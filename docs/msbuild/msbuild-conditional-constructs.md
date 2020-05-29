@@ -1,5 +1,5 @@
 ---
-title: MSBuild podmíněné konstrukce | Dokumenty společnosti Microsoft
+title: Podmíněné konstrukce MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,26 +22,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a06849c2aa0f4ec0203a7209ffc78be438dba9e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a7d6693a24d208cab6bd3b58ce16dcba8a32b190
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633379"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184286"
 ---
-# <a name="msbuild-conditional-constructs"></a>Podmíněné konstrukce MSBuild
+# <a name="msbuild-conditional-constructs"></a>Podmíněné konstrukty nástroje MSBuild
 
-MSBuild poskytuje mechanismus pro buď nebo zpracování s [Choose](../msbuild/choose-element-msbuild.md), [When](../msbuild/when-element-msbuild.md)a [Otherwise](../msbuild/otherwise-element-msbuild.md) prvky.
+Nástroj MSBuild poskytuje mechanismus pro nebo zpracování pomocí prvků [Choose](../msbuild/choose-element-msbuild.md), [when](../msbuild/when-element-msbuild.md)a [jinak](../msbuild/otherwise-element-msbuild.md) .
 
-## <a name="use-the-choose-element"></a>Použití prvku Choose
+## <a name="use-the-choose-element"></a>Použití elementu Choose
 
- Prvek `Choose` obsahuje řadu `When` prvků `Condition` s atributy, které jsou testovány v pořadí `true`od shora dolů, dokud jeden vyhodnotí na . Pokud více `When` než jeden `true`prvek vyhodnotí , pouze první z nich se používá. Prvek, `Otherwise` pokud je přítomen, bude vyhodnocen, pokud žádná podmínka pro prvek vyhodnotí `When` `true`.
+ `Choose`Element obsahuje řadu `When` prvků s `Condition` atributy, které jsou testovány v pořadí shora dolů, dokud se jedna nevyhodnotí `true` . Pokud je více než jeden `When` prvek vyhodnocen `true` , je použita pouze první z nich. `Otherwise`Element, pokud je přítomen, bude vyhodnocen, pokud není podmínka na `When` element vyhodnocena jako `true` .
 
- `Choose`prvky lze použít jako `Project` `When` podřízené prvky , a `Otherwise` prvky. `When`a `Otherwise` prvky `ItemGroup` `PropertyGroup`mohou `Choose` mít , , nebo podřízené prvky.
+ `Choose`prvky lze použít jako podřízené prvky prvku `Project` `When` a `Otherwise` prvky. `When``Otherwise`prvky a mohou mít `ItemGroup` , `PropertyGroup` nebo `Choose` podřízené prvky.
 
 ## <a name="example"></a>Příklad
 
- Následující příklad používá `Choose` `When` a prvky pro nebo zpracování. Vlastnosti a položky pro projekt jsou nastaveny v závislosti na hodnotě vlastnosti. `Configuration`
+ V následujícím příkladu jsou použity `Choose` `When` prvky a pro zpracování nebo nebo. Vlastnosti a položky projektu jsou nastaveny v závislosti na hodnotě `Configuration` Vlastnosti.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
@@ -79,9 +79,21 @@ MSBuild poskytuje mechanismus pro buď nebo zpracování s [Choose](../msbuild/c
 </Project>
 ```
 
+V tomto příkladu je použita podmínka konstanty kompilátoru `DEFINED_CONSTANT` . Ty jsou obsaženy ve `DefinedConstants` Vlastnosti. Regulární výraz se používá pro shodu s přesnou konstantou v seznamu odděleném středníkem.
+
+```xml
+<Choose>
+   <When Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
+         $(DefineConstants), '^(.*;)*DEFINED_CONSTANT(;.*)*$'))">
+      <!-- When DEFINED_CONSTANT is defined. -->
+   </When>
+   <!-- other conditions -->
+</Choose>
+```
+
 ## <a name="see-also"></a>Viz také
 
-- [Vybrat prvek (MSBuild)](../msbuild/choose-element-msbuild.md)
-- [Když element (MSBuild)](../msbuild/when-element-msbuild.md)
-- [Jinak prvek (MSBuild)](../msbuild/otherwise-element-msbuild.md)
-- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
+- [Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)
+- [When – element (MSBuild)](../msbuild/when-element-msbuild.md)
+- [Jinak – element (MSBuild)](../msbuild/otherwise-element-msbuild.md)
+- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

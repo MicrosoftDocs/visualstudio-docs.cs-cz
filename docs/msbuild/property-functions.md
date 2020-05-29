@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5f1d34a6d21e6d4f413275ee21651feb7ec3dec
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: d98d4069ca510cfbb288b88e0ab52b9cd1eb275d
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586687"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183649"
 ---
 # <a name="property-functions"></a>Funkce vlastností
 
@@ -45,7 +45,7 @@ $(ProjectOutputFolder.Substring(0,3))
 
 ### <a name="static-property-functions"></a>Funkce statických vlastností
 
-Ve svém skriptu sestavení máte přístup ke statickým vlastnostem a metodám mnoha systémových tříd. Chcete-li získat hodnotu statické vlastnosti, použijte následující syntaxi, kde \<Class> je název třídy System a \<vlastnost> je název vlastnosti.
+Ve svém skriptu sestavení máte přístup ke statickým vlastnostem a metodám mnoha systémových tříd. Chcete-li získat hodnotu statické vlastnosti, použijte následující syntaxi, kde \<Class> je název systémové třídy a \<Property> je název vlastnosti.
 
 ```
 $([Class]::Property)
@@ -57,7 +57,7 @@ Například můžete použít následující kód k nastavení vlastnosti Build 
 <Today>$([System.DateTime]::Now)</Today>
 ```
 
-Chcete-li zavolat statickou metodu, použijte následující syntaxi, kde \<třída> je název systémové třídy, \<metoda> je název metody a (\<parametry>) je seznam parametrů pro metodu:
+Chcete-li zavolat statickou metodu, použijte následující syntaxi, kde \<Class> je název systémové třídy, \<Method> je název metody a ( \<Parameters> ) je seznam parametrů pro metodu:
 
 ```
 $([Class]::Method(Parameters))
@@ -71,57 +71,57 @@ Chcete-li například nastavit vlastnost Build na nový identifikátor GUID, mů
 
 Ve funkcích statických vlastností můžete použít jakoukoli statickou metodu nebo vlastnost těchto systémových tříd:
 
-- System. Byte
-- System. Char
-- System. Convert
-- System. DateTime
-- System. Decimal
-- System. Double
-- System. Enum
-- System. GUID
-- System. Int16
-- System. Int32
-- System. Int64
-- System. IO. Path
-- System. Math
-- System. Runtime. InteropServices. OSPlatform
-- System. Runtime. InteropServices. RuntimeInformation
-- System. UInt16
-- System. UInt32
-- System. UInt64
-- System. SByte
-- System. Single
-- System. String
-- System. StringComparer
-- System. TimeSpan
-- System. text. RegularExpressions. Regex
-- System. objekt UriBuilder protokolu
-- System. Version
-- Microsoft. Build. Utilities. ToolLocationHelper
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:System.Convert?displayProperty=nameWithType>
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.Decimal?displayProperty=nameWithType>
+- <xref:System.Double?displayProperty=nameWithType>
+- <xref:System.Enum?displayProperty=nameWithType>
+- <xref:System.Guid?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.IO.Path?displayProperty=nameWithType>
+- <xref:System.Math?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.OSPlatform?displayProperty=nameWithType>
+- <xref:System.Runtime.InteropServices.RuntimeInformation?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Single?displayProperty=nameWithType>
+- <xref:System.String?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
+- <xref:System.TimeSpan?displayProperty=nameWithType>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- <xref:System.UriBuilder?displayProperty=nameWithType>
+- <xref:System.Version?displayProperty=nameWithType>
+- <xref:Microsoft.Build.Utilities.ToolLocationHelper?displayProperty=nameWithType>
 
 Kromě toho můžete použít následující statické metody a vlastnosti:
 
-- System. Environment:: CommandLine
-- System. Environment:: ExpandEnvironmentVariables
-- System. Environment:: GetEnvironmentVariable
-- System. Environment:: GetEnvironmentVariables
-- System. Environment:: GetFolderPath
-- System. Environment:: GetLogicalDrives
-- System. IO. Directory:: getdirectors
-- System. IO. Directory:: GetFiles
-- System. IO. Directory:: GetLastAccessTime
-- System. IO. Directory:: GetLastWriteTime
-- System. IO. Directory:: GetParent
-- System. IO. File:: Exists
-- System. IO. File:: GetCreationTime
-- System. IO. File:: GetAttributes
-- System. IO. File:: GetLastAccessTime
-- System. IO. File:: GetLastWriteTime
-- System. IO. File:: ReadAllText
+- [System. Environment:: CommandLine](xref:System.Environment.CommandLine*)
+- [System. Environment:: ExpandEnvironmentVariables](xref:System.Environment.ExpandEnvironmentVariables*)
+- [System. Environment:: GetEnvironmentVariable](xref:System.Environment.GetEnvironmentVariable*)
+- [System. Environment:: GetEnvironmentVariables](xref:System.Environment.GetEnvironmentVariables*)
+- [System. Environment:: GetFolderPath](xref:System.Environment.GetFolderPath*)
+- [System. Environment:: GetLogicalDrives](xref:System.Environment.GetLogicalDrives*)
+- [System. IO. Directory:: getdirectors](xref:System.IO.Directory.GetDirectories*)
+- [System. IO. Directory:: GetFiles](xref:System.IO.Directory.GetFiles*)
+- [System. IO. Directory:: GetLastAccessTime](xref:System.IO.Directory.GetLastAccessTime*)
+- [System. IO. Directory:: GetLastWriteTime](xref:System.IO.Directory.GetLastWriteTime*)
+- [System. IO. Directory:: GetParent](xref:System.IO.Directory.GetParent*)
+- [System. IO. File:: Exists](xref:System.IO.File.Exists*)
+- [System. IO. File:: GetCreationTime](xref:System.IO.File.GetCreationTime*)
+- [System. IO. File:: GetAttributes](xref:System.IO.File.GetAttributes*)
+- [System. IO. File:: GetLastAccessTime](xref:System.IO.File.GetLastAccessTime*)
+- [System. IO. File:: GetLastWriteTime](xref:System.IO.File.GetLastWriteTime*)
+- [System. IO. File:: ReadAllText](xref:System.IO.File.ReadAllText*)
 
 ### <a name="calling-instance-methods-on-static-properties"></a>Volání metod instancí ve statických vlastnostech
 
-Pokud přistupujete ke statické vlastnosti, která vrací instanci objektu, můžete vyvolat metody instance daného objektu. Chcete-li vyvolat metodu instance, použijte následující syntaxi, kde \<třída> je název systémové třídy, \<vlastnost> je název vlastnosti, \<metoda> je název metody a (\<parametry>) je seznam parametrů pro metodu:
+Pokud přistupujete ke statické vlastnosti, která vrací instanci objektu, můžete vyvolat metody instance daného objektu. Chcete-li vyvolat metodu instance, použijte následující syntaxi, kde \<Class> je název systémové třídy, \<Property> je název vlastnosti, \<Method> je název metody a ( \<Parameters> ) je seznam parametrů pro metodu:
 
 ```
 $([Class]::Property.Method(Parameters))
@@ -137,7 +137,7 @@ Například můžete použít následující kód pro nastavení vlastnosti Buil
 
 ### <a name="msbuild-property-functions"></a>Funkce vlastností MSBuild
 
-Několik statických metod v sestavení lze použít k zajištění aritmetické, bitové logické a řídicí znakové podpory. K těmto metodám přistupujete pomocí následující syntaxe, kde \<metoda> je název metody a (\<parametry>) je seznam parametrů pro metodu.
+Několik statických metod v sestavení lze použít k zajištění aritmetické, bitové logické a řídicí znakové podpory. K těmto metodám přistupujete pomocí následující syntaxe, kde \<Method> je název metody a ( \<Parameters> ) je seznam parametrů pro metodu.
 
 ```
 $([MSBuild]::Method(Parameters))
@@ -165,18 +165,18 @@ Tady je seznam funkcí MSBuild vlastností:
 |dlouhé modulo (dlouhé a, dlouhé b)|Modulo dvě dlouhé.|
 |Řídicí znak řetězce (řetězec bez řídicích znaků)|Vyřídí řetězec podle pravidel pro uvozovací znaky MSBuild.|
 |řetězcové zrušení řídicího znaku (řetězcové řídicí znaky)|Odřídí řetězec podle pravidel pro uvozovací znaky MSBuild.|
-|Bitový operátor int (int First, int Second)|Proveďte bitovou `OR` kopii prvního a druhého (první &#124; sekundu).|
-|int BitwiseAnd (int First, int Second)|Proveďte bitovou `AND` kopii prvního a druhého (první & sekundu).|
-|int BitwiseXor (int First, int Second)|Proveďte bitovou `XOR` kopii prvního a druhého (prvních ^ sekund).|
+|Bitový operátor int (int First, int Second)|Proveďte bitovou kopii `OR` prvního a druhého (první &#124; sekundu).|
+|int BitwiseAnd (int First, int Second)|Proveďte bitovou kopii `AND` prvního a druhého (první & sekundu).|
+|int BitwiseXor (int First, int Second)|Proveďte bitovou kopii `XOR` prvního a druhého (prvních ^ sekund).|
 |int BitwiseNot (int First)|Proveďte bitovou `NOT` (~ First).|
-|bool IsOsPlatform (String platformString)|Určete, zda je `platformString`aktuální platforma operačního systému. `platformString`musí být členem <xref:System.Runtime.InteropServices.OSPlatform>.|
+|bool IsOsPlatform (String platformString)|Určete, zda je aktuální platforma operačního systému `platformString` . `platformString`musí být členem <xref:System.Runtime.InteropServices.OSPlatform> .|
 |bool IsOSUnixLike ()|True, pokud je aktuální operační systém systémem UNIX.|
 |String NormalizePath (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadané cestě a zajistí, že obsahuje správné znaky oddělovače adresáře pro aktuální operační systém.|
 |String NormalizeDirectory (cesta k parametrům řetězec [])|Získá kanonickou úplnou cestu k zadanému adresáři a zajistí, že obsahuje správné znaky oddělovačů adresářů pro aktuální operační systém a zároveň zajišťuje, že má koncové lomítko.|
 |EnsureTrailingSlash řetězce (cesta k řetězci)|Pokud daná cesta nemá koncové lomítko, pak ji přidejte. Pokud je cesta prázdným řetězcem, neupraví ho.|
-|String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru ve struktuře adresáře nad aktuálním umístěním souboru buildu nebo podle `startingDirectory`toho, jestli je zadaný.|
+|String GetPathOfFileAbove (soubor řetězce; String startingDirectory)|Vyhledá a vrátí úplnou cestu k souboru ve struktuře adresáře nad aktuálním umístěním souboru buildu nebo podle `startingDirectory` toho, jestli je zadaný.|
 |GetDirectoryNameOfFileAbove (řetězec startingDirectory, název souboru String)|Vyhledejte a vraťte adresář se souborem buď v zadaném adresáři, nebo v umístění ve struktuře adresáře nad adresářem.|
-|String MakeRelative (řetězec basePath, cesta k řetězci)|Vytváří `path` relativní vzhledem `basePath`k. `basePath`musí být absolutní adresář. Pokud `path` nejde provést relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri`.|
+|String MakeRelative (řetězec basePath, cesta k řetězci)|Vytváří `path` relativní vzhledem k `basePath` . `basePath`musí být absolutní adresář. Pokud `path` nejde provést relativní, vrátí se do stejného znění. Podobně jako `Uri.MakeRelativeUri` .|
 |String ValueOrDefault (řetězec conditionValue, hodnota defaultValue řetězce)|Vrátí řetězec v parametru defaultValue pouze v případě, že parametr conditionValue je prázdný, v opačném případě vrátí hodnotu conditionValue.|
 
 ## <a name="nested-property-functions"></a>Vnořené funkce vlastností
@@ -187,13 +187,13 @@ Můžete zkombinovat funkce vlastností a vytvořit tak složitější funkce, j
 $([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))
 ```
 
-Tento příklad vrátí hodnotu <xref:System.IO.FileAttributes> `Archive` bitu (32 nebo 0) souboru daného cestou `tempFile`. Všimněte si, že hodnoty výčtu dat nemohou být v rámci funkcí vlastností uvedeny podle názvu. Místo toho je třeba použít číselnou hodnotu (32).
+Tento příklad vrátí hodnotu <xref:System.IO.FileAttributes> `Archive` bitu (32 nebo 0) souboru daného cestou `tempFile` . Všimněte si, že hodnoty výčtu dat nemohou být v rámci funkcí vlastností uvedeny podle názvu. Místo toho je třeba použít číselnou hodnotu (32).
 
 Metadata se můžou objevit i ve funkcích vnořených vlastností. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
 
 ## <a name="msbuild-doestaskhostexist"></a>DoesTaskHostExist nástroje MSBuild
 
-Funkce `DoesTaskHostExist` Property v nástroji MSBuild vrátí, zda je hostitel úlohy aktuálně nainstalován pro zadané hodnoty modulu runtime a architektury.
+`DoesTaskHostExist`Funkce Property v nástroji MSBuild vrátí, zda je hostitel úlohy aktuálně nainstalován pro zadané hodnoty modulu runtime a architektury.
 
 Tato funkce vlastnosti má následující syntaxi:
 
@@ -203,7 +203,7 @@ $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 
 ## <a name="msbuild-ensuretrailingslash"></a>EnsureTrailingSlash nástroje MSBuild
 
-Funkce `EnsureTrailingSlash` Property v MSBuild přidá koncové lomítko, pokud ještě neexistuje.
+`EnsureTrailingSlash`Funkce Property v MSBuild přidá koncové lomítko, pokud ještě neexistuje.
 
 Tato funkce vlastnosti má následující syntaxi:
 
@@ -229,7 +229,7 @@ $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 
 ## <a name="msbuild-getpathoffileabove"></a>GetPathOfFileAbove nástroje MSBuild
 
-Funkce `GetPathOfFileAbove` Property v MSBuild vrátí cestu k zadanému souboru, pokud se nachází ve struktuře adresáře nad aktuálním adresářem. Je funkčně ekvivalentní volání
+`GetPathOfFileAbove`Funkce Property v MSBuild vrátí cestu k zadanému souboru, pokud se nachází ve struktuře adresáře nad aktuálním adresářem. Je funkčně ekvivalentní volání
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
@@ -243,7 +243,7 @@ $([MSBuild]::GetPathOfFileAbove(dir.props))
 
 ## <a name="msbuild-getregistryvalue"></a>GetRegistryValue nástroje MSBuild
 
-Funkce vlastnosti `GetRegistryValue` MSBuild vrací hodnotu klíče registru. Tato funkce přijímá dva argumenty, název klíče a název hodnoty a vrací hodnotu z registru. Pokud nezadáte název hodnoty, vrátí se výchozí hodnota.
+`GetRegistryValue`Funkce vlastnosti MSBuild vrací hodnotu klíče registru. Tato funkce přijímá dva argumenty, název klíče a název hodnoty a vrací hodnotu z registru. Pokud nezadáte název hodnoty, vrátí se výchozí hodnota.
 
 Následující příklady ukazují, jak se tato funkce používá:
 
@@ -255,7 +255,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 
 ## <a name="msbuild-getregistryvaluefromview"></a>GetRegistryValueFromView nástroje MSBuild
 
-Funkce vlastnosti `GetRegistryValueFromView` MSBuild získá data systémového registru podle klíče registru, hodnoty a jednoho nebo více seřazených zobrazení registru. Klíč a hodnota jsou prohledány v každém zobrazení registru v pořadí, dokud nebudou nalezeny.
+`GetRegistryValueFromView`Funkce vlastnosti MSBuild získá data systémového registru podle klíče registru, hodnoty a jednoho nebo více seřazených zobrazení registru. Klíč a hodnota jsou prohledány v každém zobrazení registru v pořadí, dokud nebudou nalezeny.
 
 Syntaxe pro tuto funkci vlastnosti je:
 

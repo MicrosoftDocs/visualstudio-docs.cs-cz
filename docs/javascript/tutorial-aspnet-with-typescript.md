@@ -1,6 +1,6 @@
 ---
 title: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu
-description: V tomto kurzu vytvoříte aplikaci pomocí ASP.NET Core a TypeScript
+description: V tomto kurzu vytvoříte aplikaci pomocí ASP.NET Core a TypeScriptu.
 ms.date: 03/16/2020
 ms.topic: tutorial
 ms.devlang: javascript
@@ -11,97 +11,95 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e212aec6d2d3aa7e20cb0ca08c9ea604f32bb08c
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 91c712ce396000ff9babaf70335edfd5709a3000
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988548"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183090"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core s TypeScriptem ve Visual Studiu
+# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
-V tomto kurzu pro vývoj sady Visual Studio ASP.NET Core a TypeScript vytvoříte jednoduchou webovou aplikaci, přidáte nějaký kód Typu Script a pak aplikaci spusťte. 
+V tomto kurzu pro vývojové ASP.NET Core a TypeScript sady Visual Studio vytvoříte jednoduchou webovou aplikaci, přidáte nějaký kód TypeScriptu a pak aplikaci spustíte. 
 
 ::: moniker range="vs-2017"
 
-Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte ji zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Pokud jste visual studio ještě nenainstalovali, přejděte na stránku [ke stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte ji zdarma.
+Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads) a nainstalujte si ji zdarma.
 
 ::: moniker-end
 
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Vytvoření projektu ASP.NET Core
-> * Přidání balíčku NuGet pro podporu jazyka TypeScript
-> * Přidání nějakého kódu jazyka TypeScript
+> * Přidejte balíček NuGet pro podporu TypeScript.
+> * Přidat nějaký kód TypeScriptu
 > * Spuštění aplikace
 > * Přidání knihovny třetí strany pomocí npm
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Musíte mít nainstalovanou visual studio a ASP.NET zatížení vývoje webu.
+* Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje webu ASP.NET.
 
     ::: moniker range=">=vs-2019"
-    Pokud jste visual studio 2019 ještě nenainstalovali, přejděte na stránku ke stažení ve Visual [Studiu](https://visualstudio.microsoft.com/downloads/)a nainstalujte ho zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio 2019, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Pokud jste visual studio 2017 ještě nenainstalovali, přejděte na stránku ke stažení ve Visual [Studiu](https://visualstudio.microsoft.com/downloads/)a nainstalujte ho zdarma.
+    Pokud jste ještě nenainstalovali Visual Studio 2017, můžete si ho nainstalovat zdarma na stránku se [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/)   .
     ::: moniker-end
 
-    Pokud potřebujete nainstalovat úlohy, ale už máte Visual Studio, přejděte na **nástroje** > **získat nástroje a funkce...**, který otevře Instalační program sady Visual Studio. Zvolte **úlohu ASP.NET a vývoje webu a** pak zvolte **Změnit**.
+    Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte úlohu **vývoje ASP.NET a webu a** pak zvolte **Upravit**.
 
 ## <a name="create-a-new-aspnet-core-mvc-project"></a>Vytvoření nového projektu ASP.NET Core MVC
 
 Visual Studio spravuje soubory pro jednu aplikaci v *projektu*. Projekt obsahuje zdrojový kód, prostředky a konfigurační soubory.
 
 >[!NOTE]
-> Chcete-li začít s prázdným projektem ASP.NET Core a přidat front-end jazyka TypeScript, přečtěte si místo toho [ASP.NET jádro s TypeScriptem.](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
+> Pokud chcete začít s prázdným ASP.NET Core projektem a přidat front-endu TypeScript, přečtěte si místo toho [ASP.NET Core pomocí TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html) .
 
-V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci Core MVC ASP.NET.
+V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET Core aplikaci MVC.
 
 1. Otevřete sadu Visual Studio.
 
 1. Vytvoření nového projektu
 
     ::: moniker range=">=vs-2019"
-    Pokud úvodní okno není otevřené, zvolte Počáteční okno **souboru** > **Start Window**. V počátečním okně zvolte **Vytvořit nový projekt**. V rozevíracím seznamu jazyka zvolte **C#**. Do vyhledávacího pole zadejte **ASP.NET**a pak zvolte **ASP.NET Základní webová aplikace**. Zvolte **Další**.
+    Pokud okno Start není otevřeno, klikněte **na tlačítko**  >  **Start okna**. V okně Start vyberte možnost **vytvořit nový projekt**. V rozevíracím seznamu jazyk vyberte **C#**. Do vyhledávacího pole zadejte **ASP.NET**a pak zvolte **ASP.NET Core webová aplikace**. Zvolte **Další**.
 
-    Zadejte název projektu a zvolte **Vytvořit**.
+    Zadejte název projektu a klikněte na **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **nového** > **projektu**. V levém podokně dialogového okna **Nový projekt** rozbalte **položku Visual C#** a pak zvolte **.NET Core**. V prostředním podokně zvolte **ASP.NET Základní webová aplikace – C#** a pak zvolte **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** rozbalte položku **Visual C#** a pak zvolte možnost **.NET Core**. V prostředním podokně zvolte **ASP.NET Core webová aplikace – C#** a pak zvolte **OK**.
     ::: moniker-end
-    Pokud nevidíte šablonu projektu **ASP.NET core webová aplikace,** musíte přidat **ASP.NET a zatížení vývoje webu.** Podrobné pokyny naleznete v tématu [Požadavky](#prerequisites).
+    Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , je nutné přidat úlohu **vývoje webu ASP.NET a web** . Podrobné pokyny najdete v části [požadavky](#prerequisites).
 
-1. V zobrazeném dialogovém okně vyberte v dialogovém okně **možnost Webová aplikace (Model-View-Controller)** a pak zvolte **Vytvořit** (nebo **OK).**
+1. V dialogovém okně, které se zobrazí, vyberte možnost **Webová aplikace (model-zobrazení-kontroler)** v dialogovém okně a pak zvolte možnost **vytvořit** (nebo **OK**).
 
-   ![Výběr šablony MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
+   ![Zvolit šablonu MVC](../javascript/media/aspnet-core-ts-mvc-template.png)
 
     Visual Studio vytvoří nové řešení a otevře projekt v pravém podokně.
 
-## <a name="add-some-code"></a>Přidání nějakého kódu
+## <a name="add-some-code"></a>Přidat kód
 
-1. V Průzkumníku řešení (pravé podokno). Klepněte pravým tlačítkem myši na uzel projektu a zvolte **Spravovat balíčky NuGet**. Na kartě **Procházet** vyhledejte **microsoft.TypeScript.MSBuild**a potom klikněte na **Nainstalovat** vpravo a nainstalujte balíček.
+1. V Průzkumník řešení (pravé podokno). Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Spravovat balíčky NuGet**. Na kartě **Procházet** vyhledejte **Microsoft. TypeScript. MSBuild**a kliknutím na **nainstalovat** napravo nainstalujte balíček.
 
    ![Přidat balíček NuGet](../javascript/media/aspnet-core-ts-nuget.png)
 
-   Visual Studio přidá balíček NuGet pod uzel **Závislosti** v Průzkumníku řešení.
+   Sada Visual Studio přidá balíček NuGet pod uzel **závislosti** v Průzkumník řešení.
 
    > [!NOTE]
-   > Tento kurz vyžaduje balíček NuGet. Případně můžete ve vlastních aplikacích použít [balíček TypeScript npm](https://www.npmjs.com/package/typescript).
+   > Tento kurz vyžaduje balíček NuGet. Případně můžete ve svých vlastních aplikacích chtít použít [balíček TypeScript npm](https://www.npmjs.com/package/typescript).
 
-1. V Průzkumníku řešení klepněte pravým tlačítkem myši na uzel projektu a zvolte **Přidat > novou složku**. Použijte *názvové skripty* pro novou složku.
+1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript**a pak klikněte na **Přidat**.
 
-1. Klepněte pravým tlačítkem myši na složku *Skripty* a zvolte **Přidat > novou položku**. Zvolte **konfigurační soubor Jazyka JSON a**klepněte na **tlačítko Přidat**.
+   Visual Studio přidá soubor *tsconfig. JSON* do kořenového adresáře projektu. Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
 
-   Visual Studio přidá soubor *tsconfig.json* do složky *skriptů.* Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
-
-1. Otevřete *soubor tsconfig.json* a nahraďte výchozí kód následujícím kódem:
+1. Otevřete *tsconfig. JSON* a nahraďte výchozí kód následujícím kódem:
 
    ```json
    {
@@ -111,24 +109,25 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
        "removeComments": false,
        "sourceMap": true,
        "target": "es5",
-       "outDir": "../wwwroot/js"
+       "outDir": "wwwroot/js"
      },
-     "exclude": [
-       "node_modules",
-       "wwwroot"
+     "include": [
+       "scripts/**/*"
      ]
    }
    ```
 
-   Volba *outDir* určuje výstupní složku pro soubory jazyka JavaScript plánu, které jsou transponovány kompilátorem TypeScript.
+   Možnost *outDir* určuje výstupní složku pro soubory prostého JavaScriptu, které jsou přepsány kompilátorem TypeScript.
 
-   Tato konfigurace poskytuje základní úvod k použití jazyka TypeScript. V jiných scénářích, například při použití [doušku nebo webpacku](https://www.typescriptlang.org/docs/handbook/asp-net-core.html), můžete chtít jiné mezilehlé umístění pro transpované soubory JavaScript, v závislosti na vašich nástrojích a předvolbách konfigurace, namísto *.. /wwwroot/js*.
+   Tato konfigurace poskytuje základní Úvod k použití TypeScriptu. V jiných scénářích, například při použití [Gulp nebo webpacku](https://www.typescriptlang.org/docs/handbook/asp-net-core.html), můžete chtít použít jiné mezilehlé umístění pro soubory JavaScriptu v závislosti na vašich nástrojích a preferencích konfigurace namísto *wwwroot/js*.
 
-1. Klepněte pravým tlačítkem myši na složku *Skripty* a zvolte **Přidat > novou položku**. Zvolte **Soubor TypeScript**, zadejte *název app.ts* pro název souboru a klikněte na **Přidat**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat > nová složka**. Použijte názvy *skriptů* pro novou složku.
 
-   Visual Studio přidá *app.ts* do složky *skripty.*
+1. Klikněte pravým tlačítkem myši na složku *skripty* a vyberte možnost **Přidat > novou položku**. Zvolte **soubor TypeScript**, pro název souboru zadejte název *App. TS* a pak klikněte na **Přidat**.
 
-1. Otevřete *soubor app.ts* a přidejte následující kód jazyka TypeScript.
+   Visual Studio přidá *App. TS* do složky *Scripts* .
+
+1. Otevřete *App. TS* a přidejte následující kód TypeScript.
 
     ```ts
     function TSButton() {
@@ -155,15 +154,15 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
     let user = new Student("Fred", "M.", "Smith");
     ```
 
-    Visual Studio poskytuje podporu technologie IntelliSense pro váš kód Typu Script.
+    Visual Studio poskytuje podporu technologie IntelliSense pro váš kód TypeScriptu.
 
-    Chcete-li to `.lastName` otestovat, odeberte z `greeter` funkce, pak znovu zadejte ".", a uvidíte IntelliSense.
+    Pokud to chcete otestovat, odeberte `.lastName` z `greeter` funkce a pak znovu zadejte "." a uvidíte IntelliSense.
 
-    ![Zobrazit inteligentní technologie IntelliSense](../javascript/media/aspnet-core-ts-intellisense.png)
+    ![Zobrazit IntelliSense](../javascript/media/aspnet-core-ts-intellisense.png)
 
-    Výběrem `lastName` vyberte, chcete-li do kódu přidat příjmení.
+    Tuto možnost vyberte, pokud chcete `lastName` Poslední název přidat zpátky do kódu.
 
-1. Otevřete složku *Zobrazení / Domov* a potom otevřete soubor *index.html*.
+1. Otevřete okno *zobrazení/Domovská* složka a pak otevřete *index. html*.
 
 1. Na konec souboru přidejte následující kód HTML.
 
@@ -176,9 +175,9 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
     </div>
     ```
 
-1. Otevřete složku *Zobrazení / Sdílená* a potom *otevřete soubor _Layout.cshtml*.
+1. Otevřete *zobrazení/sdílená* složka a pak otevřete *_Layout. cshtml*.
 
-1. Před voláním na `@RenderSection("Scripts", required: false)`::
+1. Přidejte následující odkaz skriptu před voláním `@RenderSection("Scripts", required: false)` :
 
     ```js
     <script src="~/js/app.js"></script>
@@ -186,46 +185,46 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
 
 ## <a name="build-the-application"></a>Sestavení aplikace
 
-1. Zvolte **sestavit > sestavení řešení**.
+1. Vyberte **sestavení řešení sestavení >**.
 
-   I když se aplikace automaticky vytvoří při spuštění, chceme se podívat na něco, co se stane během procesu sestavení.
+   I když se aplikace při spuštění automaticky vytvoří, chceme se podívat na něco, co se děje během procesu sestavení.
 
-1. Otevřete složku *wwwroot / js* a najdete dva nové soubory, *app.js* a zdrojový mapový soubor *app.js.map*. Tyto soubory jsou generovány kompilátorem TypeScript.
+1. Otevřete složku *wwwroot/js* a najdete dva nové soubory, *App. js* a zdrojový soubor mapování, *App. js. map*. Tyto soubory jsou generovány kompilátorem TypeScript.
 
-   Zdrojové mapové soubory jsou vyžadovány pro ladění.
+   Zdrojové soubory mapování jsou vyžadovány pro ladění.
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-1. Stisknutím **klávesy F5** (**Ladění** > **počátečního ladění**) spusťte aplikaci.
+1. Stisknutím klávesy **F5** (**ladění**  >  **Spusťte ladění**) spusťte aplikaci.
 
     Aplikace se otevře v prohlížeči.
 
-    V okně prohlížeče se zobrazí nadpis **Uvítání** a tlačítko **Kliknout na mě.**
+    V okně prohlížeče se zobrazí **úvodní** nadpis a tlačítko **kliknout** .
 
-    ![ASP.NET jádro pomocí Jazyka TypeScript](../javascript/media/aspnet-core-ts-running-app.png)
+    ![ASP.NET Core s TypeScript](../javascript/media/aspnet-core-ts-running-app.png)
 
-1. Klepnutím na tlačítko zobrazíte zprávu, kterou jsme zadali v souboru TypeScript.
+1. Kliknutím na toto tlačítko zobrazíte zprávu, kterou jsme určili v souboru TypeScript.
 
 ## <a name="debug-the-application"></a>Ladění aplikace
 
-1. Nastavte zarážku `greeter` ve `app.ts` funkci v kliknutím na levý okraj v editoru kódu.
+1. Nastavte zarážku ve `greeter` funkci kliknutím na `app.ts` levý okraj v editoru kódu.
 
     ![Nastavení zarážky](../javascript/media/aspnet-core-ts-set-breakpoint.png)
 
-1. Stisknutím **klávesy F5** spusťte aplikaci.
+1. Stisknutím klávesy **F5** spusťte aplikaci.
 
-   Možná budete muset odpovědět na zprávu povolit ladění skriptů.
+   Možná budete muset reagovat na zprávu a povolit tak ladění skriptů.
 
-   Aplikace se pozastaví na zarážky. Nyní můžete zkontrolovat proměnné a používat funkce ladicího programu.
+   Aplikace se pozastaví na zarážce. Nyní můžete kontrolovat proměnné a používat funkce ladicího programu.
 
-## <a name="add-typescript-support-for-a-third-party-library"></a>Přidání podpory jazyka TypeScript pro knihovnu jiného výrobce
+## <a name="add-typescript-support-for-a-third-party-library"></a>Přidání podpory TypeScriptu pro knihovnu třetích stran
 
-1. Postupujte podle pokynů ve [správě balíčků npm](../javascript/npm-package-management.md#aspnet-core-projects) a přidejte `package.json` soubor do projektu. Tím přidáte podporu npm do vašeho projektu.
+1. Podle pokynů v tématu [Správa balíčků npm](../javascript/npm-package-management.md#aspnet-core-projects) přidejte `package.json` soubor do projektu. Tím se do projektu přidá podpora npm.
 
    >[!NOTE]
-   > Pro ASP.NET core projekty můžete také použít [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
+   > Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
-1. V tomto příkladu přidejte do projektu definiční soubor TypeScript pro jQuery. Do souboru *package.json* zahrňte následující.
+1. V tomto příkladu přidejte soubor definice TypeScript pro jQuery do projektu. Do souboru *Package. JSON* zahrňte následující.
 
    ```json
    "devDependencies": {
@@ -233,18 +232,18 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
    }
    ```
 
-   Tím přidáte podporu jazyka TypeScript pro jQuery. Samotná knihovna jQuery je již zahrnuta v šabloně projektu MVC (podívejte se pod wwwroot/lib v Průzkumníku řešení). Pokud používáte jinou šablonu, možná budete muset zahrnout balíček jquery npm.
+   Tím se přidá podpora TypeScript pro jQuery. Samotná knihovna jQuery je již obsažena v šabloně projektu MVC (podívejte se do části wwwroot/lib v Průzkumník řešení). Pokud používáte jinou šablonu, bude pravděpodobně nutné zahrnout také balíček jQuery npm.
 
-1. Pokud balíček v Průzkumníku řešení není nainstalován, klepněte pravým tlačítkem myši na uzel npm a zvolte **obnovit balíčky**.
+1. Pokud balíček v Průzkumník řešení není nainstalován, klikněte pravým tlačítkem myši na uzel npm a vyberte možnost **obnovit balíčky**.
 
    >[!NOTE]
-   > V některých případech může Průzkumník řešení znamenat, že balíček npm není synchronizován s *souborem package.json* z důvodu známého problému [popsaného zde](https://github.com/aspnet/Tooling/issues/479). Balíček se může například při instalaci zobrazit jako nenainstalovaný. Ve většině případů můžete aktualizovat Průzkumníka řešení odstraněním *package.json*, restartováním sady Visual Studio a opětovným přidáním souboru *package.json,* jak je popsáno výše v tomto článku.
+   > V některých scénářích může Průzkumník řešení znamenat, že balíček npm není synchronizovaný s *Package. JSON* kvůli známému problému popsanému [tady](https://github.com/aspnet/Tooling/issues/479). Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním souboru *Package. JSON*, restartováním sady Visual Studio a opětovným přidáním souboru *Package. JSON* , jak je popsáno výše v tomto článku.
 
-1. V Průzkumníku řešení klepněte pravým tlačítkem myši na složku Skripty a zvolte **Přidat** > **novou položku**.
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na složku skripty a vyberte možnost **Přidat**  >  **novou položku**.
 
-1. Zvolte **Soubor typu TypeScript**, zadejte *soubor library.ts*a zvolte **Přidat**.
+1. Vyberte **soubor TypeScript**, zadejte *Library. TS*a klikněte na **Přidat**.
 
-1. Do *souboru library.ts*přidejte následující kód.
+1. V *knihovně. TS*přidejte následující kód.
 
    ```ts
    var jqtest = {
@@ -259,20 +258,20 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
    jqtest.showMsg();
    ```
 
-   Pro jednoduchost tento kód zobrazí zprávu pomocí jQuery a výstrahy.
+   Pro zjednodušení tento kód zobrazí zprávu pomocí jQuery a výstrahy.
 
-   S typescript definice typů pro jQuery přidán, dostanete IntelliSense podporu na jQuery objekty, když zadáte "." po jQuery objektu, jak je znázorněno zde.
+   S definicemi typu TypeScript pro objekt jQuery získáte podporu technologie IntelliSense pro objekty jQuery, když zadáte "." za objektem jQuery, jak je znázorněno zde.
 
-   ![jquery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
+   ![jQuery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
 
-1. V _Layout.cshtml aktualizujte odkazy na `library.js`skripty tak, aby zahrnovaly .
+1. V _Layout. cshtml aktualizujte odkazy na skripty, které se mají zahrnout `library.js` .
 
    ```html
    <script src="~/js/app.js"></script>
    <script src="~/js/library.js"></script>
    ```
 
-1. V souboru Index.cshtml přidejte na konec souboru následující kód HTML.
+1. V indexu. cshtml přidejte následující kód HTML na konec souboru.
 
    ```html
    <div>
@@ -280,17 +279,17 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro aplikaci 
    </div>
    ```
 
-1. Stisknutím **klávesy F5** (**Ladění** > **počátečního ladění**) spusťte aplikaci.
+1. Stisknutím klávesy **F5** (**ladění**  >  **Spusťte ladění**) spusťte aplikaci.
 
     Aplikace se otevře v prohlížeči.
 
-    Klikněte na **TLAČÍTKO OK** ve výstraze zobrazíte stránku aktualizovanou na **jQuery verze je: 3.3.1!**.
+    Kliknutím na **OK** v upozornění zobrazíte stránku, která je aktualizovaná na **verzi jQuery: 3.3.1!!**.
 
-    ![příklad jquery](../javascript/media/aspnet-core-ts-jquery-example.png)
+    ![Příklad jQuery](../javascript/media/aspnet-core-ts-jquery-example.png)
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete se dozvědět více podrobností o používání jazyka TypeScript s ASP.NET jádrem.
+Další informace o použití TypeScriptu s ASP.NET Core můžete chtít získat v podrobnostech.
 
 > [!div class="nextstepaction"]
-> [ASP.NET jádro a textový skript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
+> [ASP.NET Core a TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)

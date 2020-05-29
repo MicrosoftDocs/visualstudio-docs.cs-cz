@@ -1,7 +1,7 @@
 ---
-title: Zápis vizualizéru v C# | Dokumentace Microsoftu
+title: Zápis Vizualizér v jazyce C# | Microsoft Docs
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -14,84 +14,85 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a46967d5f46c4f495a07d80e5f73cfc9f9d60c1a
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 1f188b40938c62ae8c3692f096217618f9cb7ff6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542630"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183740"
 ---
-# <a name="walkthrough-writing-a-visualizer-in-c"></a>Návod: zápis Vizualizér do jazyka C\#
-Tento návod ukazuje, jak napsat Jednoduchý vizualizér pomocí jazyka C#. Vizualizaci, kterou vytvoříte v tomto názorném postupu se zobrazí obsah řetězce pomocí okna se zprávou formulářů Windows. Tento vizualizér jednoduchým řetězcem není zvlášť užitečné sám o sobě, ale zobrazuje základní kroky, které je třeba provést pro vytvoření užitečnější vizualizéry pro jiné datové typy.
+# <a name="walkthrough-writing-a-visualizer-in-c"></a>Návod: zápis Vizualizér v jazyce C\#
+
+Tento návod ukazuje, jak napsat jednoduchý Vizualizér pomocí jazyka C#. Vizualizér, který v tomto návodu vytvoříte, zobrazí obsah řetězce pomocí okna se zprávou Windows Forms. Tento jednoduchý Vizualizér řetězců není zvlášť užitečný, ale zobrazuje základní kroky, které je nutné provést, aby bylo možné vytvořit užitečnější vizualizace pro jiné datové typy.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, přejděte **nástroje** nabídky a zvolte **nastavení importu a exportu**. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, přejděte do nabídky **nástroje** a vyberte **Nastavení importu a exportu**. Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
 
-Kód vizualizéru musí být umístěn v knihovně DLL, které budou číst ladicím programem. Proto prvním krokem je vytvoření projektu knihovny tříd pro knihovnu DLL.
+Kód Vizualizér musí být umístěn v knihovně DLL, která bude načtena ladicím programem. Proto je prvním krokem vytvoření projektu knihovny tříd pro knihovnu DLL.
 
-## <a name="create-a-visualizer-manually"></a>Ruční vytvoření vizualizéru
+## <a name="create-a-visualizer-manually"></a>Ruční vytvoření Vizualizér
 
-Postupujte podle vizualizéru při vytváření úlohy.
+Pomocí níže uvedených úloh vytvořte Vizualizér.
 
-### <a name="to-create-a-class-library-project"></a>Chcete-li vytvořit projekt knihovny tříd
+### <a name="to-create-a-class-library-project"></a>Vytvoření projektu knihovny tříd
 
 1. Vytvořte nový projekt knihovny tříd.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **knihovny tříd**, zvolte **šablony**a pak zvolte **vytvořit novou knihovnu tříd (.NET Framework)** . V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **knihovny tříd**, zvolte **šablony**a pak zvolte **vytvořit novou knihovnu tříd (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **vizuál C#** zvolte možnost **.NET Framework**a potom v prostředním podokně zvolte možnost **Knihovna tříd (.NET Framework)** .
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **.NET Framework**a potom v prostředním podokně zvolte možnost **Knihovna tříd (.NET Framework)**.
     ::: moniker-end
 
-2. Zadejte vhodný název knihovny tříd, například `MyFirstVisualizer`, a pak klikněte na tlačítko **vytvořit** nebo **OK**.
+2. Zadejte vhodný název knihovny tříd, například `MyFirstVisualizer` , a pak klikněte na tlačítko **vytvořit** nebo **OK**.
 
-   Po vytvoření knihovny tříd musíte přidat odkaz na Microsoft.VisualStudio.DebuggerVisualizers.DLL, aby mohli používat třídy definované existuje. Před přidáním odkazu však musíte přejmenovat některé třídy tak, aby měla smysluplný název.
+   Po vytvoření knihovny tříd musíte přidat odkaz na Microsoft. VisualStudio. DebuggerVisualizers. DLL, abyste mohli použít třídy, které jsou zde definovány. Před přidáním odkazu však musíte přejmenovat některé třídy, aby měly smysluplné názvy.
 
-### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Přejmenovat Class1.cs a přidat Microsoft.VisualStudio.DebuggerVisualizers
+### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Přejmenování Class1.cs a přidání Microsoft. VisualStudio. DebuggerVisualizers
 
-1. V **Průzkumníka řešení**Class1.cs pravým tlačítkem myši a zvolte **přejmenovat** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na Class1.cs a v místní nabídce vyberte **Přejmenovat** .
 
-2. Změňte název na něco smysluplného, například DebuggerSide.cs z Class1.cs.
+2. Změňte název z Class1.cs na něco smysluplného, například DebuggerSide.cs.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v DebuggerSide.cs tak, aby odpovídaly nový název souboru.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky změní deklaraci třídy v DebuggerSide.cs tak, aby odpovídala novému názvu souboru.
 
-3. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **odkazy** a zvolte **přidat odkaz** v místní nabídce.
+3. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
 
 4. V dialogovém okně **Přidat odkaz** na kartě **Procházet** vyberte **Procházet** a vyhledejte Microsoft. VisualStudio. DebuggerVisualizers. dll.
 
-    Knihovnu DLL můžete najít v *\<instalační adresář sady Visual studio > \Common7\IDE\PublicAssemblies* podadresář instalačního adresáře aplikace Visual Studio.
+    Knihovnu DLL můžete najít v podadresáři * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* instalačního adresáře sady Visual Studio.
 
 5. Klikněte na tlačítko **OK**.
 
-6. Do DebuggerSide.cs přidejte následující direktivy `using`:
+6. Do DebuggerSide.cs přidejte následující `using` direktivy:
 
    ```csharp
    using Microsoft.VisualStudio.DebuggerVisualizers;
    ```
 
-   Nyní jste připraveni k vytvoření kódových straně ladicího programu. Toto je kód, který běží v rámci ladicího programu k zobrazení informací, které chcete vizualizovat. Nejprve budete muset změnit deklarace `DebuggerSide` objekt, který dědí ze základní třídy `DialogDebuggerVisualizer`.
+   Nyní jste připraveni vytvořit kód na straně ladicího programu. Toto je kód, který běží v ladicím programu pro zobrazení informací, které chcete vizualizovat. Nejprve je třeba změnit deklaraci `DebuggerSide` objektu tak, aby dědil ze základní třídy `DialogDebuggerVisualizer` .
 
 ### <a name="to-inherit-from-dialogdebuggervisualizer"></a>Dědění z DialogDebuggerVisualizer
 
-1. V DebuggerSide.cs přejděte na následující řádek kódu:
+1. V DebuggerSide.cs přejdete na následující řádek kódu:
 
    ```csharp
    public class DebuggerSide
    ```
 
-2. Změnou kódu:
+2. Změňte kód na:
 
    ```csharp
    public class DebuggerSide : DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer` má jednu abstraktní metodu (`Show`), který je nutné přepsat.
+   `DialogDebuggerVisualizer`má jednu abstraktní metodu ( `Show` ), kterou je nutné přepsat.
 
-#### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>Pokud chcete přepsat metodu DialogDebuggerVisualizer.Show
+#### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>Přepsání metody DialogDebuggerVisualizer. show
 
-- V `public class DebuggerSide`, přidejte následující **metody:**
+- Do `public class DebuggerSide` přidejte následující **metodu:**
 
   ```csharp
   protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)
@@ -99,11 +100,11 @@ Postupujte podle vizualizéru při vytváření úlohy.
   }
   ```
 
-  `Show` Metoda obsahuje kód, který ve skutečnosti vytvoří dialogové okno vizualizér datasetu nebo jiných prvků uživatelského rozhraní a zobrazí informace, které bylo předáno vizualizéru z ladicího programu. Musíte přidat kód, který vytvoří dialogové okno a zobrazí informace. V tomto podrobném návodu bude to provedete pomocí okna se zprávou formulářů Windows. Nejprve je třeba přidat odkaz a direktivu `using` pro System. Windows. Forms.
+  `Show`Metoda obsahuje kód, který ve skutečnosti vytvoří dialogové okno vizualizér, nebo jiné uživatelské rozhraní a zobrazí informace, které byly předány Vizualizér z ladicího programu. Je nutné přidat kód, který vytvoří dialogové okno a zobrazí informace. V tomto návodu to provedete pomocí okna se zprávou Windows Forms. Nejprve je třeba přidat odkaz a `using` direktivu pro System. Windows. Forms.
 
-### <a name="to-add-systemwindowsforms"></a>Chcete-li přidat System.Windows.Forms
+### <a name="to-add-systemwindowsforms"></a>Přidání System. Windows. Forms
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **odkazy** a zvolte **přidat odkaz** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **odkazy** a v místní nabídce vyberte **Přidat odkaz** .
 
 2. V dialogovém okně **Přidat odkaz** vyberte na kartě **Procházet** možnost **Procházet**a vyhledejte System. Windows. Forms. dll.
 
@@ -111,31 +112,33 @@ Postupujte podle vizualizéru při vytváření úlohy.
 
 3. Klikněte na tlačítko **OK**.
 
-4. Do DebuggerSide.cs přidejte následující direktivy `using`:
+4. Do DebuggerSide.cs přidejte následující `using` direktivy:
 
    ```csharp
    using System.Windows.Forms;
    ```
 
-   Teď přidejte kód k vytvoření a zobrazení uživatelského rozhraní pro vaše vizualizéru. Protože je to první vizualizéru, budeme zjednodušení uživatelského rozhraní a použijte okno se zprávou.
+   Nyní přidáte nějaký kód pro vytvoření a zobrazení uživatelského rozhraní pro Vizualizér. Vzhledem k tomu, že se jedná o váš první vizualizér, ponecháme uživatelské rozhraní jednoduché a bude používat okno se zprávou.
 
-### <a name="to-show-the-visualizer-output-in-a-dialog-box"></a>Chcete-li zobrazit výstup Vizualizéru v dialogovém okně
+### <a name="to-show-the-visualizer-output-in-a-dialog-box"></a>Zobrazení výstupu Vizualizér v dialogovém okně
 
-1. V `Show` metodu, přidejte následující řádek kódu:
+1. Do metody `Show` přidejte následující řádek kódu:
 
    ```csharp
    MessageBox.Show(objectProvider.GetObject().ToString());
    ```
 
-    Tento příklad kódu neobsahuje zpracování chyb. By měly zahrnovat zpracování chyb v reálné vizualizéru nebo jakékoli jiné aplikace.
+    Tento ukázkový kód nezahrnuje zpracování chyb. Zpracování chyb byste měli zahrnout do reálného Vizualizér nebo jakéhokoli jiného typu aplikace.
 
-2. Na **sestavení** nabídce zvolte **sestavení MyFirstVisualizer**. Projekt má sestavit úspěšně. Než budete pokračovat, opravte případné chyby sestavení.
+2. V nabídce **sestavení** klikněte na příkaz **sestavit MyFirstVisualizer**. Projekt by se měl úspěšně sestavit. Než budete pokračovat, opravte případné chyby sestavení.
 
-   Který je koncem objektu kód na straně ladicího programu. Ještě jeden krok, je však; atribut, který říká na straně laděného procesu, které kolekce tříd se skládá z vizualizér.
+   To je konec kódu na straně ladicího programu. Existuje ale ještě ještě víc kroků. atribut, který oznamuje laděného procesu stranu, kterou kolekce tříd zahrnuje vizualizér.
 
-### <a name="to-add-the-debuggee-side-code"></a>Přidání kódu straně laděného procesu
+### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>Postup přidání typu k vizualizaci pro kód na straně laděného procesu
 
-1. Přidejte následující kód atributu do DebuggerSide.cs za direktivami `using`, ale před `namespace MyFirstVisualizer`:
+V kódu na straně ladicího programu určíte typ pro vizualizaci (zdroj objektu) pro laděného procesu pomocí <xref:System.Diagnostics.DebuggerVisualizerAttribute> atributu. `Target`Vlastnost nastaví typ pro vizualizaci.
+
+1. Do DebuggerSide.cs přidejte následující kód atributu za `using` direktivy, ale před `namespace MyFirstVisualizer` :
 
    ```csharp
    [assembly:System.Diagnostics.DebuggerVisualizer(
@@ -145,13 +148,13 @@ Postupujte podle vizualizéru při vytváření úlohy.
    Description = "My First Visualizer")]
    ```
 
-2. Na **sestavení** nabídce zvolte **sestavení MyFirstVisualizer**. Projekt má sestavit úspěšně. Než budete pokračovat, opravte případné chyby sestavení.
+2. V nabídce **sestavení** klikněte na příkaz **sestavit MyFirstVisualizer**. Projekt by se měl úspěšně sestavit. Než budete pokračovat, opravte případné chyby sestavení.
 
-   V tomto okamžiku je dokončena první vizualizér. Pokud jste postupovali podle kroků správně, může sestavení vizualizéru a nainstalujte ho do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Před instalací vizualizéru do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], ale měli otestovat a ujistit se, že běží správně. Teď vytvoříte testovací prostředí pro spuštění vizualizéru bez instalace do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+   V tomto okamžiku je váš první vizualizér dokončený. Pokud jste postupovali podle pokynů správně, můžete vytvořit Vizualizér a nainstalovat ho do nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Než nainstalujete Vizualizér do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , měli byste ho ale otestovat, abyste se ujistili, že funguje správně. Nyní vytvoříte testovací kabel, který bude spustit Vizualizér bez jeho instalace do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-### <a name="to-add-a-test-method-to-show-the-visualizer"></a>Chcete-li přidat testovací metody, chcete-li zobrazit vizualizér
+### <a name="to-add-a-test-method-to-show-the-visualizer"></a>Chcete-li přidat testovací metodu pro zobrazení Vizualizér
 
-1. Přidejte následující metodu do třídy `public DebuggerSide`:
+1. Přidejte následující metodu do třídy `public DebuggerSide` :
 
    ```csharp
    public static void TestShowVisualizer(object objectToVisualize)
@@ -161,113 +164,113 @@ Postupujte podle vizualizéru při vytváření úlohy.
    }
    ```
 
-2. Na **sestavení** nabídce zvolte **sestavení MyFirstVisualizer**. Projekt má sestavit úspěšně. Než budete pokračovat, opravte případné chyby sestavení.
+2. V nabídce **sestavení** klikněte na příkaz **sestavit MyFirstVisualizer**. Projekt by se měl úspěšně sestavit. Než budete pokračovat, opravte případné chyby sestavení.
 
-   Dále musíte vytvořit spustitelný projekt volat vaše vizualizéru knihovny DLL. Pro zjednodušení budeme používat projekt konzolové aplikace.
+   Dále je nutné vytvořit spustitelný projekt pro volání své knihovny Vizualizátor DLL. Pro zjednodušení použijeme projekt konzolové aplikace.
 
-### <a name="to-add-a-console-application-project-to-the-solution"></a>Chcete-li přidat do řešení projekt konzolové aplikace
+### <a name="to-add-a-console-application-project-to-the-solution"></a>Přidání projektu konzolové aplikace do řešení
 
 1. V Průzkumník řešení klikněte pravým tlačítkem myši na řešení, vyberte možnost **Přidat**a poté klikněte na možnost **Nový projekt**.
 
     ::: moniker range=">=vs-2019"
-    Do vyhledávacího pole zadejte **Konzolová aplikace**, zvolte **šablony**a pak zvolte **vytvořit novou konzolovou aplikaci (.NET Framework)** . V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    Do vyhledávacího pole zadejte **Konzolová aplikace**, zvolte **šablony**a pak zvolte **vytvořit novou konzolovou aplikaci (.NET Framework)**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** , v části **vizuál C#** zvolte **Windows Desktop**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
     ::: moniker-end
 
-2. Zadejte vhodný název knihovny tříd, například `MyTestConsole`, a pak klikněte na tlačítko **vytvořit** nebo **OK**.
+2. Zadejte vhodný název knihovny tříd, například `MyTestConsole` , a pak klikněte na tlačítko **vytvořit** nebo **OK**.
 
-   Nyní je třeba přidat že nezbytné odkazuje, takže MyTestConsole můžete volat MyFirstVisualizer.
+   Nyní je nutné přidat nezbytné odkazy, aby MyTestConsole mohli volat MyFirstVisualizer.
 
-### <a name="to-add-necessary-references-to-mytestconsole"></a>Chcete-li přidat potřebné odkazy na MyTestConsole
+### <a name="to-add-necessary-references-to-mytestconsole"></a>Přidání nezbytných odkazů na MyTestConsole
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **MyTestConsole** a zvolte **přidat odkaz** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **MyTestConsole** a v místní nabídce vyberte **Přidat odkaz** .
 
 2. V dialogovém okně **Přidat odkaz** klikněte na kartu **Procházet** a vyberte Microsoft. VISUALSTUDIO. DebuggerVisualizers. dll.
 
 3. Klikněte na tlačítko **OK**.
 
-4. Klikněte pravým tlačítkem na **MyTestConsole** a zvolte **přidat odkaz** znovu.
+4. Klikněte pravým tlačítkem na **MyTestConsole** a pak znovu vyberte **Přidat odkaz** .
 
-5. V **přidat odkaz** dialogové okno, klikněte na tlačítko **projekty** kartu a potom klikněte na tlačítko MyFirstVisualizer.
+5. V dialogovém okně **Přidat odkaz** klikněte na kartu **projekty** a pak klikněte na MyFirstVisualizer.
 
 6. Klikněte na tlačítko **OK**.
 
-   Teď přidejte kód k dokončení testovací prostředí.
+   Nyní přidáte kód pro dokončení testovacího svazku.
 
 ### <a name="to-add-code-to-mytestconsole"></a>Přidání kódu do MyTestConsole
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor Program.cs a zvolte **přejmenovat** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na program.cs a v místní nabídce vyberte **Přejmenovat** .
 
-2. Upravte název na něco smysluplnějšího, jako je například TestConsole.cs ze souboru Program.cs.
+2. Upravte název z Program.cs na smysluplnější, například TestConsole.cs.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky změní deklaraci třídy v TestConsole.cs tak, aby odpovídala novému názvu souboru.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]automaticky změní deklaraci třídy v TestConsole.cs tak, aby odpovídala novému názvu souboru.
 
-3. Do TestConsole.cs přidejte následující kód do direktiv `using`:
+3. Do TestConsole.cs přidejte následující kód do `using` direktiv:
 
    ```csharp
    using MyFirstVisualizer;
    ```
 
-4. V metodě `Main`, přidejte následující kód:
+4. Do metody `Main` přidejte následující kód:
 
    ```csharp
    String myString = "Hello, World";
    DebuggerSide.TestShowVisualizer(myString);
    ```
 
-   Nyní jste připraveni k testování první vizualizér.
+   Teď jste připraveni otestovat svůj první vizualizér.
 
-### <a name="to-test-the-visualizer"></a>K otestování vizualizéru
+### <a name="to-test-the-visualizer"></a>Otestování Vizualizér
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **MyTestConsole** a zvolte **nastavit jako spouštěný projekt** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **MyTestConsole** a v místní nabídce vyberte **nastavit jako spouštěný projekt** .
 
-2. Na **ladění** nabídce zvolte **Start**.
+2. V nabídce **ladit** klikněte na tlačítko **Spustit**.
 
-    Spuštění aplikace konzoly a Vizualizéru se zobrazí a zobrazí řetězec "Hello, World".
+    Spustí se Konzolová aplikace a zobrazí se Vizualizér a zobrazí řetězec "Hello, World".
 
-   Blahopřejeme. Stačí mít vytvořené a testovat vaše první vizualizéru.
+   Blahopřejeme. Právě jste vytvořili a otestovali svůj první vizualizér.
 
-   Pokud chcete používat vaše vizualizéru v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] místo jen volání z testovací prostředí, je nutné ji nainstalovat. Další informace najdete v tématu [postupy: instalace Vizualizéru](../debugger/how-to-install-a-visualizer.md).
+   Pokud chcete použít svůj Vizualizér [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] místo toho, aby ho bylo možné volat ze samotného testovacího prostředí, musíte ho nainstalovat. Další informace najdete v tématu [Postup: instalace Vizualizátoru](../debugger/how-to-install-a-visualizer.md).
 
-## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Vytvořit pomocí šablony položky Vizualizéru vizualizéru
+## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Vytvoření Vizualizér pomocí šablony položky Vizualizér
 
-Zatím tento návod vám ukázal vytvoření vizualizéru ručně. To bylo provedeno jako learning cvičení. Teď, když víte, jak jednoduché vizualizéru funguje, je snadný způsob, jak vytvořit: pomocí šablony položky vizualizér.
+V tomto návodu vám ukázal, jak vytvořit Vizualizér ručně. To bylo provedeno v rámci výukového cvičení. Když teď víte, jak Jednoduchý vizualizér funguje, existuje jednodušší způsob, jak ho vytvořit: pomocí šablony položky Vizualizér.
 
-Nejprve budete muset vytvořit nový projekt knihovny tříd.
+Nejprve je třeba vytvořit nový projekt knihovny tříd.
 
-### <a name="to-create-a-new-class-library"></a>Chcete-li vytvořit novou knihovnu tříd
+### <a name="to-create-a-new-class-library"></a>Vytvoření nové knihovny tříd
 
-1. Na **souboru** nabídce zvolte **nový > projekt**.
+1. V nabídce **soubor** vyberte možnost **Nový > projekt**.
 
-2. V dialogovém okně **Nový projekt** vyberte v části **vizuál C#** možnost **.NET Framework**.
+2. V dialogovém okně **Nový projekt** vyberte v části **Visual C#** možnost **.NET Framework**.
 
-3. V prostředním podokně vyberte **knihovny tříd**.
+3. V prostředním podokně vyberte možnost **Knihovna tříd**.
 
-4. V **název** zadejte vhodný název pro knihovnu tříd, jako je například MySecondVisualizer.
+4. Do pole **název** zadejte vhodný název knihovny tříd, například MySecondVisualizer.
 
 5. Klikněte na tlačítko **OK**.
 
-   Teď můžete přidat položku vizualizéru do ní:
+   Nyní můžete do něj přidat položku Vizualizér:
 
-### <a name="to-add-a-visualizer-item"></a>Chcete-li přidat položku vizualizéru
+### <a name="to-add-a-visualizer-item"></a>Přidání položky Vizualizátoru
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na MySecondVisualizer.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na MySecondVisualizer.
 
-2. V místní nabídce zvolte **přidat** a potom klikněte na tlačítko **nová položka**.
+2. V místní nabídce vyberte možnost **Přidat** a poté klikněte na položku **Nová položka**.
 
-3. V **přidat novou položku** dialogovém okně **položky Visual C#** vyberte **vizualizér**.
+3. V dialogovém okně **Přidat novou položku** vyberte v části **Visual C# položky** **Vizualizér ladicího programu**.
 
-4. V **název** zadejte vhodný název, jako je například SecondVisualizer.cs.
+4. Do pole **název** zadejte vhodný název, například SecondVisualizer.cs.
 
 5. Klikněte na tlačítko **Add** (Přidat).
 
-   To je všechno je to. Podívejte se na soubor SecondVisualizer.cs a zobrazte kód, který šablona přidá za vás. Pokračujte a experimentovat s kódem. Teď, když znáte základy, jste na dobré cestě k vytvoření složitých a užitečné vizualizéry vlastní.
+   To je vše, co je k dispozici. Podívejte se na soubor SecondVisualizer.cs a zobrazte si kód, který vám šablona přidala. Pokračujte a Experimentujte s kódem. Teď, když jste znali základy, jste na úmyslu vytvořit složitější a užitečné vizualizace, které vlastníte.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Architektura vizualizéru](../debugger/visualizer-architecture.md)
-- [Postupy: Instalace vizualizéru](../debugger/how-to-install-a-visualizer.md)
+- [Postupy: instalace Vizualizátoru](../debugger/how-to-install-a-visualizer.md)
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
