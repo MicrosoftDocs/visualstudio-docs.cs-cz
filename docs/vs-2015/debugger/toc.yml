@@ -244,8 +244,6 @@
       items:
         - name: Chyby a řešení potíží se vzdáleným laděním
           href: remote-debugging-errors-and-troubleshooting.md
-        - name: Sledování vzdáleného ladění sady Microsoft Visual Studio na vzdáleném počítači nemá oprávnění pro připojení k tomuto počítači.
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer.md
         - name: Při pokusu o spojení se vzdáleným počítačem došlo k chybě modelu DCOM. Přístup byl zamítnut.
           href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
         - name: Sledování vzdáleného ladění sady Microsoft Visual Studio je na vzdáleném počítači spuštěné pod jiným uživatelským účtem.
@@ -258,8 +256,6 @@
           href: error-kerberos-authentication-failed.md
         - name: 'Ověřte, zda je na cílovém počítači správně nakonfigurován server DNS.'
           href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
-        - name: 'Zdá se, že na vzdáleném počítači neběží sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE)'
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md
         - name: Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.
           href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
         - name: Nelze inicializovat komunikaci modelu DCOM.
@@ -278,7 +274,7 @@
           href: error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md
         - name: Pracovní proces webu byl ukončen službou IIS.
           href: error-web-site-worker-process-has-been-terminated-by-iis.md
-        - name: Není možné se připojit k počítači \<název>. Počítač se v síti nepodařilo najít.
+        - name: Není možné se připojit k počítači \<name>. Počítač se v síti nepodařilo najít.
           href: error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md
         - name: 'Ladění ve smíšeném režimu je podporované, jenom pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo vyšší.'
           href: error-mixed-mode-debugging-is-supported-only-when-using-microsoft-dotnet-framework-2-0-or-greater.md
@@ -402,7 +398,7 @@
                   href: javascript-console-commands.md
             - name: 'Spuštění ladicí relace (VB, C#, C++ a XAML)'
               href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
-            - name: Ladění kódu XAML v programu Blend for Visual Studio
+            - name: Ladění kódu XAML v programu Blend pro Visual Studio
               href: debug-xaml-in-blend.md
             - name: 'Přechod na ladicí relaci (XAML a C#)'
               items:
@@ -424,7 +420,7 @@
               href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
             - name: Doporučené nastavení vlastností
               href: managed-debugging-recommended-property-settings.md
-            - name: Aplikace Windows Forms
+            - name: Aplikace modelu Windows Forms
               href: debugging-preparation-windows-forms-applications.md
             - name: Služby systému Windows
               href: debugging-preparation-windows-services.md
@@ -558,13 +554,13 @@
           href: how-to-debug-injected-code.md
     - name: Ladění kódu GPU
       href: debugging-gpu-code.md
-    - name: Diagnostika grafiky (Ladění grafiky DirectX)
+    - name: Diagnostika grafiky (ladění grafiky DirectX)
       items:
         - name: Diagnostika grafiky (Ladění grafiky DirectX)
           href: visual-studio-graphics-diagnostics.md
         - name: Přehled
           href: overview-of-visual-studio-graphics-diagnostics.md
-        - name: začínáme
+        - name: Začínáme
           href: getting-started-with-visual-studio-graphics-diagnostics.md
         - name: Zaznamenání grafických informací
           href: capturing-graphics-information.md
@@ -628,9 +624,9 @@
               href: how-to-change-the-graphics-diagnostics-playback-machine.md
             - name: Použití diagnostiky grafiky se zařízením ARM
               href: how-to-use-graphics-diagnostics-with-an-arm-device.md
-        - name: Referenční informace
+        - name: Odkaz
           items:
-            - name: Referenční informace
+            - name: Odkaz
               href: reference-programmatic-capture.md
             - name: VsgDbg – třída
               items:
@@ -674,7 +670,7 @@
               items:
                 - name: Příprava na ladění technologie ASP.NET
                   href: preparing-to-debug-aspnet.md
-                - name: Systémové požadavky
+                - name: Požadavky na systém
                   href: aspnet-debugging-system-requirements.md
                 - name: Povolení ladění pro aplikace ASP.NET
                   items:
@@ -716,9 +712,9 @@
           items:
             - name: Chyby a řešení potíží
               href: debugging-web-applications-errors-and-troubleshooting.md
-            - name: Řešení potíží
+            - name: Poradce při potížích
               items:
-                - name: Řešení potíží
+                - name: Poradce při potížích
                   href: debugging-web-applications-troubleshooting.md
                 - name: Ověření nastavení vlastnosti služby IIS
                   href: how-to-verify-iis-property-settings.md
@@ -828,7 +824,7 @@
           href: error-user-could-not-execute-stored-procedure-sp-enable-sql-debug.md
         - name: Sdílení souborů systému Windows bylo nakonfigurováno...
           href: error-windows-file-sharing-has-been-configured-dot-dot-dot.md
-        - name: 'Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.'
+        - name: 'Připojení k procesu, který patří nedůvěryhodnému uživateli, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.'
           href: /visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015
         - name: Ladicí program musí spustit nedůvěryhodný příkaz.
           href: security-warning-debugger-must-execute-untrusted-command.md
