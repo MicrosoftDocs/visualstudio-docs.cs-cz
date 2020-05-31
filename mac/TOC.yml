@@ -6,6 +6,8 @@
       href: ide-tour.md
     - name: Visual Studio pro Mac pro uživatele Windows
       href: vsmac-for-windows-users.md
+    - name: Integrovaný terminál
+      href: integrated-terminal.md
 - name: Instalace
   items:
     - name: Instalace sady Visual Studio 2019 pro Mac

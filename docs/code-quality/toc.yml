@@ -338,6 +338,10 @@
                   href: ca1067.md
                 - name: 'CA1068: Parametry CancellationToken musí být poslední.'
                   href: ca1068.md
+                - name: 'CA1069: Výčty by neměly mít duplicitní hodnoty.'
+                  href: ca1069.md
+                - name: 'CA1070: Nedeklarujte pole událostí jako virtuální.'
+                  href: ca1070.md
                 - name: 'CA2210: Sestavení by měla mít platné silné názvy'
                   href: ca2210.md
             - name: Upozornění k dokumentaci
@@ -579,6 +583,10 @@
                   href: ca2007.md
                 - name: 'CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection'
                   href: ca2009.md
+                - name: 'CA2011: Nepřiřazujte vlastnost v rámci její metody setter'
+                  href: ca2011.md
+                - name: 'CA2015: Pro typy odvozené z MemoryManager<T> nedefinujte finalizační metody'
+                  href: ca2015.md
             - name: Upozornění zabezpečení
               items:
                 - name: Přehled
@@ -740,12 +748,24 @@
                   href: ca3147.md
                 - name: 'CA5358: Nepoužívat nezabezpečené režimy šifrování'
                   href: ca5358.md
+                - name: 'CA5359: Nezakazovat ověření certifikátu'
+                  href: ca5359.md
                 - name: 'CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování'
                   href: ca5361.md
+                - name: 'CA5362: Potenciální cyklus odkazů v deserializovaném grafu objektů'
+                  href: ca5362.md
                 - name: 'CA5363: Nezakazovat ověřování požadavků'
                   href: ca5363.md
                 - name: 'CA5364: Nepoužívejte zastaralé protokoly zabezpečení'
                   href: ca5364.md
+                - name: 'CA5365: Nezakazovat kontrolu hlaviček HTTP'
+                  href: ca5365.md
+                - name: 'CA5366: Pro DataSet Read XML použijte XmlReader.'
+                  href: ca5366.md
+                - name: 'CA5367: Neserializujte typy s poli ukazatelů.'
+                  href: ca5367.md
+                - name: 'CA5368: Pro třídy odvozené z Page nastavte ViewStateUserKey.'
+                  href: ca5368.md
                 - name: 'CA5369: Použít XmlReader pro Deserialize'
                   href: ca5369.md
                 - name: 'CA5370: Použít XmlReader pro ověřování čtečky'
@@ -756,20 +776,50 @@
                   href: ca5372.md
                 - name: 'CA5373: Nepoužívat zastaralou funkci odvození klíče'
                   href: ca5373.md
+                - name: 'CA5374: Nepoužívat XslTransform'
+                  href: ca5374.md
                 - name: 'CA5378: Nezakazujte ServicePointManagerSecurityProtocols'
                   href: ca5378.md
+                - name: 'CA5379: Nepoužívejte slabý algoritmus funkce odvození klíče (KDF).'
+                  href: ca5379.md
                 - name: 'CA5380: Nepřidávat certifikáty do kořenového úložiště'
                   href: ca5380.md
                 - name: 'CA5381: Zajistit, aby se certifikáty nepřidávaly do kořenového úložiště'
                   href: ca5381.md
+                - name: 'CA5382: Používejte v ASP.NET Core zabezpečené soubory cookie.'
+                  href: ca5382.md
+                - name: 'CA5383: Zajistěte použití zabezpečených souborů cookie v ASP.NET Core.'
+                  href: ca5383.md
+                - name: 'CA5384: Nepoužívejte algoritmus DSA (Digital Signature Algorithm).'
+                  href: ca5384.md
+                - name: 'CA5385: Použijte algoritmus RSA (Rivest-Shamir-Adleman) s dostatečnou velikostí klíče.'
+                  href: ca5385.md
                 - name: 'CA5386: Vyhněte se pevnému zakódování hodnoty SecurityProtocolType'
                   href: ca5386.md
+                - name: 'CA5387: Nepoužívat slabou funkci odvození klíče (KDF) s nedostatečným počtem iterací'
+                  href: ca5387.md
+                - name: 'CA5388: Při použití slabé funkce odvození klíče (KDF) zajistěte dostatečný počet iterací.'
+                  href: ca5388.md
                 - name: 'CA5389: Nepřidávat cestu položky archivace k cílové cestě systému souborů'
                   href: ca5389.md
+                - name: 'CA5390: Nepoužívejte pevně zakódovaný šifrovací klíč.'
+                  href: ca5390.md
+                - name: 'CA5394: Nepoužívat nezabezpečenou náhodnost'
+                  href: ca5394.md
+                - name: 'CA5396: Nastavit HttpOnly na hodnotu true pro HttpCookie'
+                  href: ca5396.md
                 - name: 'CA5397: Nepoužívejte zastaralé hodnoty SslProtocols'
                   href: ca5397.md
                 - name: 'CA5398: Vyhněte se pevně zakódovaným hodnotám SslProtocols'
                   href: ca5398.md
+                - name: 'CA5399: Definitivně zakázat kontrolu seznamu odvolaných certifikátů HttpClient'
+                  href: ca5399.md
+                - name: 'CA5400: Zkontrolujte, že kontrola seznamu odvolaných certifikátů HttpClient není vypnutá.'
+                  href: ca5400.md
+                - name: 'CA5401: Nepoužívat CreateEncryptor s nevýchozím inicializačním vektorem'
+                  href: ca5401.md
+                - name: 'CA5402: Použít CreateEncryptor s výchozím inicializačním vektorem'
+                  href: ca5402.md
                 - name: 'CA5403: Nepoužívejte pevně zakódovaný certifikát'
                   href: ca5403.md
             - name: Upozornění využití
@@ -863,5 +913,11 @@
                   href: ca2242.md
                 - name: 'CA2243: Řetězcové literály atributů by se měly správně parsovat'
                   href: ca2243.md
+                - name: 'CA2244: Neduplikujte inicializace indexovaných elementů.'
+                  href: ca2244.md
+                - name: 'CA2245: Nepřiřazujte vlastnost k ní samotné.'
+                  href: ca2245.md
+                - name: 'CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.'
+                  href: ca2246.md
             - name: Automatické pozastavení funkce
               href: automatic-feature-suspension.md

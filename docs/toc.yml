@@ -910,6 +910,8 @@
           href: ide/signing-in-to-visual-studio.md
         - name: Práce s několika uživatelskými účty
           href: ide/work-with-multiple-user-accounts.md
+        - name: 'Práce s účty, které vyžadují vícefaktorové ověřování'
+          href: ide/work-with-multi-factor-authentication.md
         - name: Prodloužení zkušební verze nebo aktualizace licence
           href: ide/how-to-unlock-visual-studio.md
     - name: Ladění výkonu sady Visual Studio
