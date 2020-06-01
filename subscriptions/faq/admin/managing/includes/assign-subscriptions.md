@@ -7,12 +7,12 @@ ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 7c90cb398e174d5b023668040352de11e1caaee3
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 192cb7118a9f431ce2e7a9396b67a919fad10bb9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386560"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200530"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>Jak se přiřazují předplatná sady Visual Studio?
 
@@ -22,7 +22,7 @@ Individuální přiřazení předplatných:
 
 1. V horní části stránky na webu [manage.visualstudio.com](https://manage.visualstudio.com) vyberte [kartu Spravovat předplatitele](https://manage.visualstudio.com/subscribers).
 2. Vyberte Přidat a zadejte jméno a e-mailovou adresu uživatele, kterému chcete přiřadit předplatné.
-    - Pokud vaše organizace využívá Azure Active Directory, v poli pro jméno se budou vyhledávat lidé v aktuálním adresáři. Uživatele můžete vybrat z výsledků hledání nebo přidat ručně.
+    1. Pokud vaše organizace využívá Azure Active Directory, v poli pro jméno se budou vyhledávat lidé v aktuálním adresáři. Uživatele můžete vybrat z výsledků hledání nebo přidat ručně.
 3. Pokud chcete předplatiteli po přihlášení k [portálu předplatných sady Visual Studio](https://my.visualstudio.com/) umožnit přístup ke stažení softwaru, nezapomeňte v části Nastavení stahování ponechat zapnutý přepínač Stahování.
 4. Vyplňte část Předvolby komunikace, abychom věděli, v jakém jazyce máme předplatitelům odeslat e-mail o přiřazení.
 5. Pokud chcete k přiřazení přidat nějaké poznámky, udělejte to v části Reference.
