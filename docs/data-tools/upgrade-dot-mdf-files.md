@@ -1,7 +1,7 @@
 ---
 title: Upgrade souborů .mdf
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - SQL Server Express
 - SQL Server LocalDB
@@ -14,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 195cab863554bc60478df4e80319eab80124140a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586091"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281120"
 ---
 # <a name="upgrade-mdf-files"></a>Upgrade souborů .mdf
 
-Toto téma popisuje možnosti upgradu databázového souboru ( *. mdf*) po instalaci novější verze sady Visual Studio. Obsahuje pokyny pro následující úlohy:
+Toto téma popisuje možnosti upgradu databázového souboru (*. mdf*) po instalaci novější verze sady Visual Studio. Obsahuje pokyny pro následující úlohy:
 
 - Upgrade databázového souboru pro použití novější verze SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ Toto téma popisuje možnosti upgradu databázového souboru ( *. mdf*) po insta
 
 - Nastavit SQL Server Express výchozím databázovým strojem
 
-Pomocí sady Visual Studio můžete otevřít projekt, který obsahuje soubor databáze ( *. mdf*), který byl vytvořen pomocí starší verze SQL Server Express nebo LocalDB. Chcete-li však pokračovat v vývoji projektu v aplikaci Visual Studio, musíte mít nainstalovanou verzi SQL Server Express nebo LocalDB nainstalované na stejném počítači jako Visual Studio nebo musíte upgradovat databázový soubor. Pokud provedete upgrade databázového souboru, nebudete k němu mít přístup pomocí starší verze SQL Server Express nebo LocalDB.
+Pomocí sady Visual Studio můžete otevřít projekt, který obsahuje soubor databáze (*. mdf*), který byl vytvořen pomocí starší verze SQL Server Express nebo LocalDB. Chcete-li však pokračovat v vývoji projektu v aplikaci Visual Studio, musíte mít nainstalovanou verzi SQL Server Express nebo LocalDB nainstalované na stejném počítači jako Visual Studio nebo musíte upgradovat databázový soubor. Pokud provedete upgrade databázového souboru, nebudete k němu mít přístup pomocí starší verze SQL Server Express nebo LocalDB.
 
 Může se také zobrazit výzva k upgradu databázového souboru, který byl vytvořen v dřívější verzi SQL Server Express nebo LocalDB, pokud verze souboru není kompatibilní s instancí SQL Server Express nebo, která je aktuálně nainstalovaná. K vyřešení tohoto problému Visual Studio vás vyzve k upgradu souboru.
 
@@ -61,13 +61,13 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
 2. V dialogovém okně **Přidat připojení** zadejte následující informace:
 
-    - **Zdroj dat**: `Microsoft SQL Server (SqlClient)`
+    - **Zdroj dat**:`Microsoft SQL Server (SqlClient)`
 
-    - **Server Name** (Název serveru):
+    - **Název serveru**:
 
-        - Chcete-li použít výchozí verzi: `(localdb)\MSSQLLocalDB`.  Tím se zadáte buď ProjectV12 nebo ProjectV13, v závislosti na tom, která verze sady Visual Studio je nainstalovaná a kdy se vytvořila první instance LocalDB. Uzel **MSSQLLocalDB** v **Průzkumník objektů systému SQL Server** ukazuje, na kterou verzi odkazuje.
+        - Použití výchozí verze: `(localdb)\MSSQLLocalDB` .  Tím se zadáte buď ProjectV12 nebo ProjectV13, v závislosti na tom, která verze sady Visual Studio je nainstalovaná a kdy se vytvořila první instance LocalDB. Uzel **MSSQLLocalDB** v **Průzkumník objektů systému SQL Server** ukazuje, na kterou verzi odkazuje.
 
-        - Použití konkrétní verze: `(localdb)\ProjectsV12` nebo `(localdb)\ProjectsV13`, kde V12 je LocalDB 2014 a v13 je LocalDB 2016.
+        - Použití konkrétní verze: `(localdb)\ProjectsV12` nebo `(localdb)\ProjectsV13` , kde V12 je LocalDB 2014 a v13 je LocalDB 2016.
 
     - **Připojit soubor databáze**: fyzická cesta primárního souboru *. mdf* .
 
@@ -79,7 +79,7 @@ Před upgradem databáze Vezměte v úvahu následující kritéria:
 
     Databáze je upgradována, je připojena k databázovému stroji LocalDB a již není kompatibilní se starší verzí nástroje LocalDB.
 
-SQL Server Express připojení můžete také upravit tak, aby používalo LocalDB, a to tak, že otevřete místní nabídku pro připojení a pak vyberete **změnit připojení**. V dialogovém okně **Upravit připojení** změňte název serveru na `(LocalDB)\MSSQLLocalDB`. V dialogovém okně **Upřesnit vlastnosti** se ujistěte, že je **uživatelská instance** nastavená na **hodnotu NEPRAVDA**.
+SQL Server Express připojení můžete také upravit tak, aby používalo LocalDB, a to tak, že otevřete místní nabídku pro připojení a pak vyberete **změnit připojení**. V dialogovém okně **Upravit připojení** změňte název serveru na `(LocalDB)\MSSQLLocalDB` . V dialogovém okně **Upřesnit vlastnosti** se ujistěte, že je **uživatelská instance** nastavená na **hodnotu NEPRAVDA**.
 
 ### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>Postup upgradu databázového souboru tak, aby používal verzi SQL Server Express
 
@@ -101,16 +101,16 @@ SQL Server Express připojení můžete také upravit tak, aby používalo Local
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Zpřístupnění SQL Server Express výchozím databázovým strojem
 
-1. Na panelu nabídek vyberte možnost **nástroje** > **Možnosti**.
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
 2. V dialogovém okně **Možnosti** rozbalte možnosti **nástroje databáze** a pak vyberte **datová připojení**.
 
-3. Do textového pole **název instance SQL Server** zadejte název instance SQL Server Express nebo LocalDB, které chcete použít. Pokud instance není pojmenována, zadejte `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB`.
+3. Do textového pole **název instance SQL Server** zadejte název instance SQL Server Express nebo LocalDB, které chcete použít. Pokud instance není pojmenována, zadejte `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB` .
 
 4. Vyberte tlačítko **OK**.
 
     SQL Server Express budou výchozím databázovým strojem pro vaše aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přístup k datům v sadě Visual Studio](accessing-data-in-visual-studio.md)

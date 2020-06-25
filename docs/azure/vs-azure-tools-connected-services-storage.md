@@ -6,21 +6,21 @@ manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: ca65086ce7ce09a1ca288c2f5cd04c31e00f8e95
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ddb0f2610473841a69ec69600cf9ef83cb898340
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911899"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280680"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio
 
 Pomocí sady Visual Studio můžete pomocí dialogového okna **Přidat připojené služby** připojit kterýkoli z následujících Azure Storage:
 
-- C#Cloudová služba
+- Cloudová služba C#
 - Mobilní služba back-endu .NET
 - Web nebo služba ASP.NET
 - Služba ASP.NET Core
@@ -72,9 +72,9 @@ Po dokončení dialogu Visual Studio přidá odkazy a upraví určité konfigura
 - Projekt cloudové služby (webové role a role pracovního procesu) – [co se stalo – projekty cloudových služeb](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - Projekt webové úlohy – [co se stalo – projekty WebJob](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fórum MSDN: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Blog týmu Microsoft Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Dokumentace k Azure Storage](/azure/storage/)
+- [Dokumentace ke službě Azure Storage](/azure/storage/)
 - [Připojené služby (Visual Studio pro Mac)](/visualstudio/mac/connected-services)

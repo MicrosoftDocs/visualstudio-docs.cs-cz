@@ -1,7 +1,7 @@
 ---
 title: Windows Communication Foundation a WCF Data Services
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -35,56 +35,56 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: abcfde777223ada130e06ab7766319e1d982258c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585935"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281042"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio
 
-Visual Studio poskytuje nástroje pro práci s Windows Communication Foundation (WCF) a WCF Data Services technologie Microsoftu pro vytváření distribuovaných aplikací. Toto téma poskytuje Úvod ke službám z perspektivy sady Visual Studio. Úplnou dokumentaci najdete v tématu [4.5 služby WCF Data](/dotnet/framework/data/wcf/index).
+Visual Studio poskytuje nástroje pro práci s Windows Communication Foundation (WCF) a WCF Data Services technologie Microsoftu pro vytváření distribuovaných aplikací. Toto téma poskytuje Úvod ke službám z perspektivy sady Visual Studio. Úplnou dokumentaci najdete v tématu [WCF Data Services 4,5](/dotnet/framework/data/wcf/index).
 
 ## <a name="what-is-wcf"></a>Co je WCF?
 
-Windows Communication Foundation (WCF) je sjednocený rámec pro vytváření zabezpečených, spolehlivých, transakčních a interoperabilních distribuovaných aplikací. Nahrazuje starší technologie pro komunikaci mezi procesy, jako jsou webové služby na ASMX, Vzdálená komunikace .NET, podnikové služby (DCOM) a služba MSMQ. WCF v sobě spojuje funkčnost všech těchto technologií ještě používáte v rámci jednotný programovací model. To zjednodušuje vývoj distribuovaných aplikací.
+Windows Communication Foundation (WCF) je sjednocený rámec pro vytváření zabezpečených, spolehlivých, transakčních a interoperabilních distribuovaných aplikací. Nahrazuje starší technologie pro komunikaci mezi procesy, jako jsou webové služby na ASMX, Vzdálená komunikace .NET, podnikové služby (DCOM) a služba MSMQ. WCF přináší funkce všech těchto technologií v rámci jednotného programovacího modelu. To zjednodušuje prostředí vývoje distribuovaných aplikací.
 
-### <a name="what-are-wcf-data-services"></a>Co jsou služby WCF Data Services
+### <a name="what-are-wcf-data-services"></a>Co jsou WCF Data Services
 
-WCF Data Services je implementace standardu protokolu OData (Open data).  WCF Data Services umožňuje vystavit tabulková data jako sadu rozhraní REST API, což vám umožní vracet data pomocí standardních příkazů HTTP, jako je GET, POST, PUT nebo DELETE. Na straně serveru se nahrazuje služeb WCF Data Services [rozhraní ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis) pro vytvoření nové služby OData. Klientská knihovna WCF Data Services je nadále vhodnou volbou pro využívání služeb OData v aplikaci .NET ze sady Visual Studio (**projekt** > **Přidat odkaz na službu**). Další informace najdete v tématu [4.5 služby WCF Data](/dotnet/framework/data/wcf).
+WCF Data Services je implementace standardu protokolu OData (Open data).  WCF Data Services umožňuje vystavit tabulková data jako sadu rozhraní REST API, což vám umožní vracet data pomocí standardních příkazů HTTP, jako je GET, POST, PUT nebo DELETE. Na straně serveru WCF Data Services pro vytváření nových služeb OData nahrazuje [webový rozhraní API ASP.NET](https://dotnet.microsoft.com/apps/aspnet/apis) . Klientská knihovna WCF Data Services je nadále vhodnou volbou pro využívání služeb OData v aplikaci .NET ze sady Visual Studio (**projekt**  >  **Přidat odkaz na službu**). Další informace najdete v tématu [WCF Data Services 4,5](/dotnet/framework/data/wcf).
 
 ### <a name="wcf-programming-model"></a>Programovací model WCF
 
-Programovací model WCF je založen na komunikaci mezi dvěma entitami: službou WCF a klientem WCF. Programovací model je zapouzdřený v oboru názvů <xref:System.ServiceModel> v .NET.
+Programovací model WCF je založen na komunikaci mezi dvěma entitami: službou WCF a klientem WCF. Programovací model je zapouzdřený v <xref:System.ServiceModel> oboru názvů v .NET.
 
-### <a name="wcf-service"></a>Služby WCF
+### <a name="wcf-service"></a>Služba WCF
 
-Služba WCF je založená na rozhraní, které definuje kontrakt mezi službou a klienta. Je označené atributem <xref:System.ServiceModel.ServiceContractAttribute> atributu, jak je znázorněno v následujícím kódu:
+Služba WCF je založena na rozhraní, které definuje kontrakt mezi službou a klientem. Je označen <xref:System.ServiceModel.ServiceContractAttribute> atributem, jak je znázorněno v následujícím kódu:
 
 [!code-csharp[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)]
 [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]
 
-Definování funkcí nebo metod, které jsou vystavené služby WCF jejich označením <xref:System.ServiceModel.OperationContractAttribute> atribut.
+Můžete definovat funkce nebo metody, které jsou zpřístupněny službou WCF jejich označením pomocí <xref:System.ServiceModel.OperationContractAttribute> atributu.
 
 [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)]
 [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]
 
-Kromě toho můžete zveřejnit serializovaná data složeného typu s označením <xref:System.Runtime.Serialization.DataContractAttribute> atribut. To umožňuje datové vazby v klientovi.
+Kromě toho můžete vystavit Serializovaná data tak, že označíte složený typ s <xref:System.Runtime.Serialization.DataContractAttribute> atributem. Tato možnost povolí datovou vazbu v klientovi.
 
-Po definování rozhraní a jeho metody jsou zapouzdřeny v třídě, která implementuje rozhraní. Více kontraktů služby můžete implementovat jednu třídu služby WCF.
+Po definování rozhraní a jeho metod jsou zapouzdřeny ve třídě, která implementuje rozhraní. Jedna třída služby WCF může implementovat několik kontraktů služeb.
 
-Služby WCF je přístupný pro spotřebu prostřednictvím co se označuje jako *koncový bod*. Koncový bod poskytuje jediný způsob, jak komunikovat se službou; službu nelze přistupovat prostřednictvím přímého odkazu stejně jako s jinými třídami.
+Služba WCF je vystavená pro spotřebu prostřednictvím toho, co je známé jako *koncový bod*. Koncový bod poskytuje jediný způsob, jak komunikovat se službou. k této službě nemůžete přistupovat přes přímý odkaz, stejně jako u jiných tříd.
 
-Koncový bod se skládá z adresy, vazby a kontrakt. Adresa definuje, ve kterém se služba nachází; může jít adresu URL, adresa protokolu FTP, nebo síť nebo místní cestu. Vazby definuje způsob, jakým komunikujete se službou. Vazby WCF poskytují univerzální model pro zadání protokolu, jako je například HTTP nebo FTP, mechanismus zabezpečení, jako je například ověřování Windows nebo uživatelská jména a hesla a mnohem víc. Kontrakt zahrnuje operace, které jsou vystavené třídy služby WCF.
+Koncový bod se skládá z adresy, vazby a kontraktu. Adresa určuje, kde se služba nachází; může to být adresa URL, adresa FTP nebo síťová nebo místní cesta. Vazba definuje způsob, jakým komunikujete se službou. Vazby WCF poskytují univerzální model pro určení protokolu, jako je HTTP nebo FTP, mechanismu zabezpečení, jako je například ověřování systému Windows nebo uživatelská jména a hesla, a mnoho dalšího. Kontrakt zahrnuje operace, které jsou zpřístupněny třídou služby WCF.
 
-Více koncových bodů mohou být vystaveny pro jednu službu WCF. To umožňuje různé klienty komunikovat se stejnou službou různými způsoby. Například bankovní služba může poskytnout jeden koncový bod pro zaměstnance a druhý pro externí zákazníky, každý pomocí jiné adresy, vazby a/nebo smlouvy.
+Pro jednu službu WCF může být vystaveno více koncových bodů. Díky tomu můžou Různí klienti komunikovat se stejnou službou různými způsoby. Například bankovní služba může poskytovat jeden koncový bod pro zaměstnance a druhý pro externí zákazníky, přičemž každý z nich používá jinou adresu, vazbu nebo kontrakt.
 
 ### <a name="wcf-client"></a>Klient WCF
 
-Klienta WCF se skládá z *proxy* , který umožňuje aplikaci komunikovat se službou WCF a koncový bod, který odpovídá koncový bod definovaný pro službu. Proxy je vygenerován na straně klienta v souboru *App. config* a obsahuje informace o typech a metodách, které jsou zpřístupněny službou. Pro služby, které poskytují několik koncových bodů můžete klienta vybrat ten, který nejlépe vyhovuje jejich potřebám, například ke komunikaci přes protokol HTTP a používat ověřování Windows.
+Klient WCF se skládá z *proxy serveru* , který umožňuje aplikaci komunikovat se službou WCF, a koncovým bodem, který odpovídá koncovému bodu definovanému pro službu. Proxy je vygenerován na straně klienta v souboru *app.config* a obsahuje informace o typech a metodách, které jsou zpřístupněny službou. U služeb, které zveřejňují více koncových bodů, může klient vybrat ten, který nejlépe vyhovuje jeho potřebám, například pro komunikaci přes protokol HTTP a použití ověřování systému Windows.
 
-Po vytvoření klienta WCF odkazujete služby ve vašem kódu stejně jako jakýkoli jiný objekt. Například volání `GetData` metoda uvedená výše, měli byste napsat kód, který má následující podobu:
+Po vytvoření klienta WCF odkazujete na službu v kódu stejným způsobem jako jakýkoliv jiný objekt. Například pro volání `GetData` výše uvedené metody byste měli napsat kód, který se podobá následujícímu:
 
 [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)]
 [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]
@@ -95,13 +95,13 @@ Visual Studio poskytuje nástroje, které vám pomůžou vytvořit služby WCF i
 
 ### <a name="create-and-test-wcf-services"></a>Vytváření a testování služeb WCF
 
-Šablony sady Visual Studio WCF můžete použít jako základ k rychlému vytvoření vlastní služby. Pak můžete automaticky hostitel služby WCF a testovacího klienta WCF pro ladění a otestování služby. Tyto nástroje společně poskytují rychlý a pohodlný ladění a testovací cyklus a eliminuje požadavek na potvrzení na model hostingu v rané fázi.
+Šablony sady Visual Studio WCF můžete použít jako základ k rychlému vytvoření vlastní služby. Pak můžete použít automatické hostování služby WCF a testovacího klienta WCF pro ladění a testování služby. Tyto nástroje společně poskytují rychlý a pohodlný cyklus ladění a testování a odstraňují požadavek na zápis do modelu hostování v rané fázi.
 
-#### <a name="wcf-templates"></a>Šablony pro WCF
+#### <a name="wcf-templates"></a>Šablony WCF
 
-Šablony sady Visual Studio pro WCF poskytují základní strukturu tříd pro vývoj služeb. Jsou k dispozici v několika šablon WCF **přidat nový projekt** dialogové okno. Patří mezi ně lLibrary projekty služby WCF, websites služby WCF a šablony položek služby WCF.
+Šablony sady Visual Studio pro WCF poskytují základní strukturu tříd pro vývoj služeb. V dialogovém okně **Přidat nový projekt** jsou k dispozici několik šablon WCF. Patří mezi ně lLibrary projekty služby WCF, websites služby WCF a šablony položek služby WCF.
 
-Když vyberete šablonu, soubory jsou přidány pro servisní smlouvy, implementace služby a konfiguraci služby. Všechny atributy vyžadované již byly přidány, vytvoření jednoduchého typu "Hello World" služby, a nemáte psát jakýkoli kód. Samozřejmě, můžete přidat kód k poskytování funkcí a metod pro vaši službu reálného světa, ale šablony poskytují základ.
+Když vyberete šablonu, přidají se soubory pro kontrakt služby, implementaci služby a konfiguraci služby. Všechny nezbytné atributy jsou již přidány, vytváření jednoduchého typu "Hello World" služby a nemusíte psát žádný kód. Budete samozřejmě chtít přidat kód pro poskytování funkcí a metod pro vaši skutečnou světovou službu, ale šablony poskytují základní základ.
 
 Další informace o šablonách WCF najdete v tématu [šablony pro WCF sady Visual Studio](/dotnet/framework/wcf/wcf-vs-templates).
 
@@ -109,35 +109,35 @@ Další informace o šablonách WCF najdete v tématu [šablony pro WCF sady Vis
 
 Po spuštění ladicího programu sady Visual Studio (stisknutím klávesy **F5**) pro projekt služby WCF je hostitelský nástroj služby WCF automaticky spuštěn pro místní hostování služby. Hostitel služby WCF vypíše služby v projektu služby WCF, načte konfiguraci projektu a vytvoří instanci hostitele pro každou službu, kterou najde.
 
-Pomocí hostitele služby WCF můžete testovat službu WCF bez psaní kódu navíc nebo potvrzení pouze určitého hostitele během vývoje.
+Pomocí hostitele služby WCF můžete testovat službu WCF bez psaní dalšího kódu nebo potvrzení konkrétního hostitele během vývoje.
 
-Další informace o hostiteli služby WCF najdete v tématu [Hostitel služby WCF (WcfSvcHost. exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
+Další informace o hostiteli služby WCF najdete v tématu [Hostitel služby WCF (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).
 
 #### <a name="wcf-test-client"></a>Testovací klient WCF
 
-Nástroj testovacího klienta WCF umožňuje vstupní parametry testu, odeslat tento vstup na službu WCF a zobrazovat odpovědi, které služba odesílá zpět. Poskytuje pohodlné službu testování prostředí, když ho spojovat se hostitel služby WCF. Vyhledejte nástroj ve složce *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* .
+Nástroj testovacího klienta WCF umožňuje zadat parametry testu, odeslat tento vstup do služby WCF a zobrazit odpověď, kterou služba odesílá zpět. Nabízí praktické prostředí pro testování služeb při kombinaci s hostitelem služby WCF. Vyhledejte nástroj ve složce *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* .
 
-Když stisknete klávesu **F5** k ladění projektu služby WCF, otevře se klient testu WCF a zobrazí seznam koncových bodů služby, které jsou definovány v konfiguračním souboru. Můžete testovat parametry a spustit službu a opakujte tento postup a průběžné testování a ověřování služby.
+Když stisknete klávesu **F5** k ladění projektu služby WCF, otevře se klient testu WCF a zobrazí seznam koncových bodů služby, které jsou definovány v konfiguračním souboru. Můžete testovat parametry a spustit službu a opakováním tohoto procesu průběžně testovat a ověřovat vaši službu.
 
-Další informace o testovacím klientovi WCF naleznete v tématu [klient testu WCF (WcfTestClient. exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
+Další informace o testovacím klientovi WCF najdete v článku [WCF test Client (WcfTestClient.exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).
 
 ### <a name="accessing-wcf-services-in-visual-studio"></a>Přístup ke službám WCF v aplikaci Visual Studio
 
-Visual Studio zjednodušuje úlohu vytváření klientů WCF, automatické generování proxy serveru a koncového bodu pro služby, které přidáte pomocí dialogového okna **Přidat odkaz na službu** . Do souboru *App. config* se přidají všechny potřebné informace o konfiguraci. Většinu času, vše, co musíte udělat, je vytvořit instanci služby použít.
+Visual Studio zjednodušuje úlohu vytváření klientů WCF, automatické generování proxy serveru a koncového bodu pro služby, které přidáte pomocí dialogového okna **Přidat odkaz na službu** . Do souboru *app.config* jsou přidány všechny nezbytné informace o konfiguraci. Ve většině případů je vše, co musíte udělat, vytvořit instanci služby, aby ji bylo možné použít.
 
-**Přidat odkaz na službu** dialogové okno umožňuje zadat adresu pro službu nebo vyhledejte službu, která je definována v rámci vašeho řešení. Dialogové okno vrátí seznam operací poskytuje tyto služby a služby. Také umožňuje definovat obor názvů, ve které bude odkazovat na službu v kódu.
+Dialogové okno **Přidat odkaz na službu** umožňuje zadat adresu služby nebo vyhledat službu, která je definována ve vašem řešení. Dialogové okno vrátí seznam služeb a operací poskytovaných těmito službami. Umožňuje také definovat obor názvů, pomocí kterého budete odkazovat na služby v kódu.
 
-**Nakonfigurovat odkazy na služby** dialogové okno umožňuje upravit konfiguraci pro službu. Můžete změnit adresu pro službu, zadat úroveň přístupu, asynchronní chování a typy kontraktů zpráv a nakonfigurovat znovuvyužití typů.
+Dialogové okno **konfigurace odkazů na službu** umožňuje přizpůsobit konfiguraci služby. Můžete změnit adresu pro službu, zadat úroveň přístupu, asynchronní chování a typy kontraktů zpráv a nakonfigurovat opakované použití typu.
 
 ## <a name="how-to-select-a-service-endpoint"></a>Postupy: výběr koncového bodu služby
 
-Některé služby Windows Communication Foundation (WCF) vystavit několik koncových bodů, pomocí kterých může klient komunikovat se službou. Služba může například vystavovat jeden koncový bod, který používá vazby HTTP a uživatelské jméno a heslo a druhý koncový bod, který používá ověřování pomocí protokolu FTP a systému Windows. První koncový bod můžou používat aplikace, které přístup ke službě z mimo bránu firewall, zatímco druhá mohou být použity v síti intranet.
+Některé služby Windows Communication Foundation (WCF) zpřístupňují několik koncových bodů, prostřednictvím kterých klient může komunikovat se službou. Služba může například vystavovat jeden koncový bod, který používá vazby HTTP a uživatelské jméno a heslo a druhý koncový bod, který používá ověřování pomocí protokolu FTP a systému Windows. První koncový bod můžou použít aplikace přistupující k této službě mimo bránu firewall, zatímco druhá se může použít na intranetu.
 
-V takovém případě můžete zadat `endpointConfigurationName` jako parametr do konstruktoru pro odkaz na službu.
+V takovém případě můžete zadat `endpointConfigurationName` jako parametr konstruktoru pro odkaz na službu.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-select-a-service-endpoint"></a>Chcete-li vybrat koncový bod služby
+### <a name="to-select-a-service-endpoint"></a>Výběr koncového bodu služby
 
 1. Přidejte odkaz na službu WCF tak, že kliknete pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a zvolíte **Přidat odkaz na službu**.
 
@@ -152,122 +152,122 @@ V takovém případě můžete zadat `endpointConfigurationName` jako parametr d
     ```
 
     > [!NOTE]
-    > Nahraďte *ServiceReference* s oborem názvů pro odkaz na službu a nahraďte *Service1Client* s názvem služby.
+    > Nahraďte *ServiceReference* oborem názvů pro odkaz na službu a nahraďte *Service1Client* názvem služby.
 
 3. Zobrazí se seznam IntelliSense, který obsahuje přetížení pro konstruktor. Vyberte `endpointConfigurationName As String` přetížení.
 
-4. Po přetížení, zadejte `=` *ConfigurationName*, kde *ConfigurationName* je název koncového bodu, který chcete použít.
+4. Po přetížení zadejte `=` *ConfigurationName*, kde *ConfigurationName* je název koncového bodu, který chcete použít.
 
     > [!NOTE]
-    > Pokud neznáte názvy dostupných koncových bodů, najdete je v souboru *App. config* .
+    > Pokud názvy dostupných koncových bodů neznáte, najdete je v souboru *app.config* .
 
-### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Chcete-li najít dostupné koncové body služby WCF
+### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>Vyhledání dostupných koncových bodů pro službu WCF
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor **App. config** pro projekt, který obsahuje odkaz na službu, a pak klikněte na tlačítko **otevřít**. Soubor se zobrazí v editoru kódu.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na soubor **app.config** pro projekt, který obsahuje odkaz na službu, a pak klikněte na **otevřít**. Soubor se zobrazí v editoru kódu.
 
-2. Hledat `<Client>` značky v souboru.
+2. Vyhledejte `<Client>` značku v souboru.
 
-3. Vyhledejte pod `<Client>` značky pro značky začínající `<Endpoint>`.
+3. Pod `<Client>` značkou vyhledejte značku, která začíná na `<Endpoint>` .
 
-     Pokud odkaz na službu poskytuje několik koncových bodů, bude existovat dva nebo více `<Endpoint` značky.
+     Pokud odkaz na službu poskytuje více koncových bodů, bude obsahovat dvě nebo více `<Endpoint` značek.
 
-4. Uvnitř značky `<EndPoint>` naleznete parametr`"` `name="`*SomeService* (kde *SomeService* představuje název koncového bodu). Toto je název koncového bodu, který lze předat `endpointConfigurationName As String` přetížení konstruktoru pro odkaz na službu.
+4. Uvnitř `<EndPoint>` značky najdete `name="` parametr *SomeService* `"` (kde *SomeService* představuje název koncového bodu). Toto je název koncového bodu, který lze předat `endpointConfigurationName As String` přetížení konstruktoru pro odkaz na službu.
 
 ## <a name="how-to-call-a-service-method-asynchronously"></a>Postupy: asynchronní volání metody služby
 
-Většina metod služby Windows Communication Foundation (WCF) může volat synchronně nebo asynchronně. Asynchronní volání metody umožňuje vaší aplikaci a pokračujte v práci, zatímco metoda je volána při práci s pomalým připojením.
+Většina metod ve službě Windows Communication Foundation (WCF) se může volat buď synchronně, nebo asynchronně. Asynchronní volání metody umožňuje, aby vaše aplikace pokračovala v práci, zatímco metoda je volána, když funguje přes pomalé připojení.
 
-Ve výchozím nastavení, když je přidán odkaz na službu do projektu, je nakonfigurován tak, aby volal metody synchronně. Můžete změnit chování při volání metody asynchronně změnou nastavení v **nastavit odkaz na službu** dialogové okno.
+Ve výchozím nastavení, když je přidán odkaz na službu do projektu, je nakonfigurován tak, aby volal metody synchronně. Chování můžete změnit na asynchronní volání metod změnou nastavení v dialogovém okně **Konfigurovat odkaz na službu** .
 
 > [!NOTE]
-> Tato možnost nastavená na základě služby. Pokud jedna metoda pro službu je volána asynchronně, všechny metody musí být volána asynchronně.
+> Tato možnost je nastavena na základě jednotlivých služeb. Pokud je jedna metoda pro službu volána asynchronně, všechny metody musí být volány asynchronně.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-call-a-service-method-asynchronously"></a>Asynchronně volat metodu služby
+### <a name="to-call-a-service-method-asynchronously"></a>Postup asynchronního volání metody služby
 
-1. V **Průzkumníka řešení**, vyberte odkaz na službu.
+1. V **Průzkumník řešení**vyberte odkaz na službu.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **nastavit odkaz na službu**.
+2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
-3. V **nastavit odkaz na službu** dialogové okno, vyberte **Generovat asynchronní operace** zaškrtávací políčko.
+3. V dialogovém okně **Konfigurovat odkaz na službu** vyberte zaškrtávací políčko **Generovat asynchronní operace** .
 
 ## <a name="how-to-bind-data-returned-by-a-service"></a>Postupy: vytvoření vazby dat vrácených službou
 
-Můžete vytvořit vazbu dat vrácené službou Windows Communication Foundation (WCF) na ovládací prvek, stejně jako kterýkoli jiný zdroj dat. můžete svázat do ovládacího prvku. Když přidáte odkaz na službu WCF, pokud služba obsahuje složené typy, které nevracejí data, se automaticky přidají do **zdroje dat** okna.
+Data vrácená službou Windows Communication Foundation (WCF) můžete navazovat do ovládacího prvku stejně, jako můžete navazovat na ovládací prvek jakýkoliv jiný zdroj dat. Pokud přidáte odkaz na službu WCF, pokud služba obsahuje složené typy, které vracejí data, budou automaticky přidány do okna **zdroje dat** .
 
-### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>K vytvoření vazby ovládacího prvku do jednoho datového pole vrácené službou WCF
+### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>Svázání ovládacího prvku s jedním datovým polem vráceným službou WCF
 
-1. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+1. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
    Zobrazí se okno **zdroje dat** .
 
-2. V **zdroje dat** okna, rozbalte uzel pro odkaz na službu. Všechny složené typy vrácené zobrazením služby.
+2. V okně **zdroje dat** rozbalte uzel pro svůj odkaz na službu. Všechny složené typy vrácené zobrazením služby.
 
-3. Rozbalte uzel typu. Zobrazí se datová pole pro daný typ.
+3. Rozbalte uzel pro typ. Zobrazí se datová pole pro daný typ.
 
-4. Vyberte pole a klikněte na šipku rozevíracího seznamu a zobrazte seznam ovládacích prvků, které jsou k dispozici pro datový typ.
+4. Vyberte pole a kliknutím na šipku rozevíracího seznamu zobrazte seznam ovládacích prvků, které jsou k dispozici pro datový typ.
 
 5. Klikněte na typ ovládacího prvku, na který chcete vytvořit vazby.
 
-6. Přetáhněte pole do formuláře. Ovládací prvek je přidán do formuláře společně s komponentou <xref:System.Windows.Forms.BindingSource> a komponentou <xref:System.Windows.Forms.BindingNavigator>.
+6. Přetáhněte pole na formulář. Ovládací prvek je přidán do formuláře společně s <xref:System.Windows.Forms.BindingSource> komponentou a <xref:System.Windows.Forms.BindingNavigator> komponentou.
 
-7. Opakujte kroky 4 až 6 pro jakékoli jiné pole, které chcete vytvořit vazbu.
+7. Opakujte kroky 4 až 6 pro všechna další pole, která chcete vytvořit.
 
-### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>K vytvoření vazby ovládacího prvku na složený typ vrácené službou WCF
+### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>Navázání ovládacího prvku na složený typ vrácený službou WCF
 
-1. Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**. Zobrazí se okno **zdroje dat** .
+1. V nabídce **data** vyberte možnost **Zobrazit zdroje dat**. Zobrazí se okno **zdroje dat** .
 
-2. V **zdroje dat** okna, rozbalte uzel pro odkaz na službu. Všechny složené typy vrácené zobrazením služby.
+2. V okně **zdroje dat** rozbalte uzel pro svůj odkaz na službu. Všechny složené typy vrácené zobrazením služby.
 
-3. Vyberte uzel pro typ a klikněte na šipku rozevíracího seznamu a zobrazte seznam dostupných možností.
+3. Vyberte uzel pro typ a kliknutím na šipku rozevíracího seznamu zobrazte seznam dostupných možností.
 
-4. Klikněte na možnost **DataGridView** k zobrazení dat v mřížce nebo **podrobnosti** k zobrazení dat v jednotlivých ovládacích prvků.
+4. Klikněte na tlačítko **DataGridView** a zobrazte tak data v tabulce nebo v **podrobnostech** , aby se zobrazila data v jednotlivých ovládacích prvcích.
 
-5. Přetáhněte uzel na formuláři. Ovládací prvky jsou přidány do formuláře společně s <xref:System.Windows.Forms.BindingSource> komponentou a <xref:System.Windows.Forms.BindingNavigator> komponentou.
+5. Přetáhněte uzel do formuláře. Ovládací prvky jsou přidány do formuláře společně s <xref:System.Windows.Forms.BindingSource> komponentou a <xref:System.Windows.Forms.BindingNavigator> komponentou.
 
 ## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>Postupy: Konfigurace služby pro opětovné použití stávajících typů
 
-Při odkazu na službu se přidá do projektu, jsou generovány všechny typy definované v rámci služby v místním projektu. V mnoha případech to vytvoří duplicitní typy, pokud služba používá běžné typy rozhraní .NET nebo když jsou typy definovány ve sdílené knihovně.
+Při přidání odkazu na službu do projektu jsou všechny typy definované ve službě generovány v místním projektu. V mnoha případech to vytvoří duplicitní typy, pokud služba používá běžné typy rozhraní .NET nebo když jsou typy definovány ve sdílené knihovně.
 
-K tomuto problému vyhnout, typy v odkazovaných sestaveních jsou sdílené ve výchozím nastavení. Pokud chcete zakázat sdílení typu pro jeden nebo více sestavení, můžete provést, **nakonfigurovat odkazy na služby** dialogové okno.
+Chcete-li se tomuto problému vyhnout, jsou typy v odkazovaných sestaveních sdíleny ve výchozím nastavení. Pokud chcete zakázat sdílení typů pro jedno nebo více sestavení, můžete tak učinit v dialogovém okně **konfigurace odkazů na službu** .
 
-### <a name="to-disable-type-sharing-in-a-single-assembly"></a>Zakázat sdílení do jednoho sestavení typu
+### <a name="to-disable-type-sharing-in-a-single-assembly"></a>Zakázání sdílení typu v jednom sestavení
 
-1. V **Průzkumníka řešení**, vyberte odkaz na službu.
+1. V **Průzkumník řešení**vyberte odkaz na službu.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **nastavit odkaz na službu**.
+2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
-3. V **nakonfigurovat odkazy na služby** dialogu **znovu použít typy v zadaných odkazovaných sestaveních**.
+3. V dialogovém okně **konfigurovat odkazy na službu** vyberte možnost **znovu použít typy v zadaných odkazovaných sestaveních**.
 
-4. Zaškrtněte políčko pro každé sestavení, ve kterém chcete povolit typ sdílení. Zakázat sdílení pro sestavení typu, ponechejte políčko zaškrtnuto.
+4. Zaškrtněte políčko pro každé sestavení, ve kterém chcete povolit sdílení typů. Chcete-li zakázat sdílení typů pro sestavení, ponechejte políčko nezaškrtnuté.
 
-### <a name="to-disable-type-sharing-in-all-assemblies"></a>Zakázat sdílení ve všech sestaveních typu
+### <a name="to-disable-type-sharing-in-all-assemblies"></a>Zakázání sdílení typů ve všech sestaveních
 
-1. V **Průzkumníka řešení**, vyberte odkaz na službu.
+1. V **Průzkumník řešení**vyberte odkaz na službu.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **nastavit odkaz na službu**.
+2. V nabídce **projekt** klikněte na položku **Konfigurovat odkaz na službu**.
 
-3. V **nakonfigurovat odkazy na služby** dialogové okno, zrušte **znovu použít typy v odkazovaných sestaveních** zaškrtávací políčko.
+3. V dialogovém okně **konfigurovat odkazy na službu** zrušte zaškrtnutí políčka **znovu použít typy v odkazovaných sestaveních** .
 
-## <a name="related-topics"></a>Příbuzná témata
+## <a name="related-topics"></a>Související témata
 
-| Název | Popis |
+| Nadpis | Popis |
 | - | - |
 | [Návod: Vytvoření jednoduché služby WCF v modelu Windows Forms](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | Poskytuje podrobné ukázky vytváření a používání služeb WCF v aplikaci Visual Studio. |
 | [Návod: vytvoření datové služby WCF pomocí WPF a Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | Poskytuje podrobné informace o tom, jak vytvořit a používat WCF Data Services v aplikaci Visual Studio. |
 | [Používání vývojářských nástrojů WCF](/dotnet/framework/wcf/using-the-wcf-development-tools) | Popisuje, jak vytvářet a testovat služby WCF v aplikaci Visual Studio. |
 | | [Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
-| [Řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md) | Uvádí některé běžné chyby, které se mohou vyskytnout s odkazy na služby a jak nechcete, aby. |
-| [Ladění služeb WCF](../debugger/debugging-wcf-services.md) | Popisuje běžné problémy ladění a postupy, které se můžete setkat při ladění služeb WCF. |
-| [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Obsahuje podrobné pokyny pro vytvoření typové datové sady a oddělení kódu TableAdapter a datové sady do více projektů. |
-| [Dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md) | Popisuje prvky uživatelského rozhraní **nastavit odkaz na službu** dialogové okno. |
+| [Řešení potíží s odkazy na služby](../data-tools/troubleshooting-service-references.md) | Představuje některé běžné chyby, ke kterým může dojít s odkazy na služby a jak je zabránit. |
+| [Ladění služeb WCF](../debugger/debugging-wcf-services.md) | Popisuje běžné problémy s laděním a techniky, se kterými se můžete setkat při ladění služeb WCF. |
+| [Návod: Vytvoření n-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | Poskytuje podrobné pokyny pro vytvoření typové datové sady a oddělení kódu TableAdapter a datové sady do více projektů. |
+| [Dialogové okno Konfigurovat odkaz na službu](../data-tools/configure-service-reference-dialog-box.md) | Popisuje prvky uživatelského rozhraní dialogového okna **Konfigurovat odkaz na službu** . |
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

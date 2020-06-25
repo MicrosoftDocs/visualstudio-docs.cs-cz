@@ -1,7 +1,7 @@
 ---
 title: Rozdělování datových sad a objektů TableAdapter do různých projektů
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, separating Datasets and TableAdapters
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8df444646512ecd4dba866fccf6da5fdf7a8bab3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 504e2411d20a85c85047e4827d613bf4f48034e9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586221"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281549"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Rozdělování datových sad a objektů TableAdapter do různých projektů
 Typové datové sady byly vylepšeny, takže třídy [objekty TableAdapter](create-and-configure-tableadapters.md) a DataSet lze generovat do samostatných projektů. Díky tomu můžete rychle oddělit aplikační vrstvy a generovat n-vrstvou datovou aplikaci.
@@ -57,7 +57,7 @@ Ve výchozím nastavení platí, že po oddělení datové sady a kódu TableAda
 > [!NOTE]
 > Chcete-li zobrazit vygenerovaný soubor třídy, vyberte projekt DataSet nebo TableAdapter. Pak v **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled N-vrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
 - [Návod: vytvoření N-vrstvých datových aplikací](../data-tools/walkthrough-creating-an-n-tier-data-application.md)

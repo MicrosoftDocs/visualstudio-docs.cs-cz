@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c16b603f1c38eeb3e71718937e7c669ae8ebc9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184546"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280873"
 ---
 # <a name="create-custom-data-visualizers"></a>Vytváření vlastních vizualizací dat
+
  *Vizualizér* je součástí [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] uživatelského rozhraní ladicího programu, které zobrazuje proměnnou nebo objekt způsobem vhodným pro svůj datový typ. Například Vizualizér HTML interpretuje řetězec HTML a zobrazí výsledek tak, jak by se zobrazil v okně prohlížeče. Vizualizér rastrového obrázku interpretuje strukturu rastrového obrázku a zobrazuje obrázek, který představuje. Některé vizualizace umožňují úpravu dat a jejich zobrazení.
 
  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]Ladicí program obsahuje šest standardních vizualizací. Vizualizace textu, HTML, XML a JSON fungují na objektech řetězců. Vizualizér stromu WPF zobrazuje vlastnosti vizuálního stromu objektu WPF. Vizualizér DataSet funguje pro objekty DataSet, DataView a DataTable.
@@ -74,11 +75,23 @@ Chcete-li vytvořit uživatelské rozhraní Vizualizátoru na straně ladicího 
 
 ### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>Vytvoření zdroje objektu Vizualizér pro stranu laděného procesu
 
-Typ, který se má vizualizovat (zdroj objektu na straně laděného procesu), určíte pomocí <xref:System.Diagnostics.DebuggerVisualizerAttribute> kódu na straně ladicího programu.
+V kódu na straně ladicího programu upravte a <xref:System.Diagnostics.DebuggerVisualizerAttribute> Zadejte typ pro vizualizaci (zdroj objektu na straně laděného procesu) ( <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ). `Target`Vlastnost nastaví zdroj objektu. Vynecháte-li zdroj objektu, Vizualizér použije výchozí zdroj objektu.
 
-1. V kódu na straně ladicího programu upravte a <xref:System.Diagnostics.DebuggerVisualizerAttribute> umožněte mu zdroj objektu ( <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ). `Target`Vlastnost nastaví zdroj objektu. Vynecháte-li zdroj objektu, Vizualizér použije výchozí zdroj objektu.
+::: moniker range=">=vs-2019"
+Kód na straně laděného procesu obsahuje zdroj objektu, který je vizuálně vizuální. Datový objekt může přepsat metody <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . Laděného procesuá knihovna DLL je nutná, pokud chcete vytvořit samostatný Vizualizér.
+::: moniker-end
 
-1. Chcete-li umožnit úpravy Vizualizér i zobrazení datových objektů, přepište `TransferData` metody nebo `CreateReplacementObject` z <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+V kódu na straně laděného procesu:
+
+- Aby mohl Vizualizér upravovat datové objekty, zdroj objektu musí dědit z <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> a přepsat `TransferData` `CreateReplacementObject` metody nebo.
+
+- Pokud potřebujete podporovat cílení na více verzí v vizualizér, můžete v souboru projektu laděného procesu použít následující monikery cílového rozhraní (TFM).
+
+   ```xml
+   <TargetFrameworks>net20;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+   ```
+
+   Toto jsou jediné podporované TFM.
 
 ## <a name="see-also"></a>Viz také
 

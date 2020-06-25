@@ -1,7 +1,7 @@
 ---
-title: Naučte se Django kurz v sadě Visual Studio krok 3, statické soubory a stránky
+title: Kurz Django ve Visual Studiu – krok 3, statické soubory a stránky
 titleSuffix: ''
-description: Návod základy Django v kontextu projektů sady Visual Studio, konkrétně ukazuje, jak sloužit statické soubory, přidat stránky do aplikace a použít dědičnost šablony
+description: Návod k Django základů v kontextu projektů aplikace Visual Studio, který konkrétně ukazuje, jak zajišťovat statické soubory, přidávání stránek do aplikace a použití dědičnosti šablon
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,46 +11,46 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 54a80ef606a553846ef5be7a86ed4183f3ffde57
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: fc87c4690978d33f6fdc8e0f5bc937cb16e6e915
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62957985"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279806"
 ---
-# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>Krok 3: Obsluhování statických souborů, přidávání stránek a používání dědičnosti šablony
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>Krok 3: obsluha statických souborů, přidávání stránek a použití dědičnosti šablon
 
 **Předchozí krok: [Vytvoření aplikace Django se zobrazeními a šablonami stránek](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
-V předchozích krocích tohoto kurzu jste se naučili, jak vytvořit minimální aplikaci Django s jednou stránkou samostatného HTML. Moderní webové aplikace se však obvykle skládají z mnoha stránek a využívají sdílené prostředky, jako jsou soubory CSS a JavaScript, k zajištění konzistentního stylu a chování.
+V předchozích krocích tohoto kurzu jste se naučili, jak vytvořit aplikaci Minimal Django s jednou stránkou vlastního HTML. Moderní webové aplikace se ale obvykle skládají z mnoha stránek a využívají sdílené prostředky, jako jsou soubory CSS a JavaScript, k zajištění konzistentního stylu a chování.
 
 V tomto kroku se dozvíte, jak:
 
 > [!div class="checklist"]
-> - Pomocí šablon položek sady Visual Studio můžete rychle přidávat nové soubory různých typů pomocí vhodného standardního kódu (krok 3-1)
-> - Konfigurace projektu Django tak, aby sloužil statickým souborům (krok 3-2)
-> - Přidání dalších stránek do aplikace (krok 3-3)
-> - Vytvoření záhlaví a nav panelu, který se používá na všech stránkách (krok 3-4)
+> - Pomocí šablon položek sady Visual Studio můžete rychle přidat nové soubory různých typů s praktickým často používaným kódem (krok 3-1).
+> - Konfigurace projektu Django pro obsluhu statických souborů (krok 3-2)
+> - Přidejte do aplikace další stránky (krok 3-3).
+> - Pomocí dědičnosti šablon vytvořte záhlaví a navigační panel, který se používá na stránkách (krok 3-4).
 
-## <a name="step-3-1-become-familiar-with-item-templates"></a>Krok 3-1: Seznámení se se šablonami položek
+## <a name="step-3-1-become-familiar-with-item-templates"></a>Krok 3-1: Seznámení se šablonami položek
 
-Při vývoji aplikace Django obvykle přidáváte mnoho dalších souborů Pythonu, HTML, CSS a JavaScriptu. Pro každý typ souboru (stejně jako další soubory, jako je *web.config,* které budete potřebovat pro nasazení), Visual Studio poskytuje pohodlné [šablony položek,](python-item-templates.md) které vám pomohou začít.
+Při vývoji aplikace Django obvykle přidáte mnoho dalších souborů Python, HTML, CSS a JavaScript. Pro každý typ souboru (stejně jako jiné soubory jako *web.config* , které můžete potřebovat pro nasazení), Visual Studio poskytuje praktické [šablony položek](python-item-templates.md) , které vám pomůžou začít.
 
-Dostupné šablony zobrazíte v **Průzkumníku řešení**a klepněte pravým tlačítkem myši na složku, ve které chcete položku vytvořit, a vyberte **přidat** > **novou položku**:
+Dostupné šablony zobrazíte tak, že přejdete na **Průzkumník řešení**, kliknete pravým tlačítkem na složku, ve které chcete položku vytvořit, vyberte **Přidat**  >  **novou položku**:
 
-![Dialogové okno Přidat novou položku v sadě Visual Studio](media/django/step03-add-new-item-dialog.png)
+![Dialogové okno Přidat novou položku v aplikaci Visual Studio](media/django/step03-add-new-item-dialog.png)
 
-Chcete-li použít šablonu, vyberte požadovanou šablonu, zadejte název souboru a vyberte **OK**. Přidání položky tímto způsobem automaticky přidá soubor do projektu sady Visual Studio a označí změny pro správě zdrojového kódu.
+Chcete-li použít šablonu, vyberte požadovanou šablonu, zadejte název souboru a vyberte **OK**. Přidáním položky tímto způsobem lze soubor automaticky přidat do projektu aplikace Visual Studio a označit změny pro správu zdrojového kódu.
 
-### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Otázka: Jak Visual Studio vědět, které šablony položek nabídnout?
+### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Otázka: jak Visual Studio ví, které šablony položek nabízí?
 
-Odpověď: Soubor projektu Visual Studio (*.pyproj*) obsahuje identifikátor typu projektu, který jej označí jako projekt Pythonu. Visual Studio používá tento identifikátor typu k zobrazení pouze ty šablony položek, které jsou vhodné pro typ projektu. Tímto způsobem visual studio můžete zadat bohatou sadu šablon položek pro mnoho typů projektů, aniž by vás požádat o jejich třídění pokaždé.
+Odpověď: soubor projektu sady Visual Studio (*. pyproj*) obsahuje identifikátor typu projektu, který ho označí jako projekt Pythonu. Sada Visual Studio používá tento identifikátor typu k zobrazení pouze těch šablon položek, které jsou vhodné pro typ projektu. Díky tomu může sada Visual Studio poskytovat bohatou sadu šablon položek pro celou řadu typů projektů bez nutnosti pokaždé, když je budete muset seřadit.
 
-## <a name="step-3-2-serve-static-files-from-your-app"></a>Krok 3-2: Zobrazení statických souborů z aplikace
+## <a name="step-3-2-serve-static-files-from-your-app"></a>Krok 3-2: Obsluhujte statické soubory z vaší aplikace
 
-Ve webové aplikaci vytvořené v Pythonu (pomocí libovolného rozhraní) se soubory Pythonu vždy spouštějí na serveru webového hostitele a nikdy se nepřenášejí do počítače uživatele. Jiné soubory, jako například CSS a JavaScript, jsou však používány výhradně prohlížečem, takže hostitelský server je jednoduše dodává tak, jak jsou požadovány. Tyto soubory jsou označovány jako "statické" soubory a Django je může automaticky doručit, aniž byste museli psát jakýkoli kód.
+Ve webové aplikaci vytvořené pomocí Pythonu (pomocí libovolného rozhraní) se soubory Pythonu vždycky spouštějí na serveru webového hostitele a nikdy se nepřenáší do počítače uživatele. Jiné soubory, jako jsou například CSS a JavaScript, se používají výhradně v prohlížeči, takže hostitelský server je jednoduše přiřadí tak, jak jsou pokaždé požadovány. Tyto soubory jsou označovány jako "statické" soubory a Django je může doručovat automaticky, aniž byste museli psát kód.
 
-Projekt Django je ve výchozím nastavení nakonfigurován tak, aby sloužil statickým souborům ze *statické* složky aplikace, a to díky těmto řádkům v *settings.py*projektu Django :
+Projekt Django je ve výchozím nastavení nakonfigurovaný tak, aby sloužil statickým souborům ze *statické* složky aplikace. Díky těmto řádkům v *Settings.py*projektu Django:
 
 ```python
 # Static files (CSS, JavaScript, Images)
@@ -61,15 +61,15 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 ```
 
-Soubory můžete uspořádat pomocí libovolné struktury složek v rámci *statické,* která se vám líbí, a potom použít relativní cesty v rámci této složky odkazovat na soubory. Chcete-li tento proces demonstrovat, přidejte do aplikace soubor CSS a použijte tuto šablonu stylů v šabloně *index.html:*
+Můžete uspořádat soubory pomocí libovolné struktury složek v rámci *statických* , které chcete, a pak pomocí relativních cest v rámci této složky odkazovat na soubory. Chcete-li předvést tento proces, následující kroky přidají do aplikace soubor CSS a pak tuto šablonu použijte v šabloně *index.html* :
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na složku **HelloDjangoApp** v `static`projektu sady Visual Studio, vyberte **přidat** > novou**složku**a pojmenujte složku .
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **HelloDjangoApp** v projektu sady Visual Studio, vyberte **Přidat**  >  **novou složku**a pojmenujte složku `static` .
 
-1. Klepněte pravým tlačítkem myši na **statickou** složku a vyberte **přidat** > **novou položku**. V zobrazeném dialogovém okně vyberte šablonu **stylů,** pojmenujte soubor `site.css`a vyberte **OK**. Soubor **site.css** se zobrazí v projektu a je otevřen v editoru. Struktura složek by měla vypadat podobně jako na následujícím obrázku:
+1. Klikněte pravým tlačítkem na **statickou** složku a vyberte **Přidat**  >  **novou položku**. V dialogovém okně, které se zobrazí, vyberte šablonu šablony **stylů** , pojmenujte soubor `site.css` a vyberte **OK**. Soubor **Web. CSS** se zobrazí v projektu a otevře se v editoru. Vaše struktura složky by měla vypadat podobně jako na následujícím obrázku:
 
-    ![Statická struktura souborů, jak je znázorněno v Průzkumníku řešení](media/django/step03-static-file-structure.png)
+    ![Struktura statického souboru, jak je znázorněno v Průzkumník řešení](media/django/step03-static-file-structure.png)
 
-1. Nahraďte obsah *webu site.css* následujícím kódem a uložte soubor:
+1. Obsah souboru *site. CSS* nahraďte následujícím kódem a uložte ho:
 
     ```css
     .message {
@@ -78,7 +78,7 @@ Soubory můžete uspořádat pomocí libovolné struktury složek v rámci *stat
     }
     ```
 
-1. Nahraďte obsah *templates/HelloDjangoApp/index.html* souboru aplikace následujícím kódem, `<strong>` který nahradí prvek použitý `<span>` v kroku `message` 2 a, který odkazuje na třídu stylu. Použití třídy stylu tímto způsobem poskytuje mnohem větší flexibilitu při stylingu prvku. (Pokud jste nepřesunuli *index.html* do podsložky v *šablonách* při použití VS 2017 15.7 a starší, podívejte se na [názvy šablon](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) v kroku 2-4.)
+1. Nahraďte obsah souboru *Templates/HelloDjangoApp/index.htm* aplikace následujícím kódem, který nahradí `<strong>` prvek použitý v kroku 2 s objektem `<span>` , který odkazuje na `message` třídu Style. Použití třídy stylu tímto způsobem poskytuje mnohem větší flexibilitu při stylování elementu. (Pokud jste nepřesunuli *index.html* do podsložky v *šablonách* při použití vs 2017 15,7 a starší verze, přečtěte si téma [template namespacing](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) in Step 2-4.)
 
     ```html
     <html>
@@ -93,15 +93,31 @@ Soubory můžete uspořádat pomocí libovolné struktury složek v rámci *stat
     </html>
     ```
 
-1. Spusťte projekt sledovat výsledky. Zastavte server po dokončení a potvrďte změny do správy zdrojového kódu, pokud se vám líbí (jak je vysvětleno v [kroku 2](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)).
+1. Spusťte projekt a sledujte výsledky. V případě potřeby zastavte Server a potvrďte změny ve správě zdrojového kódu (jak je vysvětleno v [kroku 2](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)).
 
-### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>Otázka: Jaký je účel značky {% load staticfiles %}?
+### <a name="question-what-is-the-purpose-of-the--load-staticfiles--tag"></a>Otázka: Jaký je účel značky {% Load staticfiles%}?
 
-Odpověď: `{% load staticfiles %}` Řádek je vyžadován před odkazem na `<head>` `<body>`statické soubory v prvcích, jako je a . V příkladu uvedeném v této části "staticfiles" odkazuje na vlastní sadu značek šablony Django, což je to, co umožňuje použít `{% static %}` syntaxi k odkazu na statické soubory.  Bez `{% load staticfiles %}`, uvidíte výjimku při spuštění aplikace.
+Odpověď: `{% load staticfiles %}` řádek je vyžadován před odkazování na statické soubory v prvcích jako `<head>` a `<body>` . V příkladu zobrazeném v této části odkazuje "staticfiles" na vlastní sadu značek šablony Django, což je to, co umožňuje použít `{% static %}` syntaxi pro odkazování na statické soubory.  Bez `{% load staticfiles %}` toho se při spuštění aplikace zobrazí výjimka.
 
-### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Otázka: Existují nějaké konvence pro uspořádání statických souborů?
+### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Otázka: existují nějaké konvence pro uspořádávání statických souborů?
 
-Odpověď: Do *statické* složky můžete přidávat další soubory CSS, JavaScript a HTML, jak chcete. Typickým způsobem uspořádání statických souborů je vytvoření podsložek s názvem *písma*, *skripty*a *obsah* (pro šablony stylů a všechny ostatní soubory). V každém případě nezapomeňte zahrnout tyto složky v `{% static %}` relativní cestě k souboru v odkazech.
+Odpověď: v případě potřeby můžete do *statické* složky přidat další soubory CSS, JavaScript a HTML. Typický způsob, jak uspořádat statické soubory, je vytvořit podsložky s názvem *písma*, *skripty*a *obsah* (pro šablony stylů a jiné soubory). V každém případě nezapomeňte zahrnout tyto složky do relativní cesty k souboru v `{% static %}` odkazech.
+
+### <a name="question-can-i-complete-the-same-task-without-using-the--load-staticfiles--tag"></a>Otázka: je možné dokončit stejnou úlohu bez použití značky {% Load staticfiles%}?
+
+Odpověď: Ano, můžete.
+
+```html
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" type="text/css" href="../../static/site.css" />
+    </head>
+    <body>
+        <span class="message">{{ message }}</span>{{ content }}
+    </body>
+</html>
+```
 
 ## <a name="step-3-3-add-a-page-to-the-app"></a>Krok 3-3: Přidání stránky do aplikace
 
@@ -109,16 +125,16 @@ Přidání další stránky do aplikace znamená následující:
 
 - Přidejte funkci Pythonu, která definuje zobrazení.
 - Přidejte šablonu pro značku stránky.
-- Přidejte potřebné směrování do *souboru urls.py* projektu Django.
+- Přidejte potřebné směrování do souboru *URLs.py* projektu Django.
 
-Následující kroky přidají stránku "O aplikaci" do projektu "HelloDjangoApp" a odkazy na tuto stránku z domovské stránky:
+Následující postup přidá stránku "o" do projektu "HelloDjangoApp" a odkazy na tuto stránku z domovské stránky:
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na **složku šablony/HelloDjangoApp,** vyberte `about.html` **přidat** > **novou položku**, vyberte šablonu **položky stránky HTML,** pojmenujte soubor a vyberte **OK**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **Templates/HelloDjangoApp** , vyberte možnost **Přidat**  >  **novou položku**, vyberte šablonu položky **stránky HTML** , zadejte název souboru `about.html` a vyberte **OK**.
 
     > [!Tip]
-    > Pokud se příkaz **Nová položka** v nabídce **Přidat** nezobrazí, ujistěte se, že jste server zastavili, aby visual studio ukončilo režim ladění.
+    > Pokud se příkaz **Nová položka** v nabídce **Přidat** nezobrazí, ujistěte se, že jste zastavili Server, aby aplikace Visual Studio ukončila režim ladění.
 
-1. Nahraďte obsah *about.html* následujícími značkami (explicitní odkaz na domovskou stránku nahradíte jednoduchým navigačním panelem v kroku 3-4):
+1. Obsah *about.html* nahraďte následujícím kódem (v kroku 3-4 nahraďte explicitní odkaz na domovskou stránku):
 
     ```html
     <html>
@@ -134,7 +150,7 @@ Následující kroky přidají stránku "O aplikaci" do projektu "HelloDjangoApp
     </html>
     ```
 
-1. Otevřete soubor *views.py* aplikace a přidejte funkci s názvem, `about` která šablonu používá:
+1. Otevřete soubor *views.py* aplikace a přidejte funkci s názvem `about` , která používá tuto šablonu:
 
     ```python
     def about(request):
@@ -148,45 +164,45 @@ Následující kroky přidají stránku "O aplikaci" do projektu "HelloDjangoApp
         )
     ```
 
-1. Otevřete soubor *urls.py* projektu Django a do `urlPatterns` pole přidejte následující řádek:
+1. Otevřete soubor *URLs.py* projektu Django a do pole přidejte následující řádek `urlPatterns` :
 
     ```python
     url(r'^about$', HelloDjangoApp.views.about, name='about'),
     ```
 
-1. Otevřete *soubor templates/HelloDjangoApp/index.html* a pod `<body>` element, který chcete propojit s odkazem na stránku Informace, přidáte následující řádek (tento odkaz opět nahradíte nav barem v kroku 3-4):
+1. Otevřete soubor *Templates/HelloDjangoApp/index.html* a přidejte následující řádek pod `<body>` element, který chcete propojit se stránkou o aplikaci (znovu nahraďte tento odkaz navigačním panelem v kroku 3-4):
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. Uložte všechny soubory pomocí příkazu Nabídka **Uložit** > **vše** soubor nebo stačí stisknout **kombinaci kláves Ctrl**+**Shift**+**S**. (Technicky tento krok není potřeba, protože spuštění projektu v sadě Visual Studio ukládá soubory automaticky. Nicméně, je to dobrý příkaz vědět!)
+1. Uložte všechny soubory pomocí příkazu v nabídce **soubor**  >  **Uložit vše** nebo stačí stisknout klávesy **CTRL** + **SHIFT** + **S**. (Technicky, tento krok není potřebný pro spuštění projektu v aplikaci Visual Studio ukládá soubory automaticky. Je však dobrým příkazem, který vás zajímá.)
 
-1. Spusťte projekt sledovat výsledky a zkontrolujte navigaci mezi stránkami. Po dokončení zavřete server.
+1. Spusťte projekt a sledujte výsledky a zkontrolujte navigaci mezi stránkami. Po dokončení Server zavřete.
 
-### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>Otázka: Snažil jsem se pomocí "index" pro odkaz na domovskou stránku, ale nefungovalo to. Proč?
+### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>Otázka: Pokusili jste se použít index pro odkaz na domovskou stránku, ale nepracovali. Proč?
 
-Odpověď: I když je *views.py* funkce `index`zobrazení v views.py pojmenována , vzory směrování adres URL v *souboru urls.py* projektu Django neobsahují regulární výraz, který odpovídá řetězci "index". Chcete-li tento řetězec porovnat, musíte přidat `^index$`další položku pro vzorek .
+Odpověď: i když je pojmenovaná funkce zobrazení v *views.py* `index` , vzory směrování adres URL v souboru *URLs.py* projektu Django neobsahuje regulární výraz, který odpovídá řetězci "index". Aby se tento řetězec shodoval, je nutné přidat další položku pro vzor `^index$` .
 
-Jak je znázorněno v další části, je `{% url '<pattern_name>' %}` mnohem lepší použít značku v šabloně stránky, abyste odkazovali na *název* vzoru, v takovém případě Django vytvoří správnou adresu URL pro vás. Například nahradit `<div><a href="home">Home</a></div>` v *about.html* s `<div><a href="{% url 'index' %}">Home</a></div>`. Použití 'index' funguje zde, protože první URL vzor v *urls.py* je ve skutečnosti `name='index'` s názvem 'index' (na základě argumentu). Můžete také použít 'home' odkazovat na druhý vzor.
+Jak je znázorněno v další části, je mnohem lepší použít `{% url '<pattern_name>' %}` značku v šabloně stránky k odkazování na *název* vzoru. v takovém případě Django vytvoří správnou adresu URL. Například nahraďte `<div><a href="home">Home</a></div>` v *about.html* `<div><a href="{% url 'index' %}">Home</a></div>` . Použití ' index ' zde funguje, protože první vzor adresy URL v *URLs.py* je ve skutečnosti pojmenovaný ' index ' (na základě `name='index'` argumentu). K odkazování na druhý vzor můžete použít taky možnost Home.
 
-## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>Krok 3-4: Vytvoření záhlaví a nav panelu pomocí dědičnosti šablony
+## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>Krok 3-4: použití dědičnosti šablony k vytvoření záhlaví a navigačního panelu
 
-Namísto explicitních navigačních odkazů na každé stránce používají moderní webové aplikace obvykle záhlaví značky a navigační panel, který poskytuje nejdůležitější odkazy na stránky, místní nabídky a tak dále. Chcete-li se ujistit, že záhlaví a nav panel jsou stejné na všech stránkách, ale nechcete opakovat stejný kód v každé šabloně stránky. Místo toho chcete definovat společné části všech stránek na jednom místě.
+Namísto explicitních navigačních odkazů na každé stránce obvykle používají moderní webové aplikace hlavičku brandingu a navigační panel, který poskytuje nejdůležitější odkazy na stránky, místní nabídky a tak dále. Chcete-li zajistit, aby záhlaví a navigační panel byly na všech stránkách stejné, nechcete stejný kód opakovat v každé šabloně stránky. Místo toho chcete definovat společné části všech stránek na jednom místě.
 
-Systém templating u django poskytuje dva způsoby opětovného použití konkrétních prvků ve více šablonách: zahrnuje a dědičnost.
+Django systém šablonování poskytuje dvě možnosti pro opakované použití určitých prvků v několika šablonách: includes a dědičnost.
 
-- *Zahrnuje* další šablony stránek, které vložíte na určité místo v `{% include <template_path> %}`odkazující šabloně pomocí syntaxe . Proměnnou můžete také použít, pokud chcete dynamicky změnit cestu v kódu. Zahrnuty se obvykle používají v těle stránky k vytahování sdílené šablony v určitém umístění na stránce.
+- *Zahrnuje* další šablony stránky, které vložíte na konkrétní místo v odkazující šabloně pomocí syntaxe `{% include <template_path> %}` . Proměnnou lze použít také v případě, že chcete změnit cestu dynamicky v kódu. Zahrnutí se obvykle používají v těle stránky pro vyžádání do sdílené šablony v určitém umístění na stránce.
 
-- *Dědičnost* `{% extends <template_path> %}` používá na začátku šablony stránky k určení sdílené základní šablony, na které pak odkazuje odkazující šablona. Dědičnost se běžně používá k definování sdíleného rozložení, nav panelu a dalších struktur pro stránky aplikace, takže odkazující šablony stačí přidat nebo upravit určité oblasti základní šablony nazývané *bloky*.
+- *Dědičnost* používá na `{% extends <template_path> %}` začátku šablony stránky, aby určovala sdílenou základní šablonu, na které odkazuje šablona. Dědičnost se běžně používá k definování sdíleného rozložení, navigačního panelu a dalších struktur pro stránky aplikace. to znamená, že odkazující šablony potřebují přidat nebo změnit pouze konkrétní oblasti základní šablony s názvem *bloky*.
 
-V obou `<template_path>` případech je relativní vzhledem ke`../` složce šablony aplikace (nebo `./` jsou také *povoleny).*
+V obou případech `<template_path>` je relativní vzhledem ke složce *šablon* aplikace ( `../` nebo `./` jsou také povoleny).
 
-Základní šablona vymezuje bloky pomocí `{% block <block_name> %}` a `{% endblock %}` tagy. Pokud odkazující šablona pak používá značky se stejným názvem bloku, její obsah bloku přepíše obsah základní šablony.
+Základní šablona vymezují bloky pomocí `{% block <block_name> %}` značek a `{% endblock %}` . Pokud odkazovaná šablona potom používá značky se stejným názvem bloku, její obsah bloku přepíše základní šablonu.
 
-Následující kroky ukazují dědičnost:
+Následující kroky demonstrují dědičnost:
 
-1. Ve složce *šablony aplikace/HelloDjangoApp* vytvořte nový soubor HTML (pomocí kontextové nabídky **Přidat** > **novou položku** nebo **Přidat** > **stránku HTML**) nazvaný *layout.html*a nahraďte jeho obsah níže uvedenou značkou. Můžete vidět, že tato šablona obsahuje blok s názvem "obsah", který je vše, co odkazující stránky musí nahradit:
+1. Ve složce *Templates/HelloDjangoApp* aplikace vytvořte nový soubor HTML (pomocí místní nabídky **Přidat**  >  **novou položku** nebo **Přidat**  >  **stránku HTML**) s názvem *layout.html*a nahraďte jeho obsah následujícím kódem. Vidíte, že tato šablona obsahuje blok s názvem "content" (obsah), který obsahuje všechny odkazující stránky, které musí nahradit:
 
     ```html
     <!DOCTYPE html>
@@ -216,7 +232,7 @@ Následující kroky ukazují dědičnost:
     </html>
     ```
 
-1. Přidejte následující styly do statického souboru *aplikace/site.css* (tento návod se zde nepokouší demonstrovat responzivní návrh; tyto styly jednoduše generují zajímavý výsledek):
+1. Do souboru *static/site. CSS* aplikace přidejte následující styly (Tento názorný postup se nepokusí dopředný návrh; tyto styly jsou jednoduše vygenerovat zajímavý výsledek):
 
     ```css
     .navbar {
@@ -248,7 +264,7 @@ Následující kroky ukazují dědičnost:
     }
     ```
 
-1. Upravte *templates/HelloDjangoApp/index.html* tak, aby odkazoval na základní šablonu, a přepište blok obsahu. Můžete vidět, že pomocí dědičnosti, tato šablona se stane jednoduché:
+1. Úpravou *šablon/HelloDjangoApp/index.html* můžete odkazovat na základní šablonu a přepsat blok obsahu. Můžete vidět, že pomocí dědičnosti se tato šablona bude jednoduchá:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -257,7 +273,7 @@ Následující kroky ukazují dědičnost:
     {% endblock %}
     ```
 
-1. Upravte *templates/HelloDjangoApp/about.html* tak, aby také odkazovalna základní šablonu a přepsalblok obsahu:
+1. Změňte *Templates/HelloDjangoApp/about.html* tak, aby odkazovaly na základní šablonu a přepsali jsme blok obsahu:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -266,21 +282,21 @@ Následující kroky ukazují dědičnost:
     {% endblock %}
     ```
 
-1. Spusťte server sledovat výsledky. Po dokončení zavřete server.
+1. Spusťte server a sledujte výsledky. Po dokončení Server zavřete.
 
-    ![Spuštěná aplikace zobrazující nav panel](media/django/step03-nav-bar.png)
+    ![Běžící aplikace znázorňující navigační panel](media/django/step03-nav-bar.png)
 
-1. Vzhledem k tomu, že jste provedli podstatné změny v aplikaci, je opět vhodná doba [k potvrzení změn správy zdrojového kódu](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control).
+1. Vzhledem k tomu, že jste provedli podstatné změny v aplikaci, je opět vhodným časem [Potvrdit změny ve správě zdrojového kódu](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control).
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
 > [Použití úplné šablony webového projektu Django](learn-django-in-visual-studio-step-04-full-django-project-template.md)
 
-## <a name="go-deeper"></a>Jděte hlouběji
+## <a name="go-deeper"></a>Přejít hlouběji
 
-- [Nasazení webové aplikace do služby Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)
-- [Psaní první aplikace Django, část 3 (zobrazení)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
-- Další možnosti šablon Django, jako je například tok řízení, naleznete [v tématu Jazyk šablony Django](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com)
-- Podrobné informace o `{% url %}` používání značky najdete v [adrese URL](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) v rámci [vestavěné šablony značek a filtrů pro django šablony odkaz](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/) (docs.djangoproject.com)
-- Zdrojový kód kurzu na [GitHubu: Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- [Nasazení webové aplikace do Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [Zápis první aplikace v Django, část 3 (zobrazení)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
+- Další možnosti Django šablon, jako je tok řízení, najdete v tématu [Django Template Language](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com).
+- Podrobné informace o použití `{% url %}` značky najdete v tématu [URL](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) v rámci [vestavěných značek šablony a filtrů pro Django odkazy na šablony](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/) (docs.djangoproject.com).
+- Kurz zdrojového kódu na GitHubu: [Microsoft/Python-Sample-vs-Learning-Django](https://github.com/Microsoft/python-sample-vs-learning-django)

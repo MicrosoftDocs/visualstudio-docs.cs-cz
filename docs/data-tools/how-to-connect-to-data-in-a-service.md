@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Připojování k datům ve službě'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [Visual Studio], connecting to web services
 - data sources, creating from web services
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01ad796faa8c722ba088143da814305844136aa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b49840a2190abfd223edf5643b8d70da1a59d6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586520"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282225"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Postupy: připojení k datům ve službě
 
@@ -49,15 +49,15 @@ Po dokončení průvodce je do projektu přidán odkaz na službu, který je oka
 
 5. Kliknutím na **OK** přidejte do svého projektu odkaz na službu.
 
-6. Klikněte na **Dokončit**.
+6. Klikněte na **Finish** (Dokončit).
 
      Zdroj dat se přidá do okna **zdroje dat** .
 
 ## <a name="next-steps"></a>Další kroky
 
-Chcete-li do aplikace přidat funkce, vyberte položku v okně **zdroje dat** a přetáhněte ji do formuláře pro vytvoření vázaných ovládacích prvků. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Chcete-li do aplikace přidat funkce, vyberte položku v okně **zdroje dat** a přetáhněte ji do formuláře pro vytvoření vázaných ovládacích prvků. Další informace najdete v tématu [vázání ovládacích prvků k datům v aplikaci Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků WPF k datové službě WCF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
 - [Služby Windows Communication Foundation Services a WCF Data Services v aplikaci Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -1,45 +1,45 @@
 ---
 title: Přístup k privátním cloudům Azure
-description: Zjistěte, jak získat přístup k prostředkům privátního cloudu pomocí Sady Visual Studio.
+description: Přečtěte si, jak získat přístup k prostředkům privátního cloudu pomocí sady Visual Studio.
 author: ghogen
 manager: jillfra
 assetId: 9d733c8d-703b-44e7-a210-bb75874c45c8
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/13/2017
 ms.author: ghogen
-ms.openlocfilehash: 57f92aa797e589bd48cc52296b710617cbe8d732
-ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
+ms.openlocfilehash: 6c1b46e34c688f232ee1f774ff2d19fdad7ff6bf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81544364"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280385"
 ---
-# <a name="accessing-private-azure-clouds-with-visual-studio"></a>Přístup k privátním cloudům Azure pomocí Sady Visual Studio
+# <a name="accessing-private-azure-clouds-with-visual-studio"></a>Přístup k privátním cloudům Azure pomocí sady Visual Studio
 
-Ve výchozím nastavení Visual Studio podporuje koncové body Azure cloudu REST. V tomto článku se dozvíte, jak používat certifikát privátního cloudu pro přístup k privátnímu cloudu a interakci s ním z Visual Studia.
+Ve výchozím nastavení Visual Studio podporuje koncové body REST cloudu Azure. V tomto článku se dozvíte, jak pomocí certifikátu privátního cloudu přistupovat k privátnímu cloudu a pracovat s ním ze sady Visual Studio.
 
-1. Na webu Azure Portal pro privátní cloud si stáhněte soubor nastavení publikování nebo požádejte správce o soubor nastavení publikování. (Soubor má příponu `.publishsettings`.)
+1. V Azure Portal pro privátní cloud Stáhněte soubor Publish-Settings nebo se obraťte na správce se souborem pro publikování a nastavení. (Soubor má příponu `.publishsettings` .)
 
-1. V **Průzkumníkovi serveru**Visual Studio klikněte pravým tlačítkem myši na uzel **Azure** a vyberte Spravovat **a filtrovat předplatná**.
+1. V aplikaci Visual Studio **Průzkumník serveru**klikněte pravým tlačítkem myši na uzel **Azure** a vyberte **Spravovat a filtrovat předplatná**.
 
-    ![Spravovat předplatná, příkaz](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790778.png)
+    ![Správa předplatných – příkaz](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790778.png)
 
-1. V dialogovém okně **Spravovat předplatná Microsoft Azure** vyberte kartu **Certifikáty** a pak vyberte **Importovat**.
+1. V dialogovém okně **spravovat předplatná Microsoft Azure** vyberte kartu **certifikáty** a pak vyberte **importovat**.
 
     ![Import certifikátů Azure](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790779.png)
 
-1. V dialogovém okně **Importovat předplatná Microsoft Azure** vyberte **Procházet**.
+1. V dialogovém okně **importovat předplatná Microsoft Azure** vyberte **Procházet**.
 
-    ![Tlačítko Procházet v dialogovém okně Importovat předplatná Microsoft Azure](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/browse-button.png)
+    ![Tlačítko Procházet v dialogovém okně Importovat Microsoft Azure předplatná](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/browse-button.png)
 
-1. V dialogovém okně **Otevřít** vyhledejte adresář, do kterého jste uložili soubor nastavení publikování, vyberte soubor a pak vyberte **Otevřít**.
+1. V dialogovém okně **otevřít** přejděte do adresáře, kam jste uložili soubor Publish-Settings, vyberte soubor a pak vyberte **otevřít**.
 
-    ![Výběr souboru nastavení publikování](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/select-publish-settings-file.png)
+    ![Vybrat soubor publikování – nastavení](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/select-publish-settings-file.png)
 
-1. Po návratu do dialogového okna **Importovat předplatná Microsoft Azure** vyberte **Importovat**.
+1. Po návratu do dialogového okna **importovat předplatná Microsoft Azure** vyberte **importovat**.
 
-    ![Import souboru nastavení publikování](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790780.png)
+    ![Import souboru Publish-Settings](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790780.png)
 
-    Certifikáty se importují ze souboru nastavení publikování do sady Visual Studio a teď můžete pracovat s prostředky privátního cloudu.
+    Certifikáty se importují ze souboru Publish-Settings do sady Visual Studio a teď můžete pracovat s prostředky privátního cloudu.

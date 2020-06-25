@@ -1,7 +1,7 @@
 ---
 title: Nastavení ovládacího prvku, který se má vytvořit při přetahování z okna zdrojů dat
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Data Sources Window, select controls
 - Windows Forms, displaying data
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f5a3cf2d1f34ca9a3d0c2918a8f3f0a3e05260f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281536"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat
 
@@ -37,7 +37,7 @@ V tomto kontextu pojem *objekt* odkazuje na vlastní obchodní objekt, entitu (v
 2. V okně **zdroje dat** vyberte položku, která představuje datovou tabulku nebo objekt, který chcete nastavit.
 
    > [!TIP]
-   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit** > jiné **zdroje dat** > **Windows** .
+   > Pokud okno **zdroje dat** není otevřeno, můžete ho otevřít výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**systému Windows.
 
 3. Klikněte na rozevírací nabídku pro položku a potom v nabídce klikněte na jednu z následujících položek:
 
@@ -69,6 +69,6 @@ Před přetažením položky, která představuje sloupec nebo vlastnost objektu
 
      Pokud nechcete vytvořit ovládací prvek pro sloupec nebo vlastnost, v rozevírací nabídce vyberte **None (žádné** ). To je užitečné, pokud chcete přetáhnout nadřazenou tabulku nebo objekt do návrháře, ale nechcete zahrnout konkrétní sloupec nebo vlastnost.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -1,19 +1,19 @@
 ---
 title: Minimálně jedna vybraná položka obsahuje datový typ, který návrhář nepodporuje.
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 71dcd4f9-2946-42c5-9ce4-99c819ea2785
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e2f4911c79ac6d44d2553f3db15c5649dd7160f9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d2f066bb7501085b66ba724f94840314063cd2ca
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586351"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281887"
 ---
 # <a name="one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer"></a>Minimálně jedna vybraná položka obsahuje datový typ, který návrhář nepodporuje.
 
@@ -25,6 +25,6 @@ Jedna nebo více položek přetažených z **Průzkumník serveru** nebo **Průz
 
 2. Přetáhněte zobrazení z **Průzkumník serveru** nebo **Průzkumníka databáze** do návrháře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

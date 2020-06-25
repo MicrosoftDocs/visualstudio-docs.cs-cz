@@ -1,19 +1,19 @@
 ---
 title: 'Postupy: rozšiřování kódu generovaného návrhářem O-R'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d6d1122e-2f55-4607-8d8b-48c3c22600fb
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 588eb0f61dbc16fb1625752417ac5257bf48320f
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: b4c0ac8cff82250169171e1d842e64a34a4523ac
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113685"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282108"
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>Postupy: rozšiřování kódu generovaného návrhářem O/R
 Kód generovaný **návrhářem O/R** se znovu vygeneruje při změnách tříd entit a dalších objektů na návrhové ploše. Z důvodu tohoto opětovného generování kódu je kód, který přidáte do generovaného kódu, obvykle přepsán, když Návrhář znovu vygeneruje kód. **Návrhář o/R** poskytuje možnost generovat soubory částečné třídy, ve kterých můžete přidat kód, který není přepsán. Jedním z příkladů Přidání vlastního kódu do kódu generovaného **návrhářem o/R** je přidání ověření dat do tříd LINQ to SQL (entita). Další informace najdete v tématu [Postup: Přidání ověřování do tříd entit](../data-tools/how-to-add-validation-to-entity-classes.md).
@@ -44,8 +44,8 @@ Kód generovaný **návrhářem O/R** se znovu vygeneruje při změnách tříd 
 
 3. Přidejte svůj kód v deklaraci částečné třídy pro DataContext.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [Technologie LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
