@@ -1,7 +1,7 @@
 ---
 title: Zpracování výjimky souběžnosti
 ms.date: 09/11/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,16 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 462d0a9beb88a8fb6d73bf0672bb012c75b8ea93
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9d1c151b7f3afe977786ef3b308eff2de1c0857f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586598"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282355"
 ---
 # <a name="handle-a-concurrency-exception"></a>Zpracování výjimky souběžnosti
 
-Výjimky souběžnosti (<xref:System.Data.DBConcurrencyException?displayProperty=fullName>) jsou vyvolány, když se dva uživatelé pokusí změnit stejná data v databázi ve stejnou chvíli. V tomto návodu vytvoříte aplikaci pro Windows, která ukazuje, jak zachytit <xref:System.Data.DBConcurrencyException>, najít řádek, který způsobil chybu, a Naučte se, jak ho zpracovat.
+Výjimky souběžnosti ( <xref:System.Data.DBConcurrencyException?displayProperty=fullName> ) jsou vyvolány, když se dva uživatelé pokusí změnit stejná data v databázi ve stejnou chvíli. V tomto návodu vytvoříte aplikaci pro Windows, která ukazuje, jak zachytit <xref:System.Data.DBConcurrencyException> , najít řádek, který způsobil chybu, a Naučte se, jak ho zpracovat.
 
 Tento návod vás provede následujícím procesem:
 
@@ -35,7 +35,7 @@ Tento návod vás provede následujícím procesem:
 
 2. Vytvořte novou datovou sadu založenou na tabulce Northwind Customers.
 
-3. Vytvořte formulář s <xref:System.Windows.Forms.DataGridView> pro zobrazení dat.
+3. Vytvořte formulář s a <xref:System.Windows.Forms.DataGridView> zobrazíte data.
 
 4. Naplňte datovou sadu daty z tabulky Customers v databázi Northwind.
 
@@ -45,7 +45,7 @@ Tento návod vás provede následujícím procesem:
 
 7. Zachyťte chybu a pak zobrazte různé verze záznamu, aby uživatel mohl určit, jestli se má pokračovat a aktualizovat databázi, nebo zrušit aktualizaci.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Požadované součásti
 
 Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northwind.
 
@@ -55,11 +55,11 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
     1. V aplikaci Visual Studio otevřete okno **Průzkumník objektů systému SQL Server** . (Průzkumník objektů systému SQL Server je nainstalován v rámci úlohy **úložiště dat a zpracování** v instalační program pro Visual Studio.) Rozbalte uzel **SQL Server** . Klikněte pravým tlačítkem na instanci LocalDB a vyberte **Nový dotaz**.
 
-       Otevře se okno editor dotazů.
+       Otevře se okno editoru dotazů.
 
     2. Zkopírujte [skript Transact-SQL Northwind](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní ji daty.
 
-    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a pak klikněte na tlačítko **Spustit** .
 
        Po krátké době se dotaz dokončí a vytvoří se databáze Northwind.
 
@@ -67,9 +67,9 @@ Tento návod používá SQL Server Express LocalDB a ukázkovou databázi Northw
 
 Začněte vytvořením nové aplikace model Windows Forms:
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  >  **projekt**.
 
-2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
+2. V levém podokně rozbalte možnost **Visual C#** nebo **Visual Basic** a pak vyberte možnost **desktopová plocha systému Windows**.
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
@@ -112,7 +112,7 @@ V této části vytvoříte <xref:System.Windows.Forms.DataGridView?displayPrope
 
 4. Přetáhněte tabulku do prázdné oblasti formuláře.
 
-     Do formuláře, který je svázán s <xref:System.Windows.Forms.BindingSource>, jsou přidány ovládací prvky <xref:System.Windows.Forms.DataGridView> s názvem **customersDataGridView**a <xref:System.Windows.Forms.BindingNavigator> s názvem **CustomersBindingNavigator**. To je zase vázané na tabulku Customers v NorthwindDataSet.
+     <xref:System.Windows.Forms.DataGridView>Ovládací prvek s názvem **customersDataGridView**a <xref:System.Windows.Forms.BindingNavigator> pojmenovaný **CustomersBindingNavigator**se přidá do formuláře vázaného na <xref:System.Windows.Forms.BindingSource> . To je zase vázané na tabulku Customers v NorthwindDataSet.
 
 ## <a name="test-the-form"></a>Testování formuláře
 
@@ -120,7 +120,7 @@ Nyní můžete testovat formulář, abyste se ujistili, že se chová podle oče
 
 1. Pro spuštění aplikace vyberte **F5** .
 
-     Zobrazí se formulář s ovládacím prvkem <xref:System.Windows.Forms.DataGridView>, který je vyplněn daty z tabulky Customers.
+     Formulář se zobrazí s <xref:System.Windows.Forms.DataGridView> ovládacím prvkem, který je vyplněn daty z tabulky Customers.
 
 2. V nabídce **ladění** vyberte **Zastavit ladění**.
 
@@ -150,33 +150,33 @@ Uživatel pak může přepsat databázi pomocí navržené verze, nebo aktualiza
 
 ### <a name="add-code-to-handle-the-concurrency-exception"></a>Přidat kód pro zpracování výjimky souběžnosti
 
-Při pokusu o provedení aktualizace a vyvolání výjimky je obecně vhodné provést něco s informacemi, které jsou poskytnuty vyvolanou výjimkou. V této části přidáte kód, který se pokusí aktualizovat databázi. Také se zaměříte na <xref:System.Data.DBConcurrencyException>, které mohou být vyvolány, a také na případné jiné výjimky.
+Při pokusu o provedení aktualizace a vyvolání výjimky je obecně vhodné provést něco s informacemi, které jsou poskytnuty vyvolanou výjimkou. V této části přidáte kód, který se pokusí aktualizovat databázi. Také můžete zpracovat všechny <xref:System.Data.DBConcurrencyException> , které mohou být vyvolány, a také všechny další výjimky.
 
 > [!NOTE]
-> Metody `CreateMessage` a `ProcessDialogResults` jsou přidány později v tomto návodu.
+> `CreateMessage`Metody a `ProcessDialogResults` jsou přidány později v tomto návodu.
 
-1. Pod `Form1_Load` metodu přidejte následující kód:
+1. Do metody přidejte následující kód `Form1_Load` :
 
    [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
    [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
 
-2. Nahraďte metodu `CustomersBindingNavigatorSaveItem_Click` pro volání `UpdateDatabase` metody, aby vypadala takto:
+2. Nahraďte `CustomersBindingNavigatorSaveItem_Click` metodu pro volání `UpdateDatabase` metody, aby vypadala takto:
 
    [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
    [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
 
 ### <a name="display-choices-to-the-user"></a>Zobrazit možnosti pro uživatele
 
-Kód, který jste právě napsal, volá `CreateMessage` postup pro zobrazení informací o chybách uživateli. V tomto návodu použijete okno se zprávou k zobrazení různých verzí záznamu pro uživatele. To uživateli umožňuje zvolit, jestli se má záznam přepsat, nebo zrušit úpravy. Jakmile uživatel vybere možnost (klikne na tlačítko) v okně se zprávou, odpověď je předána metodě `ProcessDialogResult`.
+Kód, který jste právě napsal, volá `CreateMessage` proceduru, která uživateli zobrazí informace o chybě. V tomto návodu použijete okno se zprávou k zobrazení různých verzí záznamu pro uživatele. To uživateli umožňuje zvolit, jestli se má záznam přepsat, nebo zrušit úpravy. Jakmile uživatel vybere možnost (klikne na tlačítko) v okně se zprávou, odpověď je předána `ProcessDialogResult` metodě.
 
-Vytvořte zprávu přidáním následujícího kódu do **editoru kódu**. Jako metodu `UpdateDatabase` zadejte tento kód:
+Vytvořte zprávu přidáním následujícího kódu do **editoru kódu**. Zadejte tento kód pod `UpdateDatabase` metodu:
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
 
 ### <a name="process-the-users-response"></a>Zpracovat reakci uživatele
 
-Také potřebujete kód pro zpracování reakce uživatele na okno se zprávou. Možnosti jsou buď k přepsání aktuálního záznamu v databázi navrhovanou změnou, nebo k opuštění místních změn a aktualizaci datové tabulky záznamem, který je aktuálně v databázi. Pokud uživatel zvolí **Ano**, je metoda <xref:System.Data.DataTable.Merge%2A> volána s argumentem *PreserveChanges* nastaveným na **hodnotu true**. Tím dojde k úspěšnému pokusu o aktualizaci, protože původní verze záznamu nyní odpovídá záznamu v databázi.
+Také potřebujete kód pro zpracování reakce uživatele na okno se zprávou. Možnosti jsou buď k přepsání aktuálního záznamu v databázi navrhovanou změnou, nebo k opuštění místních změn a aktualizaci datové tabulky záznamem, který je aktuálně v databázi. Pokud uživatel zvolí **Ano**, je <xref:System.Data.DataTable.Merge%2A> metoda volána s argumentem *PreserveChanges* nastaveným na **hodnotu true**. Tím dojde k úspěšnému pokusu o aktualizaci, protože původní verze záznamu nyní odpovídá záznamu v databázi.
 
 Pod kód, který byl přidán v předchozí části, přidejte následující kód:
 
@@ -212,6 +212,6 @@ Nyní můžete testovat formulář, abyste se ujistili, že se chová podle oče
 
    Když vyberete možnost **ne** , aktualizace se aktualizuje a aktualizuje datovou sadu hodnotami, které jsou aktuálně v databázi. Výběrem možnosti **Ano** zapíšete navrhovanou hodnotu do databáze.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)

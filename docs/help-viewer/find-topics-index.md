@@ -1,7 +1,7 @@
 ---
-title: Použití aplikace Help Viewer indexu
+title: Použít index prohlížeče nápovědy
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Index tab [Help Viewer]
 - Help Viewer, using the index
@@ -15,70 +15,70 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f80b0d63bc7e7fdb89f69607e4529e18f26cc30
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ff72fc3e65b48e195c8ffc9587bdbb3c5fc382be
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825944"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284955"
 ---
 # <a name="find-topics-by-using-the-help-viewer-index"></a>Hledání témat pomocí indexu aplikace Help Viewer
 
-Index obsahuje seznam klíčových slov, které jsou spojeny s tématy v nainstalovaném obsahu. Každé téma může mít více než jedno klíčové slovo s ním spojená, a každé klíčové slovo může být přidružen k více než jedno téma. Použijte tento index stejným způsobem jako v knize indexu.
+Index obsahuje seznam klíčových slov, která jsou přidružená k tématům v nainstalovaném obsahu. Každé téma může mít přiřazeno více než jedno klíčové slovo a každé klíčové slovo může být přidruženo k více než jednomu tématu. Tento index používejte stejným způsobem jako při použití indexu v knize.
 
-## <a name="to-find-a-topic-by-using-the-index"></a>Chcete-li najít téma pomocí rejstříku
+## <a name="to-find-a-topic-by-using-the-index"></a>Vyhledání tématu pomocí indexu
 
-Na **Index** kartu, proveďte některý z následujících úloh:
+Na kartě **index** proveďte jednu z následujících úloh:
 
-- Zadejte klíčové slovo chcete vyhledat v textovém poli. Zadejte například "" aktualizace a najděte témata s klíčovými slovy, jako je například "aktualizace," "aktualizace," a "aktualizace."
+- Zadejte klíčové slovo, které chcete vyhledat v textovém poli. Například zadáním příkazu Update (aktualizovat) vyhledejte témata s klíčovými slovy, jako je například aktualizace, aktualizováno a aktualizace.
 
-    Kliknutím na tlačítko filtru v horní části karty můžete zobrazit všechny položky, které obsahují text, který zadáte, nebo pouze ty položky, které začínaly textem, který zadáte.
+    Výběrem tlačítka filtr v horní části karty můžete zobrazit všechny položky, které obsahují zadaný text, nebo pouze položky, které začínají textem, který určíte.
 
     > [!NOTE]
-    > Jakmile se zobrazí tlačítko Filtr na tmavší pozadí s ohraničením, se musí _obsahovat_ text, který zadáte. Pokud se nezobrazují na pozadí a ohraničení, se musí _začínat_ text, který zadáte.
+    > Když se tlačítko Filtr objeví na tmavším pozadí s ohraničením, musí položky _obsahovat_ zadaný text. Pokud se pozadí a ohraničení nezobrazí, musí položky _začínat_ textem, který zadáte.
 
-- Projděte si index a zvolte klíčové slovo.
+- Procházejte indexem a vyberte klíčové slovo.
 
-    Pokud je přidruženo pouze jedno téma klíčové slovo, které zadáte, zobrazí se. V opačném případě se zobrazí seznam všech témat, které jsou spojeny s tímto klíčovým slovem.
+    Pokud je klíčové slovo, které zadáte, přidruženo pouze k jednomu tématu, zobrazí se. V opačném případě se zobrazí seznam všech témat přidružených k tomuto klíčovému slovu.
 
-## <a name="index-search-tips"></a>Tipy pro hledání indexu
+## <a name="index-search-tips"></a>Tipy pro hledání v rejstříku
 
-Pomocí indexu je procesu přímočaré. ale vědět, jak se nejlépe zadejte klíčová slova můžete produktivnější indexu vyhledávání.
+Použití indexu je přímým procesem, který je přímo předáván; Nicméně pochopíte, jak nejlépe zadat klíčová slova můžou zvýšit produktivitu hledání v indexu.
 
 ### <a name="general-guidelines"></a>Obecné pokyny
 
-- Projděte si index položky. Ne všechna témata jsou indexovány stejným způsobem, a ten, který nejvíce může pomoci při může být vyšší nebo nižší v seznamu, než jste očekávali.
+- Procházejte položkami indexu. Ne všechna témata jsou indexována stejným způsobem a ta, která by mohla nejvíc pomáhat, může být v seznamu vyšší nebo nižší, než jste očekávali.
 
-- Vynechte články, jako je například "e" nebo "the", protože je index ignoruje.
+- Vynechejte články, jako je "a" nebo "a", protože je index ignoruje.
 
-- Reverse slova, která zadáte Pokud nenajdete položky, které jste očekávali.
+- Pokud nenajdete položky, které jste očekávali, Přeměňte slova, která zadáte.
 
-    Pokud žádné odpovídající položky "ladění kódu vnořeného sestavení" nezobrazovala, zkuste například zadat, "sestavení kódu, ladění vloženého".
+    Například pokud "ladění vloženého kódu sestavení" nezobrazuje žádné relevantní položky, zkuste zadat, "kód sestavení, vložené ladění".
 
-- Použití filtrů s **Index** kartu ke snížení počtu výsledků.
+- Pro snížení počtu výsledků použijte filtry s kartou **index** .
 
-### <a name="syntax-tips"></a>Syntaxe tipy
+### <a name="syntax-tips"></a>Tipy k syntaxi
 
-Pokud nenajdete položku slovo nebo frázi, které jste zadali, zkuste následující:
+Pokud nenajdete položku pro zadané slovo nebo frázi, vyzkoušejte následující:
 
-- Zadejte první několik písmen, nebo kořenový slova. Zadáním dílčí řetězec můžete získat na témata, která byla indexované klíčová slova, která jsou množného nebo jednotného čísla.
+- Zadejte několik prvních písmen (neboli kořen) slova. Když zadáte částečný řetězec, můžete získat témata, která byla indexována pomocí klíčových slov, která jsou v jednotném nebo množném čísle.
 
-    Zadejte například "vlastnosti" spusťte hledání nad vlastnosti a vlastnosti.
+    Například zadáním "VELKÁ2" zahájíte vyhledávání nad vlastnostmi a vlastností.
 
-- Zadejte gerund (-ing) formy akce pro úlohu chcete provést. Chcete-li najít konkrétnější index položky, přidejte slovo, které popisuje přesně to, co chcete.
+- Zadejte gerund (-li) formuláře pro úlohu, kterou chcete dokončit. Pokud chcete najít konkrétnější položky indexu, přidejte Word, který přesně popisuje, co chcete.
 
-    Zadejte například "spuštěno", chcete-li získat další položky nebo "spuštěné programy" získat méně.
+    Zadejte například "spuštěno", chcete-li získat více položek nebo "spuštěné programy" a získat tak méně.
 
-- Zadejte přídavných samostatné jmen. Chcete-li zúžit výsledky, přidejte slovo, které popisuje přesně to, co chcete.
+- Zadejte samostatné přídavné jméno. Pokud chcete výsledky zúžit, přidejte Word, který přesně popisuje, co chcete.
 
-    Zadejte například "Modelu COM +" získat širokou škálu položky nebo "komponenty modelu COM +" získat méně.
+    Zadejte například "COM+" pro získání široké škály položek nebo "komponent modelu COM+", abyste získali méně.
 
-- Zadejte synonymum aplikace word nebo příkaz, který hledáte.
+- Zadejte synonymum hledaného slova nebo příkazu, který hledáte.
 
-    Pokud zadáte termín "sestavení", zkuste například "vytváření" místo.
+    Pokud jste například zadali termín "budova", zkuste místo toho "vytvořit".
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Postupy: Hledání témat v obsahu](../help-viewer/find-topics-toc.md)
-- [Postupy: Vyhledávání témat](../help-viewer/find-topics.md)
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Postupy: hledání témat v obsahu](../help-viewer/find-topics-toc.md)
+- [Postupy: hledání témat](../help-viewer/find-topics.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

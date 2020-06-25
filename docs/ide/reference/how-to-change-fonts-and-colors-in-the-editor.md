@@ -1,6 +1,6 @@
 ---
 title: Změna písma a barev editoru
-ms.date: 11/26/2018
+ms.date: 06/01/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - editors, fonts
@@ -14,39 +14,48 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c7347ba6bf599e34d9555f6acaeb03cf396a5855
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2d58270b11c810e357af00fbec249c9a659890fb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595563"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283697"
 ---
-# <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Postup: Změna písem a barev pro editor v sadě Visual Studio
+# <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Postupy: Změna písma a barev pro Editor v aplikaci Visual Studio
 
-Můžete změnit výchozí plochu písma, upravit velikost písma a změnit barvy popředí a pozadí pro různé textové **položky zobrazení** v editoru kódu. Při změně nastavení písma mějte na paměti následující informace:
+Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy popředí a pozadí pro různé **položky zobrazení** textu v editoru kódu. Při změně nastavení písma mějte na paměti následující informace:
 
-- Nastavení pro **písmo** a **velikost** jsou globální pro všechny textové prvky ve všech editorech sady Visual Studio.
+- Nastavení pro **písmo** a **Velikost** jsou globální pro všechny textové prvky ve všech editorech sady Visual Studio.
 
 - Názvy písem s pevnou šířkou jsou uvedeny tučně.
 
-- **Popředí položky**, **Pozadí položky**a **Tučné** volby lze nastavit pro každý typ textového prvku. Pokud například změníte barvy a vyberete **tučné** pro **komentář** a **záložky**, ostatní typy textových prvků nebudou ovlivněny.
+- Můžete nastavit možnosti **popředí položky**, **pozadí položky**a **tučné písmo** pro každý typ textového prvku. Například pokud změníte barvy a vyberete **tučné** pro **Komentáře** a **záložky**, jiné typy textových prvků nebudou nijak ovlivněny.
 
-## <a name="change-the-default-font-face-size-and-colors"></a>Změna výchozí plochy, velikosti a barev písma
+> [!IMPORTANT]
+> Chcete-li se dozvědět, jak přizpůsobit písma a barvy pro rozhraní IDE a ne pouze pro Editor kódu, přečtěte si téma **[Postupy: Změna písma a barev na stránce sady Visual Studio](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)** .
 
-1. Z nabídky **Nástroje** vyberte **Možnosti.** V části **Prostředí**vyberte [Písma a barvy](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md).
+## <a name="change-the-default-font-face-size-and-colors"></a>Změna výchozího vzhledu písma, velikosti a barev
 
-2. V **části Zobrazit nastavení pro**vyberte **texteditor**.
+1. V nabídce **nástroje** vyberte **možnost možnosti** . V části **prostředí**vyberte **písma a barvy**.
 
-3. Úpravou voleb **Písmo** a **Velikost** změňte plochu a velikost písma pro všechny textové prvky ve všech editorech.
+1. V **zobrazení zobrazit nastavení pro**vyberte **textový editor**.
 
-4. Vyberte příslušnou položku v **části Zobrazit položky**a pak upravte **možnosti popředí položky** a **pozadí položky.**
+   ![Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru](../../ide/media/fonts-colors-text-editor.png "Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru")
+
+1. Upravte možnosti **písmo** a **Velikost** pro změnu vzhledu a velikosti písma pro všechny textové prvky ve všech editorech.
+
+1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
 
     > [!TIP]
-    > Chcete-li obnovit výchozí nastavení, klepněte na **tlačítko Použít výchozí** nastavení.
+    > Kliknutím na **použít výchozí** obnovíte výchozí nastavení.
 
-5. Klikněte na tlačítko **OK**.
+1. Klikněte na **OK**.
+
+## <a name="next-steps"></a>Další kroky
+
+Další informace o změnách písma a barvy, které lze provést v prostředí IDE pomocí dialogového okna **Možnosti** , naleznete na stránce [písma a barvy, prostředí, dialogové okno Možnosti](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md) .
 
 ## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)
-- [Postup: Změna písem a barev v sadě Visual Studio](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Postupy: Změna písma a barev v aplikaci Visual Studio](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)

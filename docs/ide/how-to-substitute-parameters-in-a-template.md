@@ -1,7 +1,7 @@
 ---
 title: Přidání parametrů názvu do šablon projektů a položek
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - template parameters
 - template parameters, substituting
@@ -9,24 +9,24 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 9ddfe065d30b958e52e22f30f946d01d626fcf0e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3c8b6e0570567e8eb696fda61fe9db7bbd4a2f1b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591408"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283941"
 ---
-# <a name="how-to-substitute-parameters-in-a-template"></a>Postup: Nahrazení parametrů v šabloně
+# <a name="how-to-substitute-parameters-in-a-template"></a>Postupy: nahrazení parametrů v šabloně
 
-Parametry šablony umožňují nahradit identifikátory, jako jsou názvy tříd a obory názvů při vytvoření souboru ze šablony. Do existujících šablon můžete přidat parametry šablony nebo vytvořit vlastní šablony s parametry šablony.
+Parametry šablony umožňují nahradit identifikátory, jako jsou názvy tříd a obory názvů, při vytvoření souboru ze šablony. Můžete přidat parametry šablony do existujících šablon nebo vytvořit vlastní šablony s parametry šablony.
 
-Parametry šablony jsou zapsány ve formátu $*parametr*$. Úplný seznam parametrů šablony naleznete v tématu [Parametry šablony](../ide/template-parameters.md).
+Parametry šablony jsou zapsané ve formátu $*Parameter*$. Úplný seznam parametrů šablony najdete v tématu [parametry šablony](../ide/template-parameters.md).
 
-V následující části se zobrazí způsob, jak upravit šablonu tak, aby nahradila název oboru názvů názvem "bezpečný název projektu".
+V následující části se dozvíte, jak upravit šablonu, aby nahradila název oboru názvů názvem bezpečného projektu.
 
-## <a name="example---namespace-name"></a>Příklad - název oboru názvů
+## <a name="example---namespace-name"></a>Příklad – název oboru názvů
 
-1. Vložte parametr do jednoho nebo více souborů kódu v šabloně. Například:
+1. Vložte parametr do jednoho nebo více souborů kódu v šabloně. Příklad:
 
     ```csharp
     namespace $safeprojectname$
@@ -34,7 +34,7 @@ V následující části se zobrazí způsob, jak upravit šablonu tak, aby nahr
 
 1. V souboru *vstemplate* pro šablonu vyhledejte `ProjectItem` prvek, který obsahuje tento soubor.
 
-1. Nastavte `ReplaceParameters` atribut `true` pro `ProjectItem` prvek:
+1. Nastavte `ReplaceParameters` atribut `true` pro `ProjectItem` element:
 
     ```xml
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>
@@ -42,7 +42,7 @@ V následující části se zobrazí způsob, jak upravit šablonu tak, aby nahr
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
+- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
-- [Element ProjectItem (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [ProjectItem – element (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

@@ -10,72 +10,79 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1033d4167c03951a642656807aeb9cca83116651
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 85d4be9ffd8d1f5ccc6c6d1a1ba5f83e7f0fccf6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79132704"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285293"
 ---
 # <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
-Prostředí Visual Studia můžete přizpůsobit a optimalizovat díky přihlášení k účtu individuálního nastavení.
+Můžete přizpůsobit a optimalizovat vývojové prostředí v aplikaci Visual Studio přihlášením k vašemu účtu přizpůsobení.
 
 > [!NOTE]
-> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Přihlášení k Visual Studiu pro Mac](/visualstudio/mac/signing-in).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [přihlášení k Visual Studio pro Mac](/visualstudio/mac/signing-in).
+
+::: moniker range="vs-2017"
+
+> [! Upozornění] použití sady Visual Studio 2017 pro přístup k prostředkům, které jsou nakonfigurovány pro podmíněný přístup, může aktivovat omezené možnosti ověřování a vyzvat opakované ověřování několikrát v rámci stejné relace sady Visual Studio. 
+> Pokud chcete pracovat s prostředky nakonfigurovanými pro podmíněný přístup, upgradujte na Visual Studio 2019 Update 16,6 nebo novější. Další informace najdete v tématu [Jak používat Visual Studio s účty, které vyžadují vícefaktorové ověřování](work-with-multi-factor-authentication.md).
+
+::: moniker-end
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>Proč se bych se měl(a) přihlásit do aplikace Visual Studio?
 
-Když se přihlásíte, obohatíte prostředí sady Visual Studio. Například po přihlášení můžete [synchronizovat nastavení](synchronized-settings-in-visual-studio.md) mezi zařízeními, rozšířit zkušební verzi a automaticky se připojit ke službě Azure, abychom jmenovali jen některé.
+Když se přihlašujete, vylepšit prostředí sady Visual Studio. Když se například přihlásíte, můžete [synchronizovat nastavení](synchronized-settings-in-visual-studio.md) napříč zařízeními, rozšíříte zkušební verzi a automaticky se připojíte ke službě Azure, abyste pojmenovat několik.
 
-Zde je úplný seznam toho, co můžete očekávat a co můžete dělat po přihlášení:
-- **Prodlužte zkušební dobu sady Visual Studio** – visual studio professional nebo visual studio enterprise můžete použít dalších 90 dní, místo toho, aby byla omezena na zkušební dobu 30 dnů. Další informace naleznete [v tématu Rozšíření zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
+Tady je úplný seznam toho, co můžete očekávat a co můžete udělat po přihlášení:
+- **Prodloužení zkušebního období sady Visual Studio** – můžete použít Visual Studio Professional nebo Visual Studio Enterprise po dobu dalších 90 dní, a nikoli omezit na zkušební dobu 30 dní. Další informace najdete v tématu o [prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
 
-- **Odemkněte edici Visual Studio Community** – Pokud vás instalace komunitní edice vyzve k získání licence, přihlaste se k ide a odblokujte se.
+- **Odemkněte Visual Studio Community Edition** – Pokud vás instalace edice Community vyzve k zadání licence, přihlaste se k IDE a Odblokujte si je.
 
-- **Odemkněte Visual Studio, pokud používáte účet, který je přidružený k předplatnému Visual Studia nebo k organizaci Azure DevOps**. Podrobné pokyny naleznete v [tématu Rozšíření zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
+- **Pokud používáte účet, který je přidružený k předplatnému sady Visual Studio nebo organizaci Azure DevOps, odemkněte Visual Studio**. Podrobné pokyny najdete v tématu [prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
 
-- **Přístup k programu Visual Studio Dev Essentials** – Tento program zahrnuje nabídky bezplatného softwaru, školení, podporu a další. Další informace najdete v [tématu Visual Studio Dev Essentials.](https://visualstudio.microsoft.com/dev-essentials/)
+- **Přístup k Visual Studio Dev Essentials programu** – tento program zahrnuje bezplatné nabídky softwaru, školení, podporu a další. Další informace najdete v tématu [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) .
 
-- **Synchronizovat nastavení sady Visual Studio** – nastavení, která přizpůsobíte, jako jsou vazby klíčů, rozložení oken a barevný motiv, se použijí okamžitě při přihlášení k Visual Studiu na libovolném zařízení. Viz [Synchronizace nastavení v sadě Visual Studio](../ide/synchronized-settings-in-visual-studio.md).
+- **Synchronizovat nastavení aplikace Visual Studio** – nastavení, které přizpůsobíte, například vazby klíčů, rozložení oken a barevný motiv, se použijí okamžitě při přihlášení k aplikaci Visual Studio na libovolném zařízení. Viz [synchronizace nastavení v aplikaci Visual Studio](../ide/synchronized-settings-in-visual-studio.md).
 
-- **Automaticky se připojujte ke službám, jako jsou Azure a Služby Azure DevOps** v ide bez opětovného dotazování na přihlašovací údaje pro stejný účet.
+- **Automatické připojení ke službám, jako je Azure a Azure DevOps Services** v prostředí IDE, bez nutnosti opětovného zobrazení výzvy k zadání přihlašovacích údajů pro stejný účet.
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Jak se přihlásit k Visual Studiu
 
-Při prvním spuštění sady Visual Studio budete vyzváni k přihlášení a zadání základních registračních informací. 
+Při prvním otevření aplikace Visual Studio budete vyzváni k přihlášení a zadání některých základních registračních informací. 
 
 ![Výzva k přihlášení](../ide/media/vs2019_signinpopup.png)
 
-Měli byste si vybrat účet Microsoft nebo pracovní nebo školní účet, který vás nejlépe reprezentuje. Pokud žádný z těchto účtů nemáte, můžete si zdarma vytvořit účet Microsoft kliknutím na odkaz pod přihlašovacím tlačítkem. Pokud máte potíže, přečtěte [si, jak si můžu zaregistrovat účet Microsoft?](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create)
+Měli byste zvolit účet Microsoft nebo pracovní nebo školní účet, který vás nejlépe zaznamená. Pokud nemáte žádné z těchto účtů, můžete účet Microsoft zdarma vytvořit kliknutím na odkaz pod tlačítkem přihlásit se. Pokud máte problémy, přečtěte si téma [návody registrace účet Microsoft?](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create)
 
-Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio si tato nastavení pamatuje a synchronizuje je ve všech prostředích sady Visual Studio, ke které jste se přihlásili. Seznam synchronizovaných nastavení naleznete v tématu [Synchronizované nastavení](../ide/synchronized-settings-in-visual-studio.md). Pokud otevřete nabídku**Možnosti** **nástroje** > v sadě Visual Studio, můžete nastavení později změnit.
+Dále zvolte nastavení uživatelského rozhraní a barevný motiv, který chcete použít v aplikaci Visual Studio. Visual Studio pamatuje tato nastavení a synchronizuje je ve všech prostředích sady Visual Studio, ke kterým jste se přihlásili. Seznam nastavení, která jsou synchronizovaná, najdete v tématu [synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md). Nastavení můžete později změnit, pokud otevřete **Tools**  >  nabídku**Možnosti** nástrojů v aplikaci Visual Studio.
 
-Po zadání nastavení se spustí aplikace Visual Studio, přihlásíte se a budete připraveni začít. Chcete-li ověřit, zda jste přihlášeni, vyhledejte své jméno v pravém horním rohu prostředí sady Visual Studio.
+Po zadání nastavení se spustí aplikace Visual Studio, přihlásíte se a budete připraveni začít. Chcete-li ověřit, zda jste přihlášeni, hledejte své jméno v pravém horním rohu prostředí sady Visual Studio.
 
-![Aktuálně přihlášený uživatel ve VS2019](../ide/media/vs2019_username.png)
+![Aktuálně přihlášený uživatel v VS2019](../ide/media/vs2019_username.png)
 
-Pokud se při prvním spuštění sady Visual Studio rozhodnete nepřihlašovat, je to snadné později. Vyhledejte odkaz **Přihlásit se** v pravém horním rohu prostředí Visual Studio. 
+Pokud se rozhodnete, že se nechcete přihlašovat při prvním spuštění sady Visual Studio, je snadné to provést později. Vyhledejte odkaz pro **přihlášení** v pravém horním rohu prostředí sady Visual Studio. 
 
-![Nepřihlášený uživatel](../ide/media/vs2019_usernotsignedin.png)
+![Přihlášený uživatel](../ide/media/vs2019_usernotsignedin.png)
 
-Pokud se neodhlásíte, budete automaticky přihlášeni k sadě Visual Studio při každém spuštění a všechny změny synchronizovaných nastavení se automaticky použijí. Pokud se chcete odhlásit, klikněte na ikonu s názvem profilu v pravém horním rohu prostředí Sady Visual Studio, zvolte příkaz **Nastavení účtu** a pak zvolte odkaz **Odhlásit se.** Chcete-li se znovu přihlásit, zvolte příkaz **Přihlásit** se v pravém horním rohu prostředí sady Visual Studio.
+Pokud se odhlásíte, budete automaticky přihlášeni k aplikaci Visual Studio vždy, když ji spustíte, a všechny změny synchronizovaného nastavení se automaticky uplatní. Pokud se chcete odhlásit, klikněte na ikonu s názvem vašeho profilu v pravém horním rohu prostředí sady Visual Studio, vyberte příkaz **Nastavení účtu** a pak zvolte odkaz **Odhlásit** . Pokud se chcete znovu přihlásit, klikněte v pravém horním rohu prostředí sady Visual Studio na příkaz **Přihlásit** se.
 
 ## <a name="to-change-your-profile-information"></a>Změna informací v profilu
 
-1. Přejděte na**Nastavení účtu** **souboru** > a zvolte odkaz **Spravovat profil sady Visual Studio.**
+1. Přejít na **File**  >  **Nastavení účtu** soubor a vyberte odkaz **Spravovat profil sady Visual Studio** .
 
-1. V okně prohlížeče zvolte **Upravit profil** a změňte požadované nastavení.
+1. V okně prohlížeče vyberte **Upravit profil** a změňte požadovaná nastavení.
 
-1. Až budete hotovi, zvolte **Uložit změny**.
+1. Až skončíte, klikněte na **Uložit změny**.
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud při přihlašování narazíte na nějaké problémy, přečtěte si nápovědu na stránce [Podpory předplatného.](https://visualstudio.microsoft.com/subscriptions/support/)
+Pokud narazíte na problémy při přihlašování, získáte pomoc na stránce [podpory předplatného](https://visualstudio.microsoft.com/subscriptions/support/) .
 
 ## <a name="see-also"></a>Viz také
 
 * [Prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md)
-* [Přehled ide sady Visual Studio](../get-started/visual-studio-ide.md)
-* [Přihlášení (Visual Studio pro Mac)](/visualstudio/mac/signing-in)
+* [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
+* [Přihlásit se (Visual Studio pro Mac)](/visualstudio/mac/signing-in)
 * [Aktivace (Visual Studio pro Mac)](/visualstudio/mac/activation)

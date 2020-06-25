@@ -1,7 +1,7 @@
 ---
 title: Vyplnění datových sad pomocí objektů TableAdapter
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,123 +19,123 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a79f7b781944bb93a60794e748eefb9375723384
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 888e2ac47348d7e61d115f51e3ea52d15ea9f447
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302236"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282433"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Vyplnění datových sad pomocí objektů TableAdapter
 
-Komponenta TableAdapter vyplní datovou sadu daty z databáze na základě jednoho nebo více dotazů nebo uložených procedur, které zadáte. TableAdapters můžete také provádět přidává, aktualizuje a odstraňuje v databázi zachovat změny, které provedete v datové sadě. Můžete také vydat globální příkazy, které nesouvisejí s žádnou konkrétní tabulkou.
+Komponenta TableAdapter vyplní datovou sadu daty z databáze na základě jednoho nebo více dotazů nebo uložených procedur, které zadáte. Objekty TableAdapter může také v databázi provádět přidání, aktualizace a odstranění, aby byly uchovány změny provedené v datové sadě. Můžete také vydávat globální příkazy, které nesouvisí s žádnou konkrétní tabulkou.
 
 > [!NOTE]
-> TableAdapters jsou generovány návrháři sady Visual Studio. Pokud vytváříte datové sady programově, použijte DataAdapter, což je třída .NET.
+> Objekty TableAdapter jsou generovány pomocí návrhářů aplikace Visual Studio. Pokud vytváříte datové sady programově, použijte modul DataAdapter, což je třída rozhraní .NET.
 
-Podrobné informace o operacích TableAdapter můžete přeskočit přímo na jedno z těchto témat:
+Podrobné informace o operacích TableAdapter můžete přeskočit přímo na jedno z následujících témat:
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md)|Jak pomocí návrhářů vytvořit a nakonfigurovat TableAdapters|
-|[Vytvoření parametrizovaných dotazů TableAdapter](../data-tools/create-parameterized-tableadapter-queries.md)|Povolení uživatelům k zadání argumentů procedurám nebo dotazům tableadapter|
-|[Přímý přístup k databázi pomocí objektů TableAdapter](../data-tools/directly-access-the-database-with-a-tableadapter.md)|Použití metod Dbdirect tableadapters|
-|[Vypnutí omezení při vyplňování datové sady](../data-tools/turn-off-constraints-while-filling-a-dataset.md)|Jak pracovat s omezeními cizího klíče při aktualizaci dat|
-|[Rozšíření funkcí adaptéru TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)|Jak přidat vlastní kód do TableAdapters|
+|[Vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md)|Jak používat návrháře k vytváření a konfiguraci objekty TableAdapter|
+|[Vytvoření parametrizovaných dotazů TableAdapter](../data-tools/create-parameterized-tableadapter-queries.md)|Jak povolit uživatelům dodávat argumenty TableAdapter procedurám nebo dotazům|
+|[Přímý přístup k databázi pomocí objektů TableAdapter](../data-tools/directly-access-the-database-with-a-tableadapter.md)|Jak používat metody DBDirect objekty TableAdapter|
+|[Vypnutí omezení při naplňování datové sady](../data-tools/turn-off-constraints-while-filling-a-dataset.md)|Jak pracovat s omezeními cizího klíče při aktualizaci dat|
+|[Postup rozšiřování funkcí TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)|Postup přidání vlastního kódu do objekty TableAdapter|
 |[Čtení dat XML do datové sady](../data-tools/read-xml-data-into-a-dataset.md)|Jak pracovat s XML|
 
 <a name="tableadapter-overview"></a>
 
 ## <a name="tableadapter-overview"></a>TableAdapter – přehled
 
-TableAdapters jsou součásti generované návrhářem, které se připojují k databázi, spouštějí dotazy nebo uložené procedury a vyplňují jejich DataTable vrácenými daty. TableAdapters také odesílají aktualizovaná data z vaší aplikace zpět do databáze. Můžete spustit libovolný počet dotazů na TableAdapter tak dlouho, dokud vrátí data, která odpovídá schématu tabulky, ke kterému je přidružen TableAdapter. Následující diagram znázorňuje interakci adaptérů TableAdapter s databázemi a dalšími objekty v paměti:
+Objekty TableAdapter jsou komponenty generované návrhářem, které se připojují k databázi, spouštějí dotazy nebo uložené procedury a naplní jejich DataTable daty vrácenými daty. Objekty TableAdapter také odesílají aktualizované údaje z vaší aplikace zpátky do databáze. Můžete spustit libovolný počet dotazů, které chcete mít na TableAdapter, pokud vrátí data, která odpovídají schématu tabulky, ke které je přidružená TableAdapter. Následující diagram ukazuje, jak objekty TableAdapter komunikují s databázemi a dalšími objekty v paměti:
 
 ![Tok dat v klientské aplikaci](../data-tools/media/clientdatadiagram.gif)
 
-Zatímco TableAdapters jsou navrženy s **Návrhářem datové sady**, TableAdapter <xref:System.Data.DataSet>třídy nejsou generovány jako vnořené třídy . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou `NorthwindDataSet`sadu s názvem , TableAdapters, `NorthwindDataSet` které jsou `NorthwindDataSetTableAdapters` přidruženy s <xref:System.Data.DataTable>v by být v oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Například:
+I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad**, třídy TableAdapter nejsou generovány jako vnořené třídy <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
 
 ## <a name="associated-datatable-schema"></a>Přidružené schéma DataTable
 
-Při vytváření TableAdapter, použijte počáteční dotaz nebo uloženou proceduru definovat schéma tableadapter <xref:System.Data.DataTable>přidružené . Spuštění tohoto počátečního dotazu nebo uložené procedury voláním `Fill` metody TableAdapter (která vyplňuje přidružené <xref:System.Data.DataTable>karty TableAdapter). Všechny změny provedené v hlavním dotazu TableAdapter se projeví ve schématu přidružené tabulky dat. Například odebrání sloupce z hlavního dotazu také odebere sloupec z přidružené tabulky dat. Pokud všechny další dotazy na TableAdapter použít příkazy SQL, které vracejí sloupce, které nejsou v hlavním dotazu, návrhář pokusí synchronizovat změny sloupců mezi hlavní dotaz a další dotazy.
+Při vytváření TableAdapter použijte počáteční dotaz nebo uloženou proceduru k definování schématu asociovaného TableAdapter <xref:System.Data.DataTable> . Tento počáteční dotaz nebo uloženou proceduru spustíte voláním metody TableAdapter `Fill` (která vyplní přidruženého TableAdapter <xref:System.Data.DataTable> ). Všechny změny provedené v hlavním dotazu TableAdapter se projeví ve schématu přidružené tabulky dat. Například odebrání sloupce z hlavního dotazu také odebere sloupec z přidružené tabulky dat. Pokud všechny další dotazy na TableAdapter používají příkazy SQL, které vracejí sloupce, které nejsou v hlavním dotazu, Návrhář se pokusí synchronizovat změny sloupce mezi hlavním dotazem a dalšími dotazy.
 
-## <a name="tableadapter-update-commands"></a>Příkazy aktualizace adaptéru TableAdapter
+## <a name="tableadapter-update-commands"></a>Příkazy TableAdapter Update
 
-Funkce aktualizace TableAdapter závisí na tom, kolik informací je k dispozici v hlavním dotazu v **Průvodci adaptérem tableadapter**. Například TableAdapters, které jsou nakonfigurovány pro `JOIN`načtení hodnot z více tabulek (pomocí ), skalární hodnoty, zobrazení nebo výsledky agregačních funkcí nejsou zpočátku vytvořeny s možností odesílat aktualizace zpět do podkladové databáze. V okně **Vlastnosti** `UPDATE`však `DELETE` můžete ručně nakonfigurovat `INSERT`příkazy a příkazy.
+Funkce aktualizace TableAdapter závisí na tom, kolik informací je v hlavním dotazu k dispozici v **Průvodci TableAdapter**. Například objekty TableAdapter, které jsou nakonfigurovány pro načtení hodnot z více tabulek (pomocí `JOIN` ), skalární hodnoty, zobrazení nebo výsledky agregačních funkcí nejsou zpočátku vytvořeny s možností odesílat aktualizace zpět do podkladové databáze. Příkazy, a můžete ale nakonfigurovat `INSERT` `UPDATE` `DELETE` ručně v okně **vlastnosti** .
 
 ## <a name="tableadapter-queries"></a>TableAdapter – dotazy
 
 ![TableAdapter s více dotazy](../data-tools/media/tableadapter.gif)
 
-TableAdapters může obsahovat více dotazů k vyplnění jejich přidružené tabulky dat. Objektu TableAdapter lze definovat tolik dotazů, kolik vyžaduje vaše aplikace, pokud každý dotaz vrací data, která odpovídají stejnému schématu jako jeho přidružená tabulka dat. Tato funkce umožňuje TableAdapter načíst různé výsledky na základě různých kritérií.
+Objekty TableAdapter může obsahovat více dotazů, aby bylo možné vyplnit přidružené tabulky dat. Objektu TableAdapter lze definovat tolik dotazů, kolik vyžaduje vaše aplikace, pokud každý dotaz vrací data, která odpovídají stejnému schématu jako jeho přidružená tabulka dat. Tato funkce umožňuje TableAdapter načíst různé výsledky na základě různých kritérií.
 
-Pokud například aplikace obsahuje tabulku se jmény zákazníků, můžete vytvořit dotaz, který vyplní tabulku s každým jménem zákazníka, které začíná určitým písmenem, a jiným, který vyplní tabulku všemi zákazníky, kteří jsou umístěni ve stejném stavu. Chcete-li `Customers` vyplnit tabulku se zákazníky v `FillByState` daném stavu, můžete vytvořit dotaz, který `SELECT * FROM Customers WHERE State = @State`přebírá parametr pro hodnotu stavu následujícím způsobem: . Dotaz spustíte voláním `FillByState` metody a předáním hodnoty `CustomerTableAdapter.FillByState("WA")`parametru takto: .
+Například pokud vaše aplikace obsahuje tabulku s názvy zákazníků, můžete vytvořit dotaz, který tabulku vyplní pomocí každého názvu zákazníka, který začíná určitým písmenem, a další, který tabulku vyplní všemi zákazníky, kteří se nacházejí ve stejném stavu. Chcete-li vyplnit `Customers` tabulku zákazníky v daném stavu, můžete vytvořit `FillByState` dotaz, který převezme parametr pro hodnotu stav, následovně: `SELECT * FROM Customers WHERE State = @State` . Spustíte dotaz tak, že zavoláte `FillByState` metodu a předáte hodnotu parametru, například: `CustomerTableAdapter.FillByState("WA")` .
 
-Kromě přidání dotazů, které vracejí data stejného schématu jako tabulka dat tableadapter, můžete přidat dotazy, které vracejí skalární (jediné) hodnoty. Například dotaz, který vrací počet`SELECT Count(*) From Customers`zákazníků ( ) `CustomersTableAdapter,` je platný pro i v případě, že data, která je vrácena neodpovídá schématu tabulky.
+Kromě přidávání dotazů, které vracejí data stejného schématu jako tabulky dat TableAdapter, můžete přidat dotazy, které vracejí skalární (jednoduché) hodnoty. Například dotaz, který vrací počet zákazníků ( `SELECT Count(*) From Customers` ), je platný pro i v případě `CustomersTableAdapter,` , že vrácená data neodpovídají schématu tabulky.
 
-## <a name="clearbeforefill-property"></a>ClearBeforeFill, vlastnost
+## <a name="clearbeforefill-property"></a>Vlastnost ClearBeforeFill
 
-Ve výchozím nastavení při každém spuštění dotazu k vyplnění tabulky dat TableAdapter jsou existující data vymazána a do tabulky jsou načteny pouze výsledky dotazu. Nastavte `ClearBeforeFill` vlastnost TableAdapter na `false` pokud chcete přidat nebo sloučit data, která se vrátila z dotazu na existující data v tabulce dat. Bez ohledu na to, zda vymažete data, je třeba explicitně odeslat aktualizace zpět do databáze, pokud je chcete zachovat. Před spuštěním jiného dotazu, který vyplní tabulku, nezapomeňte tedy uložit všechny změny dat v tabulce. Další informace naleznete v [tématu Aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md).
+Ve výchozím nastavení se při každém spuštění dotazu pro vyplnění tabulky dat TableAdapter vymažou stávající data a do tabulky se načtou jenom výsledky dotazu. Nastavte `ClearBeforeFill` vlastnost TableAdapter na, `false` Pokud chcete přidat nebo sloučit data vrácená z dotazu do stávajících dat v tabulce dat. Bez ohledu na to, zda data vymažete, je třeba explicitně odeslat aktualizace zpět do databáze, pokud je chcete zachovat. Nezapomeňte uložit všechny změny dat v tabulce před spuštěním jiného dotazu, který tabulku vyplní. Další informace najdete v tématu [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md).
 
-## <a name="tableadapter-inheritance"></a>Dědičnost adaptéru TableAdapter
+## <a name="tableadapter-inheritance"></a>TableAdapter dědičnost
 
-TableAdapters rozšířit funkce standardních datových adaptérů zapouzdřením nakonfigurované <xref:System.Data.Common.DataAdapter> třídy. Ve výchozím nastavení TableAdapter dědí z <xref:System.ComponentModel.Component> třídy a <xref:System.Data.Common.DataAdapter> nelze přetypovat do třídy. Obsazení TableAdapter do <xref:System.Data.Common.DataAdapter> třídy <xref:System.InvalidCastException> má za následek chybu. Chcete-li změnit základní třídu TableAdapter, můžete zadat <xref:System.ComponentModel.Component> třídu, která je odvozena z vlastnosti **Základní třída** TableAdapter v **Návrháři datové sady**.
+Objekty TableAdapter rozšiřuje funkčnost standardních datových adaptérů zapouzdřením nakonfigurované <xref:System.Data.Common.DataAdapter> třídy. Ve výchozím nastavení dědí TableAdapter z <xref:System.ComponentModel.Component> třídy a nemůže být převedena na <xref:System.Data.Common.DataAdapter> třídu. Výsledkem přetypování TableAdapter do <xref:System.Data.Common.DataAdapter> třídy je <xref:System.InvalidCastException> Chyba. Chcete-li změnit základní třídu TableAdapter, můžete určit třídu, která je odvozena z <xref:System.ComponentModel.Component> vlastnosti **základní třídy** TableAdapter v **Návrhář datových sad**.
 
-## <a name="tableadapter-methods-and-properties"></a>Metody a vlastnosti adaptéru TableAdapter
+## <a name="tableadapter-methods-and-properties"></a>Metody a vlastnosti TableAdapter
 
-Třída TableAdapter není typem rozhraní .NET. To znamená, že nemůžete vyhledat v dokumentaci nebo **objekt browser**. Je vytvořen v době návrhu při použití jednoho z průvodců uvedených výše. Název, který je přiřazen k TableAdapter při jeho vytvoření je založen na názvu tabulky, se kterou pracujete. Například při vytváření TableAdapter založené na tabulce v `Orders`databázi s `OrdersTableAdapter`názvem , TableAdapter je pojmenován . Název třídy TableAdapter lze změnit pomocí **name** vlastnost v **Návrhářdatové sady**.
+Třída TableAdapter není typu .NET. To znamená, že ho nemůžete najít v dokumentaci nebo **Prohlížeč objektů**. Je vytvořena v době návrhu při použití některého z průvodců zmíněných výše. Název, který je přiřazen k TableAdapter při jeho vytvoření, je založen na názvu tabulky, se kterou pracujete. Například při vytváření TableAdapter založeného na tabulce v databázi s názvem má `Orders` TableAdapter název `OrdersTableAdapter` . Název třídy TableAdapter lze změnit pomocí vlastnosti **Name** v **Návrhář datových sad**.
 
-Následují běžně používané metody a vlastnosti tableadapters:
+Níže jsou uvedené běžně používané metody a vlastnosti objekty TableAdapter:
 
 |Člen|Popis|
 |------------|-----------------|
-|`TableAdapter.Fill`|Naplní přidruženou tabulku dat tableadapter výsledky `SELECT` příkazu TableAdapter.|
-|`TableAdapter.Update`|Odešle změny zpět do databáze a vrátí celé číslo, které představuje počet řádků ovlivněných aktualizací. Další informace naleznete v [tématu Aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md).|
-|`TableAdapter.GetData`|Vrátí nový, <xref:System.Data.DataTable> který je vyplněn daty.|
-|`TableAdapter.Insert`|Vytvoří v tabulce dat nový řádek. Další informace naleznete v [tématu Vkládání nových záznamů do databáze](../data-tools/insert-new-records-into-a-database.md).|
+|`TableAdapter.Fill`|Naplní tabulku dat přidruženého k TableAdapter výsledky `SELECT` příkazu TableAdapter.|
+|`TableAdapter.Update`|Odešle změny zpět do databáze a vrátí celé číslo představující počet řádků ovlivněných aktualizací. Další informace najdete v tématu [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md).|
+|`TableAdapter.GetData`|Vrátí nový <xref:System.Data.DataTable> , který je vyplněn daty.|
+|`TableAdapter.Insert`|Vytvoří v tabulce dat nový řádek. Další informace najdete v tématu [vložení nových záznamů do databáze](../data-tools/insert-new-records-into-a-database.md).|
 |`TableAdapter.ClearBeforeFill`|Určuje, zda bude tabulka dat před voláním metody `Fill` vyprázdněna.|
 
-## <a name="tableadapter-update-method"></a>Metoda aktualizace adaptéru TableAdapter
+## <a name="tableadapter-update-method"></a>Metoda TableAdapter Update
 
-Objekty TableAdapter používají příkazy pro čtení a zápis dat z databáze. Použijte `Fill` počáteční (hlavní) dotaz TableAdapter jako základ pro vytvoření schématu přidružené tabulky dat, `InsertCommand`jakož `UpdateCommand`i `DeleteCommand` , a příkazy, které jsou přidruženy k metodě. `TableAdapter.Update` Volání `Update` metody TableAdapter spustí příkazy, které byly vytvořeny při původní konfiguraci tableadapter, nikoli jeden z dalších dotazů, které jste přidali pomocí **Průvodce konfigurací dotazu tableadapter**.
+Objekty TableAdapter používají příkazy pro čtení a zápis dat z databáze. Použijte počáteční `Fill` (hlavní) dotaz TableAdapter jako základ pro vytvoření schématu přidružené datové tabulky a `InsertCommand` `UpdateCommand` příkazů, a, `DeleteCommand` které jsou přidruženy k `TableAdapter.Update` metodě. Voláním metody TableAdapter `Update` se spustí příkazy, které byly vytvořeny při původní konfiguraci TableAdapter, nikoli jeden z dalších dotazů, které jste přidali pomocí **Průvodce konfigurací dotazů TableAdapter**.
 
-Při použití TableAdapter, efektivně provádí stejné operace s příkazy, které by obvykle provádět. Například při volání `Fill` metody adaptéru adaptér spustí příkaz data `SelectCommand` v jeho vlastnosti a používá <xref:System.Data.SqlClient.SqlDataReader>čtečku dat (například) k načtení sady výsledků do tabulky dat. Podobně při `Update` volání metody adaptéru spustí příslušný příkaz (v `UpdateCommand`, `InsertCommand`a `DeleteCommand` vlastnosti) pro každý změněný záznam v tabulce dat.
+Když použijete TableAdapter, efektivně provádí stejné operace s příkazy, které byste obvykle prováděli. Například při volání `Fill` metody adaptéru adaptér spustí datový příkaz ve své `SelectCommand` vlastnosti a pomocí čtečky dat (například <xref:System.Data.SqlClient.SqlDataReader> ) načte sadu výsledků do tabulky dat. Podobně při volání `Update` metody adaptéru spustí příslušný příkaz (ve `UpdateCommand` `InsertCommand` vlastnostech, a `DeleteCommand` ) pro každý změněný záznam v tabulce dat.
 
 > [!NOTE]
-> Pokud v hlavním dotazu není k dispozici dostatek informací, příkazy `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny jako výchozí při generování objektu TableAdapter. Pokud tableAdapter hlavní dotaz je více než `SELECT` jeden příkaz tabulky, je možné, že `InsertCommand`návrhář `UpdateCommand`nebude `DeleteCommand`moci generovat , a . Pokud tyto příkazy nejsou generovány, může se při `TableAdapter.Update` spuštění metody zobrazit chyba.
+> Pokud v hlavním dotazu není k dispozici dostatek informací, příkazy `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny jako výchozí při generování objektu TableAdapter. Pokud je hlavní dotaz TableAdapter více než jedna tabulka `SELECT` , je možné, že návrhář nebude moci generovat `InsertCommand` , `UpdateCommand` a `DeleteCommand` . Pokud tyto příkazy nejsou vygenerovány, může při spuštění metody dojít k chybě `TableAdapter.Update` .
 
 ## <a name="tableadapter-generatedbdirectmethods"></a>Vlastnost GenerateDBDirectMethods třídy TableAdapter
 
-Kromě , `InsertCommand` `UpdateCommand`, `DeleteCommand`a , TableAdapters jsou vytvořeny pomocí metod, které lze spustit přímo proti databázi. Tyto metody (`TableAdapter.Insert`, `TableAdapter.Update`, `TableAdapter.Delete`a ) můžete volat přímo k manipulaci s daty v databázi. To znamená, že můžete volat tyto jednotlivé `TableAdapter.Update` metody z vašeho kódu namísto volání pro zpracování vložení, aktualizace a odstranění, které čekají na vyřízení pro přidružené tabulky dat.
+Kromě `InsertCommand` , `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekty TableAdapter pomocí metod, které lze spustit přímo proti databázi. Tyto metody ( `TableAdapter.Insert` , `TableAdapter.Update` a) můžete zavolat `TableAdapter.Delete` přímo k manipulaci s daty v databázi. To znamená, že můžete volat tyto jednotlivé metody z kódu místo volání `TableAdapter.Update` pro zpracování vložení, aktualizace a odstranění, které čekají na přidruženou datovou tabulku.
 
-Pokud nechcete vytvářet tyto přímé metody, nastavte vlastnost **GenerateDbDirectMethods** `false` společnosti TableAdapter na (v okně **Vlastnosti).** Další dotazy, které jsou přidány do TableAdapter jsou samostatné dotazy – negenerují tyto metody.
+Pokud nechcete vytvořit tyto přímé metody, nastavte vlastnost **GenerateDBDirectMethods** TableAdapter na `false` (v okně **vlastnosti** ). Další dotazy, které jsou přidány do TableAdapter, jsou samostatné dotazy – negenerují tyto metody.
 
-## <a name="tableadapter-support-for-nullable-types"></a>Podpora tableadapter pro typy s možnou hodnotou null
+## <a name="tableadapter-support-for-nullable-types"></a>Podpora TableAdapter pro typy s možnou hodnotou null
 
-TableAdapters podporují typy `Nullable(Of T)` `T?`s možnou hodnotou null a . Další informace o typech s možnou hodnotou null v jazyce Visual Basic naleznete v [tématu Nullable Value Types](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types). Další informace o typech s možnou hodnotou null v systému C#naleznete v [tématu Použití typů s možnou hodnotou null](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types).
+Objekty TableAdapter podporuje typy s možnou hodnotou null `Nullable(Of T)` a `T?` . Další informace o typech s možnou hodnotou null v Visual Basic naleznete v tématu [typy hodnot s možnou hodnotou null](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types). Další informace o typech s možnou hodnotou null v jazyce C# naleznete v tématu [Use Types Nullable](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types).
 
 <a name="tableadaptermanager-reference"></a>
 
-## <a name="tableadaptermanager-reference"></a>Reference TableAdapterManager
+## <a name="tableadaptermanager-reference"></a>Odkaz na TableAdapterManager
 
-Ve výchozím nastavení se třída TableAdapterManager generuje při vytváření datové sady, která obsahuje související tabulky. Chcete-li zabránit generování třídy, změňte `Hierarchical Update` hodnotu vlastnosti datové sady na false. Při přetažení tabulky, která má vztah na návrhovou plochu formuláře systému Windows nebo WPF stránky, Visual Studio deklaruje členské proměnné třídy. Pokud nepoužíváte datové vazby, budete muset ručně deklarovat proměnnou.
+Ve výchozím nastavení vygeneruje třída TableAdapterManager, když vytvoříte datovou sadu, která obsahuje související tabulky. Chcete-li zabránit vygenerování třídy, změňte hodnotu `Hierarchical Update` vlastnosti DataSet na false. Když přetáhnete tabulku, která má relaci, na návrhovou plochu stránky Windows Form nebo WPF, Visual Studio deklaruje členskou proměnnou třídy. Pokud datovou vazbu nepoužíváte, je nutné ručně deklarovat proměnnou.
 
-Třída TableAdapterManager není typem .NET. Proto nelze vyhledat v dokumentaci. Je vytvořen v době návrhu jako součást procesu vytváření datové sady.
+Třída TableAdapterManager není typu .NET. Proto je nemůžete v dokumentaci vyhledat. Je vytvořena v době návrhu v rámci procesu vytváření datové sady.
 
-Následují často používané metody a vlastnosti `TableAdapterManager` třídy:
+Následující jsou často používané metody a vlastnosti `TableAdapterManager` třídy:
 
 |Člen|Popis|
 |------------|-----------------|
 |Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
-|`BackUpDataSetBeforeUpdate`Vlastnost|Určuje, zda chcete vytvořit záložní kopii datové `TableAdapterManager.UpdateAll` sady před spuštěním metody. Boolean.|
-|*vlastnost tableName* `TableAdapter`|Představuje TableAdapter. Generogenovaný TableAdapterManager obsahuje `TableAdapter` vlastnost pro každou spravuje. Například datová sada s tabulka zákazníci a objednávky generuje `CustomersTableAdapter` `OrdersTableAdapter` s TableAdapterManager, který obsahuje a vlastnosti.|
-|`UpdateOrder`Vlastnost|Řídí pořadí jednotlivých příkazů vložení, aktualizace a odstranění. Nastavte tuto hodnotu na `TableAdapterManager.UpdateOrderOption` jednu z hodnot ve výčtu.<br /><br /> Ve výchozím `UpdateOrder` nastavení je nastavena na **InsertUpdateDelete**. To znamená, že vloží, pak aktualizace a potom odstraní jsou prováděny pro všechny tabulky v datové sadě.|
+|`BackUpDataSetBeforeUpdate`majetek|Určuje, zda má být před provedením metody vytvořena záložní kopie datové sady `TableAdapterManager.UpdateAll` . Datového.|
+|*TableName* `TableAdapter` majetek|Představuje objekt TableAdapter. Vygenerovaná TableAdapterManager obsahuje vlastnost pro každou `TableAdapter` IT správu. Například datová sada s tabulkou Customers and Orders generuje TableAdapterManager, který obsahuje `CustomersTableAdapter` a `OrdersTableAdapter` Vlastnosti.|
+|`UpdateOrder`majetek|Určuje pořadí jednotlivých příkazů INSERT, Update a DELETE. Nastavte tuto hodnotu na jednu z hodnot ve `TableAdapterManager.UpdateOrderOption` výčtu.<br /><br /> Ve výchozím nastavení `UpdateOrder` je nastavená na **InsertUpdateDelete**. To znamená, že vložení, následné aktualizace a následné odstranění jsou prováděny pro všechny tabulky v datové sadě.|
 
 ## <a name="security"></a>Zabezpečení
 
-Při použití datových příkazů s vlastností <xref:System.Data.CommandType.Text>CommandType nastavenou na , pečlivě zkontrolujte informace odeslané z klienta před jejich předáním do databáze. Uživatelé se zlými úmysly se mohou pokusit odeslat (vložit) upravené nebo další příkazy SQL ve snaze získat neoprávněný přístup nebo poškodit databázi. Před přenosem vstupu uživatele do databáze vždy ověřte, zda jsou informace platné. Osvědčeným postupem je vždy používat parametrizované dotazy nebo uložené procedury, pokud je to možné.
+Když použijete datové příkazy s vlastností CommandType nastavenou na <xref:System.Data.CommandType.Text> , pečlivě zkontrolujte informace, které se odesílají z klienta, než je předáte do vaší databáze. Uživatelé se zlými úmysly se můžou pokusit odeslat (vložit) upravené nebo další příkazy SQL za účelem získání neoprávněného přístupu nebo poškození databáze. Před přenosem vstupu uživatele do databáze vždy ověřte, zda jsou informace platné. Osvědčeným postupem je vždy použít parametrizované dotazy nebo uložené procedury, pokud je to možné.
 
 ## <a name="see-also"></a>Viz také
 

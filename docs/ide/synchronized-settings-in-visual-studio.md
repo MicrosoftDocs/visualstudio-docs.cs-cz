@@ -1,6 +1,6 @@
 ---
 title: Synchronizovat nastavení
-ms.date: 12/10/2018
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 author: TerryGLee
@@ -8,89 +8,90 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f7183f20139df82d14f80ee4b57e28b4aed3a66
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3129543656c0defe09543b8531d8a10998791083
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566784"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285202"
 ---
-# <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Synchronizace nastavení sady Visual Studio ve více počítačích
+# <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Synchronizace nastavení sady Visual Studio napříč více počítači
 
-Když se k aplikaci Visual Studio přihlásíte ve více počítačích pomocí stejného účtu individuálního nastavení, může být nastavení synchronizováno mezi počítači.
+Když se přihlásíte do sady Visual Studio na více počítačích pomocí stejného účtu individuálního nastavení, můžete nastavení synchronizovat napříč počítači.
 
 ## <a name="synchronized-settings"></a>Synchronizovaná nastavení
 
-Ve výchozím nastavení jsou synchronizována následující nastavení:
+Ve výchozím nastavení se synchronizují následující nastavení:
 
-- Nastavení vývoje. Při prvním spuštění sady Visual Studio vyberete kolekci nastavení, ale výběr můžete kdykoli změnit. Další informace naleznete v [tématu Nastavení prostředí](../ide/environment-settings.md).
+- Nastavení vývoje. Můžete vybrat kolekci nastavení při prvním otevření sady Visual Studio, ale výběr můžete kdykoli změnit. Další informace najdete v tématu [nastavení prostředí](../ide/environment-settings.md).
 
-- Uživatelem definované příkazové aliasy. Další informace o definování aliasů příkazů naleznete v tématu [Aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).
+- Aliasy příkazů definované uživatelem Další informace o tom, jak definovat aliasy příkazů, naleznete v tématu [Aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).
 
-- Uživatelem definovaná rozložení oken na stránce **Správa** > **rozložení oken.**
+- Uživatelsky definované rozložení oken v **okně**  >  **Spravovat stránku rozložení oken** .
 
-- Na stránkách**Možnosti** **nástroje** > jsou následující:
+- Na **Tools**  >  stránkách**Možnosti** nástrojů se nacházejí tyto možnosti:
 
-  - Nastavení velikosti motivu a panelu nabídek na stránce**Možnosti Obecné** **prostředí.** > 
+  - Motiv a nastavení velikosti písmen na panelu nabídek **Environment**na  >  stránce**Obecné** možnosti prostředí.
 
-  - Všechna nastavení na stránce**Volby písma a barvy** **prostředí.** > 
+  - Všechna nastavení na **Environment**  >  stránce možnosti**písma a barvy** prostředí.
 
-  - Všechny klávesové zkratky na stránce**Možnosti klávesnice** **prostředí.** > 
+  - Všechny klávesové zkratky na **Environment**  >  stránce možností**klávesnice** prostředí.
 
-  - Všechna nastavení na stránce Karty **prostředí** > **a Možnosti systému Windows.**
+  - Všechna nastavení na **Environment**  >  **kartách prostředí a** na stránce Možnosti systému Windows.
 
-  - Všechna nastavení na stránce možnosti**spuštění** **prostředí.** > 
+  - Všechna nastavení na **Environment**  >  stránce možnosti**spuštění** prostředí.
 
-  - Všechna nastavení na stránkách možností **textového editoru,** například [předvolby stylu kódu](code-styles-and-code-cleanup.md).
+  - Všechna nastavení na stránkách možností **textového editoru** , například [Předvolby stylu kódu](code-styles-and-code-cleanup.md).
 
-  - Všechna nastavení na stránkách možností **aplikace XAML.**
+  - Všechna nastavení na stránkách možností **Návrhář XAML** .
 
-## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>Vypnutí synchronizovaných nastavení v určitém počítači
+## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>Vypnutí synchronizovaných nastavení na konkrétním počítači
 
-Synchronizovaná nastavení sady Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že přejdete na stránku**Účty** **prostředí** >  **Nástroje** > **a** > po zrušení zaškrtnutí políčka Nastavení **synchronizace mezi zařízeními při přihlášení do sady Visual Studio**.
+Synchronizovaná nastavení pro Visual Studio jsou ve výchozím nastavení zapnutá. Synchronizovaná nastavení v počítači můžete vypnout tak, že na stránce **nástroje**zobrazíte  >  **Options**  >  **Environment**  >  **účty** prostředí možnosti a v **případě přihlášení do sady Visual Studio zrušíte zaškrtnutí možnosti Synchronizovat nastavení v rámci zařízení**.
 
-Pokud se například rozhodnete nesynchronizovat nastavení sady Visual Studio v počítači "A", nebudou v počítači "B" ani v počítači "C" zobrazeny žádné změny nastavení provedené v počítači "A". Počítače "B" a "C" budou pokračovat v synchronizaci mezi sebou, ale ne s počítačem "A".
+Pokud se například rozhodnete, že nechcete synchronizovat nastavení v aplikaci Visual Studio v počítači "A", žádné změny nastavení provedené v počítači "A" se nezobrazí v počítači "B" nebo v počítači "C". Počítače "B" a "C" budou nadále synchronizovány navzájem, ale ne u počítače "A".
 
 > [!NOTE]
-> Pokud se rozhodnete nesynchronizovat nastavení zrušením výběru možnosti na stránce**Účty** **prostředí** > **Možnosti** >  **nástroje,** > nebudou ovlivněny jiné verze nebo edice sady Visual Studio, které máte ve stejném počítači. Tyto souběžné instalace sady Visual Studio budou pokračovat v synchronizaci nastavení (pokud zde nezrušíte zaškrtnutí možnosti).
+> Pokud se rozhodnete nesynchronizovat nastavení tím, že zrušíte výběr možnosti na **Tools**  >  **Options**  >  **Environment**  >  stránce**účty** prostředí možnosti nástrojů, jiné verze nebo edice sady Visual Studio, které máte ve stejném počítači, nebudou ovlivněny. Tato Souběžná instalace sady Visual Studio bude pokračovat v synchronizaci jejich nastavení (Pokud nechcete zrušit možnost, že je to možné).
 
-## <a name="synchronize-settings-across-visual-studio-family-products-and-editions"></a>Synchronizace nastavení v produktech a edicích sady Visual Studio
+## <a name="synchronize-settings-across-visual-studio-ide-products-and-editions"></a>Synchronizace nastavení v rámci produktů a edicí IDE sady Visual Studio
 
-Nastavení jsou synchronizována mezi verzemi a edicemi sady Visual Studio *nainstalovanými vedle sebe*. Nastavení jsou také synchronizovány mezi produkty řady Visual Studio, včetně blendu pro Visual Studio. Produkt pro jednotlivé řady však může mít vlastní nastavení, která nejsou sdílena s visual studio. Například nastavení specifická pro blend pro Visual Studio v počítači "A" nejsou sdíleny s Visual Studio v počítačích "A" nebo "B".
+Nastavení se synchronizují napříč verzemi a edicemi sady Visual Studio nainstalovanou *vedle*sebe. Nastavení jsou také synchronizovaná v rámci Visual Studio IDE Products, včetně Blend pro Visual Studio. Jednotlivý produkt IDE sady Visual Studio však může mít vlastní nastavení, které není sdíleno se sadou Visual Studio. Například nastavení specifická pro Blend pro Visual Studio v počítači "A" nejsou sdílena se sadou Visual Studio na počítačích "A" nebo "B".
 
-## <a name="side-by-side-synchronized-settings"></a>Synchronizovaná nastavení vedle sebe
+## <a name="side-by-side-synchronized-settings"></a>Nastavení vedle sebe synchronizovaného
 
 ::: moniker range="vs-2017"
 
-Některá nastavení, jako je rozložení okna nástroje nejsou sdíleny mezi různými souběžné instalace sady Visual Studio. Soubor *CurrentSettings.vssettings* v *%userprofile%\Documents\Visual Studio 2017\Settings* je ve složce specifické pro instalaci, která je podobná *%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx\Settings*.
+Určitá nastavení, například rozložení okna nástroje, se nesdílí mezi různými souběžnými instalacemi sady Visual Studio. Soubor *CurrentSettings. vssettings* v *%UserProfile%\Documents\Visual Studio 2017 \ Settings* je ve složce určené pro instalaci, která je podobná *%localappdata%\microsoft\visualstudio\15.0_xxxxxxxx \settings*.
 
 > [!NOTE]
-> Chcete-li použít nové nastavení specifické pro instalaci, proveďte novou instalaci. Při upgradu existující instalace sady Visual Studio používá existující sdílené umístění.
+> Chcete-li použít nové nastavení specifické pro instalaci, proveďte novou instalaci. Když upgradujete existující instalaci sady Visual Studio, použije se existující sdílené umístění.
 
-Pokud máte aktuálně souběžné instalace sady Visual Studio a chcete použít nové umístění souboru nastavení specifické pro instalaci, postupujte takto:
+Pokud aktuálně máte souběžné instalace sady Visual Studio a chcete použít nové umístění souboru nastavení specifického pro instalaci, postupujte následovně:
 
-1. Upgradujte na Visual Studio 2017 verze 15.3 nebo novější.
+1. Upgradujte na Visual Studio 2017 verze 15,3 nebo novější.
 
-2. Pomocí **Průvodce importem a exportem nastavení** exportujte všechna existující nastavení do určitého umístění mimo složku *%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx.*
+2. Pomocí **Průvodce importem a exportem nastavení** můžete exportovat všechna stávající nastavení do umístění mimo složku *%localappdata%\microsoft\visualstudio\15.0_xxxxxxxx* .
 
-3. Otevřete **příkazový řádek pro vývojáře pro VS 2017** a spusťte . `devenv /resetuserdata`
+3. Otevřete **Developer Command Prompt pro VS 2017** a spusťte `devenv /resetuserdata` .
 
-1. Otevřete Visual Studio a importujte uložená nastavení z exportovaného souboru nastavení.
+1. Otevřete sadu Visual Studio a importujte uložená nastavení ze souboru exportovaných nastavení.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Některá nastavení, jako je rozložení okna nástroje nejsou sdíleny mezi různými souběžné instalace sady Visual Studio. Soubor *CurrentSettings.vssettings* v *%userprofile%\Documents\Visual Studio 2019\Settings* je ve složce specifické pro instalaci, která je podobná *%localappdata%\Microsoft\VisualStudio\16.0_xxxxxxxx\Settings*.
+Určitá nastavení, například rozložení okna nástroje, se nesdílí mezi různými souběžnými instalacemi sady Visual Studio. Soubor *CurrentSettings. vssettings* v *%UserProfile%\Documents\Visual studiu 2019 \ Settings* je ve složce specifické pro instalaci, která je podobná *%localappdata%\microsoft\visualstudio\16.0_xxxxxxxx \settings*.
 
 ::: moniker-end
 
-## <a name="reset-synchronized-settings"></a>Obnovit synchronizované nastavení
+## <a name="reset-synchronized-settings"></a>Resetovat synchronizovaná nastavení
 
-Chcete-li obnovit výchozí nastavení všech nastavení, přihlaste se do sady Visual Studio a pak vyberte **Nástroje** > **Pro import a export nastavení** otevřete Průvodce **nastavením importu a exportu**. Vyberte **Obnovit všechna nastavení** a postupujte podle zbývajících kroků průvodce.
+Pokud chcete resetovat všechna nastavení na jejich výchozí hodnoty, přihlaste se k Visual Studiu a pak výběrem možnosti **nástroje**  >  **importovat a exportovat nastavení** otevřete **Průvodce importem a exportem nastavení**. Vyberte **Obnovit všechna nastavení** a potom postupujte podle zbývajících kroků průvodce.
 
 ## <a name="see-also"></a>Viz také
 
-- [Přizpůsobení prostředí IDE](../ide/personalizing-the-visual-studio-ide.md)
+- [Přizpůsobení integrovaného vývojového prostředí](../ide/personalizing-the-visual-studio-ide.md)
 - [Nastavení prostředí](../ide/environment-settings.md)
-- [Dialogové okno Možnosti > účtů prostředí](reference/accounts-environment-options-dialog-box.md)
+- [Dialogové okno Možnosti účtů > prostředí](reference/accounts-environment-options-dialog-box.md)
+- [Souběžná instalace různých verzí sady Visual Studio](../install/install-visual-studio-versions-side-by-side.md)

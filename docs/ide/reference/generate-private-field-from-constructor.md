@@ -1,6 +1,6 @@
 ---
-title: Generovat soukromé pole z konstruktoru
-ms.date: 03/10/2020
+title: Generovat soukromé pole a vlastnost z konstruktoru
+ms.date: 06/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -10,36 +10,36 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4eb5dd39d0fb2d4cd9ba8ade0d0408d6e36a4854
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56bd361d2bffb4ff17b03ac6743837032d1934e1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094027"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283720"
 ---
-# <a name="generate-private-field-from-constructor"></a>Generovat soukromé pole z konstruktoru
+# <a name="generate-private-field-and-property-from-constructor"></a>Generovat soukromé pole a vlastnost z konstruktoru
 
-Toto refaktoring se vztahuje na: 
+Tento refaktoring platí pro: 
 
 - C# 
 
-- Visual Basic
+**Co:** Vygeneruje soukromé pole nebo vlastnost z konstruktoru. 
 
-**Co:** Generovat soukromé pole z konstruktoru. 
+**Když:** Chcete rychle přidat a inicializovat soukromé pole nebo vlastnost z konstruktoru.
 
-**Kdy:** Chcete rychle přidat soukromé pole z konstruktoru.
-
-**Proč:** Psaní soukromých polí může být časově náročné a opakující se. Použití tohoto refaktoringu je rychlé a dělá program robustnější.
+**Proč:** Zápis privátních polí a vlastností může být časově náročný a opakující se. Použití tohoto refaktoringu je rychlé a díky tomu je program robustnější.
 
 ## <a name="how-to"></a>Postupy 
 
 1. Umístěte kurzor na název parametru v rámci konstruktoru.
 
-2. Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    
-3. Vyberte možnost **Vytvořit a inicializovat pole**.
+3. Dále vyberte jednu z následujících možností:
 
-   ![Generovat soukromé pole z konstruktoru](media/generate-private-field-from-constructor.png)
+- **Vytvořit a inicializovat pole** nebo **vytvořit a inicializovat vlastnost**.
+
+   ![Generování soukromého pole z konstruktoru](media/generate-private-field-from-constructor.png)
 
 ## <a name="see-also"></a>Viz také 
 

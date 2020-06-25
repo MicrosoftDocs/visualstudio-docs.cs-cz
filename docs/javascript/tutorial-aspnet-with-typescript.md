@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 91c712ce396000ff9babaf70335edfd5709a3000
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183090"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283564"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ V tomto kurzu se naučíte:
 > * Spuštění aplikace
 > * Přidání knihovny třetí strany pomocí npm
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Požadované součásti
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje webu ASP.NET.
 
@@ -97,9 +97,9 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 
 1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript**a pak klikněte na **Přidat**.
 
-   Visual Studio přidá soubor *tsconfig. JSON* do kořenového adresáře projektu. Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
+   Visual Studio přidá *tsconfig.js* do souboru do kořenového adresáře projektu. Tento soubor můžete použít ke [konfiguraci možností](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) pro kompilátor TypeScript.
 
-1. Otevřete *tsconfig. JSON* a nahraďte výchozí kód následujícím kódem:
+1. Otevřete *tsconfig.js* a nahraďte výchozí kód následujícím kódem:
 
    ```json
    {
@@ -162,7 +162,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 
     Tuto možnost vyberte, pokud chcete `lastName` Poslední název přidat zpátky do kódu.
 
-1. Otevřete okno *zobrazení/Domovská* složka a pak otevřete *index. html*.
+1. Otevřete okno *zobrazení/Domovská* složka a pak otevřete *index. cshtml*.
 
 1. Na konec souboru přidejte následující kód HTML.
 
@@ -189,7 +189,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 
    I když se aplikace při spuštění automaticky vytvoří, chceme se podívat na něco, co se děje během procesu sestavení.
 
-1. Otevřete složku *wwwroot/js* a najdete dva nové soubory, *App. js* a zdrojový soubor mapování, *App. js. map*. Tyto soubory jsou generovány kompilátorem TypeScript.
+1. Otevřete složku *wwwroot/js* a najdete dva nové soubory, *app.js* a zdrojový soubor mapování *app.js. map*. Tyto soubory jsou generovány kompilátorem TypeScript.
 
    Zdrojové soubory mapování jsou vyžadovány pro ladění.
 
@@ -224,7 +224,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
    >[!NOTE]
    > Pro ASP.NET Core projekty můžete použít také [Správce knihovny](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) nebo přízi namísto npm k instalaci souborů JavaScript a CSS na straně klienta.
 
-1. V tomto příkladu přidejte soubor definice TypeScript pro jQuery do projektu. Do souboru *Package. JSON* zahrňte následující.
+1. V tomto příkladu přidejte soubor definice TypeScript pro jQuery do projektu. Do *package.js* souboru zadejte následující.
 
    ```json
    "devDependencies": {
@@ -237,7 +237,7 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
 1. Pokud balíček v Průzkumník řešení není nainstalován, klikněte pravým tlačítkem myši na uzel npm a vyberte možnost **obnovit balíčky**.
 
    >[!NOTE]
-   > V některých scénářích může Průzkumník řešení znamenat, že balíček npm není synchronizovaný s *Package. JSON* kvůli známému problému popsanému [tady](https://github.com/aspnet/Tooling/issues/479). Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním souboru *Package. JSON*, restartováním sady Visual Studio a opětovným přidáním souboru *Package. JSON* , jak je popsáno výše v tomto článku.
+   > V některých scénářích Průzkumník řešení může znamenat, že balíček npm není synchronizovaný s *package.jsna základě* známého problému, který je [zde](https://github.com/aspnet/Tooling/issues/479)popsán. Balíček se například může zobrazit jako nenainstalovaný při instalaci. Ve většině případů můžete aktualizovat Průzkumník řešení odstraněním *package.jsna*, restartováním sady Visual Studio a opětovným přidáním *package.jsdo* souboru, jak je popsáno výše v tomto článku.
 
 1. V Průzkumník řešení klikněte pravým tlačítkem myši na složku skripty a vyberte možnost **Přidat**  >  **novou položku**.
 

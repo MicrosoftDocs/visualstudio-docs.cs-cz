@@ -1,75 +1,75 @@
 ---
-title: 'Postup: Zobrazení, uložení a konfigurace souborů protokolu sestavení | Dokumenty společnosti Microsoft'
+title: 'Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení | Microsoft Docs'
 ms.date: 08/28/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84efda930066c4236fa4397fbadf287c6774fdb0
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 4acf8ca4e116bfb0ab990f1b0aed66bef95820ad
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472790"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283902"
 ---
-# <a name="how-to-view-save-and-configure-build-log-files"></a>Postup: Zobrazení, uložení a konfigurace souborů protokolu sestavení
+# <a name="how-to-view-save-and-configure-build-log-files"></a>Postupy: zobrazování, ukládání a konfigurace souborů protokolu sestavení
 
-Po sestavení projektu v ide sady Visual Studio, můžete zobrazit informace o tomto sestavení v okně **Výstup.** Pomocí těchto informací můžete například řešit selhání sestavení.
+Po sestavení projektu v integrovaném vývojovém prostředí sady Visual Studio můžete zobrazit informace o tomto sestavení v okně **výstup** . Pomocí těchto informací můžete například řešit potíže při selhání sestavení.
 
-- U projektů jazyka C++ můžete také zobrazit stejné informace v souboru protokolu, který je vytvořen a uložen při vytváření projektu. 
+- V případě projektů v jazyce C++ lze také zobrazit stejné informace v souboru protokolu, který je vytvořen a uložen při sestavení projektu. 
 
-- U projektů spravovaného kódu můžete klepnout do okna výstupu sestavení a stisknout **kombinaci kláves Ctrl**+**S**. Visual Studio vás vyzve k umístění pro uložení informací z okna **Výstup** do souboru protokolu.
+- Pro projekty spravovaného kódu můžete kliknout na okno výstup sestavení a stisknout **kombinaci kláves CTRL +** + **S**. Visual Studio vás vyzve k zadání umístění pro uložení informací z okna **výstup** do souboru protokolu.
 
-Pomocí ide můžete také určit, jaké druhy informací, které chcete zobrazit o každé sestavení.
+Rozhraní IDE lze také použít k určení, jaké druhy informací chcete zobrazit o jednotlivých sestaveních.
 
-Pokud vytvoříte jakýkoli druh projektu pomocí MSBuild, můžete vytvořit soubor protokolu pro uložení informací o sestavení. Další informace naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+Pokud sestavíte jakýkoli typ projektu pomocí nástroje MSBuild, můžete vytvořit soubor protokolu pro uložení informací o sestavení. Další informace najdete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-## <a name="to-view-the-build-log-file-for-a-c-project"></a>Zobrazení souboru protokolu sestavení pro projekt jazyka C++
+## <a name="to-view-the-build-log-file-for-a-c-project"></a>Zobrazení souboru protokolu sestavení pro projekt C++
 
-1. V **Průzkumníkovi Windows** nebo **Průzkumníkovi souborů**otevřete následující soubor (vzhledem k kořenové složce projektu): *Vydání*\\<ProjectName>\>. Protokol* nebo *Ladění\\<\>název_aplikace .log*
+1. V **Průzkumníku Windows** nebo **Průzkumníkovi souborů**otevřete následující soubor (relativní vzhledem k kořenové složce projektu): *release* \\ <ProjectName> \> . Log * nebo *Debug \\<ProjectName \> . log*
 
 ## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Vytvoření souboru protokolu sestavení pro projekt spravovaného kódu
 
-1. Na řádku nabídek zvolte **Build** > **Build Build Solution**.
+1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
-2. V okně **Výstup** klikněte někde v textu.
+2. V okně **výstup** klikněte někam do textu.
 
-3. Stiskněte **klávesu Ctrl**+**S**.
+3. Stiskněte klávesy **CTRL** + **S**.
 
-   Visual Studio vás vyzve k umístění k uložení výstupu sestavení.
+   Visual Studio vás vyzve k zadání umístění pro uložení výstupu sestavení.
 
-Protokoly můžete také generovat spuštěním msbuildu přímo `-fileLogger` z`-fl`příkazového řádku pomocí možnosti příkazového řádku ( ). Viz [Získání protokolů sestavení pomocí msbuild .](../msbuild/obtaining-build-logs-with-msbuild.md)
+Můžete také vygenerovat protokoly spuštěním nástroje MSBuild přímo z příkazového řádku pomocí `-fileLogger` `-fl` Možnosti příkazového řádku (). Viz [získání protokolů sestavení pomocí nástroje MSBuild](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Změna množství informací zahrnutých do protokolu sestavení
+## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Změna množství informací obsažených v protokolu sestavení
 
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > .
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
-2. Na stránce **Projekty a řešení** zvolte stránku **Sestavení a spuštění.**
+2. Na stránce **projekty a řešení** vyberte stránku **sestavení a spuštění** .
 
-3. V seznamu **podrobností o vytváření sestavení projektu MSBuild** zvolte jednu z následujících hodnot a pak zvolte tlačítko **OK.**
+3. V seznamu **podrobností výstupu sestavení projektu nástroje MSBuild** zvolte jednu z následujících hodnot a pak klikněte na tlačítko **OK** .
 
     |Úroveň podrobností|Popis|
     | - |-----------------|
-    |**Tichý**|Zobrazí pouze souhrn sestavení.|
-    |**Minimální**|Zobrazí souhrn sestavení a chyby, upozornění a zprávy, které jsou kategorizovány jako velmi důležité.|
-    |**Normální**|Zobrazí souhrn sestavení; chyby, upozornění a zprávy, které jsou klasifikovány jako velmi důležité; a hlavní kroky sestavení. Budete používat tuto úroveň podrobností nejčastěji.|
-    |**Detailed**|Zobrazí souhrn sestavení; chyby, upozornění a zprávy, které jsou klasifikovány jako velmi důležité; všechny kroky sestavení; a zprávy, které jsou rozděleny do kategorií podle normálnídůležitosti.|
-    |**Diagnostické**|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k ladění problémů s vlastní mise skripty sestavení a další problémy sestavení.|
+    |**Quiet**|Zobrazí souhrn pouze pro sestavení.|
+    |**Minimální**|Zobrazí souhrn sestavení a chyb, upozornění a zpráv, které jsou zařazeny do kategorie s vysokou důležitostí.|
+    |**Normální**|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; a hlavní kroky sestavení. Tuto úroveň podrobností budete používat častěji.|
+    |**Detailed**|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; všechny kroky sestavení; zprávy, které jsou zařazeny do kategorií normálním významem.|
+    |**Diagnostický**|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k usnadnění ladění problémů s vlastními skripty sestavení a dalšími problémy s sestavením.|
 
-     Další informace naleznete v [tématu Dialogové okno Možnosti, Projekty a řešení, Sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity>.
+     Další informace najdete v [dialogovém okně Možnosti, projekty a řešení, sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Změny se projeví v okně **Výstup** (všechny projekty) a v souboru * \<ProjectName>.txt* (pouze projekty jazyka C++).
+    > Je nutné znovu sestavit projekt, aby se změny projevily v okně **výstup** (všechny projekty) a souboru * \<ProjectName> . txt* (pouze projekty C++).
 
-## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Použití binárních protokolů k usnadnění procházení velkých souborů protokolu
+## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Použití binárních protokolů pro snazší procházení velkých souborů protokolu
 
-Binární protokoly jsou volitelnou funkcí pro projekty .NET, která umožňuje mít bohatší procházení protokolu, které mohou usnadnit hledání informací ve velkých protokolech. Chcete-li použít binární protokoly, nainstalujte [systémové nástroje projektu](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools). Další informace naleznete [https://msbuildlog.com](https://msbuildlog.com) v tématech a [binárních protokolech](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
+Binární protokoly jsou volitelnou funkcí pro projekty .NET, které vám umožní získat bohatší možnosti procházení protokolů, které by mohly usnadnit hledání informací ve velkých protokolech. Chcete-li použít binární protokoly, nainstalujte [Systémové nástroje projektu](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools). Další informace najdete v tématu [https://msbuildlog.com](https://msbuildlog.com) a v [binárním protokolu](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md) .
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření a čištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Sestavování a čištění projektů a řešení v aplikaci Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)

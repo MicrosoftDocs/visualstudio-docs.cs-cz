@@ -1,7 +1,7 @@
 ---
-title: Pomocí aplikace Help Viewer obsah
+title: Použít obsah v prohlížeči nápovědy
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_contents
 helpviewer_keywords:
@@ -15,43 +15,43 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd55a95675505648179161ae3fb7cacea6a83104
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825077"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284929"
 ---
-# Postupy: Hledání témat v obsahu
+# Postupy: hledání témat v obsahu
 
-V **obsah** kartu, můžete použít obsah (TOC) k nalezení informací o. Obsah je rozšiřitelný seznam, který obsahuje všechna témata v nainstalovaných knihách. Usnadnění informace o tom, jak procházení obsahu naleznete v tématu [klávesové zkratky (Help Viewer)](../help-viewer/shortcut-keys.md).
+Na kartě **obsah** můžete k vyhledání informací použít obsah (obsah). Obsah je rozšiřitelný seznam, který obsahuje všechna témata v nainstalovaných knihách. Informace o usnadnění procházení obsahu najdete v tématu [klávesové zkratky (Help Viewer)](../help-viewer/shortcut-keys.md).
 
 > [!IMPORTANT]
-> Rozsah témat dostupných v obsahu závisí na filtru, který jste vybrali.
+> Rozsah témat dostupných v obsahu závisí na zvoleném filtru.
 
 ## Filtrování obsahu
 
-Můžete filtrovat-li zúžit rozsah témat, která se zobrazí v obsahu **obsah** kartu. Zobrazí v seznamu jenom v případě, že obsahují kořen termínu, který zadáte. Například pokud zadáte "problém" jako filtr, pouze produkty, které obsahují text "problém" nebo "problém" zobrazí. Uzly, jejichž nadpisy neobsahují daný výraz, jsou sbaleny do jednoho uzlu se třemi tečkami ( **...** ).
+OBSAH můžete filtrovat, chcete-li zúžit rozsah témat, která se zobrazí na kartě **obsah** . názvy se v seznamu zobrazí pouze v případě, že obsahují kořen zadaného termínu. Pokud například zadáte "řešení potíží" jako filtr, zobrazí se pouze názvy obsahující "Poradce při potížích" nebo "řešení potíží". Uzly, jejichž názvy neobsahují termín, jsou sbaleny do jednoho uzlu se třemi tečkami (**...**).
 
-1. Zvolte **obsah** kartu.
+1. Vyberte kartu **obsah** .
 
-2. V **filtrovat obsahy** text zadejte termín.
+2. Do textového pole **obsah filtru** Zadejte termín.
 
 > [!NOTE]
-> Pokud filtru trvá dlouhou dobu spuštění, můžete zobrazit výsledky rychleji pomocí `title:` operátoru pro rozšířené hledání.
+> Pokud spuštění filtru trvá dlouhou dobu, můžete výsledky zobrazit rychleji pomocí `title:` operátoru rozšířeného vyhledávání.
 
 ## Synchronizace tématu s obsahem
 
-Pokud jste otevřeli téma pomocí rejstříku nebo funkcí fulltextového vyhledávání, můžete určit, kde je v tomto tématu v obsahu pomocí synchronizace obsahu s oknem tématu.
+Pokud jste otevřeli téma pomocí funkce index nebo fulltextového vyhledávání, můžete určit, kde se toto téma nachází v obsahu, pomocí synchronizace obsahu s oknem tématu.
 
-1. Zobrazte téma.
+1. Zobrazit téma.
 
-2. Klikněte na tlačítko **zobrazit téma v obsahu** tlačítko na panelu nástrojů nebo stisknete klávesu **Ctrl**+**S**.
+2. Klikněte na tlačítko **Zobrazit téma v obsahu** na panelu nástrojů nebo stiskněte klávesy **CTRL** + **S**.
 
-     **Obsah** kartě se otevře a zobrazí se umístění tématu v obsahu.
+     Karta **obsah** se otevře a zobrazí umístění tématu v obsahu.
 
-## Viz také:
+## Viz také
 
-- [Postupy: Hledání témat v rejstříku](../help-viewer/find-topics-index.md)
-- [Postupy: Vyhledávání témat](../help-viewer/find-topics.md)
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Postupy: hledání témat v indexu](../help-viewer/find-topics-index.md)
+- [Postupy: hledání témat](../help-viewer/find-topics.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

@@ -1,55 +1,55 @@
 ---
-title: Nasazení kontejneru ASP.NET Core Dockeru do Centra Dockeru | Dokumenty společnosti Microsoft
-description: Přečtěte si, jak pomocí nástrojů kontejnerů Sady Visual Studio nasadit webovou aplikaci ASP.NET Core do Centra Dockeru.
+title: Nasazení kontejneru Docker ASP.NET Core do Docker Hub | Microsoft Docs
+description: Naučte se používat nástroje sady Visual Studio Container k nasazení webové aplikace ASP.NET Core do Docker Hub.
 author: ghogen
 manager: jillfra
 ms.technology: vs-azure
 ms.devlang: dotnet
-ms.topic: article
+ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: b033825bbe8facbeae3dcdee6a5b563461921522
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 18e2789af3a699dacee9a9e8c1f1846ee8622800
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73188745"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283174"
 ---
 # <a name="deploy-to-docker-hub"></a>Nasazení do Docker Hubu
 
-Docker Hub poskytuje pohodlnou hostingovou službu pro úložiště obrázků. Do Docker Hubu můžete snadno nasadit ručně z Visual Studia.
+Docker Hub poskytuje pohodlný hostující službu pro vaše úložiště imagí. V aplikaci Visual Studio můžete snadno nasazovat do Docker Hub ručně.
 
-## <a name="create-a-docker-account-and-docker-hub-repository"></a>Vytvoření účtu Dockeru a úložiště Docker Hubu
+## <a name="create-a-docker-account-and-docker-hub-repository"></a>Vytvoření účtu Docker a úložiště Docker Hub
 
-Pokud ještě nemáte účet Dockeru, [zaregistrujte](https://hub.docker.com/signup) si účet Dockeru.
+[Zaregistrujte](https://hub.docker.com/signup) si účet Docker, pokud ho ještě nemáte.
 
-Pokud nemáte úložiště Docker Hub, vytvořte ho v [Docker Hubu](https://hub.docker.com/).
+Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.docker.com/).
 
-## <a name="publish-the-image-for-a-single-project-to-docker-hub"></a>Publikování bitové kopie pro jeden projekt do Docker Hubu
+## <a name="publish-the-image-for-a-single-project-to-docker-hub"></a>Publikování obrázku jednoho projektu do Docker Hub
 
-1. Klikněte pravým tlačítkem myši na uzel projektu a zvolte **Publikovat...**. Zobrazí se obrazovka s možnostmi nasazení.
+1. Klikněte pravým tlačítkem na uzel projektu a vyberte **publikovat...**. Zobrazí se obrazovka se zobrazenými možnostmi nasazení.
 
    ![](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 
-1. V části **Vyberte cíl publikování**zvolte **Container Registry**a pak zvolte Docker **Hub**. Zobrazí se dialogové okno **Centra Dockeru.**
+1. V části **Vyberte cíl publikování**zvolte možnost **Container Registry**a pak zvolte **Docker Hub**. Zobrazí se dialogové okno **centrum Docker** .
 
    ![](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
-1. Pokud se připojujete k vlastnímu úložišti (není součástí organizace), ponechte zaškrtnuté políčko **Publikovat na osobním úložišti.** Pokud úložiště vlastní organizace, zrušte zaškrtnutí políčka a zadejte název organizace. Zadejte své uživatelské jméno a heslo Dockeru pro svůj účet Dockeru, který má oprávnění k přístupu k úložišti, ke kterému se připojujete, a pak vyberte **Uložit**.  
+1. Pokud se připojujete k vlastnímu úložišti (ne k organizaci), ponechte zaškrtnuté políčko **publikovat do osobního úložiště** . Pokud je úložiště vlastněno organizací, zrušte zaškrtnutí políčka a zadejte název organizace. Zadejte uživatelské jméno a heslo Docker pro účet Docker, který má oprávnění pro přístup k úložišti, ke kterému se připojujete, a pak vyberte **Uložit**.  
 
-   Visual Studio se pokusí nasadit image do centra Docker.  Pokud je úspěšná, zobrazí se obrazovka **Publikování** s adresou URL obrázku úložiště, značkou obrázku, úložištěm a konfigurací sestavení** (například **Release).**
+   Visual Studio se pokusí nasadit vaši image do Docker Hub.  V případě úspěchu se obrazovka **publikování** zobrazí s adresou URL pro Image úložiště, značkou image, úložištěm a konfigurací sestavení * * (například **vydání**).
 
    ![](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
 
-1. Obrázek můžete kdykoli aktualizovat kliknutím na tlačítko **Publikovat** na této stránce.  Nebo můžete upravit nebo odebrat profil pomocí odkazů pod adresou URL.
+1. Bitovou kopii můžete kdykoli aktualizovat kliknutím na tlačítko **publikovat** na této stránce.  Nebo můžete profil upravit nebo odebrat pomocí odkazů pod adresou URL.
 
 ## <a name="next-steps"></a>Další kroky
 
-Publikovat do [registru kontejnerů Azure](/azure/container-registry/) podle kroků na [nasazení do registru kontejnerů Azure](hosting-web-apps-in-docker.md).
+Publikování do [Azure Container Registry](/azure/container-registry/) podle kroků uvedených v části [nasazení na Azure Container Registry](hosting-web-apps-in-docker.md).
 
-Nastavte průběžnou integraci a doručování (CI/CD) s [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops).
+Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
 
 ## <a name="see-also"></a>Viz také
 
-[Nasazení do nástroje](deploy-app-service.md)
-[kontejneru Visual Studio](/visualstudio/containers/)služby Azure App Service .
+[Nasadit do Azure App Service](deploy-app-service.md) 
+ [Nástroje kontejneru sady Visual Studio](/visualstudio/containers/).

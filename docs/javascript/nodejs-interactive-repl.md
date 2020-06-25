@@ -1,8 +1,8 @@
 ---
-title: Použití souboru Node.js REPL
-description: Visual Studio poskytuje podporu pro interakci s runtime Node.js
+title: Použití Node.js REPL
+description: Visual Studio poskytuje podporu pro interakci s modulem runtime Node.js.
 ms.date: 12/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
@@ -11,41 +11,41 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: faed930c60869010f740cf0a1e118a40299ce782
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8b2bbbdf478f27f936d4897f2ff773baa4cca1d6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62840657"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285001"
 ---
-# <a name="work-with-the-nodejs-interactive-window"></a>Práce s interaktivním oknem Node.js
+# <a name="work-with-the-nodejs-interactive-window"></a>Práce s Node.js interaktivním oknem
 
-Node.js Nástroje pro Visual Studio zahrnují interaktivní okno pro nainstalovaný runtime Node.js. Toto okno umožňuje zadat kód JavaScript a okamžitě zobrazit výsledky, stejně jako spustit příkazy npm pro interakci s aktuálním projektem. Interaktivní okno je také známé jako REPL (**R**ead /**E**valuate /**P**rint **L**oop).
+Nástroje pro Node.js pro Visual Studio obsahují interaktivní okno pro nainstalovanou Node.js modul runtime. Toto okno umožňuje zadat kód jazyka JavaScript a okamžitě zobrazit výsledky a spustit npm příkazy pro interakci s aktuálním projektem. Interaktivní okno se také označuje jako REPL (**R**ečíst/**E**Valuate/**P**isknout **L**OOP).
 
-## <a name="open-the-interactive-window"></a>Otevření interaktivního okna
+## <a name="open-the-interactive-window"></a>Otevřít interaktivní okno
 
-Interaktivní okno můžete otevřít klepnutím pravým tlačítkem myši na uzel projektu Node.js v Průzkumníku řešení a výběrem **interaktivního okna Otevřít soubor Node.js**.
+Interaktivní okno můžete otevřít tak, že kliknete pravým tlačítkem myši na uzel Node.js projektu v Průzkumník řešení a vyberete **otevřít Node.js interaktivní okno**.
 
-![Interaktivní okno Node.js v kontextové nabídce projektu](../javascript/media/interactivewindow-open-from-project.png)
+![Node.js interaktivní okno v místní nabídce projektu](../javascript/media/interactivewindow-open-from-project.png)
 
-Výchozí zkratkové klávesy pro otevření interaktivního okna Node.js jsou **[CTRL] + K, N**. Nebo můžete otevřít okno z panelu nástrojů výběrem **možnosti Zobrazit** > interaktivní okno aplikace**Windows** > **Node.js**.
+Výchozí krátké klávesy pro otevření Node.js interaktivní okno jsou **[CTRL] + K, N**. Nebo můžete okno otevřít z panelu nástrojů výběrem možnosti **Zobrazit**  >  **Windows**  >  **Node.js interaktivní okno**.
 
-## <a name="use-the-repl"></a>Použijte REPL
+## <a name="use-the-repl"></a>Použití REPL
 
 Po otevření můžete zadat příkazy.
 
-![Interaktivní okno Node.js](../javascript/media/interactivewindow.png)
+![Node.js interaktivní okno](../javascript/media/interactivewindow.png)
 
-Interaktivní okno má několik vestavěných příkazů, které začínají tečkovou předponou, aby se odlišily od jakékoli deklarované funkce JavaScriptu. Podporovány jsou následující příkazy:
+Interaktivní okno obsahuje několik integrovaných příkazů, které začínají předponou tečky pro jejich odlišení od libovolné funkce JavaScriptu, kterou deklarujete. Podporovány jsou následující příkazy:
 
-**.cls, .clear** Vymaže obsah okna editoru a ponechá historii a kontext spuštění beze změny.
+**. CLS,. Clear** Vymaže obsah okna editoru a ponechá historii a kontext spuštění beze změny.
 
-**.help** Zobrazí nápovědu k zadanému příkazu nebo ke všem dostupným příkazům a vazbám klíčů, pokud není zadánžádný.
+**. help** Pokud není zadána žádná hodnota, zobrazí se vám v zadaném příkazu nebo na všech dostupných příkazech a vazbách kláves.
 
-**.info** Zobrazuje informace o aktuálním použitém spustitelném souboru Node.js.
+**. info** Zobrazí informace o aktuálně použitém spustitelném souboru Node.js.
 
-**.npm** Spustí příkaz npm. Pokud řešení obsahuje více než jeden projekt, `.npm [projectname] <npm arguments>`zadejte cílový projekt pomocí .
+**. npm** Spustí příkaz npm. Pokud řešení obsahuje více než jeden projekt, zadejte cílový projekt pomocí `.npm [projectname] <npm arguments>` .
 
-**.reset** Obnoví spuštění prostředí do počátečního stavu, zachovat historii.
+**. Reset** Obnoví spouštěcí prostředí na počáteční stav a uchová historii.
 
-**.uložit** Uloží aktuální relaci REPL do souboru.
+**. Save** Uloží aktuální relaci REPL do souboru.

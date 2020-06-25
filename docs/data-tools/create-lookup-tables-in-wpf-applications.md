@@ -1,7 +1,7 @@
 ---
 title: Vytváření vyhledávacích tabulek v aplikacích WPF
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [WPF], displaying
 - WPF, data binding in Visual Studio
@@ -16,18 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a14209d895b461c64b30d0f1690b68484f09d970
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7485c63d358bc6f6fe7030e589fbdf7286ded3fd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586754"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282615"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Vytváření vyhledávacích tabulek v aplikacích WPF
 
 *Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba*) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
 
-Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID`, které označují zákazníka, který objednávku zadal. `CustomerID` je cizí klíč, který odkazuje na záznam zákazníka v tabulce `Customers`. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít místo `CustomerID`zobrazit skutečný název zákazníka. Vzhledem k tomu, že se název zákazníka nachází v tabulce `Customers`, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá hodnotu `CustomerID` v záznamu `Orders` k navigaci mezi relacemi a vrácení názvu zákazníka.
+Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje položku `CustomerID` , která označuje zákazníka, který objednávku zadal. `CustomerID`Je cizí klíč, který odkazuje na záznam zákazníka v `Customers` tabulce. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít zobrazit skutečný název zákazníka namísto `CustomerID` . Vzhledem k tomu, že je název zákazníka v `Customers` tabulce, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá `CustomerID` `Orders` k navigaci vztahu hodnotu v záznamu a vrací jméno zákazníka.
 
 ## <a name="to-create-a-lookup-table"></a>Vytvoření vyhledávací tabulky
 
@@ -68,14 +68,14 @@ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý z�
         > [!NOTE]
         > Pokud se ovládací prvek **ListBox** nebo **ListView** v seznamu nezobrazí, můžete tyto ovládací prvky přidat do seznamu. Informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-    - Libovolný vlastní ovládací prvek, který je odvozen z <xref:System.Windows.Controls.Primitives.Selector>.
+    - Libovolný vlastní ovládací prvek, který je odvozen z <xref:System.Windows.Controls.Primitives.Selector> .
 
         > [!NOTE]
         > Informace o tom, jak přidat vlastní ovládací prvky do seznamu ovládacích prvků, které můžete vybrat pro položky v okně **zdroje dat** , naleznete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
 8. Přetáhněte podřízený uzel z okna **zdroje dat** do kontejneru v Návrháři WPF. (V předchozím příkladu je podřízený uzel uzlem **objednávky** .)
 
-     Visual Studio generuje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do tabulky nebo objektu. Další informace najdete v tématu [ovládací prvky WPF vytvoření vazby k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
+     Visual Studio generuje XAML, které vytvoří nové ovládací prvky vázané na data pro každou položku, kterou přetáhnete. XAML také přidá novou <xref:System.Windows.Data.CollectionViewSource> pro podřízenou tabulku nebo objekt do prostředků cíle přetažení. U některých zdrojů dat Visual Studio také generuje kód pro načtení dat do tabulky nebo objektu. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 
 9. Přetáhněte nadřazený uzel z okna **zdroje dat** do ovládacího prvku pro vyhledávání vazeb, který jste vytvořili dříve. (V předchozím příkladu je nadřazený uzel uzel **Customers (zákazníci** )).
 
@@ -83,12 +83,12 @@ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý z�
 
     |Vlastnost|Vysvětlivky k nastavení|
     |--------------| - |
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Tato vlastnost určuje kolekci nebo vazbu, která se používá k získání dat zobrazených v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na <xref:System.Windows.Data.CollectionViewSource> pro nadřazená data, která jste přetáhli do ovládacího prvku.|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Tato vlastnost určuje kolekci nebo vazbu, která se používá k získání dat zobrazených v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na <xref:System.Windows.Data.CollectionViewSource> Nadřazená data, která jste přetáhli do ovládacího prvku.|
     |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Tato vlastnost určuje cestu položky dat, která se zobrazí v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na první sloupec nebo vlastnost v nadřazených datech za primární klíč, který má datový typ String.<br /><br /> Pokud chcete zobrazit v nadřazených datech jiný sloupec nebo vlastnost, změňte tuto vlastnost na cestu jiné vlastnosti.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio váže tuto vlastnost k sloupci nebo vlastnosti podřízených dat, která jste přetáhli do návrháře. Toto je cizí klíč pro nadřazená data.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Sada Visual Studio nastaví tuto vlastnost na cestu sloupce nebo vlastnosti podřízených dat, která je cizím klíčem pro nadřazená data.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [Zobrazení souvisejících dat v aplikacích WPF](../data-tools/display-related-data-in-wpf-applications.md)

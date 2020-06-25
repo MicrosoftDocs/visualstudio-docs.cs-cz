@@ -5,19 +5,19 @@ description: Přehled procesu sestavení nástrojů kontejneru
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
-ms.topic: conceptual
-ms.openlocfilehash: 1b23d918621d79756fd77a1dd9b98009b2769ed3
-ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
+ms.topic: reference
+ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82189488"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283200"
 ---
 # <a name="container-tools-build-properties"></a>Vlastnosti sestavení kontejnerových nástrojů
 
 Můžete přizpůsobit způsob, jakým Visual Studio sestaví projekty kontejneru, nastavením vlastností, které nástroj MSBuild používá k sestavení projektu. Můžete například změnit název souboru Dockerfile, zadat značky a štítky pro obrázky, poskytnout další argumenty předané příkazům Docker a určit, zda aplikace Visual Studio provede určité optimalizace výkonu, jako je například sestavení mimo prostředí kontejneru. Můžete také nastavit vlastnosti ladění, jako je název spustitelného souboru, který se má spustit, a argumenty příkazového řádku, které mají být zadány.
 
-Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme například, že vaše souboru Dockerfile má název *MyDockerfile*. `DockerfileFile` Vlastnost můžete nastavit v souboru projektu následujícím způsobem.
+Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. Předpokládejme například, že vaše souboru Dockerfile má název *MyDockerfile*. Vlastnost můžete nastavit `DockerfileFile` v souboru projektu následujícím způsobem.
 
 ```xml
 <PropertyGroup>
@@ -43,7 +43,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro projekty 
 | DockerfileBuildArguments | Do příkazu [Docker Build](https://docs.docker.com/engine/reference/commandline/build/) byly předány další argumenty. | Neužívá se. |1.0.1872750 nebo novější|
 | DockerfileContext | Výchozí kontext použitý při vytváření image Docker jako cesta relativní k souboru Dockerfile. | Nastaveno sadou Visual Studio. |1.0.1872750 nebo novější|
 | DockerfileFastModeStage | Fáze souboru Dockerfile (tj. Target), která se má použít při sestavování image v režimu ladění. | V souboru Dockerfile se našla první fáze (Base). |
-| DockerfileFile | Popisuje výchozí souboru Dockerfile, který bude použit k sestavení nebo spuštění kontejneru pro projekt. Může to být i cesta. | Souboru Dockerfile |1.0.1872750 nebo novější|
+| DockerfileFile | Popisuje výchozí souboru Dockerfile, který bude použit k sestavení nebo spuštění kontejneru pro projekt. Může to být i cesta. | Dockerfile |1.0.1872750 nebo novější|
 | DockerfileRunArguments | Další argumenty předané příkazu [Docker Run](https://docs.docker.com/engine/reference/commandline/run/) . | Neužívá se. |1.0.1872750 nebo novější|
 | DockerfileRunEnvironmentFiles | Středníky oddělený seznam souborů prostředí použitých při spuštění Docker. | Neužívá se. |1.0.1872750 nebo novější|
 | DockerfileTag | Značka, která bude použita při sestavování image Docker. V ladění je k značce připojen ":d EV". | Název sestavení po odstranění nealfanumerických znaků pomocí následujících pravidel: <br/> Pokud je výsledná značka všechna číselná, pak se jako předpona vloží "image" (například image2314). <br/> Pokud je výsledná značka prázdným řetězcem, použije se jako značka "image". |1.0.1872750 nebo novější|

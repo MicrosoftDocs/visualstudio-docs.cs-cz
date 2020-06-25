@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Vytvoření a odebrání závislostí projektu'
+title: 'Postupy: vytvoření a odebrání závislostí projektu'
 ms.date: 06/21/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ProjectDependenciesDlg
 helpviewer_keywords:
@@ -18,52 +18,52 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a286a84d01c6a49b32445106488688ba5b489be
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ad21aeae2d348f56cb722365cd1e2ded249bbefe
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114550"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284461"
 ---
-# <a name="how-to-create-and-remove-project-dependencies"></a>Postup: Vytvoření a odebrání závislostí projektu
+# <a name="how-to-create-and-remove-project-dependencies"></a>Postupy: vytvoření a odebrání závislostí projektu
 
-Při vytváření řešení, které obsahuje více projektů, může být nutné nejprve vytvořit určité projekty, generovat kód používaný jinými projekty. Když projekt spotřebovává spustitelný kód generovaný jiným projektem, projekt, který generuje kód, se označuje jako závislost projektu, která spotřebovává kód. Tyto vztahy závislostí lze definovat v dialogovém okně **Závislosti projektu.**
+Při sestavování řešení, které obsahuje více projektů, může být nutné nejprve sestavit určité projekty, aby bylo možné vygenerovat kód používaný jinými projekty. Když projekt spotřebovává spustitelný kód vygenerovaný jiným projektem, projekt, který generuje kód, je označován jako závislost projektu projektu, který využívá kód. Tyto vztahy závislostí lze definovat v dialogovém okně **závislosti projektu** .
 
-## <a name="to-assign-dependencies-to-projects"></a>Přiřazení závislostí projektům
+## <a name="to-assign-dependencies-to-projects"></a>Přiřazení závislostí k projektům
 
-1. V **Průzkumníku řešení**vyberte projekt.
+1. V **Průzkumník řešení**vyberte projekt.
 
-2. V nabídce **Project** zvolte **Závislosti projektu**.
+2. V nabídce **projekt** vyberte **závislosti projektu**.
 
-    Otevře se dialogové okno **Závislosti projektu.**
+    Zobrazí se dialogové okno **závislosti projektu** .
 
    > [!NOTE]
-   > Možnost **Závislosti projektu** je k dispozici pouze v řešení s více než jeden projekt.
+   > Možnost **závislosti projektu** je k dispozici pouze v řešení s více než jedním projektem.
 
-3. Na kartě **Závislosti** vyberte projekt z rozevírací nabídky **Projekt.**
+3. Na kartě **závislosti** vyberte projekt z rozevírací nabídky **projekt** .
 
-4. V poli **Závisí na** zaškrtněte políčko u jakéhokoli jiného projektu, který musí být sestavován dříve, než tento projekt.
+4. V poli **závisí na** zaškrtněte políčko u všech dalších projektů, které musí být sestaveny před tímto projektem.
 
-   Vaše řešení se musí skládat z více než jednoho projektu před vytvořením závislostí projektu.
+   Vaše řešení musí obsahovat více než jeden projekt, aby bylo možné vytvořit závislosti projektu.
 
-## <a name="to-remove-dependencies-from-projects"></a>Odebrání závislostí z projektů
+## <a name="to-remove-dependencies-from-projects"></a>Postup odebrání závislostí z projektů
 
-1. V **Průzkumníku řešení**vyberte projekt.
+1. V **Průzkumník řešení**vyberte projekt.
 
-2. V nabídce **Project** zvolte **Závislosti projektu**.
+2. V nabídce **projekt** vyberte **závislosti projektu**.
 
-     Otevře se dialogové okno **Závislosti projektu.**
+     Zobrazí se dialogové okno **závislosti projektu** .
 
     > [!NOTE]
-    > Možnost **Závislosti projektu** je k dispozici pouze v řešení s více než jeden projekt.
+    > Možnost **závislosti projektu** je k dispozici pouze v řešení s více než jedním projektem.
 
-3. Na kartě **Závislosti** vyberte projekt z rozevírací nabídky **Projekt.**
+3. Na kartě **závislosti** vyberte projekt z rozevírací nabídky **projekt** .
 
-4. V **poli Závisí na** zrušte zaškrtnutí políček vedle jiných projektů, které již nejsou závislostmi tohoto projektu.
+4. V poli **závisí na** zrušte zaškrtnutí políček u všech ostatních projektů, které již nejsou závislé na tomto projektu.
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření a čištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Sestavování a čištění projektů a řešení v aplikaci Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Kompilace a sestavení](../ide/compiling-and-building-in-visual-studio.md)
 - [Vysvětlení konfigurací sestavení](../ide/understanding-build-configurations.md)
 - [Správa vlastností projektu a řešení](managing-project-and-solution-properties.md)

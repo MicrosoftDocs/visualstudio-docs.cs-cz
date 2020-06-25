@@ -1,7 +1,7 @@
 ---
 title: Změna písma a barev
-ms.date: 11/04/2016
-ms.topic: conceptual
+ms.date: 06/01/2020
+ms.topic: how-to
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
@@ -11,61 +11,116 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 592b8bb11fa5ea9cf18cfbd5f28aad4c487bedee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0eb2373117b382cb19f374581ada45a5732b9c4c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588873"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284675"
 ---
-# <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>Postup: Změna písem a barev v sadě Visual Studio
+# <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>Postupy: Změna písma a barev v aplikaci Visual Studio
 
-Barvu rámečku IDE a oken nástrojů v sadě Visual Studio můžete přizpůsobit několika způsoby.
+Písma a barvy v aplikaci Visual Studio můžete změnit mnoha způsoby. Například můžete změnit výchozí modrý barevný motiv na tmavý motiv (označuje se také jako "tmavý režim". ") A výchozí velikost písma a textu můžete změnit na jiné písmo a velikost.
 
-> [!TIP]
-> Informace o změně barev editoru kódu naleznete v tématu [Jak: Změna písem a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
+## <a name="change-the-color-theme"></a>Změna barevného motivu
 
-## <a name="change-the-color-theme-of-the-ide"></a>Změna barevného motivu ide
+Zde je postup změny barevného motivu rámce IDE a oken nástrojů v aplikaci Visual Studio.
 
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > .
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
-1. V seznamu možností zvolte **Environment** > **General**.
+1. V seznamu Možnosti vyberte možnost **prostředí**  >  **Obecné**.
 
-1. V seznamu **Barevný motiv** zvolte buď výchozí **modrý** motiv, **tmavý**nebo **světlý**.
+1. V seznamu **barevný motiv** vyberte výchozí **modrý** motiv, **světlý** motiv, **tmavý** motiv nebo **modrý (velmi kontrastní)** motiv.
 
-> [!NOTE]
-> Když změníte barevný motiv, text v ide se vrátí na výchozí nebo dříve přizpůsobená písma a velikosti.
+   ![Snímek obrazovky dialogového okna Možnosti pro změnu barevného motivu](media/fonts-colors-theme.png "Snímek obrazovky dialogového okna Možnosti, které můžete použít ke změně barevného motivu")
 
-> [!TIP]
-> Motivy sady Visual Studio můžete vytvářet a upravovat instalací [Editoru motivů barev sady Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor).
+    > [!NOTE]
+    > Když změníte barevný motiv, text v integrovaném vývojovém prostředí vrátí výchozí nebo dříve přizpůsobenou písma a velikosti pro daný motiv.
 
-## <a name="use-windows-high-contrast-colors"></a>Použití barev s vysokým kontrastem systému Windows
-
-Zvolte **levé klávesy Alt**+**Left Shift**+**PrtScn.**
-
-> [!WARNING]
-> Tato možnost nastaví vysoký kontrast pro všechny aplikace a uI v aktuálním počítači.
-
-## <a name="change-ide-fonts"></a>Změna písem ide
-
-Můžete změnit velikost písma a textu pro všechna okna a dialogová okna v prostředí IDE. Můžete přizpůsobit pouze určitá okna a další textové prvky.
-
-### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>Změna písma a velikosti veškerého textu v ide
-
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > .
-
-1. V seznamu voleb zvolte**Písma a barvy** **prostředí** > .
-
-1. V seznamu **Zobrazit nastavení v** seznamu zvolte **Písmo prostředí**.
+    :::moniker range="vs-2017"
 
     > [!TIP]
-    > Pokud chcete změnit písmo pouze pro okna nástrojů, v seznamu **Zobrazit nastavení vyberte** **Všechny textové nástroje Windows**.
+    > Můžete vytvářet a upravovat vlastní motivy sady Visual Studio, a to tak, že nainstalujete [Editor motivů barev pro Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor).
 
-1. V seznamu **Písmo** zvolte písmo.
+    :::moniker-end
 
-1. V seznamu **Velikost** zvolte velikost textu a pak zvolte tlačítko **OK.**
+    :::moniker range="vs-2019"
+
+    > [!TIP]
+    > Můžete vytvářet a upravovat vlastní motivy sady Visual Studio, a to tak, že nainstalujete [Návrháře barevných motivů sady Visual Studio](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner).
+
+    :::moniker-end
+
+## <a name="change-fonts-and-text-size"></a>Změna písma a velikosti textu
+
+Můžete změnit velikost písma a textu pro všechna okna rámců a nástrojů IDE nebo pouze pro určité prvky systému Windows nebo text. Také můžete změnit písmo a velikost textu v editoru.
+
+### <a name="to-change-the-font-and-text-size-in-the-ide"></a>Změna písma a velikosti textu v integrovaném vývojovém prostředí
+
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+
+1. V seznamu Možnosti vyberte možnost **Environment**  >  **písma a barvy**prostředí.
+
+1. V seznamu **Zobrazit nastavení pro** vyberte možnost **prostředí**.
+
+   ![Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v integrovaném vývojovém prostředí](media/fonts-colors-environment.png "Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v integrovaném vývojovém prostředí")
+
+    > [!NOTE]
+    > Chcete-li změnit písmo pouze pro okna nástrojů, v seznamu **Zobrazit nastavení pro** vyberte možnost **všechna okna textových nástrojů**.
+
+1. Upravte možnosti **písmo** a **Velikost** pro změnu písma a velikosti textu pro rozhraní IDE.
+
+1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
+
+### <a name="to-change-the-font-and-text-size-in-the-editor"></a>Změna písma a velikosti textu v editoru
+
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
+
+1. V seznamu Možnosti vyberte možnost **Environment**  >  **písma a barvy**prostředí.
+
+1. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor**.
+
+   ![Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru](media/fonts-colors-text-editor.png "Snímek obrazovky dialogového okna Možnosti pro změnu písma a barev v editoru")
+
+1. Upravte možnosti **písmo** a **Velikost** pro změnu písma a velikosti textu pro Editor.
+
+1. Vyberte příslušnou položku v části **Zobrazit položky**a pak změňte možnosti pozadí **položky** a **pozadí položky** .
+
+Další informace najdete v tématu [Změna písma a barev pro stránku editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) .
+
+## <a name="accessibility-options"></a>Možnosti usnadnění
+
+Pokud máte zkušenosti s nízkou schopností, máte k dispozici možnosti barevného motivu. Pro *všechny* aplikace a uživatelské rozhraní v počítači můžete použít možnost vysokého kontrastu, případně možnost vyššího kontrastu jenom pro Visual Studio.
+
+### <a name="use-windows-high-contrast"></a>Použít vysoký kontrast Windows
+
+Chcete-li přepnout možnost vysoký kontrast systému Windows, použijte některý z následujících postupů:
+
+- V systému Windows nebo v libovolné aplikaci společnosti Microsoft stiskněte klávesy **levý ALT** + **levý SHIFT** + **Print Screen** .
+
+- V systému Windows vyberte možnost **Spustit**  >  **Nastavení**  >  **usnadnění přístupu**  >  **vysoký kontrast**.
+
+    > [!WARNING]
+    > Nastavení vysokého kontrastu systému Windows má vliv na všechny aplikace a uživatelské rozhraní v počítači.
+
+### <a name="use-visual-studio-extra-contrast"></a>Použít extra kontrast sady Visual Studio
+
+Pomocí následujících postupů můžete zapnout možnost speciálního kontrastu sady Visual Studio:
+
+1. Na panelu nabídek v aplikaci Visual Studio zvolte možnost **nástroje**  >  **Možnosti**a potom v seznamu možnosti zvolte možnost **Environment**  >  **Obecné**prostředí.
+
+1. V rozevíracím seznamu **barevný motiv** zvolte motiv **Blue (extra Contrast)** a klikněte na **tlačítko OK**.
+
+Další informace o dalších možnostech usnadnění sady Visual Studio, které jsou k dispozici pro vás, najdete na stránce [funkce usnadnění v aplikaci Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md) .
+
+> [!TIP]
+> Pokud máte možnost usnadnění pro barvy nebo písma, která jsou možná užitečná, ale nejsou aktuálně dostupná v aplikaci Visual Studio, dejte nám prosím na výběr **navrhnout funkci** v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/). Další informace o tomto fóru a o tom, jak to funguje, najdete na stránce [navrhnout funkci](../ide/suggest-a-feature.md) .
+
+## <a name="next-steps"></a>Další kroky
+
+Chcete-li získat další informace o všech prvcích uživatelského rozhraní, pro které můžete změnit schémata písma a barev, Projděte si stránku [písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) .
 
 ## <a name="see-also"></a>Viz také
 
-- [Funkce usnadnění v sadě Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)
-- [Postup: Změna písem a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [Změna písma a barev editoru kódu](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [Funkce editoru kódu sady Visual Studio](../ide/writing-code-in-the-code-and-text-editor.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Nastavení více projektů při spuštění'
+title: 'Postupy: Nastavení více projektů po spuštění'
 ms.date: 06/21/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - startup projects, setting multiple startup projects
 ms.assetid: 6131eb80-8745-4eb9-bdab-433e69b41651
@@ -11,26 +11,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a1eec02adf0a643d7ac7e0da8a75da5328c601b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 369b0f0dd41f028e49378d73ebb65c59931bbd60
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115137"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284084"
 ---
-# <a name="how-to-set-multiple-startup-projects"></a>Postup: Nastavení více projektů při spuštění
+# <a name="how-to-set-multiple-startup-projects"></a>Postupy: Nastavení více projektů po spuštění
 
 Visual Studio umožňuje určit, jak se spustí více než jeden projekt při spuštění ladicího programu.
 
-## <a name="to-set-multiple-startup-projects"></a>Nastavení více projektů při spuštění
+## <a name="to-set-multiple-startup-projects"></a>Nastavení více projektů po spuštění
 
-1. V **Průzkumníku řešení**vyberte řešení (horní uzel).
+1. V **Průzkumník řešení**vyberte řešení (nejvyšší uzel).
 
-2. Zvolte kontextovou nabídku uzlu řešení (klikněte pravým tlačítkem myši) a pak zvolte **Vlastnosti**. Zobrazí se dialogové okno **Stránky vlastností řešení.**
+2. Zvolte nabídku kontext uzlu řešení (klikněte pravým tlačítkem myši) a pak zvolte **vlastnosti**. Zobrazí se dialogové okno **stránky vlastností řešení** .
 
-3. Rozbalte uzel **Společné vlastnosti** a zvolte **Projekt po spuštění**.
+3. Rozbalte uzel **společné vlastnosti** a vyberte možnost **projekt po spuštění**.
 
-4. Zvolte možnost **Více projektů po spuštění** a nastavte příslušné akce.
+4. Vyberte možnost **více projektů po spuštění** a nastavte příslušné akce.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,7 +1,7 @@
 ---
 title: Přizpůsobení programu Help Viewer
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_options
 helpviewer_keywords:
@@ -13,38 +13,38 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8edcdee8ffe4c2b8a97f4ed65ae86f925db42b1c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 5d1f4de5e5ace63f748c6a75d45d8311ea3eb71b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825016"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284969"
 ---
-# <a name="customize-the-help-viewer"></a>Přizpůsobení programu help viewer
-Můžete upravit rozložení okna aplikace Help Viewer, jakož i další možnosti, jako je například velikost písma, maximální počet výsledků a jestli se mají zahrnout obsah v angličtině.
+# <a name="customize-the-help-viewer"></a>Přizpůsobení programu Help Viewer
+Můžete přizpůsobit rozložení oken aplikace Help Viewer a také další možnosti, jako je velikost písma, maximální počet výsledků a informace o tom, zda má být obsah v angličtině.
 
 ## <a name="customizing-window-layout"></a>Přizpůsobení rozložení oken
-Můžete upravit rozložení okna aplikace Help Viewer. Chcete-li obnovit výchozí rozložení okna aplikace Help Viewer, otevřete **možnosti prohlížeče** dialogové okno a potom vyberte **resetování** tlačítko.
+Můžete přizpůsobit rozložení okna aplikace Help Viewer. Chcete-li obnovit výchozí rozložení okna aplikace Help Viewer, otevřete dialogové okno **Možnosti prohlížeče** a pak klikněte na tlačítko **obnovit** .
 
-### <a name="docking-tabs"></a>Ukotvení karet
-Aplikace Help Viewer podporuje standardní funkci ukotvení. Ve výchozím nastavení všechny karty v aplikaci Help Viewer zakotveny, ale lze je přesunout, změnit jejich velikost, ukotvit je v jiných umístěních a "float" je tak, aby se zobrazí jako nezávislá podřízená okna.
+### <a name="docking-tabs"></a>Dokovací karty
+Help Viewer podporuje standardní funkce docking. Ve výchozím nastavení jsou všechny karty v prohlížeči nápovědy ukotveny, ale můžete je přesunout, změnit jejich velikost, ukotvit je na jiných místech a "float", aby se zobrazila jako nezávislá podřízená okna.
 
-### <a name="opening-a-topic-in-a-new-tab"></a>Otevírání tématu v nové záložce
-Zvolte téma v libovolné kartě pro navigaci a potom stiskněte klávesu **kombinace kláves Ctrl + Enter**.
+### <a name="opening-a-topic-in-a-new-tab"></a>Otevření tématu na nové kartě
+Zvolte téma na libovolné navigační kartě a stiskněte **kombinaci kláves CTRL + ENTER**.
 
 ### <a name="minimize-a-navigation-tab"></a>Minimalizace navigační karty
-Vytvořte více místa pro zobrazení témat výběrem ikony špendlíku navigačních karet. Když jsou tyto karty minimalizovány, zobrazí se pouze jejich popisky na nejbližším okraji okna. Karty můžete obnovit tak, zvolíte popisek libovolné karty a potom znovu vyberte ikonu připínáčku.
+Vytvořte více místa pro zobrazení témat výběrem ikony připnutí pro navigační karty. Když jsou tyto karty minimalizovány, zobrazí se na nejbližším okraji okna pouze jejich popisky. Pokud chcete karty obnovit, zvolte popisek libovolné karty a pak znovu zvolte ikonu PIN.
 
 ## <a name="changing-settings-in-viewer-options"></a>Změna nastavení v možnostech prohlížeče
-Otevřete **možnosti prohlížeče** dialogové okno kliknutím **možnosti prohlížeče** tlačítko na panelu nástrojů.
+Otevřete dialogové okno **Možnosti prohlížeče** výběrem tlačítka **Možnosti prohlížeče** na panelu nástrojů.
 
-|K provedení této úlohy:|Proveďte tento krok:|
+|Postup při provádění této úlohy:|Proveďte tento krok:|
 | - | - |
-|Změnit velikost písma zobrazeného textu|Zvolte velikost v **velikost textu** seznamu.|
-|Změnit maximální počet výsledků hledání, které se zobrazují v **hledání** kartu|Zvolte hodnotu v **maximální počet výsledků hledání** seznamu.|
-|Změnit maximální počet položek historie, ke které se zobrazí v **Oblíbené** okna|Zvolte hodnotu v **uložených položek historie maximální** seznamu.|
-|Zahrnout nebo vyloučit obsah v angličtině při prohlížení obsahu pro jiné než anglické jazykové verzi produktu.|Zaškrtněte nebo zrušte zaškrtnutí **ve všech navigačních karet a žádostí F1 zahrnout anglický obsah** zaškrtávací políčko. **Upozornění:**  Tato funkce také určuje, zda si můžete stáhnout obsah v angličtině **spravovat obsah** kartu.|
+|Změnit velikost písma, ve kterém se text zobrazuje|Vyberte velikost v seznamu **velikost textu** .|
+|Změna maximálního počtu výsledků hledání, které se zobrazí na kartě **Hledat**|V seznamu **Maximum výsledků hledání** vyberte hodnotu.|
+|Změna maximálního počtu položek historie, které se zobrazí v okně **Oblíbené**|Vyberte hodnotu v seznamu **maximální počet uložených položek historie** .|
+|Zahrnutí nebo vyloučení obsahu v angličtině při prohlížení obsahu pro jinou než anglickou verzi produktu.|Zaškrtněte nebo zrušte zaškrtnutí políčka **Zahrnout obsah v angličtině do všech navigačních karet a požadavků F1** . **Upozornění:**  Tato funkce také určuje, zda je možné stáhnout obsah v angličtině na kartě **Spravovat obsah** .|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

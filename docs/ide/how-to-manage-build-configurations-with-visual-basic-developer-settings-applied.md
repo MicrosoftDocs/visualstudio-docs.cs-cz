@@ -2,7 +2,7 @@
 title: Správa konfigurací sestavení pomocí vývojářských nastavení jazyka Visual Basic
 ms.date: 11/21/2018
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - advanced build configurations
 - building with Visual Basic developer settings (Visual Studio)
@@ -14,33 +14,33 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5243223e554f8e31fe2ffa9d667c09d0a3e1dbc0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8593f32b31dc70be08c777e86ae404da0578c48d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115156"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284227"
 ---
-# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postup: Správa konfigurací sestavení s použitým nastavením vývojáře jazyka Visual Basic
+# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Postupy: Správa konfigurací sestavení s použitím Visual Basic nastavení pro vývojáře
 
-Ve výchozím nastavení jsou všechny rozšířené možnosti konfigurace sestavení skryté při použití nastavení vývojáře jazyka Visual Basic. Tento článek vysvětluje, jak ručně povolit tato nastavení sestavení.
+Ve výchozím nastavení jsou všechny rozšířené možnosti konfigurace sestavení při použití Visual Basicho nastavení vývojářů skryté. Tento článek vysvětluje, jak ručně povolit tato nastavení sestavení.
 
-## <a name="enable-advanced-build-configurations"></a>Povolení pokročilých konfigurací sestavení
+## <a name="enable-advanced-build-configurations"></a>Povolit pokročilé konfigurace sestavení
 
-Ve výchozím nastavení skryje nastavení vývojáře jazyka Visual Basic možnost otevření dialogového okna **Správce konfigurace** a seznamy **Konfigurace** a **platformy** v [Návrháři projektu](../ide/reference/application-page-project-designer-visual-basic.md).
+Ve výchozím nastavení skryje Visual Basic vývojář možnost otevřít dialogové okno **Configuration Manager** a seznam **konfigurací** a **platforem** v [Návrháři projektu](../ide/reference/application-page-project-designer-visual-basic.md).
 
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. Rozbalte **položku Projekty a řešení**a klepněte na tlačítko **Obecné**.
+2. Rozbalte **projekty a řešení**a klikněte na **Obecné**.
 
     > [!NOTE]
-    > **Obecný** uzel je viditelný i v případě, že není zaškrtnuta možnost **Zobrazit všechna nastavení.** Pokud chcete zobrazit všechny dostupné možnosti, klikněte na **Zobrazit všechna nastavení**.
+    > **Obecný** uzel je viditelný i v případě, že není zaškrtnuta možnost **Zobrazit všechna nastavení** . Pokud chcete zobrazit všechny dostupné možnosti, klikněte na **Zobrazit všechna nastavení**.
 
-3. Klepněte na tlačítko **Zobrazit rozšířené konfigurace sestavení**.
+3. Klikněte na **Zobrazit pokročilé konfigurace sestavení**.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
-     **Nástroj Configuration Manager** je nyní k dispozici v nabídce **Sestavení** a seznamy **Konfigurace** a **Platformy** jsou viditelné v **Návrháři projektu**.
+     **Configuration Manager** je nyní k dispozici v nabídce **sestavení** a seznamy **Konfigurace** a **platforma** jsou viditelné v **Návrháři projektu**.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,7 +1,7 @@
 ---
-title: Nainstalovat dokumentaci místní nápovědy
+title: Nainstalovat místní dokumentaci k nápovědě
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_manage
 helpviewer_keywords:
@@ -23,112 +23,112 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20755447ccac7f5720bdb2df2a96cd9dbec5b730
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824948"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284903"
 ---
 # <a name="install-and-manage-local-content"></a>Instalace a Správa místního obsahu
 
-Pomocí Microsoft Help Viewer můžete přidat, odebrat, aktualizovat a přesunout obsah nápovědy, který je nainstalován v počítači podle vašich potřeb vývoje softwaru.
+Pomocí Microsoft Help Viewer můžete přidat, odebrat, aktualizovat a přesunout obsah aplikace, který je nainstalovaný v počítači, aby vyhovoval potřebám vývoje softwaru.
 
-Pokud chcete spravovat obsah v místním počítači, musí se přihlásit pomocí účtu, který má oprávnění správce. Kromě toho nemusí být schopné spravovat místní obsah, pokud pracujete v podnikovém prostředí, protože správci systému mohou tyto rozhodování pro vaši organizaci. Další informace najdete v tématu [Příručka pro správce aplikace Help Viewer](../help-viewer/administrator-guide.md).
+Chcete-li spravovat obsah v místním počítači, je nutné se přihlásit pomocí účtu, který má oprávnění správce. Kromě toho nemusí být možné spravovat místní obsah, pokud pracujete v podnikovém prostředí, protože správci systému můžou tato rozhodnutí udělat pro vaši organizaci. Další informace najdete v příručce pro [správce aplikace Help Viewer](../help-viewer/administrator-guide.md).
 
 ## <a name="change-the-content-installation-source"></a>Změna zdroje instalace obsahu
 
-Ve výchozím nastavení nainstaluje Help Viewer obsah s využitím online službu Microsoftu jako zdroj. Byste obvykle neměli měnit zdroj obsahu Pokud pracujete v podnikovém prostředí, u kterého správce systému již nainstaloval obsah do jiného umístění.
+Ve výchozím nastavení aplikace Help Viewer nainstaluje obsah pomocí online služby Microsoftu jako zdroje. Obecně byste neměli měnit zdroj obsahu, pokud nepracujete v podnikovém prostředí, pro které správce systému již nainstaloval obsah do jiného umístění.
 
 ### <a name="to-change-the-content-installation-source"></a>Změna zdroje instalace obsahu
 
-1. Na **spravovat obsah** , vyberte **disku** přepínač.
+1. Na kartě **Spravovat obsah** klikněte na tlačítko možnosti **disku** .
 
     > [!NOTE]
-    > **Disku** možnost není k dispozici v případě, že správce má že nesmíte měnit zdroj instalace obsahu. Další informace najdete v tématu [Příručka pro správce aplikace Help Viewer](../help-viewer/administrator-guide.md).
+    > Možnost **disk** není k dispozici, pokud vám správce zabránil v úpravě zdroje instalace obsahu. Další informace najdete v příručce pro [správce aplikace Help Viewer](../help-viewer/administrator-guide.md).
 
 2. Proveďte jeden z následujících kroků:
 
-    - Zadejte cestu *.msha* soubor nebo adresa URL koncového bodu služby.
+    - Zadejte cestu k souboru *. msha* nebo adresu URL koncového bodu služby.
 
-    - Klikněte na tlačítko procházení ( **...** ) tlačítko Přejít na *.msha* souboru.
+    - Klikněte na tlačítko Procházet (**...**) a přejděte k souboru *. msha* .
 
-    - V seznamu vyberte položku, která byla naposledy použita.
+    - V seznamu vyberte položku, která se naposledy používala.
 
 ## <a name="download-and-install-content-locally"></a>Stažení a instalace obsahu místně
 
-Pokud stáhnete a nainstalujete obsah v místním počítači, můžete zobrazit témata, pokud nemáte připojení k Internetu.
+Pokud stáhnete a nainstalujete obsah do místního počítače, můžete zobrazit témata, pokud nemáte připojení k Internetu.
 
 > [!IMPORTANT]
-> Pokud chcete nainstalovat obsah, musí se přihlásit pomocí účtu, který má oprávnění správce.
+> Chcete-li nainstalovat obsah, je nutné se přihlásit pomocí účtu, který má oprávnění správce.
 
 > [!NOTE]
-> Pokud integrované vývojové prostředí sady Visual Studio je nastaven na jiný jazyk než angličtinu, můžete nainstalovat obsah v angličtině, lokalizovaný obsah nebo obojí. Ale žádný obsah se zobrazí v případě, že nainstalujete pouze anglickou verzi a **ve všech navigačních karet a žádostí F1 zahrnout anglický obsah** zaškrtávací políčko **možnosti prohlížeče** dialogové okno se vymaže.
+> Pokud je integrované vývojové prostředí (IDE) sady Visual Studio nastaveno na jiný jazyk než angličtinu, můžete nainstalovat obsah v angličtině, lokalizovaný obsah nebo obojí. Pokud však nainstalujete pouze anglickou verzi a zaškrtávací políčko **Zahrnout obsah v angličtině do všech navigačních karet a požadavků F1** v dialogovém okně **Možnosti prohlížeče** není zaškrtnuto, zobrazí se žádný obsah.
 
-### <a name="to-download-and-install-content"></a>Ke stažení a nainstalování obsahu
+### <a name="to-download-and-install-content"></a>Stažení a instalace obsahu
 
-1. Zvolte **spravovat obsah** kartu.
+1. Klikněte na kartu **Spravovat obsah** .
 
-2. V seznamu obsahu zvolte **přidat** odkaz vedle knih, které chcete stáhnout a nainstalovat.
+2. V seznamu obsah klikněte na odkaz **Přidat** vedle knihy nebo knihy, které chcete stáhnout a nainstalovat.
 
-     Kniha je přidána do **čekající změny** seznamu a odhadovaná velikost knih, které jste zadali, se zobrazí pod tímto seznamem. Vzhledem k tomu, že některé knihy témata sdílejí, může být celková stahovaná velikost při několika knih menší než výsledek sečtením velikosti jednotlivé knihy, které jste zadali.
+     Kniha je přidána do seznamu **nedokončené změny** a odhadovaná velikost knihy nebo knih, které jste zadali, se zobrazí pod seznamem. Vzhledem k tomu, že některé knihy sdílejí témata, může být celková velikost stahovaných více knih menší než výsledek přidávání velikostí každé knihy, kterou jste zadali.
 
-3. Zvolte **aktualizace** tlačítko.
+3. Klikněte na tlačítko **aktualizovat** .
 
-     Knihy, které jste zadali, jsou nainstalovány společně se všemi aktualizacemi pro knihy, které už máte ve vašem počítači. Časy instalace lišit, ale můžete zobrazit průběh ve stavovém řádku.
+     Knihy nebo knihy, které jste zadali, se nainstalují spolu s aktualizacemi pro knihy, které už máte ve svém počítači. Doba instalace se liší, ale průběh můžete zobrazit ve stavovém řádku.
 
-## <a name="remove-local-content"></a>Odebrání lokálního obsahu
+## <a name="remove-local-content"></a>Odebrat místní obsah
 
 Odstraněním nežádoucího obsahu z počítače můžete ušetřit místo na disku.
 
 > [!IMPORTANT]
-> Musíte mít oprávnění správce k odebrání obsahu.
+> Chcete-li odebrat obsah, je nutné mít oprávnění správce.
 
 > [!NOTE]
-> Žádný obsah se zobrazí, pokud integrovaném vývojovém prostředí sady Visual Studio je nastaven na jiný jazyk než angličtinu, odeberete lokalizovaný obsah a **ve všech záložkách a žádostí F1 zahrnout anglický obsah** zaškrtávací políčko **možnosti prohlížeče** dialogové okno se vymaže.
+> Pokud je integrované vývojové prostředí sady Visual Studio nastaveno na jiný jazyk než angličtinu, neobjeví se žádný obsah a v dialogovém okně **Možnosti prohlížeče** je zaškrtnuto políčko **Zahrnout obsah v angličtině do všech navigačních karet a požadavků F1** .
 
-### <a name="to-remove-content"></a>Chcete-li odebrat obsah
+### <a name="to-remove-content"></a>Postup odebrání obsahu
 
-1. Zvolte **spravovat obsah** kartu.
+1. Klikněte na kartu **Spravovat obsah** .
 
-2. V seznamu obsahu zvolte **odebrat** odkaz vedle knih, které chcete odebrat.
+2. V seznamu obsah klikněte na odkaz **Odebrat** vedle knihy nebo knih, které chcete odebrat.
 
-     Kniha je přidána do **čekající změny** seznamu.
+     Kniha je přidána do seznamu **nedokončené změny** .
 
-3. Zvolte **aktualizace** tlačítko.
+3. Klikněte na tlačítko **aktualizovat** .
 
-     Knihy, které jste zadali, se odeberou z vašeho počítače.
+     Knihy nebo knihy, které jste zadali, se z počítače odeberou.
 
 ## <a name="update-local-content"></a>Aktualizace místního obsahu
 
-Stavový řádek označuje, kdy jsou k dispozici aktualizace nainstalovaného obsahu.
+Stavový řádek označuje, že jsou k dispozici aktualizace k nainstalovanému obsahu.
 
 > [!IMPORTANT]
-> Pokud chcete, aby **aplikace Help Viewer** k automaticky vyhledávala online aktualizace, je nutné otevřít **možnosti prohlížeče** dialogové okno a potom vyberte **přejít online pro kontrolu aktualizací obsahu**zaškrtávací políčko.
+> Pokud chcete, aby aplikace **Help Viewer** automaticky kontrolovala aktualizace online, je nutné otevřít dialogové okno **Možnosti prohlížeče** a pak zaškrtnout políčko **Přejít do režimu online a vyhledat aktualizace obsahu** .
 
 ### <a name="to-update-local-content"></a>Aktualizace místního obsahu
 
-- V pravém dolním rohu stavového řádku, vyberte **pro stažení klikněte zde** odkaz.
+- V pravém dolním rohu stavového řádku vyberte odkaz **klikněte sem a Stáhněte si hned** .
 
-Doba aktualizace se může lišit, ale můžete ve stavovém řádku zobrazit průběh aktualizace.
+Doba aktualizace se může lišit, ale průběh aktualizace můžete zobrazit ve stavovém řádku.
 
-## <a name="move-local-content"></a>Přesunutí místního obsahu
+## <a name="move-local-content"></a>Přesunout místní obsah
 
-Přesunutím nainstalovaného obsahu z místního počítače do sdílené síťové složky nebo na jiný oddíl v místním počítači můžete ušetřit místo na disku.
+Přesunutím nainstalovaného obsahu z místního počítače do sdílené síťové složky nebo do jiného oddílu v místním počítači můžete ušetřit místo na disku.
 
 > [!IMPORTANT]
-> Abyste mohli přesouvat obsah, musí se přihlásit pomocí účtu, který má oprávnění správce.
+> Chcete-li přesunout obsah, je nutné se přihlásit pomocí účtu, který má oprávnění správce.
 
 ### <a name="to-move-local-content"></a>Přesunutí místního obsahu
 
-1. Na **spravovat obsah** , vyberte **přesunout** tlačítko **místní cesta Store**.
+1. Na kartě **Spravovat obsah** klikněte na tlačítko **přesunout** v části **cesta k místnímu úložišti**.
 
-     **Přesunout obsah** zobrazí se dialogové okno.
+     Otevře se dialogové okno **přesunout obsah** .
 
-2. V **k** textového pole zadejte jiné umístění pro obsah a klikněte na tlačítko **OK** tlačítko.
+2. Do textového pole **do** zadejte jiné umístění pro obsah a pak klikněte na tlačítko **OK** .
 
-3. Zvolte **Zavřít** tlačítko obsah byl přesunut.
+3. Po přesunutí obsahu klikněte na tlačítko **Zavřít** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

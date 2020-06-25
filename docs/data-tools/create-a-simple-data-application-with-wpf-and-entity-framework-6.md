@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 735a4cc533312bcfa3823410780b09caa4f53fde
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173938"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282758"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí WPF a Entity Framework 6
 
-Tento návod ukazuje, jak vytvořit základní aplikaci "Forms over data" v aplikaci Visual Studio. Aplikace používá SQL Server LocalDB, databázi Northwind Entity Framework 6 a Windows Presentation Foundation. Ukazuje, jak provést základní datovou vazbu pomocí zobrazení hlavní-podrobnosti a má také vlastní navigátor vazby s tlačítky pro přesunutí na **Další**, **přesunout předchozí**, **přesunout na začátek**, **přesunout na konec**, **aktualizovat** a **Odstranit**.
+Tento návod ukazuje, jak vytvořit základní aplikaci "Forms over data" v aplikaci Visual Studio. Aplikace používá SQL Server LocalDB, databázi Northwind Entity Framework 6 (není Entity Framework Core) a Windows Presentation Foundation pro .NET Framework (ne .NET Core). Ukazuje, jak provést základní datovou vazbu pomocí zobrazení hlavní-podrobnosti a má také vlastní navigátor vazby s tlačítky pro přesunutí na **Další**, **přesunout předchozí**, **přesunout na začátek**, **přesunout na konec**, **aktualizovat** a **Odstranit**.
 
 Tento článek se zaměřuje na použití datových nástrojů v aplikaci Visual Studio a nepokouší se vysvětlovat základní technologie v jakékoli hloubce. Předpokládá, že máte základní znalosti v jazyce XAML, Entity Framework a SQL. Tento příklad také neukazuje architekturu Model-View-ViewModel (MVVM), která je standardem pro aplikace WPF. Tento kód však můžete zkopírovat do vlastní aplikace MVVM s malým počtem úprav.
 

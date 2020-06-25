@@ -1,84 +1,84 @@
 ---
-title: Vyhledejte témata (Help Viewer)
+title: Hledat témata (prohlížeč nápovědy)
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52818e4f676d6ae9f4c02f26ad8e354b206cb2b8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824997"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284916"
 ---
-# <a name="how-to-search-for-topics"></a>Postupy: Vyhledávání témat
+# <a name="how-to-search-for-topics"></a>Postupy: hledání témat
 
-Funkce fulltextového vyhledávání můžete použít k vyhledání všech témat, které obsahují konkrétní slovo. Můžete také upravit a přizpůsobit vyhledávání pomocí zástupných znaků výrazy, logické operátory a operátory rozšířeného vyhledávání.
+Pomocí funkce fulltextového vyhledávání můžete vyhledat všechna témata obsahující konkrétní slovo. Hledání můžete také Upřesnit a upravit pomocí zástupných výrazů, logických operátorů a operátorů rozšířeného vyhledávání.
 
-Otevřete **hledání** , vyberte **hledání** kartu **aplikace Help Viewer** okna, nebo pokud jste uživatelem klávesnice, zvolte **Ctrl** + **E**.
+Kartu **Vyhledat** otevřete tak, že v okně aplikace **Help Viewer** kliknete na kartu **Vyhledat** , nebo pokud jste uživatel s klávesnicí, vyberte **CTRL** + **E**.
 
-## <a name="to-perform-a-full-text-search"></a>K provádění fulltextové vyhledávání
+## <a name="to-perform-a-full-text-search"></a>Provedení fulltextového vyhledávání
 
 1. Do vyhledávacího pole zadejte slovo, které chcete najít.
 
-2. Ve vyhledávacím dotazu zadejte které operátory logických nebo rozšířené vyhledávání má použít pro vyhledávání, pokud existuje. K vyhledání všech dostupnou nápovědu, nepoužívejte operátory.
+2. Ve vyhledávacím dotazu určete, které logické nebo rozšířené operátory vyhledávání se mají použít pro hledání, pokud existuje. Pokud chcete vyhledat všechny dostupné informace, nepoužívejte operátory.
 
     > [!NOTE]
-    > V **možnosti prohlížeče** dialogovém okně můžete zadat další předvolby, například maximální počet výsledků hledání pro zobrazení na čas a jestli se mají zahrnout obsah v angličtině, pokud vaše primární národní prostředí není anglické.
+    > V dialogovém okně **Možnosti prohlížeče** můžete zadat další předvolby, jako je maximální počet výsledků hledání, které se mají zobrazit v čase, a to, jestli se má obsah v angličtině zahrnout, pokud vaše primární národní prostředí není anglické.
 
-3. Zvolte **Enter** klíč.
+3. Klikněte na klávesu **ENTER** .
 
-     Hledání ve výchozím nastavení vrátí maximálně 200 záznamů a zobrazí je v oblasti hledání výsledků. Další informace o verzi pro každý výsledek se může zobrazit v závislosti na obsahu.
+     Hledání vrátí maximálně 200 přístupů ve výchozím nastavení a zobrazí je v oblasti výsledků hledání. V závislosti na obsahu se mohou zobrazit další informace o verzi pro každý výsledek.
 
-4. Chcete-li zobrazit téma, vyberte jeho záhlaví ze seznamu výsledků.
+4. Chcete-li zobrazit téma, vyberte jeho název ze seznamu výsledků.
 
 ## <a name="full-text-search-tips"></a>Tipy pro fulltextové vyhledávání
 
-Můžete vytvořit více cílené hledání, které vracejí pouze témata, které vás zajímají, pokud pochopíte vliv syntaxi dotazu. Syntaxe obsahuje speciální znaky, rezervovaná slova a filtry. Toto téma obsahuje tipy, postupy a informace o syntaxi podrobné abychom vám lépe zručné vaše dotazy.
+Můžete vytvořit cílená hledání, která vrátí pouze témata, která vás zajímají. Pokud rozumíte tomu, jak syntaxe ovlivňuje váš dotaz. Syntaxe obsahuje speciální znaky, vyhrazená slova a filtry. V tomto tématu najdete tipy, postupy a podrobné informace o syntaxi, které vám pomůžou lépe vytvořit dotazy.
 
 ### <a name="general-guidelines"></a>Obecné pokyny
 
-Následující tabulka obsahuje některé základní pravidla a pokyny pro vývoj vyhledávacích dotazů v nápovědě.
+Následující tabulka obsahuje některá základní pravidla a pokyny pro vývoj vyhledávacích dotazů v nápovědě.
 
-|Syntaxe|Popis|
+|Syntax|Popis|
 |------------|-----------------|
-|Rozlišování velikosti písmen|Hledání se malá a velká písmena. Vývoj vašich kritérií vyhledávání pomocí velká nebo malá písmena. Například "OLE" a "ole" vrátí stejné výsledky.|
-|Kombinace znaků|Nelze vyhledat pouze jednotlivé písmena (a-z) nebo číslice (0 – 9). Pokud se pokusíte vyhledávání pro určité vyhrazená slova, například "a", "od" a "s", budou ignorovány. Další informace najdete v tématu [slova ignoruje při hledání](#stopwords) dále v tomto tématu.|
-|Pořadí vyhodnocení|Vyhledávací dotazy jsou vyhodnoceny zleva doprava.|
+|Rozlišovat velká a malá písmena|Při hledání se nerozlišují malá a velká písmena. Vytvořte kritéria hledání pomocí velkých nebo malých písmen. Například OLE a OLE vrátí stejné výsledky.|
+|Kombinace znaků|Nelze hledat pouze pro jednotlivá písmena (a-z) nebo čísla (0-9). Pokud se pokusíte vyhledat určitá vyhrazená slova, například "a", "z" a "with", budou ignorována. Další informace najdete v tématu [ignorovaná slova v hledáních](#stopwords) dále v tomto tématu.|
+|Pořadí vyhodnocování|Vyhledávací dotazy jsou vyhodnocovány zleva doprava.|
 
-### <a name="search-syntax"></a>Syntaxe vyhledávání
+### <a name="search-syntax"></a>Syntaxe hledání
 
-Pokud zadáte hledaný řetězec, který obsahuje více slov, jako je například "word1 word2," Tento řetězec je zadat text "word1 word2 a", který vrátí pouze témata, která obsahují všechny jednotlivých slov ve vyhledávacím řetězci.
+Pokud zadáte hledaný řetězec, který obsahuje více slov, například "word1 word2", je řetězec shodný s zadáním řetězce "word1 AND word2", který vrátí pouze témata obsahující všechna jednotlivá slova ve hledaném řetězci.
 
 > [!IMPORTANT]
-> - Vyhledávání frází nejsou podporovány. Pokud chcete zadat více slov ve vyhledávaném řetězci, bude vrácená témata obsahují všechna slova, která jste zadali, ale ne nutně přesnou frázi, které jste zadali.
-> - Použijte logické operátory Pokud chcete určit vztah mezi slovy ve vaší vyhledávací fráze. Můžete zahrnout logické operátory, jako je například AND, OR, NOT a TÉMĚŘ, pro další upřesněte hledání. Například pokud hledáte "deklarace TÉMĚŘ sjednocení", budou výsledky hledání obsahují témata obsahující slova "deklarace" a "sjednocení" více než pár slov od sebe navzájem. Další informace najdete v tématu [logické operátory ve vyhledávacích výrazech](../help-viewer/logical-operators-search-expressions.md).
+> - Hledání frází není podporováno. Pokud zadáte více než jedno slovo ve hledaném řetězci, budou vrácená témata obsahovat všechna slova, která jste zadali, ale nemusí být nutně přesně zadaná fráze.
+> - Pomocí logických operátorů určete vztah mezi slovy v hledané frázi. K dalšímu upřesnění hledání můžete použít logické operátory, například a, nebo, ne a blízko. Pokud například hledáte "deklaraci v blízkosti sjednocení", budou výsledky hledání obsahovat témata, která obsahují slova "deklarace" a "sjednocení" bez dalších slov od sebe navzájem. Další informace najdete v tématu [logické operátory ve vyhledávacích výrazech](../help-viewer/logical-operators-search-expressions.md).
 
 ### <a name="filters"></a>Filtry
 
-Výsledky hledání můžete omezit pomocí operátorů rozšířené vyhledávání. Nápověda obsahuje tři kategorie, které můžete použít pro filtrování výsledků fulltextové vyhledávání: Název, kód a – klíčové slovo.
+Výsledky hledání můžete dále omezit pomocí operátorů pokročilého vyhledávání. Help obsahuje tři kategorie, které lze použít k filtrování výsledků fulltextového vyhledávání: název, kód a klíčové slovo.
 
 ### <a name="ranking-of-search-results"></a>Řazení výsledků hledání
 
-Vyhledávací algoritmus platí určitá kritéria umožňující řazení výsledků vyšší nebo nižší v seznamu výsledků hledání. Obecně platí:
+Algoritmus pro hledání v seznamu výsledků používá určitá kritéria, která vám pomůžou dosáhnout vyšší nebo nižší úrovně výsledků hledání. Obecně platí:
 
-1. Obsah, který zahrnuje hledaná slova v názvu je vyšší než obsah, který není řazením.
+1. Obsah, který obsahuje hledaná slova v názvu, je seřazený nad více než obsahem.
 
-2. Obsah, který obsahuje hledaná slova v těsné blízkosti je vyšší než obsah, který není řazením.
+2. Obsah, který obsahuje hledaná slova v blízkosti, je větší než obsah, který ne.
 
-3. Obsah, který obsahuje vyšší hustotu slova je vyšší než obsah, který má nižší hustotu slova řazením.
+3. Obsah, který obsahuje vyšší hustotu hledaných slov, je větší než obsah s nižší hustotou hledaných slov.
 
-### <a name="stopwords"> Slova v hledání (nevýznamová slova) ignoruje. </a>
+### <a name=""></a><a name="stopwords">Ignorovaná slova při hledání (stop slova)</a>
 
-Nejčastěji se vyskytující slova nebo čísel, které jsou někdy označovány jako nevýznamová slova, se automaticky ignorují během fulltextového vyhledávání. Například pokud hledáte pro frázi "průchodu", zobrazí výsledky hledání témata obsahující slovo "heslo" ale ne "až".
+Často se vyskytují slova nebo čísla, která jsou někdy označována jako stopová slova, jsou automaticky ignorována během fulltextového vyhledávání. Pokud například hledáte frázi "Pass through", výsledky hledání zobrazí témata obsahující slovo "Pass", ale ne "do".
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Logické a rozšířené operátory](../help-viewer/logical-operators-search-expressions.md)
-- [Postupy: Hledání témat v rejstříku](../help-viewer/find-topics-index.md)
-- [Postupy: Hledání témat v obsahu](../help-viewer/find-topics-toc.md)
-- [Microsoft Help Viewer 2.2](../help-viewer/overview.md)
+- [Logické a pokročilé operátory](../help-viewer/logical-operators-search-expressions.md)
+- [Postupy: hledání témat v indexu](../help-viewer/find-topics-index.md)
+- [Postupy: hledání témat v obsahu](../help-viewer/find-topics-toc.md)
+- [Microsoft Help Viewer](../help-viewer/overview.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - service references [Visual Studio]
 - WCF Data Service reference
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 494e85049a173749d418276340389ebe826a0b0b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: f5f5a1e14a6eab7537c8ce64636f0f34378ad7f0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184225"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282368"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Postupy: Přidání, aktualizace nebo odebrání odkazu na službu WCF Data Service
 
@@ -57,7 +57,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 1. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
 
-     Je vygenerován klient služby (proxy) a do souboru *App. config* je přidána metadata, která popisují službu.
+     Dojde k vygenerování klienta služby (proxy) a do souboru *app.config* přidat metadata, která popisují službu.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** .
@@ -86,7 +86,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 1. Kliknutím na tlačítko **Dokončit** přidejte odkaz na projekt.
 
-     Je vygenerován klient služby (proxy) a do souboru *App. config* je přidána metadata, která popisují službu.
+     Dojde k vygenerování klienta služby (proxy) a do souboru *app.config* přidat metadata, která popisují službu.
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 1. Kliknutím na tlačítko **OK** přidejte odkaz na projekt.
 
-    Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *App. config* .
+    Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *app.config* .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. V **Průzkumník řešení**dvakrát klikněte nebo klepněte na uzel **připojené služby** . 
@@ -129,7 +129,7 @@ Uzel **připojené služby** v **Průzkumník řešení** můžete použít pro 
 
 1. Kliknutím na tlačítko **Dokončit** přidejte odkaz na projekt.
 
-    Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *App. config* .
+    Klient služby (proxy) vygeneruje a metadata, která popisují službu, se přidají do souboru *app.config* .
 
 ::: moniker-end
 
@@ -151,7 +151,7 @@ Pokud se už odkaz na službu nepoužívá, můžete ho odebrat z řešení.
 
 - V **Průzkumník řešení**klikněte pravým tlačítkem na odkaz na službu a pak klikněte na **Odstranit**.
 
-     Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou ze souboru *App. config* .
+     Klient služby se odebere z řešení a metadata, která popisují službu, se odeberou z *app.config* souboru.
 
     > [!NOTE]
     > Jakýkoli kód, který odkazuje na odkaz na službu, je nutné odebrat ručně.

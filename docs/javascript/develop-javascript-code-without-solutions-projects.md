@@ -1,10 +1,10 @@
 ---
-title: Zápis kódu JavaScriptu v Sadě Visual Studio bez řešení nebo projektu
+title: Psaní kódu jazyka JavaScript v aplikaci Visual Studio bez řešení nebo projektu
 titleSuffix: ''
-description: Visual Studio poskytuje podporu pro vytváření kódu bez závislosti na souboru projektu nebo souboru řešení
+description: Visual Studio poskytuje podporu pro vytváření kódu bez závislosti na souboru projektu nebo souboru řešení.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
@@ -13,54 +13,54 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ae8b6fd52cd2469cf7562a199b952d388b463089
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 187ca5ea0d0232e0ca8b99165e77ee265b81e801
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549935"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285085"
 ---
-# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Vývoj kódu JavaScriptu a jazyka V auvisual u sady Visual Studio bez řešení nebo projektů
+# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Vývoj kódu v jazyce JavaScript a TypeScript v aplikaci Visual Studio bez řešení nebo projektů
 
-Počínaje Visual Studio 2017, můžete [vyvíjet kód bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md), který umožňuje otevřít složku kódu a okamžitě začít pracovat s podporou rich editor, jako je IntelliSense, vyhledávání, refaktoring, ladění a další. Kromě těchto funkcí přidává Nástrojy Node.js pro visual studio podporu pro vytváření souborů Typu TypeScript, správu balíčků npm a spouštění skriptů npm.
+Počínaje sadou Visual Studio 2017 můžete [vyvíjet kód bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md), což umožňuje otevřít složku kódu a hned začít pracovat s bohatou podporou editoru, jako je IntelliSense, hledání, refaktoring, ladění a další. Kromě těchto funkcí nástroj Node.js Tools for Visual Studio přidává podporu pro vytváření souborů TypeScriptu, správu balíčků npm a spouštění skriptů npm.
 
-Chcete-li začít, vyberte na panelu nástrojů**položku Složka** **otevření** >  **souboru.** >  Průzkumník řešení zobrazí všechny soubory ve složce a můžete otevřít libovolný soubor a začít upravovat. Na pozadí Visual Studio indexuje soubory povolit npm, sestavení a ladění funkce.
+Začněte tím, že na panelu nástrojů vyberete **soubor**  >  **otevřít**  >  **složku** . Průzkumník řešení zobrazí všechny soubory ve složce a můžete otevřít kterýkoli ze souborů, abyste mohli začít upravovat. Na pozadí aplikace Visual Studio indexuje soubory pro povolení funkcí NPM, Build a Debug.
 
 > [!IMPORTANT]
-> Mnoho funkcí popsaných v tomto článku, včetně integrace npm, vyžadují Visual Studio 2017 verze 15.8 nebo novější verze. Úloha vývoje aplikace Visual Studio **Node.js** musí být nainstalována.
+> Mnohé z funkcí popsaných v tomto článku, včetně integrace npm, vyžadují Visual Studio 2017 verze 15,8 nebo novější. Je nutné nainstalovat úlohu vývoj sady Visual Studio **Node.js** .
 
-## <a name="npm-integration"></a>npm integrace
+## <a name="npm-integration"></a>integrace npm
 
-Pokud složka, kterou otevřete, obsahuje soubor *package.json,* můžete klepnout pravým tlačítkem myši na *soubor package.json* a zobrazit místní nabídku (místní nabídku) specifickou pro npm.
+Pokud složka, kterou otevřete, obsahuje *package.jsv* souboru, můžete kliknout pravým tlačítkem na *package.jsna* , aby se zobrazila kontextová nabídka (místní nabídka) specifická pro npm.
 
-![nabídka npm v Průzkumníku řešení](../javascript/media/solution-explorer-npm-ctx.png)
+![NPM – nabídka v Průzkumník řešení](../javascript/media/solution-explorer-npm-ctx.png)
 
-V místní nabídce můžete spravovat balíčky nainstalované npm stejným způsobem, jakým [spravujete balíčky npm](npm-package-management.md) při použití souboru projektu.
+V místní nabídce můžete spravovat balíčky nainstalované nástrojem npm stejným způsobem jako při použití souboru projektu pro [správu balíčků npm](npm-package-management.md) .
 
-Kromě toho menu také umožňuje spouštět skripty definované v elementu `scripts` v *package.json*. Tyto skripty budou používat verzi souboru Node.js, která je k dispozici v `PATH` proměnné prostředí. Skripty jsou spuštěny v novém okně. To to je skvělý způsob, jak spustit sestavení nebo spustit skripty.
+Kromě toho nabídka také umožňuje spouštět skripty definované v `scripts` prvku *package.jsna*. Tyto skripty budou používat verzi Node.js, která je k dispozici v `PATH` proměnné prostředí. Skripty se spouštějí v novém okně. Toto je skvělý způsob, jak spustit skripty sestavení nebo spuštění.
 
 ## <a name="build-and-debug"></a>Sestavení a ladění
 
 ### <a name="packagejson"></a>package.json
-Pokud *soubor package.json* ve složce určuje `main` prvek, bude příkaz **Ladění** k dispozici v místní nabídce pravým tlačítkem myši pro soubor *package.json*.
-Klepnutím na toto tlačítko spustíte *node.exe* se zadaným skriptem jako argumentem.
+Pokud *package.js* ve složce Určuje `main` prvek, příkaz **ladění** bude k dispozici v místní nabídce pravého tlačítka pro *package.jsna*.
+Kliknutím se spustí *node.exe* se zadaným skriptem jako jeho argumentem.
 
 ### <a name="javascript-files"></a>Soubory JavaScriptu
-Soubory JavaScriptu můžete ladit klepnutím pravým tlačítkem myši na soubor a výběrem **možnosti Ladění** v místní nabídce. Tím spustí *node.exe* s tímto souborem JavaScript jako jeho argument.
+Soubory JavaScriptu můžete ladit tak, že kliknete pravým tlačítkem na soubor a vyberete **ladění** z místní nabídky. Spustí se *node.exe* s tímto souborem JavaScriptu jako argumentem.
 
-### <a name="typescript-files-and-tsconfigjson"></a>Soubory typescriptu a tsconfig.json
-Pokud ve složce není k dispozici žádný soubor *tsconfig.json,* můžete klepnout pravým tlačítkem myši na soubor jazyka TypeScript a zobrazit příkazy místní nabídky pro sestavení a ladění tohoto souboru. Při použití těchto příkazů, sestavení nebo ladění pomocí *tsc.exe* s výchozími možnostmi. (Před laděním je třeba soubor vytvořit.)
-
-> [!NOTE]
-> Při vytváření kódu TypeScript používáme nejnovější `C:\Program Files (x86)\Microsoft SDKs\TypeScript`verzi nainstalovanou v aplikaci .
-
-Pokud je ve složce soubor *tsconfig.json,* můžete klepnutím pravým tlačítkem myši na soubor typu TypeScript zobrazit příkaz nabídky pro ladění tohoto souboru TypeScript. Tato možnost se zobrazí `outFile` pouze v případě, že v *souboru tsconfig.json*není zadánžádný . Pokud `outFile` je zadán soubor, můžete tento soubor ladit klepnutím pravým tlačítkem myši na *soubor tsconfig.json* a výběrem správné možnosti. Soubor `tsconfig.json` také poskytuje možnost sestavení, která vám umožní určit možnosti kompilátoru.
+### <a name="typescript-files-and-tsconfigjson"></a>Soubory TypeScriptu a tsconfig.jsv
+Pokud ve složce neexistuje žádná *tsconfig.js* , můžete kliknout pravým tlačítkem myši na soubor TypeScript a zobrazit příkazy místní nabídky pro sestavení a ladění tohoto souboru. Když použijete tyto příkazy, sestavíte nebo ladíte pomocí *tsc.exe* s výchozími možnostmi. (Před laděním musíte soubor sestavit.)
 
 > [!NOTE]
-> Další informace o *souboru tsconfig.json* naleznete na [stránce tsconfig.json TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+> Při sestavování kódu TypeScript používáme nejnovější verzi nainstalovanou v `C:\Program Files (x86)\Microsoft SDKs\TypeScript` .
 
-## <a name="unit-tests"></a>Jednotkové testy
-Integraci testování částí můžete povolit v sadě Visual Studio zadáním kořenového adresáře testu v *souboru package.json*:
+Pokud se ve složce nachází *tsconfig.js* souboru, můžete kliknout pravým tlačítkem na soubor TypeScript a zobrazit příkaz nabídky pro ladění tohoto souboru TypeScript. Možnost se zobrazí pouze v případě, že `outFile` v *tsconfig.js*není určena. Pokud `outFile` je zadaný, můžete tento soubor ladit tak, že kliknete pravým tlačítkem *tsconfig.jsna* a vyberete správnou možnost. `tsconfig.json`Soubor také poskytuje možnost sestavení, která umožňuje zadat možnosti kompilátoru.
+
+> [!NOTE]
+> Další informace o *tsconfig.jsnajdete na* [stráncetsconfig.jsna stránce příručka TypeScript](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+
+## <a name="unit-tests"></a>Testování částí
+Můžete povolit integraci testu jednotek v aplikaci Visual Studio zadáním kořene testu v *package.jsv*:
 
 ```json
 {
@@ -72,14 +72,14 @@ Integraci testování částí můžete povolit v sadě Visual Studio zadáním 
 }
 ```
 
-Testovací běžec vyjmenovává místně nainstalované balíčky k určení, které testovací rozhraní použít.
-Pokud není rozpoznán žádný z podporovaných rámců, zkušební běžec výchozí *ExportRunner*. Dalšími podporovanými rámci jsou:
+Test Runner vytvoří výčet místně nainstalovaných balíčků, aby určil, který testovací rozhraní se má použít.
+Pokud není rozpoznán žádný z podporovaných platforem, je Test Runner nastaven na výchozí hodnotu *ExportRunner*. Ostatní podporované architektury:
 * Mocha ([mochajs.org](https://mochajs.org/))
-* Jasmín[(Jasmine.github.io](https://jasmine.github.io/))
-* Páska ([github.com/substack/tape](https://github.com/substack/tape))
-* Žert ([jestjs.io](https://jestjs.io/))
+* Jednotek Jasmine ([Jasmine.GitHub.IO](https://jasmine.github.io/))
+* Páska ([GitHub.com/substack/Tape](https://github.com/substack/tape))
+* Jest ([jestjs.IO](https://jestjs.io/))
 
-Po otevření Průzkumníka testů (zvolte **Testovat** > **Průzkumníka testů systému****Windows** > ) Visual Studio zjišťuje a zobrazuje testy.
+Po otevření Průzkumníka testů (zvolit **test**  >  **Windows**  >  **Průzkumníka testů**systému Windows), Visual Studio zjistí a zobrazí testy.
 
 > [!NOTE]
-> Testovací běžec bude pouze výčet souborů JavaScript v kořenovém adresáři testu, pokud je vaše aplikace zapsána v TypeScriptu, musíte je nejprve vytvořit.
+> Test Runner bude vytvářet výčet pouze souborů JavaScriptu v kořenu testu, pokud je vaše aplikace napsána v TypeScript, je třeba nejprve vytvořit.

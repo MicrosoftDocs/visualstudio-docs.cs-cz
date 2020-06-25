@@ -1,7 +1,7 @@
 ---
 title: Přidání vlastních ovládacích prvků do okna zdrojů dat
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.datasource.howtoaddcustomcontrol
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: cd4791e118d22aab1126987461547f9fa2fec317
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 39ff272581793be9b456bbc404119a488850b3c4
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587105"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283070"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Přidání vlastních ovládacích prvků do okna zdrojů dat
 
@@ -39,7 +39,7 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
 2. V okně **zdroje dat** klikněte na položku, která je součástí zdroje dat, který jste přidali do okna, a poté klikněte na rozevírací nabídku položky.
 
    > [!TIP]
-   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **zobrazit** > jiné **zdroje dat** > **Windows** .
+   > Pokud není okno zdroje dat otevřené, otevřete ho výběrem možnosti **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
 3. V rozevírací nabídce klikněte na **přizpůsobit**. Otevře se jedna z následujících dialogových oken:
 
@@ -49,18 +49,18 @@ Chcete-li přidat nebo odebrat ovládací prvky ze seznamu dostupných ovládac�
 
 4. V dialogovém okně vyberte v rozevíracím seznamu datový **typ** datový typ.
 
-    - Chcete-li přizpůsobit seznam ovládacích prvků pro tabulku nebo objekt, vyberte **[seznam]** .
+    - Chcete-li přizpůsobit seznam ovládacích prvků pro tabulku nebo objekt, vyberte **[seznam]**.
 
     - Chcete-li přizpůsobit seznam ovládacích prvků pro sloupec tabulky nebo vlastnost objektu, vyberte datový typ sloupce nebo vlastnosti v podkladovém úložišti dat.
 
-    - Chcete-li upravit seznam ovládacích prvků pro zobrazení datových objektů, které mají uživatelem definované tvary, vyberte možnost **[jiné]** . Například vyberte **[Other]** , pokud vaše aplikace má vlastní ovládací prvek, který zobrazuje data z více než jedné vlastnosti konkrétního objektu.
+    - Chcete-li upravit seznam ovládacích prvků pro zobrazení datových objektů, které mají uživatelem definované tvary, vyberte možnost **[jiné]**. Například vyberte **[Other]** , pokud vaše aplikace má vlastní ovládací prvek, který zobrazuje data z více než jedné vlastnosti konkrétního objektu.
 
 5. V poli **přidružené ovládací prvky** vyberte všechny ovládací prvky, které mají být k dispozici pro vybraný datový typ, nebo zrušte výběr všech ovládacích prvků, které chcete ze seznamu odebrat.
 
     > [!NOTE]
     > Pokud ovládací prvek, který chcete vybrat, není zobrazen v poli **přidružené ovládací prvky** , je nutné přidat ovládací prvek do seznamu. Další informace najdete v tématu [Přidání přidružených ovládacích prvků](#add-associated-controls).
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
 7. V okně **zdroje dat** klikněte na položku datového typu, ke kterému jste právě přidružit jeden nebo více ovládacích prvků, a poté klikněte na rozevírací nabídku položky.
 
@@ -78,9 +78,9 @@ Chcete-li přidat ovládací prvky do seznamu přidružených ovládacích prvk�
 
     |Atribut|Popis|
     |---------------|-----------------|
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implementujte tento atribut pro jednoduché ovládací prvky, které zobrazují jeden sloupec (nebo vlastnost) dat, například <xref:System.Windows.Forms.TextBox>.|
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, například <xref:System.Windows.Forms.DataGridView>.|
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost, například <xref:System.Windows.Forms.ComboBox>.|
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implementujte tento atribut pro jednoduché ovládací prvky, které zobrazují jeden sloupec (nebo vlastnost) dat, jako je například <xref:System.Windows.Forms.TextBox> .|
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, jako je například <xref:System.Windows.Forms.DataGridView> .|
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implementujte tento atribut pro ovládací prvky, které zobrazují seznamy (nebo tabulky) dat, ale také musí obsahovat jeden sloupec nebo vlastnost, jako je například <xref:System.Windows.Forms.ComboBox> .|
 
 2. Pro model Windows Forms otevřete v dialogovém okně **Možnosti** stránku **přizpůsobení uživatelského rozhraní dat** . Nebo pro WPF otevřete dialogové okno **přizpůsobit vazbu ovládacího prvku** . Další informace najdete v tématu [přizpůsobení seznamu ovládacích prvků s možností vazby pro datový typ](#customize-the-bindable-controls-list).
 
@@ -89,7 +89,7 @@ Chcete-li přidat ovládací prvky do seznamu přidružených ovládacích prvk�
     > [!NOTE]
     > Do seznamu přidružených ovládacích prvků mohou být přidány pouze ovládací prvky, které jsou umístěny v rámci aktuálního řešení nebo v odkazovaném sestavení. (Ovládací prvky musí také implementovat jeden z atributů datové vazby v předchozí tabulce.) Chcete-li vytvořit vazby dat k vlastnímu ovládacímu prvku, který není k dispozici v okně zdroje dat, přetáhněte ovládací prvek z **panelu nástrojů** na návrhovou plochu a potom přetáhněte položku k navázání z okna **zdroje dat** do ovládacího prvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Dialogové okno Možnosti přizpůsobení uživatelského rozhraní pro data](../ide/reference/options-windows-forms-designer-data-ui-customization.md)

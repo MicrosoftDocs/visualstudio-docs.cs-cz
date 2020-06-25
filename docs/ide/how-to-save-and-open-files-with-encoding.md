@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Ukládání a otevírání souborů pomocí kódování'
+title: 'Postupy: ukládání a otevírání souborů s kódováním'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Unicode, bidirectional language support
 - files, encoding
@@ -13,51 +13,51 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e1e562771567a6ff4f9dc35c9e98ceb5441a074
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596174"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284162"
 ---
-# <a name="how-to-save-and-open-files-with-encoding"></a>Postup: Ukládání a otevírání souborů pomocí kódování
+# <a name="how-to-save-and-open-files-with-encoding"></a>Postupy: ukládání a otevírání souborů s kódováním
 
-Můžete ukládat soubory s určitým kódováním znaků pro podporu obousměrných jazyků. Můžete také určit kódování při otevírání souboru, aby visual studio zobrazí soubor správně.
+Můžete ukládat soubory s konkrétním kódováním znaků pro podporu obousměrných jazyků. Můžete také zadat kódování při otevírání souboru, aby aplikace Visual Studio správně zobrazila soubor.
 
 ## <a name="to-save-a-file-with-encoding"></a>Uložení souboru s kódováním
 
-1. V nabídce **Soubor** zvolte **Uložit soubor jako**a potom klepněte na rozevírací tlačítko vedle tlačítka **Uložit.**
+1. V nabídce **soubor** zvolte možnost **Uložit soubor jako**a pak klikněte na tlačítko rozevíracího seznamu vedle tlačítka **Uložit** .
 
-     Zobrazí se dialogové okno **Upřesnit možnosti uložení.**
+     Zobrazí se dialogové okno **Upřesnit možnosti uložení** .
 
-2. V části **Kódování**vyberte kódování, které se má pro soubor použít.
+2. V části **kódování**vyberte kódování, které chcete pro soubor použít.
 
-3. Volitelně v části **Koncovky řádků**vyberte formát znaků konce řádku.
+3. V případě potřeby můžete v části **konce řádků**vybrat formát znaků konce řádku.
 
-     Tato možnost je užitečná, pokud máte v úmyslu vyměňovat soubor s uživateli jiného operačního systému.
+     Tato možnost je užitečná, pokud máte v úmyslu vyměňovat si soubor s uživateli s jiným operačním systémem.
 
-     Pokud chcete pracovat se souborem, o kterém víte, že je zakódován určitým způsobem, můžete aplikaci Visual Studio říct, aby toto kódování používalo při otevírání souboru. Metoda, kterou použijete, závisí na tom, zda je soubor součástí projektu.
+     Chcete-li pracovat se souborem, který znáte, je kódován určitým způsobem, můžete aplikaci Visual Studio sdělit, aby při otevírání souboru používala toto kódování. Použitá metoda závisí na tom, zda je soubor součástí projektu.
 
 ## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Otevření kódovaného souboru, který je součástí projektu
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na soubor a zvolte **Otevřít pomocí**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na soubor a vyberte možnost **otevřít v programu**.
 
-2. V dialogovém okně **Otevřít v akci** zvolte editor, se kterým chcete soubor otevřít.
+2. V dialogovém okně **otevřít v aplikaci** vyberte editor, ve kterém se má soubor otevřít.
 
-     Mnoho editorů sady Visual Studio, například editor formulářů, automaticky detekuje kódování a odpovídajícím způsobem otevře soubor. Pokud zvolíte editor, který vám umožní zvolit kódování, zobrazí se dialogové okno **Kódování.**
+     Mnoho editorů sady Visual Studio, jako je například editor formulářů, automaticky rozpozná kódování a otevře soubor odpovídajícím způsobem. Pokud zvolíte editor, který umožňuje zvolit kódování, zobrazí se dialogové okno **kódování** .
 
-3. V dialogovém okně **Kódování** vyberte kódování, které má editor používat.
+3. V dialogovém okně **kódování** vyberte kódování, které má Editor použít.
 
 ## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Otevření kódovaného souboru, který není součástí projektu
 
-1. V nabídce **Soubor** přejděte na **Otevřít**, zvolte **Soubor** nebo Soubor **z webu**a pak vyberte soubor, který chcete otevřít.
+1. V nabídce **soubor** přejděte na příkaz **otevřít**, zvolte **soubor** nebo **soubor z webu**a potom vyberte soubor, který chcete otevřít.
 
-2. Klikněte na rozevírací tlačítko vedle tlačítka **Otevřít** a zvolte **Otevřít v .**
+2. Klikněte na tlačítko rozevíracího seznamu vedle tlačítka **otevřít** a vyberte možnost **otevřít v programu**.
 
 3. Postupujte podle kroků 2 a 3 z předchozího postupu.
 
 ## <a name="see-also"></a>Viz také
 
 - [Kódování a zalomení řádků](encodings-and-line-breaks.md)
-- [Kódování a globalizace forem Windows](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)
-- [Globalizace a lokalizaci aplikací](../ide/globalizing-and-localizing-applications.md)
+- [Kódování a model Windows Forms globalizace](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)
+- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)

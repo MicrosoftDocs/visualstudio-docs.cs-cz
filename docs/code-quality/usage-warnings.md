@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01dfa23896f006dbf904a3e097e0d6fa296e0361
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184572"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283343"
 ---
 # <a name="usage-warnings"></a>Upozornění využití
 
@@ -72,6 +72,7 @@ Upozornění použití podporují správné použití .NET.
 |[CA2241: Zadejte správné argumenty pro metody formátování](../code-quality/ca2241.md)|Argument formátu předaný metodě System. String. Format neobsahuje položku formátu, která by odpovídala každému argumentu objektu, nebo naopak.|
 |[CA2242: Testujte správně NaN](../code-quality/ca2242.md)|Tento výraz testuje hodnotu proti metodě Single.Nan nebo Double.Nan. Chcete-li tuto hodnotu otestovat, použijte metodu Single.IsNan(Single) nebo Double.IsNan(Double).|
 |[CA2243: Řetězcové literály atributů by se měly správně parsovat](../code-quality/ca2243.md)|Parametr řetězcového literálu atributu se neanalyzuje správně pro adresu URL, identifikátor GUID nebo verzi.|
-|[CA2244: neduplikovat inicializace indexovaných elementů](../code-quality/ca2244.md)|Inicializátor objektu má více než jeden inicializátor indexovaného elementu se stejným indexem konstanty. Všechny kromě posledního inicializátoru jsou redundantní.|
-|[CA2245: nepřiřazujte vlastnost sobě samému.](../code-quality/ca2245.md)|Vlastnost byla omylem přiřazena sama sobě.|
-|[CA2246: nepřiřazujte symbol a jeho člen v rámci stejného příkazu](../code-quality/ca2246.md)|Přiřazení symbolu a jeho členu, tedy pole nebo vlastnost, ve stejném příkazu není doporučeno. Není jasné, jestli má členský přístup za cíl použít starou hodnotu symbolu před přiřazením nebo novou hodnotou z přiřazení v tomto prohlášení.|
+|[CA2244: Neduplikujte inicializace indexovaných elementů.](../code-quality/ca2244.md)|Inicializátor objektu má více než jeden inicializátor indexovaného elementu se stejným indexem konstanty. Všechny kromě posledního inicializátoru jsou redundantní.|
+|[CA2245: Nepřiřazujte vlastnost k ní samotné.](../code-quality/ca2245.md)|Vlastnost byla omylem přiřazena sama sobě.|
+|[CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.](../code-quality/ca2246.md)|Přiřazení symbolu a jeho členu, tedy pole nebo vlastnost, ve stejném příkazu není doporučeno. Není jasné, jestli má členský přístup za cíl použít starou hodnotu symbolu před přiřazením nebo novou hodnotou z přiřazení v tomto prohlášení.|
+|[CA2248: Zadejte správný argument enum pro Enum. HasFlag.](../code-quality/ca2248.md)|Typ výčtu předaný jako argument pro `HasFlag` volání metody se liší od volajícího typu výčtu.|

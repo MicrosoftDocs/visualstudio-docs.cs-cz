@@ -1,7 +1,7 @@
 ---
 title: Změna podpisu metody
-description: Odeberte nebo změňte pořadí parametrů metody. Klikněte pravým tlačítkem myši na metodu, vyberte Rychlé akce a Refaktoringy a vyberte Změnit podpis.
-ms.date: 01/26/2018
+description: Přidat, odebrat nebo změnit pořadí parametrů metody. Klikněte pravým tlačítkem na metodu, vyberte rychlé akce a refaktoring a vyberte změnit signaturu.
+ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -14,16 +14,16 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 97c03c798732b5d722b2dc49f3ec7ffa490b4f06
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 947f44700ef43815eb29bc3e90563afe1be68f2b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68711266"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283869"
 ---
-# <a name="change-a-method-signature-refactoring"></a>Změna refaktoringu podpisu metody
+# <a name="change-a-method-signature-refactoring"></a>Změna refaktoringu signatury metody
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
@@ -31,54 +31,62 @@ Toto refaktoring se vztahuje na:
 
 **Co:** Umožňuje odebrat nebo změnit pořadí parametrů metody.
 
-**Kdy:** Chcete přesunout nebo odebrat parametr metody, který je aktuálně používán v různých umístěních.
+**Když:** Chcete přesunout nebo odebrat parametr metody, který je aktuálně používán v různých umístěních.
 
-**Proč:** Můžete ručně odebrat a změnit pořadí parametrů a potom najít všechna volání této metody a změnit je jeden po druhém, ale to by mohlo vést k chybám.  Tento refaktoring nástroj provede úlohu automaticky.
+**Proč:** Můžete ručně odebrat a změnit pořadí parametrů a pak vyhledat všechna volání této metody a změnit je po jednom, ale to může vést k chybám.  Tento nástroj refaktoringu úlohu provede automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte nebo umístěte textový kurzor do názvu metody, kterou chcete upravit, nebo do jednoho z jejích použití:
+1. Zvýrazněte nebo umístěte textový kurzor do názvu metody, kterou chcete změnit, nebo jedno z jeho použití:
 
    - C#:
 
        ![Zvýrazněný kód C #](media/changesignature-highlight-cs.png)
 
-   - Vb:
+   - JAZYK
 
-       ![Zvýrazněný kód Jazyka](media/changesignature-highlight-vb.png)
+       ![Zvýrazněný Visual Basic kódu](media/changesignature-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **kombinaci kláves Ctrl+R**a potom **kombinaci kláves Ctrl+V**.  (Všimněte si, že klávesová zkratka se může lišit podle vybraného profilu.)
-      - Stiskněte **klávesu Ctrl**+**.** aktivujete nabídku **Rychlé akce a Refaktoringy** a z místního okna Náhled vyberte **Změnit podpis.**
+      - Stiskněte klávesy **CTRL + R**a potom **CTRL + V**.  (Všimněte si, že se vaše klávesová zkratka může lišit v závislosti na vybraném profilu.)
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoringu** a v okně náhledu vyberte možnost **změnit podpis** .
    - **Myš**
-      - Vyberte **možnost Upravit > refaktorovat > odebrat parametry**.
-      - Vyberte **možnost Upravit > Přefaktorovat > Parametry přiobjednání**.
-      - Klikněte pravým tlačítkem myši na kód, vyberte nabídku **Rychlé akce a Refaktoringy** a v automaticky otevíraném okně Náhled vyberte **Změnit podpis.**
+      - Vyberte možnost **upravit > refaktoring > odebrat parametry**.
+      - Vyberte možnost **upravit > refaktoring > změnit pořadí parametrů**.
+      - Klikněte pravým tlačítkem na kód, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte **změnit podpis** .
 
-3. V dialogovém okně **Změnit podpis,** které se objeví, můžete pomocí tlačítek na pravé straně změnit podpis metody:
+3. V dialogu **změnit podpis** , který se zobrazí, můžete pomocí tlačítek na pravé straně změnit signaturu metody:
 
-   ![Dialogové okno Změnit podpis](media/changesignature-dialog-cs.png)
+   ![Dialogové okno změnit podpis](media/change-signature.png)
 
    | Tlačítko | Popis
    | ------ | ---
-   | **Nahoru/dolů** | Přesunutí vybraného parametru nahoru a dolů v seznamu
-   | **Odebrat** | Odebrání vybraného parametru ze seznamu
-   | **Obnovení** | Obnovení vybraného přeškrtnutého parametru do seznamu
+   | **Nahoru/dolů** | Přesunout vybraný parametr nahoru a dolů v seznamu
+   | **Přidat** | Přidat do seznamu nový parametr
+   | **Odebrat** | Odebere vybraný parametr ze seznamu.
+   | **Obnovení** | Obnoví vybraný, překřížený parametr na seznam.
 
    > [!TIP]
-   > Pomocí zaškrtávacího políčka **Změny odkazu náhledu** [zobrazíte, jaký bude výsledek,](../../ide/preview-changes.md) než se k němu odevzdejte.
+   > Pomocí zaškrtávacího políčka **Náhled změn odkazu** můžete [Zobrazit, co bude výsledek](../../ide/preview-changes.md) před potvrzením.
 
-4. Po dokončení proveďte změny stisknutím tlačítka **OK.**
+4. Když v dialogovém okně **změnit podpis** vyberete **Přidat** , otevře se dialogové okno **Přidat parametr** . V okně **Přidat parametr** můžete zadat název typu a název parametru. Parametr lze nastavit jako povinný, nebo volitelný s výchozí hodnotou. Potom můžete přidat hodnotu pro lokalitu volání a vybrat pro ni pojmenovaný argument, anebo použít proměnnou TODO. Proměnná TODO vloží do kódu znak TODO, abyste mohli postupně zkontrolovat jednotlivé chyby a projít si lokality volání, a tak se rozhodnout, co se má předat. V případě volitelných parametrů máte možnost lokalitu volání úplně vynechat.
 
+    ![Dialogové okno Přidat parametr-C #](media/add-parameter-dialog.png)
+
+5. Až dokončíte přidávání parametru, stiskněte tlačítko **OK** , aby se změny zobrazily.
+
+    ![Dialogové okno změnit podpis](media/change-signature.png)
+
+6. Kliknutím na tlačítko **OK** zobrazíte změny.
    - C#:
 
-      ![Výsledek podpisu změny - C #](media/changesignature-result-cs.png)
+      ![Změnit výsledek podpisu – C #](media/changesignature-result-cs.png)
 
    - Visual Basic:
 
-      ![Výsledek změny podpisu – visual basic](media/changesignature-result-vb.png)
+      ![Změnit výsledek podpisu – Visual Basic](media/changesignature-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,7 +1,7 @@
 ---
 title: Vytvoření vazby ovládacích prvků WPF k datové službě WCF
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ef13f400ff762818eb97396c51330d755c0203c4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7371e08925ad9227cf15a93a339e6e0ed36d11db
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586962"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282849"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Vytvoření vazby ovládacích prvků WPF k datové službě WCF
 
@@ -40,7 +40,7 @@ Tento návod znázorňuje následující úlohy:
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Požadované součásti
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
@@ -52,7 +52,7 @@ Předchozí znalosti následujících konceptů jsou také užitečné, ale nevy
 
 - [WCF Data Services](/dotnet/framework/data/wcf/wcf-data-services-overview).
 
-- Datové modely v [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)].
+- Datové modely v [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] .
 
 - Entity data Models a ADO.NET Entity Framework. Další informace najdete v tématu [přehled Entity Framework](/dotnet/framework/data/adonet/ef/overview).
 
@@ -60,19 +60,19 @@ Předchozí znalosti následujících konceptů jsou také užitečné, ale nevy
 
 ## <a name="create-the-service-project"></a>Vytvoření projektu služby
 
-1. Spusťte tento návod vytvořením projektu C# **webové aplikace** nebo Visual Basic ASP.NET. Pojmenujte projekt **AdventureWorksService**.
+1. Spusťte tento návod vytvořením projektu **webové aplikace** v jazyce C# nebo Visual Basic ASP.NET. Pojmenujte projekt **AdventureWorksService**.
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na **Default. aspx** a vyberte **Odstranit**. Tento soubor není pro návod nutný.
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>Vytvoření model EDM (Entity Data Model) pro službu
 
-Aby bylo možné vystavit data pro aplikaci pomocí datové služby WCF, je nutné pro tuto službu definovat datový model. Datová služba WCF podporuje dva typy datových modelů: datové modely entit a vlastní datové modely, které jsou definovány pomocí objektů modulu CLR (Common Language Runtime), které implementují rozhraní <xref:System.Linq.IQueryable%601>. V tomto návodu vytvoříte model EDM (Entity Data Model) pro datový model.
+Aby bylo možné vystavit data pro aplikaci pomocí datové služby WCF, je nutné pro tuto službu definovat datový model. Datová služba WCF podporuje dva typy datových modelů: datové modely entit a vlastní datové modely, které jsou definovány pomocí objektů CLR (Common Language Runtime), které implementují <xref:System.Linq.IQueryable%601> rozhraní. V tomto návodu vytvoříte model EDM (Entity Data Model) pro datový model.
 
 1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
 2. V seznamu nainstalované šablony klikněte na **data**a pak vyberte položku **ADO.NET model EDM (Entity Data Model)** projektu.
 
-3. Změňte název na `AdventureWorksModel.edmx`a klikněte na **Přidat**.
+3. Změňte název na `AdventureWorksModel.edmx` a klikněte na **Přidat**.
 
      Otevře se průvodce **model EDM (Entity Data Model)** .
 
@@ -84,11 +84,11 @@ Aby bylo možné vystavit data pro aplikaci pomocí datové služby WCF, je nutn
 
     - Klikněte na **nové připojení**a vytvořte připojení k databázi AdventureWorksLT.
 
-6. Na stránce **Vyberte datové připojení** se ujistěte, že je vybraná možnost **Uložit nastavení připojení entity v App. config jako** , a pak klikněte na **Další**.
+6. Na stránce **Vyberte datové připojení** se ujistěte, že je vybraná možnost **Uložit nastavení připojení entity v App.Config jako** , a pak klikněte na **Další**.
 
 7. Na stránce **Zvolte vaše databázové objekty** rozbalte **tabulky**a potom vyberte tabulku **SalesOrderHeader** .
 
-8. Klikněte na **Dokončit**.
+8. Klikněte na **Finish** (Dokončit).
 
 ## <a name="create-the-service"></a>Vytvoření služby
 
@@ -98,7 +98,7 @@ Vytvoření datové služby WCF pro zpřístupnění dat v model EDM (Entity Dat
 
 2. V seznamu **Nainstalované šablony** klikněte na možnost **Web**a poté vyberte položku projektu **WCF Data Service** .
 
-3. Do pole **název** zadejte `AdventureWorksService.svc`a klikněte na **Přidat**.
+3. Do pole **název** zadejte `AdventureWorksService.svc` a klikněte na **Přidat**.
 
      Visual Studio přidá `AdventureWorksService.svc` do projektu.
 
@@ -106,12 +106,12 @@ Vytvoření datové služby WCF pro zpřístupnění dat v model EDM (Entity Dat
 
 Službu musíte nakonfigurovat tak, aby fungovala s model EDM (Entity Data Model), kterou jste vytvořili:
 
-1. V souboru kódu `AdventureWorks.svc` nahraďte deklaraci třídy **AdventureWorksService** následujícím kódem.
+1. V `AdventureWorks.svc` souboru kódu nahraďte deklaraci třídy **AdventureWorksService** následujícím kódem.
 
      [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
      [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]
 
-     Tento kód aktualizuje třídu **AdventureWorksService** tak, aby byla odvozena z <xref:System.Data.Services.DataService%601>, která ve vaší model EDM (Entity Data Model) pracuje na třídě kontextu objektu `AdventureWorksLTEntities`. Také aktualizuje metodu `InitializeService`, aby klientům umožnil plný přístup pro čtení a zápis k entitě `SalesOrderHeader`.
+     Tento kód aktualizuje třídu **AdventureWorksService** tak, aby byla odvozena z typu <xref:System.Data.Services.DataService%601> , který pracuje ve `AdventureWorksLTEntities` třídě kontextu objektu v model EDM (Entity Data Model). Také aktualizuje `InitializeService` metodu tak, aby umožňovala klientům úplný přístup pro čtení a zápis k `SalesOrderHeader` entitě.
 
 2. Sestavte projekt a ověřte, zda se jedná o sestavení bez chyb.
 
@@ -121,15 +121,15 @@ Chcete-li zobrazit data z datové služby WCF, vytvořte novou aplikaci WPF se z
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, klikněte na položku **Přidat**a vyberte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#**  nebo **Visual Basic**a pak vyberte možnost **Windows**.
+2. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic**a pak vyberte možnost **Windows**.
 
 3. Vyberte šablonu projektu **aplikace WPF** .
 
-4. Do pole **název** zadejte `AdventureWorksSalesEditor`a klikněte na **OK**.
+4. Do pole **název** zadejte `AdventureWorksSalesEditor` a klikněte na **OK**.
 
-   Visual Studio přidá do řešení `AdventureWorksSalesEditor` projekt.
+   Visual Studio přidá `AdventureWorksSalesEditor` projekt do řešení.
 
-5. Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+5. V nabídce **data** klikněte na možnost **Zobrazit zdroje dat**.
 
    Otevře se okno **zdroje dat** .
 
@@ -141,7 +141,7 @@ Chcete-li zobrazit data z datové služby WCF, vytvořte novou aplikaci WPF se z
 
 8. V dialogovém okně **Přidat odkaz na službu** klikněte na možnost **zjistit**.
 
-   Visual Studio hledá v aktuálním řešení dostupné služby a přidá `AdventureWorksService.svc` do seznamu dostupných služeb v poli **služby** .
+   Visual Studio hledá v aktuálním řešení dostupné služby a přidá je `AdventureWorksService.svc` do seznamu dostupných služeb v poli **služby** .
 
 9. Do pole **obor názvů** zadejte **AdventureWorksService**.
 
@@ -161,7 +161,7 @@ Do okna přidejte několik tlačítek úpravou XAML v Návrháři WPF. Později 
 
    Okno se otevře v Návrháři WPF.
 
-2. V zobrazení [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] návrháře přidejte následující kód mezi značky `<Grid>`:
+2. V [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] zobrazení návrháře přidejte následující kód mezi `<Grid>` značky:
 
    ```xaml
    <Grid.RowDefinitions>
@@ -177,7 +177,7 @@ Do okna přidejte několik tlačítek úpravou XAML v Návrháři WPF. Později 
 
 ## <a name="create-the-data-bound-controls"></a>Vytvoření ovládacích prvků vázaných na data
 
-Vytvořte ovládací prvky, které zobrazují záznamy o zákaznících, přetažením uzlu `SalesOrderHeaders` z okna **zdroje dat** do návrháře.
+Vytvořte ovládací prvky, které zobrazují záznamy o zákaznících přetažením `SalesOrderHeaders` uzlu z okna **zdroje dat** do návrháře.
 
 1. V okně **zdroje dat** klikněte na rozevírací nabídku uzlu **SalesOrderHeaders** a vyberte **Podrobnosti**.
 
@@ -211,13 +211,13 @@ Vytvořte ovládací prvky, které zobrazují záznamy o zákaznících, přeta�
 
     - **ID prodejní objednávky**
 
-    - **Číslo prodejní objednávky**
+    - **Číslo nákupní objednávky**
 
 ## <a name="load-the-data-from-the-service"></a>Načtení dat ze služby
 
-Pomocí objektu proxy služby načtěte data z prodeje ze služby. Pak přiřaďte vracená data ke zdroji dat pro <xref:System.Windows.Data.CollectionViewSource> v okně WPF.
+Pomocí objektu proxy služby načtěte data z prodeje ze služby. Pak přiřaďte vrácená data ke zdroji dat <xref:System.Windows.Data.CollectionViewSource> v okně WPF.
 
-1. V Návrháři vytvořte obslužnou rutinu události `Window_Loaded` dvojitým kliknutím na text, který přečte: **MainWindow**.
+1. V Návrháři vytvořte `Window_Loaded` obslužnou rutinu události dvojitým kliknutím na text, který přečte: **MainWindow**.
 
 2. Proměnnou obslužné rutiny události nahraďte následujícím kódem. Ujistěte se, že v tomto kódu nahradíte adresu *localhost* adresou místního hostitele na vašem vývojovém počítači.
 
@@ -226,20 +226,20 @@ Pomocí objektu proxy služby načtěte data z prodeje ze služby. Pak přiřaď
 
 ## <a name="navigate-sales-records"></a>Přejít k prodejním záznamům
 
-Přidejte kód, který umožňuje uživatelům procházet záznamy prodeje pomocí tlačítek **\<** a **>** .
+Přidejte kód, který umožňuje uživatelům procházet záznamy prodeje pomocí **\<** and **>** tlačítek.
 
-1. V Návrháři poklikejte na tlačítko **<** na povrchu okna.
+1. V Návrháři poklikejte na **<** tlačítko na ploše okna.
 
-     Visual Studio otevře soubor kódu na pozadí a vytvoří novou `backButton_Click` obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
+     Visual Studio otevře soubor kódu na pozadí a vytvoří `backButton_Click` pro událost novou obslužnou rutinu události <xref:System.Windows.Controls.Primitives.ButtonBase.Click> .
 
 2. Do generované `backButton_Click` obslužné rutiny události přidejte následující kód:
 
      [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
      [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]
 
-3. Vraťte se do návrháře a dvakrát klikněte na tlačítko **>** .
+3. Vraťte se do návrháře a dvakrát klikněte na **>** tlačítko.
 
-     Visual Studio otevře soubor kódu na pozadí a vytvoří novou `nextButton_Click` obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
+     Visual Studio otevře soubor kódu na pozadí a vytvoří `nextButton_Click` pro událost novou obslužnou rutinu události <xref:System.Windows.Controls.Primitives.ButtonBase.Click> .
 
 4. Do generované `nextButton_Click` obslužné rutiny události přidejte následující kód:
 
@@ -252,9 +252,9 @@ Přidejte kód, který umožňuje uživatelům zobrazit a uložit změny v zázn
 
 1. V Návrháři dvakrát klikněte na tlačítko **Uložit změny** .
 
-     Visual Studio otevře soubor kódu na pozadí a vytvoří novou `saveButton_Click` obslužnou rutinu události pro událost <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
+     Visual Studio otevře soubor kódu na pozadí a vytvoří `saveButton_Click` pro událost novou obslužnou rutinu události <xref:System.Windows.Controls.Primitives.ButtonBase.Click> .
 
-2. Do obslužné rutiny události `saveButton_Click` přidejte následující kód.
+2. Přidejte následující kód do `saveButton_Click` obslužné rutiny události.
 
      [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
      [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]
@@ -265,7 +265,7 @@ Sestavte a spusťte aplikaci, abyste ověřili, že můžete zobrazit a aktualiz
 
 1. V nabídce **sestavení** klikněte na **Sestavit řešení**. Ověřte, že řešení je sestavení bez chyb.
 
-2. Stiskněte klávesu **Ctrl**+**F5**.
+2. Stiskněte klávesu **CTRL** + **F5**.
 
      Visual Studio spustí projekt **AdventureWorksService** bez ladění.
 
@@ -277,7 +277,7 @@ Sestavte a spusťte aplikaci, abyste ověřili, že můžete zobrazit a aktualiz
 
     - Textová pole zobrazují různá pole dat z prvního záznamu prodeje, který má ID prodejní objednávky **71774**.
 
-    - Kliknutím na tlačítko **>** nebo **<** můžete procházet dalšími záznamy prodeje.
+    - Kliknutím na **>** tlačítka nebo můžete **<** Procházet dalšími záznamy prodeje.
 
 5. V jednom ze záznamů prodejů zadejte do pole **Komentář** nějaký text a pak klikněte na **Uložit změny**.
 
@@ -295,10 +295,10 @@ Po dokončení tohoto návodu můžete provádět následující související �
 
 - Naučte se používat okno **zdroje dat** v aplikaci Visual Studio k zobrazení souvisejících dat (tj. data v relaci nadřazený-podřízený) v ovládacích prvcích WPF. Další informace naleznete v tématu [Návod: zobrazení souvisejících dat v aplikaci WPF](../data-tools/display-related-data-in-wpf-applications.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
-- [Vytvoření vazby ovládacích prvků WPF k datové sadě](../data-tools/bind-wpf-controls-to-a-dataset.md)
+- [Svázání ovládacích prvků WPF s datovou sadou](../data-tools/bind-wpf-controls-to-a-dataset.md)
 - [Přehled služby WCF (.NET Framework)](/dotnet/framework/data/wcf/wcf-data-services-overview)
 - [Přehled Entity Framework (.NET Framework)](/dotnet/framework/data/adonet/ef/overview)
 - [Přehled datové vazby (.NET Framework)](/dotnet/desktop-wpf/data/data-binding-overview)

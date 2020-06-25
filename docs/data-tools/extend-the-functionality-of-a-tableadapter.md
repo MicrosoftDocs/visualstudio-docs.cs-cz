@@ -1,7 +1,7 @@
 ---
 title: Rozšíření funkcí objektů TableAdapter
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34a5c1601071a36ca11005503e2f443a72ca3dfe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 245ea6791fde96c1ff08d43d138c522f43749c6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586637"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282420"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Rozšíření funkcí objektů TableAdapter
 
@@ -32,23 +32,23 @@ Kód, který definuje TableAdapter, se znovu vygeneruje, když se provedou jaké
 
 ## <a name="locate-tableadapters-in-code"></a>Hledání objekty TableAdapter v kódu
 
-I když jsou objekty TableAdapter vytvořeny pomocí **Návrhář datových sad**, třídy TableAdapter, které jsou generovány, nejsou vnořené třídy <xref:System.Data.DataSet>. Objekty TableAdapter se nachází v oboru názvů na základě názvu přidružené datové sady TableAdapter. Například pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet`, objekty TableAdapter by se nacházela v oboru názvů `HRDataSetTableAdapters`. (Konvence pojmenování se řídí tímto vzorem: *dataset* + `TableAdapters`).
+I když jsou objekty TableAdapter vytvořeny pomocí **Návrhář datových sad**, třídy TableAdapter, které jsou generovány, nejsou vnořené třídy <xref:System.Data.DataSet> . Objekty TableAdapter se nachází v oboru názvů na základě názvu přidružené datové sady TableAdapter. Například pokud vaše aplikace obsahuje datovou sadu s názvem `HRDataSet` , objekty TableAdapter by se nacházela v `HRDataSetTableAdapters` oboru názvů. (Konvence pojmenování se řídí tímto vzorem: *DataSet*  +  `TableAdapters` ).
 
-Následující příklad předpokládá, že TableAdapter s názvem `CustomersTableAdapter`je v projektu s `NorthwindDataSet`.
+Následující příklad předpokládá, že TableAdapter s názvem `CustomersTableAdapter` je v projektu s `NorthwindDataSet` .
 
 ### <a name="to-create-a-partial-class-for-a-tableadapter"></a>Vytvoření částečné třídy pro TableAdapter
 
 1. Přejděte do nabídky **projekt** a vyberte **Přidat třídu**a přidejte do projektu novou třídu.
 
-2. Pojmenujte `CustomersTableAdapterExtended`třídy.
+2. Pojmenujte třídu `CustomersTableAdapterExtended` .
 
-3. Vyberte **Přidat**.
+3. Vyberte možnost **Přidat**.
 
 4. Nahraďte kód správným oborem názvů a názvem částečné třídy pro váš projekt následujícím způsobem:
 
      [!code-csharp[VbRaddataTableAdapters#2](../data-tools/codesnippet/CSharp/extend-the-functionality-of-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataTableAdapters#2](../data-tools/codesnippet/VisualBasic/extend-the-functionality-of-a-tableadapter_1.vb)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vyplnění datových sad pomocí objektů TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)

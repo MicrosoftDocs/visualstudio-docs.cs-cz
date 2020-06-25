@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: ef26a566229c228711ba6e57de50402df255c3dd
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153030"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285215"
 ---
 # <a name="add-tags-to-project-templates"></a>Přidání značek do šablon projektů
 
@@ -44,7 +44,7 @@ Pokud provedete jednu z následujících akcí, můžete přidat nebo upravit zn
 * [Aktualizujte stávající šablonu projektu](how-to-update-existing-templates.md).
 * [Vytvořte novou šablonu projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <LanguageTag> Language Name </LanguageTag>
@@ -83,7 +83,7 @@ Syntaxe:
 
 ## <a name="text-value"></a>Textová hodnota
 
-Textová hodnota je povinná, pokud nepoužijete atributy `Package` a. `ID`
+Textová hodnota je povinná, pokud nepoužijete `Package` `ID` atributy a.
 
 Text poskytuje název šablony.
 
@@ -95,21 +95,21 @@ Následující seznam obsahuje předdefinované značky, které jsou k dispozici
 
 | Značka jazyka | Značka platformy | Značka typu projektu |
 | -- | -- | -- |
-| C++ (`cpp`) | Android (`android`) | Cloud (`cloud`) |
-| C# (`csharp`) | Azure (`azure`) | Konzola (`console`) |
-| F # (`fsharp`) | iOS (`ios`) | Plocha (`desktop`) |
-| Java (`java`) | Linux (`linux`) | Rozšíření (`extension`) |
-| JavaScript (`javascript`) | macOS (`macos`) | Hry (`games`) |
-| Python (`python`) | tvOS (`tvos`) | IoT (`iot`) |
-| Dotaz Languate (`querylanguage`) | Windows (`windows`) | Knihovna (`library`) |
-| TypeScript (`typescript`) | Xbox (`xbox`) | Machine Learning (`machinelearning`) |
-| Visual Basic (`visualbasic`) | | Mobilní (`mobile`) |
-| | | Office (`office`) |
-| | | Jiný (`other`) |
-| | | Služba (`service`) |
-| | | Test (`test`) |
-| | | UWP (`uwp`) |
-| | | Web (`web`) |
+| C++ ( `cpp` ) | Android ( `android` ) | Cloud ( `cloud` ) |
+| C# ( `csharp` ) | Azure ( `azure` ) | Konzola ( `console` ) |
+| F # ( `fsharp` ) | iOS ( `ios` ) | Plocha ( `desktop` ) |
+| Java ( `java` ) | Linux ( `linux` ) | Rozšíření ( `extension` ) |
+| JavaScript ( `javascript` ) | macOS ( `macos` ) | Hry ( `games` ) |
+| Python ( `python` ) | tvOS ( `tvos` ) | IoT ( `iot` ) |
+| Dotaz Languate ( `querylanguage` ) | Windows ( `windows` ) | Knihovna ( `library` ) |
+| TypeScript ( `typescript` ) | Xbox ( `xbox` ) | Machine Learning ( `machinelearning` ) |
+| Visual Basic ( `visualbasic` ) | | Mobilní ( `mobile` ) |
+| | | Office ( `office` ) |
+| | | Jiný ( `other` ) |
+| | | Služba ( `service` ) |
+| | | Test ( `test` ) |
+| | | UWP ( `uwp` ) |
+| | | Web ( `web` ) |
 
 ## <a name="example"></a>Příklad
 
@@ -122,7 +122,7 @@ Následující příklad ukazuje metadata pro šablonu projektu pro aplikaci Vis
         <Name>My template</Name>
         <Description>A basic template</Description>
         <Icon>TemplateIcon.ico</Icon>
-        <ProjectType>CSharp</ProjectType>
+        <ProjectType>csharp</ProjectType>
         <LanguageTag>C#</LanguageTag>
         <PlatformTag>windows</PlatformTag>
         <PlatformTag>linux</PlatformTag>
