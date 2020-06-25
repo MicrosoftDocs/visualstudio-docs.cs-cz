@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: příznak a odoznačení vláken | Microsoft Docs'
+title: Postup označení a odoznačení vláken | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,14 +15,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a2ce8b6ec429b3f7f5cd782c3dac52602eff16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7480f953e2fca57c296d6d1641059993bfa582c
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733240"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349624"
 ---
-# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Postupy: označení a odoznačení vláken (C#, Visual Basic,) C++
+# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Postupy: označení a odoznačení vláken vlákna (C#, Visual Basic, C++)
 
 Můžete označit vlákno, které chcete poskytnout zvláštní pozornost, a to tak, že ho označíte ikonou v podoknech **vlákna**, **paralelní zásobníky** (zobrazení vlákna), **paralelní kukátko**a **vlákna GPU** . Tato ikona vám může pomáhat a jiným odlišit vlákna označená příznakem z jiných vláken.
 
@@ -31,7 +31,7 @@ Vlákna označená příznakem také dostanou zvláštní zpracování v seznamu
 ### <a name="to-flag-or-unflag-a-thread"></a>Označení nebo odoznačení vlákna vláknem
 
 - V okně **vlákna** nebo **paralelní sledování** Najděte vlákno, které vás zajímá, a kliknutím na ikonu příznak vyberte nebo zrušte zaškrtnutí tohoto příznaku.
-- V okně **paralelní zásobníky** klikněte pravým tlačítkem na vlákno nebo skupinu vláken a vyberte **příznak/\<thread >** nebo zrušit označení nebo **\<thread >** .
+- V okně **paralelní zásobníky** klikněte pravým tlačítkem na vlákno nebo skupinu vláken a vyberte **příznak \<thread> /** nebo zrušit **příznak/ \<thread> **.
 
 ### <a name="to-unflag-all-threads"></a>Chcete-li zrušit označení všech vláken
 
@@ -58,9 +58,9 @@ Vlákna označená příznakem také dostanou zvláštní zpracování v seznamu
 
 4. Volitelné Do **vyhledávacího** pole zadejte řetězec, který bude hledat konkrétní moduly.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Začínáme s laděním vícevláknových aplikací](../debugger/get-started-debugging-multithreaded-apps.md)
 - [Návod: Ladění vícevláknových aplikací pomocí okna vlákna](../debugger/how-to-use-the-threads-window.md)

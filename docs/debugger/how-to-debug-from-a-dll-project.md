@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Ladění z projektu knihovny DLL | Dokumentace Microsoftu'
+title: Jak ladit z projektu knihovny DLL | Microsoft Docs
 ms.date: 10/10/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,71 +18,71 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2e4df2028a14281ee2343ad48b4b71812d29fca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 081e897b0ff76dd97d2c174bf8c6fbfa2334f8ff
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847975"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350118"
 ---
-# <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Postupy: Ladění z projektu knihovny DLL v sadě Visual Studio (C#, C++, Visual Basic, F#)
+# <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Postupy: ladění z projektu knihovny DLL v aplikaci Visual Studio (C#, C++, Visual Basic, F #)
 
-Jedním ze způsobů k ladění projektu knihovny DLL je volající aplikace zadejte ve vlastnostech projektu knihovny DLL. Potom spustíte ladění z projektu knihovny DLL, samotného. Pro tuto metodu za účelem fungovat musí volat stejné knihovny DLL ve stejném umístění jako ta, kterou nakonfigurujete. Pokud aplikace vyhledá a načte jinou verzi knihovny DLL, tuto verzi nesmí obsahovat vaše zarážky. Další způsoby ladění knihoven DLL najdete v tématu [projektů knihovny DLL ladění](../debugger/debugging-dll-projects.md).
+Jedním ze způsobů, jak ladit projekt knihovny DLL, je určit volající aplikaci ve vlastnostech projektu knihovny DLL. Pak můžete spustit ladění z samotného projektu knihovny DLL. Aby tato metoda fungovala, musí aplikace volat stejnou knihovnu DLL ve stejném umístění jako ta, kterou nakonfigurujete. Pokud aplikace najde a načte jinou verzi knihovny DLL, nebude tato verze obsahovat vaše zarážky. Další metody ladění knihoven DLL naleznete v tématu [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md).
 
-Pokud vaše spravovaná aplikace volá nativní knihovnu DLL nebo nativní aplikace volá operaci spravované knihovny DLL, můžete ladit knihovnu DLL a volání aplikace. Další informace najdete v tématu [jak: Ladění ve smíšeném režimu](../debugger/how-to-debug-in-mixed-mode.md).
+Pokud vaše spravovaná aplikace volá nativní knihovnu DLL nebo vaše nativní aplikace volá spravovanou knihovnu DLL, můžete ladit jak knihovnu DLL, tak volající aplikaci. Další informace najdete v tématu [Postup: ladění ve smíšeném režimu](../debugger/how-to-debug-in-mixed-mode.md).
 
-Nativní a spravované projekty knihovny DLL mají různá nastavení zadejte aplikace pro volajícího.
+Nativní a spravované projekty knihovny DLL mají různá nastavení pro určení volání aplikací.
 
-## <a name="specify-a-calling-app-in-a-native-dll-project"></a>Zadejte volání aplikace do nativního projektu knihovny DLL
+## <a name="specify-a-calling-app-in-a-native-dll-project"></a>Určení volající aplikace v nativním projektu knihovny DLL
 
-1. Vyberte projekt knihovny DLL v C++ v **Průzkumníka řešení**. Vyberte **vlastnosti** ikonu, stiskněte klávesu **Alt**+**Enter**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
+1. Vyberte projekt C++ DLL v **Průzkumník řešení**. Vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
-1. V  **\<Projekt > stránky vlastností** dialogové okno pole, ujistěte se, že **konfigurace** pole v horní části okna je nastaveno **ladění**.
+1. V dialogovém okně ** \<Project> stránky vlastností** se ujistěte, že je pole **Konfigurace** v horní části okna nastaveno na hodnotu **ladit**.
 
-1. Vyberte **vlastnosti konfigurace** > **ladění**.
+1. Vyberte možnosti **Konfigurace**  >  **ladění**.
 
-1. V **ladicí program ke spuštění** , zvolte buď **místní ladicí program Windows** nebo **vzdálený ladicí program Windows**.
+1. V seznamu **Spustit ladicí program** vyberte buď **místní ladicí program systému Windows** , nebo **vzdálený ladicí program systému Windows**.
 
-1. V **příkaz** nebo **vzdálený příkaz** pole, přidejte plně kvalifikovanou cestu a název souboru volající aplikace, například *.exe* souboru.
+1. Do **příkazu** nebo **vzdáleného příkazu** přidejte úplnou cestu a název souboru volající aplikace, jako je například soubor *. exe* .
 
-   ![Okno Vlastnosti ladění](../debugger/media/dbg-debugging-properties-dll.png "ladit vlastnosti okna")
+   ![okno Vlastnosti ladění](../debugger/media/dbg-debugging-properties-dll.png "okno Vlastnosti ladění")
 
-1. Přidat všechny argumenty potřebné program **argumenty příkazu** pole.
+1. Do pole **argumenty příkazu** přidejte všechny nezbytné argumenty programu.
 
 1. Vyberte **OK**.
 
-## <a name="specify-a-calling-app-in-a-managed-dll-project"></a>Zadejte volání aplikace v spravovaného projektu knihovny DLL
+## <a name="specify-a-calling-app-in-a-managed-dll-project"></a>Určení volající aplikace v projektu spravované knihovny DLL
 
-1. Vyberte projekt C# nebo knihovny DLL jazyka Visual Basic v **Průzkumníka řešení**. Vyberte **vlastnosti** ikonu, stiskněte klávesu **Alt**+**Enter**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
+1. Vyberte projekt v jazyce C# nebo Visual Basic DLL v **Průzkumník řešení**. Vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
-1. Ujistěte se, že **konfigurace** pole v horní části okna je nastaveno **ladění**.
+1. Ujistěte se, že pole **Konfigurace** v horní části okna je nastaveno na **ladit**.
 
-1. V části **zahájení**:
+1. V části **spouštěcí akce**:
 
-   - Pro knihovny DLL .NET Framework, vyberte **externí program Start**a přidejte plně kvalifikovanou cestu a název volající aplikace.
+   - V případě .NET Framework DLL vyberte možnost **spustit externí program**a přidejte plně kvalifikovanou cestu a název volající aplikace.
 
-   - Nebo vyberte **Start prohlížeč s adresou URL** a zadejte adresu URL místní aplikace ASP.NET.
+   - Případně vyberte možnost **spustit prohlížeč s adresou URL** a zadejte adresu URL místní aplikace ASP.NET.
 
-   - Pro knihovny DLL .NET Core **ladění** stránku vlastností se liší. Vyberte **spustitelný soubor** z **spuštění** rozevírací seznam a pak přidejte plně kvalifikovanou cestu a název volající aplikace v **spustitelný soubor** pole.
+   - V případě knihoven DLL .NET Core se stránka vlastnosti **ladění** liší. V rozevíracím seznamu **Spustit** vyberte **spustitelný soubor** a potom do pole **spustitelného souboru** přidejte plně kvalifikovanou cestu a název volající aplikace.
 
-1. Přidat všechny potřebné argumenty příkazového řádku **argumenty příkazového řádku** nebo **argumenty aplikace** pole.
+1. Do **argumentů příkazového řádku** nebo do pole **argumenty aplikace** přidejte všechny nezbytné argumenty příkazového řádku.
 
-   ![Okno ladění vlastností jazyka C#](../debugger/media/dbg-debugging-properties-dll-csharp.png "okno ladění vlastností jazyka C#")
+   ![Okno Vlastnosti ladění C#](../debugger/media/dbg-debugging-properties-dll-csharp.png "Okno Vlastnosti ladění C#")
 
-1. Použití **souboru** > **uložit vybrané položky** nebo **Ctrl**+**S** uložte změny.
+1. **File**  >  Chcete-li uložit změny, použijte možnost**Uložit vybrané položky** nebo **CTRL** + **S** .
 
 ## <a name="debug-from-the-dll-project"></a>Ladění z projektu knihovny DLL
 
 1. Nastavte zarážky v projektu knihovny DLL.
 
-1. Klikněte pravým tlačítkem na projekt knihovny DLL a zvolte **nastavit jako spouštěný projekt**.
+1. Klikněte pravým tlačítkem na projekt knihovny DLL a vyberte **nastavit jako spouštěný projekt**.
 
-1. Ujistěte se, že **konfigurace řešení** je nastaveno na **ladění**. Stisknutím klávesy **F5**, klikněte na zelené **Start** šipku, nebo vyberte **ladění** > **spustit ladění**.
+1. Ujistěte se, že pole **Konfigurace řešení** je nastaveno na **ladit**. Stiskněte klávesu **F5**, klikněte na zelenou šipku **Start** nebo vyberte **ladit**  >  **Spustit ladění**.
 
-Pokud ladění nenarazí své zarážky, ujistěte se, že vaše knihovna DLL výstup (ve výchozím nastavení,  *\<Projekt > \Debug* složky) je umístění, které je volání volající aplikace.
+Pokud ladění nevrátí vaše zarážky, ujistěte se, že váš výstup knihovny DLL (ve výchozím nastavení složka * \<project> \debug.* ) je umístění, ve kterém volající aplikace volá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)
-- [Nastavení projektu pro konfiguraci ladění jazyka C#](../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [Nastavení projektu pro konfiguraci ladění v jazyce C#](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Nastavení projektu pro konfiguraci Visual Basicho ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)

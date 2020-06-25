@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Zobrazení vlastností vlákna | Dokumentace Microsoftu'
+title: Jak zobrazit vlastnosti vlákna | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - thread properties
 ms.assetid: f0e64c0e-cdb3-4ad4-9723-09934166f3a2
@@ -10,20 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fa26c20f465ced2643b5c6aa2c8625024b38ed1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab3f98b5a47c6d950f2d95e732e05e5734c783b5
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847729"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349871"
 ---
 # <a name="how-to-display-thread-properties"></a>Postupy: Zobrazení vlastností vlákna
-Další informace o vlákně uvedené v [zobrazení vláken](../debugger/threads-view.md), použijte [dialogové okno vlastností vlákna](../debugger/thread-properties-dialog-box.md).
+Chcete-li získat další informace o vlákně uvedeném v [zobrazení vláken](../debugger/threads-view.md), použijte [dialogové okno vlastnosti vlákna](../debugger/thread-properties-dialog-box.md).
 
-### <a name="to-open-a-thread-properties-dialog-box"></a>Chcete-li otevřít dialogové okno vlastností vlákna
+### <a name="to-open-a-thread-properties-dialog-box"></a>Otevření dialogového okna vlastností vlákna
 
-1. Vyberte ze stromu se zobrazí v vlákno [zobrazení vláken](../debugger/threads-view.md).
+1. Vyberte vlákno ze stromu zobrazeného v [zobrazení vlákna](../debugger/threads-view.md).
 
-2. Z **zobrazení** nabídce zvolte **vlastnosti**.
+2. V nabídce **zobrazení** klikněte na příkaz **vlastnosti**.
 
-   Dialogová okna vlastnosti nejsou modální, takže můžete kliknout na jiné položce v zobrazení oken a dialogových oken se zobrazí informace na vybranou položku.
+   Dialogová okna vlastností nejsou modální, takže můžete kliknout na jinou položku v okně zobrazení a v dialogovém okně se zobrazí informace o vybrané položce.

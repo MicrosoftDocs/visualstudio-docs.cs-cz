@@ -2,7 +2,7 @@
 title: Spuštění pracovního procesu v rámci uživatelského účtu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -20,30 +20,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5905ad87eb534013bdfd786a79e40e46087dff55
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732821"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349403"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Postupy: Spuštění pracovního procesu v rámci uživatelského účtu
-Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (Aspnet_wp. exe nebo W3wp. exe) v rámci uživatelského účtu, postupujte podle následujících kroků.
+Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces (aspnet_wp.exe nebo w3wp.exe) v rámci uživatelského účtu, postupujte podle následujících kroků.
 
  > [!IMPORTANT]
  > Počínaje systémem Windows Server 2008 R2 doporučujeme použití [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities) jako identity pro každý fond aplikací.
 
 ## <a name="procedure"></a>Postup
 
-#### <a name="to-run-aspnet_wpexe-under-a-user-account"></a>Spuštění programu Aspnet_wp. exe v rámci uživatelského účtu
+#### <a name="to-run-aspnet_wpexe-under-a-user-account"></a>Spuštění aspnet_wp.exe pod uživatelským účtem
 
-1. Otevřete soubor Machine. config umístěný v počítači ve složce CONFIG v cestě, kam jste nainstalovali modul runtime.
+1. Otevřete soubor machine.config, který se nachází v počítači ve složce CONFIG v cestě, kam jste nainstalovali modul runtime.
 
-2. Vyhledejte část &lt;processModel &gt; a změňte atributy uživatele a hesla na jméno a heslo uživatelského účtu, pod kterým chcete spustit program Aspnet_wp. exe.
+2. Vyhledejte &lt; část processModel &gt; a změňte atributy uživatele a hesla na jméno a heslo uživatelského účtu, na kterém chcete spustit aspnet_wp.exe.
 
-3. Uložte soubor Machine. config.
+3. Uložte soubor machine.config.
 
-4. V [!INCLUDE[winxpsvr](../debugger/includes/winxpsvr_md.md)] je služba IIS 6,0 ve výchozím nastavení nainstalovaná. Odpovídající pracovní proces je w3wp.exe.To spustit v režimu IIS 6,0 pomocí programu Aspnet_wp. exe jako pracovní proces, musíte postupovat podle následujících kroků:
+4. V systému [!INCLUDE[winxpsvr](../debugger/includes/winxpsvr_md.md)] je služba IIS 6,0 standardně nainstalována. Odpovídající pracovní proces je w3wp.exe. Chcete-li spustit v režimu IIS 6,0 s aspnet_wp.exe jako pracovní proces, je nutné provést následující kroky:
 
    1. Klikněte na tlačítko **Start**, klikněte na položku **Nástroje pro správu** a potom zvolte možnost **Internetová informační služba**.
 
@@ -68,11 +68,11 @@ Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](
    net start w3svc
    ```
 
-6. Vyhledejte složku Dočasné soubory [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], která by měla být ve stejné cestě jako konfigurační složka. Klikněte pravým tlačítkem na složku dočasné [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] soubory a v místní nabídce vyberte **vlastnosti** .
+6. Vyhledejte složku dočasných [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] souborů, která by měla být ve stejné cestě jako konfigurační složka. Klikněte pravým tlačítkem na [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] složku Dočasné soubory a v místní nabídce vyberte **vlastnosti** .
 
 7. V dialogovém okně **dočasné vlastnosti souborů ASP.NET** klikněte na kartu **zabezpečení** .
 
-8. Klikněte na **Upřesnit**.
+8. Klikněte na tlačítko **Upřesnit**.
 
 9. V dialogovém okně **Upřesnit nastavení zabezpečení pro dočasné soubory ASP.NET** klikněte na **Přidat**.
 
@@ -86,6 +86,6 @@ Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](
 
 13. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti dočasných souborů ASP.NET** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
 - [Ladění ASP.NET: požadavky na systém](../debugger/aspnet-debugging-system-requirements.md)

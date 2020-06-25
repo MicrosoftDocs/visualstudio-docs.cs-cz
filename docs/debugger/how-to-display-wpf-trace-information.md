@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: zobrazení informací o trasování WPF | Microsoft Docs'
+title: Jak zobrazit informace o trasování WPF | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,21 +16,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c3f193c32b4e6a67bb0fe5540aa9d0020e77ea
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 362376176cfb95c4e285f6837c53d277110e3439
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733471"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349780"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Postupy: Zobrazení informací trasování grafického subsystému WPF
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] může přijímat informace o trasování ladění z aplikací WPF a zobrazovat tyto informace v okně **výstup** . Chcete-li zobrazit informace o trasování ladění, musí být povoleno trasování WPF.
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]může přijímat informace o trasování ladění z aplikací WPF a zobrazovat tyto informace v okně **výstup** . Chcete-li zobrazit informace o trasování ladění, musí být povoleno trasování WPF.
 
- Můžete povolit trasování WPF v souboru App. config nebo programově pomocí třídy <xref:System.Diagnostics.PresentationTraceSources>. Jednodušší způsob, jak povolit trasování WPF, je pomocí okna **Možnosti** . Trasování WPF pro webové aplikace není podporováno.
+ Můžete povolit trasování WPF v souboru App.Config nebo programově pomocí <xref:System.Diagnostics.PresentationTraceSources> třídy. Jednodušší způsob, jak povolit trasování WPF, je pomocí okna **Možnosti** . Trasování WPF pro webové aplikace není podporováno.
 
 ### <a name="to-enable-or-customize-wpf-trace-information"></a>Povolení nebo přizpůsobení trasovacích informací WPF
 
-1. V nabídce **nástroje** vyberte možnost **Možnosti**.
+1. V nabídce **Tools** (Nástroje) vyberte **Options** (Možnosti).
 
 2. V dialogovém okně **Možnosti** v levém poli otevřete uzel **ladění** .
 
@@ -60,13 +60,13 @@ ms.locfileid: "72733471"
 
      **ActivityTracing** umožňuje trasování událostí zastavení, spuštění, pozastavení, přenosu a obnovení.
 
-     Další informace o tom, jak tyto úrovně trasovacích informací znamenají, najdete v tématu <xref:System.Diagnostics.SourceLevels>.
+     Další informace o tom, jak tyto úrovně trasovacích informací znamenají, najdete v tématu <xref:System.Diagnostics.SourceLevels> .
 
-9. Klikněte na tlačítko **OK**.
+9. Klikněte na **OK**.
 
 ### <a name="to-disable-wpf-trace-information"></a>Zakázání informací o trasování WPF
 
-1. V nabídce **nástroje** vyberte možnost **Možnosti**.
+1. V nabídce **Tools** (Nástroje) vyberte **Options** (Možnosti).
 
 2. V dialogovém okně **Možnosti** v levém poli otevřete uzel **ladění** .
 
@@ -82,7 +82,7 @@ ms.locfileid: "72733471"
 
 7. Klikněte na rozevírací seznam a vyberte **vypnuto**.
 
-8. Klikněte na tlačítko **OK**.
+8. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění WPF](../debugger/debugging-wpf.md)

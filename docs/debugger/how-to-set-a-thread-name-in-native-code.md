@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: nastavení názvu vlákna v nativním kódu | Microsoft Docs'
+title: Postup nastavení názvu vlákna v nativním kódu | Microsoft Docs
 ms.date: 12/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,25 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e719563c831c50cc325d70d0de431f4be1bf514
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ce6281a87900247cc54422a5175714d5f05b8e07
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911431"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349143"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
 Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro identifikaci podprocesů zájmu v okně **vlákna** při ladění spuštěného procesu. Rozpoznatelně pojmenovaná vlákna můžou být užitečná také při provádění ladění po porážce prostřednictvím kontroly výpisu stavu systému a při analýze zachycení výkonu pomocí různých nástrojů.
 
 ## <a name="ways-to-set-a-thread-name"></a>Způsoby nastavení názvu vlákna
 
-Existují dva způsoby, jak nastavit název vlákna. První je prostřednictvím funkce [SetThreadDescription](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) . Druhý je vyvoláním určité výjimky, pokud je k procesu připojen ladicí program sady Visual Studio. Každý přístup má výhody a upozornění. Použití `SetThreadDescription` se podporuje od Windows 10, verze 1607 nebo Windows Server 2016.
+Existují dva způsoby, jak nastavit název vlákna. První je prostřednictvím funkce [SetThreadDescription](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) . Druhý je vyvoláním určité výjimky, pokud je k procesu připojen ladicí program sady Visual Studio. Každý přístup má výhody a upozornění. Použití nástroje `SetThreadDescription` je podporováno od verze Windows 10 verze 1607 nebo Windows Server 2016.
 
 Je potřeba poznamenat, že _oba_ přístupy je možné v případě potřeby použít společně, protože mechanismy, kterými pracují, jsou nezávisle na sobě.
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavte název vlákna pomocí `SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavení názvu vlákna pomocí`SetThreadDescription`
 
-Výhodnější
+Výhody:
 * Názvy vláken jsou viditelné při ladění v aplikaci Visual Studio bez ohledu na to, zda byl ladicí program připojen k procesu v době volání SetThreadDescription.
 * Po načtení výpisu stavu systému v aplikaci Visual Studio jsou názvy vláken viditelné při provádění ladění po porážce.
 * Názvy vláken jsou také viditelné při použití jiných nástrojů, jako je například ladicí program [WinDbg](/windows-hardware/drivers/debugger/debugger-download-tools) a analyzátor výkonu [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) .
@@ -65,7 +65,7 @@ int main()
 
 Dalším způsobem, jak nastavit název vlákna v programu, je sdělit název požadovaného vlákna ladicímu programu sady Visual Studio vyvoláním speciálně nakonfigurované výjimky.
 
-Výhodnější
+Výhody:
 * Funguje ve všech verzích sady Visual Studio.
 
 Upozornění
@@ -74,7 +74,7 @@ Upozornění
 
 *Případě*
 
-Níže uvedená funkce `SetThreadName` ukazuje tento přístup založený na výjimce. Všimněte si, že název vlákna bude automaticky zkopírován do vlákna, aby bylo možné uvolnit paměť pro parametr `threadName` po dokončení `SetThreadName` volání.
+`SetThreadName`Funkce uvedená níže ukazuje tento přístup založený na výjimce. Všimněte si, že název vlákna bude automaticky zkopírován do vlákna, aby bylo `threadName` možné uvolnit paměť pro parametr po `SetThreadName` dokončení volání.
 
 ```C++
 //
@@ -108,7 +108,7 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Postupy: Nastavení názvu vlákna ve spravovaném kódu](../debugger/how-to-set-a-thread-name-in-managed-code.md)

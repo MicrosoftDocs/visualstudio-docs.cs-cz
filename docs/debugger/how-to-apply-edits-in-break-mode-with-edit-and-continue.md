@@ -2,7 +2,7 @@
 title: Použití úprav v režimu pozastavení s úpravou a pokračováním | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.variables.failededit
 dev_langs:
@@ -23,17 +23,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 05340b4922262eb134aca8fef4bf215342e5a997
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: acdd5b85c77b177dfb5f6d8129594967e902337c
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734022"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350297"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Postupy: použití úprav v režimu pozastavení pomocí funkce upravit a pokračovat (Visual Basic)
 Můžete použít příkaz Upravit a pokračovat pro úpravu kódu v režimu přerušení a pak pokračovat bez zastavení a restartování provádění.
 
-Omezení pro použití úpravy a pokračování při ladění najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Omezení použití úpravy a pokračování při ladění naleznete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
 ### <a name="to-edit-code-in-break-mode"></a>Úprava kódu v režimu pozastavení
 
@@ -60,6 +60,6 @@ Omezení pro použití úpravy a pokračování při ladění najdete v tématu 
 
      Váš kód se teď provádí s použitými úpravami, které jsou součástí projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md)
 - [Upravit a pokračovat (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

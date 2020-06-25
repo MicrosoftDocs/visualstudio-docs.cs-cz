@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: ladění v clusteru s vysokým výkonem | Microsoft Docs'
+title: Jak ladit cluster s vysokým výkonem | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d95c6eeadfdf1bb90471997712299ae03a945be8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733657"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350066"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Postupy: ladění v clusteru s vysokým výkonem (C#, Visual Basic,) C++
+# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Postupy: ladění v clusteru s vysokým výkonem (C#, Visual Basic, C++)
 
 Ladění programu pro více procesů v clusteru s vysokým výkonem je jako ladění běžného programu na vzdáleném počítači. Existují však některé další okolnosti. Obecné požadavky na vzdálenou instalaci najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
- Když ladíte cluster s vysokým výkonem, můžete použít všechna [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicí okna a techniky, které jsou k dispozici pro vzdálené ladění. Vzhledem k tomu, že se jedná o vzdálené ladění, není k dispozici externí okno konzoly.
+ Když ladíte cluster s vysokým výkonem, můžete použít všechna okna [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladění a techniky, které jsou k dispozici pro vzdálené ladění. Vzhledem k tomu, že se jedná o vzdálené ladění, není k dispozici externí okno konzoly.
 
  Okno **vlákna** a okno **procesy** jsou obzvláště užitečné pro ladění paralelních aplikací. Tipy k použití těchto oken naleznete v tématu [How to: use the Process Window](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100)) a [Návod: ladit pomocí okna vlákna](../debugger/how-to-use-the-threads-window.md).
 
@@ -51,9 +51,9 @@ Ladění programu pro více procesů v clusteru s vysokým výkonem je jako lad�
 
      Nazev_pocitace =*yourmachinename*
 
-     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&`, operátoru AND, `||`, operátoru OR, `!`, operátoru NOT a závorky.
+     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&` , operátoru a, operátoru `||` OR, `!` , operátor NOT a závorky.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 ### <a name="to-set-a-breakpoint-on-a-specific-process"></a>Nastavení zarážky pro určitý proces
 
@@ -67,11 +67,11 @@ Ladění programu pro více procesů v clusteru s vysokým výkonem je jako lad�
 
      —nebo—
 
-     `ProcessID =` *yourprocessIDnumber*
+     `ProcessID =`*yourprocessIDnumber*
 
-     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&`, operátoru AND, `||`, operátoru OR, `!`, operátoru NOT a závorky.
+     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&` , operátoru a, operátoru `||` OR, `!` , operátor NOT a závorky.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 ### <a name="to-set-a-breakpoint-on-a-specific-thread"></a>Nastavení zarážky v konkrétním vlákně
 
@@ -81,22 +81,22 @@ Ladění programu pro více procesů v clusteru s vysokým výkonem je jako lad�
 
 3. Do dialogového okna **Filtr zarážek** zadejte:
 
-     `ThreadName =` *yourthreadname*
+     `ThreadName =`*yourthreadname*
 
      —nebo—
 
-     `ThreadID =` *yourthreadIDnumber*
+     `ThreadID =`*yourthreadIDnumber*
 
-     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&`, operátoru AND, `||`, operátoru OR, `!`, operátoru NOT a závorky.
+     Chcete-li vytvořit složitější filtr, můžete kombinovat klauzule pomocí `&` , operátoru a, operátoru `||` OR, `!` , operátor NOT a závorky.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak vytvořit filtr pro zarážku na počítači s názvem `marvin` a vlákna s názvem `fourier1`.
+ Následující příklad ukazuje, jak vytvořit filtr pro zarážku v počítači s názvem `marvin` a vlákno s názvem `fourier1` .
 
 `(MachineName = marvin) & (ThreadName = fourier1)`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)
 - [Postupy: použití okna procesy](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))

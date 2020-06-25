@@ -1,8 +1,8 @@
 ---
-title: Zobrazit zpětný překlad kódu v ladicím programu | Dokumentace Microsoftu
+title: Zobrazit zpětný překlad kódu v ladicím programu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/30/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.disassembly
 dev_langs:
@@ -22,55 +22,55 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43214ee122b3aa5c3907b9176631f2dc22c9178e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0570aec5e8571e75cf64418a2c8c7c95cf507d31
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846387"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348701"
 ---
-# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Zobrazit zpětný překlad kódu v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F#)
+# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Zobrazení zpětného překladu kódu v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
-**Zpětný překlad** okno zobrazuje kódu sestavení odpovídajícího pokynů vytvořeným kompilátorem. Pokud ladíte spravovaný kód, tyto pokyny k sestavení odpovídají na nativní kód vytvořený kompilátorem Just-in-Time (JIT), ne Microsoft intermediate language (MSIL) vytvořený kompilátorem Visual Studio.
-
-> [!NOTE]
-> Chcete-li využívají všech výhod **zpětný překlad** okně pochopit nebo osvojte si Základy [programovací jazyk sestavení](https://wikipedia.org/wiki/Assembly_language).
-
-Tato funkce dostupná pouze pokud je povoleno ladění na úrovni adres. Není k dispozici pro skript nebo ladění SQL.
-
-Kromě pokyny sestavení **zpětný překlad** okna můžete zobrazit následující volitelné informace:
-
-- Adresa paměti, kde se nachází každou instrukci. U nativních aplikací je skutečná adresa paměti. V jazyce Visual Basic nebo C#, je posun od začátku této funkce.
-
-- Zdrojový kód, ze kterého je odvozen kódu sestavení.
-
-- Kód bajtů, to znamená, byte reprezentace skutečný nebo instrukce jazyka MSIL.
-
-- Názvy symbolů pro adresy paměti.
-
-- Čísla řádků zdrojového kódu.
-
-Instrukcí sestavení jazyka jsou tvořeny *klávesových zkratek*, které jsou zkratky pro instrukcí názvy a *symboly* proměnné, registry a konstanty. Každou instrukci strojového jazyka je reprezentován jeden symbol jazyka sestavení může volitelně následovat jednoho nebo více symbolů.
-
-Kód sestavení spoléhá na registrech procesoru, nebo pro spravovaný kód registruje modul common language runtime. Můžete použít **zpětný překlad** okno spolu s **zaregistruje** okno, které umožňuje zkoumat obsah registru.
-
-Chcete-li zobrazit pokyny strojového kódu v jejich původním formátu číselné, nikoli jako jazyk sestavení, použijte **paměti** okno nebo vyberte **kód bajtů** z místní nabídky v **zpětný překlad**  okna.
-
-## <a name="use-the-disassembly-window"></a>Použití okna zpětného překladu
-
-Povolit **zpětný překlad** okně v části **nástroje** > **možnosti** (nebo **nástroje**  >  **Možnosti**) > **ladění**vyberte **povolit ladění na úrovni adres**.
-
-Chcete-li otevřít **zpětný překlad** okno během ladění, vyberte **Windows** > **zpětný překlad** nebo stiskněte klávesu **Alt** + **8**.
+Okno zpětný **Překlad** zobrazuje kód sestavení odpovídající pokynům vytvořeným kompilátorem. Pokud ladíte spravovaný kód, tyto pokyny k sestavení odpovídají nativnímu kódu vytvořenému kompilátorem JIT (just-in-time), nikoli pomocí jazyka MSIL (Microsoft Intermediate Language) vytvořeného kompilátorem sady Visual Studio.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Chcete-li plně využít výhod okna zpětný **Překlad** , seznámení se základními informacemi o [programování sestavení jazyka](https://wikipedia.org/wiki/Assembly_language)a jejich porozumění.
 
-Pro volitelné informace zapnout nebo vypnout, klikněte pravým tlačítkem **zpětný překlad** okna a nastavení nebo vymazat požadované možnosti v místní nabídce.
+Tato funkce je k dispozici pouze v případě, že je povoleno ladění na úrovni adres. Není k dispozici pro ladění skriptů nebo SQL.
 
-Žlutá šipka na levém okraji označí aktuální bod provádění. Pro nativní kód odpovídá bod provádění programu čítače CPU. Toto umístění se zobrazí další instrukci, která se spustí ve svém programu.
+Kromě pokynů k sestavení může okno **zpětný překlad** zobrazit následující volitelné informace:
 
-## <a name="see-also"></a>Viz také:
+- Adresa paměti, kde se nachází každá instrukce. Pro nativní aplikace se jedná o skutečnou adresu paměti. Pro Visual Basic nebo C# se jedná o posun od začátku funkce.
 
-* [O stránku nahoru nebo dolů v paměti](../debugger/how-to-page-up-or-down-in-memory.md)
+- Zdrojový kód, ze kterého je odvozen kód sestavení.
+
+- Bajty kódu, tedy bajtové reprezentace skutečných instrukcí počítače nebo jazyka MSIL.
+
+- Názvy symbolů pro paměťové adresy.
+
+- Čísla řádků odpovídající zdrojovému kódu.
+
+Pokyny pro *sestavení a jazyk sestávají z*klávesových zkratek, které jsou zkratkami pro názvy instrukcí a *symboly* pro proměnné, Registry a konstanty. Jednotlivé instrukce v jazyce počítače jsou reprezentovány jedním jazykem sestavení, volitelně následovaným jedním nebo více symboly.
+
+Kód sestavení závisí silně na registrech procesorů nebo pro spravovaný kód. Registry modulu CLR (Common Language Runtime). Můžete použít okno zpětného **překladu** spolu s oknem **Registry** , které vám umožní kontrolovat obsah registru.
+
+Chcete-li zobrazit instrukce strojového kódu v jejich nezpracovaném číselném tvaru, nikoli jako jazyk sestavení, použijte okno **paměti** nebo vyberte **bajty kódu** z místní nabídky v okně **zpětný překlad** .
+
+## <a name="use-the-disassembly-window"></a>Použití okna zpětný překlad
+
+Chcete-li povolit okno **zpětný překlad** , **Tools**v části  >  **Možnosti** nástrojů **Tools**(nebo  >  **Možnosti**nástrojů) > **ladění**vyberte **Povolit ladění na úrovni adresy**.
+
+Chcete-li otevřít okno zpětného **překladu** během ladění, vyberte možnost **Windows**  >  **zpětný překlad** nebo stiskněte klávesu **ALT** + **8**.
+
+> [!NOTE]
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
+
+Chcete-li zapnout nebo vypnout volitelné informace, klikněte pravým tlačítkem myši v okně **zpětný překlad** a nastavte nebo zrušte zaškrtnutí požadovaných možností v místní nabídce.
+
+Žlutá šipka na levém okraji označuje aktuální bod spuštění. Pro nativní kód, bod provádění odpovídá čítači programu CPU. Toto umístění ukazuje další instrukci, která se spustí v programu.
+
+## <a name="see-also"></a>Viz také
+
+* [Stránkování nahoru nebo dolů v paměti](../debugger/how-to-page-up-or-down-in-memory.md)
 * [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
-* [Postupy: Použití okna registry](../debugger/how-to-use-the-registers-window.md)
+* [Postupy: použití okna Registry](../debugger/how-to-use-the-registers-window.md)

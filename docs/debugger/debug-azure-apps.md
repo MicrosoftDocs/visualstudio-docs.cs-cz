@@ -1,7 +1,7 @@
 ---
 title: Ladění služeb Azure | Microsoft Docs
 ms.date: 09/14/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debugger
 ms.assetid: 3d434de3-ee5f-419d-9a94-ac4ac02d635b
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: e7c7ba163010a14102aa3e1b0160e1c3cf294db1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fad1a7d1f07009b169480a9e071c5cae8498f600
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745553"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350755"
 ---
 # <a name="debug-azure-services-in-visual-studio"></a>Ladění služeb Azure v aplikaci Visual Studio
 
@@ -33,6 +33,6 @@ Pomocí sady Visual Studio můžete ladit služby Azure v různých scénáříc
 
 - Informace o vzdáleném ladění ASP.NET v Azure Service Fabric najdete v tématu [ladění vzdálené Service Fabric aplikace](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Ladění v sadě Visual Studio](../debugger/index.yml)

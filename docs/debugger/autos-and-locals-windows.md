@@ -1,8 +1,8 @@
 ---
-title: Kontrolovat proměnné - okna Automatické hodnoty a místní hodnoty | Dokumentace Microsoftu
+title: Kontrola proměnných – okna auto a místní hodnoty | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/18/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.autos
 - vs.debug.locals
@@ -15,50 +15,50 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b159f631534135ac568fb03dbffa46ae0360fc47
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904082"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350742"
 ---
-# <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Kontrolovat proměnné v okně Automatické hodnoty a místní hodnoty
+# <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Kontrola proměnných v oknech automatické hodnoty a místní hodnoty
 
-**Automatické hodnoty** a **lokální** windows zobrazovat hodnoty proměnných během ladění. Systému windows jsou k dispozici pouze během relace ladění. **Automatické hodnoty** okno zobrazuje proměnné používané kolem aktuálního zarážku. **Lokální** okno zobrazuje proměnné definované v místním rozsahem, což je obvykle aktuální funkci nebo metodu. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
+Okna **Automatické** hodnoty a **místní** hodnoty zobrazují hodnoty proměnných při ladění. Okna jsou k dispozici pouze během relace ladění. Okno **Automatické** hodnoty zobrazuje proměnné používané kolem aktuální zarážky. Okno **místní** hodnoty zobrazuje proměnné definované v místním oboru, což je obvykle aktuální funkce nebo metoda. Pokud se jedná o první pokus o ladění kódu, můžete si před tím, než projdete Tento článek, přečíst [ladění pro naprostou začátečníky](../debugger/debugging-absolute-beginners.md) a [techniky a nástroje pro ladění](../debugger/write-better-code-with-visual-studio.md) .
 
- **Automatické hodnoty** není k dispozici pro interval C#, kód jazyka Visual Basic, C++ a Python, ale ne pro JavaScript nebo F#.
+ Okno **Automatické** hodnoty je k dispozici pro kód C#, Visual Basic, C++ a Python, ale ne pro JavaScript nebo F #.
 
-Chcete-li otevřít **automatické hodnoty** okně během ladění, **ladění** > **Windows** > **automatické hodnoty**, nebo stisknutím klávesy **Ctrl**+**Alt**+**V** > **A**.
+Chcete-li otevřít okno **Automatické** hodnoty, vyberte možnost **ladit**  >  **Windows**  >  **Autos**nebo stiskněte kombinaci kláves **CTRL** + **ALT** + **V**  >  **a**.
 
-Otevřete **lokální** okně během ladění, **ladění** > **Windows** > **lokální**, nebo stisknutím klávesy **Alt**+**4**.
+Chcete-li otevřít okno **místních** hodnot, při ladění vyberte možnost **ladit**  >  **Windows**  >  **místní prostředí**systému Windows nebo stiskněte klávesu **ALT** + **4**.
 
 > [!NOTE]
-> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [vizualizace dat v sadě Visual Studio pro Mac](/visualstudio/mac/data-visualizations).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [vizualizace dat v Visual Studio pro Mac](/visualstudio/mac/data-visualizations).
 
-## <a name="use-the-autos-and-locals-windows"></a>Použití okna Automatické hodnoty a místní hodnoty
+## <a name="use-the-autos-and-locals-windows"></a>Použití oken automatické hodnoty a místní hodnoty
 
-Pole a objekty zobrazit v **automatické hodnoty** a **lokální** windows jako ovládacích prvků strom. Vyberte šipku nalevo od názvu proměnné na Rozbalit zobrazení k zobrazení polí a vlastností. Tady je příklad <xref:System.IO.FileStream?displayProperty=fullName> objekt **místní hodnoty** okno:
+Pole a objekty se zobrazí v oknech **Automatické** hodnoty a **místní** hodnoty jako stromové ovládací prvky. Výběrem šipky vlevo od názvu proměnné rozbalíte zobrazení a zobrazíte pole a vlastnosti. Tady je příklad <xref:System.IO.FileStream?displayProperty=fullName> objektu v okně **místních** hodnot:
 
 ![Lokální hodnoty – FileStream](../debugger/media/locals-filestream.png "Lokální hodnoty – FileStream")
 
-Červená v **lokální** nebo **automatické hodnoty** okno znamená, že hodnota změnila od posledního vyhodnocení. Tato změna může být z předchozí ladicí relace, nebo proto, že změníte hodnotu v okně.
+Červená hodnota v okně **místní** hodnoty nebo **Automatické** hodnoty znamená, že se od posledního vyhodnocení změnila hodnota. Tato změna může být z předchozí relace ladění, nebo vzhledem k tomu, že jste změnili hodnotu v okně.
 
-Výchozí číselného formátu v oknech ladicího programu je desetinné číslo. Chcete-li změnit ji do šestnáctkové soustavy, klikněte pravým tlačítkem **místní hodnoty** nebo **automatické hodnoty** okna a vyberte **hexadecimální zobrazení**. Tato změna ovlivní všechna okna ladicího programu.
+Výchozí číselný formát v oknech ladicího programu je Decimal. Pokud ho chcete změnit na hexadecimální, klikněte pravým tlačítkem myši v okně **místní** hodnoty nebo **Automatické** hodnoty a vyberte **hexadecimální zobrazení**. Tato změna ovlivní všechna okna ladicího programu.
 
-## <a name="edit-variable-values-in-the-autos-or-locals-window"></a>Upravit hodnoty v okně Automatické hodnoty a lokální proměnné
+## <a name="edit-variable-values-in-the-autos-or-locals-window"></a>Upravit hodnoty proměnných v okně Automatické hodnoty nebo místní hodnoty
 
-K úpravě hodnot většiny proměnných v **automatické hodnoty** nebo **lokální** windows, klikněte dvakrát na hodnotu a zadejte novou hodnotu.
+Chcete-li upravit hodnoty většiny proměnných v oknech **Automatické** hodnoty nebo **místní** hodnoty, dvakrát klikněte na hodnotu a zadejte novou hodnotu.
 
-Výraz hodnoty, můžete zadat například `a + b`. Ladicí program přijímá nejvíce platné jazykové výrazy.
+Můžete například zadat výraz pro hodnotu `a + b` . Ladicí program přijímá nejvíce platné jazykové výrazy.
 
-V nativním kódu C++ může být potřeba kvalifikovat kontext názvu proměnné. Další informace najdete v tématu [kontextový operátor (C++)](../debugger/context-operator-cpp.md).
+V nativním kódu jazyka C++ bude pravděpodobně nutné kvalifikovat kontext názvu proměnné. Další informace naleznete v tématu [kontext operátoru (C++)](../debugger/context-operator-cpp.md).
 
 >[!CAUTION]
->Ujistěte se, že chápete důsledky před změnou hodnoty a výrazy. Jsou nějaké informace o možných problémech:
+>Před změnou hodnot a výrazů se ujistěte, že rozumíte důsledkům. Mezi možné problémy patří:
 >
->- Hodnocení některých výrazů může změnit hodnotu proměnné nebo jinak ovlivnit stav programu. Například vyhodnocení `var1 = ++var2` změní hodnotu obou `var1` a `var2`. Tyto výrazy se říká, že mají [vedlejší účinky](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Vedlejší účinky, může způsobit neočekávané výsledky, pokud si nejste vědomi.
+>- Hodnocení některých výrazů může změnit hodnotu proměnné nebo jinak ovlivnit stav programu. Například vyhodnocení `var1 = ++var2` změn hodnoty `var1` a `var2` . Tyto výrazy jsou označeny tak, aby měly [vedlejší účinky](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Vedlejší účinky můžou způsobit neočekávané výsledky, pokud je neznáte.
 >
->- Úpravy hodnot s plovoucí desetinnou čárkou mohou díky převodu komponenty zlomku z desítkové do binární soustavy způsobit drobné nepřesnosti. I zdánlivě neškodné úpravy mohou způsobit změny některých bitů v proměnné s plovoucí desetinnou čárkou.
+>- Úpravy hodnot s plovoucí desetinnou čárkou mohou díky převodu komponenty zlomku z desítkové do binární soustavy způsobit drobné nepřesnosti. I zdánlivě neškodné úpravy můžou způsobit změny některých bitů v proměnné s plovoucí desetinnou čárkou.
 
 ::: moniker range=">= vs-2019" 
 ## <a name="search-in-the-autos-or-locals-window"></a>Hledání v okně Automatické hodnoty nebo místní hodnoty
@@ -82,26 +82,26 @@ Pomocí nástroje **Pinnable Properties** můžete rychle zkontrolovat objekty p
 
 Při zobrazení seznamu vlastností objektu v oknech automatické hodnoty nebo místní hodnoty můžete také přepínat názvy vlastností a odfiltrovat připnuté vlastnosti.  Jednotlivé možnosti získáte tak, že vyberete tlačítka na panelu nástrojů nad okny automatické hodnoty nebo místní okna.
 
-![Filtrovat oblíbené vlastnosti](../debugger/media/filter-pinned-properties-locals.png "Filtrovat oblíbené vlastnosti")
-![přepínat názvy vlastností](../debugger/media/toggle-property-names.gif "Přepnout názvy vlastností")
+![Filtrovat oblíbené vlastnosti](../debugger/media/filter-pinned-properties-locals.png "Filtrovat oblíbené vlastnosti") 
+ ![Přepnout názvy vlastností](../debugger/media/toggle-property-names.gif "Přepnout názvy vlastností")
 
 ::: moniker-end
 
-## <a name="change-the-context-for-the-autos-or-locals-window"></a>Změna kontextu pro okno Automatické hodnoty nebo místních hodnot
+## <a name="change-the-context-for-the-autos-or-locals-window"></a>Změna kontextu okna Automatické hodnoty nebo místní hodnoty
 
-Můžete použít **umístění ladění** nástrojů a vyberte požadované funkce, vlákna nebo procesu, která změní kontext **automatické hodnoty** a **lokální** systému windows.
+Můžete použít panel nástrojů **umístění ladění** k výběru požadované funkce, vlákna nebo procesu, který změní kontext pro okna **Automatické** hodnoty a **místní** hodnoty.
 
-Povolit **umístění ladění** nástrojů, klikněte na prázdnou část oblasti nástrojů a vyberte **umístění ladění** z rozevíracího seznamu, nebo vyberte **zobrazení**  >   **Panely nástrojů** > **umístění ladění**.
+Chcete-li povolit panel nástrojů **umístění ladění** , klikněte do prázdné části oblasti panelu nástrojů a vyberte možnost **umístění ladění** z rozevíracího seznamu nebo vyberte možnost **Zobrazit**  >  **panely nástrojů**  >  **umístění ladění**.
 
-Nastavte zarážku a spusťte ladění. Při dosažení zarážky, pozastaví provádění zobrazíte umístění v **umístění ladění** nástrojů.
+Nastavte zarážku a spusťte ladění. Při dosažení zarážky se spuštění pozastaví a uvidíte umístění na panelu nástrojů **umístění ladění** .
 
-![Panel nástrojů umístění ladění](../debugger/media/debuglocationtoolbar.png "panel nástrojů Ladit umístění")
+![panel nástrojů Ladit umístění](../debugger/media/debuglocationtoolbar.png "panel nástrojů Ladit umístění")
 
-## <a name="bkmk_whatvariables"></a> Proměnné v okně Automatické hodnoty (C#, C++, Visual Basic, Python)
+## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a>Proměnné v okně Automatické hodnoty (C#, C++, Visual Basic, Python)
 
-Zobrazit jiné proměnné v jazycích různý kód **automatické hodnoty** okna.
+Různé jazyky kódu zobrazují různé proměnné v okně **Automatické** hodnoty.
 
-- V C# a Visual Basic **automatické hodnoty** v okně se zobrazí všechny proměnné použité v aktuální nebo předchozí řádku. Například v C# nebo Visual Basic code, deklarujte následující čtyři proměnné:
+- V jazyce C# a Visual Basic okno **Automatické** hodnoty zobrazuje jakoukoli proměnnou použitou na aktuálním nebo předchozím řádku. Například v kódu C# nebo Visual Basic deklarujte následující čtyři proměnné:
 
    ```csharp
        public static void Main()
@@ -114,13 +114,13 @@ Zobrazit jiné proměnné v jazycích různý kód **automatické hodnoty** okna
        }
    ```
 
-   Nastavit zarážku na řádku `c = 3;`, a spusťte ladicí program. Při pozastavení provádění **automatické hodnoty** okně se zobrazí:
+   Nastavte zarážku na řádku `c = 3;` a spusťte ladicí program. Po pozastavení provádění se zobrazí okno **Automatické** hodnoty:
 
    ![Automatické hodnoty – CSharp](../debugger/media/autos-csharp.png "Automatické hodnoty – CSharp")
 
-   Hodnota `c` je 0, protože řádku `c = 3` ještě nebyla spuštěna.
+   Hodnota `c` je 0, protože řádek `c = 3` ještě nebyl spuštěn.
 
-- V jazyce C++ **automatické hodnoty** okně zobrazí proměnných použitých ve alespoň tři řádky před aktuálním řádkem, kde je spuštění pozastaveno. Například v kódu jazyka C++ deklarujte šest proměnné:
+- V jazyce C++ okno **Automatické** hodnoty zobrazuje proměnné používané v alespoň třech řádcích před aktuálním řádkem, kde je provádění pozastaveno. Například v kódu jazyka C++ deklarujte šest proměnných:
 
    ```C++
        void main() {
@@ -134,16 +134,16 @@ Zobrazit jiné proměnné v jazycích různý kód **automatické hodnoty** okna
        }
    ```
 
-    Nastavit zarážku na řádku `e = 5;` a spustit ladicí program. Když se zastaví provádění **automatické hodnoty** okně se zobrazí:
+    Nastavte zarážku na řádku `e = 5;` a spusťte ladicí program. Po zastavení spuštění se zobrazí okno **Automatické** hodnoty:
 
-    ![Automatické hodnotyC++](../debugger/media/autos-cplus.png "Automatické hodnotyC++")
+    ![Automatické hodnoty – C + +](../debugger/media/autos-cplus.png "Automatické hodnoty – C + +")
 
-    Proměnná `e` není inicializována, protože řádku `e = 5` ještě nebyla spuštěna.
+    Proměnná `e` není inicializovaná, protože řádek `e = 5` ještě nebyl spuštěn.
 
-## <a name="bkmk_returnValue"></a> Zobrazení návratových hodnot volání metod
- V kódu rozhraní .NET a C++, může Kontrola návratových hodnot v **automatické hodnoty** okno při kroku přes nebo mimo volání metody. Volání metody zobrazení návratové hodnoty mohou být užitečné, když nejsou uloženy v místní proměnné. Metoda může použít jako parametr nebo jako návratové hodnoty metody jiné.
+## <a name="view-return-values-of-method-calls"></a><a name="bkmk_returnValue"></a>Zobrazit návratové hodnoty volání metody
+ V kódu .NET a C++ můžete v okně **Automatické** hodnoty kontrolovat návratové hodnoty při krokování nebo odvolání metody. Návratové hodnoty volání metody mohou být užitečné, pokud nejsou uloženy v místních proměnných. Metodu lze použít jako parametr nebo jako návratovou hodnotu jiné metody.
 
- Například následující C# kód přidá návratové hodnoty dvou funkcí:
+ Například následující kód jazyka C# přidá návratové hodnoty dvou funkcí:
 
 ```csharp
 static void Main(string[] args)
@@ -167,17 +167,17 @@ private static int subtractVars(int i, int j)
 }
 ```
 
-Chcete-li zobrazit vrácené hodnoty `sumVars()` a `subtractVars()` volá metody v okně Automatické hodnoty:
+Chcete-li zobrazit návratové hodnoty `sumVars()` `subtractVars()` volání metody a v okně Automatické hodnoty:
 
-1. Nastavit zarážku na `int x = sumVars(a, b) + subtractVars(c, d);` řádku.
+1. Nastavte zarážku na `int x = sumVars(a, b) + subtractVars(c, d);` řádku.
 
-1. Spustit ladění a při spuštění, pozastavení na zarážce, vyberte **Krokovat s přeskočením** nebo stiskněte klávesu **F10**. Zobrazí se následující návratové hodnoty ve **automatické hodnoty** okno:
+1. Spustit ladění a když se spuštění pozastaví na zarážce, vyberte **Krok přes** nebo stiskněte **F10**. V okně **Automatické** hodnoty by se měly zobrazit následující návratové hodnoty:
 
-  ![Automaticky vrací návratovou hodnotuC#](../debugger/media/autosreturnvaluecsharp2.png "Automaticky vrací návratovou hodnotuC#")
+  ![Automatické návratové hodnoty v jazyce C #](../debugger/media/autosreturnvaluecsharp2.png "Automatické návratové hodnoty v jazyce C #")
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Co je ladění?](../debugger/what-is-debugging.md)
-- [Techniky a nástroje ladění](../debugger/write-better-code-with-visual-studio.md)
+- [Techniky ladění a související nástroje](../debugger/write-better-code-with-visual-studio.md)
 - [První pohled na ladění](../debugger/debugger-feature-tour.md)
-- [Okno ladicího programu](../debugger/debugger-windows.md)
+- [Okna ladicího programu](../debugger/debugger-windows.md)

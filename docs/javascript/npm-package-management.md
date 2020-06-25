@@ -40,7 +40,7 @@ U Node.js projektů můžete provádět následující úlohy:
 
 Tyto funkce společně spolupracují a synchronizují se systémem projektu a *package.js* v souboru v projektu.
 
-### <a name="prerequisites"></a>Požadované součásti
+### <a name="prerequisites"></a>Požadavky
 
 Pro přidání podpory npm do projektu potřebujete nainstalovanou úlohu **vývojeNode.js** a modul runtime Node.js. Podrobný postup najdete v tématu [Vytvoření projektu Node.js](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json).
 

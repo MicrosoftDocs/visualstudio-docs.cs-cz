@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Hledání procesu v zobrazení procesů | Dokumentace Microsoftu'
+title: 'Postupy: hledání procesu v zobrazení procesů | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Processes view
 - processes, searching for
@@ -11,33 +11,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a6b57226b14963759bb4d78afff3beb5559a63e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e823ecb1f7523c1a6f094d5669f4a37a72e84f60
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64798979"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349286"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>Postupy: Hledání procesu v zobrazení procesů
-Můžete vyhledat konkrétního procesu v zobrazení procesů pomocí jeho ID nebo modul řetězec proces jako kritéria hledání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně se zobrazí atributy vybraný proces strom procesu.
+Konkrétní proces můžete vyhledat v zobrazení procesů pomocí jeho ID procesu nebo řetězce modulu jako kritéria vyhledávání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí atributy vybraného procesu ve stromu procesu.
 
 ### <a name="to-search-for-a-process-in-processes-view"></a>Hledání procesu v zobrazení procesů
 
-1. Uspořádat okna tak tohoto nástroje Spy ++ a aktivní [zobrazení procesy](../debugger/processes-view.md) okna jsou viditelné.
+1. Uspořádejte okna tak, aby se zobrazila okna nástroje Spy + + a aktivní [procesy](../debugger/processes-view.md) .
 
-2. Z **hledání** nabídce zvolte **najít proces**
+2. V nabídce **Hledat** vyberte možnost **Najít proces** .
 
-    [Dialogové okno hledání procesů](../debugger/process-search-dialog-box.md) otevře.
+    Otevře se [dialogové okno hledání procesu](../debugger/process-search-dialog-box.md) .
 
-3. Zadejte ID procesu nebo řetězce modulu, jako kritéria hledání.
+3. Jako kritéria hledání zadejte ID procesu nebo řetězec modulu.
 
-4. Zrušte zaškrtnutí všech polí, u kterých nechcete k určení hodnot.
+4. Vymažte všechna pole, pro která nechcete zadávat hodnoty.
 
    > [!TIP]
-   > Pokud chcete najít všechny procesy vlastní modul, zrušte **procesu** pole a zadejte název modulu v **modulu** pole. Pak pomocí **najít další** chcete pokračovat ve vyhledávání pro procesy.
+   > Chcete-li najít všechny procesy, které vlastní modul, zrušte zaškrtnutí políčka **proces** a do pole **modul** zadejte název modulu. Pak pokračujte v hledání procesů pomocí **Najít další** .
 
-5. Zvolte **nahoru** nebo **dolů** pro počáteční směr hledání.
+5. Pro počáteční směr hledání vyberte **nahoru** nebo **dolů** .
 
 6. Klikněte na **OK**.
 
-   Pokud je nalezen odpovídající proces, je zvýrazněn **zobrazení procesů** okna.
+   Pokud se najde stejný proces, zvýrazní se v okně **zobrazení procesu** .

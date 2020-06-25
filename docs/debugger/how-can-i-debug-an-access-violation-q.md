@@ -1,8 +1,8 @@
 ---
-title: Ladění narušení C++ přístupu | Microsoft Docs
+title: Ladění narušení přístupu C++ | Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.access
 dev_langs:
@@ -19,14 +19,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0235cc00a740069a77afd492cd585788ea666d2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 803f81d1a26438c2134349a85369d341353e17cf
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911465"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350417"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit narušení C++ přístupu?
+# <a name="how-can-i-debug-a-c-access-violation"></a>Jak mohu ladit porušení přístupu k C++?
 
 ## <a name="problem-description"></a>Popis problému
 
@@ -79,5 +79,5 @@ Pokud spustíte tento kód v aplikaci Visual Studio 2015 Update 1, mělo by se z
 
 Pokud nemůžete určit, proč ukazatel způsobil narušení přístupu, Sledujte kód, abyste se ujistili, že ukazatel způsobující problém byl správně přiřazen.  Pokud se předává jako parametr, ujistěte se, že je předaný správně, a Vy nechtěně nevytvoříte [kopii](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)s podmnožinou. Pak ověřte, že se hodnoty neúmyslně v programu nezměnily, vytvořením datové zarážky pro daný ukazatel, abyste se ujistili, že se nemění jinde v programu. Další informace o zarážekch dat naleznete v části datové zarážky v tématu [použití zarážek](../debugger/using-breakpoints.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)

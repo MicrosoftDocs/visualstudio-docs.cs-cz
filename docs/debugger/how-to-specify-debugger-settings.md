@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: určení nastavení ladicího programu | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -19,19 +19,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66e9d0fb5b7d63402c9add3ddf06b3997bc0d7d9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1e39ae29e94ff28ce10daf36e3970273d8e34e9e
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732714"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349104"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Postupy: Určení nastavení ladicího programu
-V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různá nastavení pro chování ladicího programu, včetně způsobu zobrazení proměnných, určení, zda jsou zobrazena určitá upozornění, jak jsou nastavena zarážky a jak má vliv na spuštěné programy. Nastavení ladicího programu určíte v dialogovém okně **Možnosti** .
+V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různá nastavení pro chování ladicího programu, včetně způsobu zobrazení proměnných, určení, zda jsou zobrazována určitá upozornění, jak jsou nastavena zarážky a jak má vliv na spuštěné programy. Nastavení ladicího programu určíte v dialogovém okně **Možnosti** .
 
 ### <a name="to-set-debugger-options"></a>Nastavení možností ladicího programu
 
-1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
 2. V dialogovém okně **Možnosti** otevřete složku **ladění** .
 
@@ -41,8 +41,8 @@ V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] můžete zadat různ
 
 4. Vyberte nebo zrušte požadovanou možnost nebo možnosti. Stisknutím klávesy F1 získáte nápovědu k možnostem.
 
-## <a name="see-also"></a>Viz také:
-- [Obecné, Ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)
+## <a name="see-also"></a>Viz také
+- [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)
 - [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)
-- [Běžná makra pro příkazy a vlastnosti sestavení](/cpp/build/reference/common-macros-for-build-commands-and-properties)
+- [Společná makra pro příkazy a vlastnosti sestavení](/cpp/build/reference/common-macros-for-build-commands-and-properties)

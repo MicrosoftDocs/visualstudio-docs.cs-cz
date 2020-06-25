@@ -1,7 +1,7 @@
 ---
-title: Ladění aplikací pro UWP ve vzdálených počítačích | Dokumentace Microsoftu
+title: Ladění aplikací pro UWP na vzdálených počítačích | Microsoft Docs
 ms.date: 10/05/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -13,100 +13,100 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 50d307cd65bfdf534b6ca3586e69bbc27be25e36
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902861"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348116"
 ---
-# <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Ladění aplikací pro UWP ve vzdálených počítačích ze sady Visual Studio
+# <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Ladění aplikací pro UWP na vzdálených počítačích ze sady Visual Studio
 
-Visual Studio můžete spustit, ladění, profilování a testování aplikací pro univerzální platformu Windows (UPW) na jiném počítači nebo zařízení. Spuštění aplikace UPW na vzdáleném počítači je zvláště užitečné, pokud počítač Visual Studio nepodporuje funkce specifické pro UPW, jako jsou dotykového ovládání, geografického umístění nebo fyzická orientace.
+Můžete použít Visual Studio ke spouštění, ladění, profilování a testování aplikace Univerzální platforma Windows (UWP) na jiném počítači nebo zařízení. Spuštění aplikace UWP na vzdáleném počítači je zvlášť užitečné, pokud počítač s aplikací Visual Studio nepodporuje funkce specifické pro UWP, jako je dotykové ovládání, geografické umístění nebo fyzická orientace.
 
-## <a name="BKMK_Prerequisites"></a> Požadované součásti
+## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a>Požadovaný
 
-Chcete-li ladit aplikaci UPW na vzdáleném zařízení z aplikace Visual Studio:
+Ladění aplikace UWP na vzdáleném zařízení ze sady Visual Studio:
 
-- Projekt aplikace Visual Studio musí být nakonfigurovaný pro vzdálené ladění.
-- Vzdálený počítač a počítač Visual Studio musí být připojeny přes síť nebo připojeny přímo pomocí kabelu USB nebo Ethernet. Ladění po Internetu není podporováno.
-- Je nutné [zapnutí režimu pro vývojáře](/windows/uwp/get-started/enable-your-device-for-development) na počítači aplikace Visual Studio a vzdáleném počítači.
-- Vzdálených počítačích musí běžet nástrojů Remote Tools for Visual Studio.
-  - Některé verze Windows 10 spustit a automaticky spustit nástroje remote tools. V opačném případě [nainstalovat a spustit nástroje Remote Tools for Visual Studio](#BKMK_download).
-  - Zařízení Windows Mobile 10 není vyžadují nebo podporu nástrojů remote tools.
+- Projekt sady Visual Studio musí být nakonfigurován pro vzdálené ladění.
+- Vzdálený počítač a počítač se systémem Visual Studio musí být připojeny přes síť nebo připojeny přímo přes kabel USB nebo Ethernet. Ladění po Internetu není podporováno.
+- [Vývojářský režim](/windows/uwp/get-started/enable-your-device-for-development) je nutné zapnout jak na počítači aplikace Visual Studio, tak na vzdáleném počítači.
+- Na vzdálených počítačích musí být spuštěný Remote Tools for Visual Studio.
+  - Některé verze Windows 10 spouští a spouštějí vzdálené nástroje automaticky. V opačném případě [nainstalujte a spusťte Remote Tools for Visual Studio](#BKMK_download).
+  - Zařízení se systémem Windows Mobile 10 nevyžadují nebo nepodporují nástroje Remote Tools.
 
-## <a name="BKMK_ConnectVS"></a> Konfigurace projektu Visual Studio pro vzdálené ladění
-<a name="BKMK_DirectConnect"></a> Použít projekt **vlastnosti** k určení vzdáleného zařízení pro připojení k. Nastavení se liší v závislosti na programovacím jazyce.
+## <a name="configure-a-visual-studio-project-for-remote-debugging"></a><a name="BKMK_ConnectVS"></a>Konfigurace projektu Visual studia pro vzdálené ladění
+<a name="BKMK_DirectConnect"></a>**Vlastnosti** projektu můžete použít k určení vzdáleného zařízení, ke kterému se chcete připojit. Nastavení se liší v závislosti na programovacím jazyce.
 
 > [!CAUTION]
-> Ve výchozím nastavení, na stránce vlastností nastaví **univerzální (nešifrovaný protokol)** jako **typ ověřování** pro Windows 10 vzdálená připojení. Je nutné nastavit **bez ověřování** pro připojení vzdáleného ladicího programu. **Univerzální (nešifrovaný protokol)** a **bez ověřování** protokoly mít žádné zabezpečení sítě, takže je ohrožen dat předávaných mezi vývojem a vzdálených počítačů. Vyberte typy ověřování jenom k důvěryhodným sítím, které jste jisti nejsou ohroženy škodlivými nebo nevyžádanými daty.
+> Ve výchozím nastavení stránka vlastností nastaví **univerzální (nešifrovaný protokol)** jako **typ ověřování** pro vzdálená připojení Windows 10. Možná budete muset nastavit **žádné ověřování** pro připojení ke vzdálenému ladicímu programu. **Univerzální (nešifrovaný protokol)** a **žádné ověřovací** protokoly neobsahují zabezpečení sítě, takže data předaná mezi vývojem a vzdálenými počítači jsou zranitelná. Tyto typy ověřování vyberte jenom pro důvěryhodné sítě, které jste si jisti, že nehrozí riziko škodlivých nebo nepřátelských přenosů.
 >
->Pokud se rozhodnete **ověřování Windows** pro **typ ověřování**, budete muset přihlásit ke vzdálenému počítači při ladění. Vzdálený ladicí program musí být spuštěn v rámci **ověřování Windows** režimu se stejným uživatelským účtem jako na počítač s Visual Studio.
+>Pokud pro **typ ověřování**zvolíte **ověřování systému Windows** , bude nutné se přihlásit ke vzdálenému počítači při ladění. Vzdálený ladicí program musí být spuštěný v režimu **ověřování systému Windows** se stejným uživatelským účtem jako na počítači sady Visual Studio.
 
-### <a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Konfigurace C# nebo projektu jazyka Visual Basic pro vzdálené ladění
+### <a name="configure-a-c-or-visual-basic-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a>Konfigurace projektu v jazyce C# nebo Visual Basic pro vzdálené ladění
 
-1. Vyberte C# nebo projektu jazyka Visual Basic v sadě Visual Studio **Průzkumníka řešení** a vyberte **vlastnosti** ikonu, stiskněte klávesu **Alt** +  **Zadejte**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
+1. V aplikaci Visual Studio vyberte projekt C# nebo Visual Basic **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
-1. Vyberte **ladění** kartu.
+1. Vyberte kartu **ladit** .
 
-1. V části **cílové zařízení**vyberte **vzdálený počítač** na vzdálený počítač nebo **zařízení** pro mobilní zařízení Windows 10 zařízení připojeného k přímo.
+1. V části **cílové zařízení**vyberte **vzdálený** počítač pro vzdálený počítač nebo **zařízení** pro zařízení s Windows Mobile 10 připojené přímo.
 
-1. Pro vzdálený počítač, zadejte název sítě nebo IP adresu v **vzdálený počítač** pole, nebo vyberte **najít** chcete vyhledat v zařízení [dialogové okno připojení ke vzdálené](#remote-connections).
+1. U vzdáleného počítače zadejte do pole **vzdálený počítač** název sítě nebo IP adresu, nebo vyberte **Najít** pro vyhledání zařízení v [dialogovém okně vzdálené připojení](#remote-connections).
 
-    ![Spravovat vlastnosti projektu pro vzdálené ladění](../debugger/media/vsrun_managed_projprop_remote.png "spravované ladění vlastností projektu")
+    ![Vlastnosti spravovaného projektu pro vzdálené ladění](../debugger/media/vsrun_managed_projprop_remote.png "Vlastnosti spravovaného projektu ladění")
 
-### <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Konfigurace projektu jazyka C++ pro vzdálené ladění
+### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a>Konfigurace projektu C++ pro vzdálené ladění
 
-1. Vyberte projekt C++ v sadě Visual Studio **Průzkumníka řešení** a vyberte **vlastnosti** ikonu, stiskněte klávesu **Alt**+**Enter**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
+1. Vyberte projekt C++ v aplikaci Visual Studio **Průzkumník řešení** a vyberte ikonu **vlastnosti** , stiskněte klávesu **ALT** + **ENTER**nebo klikněte pravým tlačítkem myši a zvolte možnost **vlastnosti**.
 
-1. Vyberte **ladění** kartu.
+1. Vyberte kartu **ladění** .
 
-3. V části **ladicí program ke spuštění**vyberte **vzdálený počítač** na vzdálený počítač nebo **zařízení** pro mobilní zařízení Windows 10 zařízení připojeného k přímo.
+3. V části **ladicí program, který se má spustit**, vyberte **vzdálený** počítač pro vzdálený počítač nebo **zařízení** pro zařízení s Windows Mobile 10 připojené přímo.
 
-1. Vzdálený počítač, zadejte nebo vyberte název sítě nebo IP adresu v **název počítače** pole nebo odeberte dolů a vyberte možnost **vyhledejte** chcete vyhledat v zařízení [dialogové okno vzdálená připojení ](#remote-connections).
+1. U vzdáleného počítače zadejte nebo vyberte název sítě nebo IP adresu v poli **název počítače** nebo rozevírací seznam a vyberte **Najít** , pokud chcete zařízení vyhledat v [dialogovém okně Vzdálená připojení](#remote-connections).
 
-    ![Vlastnosti projektu C++ pro vzdálené ladění](../debugger/media/vsrun_cpp_projprop_remote.png "ladění C++ vlastnosti projektu")
+    ![Vlastnosti projektu C++ pro vzdálené ladění](../debugger/media/vsrun_cpp_projprop_remote.png "C++ – vlastnosti projektu ladění")
 
-### <a name="remote-connections"></a> Použijte dialogové okno vzdálená připojení
+### <a name="use-the-remote-connections-dialog-box"></a><a name="remote-connections"></a>Použití dialogového okna Vzdálená připojení
 
-V **vzdálená připojení** dialogovém okně můžete vyhledat název konkrétního vzdáleného počítače nebo IP adresu nebo automaticky rozpoznat připojení tak, že vyberete ikonu aktualizace zaoblení šipku. Dialogové okno vyhledá pouze zařízení v místní podsíti, která jsou aktuálně spuštěné vzdálený ladicí program. Ne všechna zařízení lze zjistit v **vzdálená připojení** dialogové okno.
+V dialogovém okně **Vzdálená připojení** můžete vyhledat konkrétní název vzdáleného počítače nebo IP adresu nebo automaticky zjišťovat připojení tak, že vyberete ikonu s kulatou šipkou obnovit. Dialogové okno vyhledá pouze zařízení v místní podsíti, v nichž je aktuálně spuštěn vzdálený ladicí program. Ne všechna zařízení mohou být zjištěna v dialogovém okně **Vzdálená připojení** .
 
- ![Vzdálené připojení – dialogové okno](../debugger/media/vsrun_selectremotedebuggerdlg.png "dialogovém okně Vzdálená připojení")
+ ![Dialogové okno vzdálené připojení](../debugger/media/vsrun_selectremotedebuggerdlg.png "Dialogové okno vzdálených připojení")
 
 >[!TIP]
->Pokud se nemůžete připojit ke vzdálenému zařízení podle názvu, zkuste použít svou IP adresu. Chcete-li určit IP adresu, na vzdáleném zařízení, zadejte **ipconfig** v příkazovém okně. IP adresa bude zobrazovat jako **IPv4 adresu**.
+>Pokud se nemůžete připojit ke vzdálenému zařízení podle názvu, zkuste použít jeho IP adresu. IP adresu určíte tak, že na vzdáleném zařízení zadáte **ipconfig** v příkazovém okně. IP adresa se zobrazí jako **IPv4 adresa**.
 
-## <a name="BKMK_download"></a> Stáhněte a nainstalujte nástroje Remote Tools for Visual Studio
+## <a name="download-and-install-the-remote-tools-for-visual-studio"></a><a name="BKMK_download"></a>Stažení a instalace Remote Tools for Visual Studio
 
-Pro Visual Studio pro ladění aplikací ve vzdáleném počítači vzdáleném počítači musí běžet nástrojů Remote Tools for Visual Studio.
+Aby mohla aplikace Visual Studio ladit aplikace na vzdáleném počítači, musí na vzdáleném počítači běžet Remote Tools for Visual Studio.
 
-- Zařízení Windows Mobile 10 nevyžadují ani podporu nástrojů remote tools.
-- Aktualizovat spuštění Tvůrce příslušného počítače s Windows 10 (verze 1703) a novější, zařízení s Windows 10 Xbox, IoT a HoloLens instalovat nástroje remote tools automaticky při nasazení aplikace.
-- Pre-Creator Update 10 počítačů s Windows musíte ručně stáhnout, nainstalovat a být na vzdáleném počítači spuštěny nástroje remote tools, před zahájením ladění.
+- Zařízení se systémem Windows Mobile 10 nevyžadují nebo nepodporují nástroje Remote Tools.
+- Počítače s Windows 10, na kterých běží aktualizace autora (verze 1703) a novější, zařízení s Windows 10 Xbox, IoT a HoloLens při nasazení aplikace automaticky nainstalují vzdálené nástroje.
+- Na počítačích s Windows 10, které jsou předem Creator, je nutné ručně stáhnout, nainstalovat a spustit nástroje Remote Tools na vzdáleném počítači, než začnete s laděním.
 
-**Ke stažení a instalaci nástrojů remote tools:**
+**Stažení a instalace nástrojů Remote Tools:**
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-### <a name="BKMK_setup"></a> Konfigurace nástrojů remote tools
+### <a name="configure-the-remote-tools"></a><a name="BKMK_setup"></a>Konfigurace nástrojů Remote Tools
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
-## <a name="BKMK_RunRemoteDebug"></a> Vzdálené ladění aplikací pro UWP
+## <a name="debug-uwp-apps-remotely"></a><a name="BKMK_RunRemoteDebug"></a>Vzdálené ladění aplikací pro UWP
 
 Vzdálené ladění funguje stejně jako místní ladění.
 
-1. Na verze pre Tvůrce aktualizací Windows 10, ujistěte se, že sledování vzdáleného ladění (*msvsmon.exe*) běží na vzdáleném zařízení.
+1. V případě aktualizací verze Windows 10 předběžného autora se ujistěte, že na vzdáleném zařízení běží Sledování vzdáleného ladění (*msvsmon.exe*).
 
-1. V počítači, Visual Studio, ujistěte se, že správné cíl ladění (**vzdálený počítač** nebo **zařízení**) se zobrazí vedle na zelenou šipku na panelu nástrojů.
+1. V počítači se systémem Visual Studio se ujistěte, že je na panelu nástrojů vedle zelené šipky zobrazen správný cíl ladění (**vzdálený počítač** nebo **zařízení**).
 
-1. Spuštění ladění tak, že vyberete **ladění** > **spustit ladění**, stisknutí **F5**, nebo vyberte zelenou šipku na panelu nástrojů.
+1. Spusťte ladění tak, že vyberete **ladění**  >  **Spustit ladění**, stisknete klávesu **F5**nebo vyberete zelenou šipku na panelu nástrojů.
 
-   Projekt znovu zkompiluje, pak nasadí a spustí na vzdáleném zařízení. Ladicí program pozastaví provádění na zarážkách a můžete krokovat do, nad a z kódu.
+   Projekt se překompiluje a pak se nasadí a spustí na vzdáleném zařízení. Ladicí program pozastaví provádění na zarážekch a můžete krokovat s kódem.
 
-1. V případě potřeby vyberte **ladění** > **Zastavit ladění** nebo stiskněte klávesu **Shift**+**F5** chcete zastavit ladění a Zavřete vzdálenou aplikaci.
+1. V případě potřeby vyberte **ladit**  >  **Zastavit ladění** nebo stiskněte **SHIFT** + **F5** , abyste zastavili ladění a zavřeli vzdálenou aplikaci.
 
-## <a name="see-also"></a>Viz také:
-- [Pokročilé možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
+## <a name="see-also"></a>Viz také
+- [Rozšířené možnosti vzdáleného nasazení](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)
 - [Testování aplikací pro UWP se sadou Visual Studio](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio/)
 - [Ladění aplikací pro UWP v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)

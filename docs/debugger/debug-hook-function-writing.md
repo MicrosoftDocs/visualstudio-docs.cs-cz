@@ -1,7 +1,7 @@
 ---
-title: Zápis funkce háku ladění | Dokumentace Microsoftu
+title: Zápis funkce vidlice ladění | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vc.hooks
 dev_langs:
@@ -21,25 +21,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82145d39adc519bfd1324cc36805cea7b97b1664
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 038c976380ff1e1f0a1a7c4c150fc462f6b1d1db
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563370"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350716"
 ---
 # <a name="debug-hook-function-writing"></a>Zápis funkce háku ladění
-Tato část popisuje některé funkce háku ladění vlastní, můžete napsat a, které umožňují vložit kód do některé předdefinované body v normálním zpracování ladicího programu.
+Tato část popisuje počet vlastních funkcí ladicího programu, které můžete psát, a to tak, že vložíte kód do některých předdefinovaných bodů uvnitř normálního zpracování ladicího programu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Funkce háku bloku klienta](../debugger/client-block-hook-functions.md) poskytuje pokyny a vzor pro psaní funkcí, které sestavy dat uložených v blocích po _CLIENT_BLOCK obsah nebo ověření.
+ [Funkce zavěšení bloků klienta](../debugger/client-block-hook-functions.md) Obsahuje doprovodné materiály a prototyp pro psaní funkcí, které ověřují nebo oznamují obsah dat uložených v _CLIENT_BLOCK blocích.
 
- [Funkce háku přidělení](../debugger/allocation-hook-functions.md) definuje funkci háku přidělení, zkoumá jeho použití různých, poukazuje na omezení a poskytuje prototypu.
+ [Funkce zavěšení přidělení](../debugger/allocation-hook-functions.md) Definuje funkci zavěšení přidělení, zkoumá jejich různá použití, omezuje omezení a poskytuje prototyp.
 
- [Háky přidělení a přidělení paměti CRT](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md) popisuje omezení pro funkce háku přidělení explicitně ignorování `_CRT_BLOCK` zablokuje, pokud volání funkcí knihovny run-time jazyka C, které přidělit vnitřní paměti. Toto téma rovněž uvádí důsledky, pokud vaše háku přidělení neignoruje `_CRT_BLOCK` bloky (příklady) a jak změnit výchozí přidělení funkci, připojení **CrtDefaultAllocHook**.
+ [Zavěšení přidělení a přidělení paměti CRT](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md) Popisuje omezení funkcí zavěšení přidělení explicitních ignorování `_CRT_BLOCK` bloků, pokud provádějí jakékoli volání funkcí běhové knihovny jazyka C, které přidělují interní paměť. Toto téma také obsahuje důsledky v případě, že zavěšení přidělení Neignoruje `_CRT_BLOCK` bloky (s příklady) a jak změnit výchozí funkci zavěšení přidělení, **CrtDefaultAllocHook**.
 
- [Funkce háku sestavy](../debugger/report-hook-functions.md) popisuje `_CrtSetReportHook`, které můžete použít k filtrování sestavy a zaměřte se na konkrétní typy přidělení. Toto téma obsahuje také prototypu.
+ [Funkce zavěšení sestav](../debugger/report-hook-functions.md) V tomto tématu jsou popsány informace `_CrtSetReportHook` , které můžete použít k filtrování sestav pro zaměření na konkrétní typy přidělení. Toto téma také poskytuje prototyp.
 
 ## <a name="related-sections"></a>Související oddíly
 
-- [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) – odkazy na ladění techniky pro knihovny Run-Time jazyka C, včetně použití ladění knihovny CRT, makra pro vytváření sestav, rozdíly mezi `malloc` a `_malloc_dbg`, zápis funkce háku ladění a CRT haldy ladění.
+- [Techniky ladění CRT](../debugger/crt-debugging-techniques.md) – odkazy na techniky ladění pro běhovou knihovnu jazyka C, včetně použití knihovny ladění CRT, maker pro vytváření sestav, rozdílů mezi `malloc` a `_malloc_dbg` , zápisem funkcí vidlice ladění a haldy ladění CRT.

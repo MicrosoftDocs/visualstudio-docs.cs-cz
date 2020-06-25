@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: ladění služby WCF s místním hostováním | Microsoft Docs'
+title: Jak ladit službu WCF s místním hostováním | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,15 +17,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12654a6aa1abb34c9813e8d29c7608814021a3f0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8eda0f8bc6ee20a706eb74336c43d86934a9e457
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733972"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350365"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>Postupy: Ladění služby WCF s vlastním hostováním
-*Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojový server. Nejjednodušší způsob, jak ladit technologii WCF v místním prostředí, je nakonfigurovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pro spuštění klienta i serveru, když v nabídce **ladění** zvolíte možnost **Spustit ladění** .
+*Samoobslužná služba* je služba WCF, která neběží ve službě IIS, hostiteli služby WCF ani [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] vývojovém serveru. Nejjednodušší způsob, jak ladit technologii WCF v místním prostředí, je nakonfigurovat [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tak, aby spouštěla klienta i server, když zvolíte možnost **Spustit ladění** v nabídce **ladění** .
 
  Tuto metodu nelze použít, pokud je služba WCF s vlastním hostováním uvnitř procesu, který nelze spustit tímto způsobem, jako je služba NT. Místo toho lze provést jednu z následujících možností:
 
@@ -45,15 +45,15 @@ ms.locfileid: "72733972"
 
    2. Klikněte na **nastavit projekty po spuštění**.
 
-   3. V dialogovém okně **řešení \<name > vlastnosti** vyberte **více projektů po spuštění**.
+   3. V dialogovém **okně \<name> vlastnosti řešení** vyberte **více projektů po spuštění**.
 
    4. V mřížce **vícenásobné spouštěné projekty** na řádku, který odpovídá projektu serveru, klikněte na tlačítko **Akce** a vyberte možnost **Spustit**.
 
    5. Na řádku, který odpovídá projektu klienta, klikněte na tlačítko **Akce** a vyberte možnost **Spustit**.
 
-   6. Klikněte na tlačítko **OK**.
+   6. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění služeb WCF](../debugger/debugging-wcf-services.md)
 - [Omezení ladění WCF](../debugger/limitations-on-wcf-debugging.md)
-- [Postupy: Krokování s vnořením služeb WCF](../debugger/how-to-step-into-wcf-services.md)
+- [Postupy: krokování se službami WCF](../debugger/how-to-step-into-wcf-services.md)

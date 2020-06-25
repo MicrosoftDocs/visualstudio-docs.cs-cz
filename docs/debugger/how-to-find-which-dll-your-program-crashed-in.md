@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: hledání knihovny DLL, ve které došlo k chybě programu | Microsoft Docs'
+title: Jak najít knihovnu DLL, ve které došlo k chybě programu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.dll
 dev_langs:
@@ -22,14 +22,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bff4f164e16a65efe4ec3d1f057025168eab8cd2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 155fd74dc6e01f88bf04fe21b77ebdae6b04437f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733274"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349533"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: hledání knihovny DLL, ve které došlo k chybě programuC#( C++,, Visual Basic F#,)
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: hledání knihovny DLL, ve které došlo k chybě programu (C#, C++, Visual Basic, F #)
 
  Pokud vaše aplikace selže během volání systémové knihovny DLL nebo kódu někoho jiného, je nutné zjistit, která knihovna DLL byla aktivní, když došlo k chybě. Pokud dojde k chybě v knihovně DLL mimo vlastní program, můžete umístění identifikovat pomocí okna **moduly** .
 
@@ -49,6 +49,6 @@ ms.locfileid: "72733274"
 
 6. Podívejte se na sloupce **název** a **cesta** , kde se zobrazí název a cesta ke knihovně DLL.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)
 - [Postupy: Použití okna Moduly](../debugger/how-to-use-the-modules-window.md)

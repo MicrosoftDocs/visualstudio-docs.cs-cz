@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: použití Vizualizátoru stromu WPF | Microsoft Docs'
+title: Jak používat Vizualizér stromu WPF | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,17 +16,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbc705a20f8d878d85dc6aba14c64178c76041ac
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 8e210d41541ef2fe0f7f8da149c23dc17645e44f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888405"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348493"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>Postupy: Použití vizualizéru stromu WPF
 Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu objektu WPF a k zobrazení vlastností závislosti WPF pro objekty, které jsou obsaženy v tomto stromu. Další informace o vizuálních stromech naleznete [v tématu stromy v](/dotnet/framework/wpf/advanced/trees-in-wpf)subsystému WPF. Další informace o vlastnostech závislosti najdete v tématu [Přehled vlastností závislosti](/dotnet/framework/wpf/advanced/dependency-properties-overview).
 
- Když otevřete Vizualizér stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_ **:** _typ_ na pravé straně. V podokně **vizuálního stromu** vyberte libovolný objekt a **vlastnosti** _název_ **:** podokno_typ_ je automaticky aktualizováno, aby se zobrazily vlastnosti daného objektu.
+ Když otevřete Vizualizér stromu WPF, zobrazí se dvě podokna: **vizuální strom** na levé straně a **vlastnosti** _název_**:**_typ_ na pravé straně. V podokně **vizuálního stromu** vyberte libovolný objekt a **vlastnosti** _název_**:** podokno_typ_ je automaticky aktualizováno, aby se zobrazily vlastnosti daného objektu.
 
  > [!NOTE]
  > Můžete také použít [živý vizuální strom a živý Průzkumník vlastností](../xaml-tools/inspect-xaml-properties-while-debugging.md) k prohlédnutí vizuálního stromu objektů WPF. Vizualizér stromu WPF je starší funkce a není v aktivním vývoji.
@@ -53,7 +53,7 @@ Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu obj
 
 ### <a name="to-search-the-properties-list"></a>Hledání v seznamu vlastností
 
-- V podokně **vlastnosti** _názvu_ **:** _typ_ zadejte řetězec, který chcete v poli **filtru** vyhledat.
+- V podokně **vlastnosti** _názvu_**:**_typ_ zadejte řetězec, který chcete v poli **filtru** vyhledat.
 
   Vizualizér stromu WPF ihned vyhledá vlastnosti, které odpovídají řetězci, který jste zadali; Nyní se v seznamu zobrazí pouze vlastnosti, které odpovídají řetězci, který jste zadali. Zadáním více znaků získáte přesnější shodu.
 
@@ -63,7 +63,7 @@ Můžete použít Vizualizér stromu WPF k prozkoumání vizuálního stromu obj
 
 - Klikněte na ikonu **Zavřít** v pravém horním rohu dialogového okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytváření vlastních vizualizérů](../debugger/create-custom-visualizers-of-data.md)
 - [Stromy v subsystému WPF](/dotnet/framework/wpf/advanced/trees-in-wpf)
 - [Přehled vlastností závislosti](/dotnet/framework/wpf/advanced/dependency-properties-overview)

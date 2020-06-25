@@ -1,7 +1,7 @@
 ---
 title: Ladění JavaScriptu pomocí konzoly | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.WebClient.JavaScriptConsole
 dev_langs:
@@ -16,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ad037a0e71bc2156fe1c604d183a5e02ae914688
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187559"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348103"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Ladění JavaScriptu pomocí konzoly v aplikaci Visual Studio
 
@@ -42,25 +42,25 @@ Okno konzoly JavaScriptu vám umožní:
 - Proveďte další úkoly, jako je vymazání obrazovky. Úplný seznam příkazů najdete v tématu [příkazy konzoly JavaScriptu](../debugger/javascript-console-commands.md?view=vs-2017) .
 
 > [!TIP]
-> Pokud je okno konzoly JavaScriptu zavřené, otevřete ho tak, že kliknete na tlačítko **ladění** > **Windows**  > **JavaScript Console** . Okno se zobrazí pouze během relace ladění skriptu.
+> Pokud je okno konzoly JavaScriptu zavřené, otevřete ho tak, že kliknete na **ladit** >  **Windows**  >  **konzolu Windows JavaScript** . Okno se zobrazí pouze během relace ladění skriptu.
 
 Pomocí okna konzoly JavaScriptu můžete pracovat s aplikací bez zastavení a restartování ladicího programu. Další informace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md). Informace o dalších funkcích ladění JavaScriptu, jako je použití Průzkumníka modelu DOM a nastavení zarážek, najdete v tématu [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md) a [ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md).
 
-## <a name="InteractiveConsole"></a>Ladění pomocí okna konzoly JavaScriptu
-Následující postup vytvoří aplikaci `FlipView` a ukáže, jak interaktivně ladit chybu kódování JavaScriptu.
+## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a>Ladění pomocí okna konzoly JavaScriptu
+Následující postup vytvoří `FlipView` aplikaci a ukáže, jak interaktivně ladit chybu kódování JavaScriptu.
 
 > [!NOTE]
 > Ukázková aplikace je tady aplikace pro UWP. Níže popsané funkce konzoly se ale vztahují i na aplikace vytvořené pomocí Visual Studio Tools pro Apache Cordova.
 
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>Ladění kódu JavaScriptu v aplikaci FlipView
 
-1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor**  > **Nový projekt**.
+1. Vytvořte nové řešení v aplikaci Visual Studio tak, že kliknete na **soubor**  >  **Nový projekt**.
 
-2. Zvolte **JavaScript**  > **univerzální pro Windows**a pak zvolte **aplikace WinJS**.
+2. Zvolte **JavaScript**  >  **Windows Universal**a pak zvolte **aplikace WinJS**.
 
-3. Zadejte název projektu, například `FlipViewApp`, a kliknutím na **tlačítko OK** vytvořte aplikaci.
+3. Zadejte název projektu, například `FlipViewApp` , a kliknutím na **tlačítko OK** vytvořte aplikaci.
 
-4. V prvku tělo elementu index. html nahraďte existující kód HTML tímto kódem:
+4. V prvku tělo index.html nahraďte existující kód HTML tímto kódem:
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -84,7 +84,7 @@ Následující postup vytvoří aplikaci `FlipView` a ukáže, jak interaktivně
     }
     ```
 
-6. Otevřete default. js a nahraďte kód následujícím kódem JavaScriptu:
+6. Otevřete default.js a nahraďte kód následujícím kódem JavaScriptu:
 
     ```javascript
     (function () {
@@ -144,17 +144,17 @@ Následující postup vytvoří aplikaci `FlipView` a ukáže, jak interaktivně
 
     Aplikace se spustí, ale chybí obrázky. APPHOST chyby v okně konzoly JavaScriptu označují, že chybí obrázky.
 
-9. Po spuštění aplikace `FlipView` zadejte do příkazového řádku okna konzoly text `Data.items` (vedle symbolu "> >") a stiskněte klávesu ENTER.
+9. `FlipView`Spusťte aplikaci zadáním příkazu `Data.items` do příkazového řádku v okně konzoly (vedle symbolu ">>") a stiskněte klávesu ENTER.
 
-    V okně konzoly se zobrazí Vizualizér pro objekt `items`. To znamená, že objekt `items` instance a je k dispozici v kontextu aktuálního skriptu. V okně konzoly můžete kliknutím na uzly objektu zobrazit hodnoty vlastností (nebo použít klávesy se šipkami). Pokud kliknete na tlačítko dolů na objekt `items._data`, jak vidíte na tomto obrázku, zjistíte, že odkazy na zdroje obrázků jsou nesprávné, podle očekávání. Výchozí obrázky (logo. png) jsou stále přítomny v objektu a v nich chybí obrázky s očekávanými obrázky.
+    `items`V okně konzoly se zobrazí Vizualizér pro daný objekt. To znamená, že `items` objekt je vytvořen a je k dispozici v kontextu aktuálního skriptu. V okně konzoly můžete kliknutím na uzly objektu zobrazit hodnoty vlastností (nebo použít klávesy se šipkami). Pokud kliknete na tlačítko dolů k `items._data` objektu, jak vidíte na tomto obrázku, zjistíte, že odkazy na zdroje obrázků jsou nesprávné, podle očekávání. Výchozí obrázky (logo.png) jsou stále k dispozici v objektu a chybí obrázky s očekávanými obrázky.
 
     ![Okno konzoly JavaScriptu](../debugger/media/js_console_window.png "JS_Console_Window")
 
-    Všimněte si také, že v `items._data` objektu existuje mnoho dalších položek, než byste očekávali.
+    Všimněte si také, že v objektu existuje mnoho dalších položek, `items._data` než byste očekávali.
 
-10. Na příkazovém řádku zadejte `Data.items.push` a stiskněte klávesu ENTER. Okno konzoly zobrazuje Vizualizér pro funkci `push`, která je implementována v souboru projektu [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)]. V této aplikaci používáme `push` k přidání správných položek. Při malém šetření pomocí technologie IntelliSense zjistíme, že k nahrazení výchozích imagí byste měli použít `setAt`.
+10. Na příkazovém řádku zadejte `Data.items.push` a stiskněte klávesu ENTER. Okno konzoly zobrazuje Vizualizér pro `push` funkci, která je implementována v [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] souboru projektu. V této aplikaci používáme `push` k přidání správných položek. Při malém šetření pomocí technologie IntelliSense zjistíme, že je vhodné použít `setAt` k nahrazení výchozích imagí.
 
-11. Chcete-li tento problém vyřešit interaktivně bez zastavení relace ladění, otevřete default. js a vyberte tento kód z funkce `updateImages`:
+11. Chcete-li tento problém vyřešit interaktivně bez zastavení relace ladění, otevřete default.js a vyberte tento kód z `updateImages` funkce:
 
     ```javascript
     pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });
@@ -167,7 +167,7 @@ Následující postup vytvoří aplikaci `FlipView` a ukáže, jak interaktivně
     > [!TIP]
     > Když vložíte více řádků kódu do vstupní výzvy konzoly jazyka JavaScript, bude vstupní výzva konzoly automaticky přepnuta do víceřádkového režimu. Stisknutím kombinace kláves CTRL + ALT + M můžete zapnout nebo vypnout víceřádkový režim. Chcete-li spustit skript v víceřádkovém režimu, stiskněte klávesy CTRL + ENTER nebo zvolte symbol šipky v pravém dolním rohu okna. Další informace naleznete v části [jednořádkový režim a víceřádkový režim v okně konzoly JavaScriptu](#SinglelineMultilineMode).
 
-12. Opravte `push` volání funkcí v příkazovém řádku a nahraďte `pages.push` `Data.items.setAt`. Opravený kód by měl vypadat takto:
+12. Opravte `push` volání funkcí v příkazovém řádku a nahraďte ji `pages.push` `Data.items.setAt` . Opravený kód by měl vypadat takto:
 
     ```javascript
     Data.items.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });
@@ -176,34 +176,34 @@ Následující postup vytvoří aplikaci `FlipView` a ukáže, jak interaktivně
     ```
 
     > [!TIP]
-    > Chcete-li použít objekt `pages` místo `Data.items`, je třeba nastavit zarážku v kódu pro zachování objektu `pages` v oboru.
+    > Chcete-li použít `pages` objekt namísto `Data.items` , je nutné nastavit zarážku v kódu pro zachování `pages` objektu v oboru.
 
 13. Vyberte zelený symbol šipky ke spuštění skriptu.
 
 14. Stisknutím kombinace kláves CTRL + ALT + M Přepněte vstupní výzvu konzoly na jednořádkový režim a pak zvolte možnost **Vymazat vstup** (červený symbol "X") a odstraňte kód ze vstupní výzvy.
 
-15. Do příkazového řádku zadejte `Data.items.length = 3` a potom stiskněte klávesu ENTER. Tím se z dat odstraní nadbytečné prvky.
+15. Do `Data.items.length = 3` příkazového řádku zadejte a stiskněte klávesu ENTER. Tím se z dat odstraní nadbytečné prvky.
 
-16. Zkontrolujte aplikaci znovu a uvidíte, že správné obrázky jsou na správném `FlipView` stránkách.
+16. Zkontrolujte aplikaci znovu a uvidíte, že správné obrázky jsou na správných `FlipView` stránkách.
 
 17. V Průzkumníku modelu DOM vidíte aktualizovaný element DIV a můžete přejít do podstromu a najít očekávané elementy IMG.
 
-18. Zastavit ladění výběrem možnosti **ladění**  > **Zastavit ladění** nebo stisknutím SHIFT + F5 a opravit zdrojový kód.
+18. Zastavení ladění kliknutím na **ladění**  >  **Zastavit ladění** nebo stisknutím SHIFT + F5 a opravte zdrojový kód.
 
-    Kompletní stránku Default. HTML obsahující opravený vzorový kód naleznete v tématu [ladění kódu HTML, CSS a JavaScript Code Sample](../debugger/debug-html-css-and-javascript-sample-code.md).
+    Kompletní default.htmovou stránku obsahující opravený vzorový kód naleznete v tématu [ladění kódu HTML, CSS a JavaScript Code Sample](../debugger/debug-html-css-and-javascript-sample-code.md).
 
-## <a name="InteractiveDebuggingBreakMode"></a>Interaktivní ladění a režim přerušení
+## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a>Interaktivní ladění a režim přerušení
 Zarážky a krok do kódu lze použít při použití ladicích nástrojů JavaScriptu jako okna konzoly jazyka JavaScript. Když program, který je spuštěn v ladicím programu, narazí na zarážku, ladicí program dočasně pozastaví provádění programu. Po pozastavení běhu se program přepne z režimu spuštění do režimu přerušení. Můžete kdykoli pokračovat v provádění.
 
-Když je program v režimu pozastavení, můžete použít okno konzoly JavaScriptu ke spouštění skriptů a příkazů, které jsou platné v aktuálním kontextu spuštění skriptu. V tomto postupu použijete opravenou verzi `FlipView` aplikace, kterou jste vytvořili dříve, abyste ukázali použití režimu přerušení.
+Když je program v režimu pozastavení, můžete použít okno konzoly JavaScriptu ke spouštění skriptů a příkazů, které jsou platné v aktuálním kontextu spuštění skriptu. V tomto postupu použijete pevnou verzi `FlipView` aplikace, kterou jste vytvořili dříve, abyste ukázali použití režimu přerušení.
 
 #### <a name="to-set-a-breakpoint-and-debug-the-app"></a>Nastavení zarážky a ladění aplikace
 
-1. Ve výchozím souboru. HTML aplikace `FlipView`, kterou jste vytvořili dříve, otevřete místní nabídku pro funkci `updateImages()` a pak zvolte **zarážku**  > **Vložit**zarážku.
+1. V souboru default.html `FlipView` aplikace, kterou jste vytvořili dříve, otevřete místní nabídku pro `updateImages()` funkci a pak zvolte **zarážka**  >  **Vložit**zarážku.
 
 2. V rozevíracím seznamu vedle tlačítka **Spustit ladění** na panelu nástrojů **ladění** vyberte **místní počítač** .
 
-3. Zvolte **ladění**  > **Spustit ladění**nebo stiskněte klávesu F5.
+3. Zvolte **ladění**  >  **Spustit ladění**nebo stiskněte klávesu F5.
 
     Aplikace přejde do režimu přerušení, pokud provádění dosáhne `updateImages()` funkce a aktuální řádek provádění programu je zvýrazněn žlutě.
 
@@ -211,7 +211,7 @@ Když je program v režimu pozastavení, můžete použít okno konzoly JavaScri
 
     Hodnoty proměnných můžete změnit tak, aby okamžitě ovlivnily stav programu bez ukončení aktuální relace ladění.
 
-4. Do příkazového řádku zadejte `updateImages` a stiskněte klávesu ENTER. V okně konzoly se zobrazí Vizualizér funkce.
+4. Do `updateImages` příkazového řádku zadejte a stiskněte klávesu ENTER. V okně konzoly se zobrazí Vizualizér funkce.
 
 5. Vyberte funkci v okně konzoly, aby se zobrazila implementace funkce.
 
@@ -229,27 +229,27 @@ Když je program v režimu pozastavení, můžete použít okno konzoly JavaScri
 
     Chcete-li krokovat kód řádek po řádku, stiskněte klávesu F11 nebo stiskněte klávesu F5 a pokračujte v provádění programu.
 
-8. Stisknutím klávesy F5 pokračujte v provádění programu. Zobrazí se aplikace `FlipView` a teď všechny čtyři stránky zobrazují jednu z jiných než výchozích imagí.
+8. Stisknutím klávesy F5 pokračujte v provádění programu. `FlipView`Zobrazí se aplikace a teď všechny čtyři stránky zobrazují jednu z jiných než výchozích imagí.
 
     Chcete-li přejít zpět k aplikaci Visual Studio, stiskněte klávesu F12 nebo ALT + TAB.
 
-## <a name="SinglelineMultilineMode"></a>Jednořádkový a víceřádkový režim v okně konzoly JavaScriptu
+## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a>Jednořádkový a víceřádkový režim v okně konzoly JavaScriptu
 Vstupní výzva pro okno konzoly JavaScriptu podporuje jednořádkový režim a víceřádkový režim. Postup interaktivního ladění v tomto tématu poskytuje příklad použití obou režimů. Stisknutím kombinace kláves CTRL + ALT + M můžete přepínat mezi jednotlivými režimy.
 
 Jednořádkový režim poskytuje historii vstupu. Můžete procházet historii vstupu pomocí kláves Šipka nahoru a šipka dolů. Jednořádkový režim vymaže vstupní výzvu při spuštění skriptů. Pokud chcete skript spustit v režimu single-line, stiskněte klávesu ENTER.
 
 Víceřádkový režim nevymaže vstupní výzvu při spuštění skriptů. Když přepnete do jednořádkového režimu z víceřádkového režimu, můžete odstranit vstupní řádek stisknutím klávesy **clear Input** (červený symbol "X"). Chcete-li spustit skript v víceřádkovém režimu, stiskněte klávesy CTRL + ENTER nebo zvolte symbol šipky v pravém dolním rohu okna.
 
-## <a name="Switching"></a>Přepínání kontextu spuštění skriptu
-Okno konzoly JavaScriptu umožňuje interakci s jediným kontextem spuštění, který představuje jednu instanci hostitele webové platformy (WWAHost. exe). V některých scénářích může vaše aplikace spustit jinou instanci hostitele, například při použití `iframe`, sdílení kontraktu, webového pracovního procesu nebo ovládacího prvku `WebView`. Pokud je spuštěná jiná instance hostitele, můžete při spuštění aplikace vybrat jiný kontext spuštění, a to tak, že v seznamu **cíl** vyberete kontext spuštění.
+## <a name="switching-the-script-execution-context"></a><a name="Switching"></a>Přepínání kontextu spuštění skriptu
+Okno konzoly JavaScriptu umožňuje interakci s jediným kontextem spuštění, který představuje jednu instanci hostitele webové platformy (WWAHost.exe) současně. V některých scénářích může vaše aplikace spustit jinou instanci hostitele, například při použití `iframe` , sdílení kontraktu, webového pracovního procesu nebo `WebView` ovládacího prvku. Pokud je spuštěná jiná instance hostitele, můžete při spuštění aplikace vybrat jiný kontext spuštění, a to tak, že v seznamu **cíl** vyberete kontext spuštění.
 
 Následující ilustrace znázorňuje cílový seznam v okně konzoly JavaScriptu.
 
 ![Výběr cíle v okně konzoly JavaScriptu](../debugger/media/js_console_target.png "JS_Console_Target")
 
-Kontext spuštění můžete také přepnout pomocí příkazu `cd`, ale je nutné znát název dalšího kontextu spuštění a odkaz, který použijete, musí být v oboru. **Cílový** seznam poskytuje lepší přístup k dalším kontextům spuštění.
+Kontext spuštění můžete také přepnout pomocí `cd` příkazu, ale je nutné znát název dalšího kontextu spuštění a odkaz, který použijete, musí být v oboru. **Cílový** seznam poskytuje lepší přístup k dalším kontextům spuštění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění aplikací v sadě Visual Studio](debugging-windows-store-and-windows-universal-apps.md)
 - [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)

@@ -1,29 +1,29 @@
 ---
-title: Kontrola aplikace s využitím historického ladění | Dokumentace Microsoftu
+title: Kontrola aplikace s historickým laděním | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dea338f940cca0ce24cc200ed933adadb7d5643f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848207"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350443"
 ---
-# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Kontrola aplikace s použitím technologie IntelliTrace historické ladění v sadě Visual Studio (C#, Visual Basic, C++)
+# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Kontrola aplikace pomocí IntelliTrace historické ladění v aplikaci Visual Studio (C#, Visual Basic, C++)
 
-Můžete použít [historické ladění](../debugger/historical-debugging.md) pro přechod dozadu a předání prostřednictvím spuštění vaší aplikace a zkontrolovat její stav.
+[Historické ladění](../debugger/historical-debugging.md) můžete použít k přesunu zpět a vpřed při provádění aplikace a kontrole jejího stavu.
 
-Můžete použít nástroj IntelliTrace v sadě Visual Studio Enterprise edition, ale není edice Professional nebo Community.
+IntelliTrace můžete použít v edici Visual Studio Enterprise Edition, ale ne v edicích Professional nebo Community.
 
-## <a name="navigate-your-code-with-historical-debugging"></a>Navigace v kódu s historické ladění
+## <a name="navigate-your-code-with-historical-debugging"></a>Navigace v kódu s historickým laděním
 
-Začněme jednoduchý program, který obsahuje chybu. V aplikaci konzoly C# přidejte následující kód:
+Pojďme začít jednoduchým programem, který obsahuje chybu. Do konzolové aplikace v jazyce C# přidejte následující kód:
 
 ```csharp
 static void Main(string[] args)
@@ -51,33 +51,33 @@ private static int AddInt(int add)
 }
 ```
 
-Budeme předpokládat, který očekávanou hodnotou `resultInt` po volání `AddAll()` je 20 (výsledek zvyšování `testInt` 20 x). (Budete také předpokládáme, že nevidíte chybu v `AddInt()`). Ale ve skutečnosti 44 je výsledek. Jak jsme najít chyby bez krokování `AddAll()` 10krát? Můžeme použít historické ladění najít chyby rychleji a snadněji. Tady je způsob:
+Předpokládáme, že očekávaná hodnota `resultInt` po volání `AddAll()` je 20 (výsledek násobení `testInt` 20 časů). (Předpokládáme také, že se chyba v nástroji nezobrazuje `AddInt()` ). Výsledek je ale ve skutečnosti 44. Jak můžeme najít chybu bez krokování po `AddAll()` dobu 10 krát? Pomocí historických ladění můžeme najít chybu rychleji a snadněji. Zde je uveden postup:
 
-1. V **nástroje > Možnosti > Nástroje IntelliTrace > Obecné**, ujistěte se, že nástroj IntelliTrace zapnutý a vyberte **události IntelliTrace a informací o volání**. Pokud tuto možnost nevyberete, nebudete moci zobrazit navigační ovládací prvek (jak je popsáno níže).
+1. V **nabídce nástroje > možnosti > IntelliTrace > obecné**, ujistěte se, že je povolená možnost IntelliTrace, a vyberte **události IntelliTrace a informace o volání**. Pokud tuto možnost nevyberete, nebudete moci zobrazit navigační vazbu (jak je vysvětleno níže).
 
-2. Nastavit zarážku na `Console.WriteLine(resultInt);` řádku.
+2. Nastavte zarážku na `Console.WriteLine(resultInt);` řádku.
 
-3. Spusťte ladění. Kód se spustí až k zarážce. V **lokální** okně vidíte, že hodnota `resultInt` je 44.
+3. Spustit ladění. Kód se spustí na zarážku. V okně **místní** hodnoty vidíte, že hodnota `resultInt` je 44.
 
-4. Otevřít **diagnostické nástroje** okno (**ladit > zobrazit diagnostické nástroje**). V okně kódu by měl vypadat nějak takto:
+4. Otevřete okno **diagnostické nástroje** (**ladění > zobrazit diagnostické nástroje**). Okno Code by mělo vypadat takto:
 
     ![Okno kódu na zarážce](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
 
-5. Měli byste vidět dvojitou šipku vedle levého okraje, těsně nad zarážku. Tato oblast se nazývá navigační ovládací prvek a slouží pro historické ladění. Klikněte na šipku.
+5. Měla by se zobrazit Dvojitá šipka vedle levého okraje, těsně nad zarážku. Tato oblast se nazývá navigační hřbet a používá se pro historické ladění. Klikněte na šipku.
 
-    V okně kódu byste měli vidět, který na předchozí řádek kódu (`int resultInt = AddIterative(testInt);`) jsou zobrazeny růžový. Nad oknem měli byste vidět zprávu, která jsou teď v historické ladění.
+    V okně kód byste měli vidět, že předchozí řádek kódu ( `int resultInt = AddIterative(testInt);` ) je barevně růžový. Nad oknem by se měla zobrazit zpráva, že jste teď v historickém ladění.
 
-    V okně kódu nyní vypadá takto:
+    Okno Code (kód) teď vypadá takto:
 
-    ![okno kódu v režimu historické ladění](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
+    ![okno Code v historickém režimu ladění](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
 
-6. Nyní můžete krokovat s vnořením `AddAll()` – metoda (**F11**, nebo **Krokovat s vnořením** v navigační ovládací prvek tlačítko. Krok vpřed (**F10**, nebo **přejít na další volání** v navigační ovládací prvek. Růžový řádek je nyní na `j = AddInt(j);` řádku. **F10** v tomto případě Nekrokovat s vnořením na další řádek kódu. Místo toho se přejde na další volání funkce. Historické ladění přejde z volání do volání a přeskočí řádky kódu, které neobsahují volání funkce.
+6. Nyní se můžete krokovat s `AddAll()` metodou (**F11**nebo **krokem** na tlačítku v navigačním hřbetu). Krok nahoru (**F10**nebo **Přejít na další volání** v navigačním hřbetu. Růžová čára je nyní na `j = AddInt(j);` řádku. **F10** v tomto případě nekrokuje na další řádek kódu. Místo toho se postupuje na další volání funkce. Historické ladění přechází z volání na volání a přeskočí řádky kódu, které nezahrnují volání funkce.
 
-7. Nyní můžete krokovat s vnořením `AddInt()` metody. V tomto kódu chyby byste měli vidět okamžitě.
+7. Nyní proveďte krok do `AddInt()` metody. V tomto kódu by se měla zobrazit chyba hned.
 
 ## <a name="next-steps"></a>Další kroky
 
-Tento postup stačí poškrábaný na plochu můžete dělat s historické ladění.
+Tento postup právě poškrábaný plochu toho, co můžete dělat s historickým laděním.
 
-- Chcete-li zobrazit při ladění snímků, najdete v článku [kontrolovat předchozí nové aplikace pomocí nástroje IntelliTrace](../debugger/view-historical-application-state.md).
-- Další informace o různých nastavení a efekty různá tlačítka v navigační ovládací prvek, najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).
+- Pokud chcete zobrazit snímky během ladění, přečtěte si téma [Kontrola předchozích stavů aplikace pomocí IntelliTrace](../debugger/view-historical-application-state.md).
+- Další informace o různých nastaveních a vlivech různých tlačítek na navigačním hřbetu najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).

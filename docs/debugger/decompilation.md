@@ -1,7 +1,7 @@
 ---
-title: Dekompilace kódu .NET při ladění | Dokumenty společnosti Microsoft
+title: Dekompilovat kód .NET při ladění | Microsoft Docs
 ms.date: 2/2/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -13,103 +13,103 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: d63c05120842d52dd54359e128d0cc5f2a195817
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508742"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350560"
 ---
-# <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET při ladění
+# <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Generovat zdrojový kód ze sestavení .NET během ladění
 
-Při ladění aplikace .NET můžete zjistit, že chcete zobrazit zdrojový kód, který nemáte. Například rozdělení na výjimku nebo pomocí zásobníku volání přejít do zdrojového umístění.
+Při ladění aplikace .NET můžete zjistit, že chcete zobrazit zdrojový kód, který nemáte. Například přerušení na výjimku nebo použití zásobníku volání k přechodu na zdrojové umístění.
 
 > [!NOTE]
-> * Generování zdrojového kódu (dekompilace) je k dispozici pouze pro aplikace .NET a je založeno na projektu [ILSpy](https://github.com/icsharpcode/ILSpy) s otevřeným zdrojovým kódem.
-> * Dekompilace je k dispozici pouze v sadě Visual Studio 2019 16.5 a novější.
-> * Použití atributu [SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) na sestavení nebo modul zabrání visual studio v pokusu o dekompilaci.
+> * Generování zdrojového kódu (dekompilace) je k dispozici pouze pro aplikace .NET a je založené na open source projektu [ILSpy](https://github.com/icsharpcode/ILSpy) .
+> * Dekompilace je k dispozici pouze v aplikaci Visual Studio 2019 16,5 a novější.
+> * Použití atributu [SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) na sestavení nebo modul brání aplikaci Visual Studio v pokusu o dekompilaci.
 
 ## <a name="generate-source-code"></a>Generovat zdrojový kód
 
-Když ladíte a není k dispozici žádný zdrojový kód, Visual Studio zobrazí **dokument Zdroj nebyl nalezen** nebo pokud nemáte symboly pro sestavení, dokument Bez **načtených symbolů.** Oba dokumenty mají možnost **Decompile zdrojového kódu,** který generuje kód Jazyka C# pro aktuální umístění. Generovaný kód Jazyka C# lze pak použít stejně jako jakýkoli jiný zdrojový kód. Můžete zobrazit kód, zkontrolovat proměnné, nastavit zarážky a tak dále.
+Když ladíte a není k dispozici žádný zdrojový kód, Visual Studio zobrazí dokument **Nenalezený zdrojem** , nebo pokud nemáte symboly pro sestavení, **nenačtený dokument žádné symboly** . Oba dokumenty mají možnost **dekompilovat zdrojový kód** , která generuje kód C# pro aktuální umístění. Generovaný kód jazyka C# lze potom použít stejně jako jakýkoliv jiný zdrojový kód. Můžete zobrazit kód, kontrolovat proměnné, nastavit zarážky a tak dále.
 
-### <a name="no-symbols-loaded"></a>Nejsou načteny žádné symboly.
+### <a name="no-symbols-loaded"></a>Nebyly načteny žádné symboly
 
-Na následujícím obrázku je zobrazena zpráva **Bez načtených symbolů.**
+Následující obrázek znázorňuje zprávu, že **nejsou načteny žádné symboly** .
 
-![Snímek obrazovky s žádným načteným dokumentem se symbolem](media/decompilation-no-symbol-found.png)
+![Snímek obrazovky s dokumentem nenačteného symbolu](media/decompilation-no-symbol-found.png)
 
 ### <a name="source-not-found"></a>Zdroj nebyl nalezen.
 
-Následující obrázek znázorňuje zprávu **Zdroj nebyl nalezen.**
+Následující obrázek znázorňuje zprávu **zdroj nebyl nalezen** .
 
 ![Snímek obrazovky se zdrojovým dokumentem nebyl nalezen](media/decompilation-no-source-found.png)
 
 ## <a name="generate-and-embed-sources-for-an-assembly"></a>Generování a vložení zdrojů pro sestavení
 
-Kromě generování zdrojového kódu pro určité umístění můžete vygenerovat veškerý zdrojový kód pro dané sestavení .NET. Chcete-li to provést, přejděte do okna **Moduly** a z kontextové nabídky sestavení .NET a vyberte příkaz **Dekompilovat zdrojový kód.** Visual Studio vygeneruje soubor symbolů pro sestavení a potom vloží zdroj do souboru symbolů. V pozdějším kroku můžete [extrahovat](#extract-and-view-the-embedded-source-code) vložený zdrojový kód.
+Kromě generování zdrojového kódu pro konkrétní umístění můžete vygenerovat všechen zdrojový kód pro dané sestavení .NET. Provedete to tak, že přejdete do okna **moduly** a z kontextové nabídky sestavení .NET a pak vyberete příkaz **dekompilovat zdrojový kód** . Visual Studio vygeneruje soubor symbolů pro sestavení a poté vloží zdroj do souboru symbolů. V pozdějším kroku můžete [extrahovat](#extract-and-view-the-embedded-source-code) vložený zdrojový kód.
 
-![Snímek obrazovky kontextové nabídky sestavení v okně modulů s příkazem dekompilovat zdroj.](media/decompilation-decompile-source-code.png)
+![Snímek kontextové nabídky sestavení v okně modulů s dekompilací zdrojového příkazu](media/decompilation-decompile-source-code.png)
 
-## <a name="extract-and-view-the-embedded-source-code"></a>Extrahovat a zobrazit vložený zdrojový kód
+## <a name="extract-and-view-the-embedded-source-code"></a>Extrakce a zobrazení vloženého zdrojového kódu
 
-Zdrojové soubory, které jsou vloženy do souboru symbolů, můžete extrahovat pomocí příkazu **Extrahovat zdrojový kód** v kontextové nabídce okna **Moduly.**
+Zdrojové soubory, které jsou vloženy do souboru symbolů, můžete extrahovat pomocí příkazu **extrahovat zdrojový kód** v kontextové nabídce okna **moduly** .
 
-![Snímek obrazovky kontextové nabídky sestavení v okně modulů s příkazem Extrahovat zdroje.](media/decompilation-extract-source-code.png)
+![Snímek kontextové nabídky sestavení v okně moduly s příkazem extrahovat zdroje](media/decompilation-extract-source-code.png)
 
-Extrahované zdrojové soubory jsou přidány do roztoku jako [různé soubory](../ide/reference/miscellaneous-files.md). Funkce různé soubory je ve výchozím nastavení vypnutá v sadě Visual Studio. Tuto funkci můžete povolit v**Environment** > **Documents** > zaškrtávacím **boxu** > **Options** > Průzkumník a**údržby** nástrojů. Bez povolení této funkce nebudete moci extrahovaný zdrojový kód otevřít.
+Extrahované zdrojové soubory jsou přidány do řešení jako [jiné soubory](../ide/reference/miscellaneous-files.md). Funkce různé soubory je ve výchozím nastavení v aplikaci Visual Studio vypnutá. Tuto funkci můžete povolit z **Tools**  >  **Options**  >  **dokumentu prostředí**možnosti nástrojů  >  **Documents**  >  **Zobrazit různé soubory v Průzkumník řešení** zaškrtávací políčko. Bez povolení této funkce nebudete moci otevřít extrahovaný zdrojový kód.
 
-![Snímek obrazovky s možností nástroje se zapnutou možností různé soubory](media/decompilation-tools-options-misc-files.png)
+![Snímek obrazovky se stránkou možností nástroje s možnostmi různé soubory je povolený.](media/decompilation-tools-options-misc-files.png)
 
-Extrahované zdrojové soubory se zobrazují v různé soubory v **Průzkumníku řešení**.
+Extrahované zdrojové soubory se zobrazí v různých souborech v **Průzkumník řešení**.
 
-![Snímek obrazovky průzkumníka řešení s různé soubory](media/decompilation-solution-explorer.png)
+![Snímek obrazovky Průzkumníka řešení s různými soubory](media/decompilation-solution-explorer.png)
 
 ## <a name="known-limitations"></a>Známá omezení
 
-### <a name="requires-break-mode"></a>Vyžaduje režim přerušení
+### <a name="requires-break-mode"></a>Vyžaduje režim přerušení.
 
-Generování zdrojového kódu pomocí dekompilace je možné pouze v případě, že ladicí program je v režimu přerušení a aplikace je pozastavena. Například Visual Studio přejde do režimu přerušení, když narazí na zarážku nebo výjimku. Můžete snadno spustit Visual Studio přerušit při příštím spuštění kódu pomocí![ **příkazu Přerušit vše** (Přerušit všechny ikonu).](media/decompilation-break-all.png)
+Generování zdrojového kódu pomocí dekompilace je možné pouze v případě, že je ladicí program v režimu pozastavení a aplikace je pozastavena. Například Visual Studio vstoupí do režimu přerušení, pokud narazí na zarážku nebo na výjimku. Aplikaci Visual Studio můžete snadno aktivovat, aby se při příštím spuštění kódu přerušit pomocí příkazu **Break All** ( ![ přerušit všechny ikony ](media/decompilation-break-all.png) ).
 
 ### <a name="decompilation-limitations"></a>Omezení dekompilace
 
-Generování zdrojového kódu z meziformátu (IL), který se používá v sestaveních .NET, má některá vlastní omezení. Jako takový generovaný zdrojový kód nevypadá jako původní zdrojový kód. Většina rozdílů je v místech, kde informace v původním zdrojovém kódu není potřeba za běhu. Například informace, jako jsou mezery, komentáře a názvy místních proměnných nejsou potřeba za běhu. Doporučujeme použít generovaný zdroj k pochopení způsobu provádění programu a nikoli jako náhrada původního zdrojového kódu.
+Generování zdrojového kódu z mezilehlého formátu (IL), který je používán v sestaveních .NET, má určitá omezení. V takovém případě generovaný zdrojový kód nevypadá jako původní zdrojový kód. Většina rozdílů je uvedena v místech, kde informace v původním zdrojovém kódu nejsou za běhu potřeba. Například informace, jako jsou prázdné znaky, komentáře a názvy místních proměnných, nejsou za běhu potřeba. Pro pochopení, jak se program spouští, a nikoli jako náhrada původního zdrojového kódu, doporučujeme použít vygenerovaný zdroj.
 
-### <a name="debug-optimized-or-release-assemblies"></a>Ladění optimalizovaných nebo uvolnění sestavení
+### <a name="debug-optimized-or-release-assemblies"></a>Ladit optimalizované nebo vydaná sestavení
 
-Při ladění kódu, který byl dekompilován z sestavení, které bylo zkompilován pomocí optimalizace kompilátoru, můžete narazit na následující problémy:
-- Zarážky nemusí vždy vázat na odpovídající umístění zdroje.
-- Krokování nemusí vždy krok do správného umístění.
-- Místní proměnné nemusí mít přesné názvy.
-- Některé proměnné nemusí být k dispozici pro hodnocení.
+Při ladění kódu, který byl dekompilován ze sestavení, které bylo zkompilováno pomocí optimalizací kompilátoru, může docházet k následujícím problémům:
+- Zarážky se nemusí vždy navazovat na umístění odpovídajícího zdroje.
+- Krokování nemusí vždy krokovat se správným umístěním.
+- Místní proměnné nemohou mít přesné názvy.
+- Některé proměnné nemusí být k dispozici pro vyhodnocení.
 
-Další podrobnosti naleznete v problému GitHub: [ICSharpCode.Decompiler integrace do VS Debugger](https://github.com/icsharpcode/ILSpy/issues/1901).
+Další podrobnosti najdete v problému GitHubu: [integrace ICSharpCode. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
-### <a name="decompilation-reliability"></a>Dekompilace spolehlivost
+### <a name="decompilation-reliability"></a>Spolehlivost dekompilace
 
-Relativně malé procento pokusů o dekompilaci může mít za následek selhání. To je způsobeno chybou sekvenčního bodu null-reference v ILSpy.  Jsme zmírnilselhání zachycením těchto problémů a řádně selhání pokus o dekompilaci.
+Poměrně malé procento pokusů o dekompilaci může vést k selhání. Důvodem je chyba referenčního bodu sekvence null v ILSpy.  Toto selhání jsme zmírnili zachycením těchto problémů a řádným selháním pokusu o dekompilaci.
 
-Další podrobnosti naleznete v problému GitHub: [ICSharpCode.Decompiler integrace do VS Debugger](https://github.com/icsharpcode/ILSpy/issues/1901).
+Další podrobnosti najdete v problému GitHubu: [integrace ICSharpCode. Decompiler do ladicího programu vs](https://github.com/icsharpcode/ILSpy/issues/1901).
 
 ### <a name="limitations-with-async-code"></a>Omezení s asynchronním kódem
 
-Výsledky z dekompilace modulů s async/await vzory kódu může být neúplné nebo zcela nezdaří. IlSpy implementace async/await a výnos stav-stroje je implementována pouze částečně. 
+Výsledky dekompilace modulů s modifikátory kódu Async/await mohou být neúplné nebo selžou zcela. Implementace ILSpy typu Async/await a yield – počítače jsou pouze částečně implementovány. 
 
-Další podrobnosti naleznete v problému GitHub: [Stav generátoru PDB](https://github.com/icsharpcode/ILSpy/issues/1422).
+Další podrobnosti najdete v problému GitHubu: [stav generátoru PDB](https://github.com/icsharpcode/ILSpy/issues/1422).
 
 ### <a name="just-my-code"></a>Pouze můj kód
 
-Nastavení [Jen můj kód (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) umožňuje Visual Studio krokování systému, frameworku, knihovny a dalších volání mimo uživatele. Během relace ladění okno **Moduly** zobrazuje, které moduly kódu ladicí program považuje za můj kód (uživatelský kód).
+Nastavení [pouze můj kód (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) umožňuje Visual Studiu krokovat se systémem, architekturou, knihovnou a dalšími neuživatelskými voláními. Během relace ladění zobrazuje okno **moduly** , které kódové moduly ladicí program zpracovává jako můj kód (uživatelský kód).
 
-Dekompilace optimalizovaných nebo uvolňovacích modulů vytváří neuživatelský kód. Pokud ladicí program rozdělí v dekompilovaném kódu bez uživatele, například se zobrazí okno **Žádný zdroj.** Chcete-li zakázat pouze můj kód, přejděte **Debugging** > na**možnosti** **nástrojů** > (nebo**možnosti** **ladění** > ) >**obecné**ladění a potom zrušte zaškrtnutí **políčka Povolit pouze můj kód**.
+Dekompilace optimalizovaných nebo vydaných modulů vytváří jiný než uživatelský kód. Pokud ladicí program přeruší v kódu nekompilovaného uživatele, například, nezobrazí se **žádné okno zdroje** . Pokud chcete pouze můj kód zakázat, přejděte **Tools**k  >  **Možnosti** nástroje (nebo **Debug**  >  **Možnosti**ladění) > obecné **ladění**  >  **General**a potom zrušte zaškrtnutí **Povolit pouze můj kód**.
 
 ### <a name="extracted-sources"></a>Extrahované zdroje
 
 Zdrojový kód extrahovaný ze sestavení má následující omezení:
-- Název a umístění generovaných souborů nelze konfigurovat.
-- Soubory jsou dočasné a budou odstraněny visual studio.
-- Soubory jsou umístěny v jedné složce a všechny hierarchie složek, které původní zdroje měl se nepoužívá.
-- Název souboru pro každý soubor obsahuje kontrolní součet hash souboru.
+- Název a umístění generovaných souborů se nedají konfigurovat.
+- Soubory jsou dočasné a budou smazány pomocí aplikace Visual Studio.
+- Soubory jsou umístěny v jedné složce a v hierarchii složek, které původní zdroje nepoužívaly.
+- Název souboru pro každý soubor obsahuje hodnotu hash kontrolního součtu souboru.
 
-### <a name="generated-code-is-c-only"></a>Generovaný kód je pouze c#
-Dekompilace generuje pouze soubory zdrojového kódu v c#. Neexistuje žádná možnost generovat soubory v jiném jazyce.
+### <a name="generated-code-is-c-only"></a>Generovaný kód je pouze C#
+Dekompilace pouze generuje soubory zdrojového kódu v jazyce C#. Neexistuje žádný způsob, jak vygenerovat soubory v jiném jazyce.

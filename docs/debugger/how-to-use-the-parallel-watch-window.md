@@ -1,7 +1,7 @@
 ---
 title: Nastavte kukátko pro proměnné v paralelních vláknech | Microsoft Docs
 ms.date: 04/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.parallelwatch
 dev_langs:
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0628e75c54cf0da10dc5aecdf243ae1dda3485fb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9fb0d5ac60ea5ab89b02a624488b5df4f8a7164b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732017"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348623"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Nastavení kukátka pro proměnné v paralelních vláknech v saděC#Visual Studio ( C++, Visual Basic,)
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Nastavení kukátka pro proměnné v paralelních vláknech v sadě Visual Studio (C#, Visual Basic, C++)
 V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz obsahuje ve více vláknech. Každý řádek představuje vlákno, které běží v aplikaci, ale vlákno může být reprezentované ve více řádcích. Přesněji řečeno, každý řádek představuje volání funkce, jejíž signatura funkce odpovídá funkci v aktuálním bloku zásobníku. Položky, které jsou ve sloupcích, můžete řadit, přeřadit, odebírat a seskupovat. Vlákna můžete označit, zrušit jeho příznak, zablokovat (pozastavit) a uvolnit (pokračovat). V okně **paralelní sledování** se zobrazí následující sloupce:
 
 - Sloupec příznak, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.
@@ -82,9 +82,9 @@ V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz
 
 ### <a name="to-filter-by-a-boolean-expression"></a>Filtrování podle logického výrazu
 
-- Zadejte logický výraz do pole **filtrovat podle logického výrazu** . Ladicí program vyhodnotí výraz pro každý kontext vlákna. Zobrazí se pouze řádky, ve kterých je hodnota `true`.
+- Zadejte logický výraz do pole **filtrovat podle logického výrazu** . Ladicí program vyhodnotí výraz pro každý kontext vlákna. Zobrazí se pouze řádky, ve kterých je hodnota `true` zobrazena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Postupy: Použití okna vláken GPU](../debugger/how-to-use-the-gpu-threads-window.md)
-- [Návod: Ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+- [Postupy: použití okna vláken GPU](../debugger/how-to-use-the-gpu-threads-window.md)
+- [Návod: ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

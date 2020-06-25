@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Ladění zdroje rozhraní .NET Framework | Dokumentace Microsoftu'
+title: 'Postupy: ladění zdroje .NET Framework | Microsoft Docs'
 ms.date: 11/19/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debugging, .NET Framework source
 ms.assetid: fc12e472-ac6a-4e77-8e22-a769e13a03b8
@@ -10,59 +10,59 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 25f40b0528b794863aabdb13ed9785d2b0c551b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3f043aae44231608fb514e87a05717f4aeb924bc
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894271"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350092"
 ---
-# <a name="how-to-debug-net-framework-source"></a>Postupy: Ladění zdroje rozhraní .NET Framework
+# <a name="how-to-debug-net-framework-source"></a>Postupy: ladění zdroje .NET Framework
 
-Ladění zdroje rozhraní .NET Framework, musíte mít:
+Chcete-li ladit zdroj .NET Framework, musíte:
 
-- Povolte vstup do zdroje rozhraní.NET Framework.
+- Umožňuje zapnout krokování do zdroje .NET Framework.
 
-- Máte přístup k symbolům ladění pro kód.
+- Mít přístup ke symbolům ladění pro kód.
 
-  Je možné stáhnout symboly ladění okamžitě, nebo nastavte možnosti pro pozdější stažení. Pokud nestáhnete symboly ihned, stáhnou se při příštím spuštění ladění vaší aplikace. Při ladění, můžete použít také **moduly** nebo **zásobník volání** windows ke stažení a načíst symboly.
+  Můžete si zvolit, že se symboly ladění mají hned stáhnout, nebo nastavit možnosti pro pozdější stažení. Pokud symboly nestahujete hned, stáhne se při příštím spuštění ladění aplikace. Při ladění můžete také použít **moduly** nebo okna **zásobníku volání** ke stažení a načtení symbolů.
 
-### <a name="to-enable-stepping-into-net-framework-source"></a>Povolit vstup do zdroje rozhraní.NET Framework
+### <a name="to-enable-stepping-into-net-framework-source"></a>Postup povolení krokování do zdroje .NET Framework
 
-1. V části **nástroje** (nebo **ladění**) > **možnosti** > **ladění** > **Obecné**vyberte **zdroje povolit rozhraní .NET Framework krokování**.
+1. V části **nástroje** (nebo **ladění**) > **Možnosti**  >  **ladění**  >  **obecně**vyberte **Povolit .NET Framework krokování zdroje**.
 
-   - Pokud jste měli povoleným kódem Just My, dialogové okno upozornění zjistíte, že funkce pouze můj kód je nyní zakázána. Vyberte **OK**.
+   - Pokud jste Pouze můj kód povolili, zobrazí se dialogové okno s upozorněním, že Pouze můj kód je teď zakázané. Vyberte **OK**.
 
-   - Pokud nemáte nastavení mezipaměti místního symbolu, dialogové okno upozornění zjistíte, že byla nastavena výchozí mezipaměti symbolů. Vyberte **OK**.
+   - Pokud jste nenastavili místní mezipaměť symbolů, zobrazí se dialogové okno s upozorněním, že byla nastavena výchozí mezipaměť symbolů. Vyberte **OK**.
 
-1. Vyberte **OK** zavřete **možnosti** dialogového okna.
+1. Kliknutím na **tlačítko OK** zavřete dialogové okno **Možnosti** .
 
-### <a name="to-set-or-change-symbol-source-locations-and-loading-behavior"></a>Nastavit nebo změnit zdroj umístění symbolu a chování načítání
+### <a name="to-set-or-change-symbol-source-locations-and-loading-behavior"></a>Nastavení nebo změna umístění zdroje symbolu a chování načítání
 
-1. Vyberte **symboly** kategorie v části **nástroje** (nebo **ladění**) > **možnosti** > **ladění**.
+1. Vyberte kategorii **symboly** v nabídce **nástroje** (nebo **ladění**) > **Options**  >  **ladění**možností.
 
-1. Na **symboly** stránce v části **Symbol umístění souborů (.pdb)** vyberte **Microsoft Symbol Servers** symboly přístup z veřejné symbolové servery společnosti Microsoft. Vyberte tlačítko Přidat další umístění symbolů a změnit pořadí načítání.
+1. Na stránce **symboly** v části **umístění souborů symbolů (. pdb)** vyberte **Microsoft Symbol Servers** , abyste měli přístup k symbolům z veřejných serverů Microsoft symbol. Vyberte tlačítka panelu nástrojů pro přidání dalších umístění symbolů a změňte pořadí načítání.
 
-1. Chcete-li změnit váš místní symboly mezipaměti, upravit nebo můžete procházet do jiného umístění v rámci **mezipaměti symbolů v tomto adresáři**.
+1. Chcete-li změnit místní mezipaměť symbolů, upravte nebo vyhledejte jiné umístění v části **symboly mezipaměti v tomto adresáři**.
 
-1. Chcete-li stáhnout symboly hned, vyberte **načtení všech symbolů**. Toto tlačítko je k dispozici pouze při ladění.
+1. Chcete-li stáhnout symboly hned, vyberte **načíst všechny symboly**. Toto tlačítko je k dispozici pouze při ladění.
 
-   Pokud není nyní nestahovat symboly, budete se stáhnou při příštím spuštění ladění.
+   Pokud symboly nestahujete nyní, budou staženy při příštím spuštění ladění.
 
-1. Vyberte **OK** zavřete **možnosti** dialogového okna.
+1. Kliknutím na **tlačítko OK** zavřete dialogové okno **Možnosti** .
 
-### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Načíst symboly z modulů nebo zásobník volání systému windows
+### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Načtení symbolů z modulů nebo oken zásobníku volání
 
-1. Během ladění, otevřete okno tak, že vyberete **ladění** > **Windows** > **moduly** (nebo stiskněte klávesu **Ctrl + Alt + U**) nebo **ladění** > **Windows** > **zásobník volání** (**Ctrl + Alt + C**).
+1. Během ladění otevřete okno výběrem možnosti **ladit**  >  moduly**systému Windows**  >  **Modules** (nebo stiskněte klávesy **CTRL + ALT + U**) nebo **laděním**  >  **Windows**  >  **zásobníku volání** systému Windows (**CTRL + ALT + C**).
 
-1. Klikněte pravým tlačítkem na modul, pro který nejsou načteny symboly. V **moduly** , stav načítání symbolů je okno **symboly stavu** sloupce. V **zásobník volání** okna, stav je **stav rámce** sloupce a rámeček zobrazena šedě.
+1. Klikněte pravým tlačítkem na modul, pro který nejsou načtené symboly. V okně **moduly** je stav načítání symbolů ve sloupci **stav symbolů** . V okně **zásobník volání** je stav ve sloupci **stav rámce** a rámeček je šedý.
 
-   - Vyberte **načíst symboly** z nabídky pro vyhledání a načtení souborů ze složky na svém počítači.
+   - V nabídce vyberte **načíst symboly** , abyste našli a načetli soubory symbolů ze složky na vašem počítači.
 
-   - Vyberte **informace o načítání symbolů** zobrazíte umístění ladicí program hledá symboly.
+   - Vyberte **informace o načtení symbolů** pro zobrazení umístění, ve kterém ladicí program hledal symboly.
 
-   - Vyberte **nastavení symbolu** otevřít **symboly** stránky. Na **symboly** stránce v části **Symbol umístění souborů (.pdb)** vyberte **Microsoft Symbol Servers** symboly přístup z veřejné symbolové servery společnosti Microsoft. Vyberte tlačítko Přidat další umístění symbolů a změnit pořadí načítání. Vyberte **OK** zavřete dialogové okno.
+   - Vyberte **Nastavení symbolu** a otevřete stránku **symboly** . Na stránce **symboly** v části **umístění souborů symbolů (. pdb)** vyberte **Microsoft Symbol Servers** , abyste měli přístup k symbolům z veřejných serverů Microsoft symbol. Vyberte tlačítka panelu nástrojů pro přidání dalších umístění symbolů a změňte pořadí načítání. Kliknutím na **tlačítko OK** zavřete dialogové okno.
 
-### <a name="see-also"></a>Viz také:
+### <a name="see-also"></a>Viz také
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
-- [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

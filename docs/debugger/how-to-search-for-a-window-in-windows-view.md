@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Hledání okna v zobrazení pro Windows | Dokumentace Microsoftu'
+title: Postup hledání okna v zobrazení Windows | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - windows, searching in Windows view
 ms.assetid: 30306970-b861-4315-acf8-f86a43d4e73b
@@ -10,41 +10,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ba5c8469885fd62c99a672e894cde82700c980d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: fb5fb871ebf03595c0baca0336e8449fe39029f3
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63389294"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349234"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Postupy: Hledání okna v zobrazení oken
-Můžete vyhledat konkrétní okno v zobrazení pro Windows s použitím jeho popisovač, titulků, třídy nebo kombinace jeho titulek a třídy jako kritéria hledání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí vlastnosti vybrané okno ve stromové struktuře okna.
+Můžete vyhledat konkrétní okno v zobrazení Windows pomocí jeho popisovače, titulku, třídy nebo kombinace jeho titulku a třídy jako kritéria hledání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně zobrazí atributy vybraného okna ve stromu okna.
 
- Začněte s stromu i na druhé úrovni (všechna okna, které jsou podřízené plochy), takže můžete určit úroveň plochy windows tak, že jejich název třídy a název. Po výběru úrovně desktop okno, můžete rozšířit tuto úroveň najít konkrétní podřízené okno.
+ Začněte se stromovou strukturou rozbalenou na druhou úroveň (všechny systémy Windows, které jsou podřízené počítači), abyste mohli identifikovat okna na úrovni počítače podle názvu a názvu třídy. Po výběru okna na úrovni plochy můžete tuto úroveň rozbalit a najít tak konkrétní podřízené okno.
 
-### <a name="to-search-for-a-window-in-windows-view"></a>Hledání okna v zobrazení pro Windows
+### <a name="to-search-for-a-window-in-windows-view"></a>Hledání okna v zobrazení Windows
 
-1. Uspořádat okna tak tohoto nástroje Spy ++, [zobrazení Windows](../debugger/windows-view.md) okna a okna cílové jsou vidět.
+1. Uspořádejte okna tak, aby se zobrazila okna Spy + +, [Windows View](../debugger/windows-view.md) a cílové okno.
 
-2. Z **hledání** nabídce zvolte **najít okno**.
+2. V nabídce **Hledat** vyberte možnost **Najít okno**.
 
-    [Dialogové okno hledání](../debugger/window-search-dialog-box.md) otevře.
+    Otevře se [dialogové okno hledání okna](../debugger/window-search-dialog-box.md) .
 
    > [!TIP]
-   > Chcete-li přehlednost obrazovky, vyberte **skrýt Spy** možnost. Tato možnost ukrývá hlavního okna nástroje Spy ++ a zůstane jen **okno hledání** dialogové okno viditelné nad vaší aplikace. Obnovení hlavního okna nástroje Spy ++, po kliknutí na **OK** nebo **zrušit**, nebo pokud zrušíte výběr **skrýt Spy ++** možnost.
+   > Pokud chcete omezit přehlednost obrazovky, vyberte možnost **Skrýt Spy** . Tato možnost skrývá hlavní okno nástroje Spy + + a v horní části ostatních aplikací zůstane viditelné pouze dialogové okno pro **hledání okna** . Po kliknutí na tlačítko **OK** nebo **Zrušit**dojde k obnovení hlavního okna nástroje Spy + +, nebo když zrušíte zaškrtnutí políčka **Skrýt Spy + +** .
 
-3. Přetáhněte **tažením nástroje hledání** intervalu cíl. Při přetahování nástroj, **okno hledání** dialogové okno zobrazí podrobnosti o vybrané okno.
+3. Přetáhněte **Nástroj hledání** přes cílové okno. Při přetahování nástroje se v dialogovém okně **hledání okna** zobrazí podrobnosti o vybraném okně.
 
-   - nebo –
+   - ani
 
-     Pokud znáte popisovač okna chcete (například z ladicího programu), můžete zadat ho **zpracování** pole.
+     Pokud znáte popisovač okna, které chcete (například z ladicího programu), můžete ho zadat do pole **popisovač** .
 
-   - nebo –
+   - ani
 
-     Pokud víte, titulek a/nebo třídy okna, chcete, můžete je zadat **titulek** a **třídy** textová pole a zrušte zaškrtnutí **zpracování** textového pole.
+     Pokud znáte titulek nebo třídu požadovaného okna, můžete je zadat do textových polí **Caption** a **Class** a vymazat textové pole **popisovač** .
 
-4. Zvolte **nahoru** nebo **dolů** pro počáteční směr hledání.
+4. Pro počáteční směr hledání vyberte **nahoru** nebo **dolů** .
 
 5. Klikněte na **OK**.
 
-    Pokud je nalezen odpovídající okno, je zvýrazněn [zobrazení Windows](../debugger/windows-view.md) okna.
+    Pokud je nalezeno párové okno, je zvýrazněno v okně [zobrazení systému Windows](../debugger/windows-view.md) .

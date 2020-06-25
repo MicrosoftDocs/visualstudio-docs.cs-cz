@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Obnovení skrytých příkazů ladicího programu | Microsoft Docs'
+title: Postup obnovení skrytých příkazů ladicího programu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a45791843abe3051bacb9655c773ac9dfc6b9045
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 13b4db03a75decd41430c282a67276caa60182d8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732913"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349377"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Postupy: Obnovení skrytých příkazů ladicího programu
 Při nastavování aplikace Visual Studio budete požádáni o výběr sady výchozích nastavení IDE pro primární programovací jazyk. Výchozí nastavení IDE pro některé jazyky mohou skrýt určité příkazy ladicího programu.
@@ -60,18 +60,18 @@ Při nastavování aplikace Visual Studio budete požádáni o výběr sady výc
 
 3. Na stránce **Uložit aktuální nastavení** rozhodněte, zda chcete uložit existující nastavení, a poté klikněte na tlačítko **Další**.
 
-4. Na stránce **zvolit kolekci nastavení k importu** vyberte v části **výchozí nastavení** složku nastavení pro vývoj, která obsahuje příkazy, které chcete použít. Pokud si nejste jisti, kterou kolekci si vybrat, zkuste **Obecné vývojové nastavení** nebo **nastavení pro C++ vizuální vývoj**, které poskytuje většinu příkazů ladicího programu.
+4. Na stránce **zvolit kolekci nastavení k importu** vyberte v části **výchozí nastavení** složku nastavení pro vývoj, která obsahuje příkazy, které chcete použít. Pokud si nejste jisti, kterou kolekci si vybrat, zkuste **Obecné vývojové nastavení** nebo **Visual C++ vývojové nastavení**, které poskytuje většinu příkazů ladicího programu.
 
-5. Klikněte na tlačítko **Další**.
+5. Klikněte na **Další**.
 
 6. Na stránce **zvolit nastavení pro import** v části **Možnosti**zkontrolujte, zda je vybráno **ladění** . Pokud tato nastavení nechcete importovat, zrušte zaškrtnutí těchto políček.
 
-7. Klikněte na tlačítko **Dokončit**.
+7. Klikněte na **Finish** (Dokončit).
 
 8. Na stránce **importovat dokončení** zkontrolujte všechny chyby spojené s resetováním nastavení v části **Podrobnosti**.
 
 9. Klikněte na **Zavřít**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

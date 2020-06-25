@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Spuštění a zastavení displeje protokolu zpráv | Dokumentace Microsoftu'
+title: Jak spustit a zastavit zobrazení protokolu zpráv | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - message log display, starting
 - logging, starting message log display
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1fd5a7b7951056f65604bdea67eddcc3e696da
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7165e9a9d3a4d935e01870b6049307b5a85bdce8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825018"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349039"
 ---
-# <a name="how-to-start-and-stop-the-message-log-display"></a>Postupy: Spuštění a zastavení zobrazení protokolu zpráv
-Při [zobrazení zpráv](../debugger/messages-view.md) okno je aktivní, **spustit protokolování** nebo **zastavit protokolování** možnost se zobrazí v nástroji Spy ++ **zprávy** nabídky a odpovídající **spustit protokolování** nebo **zastavit protokolování** stane aktivní tlačítko panelu nástrojů.
+# <a name="how-to-start-and-stop-the-message-log-display"></a>Postupy: Spuštění a zastavení displeje protokolu zpráv
+Když je aktivní okno [zobrazení zpráv](../debugger/messages-view.md) , **v nabídce Spy + +** se zobrazí možnosti **Spustit protokolování** nebo **zastavit protokolování** a pak bude aktivní odpovídající tlačítko **Spustit protokolování** nebo **zastavit protokolování** .
 
 ### <a name="to-start-the-message-log-display"></a>Spuštění zobrazení protokolu zpráv
 
-1. Z **zprávy** nabídce zvolte **spustit protokolování**.
+1. V nabídce **zprávy** vyberte možnost **Spustit protokolování**.
 
-### <a name="to-stop-the-message-log-display"></a>Zastavení displeje protokolu zpráv
+### <a name="to-stop-the-message-log-display"></a>Zastavení zobrazení protokolu zpráv
 
-1. Z **zprávy** nabídce zvolte **zastavit protokolování**.
+1. V nabídce **zprávy** vyberte možnost **zastavit protokolování**.

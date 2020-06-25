@@ -1,7 +1,7 @@
 ---
 title: Kontrola výjimky – Visual Studio | Microsoft Docs
 ms.date: 1/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dae1609486ec4f3462be89b0526467dd7414647
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76829787"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350495"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Kontrola výjimky pomocí pomocníka výjimky 
 
@@ -38,7 +38,7 @@ Při přerušení ladicího programu na výjimku se zobrazí ikona chyby výjimk
 Můžete okamžitě přečíst typ výjimky a zprávu o výjimce v Pomocníkovi výjimky a zda byla výjimka vyvolána nebo Neošetřená. Kliknutím na odkaz **Zobrazit podrobnosti** můžete zkontrolovat a zobrazit vlastnosti objektu výjimky.
 
 ## <a name="analyze-null-references"></a>Analyzovat odkazy s hodnotou null
-Od sady Visual Studio 2017, pro .NET i C/C++ Code, když zaškrtnete `NullReferenceException` nebo `AccessViolation`, v Pomocníkovi výjimky se zobrazí informace o analýze null. Analýza se zobrazí jako text pod zprávou výjimky. Na následujícím obrázku jsou informace zobrazeny jako "**s** byly null".
+Od sady Visual Studio 2017 pro kód .NET i C/C++, když zaškrtnete `NullReferenceException` nebo `AccessViolation` , uvidíte informace o analýze null v Pomocníkovi výjimky. Analýza se zobrazí jako text pod zprávou výjimky. Na následujícím obrázku jsou informace zobrazeny jako "**s** byly null".
 
 ![Analýza výjimky null pro pomoc](media/debugger-exception-helper-default.png)
 
@@ -55,9 +55,9 @@ Pokud má výjimka nějaké vnitřní výjimky ([InnerException](https://docs.mi
 ![Výjimka pomocníka s vnitřní výjimkou](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="inspect-rethrown-exceptions"></a>Zkontrolovat znovu vyvolané výjimky
-V případech, kdy byla výjimka `thrown` pomocník výjimky ukazuje zásobník volání z prvního okamžiku vyvolání výjimky. Pokud byla výjimka vyvolána víckrát, zobrazí se pouze zásobník volání z původní výjimky.
+V případech, kdy došlo k výjimce `thrown` pomocníka výjimky, zobrazuje zásobník volání z prvního okamžiku, kdy byla výjimka vyvolána. Pokud byla výjimka vyvolána víckrát, zobrazí se pouze zásobník volání z původní výjimky.
 
 ![Pomocný Pomocník s výjimkami a výjimkami](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Sdílení ladicí relace s Live Share
-Z pomocníka pro výjimky můžete spustit relaci [Live Share](https://docs.microsoft.com/visualstudio/liveshare/) pomocí **Live Share spustit relaci...** . Kdokoli, kdo se připojí k relaci Live Share, uvidí pomocníka výjimky spolu s dalšími informacemi o ladění.
+Z pomocníka pro výjimky můžete spustit relaci [Live Share](https://docs.microsoft.com/visualstudio/liveshare/) pomocí **Live Share spustit relaci...**. Kdokoli, kdo se připojí k relaci Live Share, uvidí pomocníka výjimky spolu s dalšími informacemi o ladění.

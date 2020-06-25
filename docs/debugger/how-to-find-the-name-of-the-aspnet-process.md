@@ -1,7 +1,7 @@
 ---
 title: Najít spuštěný proces ASP.NET | Microsoft Docs
 ms.date: 11/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,31 +16,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 54aa98dd238d7a78e4ae89af05dceae0f9911478
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: c14067d58289dd0b41fa526937a0553c10934ea7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187653"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349604"
 ---
 # <a name="find-the-name-of-the-aspnet-process"></a>Hledání názvu procesu ASP.NET
 
-Chcete-li ladit běžící aplikaci [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], ladicí program sady Visual Studio se musí připojit k procesu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] podle názvu.
+Chcete-li ladit spuštěnou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikaci, musí být ladicí program sady Visual Studio připojen k [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] procesu podle názvu.
 
 **Zjistit, na kterém procesu běží aplikace ASP.NET:**
 
-1. V aplikaci, která běží, vyberte v aplikaci Visual Studio možnost **ladění** > **připojit k procesu**.
+1. V aplikaci spuštěné v aplikaci Visual Studio vyberte **ladit**  >  **připojit k procesu**.
 
 1. V dialogovém okně **připojit k procesu** zadejte první písmena názvů procesů z následujícího seznamu nebo je zadejte do vyhledávacího pole. Ten, který je spuštěný, je ten, který spouští aplikaci ASP.NET. Připojte se k tomuto procesu pro ladění aplikace.
 
-    - *W3wp. exe* je IIS 6,0 a novější.
-    - program *Aspnet_wp. exe* je dřívější verze služby IIS.
-    - *IISExpress. exe* je IISExpress.
-    - *dotnet. exe* je ASP.NET Core.
-    - *Inetinfo. exe* je starší aplikace ASP běžící v procesu.
+    - *w3wp.exe* je IIS 6,0 a novější.
+    - *aspnet_wp.exe* je dřívější verze služby IIS.
+    - *iisexpress.exe* je IISExpress.
+    - *dotnet.exe* je ASP.NET Core.
+    - *inetinfo.exe* jsou starší aplikace ASP spuštěné v procesu.
 
 >[!NOTE]
->Visual Studio 2012 a starší [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kódu mohou být v systému souborů a spuštěny na testovacím serveru *webdev. webServer. exe* nebo *webdev. WebServer40. exe*. V tomto případě pro místní ladění připojte k *webdev. webServer. exe* nebo *webdev. WebServer40. exe* místo procesu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)].
+>Visual Studio 2012 a starší [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kód mohou být v systému souborů a spuštěny na testovacím serveru *WebDev.WebServer.exe* nebo *WebDev.WebServer40.exe*. V tomto případě se k místnímu ladění připojí místo procesu *WebDev.WebServer.exe* nebo *WebDev.WebServer40.exe* [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
 
 **Viz také:**
 

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Ladění vnořeného kódu sestavení | Dokumentace Microsoftu'
+title: Postup ladění vloženého kódu sestavení | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.inline
 dev_langs:
@@ -19,27 +19,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e76b2668d8777c46404f0b304eeb56d1821bb8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 528defb516b704f0425ac4389a2fd65befef7063
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894297"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350027"
 ---
 # <a name="how-to-debug-inline-assembly-code"></a>Postupy: Ladění vnořeného kódu sestavení
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte nastavení importu a exportu v nabídce Nástroje. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
 
-Ladicí program poskytuje dvě okna pro ladění kódu vnořeného sestavení **zpětný překlad** okno a **zaregistruje** okna.
+Ladicí program poskytuje dvě okna pro ladění vloženého kódu sestavení, okna zpětného **překladu** a okno **Registry** .
 
 ## <a name="debug-inline-assembly-code"></a>Ladění vnořeného kódu sestavení
 
-1. Použití **zpětný překlad** okna, chcete-li zobrazit pokyny k sestavení.
+1. Použijte okno zpětný **Překlad** k zobrazení instrukcí sestavení.
 
-2. Použití **zaregistruje** okno k zobrazení obsahu registru.
+2. K zobrazení obsahu registru použijte okno **Registry** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)

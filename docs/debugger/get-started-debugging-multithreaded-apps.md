@@ -3,7 +3,7 @@ title: Naučte se ladit vícevláknové aplikace
 description: Ladění pomocí paralelních zásobníků a oken paralelního kukátka v sadě Visual Studio
 ms.custom: ''
 ms.date: 02/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f280a93022342fd9ca4dcae5cdac1de919fe1657
-ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
+ms.openlocfilehash: 30fd29357ab8b42ea6a8baa6412f9ccf7eafed28
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416402"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350508"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Začínáme s laděním vícevláknových aplikací (C#, Visual Basic, C++)
 
@@ -42,28 +42,28 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
 
    ::: moniker range=">=vs-2019"
 
-   Pokud okno Start není otevřeno, vyberte **soubor** > **Spustit okno**.
+   Pokud okno Start není otevřeno, klikněte **na tlačítko** > **Start okna**.
 
    V okně Start vyberte možnost **vytvořit nový projekt**.
 
-   V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu **C#** jazyk **C++** vyberte, nebo **Visual Basic** a v seznamu platforma zvolte možnost **Windows** . 
+   V okně **vytvořit nový projekt** zadejte do vyhledávacího pole nebo zadejte *Console* . Dále v seznamu jazyk vyberte **C#**, **C++** nebo **Visual Basic** a v seznamu platforma zvolte **Windows** . 
 
-   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace (.NET Core)** nebo, pro C++šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
+   Po použití filtrů jazyků a platforem zvolte **Konzolová aplikace (.NET Core)** nebo, pro C++, šablonu **Konzolová aplikace** a klikněte na tlačítko **Další**.
 
    > [!NOTE]
-   > Pokud nevidíte správnou šablonu, přejděte na **nástroje** > **získat nástroje a funkce...** , který otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **Desktop C++**  a zvolte možnost **Upravit**.
+   > Pokud nevidíte správnou šablonu, přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
 
    V okně **Konfigurovat nový projekt** zadejte nebo zadejte *MyThreadWalkthroughApp* do pole **název projektu** . Pak zvolte **vytvořit**.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
-   V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
+   V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
 
-   - V případě C# aplikace v části **vizuál C#** zvolte **Windows Desktop**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
-   - V případě aplikace Visual Basic vyberte v části **Visual Basic**možnost **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
-   - V případě C++ aplikace v části **vizuál C++** zvolte **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
+   - V případě aplikace v jazyce C# v části **Visual C#** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **aplikace konzoly (.NET Framework)**.
+   - V případě aplikace Visual Basic vyberte v části **Visual Basic**možnost **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)**.
+   - V aplikaci C++ klikněte v části **Visual C++** na **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
-   Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++šablonu projektu **Konzolová aplikace** , přejděte do části **nástroje** > **získat nástroje a funkce...** , který otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **Desktop C++**  a zvolte možnost **Upravit**.
+   Pokud se nezobrazuje **Konzolová aplikace (.NET Core)** nebo, pro C++, šablona projektu **Konzolová aplikace** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **desktopové vývojové prostředí pomocí C++** a pak zvolte **Upravit**.
 
    Pak zadejte název jako *MyThreadWalkthroughApp* a klikněte na **OK**.
 
@@ -232,7 +232,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
     Console.WriteLine()
     ```
 
-1. Kliknutím levým na levé straně `Thread.Sleep` nebo příkazu `std::this_thread::sleep_for` vložte novou zarážku.
+1. Kliknutím levým na levé straně `Thread.Sleep` `std::this_thread::sleep_for` příkazu or vložíte novou zarážku.
 
     Červený kroužek na hřbetu indikuje, že je v tomto umístění nastavená zarážka.
 
@@ -242,33 +242,33 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
 
 3. V editoru zdrojového kódu vyhledejte řádek, který obsahuje zarážku.
 
-### <a name="ShowThreadsInSource"></a>Zjistit značku vlákna  
+### <a name="discover-the-thread-marker"></a><a name="ShowThreadsInSource"></a>Zjistit značku vlákna  
 
 1. Na panelu nástrojů ladění vyberte tlačítko **Zobrazit vlákna ve zdroji** ![Zobrazit vlákna ve zdroji](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
 
 2. Stiskněte klávesu **F11** jednou pro posunutí ladicího programu o jeden řádek kódu.
 
-3. Podívejte se na ovládací prvek na levé straně okna. Na tomto řádku uvidíte ![značku vlákna](../debugger/media/dbg-thread-marker.png "ThreadMarker") *ikony vlákna, která se* podobá dvěma vytvořeným vláknům. Značky vlákna označuje, že je vlákno zastavené v tomto umístění.
+3. Podívejte se na hřbet na levé straně okna. Na tomto řádku uvidíte ![značku vlákna](../debugger/media/dbg-thread-marker.png "ThreadMarker") *ikony vlákna, která se* podobá dvěma vytvořeným vláknům. Značka vlákna označuje, že vlákno je v tomto umístění zastaveno.
 
     Značka vlákna může být částečně skryta zarážkou.
 
-4. Ukazatel myši značky vlákna. Zobrazí se DataTip s informacemi o názvu a čísle ID vlákna pro každé zastavené vlákno. V tomto případě je název pravděpodobně `<noname>`.
+4. Najeďte ukazatelem myši na značku vlákna. Zobrazí se DataTip s informacemi o názvu a čísle ID vlákna pro každé zastavené vlákno. V tomto případě je název pravděpodobně `<noname>` .
 
 5. Vyberte značku vlákna, abyste viděli dostupné možnosti v místní nabídce.
 
-### <a name="ParallelStacks"></a>Zobrazit umístění vláken
+### <a name="view-the-thread-locations"></a><a name="ParallelStacks"></a>Zobrazit umístění vláken
 
 V okně **paralelní zásobníky** můžete přepínat mezi zobrazením vlákna a (pro programování na základě úloh) zobrazení úkolů a můžete zobrazit informace o zásobníku volání pro každé vlákno. V této aplikaci můžeme použít zobrazení vláken.
 
-1. Otevřete okno **paralelní zásobníky** tak, že vyberete možnost **ladění** > **Windows** > **paralelní zásobníky**. Měl by se zobrazit něco podobného jako následující. Přesné informace se budou lišit v závislosti na aktuálním umístění každého vlákna, hardwaru a programovacího jazyka.
+1. Otevřete okno **paralelní zásobníky** výběrem možnosti **ladit**  >  **Windows**  >  **paralelní zásobníky**Windows. Měl by se zobrazit něco podobného jako následující. Přesné informace se budou lišit v závislosti na aktuálním umístění každého vlákna, hardwaru a programovacího jazyka.
 
     ![Okno paralelní zásobníky](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
     V tomto příkladu uvidíme tyto informace pro spravovaný kód zleva doprava:
 
-    - Hlavní vlákno (levá strana) bylo zastaveno na `Thread.Start`, kde je bod zastavení označen ![značkou](../debugger/media/dbg-thread-marker.png "ThreadMarker")ikony vlákna.
-    - Dvě vlákna zadaly `ServerClass.InstanceMethod`, jeden z nich je aktuální vlákno (žlutá šipka), zatímco druhé vlákno bylo zastaveno v `Thread.Sleep`.
-    - Spouští se také nové vlákno (na pravé straně), ale při `ThreadHelper.ThreadStart`se zastavilo.
+    - Hlavní vlákno (levá strana) bylo zastaveno `Thread.Start` , kde je bod zastavení označen ![značkou](../debugger/media/dbg-thread-marker.png "ThreadMarker")ikony vlákna.
+    - Byla zadána dvě vlákna `ServerClass.InstanceMethod` , jedna z nich je aktuální vlákno (žlutá šipka), zatímco druhé vlákno bylo zastaveno v `Thread.Sleep` .
+    - Začíná také nové vlákno (na pravé straně), ale je zastaveno `ThreadHelper.ThreadStart` .
 
 2. Kliknutím pravým tlačítkem myši na položky v okně **paralelní zásobníky** zobrazíte dostupné možnosti v místní nabídce.
 
@@ -279,15 +279,15 @@ V okně **paralelní zásobníky** můžete přepínat mezi zobrazením vlákna 
 
 ### <a name="set-a-watch-on-a-variable"></a>Nastavení kukátka pro proměnnou
 
-1. Otevřete okno **paralelní sledování** tak, že vyberete možnost **ladění** > **Windows** > **paralelní sledování** > **paralelní sledování 1**.
+1. Otevřete okno **paralelní kukátko** výběrem možnosti **ladit**  >  **Windows**  >  **paralelní sledování**  >  **paralelní sledování 1**.
 
-2. Vyberte buňku, kde se zobrazuje text `<Add Watch>` (nebo prázdná buňka záhlaví ve sloupci 4) a zadejte `data`.
+2. Vyberte buňku, kde se zobrazuje `<Add Watch>` text (nebo prázdná buňka záhlaví ve sloupci 4) a zadejte `data` .
 
     Hodnoty pro datovou proměnnou pro každé vlákno se zobrazí v okně.
 
-3. Vyberte buňku, kde se zobrazuje text `<Add Watch>` (nebo prázdná buňka záhlaví ve sloupci 5 @) a zadejte `count`.
+3. Vyberte buňku, ve které se zobrazuje `<Add Watch>` text (nebo prázdná buňka záhlaví ve sloupci 5) a zadejte `count` .
 
-    Hodnoty proměnné `count` pro každé vlákno se zobrazí v okně. Pokud ještě tyto informace nevidíte, zkuste stisknout klávesu **F11** několikrát, abyste mohli pokračovat v provádění vláken v ladicím programu.
+    Hodnoty pro `count` proměnnou pro každé vlákno se zobrazí v okně. Pokud ještě tyto informace nevidíte, zkuste stisknout klávesu **F11** několikrát, abyste mohli pokračovat v provádění vláken v ladicím programu.
 
     ![Okno paralelního sledování](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
 
@@ -313,7 +313,7 @@ Můžete označit vlákna pro udržení přehledu o důležitých vláknech a ig
 
 5. Chcete-li zrušit označení vláken, klikněte pravým tlačítkem myši na jedno nebo více vláken označených příznakem v okně **paralelní kukátko** a vyberte možnost zrušit **příznak**.
 
-### <a name="bkmk_freeze"></a>Zablokovat a uvolnit provádění vlákna
+### <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a>Zablokovat a uvolnit provádění vlákna
 
 > [!TIP]
 > Můžete ukotvit a odblokovat (pozastavit a obnovit) vlákna a řídit tak pořadí, ve kterém vlákna provádějí práci. To vám může pomáhat vyřešit problémy souběžnosti, jako jsou zablokování a konflikty časování.
@@ -332,7 +332,7 @@ Můžete označit vlákna pro udržení přehledu o důležitých vláknech a ig
 
     Aplikace může také vytvořit instanci některých nových vláken. Všechna nová vlákna nejsou označena příznakem a nejsou zmrazena.
 
-### <a name="bkmk_follow_a_thread"></a>Sledování jednoho vlákna s podmíněnými zarážkami
+### <a name="follow-a-single-thread-with-conditional-breakpoints"></a><a name="bkmk_follow_a_thread"></a>Sledování jednoho vlákna s podmíněnými zarážkami
 
 Může být užitečné postupovat při provádění jednoho vlákna v ladicím programu. Jedním ze způsobů, jak to udělat, je zmrazení vláken, která vás zajímají. V některých scénářích může být nutné postupovat podle jednoho vlákna bez zmrazení jiných vláken, například pro reprodukování konkrétní chyby. Chcete-li postupovat podle vlákna bez zmrazení jiných vláken, musíte se vyhnout přerušení kódu s výjimkou vlákna, které vás zajímá. To můžete provést nastavením [podmíněné zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 

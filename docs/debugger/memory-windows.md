@@ -1,8 +1,8 @@
 ---
-title: Zobrazení paměti pro proměnné v ladicím programu | Dokumentace Microsoftu
+title: Zobrazit paměť pro proměnné v ladicím programu | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.memory
 dev_langs:
@@ -24,98 +24,98 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 794400a14cac5b85f813e7a384c650c581a719e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51070e06f684c2e873ded76ec8797ed7587745ff
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905575"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348317"
 ---
-# <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Použití okna paměť v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F#)
+# <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Použít paměťová okna v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
 
-Během ladění, **paměti** okno zobrazuje paměťový prostor, vaše aplikace používá.
+Během ladění zobrazuje okno **paměť** místo v paměti, které vaše aplikace používá.
 
-Ladicí program systému windows jako **Watch**, **automatické hodnoty**, **místní hodnoty**a **QuickWatch** dialogového okna se zobrazí, proměnné, které se ukládají na konkrétní umístění v paměti. **Paměti** v okně se zobrazí celkový obrázek. Zobrazení paměti je vhodné pro zkoumání velkých časti dat (vyrovnávací paměti nebo velké řetězce, například), které nechcete zobrazit i v jiných oknech.
+Okna ladicího programu, jako jsou **kukátko**, **Automatické**hodnoty, **místní**hodnoty a dialog **QuickWatch** , zobrazují proměnné, které jsou uloženy v určitých umístěních v paměti. V okně **paměť** se zobrazí celkový obrázek. Zobrazení paměti je výhodné pro zkoumání velkých částí dat (například vyrovnávacích pamětí nebo velkých řetězců), které se v ostatních oknech nezobrazují dobře.
 
-**Paměti** okno se neomezuje na zobrazení dat. Všechno, co zobrazí v paměti, včetně dat, kód a náhodné bits uvolňování paměti v nepřiřazené paměti.
+Okno **paměti** není omezené na zobrazení dat. Zobrazuje vše v paměťovém prostoru, včetně dat, kódu a náhodných bitů paměti v nepřiřazené paměti.
 
-**Paměti** okno není k dispozici pro skript nebo ladění SQL. Tyto jazyky není povědomý koncept paměti.
+Okno **paměti** není k dispozici pro ladění skriptů nebo SQL. Tyto jazyky nerozpoznají koncept paměti.
 
-## <a name="open-a-memory-window"></a>Otevřete okno paměti
+## <a name="open-a-memory-window"></a>Otevřít okno paměti
 
-Ostatní okna ladicího programu, jako jsou **paměti** windows jsou k dispozici pouze během relace ladění.
+Stejně jako ostatní okna ladicího programu jsou **paměťová** okna dostupná pouze během relace ladění.
 
 >[!IMPORTANT]
->Povolit **paměti** windows, **povolit ladění na úrovni adres** musí být vybraný v **nástroje** > **možnosti** (nebo **Ladění** > **možnosti**) > **ladění** > **Obecné**.
+>Chcete-li povolit okna **paměti** , **Povolte ladění na úrovni adres** , které je **Tools**nutné vybrat v  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění.
 
-**Otevře se okno paměti**
+**Otevření okna paměti**
 
-1. Ujistěte se, že **povolit ladění na úrovni adres** výběru v **nástroje** > **možnosti** (nebo **ladění**  >  **Možnosti**) > **ladění** > **Obecné**.
+1. Ujistěte se, že je vybrána možnost **Povolit ladění na úrovni adresy** v **Tools**  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění.
 
-1. Spuštění ladění tak, že vyberete na zelenou šipku klávesy **F5**, nebo výběrem **ladění** > **spustit ladění**.
+1. Spusťte ladění tak, že vyberete zelenou šipku, stisknete klávesu **F5** **nebo vyberete ladění**  >  **Spustit ladění**.
 
-2. V části **ladění** > **Windows** > **paměti**vyberte **paměti 1**, **paměti 2**, **Paměti 3**, nebo **paměti 4**. (Některých edicích systémů [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabízejí pouze jeden **paměti** okna.)
+2. V části **ladit**  >  **Windows**  >  **paměť**Windows vyberte **paměť 1**, **paměť 2**, **paměť 3**nebo **paměť 4**. (Některé edice [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nabídky nabízí jenom jedno okno **paměti** .)
 
 ## <a name="move-around-in-the-memory-window"></a>Pohyb v okně paměti
 
-Je velký adresní prostor počítače a kde můžete snadno ztratit posouváním v **paměti** okna.
+Adresní prostor počítače je velký a můžete ho snadno ztratit posouváním v okně **paměti** .
 
-Vyšších adresách paměti se zobrazí v dolní části okna. Zobrazit adresu vyšší, přesuňte se dolů. Chcete-li zobrazit adresu nižší posuňte nahoru.
+V dolní části okna se zobrazí vyšší adresy paměti. Pokud chcete zobrazit vyšší adresu, posuňte se dolů. Pokud chcete zobrazit nižší adresu, posuňte se nahoru.
 
-Můžete okamžitě přejít na uvedené adrese v **paměti** okna pomocí přetahování myší, nebo zadáním adresy v **adresu** pole. **Adresu** pole přijímá alfanumerické adresy a výrazy, které vedou na adresy, jako například `e.User.NonroamableId`.
+V okně **paměti** můžete okamžitě přejít na zadanou adresu pomocí přetažení nebo zadáním adresy do pole **adresa** . Pole **adresa** přijímá alfanumerické adresy a výrazy, které se vyhodnotí jako adresy `e.User.NonroamableId` .
 
-Chcete vynutit okamžitou opakované vyhodnocení výrazu v **adresu** vyberte zaoblení šipku **automaticky přehodnotit** ikonu.
+Chcete-li vynutit okamžité opakované vyhodnocení výrazu v poli **adresa** , vyberte ikonu **automaticky přehodnocení** .
 
-Ve výchozím nastavení **paměti** okno zpracovává **adresu** výrazů jako živé výrazy, které jsou znovu zhodnotí jako spuštění aplikace. Živé výrazů může hodit, například chcete-li zobrazit paměť, která je přistupovala proměnné ukazatele.
+Ve výchozím nastavení okno **paměti** zpracovává výrazy **adres** jako živé výrazy, které jsou znovu vyhodnocovány při spuštění aplikace. Živé výrazy mohou být užitečné, například pro zobrazení paměti, která je dotykem proměnné ukazatele.
 
-**Pokud chcete pomocí přetažení přetažení přesunout do umístění v paměti:**
+**Přesunutí do umístění v paměti pomocí přetažení myší:**
 
-1. V jakékoli okno ladicího programu vyberte adresu paměti nebo proměnné ukazatele, který obsahuje adresu paměti.
+1. V jakémkoli okně ladicího programu vyberte adresu paměti nebo proměnnou ukazatele obsahující adresu paměti.
 
-2. Přetažení adresu nebo ukazatel **paměti** okna. Tuto adresu se pak objeví v **adresu** pole a **paměti** přizpůsobí zobrazení, které řeší v horní části okna.
+2. Přetáhněte adresu nebo ukazatel v okně **paměti** . Tato adresa se pak zobrazí v poli **adresa** a v okně **paměť** se upraví na zobrazenou adresu v horní části.
 
-**Chcete-li přesunout do umístění v paměti tak, že ho zadáte do pole adresy:**
+**Pokud se chcete přesunout do umístění paměti tím, že ho zadáte do pole Adresa:**
 
-- Zadejte nebo vložte adresu nebo výrazu v **adresu** pole a stiskněte klávesu **Enter**, nebo vyberte z rozevíracího seznamu v **adresu** pole. **Paměti** přizpůsobí zobrazení, které řeší v horní části okna.
+- Zadejte nebo vložte adresu nebo výraz do pole **adresa** a stiskněte klávesu **ENTER**nebo vyberte v rozevíracím seznamu v poli **adresa** . Okno **paměť** se upraví tak, aby se zobrazila adresa v horní části.
 
-## <a name="customize-the-memory-window"></a>Přizpůsobení okna paměť
+## <a name="customize-the-memory-window"></a>Přizpůsobení okna paměti
 
-Ve výchozím nastavení obsah paměti se zobrazí jako celá čísla 1 bajt v šestnáctkovém formátu a šířku okna určuje počet sloupců, které jsou zobrazeny. Můžete přizpůsobit tak, jak **paměti** okno zobrazuje obsah paměti.
+Ve výchozím nastavení se obsah paměti zobrazuje jako celá čísla v šestnáctkovém formátu a šířka okna určuje počet zobrazených sloupců. Můžete upravit způsob, jakým okno **paměti** zobrazuje obsah paměti.
 
-**Chcete-li změnit formát obsah paměti:**
+**Postup změny formátu obsahu paměti:**
 
-- Klikněte pravým tlačítkem **paměti** okna a zvolte formáty, které chcete v místní nabídce.
+- Pravým tlačítkem myši klikněte v okně **paměť** a v místní nabídce vyberte požadované formáty.
 
-**Chcete-li změnit počet sloupců v okně paměti:**
+**Změna počtu sloupců v okně paměti:**
 
-- Vyberte šipku rozevíracího seznamu vedle položky **sloupce** pole a vyberte číslo sloupce, které chcete zobrazit, nebo vyberte **automaticky** pro automatickou úpravu založené na šířku okna.
+- Vyberte šipku rozevíracího seznamu vedle pole **sloupce** a vyberte počet sloupců, které chcete zobrazit, nebo vyberte možnost **automaticky** pro automatické úpravy podle šířky okna.
 
-Pokud nechcete, aby obsah **paměti** oknu změnit vaše aplikace běží, můžete ji vypnout vyhodnocení výrazu za provozu.
+Pokud nechcete, aby se obsah okna **paměti** měnil při spuštění aplikace, můžete vyhodnotit Live Expression reevaluation.
 
-**Chcete-li přepnout živé vyhodnocení:**
+**Postup při vypínání služby Live Evaluation:**
 
-- Klikněte pravým tlačítkem **paměti** okna a vyberte **automaticky přehodnotit** v místní nabídce.
+- Pravým tlačítkem myši klikněte v okně **paměť** a v místní nabídce vyberte znovu **automaticky vyhodnotit** .
 
   >[!NOTE]
-  >Live výraz hodnocení je přepínací tlačítko a je ve výchozím, proto výběr **automaticky přehodnotit** ji vypne. Výběr **automaticky přehodnotit** znovu ho znovu zapne.
+  >Vyhodnocování živých výrazů je přepínací tlačítko a je standardně zapnuté, takže výběr **přehodnocení se automaticky** vypne. Opětovným výběrem možnosti znovu **vyhodnotit automaticky** znovu navrátit.
 
-Můžete skrýt nebo zobrazit panel nástrojů v horní části **paměti** okna. Nebudete mít přístup k **adresu** pole nebo jiné nástroje, když je skrytý panelu nástrojů.
+Panel nástrojů můžete skrýt nebo zobrazit v horní části okna **paměti** . Pokud je panel nástrojů skrytý, nebudete mít přístup k poli **adresa** nebo k jiným nástrojům.
 
-**Chcete-li přepnout zobrazení na panelu nástrojů:**
+**Přepnutí zobrazení panelu nástrojů:**
 
-- Klikněte pravým tlačítkem **paměti** okna a vyberte **zobrazit panel nástrojů** v místní nabídce. Panelu nástrojů zobrazí nebo zmizí, v závislosti na jeho předchozího stavu.
+- Pravým tlačítkem myši klikněte v okně **paměť** a v místní nabídce vyberte **Zobrazit panel nástrojů** . Panel nástrojů se zobrazí nebo zmizí v závislosti na předchozím stavu.
 
-## <a name="follow-a-pointer-through-memory"></a>Aby následoval ukazatel přes paměti
+## <a name="follow-a-pointer-through-memory"></a>Sledovat ukazatel paměti
 
-V aplikacích s nativní kód můžete použít názvy registrů jako živé výrazy. Například můžete použít ukazatel zásobníku dodržovat zásobníku.
+V nativních aplikacích kódu můžete jako živé výrazy použít názvy registru. Například můžete použít ukazatel zásobníku a postupovat podle zásobníku.
 
-**Chcete-li, aby následoval ukazatel přes paměti:**
+**Postup při sledování ukazatele paměti:**
 
-1. V **paměti** okno **adresu** zadejte výraz ukazatele, který je v aktuálním oboru. V závislosti na jazyku budete muset přistoupit přes ukazatel.
+1. Do pole **adresa** v okně **paměti** zadejte výraz ukazatele, který se nachází v aktuálním oboru. V závislosti na jazyku bude pravděpodobně nutné na něj odkázat.
 
-2. Stisknutím klávesy **zadejte**.
+2. Stiskněte **Enter**.
 
-   Při použití příkazu ladění, jako **krok**, adresa paměti, které jsou zobrazeny v **adresu** pole a v horní části **paměti** okno se automaticky změní jako ukazatel změny.
+   Použijete-li příkaz ladění, jako je například **Krok**, adresa paměti zobrazená v poli **adresa** a v horní části okna **paměti** se automaticky změní při změně ukazatele.
 
-## <a name="see-also"></a>Viz také:
-- [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
+## <a name="see-also"></a>Viz také
+- [Zobrazit data v ladicím programu](../debugger/viewing-data-in-the-debugger.md)

@@ -2,7 +2,7 @@
 title: Zobrazit zásobník volání v ladicím programu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/29/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.callstack
 dev_langs:
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21573f1f8bd49782739027f7dfc2034bb7501a2f
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535987"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348740"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Zobrazení zásobníku volání a použití okna zásobník volání v ladicím programu
 
@@ -52,7 +52,7 @@ Pokud nejsou [symboly ladění](#bkmk_symbols) k dispozici pro část zásobník
 
 ## <a name="view-the-call-stack-while-in-the-debugger"></a>Zobrazit zásobník volání během ladicího programu
 
-- Při ladění vyberte v nabídce **ladění** možnost **zásobník volání Windows >** .
+- Při ladění vyberte v nabídce **ladění** možnost **zásobník volání Windows >**.
 
   ![Okno zásobníku volání](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
 
@@ -66,7 +66,7 @@ Neuživatelský kód je jakýkoli kód, který není zobrazen, je-li povoleno [p
 
 `[<External Code>]`
 
-## <a name="bkmk_switch"></a>Přepnout na jiný rámec zásobníku (změnit kontext ladicího programu)
+## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a>Přepnout na jiný rámec zásobníku (změnit kontext ladicího programu)
 
 1. V okně **zásobník volání** klikněte pravým tlačítkem myši na rámec zásobníku, jehož kód a data chcete zobrazit.
 
@@ -96,21 +96,21 @@ Neuživatelský kód je jakýkoli kód, který není zobrazen, je-li povoleno [p
 
 V Visual Studio Enterprise (pouze) můžete zobrazit mapy kódu pro zásobník volání během ladění.
 
-- V okně **zásobník volání** otevřete místní nabídku. Vyberte možnost **Zobrazit zásobník volání na mapě kódu** (**Ctrl**  + **SHIFT**  +  **`** ).
+- V okně **zásobník volání** otevřete místní nabídku. Vyberte možnost **Zobrazit zásobník volání na mapě kódu** (**CTRL**  +  **SHIFT**  +  **`** ).
 
     Další informace naleznete v tématu [metody map v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
 
 ![Zobrazit zásobník volání na mapě kódu](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
 
-## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>Zobrazení kódu zpětného překladu pro funkci v zásobníku volání (C#, C++, Visual Basic,) F#
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>Zobrazení kódu zpětného překladu pro funkci v zásobníku volání (C#, C++, Visual Basic, F #)
 
 - V okně **zásobník volání** klikněte pravým tlačítkem myši na funkci, jejíž kód zpětného překladu chcete zobrazit, a vyberte možnost **Přejít na zpětný překlad**.
 
 ## <a name="change-the-optional-information-displayed"></a>Změna zobrazených volitelných informací
 
-- V okně **zásobník volání** klikněte pravým tlačítkem myši a nastavte nebo zrušte zaškrtnutí **Zobrazit \<** _informací, které chcete_  **>** .
+- V okně **zásobník volání** klikněte pravým tlačítkem myši a nastavte nebo zrušte zaškrtnutí **Zobrazit \<**_the information that you want_**> **.
 
-## <a name="bkmk_symbols"></a>Načtení symbolů pro modul (C#, C++, Visual Basic,) F#
+## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a>Načtení symbolů pro modul (C#, C++, Visual Basic, F #)
 
 V okně **zásobník volání** můžete načíst symboly ladění pro kód, který aktuálně nemá načteny symboly. Tyto symboly mohou být rozhraní .NET nebo systémové symboly stažené ze serverů veřejných symbolů společnosti Microsoft nebo symboly v cestě symbolů v počítači, který ladíte.
 
@@ -138,9 +138,9 @@ Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol
 
 5. Kliknutím na **tlačítko OK** zavřete dialogové okno **Možnosti** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Smíšený kód a chybějící informace v okně Zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
+- [Smíšený kód a chybějící informace v okně zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
 - [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
 - [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [Použití zarážek](../debugger/using-breakpoints.md)

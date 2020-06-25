@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29c74f74bbee19e414b3ee32948f3ca5338e8d53
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592985"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350820"
 ---
 # <a name="draw-shapes-and-paths"></a>Kreslení tvarů a cest
 
@@ -86,9 +86,9 @@ Pomocí nástroje **Výběr** vyberte cestu. Pomocí nástroje **pero** kliknět
 
 ## <a name="convert-a-shape-to-a-path"></a>Převod tvaru na cestu
 
-Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu. Vyberte tvar a pak vyberte **formát** > **cesta** > **převést na cestu**.
+Chcete-li upravit tvar stejným způsobem, jakým jste změnili cestu, převeďte tvar na cestu. Vyberte tvar a pak vyberte **Formát**  >  **Path**  >  **převést na cestu**cesta.
 
-**Podívejte se na krátké video:** ![nakonfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: převod tvaru na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
+**Podívejte se na krátké video:** ![ Konfigurovat nainstalované funkce ](../designers/media/bldadminconsoleinitialconfigicon.png) [, které fungují s cestami: převést tvar na cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 
 > [!NOTE]
 > **Převést na cestu** není aktuálně k dispozici pro aplikace pro UWP, které mají minimálně `TargetPlatformVersion` 10.0.16299.0 nebo novější.
@@ -99,13 +99,16 @@ Cesty a tvary můžete zkombinovat do jedné cesty.
 
 ![Kombinovat cesty](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|||||
-|-|-|-|-|
-|![Dva obrazce před kombinováním](../designers/media/b1_1.png)|Dva obrazce před kombinováním|![Krývají](../designers/media/b1_4.png)|Krývají|
-|![Toho](../designers/media/b1_2.png)|Toho|![Vyloučit překryv](../designers/media/b1_5.png)|Vyloučit překryv|
-|![Dělení](../designers/media/b1_3.png)|Dělení|![Odebrat](../designers/media/b1_6.png)|Odebrat|
+|Číslo|Akce|
+|-|-|
+|![Dva obrazce před kombinováním](../designers/media/b1_1.png)|Dva obrazce před kombinováním|
+|![Toho](../designers/media/b1_2.png)|Toho|
+|![Dělení](../designers/media/b1_3.png)|Dělení|
+|![Krývají](../designers/media/b1_4.png)|Krývají|
+|![Vyloučit překryv](../designers/media/b1_5.png)|Vyloučit překryv|
+|![Odčítání](../designers/media/b1_6.png)|Odčítání|
 
-**Podívejte se na krátké video:** ![nakonfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
+**Podívejte se na krátké video:** ![ Konfigurace nainstalovaných funkcí ](../designers/media/bldadminconsoleinitialconfigicon.png) [pracujících s cestami: kombinování cest](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 
 ## <a name="create-a-compound-path"></a>Vytvořit složenou cestu
 
@@ -115,7 +118,7 @@ Složenou cestu můžete kdykoli po vytvoření rozdělit do všech časových t
 
 ![Rozdělit složenou cestu](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
-**Podívejte se na krátké video:** ![nakonfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: Vytvořte složenou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
+**Podívejte se na krátké video:** ![ Konfigurace nainstalovaných funkcí ](../designers/media/bldadminconsoleinitialconfigicon.png) [pracujících s cestami: Vytvořte složenou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
 
 ## <a name="create-a-clipping-path"></a>Vytvořit ořezovou cestu
 
@@ -123,4 +126,4 @@ Ořezová cesta je cesta nebo tvar, který je použit na jiný objekt, skrýván
 
 ![Ořezová cesta](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
-**Podívejte se na krátké video:** ![nakonfigurovat nainstalované funkce](../designers/media/bldadminconsoleinitialconfigicon.png) [práci s cestami: vytvořte ořezovou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).
+**Podívejte se na krátké video:** ![ Konfigurace nainstalovaných funkcí ](../designers/media/bldadminconsoleinitialconfigicon.png) [pracujících s cestami: vytvořte ořezovou cestu](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).

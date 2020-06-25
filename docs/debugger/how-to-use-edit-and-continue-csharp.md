@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Použití operace upravit a pokračovat (C#) | Dokumentace Microsoftu'
+title: Jak použít příkaz Upravit a pokračovat (C#) | Microsoft Docs
 ms.date: 10/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,37 +15,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 515068f29045ef92ee7d2323f752ba2185f28cac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a88cff54679ac0deae32bfeeff1dd96526f19ea7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906268"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348857"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>Postupy: Použití operace Upravit a pokračovat (C#)
-S upravit a pokračovat můžete provést a použít změny kódu v režimu pozastavení během ladění, bez nutnosti zastavit a restartovat ladicí relaci.
+Pomocí příkaz Upravit a pokračovat můžete provést a použít změny kódu v režimu pozastavení během ladění, aniž by bylo nutné zastavit a znovu spustit ladicí relaci.
 
-Upravit a pokračovat pro C# dojde automaticky při provedení změny kódu v režimu přerušení, pokračujte v ladění s použitím **pokračovat**, **krok**, nebo **nastavit další příkaz**, nebo Vyhodnoťte funkci v okně ladicího programu.
+Příkaz Upravit a pokračovat pro jazyk C# proběhne automaticky, když provedete změny kódu v režimu pozastavení, potom budete pokračovat v ladění pomocí příkazu **pokračovat**, **Krokovat**nebo **nastavit další příkaz**nebo vyhodnotit funkci v okně ladicího programu.
 
-Další informace najdete v tématu [upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
+Další informace naleznete v tématu [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
 
 >[!NOTE]
->Upravit a pokračovat není podporována pro optimalizaci, smíšené, nebo systému SQL Server common language runtime (CLR) integrace kódu. Informace o dalších nepodporované scénáře, naleznete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md). Pokud se pokusíte upravit a pokračovat v jednom z těchto scénářů, zobrazí se okno se zprávou s informacemi o tom, že funkce upravit a pokračovat není podporována.
+>Příkaz Upravit a pokračovat není podporován pro optimalizovaný, smíšený nebo SQL Server kód pro integraci modulu CLR (Common Language Runtime). Informace o jiných nepodporovaných scénářích najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md). Pokud se pokusíte upravit a pokračovat v jednom z těchto scénářů, zobrazí se okno se zprávou oznamující, že příkaz Upravit a pokračovat není podporován.
 
-**K povolení nebo zakázání funkce upravit a pokračovat:**
+**Povolení nebo zakázání akce upravit a pokračovat:**
 
-1. Pokud jste v relaci ladění, zastavte ladění (**ladění** > **Zastavit ladění** nebo **Shift**+**F5**) .
+1. Pokud se nacházíte v relaci ladění, zastavte ladění (**ladění**  >  **zastaví ladění** nebo **SHIFT** + **F5**).
 
-1. V **nástroje** > **možnosti** (nebo **ladění** > **možnosti**) > **ladění**  >  **Obecné**zaškrtněte nebo zrušte **Povolit Editovat a pokračovat** zaškrtávací políčko.
+1. V **Tools**  >  **možnostech** nástrojů (nebo **Debug**  >  **Možnosti**ladění) > **Debugging**  >  **Obecné**ladění zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit úpravy a pokračování** .
 
-Nastavení se projeví při spuštění nebo restartování relace ladění.
+Nastavení se projeví při spuštění nebo opětovném spuštění relace ladění.
 
-**Chcete-li použít funkci upravit a pokračovat:**
+**Použití akce upravit a pokračovat:**
 
-1. Při ladění v režimu pozastavení změňte zdrojový kód.
+1. Během ladění v režimu pozastavení proveďte změnu zdrojového kódu.
 
-1. Z **ladění** nabídky, klikněte na tlačítko **pokračovat**, **krok**, nebo **nastavit další příkaz**, nebo vyhodnotíte funkci v okně ladicího programu.
+1. V nabídce **ladění** klikněte na možnost **pokračovat**, **Krok**, nebo **nastavit další příkaz**nebo vyhodnoťte funkci v okně ladicího programu.
 
-   Ladění pokračuje s novou, zkompilovaný kód.
+   Ladění pokračuje s novým kompilovaným kódem.
 
-Některé typy změn kódu nejsou podporovány funkcemi upravit a pokračovat. Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Některé typy změn kódu nejsou podporovány úpravou a pokračováním. Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).

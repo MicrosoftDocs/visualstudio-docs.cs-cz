@@ -1,7 +1,7 @@
 ---
 title: Zobrazení vláken GPU v ladicím programu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.gputthreads
 - vs.debug.gputhreads
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 972b21c4535df37dd81da6aceaa062b39176469c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cbbb49a1017fb0bc65300f3c16050db4954e1103
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732091"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348714"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>Postupy: použití okna vláken GPU (C++)
-V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spuštěny na GPU v aplikaci, kterou ladíte. Další informace o aplikacích, které běží na GPU, najdete v [ C++ ](/cpp/parallel/amp/cpp-amp-overview)tématu věnovaném amp Overview.
+V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spuštěny na GPU v aplikaci, kterou ladíte. Další informace o aplikacích, které běží na GPU, najdete v tématu [C++ amp Overview](/cpp/parallel/amp/cpp-amp-overview).
 
  Okno vlákna GPU obsahuje tabulku, ve které každý řádek představuje sadu vláken GPU, která má stejné hodnoty ve všech sloupcích. Položky, které jsou ve sloupcích, můžete řadit, přeřadit, odebírat a seskupovat. Vlákna můžete označit, odblokovat (pozastavit) a uvolnit (obnovit) z okna vlákna GPU. V okně vlákna GPU se zobrazí následující sloupce:
 
@@ -102,7 +102,7 @@ V okně vlákna GPU můžete prozkoumat a pracovat s vlákny, které jsou spušt
 
 - V okně vlákna GPU vyberte tlačítko příznak.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Postupy: Použití okna paralelního sledování](../debugger/how-to-use-the-parallel-watch-window.md)
-- [Návod: Ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+- [Postupy: použití okna paralelního sledování](../debugger/how-to-use-the-parallel-watch-window.md)
+- [Návod: ladění aplikace C++ AMP](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
