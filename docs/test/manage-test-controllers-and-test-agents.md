@@ -1,138 +1,138 @@
 ---
 title: Správa kontrolerů testů a testovacích agentů
 ms.date: 09/18/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 086601cb8cde00d63e3be85c028201922ebe5b76
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 78bd0143ee2584bcabb5e8ed4946818ee2590789
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880192"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286697"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Správa kontrolerů testů a testovacích agentů
 
-Pokud chcete pomocí sady Visual Studio vzdáleně spouštět testy, distribuovat testy mezi více počítačů nebo spustit zátěžové testy, musíte nakonfigurovat soubor testovacího řadiče, testovacích agentů a nastavení testu. Toto téma popisuje, jak spravovat testovací řadiče a testovací agenty po jejich první instalaci a konfiguraci.
+Pokud chcete použít aplikaci Visual Studio ke vzdálenému spuštění testů, distribuovat testy mezi více počítači nebo spustit zátěžové testy, je nutné nakonfigurovat testovací kontrolér, testovací agenty a soubor nastavení testu. Toto téma popisuje, jak spravovat testovací kontroléry a testovací agenty poté, co je nainstalujete a nakonfigurujete poprvé.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ::: moniker range="vs-2017"
-Pokud používáte Microsoft Test Manager ke spuštění testů v testovacích prostředích, můžete spravovat testovací řadiče a jejich agenty pomocí **Správce testovacího kontroléru** v **Centru testovacího prostředí** pro Správce testů společnosti Microsoft. Toto téma je použitelné pouze v případě, že ke spuštění testů používáte visual studio.
+Pokud používáte Microsoft Test Manager ke spuštění testů v testovacích prostředích, můžete spravovat testovací kontroléry a jejich agenty pomocí **Test Controller Manageru** v **testovacím centru** pro Microsoft Test Manager. Toto téma je použitelné pouze v případě, že používáte aplikaci Visual Studio ke spuštění testů.
 ::: moniker-end
 
-Informace o instalaci a konfiguraci testovacích agentů a testovacích řadičů pro spuštění testů v sadě Visual Studio naleznete v [tématu Konfigurace testovacích agentů a řadičů](../test/configure-test-agents-and-controllers-for-load-tests.md).
+Informace o instalaci a konfiguraci testovacích agentů a testovacích kontrolérů pro spuštění testů v aplikaci Visual Studio naleznete v tématu [Configure test Agents and Controllers](../test/configure-test-agents-and-controllers-for-load-tests.md).
 
-Chcete-li konfigurovat a sledovat testovací řadič a všechny registrované agenty, musíte mít soubor nastavení testu v testovacím projektu, který obsahuje testy, které chcete spustit. Otevřete soubor nastavení testu, zvolte **Role** a z rozbalovací nabídky pro pole **Řadič** zvolte **Spravovat testovací řadiče.**
+Chcete-li nakonfigurovat a monitorovat testovací kontrolér a všechny registrované agenty, musíte mít soubor nastavení testu v testovacím projektu, který obsahuje testy, které chcete spustit. Otevřete soubor nastavení testu, vyberte **role** a v rozevíracím seznamu pro pole **Controller** vyberte **Spravovat testovací kontroléry** .
 
-Pro projekt zátěžového testu můžete také zvolit **Spravovat testovací řadiče** z nabídky **Zátěžový test.**
+V případě projektu zátěžového testu můžete také zvolit možnost **Spravovat testovací kontroléry** z nabídky **zátěžový test** .
 
-## <a name="add-a-test-agent-to-a-test-controller"></a>Přidání testovacího agenta do testovacího řadiče
+## <a name="add-a-test-agent-to-a-test-controller"></a>Přidání testovacího agenta do testovacího kontroléru
 
-Můžete chtít přidat testovacího agenta do jiného testovacího řadiče nebo budete muset přidat testovacího agenta do testovacího řadiče, který jste právě nainstalovali.
+Můžete chtít přidat testovacího agenta k jinému testovacímu kontroleru nebo může být nutné přidat testovacího agenta k testovacímu kontroléru, který jste právě nainstalovali.
 
-### <a name="to-add-a-test-agent-to-a-test-controller"></a>Přidání testovacího agenta do testovacího řadiče
+### <a name="to-add-a-test-agent-to-a-test-controller"></a>Přidání testovacího agenta do testovacího kontroléru
 
-1. Zvolte **Spustit** > **nástroj pro konfiguraci testovacího agenta**.
+1. Vyberte možnost **Spustit**  >  **Nástroj pro konfiguraci testovacího agenta**.
 
-     Zobrazí se dialogové okno **Konfigurovat testovacího agenta.**
+     Zobrazí se dialogové okno **konfigurovat testovacího agenta** .
 
     > [!NOTE]
-    > Chcete-li jej přidat do testovacího řadiče, musíte mít již nainstalovaného testovacího agenta. Další informace o instalaci testovacího agenta naleznete v [tématu Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+    > Abyste mohli přidat testovacího agenta do testovacího kontroléru, je nutné, aby byl již nainstalován. Další informace o tom, jak nainstalovat testovacího agenta, najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
-2. Zobrazí se dvě možnosti, jak lze spustit testovacího agenta:
+2. Máte k dispozici dvě možnosti, jak lze spustit testovacího agenta:
 
-   - **Služba**: Pokud není nutné spouštět automatizované testy, které interagují s plochou, například programové testy ui nebo vytvoření záznamu videa při spuštění testu, v části **Spustit testovacího agenta jako vyberte** **služba**. Testovací agent bude spuštěn jako služba. Zvolte **Další**.
+   - **Služba**: Pokud nemusíte spouštět automatizované testy, které spolupracují s plochou, jako jsou programové testy uživatelského rozhraní nebo vytváření záznamu videa při spuštění testu, v části **spustit testovacího agenta jako**vyberte **Služba**. Testovací agent bude spuštěn jako služba. Zvolte **Další**.
 
-      Nyní můžete zadat podrobnosti o uživateli při spuštění testovacího agenta jako služby.
+      Nyní můžete zadat podrobné informace o uživateli, když se testovací agent spustí jako služba.
 
-      1. Zadejte jméno do **pole Uživatelské jméno**.
+      1. Zadejte název do pole **uživatelské jméno**.
 
-      2. Zadejte heslo do **pole Heslo**.
+      2. Do pole **heslo**zadejte heslo.
 
         |**Důležité informace o uživatelském účtu**|
         |-|
-        |- Nulová hesla nejsou podporována pro uživatelské účty.|
-        |- Pokud chcete použít kolekci IntelliTrace nebo emulaci sítě, musí být uživatelský účet členem skupiny Administrators.|
-        |- Pokud uživatelské jméno agenta není ve službě agenta, pokusí se jej přidat, což vyžaduje oprávnění na testovacím řadiči.|
-        |- Uživatel, který se pokouší použít testovací řadič, musí být v uživatelském účtu testovacího řadiče nebo nebude moci spustit testy proti kontroleru.|
+        |– Hesla s hodnotou null nejsou pro uživatelské účty podporována.|
+        |– Pokud chcete použít kolektor IntelliTrace nebo emulaci sítě, musí být uživatelský účet členem skupiny Administrators.|
+        |– Pokud uživatelské jméno agenta není ve službě agenta, pokusí se ho přidat, což vyžaduje oprávnění k testovacímu kontroléru.|
+        |– Uživatel, který se pokouší použít testovací kontrolér, musí být v účtu uživatele testovacího kontroléru nebo nebude moci spustit testy na řadiči.|
 
-   - **Interaktivní proces**: Pokud chcete spustit automatické testy, které musí pracovat s plochou, například kódované testy ui nebo vytvoření záznamu videa při spuštění testu, vyberte **interaktivní proces**. Testovací agent bude spuštěn jako interaktivní proces namísto služby.
+   - **Interaktivní proces**: Pokud chcete spustit automatizované testy, které musí komunikovat s plochou, jako jsou kódované testy uživatelského rozhraní nebo vytváření záznamu videa, když test běží, vyberte **interaktivní proces**. Testovací agent bude spuštěn jako interaktivní proces namísto služby.
 
-      Na další stránce zadejte podrobnosti o uživateli při spuštění testovacího agenta jako proces a další možnosti.
+      Na další stránce zadejte podrobné informace o uživateli, když se testovací agent spustí jako proces, a další možnosti.
 
-      1. Zadejte jméno do **pole Uživatelské jméno**.
+      1. Zadejte název do pole **uživatelské jméno**.
 
-      2. Zadejte heslo do **pole Heslo**.
+      2. Do pole **heslo**zadejte heslo.
 
         > [!NOTE]
-        > Pokud nakonfigurujete testovacího agenta tak, aby byl spuštěn jako interaktivní proces s jiným uživatelem, který není aktuálně aktivním uživatelem, je nutné restartovat počítač a přihlásit se jako tento jiný uživatel, aby bylo možné spustit agenta. Kromě toho nejsou pro uživatelské účty podporována nulová hesla. Pokud chcete použít kolekci IntelliTrace nebo emulaci sítě, musí být uživatelský účet členem skupiny Administrators.
+        > Pokud nakonfigurujete testovacího agenta tak, aby běžel jako interaktivní proces s jiným uživatelem, který není aktuálně aktivním uživatelem, je nutné restartovat počítač a přihlásit se jako tento jiný uživatel, aby bylo možné agenta spustit. Kromě toho se u uživatelských účtů nepodporují hesla s hodnotou null. Pokud chcete použít kolektor IntelliTrace nebo emulaci sítě, musí být uživatelský účet členem skupiny Administrators.
 
-      3. Chcete-li se ujistit, že počítač, který má testovacího agenta, může po restartování spustit testy, můžete nastavit, aby se počítač automaticky přihlašoval jako testovací agent. Vyberte **Možnost Přihlásit se automaticky**. Tím bude uživatelské jméno a heslo v registru ukládáno v zašifrované podobě.
+      3. Chcete-li se ujistit, že počítač s testovacím agentem může po restartu spustit testy, můžete nastavit počítač pro automatické přihlášení jako testovací agent. Vyberte **automaticky přihlásit**se. Tím se uživatelské jméno a heslo uloží do šifrovaného formuláře v registru.
 
-      4. Chcete-li se ujistit, že je spořič obrazovky zakázán, protože by to mohlo narušit všechny automatizované testy, které musí pracovat s plochou, vyberte **možnost Zajistit zakázání spořiče obrazovky**.
+      4. Chcete-li se ujistit, že je spořič obrazovky zakázán, protože to může narušit všechny automatizované testy, které musí s plochou pracovat, vyberte možnost **zkontrolovat, zda je spořič obrazovky zakázán**.
 
         > [!WARNING]
-        > Pokud se automaticky přihlásíte nebo zakážete spořič obrazovky, existují bezpečnostní rizika. Povolením automatického přihlášení povolíte ostatním uživatelům spuštění tohoto počítače a možnost používat účet, který se automaticky přihlásí. Pokud zakážete spořič obrazovky, počítač nemusí vyzvat uživatele k přihlášení k odemknutí počítače. To umožňuje komukoli přístup k počítači, pokud mají fyzický přístup k počítači. Pokud tyto funkce povolíte v počítači, měli byste se ujistit, že tyto počítače jsou fyzicky zabezpečené. Tyto počítače jsou například umístěny ve fyzicky zabezpečené laboratoři. (Pokud vymažete **funkci Ujistěte se, že je spořič obrazovky zakázán**, nepovolí te spořič obrazovky.)
+        > Pokud se přihlašujete automaticky nebo zakážete šetřič obrazovky, dojde k bezpečnostnímu riziku. Povolením automatického přihlášení povolíte ostatním uživatelům spustit tento počítač a budete moci používat účet, který se automaticky přihlašuje. Pokud vypnete šetřič obrazovky, počítač nemusí vyzvat uživatele k přihlášení, aby mohl počítač odemknout. To umožňuje komukoli přístup k počítači, pokud mají fyzický přístup k počítači. Pokud tyto funkce povolíte v počítači, měli byste se ujistit, že tyto počítače jsou fyzicky zabezpečené. Například tyto počítače se nacházejí ve fyzicky zabezpečeném testovacím prostředí. (Pokud zrušíte zaškrtnutí políčka **Ujistěte se, že je spořič obrazovky zakázaný**, nepovolíte spořič obrazovky.)
 
-3. Chcete-li zaregistrovat tohoto agenta u jiného testovacího řadiče, vyberte **registrovat s testovacím řadičem.** Zadejte název testovacího řadiče následovaný **:** a číslo portu, které používáte, v **části Zaregistrujte testovacího agenta pomocí následujícího testovacího řadiče**. Zadejte například **agent1:6901**.
+3. Chcete-li zaregistrovat tohoto agenta s jiným řadičem testu, vyberte možnost **registrovat v rámci kontroleru testů.** Zadejte název kontroleru testů následovaný **:** a číslem portu, který používáte v **registraci testovacího agenta s následujícím testovým kontrolérem**. Zadejte například **obdrží agent1:6901**.
 
     > [!NOTE]
     > Výchozí číslo portu je 6901.
 
-4. Chcete-li změny uložit, zvolte **Použít nastavení**. Zavřete dialogové okno **Souhrn konfigurace** a potom zavřete nástroj **Konfigurace testovacího agenta**.
+4. Pokud chcete změny uložit, vyberte **použít nastavení**. Zavřete dialogové okno **Souhrn konfigurace** a potom zavřete **Nástroj pro konfiguraci testovacího agenta**.
 
 > [!WARNING]
-> Pokud je agent aktuálně nakonfigurován pro spuštění na jiném testovacím řadiči, je nutné odebrat testovacího agenta z tohoto řadiče.
+> Pokud je agent aktuálně nakonfigurován tak, aby běžel na jiném kontroleru testů, je nutné odebrat testovacího agenta z tohoto kontroleru.
 
-## <a name="remove-a-test-agent-from-a-test-controller"></a>Odebrání testovacího agenta z testovacího řadiče
+## <a name="remove-a-test-agent-from-a-test-controller"></a>Odebrat testovacího agenta z kontroleru testů
 
-Testovací agent musí být nastaven a offline stavu před jeho odebráním.
+Testovací agent musí být nastaven do stavu offline, aby jej bylo možné odebrat.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Tento postup nelze použít k odebrání agentů, kteří jsou registrováni na řadič jako součást testovacího prostředí. Chcete-li odebrat tyto agenty z řadiče, je nutné odebrat prostředí pomocí Správce testů společnosti Microsoft.
+> Tento postup nemůžete použít k odebrání agentů registrovaných na řadiči jako součást testovacího prostředí. Chcete-li odebrat tyto agenty z kontroleru, je nutné prostředí odebrat pomocí Microsoft Test Manager.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Tento postup nelze použít k odebrání agentů, kteří jsou registrováni na řadič jako součást testovacího prostředí.
+> Tento postup nemůžete použít k odebrání agentů registrovaných na řadiči jako součást testovacího prostředí.
 ::: moniker-end
 
-### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Odebrání testovacího agenta z testovacího řadiče
+### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Odebrání testovacího agenta z kontroleru testů
 
 ::: moniker range=">=vs-2019"
-V Sadě Visual Studio 2019 nelze odebrat testovacího agenta, pokud je testovací řadič registrován v projektu.
+V aplikaci Visual Studio 2019 nelze odebrat testovacího agenta, pokud je testovací kontrolér zaregistrován v projektu.
 ::: moniker-end
-Pokud testovací řadič není registrován v projektu, postupujte takto.
+Pokud kontroler testů není zaregistrován u projektu, postupujte podle těchto kroků.
 
-1. V Sadě Visual Studio otevřete soubor nastavení testu pro testovací projekt, zvolte **Role** a zvolte **Spravovat testovací řadiče** z rozevíracího seznamu pro pole **Řadič.**
+1. V aplikaci Visual Studio otevřete soubor nastavení testu pro projekt testů, vyberte možnost **role** a v rozevíracím seznamu pro pole **Controller** vyberte možnost **Spravovat testovací kontroléry** .
 
-   Zobrazí se dialogové okno **Spravovat testovací řadič.**
+   Zobrazí se dialogové okno **spravovat Test Controller** .
 
-2. Do rozevíracího seznamu **Řadič** zadejte název počítače, ve kterém jste nastavili testovací řadič. Pokud jste dříve spravovali konkrétní testovací řadič, můžete vybrat název ze seznamu.
+2. V rozevíracím seznamu **kontrolér** zadejte název počítače, na kterém jste nastavili kontroler testů. Pokud jste dříve pomohli spravovat konkrétní kontroler testů, můžete název vybrat ze seznamu.
 
-3. V podokně **Agenti** vyberte název testovacího agenta. Pokud je agent stále online, zvolte **Offline.** Chcete-li ji odebrat, zvolte **Odebrat**.
+3. V podokně **agenti** vyberte název testovacího agenta. Pokud je agent stále online, vyberte možnost **offline.** Pokud ho chcete odebrat, klikněte na **Odebrat**.
 
    > [!NOTE]
-   > Odebrání testovacího agenta pouze disassociates z testovacího řadiče. Chcete-li testovacího agenta zcela odinstalovat, použijte ovládací panel **Programy a funkce** v počítači testovacího agenta.
+   > Odebrání testovacího agenta stačí zrušit jeho přidružení od kontroleru testů. Chcete-li kompletně odinstalovat testovacího agenta, použijte ovládací panel **programy a funkce** v počítači testovacího agenta.
 
 ::: moniker range="vs-2017"
-Pokud je testovací řadič registrován v projektu, odeberte agenta pomocí Správce testů společnosti Microsoft.
+Pokud je testovací kontrolér zaregistrován v projektu, odeberte agenta pomocí Microsoft Test Manager.
 ::: moniker-end
 
-## <a name="change-the-settings-for-a-test-agent"></a>Změna nastavení testovacího agenta
+## <a name="change-the-settings-for-a-test-agent"></a>Změna nastavení pro testovacího agenta
 
-Stav testovacího agenta může být některá z následujících hodnot:
+Stav agenta testu může mít jednu z následujících hodnot:
 
 |Status|Popis|
 |-|-----------------|
-|Běžecký test|Spuštění testů|
+|Spuštění testu|Spouštění testů|
 |Připraveno|K dispozici pro spuštění testů nebo shromažďování dat a diagnostiky|
-|Offline|Není k dispozici pro spuštění testů nebo shromažďování dat a diagnostiky|
-|Odpojen|Testovací agent není spuštěn.|
+|Offline|K dispozici pro spuštění testů nebo shromažďování dat a diagnostiky|
+|Propojení|Testovací agent není spuštěný.|
 
 Můžete změnit stav a další nastavení testovacího agenta pomocí následujících postupů.
 
@@ -140,98 +140,98 @@ Můžete změnit stav a další nastavení testovacího agenta pomocí následuj
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Pokud je testovací agent registrován na testovací řadič, který je registrován v projektu, změňte nastavení ve Správci testů společnosti Microsoft.
+> Pokud je testovací agent zaregistrován pro testovací kontrolér, který je zaregistrován v projektu, změňte nastavení v Microsoft Test Manager.
 ::: moniker-end
 
-1. Chcete-li nakonfigurovat a sledovat testovací řadič a všechny registrované agenty pro zátěžový test, zvolte nabídku **Zátěžový test** v sadě Visual Studio a pak zvolte **Spravovat řadiče testu**. Pro všechny ostatní testy otevřete soubor nastavení testu pro testovací projekt v sadě Visual Studio, zvolte **Role** a zvolte **Spravovat testovací řadiče** z rozbalovací nabídky pro pole **Řadič.**
+1. Chcete-li nakonfigurovat a monitorovat testovací kontrolér a všechny registrované agenty pro zátěžový test, zvolte nabídku **zátěžový test** v aplikaci Visual Studio a pak zvolte možnost **Spravovat testovací kontroléry**. Pro všechny ostatní testy otevřete soubor nastavení testu pro projekt testů v aplikaci Visual Studio, vyberte možnost **role** a v rozevíracím seznamu pro pole **Controller** vyberte možnost **Spravovat testovací kontroléry** .
 
-   Otevře se dialogové okno **Spravovat testovací řadič.**
+   Otevře se dialogové okno **spravovat Test Controller** .
 
-1. Vyberte název testovacího řadiče, jehož testovací agenty chcete změnit v seznamu testovacího řadiče. Pokud se testovací řadič v seznamu nezobrazí, zkontrolujte, zda je testovací řadič správně zaregistrován. Další informace naleznete v následujícím postupu o konfiguraci testovacího řadiče.
+1. Vyberte název kontroleru testů, jehož testovací agenty chcete změnit v seznamu kontroleru testů. Pokud se řadič testů v seznamu nezobrazí, zkontrolujte, zda je testovací kontrolér správně zaregistrován. Další informace najdete v následujícím postupu, jak nakonfigurovat testovací kontrolér.
 
-1. (Nepovinné) V podokně **Testovací agenti** vyberte počítač testovacího agenta, pro který chcete změnit vlastnosti.
+1. Volitelné V podokně **testovací agenti** vyberte počítač testovacího agenta, pro který chcete změnit vlastnosti.
 
 1. Zvolte **Properties** (Vlastnosti).
 
-1. Podle potřeby změňte následující vlastnosti testovacího agenta:
+1. Změňte následující vlastnosti testovacího agenta podle potřeby:
 
 |Vlastnost testovacího agenta|Popis|
 |-|-----------------|
-|**Vážení**|Používá se k distribuci zatížení při použití testovacích agentů s různými úrovněmi výkonu. Například testovací agent s váhou 100 obdrží dvakrát větší zatížení jako testovací agent s váhou 50.|
-|**Přepínání IP adres**|Slouží ke konfiguraci přepínání IP adres. Přepínání IP umožňuje testovacímu agentovi odesílat požadavky na server pomocí rozsahu adres IP. To simuluje volání, které pocházejí z různých klientských počítačů.<br /><br /> Přepínání IP je důležité, pokud váš zátěžový test přistupuje k webové farmě. Většina vykladačů zatížení vytvořit spřažení mezi klientem a konkrétní webový server pomocí IP adresy klienta. Pokud všechny požadavky vypadají, jako by pocházely z jednoho klienta, nevyvažovač zatížení nevyvažuje zatížení. Chcete-li získat správné vyrovnávání zatížení ve webové farmě, ujistěte se, že požadavky pocházejí z řady IP adres. **Poznámka:**  Můžete zadat síťový adaptér nebo použít **(Všechny nepřiřazené)** automaticky vybrat ten, který se právě nepoužívá. <br /><br /> Chcete-li použít funkci přepínání IP, musí být služba Test Agent sady Visual Studio spuštěna jako uživatel ve skupině Administrators pro tento počítač agenta. Tento uživatel je vybrán během instalace agenta, ale lze jej změnit úpravou vlastností služby a restartováním.<br /><br /> Chcete-li ověřit, zda přepínání IP funguje správně, povolte protokolování služby IIS na webovém serveru, ověřte pomocí funkce protokolování služby IIS, zda požadavky pocházejí z nakonfigurovaných adres IP.|
-|**Atributy**|Sada párů název/hodnota, které lze použít při výběru testovacího agenta. Test může například vyžadovat konkrétní operační hod. Atributy můžete přidat na kartě **Role** v souboru nastavení testu a lze je použít k výběru testovacího agenta, který má odpovídající atributy. Pokud chcete spustit test na více počítačích, vytvořte atribut v roli nastavení testu, který je nakonfigurován pro spuštění testů, a pak nakonfigurujte odpovídající atribut u každého testovacího agenta, který chcete v této roli použít. **Poznámka:**  Toto nastavení je k dispozici pouze pro testovací agenty, kteří jsou registrováni s testovacím řadičem, který není registrován v projektu, protože tyto atributy se používají pouze v nastavení testu pro sady Visual Studio.|
+|**Váhu**|Používá se k distribuci zatížení při použití testovacích agentů s různými úrovněmi výkonu. Například testovací agent s vážením 100 obdrží dvakrát zatížení jako testovací agent s vážením 50.|
+|**Přepínání IP**|Slouží ke konfiguraci přepínání protokolu IP. Přepínání IP umožňuje testovacímu agentovi odesílat požadavky na server pomocí rozsahu IP adres. To simuluje volání, která pocházejí z různých klientských počítačů.<br /><br /> Přepínání IP je důležité, pokud zátěžový test přistupuje k webové farmě. Většina nástrojů pro vyrovnávání zatížení vytváří spřažení mezi klientem a konkrétním webovým serverem pomocí IP adresy klienta. Pokud se všechny požadavky zdají vypadat jako z jednoho klienta, nástroj pro vyrovnávání zatížení nebude zatížení vyrovnávat. Chcete-li dosáhnout správného vyrovnávání zatížení ve webové farmě, ujistěte se, že požadavky pocházejí z rozsahu IP adres. **Poznámka:**  Můžete určit síťový adaptér nebo použít **(všechny nepřiřazené)** k automatickému výběru toho, který aktuálně není používán. <br /><br /> Chcete-li použít funkci přepínání protokolu IP, musí být služba Visual Studio Test Agent spuštěna jako uživatel ve skupině Administrators pro daný počítač agenta. Tento uživatel je vybraný při instalaci agenta, ale můžete ho změnit úpravou vlastností služby a restartováním.<br /><br /> Chcete-li ověřit, zda funkce přepínání IP funguje správně, povolte protokolování služby IIS na webovém serveru, pomocí funkce protokolování služby IIS ověřte, zda požadavky pocházejí z IP adres, které jste nakonfigurovali.|
+|**Atributy**|Sada párů název/hodnota, které lze použít ve výběru testovacího agenta. Test může například vyžadovat konkrétní operační systém. Můžete přidat atributy na kartě **role** v souboru nastavení testu a lze je použít k výběru testovacího agenta, který má odpovídající atributy. Pokud chcete spustit test na více počítačích, vytvořte atribut v roli nastavení testu, která je nakonfigurována pro spuštění testů, a poté nakonfigurujte odpovídající atribut pro každého testovacího agenta, který chcete v této roli použít.. **Poznámka:**  Toto nastavení je k dispozici pouze pro testovací agenty, kteří jsou registrováni s testovacím kontrolérem, který není registrován v projektu, protože tyto atributy se používají pouze v nastaveních testu pro aplikaci Visual Studio.|
 
-Změny atributů testu agenta a atributu testovacího agenta vstoupí v platnost okamžitě, ale nemají vliv na testy, které jsou spuštěny. Rozsah IP adres se projeví po restartování testovacího řadiče.
+Výsledek testovacího agenta a změny atributu testovacího agenta se projeví okamžitě, ale neovlivňují testy, které jsou spuštěny. Rozsah IP adres se projeví po restartování kontroleru testů.
 
-(Nepovinné) Chcete-li změnit stav testovacího agenta, vyberte agenta v seznamu a pak vyberte akci z dostupných voleb na základě aktuálního stavu agenta.
-
-> [!NOTE]
-> Pokud testovací agent běží jako proces, můžete spravovat stav testovacího agenta z ikony oznamovací oblasti, která běží v počítači, ve kterém je nainstalován testovací agent. To ukazuje stav testovacího agenta. Agenta můžete spustit, zastavit nebo restartovat, pokud je spuštěn jako proces pomocí tohoto nástroje.
-
-## <a name="configure-a-test-controller"></a>Konfigurace testovacího řadiče
-
-Chcete-li nakonfigurovat testovací řadič, musíte použít **nástroj pro konfiguraci řadiče týmového testu**. Při konfiguraci testovacího řadiče můžete zaregistrovat testovací řadič s jinou kolekcí projektu nebo zrušit registraci testovacího řadiče z kolekce projektu.
-
-Pokud chcete zaregistrovat testovací řadič s kolekcí projektů Team Foundation Server, musí být účet, který používáte pro službu testovacího řadiče, členem skupiny Účty testovací služby kolekce projektů pro kolekci projektů nebo účet, který používáte ke spuštění nástroje konfigurace testovacího řadiče, musí být správcem kolekce projektů.
+Volitelné Chcete-li změnit stav testovacího agenta, vyberte v seznamu agenta a pak vyberte akci z dostupných možností na základě aktuálního stavu agenta.
 
 > [!NOTE]
-> Pokud zrušíte registraci testovacího řadiče z kolekce projektu, který má existující prostředí v kolekci projektu, prostředí jsou stále udržovány, pokud jste přesunuli tuto kolekci projektu a znovu zaregistrujete testovací řadič do této přesunuté kolekce projektu.
+> Pokud je testovací agent spuštěn jako proces, spravujte stav testovacího agenta z ikony oznamovací oblasti, která je spuštěna v počítači, kde je nainstalován testovací agent. Zobrazuje stav testovacího agenta. Můžete spustit, zastavit nebo restartovat agenta, pokud je spuštěn jako proces pomocí tohoto nástroje.
 
-### <a name="to-configure-a-test-controller"></a>Konfigurace testovacího řadiče
+## <a name="configure-a-test-controller"></a>Konfigurace kontroleru testů
 
-1. Chcete-li nástroj kdykoli překonfigurovat, zvolte **spustit** > **nástroj pro konfiguraci řadiče testovacího provozu**.
+Chcete-li nakonfigurovat testovací kontrolér, je nutné použít **Nástroj pro konfiguraci kontroleru Team test**. Při konfiguraci kontroleru testů můžete zaregistrovat testovací kontrolér s jinou kolekcí projektu nebo zrušit registraci testovacího kontroléru z kolekce projektu.
 
-     Zobrazí se dialogové okno **Konfigurovat testovací řadič.**
+Pokud chcete zaregistrovat kontroler testů pomocí kolekce projektu Team Foundation Server, účet, který používáte pro službu testovacího kontroléru, musí být členem skupiny účtů služeb testování kolekce projektů pro kolekci projektu, nebo účet, který použijete ke spuštění nástroje pro konfiguraci testovacího kontroléru, musí být správce kolekce projektu.
 
-2. Vyberte uživatele, který chcete použít jako přihlašovací účet pro službu testovacího řadiče.
+> [!NOTE]
+> Pokud zrušíte registraci testovacího kontroléru z kolekce projektu, která obsahuje existující prostředí v kolekci projektu, prostředí jsou stále udržována, pokud jste tuto kolekci projektů přesunuli a znovu zaregistrovali řadič testu na tuto přesunutou kolekci projektů.
+
+### <a name="to-configure-a-test-controller"></a>Konfigurace kontroleru testů
+
+1. Chcete-li spustit nástroj a kdykoli znovu nakonfigurovat testovací kontrolér, klikněte na tlačítko **Spustit**  >  **Nástroj pro konfiguraci Test Controller**.
+
+     Zobrazí se dialogové okno **konfigurace Test Controller** .
+
+2. Vyberte uživatele, který chcete použít jako přihlašovací účet pro službu testovacího kontroléru.
 
     > [!NOTE]
-    > Nulová hesla nejsou pro uživatelské účty podporována.
+    > Hesla s hodnotou null nejsou pro uživatelské účty podporována.
 
-4. (Nepovinné) Pokud nechcete používat testovací řadič s testovacím prostředím, ale pouze ke spuštění testů z aplikace Visual Studio, **zrušte zaškrtnutí zrušte seznam registrut testovacího řadiče s kolekcí týmových projektů**.
+4. Volitelné Pokud nechcete použít testovací kontrolér s testovacím prostředím, ale pouze ke spuštění testů ze sady Visual Studio, zrušte zaškrtnutí políčka **Registrovat Test Controller s kolekcí týmových projektů**.
 
-5. (Nepovinné) Chcete-li nakonfigurovat testovací řadič pro zátěžové testování, vyberte **konfigurovat testovací řadič pro zátěžové testování**. Zadejte instanci serveru SQL Server v části **Vytvořit databázi výsledků zátěžového testu v následující instanci serveru SQL Server**.
+5. Volitelné Chcete-li nakonfigurovat testovací kontrolér pro zátěžové testování, vyberte možnost **Konfigurovat kontroler testů pro zátěžové testování**. Zadejte instanci SQL Server v části **vytvořit databázi výsledků zátěžového testu v následující instanci SQL Server**.
 
 > [!NOTE]
-> Další informace o snímání testovacích řadičů naleznete v [tématu Instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+> Další potíže s vyhledáním informací o testovacích kontrolérech najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
-## <a name="manage-your-agents-when-you-run-your-tests-with-a-test-controller"></a>Správa agentů při spuštění testů pomocí testovacího řadiče
+## <a name="manage-your-agents-when-you-run-your-tests-with-a-test-controller"></a>Spravovat agenty při spuštění testů s testovacím kontrolérem
 
-Když přidáte role pro vaši aplikaci do nastavení testu pro Visual Studio, můžete přidat vlastnosti agenta pro každou z vašich rolí. To určuje, které testovací agenti jsou k dispozici pro tuto roli. Při spuštění testů pomocí těchto nastavení testu, řadič testu, který je vybrán pro nastavení testu určuje dostupnost požadovaných agentů. Jedná se o následující situace, které mohou nastat při určení dostupnosti agenta:
+Při přidávání rolí pro aplikaci do nastavení testu pro sadu Visual Studio můžete přidat vlastnosti agenta pro každou z vašich rolí. Tím se určuje, které testovací agenti jsou k dispozici pro tuto roli. Při spuštění testů pomocí těchto nastavení testu určuje kontroler testů, který je vybrán pro nastavení testu, dostupnost požadovaných agentů. V těchto situacích se může stát, když se zjistí dostupnost agenta:
 
-- Pro roli, která musí spustit testy, není k dispozici žádný agent. Testy nelze spustit. Můžete provést jednu z následujících akcí a potom testy znovu spustit:
+- Pro roli, která musí spustit testy, není k dispozici žádný agent. Testy nelze spustit. Můžete provést jednu z následujících akcí a pak znovu spustit testy:
 
-  - Můžete počkat agenta k dispozici pro tuto roli ke spuštění testů.
+  - Můžete počkat, až bude agent k dispozici pro tuto roli pro spuštění testů.
 
-  - Pokud existují agenti, které jsou v offline, které lze použít pro tuto roli, můžete restartovat agenta tak, aby byl k dispozici.
+  - Pokud existují agenti, kteří jsou v režimu offline a lze je použít pro tuto roli, můžete agenta restartovat, aby byl k dispozici.
 
-  - Do testovacího řadiče můžete přidat jiného agenta se správnými vlastnostmi agenta pro tuto roli.
+  - Do kontroleru testů můžete přidat jiného agenta se správnými vlastnostmi agenta pro tuto roli.
 
-  - Vlastnosti agenta pro tuto roli můžete změnit v nastavení testu a povolit další agenty, které chcete použít.
+  - Můžete změnit vlastnosti agenta pro tuto roli v nastavení testu pro povolení jiných agentů, které chcete použít.
 
-- Pro jednu nebo více rolí, které spouštějí adaptéry diagnostických dat, není k dispozici žádný agent. Testy lze spustit, ale adaptér diagnostických dat nelze spustit. Testy můžete spustit bez adaptéru diagnostických dat nebo můžete provést jednu z následujících akcí a znovu spustit testy:
+- Pro jednu nebo více rolí, které spouštějí adaptéry diagnostických dat, není k dispozici žádný agent. Testy lze spustit, ale adaptér diagnostických dat nelze spustit. Testy můžete spustit bez adaptéru diagnostických dat, nebo můžete provést jednu z následujících akcí a znovu spustit testy:
 
-  - Můžete počkat na agenta, aby byly k dispozici pro tyto role.
+  - Můžete počkat, až bude agent pro tyto role k dispozici.
 
-  - Pokud existují agenti, které jsou v režimu offline, které lze použít pro tuto roli, je nutné změnit stav agenta na online z **Spravovat testovací kontroler** v nabídce **Test.** Kromě toho bude pravděpodobně nutné restartovat agenta, pokud byl odpojen od řadiče.
+  - Pokud jsou k dispozici jiní agenti, kteří jsou v režimu offline a lze je použít pro tuto roli, je nutné změnit stav agenta na online v nabídce **test** na možnost **Spravovat Test Controller** . Kromě toho může být nutné restartovat agenta, pokud byl odpojen od kontroleru.
 
-  - Ověřte, zda nejsou všichni agenti, které budete potřebovat pro tento test, nejsou zaneprázdněni spuštěním testů. Můžete zkontrolovat stav všech agentů z **Spravovat řadič testu** v nabídce **Test.**
+  - Ověřte, že žádné agenty, které budete potřebovat pro tento testovací běh, nejsou zaneprázdněné spouštěním testů. Ve **správě Test Controller** v nabídce **test** můžete zkontrolovat stav všech agentů.
 
-  - Do testovacího řadiče můžete přidat jiného agenta se správnými vlastnostmi agenta pro roli.
+  - Do kontroleru testů můžete přidat jiného agenta se správnými vlastnostmi agenta pro danou roli.
 
-  - Můžete změnit vlastnosti agenta pro roli v nastavení testu povolit další agenty, které chcete použít.
+  - Můžete změnit vlastnosti agenta pro roli v nastavení testu pro povolení jiných agentů, které chcete použít.
 
-## <a name="load-tests-from-delay-signed-assemblies"></a>Zátěžové testy ze sestav podepsaných zpožděním
+## <a name="load-tests-from-delay-signed-assemblies"></a>Zátěžové testy ze sestavení se zpožděným podpisem
 
-Testovací řadič a testovací agenti mohou zatížit pouze testovací sestavení, která jsou silně podepsaná sestavení nebo nepodepsaná sestavení. Některá testovací sestavení jsou podepsána zpožděním, protože potřebují mít přístup do výrobních sestavení pro aplikaci. Tato sestavení však nejsou silně podepsány, protože jsou pouze testovací sestavení a nejsou distribuovány. Tato sestavení nelze načíst, protože jsou podepsána zpožděním, proto je nutné zakázat ověření silného názvu pro tato sestavení na všech počítačích, kde bude sestava načtena včetně testovacího řídicího zařízení. Chcete-li zakázat ověření podepsané zpožděním, použijte *program sn.exe*. Token veřejného klíče sestavení podepsaného zpožděním, pro které je požadováno ověření silného názvu, může být také nutné zahrnout.
+Testovací kontrolér a testovací agenti mohou načíst pouze testovací sestavení, která jsou silně podepsaná sestavení nebo nepodepsaná sestavení. Některá testovací sestavení jsou podepsána opožděně, protože musí mít přístup k produkčním sestavením aplikace. Tato sestavení však nejsou silně podepsána, protože jsou pouze testovací sestavení a nejsou distribuována. Tato sestavení nelze načíst, protože jsou podepsané se zpožděním, takže je nutné zakázat ověřování silných názvů pro tato sestavení ve všech počítačích, kde bude sestavení načteno včetně počítače testovacího kontroléru. K zakázání ověřování podepsaného zpožděním použijte *sn.exe*. Token veřejného klíče sestavení se zpožděným podpisem, pro který je požadováno přeskočení ověřování silným názvem, může být také nutné zahrnout.
 
-Pomocí *nástroje Sn.exe* (nástroj silný název) zakažte ověření podepsané zpožděním.
+K zakázání ověřování podepsaného zpoždění použijte *Sn.exe* (nástroj Strong Name).
 
-Tím se zakáže ověření silného názvu pouze pro zadané sestavení v počítači, ve kterém spustíte příkaz. To lze provést pouze v případě, že máte dostatečná oprávnění.
+Tím se zakáže ověřování se silným názvem pouze pro zadané sestavení v počítači, na kterém příkaz spustíte. To lze provést pouze v případě, že máte dostatečná oprávnění.
 
-Po dokončení testu znovu povolte ověření zpožděného podepisování pomocí příkazu *SN.exe.*
+Po dokončení testovacího běhu znovu povolte ověřování opožděným podepsáním pomocí příkazu *SN.exe* .
 
-Doporučeným způsobem, jak zakázat a znovu povolit ověřování podepisování, je použití příkazů *SN.exe* ve skriptech. Ověření můžete zakázat v instalačním skriptu a znovu povolit ověření ve skriptu pro vyčištění.
+Doporučený způsob, jak zakázat a znovu povolit ověřování podepisování, je použití příkazů *SN.exe* ve skriptech. Ověřování můžete zakázat v instalačním skriptu a znovu povolit ověřování ve skriptu pro vyčištění.
 
 ## <a name="see-also"></a>Viz také
 

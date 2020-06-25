@@ -1,7 +1,7 @@
 ---
-title: Přidání pravidla prahové hodnoty pro zátěžové testování
+title: Přidat prahové pravidlo pro zátěžové testování
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, monitoring
 - load tests, thresholds
@@ -11,14 +11,14 @@ ms.assetid: 3d8fac8f-426f-4155-9ced-f7cd4c79792c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d1389df0c307ad6ec65575fc7934e622928a0ca1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c6855088c05e03311b5724ba3a0ccf438a43b6a8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591629"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288478"
 ---
-# <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>Postup: Přidání pravidla prahové hodnoty pomocí editoru zátěžového testu
+# <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>Postupy: Přidání prahového pravidla pomocí editoru zátěžových testů
 
 Mezní pravidla v zátěžových testech porovnávají hodnotu čítače výkonu s konstantní hodnotou nebo jinou hodnotou čítače výkonu.
 
@@ -28,21 +28,21 @@ Mezní pravidla v zátěžových testech porovnávají hodnotu čítače výkon
 
 1. Otevřete zátěžový test.
 
-2. V Editoru zátěžového testu rozbalte uzel **Sady čítačů.**
+2. V Editor zátěžového testu rozbalte uzel **sady čítačů** .
 
-3. Rozbalte jednu z **kategorií čítačů** v jedné ze sad čítačů. Můžete například vybrat **Možnost LoadTest:Scénář**. Rozbalte uzel.
+3. Rozbalte jednu z **kategorií čítače** v jedné ze sad čítačů. Můžete například vybrat **LoadTest: Scenario**. Rozbalte uzel.
 
-4. Klepněte pravým tlačítkem myši na jeden z čítačů, například **Načíst uživatele**, v části **LoadTest:Scenario**. Vyberte **přidat pravidlo prahové hodnoty**.
+4. Klikněte pravým tlačítkem na jeden z čítačů, například **uživatelské zatížení**, v části **LoadTest: Scenario**. Vyberte **Přidat pravidlo prahové hodnoty**.
 
-     Zobrazí se dialogové okno **Přidat pravidlo prahové hodnoty.**
+     Zobrazí se dialogové okno **Přidat pravidlo prahové hodnoty** .
 
-5. Můžete si vybrat ze dvou typů pravidel: **Porovnat konstantu** a **Porovnat čítač**. Vyberte požadovaný typ a nastavte hodnoty.
+5. Můžete si vybrat ze dvou typů pravidel: **porovnání čítače konstanty** a **porovnání**. Vyberte požadovaný typ a nastavte hodnoty.
 
     > [!NOTE]
-    > Nastavte **Alert If Over** vlastnost **True** označuje, že překročení prahové hodnoty je problém, nebo **False** označuje, že spadají pod prahovou hodnotu je problém.
+    > Nastavte **výstrahu, pokud** má vlastnost over na **hodnotu true** , aby označovala, že překročení prahové hodnoty je problém, nebo na **hodnotu false** , aby označovala, že se jedná o problém s prahovou hodnotou.
 
 ## <a name="see-also"></a>Viz také
 
-- [Analyzovat porušení pravidel prahových hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Určení sad čítačů a prahových hodnot pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Analýza porušení pravidel mezních hodnot](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Určení sad čítačů a mezních pravidel pro počítače v zátěžovém testu](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Analyzovat výsledky zátěžového testu](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

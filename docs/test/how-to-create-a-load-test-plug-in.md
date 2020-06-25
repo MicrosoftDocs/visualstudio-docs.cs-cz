@@ -1,7 +1,7 @@
 ---
-title: Vytvoření zásuvné moduly zátěžového testu
+title: Vytvoření modulu plug-in zátěžového testu
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.load.loadtestplugin
 helpviewer_keywords:
@@ -12,82 +12,82 @@ ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 97952f65d78f7204410d07b90e0e538fb8499116
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0abcc3865c21a4f4673331377af8d17b223c7875
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589120"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288023"
 ---
-# <a name="how-to-create-a-load-test-plug-in"></a>Postup: Vytvoření modulu plug-in zátěžového testu
+# <a name="how-to-create-a-load-test-plug-in"></a>Postupy: Vytvoření modulu plug-in zátěžového testu
 
 Lze vytvořit modul plug-in zátěžového testu pro spuštění kódu v různých časech, zatímco zátěžový test běží. Můžete vytvořit modul plug-in pro rozšíření nebo úpravu integrované funkce zátěžového testu. Lze například naprogramovat modul plug-in zátěžového testu pro nastavení nebo úpravu průběhu zátěžového testu, zatímco zátěžový test běží. Za tímto účelem je nutné vytvořit třídu, která dědí z rozhraní <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>. Tato třída musí implementovat metodu <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> tohoto rozhraní. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>.
 
 > [!TIP]
-> Můžete také vytvořit moduly plug-in pro testy výkonu webu. Další informace naleznete v [tématu Postup: Vytvoření modulu plug-in test výkonu webu](../test/how-to-create-a-web-performance-test-plug-in.md).
+> Můžete také vytvořit moduly plug-in pro testy výkonnosti webu. Další informace najdete v tématu [Postupy: Vytvoření modulu plug-in pro test výkonnosti webu](../test/how-to-create-a-web-performance-test-plug-in.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 <!-- markdownlint-disable MD003 MD020 -->
-## <a name="to-create-a-load-test-plug-in-in-c"></a>Vytvoření zásuvné modulu zátěžového testu v c #
+## <a name="to-create-a-load-test-plug-in-in-c"></a>Vytvoření modulu plug-in zátěžového testu v jazyce C #
 <!-- markdownlint-enable MD003 MD020 -->
 
-1. Otevřete webový výkon a zatížení testovací projekt, který obsahuje test výkonu webu.
+1. Otevřete projekt webového výkonu a zátěžového testu, který obsahuje test výkonnosti webu.
 
-2. Přidejte zátěžový test do testovacího projektu a nakonfigurujte jej tak, aby spouštěl test výkonu webu.
+2. Přidejte zátěžový test do projektu testu a nakonfigurujte jej tak, aby běžel test výkonnosti webu.
 
-     Další informace naleznete [v tématu Úvodní příručka: Vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md).
+     Další informace naleznete v tématu [rychlý Start: vytvoření projektu zátěžového testu](../test/quickstart-create-a-load-test-project.md).
 
-3. Přidejte do řešení nový projekt **knihovny tříd.** (V **Průzkumníku řešení**klikněte pravým tlačítkem myši na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.)
+3. Přidejte do řešení nový projekt **knihovny tříd** . (V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** a pak zvolte **Nový projekt**.)
 
-4. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na složku **Reference** v nové knihovně tříd a vyberte příkaz **Přidat odkaz**.
+4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na složku **odkazy** v nové knihovně tříd a vyberte možnost **Přidat odkaz**.
 
-   Zobrazí se dialogové okno **Přidat odkaz.**
+   Zobrazí se dialogové okno **Přidat odkaz** .
 
-5. Zvolte kartu **.NET,** posuňte se dolů a pak vyberte **Microsoft.VisualStudio.QualityTools.LoadTestFramework**.
+5. Zvolte kartu **.NET** , posuňte se dolů a pak vyberte **Microsoft. VisualStudio. QualityTools. LoadTestFramework**.
 
 6. Vyberte **OK**.
 
-   Odkaz na **Microsoft.VisualStudio.QualityTools.LoadTestFramework** je přidán do složky **Reference** v **Průzkumníku řešení**.
+   Odkaz na **Microsoft. VisualStudio. QualityTools. LoadTestFramework** se přidá do **referenční** složky v **Průzkumník řešení**.
 
-7. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na horní uzel projektu webového výkonu a zátěžového testu, který obsahuje zátěžový test, do kterého chcete přidat modul plug-in zátěžového testu, a vyberte **přidat odkaz**.
+7. V **Průzkumník řešení**klikněte pravým tlačítkem myši na nejvyšší uzel projektu testování výkonu webu a zátěžového testu, který obsahuje zátěžový test, do kterého chcete přidat modul plug-in zátěžového testu, a vyberte možnost **Přidat odkaz**.
 
-   Zobrazí se **dialogové okno Přidat odkaz**.
+   **Zobrazí se dialogové okno Přidat odkaz**.
 
-8. Zvolte kartu **Projekty** a vyberte Projekt knihovny tříd.
+8. Zvolte kartu **projekty** a vyberte projekt knihovny tříd.
 
 9. Vyberte **OK**.
 
-10. V **Editoru kódu** `using` přidejte <xref:Microsoft.VisualStudio.TestTools.LoadTesting> příkaz pro obor názvů.
+10. V **editoru kódu**přidejte `using` příkaz pro <xref:Microsoft.VisualStudio.TestTools.LoadTesting> obor názvů.
 
 11. Ve třídě vytvořené v projektu knihovny tříd implementujte rozhraní <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>. V následujícím oddílu s příklady naleznete ukázku implementace.
 
 12. Poté, co jste napsali kód, vytvořte nový projekt.
 
-13. Klikněte pravým tlačítkem myši na horní uzel zátěžového testu a pak zvolte **Přidat modul plug-in zátěžového testu**.
+13. Klikněte pravým tlačítkem myši na nejvyšší uzel zátěžového testu a pak zvolte **Přidat modul plug-in zátěžového testu**.
 
-     Zobrazí se dialogové okno **Přidat zatěžovací test plug-in.**
+     Zobrazí se dialogové okno **Přidat modul plug-in zátěžového testu** .
 
-14. V části **Vyberte modul plug-in**vyberte třídu zásuvných modulů zátěžového testu.
+14. V části **Vybrat modul plug-in**vyberte svoji třídu modulu plug-in zátěžového testu.
 
-15. V **podokně Vlastnosti vybraného modulu plug-in** nastavte počáteční hodnoty pro modul plug-in, které mají být používány za běhu.
+15. V podokně **vlastnosti pro vybraný modul plug-in** nastavte počáteční hodnoty pro modul plug-in, které se použijí v době běhu.
 
     > [!NOTE]
-    > Z modulu plug-in lze vystavit libovolný počet vlastností, ale je třeba je nastavit jako veřejné a nastavitelné a musí mít základní typ, jako je například Integer, Boolean nebo String. Můžete také změnit vlastnosti modulu plug-in test výkonu webu později pomocí okna **Vlastnosti.**
+    > Z modulu plug-in lze vystavit libovolný počet vlastností, ale je třeba je nastavit jako veřejné a nastavitelné a musí mít základní typ, jako je například Integer, Boolean nebo String. Vlastnosti modulu plug-in testu výkonnosti webu lze také změnit později pomocí okna **vlastnosti** .
 
 16. Vyberte **OK**.
 
-     Modul plug-in je přidán do složky **modulů plug-in zátěžového testu.**
+     Modul plug-in se přidá do složky **moduly plug-in zátěžového testu** .
 
     > [!WARNING]
-    > Při spuštění testu výkonu webu nebo zátěžového testu, který používá váš modul plug-in, se může zobrazit chyba podobná následující:
+    > Při spuštění testu výkonnosti webu nebo zátěžového testu, který používá modul plug-in, se může zobrazit chybová zpráva podobná následující:
     >
-    > **Požadavek se \<nezdařil: Výjimka v akci> modulu plug-in: Nelze načíst soubor nebo sestavení '\<"Název modulu plug-in".dll soubor>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null nebo jednu z jeho závislostí. Systém nemůže najít zadaný soubor.**
+    > **Požadavek se nezdařil: výjimka v \<plug-in> události: nelze načíst soubor nebo sestavení \<"Plug-in name".dll file> , verze = \<n.n.n.n> , jazyková verze = neutrální, PublicKeyToken = null nebo jedna z jejích závislostí. Systém nemůže najít zadaný soubor.**
     >
-    > To je způsobeno, pokud provedete změny kódu některého z modulů plug-in a vytvoříte novou verzi dll **(Version = 0.0.0.0)**, ale modul plug-in stále odkazuje na původní verzi modulu plug-in. Chcete-li tento problém vyřešit, postupujte takto:
+    > To je způsobeno tím, že provedete změny kódu v některém z modulů plug-in a vytvoříte novou verzi knihovny DLL **(verze = 0.0.0.0)**, ale modul plug-in stále odkazuje na původní verzi modulu plug-in. Chcete-li tento problém vyřešit, postupujte podle následujících kroků:
     >
-    > 1. Ve vašem projektu výkonu webu a zátěžového testu se zobrazí upozornění v odkazech. Odeberte a znovu přidejte odkaz na datovou dll modulu plug-in.
-    > 2. Odeberte modul plug-in z testu nebo příslušného umístění a přidejte jej zpět.
+    > 1. V projektu webového výkonu a zátěžového testu se zobrazí upozornění v odkazech. Odeberte a znovu přidejte odkaz na knihovnu DLL modulu plug-in.
+    > 2. Odeberte modul plug-in z testu nebo příslušné umístění a pak ho přidejte zpátky.
 
 ## <a name="example"></a>Příklad
 
@@ -161,4 +161,4 @@ Se zátěžovým testem je spojeno osm událostí, které mohou být zpracovány
 
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>
 - [Vytvoření vlastního kódu a modulů plugin pro zátěžové testování](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Postup: Vytvoření modulu plug-in test výkonu webu](../test/how-to-create-a-web-performance-test-plug-in.md)
+- [Postupy: Vytvoření modulu plug-in testu výkonnosti webu](../test/how-to-create-a-web-performance-test-plug-in.md)

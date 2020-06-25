@@ -1,6 +1,6 @@
 ---
 title: 'Postupy: instalace Vizualizátoru | Microsoft Docs'
-ms.date: 11/04/2016
+ms.date: 06/10/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c79fd5522447378b879443eb8dccabfe7081af4f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 99d8c0b0181286465ffe8321470d035961803a64
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183623"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286385"
 ---
 # <a name="how-to-install-a-visualizer"></a>Postupy: Instalace vizualizéru
 Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Instalace Vizualizátoru je jednoduchý proces.
@@ -53,6 +53,10 @@ Po vytvoření Vizualizér je nutné nainstalovat vizualizér, aby byl dostupný
     - `net2.0`pro laděných procesů, který spouští `.NET Framework` modul runtime.
     - `netstandard2.0`pro laděných procesů pomocí modulu runtime, který podporuje `netstandard 2.0` ( `.NET Framework v4.6.1+` nebo `.NET Core 2.0+` ).
     - `netcoreapp`pro laděných procesů, který spouští `.NET Core` modul runtime. (podporuje `.NET Core 2.0+` )
+
+   Laděného procesu knihovna DLL je nutná, pokud chcete vytvořit samostatný Vizualizér. Tato knihovna DLL obsahuje kód pro datový objekt, který může implementovat metody <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+
+   Pokud pro laděného procesu kód cílíte na více platforem, musí být knihovna DLL laděného procesu umístěna do složky pro minimální podporované TFM.
 
 4. Restartujte ladicí relaci.
 

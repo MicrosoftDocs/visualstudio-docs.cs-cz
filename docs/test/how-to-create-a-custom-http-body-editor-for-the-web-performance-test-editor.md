@@ -1,65 +1,65 @@
 ---
-title: Vytvoření vlastního editoru textu HTTP pro Editor testů výkonu webu
+title: Vytvoření vlastního editoru těla protokolu HTTP pro Editor testu výkonnosti webu
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, custom HTTP body editor
 ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: efc9a959fa02b62583e7bf366e8c580b2876a4a1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 02faf2a6c495d7fd5566c8f4291ecaad20ef5eb7
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589198"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288140"
 ---
-# <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Postup: Vytvoření vlastního editoru těla HTTP pro Editor testů výkonu webu
+# <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Postupy: Vytvoření vlastního editoru těla protokolu HTTP pro Editor testu výkonnosti webu
 
-Můžete vytvořit vlastní editor obsahu, který umožňuje upravit obsah těla řetězce nebo binární obsah těla žádosti webové služby, například SOAP, REST, asmx, wcf, RIA a další typy požadavků webové služby.
+Můžete vytvořit vlastní Editor obsahu, který umožňuje upravit obsah textu řetězce nebo binární obsah textu žádosti webové služby, například SOAP, REST, ASMX, WCF, RIA a další typy požadavků webové služby.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Můžete implementovat tyto druhy editorů:
+Tyto typy editorů můžete implementovat:
 
-- **Editor řetězcových obsahů** To je implementováno pomocí <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> rozhraní.
+- **Editor obsahu řetězce** To je implementováno pomocí <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> rozhraní.
 
-- **Binární editor obsahu** To je implementováno pomocí <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní.
+- **Editor binárních obsahu** To je implementováno pomocí <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní.
 
-Tato rozhraní jsou obsažena <xref:Microsoft.VisualStudio.TestTools.WebTesting> v oboru názvů.
+Tato rozhraní jsou obsažena v <xref:Microsoft.VisualStudio.TestTools.WebTesting> oboru názvů.
 
-## <a name="create-a-windows-control-library-project"></a>Vytvoření projektu knihovny ovládacích prvku systému Windows
+## <a name="create-a-windows-control-library-project"></a>Vytvořit projekt knihovny ovládacích prvků systému Windows
 
-1. V sadě Visual Studio vytvořte nový projekt **knihovny Windows Forms Control Library.** Pojmenujte projekt **MessageEditors**.
+1. V aplikaci Visual Studio vytvořte nový projekt **knihovny ovládacích prvků model Windows Forms** . Pojmenujte projekt **MessageEditors**.
 
-   Projekt je přidán do nového <xref:System.Windows.Forms.UserControl> řešení a pojmenovaný *UserControl1.cs* je uveden v návrháři.
+   Projekt je přidán do nového řešení a <xref:System.Windows.Forms.UserControl> s názvem *UserControl1.cs* je prezentována v návrháři.
 
-1. Z **panelu nástrojů**v kategorii Běžné ovládací <xref:System.Windows.Forms.RichTextBox> **prvky** přetáhněte a na povrch UserControl1.
+1. Z **panelu nástrojů**v kategorii **běžné ovládací prvky** přetáhněte na <xref:System.Windows.Forms.RichTextBox> povrch UserControl1.
 
-1. V pravém horním![rohu](../test/media/vs_winformsmttagglyph.gif) <xref:System.Windows.Forms.RichTextBox> ovládacího prvku zvolte glyf značky akce (FLyf ) a pak vyberte a **Dock in Parent Container**.
+1. V pravém ![ horním rohu ovládacího prvku zvolte akci značky akce (glyf inteligentních značek ](../test/media/vs_winformsmttagglyph.gif) ) <xref:System.Windows.Forms.RichTextBox> a pak vyberte a **ukotvěte v nadřazeném kontejneru**.
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt knihovny formulářů systému Windows a vyberte příkaz **Vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt knihovny model Windows Forms a vyberte **vlastnosti**.
 
-1. Ve **vlastnostech**vyberte kartu **Aplikace.**
+1. Ve **vlastnostech**vyberte kartu **aplikace** .
 
-1. V rozevíracím seznamu **Cílová architektura** vyberte rozhraní .NET Framework 4 (nebo novější).
+1. V rozevíracím seznamu **cílové rozhraní** vyberte .NET Framework 4 (nebo novější).
 
-1. Zobrazí se dialogové okno **Změna cílového rámce.**
+1. Zobrazí se dialogové okno **změnit cílovou architekturu** .
 
-1. Zvolte **Ano**.
+1. Vyberte **Ano**.
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel **Odkazy** a vyberte **přidat odkaz**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **odkazy** a vyberte možnost **Přidat odkaz**.
 
-1. Zobrazí se dialogové okno **Přidat odkaz.**
+1. Zobrazí se dialogové okno **Přidat odkaz** .
 
-1. Zvolte . **NET,** posuňte se dolů a vyberte **Microsoft.VisualStudio.QualityTools.WebTestFramework** a pak zvolte **OK**.
+1. Vyberte. Karta **net** , přejděte dolů a vyberte **Microsoft. VisualStudio. QualityTools. WebTestFramework** a pak zvolte **OK**.
 
-1. Pokud **Návrhář zobrazení** ještě není otevřený, klikněte v **Průzkumníku řešení**pravým tlačítkem myši na **UserControl1.cs** a vyberte příkaz **Návrhář zobrazení**.
+1. Pokud **Návrhář zobrazení** není ještě otevřený, klikněte v **Průzkumník řešení**pravým tlačítkem myši na **UserControl1.cs** a pak vyberte **zobrazit Návrhář**.
 
-1. Na návrhové ploše klepněte pravým tlačítkem myši a vyberte **zobrazit kód**.
+1. Na návrhové ploše klikněte pravým tlačítkem myši a vyberte možnost **Zobrazit kód**.
 
-1. (Nepovinné) Změňte název třídy a konstruktoru z UserControl1 na smysluplný název, například MessageEditorControl:
+1. Volitelné Změňte název třídy a konstruktoru z UserControl1 na smysluplný název, například MessageEditorControl:
 
     > [!NOTE]
     > Ukázka používá MessageEditorControl.
@@ -77,7 +77,7 @@ Tato rozhraní jsou obsažena <xref:Microsoft.VisualStudio.TestTools.WebTesting>
     }
     ```
 
-1. Přidejte následující vlastnosti, které povolízískání a nastavení textu v poli RichTextBox1. Rozhraní <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> bude používat EditString <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> a bude používat EditByteArray:
+1. Přidejte následující vlastnosti, abyste umožnili získání a nastavení textu v RichTextBox1. <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin>Rozhraní bude používat EditString a <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> bude používat EditByteArray:
 
     ```csharp
     public String EditString
@@ -105,35 +105,35 @@ Tato rozhraní jsou obsažena <xref:Microsoft.VisualStudio.TestTools.WebTesting>
     }
     ```
 
-## <a name="add-a-class-to-the-windows-control-library-project"></a>Přidání třídy do projektu Knihovny ovládacích prvku systému Windows
+## <a name="add-a-class-to-the-windows-control-library-project"></a>Přidat třídu do projektu knihovny ovládacích prvků systému Windows
 
-Přidejte třídu do projektu. Bude použit k implementaci <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> a rozhraní.
+Přidejte do projektu třídu. Použije se k implementaci <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní a.
 
 **Přehled kódu v tomto postupu**
 
-Editor MessageEditorControl, <xref:System.Windows.Forms.UserControl> který byl vytvořen v předchozím postupu je vytvořen jako messageEditorControl:
+MessageEditorControl <xref:System.Windows.Forms.UserControl> , který byl vytvořen v předchozím postupu, je vytvořena instance jako messageEditorControl:
 
 ```csharp
 private MessageEditorControl messageEditorControl
 ```
 
-Instance messageEditorControl je hostována v dialogovém okně <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.CreateEditor*> modulu plug-in, který je vytvořen metodou. Navíc messageEditorControl <xref:System.Windows.Forms.RichTextBox> je naplněn obsah v . <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> Vytvoření modulu plug-in však <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> nemůže `true`dojít, pokud vrátí . V případě tohoto editoru <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> vrátí, `true` pokud <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> obsahuje "xml".
+Instance messageEditorControl je hostována v dialogovém okně modulu plug-in, který je vytvořen <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.CreateEditor*> metodou. Kromě toho se messageEditorControl <xref:System.Windows.Forms.RichTextBox> naplní obsahem v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> . Vytvoření modulu plug-in však nelze provést, pokud se <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> nevrátí `true` . V případě tohoto editoru <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> vrátí, `true` Pokud <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> obsahuje "XML".
 
-Po dokončení úpravy textu řetězce a uživatel klepne **na tlačítko** OK <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*> v dialogovém okně modulu plug-in, je volána získat upravený text jako řetězec a aktualizovat **text řetězce** v požadavku v editoru výkonu testu webu.
+Při úpravách textu řetězce je dokončena a uživatel klikne na **tlačítko OK** v dialogovém okně modul plug-in, <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*> je volána k získání upravovaného textu jako řetězce a aktualizaci **těla řetězce** v požadavku v editoru výkonu webového testu.
 
 ### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Vytvoření třídy a implementace rozhraní IStringHttpBodyEditorPlugin
 
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na projekt knihovny ovládacího prvku formulářů systému Windows a vyberte příkaz **Přidat novou položku**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt knihovny ovládacích prvků model Windows Forms a vyberte možnost **Přidat novou položku**.
 
    Zobrazí se dialogové okno **Přidat novou položku**.
 
 2. Vyberte **třídu**.
 
-3. Do textového pole **Název** zadejte smysluplný název `MessageEditorPlugins`třídy, například .
+3. Do textového pole **název** zadejte smysluplný název třídy, například `MessageEditorPlugins` .
 
-4. Zvolte **Přidat**.
+4. Klikněte na tlačítko **Přidat**.
 
-   Class1 je přidán do projektu a prezentovány v Editoru kódu.
+   Class1 se přidá do projektu a zobrazí se v editoru kódu.
 
 5. V editoru kódu přidejte následující `using` příkaz:
 
@@ -141,7 +141,7 @@ Po dokončení úpravy textu řetězce a uživatel klepne **na tlačítko** OK <
     using Microsoft.VisualStudio.TestTools.WebTesting;
     ```
 
-6. Vložte do následujícího kódu k implementaci rozhraní:
+6. Vložte následující kód pro implementaci rozhraní:
 
     ```csharp
     /// <summary>
@@ -190,27 +190,27 @@ Po dokončení úpravy textu řetězce a uživatel klepne **na tlačítko** OK <
     }
     ```
 
-## <a name="add-a-ibinaryhttpbodyeditorplugin-to-the-class"></a>Přidání modulu IBinaryHttpBodyEditorPlugin do třídy
+## <a name="add-a-ibinaryhttpbodyeditorplugin-to-the-class"></a>Přidat IBinaryHttpBodyEditorPlugin do třídy
 
 Implementujte rozhraní <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin>.
 
 **Přehled kódu v tomto postupu**
 
-Implementace kódu pro <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní je <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> podobná zahrnuty v předchozím postupu. Binární verze však používá pole bajtů ke zpracování binárních dat namísto řetězce.
+Implementace kódu pro <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní je podobná, jak je <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> popsáno v předchozím postupu. Binární verze však používá pole bajtů pro zpracování binárních dat namísto řetězce.
 
-Editor Control <xref:System.Windows.Forms.UserControl> vytvořené v prvním postupu je vytvořena jako messageEditorControl:
+MessageEditorControl <xref:System.Windows.Forms.UserControl> vytvořená v prvním postupu je vytvořena instance jako messageEditorControl:
 
 ```csharp
 private MessageEditorControl messageEditorControl
 ```
 
-Instance messageEditorControl je hostována v dialogovém okně <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.CreateEditor*> modulu plug-in, který je vytvořen metodou. Navíc messageEditorControl <xref:System.Windows.Forms.RichTextBox> je naplněn obsah v . <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> Vytvoření modulu plug-in však <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> nemůže `true`dojít, pokud vrátí . V případě tohoto editoru <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> vrátí, `true` pokud <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> obsahuje "msbin1".
+Instance messageEditorControl je hostována v dialogovém okně modulu plug-in, který je vytvořen <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.CreateEditor*> metodou. Kromě toho se messageEditorControl <xref:System.Windows.Forms.RichTextBox> naplní obsahem v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> . Vytvoření modulu plug-in však nelze provést, pokud se <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> nevrátí `true` . V případě tohoto editoru <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> vrátí, `true` Pokud <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> obsahuje "msbin1".
 
-Po dokončení úpravy textu řetězce a uživatel klepne **na tlačítko** OK <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*> v dialogovém okně modulu plug-in, je volána získat upravený text jako řetězec a aktualizovat **BinaryHttpBody.Data** v požadavku v Editoru výkonu testu webu.
+Při úpravách textu řetězce je dokončena a uživatel klikne na **tlačítko OK** v dialogovém okně modul plug-in, <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*> je volána k získání upravovaného textu jako řetězce a aktualizaci **BinaryHttpBody. data** v žádosti v editoru výkonu webového testu.
 
-### <a name="to-add-the-ibinaryhttpbodyeditorplugin-to-the-class"></a>Přidání modulu IBinaryHttpBodyEditorPlugin do třídy
+### <a name="to-add-the-ibinaryhttpbodyeditorplugin-to-the-class"></a>Přidání IBinaryHttpBodyEditorPlugin do třídy
 
-- Napište nebo zkopírujte následující kód pod třídou XmlMessageEditor přidanou v předchozím postupu k <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> vytvoření instance třídy Msbin1MessageEditor z rozhraní a implementaci požadovaných metod:
+- Napište nebo zkopírujte následující kód v rámci třídy XmlMessageEditor přidané v předchozím postupu pro vytvoření instance třídy Msbin1MessageEditor z <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> rozhraní a implementaci požadovaných metod:
 
     ```csharp
     /// <summary>
@@ -262,40 +262,40 @@ Po dokončení úpravy textu řetězce a uživatel klepne **na tlačítko** OK <
         }
     ```
 
-## <a name="build-and-deploy-the-plug-ins"></a>Vytváření a nasazování modulů plug-in
+## <a name="build-and-deploy-the-plug-ins"></a>Sestavování a nasazování modulů plug-in
 
-1. V nabídce **Build** zvolte **Build \<Windows Form Control Library název projektu>**.
+1. V nabídce **sestavení** klikněte na příkaz **sestavit \<Windows Form Control Library project name> **.
 
-2. Zavřete všechny instance sady Visual Studio.
+2. Zavřete všechny instance aplikace Visual Studio.
 
    > [!NOTE]
-   > Zavření sady Visual Studio zajistí, že soubor *DLL* není uzamčen před pokusem o jeho zkopírování.
+   > Zavřením sady Visual Studio se ujistěte, že soubor *. dll* není uzamčený předtím, než se pokusíte o jeho zkopírování.
 
-3. Zkopírujte výsledný soubor *DLL* ze složky *bin\ladění* projektu (například *MessageEditors.dll*) do *%ProgramFiles%\Microsoft\\\<Visual Studio\2017 edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins*.
+3. Zkopírujte výsledný soubor *. dll* ze složky *bin\Debug* vašeho projektu (například *MessageEditors.dll*) do *%ProgramFiles%\Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins*.
 
 4. Otevřete sadu Visual Studio.
 
-   *Dll* je nyní registrována v sadě Visual Studio.
+   *Knihovna DLL* je nyní registrována v aplikaci Visual Studio.
 
-## <a name="verify-the-plug-ins-using-a-web-performance-test"></a>Ověření modulů plug-in pomocí testu výkonu webu
+## <a name="verify-the-plug-ins-using-a-web-performance-test"></a>Ověření modulů plug-in pomocí testu výkonnosti webu
 
 1. Vytvořte testovací projekt.
 
-2. Vytvořte test výkonu webu a zadejte adresu URL do prohlížeče webové služby.
+2. Vytvořte test výkonnosti webu a v prohlížeči zadejte adresu URL webové služby.
 
-3. Po dokončení nahrávání rozbalte v Editoru testů výkonu webu požadavek na webovou službu a vyberte **typ řetězce** nebo **binární tělo**.
+3. Po dokončení nahrávání v Editor testu výkonnosti webu rozbalte požadavek webové služby a vyberte buď **text řetězce** , nebo **binární tělo**.
 
-4. V okně **Vlastnosti** vyberte buď Tělo řetězce nebo Binární tělo a zvolte tři tečky **(...)**.
+4. V okně **vlastnosti** vyberte text řetězce nebo binární tělo a zvolte tři tečky **(...)**.
 
-   Zobrazí se dialogové okno **Upravit data těla HTTP.**
+   Zobrazí se dialogové okno **Upravit data těla zprávy HTTP** .
 
-5. Nyní můžete upravit data a zvolit **OK**. To vyvolá příslušnou metodu GetNewValue pro <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>aktualizaci obsahu v .
+5. Teď můžete data upravit a kliknout na **OK**. Tím se vyvolá platná metoda GetNewValue, která aktualizuje obsah v <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> .
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
 
-Ověřte, zda je cílená architektura pro projekt knihovny ovládacích prvku systému Windows .NET Framework 4.5. Ve výchozím nastavení se projekty knihovny ovládacích oken zaměřují na rozhraní .NET Framework 4.5 Client Framework, což neumožní zahrnutí odkazu Microsoft.VisualStudio.QualityTools.WebTestFramework.
+Ověřte, zda je cílový rámec pro projekt knihovny ovládacích prvků systému Windows .NET Framework 4,5. Ve výchozím nastavení projekty knihovny ovládacích prvků systému Windows cílí na rozhraní klienta .NET Framework 4,5, které neumožní zahrnutí reference Microsoft. VisualStudio. QualityTools. WebTestFramework.
 
-Další informace naleznete v [tématu Stránka aplikace, návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md).
+Další informace naleznete na [stránce aplikace, Návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md).
 
 ## <a name="see-also"></a>Viz také
 
@@ -305,9 +305,9 @@ Další informace naleznete v [tématu Stránka aplikace, návrhář projektu (C
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Vytvoření vlastního kódu a modulů plugin pro zátěžové testování](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [Postup: Vytvoření modulu plug-in na úrovni požadavku](../test/how-to-create-a-request-level-plug-in.md)
-- [Kód vlastního pravidla extrakce pro test výkonu webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
-- [Kód vlastního ověřovacího pravidla pro test výkonu webu](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [Postup: Vytvoření modulu plug-in zátěžového testu](../test/how-to-create-a-load-test-plug-in.md)
+- [Postupy: Vytvoření modulu plug-in na úrovni požadavků](../test/how-to-create-a-request-level-plug-in.md)
+- [Kód vlastní pravidlo extrakce pro test výkonnosti webu](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
+- [Kódování vlastního ověřovacího pravidla pro test výkonnosti webu](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
+- [Postupy: Vytvoření modulu plug-in zátěžového testu](../test/how-to-create-a-load-test-plug-in.md)
 - [Generování a spuštění programového testu výkonnosti webu](../test/generate-and-run-a-coded-web-performance-test.md)
-- [Postup: Vytvoření doplňku sady Visual Studio pro prohlížeč výsledků testů výkonu webu](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)
+- [Postupy: vytvoření doplňku sady Visual Studio pro web Performance Výsledky testů Viewer](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)

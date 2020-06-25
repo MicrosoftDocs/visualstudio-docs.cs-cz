@@ -1,7 +1,7 @@
 ---
-title: Vytvořit testy jednotek řízených daty
+title: Vytváření testů jednotek řízených daty
 ms.date: 05/08/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.testresults.unittest.datadriven
 - vs.test.testresults.unittest.datadriven.failure
@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f50dad637d9efa2db347ff9f1b4828abf8c733af
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589185"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287984"
 ---
-# <a name="how-to-create-a-data-driven-unit-test"></a>Postup: Vytvoření testu částí řízených daty
+# <a name="how-to-create-a-data-driven-unit-test"></a>Postupy: vytvoření testu jednotek řízených daty
 
-K nastavení metody testování částí pro načtení hodnot ze zdroje dat můžete použít rozhraní Microsoft pro testování částí pro spravovaný kód. Metoda je spuštěna postupně pro každý řádek ve zdroji dat, což usnadňuje testování různých vstupů pomocí jediné metody.
+Pomocí rozhraní Microsoft Unit Test Framework pro spravovaný kód můžete nastavit metodu testování částí pro načtení hodnot ze zdroje dat. Metoda je postupně spouštěna pro každý řádek ve zdroji dat, což usnadňuje testování různých vstupů pomocí jediné metody.
 
-Vytvoření testování částí řízených daty zahrnuje následující kroky:
+Vytváření testu jednotek řízených daty zahrnuje následující kroky:
 
-1. Vytvořte zdroj dat, který obsahuje hodnoty, které používáte v testovací metodě. Zdrojem dat může být libovolný typ, který je registrován v počítači, který spustí test.
+1. Vytvořte zdroj dat, který obsahuje hodnoty, které použijete v testovací metodě. Zdroj dat může být jakýkoli typ, který je zaregistrován na počítači, který spouští test.
 
-2. Přidejte <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> soukromé pole `TestContext` a veřejnou vlastnost do testovací třídy.
+2. Přidejte soukromé <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> pole a veřejnou `TestContext` vlastnost do třídy testu.
 
-3. Vytvořte metodu testování <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> částí a přidejte do ní atribut.
+3. Vytvořte metodu testování částí a přidejte <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> do ní atribut.
 
-4. Pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> vlastnosti indexeru načtěte hodnoty, které používáte v testu.
+4. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A>K načtení hodnot, které používáte v testu, použijte vlastnost indexer.
 
-## <a name="the-method-under-test"></a>Zkoušená metoda
+## <a name="the-method-under-test"></a>Testovaný způsob
 
-Jako příklad předpokládejme, že máte:
+Předpokládejme například, že máte následující:
 
-1. Řešení s `MyBank` názvem, které přijímá a zpracovává transakce pro různé typy účtů.
+1. Řešení s názvem `MyBank` , které přijímá a zpracovává transakce pro různé typy účtů.
 
-2. Projekt v `MyBank` `BankDb` volání, který spravuje transakce pro účty.
+2. Projekt s `MyBank` názvem `BankDb` , který spravuje transakce pro účty.
 
-3. Třída `Maths` volaná `BankDb` v projektu, která provádí matematické funkce, aby bylo zajištěno, že každá transakce je výhodná pro banku.
+3. Třída volaná `Maths` v `BankDb` projektu, která provádí matematické funkce, aby zajistila, že je každá transakce pro banku výhodná.
 
-4. Projekt testování částí `BankDbTests` volána k `BankDb` testování chování komponenty.
+4. Projekt testu jednotek volal `BankDbTests` k otestování chování `BankDb` komponenty.
 
-5. Jednotka testovací třídy volána `MathsTests` k `Maths` ověření chování třídy.
+5. Třída testu jednotek volaná `MathsTests` pro ověření chování `Maths` třídy.
 
-Otestujeme `Maths` metodu, která přidá dvě celá čísla pomocí smyčky:
+Otestujeme metodu v `Maths` , která přidá dvě celá čísla pomocí smyčky:
 
 ```csharp
 public int AddIntegers(int first, int second)
@@ -65,17 +65,17 @@ public int AddIntegers(int first, int second)
 
 ## <a name="create-a-data-source"></a>Vytvoření zdroje dat
 
-Chcete-li `AddIntegers` metodu otestovat, vytvořte zdroj dat, který určuje rozsah hodnot pro parametry a součet, který očekáváte, že bude vrácen. V tomto příkladu vytvoříme databázi `MathsData` SQL Compact `AddIntegersData` s názvem a tabulku s názvem obsahující následující názvy sloupců a hodnoty
+Chcete-li otestovat `AddIntegers` metodu, vytvořte zdroj dat, který určuje rozsah hodnot pro parametry a součet, který chcete vrátit. V tomto příkladu vytvoříme databázi SQL Compact s názvem `MathsData` a tabulku s názvem `AddIntegersData` , která obsahuje následující názvy a hodnoty sloupců.
 
-|První číslo|Druhé číslo|Součet|
+|Prvníčíslo|Druhéčíslo|Součet|
 |-|------------------|-|
 |0|1|1|
 |1|1|2|
 |2|-3|-1|
 
-## <a name="add-a-testcontext-to-the-test-class"></a>Přidejte TestContext do testovací třídy
+## <a name="add-a-testcontext-to-the-test-class"></a>Přidat TestContext do testovací třídy
 
-Rozhraní testování částí `TestContext` vytvoří objekt pro uložení informací o zdroji dat pro test řízený daty. Rámec pak nastaví tento objekt `TestContext` jako hodnotu vlastnosti, kterou vytvoříte.
+Rozhraní testování částí vytvoří `TestContext` objekt pro uložení informací o zdroji dat pro test řízený daty. Rozhraní potom nastaví tento objekt jako hodnotu `TestContext` vlastnosti, kterou vytvoříte.
 
 ```csharp
 private TestContext testContextInstance;
@@ -86,14 +86,14 @@ public TestContext TestContext
 }
 ```
 
-V testovací metodě přístup k `DataRow` datům prostřednictvím `TestContext`indexeru vlastnost .
+V testovací metodě získáte přístup k datům prostřednictvím `DataRow` vlastnosti indexeru `TestContext` .
 
 > [!NOTE]
-> Rozhraní .NET Core nepodporuje atribut [DataSource.](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute) Pokud se pokusíte o přístup k testovacím datům tímto způsobem v projektu testování částí .NET Core nebo UPW, zobrazí se chyba podobná **"'TestContext' neobsahuje definici pro 'DataRow' a žádná přístupná rozšiřující metoda 'DataRow' přijetí prvního argumentu typu "TestContext" by mohl být nalezen (chybí vám using directive nebo odkaz na sestavení?)"**.
+> .NET Core nepodporuje atribut [DataSource](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute) . Pokud se pokusíte získat přístup k datům testu tímto způsobem v projektu testu jednotek .NET Core nebo UWP, zobrazí se chybová zpráva podobná této **: "TestContext" neobsahuje definici pro vlastnost ' DataRow ' a nebyla nalezena žádná přístupná metoda rozšíření ' DataRow ', která by přijímala první argument typu ' TestContext ' (nechybí Direktiva using nebo odkaz na sestavení?)**.
 
-## <a name="write-the-test-method"></a>Napište testovací metodu
+## <a name="write-the-test-method"></a>Zapsat testovací metodu
 
-Zkušební metoda `AddIntegers` pro je poměrně jednoduchá. Pro každý řádek ve zdroji `AddIntegers` dat volejte s hodnotami sloupce **FirstNumber** a **SecondNumber** jako parametry a ověřte vrácenou hodnotu oproti hodnotě sloupce **Sum:**
+Testovací metoda pro `AddIntegers` je poměrně jednoduchá. Pro každý řádek ve zdroji dat zavolejte `AddIntegers` hodnoty sloupce **Prvníčíslo** a **druhéčíslo** jako parametry a ověřte návratovou hodnotu oproti hodnotě sloupce **Sum** :
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0; Data Source=C:\Data\MathsData.sdf;", "Numbers")]
@@ -113,11 +113,11 @@ public void AddIntegers_FromDataSourceTest()
 }
 ```
 
-Metoda `Assert` obsahuje zprávu, která `x` `y` zobrazuje hodnoty a neúspěšné iterace. Ve výchozím nastavení jsou `expected` uplatně hodnoty - a `actual` - již zahrnuty v podrobnostech neúspěšného testu.
+`Assert`Metoda obsahuje zprávu, která zobrazuje `x` `y` hodnoty a neúspěšné iterace. Ve výchozím nastavení jsou hodnoty s přívýrazem () `expected` `actual` již zahrnuty v podrobnostech o neúspěšném testu.
 
-### <a name="specify-the-datasourceattribute"></a>Určení atributu Zdroje dat
+### <a name="specify-the-datasourceattribute"></a>Zadejte DataSourceAttribute
 
-Atribut `DataSource` určuje připojovací řetězec pro zdroj dat a název tabulky, kterou používáte v testovací metodě. Přesné informace v připojovacím řetězci se liší v závislosti na tom, jaký druh zdroje dat používáte. V tomto příkladu jsme použili databázi SqlServerCe.
+`DataSource`Atribut určuje připojovací řetězec pro zdroj dat a název tabulky, kterou použijete v testovací metodě. Přesné informace v připojovacím řetězci se liší v závislosti na typu zdroje dat, který používáte. V tomto příkladu jsme použili databázi SqlServerCe.
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]
@@ -129,17 +129,17 @@ Atribut DataSource má tři konstruktory.
 [DataSource(dataSourceSettingName)]
 ```
 
-Konstruktor s jedním parametrem používá informace o připojení, které jsou uloženy v souboru *app.config* pro řešení. *DataSourceSettingsName* je název elementu Xml v konfiguračním souboru, který určuje informace o připojení.
+Konstruktor s jedním parametrem používá informace o připojení, které jsou uloženy v souboru *app.config* pro řešení. *DataSourceSettingsName* je název elementu XML v konfiguračním souboru, který určuje informace o připojení.
 
-Použití souboru *app.config* umožňuje změnit umístění zdroje dat bez provedení změn v samotném testu jednotky. Informace o vytvoření a použití souboru *app.config* naleznete v [tématu Návod: Definování zdroje dat pomocí konfiguračního souboru](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
+Použití *app.config* souboru umožňuje změnit umístění zdroje dat bez provedení změn v samotném testu jednotek. Informace o tom, jak vytvořit a použít soubor *app.config* , najdete v tématu [Návod: použití konfiguračního souboru k definování zdroje dat.](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
 
 ```csharp
 [DataSource(connectionString, tableName)]
 ```
 
-Konstruktor `DataSource` se dvěma parametry určuje připojovací řetězec pro zdroj dat a název tabulky, která obsahuje data pro testovací metodu.
+`DataSource`Konstruktor se dvěma parametry Určuje připojovací řetězec pro zdroj dat a název tabulky, která obsahuje data pro testovací metodu.
 
-Připojovací řetězce závisí na typu typu zdroje dat, ale měl by obsahovat prvek Provider, který určuje nevariantní název zprostředkovatele dat.
+Připojovací řetězce závisí na typu typu zdroje dat, ale měl by obsahovat element provider, který určuje neutrální název poskytovatele dat.
 
 ```csharp
 [DataSource(
@@ -150,26 +150,26 @@ Připojovací řetězce závisí na typu typu zdroje dat, ale měl by obsahovat 
     )]
 ```
 
-### <a name="use-testcontextdatarow-to-access-the-data"></a>Použití testContext.DataRow pro přístup k datům
+### <a name="use-testcontextdatarow-to-access-the-data"></a>Pro přístup k datům použijte TestContext. DataRow.
 
-Chcete-li získat `AddIntegersData` přístup k `TestContext.DataRow` datům v tabulce, použijte indexer. `DataRow`je <xref:System.Data.DataRow> objekt, takže načtěte hodnoty sloupců podle názvů indexů nebo sloupců. Protože jsou hodnoty vráceny jako objekty, převeďte je na příslušný typ:
+Pro přístup k datům v `AddIntegersData` tabulce použijte `TestContext.DataRow` indexer. `DataRow`je <xref:System.Data.DataRow> objekt, takže načte hodnoty sloupce podle názvu indexu nebo sloupce. Vzhledem k tomu, že hodnoty jsou vráceny jako objekty, převeďte je na příslušný typ:
 
 ```csharp
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```
 
-## <a name="run-the-test-and-view-results"></a>Spuštění testu a zobrazení výsledků
+## <a name="run-the-test-and-view-results"></a>Spustit test a zobrazit výsledky
 
-Po dokončení psaní testovací metody vytvořte testovací projekt. Testovací metoda se zobrazí v **Průzkumníku testů** ve skupině **Nespustit testy.** Při spuštění, zápisu a opětovném spuštění testů **průzkumník testů** zobrazí výsledky ve skupinách **neúspěšných testů**, **Předané testy**a **Nespouštět testy**. Můžete zvolit **Spustit vše** pro spuštění všech testů nebo zvolte **Spustit** a zvolte podmnožinu testů, které chcete spustit.
+Po dokončení psaní testovací metody Sestavte projekt testů. Testovací metoda se zobrazí v **Průzkumníku testů** ve skupině **Nespuštěné testy** . Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** zobrazí výsledky ve skupinách **neúspěšných testů**, **úspěšných testů**a **nespustí testy**. Výběrem možnosti **Spustit vše** můžete spustit všechny testy, nebo výběrem možnosti **Spustit** vyberte podmnožinu testů, které chcete spustit.
 
-Panel výsledků testů v horní části **Průzkumníka testů** je animován při spuštění testu. Na konci testu bude pruh zelený, pokud všechny testy prošly, nebo červeně, pokud některý z testů selhal. Souhrn testovacího běhu se zobrazí v podokně podrobností v dolní části okna **Průzkumníka testů.** Vyberte test pro zobrazení podrobností tohoto testu v dolním podokně.
+Pruh výsledků testu v horní části **Průzkumníka testů** je animovaný jako vaše testovací běhy. Na konci testovacího běhu bude pruh zelený, pokud všechny testy byly úspěšné nebo červené, pokud došlo k selhání některého testu. Souhrn testovacího běhu se zobrazí v podokně podrobností v dolní části okna **Průzkumníka testů** . Vyberte test pro zobrazení podrobností testu v dolním podokně.
 
 > [!NOTE]
-> Existuje výsledek pro každý řádek dat a také jeden souhrnný výsledek. Pokud test prošel na každém řádku dat, souhrnné spuštění se zobrazí jako **Předáno**. Pokud se test nezdařil na libovolném řádku dat, souhrnné spuštění se zobrazí jako **Neúspěšné**.
+> Výsledkem je výsledek pro každý řádek dat a také jeden souhrnný výsledek. Pokud byl test úspěšný na každém řádku dat, zobrazí se souhrn, jak bylo **dokončeno**. Pokud se test nezdařil na žádném řádku dat, **zobrazí se souhrn.**
 
-Pokud jste `AddIntegers_FromDataSourceTest` spustili metodu v našem příkladu, panel výsledků se změní na červenou a testovací metoda se přesune na **neúspěšné testy**. Test řízený daty se nezdaří, pokud se nezdaří některá z iterovaných metod ze zdroje dat. Když zvolíte neúspěšný test řízený daty v okně **Průzkumník testů,** podokno podrobností zobrazí výsledky každé iterace, která je identifikována indexem řádků dat. V našem příkladu `AddIntegers` se zdá, že algoritmus nezpracovává záporné hodnoty správně.
+Pokud jste `AddIntegers_FromDataSourceTest` v našem příkladu spustili metodu, pruh výsledků se změní na červenou a testovací metoda se přesune na **neúspěšné testy**. Test řízený daty se nezdařil, pokud dojde k chybě některé z iterací metod ze zdroje dat. Když v okně **Průzkumníka testů** zvolíte neúspěšný test řízený daty, v podokně podrobností se zobrazí výsledky každé iterace, která je identifikována indexem řádku dat. V našem příkladu se zobrazí, že `AddIntegers` algoritmus nezpracovává záporné hodnoty správně.
 
-Při korekci testované metody a opakování testu se panel výsledků změní na zelenou a zkušební metoda se přesune do skupiny **Předátek testu.**
+Při opravě testované metody a opětovném spuštění testu se pruh výsledků změní na zelený a testovací metoda je přesunuta do **předané testovací** skupiny.
 
 ## <a name="see-also"></a>Viz také
 
@@ -178,5 +178,5 @@ Při korekci testované metody a opakování testu se panel výsledků změní n
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>
 - [Testování částí kódu](../test/unit-test-your-code.md)
-- [Spouštění testování částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
-- [Zápis testů částí pro rozhraní .NET pomocí architektury testování částí společnosti Microsoft](../test/unit-test-your-code.md)
+- [Spouštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
+- [Zápis testů jednotek pro .NET s využitím rozhraní testování částí společnosti Microsoft](../test/unit-test-your-code.md)

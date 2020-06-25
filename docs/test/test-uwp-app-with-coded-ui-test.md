@@ -1,7 +1,7 @@
 ---
-title: Testování aplikace UPW s kódovým testem ui
+title: Testování aplikace pro UWP pomocí programového testu uživatelského rozhraní
 ms.date: 05/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
@@ -10,44 +10,44 @@ dev_langs:
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: fdd3d98bd848bb6fe679809a58f2e316a316f012
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: aad17d244d70051a363a4cde294c592968093ba0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590355"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286749"
 ---
-# <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>Vytvoření kódovaného testu ui pro testování aplikace UPW
+# <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>Vytvoření programového testu uživatelského rozhraní pro otestování aplikace pro UWP
 
-Tento článek vysvětluje, jak vytvořit kódovaný test ui pro univerzální platformu Windows (UPW).
+Tento článek vysvětluje, jak vytvořit programový test uživatelského rozhraní pro aplikaci Univerzální platforma Windows (UWP).
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="create-a-uwp-app-to-test"></a>Vytvoření aplikace UPW k testování
+## <a name="create-a-uwp-app-to-test"></a>Vytvoření aplikace pro UWP k otestování
 
-Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
+Prvním krokem je vytvoření jednoduché aplikace pro UWP, na které se má test spustit.
 
-1. V sadě Visual Studio vytvořte nový projekt pomocí šablony **Blank App (Universal Windows)** pro Visual C# nebo Visual Basic.
+1. V aplikaci Visual Studio vytvořte nový projekt pomocí šablony **prázdná aplikace (univerzální pro Windows)** pro Visual C# nebo Visual Basic.
 
    ::: moniker range="vs-2017"
 
-   ![Prázdná univerzální šablona aplikace pro Windows](../test/media/blank-uwp-app-template.png)
+   ![Prázdná šablona pro univerzální aplikaci pro Windows](../test/media/blank-uwp-app-template.png)
 
    ::: moniker-end
 
-1. V dialogovém **okně Nový projekt univerzální platformy Windows** vyberte **ok,** chcete-li přijmout výchozí verze platformy.
+1. V dialogovém okně **Nový projekt Univerzální platforma Windows** vyberte **OK** , aby se přijímaly výchozí verze platformy.
 
-1. V **Průzkumníku řešení**otevřete *soubor MainPage.xaml*.
+1. Z **Průzkumník řešení**otevřete *MainPage. XAML*.
 
-   Soubor se otevře v **Návrháři XAML**.
+   Soubor se otevře v **Návrhář XAML**.
 
-1. Přetáhněte ovládací prvek tlačítka a ovládací prvek textového pole z **panelu nástrojů** na návrhovou plochu.
+1. Přetáhněte ovládací prvek tlačítko a ovládací prvek TextBox ze **sady nástrojů** na návrhovou plochu.
 
-     ![Návrh aplikace UPW](../test/media/toolbox-controls.png)
+     ![Návrh aplikace pro UWP](../test/media/toolbox-controls.png)
 
-1. Pojmenujte ovládací prvky. Vyberte ovládací prvek textového pole a v okně **Vlastnosti** zadejte **textové pole** do pole **Název.** Vyberte ovládací prvek tlačítka a pak v okně **Vlastnosti** zadejte **tlačítko** do pole **Název.**
+1. Zadejte názvy ovládacích prvků. Vyberte ovládací prvek TextBox a potom v okně **vlastnosti** zadejte do pole **název** text **TextBox** . Vyberte ovládací prvek tlačítko a potom v okně **vlastnosti** zadejte do pole **název** **tlačítko** .
 
-1. Poklepejte na ovládací prvek tlačítka a přidejte `Button_Click` následující kód do těla metody. Tento kód jednoduše nastaví text v textovém poli na název ovládacího prvku tlačítka, jen aby nám něco ověřit s kódované houfnice test vytvoříme později.
+1. Dvakrát klikněte na ovládací prvek tlačítko a do těla metody přidejte následující kód `Button_Click` . Tento kód jednoduše nastaví text v textovém poli na název ovládacího prvku tlačítko, stačí, když nám dáte něco pro ověření pomocí kódovaného testu uživatelského rozhraní, vytvoříme ho později.
 
    ```csharp
    this.textBox.Text = this.button.Name;
@@ -57,64 +57,64 @@ Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
    Me.textBox.Text = Me.button.Name
    ```
 
-1. Stisknutím **klávesy Ctrl**+**F5** aplikaci spusťte. Mělo by se zobrazit něco podobného:
+1. Spusťte aplikaci stisknutím klávesy **CTRL** + **F5** . Mělo by se zobrazit něco podobného:
 
-   ![Aplikace UPW s tlačítkem a textovým polem](media/uwp-app.png)
+   ![Aplikace UWP s tlačítkem a textovým polem](media/uwp-app.png)
 
-## <a name="create-a-coded-ui-test"></a>Vytvoření kódovaného testu ui
+## <a name="create-a-coded-ui-test"></a>Vytvoření programového testu uživatelského rozhraní
 
-1. Chcete-li do řešení přidat testovací projekt, klikněte pravým tlačítkem myši na řešení v **Průzkumníku řešení** a zvolte **Přidat** > **nový projekt**.
+1. Chcete-li do řešení přidat testovací projekt, klikněte pravým tlačítkem na řešení v **Průzkumník řešení** a vyberte možnost **Přidat**  >  **Nový projekt**.
 
-1. Vyhledejte a vyberte šablonu **Coded UI Test Project (Universal Windows).**
+1. Vyhledejte a vyberte šablonu **projektu programového testu uživatelského rozhraní (Universal Windows)** .
 
    ::: moniker range="vs-2017"
 
-   ![Nový kódovaný testovací projekt ui](../test/media/coded-ui-test-project-uwp-template.png)
+   ![Nový projekt programového testu UI](../test/media/coded-ui-test-project-uwp-template.png)
 
    ::: moniker-end
 
    > [!NOTE]
-   > Pokud šablonu **Coded UI Test Project (Universal Windows)** nevidíte, je třeba [nainstalovat kódovku testovací součást uživatelského prostředí](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component).
+   > Pokud nevidíte šablonu **projektu programového testu UI (Universal Windows)** , je nutné [nainstalovat komponentu programového testu uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component).
 
-1. V dialogovém **okně Generovat kód pro kódovaný test ui** vyberte Ručně upravit **test**.
+1. V dialogovém okně **generovat kód pro programový test uživatelského rozhraní** vyberte možnost **ručně upravit test**.
 
-   ![Generovat kód pro kódovaný dialog testu ui](../test/media/manually-edit-the-test.png)
+   ![Vygeneruje kód pro dialog programového testu uživatelského rozhraní.](../test/media/manually-edit-the-test.png)
 
-1. Pokud aplikace UPW ještě není spuštěná, spusťte ji stisknutím **klávesctrl**+**f5**.
+1. Pokud vaše aplikace UWP ještě není spuštěná, spusťte ji stisknutím **klávesy CTRL** + **F5**.
 
-1. Otevřete dialogové okno Tvůrce testovaného kódu `CodedUITestMethod1` **umítavého** nastavení umístěním kurzoru do metody a výběrem **možnosti Testovat** > **generovaný kód pro programový test použití** > **ui programovaného tvůrce testů ui**.
+1. Otevřete dialogové okno Tvůrce programového **testu uživatelského rozhraní** tak, že umístíte kurzor do `CodedUITestMethod1` metody a pak zvolíte **test**  >  **generovat kód pro programový test UI**  >  **použít Tvůrce programového testu uživatelského rozhraní**.
 
-1. Přidejte ovládací prvky do mapy ovládacího prvku ui. Pomocí **nástroje pro křížový kříž Tvůrce kódovaného ui** pro výběr vyberte ovládací prvek tlačítka v aplikaci UPW. V dialogovém okně **Přidat kontrolní výrazy** rozbalte v případě potřeby podokno **Mapy ovládacího prvku ui** a pak vyberte **Přidat ovládací prvek do mapy ovládacího prvku ui**.
+1. Přidejte ovládací prvky do mapování ovládacího prvku uživatelského rozhraní. Pomocí nástroje **Tvůrce programového testu UI** pro křížové ovládání vyberte ovládací prvek tlačítko v aplikaci UWP. V dialogovém okně **Přidat kontrolní výrazy** rozbalte v případě potřeby podokno **Mapa ovládacího prvku uživatelského rozhraní** a pak vyberte **Přidat ovládací prvek do mapování ovládacích prvků uživatelského rozhraní**.
 
-     ![Přidání ovládacího prvku do mapy ui](../test/media/add-control-to-ui-control-map.png)
+     ![Přidat ovládací prvek do mapy uživatelského rozhraní](../test/media/add-control-to-ui-control-map.png)
 
-1. Opakováním předchozího kroku přidejte ovládací prvek textového pole do mapy ovládacího prvku ui.
+1. Zopakováním předchozího kroku přidejte ovládací prvek TextBox do mapování ovládacího prvku uživatelského rozhraní.
 
-1. V dialogovém okně **Coded UI Test Builder** vyberte **Generovat kód** nebo stiskněte **Ctrl**+**G**. Pak vyberte **Generovat,** chcete-li vytvořit kód pro změny mapy ovládacího prvku ui.
+1. V dialogovém okně Tvůrce programového **testu UI** vyberte **vytvořit kód** nebo stiskněte **kombinaci kláves CTRL +** + **G**. Pak vyberte **vytvořit** a vytvořte kód pro změny mapování ovládacího prvku uživatelského rozhraní.
 
-     ![Generovat kód pro mapu uj.](../test/media/generate-code-dialog.png)
+     ![Vygenerovat kód pro mapu uživatelského rozhraní](../test/media/generate-code-dialog.png)
 
-1. Chcete-li ověřit, zda se text v textovém poli při klepnutí na tlačítko změní na **tlačítko,** klepněte na tlačítko.
+1. Chcete-li ověřit, zda se text v textovém poli změní na **tlačítko** po kliknutí na tlačítko, klikněte na tlačítko.
 
-     ![Chcete-li nastavit hodnotu textového pole, klepněte na ovládací prvek tlačítka.](../test/media/uwp-app-button-textbox.png)
+     ![Pro nastavení hodnoty TextBox klikněte na tlačítko ovládací prvek tlačítko](../test/media/uwp-app-button-textbox.png)
 
-1. Přidejte kontrolní výraz pro ověření textu v ovládacím prvku textového pole. Pomocí nástroje nitkového kříže vyberte ovládací prvek textového pole a pak vyberte vlastnost **Text** v dialogovém okně **Přidat kontrolní výrazy.** Potom vyberte **Přidat kontrolní výraz** nebo stiskněte **Alt**+**A**. Do pole **Zpráva o selhání kontrolního výrazu** je hodnota **textového pole neočekávaná.** a pak vyberte **OK**.
+1. Přidejte kontrolní výraz pro ověření textu v ovládacím prvku TextBox. Pomocí nástroje pro křížové vlasy vyberte ovládací prvek TextBox a potom v dialogovém okně **Přidat kontrolní výrazy** vyberte vlastnost **text** . Pak vyberte **Přidat kontrolní výraz** nebo stiskněte klávesu **ALT** + **a**. V poli **Zpráva o selhání kontrolního výrazu** zadejte **hodnotu textové pole není očekáváno.** a pak vyberte **OK**.
 
-     ![Volba textového pole s nitkovým křížem a přidání kontrolního výrazu](../test/media/add-assertion-for-text.png)
+     ![Zvolit textové pole s křížovým vlasy a přidat kontrolní výraz](../test/media/add-assertion-for-text.png)
 
-1. Vygenerujte testovací kód pro kontrolní výraz. V dialogovém okně **Tvůrce testů programového u.i.** vyberte **generovat kód**. V dialogovém okně **Generovat kód** vyberte Přidat **a generovat**.
+1. Vygenerujte zkušební kód pro kontrolní výraz. V dialogovém okně Tvůrce programového **testu UI** vyberte **generovat kód**. V dialogovém okně **generovat kód** vyberte **Přidat a generovat**.
 
-     ![Generovat kód pro kontrolní výraz textového pole](../test/media/add-and-generate-assert-method.png)
+     ![Vygenerovat kód pro kontrolní výraz TextBox](../test/media/add-and-generate-assert-method.png)
 
-   V **Průzkumníku řešení** *otevřete UIMap.Designer.cs* a zobrazte přidaný kód metody assert a ovládacích prvků.
+   V **Průzkumník řešení**otevřete *UIMap.Designer.cs* a zobrazte přidaný kód pro metodu Assert a ovládací prvky.
 
    > [!TIP]
-   > Pokud používáte visual basic, otevřete *CodedUITest1.vb*. Potom v `CodedUITestMethod1()` kódu testovací metody klikněte pravým tlačítkem `Me.UIMap.AssertMethod1()` myši na volání metody assert a zvolte **Přejít na definici**. *UIMap.Designer.vb* otevře v editoru kódu a můžete zobrazit přidaný kód pro assert metody a ovládací prvky.
+   > Pokud používáte Visual Basic, otevřete *CodedUITest1. vb*. Poté v `CodedUITestMethod1()` kódu metody testu klikněte pravým tlačítkem myši na volání metody Assert `Me.UIMap.AssertMethod1()` a zvolte možnost **Přejít k definici**. *UIMap. Designer. vb* se otevře v editoru kódu a můžete zobrazit přidaný kód pro metodu Assert a ovládací prvky.
 
     > [!WARNING]
-    > Soubory *UIMap.designer.cs* nebo *UIMap.Designer.vb* neupravujte přímo. Pokud tak učiníte, změny budou přepsány při generování testu.
+    > Neupravujte soubory *UIMap.Designer.cs* nebo *UIMap. Designer. vb* přímo. Pokud to uděláte, změny budou při vygenerování testu přepsány.
 
-    Metoda assert vypadá takto:
+    Metoda Assert vypadá takto:
 
     ```csharp
     public void AssertMethod1()
@@ -137,15 +137,15 @@ Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
     End Sub
     ```
 
-1. Dále potřebujeme získat **AutomationId** [aplikace](#create-a-uwp-app-to-test) UPW, které chceme otestovat. Otevřete nabídku **Start** systému Windows a podívejte se na dlaždici aplikace. Potom přetáhněte ikonu ![](media/target-icon.png) zaměřovací ho nástroje Cíl z dialogového okna **Coded UI Test Builder** na dlaždici aplikace. Když dlaždice obklopuje modrý rámeček, uvolněte myš.
+1. Dál musíme získat **AutomationId** [aplikace](#create-a-uwp-app-to-test) pro UWP, kterou chceme testovat. Otevřete nabídku **Start** systému Windows, abyste viděli dlaždici aplikace. Pak přetáhněte ikonu cíle nástroje pro křížové vlasy ![ ](media/target-icon.png) z dialogového okna Tvůrce programového **testu UI** na dlaždici pro vaši aplikaci. Až se modrý rámeček kolem dlaždice dopustí, uvolněte myš.
 
-   ![Nástroj pro nitkový vlas](media/cross-hair-tool.png)
+   ![Nástroj pro křížové vlasy](media/cross-hair-tool.png)
 
-   Otevře se dialogové okno **Přidat kontrolní výrazy** a zobrazí **automationid** pro vaši aplikaci. Klepněte pravým tlačítkem myši na **automationId** a zvolte **Kopírovat hodnotu do schránky**.
+   Otevře se dialogové okno **Přidat kontrolní výrazy** a zobrazí **AutomationId** pro vaši aplikaci. Klikněte pravým tlačítkem na **AutomationId** a vyberte **Kopírovat hodnotu do schránky**.
 
    ![AutomationID v dialogovém okně Přidat kontrolní výraz](../test/media/automation-id.png)
 
-1. Přidejte kód do testovací metody pro spuštění aplikace UPW. V **Průzkumníku řešení**otevřete *CodedUITest1.cs* nebo *CodedUITest1.vb*. Nad voláním `AssertMethod1`přidejte kód pro spuštění aplikace UPW:
+1. Přidejte kód do testovací metody pro spuštění aplikace UWP. V **Průzkumník řešení**otevřete *CodedUITest1.cs* nebo *CodedUITest1. vb*. Nad rámec volání `AssertMethod1` přidejte kód pro spuštění aplikace UWP:
 
    ```csharp
    XamlWindow.Launch("af5ecd75-f252-45a1-9e7e-c6f1d8f054ff_0q1pp7qrjexbp!App")
@@ -155,12 +155,12 @@ Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
    XamlWindow myAppWindow = XamlWindow.Launch("af5ecd75-f252-45a1-9e7e-c6f1d8f054ff_0q1pp7qrjexbp!App");
    ```
 
-   Nahraďte ID automatizace v ukázkovém kódu hodnotou, kterou jste zkopírovali do schránky v předchozím kroku.
+   V ukázkovém kódu nahraďte ID Automation hodnotou, kterou jste zkopírovali do schránky v předchozím kroku.
 
    > [!IMPORTANT]
-   > Ořízněte začátek ID automatizace, abyste odstranili znaky, například **P~**. Pokud tyto znaky neoříznete, `Microsoft.VisualStudio.TestTools.UITest.Extension.PlaybackFailureException` test vyvolá při pokusu o spuštění aplikace.
+   > Ořízne začátek ID automatizace a odebere znaky, jako je například **P ~**. Pokud tyto znaky neoříznete, test vyvolá `Microsoft.VisualStudio.TestTools.UITest.Extension.PlaybackFailureException` při pokusu o spuštění aplikace.
 
-1. Dále přidejte kód do testovací metody a klikněte na tlačítko. Na řádku `XamlWindow.Launch`za , přidejte gesto pro klepnutí na ovládací prvek tlačítka:
+1. Potom do testovací metody přidejte kód pro kliknutí na tlačítko. Na řádku po `XamlWindow.Launch` přidejte gesto klepnutím na ovládací prvek tlačítko:
 
    ```csharp
    Gesture.Tap(this.UIMap.UIUWPAppWindow.UIButtonButton);
@@ -170,7 +170,7 @@ Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
    Gesture.Tap(Me.UIMap.UIUWPAppWindow.UIButtonButton)
    ```
 
-   Po přidání kódu by `CodedUITestMethod1` měla být úplná zkušební metoda zobrazena takto:
+   Po přidání kódu by se měla provést úplná `CodedUITestMethod1` testovací metoda, jak je znázorněno níže:
 
    ```csharp
    [TestMethod]
@@ -202,31 +202,31 @@ Prvním krokem je vytvoření jednoduché aplikace UPW pro spuštění testu.
        End Sub
    ```
 
-1. Vytvořte testovací projekt a spusťte **Průzkumníka testů** výběrem **možnosti Test** > **Windows** > Test**Explorer**.
+1. Sestavte projekt testů a pak otevřete **Průzkumník testů** výběrem **test**  >  **Windows**  >  **Průzkumník testů**systému Windows.
 
-1. Chcete-li spustit test, vyberte možnost **Spustit vše.**
+1. Kliknutím na **Spustit vše** spusťte test.
 
-   Aplikace se otevře, tlačítko je poklepané a textbox **je text** ovázaná. Metoda assert ověřuje vlastnost **Text** textového pole.
+   Aplikace se otevře, tlačítko se otevře a vlastnost **text textového** pole se naplní. Metoda Assert ověří vlastnost **text** v textovém poli.
 
-   Po dokončení testu **Průzkumník testů** zobrazí, že test prošel.
+   Po dokončení testu **Průzkumník testů** zobrazí, že test proběhl úspěšně.
 
-   ![Předané testovací displeje v Průzkumníku testů](../test/media/test-explorer-coded-ui-test-passed.png)
+   ![Úspěšná zobrazení testů v Průzkumníku testů](../test/media/test-explorer-coded-ui-test-passed.png)
 
 ## <a name="q--a"></a>Otázky a odpovědi
 
-### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Otázka: Proč nevidím možnost zaznamenat kódovaný test ui v dialogovém okně Generovat kód pro programový test ui?
+### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>Otázka: Proč se mi nezobrazuje možnost zaznamenat programový test uživatelského rozhraní v dialogovém okně generovat kód pro programový test UI?
 
-**A**: Možnost záznamu není podporována pro aplikace UPW.
+Odpověď **: možnost**nahrávání není pro aplikace pro UWP podporována.
 
-### <a name="q-can-i-create-a-coded-ui-test-for-my-uwp-apps-based-on-winjs"></a>Otázka: Mohu vytvořit kódovaný test ui pro mé aplikace UPW na základě WinJS?
+### <a name="q-can-i-create-a-coded-ui-test-for-my-uwp-apps-based-on-winjs"></a>Otázka: mohu vytvořit programový test uživatelského rozhraní pro moje aplikace UWP založené na WinJS?
 
-**A**: Ne, jsou podporovány pouze aplikace založené na XAML.
+Odpověď: Ne, jsou podporovány pouze aplikace **založené na jazyce**XAML.
 
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Otázka: Proč nelze upravit kód v souboru UIMap.Designer?
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Otázka: Proč nemůžu změnit kód v souboru UIMap. Designer?
 
-**A**: Všechny změny kódu, které provedete v *souboru UIMapDesigner.cs,* jsou přepsány při každém generování kódu pomocí **tvůrce programového testu ui**. Pokud máte upravit nahranou metodu, zkopírujte ji do *UIMap.cs* souboru a přejmenujte ji. Soubor *UIMap.cs* lze použít k přepsání metod a vlastností v *souboru UIMapDesigner.cs.* Odeberte odkaz na původní metodu v *souboru CodedUITest.cs* a nahraďte ji přejmenovaným názvem metody.
+Odpověď **: všechny**změny kódu, které provedete v souboru *UIMapDesigner.cs* , budou přepsány pokaždé, když generujete kód pomocí Tvůrce programového **testu uživatelského rozhraní**. Pokud je nutné změnit zaznamenanou metodu, zkopírujte ji do souboru *UIMap.cs* a přejmenujte ji. Soubor *UIMap.cs* lze použít k přepsání metod a vlastností v souboru *UIMapDesigner.cs* . Odeberte odkaz na původní metodu v souboru *CodedUITest.cs* a nahraďte ji názvem metody, kterou jste přejmenovali.
 
 ## <a name="see-also"></a>Viz také
 
-- [Testování kódu pomocí automatizace uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
-- [Nastavení jedinečných vlastností automatizace pro ovládací prvky UPW](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
+- [Použití automatizace uživatelského rozhraní k otestování kódu](../test/use-ui-automation-to-test-your-code.md)
+- [Nastavení jedinečných vlastností automatizace pro ovládací prvky UWP](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)

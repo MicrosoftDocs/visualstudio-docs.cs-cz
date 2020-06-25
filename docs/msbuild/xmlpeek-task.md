@@ -1,5 +1,5 @@
 ---
-title: Úloha XmlPeek | Dokumenty společnosti Microsoft
+title: Úloha XmlPeek – | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a76bf033fa3eb85f0626478b965285f32e5fb6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 27b535af260d205c74ef87d0325680389d1dbe58
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094668"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286118"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek – úloha
 
@@ -33,21 +33,19 @@ Vrátí hodnoty určené dotazem XPath ze souboru XML.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Namespaces`|Volitelný `String` parametr.<br /><br /> Určuje obory názvů předpon dotazu XPath.|
+|`Namespaces`|Volitelný `String` parametr.<br /><br /> Určuje obory názvů pro předpony dotazů XPath.|
 |`Query`|Volitelný `String` parametr.<br /><br /> Určuje dotaz XPath.|
-|`Result`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výsledky, které jsou vráceny tímto úkolem.|
+|`Result`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výsledky, které jsou vráceny touto úlohou.|
 |`XmlContent`|Volitelný `String` parametr.<br /><br /> Určuje vstup XML jako řetězec.|
 |`XmlInputPath`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje vstup XML jako cestu k souboru.|
 
 ## <a name="remarks"></a>Poznámky
 
- Kromě parametrů, které jsou uvedeny v tabulce, tato úloha <xref:Microsoft.Build.Tasks.TaskExtension> dědí parametry z <xref:Microsoft.Build.Utilities.Task> třídy, která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
-
-
+ Kromě parametrů, které jsou uvedeny v tabulce, tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
-Zde je ukázkový `settings.config` soubor XML ke čtení:
+Tady je ukázkový soubor XML `settings.config` , který se má přečíst:
 
 ```xml
 <appSettings>
@@ -55,7 +53,7 @@ Zde je ukázkový `settings.config` soubor XML ke čtení:
 </appSettings>
 ```
 
-V tomto příkladu, pokud `value`chcete číst , použijte kód jako následující:
+V tomto příkladu, pokud chcete číst `value` , použijte kód podobný následujícímu:
 
 ```xml
 <Target Name="BeforeBuild">
@@ -74,7 +72,49 @@ V tomto příkladu, pokud `value`chcete číst , použijte kód jako následují
 </Target>
 ```
 
+S obory názvů XML použijete `Namespaces` parametr, jak je uvedeno v následujícím příkladu. Se vstupním souborem XML `XMLFile1.xml` :
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<class AccessModifier='public' Name='test' xmlns:s='http://nsurl'>
+  <s:variable Type='String' Name='a'>This</s:variable>
+  <s:variable Type='String' Name='b'>is</s:variable>
+  <s:variable Type='String' Name='c'>Sparta!</s:variable>
+  <method AccessModifier='public static' Name='GetVal' />
+</class>
+```
+
+A následující `Target` definice v souboru projektu:
+
+```xml
+  <Target Name="TestPeek" BeforeTargets="Build">
+    <!-- Find the Name attributes -->
+    <XmlPeek XmlInputPath="XMLFile1.xml"
+             Query="//s:variable/@Name"
+             Namespaces="&lt;Namespace Prefix='s' Uri='http://nsurl' /&gt;">
+      <Output TaskParameter="Result" ItemName="value1" />
+    </XmlPeek>
+    <Message Text="@(value1)"/>
+    <!-- Find 'variable' nodes (XPath query includes ".") -->
+    <XmlPeek XmlInputPath="XMLFile1.xml"
+             Query="//s:variable/."
+             Namespaces="&lt;Namespace Prefix='s' Uri='http://nsurl' /&gt;">
+      <Output TaskParameter="Result" ItemName="value2" />
+    </XmlPeek>
+    <Message Text="@(value2)"/>
+  </Target>
+```
+
+Výstup obsahuje následující z `TestPeek` cíle:
+
+```output
+  TestPeek output:
+  a;b;c
+  <s:variable Type="String" Name="a" xmlns:s="http://nsurl">This</s:variable>;<s:variable Type="String" Name="b" xmlns:s="http://nsurl">is</s:variable>;<s:variable Type="String" Name="c" xmlns:s="http://nsurl">Sparta!</s:variable>
+```
+
 ## <a name="see-also"></a>Viz také
 
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Syntaxe dotazu XPath](https://wikipedia.org/wiki/XPath)

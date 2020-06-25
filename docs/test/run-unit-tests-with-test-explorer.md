@@ -2,7 +2,7 @@
 title: Spuštění a ladění testů jednotek pomocí Průzkumníka testů
 description: Naučte se spouštět testy pomocí Průzkumníka testů v aplikaci Visual Studio. Toto téma popisuje, jak povolit automatické testovací běhy po sestavení, zobrazení výsledků testů, seskupení a filtrování seznamu testů, vytvoření seznamů stop, ladění testů a používání klávesových zkratek.
 ms.date: 07/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
 author: mikejo5000
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 429892e3022854cac157605117f955fd672f8997
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6de463fbc941273bed9b949958b9463be6ea1fa3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182921"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285631"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -55,7 +55,7 @@ Na panelu nástrojů **Průzkumníka testů** můžete provádět spoustu práce
 ### <a name="run-tests"></a>Spouštění testů
 
 ::: moniker range="vs-2017"
-Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
+Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte jednu z následujících akcí:
 
 - Chcete-li spustit všechny testy v řešení, vyberte možnost **Spustit vše**.
 
@@ -68,7 +68,7 @@ Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sad
 V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selhat** , protože testy jsou spouštěny. Při uzavírání testovacího běhu se **pruh úspěch/selhání** změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte některou z následujících akcí:
+Můžete spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které vyberete. Proveďte jednu z následujících akcí:
 
 - Chcete-li spustit všechny testy v řešení, vyberte ikonu **Spustit vše** .
 
@@ -154,7 +154,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
 |**Výsledek**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Project**|Seskupí testy podle názvu projektů.|
+|**Projekt**|Seskupí testy podle názvu projektů.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Skupina|Popis|
@@ -163,8 +163,8 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |**Stav**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné** .|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Obor názvů**|Seskupí testy podle obsahujícího oboru názvů.|
-|**Project**|Seskupí testy podle obsahujícího projektu.|
-|**Deník**|Seskupí testy pomocí obsahující třídy.|
+|**Projekt**|Seskupí testy podle obsahujícího projektu.|
+|**Třída**|Seskupí testy pomocí obsahující třídy.|
 ::: moniker-end
 
 ### <a name="traits"></a>Traits
@@ -267,7 +267,7 @@ Filtrování podle různých kritérií:
 |Kvalifikátor|Popis|
 |-|-----------------|
 |**Znak**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
-|**Project**|Vyhledá shody v názvech projektů testů.|
+|**Projekt**|Vyhledá shody v názvech projektů testů.|
 |**Chybová zpráva**|Vyhledá shodu v uživatelsky definovaných chybových zprávách vrácených neúspěšnými kontrolními výrazy.|
 |**Cesta k souboru**|Vyhledá shody v plně kvalifikovaném názvu souboru zdrojových souborů testu.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
@@ -280,10 +280,10 @@ Filtrování podle různých kritérií:
 |**Stav**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Vyhledá shody v kategorii a hodnotě vlastností. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
-|**Project**|Vyhledá shody v názvech projektů testů.|
+|**Projekt**|Vyhledá shody v názvech projektů testů.|
 |**Cílová architektura**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Obor názvů**|Vyhledá shody v oborech názvů testu.|
-|**Deník**|Vyhledá shody v názvech testovacích tříd.|
+|**Třída**|Vyhledá shody v názvech testovacích tříd.|
 ::: moniker-end
 
 K vyloučení podmnožiny výsledků filtru použijte následující syntaxi:

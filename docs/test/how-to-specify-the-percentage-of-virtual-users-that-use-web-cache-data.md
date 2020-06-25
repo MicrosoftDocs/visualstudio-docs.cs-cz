@@ -1,50 +1,50 @@
 ---
-title: 'Zátěžový test: Nastavení procenta virtuálního uživatele pomocí dat webové mezipaměti'
+title: 'Zátěžový test: nastavte procento virtuálních uživatelů pomocí dat webové mezipaměti'
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, virtual users
 ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8cac3368d0f03c268e086cc8636f1175a15effdd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a31ea50cdedbeb825d03de38a89200b6e8e5200
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113359"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287399"
 ---
-# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Postup: Určení procenta virtuálních uživatelů, kteří používají data webové mezipaměti
+# <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Postupy: určení procenta virtuálních uživatelů, kteří používají data mezipaměti webu
 
-Po vytvoření zátěžového testu pomocí **Průvodce novým zátěžovým testem**můžete pomocí **Editoru zátěžového testu**změnit vlastnosti scénářů tak, aby vyhovovaly vašim potřebám a cílům testování. Úplný seznam vlastností scénáře zátěžového testu a jejich popisy naleznete v tématu [Load test scenario properties](../test/load-test-scenario-properties.md).
+Po vytvoření zátěžového testu pomocí **nového Průvodce zátěžovým testem**můžete změnit vlastnosti scénářů tak, aby splňovaly potřeby testování a cíle pomocí **Editor zátěžového testu**. Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Vlastnost Procento nových uživatelů** je nastavena v okně **Vlastnosti.** Vlastnosti scénáře zátěžového testu můžete upravit v **editoru zátěžového testu**.
+V okně **vlastnosti** je nastavená **procentuální hodnota vlastnosti New Users** . Vlastnosti scénáře zátěžového testu upravíte v **Editor zátěžového testu**.
 
-**Vlastnost Procento nových uživatelů** ovlivňuje způsob, jakým zátěžový test simuluje ukládání do mezipaměti, které by bylo provedeno webovým prohlížečem. Ve výchozím nastavení je vlastnost **Procento nových uživatelů** nastavena na 0 %. Pokud je hodnota vlastnosti **Procento nových uživatelů** nastavena na 100 %, bude každý test výkonu webu spuštěný v zátěžovém testu považován za prvního uživatele webu, který nemá žádný obsah z webu v mezipaměti prohlížeče z předchozích návštěv. Proto jsou staženy všechny požadavky ve webovém testu, včetně všech závislých požadavků, jako jsou obrázky.
+**Procentuální hodnota vlastnosti New Users** ovlivňuje způsob, jakým zátěžový test simuluje ukládání do mezipaměti, které by prováděl webový prohlížeč. Ve výchozím nastavení je **procento nových uživatelských** vlastností nastaveno na 0%. Pokud je hodnota vlastnosti **procento nových uživatelů** nastavena na 100%, každý test výkonnosti webu v rámci zátěžového testu se považuje za prvního uživatele, který nemá žádný obsah z webové stránky v mezipaměti prohlížeče z předchozích návštěv. Proto se stáhnou všechny požadavky v rámci webového testu včetně všech závislých požadavků, jako jsou obrázky.
 
 > [!NOTE]
-> Pokud je stejný prostředek, který lze uložit do mezipaměti, požadován více než jednou ve webovém testu, požadavky se nestáhnou.
+> Pokud se stejný prostředek v mezipaměti požaduje více než jednou v rámci webového testu, požadavky se nestáhnou.
 
-Pokud načítáte testování webu, který má významný počet uživatelů vrácení, u kterých je pravděpodobné, že budou mít obrázky a další obsah, který lze uložit do mezipaměti místně, pak nastavení 100 % pro **vlastnost Procento nových uživatelů** vygeneruje více požadavků na stažení, než by se stalo v reálném používání. V takovém případě byste měli odhadnout procento návštěv vašich webových stránek, které jsou od prvních uživatelů webu, a odpovídajícím způsobem nastavit **procento nových uživatelů.**
+Pokud zátěž testujete na webu, který má velký počet vrácených uživatelů, kteří budou mít obrázky, a další obsah uložený v mezipaměti v místním počítači, pak nastavení 100% pro **procento nových uživatelů** vygeneruje více požadavků na stažení, než by se mohlo stát při použití reálného světa. V takovém případě byste měli odhadnout procento návštěv na webu, které se poprvé vystavili uživatelům webu, a odpovídajícím způsobem nastavit **procento nových vlastností uživatelů** .
 
 ## <a name="to-specify-the-percentage-of-new-users-for-a-scenario"></a>Určení procenta nových uživatelů pro scénář
 
 1. Otevřete zátěžový test.
 
-     Zobrazí se **Editor zátěžového testu.** Zobrazí se strom zátěžového testu.
+     Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
 
-2. Ve **složce** Scénáře zátěžového testu zvolte uzel scénáře, pro který chcete změnit hodnotu procenta nového uživatele.
+2. Ve složce **scénáře** stromů zátěžového testu vyberte uzel scénář, pro který chcete změnit procentuální hodnotu nového uživatele pro.
 
-3. V nabídce **Zobrazení** vyberte **Okno vlastnosti**.
+3. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-     Kategorie a vlastnosti scénáře jsou zobrazeny v okně **Vlastnosti.**
+     Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-4. Nastavte hodnotu vlastnosti **Procento nových uživatelů** zadáním čísla pro procento nových uživatelů.
+4. Zadáním čísla pro procento nových uživatelů nastavte hodnotu vlastnosti **procento nových uživatelů** .
 
-5. Po dokončení změny vlastnosti zvolte **Uložit** v nabídce **Soubor.** Potom můžete spustit zátěžový test pomocí nové hodnoty **Procento nových uživatelů.**
+5. Po dokončení změny vlastnosti vyberte v nabídce **soubor** možnost **Uložit** . Pak můžete spustit zátěžový test s použitím nového **procenta hodnoty nových uživatelů** .
 
 ## <a name="see-also"></a>Viz také
 

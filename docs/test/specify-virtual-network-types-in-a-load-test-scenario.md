@@ -1,7 +1,7 @@
 ---
 title: Určení typů virtuálních sítí ve scénáři zátěžového testu
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, scenarios
 - load tests, adding networks
@@ -12,40 +12,40 @@ ms.assetid: 3c4f7874-081a-4ec4-9510-4d6d7d863a11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 60fa2bd38f3d7e594e9af7ba8ec544518bdbb920
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c1d87e9681650cd22cc713788b42360ba3460bdc
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115295"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286593"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>Určení typů virtuálních sítí ve scénáři zátěžového testu
 
-*Kombinace sítí* umožňuje simulovat zatížení realističtější ve scénáři zátěžového testu. Zatížení je generováno pomocí heterogenní kombinace typů sítí namísto jednoho typu sítě. Můžete vytvořit bližší aproximaci toho, jak koncoví uživatelé interagují s vašimi aplikacemi.
+*Kombinace sítě* poskytuje způsob, jak simulovat zatížení ve scénáři zátěžového testu. Zatížení je generováno pomocí heterogenní kombinace typů sítě namísto jednoho typu jednoduché sítě. Vytvoříte blíže přibližné informace o tom, jak koncoví uživatelé pracují s vašimi aplikacemi.
 
-Kombinace sítí určuje pravděpodobnost, že virtuální uživatel se systémem daného *síťového profilu*. Profil sítě je simulace šířky pásma sítě v aplikační vrstvě. Nesimuluje latenci.
+Kombinace sítě určuje pravděpodobnost, že virtuální uživatel spustí daný *profil sítě*. Profil sítě je simulací šířky pásma sítě v aplikační vrstvě. Latence nesimuluje.
 
-Při vytváření zátěžového testu můžete simulovat, že zatížení je generováno prostřednictvím více než jednoho typu síťového připojení. Síťový mix nabízí několik typů sítí. Různé sítě jsou simulovány. Pokud zvolíte možnost, `Cable-DSL 1.5Mbps`jako je například , čekací doby jsou vloženy do testu simulovat vybrané šířky pásma.
+Když vytvoříte zátěžový test, může být vhodné simulovat toto zatížení prostřednictvím více než jednoho typu síťového připojení. Kombinace sítě nabízí několik typů sítě. Různé sítě jsou simulované. Zvolíte-li možnost `Cable-DSL 1.5Mbps` , například, časy čekání jsou vloženy do testu, aby se simulovala vybraná šířka pásma.
 
-Síťový mix funguje stejně jako ostatní možnosti mixu. Typ sítě je vybrán náhodně přidružený k virtuálnímu uživateli na základě kombinace sítí. Testy tohoto uživatele jsou spouštěny pomocí určitého typu sítě na základě pravděpodobnosti zadané v kombinaci.
+Kombinace sítě funguje podobně jako další možnosti kombinace. Typ sítě je náhodně přidružen k virtuálnímu uživateli na základě kombinace sítí. Testy tohoto uživatele se spouští pomocí konkrétního typu sítě, a to na základě pravděpodobnosti, kterou jste zadali v kombinaci.
 
-Po zadání kombinace sítí můžete přidat a odebrat typy sítí. Můžete také změnit distribuci síťového mixu pomocí ovládacího prvku mix.
+Po zadání kombinace sítě můžete přidat nebo odebrat typy sítě. Můžete také změnit distribuci kombinace sítě pomocí ovládacího prvku míchání.
 
-Ovládací prvek mix umožňuje snadno upravit distribuci sítí ve scénáři.
+Ovládací prvek míchání umožňuje snadno upravit distribuci sítí ve scénáři.
 
-Další informace naleznete [v tématu O ovládacím prvku mix](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+Další informace naleznete v tématu [o ovládacím prvku míchání](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="true-network-emulation"></a>Skutečná síťová emulace
+## <a name="true-network-emulation"></a>Skutečná emulace sítě
 
-Visual Studio používá softwarovou skutečnou síťovou emulaci pro všechny typy testů, včetně zátěžových testů. Skutečná emulace sítě simuluje síťové podmínky přímou manipulací se síťovými pakety. Skutečný emulátor sítě může emulovat chování kabelových i bezdrátových sítí pomocí spolehlivého fyzického propojení, například sítě Ethernet. Následující síťové atributy jsou začleněny do skutečné emulace sítě:
+Visual Studio používá skutečnou emulaci sítě založenou na softwaru pro všechny typy testů včetně zátěžových testů. Skutečná emulace sítě simuluje stavy sítě pomocí přímé manipulace se síťovými pakety. Skutečný emulátor sítě může emulovat chování drátové i bezdrátové sítě pomocí spolehlivého fyzického propojení, jako je Ethernet. Následující atributy sítě jsou začleněny do skutečné emulace sítě:
 
 - Doba odezvy v síti (latence)
 
-- Velikost dostupné šířky pásma
+- Množství dostupné šířky pásma
 
-- Chování při řazení do fronty
+- Chování fronty
 
 - Ztráta paketů
 
@@ -53,51 +53,51 @@ Visual Studio používá softwarovou skutečnou síťovou emulaci pro všechny t
 
 - Šíření chyb.
 
-Skutečná síťová emulace také poskytuje flexibilitu při filtrování síťových paketů na základě adres IP nebo protokolů, jako jsou TCP, UDP a ICMP.
+Skutečná emulace sítě také poskytuje flexibilitu při filtrování síťových paketů na základě IP adres nebo protokolů, jako jsou TCP, UDP a ICMP.
 
-Skutečná síťová emulace může být použita síťovými vývojáři aplikací a testery k emulaci požadovaného testovacího prostředí, posouzení výkonu, předvídání dopadu změn nebo rozhodování o optimalizaci technologií. Ve srovnání s hardwarovými testovacími lůžky je skutečná emulace sítě mnohem levnějším a flexibilnějším řešením.
+Skutečná emulace sítě může používat vývojáři a testeri síťových aplikací k emulaci požadovaného testovacího prostředí, vyhodnocení výkonu, předpovědi dopadu změny nebo rozhodování o optimalizaci technologie. Ve srovnání s vrstvami testovacího hardwaru je skutečná emulace sítě mnohem levnější a pružnější řešení.
 
 ## <a name="to-add-new-networks-to-a-scenario"></a>Přidání nových sítí do scénáře
 
-1. Během procesu zadávání kombinace sítí pro scénář zvolte **Přidat**.
+1. Během procesu zadávání kombinace sítě pro určitý scénář vyberte možnost **Přidat**.
 
-     Do sítě je přidána nová položka sítě.
+     Do mřížky se přidá nová položka sítě.
 
     > [!NOTE]
-    > Chcete-li zobrazit dialogové okno **Upravit kombinaci sítě,** klepněte pravým tlačítkem myši na existující scénář a pak zvolte **Upravit kombinaci sítě**.
+    > Chcete-li zobrazit dialogové okno **Upravit kombinaci sítí** , klikněte pravým tlačítkem myši na existující scénář a zvolte možnost **Upravit kombinaci sítí**.
 
-2. Ve sloupci **Typ sítě** zvolte šipku pro novou položku. Zvolte požadovaný typ sítě.
+2. Ve sloupci **typ sítě** vyberte šipku pro novou položku. Vyberte požadovaný typ sítě.
 
-3. (Nepovinné) Nastavte ovládací prvek mix udáváte rozložení testu. Další informace naleznete [v tématu O ovládacím prvku mix](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+3. Volitelné Upravte ovládací prvek míchání pro určení distribuce testu. Další informace naleznete v tématu [o ovládacím prvku míchání](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
-4. Po přidání sítí zvolte **OK**.
+4. Až skončíte s přidáváním sítí, klikněte na **tlačítko OK**.
 
 ## <a name="to-remove-networks-from-a-scenario"></a>Odebrání sítí ze scénáře
 
 1. Otevřete zátěžový test.
 
-2. Klepněte pravým tlačítkem myši na scénář, ze kterého chcete odebrat síť, a zvolte **Upravit kombinaci sítě**. Zobrazí se dialogové okno **Upravit síťový mix.**
+2. Klikněte pravým tlačítkem na scénář, ze kterého chcete odebrat síť, a vyberte **Upravit kombinaci sítí**. Zobrazí se dialogové okno **Upravit kombinaci sítí** .
 
 3. Vyberte síť v mřížce a pak zvolte **Odebrat**.
 
-4. (Nepovinné) Nastavte ovládací prvek mix udáváte rozložení testu. Další informace naleznete [v tématu O ovládacím prvku mix](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+4. Volitelné Upravte ovládací prvek míchání pro určení distribuce testu. Další informace naleznete v tématu [o ovládacím prvku míchání](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
-5. Po dokončení odebírání sítí zvolte **OK**.
+5. Po dokončení odebírání sítí klikněte na **tlačítko OK**.
 
-## <a name="about-the-mix-control"></a>O ovládacím prvku mix
+## <a name="about-the-mix-control"></a>O ovládacím prvku míchání
 
-Ovládací prvek mix umožňuje upravit procento zatížení, které je distribuováno mezi testy, typy prohlížečů nebo typy sítí ve scénáři zátěžového testu. Chcete-li upravit procentuální hodnoty, přesuňte posuvníky. Úprava kombinace pro typy sítí určuje pravděpodobnost, že virtuální uživatel spouštějící určitý síťový profil ve scénáři zátěžového testu.
+Ovládací prvek míchání umožňuje upravit procento zatížení distribuované mezi testy, typy prohlížečů nebo typy sítě ve scénáři zátěžového testu. Chcete-li upravit procentuální hodnoty, přesuňte posuvníky. Nastavení kombinace pro typy sítě určuje pravděpodobnost, že virtuální uživatel spustí konkrétní profil sítě ve scénáři zátěžového testu.
 
-Když posunete jezdec, změní se procentuální hodnoty všech dostupných položek. Pokud máte více než dvě položky, částka, kterou přidáte nebo odeberete, je rovnoměrně rozdělena mezi ostatní položky. Je možné přepsat toto chování. Pokud zaškrtnete políčko ve sloupci zámku pro určitou položku, uzamknete zadanou hodnotu procenta pro tuto položku. Když potom posunete jezdec, částka, kterou přidáte nebo odeberete, se použije pouze na všechny zbývající odemčené položky.
+Při přesunutí posuvníku se změní procentuální hodnoty všech dostupných položek. Pokud máte více než dvě položky, je množství, které přidáváte nebo odebíráte, rozděleno rovnoměrně mezi ostatní položky. Toto chování je možné přepsat. Pokud zaškrtnete políčko ve sloupci uzamknout pro konkrétní položku, zamknete pro tuto položku zadanou procentuální hodnotu. Když přesunete posuvník, množství, které přidáte nebo odeberete, se použije jenom u zbývajících odemčených položek.
 
-Tlačítko **Distribuovat** se používá k rozdělení procentuálních hodnot rovnoměrně mezi všechny položky. Pokud máte například tři položky, zvolte **Rozmístění,** nastaví tecesní hodnoty na 34, 33 a 33.
+Tlačítko **rozmístit** se používá k přidělení procentuálních hodnot rovnoměrně mezi všechny položky. Například pokud máte tři položky, volba **distribuovat** nastaví procentuální hodnoty na 34, 33 a 33.
 
 > [!WARNING]
-> Tlačítko **Rozmístit** přepíše všechny položky, které jsou zamknuté.
+> Tlačítko **distribuovat** přepisuje všechny položky, které jsou zamčené.
 
-Je také možné zadat procentuální **%** hodnoty přímo do sloupce namísto použití posuvníků. Pokud zadáte procentuální hodnotu přímo, ostatní položky se automaticky neupraví.
+Je také možné zadat hodnoty procent přímo do **%** sloupce místo pomocí posuvníků. Pokud zadáte hodnotu v procentech přímo, ostatní položky se automaticky neupraví.
 
 > [!NOTE]
-> Posuvníky jsou zakázány, pokud součet nepřidá až 100 %, nebo pokud jsou procentuální hodnoty zadané do **%** sloupce desetinné čárky.
+> Když celkový součet nepřidá až 100%, nebo když jsou procentuální hodnoty zadané do sloupce desetinná, jsou posuvníky zakázané **%** .
 
-Při ručním zadávání procentuálních hodnot byste se měli ujistit, že součet všech položek je 100 %. Pokud při uložení směsi neobdržíte součet 100 %, budete vyzváni k přijetí procentuálních hodnot tak, jak jsou, nebo k jejich vrácení a úpravě. Pokud se rozhodnete je přijmout tak, jak jsou, budou poměrně 100%.  Pokud například máte dvě položky a ručně je nastavíte na 80 % a 40 %, bude první položka nastavena na 66,67 % (80 děleno 120) a druhá položka bude nastavena na 33,33 % (40 vydělených 120).
+Když zadáte procentuální hodnoty ručně, měli byste se ujistit, že součet všech položek je 100%. Když uložíte směs, pokud součet není 100%, budete vyzváni, abyste přijali procentuální hodnoty tak, jak jsou, nebo se vrátíte a upravíte. Pokud se rozhodnete je přijmout, bude se poměrně 100%.  Pokud máte například dvě položky a ručně jste je nastavili na 80% a 40%, bude první položka nastavena na 66,67% (80 dělena 120) a druhá položka bude nastavena na 33,33% (40 dělený 120).

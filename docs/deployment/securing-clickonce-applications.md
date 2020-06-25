@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24b8416508ee5800ab581a1a58cedee1e5725cab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184442"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286294"
 ---
 # <a name="secure-clickonce-applications"></a>Zabezpečení aplikací ClickOnce
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]aplikace podléhají omezením zabezpečení přístupu kódu v .NET Framework pro omezení přístupu kódu k chráněným prostředkům a operacím. Z tohoto důvodu je důležité pochopit důsledky zabezpečení přístupu kódu k [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] odpovídajícímu zápisu aplikací. K omezení přístupu mohou vaše aplikace používat plnou důvěryhodnost nebo částečné zóny, jako jsou zóny pro Internet a Intranet.
@@ -50,7 +50,7 @@ ms.locfileid: "84184442"
  Další informace o zabezpečení přístupu kódu a ClickOnce naleznete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md).
 
 ## <a name="code-signing-certificates"></a>Certifikáty pro podepisování kódu
- Chcete-li publikovat aplikaci pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, můžete podepsat manifest aplikace a nasazení pro aplikaci pomocí páru veřejného a privátního klíče. Nástroje pro podepsání manifestu jsou k dispozici na stránce **podepisování** v **Návrháři projektu**. Další informace naleznete v tématu [Podepisování stránky, Návrhář projektu](../ide/reference/signing-page-project-designer.md). Alternativně můžete manifesty podepsat pomocí souboru klíče během procesu publikování pomocí Průvodce publikováním.
+ Chcete-li publikovat aplikaci pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, můžete podepsat manifest aplikace a nasazení pro aplikaci pomocí páru veřejného a privátního klíče. Nástroje pro podepsání manifestu jsou k dispozici na stránce **podepisování** v **Návrháři projektu**. Další informace naleznete v tématu [Podepisování stránky, Návrhář projektu](../ide/reference/signing-page-project-designer.md).
 
  Po podepsání manifestů jsou informace o vydavateli aplikace založené na signatuře technologie Authenticode zobrazeny uživateli při instalaci v dialogovém okně oprávnění, a to proto, aby uživatel věděl, že aplikace pochází z důvěryhodného zdroje.
 
@@ -66,7 +66,7 @@ ms.locfileid: "84184442"
 
  `http://servername.adatum.com/WindowsApp1.application?username=joeuser`
 
- Argumenty řetězce dotazu jsou zakázány. Aby je bylo možné povolit, `trustUrlParameters` musí být atribut nastaven v manifestu nasazení aplikace. Tuto hodnotu lze nastavit z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a z MageUI. exe. Podrobné informace o tom, jak povolit předávání řetězců dotazů, naleznete v tématu [How to: načítají se informace o řetězci dotazu v online aplikaci ClickOnce](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).
+ Argumenty řetězce dotazu jsou zakázány. Aby je bylo možné povolit, `trustUrlParameters` musí být atribut nastaven v manifestu nasazení aplikace. Tuto hodnotu lze nastavit z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a z MageUI.exe. Podrobné informace o tom, jak povolit předávání řetězců dotazů, naleznete v tématu [How to: načítají se informace o řetězci dotazu v online aplikaci ClickOnce](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).
 
  Nikdy byste neměli předávat argumenty načtené pomocí řetězce dotazu do databáze nebo příkazového řádku bez ověřování argumentů a zajištění jejich bezpečnosti. Nebezpečné argumenty jsou argumenty s řídicími znaky databáze nebo příkazového řádku, které by mohly umožnit uživateli se zlými úmysly manipulaci s aplikací a provádění libovolných příkazů.
 

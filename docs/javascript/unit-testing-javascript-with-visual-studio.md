@@ -1,8 +1,8 @@
 ---
 title: Testování částí JavaScript a TypeScript
-description: Visual Studio poskytuje podporu testování částí JavaScriptu a kódu TypeScript pomocí Node.js Tools for Visual Studio
+description: Visual Studio poskytuje podporu testování částí JavaScriptu a kódu TypeScript pomocí nástrojů Node.js pro Visual Studio.
 ms.date: 06/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
@@ -11,23 +11,23 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 4e3e0b1c1579614454580d2f5446b31c718d7f35
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: acac3eb306d12ff6976e19ae5dc1ad772691094c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183103"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288998"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
-Nástroje Node. js Tools for Visual Studio umožňují psát a spouštět testy jednotek pomocí některých z oblíbených rozhraní JavaScript, aniž by bylo nutné přepnout na příkazový řádek.
+Nástroje Node.js pro Visual Studio umožňují psát a spouštět testy jednotek pomocí některých z oblíbených rozhraní JavaScript, aniž by bylo nutné přepnout na příkazový řádek.
 
 Podporované architektury:
 * Mocha ([mochajs.org](https://mochajs.org/))
 * Jednotek Jasmine ([Jasmine.GitHub.IO](https://jasmine.github.io/))
 * Páska ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.IO](https://jestjs.io/))
-* Exportovat Runner (Toto rozhraní je specifické pro Node.js Tools for Visual Studio)
+* Exportovat Runner (Toto rozhraní je specifické pro Node.js nástroje pro Visual Studio)
 
 Pokud vaše oblíbené rozhraní není podporováno, přečtěte si téma [Přidání podpory pro testovací prostředí jednotky](#addingFramework) , kde najdete informace o přidání podpory.
 
@@ -72,7 +72,7 @@ Po otevření Průzkumníka testů (zvolit **test**  >  **Windows**  >  **Průzk
 ![Průzkumník testů](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> Nepoužívejte `outdir` `outfile` možnost ani v souboru *tsconfig. JSON*, protože Průzkumník testů nebude moci nalézt testy jednotek v souborech TypeScript.
+> Nepoužívejte `outdir` `outfile` možnost nebo v *tsconfig.jsna*, protože Průzkumník testů nebude moci nalézt testy jednotek v souborech TypeScript.
 
 ## <a name="run-tests"></a>Spouštění testů
 
@@ -125,7 +125,7 @@ Test execution time: 1.5731 Seconds
 ```
 
 > [!NOTE]
-> Pokud se zobrazí chyba s oznámením, že *VSTest. Console. exe* nelze najít, ujistěte se, že jste otevřeli Developer Command Prompt a nikoli běžný příkazový řádek.
+> Pokud se zobrazí chyba s oznámením, že *vstest.console.exe* nejde najít, ujistěte se, že jste otevřeli Developer Command Prompt a ne běžný příkazový řádek.
 
 ## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>Přidání podpory pro systém testů jednotek
 
@@ -145,7 +145,7 @@ Dobrý příklad `find_tests` a `run_tests` implementace naleznete v tématu imp
 Zjišťování dostupných testovacích rozhraní probíhá při spuštění sady Visual Studio. Pokud se při spuštění sady Visual Studio přidá rozhraní, restartujte Visual Studio, aby se zjistilo rozhraní. Při provádění změn v implementaci ale nemusíte nic restartovat.
 
 ## <a name="unit-tests-in-other-project-types"></a>Testování částí v jiných typech projektů
-Nejste omezeni na psaní testů jednotek pouze v projektech Node. js. Když přidáte vlastnosti TestFramework a TestRoot do jakéhokoli projektu C# nebo Visual Basic, tyto testy budou vyčísleny a lze je spustit pomocí okna Průzkumník testů.
+Nejste omezeni na psaní testů jednotek pouze v projektech Node.js. Když přidáte vlastnosti TestFramework a TestRoot do jakéhokoli projektu C# nebo Visual Basic, tyto testy budou vyčísleny a lze je spustit pomocí okna Průzkumník testů.
 
 Pokud to chcete povolit, klikněte pravým tlačítkem myši na uzel projektu v Průzkumník řešení, zvolte **Uvolnit projekt**a pak zvolte **upravit projekt**. Poté v souboru projektu přidejte následující dva prvky do skupiny vlastností.
 

@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b0cb05948f8010964eefe101cbc77d48a149566
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180399"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288933"
 ---
 # <a name="customize-your-build"></a>Přizpůsobení sestavení
 
@@ -80,7 +80,7 @@ Vlastnosti, které jsou nastaveny v *Directory. Build. props* , lze přepsat jin
 Pokud potřebujete nastavit vlastnost nebo definovat cíl pro jednotlivý projekt, který přepíše předchozí nastavení, vložte tuto logiku do souboru projektu po dokončení importu. Aby to bylo možné provést v projektu ve stylu sady SDK, musíte nejprve nahradit atribut sady SDK ekvivalentními importy. Viz [Jak používat sady SDK pro MSBuild projekty](how-to-use-project-sdk.md).
 
 > [!NOTE]
-> Nástroj MSBuild přečte ve všech importovaných souborech během hodnocení, před spuštěním spuštění sestavení pro libovolný projekt (včetně všech `PreBuildEvent` ), takže tyto soubory nejsou očekávány pomocí `PreBuildEvent` ani žádné jiné části procesu sestavení. Jakékoli změny se projeví až při dalším vyvolání nástroje *MSBuild. exe* nebo v dalším sestavení sady Visual Studio.
+> Nástroj MSBuild přečte ve všech importovaných souborech během hodnocení, před spuštěním spuštění sestavení pro libovolný projekt (včetně všech `PreBuildEvent` ), takže tyto soubory nejsou očekávány pomocí `PreBuildEvent` ani žádné jiné části procesu sestavení. Jakékoli změny se projeví až při dalším vyvolání *MSBuild.exe* nebo v dalším sestavení sady Visual Studio.
 
 ### <a name="use-case-multi-level-merging"></a>Případ použití: sloučení na více úrovní
 
@@ -182,7 +182,7 @@ Bude prohledána stejná adresářová struktura `$(MSBuildUserExtensionsPath)` 
 ## <a name="customize-the-solution-build"></a>Přizpůsobení buildu řešení
 
 > [!IMPORTANT]
-> Přizpůsobení řešení sestavení tímto způsobem se vztahuje pouze na sestavení příkazového řádku pomocí nástroje *MSBuild. exe*. Nevztahuje **se** na sestavení v rámci sady Visual Studio.
+> Přizpůsobení řešení sestavení tímto způsobem se vztahuje pouze na sestavení příkazového řádku s *MSBuild.exe*. Nevztahuje **se** na sestavení v rámci sady Visual Studio. Z tohoto důvodu nedoporučujeme vkládat přizpůsobení na úrovni řešení. Lepší alternativou pro přizpůsobení všech projektů v řešení je použití souborů *Directory. Build. props* a *Directory. Build. targets* ve složce řešení, jak je popsáno jinde v tomto článku.
 
 Když nástroj MSBuild vytvoří soubor řešení, nejprve ho přeloží do souboru projektu a poté sestaví. Vygenerovaný soubor projektu importuje `before.{solutionname}.sln.targets` před definováním cílů a `after.{solutionname}.sln.targets` po importu cílů, včetně cílů nainstalovaných `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` do `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` adresářů a.
 

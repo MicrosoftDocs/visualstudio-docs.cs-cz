@@ -1,6 +1,6 @@
 ---
-title: Odstranit úkol | Dokumenty společnosti Microsoft
-ms.date: 11/04/2016
+title: Odstranit úlohu | Microsoft Docs
+ms.date: 06/11/2020
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Delete
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9effb00c613c5a61a5a8d4d89cbbe5b785601d8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eddb9804378a4c32de9d1b68f952bc715f32ffd6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634276"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288907"
 ---
 # <a name="delete-task"></a>Delete – úloha
 
@@ -35,35 +35,72 @@ Následující tabulka popisuje parametry `Delete` úkolu.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`DeletedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje soubory, které byly úspěšně odstraněny.|
-|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, které chcete odstranit.|
-|`TreatErrorsAsWarnings`|Volitelný `Boolean` parametr<br /><br /> Pokud `true`jsou chyby zaznamenány jako upozornění. Výchozí hodnota je `false`.|
+|`DeletedFiles`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje soubory, které se úspěšně odstranily.|
+|`Files`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory, které se mají odstranit.|
+|`TreatErrorsAsWarnings`|Volitelný `Boolean` parametr<br /><br /> Pokud `true` jsou chyby protokolovány jako upozornění. Výchozí hodnota je `false`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 > [!WARNING]
-> Buďte opatrní při použití zástupných znaků s úkolem. `Delete` Můžete snadno odstranit nesprávné soubory s `$(SomeProperty)\**\*.*` `$(SomeProperty)/**/*.*`výrazy jako nebo , zejména v případě, `Files` že vlastnost vyhodnotí na prázdný řetězec, v takovém případě parametr může vyhodnotit do kořenového adresáře jednotky a odstranit mnohem více, než jste chtěli odstranit.
+> Při použití zástupných znaků s úkolem buďte opatrní `Delete` . Nesprávné soubory můžete snadno odstranit pomocí výrazů jako `$(SomeProperty)\**\*.*` nebo `$(SomeProperty)/**/*.*` , zejména pokud je vlastnost vyhodnocena jako prázdný řetězec. v takovém případě se `Files` parametr může vyhodnotit na kořen vaší jednotky a odstranit mnohem více, než jste chtěli odstranit.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad odstraní soubor *MyApp.pdb*.
+Následující příklad odstraní soubor *MyApp. pdb* při sestavení `DeleteDebugSymbolFile` cíle.
 
 ```xml
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
 
     <PropertyGroup>
-        <AppName>MyApp</AppName>
+        <AppName>ConsoleApp1</AppName>
     </PropertyGroup>
 
-    <Target Name="DeleteFiles">
-        <Delete Files="$(AppName).pdb" />
+    <Target Name="DeleteDebugSymbolFile">
+        <Message Text="Deleting $(OutDir)$(AppName).pdb"/>
+        <Delete Files="$(OutDir)$(AppName).pdb" />
     </Target>
+  
 </Project>
+
 ```
+
+Pokud potřebujete sledovat odstraněné soubory, nastavte `TaskParameter` na hodnotu `DeletedFiles` s názvem položky následujícím způsobem:
+
+```xml
+      <Target Name="DeleteDebugSymbolFile">
+        <Delete Files="$(OutDir)$(AppName).pdb" >
+              <Output TaskParameter="DeletedFiles" ItemName="DeletedList"/>
+        </Delete>
+        <Message Text="Deleted files: '@(DeletedList)'"/>
+    </Target>
+```
+
+Místo přímého použití zástupných znaků v `Delete` úloze vytvořte `ItemGroup` soubory pro odstranění a spuštění `Delete` úlohy. Ale nezapomeňte `ItemGroup` pečlivě umístit. Pokud umístíte do `ItemGroup` nejvyšší úrovně v souboru projektu, vyhodnotí se nejdříve před zahájením sestavení, takže nebude obsahovat žádné soubory, které byly vytvořeny jako součást procesu sestavení. Proto vložte `ItemGroup` objekt, který vytvoří seznam položek k odstranění v cíli blízko `Delete` úkolu. Můžete také zadat podmínku pro kontrolu, že vlastnost není prázdná, takže nevytvoříte seznam položek s cestou, která začíná v kořenovém adresáři jednotky.
+
+`Delete`Úloha je určena k odstraňování souborů. Pokud chcete odstranit adresář, použijte [RemoveDir –](removedir-task.md).
+
+`Delete`Úkol neposkytuje možnost odstraňovat soubory jen pro čtení. Chcete-li odstranit soubory jen pro čtení, můžete použít `Exec` úlohu ke spuštění `del` příkazu nebo ekvivalentní s příslušnou možností pro povolení odstraňování souborů jen pro čtení. Musíte věnovat pozornost délce seznamu vstupních položek, protože na příkazovém řádku je omezení délky, a navíc je potřeba zpracovat názvy souborů s mezerami, jako v tomto příkladu:
+
+```xml
+<Target Name="DeleteReadOnly">
+  <ItemGroup>
+    <FileToDelete Include="read only file.txt"/>
+  </ItemGroup>
+  <Exec Command="del /F /Q &quot;@(FileToDelete)&quot;"/>
+</Target>
+```
+
+Obecně platí, že při psaní skriptů sestavení zvažte, zda je odstranění logicky součástí `Clean` operace. Pokud potřebujete nastavit soubory, které se mají vyčistit v rámci běžné `Clean` operace, můžete je přidat do `@(FileWrites)` seznamu a budou se odstraňovat v dalším `Clean` . Pokud je potřeba další vlastní zpracování, definujte cíl a určete, že se má spustit, nastavením atributu `BeforeTargets="Clean"` nebo `AfterTargets="Clean"` , nebo definujte vlastní verzi `BeforeClean` nebo `AfterClean` cílů. Viz [přizpůsobení sestavení](customize-your-build.md).
 
 ## <a name="see-also"></a>Viz také
 
+- [RemoveDir – – úloha](removedir-task.md)
 - [Úlohy](../msbuild/msbuild-tasks.md)
 - [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

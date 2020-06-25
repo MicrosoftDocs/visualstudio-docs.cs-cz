@@ -1,7 +1,7 @@
 ---
-title: Konfigurace testovacích iterací pro zátěžové testování
+title: Konfigurace iterací testů pro zátěžové testování
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, scenarios, iterations
 - load test, iterations
@@ -10,38 +10,38 @@ ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e95ca27ace50c7b28d1ffb1d3fc02589daddee2d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6adbdedf8a71319877c5527e00e0e7c5e73fa6b1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590979"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288777"
 ---
-# <a name="configure-test-iterations-in-a-load-test-scenario"></a>Konfigurace iterace testů ve scénáři zátěžového testu
+# <a name="configure-test-iterations-in-a-load-test-scenario"></a>Konfigurace iterací testů ve scénáři zátěžového testu
 
-Chcete-li konfigurovat nastavení testovací iterace, upravte scénář zátěžového testu pomocí editoru zátěžového testu a okna **Vlastnosti.** Ve výchozím nastavení je nastaven scénář zátěžového testu bez zadání maximálních iterací testu. Máte možnost nakonfigurovat maximální počet iterací ve scénáři a jak dlouho mezi nimi pozastavit.
+Chcete-li konfigurovat nastavení iterace testu, upravte scénář zátěžového testu pomocí Editor zátěžového testu a okna **vlastnosti** . Ve výchozím nastavení je scénář zátěžového testu nastavený bez určení maximálního počtu iterací testu. Máte možnost nakonfigurovat maximální počet iterací ve scénáři a dobu pozastavení mezi nimi.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="specify-the-maximum-test-iterations-for-a-scenario"></a>Určení maximálních iterací testu pro scénář
+## <a name="specify-the-maximum-test-iterations-for-a-scenario"></a>Zadejte maximální počet iterací testu pro scénář.
 
-Můžete určit maximální počet, kolikrát chcete testy spustit pro scénář pomocí Editoru zátěžového testu změnit **maximální test iterací** vlastnost v okně **Vlastnosti.**
+Můžete zadat maximální počet, kolikrát chcete, aby testy běžely pro scénář pomocí Editor zátěžového testu ke změně vlastnosti **maximálního počtu iterací testu** v okně **vlastnosti** .
 
-**Vlastnost Maximum Test Iterations** řídí maximální počet iterací testu, které mají být spuštěny pro scénář. Stejně jako pro **test iterací** vlastnost v nastavení spuštění zátěžového testu, toto je maximum napříč všemi uživateli na všech agentech, nikoli na uživatelské nastavení.
-
-> [!NOTE]
-> Úplný seznam vlastností scénáře zátěžového testu a jejich popisy naleznete v tématu [Load test scenario properties](../test/load-test-scenario-properties.md).
-
-Pro sekvenční kombinace testů je jedna iterace jeden průchod všemi testy v mixu. Pro všechny ostatní kombinace testů se každé spuštění testu počítá jako iterace. Další informace naleznete [v tématu O ovládacím prvku mix](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
-
-Pokud je zátěžový test zátěžový test založený na době trvání a doba trvání vyprší před dokončením počtu iterací, test se stále zastaví. Pokud je test založen na iteraci a iterace testu jsou splněny před iterací scénáře, test se zastaví. Doba trvání je konfigurována pomocí vlastnosti **Doba běhu** v okně **Vlastnosti** přidruženém k nastavení spuštění v zátěžovém testu.
-
-Když je splněn počet iterace scénáře, scénář se zastaví, ale všechny ostatní aktivní scénáře budou nadále spuštěny.
+Vlastnost **maximální počet iterací testu** určuje maximální počet iterací testu, které se mají spustit pro daný scénář. Stejně jako u vlastnosti **iterace testu** v nastavení spuštění zátěžového testu je toto maximum pro všechny uživatele na všech agentech, nikoli na uživatelské nastavení.
 
 > [!NOTE]
-> Související vlastnost je **Jedinečná** vlastnost na webovém testovacím zdroji, která se postupně pohybuje mezi daty, řádek po řádku, ale pouze jednou pro každý záznam. Další informace naleznete [v tématu Přidání zdroje dat do testu výkonu webu](../test/add-a-data-source-to-a-web-performance-test.md).
+> Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-**Maximální test iterací** vlastnost je užitečná pro různé situace. Některé testery zatížení dávají přednost provádění testování na základě iterace, zatímco jiné testery zatížení dávají přednost provádění testování na základě doby trvání.
+V případě kombinace sekvenčního testu jedna iterace projde všemi testy v kombinaci. U všech ostatních testovaných směsí se každé spuštění testu počítá jako iterace. Další informace naleznete v tématu [o ovládacím prvku míchání](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
+
+Pokud zátěžový test je zátěžový test založený na době od doby trvání a vyprší před dokončením počtu iterací, test se pořád zastaví. Pokud je test založen na iteraci a testy testů jsou splněné před iteracemi scénáře, test se zastaví. Doba trvání je nakonfigurována pomocí vlastnosti **trvání běhu** v okně **vlastnosti** přidruženého k nastavení spuštění v rámci zátěžového testu.
+
+V případě splnění počtu iterací scénáře přestane fungovat, ale všechny ostatní aktivní scénáře budou i nadále spuštěny.
+
+> [!NOTE]
+> Související vlastnost je **jedinečná** vlastnost na zdroji dat webového testu, která je postupně přesunuta přes data, řádek po řádku, ale pouze jednou pro každý záznam. Další informace najdete v tématu [Přidání zdroje dat do testu výkonnosti webu](../test/add-a-data-source-to-a-web-performance-test.md).
+
+Vlastnost **maximální počet iterací testu** je užitečná pro celou řadu situací. Některé testery zatížení dávají přednost testování založenému na iteraci, zatímco jiné testery zatížení dávají přednost testování na základě doby trvání.
 
 ![Určení iterací testu ve scénáři](../test/media/loadtest_prop.png)
 
@@ -51,47 +51,47 @@ Když je splněn počet iterace scénáře, scénář se zastaví, ale všechny 
 
 2. Zobrazí se Editor zátěžového testu. Zobrazí se strom zátěžového testu.
 
-3. Ve **složce** scénáře zátěžového testu zvolte uzel scénáře, pro který chcete zadat maximální počet iterací testu.
+3. Ve složce **scénáře** stromů zátěžového testu zvolte uzel scénáře, pro který chcete určit maximální počet iterací testu.
 
-4. V nabídce **Zobrazení** vyberte **Okno vlastnosti**.
+4. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-     Kategorie a vlastnosti scénáře jsou zobrazeny v okně **Vlastnosti.**
+     Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-5. Do textového pole pro vlastnost **Maximum Test Iterations** zadejte hodnotu, která označuje maximální počet testů, které mají být spuštěny pro scénář při spuštění zátěžového testu.
+5. Do textového pole pro vlastnost **maximální počet iterací testu** zadejte hodnotu, která označuje maximální počet testů, které mají být spuštěny pro daný scénář při spuštění zátěžového testu.
 
     > [!NOTE]
-    > Použití hodnoty 0 pro vlastnost **Maximální test iterací** neurčuje žádné maximální iterace.
+    > Použití hodnoty 0 pro vlastnost **maximální počet iterací testu** určuje maximální počet iterací.
 
-6. Po dokončení změny vlastnosti zvolte **Uložit** v nabídce **Soubor.** Potom můžete spustit zátěžový test pomocí nové hodnoty **Maximální test iterací.**
+6. Po dokončení změny vlastnosti vyberte v nabídce **soubor** možnost **Uložit** . Zátěžový test lze následně spustit pomocí nové hodnoty **maximálního počtu iterací testu** .
 
-## <a name="specify-think-times-between-test-iterations-for-a-scenario"></a>Určení doby přemýšlení mezi iteracemi testu pro scénář
+## <a name="specify-think-times-between-test-iterations-for-a-scenario"></a>Zadejte dobu přemýšlení mezi iteracemi testu pro scénář.
 
-Vlastnost **Think Time Between Test Iterations** je nastavena pomocí okna **Vlastnosti** při úpravách vlastností scénáře zátěžového testu v editoru zátěžového testu.
+**Doba přemýšlení mezi iteracemi testu** je nastavena pomocí okna **vlastnosti** při úpravě vlastností scénáře zátěžového testu v Editor zátěžového testu.
 
-Think **Time Between Test Iterace** vlastnost se používá k určení množství sekund čekat před spuštěním iterace testu.
+**Doba pomýšlení mezi testovacími iteracemi** se používá k určení doby v sekundách, po kterou se má počkat, než se spustí iterace testu.
 
 > [!NOTE]
-> Úplný seznam vlastností scénáře zátěžového testu a jejich popisy naleznete v tématu [Load test scenario properties](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastností scénáře zátěžového testu a jejich popis naleznete v tématu [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-### <a name="to-specify-the-think-time-between-test-iterations"></a>Určení doby přemýšlení mezi iteracemi testu
+### <a name="to-specify-the-think-time-between-test-iterations"></a>Určení doby promýšlení mezi testovacími iteracemi
 
 1. Otevřete zátěžový test.
 
-     Zobrazí se **Editor zátěžového testu.** Zobrazí se strom zátěžového testu.
+     Zobrazí se **Editor zátěžového testu** . Zobrazí se strom zátěžového testu.
 
-2. Ve **složce** Scénáře zátěžového testu zvolte uzel scénáře, pro který chcete zadat čas přemýšlení.
+2. Ve složce **scénáře** stromů zátěžového testu zvolte uzel scénář, pro který chcete zadat čas přemýšlení.
 
-3. V nabídce **Zobrazení** vyberte **Okno vlastnosti**.
+3. V nabídce **zobrazení** vyberte **okno Vlastnosti**.
 
-     Kategorie a vlastnosti scénáře jsou zobrazeny v okně **Vlastnosti.**
+     Kategorie a vlastnosti scénáře se zobrazí v okně **vlastnosti** .
 
-4. Do hodnoty **think time mezi iterací testu** zadejte číslo představující počet sekund čekání před spuštěním další iterace testu.
+4. Do hodnoty pro **dobu přemýšlení mezi vlastností iterace testu** zadejte číslo představující počet sekund, po který se má čekat před spuštěním další iterace testu.
 
-5. Po dokončení změny vlastnosti zvolte **Uložit** v nabídce **Soubor.** Potom můžete spustit zátěžový test pomocí nové hodnoty **Think Time Between Test Iterations.**
+5. Po dokončení změny vlastnosti vyberte v nabídce **soubor** možnost **Uložit** . Pak můžete spustit zátěžový test s využitím nového **času pomýšlení mezi hodnotou iterace testu** .
 
 ## <a name="see-also"></a>Viz také
 
 - [Úpravy scénářů zátěžového testu](../test/edit-load-test-scenarios.md)
-- [Konfigurace testovacích agentů a testovacích řadičů pro zátěžové testy](../test/configure-test-agents-and-controllers-for-load-tests.md)
+- [Konfigurace testovacích agentů a testovacích kontrolérů pro zátěžové testy](../test/configure-test-agents-and-controllers-for-load-tests.md)
 - [Vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md)
-- [Upravit doby přemýšlení pro simulaci zpoždění interakce s lidmi na webových stránkách](../test/edit-think-times-in-load-test-scenarios.md)
+- [Úprava časů pomýšlení pro simulaci zpoždění lidské interakce webu](../test/edit-think-times-in-load-test-scenarios.md)

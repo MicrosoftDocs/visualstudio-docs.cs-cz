@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: conceptual
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 41dd3049c790ac790b46d12b976eb3ab6457fcb2
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: bc5f4a9bfc78dd3139202872bdf8d70a050f4039
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182895"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289128"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
@@ -24,18 +24,18 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
 
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Použití hromadného přidání k přiřazení předplatných
-1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese https://manage.visualstudio.com .
+1. Přihlaste se na portál pro správu předplatných sady Visual Studio na adrese <https://manage.visualstudio.com> .
 
-2. Pokud chcete najednou přidat víc předplatitelů, přejděte na kartu **Spravovat předplatitele** . Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **hromadné přidání** .  
+1. Pokud chcete najednou přidat víc předplatitelů, přejděte na kartu **Spravovat předplatitele** . Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **hromadné přidání** .  
 
-2. Hromadné přidání používá šablonu Microsoft Excelu k nahrání informací o odběrateli. V dialogovém okně nahrát několik předplatitelů klikněte na **Stáhnout** a stáhněte šablonu.
+1. Hromadné přidání používá šablonu Microsoft Excelu k nahrání informací o odběrateli. V dialogovém okně nahrát několik předplatitelů klikněte na **Stáhnout** a stáhněte šablonu.
    > [!div class="mx-imgBorder"]
    > ![Stáhněte si excelovou šablonu pro nahrání více odběratelů.](media/download-template-upload-subscribers.png)
    >
    > [!NOTE]
    > Vždy stáhnout nejnovější verzi této šablony. Pokud používáte starší verzi, může hromadné nahrání selhat.
 
-3. V tabulce aplikace Excel vyplňte pole informacemi pro jednotlivce, ke kterým chcete přiřadit odběry. (*Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
+1. V tabulce aplikace Excel vyplňte pole informacemi pro jednotlivce, ke kterým chcete přiřadit odběry. (*Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
 
     > [!NOTE]
     > Jedno z polí v šabloně umožňuje správcům povolit nebo zakázat stahování softwaru pro předplatitele.  Zakázání stahování také zakáže přístup k klíčům Product Key.
@@ -48,11 +48,11 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
     - Ujistěte se, že jsou dokončená všechna povinná pole. 
     - Podívejte se na sloupec **chybová zpráva** .  Pokud jsou uvedeny nějaké chyby, vyřešte je před pokusem o nahrání souboru. 
 
-4. Vraťte se na portál pro správu předplatných sady Visual Studio. V dialogovém okně **nahrát několik předplatitelů** klikněte na **Procházet**.
+1. Vraťte se na portál pro správu předplatných sady Visual Studio. V dialogovém okně **nahrát několik předplatitelů** klikněte na **Procházet**.
    > [!div class="mx-imgBorder"]
    > ![Pokud chcete nahrát několik předplatitelů, přejděte k uložené šabloně.](media/bulk-add-browse-saved-template.png)
 
-5. Přejděte do excelového souboru, který jste uložili, a pak klikněte na **OK**.
+1. Přejděte do excelového souboru, který jste uložili, a pak klikněte na **OK**.
    > [!div class="mx-imgBorder"]
    > ![Nahrání excelové šablony pro nahrání více předplatitelů](media/bulk-upload-subscribers.png)
 
@@ -67,7 +67,7 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
    0. Vraťte se na portál pro správu a vyberte **Přidat**.
    0. Vyberte **hromadné přidání**.
    0. Vzhledem k tomu, že už máte excelový soubor uložený, nemusíte stahovat šablonu.  Klikněte na **Procházet**, vyhledejte soubor, který jste právě uložili, a klikněte na **otevřít**.
-   0. Klikněte na tlačítko **OK**.
+   0. Klikněte na **OK**.
 
 
     Po úspěšném nahrání se zobrazí seznam předplatitelů a potvrzovací zpráva.

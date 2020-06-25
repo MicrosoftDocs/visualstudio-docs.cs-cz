@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f10831ac398ef8fb48337436dd33253cfb32f26c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: ab0d62efb8abc3cfbae365312a009bc6d2efea43
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182999"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286350"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v aplikaci Visual Studio
 
@@ -40,7 +40,7 @@ Podrobné pokyny k nasazení najdete v tématu rychlé starty a kurzy. Přehled 
 
 Nasazení do místní složky se obvykle používá pro testování nebo pro zahájení dvoufázového nasazení, ve kterém se pro konečné nasazení používá jiný nástroj.
 
-- **ASP.NET**, **ASP.NET Core**, **Node. js**, **Python**a. **.NET Core**: k nasazení do místní složky použijte nástroj pro publikování. Přesné možnosti, které jsou k dispozici, závisí na typu vaší aplikace. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**. (Pokud jste dosud nenakonfigurovali žádné publikační profily, musíte kliknout na **vytvořit nový profil**.) Pak vyberte **Složka**. Další informace najdete v tématu [nasazení do místní složky](quickstart-deploy-to-local-folder.md).
+- **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**a. **.NET Core**: k nasazení do místní složky použijte nástroj pro publikování. Přesné možnosti, které jsou k dispozici, závisí na typu vaší aplikace. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**. (Pokud jste dosud nenakonfigurovali žádné publikační profily, musíte kliknout na **vytvořit nový profil**.) Pak vyberte **Složka**. Další informace najdete v tématu [nasazení do místní složky](quickstart-deploy-to-local-folder.md).
 
     ![Zvolit publikování](../deployment/media/quickstart-publish.png)
 
@@ -48,7 +48,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 ## <a name="publish-to-azure"></a>Publikování aplikací do Azure
 
-- **ASP.NET**, **ASP.NET Core**, **Python**a **Node. js**: publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
+- **ASP.NET**, **ASP.NET Core**, **Python**a **Node.js**: publikování do Azure App Service nebo Azure App Service Linux (pomocí kontejnerů) pomocí jedné z následujících metod.
 
   - Pro průběžné (nebo automatizované) nasazení aplikací použijte Azure DevOps s [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops).
 
@@ -58,7 +58,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
   Chcete-li použít nástroj **publikovat** , klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a vyberte možnost **publikovat**. (Pokud jste dříve nakonfigurovali všechny publikační profily, musíte kliknout na **vytvořit nový profil**.) V dialogovém okně Publikovat zvolte buď **App Service** nebo **Azure Virtual Machines**a pak postupujte podle kroků konfigurace.
 
-  ![Zvolit Azure App Service](../deployment/media/quickstart-publish-azure.png "Zvolit Azure App Service")
+  ![Zvolit Azure App Service](../deployment/media/quickstart-publish-azure-new.png "Zvolit Azure App Service")
 
   Počínaje verzí Visual Studio 2017 verze 15,7 můžete nasadit aplikace ASP.NET Core pro **App Service pro Linux**.
 
@@ -73,7 +73,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Publikování na webu nebo nasazení do síťové sdílené složky
 
-- **ASP.NET**, **ASP.NET Core**, **Node. js**a **Python**: pomocí nástroje pro publikování můžete nasadit na web pomocí FTP nebo nasazení webu. Další informace najdete v tématu [nasazení na web](quickstart-deploy-to-a-web-site.md).
+- **ASP.NET**, **ASP.NET Core**, **Node.js**a **Python**: pomocí nástroje publikovat můžete nasadit na web pomocí FTP nebo nasazení webu. Další informace najdete v tématu [nasazení na web](quickstart-deploy-to-a-web-site.md).
 
     V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **publikovat**. (Pokud jste dříve nakonfigurovali všechny publikační profily, musíte kliknout na **vytvořit nový profil**.) V nástroji publikování vyberte požadovanou možnost a postupujte podle kroků konfigurace.
 
@@ -91,7 +91,7 @@ Ze sady Visual Studio můžete vytvořit balíčky aplikací pro nasazení do Mi
 
 - **UWP**: aplikaci můžete zabalit a nasadit pomocí položek nabídky. Další informace najdete v tématu [zabalení aplikace pro UWP pomocí sady Visual Studio](/windows/uwp/packaging/packaging-uwp-apps).
 
-    ![Vytvoření balíčku aplikace](../deployment/media/feature-tour-create-app-package.jpg)
+    ![Vytvoření balíčku aplikace](../deployment/media/feature-tour-create-app-package.png)
 
 - **Plocha Windows**: nasazení můžete nasadit do Microsoft Store pomocí mostu pro stolní počítače počínaje verzí Visual Studio 2017 verze 15,4. Pokud to chcete provést, Začněte vytvořením projektu pro vytváření balíčků aplikací pro Windows. Další informace najdete v tématu [zabalení desktopové aplikace pro Microsoft Store (most pro stolní počítače)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
