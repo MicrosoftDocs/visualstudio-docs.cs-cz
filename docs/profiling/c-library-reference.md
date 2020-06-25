@@ -1,7 +1,7 @@
 ---
-title: C Odkaz na knihovnu | Dokumenty společnosti Microsoft
+title: Referenční dokumentace knihovny C | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Concurrency Visualizer SDK, C Library Reference
 ms.assetid: 46907a60-25e2-470d-a650-ae7349f868fd
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 570c3c1cfa4ee42b0b7262b92fba3c936297387c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9271cce475959e79004fba384d72228f569ad2c5
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "64826676"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331967"
 ---
-# <a name="c-library-reference"></a>Odkaz na knihovnu C
-Tato část obsahuje referenční informace pro souběžnost vizualizér SDK.
+# <a name="c-library-reference"></a>Referenční dokumentace knihovny jazyka C
+Tato část obsahuje referenční informace pro sadu SDK Vizualizátor souběžnosti.
 
 > [!NOTE]
-> Standard jazyka C si vyhrazuje použití identifikátorů,`_`které začínají znakem podtržítka ( ) pro implementace, jako jsou knihovny. Nepoužívejte názvy začínající podtržítkem v kódu. Chování prvků kódu, jejichž názvy postupujte podle této konvence nejsou zaručeny a mohou se změnit v budoucích verzích. Z těchto důvodů jsou tyto prvky kódu vynechány z této dokumentace.
+> Standard jazyka C vyhrazuje použití identifikátorů, které začínají znakem podtržítka ( `_` ) pro implementace, jako jsou knihovny. Nepoužívejte názvy začínající podtržítkem ve vašem kódu. Chování prvků kódu, jejichž názvy následují podle této konvence, není zaručeno a v budoucích verzích se může změnit. Z těchto důvodů jsou tyto prvky kódu z této dokumentace vynechány.

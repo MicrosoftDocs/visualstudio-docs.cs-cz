@@ -1,58 +1,58 @@
 ---
-title: PerfTips | Dokumenty společnosti Microsoft
+title: Tipy pro výkon | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 509d2d4f-48a5-4cdf-acad-6f7b75421303
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 93703bdd4bf2f0046176ceb1f6febd5564f61705
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7003f75b59773e8761095c15826bf5e6abcf23ff
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71128307"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331052"
 ---
 # <a name="perftips"></a>Tipy pro výkon
-Visual Studio ladicí program *PerfTips* a ladicí program integrované **diagnostické nástroje** vám pomohou sledovat a analyzovat výkon vaší aplikace při ladění.
+Ladicí program sady Visual Studio *tipy pro výkon* a integrovaný ladicí program **diagnostické nástroje** vám pomůžou monitorovat a analyzovat výkon aplikace při ladění.
 
- Přestože diagnostické nástroje integrované ladicím programem jsou skvělý způsob, jak se seznámit s problémy s výkonem při vývoji, ladicí program může mít významný dopad na výkon vaší aplikace. Chcete-li shromažďovat přesnější údaje o výkonu, zvažte použití nástrojů diagnostiky sady Visual Studio, které běží mimo ladicí program příliš jako další součást vyšetřování výkonu. Viz [Spuštění nástrojů profilování s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+ I když diagnostické nástroje integrované v ladicím programu představují skvělý způsob, jak se dozvědět o problémech s výkonem při vývoji, může mít ladicí program významný dopad na výkon vaší aplikace. Chcete-li shromažďovat přesnější data o výkonu, zvažte použití diagnostických nástrojů sady Visual Studio, které jsou spouštěny mimo ladicí program, a to jako další část šetření výkonu. Viz [spuštění nástrojů pro profilaci pomocí ladicího programu nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
 ## <a name="perftips"></a>Tipy pro výkon
- Když ladicí program zastaví provádění na zarážku nebo krokování operace, uplynulý čas mezi přestávkou a předchozí zarážka se zobrazí jako tip v okně editoru. Další informace naleznete [v tématu PerfTips: Performance Information at a tezi při ladění pomocí sady Visual Studio](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/).
+ Když ladicí program zastaví provádění na operaci zarážky nebo krokování, uplynulý čas mezi přerušením a předchozí zarážkou se zobrazí jako Tip v okně editoru. Další informace naleznete v tématu [tipy pro výkon: informace o výkonu při ladění v aplikaci Visual Studio](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/).
 
  ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")
 
-## <a name="diagnostics-tools-window"></a>Okno Nástroje diagnostiky
- Zarážky a přidružená časovací data jsou zaznamenány v okně **Diagnostické nástroje.**
+## <a name="diagnostics-tools-window"></a>Okno diagnostické nástroje
+ Zarážky a související časová data se zaznamenávají v okně **diagnostické nástroje** .
 
- Následující obrázek znázorňuje okno **Diagnostické nástroje** v aktualizaci 1 sady Visual Studio 2015:
+ Následující obrázek znázorňuje okno **diagnostické nástroje** v aplikaci Visual Studio 2015 Update 1:
 
- ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")
+ ![DiagnosticTools&#45;-datum1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-v-datum1")
 
-- Časová **osa události přerušení** označují zarážky, které byly v relaci ladění zasaženy. Kliknutím na událost ji vyberte seznam podrobností **ladicího programu.**
+- Časová osa **událostí přerušení** označuje zarážky, které byly dosaženy v relaci ladění. Kliknutím na událost můžete vybrat seznam podrobností **ladicího programu** .
 
-- Graf **využití procesoru** zobrazuje změnu využití procesoru ve všech jádrech procesoru v relaci ladění.
+- Graf **využití procesoru** zobrazuje změnu v využití CPU napříč všemi jádry procesoru v relaci ladění.
 
-- Seznam **Události** podokna podrobností **ladicího programu** obsahuje položky pro každou událost přerušení.
+- Seznam **událostí** v podokně podrobností **ladicího programu** obsahuje položky pro každou událost přerušení.
 
-- Sloupec **Doba trvání** události přerušení zobrazuje uplynulý čas mezi událostí a předchozí zarážkou.
+- Sloupec **Trvání** události break zobrazuje uplynulý čas mezi událostí a předchozí zarážkou.
 
-## <a name="turn-perftips-on-or-off"></a>Zapnutí nebo vypnutí perftips
- Povolení nebo zakázání perftips:
+## <a name="turn-perftips-on-or-off"></a>Zapnout nebo vypnout tipy pro výkon
+ Povolení nebo zakázání tipy pro výkon:
 
-1. V nabídce **Ladění** zvolte **Možnosti**.
+1. V nabídce **ladění** vyberte **možnost možnosti**.
 
-2. Při ladění zaškrtněte nebo zrušte **zaškrtnutí políčka Zobrazit uplynulý perftip**.
+2. Zaškrtnutí nebo zrušení zaškrtnutí **Zobrazit uplynulý PerfTip při ladění**.
 
-## <a name="turn-the-diagnostic-tools-window-on-or-off"></a>Zapnutí nebo vypnutí okna Diagnostické nástroje
- Povolení nebo zakázání okna Diagnostické nástroje:
+## <a name="turn-the-diagnostic-tools-window-on-or-off"></a>Zapnout nebo vypnout okno Diagnostické nástroje
+ Chcete-li povolit nebo zakázat okno Diagnostické nástroje:
 
-1. V nabídce **Ladění** zvolte **Možnosti**.
+1. V nabídce **ladění** vyberte **možnost možnosti**.
 
-2. Při ladění zaškrtněte nebo zrušte zaškrtnutí **políčka Povolit diagnostické nástroje**.
+2. Zaškrtněte nebo zrušte zaškrtnutí políčka **Povolit diagnostické nástroje při ladění**.
 
 ## <a name="see-also"></a>Viz také
 - [Profilace v sadě Visual Studio](../profiling/index.yml)

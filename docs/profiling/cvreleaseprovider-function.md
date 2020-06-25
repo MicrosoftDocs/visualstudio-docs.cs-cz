@@ -1,7 +1,7 @@
 ---
-title: Funkce CvReleaseProvider | Dokumenty společnosti Microsoft
+title: Funkce Cvreleaseprovider – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvReleaseProvider
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0008b7476290558c098b2241fde5c9b209933a0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0347d3e2345defb13a67e0e0d730e010be618a21
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974043"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332178"
 ---
-# <a name="cvreleaseprovider-function"></a>CvReleaseProvider
-Uvolní zprostředkovatele značky. Uvolnění zprostředkovatele značky neovlivní dříve vytvořené řady značek tohoto zprostředkovatele. Marker série musí být vydána samostatně cvReleaseMarkerSeries volání. Selhání uvolnění zprostředkovatele způsobí nevracení paměti.
+# <a name="cvreleaseprovider-function"></a>Cvreleaseprovider – – funkce
+Vydává poskytovatele značek. Uvolnění poskytovatele značek nebude mít vliv na dříve vytvořenou řadu označení tohoto poskytovatele. Řady značek musí být vydány samostatně voláním CvReleaseMarkerSeries –. Selhání poskytovatele Release způsobuje nevracení paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +31,13 @@ HRESULT CvReleaseProvider(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pProvider`Kontext zprostředkovatele. Nemůže být null.
+ `pProvider`Kontext poskytovatele. Nemůže mít hodnotu NULL.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK, když je zprostředkovatel úspěšně uvolněna nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+ S_OK při úspěšném vydání poskytovatele nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

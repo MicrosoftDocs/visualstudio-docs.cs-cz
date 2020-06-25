@@ -1,7 +1,7 @@
 ---
-title: Příkazový řádek Profiler pro získání samostatných dat souběžnosti aplikace
+title: Příkazový řádek profileru pro získání dat souběžnosti aplikace v samostatné aplikaci
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - concurrency profiling method
 - profiling tools,concurrency method
@@ -12,24 +12,24 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6180d2f2e3ed655f378900d3d41691daa98a0354
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 15e8be092a8e1e065f2aa1a80be7447a370974b0
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74773254"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331864"
 ---
 # <a name="collect-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Shromažďování dat souběžnosti pro samostatné aplikace pomocí příkazového řádku profileru
-Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů profilování umožňuje shromažďovat data o konfliktu prostředků a data o aktivitě vláken, která zobrazuje využití procesoru, konflikty vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vi a další systémové události.
+Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci umožňuje shromažďovat data o kolize prostředku a data aktivity vláken, která ukazují využití procesoru, kolize vláken, migraci vláken, zpoždění synchronizace, oblasti překrývajících se vstupně-výstupní operace a další systémové události.
 
 ## <a name="common-tasks"></a>Běžné úkoly
 
 |Úkol|Související obsah|
 |----------|---------------------|
-|**Spuštění dat souběžnosti aplikace rozhraní .NET Framework a souběžnosti profilu**|-   [Postup: Spuštění aplikace rozhraní .NET Framework pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
-|**Spuštění dat souběžnosti aplikace c/c++ a profilu**|-   [Postup: Spuštění nativní aplikace pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
-|**Připojení profileru ke spuštěné aplikaci rozhraní .NET Framework**|-   [Postup: Připojení profileru k aplikaci rozhraní .NET Framework ke shromažďování dat souběžnosti](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)|
-|**Připojení profileru ke spuštěné aplikaci C/C++**|-   [Postup: Připojení profileru k nativní aplikaci a shromažďování dat souběžnosti](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)|
+|**Spuštění .NET Framework aplikace a dat o souběžnosti profilů**|-   [Postupy: spuštění aplikace .NET Framework pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
+|**Spuštění aplikace C/C++ a dat o souběžnosti profilů**|-   [Postupy: spuštění nativní aplikace pro shromažďování dat souběžnosti](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
+|**Připojení profileru k běžící .NET Framework aplikaci**|-   [Postupy: Připojení profileru k aplikaci .NET Framework ke shromažďování dat souběžnosti](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)|
+|**Připojení profileru k běžící aplikaci C/C++**|-   [Postupy: Připojení profileru k nativní aplikaci a shromažďování dat souběžnosti](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)|
 
 ## <a name="related-tasks"></a>Související úlohy
 
@@ -37,20 +37,20 @@ Metoda souběžnosti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] n
 
 |Úkol|Související obsah|
 |----------|---------------------|
-|**Profil pomocí metody odběru vzorků**|-   [Shromažďujte statistiky aplikací pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
-|**Profil pomocí metody instrumentace**|-   [Shromažďování podrobných časových dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
-|**Přidělení a uvolnění paměti profil .NET**|-   [Shromažďování paměťových dat rozhraní .NET Framework](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
-|**Přidání dat interakce na úrovni**|-   [Shromažďování dat interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
+|**Profilování pomocí metody vzorkování**|-   [Shromažďování statistik aplikace pomocí vzorkování](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
+|**Profilování pomocí metody instrumentace**|-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|
+|**Profilové přidělení paměti .NET a uvolňování paměti**|-   [Shromažďování dat .NET Framework paměti](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
+|**Přidat data interakce vrstev**|-   [Shromáždit data interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
 
-### <a name="profile-concurrency-issues"></a>Problémy souběžnosti profilu
+### <a name="profile-concurrency-issues"></a>Problémy s souběžným profilací
 
 |Úkol|Související obsah|
 |----------|---------------------|
-|**Profilové aplikace ASP.NET**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
-|**Profilové služby**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
+|**Profilování aplikací ASP.NET**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
+|**Profilovací služby**|-   [Shromažďování dat souběžnosti](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
 
-### <a name="analyze-concurrency-data-views-and-reports"></a>Analýza zobrazení a sestav dat souběžnosti
-- [Zobrazení dat konfliktů prostředků](../profiling/resource-contention-data-views.md)
+### <a name="analyze-concurrency-data-views-and-reports"></a>Analýza zobrazení a sestav souběžnosti dat
+- [Zobrazení dat kolizí prostředků](../profiling/resource-contention-data-views.md)
 
 - [Vizualizér souběžnosti](../profiling/concurrency-visualizer.md)
 

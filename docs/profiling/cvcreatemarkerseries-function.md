@@ -1,7 +1,7 @@
 ---
-title: Funkce CvCreateMarkerSeries | Dokumenty společnosti Microsoft
+title: Funkce Cvcreatemarkerseries – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvCreateMarkerSeriesA
 - cvmarkers/CvCreateMarkerSeriesW
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb3ef4d928aaac57f39a48e5be212c1148ef58eb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fc44e9e1a9a1d17d3f5b0f31515e2402e9512c55
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552678"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332210"
 ---
-# <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries
-Vytvoří řadu značek pro daného zprostředkovatele.
+# <a name="cvcreatemarkerseries-function"></a>Cvcreatemarkerseries – – funkce
+Vytvoří řady značek pro daného zprostředkovatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,21 +39,21 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pProvider`Objekt zprostředkovatele dříve inicializován cvInitProvider. Nemůže být null.
+ `pProvider`Objekt poskytovatele byl dříve inicializován nástrojem CvInitProvider –. Nemůže mít hodnotu NULL.
 
- `pSeriesName`Název řady značek. Nemůže být NULL, ale prázdný řetězec je povolen.
+ `pSeriesName`Název řady značek Nemůže mít hodnotu NULL, ale je povolen prázdný řetězec.
 
- `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže být null.
+ `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je řada značek úspěšně vytvořena, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK při úspěšném vytvoření řady značek nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
- **Unicode:** CvCreateMarkerSeriesW
+ **Kódování Unicode:** CvCreateMarkerSeriesW
 
  **ANSI:** CvCreateMarkerSeriesA
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

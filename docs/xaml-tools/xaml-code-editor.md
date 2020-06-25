@@ -1,21 +1,22 @@
 ---
 title: Editor kódu XAML
+description: Prohlídka editoru kódu XAML v aplikaci Visual Studio
 ms.date: 06/16/2020
-ms.topic: conceptual
+ms.topic: overview
 monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d789ac099e6d0bba7a44f0d6efd7a19beec54c19
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290445"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329180"
 ---
 # <a name="xaml-code-editor"></a>Editor kódu XAML
 
-Editor kódu XAML v [integrovaném vývojovém prostředí sady Visual Studio](../get-started/visual-studio-ide.md) obsahuje všechny nástroje, které potřebujete k vytváření aplikací WPF a UWP pro platformu Windows a pro [Xamarin. Forms](/xamarin/xamarin-forms/user-interface/text/editor/). Tento článek popisuje jak roli, tak jak editor kódu hraje při vývoji aplikací založených na jazyce XAML a funkcí, které jsou jedinečné pro Editor kódu XAML v aplikaci Visual Studio 2019.
+Editor kódu XAML v [integrovaném vývojovém prostředí sady Visual Studio](../get-started/visual-studio-ide.md) obsahuje všechny nástroje, které potřebujete k vytváření aplikací WPF a UWP pro platformu Windows a pro [Xamarin. Forms](/xamarin/xamarin-forms/user-interface/text/editor/). Tento článek popisuje jak roli, tak jak editor kódu přehrává při vývoji aplikací založených na jazyce XAML, a funkcí, které jsou jedinečné pro Editor kódu XAML v aplikaci Visual Studio 2019.
 
 Začněte tím, že se podíváme na integrované vývojové prostředí (IDE) s otevřeným projektem WPF. Následující obrázek ukazuje několik klíčových nástrojů IDE, které použijete spolu s editorem kódu XAML.
 
@@ -182,7 +183,7 @@ Většina následujících funkcí je v integrovaném vývojovém prostředí sa
 
 Fragmenty kódu jsou malé bloky opakovaně použitelného kódu, který lze vložit do v souboru kódu pomocí příkazu místní nabídky klikněte pravým tlačítkem myši **Vložit fragment** nebo kombinaci klávesových zkratek (**CTRL** + **K**, **CTRL** + **X**). Vylepšili jsme [technologii IntelliSense](../ide/using-intellisense.md) tak, aby podporovala zobrazování fragmentů XAML, které fungují jak pro předdefinované fragmenty kódu, tak i pro všechny vlastní fragmenty kódu, které přidáte ručně. Některé předem připravené fragmenty kódu XAML zahrnují `#region` , `Column definition` ,, `Row definition` `Setter` a `Tag` .
 
-![Editor kódu XAML s možnostmi #region zobrazenými v IntelliSense](media/xaml-code-snippets.png "Snímek obrazovky editoru kódu XAML s možnostmi #region zobrazenými v IntelliSense")
+![Editor kódu XAML s možnostmi fragmentů kódu XAML zobrazenými v IntelliSense](media/xaml-code-snippets.png "Snímek obrazovky editoru kódu XAML s možnostmi fragmentů kódu XAML zobrazenými v IntelliSense")
 
 Další informace naleznete na stránkách [fragmenty kódu](../ide/code-snippets.md) a [fragmenty kódu jazyka C#](../ide/visual-csharp-code-snippets.md) .
 

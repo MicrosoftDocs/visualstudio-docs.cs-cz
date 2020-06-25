@@ -6,15 +6,14 @@ ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 04bd4540de47ec8a9da86069acb33770f9c800b8
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: d5d40878e40641b9a54a411af122f6207a02a7a1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706369"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331038"
 ---
 # <a name="debug-xaml-in-blend"></a>Ladění kódu XAML v programu Blend
 
@@ -53,13 +52,13 @@ Následující příklad vás provede jednoduchou ladicí relací XAML v Blendu.
 
 2. V seznamu typů projektů klikněte na možnost **univerzální pro Windows**.
 
-3. V seznamu šablon projektů klikněte na **prázdná aplikace (univerzální pro Windows)** .
+3. V seznamu šablon projektů klikněte na **prázdná aplikace (univerzální pro Windows)**.
 
-4. Do textového pole **název** zadejte `DebuggingSample`.
+4. Do textového pole **název** zadejte `DebuggingSample` .
 
 5. V textovém poli **umístění** ověřte umístění projektu.
 
-6. V seznamu **jazyk** klikněte na možnost **vizuál C#** a potom kliknutím na tlačítko **OK** vytvořte projekt.
+6. V seznamu **jazyk** klikněte na možnost **Visual C#** a potom kliknutím na tlačítko **OK** vytvořte projekt.
 
 7. Klikněte pravým tlačítkem myši na návrhovou plochu a potom kliknutím na tlačítko **Zobrazit zdroj** přepněte na **rozdělené** zobrazení.
 
@@ -89,7 +88,7 @@ Následující příklad vás provede jednoduchou ladicí relací XAML v Blendu.
     </Grid>
     ```
 
-10. Stisknutím **kombinace kláves Ctrl**+**SHIFT**+**B** Sestavte projekt.
+10. Stisknutím **kombinace kláves CTRL** + **+ SHIFT** + **B** Sestavte projekt.
 
     Zobrazí se chybová zpráva s upozorněním, že projekt nelze sestavit, a na panelu **výsledků** se zobrazí chyby v dolní části aplikace.
 
@@ -101,19 +100,19 @@ Když jsou zjištěny chyby XAML, návrhová plocha zobrazí výstrahu, že proj
 
 #### <a name="to-resolve-the-xaml-errors"></a>Řešení chyb XAML
 
-1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. `<` předchozí `Button` je platný, a nikoli atribut navrhovaný v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybět. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
+1. Dvakrát klikněte na první chybu v seznamu. Popis je "hodnota" < "není platná v atributu". " Když dvakrát kliknete na chybu, ukazatel najde odpovídající umístění v kódu. `<`Předchozí `Button` je platný a nikoli atribut, který je navržen v chybové zprávě. Pokud se podíváte na předchozí řádek kódu, všimnete si, že uzavírací uvozovky pro atribut `Top` chybí. Zadejte uzavírací uvozovky. Všimněte si, že seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
-2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " Zdá se, že `Margin="0,149,0,0"` správně vytvořená. Všimněte si však, že barevné kódování `Margin` neodpovídá ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota (`VerticalAlignment="Top`), `Margin="` je čtena jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top`. Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
+2. Dvakrát klikněte na popis "0" není platný na začátku názvu. " `Margin="0,149,0,0"`Zdá se, že je správně vytvořený. Všimněte si však, že barevné kódování neodpovídá `Margin` ostatním instancím `Margin` v kódu. Vzhledem k tomu, že uzavírací uvozovky chybí v předchozí dvojici název/hodnota ( `VerticalAlignment="Top` ), `Margin="` jsou čteny jako součást hodnoty předcházejícího atributu a hodnota 0 je čtena jako začátek dvojice název/hodnota. Zadejte uzavírací uvozovky pro `Top` . Seznam chyb na panelu **výsledky** se aktualizuje tak, aby odrážel vaše změny.
 
-3. Dvakrát klikněte na zbývající chybu a "tlačítko uzavírací značky XML" se neshoduje. " Ukazatel je umístěn na pravé značce **mřížky** (`</Grid>`), což naznačuje, že chyba je uvnitř objektu `Grid`. Všimněte si, že v druhém objektu `Button` chybí uzavírací značka. Po přidání uzavírací `/`se seznam panelu **výsledků** aktualizuje. Nyní, když byly vyřešeny tyto počáteční chyby, byly zjištěny dvě další chyby.
+3. Dvakrát klikněte na zbývající chybu a "tlačítko uzavírací značky XML" se neshoduje. " Ukazatel je umístěn na pravé značce **mřížky** ( `</Grid>` ), což naznačuje, že chyba je uvnitř `Grid` objektu. Všimněte si, že v druhém `Button` objektu chybí uzavírací značka. Po přidání se `/` seznam panelů **výsledků** aktualizuje. Nyní, když byly vyřešeny tyto počáteční chyby, byly zjištěny dvě další chyby.
 
-4. Dvakrát klikněte na "obsah" není rozpoznán nebo není přístupný. " `c` v `content` by měla být velká písmena. Nahraďte malý případ "c" velkým písmenem "c".
+4. Dvakrát klikněte na "obsah" není rozpoznán nebo není přístupný. " `c`V části `content` by měla být velká písmena. Nahraďte malý případ "c" velkým písmenem "c".
 
-5. Dvakrát klikněte na vlastnost mame neexistuje v oboru názvů `http://schemas.microsoft.com/winfx/2006/xaml`. "M" v "mame" musí být "N". Nahradí "M" za "N". Teď, když je možné XAML analyzovat, se aplikace zobrazí na návrhové ploše.
+5. Dvakrát klikněte na vlastnost mame neexistuje v `http://schemas.microsoft.com/winfx/2006/xaml` oboru názvů. "M" v "mame" musí být "N". Nahradí "M" za "N". Teď, když je možné XAML analyzovat, se aplikace zobrazí na návrhové ploše.
 
     ![Ladění XAML v Blend pro Visual Studio](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
-    Stisknutím **kombinace kláves Ctrl**+**SHIFT**+**B** Sestavte projekt a potvrďte, že nejsou žádné zbývající chyby.
+    Stisknutím **kombinace kláves CTRL** + **+ SHIFT** + **B** Sestavte projekt a potvrďte, že nejsou žádné zbývající chyby.
 
 ## <a name="debug-in-visual-studio"></a>Ladění v sadě Visual Studio
 
@@ -121,6 +120,6 @@ Projekty Blendu v aplikaci Visual Studio můžete otevřít pro snazší laděn�
 
 Další informace o ladění aplikace naleznete v tématu [ladění aplikací pro UWP v aplikaci Visual Studio](../debugger/debugging-windows-store-and-windows-universal-apps.md).
 
-## <a name="get-help"></a>Podpora
+## <a name="get-help"></a>Získání pomoci
 
 Pokud potřebujete další nápovědu k ladění aplikace Blendu, můžete ve [fórech komunity aplikací pro UWP](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) vyhledat příspěvky související s vaším problémem nebo odeslat otázku.

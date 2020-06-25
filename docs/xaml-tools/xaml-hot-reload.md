@@ -1,6 +1,6 @@
 ---
-title: Zápis a ladění XAML pomocí xaml hot reload
-description: XAML Hot Reload, nebo XAML upravit a pokračovat, umožňuje provádět změny v kódu XAML při spouštění aplikací
+title: Zápis a ladění XAML pomocí horkého opětovného načtení XAML
+description: Hot Reloades XAML nebo upravit a pokračovat v XAML umožňuje provádět změny kódu XAML při spouštění aplikací.
 ms.date: 08/05/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,66 +9,65 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 120ae30b3a33a04f17bd2ec23b747ac41c9427cf
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: bec1ca7ba801f4e3e0a7777e0cae62e78412dae6
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880091"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331959"
 ---
-# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění se spuštěným kódem XAML s xaml hot reload v sadě Visual Studio
+# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
-XAML Hot Reload vám pomůže vytvořit uživatelské rozhraní aplikace WPF nebo UPW tím, že vám umožní provádět změny kódu XAML, když je vaše aplikace spuštěná. Hot Reload je k dispozici v sadě Visual Studio a Blend pro visual studio. Tato funkce umožňuje postupně vytvářet a testovat kód XAML s výhodou kontextu dat spuštěné aplikace, stavu ověřování a další složitosti reálného světa, kterou je těžké simulovat během návrhu. Pokud potřebujete pomoc s odstraňováním potíží s opětovným načtením xaml, přečtěte si místo toho [článek Řešení potíží s opětovným načtením xaml hot reload.](xaml-hot-reload-troubleshooting.md)
+XAML Hot Loading vám pomůže vytvořit uživatelské rozhraní aplikace WPF nebo UWP, a to tak, že vám umožní v průběhu vaší aplikace dělat změny v kódu XAML. Hot reloading je k dispozici v aplikaci Visual Studio i Blend pro Visual Studio. Tato funkce umožňuje přírůstkově sestavovat a testovat kód XAML s výhodou pro datový kontext běžící aplikace, stav ověřování a další složitost reálného světa, která je po dobu návrhu nenáročná na simulaci. Pokud potřebujete pomoc při řešení potíží s nástrojem XAML Hot Loading, přečtěte si místo toho [řešení potíží s Hot Load](xaml-hot-reload-troubleshooting.md) .
 
 > [!NOTE]
-> Pokud používáte Xamarin.Forms, viz [XAML Hot Reload pro Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload).
+> Pokud používáte Xamarin. Forms, [Přečtěte si téma Hot reloading XAML pro Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload).
 
-XAML Hot Reload je užitečné zejména v těchto scénářích:
+V těchto scénářích je obzvlášť užitečné použití XAML Hot Reload:
 
-* Oprava problémů uživatelského uživatelského nastavení nalezených v kódu XAML po spuštění aplikace v režimu ladění.
+* Opravy problémů uživatelského rozhraní nalezené v kódu XAML po spuštění aplikace v režimu ladění.
 
-* Vytváření nové komponenty ui pro aplikaci, která je ve vývoji, při využití kontextu běhu vaší aplikace.
+* Sestavování nové komponenty uživatelského rozhraní pro aplikaci, která je vyvíjena při vývoji, a přitom využití kontextu modulu runtime vaší aplikace.
 
 |Podporované typy aplikací|Operační systém a nástroje|
 |-|-|-|
-|Windows Presentation Foundation (WPF) |Rozhraní .NET Framework 4.6+ a .NET Core</br>Windows 7 a vyšší |
-|Univerzální aplikace pro Windows (UPW)|Windows 10 a vyšší, s [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393+ |
+|Windows Presentation Foundation (WPF) |.NET Framework 4.6 + a .NET Core</br>Windows 7 a novější |
+|Univerzální aplikace pro Windows (UWP)|Windows 10 a novější s [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393 + |
 
-Následující obrázek znázorňuje použití živého vizuálního stromu k otevření zdrojového kódu a následnému opětovnému načtení xaml pro změnu textu tlačítka a barvy tlačítka.
+Následující ilustrace znázorňuje použití živého vizuálního stromu pro otevření zdrojového kódu a pak pro změnu barvy textu a tlačítka pomocí XAML Hot reload.
 
 ![Opětovné načítání XAML za provozu](../debugger/media/xaml-hot-reload-using.gif)
 
 > [!NOTE]
-> Visual Studio XAML Hot Reload je aktuálně podporována pouze při spuštění aplikace v sadě Visual Studio nebo Blend pro Visual Studio s ladicím programem připojené **(F5** nebo **Start ladění).** Toto prostředí nelze povolit pomocí [funkce Připojit k procesu,](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) pokud [ručně nenastavíte proměnnou prostředí](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
+> Aplikace Visual Studio XAML Hot Loading je aktuálně podporována pouze při spuštění aplikace v aplikaci Visual Studio nebo Blend pro Visual Studio s připojeným ladícím programem (**F5** nebo **Spustit ladění**). Toto prostředí nemůžete povolit pomocí možnosti [připojit k procesu](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) , pokud [ručně nenastavíte proměnnou prostředí](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process).
 
 ## <a name="known-limitations"></a>Známá omezení
 
-Níže jsou známa omezení xaml hot reload. Chcete-li obejít omezení, které narazíte, stačí zastavit ladicí program a dokončit operaci.
+Níže jsou známá omezení pro opětovné načtení kódu XAML. Chcete-li obejít jakékoli omezení, které je třeba spustit, stačí zastavit ladicí program a operaci dokončit.
 
-|Omezení|WPF|UWP|Poznámky|
+|Omezení|WPF|UPW|Poznámky|
 |-|-|-|-|
-|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporuje se|Nepodporuje se|Viz chyba: *Zajistit, aby se událost nezdařila*. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích UPW není odkazování na existující obslužnou rutinu události podporováno.|
-|Vytváření objektů prostředků ve slovníku prostředků, jako jsou objekty na stránce/okně aplikace nebo *v souboru App.xaml*|Podporováno spuštění v aktualizaci Visual Studia 2019 Update 2|Podporuje se|Příklad: přidání `SolidColorBrush` slovníku prostředků pro použití `StaticResource`jako .</br>Poznámka: Statické prostředky, převaděče stylů a další prvky zapsané do slovníku prostředků lze použít/použít při použití xaml hot reload. Pouze vytvoření prostředku není podporováno.</br> Změna `Source` vlastnosti slovníku prostředků.|
-|Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy je aplikace spuštěná|Nepodporuje se|Nepodporuje se|Žádný|
-|Správa balíčků NuGet (přidávání/odebírání/aktualizace balíčků)|Nepodporuje se|Nepodporuje se|Žádný|
-|Změna datové vazby, která používá rozšíření značek {x:Bind},|–|Podporováno od spuštění ve Visual Studiu 2019|To vyžaduje Windows 10 verze 1809 (sestavení 10.0.17763). Není podporováno v sadě Visual Studio 2017 nebo předchozích verzích.|
-|Změna direktiv x:Uid není podporována.|–|Nepodporuje se|Žádný|
-|Více procesů | Nepodporuje se | Nepodporuje se | Opětovné načtení za tepla lze použít pouze proti 1 procesu najednou. |
+|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporuje se|Nepodporuje se|Viz Chyba: *zajistěte, aby došlo*k chybě události. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích pro UWP není odkaz na existující obslužnou rutinu události podporovaný.|
+|Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporuje se|Příklad: přidání do `SolidColorBrush` slovníku prostředků pro použití jako `StaticResource` .</br>Poznámka: statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků mohou být použity nebo použity při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti slovníku prostředků `Source` .|
+|Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporuje se|Nepodporuje se|Žádná|
+|Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporuje se|Nepodporuje se|Žádná|
+|Změna datové vazby, která používá rozšíření značek {x:Bind}|–|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
+|Změna direktiv X:UID – se nepodporuje.|–|Nepodporuje se|Žádná|
+|Více procesů | Nepodporuje se | Nepodporuje se | Hot reloading se dá použít jenom pro 1 proces po dobu. |
 
 ## <a name="error-messages"></a>Chybové zprávy
 
-Při použití funkce XAML Hot Reload se mohou nacházet následující chyby.
+Při použití kódu XAML Hot reload může docházet k následujícím chybám.
 
 |Chybová zpráva|Popis|
 |-|-|
-|Zajistit, aby se událost nezdařila.|Chyba znamená, že se pokoušíte přepojit událost do jednoho z ovládacích prvků, který není podporován, když je aplikace spuštěna.|
-|Tato změna není podporována xaml hot reload a nebude použita během relace ladění.|Chyba znamená, že změna, o kterou se pokoušíte, není podporována opětovným načtením xaml. Zastavte relaci ladění, proveďte změnu a restartujte relaci ladění. Pokud najdete nepodporovaný scénář, který chcete zobrazit podporované, použijte naši novou možnost "Navrhnout funkci" v [komunitě vývojářů visual studia](https://developercommunity.visualstudio.com/spaces/8/index.html). |
+|Zajistěte selhání události|Chyba znamená, že se pokoušíte o přenos události do některého z vašich ovládacích prvků, které se při spuštění aplikace nepodporují.|
+|Tato změna není podporována nástrojem XAML Hot Loading a nebude použita během ladicí relace.|Chyba indikuje, že změna, kterou zkoušíte, není podporována kódováním XAML Hot reloading. Zastavte ladicí relaci, proveďte změnu a pak znovu spusťte ladicí relaci. Pokud zjistíte nepodporovaný scénář, který byste chtěli zobrazit, použijte naši novou možnost navrhnout funkci v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html). |
 
 ## <a name="see-also"></a>Viz také
 
 * [Řešení potíží s opětovným načítáním XAML za provozu](xaml-hot-reload-troubleshooting.md)
-* [XAML Hot Reload pro Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload)
+* [Opětovné načítání XAML za provozu pro Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload)
 * [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

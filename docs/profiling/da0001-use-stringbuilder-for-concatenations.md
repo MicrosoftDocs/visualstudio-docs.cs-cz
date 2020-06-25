@@ -1,7 +1,7 @@
 ---
-title: 'DA0001: Použití StringBuilder pro zřetězení | Dokumenty společnosti Microsoft'
+title: DA0001 – použití StringBuilder pro zřetězení | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0001
 - vs.performance.rules.DAUseStringBuilder
@@ -14,32 +14,32 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d93de6ce901bfe4d72628f778b18420beb5ebee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 137d21019973ac78a74429e957429d69d91edbf8
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779503"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332121"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Pro zřetězování používejte StringBuilder
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Použití třídy StringBuilder ke zřetězení
 
 |||
 |-|-|
-|Id pravidla|DA0001 řekl:|
-|Kategorie|Použití rozhraní .NET Framework|
-|Metody profilování|Vzorkování<br /><br /> Instrumentace|
-|Zpráva|Zvažte použití StringBuilder pro zřetězení řetězců|
+|ID pravidla|DA0001|
+|Kategorie|Využití .NET Framework|
+|Metody profilace|Vzorkování<br /><br /> Instrumentace|
+|Zpráva|Zvažte použití StringBuilder pro zřetězení řetězců.|
 |Typ zprávy|Upozornění|
 
 ## <a name="cause"></a>Příčina
- Volání System.String.Concat jsou významnou část dat profilování. Zvažte <xref:System.Text.StringBuilder> použití třídy k vytvoření řetězců z více segmentů.
+ Volání System. String. Concat představují významnou část dat profilování. Zvažte použití <xref:System.Text.StringBuilder> třídy pro sestavování řetězců z více segmentů.
 
 ## <a name="rule-description"></a>Popis pravidla
- Objekt <xref:System.String> je neměnný. Proto všechny změny řetězce vytvoří nový objekt řetězce a uvolnění paměti původní. Toto chování je stejné, zda voláte String.Concat explicitně nebo použijte operátory zřetězení řetězce jako + nebo +=.. Výkon programu může snížit, pokud jsou tyto metody často volány, například když jsou znaky přidány do řetězce v těsné smyčce.
+ <xref:System.String>Objekt je neměnný. Proto jakákoli úprava řetězce vytvoří nový objekt String a uvolňování paměti původní. Toto chování je stejné, bez ohledu na to, zda voláte řetězec. Concat explicitně, nebo použijte operátory zřetězení řetězců, například + nebo + =.. Výkon programu se může snížit, pokud jsou tyto metody často volány, například když jsou znaky přidány do řetězce v těsné smyčce.
 
- Třída StringBuilder je proměnlivý objekt a na rozdíl od System.String, většina metod na StringBuilder, které upravují instanci této třídy vrátit odkaz na stejnou instanci. Můžete vložit znaky nebo připojit text k instanci StringBuilder a odebrat nebo nahradit znaky v instanci bez nutnosti přidělení nové instance a odstranění původní instance.
+ Třída StringBuilder je proměnlivý objekt, a na rozdíl od System. String, většina metod v StringBuilder, která upravuje instanci této třídy, vrátí odkaz na stejnou instanci. Můžete vložit znaky nebo připojit text k instanci StringBuilder a odebrat nebo nahradit znaky v instanci bez nutnosti přidělit novou instanci a odstraněním původní instance.
 
-## <a name="how-to-investigate-a-warning"></a>Jak prošetřit varování
- Poklepáním na zprávu v okně **Seznam chyb** přejděte do [zobrazení podrobností funkce](../profiling/function-details-view.md) dat profilů vzorkování. Najděte části programu, které nejčastěji používají zřetězení řetězců. Třídu StringBuilder použijte pro složité manipulace s řetězci, včetně operací častého zřetězení řetězců.
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Dvakrát klikněte na zprávu v okně **Seznam chyb** , abyste přešli na [zobrazení podrobností o funkcích](../profiling/function-details-view.md) profilu vzorkování. Najděte části programu, které zjednodušují zřetězení řetězců. Použijte třídu StringBuilder pro komplexní manipulaci s řetězci, včetně častých operací zřetězení řetězců.
 
- Další informace o tom, jak pracovat s řetězci, [části Operace řetězce](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) kapitoly 5 – Zlepšení výkonu [spravovaného kódu](/previous-versions/msp-n-p/ff647790(v=pandp.10)) v knihovně Microsoft Patterns and Practices.
+ Další informace o tom, jak pracovat s řetězci, najdete v části [operace s řetězci](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) v [kapitole 5 – zlepšení výkonu spravovaného kódu](/previous-versions/msp-n-p/ff647790(v=pandp.10)) v knihovně Microsoft Patterns and Practices Library.

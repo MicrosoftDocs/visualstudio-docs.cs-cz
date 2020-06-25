@@ -1,7 +1,7 @@
 ---
-title: Funkce CvWriteAlert | Dokumenty společnosti Microsoft
+title: Funkce Cvwritealert – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteAlertVA
 - cvmarkers/CvWriteAlertVW
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b7cc2316168d14c6c996c4d55065771c85ffdfc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56af9515fb9c066e56dd45a0fb91a95530f09799
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62989777"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332170"
 ---
-# <a name="cvwritealert-function"></a>CvWriteAlert
-Zapíše výstrahu do trasovacího souboru vizuále souběžnosti.
+# <a name="cvwritealert-function"></a>Cvwritealert – – funkce
+Zapíše výstrahu do trasovacího souboru Vizualizátor souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,21 +55,21 @@ HRESULT CvWriteAlertVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList`Seznam argumentů.
+ `argList`Seznam argumentů
 
- `pMarkerSeries`Platný kontext řady značek. Nemůže být null.
+ `pMarkerSeries`Platný kontext řady značek Nemůže mít hodnotu NULL.
 
- `pMessage`Formátový řetězec zprávy. Nemůže být null.
+ `pMessage`Řetězec formátu zprávy Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je zpráva úspěšně zapsána. Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
- **Unicode:** CvWriteAlertW, CvWriteAlertVW
+ **Kódování Unicode:** CvWriteAlertW, CvWriteAlertVW
 
  **ANSI:** CvWriteAlertA, CvWriteAlertVA
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

@@ -1,7 +1,7 @@
 ---
-title: Funkce CvWriteFlag | Dokumenty společnosti Microsoft
+title: Funkce Cvwriteflag – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteFlagExVA
 - cvmarkers/CvWriteFlagExW
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a5a388c8f838f182d2f1f3d3f56f84b8fbf10e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 396edc736f61ae76aab7263bcd15bb0bfad13204
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62936677"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332150"
 ---
-# <a name="cvwriteflag-function"></a>CvWriteFlag
-Zapíše příznak do trasovacího souboru vizualizéru souběžnosti.
+# <a name="cvwriteflag-function"></a>Cvwriteflag – – funkce
+Zapíše příznak do trasovacího souboru Vizualizátor souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,25 +63,25 @@ HRESULT CvWriteFlagExVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList`Seznam argumentů.
+ `argList`Seznam argumentů
 
- `category`Kategorie.
+ `category`Kategorií.
 
  `level`Úroveň důležitosti.
 
- `pMarkerSeries`Platný kontext řady značek. Nemůže být null.
+ `pMarkerSeries`Platný kontext řady značek Nemůže mít hodnotu NULL.
 
- `pMessage`Formátový řetězec zprávy. Nemůže být null.
+ `pMessage`Řetězec formátu zprávy Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je zpráva úspěšně zapsána. Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
- **Unicode:** CvWriteFlagExW, CvWriteFlagExVW
+ **Kódování Unicode:** CvWriteFlagExW, CvWriteFlagExVW
 
  <strong>ANSI:</strong> CvWriteFlagExA, CvWriteFlagExVA
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

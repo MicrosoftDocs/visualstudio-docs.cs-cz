@@ -1,8 +1,8 @@
 ---
-title: Blend pro prohlídku funkce visual studia
+title: Blend pro Visual Studio prohlídka funkcí
 titleSuffix: ''
 ms.date: 07/31/2019
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - Blend.Start.Dev12
 author: TerryGLee
@@ -10,74 +10,74 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2b9f38d83befcf49ecd3de8da3a2cd26ff3ab46
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 8348ba38849b76a745a56f941850d6b61a8f433f
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301669"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332088"
 ---
-# <a name="blend-for-visual-studio-overview"></a>Přehled prolnutí pro Visual Studio
+# <a name="blend-for-visual-studio-overview"></a>Přehled Blend pro Visual Studio
 
-Blend pro Visual Studio vám pomůže navrhnout Windows a webové aplikace založené na XAML. Poskytuje stejné základní prostředí návrhu XAML jako Visual Studio a přidává vizuální návrháře pro pokročilé úkoly, jako jsou animace a chování. Porovnání mezi blenda Visual Studio, najdete [v tématu Návrh XAML v sadě Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md).
+Blend pro Visual Studio vám pomůže navrhovat okna a webové aplikace založené na jazyce XAML. Poskytuje stejné základní prostředí pro návrh XAML jako Visual Studio a přidává vizuální návrháře pro pokročilé úlohy, jako jsou například animace a chování. Porovnání mezi Blendem a sady Visual Studio naleznete v tématu [design XAML v aplikaci Visual Studio a Blend pro Visual Studio](../xaml-tools/designing-xaml-in-visual-studio.md).
 
-Blend pro Visual Studio je součástí sady Visual Studio. Chcete-li nainstalovat blend, v **Instalační službě sady Visual Studio** zvolte vývoj univerzální **platformy Windows** nebo **úlohu vývoje plochy .NET.** Obě tyto úlohy zahrnují komponentu Blend for Visual Studio.
+Blend pro Visual Studio je součástí sady Visual Studio. Chcete-li nainstalovat Blend, v **instalační program pro Visual Studio** vyberte buď úlohu **vývoj Univerzální platforma Windows** nebo vývoj **desktopových aplikací .NET** . Obě tyto úlohy zahrnují komponentu Blend pro Visual Studio.
 
-![Součásti pracovního vytížení UPW](media/installer-uwp.png)&nbsp;&nbsp;&nbsp;&nbsp;![Součásti úloh y pro vývoj stolních počítačů .NET](media/installer-dotnet-desktop.png)
+![Komponenty úlohy UWP](media/installer-uwp.png)&nbsp;&nbsp;&nbsp;&nbsp;![Součásti úlohy vývoj desktopových aplikací .NET](media/installer-dotnet-desktop.png)
 
-Pokud s blendem pro Visual Studio tečte, věnujte chvíli tomu, abyste se seznámili s jedinečnými funkcemi pracovního prostoru. Toto téma vás zavede na rychlou prohlídku.
+Pokud s Blend pro Visual Studio začínáte, měli byste se seznámit s jedinečnými funkcemi pracovního prostoru. Toto téma vás provede rychlou prohlídku.
 
 ## <a name="tools-panel"></a>Panel Nástroje
 
-Panel **nástrojů** v sadě pro Visual Studio můžete použít k vytváření a úpravám objektů v aplikaci. **Panel nástrojů** se zobrazí na levé straně návrháře XAML, když máte otevřený soubor *XAML.*
+Pomocí panelu **nástroje** v Blend pro Visual Studio můžete vytvářet a upravovat objekty v aplikaci. Panel **nástroje** se zobrazí na levé straně návrháře XAML, když máte soubor *. XAML* otevřený.
 
-Objekty vytvoříte výběrem nástroje a kreslením na kreslicí prkno myší.
+Objekty vytvoříte tak, že vyberete nástroj a nakreslíte na návrhovou plochu pomocí myši.
 
-![Panel nástrojů v prolnutí pro Visual Studio](media/blend-tools-panel.png)
+![Panel nástrojů v Blend pro Visual Studio](media/blend-tools-panel.png)
 
 > [!TIP]
-> Některé nástroje v panelu **nástrojů** mají například varianty, například místo obdélníku můžete zvolit elipsu nebo čáru. Chcete-li získat přístup k těmto variantám, klepněte na nástroj pravým tlačítkem nebo klepněte a podržte ho.
+> Některé nástroje na panelu **nástroje** mají variace, například místo obdélníku, můžete zvolit elipsu nebo čáru. Chcete-li získat přístup k těmto variantám, klikněte na něj pravým tlačítkem nebo klikněte a podržte ho.
 >
-> ![Variace nástrojů tvarů v prolnutí pro Visual Studio](media/blend-rectangle-tool-variations.png)
+> ![Variace nástroj Obrazec v Blend pro Visual Studio](media/blend-rectangle-tool-variations.png)
 
 ### <a name="selection-tools"></a>Nástroje pro výběr
 
-Vyberte objekty a cesty. Nástrojem **pro přímý výběr** vyberte vnořené objekty a segmenty cesty.
+Vyberte možnost objekty a cesty. Pomocí nástroje **přímý výběr** vyberte vnořené objekty a segmenty cest.
 
 ### <a name="view-tools"></a>Zobrazit nástroje
 
-Upravte zobrazení kreslicí plochy, například pro posouvání a zvětšování.
+Upravte zobrazení návrhové plochy, například pro posouvání a zvětšování.
 
-### <a name="brush-tools"></a>Nástroje pro štětec
+### <a name="brush-tools"></a>Nástroje štětce
 
-Pracujte s vizuálními atributy objektu, jako je transformace stopy nebo aplikování přechodu.
+Pracujte s vizuálními atributy objektu, jako je například transformace štětce nebo použití přechodu.
 
-### <a name="object-tools"></a>Nástroje pro objekty
+### <a name="object-tools"></a>Nástroje objektů
 
-Nakreslete nejběžnější objekty na kreslicí stěně, jako jsou cesty, tvary, panely rozvržení, text a ovládací prvky.
+Nakreslete nejběžnější objekty na návrhové ploše, například cesty, tvary, panely rozložení, text a ovládací prvky.
 
-### <a name="asset-tools"></a>Nástroje pro podklady
+### <a name="asset-tools"></a>Nástroje assetu
 
-Přístup k oknu Datové zdroje a zobrazte naposledy použitý datový zdroj z knihovny.
+Přejděte do okna assets (prostředky) a zobrazte naposledy použitý prostředek z knihovny.
 
-## <a name="assets-window"></a>Okno Datový majetek
+## <a name="assets-window"></a>Okno prostředků
 
-Okno **Prostředky** obsahuje všechny dostupné ovládací prvky a je podobné **panelu nástrojů** v sadě Visual Studio. Kromě ovládacích prvků najdete v okně **Datové zdroje** vše, co můžete přidat do kreslicí plochy, včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **Datové zdroje,** zvolte **Zobrazit** > **datové zdroje** nebo stiskněte **ctrl**+**alt**+**x**.
+Okno **assets (prostředky** ) obsahuje všechny dostupné ovládací prvky a je podobné jako **Sada nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete vše, co můžete přidat na návrhovou plochu v okně **assety** , včetně stylů, médií, chování a efektů. Chcete-li otevřít okno **assety** , zvolte možnost **Zobrazit**  >  **okno assety** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
-![Okno Datové zdroje v prolnutí pro Visual Studio](media/blend-assets-window.png)
+![Okno prostředků v Blend pro Visual Studio](media/blend-assets-window.png)
 
-- Zadáním textu do pole **Hledat datové zdroje** můžete filtrovat seznam datových zdrojů.
-- Přepínejte mezi režimem mřížky a zobrazením zobrazení datového zdroje v režimu seznamu pomocí tlačítek vpravo nahoře.
+- Zadáním textu do pole **Hledat prostředky** můžete filtrovat seznam assetů.
+- Přepínání mezi zobrazením mřížky a režimu seznamu v zobrazení assetů pomocí tlačítek v pravém horním rohu.
 
-## <a name="objects-and-timeline-window"></a>Okno Objekty a časová osa
+## <a name="objects-and-timeline-window"></a>Objekty a časová osa okno
 
-Toto okno slouží k uspořádání objektů na kreslicí desce a v případě, že je chcete animovat. Chcete-li otevřít okno **Objekty a Časová osa,** zvolte **Zobrazit** > **obrys dokumentu**. Kromě funkcí poskytovaných v [okně Osnova dokumentu](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) v sadě Visual Studio má okno Objekty a časová osa v prolnutí pro Visual Studio oblast kompozice časové osy vpravo. Při vytváření a úpravách animací použijte časovou osu.
+Toto okno slouží k uspořádání objektů na návrhové ploše a v případě, že je chcete animovat. Chcete-li otevřít okno **objekty a časová osa** , vyberte možnost **Zobrazit**  >  **osnovu dokumentu**. Kromě funkcí, které jsou k dispozici v [okně Osnova dokumentu](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) v aplikaci Visual Studio, má okno Objekty a časová osa v Blend pro Visual Studio oblast kompozice časové osy na pravé straně. Použijte časovou osu při vytváření a úpravách animací.
 
-![Okno Objekt a časová osa v režimu animace](media/storyboard-timeline.png)
+![Okno objekt a časová osa v režimu animace](media/storyboard-timeline.png)
 
-Použití tlačítek souvisejících se scénářem ![Tlačítka scénáře v prolnutí pro Visual Studio](media/storyboard-buttons.png) chcete-li vytvořit, odstranit, zavřít nebo vybrat scénář. Pomocí oblasti kompozice časové osy vpravo zobrazte časovou osu a přesuňte klíčové snímky.
+Použití tlačítek souvisejících se scénářem ![Tlačítka scénáře v Blend pro Visual Studio](media/storyboard-buttons.png) k vytvoření, odstranění, zavření nebo výběru scénáře. Pomocí oblasti kompozice časové osy napravo můžete zobrazit časovou osu a přesunout klíčové snímky.
 
-Najeďte nad každé tlačítko v okně, abyste se dozvěděli další informace o dostupných funkcích.
+Pokud se chcete dozvědět víc o dostupných funkcích, najeďte myší na jednotlivá tlačítka v okně.
 
 ## <a name="see-also"></a>Viz také
 

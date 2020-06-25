@@ -1,26 +1,26 @@
 ---
-title: marker_series::write_alert metoda | Dokumenty společnosti Microsoft
+title: 'marker_series:: write_alert metoda | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic:marker_series::write_alert
+- cvmarkersobj/Concurrency, diagnostic:marker_series::write_alert
 helpviewer_keywords:
-- Concurrency::diagnostic:marker_series::write_alert method
+- Concurrency, diagnostic:marker_series::write_alert method
 ms.assetid: 9d5465c7-f862-47a7-b249-4116605075a6
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 635f767f97ea3d237aeff843e99735eccae31efc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d5e79bab25885c8759ea5726b037771a4943c563
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62831381"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329637"
 ---
-# <a name="marker_serieswrite_alert-method"></a>marker_series::write_alert metoda
-Zapíše výstrahu do trasovacího souboru vizuále souběžnosti.
+# <a name="marker_serieswrite_alert-method"></a>marker_series:: write_alert – metoda
+Zapíše výstrahu do trasovacího souboru Vizualizátor souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,12 +32,12 @@ void write_alert(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_Format`Složený formátovací řetězec, který obsahuje text smíchaný s nulovými nebo více položkami formátu, které odpovídají objektům v seznamu argumentů.
+ `_Format`Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkersobj.h*
+ **Záhlaví:** *cvmarkersobj. h*
 
- **Obor názvů:** Souběžnost::diagnostik
+ **Obor názvů:** Concurrency::d odeslání diagnostických
 
 ## <a name="see-also"></a>Viz také
-- [marker_series třída](../profiling/marker-series-class.md)
+- [marker_series – třída](../profiling/marker-series-class.md)

@@ -1,7 +1,7 @@
 ---
-title: 'DA0503: Průměrná pracovní sada v bajtů pro proces profilovaný | Dokumenty společnosti Microsoft'
+title: DA0503 – průměrná pracovní sada v bajtech pro proces, který se profiluje | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.503
 - vs.performance.DA0503
@@ -13,37 +13,37 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9d309d7bf10cee07cc30c4568d2dfa59d1be56
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1bc22ec0c1ec618ed38c9860a110b1130c291ed1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777447"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332278"
 ---
-# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměrná pracovní sada v bajtů pro proces profilovaný
+# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503: Průměrná pracovní sada v bajtech pro proces profilace
 
 |||
 |-|-|
-|Id pravidla|DA0503 řekl:|
-|Kategorie|Monitorování zdrojů|
-|Metoda profilování|Všechny|
-|Zpráva|Tyto informace byly shromážděny pouze pro informaci. Čítač Pracovní sada procesu měří využití fyzické paměti procesem, který profilujete. Vykázaná hodnota je průměr vypočítaný ve všech intervalech měření.|
+|ID pravidla|DA0503|
+|Kategorie|Monitorování prostředků|
+|Metoda profilace|Vše|
+|Zpráva|Tyto informace se shromáždily jenom pro informace. Čítač pracovní sady procesů měří využití fyzické paměti procesem, který vytváříte. Hodnota hlášené je průměr vypočítaný ve všech intervalech měření.|
 |Typ pravidla|Informace|
 
- Při profilování pomocí vzorkování, .NET paměti nebo prostředků konfliktmetody, je nutné shromáždit alespoň 10 vzorků k aktivaci tohoto pravidla.
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 
 ## <a name="rule-description"></a>Popis pravidla
- Tato zpráva hlásí průměrné množství fyzické paměti, které proces aktuálně používá v bajtů (pracovní sada). Pracovní sada procesu představuje stránky z adresního prostoru procesu, které jsou aktuálně umístěny ve fyzické paměti.
+ Tato zpráva oznamuje průměrnou velikost fyzické paměti, kterou proces aktuálně používá v bajtech (pracovní sada). Pracovní sada procesu představuje stránky z adresního prostoru procesu, který je aktuálně umístěn ve fyzické paměti.
 
- Vykázaná hodnota zahrnuje rezidentní stránky ze segmentů sdílené paměti, na které proces odkazuje. Sdílené knihovny DLL, na které jsou zahrnuty odkazy na proces, jsou zahrnuty do segmentů sdílené paměti, které se počítají. Hodnota pracovní sady procesu může být vyšší než velikost virtuální paměti, kterou proces přidělil z důvodu segmentů sdílené paměti.
+ Vykazovaná hodnota zahrnuje rezidentní stránky ze sdílených segmentů paměti, na které proces odkazuje. Sdílené knihovny DLL, které odkazují na procesy, jsou zahrnuté do sdílených segmentů paměti, které se počítají. Hodnota pracovní sady procesu může být vyšší než velikost virtuální paměti, kterou byl proces přidělen z důvodu sdílených segmentů paměti.
 
- Vykázaná hodnota je průměr za všechny intervaly měření, ve kterých byl profilovaný proces aktivní.
+ Vykazovaná hodnota je průměr ve všech intervalech měření, v nichž byl proces profilace aktivní.
 
- Velikost pracovní sady procesu odráží, kolik virtuální paměti proces aktivně používá. To je také ovlivněno množství fyzické paměti (nebo paměti RAM) k dispozici ke spuštění aplikace a tvrzení pro tuto fyzickou paměť z jiných spuštěných procesů. Pokud je fyzická paměť omezena, hodnota pracovní sady procesu se může výrazně lišit, protože operační systémy se snaží vyvážit využití paměti mezi aktivními procesy pravidelným ořezáváním poměrně neaktivních stránek z pracovních sad procesů.
+ Velikost pracovní sady procesu odráží, kolik virtuální paměti proces aktivně používá. To je ovlivněno množstvím fyzické paměti (nebo paměti RAM), která je k dispozici pro spuštění aplikace a kolizí pro danou fyzickou paměť z jiných spuštěných procesů. Pokud je fyzická paměť omezená, je hodnota pracovní sady procesu apt tak, aby se významně lišila, protože operační systémy se snaží vyrovnávat využití paměti napříč aktivními procesy tím, že pravidelně vystřihuje poměrně neaktivní stránky ze procesních sad procesů.
 
- Další informace o pracovních sadách procesů naleznete v [tématu Pracovní sada](/windows/win32/memory/working-set) v dokumentaci ke správě paměti systému Windows v aplikaci MSDN.
+ Další informace o pracovních sadách procesů najdete v tématu [Work set](/windows/win32/memory/working-set) v dokumentaci ke službě Windows Memory Management na webu MSDN.
 
-## <a name="how-to-use-rule-data"></a>Použití dat pravidla
- Pomocí hodnoty pravidla můžete porovnat výkon různých verzí nebo sestavení programu nebo porozumět výkonu aplikace v různých scénářích profilování.
+## <a name="how-to-use-rule-data"></a>Jak používat data pravidla
+ Použijte hodnotu pravidla pro porovnání výkonu různých verzí nebo sestavení programu nebo pro pochopení výkonu aplikace v rámci různých scénářů profilace.
 
- Poklepáním na zprávu v okně Seznam chyb přejděte do zobrazení [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledejte sloupce **Process\Working Set** a **Memory\Pages/sec.** Porovnejte dva sloupce a zjistěte, zda existují určité fáze provádění programu, které se zdají být spojeny se zvýšenou aktivitou stránkování vi.
+ Dvojitým kliknutím na zprávu v okně Seznam chyb přejdete do zobrazení [značky](../profiling/marks-view.md) zobrazit data profilace. Vyhledejte sloupce **Process\Working sady** a **paměť \ stránky/s** . Porovnejte oba sloupce a určete, zda jsou k dispozici konkrétní fáze provádění programu, které se mají přidružit ke zvýšené vstupně-výstupní aktivitě stránkování.

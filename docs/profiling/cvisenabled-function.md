@@ -1,7 +1,7 @@
 ---
-title: Funkce CvIsEnabled | Dokumenty společnosti Microsoft
+title: Funkce Cvisenabled – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvIsEnabledEx
 - cvmarkers/CvIsEnabled
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92763e352d04d5aa3e88a68bad7adfcd05897027
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 53de9ee136c9bd12c732339b4c1c8a223fe1a3ac
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62945411"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330062"
 ---
-# <a name="cvisenabled-function"></a>CvIsEnabled
-Určuje, zda nějaká relace povolila zadaného zprostředkovatele ETW.
+# <a name="cvisenabled-function"></a>Cvisenabled – – funkce
+Určuje, zda jakákoli relace povolila zadaného zprostředkovatele ETW.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,17 +38,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametry
- `category`Kategorie.
+ `category`Kategorií.
 
  `level`Úroveň důležitosti.
 
- `pProvider`Platný objekt zprostředkovatele. Nemůže být null.
+ `pProvider`Platný objekt poskytovatele. Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, pokud je aktuálně povolen zprostředkovatel. S_FALSE, pokud je zprostředkovatel aktuálně zakázán. Kód chyby v případě, že došlo k chybám. Pomocí makra FAILED zkontrolujte chybový stav a potom zkontrolujte S_OK/S_FALSE.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK, pokud je zprostředkovatel aktuálně povolen. S_FALSE, pokud je zprostředkovatel aktuálně zakázaný. Kód chyby v případě, že došlo k chybám. Pomocí neúspěšného makra zkontrolujte chybový stav a potom vyhledejte S_OK/S_FALSE.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

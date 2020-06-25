@@ -2,25 +2,25 @@
 title: Modifikační klávesy nástroje Přímý výběr
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 21f9b951-dc2b-4d09-bd70-75caed8fb964
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1ac2ee5c5e71dd08e7c9aee81e640cf6f856b6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0931eef87bce1a942e9c8740d248d213f1b778a4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650953"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332306"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend-for-visual-studio"></a>Přímý výběr modifikační klávesy nástrojů v Blend pro Visual Studio
 
-V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě tvaru existující cesty pomocí nástroje **Přímý výběr** ![Direct nástrojů pro výběr ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png). Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
+V následující tabulce jsou uvedeny zkratky, které můžete použít k úpravě tvaru existující cesty pomocí nástroje **přímý výběr** nástrojů pro ![ přímý výběr ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) . Chcete-li přidat nebo odebrat body v existující cestě nebo připojit dvě existující cesty, použijte nástroj **pero** .
 
-|K provedení této akce|Postup|Ukazatele|
+|Akce|Postup|Ukazatel|
 | - |-------------|-------------|
 |Zobrazit tangenciální úchyty pro bod na cestě|Klikněte na bod na cestě.|![Zobrazit tangenciální úchyty pro bod na cestě](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> Ukazatel bodu přesunutí|
 |Přesunutí bodu na cestě|Přetažení bodu na cestě|![Přesunutí bodu na cestě](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> Ukazatel bodu přesunutí|
@@ -33,7 +33,7 @@ V následující tabulce jsou uvedeny zkratky, které můžete použít k úprav
 |Vytvoření segmentu a jeho ohnutí na křivku, která projde umístěním ukazatele|Najeďte myší na segment v cestě, stiskněte klávesu **ALT**a pak přetáhněte segment.|![Vytvoření segmentu a jeho ohnutí na křivku, která projde umístěním ukazatele](../designers/media/975a855a-8536-441f-97ed-2f1496e416bf.png)<br /><br /> Převést ukazatel segmentu|
 |Úprava jednoho konce tečny nezávisle na druhé straně|Vyberte bod nebo segment, stiskněte klávesu **ALT**a pak přetáhněte koncový bod tečny.|![Úprava jednoho konce tečny nezávisle na druhé straně](../designers/media/923951da-4081-4f8b-bebc-0f1f64d87504.png)<br /><br /> Převést tangenciální ukazatel|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Modifikační klávesy návrhové plochy](../xaml-tools/artboard-modifier-keys-in-blend.md)
 - [Modifikační klávesy nástroje Pero](../xaml-tools/pen-tool-modifier-keys-in-blend.md)

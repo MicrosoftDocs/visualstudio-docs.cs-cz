@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Zadejte binární hodnotu na začátek | Dokumenty společnosti Microsoft'
+title: Jak zadat binární soubor, který se má spustit | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.itemlaunch
 helpviewer_keywords:
@@ -14,30 +14,30 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7f7cfd0d7a578d2ddaff28e9821f1d190bb2e10d
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778684"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331459"
 ---
-# <a name="how-to-specify-the-binary-to-start"></a>Postup: Zadejte binární soubor, který má být zahájen
+# <a name="how-to-specify-the-binary-to-start"></a>Postupy: Určení binárního souboru ke spuštění
 
-Chcete-li profilovat binární soubory, například knihovny ** \<** DLL, musíte zadat informace do dialogového okna Cílové> stránky vlastností. Tyto informace označují, kde projekt DLL může najít volající aplikaci.
+Chcete-li profilovat binární soubory, jako jsou knihovny DLL, je nutné zadat informace v dialogovém okně ** \<Target> stránky vlastností** . Tyto informace označují, kde projekt knihovny DLL může najít volající aplikaci.
 
-1. V **Průzkumníku výkonu**klepněte pravým tlačítkem myši na cílový binární soubor a potom klepněte na příkaz **Vlastnosti**.
+1. V **prohlížeč výkonu**klikněte pravým tlačítkem myši na cílový binární soubor a pak klikněte na **vlastnosti**.
 
-2. V dialogovém okně **Stránky vlastností** klikněte na vlastnosti **Spustit.**
+2. V dialogovém okně **stránky vlastností** klikněte na vlastnosti **spuštění** .
 
-3. Zaškrtněte políčko **Přepsat vlastnosti projektu.**
+3. Vyberte zaškrtávací políčko **přepsat vlastnosti projektu** .
 
-4. V textovém poli **Spustitelný soubor** zadejte umístění souboru.
+4. Do textového pole **spustitelný soubor ke spuštění** zadejte umístění souboru.
 
-5. V textovém poli **Argumenty** zadejte argumenty, které jsou nutné ke spuštění aplikace.
+5. Do textového pole **argumenty** zadejte argumenty, které jsou požadovány ke spuštění aplikace.
 
-6. V textovém poli **Pracovní adresář** zadejte umístění adresáře.
+6. Do textového pole **pracovní adresář** zadejte umístění adresáře.
 
-7. Klikněte na tlačítko **OK**.
+7. Klikněte na **OK**.
 
 ## <a name="see-also"></a>Viz také
 

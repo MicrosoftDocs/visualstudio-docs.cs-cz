@@ -1,7 +1,7 @@
 ---
-title: Funkce CvReleaseMarkerSeries | Dokumenty společnosti Microsoft
+title: Funkce CvReleaseMarkerSeries – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvReleaseMarkerSeries
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d100b7ff37ea5a3cd224fd420f14e4cb23061903
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 84db5dac77fbbc51c9f1c0e24173dcc8ca1d68c1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974139"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332189"
 ---
-# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries
-Uvolní řadu značek. Nepoužívejte objekt řady značek po uvolnění jinak aplikace může dojít k chybě. Selhání uvolnění značky série způsobí nevracení paměti.
+# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries – – funkce
+Vydává řady značek. Nepoužívejte objekt řady značek po uvolnění v opačném případě může dojít k chybě aplikace. Neúspěšné vydání řady značek způsobuje nevracení paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +31,13 @@ HRESULT CvReleaseMarkerSeries(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pMarkerSeries`Adresa proměnné objektu zprostředkovatele. Adresa nemůže být NULL, proměnná může mít libovolnou hodnotu.
+ `pMarkerSeries`Adresa proměnné objektu zprostředkovatele Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je řada značek úspěšně uvolněna, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+ S_OK při úspěšném vydání řady značek nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

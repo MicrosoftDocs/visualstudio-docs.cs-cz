@@ -1,28 +1,28 @@
 ---
-title: diagnostický obor názvů | Dokumenty společnosti Microsoft
+title: Obor názvů diagnostiky | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic
+- cvmarkersobj/Concurrency, diagnostic
 helpviewer_keywords:
-- Concurrency::diagnostic namespace
+- Concurrency, diagnostic namespace
 ms.assetid: ad786b19-7c4c-46ee-bfb6-c4752b373a09
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62970080"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330261"
 ---
-# <a name="diagnostic-namespace"></a>diagnostický obor názvů
-Obor `diagnostics` názvů poskytuje funkce pro vyzařování značek vizualizérů souběžnosti.
+# <a name="diagnostic-namespace"></a>obor názvů diagnostiky
+`diagnostics`Obor názvů poskytuje funkce pro generování značek Vizualizátor souběžnosti.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 namespace diagnostic;
@@ -32,21 +32,21 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Třídy
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[marker_series – třída](../profiling/marker-series-class.md)|Představuje sériový kanál událostí generovaných jednoho zprostředkovatele.|
+|[marker_series – třída](../profiling/marker-series-class.md)|Představuje sériový kanál událostí generovaných jedním zprostředkovatelem.|
 |[span – třída](../profiling/span-class.md)|Definuje fázi aplikace.|
 
 ### <a name="enumerations"></a>Výčty
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značky Vizualizér souběžnosti.|
+|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značky Vizualizátor souběžnosti.|
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkersobj.h*
+ **Záhlaví:** *cvmarkersobj. h*
 
- **Obor názvů:** Souběžnost
+ **Obor názvů:** Concurrency
 
 ## <a name="see-also"></a>Viz také
-- [Obor názvů souběžnosti (vizualizér souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)
+- [Concurrency – obor názvů (Vizualizátor souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)

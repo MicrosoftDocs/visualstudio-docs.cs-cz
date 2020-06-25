@@ -1,17 +1,17 @@
 ---
 title: Ladění nebo zakázání kódu projektu v Návrháři XAML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ce29bcef43877ec8a41235545652278645cad123
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592992"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331064"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
 
@@ -35,7 +35,7 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 1. V dialogu Neošetřená výjimka vyberte **kliknutím sem znovu načtěte odkaz návrháře** .
 
-2. Na panelu nabídek vyberte možnost **ladění** > **Spustit ladění** a spusťte aplikaci.
+2. Na panelu nabídek vyberte **ladit**  >  **Spustit ladění** a sestavte a spusťte aplikaci.
 
      V případě úspěšného sestavení a spuštění aplikace může být výjimka v době návrhu způsobena kódem vašeho projektu spuštěným v návrháři.
 
@@ -53,15 +53,15 @@ Když je kód projektu zakázán, Visual Studio zobrazí zástupné symboly. Nap
 
 5. Nastavte zarážku v kódu projektu.
 
-6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit** > **připojit k procesu**.
+6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**  >  **připojení k procesu**.
 
-7. V dialogovém okně **připojit k procesu** zvolte v seznamu **procesy k dispozici** možnost **XDesProc. exe**a poté klikněte na tlačítko **připojit** .
+7. V dialogovém okně **připojit k procesu** vyberte v seznamu **procesy k dispozici** možnost **XDesProc.exe**a pak klikněte na tlačítko **připojit** .
 
      ![Proces návrháře XAML](media/xaml_attach.png)
 
      To je proces pro návrháře XAML v první instanci sady Visual Studio.
 
-8. V první instanci aplikace Visual Studio na panelu nabídky vyberte možnost **ladění** > **Spustit ladění**.
+8. V první instanci sady Visual Studio, na panelu nabídek vyberte **ladit**  >  **Spustit ladění**.
 
      Nyní můžete krokovat kód, který je spuštěn v návrháři.
 
@@ -96,6 +96,6 @@ Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v 
 
 Když vyberete **pouze ovládací prvky zobrazení platformy**, všechny vlastní ovládací prvky přicházející ze sady SDK, uživatelské ovládací prvky zákazníka a další nebudou vykresleny úplně. Místo toho jsou nahrazeni záložními ovládacími prvky, aby ukázaly velikost a polohu ovládacího prvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návrh XAML v aplikaci Visual Studio a Blend pro Visual Studio](designing-xaml-in-visual-studio.md)

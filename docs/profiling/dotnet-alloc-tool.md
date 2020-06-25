@@ -1,7 +1,7 @@
 ---
 title: Analýza využití paměti pro objekty .NET | Microsoft Docs
 ms.date: 12/9/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - memory allocation, memory usage
 author: Sagar-S-S
@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a812ea3dcddc2fa6093b2b5b99684d1d5194654
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f7ec98f8d17465e95369eb6e2ecd88051f8daa59
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280023"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330455"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>Analýza využití paměti pomocí nástroje pro přidělování objektů .NET
 

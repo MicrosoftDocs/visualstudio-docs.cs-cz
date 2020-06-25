@@ -1,61 +1,45 @@
 ---
-title: Výhody EMS | Dokumenty společnosti Microsoft
+title: Výhody Enterprise Mobility + Security v předplatných sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: bada7a96-a969-4459-a2ac-7f253149d925
-ms.date: 03/25/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
-description: Přečtěte si o výhodách Enterprise Mobility + Zabezpečení, které jsou součástí předplatného Sady Visual Studio.
-ms.openlocfilehash: e66e760cc8400e1f81c396c0e62ff57bf6356153
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+description: Přečtěte si o výhodách Enterprise Mobility + Security, které jsou součástí vašeho předplatného sady Visual Studio.
+ms.openlocfilehash: 8641b0f4710b597d237fc9a84d50c4a45e9b427c
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273917"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331249"
 ---
-# <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Podniková mobilita + zabezpečení (EMS) v předplatných Visual Studia
+# <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Enterprise Mobility + Security (EMS) v předplatných sady Visual Studio
 
-Roční cloudový a standardní předplatná Visual Studio Enterprise zahrnují enterprise mobility + zabezpečení (EMS).  Zabezpečte a spravujte své identity, zařízení, aplikace a data pomocí EMS – Azure Active Directory, Microsoft Intune, Azure Information Protection, Microsoft Advanced Threat Analytics a Microsoft Cloud App Security. 
+Enterprise Mobility + Security, která byla dříve k dispozici samostatně ve vybraných předplatných sady Visual Studio, je teď součástí předplatného nástroje Microsoft 365 Developer, které je součástí těchto stejných předplatných sady Visual Studio.  
 
-## <a name="who-should-install-ems"></a>Kdo by měl nainstalovat EMS?
-Pokud už máte tenanta office 365 developer (E3), měli byste nainstalovat EMS.  V opačném případě byste měli nainstalovat [Microsoft 365](vs-m365.md), který zahrnuje ems a Office 365 Developer (E5) a také:
-- Pokročilá analýza s Power BI
-- Rozšířená ochrana před hrozbami v Office 365
-- Azure Active Directory pro vytváření pokročilých řešení pro správu identit a přístupu
+V důsledku toho již nebude možné Enterprise Mobility + Security nabízet samostatně.  
 
-## <a name="eligibility"></a>Způsobilosti
+Aktivace předplatného Microsoft 365 Developer:
+1. Přihlaste se k [portálu předplatných sady Visual Studio](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
+1. Vyhledejte dlaždici Microsoft 365 Developer Subscription a klikněte na **aktivovat**.  
+1. Podle pokynů dokončete vytvoření vašeho účtu.  
 
-| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Obnovitelných zdrojů?    |
-|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standard)   | VL, Azure, Maloobchod, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano          |
-| Visual Studio Professional (standard<sup>2</sup>) | VL, Azure, Maloobchod                                       | K dispozici.                                                            |  Ano          |
-| Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | Není k dispozici.                                             |  Není dostupné.          |
-| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | Není k dispozici.                                              |  Není dostupné.          |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | Není dostupné. |
+Přečtěte si další informace o aktivaci [předplatného Microsoft 365 vývojářům](vs-m365.md). 
 
-<sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Partner Network (MPN), FTE, MCT Software & Services Developer, BizSpark.  Nezahrnuje se: nejhodnotnější profesionál (MVP), regionální ředitel (RD), MCT Software & Services, Imagine, Microsoft Partner Network (Professional).*
-
-<sup>2</sup> *Nezahrnuje síť partnerů společnosti Microsoft (Professional)*
-
-> [!NOTE]
-> Microsoft už nenabízí roční předplatná Visual Studio Professional a roční předplatná Visual Studia Enterprise v předplatných cloudu. Stávající zákazníci se nezmění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Noví zákazníci se [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) doporučuje přejít na prozkoumat různé možnosti nákupu Visual Studio.
-
-Nejste si jisti, které předplatné používáte?  Připojte [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) se k zobrazení všech předplatných přiřazených k vaší e-mailové adrese. Pokud nevidíte všechna předplatná, je možné, že máte jedno nebo více přiřazených k jiné e-mailové adrese.  Abyste se pomocí této e-mailové adresy zobcí, musíte se přihlásit pomocí této e-mailové adresy.
-
-## <a name="support-resources"></a>Zdroje podpory
-- Potřebujete pomoc s EMS?  Podívejte se na online [dokumentaci EMS](/enterprise-mobility-security/).
-- Technickou podporu s jakoukoli součástí EMS naleznete v [nejčastějších dotazech k podpoře EMS](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq) a vyhledejte správnou podporu pro vaši otázku.
-- Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
-- Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+## <a name="support-resources"></a>Prostředky podpory
+- Potřebujete pomáhat s EMS?  Projděte si [dokumentaci k online Enterprise mobility + Security](/enterprise-mobility-security/).
+- Technickou podporu pro všechny komponenty EMS najdete na stránce s [nejčastějšími dotazy pro podporu Enterprise mobility + Security](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq) , kde najdete správnou podporu pro vaši otázku.
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Pokud jste ještě neaktivovali individuální kreditazure devTest, který [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) je součástí vašeho předplatného, navštivte a klikněte na dlaždici Azure v kategorii Nástroje a nastavte předplatné Azure a uplatněte si individuální kredit Azure DevTest.
+Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) dlaždici Azure v kategorii Nástroje a nastavte své předplatné Azure a uplatněte svůj jednotlivý kredit Azure DevTest.
 
-Podívejte se na zbývající výhody, které jsou součástí předplatného. Navštivte [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
+Podívejte se na zbytek skvělé výhody, které jsou součástí vašeho předplatného. Přejděte na adresu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .

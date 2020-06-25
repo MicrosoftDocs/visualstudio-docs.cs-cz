@@ -1,28 +1,28 @@
 ---
-title: marker_importance Výčet | Dokumenty společnosti Microsoft
+title: Výčet marker_importance | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_importance
+- cvmarkersobj/Concurrency, diagnostic::marker_importance
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_importance enumeration
+- Concurrency, diagnostic::marker_importance enumeration
 ms.assetid: d5524ea0-0227-4d8e-9122-332291042df5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f5cfb583ec4fceb9fb7428b08c00f6ca8e26b6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d67a1806034d55147379626b6eb4f868532e4d77
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999964"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330736"
 ---
-# <a name="marker_importance-enumeration"></a>marker_importance výčet
-Představuje úroveň důležitosti značky Vizualizér souběžnosti.
+# <a name="marker_importance-enumeration"></a>výčet marker_importance
+Představuje úroveň důležitosti značky Vizualizátor souběžnosti.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum marker_importance;
@@ -32,17 +32,17 @@ enum marker_importance;
 
 ### <a name="values"></a>Hodnoty
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|`critical_importance`|Určuje, že značka má kritický význam.|
-|`high_importance`|Určuje, že značka má vysokou důležitost.|
+|`critical_importance`|Určuje, že značka má kritickou důležitost.|
+|`high_importance`|Určuje, že značka má velkou důležitost.|
 |`low_importance`|Určuje, že značka má nízkou důležitost.|
-|`normal_importance`|Určuje, že značka má normální význam.|
+|`normal_importance`|Určuje, že má značka normální důležitost.|
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkersobj.h*
+ **Záhlaví:** *cvmarkersobj. h*
 
- **Obor názvů:** Souběžnost::diagnostik
+ **Obor názvů:** Concurrency::d odeslání diagnostických
 
 ## <a name="see-also"></a>Viz také
-- [diagnostický obor názvů](../profiling/diagnostic-namespace.md)
+- [obor názvů diagnostiky](../profiling/diagnostic-namespace.md)

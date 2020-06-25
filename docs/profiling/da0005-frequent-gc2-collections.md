@@ -1,7 +1,7 @@
 ---
-title: 'DA0005: Časté kolekce GC2 | Dokumenty společnosti Microsoft'
+title: DA0005 – časté kolekce shromažďování gc2 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0005
 - vs.performance.rules.DAManyGC2Collections
@@ -14,34 +14,34 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a50567a101d77ed6498aaae13a5fe5556d9c1056
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 946e35c2ee04787d2f36bacd9011567e571d100d
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777709"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330525"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Časté shromažďování GC2
 
 |||
 |-|-|
-|RuleId|DA0005 řekl:|
-|Kategorie|Použití rozhraní .NET Framework|
-|Metoda profilování|Paměť .NET|
-|Zpráva|Mnoho objektů jsou shromažďovány v uvolnění paměti generace 2.|
+|RuleId|DA0005|
+|Kategorie|Využití .NET Framework|
+|Metoda profilace|Paměť .NET|
+|Zpráva|Mnohé z vašich objektů se shromažďují v paměti generace 2.|
 |Typ zprávy|Upozornění|
 
 ## <a name="cause"></a>Příčina
- Vysoký počet objektů paměti .NET jsou uvolněny v uvolnění paměti generace 2.
+ V uvolňování paměti 2. generace se uvolňuje velký počet paměťových objektů .NET.
 
 ## <a name="rule-description"></a>Popis pravidla
- Microsoft .NET společný jazyk runtime (CLR) poskytuje mechanismus automatické správy paměti, který používá systém uvolňování paměti k uvolnění paměti z objektů, které aplikace již nepoužívá. Systém uvolňování paměti je orientován na generování na základě předpokladu, že mnoho přidělení jsou krátkodobé. Místní proměnné, například, by měl být krátkodobý. Nově vytvořené objekty spustit v generaci 0 (gen 0), a pak jejich průběh generace 1 při jejich přežití spuštění uvolňování paměti a nakonec přechod na generaci 2, pokud aplikace stále používá.
+ Modul CLR (Common Language Runtime) Microsoft .NET poskytuje automatický mechanismus správy paměti, který používá systém uvolňování paměti k uvolnění paměti z objektů, které už aplikace nepoužívá. Systém uvolňování paměti je zaměřený na generaci, a to na základě předpokladu, že mnoho přidělení je krátkodobé. Místní proměnné, například by měly být krátkodobé. Nově vytvořené objekty začínají v generaci 0 (gen 0) a poté budou dokončeny na generaci 1, když přestanou běžet v uvolňování paměti, a nakonec přechod na generaci 2, pokud je aplikace stále používá.
 
- Objekty v generaci 0 jsou shromažďovány často a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivně. Nakonec by měly být objekty s dlouhou životností v generaci 2 shromažďovány ještě méně často. Generace 2 kolekce, která je úplné uvolnění paměti spustit, je také nejdražší operace.
+ Objekty v generaci 0 jsou často shromažďovány a obvykle velmi efektivně. Objekty v generaci 1 jsou shromažďovány méně často a méně efektivní. A konečně dlouhodobé objekty v generaci 2 by měly být shromažďovány ještě méně často. Největší náročná operace je shromažďování 2, což je úplné spuštění uvolňování paměti.
 
- Toto pravidlo je aktivováno, pokud došlo k proporcionálně příliš mnoho uvolnění paměti generace 2. Pokud příliš mnoho relativně krátkodobé objekty přežít generace 1 kolekce, ale pak mohou být shromažďovány v generaci 2 úplné kolekce, náklady na správu paměti může snadno stát nadměrné. Další informace naleznete v krizovém příspěvku [v polovině života](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) na webu MSDN společnosti Rico Mariani's Performance Tidbits.
+ Toto pravidlo je vyvoláno, když došlo k proporcování příliš velkého počtu uvolnění paměti generace 2. Pokud je v kolekci 1. generace načteno příliš mnoho poměrně krátkodobých objektů, ale je možné je shromáždit v úplné kolekci 2. generace, náklady na správu paměti lze snadno přetvořit. Další informace najdete v části věnované [krizi v polovině životního cyklu](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/) na webu MSDN na Mariani výkonu pikantní.
 
-## <a name="how-to-investigate-a-warning"></a>Jak prošetřit varování
- Zkontrolujte sestavy [zobrazení paměti .NET,](../profiling/dotnet-memory-data-views.md) abyste pochopili vzor přidělení paměti aplikace. Pomocí [zobrazení životnosti objektu](../profiling/object-lifetime-view.md) určete, které datové objekty programu přežívají do generace 2 a odtud jsou znovu vyzvednuty. Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) určete cestu spuštění, která vedla k těmto přidělením.
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Projděte si sestavy [zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md) , abyste pochopili, jaký je model přidělení paměti aplikace. Pomocí [zobrazení životnosti objektů](../profiling/object-lifetime-view.md) určete, který z datových objektů programu je v generaci 2, a pak se z něj uvolní. Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) Určete cestu spuštění, která je výsledkem těchto přidělení.
 
- Informace o tom, jak zlepšit výkon uvolňování paměti, naleznete v [tématu Základy uvolňování paměti a rady při výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti naleznete v [tématu Halda velkého objektu uncovered](https://msdn.microsoft.com/magazine/cc534993.aspx).
+ Informace o tom, jak zlepšit výkon uvolňování paměti, najdete v tématu [základy systému uvolňování paměti a Nápověda ke zvýšení výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu společnosti Microsoft. Informace o režii automatického uvolňování paměti najdete v tématu [large object halda se nepokryla](https://msdn.microsoft.com/magazine/cc534993.aspx).

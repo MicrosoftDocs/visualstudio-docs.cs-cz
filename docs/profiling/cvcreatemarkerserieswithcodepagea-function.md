@@ -1,7 +1,7 @@
 ---
-title: Funkce CvCreateMarkerSeriesWithCodePageA | Dokumenty společnosti Microsoft
+title: Funkce Cvcreatemarkerserieswithcodepagea – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmakers/CvCreateMarkerSeriesWithCodePageA
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7e540e56ce0e97ac2c6aa2e42012569f9e4f272
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e17083c48db1ba1aa6b7ff45ee467ac97900e101
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62553068"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332428"
 ---
-# <a name="cvcreatemarkerserieswithcodepagea-function"></a>CvCreateMarkerSeriesWithCodePageA
-Vytvoří řadu značek pro daného zprostředkovatele a zadanou znakovou stránku. Tuto funkci lze použít k určení znakové stránky explicitně pro text napsaný funkcemi ANSI markerAPI. Nastavení znakové stránky může být užitečné v případě, že trasování je zachycena a poté analyzována na různých počítačích s různými národními prostředími / jazyky. Ve výchozím nastavení se používá znaková stránka vrácená funkcí GetACP().
+# <a name="cvcreatemarkerserieswithcodepagea-function"></a>Cvcreatemarkerserieswithcodepagea – – funkce
+Vytvoří řady značek pro daného zprostředkovatele a zadanou znakovou stránku. Tato funkce se dá použít k určení znakové stránky explicitně pro text zapsaný pomocí funkcí rozhraní API značek ANSI. Nastavení znakové stránky může být užitečné v případě, že je trasování zachyceno a následně analyzováno na různých počítačích s různými místními prostředími nebo jazyky. Ve výchozím nastavení se používá znaková stránka vrácená funkcí GetACP ().
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,19 +34,19 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pProvider`Objekt zprostředkovatele dříve inicializován cvInitProvider. Nemůže být null.
+ `pProvider`Objekt poskytovatele byl dříve inicializován nástrojem CvInitProvider –. Nemůže mít hodnotu NULL.
 
- `pSeriesName`Název řady značek. Nemůže být NULL, ale prázdný řetězec je povolen.
+ `pSeriesName`Název řady značek Nemůže mít hodnotu NULL, ale je povolen prázdný řetězec.
 
  `nTextCodePage`Platná znaková stránka.
 
- `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže být null.
+ `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je řada značek úspěšně vytvořena, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK při úspěšném vytvoření řady značek nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)
