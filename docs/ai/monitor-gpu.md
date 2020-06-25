@@ -5,25 +5,25 @@ ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cc9491edb2e38ef96aa8ad6d554a53d43e5957f
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 694c4e12c719431b36e2fda1e58998651be39086
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638715"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371466"
 ---
 # <a name="monitoring-gpu-utilization"></a>Monitorování využití GPU
 
-Sledování využití GPU vzdálených počítačů s Linuxem:
+Monitorování využití GPU na vzdálených počítačích se systémem Linux:
 
-1. V **Průzkumníkovi serveru**rozbalte **položku Vzdálené počítače**.
-2. **Klikněte pravým tlačítkem myši na** vzdálený počítač, který chcete monitorovat.
+1. V **Průzkumník serveru**rozbalte **vzdálené počítače**.
+2. Klikněte **pravým tlačítkem na** vzdálený počítač, který chcete monitorovat.
 
-    ![gpu heatmap](media/monitor-gpu/gpu-heatmap-0.png)
+    ![heatmapu GPU](media/monitor-gpu/gpu-heatmap-0.png)
 
-3. Klepněte na tlačítko **Zobrazit tepelnou mapu**.
+3. Klikněte na **Zobrazit Heat mapu**.
 
-    ![gpu heatmap](media/monitor-gpu/heatmap.png)
+    ![heatmapu GPU](media/monitor-gpu/heatmap.png)

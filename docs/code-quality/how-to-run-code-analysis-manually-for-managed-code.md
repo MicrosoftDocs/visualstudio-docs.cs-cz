@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Ruční spuštění analýzy kódu pro spravovaný kód'
+title: Ruční spuštění analýzy kódu pro spravovaný kód
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
 - run code analysis
@@ -11,23 +11,23 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5fdeb56a0c0f4c5904a00ec53d64dae87aa4e9a5
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 584ddc9953b6f1522d12722fdd9a24d71e4e1538
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431381"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371830"
 ---
-# <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Postup: Ruční spuštění analýzy kódu pro spravovaný kód (vyžaduje Visual Studio 2019 verze 16.5 nebo novější)
-Ve výchozím nastavení analyzátory kódu .NET Compiler Platform ("Roslyn") analyzátory kódu analyzovat váš kód Jazyka C# nebo Visual Basic při psaní provádí živé analýzy, stejně jako během sestavení. Proto byste za normálních okolností nevyžadovali ruční aktivaci analýzy kódu. Existují však některé scénáře, kde můžete chtít ručně spustit analýzu kódu:
+# <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Postupy: ruční spuštění analýzy kódu pro spravovaný kód (vyžaduje Visual Studio 2019 verze 16,5 nebo novější)
+Ve výchozím nastavení .NET Compiler Platform ("Roslyn") analyzátory kódu analyzují kód C# nebo Visual Basic při psaní, a to pomocí živé analýzy a také během sestavování. Proto byste normálně nemuseli aktivovat analýzu kódu ručně. Existují však situace, kdy lze chtít ručně aktivovat analýzu kódu:
 
-- Ve výchozím nastavení spustí analýza živého kódu analyzátory pouze pro otevřené soubory v sadě Visual Studio. Může však být zájem o zobrazení upozornění analýzy kódu pro všechny soubory v konkrétním projektu nebo řešení. Pokud ano, měli byste spustit analýzu kódu jednou na projektu nebo řešení. Alternativně můžete povolit nepřetržitou analýzu živého kódu pro spuštění celého řešení. Další informace naleznete v [tématu Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md).
-- Můžete dát přednost pracovnímu postupu provádění analýzy kódu na vyžádání před průběžnou analýzou živého provozu nebo analýzou v době sestavení. Pokud ano, můžete zakázat spuštění analyzátoru během živé analýzy nebo sestavení. Informace o zakázání analýzy naleznete v tématu [Jak zakázat analýzu zdrojového kódu](disable-code-analysis.md). Pak byste chtěli ručně aktivovat analýzu kódu jednou na projektu nebo řešení. 
+- Ve výchozím nastavení provádí dynamická analýza kódu analyzátory pouze pro otevřené soubory v aplikaci Visual Studio. Můžete ale zajímat zobrazení upozornění analýzy kódu pro všechny soubory v konkrétním projektu nebo řešení. Pokud ano, chcete aktivovat analýzu kódu jednou na projektu nebo řešení. Alternativně můžete povolit průběžnou živou analýzu kódu pro spuštění v celém řešení. Další informace naleznete v tématu [How to: Configure Live Code Analysis Scope for Managed Code](./configure-live-code-analysis-scope-managed-code.md).
+- Můžete preferovat pracovní postup provádění analýzy kódu na vyžádání přes průběžnou analýzu za provozu nebo analýzu doby sestavení. V takovém případě můžete vypnout spuštění analyzátoru během analýzy za provozu nebo sestavení. Informace o zakázání analýzy najdete v tématu [Jak zakázat analýzu zdrojového kódu](disable-code-analysis.md). Pak byste chtěli ručně aktivovat analýzu kódu na projektu nebo řešení. 
 
 ### <a name="run-code-analysis-manually"></a>Ruční spuštění analýzy kódu
 
-1. V **Průzkumníku řešení**klikněte na projekt.
+1. V **Průzkumník řešení**klikněte na projekt.
 
-2. V nabídce **Analyzovat** klepněte na **položku Spustit analýzu kódu v nabídce** *Název projektu*.
+2. V nabídce **analyzovat** klikněte na možnost **Spustit analýzu kódu na** *název projektu*.
 
-Analýza kódu se spustí na pozadí. Měli byste vidět zprávu **Spuštění \<analýzy kódu pro> projektu...** ve stavovém řádku sady Visual Studio směrem k levému dolnímu rohu. Po dokončení analýzy kódu se stavová zpráva změní na **Analýzu kódu \<dokončenou pro>projektu **. Seznam chyb se brzy obnoví se všemi diagnostikami analýzy kódu.
+Analýza kódu začne spouštět na pozadí. V levém dolním rohu by se měla zobrazit zpráva **spuštění analýzy kódu pro \<project> ...** ve stavovém řádku sady Visual Studio. Po dokončení analýzy kódu se stavová zpráva změní na **analýzu kódu dokončenou pro \<project> **. Seznam chyb bude brzy aktualizován všemi diagnostikami analýzy kódu.

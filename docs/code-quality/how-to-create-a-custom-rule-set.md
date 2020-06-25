@@ -1,7 +1,7 @@
 ---
 title: Vytvoření vlastní sady pravidel pro analýzu kódu
 ms.date: 11/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f23b2badb40effd4222e21ab9e67b2907513c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81462db07941c73b847c009ef8353b00d28fff4f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587547"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371908"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -24,7 +24,7 @@ Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb pr
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Vytvoření vlastní sady pravidel z existující sady pravidel
 
-Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno&mdash;například zobrazit upozornění nebo chybu.
+Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash; , můžete například zobrazit upozornění nebo chybu.
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
@@ -44,9 +44,9 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \- nebo –
+     \-ani
 
-   - Vyberte **\<procházet >** a určete existující sadu pravidel, která není v seznamu.
+   - Tuto možnost vyberte **\<Browse>** , pokud chcete zadat existující sadu pravidel, která není v seznamu.
 
 4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
@@ -57,7 +57,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
 V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **soubor** > **Nový** > **soubor**nebo stiskněte klávesovou **zkratku CTRL**+**N**.
+1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo stiskněte klávesu **CTRL** + **N**.
 
 2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
@@ -76,13 +76,13 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ::: moniker range="vs-2017"
 
-3. Vyberte **\<vybrat více sad pravidel >** z **Spustit tuto sadu pravidel**.
+3. Vyberte **\<Choose multiple rule sets>** možnost **Spustit tuto sadu pravidel**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Vyberte **\<zvolte více sad pravidel >** z **aktivních pravidel**.
+3. Vyberte **\<Choose multiple rule sets>** z **aktivních pravidel**.
 
 ::: moniker-end
 
@@ -98,7 +98,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="rule-precedence"></a>Priorita pravidla
 
-- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Příklad:
+- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Například:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -111,9 +111,9 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 - Pokud je stejné pravidlo uvedeno v sadě *pravidel se stejnou závažností* dvakrát nebo vícekrát, může se v **Seznam chyb**zobrazit následující upozornění:
 
-   **CA0063: nepovedlo se načíst soubor sady pravidel '\[Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
+   **CA0063: nepovedlo se načíst soubor sady pravidel ' \[ Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 
-- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
+- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Například:
 
    ```xml
    <!-- Parent rule set -->
@@ -136,7 +136,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="name-and-description"></a>Název a popis
 
-Chcete-li změnit zobrazovaný název sady pravidel otevřené v editoru, otevřete okno **vlastnosti** výběrem možnosti **Zobrazit** > **okno Vlastnosti** v řádku nabídek. Do pole **název** zadejte zobrazovaný název. Můžete také zadat popis sady pravidel.
+Chcete-li změnit zobrazovaný název sady pravidel otevřené v editoru, otevřete okno **vlastnosti** výběrem možnosti **Zobrazit**  >  **okno vlastností** na řádku nabídek. Do pole **název** zadejte zobrazovaný název. Můžete také zadat popis sady pravidel.
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -145,7 +145,7 @@ Teď, když máte nastavené pravidlo, je dalším krokem přizpůsobení pravid
 > [!div class="nextstepaction"]
 > [Úprava pravidel v editoru sad pravidel](../code-quality/working-in-the-code-analysis-rule-set-editor.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Konfigurace Analýzy kódu pro spravovaný projekt kódu](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [Referenční dokumentace sady pravidel nástroje Analýza kódu](../code-quality/rule-set-reference.md)

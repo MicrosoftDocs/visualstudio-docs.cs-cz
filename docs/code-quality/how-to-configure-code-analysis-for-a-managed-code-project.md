@@ -1,7 +1,7 @@
 ---
 title: Konfigurace analýzy kódu
 ms.date: 04/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
 - vs.codeanalysis.propertypages.solution
@@ -13,46 +13,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98db7cda02495d207d6e9387341173ea2efe22ca
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: a8c922f0fc952cede53b9961e2e772e71a19cbb9
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431349"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371947"
 ---
-# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postup: Konfigurace analýzy staršíverze pro spravovaný kód
+# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
-V sadě Visual Studio můžete vybrat ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se použijí pro projekt spravovaného kódu. Ve výchozím nastavení je vybrána sada pravidel **Minimální doporučená pravidla společnosti Microsoft,** ale v případě potřeby můžete použít jinou sadu pravidel. Sady pravidel lze použít na jeden nebo více projektů v řešení.
+V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se mají použít pro projekt spravovaného kódu. Ve výchozím nastavení je vybraná sada pravidel **Minimální doporučená pravidla společnosti Microsoft** , ale v případě potřeby můžete použít jinou sadu pravidel. Sady pravidel lze použít pro jeden nebo více projektů v řešení.
 
 > [!NOTE]
-> Tento článek se vztahuje na starší analýzy a nikoli na [analyzátory kódu založené na platformě .NET Compiler Platform](use-roslyn-analyzers.md).
+> Tento článek se týká starší verze analýzy a [ne.NET Compiler Platform analyzátorů kódu na základě](use-roslyn-analyzers.md).
 
-## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro projekt rozhraní .NET Framework
+## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro .NET Framework projekt
 
-1. Otevřete kartu **Analýza kódu** na stránkách vlastností projektu. To lze provést jedním z následujících způsobů:
+1. Otevřete kartu **Analýza kódu** na stránkách vlastností projektu. Můžete to udělat jedním z těchto způsobů:
 
-   - V **Průzkumníku řešení**vyberte projekt. Na řádku nabídek vyberte **Analyzovat** > **konfigurovat analýzu** > kódu**pro \<název projektu>**.
+   - V **Průzkumník řešení**vyberte projekt. Na panelu nabídek vyberte **analyzovat**  >  **Konfigurovat analýzu kódu**  >  **pro \<projectname> **.
 
-   - Klikněte pravým tlačítkem myši na projekt v **Průzkumníku řešení** a vyberte **Vlastnosti**a pak vyberte kartu **Analýza kódu.**
+   - Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
 
-2. V seznamech **Konfigurace** a **Platforma** vyberte konfiguraci sestavení a cílovou platformu.
+2. V seznamech **Konfigurace** a **platforma** vyberte položku konfigurace sestavení a cílová platforma.
 
 ::: moniker range="vs-2017"
 
-3. Chcete-li spustit analýzu kódu při každém sestavení projektu pomocí vybrané konfigurace, vyberte **možnost Povolit analýzu kódu při sestavení**. Analýzu kódu můžete spustit také ručně tak, že na>vyberete **analyzovat** > **analýzu** > spuštění analýzy kódu spuštění**analýzy \<kódu **.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Analýzu kódu můžete spustit také ručně tak, že vyberete možnost **analyzovat**  >  **Spustit analýzu kódu**  >  **Spustit analýzu \<projectname> kódu na **.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li spustit analýzu kódu při každém sestavení projektu pomocí vybrané konfigurace, vyberte **spustit při sestavení** v části Binární **analyzátory.** Analýzu staršíverze kódu můžete spustit také ručně, najdete v [tématu How to: Run Legacy Code Analysis Manually for Managed Code](how-to-run-legacy-code-analysis-manually-for-managed-code.md) for more details.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** . Můžete také spustit starší analýzu kódu ručně. Další informace naleznete v tématu [How to: Run Legacy Code Analysis for Managed Code](how-to-run-legacy-code-analysis-manually-for-managed-code.md) .
 
 ::: moniker-end
 
-4. Chcete-li zobrazit upozornění z generovaného kódu, zrušte zaškrtnutí políčka **Potlačit výsledky z generovaného kódu.**
+4. Chcete-li zobrazit upozornění z vygenerovaného kódu, zrušte zaškrtnutí políčka **Potlačit výsledky z vygenerovaného kódu** .
 
     > [!NOTE]
-    > Tato možnost nepotlačí chyby analýzy kódu a upozornění z generovaného kódu, když se chyby a upozornění zobrazí ve formulářích a šablonách. Můžete zobrazit a udržovat zdrojový kód formuláře nebo šablony a nebude přepsán.
+    > Tato možnost potlačí chyby a upozornění analýzy kódu z generovaného kódu, pokud se chyby a upozornění zobrazují ve formulářích a šablonách. Zdrojový kód formuláře nebo šablony lze zobrazit a udržovat a nebude přepsán.
 
 ::: moniker range="vs-2017"
 
@@ -62,35 +62,35 @@ V sadě Visual Studio můžete vybrat ze seznamu [sad pravidel](../code-quality/
 
 ::: moniker range=">=vs-2019"
 
-5. V seznamu **Aktivní pravidla** proveďte jeden z následujících akcí:
+5. V seznamu **aktivní pravidla** proveďte jednu z následujících akcí:
 
 ::: moniker-end
 
    - Vyberte sadu pravidel, kterou chcete použít.
 
-   - Vyberte ** \<Procházet>** a vyhledejte existující vlastní sadu pravidel, která není v seznamu.
+   - Tuto možnost vyberte **\<Browse>** , pokud chcete najít existující sadu vlastních pravidel, která není v seznamu.
 
    - Definujte [vlastní sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
 
 ## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>Určení sad pravidel pro více projektů v řešení
 
-Ve výchozím nastavení jsou všem spravovaným projektům řešení přiřazena sada pravidel analýzy kódu *minimálních doporučených pravidel společnosti Microsoft.* Sady pravidel, které jsou přiřazeny k projektům řešení, můžete změnit v dialogovém okně **Vlastnosti** řešení.
+Ve výchozím nastavení se všechny spravované projekty řešení přiřazují do sady pravidel *Microsoft minima pravidla* analýzy kódu. Můžete změnit sady pravidel, které jsou přiřazeny k projektům řešení v dialogovém okně **vlastnosti** pro dané řešení.
 
 1. Otevřete řešení v sadě Visual Studio.
 
-2. V nabídce **Analyzovat** vyberte **konfigurovat analýzu kódu pro řešení**.
+2. V nabídce **analyzovat** vyberte možnost **Konfigurovat analýzu kódu pro řešení**.
 
-3. V případě potřeby rozbalte **položku Společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
+3. V případě potřeby rozbalte **společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
 
-4. Můžete určit sadu pravidel pro jeden nebo více projektů:
+4. Pro jeden nebo více projektů můžete zadat sadu pravidel:
 
-    - Chcete-li určit sadu pravidel pro jednotlivé projekty, vyberte název projektu.
+    - Chcete-li zadat sadu pravidel pro jednotlivé projekty, vyberte název projektu.
 
-    - Chcete-li určit sadu pravidel pro více projektů, podržte **stisknutou klávesu Ctrl** a vyberte názvy projektů.
+    - Chcete-li zadat sadu pravidel pro více projektů, podržte stisknutou **klávesu CTRL** a vyberte názvy projektů.
 
-    - Chcete-li zadat všechny projekty v řešení, podržte **stisknutou klávesu Shift** a klepněte na seznam projektů.
+    - Chcete-li zadat všechny projekty v řešení, podržte klávesu **SHIFT** a klikněte v seznamu projektu.
 
-5. Vyberte pole **Sada pravidel** projektu a pak vyberte název sady pravidel, kterou chcete použít.
+5. Vyberte pole **sada pravidel** projektu a potom vyberte název sady pravidel, kterou chcete použít.
 
 ## <a name="see-also"></a>Viz také
 

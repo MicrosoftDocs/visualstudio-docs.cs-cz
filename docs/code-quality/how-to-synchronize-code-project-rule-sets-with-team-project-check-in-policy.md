@@ -1,7 +1,7 @@
 ---
 title: Synchronizace sad pravidel projektu se zásadou vrácení se změnami
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a765bcdd6eefbb5c256603bb73c0684c8782f803
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587404"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371778"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Postupy: synchronizace sady pravidel projektu kódu se zásadou vrácení se změnami projektu Azure DevOps
 
@@ -31,7 +31,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Určení standardní sady pravidel společnosti Microsoft
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 2. Klikněte na **Analýza kódu**.
 
@@ -51,19 +51,19 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 1. V případě potřeby proveďte operaci získat v souboru sady pravidel, který určuje zásadu vrácení se změnami.
 
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt kódu a potom klikněte na tlačítko **vlastnosti**.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt kódu a pak klikněte na **vlastnosti**.
 
 3. Klikněte na **Analýza kódu**.
 
 ::: moniker range="vs-2017"
 
-4. V seznamu **Spustit tuto sadu pravidel** klikněte **\<Procházet >** .
+4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse>** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. V seznamu **aktivní pravidla** klikněte **\<Procházet >** .
+4. V seznamu **aktivní pravidla** klikněte na **\<Browse>** .
 
 ::: moniker-end
 

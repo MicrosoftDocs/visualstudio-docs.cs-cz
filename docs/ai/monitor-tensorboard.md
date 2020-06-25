@@ -1,28 +1,28 @@
 ---
-title: Monitor s TensorBoardem
+title: Monitorování pomocí TensorBoard
 author: jillre
 ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f1244b7cabf0cf89ad544b5138165a4a336a31
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 54b5594eea9b30ca755bd46c00cc2b6e1e0e19fc
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638739"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371596"
 ---
-# <a name="monitor-with-tensorboard"></a>Monitor s TensorBoardem
+# <a name="monitor-with-tensorboard"></a>Monitorování pomocí TensorBoard
 
-Můžete vizualizovat průběh tréninku modelu pomocí TensorBoard.
+Průběh školení modelu můžete vizualizovat pomocí TensorBoard.
 
-1. Klikněte pravým tlačítkem myši na projekt a klikněte na **Spustit tensorboard**; pak vyberte adresář výstupních protokolů TensorBoard.
+1. Klikněte pravým tlačítkem na projekt a pak klikněte na **Spustit TensorBoard**; pak vyberte adresář výstupních protokolů TensorBoard.
 
-    ![spustit tendenstož](media/monitor-tensorboard/run-tensorboard.png)
+    ![spustit tensorboard](media/monitor-tensorboard/run-tensorboard.png)
 
-2. Všimněte si, že chyba se v průběhu času snižuje, což znamená, že kvalita se zlepšuje.
+2. Všimněte si, že se chyba zkracuje v čase, což znamená, že kvalita se zlepšuje.
 
-    ![spustit tendenstož](media/monitor-tensorboard/tensorboard.png)
+    ![spustit tensorboard](media/monitor-tensorboard/tensorboard.png)

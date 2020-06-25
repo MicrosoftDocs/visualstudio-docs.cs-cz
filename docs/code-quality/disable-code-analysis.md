@@ -1,57 +1,57 @@
 ---
 title: Vypnout analýzu kódu
 ms.date: 10/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8db6ad7bed4b1526d87112f33d3586728728d7f5
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 163b925423ba5afc62b84866e839c5d86a6444e0
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431394"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371934"
 ---
-# <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Jak zakázat analýzu zdrojového kódu pro spravovaný kód
+# <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Zakázání analýzy zdrojového kódu pro spravovaný kód
 
 ::: moniker range=">=vs-2019"
 
-Tato stránka vám pomůže zakázat analýzu kódu v sadě Visual Studio. Existují omezení, co můžete zakázat, a postup pro vypnutí analýzy kódu se liší v závislosti na několika faktorech:
+Tato stránka vám pomůže zakázat analýzu kódu v aplikaci Visual Studio. Existují určitá omezení, která je možné zakázat, a postup pro vypnutí analýzy kódu se liší v závislosti na několika faktorech:
 
-- Typ projektu (.NET Core/Standard versus .NET Framework)
+- Typ projektu (.NET Core/Standard oproti .NET Framework)
 
-  .NET Core a .NET Standardní projekty mají možnosti na stránce vlastností analýzy kódu, které umožňují vypnout analýzu kódu z analyzátorů nainstalovaných jako balíček NuGet. Další informace naleznete v tématu [.NET Core a .NET Standard projekty](#net-core-and-net-standard-projects). Chcete-li vypnout analýzu zdrojového kódu pro projekty rozhraní .NET Framework, přečtěte si informace [o projektech rozhraní .NET Framework](#net-framework-projects).
+  Projekty .NET Core a .NET Standard mají možnosti na stránce vlastností analýzy kódu, která umožňuje vypnout analýzu kódu z analyzátorů nainstalovaných jako balíček NuGet. Další informace naleznete v tématu [projekty .NET Core a .NET Standard](#net-core-and-net-standard-projects). Chcete-li vypnout analýzu zdrojového kódu pro projekty .NET Framework, přečtěte si téma [.NET Framework projekty](#net-framework-projects).
 
-- Analýza zdroje versus starší analýza
+- Analýza zdrojového kódu oproti starší analýze
 
-  Toto téma se týká analýzy zdrojového kódu a nikoli starší (binární) analýzy. Informace o zakázání starší analýzy naleznete v tématu [How to: Enable and disable legacy code analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
+  Toto téma se vztahuje na analýzu zdrojového kódu a nikoli na starší (binární) analýzu. Informace o zakázání starší verze analýzy naleznete v tématu [How to: Enable and Disable Legacy Code Analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
 ## <a name="net-core-and-net-standard-projects"></a>Projekty .NET Core a .NET Standard
 
-Počínaje Visual Studio 2019 verze 16.3, existují dvě zaškrtávací políčka k dispozici na stránce vlastností analýzy kódu, které umožňují řídit, zda analyzátory spustit v době sestavení a čas návrhu. Tyto možnosti jsou specifické pro projekt.
+Počínaje verzí Visual Studio 2019 verze 16,3 jsou k dispozici dvě zaškrtávací políčka na stránce vlastností analýzy kódu, která umožňuje určit, zda jsou analyzátory spouštěny v době sestavení a v době návrhu. Tyto možnosti jsou specifické pro projekt.
 
-![Povolení nebo zakázání analýzy živého kódu nebo při sestavení v sadě Visual Studio](media/run-on-build-run-live-analysis.png)
+![Povolení nebo zakázání živé analýzy kódu nebo sestavení v aplikaci Visual Studio](media/run-on-build-run-live-analysis.png)
 
-Chcete-li otevřít tuto stránku, klepněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a vyberte **příkaz Vlastnosti**. Vyberte kartu **Analýza kódu.**
+Chcete-li otevřít tuto stránku, klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **vlastnosti**. Vyberte kartu **Analýza kódu** .
 
-- Chcete-li zakázat zdrojovou analýzu v době sestavení, zaškrtněte políčko **Spustit na sestavení** možnost.
-- Chcete-li zakázat analýzu živého zdroje, zaškrtněte políčko **Spustit analýzu živého** provozu.
+- Chcete-li zakázat analýzu zdrojů v čase sestavení, zrušte možnost **Spustit při sestavení** .
+- Chcete-li zakázat živou analýzu zdroje, zrušte volbu možnosti **Spustit při analýze za provozu** .
 
 > [!NOTE]
-> Počínaje Visual Studio 2019 verze 16.5, pokud dáváte přednost pracovní postup spuštění analýzy kódu na vyžádání, můžete zakázat spuštění analyzátoru během živé analýzy a/nebo sestavení a ručně spustit analýzu kódu jednou na projektu nebo řešení na vyžádání. Informace o ručním spuštění analýzy kódu naleznete v [tématu How to: Run Code Analysis Manually for Managed Code](how-to-run-code-analysis-manually-for-managed-code.md).  
+> V rámci sady Visual Studio 2019 verze 16,5, pokud upřednostňujete pracovní postup provádění analýzy kódu na vyžádání, můžete vypnout provádění analyzátoru během živé analýzy nebo sestavit a ručně aktivovat analýzu kódu na základě projektu nebo řešení na vyžádání. Informace o ručním spuštění analýzy kódu naleznete v tématu [How to: Run Code Analysis for Managed Code Manual](how-to-run-code-analysis-manually-for-managed-code.md).  
 
-## <a name="net-framework-projects"></a>Projekty rozhraní .NET Framework
+## <a name="net-framework-projects"></a>.NET Framework projekty
 
-Chcete-li vypnout analýzu zdrojového kódu pro analyzátory, přidejte do [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file)jednu nebo více následujících vlastností MSBuild .
+Chcete-li vypnout analýzu zdrojového kódu pro analyzátory, přidejte do [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file)jednu nebo více následujících vlastností nástroje MSBuild.
 
-| MSBuild, vlastnost | Popis | Výchozí |
+| Vlastnost MSBuild | Description | Výchozí |
 | - | - | - |
-| `RunAnalyzersDuringBuild` | Určuje, zda jsou analyzátory spuštěny v době sestavení. | `true` |
-| `RunAnalyzersDuringLiveAnalysis` | Určuje, zda analyzátory analyzují kód živě v době návrhu. | `true` |
-| `RunAnalyzers` | Zakáže analyzátory v době sestavení i návrhu. Tato vlastnost má `RunAnalyzersDuringBuild` přednost `RunAnalyzersDuringLiveAnalysis`před a . | `true` |
+| `RunAnalyzersDuringBuild` | Určuje, zda jsou analyzátory spouštěny v době sestavení. | `true` |
+| `RunAnalyzersDuringLiveAnalysis` | Určuje, zda analyzátory analyzují kód v době návrhu za provozu. | `true` |
+| `RunAnalyzers` | Zakáže analyzátory při sestavování i při návrhu. Tato vlastnost má přednost před `RunAnalyzersDuringBuild` a `RunAnalyzersDuringLiveAnalysis` . | `true` |
 
 Příklady:
 
@@ -67,17 +67,17 @@ Příklady:
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-[Zdrojovou analýzu](roslyn-analyzers-overview.md) nelze v sadě Visual Studio 2017 vypnout. Pokud chcete vymazat chyby analyzátoru ze seznamu chyb, můžete potlačit všechna aktuální porušení výběrem **možnosti Analyzovat** > **spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace naleznete v tématu [Potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
+Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z seznam chyb, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
 
-Počínaje Visual Studio 2019 verze 16.3, můžete vypnout analýzu zdrojového kódu nebo spustit na vyžádání. Zvažte upgrade na Visual Studio 2019.
+Počínaje verzí Visual Studio 2019 verze 16,3 můžete vypnout analýzu zdrojového kódu nebo ji spustit na vyžádání. Zvažte upgrade na Visual Studio 2019.
 
 ## <a name="legacy-analysis"></a>Starší verze analýzy
 
-Můžete zakázat starší, analýza sestavení na stránce **vlastností analýzy kódu.** Další informace naleznete v [tématu How to: Enable and disable legacy code analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
+Starší verzi, analýzu času sestavení lze zakázat na stránce vlastností **analýzy kódu** . Další informace najdete v tématu [Postup: povolení a zákaz analýzy starších kódů](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
 - [Potlačit porušení](use-roslyn-analyzers.md#suppress-violations)
-- [Postup: Povolení a zakázání analýzy starších kódů](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [Postupy: povolení a zákaz analýzy starších kódů](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

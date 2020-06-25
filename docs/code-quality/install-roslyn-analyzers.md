@@ -1,7 +1,7 @@
 ---
 title: Instalace analyzátorů Roslyn
 ms.date: 08/03/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a833cb46811bd97467fdb048272c9feb2bb7873
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ce30dd25c43f1ac8254dbdb6b04b747a976f3557
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587378"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371752"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>Nainstalovat .NET Compiler Platform analyzátory kódu
 
@@ -33,13 +33,13 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
    > [!NOTE]
    > Stránka www.nuget.org pro každý balíček analyzátoru zobrazuje příkaz pro vložení do **konzoly Správce balíčků**. Je k dispozici i praktické tlačítko ke zkopírování textu do schránky.
 
-   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **odkazy** > **analyzátory**.
+   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **References**  >  **analyzátory**odkazů.
 
 ## <a name="to-install-vsix-analyzers"></a>Instalace analyzátorů VSIX
 
 ::: moniker range="vs-2017"
 
-1. V aplikaci Visual Studio vyberte **nástroje** > **rozšíření a aktualizace**.
+1. V aplikaci Visual Studio vyberte **Tools** > **rozšíření nástrojů a aktualizace**.
 
    Otevře se dialogové okno **rozšíření a aktualizace** .
 
@@ -81,13 +81,13 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 ::: moniker range="vs-2017"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **nástroje** > **rozšíření a aktualizace**. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **Tools**možnost  >  **rozšíření a aktualizace**nástroje. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření** > **Spravovat rozšíření**. V dialogovém okně **Spravovat rozšíření** vyberte v levé části kategorii **nainstalováno** a pak vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření**  >  **Spravovat rozšíření**. V dialogovém okně **Spravovat rozšíření** vyberte v levé části kategorii **nainstalováno** a pak vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření
 > [!div class="nextstepaction"]
 > [Použití analyzátorů kódu v aplikaci Visual Studio](../code-quality/use-roslyn-analyzers.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
-- [Nainstalovat analyzátory FxCop](../code-quality/install-fxcop-analyzers.md)
+- [Instalace analyzátorů FxCop](../code-quality/install-fxcop-analyzers.md)

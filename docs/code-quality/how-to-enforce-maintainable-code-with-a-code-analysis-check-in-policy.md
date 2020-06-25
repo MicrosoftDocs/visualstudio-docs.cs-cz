@@ -1,7 +1,7 @@
 ---
 title: Použít zásadu vrácení se změnami analýzy kódu
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de2322b42be2591fa0f6cdcfc49572322dcd140
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 883b5e231036c446c1cbf1fbc2fc125a01b3de62
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587482"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371856"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Postupy: vykonání udržovatelného kódu se zásadou vrácení se změnami analýzy kódu
 
@@ -55,9 +55,9 @@ Správci správy verzí pro Team Foundation můžou do požadavků zásad vracen
 
      Pokud navíc chcete, aby porušení pravidla zabránilo úspěšnému sestavení, zaškrtněte políčko **považovat upozornění jako chybu** vedle popisu pravidla.
 
-3. Klikněte na tlačítko **OK**. Nové zásady vracení se změnami se teď vztahují na budoucí vrácení se změnami.
+3. Klikněte na **OK**. Nové zásady vracení se změnami se teď vztahují na budoucí vrácení se změnami.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Hodnoty metrik kódu](../code-quality/code-metrics-values.md)
 - [Vytváření a používání zásad vrácení se změnami analýzy kódu](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
