@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173871"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292090"
 ---
 Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační funkce, které umožňují vytvořit soubor nastavení publikování z uživatelského rozhraní.
 
-1. Pokud již máte v systému Windows Server nainstalované nasazení webu 3,6, odinstalujte ji pomocí **ovládacího panelu**  >  **programy**  >  **Odinstalovat program**.
+1. Pokud jste už nasazení webu v systému Windows Server nainstalovali, odinstalujte ji pomocí **ovládacího panelu**  >  **programy**  >  **Odinstalovat program**.
 
 2. Dále nainstalujte Nasazení webu 3,6 pro hostitelské servery na Windows serveru.
 
@@ -24,6 +24,12 @@ Nasazení webu 3,6 pro hostitelské servery poskytuje další konfigurační fun
 
     Aby bylo možné povolit generování souboru nastavení publikování, jsou skripty a nástroje nutné.
 
-4. Volitelné Ověřte, zda je Nasazení webu spuštěn správně. Otevřete **ovládací Panel > systém a zabezpečení > nástroje pro správu > služby** a ujistěte se, že je spuštěna **Webová Deployment Agent služba** (název služby se liší ve starších verzích).
+4. Volitelné Ověřte, zda Nasazení webu pracuje správně. Otevřete **ovládací Panel > systém a zabezpečení > nástroje pro správu > služby**a pak se ujistěte, že:
 
-    Pokud služba agenta není spuštěná, spusťte ji. Pokud není vůbec k dispozici, přečtěte si v **Ovládacích panelech > programy > odinstalace programu**, vyhledejte **Microsoft \<version> nasazení webu **. Vyberte **změnu** instalace a ujistěte se, že jste zvolili instalaci **na místní pevný disk** pro součásti nasazení webu. Dokončete postup změny instalace.
+    * **Služba webové Deployment Agent** je spuštěna (název služby se liší ve starších verzích).
+
+    * **Služba webové správy** je spuštěná.
+
+    Pokud není spuštěna jedna ze služeb agenta, restartujte **službu Web Deployment Agent**.
+
+    Pokud služba Web Deployment Agent vůbec není přítomna, přečtěte si v části **Ovládací panely > programy > odinstalace programu**, najděte **nasazení webu \<version> Microsoft **. Vyberte **změnu** instalace a ujistěte se, že jste zvolili instalaci **na místní pevný disk** pro součásti nasazení webu. Dokončete postup změny instalace.

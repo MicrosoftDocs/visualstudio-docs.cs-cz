@@ -1,8 +1,8 @@
 ---
-title: Připojení profileru k ASP.NET webové aplikaci za účelem získání statistik aplikací
+title: Připojení profileru k webové aplikaci ASP.NET, aby se získala Statistika aplikace
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3725ddbe-ce91-4469-991e-8c5ed048c618
 author: mikejo5000
 ms.author: mikejo
@@ -10,28 +10,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 549e43f403b19d8832e00277f826cdc7b276b747
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2944a6b84a7262c44b92584a41b25e8c7a751e17
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779074"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329408"
 ---
-# <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>Postup: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikací pomocí příkazového řádku
-Tento článek popisuje, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] jak pomocí nástrojů příkazového řádku nástroje profilování připojit profiler k ASP.NET webové aplikace a shromažďovat statistiky výkonu pomocí metody vzorkování.
+# <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace pomocí příkazového řádku
+Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler k webové aplikaci ASP.NET a shromažďovat statistiku výkonu pomocí metody vzorkování.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systémech Windows 8 a Windows Server 2012 vyžadovaly významné změny ve způsobu, jakým profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace UPW také vyžadují nové techniky kolekce. Viz [Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 >
-> Přidání dat interakce vrstvy do spuštění profilování vyžaduje specifické postupy s nástroji profilování příkazového řádku. Viz [Shromáždit data interakce vrstvy](../profiling/adding-tier-interaction-data-from-the-command-line.md).
+> Přidání dat interakce vrstev do běhu profilování vyžaduje konkrétní procedury s nástroji pro profilaci příkazového řádku. Viz [shromáždění dat interakce vrstev](../profiling/adding-tier-interaction-data-from-the-command-line.md).
 >
-> Chcete-li získat cestu k nástrojům profilování, přečtěte si informace [o určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). V 64bitových počítačích jsou k dispozici 64bitová i 32bitová verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, musíte přidat cestu nástroje do proměnné prostředí PATH v okně příkazového řádku nebo ji přidat do samotného příkazu.
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu.
 
- Chcete-li shromažďovat údaje o výkonu z ASP.NET webové aplikace, musí být inicializovány příslušné proměnné prostředí a počítač, který je hostitelem ASP.NET webové aplikace, musí být restartován, aby byl webový server pro profilování nakonfigurován.
+ Chcete-li shromažďovat údaje o výkonu z webové aplikace ASP.NET, musí být inicializovány příslušné proměnné prostředí a počítač, který je hostitelem webové aplikace ASP.NET, musí být restartován, aby bylo možné konfigurovat webový server pro profilování.
 
- Potom připojte profiler k ASP.NET pracovní proces, který je hostitelem webu. Když je profiler připojen k aplikaci, můžete pozastavit a obnovit shromažďování dat.
+ Pak Připojte profiler k pracovnímu procesu ASP.NET, který je hostitelem vašeho webu. Když je profiler připojen k aplikaci, můžete pozastavit a obnovit sběr dat.
 
- Chcete-li ukončit relaci profilování, profiler musí být odpojen od profilované aplikace a profiler musí být explicitně vypnut. Ve většině případů doporučujeme vymazat proměnné prostředí profilování na konci relace.
+ Chcete-li ukončit relaci profilování, musí být profiler odpojen od profilované aplikace a musí být explicitně vypnut. Ve většině případů doporučujeme na konci relace vymazat proměnné prostředí pro profilování.
 
 ## <a name="start-the-profiler-and-attach-to-an-aspnet-web-application"></a>Spuštění profileru a připojení k webové aplikaci ASP.NET
 
@@ -39,91 +39,91 @@ Tento článek popisuje, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md
 
 1. Otevřete okno příkazového řádku.
 
-2. Inicializovat proměnné prostředí profilování. Zadejte:
+2. Inicializujte proměnné prostředí pro profilování. Zadejte:
 
-    **VSPerfClrEnv /globalsampleon** [**/samplelineoff**]
+    **VSPerfCLREnv/globalsampleon** [**/samplelineoff**]
 
    - **/globalsampleon** umožňuje vzorkování.
 
-   - **/samplelineoff** zakáže přiřazení shromážděných dat ke konkrétním řádkům zdrojového kódu. Pokud je tato možnost zadána, data jsou přiřazena pouze funkcím.
+   - **/samplelineoff** zakáže přiřazení shromážděných dat ke konkrétním řádkům zdrojového kódu. Je-li tato možnost zadána, jsou data přiřazena pouze funkcím.
 
 3. Restartujte počítač.
 
-4. Spusťte profiler. Typ:**VSPerfCmd** [/start](../profiling/start.md)**:vzorek** `Options` [/výstup](../profiling/output.md)**:**`OutputFile`[ ]
+4. Spusťte profiler. Typ:**VSPerfCmd** [/Start](../profiling/start.md)**: Sample** [/Output](../profiling/output.md)**:** `OutputFile` [ `Options` ]
 
-   - Možnost **/start:sample** inicializuje profiler.
+   - Možnost **/Start: Sample** inicializuje Profiler.
 
-   - Možnost **/output:** `OutputFile` je vyžadována s **parametrem /start**. `OutputFile`určuje název a umístění souboru profilovacích dat (.vsp).
+   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile`Určuje název a umístění souboru dat profilování (. vsp).
 
-     S možností **/start:sample** můžete použít některou z následujících možností.
+     Pomocí možnosti **/Start: Sample** můžete použít jednu z následujících možností.
 
    > [!NOTE]
-   > Možnosti **/user** a **/crosssession** jsou obvykle vyžadovány pro ASP.NET aplikace.
+   > Možnosti **/User** a **/CrossSession** se obvykle vyžadují pro aplikace ASP.NET.
 
    | Možnost | Popis |
    | - | - |
-   | [/uživatel](../profiling/user-vsperfcmd.md) **:**:`Domain`**\\**[ ]`UserName` | Určuje doménu a uživatelské jméno účtu, který vlastní pracovní proces ASP.NET. Tato možnost je vyžadována, pokud je proces spuštěn jako uživatel jiný než přihlášený uživatel. Vlastník procesu je uveden ve sloupci **Uživatelské jméno** na kartě **Procesy** ve Správci úloh systému Windows. |
-   | [/crosssession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. Tato možnost je vyžadována, pokud je aplikace ASP.NET spuštěna v jiné relaci. Idenitifikátor relace je uveden ve sloupci ID relace na kartě Procesy ve Správci úloh systému Windows. **/CS** lze zadat jako zkratku pro **/crosssession**. |
-   | [/wincounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilování. |
-   | [/automark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/wincounter.** Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
-   | [/události](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro systém Windows (ETW), která má být shromážděna během profilování. Události ETW jsou shromažďovány v samostatném (.etl) souboru. |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Určuje doménu a uživatelské jméno účtu vlastnícího pracovní proces ASP.NET. Tato možnost je vyžadována, pokud je proces spuštěn jako uživatel jiný než přihlášený uživatel. Vlastník procesu je uveden ve sloupci **uživatelské jméno** na kartě **procesy** ve Správci úloh systému Windows. |
+   | [/CrossSession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. Tato možnost je vyžadována, pokud aplikace ASP.NET běží v jiné relaci. Identifikátor relace je uvedena ve sloupci ID relace na kartě procesy ve Správci úloh systému Windows. **/Cs** lze zadat jako zkratku pro **/CrossSession**. |
+   | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
+   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
+   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány v samostatném souboru (. ETL). |
 
-5. Spusťte ASP.NET webovou aplikaci typickým způsobem.
+5. Spusťte webovou aplikaci v ASP.NET obvyklým způsobem.
 
-6. Připojte profiler k pracovnímu procesu ASP.NET. Typ:**VSPerfCmd** [/attach](../profiling/attach.md) `ProcName`**:**`Sample Event`{`PID`&#124;} [ ] [[/targetclr](../profiling/targetclr.md)**:**`Version`]
+6. Připojte profiler k pracovnímu procesu ASP.NET. Typ:**VSPerfCmd** [/Attach](../profiling/attach.md)**:**{ `PID`&#124;`ProcName` } [ `Sample Event` ] [[/targetclr](../profiling/targetclr.md)**:** `Version` ]
 
-   - `PID`určuje ID procesu pracovního procesu ASP.NET; `ProcName` určuje název pracovního procesu. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
+   - `PID`Určuje ID procesu pracovního procesu ASP.NET; `ProcName`Určuje název pracovního procesu. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
-   - Ve výchozím nastavení jsou data o výkonu vzorkována každých 10 000 000 nezastavených cyklů hodin procesoru. To je přibližně 100 krát za sekundu na 1GH procesoru. Můžete zadat jednu z následujících možností **VSPerfCmd** pro změnu intervalu cyklu hodin nebo pro určení jiné události vzorkování.
+   - Ve výchozím nastavení jsou data o výkonu Navzorkovaná každých 10 000 000 hodinových cyklů procesoru. To je přibližně 100 časů za sekundu na frekvencí 1 GHz procesoru. Můžete zadat jednu z následujících možností **VSPerfCmd** pro změnu intervalu hodinových cyklů nebo zadání jiné události vzorkování.
 
    |Ukázková událost|Popis|
    |------------------|-----------------|
-   |[/časovač](../profiling/timer.md) **:**`Interval`|Změní interval vzorkování na počet nezastavených hodinových `Interval`cyklů určených aplikací .|
-   |[/pf](../profiling/pf.md)[**:**`Interval`]|Změní událost vzorkování na chyby stránky. Pokud `Interval` je zadán, nastaví počet chyb stránky mezi ukázkami. Výchozí hodnota je 10.|
-   |[/sys](../profiling/sys-vsperfcmd.md)`:``Interval`[ ]|Změní událost vzorkování na systémová volání z procesu do jádra operačního systému (syscalls). Pokud `Interval` je zadán, nastaví počet volání mezi vzorky. Výchozí hodnota je 10.|
-   |[/counter](../profiling/counter.md) **:**`Config`|Změní událost vzorkování a interval na čítač `Config`výkonu procesoru a interval, které jsou určeny v .|
-   |[/targetclr](../profiling/targetclr.md) **:**`Version`|Určuje verzi běžného jazyka runtime (CLR) pro profil, pokud je v aplikaci načtena více než jedna verze runtime.|
+   |[/Timer](../profiling/timer.md) **:**`Interval`|Změní interval vzorkování na počet nepřerušených hodinových cyklů, které jsou určeny pomocí `Interval` .|
+   |[/PF](../profiling/pf.md)[**:** `Interval` ]|Změní událost vzorkování na chyby stránkování. Pokud `Interval` je zadaný, nastaví počet chyb stránek mezi ukázkami. Výchozí hodnota je 10.|
+   |[/sys](../profiling/sys-vsperfcmd.md)[ `:``Interval` ]|Změní událost vzorkování na systémová volání z procesu do jádra operačního systému (voláním). Pokud `Interval` je zadáno, nastaví počet volání mezi vzorky. Výchozí hodnota je 10.|
+   |[/Counter](../profiling/counter.md) **:**`Config`|Změní událost vzorkování a interval na čítač výkonu procesoru a interval, který je určen v `Config` .|
+   |[/targetclr](../profiling/targetclr.md) **:**`Version`|Určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu runtime.|
 
-   - **targetclr:** `Version` určuje verzi CLR profilu, když je v aplikaci načtena více než jedna verze runtime. Nepovinný parametr.
+   - **targetclr:** `Version` Určuje verzi modulu CLR, která se má profilovat, pokud je v aplikaci načtena více než jedna verze modulu runtime. Nepovinný parametr.
 
 ## <a name="control-data-collection"></a>Řízení shromažďování dat
- Když je aplikace spuštěna, můžete řídit shromažďování dat spuštěním a zastavením zápisu dat do souboru pomocí možností *VSPerfCmd.exe.* Řízení shromažďování dat umožňuje shromažďovat data pro určitou část spuštění programu, jako je například spuštění nebo vypnutí aplikace.
+ Když je aplikace spuštěná, můžete řídit shromažďování dat spuštěním a zastavením zápisu dat do souboru pomocí možností *VSPerfCmd.exe* . Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění nebo ukončování aplikace.
 
 #### <a name="to-start-and-stop-data-collection"></a>Spuštění a zastavení shromažďování dat
 
-- Následující dvojice možností **VSPerfCmd** spustit a zastavit shromažďování dat. Určete každou možnost na samostatném příkazovém řádku. Shromažďování dat můžete zapnout a vypnout vícekrát.
+- Následující páry možností **VSPerfCmd** spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Shromažďování dat můžete zapnout a vypnout několikrát.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/globalon**) nebo zastaví (**/globaloff**) shromažďování dat pro všechny procesy.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` **/processoff:**`PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) shromažďování `PID`dat pro proces, který je určen .|
-    |[/attach](../profiling/attach.md) **:**:`PID` `ProcName`{&#124;} [/detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach** začne shromažďovat data pro proces `PID` určený názvem nebo (ProcName). **/detach** zastaví shromažďování dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/GlobalOn**) nebo zastaví shromažďování dat (**/globaloff**) pro všechny procesy.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` **/ProcessOff:**`PID`|Spustí (**/ProcessOn**) nebo zastaví sběr **/processoff**dat pro proces, který je určen v `PID` .|
+    |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/Attach** spustí shromažďování dat pro proces určený `PID` názvem procesu nebo (ProcName). **/detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
 
 ## <a name="end-the-profiling-session"></a>Ukončení relace profilování
- Chcete-li ukončit relaci [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] profilování, ukončete webovou aplikaci a potom pomocí příkazu **IISReset** internetové informační služby (IIS) ukončete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces. Volání **VSPerfCmd** [/shutdown](../profiling/shutdown.md) možnost vypnout profiler a zavřete profilování datový soubor.
+ Chcete-li ukončit relaci profilování, zavřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webovou aplikaci a poté pomocí příkazu Internetová informační služba (IIS) **iisreset** zavřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces. Zavolejte možnost **VSPerfCmd** [/shutdown](../profiling/shutdown.md) pro vypnutí profileru a zavření souboru dat profilování.
 
- Příkaz **VSPerfClrEnv /globaloff** vymaže proměnné prostředí profilování. Chcete-li použít nové nastavení prostředí, je nutné restartovat počítač.
+ Příkaz **VSPerfCLREnv/globaloff** vymaže proměnné prostředí profilování. Chcete-li použít nové nastavení prostředí, je nutné restartovat počítač.
 
- Příkaz **VSPerfClrEnv /globaloff** vymaže proměnné prostředí profilování, ale konfigurace systému se neobnoví, dokud není počítač restartován.
+ Příkaz **VSPerfCLREnv/globaloff** vymaže proměnné prostředí profilování, ale konfigurace systému se neresetuje, dokud se počítač nerestartuje.
 
 #### <a name="to-end-a-profiling-session"></a>Ukončení relace profilování
 
-1. Jedním z následujících akcí odpojte profiler od cílové aplikace:
+1. Chcete-li odpojit Profiler od cílové aplikace, proveďte jeden z následujících kroků:
 
-   - Typ **VSPerfCmd /detach**
+   - Typ **VSPerfCmd/detach**
 
       -nebo-
 
    - Zavřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní proces.
 
-2. Vypněte profileru. Typ:**VSPerfCmd** [/vypnutí](../profiling/shutdown.md)
+2. Vypněte profiler. Typ:**VSPerfCmd** [/shutdown](../profiling/shutdown.md)
 
-3. (Nepovinné) Vymažte proměnné prostředí profilování. Zadejte:
+3. Volitelné Vymažte proměnné prostředí profilování. Zadejte:
 
-    **VSPerfCmd /globaloff**
+    **VSPerfCmd/globaloff**
 
 4. Restartujte počítač.
 
 ## <a name="see-also"></a>Viz také
-- [Profil ASP.NET webových aplikací](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)

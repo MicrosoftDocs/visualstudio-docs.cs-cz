@@ -1,7 +1,7 @@
 ---
-title: 'DA0011: Drahé CompareTo | Dokumenty společnosti Microsoft'
+title: DA0011 – nákladný objekt CompareTo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0011
 - vs.performance.rules.DAExpensiveCompareTo
@@ -14,25 +14,25 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d0eb4566fd4c8a513b1492cecffc16cb94a1fd83
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e3b21745454a74d0251dad547ab45e845190f06d
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779425"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328173"
 ---
-# <a name="da0011-expensive-compareto"></a>DA0011: Náročná metoda CompareTo
+# <a name="da0011-expensive-compareto"></a>DA0011: Náročná funkce CompareTo
 
 |||
 |-|-|
-|Id pravidla|DA0011 řekl:|
-|Kategorie|Použití rozhraní .NET Framework|
-|Metody profilování|Vzorkování<br /><br /> Paměť .NET|
-|Zpráva|Funkce CompareTo by měly být levné a neměly by přidělit žádnou paměť. Pokud je to možné, snižte složitost funkce CompareTo.|
+|ID pravidla|DA0011|
+|Kategorie|Využití .NET Framework|
+|Metody profilace|Vzorkování<br /><br /> Paměť .NET|
+|Zpráva|Funkce CompareTo by měly být levné a nesmí přidělit žádnou paměť. Pokud je to možné, snižte složitost funkce CompareTo.|
 |Typ pravidla|Upozornění|
 
 ## <a name="cause"></a>Příčina
- CompareTo Metoda typu je nákladné nebo přiděluje paměť.
+ Metoda CompareTo typu je nákladné nebo přiděluje paměť.
 
 ## <a name="rule-description"></a>Popis pravidla
  Metody CompareTo by měly být efektivní a neměly by přidělovat paměť.

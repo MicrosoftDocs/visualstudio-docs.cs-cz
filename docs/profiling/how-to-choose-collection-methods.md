@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Zvolte metody sběru | Dokumenty společnosti Microsoft'
+title: 'Postupy: výběr metod shromažďování | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, choosing collection method
 - profiling tools, choosing collection method
@@ -12,18 +12,18 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c633e12b2e0bf157ffd94ef06a5898fdc3ec830
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4dbc54fc394f75778f74d9b6b02e93882129cdb9
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776342"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329265"
 ---
-# <a name="how-to-choose-collection-methods"></a>Postup: Zvolte metody kolekce
+# <a name="how-to-choose-collection-methods"></a>Postupy: výběr metod shromažďování
 
-Nástroje profilování visual studio podporují tři metody shromažďování dat o výkonu: vzorkování, instrumentace a souběžnost. Vzorkování nebo instrumentace můžete také použít ke shromažďování dat o přidělení paměti .NET a životnosti.
+Visual Studio Nástroje pro profilaci podporuje tři metody shromažďování údajů o výkonu: vzorkování, instrumentace a souběžnost. K shromažďování dat o přidělování a životnosti paměti .NET můžete použít také metodu vzorkování nebo instrumentace.
 
-Můžete použít metodu relace výkonu **k** určení nejvhodnější metody kolekce pro vaši aplikaci. Metodu kolekce můžete nastavit z Průvodce výkonem, Průzkumníka výkonu nebo ze stránek vlastností relace výkonu. Pokud používáte nástroje příkazového řádku, další informace naleznete [v tématu Profilování z příkazového řádku.](../profiling/using-the-profiling-tools-from-the-command-line.md)
+Vlastnost **Metoda** relace výkonu můžete použít k určení nejvhodnější metody shromažďování pro vaši aplikaci. Můžete nastavit metodu shromažďování z Průvodce výkonem, Prohlížeč výkonu nebo na stránkách vlastností relace výkonu. Pokud používáte nástroje příkazového řádku, přečtěte si další informace v tématu [profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md) .
 
 ## <a name="performance-wizard"></a>Průvodce výkonu
 
@@ -33,65 +33,65 @@ Můžete použít metodu relace výkonu **k** určení nejvhodnější metody ko
 
 | Možnost | Popis |
 |----------------------------| - |
-| **Vzorkování procesoru** | Shromažďuje statistiky aplikací, které jsou užitečné pro počáteční analýzu a pro analýzu problémů s využitím procesoru. |
-| **Instrumentation** | Shromažďuje podrobná časovací data, která jsou užitečná pro cílenou analýzu a pro analýzu problémů s výkonem vstupu a výstupu. |
-| **Přidělení paměti .NET** | Shromažďuje data přidělení paměti rozhraní .NET Framework pomocí metody profilování vzorkování. |
-| **Souběžnost** | Shromažďuje číselná data o konfliktech prostředků. |
+| **Vzorkování procesoru** | Shromažďuje statistiky aplikací, které jsou užitečné při počáteční analýze a při analýze problémů s využitím procesoru. |
+| **Instrumentace** | Shromažďuje detailní časová data, která jsou užitečná pro cílené analýzy a pro analýzu problémů s výkonem vstupu a výstupu. |
+| **Alokace paměti .NET** | Shromažďuje .NET Framework data o přidělování paměti pomocí metody profilace vzorkování. |
+| **Souběžnost** | Shromažďuje data o obsahu kolizí číselných prostředků. |
 
 ## <a name="performance-explorer"></a>Prohlížeč výkonu
 
-### <a name="to-select-a-collection-method-using-performance-explorer"></a>Výběr metody kolekce pomocí Průzkumníka výkonu
+### <a name="to-select-a-collection-method-using-performance-explorer"></a>Výběr metody kolekce pomocí Prohlížeč výkonu
 
-1. Na panelu nástrojů **Průzkumník výkonu** klikněte na šipku vedle rozevíracího seznamu **Metoda.**
+1. Na panelu nástrojů **prohlížeč výkonu** klikněte na šipku vedle rozevíracího seznamu **Metoda** .
 
-2. Klikněte na metodu kolekce, kterou dáváte přednost.
+2. Klikněte na metodu shromažďování, kterou dáváte přednost.
 
-## <a name="performance-session-property-pages"></a>Stránky vlastností relace výkonu
+## <a name="performance-session-property-pages"></a>Stránky vlastností výkonnostní relace
 
-### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>Výběr metody vzorkování nebo instrumentace pomocí vlastností relace výkonu
+### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>Výběr metody vzorkování nebo instrumentace pomocí vlastností výkonnostní relace
 
-1. V **Průzkumníku výkonu**vyberte relaci výkonu.
+1. V **prohlížeč výkonu**vyberte relaci výkonu.
 
-     Název souboru relace výkonu má . *prodloužení psess.*
+     Název souboru výkonnostní relace má. rozšíření *psess* .
 
-2. Klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Vlastnosti**.
+2. Klikněte pravým tlačítkem na výkonnostní relaci a pak klikněte na **vlastnosti**.
 
-3. Na **stránkách vlastností**klepněte na **tlačítko Obecné**.
+3. Na **stránkách vlastností**klikněte na **Obecné**.
 
-4. Klikněte na metodu kolekce, kterou dáváte přednost.
+4. Klikněte na metodu shromažďování, kterou dáváte přednost.
 
-    - Informace o dalších možnostech, které jsou k dispozici při shromažďování dat vzorkování, naleznete [v tématu Shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)
+    - Informace o dalších možnostech, které jsou k dispozici při shromažďování dat vzorkování, najdete v tématu [shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md) .
 
-    - Informace o dalších možnostech, které jsou k dispozici při shromažďování dat vzorkování, naleznete [v tématu Shromažďování podrobných časovacích dat pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md).
+    - Informace o dalších možnostech, které jsou k dispozici při shromažďování dat vzorkování, najdete v tématu [shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md).
 
-### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>Výběr kolekce dat paměti .NET pomocí vlastností relace výkonu
+### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>Výběr shromažďování dat paměti .NET pomocí vlastností výkonnostní relace
 
-1. V **Průzkumníku výkonu**vyberte relaci výkonu.
+1. V **prohlížeč výkonu**vyberte relaci výkonu.
 
-     Název souboru relace výkonu má příponu Psess.
+     Název souboru relace výkonu má příponu. psess.
 
-2. Klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Vlastnosti**.
+2. Klikněte pravým tlačítkem na výkonnostní relaci a pak klikněte na **vlastnosti**.
 
-3. Na **stránkách vlastností**klepněte na **tlačítko Obecné**.
+3. Na **stránkách vlastností**klikněte na **Obecné**.
 
-4. Klepněte na **položku Vzorkování** nebo **Instrumentace**.
+4. Klikněte na **vzorkování** nebo **instrumentace**.
 
-5. Chcete-li shromáždit velikost a počet přidělení objektů rozhraní .NET Framework, klepněte na tlačítko Shromáždit informace o přidělení objektu rozhraní **.NET.**
+5. Kliknutím na **shromáždit informace o přidělení objektů .NET Shromážděte informace** o velikosti a počtu přidělení .NET Framework objektů.
 
-6. (Nepovinné) Klepněte na **tlačítko Také shromažďovat informace o životnosti objektu .NET** ke shromažďování dat o generacích uvolňování paměti, ve kterých byla uvolněna paměť objektu.
+6. Volitelné Klikněte **také na shromažďovat informace o životnosti objektů .NET** , abyste mohli shromažďovat data o generacích uvolňování paměti, ve kterých byla paměť objektu uvolněna.
 
-     Informace o dalších možnostech, které jsou k dispozici při shromažďování dat paměti .NET, naleznete v [tématu Shromažďování přidělení paměti .NET a dat životnosti](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md).
+     Informace o dalších možnostech, které jsou k dispozici při shromažďování dat o paměti .NET, najdete v tématu [shromažďování dat o přidělení paměti .NET a době života](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md).
 
-### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Výběr shromažďování dat souběžnosti pomocí vlastností relace výkonu
+### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>Výběr shromažďování dat souběžnosti pomocí vlastností výkonnostní relace
 
-1. V **Průzkumníku výkonu**klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Vlastnosti**.
+1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klepněte na **tlačítko Obecné**.
+2. Na **stránkách vlastností**klikněte na **Obecné**.
 
-3. Klepněte na **položku Souběžnost**.
+3. Klikněte na **souběžnost**.
 
 ## <a name="see-also"></a>Viz také
 
-[Konfigurace relací](../profiling/configuring-performance-sessions.md)
-výkonu[Principy vlastností](../profiling/understanding-sampling-data-values.md)
-dat vzorkování[výkonu](../profiling/performance-session-properties.md)
+[Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md) 
+ [Porozumění hodnotám](../profiling/understanding-sampling-data-values.md) 
+ dat vzorkování [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)

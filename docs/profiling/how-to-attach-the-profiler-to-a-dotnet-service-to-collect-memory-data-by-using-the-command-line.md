@@ -1,8 +1,8 @@
 ---
-title: Připojení profileru ke službě .NET ke shromažďování paměťových dat
+title: Připojení profileru ke službě .NET ke shromažďování dat paměti
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: aeac39af-ad99-479f-aa36-4104356ca512
 author: mikejo5000
 ms.author: mikejo
@@ -10,121 +10,121 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ea4f38ccebc1015419e2254b06033fa17a09a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6552ca62be6de2e99b4e650daaa117e4025746cf
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777015"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328682"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-memory-data-by-using-the-command-line"></a>Postupy: Připojení profileru ke službě .NET ke shromažďování dat paměti pomocí příkazového řádku
-Tento článek popisuje, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] jak pomocí nástrojů příkazového řádku nástroje profilování připojit profiler ke službě rozhraní .NET Framework a shromažďovat data paměti. Můžete shromažďovat data o počtu a velikosti přidělení paměti a můžete také shromažďovat data o životnosti paměťových objektů.
+Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci nástrojů příkazového řádku připojit profiler ke službě .NET Framework a shromažďovat data paměti. Můžete shromažďovat data o počtu a velikosti přidělení paměti a můžete také shromažďovat data o životnosti paměťových objektů.
 
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systémech Windows 8 a Windows Server 2012 vyžadovaly významné změny ve způsobu, jakým profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace UPW také vyžadují nové techniky kolekce. Viz [Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro UWP také vyžadují nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 >
 > [!NOTE]
-> Chcete-li získat cestu k nástrojům profilování, přečtěte si informace [o určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). V 64bitových počítačích jsou k dispozici 64bitová i 32bitová verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, musíte přidat cestu nástroje do proměnné prostředí PATH v okně příkazového řádku nebo ji přidat do samotného příkazu.
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Na 64 počítačích jsou k dispozici i 64 32 a 32bitové verze nástrojů. Chcete-li použít nástroje příkazového řádku profileru, je nutné přidat cestu k nástrojům do proměnné prostředí PATH v okně příkazového řádku nebo je přidat do samotného příkazu.
 
- Chcete-li shromažďovat paměťová data ze služby .NET Framework, použijte nástroj [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) k inicializaci příslušných proměnných prostředí v počítači, který je hostitelem služby. Počítač musí být restartován, aby byl nakonfigurován pro profilování.
+ Chcete-li shromažďovat data o paměti z .NET Framework služby, použijte nástroj [VSPerfCLREnv. cmd](../profiling/vsperfclrenv.md) k inicializaci příslušných proměnných prostředí v počítači, který je hostitelem služby. Počítač je třeba restartovat, aby bylo možné ho nakonfigurovat pro profilaci.
 
- Potom pomocí nástroje [VSPerfCmd](../profiling/vsperfcmd.md) připojit profiler k procesu služby. Zatímco profiler je připojen ke službě, můžete pozastavit a obnovit shromažďování dat.
+ Pak použijete nástroj [VSPerfCmd](../profiling/vsperfcmd.md) k připojení profileru k procesu služby. I když je profiler připojen ke službě, můžete pozastavit a obnovit shromažďování dat.
 
- Chcete-li ukončit relaci profilování, musí být profiler odpojen od služby a poté explicitně ukončen. Ve většině případů doporučujeme vymazat proměnné prostředí profilování na konci relace.
+ Chcete-li ukončit relaci profilování, musí být profiler odpojen od služby a poté explicitně ukončen. Ve většině případů doporučujeme na konci relace vymazat proměnné prostředí pro profilování.
 
-## <a name="attach-the-profiler"></a>Připojte profiler
+## <a name="attach-the-profiler"></a>Připojení profileru
 
-#### <a name="to-attach-the-profiler-to-a-net-framework-service"></a>Připojení profileru ke službě rozhraní .NET Framework
+#### <a name="to-attach-the-profiler-to-a-net-framework-service"></a>Připojení profileru k .NET Framework službě
 
 1. V případě potřeby nainstalujte službu.
 
 2. Otevřete okno příkazového řádku.
 
-3. Inicializovat proměnné prostředí profilování. Zadejte:
+3. Inicializujte proměnné prostředí pro profilování. Zadejte:
 
-    **VSPerfClrEnv** {**/globalsamplegc /globalsamplegclife**}[**/samplelineoff**]
+    **VSPerfCLREnv** {**/globalsamplegc/globalsamplegclife**} [**/samplelineoff**]
 
-   - Možnosti **/globalsamplegclife** a **/globalsamplegclife** určují typ dat paměti, která mají být shromažďována. Zadejte jednu a pouze jednu z následujících možností.
+   - Možnosti **/globalsamplegclife** a **/globalsamplegclife** určují typ dat paměti, která se mají shromáždit. Zadejte jednu z následujících možností a jenom jednu z těchto možností.
 
-     **/globalsamplegc** Umožňuje shromažďování dat přidělení paměti.
+     **/globalsamplegc** Povolí shromažďování dat o přidělování paměti.
 
-     **/globalsamplegclife** Umožňuje shromažďování dat přidělení paměti i dat životnosti objektu.
+     **/globalsamplegclife** Povoluje shromažďování dat přidělování paměti a dat o životnosti objektů.
 
-   - Možnost **/samplelineoff** zakáže shromažďování dat čísla řádku zdrojového kódu.
+   - Možnost **/samplelineoff** zakáže shromažďování dat o číslech řádků zdrojového kódu.
 
-4. Chcete-li nastavit novou konfiguraci prostředí, restartujte počítač.
+4. Pro nastavení nové konfigurace prostředí restartujte počítač.
 
-5. V případě potřeby spusťte službu.
+5. V případě potřeby službu spusťte.
 
 6. Otevřete okno příkazového řádku. V případě potřeby přidejte cestu profileru do proměnné prostředí PATH.
 
 7. Spusťte profiler. Zadejte:
 
-    **VSPerfCmd**  [/start](../profiling/start.md) **:vzorek**  [/výstup](../profiling/output.md) **:** `OutputFile` [`Options`]
+    **VSPerfCmd**  [/Start](../profiling/start.md) **: Sample**  [/Output](../profiling/output.md) **:** `OutputFile` [ `Options` ]
 
-   - Možnost **/start:sample** inicializuje profiler.
+   - Možnost **/Start: Sample** inicializuje Profiler.
 
-   - Možnost **/output:** `OutputFile` je vyžadována s **parametrem /start**. `OutputFile`určuje název a umístění souboru profilovacích dat (.vsp).
+   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile`Určuje název a umístění souboru dat profilování (. vsp).
 
-     S možností **/start:sample** můžete použít jednu nebo více z následujících možností.
+     Pomocí možnosti **/Start: Sample** můžete použít jednu nebo více z následujících možností.
 
    > [!NOTE]
-   > Možnosti **/user** a **/crosssession** jsou obvykle vyžadovány pro služby.
+   > Pro služby jsou obvykle vyžadovány možnosti **/User** a **/CrossSession** .
 
    | Možnost | Popis |
    | - | - |
-   | [/uživatel](../profiling/user-vsperfcmd.md) **:**:`Domain`**\\**[ ]`UserName` | Určuje doménu a uživatelské jméno účtu, který proces vlastní. Tato možnost je vyžadována, pokud je proces spuštěn jako uživatel jiný než přihlášený uživatel. Vlastník procesu je uveden ve sloupci Uživatelské jméno na kartě Procesy ve Správci úloh systému Windows. |
-   | [/crosssession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. Tato možnost je vyžadována, pokud je aplikace ASP.NET spuštěna v jiné relaci. ID relace je uvedeno ve sloupci ID relace na kartě Procesy ve Správci úloh systému Windows. **/CS** lze zadat jako zkratku pro **/crosssession**. |
-   | [/uživatel](../profiling/user-vsperfcmd.md) **:**:`Domain`**\\**[ ]`UserName` | Určuje volitelnou doménu a uživatelské jméno přihlašovacího účtu, pod kterým je služba spuštěna. Přihlašovací účet je uveden ve sloupci Přihlásit se jako služby ve Správci řízení služeb systému Windows. |
-   | [/crosssession&#124;cs](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. |
-   | [/wincounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilování. |
-   | [/automark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/wincounter.** Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
-   | [/události](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro systém Windows (ETW), která má být shromážděna během profilování. Události ETW jsou shromažďovány v samostatném (.etl) souboru. |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Určuje doménu a uživatelské jméno účtu, který vlastní proces. Tato možnost je vyžadována, pokud je proces spuštěn jako jiný uživatel než přihlášený uživatel. Vlastník procesu je uveden ve sloupci uživatelské jméno na kartě procesy ve Správci úloh systému Windows. |
+   | [/CrossSession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. Tato možnost je vyžadována, pokud aplikace ASP.NET běží v jiné relaci. ID relace je uvedeno ve sloupci ID relace na kartě procesy ve Správci úloh systému Windows. **/Cs** lze zadat jako zkratku pro **/CrossSession**. |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Určuje volitelnou doménu a uživatelské jméno přihlašovacího účtu, pod kterým se služba spouští. Přihlašovací účet se zobrazí ve sloupci přihlásit se jako služba ve Správci řízení služeb systému Windows. |
+   | [/CrossSession&#124;cs](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. |
+   | [/WinCounter](../profiling/wincounter.md) **:**`WinCounterPath` | Určuje čítač výkonu systému Windows, který má být shromážděn během profilace. |
+   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Používejte pouze s **/WinCounter** . Určuje počet milisekund mezi událostmi shromažďování čítačů výkonu systému Windows. Výchozí hodnota je 500 ms. |
+   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Určuje událost trasování událostí pro Windows (ETW), která se má shromáždit během profilace. Události ETW jsou shromažďovány v samostatném souboru (. ETL). |
 
 8. Připojte profiler ke službě. Zadejte:
 
-    **VSPerfCmd**[/attach](../profiling/attach.md) **:**`PID` {&#124;`ProcName`} [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
+    **VSPerfCmd**[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [[/targetclr](../profiling/targetclr.md)**:** `Version` ]  
 
-   - Zadejte ID procesu nebo název procesu služby. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
+   - Zadejte buď ID procesu, nebo název procesu služby. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
-   - **targetclr:** `Version` určuje verzi clr (COMMON Language runtime) pro profil, když je v aplikaci načtena více než jedna verze runtime. Nepovinný parametr.
+   - **targetclr:** `Version` Určuje verzi modulu CLR (Common Language Runtime), která má být profilovaná v případě, že je do aplikace načtena více než jedna verze modulu runtime. Nepovinný parametr.
 
 ## <a name="control-data-collection"></a>Řízení shromažďování dat
- Zatímco služba je spuštěna, můžete použít *VSPerfCmd.exe* možnosti zastavit a spustit zápis dat do datového souboru profileru. Řízení shromažďování dat umožňuje shromažďovat data pro určitou část spuštění programu, jako je například spuštění nebo vypnutí aplikace.
+ Když je služba spuštěná, můžete pomocí možností *VSPerfCmd.exe* zastavit a spustit zápis dat do datového souboru profileru. Řízení sběru dat umožňuje shromažďovat data pro určitou část provádění programu, například spouštění nebo ukončování aplikace.
 
 #### <a name="to-start-and-stop-data-collection"></a>Spuštění a zastavení shromažďování dat
 
-- Následující dvojice možností **VSPerfCmd** spustit a zastavit shromažďování dat. Určete každou možnost na samostatném příkazovém řádku. Shromažďování dat můžete zapnout a vypnout vícekrát.
+- Následující páry možností **VSPerfCmd** spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Shromažďování dat můžete zapnout a vypnout několikrát.
 
     |Možnost|Popis|
     |------------|-----------------|
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/globalon**) nebo zastaví (**/globaloff**) shromažďování dat pro všechny procesy.|
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:**`PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) shromažďování dat`PID`pro proces určený ID procesu ( ).|
-    |**/attach:**`PID` { `ProcName`&#124;} [/detach](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** začne shromažďovat data pro proces určený ID procesu nebo název procesu. **/detach** zastaví shromažďování dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
+    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/GlobalOn**) nebo zastaví shromažďování dat (**/globaloff**) pro všechny procesy.|
+    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|Spustí (**/ProcessOn**) nebo zastaví shromažďování dat (**/ProcessOff**) pro proces určený identifikátorem procesu ( `PID` ).|
+    |**/Attach:**{ `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[: { `PID`&#124;`ProcName` }]|**/Attach** začne shromažďovat data pro proces určený ID procesu nebo názvem procesu. **/detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán konkrétní proces.|
 
 ## <a name="end-the-profiling-session"></a>Ukončení relace profilování
- Chcete-li ukončit relaci profilování, profiler nesmí shromažďovat data. Shromažďování dat z aplikace profilované metodou vzorkování můžete zastavit zastavením služby nebo voláním možnosti **VSPerfCmd /detach.** Potom volání **VSPerfCmd** [/shutdown](../profiling/shutdown.md) možnost vypnout profiler a zavřete profilování datový soubor. Příkaz **VSPerfClrEnv /globaloff** vymaže proměnné prostředí profilování, ale konfigurace systému se neobnoví, dokud není počítač restartován.
+ Chcete-li ukončit relaci profilování, profiler nesmí shromažďovat data. Shromažďování dat z aplikace profilované pomocí metody vzorkování můžete zastavit zastavením služby nebo zavoláním možnosti **VSPerfCmd/detach** . Potom zavoláte možnost **VSPerfCmd** [/shutdown](../profiling/shutdown.md) pro vypnutí profileru a zavření souboru dat profilování. Příkaz **VSPerfCLREnv/globaloff** vymaže proměnné prostředí profilování, ale konfigurace systému se neresetuje, dokud se počítač nerestartuje.
 
 #### <a name="to-end-a-profiling-session"></a>Ukončení relace profilování
 
-1. Jedním z následujících akcí odpojte profiler od cílové aplikace:
+1. Chcete-li odpojit Profiler od cílové aplikace, proveďte jeden z následujících kroků:
 
     - Zastavte službu.
 
          -nebo-
 
-    - Typ **VSPerfCmd /detach**
+    - Typ **VSPerfCmd/detach**
 
-2. Vypněte profileru. Zadejte:
+2. Vypněte profiler. Zadejte:
 
-     **VSPerfCmd /vypnutí**
+     **VSPerfCmd/shutdown**
 
-3. (Nepovinné) Vymažte proměnné prostředí profilování. Zadejte:
+3. Volitelné Vymažte proměnné prostředí profilování. Zadejte:
 
-     **VSPerfClrEnv /globaloff**
+     **VSPerfClrEnv/globaloff**
 
 4. Restartujte počítač.
 
 ## <a name="see-also"></a>Viz také
-- [Profilové služby](../profiling/command-line-profiling-of-services.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)
 - [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

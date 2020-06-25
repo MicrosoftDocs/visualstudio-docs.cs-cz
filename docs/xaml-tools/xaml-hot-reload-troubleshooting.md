@@ -9,15 +9,14 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73d8653b2bcf06801c18e21d9a13b21843abc7d7
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: 447725fd27ab81b85890d37a8f0df8a35ad5fbee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706376"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328474"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>Řešení potíží s opětovným načítáním XAML za provozu
 
@@ -35,26 +34,26 @@ Tato funkce je ve výchozím nastavení povolená. Když začnete ladit aplikaci
 
 ![Dostupné Hot reloading XAML](../debugger/media/xaml-hot-reload-available.png)
 
-Pokud nevidíte panel nástrojů v aplikaci, otevřete **možnosti** > **ladění** > **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
+Pokud nevidíte panel nástrojů v aplikaci, otevřete možnosti **ladění**  >  **Options**  >  **Obecné**. Ujistěte se, že jsou vybrány obě možnosti, **Povolit ladicí nástroje uživatelského rozhraní pro XAML** a **Povolit kódování XAML Hot reload** .
 
 ![Povolit Hot reloadování XAML](../debugger/media/xaml-hot-reload-enable.png)
 
-Pokud jsou tyto možnosti vybrány, pak přejít do živého vizuálního stromu (**ladění** > **Windows** > **Live Visual Tree**) a ujistěte se, že je vybrána možnost **Zobrazit běhové nástroje na** panelu nástrojů aplikace (vlevo vlevo).
+Pokud jsou tyto možnosti vybrány, pak přejít do živého vizuálního stromu (**ladit**  >  **Windows**  >  **Live Visual Tree**) a ujistěte se, že je vybrána možnost **Zobrazit běhové nástroje na** panelu nástrojů aplikace (vlevo vlevo).
 
 ![Povolit Hot reloadování XAML](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Ověřte, že používáte spustit ladění, nikoli připojit k procesu.
 
-Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` v době spuštění aplikace nastavena na hodnotu 1. Sada Visual Studio nastaví tuto automaticky jako součást příkazu **ladit** > **Spustit ladění** (nebo **F5**). Pokud chcete použít kódování XAML Hot Load pomocí příkazu **ladit** > **připojit k procesu** , pak nastavte proměnnou prostředí sami.
+Kódování XAML Hot reload vyžaduje, aby byla proměnná prostředí v `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` době spuštění aplikace nastavená na hodnotu 1. Sada Visual Studio nastaví tuto automatickou sadu jako součást příkazu **ladit**  >  **spuštění ladění** (nebo **F5**). Pokud chcete použít kódování XAML Hot Load pomocí příkazu **ladit**  >  **připojit k procesu** , pak nastavte proměnnou prostředí sami.
 
 > [!NOTE]
-> Chcete-li nastavit proměnnou prostředí, pomocí tlačítka Start vyhledejte "proměnná prostředí" a vyberte možnost **Upravit proměnné prostředí systému**. V dialogovém okně, které se otevře, zvolte **proměnné prostředí**a pak ho přidejte jako uživatelskou proměnnou a nastavte hodnotu na `1`. Chcete-li vyčistit, po dokončení ladění odeberte proměnnou.
+> Chcete-li nastavit proměnnou prostředí, pomocí tlačítka Start vyhledejte "proměnná prostředí" a vyberte možnost **Upravit proměnné prostředí systému**. V dialogovém okně, které se otevře, zvolte **proměnné prostředí**a pak ho přidejte jako uživatelskou proměnnou a nastavte hodnotu na `1` . Chcete-li vyčistit, po dokončení ladění odeberte proměnnou.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>Ověřte správnost vlastností MSBuild.
 
-Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation`, která musí být nastavena na hodnotu `True`. U UWP je vlastnost `DisableXbfLineInfo`, která musí být nastavena na hodnotu `False`. Příklad:
+Ve výchozím nastavení jsou informace o zdroji zahrnuty v konfiguraci ladění. Řídí se vlastnostmi MSBuild ve vašich souborech projektu (například *. csproj). Pro WPF je vlastnost `XamlDebuggingInformation` , která musí být nastavena na `True` . U UWP je vlastnost `DisableXbfLineInfo` , která musí být nastavena na `False` . Příklad:
 
-WPF:
+SUBSYSTÉM
 
 `<XamlDebuggingInformation>True</XamlDebuggingInformation>`
 

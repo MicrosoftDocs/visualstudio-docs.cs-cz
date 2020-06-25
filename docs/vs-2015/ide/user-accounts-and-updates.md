@@ -9,23 +9,23 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 39fb09c24e0d8cca9d2dddbfe2259b50cd2972df
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 92bbfc3612a34d354dee6288d66f2cf96c1e107c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672667"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289388"
 ---
 # <a name="user-accounts-and-updates"></a>Uživatelské účty a aktualizace
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 > [!WARNING]
-> Visual Studio 2015 nemůže získat přístup k prostředkům, které jsou nakonfigurované pro podmíněný přístup. Pokud chcete s těmito prostředky pracovat, upgradujte na Visual Studio 2017 nebo novější.
+> Visual Studio 2015 nemůže získat přístup k prostředkům, které jsou nakonfigurované pro podmíněný přístup. Pokud chcete s těmito prostředky pracovat, upgradujte na Visual Studio 2019 verze 16,6 nebo novější a sledujte, [Jak používat Visual Studio s účty, které vyžadují doprovodné materiály k Multi-Factor Authentication](../../ide/work-with-multi-factor-authentication.md) .
 
 Aplikace Visual Studio je sama o sobě připojená prostředí. Když se přihlásíte, povolíte přístup ke všem službám přidruženým k vašemu uživatelskému účtu a všem účtům, které jsou k tomuto účtu propojené. Nastavení vašeho účtu vám umožní roaming bez ohledu na to, kde používáte Visual Studio. Můžete nakonfigurovat úrovně oprávnění pro konkrétní instanci sady Visual Studio pro jednotlivé uživatele. Sada Visual Studio také informuje o tom, že je k dispozici aktualizace jakékoli součásti vaší instalace, jako je například sada SDK.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 |||
 |-|-|
@@ -35,6 +35,6 @@ Aplikace Visual Studio je sama o sobě připojená prostředí. Když se přihl�
 |[Jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md)|Popisuje, jak odemknout aplikaci Visual Studio v různých scénářích.|
 |[Oznámení](../ide/visual-studio-notifications.md)|Popisuje, jak Visual Studio vás upozorní, když komponenty jako sady SDK nebo vlastní aplikace sady Visual Studio mají k dispozici aktualizaci.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)

@@ -1,7 +1,7 @@
 ---
-title: 'DA0012: Značné množství reflexe | Dokumenty společnosti Microsoft'
+title: DA0012 – významné množství reflexe | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAReflection
 - vs.performance.12
@@ -14,30 +14,30 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c1b96e9a73b488ba9c9920e8ea43e27f78f67ed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eb574afbe1f9ac843868dabf5af88fdbc24599ef
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777670"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328166"
 ---
-# <a name="da0012-significant-amount-of-reflection"></a>DA0012: Vysoký objem odrazů
+# <a name="da0012-significant-amount-of-reflection"></a>DA0012: Velký počet reflexí
 
 |||
 |-|-|
-|Id pravidla|DA0012 řekl:|
-|Kategorie|Použití rozhraní .NET Framework|
-|Metody profilování|Vzorkování|
-|Zpráva|Je možné, že používáte reflexe nadměrně. Je to drahá operace.|
+|ID pravidla|DA0012|
+|Kategorie|Využití .NET Framework|
+|Metody profilace|Vzorkování|
+|Zpráva|Je možné, že reflexe vyřadí nadměrné využití. Tato operace je náročná.|
 |Typ pravidla|Upozornění|
 
 ## <a name="cause"></a>Příčina
- Volání System.Reflection metody jako InvokeMember a GetMember nebo Type metody jako MemberInvoke jsou významnou část dat profilování. Pokud je to možné, zvažte nahrazení těchto metod časnou vazbou na metody závislých sestavení.
+ Volání metod System. Reflection, jako jsou metodu InvokeMember a GetMember nebo na metody typu, jako je MemberInvoke, jsou významným podílem dat profilování. Pokud je to možné, zvažte nahrazení těchto metod pomocí počáteční vazby na metody závislých sestavení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Reflexe je flexibilní zařízení rozhraní .NET Framework, které lze použít k provedení pozdní vazby vaší aplikace na závislé sestavení za běhu nebo k vytvoření a dynamickému spuštění nových typů za běhu. Tyto techniky však může snížit výkon, pokud jsou používány často nebo volat v těsné smyčky.
+ Reflexe je flexibilním zařízením .NET Framework, které lze použít k provedení pozdní vazby vaší aplikace k závislému sestavení run-time nebo k vytvoření a dynamickému spouštění nových typů za běhu. Nicméně tyto techniky mohou snížit výkon, pokud jsou používány často nebo se nazývají v těsných smyčkách.
 
- Další informace naleznete v části [Reflexe a pozdní vazba](/previous-versions/msp-n-p/ff647790(v=pandp.10)#reflection-and-late-binding) kapitoly 5 – Zlepšení výkonu spravovaného kódu ve zlepšení výkonu aplikací .NET a škálovatelnosti knihovny Microsoft Patterns and Practices v knihovně MSDN.
+ Další informace najdete v části [reflexe a pozdní vazby](/previous-versions/msp-n-p/ff647790(v=pandp.10)#reflection-and-late-binding) kapitoly 5 – zlepšení výkonu spravovaného kódu v tématu zlepšení výkonu a škálovatelnosti aplikace .NET v knihovně Microsoft Patterns and Practices Library na webu MSDN.
 
-## <a name="how-to-investigate-a-warning"></a>Jak prošetřit varování
- Poklepáním na zprávu v okně Seznam chyb přejděte do [zobrazení podrobností o funkci](../profiling/function-details-view.md) dat profilování. Zkontrolujte volající funkce System.Type nebo System.Reflection metoda najít části programu, které nejčastěji používají rozhraní API .NET Reflection. Nepoužívejte metody, které vracejí metadata. Pokud je výkon vaší aplikace kritický, budete muset vyhnout použití pozdní vazby a vytváření typů dynamicky za běhu.
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Dvakrát klikněte na zprávu v okně Seznam chyb a přejděte k [zobrazení podrobností o funkci](../profiling/function-details-view.md) dat profilace. Zkontrolujte funkce volání metody System. Type nebo System. Reflection, abyste našli oddíly programu, které usnadňují použití rozhraní API pro reflexi rozhraní .NET. Vyhněte se použití metod, které vracejí metadata. Pokud je výkon vaší aplikace kritický, může být nutné vyhnout se použití pozdní vazby a vytváření typů dynamicky za běhu.

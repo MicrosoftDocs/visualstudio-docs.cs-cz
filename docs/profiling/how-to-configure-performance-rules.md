@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Konfigurace pravidel výkonu | Dokumenty společnosti Microsoft'
+title: 'Postupy: Konfigurace pravidel výkonu | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.ruleseditor
 ms.assetid: a148b468-b849-4858-880a-808a6b47e596
@@ -11,30 +11,30 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c9bb9b07a0ae1fa19ae48408aa34a9dfb6577b6e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a1301161667d945fe4570eb8c7c9f0c2ce8bfffb
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779009"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328455"
 ---
-# <a name="how-to-configure-performance-rules"></a>Postup: Konfigurace pravidel výkonu
-Upozornění výkonu nástroje profilování visual studio označují problémy v profilované aplikace, které mohou zpomalit spuštění programu. Upozornění může také znamenat, že budete muset změnit metody shromažďování shromažďovat další užitečná data. Upozornění na výkon jsou generována automaticky v relaci profilování a zobrazují se v [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]okně Seznam **chyb** při otevření datového souboru profilování v aplikaci . Některá upozornění nemusí platit pro scénáře, které vás zajímají a některá upozornění mohou být vyvolána nepřesně. Upozornění na výkon můžete nakonfigurovat tak, aby zobrazovala nebo skryla konkrétní upozornění.
+# <a name="how-to-configure-performance-rules"></a>Postupy: Konfigurace pravidel výkonu
+Upozornění na výkon aplikace Visual Studio Nástroje pro profilaci indikují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění mohou také indikovat, že možná budete muset změnit metody kolekce a shromažďovat tak užitečnější data. Upozornění na výkon jsou generována automaticky v relaci profilace a zobrazí se v okně **Seznam chyb** při otevření datového souboru profilování v nástroji [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . Některá upozornění se nemusí vztahovat na scénáře, které vás zajímají, a některá upozornění můžou být nesprávně vyvolaná. Upozornění výkonu můžete nakonfigurovat tak, aby se zobrazila nebo skryla konkrétní upozornění.
 
-### <a name="to-configure-profiler-performance-warnings"></a>Konfigurace upozornění na výkon profileru
+### <a name="to-configure-profiler-performance-warnings"></a>Konfigurace upozornění výkonu profileru
 
 1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. Rozbalte **nástroje výkonu**a klepněte na **položku Pravidla**.
+2. Rozbalte položku **Nástroje pro sledování výkonu**a pak klikněte na možnost **pravidla**.
 
-3. Chcete-li upozornění povolit nebo zakázat, zaškrtněte nebo zrušte zaškrtnutí políčka vedle **ID** upozornění a názvu.
+3. Pokud chcete povolit nebo zakázat upozornění, zaškrtněte nebo zrušte zaškrtnutí políčka vedle **ID** a názvu upozornění.
 
-4. Chcete-li určit úroveň válčící pravidla, klepněte na buňku **Akce** vedle pravidla a potom klepněte na úroveň upozornění.
+4. Pokud chcete zadat úroveň Warring pravidla, klikněte na buňku **Akce** vedle pravidla a potom klikněte na úroveň upozornění.
 
-    - **Zakázáno** - zakáže pravidlo (toto je stejné jako zrušení zaškrtnutí políčka vedle ID pravidla).
+    - **Disabled** – zakáže pravidlo (Toto je stejné jako při zrušení zaškrtnutí políčka vedle ID pravidla).
 
-    - **Upozornění** - zobrazí pravidlo jako upozornění.
+    - **Upozornění** – zobrazí pravidlo jako upozornění.
 
-    - **Chyba** - zastaví profilování provádění a zobrazí pravidlo jako chybu.
+    - **Chyba** – zastaví provádění profilování a zobrazí pravidlo jako chybu.
 
-    - **Informace** - zobrazí pravidlo pouze jako informace.
+    - **Information** – zobrazí pravidlo pouze jako informace.

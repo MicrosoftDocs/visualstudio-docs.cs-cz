@@ -1,132 +1,132 @@
 ---
-title: Jak zakoupit předplatná cloudu sady Visual Studio
+title: Jak koupit cloudová předplatná sady Visual Studio
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: conceptual
-description: Pronajměte si Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční bázi bez dlouhodobé smlouvy.
-ms.openlocfilehash: babf05c991bd323f2ebe2385085a1d9fc3b1acf8
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
+ms.openlocfilehash: b2a80fce75f710d508f0d32df37bbcde73ee20e3
+ms.sourcegitcommit: 60315ba949aca1ff06fe431dbcbcfb0fedc1e8d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273943"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85292929"
 ---
-# <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Zakoupení předplatných cloudů Visual Studio Professional a Visual Studio Enterprise
-[Předplatná Visual Studio Professional a Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) si můžete zakoupit na webu Visual Studio [Marketplace](https://marketplace.visualstudio.com). Tyto služby se nazývají **"cloudová předplatná"**.
+# <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
+Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
 
-[Porovnání výhod předplatného cloudu a cen](https://visualstudio.microsoft.com/vs/pricing/)
+[Porovnání výhod a cen cloudových předplatných](https://visualstudio.microsoft.com/vs/pricing/)
 
 > [!NOTE]
-> Microsoft už nenabízí roční předplatná Visual Studio Professional a roční předplatná Visual Studia Enterprise v předplatných cloudu. Stávající zákazníci se nezmění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Noví zákazníci se [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) doporučuje přejít na prozkoumat různé možnosti nákupu Visual Studio. Stále můžete zakoupit nové měsíční cloudové předplatné.
+> Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio. Můžete si i nadále koupit nové měsíční předplatné cloudu.
 
 ## <a name="before-you-start"></a>Než začnete
-Chcete-li fakturovat nákupy, potřebujete [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/). Můžete [se zaregistrovat](https://portal.azure.com) před prvním nákupem nebo během prvního nákupu na webu Visual Studio Marketplace.
+K účtování vašich nákupů potřebujete [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/). Můžete se [zaregistrovat](https://portal.azure.com) před prvním nákupem nebo během prvního nákupu v Visual Studio Marketplace.
 
-## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>Kdo si může koupit předplatná cloudu sady Visual Studio?
-Kdokoliv s [vlastníkem](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), [správcem služeb nebo spolusprávcem](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-subscription-administrator) přístupu k předplatnému Azure si může zakoupit cloudová předplatná.
+## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>Kdo může koupit cloudová předplatná sady Visual Studio?
+Každý s [vlastníkem](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), [správcem služeb nebo spolusprávcem](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-subscription-administrator) , kteří mají přístup k předplatnému Azure, může koupit cloudové předplatné.
 
 ## <a name="how-to-buy-cloud-subscriptions"></a>Jak koupit cloudová předplatná
 
-1. Přihlaste se k [předplatným visual studia Marketplace >](https://marketplace.visualstudio.com/subscriptions).
+1. Přihlaste se k [Předplatným Visual Studio Marketplace >](https://marketplace.visualstudio.com/subscriptions).
 
-2. Vyberte předplatné, které chcete koupit, například – Visual Studio Professional – měsíční předplatné.
+2. Vyberte předplatné, které chcete koupit, například Visual Studio Professional – měsíční předplatné.
 
-3. Vyberte předplatné Azure, které se má použít k fakturaci. Nové předplatné Azure můžete vytvořit, pokud ho nemáte.
+3. Vyberte předplatné Azure, které se má použít pro fakturaci. Můžete vytvořit nové předplatné Azure, pokud ho ještě nemáte.
     > [!div class="mx-imgBorder"]
-    > ![Vyberte předplatné Azure pro fakturaci.](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
+    > ![Vybrat předplatné Azure pro fakturaci](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
 
-4. Vyberte počet předplatných, která chcete koupit.
+4. Vyberte počet předplatných, která se mají koupit.
     > [!div class="mx-imgBorder"]
-    > ![Výběr počtu předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
+    > ![Vybrat počet předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
 
-    Pokud si nepřejete, aby si byla předplatná přiřazena, zrušte zaškrtnutí **zrušte zaškrtnutí možnosti Přiřadit mi toto předplatné**.
+    Pokud nechcete, aby se odběry přiřadily, zrušte **přiřazení tohoto předplatného mně**.
 
-5. Potvrďte a dokončete nákup. Pokud jste si přiřadili předplatné, můžete navštívit [portál předplatitelů Sady Visual Studio](https://my.visualstudio.com) a začít stahovat software a používat další výhody pro předplatitele.
-
-> [!div class="mx-imgBorder"]
-> ![Dokončení nákupu bylo úspěšně dokončeno.](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
+5. Potvrďte a dokončete nákup. Pokud jste přidělili předplatné sami sobě, můžete navštívit [portál pro předplatitele sady Visual Studio](https://my.visualstudio.com) , kde můžete začít stahovat software a využívat další výhody pro předplatitele.
 
 > [!div class="mx-imgBorder"]
-> ![Přejít na portál předplatitelů Visual Studia](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
-
-Pokud jste si zakoupili více než jedno předplatné, přejděte na [portál správy předplatných sady Visual Studio](https://manage.visualstudio.com) a přiřaďte předplatná ostatním.
+> ![Nákup se úspěšně dokončil.](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
 
 > [!div class="mx-imgBorder"]
-> ![Přiřazení předplatných ostatním](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
+> ![Přejít na portál pro předplatitele sady Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
+
+Pokud jste si koupili více než jedno předplatné, přejděte k [portálu pro správu předplatných sady Visual Studio](https://manage.visualstudio.com) , abyste přiřadili odběr jiným uživatelům.  [Nové odběry](add-monthly-subs.md) možná budete muset přidat na portál pro správu, pokud je poprvé zakoupíte.
+
+> [!div class="mx-imgBorder"]
+> ![Přiřazení odběrů jiným uživatelům](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
 
 > [!div class="mx-imgBorder"]
 > ![Zobrazit předplatná](_img/buy-vs-subscriptions/assign-subscriptions.png)
 
-## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Zrušení obnovení zakoupených cloudových předplatných
+## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Zrušení obnovení předplatných cloudu, která jste zakoupili
 
 * Změna počtu zakoupených předplatných:
 
 > [!div class="mx-imgBorder"]
-> ![Změna předplatného](_img/buy-vs-subscriptions/manage-subscriptions.png)
+> ![Změnit odběry](_img/buy-vs-subscriptions/manage-subscriptions.png)
 
-* Chcete-li zrušit tato předplatná, snižte počet předplatných na nulu (0). Neobnoví se na začátku příštího fakturačního období (první z příštího měsíce pro měsíční předplatná cloudu; o 12 měsíců později pro roční předplatná cloudu).
+* Chcete-li zrušit tato předplatná, snižte počet předplatných na nulu (0). Neobnoví se na začátku dalšího fakturačního období (první z následujících měsíců pro měsíční předplatné v cloudu; 12 měsíců později pro roční cloudová předplatná).
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
 ### <a name="for-new-customers"></a>Pro nové zákazníky:
-#### <a name="q--i-was-considering-the-annual-cloud-subscription-and-now-i-cant-find-it-what-should-i-do"></a>Otázka: Zvažoval jsem roční předplatné Cloudu a teď ho nemůžu najít.Co bych měl/a dělat?
-A: Prosím, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) jděte na další možnosti nákupu.
+#### <a name="q--i-was-considering-the-annual-cloud-subscription-and-now-i-cant-find-it-what-should-i-do"></a>Otázka: jsem zvažuje roční cloudové předplatné a teď jsem ho nedokázal najít.Co bych měl/a dělat?
+Odpověď: přejděte prosím na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Další možnosti nákupu.
 
-#### <a name="q-what-purchasing-options-are-available-to-me"></a>Otázka: Jaké možnosti nákupu mám k dispozici?
-A: Poskytujeme měsíční předplatné a standardní odběry v našich přímých prodejních kanálů. Další informace naleznete [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)v odhlašení .
-Existuje také mnoho možností prostřednictvím našeho multilicenčního programu. Můžete zkoumat možnosti a [https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy](https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy)ceny na .
+#### <a name="q-what-purchasing-options-are-available-to-me"></a>Otázka: Jaké možnosti nákupu jsou pro mě k dispozici?
+Odpověď: poskytujeme měsíční předplatná a standardní předplatná v našich přímých prodejních kanálech. Další informace najdete v [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
+V rámci multilicenčního programu je k dispozici také celá řada možností. Můžete prozkoumat možnosti a ceny na [https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy](https://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy) .
 
-#### <a name="q-the-price-for-a-retail-subscription-is-higher-what-additional-benefits-am-i-receiving"></a>Otázka: Cena za maloobchodní předplatné je vyšší. Jaké další výhody dostávám?
-A: Obdržíte trvalá licenční práva pro IDE sady Visual Studio, které bylo dodáno s předplatným. Když je čas na obnovení, platíte pouze cenu za záruku softwaru, která je výrazně nižší.
+#### <a name="q-the-price-for-a-retail-subscription-is-higher-what-additional-benefits-am-i-receiving"></a>Otázka: cena za maloobchodní předplatné je vyšší. Jaké další výhody mi Přijímám?
+Odpověď: obdržíte Trvalá licenční práva pro integrované vývojové prostředí (IDE) sady Visual Studio, které bylo součástí předplatného. Když je čas na obnovení, platíte jenom za cenu Software Assurance, což je podstatně méně.
 
 ### <a name="for-existing-annual-cloud-subscribers"></a>Pro stávající roční předplatitele cloudu
-#### <a name="q--how-will-this-change-impact-me"></a>Otázka: Jak mě tato změna ovlivní?
-A: Tato změna nebude mít vliv na stávající předplatitele.
+#### <a name="q--how-will-this-change-impact-me"></a>Otázka: jak tato změna ovlivní?
+Odpověď: Tato změna nebude mít vliv na stávající předplatitele.
 
-#### <a name="q--do-i-need-to-do-anything-as-a-result-of-these-changes"></a>Otázka: Musím v důsledku těchto změn něco udělat?
-A: Ne.  Vaše předplatná zůstanou na svém místě a budete je moci spravovat stejně jako dnes.
+#### <a name="q--do-i-need-to-do-anything-as-a-result-of-these-changes"></a>Otázka: Potřebuji něco udělat v důsledku těchto změn?
+Odpověď: ne.  Vaše předplatná zůstanou v platnosti a budete je moct spravovat tak, jak už dnes máte.
 
-#### <a name="q-what-if-i-want-to-increase-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci zvýšit počet předplatných pro své zákazníky?
-A: Roční předplatné, které jsou zakoupeny během daného měsíce jsou účtovány okamžitě po celý rok a jsou platné pro celý rok. Z tohoto důvodu můžete změnit počet licencí pouze v aktuálním měsíci nákupu (budou platné po dobu jednoho roku a účtovány po dobu jednoho roku). Mimo měsíc nákupu již není možné zvýšit počet předplatných.
+#### <a name="q-what-if-i-want-to-increase-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci zvýšit počet předplatných pro moje zákazníky?
+O: roční předplatné zakoupená během daného měsíce se účtují okamžitě po celý rok a platí pro celý rok. Z tohoto důvodu můžete upravit počet licencí pouze v aktuálním měsíci nákupu (budou platit po dobu jednoho roku a budou účtovány po dobu jednoho roku). Mimo měsíc nákupu už není možné zvýšit počet předplatných.
 
-#### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci snížit počet předplatných pro své zákazníky?
-A: Správce stále můžete snížit počet předplatných návštěvou https://manage.visualstudio.com a podle pokynů v tomto článku snížit počet předplatného. Systém *nebude* generovat poměrný kredit. Pro vrácení peněz budete muset kontaktovat fakturační tým Azure.
+#### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci snížit počet předplatných pro moje zákazníky?
+Odpověď: váš správce může stále snížit počet předplatných, a to návštěvou https://manage.visualstudio.com a podle pokynů v tomto článku, abyste snížili počty předplatných. V *systému nebude vygenerován kredit* pro nominální hodnotu. Pokud potřebujete refundaci, obraťte se na fakturační tým Azure.
 
-#### <a name="q-if-i-cancel-my-subscription-will-i-be-able-to-buy-another-annual-cloud-subscription-later"></a>Otázka: Pokud předplatné zruším, budu si moci později zakoupit další roční předplatné Cloudu?
-A: I když nebudete moci koupit další předplatné Cloud Roční, existuje mnoho možností, jak zakoupit předplatné Sady Visual Studio.  Další informace [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)naleznete na adrese .
+#### <a name="q-if-i-cancel-my-subscription-will-i-be-able-to-buy-another-annual-cloud-subscription-later"></a>Otázka: Pokud zruším předplatné, budu si moct později koupit jiné roční předplatné cloudu?
+Odpověď: i když nebudete moct koupit jiné cloudové předplatné, máte k dispozici řadu možností nákupu předplatných sady Visual Studio.  Další informace najdete na adrese [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
 
-### <a name="for-cloud-solution-providers-csp"></a>Pro poskytovatele cloudových řešení (CSP)
-#### <a name="q-how-will-this-change-impact-my-customers"></a>Otázka: Jak tato změna ovlivní mé zákazníky?
-A: Vaši zákazníci nebudou moci zakoupit nové Visual Studio Cloud roční předplatné.
+### <a name="for-cloud-solution-providers-csp"></a>Pro poskytovatele Cloud Solution Provider (CSP)
+#### <a name="q-how-will-this-change-impact-my-customers"></a>Otázka: jak bude tato změna mít dopad na moje zákazníky?
+Odpověď: vaši zákazníci nebudou moci zakoupit nové roční předplatné sady Visual Studio pro Cloud.
 
-#### <a name="q-do-my-customers-need-to-do-anything-because-of-these-changes"></a>Otázka: Musí moji zákazníci kvůli těmto změnám něco udělat?
-A: Stávající zákazníci nebudou ovlivněny. Noví zákazníci se budou muset rozhodnout, zda chtějí zakoupit měsíční předplatná sady Visual Studio nebo přejít na jiný kanál, jako je multilicence, a zakoupit předplatná sady Visual Studio.
+#### <a name="q-do-my-customers-need-to-do-anything-because-of-these-changes"></a>Otázka: moje zákazníci potřebují provést cokoli z těchto změn?
+Odpověď: stávající zákazníci nebudou mít vliv na. Noví zákazníci se budou muset rozhodnout, jestli chtějí koupit měsíční předplatná sady Visual Studio, nebo přejít na jiný kanál, jako je multilicenční produkt, abyste si mohli koupit předplatné sady Visual Studio.
 
-#### <a name="q-what-if-i-want-to-increase-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci zvýšit počet předplatných pro své zákazníky?
-A: Roční předplatné zakoupené během daného měsíce se účtuje okamžitě po celý rok a jsou platné po celý rok. Z tohoto důvodu může správce upravit pouze počet licencí v aktuálním měsíci nákupu (budou platné po dobu 1 roku a účtovány po dobu 1 roku). Mimo měsíc nákupu již není možné zvýšit počet předplatných.
+#### <a name="q-what-if-i-want-to-increase-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci zvýšit počet předplatných pro moje zákazníky?
+O: roční předplatné zakoupená během daného měsíce se účtují okamžitě po celý rok a platí pro celý rok. Z tohoto důvodu může správce změnit jenom počet licencí v aktuálním měsíci nákupu (bude platný 1 rok a bude se účtovat 1 rok). Mimo měsíc nákupu již není možné zvýšit počet předplatných.
 
-#### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci snížit počet předplatných pro své zákazníky?
-A: Správce stále můžete snížit počet předplatných návštěvou [https://manage.visualstudio.com](https://manage.visualstudio.com) a podle pokynů v tomto článku snížit počet předplatného. Systém **nebude** generovat poměrný kredit. Pro vrácení peněz budete muset kontaktovat fakturační tým Azure.
+#### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>Otázka: Co když chci snížit počet předplatných pro moje zákazníky?
+Odpověď: váš správce může stále snížit počet předplatných, a to návštěvou [https://manage.visualstudio.com](https://manage.visualstudio.com) a podle pokynů v tomto článku, abyste snížili počty předplatných. V **systému nebude vygenerován kredit** pro nominální hodnotu. Pokud potřebujete refundaci, obraťte se na fakturační tým Azure.
 
-#### <a name="q-if-my-customers-cancel-their-subscriptions-will-they-be-able-to-buy-more-annual-cloud-subscriptions-later"></a>Otázka: Pokud moji zákazníci zruší svá předplatná, budou si moci později zakoupit další roční předplatná cloudu?
-A: I když nebudou moci koupit další předplatné Cloud Roční, existuje mnoho možností, jak zakoupit předplatné Sady Visual Studio.  Další informace [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)naleznete na adrese .
+#### <a name="q-if-my-customers-cancel-their-subscriptions-will-they-be-able-to-buy-more-annual-cloud-subscriptions-later"></a>Otázka: Pokud moji zákazníci zruší své odběry, budou moci později koupit cloudová předplatná?
+Odpověď: i když nebude moct koupit jiné cloudové předplatné, máte k dispozici mnoho možností nákupu předplatných sady Visual Studio.  Další informace najdete na adrese [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) .
 
 ## <a name="related-resources"></a>Související prostředky
-- [Portál správy předplatných visual studia](https://manage.visualstudio.com/)
-- [Podpora předplatného sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
-- [Nejčastější dotazy k fakturaci předplatného visual studia v cloudu](vscloud-billing-faq.md)
-- [Nákup předplatného visual studia cloud pro poskytovatele služeb na uspono](vscloud-csp.md)
+- [Portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com/)
+- [Podpora předplatných sady Visual Studio](https://visualstudio.microsoft.com/vs/support/)
+- [Nejčastější dotazy k fakturaci pro cloudové předplatné sady Visual Studio](vscloud-billing-faq.md)
+- [Nákupy cloudového předplatného sady Visual Studio pro zprostředkovatele CSP](vscloud-csp.md)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Zakoupení cloudových předplatných
+Koupit cloudová předplatná
 - [Visual Studio Professional měsíčně](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)
 - [Visual Studio Enterprise měsíčně](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)

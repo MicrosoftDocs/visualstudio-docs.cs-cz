@@ -1,7 +1,7 @@
 ---
-title: CvEnterSpan Funkce | Dokumenty společnosti Microsoft
+title: Funkce Cventerspan – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvEnterSpanVA
 - cvmarkers/CvEnterSpanW
@@ -24,15 +24,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d501f7c1e75f5b63c82c34f2dc0a4913d7a88c7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5bb034d4a2501175d117256364082966a97af8a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552629"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328973"
 ---
-# <a name="cventerspan-function"></a>CvEnterSpan
-Označuje začátek nového rozpětí.
+# <a name="cventerspan-function"></a>Cventerspan – – funkce
+Označuje začátek nového rozsahu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,27 +102,27 @@ HRESULT CvEnterSpanExVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList`Seznam argumentů.
+ `argList`Seznam argumentů
 
- `category`Kategorie rozpětí
+ `category`Kategorie rozsahu
 
  `level`Úroveň důležitosti rozpětí.
 
- `pMarkerSeries`Platný kontext řady značek. Nemůže být null.
+ `pMarkerSeries`Platný kontext řady značek Nemůže mít hodnotu NULL.
 
- `pMessage`Řetězec ve formátu zprávy. Nemůže být null.
+ `pMessage`Řetězec formátu zprávy Nemůže mít hodnotu NULL.
 
- `ppSpan`Adresa proměnné, která bude obsahovat výsledný objekt rozsahu. Adresa nemůže být NULL, proměnná může mít libovolnou hodnotu.
+ `ppSpan`Adresa proměnné, která bude obsahovat výsledný objekt span. Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je zpráva úspěšně zapsána. Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
- **Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW
+ **Kódování Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW
 
  **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

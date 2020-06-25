@@ -1,6 +1,6 @@
 ---
-title: Kód Pythonu testu částí
-description: Nastavení testování částí pro kód Pythonu v sadě Visual Studio plně využívá funkce Průzkumníka testů ke zjišťování, spouštění a ladění testů.
+title: Kód Pythonu pro testování částí
+description: Nastavení testování částí pro kód Pythonu v aplikaci Visual Studio plně využívá funkce Průzkumníka testů pro zjišťování, spouštění a ladění testů.
 ms.date: 09/18/2019
 ms.topic: include
 author: JoshuaPartlow
@@ -10,35 +10,35 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8adce700524c4ade6c627aa91480460f8f2571f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e84b9de4eca681812209eb17f492d5e07522d3b5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71933445"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292083"
 ---
-## <a name="select-the-test-framework-for-a-python-project"></a>Výběr testovacího rámce pro projekt Pythonu
+## <a name="select-the-test-framework-for-a-python-project"></a>Výběr testovacího rozhraní pro projekt v Pythonu
 
-Visual Studio podporuje dvě testovací architektury pro Python, [unittest](https://docs.python.org/3/library/unittest.html) a [pytest](https://pytest.org/en/latest/) (k dispozici v Visual Studiu 2019 počínaje verzí 16.3). Ve výchozím nastavení není při vytváření projektu Pythonu vybrána žádná architektura. Chcete-li určit architekturu, klepněte pravým tlačítkem myši na název projektu v Průzkumníku řešení a vyberte možnost **Vlastnosti.** Tím se otevře návrhář projektu, který umožňuje konfigurovat testy prostřednictvím karty **Test.** Na této kartě můžete vybrat testovací rámec, který chcete použít pro váš projekt. 
+Visual Studio podporuje dvě testovací architektury pro Python, [UnitTest](https://docs.python.org/3/library/unittest.html) a [pytest](https://pytest.org/en/latest/) (k dispozici v aplikaci Visual Studio 2019 počínaje verzí 16,3). Ve výchozím nastavení není při vytváření projektu v jazyce Python vybrána žádná architektura. Chcete-li určit rozhraní, klikněte pravým tlačítkem myši na název projektu v Průzkumník řešení a vyberte možnost **vlastnosti** . Tím se otevře Návrhář projektu, který umožňuje konfigurovat testy prostřednictvím karty **test** . Na této kartě můžete vybrat testovací rozhraní, které chcete použít pro projekt. 
 
-* Pro rozhraní **unittest** kořenový adresář projektu se používá pro zjišťování testu. Toto umístění, stejně jako vzor textu pro identifikaci testů, lze upravit na kartě **Test** na hodnoty zadané uživatelem.
-* Pro **pytest** framework jsou možnosti testování, jako je testovací umístění a vzory názvů souborů, určeny pomocí standardního konfiguračního souboru pytest .ini. Další podrobnosti naleznete v [referenční dokumentaci pytest.](https://docs.pytest.org/en/latest/reference.html#ini-options-ref)
+* Pro **UnitTest** Framework se kořenový adresář projektu používá pro zjišťování testů. Toto umístění, stejně jako textový vzor pro identifikaci testů, lze upravit na kartě **test** na hodnoty zadané uživatelem.
+* Pro **pytest** Framework jsou možnosti testování, jako je například umístění testu a vzor názvů souborů, určeny pomocí standardního konfiguračního souboru pytest. ini. Další podrobnosti najdete v [referenční dokumentaci k pytest](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) .
 
-Po uložení výběru a nastavení architektury se zjišťování testů spustí v Průzkumníkovi testů. Pokud okno Průzkumníka testů ještě není otevřené, přejděte na panel nástrojů a vyberte **test** > **explorer**.
+Po uložení výběru a nastavení architektury se zjišťování testů Inicializuje v Průzkumníku testů. Pokud okno Průzkumník testů ještě není otevřené, přejděte na panel nástrojů a vyberte **test**  >  **Test Explorer**.
 
-## <a name="configure-testing-for-python-without-a-project"></a>Konfigurace testování Pythonu bez projektu
-Visual Studio umožňuje spustit a otestovat existující kód Pythonu bez projektu [otevřením složky s kódem Pythonu.](../../quickstart-05-python-visual-studio-open-folder.md) Za těchto okolností budete muset ke konfiguraci testování použít soubor **PythonSettings.json.** 
-1. Otevřete existující kód Pythonu pomocí možnosti **Otevřít místní složku.** 
+## <a name="configure-testing-for-python-without-a-project"></a>Konfigurace testování pro Python bez projektu
+Visual Studio umožňuje spustit a otestovat existující kód Pythonu bez projektu [otevřením složky](../../quickstart-05-python-visual-studio-open-folder.md) s kódem Pythonu. Za těchto okolností budete muset pro konfiguraci testování použít **PythonSettings.js** pro soubor. 
+1. Pomocí možnosti **otevřít místní složku** otevřete svůj existující kód Pythonu. 
 
    ![Úvodní obrazovka sady Visual Studio](../../media/quickstart-open-folder/01-open-local-folder.png)
 
-1. V okně Průzkumník řešení klepněte na ikonu **Zobrazit všechny soubory,** abyste zobrazili všechny soubory v aktuální složce.
+1. V okně Průzkumník řešení klikněte na ikonu **Zobrazit všechny soubory** , aby se zobrazily všechny soubory v aktuální složce.
 
    ![Tlačítko Zobrazit všechny soubory](../../media/unit-test-show-files.png)
 
-1. Přejděte do souboru **PythonSettings.json** ve složce **Místní nastavení.** Pokud tento soubor nevidíte ve složce **Místní nastavení,** vytvořte jej ručně.
+1. V souboru **místní složky nastavení** přejděte na **PythonSettings.js** . Pokud tento soubor nevidíte ve složce **místních nastavení** , vytvořte ho ručně.
    
-1. Přidejte pole **TestFramework** do souboru nastavení a nastavte jej **pytest** nebo **unittest** v závislosti na testování rozhraní, které chcete použít.
+1. Přidejte pole **TestFramework** do souboru nastavení a nastavte ho na **pytest** nebo **UnitTest** v závislosti na testovacím rozhraní, které chcete použít.
 
     ```json
     {
@@ -49,9 +49,9 @@ Visual Studio umožňuje spustit a otestovat existující kód Pythonu bez proje
     ```
 
     > [!Note]
-    > Pro **rozhraní unittest,** pokud pole **UnitTestRootDirectory** a **UnitTestPattern** nejsou zadány v souboru PythonSettings.json, jsou přidány a přiřazeny výchozí hodnoty "." a "test*.py".
+    > Pro **UnitTest** Framework, pokud nejsou pole **UnitTestRootDirectory** a **UnitTestPattern** v souboru zadány, jsou přidány a přiřazeny výchozí hodnoty "." a "test *. py" PythonSettings.jsv uvedeném pořadí.
 
-1. Pokud složka obsahuje adresář **src,** který je oddělený od složky, která obsahuje testy, zadejte cestu ke složce **src** pomocí pole **SearchPaths** v souboru **PythonSettings.json.**
+1. Pokud složka obsahuje **zdrojový** adresář, který je oddělený od složky, která obsahuje vaše testy, zadejte cestu ke složce **Src** pomocí pole **SearchPath** v **PythonSettings.js** souboru.
 
     ```json
     {
@@ -62,23 +62,23 @@ Visual Studio umožňuje spustit a otestovat existující kód Pythonu bez proje
     }
     ```
 
-1. Uložte změny do souboru PythonSettings.json a iniciujte zjišťování testů pro zadanou architekturu. 
+1. Uložte změny do PythonSettings.jsv souboru pro zahájení zjišťování testů pro zadané rozhraní. 
    > [!Note]
-   > Pokud je okno Průzkumníka testů již otevřené **ctrl** + **r,A** také aktivuje zjišťování.
+   > Je-li okno Průzkumník testů **již otevřeno**  +  **,** spustí se také funkce zjišťování.
 
 ## <a name="discover-and-view-tests"></a>Zjišťování a zobrazení testů
 
-Ve výchozím nastavení Visual Studio identifikuje **testování unittest** a **pytest** jako metody, jejichž názvy začínají . `test` Chcete-li zobrazit zjišťování testů, postupujte takto:
+Ve výchozím nastavení Visual Studio identifikuje **UnitTest** a **pytest** testy jako metody, jejichž názvy začínají na `test` . Chcete-li zobrazit zjišťování testů, postupujte následovně:
 
-1. Otevřete [projekt Pythonu](../../managing-python-projects-in-visual-studio.md).
+1. Otevřete [projekt Python](../../managing-python-projects-in-visual-studio.md).
 
-1. Po načtení projektu v sadě Visual Studio klikněte pravým tlačítkem myši na projekt v Průzkumníku řešení a vyberte **rozhraní unittest** nebo **pytest** na kartě **Testování** vlastností.
+1. Jakmile je projekt načten v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a na kartě **test** vlastností vyberte rozhraní **UnitTest** nebo **pytest** .
    > [!Note]
-   > Pokud používáte pytest framework, můžete určit testovací umístění a vzory názvů souborů pomocí standardního konfiguračního souboru pytest .ini. Ve výchozím nastavení se používá složka pracovního prostoru `test_*py` `*_test.py`nebo projektu se vzorem a . Další podrobnosti naleznete v [referenční dokumentaci pytest.](https://docs.pytest.org/en/latest/reference.html#ini-options-ref)
+   > Pokud používáte pytest Framework, můžete zadat umístění testu a vzory názvů souborů pomocí standardního konfiguračního souboru pytest. ini. Ve výchozím nastavení se používá složka pracovního prostoru nebo projektu se vzorem `test_*py` a `*_test.py` . Další podrobnosti najdete v [referenční dokumentaci k pytest](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) .
 
-1. Po výběru rozhraní znovu klepněte pravým tlačítkem myši na projekt a vyberte **Přidat** > **novou položku**a pak vyberte Test částí **Pythonu** následovaný **addem**.
+1. Po výběru rozhraní klikněte znovu pravým tlačítkem na projekt a vyberte **Přidat**  >  **novou položku**a pak vyberte **Test jednotky Pythonu** a potom klikněte na **Přidat**.
 
-1. Tato akce vytvoří soubor *test_1.py* s kódem, který importuje standardní `unittest` modul, odvodí testovací třídu z `unittest.TestCase`aplikace a vyvolá, `unittest.main()` pokud skript spustíte přímo:
+1. Tato akce vytvoří soubor *test_1. py* s kódem, který importuje standardní `unittest` modul, odvodí testovací třídu z `unittest.TestCase` a vyvolá, `unittest.main()` Pokud spouštíte skript přímo:
 
     ```python
     import unittest
@@ -91,49 +91,49 @@ Ve výchozím nastavení Visual Studio identifikuje **testování unittest** a *
         unittest.main()
     ```
 
-1. V případě potřeby soubor uložte a **Test** > pak otevřete **Průzkumníka testů** pomocí příkazu nabídky**Průzkumník a test.**
+1. V případě potřeby soubor uložte a pak otevřete **Průzkumníka testů** pomocí příkazu nabídky **test**  >  **Test Exploreru** .
 
-1. **Průzkumník testů** vyhledá v projektu testy a zobrazí je, jak je znázorněno níže. Poklepáním na test se otevře zdrojový soubor.
+1. **Průzkumník testů** vyhledá v projektu testy a zobrazí je, jak je znázorněno níže. Dvojím kliknutím na test se otevře jeho zdrojový soubor.
 
     ![Průzkumník testů zobrazující výchozí test_A](../../media/unit-test-a-2.png) 
 
-1. Při přidávání dalších testů do projektu můžete uspořádat zobrazení v **Průzkumníkovi testů** pomocí nabídky **Seskupit** podle na panelu nástrojů:
+1. Při přidávání dalších testů do projektu můžete zobrazení uspořádat v **Průzkumníku testů** pomocí nabídky **Seskupit podle** na panelu nástrojů:
 
-    ![Nabídka Panelu nástrojů Seskupí explorer u skupiny](../../media/unit-test-group-menu-2.png) 
+    ![Průzkumník testuje skupinu Průzkumníka podle nabídky panelu nástrojů](../../media/unit-test-group-menu-2.png) 
 
-1. Do pole **Hledat** můžete také zadat text a filtrovat testy podle názvu.
+1. Můžete také zadat text do **vyhledávacího** pole, chcete-li filtrovat testy podle názvu.
 
-Další informace o `unittest` modulu a psaní testů naleznete v [dokumentaci k Pythonu 2.7](https://docs.python.org/2/library/unittest.html) nebo [v dokumentaci k Pythonu 3.7](https://docs.python.org/3/library/unittest.html) (python.org).
+Další informace o `unittest` modulu a zápisu testů naleznete v [dokumentaci k pythonu 2,7](https://docs.python.org/2/library/unittest.html) nebo v [dokumentaci k Python 3,7](https://docs.python.org/3/library/unittest.html) (Python.org).
 
 ## <a name="run-tests"></a>Spouštění testů
 
-V **Průzkumníkovi testů** můžete spouštět testy různými způsoby:
+V **Průzkumníku testů** můžete spouštět testy různými způsoby:
 
-- **Spustit vše** jasně spustí všechny zobrazené testy (s výhradou filtrů).
-- Nabídka **Spustit** poskytuje příkazy pro spuštění neúspěšných, předaný nebo nespouštěné testy jako skupina.
-- Můžete vybrat jeden nebo více testů, klepnout pravým tlačítkem myši a vybrat **možnost Spustit vybrané testy**.
+- **Spustit všechny** jasně spuštěné testy (podléhající filtrům).
+- Nabídka **Spustit** poskytuje příkazy pro spuštění neúspěšných, úspěšných nebo nespuštěných testů jako skupiny.
+- Můžete vybrat jeden nebo více testů, kliknout pravým tlačítkem a vybrat možnost **Spustit vybrané testy**.
 
-Testy spustit na pozadí a **Průzkumník testů** aktualizuje stav každého testu, jak je dokončena:
+Testy spuštěné na pozadí a **Průzkumník testů** aktualizují stav každého testu při jeho dokončení:
 
-- Absolvování testů ukazuje zelené klíště a čas, který trvá na spuštění testu:
+- Průchody testy ukazují zelenou značku a dobu trvání spuštění testu:
 
-    ![test_A předán status](../../media/unit-test-A-pass.png)
+    ![stav předaných test_A](../../media/unit-test-A-pass.png)
 
-- Neúspěšné testy ukazují červený kříž s **odkazem Výstup,** který zobrazuje výstup konzoly a `unittest` výstup z testovacího běhu:
+- Neúspěšné testy ukazují červené křížové propojení s odkazem na **výstup** , který zobrazuje výstup a `unittest` výstup konzoly z testovacího běhu:
 
-    ![test_A stav se nezdařilo.](../../media/unit-test-A-fail.png)
+    ![neúspěšný stav test_A](../../media/unit-test-A-fail.png)
 
-    ![test_A selhals rozumem](../../media/unit-test-A-fail-reason.png)
+    ![test_A se nezdařilo z důvodu](../../media/unit-test-A-fail-reason.png)
 
-## <a name="debug-tests"></a>Testy ladění
+## <a name="debug-tests"></a>Ladit testy
 
-Vzhledem k tomu, že testy částí jsou části kódu, jsou předmětem chyb, stejně jako jakýkoli jiný kód a občas je třeba spustit v ladicím programu. V ladicím programu můžete nastavit zarážky, prozkoumat proměnné a krokovat kód. Visual Studio také poskytuje diagnostické nástroje pro testování částí.
+Vzhledem k tomu, že testy jednotek jsou části kódu, podléhají chybám stejně jako jakýkoli jiný kód a občas je nutné spustit v ladicím programu. V ladicím programu můžete nastavit zarážky, kontrolovat proměnné a krokovat kód. Visual Studio také poskytuje diagnostické nástroje pro testování částí.
 
 > [!Note]
-> Ve výchozím nastavení používá ladění testu ladicí program PTVSD 4. Pokud chcete místo toho použít ptvsd 3, můžete vybrat možnost **Použít starší debugger** v**možnosti** >  **nástroje** > **Python** > **ladění**. 
+> Ve výchozím nastavení používá test ladění pro Visual Studio 2017 ladicí program ptvsd 4 (verze 15,8 a novější) a debugpy pro Visual Studio 2019 (verze 16,5 a novější). Pokud místo toho chcete použít ptvsd 3, můžete vybrat možnost **použít starší verzi ladicího programu** pro **nástroje**s  >  **možnostmi**  >  ladění v**Pythonu**  >  **Debugging**. 
 
-Chcete-li zahájit ladění, nastavte počáteční zarážku v kódu, potom klepněte pravým tlačítkem myši na test (nebo výběr) v **Průzkumníkovi testů** a vyberte **ladění vybraných testů**. Visual Studio spustí ladicí program Pythonu stejně jako pro kód aplikace.
+Chcete-li spustit ladění, nastavte počáteční zarážku v kódu, potom klikněte pravým tlačítkem na test (nebo na výběr) v **Průzkumníku testů** a vyberte možnost **ladit vybrané testy**. Visual Studio spustí ladicí program Pythonu jako kód aplikace.
 
 ![Ladění testu](../../media/unit-test-debugging.png)
 
-Můžete také použít **analyzovat pokrytí kódu pro vybrané testy**. Další informace naleznete [v tématu Použití pokrytí kódu k určení, kolik kódu je testováno](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Můžete také použít možnost **Analyzovat pokrytí kódu pro vybrané testy**. Další informace naleznete v tématu [Použití pokrytí kódu k určení, kolik kódu je testováno](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).

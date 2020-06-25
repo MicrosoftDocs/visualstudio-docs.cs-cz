@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Přemístění instrumentovaných binárních souborů | Dokumenty společnosti Microsoft'
+title: Jak přemístit instrumentované binární soubory | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.binaries
 helpviewer_keywords:
@@ -15,28 +15,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cddbb0b3e27b841441937b7256ea32d722e25f5e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 92ec3bb107c5921c6ac0113e18f1dc35ec3dd07a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74774897"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328808"
 ---
-# <a name="how-to-relocate-instrumented-binaries"></a>Postup: Přemístění instrumentovaných binárních souborů
+# <a name="how-to-relocate-instrumented-binaries"></a>Postupy: přemístění instrumentních binárních souborů
 
-Během instrumentace jsou do binárního souboru vloženy sondy pro měření výkonu aplikace. Pokud se rozhodnete přemístit instrumentovaný binární soubor, je kopie původníbinární soubor instrumentované a dát do zadaného umístění. Tato možnost je užitečná, pokud nechcete, aby profiler přejmenoval původní binární soubor. Pokud binární soubor není přemístěn, původní verze binárního souboru je přepsána.
+Během instrumentace jsou testy vloženy do binárního souboru pro měření výkonu aplikace. Zvolením možnosti přemístit instrumentované binární soubory se zainstrumentuje a umístí se do zadaného umístění kopie původního binárního souboru. Tato možnost je užitečná v případě, že nechcete, aby Profiler přejmenoval původní binární soubor. Pokud binární soubor není přemístěný, původní verze binárního souboru bude přepsána.
 
-## <a name="to-relocate-instrumented-binary"></a>Chcete-li přemístit instrumentované binární
+## <a name="to-relocate-instrumented-binary"></a>Přemístění instrumentované binární
 
-1. V **Průzkumníku výkonu**klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Vlastnosti**.
+1. V **prohlížeč výkonu**klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.
 
-2. Na **stránkách vlastností**klepněte na **vlastnosti Binární.**
+2. Na **stránkách vlastností**klikněte na **binární** vlastnosti.
 
-3. Zaškrtněte **políčko Přemístit instrumentované binární soubory.**
+3. Zaškrtněte políčko **přemístit instrumentované binární soubory** .
 
-4. Zadejte umístění instrumentovaného binárního souboru.
+4. Zadejte umístění pro instrumentované binární soubory.
 
 ## <a name="see-also"></a>Viz také
 
-[Konfigurace výkonových relací](../profiling/configuring-performance-sessions.md)
-[VSInstr](../profiling/vsinstr.md)
+[Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md) 
+ [VSInstr](../profiling/vsinstr.md)

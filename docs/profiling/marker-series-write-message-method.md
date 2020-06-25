@@ -1,26 +1,26 @@
 ---
-title: marker_series::write_message metoda | Dokumenty společnosti Microsoft
+title: 'marker_series:: write_message metoda | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_series::write_message
+- cvmarkersobj/Concurrency, diagnostic::marker_series::write_message
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_series::write_message method
+- Concurrency, diagnostic::marker_series::write_message method
 ms.assetid: 546121bc-67e0-4a5a-a456-12bd78fd6de2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be6194936264d6038c4dc1e26b5d05f539f0dc6a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 14a4cb4a604907908b8f2b35ea0baa583ab1ca57
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62830899"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328301"
 ---
-# <a name="marker_serieswrite_message-method"></a>marker_series::write_message metoda
-Zapíše zprávu do trasovacího souboru vizuále souběžnosti.
+# <a name="marker_serieswrite_message-method"></a>marker_series:: write_message – metoda
+Zapíše zprávu do trasovacího souboru Vizualizátor souběžnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,16 +48,16 @@ void write_message(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_Format`Složený formátovací řetězec, který obsahuje text smíchaný s nulovými nebo více položkami formátu, které odpovídají objektům v seznamu argumentů.
+ `_Format`Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
 
  `_Importance`Úroveň důležitosti.
 
- `_Category`Úroveň category.Importance.
+ `_Category`Category. důležitost úrovně.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkersobj.h*
+ **Záhlaví:** *cvmarkersobj. h*
 
- **Obor názvů:** Souběžnost::diagnostik
+ **Obor názvů:** Concurrency::d odeslání diagnostických
 
 ## <a name="see-also"></a>Viz také
-- [marker_series třída](../profiling/marker-series-class.md)
+- [marker_series – třída](../profiling/marker-series-class.md)

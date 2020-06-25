@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Nastavení aktuální relace | Dokumenty společnosti Microsoft'
+title: Jak nastavit aktuální relaci | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - current performance sessions
 - Performance Explorer, selecting sessions
@@ -16,28 +16,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eb60a431ae1fd1f6d44b8aa1477d74705eb532d7
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778749"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328361"
 ---
-# <a name="how-to-set-the-current-session"></a>Postup: Nastavení aktuální relace
+# <a name="how-to-set-the-current-session"></a>Postupy: nastavení aktuální relace
 
-V **Průzkumníku výkonu**můžete otevřít více relací výkonu a poté vybrat jednu z viditelných relací výkonu, které se mají nastavit jako aktuální relace.
+V **prohlížeč výkonu**můžete otevřít více relací výkonu a pak můžete vybrat jednu z viditelných relací výkonu, které chcete nastavit jako aktuální relaci.
 
-Po nastavení relace jako aktuální relace se klepnutím na **tlačítko Spustit** na panelu nástrojů **Průzkumníka výkonu** spustíprofilování aktuální relace.
+Jakmile nastavíte relaci jako aktuální, po kliknutí na tlačítko **Spustit** na panelu nástrojů **prohlížeč výkonu** se spustí profilace aktuální relace.
 
 ## <a name="to-set-current-performance-session"></a>Nastavení aktuální relace výkonu
 
-- V **Průzkumníku výkonu**klepněte pravým tlačítkem myši na relaci výkonu a potom klepněte na příkaz **Nastavit jako aktuální relaci**.
+- V **prohlížeč výkonu**klikněte pravým tlačítkem myši na výkonnostní relaci a pak klikněte na **nastavit jako aktuální relaci**.
 
      Název relace se zobrazí tučně.
 
 ## <a name="see-also"></a>Viz také
 
-[Konfigurovat výkonové relace](../profiling/configuring-performance-sessions.md)
-[Okno](../profiling/performance-explorer-window.md)
-Sledování výkonu[Vlastnosti](../profiling/performance-session-properties.md)
-relace[výkonu Přehled relací výkonu](../profiling/performance-session-overview.md)
+[Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md) 
+ [Prohlížeč výkonu okno](../profiling/performance-explorer-window.md) 
+ [Vlastnosti](../profiling/performance-session-properties.md) 
+ výkonnostní relace [Přehled výkonnostní relace](../profiling/performance-session-overview.md)

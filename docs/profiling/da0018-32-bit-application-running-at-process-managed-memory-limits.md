@@ -1,7 +1,7 @@
 ---
-title: 'DA0018: 32bitová aplikace spuštěná při omezení chované paměti procesu | Dokumenty společnosti Microsoft'
+title: DA0018-32-bitová aplikace spuštěná v limitech paměti spravovaného procesu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.18
 - vs.performance.DA0018
@@ -13,60 +13,60 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7bebd25f499131b4beda109ebb9ac468c2435b1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 43535ed4a2e4e3a941b18fe315c3a5015639a0c6
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74780062"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328426"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: 32bitová aplikace spuštěná s omezením paměti spravované procesem
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018:32-bitová aplikace spuštěná v limitech paměti spravovaného procesu
 
 |||
 |-|-|
-|Id pravidla|DA0018|
-|Kategorie|Využití nástrojů profilování|
-|Metoda profilování|Vzorkování|
-|Zpráva|Přidělení spravované paměti blížící se výchozímu limitu pro 32bitový proces. Aplikace může být vázána na paměť.|
+|ID pravidla|DA0018|
+|Kategorie|Využití Nástroje pro profilaci|
+|Metoda profilace|Vzorkování|
+|Zpráva|Přidělení spravované paměti se blíží výchozímu limitu pro 32 proces. Vaše aplikace může být vázaná na paměť.|
 |Typ pravidla|Upozornění|
 
- Při profilování pomocí vzorkování, .NET paměti nebo prostředků konfliktmetody, je nutné shromáždit alespoň 10 vzorků k aktivaci tohoto pravidla.
+ Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.
 
 ## <a name="cause"></a>Příčina
- Systémová data shromážděná během profilování znamená, že hromady paměti rozhraní .NET Framework se přiblížily maximální velikosti, které mohou spravované hromady dosáhnout v 32bitovém procesu. Tato maximální velikost je výchozí hodnota. Je založen na celkové mno ství adresního prostoru procesu, který lze přidělit soukromým bajtům. Vykázaná hodnota je maximální pozorovaná hodnota hromad, zatímco profilovaný proces byl aktivní. Zvažte profilování znovu pomocí metody profilování paměti .NET a optimalizaci použití spravovaných prostředků aplikací.
+ Systémová data shromážděná během procesu profilace označují, že haldy .NET Framework paměti dosáhly maximální velikosti, ke které mají spravované haldy přístup v 32m procesu. Tato maximální velikost je výchozí hodnota. Vychází z celkového množství adresního prostoru procesu, který se dá přidělit pro soukromé bajty. Hlášená hodnota je maximální zjištěná hodnota haldy během aktivního procesu profilace. Zvažte opětovné vytvoření profilace pomocí metody profilace paměti .NET a optimalizace použití spravovaných prostředků aplikací.
 
- Při velikosti spravované hromady přístup výchozí limit, proces automatické uvolňování paměti může být vyvolána častěji. To zvyšuje režii správy paměti.
+ Pokud velikost spravovaných hald přiblíží výchozímu limitu, může být potřeba vyvolat častěji proces automatického uvolňování paměti. Tím se zvyšuje režie správy paměti.
 
- Pravidlo pouze pro 32bitové aplikace spuštěné na 32bitových počítačích.
+ Pravidlo se aktivuje jenom pro 32 aplikace běžící na 32 počítačích.
 
 ## <a name="rule-description"></a>Popis pravidla
- Microsoft .NET společný jazyk run-time (CLR) poskytuje mechanismus automatické správy paměti, který používá systém uvolňování paměti k uvolnění paměti z objektů, které aplikace již nepoužívá. Systém uvolňování paměti je orientován na generování na základě předpokladu, že mnoho přidělení jsou krátkodobé. Místní proměnné, například, by měl být krátkodobý. Nově vytvořené objekty spustit v generaci 0 (gen 0), a pak jejich průběh generace 1 při jejich přežití spuštění uvolňování paměti a nakonec přechod na generaci 2, pokud aplikace stále používá.
+ Modul CLR (Common Language Runtime) platformy Microsoft .NET poskytuje automatický mechanismus správy paměti, který používá systém uvolňování paměti k uvolnění paměti z objektů, které aplikace již nepoužívá. Systém uvolňování paměti je zaměřený na generaci, a to na základě předpokladu, že mnoho přidělení je krátkodobé. Místní proměnné, například by měly být krátkodobé. Nově vytvořené objekty začínají v generaci 0 (gen 0) a poté budou dokončeny na generaci 1, když přestanou běžet v uvolňování paměti, a nakonec přechod na generaci 2, pokud je aplikace stále používá.
 
- Spravované objekty, které jsou větší než 85 kB jsou přiděleny na haldy velkého objektu, kde jsou předmětem méně časté uvolňování paměti a zhutnění než menší objekty. velké objekty jsou spravovány samostatně, protože se předpokládá, že jsou trvalejší a protože míchání trvalé a velké objekty s často přidělené menší objekty může způsobit nejhorší přetypování fragmentace haldy.
+ Spravované objekty, které jsou větší než 85 KB, jsou přidělovány Large Object haldě, kde se vztahují k méně častým uvolňováním paměti a komprimaci než menší objekty. velké objekty jsou spravovány samostatně, protože se předpokládá, že jsou trvalé a protože kombinace trvalých a velkých objektů s často přidělenými menšími objekty může způsobit fragmentaci haldy v horším přetypování.
 
- Jako celková velikost spravované hromady přístup výchozí limit, režie správy paměti obvykle zvyšuje do bodu, kde může začít mít vliv na odezvu a škálovatelnost aplikace.
+ Vzhledem k tomu, že celková velikost spravovaných hald se blíží k výchozímu limitu, režie správy paměti obvykle roste na místo, kde může začít ovlivňovat odezvu a škálovatelnost aplikace.
 
-## <a name="how-to-investigate-a-warning"></a>Jak prošetřit varování
- Poklepáním na zprávu v okně Seznam chyb přejděte do zobrazení [Značky.](../profiling/marks-view.md) Najít **.NET CLR\\paměti # bajty ve všech hromady** a **# Celkem potvrzených bajtů** sloupce. Zjistěte, zda existují určité fáze provádění programu, kde je přidělení spravované paměti těžší než jiné fáze. Porovnejte hodnoty **# Bajty ve všech hedžových** sloupcích s rychlostí uvolňování paměti vykázané v **paměti\\.NET CLR # kolekcí Gen 0**, paměti **.NET CLR\\# kolekcí Gen 1**a **.NET CLR Memory\\# sloupců Gen 2 Collections,** abyste zjistili, zda vzorek přidělení spravované paměti ovlivňuje rychlost uvolňování paměti.
+## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění
+ Dvojitým kliknutím na zprávu v okně Seznam chyb přejdete do zobrazení [značky](../profiling/marks-view.md) . Vyhledá **paměť .NET CLR \\ počet bajtů ve všech haldách** a sloupcích **# celkem potvrzených bajtů** . Určete, zda existují konkrétní fáze provádění programu, kde je přidělení spravované paměti těžší než jiné fáze. Porovnejte hodnoty ve sloupci **počet bajtů ve všech haldách** s frekvencí uvolňování paměti nahlášené v **paměti .NET CLR pro \\ kolekce 1**. generace, v **paměti .NET CLR \\ # z kolekcí 1**. generace a v **paměti .NET CLR. \\ # 2** . generace mají vliv na rychlost uvolňování paměti.
 
- V aplikaci rozhraní .NET Framework čas common language runtime omezuje celkovou velikost spravovaných hromad na o něco menší než polovinu maximální velikosti soukromé části prostoru adresního prostoru procesu. Pro 32bitové procesy spuštěné na 32bitovém počítači představuje 2 GB horní limit soukromé části adresního prostoru procesu. Jako celková velikost spravované hromady začne blížit jeho výchozí limit, režie správy paměti může zvýšit a výkon aplikace může snížit.
+ V aplikaci .NET Framework modul CLR (Common Language Runtime) omezuje celkovou velikost spravovaných hald na méně než jednu polovinu maximální velikosti privátní oblasti v adresním prostoru procesu. Pro 32 procesy běžící na 32 počítači představuje 2 GB horní limit soukromé části adresního prostoru procesu. Vzhledem k tomu, že celková velikost spravovaných hald začíná pro přístup k jejímu výchozímu limitu, může dojít ke zvýšení režie správy paměti a snížení výkonu aplikace.
 
- Pokud je problém s nadměrnou režií spravované paměti, zvažte některou z těchto možností:
+ Pokud se jedná o problém nadměrné nároky na spravovanou paměť, vezměte v úvahu jednu z těchto možností:
 
-- optimalizace využití prostředků spravované paměti aplikací
+- optimalizace využití spravovaných paměťových prostředků aplikací
 
    -nebo-
 
-- podniknutí kroků ke zmírnění architektonických omezení maximální velikosti virtuální paměti pro 32bitový proces
+- Postup uvolnění omezení architektury pro maximální velikost virtuální paměti pro 32 proces
 
-  Chcete-li optimalizovat využití prostředků spravované paměti aplikací, shromážděte data přidělení spravované paměti v systému profilování přidělení paměti .NET. Zkontrolujte sestavy [zobrazení paměti .NET,](../profiling/dotnet-memory-data-views.md) abyste pochopili vzor přidělení paměti aplikace.
+  Chcete-li optimalizovat využití spravovaných paměťových prostředků aplikací, Shromážděte data přidělení spravované paměti v běhu profilování přidělení paměti .NET. Projděte si sestavy [zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md) , abyste pochopili, jaký je model přidělení paměti aplikace.
 
-  Pomocí [zobrazení životnosti objektu](../profiling/object-lifetime-view.md) určete, které datové objekty programu přežívají do generování a pak jsou odtud rekultivovány.
+  Pomocí [zobrazení životnosti objektů](../profiling/object-lifetime-view.md) určete, který z datových objektů programu je v generaci, a pak se z něj uvolní.
 
-  Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) určete cestu spuštění, která vedla k těmto přidělením.
+  Pomocí [zobrazení přidělení](../profiling/dotnet-memory-allocations-view.md) Určete cestu spuštění, která je výsledkem těchto přidělení.
 
-  Další informace o tom, jak zlepšit výkon uvolňování paměti, naleznete v technickém článku rozhraní .NET [Framework, Garbage Collector Basics a Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu MSDN.
+  Další informace o tom, jak zlepšit výkon uvolňování paměti, najdete v článku .NET Framework technické články, [základy systému uvolňování paměti a tipy k výkonu](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) na webu MSDN.
 
-  Chcete-li získat odlehčení architektury od omezení virtuální paměti na velikost soukromé části adresního prostoru procesu, zkuste spustit tento 32bitový proces v 64bitovém počítači.  32bitový proces v 64bitovém počítači může získat až 4 GB privátní virtuální paměti.
+  Chcete-li získat strukturální úlevy z omezení virtuální paměti na velikost soukromé části adresního prostoru procesu, zkuste spustit tento 32 proces na 64 počítači.  32 proces na 64 počítači může získat až 4 GB privátní virtuální paměti.
 
-  64bitový proces spuštěný na 64bitovém počítači může získat až 8 TB virtuální paměti. Zvažte rekompilaci aplikace ke spuštění jako nativní 64bitová aplikace. Toto pravidlo je pouze pro informaci a nemusí vyžadovat nápravná opatření.
+  64 proces, který běží na 64 počítači, může získat až 8 TB virtuální paměti. Zvažte opětovné kompilování aplikace, aby byla spuštěna jako nativní 64 aplikace. Toto pravidlo je pouze pro informace a nemusí vyžadovat nápravné akce.

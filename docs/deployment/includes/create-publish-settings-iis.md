@@ -1,23 +1,25 @@
 ---
-ms.openlocfilehash: 69f4f4c2b55670d510652b44a203b9f0eafcc53a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: b8002d9e911c8d8c07a5aaf5286168e49a374a7c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143548"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292123"
 ---
 
-1. Zavřete a znovu otevřete Konzolu pro správu služby IIS a zobrazte aktualizované možnosti konfigurace v ui.
+1. Zavřete a znovu otevřete konzolu pro správu služby IIS, abyste zobrazili aktualizované možnosti konfigurace v uživatelském rozhraní.
 
-2. Ve službě IIS klepněte pravým tlačítkem myši na **výchozí web**a zvolte **možnost Nasadit** > **konfigurovat publikování na nasazení webu**.
+2. Ve službě IIS klikněte pravým tlačítkem na **výchozí web**a vyberte **nasadit**  >  **Konfigurovat nasazení webu publikování**.
 
-    ![Konfigurace konfigurace nasazení webu](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
+    ![Konfigurace konfigurace Nasazení webu](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
 
-3. V dialogovém okně **Konfigurovat publikování na nasazení webu** zkontrolujte nastavení.
+   Pokud se nabídka **nasadit** nezobrazuje, Projděte si předchozí část a ověřte, jestli je spuštěná nasazení webu.
 
-4. Klepněte na **položku Nastavení**.
+3. V dialogovém okně **Konfigurace publikování nasazení webu** prověřte nastavení.
 
-    V panelu **Výsledky** výstup ukazuje, že přístupová práva jsou udělena určenému uživateli a že soubor s příponou *souboru .publishsettings* byl vygenerován v umístění zobrazeném v dialogovém okně.
+4. Klikněte na tlačítko **nastavit**.
+
+    Na panelu **výsledky** zobrazuje výstup oprávnění pro přístup k zadanému uživateli a soubor s příponou *. publishsettings* byl vygenerován v umístění zobrazeném v dialogovém okně.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -34,14 +36,14 @@ ms.locfileid: "68143548"
     </publishData>
     ```
 
-    V závislosti na konfiguraci systému Windows Server a služby IIS se v souboru XML zobrazují různé hodnoty. Zde je několik podrobností o zobrazených hodnotách:
+    V závislosti na konfiguraci Windows serveru a IIS se v souboru XML zobrazí různé hodnoty. Tady je několik podrobností o zobrazených hodnotách:
 
-   * Soubor *msdeploy.axd* odkazovaný `publishUrl` v atributu je dynamicky generovaný soubor obslužné rutiny HTTP pro nasazení webu. (Pro účely `http://myhostname:8172` testování, obecně funguje také.)
-   * Port `publishUrl` je nastaven na port 8172, což je výchozí pro nasazení webu.
-   * Port `destinationAppUrl` je nastaven na port 80, což je výchozí pro iis.
-   * Pokud se nemůžete připojit ke vzdálenému hostiteli v sadě Visual Studio pomocí názvu hostitele (v pozdějších krocích), otestujte adresu IP místo názvu hostitele.
+   * Soubor *MSDeploy. axd* , na který se odkazuje v `publishUrl` atributu, je dynamicky generovaný soubor obslužné rutiny HTTP pro nasazení webu. ( `http://myhostname:8172` Obecně funguje i pro účely testování.)
+   * `publishUrl`Port je nastaven na port 8172, což je výchozí hodnota pro nasazení webu.
+   * `destinationAppUrl`Port je nastaven na port 80, což je výchozí hodnota pro službu IIS.
+   * Pokud se nemůžete připojit ke vzdálenému hostiteli v aplikaci Visual Studio pomocí názvu hostitele (v pozdějších krocích), otestujte IP adresu místo názvu hostitele.
 
      > [!NOTE]
-     > Pokud publikujete do služby IIS spuštěné na virtuálním počítači Azure, musíte otevřít porty Nasazení webu a IIS ve skupině Zabezpečení sítě. Podrobné informace naleznete v [tématu Instalace a spuštění služby IIS](/azure/virtual-machines/windows/quick-create-portal#install-web-server).
+     > Pokud publikujete do služby IIS běžící na virtuálním počítači Azure, musíte otevřít Nasazení webu a porty služby IIS ve skupině zabezpečení sítě. Podrobné informace najdete v tématu [instalace a spuštění služby IIS](/azure/virtual-machines/windows/quick-create-portal#install-web-server).
 
-5. Zkopírujte tento soubor do počítače, ve kterém používáte visual studio.
+5. Zkopírujte tento soubor do počítače, na kterém je spuštěná aplikace Visual Studio.

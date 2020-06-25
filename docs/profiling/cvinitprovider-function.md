@@ -1,7 +1,7 @@
 ---
-title: Funkce CvInitProvider | Dokumenty společnosti Microsoft
+title: Funkce CvInitProvider – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvInitProvider
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a97be63cd782397e984fd8dbce7da844efa07540
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b06190568454977bfcb54d65db9011fc979f7591
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552664"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329562"
 ---
-# <a name="cvinitprovider-function"></a>CvInitProvider
-Inicializuje zprostředkovatele značky. Musí být volána před všechny ostatní funkce souběžnosti Vizulizátor SDK.
+# <a name="cvinitprovider-function"></a>CvInitProvider – – funkce
+Inicializuje poskytovatele značek. Musí být volána před jakoukoliv funkcí Vizualizátor souběžnosti sady SDK.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pGuid`Identifikátor GUID zprostředkovatele. Nemůže být null.
+ `pGuid`Identifikátor GUID zprostředkovatele Nemůže mít hodnotu NULL.
 
- `ppProvider`Adresa výstupní proměnné, která bude ukládat kontext zprostředkovatele. Nemůže být null.
+ `ppProvider`Adresa výstupní proměnné, která bude ukládat kontext poskytovatele. Nemůže mít hodnotu NULL.
 
-## <a name="return-value"></a>Návratová hodnota
- S_OK, kdy je zprostředkovatel úspěšně inicializován, nebo kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte následující/neúspěšná makra.
+## <a name="return-value"></a>Vrácená hodnota
+ S_OK při úspěšné inicializaci poskytovatele nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkers.h*
+ **Záhlaví:** *cvmarkers. h*
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C++](../profiling/cpp-library-reference.md)
+- [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)
