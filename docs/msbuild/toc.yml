@@ -11,6 +11,8 @@
         - name: Přehled
           displayName: msbuild concepts
           href: msbuild-concepts.md
+        - name: Jak MSBuild sestavuje projekty
+          href: build-process-overview.md
         - name: Vlastnosti
           items:
             - name: vlastnosti nástroje MSBuild

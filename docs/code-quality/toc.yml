@@ -551,6 +551,14 @@
                   href: ca1828.md
                 - name: 'CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count'
                   href: ca1829.md
+                - name: 'CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan'
+                  href: ca1831.md
+                - name: 'CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
+                  href: ca1832.md
+                - name: 'CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
+                  href: ca1833.md
+                - name: 'CA1835: Pro metody Stream ReadAsync/WriteAsync preferovat přetížení paměti'
+                  href: ca1835.md
             - name: Upozornění přenositelnosti
               items:
                 - name: Přehled
@@ -585,6 +593,12 @@
                   href: ca2009.md
                 - name: 'CA2011: Nepřiřazujte vlastnost v rámci její metody setter'
                   href: ca2011.md
+                - name: 'CA2012: Správně použít hodnoty ValueTask'
+                  href: ca2012.md
+                - name: 'CA2013: Nepoužívejte ReferenceEquals s typy hodnot'
+                  href: ca2013.md
+                - name: 'CA2014: Nepoužívat stackalloc ve smyčkách'
+                  href: ca2014.md
                 - name: 'CA2015: Pro typy odvozené z MemoryManager<T> nedefinujte finalizační metody'
                   href: ca2015.md
             - name: Upozornění zabezpečení
@@ -750,6 +764,8 @@
                   href: ca5358.md
                 - name: 'CA5359: Nezakazovat ověření certifikátu'
                   href: ca5359.md
+                - name: 'CA5360: Nevolejte nebezpečné metody při deserializaci'
+                  href: ca5360.md
                 - name: 'CA5361: Nezakazovat zprostředkovateli SChannel použití silného šifrování'
                   href: ca5361.md
                 - name: 'CA5362: Potenciální cyklus odkazů v deserializovaném grafu objektů'
@@ -778,6 +794,12 @@
                   href: ca5373.md
                 - name: 'CA5374: Nepoužívat XslTransform'
                   href: ca5374.md
+                - name: 'CA5375: Nepoužívat sdílený přístupový podpis účtu'
+                  href: ca5375.md
+                - name: 'CA5376: Použít SharedAccessProtocol HttpsOnly'
+                  href: ca5376.md
+                - name: 'CA5377: Použít zásady přístupu na úrovni kontejneru'
+                  href: ca5377.md
                 - name: 'CA5378: Nezakazujte ServicePointManagerSecurityProtocols'
                   href: ca5378.md
                 - name: 'CA5379: Nepoužívejte slabý algoritmus funkce odvození klíče (KDF).'
@@ -804,8 +826,16 @@
                   href: ca5389.md
                 - name: 'CA5390: Nepoužívejte pevně zakódovaný šifrovací klíč.'
                   href: ca5390.md
+                - name: 'CA5391: Používat tokeny proti padělkům v kontrolerech MVC ASP.NET Core'
+                  href: ca5391.md
+                - name: 'CA5392: Používat při voláních nespravovaného kódu atribut DefaultDllImportSearchPaths'
+                  href: ca5392.md
+                - name: 'CA5393: Nepoužívat nebezpečnou hodnotu DllImportSearchPath'
+                  href: ca5393.md
                 - name: 'CA5394: Nepoužívat nezabezpečenou náhodnost'
                   href: ca5394.md
+                - name: 'CA5395: Chybějící atribut HttpVerb pro metody akce'
+                  href: ca5395.md
                 - name: 'CA5396: Nastavit HttpOnly na hodnotu true pro HttpCookie'
                   href: ca5396.md
                 - name: 'CA5397: Nepoužívejte zastaralé hodnoty SslProtocols'
@@ -919,5 +949,7 @@
                   href: ca2245.md
                 - name: 'CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.'
                   href: ca2246.md
+                - name: 'CA2248: Poskytněte prosím do Enum.HasFlag správný argument enum'
+                  href: ca2248.md
             - name: Automatické pozastavení funkce
               href: automatic-feature-suspension.md

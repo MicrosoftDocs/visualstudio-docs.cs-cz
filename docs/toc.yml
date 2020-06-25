@@ -154,9 +154,9 @@
       href: ide/quickstart-visual-basic-console.md
 - name: Kurzy
   items:
-    - name: 'C#'
+    - name: C#
       href: get-started/csharp/
-    - name: 'F#'
+    - name: F#
       href: /dotnet/fsharp/
     - name: Visual Basic
       href: get-started/visual-basic/
@@ -202,7 +202,7 @@
           items:
             - name: Správa nastavení aplikace (.NET)
               href: ide/managing-application-settings-dotnet.md
-            - name: 'Přidání konfiguračního souboru aplikace do projektu C#'
+            - name: Přidání konfiguračního souboru aplikace do projektu C#
               href: ide/how-to-add-app-config-file.md
         - name: Podepsání manifestů
           items:
@@ -291,7 +291,7 @@
               items:
                 - name: Používání fragmentů kódu
                   href: ide/code-snippets.md
-                - name: 'Referenční informace k fragmentům kódu C#'
+                - name: Referenční informace k fragmentům kódu C#
                   href: ide/visual-csharp-code-snippets.md
                 - name: Referenční informace k fragmentům kódu C++
                   href: ide/visual-cpp-code-snippets.md
@@ -325,10 +325,16 @@
                   href: ide/reference/generate-method.md
                 - name: Generování pole / vlastnosti / místní funkce
                   href: ide/reference/generate-field-property-local.md
+                - name: Generování operátorů porovnání pro rozhraní IComparable
+                  href: ide/reference/generate-comparison-operators.md
                 - name: Generování konstruktoru
                   href: ide/reference/generate-constructor.md
                 - name: Generování dekonstruktorů
                   href: ide/reference/generate-deconstructor.md
+                - name: Generování operátorů IEquatable pro struktury
+                  href: ide/reference/generate-equals-structs.md
+                - name: Přidání hlavičky souboru
+                  href: ide/reference/add-file-header.md
                 - name: Přidání explicitního přetypování
                   href: ide/reference/add-explicit-cast.md
                 - name: Přidání parametru do metody
@@ -368,6 +374,8 @@
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: Konverze mezi metodou a vlastností Get
                   href: ide/reference/convert-get-method-to-property.md
+                - name: Převod mezi literály běžných řetězců a literály doslovných řetězců
+                  href: ide/reference/convert-between-regular-string-verbatim-string.md
                 - name: Převod místní funkce na metodu
                   href: ide/reference/convert-local-function-method.md
                 - name: Převod smyčky foreach na LINQ
@@ -378,6 +386,8 @@
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: Převedení příkazu switch na výraz switch
                   href: ide/reference/convert-switch-statement-to-switch-expression.md
+                - name: Doplňování řetězcových literálů DateTime a TimeSpan
+                  href: ide/reference/datetime-timespan-completion.md
                 - name: Zapouzdření pole
                   href: ide/reference/encapsulate-field.md
                 - name: Extrahování rozhraní
@@ -412,6 +422,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: přejmenování
                   href: ide/reference/rename.md
+                - name: Zjednodušení logických výrazů
+                  href: ide/reference/simplify-conditional-expression.md
                 - name: Zjednodušení interpolace řetězců
                   href: ide/reference/simplify-string-interpolation.md
                 - name: Řazení direktiv using
@@ -438,7 +450,7 @@
               href: ide/using-intellisense.md
             - name: Visual Basic IntelliSense
               href: ide/visual-basic-specific-intellisense.md
-            - name: 'C# IntelliSense'
+            - name: C# IntelliSense
               href: ide/visual-csharp-intellisense.md
             - name: JavaScript IntelliSense
               href: ide/javascript-intellisense.md
@@ -583,7 +595,7 @@
           href: ide/productivity-features.md
         - name: Produktivita – klávesové zkratky
           href: ide/productivity-shortcuts.md
-        - name: 'Tipy pro vývojáře C#'
+        - name: Tipy pro vývojáře C#
           displayName: ReSharper
           href: ide/csharp-developer-productivity.md
         - name: Přizpůsobení klávesových zkratek
@@ -684,9 +696,9 @@
                       href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
                     - name: 'Krok 9: Vyzkoušení dalších funkcí'
                       href: ide/step-9-try-other-features.md
-        - name: 'F#'
+        - name: F#
           items:
-            - name: 'Vývoj v jazyce F#'
+            - name: Vývoj v jazyce F#
               href: ide/fsharp-visual-studio.md
             - name: Cílení na starší verze rozhraní .NET
               href: ide/fsharp-target-older-dotnet-versions.md
@@ -851,7 +863,7 @@
       href: /azure/devops/pipelines/index?view=vsts
     - name: Určení událostí sestavení (Visual Basic)
       href: ide/how-to-specify-build-events-visual-basic.md
-    - name: 'Určení událostí sestavení (C#)'
+    - name: Určení událostí sestavení (C#)
       href: ide/how-to-specify-build-events-csharp.md
     - name: Konfigurace upozornění v jazyce Visual Basic
       href: ide/configuring-warnings-in-visual-basic.md
@@ -1122,7 +1134,7 @@
                       href: ide/code-styles-and-code-cleanup.md
                     - name: IntelliSense
                       href: ide/visual-basic-specific-intellisense.md
-                - name: 'C#'
+                - name: C#
                   items:
                     - name: Upřesnit
                       href: ide/reference/options-text-editor-csharp-advanced.md
@@ -1140,7 +1152,7 @@
                       href: ide/reference/options-text-editor-c-cpp-formatting.md
                     - name: Zobrazit
                       href: ide/reference/options-text-editor-c-cpp-view.md
-                - name: 'F#'
+                - name: F#
                   items:
                     - name: Upřesnit
                       href: ide/reference/options-text-editor-fsharp-advanced.md
@@ -1223,7 +1235,7 @@
               items:
                 - name: Stránka Sestavení
                   href: ide/reference/build-page-project-designer-csharp.md
-                - name: 'Dialogové okno Upřesnit nastavení sestavení (C#)'
+                - name: Dialogové okno Upřesnit nastavení sestavení (C#)
                   href: ide/reference/advanced-build-settings-dialog-box-csharp.md
             - name: 'Analýza kódu, návrhář projektu'
               href: ide/reference/code-analysis-project-designer.md

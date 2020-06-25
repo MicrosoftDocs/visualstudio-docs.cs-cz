@@ -2,6 +2,8 @@
   href: index.yml
 - name: Přehled XAML
   href: xaml-overview.md
+- name: Editor kódu XAML
+  href: xaml-code-editor.md
 - name: Návrhář XAML
   items:
     - name: Návrh XAML v sadě Visual Studio a Blendu

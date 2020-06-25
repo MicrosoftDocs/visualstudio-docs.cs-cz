@@ -8,55 +8,65 @@ metadata:
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
-  ms.date: 10/30/2019
-  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.date: 06/03/2020
+  ms.openlocfilehash: 4f522f6613424c3251344207381d2eaf31705c9c
+  ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "79549918"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85289115"
 landingContent:
-- title: Informace o profilaci
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: První seznámení s nástroji pro profilaci
-      url: profiling-feature-tour.md
-  - linkListType: concept
-    links:
-    - text: Způsoby spuštění nástrojů pro profilaci
-      url: running-profiling-tools-with-or-without-the-debugger.md
 - title: Začínáme
   linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Analýza využití procesoru (C#, Visual Basic)
-      url: quickstart-cpu-usage-managed.md
-    - text: Analýza využití procesoru (C++)
-      url: quickstart-cpu-usage-native.md
-    - text: Analýza využití procesoru (ASP.NET)
-      url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
     - text: Začínáme s analýzou využití procesoru
       url: beginners-guide-to-performance-profiling.md
     - text: Začínáme s měřením využití paměti
       url: memory-usage.md
-- title: Další nástroje pro měření výkonu
-  linkLists:
   - linkListType: how-to-guide
     links:
     - text: Tipy pro výkon
       url: perftips.md
-    - text: Měření využití procesoru z příkazového řádku
-      url: profile-apps-from-command-line.md
-    - text: Měření využití paměti u objektů .NET
+- title: Základy
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: První seznámení s nástroji pro profilaci
+      url: profiling-feature-tour.md
+    - text: Způsoby spuštění nástrojů pro profilaci
+      url: running-profiling-tools-with-or-without-the-debugger.md
+  - linkListType: concept
+    links:
+    - text: Porozumění metodám shromažďování údajů o výkonu
+      url: understanding-performance-collection-methods-perf-profiler.md
+- title: Nástroje pro měření výkonu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Využití procesoru
+      url: cpu-usage.md
+    - text: Databáze
+      url: analyze-database.md
+    - text: Prohlížeč událostí
+      url: events-viewer.md
+    - text: Využití paměti
+      url: memory-usage-without-debugging2.md
+    - text: Sledování přidělování objektů .NET
       url: dotnet-alloc-tool.md
+    - text: Využití GPU (Direct3D)
+      url: gpu-usage.md
+    - text: .NET Async
+      url: analyze-async.md
     - text: Analýza spotřeby prostředků (XAML)
       url: application-timeline.md
-    - text: Analýza využití GPU (Direct3D)
-      url: gpu-usage.md
-    - text: Analýza využití sítě (UPW)
-      url: network-usage.md
-    - text: Analýza spotřeby energie (UPW)
-      url: analyze-energy-use-in-store-apps.md
+- title: Příručky
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Optimalizace nastavení profileru
+      url: optimize-profiler-settings.md
+    - text: Měření výkonu z příkazového řádku
+      url: profile-apps-from-command-line.md
+    - text: Souběžné používání více nástrojů profileru
+      url: use-multiple-profiler-tools-simultaneously.md

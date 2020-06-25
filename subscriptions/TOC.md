@@ -74,6 +74,7 @@
 ### [Supersprávci a správci](admin-roles.md)
 ### [Nastavení předvoleb smluv](admin-prefs.md)
 ### [Přehled](using-admin-portal.md)
+### [Přidání měsíčních předplatných](add-monthly-subs.md)
 ### Přiřazení předplatných
 #### [Přidání jednotlivých uživatelů](assign-license.md)
 #### [Přidání více uživatelů](assign-license-bulk.md)

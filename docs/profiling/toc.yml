@@ -1,11 +1,13 @@
 - name: Dokumentace k profilaci
   href: index.yml
 - name: Přehled
-  href: profiling-overview.md
-- name: Rychlý start
   items:
     - name: První seznámení s profilací
       href: profiling-feature-tour.md
+    - name: Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
+      href: running-profiling-tools-with-or-without-the-debugger.md
+- name: Rychlý start
+  items:
     - name: Analýza využití procesoru (spravovaný)
       href: quickstart-cpu-usage-managed.md
     - name: Analýza využití procesoru (nativní)
@@ -20,12 +22,22 @@
       href: memory-usage.md
 - name: Koncepty
   items:
-    - name: Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
-      href: running-profiling-tools-with-or-without-the-debugger.md
+    - name: Porozumění metodám shromažďování údajů o výkonu
+      href: understanding-performance-collection-methods-perf-profiler.md
+    - name: Optimalizace nastavení profileru
+      href: optimize-profiler-settings.md
+    - name: Souběžné používání více nástrojů profileru
+      href: use-multiple-profiler-tools-simultaneously.md
 - name: Návody
   items:
-    - name: Použití tipů pro výkon
+    - name: Tipy pro výkon
       href: perftips.md
+    - name: .NET Async
+      href: analyze-async.md
+    - name: Databáze
+      href: analyze-database.md
+    - name: Prohlížeč událostí
+      href: events-viewer.md
     - name: Využití procesoru
       href: cpu-usage.md
     - name: Využití paměti
