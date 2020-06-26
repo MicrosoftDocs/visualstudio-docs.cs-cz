@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Určení obsahu pro technickou podporu | Dokumentace Microsoftu'
+title: Jak zadat odkaz na technickou podporu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,30 +20,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a050ae24ddb5b796acf101e0432a5b64cd28031
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e64ef97b8b51f8a943e216bad67ec300026d5654
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382052"
 ---
-# <a name="how-to-specify-a-link-for-technical-support"></a>Postupy: Určení obsahu pro technickou podporu
-Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, **adresu URL podpory** vlastnost identifikuje webové stránky nebo sdílené složky, kde mohou uživatelé získat informace o aplikaci. Tato vlastnost je volitelná. Pokud je zadán, adresa URL se zobrazí v vstupní aplikace **přidat nebo odebrat programy** dialogové okno.
+# <a name="how-to-specify-a-link-for-technical-support"></a>Postupy: určení odkazu na technickou podporu
+Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vlastnost **URL podpory** identifikuje webovou stránku nebo sdílenou složku, kde mohou uživatelé přejít k získání informací o aplikaci. Tato vlastnost je nepovinná; Pokud je tato adresa URL k dispozici, zobrazí se v dialogovém okně **Přidat nebo odebrat programy** v položce aplikace.
 
- **Adresu URL podpory** vlastnost lze nastavit na **publikovat** stránku **Návrháře projektu**.
+ Vlastnost **Adresa URL podpory** se dá nastavit na stránce **publikovat** v **Návrháři projektu**.
 
-### <a name="to-specify-a-support-url"></a>Chcete-li určit adresu URL podpory
+### <a name="to-specify-a-support-url"></a>Určení adresy URL podpory
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **publikovat** kartu.
+2. Klikněte na kartu **publikovat** .
 
-3. Klikněte na tlačítko **možnosti** tlačítko Otevřít **možnosti publikování** dialogové okno.
+3. Kliknutím na tlačítko **Možnosti** otevřete dialogové okno **Možnosti publikování** .
 
-4. Klikněte na tlačítko **popis**.
+4. Klikněte na **Popis**.
 
-5. V **adresu URL podpory** pole, zadejte plně kvalifikovanou cestu k webové stránky, webové stránky nebo UNC sdílené složky.
+5. Do pole **Adresa URL podpory** zadejte plně kvalifikovanou cestu k webu, webové stránce nebo sdílené složce UNC.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Nastavení publikování ClickOnce verze | Dokumentace Microsoftu'
+title: Jak nastavit publikování ClickOnce verze | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2bd526203b777bafd77c79a4934d1f3e8754dee
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: df5e1d91de14e3da4f188c276ef7dd74943d8978
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406847"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382117"
 ---
-# <a name="how-to-set-the-clickonce-publish-version"></a>Postupy: Nastavení publikování ClickOnce verze
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` Vlastnost určuje, zda aplikace, které publikujete bude považována za aktualizace. Každá verze se zvýší, aplikace bude publikována jako aktualizace.
+# <a name="how-to-set-the-clickonce-publish-version"></a>Postupy: nastavení verze publikování ClickOnce
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` Vlastnost určuje, zda bude aplikace, kterou publikujete, považována za aktualizaci. Pokaždé, když se verze zvýší, aplikace se publikuje jako aktualizace.
 
- `Publish Version` Vlastnost lze nastavit na **publikovat** stránku **Návrháře projektu**.
+ `Publish Version`Vlastnost lze nastavit na stránce **publikovat** v **Návrháři projektu**.
 
 > [!NOTE]
-> Projekt možnost, bude automaticky zvýší `Publish Version` vlastnost pokaždé, když je aplikace publikována, tato možnost je standardně povolená. Další informace najdete v tématu [jak: Automaticky ClickOnce Inkrementace verze publikování](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md).
+> K dispozici je možnost projektu, která bude automaticky zvyšovat hodnotu `Publish Version` vlastnosti při každém publikování aplikace. Tato možnost je ve výchozím nastavení povolena. Další informace najdete v tématu [Postup: automatické zvýšení verze publikování ClickOnce](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md).
 
-### <a name="to-change-the-publish-version"></a>Chcete-li změnit verzi publikování
+### <a name="to-change-the-publish-version"></a>Změna verze publikování
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** klikněte na nabídku **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **publikovat** kartu.
+2. Klikněte na kartu **publikovat** .
 
-3. V **publikovat verzi** pole, zvýší **hlavní**, **menší**, **sestavení**, nebo **revize** verze čísla.
+3. V poli **verze publikování** Zvyšte číslo **verze, podverze,** **sestavení**nebo **Revize** . **Minor**
 
     > [!NOTE]
-    > Nikdy by měla snížit na číslo verze. To uděláte tak může způsobit nepředvídatelné chování aktualizace.
+    > Nikdy byste neměli snižovat číslo verze; v takovém případě by mohlo dojít k nepředvídatelnému chování aktualizace.
 
-## <a name="see-also"></a>Viz také:
-- [Volba strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)
-- [Postupy: Automaticky ClickOnce Inkrementace verze publikování](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
+## <a name="see-also"></a>Viz také
+- [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)
+- [Postupy: automatické zvýšení verze publikování ClickOnce](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

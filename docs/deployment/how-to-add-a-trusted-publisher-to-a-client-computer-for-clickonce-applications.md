@@ -1,7 +1,7 @@
 ---
-title: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce
+title: Přidat důvěryhodný vydavatel do klientského počítače pro ClickOnce aplikace
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,46 +15,46 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1423952405a31063ee88ce6fa1dfe0b75d80fe5d
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 594c012aaa49a5b62e9f254f924a71f4934d1ebe
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649206"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382611"
 ---
-# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postup: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce
-Pomocí funkce Trusted Application Deployment můžete konfigurovat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] klientské počítače tak, aby aplikace běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr.exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.
+# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postupy: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce
+Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské počítače tak, aby [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr.exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.
 
- Příkazy, které používáte, se mírně liší v závislosti na tom, zda certifikační autorita (CA), která certifikát vydala, je součástí důvěryhodného kořenového adresáře klienta. Pokud je klientský počítač se systémem Windows součástí domény, bude v seznamu obsahovat certifikační autority, které jsou považovány za důvěryhodné kořeny. Tento seznam je obvykle konfigurován správcem systému. Pokud byl certifikát vydán některou z těchto důvěryhodných kořenových adresářů nebo certifikačníautoritou, která se zřetězí s jedním z těchto důvěryhodných kořenových adresářů, můžete jej přidat do důvěryhodného kořenového úložiště klienta. Pokud na druhé straně váš certifikát nebyl vydán jedním z těchto důvěryhodných kořenových adresářů, je nutné přidat certifikát do úložiště důvěryhodného kořenového adresáře klienta i do úložiště důvěryhodných vydavatelů.
+ Příkazy, které použijete, se mírně liší v závislosti na tom, jestli certifikační autorita (CA), která certifikát vystavila, je součástí důvěryhodného kořenového certifikátu klienta. Pokud je klientský počítač se systémem Windows součástí domény, bude obsahovat v seznamu certifikační autority, které jsou považovány za důvěryhodné kořenové adresáře. Tento seznam je obvykle nakonfigurovaný správcem systému. Pokud certifikát vystavila jedna z těchto důvěryhodných kořenových adresářů nebo certifikační autorita, která je zřetězena s jednou z těchto důvěryhodných kořenových adresářů, můžete certifikát přidat do důvěryhodného kořenového úložiště klienta. Pokud na druhé straně váš certifikát nevydala jedna z těchto důvěryhodných kořenových adresářů, musíte certifikát přidat do důvěryhodného kořenového úložiště klienta i do úložiště důvěryhodných vydavatelů.
 
 > [!NOTE]
-> Certifikáty je nutné přidat tímto způsobem v každém [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] klientském počítači, do kterého plánujete nasadit aplikaci, která vyžaduje zvýšená oprávnění. Certifikáty přidáte ručně nebo prostřednictvím aplikace, kterou nasadíte svým klientům. Tyto počítače je třeba nakonfigurovat pouze jednou, po [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] kterém můžete nasadit libovolný počet aplikací podepsaných stejným certifikátem.
+> Certifikáty je třeba přidat na každý klientský počítač, do kterého plánujete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která vyžaduje zvýšená oprávnění. Certifikáty přidáte buď ručně, nebo prostřednictvím aplikace, kterou nasadíte do klientů. Tyto počítače je třeba nakonfigurovat pouze jednou, a poté můžete nasadit libovolný počet [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací podepsaný se stejným certifikátem.
 
- Můžete také přidat certifikát do úložiště programově <xref:System.Security.Cryptography.X509Certificates.X509Store> pomocí třídy.
+ Do úložiště můžete také přidat certifikát programově pomocí <xref:System.Security.Cryptography.X509Certificates.X509Store> třídy.
 
- Přehled nasazení důvěryhodných aplikací naleznete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).
+ Přehled nasazení důvěryhodných aplikací najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).
 
-### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod důvěryhodným kořenem
+### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod důvěryhodným kořenovým adresářem
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X.509 (*.cer).* Další informace o formátech certifikátů naleznete [v tématu Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
-3. Na příkazovém řádku v klientských počítačích spusťte následující příkaz:
+3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 
-     **certmgr.exe -přidat certificate.cer -c -s -r localMachine TrustedPublisher**
+     **certmgr.exe – přidání certifikátu. cer-c-s-r localMachine TrustedPublisher**
 
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod jiným kořenem
 
 1. Získejte digitální certifikát od certifikační autority.
 
-2. Exportujte certifikát do formátu Base64 X.509 (*.cer).* Další informace o formátech certifikátů naleznete [v tématu Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Exportujte certifikát do formátu Base64 X. 509 (*. cer*). Další informace o formátech certifikátů najdete v tématu [Export certifikátu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
-3. Na příkazovém řádku v klientských počítačích spusťte následující příkaz:
+3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:
 
-     **certmgr.exe -přidat good.cer -c -s -r localMachine Root**
+     **certmgr.exe – přidat dobrý. cer-c-s-r localMachine root**
 
-     **certmgr.exe -přidat good.cer -c -s -r localMachine TrustedPublisher**
+     **certmgr.exe – přidat dobrý. cer-c-s-r localMachine TrustedPublisher**
 
 ## <a name="see-also"></a>Viz také
 - [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
@@ -62,10 +62,10 @@ Pomocí funkce Trusted Application Deployment můžete konfigurovat [!INCLUDE[nd
 - [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce a kód Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md)
-- [Postup: Povolení nastavení zabezpečení ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)
-- [Postup: Nastavení zóny zabezpečení pro aplikaci ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [Postup: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Postup: Ladění aplikace ClickOnce s omezenými oprávněními](securing-clickonce-applications.md)
-- [Postup: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
-- [Postup: Opětovné podepsání manifestů aplikací a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
-- [Postup: Konfigurace chování výzvy k důvěře ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+- [Postupy: povolení nastavení zabezpečení ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)
+- [Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [Postupy: ladění aplikace ClickOnce s omezenými oprávněními](securing-clickonce-applications.md)
+- [Postupy: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
+- [Postupy: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+- [Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

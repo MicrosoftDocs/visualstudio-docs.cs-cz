@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a0ff6ba1f654f3a9b909012f159cd3daaf2892f3
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283343"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382624"
 ---
 # <a name="usage-warnings"></a>Upozornění využití
 
@@ -75,4 +75,5 @@ Upozornění použití podporují správné použití .NET.
 |[CA2244: Neduplikujte inicializace indexovaných elementů.](../code-quality/ca2244.md)|Inicializátor objektu má více než jeden inicializátor indexovaného elementu se stejným indexem konstanty. Všechny kromě posledního inicializátoru jsou redundantní.|
 |[CA2245: Nepřiřazujte vlastnost k ní samotné.](../code-quality/ca2245.md)|Vlastnost byla omylem přiřazena sama sobě.|
 |[CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.](../code-quality/ca2246.md)|Přiřazení symbolu a jeho členu, tedy pole nebo vlastnost, ve stejném příkazu není doporučeno. Není jasné, jestli má členský přístup za cíl použít starou hodnotu symbolu před přiřazením nebo novou hodnotou z přiřazení v tomto prohlášení.|
+|[CA2247: argument předaný konstruktoru TaskCompletionSource by měl být parametr TaskCreationOptions enum namísto typ TaskContinuationOptions výčtu.](../code-quality/ca2246.md)|TaskCompletionSource má konstruktory, které přijímají parametr TaskCreationOptions, které ovládají podkladovou úlohu a konstruktory, které přijímají stav objektu, který je uložen v úloze.  Náhodné předání typ TaskContinuationOptions namísto parametr TaskCreationOptions způsobí, že volání zpracuje možnosti jako stav.|
 |[CA2248: Zadejte správný argument enum pro Enum. HasFlag.](../code-quality/ca2248.md)|Typ výčtu předaný jako argument pro `HasFlag` volání metody se liší od volajícího typu výčtu.|

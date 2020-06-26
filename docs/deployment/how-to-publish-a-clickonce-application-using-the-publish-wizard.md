@@ -1,7 +1,7 @@
 ---
 title: Publikování aplikace ClickOnce pomocí Průvodce publikováním
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,88 +17,88 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c3880fdc8d1d83fd36fdf09fea9e0c955b02236
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 518252ac24dc45036587de114f68cd0a77b8c5b8
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263269"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382299"
 ---
-# <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním
-Pro aplikaci ClickOnce zpřístupnit uživatelům, je nutné ji publikovat na sdílené složce nebo cestu, FTP server nebo vyměnitelná média. Aplikaci můžete publikovat pomocí Průvodce publikováním; Další vlastnosti týkající se publikování jsou k dispozici na **publikovat** stránku **Návrháře projektu**. Další informace najdete v tématu [publikování ClickOnce applications](../deployment/publishing-clickonce-applications.md).
+# <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním
+Chcete-li aplikaci ClickOnce zpřístupnit uživatelům, je nutné ji publikovat do sdílené složky nebo cesty, serveru FTP nebo na vyměnitelné médium. Aplikaci můžete publikovat pomocí Průvodce publikováním. Další vlastnosti týkající se publikování jsou k dispozici na stránce **publikovat** v **Návrháři projektu**. Další informace naleznete v tématu [publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md).
 
-Před spuštěním Průvodce publikováním byste měli odpovídajícím způsobem nastavit vlastnosti publikování. Například pokud chcete určit klíč k podepsání aplikace ClickOnce, můžete tak učinit na **podepisování** stránku **Návrháře projektu**. Další informace najdete v tématu [zabezpečení ClickOnce applications](../deployment/securing-clickonce-applications.md).
-
-> [!NOTE]
-> Při instalaci více než jednu verzi aplikace s použitím technologie ClickOnce, instalace přesune starší verze této aplikace do složky s názvem *archivu*, v umístění pro publikování, který zadáte. Archivace dřívějších verzí tímto způsobem udržuje instalační adresář čistý od složek starší verze.
+Před spuštěním Průvodce publikováním byste měli správně nastavit vlastnosti publikování. Například pokud chcete určit klíč k podepsání aplikace ClickOnce, můžete tak učinit na stránce **podepisování** v **Návrháři projektu**. Další informace najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, klikněte na tlačítko **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Při instalaci více než jedné verze aplikace pomocí technologie ClickOnce instalační program přesune předchozí verze aplikace do složky s názvem *Archive*v umístění pro publikování, které zadáte. Archivace předchozích verzí tímto způsobem udržuje instalační adresář v nejasnosti od předchozí verze.
 
-## <a name="to-publish-to-a-file-share-or-path"></a>K publikování do sdílené složky nebo cesta
+> [!NOTE]
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, klikněte na položku **Nastavení importu a exportu** v nabídce **nástroje** . Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
 
-1. V **Průzkumníka řešení**, vyberte aplikační projekt.
+## <a name="to-publish-to-a-file-share-or-path"></a>Publikování do sdílené složky nebo cesty
 
-2. Na **sestavení** nabídky, klikněte na tlačítko **publikovat** *Projectname*.
+1. V **Průzkumník řešení**vyberte projekt aplikace.
+
+2. V nabídce **sestavení** klikněte na **publikovat** *ProjectName*.
 
     Zobrazí se Průvodce publikováním.
 
-3. V **kde chcete publikovat aplikaci?** stránce, zadejte platnou adresu serveru FTP nebo platná cesta k souboru pomocí jednoho z formátů zobrazí a pak klikněte na **Další**.
+3. Na stránce **kde chcete publikovat aplikaci?** zadejte platnou adresu serveru FTP nebo platnou cestu k souboru pomocí jednoho z uvedených formátů a potom klikněte na tlačítko **Další**.
 
-4. V **jak budou uživatelé aplikaci instalovat?** vyberte umístění, odkud budou uživatelé instalovat aplikaci:
+4. Na stránce **jak budou uživatelé aplikaci instalovat?** vyberte umístění, kam budou uživatelé instalovat aplikaci:
 
-   - Pokud budou uživatelé instalovat z webového serveru, klikněte na tlačítko **z webu** a zadejte adresu URL, která odpovídá cestu souboru zadanou v předchozím kroku. Klikněte na **Další**. (Tato možnost se obvykle používá při zadání adresy FTP jako umístění pro publikování. Přímé stažení ze serveru FTP není podporováno. Proto je nutné zadat adresu URL zde.)
+   - Pokud budou uživatelé instalovat z webu, klikněte na **z** webu a zadejte adresu URL, která odpovídá cestě k souboru zadané v předchozím kroku. Klikněte na **Další**. (Tato možnost se obvykle používá, když jako umístění pro publikování zadáte adresu FTP. Přímé stahování z FTP serveru se nepodporuje. Proto je třeba zadat adresu URL zde.)
 
-   - Pokud uživatelé nainstalují aplikace přímo ze sdílené složky, klikněte na tlačítko **ze sdílené složky UNC cestu nebo sdílená složka**a potom klikněte na tlačítko **Další**. (To je pro umístění formuláře publikování *c:\deploy\myapp* nebo  *\\\server\myapp*.)
+   - Pokud budou uživatelé instalovat aplikaci přímo ze sdílené složky, klikněte na možnost **z cesty UNC nebo sdílené složky**a potom klikněte na tlačítko **Další**. (Jedná se o umístění pro publikování formuláře *c:\deploy\myapp* nebo * \\ \server\myapp*.)
 
-   - Pokud budou uživatelé instalovat z vyměnitelných médií, klikněte na tlačítko **z disku CD-ROM nebo DVD-ROM**a potom klikněte na tlačítko **Další**.
+   - Pokud budou uživatelé instalovat z vyměnitelných médií, klikněte na možnost **z disku CD-ROM nebo DVD-ROM**a potom klikněte na tlačítko **Další**.
 
-5. Na **bude aplikace dostupná offline?** klikněte na příslušnou možnost:
+5. Na stránce **bude aplikace k dispozici offline?** klikněte na příslušnou možnost:
 
-   - Pokud chcete povolit spuštění aplikace když je uživatel odpojen od sítě, klikněte na tlačítko **Ano, tato aplikace bude k dispozici online nebo offline**. Zástupce na **Start** nabídky se vytvoří pro aplikaci.
+   - Pokud chcete povolit spuštění aplikace v případě odpojení uživatele od sítě, klikněte na **Ano, tato aplikace bude k dispozici online nebo offline**. Pro aplikaci se vytvoří zástupce v nabídce **Start** .
 
-   - Pokud chcete spustit aplikaci přímo z umístění pro publikování, klikněte na tlačítko **Ne, tato aplikace je dostupná pouze online**. Zástupce na **Start** nabídky se nevytvoří.
+   - Chcete-li spustit aplikaci přímo z umístění publikování, klikněte na tlačítko **Ne, tato aplikace je k dispozici pouze online**. Zástupce v nabídce **Start** nebude vytvořen.
 
-     Klikněte na tlačítko **Další** pokračujte.
+     Pokračujte výběrem tlačítka **Další**.
 
-6. Klikněte na tlačítko **Dokončit** publikování aplikace.
+6. Kliknutím na tlačítko **Dokončit** publikujte aplikaci.
 
-    Stav publikování se zobrazí v oznamovací oblasti.
+    Stav publikování se zobrazí v oznamovací oblasti stavu.
 
-## <a name="to-publish-to-a-cd-rom-or-dvd-rom"></a>Chcete-li publikovat na disk CD-ROM nebo DVD-ROM
+## <a name="to-publish-to-a-cd-rom-or-dvd-rom"></a>Publikování na disk CD-ROM nebo DVD-ROM
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt aplikace a klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt aplikace a klikněte na **vlastnosti**.
 
-    **Návrháře projektu** se zobrazí.
+    Zobrazí se **Návrhář projektu** .
 
-2. Klikněte na tlačítko **publikovat** karty otevřete **publikovat** stránku **Návrháře projektu**a klikněte na tlačítko **Průvodce publikováním** tlačítko.
+2. Kliknutím na kartu **publikovat** otevřete stránku **publikovat** v **Návrháři projektu**a klikněte na tlačítko **Průvodce publikováním** .
 
     Zobrazí se Průvodce publikováním.
 
-3. V **kde chcete publikovat aplikaci?** stránky, zadejte cestu k souboru nebo umístění FTP, ve kterém aplikace bude publikována, třeba *d:\deploy*. Pak klikněte na tlačítko **Další** pokračujte.
+3. Na stránce **kde chcete publikovat aplikaci?** zadejte cestu k souboru nebo umístění serveru FTP, kde bude aplikace publikována, například *d:\deploy*. Pokračujte kliknutím na tlačítko **Další** .
 
-4. Na **jak budou uživatelé aplikaci instalovat?** klikněte na z **CD-ROM nebo DVD-ROM**a potom klikněte na tlačítko **Další**.
-
-   > [!NOTE]
-   > Pokud chcete, aby se instalace spustila automaticky při vložení disku CD-ROM do jednotky, otevřete **publikovat** stránku **Návrháře projektu** a klikněte na tlačítko **možnosti** tlačítko a pak na **možnosti publikování** průvodce, vyberte **pro instalace z CD automaticky spustit instalační program po vložení disku CD**.
-
-5. Pokud distribuujete aplikaci na disku CD-ROM, můžete chtít poskytnout aktualizace z webu. V **kde bude aplikace vyhledávat aktualizace?** stránce, zvolte možnost aktualizace:
-
-   - Pokud aplikace bude vyhledávat aktualizace, klikněte na tlačítko **bude aplikace vyhledávat aktualizace z následujícího umístění** a zadejte umístění, kde budou aktualizace zveřejňovány. To může být umístění souboru, web nebo FTP server.
-
-   - Pokud aplikace nebude kontrolovat aktualizace, klikněte na tlačítko **aplikace nebude kontrolovat aktualizace**.
-
-     Klikněte na tlačítko **Další** pokračujte.
-
-6. Klikněte na tlačítko **Dokončit** publikování aplikace.
-
-    Stav publikování se zobrazí v oznamovací oblasti.
+4. Na stránce **jak budou uživatelé aplikaci instalovat?** klikněte na možnost z **disku CD-ROM nebo DVD-ROM**a potom klikněte na tlačítko **Další**.
 
    > [!NOTE]
-   > Po dokončení publikování budete muset použít CD-RW nebo DVD-RW ke zkopírování souborů z umístění zadaného v kroku 3 na médium CD-ROM nebo DVD-ROM.
+   > Pokud chcete, aby se instalace automaticky spustila při vložení disku CD-ROM do jednotky, otevřete stránku **publikovat** v **Návrháři projektu** a klikněte na tlačítko **Možnosti** a potom v průvodci **publikováním možností** vyberte možnost **pro instalaci CD, automaticky spustit instalační program při vložení disku CD**.
 
-## <a name="see-also"></a>Viz také:
+5. Pokud distribuujete aplikaci na disk CD-ROM, možná budete chtít poskytnout aktualizace z webu. Na stránce **kde bude aplikace vyhledávat aktualizace?** vyberte možnost aktualizace:
 
-- [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)
+   - Pokud aplikace bude vyhledávat aktualizace, klikněte na **aplikaci vyhledat aktualizace z následujícího umístění** a zadejte umístění, kam budou odesílány aktualizace. Může to být umístění souboru, web nebo FTP server.
+
+   - Pokud aplikace nebude vyhledávat aktualizace, klikněte na aplikace nebude **kontrolovat aktualizace**.
+
+     Pokračujte výběrem tlačítka **Další**.
+
+6. Kliknutím na tlačítko **Dokončit** publikujte aplikaci.
+
+    Stav publikování se zobrazí v oznamovací oblasti stavu.
+
+   > [!NOTE]
+   > Po dokončení publikování budete muset ke zkopírování souborů z umístění zadaného v kroku 3 na médium CD-ROM nebo DVD-ROM použít příkaz CD-Write nebo DVD-Write.
+
+## <a name="see-also"></a>Viz také
+
+- [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)
 - [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)
-- [Nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
+- [Nasazení řešení Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)

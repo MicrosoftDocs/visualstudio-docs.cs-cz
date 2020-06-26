@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Automaticky ClickOnce Inkrementace verze publikování | Dokumentace Microsoftu'
+title: Postup – automatické zvýšení verze publikování ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,32 +17,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cce9dfe48e34d642b115c8391de73c0350ce515b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 710f2d045af4da92116334e64efa5ce528563d1d
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928503"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382598"
 ---
-# <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>Postupy: Automaticky ClickOnce Inkrementace verze publikování
+# <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>Postupy: automatické zvýšení verze publikování ClickOnce
 
-Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, změna `Publish Version` vlastnosti způsobí, že aplikace má být publikován jako aktualizace. Ve výchozím nastavení, Visual Studio automaticky zvýší `Revision` počet `Publish Version` pokaždé, když publikujete aplikaci.
+Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace Změna `Publish Version` vlastnosti způsobí, že se aplikace publikuje jako aktualizace. Ve výchozím nastavení Visual Studio automaticky zvyšuje `Revision` počet `Publish Version` pokaždé, když publikujete aplikaci.
 
-Toto chování lze zakázat na **publikovat** stránku **Návrháře projektu**.
+Toto chování můžete zakázat na stránce **publikovat** v **Návrháři projektu**.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
 
-## <a name="to-disable-automatically-incrementing-the-publish-version"></a>Chcete-li zakázat automatické zvyšování verzi publikování
+## <a name="to-disable-automatically-incrementing-the-publish-version"></a>Zakázání automatického zvýšení verze publikování
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **publikovat** kartu.
+2. Klikněte na kartu **publikovat** .
 
-3. V **publikovat verzi** části, zrušte **automaticky zvyšovat číslo každé vydané verze** zaškrtávací políčko.
+3. V části **publikovat verzi** zrušte zaškrtnutí políčka **automaticky zvyšovat revizi při každém vydání** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Postupy: Nastavení publikování ClickOnce verze](../deployment/how-to-set-the-clickonce-publish-version.md)
+- [Postupy: nastavení verze publikování ClickOnce](../deployment/how-to-set-the-clickonce-publish-version.md)
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

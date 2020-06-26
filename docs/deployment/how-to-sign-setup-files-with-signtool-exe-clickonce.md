@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Podepsání souborů instalace pomocí SignTool.exe (ClickOnce) | Dokumentace Microsoftu'
+title: Postup při podepisování instalačních souborů pomocí SignTool.exe (ClickOnce) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,63 +18,63 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f31ebeb18790ddf76c42585868aea8a04547bfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f9e1911b6e86058b7f078f40fa10ca5e0e4e53c0
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928412"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382065"
 ---
-# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Postupy: Podepsání souborů instalace pomocí SignTool.exe (ClickOnce)
-Můžete použít *SignTool.exe* podepsat instalační program (*setup.exe*). Tento proces pomáhá zajistit, že zmanipulovanou soubory nejsou nainstalované v počítačích koncových uživatelů.
+# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Postupy: Podepsání instalačních souborů pomocí SignTool.exe (ClickOnce)
+K podepsání instalačního programu (*setup.exe*) můžete použít *SignTool.exe* . Tento proces pomáhá zajistit, aby v počítačích koncových uživatelů nebyly nainstalovány neoprávněné soubory.
 
- Ve výchozím nastavení má ClickOnce podepsané manifesty a podepsaný instalační program. Nicméně pokud chcete změnit parametry instalační program později, musíte podepsat instalační program později. Pokud změníte parametry po instalační program je podepsán, dojde k poškození podpis.
+ Ve výchozím nastavení má ClickOnce podepsané manifesty a program s podepsaným nastavením. Pokud však chcete později změnit parametry instalačního programu, je nutné program podepsat později. Pokud změníte parametry po podepsání instalačního programu, podpis bude poškozen.
 
- Následující postup vytvoří nepodepsané manifesty a bez znaménka instalační program. Potom ClickOnce je povoleno podepisování v sadě Visual Studio ke generování podepsané manifesty. Instalační program, zůstane bez znaménka, aby zákazník mohli podepsat spustitelný soubor s vlastní certifikát.
+ Následující procedura generuje nepodepsané manifesty a nepodepsaný instalační program. V aplikaci Visual Studio je pak podepisování ClickOnce povoleno pro generování podepsaných manifestů. Instalační program je ponechán bez znaménka, aby zákazník mohl podepsat spustitelný soubor pomocí vlastního certifikátu.
 
-### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>Generovat nepodepsané instalační program a podepsání později
+### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>Vygenerujte nepodepsaný instalační program a podepište se později.
 
-1. Ve vývojovém počítači, nainstalujte certifikát, který chcete podepsat manifesty s.
+1. Ve vývojovém počítači nainstalujte certifikát, ve kterém chcete manifest podepsat.
 
-2. Vyberte projekt v **Průzkumníka řešení**.
+2. Vyberte projekt v **Průzkumník řešení**.
 
-3. Na **projektu** nabídky, klikněte na tlačítko *ProjectName* **vlastnosti**.
+3. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
-4. V **podepisování** zrušte **podepsat manifesty ClickOnce**.
+4. Na stránce **podepisování** zrušte **podpis manifestů ClickOnce**.
 
-5. V **publikovat** klikněte na **požadavky**.
+5. Na stránce **publikovat** klikněte na **požadované součásti**.
 
-6. Ověřte, zda jsou vybrány všechny požadavky a klikněte na **OK**.
+6. Ověřte, že jsou vybrané všechny požadavky, a pak klikněte na **OK**.
 
-7. V **publikovat** stránce, ověřte nastavení publikování a pak klikněte na tlačítko **publikovat**.
+7. Na stránce **publikovat** ověřte nastavení publikování a pak klikněte na **Publikovat nyní**.
 
-     Řešení publikuje manifestu nepodepsané aplikace, manifest nasazení bez znaménka, specifické pro verzi soubory a bez znaménka instalační program do umístění složky pro publikování.
+     Řešení publikuje nepodepsaný manifest aplikace, nepodepsaný manifest nasazení, soubory pro konkrétní verzi a nepodepsaný instalační program do umístění složky pro publikování.
 
-8. V **publikovat** klikněte na **požadavky**.
+8. Na stránce **publikovat** klikněte na **požadované součásti**.
 
-9. V **požadavky** dialogové okno, zrušte zaškrtnutí **vytvořit instalační program pro nainstalování nezbytných součástí**.
+9. V dialogovém okně **požadavky** zrušte zaškrtnutí políčka **vytvořit instalační program a nainstalujte požadované součásti**.
 
-10. V **publikovat** stránce, ověřte nastavení publikování a pak klikněte na tlačítko **publikovat**.
+10. Na stránce **publikovat** ověřte nastavení publikování a pak klikněte na **Publikovat nyní**.
 
-     Řešení publikuje manifestu podepsanou aplikaci, podepsaný manifest nasazení a specifické pro verzi soubory do umístění složky pro publikování. Proces publikování není přepsán instalačního programu bez znaménka.
+     Řešení publikuje podepsaný manifest aplikace, podepsaný manifest nasazení a soubory specifické pro verzi do umístění složky pro publikování. Proces publikování nepřepíše nepodepsaný instalační program.
 
 11. Na webu zákazníka otevřete příkazový řádek.
 
-12. Přejděte do adresáře, který obsahuje *.exe* souboru.
+12. Přejděte do adresáře, který obsahuje soubor *. exe* .
 
-13. Přihlaste *.exe* soubor pomocí následujícího příkazu:
+13. Podepište soubor *. exe* pomocí následujícího příkazu:
 
     ```cmd
     signtool sign /sha1 CertificateHash Setup.exe
     signtool sign /f CertFileName Setup.exe
     ```
 
-     Například k podepisování instalačního programu, použijte jednu z následujících příkazů:
+     Chcete-li například podepsat instalační program, použijte jeden z následujících příkazů:
 
     ```cmd
     signtool sign /sha1 CCB... Setup.exe
     signtool sign /f CertFileName Setup.exe
     ```
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Znovu podepište manifesty aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

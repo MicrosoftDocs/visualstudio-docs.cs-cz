@@ -1,7 +1,7 @@
 ---
 title: Nastavení vlastního umístění souboru protokolu pro chyby nasazení ClickOnce
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,35 +16,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbfdbb73d7b7cc1e3dc92e59a1c0dd8d5093269e
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 05ffd1cf32f8c7ea93e63232f7026c6c926f9308
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263232"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382169"
 ---
-# <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Postupy: Nastavení umístění souboru vlastního protokolu pro chyby nasazení ClickOnce
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] udržuje aktivace soubory protokolu pro všechna nasazení. Tyto protokoly zdokumentujte jakékoli chyby týkající se instalace a inicializace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří jeden soubor protokolu pro každé nasazení aktivace. Ukládá tyto soubory protokolu ve složce dočasných souborů Internetu. Soubor protokolu pro nasazení se zobrazí uživateli, když dojde k selhání aktivace a uživatel klikne **podrobnosti** ve výsledné dialog s chybou.
+# <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Postupy: nastavení vlastního umístění souboru protokolu pro chyby nasazení ClickOnce
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]udržuje soubory protokolu aktivace pro všechna nasazení. Tyto protokoly dokumentují všechny chyby, které se týkají instalace a inicializace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří jeden soubor protokolu pro každou aktivaci nasazení. Tyto soubory protokolu se uloží do složky dočasných internetových souborů. Soubor protokolu pro nasazení se uživateli zobrazí, když dojde k selhání aktivace a uživatel klikne na **Podrobnosti** v dialogovém okně výsledné chyby.
 
- Toto chování lze změnit pro konkrétního klienta pomocí Editoru registru (**regedit.exe**) Chcete-li nastavit cestu k souboru vlastního protokolu. V takovém případě [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokoly aktivace úspěchů a neúspěchů pro všechna nasazení v jednom souboru.
+ Toto chování můžete změnit pro konkrétního klienta pomocí Editoru registru (**regedit.exe**) a nastavit tak vlastní cestu k souboru protokolu. V takovém případě [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokoluje úspěšné a neúspěšné aktivace pro všechna nasazení v jednom souboru.
 
 > [!CAUTION]
-> Pokud Editor registru používán správně, můžete způsobit vážné problémy, které mohou vyžadovat přeinstalaci operačního systému. Pomocí Editoru registru na vlastní nebezpečí.
+> Pokud používáte Editor registru nesprávně, může dojít k vážným problémům, které mohou vyžadovat přeinstalaci operačního systému. Editor registru použijte na vlastní riziko.
 
 > [!NOTE]
-> Je potřeba zkrátit nebo odstranění souboru protokolu čas od času, aby se zabránilo jejímu růstu příliš velký.
+> Soubor protokolu bude někdy potřeba zkrátit nebo odstranit, aby se zabránilo jeho většímu růstu.
 
- Následující postup popisuje, jak nastavit vlastního umístění souboru protokolu pro jednoho klienta.
+ Následující postup popisuje, jak nastavit vlastní umístění souboru protokolu pro jednoho klienta.
 
-### <a name="to-set-a-custom-log-file-location"></a>Chcete-li nastavit vlastního umístění souboru protokolu
+### <a name="to-set-a-custom-log-file-location"></a>Nastavení vlastního umístění souboru protokolu
 
-1. Otevřít **Regedit.exe**.
+1. Otevřete **Regedit.exe**.
 
-2. Přejděte na uzel `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment`.
+2. Přejděte k uzlu `HKCU\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment` .
 
-3. Nastavte hodnotu řetězce `LogFilePath` úplnou cestu a název souboru váš vlastní protokol upřednostňované umístění.
+3. Nastavte hodnotu řetězce `LogFilePath` na úplnou cestu a název souboru upřednostňovaného vlastního umístění protokolu.
 
-     Toto umístění musí být v adresáři, do které má uživatel oprávnění k zápisu. Například v systému Windows Vista, vytvořte následující strukturu složek a nastavení `LogFilePath` k *C:\Users\\\<uživatelské jméno > \Documents\Logs\ClickOnce\installation.log*.
+     Toto umístění musí být v adresáři, ke kterému má uživatel oprávnění k zápisu. Například v systému Windows Vista vytvořte následující strukturu složek a nastavte `LogFilePath` ji na *C:\Users \\ \<username> \Documents\Logs\ClickOnce\installation.log*.
 
-## <a name="see-also"></a>Viz také:
-- [Řešení potíží s nasazením ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)
+## <a name="see-also"></a>Viz také
+- [Řešení potíží s nasazeními ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)

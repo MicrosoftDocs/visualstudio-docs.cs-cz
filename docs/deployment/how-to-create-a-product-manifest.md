@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytvoření manifestu produktu | Dokumentace Microsoftu'
+title: Postup vytvoření manifestu produktu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - FSharp
 - VB
@@ -18,27 +18,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68f3006104b50876f6d2716ff4eb1efe0a705284
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f0f4302756b089376eca8926453399768faaf58f
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382507"
 ---
 # <a name="how-to-create-a-product-manifest"></a>Postupy: Vytvoření manifestu produktu
-Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden produkt soubor manifestu ale manifest balíčku pro každé národní prostředí. Manifest balíčku obsahuje lokalizace specifických aspektů vašeho balíčku. Jedná se o řetězce, licenční smlouvy s koncovým uživatelem a jazykových sad.
+K nasazení požadavků pro aplikaci můžete vytvořit balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden soubor manifestu produktu, ale manifest balíčku pro každé národní prostředí. Manifest balíčku obsahuje aspekty balíčku specifické pro lokalizaci. Patří sem řetězce, licenční smlouvy s koncovým uživatelem a jazykové sady.
 
- Další informace o manifestech balíčku najdete v tématu [jak: Vytvoření manifestu balíčku](../deployment/how-to-create-a-package-manifest.md).
+ Další informace o manifestech balíčků naleznete v tématu [How to: Create a manifest balíčku](../deployment/how-to-create-a-package-manifest.md).
 
 ## <a name="create-the-product-manifest"></a>Vytvoření manifestu produktu
 
-#### <a name="to-create-the-product-manifest"></a>K vytvoření manifestu produktu
+#### <a name="to-create-the-product-manifest"></a>Vytvoření manifestu produktu
 
 1. Vytvořte adresář pro balíček zaváděcího nástroje. Tento příklad používá C:\package.
 
-2. V sadě Visual Studio vytvořte nový XML soubor s názvem *product.xml*a uložit ho. tím *C:\package* složky.
+2. V aplikaci Visual Studio vytvořte nový soubor XML s názvem *product.xml*a uložte ho do složky *C:\package* .
 
-3. Přidejte následující kód XML pro popis kódu XML obor názvů a produktu pro balíček. Nahraďte kód produktu jedinečný identifikátor pro balíček.
+3. Přidejte následující kód XML pro popis oboru názvů XML a kódu produktu pro balíček. Nahraďte kód produktu jedinečným identifikátorem balíčku.
 
     ```xml
     <Product
@@ -46,7 +46,7 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
     ProductCode="Custom.Bootstrapper.Package">
     ```
 
-4. Přidejte kód jazyka XML k určení, zda balíček obsahuje závislost. Tento příklad používá závislost na Microsoft Windows Installer 3.1.
+4. Přidejte XML, chcete-li určit, že balíček obsahuje závislost. V tomto příkladu se používá závislost na Microsoft Instalační služba systému Windows 3,1.
 
     ```xml
     <RelatedProducts>
@@ -54,7 +54,7 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
       </RelatedProducts>
     ```
 
-5. Přidejte XML pro všechny soubory, které jsou součástí balíčku zaváděcího nástroje. Tento příklad používá název souboru balíčku *CorePackage.msi*.
+5. Přidejte XML pro výpis všech souborů, které jsou v balíčku zaváděcího nástroje. V tomto příkladu se používá název souboru balíčku *CorePackage.msi*.
 
     ```xml
     <PackageFiles>
@@ -62,16 +62,16 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
     </PackageFiles>
     ```
 
-6. Zkopírovat nebo přesunout *CorePackage.msi* do souboru *C:\package* složky.
+6. Zkopírujte nebo přesuňte soubor *CorePackage.msi* do složky *C:\package* .
 
-7. Přidejte kód jazyka XML k instalaci balíčku zaváděcího nástroje příkazů. Zaváděcí nástroj automaticky přidá **/qn** příznak, který *MSI* soubor, který bude instalaci v bezobslužném režimu. Pokud je soubor *.exe*, zaváděcí nástroj spustí *.exe* souboru prostředí. Následující kód XML ukazuje žádné argumenty *CorePackage.msi*, ale můžete vložit argument příkazového řádku do `Arguments` atribut.
+7. Přidejte XML pro instalaci balíčku pomocí příkazů zaváděcího nástroje. Zaváděcí nástroj automaticky přidá příznak **/qn** do souboru *. msi* , který se nainstaluje tiše. Pokud je soubor *. exe*, zaváděcí nástroj spustí soubor *. exe* pomocí prostředí. Následující kód XML ukazuje žádné argumenty pro *CorePackage.msi*, ale do atributu lze vložit argument příkazového řádku `Arguments` .
 
     ```xml
     <Commands>
         <Command PackageFile="CorePackage.msi" Arguments="">
     ```
 
-8. Přidejte následující kód XML do zkontrolujte, jestli je nainstalovaný balíček zaváděcího nástroje. Nahraďte kód produktu identifikátoru GUID distribuovatelnou komponentu.
+8. Pokud chcete zjistit, jestli je tento balíček zaváděcího nástroje nainstalovaný, přidejte následující kód XML. Nahraďte kód produktu identifikátorem GUID distribuovatelné součásti.
 
     ```xml
     <InstallChecks>
@@ -81,7 +81,7 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
     </InstallChecks>
     ```
 
-9. Přidejte kód jazyka XML ke změně chování zaváděcího nástroje v závislosti na tom, jestli už je nainstalovaná komponenta zaváděcího nástroje. Pokud je součást nainstalovaná, nespustí se balíček zaváděcího nástroje. Následující kód XML kontroluje, zda je aktuální uživatel správcem, protože tato součást vyžaduje oprávnění správce.
+9. Přidejte XML pro změnu chování zaváděcího nástroje v závislosti na tom, jestli je už součást zaváděcího nástroje nainstalovaná. Pokud je součást nainstalována, balíček zaváděcího nástroje se nespustí. Následující kód XML zkontroluje, zda je aktuální uživatel správcem, protože tato součást vyžaduje oprávnění správce.
 
     ```xml
     <InstallConditions>
@@ -94,7 +94,7 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
     </InstallConditions>
     ```
 
-10. Přidejte kód jazyka XML pro nastavení ukončovací kód, pokud je instalace úspěšná, a pokud je nutné restartovat počítač. Následující kód XML ukazuje, že selžou a FailReboot ukončovací kódy, které označují, že zaváděcí nástroj nebude pokračovat v instalaci balíčků.
+10. Přidejte XML pro nastavení ukončovacích kódů, pokud je instalace úspěšná a jestli je nutné restartovat počítač. Následující kód XML ukazuje ukončovací kódy chyb a FailReboot, což značí, že zaváděcí program nebude nadále instalovat balíčky.
 
     ```xml
     <ExitCodes>
@@ -105,14 +105,14 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
     </ExitCodes>
     ```
 
-11. Přidejte následující kód XML na konec části příkazů pro zaváděcí nástroj.
+11. Přidejte následující kód XML pro konec oddílu pro příkazy zaváděcího nástroje.
 
     ```xml
         </Command>
     </Commands>
     ```
 
-12. Přesunout *C:\package* složky zaváděcího nástroje adresáře sady Visual Studio. Pro Visual Studio 2010, je to *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* adresáře.
+12. Přesuňte složku *C:\package* do adresáře zaváděcího nástroje sady Visual Studio. V případě sady Visual Studio 2010 se jedná o adresář *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* .
 
 ## <a name="example"></a>Příklad
  Manifest produktu obsahuje pokyny k instalaci pro vlastní požadavky.
@@ -158,5 +158,5 @@ Pokud chcete nasadit požadavky pro vaši aplikaci, můžete vytvořit balíček
 </Product>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)

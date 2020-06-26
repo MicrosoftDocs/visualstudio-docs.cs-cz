@@ -1,7 +1,7 @@
 ---
 title: Načtení informací o řetězci dotazu v online aplikaci ClickOnce
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30169a43d88f0ee8ae2c428e5a3da0aef0b9d642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d0e177f1d41655ffa6fb6b6bbfa52cfc29d15fd6
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382182"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>Postupy: načtení informací řetězce dotazu v online aplikaci ClickOnce
-*Řetězec dotazu* je část adresy URL začínající otazníkem (?), která obsahuje libovolné informace ve tvaru *název = hodnota*. Předpokládejme, že máte aplikaci [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] s názvem `WindowsApp1`, kterou hostuje `servername`, a chcete předat hodnotu pro proměnnou `username` při spuštění aplikace. Adresa URL může vypadat takto:
+*Řetězec dotazu* je část adresy URL začínající otazníkem (?), která obsahuje libovolné informace ve tvaru *název = hodnota*. Předpokládejme, že máte [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci s názvem `WindowsApp1` , na kterou jste hostitelem `servername` , a chcete předat hodnotu proměnné `username` při spuštění aplikace. Adresa URL může vypadat takto:
 
  `http://servername/WindowsApp1.application?username=joeuser`
 
@@ -32,17 +32,17 @@ ms.locfileid: "72637865"
 > [!NOTE]
 > Informace v řetězci dotazu můžete předávat jenom v případě, že se aplikace spouští pomocí protokolu HTTP namísto použití sdílené složky nebo místního systému souborů.
 
- První postup ukazuje, jak může vaše aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] použít malý kód ke čtení těchto hodnot při spuštění aplikace.
+ První postup ukazuje, jak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] může vaše aplikace používat malou část kódu ke čtení těchto hodnot při spuštění aplikace.
 
- Následující postup ukazuje, jak nakonfigurovat aplikaci [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] pomocí nástroje MageUI. exe tak, aby mohla přijmout parametry řetězce dotazu. To je nutné provést při každém publikování aplikace.
+ Následující postup ukazuje, jak nakonfigurovat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pomocí MageUI.exe tak, aby mohla přijímat parametry řetězce dotazu. To je nutné provést při každém publikování aplikace.
 
 > [!NOTE]
 > V části zabezpečení níže v tomto tématu se můžete rozhodnout, že tuto funkci povolíte.
 
- Informace o tom, jak vytvořit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí nástroje *Mage. exe* nebo *MageUI. exe*, naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
+ Informace o tom, jak vytvořit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení pomocí *Mage.exe* nebo *MageUI.exe*, naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
 
 > [!NOTE]
-> Počínaje verzí .NET Framework 3,5 SP1 je možné předat argumenty příkazového řádku do offline aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Chcete-li zadat argumenty do aplikace, můžete předat parametry do souboru zástupce pomocí. Rozšíření APPREF-MS.
+> Počínaje .NET Framework 3,5 SP1 je možné předat argumenty příkazového řádku do offline [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace. Chcete-li zadat argumenty do aplikace, můžete předat parametry do souboru zástupce pomocí. Rozšíření APPREF-MS.
 
 ### <a name="to-obtain-query-string-information-from-a-clickonce-application"></a>Získání informací o řetězci dotazu z aplikace ClickOnce
 
@@ -51,9 +51,9 @@ ms.locfileid: "72637865"
      [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
      [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]
 
-2. Voláním dříve definované funkce načtěte <xref:System.Collections.DictionaryBase.Dictionary%2A> parametrů řetězce dotazu indexovaného podle názvu.
+2. Volejte dříve definovanou funkci pro načtení <xref:System.Collections.DictionaryBase.Dictionary%2A> parametrů řetězce dotazu indexovaného podle názvu.
 
-### <a name="to-enable-query-string-passing-in-a-clickonce-application-with-mageuiexe"></a>Povolení předávání řetězců dotazů v aplikaci ClickOnce pomocí MageUI. exe
+### <a name="to-enable-query-string-passing-in-a-clickonce-application-with-mageuiexe"></a>Povolení předávání řetězců dotazů v aplikaci ClickOnce pomocí MageUI.exe
 
 1. Otevřete příkazový řádek .NET a zadejte:
 
@@ -61,14 +61,14 @@ ms.locfileid: "72637865"
    MageUI
    ```
 
-2. V nabídce **soubor** vyberte možnost **otevřít**a otevřete manifest nasazení aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], což je soubor končící příponou `.application`.
+2. V nabídce **soubor** vyberte možnost **otevřít**a otevřete manifest nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, což je soubor končící `.application` příponou.
 
 3. V levém navigačním okně vyberte panel **Možnosti nasazení** a zaškrtněte políčko **povoluje předání parametrů adresy URL do aplikace** .
 
 4. V nabídce **soubor** vyberte **Uložit**.
 
 > [!NOTE]
-> Alternativně můžete povolit předávání řetězců dotazu v [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. Zaškrtněte políčko **Allow URL Parameters Passed to Application** , které lze najít otevřením **vlastností projektu**, výběrem karty **publikovat** , kliknutím na tlačítko **Možnosti** a následným výběrem **Manifests**.
+> Alternativně můžete povolit předávání řetězce dotazu v [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . Zaškrtněte políčko **Allow URL Parameters Passed to Application** , které lze najít otevřením **vlastností projektu**, výběrem karty **publikovat** , kliknutím na tlačítko **Možnosti** a následným výběrem **Manifests**.
 
 ## <a name="robust-programming"></a>Robustní programování
  Při použití parametrů řetězce dotazu musíte pečlivě zvážit, jak je vaše aplikace nainstalovaná a aktivovaná. Pokud je vaše aplikace nakonfigurovaná tak, aby se nainstalovala na počítač uživatele z webu nebo ze sdílené síťové složky, může uživatel aplikaci aktivovat jenom jednou přes adresu URL. Potom bude uživatel obvykle aktivovat vaši aplikaci pomocí zástupce v nabídce **Start** . V důsledku toho je zaručeno, že aplikace získá argumenty řetězce dotazu pouze jednou během své životnosti. Pokud se rozhodnete tyto argumenty uložit v počítači uživatele pro budoucí použití, zodpovídáte za jejich uložení bezpečným a bezpečným způsobem.
@@ -76,7 +76,7 @@ ms.locfileid: "72637865"
  Pokud je vaše aplikace online, bude vždy aktivována prostřednictvím adresy URL. I v tomto případě musí být aplikace zapsána, aby fungovala správně, pokud parametry řetězce dotazu chybí nebo jsou poškozené.
 
 ## <a name="net-framework-security"></a>zabezpečení v rozhraní .NET Framework
- Povolte předávání parametrů adresy URL vaší [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pouze v případě, že plánujete před použitím vyčistit vstup všech škodlivých znaků. Řetězec, který je vložený pomocí uvozovek, lomítka nebo středníků, může například provádět libovolné operace s daty, pokud se používá nefiltrovaný dotaz SQL na databázi. Další informace o zabezpečení řetězce dotazů najdete v tématu [Přehled zneužití skriptů](https://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).
+ Povolte předávání parametrů adresy URL vaší [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci pouze v případě, že máte v úmyslu vyčistit vstup všech škodlivých znaků předtím, než je použijete. Řetězec, který je vložený pomocí uvozovek, lomítka nebo středníků, může například provádět libovolné operace s daty, pokud se používá nefiltrovaný dotaz SQL na databázi. Další informace o zabezpečení řetězce dotazů najdete v tématu [Přehled zneužití skriptů](https://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).
 
-## <a name="see-also"></a>Viz také:
-- [Zabezpečené aplikace ClickOnce](../deployment/securing-clickonce-applications.md)
+## <a name="see-also"></a>Viz také
+- [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)

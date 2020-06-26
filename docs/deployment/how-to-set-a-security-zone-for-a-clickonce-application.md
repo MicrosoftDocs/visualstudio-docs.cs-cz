@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Nastavení zóny zabezpečení pro aplikaci ClickOnce | Dokumentace Microsoftu'
+title: Postup nastavení zóny zabezpečení pro aplikaci ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,33 +16,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31a61dd337fce614c1271f994a42ec90f3be8acb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 51515339c24ea8a0507c47d0399cde9e423f71a0
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898386"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382130"
 ---
-# <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>Postupy: Nastavení zóny zabezpečení pro aplikaci ClickOnce
-Při nastavování oprávnění zabezpečení pro aplikaci ClickOnce přístup ke kódu, musíte spustit na základní sadu oprávnění **zabezpečení** stránku **Návrháře projektu**.
+# <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce
+Při nastavování oprávnění zabezpečení přístupu kódu pro aplikaci ClickOnce musíte začít se základní sadou oprávnění na stránce **zabezpečení** **Návrháře projektu**.
 
- Ve většině případů můžete také **Internet** zóny, který obsahuje omezenou sadu oprávnění, nebo **místní Intranet** zóny, který obsahuje větší sadu oprávnění. Pokud vaše aplikace požaduje vlastní oprávnění, můžete provést kliknutím **vlastní** zóně zabezpečení. Další informace o nastavení vlastních oprávnění najdete v tématu [jak: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md).
+ Ve většině případů můžete také zvolit **internetovou** zónu, která obsahuje omezená sada oprávnění, nebo zónu **místního intranetu** , která obsahuje větší sadu oprávnění. Pokud vaše aplikace vyžaduje vlastní oprávnění, můžete to udělat tak, že vyberete **vlastní** zónu zabezpečení. Další informace o nastavení vlastních oprávnění naleznete v tématu [Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md).
 
-### <a name="to-set-a-security-zone"></a>Do nastavení zóny zabezpečení
+### <a name="to-set-a-security-zone"></a>Nastavení zóny zabezpečení
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** klikněte na nabídku **vlastnosti**.
+1. Když je vybrán projekt v **Průzkumník řešení**, v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **zabezpečení** kartu.
+2. Klikněte na kartu **Zabezpečení**.
 
-3. Vyberte **povolit nastavení zabezpečení ClickOnce** zaškrtávací políčko.
+3. Zaškrtněte políčko **Povolit nastavení zabezpečení ClickOnce** .
 
-4. Vyberte **Toto je aplikace s částečnou důvěryhodností** přepínač.
+4. Vyberte přepínač možnost **aplikace s částečnou důvěryhodností** .
 
-     Ovládací prvky **oprávnění zabezpečení ClickOnce** oddílu jsou povolené.
+     Ovládací prvky v oddílu **oprávnění zabezpečení ClickOnce** jsou povolené.
 
-5. V **vaše aplikace bude provedena instalace ze zóny** rozevírací seznam, vyberte zónu zabezpečení.
+5. V zóně, ve které **bude aplikace nainstalována** , vyberte zónu zabezpečení.
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
 - [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)
 - [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)

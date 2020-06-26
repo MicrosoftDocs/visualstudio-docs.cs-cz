@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Určení názvu úvodní nabídky pro aplikaci ClickOnce | Dokumentace Microsoftu'
+title: Jak zadat název nabídky Start pro aplikaci ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,38 +16,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ef1675480182796e1fe8bbe29baa5ed6a9d5f63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 882d6f7471530a101404040368dbc6088e9b5d96
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898799"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381922"
 ---
-# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Postupy: Určení názvu úvodní nabídky pro aplikaci ClickOnce
-Když [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se nainstaluje pro použití online i offline, záznam se přidá do **spustit** nabídky a **přidat nebo odebrat programy** seznamu. Ve výchozím nastavení, zobrazovaný název je stejný jako název sestavení aplikace, ale zobrazované jméno můžete změnit nastavením **název produktu** v **možnosti publikování** dialogové okno.
+# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Postupy: určení názvu nabídky Start pro aplikaci ClickOnce
+Když [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je aplikace nainstalována pro online i offline použití, přidá se do nabídky **Start** položka a seznam **Přidat nebo odebrat programy** . Ve výchozím nastavení je zobrazované jméno stejné jako název sestavení aplikace, ale můžete změnit název zobrazení nastavením **názvu produktu** v dialogovém okně **Možnosti publikování** .
 
- **Název produktu** bude zobrazen na *publish.htm* stránky; pro aplikace nainstalované v režimu offline, bude název položky v **Start** nabídky a také budou název, který se zobrazuje v **Přidat nebo odebrat programy**.
+ **Název produktu** se zobrazí na stránce *publish.htm* ; v případě nainstalované offline aplikace se jedná o název položky v nabídce **Start** a také na název, který se zobrazí v nabídce **Přidat nebo odebrat programy**.
 
- **Název vydavatele** se zobrazí na *publish.htm* stránky výše **název produktu**, a pro aplikace nainstalované v režimu offline, bude také název složky, která obsahuje aplikace ikona **Start** nabídky.
+ **Název vydavatele** se zobrazí na stránce *publish.htm* nad **názvem produktu**a v případě nainstalované offline aplikace bude také názvem složky, která obsahuje ikonu aplikace v nabídce **Start** .
 
- Vytvoří se odkaz aplikace nebo místní nabídky Start ve *%appdata%\Microsoft\Windows\Start Start\Programy\\< název vydavatele\>*. Odkaz na místní nebo aplikace má stejný název jako název produktu.
+ Zástupce v nabídce Start nebo odkaz na aplikaci se vytvoří v *%AppData%\Microsoft\Windows\Start start\programy \\<jméno \> vydavatele*. Zástupce nebo odkaz na aplikaci má stejný název jako název produktu.
 
- Můžete nastavit **název produktu** a **název vydavatele** vlastnosti v **možnosti publikování** dialogovém okně k dispozici na **publikovat** stránky nástroje **Návrhář projektu**.
+ Vlastnosti **název produktu** a **název vydavatele** můžete nastavit v dialogovém okně **Možnosti publikování** , které je k dispozici na stránce **publikovat** v **Návrháři projektu**.
 
-### <a name="to-specify-a-start-menu-name"></a>K určení názvu úvodní nabídky
+### <a name="to-specify-a-start-menu-name"></a>Určení názvu nabídky Start
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **publikovat** kartu.
+2. Klikněte na kartu **publikovat** .
 
-3. Klikněte na tlačítko **možnosti** tlačítko Otevřít **možnosti publikování** dialogové okno.
+3. Kliknutím na tlačítko **Možnosti** otevřete dialogové okno **Možnosti publikování** .
 
-4. Klikněte na tlačítko **popis**.
+4. Klikněte na **Popis**.
 
-5. V **možnosti publikování** dialogového okna zadejte název, který má být zobrazen v **název produktu**.
+5. V dialogovém okně **Možnosti publikování** zadejte název, který se zobrazí v poli **název produktu**.
 
-6. Volitelně můžete zadat název vydavatele v **název vydavatele**.
+6. V případě potřeby můžete zadat název vydavatele v **názvu vydavatele**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)
-- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

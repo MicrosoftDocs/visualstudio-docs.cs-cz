@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce | Dokumentace Microsoftu'
+title: Nastavení vlastních oprávnění pro aplikaci ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,39 +15,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8a6fd6625726f749afcf20b80f83178a47ab92
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 17cd398468bd1640e50f6a58004905cfdf6c2ff0
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63407009"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382143"
 ---
-# <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce
-Můžete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která používá výchozí oprávnění pro zóny Internetu a místního intranetu. Alternativně můžete vytvořit vlastní zónu pro konkrétní oprávnění, které aplikace potřebuje. Můžete to provést úpravou oprávnění zabezpečení na **zabezpečení** stránku **Návrháře projektu**.
+# <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce
+Můžete nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci, která používá výchozí oprávnění pro zóny Internet nebo místní intranet. Alternativně můžete vytvořit vlastní zónu pro konkrétní oprávnění, která aplikace potřebuje. To lze provést přizpůsobením oprávnění zabezpečení na stránce **zabezpečení** **Návrháře projektu**.
 
 ### <a name="to-customize-a-permission"></a>Přizpůsobení oprávnění
 
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
 
-2. Klikněte na tlačítko **zabezpečení** kartu.
+2. Klikněte na kartu **Zabezpečení**.
 
-3. Vyberte **povolit nastavení zabezpečení ClickOnce** zaškrtávací políčko.
+3. Zaškrtněte políčko **Povolit nastavení zabezpečení ClickOnce** .
 
-4. Vyberte **Toto je aplikace s částečnou důvěryhodností** přepínač.
+4. Vyberte přepínač možnost **aplikace s částečnou důvěryhodností** .
 
-     Ovládací prvky **oprávnění zabezpečení ClickOnce** oddílu jsou povolené.
+     Ovládací prvky v oddílu **oprávnění zabezpečení ClickOnce** jsou povolené.
 
-5. Z **vaše aplikace bude provedena instalace ze zóny** rozevíracího seznamu, klikněte na tlačítko **(vlastní)**.
+5. Z rozevíracího seznamu zóna, ve které **se aplikace nainstaluje** , klikněte na **(vlastní)**.
 
-6. Klikněte na tlačítko **editovat XML soubor oprávnění**.
+6. Klikněte na **Upravit oprávnění XML**.
 
-     *App.manifest* soubor se otevře v editoru XML.
+     Soubor *App. manifest* se otevře v editoru XML.
 
-7. Před `</applicationRequestMinimum>` prvku, přidejte kód XML pro oprávnění, která vaše aplikace vyžaduje.
+7. Před `</applicationRequestMinimum>` element přidejte kód XML pro oprávnění, která vaše aplikace vyžaduje.
 
     > [!NOTE]
-    > Můžete použít `ToXml` metoda oprávnění nastavená pro generování kódu XML pro manifest aplikace. Například pro generování kódu XML pro <xref:System.Security.Permissions.EnvironmentPermission> sadu oprávnění, volání <xref:System.Security.Permissions.EnvironmentPermission.ToXml%2A> metody.
+    > Můžete použít `ToXml` metodu sady oprávnění k vygenerování kódu XML pro manifest aplikace. Chcete-li například vygenerovat XML pro <xref:System.Security.Permissions.EnvironmentPermission> sadu oprávnění, zavolejte <xref:System.Security.Permissions.EnvironmentPermission.ToXml%2A> metodu.
 
-## <a name="see-also"></a>Viz také:
-- [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)
+## <a name="see-also"></a>Viz také
+- [Zabezpečené aplikace ClickOnce](../deployment/securing-clickonce-applications.md)
 - [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)

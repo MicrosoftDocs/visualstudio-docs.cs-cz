@@ -1,40 +1,40 @@
 ---
-title: 'Postupy: zahrnutí požadavků do aplikace ClickOnce | Microsoft Docs'
+title: Postup – zahrnutí požadavků do aplikace ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c66bf0a5-8c93-4e68-a224-3b29ac36fe4d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94ed90b9fcdd0c4ffe35789d00de4bbbd4aaa355
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 957b375a3f3a00e653118b59c48b7233197c30ca
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77557642"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382390"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Postupy: zahrnutí požadavků do aplikace ClickOnce
-Předtím, než budete moci distribuovat požadovaný software do aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], je nutné nejprve stáhnout instalační balíčky pro tyto požadavky do vašeho vývojového počítače. Když publikujete aplikaci a zvolíte možnost **Stáhnout požadavky ze stejného umístění jako moje aplikace**, dojde k chybě, pokud instalační balíčky nejsou ve složce **Packages** .
+Předtím, než budete moci distribuovat požadovaný software do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, je třeba nejprve stáhnout instalační balíčky pro tyto požadavky do vašeho vývojového počítače. Když publikujete aplikaci a zvolíte možnost **Stáhnout požadavky ze stejného umístění jako moje aplikace**, dojde k chybě, pokud instalační balíčky nejsou ve složce **Packages** .
 
 > [!NOTE]
 > Postup přidání instalačního balíčku pro .NET Framework najdete v tématu [Průvodce nasazením .NET Framework pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers).
 
-## <a name="Package"></a>Postup přidání instalačního balíčku pomocí souboru Package. XML
+## <a name="to-add-an-installer-package-by-using-packagexml"></a><a name="Package"></a>Postup přidání instalačního balíčku pomocí Package.xml
 
 1. V Průzkumníku souborů otevřete složku **balíčky** .
 
-    Ve výchozím nastavení je cesta `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\`.
+    Ve výchozím nastavení je cesta `%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\` .
 
-2. Otevřete složku pro požadavek, který chcete přidat, a poté otevřete složku jazyka pro vaši nainstalovanou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (například **EN** pro angličtinu).
+2. Otevřete složku pro požadavek, který chcete přidat, a poté otevřete složku jazyka pro nainstalovanou verzi nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (například **EN** for English).
 
-3. V programu Poznámkový blok otevřete soubor *Package. XML* .
+3. V programu Poznámkový blok otevřete soubor *Package.xml* .
 
-4. Vyhledejte prvek **název** , který obsahuje `http://go.microsoft.com/fwlink`a zkopírujte adresu URL. Zahrňte část **LinkId** .
+4. Vyhledejte element **Name** , který obsahuje `http://go.microsoft.com/fwlink` , a zkopírujte adresu URL. Zahrňte část **LinkId** .
 
    > [!NOTE]
-   > Pokud žádný element **Name** neobsahuje `http://go.microsoft.com/fwlink`, otevřete soubor **Product. XML** v kořenové složce pro požadovanou součást a vyhledejte řetězec **fwlink** .
+   > Pokud žádný element **Name** neobsahuje `http://go.microsoft.com/fwlink` , otevřete soubor **Product.xml** v kořenové složce pro požadovanou součást a vyhledejte řetězec **fwlink** .
 
    > [!IMPORTANT]
    > Některé požadované softwarové programy mohou mít několik instalačních balíčků (například v 32bitových nebo 64bitových systémech). Pokud více elementů **Name** obsahuje **fwlink**, je nutné zopakovat zbývající kroky pro každý z nich.
