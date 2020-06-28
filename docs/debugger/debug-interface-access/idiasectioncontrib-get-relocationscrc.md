@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSectionContrib:: get_relocationsCrc | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b8602cfefbd414561ebfbaee979e6af5711b879
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 596656930e511d68f20916bd34044410aa706c75
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742547"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466117"
 ---
 # <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
 Načte kontrolu cyklického redundance (CRC) informace o přemístění pro oddíl.
@@ -36,7 +36,7 @@ HRESULT get_relocationsCrc ( 
 mimo Vrátí CRC informace o přemístění pro oddíl.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

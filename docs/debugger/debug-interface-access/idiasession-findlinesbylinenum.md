@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findLinesByLinenum | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5d64e9484b9450f5211e271df3b154ebab0fa75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 240eb3196ac47bf48bc6d6c3ef3ca844ec010dde
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742107"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465662"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 Určuje čísla řádků kompilantu, že zadané číslo řádku ve zdrojovém souboru leží uvnitř nebo blízko.
@@ -37,11 +37,11 @@ HRESULT findLinesByLinenum ( 
 #### <a name="parameters"></a>Parametry
 `compiland`
 
-pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje kompilantu, ve kterém chcete vyhledat čísla řádků. Tento parametr nelze `NULL`.
+pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje kompilantu, ve kterém chcete vyhledat čísla řádků. Tento parametr nemůže být `NULL` .
 
 `file`
 
-pro Objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje zdrojový soubor pro hledání. Tento parametr nelze `NULL`.
+pro Objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje zdrojový soubor pro hledání. Tento parametr nemůže být `NULL` .
 
 `linenum`
 
@@ -59,7 +59,7 @@ pro Určuje číslo sloupce. K určení všech sloupců použijte nulu. Sloupec 
 mimo Vrátí [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta, který obsahuje seznam čísel řádků, které se načetly.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 Následující příklad ukazuje, jak otevřít zdrojový soubor, vytvořit výčet compilands, který tento soubor přispěl, a vyhledat čísla řádků ve zdrojovém souboru, kde se spouští jednotlivé kompilantu.
@@ -101,7 +101,7 @@ void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)

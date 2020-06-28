@@ -1,7 +1,7 @@
 ---
-title: 'IDiaSegment:: get_Length | Microsoft Docs'
+title: 'IDiaSegment:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74b4e0d96013504a0fd03b7350c58f1987903ad0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d878e831e18149df63243abd7c6a4ceee051d550
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742414"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465970"
 ---
 # <a name="idiasegmentget_length"></a>IDiaSegment::get_length
 Načte počet bajtů v segmentu.
@@ -36,7 +36,7 @@ HRESULT get_ length ( 
 mimo Vrátí počet bajtů v segmentu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

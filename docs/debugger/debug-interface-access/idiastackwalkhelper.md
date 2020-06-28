@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkHelper | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40c2b58778b2a1073b31acc7007388d8e8fe222c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bdf2f54c585a8a5406a0772dc1c580112036671d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741308"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464623"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 Usnadňuje procházení zásobníku pomocí souboru ladicí databáze programu (PDB).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 
@@ -31,7 +31,7 @@ IDiaStackWalkHelper: IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí VTable
- Následující tabulka uvádí metody `IDiaStackWalkHelper`:
+ Následující tabulka uvádí metody `IDiaStackWalkHelper` :
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -41,7 +41,7 @@ IDiaStackWalkHelper: IUnknown
 |[IDiaStackWalkHelper::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddress.md)|Vyhledá zadaný rámec zásobníku pro nejbližší návratovou adresu funkce.|
 |[IDiaStackWalkHelper::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddressstart.md)|Vyhledá zadaný rámec zásobníku pro návratovou adresu na zadané adrese zásobníku nebo v ní.|
 |[IDiaStackWalkHelper::frameForVA](../../debugger/debug-interface-access/idiastackwalkhelper-frameforva.md)|Načte rámec zásobníku, který obsahuje zadanou virtuální adresu.|
-|[IDiaStackWalkHelper::symbolForVA](../../debugger/debug-interface-access/idiastackwalkhelper-symbolforva.md)|Načte symbol, který obsahuje zadanou virtuální adresu. **Poznámka:**  Symbol musí mít typ `SymTagFunctionType` (hodnota z výčtu [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
+|[IDiaStackWalkHelper::symbolForVA](../../debugger/debug-interface-access/idiastackwalkhelper-symbolforva.md)|Načte symbol, který obsahuje zadanou virtuální adresu. **Poznámka:**  Symbol musí být typu `SymTagFunctionType` (hodnota z výčtu [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaStackWalkHelper::pdataForVA](../../debugger/debug-interface-access/idiastackwalkhelper-pdataforva.md)|Vrátí blok dat PDATA přidružený k zadané virtuální adrese.|
 |[IDiaStackWalkHelper::imageForVA](../../debugger/debug-interface-access/idiastackwalkhelper-imageforva.md)|Načte počáteční virtuální adresu spustitelného souboru, kterému byla udělena virtuální adresa někde v paměťovém prostoru spustitelného souboru.|
 
@@ -56,9 +56,9 @@ IDiaStackWalkHelper: IUnknown
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: Msdia80. dll
+ KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

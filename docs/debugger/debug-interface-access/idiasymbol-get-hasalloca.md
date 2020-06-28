@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasAlloca | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4d476d5b2ecf9edf29aea1bbbc68e7890b59b13
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 11ebf6a450aa9b2b5fdd05d6573fc9ee10c6f83e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740589"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463825"
 ---
 # <a name="idiasymbolget_hasalloca"></a>IDiaSymbol::get_hasAlloca
-Načte příznak, který určuje, zda funkce obsahuje volání metody `alloca` (která se používá k přidělení paměti v zásobníku).
+Načte příznak, který určuje, zda funkce obsahuje volání `alloca` (které se používá k přidělení paměti v zásobníku).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,10 +31,10 @@ HRESULT get_hasAlloca(   BOOL *pFlag);
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-mimo Vrátí `TRUE`, pokud funkce obsahuje volání `alloca`; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda funkce obsahuje volání `alloca` ; v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -44,7 +44,7 @@ mimo Vrátí `TRUE`, pokud funkce obsahuje volání `alloca`; v opačném příp
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 8.0|
+|Verze:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

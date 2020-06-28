@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasInlAsm | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 336849e6818bd3b8d68558b381b8f0a0f8600028
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8bd9207a802a919e1dd86624584bda6963d2f278
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740520"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463706"
 ---
 # <a name="idiasymbolget_hasinlasm"></a>IDiaSymbol::get_hasInlAsm
 Načte příznak, který určuje, zda funkce obsahuje vložené sestavení.
@@ -33,10 +33,10 @@ HRESULT get_hasInlAsm(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-mimo Vrátí `TRUE`, pokud má funkce nějaké vložené sestavení; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda má funkce jakékoli vložené sestavení; v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -46,7 +46,7 @@ mimo Vrátí `TRUE`, pokud má funkce nějaké vložené sestavení; v opačném
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 8.0|
+|Verze:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: get_cplusplusExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d6d1e66cc7358bd086088199bf07a7320a0c8d07
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b23221b9b1efcfb4b13e5713b94a8acb4bf86a29
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743641"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467398"
 ---
 # <a name="idiaframedataget_cplusplusexceptionhandling"></a>IDiaFrameData::get_cplusplusExceptionHandling
-Načte příznak, který označuje, C++ zda je zpracování výjimek aktivní.
+Načte příznak, který označuje, zda je zpracování výjimek jazyka C++ v platnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ HRESULT get_cplusplusExceptionHandling ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, C++ Pokud je v platnosti zpracování výjimek; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda je prováděno zpracování výjimek jazyka C++. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Chcete-li zjistit, zda je zpracování strukturované výjimky v platnosti (což se C++ velmi liší od zpracování výjimek), zavolejte metodu [IDiaFrameData:: get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md) .
+ Chcete-li zjistit, zda je zpracování strukturované výjimky v platnosti (což se velmi liší od zpracování výjimek jazyka C++), zavolejte metodu [IDiaFrameData:: get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)
