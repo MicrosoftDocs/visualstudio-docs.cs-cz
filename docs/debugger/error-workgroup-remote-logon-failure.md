@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: selhání vzdáleného přihlášení pracovní skupiny | Microsoft Docs'
+title: Chyba – Chyba vzdáleného přihlášení pracovní skupiny | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.workgroup_remote_logon_failure
 dev_langs:
@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d1ee0cfbd021eb7d6a03a791713d187d3c8877c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 97045215098b1f59d5f76a928e9e0a1ab8362756
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736264"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460089"
 ---
 # <a name="error-workgroup-remote-logon-failure"></a>Chyba: Selhání vzdáleného přihlášení pracovní skupiny
 Tato chyba čte:
 
  Chyba přihlášení: neznámé uživatelské jméno nebo špatné heslo
 
- **Způsobit**
+ **Příčina**
 
  K této chybě může dojít při ladění z počítače v pracovní skupině a pokusu o připojení ke vzdálenému počítači. Mezi možné příčiny patří:
 
@@ -73,6 +73,6 @@ Tato chyba čte:
 
      ![Možnosti zabezpečení místních zásad zabezpečení](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")
 
-## <a name="see-also"></a>Viz také:
-- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

@@ -9,78 +9,78 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Security page
 - Security page in Project Designer
-author: TerryGLee
-ms.author: tglee
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 272d37ef9e73aa5dd0d10ca0210b18a945f993fd
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 0839adcf0e6c61141d2a14ad8903c532af76804c
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649826"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418896"
 ---
 # <a name="security-page-project-designer"></a>Stránka Zabezpečení, návrhář projektu
 
-Stránka **Zabezpečení** **návrháře projektu** se používá ke konfiguraci nastavení zabezpečení přístupu kódu pro aplikace, které jsou nasazeny pomocí nasazení ClickOnce. Další informace naleznete v [tématu Zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
+Stránka **zabezpečení** **Návrháře projektu** slouží ke konfiguraci nastavení zabezpečení přístupu kódu pro aplikace, které jsou nasazeny pomocí nasazení ClickOnce. Další informace najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
 
-Chcete-li získat přístup ke stránce **Zabezpečení,** klepněte na uzel projektu v **Průzkumníku řešení**a potom v nabídce **Project** klepněte na příkaz **Vlastnosti**. Po zobrazení **Návrháře projektů** klikněte na kartu **Zabezpečení.**
+Chcete-li získat přístup ke stránce **zabezpečení** , klikněte na uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **zabezpečení** .
 
 ## <a name="security-settings"></a>Nastavení zabezpečení
 
- **Povolení nastavení zabezpečení ClickOnce**
+ **Povolit nastavení zabezpečení ClickOnce**
 
-Určuje, zda jsou nastavení zabezpečení povolena v době návrhu. Pokud tato možnost není zaškrtnuta, nejsou k dispozici všechny ostatní možnosti na stránce **Zabezpečení.**
+Určuje, zda jsou nastavení zabezpečení povolena v době návrhu. Pokud tato možnost není zaškrtnutá, všechny ostatní možnosti na stránce **zabezpečení** nejsou k dispozici.
 
 > [!NOTE]
-> Při publikování aplikace pomocí Průvodce **publikováním** je tato možnost automaticky povolena.
+> Když publikujete aplikaci pomocí průvodce **publikováním** , tato možnost je automaticky povolena.
 
-Vyberete-li tuto možnost, budete mít možnost vybrat jedno ze dvou přepínacích tlačítek: **Jedná se o aplikaci s úplným vztahem důvěryhodnosti** nebo **o aplikaci s částečnou důvěryhodností**.
+Když vyberete tuto možnost, budete mít možnost výběru jednoho ze dvou přepínačů: **jedná se o úplnou důvěryhodnou aplikaci** nebo **se jedná o aplikaci s částečnou důvěryhodností**.
 
-Ve výchozím nastavení je vybrána tato možnost pro projekty aplikace webového prohlížeče WPF.
+Ve výchozím nastavení je pro projekty aplikace webového prohlížeče WPF Tato možnost vybraná.
 
-Ve výchozím nastavení je tato možnost pro všechny ostatní typy projektů vymazána.
+Ve výchozím nastavení pro všechny ostatní typy projektů Tato možnost není zaškrtnuta.
 
  **Toto je aplikace s plnou důvěryhodností.**
 
-Pokud vyberete tuto možnost, aplikace požádá o oprávnění úplné důvěryhodnosti při instalaci nebo spuštění v klientském počítači. Pokud je to možné, nepoužívejte úplnou důvěryhodnost, protože vaší aplikaci bude udělen neomezený přístup k prostředkům, jako je například systém souborů a registr.
+Vyberete-li tuto možnost, aplikace při instalaci nebo spuštění v klientském počítači požádá o úplná oprávnění důvěryhodnosti. Nepoužívejte úplný vztah důvěryhodnosti, pokud je to možné, protože vaší aplikaci bude udělen neomezený přístup k prostředkům, jako je třeba systém souborů a registr.
 
-Ve výchozím nastavení je pro projekty aplikace webového prohlížeče WPF tato možnost nastavena na částečnou důvěryhodnost.
+Ve výchozím nastavení pro projekty aplikace webového prohlížeče WPF je tato možnost nastavena na částečnou důvěryhodnost.
 
-Ve výchozím nastavení je tato možnost pro všechny ostatní typy projektů nastavena na hodnotu Úplná důvěryhodnost.
+Ve výchozím nastavení pro všechny ostatní typy projektů je tato možnost nastavena na úplný vztah důvěryhodnosti.
 
- **Jedná se o aplikaci s částečnou důvěryhodností.**
+ **Toto je aplikace s částečnou důvěryhodností.**
 
-Pokud vyberete tuto možnost, aplikace požádá o částečná oprávnění důvěryhodnosti při instalaci nebo spuštění v klientském počítači. *Částečný vztah důvěryhodnosti* znamená, že budou spuštěny pouze akce, které jsou povoleny podle požadovaných oprávnění zabezpečení přístupu kódu. Další informace o konfiguraci oprávnění zabezpečení naleznete v [tématu Code Access Security for ClickOnce Applications](../../deployment/code-access-security-for-clickonce-applications.md).
+Pokud vyberete tuto možnost, aplikace při instalaci nebo spuštění v klientském počítači vyžádá částečná oprávnění vztahu důvěryhodnosti. *Částečná důvěryhodnost* znamená, že se spustí jenom akce, které jsou povolené v rámci požadovaných oprávnění zabezpečení přístupu ke kódu. Další informace o tom, jak nakonfigurovat oprávnění zabezpečení, najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
 
-Nastavení zabezpečení Částečná důvěryhodnost můžete určit konfigurací možností v oblasti **Oprávnění zabezpečení ClickOnce.**
+Nastavení zabezpečení s částečnou důvěryhodností můžete určit konfigurací možností v oblasti **oprávnění zabezpečení ClickOnce** .
 
-## <a name="clickonce-security-permissions"></a>ClickOnce Oprávnění zabezpečení
+## <a name="clickonce-security-permissions"></a>Oprávnění zabezpečení ClickOnce
 
- **Zóna, ze které bude aplikace nainstalována**
+ **Zóna, ze které se aplikace nainstaluje**
 
-Určuje výchozí sadu oprávnění zabezpečení přístupu kódu. Chcete-li nastavit omezená oprávnění, zvolte **internet** nebo **místní intranet** nebo zvolte **(Vlastní)** pro konfiguraci vlastní sady oprávnění. Pokud aplikace požaduje více oprávnění, než je uděleno v zóně, zobrazí se výzva důvěryhodnosti ClickOnce pro koncového uživatele udělit další oprávnění. Další informace o konfiguraci oprávnění zabezpečení naleznete v [tématu Code Access Security for ClickOnce Applications](../../deployment/code-access-security-for-clickonce-applications.md).
+Určuje výchozí sadu oprávnění zabezpečení přístupu kódu. Vyberte **Internet** nebo **místní intranet** pro sadu omezených oprávnění, nebo vyberte **(vlastní)** a nakonfigurujte vlastní sadu oprávnění. Pokud aplikace požaduje více oprávnění, než je uděleno v zóně, zobrazí se uživateli výzva k zadání vztahu důvěryhodnosti ClickOnce pro koncového uživatele, který udělí další oprávnění. Další informace o tom, jak nakonfigurovat oprávnění zabezpečení, najdete v tématu [zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md).
 
-Ve výchozím nastavení je u projektů aplikace webového prohlížeče WPF tato možnost nastavena na **internet**.
+Ve výchozím nastavení jsou pro projekty aplikace webového prohlížeče WPF tyto možnosti nastaveny na možnost **Internet**.
 
  **Upravit oprávnění XML**
 
-Otevře šablonu manifestu aplikace (app.manifest) pro konfiguraci oprávnění pro **sadu oprávnění (Vlastní).**
+Otevře šablonu manifestu aplikace (App. manifest) pro konfiguraci oprávnění pro sadu oprávnění **(vlastní)** .
 
- **Upřesnit**
+ **Pokročilý**
 
-Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md), které slouží ke konfiguraci nastavení pro ladění aplikace s omezenými oprávněními. Tato nastavení jsou kontrolovány během ladění a výjimky oprávnění označují, že vaše aplikace může potřebovat více oprávnění, než je definováno v zóně.
+Otevře [dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md), které se používá ke konfiguraci nastavení pro ladění aplikace s omezenými oprávněními. Tato nastavení jsou kontrolována během ladění a výjimky oprávnění označují, že vaše aplikace může potřebovat více oprávnění, než je definováno v zóně.
 
 ## <a name="see-also"></a>Viz také
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>
-- [Zabezpečení přístupu kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md)
+- [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../../deployment/code-access-security-for-clickonce-applications.md)
 - [Postupy: Povolení nastavení zabezpečení ClickOnce](../../deployment/how-to-enable-clickonce-security-settings.md)
 - [Postupy: Nastavení zóny zabezpečení pro aplikaci ClickOnce](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
 - [Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Zabezpečené aplikace ClickOnce](../../deployment/securing-clickonce-applications.md)
-- [ClickOnce Zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md)
+- [Zabezpečení aplikací ClickOnce](../../deployment/securing-clickonce-applications.md)
+- [ClickOnce – zabezpečení a nasazení](../../deployment/clickonce-security-and-deployment.md)
 - [Referenční dokumentace k vlastnostem projektu](../../ide/reference/project-properties-reference.md)
 - [Dialogové okno Upřesnit nastavení zabezpečení](../../ide/reference/advanced-security-settings-dialog-box.md)

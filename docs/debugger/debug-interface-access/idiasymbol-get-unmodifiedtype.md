@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_unmodifiedType | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47841f5fe4abeafe7c522784db337b1960081439
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee138fd361d883fb465711e679d09e6c96ddac4b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738985"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461579"
 ---
 # <a name="idiasymbolget_unmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
 Načte původní typ pro tento symbol. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na typ.
@@ -36,7 +36,7 @@ HRESULT get_unmodifiedType( 
 mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje původní typ tohoto symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -49,7 +49,7 @@ mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbo
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Chyba: pracovní proces webu byl ukončen službou IIS | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.web_server_process_terminated
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3231c8ba2835fb535d538e29ef7df7ea3d1c4a8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6d61f124d906137557b17b81122eba34e471a1a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736357"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459997"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Chyba: Pracovní proces webu byl ukončen službou IIS.
 Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová informační služba (IIS), aby se předpokládalo, že pracovní proces přestal reagovat. Proto služba IIS ukončila pracovní proces.
@@ -34,13 +34,13 @@ Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová 
 
    2. V **Ovládacích panelech**zvolte **přepínač přepnout do klasického zobrazení**, v případě potřeby a dvakrát klikněte na položku **Nástroje pro správu**.
 
-2. V okně **Nástroje pro správu** poklikejte na **Správce služby Internetová informační služba (IIS)** .
+2. V okně **Nástroje pro správu** poklikejte na **Správce služby Internetová informační služba (IIS)**.
 
     Spustí se správce služby IIS.
 
-3. V podokně **připojení** rozbalte \<computer název > uzel v případě potřeby.
+3. V podokně **připojení** rozbalte \<computer name> uzel v případě potřeby.
 
-4. Pod uzlem \<computer název > klikněte na **fondy aplikací**.
+4. V \<computer name> uzlu klikněte na **fondy aplikací**.
 
 5. V seznamu **fondy aplikací** klikněte pravým tlačítkem na název fondu, ve kterém je aplikace spuštěná, a pak klikněte na **Upřesnit nastavení**.
 
@@ -56,5 +56,5 @@ Ladicí program zastavil provádění kódu na webu. To způsobilo Internetová 
 
 8. Zavřete Správce služby IIS a okno **Nástroje pro správu** .
 
-## <a name="see-also"></a>Viz také:
-- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)

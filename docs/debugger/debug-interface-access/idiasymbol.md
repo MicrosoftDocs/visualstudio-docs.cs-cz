@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,27 +12,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c22e4b5d0fdb965cceb87fdff878c93b76e96b15
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0214d3e8d097efa31b3f8b02e67f419226a093a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738778"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461341"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 Popisuje vlastnosti instance symbolu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSymbol : IUnknown
 ```
 
 ## <a name="methods-in-alphabetical-order"></a>Metody v abecedním pořadí
-Následující tabulka ukazuje metody `IDiaSymbol`.
+V následující tabulce jsou uvedeny metody `IDiaSymbol` .
 
 > [!NOTE]
-> Symboly budou vracet smysluplná data pouze pro některé z těchto metod v závislosti na typu symbolu. Pokud metoda vrátí `S_OK`, pak tato metoda vrátila smysluplná data.
+> Symboly budou vracet smysluplná data pouze pro některé z těchto metod v závislosti na typu symbolu. Pokud metoda vrátí `S_OK` , pak tato metoda vrátila smysluplná data.
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -49,8 +49,8 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyrva.md)|Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo, v tomto symbolu v rámci zadané relativní virtuální adresy (RVA).|
 |[IDiaSymbol::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyva.md)|Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo, v tomto symbolu v rámci zadané virtuální adresy (VA).|
 |[IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsbyrvaforacceleratorpointertag.md)|S ohledem na odpovídající hodnotu značky vrátí tato metoda výčet symbolů, které jsou obsaženy v této zástupné funkci v zadané relativní virtuální adrese.|
-|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|Vrátí počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.|
-|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|Vrátí všechny hodnoty značek akcelerátoru, které odpovídají funkci C++ zástupného kódu akcelerátoru amp.|
+|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|Vrátí počet značek akcelerátoru v C++ AMP funkci zástupné procedury.|
+|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|Vrátí všechny hodnoty značek akcelerátoru, které odpovídají funkci pro zástupné procedury akcelerátoru C++ AMP.|
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|Načte modifikátor přístupu člena třídy.|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|Načte odkládací část umístění adresy.|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|Načte část umístění adresy.|
@@ -89,11 +89,11 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|Načte číslo sestavení front-endu.|
 |[IDiaSymbol::get_function](../../debugger/debug-interface-access/idiasymbol-get-function.md)|Načte příznak označující, zda veřejný symbol odkazuje na funkci.|
 |[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|Načte identifikátor GUID symbolu.|
-|[IDiaSymbol::get_hasAlloca](../../debugger/debug-interface-access/idiasymbol-get-hasalloca.md)|Načte příznak označující, zda funkce obsahuje volání `alloca`.|
+|[IDiaSymbol::get_hasAlloca](../../debugger/debug-interface-access/idiasymbol-get-hasalloca.md)|Načte příznak označující, zda funkce obsahuje volání `alloca` .|
 |[IDiaSymbol::get_hasAssignmentOperator](../../debugger/debug-interface-access/idiasymbol-get-hasassignmentoperator.md)|Načte příznak označující, zda uživatelsky definovaný datový typ má definované operátory přiřazení.|
 |[IDiaSymbol::get_hasCastOperator](../../debugger/debug-interface-access/idiasymbol-get-hascastoperator.md)|Načte příznak označující, zda uživatelsky definovaný datový typ má definované operátory přetypování.|
 |[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|Načte příznak označující, zda kompilantu obsahuje nějaké informace o ladění.|
-|[IDiaSymbol::get_hasEH](../../debugger/debug-interface-access/idiasymbol-get-haseh.md)|Načte příznak označující, zda má funkce obslužnou rutinu výjimky ve C++stylu.|
+|[IDiaSymbol::get_hasEH](../../debugger/debug-interface-access/idiasymbol-get-haseh.md)|Načte příznak označující, zda má funkce obslužnou rutinu výjimky ve stylu jazyka C++.|
 |[IDiaSymbol::get_hasEHa](../../debugger/debug-interface-access/idiasymbol-get-haseha.md)|Načte příznak označující, zda má funkce asynchronní obslužnou rutinu výjimky.|
 |[IDiaSymbol::get_hasInlAsm](../../debugger/debug-interface-access/idiasymbol-get-hasinlasm.md)|Načte příznak označující, zda má funkce vložené sestavení.|
 |[IDiaSymbol::get_hasLongJump](../../debugger/debug-interface-access/idiasymbol-get-haslongjump.md)|Načte příznak označující, zda funkce obsahuje příkaz longjmp (součást zpracování výjimek ve stylu jazyka C).|
@@ -106,8 +106,8 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|Načte příznak označující, zda byla funkce označena atributem inline.|
 |[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|Načte příznak označující, jestli má funkce návrat z instrukce pro přerušení.|
 |[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|Načte příznak označující, zda je funkce virtuální funkcí základní třídy.|
-|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|Načte příznak, který označuje, zda symbol odpovídá skupině sdílené místní proměnné v kódu kompilovaném pro akcelerátor C++ amp.|
-|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|Načte příznak, který označuje, zda symbol odpovídá *symbolu rozsahu definice* pro komponentu značky v kódu kompilovaném pro akcelerátor C++ amp. Symbol rozsahu definice je umístění proměnné pro rozsah adres.|
+|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|Načte příznak, který označuje, zda symbol odpovídá skupině sdílené místní proměnné v kódu kompilovaném pro C++ AMP akcelerátor.|
+|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|Načte příznak, který označuje, zda symbol odpovídá *symbolu rozsahu definice* pro komponentu značky v kódu kompilovaném pro C++ amp akcelerátor. Symbol rozsahu definice je umístění proměnné pro rozsah adres.|
 |[IDiaSymbol::get_isAcceleratorStubFunction](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorstubfunction.md)|Označuje, zda symbol odpovídá symbolu funkce nejvyšší úrovně pro shader kompilovaný pro akcelerátor, který odpovídá `parallel_for_each` volání.|
 |[IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)|Načte příznak označující, zda jsou data součástí agregace mnoha symbolů.|
 |[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|Načte příznak označující, zda soubor symbolů obsahuje typy jazyka C.|
@@ -121,7 +121,7 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_isMultipleInheritance](../../debugger/debug-interface-access/idiasymbol-get-ismultipleinheritance.md)|Určuje, zda `this` ukazatel ukazuje na datový člen s vícenásobnou dědičností.|
 |[IDiaSymbol::get_isNaked](../../debugger/debug-interface-access/idiasymbol-get-isnaked.md)|Načte příznak označující, zda má funkce atribut typu [holé](/cpp/cpp/naked-cpp) .|
 |[IDiaSymbol::get_isOptimizedAway](../../debugger/debug-interface-access/idiasymbol-get-isoptimizedaway.md)|Určuje, zda je proměnná optimalizována.|
-|[IDiaSymbol::get_isPointerBasedOnSymbolValue](../../debugger/debug-interface-access/idiasymbol-get-ispointerbasedonsymbolvalue.md)|Určuje, zda je ukazatel `this` založen na hodnotě symbolu.|
+|[IDiaSymbol::get_isPointerBasedOnSymbolValue](../../debugger/debug-interface-access/idiasymbol-get-ispointerbasedonsymbolvalue.md)|Určuje, zda `this` je ukazatel založen na hodnotě symbolu.|
 |[IDiaSymbol::get_isPointerToDataMember](../../debugger/debug-interface-access/idiasymbol-get-ispointertodatamember.md)|Určuje, zda je tento symbol ukazatelem na datový člen.|
 |[IDiaSymbol::get_isPointerToMemberFunction](../../debugger/debug-interface-access/idiasymbol-get-ispointertomemberfunction.md)|Určuje, zda je tento symbol ukazatelem na členskou funkci.|
 |[IDiaSymbol::get_isReturnValue](../../debugger/debug-interface-access/idiasymbol-get-isreturnvalue.md)|Určuje, zda proměnná přenáší návratovou hodnotu.|
@@ -153,15 +153,15 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_noReturn](../../debugger/debug-interface-access/idiasymbol-get-noreturn.md)|Načte příznak označující, zda byla funkce deklarována s atributem [vracet](/cpp/cpp/noreturn) .|
 |[IDiaSymbol::get_noStackOrdering](../../debugger/debug-interface-access/idiasymbol-get-nostackordering.md)|Načte příznak označující, zda by nebylo možné provést řazení zásobníku jako součást kontroly vyrovnávací paměti zásobníku.|
 |[IDiaSymbol::get_notReached](../../debugger/debug-interface-access/idiasymbol-get-notreached.md)|Načte příznak označující, zda není funkce nebo popisek nikdy dosažen.|
-|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|Vrátí počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.|
+|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|Vrátí počet značek akcelerátoru v C++ AMP funkci zástupné procedury.|
 |[IDiaSymbol::get_numberOfModifiers](../../debugger/debug-interface-access/idiasymbol-get-numberofmodifiers.md)|Načte počet modifikátorů, které jsou aplikovány na původní typ.|
 |[IDiaSymbol::get_numberOfRegisterIndices](../../debugger/debug-interface-access/idiasymbol-get-numberofregisterindices.md)|Načte počet indexů registru.|
 |[IDiaSymbol::get_numberOfRows](../../debugger/debug-interface-access/idiasymbol-get-numberofrows.md)|Načte počet řádků v matici.|
 |[IDiaSymbol::get_numberOfColumns](../../debugger/debug-interface-access/idiasymbol-get-numberofcolumns.md)|Načte počet sloupců v matici.|
 |[IDiaSymbol::get_objectFileName](../../debugger/debug-interface-access/idiasymbol-get-objectfilename.md)|Načte název souboru objektu.|
 |[IDiaSymbol::get_objectPointerType](../../debugger/debug-interface-access/idiasymbol-get-objectpointertype.md)|Načte typ ukazatele objektu pro metodu třídy.|
-|[IDiaSymbol::get_oemId](../../debugger/debug-interface-access/idiasymbol-get-oemid.md)|Načte hodnotu `oemId` symbolu.|
-|[IDiaSymbol::get_oemSymbolId](../../debugger/debug-interface-access/idiasymbol-get-oemsymbolid.md)|Načte hodnotu `oemSymbolId` symbolu.|
+|[IDiaSymbol::get_oemId](../../debugger/debug-interface-access/idiasymbol-get-oemid.md)|Načte `oemId` hodnotu symbolu.|
+|[IDiaSymbol::get_oemSymbolId](../../debugger/debug-interface-access/idiasymbol-get-oemsymbolid.md)|Načte `oemSymbolId` hodnotu symbolu.|
 |[IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)|Načte posun umístění symbolu.|
 |[IDiaSymbol::get_optimizedCodeDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-optimizedcodedebuginfo.md)|Načte příznak označující, zda funkce nebo popisek obsahuje optimalizované kódy a také informace o ladění.|
 |[IDiaSymbol::get_overloadedOperator](../../debugger/debug-interface-access/idiasymbol-get-overloadedoperator.md)|Načte příznak označující, zda uživatelsky definovaný datový typ má přetížené operátory.|
@@ -173,7 +173,7 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_registerId](../../debugger/debug-interface-access/idiasymbol-get-registerid.md)|Načte specifikátor registrace umístění.|
 |[IDiaSymbol::get_registerType](../../debugger/debug-interface-access/idiasymbol-get-registertype.md)|Načte typ registru.|
 |[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|Načte relativní virtuální adresu (RVA) umístění.|
-|[IDiaSymbol::get_restrictedType](../../debugger/debug-interface-access/idiasymbol-get-restrictedtype.md)|Určuje, zda je ukazatel `this` označen jako omezený.|
+|[IDiaSymbol::get_restrictedType](../../debugger/debug-interface-access/idiasymbol-get-restrictedtype.md)|Určuje, zda `this` je ukazatel označen jako omezený.|
 |[IDiaSymbol::get_samplerSlot](../../debugger/debug-interface-access/idiasymbol-get-samplerslot.md)|Načte slot vzorkovače.|
 |[IDiaSymbol::get_scoped](../../debugger/debug-interface-access/idiasymbol-get-scoped.md)|Načte příznak označující, zda se uživatelsky definovaný datový typ zobrazuje v neglobálním lexikálním oboru.|
 |[IDiaSymbol::get_signature](../../debugger/debug-interface-access/idiasymbol-get-signature.md)|Načte hodnotu podpisu symbolu.|
@@ -192,7 +192,7 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|Načte oddíl adresy cíle s převoláním.|
 |[IDiaSymbol::get_targetVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetvirtualaddress.md)|Načte virtuální adresu (VA) cíle s převoláním.|
 |[IDiaSymbol::get_textureSlot](../../debugger/debug-interface-access/idiasymbol-get-textureslot.md)|Načte slot textury.|
-|[IDiaSymbol::get_thisAdjust](../../debugger/debug-interface-access/idiasymbol-get-thisadjust.md)|Načte logický `this` seřizovacího modulu pro metodu.|
+|[IDiaSymbol::get_thisAdjust](../../debugger/debug-interface-access/idiasymbol-get-thisadjust.md)|Načte logický `this` seřizovací modul pro metodu.|
 |[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|Načte typ převráceného kódu funkce.|
 |[IDiaSymbol::get_timeStamp](../../debugger/debug-interface-access/idiasymbol-get-timestamp.md)|Načte časové razítko základního spustitelného souboru.|
 |[IDiaSymbol::get_token](../../debugger/debug-interface-access/idiasymbol-get-token.md)|Načte token metadat spravované funkce nebo proměnné.|
@@ -203,8 +203,8 @@ Následující tabulka ukazuje metody `IDiaSymbol`.
 |[IDiaSymbol::get_uavSlot](../../debugger/debug-interface-access/idiasymbol-get-uavslot.md)|Načte slot UAV.|
 |[IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)|Načte celou řadu uživatelsky definovaného typu (UDT).|
 |[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|Načte příznak označující, zda je uživatelem definovaný datový typ nezarovnán.|
-|[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|Načte nedekorovaný název pro C++ dekorované nebo navázání názvu.|
-|[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|Přípona metody `get_undecoratedName`, která načte nedekorovaný název na základě hodnoty pole rozšíření.|
+|[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|Načte nedekorovaný název pro upravený nebo propojený, název v jazyce C++.|
+|[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|Rozšíření `get_undecoratedName` metody, která načte nedekorovaný název na základě hodnoty pole rozšíření.|
 |[IDiaSymbol::get_unmodifiedTypeId](../../debugger/debug-interface-access/idiasymbol-get-unmodifiedtypeid.md)|Načte ID původního (neupraveného) typu.|
 |[IDiaSymbol::get_upperBound](../../debugger/debug-interface-access/idiasymbol-get-upperbound.md)|Načte horní mez dimenze pole FORTRAN.|
 |[IDiaSymbol::get_upperBoundId](../../debugger/debug-interface-access/idiasymbol-get-upperboundid.md)|Načte identifikátor symbolu horní meze dimenze pole FORTRAN.|
@@ -261,7 +261,7 @@ Získejte toto rozhraní voláním jedné z následujících metod:
 Tento příklad ukazuje, jak zobrazit místní proměnné pro funkci v dané relativní virtuální adrese. Také ukazuje, jak spolu vzájemně souvisí symboly různých typů.
 
 > [!NOTE]
-> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce v případě, že instance přechází z rozsahu.
+> `CDiaBSTR`je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
 
 ```C++
 void DumpLocalVars( DWORD rva, IDiaSession *pSession )
@@ -336,13 +336,13 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 ```
 
 ## <a name="requirements"></a>Požadavky
-`Header:` Dia2. h
+`Header:`Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

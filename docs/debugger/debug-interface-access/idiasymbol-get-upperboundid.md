@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_upperBoundId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 640bce657df53bec66ab75575f35fcd68131a82a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6d573f54a6264562c02960448768a8409fcc5e5a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738942"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461544"
 ---
 # <a name="idiasymbolget_upperboundid"></a>IDiaSymbol::get_upperBoundId
 Načte identifikátor symbolu horní meze dimenze pole FORTRAN.
@@ -35,7 +35,7 @@ HRESULT get_upperBoundId ( 
 - [out,] Vrátí ID symbolu, který představuje horní mez dimenze pole FORTRAN.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -43,5 +43,5 @@ HRESULT get_upperBoundId ( 
 ## <a name="remarks"></a>Poznámky
  Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

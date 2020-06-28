@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_slot | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a47ba9144ab2a322148f167d50b54f1d6b7db80d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b4701e3274a45d16cf06ac9a25aa94448bc85b0c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739325"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461975"
 ---
 # <a name="idiasymbolget_slot"></a>IDiaSymbol::get_slot
-Načte číslo pozice v umístění. Použijte při `LocIsSlot` [výčtu LocationType –](../../debugger/debug-interface-access/locationtype.md) .
+Načte číslo pozice v umístění. Použijte, když je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) `LocIsSlot` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,11 +36,11 @@ HRESULT get_slot ( 
 mimo Vrátí číslo pozice umístění.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

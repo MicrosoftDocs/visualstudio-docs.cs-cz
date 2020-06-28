@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_volatileType | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5967a13596b5fad99f0f14277ea0e9505e222a41
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f612b11623f2a70e972ddce9ee4aa26ff2d44067
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738804"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461356"
 ---
 # <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
 Načte příznak, který určuje, zda je uživatelsky definovaný datový typ (UDT) volatile.
@@ -33,16 +33,16 @@ HRESULT get_volatileType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud je typ UDT volatile; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda je parametr UDT volatile. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- V C++aplikaci může být typ UDT označený klíčovým slovem `volatile`, což značí, že jeho obsah nelze předpokládat, že existuje z jednoho přístupu k dalšímu.
+ V jazyce C++ může být typ UDT označený `volatile` klíčovým slovem, což značí, že jeho obsah nelze předpokládat, že existuje z jednoho přístupu k dalšímu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

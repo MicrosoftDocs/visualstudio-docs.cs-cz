@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_thisAdjust | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e92a18ce7b9b7206121d1ad514217f79d2f8628a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2475ccf14d892a7f7d1b130c63dbea458038dd41
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739150"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461799"
 ---
 # <a name="idiasymbolget_thisadjust"></a>IDiaSymbol::get_thisAdjust
-Načte logický `this` seřizovacího modulu pro metodu.
+Načte logický `this` seřizovací modul pro metodu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ HRESULT get_thisAdjust ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí metodu pro nastavení logického `this` pro metodu.
+mimo Vrátí logický `this` seřizovací metodu pro metodu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- V některých případech vícenásobné dědičnosti musí metoda sám vypočítat hodnotu true `this` přidáním posunu k `this`.
+ V některých případech vícenásobné dědičnosti může metoda sám vypočítat hodnotu true přidáním `this` posunu k `this` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3511b52ab8c04d9018336b4d63b0659792835d99
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85347869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418779"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributu DebuggerDisplay (C#, Visual Basic, F #, C++/CLI).
 
@@ -27,10 +27,10 @@ ms.locfileid: "85347869"
 
 Pokud má třída potlačenou `ToString()` metodu, ladicí program použije potlačenou metodu namísto výchozího `{<typeName>}` . Proto, pokud jste přepsali `ToString()` metodu, ladicí program použije přepsanou metodu namísto výchozího `{<typeName>}` a nemusíte ji používat `DebuggerDisplay` . Použijete-li obojí, má `DebuggerDisplay` atribut přednost před potlačenou `ToString()` metodou. `DebuggerDisplay`Atribut má také přednost před potlačenou `ToString()` metodou v podtříde.
 
-Bez ohledu na to, zda ladicí program vyhodnocuje Toto implicitní `ToString()` volání, závisí na nastavení uživatele v dialogovém okně **Nástroje/možnosti/ladění** . Visual Basic neimplementuje Toto implicitní `ToString()` vyhodnocení.
+Bez ohledu na to, zda ladicí program vyhodnocuje Toto implicitní `ToString()` volání, závisí na nastavení uživatele v dialogovém okně **Nástroje/možnosti/ladění** .
 
 > [!IMPORTANT]
-> Pokud je zaškrtnuté políčko **Zobrazit nezpracovanou strukturu objektů v proměnných** v dialogovém okně **nástroje/Options/ladění** , `DebuggerDisplay` je atribut ignorován.
+> Pokud je zaškrtávací políčko **Zobrazit nezpracovanou strukturu objektů v proměnných** zaškrtnuto v dialogovém okně **Nástroje/možnosti/ladění** , `DebuggerDisplay` je atribut ignorován.
 
 > [!NOTE]
 > Pro nativní kód je tento atribut podporován pouze v kódu jazyka C++/CLI.

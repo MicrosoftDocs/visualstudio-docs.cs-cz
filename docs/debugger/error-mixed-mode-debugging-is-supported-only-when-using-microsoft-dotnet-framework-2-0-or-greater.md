@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: ladění ve smíšeném režimu je podporováno pouze v případě, že používáte Microsoft .NET Framework 2,0 nebo vyšší | Microsoft Docs'
+title: 'Chyba: ladění ve smíšeném režimu se podporuje jenom v případě, že používáte Microsoft .NET Framework 2,0 nebo vyšší |. Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.interop_unsupported_to_old
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c85dac85146c59d8aeba9f9cf85351b5bc17a81c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: de19f6b735f990b0e419c040291e1bf538f680f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737616"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460621"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>Chyba: Ladění ve smíšeném režimu je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo vyšší.
 Chcete-li ladit smíšený nativní a spravovaný kód, je nutné mít .NET Framework verze 2,0, 3,0. 3,5 nebo 4,0. Ladění ve smíšeném režimu se staršími verzemi .NET Framework není podporováno.
@@ -28,5 +28,5 @@ Chcete-li ladit smíšený nativní a spravovaný kód, je nutné mít .NET Fram
 
 - Upgradujte .NET Framework na verzi 2,0, 3,0, 3,5 nebo 4,0.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vzdálené ladění](../debugger/remote-debugging.md)

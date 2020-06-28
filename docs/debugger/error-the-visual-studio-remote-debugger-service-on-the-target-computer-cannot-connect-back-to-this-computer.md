@@ -1,9 +1,9 @@
 ---
-title: 'Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.'
+title: 'Chyba: Služba Visual Studio Remote Debugger v cílovém počítači se nemůže připojit zpět k tomuto počítači.'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.service_access_denied_oncallback
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 695c4c9e84ce9eb851a551dc9821bff00123a35c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 975d2d1c1f66fe06f8fc3a9568f790fbe4c21e36
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737409"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460387"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
 Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna pod uživatelským účtem, který nelze ověřit při pokusu o připojení k počítači, ze kterého provádíte ladění. K této chybě může dojít při vzdáleném ladění pomocí staršího ladicího stroje a vzdálený ladicí program je spuštěn jako služba.
@@ -30,17 +30,17 @@ Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna p
 
 |||||
 |-|-|-|-|
-||Účet LocalSystem|Doménový účet|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
+||Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
 |Oba počítače ve stejné doméně|Ano|Ano|Ano|
-|Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|Ne|Ano|
-|Jeden nebo oba počítače v pracovní skupině|Ne|Ne|Ano|
-|Počítače v různých doménách|Ne|Ne|Ano|
+|Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|No|Yes|
+|Jeden nebo oba počítače v pracovní skupině|Ne|No|Yes|
+|Počítače v různých doménách|Ne|No|Yes|
 
  Další vylepšení:
 
 - Účet, pod kterým spustíte službu Visual Studio Remote Debugger, se musí nacházet jako správce na vzdáleném počítači, aby mohl ladit jakýkoli proces.
 
-- Je také nutné udělit účtu oprávnění `Log on as a service` na vzdáleném počítači, který používá nástroj pro správu **místních zásad zabezpečení** .
+- K účtu musí být také udělené `Log on as a service` oprávnění na vzdáleném počítači, který používá nástroj pro správu **místních zásad zabezpečení** .
 
 - Pokud používáte místní účet pro přístup k počítači, musíte spustit službu Visual Studio Remote Debugger pod místním účtem.
 
@@ -74,6 +74,6 @@ Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna p
 
 - Spusťte Sledování vzdáleného ladění jako aplikaci namísto služby.
 
-## <a name="see-also"></a>Viz také:
-- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

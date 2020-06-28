@@ -1,7 +1,7 @@
 ---
 title: IDiaTable | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bc7a573eb92d7c51079b0a7e97067abd155ae4fa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 984b9d5d9bfd5c3800ec816e1f57489e0348f53c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738702"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461285"
 ---
 # <a name="idiatable"></a>IDiaTable
 Vytvoří výčet tabulky zdroje dat DIA.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaTable : IEnumUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaTable`.
+V následující tabulce jsou uvedeny metody `IDiaTable` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -39,14 +39,14 @@ Následující tabulka ukazuje metody `IDiaTable`.
 |[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|Načte odkaz na konkrétní index záznamu.|
 
 ## <a name="remarks"></a>Poznámky
-Toto rozhraní implementuje metody výčtu `IEnumUnknown` v oboru názvů Microsoft. VisualStudio. OLE. Interop. Rozhraní výčtu `IEnumUnknown` je mnohem efektivnější pro iteraci nad obsahem tabulky, než metody [IDiaTable:: get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) a [IDiaTable:: Item](../../debugger/debug-interface-access/idiatable-item.md) .
+Toto rozhraní implementuje `IEnumUnknown` metody výčtu v oboru názvů Microsoft. VisualStudio. OLE. Interop. `IEnumUnknown`Rozhraní výčtu je mnohem efektivnější pro iteraci nad obsahem tabulky, než metody [IDiaTable:: Get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) a [IDiaTable:: Item](../../debugger/debug-interface-access/idiatable-item.md) .
 
-Výklad rozhraní `IUnknown` vráceného metodou `IDiaTable::Item` nebo metodou `Next` (v oboru názvů Microsoft. VisualStudio. OLE. Interop) závisí na typu tabulky. Například pokud rozhraní `IDiaTable` představuje seznam vložených zdrojů, pro rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) by se mělo zadat dotaz `IUnknown` rozhraní.
+Interpretace `IUnknown` rozhraní vráceného buď `IDiaTable::Item` metodou nebo `Next` metodou (v oboru názvů Microsoft. VisualStudio. OLE. Interop) závisí na typu tabulky. Například pokud `IDiaTable` rozhraní představuje seznam vložených zdrojů, `IUnknown` pro rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) by se mělo zadat dotaz na rozhraní.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
 Získejte toto rozhraní voláním metody [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md) nebo [IDiaEnumTables:: Next](../../debugger/debug-interface-access/idiaenumtables-next.md) .
 
-Následující rozhraní jsou implementována s rozhraním `IDiaTable` (to znamená, že můžete zadat dotaz na `IDiaTable` rozhraní pro jedno z následujících rozhraní):
+Následující rozhraní jsou implementována s `IDiaTable` rozhraním (to znamená, že můžete zadat dotaz na `IDiaTable` rozhraní pro jedno z následujících rozhraní):
 
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
@@ -63,10 +63,10 @@ Následující rozhraní jsou implementována s rozhraním `IDiaTable` (to zname
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
 ## <a name="example"></a>Příklad
-První funkce, `ShowTableNames`, zobrazí názvy všech tabulek v relaci. Druhá funkce, `GetTable`, vyhledá všechny tabulky pro tabulku, která implementuje zadané rozhraní. Třetí funkce `UseTable` ukazuje, jak používat funkci `GetTable`.
+První funkce `ShowTableNames` zobrazí názvy všech tabulek v relaci. Druhá funkce, `GetTable` , vyhledá všechny tabulky pro tabulku, která implementuje zadané rozhraní. Třetí funkce, `UseTable` , ukazuje, jak používat `GetTable` funkci.
 
 > [!NOTE]
-> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce v případě, že instance přechází z rozsahu.
+> `CDiaBSTR`je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
 
 ```C++
 void ShowTableNames(IDiaSession *pSession)
@@ -135,9 +135,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 - [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

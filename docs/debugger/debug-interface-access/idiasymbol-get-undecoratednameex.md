@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_undecoratedNameEx | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48efbc249d076853e12bc54d2e8a8d438570e740
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25942c76d8e568d6354c9a6a2b2c69c806cde352
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738998"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461600"
 ---
 # <a name="idiasymbolget_undecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
-Načte část nebo celý nedekorovaný název pro C++ dekorované (propojení) název.
+Načte část nebo celý nedekorovaný název pro název dekorované (vazby) v jazyce C++.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,21 +38,21 @@ pro Určuje kombinaci příznaků, které řídí, co je vráceno. Konkrétní h
 
  `pRetVal`
 
-mimo Vrátí nedekorovaný název pro C++ dekorovaný název.
+mimo Vrátí nedekorovaný název pro dekorované názvy v jazyce C++.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- @No__t_0 může být kombinací následujících příznaků.
+ `undecorateOptions`Může se jednat o kombinaci následujících příznaků.
 
 > [!NOTE]
 > Názvy příznaků nejsou definovány v DIA SDK, takže je nutné přidat deklarace do kódu nebo použít nezpracované hodnoty.
 
-|příznaků|Hodnota|Popis|
+|Příznak|Hodnota|Popis|
 |----------|-----------|-----------------|
 |UNDNAME_COMPLETE|0x0000|Povoluje úplné oddekorace.|
 |UNDNAME_NO_LEADING_UNDERSCORES|0x0001|Odstraní úvodní podtržítka od společnosti Microsoft rozšířená klíčová slova.|
@@ -62,7 +62,7 @@ mimo Vrátí nedekorovaný název pro C++ dekorovaný název.
 |UNDNAME_NO_ALLOCATION_LANGUAGE|0x0010|Zakáže rozšíření specifikátoru jazyka deklarace.|
 |UNDNAME_RESERVED1|0x0020|Rezervovaný.|
 |UNDNAME_RESERVED2|0x0040|Rezervovaný.|
-|UNDNAME_NO_THISTYPE|0x0060|Zakáže všechny modifikátory u typu `this`.|
+|UNDNAME_NO_THISTYPE|0x0060|Zakáže všechny modifikátory `this` typu.|
 |UNDNAME_NO_ACCESS_SPECIFIERS|0x0080|Zakáže rozšíření specifikátorů přístupu pro členy.|
 |UNDNAME_NO_THROW_SIGNATURES|0x0100|Zakáže rozšíření throw-signaturs pro funkce a ukazatele na funkce.|
 |UNDNAME_NO_MEMBER_TYPE|0x0200|Zakáže rozšíření `static` nebo `virtual` členů.|
@@ -75,5 +75,5 @@ mimo Vrátí nedekorovaný název pro C++ dekorovaný název.
 |UNDNAME_NO_IDENT_CHAR_CHECK|0x10000|Potlačí kontrolu platných znaků identifikátoru.|
 |UNDNAME_NO_PTR64|0x20000|Nezahrnuje ptr64 do výstupu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

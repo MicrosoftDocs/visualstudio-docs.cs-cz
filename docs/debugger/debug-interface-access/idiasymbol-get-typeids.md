@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_typeIds | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4db7c1d7e3ed19268d94b28a7f0500788f7d21f5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 36bf189b8137c5a1a632dffd0b5a5d1641a9c24c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739076"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461690"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbol.
@@ -39,17 +39,17 @@ pro Velikost vyrovnávací paměti pro uchovávání dat.
 
  `pcTypeIds`
 
-mimo Vrátí počet zapsaných `typeIds`, nebo pokud `typeIds` `NULL`, pak celkový počet dostupných identifikátorů typů.
+mimo Vrátí počet `typeIds` napsaných čísel, nebo pokud `typeIds` je `NULL` , a celkový počet dostupných identifikátorů typů.
 
  `typeIds[]`
 
 mimo Pole, které se má vyplnit identifikátory typu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

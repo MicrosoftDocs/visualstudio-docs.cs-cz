@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: ověřování protokolu Kerberos nebylo úspěšné | Microsoft Docs'
+title: 'Chyba: ověřování protokolem Kerberos se nezdařilo | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.callback_kerberos_auth_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe13fd3d0dc7e29fc12d369ec0865bcbc97b1a4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 07afa4aca82a83f5b7ba64ad0e9958710582a6a0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737670"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460674"
 ---
 # <a name="error-kerberos-authentication-failed"></a>Chyba: Ověření protokolem Kerberos se nezdařilo.
 Při pokusu o vzdálené ladění se může zobrazit následující chybová zpráva:
@@ -34,7 +34,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 - Cílový počítač nebo hostitelský počítač ladicího programu se nachází v pracovní skupině, nikoli v doméně.
 
-   \- nebo-
+   \-ani
 
 - Protokol Kerberos byl na řadiči domény zakázán.
 
@@ -52,12 +52,12 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
     ping <debugger_host_computer_name>
     ```
 
-3. První řádek odpovědi `ping` zobrazuje úplný název počítače a IP adresu vrácenou DNS pro zadaný počítač.
+3. První řádek `ping` odpovědi zobrazuje úplný název počítače a IP adresu vrácenou DNS pro zadaný počítač.
 
-4. Na hostitelském počítači ladicího programu otevřete okno **příkazového řádku** a spusťte `ipconfig`.
+4. Na hostitelském počítači ladicího programu otevřete okno **příkazového řádku** a spusťte příkaz `ipconfig` .
 
 5. Porovnejte hodnoty IP adres.
 
-## <a name="see-also"></a>Viz také:
-- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Vzdálené ladění](../debugger/remote-debugging.md)

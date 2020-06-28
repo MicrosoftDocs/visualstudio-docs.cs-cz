@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: při ladění webových služeb vypršel časový limit | Microsoft Docs'
+title: Chyba – časový limit při ladění webových služeb | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aba4fef3e1c787651eb961f80b3507090f250a2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: efb77689c33d263723f146f9b2484748505406b6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736919"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460270"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>Chyba: Během ladění webových služeb vypršel časový limit.
 Při krokování webové služby XML od volání kódu může být volání někdy vyprší časový limit, přičemž výsledkem je, že nelze pokračovat v ladění. Může se zobrazit chybová zpráva, například.
@@ -39,5 +39,5 @@ Service1 obj = new Service1();
 obj.TimeOut = -1; // infinite time out.
 ```
 
-## <a name="see-also"></a>Viz také:
-- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

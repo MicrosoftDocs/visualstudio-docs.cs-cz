@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: getSrcLineOnTypeDefn | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ad554d18-9988-4b64-ad71-e7594c266e94
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f28dc5e60343cc6aacdf456d5475afbfc7db5e9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e19ce48a8716952f53a1caa6a44fd5ba3d817f4e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738786"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461348"
 ---
 # <a name="idiasymbolgetsrclineontypedefn"></a>IDiaSymbol::getSrcLineOnTypeDefn
 Načte zdrojový soubor a číslo řádku, které označují, kde je definován zadaný uživatelsky definovaný typ.
@@ -30,11 +30,11 @@ HRESULT getSrcLineOnTypeDefn(
 #### <a name="parameters"></a>Parametry
  `ppResult`
 
-mimo Objekt `IDiaLineNumber`, který obsahuje zdrojový soubor a číslo řádku, kde je definován uživatelem.
+mimo `IDiaLineNumber`Objekt, který obsahuje zdrojový soubor a číslo řádku, kde je definován uživatelem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

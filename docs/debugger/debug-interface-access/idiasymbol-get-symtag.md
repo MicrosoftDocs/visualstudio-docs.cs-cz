@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_symTag | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99f24e47ff04c6a7d37633c4f04bbd058b861cd6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9336bece2713c69f4fbb88df9703405cdd161e54
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739234"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461891"
 ---
 # <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 Načte klasifikátor typu symbolu.
@@ -36,7 +36,7 @@ HRESULT get_symTag ( 
 mimo Vrací hodnotu z výčtu [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) , který určuje klasifikátor typu symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -49,6 +49,6 @@ DWORD       tag = 0;
 pType->get_symTag( &tag );
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

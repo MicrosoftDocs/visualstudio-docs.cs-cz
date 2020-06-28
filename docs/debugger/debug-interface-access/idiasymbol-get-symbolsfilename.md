@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_symbolsFileName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f282f7eeae0dd4def8468322bf73e192503ceef1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d83747d3db9336c00d8c770db415093de693f1c7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739250"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461926"
 ---
 # <a name="idiasymbolget_symbolsfilename"></a>IDiaSymbol::get_symbolsFileName
 Načte název souboru, ze kterého byly symboly načteny.
@@ -36,14 +36,14 @@ HRESULT get_symbolsFileName ( 
 mimo Vrátí název souboru, ze kterého byly symboly načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost je platná pouze pro symboly s hodnotou [výčtu symtagenum –](../../debugger/debug-interface-access/symtagenum.md) `SymTagExe`, které mají také globální rozsah.
+ Tato vlastnost je platná pouze pro symboly s hodnotou [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) `SymTagExe` , která má také globální rozsah.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

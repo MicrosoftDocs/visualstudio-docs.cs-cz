@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: Cílový proces se ukončil s kódem &#39;kód&#39; při vyhodnocování funkce &#39;funkce&#39; | Dokumentace Microsoftu'
+title: 'Chyba: cílový proces se ukončil s kódem &#39;kódem&#39; při vyhodnocování funkce &#39;funkcí&#39; | Microsoft Docs'
 ms.date: 4/06/2018
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.process_exit_during_func_eval
 author: mikejo5000
@@ -9,39 +9,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d82b6011a0dfa7f2c388e7d5f39a9ebabcd663
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850820"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460775"
 ---
-# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Chyba: Cílový proces se ukončil s kódem &#39;kód&#39; při vyhodnocování funkce &#39;– funkce&#39;
+# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Chyba: cílový proces se ukončil s kódem &#39;kódem&#39; při vyhodnocování funkce &#39;funkce&#39;
 
-Text celé zprávy: Cílový proces se ukončil s kódem "kód" při vyhodnocování funkce 'function'.
+Úplný text zprávy: cílový proces byl ukončen s kódem Code při vyhodnocování funkce Function.
 
-Aby bylo snazší kontrolovat stav objektů .NET, ladicí program automaticky vynutí laděného procesu ke spuštění dalšího kódu (obvykle metody getter vlastnosti a `ToString` funkce). Ve většině případů tyto funkce úspěšně dokončena, nebo vyvolat výjimky, které lze zachytit ladicím programem. Existují však některé okolnosti, ve kterých nejde zachytit výjimky, protože překračují hranice jádra, vyžadují – čerpání zpráv uživatele nebo Neopravitelná. Jako výsledek, metoda getter vlastnosti nebo metody ToString, která spustí kód tohoto buď ukončí proces (například volání `ExitProcess()`) nebo vyvolá neošetřenou výjimku, která nejde zachytit (například `StackOverflowException`) končí laděného procesu a ukončení relace ladění. Pokud dojde k této chybě to došlo k chybě.
+Aby bylo snazší zkontrolovat stav objektů .NET, ladicí program automaticky vynutí proces laděného procesu spustit další kód (obvykle metody getter vlastnosti a `ToString` funkce). Ve většině scénářů jsou tyto funkce úspěšně dokončeny nebo vyvolaly výjimky, které mohou být zachyceny ladicím programem. Existují však určité okolnosti, kdy výjimky nelze zachytit, protože překračují hranice jádra, vyžadují čerpadlo uživatelských zpráv nebo jsou neobnovitelné. V důsledku toho metoda getter nebo ToString, která spouští kód, který buď explicitně ukončí proces (například volání `ExitProcess()` ) nebo vyvolá neošetřenou výjimku, kterou nelze zachytit (například `StackOverflowException` ), ukončí laděný proces a ukončí relaci ladění. Pokud se zobrazí tato chybová zpráva, došlo k této chybě.
 
-Jedním z běžných důvodů tohoto problému je, že když ladicí program vyhodnotí vlastnost, která se zavolá sama sebe, to může vést k výjimce přetečení zásobníku. Výjimku přetečení zásobníku nelze obnovit, a cílový proces se ukončí.
+Jednou z běžných příčin tohoto problému je, že když ladicí program vyhodnotí vlastnost, která volá sám sebe, může to mít za následek výjimku přetečení zásobníku. Nelze obnovit výjimku přetečení zásobníku a cílový proces bude ukončen.
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 
 Existují dvě možná řešení tohoto problému.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: Ladicí program zabránit volání metoda getter vlastnosti nebo metody ToString 
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Řešení #1: zabrání ladicímu programu volat vlastnost getter nebo metodu ToString. 
 
-Chybová zpráva vám sdělí název, který ladicí program se pokusil zavolat funkci. S názvem funkce, můžete zkusit znovu vaše rozhodnutí vyzkoušet tuto funkci **okamžité** okno pro ladění hodnocení. Ladění je možné při vyhodnocování z **okamžité** okno proto, že na rozdíl od implicitní vyhodnocení z **automatické hodnoty a místní hodnoty/Watch** windows, ladicí program přeruší v případě neošetřených výjimek.
+Chybová zpráva vám sdělí název funkce, kterou ladicí program pokusil zavolat. S názvem funkce můžete zkusit znovu vyhodnotit tuto funkci z příkazového **okna pro** ladění vyhodnocení. Ladění je možné při vyhodnocování z **příkazového okna,** protože na rozdíl od implicitních hodnocení z oken automatické hodnoty, místní hodnoty a **kukátko** se ladicí program ukončí na neošetřených výjimkách.
 
-Pokud upravíte tuto funkci, můžete zabránit ladicí program volání metoda getter vlastnosti nebo `ToString` metody. Zkuste použijte jeden z následujících akcí:
+Pokud tuto funkci můžete změnit, můžete zabránit ladicímu programu v volání metody getter nebo Method vlastnosti `ToString` . Zkuste provést jednu z následujících akcí:
 
-* Změnit metodu na jiný typ kódu kromě metoda getter vlastnosti nebo metody ToString a problém zmizí.
+* Změňte metodu na jiný typ kódu kromě metody getter nebo ToString a problém zmizí.
     -nebo-
-* (Pro `ToString`) definovat `DebuggerDisplay` atribut na typ a může mít ladicí program vyhodnotí něco jiného než `ToString`.
+* (Pro `ToString` ) Definujte `DebuggerDisplay` atribut pro daný typ a ladicí program může vyhodnotit jinou hodnotu než `ToString` .
     -nebo-
-* (Pro metoda getter vlastnosti) Vložit `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atribut na vlastnost. To může být užitečné, pokud máte metodu, která nadále vlastnost z důvodů kompatibility rozhraní API, ale ve skutečnosti měla by být metody.
+* (Pro Getter vlastnost) Umístěte `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` atribut na vlastnost. To může být užitečné, pokud máte metodu, která musí mít vlastnost pro důvody kompatibility rozhraní API, ale měla by být ve skutečnosti metoda.
 
-Pokud tuto metodu nelze upravit, bude pravděpodobně možné Cílový proces zarážku alternativní instrukce, a opakujte hodnocení.
+Pokud tuto metodu nemůžete změnit, je možné, že cílový proces bude možné rozdělit na alternativní instrukci a znovu provést vyhodnocení.
 
-### <a name="solution-2-disable-all-implicit-evaluation"></a>Řešení #2: Zakažte všechny implicitní vyhodnocení
+### <a name="solution-2-disable-all-implicit-evaluation"></a>Řešení #2: Zakázat všechna implicitní vyhodnocení
 
-Pokud předchozí řešení není problém vyřešit, přejděte na **nástroje** > **možnosti**a zrušte zaškrtnutí políčka **ladění**  >   **Obecné** > **povolit vyhodnocování vlastností a jiných implicitních volání funkcí**. Tím dojde k zakázání většina vyhodnocení implicitní funkce a má problém vyřešit.
+Pokud předchozí řešení problém nevyřeší, pokračujte na **Tools**  >  **Možnosti**nástroje a zrušte zaškrtněte nastavení **ladění**  >  **Obecné**  >  **Povolit vyhodnocení vlastností a další implicitní volání funkcí**. Tato akce zakáže většinu implicitních vyhodnocení funkcí a tento problém by měl vyřešit.

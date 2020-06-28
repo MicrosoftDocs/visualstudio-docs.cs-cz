@@ -11,65 +11,65 @@ helpviewer_keywords:
 - pre-build events
 - post-build events
 ms.assetid: 3fff9ae5-213c-46ea-a660-1d70acb6c922
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6629f41657a546ffb5fb48e0b6efb5f4f0dd50cb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a56093ab14b9be72f99e36b03eefe7abb895183f
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596876"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419052"
 ---
 # <a name="build-events-page-project-designer-c"></a>Stránka Události sestavení, návrhář projektu (C#)
 
-Pomocí stránky **Události sestavení** **návrháře projektu** určete pokyny konfigurace sestavení. Můžete také určit podmínky, za kterých jsou spuštěny všechny události po sestavení. Další informace naleznete v [tématu How to: Specify Build Events (C#)](../../ide/how-to-specify-build-events-csharp.md) and [How to: Specify Build Events (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
+Pomocí stránky **události sestavení** **Návrháře projektu** můžete zadat pokyny ke konfiguraci sestavení. Můžete také zadat podmínky, za kterých budou spouštěny události po sestavení. Další informace naleznete v tématu [Postupy: určení událostí sestavení (C#)](../../ide/how-to-specify-build-events-csharp.md) a [Postupy: určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 **Konfigurace**
 
-Tento ovládací prvek nelze na této stránce upravovat. Popis tohoto ovládacího prvku naleznete v tématu [Build Page, Project Designer (C#)](../../ide/reference/build-page-project-designer-csharp.md).
+Tento ovládací prvek není na této stránce možné upravovat. Popis tohoto ovládacího prvku naleznete v tématu [Stránka sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
 **Platforma**
 
-Tento ovládací prvek nelze na této stránce upravovat. Popis tohoto ovládacího prvku naleznete v tématu [Build Page, Project Designer (C#)](../../ide/reference/build-page-project-designer-csharp.md).
+Tento ovládací prvek není na této stránce možné upravovat. Popis tohoto ovládacího prvku naleznete v tématu [Stránka sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
 **Příkazový řádek události před sestavením**
 
-Určuje všechny příkazy, které mají být provedeny před spuštěním sestavení. Chcete-li zadat dlouhé příkazy, klepněte na **tlačítko Upravit předsestavení,** [chcete-li zobrazit dialogové okno příkazového řádku události před sestavením nebo po sestavení](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
+Určuje, které příkazy se mají provést před zahájením sestavení. Chcete-li zadat dlouhé příkazy, klikněte na tlačítko **Upravit před sestavením** a zobrazte tak [dialogové okno Příkazový řádek události před sestavením/po sestavení](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md).
 
 > [!NOTE]
-> Události předběžného sestavení se nespustí, pokud je projekt aktuální a neaktivuje se žádné sestavení.
+> Události před sestavením se nespustí, pokud je projekt aktuální a není spuštěno žádné sestavení.
 
 **Příkazový řádek události po sestavení**
 
-Určuje všechny příkazy, které mají být provedeny po ukončení sestavení. Chcete-li psát dlouhé příkazy, klepněte na **tlačítko Upravit následné sestavení** a zobrazte dialogové okno **příkazového řádku události před sestavením.**
+Určuje všechny příkazy, které mají být provedeny po ukončení sestavení. Chcete-li zadat dlouhé příkazy, klikněte na **Upravit po sestavení** , aby se zobrazilo **dialogové okno Příkazový řádek události před sestavením/po sestavení**.
 
 > [!NOTE]
-> Přidejte `call` příkaz před všechny příkazy po sestavení, které spouštějí soubory BAT. Příkladem je `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+> Přidejte `call` příkaz před všechny příkazy po sestavení, které spouštějí soubory. bat. Příkladem je `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
-**Spuštění události po sestavení**
+**Spustit událost po sestavení**
 
 Určuje následující podmínky pro spuštění události po sestavení, jak je znázorněno v následující tabulce.
 
 |Možnost|Výsledek|
 |------------|------------|
-|**Vždy**|Událost po sestavení se spustí bez ohledu na to, zda je sestavení úspěšné.|
-|**Na úspěšné sestavení**|Událost po sestavení se spustí, pokud je sestavení úspěšné. Proto bude událost spuštěna i pro projekt, který je aktuální, tak dlouho, dokud sestavení úspěšné.|
-|**Když sestavení aktualizuje výstup projektu**|Událost po sestavení se spustí pouze v případě, že se výstupní soubor kompilátoru (.exe nebo .dll) liší od předchozího výstupního souboru kompilátoru. Proto událost po sestavení není spuštěna, pokud je projekt aktuální.|
+|**Vždy**|Událost po sestavení se spustí bez ohledu na to, jestli je sestavení úspěšné.|
+|**Po úspěšném sestavení**|Událost po sestavení se spustí, pokud je sestavení úspěšné. Proto se událost spustí i pro projekt, který je aktuální, pokud je sestavení úspěšné.|
+|**Když sestavení aktualizuje výstup projektu**|Událost po sestavení se spustí pouze v případě, že výstupní soubor kompilátoru (. exe nebo. dll) je jiný než předchozí výstupní soubor kompilátoru. Proto se událost po sestavení nespustí, pokud je projekt aktuální.|
 
 ## <a name="in-the-project-file"></a>V souboru projektu
 
-V dřívějších verzích sady Visual Studio při změně nastavení **PreBuildEvent** nebo **PostBuildEvent** v ide, Visual Studio přidá `PreBuildEvent` vlastnost nebo `PostBuildEvent` do souboru projektu. Pokud je například nastavení příkazového řádku **PreBuildEvent** v prostředí IDE následující:
+V dřívějších verzích sady Visual Studio, pokud změníte nastavení **PreBuildEvent** nebo **PostBuildEvent** v rozhraní IDE, Visual Studio přidá `PreBuildEvent` `PostBuildEvent` vlastnost nebo do souboru projektu. Například pokud vaše nastavení příkazového řádku **PreBuildEvent** v integrovaném vývojovém prostředí je následující:
 
 ```input
 "$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
 ```
 
-pak nastavení souboru projektu je:
+nastavení soubor projektu je:
 
 ```xml
 <PropertyGroup>
@@ -77,7 +77,7 @@ pak nastavení souboru projektu je:
 </PropertyGroup>
 ```
 
-Pro projekty .NET Core Visual Studio 2019 (a Visual Studio 2017 v `PreBuild` `PostBuild` novějších aktualizacích) přidá cíl MSBuild s názvem nebo pro nastavení **PreBuildEvent** a **PostBuildEvent.** Tyto cíle používají **BeforeTargets** a **AfterTargets** atributy, které MSBuild rozpozná. Například pro předchozí příklad Visual Studio nyní generuje následující kód:
+Pro projekty .NET Core Visual Studio 2019 (a Visual Studio 2017 v novějších aktualizacích) přidá cíl MSBuild s názvem `PreBuild` nebo `PostBuild` pro nastavení **PreBuildEvent** a **PostBuildEvent** . Tyto cíle používají atributy **BeforeTargets** a **AfterTargets** , které nástroj MSBuild rozpozná. Například pro předchozí příklad nyní Visual Studio generuje následující kód:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -85,7 +85,7 @@ Pro projekty .NET Core Visual Studio 2019 (a Visual Studio 2017 v `PreBuild` `Po
 </Target>
 ```
 
-Pro událost po sestavení použijte `PostBuild` název a `AfterTargets` nastavte `PostBuildEvent`atribut na .
+Pro událost po sestavení použijte název `PostBuild` a nastavte atribut `AfterTargets` na `PostBuildEvent` .
 
 ```xml
 <Target Name="PostBuild" AfterTargets="PostBuildEvent">
@@ -94,7 +94,7 @@ Pro událost po sestavení použijte `PostBuild` název a `AfterTargets` nastavt
 ```
 
 > [!NOTE]
-> Tyto změny souboru projektu byly provedeny pro podporu projektů ve stylu sady SDK. Pokud migrujete soubor projektu ze starého formátu do formátu ve stylu sady `PreBuildEvent` SDK ručně, měli byste odstranit vlastnosti a `PostBuildEvent` nahradit je `PreBuild` a `PostBuild` cíle, jak je znázorněno v předchozím kódu. Informace o tom, jak zjistit, zda je projekt projektem ve stylu sady SDK, naleznete v [tématu Kontrola formátu projektu](/nuget/resources/check-project-format).
+> Tyto změny souborů projektu byly provedeny pro podporu projektů ve stylu sady SDK. Pokud migrujete soubor projektu z původního formátu do formátu stylu sady SDK ručně, měli byste odstranit `PreBuildEvent` `PostBuildEvent` vlastnosti a a nahradit je a `PreBuild` cíli, jak je `PostBuild` uvedeno v předchozím kódu. Informace o tom, jak zjistit, zda se jedná o projekt ve stylu sady SDK, naleznete v tématu [check Project Format](/nuget/resources/check-project-format).
 
 ## <a name="see-also"></a>Viz také
 

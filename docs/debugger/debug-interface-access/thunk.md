@@ -1,7 +1,7 @@
 ---
 title: Převod kódu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,22 +13,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7361ab06adf6e692fe3e44955375eb08fa0bf05
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 90eeaefd8784be3e381c72dd452a23c56e0df47d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738480"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461033"
 ---
 # <a name="thunk"></a>Převod
-Každý `thunk` je identifikován značkou `SymTagThunk`.
+Každá `thunk` je identifikována `SymTagThunk` značkou.
 
 ## <a name="properties"></a>Vlastnosti
  V následující tabulce jsou uvedeny vlastnosti, které jsou platné pro tento typ symbolu.
 
 |Vlastnost|Datový typ|Popis|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Atribut modifikátoru přístupu, jednu z hodnot [výčtu CV_access_e](../../debugger/debug-interface-access/cv-access-e.md) (pouze V DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Atribut modifikátoru přístupu, jednu z hodnot [výčtu CV_access_e](../../debugger/debug-interface-access/cv-access-e.md) (pouze v DIA SDK v 8.0 nebo novějším).|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Odsadit část umístění; Podrobnosti najdete v tématu [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md).|
 |[IDiaSegment::get_addressSection](../../debugger/debug-interface-access/idiasegment-get-addresssection.md)|`DWORD`|Část umístění; Podrobnosti najdete v tématu [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md).|
 |[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|Nadřazený objekt třídy, pokud existuje (pouze v rámci DIA SDK V 8.0 nebo novější).|
@@ -44,7 +44,7 @@ Každý `thunk` je identifikován značkou `SymTagThunk`.
 |[IDiaSymbol::get_pure](../../debugger/debug-interface-access/idiasymbol-get-pure.md)|`BOOL`|TRUE, pokud je převod za čistě virtuální (jenom v DIA SDK V 8.0 nebo novějším).|
 |[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|`DWORD`|Relativní pozice této rutiny v rámci jejího modulu.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|ID indexu symbolu|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagThunk` (jedna z hodnot [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagThunk` (jednu z hodnot [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaSymbol::get_targetOffset](../../debugger/debug-interface-access/idiasymbol-get-targetoffset.md)|`DWORD`|Posune část umístění cíle převolání.|
 |[IDiaSymbol::get_targetRelativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetrelativevirtualaddress.md)|`DWORD`|Relativní virtuální adresa cíle přehlasování v ohraničujícím bloku|
 |[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|`DWORD`|Část cíle převolání.|
@@ -52,13 +52,13 @@ Každý `thunk` je identifikován značkou `SymTagThunk`.
 |[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|`DWORD`|Typ převodu, jak je definováno [výčtem THUNK_ORDINAL](../../debugger/debug-interface-access/thunk-ordinal.md).|
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Typ tohoto převodu (pouze v DIA SDK V 8.0 nebo novějším).|
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|ID symbolu typu (pouze v DIA SDK V 8.0 nebo novějším).|
-|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE`, pokud není převod kódu zarovnán (pouze v DIA SDK v 8.0 nebo novějším),|
-|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE`, zda je převodová rutina virtuální (pouze v DIA SDK verze 8.0 nebo novější).|
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE`Pokud není převod kódu zarovnán (pouze v DIA SDK V 8.0 nebo novějším),|
+|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE`v případě, že převod je virtuální (jenom v DIA SDK V 8.0 nebo novějším).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Pozice této rutiny v rámci spustitelného souboru.|
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|Posun ve virtuální tabulce k této rutině (pouze v DIA SDK V 8.0 nebo novějším).|
-|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`, je-li převod kódu označen jako volatile (pouze v DIA SDK v 8.0 nebo novějším).|
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`Pokud je převod kódu označen jako volatile (pouze v DIA SDK V 8.0 nebo novějším).|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)
 - [THUNK_ORDINAL – výčet](../../debugger/debug-interface-access/thunk-ordinal.md)

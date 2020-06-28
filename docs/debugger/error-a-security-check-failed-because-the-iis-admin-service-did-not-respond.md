@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: nepovedlo se ověřit zabezpečení, protože služba správy služby IIS neodpověděla | Microsoft Docs'
+title: 'Chyba: ověření zabezpečení se nezdařilo, protože služba správy služby IIS neodpověděla | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.iis_not_responding
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f668de3d7c7e9a8bd075beb972199cf849feea65
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1b9620edf10d2d3cab8da8231e561fc77d7e6af5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737877"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460875"
 ---
 # <a name="error-a-security-check-failed-because-the-iis-admin-service-did-not-respond"></a>Chyba: Kontrola zabezpečení selhala, protože služba správy služby IIS neodpověděla.
 K této chybě dochází, pokud služba správy služby IIS nereaguje. To obvykle znamená, že došlo k potížím s instalací služby IIS. Nejdřív ověřte, že je služba spuštěná pomocí nástroje **služby** z **nástrojů pro správu**.
@@ -44,5 +44,5 @@ K této chybě dochází, pokud služba správy služby IIS nereaguje. To obvykl
 
      Další informace najdete v dokumentaci ke službě IIS.
 
-## <a name="see-also"></a>Viz také:
-- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

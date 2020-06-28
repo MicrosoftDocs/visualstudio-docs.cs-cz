@@ -1,7 +1,7 @@
 ---
 title: 'Chyba: uživatel nemohl spustit uloženou proceduru sp_enable_sql_debug | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,16 +12,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bdc6ecb03572d824f6e3b887090d67be416cdef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1da494b5bb8c168775e2183f41113f00d021792
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736555"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460062"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Chyba: Uživatel nemohl spustit uloženou proceduru sp_enable_sql_debug.
 
-Uloženou proceduru sp_enable_sql_debug se nepovedlo spustit na serveru. Příčinou může být:
+Uloženou proceduru sp_enable_sql_debug nelze na serveru spustit. Příčinou může být:
 
 - Problém s připojením Musíte mít stabilní připojení k serveru.
 
@@ -29,7 +29,7 @@ Uloženou proceduru sp_enable_sql_debug se nepovedlo spustit na serveru. Příč
 
 Další informace najdete v tématu [Postup: nastavení SQL Server oprávnění pro ladění](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: nastavení SQL Server oprávnění pro ladění](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
 - [Nastavení ladění SQL](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))

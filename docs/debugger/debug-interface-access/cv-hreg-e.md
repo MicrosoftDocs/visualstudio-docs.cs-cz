@@ -1,7 +1,7 @@
 ---
 title: CV_HREG_e | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aac055930e9d1b016bbdc4949cbbdbee798cfaa2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee15d5b4d6a0959397d8d62753455c7a26f01f78
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745308"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462105"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Určuje cílový registr.
 
 > [!NOTE]
-> Vzhledem k tomu, že výčet `CV_HREG_e` je příliš velký pro duplikaci v celém místě, je k dispozici zkrácená verze jako odkaz. Chybějící položky jsou vyznačeny kurzívou. Úplný výčet je k dispozici v souboru hlaviček cvconst. h.
+> Vzhledem `CV_HREG_e` k tomu, že výčet je příliš velký pro duplikaci v celém místě, je k dispozici zkrácená verze jako odkaz. Chybějící položky jsou vyznačeny kurzívou. Úplný výčet je k dispozici v souboru hlaviček cvconst. h.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum CV_HREG_e {
@@ -415,13 +415,13 @@ CV_R68_ * Registry používané procesorem 68K.
 
 CV_M4_ * Registry používané procesorem MIPS 4000 Series.
 
-CV_ALPHA_ * Registry používané procesorem řady AXP Series společnosti Digital Equipment Corporation.
+CV_ALPHA_ * registrů, které používá procesor Digital Equipment Corporation Alpha AXP Series.
 
 CV_PPC_ * Registry používané procesorem Motorola/IBM PowerPC.
 
 CV_SH3_ * a CV_SH_ \* Registry používané procesorem Hitachi SH3 a Hitachi SH Series.
 
-CV_ARM_ * Registry používané procesory ARM (Advanced RISC Machine).
+CV_ARM_ * registrů, které používají procesory ARM (Advanced RISC Machine).
 
 CV_IA64_ * Registry používané procesory Intel IA64 Series.
 
@@ -429,7 +429,7 @@ CV_TRI_ * Registry používané procesorem Infineon Technologies TriCore.
 
 CV_AM33_ * Registry používané Matsushita/Panasonic AM33 a souvisejícími procesory.
 
-CV_M32R_ * Registry používané procesorem Mitsubishi M32R.
+CV_M32R_ * Registry používané procesorem M32R Mitsubishi.
 
 ## <a name="remarks"></a>Poznámky
 Každý typ procesoru používá vlastní jedinečnou sadu registrů.
@@ -446,10 +446,10 @@ Hodnoty v tomto výčtu jsou předány do následujících metod:
 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
-## <a name="requirements"></a>Požadavků
+## <a name="requirements"></a>Požadavky:
 Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 - [IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)

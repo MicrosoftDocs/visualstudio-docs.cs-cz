@@ -1,7 +1,7 @@
 ---
 title: Rozhraní (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0aa48ae0d3c3b6b05ea469baea1a1e1aa106667
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 902a3d361eb06288a0e50e9f384b67a2a8c61aa1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738701"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461271"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Rozhraní (Přístup k rozhraní ladění SDK)
 Metody jsou seřazeny podle abecedy pod každým rozhraním v obsahu a na stránce rozhraní v pořadí podle tabulky vtable.
@@ -166,6 +166,6 @@ Popisuje výčty a struktury používané různými rozhraními DIA SDK.
 
 Popisuje konstanty, které jsou k dispozici v DIA SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

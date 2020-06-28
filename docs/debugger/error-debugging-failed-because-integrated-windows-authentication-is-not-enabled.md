@@ -1,7 +1,7 @@
 ---
 title: 'Chyba: ladění se nezdařilo, protože není povolené integrované ověřování systému Windows | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_ntlm_authn_not_enabled
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c508951a3b54a7f84f142c5029b5305c8ef579ea
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b9c4f0e25449b0e108ac39662ec52a0ba9abc217
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911539"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460835"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
 Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověřování. Tato situace může nastat při pokusu o krokování do webové aplikace nebo webové služby XML. Jednou z příčin této chyby je, že není povolené integrované ověřování systému Windows. Pokud ho chcete povolit, postupujte podle kroků v tématu povolení integrovaného ověřování systému Windows.
@@ -73,7 +73,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
 
          Zobrazí se dialogové okno uživatel Access Control a zobrazí výzvu k pokračování oprávnění.
 
-    3. Klikněte na **pokračovat**.
+    3. Klikněte na **Pokračovat**.
 
          Zobrazí se dialogové okno funkce systému Windows.
 
@@ -97,7 +97,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
 
 4. Klikněte na **klasické zobrazení**a potom poklikejte na **Nástroje pro správu**.
 
-5. Ve sloupci **název** a dvakrát klikněte na **Správce služby Internetová informační služba (IIS)** .
+5. Ve sloupci **název** a dvakrát klikněte na **Správce služby Internetová informační služba (IIS)**.
 
 6. Ve sloupci **připojení** rozbalte uzel pro váš server.
 
@@ -113,7 +113,7 @@ Ověření uživatele, který požádalo o ladění, se zabránilo chybou ověř
 
 10. Zavřete okno **Správce služby Internetová informační služba (IIS)** .
 
-## <a name="see-also"></a>Viz také:
-- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 - [Ověřování zprostředkovatel zabezpečení Microsoft Digest](/windows/win32/secauthn/microsoft-digest-authentication)
 - [Spouštění webových aplikací v systému Windows Vista se službou IIS 7,0 a sadou Visual Studio](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

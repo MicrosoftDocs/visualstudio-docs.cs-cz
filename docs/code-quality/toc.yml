@@ -551,6 +551,8 @@
                   href: ca1828.md
                 - name: 'CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count'
                   href: ca1829.md
+                - name: 'CA1830: Upřednostňovat pro StringBuilder přetížení metod Append a Insert silného typu'
+                  href: ca1830.md
                 - name: 'CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan'
                   href: ca1831.md
                 - name: 'CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory'
@@ -949,6 +951,8 @@
                   href: ca2245.md
                 - name: 'CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.'
                   href: ca2246.md
+                - name: 'CA2247: Argument předaný konstruktoru TaskCompletionSource by měl být výčet TaskCreationOptions, nikoli výčet TaskContinuationOptions'
+                  href: ca2247.md
                 - name: 'CA2248: Poskytněte prosím do Enum.HasFlag správný argument enum'
                   href: ca2248.md
             - name: Automatické pozastavení funkce

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_undecoratedName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 533fc28da8cdd500234e07d2294a9d503476568e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: eeb6fa8a2ed90325c061e0e0633e991ebd318917
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739003"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461607"
 ---
 # <a name="idiasymbolget_undecoratedname"></a>IDiaSymbol::get_undecoratedName
-Načte nedekorovaný název pro C++ dekorované nebo navázání názvu.
+Načte nedekorovaný název pro upravený nebo propojený, název v jazyce C++.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ HRESULT get_undecoratedName ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí nedekorovaný název pro C++ dekorovaný název.
+mimo Vrátí nedekorovaný název pro dekorované názvy v jazyce C++.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

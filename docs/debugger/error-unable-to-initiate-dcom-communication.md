@@ -1,7 +1,7 @@
 ---
 title: 'Chyba: nelze inicializovat komunikaci modelu DCOM | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unmarshal_server_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a5e45df06d4b9490160c94902457ea630548966
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ccd8b30fcba11d89e11227861c4582ff67f3a7e7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736718"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460023"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>Chyba: Nelze inicializovat komunikaci modelu DCOM.
 Při pokusu o komunikaci místního počítače se vzdáleným počítačem došlo k chybě modelu DCOM. To je způsobeno bránou firewall na vzdáleném serveru nebo přerušeným ověřováním systému Windows na vzdáleném počítači.
@@ -30,5 +30,5 @@ Při pokusu o komunikaci místního počítače se vzdáleným počítačem doš
 
 - Chcete-li obnovit ověřování systému Windows, zkuste oba počítače restartovat. Prověřte protokoly událostí v místních a vzdálených počítačích pro chyby protokolu Kerberos a požádejte správce domény o známé problémy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vzdálené ladění](../debugger/remote-debugging.md)

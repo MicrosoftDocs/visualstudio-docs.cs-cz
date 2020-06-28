@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_virtualTableShapeId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3134d504625435706c36e1afc7c9df64611a7516
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e46a9188e4189359118eaf1ea4891c903c1f47a8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738807"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461383"
 ---
 # <a name="idiasymbolget_virtualtableshapeid"></a>IDiaSymbol::get_virtualTableShapeId
 Načte identifikátor symbolu obrazce virtuální tabulky symbolu.
@@ -36,7 +36,7 @@ HRESULT get_virtualTableShapeId ( 
 mimo Vrátí ID symbolu obrazce virtuální tabulky symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -44,5 +44,5 @@ mimo Vrátí ID symbolu obrazce virtuální tabulky symbolu.
 ## <a name="remarks"></a>Poznámky
  Identifikátor je jedinečná hodnota vytvořená DIA SDK k označení všech symbolů jako jedinečných.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

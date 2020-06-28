@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_sealed | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ece720a42b606640d02729951c11ae03d092aedf
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0b1f826c4dfcc8f000b37144b28dfcb8cf503a87
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739364"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462051"
 ---
 # <a name="idiasymbolget_sealed"></a>IDiaSymbol::get_sealed
 Načte příznak, který určuje, zda je třída nebo metoda zapečetěna.
@@ -33,10 +33,10 @@ HRESULT get_sealed( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud je třída nebo metoda zapečetěná; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda je třída nebo metoda zapečetěna. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -49,7 +49,7 @@ mimo Vrátí `TRUE`, pokud je třída nebo metoda zapečetěná; v opačném př
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

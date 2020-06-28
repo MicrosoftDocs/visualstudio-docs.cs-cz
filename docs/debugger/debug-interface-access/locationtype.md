@@ -1,7 +1,7 @@
 ---
 title: LocationType – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc40cc6cc8e821db7c28a4647e36e7bad241b29f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b2fafbb25d52df6082736431727222c788d73476
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738639"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461215"
 ---
 # <a name="locationtype"></a>LocationType
 Určuje druh informací o poloze obsažených v symbolu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum LocationType {
@@ -42,29 +42,29 @@ enum LocationType {
 ```
 
 ## <a name="elements"></a>Elementy
-informace o umístění `LocIsNull` nejsou k dispozici.
+`LocIsNull`Informace o poloze nejsou k dispozici.
 
-Umístění `LocIsStatic` je statické.
+`LocIsStatic`Umístění je statické.
 
-Umístění `LocIsTLS` se nachází v thread localm úložišti.
+`LocIsTLS`Umístění je v thread local Storage.
 
-Umístění `LocIsRegRel` je relativní k registraci.
+`LocIsRegRel`Umístění je relativní k registraci.
 
-Umístění `LocIsThisRel` je `this` relativní.
+`LocIsThisRel`Umístění je `this` relativní.
 
-Umístění `LocIsEnregistered` se nachází v registru.
+`LocIsEnregistered`Umístění se nachází v registru.
 
-Umístění `LocIsBitField` se nachází v bitovém poli.
+`LocIsBitField`Umístění je bitové pole.
 
-Umístění `LocIsSlot` je slot jazyka MSIL (Microsoft Intermediate Language).
+`LocIsSlot`Umístění je slot jazyka MSIL (Microsoft Intermediate Language).
 
-Umístění `LocIsIlRel` je relativní vzhledem k jazyku MSIL.
+`LocIsIlRel`Umístění je relativní vzhledem k jazyku MSIL.
 
-Umístění `LocInMetaData` se nachází v metadatech.
+`LocInMetaData`Umístění je v metadatech.
 
-Umístění `LocIsConstant` se nachází v konstantní hodnotě.
+`LocIsConstant`Umístění je konstantní hodnota.
 
-`LocTypeMax` počet typů umístění v tomto výčtu.
+`LocTypeMax`Počet typů umístění v tomto výčtu.
 
 ## <a name="remarks"></a>Poznámky
 Vlastnosti, které jsou k dispozici pro rozhraní [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , závisí na umístění symbolu v rámci souboru obrázku. Další informace naleznete v tématu [umístění symbolů](../../debugger/debug-interface-access/symbol-locations.md).
@@ -74,7 +74,7 @@ Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaSymbol:: get_locatio
 ## <a name="requirements"></a>Požadavky
 Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)

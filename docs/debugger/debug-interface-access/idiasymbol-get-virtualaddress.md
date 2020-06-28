@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee1c5e989c4e4d9937fad4ba23c261437b4009b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dbcf11f95260d8e58916de9fcc40d9a44a14a27d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738899"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461481"
 ---
 # <a name="idiasymbolget_virtualaddress"></a>IDiaSymbol::get_virtualAddress
-Načte virtuální adresu (VA) umístění. Použijte, pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastavený na `LocIsStatic`.
+Načte virtuální adresu (VA) umístění. Použijte v případě, že je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastaven na hodnotu `LocIsStatic` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,11 +36,11 @@ HRESULT get_virtualAddress ( 
 mimo Vrátí virtuální adresu umístění.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Chyba: nepovedlo se nastavit zarážku dat | Microsoft Docs'
 ms.date: 12/3/2019
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unable_to_set_data_breakpoint
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 18fa63f2a6f4b6d789bad6f813cb3956a636a2d2
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: dab5e146d510601c6e93582b6b128abcd964b4a7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404089"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459932"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Řešení chyb zarážek dat
 Tato stránka vás provede při řešení běžných chyb, ke kterým dochází při použití možnosti "přerušit při změně hodnoty".
@@ -44,7 +44,7 @@ Níže je uveden seznam chyb, ke kterým může dojít při použití spravovan�
 
     - "Přerušit při změně hodnoty" na proměnnou, která není rozbalena z rozevíracího seznamu.
         - Ladicí program interně potřebuje znát objekt obsahující pole, které chcete sledovat. Systém uvolňování paměti může přesunout objekt kolem haldy, aby ladicí program musel znát objekt, který má proměnnou, kterou chcete sledovat. 
-        - **Alternativní řešení**: Pokud jste v rámci objektu, na který chcete nastavit zarážku dat, můžete přejít o jeden snímek nahoru a pomocí okna `locals/autos/watch` rozbalit objekt a nastavit zarážku dat na požadované pole.
+        - **Alternativní řešení**: Pokud jste v rámci objektu, na kterém chcete nastavit zarážku dat, můžete přejít o jeden snímek nahoru a použít `locals/autos/watch` okno k rozšíření objektu a nastavení datové zarážky pro pole, které chcete.
 
 - *"Datové zarážky nejsou podporovány u statických polí nebo statických vlastností."*
     
@@ -63,10 +63,10 @@ Níže je uveden seznam chyb, ke kterým může dojít při použití spravovan�
     - Každá architektura má nastaven počet bajtů a zarážky hardwarových dat, které může podporovat, a vlastnost, u které chcete nastavit zarážku dat, překročila tento limit. Informace o tom, kolik datových zarážek a bajtů podporovaných hardwarem pro architekturu, kterou používáte, najdete v tabulce [omezení hardwaru datových zarážek](#data-breakpoint-hardware-limitations) . 
     - **Alternativní řešení**: Nastavte zarážku dat na hodnotu, která se může změnit v rámci vlastnosti.
 
-- *"Při použití vyhodnocovacího filtru výrazů starší verze C# se nepodporují datové zarážky."*
+- *"Při použití starší verze vyhodnocovacího filtru výrazů jazyka C# nejsou podporovány datové zarážky."*
 
-    - Datové zarážky jsou podporovány pouze v vyhodnocovacím filtru výrazů C# , který není starší verze. 
-    - **Řešení**: vyhodnocovací filtr starších C# výrazů zakážete tak, že kliknete na `Debug -> Options` pak v části `Debugging -> General` zrušíte kontrolu `"Use the legacy C# and VB expression evaluators"`.
+    - Datové zarážky jsou podporovány pouze v vyhodnocovacím filtru výrazů v jazyce C#, který není starší verze. 
+    - **Řešení**: starší verze filtru výrazů C# zakážete tak, že `Debug -> Options` v části zrušíte `Debugging -> General` kontrolu `"Use the legacy C# and VB expression evaluators"` .
 
 ## <a name="data-breakpoint-hardware-limitations"></a>Omezení hardwaru datových zarážek
 
@@ -79,9 +79,9 @@ Architektura (konfigurace platformy), na které se program spouští, má omezen
 | ARM | 1 | 4 |
 | ARM64 | 2 | 8 |
 
-## <a name="provide-feedback"></a>Poskytnout zpětnou vazbu
+## <a name="provide-feedback"></a>Poskytnutí zpětné vazby
 Pokud máte nějaké problémy nebo návrhy této funkce, dejte nám prosím vědět prostřednictvím Help > odeslání názoru > [nahlášení problému](../ide/how-to-report-a-problem-with-visual-studio.md) v integrovaném vývojovém prostředí nebo [komunitě vývojářů](https://developercommunity.visualstudio.com/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Použití možnosti "přerušit při změně hodnoty" v .NET Core 3,0](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus).
 - [DevBlog: break při změně hodnoty: datové zarážky pro .NET Core v aplikaci Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)

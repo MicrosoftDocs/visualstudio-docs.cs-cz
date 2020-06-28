@@ -1,7 +1,7 @@
 ---
 title: Namesearchoptions – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61905c0c6c40d893cc8723b711d67690133a7155
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 696ad3e659b503b27da73056dafb57c5852d5133
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738618"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461173"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Určuje možnosti hledání symbolů a názvů souborů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum NameSearchOptions {
@@ -43,17 +43,17 @@ enum NameSearchOptions {
 ```
 
 ## <a name="elements"></a>Elementy
-`nsNone` nejsou zadány žádné možnosti.
+`nsNone`Nejsou zadány žádné možnosti.
 
-`nsfCaseSensitive` použije shodu názvů rozlišující velikosti písmen.
+`nsfCaseSensitive`Použije shodu názvů rozlišující velká a malá písmena.
 
-`nsfCaseInsensitive` aplikuje shodu názvů bez rozlišení velkých a malých písmen.
+`nsfCaseInsensitive`Použije porovnávání názvů bez rozlišení velkých a malých písmen.
 
-`nsfFNameExt` považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje.
+`nsfFNameExt`Považuje názvy za cesty a použije název souboru. přípona rozšíření se shoduje s názvem.
 
-`nsfRegularExpression` použije název rozlišovat velká a malá písmena pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
+`nsfRegularExpression`Aplikuje název rozlišovat velikost písmen pomocí hvězdičky (*) a otazníků (?) jako zástupných znaků. (Jiné běžné znaky regulárních výrazů se nepodporují.)
 
-`nsfUndecoratedName` platí pouze pro symboly, které mají nedekorované i dekorované názvy.
+`nsfUndecoratedName`Platí pouze pro symboly, které mají nedekorované i dekorované názvy.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty z tohoto výčtu jsou předány do následujících metod:
@@ -67,7 +67,7 @@ Hodnoty z tohoto výčtu jsou předány do následujících metod:
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Dia2. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)

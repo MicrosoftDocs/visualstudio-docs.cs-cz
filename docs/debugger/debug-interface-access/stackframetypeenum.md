@@ -1,7 +1,7 @@
 ---
 title: Stackframetypeenum – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b0c9dd106e5744a369ddaa6cb870788f7464d3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3f83cdb163881366a1a0bede95a07e1dae1fc50a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738555"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461096"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Určuje typ rámce zásobníku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum StackFrameTypeEnum {
@@ -36,17 +36,17 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Elementy
-vynechání ukazatele `FrameTypeFPO`ho rámce; K dispozici jsou informace o!.
+`FrameTypeFPO`Vynechaný ukazatel na rámec; K dispozici jsou informace o!.
 
-`FrameTypeTrap` rámečku depeše jádra.
+`FrameTypeTrap`Rámec depeše jádra.
 
-`FrameTypeTSS` rámečku depeše jádra.
+`FrameTypeTSS`Rámec depeše jádra.
 
-`FrameTypeStandard` standardní rámec zásobníku EBP
+`FrameTypeStandard`Standardní rámec zásobníku EBP
 
-vynechání ukazatele `FrameTypeFrameData`ho rámce; K dispozici jsou informace o snímcích dat.
+`FrameTypeFrameData`Vynechaný ukazatel na rámec; K dispozici jsou informace o snímcích dat.
 
-`FrameTypeUnknown` rámec, který neobsahuje žádné informace o ladění.
+`FrameTypeUnknown`Rámec, který nemá žádné informace o ladění.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaStackFrame:: get_Type](../../debugger/debug-interface-access/idiastackframe-get-type.md) .
@@ -54,6 +54,6 @@ Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaStackFrame:: get_Typ
 ## <a name="requirements"></a>Požadavky
 Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

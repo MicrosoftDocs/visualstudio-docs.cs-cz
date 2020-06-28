@@ -1,7 +1,7 @@
 ---
 title: Memorytypeenum – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e0710ec5cdfcfcb59407d18b43b885603f017fdb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2cd255ab59c9d46676ba46baddd9cee7e3ef4cc2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738635"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461180"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 Určuje typ paměti, pro který má být přístup.
@@ -34,13 +34,13 @@ enum MemoryTypeEnum {
 ```
 
 #### <a name="parameters"></a>Parametry
-`MemTypeCode` přistupuje pouze k paměti kódu.
+`MemTypeCode`Přistupuje pouze k paměti kódu.
 
-`MemTypeData` přistupuje k datům nebo zásobníku paměti.
+`MemTypeData`Přistupuje k datům nebo zásobníku paměti.
 
-`MemTypeStack` přistupuje pouze k paměti zásobníku.
+`MemTypeStack`Přistupuje pouze do zásobníku paměti.
 
-`MemTypeAny` přistupuje k jakémukoli typu paměti.
+`MemTypeAny`Přistupuje k jakémukoli typu paměti.
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty v tomto výčtu jsou předány metodě [IDiaStackWalkHelper:: readMemory –](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) pro omezení přístupu k různým typům paměti.
@@ -48,6 +48,6 @@ Hodnoty v tomto výčtu jsou předány metodě [IDiaStackWalkHelper:: readMemory
 ## <a name="requirements"></a>Požadavky
 Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)

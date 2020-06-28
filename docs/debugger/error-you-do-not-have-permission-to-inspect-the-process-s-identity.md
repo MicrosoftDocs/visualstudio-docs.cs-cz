@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: nemáte oprávnění ke kontrole identity procesů&#39;| Microsoft Docs'
+title: 'Chyba: nemáte oprávnění kontrolovat identitu procesu&#39;s | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cad229f80676c3d1f7a7d23ad7a29729c834929b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8bd1bc11d42d8aed0b816a667fe5adcc139a42c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736225"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459919"
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Chyba: nemáte oprávnění ke kontrole identity procesů&#39;.
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Chyba: nemáte oprávnění kontrolovat identitu procesu&#39;s.
 Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfigurace vašeho systému.
 
  Ladicí program nemohl zkontrolovat identitu procesu, což je nezbytné informace pro ladění. Nejpravděpodobnější příčinou je, že služba Terminal Services je zakázána. Služba Terminal Services je ve výchozím nastavení povolená. Pomocí těchto kroků ho znovu povolte.
@@ -42,7 +42,7 @@ Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfi
 
 7. V okně **vlastnosti Terminálové služby** přejděte na kartu **Obecné** a nastavte **Typ spouštění** na **Ruční**.
 
-8. Klikněte na tlačítko **OK**.
+8. Klikněte na **OK**.
 
 9. Restartujte počítač.
 
@@ -52,7 +52,7 @@ Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfi
 
 1. Klikněte na tlačítko **Start** a poté klikněte pravým tlačítkem myši na položku **Tento počítač**.
 
-2. Vyberte **vlastnosti**.
+2. Zvolte **Properties** (Vlastnosti).
 
      Zobrazí se okno **Vlastnosti systému** .
 
@@ -60,7 +60,7 @@ Nemáte oprávnění kontrolovat identitu procesu. Příčinou může být konfi
 
 4. V části **Vzdálená plocha**vyberte možnost **dovolit uživatelům vzdálené připojení k tomuto počítači**.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
-- [Chyby při vzdáleném ladění a jejich řešení](../debugger/remote-debugging-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Chyby a řešení potíží se vzdáleným laděním](../debugger/remote-debugging-errors-and-troubleshooting.md)

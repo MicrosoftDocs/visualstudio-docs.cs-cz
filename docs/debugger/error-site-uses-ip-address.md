@@ -1,7 +1,7 @@
 ---
-title: 'Chyba: lokalita používá IP adresu | Microsoft Docs'
+title: Chyba – lokalita používá IP adresu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_siteusesipaddress
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96786efad0349dec7c9e8e9a02cca40af3668341
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 58db12ba9dbbc9526ac86262a6be5b2c0a7f765e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737503"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460543"
 ---
 # <a name="error-site-uses-ip-address"></a>Chyba: Server používá adresu IP
 K této chybě dojde, když se ladicí program pokusí o automatické připojení k webové aplikaci, která používá IP adresu. K tomu dojde, pokud změníte **identifikaci** webu tak, aby **používala konkrétní IP adresu** ve službě IIS.
@@ -36,5 +36,5 @@ K této chybě dojde, když se ladicí program pokusí o automatické připojen�
 
 2. Změnit nastavení **Identifikace webu služby IIS** .
 
-## <a name="see-also"></a>Viz také:
-- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+## <a name="see-also"></a>Viz také
+- [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
