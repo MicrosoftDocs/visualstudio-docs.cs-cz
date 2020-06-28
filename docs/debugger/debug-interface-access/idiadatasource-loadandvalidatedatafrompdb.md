@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: loadAndValidateDataFromPdb | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97afff946827c37ec2f84457016525377977dc8b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3e3a4b73cbbfe16cb87108c5f157dada135e71ee
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745006"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468537"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Otevře a ověří, že soubor databáze programu (PDB) odpovídá poskytnutým informacím o podpisu a připraví soubor. pdb jako zdroj dat pro ladění.
@@ -40,7 +40,7 @@ pro Cesta k souboru. pdb.
 
 `pcsig70`
 
-pro Signatura identifikátoru GUID, který se má ověřit proti podpisu souboru. pdb. Signatury GUID mají jenom soubory. pdb v [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] a novějších.
+pro Signatura identifikátoru GUID, který se má ověřit proti podpisu souboru. pdb. Signatury GUID mají jenom soubory. pdb v [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] a novější.
 
 `sig`
 
@@ -51,7 +51,7 @@ pro 32 signatura, která se má ověřit proti podpisu souboru. pdb.
 pro Věková hodnota, která se má ověřit Věk nutně neodpovídá žádné známé časové hodnotě, používá se k určení, jestli soubor. pdb není synchronizovaný s odpovídajícím souborem. exe.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
 
 |Hodnota|Popis|
 |-----------|-----------------|
@@ -91,7 +91,7 @@ if (FAILED(hr))
 
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)

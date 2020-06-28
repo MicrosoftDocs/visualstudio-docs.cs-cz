@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 453be1d77f1d2b1759e3de4433225cf97d026054
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9f8730fb864a70e7f649d5e8b4920d916c07c11
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744907"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468488"
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 Inicializuje přístup ke zdroji ladicích symbolů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaDataSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaDataSource`.
+V následující tabulce jsou uvedeny metody `IDiaDataSource` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -41,10 +41,10 @@ Následující tabulka ukazuje metody `IDiaDataSource`.
 |[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|Otevře relaci pro zadávání dotazů na symboly.|
 
 ## <a name="remarks"></a>Poznámky
-Volání jedné z metod zatížení rozhraní `IDiaDataSource` otevře zdroj symbolu. Úspěšné volání metody [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) vrátí rozhraní [IDiaSession](../../debugger/debug-interface-access/idiasession.md) , které podporuje dotazování na zdroj dat. Pokud metoda Load vrátí chybu související se souborem, návratová hodnota metody [IDiaDataSource:: get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) obsahuje název souboru přidruženého k chybě.
+Volání jedné z metod zatížení `IDiaDataSource` rozhraní otevře zdroj symbolu. Úspěšné volání metody [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) vrátí rozhraní [IDiaSession](../../debugger/debug-interface-access/idiasession.md) , které podporuje dotazování na zdroj dat. Pokud metoda Load vrátí chybu související se souborem, návratová hodnota metody [IDiaDataSource:: get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) obsahuje název souboru přidruženého k chybě.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Toto rozhraní se získá voláním funkce `CoCreateInstance` s identifikátorem třídy `CLSID_DiaSource` a ID rozhraní `IID_IDiaDataSource`. Příklad ukazuje, jak se toto rozhraní získává.
+Toto rozhraní se získá voláním `CoCreateInstance` funkce s identifikátorem třídy `CLSID_DiaSource` a ID rozhraní `IID_IDiaDataSource` . Příklad ukazuje, jak se toto rozhraní získává.
 
 ## <a name="example"></a>Příklad
 
@@ -67,7 +67,7 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

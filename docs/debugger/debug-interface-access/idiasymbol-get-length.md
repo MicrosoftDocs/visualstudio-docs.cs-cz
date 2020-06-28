@@ -1,7 +1,7 @@
 ---
-title: 'IDiaSymbol:: get_Length | Microsoft Docs'
+title: 'IDiaSymbol:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 114d9f7b00bbe5d322e7b6893e96fbbabec9d002
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2d9adc7949b0a6df886ceda0c1ddc6f3b9ee90d4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739986"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463069"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
 Načte počet bitů nebo bajtů paměti, které používá objekt reprezentovaný tímto symbolem.
@@ -36,13 +36,13 @@ HRESULT get_length ( 
 mimo Vrátí počet bajtů nebo bitů paměti využívaných objektem reprezentovaným tímto symbolem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Pokud je [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md) symbolu `LocIsBitField`, délka vrácená touto metodou je v bitech; v opačném případě je délka v bajtech pro všechny ostatní typy umístění.
+ Pokud je [LocationType – výčtem](../../debugger/debug-interface-access/locationtype.md) symbolu `LocIsBitField` , délka vrácená touto metodou je v bitech; v opačném případě je délka v bajtech pro všechny ostatní typy umístění.
 
 ## <a name="example"></a>Příklad
 
@@ -57,8 +57,8 @@ pSymbol->get_length( &length );
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 7.0|
+|Verze:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)

@@ -1,7 +1,7 @@
 ---
 title: Basictype – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fff76abdecdd8613a462225278053ef4f6d9694
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b7d9df59d5a3075bf63d619a03e8fe31da6991a1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745481"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462279"
 ---
 # <a name="basictype"></a>BasicType
 Určuje základní typ symbolu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum BasicType {
@@ -52,39 +52,39 @@ enum BasicType {
 ## <a name="elements"></a>Elementy
 btNoType není zadán žádný základní typ.
 
-btVoid Basic Type je `void`.
+btVoid je základní typ `void` .
 
-btChar Basic Type je `char` (C/C++ typ).
+btChar Basic je typ `char` (C/C++).
 
-btWChar Basic Type je roztažitelné znak (Unicode) (`WCHAR`).
+btWChar Basic Type je roztažitelné znak (Unicode) ( `WCHAR` ).
 
-btInt Basic Type je `signed int` (C/C++ typ).
+btInt Basic Type `signed int` (typ C/C++).
 
-btUInt Basic Type je `unsigned int` (C/C++ typ).
+btUInt Basic Type `unsigned int` (typ C/C++).
 
-btFloat Basic Type je číslo s plovoucí desetinnou čárkou (`FLOAT`).
+btFloat Basic Type je číslo s plovoucí desetinnou čárkou ( `FLOAT` ).
 
-btBCD Basic Type je binární kódované číslo (`BCD`).
+btBCD Basic Type je binární kódované číslo ( `BCD` ).
 
-btBool Basic Type je logická hodnota (`BOOL`).
+btBool základní typ je logická hodnota ( `BOOL` ).
 
-btLong Basic Type je `long int` (C/C++ typ).
+btLong Basic je typ `long int` (C/C++).
 
-btULong Basic Type je `unsigned long int` (C/C++ typ).
+btULong Basic Type je typ `unsigned long int` (C/C++).
 
 btCurrency je základní typ Měna.
 
-btDate je základní typ datum a čas (`DATE`).
+btDate je základní typ datum a čas ( `DATE` ).
 
-btVariant Basic Type je struktura typu proměnné (`VARIANT`).
+btVariant Basic Type je struktura typu proměnné ( `VARIANT` ).
 
 Základní typ btComplex je komplexní číslo.
 
 btBit základní typ je bit.
 
-btBSTR Basic Type je základní nebo binární řetězec (`BSTR`).
+btBSTR Basic Type je základní nebo binární řetězec ( `BSTR` ).
 
-btHresult Basic Type je `HRESULT`.
+btHresult je základní typ `HRESULT` .
 
 ## <a name="remarks"></a>Poznámky
 Hodnoty v tomto výčtu jsou vráceny metodou [IDiaSymbol:: get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) .
@@ -92,7 +92,7 @@ Hodnoty v tomto výčtu jsou vráceny metodou [IDiaSymbol:: get_baseType](../../
 ## <a name="requirements"></a>Požadavky
 Záhlaví: cvconst. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)
 - [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

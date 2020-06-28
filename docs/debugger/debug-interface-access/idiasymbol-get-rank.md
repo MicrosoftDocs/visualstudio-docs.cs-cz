@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_rank | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5cff86464a4034ad869cdfe231a88ad128dbf52
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 75e21d5af58d857f81d76bfa78af1d476f47f104
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739486"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462516"
 ---
 # <a name="idiasymbolget_rank"></a>IDiaSymbol::get_rank
 Načte pořadí (počet rozměrů) multidimenzionálního pole FORTRAN.
@@ -36,13 +36,13 @@ HRESULT get_rank ( 
 mimo Vrátí počet dimenzí v multidimenzionálním poli FORTRAN.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Rank odkazuje na počet dimenzí v poli, kde je pole deklarováno jako `myarray[1,2,3]`. Tento příklad má pořadí 3 a 3 rozměry. Pořadí neplatí pro C++ použití konceptu pole polí pro každou dimenzi (tj. `myarray[1][2][3]`).
+ Rank odkazuje na počet dimenzí v poli, kde je pole deklarováno jako `myarray[1,2,3]` . Tento příklad má pořadí 3 a 3 rozměry. Rozsah se nevztahuje na jazyk C++, který používá koncept pole polí pro každou dimenzi (tj `myarray[1][2][3]` .).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

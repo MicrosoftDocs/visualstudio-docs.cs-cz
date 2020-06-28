@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap::p ut_imageAlign | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b1a6bf037dc87d84fab21622571158fb0682f60
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ad9a97dd2e50b5bc131975321306bf8d9d52501e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745051"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468565"
 ---
 # <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 Nastaví zarovnání obrázku.
@@ -36,7 +36,7 @@ HRESULT put_imageAlign ( 
 pro Nová hodnota zarovnání obrázku pro spustitelný soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Image (načtené spustitelné soubory) jsou zarovnané na zadané hranice paměti. Toto zarovnání může být ovlivněno aktuální architekturou systému a možnostmi kompilovat a propojit čas. Zarovnání obrázku je vždy na hranicích bajtů. Následující hodnoty zarovnání obrázku jsou platné: 1, 2, 4, 8, 16, 16, 32 a 64 bajtových hranic.
@@ -44,8 +44,8 @@ pro Nová hodnota zarovnání obrázku pro spustitelný soubor.
  Aktuální zarovnání obrázku lze načíst voláním metody [IDiaAddressMap:: get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) .
 
 > [!NOTE]
-> Bitová kopie je již načtena v době, kdy lze tuto metodu volat. Metoda `put_imageAlign` se obvykle používá, když se obrázek přesunul nebo změnil a vyžaduje se nové zarovnání.
+> Bitová kopie je již načtena v době, kdy lze tuto metodu volat. `put_imageAlign`Metoda se obvykle používá, když se obrázek přesunul nebo změnil a vyžaduje se nové zarovnání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

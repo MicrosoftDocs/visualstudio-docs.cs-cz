@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: get_lastError | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48595dda70560f555533a1857f73db4d7bd20a86
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 231c6b082f7a641ee78d10003d544c3fb9644c1c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744978"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468523"
 ---
 # <a name="idiadatasourceget_lasterror"></a>IDiaDataSource::get_lastError
 Načte název souboru pro poslední chybu načtení.
@@ -36,7 +36,7 @@ HRESULT get_lastError (
 mimo Vrátí řetězec, který obsahuje název souboru. pdb přidružený k Poslední chybě načtení.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí poslední kód chyby způsobený operací Load. Vrátí `E_INVALIDARG`, pokud je `NULL` parametr `pRetVal`.
+ Vrátí poslední kód chyby způsobený operací Load. Vrátí, `E_INVALIDARG` zda `pRetVal` je parametr `NULL` .
 
 ## <a name="example"></a>Příklad
 
@@ -45,5 +45,5 @@ BSTR    fileName;
 HRESULT errorCode = pSource->get_lastError( &fileName );
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

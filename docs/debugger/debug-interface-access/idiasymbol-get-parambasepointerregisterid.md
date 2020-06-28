@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_paramBasePointerRegisterId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 09bdfb5d276e4dc7414c78529c2a6f1644597cd3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2fe29506c0d25d2afc9914c21774dbf353a7a341
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739519"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462579"
 ---
 # <a name="idiasymbolget_parambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
-Načte identifikátor registru, který uchovává základní ukazatel na parametry. Použijte, pokud je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastavený na `SymTagFunction`.
+Načte identifikátor registru, který uchovává základní ukazatel na parametry. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na hodnotu `SymTagFunction` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ HRESULT get_paramBasePointerRegisterId ( 
 mimo Vrátí ID registru, který uchovává základní ukazatel na parametry.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -48,7 +48,7 @@ mimo Vrátí ID registru, který uchovává základní ukazatel na parametry.
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_platform | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a86e7b6b75e0689ccd98a2cab2ed9ef93188312
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fe9da9a436604c869bb460dd6a30bf74c3c286f6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739507"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462558"
 ---
 # <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
 Načte typ platformy, pro který se kompilantu zkompilovaný.
@@ -33,14 +33,14 @@ HRESULT get_platform ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrací hodnotu z výčtu [výčtu CV_CPU_TYPE_e](../../debugger/debug-interface-access/cv-cpu-type-e.md) , který určuje typ platformy, pro kterou byla kompilantu zkompilována.
+mimo Vrací hodnotu z výčtu [výčtu CV_CPU_TYPE_e](../../debugger/debug-interface-access/cv-cpu-type-e.md) , který určuje typ platformy, pro kterou byl zkompilován kompilantu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CV_CPU_TYPE_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md)

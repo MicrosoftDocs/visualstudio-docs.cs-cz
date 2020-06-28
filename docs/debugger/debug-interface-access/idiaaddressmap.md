@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e06acf045ce1893762d5c898752dd6bc40de50a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ddf4b1c2a6a22170fb52da200bbd53c2b6b96e62
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744982"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468530"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 Poskytuje kontrolu nad tím, jak DIA SDK počítá virtuální a relativní virtuální adresy pro objekty ladění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaAddressMap : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
- Následující tabulka ukazuje metody `IDiaAddressMap`.
+ V následující tabulce jsou uvedeny metody `IDiaAddressMap` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -43,19 +43,19 @@ IDiaAddressMap : IUnknown
 |[IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)|Poskytuje mapu adres pro podporu překladů rozložení obrázků.|
 
 ## <a name="remarks"></a>Poznámky
- Ovládací prvek poskytnutý tímto rozhraním je zapouzdřen ve dvou sadách dat, která zadáte: hlavičky obrázků a mapy adres. Většina klientů používá metodu [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) k vyhledání správných informací o ladění pro obrázek a metoda může obvykle zjistit všechny nezbytné hlavičky a data Maps. Někteří klienti však implementují specializované zpracování a hledání dat. Tito klienti používají metody rozhraní `IDiaAddressMap` k tomu, aby DIA SDK výsledky hledání.
+ Ovládací prvek poskytnutý tímto rozhraním je zapouzdřen ve dvou sadách dat, která zadáte: hlavičky obrázků a mapy adres. Většina klientů používá metodu [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) k vyhledání správných informací o ladění pro obrázek a metoda může obvykle zjistit všechny nezbytné hlavičky a data Maps. Někteří klienti však implementují specializované zpracování a hledání dat. Tito klienti používají metody `IDiaAddressMap` rozhraní k poskytnutí DIA SDK s výsledky hledání.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je dostupné z objektu relace DIA. Klient volá metodu `QueryInterface` v rozhraní objektu relace DIA, obvykle [IDiaSession](../../debugger/debug-interface-access/idiasession.md), pro načtení rozhraní `IDiaAddressMap`.
+ Toto rozhraní je dostupné z objektu relace DIA. Klient volá `QueryInterface` metodu rozhraní objektu relace DIA, obvykle [IDiaSession](../../debugger/debug-interface-access/idiasession.md), pro načtení `IDiaAddressMap` rozhraní.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Dia2. h
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: Msdia80. dll
+ KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

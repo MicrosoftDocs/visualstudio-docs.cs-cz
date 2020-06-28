@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_liveRangeStartAddressSection | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a23f0661d8af6417d754fd7a71c66c5dd3ef1135
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b8ba63eb1b68cc5e630e650bff80d86d6fb0b3f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739909"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463027"
 ---
 # <a name="idiasymbolget_liverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
 Vrátí část počáteční adresy rozsahu, ve kterém je místní symbol platný.
@@ -36,7 +36,7 @@ HRESULT get_liveRangeStartAddressSection ( 
 mimo Vrátí část počátečního rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 > [!NOTE]
 > Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
@@ -51,7 +51,7 @@ mimo Vrátí část počátečního rozsahu adres.
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumFrameData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e20fa21d739c79dad94a8445f6d0fe811337fd40
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a5c99d9587de85941721ae404fefdcac7586fb08
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744554"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468299"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 Vytvoří výčet různých datových prvků rámce obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumFrameData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumFrameData`.
+V následující tabulce jsou uvedeny metody `IDiaEnumFrameData` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -49,7 +49,7 @@ Následující tabulka ukazuje metody `IDiaEnumFrameData`.
 Získejte toto rozhraní z metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) . Podrobnosti najdete v příkladu.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat (funkce `GetEnumFrameData`) a použít (funkce `ShowFrameData`) rozhraní `IDiaEnumFrameData`. Příklad funkce `PrintFrameData` naleznete v rozhraní [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) .
+Tento příklad ukazuje, jak získat ( `GetEnumFrameData` funkce) a použít ( `ShowFrameData` funkce) `IDiaEnumFrameData` rozhraní. Příklad funkce naleznete v rozhraní [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) `PrintFrameData` .
 
 ```C++
 
@@ -105,9 +105,9 @@ void ShowFrameData(IDiaSession *pSession)
 
 **Knihovna:** diaguids. lib
 
-**Knihovna DLL:** Msdia80. dll
+**Knihovna DLL:** msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

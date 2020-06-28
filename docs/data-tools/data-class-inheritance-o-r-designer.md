@@ -3,23 +3,23 @@ title: Dědičnost datových tříd (O-R Designer)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: af32653c-f4e6-4217-8c5a-e32b322b4918
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7cb47913f2b14867be4dcc8f98688ab2d2a858d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7172c868780aec61de8688614fbb93627dc23bf5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648559"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462392"
 ---
 # <a name="data-class-inheritance-or-designer"></a>Dědičnost datových tříd (Návrhář relací objektů)
 
 Stejně jako jiné objekty mohou LINQ to SQL třídy používat dědičnost a být odvozeny od jiných tříd. V kódu můžete určit vztahy dědičnosti mezi objekty tím, že deklarujete, že jedna třída dědí z jiné třídy. V databázi jsou vztahy dědičnosti vytvářeny několika způsoby. **Návrhář relací objektů** (**O/R Designer**) podporuje koncept dědičnosti s jednou tabulkou, protože je často implementován v relačních systémech.
 
-V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje sloupce pro základní i odvozené třídy. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy daný záznam patří. Vezměte například `Persons` tabulku, která obsahuje všechny zaměstnané společností. Někteří lidé jsou zaměstnanci a někteří lidé jsou manažeři. Tabulka `Persons` obsahuje sloupec s názvem `Type` s hodnotou 1 pro manažery a hodnotou 2 pro zaměstnance. Sloupec `Type` je sloupec diskriminátor. V tomto scénáři můžete vytvořit podtřídu zaměstnanců a naplnit třídu pouze záznamy, které mají hodnotu `Type` 2.
+V případě dědičnosti s jednou tabulkou existuje jedna databázová tabulka, která obsahuje sloupce pro základní i odvozené třídy. U relačních dat obsahuje sloupec diskriminátor hodnotu, která určuje, do které třídy daný záznam patří. Představte si třeba `Persons` tabulku, která obsahuje každého zaměstnaného společností. Někteří lidé jsou zaměstnanci a někteří lidé jsou manažeři. `Persons`Tabulka obsahuje sloupec s názvem `Type` , který má hodnotu 1 pro manažery a hodnotu 2 pro zaměstnance. `Type`Sloupec je sloupec diskriminátoru. V tomto scénáři můžete vytvořit podtřídu zaměstnanců a naplnit třídu pouze záznamy, které mají `Type` hodnotu 2.
 
 Při konfiguraci dědičnosti v třídách entit pomocí [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] přetáhněte jedinou tabulku, která obsahuje data dědičnosti, do návrháře dvakrát: jednou pro každou třídu v hierarchii dědičnosti. Po přidání tabulek do návrháře je připojte pomocí položky dědičnosti z panelu nástrojů **Návrhář relací objektů** a pak nastavte čtyři vlastnosti dědičnosti v okně **vlastnosti** .
 
@@ -41,7 +41,7 @@ Vytvoření objektového modelu, který používá dědičnost a odpovídá rela
 |[Postupy: Konfigurace dědičnosti pomocí Návrháře relací objektů](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)|Popisuje, jak nakonfigurovat třídy entit, které používají dědičnost s jednou tabulkou, pomocí **návrháře o/R**.|
 |[Návod: vytváření tříd LINQ to SQL pomocí dědičnosti s jednou tabulkou (O/R Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|Poskytuje podrobné pokyny ke konfiguraci tříd entit, které používají dědičnost s jednou tabulkou, pomocí **návrháře o/R**.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)

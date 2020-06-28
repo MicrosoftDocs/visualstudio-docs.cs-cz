@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_numberOfRows | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: cf3eb110-d07f-4995-b68b-08290aa67d6f
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 257a667d8c2347394abaaa3282b37201d443ed97
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9b59ab4057d56e37f88e585999d4187159700c78
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739650"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462719"
 ---
 # <a name="idiasymbolget_numberofrows"></a>IDiaSymbol::get_numberOfRows
 Načte počet řádků v matici.
@@ -30,10 +30,10 @@ HRESULT get_numberOfRows(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Ukazatel na `DWORD`, který obsahuje počet řádků v matici.
+mimo Ukazatel na `DWORD` , který obsahuje počet řádků v matici.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumFrameData:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fe478e503ed6e16ee570f309f91434c658ebd27
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2755ce3f48e22d239622dd49800e98ce49c496c7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744603"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468320"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
 Načte zadaný počet prvků dat rámce v sekvenci výčtu.
@@ -46,8 +46,8 @@ mimo Pole objektů [IDiaFrameData](../../debugger/debug-interface-access/idiafra
 mimo Vrátí počet datových elementů rámce v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další záznamy. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další záznamy. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

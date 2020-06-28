@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_machineType | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ea9f5762e265b2892a906060a430db03f7b7d67
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 29bdfbab41c5382661e022d38a190d3bd19c38c3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739840"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462915"
 ---
 # <a name="idiasymbolget_machinetype"></a>IDiaSymbol::get_machineType
 Načte typ cílového procesoru.
@@ -33,14 +33,14 @@ HRESULT get_machineType ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrací hodnotu z [konstant IMAGE_FILE_MACHINE_](/windows/desktop/SysInfo/image-file-machine-constants) , které určují typ cílového procesoru.
+mimo Vrací hodnotu z [IMAGE_FILE_MACHINE_ konstant](/windows/desktop/SysInfo/image-file-machine-constants) , které určují typ cílového procesoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
-## <a name="see-also"></a>Viz také:
-- [Konstanty IMAGE_FILE_MACHINE_](/windows/desktop/SysInfo/image-file-machine-constants) 
+## <a name="see-also"></a>Viz také
+- [IMAGE_FILE_MACHINE_ konstanty](/windows/desktop/SysInfo/image-file-machine-constants) 
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

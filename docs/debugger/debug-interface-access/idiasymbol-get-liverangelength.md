@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_liveRangeLength | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b663ef54959544764016fe59e4b0fb41607854b1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dac0c302fa85533624f58eac1538f8c8ba076e5b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739935"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463041"
 ---
 # <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
 Vrátí délku rozsahu adres, ve kterém je místní symbol platný.
@@ -36,7 +36,7 @@ HRESULT get_liveRangeLength ( 
 mimo Vrátí délku rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 > [!NOTE]
 > Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
@@ -48,7 +48,7 @@ mimo Vrátí délku rozsahu adres.
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

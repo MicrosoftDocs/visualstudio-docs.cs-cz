@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: loadDataFromIStream | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bcf657b4404ed72059351175d124a9c07abb46
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7a6a19d926ead4c2c38ff69544311caa1f726b3e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744944"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468509"
 ---
 # <a name="idiadatasourceloaddatafromistream"></a>IDiaDataSource::loadDataFromIStream
 Připraví ladicí data uložená v souboru programové databáze (PDB), který je k dispozici prostřednictvím datového proudu v paměti.
@@ -33,10 +33,10 @@ HRESULT loadDataFromIStream ( 
 #### <a name="parameters"></a>Parametry
  pIStream
 
-pro Objekt <xref:IStream> reprezentující datový proud, který se má použít.
+pro <xref:IStream>Objekt představující datový proud, který se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
 
 |Hodnota|Popis|
 |-----------|-----------------|
@@ -45,7 +45,7 @@ pro Objekt <xref:IStream> reprezentující datový proud, který se má použít
 |E_UNEXPECTED|Zdroj dat už je připravený.|
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda umožňuje získat data ladění pro spustitelný soubor z paměti prostřednictvím objektu <xref:IStream>.
+ Tato metoda umožňuje získat data ladění pro spustitelný soubor z paměti prostřednictvím <xref:IStream> objektu.
 
  Chcete-li načíst soubor. pdb bez ověření, použijte metodu [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) .
 
@@ -53,7 +53,7 @@ pro Objekt <xref:IStream> reprezentující datový proud, který se má použít
 
  Chcete-li získat přístup k procesu načítání dat (pomocí mechanismu zpětného volání), použijte metodu [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
 - [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)

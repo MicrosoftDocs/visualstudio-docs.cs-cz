@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumInjectedSources | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: feaf5d372279c6ab24053058a14aba4b3a71fd78
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8ecd669e546f12972c2a11c3b038322ceaf18fc1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744462"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468243"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 Vytvořte výčet různých vložených zdrojů obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumInjectedSources : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumInjectedSources`.
+V následující tabulce jsou uvedeny metody `IDiaEnumInjectedSources` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -44,10 +44,10 @@ Následující tabulka ukazuje metody `IDiaEnumInjectedSources`.
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Toto rozhraní se získá voláním metody [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) s názvem konkrétního zdrojového souboru nebo voláním metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) s identifikátorem GUID rozhraní `IDiaEnumInjectedSources`.
+Toto rozhraní je získáno voláním metody [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) s názvem konkrétního zdrojového souboru nebo voláním metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) s identifikátorem GUID `IDiaEnumInjectedSources` rozhraní.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat (funkce `GetEnumInjectedSources`) a použít (funkce `DumpAllInjectedSources`) rozhraní `IDiaEnumInjectedSources`. Implementaci funkce `PrintPropertyStorage` naleznete v rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) . Alternativní výstup naleznete v rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) .
+Tento příklad ukazuje, jak získat ( `GetEnumInjectedSources` funkce) a použít ( `DumpAllInjectedSources` funkce) `IDiaEnumInjectedSources` rozhraní. Implementaci funkce naleznete v rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) `PrintPropertyStorage` . Alternativní výstup naleznete v rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) .
 
 ```C++
 
@@ -110,9 +110,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)

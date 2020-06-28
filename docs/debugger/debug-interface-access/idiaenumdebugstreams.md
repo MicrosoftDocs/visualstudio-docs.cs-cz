@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumDebugStreams | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70e14e594b385a2fa93f51eed4dec36d74db347e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e73087786e43c254c9635b239f59e7b4dd982090
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744682"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468369"
 ---
 # <a name="idiaenumdebugstreams"></a>IDiaEnumDebugStreams
 Vytvoří výčet různých streamů ladění obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumDebugStreams : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumDebugStreams`.
+V následující tabulce jsou uvedeny metody `IDiaEnumDebugStreams` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -45,10 +45,10 @@ Následující tabulka ukazuje metody `IDiaEnumDebugStreams`.
 Obsah streamů ladění je závislý na implementaci a formáty dat jsou nedokumentované.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Chcete-li získat objekt `IDiaEnumDebugStreams`, zavolejte metodu [IDiaSession:: getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) .
+Pro získání objektu zavolejte metodu [IDiaSession:: getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) `IDiaEnumDebugStreams` .
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat přístup k datovým proudům dostupným z tohoto rozhraní. Implementaci funkce `PrintStreamData` naleznete v rozhraní [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) .
+Tento příklad ukazuje, jak získat přístup k datovým proudům dostupným z tohoto rozhraní. Implementaci funkce naleznete v rozhraní [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) `PrintStreamData` .
 
 ```C++
 void DumpAllDebugStreams( IDiaSession* pSession)
@@ -82,9 +82,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 - [IDiaSession::getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md)

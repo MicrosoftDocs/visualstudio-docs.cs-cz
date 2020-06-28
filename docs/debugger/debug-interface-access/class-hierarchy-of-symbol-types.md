@@ -1,7 +1,7 @@
 ---
 title: Hierarchie tříd typů symbolů | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c42ea4bb2d5c2ad91538bec8b31774a5a41aa4d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ed6817c5c01b66143739b2f81899f2b58886d8e8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745459"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462271"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Hierarchie tříd typů symbolů
 Následující tabulka popisuje typy symbolů v hierarchii tříd.
@@ -40,12 +40,12 @@ Následující tabulka popisuje typy symbolů v hierarchii tříd.
 |[VTable](../../debugger/debug-interface-access/vtable.md)|Symbol pro virtuální tabulku|
 |[CustomType](../../debugger/debug-interface-access/customtype.md)|Symbol pro typ definovaný dodavatelem|
 |[ManagedType](../../debugger/debug-interface-access/managedtype.md)|Symbol pro typ definovaný v metadatech|
-|[Rozměr](../../debugger/debug-interface-access/dimension.md)|Symbol pro rozměry pole|
+|[Dimenze](../../debugger/debug-interface-access/dimension.md)|Symbol pro rozměry pole|
 
 > [!NOTE]
 > Každý symbol může mít vlastnosti, které uchovávají informace o symbolu, jakož i odkazy na jiné symboly. Tyto vlastnosti jsou uvedeny v tématech jednotlivých symbolů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [CV_access_e – výčet](../../debugger/debug-interface-access/cv-access-e.md)
 - [Lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [Symboly a značky symbolů](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)

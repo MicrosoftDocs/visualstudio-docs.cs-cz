@@ -1,7 +1,7 @@
 ---
 title: DiaAddressMapEntry – | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b326116b1e1b677a997b264cf0c168a93febb0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8cae8159c893229f02e9598e932d7bc19efc2f4a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745254"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468677"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Popisuje položku v mapě adres.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 struct DiaAddressMapEntry {
@@ -32,26 +32,26 @@ struct DiaAddressMapEntry {
 ```
 
 ## <a name="elements"></a>Elementy
-`rva` relativní virtuální adresu (RVA) v imagi A.
+`rva`Relativní virtuální adresa (RVA) v imagi A.
 
-`rvaTo` relativní virtuální adresa `rva` je namapovaná na Image B.
+`rvaTo`Relativní virtuální adresa `rva` je namapována na v imagi B.
 
 ## <a name="remarks"></a>Poznámky
-Mapa adres poskytuje překlad z jednoho rozložení obrázku (A) na jiný (B). Pole `DiaAddressMapEntry` struktury seřazené podle `rva` definuje mapu adres.
+Mapa adres poskytuje překlad z jednoho rozložení obrázku (A) na jiný (B). Pole `DiaAddressMapEntry` struktur seřazené podle `rva` definuje mapu adres.
 
-Chcete-li přeložit adresu, `addrA` v imagi A na adresu `addrB` v imagi B proveďte následující kroky:
+K překladu adresy, `addrA` v imagi a na adresu, `addrB` v imagi B proveďte následující kroky:
 
-1. Vyhledejte v mapě položku `e` s největším `rva`ou menší nebo rovnou `addrA`.
+1. Vyhledá v mapě položku, `e` která má největší velikost `rva` menší než nebo rovna `addrA` .
 
-2. Nastavte `delta = addrA - e.rva`.
+2. Nastavit `delta = addrA - e.rva` .
 
-3. Nastavte `addrB = e.rvaTo + delta`.
+3. Nastavit `addrB = e.rvaTo + delta` .
 
-    Do metody [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) se předává pole struktur `DiaAddressMapEntry`.
+    `DiaAddressMapEntry`Do metody [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) se předává pole struktur.
 
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Dia2. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)

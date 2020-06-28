@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_localBasePointerRegisterId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f9ad47a37c2d9306cc4f087719bfef7a52be308
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fee917c4d275ec0f76cd3442d1ae56887667ca6c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739872"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462985"
 ---
 # <a name="idiasymbolget_localbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
-Načte identifikátor registru, který drží základní ukazatel na místní proměnné v zásobníku. Použijte, pokud je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastavený na `SymTagFunction`.
+Načte identifikátor registru, který drží základní ukazatel na místní proměnné v zásobníku. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na hodnotu `SymTagFunction` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ HRESULT get_localBasePointerRegisterId ( 
 mimo Vrátí ID registru, který drží základní ukazatel na místní proměnné v zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -48,7 +48,7 @@ mimo Vrátí ID registru, který drží základní ukazatel na místní proměnn
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

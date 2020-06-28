@@ -1,6 +1,6 @@
 ---
 title: Řešení a projekty
-ms.date: 10/05/2017
+ms.date: 06/26/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -20,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 742ee7a8450c5d2cf4d7a167a1977b3c1c18ef21
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ad0ee64afa78a962271d2b702ee525287c5b2457
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285228"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468727"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v aplikaci Visual Studio
 
@@ -74,13 +74,16 @@ Po vytvoření nového projektu můžete použít **Průzkumník řešení** k z
 
 Řada příkazů nabídky je k dispozici v nabídce po kliknutí pravým tlačítkem myši na různých položkách v **Průzkumník řešení**. Mezi tyto příkazy patří sestavení projektu, Správa balíčků NuGet, přidání odkazu, přejmenování souboru a spuštění testů, stačí jenom pár název. Panel nástrojů v horní části **Průzkumník řešení** obsahuje tlačítka pro přepínání ze zobrazení řešení do zobrazení složky, zobrazení skrytých souborů, sbalení všech uzlů a další.
 
+> [!TIP]
+> Pokud jste Průzkumník řešení zavřeli a chcete ho znovu otevřít, v řádku nabídek vyberte **okno**  >  **obnovit rozložení okna** .
+
 U ASP.NET Core projektů můžete přizpůsobit, jak jsou soubory vnořené v **Průzkumník řešení**. Další informace najdete v tématu [přizpůsobení vnořování souborů v Průzkumník řešení](file-nesting-solution-explorer.md).
 
-> [!TIP]
-> Pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkumník řešení, přečtěte si stránku [zobrazení tříd a prohlížeč objektů ikony](class-view-and-object-browser-icons.md) .
+A pokud chcete zobrazit seznam některých ikon, které se zobrazují v Průzkumník řešení, přečtěte si téma [zobrazení tříd a prohlížeč objektů ikony](class-view-and-object-browser-icons.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
+- [Přenos, migrace a upgrade projektů](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [Projekty a řešení (Visual Studio pro Mac)](/visualstudio/mac/projects-and-solutions)
 - [Přidání a odebrání položek projektu (Visual Studio pro Mac)](/visualstudio/mac/add-and-remove-project-items)

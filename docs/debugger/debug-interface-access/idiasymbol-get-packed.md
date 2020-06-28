@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_packed | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 420ba5b56342b4b1d5b8e4c2756aa828e5fe53b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 73694e46f66014c251dbe3760dfade7baea566da
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739528"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462586"
 ---
 # <a name="idiasymbolget_packed"></a>IDiaSymbol::get_packed
 Načte příznak, který určuje, zda je uživatelem definovaný datový typ (UDT) zabalen.
@@ -33,10 +33,10 @@ HRESULT get_packed ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud je sbalený parametr UDT; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda je sbalený parametr UDT. v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -44,5 +44,5 @@ mimo Vrátí `TRUE`, pokud je sbalený parametr UDT; v opačném případě vrá
 ## <a name="remarks"></a>Poznámky
  Zabalený znamená, že všechny členy UDT jsou umístěné co nejblíže k dispozici, bez toho, aby se odsazení nerovnalo hranicím paměti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

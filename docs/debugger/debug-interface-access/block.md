@@ -1,7 +1,7 @@
 ---
 title: Blok | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c39c69900859957f0d0746c688334f31c8419d5f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 45e1d97c694806857d9ee7920e6d4fd640db4582
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745462"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462265"
 ---
 # <a name="block"></a>Blok
-Každý blok kódu je identifikován symbolem `SymTagBlock`. Symboly blokování slouží k identifikaci vnořených oborů v rámci funkcí.
+Každý blok kódu je identifikován `SymTagBlock` symbolem. Symboly blokování slouží k identifikaci vnořených oborů v rámci funkcí.
 
 ## <a name="properties"></a>Vlastnosti
  V následující tabulce jsou uvedeny vlastnosti, které jsou platné pro tento typ symbolu.
@@ -38,10 +38,10 @@ Každý blok kódu je identifikován symbolem `SymTagBlock`. Symboly blokování
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Vrátí název bloku (což je obvykle prázdný řetězec).|
 |[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|`DWORD`|Vrátí virtuální adresu tohoto bloku vzhledem k jeho lexikálnímu nadřazenému objektu.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|ID indexu symbolu|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagBlock` (jedna z hodnot [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Vrátí `SymTagBlock` (jednu z hodnot [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) ).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Vrátí virtuální adresu tohoto bloku v rámci spustitelného souboru.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 - [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md)
 - [Umístění symbolů](../../debugger/debug-interface-access/symbol-locations.md)

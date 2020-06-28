@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_liveRangeStartAddressOffset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b39bf1e73d8b056c1cfcbfafd41dcbbb464c40ce
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2563afe5c5323415c5d4c9d7f0b0fa89583f9736
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739913"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463034"
 ---
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Vrátí odkládací část počáteční adresy rozsahu, ve kterém je místní symbol platný.
@@ -36,7 +36,7 @@ HRESULT get_liveRangeStartAddressOffset ( 
 mimo Vrátí odkládací část počátečního rozsahu adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 > [!NOTE]
 > Vrácený kód chyby znamená, že symbol neobsahuje informace o živém rozsahu.
@@ -44,14 +44,14 @@ mimo Vrátí odkládací část počátečního rozsahu adres.
 ## <a name="remarks"></a>Poznámky
  Adresa vytvořená oddílem a odsazením je začátek rozsahu, ve kterém je symbol platný.
 
- Část adresy získáte pomocí [IDiaSymbol:: get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md).
+ Chcete-li získat část této adresy, použijte [IDiaSymbol:: get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md).
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Dia2. h
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

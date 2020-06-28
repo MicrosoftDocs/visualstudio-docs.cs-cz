@@ -1,7 +1,7 @@
 ---
 title: Výčty a struktury | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6769af8a417c111de6c8dfc68cd7cda548eaa24c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5c7441e25533ca29f84d55779942b0bfb785dd9f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745215"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468656"
 ---
 # <a name="enumerations-and-structures"></a>Výčty a struktury
 
@@ -102,6 +102,6 @@ Určuje rozhraní poskytované DIA SDK.
 
 Určuje konstanty, které jsou k dispozici v DIA SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumFrameData:: resetovat | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42ec5ff9fef0639239fed0d6b18febf73bfe889a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 050799ba0191c9de3f74874d3cd35455278c7730
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744584"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468313"
 ---
 # <a name="idiaenumframedatareset"></a>IDiaEnumFrameData::Reset
 Obnoví posloupnost výčtu na začátek.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK`.
+ Vrací objekt `S_OK`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isSdl | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 6aa0e116-da75-4643-a4d7-d8e142231e21
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01503bca82046ace7f27cf4f80c163944009e89b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: abca9e52087a8cebd44ee21f9791a2ce290731d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740075"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463202"
 ---
 # <a name="idiasymbolget_issdl"></a>IDiaSymbol::get_isSdl
 Určuje, jestli je modul kompilovaný pomocí možnosti/SDL.
@@ -30,10 +30,10 @@ HRESULT get_isSdl(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Ukazatel na `BOOL`, který určuje, zda je modul kompilován pomocí možnosti/SDL.
+mimo Ukazatel na `BOOL` , který určuje, zda je modul zkompilován s možností/SDL.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

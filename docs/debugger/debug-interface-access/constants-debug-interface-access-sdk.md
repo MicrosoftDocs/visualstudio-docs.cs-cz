@@ -1,7 +1,7 @@
 ---
 title: Konstanty (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b10ab87f056bc153ec41c125b0e01ddefa139b80
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3fa6037253141df1111ef3bc57fac9c718d826dc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745403"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462237"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Konstanty (Přístup k rozhraní ladění SDK)
 Tyto řetězcové konstanty lze použít k identifikaci různých oddílů souboru PDB (program Debug Database) prostřednictvím DIA SDK.
 
 ## <a name="constants"></a>Konstanty
-Následující jsou deklarovány jako C/C++ makra.
+Následující jsou deklarovány jako makra jazyka C/C++.
 
 |Podokně|Hodnota|
 |-----------|-----------|
@@ -55,7 +55,7 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 ## <a name="requirements"></a>Požadavky
 Záhlaví: Dia2. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Reference](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)
 - [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

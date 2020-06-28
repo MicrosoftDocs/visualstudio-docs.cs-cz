@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumDebugStreamData:: Item | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e221516198d186dd08c353123ce4236f0be1383c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4696d8fdab9720796db1c6b5dff25b7bcfe49e01
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744823"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468453"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
 Načte zadaný záznam.
@@ -36,7 +36,7 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametry
  index
 
-pro Index záznamu, který se má načíst Index je v rozsahu 0 až `count`-1, kde `count` vrací [IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md).
+pro Index záznamu, který se má načíst Index je v rozsahu 0 až `count` -1, kde `count` je vrácen funkcí [IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md).
 
  cbData
 
@@ -44,16 +44,16 @@ pro Velikost vyrovnávací paměti dat (v bajtech).
 
  pcbData
 
-mimo Vrátí počet vrácených bajtů. Pokud je `data` `NULL`, pak `pcbData` obsahuje celkový počet bajtů dat dostupných v zadaném záznamu.
+mimo Vrátí počet vrácených bajtů. Pokud `data` je `NULL` , pak `pcbData` obsahuje celkový počet bajtů dat dostupných v zadaném záznamu.
 
  data []
 
 mimo Vyrovnávací paměť, která je vyplněna daty záznamu streamu ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` pro neplatné parametry a v případě, že parametr `index` je mimo rozsah.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí `E_INVALIDARG` neplatným parametrům a pokud `index` je parametr mimo rozsah.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 - [IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)
 - [IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)
