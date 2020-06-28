@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSymbols:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2d754c144ad876890b89ea217bf0ac55ad60b24
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 110cacc241a733289b8cdce60c2d64c6fdf298e2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743939"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467727"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 Načte zadaný počet symbolů v sekvenci výčtu.
@@ -46,7 +46,7 @@ mimo Pole, které se má vyplnit objekty [IDiaSymbol](../../debugger/debug-inter
 mimo Vrátí počet symbolů v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další symboly. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další symboly. V opačném případě vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 
@@ -57,7 +57,7 @@ DWORD celt;
 pEnum->Next( 1, &pSym, &celt );
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

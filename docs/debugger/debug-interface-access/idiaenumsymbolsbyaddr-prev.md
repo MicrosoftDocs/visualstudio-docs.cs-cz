@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr::P rev | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70265976e5c6e7c2b3f536f2b8648aaba44df528
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8fe7ced486524c7409532e140f48f841b5e55078
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743860"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467643"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
 Načte předchozí symboly v pořadí podle adresy.
@@ -46,11 +46,11 @@ mimo Pole, které se má vyplnit objekty [IDiaSymbol](../../debugger/debug-inter
 mimo Vrátí počet symbolů v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné předchozí symboly. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné předchozí symboly. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Tato metoda aktualizuje pozici čítače výčtu počtem načtených prvků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

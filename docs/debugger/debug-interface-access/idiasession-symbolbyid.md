@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: symbolById | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0ffcb6c438150bff82f17a66c3347c300b17d72
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 01c2470be57616dcb026c3f5f29e3b2ab2a11a4e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741884"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465389"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
 Načte symbol podle jeho jedinečného identifikátoru.
@@ -41,7 +41,7 @@ pro Jedinečný identifikátor.
 mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje načtený symbol.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
 Zadaný identifikátor je jedinečnou hodnotou, kterou používá interně DIA SDK k nastavení všech symbolů jako jedinečných.
@@ -49,7 +49,7 @@ Zadaný identifikátor je jedinečnou hodnotou, kterou používá interně DIA S
 Tuto metodu lze použít například k načtení symbolu reprezentujícího typ jiného symbolu (viz příklad).
 
 ## <a name="example"></a>Příklad
-Tento příklad načte [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující typ jiného symbolu. Tento příklad ukazuje, jak použít metodu `symbolById` v relaci. Jednodušším přístupem je zavolat metodu [IDiaSymbol:: get_Type](../../debugger/debug-interface-access/idiasymbol-get-type.md) a načíst symbol typu přímo.
+Tento příklad načte [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující typ jiného symbolu. Tento příklad ukazuje, jak použít `symbolById` metodu v relaci. Jednodušším přístupem je volání metody [IDiaSymbol:: get_Type](../../debugger/debug-interface-access/idiasymbol-get-type.md) pro načtení symbolu typu přímo.
 
 ```C++
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)
@@ -65,7 +65,7 @@ IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

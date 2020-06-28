@@ -1,7 +1,7 @@
 ---
-title: 'IDiaFrameData:: get_Type | Microsoft Docs'
+title: 'IDiaFrameData:: get_type | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4af060a4a0c36067a07a78166d1cf9cbc62e90e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2526fd4991677eca60b908d6ab1f4b3e6e8189af
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743483"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467195"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 Načte typ snímku specifický pro kompilátor.
@@ -36,8 +36,8 @@ HRESULT get_type ( 
 mimo Vrací hodnotu z výčtu [výčtu stackframetypeenum –](../../debugger/debug-interface-access/stackframetypeenum.md) , který označuje typ rámce specifický pro kompilátor.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [StackFrameTypeEnum – výčet](../../debugger/debug-interface-access/stackframetypeenum.md)

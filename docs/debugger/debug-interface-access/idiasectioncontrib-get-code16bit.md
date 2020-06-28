@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSectionContrib:: get_code16bit | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94fcc9ae93a515890025bb74a810733f213c869a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5cf76f2c335af44a3dc1b0ebdd388ae1a26c462c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742739"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466355"
 ---
 # <a name="idiasectioncontribget_code16bit"></a>IDiaSectionContrib::get_code16bit
 Načte příznak, který označuje, zda oddíl obsahuje 16bitový kód.
@@ -33,13 +33,13 @@ HRESULT get_code16bit(
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud je kód v oddílu 16 bitů; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda je kód v oddílu 16 bitů; v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Tato metoda určuje pouze, zda je kód v 16bitovém. Pokud kód není 16 bitů, může to být cokoli jiného, například 32-bit nebo 64-bit Code.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

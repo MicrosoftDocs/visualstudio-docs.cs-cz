@@ -1,7 +1,7 @@
 ---
 title: IDiaPropertyStorage | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de57f0d3bd44e4d46f19ee74484380bf0e6f2ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ba4cdb5f74cedf13cfb74b5aff6d43d24534eab9
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742847"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466481"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
 Umožňuje číst trvalé vlastnosti sady vlastností DIA.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaPropertyStorage : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaPropertyStorage`.
+V následující tabulce jsou uvedeny metody `IDiaPropertyStorage` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -43,10 +43,10 @@ Následující tabulka ukazuje metody `IDiaPropertyStorage`.
 |[IDiaPropertyStorage::ReadULONGLONG](../../debugger/debug-interface-access/idiapropertystorage-readulonglong.md)|Přečte `ULONGLONG` hodnoty v sadě vlastností.|
 
 ## <a name="remarks"></a>Poznámky
-Každá vlastnost v rámci sady vlastností je identifikována identifikátorem vlastnosti (ID), čtyřmi `ULONG` hodnotou jedinečnou pro tuto sadu. Vlastnosti vystavené prostřednictvím rozhraní `IDiaPropertyStorage` odpovídají vlastnostem, které jsou k dispozici v nadřazeném rozhraní. Například vlastnosti rozhraní [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) lze přistupovat pomocí názvu prostřednictvím rozhraní `IDiaPropertyStorage` (Všimněte si ale, že i když vlastnost může být přístupná, neznamená to, že je vlastnost platná pro určitý objekt `IDiaSymbol`).
+Jednotlivé vlastnosti v sadě vlastností jsou identifikovány identifikátorem vlastnosti (ID), což je hodnota 4 bajtu `ULONG` jedinečná pro tuto sadu. Vlastnosti vystavené prostřednictvím `IDiaPropertyStorage` rozhraní odpovídají vlastnostem, které jsou k dispozici v nadřazeném rozhraní. Například vlastnosti rozhraní [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) lze přistupovat pomocí názvu prostřednictvím `IDiaPropertyStorage` rozhraní (Všimněte si však, že i když vlastnost může být přístupná, neznamená to, že je vlastnost platná pro určitý `IDiaSymbol` objekt).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním metody `QueryInterface` v jiném rozhraní. Pro rozhraní `IDiaPropertyStorage` lze zadat dotaz na následující rozhraní:
+Získejte toto rozhraní voláním `QueryInterface` metody na jiném rozhraní. Pro rozhraní lze zadat dotaz na následující rozhraní `IDiaPropertyStorage` :
 
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
@@ -63,7 +63,7 @@ Získejte toto rozhraní voláním metody `QueryInterface` v jiném rozhraní. P
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje funkci, která zobrazí všechny vlastnosti vystavené objektem `IDiaPropertyStorage`. V rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) najdete příklad toho, jak se rozhraní `IDiaPropertyStorage` získává z rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) .
+Tento příklad ukazuje funkci, která zobrazí všechny vlastnosti vystavené `IDiaPropertyStorage` objektem. Příklad toho [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) , jak `IDiaPropertyStorage` se rozhraní získává z rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) , naleznete v rozhraní IDiaEnumInjectedSources.
 
 ```C++
 void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)
@@ -124,9 +124,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

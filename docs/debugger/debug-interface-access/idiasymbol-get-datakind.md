@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_dataKind | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1291c57425b7250af46b3b02ba8f407fb4959a05
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dbeff220bdb0f3c97b8e6588ff42c31b31b97ceb
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740711"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463944"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 Načte klasifikaci proměnných pro datový symbol.
@@ -36,7 +36,7 @@ HRESULT get_dataKind ( 
 mimo Vrací hodnotu z výčtu [výčtu datakind](../../debugger/debug-interface-access/datakind.md) určující druh dat, jako je například globální, statická nebo konstanta.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -46,8 +46,8 @@ mimo Vrací hodnotu z výčtu [výčtu datakind](../../debugger/debug-interface-
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 7.0|
+|Verze:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [DataKind – výčet](../../debugger/debug-interface-access/datakind.md)

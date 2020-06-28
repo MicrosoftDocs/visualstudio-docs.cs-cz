@@ -1,7 +1,7 @@
 ---
 title: 'IDiaInjectedSource:: get_source | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b389df8220766ffbdbf865a2b8e70877fe91b3f1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8408145d83b3b78f8392603466980495ab32d24b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743340"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467027"
 ---
 # <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 Načte bajty zdrojového kódu.
@@ -39,14 +39,14 @@ pro Počet bajtů, které představují velikost datové vyrovnávací paměti.
 
  `pcbData`
 
-mimo Vrátí počet bajtů, které představují vrácené bajty. Pokud je `data` `NULL`, pak `pcbData` je celkový počet bajtů dat, která jsou k dispozici.
+mimo Vrátí počet bajtů, které představují vrácené bajty. Pokud `data` je `NULL` , pak `pcbData` je celkový počet bajtů dat, který je k dispozici.
 
  `data[]`
 
 mimo Vyrovnávací paměť, která se má vyplnit zdrojovými bajty
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

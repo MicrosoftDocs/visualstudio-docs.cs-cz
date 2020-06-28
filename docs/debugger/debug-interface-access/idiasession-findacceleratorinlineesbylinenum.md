@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findAcceleratorInlineesByLinenum | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 386c87aa-f7b2-4d38-9dd6-fffba9ff01f0
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d08168a83b9bb635fd6a0e22dc22f91a454001f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ec927532ebc808fae0717e36439be356cb022b32
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742326"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465872"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
 Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému zdrojovému umístění.
@@ -35,11 +35,11 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-pro @No__t_0, který odpovídá funkci zástupné procedury akcelerátoru, kterou je třeba vyhledat.
+pro `IDiaSymbol`Který odpovídá funkci pro zástupnou proceduru akcelerátoru, která musí být prohledána.
 
  `file`
 
-pro @No__t_0 zdrojového umístění.
+pro `IDiaSourceFile`Zdrojového umístění.
 
  `linenum`
 
@@ -51,12 +51,12 @@ pro Číslo sloupce zdrojového umístění
 
  `ppResult`
 
-mimo Ukazatel na ukazatel rozhraní `IDiaEnumLineNumbers`, který je inicializován s výsledkem.
+mimo Ukazatel na `IDiaEnumLineNumbers` ukazatel rozhraní, který je inicializován s výsledkem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

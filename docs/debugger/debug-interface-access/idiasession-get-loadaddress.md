@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b23aff5cd5d2b94a44e3e9139ff4c97acb2225d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0615933715c0e78513f9ee33ee171cc764f5d743
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741932"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465431"
 ---
 # <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
 Načte adresu načtení pro spustitelný soubor, který odpovídá symbolům v tomto úložišti symbolů.
@@ -36,11 +36,11 @@ HRESULT get_loadAddress ( 
 mimo Vrátí virtuální adresu (VA), kde je načten soubor. exe nebo. dll.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrácená adresa zatížení je vždycky nula, pokud se konkrétně nenastaví pomocí metody [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) .
+ Vrácená adresa zatížení je vždycky nula, pokud se konkrétně nenastaví pomocí metody [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)

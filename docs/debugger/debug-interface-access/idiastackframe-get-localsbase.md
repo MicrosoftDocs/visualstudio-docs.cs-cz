@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_localsBase | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae3f83469e14e826802ca82d3d58686a340d9e0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7f7c3f442ba814e2f59f33ea0ad837cec472e511
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741664"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465029"
 ---
 # <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
 Načte základní adresu místních proměnných pro daný rámec.
@@ -36,7 +36,7 @@ HRESULT get_localsBase ( 
 mimo Vrátí základní adresu místních proměnných.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

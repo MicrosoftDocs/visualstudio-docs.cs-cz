@@ -1,7 +1,7 @@
 ---
 title: 'IDiaLineNumber:: get_sourceFile | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f0041ef4d83003d1b42e0c95b1412262d08458c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5242dec0f217f819c6a2ceb8ddaacbafe2de18a2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743149"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466859"
 ---
 # <a name="idialinenumberget_sourcefile"></a>IDiaLineNumber::get_sourceFile
 Načte odkaz na zdrojový soubor.
@@ -36,8 +36,8 @@ HRESULT get_sourceFile ( 
 mimo Vrátí objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje zdrojový soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

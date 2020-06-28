@@ -1,7 +1,7 @@
 ---
 title: 'IDiaPropertyStorage:: ReadULONGLONG | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dde2f111e468b8ccf6c1d91440f06d3e7048a0f6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b188ec5067efed410d934b98559505d48ab6585a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742855"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466488"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
 Přečte `ULONGLONG` hodnoty v sadě vlastností.
@@ -34,17 +34,17 @@ HRESULT ReadULONGLONG ( 
 #### <a name="parameters"></a>Parametry
  `id`
 
-pro Identifikátor vlastnosti, která má být načtena (`PROPID` je definována v WTypes. h jako `ULONG`).
+pro Identifikátor vlastnosti, která má být načtena ( `PROPID` je definována v WTypes. h jako `ULONG` ).
 
  `pValue`
 
 mimo Vrátí hodnotu vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG`, pokud vlastnost není typu `ULONGLONG`.
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Vrátí, `E_INVALIDARG` zda vlastnost není typu `ULONGLONG` .
 
 ## <a name="remarks"></a>Poznámky
- @No__t_0 definuje Windows jako 64-bit unsigned integer.
+ Objekt `ULONGLONG` je definován systémem Windows jako 64-bit unsigned integer.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

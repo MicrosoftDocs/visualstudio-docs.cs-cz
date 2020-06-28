@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findInlineesByName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9860336d-f703-4ecb-bfc4-3f5beb175a76
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7fd74707284e32471bad1da27e288139ea617a1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cdb35b9c61ddf347ee85553f69536d3757138ebe
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742183"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465704"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
 Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech zapsaných funkcí, které odpovídají zadanému názvu.
@@ -44,9 +44,9 @@ pro Určuje možnosti porovnání použité pro hledání názvu. Hodnoty výčt
 mimo Vrátí objekt [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) , který obsahuje seznam čísel řádků, které byly načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

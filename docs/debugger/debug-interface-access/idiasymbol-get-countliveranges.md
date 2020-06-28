@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_countLiveRanges | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 990673afdb01b1471ad75d65036610c486e735c4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 89a6198a73adc5a9f4afec1f3b40302263660a29
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740743"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463972"
 ---
 # <a name="idiasymbolget_countliveranges"></a>IDiaSymbol::get_countLiveRanges
 Načte počet platných rozsahů adres přidružených k místnímu symbolu.
@@ -36,14 +36,14 @@ HRESULT get_countLiveRanges ( 
 mimo Vrátí počet rozsahů adres.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="requirements"></a>Požadavky
  Záhlaví: Dia2. h
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

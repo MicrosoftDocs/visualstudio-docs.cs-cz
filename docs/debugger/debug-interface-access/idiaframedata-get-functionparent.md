@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: get_functionParent | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 809de8589302ddc35a14e2ea0663248a163176e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ef646016433ecfe19106a17dff391c2dd8ce8382
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743627"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467384"
 ---
 # <a name="idiaframedataget_functionparent"></a>IDiaFrameData::get_functionParent
 Načte rozhraní rámce dat pro ohraničující funkci.
@@ -36,7 +36,7 @@ HRESULT get_functionParent ( 
 mimo Vrátí objekt [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) pro ohraničující funkci.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

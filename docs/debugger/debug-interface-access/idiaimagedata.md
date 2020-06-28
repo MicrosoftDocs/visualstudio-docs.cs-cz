@@ -1,7 +1,7 @@
 ---
 title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75a81ae23db90b06915e7090a9f2918be3ff18ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 39bc89e9b41f4d1c384476e673d116cb1cd08159
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743395"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467132"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 Zpřístupňuje podrobné informace o základním umístění a posunech paměti modulu nebo obrázku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaImageData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaImageData`.
+V následující tabulce jsou uvedeny metody `IDiaImageData` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -38,13 +38,13 @@ Následující tabulka ukazuje metody `IDiaImageData`.
 |[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Načte umístění paměti, kde má být obrázek založen.|
 
 ## <a name="remarks"></a>Poznámky
-Některé streamy ladění (XDATA, PDATA) obsahují kopie dat také uložené v imagi. Tyto datové objekty streamu se dají dotazovat na rozhraní `IDiaImageData`. Podrobnosti najdete v části "poznámky k volajícím" v tomto tématu.
+Některé streamy ladění (XDATA, PDATA) obsahují kopie dat také uložené v imagi. Tyto datové objekty streamu se dají dotazovat na `IDiaImageData` rozhraní. Podrobnosti najdete v části "poznámky k volajícím" v tomto tématu.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním `QueryInterface` v objektu [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) . Všimněte si, že ne všechny streamy ladění podporují rozhraní `IDiaImageData`. Například v současné době pouze datové proudy XDATA a PDATA podporují rozhraní `IDiaImageData`.
+Získejte toto rozhraní voláním `QueryInterface` objektu [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) . Všimněte si, že ne všechny streamy ladění podporují `IDiaImageData` rozhraní. Například aktuálně pouze datové proudy XDATA a PDATA podporují `IDiaImageData` rozhraní.
 
 ## <a name="example"></a>Příklad
-Tento příklad vyhledá všechny streamy ladění pro libovolný datový proud, který podporuje rozhraní `IDiaImageData`. Pokud je takový datový proud nalezen, zobrazí se některé informace o tomto datovém proudu.
+Tento příklad vyhledá všechny streamy ladění pro libovolný datový proud, který `IDiaImageData` rozhraní podporuje. Pokud je takový datový proud nalezen, zobrazí se některé informace o tomto datovém proudu.
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -115,8 +115,8 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

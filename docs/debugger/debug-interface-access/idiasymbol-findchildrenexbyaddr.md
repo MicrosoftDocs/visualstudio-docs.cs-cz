@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: findChildrenExByAddr | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dc49d9501e72fb81849943144973574a0d55fef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9c0fcba05cb21aa3d19b79ac26ca5c70ace12e6d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741288"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464574"
 ---
 # <a name="idiasymbolfindchildrenexbyaddr"></a>IDiaSymbol::findChildrenExByAddr
 Načte podřízené objekty symbolu, které jsou platné na zadané adrese.
@@ -37,11 +37,11 @@ HRESULT findChildrenExByAddr ( 
 #### <a name="parameters"></a>Parametry
  `symtag`
 
-pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené položky, které se mají načíst.
+pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na hodnotu `SymTagNull` pro všechny podřízené položky, které mají být načteny.
 
  `name`
 
-pro Určuje název podřízených objektů, které mají být načteny. Nastavte na `NULL` pro všechny podřízené položky, které se mají načíst.
+pro Určuje název podřízených objektů, které mají být načteny. Nastavte na hodnotu `NULL` pro všechny podřízené položky, které mají být načteny.
 
  `compareFlags`
 
@@ -56,7 +56,7 @@ pro Adresa symbolu.
 mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK`, pokud byl nalezen alespoň jeden podřízený symbol, nebo vrátí `S_FALSE`, pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.
+ Vrátí `S_OK` , zda byl nalezen alespoň jeden podřízený symbol, nebo vrátí, `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky. v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Mezi vracené místní symboly patří informace o živém rozsahu.
@@ -66,9 +66,9 @@ mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idia
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSegment:: get_offset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e0d6084f75b3ba903a89c3dfc4249b73887df39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: be90322d11d8676d1087ee53c914eaf7a33c518b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742404"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465963"
 ---
 # <a name="idiasegmentget_offset"></a>IDiaSegment::get_offset
 Načte posunutí v segmentech, kde začíná oddíl.
@@ -36,7 +36,7 @@ HRESULT get_offset ( 
 mimo Vrátí posunutí v segmentech, kde začíná oddíl.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

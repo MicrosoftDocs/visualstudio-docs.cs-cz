@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSourceFile:: get_uniqueId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30a210c12384cbde55dafe6f3410b8fc840e8507
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b3f159211854e5b408d34c253a77893caf763bf2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741793"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465197"
 ---
 # <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
 Načte jednoduchou celočíselnou hodnotu klíče, která je pro tento obrázek jedinečná.
@@ -36,10 +36,10 @@ HRESULT get_uniqueId ( 
 mimo Vrací jednoduchou celočíselnou hodnotu klíče, která je pro tento obrázek jedinečná.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Porovnávání klíčů, nikoli řetězců, může urychlit zpracování čísla řádku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

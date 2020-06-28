@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: findChildren – | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3c62271f6324e50a68de393cfa668c69ba4a935
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7f1fe583ba4932f4f534886ed1c9af34e900ba67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741291"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464588"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Načte podřízené položky symbolu.
@@ -36,11 +36,11 @@ HRESULT findChildren ( 
 #### <a name="parameters"></a>Parametry
  `symtag`
 
-pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené položky, které se mají načíst.
+pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na hodnotu `SymTagNull` pro všechny podřízené položky, které mají být načteny.
 
  `name`
 
-pro Určuje název podřízených objektů, které mají být načteny. Nastavte na `NULL` pro všechny podřízené položky, které se mají načíst.
+pro Určuje název podřízených objektů, které mají být načteny. Nastavte na hodnotu `NULL` pro všechny podřízené položky, které mají být načteny.
 
  `compareFlags`
 
@@ -51,12 +51,12 @@ pro Určuje možnosti porovnání použité pro porovnávání názvů. Hodnoty 
 mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.
 
 ## <a name="return-value"></a>Návratová hodnota
- Vrátí `S_OK`, pokud byl nalezen alespoň jeden podřízený symbol, nebo vrátí `S_FALSE`, pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.
+ Vrátí `S_OK` , zda byl nalezen alespoň jeden podřízený symbol, nebo vrátí, `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky. v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Tato metoda je shodná s voláním metody [IDiaSession:: findChildren –](../../debugger/debug-interface-access/idiasession-findchildren.md) s tímto symbolem jako s prvním parametrem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

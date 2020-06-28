@@ -1,7 +1,7 @@
 ---
 title: IDiaSegment | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 855b40f3d35d884a366e8fdc36ed1ec4f2bef85a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d248bd5dcacf2c852076bc1dddbcd40d149ebf67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742329"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465879"
 ---
 # <a name="idiasegment"></a>IDiaSegment
 Mapuje data z čísla oddílu na segmenty adresního prostoru.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSegment : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaSegment`.
+V následující tabulce jsou uvedeny metody `IDiaSegment` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -98,9 +98,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)
 - [IDiaEnumSegments::Next](../../debugger/debug-interface-access/idiaenumsegments-next.md)

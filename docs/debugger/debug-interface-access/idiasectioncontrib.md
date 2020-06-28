@@ -1,7 +1,7 @@
 ---
 title: IDiaSectionContrib | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 807b9ada9b9424481a184e548e741131d66ab853
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 82d1a52616273a1cfe1d54580c91ec4ba6e1c09e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742463"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466068"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 Načte data popisující příspěvek oddílu, to znamená, že souvislý blok paměti přispěl k obrázku pomocí kompilantu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSectionContrib : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaSectionContrib`.
+V následující tabulce jsou uvedeny metody `IDiaSectionContrib` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -61,10 +61,10 @@ Následující tabulka ukazuje metody `IDiaSectionContrib`.
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Toto rozhraní se získá voláním metod [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) a [IDiaEnumSectionContribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) . Příklad získání `IDiaSectionContrib` rozhraní naleznete v rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) .
+Toto rozhraní se získá voláním metod [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) a [IDiaEnumSectionContribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) . Příklad získání rozhraní naleznete v rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) `IDiaSectionContrib` .
 
 ## <a name="example"></a>Příklad
-Tato funkce zobrazuje adresu každého oddílu spolu s případnými přidruženými symboly. V rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) se můžete podívat, jak se získává rozhraní `IDiaSectionContrib`.
+Tato funkce zobrazuje adresu každého oddílu spolu s případnými přidruženými symboly. Podívejte se na rozhraní [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) , kde zjistíte, jak `IDiaSectionContrib` se rozhraní získává.
 
 ```C++
 void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
@@ -131,9 +131,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 - [IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)

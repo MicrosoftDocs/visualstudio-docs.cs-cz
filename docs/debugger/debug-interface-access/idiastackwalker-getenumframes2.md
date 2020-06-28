@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalker:: getEnumFrames2 | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6de78b5553719def2fd7ef9c6adb55e823aac34
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 28e2f0ec5f176ab32e6bfed1e959f68c04550f67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741531"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464854"
 ---
 # <a name="idiastackwalkergetenumframes2"></a>IDiaStackWalker::getEnumFrames2
 Načte enumerátor rámce zásobníku pro konkrétní typ platformy.
@@ -47,12 +47,12 @@ pro Pomocný objekt [IDiaStackWalkHelper](../../debugger/debug-interface-access/
 mimo Vrátí objekt [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) obsahující seznam objektů [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Chcete-li získat seznam rámců zásobníku jenom pro platformu x86, zavolejte metodu [IDiaStackWalker:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 - [CV_CPU_TYPE_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md)
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

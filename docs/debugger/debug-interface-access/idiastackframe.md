@@ -1,7 +1,7 @@
 ---
 title: IDiaStackFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a54bd52f3783bb0bedc279cffafab2f21e0b0f39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e3cadcfd8fed1818e18d276503c0843e0567addf
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741560"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464910"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 Zpřístupňuje vlastnosti rámce zásobníku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackFrame : IUnknown
@@ -35,7 +35,7 @@ Toto rozhraní podporuje následující metody:
 |------------|-----------------|
 |[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Načte příznak označující, že základní ukazatel je přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.|
 |[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|Načte základnu adresy rámce.|
-|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Načte příznak označující, že C++ zpracování výjimek je v platnosti.|
+|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|Načte příznak označující, že zpracování výjimek jazyka C++ je v platnosti.|
 |[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|Načte příznak označující, že blok obsahuje vstupní bod funkce.|
 |[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|Načte počet bajtů místních proměnných vložených v zásobníku.|
 |[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|Načte počet bajtů parametrů přesunutých do zásobníku.|
@@ -54,7 +54,7 @@ Toto rozhraní podporuje následující metody:
 Rámec zásobníku je abstrakcí volání funkce během jeho spuštění.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním metody [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) . Příklad získání `IDiaStackFrame` rozhraní naleznete v rozhraní [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) .
+Získejte toto rozhraní voláním metody [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) . Příklad získání rozhraní naleznete v rozhraní [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) `IDiaStackFrame` .
 
 ## <a name="example"></a>Příklad
 Tento příklad zobrazí různé atributy rámce zásobníku.
@@ -105,9 +105,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)

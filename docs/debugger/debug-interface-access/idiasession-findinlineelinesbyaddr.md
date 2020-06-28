@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findInlineeLinesByAddr | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: bb70e408-eed1-4c9c-b5b1-44323125f48b
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 496f6b569b3ac02c625ddf18406b78fdb1687be2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4de373985230524dfe12703545a4690090ffce8e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742237"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465802"
 ---
 # <a name="idiasessionfindinlineelinesbyaddr"></a>IDiaSession::findInlineeLinesByAddr
 Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo, zadaným nadřazeným symbolem a jsou obsaženy v zadaném rozsahu adres.
@@ -32,7 +32,7 @@ HRESULT findInlineeLinesByAddr ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-pro Objekt `IDiaSymbol` reprezentující nadřazený prvek.
+pro `IDiaSymbol`Objekt představující nadřazený prvek.
 
  `isect`
 
@@ -48,12 +48,12 @@ pro Určuje rozsah adres, který má být pokrytý pomocí tohoto dotazu, v poč
 
  `ppResult`
 
-mimo Obsahuje objekt `IDiaEnumLineNumbers`, který obsahuje seznam čísel řádků, které se načítají.
+mimo Obsahuje `IDiaEnumLineNumbers` objekt obsahující seznam čísel řádků, které jsou načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

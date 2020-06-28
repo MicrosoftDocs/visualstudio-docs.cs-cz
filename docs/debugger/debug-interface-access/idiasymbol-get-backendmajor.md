@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_backEndMajor | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bae33cf32bc86ad77fa03fab9f940c9fec25194a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 87ede4bfbac0d88ba65bd57d301df93a97738ea7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740990"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464252"
 ---
 # <a name="idiasymbolget_backendmajor"></a>IDiaSymbol::get_backEndMajor
 Načte číslo hlavní verze kompilátoru pro back-end.
@@ -36,7 +36,7 @@ HRESULT get_backEndMajor ( 
 mimo Vrátí číslo hlavní verze back-endu. Viz poznámky.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -44,14 +44,14 @@ mimo Vrátí číslo hlavní verze back-endu. Viz poznámky.
 ## <a name="remarks"></a>Poznámky
  Kompilátor se obvykle skládá ze dvou primárních elementů: front-end (analyzátor), který zpracovává analýzu zdrojového kódu do přechodného formátu, a back-endu (generátor kódu), který převede zprostředkující formulář na sestavení. Pro front-end je neobvyklá verze, která má jinou verzi než back-end.
 
- Číslo verze front-endu nebo back-endu se skládá ze tří částí: \<major >. \<minor >. \<build >, kde \<major > je hlavní číslo verze, \<minor > je číslo dílčí verze a \<build > je číslo sestavení. Například 13.10.3077.
+ Číslo verze na front-end nebo back-end se skládá ze tří částí: \<major> . \<minor> . \<build> , kde \<major> je hlavní číslo verze, \<minor> je číslo podverze a \<build> číslo sestavení. Například 13.10.3077.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 7.0|
+|Verze:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

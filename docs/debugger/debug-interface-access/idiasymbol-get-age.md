@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_age | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28a78094d9779a0da35052808dfb8d5f42972894
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b8fc198573123c24a3c48068b50161d0aa7f3b60
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741039"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464343"
 ---
 # <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
 Načte hodnotu stáří souboru. pdb.
@@ -36,7 +36,7 @@ HRESULT get_age ( 
 mimo Vrátí hodnotu stáří souboru. pdb.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -49,7 +49,7 @@ mimo Vrátí hodnotu stáří souboru. pdb.
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 7.0|
+|Verze:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

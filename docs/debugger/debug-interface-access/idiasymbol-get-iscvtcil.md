@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isCVTCIL | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4741c4f3a13b77dd871cefdb7a9d6430250b98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 068720e4b35ca52e07351aeb6f74d7594fe69d1e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740271"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463433"
 ---
 # <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
 Načte příznak označující, zda byl modul převeden z modulu Common Intermediate Language (CIL) na nativní modul.
@@ -33,24 +33,24 @@ HRESULT get_isCVTCIL(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-mimo Vrátí `TRUE`, pokud byl modul převeden z CIL do nativního kódu; v opačném případě vrátí `FALSE`.
+mimo Vrátí `TRUE` , zda byl modul převeden z jazyka CIL do nativního kódu. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost je k dispozici z `SymTagCompilandDetails`ho typu symbolu (viz [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md).
+ Tato vlastnost je k dispozici z `SymTagCompilandDetails` typu symbolu (viz [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 8.0|
+|Verze:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSourceFiles | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 091d2f5996d53341e57c5c1b2125609642a156eb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 810ccbfc47a7fabaefdca5a1f6c158b328c4509c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744031"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467846"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
 Vytvoří výčet různých zdrojových souborů obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSourceFiles : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumSourceFiles`.
+V následující tabulce jsou uvedeny metody `IDiaEnumSourceFiles` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -44,10 +44,10 @@ Následující tabulka ukazuje metody `IDiaEnumSourceFiles`.
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním metody `QueryInterface` v objektu [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Podrobnosti najdete v příkladu.
+Získejte toto rozhraní voláním `QueryInterface` metody pro objekt [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Podrobnosti najdete v příkladu.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat `IDiaEnumSourceFiles` rozhraní ze seznamu tabulek v objektu relace DIA. Příklad přístupu k informacím o zdrojovém souboru naleznete v rozhraní [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) .
+Tento příklad ukazuje, jak získat `IDiaEnumSourceFiles` rozhraní ze seznamu tabulek v objektu relace Dia. Příklad přístupu k informacím o zdrojovém souboru naleznete v rozhraní [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) .
 
 ```C++
 
@@ -84,9 +84,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_framePointerPresent | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fce085f134b844d7e53e19d9e2ec057aa8a89ca
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e5ccc4c679c7bb20d5b419fe2c04ab5ea8dce904
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740670"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463902"
 ---
 # <a name="idiasymbolget_framepointerpresent"></a>IDiaSymbol::get_framePointerPresent
-Načte příznak, který určuje, zda je k dispozici ukazatel na rámec. Použijte, pokud je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastavený na `SymTagFunction`.
+Načte příznak, který určuje, zda je k dispozici ukazatel na rámec. Použijte v případě, že je [výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) nastaven na hodnotu `SymTagFunction` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ HRESULT get_framePointerPresent( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-[out]] Vrátí `TRUE`, pokud je přítomný ukazatel na rámec. v opačném případě vrátí `FALSE`.
+[out]] Vrátí `TRUE` , zda je k dispozici ukazatel rámce. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -48,7 +48,7 @@ HRESULT get_framePointerPresent( 
 
  Knihovna: diaguids. lib
 
- Knihovna DLL: msdia100. dll
+ KNIHOVNA DLL: msdia100.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

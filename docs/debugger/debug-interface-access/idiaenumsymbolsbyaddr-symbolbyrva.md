@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSymbolsByAddr:: symbolByRVA | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4c34ce4105da6d50dc2bc9a0554f9539c1b2177
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: eb6f2f4486f943064ef4c29d16c98003aa3ff088
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743833"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467622"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
 Umístí enumerátor pomocí vyhledávání relativní virtuální adresou (RVA).
@@ -41,9 +41,9 @@ pro Adresa relativní k začátku obrázku
 mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující nalezený symbol.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud symbol nebyl nalezen. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí, `S_FALSE` zda nebyl nalezen symbol. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 - [IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

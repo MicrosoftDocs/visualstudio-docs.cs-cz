@@ -1,7 +1,7 @@
 ---
 title: IDiaInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 994f454372883f2516d1eab03bf1152693969b16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7ae7095d2be479c5e7789a478b8d27632a1d2faa
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743311"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467006"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 Přistupuje k vloženému zdrojovému kódu uloženému ve zdroji dat DIA.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaInjectedSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaInjectedSource`.
+V následující tabulce jsou uvedeny metody `IDiaInjectedSource` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -42,13 +42,13 @@ Následující tabulka ukazuje metody `IDiaInjectedSource`.
 |[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Načte bajty zdrojového kódu.|
 
 ## <a name="remarks"></a>Poznámky
-Vložený zdroj je text vložený během kompilace. To neznamená, že preprocesor `#include` použit v C++.
+Vložený zdroj je text vložený během kompilace. To neznamená, že preprocesor `#include` použitý v jazyce C++.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním metody [IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) nebo [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) . Příklad získání `IDiaInjectedSource` rozhraní naleznete v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) .
+Získejte toto rozhraní voláním metody [IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) nebo [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) . Příklad získání rozhraní naleznete v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) `IDiaInjectedSource` .
 
 ## <a name="example"></a>Příklad
-Tento příklad zobrazuje data dostupná z rozhraní `IDiaInjectedSource`. Alternativní přístup pomocí rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) naleznete v příkladu v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) .
+Tento příklad zobrazuje data dostupná z `IDiaInjectedSource` rozhraní. Alternativní přístup pomocí rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) naleznete v příkladu v rozhraní [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) .
 
 ```C++
 void PrintInjectedSource(IDiaInjectedSource* pSource)
@@ -117,9 +117,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)
 - [IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)

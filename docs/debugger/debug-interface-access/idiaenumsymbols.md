@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbols | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0864522c079ff1f694072fec3147d006cd2ce43d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6018558ead8ae8b5532253cfa32180491514b040
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743897"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467678"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 Vytvoří výčet různých symbolů obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSymbols : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumSymbols`.
+V následující tabulce jsou uvedeny metody `IDiaEnumSymbols` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -42,7 +42,7 @@ Následující tabulka ukazuje metody `IDiaEnumSymbols`.
 |[IDiaEnumSymbols::Clone](../../debugger/debug-interface-access/idiaenumsymbols-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|
 
 ## <a name="remarks"></a>Poznámky
-Toto rozhraní poskytuje symboly seskupené podle konkrétního typu symbolu, například `SymTagUDT` (uživatelsky definované typy) nebo `SymTagBaseClass`. Chcete-li pracovat se symboly seskupenými podle adresy, použijte rozhraní [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) .
+Toto rozhraní poskytuje symboly seskupené podle konkrétního typu symbolu, například `SymTagUDT` (uživatelsky definované typy) nebo `SymTagBaseClass` . Chcete-li pracovat se symboly seskupenými podle adresy, použijte rozhraní [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
 Získejte toto rozhraní voláním následujících metod:
@@ -54,10 +54,10 @@ Získejte toto rozhraní voláním následujících metod:
 - [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat rozhraní `IDiaEnumSymbols` a potom použít tento výčet k vypsání uživatelsky definovaných typů (UDT).
+Tento příklad ukazuje, jak získat `IDiaEnumSymbols` rozhraní a potom použít tento výčet k vypsání uživatelsky definovaných typů (UDT).
 
 > [!NOTE]
-> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce v případě, že instance přechází z rozsahu.
+> `CDiaBSTR`je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.
 
 ```C++
 void ShowUDTs(IDiaSymbol *pGlobals)
@@ -90,9 +90,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 - [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findInlineeLines | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b6822d8b-70d5-470b-8278-3aec4680326c
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5103a881b1b046479a1a3156f06038e230f5063e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a03eb23929d3a882b397a8a95f2d9c4c17abf0df
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742244"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465809"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
 Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo zadaným nadřazeným symbolem.
@@ -32,16 +32,16 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>Parametry
  `parent`
 
-pro Objekt `IDiaSymbol` reprezentující nadřazený prvek.
+pro `IDiaSymbol`Objekt představující nadřazený prvek.
 
  `ppResult`
 
-mimo Obsahuje objekt `IDiaEnumLineNumbers`, který obsahuje seznam čísel řádků, které se načítají.
+mimo Obsahuje `IDiaEnumLineNumbers` objekt obsahující seznam čísel řádků, které jsou načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

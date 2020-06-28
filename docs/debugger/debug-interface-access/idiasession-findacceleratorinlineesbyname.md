@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findAcceleratorInlineesByName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: e203e5c2-6563-43fa-be56-3063955043ab
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 007477d3f0de3767b0c5ef0af977f969505884ed
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: abd6f8afb7275503fa3de855575e9dcb6dad0fb3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742315"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465844"
 ---
 # <a name="idiasessionfindacceleratorinlineesbyname"></a>IDiaSession::findAcceleratorInlineesByName
 Vrátí výčet symbolů pro vložené rámce, které odpovídají zadanému názvu vložené funkce.
@@ -37,19 +37,19 @@ pro Název funkce inline, která se má prohledat
 
  `option`
 
-pro Možnosti vyhledávání názvů, které se mají použít při vyhledávání vložených snímků, které odpovídají `name`. Další informace najdete v tématu [výčet namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md).
+pro Možnosti vyhledávání názvů, které se mají použít při vyhledávání vložených snímků, které odpovídají `name` . Další informace najdete v tématu [výčet namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md).
 
  `ppResult`
 
-mimo Ukazatel na ukazatel rozhraní `IDiaEnumSymbols`, který je inicializován s výsledkem.
+mimo Ukazatel na `IDiaEnumSymbols` ukazatel rozhraní, který je inicializován s výsledkem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce vyhledá vložené položky pouze v rámci akcelerátorových funkcí akcelerátoru. Ignoruje záznamy C++ nativních procedur.
+ Tato funkce vyhledá vložené položky pouze v rámci akcelerátorových funkcí akcelerátoru. Ignoruje záznamy procedur v nativním jazyce C++.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d586cfe3e78a320ffed42e7181463eb79a6b313a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee2f68066de6a41e6fd6a1cf4143613a7597d6f1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743460"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467181"
 ---
 # <a name="idiaframedata"></a>IDiaFrameData
 Zpřístupňuje podrobnosti rámce zásobníku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaFrameData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaFrameData`.
+V následující tabulce jsou uvedeny metody `IDiaFrameData` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -45,7 +45,7 @@ Následující tabulka ukazuje metody `IDiaFrameData`.
 |[IDiaFrameData::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiaframedata-get-lengthsavedregisters.md)|Načte počet bajtů uložených registrů, které byly vloženy do zásobníku.|
 |[IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)|Načte řetězec programu, který se používá k výpočtu sady registrů před voláním do aktuální funkce.|
 |[IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)|Načte příznak, který označuje, že zpracování systémových výjimek je v platnosti.|
-|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|Načte příznak, který označuje, C++ že zpracování výjimek je v platnosti.|
+|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|Načte příznak, který označuje, že zpracování výjimek jazyka C++ je v platnosti.|
 |[IDiaFrameData::get_functionStart](../../debugger/debug-interface-access/idiaframedata-get-functionstart.md)|Načte příznak, který označuje, že blok obsahuje vstupní bod funkce.|
 |[IDiaFrameData::get_allocatesBasePointer](../../debugger/debug-interface-access/idiaframedata-get-allocatesbasepointer.md)|Načte příznak, který označuje, že základní ukazatel je přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.|
 |[IDiaFrameData::get_type](../../debugger/debug-interface-access/idiaframedata-get-type.md)|Načte typ snímku specifický pro kompilátor.|
@@ -59,7 +59,7 @@ Následující tabulka ukazuje metody `IDiaFrameData`.
  Získejte toto rozhraní voláním metod [IDiaEnumFrameData:: Next](../../debugger/debug-interface-access/idiaenumframedata-next.md) nebo [IDiaEnumFrameData:: Item](../../debugger/debug-interface-access/idiaenumframedata-item.md) . Podrobnosti najdete v rozhraní [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) .
 
 ## <a name="example"></a>Příklad
- Tento příklad vytiskne vlastnosti objektu `IDiaFrameData`. Příklad toho, jak se získává rozhraní `IDiaFrameData`, naleznete v rozhraní [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) .
+ Tento příklad vytiskne vlastnosti `IDiaFrameData` objektu. Příklad toho, jak se rozhraní získává, naleznete v rozhraní [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) `IDiaFrameData` .
 
 ```C++
 void PrintFrameData(IDiaFrameData* pFrameData){
@@ -117,9 +117,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 - [IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)
