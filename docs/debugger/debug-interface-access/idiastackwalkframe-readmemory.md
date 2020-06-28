@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalkFrame:: readMemory – | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae1201fca1fc25cce19b40b47d6435d02d80e1b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f682f3fe0e300f84dc28b959497138a5019f954b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741480"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464826"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 Načte paměť z image.
@@ -49,14 +49,14 @@ pro Velikost vyrovnávací paměti dat (v bajtech).
 
  `pcbData`
 
-mimo Vrátí počet vrácených bajtů. Pokud je `data` `NULL`, pak `pcbData` obsahuje celkový počet bajtů dat, který je k dispozici.
+mimo Vrátí počet vrácených bajtů. Pokud `data` je `NULL` , pak `pcbData` obsahuje celkový počet bajtů dat, která jsou k dispozici.
 
  `data`
 
 mimo Vyrovnávací paměť, která se má vyplnit daty ze zadaného umístění.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

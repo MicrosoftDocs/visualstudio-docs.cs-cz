@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_constructor | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49dc80eecf104e8ebd9e394f16afdc393c9a865f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 877ac3b0a73dc13600c9d6847dfc505caaa05821
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740805"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464042"
 ---
 # <a name="idiasymbolget_constructor"></a>IDiaSymbol::get_constructor
 Načte příznak, který určuje, zda uživatelem definovaný datový typ má konstruktor nebo destruktor.
@@ -33,10 +33,10 @@ HRESULT get_constructor ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud uživatelsky definovaný datový typ má konstruktor nebo destruktor; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda uživatelem definovaný datový typ má konstruktor nebo destruktor; v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -46,7 +46,7 @@ mimo Vrátí `TRUE`, pokud uživatelsky definovaný datový typ má konstruktor 
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 7.0|
+|Verze:|DIA SDK v 7.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

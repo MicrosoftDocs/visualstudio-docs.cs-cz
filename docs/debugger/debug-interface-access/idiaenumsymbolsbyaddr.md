@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d8cddaa39635be534e2247b48a370ed88b29ab4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 92062883ea97fdc6251ffa600e31230fb448f73b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743818"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467580"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Provede výčet podle adres různých symbolů obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSymbolsByAddr : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumSymbolsByAddr`.
+V následující tabulce jsou uvedeny metody `IDiaEnumSymbolsByAddr` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -41,7 +41,7 @@ Následující tabulka ukazuje metody `IDiaEnumSymbolsByAddr`.
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|Vytvoří kopii objektu.|
 
 ## <a name="remarks"></a>Poznámky
-Toto rozhraní poskytuje symboly seskupené podle adres. Chcete-li pracovat se symboly seskupenými podle typu, například `SymTagUDT` (uživatelem definovaný typ) nebo `SymTagBaseClass`, použijte rozhraní [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) .
+Toto rozhraní poskytuje symboly seskupené podle adres. Chcete-li pracovat se symboly seskupenými podle typu, například `SymTagUDT` (uživatelem definovaný typ) nebo `SymTagBaseClass` , použijte rozhraní [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
 Získejte toto rozhraní voláním metody [IDiaSession:: getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) .
@@ -98,9 +98,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasEHa | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f010fee3243a9ce202451fc9cc5cff1ed908118
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6c565a8c13b31feb78c8d60bf0b18bbc923f14f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740533"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463748"
 ---
 # <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 Načte příznak, který určuje, zda funkce obsahuje asynchronní (strukturované) zpracování výjimek.
@@ -33,23 +33,23 @@ HRESULT get_hasEHa(
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-mimo Vrátí `TRUE`, pokud má funkce nějaké asynchronní zpracování výjimek; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda má funkce jakékoli asynchronní zpracování výjimek; v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
 
 ## <a name="remarks"></a>Poznámky
- Je možné kombinovat asynchronní nebo strukturované zpracování výjimek s C++zpracováním výjimek ve stylu, ale vyžaduje specifický přepínač kompilátoru/EHa, aby byl povolen.
+ Je možné kombinovat asynchronní nebo strukturované zpracování výjimek pomocí zpracování výjimek ve stylu C++, ale pro jeho povolení vyžaduje konkrétní přepínač kompilátoru/EHa.
 
 ## <a name="requirements"></a>Požadavky
 
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 8.0|
+|Verze:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

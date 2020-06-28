@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSegment:: get_write | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 523a19b5cf9a8de7039d539edef9ddc9c90a6a9e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 498a72888ff59d09abf4f8d4dd830db25678761c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742345"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465935"
 ---
 # <a name="idiasegmentget_write"></a>IDiaSegment::get_write
 Načte příznak, který označuje, zda lze segment upravit.
@@ -33,10 +33,10 @@ HRESULT get_write ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud je možné segment zapsat; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda lze segment zapsat do; v opačném případě vrátí `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

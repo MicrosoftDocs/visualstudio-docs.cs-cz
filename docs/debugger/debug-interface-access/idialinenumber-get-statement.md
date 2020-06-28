@@ -1,7 +1,7 @@
 ---
 title: 'IDiaLineNumber:: get_statement | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a37052944f74e36b488541074a0033f5b8aca9e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3ea4a05bfccddeedb29110ea6ee44f34f85534a8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743134"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466845"
 ---
 # <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
 Načte příznak označující, že tyto informace o řádku popisují začátek příkazu, nikoli výraz ve zdroji programu.
@@ -33,13 +33,13 @@ HRESULT get_statement ( 
 #### <a name="parameters"></a>Parametry
  `pRetVal`
 
-mimo Vrátí `TRUE`, pokud informace o tomto řádku popisují začátek příkazu ve zdroji programu.
+mimo Vrátí `TRUE` , pokud informace o tomto řádku popisují začátek příkazu ve zdroji programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Příkazy mohou být rozloženy na více řádků. Tato metoda označuje, zda přidružené číslo řádku označuje začátek takového víceřádkového příkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

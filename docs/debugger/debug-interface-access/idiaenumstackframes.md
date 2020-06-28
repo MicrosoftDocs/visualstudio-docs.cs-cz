@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumStackFrames | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83e6adb3157b67b89ef2c05f59eaaf2c7084d9d8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9322af6bf04e21430ed49be8e631f3a7dc63643
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744010"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467825"
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 Vytvoří výčet různých dostupných rámců zásobníku.
@@ -35,7 +35,7 @@ Vytvoří výčet různých dostupných rámců zásobníku.
 Získejte toto rozhraní voláním metod [IDiaStackWalker:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) nebo [IDiaStackWalker:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) .
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat a použít rozhraní `IDiaEnumStackFrames`. Implementaci funkce `PrintStackFrame` naleznete v rozhraní [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) .
+Tento příklad ukazuje, jak získat a použít `IDiaEnumStackFrames` rozhraní. Implementaci funkce naleznete v rozhraní [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) `PrintStackFrame` .
 
 ```C++
 void DumpStackFrames(IDiaStackWalker*     pStackWalker,
@@ -67,9 +67,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)

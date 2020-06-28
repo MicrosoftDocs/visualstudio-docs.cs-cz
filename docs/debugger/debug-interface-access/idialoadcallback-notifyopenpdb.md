@@ -1,7 +1,7 @@
 ---
 title: 'IDiaLoadCallback:: NotifyOpenPDB | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbcf8aff8dc18776cbcb09a5fa3f13edca4cd7a7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 468aef9faf4aa6c7c1b7ddebb1fd0c15445d61a2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743069"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466740"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
 Volá se, když se otevře soubor kandidát. pdb.
@@ -38,10 +38,10 @@ pro Úplná cesta k souboru. pdb.
 
  `resultCode`
 
-pro Kód, který indikuje úspěch (`S_OK`) nebo selhání zatížení jako u tohoto souboru.
+pro Kód, který označuje úspěch ( `S_OK` ) nebo selhání zatížení, které je použito pro tento soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Návratový kód se obvykle ignoruje.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Návratový kód se obvykle ignoruje.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

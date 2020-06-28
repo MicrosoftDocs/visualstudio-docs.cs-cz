@@ -1,7 +1,7 @@
 ---
 title: 'IDiaLoadCallback2:: RestrictDBGAccess | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,27 +12,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79756c2f9ab9e69fa45041e2ddaa2ff2119c27c5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8fd54587127d434f79cf8d80aa130f5135bb7aeb
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743006"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466712"
 ---
 # <a name="idialoadcallback2restrictdbgaccess"></a>IDiaLoadCallback2::RestrictDBGAccess
 Určuje, zda je povoleno hledání informací o ladění ze souborů. dbg.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT RestrictDBGAccess();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Libovolná návratová hodnota kromě `S_OK`, aby se zabránilo hledání informací o ladění ze souborů. dbg.
+ Libovolná návratová hodnota `S_OK` , která není zabráněno v hledání ladicích informací ze souborů. dbg.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

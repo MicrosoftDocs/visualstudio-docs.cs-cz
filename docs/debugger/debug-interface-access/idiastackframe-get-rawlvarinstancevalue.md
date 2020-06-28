@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1118517988f6a790cd4f6732eba3bc8a9fc25a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5a45568ea62a767d06a33c324f0f05a1f697e93f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741638"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464980"
 ---
 # <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 Tato metoda načte hodnotu zadané místní proměnné jako nezpracované bajty.
@@ -36,11 +36,11 @@ HRESULT get_rawLVarInstanceValue(
 #### <a name="parameters"></a>Parametry
  `pInstance`
 
-pro Objekt `IDiaLVarInstance` reprezentující instanci lokální proměnné pro získání hodnoty pro.
+pro `IDiaLVarInstance`Objekt představující instanci lokální proměnné pro získání hodnoty pro.
 
  `cbDataMax`
 
-pro Maximální počet bajtů ve vyrovnávací paměti, na které ukazuje `pbData`. Může to být maximálně 8 bajtů (`sizeof(ULONGLONG)`).
+pro Maximální počet bajtů ve vyrovnávací paměti, na které ukazuje `pbData` . Může to být maximálně 8 bajtů ( `sizeof(ULONGLONG)` ).
 
  `pcbData`
 
@@ -48,10 +48,10 @@ mimo Vrátí skutečný počet bajtů uložených ve vyrovnávací paměti.
 
  `pbData`
 
-mimo Vyrovnávací paměť, která se má vyplnit daty. Toto nelze `NULL`.
+mimo Vyrovnávací paměť, která se má vyplnit daty. To nemůže být `NULL` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

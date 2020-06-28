@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffde40e221823d9656c4b6414b14067ac9d0537a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 77d50a6c59ea376950d8cd4653f29ba7d04f36ad
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744042"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467839"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
 Načte zadaný počet prvků rámce zásobníku z sekvence výčtu.
@@ -46,8 +46,8 @@ mimo Pole, které se má vyplnit požadovanými [IDiaStackFrame](../../debugger/
 mimo Vrátí počet prvků rámce zásobníku v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další bloky zásobníku. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další rámce zásobníku. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: findSymbolsForAcceleratorPointerTag | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: fb66852c-c5f7-4140-b9fe-20cb4e51a9fe
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1544471bd4ff9166d4c8f4c10f48840db6f576f3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3219312a96e5ad23c0eef519d077faedacb2b824
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741121"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464420"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-Vrátí počet značek akcelerátoru v rámci C++ funkce zástupného kódu amp.
+Vrátí počet značek akcelerátoru v C++ AMP funkci zástupné procedury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,11 +35,11 @@ pro Hodnota značky ukazatele, pro kterou jsou nalezeny záznamy symbolů pointe
 
  `ppResult`
 
-mimo Ukazatel na ukazatel rozhraní `IDiaEnumSymbols`, který je inicializován s výsledkem.
+mimo Ukazatel na `IDiaEnumSymbols` ukazatel rozhraní, který je inicializován s výsledkem.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

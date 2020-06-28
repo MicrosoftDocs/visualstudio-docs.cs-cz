@@ -1,7 +1,7 @@
 ---
 title: 'IDiaPropertyStorage:: ReadBOOL | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d776e37bab189e61d0264f4cbda24f89cb4501ce
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7d94e38ade7b44d7458a0918080214d00e0000aa
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742929"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466607"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
 Přečte `BOOL` hodnoty v sadě vlastností.
@@ -34,17 +34,17 @@ HRESULT ReadBOOL ( 
 #### <a name="parameters"></a>Parametry
  `id`
 
-pro Identifikátor vlastnosti, která má být načtena (`PROPID` je definována v WTypes. h jako `ULONG`).
+pro Identifikátor vlastnosti, která má být načtena ( `PROPID` je definována v WTypes. h jako `ULONG` ).
 
  `pValue`
 
 mimo Vrátí hodnotu vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG`, pokud vlastnost není typu `BOOL`.
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Vrátí, `E_INVALIDARG` zda vlastnost není typu `BOOL` .
 
 ## <a name="remarks"></a>Poznámky
- Pro konzistentní výsledky interpretujte hodnotu `BOOL`, aby nenulové hodnoty byly `TRUE` a nula je `FALSE`.
+ Pro konzistentní výsledky interpretujte `BOOL` hodnotu tak, aby nenulové hodnoty byly `TRUE` a nula `FALSE` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

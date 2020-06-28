@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSourceFile:: get_compilands | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dea4b53daae31c90753ef7afb293e69157f58e41
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 89b3d85ab967185fb264491f57d6e6b59afad105
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741816"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465298"
 ---
 # <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
 Načte enumerátor compilands, který má čísla řádků odkazující na tento soubor.
@@ -36,8 +36,8 @@ HRESULT get_compilands ( 
 mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam všech compilands, které mají čísla řádků odkazující na tento soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

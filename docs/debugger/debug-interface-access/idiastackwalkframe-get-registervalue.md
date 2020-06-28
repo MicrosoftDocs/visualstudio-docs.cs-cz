@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalkFrame:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5d1010cf9231e4777c8aef8de4a71d23937974e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bba448e11cd8a3be269f0824df1597ac1c6ce95a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741507"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464840"
 ---
 # <a name="idiastackwalkframeget_registervalue"></a>IDiaStackWalkFrame::get_registerValue
 Načte hodnotu registru.
@@ -41,8 +41,8 @@ pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/
 mimo Vrátí aktuální hodnotu registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 - [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md)

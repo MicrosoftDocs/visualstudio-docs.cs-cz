@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: Execute | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88c9af8293dfc6a35e5f0e42d9596494d74b10aa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2587d10b613200b1bf850636f613abbb497e04de
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743687"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467447"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 Provede unwinding zásobníku a vrátí výsledky v rozhraní rámce procházení zásobníku.
@@ -36,7 +36,7 @@ HRESULT execute ( 
 pro Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) , který obsahuje stav registrů rámců.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.
 
 |Hodnota|Popis|
 |-----------|-----------------|
@@ -46,8 +46,8 @@ pro Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackw
 |E_DIA_VALUE|Chyba při výpočtu hodnoty (například dělení nulou).|
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána během ladění pro odvinutí zásobníku. Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) je implementován klientskou aplikací pro příjem aktualizací registrů a k poskytnutí metod používaných metodou `execute`.
+ Tato metoda je volána během ladění pro odvinutí zásobníku. Objekt [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md) je implementován klientskou aplikací pro příjem aktualizací registrů a k poskytnutí metod používaných `execute` metodou.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

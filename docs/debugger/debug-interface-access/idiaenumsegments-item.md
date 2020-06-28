@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSegments:: Item | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 101821e3c00d3aeac9b131ee5a11ab9a01e090a9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e03c01efb9f2dca13009a7dc7eeb8282b5c9082c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744186"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468042"
 ---
 # <a name="idiaenumsegmentsitem"></a>IDiaEnumSegments::Item
 Načte segment prostřednictvím indexu.
@@ -34,15 +34,15 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametry
  index
 
-pro Index objektu [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) , který se má načíst Index je v rozsahu 0 až `count`-1, kde `count` vrací metoda [IDiaEnumSegments:: get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) .
+pro Index objektu [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) , který se má načíst Index je v rozsahu 0 až `count` -1, kde `count` je vrácen metodou [IDiaEnumSegments:: get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) .
 
- letu
+ segment
 
 mimo Vrátí objekt [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) představující požadovaný segment.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

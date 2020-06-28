@@ -1,7 +1,7 @@
 ---
 title: 'IDiaPropertyStorage:: ReadPropertyNames | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f554485ae56a9d5f190c749879545165d299531c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 257546e54cb04713f2f13892ec782aca1712cfba
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742874"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466516"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
 Načte odpovídající názvy řetězců pro dané identifikátory vlastností.
@@ -35,21 +35,21 @@ HRESULT ReadPropertyNames (
 #### <a name="parameters"></a>Parametry
  `cpropid`
 
-pro Počet ID vlastností v `rgpropid`.
+pro Počet ID vlastností v `rgpropid` .
 
  `rgpropid`
 
-pro Pole ID vlastností, pro které se mají získat názvy (`PROPID` jsou definovány v WTypes. h jako `ULONG`).
+pro Pole ID vlastností, pro které se mají získat názvy ( `PROPID` je definováno v WTypes. h jako `ULONG` ).
 
  `rglpwstrName`
 
-[in, out] Pole názvů vlastností pro zadaná ID vlastností Pole musí být předem přiděleno pro uchování požadovaného počtu názvů vlastností a musí být schopné uchovávat alespoň `cpropid``BSTR` řetězce.
+[in, out] Pole názvů vlastností pro zadaná ID vlastností Pole musí být předem přiděleno pro uchování požadovaného počtu názvů vlastností a musí být schopno uchovávat nejméně `cpropid``BSTR` řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Názvy vrácených vlastností musí být uvolněny (voláním funkce `SysFreeString`), pokud už je nepotřebujete.
+ Názvy vrácených vlastností musí být uvolněny (voláním `SysFreeString` funkce), pokud už je nepotřebujete.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

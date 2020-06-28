@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_returnAddress | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5312eb455de8ce187bf4ae2acc2fc5b4b57a07bc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0fdfe3e4d52bbbfdd686c3a0394dfb5699058a69
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741607"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464973"
 ---
 # <a name="idiastackframeget_returnaddress"></a>IDiaStackFrame::get_returnAddress
 Načte návratovou adresu rámce.
@@ -36,7 +36,7 @@ HRESULT get_returnAddress ( 
 mimo Vrátí návratovou adresu rámce.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

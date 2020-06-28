@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_lengthProlog | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af0581f3278288c0acd0269a193b89b32b840c3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a7befb78c49d206c3192d878994b6056c07c2d40
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741704"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465078"
 ---
 # <a name="idiastackframeget_lengthprolog"></a>IDiaStackFrame::get_lengthProlog
 Načte počet bajtů kódu prologu v bloku.
@@ -36,7 +36,7 @@ HRESULT get_lengthProlog ( 
 mimo Vrátí počet bajtů kódu prologu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

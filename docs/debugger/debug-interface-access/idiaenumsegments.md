@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSegments | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eff457d539317d2f8c7d77dfc85eb16063650c14
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cd6a0716d0bae5a223cff3439834c87b9650e7a5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744161"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467944"
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 Vytvoří výčet různých segmentů obsažených ve zdroji dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSegments : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumSegments`.
+V následující tabulce jsou uvedeny metody `IDiaEnumSegments` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -44,10 +44,10 @@ Následující tabulka ukazuje metody `IDiaEnumSegments`.
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Získejte toto rozhraní voláním metody `QueryInterface` v objektu [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Podrobnosti najdete v příkladu.
+Získejte toto rozhraní voláním `QueryInterface` metody pro objekt [IDiaTable](../../debugger/debug-interface-access/idiatable.md) . Podrobnosti najdete v příkladu.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat rozhraní `IDiaEnumSections` z tabulky. Úplnější příklad použití segmentů naleznete v rozhraní [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) .
+Tento příklad ukazuje, jak získat `IDiaEnumSections` rozhraní z tabulky. Úplnější příklad použití segmentů naleznete v rozhraní [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) .
 
 ```C++
 void ShowSegments(IDiaTable *pTable, IDiaSession *pSession)
@@ -69,9 +69,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

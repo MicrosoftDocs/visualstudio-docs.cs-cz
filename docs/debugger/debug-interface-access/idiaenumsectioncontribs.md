@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSectionContribs | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e332bacdeaeca00d4e43d80807ee5f95c51c7e93
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebc0fe8391c6390d62cffbb591c4cef1ea52976f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744252"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468070"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 Vytvoří výčet různých příspěvků obsažených v části zdroje dat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSectionContribs : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
-Následující tabulka ukazuje metody `IDiaEnumSectionContribs`.
+V následující tabulce jsou uvedeny metody `IDiaEnumSectionContribs` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -47,7 +47,7 @@ Následující tabulka ukazuje metody `IDiaEnumSectionContribs`.
 Získejte toto rozhraní z metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) . Podrobnosti najdete v příkladu.
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak získat (funkce `GetEnumSectionContribs`) a použít (funkce `ShowSectionContribs`) rozhraní `IDiaEnumSectionContribs`. Úplnější příklad použití části příspěvky najdete v tématu rozhraní [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) .
+Tento příklad ukazuje, jak získat ( `GetEnumSectionContribs` funkce) a použít ( `ShowSectionContribs` funkce) `IDiaEnumSectionContribs` rozhraní. Úplnější příklad použití části příspěvky najdete v tématu rozhraní [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) .
 
 ```C++
 
@@ -104,9 +104,9 @@ Záhlaví: Dia2. h
 
 Knihovna: diaguids. lib
 
-Knihovna DLL: Msdia80. dll
+KNIHOVNA DLL: msdia80.dll
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozhraní (Přístup k rozhraní ladění SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 - [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

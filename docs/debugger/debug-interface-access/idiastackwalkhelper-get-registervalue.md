@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalkHelper:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfb3e219012effe47a2352f7c22c6cf51b4617f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3fb78b4cbdfa2130731e3847b1a3325ab4cb3eac
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741406"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464721"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 Načte hodnotu registru.
@@ -34,18 +34,18 @@ HRESULT get_registerValue ( 
 #### <a name="parameters"></a>Parametry
  `index`
 
-pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) , která určuje, ze kterého registru se má získat hodnota.
+pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) určující, ze kterého registru se má získat hodnota.
 
  `pRetVal`
 
 mimo Vrátí aktuální hodnotu registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Navzdory velikosti parametru `pRetVal` by implementace měla ukládat pouze to, co registr obvykle uchovává. Například 8bitový registr obsahuje pouze nejnižší 8 bitů dané hodnoty. Tato 16bitová hodnota je rozšířena na 64-bity při návratu z této metody.
+ Navzdory velikosti `pRetVal` parametru by implementace měla ukládat pouze to, co registr obvykle uchovává. Například 8bitový registr obsahuje pouze nejnižší 8 bitů dané hodnoty. Tato 16bitová hodnota je rozšířena na 64-bity při návratu z této metody.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 - [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md)

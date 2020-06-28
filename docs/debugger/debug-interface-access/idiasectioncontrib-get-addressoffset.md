@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSectionContrib:: get_addressOffset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f884dfa6d6cb645bc8dd5826265bd8220e208573
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 661c24a3d9fffc35e5fc581b1fc8a4f96452ef1d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742781"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466446"
 ---
 # <a name="idiasectioncontribget_addressoffset"></a>IDiaSectionContrib::get_addressOffset
 Načte část s odsazením adresy příspěvku.
@@ -36,7 +36,7 @@ HRESULT get_addressOffset ( 
 mimo Vrátí část adresy příspěvku pro posun.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

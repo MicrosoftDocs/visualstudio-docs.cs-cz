@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSegments:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34062b654cbaccec053c5ac50bfb041d37a0f4e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8e87efa1ed616a38ccb79fec1e286417c10124b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744194"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468028"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 Načte zadaný počet segmentů v sekvenci výčtu.
@@ -46,8 +46,8 @@ mimo Pole, které se má vyplnit požadovanými [IDiaSegment](../../debugger/deb
 mimo Vrátí počet segmentů v načteném enumerátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE`, pokud nejsou k dispozici žádné další segmenty. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda nejsou k dispozici žádné další segmenty. V opačném případě vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

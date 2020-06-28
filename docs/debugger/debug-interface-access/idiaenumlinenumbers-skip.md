@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumLineNumbers:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58b959db58688fd13c3539f720315971e774a96d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9301b3567b88079c9d7ff91dbfb866a048324294
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744363"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468194"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 Přeskočí zadaný počet čísel řádků ve výčtové sekvenci.
@@ -36,7 +36,7 @@ HRESULT Skip ( 
 pro Počet čísel řádků ve výčtové sekvenci, která se má přeskočit
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE`, pokud nejsou k dispozici žádná další čísla řádků k přeskočení.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí, `S_FALSE` Pokud nejsou k dispozici žádná další čísla řádků, která by bylo možné přeskočit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

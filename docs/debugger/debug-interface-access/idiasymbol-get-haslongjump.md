@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasLongJump | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fb1e23d252b7cb4f2685a9b07d6e3e92db801bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9aa43688b8fd3bb69cd8d44181da22924932e900
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740503"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463699"
 ---
 # <a name="idiasymbolget_haslongjump"></a>IDiaSymbol::get_hasLongJump
 Načte příznak, který určuje, zda funkce obsahuje použití příkazu [longjmp](/cpp/c-runtime-library/reference/longjmp) (spárovaného s příkazem [setjmp](/cpp/c-runtime-library/reference/setjmp) , tato forma metody zpracování výjimek ve stylu C).
@@ -33,10 +33,10 @@ HRESULT get_hasLongJump
 #### <a name="parameters"></a>Parametry
  `pFlag`
 
-mimo Vrátí `TRUE`, pokud funkce obsahuje příkaz `longjmp`; v opačném případě vrátí `FALSE`.
+mimo Vrátí, `TRUE` zda funkce obsahuje `longjmp` příkaz. v opačném případě vrátí hodnotu `FALSE` .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.
 
 > [!NOTE]
 > Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.
@@ -46,9 +46,9 @@ mimo Vrátí `TRUE`, pokud funkce obsahuje příkaz `longjmp`; v opačném pří
 |Požadavek|Popis|
 |-----------------|-----------------|
 |Hlaviček|Dia2. h|
-|Znění|DIA SDK v 8.0|
+|Verze:|DIA SDK v 8.0|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)
 - [longjmp](/cpp/c-runtime-library/reference/longjmp)

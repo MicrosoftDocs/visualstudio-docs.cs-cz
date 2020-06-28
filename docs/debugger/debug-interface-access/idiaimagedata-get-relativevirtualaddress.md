@@ -1,7 +1,7 @@
 ---
 title: 'IDiaImageData:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfc7a808da6bb11907fc239f4b320e4dd93a2d19
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3aef31e953c8e73e38c91afe53d821d80be725fa
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743431"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467146"
 ---
 # <a name="idiaimagedataget_relativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
 Načte umístění ve virtuální paměti modulu vzhledem k aplikaci.
@@ -36,7 +36,7 @@ HRESULT get_relativeVirtualAddress ( 
 mimo Vrátí relativní posun virtuální paměti modulu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)
