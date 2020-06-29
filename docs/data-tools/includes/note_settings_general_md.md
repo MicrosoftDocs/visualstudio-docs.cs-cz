@@ -7,4 +7,4 @@ ms.lasthandoff: 03/18/2020
 ms.locfileid: "68146690"
 ---
 > [!NOTE]
-> V počítači mohou být v tomto článku uvedeny různé názvy nebo umístění pro některé prvky uživatelského rozhraní sady Visual Studio. Je možné, že používáte jinou edici sady Visual Studio nebo jiné nastavení prostředí. Další informace naleznete [v tématu Přizpůsobení prostředí IDE](../../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může zobrazit jiné názvy nebo umístění pro některé prvky uživatelského rozhraní sady Visual Studio v tomto článku. Můžete použít jinou edici sady Visual Studio nebo jiné nastavení prostředí. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE](../../ide/personalizing-the-visual-studio-ide.md)).

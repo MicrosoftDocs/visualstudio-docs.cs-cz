@@ -7,13 +7,13 @@ ms.assetid: 1530ca0a-f23f-44f1-9bde-792ea1265085
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 2e9d864003447248b6669286a34be34bd37383c6
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 0b36155b46d4e2d161fdf7b70e861790a66c7c7e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386572"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85503486"
 ---
-## <a name="how-do-my-end-users-activate-their-subscription"></a>Jak naši koncoví uživatelé aktivují své předplatné?
+## <a name="how-do-my-end-users-activate-their-visual-studio-subscription"></a>Jak si naši koncoví uživatelé aktivují předplatné sady Visual Studio?
 
 Předplatné je aktivní a dá se použít, jakmile je přiřazeno na [portálu pro správce sady Visual Studio](https://manage.visualstudio.com/subscribers). Předplatitel se může hned přihlásit na [portálu pro předplatitele sady Visual Studio](https://my.visualstudio.com/) nebo v integrovaném vývojovém prostředí (IDE) sady Visual Studio a obdrží uvítací e-mail s oznámením, že je předplatné přiřazené.
