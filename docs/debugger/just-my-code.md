@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e233be301630b00031bb90cd95fc78c2697c4e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 867477fd3e490f91e81fb91c8be267ede83c8d2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348428"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536562"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>Ladit pouze uživatelský kód pomocí Pouze můj kód
 
@@ -185,7 +185,7 @@ Soubor *. natstepfilter* je soubor XML s touto syntaxí:
 
 ```
 
-|Prvek|Description|
+|Prvek|Popis|
 |-------------|-----------------|
 |`Function`|Povinná hodnota. Určuje jednu nebo více funkcí jako neuživatelské funkce.|
 |`Name`|Povinná hodnota. Formátovaný regulární výraz ECMA-262 určující úplný název funkce, který se má shodovat. Příklad:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> oznamuje ladicímu programu, že všechny metody v `MyNS::MyClass` mají být považovány za neuživatelský kód. Porovnávání rozlišuje velká a malá písmena.|
@@ -196,7 +196,7 @@ Soubor *. natstepfilter* je soubor XML s touto syntaxí:
 
 <a name="BKMK_JS_User_and_non_user_code"></a>JavaScript Pouze můj kód řídí krokování a zobrazování zásobníku volání pomocí kategorizace kódu v jedné z těchto klasifikací:
 
-|||
+|Classification|Popis|
 |-|-|
 |**MyCode**|Uživatelský kód, který vlastníte a ovládáte.|
 |**LibraryCode**|Neuživatelský kód z knihoven, které často používáte, a vaše aplikace spoléhá na správné fungování (například WinJS nebo jQuery).|
@@ -279,7 +279,7 @@ Specifikace v tomto souboru přepisují výchozí klasifikace a *mycode.default.
 
 Páry hodnot klíčů **Eval**, **Function**a **ScriptBlock** určují způsob klasifikace dynamicky generovaného kódu:
 
-|||
+|Name|Popis|
 |-|-|
 |**Eval**|Skript, který je spuštěn předáním řetězce do funkce poskytnuté hostitelem `eval` . Ve výchozím nastavení je skript Eval klasifikován jako **myCode**.|
 |**Funkce**|Skript, který je spuštěn předáním řetězce `Function` konstruktoru. Ve výchozím nastavení je skript funkcí klasifikován jako **LibraryCode**.|
@@ -295,7 +295,7 @@ Můžete změnit hodnotu na jedno z těchto klíčových slov:
 
 Páry klíč-hodnota **myCode**, **knihovny**a **nesouvisející** hodnoty klíčů určují adresy URL nebo soubory, které chcete zahrnout do klasifikace:
 
-|||
+|Name|Popis|
 |-|-|
 |**MyCode**|Pole adres URL nebo souborů, které jsou klasifikovány jako **myCode**.|
 |**Knihovny**|Pole adres URL nebo souborů, které jsou klasifikovány jako **LibraryCode**.|

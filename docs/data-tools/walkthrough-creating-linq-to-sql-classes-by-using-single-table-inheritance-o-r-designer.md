@@ -11,15 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afe4063f2d96b2ae46664ec6642ec1a4e98ab892
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585974"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535262"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>Návod: vytvoření tříd LINQ to SQL pomocí dědičnosti s jednou tabulkou (O/R Designer)
-[Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) podporují dědičnost jedné tabulky, protože je obvykle implementována v relačních systémech. Tento názorný postup se rozšíří na obecný postup, který je k dispozici v tématu [How to: Configure dědičnost pomocí návrháře o/R](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) a poskytuje některá skutečná data k předvedení použití dědičnosti v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].
+[Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) podporují dědičnost jedné tabulky, protože je obvykle implementována v relačních systémech. Tento názorný postup se rozšíří na obecný postup, který je k dispozici v tématu [How to: Configure dědičnost pomocí návrháře o/R](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) a poskytuje některá skutečná data k předvedení použití dědičnosti v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] .
 
 Během tohoto Názorného postupu provedete následující úlohy:
 
@@ -27,7 +27,7 @@ Během tohoto Názorného postupu provedete následující úlohy:
 
 - Vytvořte aplikaci model Windows Forms.
 
-- Přidejte soubor [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] do projektu.
+- Přidejte [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] soubor do projektu.
 
 - Vytvořte nové třídy entit.
 
@@ -38,7 +38,7 @@ Během tohoto Názorného postupu provedete následující úlohy:
 - Zobrazí data ve formuláři Windows.
 
 ## <a name="create-a-table-to-inherit-from"></a>Vytvoření tabulky, ze které se zdědí
-Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person`ovou tabulku, použijte ji jako základní třídu a pak vytvořte objekt `Employee`, který z něj dědí.
+Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person` tabulku, použijte ji jako základní třídu a pak vytvořte `Employee` objekt, který z něj dědí.
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Vytvoření základní tabulky k demonstraci dědičnosti
 
@@ -49,13 +49,13 @@ Chcete-li zjistit, jak dědičnost funguje, vytvořte malou `Person`ovou tabulku
 
 2. V **Návrháři tabulky**přidejte do tabulky následující sloupce:
 
-    |Název sloupce|Datový typ|Povoluje hodnoty null.|
+    |Název sloupce|Typ dat|Povoluje hodnoty null.|
     |-----------------|---------------|-----------------|
     |**ID**|**int**|**Chybné**|
-    |**Typ**|**int**|**True** (Pravda)|
-    |**Jméno**|**nvarchar(200)**|**Chybné**|
-    |**LastName**|**nvarchar(200)**|**Chybné**|
-    |**Manager**|**int**|**True** (Pravda)|
+    |**Typ**|**int**|**Podmínka**|
+    |**FirstName**|**nvarchar (200)**|**Chybné**|
+    |**Polím**|**nvarchar (200)**|**Chybné**|
+    |**Manager**|**int**|**Podmínka**|
 
 3. Nastavte sloupec ID jako primární klíč.
 
@@ -70,12 +70,11 @@ Aby bylo možné ověřit, že je dědění správně nakonfigurováno, tabulka 
 
 2. Zkopírujte do tabulky následující data. (Můžete ho zkopírovat a pak ho vložit do tabulky výběrem celého řádku v podokně **výsledků** .)
 
-    ||||||
+    |**ID**|**Typ**|**FirstName**|**Polím**|**Manager**|
     |-|-|-|-|-|
-    |**ID**|**Typ**|**Jméno**|**LastName**|**Manager**|
-    |**1**|**1**|**Anne**|**Wallace**|**NULL**|
-    |**2**|**1**|**Carlos**|**Grilo**|**NULL**|
-    |**3**|**1**|**Yael**|**Peled**|**NULL**|
+    |**1**|**1**|**Anne**|**Wallace**|**PLATNOST**|
+    |**2**|**1**|**Carlos**|**Grilo**|**PLATNOST**|
+    |**3**|**1**|**Yael**|**Peled**|**PLATNOST**|
     |**4**|**2**|**Gatis**|**Ozolins**|**1**|
     |**5**|**2**|**Andreas**|**Hauser**|**1**|
     |**6**|**2**|**Tiffany**|**Phuvasate**|**1**|
@@ -83,7 +82,7 @@ Aby bylo možné ověřit, že je dědění správně nakonfigurováno, tabulka 
     |**8**|**2**|**Michał**|**Poliszkiewicz**|**2**|
     |**9**|**2**|**Černý**|**Yee**|**2**|
     |**10**|**2**|**Fabricio**|**Noriega**|**3**|
-    |**11**|**2**|**Mindy**|**Martin**|**3**|
+    |**11**|**2**|**Mindy**|**Nováková**|**3**|
     |**12**|**2**|**Ken**|**Kwok**|**3**|
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
@@ -91,9 +90,9 @@ Teď, když jste vytvořili tabulku, vytvořte nový projekt pro ukázku konfigu
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Vytvoření nové aplikace model Windows Forms
 
-1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový** > **projekt**.
+1. V aplikaci Visual Studio v nabídce **soubor** vyberte **Nový**  >  **projekt**.
 
-2. V levém podokně rozbalte buď **vizuál C#**  , nebo **Visual Basic** a pak vyberte **Desktop Windows**.
+2. V levém podokně rozbalte možnost **Visual C#** nebo **Visual Basic** a pak vyberte možnost **desktopová plocha systému Windows**.
 
 3. V prostředním podokně vyberte typ projektu **aplikace model Windows Forms** .
 
@@ -147,9 +146,9 @@ Nyní do formuláře přidáte nějaký kód, který se dotazuje na konkrétní 
 
 1. Přetáhněte **seznam** na **Form1**.
 
-2. Dvojitým kliknutím na formulář vytvoříte obslužnou rutinu události `Form1_Load`.
+2. Dvojitým kliknutím na formulář vytvoříte `Form1_Load` obslužnou rutinu události.
 
-3. Do obslužné rutiny události `Form1_Load` přidejte následující kód:
+3. Do `Form1_Load` obslužné rutiny události přidejte následující kód:
 
     ```vb
     Dim dc As New DataClasses1DataContext
@@ -185,10 +184,10 @@ Spusťte aplikaci a ověřte, že záznamy zobrazené v seznamu jsou všichni za
 
 3. Zavřete formulář. (V nabídce **ladění** klikněte na položku **Zastavit ladění**.)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Postupy: Přiřazení uložených procedur za účelem aktualizací, vkládání a odstraňování (Návrhář relací objektů)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
-- [Postupy: generování objektového modelu v Visual Basic neboC#](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)
+- [Technologie LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [Postupy: generování objektového modelu v Visual Basic nebo C #](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

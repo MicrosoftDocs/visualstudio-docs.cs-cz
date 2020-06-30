@@ -15,24 +15,24 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 78702298bab484a95bb8108150415ec0b31ede7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad467e880b3281a75db2627108af0e0b2f90ea99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662914"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534456"
 ---
 # <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: Nevolejte přepisovatelné metody v konstruktorech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotCallOverridableMethodsInConstructors|
 |CheckId|CA2214|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Konstruktor nezapečetěného typu volá virtuální metodu definovanou ve své třídě.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,7 +45,7 @@ ms.locfileid: "72662914"
  Nepotlačujte upozornění na toto pravidlo. Konstruktor by měl být přepracován, aby se vyloučilo volání virtuální metody.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje účinek porušení tohoto pravidla. Testovací aplikace vytvoří instanci `DerivedType`, což způsobí spuštění konstruktoru základní třídy (`BadlyConstructedType`). konstruktor `BadlyConstructedType` nesprávně volá virtuální metodu `DoSomething`. Jak výstup ukazuje, `DerivedType.DoSomething()` provádění a provede před tím, než se spustí konstruktor `DerivedType`.
+ Následující příklad ukazuje účinek porušení tohoto pravidla. Testovací aplikace vytvoří instanci `DerivedType` , která způsobí spuštění konstruktoru základní třídy ( `BadlyConstructedType` ). `BadlyConstructedType`konstruktor nesprávně volá virtuální metodu `DoSomething` . Jak výstup ukazuje, je `DerivedType.DoSomething()` spuštěn a provede se, než se `DerivedType` spustí konstruktor.
 
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/cs/FxCop.Usage.CtorVirtual.cs#1)]
  [!code-vb[FxCop.Usage.CtorVirtual#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/vb/FxCop.Usage.CtorVirtual.vb#1)]
@@ -53,5 +53,5 @@ ms.locfileid: "72662914"
  Tento příklad vytvoří následující výstup.
 
  **Volání základního konstruktoru ctor.** 
-**odvozené DoSomething se říká inicializovat? Žádné** 
-**volání odvozeného konstruktoru ctor.**
+ **Odvozená DoSomething se nazývá inicializovaná? Žádné** 
+ **volání odvozeného konstruktoru ctor.**

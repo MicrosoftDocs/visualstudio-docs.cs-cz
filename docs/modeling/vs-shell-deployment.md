@@ -1,31 +1,31 @@
 ---
 title: Nasazení prostředí VS
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ca497244a806324d9d2315fa1b1b89404838ff3
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.openlocfilehash: d8793312e0ed022fc7210508efdf20a81b293f0f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81444996"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535847"
 ---
 # <a name="vs-shell-deployment"></a>Nasazení prostředí VS
 
-Izolované prostředí umožňuje určit, které funkce sady Visual Studio je třeba pracovat s jazykem specifickým pro doménu a jak by se mělo toto řešení zobrazit. Další informace o izolované prostředí sady Visual Studio naleznete v [tématu Přizpůsobení izolovaného prostředí](https://docs.microsoft.com/visualstudio/extensibility/customizing-the-isolated-shell).
+Izolované prostředí vám umožní určit, které funkce sady Visual Studio budete potřebovat k interakci s jazykem konkrétní domény a jak se má toto řešení zobrazit. Další informace o izolovaném prostředí sady Visual Studio najdete v tématu [přizpůsobení izolovaného prostředí](https://docs.microsoft.com/visualstudio/extensibility/customizing-the-isolated-shell).
 
-Nastavení prostředí Visual Studio jako cíle nasazení:
+Chcete-li nastavit prostředí sady Visual Studio jako cíl nasazení:
 
-1. V projektu **DslPackage** otevřete **source.extension.tt**.
+1. V projektu **DslPackage** otevřete **source.extension.TT**.
 
-2. Pod `<SupportedProducts>` vložkou:
+2. V části `<SupportedProducts>` Vložit:
 
    ```xml
    <IsolatedShell Version="1.0">MyIsolatedShell</IsolatedShell>
    ```
 
-   Nahraďte *myisolatedshell* názvem izolovaného balíčku prostředí.
+   Nahraďte *MyIsolatedShell* názvem vašeho balíčku izolovaného prostředí.

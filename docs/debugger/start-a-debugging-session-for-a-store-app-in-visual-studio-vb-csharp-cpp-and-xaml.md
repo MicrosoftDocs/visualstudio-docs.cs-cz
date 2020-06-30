@@ -35,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b11ea380f9012bc64f577d2da54a4a88b9f94daf
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: c4e025603fef11e278aee21b3c44f8d35d7cd34b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348233"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536549"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>Spuštění ladicí relace aplikace pro UPW
 
@@ -76,7 +76,7 @@ Ladění pokračuje, dokud není dosaženo zarážky, ručním zastavením spuš
 
 Můžete nastavit cíl ladění na panelu nástrojů sady Visual Studio nebo na stránce vlastností ladění projektu. Vyberte jednu z následujících možností:
 
-|||
+|Name|Popis|
 |-|-|
 |**Místní počítač**|Ladit aplikaci v aktuální relaci na místním počítači.|
 |**Simulátor**|Ladit aplikaci v simulátoru sady Visual Studio pro aplikace pro UWP Simulátor je okno plochy, které simuluje funkce zařízení, jako jsou dotyková gesta a rotace zařízení, které na místním počítači pravděpodobně neexistují. Možnost simulátoru je dostupná jenom v případě, že je **Minimální verze cílové platformy** vaší aplikace menší než nebo se rovná operačnímu systému v místním počítači. Další informace najdete v tématu [spouštění aplikací pro UWP v simulátoru](../debugger/run-windows-store-apps-in-the-simulator.md).|
@@ -114,7 +114,7 @@ V aplikacích C++ aplikace Visual Studio ve výchozím nastavení ladí nativní
 
 - V případě aplikací pro C++ vyberte v rozevíracím seznamu **Typ ladicího programu** na stránce vlastností **ladění** jeden z následujících ladicích programů.
 
-|||
+|Name|Popis|
 |-|-|
 |**Jenom spravovaná**|Ladění spravovaného kódu ve vaší aplikaci. Kód JavaScriptu a nativní kód jazyka C/C++ jsou ignorovány.|
 |**Pouze nativní**|Ladění nativního kódu C/C++ ve vaší aplikaci. Spravovaný kód a kód jazyka JavaScript jsou ignorovány.|

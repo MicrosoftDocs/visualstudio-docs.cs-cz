@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b242bd0eec4f7faa3f7a27923de289c494ccf798
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6fb07e9bc6c308e27e3ad054c5aeb0b12c092054
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298201"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534001"
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ Visual Studio teď nabízí možnost zvolit si nástroje pro výkon, některé z
   
      V sestaveních pro ladění chybí určitá optimalizace, kterou sestavení vydává, například volání funkcí a konstanty, vyřazení nepoužitých cest kódu a ukládání proměnných způsobem, který nelze použít v ladicím programu. Ladicí program změní dobu výkonu, protože provádí určité operace, které jsou nezbytné pro ladění (například zachycení událostí výjimky a načtení modulu). Hodnoty výkonu v nástrojích integrovaných s ladicím programem jsou proto přesné pouze v desítkách milisekund. V případě konfigurací vydaných verzí pomocí nástrojů bez ladicího programu jsou počty výkonu mnohem přesnější.  
   
-## <a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Shromažďování dat profilace během ladění  
+## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Shromažďování dat profilace během ladění  
  Následující část se zabývá laděním místně. V dalších částech se dozvíte o ladění v zařízení nebo vzdáleném ladění.  
   
 1. Otevřete projekt, který chcete ladit, klikněte na tlačítko **ladění/spustit ladění** (nebo **Spusťte** na panelu nástrojů nebo **F5**).  
@@ -76,7 +76,7 @@ Visual Studio teď nabízí možnost zvolit si nástroje pro výkon, některé z
   
 2. V nabídce **ladění** vyberte možnost **Profiler výkonu...** (Klávesová zkratka: Alt + F2).  
   
-3. Na stránce spuštění diagnostiky vyberte jeden nebo více nástrojů, které chcete spustit v relaci. Zobrazí se pouze nástroje, které jsou použitelné pro typ projektu, operační systém a programovací jazyk. Když zvolíte diagnostický nástroj, budou zakázány výběry pro nástroje, které nelze spustit ve stejné diagnostické relaci. Tady je postup, C# jak můžou vaše volby Hledat univerzální aplikaci pro Windows:  
+3. Na stránce spuštění diagnostiky vyberte jeden nebo více nástrojů, které chcete spustit v relaci. Zobrazí se pouze nástroje, které jsou použitelné pro typ projektu, operační systém a programovací jazyk. Když zvolíte diagnostický nástroj, budou zakázány výběry pro nástroje, které nelze spustit ve stejné diagnostické relaci. Tady je postup, jak můžou vaše volby Hledat univerzální aplikaci pro Windows v C#:  
   
     ![Výběr diagnostických nástrojů](../profiling/media/diag-selecttool.png "DIAG_SelectTool")  
   
@@ -99,7 +99,7 @@ Visual Studio teď nabízí možnost zvolit si nástroje pro výkon, některé z
 ## <a name="the-profiling-report"></a>Sestava profilace  
  ![Sestava diagnostických nástrojů](../profiling/media/diag-report.png "DIAG_Report")  
   
-|||  
+|Image|Popis|  
 |-|-|  
 |![Krok 1](../profiling/media/procguid-1.png "ProcGuid_1")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|  
 |![Krok 2](../profiling/media/procguid-2.png "ProcGuid_2")|Přetažením modrých panelů můžete vybrat určitou oblast časové osy a omezit tak sestavu jen na tuto část časové osy.|  

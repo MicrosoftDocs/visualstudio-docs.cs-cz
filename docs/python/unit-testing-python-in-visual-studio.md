@@ -1,8 +1,8 @@
 ---
-title: Kód Pythonu testu částí
-description: Nastavení testování částí pro kód Pythonu v sadě Visual Studio plně využívá funkce Průzkumníka testů ke zjišťování, spouštění a ladění testů.
+title: Kód Pythonu pro testování částí
+description: Nastavení testování částí pro kód Pythonu v aplikaci Visual Studio plně využívá funkce Průzkumníka testů pro zjišťování, spouštění a ladění testů.
 ms.date: 09/18/2019
-ms.topic: include
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,20 +10,20 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 09c67ace9db36cb8ee3d94296d339b62849e3c94
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2a621cd56f980c8a1404ba8855cdf3544e58d39d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71254199"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535320"
 ---
-# <a name="set-up-unit-testing-for-python-code"></a>Nastavení testování částí pro kód Pythonu
+# <a name="set-up-unit-testing-for-python-code"></a>Nastavení testování částí kódu Pythonu
 
-Testy částí jsou části kódu, které testují jiné jednotky kódu v aplikaci, obvykle izolované funkce, třídy a tak dále. Když aplikace projde všechny své testy částí, můžete alespoň důvěřovat, že její funkce nižší úrovně je správná.
+Testy jednotek jsou části kódu, které testují jiné jednotky kódu v aplikaci, obvykle izolované funkce, třídy a tak dále. Když aplikace projde všemi testy jednotek, můžete alespoň důvěřovat, že její funkce na nízké úrovni je správná.
 
-Python používá testování částí značně k ověření scénářů při navrhování programu. Podpora Pythonu v sadě Visual Studio zahrnuje zjišťování, provádění a ladění testů částí v rámci procesu vývoje, aniž byste museli spouštět testy samostatně.
+Python často používá testy jednotek k ověření scénářů při navrhování programu. Podpora Pythonu v sadě Visual Studio zahrnuje zjišťování, spouštění a ladění testů jednotek v rámci kontextu procesu vývoje, aniž by bylo nutné spouštět testy samostatně.
 
-Tento článek obsahuje stručný přehled možností testování částí v sadě Visual Studio s Pythonem. Další informace o testování částí obecně naleznete v [tématu Testování částí kódu](../test/unit-test-your-code.md).
+Tento článek poskytuje stručný přehled možností testování částí v aplikaci Visual Studio pomocí Pythonu. Další informace o testování částí obecně najdete v tématu [testování částí kódu](../test/unit-test-your-code.md).
 
 ::: moniker range="vs-2017"
 

@@ -2,7 +2,7 @@
 title: Kód Pythonu pro testování částí
 description: Nastavení testování částí pro kód Pythonu v aplikaci Visual Studio plně využívá funkce Průzkumníka testů pro zjišťování, spouštění a ladění testů.
 ms.date: 09/18/2019
-ms.topic: include
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e84b9de4eca681812209eb17f492d5e07522d3b5
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6b611657db104a4b74e784df8925627ff41f3c33
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85292083"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535321"
 ---
 ## <a name="select-the-test-framework-for-a-python-project"></a>Výběr testovacího rozhraní pro projekt v Pythonu
 

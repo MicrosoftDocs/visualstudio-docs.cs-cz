@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Tisk dokumentů prostřednictvím kódu programu'
+title: 'Postupy: tisk dokumentů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,49 +13,49 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3df7ad4a5569a0c123d8c0e284ff7ad57e900355
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 413d0e4f56aeb897af4f16a0dc6c43b4f04eace7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956041"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537823"
 ---
-# <a name="how-to-programmatically-print-documents"></a>Postupy: Tisk dokumentů prostřednictvím kódu programu
-  Můžete vytisknout celý dokument aplikace Microsoft Office Word nebo část dokumentu, se výchozí tiskárna.
+# <a name="how-to-programmatically-print-documents"></a>Postupy: tisk dokumentů prostřednictvím kódu programu
+  Můžete vytisknout celý systém Microsoft Office wordový dokument nebo část dokumentu na výchozí tiskárnu.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="print-a-document-that-is-part-of-a-document-level-customization"></a>Vytisknout dokument, který je součástí přizpůsobení na úrovni dokumentu
+## <a name="print-a-document-that-is-part-of-a-document-level-customization"></a>Tisk dokumentu, který je součástí přizpůsobení na úrovni dokumentu
 
-### <a name="to-print-the-entire-document"></a>Chcete-li vytisknout celý dokument
+### <a name="to-print-the-entire-document"></a>Tisk celého dokumentu
 
-1. Volání <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> metodu `ThisDocument` třídu ve vašem projektu, chcete-li vytisknout celý dokument. Pokud chcete použít tento příklad, spusťte kód z `ThisDocument` třídy.
+1. Zavolejte <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> metodu `ThisDocument` třídy v projektu pro vytištění celého dokumentu. Chcete-li použít tento příklad, spusťte kód z `ThisDocument` třídy.
 
      [!code-vb[Trin_VstcoreWordAutomation#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#11)]
      [!code-csharp[Trin_VstcoreWordAutomation#11](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#11)]
 
 ### <a name="to-print-the-current-page-of-the-document"></a>Tisk aktuální stránky dokumentu
 
-1. Volání <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> metodu `ThisDocument` třídy ve vašem projektu a určit, že jedna kopie aktuální stránky vytištěn. Pokud chcete použít tento příklad, spusťte kód z `ThisDocument` třídy.
+1. Zavolejte <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> metodu `ThisDocument` třídy v projektu a určete, zda bude vytištěna jedna kopie aktuální stránky. Chcete-li použít tento příklad, spusťte kód z `ThisDocument` třídy.
 
      [!code-vb[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#12)]
      [!code-csharp[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#12)]
 
 ## <a name="print-a-document-by-using-a-vsto-add-in"></a>Tisk dokumentu pomocí doplňku VSTO
 
-### <a name="to-print-an-entire-document"></a>Chcete-li vytisknout celý dokument
+### <a name="to-print-an-entire-document"></a>Tisk celého dokumentu
 
-1. Volání <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> metodu <xref:Microsoft.Office.Interop.Word.Document> objekt, který chcete vytisknout. Následující příklad kódu zobrazí aktivní dokument. Pokud chcete použít tento příklad, spusťte kód z `ThisAddIn` třídu ve vašem projektu.
+1. Zavolejte <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> metodu <xref:Microsoft.Office.Interop.Word.Document> objektu, který chcete vytisknout. Následující příklad kódu vytiskne aktivní dokument. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#11)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#11](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#11)]
 
 ### <a name="to-print-the-current-page-of-a-document"></a>Tisk aktuální stránky dokumentu
 
-1. Volání <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> metodu <xref:Microsoft.Office.Interop.Word.Document> objekt, který chcete vytisknout a určit, že jedna kopie aktuální stránky vytištěn. Následující příklad kódu zobrazí aktivní dokument. Pokud chcete použít tento příklad, spusťte kód z `ThisAddIn` třídu ve vašem projektu.
+1. Zavolejte <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> metodu <xref:Microsoft.Office.Interop.Word.Document> objektu, který chcete vytisknout, a určete, že bude vytištěna jedna kopie aktuální stránky. Následující příklad kódu vytiskne aktivní dokument. Chcete-li použít tento příklad, spusťte kód z `ThisAddIn` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#12)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#12)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e72d0ce7435a067ef9aa16ccc5b2daa7602926bf
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 7de4488a8304b21b578b2ad5ac2c29deafcf1b0a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184819"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537537"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Použití obrázku v aplikaci Visual Studio
@@ -60,44 +60,38 @@ ms.locfileid: "84184819"
 #### <a name="concept-development"></a>Vývoj konceptů
  Visual Studio má v uživatelském rozhraní širokou škálu typů ikon. Během vývoje pečlivě zvažte typ ikony. Pro prvky ikony nepoužívejte nejasné nebo neobvyklé objekty uživatelského rozhraní. V těchto případech můžete vyjádřit výslovný symbol, například s ikonou inteligentní značky. Všimněte si, že význam abstraktní značky na levé straně je jasnější než Vague verze založená na uživatelském rozhraní vpravo:
 
-|||
-|-|-|
 |**Správné použití symbolického snímků**|**Nesprávné použití symbolického snímků**|
+|-|-|
 |![Správná ikona inteligentní značky](../../extensibility/ux-guidelines/media/0404-01_smarttagcorrect.png "0404 – 01_SmartTagCorrect")|![Nesprávná ikona inteligentní značky](../../extensibility/ux-guidelines/media/0404-02_smarttagincorrect.png "0404 – 02_SmartTagIncorrect")|
 
  Existují instance, ve kterých standardní, snadno rozpoznatelné prvky uživatelského rozhraní fungují dobře pro ikony. Přidat okno je jedním z těchto příkladů:
 
-|||
-|-|-|
 |**Správné prvky uživatelského rozhraní v ikoně**|**Nesprávný prvek uživatelského rozhraní v ikoně**|
+|-|-|
 |![Správná ikona pro přidání okna](../../extensibility/ux-guidelines/media/0404-03_addwindowcorrect.png "0404 – 03_AddWindowCorrect")|![Nesprávná ikona pro přidání okna](../../extensibility/ux-guidelines/media/0404-04_addwindowincorrect.png "0404 – 04_AddWindowIncorrect")|
 
  Nepoužívejte dokument jako základní prvek, pokud není zásadní pro význam ikony. Bez prvku dokumentu v nabídce Přidat dokument (níže) je význam ztracen, zatímco s aktualizací elementu dokumentu není nutné sdělit význam.
 
-|||
-|-|-|
 |**Správné použití ikony dokumentu**|**Nesprávné použití ikony dokumentu**|
+|-|-|
 |![Ikona správné ikony dokumentu](../../extensibility/ux-guidelines/media/0404-05_documenticoncorrect.png "0404 – 05_DocumentIconCorrect")|![Nesprávná Ikona dokumentu](../../extensibility/ux-guidelines/media/0404-06_documenticonincorrect.png "0404 – 06_DocumentIconIncorrect")|
 
  Koncept "show" by měl být reprezentován ikonou, která nejlépe ukazuje, co se zobrazuje, například s příkladem Zobrazit všechny soubory. V případě potřeby lze pomocí metafora objektivu označit koncept "zobrazení", například s příkladem Prostředky.
 
-|||
-|-|-|
 |**Uvádí**|**Zobrazení**|
+|-|-|
 |![Zobrazit ikonu](../../extensibility/ux-guidelines/media/0404-07_show.png "0404 – 07_Show")|![Ikona zobrazení](../../extensibility/ux-guidelines/media/0404-08_view.png "0404 – 08_View")|
 
  Ikona lupy na pravé straně by měla představovat pouze hledání, hledání a procházení. Varianta vlevo s znaménkem plus nebo mínus by měla představovat pouze přiblížení nebo oddálení.
 
-|||
-|-|-|
 |**Nápovědě**|**Přibliž**|
+|-|-|
 |![Ikona Hledat](../../extensibility/ux-guidelines/media/0404-09_search.png "0404 – 09_Search")|![Ikona přiblížení](../../extensibility/ux-guidelines/media/0404-10_zoom.png "0404 – 10_Zoom")|
 
  Ve stromovém zobrazení nepoužívejte ikonu složky i modifikátor. Pokud je k dispozici, používejte pouze modifikátor.
 
-|||
-|-|-|
 |**Správné ikony stromového zobrazení**|**Nesprávné ikony zobrazení stromu**|
+|-|-|
 |![Ikona správného zobrazení stromu &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404 – 11_TreeViewCorrect1") ![správné ikony zobrazení stromu &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404 – 12_TreeViewCorrect2")|![Nesprávná ikona zobrazení stromu &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404 – 13_TreeViewIncorrect1") ![nesprávná ikona zobrazení stromu &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404 – 14_TreeViewIncorrect2")|
 
 ### <a name="style-details"></a>Podrobnosti stylu
@@ -127,23 +121,20 @@ ms.locfileid: "84184819"
 
  Chcete-li dosáhnout ideálního zarovnání a vyrovnání, vyhněte se nebráníte základnímu prvku ikony pomocí glyfů akcí. Umístěte glyf v blízkosti levého horního rohu základního prvku. Při přidávání dalšího prvku zvažte zarovnání a vyvážení ikony.
 
-|||
-|-|-|
 |**Správné zarovnání a vyrovnání**|**Nesprávné zarovnání a zůstatek**|
+|-|-|
 |![Správný zůstatek a zarovnání ikon](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404 – 22_AlignBalanceCorrect")|![Nesprávný vyvážení a zarovnání ikon](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404 – 23_AlignBalanceIncorrect")|
 
  Zajistěte, aby parita velikosti pro ikony, které sdílí prvky, a byly použity v sadách. Všimněte si, že v nesprávném párování jsou kružnice a šipky ve větší velikosti a neodpovídají.
 
-|||
-|-|-|
 |**Parita správné velikosti**|**Nesprávná parita velikosti**|
+|-|-|
 |![Správná velikost a parita ikony](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404 – 24_SizeParityCorrect")|![Nesprávná velikost a parita ikony](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404 – 25_SizeParityIncorrect")|
 
  Používejte konzistentní tloušťky čar a vizuálů. Vyhodnoťte, jak ikona, kterou vytváříte, porovnává s ostatními ikonami pomocí souběžného porovnání. Nikdy nepoužívejte celý rámec 16x16, použijte 15x15 nebo menší. Poměr negativních na pozitivní (z tmavého na světlo) by měl být 50/50.
 
-|||
-|-|-|
 |**Správný poměr záporných k kladnému**|**Nesprávný negativ na kladný poměr**|
+|-|-|
 |![Správná vizuální váha pro ikony &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404 – 26_VisualWeightCorrect1")<br /><br /> ![Správná vizuální váha pro ikony &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404 – 27_VisualWeightCorrect2")<br /><br /> ![Správná vizuální váha pro ikony &#40;3&#41;](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404 – 28_VisualWeightCorrect3")|![Nesprávná vizuální váha pro ikony](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404 – 29_VisualWeightIncorrect")|
 
  Pomocí jednoduchých, srovnatelných tvarů a doplňkových úhlů Sestavujte prvky bez omezení integrity elementu. Pokud je to možné, použijte 45 ° nebo 90 °.
@@ -163,16 +154,14 @@ ms.locfileid: "84184819"
 
  Zdroje světla používejte pouze v případě, že k objektu přidáte potřebnou přehlednost.
 
-|||
-|-|-|
 |**Správný zdroj světla**|**Nesprávný zdroj světla**|
+|-|-|
 |![Správné zdroje světla pro ikony](../../extensibility/ux-guidelines/media/0404-34_lightsourcescorrect.png "0404 – 34_LightSourcesCorrect")|![Nesprávné zdroje světla pro ikony](../../extensibility/ux-guidelines/media/0404-35_lightsourcesincorrect.png "0404 – 35_LightSourcesIncorrect")|
 
  Pomocí osnov můžete zlepšit čitelnost nebo lepší komunikaci metafora. Vyvážení negativního (tmavého)ho zůstatku by mělo být 50/50.
 
-|||
-|-|-|
 |**Správné použití obrysů**|**Nesprávné použití obrysů**|
+|-|-|
 |![Správné osnovy](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404 – 36_OutlinesCorrect")|![Nesprávné osnovy](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404 – 37_OutlinesIncorrect")|
 
 #### <a name="icon-types"></a>Typy ikon
@@ -258,7 +247,7 @@ ms.locfileid: "84184819"
 
 - odlišení položek v rámci technologie IntelliSense
 
-### <a name="accessibility"></a>Usnadnění
+### <a name="accessibility"></a>Přístupnost
  Pokyny pro dodržování předpisů sady Visual Studio vyžadují, aby všechny ikony vrácené do produktu vyhověly požadavkům na přístupnost pro barvy a kontrast. Barvy v paletě vizuálního jazyka byly testovány a splňovaly tyto požadavky.
 
 #### <a name="color-inversion-for-dark-themes"></a>Inverze barev pro tmavé motivy
@@ -269,7 +258,7 @@ ms.locfileid: "84184819"
 ### <a name="base-palette"></a>Základní paleta
  Všechny standardní ikony obsahují tři základní barvy. Ikony neobsahují žádné přechody nebo vržené stíny, s jednou nebo dvěma výjimkami pro ikony 3D nástrojů.
 
-|Využití|Název|Hodnota (světlý motiv)|Barvu|Příklad|
+|Využití|Name|Hodnota (světlý motiv)|Barvu|Příklad|
 |-----------|----------|---------------------------|------------|-------------|
 |Pozadí/tmavá|VS BG|424242/66, 66, 66|![Vzorník 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Základní paleta – příklad](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
 |Popředí a světlo|VS FG|F0EFF1/240 239 241|![F0EFF1 vzorníku](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
@@ -282,7 +271,7 @@ ms.locfileid: "84184819"
 #### <a name="action-modifiers"></a>Modifikátory akcí
  Níže uvedené čtyři barvy označují typy akcí vyžadovaných modifikátory akce:
 
-|Využití|Název|Value (všechny motivy)|Barvu|
+|Využití|Name|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Kladné|Zelená akce VS|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
 |Záporný|Akce VS – červená|A1260D/161, 38, 13|![A1260D vzorníku](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
@@ -292,47 +281,47 @@ ms.locfileid: "84184819"
 ##### <a name="examples"></a>Příklady
  Zelená se používá pro modifikátory pozitivních akcí, jako je "Přidat", "spustit", "přehrát" a "ověřit".
 
-|||||
+|Spustit|Spustit dotaz|Přehrát všechny kroky|Přidat ovládací prvek|
 |-|-|-|-|
-|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Spustit|![Spustit ikonu dotazu](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")<br />Spustit dotaz|![Ikona pro přehrání všech kroků](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")<br />Přehrát všechny kroky|![Přidat ikonu ovládacího prvku](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")<br />Přidat ovládací prvek|
+|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Spustit ikonu dotazu](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")|![Ikona pro přehrání všech kroků](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")|![Přidat ikonu ovládacího prvku](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")|
 
  Pro modifikátory negativních akcí, jako je například "odstranit", "Stop", "Storno" a "Zavřít" se používá červená.
 
-|||||
+|Odstranění relace|Odstranit sloupec|Zastavit dotaz|Připojení offline|
 |-|-|-|-|
-|![Ikona odstranění vztahu](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")<br />Odstranění relace|![Ikona odstranění sloupce](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")<br />Odstranit sloupec|![Ikona zastavit dotaz](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")<br />Zastavit dotaz|![Ikona připojení offline](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")<br />Připojení offline|
+|![Ikona odstranění vztahu](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")|![Ikona odstranění sloupce](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")|![Ikona zastavit dotaz](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")|![Ikona připojení offline](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")|
 
  Modrá se aplikuje na neutrální modifikátory akcí nejčastěji reprezentované jako šipky, jako je "otevřít", "Další", "předchozí", "Import" a "Export".
 
-|||||
+|Přejít k poli|Dávkové vrácení se změnami|Editor adres|Editor přidružení|
 |-|-|-|-|
-|![Přejít na ikonu pole](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")<br />Přejít k poli|![Ikona&#45;kontroly v dávce](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")<br />Dávkové vrácení se změnami|![Ikona editoru adres](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")<br />Editor adres|![Ikona editoru přidružení](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")<br />Editor přidružení|
+|![Přejít na ikonu pole](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")|![Ikona&#45;kontroly v dávce](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")|![Ikona editoru adres](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")|![Ikona editoru přidružení](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")|
 
  Tmavě zlatá se primárně používá pro modifikátor New.
 
-|||||
+|Nový projekt|Vytvořit nový graf|Nový test jednotek|Nová položka seznamu|
 |-|-|-|-|
-|![Ikona nového projektu](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />Nový projekt|![Vytvořit novou ikonu grafu](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")<br />Vytvořit nový graf|![Ikona nové jednotky testu](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")<br />Nový test jednotek|![Ikona nové položky seznamu](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")<br />Nová položka seznamu|
+|![Ikona nového projektu](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")|![Vytvořit novou ikonu grafu](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")|![Ikona nové jednotky testu](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")|![Ikona nové položky seznamu](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")|
 
 #### <a name="special-cases"></a>Zvláštní případy
  Ve zvláštních případech může být modifikátor barevné akce použit nezávisle jako samostatná ikona. Barva použitá pro ikonu odráží akce, ke kterým je ikona přidružena. Toto použití je omezeno na malou podmnožinu ikon, včetně:
 
-||||||
+|Spustit|Zastavit|Odstranit|Uložit|Přejít zpátky|
 |-|-|-|-|-|
-|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Spustit|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />Zastavit|![Ikona Odstranit](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />Odstranit|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Uložit|![Ikona navigace zpátky](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />Přejít zpátky|
+|![Ikona spuštění](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Ikona Odstranit](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Ikona Uložit](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Ikona navigace zpátky](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>Paleta hierarchie kódu
 
 #### <a name="folder"></a>Složka
 
-|Využití|Název|Value (všechny motivy)|Barvu|Příklad|
+|Využití|Name|Value (všechny motivy)|Barvu|Příklad|
 |-----------|----------|--------------------------|------------|-------------|
 |Složky|Složka|DCB67A/220 182 122|![DCB67A vzorníku](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![Ikona barvy složky](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Jazyky sady Visual Studio
  Všechny běžné jazyky nebo platformy, které jsou k dispozici v aplikaci Visual Studio, mají přidruženou barvu. Tyto barvy se používají na základní ikoně nebo na modifikátorech jazyka, které se zobrazují v pravém horním rohu složených ikon.
 
-|Využití|Název|Value (všechny motivy)|Barvu|
+|Využití|Name|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |ASP, HTML, WPF|ASP.NET HTML WPF – modrá|0095D7/0149 215|![0095D7 vzorníku](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|Fialová CPP|9B4F96/155, 79150|![9B4F96 vzorníku](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
@@ -346,15 +335,18 @@ ms.locfileid: "84184819"
 
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Příklady ikon s modifikátory jazyka
 
-|||||||
+|VB|C#|F#|JavaScript|Python|
 |-|-|-|-|-|-|
-|![Ikona Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![Ikona&#35; v jazyce C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![Ikona&#43;&#43; v jazyce C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")<br />C++|![Ikona F&#35;](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![Ikona JavaScriptu](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")<br />JavaScript|![Ikona Pythonu](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")<br />Python|
+|![Ikona Visual Basic](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![Ikona&#35; v jazyce C](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![Ikona&#43;&#43; v jazyce C](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![Ikona F&#35;](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![Ikona JavaScriptu](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Ikona Pythonu](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
+
+|HTML|WPF|ASP|CSS|TypeScript|
+|-|-|-|-|-|-|
 |![Ikona HTML](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![Ikona WPF](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![Ikona ASP](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![Ikona CSS](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![Ikona TypeScript](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
  Ikony IntelliSense používají výhradní paletu barev. Tyto barvy slouží k usnadnění rozlišení mezi různými položkami v místním seznamu technologie IntelliSense.
 
-|Využití|Název|Value (všechny motivy)|Barvu|
+|Využití|Name|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Třída, událost|Oranžová akce VS|C27D1A/194125, 26|![C27D1A vzorníku](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 |Metoda rozšíření, metoda, modul, delegát|Fialová akce VS|652D90/101, 45144|![652D90 vzorníku](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
@@ -364,15 +356,18 @@ ms.locfileid: "84184819"
 
 ##### <a name="examples-of-intellisense-icons"></a>Příklady ikon technologie IntelliSense
 
-||||||
+|Třída|Soukromá událost|Delegát|Metoda Friend|Pole|
 |-|-|-|-|-|
-|![Ikona třídy IntelliSense](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")<br />Třída|![Ikona soukromé události technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")<br />Soukromá událost|![Ikona delegáta technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")<br />Delegát|![Metoda IntelliSense – ikona přítele](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")<br />Metoda Friend|![Ikona pole](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")<br />Pole|
-|![Ikona položky výčtu Protected IntelliSense](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")<br />Chráněná položka výčtu|![Ikona objektu IntelliSense](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")<br />Objekt|![Ikona šablony technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")<br />Šablona|![Ikona zástupce výjimky technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")<br />Zástupce výjimky||
+|![Ikona třídy IntelliSense](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")|![Ikona soukromé události technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")|![Ikona delegáta technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")|![Metoda IntelliSense – ikona přítele](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")|![Ikona pole](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")|
+
+|Chráněná položka výčtu|Objekt|Šablona|Zástupce výjimky|
+|-|-|-|-|
+|![Ikona položky výčtu Protected IntelliSense](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![Ikona objektu IntelliSense](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![Ikona šablony technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![Ikona zástupce výjimky technologie IntelliSense](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
 
 ### <a name="notifications"></a>Oznámení
  Oznámení v aplikaci Visual Studio se používají k indikaci stavu. V paletě oznámení se k definování oznámení s následujícími úrovněmi stavu používá následující čtyři barvy a také černé nebo bílé možnosti výplně popředí.
 
-|Využití|Název|Value (všechny motivy)|Barvu|
+|Využití|Name|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Stav: neutrální|Modré oznámení (VS Blue)|1BA1E2/27 161 226|![1BA1E2 vzorníku](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
 |Stav: pozitivní|Oznámení zeleně (VS. zeleně)|339933/51153, 51|![Vzorník 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|
@@ -383,6 +378,6 @@ ms.locfileid: "84184819"
 
 #### <a name="examples-of-notification-icons"></a>Příklady ikon oznámení
 
-|||||
+|Výstrahy|Upozornění|Dokončit|Zastavit|
 |-|-|-|-|
-|![Ikona výstrahy](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")<br />Výstrahy|![Ikona upozornění](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")<br />Upozornění|![Ikona dokončení](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")<br />Dokončit|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")<br />Zastavit|
+|![Ikona výstrahy](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Ikona upozornění](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Ikona dokončení](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Ikona zastavení](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|

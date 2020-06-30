@@ -16,25 +16,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 975d2d1c1f66fe06f8fc3a9568f790fbe4c21e36
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: b372b1f6fcdab357e87ff91fa4df257e8da7d68d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460387"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536666"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
 Tato chyba znamená, že je služba vzdáleného ladicího programu spuštěna pod uživatelským účtem, který nelze ověřit při pokusu o připojení k počítači, ze kterého provádíte ladění. K této chybě může dojít při vzdáleném ladění pomocí staršího ladicího stroje a vzdálený ladicí program je spuštěn jako služba.
 
  Následující tabulka ukazuje, jaké účty mají přístup k počítači:
 
-|||||
+|Scénář|Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
 |-|-|-|-|
-||Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo v obou počítačích|
 |Oba počítače ve stejné doméně|Ano|Ano|Ano|
-|Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|No|Yes|
-|Jeden nebo oba počítače v pracovní skupině|Ne|No|Yes|
-|Počítače v různých doménách|Ne|No|Yes|
+|Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|Ne|Ano|
+|Jeden nebo oba počítače v pracovní skupině|Ne|Ne|Ano|
+|Počítače v různých doménách|Ne|Ne|Ano|
 
  Další vylepšení:
 

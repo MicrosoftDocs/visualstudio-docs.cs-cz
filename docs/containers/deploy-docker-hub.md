@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: 18e2789af3a699dacee9a9e8c1f1846ee8622800
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f1c02e1fdc0c72ac23cb65605f324608a7fc33d7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283174"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536887"
 ---
 # <a name="deploy-to-docker-hub"></a>Nasazení do Docker Hubu
 
@@ -29,17 +29,17 @@ Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.doc
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **publikovat...**. Zobrazí se obrazovka se zobrazenými možnostmi nasazení.
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![Snímek obrazovky s možnostmi nasazení](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 
 1. V části **Vyberte cíl publikování**zvolte možnost **Container Registry**a pak zvolte **Docker Hub**. Zobrazí se dialogové okno **centrum Docker** .
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
+   ![Snímek obrazovky s dialogovým oknem Docker Hub](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
 1. Pokud se připojujete k vlastnímu úložišti (ne k organizaci), ponechte zaškrtnuté políčko **publikovat do osobního úložiště** . Pokud je úložiště vlastněno organizací, zrušte zaškrtnutí políčka a zadejte název organizace. Zadejte uživatelské jméno a heslo Docker pro účet Docker, který má oprávnění pro přístup k úložišti, ke kterému se připojujete, a pak vyberte **Uložit**.  
 
-   Visual Studio se pokusí nasadit vaši image do Docker Hub.  V případě úspěchu se obrazovka **publikování** zobrazí s adresou URL pro Image úložiště, značkou image, úložištěm a konfigurací sestavení * * (například **vydání**).
+   Visual Studio se pokusí nasadit vaši image do Docker Hub.  V případě úspěchu se obrazovka **publikování** zobrazí s adresou URL pro Image úložiště, značkou image, úložištěm a konfigurací sestavení (například **vydání**).
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
+   ![Snímek obrazovky pro publikování](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
 
 1. Bitovou kopii můžete kdykoli aktualizovat kliknutím na tlačítko **publikovat** na této stránce.  Nebo můžete profil upravit nebo odebrat pomocí odkazů pod adresou URL.
 
