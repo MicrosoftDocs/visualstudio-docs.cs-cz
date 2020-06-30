@@ -1,5 +1,5 @@
 ---
-title: NameProfile | Dokumentace Microsoftu
+title: NameProfile | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,19 +12,19 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1c2134c38a3910a5dd1308990b0788002a7ded2d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 7cac308de96c3edc2dfe5c7577b0bee8077bf9e7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441904"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548433"
 ---
 # <a name="nameprofile"></a>NameProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`NameProfile` Funkce přiřadí řetězec zadaný proces nebo vlákno.  
+`NameProfile`Funkce přiřadí řetězec do zadaného procesu nebo vlákna.  
   
- Rozhraní API NameProfile je k dispozici pouze pro profilaci instrumentace. Rozhraní API NameProfile se nepodporuje pro profilaci vzorkování.  
+ Rozhraní NameProfile API je dostupné jenom pro profilaci instrumentace. Pro profilaci vzorkování není podporováno rozhraní NameProfile API.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,67 +38,67 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 #### <a name="parameters"></a>Parametry  
  `pszName`  
   
- Název elementu profilování. Název je neplatný (výsledkem je návratová NAME_ERROR_INVALID_NAME NameProfileA), pokud:  
+ Název elementu profilace. Název je neplatný (výsledkem NameProfileA návratové NAME_ERROR_INVALID_NAME), pokud:  
   
-- Ukazatel předaný do NameProfileA je hodnota NULL  
+- Ukazatel předaný do NameProfileA je hodnota NULL.  
   
-- Data řetězce pszName začíná číslem  
+- Řetězcová data pszName začínají číslem  
   
-- Data řetězce pszName obsahuje mezeru  
+- Řetězcová data pszName obsahují mezeru.  
   
-- Data řetězce pszName obsahuje některý z následujících znaků:,. ' ~! @# $% ^ & * () = []{}&#124;\\? / <>  
+- Řetězcová data pszName obsahují kterýkoli z následujících znaků:,;. ~! @ # $% ^& * () = [] {}&#124;\\ ?/<>  
   
   `Level`  
   
-  Informuje o úrovni profil, ke které výkonu shromažďování dat lze použít. Následující **PROFILE_CONTROL_LEVEL** hodnoty můžete použít k označení jednu ze tří úrovní výkonu, které lze použít shromažďování dat:  
+  Označuje úroveň profilu, na kterou lze použít shromažďování dat výkonu. Následující hodnoty **PROFILE_CONTROL_LEVEL** lze použít k označení jedné ze tří úrovní, na které lze použít shromažďování dat výkonu:  
   
-|Enumerátor|Popis|  
+|Čítače|Popis|  
 |----------------|-----------------|  
-|PROFILE_GLOBALLEVEL|Globální nastavení úrovně má vliv na všechny procesy a vlákna při spuštění profilace.|  
-|PROFILE_PROCESSLEVEL|Nastavení úrovně procesu mít vliv na všechna vlákna, které jsou součástí určeného procesu.|  
-|PROFILE_THREADLEVEL|Vlákno profilace nastavení úrovně má vliv na zadaný podproces.|  
+|PROFILE_GLOBALLEVEL|Nastavení globální úrovně má vliv na všechny procesy a vlákna v rámci procesu profilace.|  
+|PROFILE_PROCESSLEVEL|Nastavení na úrovni procesu ovlivňuje všechna vlákna, která jsou součástí zadaného procesu.|  
+|PROFILE_THREADLEVEL|Nastavení úrovně profilace vlákna má vliv na zadané vlákno.|  
   
  `dwId`  
   
- Profilace úrovně identifikátor. Použití procesu nebo vlákna identifikátor, který je generováno systémem.  
+ Identifikátor úrovně profilace. Použijte proces nebo identifikátor vlákna, který je generován systémem.  
   
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
- Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jeden z následujících akcí:  
+ Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jedna z následujících:  
   
-|Enumerátor|Popis|  
+|Čítače|Popis|  
 |----------------|-----------------|  
-|NAME_ERROR_ID_NOEXIST|Profilace Zadaný prvek neexistuje.|  
-|NAME_ERROR_INVALID_NAME|Název je neplatný.|  
+|NAME_ERROR_ID_NOEXIST|Zadaný element profilace neexistuje.|  
+|NAME_ERROR_INVALID_NAME|Název není platný.|  
 |NAME_ERROR_LEVEL_NOEXIST|Zadaná úroveň profilu neexistuje.|  
 |NAME_ERROR_NO_SUPPORT|Zadaná operace není podporována.|  
-|NAME_ERROR_OUTOFMEMORY|Paměť není k dispozici k zaznamenání události.|  
-|NAME_ERROR_REDEFINITION|Název se už přiřadit k elementu profilu. Název této funkce se ignoruje.|  
-|NAME_ERROR_TEXTTRUNCATED|Text názvu překročilo 32 znaků včetně znak null a byl proto zkrácen.|  
-|NAME_OK|Název byl úspěšně zaregistrován.|  
+|NAME_ERROR_OUTOFMEMORY|Paměť nebyla k dispozici pro záznam události.|  
+|NAME_ERROR_REDEFINITION|K elementu profilu byl již přiřazen název. Název této funkce je ignorován.|  
+|NAME_ERROR_TEXTTRUNCATED|Text názvu přesáhl 32 znaků, včetně znaku null a byl proto zkrácen.|  
+|NAME_OK|Název se úspěšně zaregistroval.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pro každý proces nebo vlákno lze přiřadit pouze jeden název. Po profilování prvek má název, jsou ignorovány následných volání NameProfile pro daný element.  
+ Každému procesu nebo vláknu lze přiřadit pouze jeden název. Po pojmenování elementu profilování jsou následná volání NameProfile pro daný prvek ignorována.  
   
- Pokud je na různých vláknech či procesy se stejným názvem, sestava bude obsahovat data ze všech prvků na této úrovni s tímto názvem.  
+ Pokud je stejný název přidělen různým vláknům nebo procesům, sestava bude obsahovat data ze všech prvků na této úrovni s tímto názvem.  
   
- Pokud zadáte proces nebo vlákno než tu, musí se ujistěte, že inicializovat a spuštěn dříve, než použijete název. V opačném případě metoda NameProfile selže.  
+ Pokud zadáte jiný proces nebo vlákno než aktuální, musíte se ujistit, že byl inicializován a spuštěn před jeho pojmenování. V opačném případě se metoda NameProfile nezdařila.  
   
 > [!IMPORTANT]
-> CreateProcess() a rozhraní API CreateThread() funkce může vrátit před vlákna nebo procesu je inicializován.  
+> Funkce rozhraní API CreateProcess () a CreateThread () mohou vracet před inicializací vlákna nebo procesu.  
   
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework  
  Microsoft.VisualStudio.Profiler.dll  
   
 ## <a name="function-information"></a>Informace o funkci  
   
-|||  
+|Položka|Popis|  
 |-|-|  
-|**Header**|Zahrnout VSPerf.h|  
-|**Knihovna**|Použití VSPerf.lib|  
-|**Unicode**|Implementováno jako `NameProfileW` (Unicode) a `NameProfileA` (ANSI).|  
+|**Hlaviček**|Zahrnout VSPerf. h|  
+|**Knihovna**|Použití VSPerf. lib|  
+|**Kódování Unicode**|Implementováno jako `NameProfileW` (Unicode) a `NameProfileA` (ANSI).|  
   
 ## <a name="example"></a>Příklad  
- Následující kód znázorňuje volání funkce NameProfile. Příklad předpokládá použití maker řetězec Win32 a nastavení kompilátoru standardu ANSI k určení, zda kód volá ANSI povolena funkce.  
+ Následující kód ilustruje volání funkce NameProfile. Příklad předpokládá použití maker řetězců Win32 a nastavení kompilátoru pro ANSI k určení, zda kód volá funkci s povoleným kódováním ANSI.  
   
 ```  
 void ExerciseNameProfile()  
@@ -136,4 +136,4 @@ void ExerciseNameProfile()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace rozhraní Visual Studio Profiler API (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+ [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace pravidel výkonu | Dokumentace Microsoftu
+title: Referenční informace o pravidlech výkonu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,32 +9,32 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b522f777be495392a39e5a89724fc5657be6ac95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48659a0b5981d545a706abfcaa7c3db24052cd20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190378"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548405"
 ---
 # <a name="performance-rules-reference"></a>Referenční dokumentace pravidel výkonu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pravidla výkonu nástrojů pro profilaci poskytují další upozornění a informace o výkonu vaší aplikace. Pravidla výkonu, analýza dat během spuštění profilování, která se shromažďují ze zdrojů, jako jsou Windows a čítače výkonu procesoru. Pravidlo zprávy se zobrazují v okně chybový výstup [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] integrovaného vývojového prostředí. Zprávy jsou uvedeny pomocí jednoho z následujících úrovní pravidlo:  
+Pravidla výkonu Nástroje pro profilaci poskytují další upozornění a informace o výkonu aplikace. Pravidla výkonu analyzují data v běhu profilace, která se shromažďují ze zdrojů, jako jsou čítače výkonu Windows a procesoru. Zprávy pravidla se zobrazí v okně výstup chyby [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] integrovaného vývojového prostředí. Zprávy jsou uvedeny s jednou z následujících úrovní pravidel:  
   
-|||  
+|Kategorie|Popis|  
 |-|-|  
-|**Chyba**|Několik pravidel generovat chybové zprávy, protože většina problémy s výkonem nejsou chyby rovnou předplatit. Chybová zpráva může znamenat selhání ke shromažďování dat profilace.|  
-|**Upozornění**|Upozornění označují oblast vaší aplikace, která může být potenciálně příčiny problémů s výkonem nebo, který může mít užitek z optimalizace.|  
-|**Informace o**|Zprávy s informacemi o označuje, že buď analýzy podmínku pravidla, která: nebylo dosaženo této prahové hodnoty generovat chybovou zprávu, nebo že informace ve zprávě je užitečné, ale neodráží problém s výkonem.|  
+|**Chyba**|Několik pravidel generuje chybové zprávy, protože většina problémů s výkonem není nesprávnými chybami. Chybová zpráva může indikovat selhání shromažďování dat profilování.|  
+|**Upozornění**|Upozornění označují oblast vaší aplikace, která může být zdrojem problémů s výkonem nebo která může být výhodou optimalizace.|  
+|**Informace**|Informační zprávy naznačují, že buď analýza podmínky pravidla nedosáhla prahové hodnoty pro vygenerování chybové zprávy, nebo že informace ve zprávě jsou užitečné, ale neodráží problém s výkonem.|  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Pravidla výkonu podle identifikátorů](../profiling/performance-rules-by-id.md)  
+ [Pravidla výkonu podle ID](../profiling/performance-rules-by-id.md)  
   
- Pravidla výkonu nástrojů pro profilaci sady jsou uspořádány do čtyř kategorií:  
+ Pravidla výkonu Nástroje pro profilaci jsou uspořádána ve čtyřech kategoriích:  
   
-|||  
+|Kategorie|Popis|  
 |-|-|  
-|[Pravidla výkonu použití rozhraní .NET Framework](../profiling/dotnet-framework-usage-performance-rules.md)|Pravidla, která vám pomůže efektivně pomocí rozhraní .NET Framework.|  
-|[Pravidla výkonu paměti a stránkování](../profiling/memory-and-paging-performance-rules.md)|Pravidla, která analýza spravované paměti a stránkování vaší aplikace.|  
-|[Pravidla používání nástrojů pro profilaci](../profiling/profiling-tools-usage-rules.md)|Pravidla, která vám pomůže efektivně pomocí nástrojů pro profilaci.|  
-|[Pravidla výkonu sledování prostředků](../profiling/resource-monitoring-performance-rules.md)|Zprávy s informacemi o využití procesoru a paměti v Profilování spustit.|
+|[Pravidla výkonu .NET Framework využití](../profiling/dotnet-framework-usage-performance-rules.md)|Pravidla, která vám pomůžou efektivně používat .NET Framework.|  
+|[Pravidla výkonu paměti a stránkování](../profiling/memory-and-paging-performance-rules.md)|Pravidla, která analyzují chování spravované paměti a stránkování vaší aplikace.|  
+|[Nástroje pro profilaci pravidla použití](../profiling/profiling-tools-usage-rules.md)|Pravidla, která vám pomůžou efektivně používat Nástroje pro profilaci.|  
+|[Pravidla výkonu monitorování prostředků](../profiling/resource-monitoring-performance-rules.md)|Informační zprávy o využití procesoru a paměti při spuštění profilace.|

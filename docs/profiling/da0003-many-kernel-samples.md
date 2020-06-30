@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e4196b8bc107310353b71ce18f9cfc83a63cf6a5
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: d0523f9a21dbdb655a02fb6263a6eb644458ab6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332074"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548223"
 ---
 # <a name="da0003-many-kernel-samples"></a>DA0003: Velký počet vzorků jádra
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0003|
 |Kategorie|Využití Nástroje pro profilaci|

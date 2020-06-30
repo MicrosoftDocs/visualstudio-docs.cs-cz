@@ -15,24 +15,24 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6109e0dc18f98d0b22dfb5c548bd12447b53e61d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8f800a550717abfabdfb9296fc8f6de49d127d73
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662984"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548197"
 ---
-# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: Sestavení by měly mít platné silné názvy
+# <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: Sestavení by měla mít platné silné názvy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AssembliesShouldHaveValidStrongNames|
 |CheckId|CA2210|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Sestavení není podepsáno silným názvem, nelze ověřit silný název nebo silný název nebude platný bez aktuálního nastavení registru počítače.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -46,7 +46,7 @@ ms.locfileid: "72662984"
 
 - Sestavení bylo nesprávně podepsáno nebo se nezdařilo podepisování.
 
-- Sestavení vyžaduje k předání ověření nastavení registru. Například nástroj silného názvu (Sn. exe) se použil k přeskočení ověření pro sestavení.
+- Sestavení vyžaduje k předání ověření nastavení registru. Například nástroj silného názvu (Sn.exe) byl použit k přeskočení ověření pro sestavení.
 
   Silný název chrání klienty před neúmyslným načtením narušeného sestavení. Sestavení bez silných názvů by kromě velmi omezených scénářů neměla být nasazována. Pokud sdílíte nebo šíříte sestavení, která nejsou správně podepsána, může být sestavení záměrně poškozeno, modul CLR je nemusí načíst nebo uživatelé mohou být nuceni vypnout na svém počítači ověřování. Sestavení bez silného názvu má z následujících nevýhod:
 
@@ -63,15 +63,15 @@ ms.locfileid: "72662984"
 
  Použijte jeden z následujících postupů:
 
-- Použijte nástroj Assembly Linker (Al. exe), který poskytuje sada [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.
+- Použijte nástroj Assembly Linker (Al.exe) poskytovaný [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sadou SDK.
 
-- Pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] v 1.0 nebo v 1.1 použijte buď atribut <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> nebo <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>.
+- Pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] direktivu v 1.0 nebo v 1.1 použijte buď <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> atribut nebo <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> .
 
-- Pro [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] použijte buď možnost kompilátoru `/keyfile` nebo `/keycontainer` [/keyfile (zadejte klíč nebo dvojici klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06) nebo [/keycontainer (zadejte kontejner klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e) možnost linkeru v aplikaci C++).
+- Pro [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] použijte buď `/keyfile` možnost kompilátoru "nebo"/keyfile " `/keycontainer` [(zadejte klíč nebo dvojici klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/9b71f8c0-541c-4fe5-a0c7-9364f42ecb06) nebo [/keycontainer (zadejte kontejner klíčů pro podepsání sestavení)](https://msdn.microsoft.com/library/94882d12-b77a-49c7-96d0-18a31aee001e) v jazyce C++.
 
   **Podepsání sestavení silným názvem v aplikaci Visual Studio**
 
-1. V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete své řešení.
+1. V aplikaci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete své řešení.
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a pak klikněte na **Vlastnosti.**
 
@@ -89,11 +89,11 @@ ms.locfileid: "72662984"
 
    **Podepsání sestavení silným názvem mimo Visual Studio**
 
-- Použijte nástroj se silným názvem (Sn. exe), který je k dispozici v sadě [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Další informace naleznete v tématu [sn. exe (Nástroj pro silný název)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).
+- Použijte nástroj se silným názvem (Sn.exe), který poskytuje [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sada SDK. Další informace najdete v tématu [Sn.exe (Nástroj pro silný název)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Potlačí upozornění z tohoto pravidla pouze v případě, že je sestavení použito v prostředí, ve kterém není manipulace s obsahem netýká se.
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName><xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
- [Postupy: podepsání sestavení silným názvem](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [sn. exe (Nástroj pro silný název)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)
+ <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
+ [Postupy: podepsání sestavení silným názvem](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67) [Sn.exe (Nástroj pro silný název)](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)

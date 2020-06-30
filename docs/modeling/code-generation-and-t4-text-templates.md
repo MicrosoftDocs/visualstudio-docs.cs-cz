@@ -1,7 +1,7 @@
 ---
 title: Vytvoření kódu a textové šablony T4
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - VS.ToolsOptionsPages.TextTemplating.TextTemplating
 helpviewer_keywords:
@@ -15,16 +15,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eba8b4850ee845414084ef766fce30f9efd7e6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597201"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548236"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Vytvoření kódu a textové šablony T4
 
-V aplikaci Visual Studio je *Textová šablona T4* kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor. Logika ovládacího prvku je zapsána jako fragmenty kódu programu v [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]. V systému Visual Studio 2015 Update 2 a novějších můžete použít C# funkce verze 6,0 v direktivách šablon T4. Vygenerovaný soubor může být text libovolného typu, jako je například webová stránka nebo soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
+V aplikaci Visual Studio je *Textová šablona T4* kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor. Logika ovládacího prvku je zapsána jako fragmenty kódu programu v systému [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . V systému Visual Studio 2015 Update 2 a novějších můžete použít funkce C# verze 6,0 v direktivách šablon T4. Vygenerovaný soubor může být text libovolného typu, jako je například webová stránka nebo soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
 
 Existují dva druhy textových šablon T4: doba běhu a doba návrhu.
 
@@ -94,6 +94,6 @@ Další informace najdete v tématu [generování kódu v době návrhu pomocí 
 
 Funkce transformace textové šablony má název *T4*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)

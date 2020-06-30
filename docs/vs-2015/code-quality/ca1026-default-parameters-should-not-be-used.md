@@ -15,30 +15,30 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8fffbdc2cf9f4e09fe98c8e14b6692802ab3f275
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a63d6e788dd1722d0c593469b225a4f1aeb4738d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661947"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548438"
 ---
 # <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026: Neměly by být použity výchozí parametry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DefaultParametersShouldNotBeUsed|
 |CheckId|CA1026|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Externě viditelný typ obsahuje externě viditelnou metodu, která používá výchozí parametr.
 
 ## <a name="rule-description"></a>Popis pravidla
  Metody používající výchozí parametry jsou povoleny v rámci specifikace CLS (Common Language Specification); specifikace CLS však umožňuje kompilátorům ignorovat hodnoty, které jsou přiřazeny těmto parametrům. Kód, který je napsán pro kompilátory, které ignorují výchozí hodnoty parametrů, musí explicitně zadat argumenty pro každý výchozí parametr. Chcete-li zachovat chování, které chcete v programovacích jazycích, metody, které používají výchozí parametry, by měly být nahrazeny přetíženími metod, které poskytují výchozí parametry.
 
- Kompilátor C++ při přístupu ke spravovanému kódu ignoruje hodnoty výchozích parametrů pro spravované rozšíření. Kompilátor Visual Basic podporuje metody, které mají výchozí parametry, které používají klíčové slovo [Optional](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) .
+ Kompilátor při přístupu ke spravovanému kódu ignoruje hodnoty výchozích parametrů pro spravované rozšíření pro C++. Kompilátor Visual Basic podporuje metody, které mají výchozí parametry, které používají klíčové slovo [Optional](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) .
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, nahraďte metodu, která používá výchozí parametry, pomocí přetížení metod, které poskytují výchozí parametry.

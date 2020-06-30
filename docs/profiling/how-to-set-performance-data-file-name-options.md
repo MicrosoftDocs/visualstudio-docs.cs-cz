@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 368dfd4c67277305672a89be9e5ab811d341b009
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330027"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548119"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Postupy: Nastavení možností názvu datového souboru výkonu
 
@@ -24,7 +24,7 @@ Ve výchozím nastavení uložíte data profilování (.* VSP*) soubor pomocí n
 
 Libovolný parametr pojmenování můžete změnit na stránce **Obecné** dialogového okna vlastnosti pro relaci výkonu.
 
-|||
+|Parametr|Popis|
 |-|-|
 |*Cesta*|Adresář, který obsahuje sestavu. Výchozím umístěním je složka řešení nebo výchozí umístění pro projekty a řešení uživatele.|
 |*Soubor VSP*|Název souboru dat profilování. Výchozí název je název řešení nebo spustitelného souboru.|
@@ -39,7 +39,7 @@ Libovolný parametr pojmenování můžete změnit na stránce **Obecné** dialo
 
 3. V části **Sestava**změňte kterékoli z následujících nastavení:
 
-    |||
+    |Name|Popis|
     |-|-|
     |**Umístění sestavy**|Zadejte adresář, do kterého se mají ukládat soubory dat profilování.|
     |**Název sestavy**|Zadejte základní název souborů.|

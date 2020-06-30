@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b3a067ae9e884ca7f6a4592dbd827eb0c028876a
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: e0ac8d8558ee73903898e920ed8174c73ea66c4d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332049"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548171"
 ---
 # <a name="da0004-high-processor-usage"></a>DA0004: Vysoké využití procesoru
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0004|
 |Kategorie|Využití Nástroje pro profilaci|
