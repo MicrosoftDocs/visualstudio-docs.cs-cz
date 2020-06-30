@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přesouvání listů v sešitech prostřednictvím kódu programu'
+title: 'Postupy: přesouvání listů v sešitech prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,35 +13,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7e62e397bd9f8c2a0e8e8c8b7ed6581e289a9efc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4594395eb887a950c9ff0ba41cd8d3c625d35dc3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812735"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519819"
 ---
-# <a name="how-to-programmatically-move-worksheets-within-workbooks"></a>Postupy: Přesouvání listů v sešitech prostřednictvím kódu programu
-  Můžete programově změnit pozici listů vzhledem k jiné listy v sešitu. Pokud nezadáte umístění pro přesunutý list, Excel vytvoří nový sešit tak, aby obsahovala ho.
+# <a name="how-to-programmatically-move-worksheets-within-workbooks"></a>Postupy: přesouvání listů v sešitech prostřednictvím kódu programu
+  Můžete programově měnit pozici listů relativně k ostatním listům v sešitu. Pokud nezadáte umístění pro přesunutý list, aplikace Excel vytvoří nový sešit, který bude obsahovat.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="to-move-a-worksheet-in-a-document-level-customization"></a>Chcete-li přesunout na listu v přizpůsobení na úrovni dokumentu
+## <a name="to-move-a-worksheet-in-a-document-level-customization"></a>Přesunutí listu v přizpůsobení na úrovni dokumentu
 
-1. Celkový počet listů v sešitu přiřadit proměnné a poté přesuňte první sešit tak, aby ho jako poslední.
+1. Přiřaďte celkový počet listů v sešitu proměnné a pak přesuňte první list tak, aby se stal jeho posledním.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#24](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#24)]
      [!code-vb[Trin_VstcoreExcelAutomation#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#24)]
 
-## <a name="to-move-a-worksheet-in-a-vsto-add-in"></a>Chcete-li přesunout na listu v doplňku VSTO
+## <a name="to-move-a-worksheet-in-a-vsto-add-in"></a>Přesunutí listu v doplňku VSTO
 
-1. Celkový počet listů v sešitu přiřadit proměnné a poté přesuňte první sešit tak, aby ho jako poslední.
+1. Přiřaďte celkový počet listů v sešitu proměnné a pak přesuňte první list tak, aby se stal jeho posledním.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#16](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#16)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#16](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#16)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Postupy: Skrývání listů prostřednictvím kódu programu](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Postupy: skrývání listů prostřednictvím kódu programu](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
-- [Postupy: Zamykání listů](../vsto/how-to-programmatically-protect-worksheets.md)
+- [Postupy: ochrana listů prostřednictvím kódu programu](../vsto/how-to-programmatically-protect-worksheets.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)

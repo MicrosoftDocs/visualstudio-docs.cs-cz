@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b4abf0b15a4fbba1abc61572da8a2f6126c754f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ade0d10e203752c7412929c6f5f44d9cbfaacfa6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652162"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521261"
 ---
-# <a name="ca2103-review-imperative-security"></a>CA2103: Zkontrolujte naléhavé zabezpečení
+# <a name="ca2103-review-imperative-security"></a>CA2103: Zkontrolujte imperativní zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ReviewImperativeSecurity|
 |CheckId|CA2103|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda používá imperativní zabezpečení a může vytvářet oprávnění pomocí stavové informace nebo návratové hodnoty, která se může změnit, pokud je žádost aktivní.
 
 ## <a name="rule-description"></a>Popis pravidla

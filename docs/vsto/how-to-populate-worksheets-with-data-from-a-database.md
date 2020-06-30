@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: naplnění listů daty z databáze'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985851"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520117"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Postupy: naplnění listů daty z databáze
 
@@ -41,9 +41,9 @@ Následující příklad ukazuje, jak přidat ovládací prvky vázané na data 
 
 Na listu se vytvoří jeden z následujících ovládacích prvků:
 
-- Pokud přetáhnete pole, na listu se vytvoří ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange>. Další informace naleznete v tématu [NamedRange Control](../vsto/namedrange-control.md).
+- Pokud přetáhnete pole, na <xref:Microsoft.Office.Tools.Excel.NamedRange> listu se vytvoří ovládací prvek. Další informace naleznete v tématu [NamedRange Control](../vsto/namedrange-control.md).
 
-- Pokud tabulku přetáhnete, na listu se vytvoří ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject>. Další informace naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
+- Pokud tabulku přetáhnete, na <xref:Microsoft.Office.Tools.Excel.ListObject> listu se vytvoří ovládací prvek. Další informace naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
 Můžete přidat jiný ovládací prvek výběrem tabulky nebo pole v okně **zdroje dat** a následným výběrem jiného ovládacího prvku v rozevíracím seznamu.
 
@@ -53,21 +53,21 @@ Kromě ovládacího prvku jsou do projektu automaticky přidány následující 
 
 - Typová datová sada, která zapouzdřuje tabulky dat, ke kterým jste se připojili v databázi. Další informace najdete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
 
-- <xref:System.Windows.Forms.BindingSource>, který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>, Který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
 - TableAdapter, který připojuje typovou datovou sadu k databázi. Další informace najdete v tématu [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
 - TableAdapterManager, který se používá ke koordinaci tabulkových adaptérů v datové sadě za účelem povolení hierarchických aktualizací. Další informace najdete v tématu [Hierarchická aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí <xref:System.Windows.Forms.BindingSource> můžete uživatelům umožnit procházení záznamů.
+Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí nástroje můžete <xref:System.Windows.Forms.BindingSource> uživatelům umožnit procházení záznamů.
 
 ### <a name="to-scroll-through-the-records"></a>Procházení záznamů
 
-- Použijte <xref:System.Windows.Forms.BindingSource> metody, jako je <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Použijte <xref:System.Windows.Forms.BindingSource> metody jako <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)

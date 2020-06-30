@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ea56799500a0b2b831145fcb968550dbf7b60a45
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 5dd1114f4be0ed943c9a582c04d9917b03ca75c3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85328186"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520780"
 ---
 # <a name="da0008-few-samples-collected"></a>DA0008: Shromážděno málo vzorků
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0008|
 |Kategorie|Využití Nástroje pro profilaci|

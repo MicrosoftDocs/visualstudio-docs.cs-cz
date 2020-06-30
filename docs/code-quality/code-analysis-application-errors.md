@@ -13,27 +13,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c35ba03c2f93af0705910b8f89dd835c985e3e60
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587781"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521313"
 ---
 # <a name="code-analysis-application-errors"></a>Chyby aplikace analýzy kódu
 
 Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem pro analýzu spravovaného kódu.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
-|||
+|Kód|Popis|
 |-|-|
 |[CA0001](ca0001.md)|V nástroji pro analýzu spravovaného kódu se vyvolala výjimka, která neindikuje očekávanou chybovou podmínku.|
 |[CA0051](ca0051.md)|Nebyla vybrána žádná pravidla.|
 |[CA0052](ca0052.md)|Nebyly vybrány žádné cíle pro analýzu.|
 |[CA0053](ca0053.md)|Sestavení pravidla nelze načíst.|
 |[CA0054](ca0054.md)|Sestavení vlastního pravidla obsahuje neplatné prostředky XML.|
-|[CA0055](ca0055.md)|Nelze načíst soubor:\<cesta >|
+|[CA0055](ca0055.md)|Nepodařilo se načíst soubor:\<path>|
 |[CA0056](ca0056.md)|Soubor projektu má nesprávnou verzi nástroje pro analýzu.|
 |[CA0057](ca0057.md)|Porušení nelze mapovat na aktuální sadu cílů a pravidel.|
 |[CA0058](ca0058.md)|Nelze načíst sestavení, na které odkazuje.|
@@ -54,7 +54,7 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 |[CA0503](ca0503.md)|Vlastnost je zastaralá. Použít nahrazující vlastnost|
 |[CA0504](ca0504.md)|Adresář pravidel se ignoroval, protože neexistuje.|
 |[CA0505](ca0505.md)|Vlastnost je zastaralá. Použít nahrazující vlastnost|
-|[FxCopCmd – chyby](fxcopcmd-errors.md)|Chyby analýzy spravovaného kódu|
+|[FxCopCmd chyby](fxcopcmd-errors.md)|Chyby analýzy spravovaného kódu|
 
 ## <a name="related-sections"></a>Související oddíly
 

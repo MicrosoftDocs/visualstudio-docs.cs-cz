@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e87669ac58fd81faea117e45aaeb6c1a1b5a60d6
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 4309b1a38e99cda262bf7558f050754656419e88
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85328223"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520819"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: Přepis Equals() pro typy hodnot
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0006|
 |Kategorie|Využití .NET Framework|

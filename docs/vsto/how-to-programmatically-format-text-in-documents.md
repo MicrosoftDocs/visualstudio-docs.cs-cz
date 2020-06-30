@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Programově formátování textu v dokumentech'
+title: 'Postupy: formátování textu v dokumentech prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,39 +14,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9f0f64f47317b5712c34d8aca4ea6f64191438e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 76af290b0e32126689dbe7b60f27889d9742ea7f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971131"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519844"
 ---
-# <a name="how-to-programmatically-format-text-in-documents"></a>Postupy: Programově formátování textu v dokumentech
-  Můžete použít <xref:Microsoft.Office.Interop.Word.Range> objekt pro formátování textu v dokumentu aplikace Microsoft Office Word.
+# <a name="how-to-programmatically-format-text-in-documents"></a>Postupy: formátování textu v dokumentech prostřednictvím kódu programu
+  Objekt lze použít <xref:Microsoft.Office.Interop.Word.Range> k formátování textu v dokumentu aplikace systém Microsoft Office Word.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- V následujícím příkladu vybere první odstavec v dokumentu a změní velikost písma a název písma, zarovnání. Potom vybere rozsah a zobrazí okno se zprávou k pozastavení před provedením další části kódu. V další části volá metodu zpět <xref:Microsoft.Office.Tools.Word.Document> hostitelský objekt (pro přizpůsobení na úrovni dokumentu) nebo <xref:Microsoft.Office.Interop.Word.Document> třídy (pro doplňku VSTO) třikrát. Použije styl odsazení normální a zobrazí okno se zprávou pozastavit kód. Potom kód volá <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> metoda jednou a zobrazí okno se zprávou.
+ Následující příklad vybere první odstavec v dokumentu a změní velikost písma, název písma a zarovnání. Pak vybere rozsah a před provedením další části kódu zobrazí okno se zprávou pro pozastavení. V další části je volána metoda Undo <xref:Microsoft.Office.Tools.Word.Document> položky hostitele (pro přizpůsobení na úrovni dokumentu) nebo <xref:Microsoft.Office.Interop.Word.Document> třídy (pro doplněk VSTO) třikrát. Použije normální styl odsazení a zobrazí okno se zprávou pro pozastavení kódu. Potom kód volá <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> metodu jednou a zobrazí okno se zprávou.
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="to-format-text-using-a-document-level-customization"></a>K formátování textu s použitím přizpůsobení úrovni dokumentu
+### <a name="to-format-text-using-a-document-level-customization"></a>Formátování textu pomocí přizpůsobení na úrovni dokumentu
 
-1. Následující příklad je možné v přizpůsobení na úrovni dokumentu. Chcete-li tento kód použít, spusťte z `ThisDocument` třídu ve vašem projektu.
+1. Následující příklad lze použít v přizpůsobení na úrovni dokumentu. Chcete-li použít tento kód, spusťte jej z `ThisDocument` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomation#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#62)]
      [!code-csharp[Trin_VstcoreWordAutomation#62](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#62)]
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="to-format-text-using-a-vsto-add-in"></a>K formátování textu pomocí doplňku VSTO
+### <a name="to-format-text-using-a-vsto-add-in"></a>Formátování textu pomocí doplňku VSTO
 
-1. Následující příklad je možné v doplňku VSTO. Tento příklad používá aktivní dokument. Chcete-li tento kód použít, spusťte z `ThisAddIn` třídu ve vašem projektu.
+1. V doplňku VSTO se dá použít následující příklad. Tento příklad používá aktivní dokument. Chcete-li použít tento kód, spusťte jej z `ThisAddIn` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#62)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#62)]
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Programově definování a výběr oblastí v dokumentech](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Postupy: Vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [Postupy: Programově hledání a nahrazování textu v dokumentech](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [Postupy: hledání a nahrazování textu v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)

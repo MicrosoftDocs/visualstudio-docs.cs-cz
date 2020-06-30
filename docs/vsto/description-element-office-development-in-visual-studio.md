@@ -1,9 +1,9 @@
 ---
-title: '&lt;Popis&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;Description – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: secdec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ede5ac920c1d40402504544a13f8a00905b82e80
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4c8b54f8ccf2181a053ae5d2fe221b49840cd72c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972379"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520264"
 ---
-# <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;Popis&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `description` Elementu `vstov4` obor názvů obsahuje popis řešení pro Office, který se zobrazí v dialogovém okně Doplňky modelu COM z aplikace Microsoft Office.
+# <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;Description – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `description`Element `vstov4` oboru názvů ukládá popis řešení Office, který se zobrazí v dialogovém okně Doplňky modelu COM aplikace systém Microsoft Office aplikací.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <description>
@@ -34,14 +34,14 @@ ms.locfileid: "62972379"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- Volitelné. `description` Elementu je `vstov4` oboru názvů. Obsahuje popis doplněk, který se zobrazí v dialogovém okně Doplňky modelu COM z aplikace Microsoft Office.
+ Nepovinný parametr. `description`Element je v `vstov4` oboru názvů. Obsahuje popis doplňku, který se zobrazí v dialogovém okně Doplňky modelu COM aplikace systém Microsoft Office aplikací.
 
- `description` Prvek nemá žádné atributy nebo elementy.
+ `description`Element nemá žádné atributy ani elementy.
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje, `description` – element pro řešení úrovni aplikace nasazené s použitím [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `description` element pro řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -52,8 +52,8 @@ ms.locfileid: "62972379"
 </vstov4:description>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

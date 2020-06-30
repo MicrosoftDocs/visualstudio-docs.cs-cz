@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4352575c811d76241721fc8343b6a48c012eddb7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 102e41e45caac8d0567786579130e0953ec68b30
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917406"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521235"
 ---
 # <a name="image-service-and-catalog"></a>Služba vyhledávání a katalog obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -20,9 +20,8 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
  Image Service představená v aplikaci Visual Studio 2015 umožňuje vývojářům získat nejlepší obrázky pro zařízení a vybraný motiv uživatele k zobrazení obrázku, včetně oprav pro kontext, ve kterém se zobrazují. Přijetí služby imagí vám pomůže eliminovat hlavní užitečné body související s údržbou prostředků, škálováním na HDPI a s nimi.  
 
-|||  
-|-|-|  
 |**Problémy dnes**|**Řešení**|  
+|-|-|  
 |Prolnutí barvy pozadí|Vestavěná směs alfa|  
 |Obrázky (některé)|Metadata motivu|  
 |Vysoký kontrast režim|Alternativní prostředky Vysoký kontrast|  
@@ -102,13 +101,12 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Symbols>  
 ```  
 
-|||  
-|-|-|  
 |**Dílčí element**|**Definice**|  
-|Importovat|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|  
-|identifikátor GUID|Symbol představuje GUID a musí odpovídat formátování identifikátoru GUID.|  
+|-|-|  
+|Import|Importuje symboly daného souboru manifestu pro použití v aktuálním manifestu.|  
+|Identifikátor GUID|Symbol představuje GUID a musí odpovídat formátování identifikátoru GUID.|  
 |ID|Symbol představuje ID a musí být nezáporné celé číslo.|  
-|String|Symbol představuje libovolnou řetězcovou hodnotu.|  
+|Řetězec|Symbol představuje libovolnou řetězcovou hodnotu.|  
 
  V symbolech rozlišuje velká a malá písmena a jsou odkazovány pomocí syntaxe $ (symbol-Name):  
 
@@ -118,11 +116,10 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Image>  
 ```  
 
- Některé symboly jsou předdefinované pro všechny manifesty. Ty lze použít v atributu identifikátoru URI \<zdrojového > nebo \<Import > elementu do odkazů na cesty na místním počítači.  
+ Některé symboly jsou předdefinované pro všechny manifesty. Ty lze použít v atributu identifikátoru URI \<Source> \<Import> prvku nebo na odkazování cest v místním počítači.  
 
-|||  
+|**Písmeno**|**Popis**|  
 |-|-|  
-|**Symbol**|**Popis**|  
 |CommonProgramFiles|Hodnota proměnné prostředí% CommonProgramFiles%|  
 |LocalAppData|Hodnota proměnné prostředí% LocalAppData%|  
 |ManifestFolder|Složka obsahující soubor manifestu|  
@@ -131,11 +128,11 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 |Systém|Složka Windows\System32|  
 |Adresář|Hodnota proměnné prostředí% WinDir%|  
 
- **Obrázek**  
+ **Image**  
 
- Element \<image > definuje obrázek, na který může odkazovat moniker. Identifikátor GUID a ID, které se přijímají společně tvoří moniker bitové kopie. Moniker obrázku musí být v celé knihovně imagí jedinečný. Pokud má více než jeden obrázek daný moniker, při sestavování knihovny je ten, který se zachovává.  
+ \<Image>Prvek definuje obrázek, na který může odkazovat moniker. Identifikátor GUID a ID, které se přijímají společně tvoří moniker bitové kopie. Moniker obrázku musí být v celé knihovně imagí jedinečný. Pokud má více než jeden obrázek daný moniker, při sestavování knihovny je ten, který se zachovává.  
 
- Musí obsahovat alespoň jeden zdroj. Velikost neutrálních zdrojů poskytne nejlepší výsledky napříč širokou škálou velikostí, ale nevyžadují se. Je-li služba požádána o obrázek velikosti, která není definována v prvku \<image > element a neexistuje žádný neutrální zdroj, služba zvolí nejlepší zdroj specifický pro danou velikost a změní velikost na požadovanou velikost.  
+ Musí obsahovat alespoň jeden zdroj. Velikost neutrálních zdrojů poskytne nejlepší výsledky napříč širokou škálou velikostí, ale nevyžadují se. Pokud je služba požádána o obrázek velikosti, která není definována v \<Image> elementu a neexistuje žádný neutrální zdroj, služba vybere zdroj, který je pro konkrétní velikost specifický, a bude ho škálovat na požadovanou velikost.  
 
 ```xml  
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">  
@@ -144,16 +141,15 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 </Image>  
 ```  
 
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|identifikátor GUID|Požadovanou Část GUID monikeru image|  
+|-|-|  
+|Identifikátor GUID|Požadovanou Část GUID monikeru image|  
 |ID|Požadovanou Část ID monikeru bitové kopie|  
 |AllowColorInversion|[Volitelné, výchozí hodnota true] Určuje, zda může být barva obrázku při použití na tmavém pozadí převrácena prostřednictvím kódu programu.|  
 
  **Zdroj**  
 
- Zdrojový element > \<definuje jeden prostředek zdroje obrázku (XAML a PNG).  
+ \<Source>Prvek definuje jeden prostředek zdroje obrázku (XAML a PNG).  
 
 ```xml  
 <Source Uri="uri" Background="background">  
@@ -164,35 +160,33 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Atribut** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definice**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      Identifikátor URI      |                                                                                                                                                                                                                                                                                                               Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může být jeden z následujících akcí:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek                                                                                                                                                                                                                                                                                                               |
-|  Podrobnosti   | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může být jeden z následujících akcí:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
+|      Identifikátor URI      |                                                                                                                                                                                                                                                                                                               Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek                                                                                                                                                                                                                                                                                                               |
+|  Pozadí   | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
- \<zdrojový > prvek může mít přesně jeden z následujících volitelných dílčích elementů:  
+ \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:  
 
-||||  
+|**Objekt**|**Atributy (všechny povinné)**|**Definice**|  
 |-|-|-|  
-|**Element**|**Atributy (všechny povinné)**|**Definice**|  
-|Velikost \<|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|  
-|\<SizeRange >|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|  
-|\<dimenzí >|Width, Height|Zdroj se použije pro obrázky zadané šířky a výšky (v jednotkách zařízení).|  
-|\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Zdroj bude použit pro obrázky z minimální šířky a výšky až po maximální šířku a výšku (v jednotkách zařízení) včetně.|  
+|\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|  
+|\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|  
+|\<Dimensions>|Šířka, Výška|Zdroj se použije pro obrázky zadané šířky a výšky (v jednotkách zařízení).|  
+|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Zdroj bude použit pro obrázky z minimální šířky a výšky až po maximální šířku a výšku (v jednotkách zařízení) včetně.|  
 
- \<zdrojový > prvek může mít také volitelný dílčí element \<NativeResource >, který definuje \<zdrojového >, který je načten z nativního sestavení namísto spravovaného sestavení.  
+ \<Source>Element může mít také volitelný \<NativeResource> dílčí element, který definuje \<Source> , který je načten z nativního sestavení namísto spravovaného sestavení.  
 
 ```xml  
 <NativeResource Type="type" ID="int" />  
 ```  
 
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|Type|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|  
+|-|-|  
+|Typ|Požadovanou Typ nativního prostředku, buď XAML, nebo PNG|  
 |ID|Požadovanou Část celého čísla ID nativního prostředku|  
 
  **Obrázků**  
 
- Prvek > \<ImageList definuje kolekci obrázků, které mohou být vráceny v jednom pruhu. Pruh je podle potřeby založený na vyžádání.  
+ \<ImageList>Prvek definuje kolekci obrázků, které mohou být vráceny v jednom pruhu. Pruh je podle potřeby založený na vyžádání.  
 
 ```xml  
 <ImageList>  
@@ -201,10 +195,9 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </ImageList>  
 ```  
 
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|identifikátor GUID|Požadovanou Část GUID monikeru image|  
+|-|-|  
+|Identifikátor GUID|Požadovanou Část GUID monikeru image|  
 |ID|Požadovanou Část ID monikeru bitové kopie|  
 |Externí|[Volitelné, výchozí hodnota false] Určuje, zda moniker image odkazuje na obrázek v aktuálním manifestu.|  
 
@@ -229,7 +222,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
   - **EmbedInteropTypes** by měla být nastavená na true.  
 
-- **Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime**  
+- **Microsoft. VisualStudio. Shell. Interop. 14.0. DesignTime**  
 
   - Povinné, pokud používáte typ **IVsImageService2**  
 
@@ -239,7 +232,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
   - Vyžaduje se, pokud použijete **BrushToColorConverter** pro ImageThemingUtilities. **ImageBackgroundColor** v UŽIVATELSKÉM rozhraní WPF  
 
-- **Microsoft.VisualStudio.Shell.\<VSVersion>.0**  
+- **Microsoft. VisualStudio. Shell. \<VSVersion> . 0,8**  
 
   - Povinné, pokud používáte typ **IVsUIObject**  
 
@@ -252,29 +245,29 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 ### <a name="first-steps-native"></a>První kroky (nativní)  
  Chcete-li použít službu Image Service, je nutné zahrnout do projektu některá nebo všechna následující záhlaví:  
 
-- **KnownImageIds.h**  
+- **KnownImageIds. h**  
 
   - Vyžaduje se, pokud použijete vestavěný katalog imagí **KnownMonikers**, ale nemůžete použít typ **ImageMoniker** , například při vracení hodnot z **IVsHierarchy GetGuidProperty** nebo **GetProperty** volání.  
 
-- **KnownMonikers.h**  
+- **KnownMonikers. h**  
 
   - Vyžaduje se, pokud použijete integrovaný katalog imagí **KnownMonikers**.  
 
-- **ImageParameters140.h**  
+- **ImageParameters140. h**  
 
   - Vyžaduje se, pokud použijete typy **ImageMoniker** a **structsize** .  
 
-- **VSShell140.h**  
+- **VSShell140. h**  
 
   - Vyžaduje se, pokud použijete typ **IVsImageService2** .  
 
-- **ImageThemingUtilities.h**  
+- **ImageThemingUtilities. h**  
 
   - Vyžaduje se, pokud nemůžete nechat službu Image Service pokládat za vás.  
 
   - Tuto hlavičku nepoužívejte, pokud služba Image dokáže zpracovat vaše image.  
 
-- **VSUIDPIHelper.h**  
+- **VSUIDPIHelper. h**  
 
   - Vyžaduje se, pokud k získání aktuálního rozlišení DPI použijete pomocná okna.  
 
@@ -312,7 +305,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 
  Aktualizace stávajícího uživatelského rozhraní WPF je poměrně jednoduchý proces, který se skládá ze tří základních kroků:  
 
-1. Nahradit všechny prvky \<image > v uživatelském rozhraní pomocí prvků \<CrispImage >  
+1. Nahradit všechny \<Image> prvky v uživatelském rozhraní \<CrispImage> elementy  
 
 2. Změnit všechny zdrojové atributy na atributy monikeru  
 
@@ -493,7 +486,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  **Co když je třeba soubor. vsct přečíst také staršími verzemi sady Visual Studio?**  
 
- Starší verze sady Visual Studio nerozpoznají příznak příkazu **IconIsMoniker** . Můžete použít image ze služby image ve verzích sady Visual Studio, které je podporují, ale nadále používat staré obrázky ve starších verzích sady Visual Studio. Chcete-li to provést, ponechte soubor. vsct beze změny (a tedy kompatibilní se staršími verzemi sady Visual Studio) a vytvořte soubor CSV (hodnoty oddělené čárkami), který se mapuje z párů identifikátorů GUID/ID definovaných v \<souboru. vsct > elementu na páry identifikátorů GUID a ID monikeru image.  
+ Starší verze sady Visual Studio nerozpoznají příznak příkazu **IconIsMoniker** . Můžete použít image ze služby image ve verzích sady Visual Studio, které je podporují, ale nadále používat staré obrázky ve starších verzích sady Visual Studio. Chcete-li to provést, ponechte soubor. vsct beze změny (a tedy kompatibilní se staršími verzemi sady Visual Studio) a vytvořte soubor CSV (hodnoty oddělené čárkami), který se mapuje z párů identifikátorů GUID/ID definovaných v prvku souboru. vsct \<Bitmaps> na páry identifikátorů GUID nebo ID monikeru image.  
 
  Formát souboru CSV mapování:  
 
@@ -509,18 +502,18 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]  
 ```  
 
- **IconMappingFilename** je buď relativní cesta implicitně rootovaná na $PackageFolder $ (jako v příkladu výše), nebo absolutní cesta explicitně rootovaná v adresáři definovaném proměnnou prostředí, například @ "%USERPROFILE%\dir1\dir2\MyMappingFile.csv".  
+ **IconMappingFilename** je buď relativní cesta implicitně rootovaná na $PackageFolder $ (jako v příkladu výše), nebo absolutní cesta explicitně rootovaná v adresáři definovaném proměnnou prostředí, například @ "% UserProfile% \dir1\dir2\MyMappingFile.csv".  
 
 ## <a name="how-do-i-port-a-project-system"></a>Návody rozportovat systém projektu?  
  **Jak dodat ImageMonikers pro projekt**  
 
 1. Implementujte **VSHPROPID_SupportsIconMonikers** v **IVsHierarchy**projektu a vraťte hodnotu true.  
 
-2. Implementujte **buď VSHPROPID_IconMonikerImageList** (Pokud původní projekt používá **VSHPROPID_IconImgList**) nebo **VSHPROPID_IconMonikerGuid** **VSHPROPID_IconMonikerId** **VSHPROPID_OpenFolderIconMonikerGuid VSHPROPID_OpenFolderIconMonikerId (** Pokud původní projekt používá **VSHPROPID_IconHandle** a **VSHPROPID_OpenFolderIconHandle**).  
+2. Implementujte **buď VSHPROPID_IconMonikerImageList** (Pokud původní projekt používá **VSHPROPID_IconImgList**) nebo **VSHPROPID_IconMonikerGuid** **VSHPROPID_IconMonikerId** **VSHPROPID_OpenFolderIconMonikerGuid VSHPROPID_OpenFolderIconMonikerId (** Pokud **VSHPROPID_OpenFolderIconMonikerId** původní projekt používá **VSHPROPID_IconHandle** a **VSHPROPID_OpenFolderIconHandle**).  
 
 3. Změňte implementaci původní VSHPROPIDs pro ikony a vytvořte tak starší verze ikon, pokud je požadují Rozšiřovací body. **IVsImageService2** poskytuje funkce potřebné k získání těchto ikon.  
 
-   **Další požadavky pro charakter VBC# /Project**  
+   **Další požadavky pro charakter projektu VB/C#**  
 
    Implementujte **VSHPROPID_SupportsIconMonikers** jenom v případě, že zjistíte, že váš projekt je **nejvzdálenější charakter**. V opačném případě nemusí skutečný charakter obrazu v realitě podporovat monikery obrázků a váš základní charakter může efektivně skrývat přizpůsobené image.  
 
@@ -570,17 +563,17 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 2. Pokud používáte jenom **KnownMonikers**, udělejte toto:  
 
-   - Nahraďte část \<images > manifestu pomocí \<image/>.  
+   - Nahraďte \<Images> oddíl manifestu parametrem \<Images/> .  
 
-   - Odeberte všechna ID podimage (cokoli s \<název imagestrip > _ # #).  
+   - Odeberte všechna ID podobrazových imagí (cokoli s \<imagestrip name> _ # #).  
 
    - Doporučené: Přejmenujte symbol AssetsGuid a symbol pruhu obrázku tak, aby odpovídaly jeho využití.  
 
-   - Nahraďte identifikátor GUID každého **ContainedImage**pomocí $ (ImageCatalogGuid), nahraďte jednotlivá ID **ContainedImage**pomocí $ (\<moniker >) a přidejte do každého **ContainedImage** atribut External = "true".  
+   - Nahraďte identifikátor GUID každého **ContainedImage**pomocí $ (ImageCatalogGuid), nahraďte jednotlivá ID **ContainedImage**pomocí $ ( \<moniker> ) a přidejte do každého **ContainedImage** atribut External = "true".  
 
-       - \<moniker > by měl být nahrazen **KnownMoniker** , který odpovídá imagi, ale s názvem "KnownMonikers". odebráno z názvu.  
+       - \<moniker>by měl být nahrazen **KnownMoniker** , který odpovídá obrázku, ale má "KnownMonikers". odebráno z názvu.  
 
-   - Přidejte < importovat manifest = "$ (ManifestFolder)\\< relativní instalační cestu k adresáři\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/\> na začátek oddílu \<symboly >.  
+   - Přidejte <importovat manifest = "$ (ManifestFolder) \\<relativní instalační cestu k \> \Microsoft.VisualStudio.ImageCatalog.imagemanifest"/ \> na začátek \<Symbols> oddílu.  
 
        - Relativní cesta je určena umístěním nasazení definovaným při vytváření obsahu manifestu.  
 
@@ -652,12 +645,12 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="testing-your-images"></a>Testování imagí  
  Pomocí nástroje Prohlížeč knihovny obrázků můžete testovat manifesty imagí, abyste měli jistotu, že všechno je správně vytvořené. Tento nástroj najdete v [sadě Visual Studio 2015 SDK](visual-studio-sdk.md). Dokumentaci k tomuto nástroji a dalším uživatelům najdete [tady](internals/vssdk-utilities.md).  
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací  
+## <a name="additional-resources"></a>Další zdroje  
 
-### <a name="samples"></a>Ukázky  
+### <a name="samples"></a>ukázky  
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.  
 
- Nejnovější ukázky najdete [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) .  
+ Podívejte [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) se na nejnovější ukázky.  
 
 ### <a name="tooling"></a>Nástroje  
  Vytvořila se sada nástrojů podpory pro službu Image Service, která vám pomůže při vytváření nebo aktualizaci uživatelského rozhraní, které funguje s imagí služby. Další informace o jednotlivých nástrojích najdete v dokumentaci dodávané s nástroji. Nástroje jsou zahrnuty v rámci sady [Visual Studio 2015 SDK.](https://msdn.microsoft.com/library/bb166441.aspx)  
@@ -668,15 +661,15 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  **ManifestToCode**  
 
- Nástroj manifest to Code přebírá soubor manifestu obrázku a generuje soubor obálky pro odkazování na hodnoty manifestu v souborech Code (C++, C#, nebo VB) nebo. vsct.  
+ Nástroj Manifest to Code přebírá soubor manifestu obrázku a generuje soubor obálky pro odkazování na hodnoty manifestu v kódu (C++, C# nebo VB) nebo souborech. vsct.  
 
  **ImageLibraryViewer**  
 
  Nástroj Prohlížeč knihovny obrázků může načíst manifesty obrázků a umožňuje uživatelům manipulovat stejným způsobem, jako by se v aplikaci Visual Studio zajistilo správné vytváření manifestu. Uživatel může změnit nastavení pozadí, velikosti, DPI, Vysoký kontrast a dalších nastavení. Zobrazuje také informace o načítání pro hledání chyb v manifestech a zobrazuje zdrojové informace pro každý obrázek v manifestu.  
 
-## <a name="faq"></a>Nejčastější dotazy  
+## <a name="faq"></a>Časté otázky  
 
-- Existují nějaké závislosti, které je potřeba zahrnout při načítání \<odkazů include = "Microsoft. VisualStudio. *. Spolupráce. 14.0. DesignTime "/>?  
+- Existují nějaké závislosti, které je potřeba zahrnout při načítání \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ?  
 
   - Nastavte EmbedInteropTypes = "true" na všech interoperabilních knihovnách DLL.  
 
@@ -690,75 +683,74 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Ty se odebraly, když se Služba CPS aktualizovala tak, aby používala monikery. Již nemusíte volat **StockIconService**, jednoduše předat požadovaný **KnownMoniker** metodě nebo vlastnosti pomocí metody rozšíření **ToProjectSystemType ()** v nástrojích CPS. Mapování můžete najít z **ImageName** na **KnownMonikers** níže:  
 
-    |||  
-    |-|-|  
     |**ImageName**|**KnownMoniker**|  
-    |ImageName.OfflineWebApp|KnownImageIds.Web|  
-    |ImageName.WebReferencesFolder|KnownImageIds.Web|  
-    |ImageName.OpenReferenceFolder|KnownImageIds.FolderOpened|  
+    |-|-|  
+    |ImageName. OfflineWebApp|KnownImageIds. Web|  
+    |ImageName. WebReferencesFolder|KnownImageIds. Web|  
+    |ImageName. OpenReferenceFolder|KnownImageIds.FolderOpened|  
     |ImageName. ReferenceFolder|KnownImageIds. reference|  
     |ImageName. reference|KnownImageIds. reference|  
     |ImageName. SdlWebReference|KnownImageIds.WebReferenceFolder|  
-    |ImageName.DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|  
-    |ImageName.Folder|KnownImageIds.FolderClosed|  
-    |ImageName.OpenFolder|KnownImageIds.FolderOpened|  
-    |ImageName.ExcludedFolder|KnownImageIds.HiddenFolderClosed|  
-    |ImageName.OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|  
-    |ImageName.ExcludedFile|KnownImageIds.HiddenFile|  
-    |ImageName.DependentFile|KnownImageIds.GenerateFile|  
-    |ImageName.MissingFile|KnownImageIds.DocumentWarning|  
-    |ImageName.WindowsForm|KnownImageIds.WindowsForm|  
-    |ImageName.WindowsUserControl|KnownImageIds.UserControl|  
-    |ImageName.WindowsComponent|KnownImageIds.ComponentFile|  
-    |ImageName.XmlSchema|KnownImageIds.XMLSchema|  
-    |ImageName.XmlFile|KnownImageIds.XMLFile|  
-    |ImageName.WebForm|KnownImageIds.Web|  
-    |ImageName.WebService|KnownImageIds.WebService|  
-    |ImageName.WebUserControl|KnownImageIds.WebUserControl|  
-    |ImageName.WebCustomUserControl|KnownImageIds.WebCustomControl|  
-    |ImageName.AspPage|KnownImageIds.ASPFile|  
-    |ImageName.GlobalApplicationClass|KnownImageIds.SettingsFile|  
-    |ImageName.WebConfig|KnownImageIds.ConfigurationFile|  
+    |ImageName. DiscoWebReference|KnownImageIds.DynamicDiscoveryDocument|  
+    |ImageName. Folder|KnownImageIds.FolderClosed|  
+    |ImageName. OpenFolder|KnownImageIds.FolderOpened|  
+    |ImageName. ExcludedFolder|KnownImageIds.HiddenFolderClosed|  
+    |ImageName. OpenExcludedFolder|KnownImageIds.HiddenFolderOpened|  
+    |ImageName. ExcludedFile|KnownImageIds.HiddenFile|  
+    |ImageName. DependentFile|KnownImageIds.GenerateFile|  
+    |ImageName. MissingFile|KnownImageIds.DocumentWarning|  
+    |ImageName. WindowsForm|KnownImageIds.WindowsForm|  
+    |ImageName. WindowsUserControl|KnownImageIds. UserControl|  
+    |ImageName. WindowsComponent|KnownImageIds.ComponentFile|  
+    |ImageName.Xmlschéma|KnownImageIds.XMLschéma|  
+    |Soubor ImageName.Xml|Soubor KnownImageIds.XML|  
+    |ImageName. Web– formulář|KnownImageIds. Web|  
+    |ImageName. WebService|KnownImageIds. WebService|  
+    |ImageName. WebUserControl|KnownImageIds. WebUserControl|  
+    |ImageName. WebCustomUserControl|KnownImageIds.WebCustomControl|  
+    |ImageName. AspPage|KnownImageIds.ASPFile|  
+    |ImageName. GlobalApplicationClass|KnownImageIds.SettingsFile|  
+    |ImageName. WebConfig|KnownImageIds.ConfigurationFile|  
     |ImageName.HtmlPage|KnownImageIds.HTMLFile|  
-    |ImageName.StyleSheet|KnownImageIds.StyleSheet|  
-    |ImageName.ScriptFile|KnownImageIds.JSScript|  
-    |ImageName.TextFile|KnownImageIds. Document|  
-    |ImageName.SettingsFile|KnownImageIds.Settings|  
+    |ImageName. StyleSheet|KnownImageIds. StyleSheet|  
+    |ImageName. ScriptFile|Skript KnownImageIds.JS|  
+    |ImageName. TextFile|KnownImageIds.Document|  
+    |ImageName. SettingsFile|KnownImageIds. Settings|  
     |ImageName. Resources|KnownImageIds.DocumentGroup|  
-    |ImageName.Bitmap|KnownImageIds. Image|  
-    |ImageName.Icon|KnownImageIds.IconFile|  
-    |ImageName.Image|KnownImageIds. Image|  
-    |ImageName.ImageMap|KnownImageIds.ImageMapFile|  
-    |ImageName.XWorld|KnownImageIds.XWorldFile|  
-    |ImageName.Audio|KnownImageIds.Sound|  
-    |ImageName.Video|KnownImageIds.Media|  
-    |ImageName.Cab|KnownImageIds.CABProject|  
-    |ImageName. jar|KnownImageIds.JARFile|  
-    |ImageName.DataEnvironment|KnownImageIds.DataTable|  
-    |ImageName.PreviewFile|KnownImageIds. Report|  
-    |ImageName.DanglingReference|KnownImageIds.ReferenceWarning|  
-    |ImageName.XsltFile|KnownImageIds.XSLTransform|  
+    |ImageName. Bitmap|KnownImageIds. Image|  
+    |ImageName. Icon|KnownImageIds.IconFile|  
+    |ImageName. Image|KnownImageIds. Image|  
+    |ImageName. ImageMap|KnownImageIds.ImageMapFile|  
+    |ImageName. XWorld|KnownImageIds.XWorldFile|  
+    |ImageName. audio|KnownImageIds. Sound|  
+    |ImageName. video|KnownImageIds. Media|  
+    |ImageName.Cab|KnownImageIds.CABprojekt|  
+    |ImageName. jar|KnownImageIds. JARFile|  
+    |ImageName. DataEnvironment|KnownImageIds. DataTable|  
+    |ImageName. PreviewFile|KnownImageIds. Report|  
+    |ImageName. DanglingReference|KnownImageIds.ReferenceWarning|  
+    |ImageName. XsltFile|KnownImageIds. XSLTransform|  
     |ImageName. Cursor|KnownImageIds.CursorFile|  
-    |ImageName.AppDesignerFolder|KnownImageIds.Property|  
-    |ImageName.Data|KnownImageIds.Database|  
-    |ImageName.Application|KnownImageIds.Application|  
-    |ImageName.DataSet|KnownImageIds.DatabaseGroup|  
-    |ImageName.Pfx|KnownImageIds.Certificate|  
-    |ImageName.Snk|KnownImageIds. Rule|  
-    |ImageName.VisualBasicProject|KnownImageIds.VBProjectNode|  
-    |ImageName.CSharpProject|KnownImageIds.CSProjectNode|  
-    |ImageName. Empty|KnownImageIds.Blank|  
-    |ImageName.MissingFolder|KnownImageIds.FolderOffline|  
+    |ImageName. AppDesignerFolder|KnownImageIds. Property|  
+    |ImageName. data|KnownImageIds. Database|  
+    |ImageName. Application|KnownImageIds. Application|  
+    |ImageName. DataSet|KnownImageIds. Database – databáze|  
+    |ImageName. pfx|KnownImageIds. Certificate|  
+    |ImageName. snk|KnownImageIds. Rule|  
+    |ImageName. VisualBasicProject|KnownImageIds.VBProjectNode|  
+    |ImageName. CSharpProject|KnownImageIds.CSProjectNode|  
+    |ImageName. Empty|KnownImageIds. blank|  
+    |ImageName. MissingFolder|KnownImageIds.FolderOffline|  
     |ImageName. SharedImportReference|KnownImageIds.SharedProject|  
-    |ImageName.SharedProjectCs|KnownImageIds.CSSharedProject|  
-    |ImageName.SharedProjectVc|KnownImageIds.CPPSharedProject|  
-    |ImageName.SharedProjectJs|KnownImageIds.JSSharedProject|  
-    |ImageName.CSharpCodeFile|KnownImageIds.CSFileNode|  
-    |ImageName.VisualBasicCodeFile|KnownImageIds.VBFileNode|  
+    |ImageName. SharedProjectCs|KnownImageIds.CSSharedProject|  
+    |ImageName. SharedProjectVc|KnownImageIds.CPPSharedProject|  
+    |ImageName. SharedProjectJs|KnownImageIds.JSSharedProject|  
+    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|  
+    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|  
 
   - Aktualizujem poskytovatele seznamu pro doplňování. Co **KnownMonikers** odpovídá starým hodnotám **StandardGlyphGroup** a **StandardGlyph** ?  
 
-    ||||  
+    |Name|Name|Name|  
     |-|-|-|  
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|  
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|  
@@ -948,12 +940,12 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|  
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||ClassFile|  
-    |GlyphAssembly||Odkaz|  
-    |GlyphLibrary||Knihovna nástroje|  
+    |GlyphAssembly||Referenční informace|  
+    |GlyphLibrary||Knihovna|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  
     |GlyphCppProject||CPPProjectNode|  
-    |GlyphDialogId||Dialogové okno|  
+    |GlyphDialogId||Dialogový|  
     |GlyphOpenFolder||FolderOpened|  
     |GlyphClosedFolder||FolderClosed|  
     |GlyphArrow||GoToNext|  
@@ -964,7 +956,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphReference||ClassMethodReference|  
     |GlyphRecursion||Rekurze|  
     |GlyphXmlItem||Značka|  
-    |GlyphJSharpProject||Dokumentů|  
+    |GlyphJSharpProject||DocumentCollection|  
     |GlyphJSharpDocument||Dokument|  
     |GlyphForwardType||GoToNext|  
     |GlyphCallersGraph||CallTo|  
