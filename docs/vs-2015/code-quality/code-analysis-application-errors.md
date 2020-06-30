@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9fa92e773c3dc130d0c0fc0ce05cc270dc9b6e53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef5ccc0cf432a5c6782b76c4623bfdc55f66a8b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669012"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538552"
 ---
 # <a name="code-analysis-application-errors"></a>Chyby aplikace Analýzy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,14 +27,14 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-|||
+|Položka|Hodnota|
 |-|-|
 |[CA0001](ca0001.md)|V nástroji pro analýzu spravovaného kódu se vyvolala výjimka, která neindikuje očekávanou chybovou podmínku.|
 |[CA0051](ca0051.md)|Nebyla vybrána žádná pravidla.|
 |[CA0052](ca0052.md)|Nebyly vybrány žádné cíle pro analýzu.|
 |[CA0053](ca0053.md)|Sestavení pravidla nelze načíst.|
 |[CA0054](ca0054.md)|Sestavení vlastního pravidla obsahuje neplatné prostředky XML.|
-|[CA0055](ca0055.md)|Nelze načíst soubor: \<path >|
+|[CA0055](ca0055.md)|Nepodařilo se načíst soubor:\<path>|
 |[CA0056](ca0056.md)|Soubor projektu má nesprávnou verzi nástroje pro analýzu.|
 |[CA0057](ca0057.md)|Porušení nelze mapovat na aktuální sadu cílů a pravidel.|
 |[CA0058](ca0058.md)|Nelze načíst sestavení, na které odkazuje.|
@@ -55,7 +55,7 @@ Tato část je odkazem na chybové zprávy, které jsou generovány nástrojem p
 |[CA0503](ca0503.md)|Vlastnost je zastaralá. Použít vlastnost převádějící|
 |[CA0504](ca0504.md)|Adresář pravidel se ignoroval, protože neexistuje.|
 |[CA0505](ca0505.md)|Vlastnost je zastaralá. Použít vlastnost převádějící|
-|[FxCopCmd – chyby](fxcopcmd-errors.md)|Chyby analýzy spravovaného kódu|
+|[FxCopCmd chyby](fxcopcmd-errors.md)|Chyby analýzy spravovaného kódu|
 
 ## <a name="related-sections"></a>Související oddíly
 

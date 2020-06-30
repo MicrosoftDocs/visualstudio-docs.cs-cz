@@ -1,5 +1,5 @@
 ---
-title: Vázání ovládacích prvků WPF k datům | Microsoft Docs
+title: Vázání ovládacích prvků WPF k datům (část 2) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-data-tools
@@ -22,19 +22,19 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f99c9a9ecbb18155ea8cd1197b94a7b383a80a1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 06428a633aec41489a8a77655d6ea9442ffffaa0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662507"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540085"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Vytvoření vazby ovládacích prvků WPF k datům v sadě Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vytvořit ovládací prvky [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] vázané na data pomocí okna **zdroje dat** . Nejprve přidejte zdroj dat do okna **zdroje dat** . Pak přetáhněte položky z okna **zdroje dat** do**Návrháře WPF**.
+Ovládací prvky vázané na data lze vytvořit [!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)] pomocí okna **zdroje dat** . Nejprve přidejte zdroj dat do okna **zdroje dat** . Pak přetáhněte položky z okna **zdroje dat** do**Návrháře WPF**.
 
-## <a name="adding"></a>Přidání zdroje dat do okna zdroje dat
+## <a name="add-a-data-source-to-the-data-sources-window"></a><a name="adding"></a>Přidání zdroje dat do okna zdroje dat
  Předtím, než můžete vytvořit ovládací prvky vázané na data, je nutné nejprve přidat zdroj dat do okna **zdroje dat** .
 
 #### <a name="to-add-a-data-source-to-the-data-sources-window"></a>Přidání zdroje dat do okna zdroje dat
@@ -53,8 +53,8 @@ Můžete vytvořit ovládací prvky [!INCLUDE[TLA#tla_titlewinclient](../include
 
     - [Umožňuje svázat data s existujícími ovládacími prvky v Návrháři](#existing).
 
-## <a name="simple"></a>Vytvoření ovládacího prvku vázaného na jedno pole dat
- Po přidání zdroje dat do okna **zdroje dat** můžete vytvořit nový ovládací prvek vázaný na data, který zobrazí jedno pole dat, například <xref:System.Windows.Controls.ComboBox> nebo <xref:System.Windows.Controls.TextBox>.
+## <a name="create-a-control-that-is-bound-to-a-single-field-of-data"></a><a name="simple"></a>Vytvoření ovládacího prvku vázaného na jedno pole dat
+ Po přidání zdroje dat do okna **zdroje dat** můžete vytvořit nový ovládací prvek vázaný na data, který zobrazí jedno pole dat, například <xref:System.Windows.Controls.ComboBox> nebo <xref:System.Windows.Controls.TextBox> .
 
 #### <a name="to-create-a-control-that-is-bound-to-a-single-field-of-data"></a>Vytvoření ovládacího prvku vázaného na jedno pole dat
 
@@ -66,27 +66,27 @@ Můžete vytvořit ovládací prvky [!INCLUDE[TLA#tla_titlewinclient](../include
 
 3. Přetáhněte položku do platného kontejneru v návrháři. Další informace o platných kontejnerech naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvoří nový ovládací prvek vázaný na data a vhodně s názvem <xref:System.Windows.Controls.Label> v kontejneru. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a kód pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Vytvoří nový ovládací prvek vázaný na data a patřičně <xref:System.Windows.Controls.Label> s názvem v kontejneru. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a Code pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="complex"></a>Vytvoření ovládacího prvku vázaného na více polí dat
- Po přidání zdroje dat do okna **zdroje dat** můžete vytvořit nový ovládací prvek vázaný na data, který bude zobrazovat více polí dat, například <xref:System.Windows.Controls.DataGrid> nebo <xref:System.Windows.Controls.ListView>.
+## <a name="create-a-control-that-is-bound-to-multiple-fields-of-data"></a><a name="complex"></a>Vytvoření ovládacího prvku vázaného na více polí dat
+ Po přidání zdroje dat do okna **zdroje dat** můžete vytvořit nový ovládací prvek vázaný na data, který bude zobrazovat více polí dat, například <xref:System.Windows.Controls.DataGrid> nebo <xref:System.Windows.Controls.ListView> .
 
 #### <a name="to-create-a-control-that-is-bound-to-multiple-fields-of-data"></a>Vytvoření ovládacího prvku vázaného na více polí dat
 
 1. V okně **zdroje dat** vyberte položku, která představuje tabulku nebo objekt. Příklad vizuálního příkladu naleznete v [okně zdroje dat](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).
 
-2. Volitelně můžete vybrat ovládací prvek, který chcete vytvořit. Ve výchozím nastavení jsou všechny položky v okně **zdroje dat** , které představují datovou tabulku nebo objekt, nastaveny k vytvoření <xref:System.Windows.Controls.DataGrid> (Pokud se projekt cílí .NET Framework 4) nebo <xref:System.Windows.Controls.ListView> (pro starší verze .NET Framework).
+2. Volitelně můžete vybrat ovládací prvek, který chcete vytvořit. Ve výchozím nastavení každá položka v okně **zdroje dat** , která představuje datovou tabulku nebo objekt, je nastavena na hodnotu vytvořit <xref:System.Windows.Controls.DataGrid> (Pokud se vaše projekt zaměřuje .NET Framework 4) nebo <xref:System.Windows.Controls.ListView> (pro starší verze .NET Framework).
 
      Chcete-li vybrat jiný ovládací prvek, klikněte na šipku rozevíracího seznamu vedle položky a vyberte ovládací prvek. Další informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
     > [!NOTE]
     > Pokud nechcete zobrazit konkrétní sloupec nebo vlastnost, rozbalte položku pro zobrazení jejích podřízených objektů. Klikněte na šipku rozevíracího seznamu vedle sloupce nebo vlastnosti, kterou nechcete zobrazit, a potom klikněte na **žádná**.
 
-3. Přetáhněte položku na platný kontejner v návrháři, jako je například <xref:System.Windows.Controls.Grid>. Další informace o platných kontejnerech naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+3. Přetáhněte položku na platný kontejner v návrháři, jako je například <xref:System.Windows.Controls.Grid> . Další informace o platných kontejnerech naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvoří nový ovládací prvek vázaný na data v kontejneru. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a kód pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Vytvoří nový ovládací prvek vázaný na data v kontejneru. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a Code pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="details"></a>Vytvoření sady ovládacích prvků, které jsou vázány na více polí dat
+## <a name="create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a><a name="details"></a>Vytvoření sady ovládacích prvků, které jsou vázány na více polí dat
  Po přidání zdroje dat do okna **zdroje dat** můžete vytvořit datovou tabulku nebo objekt pro sadu ovládacích prvků. Pro každý sloupec nebo vlastnost v tabulce nebo objektu je vytvořen jiný ovládací prvek.
 
 #### <a name="to-create-a-set-of-controls-that-are-bound-to-multiple-fields-of-data"></a>Vytvoření sady ovládacích prvků, které jsou vázány na více polí dat
@@ -98,27 +98,27 @@ Můžete vytvořit ovládací prvky [!INCLUDE[TLA#tla_titlewinclient](../include
     > [!NOTE]
     > Pokud nechcete zobrazit konkrétní sloupec nebo vlastnost, rozbalte položku pro zobrazení jejích podřízených objektů. Klikněte na šipku rozevíracího seznamu vedle sloupce nebo vlastnosti, kterou nechcete zobrazit, a potom klikněte na **žádná**.
 
-3. Přetáhněte položku na platný kontejner v návrháři, jako je například <xref:System.Windows.Controls.Grid>. Další informace o platných kontejnerech naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+3. Přetáhněte položku na platný kontejner v návrháři, jako je například <xref:System.Windows.Controls.Grid> . Další informace o platných kontejnerech naleznete v tématu [BIND WPF Controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvoří v kontejneru nové ovládací prvky vázané na data. Každý ovládací prvek je svázán s jiným sloupcem nebo vlastností a každý ovládací prvek je doprovázen příslušným <xref:System.Windows.Controls.Label> ovládacím prvkem. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a kód pro svázání ovládacích prvků s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Vytvoří nové ovládací prvky vázané na data v kontejneru. Každý ovládací prvek je svázán s jiným sloupcem nebo vlastností a každý ovládací prvek je doprovázen odpovídajícím názvem <xref:System.Windows.Controls.Label> ovládacího prvku. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]také generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a Code pro svázání ovládacích prvků s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-## <a name="existing"></a>Binddata se na existující ovládací prvky v Návrháři
+## <a name="binddata-to-existing-controls-in-the-designer"></a><a name="existing"></a>Binddata se na existující ovládací prvky v Návrháři
  Po přidání zdroje dat do okna **zdroje dat** můžete přidat datovou vazbu k existujícímu ovládacímu prvku v návrháři.
 
 #### <a name="to-bind-data-to-an-existing-control-in-the-designer"></a>Svázání dat s existujícím ovládacím prvkem v Návrháři
 
 1. V okně **zdroje dat** použijte jeden z následujících postupů:
 
-    - Chcete-li přidat datovou vazbu na existující ovládací prvek, který zobrazuje více polí dat, například <xref:System.Windows.Controls.DataGrid> nebo <xref:System.Windows.Controls.ListView>, vyberte položku, která představuje tabulku nebo objekt, který chcete svázat s ovládacím prvkem.
+    - Chcete-li přidat datovou vazbu na existující ovládací prvek, který zobrazuje více polí dat, například <xref:System.Windows.Controls.DataGrid> nebo <xref:System.Windows.Controls.ListView> , vyberte položku, která představuje tabulku nebo objekt, který chcete svázat s ovládacím prvkem.
 
-    - Chcete-li přidat datovou vazbu na existující ovládací prvek, který zobrazuje jedno pole dat, například <xref:System.Windows.Controls.ComboBox> nebo <xref:System.Windows.Controls.TextBox> rozbalte položku, která představuje tabulku nebo objekt obsahující data, a pak vyberte položku, která představuje data, která chcete svázat s nad.
+    - Chcete-li přidat datovou vazbu na existující ovládací prvek, který zobrazuje jedno pole dat, například <xref:System.Windows.Controls.ComboBox> nebo <xref:System.Windows.Controls.TextBox> , rozbalte položku, která představuje tabulku nebo objekt obsahující data, a pak vyberte položku, která představuje data, která chcete svázat s ovládacím prvkem.
 
 2. Přetáhněte vybranou položku z okna **zdroje dat** do existujícího ovládacího prvku v návrháři. Ovládací prvek musí být platným cílem přetažení. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a kód pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]generuje [!INCLUDE[TLA#tla_titlexaml](../includes/tlasharptla-titlexaml-md.md)] a Code pro svázání ovládacího prvku s daty. Další informace najdete v tématu [vázání ovládacích prvků WPF na data v aplikaci Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
     > [!NOTE]
     > Pokud je ovládací prvek již vázaný na data, je datová vazba pro ovládací prvek obnovena na položku, která byla naposledy přetažena na ovládací prvek.
 
 ## <a name="see-also"></a>Viz také
- [Vázání ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [Vytvoření vyhledávacích tabulek v aplikacích WPF](../data-tools/create-lookup-tables-in-wpf-applications.md) [zobrazení souvisejících dat v aplikacích](../data-tools/display-related-data-in-wpf-applications.md) WPF [navázání ovládacích prvků WPF na datovou sadu](../data-tools/bind-wpf-controls-to-a-dataset.md) vázání ovládacích prvků WPF na datovou [službu WCF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) [: Zobrazení souvisejících dat v aplikaci WPF](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)
+ [Vázání ovládacích prvků WPF k datům v sadě Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) [Vytvoření vyhledávacích tabulek v aplikacích WPF](../data-tools/create-lookup-tables-in-wpf-applications.md) [zobrazení souvisejících dat v aplikacích](../data-tools/display-related-data-in-wpf-applications.md) WPF [navázání ovládacích prvků WPF na datovou sadu](../data-tools/bind-wpf-controls-to-a-dataset.md) vázání ovládacích prvků WPF na datovou [službu WCF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md) postup [: zobrazení souvisejících dat v aplikaci WPF](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)

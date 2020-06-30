@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 72729253d008ae5b7c38815e7c5db7636538c812
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 97f5243b775f19d77bc8d5a5c1d29fddadd9f1c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586839"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541775"
 ---
 # <a name="create-sharepoint-solutions"></a>Vytváření řešení pro SharePoint
   Můžete vytvářet aplikace SharePoint v aplikaci Visual Studio jako alternativu k jejich vytváření v Návrháři služby SharePoint. Visual Studio podporuje rychlý vývoj pro SharePoint poskytnutím takových funkcí jako pokročilých ladicích nástrojů, IntelliSense, dokončování příkazů a šablon projektů. Visual Studio také využívá výhod rozšířených nástrojů a jazyků založených na .NET Framework. Projekty služby SharePoint můžete vyvíjet pomocí Visual Basic nebo Visual C# a můžete vyvíjet aplikace pro projekty služby SharePoint pomocí JavaScriptu.
@@ -27,12 +27,12 @@ ms.locfileid: "82586839"
 > [!NOTE]
 > Zjistěte, jak pomocí nového [modelu doplňku pro SharePoint](/sharepoint/dev/sp-add-ins/sharepoint-add-ins) rozšíříte možnosti SharePointu pro vaše uživatele. Tyto doplňky mají velmi malé nároky ve srovnání s řešeními služby SharePoint a můžete je sestavit pomocí téměř libovolné technologie webového programování, jako je HTML5, JavaScript, CSS3 a XML.
 
-|||
+|Oblast obsahu|Články|
 |-|-|
 |![Dokumentace](../sharepoint/media/vs-icon-documentation.gif "Dokumentace")|**Dokumentace**<br /><br /> -   [Začínáme &#40;vývoj pro SharePoint v aplikaci Visual Studio&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)<br />-   [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|
 |![Dokumentace](../sharepoint/media/vs-icon-documentation.gif "Dokumentace")|**Doporučené úlohy**<br /><br /> -   [Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)<br />-   [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)<br />-   [Postupy: vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md)<br />-   [Postupy: Vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)<br />-   [Postupy: vytvoření uživatelského ovládacího prvku pro stránku aplikace SharePoint nebo webovou část](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|
 |![Postupy](../sharepoint/media/vs-icon-walkthroughs.gif "Postupy")|**Postupy**<br /><br /> -   [Návody pro vývoj pro SharePoint](../sharepoint/sharepoint-development-walkthroughs.md)|
-|![Ukázky kódu](../sharepoint/media/vs-icon-codesamples.gif "Ukázky kódů")|**Ukázky kódu**<br /><br /> -   [Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint – vývojář ke stažení](/sharepoint/dev/)|
+|![Ukázky kódů](../sharepoint/media/vs-icon-codesamples.gif "Ukázky kódů")|**Ukázky kódů**<br /><br /> -   [Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint – vývojář ke stažení](/sharepoint/dev/)|
 |![Školení](../sharepoint/media/vs-icon-training.gif "Školení")|**Školení**<br /><br /> -   [Seznámení s vývojem pro SharePoint](/sharepoint/dev/)|
 |![Fóra](../sharepoint/media/vs-icon-forums.gif "Fóra")|**Fóra**<br /><br /> -   [Vývoj pro SharePoint pomocí sady Visual Studio](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssharepointdevelopment)<br />-   [SharePoint 2010](https://social.msdn.microsoft.com/Forums/sharepoint/home?category=sharepoint2010,sharepoint)|
 |![Školení](../sharepoint/media/vs-icon-training.gif "Školení")|**Blogy**<br /><br /> -   [Blog vývoje pro Visual Studio SharePoint](https://blogs.msdn.microsoft.com/vssharepointtoolsblog/)|

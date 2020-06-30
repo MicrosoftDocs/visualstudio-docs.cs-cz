@@ -1,7 +1,7 @@
 ---
 title: IManagedAddin – rozhraní
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 320b20fa40250ca47dd414b362059e152eba2c3b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420984"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541125"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin – rozhraní
-  Implementace imanagedaddin – rozhraní pro vytváření komponenty, která načte spravovaných doplňků VSTO. Toto rozhraní přidal v systému Microsoft Office 2007.
+  Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO. Toto rozhraní bylo přidáno v 2007 systém Microsoft Office systému.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 [
@@ -41,48 +41,48 @@ interface IManagedAddin : IUnknown
 ```
 
 ## <a name="methods"></a>Metody
- Následující tabulka shrnuje metody, které jsou definovány imanagedaddin – rozhraní.
+ V následující tabulce jsou uvedeny metody, které jsou definovány rozhraním IManagedAddin –.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Volá se, když Microsoft Office aplikace načte spravovaného doplňku VSTO.|
-|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Volá se bezprostředně před Microsoft Office spravovaného doplňku VSTO uvolnění aplikace.|
+|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Volá se, když aplikace systém Microsoft Office načte spravovaný doplněk VSTO.|
+|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Volá se těsně před tím, než aplikace systém Microsoft Office uvolní spravovaný doplněk VSTO.|
 
 ## <a name="remarks"></a>Poznámky
- Aplikace Microsoft Office, od verze systému Microsoft Office 2007 pomocí imanagedaddin – rozhraní zavádějí doplňků VSTO pro Office. Můžete implementovat imanagedaddin – rozhraní pro vytváření vlastní zavaděče doplňku VSTO a modul runtime pro spravované doplňků VSTO, namísto použití doplňku VSTO zavaděč (*knihovna VSTOLoader.dll*) a [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Další informace najdete v tématu [doplňků VSTO architektura](../vsto/architecture-of-vsto-add-ins.md).
+ Systém Microsoft Office aplikace, počínaje systém Microsoft Officem systémem 2007, použijte rozhraní IManagedAddin –, které vám pomůžou načíst Doplňky Office VSTO. Rozhraní IManagedAddin – můžete implementovat k vytvoření vlastního zavaděče a modulu runtime doplňku VSTO pro spravované doplňky VSTO místo používání zavaděče doplňku VSTO (*VSTOLoader.dll*) a [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Další informace najdete v tématu [architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md).
 
-## <a name="how-managed-add-ins-are-loaded"></a>Jak spravované doplňky jsou načteny.
- Při spuštění aplikace, dojde k následujícím krokům:
+## <a name="how-managed-add-ins-are-loaded"></a>Způsob načtení spravovaných doplňků
+ Následující kroky se vyskytnou při spuštění aplikace:
 
-1. Aplikace zjistí doplňků VSTO tím, že hledají záznamy v následujícím klíči registru:
+1. Aplikace zjišťuje doplňky VSTO tím, že hledá položky v následujícím klíči registru:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Office\\ *\<název_aplikace >* \Addins\\**
+    **HKEY_CURRENT_USER \Software\Microsoft\Office \\ *\<application name>* \Addins\\**
 
-    Každá položka v rámci tohoto klíče registru je jedinečné ID doplňku VSTO. Obvykle je to název sestavení doplňku VSTO.
+    Každá položka v tomto klíči registru je jedinečné ID doplňku VSTO. Obvykle je to název sestavení doplňku VSTO.
 
-2. Aplikace vyhledá `Manifest` položky pod položkou pro každý doplňku VSTO.
+2. Aplikace vyhledá `Manifest` položku v položce pro každý doplněk VSTO.
 
-    Spravované doplňky VSTO můžete ukládat úplnou cestu k manifestu v `Manifest` položku **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<název_aplikace >_ \Addins\\ _\<ID doplňku>_ **. Manifest je soubor (obvykle soubor XML), který poskytuje informace, které slouží k načtení doplňku VSTO.
+    Spravované doplňky VSTO můžou ukládat úplnou cestu k manifestu v `Manifest` položce **HKEY_CURRENT_USER \software\microsoft\office \\ _\<application name>_ \Addins \\ _\<add-in ID>_ **. Manifest je soubor (obvykle soubor XML), který poskytuje informace, které vám pomůžou při načítání doplňku VSTO.
 
-3. Pokud aplikace zjistí `Manifest` položky, aplikace se pokouší načíst spravované součásti zavaděč doplňku VSTO. Aplikace to provede tak, že zkusíte vytvořit objekt modelu COM, který implementuje imanagedaddin – rozhraní.
+3. Pokud aplikace najde `Manifest` záznam, aplikace se pokusí načíst spravovanou komponentu zavaděče doplňku VSTO. Aplikace to provede tím, že se pokusí vytvořit objekt modelu COM, který implementuje rozhraní IManagedAddin –.
 
-    [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Obsahuje součást doplňku VSTO zavaděč (*knihovna VSTOLoader.dll*), nebo můžete vytvořit vlastní implementaci imanagedaddin – rozhraní.
+    [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Zahrnuje komponentu zavaděče doplňku VSTO (*VSTOLoader.dll*), nebo můžete vytvořit vlastní implementací rozhraní IManagedAddin –.
 
-4. Volání aplikace [IManagedAddin::Load](../vsto/imanagedaddin-load.md) metoda a předá v hodnotě `Manifest` položka.
+4. Aplikace zavolá metodu [IManagedAddin –:: Load](../vsto/imanagedaddin-load.md) a předá hodnotu `Manifest` položky.
 
-5. [IManagedAddin::Load](../vsto/imanagedaddin-load.md) metoda provede úlohy potřebné pro zavedení doplňku VSTO, jako je například konfigurace zásad aplikací domény a zabezpečení pro VSTO doplněk, který se načítá.
+5. Metoda [IManagedAddin –:: Load](../vsto/imanagedaddin-load.md) provádí úlohy vyžadované k načtení doplňku VSTO, jako je například konfigurace domény aplikace a zásad zabezpečení pro doplněk VSTO, který se načítá.
 
-   Další informace o registru spravované klíče, které aplikace Microsoft Office použijte k vyhledání a načtení doplňků VSTO naleznete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
+   Další informace o klíčích registru, které systém Microsoft Office aplikace používají ke zjišťování a načítání spravovaných doplňků VSTO, najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
-## <a name="guidance-to-implement-imanagedaddin"></a>Pokyny k implementaci imanagedaddin –
- Pokud implementujete imanagedaddin –, budete muset zaregistrovat knihovnu DLL, která obsahuje implementace s použitím následující identifikátor CLSID:
+## <a name="guidance-to-implement-imanagedaddin"></a>Pokyny k implementaci IManagedAddin –
+ Pokud implementujete IManagedAddin –, je nutné zaregistrovat knihovnu DLL obsahující implementaci pomocí následujícího identifikátoru CLSID:
 
  99D651D7-5F7C-470E-8A3B-774D5D9536AC
 
- Aplikace Microsoft Office můžete vytvořit objekt modelu COM, který implementuje imanagedaddin – tento identifikátor CLSID.
+ Systém Microsoft Office aplikace používají tento identifikátor CLSID k vytvoření objektu COM, který implementuje IManagedAddin –.
 
 > [!CAUTION]
-> Tento identifikátor CLSID také používá *knihovna VSTOLoader.dll* v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Proto pokud používáte imanagedaddin – k vytvoření doplňku VSTO zavaděč a součásti modulu runtime, nemůžete nasadit komponenty do počítačů, na kterých běží doplňků VSTO, které spoléhají na [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
+> Tento identifikátor CLSID je také používán *VSTOLoader.dll* v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Proto pokud k vytvoření vlastního zavaděče doplňku VSTO a komponenty prostředí runtime použijete IManagedAddin –, nemůžete tuto komponentu nasadit do počítačů, ve kterých jsou spuštěné doplňky VSTO, které jsou závislé na [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
-## <a name="see-also"></a>Viz také:
-- [Nespravovaná referenční dokumentace rozhraní API &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)
+## <a name="see-also"></a>Viz také
+- [Nespravované Reference k rozhraní API &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)

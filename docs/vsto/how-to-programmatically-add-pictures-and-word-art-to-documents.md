@@ -1,7 +1,7 @@
 ---
 title: Přidávání obrázků a aplikace Word Art do dokumentů prostřednictvím kódu programu
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45b3030875539035f93bd340354e7041028200d2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 621051c827b08e66d68bc348401c2a939e279bcf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253824"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538083"
 ---
-# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Postupy: Programové přidávání obrázků a aplikace Word Art do dokumentů
+# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Postupy: Přidávání obrázků a aplikace Word Art do dokumentů prostřednictvím kódu programu
   Obrázky a kresby objektů můžete přidat do dokumentů v době návrhu nebo během doby běhu. WordArt umožňuje přidat do systém Microsoft Office wordové dokumenty dekorativní text. Tyto speciální textové efekty jsou kresby objektů, které lze přizpůsobit a vkládat do dokumentu.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "71253824"
 
 ### <a name="to-add-a-picture-at-the-cursor-location"></a>Přidání obrázku do umístění kurzoru
 
-1. <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> Zavolejte metodu <xref:Microsoft.Office.Interop.Word.InlineShapes> kolekce a předejte jí název souboru.
+1. Zavolejte <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> metodu <xref:Microsoft.Office.Interop.Word.InlineShapes> kolekce a předejte jí název souboru.
 
      [!code-vb[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#108)]
      [!code-csharp[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#108)]
@@ -78,7 +78,7 @@ ms.locfileid: "71253824"
      [!code-vb[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#109)]
      [!code-csharp[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#109)]
 
-2. <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> Zavolejte metodu <xref:Microsoft.Office.Interop.Word.Shapes> objektu v dokumentu.
+2. Zavolejte <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> metodu <xref:Microsoft.Office.Interop.Word.Shapes> objektu v dokumentu.
 
      [!code-vb[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#110)]
      [!code-csharp[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#110)]
@@ -90,18 +90,18 @@ ms.locfileid: "71253824"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#109)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#109)]
 
-2. <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> Zavolejte metodu <xref:Microsoft.Office.Interop.Word.Shapes> objektu aktivního dokumentu (nebo jiný dokument, který zadáte).
+2. Zavolejte <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> metodu <xref:Microsoft.Office.Interop.Word.Shapes> objektu aktivního dokumentu (nebo jiný dokument, který zadáte).
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#110)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#110)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
 
-- Obrázek s názvem *SamplePicture. jpg* musí existovat na jednotce C.
+- Na jednotce C musí existovat obrázek s názvem *SamplePicture.jpg* .
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Programové otevření existujících dokumentů](../vsto/how-to-programmatically-open-existing-documents.md)
-- [Postupy: Vložení textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [Postupy: Po hledání programově obnovit výběry](../vsto/how-to-programmatically-restore-selections-after-searches.md)
-- [Postupy: Ukládání dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-save-documents.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: otevírání existujících dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-existing-documents.md)
+- [Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [Postupy: obnovení výběru po hledání prostřednictvím kódu programu](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [Postupy: ukládání dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-save-documents.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

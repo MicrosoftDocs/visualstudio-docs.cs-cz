@@ -15,28 +15,28 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3e98c2ea598bcf73b919ba10ef1ea0b53c2a40f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e30dd2945820a61aa7c96d4e6c6fd59354e0c3ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651963"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540735"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Finalizační metody by měly být chráněné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný typ implementuje finalizační metodu, která neurčuje přístup Family (Protected).
 
 ## <a name="rule-description"></a>Popis pravidla
- Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo je vynutilo kompilátory C#, Visual Basic a Visual C++ .
+ Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo je vynutilo kompilátory C#, Visual Basic a Visual C++.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, změňte finalizační metodu tak, aby byla přístupná pro rodinu.

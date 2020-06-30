@@ -1,7 +1,7 @@
 ---
-title: '&lt;vstoruntime –&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;vstoRuntime – &gt; element (vývoj pro Office v sadě Visual Studio)'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 98f483748cce9c3a053c800f9bdd6e0f3d651da2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 985afe50d7c6edcfdb34e2ca046f59c5f7b664a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982142"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541879"
 ---
-# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoruntime –&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `vstoRuntime` Elementu `vstav3` obor názvů obsahuje podporovanou verzi sady Visual Studio Tools for Office runtime pro konkrétní řešení Office.
+# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `vstoRuntime`Element `vstav3` oboru názvů obsahuje podporovanou verzi Visual Studio Tools for Office runtime pro konkrétní řešení Office.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <vstoRuntime
@@ -34,20 +34,20 @@ ms.locfileid: "62982142"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `vstoRuntime` Element je povinný a je v `vstav3` oboru názvů. Pokud řešení pro Office podporuje dvě verze nástroje Visual Studio Tools pro systém Office runtime, existují dva `vstoRuntime` prvky v manifestu aplikace.
+ `vstoRuntime`Element je povinný a je v `vstav3` oboru názvů. Pokud řešení pro systém Office podporuje dvě verze Visual Studio Tools for Office runtime, existují dva `vstoRuntime` prvky v manifestu aplikace.
 
- `vstoRuntime` Element má následující atributy.
+ `vstoRuntime`Element má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`release`|Povinný parametr. Verze sady Visual Studio Tools for Office runtime.|
-|`version`|Povinný parametr. Číslo verze sady Visual Studio Tools for Office runtime.|
-|`supportUrl`|Volitelné. Odkaz na umístění instalace sady Visual Studio Tools for Office runtime.|
+|`release`|Povinná hodnota. Vydaná verze modulu runtime Visual Studio Tools for Office.|
+|`version`|Povinná hodnota. Číslo verze modulu runtime Visual Studio Tools for Office.|
+|`supportUrl`|Nepovinný parametr. Odkaz na umístění instalace modulu runtime Visual Studio Tools for Office.|
 
- `vstoRuntime` neobsahuje žádné prvky.
+ `vstoRuntime`neobsahuje žádné elementy.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje, `vstoRuntime` elementu v manifestu aplikace pro řešení Office nasazené s použitím [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `vstoRuntime` prvek v manifestu aplikace pro řešení Office nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ```xml
 <vstav3:vstoRuntime
@@ -56,8 +56,8 @@ ms.locfileid: "62982142"
     supportUrl="http://www.microsoft.com" />
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

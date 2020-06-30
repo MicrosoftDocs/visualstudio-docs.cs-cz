@@ -1,9 +1,9 @@
 ---
-title: 'Postupy: Mapování schémat na dokumenty aplikace Word v sadě Visual Studio'
+title: 'Postupy: mapování schémat na dokumenty aplikace Word v rámci sady Visual Studio'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,53 +16,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c6f9ee9a7b636c6c12bfe2f8debcc05911e3b04
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 281d9dc18ae1d0550ba844e58d4e39c3723c8dfb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441758"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538148"
 ---
-# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Postupy: Mapování schémat na dokumenty aplikace Word v sadě Visual Studio
-  **Důležité** informace uvedené v tomto tématu týkající se Microsoft Word je zobrazené výhradně pro výhod a užívání o jednotlivci i organizacemi, kteří se nacházejí mimo Spojené státy a jeho území nebo kteří používají nebo vývoj programy, které běží na produkty Microsoft Word, které byly licencovaných společností Microsoft před 2010 dne, kdy Microsoft odebrána implementace konkrétní funkce související s vlastní XML z aplikace Microsoft Word. Tyto informace týkající se Microsoft Word nemusí být přečteny nebo používány jednotlivcům i organizacím v USA nebo v jeho území, které používáte, nebo vývoji programů, které běží na produkty Microsoft Word, které byly licencovaných společností Microsoft po 10. ledna 2010 ; tyto produkty se chovají stejně jako produkty licenci před tímto datem nebo zakoupených a licencovaná pro použití mimo území Spojených států.
+# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Postupy: mapování schémat na dokumenty aplikace Word v rámci sady Visual Studio
+  **Důležité** informace Informace uvedené v tomto tématu týkající se Microsoft Wordu se poskytují výhradně pro zvýhodnění a použití jednotlivců a organizací, kteří se nacházejí mimo USA a její oblasti nebo kteří používají nebo vyvíjí programy, na kterých běží, od společnosti Microsoft Word, které byly licencované od společnosti Microsoft před lednem 2010, když společnost Microsoft odebrala implementaci konkrétních funkcí souvisejících s vlastním kódem XML z aplikace Microsoft Word. Tyto informace týkající se Microsoft Wordu nemusí číst ani používat jednotlivci nebo organizace v USA nebo na jejích oblastech, kteří používají, nebo vyvíjet programy, na kterých běží, od společnosti Microsoft Word, které byly licencované od Microsoftu po 10. ledna 2010. Tyto produkty se nebudou chovat stejně jako produkty licencované před tímto datem nebo zakoupené a licencované pro použití mimo USA.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Dokument je otevřen v sadě Visual Studio, můžete namapovat schématu XML k dokumentu. Můžete používat stejné nástroje Microsoft Office Word, které používáte, když je dokument otevřít mimo sadu Visual Studio. Office project vytvoří stejné objekty, zda mapování schématu pro dokument před nebo po vytvoření řešení aplikace Word.
+ Schéma XML lze namapovat na dokument, zatímco je dokument otevřen v aplikaci Visual Studio. Použijete stejné systém Microsoft Office nástroje pro Word, které použijete, když je dokument otevřen mimo sadu Visual Studio. Projekt sady Office vytvoří stejné objekty bez ohledu na to, zda schéma namapujete do dokumentu před nebo po vytvoření řešení pro aplikace Word.
 
-## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>K mapování schématu XML do dokumentů aplikace Word v sadě Visual Studio
+## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Mapování schématu XML k dokumentu aplikace Word v aplikaci Visual Studio
 
-1. Otevřete projekt dokumentu nebo šabloně aplikace Word v sadě Visual Studio.
+1. Otevřete dokument aplikace Word nebo šablonu projektu v aplikaci Visual Studio.
 
-2. Klikněte na tlačítko v dokumentu, abychom přesunutí výběru do návrháře.
+2. Kliknutím v dokumentu přesuňte fokus do návrháře.
 
-3. Na pásu karet klikněte na tlačítko **Developer** kartu.
+3. Na pásu karet klikněte na kartu **vývojář** .
 
     > [!NOTE]
-    > Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [jak: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > Pokud karta **vývojář** není zobrazená, musíte ji nejdřív zobrazit. Další informace najdete v tématu [Postup: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-4. V **XML** klikněte na možnost **schématu**.
+4. Ve skupině **XML** klikněte na **schéma**.
 
-     **Šablon a doplňků** zobrazí se dialogové okno.
+     Otevře se dialogové okno **šablony a doplňky** .
 
-5. Klikněte na tlačítko **schématu XML** kartu.
+5. Klikněte na kartu **schéma XML** .
 
-6. Klikněte na tlačítko **přidat schéma**.
+6. Klikněte na **Přidat schéma**.
 
-     **Přidat schéma** zobrazí se dialogové okno.
+     Otevře se dialogové okno **Přidat schéma** .
 
-7. Přejděte do souboru schématu, vyberte ji a pak klikněte na tlačítko **otevřít**.
+7. Vyhledejte soubor schématu, vyberte jej a klikněte na tlačítko **otevřít**.
 
-     **Schéma – nastavení** zobrazí se dialogové okno.
+     Otevře se dialogové okno **Nastavení schématu** .
 
-8. Přiřadit alias nebo klikněte na tlačítko **OK** přidat schéma bez aliasu.
+8. Přiřaďte alias nebo kliknutím na tlačítko **OK** přidejte schéma bez aliasu.
 
 9. Klikněte na **OK**.
 
-     **Struktura XML** otevře se okno.
+     Otevře se okno **struktury XML** .
 
-10. Prvky z přetáhnout **struktura XML** okno na místa v dokumentu, kde chcete vytvořit odpovídající ovládací prvky.
+10. Přetáhněte prvky z okna **struktury XML** na místa v dokumentu, kde chcete vytvořit odpovídající ovládací prvky.
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Mapování schémat na listy v prostředí Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: mapování schémat na listy v rámci sady Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
 - [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)

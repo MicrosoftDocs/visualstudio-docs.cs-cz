@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků do zobrazení Backstage '
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5b4ea5cdcd869f16f987e9431359511831af9573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986012"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538343"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Postupy: Přidání ovládacích prvků do zobrazení Backstage
   Pomocí Návrháře pásu karet můžete přidat ovládací prvky do nabídky, která se otevře po kliknutí na kartu **soubor** . Když aplikaci spustíte, ovládací prvky, které přidáte na kartu **soubor** , se zobrazí ve skupině s názvem **Doplňky**.
@@ -62,7 +62,7 @@ ms.locfileid: "72986012"
 
 4. Přetáhněte ovládací prvky pro přesunutí na nové pozice v nabídce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)

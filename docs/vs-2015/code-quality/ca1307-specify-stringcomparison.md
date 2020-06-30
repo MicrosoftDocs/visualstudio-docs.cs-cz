@@ -15,33 +15,33 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 111f0b85a601d931ac17bde46f7170fa81e71815
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 033d8f0e22ec040ffb10821993a5a9c647ee401e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661400"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538915"
 ---
-# <a name="ca1307-specify-stringcomparison"></a>CA1307: Zadejte možnosti StringComparison
+# <a name="ca1307-specify-stringcomparison"></a>CA1307: Určete StringComparison
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|SpecifyStringComparison|
 |CheckId|CA1307|
 |Kategorie|Microsoft. Globalization|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr <xref:System.StringComparison>.
+## <a name="cause"></a>Příčina
+ Operace porovnání řetězců používá přetížení metody, které nenastavuje <xref:System.StringComparison> parametr.
 
 ## <a name="rule-description"></a>Popis pravidla
- Mnoho operací s řetězci, nejdůležitější <xref:System.String.Compare%2A> a <xref:System.String.Equals%2A> metody, poskytují přetížení, které přijímá hodnotu výčtu <xref:System.StringComparison> jako parametr.
+ Mnoho řetězcových operací, nejdůležitější <xref:System.String.Compare%2A> metody a <xref:System.String.Equals%2A> , poskytují přetížení, které přijímá <xref:System.StringComparison> hodnotu výčtu jako parametr.
 
- Pokaždé, když existuje přetížení, které přijímá parametr <xref:System.StringComparison>, měl by se použít místo přetížení, které tento parametr nevyužívá. Explicitním nastavením tohoto parametru je váš kód často jasný a je snazší ho udržovat.
+ Pokaždé, když existuje přetížení, které přijímá <xref:System.StringComparison> parametr, měl by být použit místo přetížení, které tento parametr nevyužívá. Explicitním nastavením tohoto parametru je váš kód často jasný a je snazší ho udržovat.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte metody porovnání řetězců na přetížení, které přijímají výčet <xref:System.StringComparison> jako parametr. Například: Změňte `String.Compare(str1, str2)` na `String.Compare(str1, str2, StringComparison.Ordinal)`.
+ Chcete-li opravit porušení tohoto pravidla, změňte metody porovnání řetězců na přetížení, které přijímají <xref:System.StringComparison> výčet jako parametr. Například: změnit `String.Compare(str1, str2)` na `String.Compare(str1, str2, StringComparison.Ordinal)` .
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  V případě, že je knihovna nebo aplikace určena pro omezené místní cílovou skupinu a nebude proto lokalizována, je bezpečné potlačit upozornění od tohoto pravidla.

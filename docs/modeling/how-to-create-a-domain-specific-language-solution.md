@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Vytváření řešení jazyka specifického pro doménu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 175da19782927f8c84b9fae0e6d9820a22bd891a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594666"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541788"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
 Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řešení sady Visual Studio.
@@ -38,7 +38,7 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 1. Spusťte Průvodce DSL vytvořením nového projektu **Návrháře jazyka specifického pro doménu** .
 
    > [!NOTE]
-   > Název, který si zvolíte pro projekt, by měl být platný vizuální C# identifikátor, protože může být použit ke generování kódu.
+   > Název, který si zvolíte pro projekt, by měl být platný identifikátor jazyka Visual C#, protože může být použit pro generování kódu.
 
    ::: moniker range="vs-2017"
 
@@ -65,7 +65,7 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
    > [!NOTE]
    > Pokud se zobrazí zpráva upozorňující, že nespouštíte textové šablony z nedůvěryhodných zdrojů, klikněte na tlačítko **OK**. Tuto zprávu můžete nastavit tak, aby se nezobrazovala znovu.
 
-## <a name="settings"></a>Stránky průvodce návrháře DSL
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>Stránky průvodce návrháře DSL
  Z jejich výchozích hodnot můžete nechat některá z těchto polí beze změny. Ujistěte se však, že jste nastavili pole Přípona souboru.
 
 ### <a name="solution-settings-page"></a>Stránka nastavení řešení
@@ -73,7 +73,7 @@ Než budete moct tento postup spustit, nainstalujte tyto komponenty:
 Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit. Různé šablony poskytují pohodlný počáteční bod. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Jak chcete pojmenovat jazyk specifický pro doménu?**
-Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název C# třídy.
+Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název třídy jazyka C#.
 
 ### <a name="file-extension-page"></a>Stránka s příponou souboru
  **Jakou příponu mají soubory modelu používat?**
@@ -87,11 +87,11 @@ Zadejte novou příponu souboru.
 
 - Zadejte jinou příponu souboru.
 
-     \- nebo –
+     \-ani
 
 - Resetovat experimentální instanci sady Visual Studio. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \- nebo –
+     \-ani
 
 - Pokud je rozšíření sady Visual Studio, které používá tuto příponu souboru, v počítači plně nainstalováno, odinstalujte ho. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
@@ -116,7 +116,7 @@ Tento název se použije jako název složený z názvu vaší společnosti a pr
 
  Další informace o silných názvech naleznete v tématu [vytváření a používání sestavení se silným názvem](/dotnet/standard/assembly/create-use-strong-named).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

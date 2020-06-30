@@ -1,7 +1,7 @@
 ---
 title: IManagedAddin::Unload
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -12,28 +12,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 296502aa461688c34152d86ee21aab5f2c83ecb4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1ec01ebc32472e315fe2c905ecfd2cfef0f4bbe1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956741"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541008"
 ---
 # <a name="imanagedaddinunload"></a>IManagedAddin::Unload
-  Volá se bezprostředně před spravované Add-in VSTO je uvolněna.
+  Volá se těsně předtím, než se spravovaný doplněk VSTO uvolní.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 HRESULT Unload();
 ```
 
-## <a name="return-value"></a>Návratová hodnota
- Hodnota HRESULT, která označuje, zda metoda byla úspěšně dokončena.
+## <a name="return-value"></a>Vrácená hodnota
+ Hodnota HRESULT, která označuje, zda byla metoda úspěšně dokončena.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není volána aktuální verze sady Microsoft Office. Tato metoda je vyhrazená pro budoucí použití.
+ Tato metoda není volána aktuálními verzemi systém Microsoft Office. Tato metoda je vyhrazena pro budoucí použití.
 
-## <a name="see-also"></a>Viz také:
-- [Imanagedaddin – rozhraní](../vsto/imanagedaddin-interface.md)
+## <a name="see-also"></a>Viz také
+- [Rozhraní IManagedAddin –](../vsto/imanagedaddin-interface.md)
 - [IManagedAddin::Load](../vsto/imanagedaddin-load.md)

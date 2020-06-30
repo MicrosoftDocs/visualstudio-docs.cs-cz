@@ -15,28 +15,28 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 06d961fee28fa67f1e4f712564f6b3d5ff4073ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8083edf04aa799c8031fbcd1b53a2e17104dd4a6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651622"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538798"
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218: Přepište GetHashCode při přepsání Equals
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|OverrideGetHashCodeOnOverridingEquals|
 |CheckId|CA2218|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Veřejný typ přepisuje <xref:System.Object.Equals%2A?displayProperty=fullName>, ale nepřepisuje <xref:System.Object.GetHashCode%2A?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Veřejný typ přepisuje <xref:System.Object.Equals%2A?displayProperty=fullName> , ale nepřepisuje <xref:System.Object.GetHashCode%2A?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Object.GetHashCode%2A> vrací hodnotu na základě aktuální instance, která je vhodná pro algoritmy hash a datové struktury, jako je zatřiďovací tabulka. Dva objekty, které jsou stejného typu a jsou rovny, musí vracet stejný kód hash, aby bylo zajištěno, že instance následujících typů fungují správně:
+ <xref:System.Object.GetHashCode%2A>Vrátí hodnotu založenou na aktuální instanci, která je vhodná pro algoritmy hash a datové struktury, jako je zatřiďovací tabulka. Dva objekty, které jsou stejného typu a jsou rovny, musí vracet stejný kód hash, aby bylo zajištěno, že instance následujících typů fungují správně:
 
 - <xref:System.Collections.Hashtable?displayProperty=fullName>
 
@@ -54,10 +54,10 @@ ms.locfileid: "72651622"
 
 - <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>
 
-- Typy, které implementují <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
+- Typy, které implementují<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, Poskytněte implementaci <xref:System.Object.GetHashCode%2A>. Pro dvojici objektů stejného typu je nutné zajistit, aby implementace vrátila stejnou hodnotu, pokud vaše implementace <xref:System.Object.Equals%2A> vrátí `true` páru.
+ Chcete-li opravit porušení tohoto pravidla, Poskytněte implementaci <xref:System.Object.GetHashCode%2A> . Pro pár objektů stejného typu je nutné zajistit, aby implementace vrátila stejnou hodnotu, pokud vaše implementace <xref:System.Object.Equals%2A> vrátí `true` pro dvojici.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
@@ -71,7 +71,7 @@ ms.locfileid: "72651622"
  [!code-csharp[FxCop.Usage.GetHashCodeErrorClass#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeErrorClass/cs/FxCop.Usage.GetHashCodeErrorClass.cs#1)]
 
 ### <a name="comments"></a>Komentáře
- Následující příklad opravuje porušení přepsáním <xref:System.Object.GetHashCode>.
+ Následující příklad opravuje porušení pomocí přepsání <xref:System.Object.GetHashCode> .
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.GetHashCodeFixedClass#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeFixedClass/cs/FxCop.Usage.GetHashCodeFixedClass.cs#1)]
@@ -85,23 +85,23 @@ ms.locfileid: "72651622"
  [!code-csharp[FxCop.Usage.GetHashCodeErrorStruct#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeErrorStruct/cs/FxCop.Usage.GetHashCodeErrorStruct.cs#1)]
 
 ### <a name="comments"></a>Komentáře
- Následující příklad opravuje porušení přepsáním <xref:System.Object.GetHashCode>.
+ Následující příklad opravuje porušení pomocí přepsání <xref:System.Object.GetHashCode> .
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.GetHashCodeFixedStruct#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeFixedStruct/cs/FxCop.Usage.GetHashCodeFixedStruct.cs#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1046: Nepřetěžujte operátory rovnosti na odkazových typech](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046: Nepřetěžujte operátory rovnosti u odkazových typů](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
  [CA2225: Přetížení operátoru mají pojmenované alternativy](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
- [CA2226: Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226: Operátory by měly mít symetrická přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
  [CA2224: Přepište Equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2231: Přetižte operátor equals při přepsání ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 - <xref:System.Object.GetHashCode%2A?displayProperty=fullName>

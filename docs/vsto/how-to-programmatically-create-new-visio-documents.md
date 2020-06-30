@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu'
+title: 'Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,68 +13,68 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 61fb1302ffb0a068122c333e196178dfa2b30d86
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 171ad93caf6b5c13d000073a0d7f7e82282b9b4a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62574834"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541528"
 ---
-# <a name="how-to-programmatically-create-new-visio-documents"></a>Postupy: Vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu
-  Když vytváříte vykreslení dokumentu nové aplikace Microsoft Office Visio, přidejte ji tak `Microsoft.Office.Interop.Visio.Documents` kolekce otevřených dokumentů aplikace Visio. V důsledku toho `Microsoft.Office.Interop.Visio.Documents.Add` metoda vytvoří nový dokument výkresu Visia. Další informace najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) metody.
+# <a name="how-to-programmatically-create-new-visio-documents"></a>Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu
+  Když vytvoříte nový dokument systém Microsoft Office Visio Drawing, přidáte ho do `Microsoft.Office.Interop.Visio.Documents` kolekce otevřených dokumentů Visia. V důsledku toho `Microsoft.Office.Interop.Visio.Documents.Add` Metoda vytvoří nový dokument pro kreslení aplikace Visio. Další informace najdete v referenční dokumentaci k jazyku VBA pro [Microsoft.Office.Interop.Visio.Documents. Přidat](/office/vba/api/Visio.Documents.Add) metodu.
 
-## <a name="create-new-blank-documents"></a>Vytvoření nové prázdné dokumenty
+## <a name="create-new-blank-documents"></a>Vytvoření nových prázdných dokumentů
 
-### <a name="to-create-a-new-document"></a>Chcete-li vytvořit nový dokument
+### <a name="to-create-a-new-document"></a>Vytvoření nového dokumentu
 
-- Použití `Microsoft.Office.Interop.Visio.Documents.Add` metodu pro vytvoření nového prázdného dokumentu, který není založen na šabloně.
+- Použijte `Microsoft.Office.Interop.Visio.Documents.Add` metodu k vytvoření nového prázdného dokumentu, který není založen na šabloně.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#1)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#1)]
 
-## <a name="create-documents-copied-from-existing-documents"></a>Vytváření dokumentů, které jsou zkopírovány z existující dokumenty
- `Microsoft.Office.Interop.Visio.Documents.Add` Metody můžete vytvořit nový dokument, který je kopii existující dokument Visia. Musíte zadat název souboru a diagram plně kvalifikovanou cestu.
+## <a name="create-documents-copied-from-existing-documents"></a>Vytváření dokumentů zkopírovaných z existujících dokumentů
+ `Microsoft.Office.Interop.Visio.Documents.Add`Metoda může vytvořit nový dokument, který je kopií existujícího dokumentu aplikace Visio. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu k diagramu.
 
-### <a name="to-create-a-new-document-that-is-copied-from-an-existing-document"></a>Chcete-li vytvořit nový dokument, který je zkopírován z existujícího dokumentu
+### <a name="to-create-a-new-document-that-is-copied-from-an-existing-document"></a>Vytvoření nového dokumentu, který se zkopíruje z existujícího dokumentu
 
-- Volání `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k diagram Visia.
+- Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k diagramu Visia.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#2)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#2)]
 
-## <a name="create-stencils-copied-from-existing-stencils"></a>Vytvořit vzorníky zkopírovány z existující vzorníky
- [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) metody můžete vytvořit nové šablony hloubky, který je kopií existujícího vzorníku Visia. Musíte zadat název souboru a plně kvalifikovanou cestu vzorníku.
+## <a name="create-stencils-copied-from-existing-stencils"></a>Vytváření vzorníků zkopírovaných z existujících vzorníků
+ [Microsoft.Office.Interop.Visio.Documents. Metoda Add](/office/vba/api/Visio.Documents.Add) může vytvořit nový vzorník, který je kopií existujícího vzorníku aplikace Visio. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu vzorníku.
 
-### <a name="to-create-a-new-stencil-that-is-copied-from-an-existing-stencil"></a>Chcete-li vytvořit nový, který se zkopíruje z existující šablony hloubky vzorníku
+### <a name="to-create-a-new-stencil-that-is-copied-from-an-existing-stencil"></a>Vytvoření nového vzorníku, který se zkopíruje z existujícího vzorníku
 
-- Volání `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k vzorníku.
+- Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k vzorníku.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#3)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#3)]
 
-## <a name="create-documents-based-on-existing-templates"></a>Vytváření dokumentů na základě existujících šablon
- `Microsoft.Office.Interop.Visio.Documents.Add` Metody můžete vytvořit nový dokument ( *.vsd* souboru), který je založen na základě existující šablony Visio ( *vst* souboru). Tato metoda zkopíruje vzorníků, styly a nastavení, které jsou součástí šablony pracovního prostoru. Musíte zadat název souboru a plně kvalifikovanou cestu šablony.
+## <a name="create-documents-based-on-existing-templates"></a>Vytváření dokumentů založených na existujících šablonách
+ `Microsoft.Office.Interop.Visio.Documents.Add`Metoda může vytvořit nový dokument (soubor *. vsd* ), který je založen na existující šabloně aplikace Visio (soubor *. vst* ). Tato metoda zkopíruje vzorníky, styly a nastavení, které jsou součástí pracovního prostoru šablony. Je nutné, abyste zadali název souboru a plně kvalifikovanou cestu k šabloně.
 
-### <a name="to-create-a-new-document-that-is-based-on-an-existing-template"></a>Chcete-li vytvořit nový dokument, který je založen na základě existující šablony
+### <a name="to-create-a-new-document-that-is-based-on-an-existing-template"></a>Vytvoření nového dokumentu, který je založen na stávající šabloně
 
-- Volání `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k šabloně.
+- Zavolejte `Microsoft.Office.Interop.Visio.Documents.Add` metodu a zadejte cestu k šabloně.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#4)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#4)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:
 
-- Dokument Visia s názvem `myDrawing.vsd` musí být umístěn v adresáři s názvem `Test` v *dokumenty* složky (pro Windows XP a starší) nebo *dokumenty* složku (pro Windows Vista).
+- Dokument aplikace Visio s názvem `myDrawing.vsd` musí být umístěn v adresáři s názvem `Test` ve složce *dokumenty* (pro systém Windows XP a starší) nebo ve složce *dokumenty* (pro systém Windows Vista).
 
-- Dokument Visia s názvem `myStencil.vss` musí být umístěn v adresáři s názvem `Test` v *dokumenty* složky (pro Windows XP a starší) nebo *dokumenty* složku (pro Windows Vista).
+- Dokument aplikace Visio s názvem `myStencil.vss` musí být umístěn v adresáři s názvem `Test` ve složce *dokumenty* (pro systém Windows XP a starší) nebo ve složce *dokumenty* (pro systém Windows Vista).
 
-- Dokument Visia s názvem `myTemplate.vst` musí být umístěn v adresáři s názvem `Test` v *dokumenty* složky (pro Windows XP a starší) nebo *dokumenty* složku (pro Windows Vista).
+- Dokument aplikace Visio s názvem `myTemplate.vst` musí být umístěn v adresáři s názvem `Test` ve složce *dokumenty* (pro systém Windows XP a starší) nebo ve složce *dokumenty* (pro systém Windows Vista).
 
-## <a name="see-also"></a>Viz také:
-- [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)
+## <a name="see-also"></a>Viz také
+- [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
-- [Postupy: Otevírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-open-visio-documents.md)
-- [Postupy: Zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Postupy: Ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)
-- [Postupy: Tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)
+- [Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-open-visio-documents.md)
+- [Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)
+- [Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)
+- [Postupy: tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)

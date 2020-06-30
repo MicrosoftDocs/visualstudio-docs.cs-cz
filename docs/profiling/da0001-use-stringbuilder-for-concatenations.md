@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 137d21019973ac78a74429e957429d69d91edbf8
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 6a645816ed046c2ce253a9f882c1425c48347573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332121"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541736"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Použití třídy StringBuilder ke zřetězení
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0001|
 |Kategorie|Využití .NET Framework|

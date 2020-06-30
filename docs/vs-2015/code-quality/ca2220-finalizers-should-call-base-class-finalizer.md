@@ -15,37 +15,37 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1a4538c66d351956da8168d4f84c1895190ab453
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5d9139314d52c4c50de84a45f227e6df5715bf02
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663580"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540657"
 ---
-# <a name="ca2220-finalizers-should-call-base-class-finalizer"></a>CA2220: Finalizační metody by měly volat finalizační metodu třídy Base
+# <a name="ca2220-finalizers-should-call-base-class-finalizer"></a>CA2220: Finalizační metody by měly volat finalizační metodu základní třídy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|FinalizersShouldCallBaseClassFinalizer|
 |CheckId|CA2220|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Typ, který Přepisuje <xref:System.Object.Finalize%2A?displayProperty=fullName>, nevolá metodu <xref:System.Object.Finalize%2A> v její základní třídě.
+## <a name="cause"></a>Příčina
+ Typ, který Přepisuje, <xref:System.Object.Finalize%2A?displayProperty=fullName> nevolá <xref:System.Object.Finalize%2A> metodu v její základní třídě.
 
 ## <a name="rule-description"></a>Popis pravidla
- Finalizační metoda musí být šířena přes hierarchii dědičnosti. Aby bylo zajištěno, typy musí volat svou základní třídu <xref:System.Object.Finalize%2A> metody z vlastní <xref:System.Object.Finalize%2A> metody. C# Kompilátor automaticky přidá volání k finalizační metodě základní třídy.
+ Finalizační metoda musí být šířena přes hierarchii dědičnosti. Aby bylo zajištěno, typy musí volat svou metodu základní třídy <xref:System.Object.Finalize%2A> v rámci své vlastní <xref:System.Object.Finalize%2A> metody. Kompilátor jazyka C# přidá volání finalizační metody základní třídy automaticky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, zavolejte metodu <xref:System.Object.Finalize%2A> základního typu z vaší metody <xref:System.Object.Finalize%2A>.
+ Chcete-li opravit porušení tohoto pravidla, zavolejte metodu základního typu <xref:System.Object.Finalize%2A> z vaší <xref:System.Object.Finalize%2A> metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo. Některé kompilátory, které cílí na modul CLR (Common Language Runtime), vkládají volání finalizační metody základního typu do jazyka MSIL (Microsoft Intermediate Language). Pokud je oznámeno upozornění z tohoto pravidla, kompilátor nevloží volání a je nutné jej přidat do kódu.
 
 ## <a name="example"></a>Příklad
- Následující Visual Basic příklad ukazuje typ `TypeB`, který správně volá metodu <xref:System.Object.Finalize%2A> ve své základní třídě.
+ Následující příklad Visual Basic ukazuje typ `TypeB` , který správně volá <xref:System.Object.Finalize%2A> metodu v její základní třídě.
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableBaseCalled/vb/FxCop.Usage.IDisposableBaseCalled.vb#1)]
 
