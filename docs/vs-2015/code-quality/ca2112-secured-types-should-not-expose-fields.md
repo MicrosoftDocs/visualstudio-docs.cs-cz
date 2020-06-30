@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c91a7c9833d3d9d5ae283c28ae4d437bd07734
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4267b4f55f78106a4d1e8f3b2f9b296be9ddf618
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658751"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546533"
 ---
 # <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: Zabezpečené typy by neměly vystavovat pole
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|SecuredTypesShouldNotExposeFields|
 |CheckId|CA2112|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo chráněný typ obsahuje veřejná pole a je zabezpečený [požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d).
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,7 +45,7 @@ ms.locfileid: "72658751"
  Pro problémy se zabezpečením a dobrým návrhem byste měli opravit porušení tím, že zveřejníte veřejná pole NonPublic. Můžete potlačit upozornění z tohoto pravidla, pokud pole neobsahuje informace, které by měly zůstat zabezpečené, a Nespoléháte se na obsah pole.
 
 ## <a name="example"></a>Příklad
- Následující příklad se skládá z typu knihovny (`SecuredTypeWithFields`) s nezabezpečenými poli, typ (`Distributor`), který může vytvořit instance typu knihovny a chybné předávání instancí typů, nemá oprávnění k jejich vytvoření a kód aplikace, který může číst pole instance, i když nemá oprávnění zabezpečující typ.
+ Následující příklad se skládá z typu knihovny ( `SecuredTypeWithFields` ) s nezabezpečenými poli, typ ( `Distributor` ), který může vytvořit instance typu knihovny a chybné předávání instancí na typy nemají oprávnění k jejich vytvoření, a kód aplikace, který může číst pole instance, i když nemá oprávnění zabezpečující typ.
 
  Následující kód knihovny je v rozporu s pravidlem.
 
@@ -64,9 +64,9 @@ ms.locfileid: "72658751"
  Tento příklad vytvoří následující výstup.
 
  **Vytváření instance třídy SecuredTypeWithFields.** 
-**zabezpečených polí typu: 22, 33** 
-**Změna pole zabezpečeného typu...** 
-**pole objektů uložených v mezipaměti: 99, 33**
+ **Pole zabezpečeného typu: 22, 33** 
+ **Mění se pole zabezpečeného typu...** 
+ **Pole objektů v mezipaměti: 99, 33**
 ## <a name="related-rules"></a>Související pravidla
  [CA1051: Nedeklarujte viditelná pole instance](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 

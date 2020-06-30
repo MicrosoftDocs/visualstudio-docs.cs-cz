@@ -1,9 +1,9 @@
 ---
-title: '&lt;customHostSpecified&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;customHostSpecified – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,31 +16,31 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26597796c99d3ab8740812819cf3aa5568e2985b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 689848f14b4540a54489b4ea5bbad67e493fe276
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956176"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544908"
 ---
-# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customHostSpecified&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `customHostSpecified` Element označuje, že toto řešení není samostatné aplikace. Řešení pro systém Office obsahují komponenty, které se hostují uvnitř aplikace Microsoft Office.
+# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customHostSpecified – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `customHostSpecified`Element označuje, že toto řešení není samostatná aplikace. Řešení pro systém Office obsahují součásti, které jsou hostovány v aplikacích systém Microsoft Office.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <customHostSpecified />
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `customHostSpecified` Element se vyžaduje pro řešení Office. Tento element má `co.v1` obor názvů a určuje, zda toto nasazení obsahuje komponenty, která se nasadí v rámci vlastního hostitele, a není samostatné aplikace.
+ `customHostSpecified`Element je vyžadován pro řešení Office. Tento prvek je v `co.v1` oboru názvů a určuje, že toto nasazení obsahuje komponentu, která bude nasazena v rámci vlastního hostitele a není samostatnou aplikací.
 
- Tento element je podřízeným prvkem první `<entrypoint>` elementu v manifestu aplikace. Může existovat žádné další podřízené prvky v dané `<entrypoint>` element nebo [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] vyvolá chybu ověření během instalace.
+ Tento prvek je podřízeným prvkem prvního `<entrypoint>` prvku v manifestu aplikace. V tomto elementu nesmí být žádné další podřízené elementy `<entrypoint>` nebo [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] během instalace dojde k chybě ověřování.
 
- Tento element nemá žádné atributy a žádné podřízené prvky.
+ Tento element nemá žádné atributy ani podřízené elementy.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje, `customHostSpecified` elementu v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `customHostSpecified` prvek v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ```xml
 <entryPoint>
@@ -48,8 +48,8 @@ ms.locfileid: "62956176"
 </entryPoint>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

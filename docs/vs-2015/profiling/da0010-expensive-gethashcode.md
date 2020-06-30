@@ -14,27 +14,27 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a0a2947f0bd6758de62a4a11d78390d38a503271
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: af234cd130d06c2a76c5ddbc958a67eb064d9128
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919034"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547573"
 ---
-# <a name="da0010-expensive-gethashcode"></a>DA0010: Náročná metoda GetHashCode
+# <a name="da0010-expensive-gethashcode"></a>DA0010: Náročná funkce GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0010: nákladný GetHashCode](/visualstudio/profiling/da0010-expensive-gethashcode).  
 
-|||  
+|Položka|Hodnota|  
 |-|-|  
-|Id pravidla|DA0010|  
+|ID pravidla|DA0010|  
 |Kategorie|Využití .NET Framework|  
 |Metody profilace|Vzorkování<br /><br /> Paměť .NET|  
 |Zpráva|Funkce GetHashCode by měly být levné a nesmí přidělit žádnou paměť. Pokud je to možné, snižte složitost funkce kódu hash.|  
 |Typ zprávy|Upozornění|  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Volání metody GetHashCode typu jsou významným podílem dat profilování nebo metoda přiděluje paměť.  
   
 ## <a name="rule-description"></a>Popis pravidla  

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Obnovení výběru po hledání prostřednictvím kódu programu'
+title: 'Postupy: obnovení výběru po hledání prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,45 +14,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 672c66fef5d7400601ce69270b5cd4f525b34c7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 30daa81c33070db3f9418b45b84b4acc6e243dc9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955694"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547092"
 ---
-# <a name="how-to-programmatically-restore-selections-after-searches"></a>Postupy: Obnovení výběru po hledání prostřednictvím kódu programu
-  Je-li najít a nahradit text v dokumentu, můžete chtít obnovit původní výběru uživatele po dokončení hledání.
+# <a name="how-to-programmatically-restore-selections-after-searches"></a>Postupy: obnovení výběru po hledání prostřednictvím kódu programu
+  Pokud vyhledáte a nahradíte text v dokumentu, možná budete chtít obnovit původní výběr uživatele po dokončení hledání.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Kód v postupu Ukázka používá dva <xref:Microsoft.Office.Interop.Word.Range> objekty. Jeden ukládá aktuální <xref:Microsoft.Office.Interop.Word.Selection>, a jeden nastaví celý dokument určený jako rozsah hledání.
+ Kód v ukázkové proceduře využívá dva <xref:Microsoft.Office.Interop.Word.Range> objekty. Jeden ukládá aktuální <xref:Microsoft.Office.Interop.Word.Selection> a jeden nastaví celý dokument, který se má použít jako rozsah hledání.
 
-## <a name="to-restore-the-users-original-selection-after-a-search"></a>Chcete-li obnovit uživatele původního výběru po hledání
+## <a name="to-restore-the-users-original-selection-after-a-search"></a>Obnovení původního výběru uživatele po hledání
 
-1. Vytvořte <xref:Microsoft.Office.Interop.Word.Range> objekty pro dokument a aktuálního výběru.
+1. Vytvořte <xref:Microsoft.Office.Interop.Word.Range> objekty pro dokument a aktuální výběr.
 
     [!code-vb[Trin_VstcoreWordAutomation#83](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#83)]
     [!code-csharp[Trin_VstcoreWordAutomation#83](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#83)]
 
-2. Provést hledání a nahrazení operace.
+2. Proveďte operaci hledání a nahrazení.
 
     [!code-vb[Trin_VstcoreWordAutomation#84](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#84)]
     [!code-csharp[Trin_VstcoreWordAutomation#84](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#84)]
 
-3. Vyberte začátek rozsahu, chcete-li obnovit původní výběru uživatele.
+3. Vyberte počáteční rozsah pro obnovení původního výběru uživatele.
 
     [!code-vb[Trin_VstcoreWordAutomation#85](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#85)]
     [!code-csharp[Trin_VstcoreWordAutomation#85](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#85)]
 
-   Následující příklad ukazuje kompletní metodu.
+   Následující příklad ukazuje metodu Complete.
 
 ## <a name="example"></a>Příklad
  [!code-vb[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#82)]
  [!code-csharp[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#82)]
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Programově hledání a nahrazování textu v dokumentech](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
-- [Postupy: Nastavování možností hledání v aplikaci Word](../vsto/how-to-programmatically-set-search-options-in-word.md)
-- [Postupy: Procházení nalezených položek v dokumentech prostřednictvím kódu programu smyčky](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: hledání a nahrazování textu v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+- [Postupy: nastavování možností hledání v aplikaci Word prostřednictvím kódu programu](../vsto/how-to-programmatically-set-search-options-in-word.md)
+- [Postupy: procházení nalezených položek v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

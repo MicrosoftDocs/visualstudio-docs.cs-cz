@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Hledání v rámci konkrétní složky prostřednictvím kódu programu'
+title: 'Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,22 +12,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5ac3dbb169fee82a55cc41b773d3616c56f83534
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f5e0f098edcffce07eb2c3f243b994d1a53cdf9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961898"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547014"
 ---
-# <a name="how-to-programmatically-search-within-a-specific-folder"></a>Postupy: Hledání v rámci konkrétní složky prostřednictvím kódu programu
-  Tento příklad kódu používá `Find` a `FindNext` metody k vyhledání textu v poli Předmět e-mailové zprávy, které jsou v **doručené pošty**. Tato metoda používá řetězec filtru k vyhledání písmeno T jako počáteční písmeno `Subject` text.
+# <a name="how-to-programmatically-search-within-a-specific-folder"></a>Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu
+  Tento příklad kódu používá `Find` metody a `FindNext` k hledání textu v poli subjekt e-mailových zpráv, které jsou ve **složce Doručená pošta**. Tato metoda používá filtr řetězce pro kontrolu písmene T jako počáteční písmeno `Subject` textu.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Příklad
  [!code-csharp[Trin_OL_SearchFolder#1](../vsto/codesnippet/CSharp/Trin_OL_SearchFolder/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce se složkami](../vsto/working-with-folders.md)
 - [Přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md)
-- [Postupy: Programově načítání složek podle názvu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Postupy: načítání složek podle názvu prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)

@@ -1,7 +1,7 @@
 ---
 title: Exportovat diagramy jako obrázky
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56b7839985871333bb120057efde92e58baebdec
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2e433e47d04a2beb1521aba65be664f7c7efd44f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596616"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547599"
 ---
 # <a name="export-diagrams-as-images"></a>Exportovat diagramy jako obrázky
 
@@ -38,9 +38,9 @@ Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, p�
 
 2. V seznamu **název** vyberte **ZAPISOVAČ dokumentů Microsoft XPS**a pak klikněte na **OK**.
 
-3. V dialogovém okně **Uložit soubor jako** uložte soubor jako soubor **dokumentu XPS (\*. XPS)** .
+3. V dialogovém okně **Uložit soubor jako** uložte soubor jako soubor **dokumentu XPS ( \* . XPS)** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Sdílení modelů a export diagramů](../modeling/share-models-and-exporting-diagrams.md)

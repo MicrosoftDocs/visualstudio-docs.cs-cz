@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Naplnění dokumentů daty z databáze'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8470ec4acf686c016088c5f474539a1ab7ed85df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985888"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547196"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>Postupy: Naplnění dokumentů daty z databáze
 
@@ -36,7 +36,7 @@ Následující příklad ukazuje, jak přidat ovládací prvky vázané na data 
 
 ### <a name="to-populate-a-document-with-data-from-a-database"></a>Naplnění dokumentu daty z databáze
 
-1. Otevřete projekt na úrovni dokumentu aplikace Word v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]s dokumentem otevřeným v návrháři.
+1. Otevřete projekt na úrovni dokumentu aplikace Word v aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] s dokumentem otevřeným v návrháři.
 
 2. Otevřete okno **zdroje dat** a vytvořte zdroj dat z databáze. Další informace najdete v tématu [Přidání nových připojení](../data-tools/add-new-connections.md).
 
@@ -52,21 +52,21 @@ Kromě ovládacího prvku jsou do projektu automaticky přidány následující 
 
 - Typová datová sada, která zapouzdřuje tabulky dat, ke kterým jste se připojili v databázi. Další informace najdete v tématu [nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).
 
-- <xref:System.Windows.Forms.BindingSource>, který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>, Který spojuje ovládací prvek s typovou datovou sadou. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
 - TableAdapter, který připojuje typovou datovou sadu k databázi. Další informace najdete v tématu [Vytvoření a konfigurace objekty TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
 - TableAdapterManager, který se používá ke koordinaci tabulkových adaptérů v datové sadě za účelem povolení hierarchických aktualizací. Další informace najdete v tématu [Hierarchická aktualizace](../data-tools/hierarchical-update.md) a [TableAdapterManager reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí <xref:System.Windows.Forms.BindingSource> můžete uživatelům umožnit procházení záznamů.
+Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat. Pomocí nástroje můžete <xref:System.Windows.Forms.BindingSource> uživatelům umožnit procházení záznamů.
 
 ### <a name="to-scroll-through-the-records"></a>Procházení záznamů
 
-- Použijte <xref:System.Windows.Forms.BindingSource> metody, jako je <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>.
+- Použijte <xref:System.Windows.Forms.BindingSource> metody jako <xref:System.Windows.Forms.BindingSource.MoveNext%2A> a <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)

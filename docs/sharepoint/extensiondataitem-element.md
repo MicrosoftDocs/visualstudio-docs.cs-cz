@@ -1,5 +1,5 @@
 ---
-title: ExtensionDataItem – Element | Dokumentace Microsoftu
+title: Element ExtensionDataItem – | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 658fb63227f4c4532038d537bde7cc10ca2c4f5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 295ee649cec01e50b237b4fad1798806d460727b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967380"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546546"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem – element
-  Vlastní datová položka, která je přidružená k položce projektu služby SharePoint, ve formátu klíč/hodnota. Klíč a hodnotu musí být řetězce.
+  Vlastní datová položka, která je přidružena k položce projektu služby SharePoint, ve formátu klíč/hodnota. Klíč i hodnota musí být řetězce.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ExtensionDataItem Key = "Key of the data item"
@@ -36,8 +36,8 @@ ms.locfileid: "62967380"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|**Key**|Vyžaduje **xs: řetězec** atribut.<br /><br /> Klíč, který se používá k ukládání a načítání datová položka.|
-|**Hodnota**|Vyžaduje **xs:string** atribut.<br /><br /> Hodnota datová položka.|
+|**Klíč**|Požadován atribut **xs: String** .<br /><br /> Klíč, který se používá k uložení a načtení datové položky.|
+|**Hodnota**|Požadován atribut **xs: String** .<br /><br /> Hodnota datové položky.|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -46,19 +46,19 @@ ms.locfileid: "62967380"
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|Představuje kolekci vlastních datových položek, které jsou spojeny s položku Sharepointového projektu.|
+|[ExtensionData –](../sharepoint/extensiondata-element.md)|Představuje kolekci vlastních datových položek, které jsou přidruženy k položce projektu služby SharePoint.|
 
 ## <a name="remarks"></a>Poznámky
- Po přidružení vlastních dat k položky Sharepointového projektu s použitím <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> vlastnost <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> objektu, Visual Studio uloží data do nového **ExtensionDataItem –** element v `.spdata` souboru Položka projektu. Další informace najdete v tématu [ukládání dat do rozšíření systému projektu služby SharePoint](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Při přidružení vlastních dat k položce projektu služby SharePoint pomocí <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> vlastnosti <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> objektu aplikace Visual Studio uloží data do nového prvku **ExtensionDataItem –** v `.spdata` souboru pro položku projektu. Další informace naleznete v tématu [uložení dat v rozšíření systému projektu služby SharePoint](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
 
 ## <a name="element-information"></a>Informace o elementu
 
-|||
+|Vlastnost|Hodnota|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Název schématu**|Schéma položky projektu služby SharePoint|
-|**Soubor ověření**|ProjectItemModelSchema.xsd|
-|**Může být prázdný**|Ne|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Název schématu**|Schéma položek projektu služby SharePoint|
+|**Soubor ověření**|ProjectItemModelSchema. xsd|
+|**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

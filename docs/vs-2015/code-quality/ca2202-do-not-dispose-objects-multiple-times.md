@@ -15,42 +15,42 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e0be715d8aea84fac53ea2a796e71850b961730c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 31bf7fe33aa59c3a713d2da81ddbd11ed6899723
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667405"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546286"
 ---
 # <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202: Neuvolňujte objekty několikrát
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotDisposeObjectsMultipleTimes|
 |CheckId|CA2202|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Implementace metody obsahuje cesty kódu, které by mohly způsobit více volání <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> nebo ekvivalent Dispose, jako je například metoda Close () u některých typů na stejném objektu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Správně implementovaná <xref:System.IDisposable.Dispose%2A> metoda může být volána několikrát bez vyvolání výjimky. Nicméně to není zaručeno a vyhnout se generování <xref:System.ObjectDisposedException?displayProperty=fullName> byste neměli volat <xref:System.IDisposable.Dispose%2A> více než jednou pro objekt.
+ Správně implementovaná <xref:System.IDisposable.Dispose%2A> metoda může být volána víckrát bez vyvolání výjimky. Nicméně to není zaručeno a vyhnout se generování <xref:System.ObjectDisposedException?displayProperty=fullName> , neměli byste volat pro <xref:System.IDisposable.Dispose%2A> objekt více než jednou.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA2000: Uvolňujte objekty před ztrátou oboru](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte implementaci tak, aby bez ohledu na cestu kódu byla <xref:System.IDisposable.Dispose%2A> pro objekt volána pouze jednou.
+ Chcete-li opravit porušení tohoto pravidla, změňte implementaci tak, aby nezávisle na cestě kódu byly <xref:System.IDisposable.Dispose%2A> pro objekt volány pouze jednou.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. I v případě, že je známo, že <xref:System.IDisposable.Dispose%2A> pro objekt je možné bezpečně volat, implementace se může v budoucnu změnit.
+ Nepotlačujte upozornění na toto pravidlo. I v případě, že je známo, že se má <xref:System.IDisposable.Dispose%2A> u objektu bezpečně volat vícenásobně, implementace se může v budoucnu změnit.
 
 ## <a name="example"></a>Příklad
- Vnořené příkazy `using` (`Using` v Visual Basic) mohou způsobit porušení upozornění CA2202. Pokud prostředek IDisposable vnořeného příkazu vnitřní `using` obsahuje prostředek vnějšího příkazu `using`, metoda `Dispose` vnořeného prostředku uvolní obsažený prostředek. Pokud k této situaci dojde, pokusí se metoda `Dispose` vnějšího příkazu `using` uvolnit svůj prostředek podruhé.
+ Vnořené `using` příkazy ( `Using` v Visual Basic) mohou způsobit porušení upozornění CA2202. Pokud prostředek IDisposable vnořeného vnitřního `using` příkazu obsahuje prostředek vnějšího `using` příkazu, `Dispose` Metoda vnořeného prostředku uvolní obsažený prostředek. Pokud dojde k této situaci, `Dispose` Metoda vnějšího `using` příkazu se pokusí o odstranění svého prostředku podruhé.
 
- V následujícím příkladu je objekt <xref:System.IO.Stream>, který je vytvořen v vnějším příkazu Using, vydán na konci vnitřního příkazu Using v metodě Dispose objektu <xref:System.IO.StreamWriter>, který obsahuje objekt `stream`. Na konci vnějšího příkazu `using` se objekt `stream` uvolní podruhé. Druhá verze je porušení CA2202.
+ V následujícím příkladu <xref:System.IO.Stream> je objekt, který je vytvořen v vnějším příkazu Using, vydán na konci vnitřního příkazu Using v metodě Dispose <xref:System.IO.StreamWriter> objektu, který obsahuje `stream` objekt. Na konci vnějšího příkazu se `using` `stream` objekt uvolní podruhé. Druhá verze je porušení CA2202.
 
 ```
 using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
@@ -63,7 +63,7 @@ using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
 ```
 
 ## <a name="example"></a>Příklad
- Chcete-li tento problém vyřešit, použijte místo vnějšího příkazu `using` `try` / `finally` blok. V bloku `finally` zajistěte, aby prostředek `stream` nebyl null.
+ Chcete-li tento problém vyřešit, použijte `try` / `finally` místo vnějšího `using` příkazu blok. V bloku Ujistěte se `finally` , že `stream` prostředek není null.
 
 ```
 Stream stream = null;
@@ -84,4 +84,4 @@ finally
 ```
 
 ## <a name="see-also"></a>Viz také
- [vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb) <xref:System.IDisposable?displayProperty=fullName>
+ <xref:System.IDisposable?displayProperty=fullName>[Vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

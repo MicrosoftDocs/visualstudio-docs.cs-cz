@@ -1,18 +1,18 @@
 ---
 title: Řízení viditelnosti ikony či dekorátoru
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76db7caa14050c924706763214e92a6ee3d68975
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748492"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546639"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Řízení viditelnosti ikony či dekorátoru
 *Dekoratér* je ikona nebo řádek textu, který se zobrazí na obrazci v jazyce specifickém pro doménu (DSL). Dekoratér se může zobrazit a zmizí v závislosti na stavu vlastností v modelu. Například na tvaru, který představuje osobu, můžete mít různé ikony, které se zobrazí v závislosti na pohlaví osoby, počtu podřízených objektů atd.
@@ -58,13 +58,13 @@ ms.locfileid: "72748492"
 
 1. Do doménové třídy přidejte vypočítanou vlastnost domény. V okně **vlastnosti** nastavte následující hodnoty:
 
-     **Proprocházetelné =** `False` **– skryje vlastnost od uživatele** .
+     **Proprocházetelné =** `False` **– Tato vlastnost skrývá uživatele** .    
 
-     **Druh =** `Calculated` **– to znamená, že budete poskytovat kód, který vypočítá jeho hodnotu**
+     **Druh =** `Calculated` **– to znamená, že budete poskytovat kód, který vypočítá jeho hodnotu** .    
 
      **Název** například **DecoratorControl**
 
-     **Zadejte**  =  `Boolean`
+     **Textový** = `Boolean`
 
      Další informace najdete v tématu věnovaném [vypočítaným a vlastním vlastnostem úložiště](../modeling/calculated-and-custom-storage-properties.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "72748492"
 
     3. V poli **vlastnost filtru**vyberte vlastnost ovládacího prvku **DecoratorControl**.
 
-    4. V části **položky viditelnosti**zadejte `True`.
+    4. V části **položky viditelnosti**zadejte `True` .
 
 3. Na panelu nástrojů **Průzkumník řešení** klikněte na **transformovat všechny šablony** .
 
@@ -103,7 +103,7 @@ ms.locfileid: "72748492"
 
 8. Znovu sestavte a spusťte řešení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 519faf2d49cb74d60d342d6bcf449f211076b0b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 118c29473db09d5ed0a4fa447e27e593a88f98b3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661088"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546754"
 ---
-# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Nepřetěžujte operátory rovnosti na odkazových typech
+# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Nepřetěžujte operátory rovnosti u odkazových typů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo vnořený typ veřejného odkazu přetěžuje operátor rovnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -56,12 +56,12 @@ ms.locfileid: "72661088"
 
  Tento příklad vytvoří následující výstup.
 
- **a = nové (2, 2) a b = nové (2, 2) jsou stejné? Ne** 
-**c a a jsou stejné? Ano** 
-**b a a jsou = =? Žádné** 
-**c a je = =? Ano**
+ **a = nové (2, 2) a b = nové (2, 2) jsou stejné? Neodpovídají žádné** 
+ **c a a. Ano** 
+ **b a a jsou = =? Ne** 
+ **c a a jsou = =? Ano**
 ## <a name="related-rules"></a>Související pravidla
  [CA1013: Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
 ## <a name="see-also"></a>Viz také
- [operátory rovnosti](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a) <xref:System.Object.Equals%2A?displayProperty=fullName>
+ <xref:System.Object.Equals%2A?displayProperty=fullName>[Operátory rovnosti](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

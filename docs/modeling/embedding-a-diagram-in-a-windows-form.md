@@ -1,18 +1,18 @@
 ---
 title: Vložení diagramu do formuláře Windows
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94425c9f3bc586847f43589f7abdcef2295cf1b9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114622"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547625"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Vložení diagramu do formuláře Windows
 
@@ -67,7 +67,7 @@ Diagram DSL lze vložit do ovládacího prvku systému Windows, který se zobraz
 
 ## <a name="update-the-form-using-store-events"></a>Aktualizace formuláře pomocí událostí úložiště
 
-1. V návrháři formuláře přidejte **seznam** s názvem `listBox1`. Tím se zobrazí seznam elementů v modelu. Je synchronizován s modelem pomocí *událostí úložiště*. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. V návrháři formuláře přidejte **seznam** s názvem `listBox1` . Tím se zobrazí seznam elementů v modelu. Je synchronizován s modelem pomocí *událostí úložiště*. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 2. V souboru vlastního kódu přepište další metody do třídy objekt DocView:
 
@@ -141,7 +141,7 @@ Diagram DSL lze vložit do ovládacího prvku systému Windows, který se zobraz
 
      Všimněte si, že seznam obsahuje seznam prvků v modelu a že je správný po přidání nebo odstranění a po vrácení a opakování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v modelu a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [Zápis kódu pro úpravu jazyka specifického pro doménu](../modeling/writing-code-to-customise-a-domain-specific-language.md)

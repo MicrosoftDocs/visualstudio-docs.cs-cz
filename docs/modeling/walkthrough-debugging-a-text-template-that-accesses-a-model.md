@@ -1,18 +1,18 @@
 ---
 title: 'Návod: Ladění textové šablony přistupující k modelu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f592cfbd46e0f4fc3a64ecaabadf17a6754480c0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e33297bba899c1843b8601c031d7669531a1bd3f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593522"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546897"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Návod: Ladění textové šablony přistupující k modelu
 Když upravujete nebo přidáváte textové šablony v řešení jazyka specifického pro doménu, může dojít k chybám, když modul transformuje šablonu na zdrojový kód nebo když zkompiluje generovaný kód. Následující návod ukazuje některé z akcí, které můžete provést při ladění textové šablony.
@@ -40,12 +40,12 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
 1. Sestavte řešení a začněte ho spouštět v ladicím programu. (V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**a potom v nabídce **ladění** klikněte na příkaz **Spustit ladění**.) Nová instance aplikace Visual Studio otevře ladění projektu.
 
-2. Přidejte textový soubor s názvem `DebugTest.tt` do ladicího projektu.
+2. Přidejte textový soubor s názvem `DebugTest.tt` do projektu ladění.
 
-3. Ujistěte se, že vlastnost **Custom Tool** třídy DebugTest.TT je nastavená na `TextTemplatingFileGenerator`.
+3. Ujistěte se, že vlastnost **Custom Tool** třídy DebugTest.TT je nastavená na `TextTemplatingFileGenerator` .
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Direktivy ladění, které přistupují k modelu z textové šablony
- Předtím, než budete moci získat přístup k modelu z příkazů a výrazů v textové šabloně, je nutné nejprve volat generovaný procesor direktiv. Volání vygenerovaného procesoru direktiv zpřístupňuje třídy v modelu pro kód textové šablony jako vlastnosti. Další informace najdete v tématu [přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md).
+ Předtím, než budete moci získat přístup k modelu z příkazů a výrazů v textové šabloně, je nutné nejprve volat generovaný procesor direktiv. Volání vygenerovaného procesoru direktiv zpřístupňuje třídy v modelu pro kód textové šablony jako vlastnosti. Další informace naleznete v tématu [přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md).
 
  V následujících postupech budete ladit nesprávný název direktivy a název nesprávného názvu vlastnosti.
 
@@ -93,11 +93,11 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
      **Procesor nazvaný ' DebuggingTestLanguageDirectiveProcessor ' nepodporuje direktivu nazvanou ' modelRoot '. Transformace se nespustí.**
 
-     V tomto případě volání direktivy obsahuje nesprávný název direktivy. Zadali jste `modelRoot` jako název direktivy, ale správný název direktivy je `DebuggingTestLanguage`.
+     V tomto případě volání direktivy obsahuje nesprávný název direktivy. Zadali jste `modelRoot` jako název direktivy, ale správný název direktivy je `DebuggingTestLanguage` .
 
 3. Dvojitým kliknutím na chybu v okně **Seznam chyb** přejdete do kódu.
 
-4. Chcete-li tento kód opravit, změňte název direktivy na `DebuggingTestLanguage`.
+4. Chcete-li opravit kód, změňte název direktivy na `DebuggingTestLanguage` .
 
      Změna je zvýrazněna.
 
@@ -157,13 +157,13 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
      (C#)
 
-     **Kompilace transformace: Microsoft. VisualStudio. TextTemplating\<GUID >. GeneratedTextTransformation neobsahuje definici pro ' ExampleModel '.**
+     **Kompilování transformace: Microsoft. VisualStudio. TextTemplating \<GUID> . GeneratedTextTransformation neobsahuje definici pro ' ExampleModel '.**
 
      (Visual Basic)
 
-     **Kompilace transformace: ExampleModel není členem Microsoft. VisualStudio. TextTemplating\<GUID >. GeneratedTextTransformation'.**
+     **Kompilace transformace: ' ExampleModel ' není členem ' Microsoft. VisualStudio. TextTemplating \<GUID> . GeneratedTextTransformation'.**
 
-     V tomto případě kód textové šablony obsahuje nesprávný název vlastnosti. Zadali jste `ExampleModel` jako název vlastnosti, ale správný název vlastnosti je `LibraryModel`. Správný název vlastnosti můžete najít v parametru poskytuje, jak je znázorněno v následujícím kódu:
+     V tomto případě kód textové šablony obsahuje nesprávný název vlastnosti. Zadali jste `ExampleModel` název vlastnosti, ale správný název vlastnosti je `LibraryModel` . Správný název vlastnosti můžete najít v parametru poskytuje, jak je znázorněno v následujícím kódu:
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
@@ -171,9 +171,9 @@ Když upravujete nebo přidáváte textové šablony v řešení jazyka specific
 
 3. Dvojitým kliknutím na chybu v okně Seznam chyb přejdete do kódu.
 
-4. Chcete-li tento kód opravit, změňte název vlastnosti na `LibraryModel` v kódu textové šablony.
+4. Chcete-li opravit kód, změňte název vlastnosti na `LibraryModel` v kódu textové šablony.
 
-     Změny jsou zvýrazněné.
+     Změny jsou zvýrazněny.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>

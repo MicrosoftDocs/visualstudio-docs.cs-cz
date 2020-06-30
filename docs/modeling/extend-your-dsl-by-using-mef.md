@@ -1,18 +1,18 @@
 ---
 title: Rozšíření vašeho DSL pomocí MEF
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8e4898ba6c87f25b38a6c3e42032412d69d8ece
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596603"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547638"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
 
@@ -26,7 +26,7 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
 
 1. V projektu **DslPackage** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
-     Název souboru: `CommandExtensionVSCT.tt`
+     Název souboru:`CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
     > Nastavte identifikátor GUID v tomto souboru tak, aby byl stejný jako CommandSetId identifikátor GUID, který je definovaný v DslPackage\GeneratedCode\Constants.tt.
@@ -42,21 +42,21 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
     ```
 
-    Název souboru: `CommandExtensionRegistrar.tt`
+    Název souboru:`CommandExtensionRegistrar.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
     ```
 
-    Název souboru: `ValidationExtensionEnablement.tt`
+    Název souboru:`ValidationExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
     ```
 
-    Název souboru: `ValidationExtensionRegistrar.tt`
+    Název souboru:`ValidationExtensionRegistrar.tt`
 
     Pokud tento soubor přidáte, musíte v rámci DSL povolit ověřování pomocí aspoň jednoho přepínače v **EditorValidation** v Průzkumníku DSL.
 
@@ -65,7 +65,7 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
     ```
 
-    Název souboru: `PackageExtensionEnablement.tt`
+    Název souboru:`PackageExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -74,21 +74,21 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
 
 2. V projektu **DSL** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
-     Název souboru: `DesignerExtensionMetaDataAttribute.tt`
+     Název souboru:`DesignerExtensionMetaDataAttribute.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
     ```
 
-    Název souboru: `GestureExtensionEnablement.tt`
+    Název souboru:`GestureExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
     ```
 
-    Název souboru: `GestureExtensionController.tt`
+    Název souboru:`GestureExtensionController.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -101,13 +101,13 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
     ```
 
-    Vložte řádek po existující direktivě `<Include>`.
+    Vložte řádek za existující `<Include>` direktivou.
 
 4. Otevřete *DslDefinition. DSL*.
 
 5. V Průzkumníku DSL vyberte **Editor\Validation**.
 
-6. V okno Vlastnosti zajistěte, aby alespoň jedna z vlastností s názvem **použití** byla `true`.
+6. V okno Vlastnosti zajistěte, aby alespoň jedna z vlastností s názvem **používá** `true` .
 
 7. Na panelu nástrojů **Průzkumník řešení** klikněte na možnost **transformovat všechny šablony**.
 
@@ -127,9 +127,9 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
 2. V novém projektu přidejte odkaz na sestavení DSL.
 
-   - Toto sestavení obvykle má název, který končí na. DSL. dll ".
+   - Toto sestavení obvykle má název, který končí na ".Dsl.dll".
 
-   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL\\\\\***
+   - Máte-li přístup k projektu DSL, můžete najít soubor sestavení v adresáři **DSL \\ \\ \* ** .
 
    - Máte-li přístup k souboru VSIX DSL, můžete najít sestavení změnou přípony názvu souboru VSIX na ". zip". Dekomprimuje soubor. zip.
 
@@ -157,7 +157,7 @@ Máte-li přístup k DSL podporujícímu MEF, kterou vytvořila nebo někomu jin
 
    1. Ve **zdroji. extension. vsixmanifest**klikněte na **Přidat odkaz** .
 
-   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage\\bin\\\*** .
+   2. V dialogovém okně klikněte na **Přidat datovou část** a pak vyhledejte soubor VSIX pro DSL. Soubor VSIX je sestaven v řešení DSL v **DslPackage \\ bin \\ \* **.
 
        To umožní uživatelům instalovat DSL a rozšíření ve stejnou dobu. Pokud uživatel už má nainstalovanou DSL, nainstaluje se jenom vaše rozšíření.
 
@@ -175,9 +175,9 @@ Můžete zapisovat rozšíření v projektu kódu sestavení samostatného řeš
 
 ### <a name="menu-commands"></a>Příkazy nabídky
 
-Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixujte třídu s atributem definovaným v DSL s názvem *YourDsl*`CommandExtension`. Můžete napsat více než jednu třídu příkazu nabídky.
+Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixuje třídu s atributem definovaným v DSL s názvem *YourDsl* `CommandExtension` . Můžete napsat více než jednu třídu příkazu nabídky.
 
-`QueryStatus()` se volá vždycky, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled`, které určují, kdy se má příkaz použít.
+`QueryStatus()`je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled` , aby označoval, kdy je možné příkaz použít.
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -321,7 +321,7 @@ namespace MefExtension
 
 ### <a name="validation-constraints"></a>Omezení ověřování
 
-Metody ověřování jsou označeny atributem `ValidationExtension`, který je generován pomocí DSL, a také pomocí <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>. Metoda se může objevit v jakékoli třídě, která není označená atributem.
+Metody ověřování jsou označeny `ValidationExtension` atributem, který je generován pomocí DSL a také pomocí <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> . Metoda se může objevit v jakékoli třídě, která není označená atributem.
 
 Další informace najdete v tématu [ověření v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md).
 
@@ -372,9 +372,9 @@ namespace MefExtension
 } } } }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
-- [MEF (Managed Extensibility Framework)](/dotnet/framework/mef/index)
+- [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Ověřování v jazyce specifickém pro doménu](../modeling/validation-in-a-domain-specific-language.md)

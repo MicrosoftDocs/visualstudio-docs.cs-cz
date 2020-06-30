@@ -15,12 +15,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7138784201a1ac036047e1c8df362727fa393b51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e9dbd245edd81907197e23c0d193a01cc07424b4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72620778"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548106"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Přidání podpory editoru sady Visual Studio pro jiné jazyky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,18 +34,46 @@ Přečtěte si, jak editor sady Visual Studio podporuje čtení a navigaci v rů
 
  Visual Studio aktuálně poskytuje barevné zvýrazňování syntaxe a podporu dokončování příkazů pro následující jazyky pomocí [TextMate gramatik](https://manual.macromates.com/en/language_grammars). Pokud váš oblíbený jazyk není v tabulce, ale nedělejte si starosti – můžete ho přidat.
 
-|||||||
-|-|-|-|-|-|-|
-|Bat|F#|Java|Markdownu|Rust|Visual Basic|
-|Clojure|Jděte|JavaDoc|Objective-C|ShaderLab|Visual C#|
-|CMake|Groovy|FORMÁT JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|TOLIK|Python|SQL|VBNet|
-|CSS|UŽÍVANÝ|LUA|R|SWIFT|XML|
-|Docker|Jade|Značka|Ruby|TypeScript|YAML|
+- Bat
+- F#
+- Java
+- Markdown
+- Rust
+- Visual Basic
+- Clojure
+- Go
+- JavaDoc
+- Objective-C
+- ShaderLab
+- C#
+- CMake
+- Groovy
+- JSON
+- Perl
+- ShellScript
+- Visual C++
+- CoffeeScript
+- HTML
+- TOLIK
+- Python
+- SQL
+- VBNet
+- CSS
+- INI
+- LUA
+- R
+- Swift
+- XML
+- Docker
+- Jade
+- Značka
+- Ruby
+- TypeScript
+- YAML
 
  Kromě barevného zabarvení syntaxe a základního dokončování příkazů má Visual Studio také funkci s názvem [Přejít na](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/). Tato funkce umožňuje rychle vyhledat soubory kódu, cesty k souborům a symboly kódu. Visual Studio poskytuje podporu pro následující jazyky.
 
-- Jděte
+- Přejít
 
 - Java
 
@@ -68,17 +96,17 @@ Přečtěte si, jak editor sady Visual Studio podporuje čtení a navigaci v rů
 
  Přidejte všechny nové gramatiky TextMate pro Visual Studio do následující složky:
 
- % USERPROFILE% \\. vs\Extensions
+ % USERPROFILE% \\ . vs\Extensions
 
  V rámci této základní cesty přidejte následující složky, pokud se na vaši situaci vztahují:
 
 |Název složky|Popis|
 |-----------------|-----------------|
-|*název \<language \\ >*|Složka jazyka Nahraďte *\<language název >* názvem jazyka. Například **\Matlab**.|
-|\Syntaxes|Složka gramatiky. Obsahuje soubory gramatiky. JSON pro jazyk, například **MATLAB. JSON**.|
+|\\*\<language name>*|Složka jazyka Nahraďte *\<language name>* názvem jazyka. Například **\Matlab**.|
+|\Syntaxes|Složka gramatiky. Obsahuje soubory gramatiky. JSON pro jazyk, například **Matlab.js**.|
 |\Snippets|Složka fragmenty. Obsahuje fragmenty kódu pro daný jazyk.|
 
- V systému Windows se% USERPROFILE% překládá na cestu: c:\Users \\ *\<user název >* . Pokud složka rozšíření v systému neexistuje, budete ji muset vytvořit. Pokud složka již existuje, bude skrytá.
+ V systému Windows se% USERPROFILE% překládá na cestu: c:\Users \\ *\<user name>* . Pokud složka rozšíření v systému neexistuje, budete ji muset vytvořit. Pokud složka již existuje, bude skrytá.
 
  Podrobnosti o tom, jak vytvořit TextMate gramatiky, najdete v tématu [TextMate – Úvod do jazykových gramatik: jak přidat zvýrazňování syntaxe zdrojového kódu vloženého do HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) a [poznámky k vytvoření jazykové gramatiky a vlastní motiv pro sadu TextMate](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
 

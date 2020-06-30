@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: hledání textu v oblastech listů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0ffc06c2f50f7a304ef76ac1451ee47419143afb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4d35d24f9132a9b279316b53fbb13e3bfa094994
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985824"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547027"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Postupy: hledání textu v oblastech listů prostřednictvím kódu programu
-  Metoda <xref:Microsoft.Office.Interop.Excel.Range.Find%2A> objektu <xref:Microsoft.Office.Interop.Excel.Range> umožňuje vyhledávat text v rámci rozsahu. Tento text může také obsahovat libovolný z chybových řetězců, které se mohou objevit v buňce listu, například `#NULL!` nebo `#VALUE!`. Další informace o chybových řetězcích najdete v tématu [hodnoty chyb buněk](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).
+  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Metoda <xref:Microsoft.Office.Interop.Excel.Range> objektu umožňuje vyhledávat text v rámci rozsahu. Tento text může také obsahovat libovolný z chybových řetězců, které se mohou objevit v buňce listu, jako je například `#NULL!` nebo `#VALUE!` . Další informace o chybových řetězcích najdete v tématu [hodnoty chyb buněk](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Následující příklad vyhledá rozsah s názvem `Fruits` a upraví písmo pro buňky, které obsahují slovo "jablka". Tento postup také používá metodu <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>, která pomocí dříve nastaveného nastavení hledání opakuje hledání. Zadejte buňku, která se má hledat, a metoda <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> zpracuje zbytek.
+ Následující příklad vyhledá rozsah s názvem `Fruits` a upraví písmo pro buňky, které obsahují slovo "jablka". Tento postup také používá <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> metodu, která pomocí dříve nastaveného nastavení hledání opakuje hledání. Zadejte buňku, po které chcete hledat, a <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> metoda zpracuje zbytek.
 
 > [!NOTE]
-> Hledání metody <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> zabalí zpět na začátek rozsahu hledání poté, co dosáhlo konce rozsahu. Váš kód musí zajistit, aby se hledání Nezalamovat v nekonečné smyčce. Ukázkový postup ukazuje jeden ze způsobů, jak tuto funkci zpracovat pomocí vlastnosti <xref:Microsoft.Office.Interop.Excel.Range.Address%2A>.
+> <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>Vyhledávání metody zalomí zpět na začátek rozsahu hledání poté, co dosáhlo konce rozsahu. Váš kód musí zajistit, aby se hledání Nezalamovat v nekonečné smyčce. Vzorový postup ukazuje jeden ze způsobů, jak tuto funkci zpracovat pomocí <xref:Microsoft.Office.Interop.Excel.Range.Address%2A> Vlastnosti.
 
 ## <a name="to-search-for-text-in-a-worksheet-range"></a>Hledání textu v rozsahu listu
 
@@ -48,7 +48,7 @@ ms.locfileid: "72985824"
     [!code-csharp[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#60)]
     [!code-vb[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#60)]
 
-4. Porovnejte první nalezený rozsah (`firstFind`) s **žádným**. Pokud `firstFind` neobsahují žádnou hodnotu, kód si uloží pryč nalezený rozsah (`currentFind`).
+4. Porovnejte první nalezený rozsah ( `firstFind` ) s **žádným**. Pokud `firstFind` neobsahuje žádnou hodnotu, kód si uloží pryč nalezený rozsah ( `currentFind` ).
 
     [!code-csharp[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#61)]
     [!code-vb[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#61)]
@@ -74,7 +74,7 @@ ms.locfileid: "72985824"
  [!code-csharp[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#57)]
  [!code-vb[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#57)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s rozsahy](../vsto/working-with-ranges.md)
 - [Postupy: používání stylů pro oblasti v sešitech prostřednictvím kódu programu](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
 - [Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)

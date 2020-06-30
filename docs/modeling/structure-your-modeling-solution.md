@@ -1,18 +1,18 @@
 ---
 title: Strukturujte svá řešení modelování
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57edf4253840294968238793bf9f3b24326a1e3f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cc4eba7dc4d185cbd8eb4f1b073fce8b0c9fb07e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591941"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545038"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
 
@@ -20,7 +20,7 @@ Chcete-li efektivně používat modely ve vývojovém projektu, členové týmu 
 
 Chcete-li spustit projekt nebo dílčí projekt rychle, je vhodné mít šablonu projektu, která následuje za strukturou projektu, kterou jste si zvolili. Toto téma popisuje, jak vytvořit a používat takovou šablonu.
 
-Toto téma předpokládá, že pracujete na projektu, který je dostatečně velký, aby vyžadoval několik členů týmu a možná má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojového kódu, jako je například [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]. Aspoň někteří členové týmu používají Visual Studio k vývoji modelů a jiní členové týmu mohou zobrazit modely pomocí jiných verzí sady Visual Studio.
+Toto téma předpokládá, že pracujete na projektu, který je dostatečně velký, aby vyžadoval několik členů týmu a možná má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojového kódu, jako je [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] . Aspoň někteří členové týmu používají Visual Studio k vývoji modelů a jiní členové týmu mohou zobrazit modely pomocí jiných verzí sady Visual Studio.
 
 Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé funkce nástrojů a modelování, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -72,7 +72,7 @@ Ve středních nebo rozsáhlých projektech je struktura týmu založena na stru
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Použít samostatný balíček pro každou vrstvu
 
-1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení, přejděte na **přidat**a potom klikněte na tlačítko **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
+1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel řešení, přejděte na **Přidat**a pak klikněte na **existující projekt**. K jednomu projektu modelování se teď dá dostat z každého Řešení: projekt architektury a vývojový projekt pro každou vrstvu.
 
 2. Ve sdíleném modelu vytvořte balíček pro každou vrstvu: v **Průzkumník řešení**vyberte projekt modelování. V **Průzkumníku modelů UML**klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **Přidat**a pak klikněte na **balíček**.
 
@@ -102,11 +102,11 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 4. Podle pokynů v průvodci vyberte projekty, které chcete zahrnout do šablony, zadejte název a popis šablony a zadejte umístění výstupu.
 
-## <a name="watch-a-video"></a>Podívejte se na video
+## <a name="watch-a-video"></a>Přehrát video
 
 [Uspořádání a Správa modelů](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
 - [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)

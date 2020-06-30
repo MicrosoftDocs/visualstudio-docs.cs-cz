@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 487047b7dd3096e65a6e287d79d91d3029f3dc5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 12132622900d5698a6b78a1914c687a369d7dc03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608984"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547729"
 ---
-# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Delegáti musejí být připojeni k metodám s konzistentní transparentností
+# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Delegáti musí mít vazbu s metodami s konzistentní transparentností
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DelegatesMustBindWithConsistentTransparency|
 |CheckId|CA2133|
@@ -31,8 +31,8 @@ ms.locfileid: "72608984"
 > [!NOTE]
 > Toto upozornění je použito pouze pro kód, na kterém je spuštěn CoreCLR (verze modulu CLR, která je specifická pro webové aplikace Silverlight).
 
-## <a name="cause"></a>příčina
- Toto upozornění se aktivuje u metody, která váže delegáta, který je označený pomocí <xref:System.Security.SecurityCriticalAttribute>, k metodě, která je průhledná nebo která je označena <xref:System.Security.SecuritySafeCriticalAttribute>. Upozornění je také vyvoláno na metodě, která vytvoří vazbu transparentního delegáta nebo bezpečně kritického delegáta na kritickou metodu.
+## <a name="cause"></a>Příčina
+ Toto upozornění se aktivuje u metody, která váže delegáta, který je označený <xref:System.Security.SecurityCriticalAttribute> na metodu, která je průhledná nebo která je označena atributem <xref:System.Security.SecuritySafeCriticalAttribute> . Upozornění je také vyvoláno na metodě, která vytvoří vazbu transparentního delegáta nebo bezpečně kritického delegáta na kritickou metodu.
 
 ## <a name="rule-description"></a>Popis pravidla
  Typy delegátů a metody, které jsou vázány na, musí mít konzistentní transparentnost. Transparentní a bezpečně kritické delegáti mohou být vázáni pouze na jiné transparentní nebo bezpečné metody kritické. Podobně, kritické delegáti mohou být vázáni pouze na kritické metody. Tato pravidla vazby zajišťují, že jediný kód, který může vyvolat metodu prostřednictvím delegáta, by mohl také vyvolat stejnou metodu přímo. Například pravidla vazby zabraňují transparentnímu kódu ve volání kritického kódu přímo prostřednictvím transparentního delegáta.

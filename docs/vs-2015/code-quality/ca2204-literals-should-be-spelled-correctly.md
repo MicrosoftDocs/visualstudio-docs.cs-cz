@@ -15,30 +15,30 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d3e94f308936f898e555b1ad38e6a9d50051a276
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ecf829251cbeab600cb95f8f0c0b0173cd7338d4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659542"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546273"
 ---
 # <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: Literály by měly být zadány správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|LiteralsShouldBeSpelledCorrectly|
 |CheckId|CA2204|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda předává literální řetězec do, který je použit v parametru nebo vlastnosti, který vyžaduje lokalizovaný řetězec a řetězcový literál obsahuje jedno nebo více slov, která nejsou rozpoznána knihovnou kontroly pravopisu společnosti Microsoft.
 
 ## <a name="rule-description"></a>Popis pravidla
  Toto pravidlo zkontroluje literálový řetězec, který je předán jako hodnota parametru nebo vlastnosti v případě, že jeden nebo více následujících případů je pravdivé:
 
-- Atribut <xref:System.ComponentModel.LocalizableAttribute> parametru nebo vlastnosti je nastaven na hodnotu true.
+- <xref:System.ComponentModel.LocalizableAttribute>Atribut parametru nebo vlastnosti je nastaven na hodnotu true.
 
 - Název parametru nebo vlastnosti obsahuje text "text", "zpráva" nebo "titulek".
 

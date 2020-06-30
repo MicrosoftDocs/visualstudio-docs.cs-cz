@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1b7c4c82add8644a1c2c213536c2ad3c0097c3a6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 30eee67d54e4fc3c73b265240fff82b0729e1cfc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661981"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546643"
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023: Indexery by neměly být multidimenzionální
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IndexersShouldNotBeMultidimensional|
 |CheckId|CA1023|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo chráněný typ obsahuje veřejný nebo chráněný indexer, který používá více než jeden index.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,7 +45,7 @@ ms.locfileid: "72661981"
  Potlačí upozornění z tohoto pravidla až po pečlivém zvážení nutnosti nestandardního indexeru.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, `DayOfWeek03` s multidimenzionálním indexerem, který porušuje pravidlo. Indexer se může zobrazit jako typ převodu, a proto je lépe přístupný jako metoda. Typ je přepracován v `RedesignedDayOfWeek03` pro splnění pravidla.
+ Následující příklad ukazuje typ `DayOfWeek03` s multidimenzionálním indexerem, který porušuje pravidlo. Indexer se může zobrazit jako typ převodu, a proto je lépe přístupný jako metoda. Typ je přepracován v `RedesignedDayOfWeek03` pro splnění pravidla.
 
  [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.OneDimensionForIndexer/cpp/FxCop.Design.OneDimensionForIndexer.cpp#1)]
  [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.OneDimensionForIndexer/cs/FxCop.Design.OneDimensionForIndexer.cs#1)]

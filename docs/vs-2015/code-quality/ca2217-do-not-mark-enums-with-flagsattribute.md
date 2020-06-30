@@ -15,28 +15,28 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 73f94c45568a55cc098dd223deca9dab404f44ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b584e355f5b64984f57dd17606dfb0a2f781c62d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651637"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547664"
 ---
 # <a name="ca2217-do-not-mark-enums-with-flagsattribute"></a>CA2217: Neoznačujte výčty pomocí FlagsAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotMarkEnumsWithFlags|
 |CheckId|CA2217|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Externě viditelný výčet je označený <xref:System.FlagsAttribute> a má jednu nebo více hodnot, které nejsou mocninou dvou nebo kombinaci dalších definovaných hodnot výčtu.
+## <a name="cause"></a>Příčina
+ Externě viditelný výčet je označený jako <xref:System.FlagsAttribute> a má jednu nebo více hodnot, které nejsou mocninou dvou nebo kombinaci dalších definovaných hodnot výčtu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Výčet by měl mít <xref:System.FlagsAttribute> k dispozici pouze v případě, že každá hodnota definovaná ve výčtu je mocninou dvou nebo kombinací definovaných hodnot.
+ Výčet by měl být <xref:System.FlagsAttribute> přítomen pouze v případě, že každá hodnota definovaná ve výčtu je mocninou dvou nebo kombinací definovaných hodnot.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, odeberte <xref:System.FlagsAttribute> z výčtu.
@@ -45,7 +45,7 @@ ms.locfileid: "72651637"
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje výčet, Color, který obsahuje hodnotu 3, která není ani mocninou dvou ani kombinace žádné z definovaných hodnot. Výčet barev by neměl být označený <xref:System.FlagsAttribute>.
+ Následující příklad ukazuje výčet, Color, který obsahuje hodnotu 3, která není ani mocninou dvou ani kombinace žádné z definovaných hodnot. Výčet barev by neměl být označen atributem <xref:System.FlagsAttribute> .
 
  [!code-cpp[FxCop.Usage.EnumNoFlags#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.EnumNoFlags/cpp/FxCop.Usage.EnumNoFlags.cpp#1)]
  [!code-csharp[FxCop.Usage.EnumNoFlags#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EnumNoFlags/cs/FxCop.Usage.EnumNoFlags.cs#1)]

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Odstraňování kontaktů aplikace Outlook prostřednictvím kódu programu'
+title: 'Postupy: odstraňování kontaktů aplikace Outlook prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 55ee5698ce1cb36a79a596124dedd681e6da4bdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4412c86652d08fb1c415b4753bfb18a903a0b0d9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814622"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545935"
 ---
-# <a name="how-to-programmatically-delete-outlook-contacts"></a>Postupy: Odstraňování kontaktů aplikace Outlook prostřednictvím kódu programu
-  Tento příklad odstraní kontakt. Příklad předpokládá, že v kontaktu s názvem "Armando Pinto" existuje **kontakty** složky.
+# <a name="how-to-programmatically-delete-outlook-contacts"></a>Postupy: odstraňování kontaktů aplikace Outlook prostřednictvím kódu programu
+  Tento příklad odstraní kontakt. V příkladu se předpokládá, že ve složce **kontaktů** existuje kontakt s názvem "Armando Pinto".
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "62814622"
  [!code-vb[Trin_Outlook_RL_DeleteContacts#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_DeleteContacts/thisaddin.vb#1)]
  [!code-csharp[Trin_Outlook_RL_DeleteContacts#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_DeleteContacts/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
-- [Postupy: Hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
-- [Postupy: Programový přístup ke kontaktům aplikace Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Postupy: hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
+- [Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-access-outlook-contacts.md)

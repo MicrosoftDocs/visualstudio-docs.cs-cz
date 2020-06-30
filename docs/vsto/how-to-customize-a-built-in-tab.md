@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přizpůsobení předdefinované karty'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3550c3bd48a02d5daf4ef7156960e8a8fab3b93a
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5f73ec7a8555a5e5d569d4316ca619747550bf11
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985949"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547183"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Postupy: Přizpůsobení předdefinované karty
   Můžete přidat skupiny a ovládací prvky na integrovanou kartu. Integrovaná karta je karta, která je již na pásu karet aplikace systém Microsoft Office. Karta **data** je například Integrovaná karta v aplikaci Excel. Když vytvoříte vlastní skupinu, zobrazí se na kartě jako poslední, ale skupinu můžete přesunout kdekoli na kartě.
@@ -66,7 +66,7 @@ ms.locfileid: "72985949"
 
      Seznam ID ovládacích prvků najdete v tématu [soubory s nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní pro Office Fluent](https://www.microsoft.com/download/details.aspx?id=6627).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c4484d07c5cfb77a5fa17460859972bc58b219fc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: b12d51ffe3a2e647a067b95d320e8beb70cac384
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985996"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547534"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office
-  Můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu. V době běhu můžete přidat ovládací prvky v přizpůsobení na úrovni dokumentu a v Doplňkech VSTO. Například můžete přidat ovládací prvek <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> do listu, aby si uživatelé mohli vybrat ze seznamu možností.
+  Můžete přidat model Windows Forms ovládací prvky pro systém Microsoft Office Excelu a systém Microsoft Office wordové dokumenty v době návrhu v projektech na úrovni dokumentu. V době běhu můžete přidat ovládací prvky v přizpůsobení na úrovni dokumentu a v Doplňkech VSTO. Můžete například přidat <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> ovládací prvek do listu, aby si uživatelé mohli vybrat ze seznamu možností.
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "72985996"
 
 - [Přidání ovládacích prvků v době běhu v doplňcích VSTO](#runtimeaddin)
 
-## <a name="designtime"></a>Přidat ovládací prvky v době návrhu
+## <a name="add-controls-at-design-time"></a><a name="designtime"></a>Přidat ovládací prvky v době návrhu
  Existuje několik způsobů, jak přidat model Windows Forms ovládací prvky do dokumentu v projektu na úrovni dokumentu v době návrhu.
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
@@ -97,22 +97,22 @@ ms.locfileid: "72985996"
     > [!NOTE]
     > Když vyberete ovládací prvek v aplikaci Excel, zobrazí se na **řádku vzorců** **= vložení ("WinForms. Control. host", ")** . Tento text je nezbytný a neměl by být odstraněn.
 
-## <a name="runtimedoclevel"></a>Přidat ovládací prvky za běhu v projektech na úrovni dokumentu
- V době běhu můžete programově přidat model Windows Forms ovládací prvky do dokumentu. Ve Wordu použijte metody vlastnosti <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> třídy `ThisDocument`. V aplikaci Excel použijte metody vlastnosti <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> třídy `Sheet`*n* . Každá metoda má několik přetížení, která umožňují určit umístění ovládacího prvku různými způsoby.
+## <a name="add-controls-at-run-time-in-document-level-projects"></a><a name="runtimedoclevel"></a>Přidat ovládací prvky za běhu v projektech na úrovni dokumentu
+ V době běhu můžete programově přidat model Windows Forms ovládací prvky do dokumentu. V aplikaci Word použijte metody <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> vlastnosti `ThisDocument` třídy. V aplikaci Excel použijte metody <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> vlastnosti `Sheet` třídy *n* . Každá metoda má několik přetížení, která umožňují určit umístění ovládacího prvku různými způsoby.
 
  Při přidání ovládacího prvku model Windows Forms do dokumentu v době běhu není ovládací prvek při zavření dokumentu uložen v dokumentu. Ovládací prvek lze znovu vytvořit při příštím otevření dokumentu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 ### <a name="to-add-a-windows-forms-control-at-run-time"></a>Přidání ovládacího prvku model Windows Forms v době běhu
 
-1. Použijte metodu, která má název přidat\<*třídy ovládacího prvku*> (kde *Třída ovládacího prvku* je název třídy ovládacího prvku model Windows Forms, který chcete přidat, například <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).
+1. Použijte metodu, která má název Add \<*control class*> (kde *Třída ovládacího prvku* je název třídy model Windows Forms ovládacího prvku, který chcete přidat, například <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A> ).
 
-     Následující příklad kódu ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.Controls.Button> do buňky **C5** `Sheet1` v projektu na úrovni dokumentu pro aplikaci Excel.
+     Následující příklad kódu ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.Controls.Button> do buňky **C5** `Sheet1` v projektu na úrovni dokumentu v aplikaci Excel.
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]
 
-## <a name="runtimeaddin"></a>Přidání ovládacích prvků v době běhu v doplňcích VSTO
- Můžete přidat ovládací prvky model Windows Forms programově do libovolného otevřeného dokumentu v době běhu. Nejprve vygenerujte hostitelskou položku, která je založena na otevřeném dokumentu nebo listu. Pak ve Wordu použijte metody vlastnosti <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> nové položky hostitele. V aplikaci Excel použijte metody vlastnosti <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> nové položky hostitele. Každá metoda má několik přetížení, která umožňují určit umístění ovládacího prvku různými způsoby.
+## <a name="add-controls-at-run-time-in-vsto-add-ins"></a><a name="runtimeaddin"></a>Přidání ovládacích prvků v době běhu v doplňcích VSTO
+ Můžete přidat ovládací prvky model Windows Forms programově do libovolného otevřeného dokumentu v době běhu. Nejprve vygenerujte hostitelskou položku, která je založena na otevřeném dokumentu nebo listu. Pak ve Wordu použijte metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Vlastnosti nové položky hostitele. V aplikaci Excel použijte metody <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> Vlastnosti nové položky hostitele. Každá metoda má několik přetížení, která umožňují určit umístění ovládacího prvku různými způsoby.
 
  Při přidání ovládacího prvku model Windows Forms do dokumentu v době běhu není ovládací prvek při zavření dokumentu uložen v dokumentu. Ovládací prvek lze znovu vytvořit při příštím otevření dokumentu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
@@ -120,17 +120,17 @@ ms.locfileid: "72985996"
 
 ### <a name="to-add-a-windows-forms-control-at-run-time"></a>Přidání ovládacího prvku model Windows Forms v době běhu
 
-1. Použijte metodu, která má název přidat\<*třídy ovládacího prvku*> (kde *Třída ovládacího prvku* je název třídy ovládacího prvku model Windows Forms, který chcete přidat, například <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A>).
+1. Použijte metodu, která má název Add \<*control class*> (kde *Třída ovládacího prvku* je název třídy model Windows Forms ovládacího prvku, který chcete přidat, například <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A> ).
 
     > [!NOTE]
-    > V projektech doplňku VSTO, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, musíte přidat odkaz na soubor *Microsoft. Office. Tools. Excel. v 4.0. Utilities. dll* nebo *Microsoft. Office. Tools. Word. v 4.0. Utilities. dll* , aby bylo možné získat přístup k přidání @no__ *třídy ovládacího prvku*t_3_ > metody.
+    > V projektech doplňku VSTO, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, je nutné přidat odkaz na *Microsoft.Office.Tools.Excel.v4.0.Utilities.dll* nebo *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* sestavení před tím, než budete moci získat přístup k \<*control class*> metodám Add.
 
-     Následující příklad kódu ukazuje, jak přidat <xref:Microsoft.Office.Tools.Word.Controls.Button> k prvnímu odstavci aktivního dokumentu pomocí doplňku aplikace Word VSTO.
+     Následující příklad kódu ukazuje, jak přidat do <xref:Microsoft.Office.Tools.Word.Controls.Button> prvního odstavce aktivního dokumentu pomocí doplňku aplikace Word VSTO.
 
      [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]
      [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Postupy: Změna velikosti ovládacích prvků v buňkách listu](../vsto/how-to-resize-controls-within-worksheet-cells.md)

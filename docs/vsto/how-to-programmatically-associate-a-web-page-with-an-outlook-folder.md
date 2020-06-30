@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Programově přidružte webovou stránku složky aplikace Outlook'
+title: 'Postupy: přidružení webové stránky ke složce aplikace Outlook prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e83f8b7f6bcdb790b5e545aa76426bc05f0735f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b8d44ffc46557243d2681b8f8b4a3b85d1cd9be6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817306"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546143"
 ---
-# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Postupy: Programově přidružte webovou stránku složky aplikace Outlook
-  Tento příklad vyhledá složku s názvem `HtmlView` v aplikaci Microsoft Office Outlook. Pokud složka neexistuje, kód vytvoří složku a přiřadí ji na webové stránce. Pokud složka existuje, kód zobrazí obsah složky.
+# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Postupy: přidružení webové stránky ke složce aplikace Outlook prostřednictvím kódu programu
+  Tento příklad kontroluje složku s názvem `HtmlView` v systém Microsoft Office Outlook. Pokud složka neexistuje, kód vytvoří složku a přiřadí jí webovou stránku. Pokud složka existuje, kód zobrazí obsah složky.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Příklad
  [!code-csharp[Trin_OL_HTMLFolder#1](../vsto/codesnippet/CSharp/Trin_OL_HTMLFolder/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce se složkami](../vsto/working-with-folders.md)
-- [Postupy: Programově načítání složek podle názvu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Postupy: Vytváření vlastních položek složek prostřednictvím kódu programu](../vsto/how-to-programmatically-create-custom-folder-items.md)
+- [Postupy: načítání složek podle názvu prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Postupy: vytváření vlastních položek složek prostřednictvím kódu programu](../vsto/how-to-programmatically-create-custom-folder-items.md)

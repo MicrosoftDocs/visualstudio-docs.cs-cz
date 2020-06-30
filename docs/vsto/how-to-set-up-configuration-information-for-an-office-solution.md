@@ -1,7 +1,7 @@
 ---
-title: Nastavení informací o konfiguraci pro řešení Office
+title: Nastavení informací o konfiguraci pro řešení pro systém Office
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,37 +13,37 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c477068b3aee3325acae0887e11da908d6c33a85
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 8a0868019247e20b9154690469d4c291f1f8e0d6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328888"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545805"
 ---
-# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Postupy: Nastavení informací o konfiguraci pro řešení Office
-  Konfigurační soubory můžete použít ke konfiguraci nastavení, které jsou specifické pro vaše řešení pro Office. Můžete zadat nastavení, například zásady vazeb sestavení, objekty vzdálené komunikace, ladění a trasování nastavení.
+# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Postupy: nastavení informací o konfiguraci pro řešení pro systém Office
+  Pomocí konfiguračních souborů můžete nakonfigurovat nastavení, která jsou specifická pro vaše řešení Office. Můžete určit nastavení, jako je například zásada vytváření sestavení, vzdálené objekty, ladění a nastavení trasování.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-### <a name="to-add-a-configuration-file-to-your-office-project"></a>Chcete-li přidat konfigurační soubor do projektu sady Office
+### <a name="to-add-a-configuration-file-to-your-office-project"></a>Přidání konfiguračního souboru do projektu Office
 
-1. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.
+1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-2. V **kategorie** podokně klikněte na tlačítko **Obecné**.
+2. V podokně **kategorie** klikněte na **Obecné**.
 
-3. V **šablony** vyberte **konfiguračního souboru aplikace**.
+3. V podokně **šablony** vyberte možnost **konfigurační soubor aplikace**.
 
-4. V **název** zadejte stejný název jako sestavení plus rozšíření *.config*. Například konfigurační soubor pro sestavení projektu aplikace Excel názvem *ExcelWorkbook1.dll* by se pojmenoval *ExcelWorkbook1.dll.config*.
+4. Do pole **název** zadejte stejný název jako sestavení a příponu *. config*. Například konfigurační soubor pro sestavení projektu aplikace Excel s názvem *ExcelWorkbook1.dll* by měl být pojmenován *ExcelWorkbook1.dll.config*.
 
-5. Klikněte na **Přidat**.
+5. Klikněte na tlačítko **Add** (Přidat).
 
-6. Vytvoření konfiguračního souboru podle schéma konfiguračního souboru aplikace. Další informace najdete v tématu [schéma konfiguračního souboru pro rozhraní .NET Framework](/dotnet/framework/configure-apps/file-schema/index).
+6. Vytvořte konfigurační soubor podle schématu konfiguračního souboru aplikace. Další informace najdete v tématu [Schéma konfiguračního souboru pro .NET Framework](/dotnet/framework/configure-apps/file-schema/index).
 
-   Neexistují žádné zvláštní požadavky pro použití konfiguračních souborů s projekty sady Office.
+   Neexistují žádné zvláštní požadavky na použití konfiguračních souborů s projekty Office.
 
-## <a name="see-also"></a>Viz také:
-- [Schéma konfiguračního souboru pro rozhraní .NET Framework](/dotnet/framework/configure-apps/file-schema/index)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
+## <a name="see-also"></a>Viz také
+- [Schéma konfiguračního souboru pro .NET Framework](/dotnet/framework/configure-apps/file-schema/index)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

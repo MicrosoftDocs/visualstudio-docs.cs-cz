@@ -1,26 +1,26 @@
 ---
-title: Kompilátor barev VSIX | Dokumentace Microsoftu
+title: Kompilátor barev VSIX | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e1607ec4863c7e2b21cd69dd57ca4203e3cf4dbf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c92fb2ad45bc0fb09c7e9bd8e87db38c13a99736
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68147949"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546741"
 ---
 # <a name="vsix-color-compiler"></a>Kompilátor barev VSIX
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Je nástroj kompilátoru barva rozšíření Visual Studio konzolovou aplikaci, která přebírá soubor XML představující barvy pro existující motivů aplikace Visual Studio a převede jej .pkgdef souboru tak, aby tyto barvy, je možné v sadě Visual Studio. Protože jde snadno porovnat rozdíly mezi soubory .xml, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Je také může využívat do prostředí sestavení tak, aby výstupy sestavení soubor .pkgdef platný.  
+Nástroj pro kompilátor barev rozšíření sady Visual Studio je Konzolová aplikace, která přebírá soubor. XML reprezentující barvy pro existující motivy sady Visual Studio a převede ho na soubor. pkgdef tak, aby tyto barvy mohly být použity v aplikaci Visual Studio. Vzhledem k tomu, že je snadné porovnat rozdíly mezi soubory. XML, tento nástroj je užitečný pro správu vlastních barev ve správě zdrojového kódu. Dá se taky připojit do prostředí pro Build, aby výstup buildu byl platný soubor. pkgdef.  
   
  **Schéma XML motivu**  
   
- Soubor XML motivu dokončení vypadá takto:  
+ Úplný soubor Theme. XML vypadá takto:  
   
 ```xml  
 <Themes>  
@@ -42,7 +42,7 @@ Je nástroj kompilátoru barva rozšíření Visual Studio konzolovou aplikaci, 
   
  **Motiv**  
   
- \<Motiv > element definuje celý motiv. Motiv musí obsahovat alespoň jeden \<kategorie > element. Motiv prvky jsou definovány takto:  
+ \<Theme>Element definuje celý motiv. Motiv musí obsahovat alespoň jeden \<Category> element. Prvky motivu jsou definovány takto:  
   
 ```xml  
 <Theme Name="name" GUID="guid">  
@@ -50,41 +50,38 @@ Je nástroj kompilátoru barva rozšíření Visual Studio konzolovou aplikaci, 
 </Theme>  
 ```  
   
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|Name|[Povinné] Název motivu|  
-|GUID|[Povinné] Identifikátor GUID motivu (musí odpovídat identifikátoru GUID formátování)|  
-  
- Při vytváření vlastní barvy pro sadu Visual Studio, musíte je definovat následující motivy tyto barvy. Pokud neexistují žádné barvy pro konkrétní motivu, Visual Studio se pokusí načíst chybějící barvy z světlý motiv.  
-  
-|||  
 |-|-|  
-|**Název motivu**|**Motiv GUID**|  
+|Name|Požadovanou Název motivu|  
+|Identifikátor GUID|Požadovanou Identifikátor GUID motivu (musí odpovídat formátování identifikátoru GUID)|  
+  
+ Při vytváření vlastních barev pro aplikaci Visual Studio je nutné tyto barvy definovat pro následující motivy. Pokud pro určitý motiv neexistují žádné barvy, Visual Studio se pokusí načíst chybějící barvy z světlého motivu.  
+  
+|**Název motivu**|**Identifikátor GUID motivu**|  
+|-|-|  
 |Světlý|{de3dbbcd-f642-433c-8353-8f1df4370aba}|  
 |Tmavý|{1ded0138-47ce-435e-84ef-9ec1f439b749}|  
-|Modrá|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|  
+|Blue|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|  
 |Vysoký kontrast|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|  
   
  **Kategorie**  
   
- \<Kategorie > element definuje kolekci barvy motivu. Názvy kategorií zajišťují logické seskupení a musí být definován jako nejpřesnějším co nejvíc. Kategorie musí obsahovat alespoň jeden \<barva > element. Kategorie prvky jsou definovány takto:  
+ \<Category>Prvek definuje kolekci barev v motivu. Názvy kategorií poskytují logické seskupení a měly by být definovány co nejpřesněji. Kategorie musí obsahovat alespoň jeden \<Color> element. Prvky kategorie jsou definovány takto:  
   
 ```xml  
 <Category Name="name" GUID="guid">  
       <!-- one or more Color elements -->  
  </Category>  
 ```  
-  
-|||  
-|-|-|  
+    
 |**Atribut**|**Definice**|  
-|Name|[Povinné] Název kategorie|  
-|GUID|[Povinné] Identifikátor GUID kategorie (musí odpovídat identifikátoru GUID formátování)|  
+|-|-|  
+|Name|Požadovanou Název kategorie|  
+|Identifikátor GUID|Požadovanou Identifikátor GUID kategorie (musí odpovídat formátování identifikátoru GUID)|  
   
  **Barva**  
   
- \<Barva > element definuje barvu, která pro fungování součásti nebo stavu uživatelského rozhraní. Upřednostňovaný schéma pojmenování pro barvu je [uživatelské rozhraní typu] [stav]. Nepoužívejte slova "color", protože je redundantní. Barva mělo jasně uvádět, typ elementu a situací nebo "stavu", pro které se použijí barvy. Barva nesmí být prázdné a musí obsahovat jeden nebo oba \<pozadí > a \<popředí > element. Barevné prvky jsou definovány takto:  
+ \<Color>Element definuje barvu pro komponentu nebo stav uživatelského rozhraní. Upřednostňované schéma pojmenovávání barev je [typ uživatelského rozhraní] [stav]. Nepoužívejte slovo "Color", protože je redundantní. Barva by měla jasně označovat typ prvku a situace nebo "stát", pro který bude použita barva. Barva nesmí být prázdná a musí obsahovat buď jeden nebo oba \<Background> \<Foreground> elementy a. Barevné prvky jsou definovány takto:  
   
 ```xml  
 <Color Name="name">  
@@ -93,31 +90,29 @@ Je nástroj kompilátoru barva rozšíření Visual Studio konzolovou aplikaci, 
  </Color>  
 ```  
   
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|Name|[Povinné] Název barvy|  
+|-|-|  
+|Name|Požadovanou Název barvy|  
   
- **Na pozadí a/nebo popředí**  
+ **Pozadí a popředí**  
   
- \<Pozadí > a \<popředí > elementy definovat hodnotu a typ pro pozadí nebo popředí prvku uživatelského rozhraní barvu. Tyto prvky nemají žádné podřízené položky.  
+ \<Background>Elementy a \<Foreground> definují hodnotu barvy a typ pro pozadí nebo popředí prvku uživatelského rozhraní. Tyto prvky nemají žádné podřízené položky.  
   
 ```xml  
 <Background Type="type" Source="int" />  
 <Foreground Type="type" Source="int" />  
 ```  
   
-|||  
-|-|-|  
 |**Atribut**|**Definice**|  
-|type|[Povinné] Typ barvy. Může být jeden z následujících akcí:<br /><br /> *CT_INVALID:* Barva je neplatný nebo není nastavená.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB.<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Visual Studio barvu z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|  
-|Source|[Povinné] Hodnota barvy v šestnáctkovém|  
+|-|-|  
+|Typ|Požadovanou Typ barvy. Může to být jedna z následujících:<br /><br /> *CT_INVALID:* Barva je neplatná nebo není nastavena.<br /><br /> *CT_RAW:* Nezpracovaná hodnota ARGB<br /><br /> *CT_COLORINDEX:* NEPOUŽÍVEJTE.<br /><br /> *CT_SYSCOLOR:* Systémová barva systému Windows z SysColor.<br /><br /> *CT_VSCOLOR:* Barva sady Visual Studio z __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Automatická barva.<br /><br /> *CT_TRACK_FOREGROUND:* NEPOUŽÍVEJTE.<br /><br /> *CT_TRACK_BACKGROUND:* NEPOUŽÍVEJTE.|  
+|Zdroj|Požadovanou Hodnota barvy reprezentovaná v šestnáctkovém formátu|  
   
- Podporované výčtem __VSCOLORTYPE všechny hodnoty jsou podporovány na schéma v atributu typu. Doporučujeme však, že používáte pouze CT_RAW a CT_SYSCOLOR.  
+ Všechny hodnoty podporované výčtem __VSCOLORTYPE jsou podporovány schématem v atributu type. Doporučujeme však, abyste používali pouze CT_RAW a CT_SYSCOLOR.  
   
- **Všechno dohromady**  
+ **Vše dohromady**  
   
- Toto je jednoduchý příklad souboru XML motivu platné:  
+ Toto je jednoduchý příklad platného souboru Theme. XML:  
   
 ```xml  
 <Themes>  
@@ -132,35 +127,34 @@ Je nástroj kompilátoru barva rozšíření Visual Studio konzolovou aplikaci, 
 ```  
   
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj  
- **Syntaxe**  
+ **Syntax**  
   
- VsixColorCompiler \<souboru XML > \<PkgDef soubor > \<volitelné argumenty >  
+ VsixColorCompiler \<XML file> \<PkgDef file>\<Optional Args>  
   
- **Argumenty**  
+ **Arguments**  
   
-||||  
+|**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|  
 |-|-|-|  
-|**Název přepínače**|**Poznámky**|**Požadované nebo volitelné**|  
-|Nepojmenované (soubor XML)|Toto je první nepojmenovaný parametr a cesta k souboru XML pro převod.|Požadováno|  
-|Nepojmenované (soubor .pkgdef)|Toto je druhá nepojmenovaný parametr a výstupní cesta k souboru generovaného .pkgdef.<br /><br /> Výchozí hodnota: \<Název souboru XML > .pkgdef|volitelná,|  
-|/noLogo|Informace o produktu a autorská práva tisk nastavení tohoto příznaku se zastaví.|volitelná,|  
-|/?|Vytiskne informace nápovědy.|volitelná,|  
-|/help|Vytiskne informace nápovědy.|volitelná,|  
+|Nepojmenované (soubor. XML)|Toto je první nepojmenovaný parametr a je cesta k souboru XML, který se má převést.|Vyžadováno|  
+|Nepojmenované (soubor. pkgdef)|Toto je druhý nepojmenovaný parametr a je výstupní cesta pro vygenerovaný soubor. pkgdef.<br /><br /> Výchozí: \<XML Filename> . pkgdef|Volitelné|  
+|/noLogo|Nastavením tohoto příznaku se zastaví tisk informací o produktech a copyrightech.|Volitelné|  
+|/?|Vytiskněte informace o nápovědě.|Volitelné|  
+|/help|Vytiskněte informace o nápovědě.|Volitelné|  
   
  **Příklady**  
   
 - VsixColorCompiler D:\xml\colors.xml D:\pkgdef\colors.pkgdef  
   
-- / Nologo VsixColorCompiler D:\xml\colors.xml  
+- VsixColorCompiler D:\xml\colors.xml/noLogo  
   
 ## <a name="notes"></a>Poznámky  
   
-- Tento nástroj vyžaduje instalaci nejnovější verze modulu runtime VC ++.  
+- Tento nástroj vyžaduje, aby byla nainstalovaná nejnovější verze modulu runtime VC + +.  
   
-- Podporují se jenom jeden soubory. Hromadné byl inicializován převod pomocí cesty ke složkám se nepodporuje.  
+- Jsou podporovány pouze jednotlivé soubory. Hromadný převod prostřednictvím cest ke složkám není podporován.  
   
 ## <a name="sample-output"></a>Ukázkový výstup  
- Soubor .pkgdef generovaný nástrojem bude vypadat podobně jako následující klíče:  
+ Soubor. pkgdef generovaný nástrojem bude vypadat podobně jako v následujících klíčích:  
   
 ```  
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\Environment]  

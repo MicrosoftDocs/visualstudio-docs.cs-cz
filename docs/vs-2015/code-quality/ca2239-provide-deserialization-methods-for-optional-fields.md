@@ -15,28 +15,28 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5604b697af1716e918f3a0f6d9a26ddbe70fc0b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dfbb9082d557c8e67ddebf0237293364d54a65cf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672960"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545129"
 ---
-# <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: Poskytujte metody deserializace pro nepovinné pole
+# <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: Zadejte metody deserializace pro nepovinná pole
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ProvideDeserializationMethodsForOptionalFields|
 |CheckId|CA2239|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Typ obsahuje pole, které je označeno atributem <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> a typ neposkytuje metody zpracování událostí de Serialization.
+## <a name="cause"></a>Příčina
+ Typ obsahuje pole, které je označeno <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atributem a typ neposkytuje metody zpracování událostí rušení serializace.
 
 ## <a name="rule-description"></a>Popis pravidla
- Atribut <xref:System.Runtime.Serialization.OptionalFieldAttribute> nemá žádný vliv na serializaci. pole, které je označeno atributem, je serializováno. Pole je však ignorováno při zrušení serializace a zachovává výchozí hodnotu přidruženou k jeho typu. Obslužné rutiny události deserializace by měly být deklarovány pro nastavení pole během procesu rušení serializace.
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute>Atribut nemá žádný vliv na serializaci; pole označené atributem je serializováno. Pole je však ignorováno při zrušení serializace a zachovává výchozí hodnotu přidruženou k jeho typu. Obslužné rutiny události deserializace by měly být deklarovány pro nastavení pole během procesu rušení serializace.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, přidejte do typu metody zpracování událostí ve více serializacích.
@@ -51,11 +51,11 @@ ms.locfileid: "72672960"
  [!code-vb[FxCop.Usage.OptionalFields#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.OptionalFields/vb/FxCop.Usage.OptionalFields.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2236: Volejte metody třídy Base na typech ISerializable](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
+ [CA2236: Volejte metody základní třídy u typů ISerializable](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2240: Implementujte správně ISerializable](../code-quality/ca2240-implement-iserializable-correctly.md)
 
- [CA2229: Implementovat serializační konstruktory](../code-quality/ca2229-implement-serialization-constructors.md)
+ [CA2229: Implementujte serializační konstruktory](../code-quality/ca2229-implement-serialization-constructors.md)
 
  [CA2238: Implementujte správně metody serializace](../code-quality/ca2238-implement-serialization-methods-correctly.md)
 

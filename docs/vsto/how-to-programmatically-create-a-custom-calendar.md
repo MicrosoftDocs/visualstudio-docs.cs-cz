@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytváření vlastních kalendářů prostřednictvím kódu programu'
+title: 'Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 653340d3a682664670998c874344bfc931105892
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aab9e14c7fa4b4c70b2e61eca382af2ce787148c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575218"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546052"
 ---
-# <a name="how-to-programmatically-create-a-custom-calendar"></a>Postupy: Vytváření vlastních kalendářů prostřednictvím kódu programu
-  Tento příklad vytvoří novou složku kalendáře s názvem **PersonalCalendar**a vytvoří novou položku události a přidá jej do složky Kalendář. Kód poté zobrazí kalendář.
+# <a name="how-to-programmatically-create-a-custom-calendar"></a>Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu
+  Tento příklad vytvoří novou složku kalendáře s názvem **PersonalCalendar**a potom vytvoří novou položku události a přidá ji do složky kalendáře. Kód pak zobrazí složku kalendáře.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Příklad
  [!code-csharp[Trin_OL_CustomCalendar#1](../vsto/codesnippet/CSharp/Trin_OL_CustomCalendar/thisaddin.cs#1)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s položkami kalendáře](../vsto/working-with-calendar-items.md)
-- [Postupy: Vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)
-- [Postupy: Vytváření žádostí o schůzku prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-meeting-request.md)
+- [Postupy: vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)
+- [Postupy: vytváření žádostí o schůzku prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-meeting-request.md)

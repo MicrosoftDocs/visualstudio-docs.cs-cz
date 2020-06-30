@@ -19,30 +19,30 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dd1c144f04150e3965e2c0264b80147cbd9b8f19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2304b78073b806dfc4aec9686f061d946b379ded
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663203"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545415"
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
 |CheckId|CA1013|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo chráněný typ implementuje operátory sčítání a odčítání, aniž by implementoval operátor rovnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
- V případě, že instance typu lze kombinovat pomocí operací, jako je sčítání a odčítání, byste měli téměř vždy definovat rovnost, která vrací `true` pro všechny dvě instance, které mají stejné hodnoty prvku.
+ V případě, že instance typu lze kombinovat pomocí operací, jako je sčítání a odčítání, byste měli téměř vždy definovat rovnost, která se vrátí `true` pro všechny dvě instance, které mají stejné hodnoty prvků.
 
- Nelze použít výchozí operátor rovnosti v přetížené implementaci operátoru rovnosti. Uděláte to tak, že dojde k přetečení zásobníku. K implementaci operátoru rovnosti použijte metodu Object. Equals v implementaci. Podívejte se na téma v následujícím příkladu.
+ Nelze použít výchozí operátor rovnosti v přetížené implementaci operátoru rovnosti. Uděláte to tak, že dojde k přetečení zásobníku. K implementaci operátoru rovnosti použijte metodu Object. Equals v implementaci. Prohlédněte si následující příklad.
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -65,7 +65,7 @@ return left.Equals(right);
  V případě, že výchozí implementace operátoru rovnosti poskytuje správné chování pro typ, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad definuje typ (`BadAddableType`), který porušuje toto pravidlo. Tento typ by měl implementovat operátor rovnosti pro vytvoření všech dvou instancí, které mají stejné hodnoty polí test `true` pro rovnost. Typ `GoodAddableType` zobrazuje opravenou implementaci. Všimněte si, že tento typ také implementuje operátor nerovnosti a Přepisuje <xref:System.Object.Equals%2A> pro splnění jiných pravidel. Kompletní implementace by taky implementovala <xref:System.Object.GetHashCode%2A>.
+ Následující příklad definuje typ ( `BadAddableType` ), který porušuje toto pravidlo. Tento typ by měl implementovat operátor rovnosti, aby všechny dvě instance, které mají stejné hodnoty polí, byly testovány `true` pro rovnost. Typ `GoodAddableType` zobrazuje opravenou implementaci. Všimněte si, že tento typ také implementuje operátor nerovnosti a přepsání <xref:System.Object.Equals%2A> pro splnění dalších pravidel. Bude implementována i kompletní implementace <xref:System.Object.GetHashCode%2A> .
 
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AddAndSubtract/cs/FxCop.Design.AddAndSubtract.cs#1)]
 
@@ -76,8 +76,10 @@ return left.Equals(right);
 
  Tento příklad vytvoří následující výstup.
 
- **Špatný typ: {2,2} {2,2} jsou stejné? Žádný** 
-**dobrý typ: {3,3} {3,3} jsou stejné? Ano** 
-**dobrý typ: {3,3} 0 jsou = =?   Ano** 1**špatný typ: 3 4 jsou stejné? Žádný** 5**dobrý typ: 7 8 jsou = =?   Ne**
+ **Chybný typ: {2,2} {2,2} jsou stejné? Žádný** 
+ **dobrý typ: {3,3} {3,3} je stejný? Ano** 
+ **dobrý typ: {3,3} {3,3} jsou = =?   Ano** 
+ **špatný typ: {2,2} {9,9} je stejný? Neexistuje** 
+ **dobrý typ: {3,3} {9,9} = =?   Ne**
 ## <a name="see-also"></a>Viz také
  [Operátory rovnosti](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

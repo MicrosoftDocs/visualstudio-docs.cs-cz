@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Programové zabezpečení listů'
+title: 'Postupy: ochrana listů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 931bfba9aeac76132ca2dd5e6115abef9869a1df
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: d51a6557b2204d7b6ff3d8865c82de091f5a59d0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254591"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545896"
 ---
-# <a name="how-to-programmatically-protect-worksheets"></a>Postupy: Programové zabezpečení listů
+# <a name="how-to-programmatically-protect-worksheets"></a>Postupy: ochrana listů prostřednictvím kódu programu
   Funkce Ochrana v aplikaci systém Microsoft Office Excel pomáhá zabránit uživatelům a kódu v úpravách objektů v listu. Ve výchozím nastavení jsou všechny buňky po zapnutí ochrany zamčené.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71254591"
 > [!NOTE]
 > Do oblastí uzamknutého listu nelze přidat ovládací prvky model Windows Forms.
 
-## <a name="use-the-designer"></a>Použití návrháře
+## <a name="use-the-designer"></a>Použití designeru
 
 ### <a name="to-protect-a-worksheet-in-the-designer"></a>Ochrana listu v Návrháři
 
@@ -53,23 +53,23 @@ ms.locfileid: "71254591"
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-document-level-customization"></a>Ochrana listu pomocí kódu v přizpůsobení na úrovni dokumentu
 
-1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> Zavolejte metodu listu. V tomto příkladu se předpokládá, že pracujete s listem s názvem `Sheet1`.
+1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> metodu listu. V tomto příkladu se předpokládá, že pracujete s listem s názvem `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#27)]
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-vsto-add-in"></a>Ochrana listu pomocí kódu v doplňku VSTO
 
-1. <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A> Zavolejte metodu aktivního listu.
+1. Zavolejte <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A> metodu aktivního listu.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Postupy: Programové odebrání ochrany z listů](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
-- [Postupy: Programové zabezpečení sešitů](../vsto/how-to-programmatically-protect-workbooks.md)
-- [Postupy: Programové skrývání listů](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Postupy: odebrání ochrany z listů prostřednictvím kódu programu](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
+- [Postupy: Ochrana sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-protect-workbooks.md)
+- [Postupy: skrývání listů prostřednictvím kódu programu](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 - [Položka hostitele listu](../vsto/worksheet-host-item.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)

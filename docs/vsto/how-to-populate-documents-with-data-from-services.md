@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Naplnění dokumentů daty ze služeb'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f53000f7d6aa8bdd8261bbe5658607918b6b449
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 01e2a83f464576d1ca780daa17c0d9478f0caa14
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985873"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547144"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>Postupy: Naplnění dokumentů daty ze služeb
 
@@ -35,7 +35,7 @@ Následující příklad ukazuje, jak přidat ovládací prvky vázané na data 
 
 2. Přetáhněte tabulku nebo pole z okna **zdroje dat** do dokumentu.
 
-     V dokumentu je vytvořen ovládací prvek, vytvoří se <xref:System.Windows.Forms.BindingSource>, který je vázán na třídu objektu v projektu a třídy jsou vygenerovány pro danou službu.
+     V dokumentu je vytvořen ovládací prvek, který je <xref:System.Windows.Forms.BindingSource> vázán na třídu objektu v projektu a třídy jsou vygenerovány pro službu.
 
 3. Ve svém kódu vytvořte instanci třídy webové služby, ke které jste se připojili v kroku 1.
 
@@ -45,11 +45,11 @@ Následující příklad ukazuje, jak přidat ovládací prvky vázané na data 
 
      Metody, které použijete, závisí na tom, co webová služba nabízí.
 
-6. Přiřaďte odpověď na data z webové služby na vlastnost <xref:System.Windows.Forms.BindingSource.DataSource%2A> <xref:System.Windows.Forms.BindingSource>.
+6. Přiřaďte odpověď na data z webové služby k <xref:System.Windows.Forms.BindingSource.DataSource%2A> vlastnosti <xref:System.Windows.Forms.BindingSource> .
 
-Při spuštění projektu ovládací prvky zobrazí první záznam ve zdroji dat. Můžete povolit procházení záznamů prostřednictvím zpracování událostí měny pomocí objektů v <xref:System.Windows.Forms.BindingSource>.
+Při spuštění projektu ovládací prvky zobrazí první záznam ve zdroji dat. Můžete povolit procházení záznamů prostřednictvím zpracování událostí měny pomocí objektů v <xref:System.Windows.Forms.BindingSource> .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)

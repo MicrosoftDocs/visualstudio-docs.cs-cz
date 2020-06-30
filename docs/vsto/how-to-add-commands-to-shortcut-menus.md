@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: přidávání příkazů do místních nabídek'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82c26022f0c88f1ce125c64f5ec3b2df8d20346e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986032"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546195"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Postupy: přidávání příkazů do místních nabídek
   Toto téma ukazuje, jak přidat příkazy do místní nabídky v aplikaci Office pomocí doplňku VSTO.
@@ -31,18 +31,18 @@ ms.locfileid: "72986032"
 
 2. **Průzkumník řešení**vyberte **ThisAddIn.cs** nebo **ThisAddIn. vb**.
 
-3. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
+3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
      V editoru kódu se otevře soubor třídy **ThisAddIn** .
 
-4. Do třídy **ThisAddIn** přidejte následující kód. Tento kód přepíše metodu `CreateRibbonExtensibilityObject` a vrátí třídu XML pásu karet do aplikace sady Office.
+4. Do třídy **ThisAddIn** přidejte následující kód. Tento kód přepíše `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
 
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. V **Průzkumník řešení**vyberte soubor XML pásu karet. Ve výchozím nastavení má soubor XML pásu karet název *Ribbon1. XML*.
+5. V **Průzkumník řešení**vyberte soubor XML pásu karet. Ve výchozím nastavení se soubor XML pásu karet jmenuje *Ribbon1.xml*.
 
-6. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
+6. Na panelu nabídek vyberte možnost **Zobrazit**  >  **kód**.
 
      V editoru kódu se otevře soubor XML pásu karet.
 
@@ -72,14 +72,14 @@ ms.locfileid: "72986032"
 
 8. V **Průzkumník řešení**vyberte **MyRibbon.cs** nebo **MyRibbon. vb**.
 
-9. Přidejte metodu zpětného volání do třídy `Ribbon1` pro každý ovládací prvek, který chcete zpracovat.
+9. Přidejte do třídy metodu zpětného volání `Ribbon1` pro každý ovládací prvek, který chcete zpracovat.
 
      Následující metoda zpětného volání zpracovává tlačítko **moje tlačítko** . Tento kód přidá řetězec do aktivního dokumentu v aktuálním umístění nástroje pro vydaný kurzor.
 
      [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
      [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
 - [Návod: Vytvoření místních nabídek pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

@@ -15,25 +15,25 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a240a6eea86075bbf7f721f8620b6d135d594c20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661953"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546663"
 ---
 # <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Použijte vlastnosti, kde je to vhodné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Veřejná nebo chráněná metoda má název, který začíná `Get`, nepřebírá žádné parametry a vrací hodnotu, která není polem.
+## <a name="cause"></a>Příčina
+ Veřejná nebo chráněná metoda má název, který začíná `Get` , nepřebírá žádné parametry a vrací hodnotu, která není polem.
 
 ## <a name="rule-description"></a>Popis pravidla
  Ve většině případů vlastnosti reprezentují data a metody, které provádějí akce. Vlastnosti jsou dostupné jako pole, což usnadňuje jejich použití. Metoda je dobrým kandidátem, který se stane vlastností, pokud je přítomna jedna z těchto podmínek:
@@ -67,7 +67,7 @@ ms.locfileid: "72661953"
 ## <a name="controlling-property-expansion-in-the-debugger"></a>Řízení rozšíření vlastností v ladicím programu
  Jedním z důvodů, proč programátoři nepoužívají vlastnost, je, že nechtějí, aby ladicí program automaticky rozbalí. Například vlastnost může zahrnovat přidělení velkého objektu nebo volání volání nespravovaného objektu, ale nemusí mít ve skutečnosti žádné pozorovatelné vedlejší účinky.
 
- Ladicímu programu můžete zabránit v automatickém rozbalování vlastností, a to použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. Následující příklad ukazuje tento atribut aplikovaný na vlastnost instance.
+ Ladicímu programu můžete zabránit v automatickém rozbalování vlastností, a to použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> . Následující příklad ukazuje tento atribut aplikovaný na vlastnost instance.
 
 ```vb
 Imports System

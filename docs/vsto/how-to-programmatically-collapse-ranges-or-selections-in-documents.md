@@ -1,7 +1,7 @@
 ---
-title: Sbalit oblastí nebo výběrů v dokumentech prostřednictvím kódu programu
+title: Programové sbalení oblastí nebo výběrů v dokumentech
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,37 +16,37 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7394e8703f0437493536655e11b00ed302e59cff
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 1575a130a525c169553598fd15acfa8ba8fc397a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402242"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546117"
 ---
-# <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>Postupy: Oblastí nebo výběrů v dokumentech prostřednictvím kódu programu sbalit
-  Pokud pracujete <xref:Microsoft.Office.Interop.Word.Range> nebo <xref:Microsoft.Office.Interop.Word.Selection> objektu, můžete chtít změnit výběr na bod vložení před vložení textu, aby nedošlo k přepsání existující text. Jak <xref:Microsoft.Office.Interop.Word.Range> a <xref:Microsoft.Office.Interop.Word.Selection> objekty mají sbalit metodu, která využívá <xref:Microsoft.Office.Interop.Word.WdCollapseDirection> hodnot výčtu:
+# <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>Postupy: sbalení oblastí nebo výběrů v dokumentech prostřednictvím kódu programu
+  Pokud pracujete s <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> objektem nebo, možná budete chtít před vložením textu změnit výběr na místo, aby se zabránilo přepsání stávajícího textu. <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> Objekty i mají metodu sbalení, která využívá <xref:Microsoft.Office.Interop.Word.WdCollapseDirection> hodnoty výčtu:
 
-- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart> Sbalí výběr na začátek výběru. Toto je výchozí, pokud nezadáte hodnotu výčtu.
+- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart>sbalí výběr na začátek výběru. Toto je výchozí nastavení, pokud nezadáte hodnotu výčtu.
 
-- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd> Sbalí výběr do zakončení výběru.
+- <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd>sbalí výběr na konec výběru.
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="to-collapse-a-range-and-insert-new-text"></a>Sbalit oblast a vložit nový text
+## <a name="to-collapse-a-range-and-insert-new-text"></a>Sbalení rozsahu a vložení nového textu
 
-1. Vytvoření <xref:Microsoft.Office.Interop.Word.Range> objekt, který se skládá z prvního odstavce v dokumentu.
+1. Vytvořte <xref:Microsoft.Office.Interop.Word.Range> objekt, který se skládá z prvního odstavce v dokumentu.
 
-    Následující příklad kódu je možné v přizpůsobení na úrovni dokumentu.
+    Následující příklad kódu lze použít v přizpůsobení na úrovni dokumentu.
 
     [!code-vb[Trin_VstcoreWordAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#46)]
     [!code-csharp[Trin_VstcoreWordAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#46)]
 
-    Následující příklad kódu je možné v doplňku VSTO. Tento kód používá aktivního dokumentu.
+    V doplňku VSTO se dá použít následující příklad kódu. Tento kód používá aktivní dokument.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#46)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#46](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#46)]
 
-2. Použití <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart> hodnotu výčtu pro sbalení rozsahu.
+2. Rozsah můžete <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart> sbalit pomocí hodnoty výčtu.
 
     [!code-vb[Trin_VstcoreWordAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#47)]
     [!code-csharp[Trin_VstcoreWordAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#47)]
@@ -56,40 +56,40 @@ ms.locfileid: "66402242"
     [!code-vb[Trin_VstcoreWordAutomation#48](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#48)]
     [!code-csharp[Trin_VstcoreWordAutomation#48](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#48)]
 
-4. Vyberte <xref:Microsoft.Office.Interop.Word.Range>.
+4. Vyberte <xref:Microsoft.Office.Interop.Word.Range> .
 
     [!code-vb[Trin_VstcoreWordAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#49)]
     [!code-csharp[Trin_VstcoreWordAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#49)]
 
-   Pokud používáte <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd> hodnotu výčtu, text se vloží na začátek odstavec.
+   Použijete-li <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd> hodnotu výčtu, text bude vložen na začátku následujícího odstavce.
 
    [!code-vb[Trin_VstcoreWordAutomation#50](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#50)]
    [!code-csharp[Trin_VstcoreWordAutomation#50](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#50)]
 
-   Očekáváte, že vložení nového větu by jej vložit před značku odstavce, ale to je tomu tak není, protože původní rozsah obsahuje značku odstavce. Další informace najdete v tématu [jak: Při vytváření oblastí prostřednictvím kódu programu vyloučení značek odstavů](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md).
+   Můžete očekávat, že vložením nové věty by se vložila před značku odstavce, ale ne v případě, že původní rozsah obsahuje značku odstavce. Další informace naleznete v tématu [How to: reexclude znak konce odstavců při vytváření rozsahů](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md).
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
-### <a name="to-collapse-a-range-in-a-document-level-customization"></a>Chcete-li sbalit oblast v přizpůsobení na úrovni dokumentu
+### <a name="to-collapse-a-range-in-a-document-level-customization"></a>Sbalení rozsahu v přizpůsobení na úrovni dokumentu
 
-1. Následující příklad ukazuje kompletní metodu pro přizpůsobení na úrovni dokumentu. Chcete-li tento kód použít, spusťte z `ThisDocument` třídu ve vašem projektu.
+1. Následující příklad ukazuje metodu Complete pro přizpůsobení na úrovni dokumentu. Chcete-li použít tento kód, spusťte jej z `ThisDocument` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomation#45](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#45)]
      [!code-csharp[Trin_VstcoreWordAutomation#45](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#45)]
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
-### <a name="to-collapse-a-range-in-a-vsto-add-in"></a>Chcete-li sbalit oblast v doplňku VSTO
+### <a name="to-collapse-a-range-in-a-vsto-add-in"></a>Sbalení rozsahu v doplňku VSTO
 
-1. Následující příklad ukazuje kompletní metodu pro doplňku VSTO. Chcete-li tento kód použít, spusťte z `ThisAddIn` třídu ve vašem projektu.
+1. Následující příklad ukazuje metodu Complete pro doplněk VSTO. Chcete-li použít tento kód, spusťte jej z `ThisAddIn` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#45](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#45)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#45](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#45)]
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [Postupy: Programově definování a výběr oblastí v dokumentech](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Postupy: Načítání počátečních a koncových znaků oblastí prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [Postupy: Programově vyloučení značek odstavů při vytváření oblastí](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)
-- [Postupy: Rozšiřování oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [Postupy: Programově resetování oblastí v dokumentech aplikace Word](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Postupy: načítání počátečních a koncových znaků v oblastech prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [Postupy: vyloučení značek odstavců při vytváření rozsahů prostřednictvím kódu programu](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)
+- [Postupy: rozšiřování oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [Postupy: resetování oblastí v dokumentech aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)

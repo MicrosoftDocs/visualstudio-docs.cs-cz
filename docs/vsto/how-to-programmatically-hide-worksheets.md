@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Skrývání listů prostřednictvím kódu programu'
+title: 'Postupy: skrývání listů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,46 +13,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1fca54350900b2ed252efc324308d1168c6da53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83cf1f63a67525dca4cf9dbb5a4916da5d70b4ce
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812463"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547404"
 ---
-# <a name="how-to-programmatically-hide-worksheets"></a>Postupy: Skrývání listů prostřednictvím kódu programu
-  Můžete zobrazit nebo skrýt všechny listu v sešitu. Chcete-li skrýt listu, pomocí hostitelská položka worksheet nebo přistupovat ke listu pomocí kolekce listů sešitu.
+# <a name="how-to-programmatically-hide-worksheets"></a>Postupy: skrývání listů prostřednictvím kódu programu
+  V sešitu můžete zobrazit nebo skrýt kterýkoli list. Chcete-li skrýt list, použijte položku hostitele listu nebo přejděte k listu pomocí kolekce listů sešitu.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="use-the-worksheet-host-item"></a>Použití hostitelská položka worksheet
- Pokud v době návrhu v přizpůsobení na úrovni dokumentu byla přidána do listu, použijte <xref:Microsoft.Office.Tools.Excel.Worksheet.Visible%2A> vlastnost skrýt zadaného listu.
+## <a name="use-the-worksheet-host-item"></a>Použít položku hostitele listu
+ Pokud byl sešit přidán v době návrhu v přizpůsobení na úrovni dokumentu, použijte <xref:Microsoft.Office.Tools.Excel.Worksheet.Visible%2A> vlastnost pro skrytí zadaného listu.
 
-### <a name="to-hide-a-worksheet-using-a-worksheet-host-item"></a>Chcete-li skrýt na listu s použitím hostitelská položka worksheet
+### <a name="to-hide-a-worksheet-using-a-worksheet-host-item"></a>Skrytí listu pomocí položky hostitele na listu
 
-1. Nastavte <xref:Microsoft.Office.Tools.Excel.Worksheet.Visible%2A> vlastnost `Sheet1` položka hostitele na <xref:Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden> hodnota výčtu.
+1. Nastavte <xref:Microsoft.Office.Tools.Excel.Worksheet.Visible%2A> vlastnost `Sheet1` položky hostitele na <xref:Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden> hodnotu výčtu.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#25](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#25)]
      [!code-vb[Trin_VstcoreExcelAutomation#25](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#25)]
 
-## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Kolekce stylů Excelový sešit
- Přístup k listů prostřednictvím aplikace Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce v následujících případech:
+## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Použití kolekce listů excelového sešitu
+ Přístup k listům prostřednictvím kolekce aplikace systém Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> v následujících případech:
 
-- Chcete skrýt sešitu v doplňku VSTO.
+- Chcete skrýt list v doplňku VSTO.
 
-- List, který chcete skrýt byl vytvořen v době běhu v přizpůsobení na úrovni dokumentu.
+- List, který chcete skrýt, byl vytvořen v době běhu v přizpůsobení na úrovni dokumentu.
 
-### <a name="to-hide-a-worksheet-using-the-sheets-collection-of-the-excel-workbook"></a>Chcete-li skrýt na listu s použitím kolekci seznamů sešitu aplikace Excel
+### <a name="to-hide-a-worksheet-using-the-sheets-collection-of-the-excel-workbook"></a>Skrytí listu pomocí kolekce listů sešitu aplikace Excel
 
-1. Nastavte <xref:Microsoft.Office.Interop.Excel.Worksheets.Visible%2A> vlastnost list <xref:Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden> hodnota výčtu.
+1. Nastavte <xref:Microsoft.Office.Interop.Excel.Worksheets.Visible%2A> vlastnost listu na <xref:Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden> hodnotu výčtu.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#26](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#26)]
      [!code-vb[Trin_VstcoreExcelAutomation#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#26)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s listy](../vsto/working-with-worksheets.md)
 - [Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
-- [Postupy: Přesouvání listů v sešitech prostřednictvím kódu programu](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
-- [Postupy: Zamykání listů](../vsto/how-to-programmatically-protect-worksheets.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
+- [Postupy: přesouvání listů v sešitech prostřednictvím kódu programu](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
+- [Postupy: ochrana listů prostřednictvím kódu programu](../vsto/how-to-programmatically-protect-worksheets.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)

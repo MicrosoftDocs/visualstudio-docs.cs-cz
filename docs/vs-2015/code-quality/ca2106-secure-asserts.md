@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1f333478c952db74fa6a9482cdad91ce6a858301
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eb0e097c2f13fa9d9279a5f3e9761a53cb6e4b1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666002"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547742"
 ---
-# <a name="ca2106-secure-asserts"></a>CA2106: Zabezpečte nepodmíněné výrazy
+# <a name="ca2106-secure-asserts"></a>CA2106: Zabezpečte kontrolní příkazy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|SecureAsserts|
 |CheckId|CA2106|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda uplatňuje oprávnění a na volajícím nejsou vykonány žádné kontroly zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,4 +45,4 @@ ms.locfileid: "72666002"
  Potlačí upozornění od tohoto pravidla až po pečlivou kontrolu zabezpečení.
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [pokyny pro zabezpečené kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>[Pokyny pro zabezpečené kódování](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)

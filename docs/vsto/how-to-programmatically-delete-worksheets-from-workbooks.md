@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 04c7eafd99d122c0b502e4b804b050bf7c59761f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 38aa92ae1c320ae9eb5ad4bdb1e43b761048661f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985832"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547131"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu
   Můžete odstranit kterýkoli list v sešitu. Chcete-li odstranit list, použijte položku hostitele listu nebo přejděte k listu pomocí kolekce listů sešitu.
@@ -26,7 +26,7 @@ ms.locfileid: "72985832"
  [!INCLUDE[appliesto_xlalldocapp](includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-the-worksheet-host-item"></a>Použít položku hostitele listu
- Pokud byl sešit přidán v době návrhu v přizpůsobení na úrovni dokumentu, použijte metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> k odstranění zadaného listu. Následující kód odstraní list ze sešitu odkazem přímo na položku hostitele na listu.
+ Pokud byl sešit přidán v době návrhu v přizpůsobení na úrovni dokumentu, použijte <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> metodu k odstranění zadaného listu. Následující kód odstraní list ze sešitu odkazem přímo na položku hostitele na listu.
 
 > [!IMPORTANT]
 > Tento kód se spouští pouze v projektech, které vytvoříte pomocí kterékoli z následujících šablon projektu:
@@ -40,13 +40,13 @@ ms.locfileid: "72985832"
 
 ### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Odstranění listu pomocí položky hostitele na listu
 
-1. Zavolejte metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> `Sheet1`.
+1. Zavolejte <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> metodu `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#17](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomation#17](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#17)]
 
 ## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Použití kolekce listů excelového sešitu
- Přístup k listům prostřednictvím kolekce systém Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> v následujících případech:
+ Přístup k listům prostřednictvím kolekce aplikace systém Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> v následujících případech:
 
 - Chcete odstranit list v doplňku VSTO.
 
@@ -59,12 +59,12 @@ ms.locfileid: "72985832"
 
 ### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Odstranění listu pomocí kolekce listů sešitu aplikace Excel
 
-1. Volejte metodu <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> kolekce <xref:Microsoft.Office.Interop.Excel.Sheets>.
+1. Zavolejte <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> metodu <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#18](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
      [!code-vb[Trin_VstcoreExcelAutomation#18](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s listy](working-with-worksheets.md)
 - [Postupy: skrývání listů prostřednictvím kódu programu](how-to-programmatically-hide-worksheets.md)
 - [Postupy: přesouvání listů v sešitech prostřednictvím kódu programu](how-to-programmatically-move-worksheets-within-workbooks.md)

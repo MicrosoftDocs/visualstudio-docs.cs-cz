@@ -15,24 +15,24 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a550226a5ea1edb3b30e317be6b5682f4c204d52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9533a597a33deaed17ff2a73d56ef306ea7b5613
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667380"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546338"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Nevyvolávejte vyhrazené typy výjimek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotRaiseReservedExceptionTypes|
 |CheckId|CA2201|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda vyvolá typ výjimky, který je příliš obecný nebo který je rezervován modulem runtime.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -56,9 +56,9 @@ ms.locfileid: "72667380"
 
   **Negenerovat obecné výjimky**
 
-  Pokud vyvoláte obecný typ výjimky, například <xref:System.Exception> nebo <xref:System.SystemException> v knihovně nebo v rámci architektury, vynutí si příjemce zachytit všechny výjimky, včetně neznámých výjimek, které neznají způsob zpracování.
+  Pokud vyvoláte obecný typ výjimky, například <xref:System.Exception> nebo <xref:System.SystemException> v knihovně nebo v architektuře, vynutí si příjemce zachytit všechny výjimky, včetně neznámých výjimek, které neznají způsob zpracování.
 
-  Místo toho buď vyvolejte více odvozeného typu, který již v rozhraní existuje, nebo vytvořte vlastní typ, který je odvozen z <xref:System.Exception>.
+  Místo toho buď vyvolejte více odvozeného typu, který již v rozhraní existuje, nebo vytvořte vlastní typ, který je odvozen z <xref:System.Exception> .
 
   **Vyvolat specifické výjimky**
 
@@ -66,21 +66,21 @@ ms.locfileid: "72667380"
 
 |Popis parametru|Výjimka|
 |---------------------------|---------------|
-|odkaz na `null`|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|`null`odkaz|<xref:System.ArgumentNullException?displayProperty=fullName>|
 |Mimo povolený rozsah hodnot (například index pro kolekci nebo seznam)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
-|Neplatná hodnota `enum`|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
-|Obsahuje formát, který nesplňuje specifikace parametrů metody (například formátovací řetězec pro `ToString(String)`).|<xref:System.FormatException?displayProperty=fullName>|
+|Neplatná `enum` hodnota|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
+|Obsahuje formát, který nesplňuje specifikace parametrů metody (například formátovací řetězec pro `ToString(String)` ).|<xref:System.FormatException?displayProperty=fullName>|
 |Jinak neplatné|<xref:System.ArgumentException?displayProperty=fullName>|
 
- Když je operace neplatná pro aktuální stav objektu throw <xref:System.InvalidOperationException?displayProperty=fullName>
+ Když je operace neplatná pro aktuální stav objektu throw<xref:System.InvalidOperationException?displayProperty=fullName>
 
- Je-li operace provedena u objektu, který byl uvolněn jako throw <xref:System.ObjectDisposedException?displayProperty=fullName>
+ Když je provedena operace u objektu, který byl uvolněn throw<xref:System.ObjectDisposedException?displayProperty=fullName>
 
- V případě, že operace není podporována (například v přepsaném **datovém proudu. zápis** do datového proudu otevřeného pro čtení) vyvolat <xref:System.NotSupportedException?displayProperty=fullName>
+ V případě, že operace není podporována (například v přepsaném **datovém proudu. zápis** do datového proudu otevřeného pro čtení) vyvolání<xref:System.NotSupportedException?displayProperty=fullName>
 
- Pokud by převod způsobil přetečení (například v explicitním přetížení operátoru přetypování), throw <xref:System.OverflowException?displayProperty=fullName>
+ Pokud by převod způsobil přetečení (například v explicitním přetížení operátoru přetypování), throw<xref:System.OverflowException?displayProperty=fullName>
 
- Pro všechny ostatní situace zvažte vytvoření vlastního typu, který je odvozen z <xref:System.Exception> a throw.
+ Pro všechny ostatní situace zvažte vytvoření vlastního typu, který je odvozen od <xref:System.Exception> a vyvolávají ho.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, změňte typ vyvolané výjimky na konkrétní typ, který není jedním z rezervovaných typů.

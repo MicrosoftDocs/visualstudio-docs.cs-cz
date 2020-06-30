@@ -10,28 +10,28 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 68973963d77bdd4134213b8524b24f75a6be5ab1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c8acef82c2616259793ba63ca51c789cfd1b9ba4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597123"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547352"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Dialogová okna Přidat parametry a Přidat argumenty
 
-Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **přidat parametry** používané návrhářem <xref:System.Activities.Statements.InvokeMethod>:
+Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **přidat parametry** používané <xref:System.Activities.Statements.InvokeMethod> návrhářem:
 
-|||
+|Name|Hodnota|
 |-|-|
 |**Směr**|Určuje, zda parametr představuje tok dat do metody, mimo metodu nebo obojí.|
 |**Typ**|Název typu nového parametru.|
 |**Hodnota**|Výraz Visual Basic, který se používá k přiřazení výchozí hodnoty k novému parametru.|
 
-Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **Přidat argumenty** používané návrhářem <xref:System.Activities.Statements.InvokeDelegate>:
+Následující tabulka popisuje prvky uživatelského rozhraní (UI) dialogového okna **Přidat argumenty** používané <xref:System.Activities.Statements.InvokeDelegate> návrhářem:
 
-|||
+|Name|Hodnota|
 |-|-|
-|**Jméno**|Název argumentu.|
+|**Název**|Název argumentu.|
 |**Směr**|Určuje, zda argument představuje tok dat do delegáta, z delegáta nebo obojí.|
 |**Typ**|Název typu nového argumentu.|
 |**Hodnota**|Hodnota, která se má použít pro tuto instanci argumentu delegáta.|

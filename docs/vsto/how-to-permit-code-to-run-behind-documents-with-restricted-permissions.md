@@ -1,7 +1,7 @@
 ---
-title: Povolit kód ke spuštění za dokumentace s omezenými oprávněními
+title: Povolit spuštění kódu na pozadí dokumentů s omezenými oprávněními
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,39 +17,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32e42954958fda71d54c3c0ac2685928644e7461
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 15cfb7ebf2f4f71e892820206f0dd1d006639992
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402248"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547508"
 ---
-# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Postupy: Povolit kód ke spuštění pozadí dokumentů s omezenými oprávněními
-  Funkci Správa informačních práv (IRM) systému Microsoft Office můžete použít k omezení oprávnění k dokumentu nebo sešitu. Ve výchozím nastavení nemá oprávnění spustit kódu s omezeným přístupem dokument aplikace Microsoft Office Word nebo sešit aplikace Microsoft Office Excel. Výchozí nastavení můžete změnit tak, aby vaše rozšíření spravovaného kódu můžete přístup k objektu modelu, a vaše řešení bude fungovat.
+# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Postupy: povolení spuštění kódu na pozadí dokumentů s omezenými oprávněními
+  Pomocí funkce Information Rights Management (IRM) systém Microsoft Office můžete omezit oprávnění k dokumentu nebo sešitu. Ve výchozím nastavení není možné spustit kód za omezeným systém Microsoft Office dokumentu aplikace Word nebo excelový sešit systém Microsoft Office. Můžete změnit výchozí nastavení tak, aby vaše rozšíření spravovaného kódu mohla přistupovat k objektovému modelu a vaše řešení bude fungovat.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Musí být autorem dokumentu nebo sešitu nebo mají úplný přístup, abyste mohli změnit nastavení oprávnění.
+ Aby bylo možné změnit nastavení oprávnění, musíte být autor dokumentu nebo sešitu, nebo mít přístup k úplnému řízení.
 
-## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Tak, aby povolovala kód ke spuštění pozadí dokumentů s omezenými oprávněními
+## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Povolení spuštění kódu na pozadí dokumentů s omezenými oprávněními
 
-1. Otevření dokumentu nebo sešitu v aplikaci Word nebo Excel.
+1. Otevřete dokument nebo sešit ve Wordu nebo Excelu.
 
-2. Klikněte na tlačítko **souboru** kartu, přejděte na **připravit**, přejděte na **omezit oprávnění**a potom klikněte na tlačítko **omezený přístup**.
+2. Klikněte na kartu **soubor** , přejděte na **Příprava**, přejděte na **omezit oprávnění**a pak klikněte na **omezený přístup**.
 
    > [!NOTE]
-   > Při prvním použití zobrazí výzva k instalaci klienta Windows Rights Management. Po instalaci klienta, můžete potřebovat zopakujte kroky.
+   > Při prvním použití se zobrazí výzva k instalaci klienta Rights Management pro Windows. Po instalaci klienta budete možná muset postup opakovat.
 
-3. V **oprávnění** dialogu **omezit oprávnění k tomuto dokumentu**a potom klikněte na tlačítko **další možnosti**.
+3. V dialogovém okně **oprávnění** vyberte **omezit oprávnění k tomuto dokumentu**a pak klikněte na **Další možnosti**.
 
-4. V části **další oprávnění pro uživatele**vyberte **programový přístup k obsahu**.
+4. V části **Další oprávnění pro uživatele**vyberte **přístup k obsahu prostřednictvím kódu programu**.
 
-   Programový přístup k objektovému modelu umožní aplikaci Word nebo Excel.
+   Aplikace Word nebo Excel umožní programový přístup k objektovému modelu.
 
-## <a name="see-also"></a>Viz také:
-- [Přehled rozšíření spravovaného kódu a správy přístupových práv](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+## <a name="see-also"></a>Viz také
+- [Přehled správy přístupových práv k informacím a rozšíření spravovaného kódu](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
 - [Ochrana dokumentů v řešeních na úrovni dokumentu](../vsto/document-protection-in-document-level-solutions.md)
-- [Ochrana dokumentů Office heslem](../vsto/password-protection-on-office-documents.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Ochrana heslem v dokumentech Office](../vsto/password-protection-on-office-documents.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

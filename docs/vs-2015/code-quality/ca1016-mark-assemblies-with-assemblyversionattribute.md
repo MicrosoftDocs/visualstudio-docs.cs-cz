@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f1498624d4f79a60854a624ee5c4053a3343f515
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97bd41e51c8d6b5415ffb91c5696c7055f46cf7c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663174"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545402"
 ---
-# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí atributu AssemblyVersionAttribute
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí AssemblyVersionAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Sestavení nemá číslo verze.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -42,20 +42,20 @@ ms.locfileid: "72663174"
 
 - Číslo verze
 
-- jazykových
+- Kultura
 
 - Veřejný klíč (pro silně pojmenovaná sestavení).
 
-  @No__t_0 používá číslo verze k jednoznačné identifikaci sestavení a k vytvoření vazby na typy v silně pojmenovaných sestaveních. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
+  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]Používá číslo verze k jednoznačné identifikaci sestavení a k vytvoření vazby na typy v silně pojmenovaných sestaveních. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte do sestavení číslo verze pomocí atributu <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName>. Podívejte se na téma v následujícím příkladu.
+ Chcete-li opravit porušení tohoto pravidla, přidejte do sestavení číslo verze pomocí <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atributu. Prohlédněte si následující příklad.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Potlačit upozornění z tohoto pravidla pro sestavení, která používají třetí strany nebo v produkčním prostředí.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje sestavení, které má atribut <xref:System.Reflection.AssemblyVersionAttribute> použit.
+ Následující příklad ukazuje sestavení, které má <xref:System.Reflection.AssemblyVersionAttribute> atribut použit.
 
  [!code-cpp[FxCop.Design.AssembliesVersion#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesVersion/cpp/FxCop.Design.AssembliesVersion.cpp#1)]
  [!code-csharp[FxCop.Design.AssembliesVersion#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesVersion/cs/FxCop.Design.AssembliesVersion.cs#1)]

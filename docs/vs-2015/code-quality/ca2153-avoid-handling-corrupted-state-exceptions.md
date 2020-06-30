@@ -8,28 +8,28 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9d4ca2668f2d6241e9a3cca88b4722ee5348abc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27d837c09e5f2f90796c149bf58d1114d7e6352d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667413"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546312"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Vyhněte se zpracování výjimek v poškozeném stavu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  [Poškozené výjimky stavu (rozšíření)](https://msdn.microsoft.com/magazine/dd419661.aspx) označují, že v procesu existuje poškození paměti. Pokud by útočník mohl zneužít do poškozené oblasti paměti, může to místo toho zachytit, než umožní selhání procesu způsobit chyby zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Rozšíření na straně serveru označuje, že stav procesu je poškozený a nebyl zachycen systémem. V případě poškozeného stavu je obecná obslužná rutina zachycena pouze v případě, že svou metodu označíte pomocí správného atributu `HandleProcessCorruptedStateExceptions`. Ve výchozím nastavení nebude modul [CLR (Common Language Runtime)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) vyvolat obslužné rutiny catch pro rozšíření.
+ Rozšíření na straně serveru označuje, že stav procesu je poškozený a nebyl zachycen systémem. V případě poškozeného stavu je obecná obslužná rutina zachycena pouze v případě, že svou metodu označíte pomocí správného `HandleProcessCorruptedStateExceptions` atributu. Ve výchozím nastavení nebude modul [CLR (Common Language Runtime)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) vyvolat obslužné rutiny catch pro rozšíření.
 
  Povolení selhání procesu bez zachycení těchto typů výjimek je nejbezpečnější možností, protože i kód protokolování může útočníkům umožnit zneužít chyby poškození paměti.
 
@@ -38,7 +38,7 @@ ms.locfileid: "72667413"
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li vyřešit toto upozornění, proveďte jednu z následujících akcí:
 
- 1. Odeberte atribut `HandleProcessCorruptedStateExceptions`. Vrátí se k výchozímu chování modulu runtime, kde rozšíření nejsou předány obslužným rutinám catch.
+ 1. Odeberte `HandleProcessCorruptedStateExceptions` atribut. Vrátí se k výchozímu chování modulu runtime, kde rozšíření nejsou předány obslužným rutinám catch.
 
  2. Odeberte obslužnou rutinu obecné catch v předvolbách obslužných rutin, které zachycují konkrétní typy výjimek.  To může zahrnovat rozšíření za předpokladu, že kód obslužné rutiny může bezpečně zpracovat (velmi zřídka).
 

@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 92bbfc3612a34d354dee6288d66f2cf96c1e107c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f3ed1bd914655109606c1472227fb73c10d5b7a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289388"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547612"
 ---
 # <a name="user-accounts-and-updates"></a>Uživatelské účty a aktualizace
 
@@ -27,7 +27,7 @@ Aplikace Visual Studio je sama o sobě připojená prostředí. Když se přihl�
 
 ## <a name="in-this-section"></a>V této části
 
-|||
+|Nadpis|Popis|
 |-|-|
 |[Přihlášení k sadě Visual Studio](../ide/signing-in-to-visual-studio.md)|Popisuje, jak a proč se přihlašovat k aplikaci Visual Studio.|
 |[Práce s několika uživatelskými účty](../ide/work-with-multiple-user-accounts.md)|Popisuje, jak přidružit více účtů Microsoft a pracovní nebo školní účty a povolit přístup k prostředkům a službám ze všech vašich účtů.|

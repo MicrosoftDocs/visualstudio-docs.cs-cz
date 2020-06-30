@@ -19,24 +19,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8df4972cb1d54b88d6e716254574ea95bcaed4b7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a5d64a27759cf844550297beb19b026bbeaa0e40
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672445"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546819"
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>Potlačení upozornění použitím atributu SuppressMessage
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Je často vhodné označit, že upozornění není nepoužitelné, aby členové týmu informovali, že kód byl zkontrolován a bylo zjištěno, že upozornění by mělo být potlačeno. Ve zdrojovém potlačení (ISS) umožňuje vývojářům umístit atribut, který potlačí upozornění blízko k umístění, které upozornění vygenerovalo. Atribut ISS můžete přidat přímo ke zdrojovému souboru nebo můžete použít místní nabídku v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí (IDE).
+Je často vhodné označit, že upozornění není nepoužitelné, aby členové týmu informovali, že kód byl zkontrolován a bylo zjištěno, že upozornění by mělo být potlačeno. Ve zdrojovém potlačení (ISS) umožňuje vývojářům umístit atribut, který potlačí upozornění blízko k umístění, které upozornění vygenerovalo. Můžete přidat atribut ISS přímo ke zdrojovému souboru nebo můžete použít místní nabídku v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí (IDE).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-|||
+|Nadpis|Popis|
 |-|-|
 |[Přehled potlačování ve zdroji](../code-quality/in-source-suppression-overview.md)|Přečtěte si o službě ISS a použijte ji ve svém kódu.|
-|[Postupy: Potlačení upozornění použitím položky nabídky](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)|Přečtěte si, jak potlačit upozornění v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE pomocí místní nabídky.|
+|[Postupy: Potlačení upozornění použitím položky nabídky](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)|Naučte se potlačit upozornění v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí pomocí místní nabídky.|
 
 ## <a name="related-sections"></a>Související oddíly
  [Analýza kvality spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

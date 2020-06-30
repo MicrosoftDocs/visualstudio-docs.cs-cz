@@ -1,5 +1,5 @@
 ---
-title: Soubory Element | Dokumentace Microsoftu
+title: Element Files | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3c669b7cc314bc2d7a999e77d5cfb95251789dd8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 42e919bbe25047da14940203ac86793430aeadde
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967367"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546507"
 ---
 # <a name="files-element"></a>Files – element
-  Určuje soubory, které chcete nasadit položky projektu služby SharePoint, jako je například souborů elementu funkce a výstupu závislé jiné-projektů služby SharePoint.
+  Určuje soubory, které mají být nasazeny s položkou projektu služby SharePoint, jako jsou například soubory prvků funkce a výstup závislých projektů mimo službu SharePoint.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Files>
@@ -31,7 +31,7 @@ ms.locfileid: "62967367"
 </Files>
 ```
 
-## <a name="type"></a>Type
+## <a name="type"></a>Typ
  **FileCollectionType**
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
@@ -44,23 +44,23 @@ ms.locfileid: "62967367"
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|Volitelné **ProjectItemFileType** elementu.<br /><br /> Představuje soubor služby SharePoint, jako je například soubor prvku funkce zahrnout do položky projektu při nasazení do služby SharePoint.|
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|Volitelné **ProjectOutputFileType** elementu.<br /><br /> Představuje výstupní projekt, který patří do položky projektu při nasazení do služby SharePoint.|
+|[ProjectItemFile –](../sharepoint/projectitemfile-element.md)|Volitelný element **ProjectItemFileType** .<br /><br /> Představuje soubor služby SharePoint, jako je například soubor prvků funkce, který se má zahrnout do položky projektu při nasazení do služby SharePoint.|
+|[ProjectOutputFile –](../sharepoint/projectoutputfile-element.md)|Volitelný element **ProjectOutputFileType** .<br /><br /> Představuje výstup projektu, který má být zahrnut do položky projektu při nasazení do služby SharePoint.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Představuje položku Sharepointového projektu. Tento prvek požadovaný kořenový element z `.spdata` souboru.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Představuje položku SharePointového projektu. Tento prvek požadovaný kořenový element `.spdata` souboru.|
 
 ## <a name="element-information"></a>Informace o elementu
 
-|||
+|Vlastnost|Hodnota|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Název schématu**|Schéma položky projektu služby SharePoint|
-|**Soubor ověření**|ProjectItemModelSchema.xsd|
-|**Může být prázdný**|Ne|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Název schématu**|Schéma položek projektu služby SharePoint|
+|**Soubor ověření**|ProjectItemModelSchema. xsd|
+|**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
+## <a name="see-also"></a>Viz také
+- [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

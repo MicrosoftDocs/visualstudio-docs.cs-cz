@@ -1,7 +1,7 @@
 ---
 title: Přidání vlastního ověřování architektury do diagramů závislostí
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f7c3c37feb2f2d68817807f056ee470f0d0d05f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597227"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546919"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání vlastního ověřování architektury do diagramů závislostí
 
@@ -47,7 +47,7 @@ Nejrychlejší způsob, jak vytvořit validátor, je použití šablony projektu
    > [!WARNING]
    > Chcete-li, aby šablona fungovala správně:
    >
-   > - Upravte volání `LogValidationError` pro odebrání volitelných argumentů `errorSourceNodes` a `errorTargetNodes`.
+   > - Upravte volání na `LogValidationError` pro odebrání volitelných argumentů `errorSourceNodes` a `errorTargetNodes` .
    > - Pokud používáte vlastní vlastnosti, použijte aktualizaci uvedenou v části [Přidání vlastních vlastností do diagramů závislostí](../modeling/add-custom-properties-to-layer-diagrams.md).
 
 2. Upravte kód pro definování ověřování. Další informace najdete v tématu [ověřování programování](#programming).
@@ -87,11 +87,11 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
     2. V dialogovém okně **Přidat nový prostředek** nastavte:
 
-         **Type** = **Microsoft.VisualStudio.MefComponent**
+         **Typ**  =  **Microsoft. VisualStudio. MefComponent**
 
-         **Zdrojový** = **projekt v aktuálním řešení**
+         **Zdroj**  =  **Projekt v aktuálním řešení**
 
-         **Projekt** = *váš projekt validátoru*
+         **Projekt**  =  *váš projekt validátoru*
 
 5. Musíte ho také přidat jako ověření vrstvy:
 
@@ -99,22 +99,22 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
     2. V dialogovém okně **Přidat nový prostředek** nastavte:
 
-         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. Nejedná se o jednu z možností v rozevíracím seznamu. Je nutné zadat ho z klávesnice.
+         **Typ**  =  **Microsoft. VisualStudio. ArchitectureTools. Layer. validátor**. Nejedná se o jednu z možností v rozevíracím seznamu. Je nutné zadat ho z klávesnice.
 
-         **Zdrojový** = **projekt v aktuálním řešení**
+         **Zdroj**  =  **Projekt v aktuálním řešení**
 
-         **Projekt** = *váš projekt validátoru*
+         **Projekt**  =  *váš projekt validátoru*
 
 6. Vraťte se do projektu ověření vrstvy a přidejte následující odkazy projektu:
 
-    |**Odkazy**|**Co vám to umožňuje**|
+    |**Reference**|**Co vám to umožňuje**|
     |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|Čtení grafu architektury|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Čtení modelu DOM kódu přidruženého k vrstvám|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Čtení modelu vrstvy|
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Čtení a aktualizace obrazců a diagramů.|
-    |System.ComponentModel.Composition|Definice ověřovací komponenty pomocí Managed Extensibility Framework (MEF)|
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Definování rozšíření modelování|
+    |Microsoft. VisualStudio. ArchitectureTools. rozšiřitelnost|Čtení a aktualizace obrazců a diagramů.|
+    |System. ComponentModel. složení|Definice ověřovací komponenty pomocí Managed Extensibility Framework (MEF)|
+    |Microsoft. VisualStudio. Modeling. SDK. znění|Definování rozšíření modelování|
 
 7. Zkopírujte ukázkový kód na konci tohoto tématu do souboru třídy v projektu knihovny validátoru, aby obsahoval kód pro ověření. Další informace najdete v tématu [ověřování programování](#programming).
 
@@ -125,7 +125,7 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
 9. Chcete-li nainstalovat VSIX v hlavní instanci aplikace Visual Studio nebo v jiném počítači, vyhledejte soubor **. vsix** v adresáři **bin** projektu VSIX. Zkopírujte jej do počítače, kam chcete nainstalovat VSIX. Dvakrát klikněte na soubor VSIX v Průzkumníkovi Windows.
 
-## <a name="programming"></a>Ověřování programování
+## <a name="programming-validation"></a><a name="programming"></a>Ověřování programování
 
 Chcete-li definovat rozšíření pro ověření vrstvy, Definujte třídu, která má následující vlastnosti:
 
@@ -148,10 +148,10 @@ Chcete-li definovat rozšíření pro ověření vrstvy, Definujte třídu, kter
     } }
   ```
 
-- Když zjistíte chybu, můžete ji nahlásit pomocí `LogValidationError()`.
+- Když zjistíte chybu, můžete ji nahlásit pomocí `LogValidationError()` .
 
   > [!WARNING]
-  > Nepoužívejte volitelné parametry `LogValidationError`.
+  > Nepoužívejte volitelné parametry `LogValidationError` .
 
 Když uživatel vyvolá příkaz nabídky **ověřit architekturu** , systém modulu runtime vrstvy analyzuje vrstvy a jejich artefakty a vytvoří tak graf. Graf obsahuje čtyři části:
 
@@ -163,18 +163,18 @@ Když uživatel vyvolá příkaz nabídky **ověřit architekturu** , systém mo
 
 - Uzly, které reprezentují chyby zjištěné validátorem.
 
-Když je graf vytvořen, je volána standardní metoda ověřování. Po dokončení se v nespecifikovaném pořadí zavolají jakékoli nainstalované metody ověřování rozšíření. Graf je předán do každé metody `ValidateArchitecture`, která může kontrolovat graf a nahlásit všechny nalezené chyby.
+Když je graf vytvořen, je volána standardní metoda ověřování. Po dokončení se v nespecifikovaném pořadí zavolají jakékoli nainstalované metody ověřování rozšíření. Graf se předává každé `ValidateArchitecture` metodě, která může kontrolovat graf a nahlásit všechny nalezené chyby.
 
 > [!NOTE]
 > To není stejné jako proces ověření, který se dá použít v jazycích specifických pro doménu.
 
 Metody ověřování by neměly měnit model vrstvy nebo kód, který se ověřuje.
 
-Model grafu je definován v <xref:Microsoft.VisualStudio.GraphModel>. Jeho hlavní třídy jsou <xref:Microsoft.VisualStudio.GraphModel.GraphNode> a <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.
+Model grafu je definován v <xref:Microsoft.VisualStudio.GraphModel> . Jeho hlavní třídy jsou <xref:Microsoft.VisualStudio.GraphModel.GraphNode> a <xref:Microsoft.VisualStudio.GraphModel.GraphLink> .
 
 Každý uzel a každý odkaz má jednu nebo více kategorií, které určují typ prvku nebo vztahu, který představuje. Uzly typického grafu mají následující kategorie:
 
-- Dsl.LayerModel
+- DSL. LayerModel
 
 - DSL. Layer
 
@@ -194,7 +194,7 @@ Každý uzel a každý odkaz má jednu nebo více kategorií, které určují ty
 
 Odkazy z vrstev na elementy v kódu mají kategorii "představuje".
 
-## <a name="debugging"></a>Ověřování ladění
+## <a name="debugging-validation"></a><a name="debugging"></a>Ověřování ladění
 
 Chcete-li ladit rozšíření ověřování vrstvy, stiskněte klávesy CTRL + F5. Otevře se experimentální instance aplikace Visual Studio. V této instanci otevřete nebo vytvořte model vrstvy. Tento model musí být přidružen k kódu a musí mít alespoň jednu závislost.
 
@@ -216,9 +216,9 @@ Vždy, když aktualizujete ověřovací kód, použijte příkaz **Vyčistit ře
 
 Ověřování se spouští v samostatném procesu. Proto se zarážky v metodě ověřování nebudou aktivovat. Ladicí program musíte připojit k procesu explicitně po spuštění ověřování.
 
-Chcete-li připojit ladicí program k procesu ověřování, vložte volání `System.Diagnostics.Debugger.Launch()` na začátku vaší metody ověřování. Po zobrazení dialogového okna ladění vyberte hlavní instanci aplikace Visual Studio.
+Chcete-li připojit ladicí program k procesu ověřování, vložte volání na `System.Diagnostics.Debugger.Launch()` začátek metody ověřování. Po zobrazení dialogového okna ladění vyberte hlavní instanci aplikace Visual Studio.
 
-Alternativně můžete vložit volání `System.Windows.Forms.MessageBox.Show()`. Když se zobrazí okno se zprávou, přejděte do hlavní instance sady Visual Studio a v nabídce **ladění** klikněte na **připojit k procesu**. Vyberte proces s názvem **GraphCmd. exe**.
+Alternativně můžete vložit volání do `System.Windows.Forms.MessageBox.Show()` . Když se zobrazí okno se zprávou, přejděte do hlavní instance sady Visual Studio a v nabídce **ladění** klikněte na **připojit k procesu**. Vyberte proces s názvem **Graphcmd.exe**.
 
 Experimentální instanci vždy spusťte stisknutím kombinace kláves CTRL + F5 (**Spustit bez ladění**).
 
@@ -226,7 +226,7 @@ Experimentální instanci vždy spusťte stisknutím kombinace kláves CTRL + F5
 
 Chcete-li nainstalovat rozšíření ověřování na počítači, ve kterém je nainstalována vhodná verze sady Visual Studio, otevřete soubor VSIX v cílovém počítači.
 
-## <a name="example"></a>Příklad kódu
+## <a name="example-code"></a><a name="example"></a>Příklad kódu
 
 ```csharp
 using System;
@@ -287,6 +287,6 @@ namespace Validator3
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rozšíření diagramů závislostí](../modeling/extend-layer-diagrams.md)

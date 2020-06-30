@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidat ovládací prvky grafu do listů'
+title: 'Postupy: Přidání ovládacích prvků grafu do listů'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80cc011cb9c2387b86e244f501fd5746ebb67535
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: fdb1f738fe6e68f7470ae65e6ce08b2f3be0ef6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254656"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546234"
 ---
-# <a name="how-to-add-chart-controls-to-worksheets"></a>Postupy: Přidat ovládací prvky grafu do listů
-  Ovládací prvky můžete <xref:Microsoft.Office.Tools.Excel.Chart> přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v přizpůsobení na úrovni dokumentu. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.Chart> ovládací prvky v době běhu v doplňkech VSTO.
+# <a name="how-to-add-chart-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků grafu do listů
+  <xref:Microsoft.Office.Tools.Excel.Chart>Ovládací prvky můžete přidat do listu aplikace systém Microsoft Office Excel v době návrhu a v době běhu v přizpůsobení na úrovni dokumentu. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.Chart> ovládací prvky v době běhu v doplňkech VSTO.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -35,11 +35,11 @@ ms.locfileid: "71254656"
 
   Další informace o <xref:Microsoft.Office.Tools.Excel.Chart> ovládacích prvcích naleznete v tématu [Chart Control](../vsto/chart-control.md).
 
-## <a name="designtime"></a>Přidat ovládací prvky grafu v době návrhu
- <xref:Microsoft.Office.Tools.Excel.Chart> Ovládací prvek můžete přidat do listu stejným způsobem, jako byste graf přidali v rámci aplikace.
+## <a name="add-chart-controls-at-design-time"></a><a name="designtime"></a>Přidat ovládací prvky grafu v době návrhu
+ Ovládací prvek můžete přidat <xref:Microsoft.Office.Tools.Excel.Chart> do listu stejným způsobem, jako byste graf přidali v rámci aplikace.
 
 > [!NOTE]
-> Ovládací prvek není k dispozici v okně **Sada nástrojů** nebo **zdroje dat.** <xref:Microsoft.Office.Tools.Excel.Chart>
+> <xref:Microsoft.Office.Tools.Excel.Chart>Ovládací prvek není k dispozici v okně **Sada nástrojů** nebo **zdroje dat** .
 
 ### <a name="to-add-a-chart-host-control-to-a-worksheet-in-excel"></a>Přidání ovládacího prvku pro hostování grafu do listu v aplikaci Excel
 
@@ -55,18 +55,18 @@ ms.locfileid: "71254656"
 
 6. V dialogovém okně **Vybrat zdroj dat** klikněte na tlačítko **OK**.
 
-## <a name="runtimedoclevel"></a>Přidat ovládací prvky grafu za běhu v projektu na úrovni dokumentu
- <xref:Microsoft.Office.Tools.Excel.Chart> Ovládací prvek lze přidat dynamicky v době běhu. Po zavření dokumentu se v dokumentu neukládají dynamicky vytvořené grafy jako hostitelské ovládací prvky. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
+## <a name="add-chart-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Přidat ovládací prvky grafu za běhu v projektu na úrovni dokumentu
+ Ovládací prvek lze přidat <xref:Microsoft.Office.Tools.Excel.Chart> dynamicky v době běhu. Po zavření dokumentu se v dokumentu neukládají dynamicky vytvořené grafy jako hostitelské ovládací prvky. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 #### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>Postup pro přidání ovládacího prvku grafu do listu prostřednictvím kódu programu
 
-1. V obslužné rutině <xref:Microsoft.Office.Tools.Excel.Chart> `Sheet1` <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> události pro vložte následující kód pro přidání ovládacího prvku.
+1. V <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> obslužné rutině události pro `Sheet1` vložte následující kód pro přidání <xref:Microsoft.Office.Tools.Excel.Chart> ovládacího prvku.
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#1)]
      [!code-vb[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#1)]
 
-## <a name="runtimeaddin"></a>Přidání ovládacích prvků Chart v době běhu v projektu doplňku VSTO
- <xref:Microsoft.Office.Tools.Excel.Chart> Ovládací prvek můžete přidat programově do libovolného otevřeného listu v projektu doplňku VSTO. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+## <a name="add-chart-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Přidání ovládacích prvků Chart v době běhu v projektu doplňku VSTO
+ Ovládací prvek můžete přidat <xref:Microsoft.Office.Tools.Excel.Chart> programově do libovolného otevřeného listu v projektu doplňku VSTO. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
  Dynamicky vytvořené ovládací prvky grafu se v listu neukládají jako hostitelské ovládací prvky při zavření listu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
@@ -77,16 +77,16 @@ ms.locfileid: "71254656"
      [!code-csharp[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#9)]
      [!code-vb[Trin_Excel_Dynamic_Controls#9](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#9)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad má následující požadavky:
 
 - Data, která se mají vynést do grafu, se ukládají v rozsahu od A5 do D8 v listu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
 - [Ovládací prvek grafu](../vsto/chart-control.md)
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

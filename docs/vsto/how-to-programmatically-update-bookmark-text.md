@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Programově aktualizovat textu záložky'
+title: 'Postupy: aktualizace textu záložek prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,72 +14,72 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 436fefd425da46cea6a8cd1aba95fb9eb14362f7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9b76c239606a4bf0d6da203bd4eea45a11162706
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418964"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546949"
 ---
-# <a name="how-to-programmatically-update-bookmark-text"></a>Postupy: Programově aktualizovat textu záložky
-  Můžete vložit text do zástupný symbol záložky v dokumentu aplikace Microsoft Office Word tak, aby text můžete načíst později, nebo k nahrazení textu v záložce. Pokud vyvíjíte přizpůsobení úrovni dokumentu, můžete také aktualizovat text <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek, který je vázán na data. Další informace najdete v tématu [vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
+# <a name="how-to-programmatically-update-bookmark-text"></a>Postupy: aktualizace textu záložek prostřednictvím kódu programu
+  Text můžete vložit do zástupné záložky v dokumentu systém Microsoft Office Word, abyste mohli text později načíst nebo nahradit text na záložce. Pokud vyvíjíte přizpůsobení na úrovni dokumentu, můžete také aktualizovat text v <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacím prvku, který je svázán s daty. Další informace najdete v tématu [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Záložka objekt může být jeden ze dvou typů:
+ Objekt Bookmark může být jeden ze dvou typů:
 
-- A <xref:Microsoft.Office.Tools.Word.Bookmark> hostování ovládacího prvku.
+- <xref:Microsoft.Office.Tools.Word.Bookmark>Hostitelský ovládací prvek.
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky rozšíření nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekty povolením vystavení události a datové vazby. Další informace o hostitelských ovládacích prvcích najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+   <xref:Microsoft.Office.Tools.Word.Bookmark>ovládací prvky rozšiřuje nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekty tím, že povolují datové vazby a zpřístupňují události. Další informace o hostitelských ovládacích prvcích naleznete v tématu Přehled hostitelských [položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
-- Nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objektu.
+- Nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekt.
 
-   <xref:Microsoft.Office.Interop.Word.Bookmark> objekty nemají vazby funkcí události nebo data.
+   <xref:Microsoft.Office.Interop.Word.Bookmark>objekty nemají události nebo funkce datové vazby.
 
-  Když přiřadíte text na záložku, chování se liší mezi <xref:Microsoft.Office.Interop.Word.Bookmark> a <xref:Microsoft.Office.Tools.Word.Bookmark>. Další informace najdete v tématu [Bookmark – ovládací prvek](../vsto/bookmark-control.md).
+  Když přiřadíte text k záložce, chování se liší mezi <xref:Microsoft.Office.Interop.Word.Bookmark> a a <xref:Microsoft.Office.Tools.Word.Bookmark> . Další informace naleznete v tématu [ovládací prvek Bookmark](../vsto/bookmark-control.md).
 
-## <a name="use-host-controls"></a>Použití hostitelské ovládací prvky
+## <a name="use-host-controls"></a>Použití hostitelských ovládacích prvků
 
-### <a name="to-update-bookmark-contents-using-a-bookmark-control"></a>Aktualizovat obsah záložku pomocí ovládací prvek Bookmark
+### <a name="to-update-bookmark-contents-using-a-bookmark-control"></a>Aktualizace obsahu záložky pomocí ovládacího prvku záložky
 
-1. Vytvořit proceduru, která přijímá `bookmark` argument pro název záložky a `newText` argument řetězec, který má přiřadit <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnost.
+1. Vytvořte proceduru, která převezme `bookmark` argument pro název záložky, a `newText` argument pro řetězec, který má být přiřazen <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> Vlastnosti.
 
     > [!NOTE]
-    > Přiřazení text, který má <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> nebo <xref:Microsoft.Office.Tools.Word.Bookmark.FormattedText%2A> vlastnost <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek nezpůsobí záložku, která se má odstranit.
+    > Přiřazení textu k <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnosti nebo <xref:Microsoft.Office.Tools.Word.Bookmark.FormattedText%2A> <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku nezpůsobí odstranění záložky.
 
      [!code-vb[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#63)]
      [!code-csharp[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#63)]
 
-2. Přiřazení *newText* řetězec, který se <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnost <xref:Microsoft.Office.Tools.Word.Bookmark>.
+2. Přiřaďte řetězec *NewText* k <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
      [!code-vb[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#64)]
      [!code-csharp[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#64)]
 
 ## <a name="use-word-objects"></a>Použití objektů aplikace Word
 
-### <a name="to-update-bookmark-contents-using-a-word-bookmark-object"></a>Aktualizovat obsah záložku pomocí objektem Wordové záložky
+### <a name="to-update-bookmark-contents-using-a-word-bookmark-object"></a>Aktualizace obsahu záložky pomocí objektu Word Bookmark
 
-1. Vytvořit proceduru, která má `bookmark` argument název <xref:Microsoft.Office.Interop.Word.Bookmark>a `newText` argument řetězec, který má přiřadit <xref:Microsoft.Office.Interop.Word.Range.Text%2A> vlastnost záložky.
+1. Vytvořte proceduru, která má `bookmark` argument pro název <xref:Microsoft.Office.Interop.Word.Bookmark> , a `newText` argument pro řetězec, který má být přiřazen <xref:Microsoft.Office.Interop.Word.Range.Text%2A> Vlastnosti záložky.
 
     > [!NOTE]
-    > Přiřazení text do nativní aplikace Word <xref:Microsoft.Office.Interop.Word.Bookmark> objekt způsobí, že na záložku, která se má odstranit.
+    > Při přiřazování textu k nativnímu objektu aplikace Word <xref:Microsoft.Office.Interop.Word.Bookmark> dojde k odstranění záložky.
 
      [!code-vb[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#65)]
      [!code-csharp[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#65)]
 
-2. Přiřazení *newText* řetězec, který se <xref:Microsoft.Office.Interop.Word.Range.Text%2A> vlastnost záložky, který automaticky odstraní záložky. Potom je znovu přidat záložku na <xref:Microsoft.Office.Interop.Word.Bookmarks> kolekce.
+2. Přiřaďte řetězec *NewText* k <xref:Microsoft.Office.Interop.Word.Range.Text%2A> Vlastnosti záložky, která automaticky odstraní záložku. Pak záložku znovu přidejte do <xref:Microsoft.Office.Interop.Word.Bookmarks> kolekce.
 
-     Následující příklad kódu je možné v přizpůsobení na úrovni dokumentu.
+     Následující příklad kódu lze použít v přizpůsobení na úrovni dokumentu.
 
      [!code-vb[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#66)]
      [!code-csharp[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#66)]
 
-     Následující příklad kódu je možné v doplňku VSTO. Tento příklad používá aktivní dokument.
+     V doplňku VSTO se dá použít následující příklad kódu. Tento příklad používá aktivní dokument.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#66)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#66)]
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)
-- [BOOKMARK – ovládací prvek](../vsto/bookmark-control.md)
+- [Ovládací prvek záložek](../vsto/bookmark-control.md)

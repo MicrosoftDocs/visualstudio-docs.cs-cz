@@ -1,7 +1,7 @@
 ---
 title: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,68 +15,68 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aed3ace3765bb9f160117503deb7373e12e510ad
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: 2d24ec3a17c9e0824c6b7aaffeaaac02c1c4f76e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177768"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546221"
 ---
-# <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Postupy: Přidání podokna akcí do wordových dokumentů nebo excelových sešitů
-  K přidání podokna akcí do dokumentů aplikace Microsoft Office Word nebo sešitu aplikace Microsoft Excel, vytvoření uživatelského ovládacího prvku Windows Forms. Pak přidejte uživatelský ovládací prvek <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnost `ThisDocument.ActionsPane` pole (slova) nebo `ThisWorkbook.ActionsPane` pole (Excel) ve vašem projektu.
+# <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel
+  Chcete-li přidat podokno akcí do aplikace systém Microsoft Office wordový dokument nebo do sešitu aplikace Microsoft Excel, nejprve vytvořte model Windows Forms uživatelský ovládací prvek. Pak přidejte uživatelský ovládací prvek do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti `ThisDocument.ActionsPane` pole (Word) nebo `ThisWorkbook.ActionsPane` pole (Excel) v projektu.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="creating-the-user-control"></a>Vytvoření uživatelského ovládacího prvku
- Následující postup ukazuje, jak vytvořit uživatelský ovládací prvek aplikace Word nebo Excel projektu. Také přidá tlačítko do uživatelského ovládacího prvku, který zapíše text do dokumentem nebo sešitem, když dojde ke kliknutí na.
+ Následující postup ukazuje, jak vytvořit uživatelský ovládací prvek v projektu aplikace Word nebo Excel. Přidá také tlačítko k uživatelskému ovládacímu prvku, který při kliknutí zapisuje text do dokumentu nebo na sešit.
 
-#### <a name="to-create-the-user-control"></a>Chcete-li vytvořit uživatelský ovládací prvek
+#### <a name="to-create-the-user-control"></a>Vytvoření uživatelského ovládacího prvku
 
-1. V sadě Visual Studio otevřete projekt úrovni dokumentu aplikace Word nebo Excel.
+1. Otevřete projekt na úrovni dokumentu aplikace Word nebo Excelu v aplikaci Visual Studio.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.
+2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V **přidat novou položku** dialogu **ovládacího prvku podokna akcí**, pojmenujte ho **HelloControl**a klikněte na tlačítko **přidat**.
-
-    > [!NOTE]
-    > Můžete také přidat **uživatelský ovládací prvek** položky do projektu. Třídy generované **ovládacího prvku podokna akcí** a **uživatelský ovládací prvek** položky jsou funkčně ekvivalentní.
-
-4. Z **Windows Forms** karty **nástrojů** přetáhněte **tlačítko** ovládacího prvku do ovládacího prvku.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **HelloControl**a klikněte na tlačítko **Přidat**.
 
     > [!NOTE]
-    > Pokud ovládací prvek není viditelný v návrháři, dvakrát klikněte na tlačítko **HelloControl** v **Průzkumníka řešení**.
+    > Můžete alternativně přidat položku **uživatelského ovládacího prvku** do projektu. Třídy generované **ovládacími prvky podokna akce** a položkami **uživatelského ovládacího prvku** jsou funkčně ekvivalentní.
 
-5. Přidejte kód, který <xref:System.Windows.Forms.Control.Click> obslužná rutina události tlačítka. Následující příklad ukazuje kód pro dokument aplikace Microsoft Office Word.
+4. Na kartě **model Windows Forms** panelu **nástrojů** přetáhněte ovládací prvek **tlačítko** na ovládací prvek.
+
+    > [!NOTE]
+    > Pokud ovládací prvek není viditelný v návrháři, poklikejte na **HelloControl** v **Průzkumník řešení**.
+
+5. Přidejte kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka. Následující příklad ukazuje kód pro systém Microsoft Office wordový dokument.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#12)]
      [!code-vb[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/HelloControl.vb#12)]
 
-6. V jazyce C# je nutné přidat obslužnou rutinu události pro kliknutí na tlačítko. Tento kód v můžete umístit `HelloControl` konstruktor po volání `InitializeComponent`.
+6. V jazyce C# je nutné přidat obslužnou rutinu události pro kliknutí na tlačítko. Tento kód lze umístit do `HelloControl` konstruktoru po volání `InitializeComponent` .
 
-     Informace o tom, jak vytváření obslužných rutin událostí, naleznete v tématu [jak: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
+     Informace o tom, jak vytvořit obslužné rutiny událostí, naleznete v tématu [How to: Create event handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#13)]
 
-## <a name="add-the-user-control-to-the-actions-pane"></a>Přidat uživatelský ovládací prvek do podokna akcí
- Pokud chcete zobrazit podokno akcí, přidejte uživatelský ovládací prvek <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnost `ThisDocument.ActionsPane` pole (slova) nebo `ThisWorkbook.ActionsPane` pole (Excel).
+## <a name="add-the-user-control-to-the-actions-pane"></a>Přidání uživatelského ovládacího prvku do podokna akce
+ Chcete-li zobrazit podokno akcí, přidejte uživatelský ovládací prvek do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti `ThisDocument.ActionsPane` pole (Word) nebo `ThisWorkbook.ActionsPane` pole (Excel).
 
-### <a name="to-add-the-user-control-to-the-actions-pane"></a>Chcete-li přidat uživatelský ovládací prvek do podokna akcí
+### <a name="to-add-the-user-control-to-the-actions-pane"></a>Přidání uživatelského ovládacího prvku do podokna akce
 
-1. Přidejte následující kód, který `ThisDocument` nebo `ThisWorkbook` třídu jako deklaraci třídy úrovni (nepřidávejte tento kód do metody).
+1. Přidejte následující kód do `ThisDocument` `ThisWorkbook` třídy nebo jako deklaraci na úrovni třídy (Nepřidávat tento kód do metody).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#14)]
      [!code-vb[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#14)]
 
-2. Přidejte následující kód, který `ThisDocument_Startup` obslužná rutina události `ThisDocument` třídy nebo `ThisWorkbook_Startup` obslužná rutina události `ThisWorkbook` třídy.
+2. Přidejte následující kód do `ThisDocument_Startup` obslužné rutiny události `ThisDocument` třídy nebo `ThisWorkbook_Startup` obslužné rutiny události `ThisWorkbook` třídy.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#15)]
      [!code-vb[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#15)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)
-- [Návod: Vkládání textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
+- [Návod: vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
 - [Postupy: Správa rozložení ovládacích prvků v podoknech akcí](../vsto/how-to-manage-control-layout-on-actions-panes.md)
-- [Návod: Vkládání textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
+- [Návod: vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)

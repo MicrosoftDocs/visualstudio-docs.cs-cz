@@ -8,17 +8,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2ce5390ce8d649ab2c57eccde34506d6831b8193
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d8cd78b529618504b5f14905a764c369da249fe2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300969"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545168"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: Zpracování nezabezpečené specifikace DTD
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|InsecureDTDProcessing|
 |CheckId|CA3075|
@@ -26,22 +26,22 @@ ms.locfileid: "74300969"
 |Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>Příčina
- Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkazujete na zdroje externích entit, může analyzátor přijmout nedůvěryhodné vstupní a únik citlivých informací útočníkům.
+ Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkazujete na zdroje externích entit, analyzátor může přijmout nedůvěryhodné vstupní a únik citlivých informací útočníkům.
 
 ## <a name="rule-description"></a>Popis pravidla
  [Definice typu dokumentu (DTD)](https://msdn.microsoft.com/library/aa468547.aspx) je jedním ze dvou způsobů, jak může analyzátor XML určit platnost dokumentu, jak je definováno v [konsorcium World Wide Web (W3C) jazyk XML (Extensible Markup Language) (XML) 1,0](https://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledává vlastnosti a instance, kde jsou přijímána nedůvěryhodná data, aby upozornila vývojáře na potenciální hrozby [zpřístupnění informací](https://msdn.microsoft.com/library/4064c89f-afa6-444a-aa7e-807ef072131c) , což může vést k útokům DOS [(Denial of Service)](https://msdn.microsoft.com/library/dfb150f3-d598-4697-a5e6-6779e4f9b600) . Toto pravidlo se aktivuje v těchto případech:
 
-- DtdProcessing je povolena na instanci <xref:System.Xml.XmlReader>, která řeší externí entity XML pomocí <xref:System.Xml.XmlUrlResolver>.
+- DtdProcessing je povolena pro <xref:System.Xml.XmlReader> instanci, která řeší externí entity XML pomocí <xref:System.Xml.XmlUrlResolver> .
 
-- Vlastnost <xref:System.Xml.XmlNode.InnerXml%2A> v kódu XML je nastavena.
+- <xref:System.Xml.XmlNode.InnerXml%2A>Vlastnost v kódu XML je nastavena.
 
-- vlastnost <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> je nastavena na hodnotu analyzovat.
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>vlastnost je nastavena na hodnotu Parse.
 
-- Nedůvěryhodný vstup se zpracovává pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver>.
+- Nedůvěryhodný vstup je zpracován pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver> .
 
-- Objekt XmlReader.<xref:System.Xml.XmlReader.Create%2A> Metoda je vyvolána s nezabezpečenou <xref:System.Xml.XmlReaderSettings> instancí nebo vůbec žádnou instancí.
+- Objekt XmlReader.<xref:System.Xml.XmlReader.Create%2A> Metoda je vyvolána s nezabezpečenou <xref:System.Xml.XmlReaderSettings> instancí nebo žádnou instancí.
 
-- Vytvoří se <xref:System.Xml.XmlReader> s nezabezpečenými výchozími nastaveními nebo hodnotami.
+- <xref:System.Xml.XmlReader>je vytvořeno s nezabezpečenými výchozími nastaveními nebo hodnotami.
 
   V každém z těchto případů je výsledek stejný: obsah buď ze systému souborů, nebo síťových sdílených složek z počítače, ve kterém je soubor XML zpracován, bude vystaven útočníkovi, který se pak může použít jako vektor DoS.
 
@@ -49,15 +49,15 @@ ms.locfileid: "74300969"
 
 - Zachyťte a zpracujte všechny výjimky XmlTextReader správně, aby nedocházelo k odhalení informací o cestách.
 
-- Použijte <xref:System.Xml.XmlSecureResolver> k omezení prostředků, ke kterým má aplikace XmlTextReader přístup.
+- Použijte  <xref:System.Xml.XmlSecureResolver> k omezení prostředků, ke kterým má aplikace XmlTextReader přístup.
 
-- Nepovolujte <xref:System.Xml.XmlReader> otevírat žádné externí prostředky nastavením vlastnosti <xref:System.Xml.XmlResolver> na **hodnotu null**.
+- Nepovolujte  <xref:System.Xml.XmlReader> otevření žádných externích prostředků nastavením <xref:System.Xml.XmlResolver> vlastnosti na **hodnotu null**.
 
-- Zajistěte, aby byla vlastnost <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> <xref:System.Data.DataViewManager> přiřazena z důvěryhodného zdroje.
+- Ujistěte se, že <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> vlastnost <xref:System.Data.DataViewManager> je přiřazena z důvěryhodného zdroje.
 
   .NET 3,5 a starší
 
-- Pokud pracujete s nedůvěryhodnými zdroji, zakažte zpracování DTD nastavením vlastnosti <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> na **hodnotu true** .
+- Pokud pracujete s nedůvěryhodnými zdroji, zakažte zpracování DTD nastavením  <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> vlastnosti na **hodnotu true** .
 
 - Třída XmlTextReader má úplný požadavek dědičnosti vztahu důvěryhodnosti. Další informace najdete v tématu [požadavky dědičnosti](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) .
 

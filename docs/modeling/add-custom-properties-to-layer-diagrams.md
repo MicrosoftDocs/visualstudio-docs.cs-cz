@@ -1,7 +1,7 @@
 ---
 title: Přidání vlastních vlastností do diagramů závislostí
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3623a0c2380188cbb16f6186bddc3f3f2f0c3bd7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590589"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546911"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Přidání vlastních vlastností do diagramů závislostí
 
@@ -22,7 +22,7 @@ Při psaní kódu rozšíření pro diagramy závislosti můžete uložit hodnot
 
 ## <a name="non-visible-properties"></a>Neviditelné vlastnosti
 
-Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V [ILayerElement](/previous-versions/ff644511(v=vs.140))je slovník s názvem `Properties`. Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
+Pokud chcete, aby kód připojil hodnoty k jakémukoli prvku v diagramu závislostí, nemusíte definovat komponentu MEF. V ILayerElement je slovník s `Properties` názvem [ILayerElement](/previous-versions/ff644511(v=vs.140)). Stačí přidat zařazovací hodnoty do slovníku libovolného elementu vrstvy. Budou uloženy jako součást diagramu závislostí.
 
 ## <a name="editable-properties"></a>Upravitelné vlastnosti
 
@@ -63,11 +63,11 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 Můžete definovat vlastnosti v [ILayerElement](/previous-versions/ff644511(v=vs.140)) nebo kterékoli z jeho odvozených tříd, které zahrnují:
 
-- `ILayerModel` – model
+- `ILayerModel`– model
 
-- `ILayer` – jednotlivé vrstvy
+- `ILayer`– jednotlivé vrstvy
 
-- `ILayerDependencyLink` – propojení mezi vrstvami
+- `ILayerDependencyLink`– propojení mezi vrstvami
 
 - `ILayerComment`
 
@@ -75,7 +75,7 @@ Můžete definovat vlastnosti v [ILayerElement](/previous-versions/ff644511(v=vs
 
 ## <a name="example"></a>Příklad
 
-Následující kód je typický popisovač vlastní vlastnosti. Definuje logickou vlastnost v modelu vrstvy (`ILayerModel`), která umožňuje uživateli zadat hodnoty pro vlastní metodu ověřování.
+Následující kód je typický popisovač vlastní vlastnosti. Definuje logickou vlastnost v modelu vrstvy ( `ILayerModel` ), která umožňuje uživateli zadat hodnoty pro vlastní metodu ověřování.
 
 ```csharp
 using System;
@@ -160,6 +160,6 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Rozšíření diagramů závislostí](../modeling/extend-layer-diagrams.md)
