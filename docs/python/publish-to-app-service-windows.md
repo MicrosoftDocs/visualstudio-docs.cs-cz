@@ -2,7 +2,7 @@
 title: Publikování aplikace v Pythonu pro Azure App Service ve Windows
 description: Postup publikování webové aplikace v Pythonu přímo do Azure App Service ve Windows ze sady Visual Studio, včetně potřebného obsahu pro soubor web.config.
 ms.date: 01/07/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 0564e9d36fafb32dfdefa1e5a581d298da744a0a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 649d40a3b95f9e3d4df51cc4ab22a3fb79ac1498
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289167"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531843"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
@@ -30,7 +30,7 @@ Proces publikování se mezi Visual Studio 2017 a novějším a Visual Studio 20
 > [!Note]
 > Další informace o změnách mezi Visual Studio 2015 a Visual Studio 2017 a novějším najdete v blogovém příspěvku [publikování do Azure v aplikaci Visual studio 2017](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Pro tento návod potřebujete projekt webové aplikace založený na láhvi, baňce nebo Djangoch architekturách. Pokud projekt ještě nemáte a chcete vyzkoušet proces publikování, vytvořte jednoduchý testovací projekt následujícím způsobem:
 

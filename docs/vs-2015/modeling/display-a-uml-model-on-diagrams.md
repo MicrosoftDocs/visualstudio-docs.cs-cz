@@ -11,12 +11,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 12c6cecf79b0c20ea2c110efa432d5ccb9f38863
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 06a22161068dd7604fe7bb4153e322c0954b89d2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916137"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533015"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>Zobrazení modelu UML v diagramech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,57 +36,57 @@ V tomto tématu:
 
 - [Příklad: příkaz pro zarovnání obrazců](#AlignCommand)
 
-## <a name="Display"></a>Zobrazení prvku v diagramu
+## <a name="to-display-an-element-on-a-diagram"></a><a name="Display"></a>Zobrazení prvku v diagramu
  Při vytváření prvku, jako je například případ použití nebo akce, ho uživatel uvidí v Průzkumníku modelů UML, ale v diagramu se nemusí vždy automaticky zobrazovat. V některých případech je nutné napsat kód pro zobrazení. V následující tabulce jsou shrnuty alternativy.
 
-|Typ elementu|Příklad|Chcete-li toto zobrazení zobrazit, váš kód musí|
+|Typ elementu|Například|Chcete-li toto zobrazení zobrazit, váš kód musí|
 |---------------------|-----------------|-------------------------------------|
-|Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);` **Poznámka:** Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy nevrátí žádnou `IShape`. Ale tvar je správně vytvořený a je přístupný pomocí `IElement.Shapes().`|
+|Třídění|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|Vytvoření přidružených tvarů na zadaných diagramech. Pro jednotlivé klasifikátory můžete vytvořit libovolný počet tvarů.<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> Nastavte `parentShape` na `null` pro tvar na nejvyšší úrovni diagramu.<br /><br /> Zobrazení jednoho obrazce v jiném:<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);`**Poznámka:**  Pokud provedete zobrazení uvnitř transakce **ILinkedUndo** , metoda někdy vrátí hodnotu No `IShape` . Ale tvar je správně vytvořen a je přístupný pomocí`IElement.Shapes().`|
 |Podřízená položka třídění|Atribut, operace,<br /><br /> Součást, port|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se jako součást nadřazeného objektu.|
 |Chování|Interakce (sekvence),<br /><br /> Aktivita|Navažte chování na příslušný diagram.<br /><br /> Každé chování může být vázáno na maximálně jeden diagram najednou.<br /><br /> Příklad:<br /><br /> `sequenceDiagram.Bind(interaction);`<br /><br /> `activityDiagram.Bind(activity);`|
 |Podřízený objekt chování|Životnosti, zprávy, akce, uzly objektů|Automatický – není vyžadován žádný kód.<br /><br /> Je zobrazen, pokud je nadřazený objekt svázán s diagramem.|
 |Relace|Asociace, generalizace, tok, závislost|Automatický – není vyžadován žádný kód.<br /><br /> Zobrazuje se na každém diagramu, na kterém jsou zobrazeny oba konce.|
 
-## <a name="GetShapes"></a>Přístup k tvarům, které reprezentují element
+## <a name="accessing-the-shapes-that-represent-an-element"></a><a name="GetShapes"></a>Přístup k tvarům, které reprezentují element
  Obrazec představující prvek patří do těchto typů:
 
  `IShape`
 
- `IShape<` *ElementType* `>`
+ `IShape<`*ElementType*`>`
 
- kde *ElementType* je typ prvku modelu, například `IClass` nebo `IUseCase`.
+ kde *ElementType* je typ prvku modelu, například `IClass` nebo `IUseCase` .
 
-|||
+|Syntax|Popis|
 |-|-|
-|`anElement.Shapes ()`|Všechny `IShapes`, které představují tento prvek v otevřených diagramech.|
-|`anElement.Shapes(aDiagram)`|Všechny `IShapes`, které reprezentují tento prvek na konkrétním diagramu.|
-|`anIShape.GetElement()`|`IElement`, který tvar představuje. Normálně byste ji přetypování na podtřídu třídy IElement.|
-|`anIShape.Diagram`|`IDiagram`, který obsahuje tvar|
-|`anIShape.ParentShape`|Tvar, který obsahuje `anIShape`. Například obrazec portu je obsažen v obrazci součásti.|
-|`anIShape.ChildShapes`|Tvary obsažené v `IShape` nebo `IDiagram`|
-|`anIShape.GetChildShapes<IUseCase>()`|Tvary obsažené v `IShape` nebo `IDiagram` reprezentující prvky zadaného typu, například `IUseCase`.|
-|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Přetypování obecného `IShape` na `IShape<IElement>`silného typu.|
+|`anElement.Shapes ()`|Všechny `IShapes` , které představují tento prvek v otevřených diagramech.|
+|`anElement.Shapes(aDiagram)`|Všechny `IShapes` , které reprezentují tento prvek na konkrétním diagramu.|
+|`anIShape.GetElement()`|`IElement`Který tvar představuje. Normálně byste ji přetypování na podtřídu třídy IElement.|
+|`anIShape.Diagram`|`IDiagram`, Který obsahuje tvar.|
+|`anIShape.ParentShape`|Tvar, který obsahuje `anIShape` . Například obrazec portu je obsažen v obrazci součásti.|
+|`anIShape.ChildShapes`|Tvary obsažené v `IShape` nebo `IDiagram` .|
+|`anIShape.GetChildShapes<IUseCase>()`|Tvary obsažené v `IShape` nebo `IDiagram` , které reprezentují prvky zadaného typu, například `IUseCase` .|
+|`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|Přetypování obecné `IShape` na silně typované `IShape<IElement>` .|
 |`IShape<IClassifier> classifierShape;`<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `classifierShape.ToIShape<IUseCase>();`|Přetypování tvaru z jednoho parametrizovaného typu obrazce na jiný.|
 
-## <a name="Moving"></a>Přesun a změna velikosti tvarů
+## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a>Přesun a změna velikosti tvarů
 
-|||
+|Syntax|Popis|
 |-|-|
 |`anIShape.Move(x, y, [width], [height])`|Přesune nebo změní velikost obrazce.|
-|`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Aktivujte okno a posuňte diagram tak, aby byly všechny dané obrazce viditelné. Všechny obrazce musí být v diagramu. Pokud je `zoomToFit` true, diagram bude v případě potřeby upravený tak, aby všechny obrazce byly viditelné.|
+|`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Aktivujte okno a posuňte diagram tak, aby byly všechny dané obrazce viditelné. Všechny obrazce musí být v diagramu. Pokud `zoomToFit` má hodnotu true, diagram bude v případě potřeby upravený tak, aby všechny obrazce byly viditelné.|
 
  Příklad naleznete v tématu [Definování příkazu zarovnání](#AlignCommand).
 
-## <a name="Removing"></a>Odebrání tvaru z diagramu
+## <a name="to-remove-a-shape-from-a-diagram"></a><a name="Removing"></a>Odebrání tvaru z diagramu
  Můžete odstranit tvary některých typů elementu bez odstranění elementu.
 
 |Element modelu|Odebrání obrazce|
 |-------------------|-------------------------|
 |Klasifikátor: třída, rozhraní, výčet, objekt actor, případ použití nebo komponenta|`shape.Delete();`|
-|Chování: interakce nebo aktivita|Diagram můžete z projektu odstranit. Cestu získáte pomocí `IDiagram.FileName`.<br /><br /> Tím se chování z modelu neodstraní.|
+|Chování: interakce nebo aktivita|Diagram můžete z projektu odstranit. Použijte `IDiagram.FileName` k získání cesty.<br /><br /> Tím se chování z modelu neodstraní.|
 |Jakýkoli jiný tvar|Nelze explicitně odstranit jiné tvary z diagramu. Tvar bude automaticky zmizet, pokud je prvek odstraněn z modelu, nebo pokud je nadřazený tvar odebrán z diagramu.|
 
-## <a name="Opening"></a>Otevírání a vytváření diagramů
+## <a name="opening-and-creating-diagrams"></a><a name="Opening"></a>Otevírání a vytváření diagramů
 
 ### <a name="to-access-the-users-current-diagram-from-a-command-or-gesture-extension"></a>Přístup k aktuálnímu diagramu uživatele z rozšíření příkazu nebo gesta
  Deklarovat tuto importovanou vlastnost ve třídě:
@@ -102,7 +102,7 @@ V tomto tématu:
  `Context.CurrentDiagram as IClassDiagram;`
 
 > [!NOTE]
-> Instance `IDiagram` (a její podtypy, jako je například `IClassDiagram`), jsou platné pouze v rámci příkazu, který zpracováváte. Nedoporučuje se ponechat objekt `IDiagram` v proměnné, která přetrvává, dokud se ovládací prvek vrátí uživateli.
+> Instance `IDiagram` (a její podtypy jako `IClassDiagram` ) je platná pouze v rámci příkazu, který zpracováváte. Nedoporučuje se uchovávat `IDiagram` objekt v proměnné, která zůstává v průběhu řízení vráceného uživateli.
 
  Další informace najdete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
 
@@ -114,9 +114,9 @@ Context.CurrentDiagram.ModelStore.Diagrams()
 ```
 
 ## <a name="to-access-the-diagrams-in-a-project"></a>Přístup k diagramům v projektu
- Rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] API je možné použít k otevření a vytvoření modelů a diagramů modelování.
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Rozhraní API je možné použít k otevření a vytvoření modelů a diagramů modelování.
 
- Všimněte si přetypování z `EnvDTE.ProjectItem` na `IDiagramContext`.
+ Všimněte si přetypování z `EnvDTE.ProjectItem` na `IDiagramContext` .
 
 ```
 
@@ -152,9 +152,9 @@ foreach (ProjectItem item in project.ProjectItems)
   { ... } } }
 ```
 
- Po návratu ovládacího prvku do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]nejsou instance `IDiagram` a jeho podtypy platné.
+ Instance `IDiagram` a jejich podtypy nejsou platné po vrácení řízení do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Můžete také získat úložiště modelu z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ho projektu:
+ Můžete také získat úložiště modelu z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu:
 
 ```
 
@@ -162,7 +162,7 @@ foreach (ProjectItem item in project.ProjectItems)
 IModelStore modelStore = (project as IModelingProject).Store;
 ```
 
-## <a name="AlignCommand"></a>Příklad: příkaz pro zarovnání obrazců
+## <a name="example-command-for-aligning-shapes"></a><a name="AlignCommand"></a>Příklad: příkaz pro zarovnání obrazců
  Následující kód implementuje příkaz nabídky, který zarovnává tvary na úhledný. Uživatel musí nejdřív umístit dva nebo více tvarů v přibližném zarovnání, a to buď vertikálně, nebo vodorovně. Pak můžete použít příkaz align k zarovnání svých Center.
 
  Aby byl příkaz dostupný, přidejte tento kód do projektu příkazu nabídky a potom nasaďte výsledné rozšíření pro vaše uživatele. Další informace najdete v tématu [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md).
