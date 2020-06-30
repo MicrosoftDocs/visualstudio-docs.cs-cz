@@ -1,7 +1,7 @@
 ---
-title: Iwefdebuggingsupport – rozhraní
+title: Rozhraní IWefDebuggingSupport –
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -10,17 +10,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a71adf5371275fbbdc19cdf09be96ef900ec073d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583760"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544726"
 ---
-# <a name="iwefdebuggingsupport-interface"></a>Iwefdebuggingsupport – rozhraní
-  Implementované ladicí prostředí, jako je Visual Studio, k usnadnění ladění aplikací pro Office. Aplikace Office, jako je například aplikaci Word nebo Excel, získá tato rozhraní ze sady Visual Studio a potom zavolá metody na rozhraní v určitých bodech během relace ladění.
+# <a name="iwefdebuggingsupport-interface"></a>Rozhraní IWefDebuggingSupport –
+  Implementováno ladicím prostředím, jako je například sada Visual Studio, pro usnadnění ladění aplikací pro Office. Aplikace Office, jako je Word nebo Excel, získá toto rozhraní ze sady Visual Studio a potom v rámci relace ladění zavolá metody v rozhraní v určitých okamžicích.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 [
@@ -37,9 +37,9 @@ interface IWefDebuggingSupport : IUnknown
 ```
 
 ## <a name="methods"></a>Metody
- Následující tabulka uvádí metody, které definuje iwefdebuggingsupport – rozhraní.
+ V následující tabulce jsou uvedeny metody, které definuje rozhraní IWefDebuggingSupport –.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Getautoinsertextensions – metoda](../vsto/getautoinsertextensions-method.md)|Získá informace o aplikacích pro Office, které se mají automaticky vložit během ladění.|
-|[Setwefprocessid – metoda](../vsto/setwefprocessid-method.md)|Poskytuje identifikátor procesu, který se spustí rozšíření webové rozhraní Framework (WEF) obsah.|
+|[Metoda Getautoinsertextensions –](../vsto/getautoinsertextensions-method.md)|Načte informace o aplikacích pro Office, které se mají automaticky vkládat během ladění.|
+|[Metoda Setwefprocessid –](../vsto/setwefprocessid-method.md)|Poskytuje identifikátor procesu, který spustí obsah architektury Web Extensions (WEF).|

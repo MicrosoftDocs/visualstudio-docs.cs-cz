@@ -15,26 +15,26 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5a06e87f8d28ceb225e240d7702a47e00122feea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe6b90ef971bd00392381f47860d85f34e10dc26
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919177"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544024"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Identifikátory by neměly obsahovat podtržítka
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1707: identifikátory by neměly obsahovat podtržítka](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Narušující změna|Přerušení – při vyvolání na sestavení<br /><br /> Nerozdělitelné – při vyvolání u parametrů typu|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název identifikátoru obsahuje znak podtržítka (_).
 
 ## <a name="rule-description"></a>Popis pravidla

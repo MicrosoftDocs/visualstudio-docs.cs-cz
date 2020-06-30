@@ -1,18 +1,18 @@
 ---
 title: Nastavení obrázku pozadí v diagramu
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7701bf0ba1467b481f6da64d3c2e229be77a7fe7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591954"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542581"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Nastavení obrázku pozadí v diagramu
 V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obrázek pozadí pro vygenerovaný Návrhář pomocí vlastního kódu.
@@ -43,7 +43,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 11. Pokud chybí Resources.Designer.cs, klikněte na soubor Resources. resx v **Průzkumník řešení**.
 
-12. V okně **vlastnosti** nastavte vlastnost `Custom Tool` na hodnotu `ResXFileCodeGenerator`.
+12. V okně **vlastnosti** nastavte `Custom Tool` vlastnost na hodnotu `ResXFileCodeGenerator` .
 
 13. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DSL, přejděte na **Přidat**a klikněte na **Nová složka**.
 
@@ -53,7 +53,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
 16. V dialogovém okně **Přidat novou položku** v seznamu **šablony** klikněte na **soubor kódu**.
 
-17. Do pole **název** zadejte `BackgroundImage.cs`a klikněte na **Přidat**.
+17. Do pole **název** zadejte `BackgroundImage.cs` a klikněte na **Přidat**.
 
 18. Zkopírujte následující kód do souboru BackgroundImage.cs, upravte obor názvů, název třídy diagramu a název prostředku obrázkového souboru.
 
@@ -100,7 +100,7 @@ V sadě Visual Studio vizualizace a modelování sady SDK můžete nastavit obr�
 
      Další informace o přizpůsobení modelu pomocí programového kódu naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Přizpůsobení textových a obrazových polí](../modeling/customizing-text-and-image-fields.md)

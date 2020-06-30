@@ -1,8 +1,8 @@
 ---
 title: IPython REPL (interaktivní okno)
-description: Interaktivní okno Visual Studio v režimu IPython použijte pro uživatelsky přívětivé interaktivní vývojové prostředí s funkcemi interaktivníparalelní výpočetní techniky.
+description: Interaktivní okno Visual Studio v režimu IPython použijte pro uživatelsky přívětivé interaktivní vývojové prostředí s funkcemi interaktivního paralelního zpracování.
 ms.date: 01/28/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,29 +10,29 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8b4510ed738fdd2b33389ab4242dbde86cffff8c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b1fe36a4ee74ca1b41c1db1d79a6e4683c1f2b1f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62957726"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542425"
 ---
-# <a name="use-ipython-in-the-interactive-window"></a>Použití IPythonv interaktivním okně
+# <a name="use-ipython-in-the-interactive-window"></a>Použití IPython v interaktivním okně
 
-Interaktivní **okno** Visual Studio v režimu IPython je pokročilé, ale uživatelsky přívětivé interaktivní vývojové prostředí, které má funkce interaktivní paralelní výpočetní techniky. Tento článek vás provede pomocí IPython v **interaktivní** okno Visual Studio, ve kterém jsou k dispozici také všechny běžné [interaktivní okno](python-interactive-repl-in-visual-studio.md) funkce.
+**Interaktivní** okno Visual Studio v režimu IPython je pokročilé a uživatelsky přívětivé interaktivní vývojové prostředí, které má funkce interaktivního paralelního zpracování. Tento článek vás provede použitím IPython v **interaktivním** okně sady Visual Studio, ve kterém jsou k dispozici také všechny běžné [interaktivní funkce okna](python-interactive-repl-in-visual-studio.md) .
 
-Pro tento návod byste měli mít nainstalované prostředí [Anaconda,](https://www.continuum.io) které zahrnuje IPython a potřebné knihovny.
+V tomto návodu byste měli mít nainstalované prostředí [Anaconda](https://www.continuum.io) , které zahrnuje IPython a potřebné knihovny.
 
 > [!Note]
-> IronPython nepodporuje IPython, navzdory skutečnosti, že jej můžete vybrat ve formuláři **Interaktivní možnosti.** Další informace naleznete v [žádosti o funkci](https://github.com/Microsoft/PTVS/issues/84).
+> Ironpythonu nepodporuje IPython, navzdory tomu, že ho můžete vybrat ve formuláři **interaktivní možnosti** . Další informace najdete v [žádosti o funkce](https://github.com/Microsoft/PTVS/issues/84).
 
-1. Otevřete Visual Studio, přepněte do okna **Prostředí Pythonu** (**Zobrazit** > **další prostředí Windows** > **Pythonu**) a vyberte prostředí Anaconda.
+1. Otevřete Visual Studio, přepněte do okna **prostředí Pythonu** (**Zobrazit**  >  **Další**  >  **prostředí Windows Python**) a vyberte prostředí Anaconda.
 
-2. **Zkontrolujte, zda karty Balíčky (Conda)** (které se mohou zobrazit `ipython` `matplotlib` jako **pip** nebo **balíčky)** pro toto prostředí a ujistěte se, že a jsou uvedeny. Pokud ne, nainstalujte je zde. (Viz [Python Prostředí windows - balíčky kartu](python-environments-window-tab-reference.md).)
+2. Zkontrolujte kartu **balíčky (conda)** (která se může zobrazit jako **PIP** nebo **balíčky**) pro toto prostředí, aby se zajistilo, že `ipython` a `matplotlib` jsou uvedené. Pokud ne, nainstalujte je sem. (Viz [prostředí Python Windows – karta balíčky](python-environments-window-tab-reference.md).)
 
-3. Vyberte kartu **Přehled** a vyberte **Použít interaktivní režim IPython**. (V Visual Studiu 2015 vyberte **Konfigurovat interaktivní možnosti,** chcete-li otevřít dialogové okno **Možnosti,** potom nastavit **interaktivní režim** na **IPython**a vybrat **OK**).
+3. Vyberte kartu **Přehled** a vyberte **použít interaktivní režim IPython**. (V sadě Visual Studio 2015 vyberte **Konfigurovat interaktivní možnosti** pro otevření dialogového okna **Možnosti** , pak nastavte **interaktivní režim** na **IPython**a vyberte **OK**).
 
-4. Vyberte **Otevřít interaktivní okno,** chcete-li vyvolat **interaktivní** okno v režimu IPython. Pokud jste právě změnili interaktivní režim, bude pravděpodobně nutné okno obnovit. Pokud se zobrazí pouze výzva >>> , může být také nutné stisknout klávesu **Enter,** aby se zobrazila výzva jako **v [2]**.
+4. Vyberte **otevřít interaktivní okno** a zobrazte **interaktivní** okno v režimu IPython. Pokud jste právě změnili interaktivní režim, možná budete muset resetovat okno. Pokud se zobrazí jenom >>> výzvy, budete muset stisknout **ENTER** , takže se zobrazí výzva jako **v [2]**.
 
     ![Interaktivní okno v režimu IPython](media/ipython-repl-03.png)
 
@@ -47,11 +47,11 @@ Pro tento návod byste měli mít nainstalované prostředí [Anaconda,](https:/
    plt.plot(x, y, 'r', x, x ** 3, 'g', x, x ** 4, 'b')
    ```
 
-6. Po zadání posledního řádku byste měli vidět vložkový graf (který můžete v případě potřeby změnit přetažením v pravém dolním rohu).
+6. Po zadání posledního řádku byste měli vidět vložený graf (jehož velikost můžete změnit přetažením v pravém dolním rohu, pokud je potřeba).
 
-    ![Inline graf v interaktivním okně](media/ipython-repl-04.png)
+    ![Vložený graf v interaktivním okně](media/ipython-repl-04.png)
 
-7. Místo psaní do repl, můžete místo toho psát kód v editoru, vyberte jej, pravým tlačítkem myši, a vyberte **Odeslat do interaktivní** příkaz (nebo stiskněte **klávesu Ctrl**+**Enter**). Zkuste vložit níže uvedený kód do nového souboru v editoru, vyberte jej pomocí **klávesCtrl**+**A**a potom odešlete do **interaktivního** okna. (Visual Studio odešle kód jako jednu jednotku, aby se zabránilo poskytování mezilehlé nebo částečné grafy. A pokud nemáte otevřený projekt Pythonu s vybraným jiným prostředím, Visual Studio otevře **interaktivní** okno pro jakékoli prostředí, které je vybráno jako výchozí v okně **Prostředí Pythonu.)**
+7. Namísto psaní do REPL můžete místo toho napsat kód v editoru, vybrat ho, kliknout pravým tlačítkem a vybrat možnost **Odeslat do interaktivního** příkazu (nebo stisknout klávesu **CTRL** + **ENTER**). Zkuste vložit kód uvedený níže do nového souboru v editoru, vybrat ho pomocí **kombinace kláves CTRL** + **a**a odeslat do **interaktivního** okna. (Visual Studio pošle kód jako jednu jednotku, abyste se vyhnuli poskytování mezilehlých nebo částečných grafů. A pokud nemáte otevřený projekt v Pythonu s vybraným jiným prostředím, Visual Studio otevře **interaktivní** okno pro jakékoli prostředí, které je v okně **prostředí Pythonu** vybrané jako výchozí.)
 
     ```python
     from mpl_toolkits.mplot3d import Axes3D
@@ -76,12 +76,12 @@ Pro tento návod byste měli mít nainstalované prostředí [Anaconda,](https:/
 
     ![Odeslání kódu z editoru do interaktivního okna](media/ipython-repl-05.png)
 
-8. Chcete-li zobrazit grafy mimo **interaktivní** okno, spusťte kód místo použití **příkazu Ladění** > **start bez ladění.**
+8. Chcete-li zobrazit grafy mimo **interaktivní** okno, spusťte kód místo toho pomocí příkazu **ladit**  >  **Spustit bez ladění** .
 
-IPython má mnoho dalších užitečných funkcí, jako je únik do systémového prostředí, variabilní substituce, zachytávání výstupu atd. Další informace naleznete v [dokumentaci k IPythonu.](https://ipython.org/documentation.html)
+IPython má mnoho dalších užitečných funkcí, jako je například uvozovací znaky pro systémové prostředí, nahrazování proměnných, zachycení výstupu atd. Další informace najdete v [dokumentaci k IPython](https://ipython.org/documentation.html) .
 
 ## <a name="see-also"></a>Viz také
 
-- Pokud chcete Jupyter používat snadno a bez instalace, vyzkoušejte bezplatnou [hostovkou poznámkových bloků Azure,](https://notebooks.azure.com/) která vám umožní uchovávat a sdílet poznámkové bloky s ostatními.
+- Pokud chcete snadno používat Jupyter a bez instalace, vyzkoušejte bezplatnou [Azure Notebooks hostovanou službu](https://notebooks.azure.com/) , která vám umožní zachovat a sdílet poznámkové bloky s ostatními.
 
-- [Virtuální počítač Azure Data Science](/azure/machine-learning/data-science-virtual-machine/overview) je taky předem nakonfigurovaný pro spouštění poznámkových bloků Jupyter spolu s celou řadou dalších nástrojů pro datové vědy.
+- [Azure Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) také předem nakonfigurujeme tak, aby spouštěla poznámkové bloky Jupyter spolu s řadou dalších nástrojů pro datové vědy.

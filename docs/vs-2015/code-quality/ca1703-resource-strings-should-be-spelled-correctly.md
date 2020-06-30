@@ -15,24 +15,24 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9574ff022e0d5407b2683e5ba7a6b2e0cde5201e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2e720c1c491e88b6d89fb4b1f0175e8bc8a56e27
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669227"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544050"
 ---
 # <a name="ca1703-resource-strings-should-be-spelled-correctly"></a>CA1703: Řetězce prostředků by měly být zadány správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ResourceStringsShouldBeSpelledCorrectly|
 |CheckId|CA1703|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Zdrojový řetězec obsahuje jedno nebo více slov, která knihovna kontroly pravopisu společnosti Microsoft nerozpoznala.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -47,7 +47,7 @@ ms.locfileid: "72669227"
  Nepotlačujte upozornění na toto pravidlo. Správná pravopisná slova zkracují dobu potřebnou k učení nových knihoven softwaru.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1701: Malá a velká písmena složených slov prostředku řetězců by měla být použita správně](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+ [CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
  [CA1704: Identifikátory by měly být zadány správně](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 

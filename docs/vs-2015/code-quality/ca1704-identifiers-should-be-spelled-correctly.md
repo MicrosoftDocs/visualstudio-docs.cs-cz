@@ -15,24 +15,24 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56ac5e60964621859c77bf53dc4f6c14480b4a83
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5e078fc1bb7fe247d541e7695e98c2de76c2466
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669243"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544063"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: Identifikátory by měly být zadány správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název identifikátoru obsahuje jedno nebo více slov, která knihovna kontroly pravopisu společnosti Microsoft nerozpoznala. Toto pravidlo nekontroluje konstruktory nebo členy se speciálním jménem, jako jsou například GET a Set Access Property.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -44,14 +44,14 @@ ms.locfileid: "72669243"
 
 - Úvodní a koncové apostrofy jsou odebrány. Například "Sender" tokenizes na "Sender".
 
-- Podtržítka označují konec tokenu a jsou odebrána. Například hello_world tokenizes na "Hello", "World".
+- Podtržítka označují konec tokenu a jsou odebrána. Například Hello_world tokenizes na "Hello", "World".
 
-- Vložené ampersandy se odeberou. Například pro & mat tokenizes do formátu "Format".
+- Vložené ampersandy se odeberou. Například pro&mat tokenizes do formátu "Format".
 
   Ve výchozím nastavení se používá anglická (EN) verze kontroly pravopisu. Žádné jiné jazykové slovníky nejsou aktuálně k dispozici.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, opravte pravopis slova nebo přidejte slovo do vlastního slovníku s názvem CustomDictionary. XML. Umístěte slovník do instalačního adresáře nástroje, adresáře projektu nebo v adresáři, který je přidružen k nástroji v rámci profilu uživatele (%USERPROFILE%\Application Data \\...). Chcete-li se dozvědět, jak přidat vlastní slovník do projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], přečtěte si téma [How to: Customize a Code Analysis Dictionary.](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ Chcete-li opravit porušení tohoto pravidla, opravte pravopis slova nebo přidejte slovo do vlastního slovníku s názvem CustomDictionary.xml. Umístěte slovník do instalačního adresáře nástroje, adresáře projektu nebo v adresáři, který je přidružen k nástroji v rámci profilu uživatele (%USERPROFILE%\Application data \\ ...). Informace o tom, jak přidat vlastní slovník do projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , naleznete v tématu [How to: Customize a Code Analysis Dictionary.](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 - Přidejte slova, která by neměla způsobovat porušení v rámci slovníku/slov/rozpoznané cesty.
 

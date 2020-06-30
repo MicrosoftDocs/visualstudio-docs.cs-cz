@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Změna pozice karty na pásu karet'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf943f9df4499b30e294e4d7e8bf48b25aa52eab
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985989"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544856"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Postupy: Změna pozice karty na pásu karet
   Pořadí vlastních karet na pásu karet můžete změnit pomocí **editoru kolekce karet**. Vlastní karty můžete umístit před nebo za integrovanou kartu na pásu karet. Integrovaná karta je karta, která již je na pásu karet aplikace systém Microsoft Office. Karta **data** je například Integrovaná karta v aplikaci Excel.
@@ -56,7 +56,7 @@ ms.locfileid: "72985989"
 
      Seznam ID ovládacích prvků najdete v tématu [soubory s nápovědu pro office 2010: identifikátory ovládacích prvků uživatelského rozhraní pro Office Fluent](https://www.microsoft.com/download/details.aspx?id=6627).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)

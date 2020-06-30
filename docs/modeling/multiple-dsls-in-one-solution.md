@@ -1,18 +1,18 @@
 ---
 title: Vícesouborové DSL v jediném řešení
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5d21d3954a402e7ce8eb26c34d6a6a5c237309a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658349"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542594"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Vícesouborové DSL v jediném řešení
 
@@ -30,31 +30,31 @@ K integraci více DSL můžete použít několik postupů. Další informace nal
 
    - Nezapomeňte vytvořit každou DSL s jinou příponou názvu souboru.
 
-   - Změňte názvy projektů **DSL** a **DslPackage** tak, aby se všechny lišily. Například: `Dsl1`, `DslPackage1`, `Dsl2` `DslPackage2`.
+   - Změňte názvy projektů **DSL** a **DslPackage** tak, aby se všechny lišily. Například: `Dsl1` , `DslPackage1` , `Dsl2` , `DslPackage2` .
 
    - V každém **DslPackage \* \ source.extension.TT**aktualizujte tento řádek na správný název projektu DSL:
 
       `string dslProjectName = "Dsl2";`
 
-   - V rámci řešení VSIX přidejte \* projekty DSL * a DslPackage. Každou dvojici můžete umístit do vlastní složky řešení.
+   - V rámci řešení VSIX přidejte projekty DSL * a DslPackage \* . Každou dvojici můžete umístit do vlastní složky řešení.
 
 2. Kombinovat manifesty VSIX DSL:
 
-   1. Otevřete _YourVsixProject_ **\Source.extension.manifest**.
+   1. Otevřete _YourVsixProject_**\Source.extension.manifest**.
 
    2. U každé DSL vyberte **Přidat obsah** a přidejte:
 
-       - `Dsl*` projekt jako **součást MEF**
+       - `Dsl*`projekt jako **součást MEF**
 
-       - `DslPackage*` projekt jako **součást MEF**
+       - `DslPackage*`projekt jako **součást MEF**
 
-       - `DslPackage*` projekt jako **balíček vs**
+       - `DslPackage*`projekt jako **balíček vs**
 
 3. Sestavte řešení.
 
-   Výsledný VSIX bude instalovat obě DSL. Můžete je otestovat pomocí F5 nebo nasadit _YourVsixProject_ **\bin\debug \\ \*. vsix**.
+   Výsledný VSIX bude instalovat obě DSL. Můžete je otestovat pomocí F5 nebo nasadit _YourVsixProject_**\bin\debug \\ \* . vsix**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

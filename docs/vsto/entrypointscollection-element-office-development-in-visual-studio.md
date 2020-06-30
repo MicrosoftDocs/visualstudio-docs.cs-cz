@@ -1,9 +1,9 @@
 ---
-title: '&lt;entrypointscollection –&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4e877e186538622b3604e850040cbed0b018911d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ffa3c76f0f1afa0c9c445cfaf6f5f92484a73ba7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951889"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543556"
 ---
-# <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entrypointscollection –&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `entryPointsCollection` Elementu `vstav3` obor názvů obsahuje všechny `entryPoints` prvky přidružené k řešení pro systém Office.
+# <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `entryPointsCollection`Element `vstav3` oboru názvů obsahuje všechny `entryPoints` prvky přidružené k řešením pro systém Office.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <entryPointsCollection>
@@ -42,19 +42,19 @@ ms.locfileid: "62951889"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `entryPointsCollection` Element je povinný a je v `vstav3` oboru názvů. Podřízené elementy musí být také v tomto oboru názvů. Existuje pouze jeden `entryPointsCollection` element definovaný v manifestu aplikace.
+ `entryPointsCollection`Element je povinný a je v `vstav3` oboru názvů. Podřízené elementy musí být také v tomto oboru názvů. `entryPointsCollection`V manifestu aplikace je definován pouze jeden prvek.
 
- `entryPointsCollection` Prvek nemá žádné atributy.
+ `entryPointsCollection`Element nemá žádné atributy.
 
- `entryPointsCollection` obsahuje následující prvky.
+ `entryPointsCollection`obsahuje následující prvky.
 
-### <a name="entrypoints"></a>entryPoints
- Povinný parametr. Role `entryPoints` prvek `vstav3` obor názvů je definovaný v [ &#60;entryPoints&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
+### <a name="entrypoints"></a>Vstupní entryPoint
+ Povinná hodnota. Role `entryPoints` elementu v `vstav3` oboru názvů je definována v [&#60;entrypoint&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
 
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje, `entryPointsCollection` elementu v manifestu aplikace nasazené pomocí řešení úrovni dokumentu [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni dokumentu nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -100,7 +100,7 @@ ms.locfileid: "62951889"
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje `entryPointsCollection` elementu v manifestu aplikace pro řešení úrovni aplikace nasazené s použitím [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro řešení na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -119,10 +119,10 @@ ms.locfileid: "62951889"
   </vstav3:entryPointsCollection>
 ```
 
-## <a name="multi-project-deployment-example"></a>Příklad nasazení vícenásobného projektu
+## <a name="multi-project-deployment-example"></a>Příklad nasazení s více projekty
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje `entryPointsCollection` elementu v manifestu aplikace pro nasazení více projekty s dvě řešení pro systém Office. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `entryPointsCollection` prvek v manifestu aplikace pro nasazení více projektů se dvěma řešeními pro systém Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -177,8 +177,8 @@ ms.locfileid: "62951889"
     </vstav3:entryPointsCollection>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

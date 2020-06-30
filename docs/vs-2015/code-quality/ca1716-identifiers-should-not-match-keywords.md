@@ -15,24 +15,24 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f81aec5973d1915ba646c20c3b84186443678754
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67a3588a857a0eea7d338217f975ed593dfdad52
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669105"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543699"
 ---
-# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Identifikátory by neměly odpovídat klíčovým slovům
+# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Identifikátory by se neměly shodovat s klíčovými slovy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldNotMatchKeywords|
 |CheckId|CA1716|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název oboru názvů, typ nebo člen viritual nebo člen rozhraní odpovídá rezervovanému klíčovému slovu v programovacím jazyce.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -46,10 +46,10 @@ ms.locfileid: "72669105"
 
 - C++/CLI
 
-  Porovnávání bez rozlišování velkých a malých písmen se používá pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] klíčová slova a pro ostatní jazyky se používá porovnání s rozlišováním velkých a malých písmen.
+  Porovnávání bez rozlišování velkých a malých písmen se používá pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] klíčová slova a pro ostatní jazyky se používá porovnání rozlišující malá a velká písmena.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Vyberte název, který se nezobrazuje v seznamu klíčových slov.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pokud si nejste přesvědčeni, že tento identifikátor Nezaměňujte uživatele rozhraní API a že je knihovna použitelná ve všech dostupných jazycích v [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], můžete potlačit upozornění z tohoto pravidla.
+ Můžete potlačit upozornění z tohoto pravidla, pokud jste přesvědčeni, že identifikátor Nezaměňujte uživatele rozhraní API a že je knihovna použitelná ve všech dostupných jazycích v [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .

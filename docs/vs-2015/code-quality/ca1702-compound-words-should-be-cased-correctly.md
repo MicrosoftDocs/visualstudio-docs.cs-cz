@@ -15,26 +15,26 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 854e9a492f422957e64e1a4b6a00bc7c39b81c46
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f9dc15cec4012d2b63eb5f21c25bd709961c95c8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919242"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544076"
 ---
 # <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Malá a velká písmena složených slov by měla být použita správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1702: složená slova by měla být použita správně](/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|CompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1702|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Narušující změna|Přerušení – při vyvolání na sestavení.<br /><br /> Bez přerušení – při vyvolání v parametrech typu.|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název identifikátoru obsahuje více slov a nejméně jedno z těchto slov se jeví jako složené slovo, které není správně použita.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -49,7 +49,7 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1702: slo
  Z tohoto pravidla je bezpečné potlačit upozornění, pokud slovník pravopisu rozpozná obě části složeného slova a záměr je použít dvě slova.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1701: Malá a velká písmena složených slov prostředku řetězců by měla být použita správně](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+ [CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
  [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 

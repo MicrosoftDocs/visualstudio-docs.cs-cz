@@ -15,40 +15,40 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 09fa055fbf1b11e06b1dde32df5a316a3ec39848
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 90c1f66f36fc689ee077ec66f154487d65ee13a1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658661"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543608"
 ---
-# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: Typy APTCA by měl rozšířit pouze základní typy APTCA
+# <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: Typy APTCA by měl rozšiřovat pouze základní typy APTCA
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AptcaTypesShouldOnlyExtendAptcaBaseTypes|
 |CheckId|CA2117|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Veřejný nebo chráněný typ v sestavení s atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> dědí z typu deklarovaného v sestavení, které nemá atribut.
+## <a name="cause"></a>Příčina
+ Veřejný nebo chráněný typ v sestavení s <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> atributem dědí z typu deklarovaného v sestavení, které nemá atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- Ve výchozím nastavení jsou veřejné nebo chráněné typy v sestaveních se silnými názvy implicitně chráněny [požadavky dědičnosti](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) pro úplný vztah důvěryhodnosti. Sestavení se silným názvem označená atributem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) nemají tuto ochranu. Atribut zakáže požadavek dědičnosti. Díky tomu jsou vystavené typy deklarované v sestavení dědičné typy, které nemají úplný vztah důvěryhodnosti.
+ Ve výchozím nastavení jsou veřejné nebo chráněné typy v sestaveních se silnými názvy implicitně chráněny [požadavky dědičnosti](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) pro úplný vztah důvěryhodnosti. Sestavení se silným názvem označená <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributem (APTCA) nemají tuto ochranu. Atribut zakáže požadavek dědičnosti. Díky tomu jsou vystavené typy deklarované v sestavení dědičné typy, které nemají úplný vztah důvěryhodnosti.
 
- Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a typ v sestavení dědí z typu, který nepovoluje částečně důvěryhodné volající, je možné zajistit zneužití zabezpečení. Pokud dva typy `T1` a `T2` splňují následující podmínky, mohou škodlivé volající používat typ `T1` pro obnechání implicitního požadavku dědičnosti s úplnou důvěryhodností, který chrání `T2`:
+ Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a typ v sestavení dědí z typu, který nepovoluje částečně důvěryhodné volající, je možné zajistit zneužití zabezpečení. Pokud existují dva typy `T1` a `T2` splňují následující podmínky, škodlivé volající mohou použít typ `T1` pro obejít požadavek dědičnosti implicitní plné důvěryhodnosti, který chrání `T2` :
 
-- `T1` je veřejný typ deklarovaný v plně důvěryhodném sestavení, které má atribut APTCA.
+- `T1`je veřejný typ deklarovaný v plně důvěryhodném sestavení, které má atribut APTCA.
 
-- `T1` dědí z typu `T2` mimo jeho sestavení.
+- `T1`dědí z typu `T2` mimo jeho sestavení.
 
-- sestavení `T2` nemá atribut APTCA a proto by neměl být děděnelné typy v částečně důvěryhodných sestaveních.
+- `T2`sestavení nemá atribut APTCA a proto by nemělo být děděno typy v částečně důvěryhodných sestaveních.
 
-  Částečně důvěryhodný typ `X` může dědit z `T1`, což dává přístup k zděděným členům deklarovaným v `T2`. Vzhledem k tomu, že `T2` nemá atribut APTCA, jeho bezprostřední odvozený typ (`T1`) musí splňovat požadavky dědičnosti pro úplný vztah důvěryhodnosti; `T1` má úplný vztah důvěryhodnosti, a proto splňuje tuto kontrolu. Bezpečnostní riziko je způsobeno tím, že `X` se nepodílí na splnění požadavku dědičnosti, který chrání `T2` z nedůvěryhodného podtříd. Z tohoto důvodu typy s atributem APTCA nesmí rozkrývat typy, které nemají atribut.
+  Částečně důvěryhodný typ `X` může dědit z `T1` , což dává přístup k zděděným členům deklarovaným v `T2` . Vzhledem k tomu, že nemá `T2` atribut APTCA, musí jeho bezprostřední odvozený typ ( `T1` ) splňovat požadavky dědičnosti pro úplný vztah důvěryhodnosti; `T1` má úplný vztah důvěryhodnosti, a proto splňuje tuto kontrolu. Bezpečnostní riziko je způsobeno tím, že se `X` nepodílí na splnění požadavku dědičnosti, který chrání `T2` před nedůvěryhodným podtřídou. Z tohoto důvodu typy s atributem APTCA nesmí rozkrývat typy, které nemají atribut.
 
-  Jiné problémy se zabezpečením a možná i běžnější je, že odvozený typ (`T1`) může, prostřednictvím chyby programátora, zveřejňuje chráněné členy z typu, který vyžaduje úplný vztah důvěryhodnosti (`T2`). Pokud k tomu dojde, nedůvěryhodní volající získají přístup k informacím, které by měly být k dispozici pouze pro plně důvěryhodné typy.
+  Jiné potíže se zabezpečením a možná i běžnější, je, že odvozený typ ( `T1` ) může prostřednictvím chyby programátora zveřejnit chráněné členy z typu, který vyžaduje úplný vztah důvěryhodnosti ( `T2` ). Pokud k tomu dojde, nedůvěryhodní volající získají přístup k informacím, které by měly být k dispozici pouze pro plně důvěryhodné typy.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Pokud typ hlášených porušením je v sestavení, které nevyžaduje atribut APTCA, odeberte jej.
@@ -78,8 +78,8 @@ ms.locfileid: "72658661"
  Tento příklad vytvoří následující výstup.
 
  **Vyhovět na Shady glen 2/22/2003 12:00:00.** 
-**z testu: Slunečné louk** 
-**splňovat slunečné louky 2/22/2003 12:00:00.**
+ **Z testu: Slunečné louky** 
+ **Vyhovět na slunečné louky 2/22/2003 12:00:00.**
 ## <a name="related-rules"></a>Související pravidla
  [CA2116: Metody APTCA by měly volat pouze metody APTCA](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 

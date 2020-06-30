@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Nainstalovat primární spolupracující sestavení pro Office'
+title: 'Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office'
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee6755a2d795d2018136785986a5a346ddc07dc6
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: b6f90b568f98abe5026525a60723efb59f737235
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551790"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544778"
 ---
-# <a name="how-to-install-office-primary-interop-assemblies"></a>Postupy: Nainstalovat primární spolupracující sestavení pro Office
+# <a name="how-to-install-office-primary-interop-assemblies"></a>Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office
   Při instalaci Office nainstalujte systém Microsoft Office primární spolupracující sestavení (PIA).
 
 [!include[Add-ins note](includes/addinsnote.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "69551790"
     > [!WARNING]
     > Ve výchozím nastavení jsou ve vašem řešení při sestavování služby PIA vloženy do vašeho řešení, takže nemusíte distribuovat PIA uživatelům jako předpoklady pro používání doplňku VSTO nebo přizpůsobení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Sestavení primární spolupráce pro Office](../vsto/office-primary-interop-assemblies.md)
-- [Postupy: Cílové aplikace Office prostřednictvím primárních sestavení spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
+- [Postupy: cílení aplikací Office prostřednictvím primárních sestavení spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Postupy: Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
-- [Postupy: Nainstalovat Visual Studio Tools for Office distribuovatelné za běhu](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
-- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
-- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Postupy: instalace redistribuovatelného prostředí Visual Studio Tools for Office runtime](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

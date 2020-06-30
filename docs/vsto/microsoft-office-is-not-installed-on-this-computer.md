@@ -1,7 +1,7 @@
 ---
 title: Sada Microsoft Office není v tomto počítači nainstalována.
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: error-reference
 f1_keywords:
 - VST.SelectDocWizard.OfficeNotInstalled
 dev_langs:
@@ -12,20 +12,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f75ffccf8aa9e3c6252583ad1cfd87baa37ba94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 16f312f9b9d15cbdacbb1fa3e0628903254aeaea
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970315"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543140"
 ---
-# <a name="microsoft-office-is-not-installed-on-the-computer"></a>V počítači není nainstalována aplikace Microsoft Office
-  Visual Studio nemůže najít aplikaci Microsoft Office, který odpovídá typu projektu. Pokud vyvíjíte projekt doplňku VSTO, znamená to, že nemůžete ladit ani spustit projekt. Pokud se pokoušíte vytvořit projekt úrovni dokumentu, to znamená, že nelze vytvořit projekt.
+# <a name="microsoft-office-is-not-installed-on-the-computer"></a>systém Microsoft Office není v počítači nainstalován.
+  Visual Studio nemůže najít systém Microsoft Office aplikaci, která odpovídá typu projektu. Pokud vyvíjíte projekt doplňku VSTO, znamená to, že projekt nelze ladit ani spustit. Pokud se pokoušíte vytvořit projekt na úrovni dokumentu, znamená to, že projekt nemůžete vytvořit.
 
-## <a name="to-correct-the-error"></a>Chcete-li opravit chyby
+## <a name="to-correct-the-error"></a>Oprava chyby
 
-1. Instalace aplikace Microsoft Office přidruženou k typu projektu, včetně primárních sestavení vzájemné spolupráce. Další informace o podporovaných verzích systému Microsoft Office, naleznete v tématu [konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+1. Nainstalujte aplikaci systém Microsoft Office přidruženou k typu projektu, včetně primárních sestavení vzájemné spolupráce. Další informace o podporovaných verzích systém Microsoft Office najdete v tématu [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md)
 - [Postupy: Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,62 +13,62 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b54a341cd9dd949f892537ee384afb4984aecc02
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 95fc165c1a3123d68529f6ccaea99fea963c2a67
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419695"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543491"
 ---
 # <a name="how-to-add-xmlnodes-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word
-  **Důležité** informace uvedené v tomto tématu týkající se Microsoft Word je zobrazené výhradně pro výhod a užívání o jednotlivci i organizacemi, kteří se nacházejí mimo Spojené státy a jeho území nebo kteří používají nebo vývoj programy, které běží na produkty Microsoft Word, které byly licencovaných společností Microsoft před 2010 dne, kdy Microsoft odebrána implementace konkrétní funkce související s vlastní XML z aplikace Microsoft Word. Tyto informace týkající se Microsoft Word nemusí být přečteny nebo používány jednotlivcům i organizacím v USA nebo v jeho území, které používáte, nebo vývoji programů, které běží na produkty Microsoft Word, které byly licencovaných společností Microsoft po 10. ledna 2010 ; tyto produkty se chovají stejně jako produkty licenci před tímto datem nebo zakoupených a licencovaná pro použití mimo území Spojených států.
+  **Důležité** informace Informace uvedené v tomto tématu týkající se Microsoft Wordu se poskytují výhradně pro zvýhodnění a použití jednotlivců a organizací, kteří se nacházejí mimo USA a její oblasti nebo kteří používají nebo vyvíjí programy, na kterých běží, od společnosti Microsoft Word, které byly licencované od společnosti Microsoft před lednem 2010, když společnost Microsoft odebrala implementaci konkrétních funkcí souvisejících s vlastním kódem XML z aplikace Microsoft Word. Tyto informace týkající se Microsoft Wordu nemusí číst ani používat jednotlivci nebo organizace v USA nebo na jejích oblastech, kteří používají, nebo vyvíjet programy, na kterých běží, od společnosti Microsoft Word, které byly licencované od Microsoftu po 10. ledna 2010. Tyto produkty se nebudou chovat stejně jako produkty licencované před tímto datem nebo zakoupené a licencované pro použití mimo USA.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Při namapování opakující se element schématu XML na dokumentu aplikace Microsoft Office Word Visual Studio automaticky přidá <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládacího prvku do dokumentu.
+ Při mapování opakujícího se elementu schématu XML na systém Microsoft Office wordový dokument, Visual Studio automaticky přidá <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládací prvek do dokumentu.
 
- Informace o mapování neopakujícími prvků schématu XML, naleznete v tématu [jak: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word](../vsto/how-to-add-xmlnode-controls-to-word-documents.md).
+ Informace o mapování neopakujících se prvků schématu XML naleznete v tématu [How to: Add XmlNode Controls to Word Documents](../vsto/how-to-add-xmlnode-controls-to-word-documents.md).
 
 > [!NOTE]
-> <xref:Microsoft.Office.Tools.Word.XMLNodes> Ovládací prvek není k dispozici **nástrojů** nebo **zdroje dat** okna ani může být vytvořili prostřednictvím kódu programu.
+> <xref:Microsoft.Office.Tools.Word.XMLNodes>Ovládací prvek není k dispozici v okně **panelu nástrojů** nebo **zdrojů dat** , ani jej nelze vytvořit programově.
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-### <a name="to-add-an-xmlnodes-control-to-a-document"></a>Chcete-li přidat XmlNodes – ovládací prvek do dokumentu
+### <a name="to-add-an-xmlnodes-control-to-a-document"></a>Přidání ovládacího prvku XMLNodes do dokumentu
 
-1. V dokumentu v návrháři aplikace Visual Studio na pásu karet, klepněte **Developer** kartu.
+1. V dokumentu v návrháři aplikace Visual Studio klikněte na pásu karet na kartu **vývojář** .
 
     > [!NOTE]
-    > Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [jak: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > Pokud karta **vývojář** není zobrazená, musíte ji nejdřív zobrazit. Další informace najdete v tématu [Postup: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-2. V **XML** klikněte na možnost **schématu**.
+2. Ve skupině **XML** klikněte na **schéma**.
 
-     **Šablon a doplňků** zobrazí se dialogové okno.
+     Otevře se dialogové okno **šablony a doplňky** .
 
-3. Klikněte na tlačítko **schématu XML** kartu.
+3. Klikněte na kartu **schéma XML** .
 
-4. Klikněte na tlačítko **přidat schéma**.
+4. Klikněte na **Přidat schéma**.
 
-     **Přidat schéma** zobrazí se dialogové okno.
+     Otevře se dialogové okno **Přidat schéma** .
 
-5. Výběr schématu XML, který obsahuje opakující se elementy schématu a klikněte na tlačítko **otevřít**.
+5. Vyberte schéma XML, které obsahuje opakující se prvky schématu, a klikněte na **otevřít**.
 
-     **Schéma – nastavení** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Nastavení schématu** .
 
-6. Přiřadit alias nebo klikněte na tlačítko **OK** přidat schéma bez aliasu.
+6. Přiřaďte alias nebo kliknutím na tlačítko **OK** přidejte schéma bez aliasu.
 
-     Schéma se přidá do **přidat schéma** dialogové okno.
+     Schéma je přidáno do dialogového okna **Přidat schéma** .
 
-7. V **přidat schéma** dialogové okno, klikněte na tlačítko **OK**.
+7. V dialogovém okně **Přidat schéma** klikněte na tlačítko **OK**.
 
-     **Struktura XML** otevře se podokno úloh.
+     Otevře se podokno úloh **Struktura XML** .
 
-8. Klikněte na opakující se element schématu **struktura XML** podokna úloh se přidá do dokumentu.
+8. Klikněte na opakující se prvek schématu v podokně úloh **Struktura XML** a přidejte ho do dokumentu.
 
-     <xref:Microsoft.Office.Tools.Word.XMLNodes> Ovládacího prvku je vytvořen a přidán do projektu.
+     <xref:Microsoft.Office.Tools.Word.XMLNodes>Ovládací prvek je vytvořen a přidán do projektu.
 
-## <a name="see-also"></a>Viz také:
-- [XmlNodes – ovládací prvek](../vsto/xmlnodes-control.md)
-- [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+## <a name="see-also"></a>Viz také
+- [Ovládací prvek XMLNodes](../vsto/xmlnodes-control.md)
+- [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

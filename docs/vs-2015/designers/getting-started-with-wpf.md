@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 038c630d7e1641ea2ef446060797775ccb9e3b5d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3b005b55e0079b7db6486a8cde08f81f62ac7399
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664640"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542035"
 ---
 # <a name="getting-started-with-wpf"></a>Začínáme s WPF
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -23,11 +23,11 @@ Windows Presentation Foundation (WPF) je architektura uživatelského rozhraní,
 
 ## <a name="where-should-i-start"></a>Kde mám začít?
 
-|||
+|Scénář|Články|
 |-|-|
 |Chci se pustit přímo v...|[Návod: Moje první desktopová aplikace WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [Návod: Vytvoření desktopové aplikace WPF připojené ke službě Azure Mobile](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|
 |Návody navrhnout uživatelské rozhraní aplikace?|[Návrh XAML v sadě Visual Studio a Blend pro Visual Studio](../designers/designing-xaml-in-visual-studio.md)|
-|Začínáte s .NET?|[Přehled .NET Framework](https://msdn.microsoft.com/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [Základy vytváření aplikací](https://msdn.microsoft.com/library/653da4ba-3752-4d1f-a08a-de017dc86ecc)<br /><br /> [Začínáme s jazykem Visual C# a Visual Basic](https://msdn.microsoft.com/library/dd492171\(v=vs.140\).aspx)|
+|Začínáte s .NET?|[Přehled rozhraní .NET Framework](https://msdn.microsoft.com/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [Základy vytváření aplikací](https://msdn.microsoft.com/library/653da4ba-3752-4d1f-a08a-de017dc86ecc)<br /><br /> [Začínáme s jazykem Visual C# a Visual Basic](https://msdn.microsoft.com/library/dd492171\(v=vs.140\).aspx)|
 |Řekněte mi více o WPF...|[Úvod do WPF](../designers/introduction-to-wpf.md)<br /><br /> [Přehled XAML (WPF)](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)<br /><br /> [Ovládací prvky](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)<br /><br /> [Přehled datových vazeb](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)<br /><br /> [Datová vazba WPF s LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md)|
 |Jste vývojář model Windows Forms?|[Ovládací prvky Windows Forms a ekvivalentní ovládací prvky WPF](https://msdn.microsoft.com/library/ms750559\(v=vs.100\).aspx)<br /><br /> [Podporované scénáře v technologii WPF a model Windows Formsch operacích](https://msdn.microsoft.com/library/ms751797\(v=vs.100\).aspx)|
 

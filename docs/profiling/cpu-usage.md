@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b372e0f30c91a605be047e921bc2b7672a1cf468
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85329433"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543387"
 ---
 # <a name="analyze-cpu-usage"></a>Analýza využití procesoru
 
@@ -61,7 +61,7 @@ Počínaje verzí Visual Studio 2019 můžete kliknout na tlačítko **Rozbalit 
 
 ### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Sloupce dat využití procesoru
 
-|||
+|Name|Popis|
 |-|-|
 |**Celkový čas procesoru [jednotka,%]**|![Total% data Equation – rovnice](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Hodnoty milisekund a CPU používané voláním funkce a funkce volané funkcí ve vybraném časovém rozsahu. To se liší od grafu časová osa **využití procesoru** , který porovnává celkovou dostupnou CPU v časovém rozsahu s celkovým DOSTUPNÝm procesorem.|
 |**Samotný procesor [jednotka,%]**|![% Rovnice sebe](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Hodnoty milisekund a CPU využívané voláním funkce ve vybraném časovém rozsahu s výjimkou funkcí volaných funkcí.|
@@ -80,7 +80,7 @@ Chcete-li zobrazit strom volání, vyberte v sestavě nadřazený uzel. Stránka
 ![Stromová struktura volání](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Stromová struktura volání")
 ::: moniker-end
 
-|||
+|Image|Popis|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Uzel nejvyšší úrovně ve stromech volání využití CPU je pseudo uzel.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Pokud je v aplikaci většina aplikací zakázaná možnost **Zobrazit externí kód** , je uzel druhé úrovně uzlem **[externí kód]** . Uzel obsahuje kód systému a rozhraní, který spustí a zastaví aplikaci, nakreslí uživatelské rozhraní, řídí plánování vláken a poskytuje aplikaci další služby nižší úrovně.|

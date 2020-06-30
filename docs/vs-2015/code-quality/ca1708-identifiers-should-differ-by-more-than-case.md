@@ -15,24 +15,24 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f611cb899a2386c47e1370214a74c2a5da52584f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 22a33c852b941b4c7e7398416aa1e74e69ff1786
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669203"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544037"
 ---
 # <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldDifferByMoreThanCase|
 |CheckId|CA1708|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Názvy dvou typů, členů, parametrů nebo plně kvalifikovaných oborů názvů jsou identické, když jsou převedeny na malá písmena.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -44,7 +44,7 @@ ms.locfileid: "72669203"
  Vyberte název, který je jedinečný, pokud je porovnán s jinými identifikátory při nerozlišování velkých a malých písmen.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Knihovna nemusí být použitelná ve všech dostupných jazycích v [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ Nepotlačujte upozornění na toto pravidlo. Knihovna nemusí být použitelná ve všech dostupných jazycích v [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
 ## <a name="example-of-a-violation"></a>Příklad porušení
  Následující příklad demonstruje porušení tohoto pravidla.

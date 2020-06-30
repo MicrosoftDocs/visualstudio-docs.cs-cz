@@ -15,24 +15,24 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a05b7098d75d368f893b2504f7663675611bc0ce
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 03918353b66c36698b5d17b332da052b6d95c87a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658727"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544388"
 ---
-# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Zkontrolujte deklarativní zabezpečení na hodnotách
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Zkontrolujte deklarativní zabezpečení u typů hodnot
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo chráněný typ hodnoty je zabezpečený [daty a modelováním](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) nebo [požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d).
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,7 +45,7 @@ ms.locfileid: "72658727"
  Můžete potlačit upozornění z tohoto pravidla, pokud kterýkoli volající může získat instance typu hodnoty ve svém výchozím stavu bez ohrožení zabezpečení.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje knihovnu obsahující typ hodnoty, který toto pravidlo porušuje. Všimněte si, že typ `StructureManager` předpokládá, že volající, který předává instanci typu hodnoty má oprávnění vytvořit nebo získat přístup k instanci.
+ Následující příklad ukazuje knihovnu obsahující typ hodnoty, který toto pravidlo porušuje. Všimněte si, že `StructureManager` typ předpokládá, že volající, který předává instanci typu hodnoty, má oprávnění vytvořit nebo získat přístup k instanci.
 
  [!code-csharp[FxCop.Security.DemandOnValueType#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.DemandOnValueType/cs/FxCop.Security.DemandOnValueType.cs#1)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "72658727"
  Tento příklad vytvoří následující výstup.
 
  **Vlastní konstruktor struktury: požadavek se nezdařil.** 
-**New Values SecuredTypeStructure 100 100** 
-**New values SecuredTypeStructure 200 200**
+ **Nové hodnoty SecuredTypeStructure 100 100** 
+ **Nové hodnoty SecuredTypeStructure 200 200**
 ## <a name="see-also"></a>Viz také
  [Propojení vyžaduje](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) [data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

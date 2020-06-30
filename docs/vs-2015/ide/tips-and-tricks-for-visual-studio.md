@@ -1,5 +1,5 @@
 ---
-title: Tipy a triky | Dokumentace Microsoftu
+title: Tipy a triky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,18 +9,18 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 432a0eddece867972e5c5159f734b4589c22e218
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299926"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542984"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Tipy a triky pro Visual Studio
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto tématu. Obecnější informace naleznete v tématu [klávesové zkratky v aplikaci Visual Studio](default-keyboard-shortcuts-in-visual-studio.md). Informace o tom, jak optimalizovat aplikaci Visual Studio pro usnadnění přístupu, najdete v tématu [tipy a triky pro usnadnění](../ide/reference/accessibility-tips-and-tricks.md).
+Můžete snadněji navigovat v aplikaci Visual Studio pomocí zástupců v tomto tématu. Obecnější informace naleznete v tématu [klávesové zkratky v aplikaci Visual Studio](default-keyboard-shortcuts-in-visual-studio.md). Informace o tom, jak optimalizovat aplikaci Visual Studio pro usnadnění přístupu, najdete v tématu [tipy a triky pro usnadnění](../ide/reference/accessibility-tips-and-tricks.md).
 
 - [Správa oken](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowMgmt)
 
@@ -38,106 +38,106 @@ Můžete přejít v sadě Visual Studio snadněji pomocí zástupců v tomto té
 
 - [Správa životního cyklu aplikací](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="BKMK_WindowMgmt"></a>Správa oken
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>Správa oken
 
-|||
+|Příkaz|Zástupce|
 |-|-|
-|Odtáhněte plovoucí zásobník karet|CTRL + klepnutí pro vícenásobný výběr|
-|Maximalizovat plovoucí okno|Poklepejte na záhlaví okna|
-|Opětné ukotvení plovoucího okna|Ctrl + poklepání na záhlaví okna|
+|Odtahování plovoucích zásobníků karet|Ctrl + kliknutí pro vícenásobný výběr|
+|Maximalizovat plovoucí okno|Dvakrát klikněte na záhlaví|
+|Opětovné ukotvení plovoucího okna|CTRL + poklikejte na záhlaví okna|
 |Zavřít aktivní dokument|Ctrl+F4|
-|Zobrazit seznam otevřených souborů|Ctrl + Alt + Šipka dolů|
-|Zobrazit všechny Windows s plovoucí desetinnou čárkou|Ctrl+Shift+M|
+|Zobrazit seznam otevřených souborů|Ctrl + Alt + šipka dolů|
+|Zobrazit všechna plovoucí okna|Ctrl+Shift+M|
 
-## <a name="BKMK_WindowShortcuts"></a>Zástupci oken
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>Zástupci oken
 
-|||
+|Příkaz|Zástupce|
 |-|-|
-|Přesunutí/ukotvení plovoucího Windows|Win + šipka vlevo / Win + šipka vpravo|
-|Maximalizace nebo minimalizace Windows|Win + šipka nahoru / Win + šipka dolů|
-|Zobrazit seznam odkazů|Win + Alt + n|
-|Spustit novou instanci|Win+Shift+n|
-|Přepínání mezi Windows|Win + n|
+|Přesunout/ukotvit plovoucí okna|Win + šipka vlevo/Win + šipka vpravo|
+|Maximalizovat/minimalizovat okna|Win + šipka nahoru/Win + šipka dolů|
+|Zobrazit seznam odkazů|Win + ALT + n|
+|Spustit novou instanci|Win + Shift + n|
+|Přepínání mezi okny|Win + n|
 
-## <a name="BKMK_Search"></a>Hledání v aplikaci Visual Studio
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Hledání v aplikaci Visual Studio
 
-|||
+|Příkaz|Zástupce|
 |-|-|
-|Hledání v Průzkumníkovi řešení|Ctrl+;|
-|Umístit fokus do vyhledávacího pole v okně libovolného nástroje|ALT +' Pokud má okno nástroje fokus|
+|Hledání Průzkumník řešení|Ctrl+;|
+|Umístit fokus do vyhledávacího pole v jakémkoli okně nástrojů|ALT + ', je-li okno nástroje aktivní|
 |Snadné spuštění|Ctrl+Q|
-|Výsledky v rozsahu snadného spuštění|-@opt možnosti<br />– @cmd příkazy<br />– @mru naposledy použité<br />-@doc otevřít dokumenty|
-|Hledání v možnostech nástrojů|CTRL + E|
+|Výsledky rozsahu snadného spuštění|– @opt Možnosti<br />– @cmd Příkazy<br />– @mru Naposledy použité<br />- @doc Otevřít dokumenty|
+|Hledat v možnostech nástrojů|CTRL + E|
 
-## <a name="BKMK_EditorFind"></a>Hledání editoru
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>Hledání editoru
 
-|||
+|Příkaz|Zástupce|
 |-|-|
 |Rychlé hledání|Ctrl+F|
-|Rychlé vyhledání dalšího výsledku|Enter|
-|Rychlé vyhledání předchozího výsledku|Shift+Enter|
-|Rychle najít, rozbalení rozevíracího seznamu|ALT + Šipka dolů|
-|Zrušit hledání|Esc|
+|Rychle najít další výsledek|Enter|
+|Rychle najít předchozí výsledek|Shift+Enter|
+|Rychlé hledání rozbalení rozevírací nabídky|Alt + šipka dolů|
+|Zavřít hledání|Esc|
 |Rychlé nahrazení|Ctrl+H|
 |Rychlé nahrazení nahradit další|Alt+R|
-|Rychlé nahrazení Nahradit vše|ALT + A|
+|Rychlé nahrazení Nahradit vše|Alt+A|
 |Najít v souborech|Ctrl+Shift+F|
 |Nahradit v souborech|Ctrl+Shift+H|
 
-## <a name="BKMK_CodeEditor"></a>Editor kódu
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>Editor kódu
 
-|||
+|Příkaz|Zástupce|
 |-|-|
-|Režim návrhu technologie IntelliSense|Ctrl + Alt + mezerník (přepnutí)|
+|Režim návrhu IntelliSense|CTRL + ALT + MEZERNÍK (přepnout)|
 |Vynutit zobrazení IntelliSense|Ctrl+J|
 |Inteligentní značky|Ctrl+.|
-|Sběrač fragmentů|CTRL + K, X nebo?, Tab (VB)|
-|Obklopit fragmentem|CTRL + K, S|
-|Zobrazit rychlé informace|CTRL + K, můžu|
-|Přejděte na|Ctrl+,|
+|Výběr fragmentu|CTRL + K, X nebo?, TAB (VB)|
+|Obklopit|CTRL + K, S|
+|Zobrazit rychlé informace|CTRL + K, I|
+|Přejít na|Ctrl+,|
 |Přejít k definici|F12|
 |Náhled definice|Alt+F12|
-|Přejít k zásobníku definice|Ctrl + Shift + 8 (zpět), Ctrl + Shift + 7 (dopředu)|
-|Procházení zvýrazněných odkazů|Ctrl + Shift + šipka nahoru (předchozí), Ctrl + Shift + šipka dolů (Další)|
-|Editor Lupa|Ctrl + Shift + > (vstup), Ctrl + Shift + < (výstup)|
-|Výběr bloku|Podržte klávesu Alt a táhněte myší, Shift + Alt + šipka klíče|
-|Přesun o řádek nahoru/dolů|ALT + Šipka nahoru / Alt + Šipka dolů|
+|Přejít na stack definice|CTRL + SHIFT + 8 (zpět), CTRL + SHIFT + 7 (před)|
+|Přejít na zvýrazněné odkazy|CTRL + SHIFT + up (předchozí), CTRL + SHIFT + šipka dolů (další)|
+|Přiblížení editoru|CTRL + SHIFT +> (v), CTRL + SHIFT +< (out)|
+|Výběr bloku|Podržte klávesu Alt a přetáhněte myš, SHIFT + ALT + klávesy se šipkami.|
+|Přesunout řádek nahoru/dolů|Alt + šipka nahoru/Alt + šipka dolů|
 |Náhled definice|Alt+F12|
-|Zavřít okno definice operace Peek|Esc|
-|Povýšit okno definice operace Peek na běžnou kartu dokumentu|Ctrl+Alt+Home|
-|Navigace mezi více okny definice operace Peek|Ctrl+Alt+- a Ctrl+Alt+=|
-|Navigace mezi více výsledky operace Peek|F8 a Shift+F8|
-|Přepnout mezi oknem editoru kódu a oknem Náhled definice|Shift+Esc|
+|Zavřít okno Náhled definice|Esc|
+|Zvýšit úroveň okna Náhled definice na normální kartu dokumentu|Ctrl+Alt+Home|
+|Navigace mezi několika okny s náhledem definice|Ctrl+Alt+- a Ctrl+Alt+=|
+|Navigace mezi více náhledy výsledků|F8 a Shift+F8|
+|Přepnout mezi oknem editoru kódu a oknem náhled definice|Shift+Esc|
 
-## <a name="BKMK_Toolbars"></a>Představuje
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>Představuje
 
-|||
+|Příkaz|Zástupce|
 |-|-|
-|Přidat tlačítka|Klikněte na tlačítko pro přetečení panelu nástrojů|
-|Najít pole se seznamem ve standardním panelu nástrojů|Ctrl+D|
-|Najít režim příkazů textového pole|Typ ">"|
-|Vytvořit nový alias|> příkaz aliasu NewAlias|
+|Přidat tlačítka|Klikněte na tlačítko přetečení panelu nástrojů.|
+|Najít pole se seznamem na standardním panelu nástrojů|Ctrl+D|
+|Režim příkazu find TextBox|Zadejte ">"|
+|Vytvořit nový alias|>NewAlias alias – příkaz|
 
-## <a name="BKMK_Debugging"></a> Ladění
+## <a name="debugging"></a><a name="BKMK_Debugging"></a> Ladění
 
-|||
+|Příkaz|Zástupce|
 |-|-|
 |Spustit ladění|F5|
 |Zastavit ladění|Shift+F5|
 |Restartovat ladění|Ctrl+Shift+F5|
-|Krok přes|F10|
-|Krokovat s vnořením|F11|
-|Krokovat s Vystoupením|Shift+F11|
+|Krokovat|F10|
+|Krokovat s vnořením|Kláves|
+|Krok ven|Shift+F11|
 |Spustit ke kurzoru|Ctrl+F10|
 |Nastavit další příkaz|Ctrl+Shift+F10|
-|Nastavení a přepněte zarážku|F9|
+|Nastavit a Přepnout zarážku|F9|
 |Zakázat zarážku|Ctrl+F9|
 |Příkazové podokno|Ctrl+Alt+I|
-|Režim příkazů příkazového podokna|Typ ">"|
-|Vymazání mezipaměti příkazového podokna|> kompatibilní se specifikací|
-|Tisk hodnoty příkazového podokna|?varname|
+|Režim příkazu příkazového podokna|Zadejte ">"|
+|Prázdná vyrovnávací paměť pro okamžité okno|>CLS|
+|Hodnota pro okamžité vytištění okna|? název_proměnné|
 
-## <a name="BKMK_ALM"></a>Správa životního cyklu aplikací
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>Správa životního cyklu aplikací
 
 Viz [klávesové zkratky: Visual Studio Online, webový portál TFS a Team Explorer](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 

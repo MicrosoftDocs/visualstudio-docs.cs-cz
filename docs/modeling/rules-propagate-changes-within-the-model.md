@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, rules
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74d64b4fe0c0aa5293e11daad13f632c4a487736
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2050fe0ea2d1a9bb0bf278c13c2beb587412c643
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747422"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542555"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Pravidla šířící změny v modelu
 Můžete vytvořit pravidlo obchodu a rozšířit změnu z jednoho prvku na jiný v rámci vizualizace a modelování SDK (VMSDK). Když dojde ke změně jakéhokoli prvku v úložišti, pravidla se naplánují na spouštění, obvykle v případě, kdy je nejvzdálenější transakce potvrzena. Existují různé typy pravidel pro různé druhy událostí, jako je například přidání prvku nebo jeho odstranění. Můžete připojit pravidla ke konkrétním typům prvků, tvarů nebo diagramů. Mnoho vestavěných funkcí je definovaných pravidly: například pravidla zajišťují, že se diagram při změně modelu aktualizuje. Jazyk specifický pro doménu můžete přizpůsobit přidáním vlastních pravidel.
@@ -72,9 +72,9 @@ namespace ExampleNamespace
 
 ### <a name="to-define-a-rule"></a>Definování pravidla
 
-1. Definujte pravidlo jako třídu s předponou atributu `RuleOn`. Atribut přidruží pravidlo k jedné z vašich doménových tříd, relací nebo prvků diagramu. Pravidlo bude použito na všechny instance této třídy, což může být abstraktní.
+1. Definujte pravidlo jako třídu s předponou s `RuleOn` atributem. Atribut přidruží pravidlo k jedné z vašich doménových tříd, relací nebo prvků diagramu. Pravidlo bude použito na všechny instance této třídy, což může být abstraktní.
 
-2. Zaregistrujte pravidlo tím, že ho přidáte do sady vrácené `GetCustomDomainModelTypes()` ve třídě doménového modelu.
+2. Zaregistrujte pravidlo tím, že ho přidáte do sady vrácené `GetCustomDomainModelTypes()` ve vaší třídě doménového modelu.
 
 3. Odvození třídy pravidla z jedné z abstraktních tříd pravidla a zápis kódu metody spuštění.
 
@@ -82,7 +82,7 @@ namespace ExampleNamespace
 
 ### <a name="to-define-a-rule-on-a-domain-class"></a>Definování pravidla pro doménovou třídu
 
-- V souboru vlastního kódu Definujte třídu a prefixujte ji pomocí atributu <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute>:
+- V souboru vlastního kódu Definujte třídu a prefixujte ji <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> atributem:
 
     ```csharp
     [RuleOn(typeof(ExampleElement),
@@ -94,7 +94,7 @@ namespace ExampleNamespace
 
 - Typ subjektu v prvním parametru může být doménová třída, doménová relace, tvar, spojnice nebo diagram. Obvykle použijete pravidla na doménové třídy a vztahy.
 
-     @No__t_0 je obvykle `TopLevelCommit`. Tím se zajistí, že se pravidlo spustí až po provedení všech primárních změn transakce. Alternativy jsou vložené, takže pravidlo se po změně spustí brzo; a LocalCommit, který spouští pravidlo na konci aktuální transakce (což nemusí být nejvzdálenější). Můžete také nastavit prioritu pravidla, aby ovlivnilo jeho pořadí ve frontě, ale toto je nespolehlivější způsob dosažení potřebného výsledku.
+     `FireTime`Je obvykle `TopLevelCommit` . Tím se zajistí, že se pravidlo spustí až po provedení všech primárních změn transakce. Alternativy jsou vložené, takže pravidlo se po změně spustí brzo; a LocalCommit, který spouští pravidlo na konci aktuální transakce (což nemusí být nejvzdálenější). Můžete také nastavit prioritu pravidla, aby ovlivnilo jeho pořadí ve frontě, ale toto je nespolehlivější způsob dosažení potřebného výsledku.
 
 - Jako typ subjektu můžete zadat abstraktní třídu.
 
@@ -128,10 +128,10 @@ namespace ExampleNamespace
 
 - Odvodit třídu pravidla z jedné z následujících základních tříd:
 
-  | Základní třída | Signálu |
+  | Základní třída | Trigger |
   |-|-|
   | <xref:Microsoft.VisualStudio.Modeling.AddRule> | Přidá se element, odkaz nebo tvar.<br /><br /> Tuto kombinaci použijte k detekci nových vztahů kromě nových prvků. |
-  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | Hodnota vlastnosti domény se změnila. Argument metody poskytuje staré a nové hodnoty.<br /><br /> U obrazců se toto pravidlo aktivuje při změně předdefinované vlastnosti `AbsoluteBounds`, pokud je obrazec přesunutý.<br /><br /> V mnoha případech je pohodlnější přepsat `OnValueChanged` nebo `OnValueChanging` v obslužné rutině vlastností. Tyto metody jsou volány bezprostředně před a po změně. Naproti tomu se pravidlo obvykle spouští na konci transakce. Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md). **Poznámka:**  Toto pravidlo se neaktivuje, když se vytvoří nebo odstraní odkaz. Místo toho zapište `AddRule` a `DeleteRule` doménového vztahu. |
+  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | Hodnota vlastnosti domény se změnila. Argument metody poskytuje staré a nové hodnoty.<br /><br /> U obrazců je toto pravidlo aktivováno, když se `AbsoluteBounds` změní integrovaná vlastnost, pokud je obrazec přesunut.<br /><br /> V mnoha případech je pohodlnější přepsat `OnValueChanged` nebo `OnValueChanging` v obslužné rutině vlastnosti. Tyto metody jsou volány bezprostředně před a po změně. Naproti tomu se pravidlo obvykle spouští na konci transakce. Další informace najdete v tématu [obslužné rutiny změny hodnoty vlastnosti domény](../modeling/domain-property-value-change-handlers.md). **Poznámka:**  Toto pravidlo se neaktivuje, když se vytvoří nebo odstraní odkaz. Místo toho napište `AddRule` a `DeleteRule` pro doménový vztah. |
   | <xref:Microsoft.VisualStudio.Modeling.DeletingRule> | Aktivuje se, když se chystá odstranění elementu nebo odkazu. Vlastnost ModelElement. má hodnotu true do konce transakce. |
   | <xref:Microsoft.VisualStudio.Modeling.DeleteRule> | Provede se při odstranění elementu nebo odkazu. Pravidlo je spuštěno po provedení všech ostatních pravidel, včetně DeletingRules. ModelElement. IsDeleted je false a ModelElement. IsDeleted má hodnotu true. Aby bylo možné provést následné zrušení, prvek není ve skutečnosti odebrán z paměti, ale je odebrán z Store. ElementDirectory. |
   | <xref:Microsoft.VisualStudio.Modeling.MoveRule> | Prvek je přesunut z jednoho oddílu úložiště do jiného.<br /><br /> (Všimněte si, že to nesouvisí s grafickým umístěním tvaru.) |
@@ -141,7 +141,7 @@ namespace ExampleNamespace
   | <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule> | Provedeno v případě, že transakce bude potvrzena. |
   | <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule> | Provedeno v případě, že transakce bude vrácena zpět. |
 
-- Každá třída má metodu, kterou přepíšete. Zadejte `override` ve vaší třídě, abyste ji mohli zjistit. Parametr této metody identifikuje prvek, který se mění.
+- Každá třída má metodu, kterou přepíšete. Zadejte `override` svou třídu a zjistěte ji. Parametr této metody identifikuje prvek, který se mění.
 
   Všimněte si následujících bodů pravidel:
 
@@ -151,13 +151,13 @@ namespace ExampleNamespace
 
 3. Pravidla nejsou provedena, pokud je transakce vrácena zpět nebo když jsou provedeny operace vrácení zpět nebo opakování. Tyto operace obnoví veškerý obsah úložiště do předchozího stavu. Proto pokud vaše pravidlo změní stav všeho, co je mimo obchod, nemusí v synchronism s obsahem úložiště zůstat. Chcete-li aktualizovat stav mimo úložiště, je lepší používat události. Další informace najdete v tématu [obslužné rutiny událostí rozšiřovat změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-4. Některá pravidla se spustí, když je model načten ze souboru. Chcete-li určit, zda probíhá načítání nebo ukládání, použijte `store.TransactionManager.CurrentTransaction.IsSerializing`.
+4. Některá pravidla se spustí, když je model načten ze souboru. Chcete-li zjistit, zda probíhá načítání nebo ukládání, použijte `store.TransactionManager.CurrentTransaction.IsSerializing` .
 
 5. Pokud kód pravidla vytvoří další aktivační procedury pravidel, budou přidány na konec seznamu pro vypálení a spustí se před dokončením transakce. DeletedRules se spustí po všech ostatních pravidlech. Jedno pravidlo může běžet mnohokrát v transakci, a to jednou při každé změně.
 
-6. Chcete-li předat informace do a z pravidel, můžete ukládat informace v `TransactionContext`. Toto je pouze slovník, který je udržován během transakce. Je uvolněna v případě, že transakce skončí. Argumenty události v každém pravidle poskytují přístup k ní. Mějte na paměti, že pravidla se nespouštějí v předvídatelném pořadí.
+6. Chcete-li předat informace do a z pravidel, můžete ukládat informace v části `TransactionContext` . Toto je pouze slovník, který je udržován během transakce. Je uvolněna v případě, že transakce skončí. Argumenty události v každém pravidle poskytují přístup k ní. Mějte na paměti, že pravidla se nespouštějí v předvídatelném pořadí.
 
-7. Pravidla použijte po zvážení dalších možností. Například pokud chcete aktualizovat vlastnost při změně hodnoty, zvažte použití počítané vlastnosti. Chcete-li omezit velikost nebo umístění tvaru, použijte `BoundsRule`. Pokud chcete reagovat na změnu v hodnotě vlastnosti, přidejte do vlastnosti obslužnou rutinu `OnValueChanged`. Další informace najdete v tématu [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md).
+7. Pravidla použijte po zvážení dalších možností. Například pokud chcete aktualizovat vlastnost při změně hodnoty, zvažte použití počítané vlastnosti. Pokud chcete omezit velikost nebo umístění tvaru, použijte `BoundsRule` . Pokud chcete reagovat na změnu v hodnotě vlastnosti, přidejte `OnValueChanged` obslužnou rutinu do vlastnosti. Další informace najdete v tématu [reagování na změny a šíření změn](../modeling/responding-to-and-propagating-changes.md).
 
 ## <a name="example"></a>Příklad
  Následující příklad aktualizuje vlastnost při vytvoření instance doménového vztahu pro propojení dvou prvků. Pravidlo se aktivuje nejen v případě, že uživatel vytvoří odkaz na diagram, ale také v případě, že kód programu vytvoří odkaz.
@@ -207,6 +207,6 @@ namespace Company.TaskRuleExample
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obslužné rutiny události šířící změny mimo model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

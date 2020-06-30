@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Nastavování barev oblastí aplikace Excel'
+title: 'Postupy: použití barev v oblastech aplikace Excel prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,46 +14,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 56ecbfcdaf22132f63df1ecf5eadba97dee426af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d4a99e2e71e6a87b304ceea45a3cd595f911ff1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817270"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543452"
 ---
-# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Postupy: Nastavování barev oblastí aplikace Excel
-  Pokud chcete použít barvu textu v rámci oblasti buněk, použijte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo rozsah objekt nativní aplikace Excel.
+# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Postupy: použití barev v oblastech aplikace Excel prostřednictvím kódu programu
+  Chcete-li použít barvu na text v rámci rozsahu buněk, použijte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo nativní objekt oblasti aplikace Excel.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>Použití ovládacího prvku NamedRange
- Tento příklad je určený pro přizpůsobení na úrovni dokumentu.
+ Tento příklad je pro přizpůsobení na úrovni dokumentu.
 
-### <a name="to-apply-color-to-a-namedrange-control"></a>Chcete-li použít barvu do ovládacího prvku NamedRange
+### <a name="to-apply-color-to-a-namedrange-control"></a>Použití barvy pro ovládací prvek NamedRange
 
-1. Vytvoření <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku na buňku A1.
+1. Vytvoří <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek v buňce a1.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#65)]
      [!code-vb[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#65)]
 
-2. Nastavení barvy textu <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku.
+2. Nastaví barvu textu v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacím prvku.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#66)]
      [!code-vb[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#66)]
 
-## <a name="use-native-excel-ranges"></a>Použít nativní oblastí aplikace Excel
+## <a name="use-native-excel-ranges"></a>Použít nativní oblasti aplikace Excel
 
-### <a name="to-apply-color-to-a-native-excel-range-object"></a>Použít barvu na objekt nativní oblasti aplikace Excel
+### <a name="to-apply-color-to-a-native-excel-range-object"></a>Aplikování barvy na nativní objekt oblasti aplikace Excel
 
-1. Vytvoření rozsahu na buňku A1 a nastavte barvu textu.
+1. Vytvořte oblast v buňce a1 a pak nastavte barvu textu.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#67)]
      [!code-vb[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#67)]
 
-## <a name="see-also"></a>Viz také:
-- [Práce s oblastmi](../vsto/working-with-ranges.md)
-- [Namedrange – ovládací prvek](../vsto/namedrange-control.md)
-- [Postupy: Používání stylů pro oblasti sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
-- [Postupy: Odkazování na oblasti listů v kódu programu](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+## <a name="see-also"></a>Viz také
+- [Práce s rozsahy](../vsto/working-with-ranges.md)
+- [Ovládací prvek NamedRange](../vsto/namedrange-control.md)
+- [Postupy: používání stylů pro oblasti v sešitech prostřednictvím kódu programu](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
+- [Postupy: odkazování na oblasti listů v kódu prostřednictvím kódu programu](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

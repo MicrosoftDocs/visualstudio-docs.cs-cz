@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62ac71a3aa707958bd0c7f107185d141e339b2b7
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332145"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543348"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Analýza využití paměti bez ladicího programu
 
@@ -76,7 +76,7 @@ Po zastavení shromažďování dat nástroj **využití paměti** zastaví apli
 
   ![Odkazy na zobrazení snímků](../profiling/media/memuse__snapshotview_numbered.png "Odkazy na zobrazení snímků")
 
-|||
+|Image|Popis|
 |-|-|
 |![Krok 1](../profiling/media/procguid_1.png "ProcGuid_1")|Celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Celkový počet objektů v paměti, kdy byl snímek proveden.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu podrobností snímku seřazenou podle počtu instancí typů.|
@@ -130,7 +130,7 @@ Oba odkazy otevřou stejnou sestavu. Jediným rozdílem je počáteční pořad�
 
 Strom **spravované haldy** v sestavě podrobností snímku má následující sloupce:
 
-|||
+|Name|Popis|
 |-|-|
 |**Typ objektu**|Název typu nebo instance objektu.|
 |**Výpočtu**|Počet instancí objektu typu. **Počet** je vždy 1 pro instanci.|
@@ -152,7 +152,7 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 
 **Odkazovaný strom typů** v sestavě podrobností snímku má následující sloupce. Strom **odkazovaných objektů** nemá sloupec **Count reference** .
 
-|||
+|Name|Popis|
 |-|-|
 |**Typ** nebo **instance** objektu|Název typu nebo instance.|
 |**Počet odkazů**|Pro typy počet instancí objektů typu.|
@@ -176,7 +176,7 @@ Oba odkazy otevřou stejnou sestavu. Jediným rozdílem je počáteční pořad�
 
 Strom **spravované haldy** v sestavě rozdílového snímku má následující sloupce:
 
-|||
+|Name|Popis|
 |-|-|
 |**Typ objektu**|Název typu nebo instance objektu.|
 |**Výpočtu**|Počet instancí typu v primárním snímku. **Počet** je vždy 1 pro instanci.|
@@ -203,7 +203,7 @@ Pro typ v **cestě ke stromu kořene** se počet objektů, které obsahují odka
 
 **Odkazovaný strom typů** ve zprávě rozdílového snímku má následující sloupce. Strom **odkazovaných objektů** má pro sebe **instance**, **Velikost (bajty)**, **celkovou velikost (bajty) a počet**sloupců **modulu** .
 
-|||
+|Name|Popis|
 |-|-|
 |**Typ** nebo **instance** objektu|Název typu nebo instance objektu.|
 |**Počet odkazů**|Počet instancí typu v primárním snímku.|

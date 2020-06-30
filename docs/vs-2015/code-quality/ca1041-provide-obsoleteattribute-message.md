@@ -15,37 +15,37 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dd1799f67036ab55de5b136d746ce938835de87f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d738cf15ebe734cb74e553f38f6eb26af17e8cfd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668329"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542308"
 ---
 # <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: Poskytněte zprávu ObsoleteAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ProvideObsoleteAttributeMessage|
 |CheckId|CA1041|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Typ nebo člen je označen pomocí atributu <xref:System.ObsoleteAttribute?displayProperty=fullName>, který nemá zadanou jeho vlastnost <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Typ nebo člen je označen pomocí <xref:System.ObsoleteAttribute?displayProperty=fullName> atributu, který nemá <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> zadanou vlastnost.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.ObsoleteAttribute> slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> kompilována, zobrazí se vlastnost <xref:System.ObsoleteAttribute.Message%2A> atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
+ <xref:System.ObsoleteAttribute>slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> je zkompilován, je <xref:System.ObsoleteAttribute.Message%2A> zobrazena vlastnost atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte do konstruktoru <xref:System.ObsoleteAttribute> parametr `message`.
+ Chcete-li opravit porušení tohoto pravidla, přidejte `message` parametr do <xref:System.ObsoleteAttribute> konstruktoru.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačí upozornění z tohoto pravidla, protože vlastnost <xref:System.ObsoleteAttribute.Message%2A> poskytuje kritické informace o zastaralém typu nebo členu.
+ Potlačí upozornění z tohoto pravidla, protože <xref:System.ObsoleteAttribute.Message%2A> vlastnost poskytuje kritické informace o zastaralém typu nebo členu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje zastaralého člena, který má správně deklarovaný <xref:System.ObsoleteAttribute>.
+ Následující příklad ukazuje zastaralý člen, který má správně deklarovaný <xref:System.ObsoleteAttribute> .
 
  [!code-cpp[FxCop.Design.ObsoleteAttributeOnMember#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ObsoleteAttributeOnMember/cpp/FxCop.Design.ObsoleteAttributeOnMember.cpp#1)]
  [!code-csharp[FxCop.Design.ObsoleteAttributeOnMember#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ObsoleteAttributeOnMember/cs/FxCop.Design.ObsoleteAttributeOnMember.cs#1)]

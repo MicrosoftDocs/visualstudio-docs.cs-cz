@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 36a0772730718047f2b9d6fc6bc36c30a211a2af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1a65f42dafca696bfa638964b825410b576d4845
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657994"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544284"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,12 +40,12 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 
 - [Prohlídka panelu vlastností](#Properties)
 
-## <a name="Tools"></a>Prohlídka panelu nástrojů
+## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a>Prohlídka panelu nástrojů
  Pomocí panelu **nástroje** v Blend pro Visual Studio můžete vytvářet a upravovat objekty v aplikaci. Objekty vytvoříte tak, že vyberete nástroj a nakreslíte na návrhovou plochu pomocí myši.
 
- ![Panel nástroje](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
+ ![Panel Nástroje](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
 
-|||||
+|Image|Typ nástroje|Image|Typ nástroje|
 |-|-|-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Nástroje pro výběr** Vyberte možnost objekty a cesty.<br /><br /> Pomocí nástroje **přímý výběr** vyberte vnořené objekty a segmenty cest.|![Popisek A](../designers/media/b5-label-a.png "b5_label_A")|**Nástroje přechodu a štětce**|
 |![](../designers/media/b1-2.png "B1_2")|**Zobrazit nástroje** Upravte zobrazení návrhové plochy, například pro posouvání a zvětšování.|![Popisek B](../designers/media/b5-label-b.png "b5_label_B")|**Nástroje cest**|
@@ -56,12 +56,12 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 
  **Podívejte se na krátké video:** ![Konfigurace nainstalovaných funkcí](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [na panelu nástrojů](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).
 
-## <a name="Assets"></a>Prohlídka panelu aktiva
+## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a>Prohlídka panelu aktiva
  Všechny ovládací prvky můžete najít na panelu **aktiva** , podobně jako **panel nástrojů v sadě** Visual Studio. Kromě ovládacích prvků najdete všechno, co můžete přidat na návrhovou plochu na panelu **aktiva** , včetně stylů, médií, chování a efektů.
 
- ![Panel aktiva](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
+ ![Panel prostředků](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
 
-|||
+|Image|Popis|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Vyhledávací pole** Chcete-li filtrovat seznam assetů, zadejte do **vyhledávacího** pole.|
 |![](../designers/media/b1-2.png "B1_2")|**Režim mřížky a režim seznamu** Přepínání mezi zobrazením **režimu mřížky** a zobrazením **režimu seznamu** prostředků|
@@ -69,12 +69,12 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 |![](../designers/media/b1-4.png "B1_4")|**Styly** Zobrazit všechny styly, které jsou obsaženy ve slovníku prostředků.|
 |![](../designers/media/b1-5.png "B1_5")|**Popis** Zobrazí popis vybrané kategorie assetů nebo podkategorie.|
 
-## <a name="Objects"></a>Prohlídka panelu Objekty a časová osa
+## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a>Prohlídka panelu Objekty a časová osa
  Tento panel slouží k uspořádání objektů na návrhové ploše a v případě, že je chcete animovat.
 
  ![Panel objekt a časová osa v režimu animace](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
 
-|||
+|Image|Popis|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Zobrazení objektů** Zobrazení vizuálního stromu dokumentu Můžete přejít k podrobnostem na různé úrovně podrobností. Můžete také přidat vrstvy pro další uspořádání objektů na návrhové ploše. Tímto způsobem je můžete uzamknout a skrýt jako skupinu.|
 |![](../designers/media/b1-2.png "B1_2")|**Indikátor režimu záznamu** Podívejte se, jestli se na časové ose zaznamenávají změny vlastností.|
@@ -93,7 +93,7 @@ Blend pro Visual Studio vám pomůže navrhovat aplikace Windows Desktop, web, [
 |![](../designers/media/b1-15.png "B1_15")|**Přiblížení časové osy** Nastavte rozlišení přiblížení časové osy. Přiblížení umožňuje upravovat animaci s více detaily a oddálení zobrazení ukáže větší přehled o tom, co se děje během delšího časového období. Pokud přiblížíte, ale nemůžete nastavit klíčový snímek na pozici v čase, který chcete, ověřte, zda je hodnota rozlišení intervalu klíčových snímků dostatečně vysoká.|
 |![Popisek 16](../designers/media/b5-label-16.png "b5_label_16")|**Oblast kompozice časové osy** Zobrazte časovou osu a přesuňte klíčové snímky kolem jejich přetažením nebo pomocí místních nabídek.|
 
-## <a name="Properties"></a>Prohlídka panelu vlastností
+## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a>Prohlídka panelu vlastností
  Pomocí tohoto panelu můžete zobrazit a upravit vlastnosti objektu. Můžete je také nastavit přímo na návrhové ploše. Pokud to uděláte, změny vlastností se projeví na panelu **vlastnosti** .
 
  ![Panel vlastností](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")

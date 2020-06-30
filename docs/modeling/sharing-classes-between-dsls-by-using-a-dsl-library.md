@@ -1,18 +1,18 @@
 ---
 title: Sdílení tříd mezi DSL pomocí knihovny DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bfadc1777dfb4ba0c8ea712cfd39becc47f54a1
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76111361"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542542"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>Sdílení tříd mezi DSL pomocí knihovny DSL
 V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletní definici DSL, kterou můžete importovat do jiné DSL. To vám umožní zvážit společné části podobných modelů.
@@ -31,17 +31,17 @@ V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletn
 
      Chcete-li definovat vztah, který mohou používat importci, vytvořte dvě doménové třídy a mezi nimi vytvořte vztah.
 
-     Zvažte nastavení **modifikátoru dědičnosti** doménových tříd na `Abstract`.
+     Zvažte nastavení **modifikátoru dědičnosti** doménových tříd na `Abstract` .
 
 3. Můžete přidat prvky, které definujete v Průzkumníku DSL, jako jsou například tvůrci připojení.
 
 4. Můžete přidat vlastní nastavení, která vyžadují další kód, například omezení ověřování.
 
-5. Klikněte na tlačítko **Transformovat všechny šablony**.
+5. Klikněte na **transformovat všechny šablony**.
 
 6. Sestavte projekt.
 
-7. Když distribuujete DSL pro jiné uživatele, musíte poskytnout zkompilované sestavení (DLL) i soubor `DslDefinition.dsl`. Zkompilované sestavení můžete najít ve složce v části `Dsl\bin\*`
+7. Když distribuujete DSL pro jiné uživatele, musíte poskytnout zkompilované sestavení (DLL) i soubor `DslDefinition.dsl` . Zkompilované sestavení můžete najít ve složce pod`Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>Import knihovny DSL
 
@@ -61,7 +61,7 @@ V sadě Visual Studio vizualizace and modeling SDK můžete vytvořit nekompletn
 
    Knihovna DSL může importovat jiné knihovny. Při importu knihovny se její importy automaticky zobrazí také v Průzkumníku DSL.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)
 

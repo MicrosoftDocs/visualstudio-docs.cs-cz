@@ -1,9 +1,9 @@
 ---
-title: '&lt;formRegion&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;formRegion – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 33bc2ce58f90f37a1219427558a01bd13e5654df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9e13576ef673728d673d0351cf289a80944584bd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414536"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543529"
 ---
-# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;formRegion&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `formRegion` Elementu `vstov4` obor názvů identifikuje oblasti formuláře aplikace Microsoft Office Outlook, který je přidružený k doplňku VSTO.
+# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;formRegion – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `formRegion`Element `vstov4` oboru názvů identifikuje oblast formuláře systém Microsoft Office Outlooku, která je přidružená k doplňku VSTO.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <formRegion
@@ -35,29 +35,29 @@ ms.locfileid: "62414536"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `formRegion` Elementu `vstov4` obor názvů identifikuje oblasti formuláře, který je přidružený doplňku VSTO v Outlooku. Je vyžadován pouze pro aplikaci Outlook doplňků VSTO, které zahrnují oblasti formuláře.
+ `formRegion`Element `vstov4` oboru názvů identifikuje oblast formuláře přidruženou k DOPLŇKu VSTO pro Outlook. Je vyžadován pouze pro Doplňky aplikace Outlook VSTO, které obsahují oblasti formuláře.
 
- Může existovat více `formRegion` elementy definované uvnitř `formRegions` – element pro jednoho doplňku VSTO.
+ V `formRegion` rámci jednoho doplňku VSTO může být definováno více elementů `formRegions` .
 
- `formRegion` Element má tento atribut.
-
-|Atribut|Popis|
-|---------------|-----------------|
-|`name`|Povinný parametr. Určuje název oblasti formuláře.|
-
- `formRegion` Element má následující podřízené prvky.
-
-### <a name="messageclass"></a>Třída messageClass
- `messageClass` Element identifikuje formuláře aplikace Outlook, který je přidružený k oblasti formuláře.
-
- `messageClass` Element má tento atribut.
+ `formRegion`Element má následující atribut.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`name`|Povinný parametr. Identifikuje formulář, který je přidružený k oblasti formuláře.|
+|`name`|Povinná hodnota. Určuje název oblasti formuláře.|
+
+ `formRegion`Element má následující podřízené prvky.
+
+### <a name="messageclass"></a>messageClass
+ `messageClass`Prvek identifikuje formulář aplikace Outlook, který je přidružen k oblasti formuláře.
+
+ `messageClass`Element má následující atribut.
+
+|Atribut|Popis|
+|---------------|-----------------|
+|`name`|Povinná hodnota. Určuje formulář, který je spojen s oblastí formuláře.|
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje `formRegion` elementu v manifestu aplikace pro Outlook VSTO doplněk nasazeným v rámci [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Existují tři třídy zpráv, které jsou přidružené k této oblasti jeden formulář. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `formRegion` prvek v manifestu aplikace pro doplněk aplikace Outlook VSTO nasazený pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . S touto oblastí formuláře jsou přidruženy tři třídy zpráv. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ```xml
 <vstov4:formRegion
@@ -68,9 +68,9 @@ ms.locfileid: "62414536"
 </vstov4:formRegion>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md)
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

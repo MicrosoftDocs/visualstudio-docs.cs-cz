@@ -22,12 +22,12 @@ caps.latest.revision: 142
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a3a3e68874bb3295f6696bbdadb3c470a7f2a4ad
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: c379054506672f36368b6da99c40a0a75a25e0ac
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586621"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543920"
 ---
 # <a name="intellitrace"></a>IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,7 +46,7 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
   
-|||  
+|Scénář|Články|  
 |-|-|  
 |**Ladit moje aplikace pomocí IntelliTrace:**<br /><br /> -Zobrazit minulé události.<br />-Zobrazit informace o volání s minulými událostmi.<br />-Uložit moji relaci IntelliTrace.<br />– Řízení dat, která IntelliTrace shromažďuje.|-   [Návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />     [Funkce IntelliTrace](../debugger/intellitrace-features.md)<br />-   [Konfigurace IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)<br />-   [Historické ladění](../debugger/historical-debugging.md)|  
 |**Shromažďovat data IntelliTrace během testovací relace v Test Manager**|-   [Shromažďování více diagnostických dat v ručních testech](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
@@ -55,11 +55,11 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
 ## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a>Jaké aplikace je možné ladit pomocí IntelliTrace?  
   
-|||  
+|Úroveň podpory|Typy aplikací|  
 |-|-|  
 |**Doložen**|– Aplikace Visual Basic a Visual C#, které používají .NET Framework 2,0 nebo vyšší verze.<br />     Můžete ladit většinu aplikací, včetně ASP.NET, Microsoft Azure, model Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 a 64-bit Apps.<br />     Chcete-li ladit aplikace služby SharePoint pomocí IntelliTrace, přečtěte si [Návod: ladění aplikace služby SharePoint pomocí IntelliTrace](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4).<br />     Pokud chcete ladit Microsoft Azure aplikace pomocí IntelliTrace, přečtěte si téma [Ladění publikované cloudové služby pomocí IntelliTrace a sady Visual Studio](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).|  
 |**Omezená podpora**|– Aplikace v jazyce F # na experimentální bázi<br />– Aplikace pro Windows Store podporované jenom pro události|  
-|**Nepodporováno**|– C++, jiné jazyky a skript<br />– Služby Windows, Silverlight, Xbox nebo [!INCLUDE[winmobile](../includes/winmobile-md.md)] aplikace|  
+|**Nepodporuje se**|– C++, jiné jazyky a skript<br />– Služby Windows, Silverlight, Xbox nebo [!INCLUDE[winmobile](../includes/winmobile-md.md)] aplikace|  
   
 > [!NOTE]
 > Pokud chcete ladit proces, který je již spuštěn, nelze použít nástroj IntelliTrace. Nástroj IntelliTrace je nutné spustit při spuštění procesu.  
@@ -174,7 +174,7 @@ Můžete strávit méně času laděním aplikace, když použijete IntelliTrace
   
  Shromažďování informací o voláních může výrazně zpomalit vaši aplikaci. Může také dojít ke zvětšení všech souborů protokolu IntelliTrace (.iTrace) ukládaných na disk. Pro minimalizaci negativních dopadů shromažďujte informace o volání pouze u modulů, které vás zajímají.  Chcete-li změnit maximální velikost souborů. iTrace, přejděte na **nástroje**, **Možnosti**, **IntelliTrace**, **Upřesnit**. Viz [Configure IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e).  
   
-## <a name="in-this-section"></a>V tomto oddílu  
+## <a name="in-this-section"></a>V této části  
  [Funkce IntelliTrace](../debugger/intellitrace-features.md)  
   
  [Konfigurace IntelliTrace](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)  
