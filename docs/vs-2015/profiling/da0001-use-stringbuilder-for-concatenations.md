@@ -14,31 +14,31 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6a871f726dc13f91c1dfd57471c12ee5cbfeb245
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5e2e52b0688f69fd154425887077c40fc3e6c265
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918868"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531401"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Pro zřetězování používejte StringBuilder
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Použití třídy StringBuilder ke zřetězení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [DA0001: použití StringBuilder pro zřetězení](/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations).  
   
-|||  
+|Položka|Hodnota|  
 |-|-|  
-|Id pravidla|DA0001|  
+|ID pravidla|DA0001|  
 |Kategorie|Využití .NET Framework|  
 |Metody profilace|Vzorkování<br /><br /> Instrumentace|  
 |Zpráva|Zvažte použití StringBuilder pro zřetězení řetězců.|  
 |Typ zprávy|Upozornění|  
   
-## <a name="cause"></a>příčina  
- Volání System. String. Concat představují významnou část dat profilování. Zvažte použití třídy <xref:System.Text.StringBuilder> pro vytváření řetězců z více segmentů.  
+## <a name="cause"></a>Příčina  
+ Volání System. String. Concat představují významnou část dat profilování. Zvažte použití <xref:System.Text.StringBuilder> třídy pro sestavování řetězců z více segmentů.  
   
 ## <a name="rule-description"></a>Popis pravidla  
- Objekt <xref:System.String> je neměnný. Proto jakákoli úprava řetězce vytvoří nový objekt String a uvolňování paměti původní. Toto chování je stejné, bez ohledu na to, zda voláte řetězec. Concat explicitně, nebo použijte operátory zřetězení řetězců, například + nebo + =.. Výkon programu se může snížit, pokud jsou tyto metody často volány, například když jsou znaky přidány do řetězce v těsné smyčce.  
+ <xref:System.String>Objekt je neměnný. Proto jakákoli úprava řetězce vytvoří nový objekt String a uvolňování paměti původní. Toto chování je stejné, bez ohledu na to, zda voláte řetězec. Concat explicitně, nebo použijte operátory zřetězení řetězců, například + nebo + =.. Výkon programu se může snížit, pokud jsou tyto metody často volány, například když jsou znaky přidány do řetězce v těsné smyčce.  
   
  Třída StringBuilder je proměnlivý objekt, a na rozdíl od System. String, většina metod v StringBuilder, která upravuje instanci této třídy, vrátí odkaz na stejnou instanci. Můžete vložit znaky nebo připojit text k instanci StringBuilder a odebrat nebo nahradit znaky v instanci bez nutnosti přidělit novou instanci a odstraněním původní instance.  
   
