@@ -6,4 +6,4 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68142598"
 ---
-.NET Framework 2.0
+.NET Framework 2,0

@@ -6,4 +6,4 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68183733"
 ---
-  **Platí pro:** Informace v tomto tématu se vztahují na přidání VSTO\-v projektech. Další informace najdete v tématu [dostupné funkce podle typu aplikace a projekt sady Office](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Platí pro:** Informace v tomto tématu se vztahují na projekty doplňku VSTO \- . Další informace najdete v tématu [dostupné funkce podle aplikace systému Office a typu projektu](../../vsto/features-available-by-office-application-and-project-type.md).

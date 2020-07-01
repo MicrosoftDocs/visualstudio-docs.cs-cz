@@ -1,5 +1,5 @@
 ---
-title: Nasazení do místní složky
+title: Nasadit do místní složky
 description: Nasazení aplikace do místní složky
 services: ''
 author: mikejo5000
@@ -15,36 +15,36 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68149223"
 ---
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **publikovat** (pro webové formuláře **publikovat webovou aplikaci**).
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **publikovat** (pro webové formuláře, **publikovat webovou aplikaci**).
 
-    Pokud jste dříve nakonfigurovali všech profilů publikování **publikovat** otevře se podokno. Klikněte na tlačítko **nový profil**.
+    Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Klikněte na **Nový profil**.
 
-1. V **publikovat** dialogu **složky**, klikněte na tlačítko **Procházet**a vytvořte novou složku **C:\Publish**.
+1. V dialogovém okně **publikovat** vyberte možnost **Složka**, klikněte na tlačítko **Procházet**a vytvořte novou složku **C:\Publish**.
 
     ![RemoteDBG_Publish_Local](../media/remotedbg_publish_local.png "RemoteDBG_Publish_Local")
 
-    Pro aplikace webových formulářů, zvolte **vlastní** v dialogovém okně Publikovat, zadejte název profilu a zvolte **OK**.
+    V případě aplikace webové formuláře vyberte v dialogovém okně Publikovat možnost **vlastní** , zadejte název profilu a klikněte na **tlačítko OK**.
 
-1. Klikněte na tlačítko **vytvořit profil** v rozevíracím seznamu (**publikovat** je výchozí hodnota).
+1. V rozevíracím seznamu klikněte na **vytvořit profil** (výchozí hodnota je**Publish** ).
 
-1. V **publikovat** dialogové okno, klikněte na tlačítko **nastavení** propojit a pak vyberte **nastavení** kartu.
+1. V dialogovém okně **publikovat** klikněte na odkaz **Nastavení** a pak vyberte kartu **Nastavení** .
 
-1. Nastavení konfigurace **ladění**vyberte **odstranit všechny existující soubory před publikováním**a potom klikněte na tlačítko **Uložit**.
+1. Nastavte konfiguraci na **ladit**, vyberte **Odstranit všechny existující soubory před publikováním**a pak klikněte na **Uložit**.
 
     > [!NOTE]
-    > Pokud používáte sestavení pro vydání, můžete zakázat ladění v souboru web.config, při publikování.
+    > Použijete-li sestavení pro vydání, zakážete ladění v souboru web.config při publikování.
 
-1. Klikněte na tlačítko **publikovat**.
+1. Klikněte na **Publikovat**.
 
     ![RemoteDBG_Publish_Debug_Config](../media/remotedbg_publish_debug_config.png "RemoteDBG_Publish_Debug_Config")
 
-    Publikuje aplikace **ladění** konfigurace projektu do místní složky. Průběh zobrazuje v okně výstup.
+    Aplikace publikuje konfiguraci **ladění** projektu do místní složky. Průběh se zobrazí v okně výstup.
 
-1. Zkopírujte adresář projektu ASP.NET ze sady Visual Studio do místního adresáře konfigurovat pro aplikace ASP.NET (v tomto příkladu **C:\Publish**) na počítač s Windows serverem. V tomto kurzu předpokládáme, kterou kopírujete ručně, ale můžete použít jiné nástroje, jako je PowerShell, příkazu Xcopy nebo Robocopy.
+1. Zkopírujte adresář projektu ASP.NET z počítače sady Visual Studio do místního adresáře nakonfigurovaného pro aplikaci ASP.NET (v tomto příkladu **C:\Publish**) na počítači se systémem Windows Server. V tomto kurzu se předpokládá, že provádíte kopírování ručně, ale můžete použít i další nástroje, jako je PowerShell, XCOPY nebo Robocopy.
 
     > [!CAUTION]
-    > Pokud potřebujete provést změny v kódu nebo znovu sestavit, musíte znovu publikovat a opakujte tento krok. Spustitelný soubor, který jste zkopírovali do vzdáleného počítače se musí přesně odpovídat, místní zdroje a symbolů.    Pokud jste neprovádějte tuto akci, zobrazí se `cannot find or open the PDB file` upozornění v sadě Visual Studio při pokusu o ladění procesu.
+    > Pokud potřebujete provést změny v kódu nebo znovu sestavit, musíte znovu publikovat a opakovat tento krok. Spustitelný soubor, který jste zkopírovali do vzdáleného počítače, se musí přesně shodovat s vaším místním zdrojem a symboly.    Pokud to neuděláte, zobrazí se `cannot find or open the PDB file` při pokusu o ladění procesu v aplikaci Visual Studio upozornění.
 
-1. V systému Windows Server ověřte, že aplikace spustit správně tak, že otevřete aplikaci v prohlížeči.
+1. Na Windows serveru ověřte, že aplikaci můžete správně spustit tak, že otevřete aplikaci v prohlížeči.
 
-    Pokud aplikace nespustí správně, může být Neshoda mezi verzí technologie ASP.NET, které jsou nainstalované na serveru a váš počítač Visual Studio nebo může jít o problém s konfigurací služby IIS nebo webové stránky. Znovu zkontrolujte dřívějších krocích.
+    Pokud aplikace nefunguje správně, může dojít ke neshodě mezi verzí ASP.NET nainstalovanou na vašem serveru a vaším počítačem v rámci sady Visual Studio, případně může dojít k potížím s konfigurací služby IIS nebo webu. Překontrolujte předchozí kroky.

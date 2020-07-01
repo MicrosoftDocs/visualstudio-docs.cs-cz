@@ -8,4 +8,4 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "68145048"
 ---
 > [!NOTE]
-> **Transformace textové šablony** součásti se instalují automaticky jako součást **vývoj rozšíření sady Visual Studio** pracovního vytížení. Můžete také nainstalovat z **jednotlivé komponenty** kartu instalační program sady Visual Studio v části **sad SDK, knihoven a architektur** kategorie. Nainstalujte **Modeling SDK** z **jednotlivé komponenty** kartu.
+> Součást **transformace textové šablony** se automaticky nainstaluje jako součást úlohy **vývoje rozšíření sady Visual Studio** . Můžete ji také nainstalovat na kartě **jednotlivé součásti** instalační program pro Visual Studio, v kategorii sady **SDK, knihovny a architektury** . Nainstalujte součást **MODELING SDK** z karty **jednotlivé komponenty** .

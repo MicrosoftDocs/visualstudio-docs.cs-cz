@@ -15,4 +15,4 @@ ms.lasthandoff: 03/20/2020
 ms.locfileid: "70197113"
 ---
 > [!Note]
-> Tento článek se vztahuje na Visual Studio 2015. Pokud hledáte nejnovější dokumentaci k sadě Visual Studio, použijte volič verze v levém horním rohu. Doporučujeme upgradovat na Visual Studio 2019. [Stáhněte si ji zde](https://visualstudio.microsoft.com/downloads)
+> Tento článek se týká sady Visual Studio 2015. Pokud hledáte nejnovější dokumentaci k sadě Visual Studio, použijte selektor verzí v levém horním rohu. Doporučujeme upgradovat na Visual Studio 2019. [Stáhnout sem](https://visualstudio.microsoft.com/downloads)
