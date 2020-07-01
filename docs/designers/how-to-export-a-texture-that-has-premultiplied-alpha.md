@@ -1,49 +1,49 @@
 ---
 title: 'Postupy: Export textury s přednásobeným alfa'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84017bef80f42bd1848833b957abd88297d1e12d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a1325b5bc0009ba0c022d37be70ca6aab7cc8084
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72635487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768915"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Postupy: Export textury s přednásobeným alfa
 
-Kanál obsahu obrazu může generovat předem vynásobené alfa textury ze zdrojového obrazu. Ty mohou být jednodušší a robustnější než textury, které neobsahují předem vynásobené alfa.
+Kanál obsahu obrázku může ve zdrojové imagi generovat předem vynásobené alfa textury. Ty mohou být jednodušší použít a robustnější než textury, které neobsahují předem vynásobené alfa.
 
-Tento dokument ukazuje tyto činnosti:
+Tento dokument znázorňuje tyto aktivity:
 
-- Konfigurace zdrojového obrazu, který má být zpracován kanálem obsahu obrázku.
+- Konfigurace zdrojového obrázku, který má být zpracován kanálem obsahu obrázku.
 
-- Konfigurace kanálu obsahu obrázků pro generování předem vynásobené alfa.
+- Konfigurace kanálu obsahu obrázku tak, aby generovala předem vynásobený kanál alfa.
 
-## <a name="premultiplied-alpha"></a>Předem vynásobená alfa
-Předem vynásobená alfa nabízí několik výhod oproti konvenční, nepřednásobité alfa, protože lépe reprezentuje skutečnou interakci světla s fyzikálními materiály oddělením barevného příspěvku texelu (barvu, kterou přidává scény) z jeho průsvitnosti (množství podkladové barvy, které umožňuje projít). Některé z výhod použití předem vynásobené alfa jsou:
+## <a name="premultiplied-alpha"></a>Předem vynásobený alfa
+Předem vynásobený alfa nabízí několik výhod oproti konvenčnímu nenásobenému alfa, protože lépe představuje skutečnou interakci světla s fyzickými materiály oddělením příspěvku barvy Texel (barvy, kterou přidá do scény) z průsvitnost (množství základní barvy, kterou umožňuje prostřednictvím). Některé výhody použití předem vynásobené alfa jsou:
 
-- Prolnutí s předem vynásobenou alfa je asociativní operace; výsledek prolnutí více průsvitných textur je stejný, bez ohledu na pořadí, ve kterém jsou textury prolnuty.
+- Smíchání s předem vynásobeným alfa je asociativní operace; Výsledek prolnutí více průsvitných textur je stejný, bez ohledu na pořadí, ve kterém jsou textury smíchány.
 
-- Vzhledem k asociativní povaze prolnutí s předem vynásobenou alfa je zjednodušeno víceprůchodové vykreslování průsvitných objektů.
+- Z důvodu asociativního charakteru prolnutí s předem vynásobeným alfa se zjednodušené vykreslování průsvitných objektů zjednodušuje.
 
-- Použitím předem vynásobeného alfa lze dosáhnout jak čistého aditivního prolnutí (nastavením alfa na nulu), tak lineárně interpolovaným prolnutím současně. Například v částicovém systému se aditivní směs ohnivých částic může stát průsvitnou kouřovou částicí, která se mísí pomocí lineární interpolace. Bez předem vynásobené alfa, budete muset čerpat částice ohně odděleně od kouřových částic a upravit stav vykreslení mezi voláním kreslení.
+- Pomocí předem vynásobené hodnoty alfa je možné dosáhnout souběžně čistě doplňkového míchání (nastavením hodnoty Alpha na nulu) a lineárně interpolované prolnutí. Například v systému částic se mohou doplňkové směsné částice požáru stát průsvitnými částicemi kouře, které jsou smíchány pomocí lineární interpolace. Bez předem vynásobené alfa by bylo nutné vykreslit částice požáru odděleně od kouřových částic a změnit stav vykreslování mezi voláními vykreslování.
 
-- Textury, které používají předem vynásobenou alfa komprimovanou s vyšší kvalitou než ty, které nevykazují vybledlé hrany – nebo "efekt aureoly", které mohou být výsledkem, když prolnete textury, které nepoužívají předem vynásobenou alfa.
+- Textury, které používají předem vynásobené alfa kompresi s vyšší kvalitou než ty, které nejsou, a neprojevují debarvované hrany nebo "halo efekt", které mohou být výsledkem prolnutí textur, které nepoužívají předem vynásobené alfa.
 
-#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Vytvoření textury, která používá předem vynásobenou alfa verzi
+#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Vytvoření textury, která používá předem vynásobené alfa
 
-1. Začněte se základní texturou. Načtěte existující obrazový soubor nebo jej vytvořte podle popisu v [části Postup: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md).
+1. Začněte základní texturou. Načtěte existující soubor obrázku nebo ho vytvořte tak, jak je popsáno v tématu [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md).
 
-2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázků. V **Průzkumníku řešení**otevřete místní nabídku pro soubor textury a pak zvolte **Vlastnosti**. Na stránce **Configuration Properties** > **General** nastavte vlastnost **Typ položky** na Kanál obsahu **obrázku**. Ujistěte se, že **content** vlastnost je nastavena na **Ano** a **vyloučit z sestavení** je nastavena na **ne**, a pak zvolte **použít** tlačítko. Zobrazí se stránka vlastností vlastností konfigurace **kanálu obsahu obrázku.**
+2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury a zvolte možnost **vlastnosti**. Na stránce **Vlastnosti konfigurace**  >  **Obecné** nastavte vlastnost **typ položky** na **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
 
-3. Nakonfigurujte kanál obsahu bitových obrázků tak, aby generoval předem vynásobenou alfa. Na stránce**Obecné** rozložení**obsahu** >  **obrazu vlastností** > konfigurace nastavte vlastnost **Převést na předem vynásobený alfa formát** na **Hodnotu Ano (/generatepremultipliedalpha).**
+3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval předem vynásobený alfa. Na stránce **Vlastnosti konfigurace**  >  **Obrázek nastavení kanálu obsahu obrázek**  >  **General** nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)**.
 
-4. Zvolte tlačítko **OK.**
+4. Klikněte na tlačítko **OK** .
 
-   Při vytváření projektu převede kanál obsahu obrázků zdrojový obraz z pracovního formátu do zadaný výstupního formátu – to zahrnuje převod obrazu na předem vynásobený alfa formát – a výsledek se zkopíruje do výstupu projektu. Adresář.
+   Při sestavování projektu kanál obsahu obrazu převede zdrojový obraz z pracovního formátu na výstupní formát, který jste zadali – to zahrnuje převod obrázku na předem vynásobený formát alfa – a výsledek je zkopírován do výstupního adresáře projektu.

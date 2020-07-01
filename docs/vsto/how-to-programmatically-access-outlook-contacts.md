@@ -34,7 +34,7 @@ ms.locfileid: "85520091"
 
 - Kontakty, jejichž příjmení obsahují řetězec "**NEDEF"** (například Tzipi Butnaru) ve složce **kontaktů** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
 - [Postupy: Přidání položky do kontaktů aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
 - [Postupy: hledání konkrétního kontaktu prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-a-specific-contact.md)

@@ -1,7 +1,7 @@
 ---
 title: Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985772"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519857"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>Spravované referenční materiály (vývoj pro Office v sadě Visual Studio)
-  Tato část obsahuje referenční dokumentaci rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](includes/net-v45-md.md)]. Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na .NET Framework 3,5, najdete v následující referenční části v dokumentaci k sadě Visual Studio: [Managed Reference (vývoj pro Office v sadě Visual Studio )](managed-reference-office-development-in-visual-studio.md).
+  Tato část obsahuje referenční dokumentaci rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](includes/net-v45-md.md)] . Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office, které cílí na .NET Framework 3,5, najdete v následující referenční části v dokumentaci k sadě Visual Studio: [spravované referenční materiály (vývoj pro Office v sadě Visual Studio)](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  <xref:Microsoft.Office.Tools>
 
  Obsahuje třídy společné pro programování řešení pro systém Office. Patří mezi ně základní třída pro doplňky VSTO, třídy pro vytváření vlastních podoken úloh v doplňcích VSTO, třídy pro vytváření inteligentních značek v aplikacích Excel a Word a třídy pro vytváření podoken akcí v přizpůsobeních na úrovni dokumentu.
@@ -56,15 +56,15 @@ ms.locfileid: "72985772"
 
  <xref:Microsoft.VisualStudio.Tools.Applications>
 
- Obsahuje třídu <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> a sadu souvisejících datových tříd uložených v mezipaměti. Tyto třídy lze použít k úpravě některých aspektů přizpůsobení na úrovni dokumentu na počítačích, které nemají nainstalované systém Microsoft Office.
+ Obsahuje <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídu a sadu souvisejících datových tříd uložených v mezipaměti. Tyto třídy lze použít k úpravě některých aspektů přizpůsobení na úrovni dokumentu na počítačích, které nemají nainstalované systém Microsoft Office.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>
 
- Obsahuje rozhraní <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> (které můžete implementovat k vytvoření *akce po nasazení* pro řešení pro Office), výjimky, které mohou být vyvolány při instalaci řešení Office a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
+ Obsahuje <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction> rozhraní (které můžete implementovat pro vytvoření *akce po nasazení* pro řešení Office), výjimky, které mohou být vyvolány při instalaci řešení Office a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- Obsahuje většinu výjimek, které mohou být vyvolány [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)], několik tříd, které lze použít k ukládání dat do mezipaměti v přizpůsobení na úrovni dokumentu a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
+ Obsahuje většinu výjimek, které mohou být vyvolány [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] , několik tříd, které lze použít k ukládání dat do mezipaměti v přizpůsobení na úrovni dokumentu a dalších rozhraní API, která jsou součástí infrastruktury sady Visual Studio.
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
@@ -72,6 +72,6 @@ ms.locfileid: "72985772"
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled nástrojů Visual Studio Tools for Office runtime](visual-studio-tools-for-office-runtime-overview.md)
-- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 - [Ukázky a návody pro vývoj pro Office](office-development-samples-and-walkthroughs.md)
 - [Návrh a tvorba řešení pro systém Office](designing-and-creating-office-solutions.md)

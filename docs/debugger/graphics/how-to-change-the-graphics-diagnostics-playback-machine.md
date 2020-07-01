@@ -1,19 +1,19 @@
 ---
 title: 'Postupy: Změna Diagnostika grafiky počítač pro přehrávání | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1b9aa3ea-29a0-4e21-bc57-936f33537b5c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a41caf3f866c4a21d0a44fc69932066b2b7d923
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4f057e2e4f9d39fd3c5d985b3f0d19751d508614
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769384"
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>Postupy: Změna počítače pro přehrávání diagnostiky grafiky
 Pomocí místního počítače nebo vzdáleného počítače nebo zařízení můžete přehrát informace o grafice.
@@ -25,7 +25,7 @@ Pomocí místního počítače nebo vzdáleného počítače nebo zařízení m�
 
 1. V okně dokument protokolu grafiky klikněte na odkaz pro **přehrání počítače** . Zobrazí se dialogové okno **připojení vzdáleného ladicího programu** .
 
-2. V části **Ruční konfigurace**do vlastnosti **adresa** zadejte `localhost`.
+2. V části **Ruční konfigurace**do vlastnosti **adresa** zadejte `localhost` .
 
 3. Nastavte vlastnost **režim ověřování** na **žádný**.
 

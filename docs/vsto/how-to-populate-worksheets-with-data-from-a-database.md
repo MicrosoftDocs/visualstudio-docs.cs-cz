@@ -67,7 +67,7 @@ Při spuštění projektu ovládací prvek zobrazí první záznam ve zdroji dat
 
 Informace o tom, jak odeslat aktualizace typové datové sadě a databázi, naleznete v tématu [How to: Update a data source to data z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Přidání nových zdrojů dat](../data-tools/add-new-data-sources.md)

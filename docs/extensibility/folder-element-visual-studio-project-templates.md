@@ -1,8 +1,8 @@
 ---
-title: Element složky (šablony projektů sady Visual Studio) | Dokumenty společnosti Microsoft
+title: Folder – element (šablony projektů sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
@@ -13,19 +13,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb256b8be0dd9ce68f193750bf3ff5a383d5f073
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769588"
 ---
-# <a name="folder-element-visual-studio-project-templates"></a>Element složky (šablony projektů sady Visual Studio)
+# <a name="folder-element-visual-studio-project-templates"></a>Folder – element (šablony projektů sady Visual Studio)
 Určuje složku, která bude přidána do projektu.
 
- \<VSTemplate \<> TemplateContent \< \<>> složky projektu>
+ \<VSTemplate> \<TemplateContent>
+ \<Project>
+ \<Folder>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Folder Name="Project Folder">
@@ -34,35 +36,35 @@ Určuje složku, která bude přidána do projektu.
 </Folder>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Požadovaný atribut.<br /><br /> Název složky projektu.|
-|`TargetFolderName`|Nepovinný atribut.<br /><br /> Určuje název, který má být složky přivytváření projektu ze šablony. Tento atribut je užitečný pro použití nahrazení parametrů k vytvoření názvu složky nebo pojmenování složky s mezinárodním řetězcem, který nelze použít přímo v souboru *ZIP.*|
+|`Name`|Požadovaný atribut.<br /><br /> Název složky projektu|
+|`TargetFolderName`|Nepovinný atribut.<br /><br /> Určuje název, který má být při vytvoření projektu ze šablony vytvořen. Tento atribut je vhodný pro použití náhrady parametrů k vytvoření názvu složky nebo pojmenování složky s mezinárodním řetězcem, který nelze použít přímo v souboru *. zip* .|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|`Folder`|Určuje složku, kterou chcete přidat do projektu. `Folder`prvky mohou `Folder` obsahovat podřízené prvky.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Určuje soubor, který má být do projektu připojován.|
+|`Folder`|Určuje složku, která se má přidat do projektu. `Folder`prvky mohou obsahovat podřízené `Folder` prvky.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Určuje soubor, který se má přidat do projektu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|Volitelný podřízený prvek [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|
+|[Projekt](../extensibility/project-element-visual-studio-templates.md)|Volitelný podřízený prvek [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|
 
 ## <a name="remarks"></a>Poznámky
- `Folder`je volitelné dítě `Project`.
+ `Folder`je volitelnou podřízenou položkou `Project` .
 
- K uspořádání položek projektu do složek v šabloně můžete použít některou z následujících metod:
+ K uspořádání položek projektu do složek v šabloně můžete použít kteroukoli z následujících metod:
 
-- Zahrňte složky do souboru *ZIP* šablony a přidejte je do projektu do souboru `ProjectItem` *.vstemplate* zadáním cesty k souboru v prvcích bez `Folder` prvků. Toto je doporučená metoda. Například:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Příklad:
 
      `...`
 
@@ -72,7 +74,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Zahrňte složky do souboru *ZIP* šablony a přidejte je `Folder` do projektu v souboru *.vstemplate* s prvky. Například:
+- Zahrňte složky do souboru template *. zip* a přidejte je do projektu v souboru *. vstemplate* s `Folder` prvky. Příklad:
 
      `...`
 
@@ -86,7 +88,7 @@ Určuje složku, která bude přidána do projektu.
 
      `...`
 
-- Nezahrnovat složky do souboru *.zip* šablony, ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` prvku. Například:
+- Nezahrnujte složky do souboru template *. zip* , ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Příklad:
 
      `...`
 
@@ -97,7 +99,7 @@ Určuje složku, která bude přidána do projektu.
      `...`
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci systému Windows.
+ Následující příklad ukazuje metadata pro šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci systému Windows.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -125,7 +127,7 @@ Určuje složku, která bude přidána do projektu.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také:
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Element ProjectItem (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)
+- [ProjectItem – element (šablony položek sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

@@ -1,45 +1,45 @@
 ---
-title: Návrh aplikací pro Windows Forms
+title: Návrh model Windows Formsch aplikací
 ms.date: 08/09/2019
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - Windows Forms Designer
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 171cdffa569b342bdbc7dd0da1c8da218e1d622c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768760"
 ---
 # <a name="windows-forms-designer-overview"></a>Přehled nástroje Návrhář formulářů
 
-Návrhář windows forms v sadě Visual Studio poskytuje řešení rychlého vývoje pro vytváření aplikací založených na formulářích Windows. Návrhář windows forms umožňuje snadno přidat ovládací prvky do formuláře, uspořádat je a napsat kód pro jejich události. Další informace o windows forms najdete v [tématu Windows Forms overview](/dotnet/framework/winforms/windows-forms-overview).
+Návrhář formulářů v aplikaci Visual Studio poskytuje rychlé vývojové řešení pro vytváření aplikací založených na model Windows Forms. Návrhář formulářů umožňuje snadno přidat ovládací prvky do formuláře, uspořádat je a napsat kód pro své události. Další informace o model Windows Forms najdete v tématu [model Windows Forms Overview](/dotnet/framework/winforms/windows-forms-overview).
 
 ## <a name="functionality"></a>Funkce
 
 Pomocí návrháře můžete:
 
-- Přidejte do formuláře součásti, ovládací prvky dat nebo ovládací prvky založené na systému Windows.
+- Do formuláře přidejte součásti, ovládací prvky pro data nebo ovládací prvky založené na systému Windows.
 
-- Poklepejte na formulář v návrháři `Load` a napište kód v události pro tento formulář nebo poklepejte na ovládací prvek ve formuláři a napište kód pro výchozí událost ovládacího prvku.
+- Dvakrát klikněte na formulář v návrháři a napište kód v `Load` události pro tento formulář, nebo dvakrát klikněte na ovládací prvek ve formuláři a napište kód pro výchozí událost ovládacího prvku.
 
-- Upravte vlastnost Text ovládacího prvku výběrem ovládacího prvku a zadáním názvu.
+- Upravte vlastnost text ovládacího prvku tak, že vyberete ovládací prvek a zadáte název.
 
-- Upravte umístění vybraného ovládacího prvku jeho přesunutím pomocí myši nebo kláves se šipkami. Podobně upravte umístění přesněji pomocí kláves Ctrl a kláves se šipkami. Nakonec upravte velikost ovládacího prvku pomocí kláves Shift a kláves se šipkami.
+- Umístění vybraného ovládacího prvku upravíte přesunutím pomocí myši nebo kláves se šipkami. Podobně upravte umístění přesněji pomocí kláves CTRL a šipky. Nakonec upravte velikost ovládacího prvku pomocí kláves SHIFT a šipky.
 
-- Vyberte více ovládacích prvků tak, že při klepnutí vyberete **shift** nebo **ctrl.** Při použití **svěšení Shift**+click je prvním vybraným ovládacím prvkem dominantní ovládací prvek při zarovnání nebo manipulaci s velikostí. Při použití **ctrl**+click je dominantní poslední vybraný ovládací prvek, takže dominantní ovládací prvek se mění s každým novým přidaným ovládacím prvkem. Případně můžete vybrat více ovládacích prvků přetažením obdélníku výběru kolem ovládacích prvků, které chcete vybrat.
+- Vyberte více ovládacích prvků tak, že při kliknutí na tlačítko **SHIFT** nebo **CTRL** vyberete možnost. Při použití jednotlivě **SHIFT**+ Click je prvním vybraným ovládacím prvkem dominantní ovládací prvek při zarovnání nebo manipulaci s velikostí. Při použití **kombinace kláves CTRL**+ kliknutí je poslední vybraný ovládací prvek dominantní, takže dominantní ovládací prvek se změní při každém přidání nového ovládacího prvku. Alternativně můžete vybrat více ovládacích prvků přetažením obdélníku výběru kolem ovládacích prvků, které chcete vybrat.
 
 > [!NOTE]
-> Pomocí Návrháře formulářů systému Windows, nikoli editoru prostředků, proveďte změny v souboru prostředku formuláře (*.resx).* Pokud upravíte soubor Resx založený na formuláři, zobrazí se upozornění, že změny provedené v Editoru prostředků mohou být ztraceny. Důvodem je, že Návrhář formulářů systému Windows generuje soubor Resx.
+> K provedení změn v souboru prostředků formuláře (*. resx*) použijte Návrhář formulářů, a ne editor prostředků. Pokud upravujete soubor. resx založený na formuláři, může se zobrazit upozornění, že změny, které provedete v editoru prostředků, mohou být ztraceny. Důvodem je, že Návrhář formulářů generuje soubor. resx.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Windows Forms – přehled](/dotnet/framework/winforms/windows-forms-overview)
+- [Přehled model Windows Forms](/dotnet/framework/winforms/windows-forms-overview)
 - [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/)
-- [Vstup uživatele ve Formulářích Systému Windows](/dotnet/framework/winforms/user-input-in-windows-forms)
-- [Datová vazba ve Windows Forms](/dotnet/framework/winforms/windows-forms-data-binding)
-- [Vylepšení aplikací pro Windows Forms](/dotnet/framework/winforms/advanced/)
-- <xref:System.Windows.Forms?displayProperty=fullName>Odkaz na rozhraní API
+- [Vstup uživatele v model Windows Forms](/dotnet/framework/winforms/user-input-in-windows-forms)
+- [Datová vazba v model Windows Forms](/dotnet/framework/winforms/windows-forms-data-binding)
+- [Vylepšení model Windows Formsch aplikací](/dotnet/framework/winforms/advanced/)
+- <xref:System.Windows.Forms?displayProperty=fullName>Reference k rozhraní API

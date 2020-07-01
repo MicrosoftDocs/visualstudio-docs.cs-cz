@@ -10,63 +10,63 @@ helpviewer_keywords:
 - performance
 - low-memory
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
-author: TerryGLee
-ms.author: tglee
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8480eb57a08905c2a593adbab519ae793638888
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769482"
 ---
 # <a name="automatic-feature-suspension"></a>Automatické pozastavení funkce
 
-Pokud dostupná systémová paměť klesne na 200 MB nebo méně, visual studio zobrazí v editoru kódu následující zprávu:
+Pokud velikost dostupné systémové paměti klesne na 200 MB nebo méně, Visual Studio zobrazí v editoru kódu následující zprávu:
 
-![Výstražný text pozastavující úplnou analýzu řešení](../code-quality/media/fsa_alert.png)
+![Text výstrahy, která pozastavuje úplnou analýzu řešení](../code-quality/media/fsa_alert.png)
 
-Když Visual Studio zjistí stav nedostatku paměti, automaticky pozastaví některé pokročilé funkce, aby zůstal stabilní. Visual Studio pokračuje v práci jako dříve, ale jeho výkon je snížena.
+Když Visual Studio zjistí stav nedostatku paměti, automaticky pozastaví určité pokročilé funkce, aby bylo možné udržet stabilní. Visual Studio bude i nadále fungovat jako dřív, ale jeho výkon je degradován.
 
-V podmínkách nedostatku paměti probíhá následující akce:
+V podmínkách nedostatku paměti proběhne následující akce:
 
-- Analýza živého kódu pro visual c# a visual basic je snížena na minimální rozsah.
+- Živá analýza kódu pro Visual C# a Visual Basic se zkracuje na minimální rozsah.
 
-- [Uvolňování paměti](/dotnet/standard/garbage-collection/index) (GC) režim s nízkou latencí pro Visual C# a Visual Basic je zakázán.
+- Režim [uvolňování paměti](/dotnet/standard/garbage-collection/index) (GC) s nízkou latencí pro Visual C# a Visual Basic je zakázaný.
 
-- Mezipaměti sady Visual Studio jsou vyprázdněny.
+- Mezipaměti sady Visual Studio jsou vyprázdněné.
 
-## <a name="improve-visual-studio-performance"></a>Zlepšení výkonu visual studia
+## <a name="improve-visual-studio-performance"></a>Zlepšení výkonu sady Visual Studio
 
-Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo podmínkami nedostatku paměti, naleznete [v tématu Důležité informace o výkonu pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+Tipy a triky, jak zlepšit výkon sady Visual Studio při práci s velkými řešeními nebo s nízkými paměťovými podmínkami, najdete v tématu [požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Analýza živého kódu je omezena na minimální rozsah
+## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Živá analýza kódu se zkracuje na minimální rozsah
 
-Ve výchozím nastavení se analýza živého kódu provádí pro otevřené dokumenty a projekty. Tento obor analýzy můžete přizpůsobit tak, aby byl omezen na aktuální dokument nebo zvýšen na celé řešení. Další informace naleznete v [tématu Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md). V případě nedostatku paměti Visual Studio vynutí rozsah živé analýzy, které mají být sníženy na aktuální dokument. Můžete však znovu povolit upřednostňovaný obor analýzy výběrem tlačítka **Znovu povolit** na informačním panelu, když se zobrazí, nebo restartováním sady Visual Studio. Dialogové okno Možnosti vždy zobrazuje aktuální nastavení oboru analýzy živého kódu.
+Ve výchozím nastavení se dynamická analýza kódu spouští pro otevřené dokumenty a projekty. Tento obor analýzy můžete přizpůsobit tak, aby se snížil na aktuální dokument nebo zvýšil na celé řešení. Další informace naleznete v tématu [How to: Configure Live Code Analysis Scope for Managed Code](./configure-live-code-analysis-scope-managed-code.md). V případě nedostatku paměti aplikace Visual Studio vynutí snížení rozsahu živých analýz na aktuální dokument. Můžete však znovu povolit svůj preferovaný rozsah analýzy výběrem tlačítka **znovu povolit** na informačním panelu, když se zobrazí nebo po restartování sady Visual Studio. Dialogové okno Možnosti vždy zobrazuje aktuální nastavení rozsahu analýzy kódu v reálném čase.
 
-## <a name="gc-low-latency-disabled"></a>Zakázána nízká latence globálního katalogu
+## <a name="gc-low-latency-disabled"></a>Nízká latence GC – vypnuto
 
-Chcete-li znovu povolit režim s nízkou latencí gc, restartujte aplikaci Visual Studio. Ve výchozím nastavení Visual Studio umožňuje gc režim s nízkou latencí při každém psaní, aby zajistily, že vaše psaní neblokuje žádné operace GC. Pokud však stav nedostatku paměti způsobí, že visual studio zobrazí upozornění na automatické pozastavení, režim s nízkou latencí GC je pro tuto relaci zakázán. Restartování sady Visual Studio znovu povolí výchozí chování GC. Další informace naleznete v tématu <xref:System.Runtime.GCLatencyMode>.
+Pokud chcete znovu povolit režim s nízkou latencí GC, restartujte Visual Studio. Ve výchozím nastavení Visual Studio umožňuje režim GC s nízkou latencí, kdykoli píšete, abyste zajistili, že váš zápis nebude blokovat žádné operace GC. Pokud ale stav nedostatku paměti způsobí, že Visual Studio zobrazí upozornění na automatické pozastavení, režim s nízkou latencí GC bude pro tuto relaci zakázán. Opětovné restartování sady Visual Studio – povolí výchozí chování GC. Další informace naleznete v tématu <xref:System.Runtime.GCLatencyMode>.
 
 ## <a name="visual-studio-caches-flushed"></a>Vyprázdněné mezipaměti sady Visual Studio
 
-Pokud budete pokračovat v aktuální relaci vývoje nebo restartovat Visual Studio, všechny mezipaměti sady Visual Studio jsou okamžitě vyprázdněny, ale začnou znovu naplnit. Vyprázdněné mezipaměti zahrnují mezipaměti pro následující funkce:
+Pokud budete pokračovat v aktuální vývojové relaci nebo restartujete aplikaci Visual Studio, všechny mezipaměti sady Visual Studio se okamžitě vyprázdní, ale začněte znovu naplnit. Vyprázdněné mezipaměti zahrnují mezipaměti pro následující funkce:
 
-- Najít všechny reference
+- Najít všechny odkazy
 
 - Přejít na
 
 - Přidat pomocí
 
-Kromě toho mezipaměti používané pro interní operace sady Visual Studio jsou také vymazány.
+Kromě toho jsou vymazány i mezipaměti používané pro interní operace sady Visual Studio.
 
 > [!NOTE]
-> Automatické pozastavení funkce upozornění dochází pouze jednou na základě řešení, nikoli na základě relace. To znamená, že pokud přepnete z jazyka Visual Basic na Visual C# (nebo naopak) a naběhnete do jiného stavu nedostatku paměti, můžete případně získat další upozornění na pozastavení automatické funkce.
+> Automatické upozornění na pozastavení funkcí probíhá pouze jednou pro jednotlivá řešení, nikoli na základě jednotlivých relací. To znamená, že pokud přepnete z Visual Basic do jazyka Visual C# (nebo naopak) a spustíte do jiného stavu nedostatku paměti, můžete získat další upozornění na automatické pozastavení funkcí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md)
+- [Postupy: Konfigurace oboru dynamické analýzy kódu pro spravovaný kód](./configure-live-code-analysis-scope-managed-code.md)
 - [Základy kolekce paměti](/dotnet/standard/garbage-collection/fundamentals)
-- [Aspekty výkonu pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Požadavky na výkon pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)

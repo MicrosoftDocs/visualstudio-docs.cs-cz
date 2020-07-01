@@ -1,8 +1,8 @@
 ---
-title: Element FullClassName (rozšíření průvodce šablonou VS)
+title: FullClassName – – element (rozšíření Průvodce šablonou VS)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#FullClassName
 helpviewer_keywords:
@@ -13,49 +13,50 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e533fdf5b5497b17949581801721136b18bc2d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769599"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>Element FullClassName (rozšíření průvodce šablonou sady Visual Studio)
-Plně kvalifikovaný název třídy, která `IWizard` implementuje rozhraní.
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName – – element (rozšíření Průvodce šablonami sady Visual Studio)
+Plně kvalifikovaný název třídy, která implementuje `IWizard` rozhraní.
 
- \<vstemplate \<> rozšíření> ... \<FullClassName>
+ \<VSTemplate> \<WizardExtension>
+... \<FullClassName>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <FullClassName>ClassName</FullClassName>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení průvodce šablonou.|
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Obsahuje registrační prvky pro přizpůsobení Průvodce šablonou.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Tento text určuje třídu, `IWizard` která implementuje rozhraní. Zadaná třída musí existovat v sestavení určeném elementem [Assembly.](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)
+ Tento text určuje třídu, která implementuje `IWizard` rozhraní. Zadaná třída musí existovat v sestavení určeném prvkem [sestavení](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) .
 
 ## <a name="remarks"></a>Poznámky
- `FullClassName`je povinnýpodřízený `WizardExtension`prvek .
+ `FullClassName`je požadovaný podřízený prvek `WizardExtension` .
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro standardní šablonu [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu pro aplikaci systému Windows.
+ Následující příklad ilustruje metadata pro standardní šablonu projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikaci systému Windows.
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -85,7 +86,7 @@ Plně kvalifikovaný název třídy, která `IWizard` implementuje rozhraní.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také:
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postup: Použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [Postupy: použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md)

@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e3b21745454a74d0251dad547ab45e845190f06d
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 58c94e5a24eab1c638397d7b1391596e503207fa
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85328173"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520663"
 ---
 # <a name="da0011-expensive-compareto"></a>DA0011: Náročná funkce CompareTo
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA0011|
 |Kategorie|Využití .NET Framework|

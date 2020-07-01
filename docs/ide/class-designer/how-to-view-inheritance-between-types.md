@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Zobrazení dědičnosti mezi typy (návrhář tříd)'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.AssociationTypeNotFoundError
 helpviewer_keywords:
@@ -14,38 +14,38 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47907493451841b631d561bfddb74676a460ff29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d5c35279421ad17e62afe707d62dbc879d03b384
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769909"
 ---
-# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Postup: Zobrazení dědičnosti mezi typy v Návrháři tříd
+# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Postupy: zobrazení dědičnosti mezi typy v Návrhář tříd
 
-Vztah dědičnosti, pokud existuje, můžete najít mezi základním typem a jeho odvozenými typy v diagramu třídy v **Návrháři tříd**. Chcete-li vytvořit vztah dědičnosti, pokud neexistuje, mezi dvěma typy, přečtěte si část [Jak: Vytvoření dědičnosti mezi typy](how-to-create-inheritance-between-types.md).
+Můžete najít vztah dědičnosti, pokud existuje, mezi základním typem a jeho odvozenými typy v diagramu tříd v **Návrhář tříd**. Chcete-li vytvořit vztah dědičnosti, pokud žádný neexistuje, mezi dvěma typy, viz [How to: Create dědičnost mezi typy](how-to-create-inheritance-between-types.md).
 
 ## <a name="to-find-the-base-type"></a>Vyhledání základního typu
 
-1. V diagramu třídy klikněte na typ, pro který chcete zobrazit základní třídu nebo rozhraní.
+1. V diagramu tříd klikněte na typ, pro který chcete zobrazit základní třídu nebo rozhraní.
 
-2. V nabídce **Diagram tříd** zvolte Zobrazit **základní třídu** nebo **Zobrazit základní rozhraní**.
+2. V nabídce **Diagram tříd** vyberte možnost **Zobrazit základní třídu** nebo **Zobrazit základní rozhraní**.
 
-     V diagramu se zobrazí vybraná základní třída nebo rozhraní typu. Všechny skryté čáry dědičnosti se nyní zobrazí mezi těmito dvěma obrazci.
+     Základní třída nebo rozhraní typu se v diagramu zobrazí jako vybrané. Všechny skryté řádky dědičnosti se nyní zobrazují mezi dvěma tvary.
 
-Můžete také klepnout pravým tlačítkem myši na typ, jehož základní typ chcete zobrazit, a zvolit **Zobrazit základní třídu** nebo **Zobrazit základní rozhraní**.
+Můžete také kliknout pravým tlačítkem na typ, jehož základní typ chcete zobrazit, a zvolit **Zobrazit základní třídu** nebo **Zobrazit základní rozhraní**.
 
-## <a name="to-find-the-derived-types"></a>Chcete-li najít odvozené typy
+## <a name="to-find-the-derived-types"></a>Vyhledání odvozených typů
 
-1. V diagramu třídy klikněte na typ, pro který chcete zobrazit odvozené třídy nebo rozhraní.
+1. V diagramu tříd klikněte na typ, pro který chcete zobrazit odvozené třídy nebo rozhraní.
 
-2. V nabídce **Diagram tříd** zvolte **Zobrazit odvozené třídy** nebo **Zobrazit odvozená rozhraní**.
+2. V nabídce **Diagram tříd** vyberte možnost **Zobrazit odvozené třídy** nebo **Zobrazit odvozená rozhraní**.
 
-     Odvozené třídy nebo rozhraní typu se zobrazí v diagramu. Mezi obrazci se nyní zobrazí všechny skryté čáry dědičnosti.
+     V diagramu se zobrazí odvozené třídy nebo rozhraní typu. Mezi tvary se nyní zobrazí všechny skryté řádky dědičnosti.
 
-Můžete také klepnout pravým tlačítkem myši na typ, pro který chcete zobrazit jeho odvozené typy, a zvolit **Zobrazit odvozené třídy** nebo **Zobrazit odvozené rozhraní**.
+Můžete také kliknout pravým tlačítkem na typ, pro který chcete zobrazit jeho odvozené typy, a zvolit možnost **Zobrazit odvozené třídy** nebo **Zobrazit odvozená rozhraní**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postup: Vytvoření přidružení mezi typy](how-to-create-associations-between-types.md)
+- [Postupy: vytváření přidružení mezi typy](how-to-create-associations-between-types.md)
 - [Zobrazování typů a vztahů](designing-and-viewing-classes-and-types.md)

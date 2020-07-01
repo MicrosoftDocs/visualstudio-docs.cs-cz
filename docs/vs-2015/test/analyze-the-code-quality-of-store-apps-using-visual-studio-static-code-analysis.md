@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b2e1fd025d559889f0ea41d39879e251e80fa64
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: f837822e47c911e3c27d9d41e31ae9cd448d4fc5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586699"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520494"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Analýza kvality kódu aplikací pro Store pomocí statické analýzy kódu sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,16 +24,16 @@ Nástroj Analýza kódu v sadě Visual Studio kontroluje váš kód pro sadu bě
 > [!NOTE]
 > Analýza kódu není k dispozici pro kód jazyka JavaScript.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
-|||
+|Nadpis|Popis|
 |-|-|
 |[Analýza kvality kódu Visual Basic a C#](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)|Použijte analýzu kódu v projektech Visual Basic a C#.|
 |[Analýza kvality kódu C++](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|Použití analýzy kódu v projektech C++.|
 
 ## <a name="more-code-analysis-info"></a>Další informace o analýze kódu
 
-|||
+|Nadpis|Popis|
 |-|-|
 |[Analýza kódu v knihovně MSDN](https://msdn.microsoft.com/library/dd264897.aspx)|Přečtěte si další informace o použití analýzy kódu v Visual Studio Ultimate, Visual Studio Premium a Visual Studio Professional.|
 |[Blog týmu analýzy kódu na webu MSDN](https://blogs.msdn.com/b/codeanalysis/)|Další informace, včetně technických dokladů a ukázek, najdete na blogu týmu analýzy kódu.|

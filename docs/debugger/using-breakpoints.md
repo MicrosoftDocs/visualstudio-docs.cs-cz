@@ -1,7 +1,7 @@
 ---
 title: Použití zarážek v ladicím programu | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 06/30/2020
 ms.topic: how-to
 f1_keywords:
 - vs.debug.breakpointswin
@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fab15d3390e73ad464a334ccbe64ff8d59db77f2
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 57b2ea6a0c69387043057bc07957a757ed351f99
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769405"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Použití zarážek v ladicím programu sady Visual Studio
 
@@ -50,7 +50,7 @@ Zarážky jsou jedním z nejdůležitějších technik ladění v sadě nástroj
 
 ## <a name="set-breakpoints-in-source-code"></a><a name="BKMK_Overview"></a>Nastavení zarážek ve zdrojovém kódu
 
-Zarážku můžete nastavit na jakémkoli řádku spustitelného kódu. Například v následujícím kódu jazyka C# můžete nastavit zarážku na deklaraci proměnné, `for` smyčku nebo libovolný kód uvnitř `for` smyčky. Nelze nastavit zarážku na deklaracech oboru názvů nebo třídy nebo na podpis metody.
+Zarážku můžete nastavit na jakémkoli řádku spustitelného kódu. Například v následujícím kódu jazyka C# můžete nastavit zarážku na řádku kódu s přiřazením proměnné ( `int testInt = 1` ), `for` smyčkou nebo jakýmkoli kódem uvnitř `for` smyčky. Nemůžete nastavit zarážku pro signatury metod, deklarace pro obor názvů, třídu nebo deklarace proměnných, pokud neexistuje žádné přiřazení a metodu getter/setter.
 
 Chcete-li nastavit zarážku ve zdrojovém kódu, klikněte na levý levý okraj vedle řádku kódu. Můžete také vybrat řádek a stisknout klávesu **F9**, vybrat **Debug**  >  **přepínač ladit zarážku**nebo kliknout pravým tlačítkem a vybrat **zarážku**  >  **Vložit**zarážku. Zarážka se zobrazuje na levém okraji jako červená tečka.
 
@@ -319,7 +319,7 @@ Chcete-li vizuálně sledovat zarážky během provádění kódu, viz [metody m
 
 2. V okně **zpětný překlad** klikněte na levý okraj instrukce, na kterou chcete přerušit. Můžete ji také vybrat a stisknout klávesu **F9**nebo kliknout pravým tlačítkem a vybrat **zarážku**  >  **Vložit**zarážku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Co je ladění?](../debugger/what-is-debugging.md)
 - [Zápis lepšího kódu v jazyce C# pomocí sady Visual Studio](../debugger/write-better-code-with-visual-studio.md)

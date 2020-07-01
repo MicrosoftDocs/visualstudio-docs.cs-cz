@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Otevírání dokumentů aplikace Visio prostřednictvím kódu programu'
+title: 'Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,45 +13,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b863040bcceb4e86aae7ed4efd83c2466eec12c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812248"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519987"
 ---
-# <a name="how-to-programmatically-open-visio-documents"></a>Postupy: Otevírání dokumentů aplikace Visio prostřednictvím kódu programu
-  Existují dvě metody pro otevírání stávajících dokumentů Microsoft Office Visio: Otevřít a OpenEx. Metoda OpenEx se shoduje s metodu Open s tím rozdílem, že obsahuje argumenty, ve kterých můžete určit volající, jak se dokument otevře.
+# <a name="how-to-programmatically-open-visio-documents"></a>Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu
+  Existují dvě metody otevření existujících systém Microsoft Office dokumentů aplikace Visio: Open a OpenEx. Metoda OpenEx je shodná s metodou Open, s tím rozdílem, že poskytuje argumenty, ve kterých může volající určit způsob otevření dokumentu.
 
- Podrobnosti o objektovém modelu najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Documents.Open](/office/vba/api/Visio.Documents.Open) metoda a [Microsoft.Office.Interop.Visio.Documents.OpenEx](/office/vba/api/Visio.Documents.OpenEx) Metoda.
+ Podrobnosti o objektovém modelu naleznete v referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Documents. Otevřete](/office/vba/api/Visio.Documents.Open) metodu a [Microsoft.Office.Interop.Visio.Documents. OpenEx](/office/vba/api/Visio.Documents.OpenEx) – metoda
 
-## <a name="open-a-visio-document"></a>Otevřete dokument Visia
+## <a name="open-a-visio-document"></a>Otevření dokumentu Visia
 
-### <a name="to-open-a-visio-document"></a>Otevřete dokument Visia
+### <a name="to-open-a-visio-document"></a>Otevření dokumentu aplikace Visio
 
-- Volání `Microsoft.Office.Interop.Visio.Documents.Open` metodu a zadejte plně kvalifikovanou cestu dokument Visia.
+- Zavolejte `Microsoft.Office.Interop.Visio.Documents.Open` metodu a zadejte plně kvalifikovanou cestu k dokumentu Visia.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#5)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#5)]
 
-## <a name="open-a-visio-document-with-specified-arguments"></a>Otevřete dokument Visia se zadanými argumenty
+## <a name="open-a-visio-document-with-specified-arguments"></a>Otevřít dokument Visia se zadanými argumenty
 
-### <a name="to-open-a-visio-document-as-read-only-and-docked"></a>Otevřete dokument Visia jako jen pro čtení a ukotvených
+### <a name="to-open-a-visio-document-as-read-only-and-docked"></a>Otevření dokumentu aplikace Visio jako jen pro čtení a ukotven
 
-- Volání `Microsoft.Office.Interop.Visio.Documents.OpenEx` metoda, zadejte plně kvalifikovanou cestu dokumentů aplikace Visio a zahrnout argumenty, které chcete použít – v tomto případu, ukotvených a jen pro čtení.
+- Zavolejte `Microsoft.Office.Interop.Visio.Documents.OpenEx` metodu, zadejte plně kvalifikovanou cestu k dokumentu aplikace Visio a zahrňte argumenty, které chcete použít – v tomto případě ukotvené a jen pro čtení.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#6](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#6)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#6](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#6)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad kódu vyžaduje následující:
 
-- Dokument Visia s názvem `myDrawing.vsd` musí být umístěn v adresáři s názvem `Test` v *dokumenty* složky (pro Windows XP a starší) nebo *dokumenty* složku (pro Windows Vista).
+- Dokument aplikace Visio s názvem `myDrawing.vsd` musí být umístěn v adresáři s názvem `Test` ve složce *dokumenty* (pro systém Windows XP a starší) nebo ve složce *dokumenty* (pro systém Windows Vista).
 
 ## <a name="see-also"></a>Viz také:
-- [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)
+- [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
-- [Postupy: Vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)
-- [Postupy: Zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Postupy: Ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)
-- [Postupy: Tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)
+- [Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)
+- [Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)
+- [Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)
+- [Postupy: tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)

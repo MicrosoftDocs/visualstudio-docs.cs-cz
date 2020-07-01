@@ -1,7 +1,7 @@
 ---
 title: knihovna obrázků
 ms.date: 11/04/2016
-ms.topic: sample
+ms.topic: conceptual
 helpviewer_keywords:
 - animation [Visual Studio]
 - graphics [Visual Studio], Image Library
@@ -16,22 +16,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2599238e18415fb494d3d72fdf24305d7ba1b0b4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 88dc33f4dcc8edf0b7793a726a0b626360b9edb1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75589900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768671"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 
-Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikací, které se zobrazují v aplikacích Microsoft Visual Studio, Microsoft Windows, systému Office a dalším softwaru společnosti Microsoft. Tuto sadu více než 1 000 bitových kopií lze použít k vytvoření aplikací, které vypadají vizuálně konzistentní se softwarem společnosti Microsoft.
+Knihovna obrázků sady Visual Studio obsahuje bitové kopie aplikace, které se zobrazují v Microsoft Visual Studio, Microsoft Windows, systému Office a dalším softwaru společnosti Microsoft. Tato sada více než 1 000 imagí se dá použít k vytváření aplikací, které vypadají vizuálně konzistentně se softwarem Microsoftu.
 
-[Stažení knihovny obrázků visual studia](https://www.microsoft.com/download/details.aspx?id=35825)
+[Stáhnout knihovnu imagí sady Visual Studio](https://www.microsoft.com/download/details.aspx?id=35825)
 
-Knihovna obrázků je rozdělena do pěti kategorií: Společné prvky, Akce, Poznámky, Ikony a Objekty. Soubory Readme jsou zahrnuty ve formátu PDF pro typy společných prvků a ikon. Obsahují informace o tom, jak správně používat tyto obrázky ve vašich aplikacích.
+Knihovna obrázků je rozdělena na pět kategorií: běžné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou součástí formátu PDF pro běžné prvky a typy ikon. Obsahují informace o tom, jak tyto obrázky ve svých aplikacích vhodně použít.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Instalace sady Visual Studio](../install/install-visual-studio.md)
-- [Obrázky, bitmapy a metasoubory](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)
+- [Obrázky, rastrové obrázky a metasoubory](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)

@@ -34,7 +34,7 @@ ms.locfileid: "85519909"
 
 - E-mailová zpráva, která dorazí na slovo **test** v `Subject` poli.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Práce se složkami](../vsto/working-with-folders.md)
 - [Postupy: načítání složek podle názvu prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
 - [Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu](../vsto/how-to-programmatically-search-within-a-specific-folder.md)

@@ -11,4 +11,4 @@ ms.lasthandoff: 04/02/2020
 ms.locfileid: "80573183"
 ---
 > [!NOTE]
-> Máte zájem o vývoj řešení, která rozšiřují prostředí Office na příčce na různých platformách? Podívejte se na nový [model doplňků office](/office/dev/add-ins/). Doplňky sady Office mají ve srovnání s doplňky a řešeními VSTO malé rozměry a můžete je vytvářet pomocí téměř jakékoli technologie webového programování, jako je HTML5, JavaScript, CSS3 a XML.
+> Uvažujete o vývoji řešení, která šíří možnosti Office napříč různými platformami? Podívejte se na nový [model Office](/office/dev/add-ins/)doplňky. Doplňky pro Office mají v porovnání s doplňky a řešeními VSTO malé nároky a můžete je sestavit pomocí prakticky libovolné technologie webového programování, jako je HTML5, JavaScript, CSS3 a XML.

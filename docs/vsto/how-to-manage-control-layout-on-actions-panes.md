@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Správa rozložení ovládacích prvků v podoknech akcí'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 043f93c12181d34e9d2a92435c854cdf76f18904
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: b6df90847000560299b8b1a6f259ffa6e7df0729
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255825"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520144"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>Postupy: Správa rozložení ovládacích prvků v podoknech akcí
   Podokno akce je ukotveno napravo od dokumentu nebo listu ve výchozím nastavení. dá se ale ukotvit vlevo, nahoře nebo dole. Pokud používáte více uživatelských ovládacích prvků, můžete napsat kód pro správné vytvoření zásobníku uživatelských ovládacích prvků v podokně akce. Další informace najdete v tématu [Přehled podokna akcí](../vsto/actions-pane-overview.md).
@@ -29,18 +29,18 @@ ms.locfileid: "71255825"
  Pořadí zásobníku ovládacích prvků závisí na tom, zda je podokno akce ukotveno svisle nebo vodorovně.
 
 > [!NOTE]
-> Pokud uživatel změní velikost podokna akce v době běhu, můžete nastavit ovládací prvky pro změnu velikosti pomocí podokna akce. Můžete použít <xref:System.Windows.Forms.Control.Anchor%2A> vlastnost ovládacího prvku model Windows Forms k ukotvení ovládacích prvků do podokna akce. Další informace najdete v tématu [jak: Ovládací prvky kotvy](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)na model Windows Forms.
+> Pokud uživatel změní velikost podokna akce v době běhu, můžete nastavit ovládací prvky pro změnu velikosti pomocí podokna akce. Můžete použít <xref:System.Windows.Forms.Control.Anchor%2A> vlastnost ovládacího prvku model Windows Forms k ukotvení ovládacích prvků do podokna akce. Další informace naleznete v tématu [How to: Anchor Controls on model Windows Forms](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms).
 
 > [!NOTE]
 > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="to-set-the-stack-order-of-the-actions-pane-controls"></a>Nastavení pořadí zásobníku pro ovládací prvky podokna akce
 
-1. Otevřete projekt na úrovni dokumentu pro systém Microsoft Office Word, který obsahuje podokno akce s několika uživatelskými ovládacími prvky nebo vnořenými ovládacími prvky podokna akcí. Další informace najdete v tématu [jak: Přidejte podokno akcí do dokumentů aplikace Word nebo sešitů](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)aplikace Excel.
+1. Otevřete projekt na úrovni dokumentu pro systém Microsoft Office Word, který obsahuje podokno akce s několika uživatelskými ovládacími prvky nebo vnořenými ovládacími prvky podokna akcí. Další informace najdete v tématu [Postup: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).
 
 2. Pravým tlačítkem myši klikněte na **ThisDocument.cs** nebo **ThisDocument. vb** v **Průzkumník řešení** a pak klikněte na **Zobrazit kód**.
 
-3. V obslužné rutině události podokna akce ověřte, zda je orientace podokna akce vodorovná. <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged>
+3. V <xref:Microsoft.Office.Tools.ActionsPane.OrientationChanged> obslužné rutině události podokna akce ověřte, zda je orientace podokna akce vodorovná.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#30](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#30)]
      [!code-vb[Trin_VstcoreActionsPaneWord#30](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#30)]
@@ -50,7 +50,7 @@ ms.locfileid: "71255825"
      [!code-csharp[Trin_VstcoreActionsPaneWord#31](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#31)]
      [!code-vb[Trin_VstcoreActionsPaneWord#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#31)]
 
-5. V C#nástroji je nutné přidat obslužnou rutinu události pro `ActionsPane` <xref:Microsoft.Office.Tools.Word.Document.Startup> do obslužné rutiny události. Informace o vytváření obslužných rutin událostí naleznete [v tématu How to: Vytváření obslužných rutin událostí v](../vsto/how-to-create-event-handlers-in-office-projects.md)projektech pro systém Office.
+5. V jazyce C# je nutné přidat obslužnou rutinu události pro do `ActionsPane` <xref:Microsoft.Office.Tools.Word.Document.Startup> obslužné rutiny události. Informace o vytváření obslužných rutin událostí najdete v tématu [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#32](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#32)]
 
@@ -60,7 +60,7 @@ ms.locfileid: "71255825"
  [!code-csharp[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#29)]
  [!code-vb[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#29)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje:
 
 - Projekt na úrovni dokumentu aplikace Word s podoknem akcí, které obsahuje více uživatelských ovládacích prvků nebo vnořených ovládacích prvků podokna akcí.
@@ -69,5 +69,5 @@ ms.locfileid: "71255825"
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)
 - [Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
 - [Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
-- [Návod: Vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
-- [Návod: Vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
+- [Návod: vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
+- [Návod: vložení textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)

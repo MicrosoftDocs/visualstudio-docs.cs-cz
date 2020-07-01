@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 00f8543c2fdb204a165292844cb5bf5b925c63e8
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: c58033e89742650dc097a7469cbf62d7b6168509
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330492"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520364"
 ---
 # <a name="vsperf"></a>VSPerf
 Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
@@ -28,7 +28,7 @@ Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
 ## <a name="uwp-apps-only"></a>Jenom aplikace pro UWP
  Tyto možnosti se vztahují jenom na aplikace pro UWP.
 
-|||
+|Možnost|Popis|
 |-|-|
 |**/App: {AppName}**|Spustí Profiler a počká na spuštění zadané aplikace z nabídky Start.<br /><br /> Spusťte `vsperf /listapps` pro zobrazení názvu aplikace a PackageFullName nainstalovaných aplikací.|
 |**/Package: {PackageFullName}**|Spustí Profiler a počká na spuštění zadané aplikace z nabídky Start.<br /><br /> Spusťte `vsperf /listapps` pro zobrazení názvu aplikace a PackageFullName nainstalovaných aplikací.|
@@ -39,7 +39,7 @@ Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
 ## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Aplikace pro stolní počítače se systémem Windows 8 a Windows Server 2012
  Tyto možnosti nefungují v aplikacích pro UWP.
 
-|||
+|Možnost|Popis|
 |-|-|
 |**/Lauch: {executable}**|Spustí a začne profilování zadaného spustitelného souboru.|
 |**/args: {ExecutableArguments}**|Určuje argumenty příkazového řádku pro předání cíle **/Lauch** .|
@@ -48,7 +48,7 @@ Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
 ## <a name="all-applications"></a>Všechny aplikace
  Tato možnost se vztahuje na všechny aplikace systému Windows 8 nebo Windows Server 2012.
 
-|||
+|Možnost|Popis|
 |-|-|
 |**/Attach: {PID&#124;Process} [, PID&#124;Process]...**|Shromažďuje data ze zadaných procesů.<br /><br /> Pomocí Správce úloh můžete zobrazit ID procesu (PID) a zpracovat názvy spuštěných aplikací.|
 |**/File: {Report}**|Nepovinný parametr. Určuje výstupní soubor (přepíše existující soubor).<br /><br /> Používá se jenom s/Package nebo/Attach..|
@@ -58,6 +58,6 @@ Nástroj příkazového řádku **VsPerf** použijte k těmto akcím:
 |**/detach**|Zastavte shromažďování dat, ale umožněte cílovým procesům pokračovat v běhu.|
 |**/status**|Zobrazit stav profileru.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 - [Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

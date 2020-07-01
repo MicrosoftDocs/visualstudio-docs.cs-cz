@@ -37,7 +37,7 @@ ms.locfileid: "85519825"
 
 - Textový soubor `Test.txt` , který bude uložen na jednotce C.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Práce se sešity](../vsto/working-with-workbooks.md)
 - [Postupy: otevírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-workbooks.md)
 - [Postupy: vytváření nových sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-workbooks.md)

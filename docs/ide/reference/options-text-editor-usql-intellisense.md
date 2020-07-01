@@ -1,59 +1,59 @@
 ---
-title: Možnosti, Textový editor, U-SQL, IntelliSense
+title: Možnosti, textový editor, U-SQL, IntelliSense
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.IntelliSense
 - VS.ToolsOptionsPages.Text_Editor.HQL.IntelliSense
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04f7a66884238856ba6988b9f1e8c648f4ff1d16
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91d2af8bfcd8c9d80b589e01aedd535afbd1a913
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769463"
 ---
-# <a name="options-text-editor-u-sql-intellisense"></a>Možnosti, Textový editor, U-SQL, IntelliSense
+# <a name="options-text-editor-u-sql-intellisense"></a>Možnosti, textový editor, U-SQL, IntelliSense
 
-Pomocí stránky možností **technologie IntelliSense** můžete upravit některá nastavení textového editoru pro U-SQL. Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > a pak zvolte **Textový editor** > **U-SQL** > **IntelliSense**.
+Pomocí stránky možnosti **technologie IntelliSense** můžete změnit některá nastavení textového editoru u-SQL. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte **textový editor**  >  **U-SQL**  >  **IntelliSense**.
 
-## <a name="intellisense-settings"></a>Nastavení technologie IntelliSense
+## <a name="intellisense-settings"></a>Nastavení IntelliSense
 
-Zaškrtnutím políčka povolíte **funkci Rychlé informace** nebo **Aplikaci Intellisense**. Rychlé informace zobrazí úplnou deklaraci, když najedete kurzorem myši na proměnnou.
+Zaškrtnutím políčka povolíte **rychlé informace** nebo **IntelliSense**. Rychlé informace zobrazí úplnou deklaraci ukazatele myši nad proměnnou.
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
-- **Zobrazit seznam dokončení po zadání znaku**
+- **Po zadání znaku zobrazit seznam dokončení**
 
-   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí seznam dokončení, když začnete psát. Pokud tuto možnost nevyberete, je dokončení technologie IntelliSense stále k dispozici v nabídce IntelliSense nebo stisknutím **klávesy Ctrl** + **Mezerník**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tuto možnost nevyberete, doplňování technologie IntelliSense je stále k dispozici v nabídce technologie IntelliSense nebo stiskněte **klávesovou zkratku CTRL**  +  **MEZERNÍK**.
 
-- **Umístění klíčových slov do seznamů dokončení**
+- **Umístit klíčová slova do seznamů dokončení**
 
-   Je-li vybrána tato možnost, zahrne technologie IntelliSense klíčová slova do seznamu dokončení.
+   Když je vybraná tato možnost, IntelliSense zahrnuje klíčová slova v seznamu pro doplňování.
 
-- **Umístění fragmentů kódu do seznamů dokončení**
+- **Umístit fragmenty kódu do seznamů dokončení**
 
-   Je-li vybrána tato možnost, zahrnuje technologie IntelliSense do seznamu dokončení fragmenty kódu.
+   Pokud je vybrána tato možnost, technologie IntelliSense obsahuje fragmenty kódu v seznamu pro doplňování.
 
 ## <a name="selection-in-completion-list"></a>Výběr v seznamu dokončení
 
-- **Potvrzení zadáním následujících znaků**
+- **Potvrďte zadáním následujících znaků.**
 
-   Toto pole zobrazuje znaky, které způsobují, že aktuálně zvýrazněný návrh seznamu dokončení bude potvrzen. Znaky můžete přidat nebo odebrat z tohoto seznamu.
+   Toto pole zobrazuje znaky, které způsobují, že aktuálně zvýrazněný návrh seznamu dokončení bude potvrzen. V tomto seznamu můžete přidat nebo odebrat znaky.
 
-- **Potvrzení stisknutím mezerníku**
+- **Potvrdit stisknutím mezerníku**
 
-   Pokud je tato možnost vybrána, můžete potvrdit zvýrazněný návrh seznamu dokončení stisknutím mezerníku.
+   Když je vybraná tato možnost, můžete zvýrazněný návrh seznamu dokončení potvrdit stisknutím mezerníku.
 
-- **Přidání nového řádku na konec plně zadaného slova na enteru**
+- **Přidat nový řádek na konci plně zadaného slova při zadání**
 
-   Je-li tato možnost vybrána, automaticky se přidá nový řádek a kurzor se přesune na nový řádek, když zadáte všechny znaky pro návrh seznamu dokončení.
+   Když se tato možnost vybere, automaticky se přidá nový řádek a při zadání všech znaků pro návrh seznamu pro dokončení se kurzor přesune na nový řádek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
 - [Používání atributu IntelliSense](../../ide/using-intellisense.md)

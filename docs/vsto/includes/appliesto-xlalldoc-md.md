@@ -6,4 +6,4 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68143697"
 ---
-  **Platí pro:** Informace v tomto tématu se vztahují k dokumentu\-projekty na úrovni aplikace Excel. Další informace najdete v tématu [dostupné funkce podle typu aplikace a projekt sady Office](../../vsto/features-available-by-office-application-and-project-type.md).
+  **** Platí pro:\- Informace v tomto tématu se vztahují na projekty na úrovni dokumentu ve Excelu. Další informace najdete v tématu [dostupné funkce podle aplikace systému Office a typu projektu](../../vsto/features-available-by-office-application-and-project-type.md).

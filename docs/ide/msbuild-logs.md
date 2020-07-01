@@ -1,8 +1,8 @@
 ---
-title: Poradce při potížích a vytváření protokolů pro problémy s msbuildem
+title: Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild
 ms.date: 06/27/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - msbuild logs"
 author: corob-msft
@@ -15,38 +15,38 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ae91f7b9c90f0b06c449d26f67fe4fcc3434518e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77278807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768704"
 ---
-# <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>Poradce při potížích a vytváření protokolů pro problémy s msbuildem
+# <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild
 
-Následující postupy vám mohou pomoci diagnostikovat problémy se sestavením v projektu sady Visual Studio a v případě potřeby vytvořit protokol, který bude odeslán společnosti Microsoft k prošetření.
+Následující postupy vám pomohou diagnostikovat problémy sestavení v projektu sady Visual Studio a v případě potřeby vytvořit protokol pro odeslání do Microsoftu pro účely šetření.
 
-## <a name="a-property-value-is-ignored"></a>Hodnota vlastnosti je ignorována.
+## <a name="a-property-value-is-ignored"></a>Hodnota vlastnosti se ignoruje.
 
-Pokud se vlastnost projektu zdá být nastavena na určitou hodnotu, ale nemá žádný vliv na sestavení, postupujte takto:
+Pokud se zdá, že vlastnost projektu je nastavena na konkrétní hodnotu, ale nemá žádný vliv na sestavení, postupujte podle následujících kroků:
 
-1. Otevřete příkazový řádek pro vývojáře sady Visual Studio, který odpovídá vaší verzi sady Visual Studio.
-1. Spusťte následující příkaz po nahrazení hodnot cesty řešení, konfigurace a názvu projektu:
+1. Otevřete Developer Command Prompt sady Visual Studio, která odpovídá vaší verzi sady Visual Studio.
+1. Po nahrazení hodnot pro cestu k řešení, konfiguraci a název projektu spusťte následující příkaz:
 
     ```cmd
     msbuild /p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /pp:out.xml MyProject.vcxproj
     ```
 
-    Tento příkaz vytvoří "preprocessed" msbuild soubor projektu (out.xml). V tomto souboru můžete vyhledat určitou vlastnost a zjistit, kde je definován.
+    Tento příkaz vytvoří soubor projektu MSBuild "předzpracovaný" (out.xml). V tomto souboru můžete vyhledat konkrétní vlastnost a zjistit, kde je definována.
 
-Poslední definice vlastnosti je, co spotřebovává sestavení. Pokud je vlastnost nastavena dvakrát, druhá hodnota přepíše první. MSBuild také vyhodnocuje projekt v několika průchodech:
+Poslední definice vlastnosti je to, co sestavení spotřebovává. Pokud je vlastnost nastavena dvakrát, druhá hodnota přepíše první. Nástroj MSBuild také vyhodnocuje projekt v několika průchodech:
 
-- PropertyGroups a importy
+- Element PropertyGroups a importy
 - ItemDefinitionGroups
-- Skupiny položek
+- ItemGroups
 - Cíle
 
-Proto, vzhledem k následujícímu pořadí:
+Proto v uvedeném pořadí:
 
 ```xml
 <PropertyGroup>
@@ -65,11 +65,11 @@ Proto, vzhledem k následujícímu pořadí:
 </PropertyGroup>
 ```
 
-Hodnota "MyMetadata" pro položku "MyFile.txt" bude vyhodnocena na "B" během sestavení (ne "A" a není prázdný)
+Hodnota "MyMetadata" pro položku "MyFile.txt" bude při sestavování vyhodnocena jako "B" (nikoli "a" a není prázdná)
 
-## <a name="incremental-build-is-building-more-than-it-should"></a>Přírůstkové sestavení buduje více, než by mělo
+## <a name="incremental-build-is-building-more-than-it-should"></a>Přírůstkové sestavování sestavuje víc, než by mělo
 
-Pokud MSBuild je zbytečně opětovné sestavení projektu nebo položky projektu, vytvořte podrobný nebo binární protokol sestavení. V protokolu můžete zbytečně vyhledat soubor, který byl sestaven nebo zkompilován. Výstup vypadá asi takto:
+Pokud nástroj MSBuild nemusí nutně znovu sestavit projekt nebo položku projektu, vytvořte podrobný nebo binární protokol sestavení. V protokolu můžete vyhledat soubor, který byl sestaven nebo kompilován zbytečně. Výstup bude vypadat nějak takto:
 
 ```output
   Task "CL"
@@ -89,7 +89,7 @@ Pokud MSBuild je zbytečně opětovné sestavení projektu nebo položky projekt
   Debug\Project1.tlog\CL.write.1.tlog
 ```
 
-Pokud vytváříte v ide sady Visual Studio (s podrobnostmi o podrobném výstupním okně), **okno Výstup** zobrazí důvod, proč každý projekt není aktuální:
+Pokud sestavíte v integrovaném vývojovém prostředí (IDE) sady Visual Studio (s detailní podrobností okna výstup), **okno výstup** zobrazuje důvod, proč každý projekt není aktuální:
 
 ```output
 1>------ Up-To-Date check: Project: Project1, Configuration: Debug Win32 ------
@@ -97,10 +97,10 @@ Pokud vytváříte v ide sady Visual Studio (s podrobnostmi o podrobném výstup
 1>Project is not up-to-date: build input 'f:\test\project1\project1\project1.h' was modified after the last build finished.
 ```
 
-## <a name="create-a-binary-msbuild-log"></a>Vytvoření binárního protokolu msbuild
+## <a name="create-a-binary-msbuild-log"></a>Vytvoření binárního protokolu MSBuild
 
-1. Otevření příkazového řádku pro vývojáře pro vaši verzi sady Visual Studio
-1. Na příkazovém řádku spusťte jeden z následujících příkazů. (Nezapomeňte použít skutečné hodnoty projektu a konfigurace.):
+1. Otevřete Developer Command Prompt pro vaši verzi sady Visual Studio
+1. Z příkazového řádku spusťte jeden z následujících příkazů. (Nezapomeňte použít svůj skutečný projekt a konfigurační hodnoty.):
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
@@ -112,13 +112,13 @@ Pokud vytváříte v ide sady Visual Studio (s podrobnostmi o podrobném výstup
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
     ```
 
-Soubor Msbuild.binlog bude vytvořen v adresáři, ze kterého jste spustili službu MSBuild. Můžete jej zobrazit a prohledávat pomocí [programu Msbuild Structured Log Viewer](http://www.msbuildlog.com/).
+Soubor MSBuild. binlog bude vytvořen v adresáři, ze kterého jste spustili nástroj MSBuild. Můžete ji zobrazit a vyhledat pomocí [prohlížeče strukturovaného protokolu nástroje MSBuild](http://www.msbuildlog.com/).
 
-## <a name="create-a-detailed-log"></a>Vytvoření podrobného protokolu
+## <a name="create-a-detailed-log"></a>Vytvořit podrobný protokol
 
-1. V hlavní nabídce sady Visual Studio**Options** > přejděte na**projekty a řešení** > **nástroje** > **sestavení a spuštění**.
-1. Nastavte **msbuild projektu vytvořit podrobnost** podrobně **v** obou polích se seznamem. Horní ovládací prvky sestavení podrobností v **okně výstup** a druhý ovládací prvky sestavení podrobnost v souboru \<\>název_projektu .log, který je vytvořen v adresáři zprostředkující každý projekt během sestavení.
-2. Z příkazového řádku vývojáře sady Visual Studio zadejte jeden z těchto příkazů a napočtete skutečné hodnoty cesty a konfigurace:
+1. V hlavní nabídce sady Visual Studio přejděte na **nástroje**  >  **Možnosti**  >  **projekty a řešení**  > **sestavování a spouštění**.
+1. Nastavte **Podrobnosti sestavení projektu MSBuild** na **podrobné** v obou polích se seznamem. Horní jeden ovládací prvek má v **okno výstup** podrobnost sestavení a druhá z nich je podrobností sestavení v \<projectname\> souboru. log, který je vytvořen v zprostředkujícím adresáři každého projektu během sestavení.
+2. Z příkazového řádku pro vývojáře sady Visual Studio zadejte jeden z těchto příkazů a nahraďte svou skutečnou cestu a konfigurační hodnoty:
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
@@ -130,4 +130,4 @@ Soubor Msbuild.binlog bude vytvořen v adresáři, ze kterého jste spustili slu
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj
     ```
 
-    Soubor Msbuild.log bude vytvořen v adresáři, ze kterého jste spustili msbuild.
+    Soubor MSBuild. log bude vytvořen v adresáři, ze kterého jste spustili nástroj MSBuild.

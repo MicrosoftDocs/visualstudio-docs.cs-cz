@@ -6,17 +6,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.port
 helpviewer_keywords:
 - Domain-Specific Language, port shape
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 60498c57e80b474bae8d5c320183442bbc4fcfd4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2e5ed5703d67e4c10bd7a9e4fe2ab234c5577f65
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747450"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520857"
 ---
 # <a name="properties-of-port-shapes"></a>Vlastnosti obrazců portů
 Obrazce portů můžete použít k reprezentaci tříd domény ve vygenerovaném návrháři.
@@ -28,30 +28,30 @@ Obrazce portů můžete použít k reprezentaci tříd domény ve vygenerovaném
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
 |Barva výplně|Barva výplně tohoto obrazce|White|
-|Režim přechodu výplně|Režim přechodu výplně tohoto obrazce|Horizontální|
-|Geometrie|Geometrie tohoto obrazce (obdélník, zaoblený obdélník, elipsa nebo kroužek).|plocha|
-|Má výchozí spojovací body|Pokud `True`, tvar použije ve vygenerovaném návrháři horní, dolní, levý a pravý spojovací bod.|False|
-|Barva obrysu|Barva obrysu tohoto obrazce|zůstane|
-|Styl přerušované čáry obrysu|Styl přerušování obrysu tohoto obrazce (Solid, pomlčka, tečka, čárka tečka, čárka tečka tečka nebo vlastní).|Solid|
+|Režim přechodu výplně|Režim přechodu výplně tohoto obrazce|Vodorovně|
+|Geometrie|Geometrie tohoto obrazce (obdélník, zaoblený obdélník, elipsa nebo kroužek).|Obdélník|
+|Má výchozí spojovací body|Pokud `True` bude obrazec používat horní, dolní, levý a pravý spojovací bod ve vygenerovaném návrháři.|False|
+|Barva obrysu|Barva obrysu tohoto obrazce|Black|
+|Styl přerušované čáry obrysu|Styl přerušování obrysu tohoto obrazce (Solid, pomlčka, tečka, čárka tečka, čárka tečka tečka nebo vlastní).|Plná|
 |Tloušťka obrysu|Tloušťka obrysu tohoto obrazce|0,03125|
-|Barva textu|Barva použitá pro text dekoratéry, která je přidružena k tomuto obrazci.|zůstane|
-|Modifikátor přístupu|Úroveň přístupu třídy (`public` nebo `internal`).|Public|
-|Vlastní atributy|Slouží k přidání atributů do třídy zdrojového kódu, která je vygenerována z tohoto obrazce.|\<none >|
-|Generuje dvojitou odvozenou|Pokud `True`, bude vygenerována jak základní třída, tak i částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepis a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md) .|False|
-|Má vlastní konstruktor|Pokud `True`, bude ve zdrojovém kódu k dispozici vlastní konstruktor. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z portu (`none`, `abstract` nebo `sealed`).|žádná|
-|Základní port|Základní třída tohoto obrazce|nTato|
+|Barva textu|Barva použitá pro text dekoratéry, která je přidružena k tomuto obrazci.|Black|
+|Modifikátor přístupu|Úroveň přístupu třídy ( `public` nebo `internal` ).|Public|
+|Vlastní atributy|Slouží k přidání atributů do třídy zdrojového kódu, která je vygenerována z tohoto obrazce.|\<none>|
+|Generuje dvojitou odvozenou|Pokud `True` bude vygenerována jak základní třída, tak částečná třída (pro podporu přizpůsobení prostřednictvím přepsání). Další informace naleznete v tématu [přepis a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md) .|False|
+|Má vlastní konstruktor|Pokud se `True` vlastní konstruktor poskytne ve zdrojovém kódu. Další informace naleznete v tématu [přepsání a rozšíření vygenerovaných tříd](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Modifikátor dědičnosti|Popisuje druh dědění třídy zdrojového kódu, který je generován z portu ( `none` `abstract` nebo `sealed` ).|žádné|
+|Základní port|Základní třída tohoto obrazce|(žádná)|
 |Name|Název tohoto obrazce|Aktuální název|
 |Obor názvů|Obor názvů, který je přidružen k tomuto obrazci.|Aktuální obor názvů|
-|Typ popisu nástroje|Jak je definován popis tlačítka (pevná, proměnná nebo žádný). Pokud je pevná, pak se jako popis používá hodnota vlastnosti `Fixed Tooltip Text`; Pokud je proměnná, pak je popis definovaný ve vlastním kódu.|žádná|
-|Poznámky|Neformální poznámky, které jsou přidruženy k tomuto obrazci.|\<none >|
-|Počáteční výška|Počáteční výška tohoto obrazce v palcích|první|
-|Počáteční Šířka|Počáteční šířka tohoto obrazce v palcích|1,5|
-|Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True`, může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|False|
-|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none >|
-|Zobrazované jméno|Název, který se zobrazí ve vygenerovaném návrháři pro tento obrazec.|\<none >|
-|Text tipu s pevným nástrojem|Text, který se používá pro pevný popis.|\<none >|
-|Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento tvar.|\<none >|
+|Typ popisu nástroje|Jak je definován popis tlačítka (pevná, proměnná nebo žádný). Je-li tento parametr zadán, je hodnota `Fixed Tooltip Text` vlastnosti použita jako popis; je-li proměnná, je popis tlačítka definován ve vlastním kódu.|žádné|
+|Poznámky|Neformální poznámky, které jsou přidruženy k tomuto obrazci.|\<none>|
+|Počáteční výška|Počáteční výška tohoto obrazce v palcích|1|
+|Počáteční Šířka|Počáteční šířka tohoto obrazce v palcích|1.5|
+|Vystavená Barva výplně jako vlastnost<br /><br /> Zpřístupněný režim přechodu výplně<br /><br /> Vystavená barva obrysu jako vlastnost<br /><br /> Vykrytý styl přerušované čáry jako vlastnost<br /><br /> Vystavená tloušťka obrysu jako vlastnost<br /><br /> Zpřístupňuje barvu textu|Pokud `True` může uživatel nastavit uvedenou vlastnost tvaru. Pokud to chcete nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na **Přidat vystavené**.|False|
+|Popis|Slouží k dokumentování vygenerovaného návrháře.|\<none>|
+|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři pro tento obrazec.|\<none>|
+|Text tipu s pevným nástrojem|Text, který se používá pro pevný popis.|\<none>|
+|Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento tvar.|\<none>|
 
 ## <a name="see-also"></a>Viz také:
 
