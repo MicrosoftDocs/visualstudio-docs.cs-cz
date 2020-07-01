@@ -10,4 +10,4 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68147099"
 ---
-Nezabezpečené deserializers jsou zranitelné při deserializaci nedůvěryhodná data. Útočník může změnit serializovaná data, aby mohly zahrnout typy neočekávané vkládat objekty se zlými úmysly vedlejší účinky. Útok na nezabezpečené deserializátor může, například spuštění příkazů na příslušný operační systém, komunikují přes síť a odstraňovat soubory.
+Nezabezpečené deserializace jsou zranitelné při deserializaci nedůvěryhodných dat. Útočník by mohl upravit Serializovaná data tak, aby zahrnovala neočekávané typy pro vložení objektů se škodlivými vedlejšími účinky. Útok proti nezabezpečenému odserializaci může například provádět příkazy v podkladovém operačním systému, komunikovat přes síť nebo odstraňovat soubory.

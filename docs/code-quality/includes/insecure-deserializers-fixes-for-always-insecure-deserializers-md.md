@@ -10,11 +10,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68147114"
 ---
-- Pokud je to možné, použijte zabezpečené serializátor, a **Nepovolit útočníkovi zadat libovolný typ k deserializaci**. Některé bezpečnější serializátory patří:
+- Pokud je to možné, použijte místo toho zabezpečený serializátor a **nepovolujte útočníkovi zadání libovolného typu k deserializaci**. Mezi bezpečnější serializátory patří:
   - <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>
   - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>
-  - <xref:System.Web.Script.Serialization.JavaScriptSerializer?displayProperty=nameWithType> -Nikdy nepoužívejte <xref:System.Web.Script.Serialization.SimpleTypeResolver?displayProperty=nameWithType>. Pokud je nutné použít typ překladače, omezení deserializovaný typy k očekávaným seznamem.
+  - <xref:System.Web.Script.Serialization.JavaScriptSerializer?displayProperty=nameWithType>– Nikdy nepoužívejte <xref:System.Web.Script.Serialization.SimpleTypeResolver?displayProperty=nameWithType> . Pokud je nutné použít překladač typů, omezte deserializovatelné typy na očekávaný seznam.
   - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-  - Newtonsoft Json.NET - TypeNameHandling.None použití. Pokud musíte použít jinou hodnotu pro TypeNameHandling, omezte na očekávaným seznamem s vlastní ISerializationBinder deserializovaný typy.
-  - Protocol Buffers
-- Ujistěte se, manipulací serializovaná data. Po serializaci podepište kryptograficky serializovaná data. Před deserializace ověřte kryptografický podpis. Chraňte kryptografické klíče z je zveřejněn a návrh pro rotace klíčů.
+  - Newtonsoft Json.NET – použijte TypeNameHandling. None. Pokud je nutné použít jinou hodnotu pro TypeNameHandling, omezte deserializovatelné typy na očekávaný seznam pomocí vlastního ISerializationBinder.
+  - Vyrovnávací paměti protokolů
+- Proveďte serializovanou manipulaci s daty. Po serializaci kryptograficky podepisují Serializovaná data. Před deserializací ověřte kryptografický podpis. Chránit kryptografický klíč před zveřejněním a návrhem pro střídání klíčů.
