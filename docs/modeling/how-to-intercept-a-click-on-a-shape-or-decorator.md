@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Zachycení kliknutí na obrazec či dekorátor'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: JoshuaPartlow
@@ -9,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4923a858d9d46c477f50df2a08440a10e9309ef
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 58d447526d83fec406b6fc20a08edcec37de89ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114521"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532519"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Postupy: Zachycení kliknutí na obrazec či dekorátor
 Následující postupy ukazují, jak zachytit kliknutí na tvar nebo ikonu dekoratér. Můžete zachytit kliknutím, dvojitým kliknutím, přetažením a dalším gestům a nastavit prvek jako odpověď.
 
 ## <a name="to-intercept-clicks-on-shapes"></a>Zachycení kliknutí na obrazce
- V projektu DSL v souboru kódu, který je oddělen od generovaných souborů kódu, zapište částečnou definici třídy pro třídu Shape. Přepište `OnDoubleClick()` nebo jednu jinou metodu, která má název začínající na `On...`. Příklad:
+ V projektu DSL v souboru kódu, který je oddělen od generovaných souborů kódu, zapište částečnou definici třídy pro třídu Shape. Přepište `OnDoubleClick()` nebo jednu z dalších metod, které mají název začínající na `On...` . Příklad:
 
 ```csharp
 public partial class MyShape // change
@@ -34,10 +34,10 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> Nastavte `e.Handled` na `true`, pokud nechcete, aby byla událost předána k nadřazenému obrazci nebo diagramu.
+> Nastavte `e.Handled` na `true` , pokud nechcete, aby byla událost předána nadřazenému obrazci nebo diagramu.
 
 ## <a name="to-intercept-clicks-on-decorators"></a>Zachycení kliknutí na dekoratéry
- Image dekoratéry se přenesou na instanci třídy ImageField, která má metodu-DoubleClick. Můžete zachytit kliknutím, pokud píšete podtřídu ImageField. Pole jsou nastavena v metodě InitializeShapeFields. Proto je nutné změnit tuto metodu pro vytvoření instance podtřídy namísto normálního ImageField. Metoda InitializeShapeFields je ve vygenerovaném kódu třídy Shape. Můžete přepsat třídu Shape, pokud nastavíte vlastnost `Generates Double Derived`, jak je popsáno v následujícím postupu.
+ Image dekoratéry se přenesou na instanci třídy ImageField, která má metodu-DoubleClick. Můžete zachytit kliknutím, pokud píšete podtřídu ImageField. Pole jsou nastavena v metodě InitializeShapeFields. Proto je nutné změnit tuto metodu pro vytvoření instance podtřídy namísto normálního ImageField. Metoda InitializeShapeFields je ve vygenerovaném kódu třídy Shape. Můžete přepsat třídu Shape, pokud nastavíte její `Generates Double Derived` vlastnost, jak je popsáno v následujícím postupu.
 
  I když InitializeShapeFields je metoda instance, je volána pouze jednou pro každou třídu. Proto pro každé pole v každé třídě existuje pouze jedna instance ClickableImageField, nikoli jedna instance pro každý prvek v diagramu. Když uživatel dvakrát klikne na instanci, je nutné určit, která instance byla vybrána, jak kód v příkladu ukazuje.
 
@@ -47,7 +47,7 @@ public partial class MyShape // change
 
 2. Vyberte nebo vytvořte obrazec s ikonou dekoratér a namapujte ho na doménovou třídu.
 
-3. V souboru kódu, který je oddělen od souborů ve složce `GeneratedCode`, vytvořte novou podtřídu třídy ImageField:
+3. V souboru kódu, který je oddělen od souborů ve `GeneratedCode` složce, vytvořte novou podtřídu třídy ImageField:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -129,11 +129,11 @@ public partial class MyShape // change
 
 4. Upravte názvy tříd domény a tvarů v tomto kódu tak, aby odpovídaly vaší vlastní DSL.
 
-   V souhrnu kód funguje následujícím způsobem. V tomto příkladu je `ClassShape` název obrazce oddílu.
+   V souhrnu kód funguje následujícím způsobem. V tomto příkladu `ClassShape` je název obrazce oddílu.
 
 - Sada obslužných rutin událostí myši je při vytvoření přiřazena ke každé instanci oddílu.
 
-- Událost `ClassShape.MouseDown` ukládá aktuální položku.
+- `ClassShape.MouseDown`Událost uchovává aktuální položku.
 
 - Když se ukazatel myši přesune mimo aktuální položku, vytvoří se instance MouseAction, která nastaví kurzor a zachytí ukazatel myši, dokud se neuvolní.
 

@@ -1,18 +1,18 @@
 ---
 title: 'Postupy: Otevření modelu ze souboru v kódu programu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594614"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532480"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Postupy: Otevření modelu ze souboru v kódu programu
 
@@ -39,9 +39,9 @@ Přidejte tyto odkazy do projektu aplikace Visual Studio:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - Pokud to nevidíte na kartě **.NET** v dialogovém okně **Přidat odkazy** , klikněte na kartu **Procházet** a přejděte na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
+  - Pokud to nevidíte na kartě **.NET** v dialogovém okně **Přidat odkazy** , klikněte na kartu **Procházet** a přejděte na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject*`.Dsl.dll`.
+- Vaše sestavení DSL, které se nachází ve složce Bin vašeho projektu DSL. Jeho název má obvykle tvar: *yourcompany*. *YourProject* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>Důležité třídy v DSL
 
@@ -49,11 +49,11 @@ Předtím, než budete moct napsat kód, který čte vaši DSL, byste měli zná
 
 Jsou to třídy, které byste měli identifikovat:
 
-- *YourDslRootClass* – jedná se o název kořenové třídy v `DslDefinition.dsl`.
+- *YourDslRootClass* – jedná se o název kořenové třídy v `DslDefinition.dsl` .
 
-- *YourDslName* `SerializationHelper` – Tato třída je definována v `SerializationHelper.cs` v projektu DSL.
+- *YourDslName* `SerializationHelper` – Tato třída je definována v `SerializationHelper.cs` projektu DSL.
 
-- *YourDslName* `DomainModel` – Tato třída je definována v `DomainModel.cs` v projektu DSL.
+- *YourDslName* `DomainModel` – Tato třída je definována v `DomainModel.cs` projektu DSL.
 
 ## <a name="read-from-a-file"></a>Čtení ze souboru
 

@@ -1,30 +1,30 @@
 ---
 title: 'Postupy: Migrace jazyka specifického pro doménu na novou verzi'
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6be4a8205935d131d880923e721e342ea904134d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8bdaea1267d0bf69078aec5739291e72db8dfda
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747544"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532608"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Postupy: Migrace jazyka specifického pro doménu na novou verzi
-Můžete migrovat projekty, které definují a používají jazyk specifický pro doménu [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] z verze [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], která byla distribuována s [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)].
+Můžete migrovat projekty, které definují a využívají jazyk specifický pro doménu, [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] z verze nástroje [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , která byla distribuována pomocí nástroje [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] .
 
- K dispozici je nástroj pro migraci, který je součástí [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]. Nástroj převede projekty a řešení sady Visual Studio, které používají nebo definují nástroje DSL.
+ K dispozici je nástroj pro migraci, který je součástí nástroje [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] . Nástroj převede projekty a řešení sady Visual Studio, které používají nebo definují nástroje DSL.
 
  Nástroj pro migraci musíte spustit explicitně: při otevření řešení v aplikaci Visual Studio se nespustí automaticky. Nástroj a podrobný dokument s pokyny najdete v této cestě:
 
  **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>Před migrací projektů DSL
- Nástroj pro migraci upraví soubory projektu sady Visual Studio ( **. csproj**) a soubory řešení ( **. sln**).
+ Nástroj pro migraci upraví soubory projektu sady Visual Studio (**. csproj**) a soubory řešení (**. sln**).
 
 #### <a name="to-prepare-projects-for-migration"></a>Příprava projektů pro migraci.
 
@@ -57,11 +57,11 @@ Můžete migrovat projekty, které definují a používají jazyk specifický pr
 
 4. Převeďte projekty.
 
-   1. Klikněte na tlačítko **převést**.
+   1. Klikněte na tlačítko **Převést**.
 
-        Před převodem každého souboru projektu se uloží kopie _Project_ **. csproj** jako _Project_ **. vs2008. csproj.**
+        Před převodem každého souboru projektu se uloží kopie _Project_**. csproj** jako _Project_**. vs2008. csproj.**
 
-        Kopii každého _řešení_ **. sln** se uloží jako _Solution_ **. vs2008. sln.**
+        Kopii každého _řešení_**. sln** se uloží jako _Solution_**. vs2008. sln.**
 
    2. Prozkoumejte všechny neúspěšné převody, které se nahlásily.
 

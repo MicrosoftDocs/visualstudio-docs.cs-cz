@@ -1,25 +1,25 @@
 ---
 title: Příkaz Upravit standardní nabídku v DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae2aa04eb415ee5c4b7aaa41ea4c6abb49333f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605254"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532493"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Postupy: Úprava příkazu standardní nabídky v jazyce specifickém pro doménu
 
-Můžete upravit chování některých standardních příkazů, které jsou v DSL definovány automaticky. Můžete například upravit **Vyjmout** , aby vyloučil citlivé informace. Chcete-li to provést, přepište metody ve třídě sady příkazů. Tyto třídy jsou definovány v souboru CommandSet.cs v projektu DslPackage a jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>.
+Můžete upravit chování některých standardních příkazů, které jsou v DSL definovány automaticky. Můžete například upravit **Vyjmout** , aby vyloučil citlivé informace. Chcete-li to provést, přepište metody ve třídě sady příkazů. Tyto třídy jsou definovány v souboru CommandSet.cs v projektu DslPackage a jsou odvozeny z <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
 > [!NOTE]
 > Chcete-li vytvořit vlastní příkazy nabídky, přečtěte si téma [Postupy: Přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
@@ -28,11 +28,11 @@ Můžete upravit chování některých standardních příkazů, které jsou v D
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>Zjištění příkazů, které lze upravit
 
-1. V projektu `DslPackage` otevřete `GeneratedCode\CommandSet.cs`. Tento C# soubor najdete v Průzkumník řešení jako dceřinou společnost `CommandSet.tt`.
+1. V `DslPackage` projektu otevřete `GeneratedCode\CommandSet.cs` . Tento soubor v jazyce C# lze najít v Průzkumník řešení jako dceřiné společnosti `CommandSet.tt` .
 
-2. Najde v tomto souboru třídy, jejichž názvy končí řetězcem "`CommandSet`", například `Language1CommandSet` a `Language1ClipboardCommandSet`.
+2. Najde třídy v tomto souboru, jejichž názvy končí znakem " `CommandSet` ", například `Language1CommandSet` a `Language1ClipboardCommandSet` .
 
-3. Do každé třídy sady příkazů zadejte "`override`" následovaný mezerou. IntelliSense zobrazí seznam metod, které lze přepsat. Každý příkaz má dvojici metod, jejichž názvy začínají na "`ProcessOnStatus`" a "`ProcessOnMenu`".
+3. Do každé třídy sady příkazů zadejte " `override` " následovaný mezerou. IntelliSense zobrazí seznam metod, které lze přepsat. Každý příkaz má dvojici metod, jejichž názvy začínají na " `ProcessOnStatus` " a " `ProcessOnMenu` ".
 
 4. Všimněte si, že třídy sady příkazů obsahují příkaz, který chcete upravit.
 
@@ -53,7 +53,7 @@ Vytvořte nový soubor, který obsahuje částečnou deklaraci třídy sady př�
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs`.
+2. V **DslPackage**vytvořte složku s názvem **vlastní kód**. V této složce vytvořte nový soubor třídy s názvem `CommandSet.cs` .
 
 3. V novém souboru zapište částečnou deklaraci, která má stejný obor názvů a název jako vygenerovaná částečná třída. Příklad:
 
@@ -70,7 +70,7 @@ Vytvořte nový soubor, který obsahuje částečnou deklaraci třídy sady př�
 
 ## <a name="override-the-command-methods"></a>Přepsat metody příkazu
 
-Většina příkazů má dvě přidružené metody: metoda s názvem, jako `ProcessOnStatus`... Určuje, zda má být příkaz viditelný a povolený. Je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram a měl by být proveden rychle a neprovádí se žádné změny. `ProcessOnMenu`... se volá, když uživatel klikne na příkaz a měla by provádět funkci příkazu. Je možné, že budete chtít přepsat jednu nebo obě z těchto metod.
+Většina příkazů má dvě přidružené metody: metoda s názvem jako `ProcessOnStatus` ... Určuje, zda má být příkaz viditelný a povolený. Je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram a měl by být proveden rychle a neprovádí se žádné změny. `ProcessOnMenu`... se volá, když uživatel klikne na příkaz a měla by provádět funkci příkazu. Je možné, že budete chtít přepsat jednu nebo obě z těchto metod.
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>Změna při zobrazení příkazu v nabídce
 
@@ -131,15 +131,15 @@ Následující fragmenty jsou často užitečné v rámci těchto metod:
 
 - `this.CurrentSelection`. Tvar, na který uživatel klikne pravým tlačítkem, je vždy zahrnut v tomto seznamu obrazců a konektorů. Pokud uživatel klikne na prázdnou část diagramu, diagram je jediným členem tohoto seznamu.
 
-- `this.IsDiagramSelected()`  -  `true`, pokud uživatel klikl na prázdnou část diagramu.
+- `this.IsDiagramSelected()` - `true`Pokud uživatel klikl na prázdnou část diagramu.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` – uživatel nevybrali více obrazců.
+- `this.IsSingleSelection()`– uživatel nevybrali více tvarů.
 
-- `this.SingleSelection` – tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
+- `this.SingleSelection`– tvar nebo diagram, na který uživatel klikne pravým tlačítkem myši
 
-- `shape.ModelElement as MyLanguageElement` – prvek modelu reprezentovaný tvarem.
+- `shape.ModelElement as MyLanguageElement`– prvek modelu reprezentovaný obrazcem.
 
 Další informace o tom, jak přejít z prvku na prvek a o tom, jak vytvořit objekty a odkazy, naleznete v tématu [navigace a aktualizace modelu v kódu programu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 

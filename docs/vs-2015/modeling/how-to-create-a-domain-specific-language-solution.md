@@ -15,26 +15,26 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e17171b79e06a273e9a9f4bb5032781963e8d818
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 227838334067d33c8a50c81d3a3c013c6baee356
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918826"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533078"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Postupy: Vytváření řešení jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
 
 ## <a name="prerequisites"></a>Požadavky
  Než budete moct tento postup spustit, musíte nejdřív nainstalovat tyto komponenty:
 
-|||
+|Produkt|Odkaz ke stažení|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
-|Sada Visual Studio Visualization and Modeling SDK|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
+|Sada SDK pro vizualizaci a modelování sady Visual Studio|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
 
@@ -44,18 +44,18 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 
    1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-   2. **Nový projekt** zobrazí se dialogové okno.
+   2. Zobrazí se dialogové okno **Nový projekt**.
 
    3. V části **typy projektů**rozbalte uzel **ostatní typy projektů** a klikněte na **rozšiřitelnost**.
 
    4. Klikněte na **Návrhář jazyka specifického pro doménu**.
 
-   5. Do pole **název** zadejte název řešení. Klikněte na tlačítko **OK**.
+   5. Do pole **název** zadejte název řešení. Klikněte na **OK**.
 
        Zobrazí se **Průvodce návrháře jazyka specifického pro doménu** .
 
       > [!NOTE]
-      > Název, který zadáte, by měl být platným vizuálním C# identifikátorem, protože je možné ho použít ke generování kódu.
+      > Název, který zadáte, by měl být platným identifikátorem jazyka Visual C#, protože může být použit pro generování kódu.
 
       ![Dialog vytvořit DSL](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
@@ -67,9 +67,9 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 
 3. Na stránce **Přípona souboru** zadejte příponu filename. Měl by být jedinečný v počítači a na všech počítačích, na které chcete nainstalovat DSL. Měla by se zobrazit zpráva **žádné aplikace ani editory sady Visual Studio nepoužívají toto rozšíření**.
 
-   - Pokud jste v předchozích experimentálních DSL použili příponu názvu souboru, která nebyla plně nainstalovaná, můžete je vymazat pomocí nástroje pro **obnovení experimentální instance** , který najdete v nabídce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK.
+   - Pokud jste v předchozích experimentálních DSL použili příponu názvu souboru, která nebyla plně nainstalovaná, můžete je vymazat pomocí nástroje pro **obnovení experimentální instance** , který lze najít v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nabídce SDK.
 
-   - Pokud je v počítači plně nainstalovaná jiná přípona [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], která tuto příponu souboru používá, zvažte její odinstalaci. V nabídce **nástroje** klikněte na **Správce rozšíření**.
+   - Pokud [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je v počítači plně nainstalovaná jiná přípona této přípony souboru, zvažte její odinstalaci. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
 4. Zkontrolujte a v případě potřeby upravte pole na zbývajících stránkách průvodce. Až budete s nastavením spokojeni, klikněte na **Dokončit**. Další informace o nastaveních najdete na [stránce průvodce návrháře DSL](#settings).
 
@@ -78,7 +78,7 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
    > [!NOTE]
    > Pokud se zobrazí zpráva upozorňující, že nespouštíte textové šablony z nedůvěryhodných zdrojů, klikněte na tlačítko **OK**. Tuto zprávu můžete nastavit tak, aby se nezobrazovala znovu.
 
-## <a name="settings"></a>Stránky průvodce návrháře DSL
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>Stránky průvodce návrháře DSL
  Z jejich výchozích hodnot můžete nechat některá z těchto polí beze změny. Ujistěte se však, že jste nastavili pole Přípona souboru.
 
 ### <a name="solution-settings-page"></a>Stránka nastavení řešení
@@ -86,7 +86,7 @@ Jazyk specifický pro doménu (DSL) se vytvoří pomocí specializovaného řeš
 Vyberte šablonu, která je podobná DSL, kterou chcete vytvořit. Různé šablony poskytují pohodlný počáteční bod. Když vyberete šablonu řešení, Průvodce zobrazí popis. Další informace o šablonách řešení najdete v tématu [Výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Jak chcete pojmenovat jazyk specifický pro doménu?**
-Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název C# třídy.
+Ve výchozím nastavení se jedná o název řešení. Z této hodnoty je vygenerován kód. Musí být platný jako název třídy jazyka C#.
 
 ### <a name="file-extension-page"></a>Stránka s příponou souboru
  **Jakou příponu mají soubory modelu používat?**
@@ -100,13 +100,13 @@ Zadejte novou příponu souboru.
 
 - Zadejte jinou příponu souboru.
 
-     \- nebo –
+     \-ani
 
-- Obnovte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instance. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
+- Resetovat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] experimentální instanci. Tím zrušíte registraci všech dříve vytvořených DSL. V nabídce **Start** klikněte na **všechny programy**, **Microsoft Visual Studio 2010 SDK**, **nástroje**a pak **na experimentální instanci Microsoft Visual Studio 2010 obnovte**. Můžete znovu sestavit jakýkoli jiný DSL, který chcete znovu použít.
 
-     \- nebo –
+     \-ani
 
-- Pokud je v počítači plně nainstalovaná přípona [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], která tuto příponu souboru používá, odinstalujte ji. V nabídce **nástroje** klikněte na **Správce rozšíření**.
+- Pokud je [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření, které tuto příponu souboru používá, v počítači plně nainstalované, odinstalujte ho. V nabídce **nástroje** klikněte na **Správce rozšíření**.
 
 ### <a name="product-settings-page"></a>Stránka nastavení produktu
  **Jaký je název produktu, ke kterému patří nový jazyk specifický pro doménu?**

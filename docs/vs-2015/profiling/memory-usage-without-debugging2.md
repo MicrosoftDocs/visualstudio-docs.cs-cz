@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 64f739039d17af7fbee9718da93e8610e2619a85
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: ce7d30b66106b8d0d861fcf782a77ee7f461196b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586944"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532038"
 ---
 # <a name="memory-usage-without-debugging"></a>Využití paměti bez ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +79,7 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
   
   Číslované položky na obrázku zobrazení snímku jsou odkazy, které zobrazují zobrazení sestavy využití paměti.  
   
-|||  
+|Image|Popis|  
 |-|-|  
 |![Krok 1](../profiling/media/procguid-1.png "ProcGuid_1")|Text odkazu zobrazuje celkový počet bajtů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle celkové velikosti instancí typu.|  
 |![Krok 2](../profiling/media/procguid-2.png "ProcGuid_2")|Text odkazu zobrazuje celkový počet objektů v paměti při pořízení snímku.<br /><br /> Kliknutím na tento odkaz zobrazíte sestavu s podrobnostmi o snímku, která je seřazená podle počtu instancí typů.|  
@@ -135,7 +135,7 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
   
  ![Spravovaný strom haldy](../profiling/media/memuse-snapshotdetails-managedheaptree.png "MEMUSE__SnapshotDetails_ManagedHeapTree")  
   
-|||  
+|Name|Popis|  
 |-|-|  
 |**Typ objektu**|Název typu nebo instance objektu.|  
 |**Výpočtu**|Počet instancí objektu typu. Číslo je vždy 1 pro instanci.|  
@@ -154,7 +154,7 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
   
  ![Odkazovaný Objjects strom pro instance](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Name|Popis|  
 |-|-|  
 |**Typ nebo instance objektu**|Název typu nebo instance objektu.|  
 |**Velikost (v bajtech)**|Pro typ je velikost všech instancí typu bez velikosti objektů obsažených v typu.<br /><br /> V případě instance velikost objektu s výjimkou velikosti objektů obsažených v objektu.|  
@@ -176,7 +176,7 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
   
  Všimněte si, že sloupce **počet**, **Velikost (bajty)** a **Celková velikost (bajty)** byly na obrázku sbaleny.  
   
-|||  
+|Name|Popis|  
 |-|-|  
 |**Typ objektu**|Název typu nebo instance objektu.|  
 |**Výpočtu**|Počet instancí typu v primárním snímku. **Počet** je vždy 1 pro instanci.|  
@@ -196,7 +196,7 @@ Nástroj **využití paměti** bez ladění můžete použít k následujícím 
   
  ![Odkazovaný Objjects strom pro instance](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Name|Popis|  
 |-|-|  
 |**Typ nebo instance objektu**|Název typu nebo instance objektu.|  
 |**Velikost (v bajtech)**|V případě instance je velikost objektu v primárním snímku bez velikosti objektů obsažených v instanci.<br /><br /> Pro typ je celková velikost instancí typu v primárním snímku bez velikosti objektů obsažených v instanci.|  

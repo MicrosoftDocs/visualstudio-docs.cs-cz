@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Vytvoření vlastního hostitele textových šablon'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593535"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532220"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>Návod: Vytvoření vlastního hostitele textových šablon
 
@@ -51,7 +51,7 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
 
 2. Přidejte odkazy na následující sestavení:
 
-   - **Microsoft.VisualStudio.TextTemplating.\*.0**
+   - **Microsoft. VisualStudio. TextTemplating. \* . 0,8**
 
    - **Microsoft. VisualStudio. TextTemplating. Interfaces. 10.0 a novějších verzí**
 
@@ -714,11 +714,11 @@ V tomto návodu vytvoříte vlastního hostitele ve spustitelné aplikaci, kter
    End Namespace
    ```
 
-4. Pouze pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
+4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Pouze pro otevřete nabídku **projekt** a klikněte na příkaz **vlastnosti CustomHost**. V seznamu **spouštěcí objekt** klikněte na **CustomHost. program**.
 
-5. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše**.
+5. V nabídce **soubor** klikněte na **Uložit vše**.
 
-6. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+6. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
 ## <a name="test-the-custom-host"></a>Test vlastního hostitele
 
@@ -726,7 +726,7 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
 ### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Vytvoření textové šablony pro testování vlastního hostitele
 
-1. Vytvořte textový soubor a pojmenujte ho `TestTemplate.tt`.
+1. Vytvořte textový soubor a pojmenujte ho `TestTemplate.tt` .
 
      K vytvoření souboru lze použít libovolný textový editor (například Poznámkový blok).
 
@@ -773,7 +773,7 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
 
     ```
 
-3. Soubor uložte a zavřete.
+3. Uložte soubor a zavřete ho.
 
 ### <a name="to-test-the-custom-host"></a>Testování vlastního hostitele
 
@@ -786,7 +786,7 @@ Při testování vlastního hostitele napíšete textovou šablonu, spustíte vl
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > Místo zadání adresy můžete v **Průzkumníkovi Windows** vyhledat soubor CustomHost. exe a pak ho přetáhnout do okna příkazového řádku.
+    > Místo zadání adresy můžete v **Průzkumníkovi Windows** přejít na soubor CustomHost.exe a pak ho přetáhnout do okna příkazového řádku.
 
 3. Zadejte mezeru.
 

@@ -56,7 +56,7 @@ V tomto tématu:
 
  kde *ElementType* je typ prvku modelu, například `IClass` nebo `IUseCase` .
 
-|Syntax|Popis|
+|Syntaxe|Popis|
 |-|-|
 |`anElement.Shapes ()`|Všechny `IShapes` , které představují tento prvek v otevřených diagramech.|
 |`anElement.Shapes(aDiagram)`|Všechny `IShapes` , které reprezentují tento prvek na konkrétním diagramu.|
@@ -70,7 +70,7 @@ V tomto tématu:
 
 ## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a>Přesun a změna velikosti tvarů
 
-|Syntax|Popis|
+|Syntaxe|Popis|
 |-|-|
 |`anIShape.Move(x, y, [width], [height])`|Přesune nebo změní velikost obrazce.|
 |`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|Aktivujte okno a posuňte diagram tak, aby byly všechny dané obrazce viditelné. Všechny obrazce musí být v diagramu. Pokud `zoomToFit` má hodnotu true, diagram bude v případě potřeby upravený tak, aby všechny obrazce byly viditelné.|

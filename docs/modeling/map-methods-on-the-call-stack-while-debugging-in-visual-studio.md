@@ -200,7 +200,7 @@ Vytvořte mapu kódu pro vizuální trasování zásobníku volání při laděn
 
 - [Najít chyby pomocí mapy](#FindBugs)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 - [Použití map kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md)

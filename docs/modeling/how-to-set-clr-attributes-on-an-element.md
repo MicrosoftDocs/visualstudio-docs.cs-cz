@@ -1,45 +1,45 @@
 ---
 title: 'Postupy: Nastavování atributů CLR v elementu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.EditAttributesDialog
 helpviewer_keywords:
 - Domain-Specific Language, custom attrributes
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f943f9713e4432f0b06242a2f66acae6b390e5cc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebda963bf1afa55fa8d7f98774c72a75d242ceef
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748370"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532454"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>Postupy: Nastavování atributů CLR v elementu
-Vlastní atributy jsou speciální atributy, které lze přidat do doménových prvků, tvarů, spojnic a diagramů. Můžete přidat libovolný atribut, který dědí z třídy `System.Attribute`.
+Vlastní atributy jsou speciální atributy, které lze přidat do doménových prvků, tvarů, spojnic a diagramů. Můžete přidat libovolný atribut, který dědí z `System.Attribute` třídy.
 
 ### <a name="to-add-a-custom-attribute"></a>Přidání vlastního atributu
 
 1. V **Průzkumníku DSL**vyberte prvek, ke kterému chcete přidat vlastní atribut.
 
-2. V okně **vlastnosti** vedle vlastnosti **vlastní atributy** klikněte na ikonu Procházet ( **...** ).
+2. V okně **vlastnosti** vedle vlastnosti **vlastní atributy** klikněte na ikonu Procházet (**...**).
 
      Otevře se dialogové okno **Upravit atributy** .
 
-3. Ve sloupci **název** klikněte na **\<add atributu >** a zadejte název atributu. Stiskněte klávesu ENTER.
+3. Ve sloupci **název** klikněte na **\<add attribute>** a zadejte název svého atributu. Stiskněte ENTER.
 
-4. Řádek pod názvem atributu obsahuje závorky. Na tomto řádku zadejte typ parametru pro atribut (například `string`) a potom stiskněte klávesu ENTER.
+4. Řádek pod názvem atributu obsahuje závorky. Na tomto řádku zadejte typ parametru pro atribut (například `string` ) a potom stiskněte klávesu ENTER.
 
-5. Do sloupce **vlastnost název** zadejte vhodný název, například `MyString`.
+5. Do sloupce **vlastnost název** zadejte vhodný název, například `MyString` .
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
      Vlastnost **Custom Attributes** nyní zobrazuje atribut v následujícím formátu:
 
-     `[` *AttributeName* `(` *ParameterName* `=` *typ* `)]`
+     `[`*AttributeName* `(` *ParameterName* `=` *Typ*`)]`
 
 ## <a name="see-also"></a>Viz také:
 

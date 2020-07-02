@@ -1,7 +1,7 @@
 ---
 title: Mapy kódu
 ms.date: 05/16/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.progression.codemap
 - vs.progression.standardgraphsdialog
@@ -16,12 +16,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6e4efbc0cf950781c84eadf974ea87943d9828c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 771a6ccf4749a3464204d3da75f4d403d1ab2dd5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594575"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532714"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Mapování závislostí pomocí map kódu
 
@@ -36,20 +36,20 @@ Chcete-li vytvářet a upravovat mapy kódu, potřebujete Visual Studio Enterpri
 
 Závislosti pro kód můžete mapovat v těchto jazycích:
 
-- Vizuální C# nebo Visual Basic v řešení nebo sestaveních ( *. dll* nebo *. exe*)
+- Visual C# nebo Visual Basic v řešení nebo sestaveních (*. dll* nebo *. exe*)
 
-- Nativní nebo spravovaný jazyk C C++ nebo kód ve C++ vizuálních projektech, hlavičkové soubory ( *. h* nebo `#include`) nebo binární soubory
+- Nativní nebo spravovaný kód jazyka C nebo C++ v Visual C++ projekty, soubory hlaviček (*. h* nebo `#include` ) nebo binární soubory
 
 - Projekty X + + a sestavení vytvořená z modulů .NET pro Microsoft Dynamics AX
 
 > [!NOTE]
-> Pro jiné projekty než C# nebo Visual Basic je k dispozici méně možností pro spuštění mapy kódu nebo přidávání položek do existující mapy kódu. Například nelze kliknout pravým tlačítkem myši na objekt v textovém editoru C++ projektu a přidat jej do mapy kódu. Jednotlivé prvky nebo soubory kódu však lze přetáhnout z **Průzkumník řešení**, **zobrazení tříd**a **Prohlížeč objektů**.
+> Pro jiné projekty než C# nebo Visual Basic je k dispozici méně možností pro spuštění mapy kódu nebo přidávání položek do existující mapy kódu. Například nelze kliknout pravým tlačítkem myši na objekt v textovém editoru projektu jazyka C++ a přidat jej do mapy kódu. Jednotlivé prvky nebo soubory kódu však lze přetáhnout z **Průzkumník řešení**, **zobrazení tříd**a **Prohlížeč objektů**.
 
 ## <a name="install-code-map-and-live-dependency-validation"></a>Instalovat mapu kódu a ověřování živých závislostí
 
 Chcete-li vytvořit mapu kódu v aplikaci Visual Studio, nejprve nainstalujte **mapu kódu** a komponenty **ověřování živé závislosti** :
 
-1. Otevřete **instalační program pro Visual Studio**. Můžete ji otevřít z nabídky Start systému Windows nebo v sadě Visual Studio tak, že vyberete **nástroje** > **získat nástroje a funkce**.
+1. Otevřete **instalační program pro Visual Studio**. Můžete ji otevřít z nabídky Start v systému Windows nebo v sadě Visual Studio tak, že vyberete **nástroje**  >  **získat nástroje a funkce**.
 
 1. Vyberte kartu **jednotlivé součásti** .
 
@@ -67,7 +67,7 @@ Můžete vytvořit prázdnou mapu kódu a přetáhnout položky do ní, včetně
 
 Přidání prázdné mapy kódu:
 
-1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení nejvyšší úrovně. Vyberte možnost **přidat** > **novou položku**.
+1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení nejvyšší úrovně. Vyberte možnost **Přidat**  >  **novou položku**.
 
 2. V dialogovém okně **Přidat novou položku** vyberte v části **nainstalováno**kategorii **Obecné** .
 
@@ -78,13 +78,13 @@ Přidání prázdné mapy kódu:
 
    Ve složce **položky řešení** vašeho řešení se zobrazí prázdná mapa.
 
-Podobně můžete vytvořit nový soubor s mapou kódu bez jeho přidání do řešení, a to tak, že vyberete **architekturu** > **novou mapu kódu** nebo **soubor** > **Nový** > **soubor**.
+Podobně můžete vytvořit nový soubor s mapou kódu, aniž byste ho přidali do vašeho řešení, a to tak, že vyberete **Architektura**  >  **Nová mapa kódu** nebo **soubor**  >  **Nový**  >  **soubor**.
 
 ## <a name="generate-a-code-map-for-your-solution"></a>Generovat mapu kódu pro vaše řešení
 
 Chcete-li zobrazit všechny závislosti ve vašem řešení:
 
-1. Na panelu nabídek vyberte možnost **architektura** > **Generovat mapu kódu pro řešení**. Pokud se váš kód od posledního sestavení nezměnil, můžete vybrat **architekturu** > **Generovat mapu kódu pro řešení bez nutnosti sestavování** .
+1. Na panelu nabídek vyberte možnost **Architektura**  >  **Generovat mapu kódu pro řešení**. Pokud se váš kód od posledního sestavení nezměnil, můžete vybrat **architekturu**  >  **Generovat mapu kódu pro řešení bez nutnosti vytvářet** místo.
 
    ![Vytvoření mapy kódu – příkaz](../modeling/media/codemapsarchitecturemenu.png)
 
@@ -162,7 +162,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
    ![Vyberte položky, které chcete namapovat.](../modeling/media/codemapsselectinsolutionexplorer.png)
 
-1. Na panelu nástrojů **Průzkumník řešení** vyberte možnost **Zobrazit na mapě kódu** ![tlačítko vytvořit nový graf z vybraných uzlů](../modeling/media/createnewgraphfromselectedbutton.gif). Případně můžete otevřít místní nabídku pro jednu nebo skupinu položek a zvolit **Zobrazit na mapě kódu**.
+1. Na panelu nástrojů **Průzkumník řešení** klikněte na tlačítko **Zobrazit na mapě kódu** ![ vytvořit nový graf z vybraných uzlů ](../modeling/media/createnewgraphfromselectedbutton.gif) . Případně můžete otevřít místní nabídku pro jednu nebo skupinu položek a zvolit **Zobrazit na mapě kódu**.
 
    Můžete také přetáhnout položky z **Průzkumník řešení**, **zobrazení tříd**nebo **Prohlížeč objektů**do [nové](#add-a-code-map) nebo existující mapy kódu. Chcete-li zahrnout nadřazenou hierarchii pro vaše položky, stiskněte a podržte klávesu **CTRL** při přetahování položek nebo použijte tlačítko **Zahrnout nadřazené** položky na panelu nástrojů mapa kódu a určete výchozí akci. Soubory sestavení můžete také přetáhnout mimo aplikaci Visual Studio, například z **Průzkumníka Windows**.
 
@@ -177,19 +177,19 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
    ![Rozbalení uzlu v mapě kódu](../modeling/media/dependencygraph_containment.png)
 
-   Chcete-li rozbalit všechny položky, vyberte je pomocí **kombinace kláves Ctrl**+**a**, otevřete místní nabídku pro mapu a zvolte možnost **Skupina** > **rozbalte**. Tato možnost není k dispozici, pokud rozšíření všech skupin vytvoří nepoužitou mapu nebo problémy s pamětí.
+   Chcete-li rozbalit všechny položky, vyberte je pomocí **kombinace kláves CTRL** + **a**, pak otevřete místní nabídku pro mapu a zvolte možnost **Skupina**  >  **Rozbalit**. Tato možnost není k dispozici, pokud rozšíření všech skupin vytvoří nepoužitou mapu nebo problémy s pamětí.
 
 5. V případě potřeby dál Rozšiřte položky, které vás zajímají, na úrovni třídy a člena.
 
    ![Rozbalení skupin na úrovni třídy a člena](../modeling/media/codemapsexpandtoclassandmember.png)
 
-   Chcete-li zobrazit členy, kteří jsou v kódu, ale nezobrazují se na mapě, klikněte na ikonu znovu **načíst podřízené** ![v levém horním rohu skupiny](../modeling/media/dependencygraph_deletednodesicon.png) ikonu znovu načíst podřízenou položku.
+   Chcete-li zobrazit členy, kteří jsou v kódu, ale nezobrazují se na mapě, klikněte na ikonu znovu **načíst podřízené** položky ![ ](../modeling/media/dependencygraph_deletednodesicon.png) v levém horním rohu skupiny.
 
 6. Chcete-li zobrazit další položky týkající se těch na mapě, vyberte je a zvolte možnost **Zobrazit související** na panelu nástrojů mapa kódu a pak vyberte typ souvisejících položek, které chcete přidat do mapy. Případně vyberte jednu nebo více položek, otevřete místní nabídku a zvolte možnost **Zobrazit** pro typ souvisejících položek, které chcete přidat do mapy. Příklad:
 
     V případě **sestavení**vyberte:
 
-    |||
+    |Možnost|Popis|
     |-|-|
     |**Zobrazit sestavení s odkazy**|Přidejte sestavení, na které odkazuje toto sestavení. Externí sestavení se zobrazí ve skupině **externí** typy.|
     |**Zobrazit sestavení odkazující na tuto**|Přidejte sestavení do řešení, která odkazují na toto sestavení.|
@@ -198,7 +198,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
     Pro **třídu** nebo **rozhraní**vyberte:
 
-    |||
+    |Možnost|Popis|
     |-|-|
     |**Zobrazit základní typy**|V případě třídy přidejte základní třídu a implementovaná rozhraní.<br /><br /> V rámci rozhraní přidejte základní rozhraní.|
     |**Zobrazit odvozené typy**|V případě třídy přidejte odvozené třídy.<br /><br /> V rámci rozhraní přidejte odvozené rozhraní a implementaci tříd nebo struktur.|
@@ -211,7 +211,7 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
      Pro **metodu**vyberte:
 
-    |||
+    |Možnost|Popis|
     |-|-|
     |**Zobrazit metody tato volání**|Přidejte metody, které tato metoda volá.|
     |**Zobrazit pole s odkazy**|Přidejte pole, na která odkazuje tato metoda.|
@@ -221,14 +221,14 @@ Předpokládejme, že máte revizi kódu, který se má provést v některých s
 
      Pro **pole** nebo **vlastnost**vyberte:
 
-    |||
+    |Možnost|Popis|
     |-|-|
     |**Zobrazit obsahující typ**|Přidejte nadřazený typ.|
     |**Zobrazit obsahující typ, obor názvů a sestavení**|Přidejte hierarchii nadřazeného kontejneru.|
 
     ![Zobrazit metody volané tímto členem](../modeling/media/codemapsshowrelatedmethods.png)
 
-7. Mapa zobrazuje vztahy. V tomto příkladu Mapa zobrazuje metody volané metodou `Find` a jejich umístění v řešení nebo externě.
+7. Mapa zobrazuje vztahy. V tomto příkladu Mapa zobrazuje metody volané `Find` metodou a jejich umístění v řešení nebo externě.
 
    ![Zobrazit konkrétní závislosti na mapě kódu](../modeling/media/codemapsspecificdependenciesintro.png)
 

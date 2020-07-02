@@ -1,18 +1,18 @@
 ---
 title: 'Postupy: Rozšíření návrháře jazyka specifického pro doménu'
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa03e43276c7c995c5f494c5325dd79716dcf998
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605597"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532583"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Postupy: Rozšíření návrháře jazyka specifického pro doménu
 
@@ -68,7 +68,7 @@ Chcete-li otestovat jakékoli rozšíření v tomto tématu, sestavte a spusťte
 
 Chcete-li nasadit rozšíření do hlavní sady Visual Studio a do jiných počítačů, postupujte podle následujících kroků:
 
-1. Vyhledejte instalační soubor VSIX v projektu VSIX v přihrádce \\ * \\ \*. vsix
+1. V projektu VSIX v souboru bin \\ * \\ \* . vsix Najděte instalační soubor VSIX.
 
 2. Zkopírujte tento soubor do cílového počítače a potom v Průzkumníku Windows (nebo v Průzkumníku souborů) poklikejte na něj.
 
@@ -84,7 +84,7 @@ K odinstalaci rozšíření použijte následující postup:
 
 Chcete-li vytvořit příkaz místní nabídky na ploše návrháře DSL nebo v okně Průzkumníka DSL, napište třídu podobnou následující.
 
-Třída musí implementovat `ICommandExtension` a musí mít `DslDefinitionModelCommandExtension` atributu.
+Třída musí implementovat `ICommandExtension` a musí mít atribut `DslDefinitionModelCommandExtension` .
 
 ```csharp
 using System.Collections.Generic;

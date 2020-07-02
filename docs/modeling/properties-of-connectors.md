@@ -48,6 +48,6 @@ Konektory reprezentují doménové vztahy ve vygenerovaném návrháři.
 |Pevný text popisu|Text, který se používá pro pevný popis.|\<none>|
 |Klíčové slovo Help|Klíčové slovo, které se používá k indexování Nápověda F1 pro tento element.|\<none>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
