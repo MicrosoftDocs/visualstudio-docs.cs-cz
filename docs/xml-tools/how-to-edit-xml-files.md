@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: úprava souborů XML'
+title: 'Postupy: Úpravy souborů XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 216718627936ac7f519c1a6a28a30886e8ae9c27
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1ce3e41b2fe9dfdb080e23fb4270454bbd57f7ef
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817200"
 ---
 # <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
 
@@ -32,7 +32,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 3. Do pole **název** zadejte název souboru a stiskněte **Přidat**.
 
-   Soubor XML se přidá do projektu a otevře se v editoru XML. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8" ?>`.
+   Soubor XML se přidá do projektu a otevře se v editoru XML. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8" ?>` .
 
 ## <a name="add-an-existing-xml-file-to-a-project"></a>Přidat existující soubor XML do projektu
 
@@ -50,25 +50,25 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 2. Vyberte **soubor XML** , chcete-li vytvořit nový soubor XML; nebo vyberte **soubor XSLT** pro vytvoření nové šablony stylů XSLT.
 
-3. Klikněte na tlačítko **otevřít**.
+3. Klikněte na **Otevřít**.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>Vytvoření prázdného projektu pro soubory XML
 
 ::: moniker range="vs-2017"
 
-1. V nabídce **soubor** vyberte **Nový** > **projekt**.
+1. V nabídce **soubor** vyberte možnost **Nový** > **projekt**.
 
-   **Nový projekt** zobrazí se dialogové okno.
+   Zobrazí se dialogové okno **Nový projekt**.
 
 2. Vyberte jazyk kódu, který chcete zvolit, a pak vyberte šablonu **prázdného projektu (.NET Framework)** .
 
-3. Klikněte na tlačítko **OK**.
+3. Klikněte na **OK**.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. V nabídce **soubor** vyberte **Nový** > **projekt**.
+1. V nabídce **soubor** vyberte možnost **Nový** > **projekt**.
 
 2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak klikněte na **Další**.
 

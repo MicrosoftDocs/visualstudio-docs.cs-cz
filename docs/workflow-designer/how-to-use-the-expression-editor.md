@@ -1,7 +1,7 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití editoru výrazů'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ExpressionTextBox.UI
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
@@ -10,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aff5654214809cf2f57767005153ba557df487c1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 04c0fdaab87c88028b8c14ca59e93fa93e74be74
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817434"
 ---
-# <a name="how-to-use-the-expression-editor"></a>Postupy: použití editoru výrazů
+# <a name="how-to-use-the-expression-editor"></a>Postupy: Používání editoru výrazů
 
 Editor výrazů je Návrhář postupu provádění ovládací prvek, který se používá v mnoha aktivitách pracovního postupu pro zadávání a vyhodnocení výrazů. Editor výrazů poskytuje prostředí pro úpravu podrobnějším integrovaného vývojového prostředí (IDE), včetně IntelliSense, barev, ParamInfo, chybových vlnovek, mimo jiné funkce. Kompilátor po jeho zadání ověří výraz. Pokud je výraz neplatný, zobrazí se ikona chyby. Editor lze také otevřít jako dialogové okno **Editor výrazů** .
 
-Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (například proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby zadávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=" namísto "= ="), logické operátory jsou slova "a" a "nebo" namísto symbolů "& &" a "| |" a namísto **hodnoty null**se **nic** nepoužívá. Další informace o výrazech a operátorech v Visual Basic a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
+Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (například proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby zadávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí jazyka C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se (=) místo "= ="), logické operátory jsou slova "a" a "nebo" namísto symbolů "&&" a "| |" a namísto **hodnoty null**nejsou použity **žádné** údaje. Další informace o výrazech a operátorech v Visual Basic a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
 
 **Editor výrazů** se chová takto:
 
@@ -38,14 +38,14 @@ Výrazy jsou hodnoty literálu nebo Visual Basic kód vázaný na argumenty nebo
 
 1. V aplikaci Visual Studio otevřete nový nebo existující projekt pracovního postupu.
 
-2. Přidejte například aktivitu <xref:System.Activities.Statements.Assign> do pracovního postupu.
+2. Přidejte například <xref:System.Activities.Statements.Assign> aktivitu do pracovního postupu.
 
     > [!NOTE]
-    > Několik aktivit pracovního postupu má editory výrazů. Výraz TextBlocks se také zobrazí v Návrháři proměnných, v Návrháři argumentů a v Návrháři dynamického argumentu. Jako příklad se používá aktivita <xref:System.Activities.Statements.Assign>.
+    > Několik aktivit pracovního postupu má editory výrazů. Výraz TextBlocks se také zobrazí v Návrháři proměnných, v Návrháři argumentů a v Návrháři dynamického argumentu. <xref:System.Activities.Statements.Assign>Aktivita se používá jako příklad.
 
-3. Klikněte na levý Editor výrazů v Návrháři aktivit pro aktivitu <xref:System.Activities.Statements.Assign>.
+3. Klikněte na levý Editor výrazů v Návrháři aktivit pro <xref:System.Activities.Statements.Assign> aktivitu.
 
-     Šedé řetězce vodoznaku **\<do >** a **\<zadejte výraz VB >** jsou výchozí textové řetězce pro Editor výrazů v aktivitě <xref:System.Activities.Statements.Assign>.
+     Šedé řetězce vodoznaku **\<To>** a **\<Enter a VB Expression>** jsou výchozí textové řetězce pro Editor výrazů v <xref:System.Activities.Statements.Assign> aktivitě.
 
 4. Zadejte svůj výraz. Pokud zadáte řetězec, nezapomeňte kolem řetězce vložit uvozovky. Pokud se rozhodnete vytvořit vazbu argumentu výrazu na proměnnou, ponechte uvozovky vypnuté.
 

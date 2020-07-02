@@ -3,7 +3,7 @@ title: Délce pole musí být přiřazeno konečné kladné číslo | Microsoft 
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5030
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: c51c66a4-a543-4e95-b18d-2cfbcb3d1fdd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cff9c8c42199e106cca5f6f2808866e46a26afe2
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 30e02f4f90300e2c05076553419cda5f8c353ab0
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817681"
 ---
 # <a name="array-length-must-be-assigned-a-finite-positive-number"></a>Délce pole musí být přiřazeno konečné kladné číslo.
-Při nastavování vlastnosti **Length** existujícího objektu **Array** jste zadali délku pole, která nebyla kladné číslo nebo nula. K této chybě dojde, když přiřadíte hodnotu vlastnosti **Length** objektu `Array`, který je záporný nebo není číslo (`NaN`). Všimněte si, že [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] automaticky převádí zlomková čísla na celá čísla.  
+Při nastavování vlastnosti **Length** existujícího objektu **Array** jste zadali délku pole, která nebyla kladné číslo nebo nula. K této chybě dochází, pokud přiřadíte hodnotu vlastnosti **Length** `Array` objektu, který je záporný nebo není číslo ( `NaN` ). Všimněte si, že [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] automaticky převádí zlomková čísla na celá čísla.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   

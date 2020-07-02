@@ -1,9 +1,9 @@
 ---
-title: Souhrn operátorů (JavaScript) | Dokumentace Microsoftu
+title: Souhrn operátorů (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 dev_langs:
 - JavaScript
 - TypeScript
@@ -12,25 +12,25 @@ ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dadd47684978bf4be6c9029646d4b6041cb431ee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 995a286140464e58635bc485478bb570871f5e09
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816784"
 ---
 # <a name="operator-summary-javascript"></a>Souhrn operátorů (JavaScript)
-Následující tabulka uvádí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] operátory v jejich příslušných kategorií.  
+Následující tabulky uvádějí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] operátory v příslušných kategoriích.  
   
 ## <a name="computational-operators"></a>Výpočetní operátory  
   
 |Operátor|Symbol|  
 |--------------|------------|  
-|[Přidání](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
+|[Sčítání](../../javascript/reference/addition-operator-decrement-javascript.md)|+|  
 |[Snížení](../../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
-|[Dělení](../../javascript/reference/division-operator-decrement-javascript.md)|/|  
+|[Oddělení](../../javascript/reference/division-operator-decrement-javascript.md)|/|  
 |[Přírůstek](../../javascript/reference/increment-and-decrement-operators-javascript.md)|++|  
-|[Zbývající](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
+|[Zbytek](../../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
 |[Násobení](../../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
 |[Odčítání](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
 |[Unární negace](../../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
@@ -39,8 +39,8 @@ Následující tabulka uvádí [!INCLUDE[javascript](../../javascript/includes/j
   
 |Operátor|Symbol|  
 |--------------|------------|  
-|[Čárka](../../javascript/reference/comma-operator-decrement-javascript.md)|, |  
-|[Podmíněný (Ternary)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
+|[Čárka](../../javascript/reference/comma-operator-decrement-javascript.md)|,|  
+|[Podmíněný (Ternární)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|?:|  
 |[Rovnost](../../javascript/reference/comparison-operators-javascript.md)|==|  
 |[Větší než](../../javascript/reference/comparison-operators-javascript.md)|>|  
 |[Větší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|>=|  
@@ -49,8 +49,8 @@ Následující tabulka uvádí [!INCLUDE[javascript](../../javascript/includes/j
 |[Menší než](../../javascript/reference/comparison-operators-javascript.md)|<|  
 |[Menší než nebo rovno](../../javascript/reference/comparison-operators-javascript.md)|<=|  
 |[Logický operátor AND](../../javascript/reference/logical-and-operator-decrement-javascript.md)|&&|  
-|[Logický operátor NOT](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
-|[Logická nebo](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
+|[Logické NE](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|!|  
+|[Logický operátor OR](../../javascript/reference/logical-or-operator-decrement-javascript.md)|&#124;&#124;|  
 |[Neidentity](../../javascript/reference/comparison-operators-javascript.md)|!==|  
   
 ## <a name="bitwise-operators"></a>Bitové operátory  
@@ -58,12 +58,12 @@ Následující tabulka uvádí [!INCLUDE[javascript](../../javascript/includes/j
 |Operátor|Symbol|  
 |--------------|------------|  
 |[Bitový operátor AND](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|&|  
-|[Bitový Posun vlevo](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  
+|[Bitový posun doleva](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|<\<|  
 |[Bitový operátor NOT](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|~|  
-|[Bitový operátor nebo](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
-|[Bitového posunutí doprava](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
+|[Bitový operátor OR](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|&#124;|  
+|[Bitový posun doprava](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|>>|  
 |[Bitový operátor XOR](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|^|  
-|[Posunutí doprava bez znaménka](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
+|[Posunutí doprava (bez znaménka)](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|>>>|  
   
 ## <a name="assignment-operators"></a>Operátory přiřazení  
  [Operátory přiřazení](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)  
@@ -73,9 +73,9 @@ Následující tabulka uvádí [!INCLUDE[javascript](../../javascript/includes/j
 ## <a name="miscellaneous-operators"></a>Různé operátory  
  [delete](../../javascript/reference/delete-operator-decrementjavascript.md)  
   
- [instanceof](../../javascript/reference/instanceof-operator-decrementjavascript.md)  
+ [Instanceof](../../javascript/reference/instanceof-operator-decrementjavascript.md)  
   
- [new](../../javascript/reference/new-operator-decrementjavascript.md)  
+ [New](../../javascript/reference/new-operator-decrementjavascript.md)  
   
  [typeof](../../javascript/reference/typeof-operator-decrementjavascript.md)  
   

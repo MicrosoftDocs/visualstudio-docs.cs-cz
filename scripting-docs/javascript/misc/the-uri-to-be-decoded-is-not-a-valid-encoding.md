@@ -3,7 +3,7 @@ title: Identifikátor URI, který se má dekódovat, není platné kódování |
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5025
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: 029e0790-ffd1-496d-8700-3b3dbac1b6fd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 99df8739137971e32c14f265460ff3f4a9c03816
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 98d2ee08a52e86c435c58502da1ab4f68b594905
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816160"
 ---
 # <a name="the-uri-to-be-decoded-is-not-a-valid-encoding"></a>Dekódovaný identifikátor URI nemá platné kódování
-Pokusili jste se dekódovat nesprávně vytvořený identifikátor URI (Uniform Resource Identifier). Identifikátory URI mají speciální syntaxi; aby bylo možné použít v identifikátoru URI, musí být kódování více než alfanumerických znaků kódováno. Pomocí metod `encodeURI` a `encodeURIComponent` můžete vytvořit identifikátor URI z normálního [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] řetězce.  
+Pokusili jste se dekódovat nesprávně vytvořený identifikátor URI (Uniform Resource Identifier). Identifikátory URI mají speciální syntaxi; aby bylo možné použít v identifikátoru URI, musí být kódování více než alfanumerických znaků kódováno. Pomocí `encodeURI` metod a můžete `encodeURIComponent` vytvořit identifikátor URI z normálního [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] řetězce.  
   
  Úplný identifikátor URI se skládá z sekvence komponent a oddělovačů. Formulář Obecné je:  
   
@@ -37,5 +37,5 @@ Pokusili jste se dekódovat nesprávně vytvořený identifikátor URI (Uniform 
 - Ujistěte se, že se pokoušíte dekódovat pouze platné identifikátory URI. Nelze dekódovat běžné [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] řetězce, protože mohou obsahovat neplatné znaky.  
   
 ## <a name="see-also"></a>Viz také:  
-   [funkce decodeURI –](../../javascript/reference/decodeuri-function-javascript.md)  
+ [decodeURI – – funkce](../../javascript/reference/decodeuri-function-javascript.md)   
  [decodeURIComponent – funkce](../../javascript/reference/decodeuricomponent-function-javascript.md)

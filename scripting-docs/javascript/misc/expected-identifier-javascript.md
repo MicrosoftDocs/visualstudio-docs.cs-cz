@@ -3,7 +3,7 @@ title: Byl očekáván identifikátor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1010
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: 92eaa97f-7084-4618-9608-768b51a0600b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8555ddde52602f5761be40cfcc752abd12697deb
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 71f5e4363481745887371e7d25e308b2856dc00c
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72577297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816524"
 ---
 # <a name="expected-identifier-javascript"></a>Byl očekáván identifikátor (JavaScript)
 Použili jste něco jiného než identifikátor v kontextu, ve kterém byl nějaký povinný. Identifikátor může být:  

@@ -3,7 +3,7 @@ title: Příkaz ' break ' nemůže být mimo smyčku | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1019
 dev_langs:
@@ -14,27 +14,27 @@ ms.assetid: 11d02172-2a78-4705-a730-d21111db5f42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 356e7022f940e696030b0cda4f71a599c147dd5a
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0959bad452d3b24ca1475b66e37fbdab1e9c3e7f
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817655"
 ---
 # <a name="cant-have-break-outside-of-loop"></a>Příkaz 'break' nemůže být uveden mimo smyčku
-Pokusili jste se použít klíčové slovo **Break** mimo smyčku. Klíčové slovo **Break** slouží k ukončení smyčky nebo příkazu `switch`. Musí být vložen do těla smyčky nebo příkazu `switch`. **Popisek** však může následovat za klíčovým slovem Break.  
+Pokusili jste se použít klíčové slovo **Break** mimo smyčku. Klíčové slovo **Break** slouží k ukončení smyčky nebo `switch` příkazu. Musí být vložen do těla smyčky nebo `switch` příkazu. **Popisek** však může následovat za klíčovým slovem Break.  
   
 ```js
 break labelname;  
 ```  
   
- Pokud používáte vnořené smyčky nebo příkazy `switch` a potřebujete rozdělit smyčku, která není nejvnitřnější, stačí pouze označený tvar tohoto klíčového slova **Break** .  
+ Pokud používáte vnořené smyčky nebo **break** `switch` příkazy a potřebujete rozdělit smyčku, která není nejvnitřnější, stačí pouze označený tvar tohoto klíčového slova break.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
 - Ujistěte se, že se klíčové slovo **Break** zobrazuje uvnitř ohraničující smyčky nebo příkazu switch.  
   
 ## <a name="see-also"></a>Viz také:  
-   [příkazu break](../../javascript/reference/break-statement-javascript.md)  
- [Řízení  toku programu](../../javascript/controlling-program-flow-javascript.md)  
+ [break – příkaz](../../javascript/reference/break-statement-javascript.md)   
+ [Řízení toku programu](../../javascript/controlling-program-flow-javascript.md)   
  [Řešení potíží se skripty](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

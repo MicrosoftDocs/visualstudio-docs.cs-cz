@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: generování fragmentu XML ze schématu XML'
+title: 'Postupy: Generování fragmentu XML ze schématu XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817174"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Postupy: generování fragmentu XML ze schématu XML
 
@@ -33,13 +33,13 @@ Tato funkce je k dispozici pouze u elementů. Platí taky následující pravidl
 
 - Kurzor musí být umístěn hned napravo od názvu elementu.
 
-Vygenerovaný fragment obsahuje všechny požadované atributy a prvky. Pokud je `minOccurs` větší než jedna, požadovaný minimální počet instancí tohoto prvku je zahrnut ve fragmentu až do maximálního počtu instancí 100. Všechny pevné hodnoty nalezené ve schématu mají za následek pevné hodnoty fragmentu. prvky `xsd:any` a `xsd:anyAttribute` jsou ignorovány a mají za následek žádné další konstrukce fragmentu kódu.
+Vygenerovaný fragment obsahuje všechny požadované atributy a prvky. Pokud `minOccurs` je větší než jeden, požadovaný minimální počet instancí tohoto prvku je zahrnut ve fragmentu až do maximálního počtu instancí 100. Všechny pevné hodnoty nalezené ve schématu mají za následek pevné hodnoty fragmentu. `xsd:any``xsd:anyAttribute`prvky a jsou ignorovány a nemají za následek žádné další konstrukce fragmentů.
 
 Výchozí hodnoty jsou vygenerovány a označeny jako upravitelné hodnoty. Pokud schéma určuje výchozí hodnotu, použije se tato výchozí hodnota. Pokud je však výchozí hodnota schématu prázdný řetězec, Editor vygeneruje výchozí hodnoty následujícím způsobem:
 
 - Pokud typ schématu obsahuje všechny omezující vlastnosti výčtu, a to buď přímo, nebo nepřímo prostřednictvím kteréhokoli člena typu sjednocení, jako výchozí se použije první Výčtová hodnota nalezená v objektovém modelu schématu.
 
-- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je `itemType`typ atomická. Pro sjednocení je typ atomický typ prvního `memberType`.
+- Pokud je typ schématu typ Atomic, Editor získá typ atomie a vloží název atomické typu. Pro odvozený jednoduchý typ používá základní jednoduchý typ. Jako typ seznamu je atomická typ `itemType` . Pro sjednocení je typ atomické atomická typ prvního `memberType` .
 
 ## <a name="example"></a>Příklad
 
@@ -54,9 +54,9 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
 2. V podokně **šablony** vyberte **soubor XML** a klikněte na **otevřít**.
 
-     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8">`.
+     V editoru se otevře nový soubor. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8">` .
 
-3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení ( **...** ) v poli **schémata** .
+3. V okně Vlastnosti dokumentu klikněte na tlačítko pro procházení (**...**) v poli **schémata** .
 
      Zobrazí se dialogové okno **schémata XSD** .
 
@@ -66,7 +66,7 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
 5. Vyberte soubor schématu a klikněte na **otevřít**.
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
      Schéma XML je nyní přidruženo k dokumentu XML.
 
@@ -88,7 +88,7 @@ Kroky v této části ukazují, jak používat funkci fragmentu XML vygenerovano
 
      Editor přidá počáteční značku `<Contact` a umístí kurzor za název elementu.
 
-4. Stisknutím klávesy **TAB** vygenerujte data XML prvku `Contact` na základě jeho informací o schématu.
+4. Stisknutím klávesy **TAB** vygenerujte XML data pro `Contact` element na základě jeho informací o schématu.
 
 ## <a name="input"></a>Vstup
 
@@ -141,7 +141,7 @@ Následující soubor schématu se používá v tomto návodu.
 
 ### <a name="output"></a>Výstup
 
-Následuje data XML, která jsou generována v závislosti na informacích schématu přidružených k prvku `Contact`. Položky označené jako `bold` určují upravitelná pole ve fragmentu kódu XML.
+Následuje data XML, která jsou generována na základě informací o schématu přidružených k `Contact` elementu. Položky označené jako `bold` upravitelná pole ve fragmentu kódu XML.
 
 ```xml
 <Contact>

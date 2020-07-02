@@ -1,21 +1,21 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití navigace s popisem cesty'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 291badb04c791305f655e187ff7853fc8c5087a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817460"
 ---
-# <a name="how-to-use-breadcrumb-navigation"></a>Postupy: použití navigace s popisem cesty
+# <a name="how-to-use-breadcrumb-navigation"></a>Postupy: Používání navigace s popisem cesty
 
 Existují tři hlavní způsoby, jak změnit sadu aktivit, které jsou zobrazeny v Návrhář postupu provádění:
 
@@ -38,7 +38,7 @@ Existují tři hlavní způsoby, jak změnit sadu aktivit, které jsou zobrazeny
 2. Když se stav rozšíření změní kliknutím na tlačítko, nový stav rozšíření je uložen v jazyce XAML.
 
     > [!WARNING]
-    > Ne všechny aktivity lze rozbalit na místě. Existují dva případy, kdy aktivitu nelze rozšířit na místě: nadřazený objekt aktivity nepovoluje, aby byly podřízené položky rozbaleny, (například aktivity ve vývojovém diagramu nelze rozbalit na místě) nebo Návrhář aktivity nedovoluje být rozbaleno na místě. I když žádný z návrhářů aktivity zahrnutý v Návrhář postupu provádění nemá druhé chování, některé vlastní aktivity mohou toto chování vykazovat.
+    > Ne všechny aktivity lze rozbalit na místě. Existují dva případy, kdy aktivitu nelze rozšířit na místo: Nadřazená aktivita nepovoluje, aby byly podřízené položky rozbaleny, (například aktivity ve vývojovém diagramu nelze rozšířit na místo), nebo Návrhář aktivity nedovoluje, aby byl rozšířen na místo. I když žádný z návrhářů aktivity zahrnutý v Návrhář postupu provádění nemá druhé chování, některé vlastní aktivity mohou toto chování vykazovat.
 
 ## <a name="expanding-all-or-collapsing-all-activities"></a>Rozbalení všech nebo sbalení všech aktivit
 
@@ -47,7 +47,7 @@ Existují tři hlavní způsoby, jak změnit sadu aktivit, které jsou zobrazeny
 2. Po použití možnosti Rozbalit vše nebo sbalit všechny stavy můžete kliknout na tlačítko **obnovit** , které se zobrazí, abyste se mohli podívat na stav dříve aplikovaný na každou aktivitu.
 
     > [!WARNING]
-    > Pokud se některá z aktivit, jako je <xref:System.Activities.Statements.Flowchart>, nerozhodla rozbalovat, funkce přidružená tlačítkům **Rozbalit vše** a **sbalit všechna** jsou v Návrháři **vývojového diagramu** zakázané. Další informace o návrháři **vývojového diagramu** najdete v tématu [vývojové diagramy](../workflow-designer/flowchart-activity-designer.md) .
+    > Pokud se u aktivity, jako <xref:System.Activities.Statements.Flowchart> je třeba, nerozhodlo o rozbalení, funkce přidružená tlačítkům **Rozbalit vše** a **sbalit všechna** jsou v Návrháři **vývojového diagramu** zakázané. Další informace o návrháři **vývojového diagramu** najdete v tématu [vývojové diagramy](../workflow-designer/flowchart-activity-designer.md) .
 
     > [!WARNING]
     > Možnost Rozbalit vše má také zvláštní efekt v Návrháři aktivity **Switch** a **TryCatch** . Po kliknutí na **Rozbalit vše**se zobrazí všechny případy přepínače a všechny bloky try/catch/finally. Kliknutím na tlačítko **obnovit** nebo **Sbalit vše** vrátíte tyto návrháře do jejich výchozího stavu, ze kterého můžete kliknutím na jednotlivý případ/blok zobrazit jeho obsah.

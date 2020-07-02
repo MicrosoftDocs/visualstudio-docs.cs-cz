@@ -1,19 +1,19 @@
 ---
 title: Přidání uzlů do pracovního prostoru z Průzkumníka schémat XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2049b8da1caa4e0af0afc52aec6e75f499d85b8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 751e291188e6357343936d61d56f07bd86f97eaf
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816394"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>Postupy: Přidání uzlů do pracovního prostoru z Průzkumníka schémat XML
 
@@ -26,23 +26,23 @@ Toto téma vysvětluje, jak přidat uzly do [pracovního prostoru Návrhář sch
 
 1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
-2. Klikněte pravým tlačítkem na uzel `PurchaseOrderType` v Průzkumníku XSD. **V zobrazení grafu vyberte Zobrazit**.
+2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v PRŮZKUMNÍKU XSD. **V zobrazení grafu vyberte Zobrazit**.
 
-     Uzel `purchaseOrderType` se zobrazí na návrhové ploše zobrazení grafu.
+     `purchaseOrderType`Uzel se zobrazí na návrhové ploše zobrazení grafu.
 
 ## <a name="to-drag-and-drop-a-node-on-to-a-view"></a>Přetažení uzlu do zobrazení
 
-1. V zobrazení grafu klikněte pravým tlačítkem myši na uzel `PurchaseOrderType`. **V Průzkumníku schémat XML vyberte Zobrazit**.
+1. V zobrazení grafu klikněte pravým tlačítkem myši na `PurchaseOrderType` uzel. **V Průzkumníku schémat XML vyberte Zobrazit**.
 
      Uzel je zvýrazněn v **Průzkumníku schémat XML**.
 
-2. Klikněte pravým tlačítkem na uzel `PurchaseOrderType` v **Průzkumníku schémat XML** a vyberte **Zobrazit všechny odkazy**.
+2. Klikněte pravým tlačítkem na `PurchaseOrderType` uzel v **Průzkumníku schémat XML** a vyberte **Zobrazit všechny odkazy**.
 
-     Uzel `purchaseOrder` je zvýrazněný.
+     `purchaseOrder`Uzel je zvýrazněný.
 
-3. Přetáhněte uzel `purchaseOrder` do zobrazení grafu.
+3. Přetáhněte `purchaseOrder` uzel na zobrazení grafu.
 
-     Uzel `purchaseOrder` a uzel `PurchaseOrderType` se zobrazí vedle sebe na návrhové ploše zobrazení grafu. Vzhledem k tomu, že se tyto dva uzly vztahují (`purchaseOrder` prvek je typu `PurchaseOrderType`), je mezi nimi vykreslena šipka.
+     `purchaseOrder`Uzel a `PurchaseOrderType` uzel se zobrazí vedle sebe na návrhové ploše zobrazení grafu. Vzhledem k tomu, že oba uzly jsou související ( `purchaseOrder` element je `PurchaseOrderType` typu), je mezi nimi vykreslena šipka.
 
 ## <a name="to-add-nodes-using-the-schema-explorer-search-capability"></a>Přidání uzlů pomocí možnosti vyhledávání v Průzkumníku schémat
 
@@ -56,7 +56,7 @@ Toto téma vysvětluje, jak přidat uzly do [pracovního prostoru Návrhář sch
 
      ![Výsledek hledání v Průzkumníkovi schémat XML](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     Uzel `purchaseOrder` a uzel `PurchaseOrderType` se zobrazí vedle sebe na návrhové ploše [zobrazení grafu](../xml-tools/graph-view.md). Vzhledem k tomu, že se tyto dva uzly vztahují (`purchaseOrder` prvek je typu `PurchaseOrderType`), je mezi nimi vykreslena šipka.
+     `purchaseOrder`Uzel a `PurchaseOrderType` uzel se zobrazí vedle sebe na návrhové ploše [zobrazení grafu](../xml-tools/graph-view.md). Vzhledem k tomu, že oba uzly jsou související ( `purchaseOrder` element je `PurchaseOrderType` typu), je mezi nimi vykreslena šipka.
 
 ## <a name="see-also"></a>Viz také:
 

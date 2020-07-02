@@ -3,7 +3,7 @@ title: Chyba syntaxe v regulárním výrazu (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5017
 dev_langs:
@@ -14,21 +14,21 @@ ms.assetid: 7799ed69-c877-42a1-87cf-ad6739302c10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 69970a810df7cf0ea186d74fc39ae23e6e44e7ab
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 192f9a5ca9928e4c325d67c340276ef12de14686
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816186"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>Chyba syntaxe v regulárním výrazu (JavaScript)
 Struktura hledaného řetězce je v rozporu s jedním nebo více gramatickými pravidly [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] regulárního výrazu.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Zajistěte, aby struktura vyhledávacího řetězce regulárního výrazu odpovídala syntaxi regulárního výrazu [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)].  
+- Zajistěte, aby struktura vyhledávacího řetězce regulárního výrazu odpovídala [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] syntaxi regulárního výrazu.  
   
 ## <a name="see-also"></a>Viz také:  
-   [objektu regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)  
+ [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
  [compile – metoda (Regulární výraz)](../../javascript/reference/compile-method-regular-expression-javascript.md)

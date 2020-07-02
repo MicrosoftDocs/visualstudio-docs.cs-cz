@@ -1,7 +1,7 @@
 ---
 title: Editor XML a Návrhář schémat
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - vb.xmldesigner
 helpviewer_keywords:
@@ -32,22 +32,22 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a5f069d5255a744e256bc9f7d1b48a135e85d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e763fa3475f26b9742ea5fb7061978e711eb22ea
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816420"
 ---
-# <a name="xml-tools-in-visual-studio"></a>Nástroje XML v sadě Visual Studio
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Přehled nástrojů XML v aplikaci Visual Studio
 
-*Kód XML (Extensible Language)* je značkovací jazyk, který poskytuje formátu pro popis data. XML odděluje data a její prezentaci pomocí přidružených šablon stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
+*Jazyk XML (Extensible Markup Language) (XML)* je jazyk značek, který poskytuje formát pro popisovaná data. XML odděluje data a její prezentaci pomocí přidružených šablon stylů, jako je XSL (Extensible Stylesheet Language) a kaskádové šablony stylů (CSS). Visual Studio obsahuje nástroje a funkce, které usnadňují práci s XML, XSLT a schématy XML.
 
 ## <a name="xml-editor"></a>Editor XML
 
 [Editor XML](xml-editor.md) slouží k úpravám dokumentů XML. Poskytuje úplnou kontrolu syntaxe XML, ověřování schématu při psaní, barevném kódování a IntelliSense. Pokud je k dispozici definice typu schématu nebo dokumentu, používá technologie IntelliSense k vypsání přípustných prvků a atributů.
 
-K těmto dalším funkcím patří:
+Mezi další funkce patří:
 
 - Podpora fragmentů kódu XML, včetně fragmentů generovaných schématem
 
@@ -77,5 +77,5 @@ Visual Studio podporuje [ladění šablon stylů XSLT](../xml-tools/debugging-xs
 - <xref:System.Xml?displayProperty=fullName>
 - [Transformace XSLT](/dotnet/standard/data/xml/xslt-transformations)
 - [Zpracování dat XML pomocí datového modelu XPath](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)
-- [Model DOM (Document Object Model) dokumentu XML](/dotnet/standard/data/xml/xml-document-object-model-dom)
+- [model DOM (Document Object Model) dokumentu XML](/dotnet/standard/data/xml/xml-document-object-model-dom)
 - [Model objektu schématu (SOM) XML](/dotnet/standard/data/xml/xml-schema-object-model-som)

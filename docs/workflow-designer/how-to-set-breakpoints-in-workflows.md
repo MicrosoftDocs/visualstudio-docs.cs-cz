@@ -1,23 +1,23 @@
 ---
 title: 'Návrhář postupu provádění-postupy: nastavení zarážek v pracovních postupech'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e41b21c9-c061-4358-8e2f-eb5e412864a8
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ebebd0efe689c2f3f83e776c0cb3889ee64add2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9530e7ec018a89c3648f61660a5651eddaace805
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817486"
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>Postupy: nastavení zarážek v pracovních postupech
 
-Když použijete Návrhář postupu provádění, můžete nastavit zarážky v grafických pracovních postupech tak, jak byste to provedete C# v Visual Basic nebo kódu. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
+Při použití Návrhář postupu provádění můžete nastavit zarážky na vašich grafických pracovních postupech tak, jak byste to provedete v kódu Visual Basic nebo C#. Jak bylo očekáváno, spuštění pracovního postupu se zastaví v každé zarážce, kterou jste nastavili.
 
 Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastavení zarážky čeká na vyřízení a je reprezentována plnou červenou ikonou. Když modul runtime načetl typ pracovního postupu, bude se jednat o vazbu. Pokud zadáte nesprávný formát pro zarážku, například název aktivity, který není platný, zobrazí se chybové okno. Zarážka je stále přidána do okna zarážky, ale je označena malým znakem "x".
 
@@ -25,10 +25,10 @@ Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastaven
 > Nastavení zarážek u vyvolaných pracovních postupů se nepodporuje.
 
 > [!NOTE]
-> Před laděním se ujistěte, že jste vybrali možnost **povolit pouze můj kód (pouze spravované)** z nabídky **nástroje** > **Možnosti** > **ladění** . Pokud možnost není vybrána a máte dvě sekvence vnořené v jiné sekvenci a nastavíte bod přerušení v první vnitřní sekvenci, stisknutí klávesy **F11** nebude ladit do druhé vnitřní sekvence.
+> Před laděním se ujistěte, že jste vybrali možnost **Povolit pouze můj kód (pouze spravované)** z **Tools**  >  **Options**  >  nabídky**ladění** možností nástrojů. Pokud možnost není vybrána a máte dvě sekvence vnořené v jiné sekvenci a nastavíte bod přerušení v první vnitřní sekvenci, stisknutí klávesy **F11** nebude ladit do druhé vnitřní sekvence.
 
 > [!NOTE]
-> Zarážky v pracovním postupu nejsou k dispozice, pokud úplná cesta k souboru XAML není přesná. Úplná cesta k souboru XAML není po přesunutí projektu nebo řešení do jiné složky nebo jiného počítače přesná. Vyberte **Ctrl**+**s** a uložte a aktualizujte vlastnost Úplná cesta.
+> Zarážky v pracovním postupu nejsou k dispozice, pokud úplná cesta k souboru XAML není přesná. Úplná cesta k souboru XAML není po přesunutí projektu nebo řešení do jiné složky nebo jiného počítače přesná. Vyberte **CTRL** + **S** a uložte a aktualizujte vlastnost Úplná cesta.
 
 ## <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Nastavení zarážky u aktivity v zobrazení Návrh
 
@@ -36,7 +36,7 @@ Zarážka má tři stavy: *nevyřízené*, *vázané*a *chybové*. Při nastaven
 
 2. V nabídce **ladění** vyberte možnost **Přepnout zarážku**. V levém horním rohu aktivity se zobrazí červená ikona.
 
-   Případně můžete stisknout klávesu **F9** po výběru aktivity, nebo můžete kliknout pravým tlačítkem myši na aktivitu a vybrat **zarážku** > **Vložit zarážku** z nabídky klikněte pravým tlačítkem myši.
+   Případně můžete stisknout klávesu **F9** po výběru aktivity, nebo můžete kliknout pravým tlačítkem myši na aktivitu a vybrat **zarážku**  >  **Vložit** zarážku v nabídce kliknutím pravým tlačítkem myši.
 
 ## <a name="see-also"></a>Viz také:
 

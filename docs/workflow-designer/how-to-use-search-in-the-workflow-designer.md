@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: použití vyhledávání v Návrhář postupu provádění'
+title: 'Postupy: Hledání v návrháři postupu provádění'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 12bda4af085b8ab41d3e11841f24cd5dfd389738
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817473"
 ---
-# <a name="how-to-use-search-in-the-workflow-designer"></a>Postupy: použití vyhledávání v Návrhář postupu provádění
+# <a name="how-to-use-search-in-the-workflow-designer"></a>Postupy: Hledání v návrháři postupu provádění
 
 Abyste usnadnili vytváření větších a složitějších pracovních postupů, můžete hledat v rámci Návrhář postupu provádění pro hledání položek podle klíčového slova. Všimněte si, že Návrhář nepodporuje nahrazení.
 
@@ -23,7 +23,7 @@ Abyste usnadnili vytváření větších a složitějších pracovních postupů
 
 Rychlé hledání najde v Návrháři následující:
 
-- Vlastnosti objektů <xref:System.Activities.Activity>, <xref:System.Activities.Statements.FlowNode> objektů, <xref:System.Activities.Statements.State> objektů, přechodů a dalších vlastních položek řízení toku.
+- Vlastnosti <xref:System.Activities.Activity> objektů, <xref:System.Activities.Statements.FlowNode> objektů, <xref:System.Activities.Statements.State> objektů, přechodů a dalších vlastních položek řízení toku.
 
 - Proměnné
 
@@ -33,7 +33,7 @@ Rychlé hledání najde v Návrháři následující:
 
 ### <a name="use-quick-find"></a>Použít rychlé hledání
 
-1. V okně návrháře pracovních postupů otevřete, stiskněte **CTRL + F**nebo vyberte **Upravit**  > **Najít a nahradit**  > **Rychlé hledání**.
+1. Pomocí návrháře pracovních postupů otevřete, stiskněte **CTRL + F**nebo vyberte **Upravit**  >  **Najít a nahradit**  >  **Rychlé hledání**.
 
 2. Do textového pole **Najít** zadejte hledaný termín a klikněte na **Najít další**.
 
@@ -47,7 +47,7 @@ Hledání v souborech vyhledává řetězce v souborech pracovního postupu, vč
 
 ### <a name="use-find-in-files"></a>Použít hledání v souborech
 
-1. V aplikaci Visual Studio stiskněte **Ctrl** +**SHIFT** +**F**nebo vyberte **Upravit**  > **Najít a nahradit**  > **najít v souborech**.
+1. V aplikaci Visual Studio stiskněte klávesy **CTRL** + **SHIFT** + **F**nebo vyberte možnost **Upravit**  >  **Najít a nahradit**  >  **najít v souborech**.
 
 2. Do textového pole **Najít** zadejte hledaný text a klikněte na **Najít vše**.
 

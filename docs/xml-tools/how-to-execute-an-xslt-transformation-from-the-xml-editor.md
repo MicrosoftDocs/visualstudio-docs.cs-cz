@@ -1,25 +1,25 @@
 ---
 title: Spustit transformaci XSLT
 ms.date: 03/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bd26eaadf921d13fc425a91031a39df5a80ea2a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1e74beb2903cd133dfdd322ce4c297692eae3411
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817187"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Postupy: spuštění transformace XSLT z editoru XML
 
 Editor XML umožňuje přidružit šablonu stylů XSLT k dokumentu XML, provést transformaci a zobrazit výstup. Výsledný výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
-Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na prvku `xsl:output` v šabloně stylů a může být. *XML*,. *txt* nebo. *htm*.
+Vlastnost **Output** Určuje název souboru pro výstup. Pokud je vlastnost **Output** prázdná, v dočasném adresáři se vygeneruje název souboru. Přípona souboru je založena na `xsl:output` elementu v šabloně stylů a může být.* XML*,. *txt* nebo. *htm*.
 
 Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. *HTML* rozšíření, výstup XSLT je zobrazený ve webovém prohlížeči. Všechny ostatní přípony souborů jsou otevřeny pomocí výchozího editoru zvoleného v aplikaci Visual Studio. Například pokud je přípona souboru. *XML*, Visual Studio používá editor XML.
 
@@ -29,13 +29,13 @@ Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. 
 
 2. Přidružte šablonu stylů XSLT k dokumentu XML.
 
-    - Přidejte do dokumentu XML instrukci pro zpracování `xml-stylesheet`. Přidejte například následující řádek do prologu dokumentu: `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>`
+    - Přidejte `xml-stylesheet` do dokumentu XML instrukci pro zpracování. Do prologu dokumentu přidejte například následující řádek:`<?xml-stylesheet type='text/xsl' href='filename.xsl'?>`
 
        -nebo-
 
     - Přidejte šablonu stylů XSLT pomocí okna **vlastnosti** . Otevřete-li soubor XML v editoru, klikněte pravým tlačítkem myši kdekoli v editoru a vyberte možnost **vlastnosti**. V okně **vlastnosti** klikněte na pole se **šablonou stylů** a vyberte tlačítko Procházet (...). Vyberte šablonu stylů XSLT a pak zvolte **otevřít**.
 
-3. Na panelu nabídek vyberte **XML** > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl**+**ALT**+**F5**.
+3. Na panelu nabídek vyberte **XML**  >  **Spustit XSLT bez ladění**. Nebo stiskněte klávesy **CTRL** + **ALT** + **F5**.
 
    Výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 
@@ -51,7 +51,7 @@ Pokud **výstupní** vlastnost určuje název souboru s příponou. *htm* nebo. 
    > [!NOTE]
    > Dokument XML je vstupní dokument, který se používá pro transformaci. Pokud při spuštění transformace XSLT není dokument zadán, zobrazí se dialogové okno **otevřít soubor** a v tomto okamžiku můžete zadat dokument.
 
-3. Na panelu nabídek vyberte **XML** > **Spustit XSLT bez ladění**. Nebo stiskněte klávesu **Ctrl**+**ALT**+**F5**.
+3. Na panelu nabídek vyberte **XML**  >  **Spustit XSLT bez ladění**. Nebo stiskněte klávesy **CTRL** + **ALT** + **F5**.
 
    Výstup z transformace XSLT se zobrazí v novém okně dokumentu.
 

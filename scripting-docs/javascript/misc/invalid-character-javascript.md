@@ -3,7 +3,7 @@ title: Neplatný znak (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1014
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 267dcc5af0870132a14c679c7fc26589d6b776c9
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: c2dc3e733afdb4f3d25595e819163ff56e397c6e
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816940"
 ---
 # <a name="invalid-character-javascript"></a>Neplatný znak (JavaScript)
-Zavedli jste identifikátor pomocí znaku (nebo znaků), který není rozpoznán jako platný kompilátorem [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]. Platné znaky používají následující pravidla:  
+Zavedli jste identifikátor pomocí znaku (nebo znaků), který kompilátor nerozpoznal jako platný [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] . Platné znaky používají následující pravidla:  
   
 - První znak musí být písmeno ASCII (velká a malá písmena) nebo podtržítko (_).  
   
@@ -32,9 +32,9 @@ Zavedli jste identifikátor pomocí znaku (nebo znaků), který není rozpoznán
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Vyhněte se použití znaků, které nejsou součástí definice [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] jazyka.  
+- Vyhněte se použití znaků, které nejsou součástí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] definice jazyka.  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [proměnných](../../javascript/variables-javascript.md)  
- @No__t_1 [speciálních znaků](../../javascript/advanced/special-characters-javascript.md)  
- [Datové typy](../../javascript/data-types-javascript.md)
+ [Proměnné](../../javascript/variables-javascript.md)   
+ [Speciální znaky](../../javascript/advanced/special-characters-javascript.md)   
+ [Typy dat](../../javascript/data-types-javascript.md)

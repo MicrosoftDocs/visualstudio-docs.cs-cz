@@ -1,21 +1,21 @@
 ---
 title: 'Návrhář postupu provádění: ladit XAML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 81c3e20e858fb8501c1c1a564a91270af6a4aaa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9be7c8da251a9698e0fceba64e3941ba8fbdf803
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817512"
 ---
-# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Postupy: ladění XAML pomocí Návrhář postupu provádění
+# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Postupy: Ladění XAML pomocí návrháře postupu provádění
 
 Pracovní postupy jsou definovány z podmínek XAML. Reprezentace uživatelského rozhraní pracovního postupu je postavená na stromu XAML, který definuje pracovní postup. Prostředí ladění je podobné jako při ladění pracovních postupů v Návrhář postupu provádění. Například při ladění XAML fungují okna místní hodnoty, sledování a vlákna stejným způsobem jako při ladění Návrhář postupu provádění. Kromě toho zobrazení zásobníku volání během ladění XAML je spojnicové hierarchické zobrazení toku spuštění pro pracovní postup.
 

@@ -1,7 +1,7 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití návrháře argumentů'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ArgumentDesigner.UI
 - System.Activities.Presentation.View.DesignTimeArgument.UI
@@ -11,14 +11,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2903c69e3cf50f3ed0392239ee8848a79eb50e20
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6c3c0fe3de3a9ab74ed09c1be45e0d39a71a5b7c
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817447"
 ---
-# <a name="how-to-use-the-argument-designer"></a>Postupy: použití návrháře argumentů
+# <a name="how-to-use-the-argument-designer"></a>Postupy: Používání návrháře argumentů
 
 Návrhář argumentů usnadňuje umožnění toku dat do aktivity a z ní. Kliknutím na tlačítko **argumenty** v levém dolním rohu plátna návrhu získáte přístup k návrháři. Návrhář obsahuje seznam argumentů, které se zobrazí v tabulkovém formátu a lze je seřadit podle jednotlivých záhlaví sloupců, s výjimkou sloupce **Výchozí hodnota** . Každý argument obsahuje název, typ/výstup/výstup/vlastnost, typ a výchozí hodnotu výrazu (pokud existuje). Název a výchozí hodnota výrazu jsou upravitelná textová pole a typ a směr jsou rozevírací. Další informace naleznete v tématu [proměnné a argumenty (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments).
 
@@ -35,5 +35,5 @@ Návrhář argumentů usnadňuje umožnění toku dat do aktivity a z ní. Klikn
 
 ## <a name="see-also"></a>Viz také:
 
-- [Používání návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
+- [Použití návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
 - [Proměnné a argumenty](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

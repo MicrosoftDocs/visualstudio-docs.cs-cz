@@ -3,7 +3,7 @@ title: Neplatný argument Replacer | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5035
 dev_langs:
@@ -15,22 +15,22 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9ba76a2121dfb3853e38bacbdf49c985103c2a35
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 452af60c37e4a56996438cc2957e9b69ccee98ef
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816823"
 ---
 # <a name="invalid-replacer-argument"></a>Neplatný argument nahrazení
-Byl proveden pokus o vyvolání `JSON.stringify` s argumentem, který není platný. Argument `replacer` musí být funkce nebo pole.  
+Byl proveden pokus o vyvolání `JSON.stringify` s argumentem, který není platný. `replacer`Argument musí být funkce nebo pole.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Změňte argument `replacer` na funkci nebo pole.  
+- Změňte `replacer` argument na funkci nebo pole.  
   
 ## <a name="example"></a>Příklad  
- Kód v tomto příkladu způsobí chybu za běhu, protože `memberfilter` je objekt namísto funkce nebo pole.  
+ Kód v tomto příkladu způsobuje chybu za běhu, protože `memberfilter` se jedná o objekt namísto funkce nebo pole.  
   
 ```JavaScript  
 var contact = new Object();  
@@ -45,6 +45,6 @@ var jsontext = JSON.stringify(contact, memberfilter, "\t");
 ```  
   
 ## <a name="see-also"></a>Viz také:  
- @No__t_1 [objektu JSON](../../javascript/reference/json-object-javascript.md)  
- @No__t_1 [funkce JSON. Parse](../../javascript/reference/json-parse-function-javascript.md)  
+ [Objekt JSON](../../javascript/reference/json-object-javascript.md)   
+ [Funkce JSON. Parse](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript – chyby za běhu](../../javascript/reference/javascript-run-time-errors.md)

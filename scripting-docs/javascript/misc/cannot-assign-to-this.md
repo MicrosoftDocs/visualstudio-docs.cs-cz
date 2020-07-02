@@ -3,7 +3,7 @@ title: Nejde přiřadit k této | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5000
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 73baa77cc63e3a43ac30e70f66081bbc7ade3020
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: f5c52153da64ff477d89b09d4af17169da18e4e1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817317"
 ---
 # <a name="cannot-assign-to-this"></a>Nelze přiřazovat do objektu 'this'
-Pokusili jste se přiřadit hodnotu k **tomuto**. **Toto** je klíčové slovo [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)], které odkazuje na jednu z těchto akcí:
+Pokusili jste se přiřadit hodnotu k **tomuto**. **Toto** [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] klíčové slovo odkazuje na jednu z těchto:
 
 - objekt, který aktuálně provádí metodu,
 

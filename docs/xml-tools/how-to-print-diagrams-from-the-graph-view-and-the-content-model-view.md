@@ -1,19 +1,19 @@
 ---
 title: 'Schéma XML: Tisk diagramů v zobrazení grafu & zobrazení modelu obsahu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1253e5470b176f04d715adc4caa10cec202a4c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e5aef4b2a7bc040a75a97bc66f26526053f4cada
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817122"
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Postupy: Tisk diagramů ze zobrazení grafu a ze zobrazení modelu obsahu
 
@@ -33,4 +33,4 @@ Toto téma popisuje, jak vytisknout diagram ze zobrazení grafu nebo z pohledu m
 
 - [Zobrazení grafu](../xml-tools/graph-view.md)
 - [Zobrazení modelu obsahu](../xml-tools/content-model-view.md)
-- [Pracovní prostor návrháře schématu XML](../xml-tools/xml-schema-designer-workspace.md)
+- [Pracovní prostor Návrháře schémat XML](../xml-tools/xml-schema-designer-workspace.md)

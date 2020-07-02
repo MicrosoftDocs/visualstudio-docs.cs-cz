@@ -1,7 +1,7 @@
 ---
 title: 'Návrhář postupu provádění-postupy: použití návrháře proměnných'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.DesignTimeVariable.UI
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ec5e6d16d17024b0b49f977b87ddacc275e5860
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f02aab6c5ecf545e0f754f1a88fa7e26a88f206d
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817408"
 ---
-# <a name="how-to-use-the-variable-designer"></a>Postupy: použití návrháře proměnných
+# <a name="how-to-use-the-variable-designer"></a>Postupy: Používání návrháře proměnných
 
 Návrhář proměnných se používá k vytvoření proměnných pro použití ve scénářích datové vazby a podmíněných příkazech. K návrháři se dostanete kliknutím na tlačítko **proměnné** v levém dolním rohu plátna návrh. Návrhář obsahuje seznam proměnných, které se zobrazí v tabulkovém formátu, a lze je seřadit podle jednotlivých záhlaví sloupců, s výjimkou **výchozího** sloupce. Každá proměnná obsahuje název, typ proměnné, rozsah a výchozí hodnotu (pokud existuje). Název a výchozí hodnota jsou upravitelná textová pole a typ a rozsah jsou rozevírací seznam. Obor je aktivita, která byla vybrána při vyvolání návrháře proměnných. Pokud proměnnou nelze vytvořit v rámci oboru výběru, bude výchozí hodnota oboru nejbližší předchůdce aktivity výběru, který umožňuje vytvoření proměnných ve svém rozsahu. Další informace naleznete v tématu [proměnné a argumenty (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments).
 
@@ -38,6 +38,6 @@ Návrhář proměnných se používá k vytvoření proměnných pro použití v
 
 ## <a name="see-also"></a>Viz také:
 
-- [Používání návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
+- [Použití návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
 - [Proměnné a argumenty](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)
 - [Postupy: Používání návrháře argumentů](../workflow-designer/how-to-use-the-argument-designer.md)

@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89006ab582a48f7f3be54b4eb459903b64af7daf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7c1f2583b0624691405ec3ef5a88aa11cb796327
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816692"
 ---
-# <a name="quickstart-first-look-at-profiling-tools"></a>Rychlý Start: první pohled na nástroje pro profilaci
+# <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
 Visual Studio poskytuje celou řadu nástrojů pro profilaci, které vám pomůžou s diagnostikou různých typů problémů s výkonem v závislosti na typu aplikace. V tomto článku se rychle podívejte na nejběžnější nástroje pro profilaci.
 
@@ -131,7 +131,7 @@ V případě aplikací .NET Core, které používají ADO.NET nebo Entity Framew
 
 Nástroj zobrazí každý dotaz v zobrazení seznamu. Můžete zobrazit informace, jako je čas zahájení a doba trvání dotazu.
 
-![Přidělování](./media/db-gotosource.png "Přidělování")
+![Vyhrazen](./media/db-gotosource.png "Přidělování")
 
 ::: moniker-end
 
@@ -199,14 +199,14 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|ano|ano|
-|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Alokace objektů .NET](../profiling/dotnet-alloc-tool.md)|Ano (jenom .NET)|ano|ano|
 |[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
-|[Prohlížeč událostí](../profiling/perftips.md)|ano|ano|ano|
-|[.NET Async](../profiling/perftips.md)|Ano (jenom .NET)|ano|ano|
-|[Database](../profiling/perftips.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
+|[Prohlížeč událostí](../profiling/events-viewer.md)|ano|ano|ano|
+|[.NET Async](../profiling/analyze-async.md)|Ano (jenom .NET)|ano|ano|
+|[Database](../profiling/analyze-database.md)|Ano (jenom .NET Core)|ne|Ano (jenom ASP.NET Core)|
 |[Prohlížeč výkonu](../profiling/performance-explorer.md)|ne|ne|ne|
 |[IntelliTrace](../debugger/intellitrace.md)|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|.NET jenom s Visual Studio Enterprise|
 ::: moniker-end
@@ -214,7 +214,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker range="vs-2017"
 |Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
@@ -227,5 +227,5 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker-end
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md)
