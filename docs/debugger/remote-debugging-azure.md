@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 6983d3ac191b8eb85d38e1d40afa3244e97dbb17
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184247"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536783"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Vzdálené ladění ASP.NET Core ve službě IIS v Azure v aplikaci Visual Studio
 
@@ -96,7 +96,7 @@ Ze sady Visual Studio můžete rychle publikovat a ladit aplikaci do plně zří
 
     Zarážka by měla být dosaženo v aplikaci Visual Studio.
 
-    A je to! Zbývající kroky v tomto tématu se vztahují na vzdálené ladění na virtuálním počítači Azure.
+    A to je vše! Zbývající kroky v tomto tématu se vztahují na vzdálené ladění na virtuálním počítači Azure.
 
 ## <a name="remote-debug-aspnet-core-on-an-azure-vm"></a><a name="remote_debug_azure_vm"></a>Vzdálené ladění ASP.NET Core na virtuálním počítači Azure
 
@@ -175,15 +175,15 @@ Tuto možnost můžete použít k vytvoření souboru nastavení publikování a
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-    > [!NOTE]
-    > If you restart an Azure VM, the IP address may change.
+> [!NOTE]
+> Pokud restartujete virtuální počítač Azure, IP adresa se může změnit.
 
 Po úspěšném nasazení aplikace by se měla spustit automaticky. Pokud se aplikace nespustí ze sady Visual Studio, spusťte aplikaci ve službě IIS, abyste ověřili, že funguje správně. V případě ASP.NET Core musíte také zajistit, aby pole fond aplikací pro **DefaultAppPool** bylo nastaveno na **žádný spravovaný kód**.
 
 1. V dialogovém okně **Nastavení** Povolte ladění kliknutím na tlačítko **Další**, zvolte konfiguraci **ladění** a pak zvolte **odebrat další soubory v cílovém umístění** v možnostech **publikování souboru** .
 
     > [!IMPORTANT]
-    > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *Web. config* při publikování.
+    > Pokud zvolíte konfiguraci vydané verze, zakážete ladění v souboru *web.config* při publikování.
 
 1. Klikněte na **Uložit** a znovu publikujte aplikaci.
 
@@ -255,11 +255,11 @@ Stáhněte si verzi nástrojů Remote Tools, které odpovídají vaší verzi sa
 
 6. Zadejte první písmeno názvu procesu pro rychlé vyhledání vaší aplikace.
 
-    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) služby IIS, vyberte správný proces **W3wp. exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
+    * Pokud používáte [model hostování v rámci procesu](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models) služby IIS, vyberte správný proces **w3wp.exe** . Počínaje platformou .NET Core 3 se jedná o výchozí nastavení.
 
-    * V opačném případě vyberte proces **dotnet. exe** . (Toto je model hostování mimo proces.)
+    * V opačném případě vyberte proces **dotnet.exe** . (Toto je model hostování mimo proces.)
 
-    Pokud máte více procesů, které zobrazují *W3wp. exe* nebo *dotnet. exe*, podívejte se do sloupce **uživatelské jméno** . V některých scénářích se ve sloupci **uživatelské jméno** zobrazí název vašeho fondu aplikací, například **Služba IIS APPPOOL\DefaultAppPool**. Pokud se zobrazí fond aplikací, ale není jedinečný, vytvořte nový pojmenovaný fond aplikací pro instanci aplikace, kterou chcete ladit, a pak ji můžete snadno najít ve sloupci **uživatelské jméno** .
+    Pokud máte více procesů zobrazujících *w3wp.exe* nebo *dotnet.exe*, podívejte se do sloupce **uživatelské jméno** . V některých scénářích se ve sloupci **uživatelské jméno** zobrazí název vašeho fondu aplikací, například **Služba IIS APPPOOL\DefaultAppPool**. Pokud se zobrazí fond aplikací, ale není jedinečný, vytvořte nový pojmenovaný fond aplikací pro instanci aplikace, kterou chcete ladit, a pak ji můžete snadno najít ve sloupci **uživatelské jméno** .
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")

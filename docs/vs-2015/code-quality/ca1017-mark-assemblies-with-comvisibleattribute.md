@@ -15,37 +15,37 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 505e5780b8a50113aaf98ea7dbac767d280bebb6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 17f0a540a436316d3a4fb3b71a2a51b1c5a90a6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662057"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535067"
 ---
-# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Označte sestavení pomocí atributu ComVisibleAttribute
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Označte sestavení pomocí ComVisibleAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|MarkAssembliesWithComVisible|
 |CheckId|CA1017|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- V sestavení není použit atribut <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Pro sestavení není <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> použit atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- Atribut <xref:System.Runtime.InteropServices.ComVisibleAttribute> určuje, jak klienti modelu COM přistupují ke spravovanému kódu. Dobrý návrh přikazuje, aby sestavení explicitně uvedla viditelnost modelu COM. Viditelnost modelu COM lze nastavit pro celé sestavení a následně přepsat pro jednotlivé typy a členy typu. Pokud atribut není přítomen, obsah sestavení je viditelný pro klienty modelu COM.
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>Atribut určuje, jak klienti modelu COM přistupují ke spravovanému kódu. Dobrý návrh přikazuje, aby sestavení explicitně uvedla viditelnost modelu COM. Viditelnost modelu COM lze nastavit pro celé sestavení a následně přepsat pro jednotlivé typy a členy typu. Pokud atribut není přítomen, obsah sestavení je viditelný pro klienty modelu COM.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, přidejte atribut do sestavení. Pokud nechcete, aby bylo sestavení viditelné pro klienty modelu COM, použijte atribut a nastavte jeho hodnotu na `false`.
+ Chcete-li opravit porušení tohoto pravidla, přidejte atribut do sestavení. Pokud nechcete, aby bylo sestavení viditelné pro klienty modelu COM, použijte atribut a nastavte jeho hodnotu na `false` .
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Chcete-li, aby bylo sestavení viditelné, použijte atribut a nastavte jeho hodnotu na `true`.
+ Nepotlačujte upozornění na toto pravidlo. Chcete-li, aby bylo sestavení viditelné, použijte atribut a nastavte jeho hodnotu na `true` .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje sestavení s použitým atributem <xref:System.Runtime.InteropServices.ComVisibleAttribute>, aby se zabránilo jeho viditelnému klientům modelu COM.
+ Následující příklad ukazuje sestavení, které má <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut použit, aby se zabránilo jeho viditelnému klientům modelu COM.
 
  [!code-cpp[FxCop.Design.AssembliesCom#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesCom/cpp/FxCop.Design.AssembliesCom.cpp#1)]
  [!code-csharp[FxCop.Design.AssembliesCom#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesCom/cs/FxCop.Design.AssembliesCom.cs#1)]

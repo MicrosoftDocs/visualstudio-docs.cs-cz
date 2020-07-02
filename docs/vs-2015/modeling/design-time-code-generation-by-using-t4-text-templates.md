@@ -17,24 +17,24 @@ caps.latest.revision: 40
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e817bc76a76c3d0af0e3509ef14312ac1b98acf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: efdbf1b96e1dc49f5b9c48cebe6cededc9ea7c6e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669804"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534144"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>Vytvoření kódu v době návrhu pomocí textových šablon T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Textové šablony T4 v době návrhu umožňují generovat kód programu a další soubory v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Obvykle píšete šablony tak, aby lišily kód, který generují podle dat z *modelu*. Model je soubor nebo databáze obsahující klíčové informace o požadavcích vaší aplikace.
+Textové šablony T4 v době návrhu umožňují generovat kód programu a další soubory v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Obvykle píšete šablony tak, aby lišily kód, který generují podle dat z *modelu*. Model je soubor nebo databáze obsahující klíčové informace o požadavcích vaší aplikace.
 
  Můžete mít například model definující pracovní postup, a to buď jako tabulku, nebo jako diagram. Z modelu můžete vygenerovat software, který spouští pracovní postup. Když se změní požadavky vašich uživatelů, je snadné diskutovat o novém pracovním postupu s uživateli. Opětovné generování kódu z pracovního postupu je spolehlivější než ruční aktualizace kódu.
 
 > [!NOTE]
 > *Model* je zdroj dat, který popisuje konkrétní aspekt aplikace. Může to být libovolný formulář v jakémkoli typu souboru nebo databáze. Nemusí být v žádném konkrétním formuláři, jako je model UML nebo model jazyka specifického pro doménu. Typické modely jsou ve formě tabulek nebo souborů XML.
 
- Již jste obeznámeni s generováním kódu. Při definování prostředků v souboru **. resx** v řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jsou automaticky generovány sady tříd a metod. Soubor prostředků je mnohem jednodušší a spolehlivější pro úpravu prostředků, než by bylo nutné v případě, že jste museli upravovat třídy a metody. Pomocí textových šablon můžete kód vytvořit stejným způsobem ze zdroje vlastního návrhu.
+ Již jste obeznámeni s generováním kódu. Při definování prostředků v souboru **. resx** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení se automaticky generuje sada tříd a metod. Soubor prostředků je mnohem jednodušší a spolehlivější pro úpravu prostředků, než by bylo nutné v případě, že jste museli upravovat třídy a metody. Pomocí textových šablon můžete kód vytvořit stejným způsobem ze zdroje vlastního návrhu.
 
  Textová šablona obsahuje kombinaci textu, který chcete vygenerovat, a kód programu, který generuje proměnné části textu. Programový kód a umožňuje opakovat nebo podmíněně vynechat části vygenerovaného textu. Generovaný text může být samotný programový kód, který bude tvořit součást vaší aplikace.
 
@@ -52,14 +52,14 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
      Všimněte si, že vlastnost **vlastního nástroje** souboru je **hodnotu TextTemplatingFileGenerator**.
 
-3. Otevřete soubor. Již bude obsahovat následující direktivy:
+3. Otevřete tento soubor. Již bude obsahovat následující direktivy:
 
     ```
     <#@ template hostspecific="false" language="C#" #>
     <#@ output extension=".txt" #>
     ```
 
-     Pokud jste přidali šablonu do projektu [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], atribut Language bude "`VB`".
+     Pokud jste přidali šablonu do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] projektu, atribut Language bude " `VB` ".
 
 4. Na konec souboru přidejte nějaký text. Příklad:
 
@@ -69,7 +69,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
 5. Uložte soubor.
 
-     Může se zobrazit okno s **upozorněním zabezpečení** , které vás vyzve k potvrzení, že chcete šablonu spustit. Klikněte na tlačítko **OK**.
+     Může se zobrazit okno s **upozorněním zabezpečení** , které vás vyzve k potvrzení, že chcete šablonu spustit. Klikněte na **OK**.
 
 6. V **Průzkumník řešení**rozbalte uzel soubor šablony a vyhledejte soubor s příponou **. txt**. Soubor obsahuje text vygenerovaný ze šablony.
 
@@ -83,7 +83,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
 - Uložte šablonu.
 
-- V nabídce **sestavení** klikněte na **transformovat všechny šablony** . Tím dojde k transformaci všech šablon v řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+- V nabídce **sestavení** klikněte na **transformovat všechny šablony** . Tím dojde k transformaci všech šablon v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení.
 
 - V **Průzkumník řešení**v místní nabídce libovolného souboru vyberte možnost **Spustit vlastní nástroj**. Tuto metodu použijte, chcete-li transformovat vybranou podmnožinu šablon.
 
@@ -94,7 +94,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
 #### <a name="to-generate-text-by-using-program-code"></a>Generování textu pomocí kódu programu
 
-1. Změnit obsah souboru `.tt`:
+1. Změnit obsah `.tt` souboru:
 
    ```csharp
    <#@ template hostspecific="false" language="C#" #>
@@ -123,14 +123,14 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
 2. Uložte soubor. TT a znovu zkontrolujte vygenerovaný soubor. txt. Zobrazuje čtverce čísel od 0 do 10.
 
-   Všimněte si, že příkazy jsou uzavřeny v rámci `<#...#>` a jednotlivé výrazy v rámci `<#=...#>`. Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
+   Všimněte si, že příkazy jsou uzavřeny v rámci `<#...#>` a jednotlivé výrazy v rámci `<#=...#>` . Další informace najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
-   Pokud napíšete kód generování v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], direktiva `template` by měla obsahovat `language="VB"`. výchozím nastavením je `"C#"`.
+   Pokud píšete kód generování v nástroji [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , `template` direktiva by měla obsahovat `language="VB"` . `"C#"` je výchozí možnost.
 
 ## <a name="debugging-a-design-time-t4-text-template"></a>Ladění šablony textu T4 v době návrhu
  Ladění textové šablony:
 
-- Do direktivy `template` vložte `debug="true"`. Příklad:
+- Vložte `debug="true"` do `template` direktivy. Příklad:
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -141,7 +141,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
   Šablona se spustí a zastaví na zarážekch. Můžete kontrolovat proměnné a krokovat kód obvyklým způsobem.
 
 > [!TIP]
-> `debug="true"` zpřístupňuje mapa generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
+> `debug="true"`Vytvoří mapu generovaného kódu přesněji pro textovou šablonu vložením dalších direktiv pro číslování řádků do generovaného kódu. Pokud je necháte, zarážky mohou zastavit běh v nesprávném stavu.
 >
 > Ale můžete ponechat klauzuli v direktivě šablony i v případě, že neladíte. To způsobuje pouze velmi malý pokles výkonu.
 
@@ -198,23 +198,23 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 ### <a name="generating-code-and-generated-text"></a>Generování kódu a vygenerovaný text
  Při generování kódu programu je nejdůležitější se vyhnout vygenerování kódu, který se spouští ve vaší šabloně, a výslednému generovanému kódu, který se stal součástí vašeho řešení. Tyto dva jazyky nemusí být stejné.
 
- Předchozí příklad obsahuje dvě verze. V jedné verzi je generování kódu v C#. V druhé verzi je generovaný kód Visual Basic. Ale text generovaný oběma z nich je stejný a jedná se o C# třídu.
+ Předchozí příklad obsahuje dvě verze. V jedné verzi je generování kódu v jazyce C#. V druhé verzi je generovaný kód Visual Basic. Ale text generovaný oběma z nich je stejný a jedná se o třídu jazyka C#.
 
- Stejným způsobem můžete použít šablonu [!INCLUDE[csprcs](../includes/csprcs-md.md)] k vygenerování kódu v libovolném jazyce. Vygenerovaný text nemusí být v žádném konkrétním jazyce a nemusí se jednat o programový kód.
+ Stejným způsobem můžete použít [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablonu k vygenerování kódu v libovolném jazyce. Vygenerovaný text nemusí být v žádném konkrétním jazyce a nemusí se jednat o programový kód.
 
 ### <a name="structuring-text-templates"></a>Strukturování textových šablon
  V důsledku dobrého postupu můžeme kód šablony rozdělit do dvou částí:
 
-- Část konfigurace nebo shromažďování dat, která nastavuje hodnoty v proměnných, ale neobsahuje textové bloky. V předchozím příkladu je tato část inicializací `properties`.
+- Část konfigurace nebo shromažďování dat, která nastavuje hodnoty v proměnných, ale neobsahuje textové bloky. V předchozím příkladu je tato část inicializací `properties` .
 
    To se někdy označuje jako oddíl "model", protože vytváří model in-Store a obvykle čte soubor modelu.
 
-- Část pro generování textu (`foreach(...){...}` v příkladu), která používá hodnoty proměnných.
+- Část pro generování textu ( `foreach(...){...}` v příkladu), která používá hodnoty proměnných.
 
   Toto není nezbytné oddělení, ale jedná se o styl, který usnadňuje čtení šablony snížením složitosti součásti, která obsahuje text.
 
 ## <a name="reading-files-or-other-sources"></a>Čtení souborů nebo jiných zdrojů
- Pro přístup k souboru modelu nebo databázi může váš kód šablony používat sestavení, jako je System. XML. Chcete-li získat přístup k těmto sestavením, je nutné vložit direktivy, jako například:
+ Pro přístup k souboru modelu nebo databázi může váš kód šablony použít sestavení jako System.XML. Chcete-li získat přístup k těmto sestavením, je nutné vložit direktivy, jako například:
 
 ```
 <#@ assembly name="System.Xml.dll" #>
@@ -222,7 +222,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 <#@ import namespace="System.IO" #>
 ```
 
- Direktiva `assembly` zpřístupňuje zadané sestavení kódu šablony stejným způsobem jako oddíl odkazy v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Nemusíte zahrnovat odkaz na System. dll, na který se odkazuje automaticky. Direktiva `import` umožňuje používat typy bez použití jejich plně kvalifikovaných názvů stejným způsobem jako direktiva `using` v běžném programovém souboru.
+ `assembly`Direktiva zpřístupní zadané sestavení kódu šablony stejným způsobem jako oddíl odkazy [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Nemusíte zahrnovat odkaz na System.dll, na který se odkazuje automaticky. `import`Direktiva umožňuje používat typy bez použití jejich plně kvalifikovaných názvů stejným způsobem jako `using` direktiva v běžném programovém souboru.
 
  Například po importu **System.IO**můžete napsat:
 
@@ -242,7 +242,7 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 ```
 
 ### <a name="opening-a-file-with-a-relative-pathname"></a>Otevření souboru s relativní cestou
- Chcete-li načíst soubor z umístění relativního k textové šabloně, můžete použít `this.Host.ResolvePath()`. Pro použití. Hostitel, musíte nastavit `hostspecific="true"` v `template`:
+ Chcete-li načíst soubor z umístění relativního k textové šabloně, můžete použít `this.Host.ResolvePath()` . Pro použití. Hostitel, musíte nastavit `hostspecific="true"` v `template` :
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -272,12 +272,12 @@ Textové šablony T4 v době návrhu umožňují generovat kód programu a dalš
 
 ```
 
- Můžete také použít `this.Host.TemplateFile`, který určuje název aktuálního souboru šablony.
+ Můžete také použít `this.Host.TemplateFile` , který určuje název aktuálního souboru šablony.
 
- Typ `this.Host` (v jazyce VB, `Me.Host`) je `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`.
+ Typ `this.Host` (v jazyce VB, `Me.Host` ) je `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` .
 
-### <a name="getting-data-from-includevsprvsincludesvsprvs-mdmd"></a>Získávání dat z [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
- Chcete-li použít služby poskytované v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], nastavte atribut `hostSpecific` a načtěte sestavení `EnvDTE`. Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Příklad:
+### <a name="getting-data-from-vsprvs"></a>Získávání dat z[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]
+ Chcete-li použít služby poskytované v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Pro přístup k DTE a dalším službám pak můžete použít IServiceProvider. GetCOMService (). Příklad:
 
 ```scr
 <#@ template hostspecific="true" language="C#" #>
@@ -295,12 +295,12 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > Textová šablona se spouští ve své vlastní doméně aplikace a služby jsou k dispozici v zařazování. V této situaci je GetCOMService () spolehlivější než GetService ().
 
-## <a name="Regenerating"></a>Opětovné generování kódu automaticky
- Obvykle se několik souborů ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení generuje s jedním vstupním modelem. Každý soubor je vygenerován z vlastní šablony, ale šablony všechny odkazují na stejný model.
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>Opětovné generování kódu automaticky
+ Obvykle se několik souborů v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení generuje s jedním vstupním modelem. Každý soubor je vygenerován z vlastní šablony, ale šablony všechny odkazují na stejný model.
 
  Pokud se zdrojový model změní, měli byste znovu spustit všechny šablony v řešení. Chcete-li to provést ručně, vyberte možnost **transformovat všechny šablony** v nabídce **sestavení** .
 
- Pokud jste nainstalovali [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a modelování sady SDK, můžete mít všechny šablony transformované automaticky pokaždé, když provedete sestavení. Chcete-li to provést, upravte soubor projektu (. csproj nebo. vbproj) v textovém editoru a přidejte následující řádky poblíž konce souboru za všechny ostatní příkazy `<import>`:
+ Pokud jste nainstalovali [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sadu vizualizací a modelování SDK, můžete mít všechny šablony transformované automaticky pokaždé, když provedete sestavení. Chcete-li to provést, upravte soubor projektu (. csproj nebo. vbproj) v textovém editoru a přidejte následující řádky poblíž konce souboru za všechny ostatní `<import>` příkazy:
 
 ```
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v11.0\TextTemplating\Microsoft.TextTemplating.targets" />
@@ -313,19 +313,19 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
  Další informace naleznete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
 
 ## <a name="error-reporting"></a>Hlášení chyb
- Chcete-li umístit chybové zprávy a upozornění v okně chyby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], můžete použít tyto metody:
+ Chcete-li umístit chybové zprávy a upozornění v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okně chyby, můžete použít tyto metody:
 
 ```
 Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="Converting"></a>Převod existujícího souboru na šablonu
- Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, které generují, spolu s některým vloženého programového kódu. To navrhuje užitečnou metodu tvorby šablony. Nejdřív vytvořte běžný soubor jako prototyp, jako je [!INCLUDE[csprcs](../includes/csprcs-md.md)] soubor, a pak postupně naveďte kód generování, který se liší od výsledného souboru.
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>Převod existujícího souboru na šablonu
+ Užitečnou funkcí šablon je, že vypadají velmi podobně jako soubory, které generují, spolu s některým vloženého programového kódu. To navrhuje užitečnou metodu tvorby šablony. Nejprve vytvořte běžný soubor jako prototyp, jako je například [!INCLUDE[csprcs](../includes/csprcs-md.md)] soubor, a pak postupně zaveďte kód generování, který se liší od výsledného souboru.
 
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>Převod existujícího souboru na šablonu pro dobu návrhu
 
-1. Do projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přidejte soubor typu, který chcete vygenerovat, například `.cs`, `.vb` nebo `.resx` soubor.
+1. Do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu přidejte soubor typu, který chcete vygenerovat, jako je například `.cs` , `.vb` nebo `.resx` soubor.
 
 2. Otestujte nový soubor, abyste se ujistili, že funguje.
 
@@ -333,10 +333,10 @@ Warning("A warning message");
 
 4. Ověřte následující vlastnosti souboru **. TT** :
 
-    |||
+    |Vlastnost|Hodnota|
     |-|-|
     |**Vlastní nástroj =**|**Hodnotu TextTemplatingFileGenerator**|
-    |**Akce sestavení =**|**NTato**|
+    |**Akce sestavení =**|**Žádné**|
 
 5. Na začátek souboru vložte následující řádky:
 
@@ -345,9 +345,9 @@ Warning("A warning message");
     <#@ output extension=".cs" #>
     ```
 
-     Chcete-li zapsat kód generování šablony v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], nastavte atribut `language` na `"VB"` místo `"C#"`.
+     Chcete-li zapsat kód generování šablony v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , nastavte `language` atribut na `"VB"` místo `"C#"` .
 
-     Nastavte atribut `extension` na příponu názvu souboru pro typ souboru, který chcete vygenerovat, například `.cs`, `.resx` nebo `.xml`.
+     Nastavte `extension` atribut na příponu názvu souboru pro typ souboru, který chcete vygenerovat, například `.cs` `.resx` nebo `.xml` .
 
 6. Uložte soubor.
 
@@ -364,9 +364,9 @@ Warning("A warning message");
 
 |Další krok|Téma|
 |---------------|-----------|
-|Napsat a ladit pokročilejší textovou šablonu s kódem, který používá pomocné funkce, zahrnuté soubory a externí data.|[Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)|
+|Napsat a ladit pokročilejší textovou šablonu s kódem, který používá pomocné funkce, zahrnuté soubory a externí data.|[Tvorba textové šablony T4](../modeling/writing-a-t4-text-template.md)|
 |Vygeneruje v době běhu dokumenty ze šablon.|[Generování textu za běhu pomocí textových šablon T4](../modeling/run-time-text-generation-with-t4-text-templates.md)|
-|Spuštění generování textu mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Spustit generování textu mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
 |Transformujte data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Zapište procesory direktiv pro transformaci vašich vlastních zdrojů dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
 

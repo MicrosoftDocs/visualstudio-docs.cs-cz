@@ -18,17 +18,17 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d05b8a492768dfe9163d7ede55c2bf4aef084c26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f87e3a3adda270f6b78b9134c7535bda6c73d952
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668030"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533143"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Postupy: Vytváření typů pomocí návrháře tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, vytvořte je v diagramu tříd. Chcete-li zobrazit existující typy, přečtěte si téma [Postup: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md).
+Chcete-li navrhnout nové typy pro projekty Visual C# .NET a Visual Basic .NET, vytvořte je v diagramu tříd. Chcete-li zobrazit existující typy, přečtěte si téma [Postup: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md).
 
 - [Vytvořit nový typ](#CreateType)
 
@@ -36,19 +36,19 @@ Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, 
 
 - [Použití vlastního atributu na člen typu](#CustAttributeMember)
 
-## <a name="CreateType"></a>Vytvořit nový typ
+## <a name="create-a-new-type"></a><a name="CreateType"></a>Vytvořit nový typ
 
 1. V sadě nástrojů v nabídce Návrhář tříd přetáhněte jeden z nich do diagramu tříd:
 
     - **Třída** nebo **abstraktní třída**
 
-    - **Vytváření**
+    - **Výčet**
 
-    - **Prostředí**
+    - **Rozhraní**
 
     - **Structure** (VB) nebo **struct** (C#)
 
-    - **Dostával**
+    - **Delegát**
 
     - **Modul** (pouze VB)
 
@@ -64,9 +64,8 @@ Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, 
 
 4. Nyní přidejte další položky pro definování typu:
 
-    |||
+    |**For**|**Přidat**|
     |-|-|
-    |**For**|**Add**|
     |Třídy, abstraktní třídy nebo struktury|Metody, vlastnosti, pole, události, konstruktory (metoda), destruktory (metoda) a konstanty, které určují typ|
     |Výčty|Hodnoty polí, které tvoří výčet|
     |Rozhraní|Metody, vlastnosti a události, které tvoří rozhraní|
@@ -75,7 +74,7 @@ Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, 
 
      Viz [vytváření členů](../ide/creating-and-configuring-type-members-class-designer.md#CreateMembers).
 
-## <a name="CustAttributeType"></a>Použití vlastního atributu na typ
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a>Použití vlastního atributu na typ
 
 1. Klikněte na tvar typu v diagramu tříd.
 
@@ -85,7 +84,7 @@ Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, 
 
      Až skončíte, uživatelské atributy se použijí na typ.
 
-## <a name="CustAttributeMember"></a>Použití vlastního atributu na člen typu
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>Použití vlastního atributu na člen typu
 
 1. Klikněte na název člena ve tvaru jeho typu v diagramu tříd nebo na jeho řádku v okně Detaily třídy.
 
@@ -96,4 +95,4 @@ Chcete-li navrhnout nové typy C# pro projekty Visual .net a Visual Basic .NET, 
      Až skončíte, uživatelské atributy se použijí na typ.
 
 ## <a name="see-also"></a>Viz také
- [Postupy: vytvoření dědičnosti mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md) [Postupy: vytváření přidružení mezi typy (návrhář tříd)](../ide/how-to-create-associations-between-types-class-designer.md) [vytváření a konfigurace členů typu (návrhář tříd)](../ide/creating-and-configuring-type-members-class-designer.md) [práce s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md) [Navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md)
+ [Postupy: vytvoření dědičnosti mezi typy (návrhář tříd)](../ide/how-to-create-inheritance-between-types-class-designer.md) [Postupy: vytváření přidružení mezi typy (návrhář tříd)](../ide/how-to-create-associations-between-types-class-designer.md) [vytváření a konfigurace členů typu (návrhář tříd)](../ide/creating-and-configuring-type-members-class-designer.md) [práce s diagramy tříd (Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md) [navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md)

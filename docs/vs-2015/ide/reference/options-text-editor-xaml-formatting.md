@@ -31,12 +31,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 319e09d2438b23c217f7820fe4288758a595be56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 537223aab878aee2fb00e9417d0415f0a17d2dd5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662225"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534131"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Možnosti, textový editor, XAML, formátování
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -59,9 +59,9 @@ Automatické formátování může nastat, pokud je zjištěna kterákoli z nás
 
   Můžete určit, které události způsobí automatické formátování.
 
-|||
+|Name|Popis|
 |-|-|
-|**Při dokončení koncové značky nebo jednoduché značky**|Automatické formátování probíhá po dokončení psaní koncové značky nebo jednoduché značky. Jednoduchá značka nemá žádné atributy, například `<Button />`.|
+|**Při dokončení koncové značky nebo jednoduché značky**|Automatické formátování probíhá po dokončení psaní koncové značky nebo jednoduché značky. Jednoduchá značka nemá žádné atributy, například `<Button />` .|
 |**Po dokončení počáteční značky**|Automatické formátování probíhá po dokončení psaní počáteční značky.|
 |**Při vložení ze schránky**|Automatické formátování probíhá při vložení XAML ze schránky do zobrazení XAML.|
 
@@ -70,7 +70,7 @@ Toto nastavení určuje, zda jsou hodnoty atributů uzavřeny v jednoduchých ne
 
 Po nastavení této možnosti budou ovlivněny pouze atributy, které jsou následně přidány pomocí návrháře nebo ručně v zobrazení XAML.
 
-|||
+|Name|Popis|
 |-|-|
 |**Dvojité uvozovky (")**|Hodnoty atributu jsou uzavřeny v dvojitých uvozovkách.<br /><br /> `<Button Name="button1">Hello</Button>`|
 |**Jednoduché uvozovky (')**|Hodnoty atributu jsou uzavřeny v jednoduchých uvozovkách.<br /><br /> `<Button Name='button1'>Hello</Button>`|
@@ -78,15 +78,15 @@ Po nastavení této možnosti budou ovlivněny pouze atributy, které jsou násl
 ## <a name="tag-wrapping"></a>Zalamování značky
 Můžete zadat délku řádku pro zalamování značky. Je-li povoleno zalamování značky, bude všechny XAML následně přidané pomocí návrháře vhodně zabaleny.
 
-|||
+|Name|Popis|
 |-|-|
 |**Zalomit značky, které překračují určenou délku**|Určuje, zda jsou řádky zabaleny na délku řádku určené **délkou**.|
-|**Časový**|Počet znaků, které řádek může obsahovat. V případě potřeby mohou některé řádky XAML překročit určenou délku řádku.|
+|**Délka**|Počet znaků, které řádek může obsahovat. V případě potřeby mohou některé řádky XAML překročit určenou délku řádku.|
 
 ## <a name="attribute-spacing"></a>Mezery atributů
 Pomocí tohoto nastavení můžete řídit uspořádání atributů v dokumentu XAML.
 
-|||
+|Name|Popis|
 |-|-|
 |**Zachovat newlines a mezery mezi atributy**|Nové řádky a mezery mezi atributy nejsou ovlivněny automatickým formátováním.<br /><br /> `<Button Height="23" Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
 |**Vložit jednu mezeru mezi atributy**|Atributy zaujímají jeden řádek s jedním prostorem, který odděluje sousední atributy. Nastavení zalamování značky se aplikují.<br /><br /> `<Button Height="23" Name="button1" Width="75">Hello</Button>`|
@@ -105,7 +105,7 @@ Pomocí tohoto nastavení můžete řídit, jak jsou prvky uspořádány do doku
 ## <a name="auto-insert"></a>Automaticky vložit
 Toto nastavení použijte k určení, kdy se značky a uvozovky generují automaticky.
 
-|||
+|Name|Popis|
 |-|-|
 |**Uzavírací značky**|Určuje, zda je uzavírací značka elementu generována automaticky při zavření počáteční značky s větším než znakem (>).|
 |**Uvozovky atributů**|Určuje, zda se mají při výběru hodnoty atributu v rozevíracím seznamu dokončování příkazů generovat ohraničující uvozovky.|
@@ -115,18 +115,18 @@ Toto nastavení použijte k určení, kdy se značky a uvozovky generují automa
 ## <a name="default-view"></a>Výchozí zobrazení
 Toto nastavení použijte k určení, zda zobrazení Návrh se zobrazí při načtení dokumentů XAML.
 
-|||
+|Name|Popis|
 |-|-|
 |**Vždy otevírat dokumenty v plném zobrazení XAML**|Určuje, zda budou dokumenty XAML zobrazeny pouze v zobrazení jazyka XAML bez zobrazení Návrh. Užitečné pro načítání rozsáhlých dokumentů.|
 
 ## <a name="toolbox"></a>Sada nástrojů
 Pomocí tohoto nastavení můžete určit, zda jsou uživatelské ovládací prvky a vlastní ovládací prvky zobrazeny v sadě nástrojů.
 
-|||
+|Name|Popis|
 |-|-|
 |**Automatické naplnění položek panelu nástrojů**|Určuje, zda jsou uživatelské ovládací prvky a vlastní ovládací prvky v aktuálním řešení zobrazeny v sadě nástrojů automaticky.|
 
 ## <a name="see-also"></a>Viz také
-[XAML v](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) subsystému WPF 
-[Postupy: Změna nastavení zobrazení XAML](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47) 
-[návody XAML a Code](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
+[XAML v subsystému WPF](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) 
+ [Postupy: Změna nastavení](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47) 
+ zobrazení XAML [Návody pro XAML a Code](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)

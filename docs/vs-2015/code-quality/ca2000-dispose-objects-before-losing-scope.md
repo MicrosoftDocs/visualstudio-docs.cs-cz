@@ -16,24 +16,24 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 89e0797afdcf299bb466018049a6d1217c5ad2dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e3de3246980ead0b20d471321a9696451aed81ac
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666162"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534768"
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Uvolňujte objekty před ztrátou oboru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DisposeObjectsBeforeLosingScope|
 |CheckId|CA2000|
 |Kategorie|Microsoft.Reliability|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Je vytvořen místní objekt typu <xref:System.IDisposable>, který však není uvolněn před tím, než jsou všechny odkazy na objekt mimo rozsah.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -50,7 +50,7 @@ ms.locfileid: "72666162"
 
 - Inicializace členů uvolnitelného objektu by neměla být provedena v rámci konstruktoru příkazu using.
 
-- Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Například
+- Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Třeba
 
     ```
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))
@@ -65,7 +65,7 @@ ms.locfileid: "72666162"
  Nepotlačujte upozornění tohoto pravidla, pokud jste volali metodu na objekt, který volá metodu `Dispose`, jako například <xref:System.IO.Stream.Close%2A>, nebo pokud metoda, která vyvolala upozornění, vrátí objekt IDisposable zabalující objekt.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2213: Uvolnitelné pole by mělo být uvolněno](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
+ [CA2213: Uvolnitelná pole by měla být uvolněna](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
  [CA2202: Neuvolňujte objekty několikrát](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)
 
@@ -76,9 +76,9 @@ ms.locfileid: "72666162"
 
  V metodě OpenPort2 jsou deklarovány dva objekty SerialPort a jsou nastaveny na hodnotu null:
 
-- Objekt `tempPort`, který se používá k testování toho, zda operace metody proběhly úspěšně.
+- `tempPort`, který slouží k otestování úspěšné operace metody.
 
-- Objekt `port`, který se používá pro návratovou hodnotu metody.
+- `port`, který se používá pro návratovou hodnotu metody.
 
   Objekt `tempPort` je vytvořen a otevřen v rámci bloku `try` a jakákoli jiná požadovaná činnost je vykonána v rámci stejného bloku `try`. Na konci bloku `try` je otevřený port přiřazen objektu `port`, který bude vrácen, a objekt `tempPort` je nastaven na hodnotu `null`.
 
@@ -98,4 +98,4 @@ ms.locfileid: "72666162"
 <!-- TODO: review snippet reference  [!CODE [FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1](FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1)]  -->
 
 ## <a name="see-also"></a>Viz také
- [vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb) <xref:System.IDisposable>
+ <xref:System.IDisposable>[Vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

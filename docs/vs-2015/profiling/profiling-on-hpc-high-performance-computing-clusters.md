@@ -21,42 +21,42 @@ caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eeb5375d636ef16fde658b88dbf662cdd9f1e27d
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983809"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535535"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>Profilování v klastrech HPC (High Performance Computing)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windows pomocí metody vzorkování [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] nebo [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] Nástroje pro profilaci. Další informace o HPC naleznete v tématu [Big Compute: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) na webu společnosti Microsoft.  
+Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windows pomocí metody vzorkování [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] Nástroje pro profilaci nebo. Další informace o HPC naleznete v tématu [Big Compute: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) na webu společnosti Microsoft.  
   
 ## <a name="prerequisites"></a>Požadavky  
  Chcete-li vytvořit profil na výpočetním uzlu HPC, je nutné provést následující akce:  
   
-- Nainstalujte sadu Microsoft HPC Pack 2008 na stejný počítač jako [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]. Počítač nemusí být součástí clusteru HPC. Sadu HPC Pack můžete nainstalovat na [webu služby Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=2800).  
+- Nainstalujte sadu Microsoft HPC Pack 2008 na stejný počítač jako [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . Počítač nemusí být součástí clusteru HPC. Sadu HPC Pack můžete nainstalovat na [webu služby Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=2800).  
   
-- Nainstalujte [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] a samostatnou verzi Nástroje pro profilaci na výpočetním uzlu HPC. V instalačním médiu [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] jsou k dispozici programy pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] i samostatné profilery. **Poznámka:** Po instalaci [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] a před instalací Nástroje pro profilaci je nutné restartovat výpočetní prostředí.  
+- Do [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] výpočetního uzlu HPC nainstalujte a samostatnou verzi nástroje pro profilaci. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]V instalačním médiu nástroje jsou k dispozici i samostatné profilery [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] . **Poznámka:** Po nainstalování [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] a před instalací nástroje pro profilaci musíte výpočetní prostředí restartovat.  
   
-  Pokud chcete nainstalovat [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] a samostatné Nástroje pro profilaci na aktivním výpočetním uzlu HPC a povolit profilaci na počítači s clustery, postupujte takto:  
+  Pokud chcete nainstalovat [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] a samostatné nástroje pro profilaci na aktivním výpočetním uzlu HPC a povolit profilaci na počítači s clustery, postupujte takto:  
   
 1. Otevřete okno příkazového řádku, které je nainstalováno se sadou HPC Pack.  
   
 2. Do samostatných příkazových výzev zadejte následující příkazy:  
   
-    1. `clusrun /all /scheduler:` *% hlavnímu uzlu%% FxPath%* `/q /norestart`  
+    1. `clusrun /all /scheduler:`*% Hlavnímu uzlu%% FxPath%*`/q /norestart`  
   
-    2. `clusrun /all /scheduler:` *% hlavnímu uzlu%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
+    2. `clusrun /all /scheduler:`*% Hlavnímu uzlu%*`shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
   
-    3. `clusrun /all /scheduler:` *% hlavnímu uzlu%% ProfilerPath%* `/q /norestart`  
+    3. `clusrun /all /scheduler:`*% Hlavnímu uzlu%% ProfilerPath%*`/q /norestart`  
   
-|||  
+|Element syntax|Popis|  
 |-|-|  
 |*Hlavnímu uzlu*|Název hlavního uzlu clusteru|  
-|*%FxPath%*|Cesta k instalačnímu programu [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] V instalačním médiu [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] cesta: WCU\dotNetFramework\ dotNetFx40_Full_x86_x64. exe.|  
-|*%ProfilerPath%*|Cesta k samostatné verzi instalačního programu Nástroje pro profilaci. Na instalačním médiu [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] cesta: Standalone Profiler\x64\ vs_profiler. exe.|  
+|*%FxPath%*|Cesta k [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] Instalačnímu programu Na [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] instalačním médiu je cesta: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
+|*%ProfilerPath%*|Cesta k samostatné verzi instalačního programu Nástroje pro profilaci. Na [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] instalačním médiu je cesta: Standalone Profiler\x64\vs_profiler.exe|  
   
 ## <a name="profiling-on-an-hpc-compute-node"></a>Profilace na výpočetním uzlu HPC  
  Relace profilování se konfiguruje pomocí Průvodce výkonem HPC k určení clusteru HPC a cílových informací. Můžete nastavit další možnosti na stránkách vlastností výkonnostní relace. Nástroje pro profilaci automaticky nasadit nezbytné cílové binární soubory a spustit Profiler a aplikaci HPC.  
@@ -69,11 +69,11 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
 3. Na druhé stránce průvodce vyberte aplikaci, kterou chcete profilovat.  
   
-    - Chcete-li profilovat projekt, který je aktuálně otevřen v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], vyberte možnost **jedna nebo více dostupných projektů** a potom vyberte název projektu ze seznamu.  
+    - Chcete-li profilovat projekt, který je aktuálně otevřen v aplikaci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] , vyberte možnost **jedna nebo více dostupných projektů** a potom v seznamu vyberte název projektu.  
   
     - Chcete-li profilovat binární soubor, který není v otevřeném projektu, vyberte **spustitelný soubor (. Soubor EXE)** .  
   
-4. Klikněte na tlačítko **Další**.  
+4. Klikněte na **Další**.  
   
 5. Na třetí stránce průvodce:  
   
@@ -85,7 +85,7 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
     - V části **umístění nasazení**zadejte cestu k adresáři, který server HPC používá k přípravě imagí pro nasazení.  
   
-6. Klikněte na tlačítko **Další**.  
+6. Klikněte na **Další**.  
   
 7. Na čtvrté stránce průvodce:  
   
@@ -99,13 +99,13 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
   
          Chcete-li profilovat proces nebo procesy, které jsou spuštěny na konkrétním uzlu v clusteru HPC, vyberte možnost **profil v uzlu** a potom v rozevíracím seznamu vyberte uzel.  
   
-8. Klikněte na tlačítko **Další**.  
+8. Klikněte na **Další**.  
   
 9. Na páté stránce průvodce se můžete rozhodnout pro okamžité spuštění profileru a procesu profilování nebo pro pozdější spuštění profilování pomocí Prohlížeč výkonu.  
   
     - Vyberte **Spustit profilaci po dokončení průvodce** pro okamžité spuštění profilování, nebo zrušte zaškrtnutí políčka pro spuštění profilování ručně.  
   
-10. Klikněte na tlačítko **Dokončit**.  
+10. Klikněte na **Finish** (Dokončit).  
   
 ## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>Nastavení vlastností profilace HPC pomocí stránek vlastností výkonnostní relace  
  Vlastnosti relace výkonu, které nastavíte v průvodci profilací HPC, můžete změnit na stránce vlastností spuštění HPC na stránce vlastností výkonnostní relace. Další možnosti nastavíte na stránce Pokročilé vlastnosti HPC.  
@@ -141,11 +141,11 @@ Můžete profilovat výpočetní uzly clusterů HPC se systémem Microsoft Windo
 |--------------|-----------------|  
 |**Název projektu**|Název aktuálního [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] projektu nebo řešení.|  
 |**Vyčistit při zastavení profileru**|V případě hodnoty true odstraní binární soubory, které byly nasazeny do spouštěcího adresáře. Soubory a adresáře vytvořené uživatelským programem nejsou v tomto kroku odebrány. Pokud se spouštěcí adresář a adresář pro nasazení vytvořily pomocí rozhraní IDE, rozhraní IDE se je pokusí odebrat, ale to neudělá, pokud mají soubory, které rozhraní IDE nenasazeno.|  
-|**Další soubory k nasazení**|Určuje středníkem oddělený seznam všech dalších souborů, které mají být nasazeny na výpočetním uzlu. Kliknutím na tlačítko se třemi tečkami ( **...** ) můžete vybrat více souborů pomocí dialogového okna.|  
-|**Mpiexec – příkaz**|Určuje aplikaci, která spustí aplikaci MPI. Výchozí hodnota je **mpiexec. exe.**|  
-|**Argumenty mpiexec**|Určuje argumenty, které se mají předat příkazu mpiexec. exe.|  
+|**Další soubory k nasazení**|Určuje středníkem oddělený seznam všech dalších souborů, které mají být nasazeny na výpočetním uzlu. Kliknutím na tlačítko se třemi tečkami (**...**) můžete vybrat více souborů pomocí dialogového okna.|  
+|**Mpiexec – příkaz**|Určuje aplikaci, která spustí aplikaci MPI. Výchozí hodnota je **mpiexec.exe**|  
+|**Argumenty mpiexec**|Určuje argumenty, které se mají předat příkazu mpiexec.exe.|  
 |**Požadované uzly v clusteru**|Určuje počet uzlů v clusteru, na kterých se má aplikace spustit.|  
-|**Nasazení souborů CRT**|V případě hodnoty true nasadí čas CC++ /Run v clusteru.|  
+|**Nasazení souborů CRT**|V případě hodnoty true nasadí čas spuštění C/C++ v clusteru.|  
 |**Skript předběžného profilu**|Určuje cestu a název souboru skriptu, který má být spuštěn na místním vývojovém počítači před spuštěním relace profilování.|  
 |**Argumenty skriptu před profilem**|Určuje argumenty, které se mají předat skriptu předběžného profilu.|  
 |**Skript po profilaci**|Určuje cestu a název souboru skriptu, který má být spuštěn na místním vývojovém počítači po ukončení relace profilování.|  

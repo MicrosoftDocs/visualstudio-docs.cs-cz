@@ -15,36 +15,36 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 49a693224b6552340d2a01051318842749a84cc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e01ad9fc4fc57917c123404d8863d04240585793
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663680"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533429"
 ---
 # <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|MovePInvokesToNativeMethodsClass|
 |CheckId|CA1060|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda používá služby vyvolání platformy pro přístup k nespravovanému kódu a není členem jedné z tříd **NativeMethods** .
 
 ## <a name="rule-description"></a>Popis pravidla
- Metody vyvolání platformy, například ty, které jsou označeny pomocí atributu <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>, nebo metody, které jsou definovány pomocí klíčového slova `Declare` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], mají přístup k nespravovanému kódu. Tyto metody by měly být v jedné z následujících tříd:
+ Metody vyvolání platformy, například ty, které jsou označeny pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atributu nebo metody, které jsou definovány pomocí `Declare` klíčového slova v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , přistupuje k nespravovanému kódu. Tyto metody by měly být v jedné z následujících tříd:
 
-- **NativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> nesmí být použita na tuto třídu.) Tato třída je určena pro metody, které lze použít kdekoli, protože bude provedeno procházení zásobníku.
+- **NativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. ( <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> nesmí být použito pro tuto třídu.) Tato třída je určena pro metody, které lze použít kdekoli, protože bude provedeno procházení zásobníku.
 
-- **SafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> se aplikuje na tuto třídu.) Tato třída je určena pro metody, které jsou bezpečné pro všechny volání. Volající z těchto metod nejsou vyžadováni k provedení úplné kontroly zabezpečení, aby bylo zajištěno, že je používání bezpečné, protože metody jsou pro libovolného volajícího neškodné.
+- **SafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. ( <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> je použito pro tuto třídu.) Tato třída je určena pro metody, které jsou bezpečné pro všechny volání. Volající z těchto metod nejsou vyžadováni k provedení úplné kontroly zabezpečení, aby bylo zajištěno, že je používání bezpečné, protože metody jsou pro libovolného volajícího neškodné.
 
-- **UnsafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> se aplikuje na tuto třídu.) Tato třída je určena pro metody, které jsou potenciálně nebezpečné. Každý volající těchto metod musí provést úplnou kontrolu zabezpečení, aby bylo zajištěno, že je použití zabezpečené, protože se neprovede žádné procházení zásobníku.
+- **UnsafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. ( <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> je použito pro tuto třídu.) Tato třída je určena pro metody, které jsou potenciálně nebezpečné. Každý volající těchto metod musí provést úplnou kontrolu zabezpečení, aby bylo zajištěno, že je použití zabezpečené, protože se neprovede žádné procházení zásobníku.
 
-  Tyto třídy jsou deklarovány jako `internal` (`Friend`, v Visual Basic) a deklaraci soukromého konstruktoru, aby se zabránilo vytváření nových instancí. Metody v těchto třídách by měly být `static` a `internal` (`Shared` a `Friend` v Visual Basic).
+  Tyto třídy jsou deklarovány jako `internal` ( `Friend` , v Visual Basic) a deklaraci soukromého konstruktoru, aby se zabránilo vytváření nových instancí. Metody v těchto třídách by měly být `static` a `internal` ( `Shared` a `Friend` v Visual Basic).
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, přesuňte metodu do příslušné třídy **NativeMethods** . Pro většinu aplikací je k dispozici pouze přesun volání nespravovaného volání do nové třídy s názvem **NativeMethods** .
@@ -69,7 +69,7 @@ ms.locfileid: "72663680"
 ### <a name="description"></a>Popis
  Vzhledem k tomu, že třída **NativeMethods** by neměla být označena pomocí metody **SuppressUnmanagedCodeSecurityAttribute**, volání nespravovaného **přístupu,** která jsou uvedena v této třídě, budou vyžadovat oprávnění k roztřídě. Vzhledem k tomu, že většina aplikací běží z místního počítače a běží společně s úplným vztahem důvěryhodnosti, obvykle se nejedná o problém. Nicméně pokud vyvíjíte opakovaně použitelné knihovny, měli byste zvážit definování třídy **SafeNativeMethods** nebo **UnsafeNativeMethods** .
 
- Následující příklad ukazuje metodu **interakce. ZvukovýSignál** , která zabalí funkci **MessageBeep** z User32. dll. **MessageBeep** P/Invoke je vložen do třídy **NativeMethods** .
+ Následující příklad ukazuje metodu **interakce. ZvukovýSignál** , která zabalí funkci **MessageBeep** z user32.dll. **MessageBeep** P/Invoke je vložen do třídy **NativeMethods** .
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.NativeMethods#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethods/cs/FxCop.Design.NativeMethods.cs#1)]
@@ -80,7 +80,7 @@ ms.locfileid: "72663680"
 ### <a name="description"></a>Popis
  Metody volání, které mohou být bezpečně zpřístupněny všem aplikacím a nemají žádné vedlejší účinky, by měly být umístěny do třídy s názvem **SafeNativeMethods**. Nemáte oprávnění k vyžádání a nemusíte platit mnohem pozor na to, odkud jsou volány.
 
- Následující příklad ukazuje vlastnost **prostředí. TickCount** , která zabalí funkci **GetTickCount** z Kernel32. dll.
+ Následující příklad ukazuje vlastnost **prostředí. TickCount** , která zabalí funkci **GetTickCount** z kernel32.dll.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.NativeMethodsSafe#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsSafe/cs/FxCop.Design.NativeMethodsSafe.cs#1)]
@@ -91,11 +91,11 @@ ms.locfileid: "72663680"
 ### <a name="description"></a>Popis
  Metody volání, které nelze bezpečně volat a které by mohly způsobit vedlejší účinky, by měly být umístěny ve třídě s názvem **UnsafeNativeMethods**. Tyto metody by měly být přísně kontrolovány, aby se zajistilo, že nejsou uživateli k úmyslu nevystaveni. Pravidlo [CA2118: Zkontrolujte použití SuppressUnmanagedCodeSecurityAttribute](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) , které vám může s tímto. Další možností je, že metody by měly mít jiné oprávnění, které je **požadováno namísto nejenom při jejich** použití.
 
- Následující příklad ukazuje metodu **Cursor. Hide** , která zabalí funkci **ShowCursor** z User32. dll.
+ Následující příklad ukazuje metodu **Cursor. Hide** , která zabalí funkci **ShowCursor** z user32.dll.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.NativeMethodsUnsafe#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsUnsafe/cs/FxCop.Design.NativeMethodsUnsafe.cs#1)]
  [!code-vb[FxCop.Design.NativeMethodsUnsafe#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsUnsafe/vb/FxCop.Design.NativeMethodsUnsafe.vb#1)]
 
 ## <a name="see-also"></a>Viz také
- [Upozornění ohledně návrhu](../code-quality/design-warnings.md)
+ [Upozornění návrhu](../code-quality/design-warnings.md)

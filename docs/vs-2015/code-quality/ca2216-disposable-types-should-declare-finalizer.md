@@ -15,25 +15,25 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 082afacba1ccf4c982e5ddceec37d2a1567efd7a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5268cb90544088742c6fda7c751bab943503cacc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651654"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534469"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DisposableTypesShouldDeclareFinalizer|
 |CheckId|CA2216|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno v <xref:System.Object.Finalize%2A?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno v <xref:System.Object.Finalize%2A?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Popis pravidla
  Porušení tohoto pravidla je hlášeno, pokud typ mimo použití obsahuje pole následujících typů:
@@ -45,10 +45,10 @@ ms.locfileid: "72651654"
 - <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá vaši metodu <xref:System.IDisposable.Dispose%2A>.
+ Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá vaši <xref:System.IDisposable.Dispose%2A> metodu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění od tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> pro účely uvolňování nespravovaných prostředků.
+ Je bezpečné potlačit upozornění z tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> pro účely uvolnění nespravovaných prostředků.
 
 ## <a name="example"></a>Příklad
  Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem.
@@ -56,14 +56,14 @@ ms.locfileid: "72651654"
  [!code-csharp[FxCop.Usage.DisposeNoFinalize#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.DisposeNoFinalize/cs/FxCop.Usage.DisposeNoFinalize.cs#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2115: Volejte GC.KeepAlive při použití nativních zdrojů](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+ [CA2115: Volejte GC.KeepAlive při použití nativních prostředků](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
 
  [CA1816: Volejte správně GC.SuppressFinalize](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
 
- [CA1049: Typy, které vlastní nativní prostředky by měly být uvolnitelné](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+ [CA1049: Typy, které vlastní nativní prostředky, by měly být uvolnitelné](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
 
 ## <a name="see-also"></a>Viz také
- <xref:System.IDisposable?displayProperty=fullName><xref:System.IntPtr?displayProperty=fullName>
+ <xref:System.IDisposable?displayProperty=fullName> <xref:System.IntPtr?displayProperty=fullName>
  <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>
  <xref:System.UIntPtr?displayProperty=fullName>
  <xref:System.Object.Finalize%2A?displayProperty=fullName>

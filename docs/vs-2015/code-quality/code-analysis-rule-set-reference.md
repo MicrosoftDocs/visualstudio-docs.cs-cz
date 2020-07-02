@@ -11,22 +11,22 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a3c0b347f186c5adee6cf86a0e1720ebfa80f253
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e480869d5b13ecc051deaa97b0bfd2532519d18f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670119"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535717"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Referenční dokumentace sady pravidel nástroje Analýza kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při konfiguraci analýzy kódu pro projekty spravovaného kódu v [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] nebo [!INCLUDE[vsPro](../includes/vspro-md.md)]you se zobrazí se seznamem předdefinovaných *sad pravidel*. Můžete použít jednu ze standardních sad pravidel nebo sadu pravidel upravit a přizpůsobit ji požadavkům projektu.
+Při konfiguraci analýzy kódu pro projekty spravovaného kódu v [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] , [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] nebo [!INCLUDE[vsPro](../includes/vspro-md.md)] se zobrazí seznam předdefinovaných *sad pravidel*. Můžete použít jednu ze standardních sad pravidel nebo sadu pravidel upravit a přizpůsobit ji požadavkům projektu.
 
 ## <a name="available-rule-sets"></a>Dostupné sady pravidel
  V následující tabulce jsou uvedeny výchozí sady pravidel:
 
-|||
+|Položka|Hodnota|
 |-|-|
 |[Sada pravidel Všechna pravidla](../code-quality/all-rules-rule-set.md)|Tato sada pravidel obsahuje všechna pravidla. Spuštění této sady pravidel může způsobit, že se nahlásí velký počet upozornění. Tato sada pravidel se používá k získání přehledu o všech problémech v kódu. To vám může pomáhat při rozhodování, které z lépe zaměřené sady pravidel jsou nejvhodnější pro spuštění pro vaše projekty.|
 |[Sada pravidel Základní pravidla správnosti pro spravovaný kód](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|Tato pravidla se zaměřují na logické chyby a běžné chyby provedené v použití rozhraní API rozhraní .NET Framework. Zahrňte tuto sadu pravidel, abyste ji rozbalíte na seznam upozornění hlášených minimálními doporučenými pravidly.|
@@ -36,8 +36,8 @@ Při konfiguraci analýzy kódu pro projekty spravovaného kódu v [!INCLUDE[vsP
 |[Sada pravidel Pravidla globalizace pro spravovaný kód](../code-quality/globalization-rules-rule-set-for-managed-code.md)|Tato pravidla se zaměřují na problémy, které zabraňují správnému zobrazení dat v aplikaci při použití v různých jazycích, národních prostředích a jazykových verzích. Zahrňte tuto sadu pravidel, pokud je vaše aplikace lokalizovaná nebo globální.|
 |[Sada pravidel Spravovaná minimální pravidla pro spravovaný kód](../code-quality/managed-minimun-rules-rule-set-for-managed-code.md)|Tato pravidla se zaměřují na nejdůležitější problémy v kódu, pro které je analýza kódu nejpřesnější.  Tato pravidla jsou malá v čísle a jsou určena pouze pro běh v omezeném vydání sady Visual Studio.  Použijte MinimumRecommendedRules. ruleset s ostatními edicemi sady Visual Studio.|
 |[Sada pravidel Spravovaná doporučená pravidla pro spravovaný kód](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)|Tato pravidla se zaměřují na nejdůležitější problémy v kódu, včetně možných bezpečnostních otvorů, chyb aplikací a dalších důležitých chyb logiky a návrhu. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro vaše projekty.|
-|[Sada pravidel Smíšená minimální pravidla](../code-quality/mixed-minimum-rules-rule-set.md)|Tato pravidla se zaměřují na nejdůležitější problémy v C++ projektech, které podporují modul CLR (Common Language Runtime), včetně možných bezpečnostních děr a chyb aplikací. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro C++ projekty, které podporují modul CLR (Common Language Runtime).|
-|[Sada pravidel Smíšená doporučená pravidla](../code-quality/mixed-recommended-rules-rule-set.md)|Tato pravidla se zaměřují na nejběžnější a kritické problémy v C++ projektech, které podporují modul CLR (Common Language Runtime), včetně možných bezpečnostních děr, chyb aplikací a dalších důležitých chyb logiky a návrhu. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro C++ projekty, které podporují modul CLR (Common Language Runtime).  Tento RuleSet je navržený tak, aby byl nakonfigurovaný s edicí Visual Studio Professional a vyšší.|
+|[Sada pravidel Smíšená minimální pravidla](../code-quality/mixed-minimum-rules-rule-set.md)|Tato pravidla se zaměřují na nejdůležitější problémy v projektech C++, které podporují modul CLR (Common Language Runtime), včetně možných bezpečnostních děr a chyb aplikací. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).|
+|[Sada pravidel Smíšená doporučená pravidla](../code-quality/mixed-recommended-rules-rule-set.md)|Tato pravidla se zaměřují na nejběžnější a kritické problémy v projektech C++, které podporují modul CLR (Common Language Runtime), včetně možných bezpečnostních děr, chyb aplikací a dalších důležitých chyb logiky a návrhu. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro projekty C++, které podporují modul CLR (Common Language Runtime).  Tento RuleSet je navržený tak, aby byl nakonfigurovaný s edicí Visual Studio Professional a vyšší.|
 |[Sada pravidel Nativní minimální pravidla](../code-quality/native-minimum-rules-rule-set.md)|Tato pravidla se soustředí na nejdůležitější problémy v nativním kódu, včetně možných bezpečnostních děr a selhání aplikace. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro vaše nativní projekty.|
 |[Sada pravidel Nativní doporučená pravidla](../code-quality/native-recommended-rules-rule-set.md)|Tato pravidla se zaměřují na nejdůležitější a běžné problémy v nativním kódu, včetně možných bezpečnostních děr a chyb aplikací.  Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro vaše nativní projekty.  Tato RuleSet je navržená tak, aby spolupracovala s edicí Visual Studio Professional a vyšší.|
 |[Sada pravidel Pravidla zabezpečení pro spravovaný kód](../code-quality/security-rules-rule-set-for-managed-code.md)|Tato sada pravidel obsahuje všechna pravidla zabezpečení společnosti Microsoft. Zahrňte tuto sadu pravidel, aby se maximalizoval počet potenciálních chyb zabezpečení, které jsou hlášeny.|

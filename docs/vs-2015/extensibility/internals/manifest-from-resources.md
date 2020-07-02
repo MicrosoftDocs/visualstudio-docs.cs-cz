@@ -1,72 +1,71 @@
 ---
-title: Manifest z prostředků | Dokumentace Microsoftu
+title: Manifest from Resources | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 33d3094c599ddc8cb472bd6defa211f57e85e84f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4827402b63eadf517f031b04b7c7cf2fe8a4f56b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68192625"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537095"
 ---
 # <a name="manifest-from-resources"></a>Manifest z prostředků
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Manifest z prostředků nástroje je konzolová aplikace, která přebírá seznam prostředků obrázků (.png nebo .xaml soubory) a vygeneruje .imagemanifest soubor, který umožňuje tyto Image se použije ve službě Visual Studio bitové kopie. Kromě toho tento nástroj lze přidat Image do existujícího .imagemanifest. Tento nástroj je užitečný pro přidání podporu vysokých hodnot DPI a motivy pro bitové kopie do rozšíření aplikace Visual Studio. Soubor generovaný .imagemanifest by součástí a nasazen jako součást rozšíření sady Visual Studio (VSIX).  
+Nástroj Manifest from Resources je Konzolová aplikace, která přebírá seznam prostředků obrázků (soubory. png nebo. XAML) a generuje soubor. imagemanifest, který umožňuje použití těchto imagí ve službě image sady Visual Studio. Kromě toho lze pomocí tohoto nástroje Přidat obrázky do existujícího. imagemanifest. Tento nástroj je užitečný pro přidání vysokého rozlišení DPI a podpory pro obrázky do rozšíření sady Visual Studio. Vygenerovaný soubor. imagemanifest by měl být součástí a nasazen jako součást rozšíření sady Visual Studio (. vsix).  
   
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj  
  **Syntaxe**  
   
- ManifestFromResources /resources:\<Dir1 >;\< Img1 >/Assembly:\<AssemblyName > \<volitelné argumenty >  
+ ManifestFromResources/Resources: \<Dir1> ; \<Img1> /Assembly je: \<AssemblyName>\<Optional Args>  
   
- **Argumenty**  
+ **Arguments**  
   
-||||  
+|**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|  
 |-|-|-|  
-|**Název přepínače**|**Poznámky**|**Požadované nebo volitelné**|  
-|/Resources|Středníkem oddělený seznam imagí nebo adresáře. Tento seznam by měl vždy obsahovat seznam všech imagí, které budou v manifestu. -Li zadána je částečný seznam, jen položky nejsou zahrnuty budou ztraceny.<br /><br /> Pokud je soubor daný prostředek obrázku, nástroj bude ho rozdělte do samostatné obrázky před přidáním každý subimage do manifestu.<br /><br /> Pokud na obrázku je soubor ve formátu PNG, doporučujeme že formát názvu tímto způsobem tak, aby nástroj můžete přejít k vyplnění správné atributy obrázku: \<Název >. \<Šířka >. \<Výška > PNG.|Požadováno|  
-|/ Assembly|Název spravovaného sestavení (nikoli včetně přípony) nebo cesta k modulu runtime nativní sestavení, který je hostitelem zdroje (relativní k umístění manifestu modulu runtime).|Požadováno|  
-|Volba/manifest|Název souboru generovaného .imagemanifest. To může zahrnovat absolutní nebo relativní cestu k vytvoření souboru v jiném umístění. Výchozí název odpovídá názvu sestavení.<br /><br /> Výchozí hodnota: \<Aktuální adresář >\\< sestavení\>.imagemanifest|volitelná,|  
-|/guidName|Název symbolu identifikátor GUID pro všechny Image v generovaném manifestu.<br /><br /> Výchozí hodnota: AssetsGuid|volitelná,|  
-|/rootPath|Kořenová cesta, kterou je potřeba se odstraní před vytvořením spravovaného prostředku identifikátorů URI. (Tento příznak je pomoct s případy, kde nástroj získá relativní cestou URI chybný, způsobí prostředky na nepodaří zavést.)<br /><br /> Výchozí hodnota: \<Aktuální adresář >|volitelná,|  
-|/ Recursive|Nastavení tohoto příznaku instruuje nástroj rekurzivně prohledávat všechny adresáře v argumentu /resources. Tento příznak vynechání způsobí top-úrovně pouze pro vyhledávání adresářů.|volitelná,|  
-|/isNative|Tento příznak nastavte, když je argumentem sestavení cestu pro nativní sestavení. Název spravovaného sestavení po sestavení argument vynechat, nechte tento příznak. (Viz část poznámky pro další informace o tento příznak.)|volitelná,|  
-|/newGuids|Nastavení tohoto příznaku instruuje nástroj pro vytvoření nové hodnoty pro symbol GUID obrázky místo sloučení z existujícího manifestu.|volitelná,|  
-|/newIds|Nastavení tohoto příznaku dává pokyn k vytvoření nové hodnoty symbolů ID pro každý obrázek namísto sloučení hodnoty z existujícího manifestu nástroj.|volitelná,|  
-|/noLogo|Informace o produktu a autorská práva tisk nastavení tohoto příznaku se zastaví.|volitelná,|  
-|/?|Vytiskne informace nápovědy.|volitelná,|  
-|/help|Vytiskne informace nápovědy.|volitelná,|  
+|/resources|Seznam obrázků nebo adresářů oddělených středníkem. Tento seznam by měl vždycky obsahovat úplný seznam imagí, které budou v manifestu. Pokud je zadaný jenom částečný seznam, ztratí se položky, které nejsou zahrnuté.<br /><br /> Pokud je daný soubor prostředků pruhem obrázku, nástroj ho rozdělí do samostatných imagí před přidáním každého dílčího obrázku do manifestu.<br /><br /> Pokud je obrázek souborem. png, doporučujeme tento název naformátovat tak, aby nástroj mohl vyplnit správné atributy obrázku: \<Name> . \<Width> . \<Height> . PNG.|Vyžadováno|  
+|/Assembly je|Název spravovaného sestavení (nezahrnuje rozšíření) nebo cesta modulu runtime nativního sestavení, které hostuje prostředky (vzhledem k umístění modulu runtime manifestu).|Vyžadováno|  
+|/manifest|Název, který má být vygenerován souboru. imagemanifest. To může také zahrnovat absolutní nebo relativní cestu k vytvoření souboru v jiném umístění. Výchozí název odpovídá názvu sestavení.<br /><br /> Výchozí: \<Current Directory> \\<Assembly \> . imagemanifest|Volitelné|  
+|/guidName|Název, který má být zadán pro symbol identifikátoru GUID pro všechny obrázky ve vygenerovaném manifestu.<br /><br /> Výchozí: AssetsGuid|Volitelné|  
+|/rootPath|Kořenová cesta, kterou je třeba před vytvořením identifikátorů URI spravovaného prostředku odepsat. (Tento příznak vám pomůže s případy, kdy nástroj získá neoprávněnou cestu k relativnímu identifikátoru URI, což způsobí selhání načtení prostředků.)<br /><br /> Výchozí\<Current Directory>|Volitelné|  
+|/Recursive|Nastavením tohoto příznaku sdělíte nástroji rekurzivní hledání adresářů v argumentu/Resources. Vynechání tohoto příznaku způsobí, že se adresáře budou hledat jenom na nejvyšší úrovni.|Volitelné|  
+|/isNative|Pokud je argumentem sestavení cesta k nativnímu sestavení, nastavte tento příznak. Tento příznak vynechejte, pokud je argumentem sestavení název spravovaného sestavení. (Další informace o tomto příznaku najdete v části poznámky.)|Volitelné|  
+|/newGuids|Nastavením tohoto příznaku se dozvíte, že nástroj vytvoří novou hodnotu pro symbol GUID obrázku, místo abyste museli sloučit z existujícího manifestu.|Volitelné|  
+|/newIds|Nastavením tohoto příznaku se dozvíte, že nástroj vytvoří nové hodnoty symbolů ID pro každý obrázek místo sloučení hodnot z existujícího manifestu.|Volitelné|  
+|/noLogo|Nastavením tohoto příznaku se zastaví tisk informací o produktech a copyrightech.|Volitelné|  
+|/?|Vytiskněte informace o nápovědě.|Volitelné|  
+|/help|Vytiskněte informace o nápovědě.|Volitelné|  
   
  **Příklady**  
   
-- ManifestFromResources /resources:D:\Images /assembly:My.Assembly.Name /isNative  
+- ManifestFromResources/Resources: D:\Images/Assembly je: My. Assembly. Name/isNative  
   
-- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /manifest:MyImageManifest.imagemanifest  
+- ManifestFromResources/resources:D:\Images\Image1.png;D: \Images\Image1.xaml/Assembly je: My. Assembly. Name/manifest: MyImageManifest. imagemanifest  
   
-- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /guidName:MyImages /newGuids /newIds  
+- ManifestFromResources/resources:D:\Images\Image1.png;D: \Images\Image1.xaml/Assembly je: My. Assembly. Name/guidName: MyImages/newGuids/newIds  
   
 ## <a name="notes"></a>Poznámky  
   
-- Nástroj podporuje jenom soubory ve formátu PNG a .xaml. U jiných typů souboru bitové kopie nebo se budou ignorovat. Vygeneruje se upozornění pro všechny nepodporované typy při analýze prostředky. Pokud ne, podporovány bitové kopie se nacházejí dokončení nástroj Analýza kódu prostředky, bude vygenerována chyba  
+- Nástroj podporuje pouze soubory. png a. XAML. Všechny ostatní typy obrázků nebo souborů budou ignorovány. Pro všechny nepodporované typy zjištěné při analýze prostředků se vygeneruje upozornění. Pokud se po dokončení analýzy prostředků nenaleznou žádné podporované image, vygeneruje se chyba.  
   
-- Pomocí následujících navrhované formátu pro obrázky ve formátu PNG, nástroj nastaví hodnota velikosti/dimenze ve formátu PNG velikosti určený formát i v případě, že se liší od skutečné velikosti na obrázku.  
+- Podle navrženého formátu pro obrázky. png nástroj nastaví hodnotu velikost/dimenze pro formát. png na velikost zadanou velikostí, a to i v případě, že se liší od skutečné velikosti obrázku.  
   
-- Lze vynechat šířky a výšky formátu pro obrázky ve formátu PNG, ale nástroj číst skutečné šířky a výšky na obrázku, který se použijí pro hodnotu velikosti/dimenze na obrázku.  
+- Formát Width/Height lze pro obrázky. png vynechat, ale nástroj si přečte skutečnou šířku a výšku obrázku a použije je pro hodnotu velikosti a dimenze obrázku.  
   
-- Spuštění tohoto nástroje na stejné obrázku více než jednou pro stejný .imagemanifest způsobí duplicitní položky manifestu, protože se nástroj pokusí rozdělení obrázku na samostatné obrázky a přidat do existující manifest.  
+- Spuštění tohoto nástroje na stejném svazku s obrázkem několikrát pro stejný svazek. imagemanifest bude mít za následek duplicitní položky manifestu, protože se nástroj pokusí rozdělit obrázek do samostatných imagí a přidat je do existujícího manifestu.  
   
-- Sloučení (vynechání /newGuids nebo /newIds) lze provádět pouze pro nástroj vygeneruje manifesty. Manifestů, které jste přizpůsobili nebo vygenerované pomocí jiným způsobem nemusí správně sloučit.  
+- Sloučení (vynechání/newGuids nebo/newIds) by mělo být provedeno pouze pro manifesty vygenerované nástrojem. Manifesty, které byly přizpůsobené nebo vygenerované prostřednictvím jiných prostředků, se nemusí správně sloučit.  
   
-- Manifesty, které jsou generovány pro nativní sestavení možná bude nutné ručně upravit po vygenerování aby symboly ID odpovídat ID ze souboru .rc nativní sestavení prostředků.  
+- Manifesty, které jsou generovány pro nativní sestavení, mohou být po generaci ručně upravovány, aby se symboly ID shodovaly s ID prostředků ze souboru. RC nativního sestavení.  
   
 ## <a name="sample-output"></a>Vzorový výstup  
- **Jednoduchý obrázek manifestu**  
+ **Jednoduchý manifest obrázku**  
   
- Image manifest bude vypadat podobně jako tento soubor XML:  
+ Manifest obrázku bude podobný tomuto souboru. XML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -90,9 +89,9 @@ Manifest z prostředků nástroje je konzolová aplikace, která přebírá sezn
 </ImageManifest>  
 ```  
   
- **Obrázek manifest pro obrázku**  
+ **Manifest obrázku pro pruh obrázku**  
   
- Manifest image pro obrázku bude vypadat podobně jako tento soubor XML:  
+ Manifest obrázku pro pruh obrázku bude podobný tomuto souboru. XML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -127,9 +126,9 @@ Manifest z prostředků nástroje je konzolová aplikace, která přebírá sezn
 </ImageManifest>  
 ```  
   
- **Manifest Image pro prostředky sestavení nativní bitové kopie**  
+ **Manifest obrázku pro prostředky nativního bitové kopie sestavení**  
   
- Manifest image pro nativní bitové kopie bude vypadat podobně jako tento soubor XML:  
+ Manifest obrázku pro nativní bitové kopie bude vypadat podobně jako tento soubor. XML:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

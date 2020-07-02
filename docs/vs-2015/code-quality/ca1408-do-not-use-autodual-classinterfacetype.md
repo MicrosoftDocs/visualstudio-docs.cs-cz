@@ -15,33 +15,33 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3ccd8f9fa201e2cdfabfb7f6354d6df4718c572e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b953a97d557e28cce50f554acc03797d4be38220
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652758"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534872"
 ---
-# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: Nepoužívejte AutoDual ClassInterfaceType
+# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: Nepoužívejte typ AutoDual ClassInterface
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotUseAutoDualClassInterfaceType|
 |CheckId|CA1408|
 |Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Viditelný typ objektu součásti modelu COM je označen atributem <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> nastaveným na hodnotu `AutoDual` <xref:System.Runtime.InteropServices.ClassInterfaceType>.
+## <a name="cause"></a>Příčina
+ Viditelný typ modelu COM (Component Object Model) je označen <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributem nastaveným na `AutoDual` hodnotu <xref:System.Runtime.InteropServices.ClassInterfaceType> .
 
 ## <a name="rule-description"></a>Popis pravidla
- Typy, které používají duální rozhraní, umožňují klientům navázat se na určité rozložení rozhraní. Změny v budoucí verzi rozložení typu nebo jakéhokoli základního typu přeruší klienty modulu COM, kteří jsou navázáni na toto rozhraní. Ve výchozím nastavení, pokud není zadán atribut <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>, je použito pouze odesílající rozhraní.
+ Typy, které používají duální rozhraní, umožňují klientům navázat se na určité rozložení rozhraní. Změny v budoucí verzi rozložení typu nebo jakéhokoli základního typu přeruší klienty modulu COM, kteří jsou navázáni na toto rozhraní. Ve výchozím nastavení platí, že pokud <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atribut není zadán, je použita pouze odesílající rozhraní.
 
  Pokud není určeno jinak, všechny veřejné neobecné typy jsou viditelné pro COM; všechny NonPublic a obecné typy jsou neviditelné v modelu COM.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte hodnotu atributu <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> na hodnotu `None` <xref:System.Runtime.InteropServices.ClassInterfaceType> a explicitně definujte rozhraní.
+ Chcete-li opravit porušení tohoto pravidla, změňte hodnotu <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributu na `None` hodnotu <xref:System.Runtime.InteropServices.ClassInterfaceType> a explicitně definujte rozhraní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Potlačí upozornění z tohoto pravidla, pokud není jisté, že rozložení typu a jeho základní typy se v budoucí verzi nezmění.

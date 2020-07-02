@@ -19,7 +19,7 @@ ms.locfileid: "85536225"
 Nástroj Manifest from Resources je Konzolová aplikace, která přebírá seznam prostředků obrázků (soubory. png nebo. XAML) a generuje soubor. imagemanifest, který umožňuje použití těchto imagí ve službě image sady Visual Studio. Kromě toho lze pomocí tohoto nástroje Přidat obrázky do existujícího. imagemanifest. Tento nástroj je užitečný pro přidání vysokého rozlišení DPI a podpory pro obrázky do rozšíření sady Visual Studio. Vygenerovaný soubor. imagemanifest by měl být součástí a nasazen jako součást rozšíření sady Visual Studio (. vsix).
 
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj
- **Syntax**
+ **Syntaxe**
 
  ManifestFromResources/Resources: \<Dir1> ; \<Img1> /Assembly je: \<AssemblyName>\<Optional Args>
 

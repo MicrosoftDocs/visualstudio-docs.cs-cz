@@ -49,7 +49,7 @@ Publikování do [Azure Container Registry](/azure/container-registry/) podle kr
 
 Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nasadit do Azure App Service](deploy-app-service.md) 
  [Nástroje kontejneru sady Visual Studio](/visualstudio/containers/).

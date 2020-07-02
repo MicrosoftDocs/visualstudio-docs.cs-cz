@@ -360,6 +360,6 @@ Chcete-li otestovat vlastního hostitele textových šablon, musíte nejprve nap
     Linked from: ExampleElement1
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Návod: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md)

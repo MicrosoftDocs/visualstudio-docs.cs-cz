@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 34ebe4848bbbe49b9a67449795f0aea7d104af8b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f6d228b0fbf5507ba135f9ddc35d6d8b161f0011
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671629"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534846"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: Identifikátory by neměly obsahovat názvy typů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
 |CheckId|CA1720|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název parametru v externě viditelném členu obsahuje název datového typu.
 
  -nebo-
@@ -40,11 +40,11 @@ ms.locfileid: "72671629"
  Název externě viditelného členu obsahuje název datového typu specifický pro jazyk.
 
 ## <a name="rule-description"></a>Popis pravidla
- Názvy parametrů a členů jsou lépe použity ke sdělení jejich významu, než aby bylo možné popsat jejich typ, který je třeba poskytnout pomocí vývojářských nástrojů. V případě názvů členů, pokud je třeba použít název datového typu, použijte název nezávislá na jazyce, nikoli na konkrétní jazyk. Například namísto názvu C# typu int použijte název datového typu nezávislý na jazyku, Int32.
+ Názvy parametrů a členů jsou lépe použity ke sdělení jejich významu, než aby bylo možné popsat jejich typ, který je třeba poskytnout pomocí vývojářských nástrojů. V případě názvů členů, pokud je třeba použít název datového typu, použijte název nezávislá na jazyce, nikoli na konkrétní jazyk. Například namísto názvu typu ' int ' jazyka C# použijte název datového typu nezávislý na jazyce, Int32.
 
  Všechny diskrétní tokeny v názvu parametru nebo členu jsou zkontrolovány proti následujícím jazykově specifickým názvům datových typů, a to při nerozlišování velkých a malých písmen:
 
-- Logick
+- Logická hodnota
 
 - WChar
 
@@ -56,7 +56,7 @@ ms.locfileid: "72671629"
 
 - UShort
 
-- Hmot
+- Int
 
 - UInt
 
@@ -72,7 +72,7 @@ ms.locfileid: "72671629"
 
 - Podpisy
 
-- Plovák
+- Float
 
 - Float32
 
@@ -84,11 +84,11 @@ ms.locfileid: "72671629"
 
 - Objektu
 
-- Boolean
+- Logická hodnota
 
 - Char
 
-- String
+- Řetězec
 
 - SByte
 
@@ -112,7 +112,7 @@ ms.locfileid: "72671629"
 
 - Střed
 
-- Ukazatele
+- Ukazatel
 
 - UInptr
 
@@ -120,13 +120,13 @@ ms.locfileid: "72671629"
 
 - UPointer
 
-- Single
+- Jeden
 
 - Double
 
 - Desetinné číslo
 
-- Hlavních
+- Identifikátor GUID
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  **Je-li aktivováno proti parametru:**
@@ -147,4 +147,4 @@ ms.locfileid: "72671629"
 
  [CA1707: Identifikátory by neměly obsahovat podtržítka](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 
- [CA1719: Názvy parametrů by neměly odpovídat názvům členů](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)
+ [CA1719: Názvy parametrů by se neměly shodovat s názvy členů](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)

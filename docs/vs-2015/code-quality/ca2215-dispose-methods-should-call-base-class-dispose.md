@@ -16,44 +16,44 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 89f3705169fb9d28a1ec773671d460f00b98d892
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4197c2faaf4aa23db930a9019538592326a84116
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662853"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534378"
 ---
-# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Metody Dispose by měly volat uvolnění třídy Base
+# <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Metody Dispose by měly volat uvolnění základní třídy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|
 |CheckId|CA2215|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> dědí z typu, který také implementuje <xref:System.IDisposable>. Metoda <xref:System.IDisposable.Dispose%2A> děděného typu nevolá metodu <xref:System.IDisposable.Dispose%2A> nadřazeného typu.
+## <a name="cause"></a>Příčina
+ Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> dědí z typu, který také implementuje <xref:System.IDisposable> . <xref:System.IDisposable.Dispose%2A>Metoda dědění typu nevolá <xref:System.IDisposable.Dispose%2A> metodu nadřazeného typu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud typ dědí z typu na jedno použití, musí volat metodu <xref:System.IDisposable.Dispose%2A> základního typu v rámci své vlastní metody <xref:System.IDisposable.Dispose%2A>. Volání metody Dispose základní typ zajistí, že budou uvolněny všechny prostředky vytvořené základním typem.
+ Pokud typ dědí z typu na jedno použití, musí volat <xref:System.IDisposable.Dispose%2A> metodu základního typu v rámci své vlastní <xref:System.IDisposable.Dispose%2A> metody. Volání metody Dispose základní typ zajistí, že budou uvolněny všechny prostředky vytvořené základním typem.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, zavolejte `base`. <xref:System.IDisposable.Dispose%2A> v metodě <xref:System.IDisposable.Dispose%2A>.
+ Chcete-li opravit porušení tohoto pravidla, zavolejte `base` .<xref:System.IDisposable.Dispose%2A> v <xref:System.IDisposable.Dispose%2A> metodě.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění z tohoto pravidla, pokud volání `base`. <xref:System.IDisposable.Dispose%2A> nastane na hlubší úrovni volání než kontroly pravidla.
+ V případě volání metody je bezpečné potlačit upozornění od tohoto pravidla `base` .<xref:System.IDisposable.Dispose%2A> nastane na hlubší úrovni volání než kontroly pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ `TypeA`, který implementuje <xref:System.IDisposable>.
+ Následující příklad ukazuje typ `TypeA` , který implementuje <xref:System.IDisposable> .
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposablePattern/cs/FxCop.Usage.IDisposablePattern.cs#1)]
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ `TypeB`, který dědí z typu `TypeA` a správně volá jeho metodu <xref:System.IDisposable.Dispose%2A>.
+ Následující příklad ukazuje typ `TypeB` , který dědí z typu `TypeA` a správně volá jeho <xref:System.IDisposable.Dispose%2A> metodu.
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableBaseCalled/vb/FxCop.Usage.IDisposableBaseCalled.vb#1)]
 
 ## <a name="see-also"></a>Viz také
- [vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb) <xref:System.IDisposable?displayProperty=fullName>
+ <xref:System.IDisposable?displayProperty=fullName>[Vzor Dispose](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

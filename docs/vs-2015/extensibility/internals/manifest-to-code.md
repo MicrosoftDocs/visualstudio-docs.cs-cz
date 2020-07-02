@@ -1,61 +1,60 @@
 ---
-title: Manifest do kódu | Dokumentace Microsoftu
+title: Manifest to Code | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 5dd39ecfb25b4b21f7a9064da7621bcc77aab791
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb9b02e10a2d263a39e7ae6a150e452ff8321d9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68192651"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537056"
 ---
 # <a name="manifest-to-code"></a>Manifest do kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Manifest pro nástroj kódu je konzolová aplikace, která přijímá soubor .imagemanifest Image služby Visual Studio a vygeneruje soubor souhrnného nebo soubory pro odkazování na image manifest hodnoty v C++, C#, VB nebo soubory .vsct pro rozšíření sady Visual Studio. Tento nástroj generuje obálky soubory, které lze použít pro žádost o Image z Image ve službě Visual Studio přímo, nebo pro předávání manifestu hodnot prostřednictvím rozhraní API, pokud kód zpracovává všechny své vlastní uživatelské rozhraní a vykreslování.  
+Nástroj Manifest to Code je Konzolová aplikace, která přebírá soubor. imagemanifest pro službu image sady Visual Studio a generuje soubor obálky nebo soubory pro odkazování na hodnoty manifestu obrázků v souborech C++, C#, VB nebo. vsct pro rozšíření sady Visual Studio. Tento nástroj generuje obálky soubory, které lze použít pro vyžádání imagí z aplikace Visual Studio Image Service přímo, nebo pro předání hodnot manifestu prostřednictvím rozhraní API, pokud kód nezpracovává žádné vlastní uživatelské rozhraní a vykreslování.  
   
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj  
  **Syntaxe**  
   
- Volba/manifest ManifestToCode:\<soubor manifestu Image > /language:\<jazyk kódu > \<volitelné argumenty >  
+ ManifestToCode/manifest: \<Image Manifest file> /Language: \<Code Language>\<Optional Args>  
   
- **Argumenty**  
+ **Arguments**  
   
-||||  
+|**Název přepínače**|**Poznámky**|**Povinné nebo volitelné**|  
 |-|-|-|  
-|**Název přepínače**|**Poznámky**|**Požadované nebo volitelné**|  
-|Volba/manifest|Cesta k manifestu image chcete použít k vytvoření nebo aktualizaci kódu obálky.|Požadováno|  
-|/Language|Jazyk, ve které se mají vygenerovat obálku kódu.<br /><br /> Platné hodnoty: CPP, C++, CS, CSharp, C#, VB nebo VSCT hodnoty jsou malá a velká písmena.<br /><br /> Pro jazyk VSCT možnost /monikerClass, /classAccess a/Namespace možnosti jsou ignorovány.|Požadováno|  
-|/imageIdClass|Název imageIdClass a přidružený soubor vytvořené nástrojem. Pro možnost jazyka C++ jsou generovány pouze soubory hlaviček.<br /><br /> Výchozí hodnota: \<Cesta k manifestu > \MyImageIds. \<Lang ext, přípona >|volitelná,|  
-|/monikerClass|Název monikerClass a přidružený soubor vytvořené nástrojem. Pro možnost jazyka C++ jsou generovány pouze soubory hlaviček. To se ignoruje pro VSCT jazyk.<br /><br /> Výchozí hodnota: \<Cesta k manifestu > \MyMonikers. \<Lang ext, přípona >|volitelná,|  
-|/classAccess|Modifikátor přístupu pro imageIdClass a monikerClass. Ujistěte se, že modifikátor přístupu je platná pro daný jazyk. To se ignoruje pro možnost VSCT jazyka.<br /><br /> Výchozí hodnota: Public|volitelná,|  
-|/ Namespace|Obor názvů definovaný v obálku kódu. To se ignoruje pro možnost VSCT jazyka. Buď "." nebo '::' je platný obor názvů oddělovače, bez ohledu na to možnost zvoleném jazyce.<br /><br /> Výchozí hodnota: MyImages|volitelná,|  
-|/noLogo|Informace o produktu a autorská práva tisk nastavení tohoto příznaku se zastaví.|volitelná,|  
-|/?|Vytiskne informace nápovědy.|volitelná,|  
-|/help|Vytiskne informace nápovědy.|volitelná,|  
+|/manifest|Cesta k manifestu obrázku, který se má použít k vytvoření nebo aktualizaci obálky kódu.|Vyžadováno|  
+|/Language|Jazyk, ve kterém má být vygenerována obálka kódu<br /><br /> Platné hodnoty: CPP, C++, CS, CSharp, C#, VB nebo VSCT v hodnotách se nerozlišují malá a velká písmena.<br /><br /> Pro možnost jazyka VSCT se možnosti/monikerClass,/classAccess a/Namespace ignorují.|Vyžadováno|  
+|/imageIdClass|Název imageIdClass a přidružený soubor, který nástroj vytvořil. Pro možnost jazyka C++ jsou vygenerovány pouze soubory. h.<br /><br /> Výchozí: \<Manifest Path> \MyImageIds.\<Lang Ext>|Volitelné|  
+|/monikerClass|Název monikerClass a přidružený soubor, který nástroj vytvořil. Pro možnost jazyka C++ jsou vygenerovány pouze soubory. h. Ignoruje se pro jazyk VSCT.<br /><br /> Výchozí: \<Manifest Path> \MyMonikers.\<Lang Ext>|Volitelné|  
+|/classAccess|Modifikátor přístupu pro imageIdClass a monikerClass. Ujistěte se, že modifikátor přístupu je pro daný jazyk platný. Toto nastavení se ignoruje u možnosti VSCT Language.<br /><br /> Výchozí: veřejné|Volitelné|  
+|/Namespace|Obor názvů definovaný v obálce kódu. Toto nastavení se ignoruje u možnosti VSCT Language. Buď. nebo:: jsou platné oddělovače oboru názvů bez ohledu na zvolenou možnost jazyka.<br /><br /> Výchozí: MyImages|Volitelné|  
+|/noLogo|Nastavením tohoto příznaku se zastaví tisk informací o produktech a copyrightech.|Volitelné|  
+|/?|Vytiskněte informace o nápovědě.|Volitelné|  
+|/help|Vytiskněte informace o nápovědě.|Volitelné|  
   
  **Příklady**  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:CSharp  
+- ManifestToCode/manifest: D:\MyManifest.imagemanifest/Language: CSharp  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:C++/namespace: Moje:: Namespace /imageIdClass:MyImageIds /monikerClass:MyMonikers /classAccess:friend  
+- ManifestToCode/manifest: D:\MyManifest.imagemanifest/Language: C++/Namespace: My:: Namespace/imageIdClass: MyImageIds/monikerClass: MyMonikers/classAccess: Friend  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:VSCT /imageIdClass:MyImageIds  
+- ManifestToCode/manifest: D:\MyManifest.imagemanifest/Language: VSCT/imageIdClass: MyImageIds  
   
 ## <a name="notes"></a>Poznámky  
   
-- Doporučujeme použít tento nástroj se image manifestů, které byly vytvořeny podle Manifest z prostředků nástroje.  
+- Tento nástroj doporučujeme používat s manifesty obrázků generovanými nástrojem Manifest from Resources.  
   
-- Nástroj zjistí pouze položky symbolů ke generování kódu obálky. Pokud image manifest obsahuje žádné symboly, obálky vygenerovaný kód bude prázdný. Pokud je obrázek nebo sadu bitových kopií v manifestu obrázků, které nepoužívají symboly, budou vyloučeny z obálku kódu.  
+- Nástroj vyhledá obálky kódu pouze v záznamech symbolů. Pokud manifest obrázku neobsahuje žádné symboly, vygenerované obálky kódu budou prázdné. Pokud je v manifestu obrázku obrázek nebo sada obrázků, které symboly nepoužívají, budou vyloučeny z obálky kódu.  
   
 ## <a name="sample-output"></a>Ukázkový výstup  
- **C# – obálky**  
+ **Obálky C#**  
   
- Dvojice ID jednoduché bitové kopie a moniker bitové kopie třídy pro C# bude vypadat jako následující kód:  
+ Dvojice jednoduchých IDENTIFIKÁTORů obrázků a tříd monikerů obrázků pro jazyk C# bude podobná následujícímu kódu:  
   
 ```csharp  
 //-----------------------------------------------------------------------------  
@@ -96,9 +95,9 @@ namespace MyImages
 }  
 ```  
   
- **Obálky jazyka C++**  
+ **Obálky C++**  
   
- Dvojice ID jednoduché bitové kopie a moniker bitové kopie třídy pro C++ bude vypadat jako následující kód:  
+ Dvojice jednoduchého ID obrázku a třídy monikeru obrázků pro C++ bude podobná následujícímu kódu:  
   
 ```cpp  
 //-----------------------------------------------------------------------------  
@@ -155,9 +154,9 @@ __declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::As
 }  
 ```  
   
- **Obálky jazyka Visual Basic**  
+ **Visual Basic obálky**  
   
- Dvojice ID jednoduché bitové kopie a moniker bitové kopie třídy pro Visual Basic, bude vypadat jako následující kód:  
+ Dvojice jednoduchého ID obrázku a třídy monikeru imagí pro Visual Basic bude podobná následujícímu kódu:  
   
 ```vb  
 ' -----------------------------------------------------------------------------  
@@ -213,7 +212,7 @@ End Namespace
   
  **Obálka VSCT**  
   
- Sada ID obrázku pro souboru .vsct bude podobný tomuto:  
+ Sada ID imagí pro soubor. vsct bude vypadat přibližně takto:  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  

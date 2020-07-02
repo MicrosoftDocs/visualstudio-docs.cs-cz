@@ -12,16 +12,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5349c08497bc52c32a4ffed30b74f2d3bd71e4e
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 6f0e0ce657c1cc0ed79d56e3daa90480ed0c1381
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911317"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536490"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>Použití samostatného kolektoru IntelliTrace (C#, Visual Basic)
 
-**Samostatný kolektor IntelliTrace** umožňuje shromažďovat diagnostická data IntelliTrace pro vaše aplikace na produkčních serverech nebo v jiných prostředích, aniž by bylo nutné instalovat Visual Studio do cílového počítače a beze změny cílového systému. hlediska. Samostatné kolektor IntelliTrace funguje na webech, SharePointu, WPF a aplikacích model Windows Forms. Až budete hotovi s shromažďováním dat, stačí odstranit kolektor a odinstalovat ho.
+**Samostatný kolektor IntelliTrace** umožňuje shromažďovat diagnostická data IntelliTrace pro vaše aplikace na produkčních serverech nebo v jiných prostředích, aniž by bylo nutné instalovat sadu Visual Studio do cílového počítače a přitom beze změny prostředí cílového systému. Samostatné kolektor IntelliTrace funguje na webech, SharePointu, WPF a aplikacích model Windows Forms. Až budete hotovi s shromažďováním dat, stačí odstranit kolektor a odinstalovat ho.
 
  Sledujte IntelliTrace v akci: [shromažďování a analýza dat IntelliTrace v produkčním prostředí pro ladění (video pro kanál 9)](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)
 
@@ -44,13 +44,13 @@ ms.locfileid: "72911317"
 
 - [Které aplikace pracují se sadou kolekcí?](#WhatApps)
 
-- [Návody začít?](#GetStarted)
+- [Jak mám začít?](#GetStarted)
 
 - [Jak můžu získat většinu dat bez zpomalení aplikace?](#Minimizing)
 
 - [Kde jinak můžu získat IntelliTrace data?](#WhereElse)
 
-## <a name="WhatApps"></a>Které aplikace pracují se sadou kolekcí?
+## <a name="what-apps-work-with-the-collector"></a><a name="WhatApps"></a>Které aplikace pracují se sadou kolekcí?
 
 - Webové aplikace ASP.NET hostované ve službě Internetová informační služba (IIS) verze 7,0, 7,5, 8,0, 12,0 a 16,0
 
@@ -58,7 +58,7 @@ ms.locfileid: "72911317"
 
 - Windows Presentation Foundation (WPF) a aplikace model Windows Forms.
 
-## <a name="GetStarted"></a>Návody začít?
+## <a name="how-do-i-get-started"></a><a name="GetStarted"></a>Návody začít?
 
 1. [Instalace kolekce](#BKMK_Install_the_IntelliTrace_Stand_Alone_Collector)
 
@@ -76,7 +76,7 @@ ms.locfileid: "72911317"
 
 6. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a>Instalace kolekce
+## <a name="install-the-collector"></a><a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a>Instalace kolekce
 
 1. Na serveru vaší aplikace vytvořte adresář kolektoru, například: **C:\IntelliTraceCollector** .
 
@@ -84,17 +84,17 @@ ms.locfileid: "72911317"
 
    - **Stažení softwaru** nebo **My.VisualStudio.com**společnosti Microsoft:
 
-     1. Vedle **soubor IntelliTraceCollector. exe**klikněte na **Stáhnout**.
+     1. Vedle **IntelliTraceCollector.exe**klikněte na **Stáhnout**.
 
-     2. Uložte soubor IntelliTraceCollector. exe do adresáře kolektoru, například: **C:\IntelliTraceCollector**
+     2. Uložte IntelliTraceCollector.exe do adresáře kolektoru, například: **C:\IntelliTraceCollector**
 
-     3. Spusťte soubor IntelliTraceCollector. exe. Tím se extrahuje soubor IntelliTraceCollection. cab.
+     3. Spusťte IntelliTraceCollector.exe. Tím se extrahuje soubor IntelliTraceCollection.cab.
 
-        \- nebo-
+        \-ani
 
    - **Instalační složka sady Visual Studio**:
 
-     1. Zkopírujte IntelliTraceCollection. cab ze složky, ve které je nainstalován kolektor, například:
+     1. Zkopírujte IntelliTraceCollection.cab ze složky, ve které je kolektor nainstalován, například:
 
           **.. \Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace**
 
@@ -102,28 +102,28 @@ ms.locfileid: "72911317"
 
           **.. \Microsoft Visual Studio 12.0 \ Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
-     2. Vložte IntelliTraceCollection. cab do adresáře kolektoru, například: **C:\IntelliTraceCollector**
+     2. Vložte IntelliTraceCollection.cab do adresáře kolektoru, například: **C:\IntelliTraceCollector**
 
-3. Rozbalte IntelliTraceCollection. cab:
+3. Rozbalte IntelliTraceCollection.cab:
 
    1. Na serveru vaší aplikace otevřete okno příkazového řádku jako správce.
 
    2. Přejděte do adresáře kolektoru, například: **C:\IntelliTraceCollector**
 
-   3. Pomocí příkazu **expand** , včetně tečky ( **.** ) na konci, rozbalte IntelliTraceCollection. cab:
+   3. Pomocí příkazu **Rozbalit** , včetně tečky (**.**) na konci, rozbalte IntelliTraceCollection.cab:
 
         `expand  /f:* IntelliTraceCollection.cab .`
 
        > [!NOTE]
-       > Tečka ( **.** ) zachová podsložky, které obsahují lokalizované plány kolekcí.
+       > Tečka (**.**) zachová podsložky, které obsahují lokalizované plány kolekcí.
 
-## <a name="ConfigurePermissionsRunningCollector"></a>Nastavení oprávnění pro adresář sběrače
+## <a name="set-up-permissions-for-the-collector-directory"></a><a name="ConfigurePermissionsRunningCollector"></a>Nastavení oprávnění pro adresář sběrače
 
 1. Na serveru vaší aplikace otevřete okno příkazového řádku jako správce.
 
 2. Pomocí příkazu Windows **Icacls** udělte správci serveru úplná oprávnění k adresáři kolektoru. Příklad:
 
-     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID >* `":F`
+     `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
 3. Shromažďování dat pro webovou aplikaci nebo aplikaci služby SharePoint:
 
@@ -131,7 +131,7 @@ ms.locfileid: "72911317"
 
          Příklad:
 
-         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID >* `":F`
+         `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2. Udělte fondu aplikací oprávnění ke čtení a spouštění aplikace SharePoint pro adresář sběrače.
 
@@ -145,7 +145,7 @@ ms.locfileid: "72911317"
 
              `icacls "C:\IntelliTraceCollector" /grant "IIS APPPOOL\SharePoint - 80":RX`
 
-## <a name="BKMK_Set_up_the_IntelliTrace_PowerShell_commandlets"></a>Instalace rutin prostředí PowerShell pro IntelliTrace pro shromažďování dat pro webové aplikace nebo aplikace služby SharePoint
+## <a name="install-intellitrace-powershell-cmdlets-to-collect-data-for-web-apps-or-sharepoint-applications"></a><a name="BKMK_Set_up_the_IntelliTrace_PowerShell_commandlets"></a>Instalace rutin prostředí PowerShell pro IntelliTrace pro shromažďování dat pro webové aplikace nebo aplikace služby SharePoint
 
 1. Na serveru vaší aplikace se ujistěte, že je PowerShell povolený. Ve většině verzí Windows serveru můžete tuto funkci přidat do nástroje pro správu **Správce serveru** .
 
@@ -161,15 +161,15 @@ ms.locfileid: "72911317"
 
             - V 64 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell**. Vyberte **Spustit jako správce**.
 
-            - V 32 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell (x86)** . Vyberte **Spustit jako správce**.
+            - V 32 operačních systémech otevřete místní nabídku **prostředí Windows PowerShell (x86)**. Vyberte **Spustit jako správce**.
 
-    2. V příkazovém okně PowerShellu použijte příkaz **Import-Module** pro import **Microsoft. VisualStudio. IntelliTrace. PowerShell. dll**.
+    2. V příkazovém okně PowerShellu pomocí příkazu **Import-Module** importujte **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll**.
 
          Příklad:
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
-## <a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a>Nastavení oprávnění pro adresář souboru. iTrace
+## <a name="set-up-permissions-for-the-itrace-file-directory"></a><a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a>Nastavení oprávnění pro adresář souboru. iTrace
 
 1. Na serveru vaší aplikace vytvořte adresář souboru. iTrace, například: **C:\IntelliTraceLogFiles**
 
@@ -209,15 +209,15 @@ ms.locfileid: "72911317"
 
      5. Do pole **Zadejte názvy objektů k výběru** přidejte fond aplikací pro webovou aplikaci nebo aplikaci služby SharePoint.
 
-     6. Pro překlad názvu vyberte možnost **kontrolovat názvy** . Klikněte na **tlačítko OK**.
+     6. Pro překlad názvu vyberte možnost **kontrolovat názvy** . Vyberte **OK**.
 
      7. Ujistěte se, že fond aplikací má **oprávnění Úplné řízení**.
 
-## <a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a>Shromažďování dat z webové aplikace nebo aplikace služby SharePoint
+## <a name="collect-data-from-a-web-app-or-sharepoint-application"></a><a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a>Shromažďování dat z webové aplikace nebo aplikace služby SharePoint
 
 1. Pokud chcete začít shromažďovat data, otevřete okno příkazového řádku PowerShellu jako správce a pak spusťte tento příkaz:
 
-     `Start-IntelliTraceCollection` `"` *\<ApplicationPool >* `"` *\<PathToCollectionPlan >* *\<FullPathToITraceFileDirectory >*
+     `Start-IntelliTraceCollection` `"` *\<ApplicationPool>* `"` *\<PathToCollectionPlan>* *\<FullPathToITraceFileDirectory>*
 
     > [!IMPORTANT]
     > Po spuštění tohoto příkazu zadejte **Y** a potvrďte tak, že chcete začít shromažďovat data.
@@ -226,21 +226,21 @@ ms.locfileid: "72911317"
 
      `Start-IntelliTraceCollection "SharePoint - 80" "C:\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogFiles"`
 
-    |||
+    |Name|Popis|
     |-|-|
     |*ApplicationPool*|Název fondu aplikací, ve kterém se vaše aplikace spouští|
-    |*PathToCollectionPlan*|Cesta k plánu shromažďování dat, soubor. XML, který konfiguruje nastavení pro kolektor.<br /><br /> Můžete zadat plán, který je součástí kolekce. Následující plány fungují pro webové aplikace a aplikace služby SharePoint:<br /><br /> -collection_plan. ASP. NET. default. XML<br />     Shromažďuje pouze události IntelliTrace a události služby SharePoint, včetně výjimek, volání databáze a požadavků na webový server.<br />-collection_plan. ASP. NET. Trace. XML<br />     Shromažďuje volání funkcí a všechna data v collection_plan. ASP. NET. default. XML. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit aplikaci více než collection_plan. ASP. NET. default. XML.<br /><br /> Abyste se vyhnuli zpomalení vaší aplikace, přizpůsobte si tyto plány nebo vytvořte vlastní plán. Z důvodu zabezpečení umístěte vlastní plány do stejného zabezpečeného umístění jako soubory kolektoru. Přečtěte si téma [Vytvoření a přizpůsobení plánů kolekcí IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) a [návody získání většiny dat bez zpomalení aplikace?](#Minimizing) **Poznámka:**  Ve výchozím nastavení je maximální velikost souboru. iTrace 100 MB. Když soubor. iTrace dosáhne tohoto limitu, kolektor odstraní nejstarší položky souboru, aby bylo možné místo pro novější položky. Chcete-li tento limit změnit, upravte atribut `MaximumLogFileSize` plánu kolekcí. <br /><br /> *Kde najdu lokalizované verze těchto plánů kolekcí?*<br /><br /> Lokalizované plány můžete najít v podsložkách kolekce.|
+    |*PathToCollectionPlan*|Cesta k plánu shromažďování dat, soubor. XML, který konfiguruje nastavení pro kolektor.<br /><br /> Můžete zadat plán, který je součástí kolekce. Následující plány fungují pro webové aplikace a aplikace služby SharePoint:<br /><br /> -collection_plan.ASP.NET.default.xml<br />     Shromažďuje pouze události IntelliTrace a události služby SharePoint, včetně výjimek, volání databáze a požadavků na webový server.<br />-collection_plan.ASP.NET.trace.xml<br />     Shromažďuje volání funkcí a všechna data v collection_plan.ASP.NET.default.xml. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit aplikaci více než collection_plan.ASP.NET.default.xml.<br /><br /> Abyste se vyhnuli zpomalení vaší aplikace, přizpůsobte si tyto plány nebo vytvořte vlastní plán. Z důvodu zabezpečení umístěte vlastní plány do stejného zabezpečeného umístění jako soubory kolektoru. Přečtěte si téma [Vytvoření a přizpůsobení plánů kolekcí IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) a [návody získání většiny dat bez zpomalení aplikace?](#Minimizing) **Poznámka:**  Ve výchozím nastavení je maximální velikost souboru. iTrace 100 MB. Když soubor. iTrace dosáhne tohoto limitu, kolektor odstraní nejstarší položky souboru, aby bylo možné místo pro novější položky. Chcete-li tento limit změnit, upravte atribut plánu kolekce `MaximumLogFileSize` . <br /><br /> *Kde najdu lokalizované verze těchto plánů kolekcí?*<br /><br /> Lokalizované plány můžete najít v podsložkách kolekce.|
     |*FullPathToITraceFileDirectory*|Úplná cesta k adresáři souboru. iTrace. **Poznámka k zabezpečení:**  Zadejte úplnou cestu, nikoli relativní cestu.|
 
      Kolektor se připojí k fondu aplikací a začne shromažďovat data.
 
      *Můžu v tuto chvíli otevřít soubor. iTrace?* Ne, soubor je během shromažďování dat uzamčen.
 
-2. Reprodukování problému.
+2. Reprodukujte problém.
 
 3. Chcete-li vytvořit kontrolní bod souboru. iTrace, použijte tuto syntaxi:
 
-     `Checkpoint-IntelliTraceCollection` `"` *\<ApplicationPool >* `"`
+     `Checkpoint-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`
 
 4. Ke kontrole stavu shromažďování použijte tuto syntaxi:
 
@@ -248,27 +248,27 @@ ms.locfileid: "72911317"
 
 5. Chcete-li zastavit shromažďování dat, použijte tuto syntaxi:
 
-     `Stop-IntelliTraceCollection` `"` *\<ApplicationPool >* `"`
+     `Stop-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`
 
     > [!IMPORTANT]
     > Po spuštění tohoto příkazu zadejte **Y** a potvrďte tak, že chcete zastavit shromažďování dat. V opačném případě může kolektor i nadále shromažďovat data, soubor iTrace zůstane uzamčený nebo soubor nemusí obsahovat užitečná data.
 
 6. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="BKMK_Collect_Data_from_Executables"></a>Shromažďovat data ze spravované aplikace
+## <a name="collect-data-from-a-managed-app"></a><a name="BKMK_Collect_Data_from_Executables"></a>Shromažďovat data ze spravované aplikace
 
 1. Pokud chcete spustit aplikaci a shromažďovat data ve stejnou dobu, použijte tuto syntaxi:
 
-     *\<FullPathToIntelliTraceCollectorExecutable >* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan >* `/f:` *\<FullPathToITraceFileDirectoryAndFileName >* *\<PathToAppExecutableFileAndFileName >*
+     *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
 
      Například pro shromažďování dat z aplikace s názvem **MyApp**:
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 
-    |||
+    |Name|Popis|
     |-|-|
-    |*FullPathToIntelliTraceCollectorExecutable*|Úplná cesta ke spustitelnému souboru kolektoru, IntelliTraceSC. exe|
-    |*PathToCollectionPlan*|Cesta k plánu shromažďování dat, soubor. XML, který konfiguruje nastavení pro kolektor.<br /><br /> Můžete zadat plán, který je součástí kolekce. Následující plány fungují pro spravované aplikace:<br /><br /> -collection_plan. ASP. NET. default. XML<br />     Shromažďuje pouze události IntelliTrace, včetně výjimek, volání databáze a požadavků na webový server.<br />-collection_plan. ASP. NET. Trace. XML<br />     Shromažďuje volání funkcí a všechna data v collection_plan. ASP. NET. default. XML. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit aplikaci více než collection_plan. ASP. NET. default. XML.<br /><br /> Abyste se vyhnuli zpomalení vaší aplikace, přizpůsobte si tyto plány nebo vytvořte vlastní plán. Z důvodu zabezpečení umístěte vlastní plány do stejného zabezpečeného umístění jako soubory kolektoru. Přečtěte si téma [Vytvoření a přizpůsobení plánů kolekcí IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) a [návody získání většiny dat bez zpomalení aplikace?](#Minimizing) **Poznámka:**  Ve výchozím nastavení je maximální velikost souboru. iTrace 100 MB. Když soubor. iTrace dosáhne tohoto limitu, kolektor odstraní nejstarší položky souboru, aby bylo možné místo pro novější položky. Chcete-li tento limit změnit, upravte atribut `MaximumLogFileSize` plánu kolekcí. <br /><br /> *Kde najdu lokalizované verze těchto plánů kolekcí?*<br /><br /> Lokalizované plány můžete najít v podsložkách kolekce.|
+    |*FullPathToIntelliTraceCollectorExecutable*|Úplná cesta ke spustitelnému souboru kolektoru, IntelliTraceSC.exe|
+    |*PathToCollectionPlan*|Cesta k plánu shromažďování dat, soubor. XML, který konfiguruje nastavení pro kolektor.<br /><br /> Můžete zadat plán, který je součástí kolekce. Následující plány fungují pro spravované aplikace:<br /><br /> -collection_plan.ASP.NET.default.xml<br />     Shromažďuje pouze události IntelliTrace, včetně výjimek, volání databáze a požadavků na webový server.<br />-collection_plan.ASP.NET.trace.xml<br />     Shromažďuje volání funkcí a všechna data v collection_plan.ASP.NET.default.xml. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit aplikaci více než collection_plan.ASP.NET.default.xml.<br /><br /> Abyste se vyhnuli zpomalení vaší aplikace, přizpůsobte si tyto plány nebo vytvořte vlastní plán. Z důvodu zabezpečení umístěte vlastní plány do stejného zabezpečeného umístění jako soubory kolektoru. Přečtěte si téma [Vytvoření a přizpůsobení plánů kolekcí IntelliTrace](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) a [návody získání většiny dat bez zpomalení aplikace?](#Minimizing) **Poznámka:**  Ve výchozím nastavení je maximální velikost souboru. iTrace 100 MB. Když soubor. iTrace dosáhne tohoto limitu, kolektor odstraní nejstarší položky souboru, aby bylo možné místo pro novější položky. Chcete-li tento limit změnit, upravte atribut plánu kolekce `MaximumLogFileSize` . <br /><br /> *Kde najdu lokalizované verze těchto plánů kolekcí?*<br /><br /> Lokalizované plány můžete najít v podsložkách kolekce.|
     |*FullPathToITraceFileDirectoryAndFileName*|Úplná cesta k adresáři souboru. iTrace a název souboru. iTrace s příponou **. iTrace** **Poznámka k zabezpečení:**  Zadejte úplnou cestu, nikoli relativní cestu.|
     |*PathToAppExecutableFileAndFileName*|Cesta a název souboru vaší spravované aplikace|
 
@@ -276,7 +276,7 @@ ms.locfileid: "72911317"
 
 3. [Otevřete soubor. iTrace v Visual Studio Enterprise](#BKMK_View_IntelliTrace_Log_Files)
 
-## <a name="BKMK_View_IntelliTrace_Log_Files"></a>Otevřete soubor. iTrace v Visual Studio Enterprise
+## <a name="open-the-itrace-file-in-visual-studio-enterprise"></a><a name="BKMK_View_IntelliTrace_Log_Files"></a>Otevřete soubor. iTrace v Visual Studio Enterprise
 
 > [!NOTE]
 > Chcete-li ladit pomocí IntelliTrace a krokovat kód, je nutné mít stejné zdrojové soubory a soubory symbolů. Viz [diagnostikování problémů po nasazení](../debugger/diagnose-problems-after-deployment.md).
@@ -290,7 +290,7 @@ ms.locfileid: "72911317"
     > [!NOTE]
     > Chcete-li ladit pomocí IntelliTrace a krokovat kód, musíte mít na svém vývojovém počítači vyhovující zdrojové soubory a soubory symbolů. Viz [diagnostikování problémů po nasazení](../debugger/diagnose-problems-after-deployment.md).
 
-## <a name="Minimizing"></a>Návody získat nejvíc dat bez zpomalení aplikace?
+## <a name="how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>Návody získat nejvíc dat bez zpomalení aplikace?
  IntelliTrace může shromažďovat spoustu dat, takže dopad na výkon vaší aplikace závisí na datech, která IntelliTrace shromažďuje, a na druhu kódu, který analyzuje. Viz [optimalizace shromažďování IntelliTrace na produkčních serverech](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/).
 
  Tady je několik způsobů, jak získat většinu dat bez zpomalení aplikace:
@@ -305,11 +305,11 @@ ms.locfileid: "72911317"
 
 - Zkontrolujte události v plánu shromažďování dat, pro které IntelliTrace shromažďuje data. Upravte plán shromažďování dat, abyste zakázali události, které nejsou důležité nebo vás zajímají.
 
-   Chcete-li zakázat událost, nastavte atribut `enabled` elementu `<DiagnosticEventSpecification>` na hodnotu `false`:
+   Chcete-li zakázat událost, nastavte `enabled` atribut `<DiagnosticEventSpecification>` elementu na `false` :
 
    `<DiagnosticEventSpecification enabled="false">`
 
-   Pokud atribut `enabled` neexistuje, je událost povolena.
+   Pokud `enabled` atribut neexistuje, událost je povolena.
 
    *Jak to zvyšuje výkon?*
 
@@ -319,11 +319,11 @@ ms.locfileid: "72911317"
 
 - Zkontrolujte moduly v plánu shromažďování dat, pro které IntelliTrace shromažďuje data. Upravte plán shromažďování dat tak, aby obsahoval pouze ty moduly, které vás zajímají:
 
-  1. Otevřete plán kolekce. Vyhledejte prvek `<ModuleList>`.
+  1. Otevřete plán kolekce. Vyhledejte `<ModuleList>` element.
 
-  2. V `<ModuleList>`nastavte atribut `isExclusionList` na `false`.
+  2. V `<ModuleList>` , nastavte `isExclusionList` atribut na `false` .
 
-  3. Pomocí elementu `<Name>` určete jednotlivé moduly s jedním z následujících způsobů: název souboru, Řetězcová hodnota pro zahrnutí jakéhokoli modulu, jehož název obsahuje tento řetězec nebo veřejný klíč.
+  3. Pomocí `<Name>` elementu zadejte každý modul s jedním z následujících způsobů: název souboru, Řetězcová hodnota pro zahrnutí jakéhokoli modulu, jehož název obsahuje tento řetězec nebo veřejný klíč.
 
      Chcete-li například shromažďovat data pouze z hlavního webového modulu webové aplikace Fabrikam Fiber, vytvořte seznam podobný tomuto:
 
@@ -363,28 +363,28 @@ ms.locfileid: "72911317"
 
     *Proč místo toho vyloučit moduly?*
 
-    Ve výchozím nastavení plány shromažďování dat vyloučí moduly nastavením atributu `isExclusionList` na hodnotu `true`. Vyloučení modulů však může přesto vést k shromažďování dat z modulů, které nesplňují kritéria seznamu a nemusí vás zajímat, například moduly třetích stran nebo open source.
+    Ve výchozím nastavení plány shromažďování dat vyloučí moduly nastavením `isExclusionList` atributu na `true` . Vyloučení modulů však může přesto vést k shromažďování dat z modulů, které nesplňují kritéria seznamu a nemusí vás zajímat, například moduly třetích stran nebo open source.
 
 - *Existují nějaká data, která IntelliTrace neshromažďuje?*
 
    Ano, pokud chcete snížit dopad na výkon, IntelliTrace omezuje shromažďování dat na hodnoty primitivních datových typů předaných do a vrácených z metod a na hodnoty primitivních datových typů v polích objektů nejvyšší úrovně předaných do a vrácených z metod.
 
-   Předpokládejme například, že máte podpis metody `AlterEmployee`, který přijímá celočíselnou `id` a `Employee` objekt `oldemployee`:
+   Předpokládejme například, že máte `AlterEmployee` signaturu metody, která přijímá celé číslo `id` a `Employee` objekt `oldemployee` :
 
    `public Employee AlterEmployee(int id, Employee oldemployee)`
 
-   Typ `Employee` má následující atributy: `Id`, `Name`a `HomeAddress`. Mezi `Employee` a typem `Address` existuje vztah přidružení.
+   `Employee`Typ má následující atributy: `Id` , `Name` a `HomeAddress` . Mezi a typem existuje vztah přidružení `Employee` `Address` .
 
    ![Vztah mezi zaměstnancem a adresou](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
 
-   Kolektor zaznamenává hodnoty pro `id`, `Employee.Id`, `Employee.Name` a objekt `Employee` vrácený metodou `AlterEmployee`. Kolektor však nezaznamená informace o objektu `Address`, který je jiný než bez ohledu na to, zda byl null nebo ne. Kolektor také nezaznamenává data týkající se místních proměnných v metodě `AlterEmployee`, pokud jiné metody nepoužívají tyto místní proměnné jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.
+   Kolektor zaznamenává hodnoty pro `id` , `Employee.Id` `Employee.Name` a `Employee` objekt vrácený z `AlterEmployee` metody. Kolektor však nezaznamená informace o objektu, který je `Address` jiný než bez ohledu na to, zda byl null nebo ne. Kolektor také nezaznamenává data týkající se místních proměnných v `AlterEmployee` metodě, pokud jiné metody tyto místní proměnné nepoužívají jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.
 
-## <a name="WhereElse"></a>Kde jinak můžu získat IntelliTrace data?
+## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a>Kde jinak můžu získat IntelliTrace data?
 
 IntelliTrace data z relace ladění IntelliTrace můžete získat v Visual Studio Enterprise. Viz [funkce IntelliTrace](../debugger/intellitrace-features.md).
 
-## <a name="where-can-i-get-more-information"></a>Kde lze získat další informace?
- [Použití uložených dat řešení IntelliTrace](../debugger/using-saved-intellitrace-data.md)
+## <a name="where-can-i-get-more-information"></a>Zdroje dalších informací
+ [Použití dat uložených nástrojem IntelliTrace](../debugger/using-saved-intellitrace-data.md)
 
  [IntelliTrace](../debugger/intellitrace.md)
 
@@ -397,8 +397,8 @@ IntelliTrace data z relace ladění IntelliTrace můžete získat v Visual Studi
 
  [Microsoft DevOps](https://devblogs.microsoft.com/devops/)
 
-### <a name="forums"></a>Diskuzní fóra
- [Ladicí program sady Visual Studio](https://social.msdn.microsoft.com/Forums/en-US/home)
+### <a name="forums"></a>Fóra
+ [Visual Studio – ladicí program](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ### <a name="videos"></a>Videa
  [Video pro kanál 9: shromažďování a analýza dat IntelliTrace](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)

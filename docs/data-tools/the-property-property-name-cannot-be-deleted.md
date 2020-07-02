@@ -3,17 +3,17 @@ title: Vlastnost se nedá odstranit.
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 55873f74-7834-4ec1-8815-eeeb65618d87
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 91fce94babf443c974a49885263b8e7eb77d9eaa
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 63e99bf7b247856815fd3e8de0f4932fed4881dc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85281342"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535288"
 ---
 # <a name="the-property-property-name-cannot-be-deleted"></a>Vlastnost \<property name> nejde odstranit.
 
@@ -31,6 +31,6 @@ Nastavte **vlastnost diskriminátor** na jinou vlastnost datové třídy, aby by
 
 3. Zkuste vlastnost odstranit znovu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
