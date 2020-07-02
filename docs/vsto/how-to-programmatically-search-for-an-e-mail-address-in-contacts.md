@@ -34,7 +34,7 @@ ms.locfileid: "85537641"
 
 - Kontakty, které mají název domény **example.com** ve svých e-mailových adresách (například `somebody@example.com` ) a mají křestní jména a příjmení.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
 - [Postupy: odesílání e-mailů prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
 - [Postupy: přístup ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-access-outlook-contacts.md)

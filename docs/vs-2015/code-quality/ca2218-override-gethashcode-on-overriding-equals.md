@@ -101,7 +101,7 @@ ms.locfileid: "85538798"
 
  [CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 - <xref:System.Object.GetHashCode%2A?displayProperty=fullName>

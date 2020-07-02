@@ -63,6 +63,6 @@ ms.locfileid: "85538148"
 
 10. Přetáhněte prvky z okna **struktury XML** na místa v dokumentu, kde chcete vytvořit odpovídající ovládací prvky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: mapování schémat na listy v rámci sady Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
 - [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)

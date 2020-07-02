@@ -1,5 +1,5 @@
 ---
-title: Testování částí stávajících C++ aplikací pomocí Průzkumníka testů | Microsoft Docs
+title: Testování částí stávajících aplikací C++ pomocí Průzkumníka testů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -8,20 +8,20 @@ ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
 caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 34d1918522711f3070cf6988a83ebdbd1e80b2f4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 68bff8dbe2d0e5d85c8b18eeafaeaad06ba3982e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659586"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540072"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>Testování částí stávajících aplikací C++ pomocí Průzkumníka testů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má dobrý rozsah s testováním částí. To vám dává jistotu, že vaše změny nevedly k chybám. Pokud aplikace ještě testy jednotek neobsahuje, můžete je přidat pomocí techniků, které jsou znázorněné v tomto tématu. Toto téma popisuje, jak přidat testy jednotek pro existující vizuální C++ kód, počínaje rozhodnutím o testování kódu a následným vytvořením, zápisem a nakonec spuštěním testů.
+Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má dobrý rozsah s testováním částí. To vám dává jistotu, že vaše změny nevedly k chybám. Pokud aplikace ještě testy jednotek neobsahuje, můžete je přidat pomocí techniků, které jsou znázorněné v tomto tématu. Toto téma popisuje, jak přidat testy částí pro existující kód Visual C++, počínaje rozhodnutím, jak otestovat kód a pak vytvořit, zapsat a nakonec spustit testy.
 
 ## <a name="deciding-how-to-test-your-code"></a>Rozhodnutí o testování kódu
- Otevřete existující C++ projekt a zkontrolujte ho a rozhodněte se, jak chcete přidat testy jednotek. Můžete chtít použít některé nástroje pro modelování, které vám pomůžou zobrazit závislosti v kódu, a porozumět tomu, jak části pracují. Další informace naleznete v tématu [vizualizace kódu](../modeling/visualize-code.md).
+ Otevřete existující projekt C++ a prozkoumejte ho a rozhodněte se, jak chcete přidat testy jednotek. Můžete chtít použít některé nástroje pro modelování, které vám pomůžou zobrazit závislosti v kódu, a porozumět tomu, jak části pracují. Další informace naleznete v tématu [vizualizace kódu](../modeling/visualize-code.md).
 
  Doporučujeme oddělit změny do malých úloh. Před každou malou změnou zapište testy jednotek pro aspekty chování, které zůstane stejné. Tyto testy budou po provedení změny i nadále předávány. Například pokud plánujete změnit funkci řazení tak, aby seřadí seznam osob podle příjmení, nikoli podle křestního jména, můžete napsat test jednotky, který ověří, zda se všechny vstupní názvy zobrazí ve výstupu. Po provedení změny můžete chtít přidat nové testy jednotek pro nové chování.
 
@@ -49,7 +49,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
 ## <a name="creating-the-tests"></a>Vytváření testů
 
-### <a name="staticLink"></a>Změna testovaného kódu na statickou knihovnu
+### <a name="to-change-the-code-under-test-to-a-static-library"></a><a name="staticLink"></a>Změna testovaného kódu na statickou knihovnu
 
 - Pokud testy musí používat členy, které nejsou exportovány v rámci testu projektu, a projekt v rámci testu je sestaven jako dynamická knihovna, zvažte jeho převod na statickou knihovnu.
 
@@ -57,17 +57,17 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
   2. Vyberte **Vlastnosti konfigurace**, **Obecné**.
 
-  3. Nastavte **typ konfigurace** na **statickou knihovnu (. lib)** .
+  3. Nastavte **typ konfigurace** na **statickou knihovnu (. lib)**.
 
   Pokračujte postupem [propojení testů s objekty nebo soubory knihovny](#objectRef).
 
-### <a name="projectRef"></a>Odkazování na exportované funkce z testovacího projektu
+### <a name="to-reference-exported-functions-from-the-test-project"></a><a name="projectRef"></a>Odkazování na exportované funkce z testovacího projektu
 
 - Pokud projekt v rámci testu exportuje funkce, které chcete otestovat, můžete přidat odkaz na projekt kódu z testovacího projektu.
 
-  1. Vytvořte C++ testovací projekt.
+  1. Vytvořte projekt testů jazyka C++.
 
-      1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**, **Visual C++, test**,  **C++ test jednotek projektu**.
+      1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**, **Visual C++, test**, **projekt testování částí C++**.
 
   2. V Průzkumník řešení v místní nabídce testovacího projektu vyberte možnost **odkazy**. Otevře se okno Vlastnosti projektu.
 
@@ -75,23 +75,23 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
   4. Vyberte **projekty**a potom projekt, který chcete otestovat.
 
-       Klikněte na tlačítko **Přidat** .
+       Vyberte tlačítko **Přidat**.
 
   5. Ve vlastnostech testovacího projektu přidejte do adresáře include umístění testovaného projektu.
 
-       Vyberte **Vlastnosti konfigurace**, **adresáře VC + +** , **adresáře include**.
+       Vyberte **Vlastnosti konfigurace**, **adresáře VC + +**, **adresáře include**.
 
        Zvolte **Upravit**a pak přidejte adresář záhlaví testovaného projektu.
 
   Přejít na [Zápis testování částí](#addTests).
 
-### <a name="objectRef"></a>Propojení testů s objekty nebo soubory knihovny
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>Propojení testů s objekty nebo soubory knihovny
 
 - Pokud testovaný kód neexportuje funkce, které chcete otestovat, můžete přidat výstupní soubor **. obj** nebo **. lib** do závislostí testovacího projektu.
 
-  1. Vytvořte C++ testovací projekt.
+  1. Vytvořte projekt testů jazyka C++.
 
-      1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**, **Visual C++, test**,  **C++ test jednotek projektu**.
+      1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**, **Visual C++, test**, **projekt testování částí C++**.
 
   2. V Průzkumník řešení v místní nabídce testovacího projektu vyberte možnost **vlastnosti**. Otevře se okno Vlastnosti projektu.
 
@@ -103,36 +103,36 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
        Vyberte **Upravit**a přidejte cestu k adresáři souborů **. obj** nebo **. lib** . Cesta je obvykle ve složce sestavení testovaného projektu.
 
-  5. Vyberte **Vlastnosti konfigurace**, **adresáře VC + +** , **adresáře include**.
+  5. Vyberte **Vlastnosti konfigurace**, **adresáře VC + +**, **adresáře include**.
 
        Zvolte **Upravit**a pak přidejte adresář záhlaví testovaného projektu.
 
   Přejít na [Zápis testování částí](#addTests).
 
-### <a name="sameProject"></a>Přidání jednotkových testů do stejného projektu
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>Přidání jednotkových testů do stejného projektu
 
 1. Upravte vlastnosti projektu kódu produktu tak, aby obsahovaly hlavičky a soubory knihoven, které jsou požadovány pro testování částí.
 
    1. V Průzkumník řešení v místní nabídce testovaného projektu vyberte možnost Vlastnosti. Otevře se okno Vlastnosti projektu.
 
-   2. Vyberte možnost **Vlastnosti konfigurace**, **adresáře VC + +** .
+   2. Vyberte možnost **Vlastnosti konfigurace**, **adresáře VC + +**.
 
    3. Upravte adresáře include a knihovny:
 
-       |||
+       |Vlastnost|Hodnota|
        |-|-|
        |**Zahrnout adresáře**|**$ (VCInstallDir) UnitTest\include; $ (IncludePath)**|
        |**Adresáře knihoven**|**$ (VCInstallDir) UnitTest\lib; $ (LibraryPath)**|
 
-2. Přidat soubor C++ testu jednotek:
+2. Přidat soubor testu jednotek C++:
 
-   - V Průzkumník řešení v místní nabídce projektu zvolte možnost **Přidat**, **Nová položka**a pak zvolte možnost  **C++ test jednotky**.
+   - V Průzkumník řešení v místní nabídce projektu zvolte možnost **Přidat**, **Nová položka**a pak zvolte možnost **test jednotek jazyka C++**.
 
    Přejít na [Zápis testování částí](#addTests).
 
-## <a name="addTests"></a>Zápis testů jednotek
+## <a name="writing-the-unit-tests"></a><a name="addTests"></a>Zápis testů jednotek
 
-1. V každém souboru kódu testu jednotek přidejte příkaz `#include` pro hlavičky testovaného projektu.
+1. V každém souboru kódu testu jednotek přidejte `#include` příkaz pro záhlaví testovaného projektu.
 
 2. Přidejte testovací třídy a metody do souborů kódu testování částí. Příklad:
 
@@ -156,7 +156,7 @@ Doporučujeme, abyste před změnou existující aplikace měli jistotu, že má
 
    Další informace naleznete v tématu [testování částí nativního kódu pomocí Průzkumníka testů](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c).
 
-## <a name="run-the-tests"></a>Spustit testy
+## <a name="run-the-tests"></a>Spuštění testů
 
 1. V nabídce **zobrazení** vyberte možnost **ostatní okna**, **Průzkumník testů**.
 

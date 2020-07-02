@@ -1,9 +1,9 @@
 ---
-title: '&lt;formRegions&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;formRegions – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 68a24560df1da153702cfca2a206ea38cc8fac94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f98c74c2df998f0e79f5b95a316a7917304e029
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972327"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538356"
 ---
-# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `formRegions` Elementu `vstov4` obor názvů obsahuje oblastí formulářů aplikace Microsoft Office Outlook, které jsou spojeny s doplňku VSTO.
+# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `formRegions`Element `vstov4` oboru názvů obsahuje oblasti formuláře systém Microsoft Office Outlooku, které jsou přidruženy k doplňku VSTO.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +36,21 @@ ms.locfileid: "62972327"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `formRegions` Elementu `vstov4` obor názvů obsahuje všechny `formRegion` prvky pro doplňku VSTO v Outlooku. Je vyžadován pouze pro aplikaci Outlook doplňků VSTO, které zahrnují oblasti formuláře.
+ `formRegions`Element `vstov4` oboru názvů obsahuje všechny `formRegion` prvky pro doplněk VSTO pro Outlook. Je vyžadován pouze pro Doplňky aplikace Outlook VSTO, které obsahují oblasti formuláře.
 
- Může existovat pouze jeden `formRegions` element definovaný v manifestu aplikace.
+ `formRegions`V manifestu aplikace může být definován pouze jeden prvek.
 
- `formRegions` Prvek nemá žádné atributy.
+ `formRegions`Element nemá žádné atributy.
 
- `formRegions` Element má následující element.
+ `formRegions`Element má následující element.
 
 ### <a name="formregion"></a>formRegion
- Vyžaduje se pro aplikaci Outlook doplňků VSTO, které zahrnují oblasti formuláře. `formRegion` Element je definován v [ &#60;formRegion&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregion-element-office-development-in-visual-studio.md).
+ Vyžaduje se pro doplňky Outlook VSTO, které obsahují oblasti formuláře. `formRegion`Element je definován v [&#60;FormRegion&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregion-element-office-development-in-visual-studio.md).
 
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje `formRegions` elementu v manifestu aplikace pro řešení Office úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `formRegions` prvek v manifestu aplikace pro řešení Office na úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -67,6 +67,6 @@ ms.locfileid: "62972327"
 
 ## <a name="see-also"></a>Viz také:
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

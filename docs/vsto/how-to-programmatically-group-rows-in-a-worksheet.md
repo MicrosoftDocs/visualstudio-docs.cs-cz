@@ -58,7 +58,7 @@ ms.locfileid: "85537875"
     > [!NOTE]
     > Chcete-li zrušit seskupení řádků, zavolejte <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> metodu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Práce s listy](../vsto/working-with-worksheets.md)
 - [Ovládací prvek NamedRange](../vsto/namedrange-control.md)
 - [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md)

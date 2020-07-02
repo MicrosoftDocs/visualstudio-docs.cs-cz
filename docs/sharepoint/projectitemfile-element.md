@@ -1,5 +1,5 @@
 ---
-title: ProjectItemFile – Element | Dokumentace Microsoftu
+title: Element ProjectItemFile – | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 57c491c79030eea1a01024235c01aec425d5994c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1c9814498d74a5d1a6533576f1071b4bf7deb57
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62562359"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539851"
 ---
 # <a name="projectitemfile-element"></a>ProjectItemFile – element
-  Představuje soubor služby SharePoint, jako je například soubor prvku funkce zahrnout do položky projektu při nasazení do služby SharePoint.
+  Představuje soubor služby SharePoint, jako je například soubor prvků funkce, který se má zahrnout do položky projektu při nasazení do služby SharePoint.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ ms.locfileid: "62562359"
     Type = "Type of deployment for the file" />
 ```
 
-## <a name="type"></a>Type
+## <a name="type"></a>Typ
  **ProjectItemFileType**
 
 ## <a name="attributes-and-elements"></a>Atributy a elementy
@@ -40,9 +40,9 @@ ms.locfileid: "62562359"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|**Zdroj**|Vyžaduje **xs:string** atribut.<br /><br /> Název souboru, který má nasazení s položkou projektu.|
-|**Cíl**|Volitelné **xs:string** atribut.<br /><br /> Cesta, kam se nasadí soubor na Sharepointu, vzhledem ke kořenové složky nasazení. Kořenové složky nasazení se určuje podle typ nasazení určený **typ** atribut. Pokud **cílové** atribut není zadán, soubor bude nasazen do složky s názvem zadaným v **zdroj** atribut.<br /><br /> Další informace najdete v popisech pro **cesty nasazení** a **kořen nasazení** položky v projektu služby SharePoint [řešení pro vývoj SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
-|**Typ**|Vyžaduje **xs:string** atribut.<br /><br /> Typ nasazení k souboru. Další informace o možných hodnot, viz popis **typ nasazení** vlastnosti položky projektu služby SharePoint v [řešení vývoj služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
+|**Zdroj**|Požadován atribut **xs: String** .<br /><br /> Název souboru, který má být nasazen s položkou projektu.|
+|**Cílové**|Volitelný atribut **xs: String** .<br /><br /> Cesta, kam se soubor nasadí na SharePointu, vzhledem k kořenové složce nasazení Kořenová složka nasazení je určena typem nasazení určeným atributem **Type** . Pokud **cílový** atribut není zadán, soubor bude nasazen do složky s názvem zadaným ve **zdrojovém** atributu.<br /><br /> Další informace naleznete v popisech pro **cestu nasazení** a kořenové vlastnosti **nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
+|**Typ**|Požadován atribut **xs: String** .<br /><br /> Typ nasazení souboru. Další informace o možných hodnotách naleznete v popisu vlastnosti **typ nasazení** položek projektu služby SharePoint v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -51,19 +51,19 @@ ms.locfileid: "62562359"
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[Soubory](../sharepoint/files-element.md)|Určuje soubory, které chcete zahrnout do položky projektu služby SharePoint při nasazení do služby SharePoint.|
+|[Spis](../sharepoint/files-element.md)|Určuje soubory, které mají být zahrnuty do položky projektu služby SharePoint, když jsou nasazeny do služby SharePoint.|
 
 ## <a name="remarks"></a>Poznámky
- Soubory služby SharePoint, které jsou obvykle odkazované **ProjectItemFile –** prvky patří soubory funkcí – element (*Elements.xml*), soubory schémat pro seznam definic (*Schema.xml*) a soubory definic webové části pro webové části (*.webpart*).
+ Soubory SharePointu, které jsou obvykle odkazovány v prvcích **ProjectItemFile –** , zahrnují soubory prvků funkce (*Elements.xml*), soubory schématu pro definice seznamu (*Schema.xml*) a soubory definice webových částí pro webové části (*. WebPart*).
 
 ## <a name="element-information"></a>Informace o elementu
 
-|||
+|Vlastnost|Hodnota|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Název schématu**|Schéma položky projektu služby SharePoint|
-|**Soubor ověření**|ProjectItemModelSchema.xsd|
-|**Může být prázdný**|Ne|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Název schématu**|Schéma položek projektu služby SharePoint|
+|**Soubor ověření**|ProjectItemModelSchema. xsd|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

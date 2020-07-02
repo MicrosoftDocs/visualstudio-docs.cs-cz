@@ -1,7 +1,7 @@
 ---
-title: '&lt;Aktualizovat&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;Update – &gt; element (vývoj pro Office v sadě Visual Studio)'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 461fae79e3af346d64017166b6dae3ace67599e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967530"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537381"
 ---
-# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Aktualizovat&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `update` Prvek určuje interval, ve kterém bude zjišťovat řešení pro aktualizaci.
+# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Update – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `update`Prvek určuje interval, ve kterém bude řešení vyhledávat aktualizace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,30 +37,30 @@ ms.locfileid: "62967530"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `update` Element je povinný a je v `vstav3` oboru názvů.
+ `update`Element je povinný a je v `vstav3` oboru názvů.
 
- `update` Element má následující atributy.
+ `update`Element má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`enabled`|Povinný parametr. Nastavte enabled na jednu z následujících hodnot:<br /><br /> -   **Hodnota TRUE** ke kontrole aktualizací.<br />-   **false** zabránit, vyhledávají se aktualizace.|
+|`enabled`|Povinná hodnota. Nastavte povoleno na jednu z následujících hodnot:<br /><br /> -   **true** pro kontrolu aktualizací.<br />-   **false** , pokud chcete zabránit kontrole aktualizací.|
 
- `update` Element má následující podřízené prvky.
+ `update`Element má následující podřízené prvky.
 
 ### <a name="expiration"></a>vypršení platnosti
- `expiration` Element je povinný a je v `vstav3` oboru názvů. Tento prvek určuje interval, kdy až řešení příště pro aktualizaci.
+ `expiration`Element je povinný a je v `vstav3` oboru názvů. Tento prvek určuje interval, ve kterém řešení vyhledává aktualizace.
 
- `expiration` Element má následující atributy.
+ `expiration`Element má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`maximumAge`| Povinný parametr. Nastavte toto na celé číslo.|
-|`unit`|Povinný parametr. Nastavte `unit` na jednu z následujících hodnot:<br /><br /> -   **hodiny**<br />-   **dny**<br />-   **týdnů**|
+|`maximumAge`| Povinná hodnota. Nastavte tuto hodnotu jako celé číslo.|
+|`unit`|Povinná hodnota. Nastavte `unit` na jednu z následujících hodnot:<br /><br /> -   **hodin**<br />-   **denní**<br />-   **Week**|
 
-## <a name="example-of-always-checking-for-updates"></a>Příklad vždy vyhledávají se aktualizace
+## <a name="example-of-always-checking-for-updates"></a>Příklad vždycky se zjišťováním aktualizací
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje `update` element, který je nastavena na vždy vyhledejte aktualizace v řešeních pro systém Office.
+ Následující příklad kódu ukazuje `update` prvek, který je nastaven tak, aby vždy kontroloval aktualizace v řešeních pro systém Office.
 
 ### <a name="code"></a>Kód
 
@@ -68,10 +68,10 @@ ms.locfileid: "62967530"
 <vstav3:update enabled="true" />
 ```
 
-## <a name="example-of-setting-a-default-update-interval"></a>Příklad nastavení výchozí interval aktualizace
+## <a name="example-of-setting-a-default-update-interval"></a>Příklad nastavení výchozího intervalu aktualizace
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje `update` elementu v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `update` prvek v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -83,7 +83,7 @@ ms.locfileid: "62967530"
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Nasazení řešení Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

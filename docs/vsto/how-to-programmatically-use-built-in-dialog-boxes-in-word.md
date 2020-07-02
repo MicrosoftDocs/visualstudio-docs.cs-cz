@@ -45,7 +45,7 @@ ms.locfileid: "85537615"
 
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: používání dialogových oken aplikace Word ve skrytém režimu prostřednictvím kódu programu](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

@@ -62,7 +62,7 @@ ms.locfileid: "85538343"
 
 4. Přetáhněte ovládací prvky pro přesunutí na nové pozice v nabídce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)

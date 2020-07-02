@@ -15,28 +15,28 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7e75b2e295a561e026b437b3c62724536a3ac64e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56c69badf76a05351b37a7c8a41a9cacf54f9974
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671986"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539721"
 ---
-# <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005: Vyhněte se nadbytečným parametrům na obecných typech
+# <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005: Vyhněte se nadbytečným parametrům u obecných typů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AvoidExcessiveParametersOnGenericTypes|
 |CheckId|CA1005|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Externě viditelný obecný typ má více než dva parametry typu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Čím více parametrů typu obecný typ obsahuje, tím obtížnější je vědět a zapamatovat si, co každý z parametrů typu představuje. Je obvykle zřejmé s jedním parametrem typu, jako v `List<T>` a v některých případech se dvěma parametry typu, jako v `Dictionary<TKey, TValue>`. Pokud existuje více než dva parametry typu, je problém pro většinu uživatelů příliš velký (například `TooManyTypeParameters<T, K, V>` v C# nebo `TooManyTypeParameters(Of T, K, V)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ Čím více parametrů typu obecný typ obsahuje, tím obtížnější je vědět a zapamatovat si, co každý z parametrů typu představuje. Je obvykle zřejmé s jedním parametrem typu, jako v `List<T>` a v některých případech se dvěma parametry typu, jako v `Dictionary<TKey, TValue>` . Pokud existuje více než dva parametry typu, je problém pro většinu uživatelů příliš velký (například `TooManyTypeParameters<T, K, V>` v jazyce C# nebo `TooManyTypeParameters(Of T, K, V)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, změňte návrh tak, aby nepoužíval více než dva parametry typu.
@@ -51,7 +51,7 @@ ms.locfileid: "72671986"
 
  [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006: Nevnořujte obecné typy do signatur členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
  [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 

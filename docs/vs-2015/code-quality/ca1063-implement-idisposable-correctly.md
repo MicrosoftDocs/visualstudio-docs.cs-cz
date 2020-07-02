@@ -15,25 +15,25 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04691d2344b232906676180122ad67fff5405891
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663637"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539357"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: Implementuje správně IDisposable
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- `IDisposable` není správně implementován. Tady jsou uvedené nějaké důvody tohoto problému:
+## <a name="cause"></a>Příčina
+ `IDisposable`není implementováno správně. Tady jsou uvedené nějaké důvody tohoto problému:
 
 - Rozhraní IDisposable je znovu implementováno ve třídě.
 
@@ -59,11 +59,11 @@ ms.locfileid: "72663637"
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Zkontrolujte svůj kód a určete, která z následujících řešení vyřeší toto porušení.
 
-- Odeberte IDisposable ze seznamu rozhraní implementovaných {0} a místo toho přepište implementaci Dispose základní třídy.
+- Odeberte IDisposable ze seznamu rozhraní implementovaných pomocí {0} a místo toho přepište implementaci Dispose základní třídy.
 
-- Odeberte finalizační metodu z typu {0}, přepište Dispose (bool disposing) a vložte logiku finalizace do cesty kódu, kde ' disposing ' má hodnotu false.
+- Odeberte finalizační metodu z typu {0} , přepište Dispose (bool disposing) a vložte logiku finalizace do cesty kódu, kde ' disposing ' je false.
 
-- Odeberte {0}, přepište Dispose (bool disposing) a vložte logiku Dispose do cesty kódu, kde má vlastnost disposing hodnotu true.
+- Odeberte {0} , přepište Dispose (bool disposing) a vložte logiku Dispose do cesty kódu, kde má vlastnost disposing hodnotu true.
 
 - Ujistěte se, že {0} je deklarována jako veřejná a zapečetěná.
 
@@ -71,7 +71,7 @@ ms.locfileid: "72663637"
 
 - Ujistěte se, že {0} je deklarována jako chráněná, virtuální a nezapečetěná.
 
-- Upravte {0} tak, že volá Dispose (true) a pak zavolá GC. SuppressFinalize na aktuální instanci objektu (' this ' nebo ' já ' v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a pak se vrátí.
+- Upravte {0} tak, že volá Dispose (true) a pak zavolá GC. SuppressFinalize na aktuální instanci objektu (' this ' nebo ' já ' v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) a pak se vrátí.
 
 - Upravte {0} tak, že volá Dispose (false) a potom se vrátí.
 

@@ -88,7 +88,7 @@ Tento příklad kódu vyžaduje následující:
 
 - Chcete-li uložit dokument s novým názvem, musí existovat adresář s názvem *test* na jednotce C.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: zavírání dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-close-documents.md)
 - [Postupy: otevírání existujících dokumentů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-existing-documents.md)

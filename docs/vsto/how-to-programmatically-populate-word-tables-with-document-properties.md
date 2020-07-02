@@ -1,7 +1,7 @@
 ---
-title: Naplnění s vlastností dokumentu do tabulek aplikace Word prostřednictvím kódu programu
+title: Naplnění tabulek aplikace Word vlastnostmi dokumentu prostřednictvím kódu programu
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,88 +13,88 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e296a63c208bc1c3316f89b7b4003f16daf3c93e
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: 92d9b38c6a1e770749849966deec7f503f9eeb5d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177782"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537810"
 ---
-# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>Postupy: Vkládání kódu programu s vlastností dokumentu do tabulek aplikace Word
-  Následující příklad vytvoří tabulku aplikace Microsoft Office Word v horní části dokumentu a naplní ho s vlastnostmi hostitele dokumentu.
+# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>Postupy: naplnění tabulek Wordu pomocí vlastností dokumentu prostřednictvím kódu programu
+  Následující příklad vytvoří tabulku systém Microsoft Office Word v horní části dokumentu a naplní ji vlastnostmi hostitelského dokumentu.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="populate-tables-in-a-document-level-customization"></a>Vkládání do tabulek v přizpůsobení na úrovni dokumentu
+## <a name="populate-tables-in-a-document-level-customization"></a>Naplnění tabulek v přizpůsobení na úrovni dokumentu
 
-### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>Chcete-li vytvořit tabulku a přidejte do ní vlastnosti dokumentu
+### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>Vytvoření tabulky a její vyplnění vlastnostmi dokumentu
 
-1. Nastavte rozsah na začátek dokumentu.
+1. Nastaví rozsah na začátek dokumentu.
 
     [!code-vb[Trin_VstcoreWordAutomation#90](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#90)]
     [!code-csharp[Trin_VstcoreWordAutomation#90](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#90)]
 
-2. Vložte nadpis tabulky a zahrnout konce odstavce.
+2. Vložte nadpis tabulky a přidejte znaky konce odstavce.
 
     [!code-vb[Trin_VstcoreWordAutomation#91](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#91)]
     [!code-csharp[Trin_VstcoreWordAutomation#91](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#91)]
 
-3. Přidání tabulky do dokumentu v rozsahu.
+3. Přidejte tabulku do dokumentu v rozsahu.
 
     [!code-vb[Trin_VstcoreWordAutomation#92](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#92)]
     [!code-csharp[Trin_VstcoreWordAutomation#92](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#92)]
 
-4. Formátování tabulky a stylu.
+4. Naformátuje tabulku a použije styl.
 
     [!code-vb[Trin_VstcoreWordAutomation#93](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#93)]
     [!code-csharp[Trin_VstcoreWordAutomation#93](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#93)]
 
-5. Vkládání vlastností dokumentu do buňky.
+5. Vložte vlastnosti dokumentu do buněk.
 
     [!code-vb[Trin_VstcoreWordAutomation#94](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#94)]
     [!code-csharp[Trin_VstcoreWordAutomation#94](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#94)]
 
-   Následující příklad ukazuje kompletní postup. Chcete-li tento kód použít, spusťte z `ThisDocument` třídu ve vašem projektu.
+   Následující příklad ukazuje kompletní postup. Chcete-li použít tento kód, spusťte jej z `ThisDocument` třídy v projektu.
 
    [!code-vb[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#89)]
    [!code-csharp[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#89)]
 
-## <a name="populate-tables-in-a-vsto-add-in"></a>Naplnění tabulky v doplňku VSTO
+## <a name="populate-tables-in-a-vsto-add-in"></a>Naplnění tabulek v doplňku VSTO
 
-### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>Chcete-li vytvořit tabulku a přidejte do ní vlastnosti dokumentu
+### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>Vytvoření tabulky a její vyplnění vlastnostmi dokumentu
 
-1. Nastavte rozsah na začátek dokumentu.
+1. Nastaví rozsah na začátek dokumentu.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#90](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#90)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#90](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#90)]
 
-2. Vložte nadpis tabulky a zahrnout konce odstavce.
+2. Vložte nadpis tabulky a přidejte znaky konce odstavce.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#91](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#91)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#91](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#91)]
 
-3. Přidání tabulky do dokumentu v rozsahu.
+3. Přidejte tabulku do dokumentu v rozsahu.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#92](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#92)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#92](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#92)]
 
-4. Formátování tabulky a stylu.
+4. Naformátuje tabulku a použije styl.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#93](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#93)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#93](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#93)]
 
-5. Vkládání vlastností dokumentu do buňky.
+5. Vložte vlastnosti dokumentu do buněk.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#94](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#94)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#94](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#94)]
 
-   Následující příklad ukazuje kompletní postup. Chcete-li tento kód použít, spusťte z `ThisAddIn` třídu ve vašem projektu.
+   Následující příklad ukazuje kompletní postup. Chcete-li použít tento kód, spusťte jej z `ThisAddIn` třídy v projektu.
 
    [!code-vb[Trin_VstcoreWordAutomationAddIn#89](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#89)]
    [!code-csharp[Trin_VstcoreWordAutomationAddIn#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#89)]
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)
-- [Postupy: Přidávání textu a formátování do buněk tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
-- [Postupy: Programové přidání řádků a sloupců do tabulek aplikace Word](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
+- [Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)
+- [Postupy: přidávání textu a formátování do buněk v tabulkách aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
+- [Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

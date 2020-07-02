@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 26da567918ea25f212c4c03e87e81d5cc18b60ab
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285974"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537277"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Aktivita analýzy využití prostředků a vlákna uživatelského rozhraní (XAML)
 
@@ -100,7 +100,7 @@ V zobrazení podrobností je místo, kde strávíte většinu času analýzou se
 
 Podporují se tyto události:
 
-|||
+|Name|Popis|
 |-|-|
 |**Analýze**|Čas strávený analýzou souborů XAML a vytváření objektů<br /><br /> Rozbalením uzlu **analýzy** v **podrobnostech časové osy** se zobrazí řetězec závislosti všech souborů XAML, které byly analyzovány z důvodu kořenové události. Tento tip vám umožní identifikovat nepotřebnou analýzu souborů a vytvoření objektu ve scénářích citlivých na výkon a optimalizovat.|
 |**Layout**|Ve velkých aplikacích lze na obrazovce zobrazit tisíce prvků současně. Tento displej může mít za následek tempo snímků uživatelského rozhraní a odpovídající nedostatečnou odezvu aplikace. Událost rozložení přesně určuje náklady na rozložení každého prvku (to znamená čas strávený při uspořádání, měření, ApplyTemplate, ArrangeOverride a MeasureOverride). Vytvoří také vizuální stromy, které byly součástí průchodu rozložení. Tuto vizualizaci můžete použít k určení, které logické stromy se mají vyřadit, nebo k vyhodnocení jiných mechanismů odložení pro optimalizaci úspěšnosti rozložení.|
@@ -116,14 +116,14 @@ Podporují se tyto události:
 
 Pomocí panelu nástrojů **Podrobnosti časové osy** můžete seřadit, filtrovat a zadat poznámky k **podrobnostem zobrazení na časové ose** .
 
-|||
+|Name|Popis|
 |-|-|
 |**Řadit podle**|Seřaďte data podle času zahájení nebo délky událostí.|
 |![Seskupit události podle rámce](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Přidá nebo odebere kategorii **rámce** nejvyšší úrovně, která seskupuje události podle rámce.|
 |![Filtrovat seznam podrobností časové osy](../profiling/media/timeline_filter.png "TIMELINE_Filter")|Vyfiltruje seznam podle vybraných kategorií a délky událostí.|
 |![Přizpůsobení informací o podrobnostech časové osy](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|Umožňuje zadat poznámky pro události.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Blog týmu WPF: nový nástroj pro analýzu výkonu uživatelského rozhraní pro aplikace WPF](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
 - [Osvědčené postupy výkonu pro aplikace pro UWP pomocí C++, C# a Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))

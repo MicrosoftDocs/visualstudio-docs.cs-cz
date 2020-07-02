@@ -15,37 +15,37 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2062c7518545300074a0377b7a9cca7ddf1a8aa5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: babef652bbfa55d6549cf0e43ddae0920b3ff302
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603371"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539487"
 ---
 # <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054: Parametry identifikátoru URI by neměly být řetězce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|UriParametersShouldNotBeStrings|
 |CheckId|CA1054|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Typ deklaruje metodu s parametrem řetězce, jehož název obsahuje "URI", "URI", "urn", "urn", "URL" nebo "URL" a typ nedeklaruje odpovídající přetížení, které přijímá parametr <xref:System.Uri?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Typ deklaruje metodu s parametrem řetězce, jehož název obsahuje "URI", "URI", "urn", "urn", "URL" nebo "URL" a typ nedeklaruje odpovídající přetížení, které přijímá <xref:System.Uri?displayProperty=fullName> parametr.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo rozdělí název parametru na tokeny založené na konvenci ve stylu CamelCase (velká a malá písmena) a zkontroluje, jestli každý token odpovídá "URI", "URI", "urn", "urn", "URL" nebo "URL". Pokud existuje shoda, pravidlo předpokládá, že parametr představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. Pokud metoda přijímá řetězcovou reprezentaci identifikátoru URI, měla by být poskytnuta odpovídající přetížená instance, která přebírá instanci třídy <xref:System.Uri>, která poskytuje tyto služby bezpečným a bezpečným způsobem.
+ Toto pravidlo rozdělí název parametru na tokeny založené na konvenci ve stylu CamelCase (velká a malá písmena) a zkontroluje, jestli každý token odpovídá "URI", "URI", "urn", "urn", "URL" nebo "URL". Pokud existuje shoda, pravidlo předpokládá, že parametr představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. Pokud metoda přebírá řetězcovou reprezentaci identifikátoru URI, měla by být poskytnuta odpovídající přetížení, které přebírá instanci <xref:System.Uri> třídy, která poskytuje tyto služby bezpečným a zabezpečeným způsobem.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte parametr na typ <xref:System.Uri>; Toto je zásadní změna. Případně zadejte přetížení metody, která přijímá parametr <xref:System.Uri>; Toto je nepřerušená změna.
+ Chcete-li opravit porušení tohoto pravidla, změňte parametr na <xref:System.Uri> typ; jedná se o zásadní změnu. Případně zadejte přetížení metody, která přijímá <xref:System.Uri> parametr. Jedná se o nepřerušenou změnu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Pokud parametr nepředstavuje identifikátor URI, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, `ErrorProne`, který porušuje toto pravidlo, a typ `SaferWay`, který splňuje pravidlo.
+ Následující příklad ukazuje typ, `ErrorProne` , který porušuje toto pravidlo, a typ, `SaferWay` který splňuje pravidlo.
 
  [!code-cpp[FxCop.Design.UriNotString#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.UriNotString/cpp/FxCop.Design.UriNotString.cpp#1)]
  [!code-csharp[FxCop.Design.UriNotString#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.UriNotString/cs/FxCop.Design.UriNotString.cs#1)]
@@ -58,4 +58,4 @@ ms.locfileid: "72603371"
 
  [CA2234: Předejte objekty System.Uri namísto řetězců](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
 
- [CA1057: Řetězcové přetížení identifikátoru URI volá přetížení System.Uri](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)
+ [CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

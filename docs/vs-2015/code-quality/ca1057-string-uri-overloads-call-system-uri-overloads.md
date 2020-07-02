@@ -15,31 +15,31 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ba7e7de4f3ef6336ed3d82dc1e1da03ec0bf2575
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bcdb4d8333b0a4d2d06580d882cf736d4527eca4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603081"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539526"
 ---
-# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Řetězcové přetížení identifikátoru URI volá přetížení System.Uri
+# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru parametrem <xref:System.Uri?displayProperty=fullName> a přetížení, které přijímá řetězcový parametr, nevolá přetížení, které přijímá parametr <xref:System.Uri>.
+## <a name="cause"></a>Příčina
+ Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru <xref:System.Uri?displayProperty=fullName> parametrem a přetížení, které přijímá řetězcový parametr, nevolá přetížení, které přijímá <xref:System.Uri> parametr.
 
 ## <a name="rule-description"></a>Popis pravidla
- Vzhledem k tomu, že přetížení se liší pouze parametrem String/<xref:System.Uri>, předpokládá se, že řetězec představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. Třída <xref:System.Uri> poskytuje tyto služby bezpečným a bezpečným způsobem. Chcete-li těžit výhody třídy <xref:System.Uri>, přetížení řetězce by mělo volat přetížení <xref:System.Uri> pomocí řetězcového argumentu.
+ Vzhledem k tomu, že přetížení se liší pouze řetězcem nebo <xref:System.Uri> parametrem, předpokládá se, že řetězec představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. <xref:System.Uri>Třída poskytuje tyto služby bezpečným a bezpečným způsobem. Chcete-li těžit výhody <xref:System.Uri> třídy, přetížení řetězce by mělo volat <xref:System.Uri> přetížení pomocí řetězcového argumentu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Znovu Implementujte metodu, která používá řetězcovou reprezentaci identifikátoru URI, aby vytvořila instanci <xref:System.Uri> třídy pomocí řetězcového argumentu a poté předá objekt <xref:System.Uri> přetížení, které má parametr <xref:System.Uri>.
+ Znovu Implementujte metodu, která používá řetězcovou reprezentaci identifikátoru URI, aby vytvořila instanci <xref:System.Uri> třídy pomocí řetězcového argumentu a poté předá <xref:System.Uri> objekt přetížení, které má <xref:System.Uri> parametr.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Pokud parametr řetězce nepředstavuje identifikátor URI, je bezpečné potlačit upozornění od tohoto pravidla.

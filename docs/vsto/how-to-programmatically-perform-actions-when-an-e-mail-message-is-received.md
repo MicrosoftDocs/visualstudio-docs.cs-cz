@@ -1,7 +1,7 @@
 ---
-title: Pokud dostali e-mailové zprávy prostřednictvím kódu programu provádět akce
+title: Při přijetí e-mailové zprávy programově provádět akce
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a0787db2f7055bc65871227b9fcf8cbbb60ec1d8
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 75278a52fb989e5142e5981dab604bf3da49bd99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402202"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537862"
 ---
-# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Postupy: Programově provádění akcí po přijetí e-mailovou zprávu
-  V tomto příkladu provede vlastní akce, když je uživateli doručeno e-mailovou zprávu.
+# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Postupy: provádění akcí po přijetí e-mailové zprávy prostřednictvím kódu programu
+  Tento příklad provádí vlastní akce, když uživatel obdrží e-mailovou zprávu.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -32,6 +32,6 @@ ms.locfileid: "66402202"
  [!code-csharp[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs#1)]
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md)
+- [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md)
 - [Práce s položkami pošty](../vsto/working-with-mail-items.md)
 - [Začínáme s programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,46 +17,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4de0471dcc94a709156f5dc9fcce57dca8fb82bd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 92148a6f084a4cc04b4587781e750e4fd0df133f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427592"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538330"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu
-  V dokumentu aplikace Microsoft Office Word a sešit aplikace Microsoft Office Excel můžete ukládat XML data tak, že vytvoříte vlastní část XML do přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [přehled částí XML vlastní](../vsto/custom-xml-parts-overview.md).
+  Data XML můžete ukládat do systém Microsoft Office excelového sešitu nebo systém Microsoft Office dokumentu aplikace Word vytvořením vlastní části XML v přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md).
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 > [!NOTE]
-> Visual Studio neposkytuje projekty na úrovni dokumentu pro aplikaci Microsoft Office PowerPoint. Informace o přidání vlastních částí XML do Powerpointovou prezentaci. pomocí doplňku VSTO najdete v tématu [jak: Přidání vlastních částí XML do dokumentů s použitím doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).
+> Visual Studio neposkytuje projekty na úrovni dokumentu pro systém Microsoft Office PowerPointu. Informace o přidání vlastní součásti XML do prezentace aplikace PowerPoint pomocí doplňku VSTO naleznete v tématu [How to: Add a Custom XML Parts to Documents in VSTO Add-in](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).
 
-### <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>Chcete-li přidat vlastní část XML k Excelovému sešitu
+### <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>Přidání vlastní části XML do excelového sešitu
 
-1. Přidat nový <xref:Microsoft.Office.Core.CustomXMLPart> objektu <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v sešitu. <xref:Microsoft.Office.Core.CustomXMLPart> Obsahuje řetězec XML, který chcete uložit v sešitu.
+1. Přidá nový <xref:Microsoft.Office.Core.CustomXMLPart> objekt do <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v sešitu. <xref:Microsoft.Office.Core.CustomXMLPart>Obsahuje řetězec XML, který chcete uložit do sešitu.
 
      [!code-csharp[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.cs#1)]
      [!code-vb[Trin_AddCustomXmlPartExcelDocLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartExcelDocLevel/ThisWorkbook.vb#1)]
 
-2. Přidat `AddCustomXmlPartToWorkbook` metodu `ThisWorkbook` třídy v projektu úrovni dokumentu pro Excel.
+2. Přidejte `AddCustomXmlPartToWorkbook` metodu do `ThisWorkbook` třídy v projektu na úrovni dokumentu pro Excel.
 
-3. Volejte metodu od jiného kódu ve vašem projektu. Například pokud chcete vytvořit vlastní část XML, když uživatel otevře sešit, volejte metodu z `ThisWorkbook_Startup` obslužné rutiny události.
+3. Zavolejte metodu z jiného kódu v projektu. Chcete-li například vytvořit vlastní část XML, když uživatel otevře sešit, zavolejte metodu z `ThisWorkbook_Startup` obslužné rutiny události.
 
-### <a name="to-add-a-custom-xml-part-to-a-word-document"></a>Chcete-li přidat vlastní část XML do Wordového dokumentu
+### <a name="to-add-a-custom-xml-part-to-a-word-document"></a>Přidání vlastní části XML do wordového dokumentu
 
-1. Přidat nový <xref:Microsoft.Office.Core.CustomXMLPart> objektu <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v dokumentu. <xref:Microsoft.Office.Core.CustomXMLPart> Obsahuje řetězec XML, který chcete uložit v dokumentu.
+1. Přidá nový <xref:Microsoft.Office.Core.CustomXMLPart> objekt do <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v dokumentu. <xref:Microsoft.Office.Core.CustomXMLPart>Obsahuje řetězec XML, který chcete uložit v dokumentu.
 
      [!code-vb[Trin_AddCustomXmlPartWordDocLevel#1](../vsto/codesnippet/VisualBasic/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.vb#1)]
      [!code-csharp[Trin_AddCustomXmlPartWordDocLevel#1](../vsto/codesnippet/CSharp/Trin_AddCustomXmlPartWordDocLevel/ThisDocument.cs#1)]
 
-2. Přidat `AddCustomXmlPartToDocument` metodu `ThisDocument` třídy v projektu úrovni dokumentu pro aplikaci Word.
+2. Přidejte `AddCustomXmlPartToDocument` metodu do `ThisDocument` třídy v projektu na úrovni dokumentu pro aplikaci Word.
 
-3. Volejte metodu od jiného kódu ve vašem projektu. Například pokud chcete vytvořit vlastní část XML, když uživatel otevře dokument, volejte metodu z `ThisDocument_Startup` obslužné rutiny události.
+3. Zavolejte metodu z jiného kódu v projektu. Chcete-li například vytvořit vlastní část XML, když uživatel otevře dokument, zavolejte metodu z `ThisDocument_Startup` obslužné rutiny události.
 
 ## <a name="robust-programming"></a>Robustní programování
- Pro zjednodušení tento příklad používá řetězec jazyka XML, který je definován jako místní proměnná v metodě. Obvykle byste měli získat XML z externího zdroje, jako je například soubor nebo databáze.
+ Pro zjednodušení tento příklad používá řetězec XML, který je definován jako místní proměnná v metodě. Obvykle byste měli získat XML z externího zdroje, jako je například soubor nebo databáze.
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md)
-- [Postupy: Přidání vlastních částí XML do dokumentů s použitím doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)
+- [Postupy: Přidání vlastních částí XML do dokumentů pomocí doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)

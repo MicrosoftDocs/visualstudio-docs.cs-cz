@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,20 +14,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc8fbc80a58afcb6f2256c56b1071276c50f319b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 0097692c77d0b472c808876e9017b514b6416fc6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985845"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538070"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu
-  V tabulce systém Microsoft Office Word jsou buňky uspořádány do řádků a sloupců. Metodu <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> objektu <xref:Microsoft.Office.Interop.Word.Rows> lze použít k přidání řádků do tabulky a metody <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> objektu <xref:Microsoft.Office.Interop.Word.Columns> pro přidání sloupců.
+  V tabulce systém Microsoft Office Word jsou buňky uspořádány do řádků a sloupců. Můžete použít <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> metodu <xref:Microsoft.Office.Interop.Word.Rows> objektu pro přidání řádků do tabulky a <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> metodu <xref:Microsoft.Office.Interop.Word.Columns> objektu pro přidání sloupců.
 
  [!INCLUDE[appliesto_wdalldocapp](includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="document-level-customization-examples"></a>Příklady přizpůsobení na úrovni dokumentu
- Následující příklady kódu lze použít v přizpůsobení na úrovni dokumentu. Chcete-li použít tyto příklady, spusťte je z třídy `ThisDocument` v projektu. V těchto příkladech se předpokládá, že dokument přidružený k vašemu přizpůsobení má již alespoň jednu tabulku.
+ Následující příklady kódu lze použít v přizpůsobení na úrovni dokumentu. Chcete-li použít tyto příklady, spusťte je z `ThisDocument` třídy v projektu. V těchto příkladech se předpokládá, že dokument přidružený k vašemu přizpůsobení má již alespoň jednu tabulku.
 
 > [!IMPORTANT]
 > Tento kód se spouští pouze v projektech, které vytvoříte pomocí kterékoli z následujících šablon projektu:
@@ -41,20 +41,20 @@ ms.locfileid: "72985845"
 
 ### <a name="to-add-a-row-to-a-table"></a>Přidání řádku do tabulky
 
-1. K přidání řádku do tabulky použijte metodu <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>.
+1. Použijte <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> metodu pro přidání řádku do tabulky.
 
      [!code-vb[Trin_VstcoreWordAutomation#95](codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#95)]
      [!code-csharp[Trin_VstcoreWordAutomation#95](codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#95)]
 
 ### <a name="to-add-a-column-to-a-table"></a>Přidání sloupce do tabulky
 
-1. Použijte metodu <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> a potom pomocí metody <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> nastavte, aby všechny sloupce měly stejnou šířku.
+1. Použijte <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> metodu a potom pomocí <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> metody nastavte stejnou šířku všech sloupců.
 
      [!code-vb[Trin_VstcoreWordAutomation#96](codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#96)]
      [!code-csharp[Trin_VstcoreWordAutomation#96](codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#96)]
 
 ## <a name="vsto-add-in-examples"></a>Příklady doplňku VSTO
- V doplňku VSTO lze použít následující příklady kódu. Chcete-li použít příklady, spusťte je z třídy `ThisAddIn` v projektu. V těchto příkladech se předpokládá, že aktivní dokument již obsahuje alespoň jednu tabulku.
+ V doplňku VSTO lze použít následující příklady kódu. Chcete-li použít příklady, spusťte je z `ThisAddIn` třídy v projektu. V těchto příkladech se předpokládá, že aktivní dokument již obsahuje alespoň jednu tabulku.
 
 > [!IMPORTANT]
 > Tento kód se spouští pouze v projektech, které vytvoříte pomocí šablon doplňku aplikace Word VSTO.
@@ -63,14 +63,14 @@ ms.locfileid: "72985845"
 
 ### <a name="to-add-a-row-to-a-table"></a>Přidání řádku do tabulky
 
-1. K přidání řádku do tabulky použijte metodu <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>.
+1. Použijte <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> metodu pro přidání řádku do tabulky.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#95](codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#95)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#95](codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#95)]
 
 ### <a name="to-add-a-column-to-a-table"></a>Přidání sloupce do tabulky
 
-1. Použijte metodu <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> a potom pomocí metody <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> nastavte, aby všechny sloupce měly stejnou šířku.
+1. Použijte <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> metodu a potom pomocí <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> metody nastavte stejnou šířku všech sloupců.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#96](codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#96)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#96](codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#96)]

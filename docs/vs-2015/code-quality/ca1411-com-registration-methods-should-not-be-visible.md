@@ -15,31 +15,31 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f3ddd2c90d23884bd08a90560dcc5ed0fe700aaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f001a2bb4920ebfb3f5cff3745639bd346a0a920
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652717"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540138"
 ---
 # <a name="ca1411-com-registration-methods-should-not-be-visible"></a>CA1411: Metody registrace modelu COM by neměly být viditelné
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ComRegistrationMethodsShouldNotBeVisible|
 |CheckId|CA1411|
 |Kategorie|Microsoft. interoperabilita|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Metoda, která je označena atributem <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> nebo atributem <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>, je externě viditelná.
+## <a name="cause"></a>Příčina
+ Metoda, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atributem nebo, je externě viditelná.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud je sestavení registrováno pomocí modelu COM (Component Object Model), položky jsou přidány do registru pro každý typ viditelný v sestavení. Metody označené atributem <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> a <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> jsou volány během procesu registrace a zrušení registrace, v uvedeném pořadí, ke spuštění uživatelského kódu, který je specifický pro registraci nebo zrušení registrace těchto typů. Tento kód by neměl být volán mimo tyto procesy.
+ Pokud je sestavení registrováno pomocí modelu COM (Component Object Model), položky jsou přidány do registru pro každý typ viditelný v sestavení. Metody, které jsou označeny <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> atributem a, jsou volány během procesu registrace a zrušení registrace, v uvedeném pořadí, ke spuštění uživatelského kódu, který je specifický pro registraci nebo zrušení registrace těchto typů. Tento kód by neměl být volán mimo tyto procesy.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, změňte přístupnost metody na `private` nebo `internal` (`Friend` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ Chcete-li opravit porušení tohoto pravidla, změňte přístupnost metody na `private` nebo `internal` ( `Friend` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
@@ -54,4 +54,4 @@ ms.locfileid: "72652717"
  [CA1410: Metody registrace modelu COM by si měly odpovídat](../code-quality/ca1410-com-registration-methods-should-be-matched.md)
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName> [registrace sestavení pomocí modelu COM](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [Regasm. exe (nástroj registrace sestavení)](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)
+ <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>[Registrace sestavení pomocí modelu COM](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [Regasm.exe (nástroj registrace sestavení)](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)

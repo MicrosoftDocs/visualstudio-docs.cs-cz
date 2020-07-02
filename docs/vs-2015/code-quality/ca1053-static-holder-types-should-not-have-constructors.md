@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7de098d264dbdd6d7d9daea385de2e03d4e1ba35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 29cc322dd59dc0de66af8f92a46524d15b0022c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653827"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539578"
 ---
-# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: Statický vlastník typů by neměl mít konstruktory
+# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: Statické typy vlastníků by neměly mít konstruktory
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|StaticHolderTypesShouldNotHaveConstructors|
 |CheckId|CA1053|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo vnořený veřejný typ deklaruje pouze statické členy a má veřejný nebo chráněný výchozí konstruktor.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -48,6 +48,6 @@ ms.locfileid: "72653827"
  Nepotlačujte upozornění na toto pravidlo. Přítomnost konstruktoru naznačuje, že typ není statický typ.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem. Všimněte si, že ve zdrojovém kódu není žádný výchozí konstruktor. Když je tento kód zkompilován do sestavení, C# kompilátor vloží výchozí konstruktor, který porušuje toto pravidlo. Chcete-li tento problém opravit, deklarujte privátní konstruktor.
+ Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem. Všimněte si, že ve zdrojovém kódu není žádný výchozí konstruktor. Když je tento kód zkompilován do sestavení, kompilátor jazyka C# vloží výchozí konstruktor, který porušuje toto pravidlo. Chcete-li tento problém opravit, deklarujte privátní konstruktor.
 
  [!code-csharp[FxCop.Design.StaticTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticTypes/cs/FxCop.Design.StaticTypes.cs#1)]

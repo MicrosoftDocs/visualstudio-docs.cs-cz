@@ -38,7 +38,7 @@ ms.locfileid: "85537576"
 
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: používání předdefinovaných dialogových oken v aplikaci Word prostřednictvím kódu programu](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)
 - [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md)

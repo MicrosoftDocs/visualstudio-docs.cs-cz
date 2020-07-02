@@ -81,6 +81,6 @@ ms.locfileid: "85538291"
 ## <a name="robust-programming"></a>Robustní programování
  Pro zjednodušení tento příklad používá řetězec XML, který je definován jako místní proměnná v metodě. Obvykle byste měli získat XML z externího zdroje, jako je například soubor nebo databáze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md)
 - [Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)

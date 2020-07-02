@@ -1,7 +1,7 @@
 ---
 title: Sešit použitý k vytvoření tohoto projektu obsahuje ovládací prvky ActiveX, které návrhář nemůže načíst.
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: error-reference
 f1_keywords:
 - VST.SelectDocWizard.ContainsActiveXControls
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27feb1c6a85740d8a9287ce3a2a47800595e178a
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 4485489b48c4d1b03b608c6072cfc859e8bc8f59
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253776"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537342"
 ---
 # <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>Sešit použitý k vytvoření tohoto projektu obsahuje ovládací prvky ActiveX, které návrhář nemůže načíst.
   Tato chyba se zobrazí, když přidáte ovládací prvek do dokumentu aplikace Word nebo excelový list programově, uložíte dokument nebo sešit a pak vytvoříte nové řešení na úrovni dokumentu na základě dokumentu nebo sešitu.
@@ -33,5 +33,5 @@ ms.locfileid: "71253776"
 3. Vytvořte řešení na úrovni dokumentu na základě dokumentu nebo sešitu.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)

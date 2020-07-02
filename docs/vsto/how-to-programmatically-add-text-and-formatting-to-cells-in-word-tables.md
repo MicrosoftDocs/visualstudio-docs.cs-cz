@@ -1,7 +1,7 @@
 ---
-title: Přidání textu a formátování do buněk tabulek aplikace Word prostřednictvím kódu programu
+title: Přidání textu &ho formátování do buněk tabulky aplikace Word prostřednictvím kódu programu
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,33 +15,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cdab1877cf2114f7828dbd65786cf8758d77d0f3
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: acd43c82c6dae32ef6595b2f63c06fe61f3c6168
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402019"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538044"
 ---
-# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Postupy: Přidávání textu a formátování do buněk tabulek aplikace Word prostřednictvím kódu programu
-  Každá tabulka se skládá z kolekce buněk. Jednotlivých <xref:Microsoft.Office.Interop.Word.Cell> objekt představuje jednu buňku v tabulce. Na každé buňce její umístění v tabulce můžete odkazovat. V tomto příkladu odkazuje na buňku v prvním řádku a první sloupec tabulce. Přidá text do buňky; a použije formátování.
+# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Postupy: přidávání textu a formátování do buněk v tabulkách aplikace Word prostřednictvím kódu programu
+  Každá tabulka se skládá z kolekce buněk. Každý jednotlivý <xref:Microsoft.Office.Interop.Word.Cell> objekt představuje jednu buňku v tabulce. Na každou buňku odkazujete podle jejího umístění v tabulce. Tento příklad odkazuje na buňku umístěnou v prvním řádku a prvním sloupci v tabulce. Přidá text do buňky. a aplikuje formátování.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="to-add-text-and-formatting-to-cells"></a>Přidání textu a formátování do buněk
 
-1. Odkaz na buňku její umístění v tabulce, přidejte text do buňky a použít formátování.
+1. Podívejte se na buňku podle jejího umístění v tabulce, přidejte text do buňky a použijte formátování.
 
-     Následující příklad kódu je možné v přizpůsobení na úrovni dokumentu. Pokud chcete použít tento příklad, spusťte jej z `ThisDocument` třídu ve vašem projektu.
+     Následující příklad kódu lze použít v přizpůsobení na úrovni dokumentu. Chcete-li použít tento příklad, spusťte jej z `ThisDocument` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#97)]
      [!code-csharp[Trin_VstcoreWordAutomation#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#97)]
 
-     Následující příklad kódu je možné v doplňku VSTO. Tento příklad používá aktivní dokument. Pokud chcete použít v příkladu, spusťte jej z `ThisAddIn` třídu ve vašem projektu.
+     V doplňku VSTO se dá použít následující příklad kódu. Tento příklad používá aktivní dokument. Chcete-li použít příklad, spusťte jej z `ThisAddIn` třídy v projektu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#97)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#97)]
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)
-- [Postupy: Programové přidání řádků a sloupců do tabulek aplikace Word](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
-- [Postupy: Vkládání kódu programu s vlastností dokumentu do tabulek aplikace Word](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)
+- [Postupy: vytváření tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-create-word-tables.md)
+- [Postupy: přidávání řádků a sloupců do tabulek aplikace Word prostřednictvím kódu programu](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
+- [Postupy: naplnění tabulek Wordu pomocí vlastností dokumentu prostřednictvím kódu programu](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)

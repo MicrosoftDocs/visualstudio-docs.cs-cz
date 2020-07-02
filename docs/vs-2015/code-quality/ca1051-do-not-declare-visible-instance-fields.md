@@ -15,39 +15,39 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 41332ab7d729f7b2187ccace6b05fe2d17763a0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 076ce3858774d44e2d6c4c25205ced74b7a41bf0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672522"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539760"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Nedeklarujte viditelná pole instance
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotDeclareVisibleInstanceFields|
 |CheckId|CA1051|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Externě viditelný typ má externě viditelné pole instance.
 
 ## <a name="rule-description"></a>Popis pravidla
  Hlavní použití pole by mělo být jako podrobnost implementace. Pole by měla být `private` nebo `internal` a měla by být vystavena pomocí vlastností. Přístup k vlastnosti je snadno přístupný, protože je přístup k poli a kód v přístupových objektech vlastnosti se může změnit, protože funkce typu se rozšiřují bez úvodních změn. Vlastnosti, které vracejí jenom hodnotu privátního nebo interního pole, jsou optimalizované tak, aby se prováděly v hodnotě s přístupem k poli. k používání externě viditelných polí nad vlastnostmi je přidruženo velmi malý nárůst výkonu.
 
- Externě Visible odkazuje na úrovni přístupnosti `public`, `protected` a `protected internal` (`Public`, `Protected` a `Protected Friend` na Visual Basic).
+ Externě viditelné `public` jsou `protected` úrovně dostupnosti, a `protected internal` ( `Public` , a `Protected` `Protected Friend` v Visual Basic).
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, nastavte pole `private` nebo `internal` a vystavte ho pomocí externě viditelné vlastnosti.
+ Chcete-li opravit porušení tohoto pravidla, vytvořte pole `private` nebo `internal` ho zpřístupněte pomocí externě viditelné vlastnosti.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo. Externě viditelná pole neposkytují žádné výhody, které nejsou k dispozici pro vlastnosti. Veřejné pole navíc nelze chránit pomocí [požadavků propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d). Viz [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ (`BadPublicInstanceFields`), který porušuje toto pravidlo. `GoodPublicInstanceFields` zobrazuje opravený kód.
+ Následující příklad ukazuje typ ( `BadPublicInstanceFields` ), který porušuje toto pravidlo. `GoodPublicInstanceFields`zobrazuje opravený kód.
 
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TypesPublicInstanceFields/cs/FxCop.Design.TypesPublicInstanceFields.cs#1)]
 
@@ -55,4 +55,4 @@ ms.locfileid: "72672522"
  [CA2112: Zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
 
 ## <a name="see-also"></a>Viz také
- [Požadavky propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)
+ [Požadavky na odkaz](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

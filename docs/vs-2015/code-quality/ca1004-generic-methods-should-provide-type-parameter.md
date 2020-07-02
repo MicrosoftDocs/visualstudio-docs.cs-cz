@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a7c64337af94f9e88944fd15480f4b7ce1e2cb08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e7a96c95313ffee82448e3485c90868c8103814a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655258"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539799"
 ---
 # <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: Obecné metody by měly poskytnout parametr typu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|GenericMethodsShouldProvideTypeParameter|
 |CheckId|CA1004|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Signatura parametru externě viditelné obecné metody neobsahuje typy, které odpovídají všem parametrům typu metody.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,13 +45,13 @@ ms.locfileid: "72655258"
  Nepotlačujte upozornění na toto pravidlo. Poskytování generických v syntaxi, která je snadno srozumitelná a používá, zkracuje dobu potřebnou k tomu, abyste se seznámili a zvyšovali rychlost přijímání nových knihoven.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje syntaxi pro volání dvou obecných metod. Argument typu pro `InferredTypeArgument` je odvozen a argument typu `NotInferredTypeArgument` musí být explicitně zadán.
+ Následující příklad ukazuje syntaxi pro volání dvou obecných metod. Argument typu pro `InferredTypeArgument` je odvozený a argument typu pro `NotInferredTypeArgument` musí být explicitně zadaný.
 
  [!code-csharp[FxCop.Design.Inference#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.Inference/cs/FxCop.Design.Inference.cs#1)]
  [!code-vb[FxCop.Design.Inference#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.Inference/vb/FxCop.Design.Inference.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005: Vyhněte se nadbytečným parametrům u obecných typů](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1010: Kolekce musí implementovat obecné rozhraní](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
@@ -59,7 +59,7 @@ ms.locfileid: "72655258"
 
  [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006: Nevnořujte obecné typy do signatur členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
  [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
