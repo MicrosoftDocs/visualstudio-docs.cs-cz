@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Konfigurace zabezpečení se seznamem povolených položek'
+title: 'Postupy: Konfigurace zabezpečení seznamu zahrnutí'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,60 +13,60 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ef4d25088e56f2223cb392dbc00c8454e1a291ed
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62826376"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541632"
 ---
-# <a name="how-to-configure-inclusion-list-security"></a>Postupy: Konfigurace zabezpečení se seznamem povolených položek
-  Pokud máte oprávnění správce, můžete nakonfigurovat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] důvěryhodný dotaz na ovládací prvek, zda koncovým uživatelům se zobrazí možnost instalace řešení pro systém Office uložením rozhodnutí o důvěryhodnosti na seznam povolených položek. Informace o seznamech povolených položek najdete v tématu [řešení důvěřovat Office s použitím seznamů povolených položek](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
+# <a name="how-to-configure-inclusion-list-security"></a>Postupy: Konfigurace zabezpečení seznamu zahrnutí
+  Pokud máte oprávnění správce, můžete nakonfigurovat [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] výzvu vztahu důvěryhodnosti, abyste mohli řídit, jestli mají koncoví uživatelé možnost instalovat řešení Office, a to uložením rozhodnutí o důvěryhodnosti do seznamu povolených. Informace o seznamech zahrnutí najdete v tématu [důvěryhodná řešení Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Pro řešení, které jsou v každé z pěti zóny můžete nastavit následující možnosti:
+ Pro řešení, která jsou v každé z pěti zón, můžete nastavit následující možnosti:
 
-- Povolit [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] důvěřovat výzvy klíč a seznam povolených položek. Můžete povolit koncovým uživatelům zajištění důvěryhodnosti řešení pro systém Office, které jsou podepsané pomocí žádné certifikáty.
+- Povolte [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíč výzvy vztahu důvěryhodnosti a seznam zahrnutí. Koncovým uživatelům můžete umožnit udělit vztah důvěryhodnosti k řešením Office, která jsou podepsaná jakýmkoli certifikátem.
 
-- Omezit [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] důvěřovat výzvy klíč a seznam povolených položek. Můžete povolit koncovým uživatelům pro instalaci řešení pro systém Office, které jsou podepsány pomocí certifikátu, který identifikuje vydavatele, ale který ještě není důvěryhodný.
+- Omezte [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíč výzvy vztahu důvěryhodnosti a seznam zahrnutí. Koncovým uživatelům můžete dovolit instalovat řešení Office, která jsou podepsaná certifikátem, který identifikuje vydavatele, ale ještě není důvěryhodný.
 
-- Zakažte [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] důvěřovat výzvy klíč a seznam povolených položek. Znemožněte koncovým uživatelům instalovat žádné řešení pro Office, které není podepsáno s explicitně důvěryhodný certifikát.
+- Zakažte [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] klíč výzvy vztahu důvěryhodnosti a seznam zahrnutí. Koncovým uživatelům můžete zabránit v instalaci jakéhokoli řešení Office, které není podepsané explicitně důvěryhodným certifikátem.
 
-## <a name="enable-the-inclusion-list"></a>Povolit seznam povolených položek
- Povolte seznamu povolených položek pro zónu, když chcete koncovým uživatelům se zobrazí možnost instalace a spuštění jakékoli řešení pro Office, který pochází z této zóny.
+## <a name="enable-the-inclusion-list"></a>Povolit seznam zahrnutí
+ Seznam zahrnutí pro zónu povolte, pokud chcete koncovým uživatelům prezentovat možnost instalace a spuštění libovolného řešení Office, které pochází z této zóny.
 
-### <a name="to-enable-the-inclusion-list-by-using-the-registry-editor"></a>Chcete-li povolit seznam povolených položek pomocí Editoru registru
+### <a name="to-enable-the-inclusion-list-by-using-the-registry-editor"></a>Povolení seznamu zahrnutí pomocí Editoru registru
 
-1. Otevřete editor registru:
+1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
 
-    2. V **otevřít** zadejte **regedt32.exe**a potom klikněte na tlačítko **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami.
 
-    |Hodnota řetězce podklíče|Hodnota|
+    |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
     |**Internet**|**AuthenticodeRequired**|
     |**UntrustedSites**|**Disabled** (Zakázáno)|
-    |**MyComputer**|**Povoleno**|
-    |**LocalIntranet**|**Povoleno**|
-    |**TrustedSites**|**Povoleno**|
+    |**MyComputer**|**Enabled** (Povoleno)|
+    |**LocalIntranet**|**Enabled** (Povoleno)|
+    |**TrustedSites**|**Enabled** (Povoleno)|
 
-     Ve výchozím nastavení **Internet** má hodnotu **AuthenticodeRequired** a **UntrustedSites** má hodnotu **zakázané**.
+     Ve výchozím nastavení má **Internet** hodnotu **AuthenticodeRequired** a **UntrustedSites** má hodnotu **disabled**.
 
-### <a name="to-enable-the-inclusion-list-programmatically"></a>Chcete-li povolit seznam povolených položek prostřednictvím kódu programu
+### <a name="to-enable-the-inclusion-list-programmatically"></a>Povolení seznamu povolených programů prostřednictvím kódu programu
 
-1. Vytvoření jazyka Visual Basic nebo Visual C# konzolové aplikace.
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C#.
 
-2. Otevřít *soubor Program.vb* nebo *Program.cs* pro úpravy a přidejte následující kód.
+2. Otevřete soubor *program. vb* nebo *program.cs* pro úpravy a přidejte následující kód.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -92,26 +92,26 @@ ms.locfileid: "62826376"
 
 3. Sestavte a spusťte aplikaci.
 
-## <a name="restrict-the-inclusion-list"></a>Omezte seznam povolených položek
- Omezte seznam povolených položek, aby řešení musí být podepsány pomocí technologie Authenticode certifikáty, které mají známé identity, než se uživatelům zobrazí výzva rozhodnutí důvěryhodnosti.
+## <a name="restrict-the-inclusion-list"></a>Omezit seznam zahrnutí
+ Omezte seznam zahrnutí, aby řešení musela být podepsaná certifikáty Authenticode, které mají známou identitu před tím, než se uživatelům zobrazí výzva k rozhodnutí o důvěryhodnosti.
 
-### <a name="to-restrict-the-inclusion-list"></a>K omezení seznamu povolených položek
+### <a name="to-restrict-the-inclusion-list"></a>Omezení seznamu zahrnutí
 
-1. Otevřete editor registru:
+1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
 
-    2. V **otevřít** zadejte **regedt32.exe**a potom klikněte na tlačítko **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
 
 2. Vyhledejte následující klíč registru:
 
-     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Pokud klíč neexistuje, vytvořte ho.
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami.
 
-    |Hodnota řetězce podklíče|Value|
+    |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
     |**UntrustedSites**|**Disabled** (Zakázáno)|
     |**Internet**|**AuthenticodeRequired**|
@@ -119,13 +119,13 @@ ms.locfileid: "62826376"
     |**LocalIntranet**|**AuthenticodeRequired**|
     |**TrustedSites**|**AuthenticodeRequired**|
 
-     Ve výchozím nastavení **Internet** má hodnotu **AuthenticodeRequired** a **UntrustedSites** má hodnotu **zakázané**.
+     Ve výchozím nastavení má **Internet** hodnotu **AuthenticodeRequired** a **UntrustedSites** má hodnotu **disabled**.
 
-### <a name="to-restrict-the-inclusion-list-programmatically"></a>K omezení seznamu povolených položek prostřednictvím kódu programu
+### <a name="to-restrict-the-inclusion-list-programmatically"></a>Chcete-li omezit seznam zahrnutí programově
 
-1. Vytvoření jazyka Visual Basic nebo Visual C# konzolové aplikace.
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C#.
 
-2. Otevřít *soubor Program.vb* nebo *Program.cs* pro úpravy a přidejte následující kód.
+2. Otevřete soubor *program. vb* nebo *program.cs* pro úpravy a přidejte následující kód.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -151,24 +151,24 @@ ms.locfileid: "62826376"
 
 3. Sestavte a spusťte aplikaci.
 
-## <a name="disable-the-inclusion-list"></a>Zakázat seznam povolených položek
- Seznam povolených položek můžete zakázat, aby koncoví uživatelé můžou nainstalovat pouze řešení, které jsou podepsané důvěryhodným a známým certifikátem.
+## <a name="disable-the-inclusion-list"></a>Zakázat seznam zahrnutí
+ Seznam pro zahrnutí můžete zakázat, aby koncoví uživatelé mohli instalovat jenom řešení, která jsou podepsaná důvěryhodným a známým certifikátem.
 
-### <a name="to-disable-the-inclusion-list"></a>Chcete-li zakázat seznam povolených položek
+### <a name="to-disable-the-inclusion-list"></a>Zakázání seznamu pro zahrnutí
 
-1. Otevřete editor registru:
+1. Otevřete editor registru: .
 
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.
 
-    2. V **otevřít** zadejte **regedt32.exe**a potom klikněte na tlačítko **OK**.
+    2. Do pole **otevřít** zadejte **regedt32.exe**a pak klikněte na **OK**.
 
-2. Pokud to ještě neexistuje, vytvořte následující klíč registru:
+2. Pokud tato akce ještě neexistuje, vytvořte následující klíč registru:
 
-     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
 
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami.
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami.
 
-    |Hodnota řetězce podklíče|Value|
+    |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
     |**UntrustedSites**|**Disabled** (Zakázáno)|
     |**Internet**|**Disabled** (Zakázáno)|
@@ -176,11 +176,11 @@ ms.locfileid: "62826376"
     |**LocalIntranet**|**Disabled** (Zakázáno)|
     |**TrustedSites**|**Disabled** (Zakázáno)|
 
-### <a name="to-disable-the-inclusion-list-programmatically"></a>Chcete-li zakázat seznam povolených položek prostřednictvím kódu programu
+### <a name="to-disable-the-inclusion-list-programmatically"></a>Postup při zakazování seznamu povolených zahrnutí
 
-1. Vytvoření jazyka Visual Basic nebo Visual C# konzolové aplikace.
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C#.
 
-2. Otevřít *soubor Program.vb* nebo *Program.cs* pro úpravy a přidejte následující kód.
+2. Otevřete soubor *program. vb* nebo *program.cs* pro úpravy a přidejte následující kód.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -208,5 +208,5 @@ ms.locfileid: "62826376"
 3. Sestavte a spusťte aplikaci.
 
 ## <a name="see-also"></a>Viz také:
-- [Vztah důvěryhodnosti řešení pro systém Office s použitím seznamů povolených položek](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
+- [Důvěryhodná řešení pro Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

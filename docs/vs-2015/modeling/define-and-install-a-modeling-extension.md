@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c38150dd84ef8898b2aa894a614dfb79e289b593
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ef79d1be0b88ecdafa8691189bbc95291a6417ed
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850454"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544986"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Definování a instalace rozšíření modelování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 ## <a name="creating-a-modeling-extension-solution"></a>Vytvoření řešení rozšíření pro modelování
  Chcete-li definovat rozšíření modelování, je nutné vytvořit řešení, které obsahuje tyto projekty:
 
-- Projekt rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Integration Extension (VSIX). Tím se vygeneruje soubor, který funguje jako instalační program pro komponenty rozšíření.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Projekt rozšíření Integration (VSIX). Tím se vygeneruje soubor, který funguje jako instalační program pro komponenty rozšíření.
 
 - Projekt knihovny tříd, který je vyžadován pro součásti, které obsahují kód programu.
 
@@ -44,7 +44,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 1. V nabídce **soubor** klikněte na příkaz **Nový**, **projekt**.
 
-2. V části **Nainstalované šablony**vyberte **možnost C# Visual** nebo **Visual Basic**a pak zvolte možnost **Knihovna tříd**.
+2. V části **Nainstalované šablony**vyberte možnost **Visual C#** nebo **Visual Basic**a pak zvolte možnost **Knihovna tříd**.
 
 #### <a name="to-create-a-vsix-project"></a>Vytvoření projektu VSIX
 
@@ -54,7 +54,7 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
     1. V **Průzkumník řešení**v místní nabídce řešení vyberte možnost **Přidat**, **Nový projekt**.
 
-    2. V části **Nainstalované šablony**rozbalte **položku C# Visual** nebo **Visual Basic**a potom vyberte možnost **rozšiřitelnost**. V prostředním sloupci vyberte **projekt VSIX**.
+    2. V části **Nainstalované šablony**rozbalte položku **Visual C#** nebo **Visual Basic**a potom vyberte možnost **rozšiřitelnost**. V prostředním sloupci vyberte **projekt VSIX**.
 
 3. Nastavte projekt VSIX jako projekt po spuštění řešení.
 
@@ -72,10 +72,10 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
     2. Pro komponentu s kódem nastavte tato pole v dialogovém okně **Přidat nový prostředek** :
 
-        |||
+        |Pole|Hodnota|
         |-|-|
-        |**Zadejte** =|**Microsoft.VisualStudio.MefComponent**|
-        | = **zdroje**|**Projekt v aktuálním řešení**|
+        |**Textový** =|**Microsoft. VisualStudio. MefComponent**|
+        |**Zdrojová** =|**Projekt v aktuálním řešení**|
         |**Project** =|*Váš projekt knihovny tříd*|
         |**Vložit do této složky** =|*obsahovat*|
 
@@ -97,9 +97,9 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 #### <a name="to-run-an-extension-during-its-development"></a>Spuštění rozšíření během vývoje
 
-1. V nabídce **ladění** [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] vyberte možnost **Spustit ladění**.
+1. V nabídce [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **ladění** vyberte možnost **Spustit ladění**.
 
-     Sestavení projektu a nová instance [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] začínají v experimentálním režimu.
+     Sestavení projektu a nová instance se [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] spustí v experimentálním režimu.
 
     - Případně můžete zvolit možnost **Spustit bez ladění**. Tím se zkracuje čas potřebný ke spuštění programu.
 
@@ -109,14 +109,14 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 3. Pokud jste použili příkaz **Spustit bez ladění** , ale chcete použít ladicí program, vraťte se k hlavní instanci aplikace Visual Studio. V nabídce **ladění** klikněte na **připojit k procesu**. V dialogovém okně vyberte experimentální instanci aplikace Visual Studio, která má název programu **devenv**.
 
-## <a name="Installing"></a>Instalace a odinstalace rozšíření
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Instalace a odinstalace rozšíření
  Provedením následujících kroků spusťte rozšíření v hlavní instanci aplikace Visual Studio buď na svém vlastním počítači, nebo na jiných počítačích.
 
 1. V počítači vyhledejte soubor **. vsix** , který byl vytvořen vaším projektem rozšíření.
 
     1. V **Průzkumník řešení**v místní nabídce projektu a pak zvolte možnost **Otevřít složku v Průzkumníku Windows**.
 
-    2. Vyhledejte soubor **bin\\\*\\** _YourProject_ **. vsix**
+    2. Vyhledejte soubor **bin \\ \* \\ **_YourProject_**. VSIX.**
 
 2. Zkopírujte soubor **. vsix** do cílového počítače, do kterého chcete nainstalovat rozšíření. Může to být váš vlastní počítač nebo jiný.
 
@@ -130,15 +130,15 @@ V aplikaci Visual Studio můžete definovat rozšíření pro modelování diagr
 
 #### <a name="to-uninstall-an-extension"></a>Odinstalace rozšíření
 
-1. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+1. V nabídce **Nástroje** klikněte na **Rozšíření a aktualizace**.
 
 2. Rozbalte položku **nainstalovaná rozšíření**.
 
 3. Vyberte rozšíření a pak klikněte na **odinstalovat**.
 
-   Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users\\*username*\AppData\Local:
+   Zřídka se vadné rozšíření nedokáže načíst a vytvoří sestavu v okně chyb, ale nezobrazí se ve Správci rozšíření. V takovém případě můžete odebrat rozšíření odstraněním souboru z následujícího umístění, kde *% localappdata%* je obvykle *jednotka*: \Users \\ *uživatelské_jméno*\AppData\Local:
 
-   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
+   *% Localappdata%* **\Microsoft\VisualStudio \\ [verze] \Extensions**
 
 ## <a name="see-also"></a>Viz také
  [Definování profilu pro rozšiřování UML](../modeling/define-a-profile-to-extend-uml.md) [Definování vlastní položky sady nástrojů pro modelování](../modeling/define-a-custom-modeling-toolbox-item.md) definování [omezení ověření pro modely UML](../modeling/define-validation-constraints-for-uml-models.md) [Definování příkazu nabídky v diagramu modelování](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Scénář: Změna návrhu pomocí vizualizace a modelování'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - code visualization [Visual Studio ALM]
 - modeling software [Visual Studio ALM]
@@ -15,37 +15,37 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1400f6d5881d5340ec452297d3579306111391b6
-ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
+ms.openlocfilehash: 1c0e971a2a38013ae75287467404e3321e3c4d37
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759746"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544193"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 
-Ujistěte se, že váš softwarový systém splňuje potřeby uživatelů pomocí vizualizačních a modelovacích nástrojů v sadě Visual Studio.
-Pomocí nástrojů, jako jsou mapy kódu, diagramy závislostí a diagramy tříd, můžete:
+Ujistěte se, že váš softwarový systém splňuje požadavky uživatelů pomocí nástrojů pro vizualizaci a modelování v aplikaci Visual Studio.
+Pomocí nástrojů, jako jsou mapy kódu, diagramy závislostí a diagramy tříd:
 
-Informace o tom, které verze sady Visual Studio podporují jednotlivé nástroje, naleznete [v tématu Podpora verzí pro architekturu a nástroje pro modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Chcete-li zjistit, které verze aplikace Visual Studio podporují jednotlivé nástroje, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-- Vyjasněte požadavky uživatelů a obchodní procesy.
+- Upřesněte požadavky uživatelů a obchodní procesy.
 
 - Vizualizujte a prozkoumejte existující kód.
 
-- Popište změny existujícího systému.
+- Popisuje změny v existujícím systému.
 
-- Ověřte, zda systém splňuje své požadavky.
+- Ověřte, že systém splňuje požadavky.
 
 - Udržujte kód v souladu s návrhem.
 
 Tento návod:
 
-- Popisuje, jak mohou tyto nástroje využívat váš softwarový projekt.
+- Popisuje, jak můžou tyto nástroje těžit z vašeho softwarového projektu.
 
-- Ukazuje, jak můžete použít tyto nástroje, bez ohledu na váš vývojový přístup, s ukázkovým scénářem.
+- Ukazuje, jak můžete tyto nástroje používat bez ohledu na to, jaký je váš přístup k vývoji, a to s ukázkovým scénářem.
 
-Další informace o těchto nástrojích a scénářích, které podporují, najdete v následujících tématech:
+Další informace o těchto nástrojích a scénářích, které podporují, najdete v těchto tématech:
 
 - [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)
 
@@ -53,41 +53,41 @@ Další informace o těchto nástrojích a scénářích, které podporují, naj
 
 ## <a name="scenario-overview"></a>Přehled scénáře
 
-Tento scénář popisuje epizody z životního cyklu vývoje softwaru dvou fiktivních společností: Dinner Now a Lucerne Publishing. Dinner Now poskytuje webovou službu doručování jídel v Seattlu. Zákazníci si mohou objednat jídlo a zaplatit za ně na webových stránkách Dinner Now. Objednávky jsou pak odeslány do příslušné místní restaurace k doručení. Lucerne Publishing, společnost v New Yorku, provozuje několik firem jak off, tak na webu. Například provozují web, na kterém mohou zákazníci zveřejňovat recenze restaurací.
+Tento scénář popisuje díly z životního cyklu vývoje softwaru dvou fiktivních společností: večeře nyní a Lucerne Publishing. Večeře teď poskytuje webovou službu pro doručování na základě jídla v Seattlu. Zákazníci můžou objednat jídla a platit za ně na webu večeře Now. Objednávky se pak odesílají do příslušné místní restaurace pro doručení. Lucerne Publishing, společnost v New Yorku, provozuje na webu několik firem současně. Například spouštějí web, kde můžou zákazníci publikovat recenze na restaurace.
 
-Lucerne nedávno získal večeři nyní a chce provést následující změny:
+Společnost Lucerne nedávno získala večeři a chce provést následující změny:
 
-- Integrujte jejich webové stránky přidáním funkcí pro kontrolu restaurací do aplikace Dinner Now.
+- Integrujte své weby přidáním funkcí recenze pro restaurace do hostina Now.
 
-- Nahraďte platební systém Dinner Now systémem Lucerne.
+- V systému společnosti Lucerne teď nahraďte platební systém.
 
-- Rozbalte službu Večeři v celém regionu.
+- Rozbalte službu večeře Now v rámci oblasti.
 
-Večeře nyní používá SCRUM a eXtreme programování. Mají velmi vysoké pokrytí testu a velmi málo nepodporovaného kódu. Minimalizují rizika vytvořením malých, ale funkčních verzí systému a následným přírůstkovým přidáváním funkcí. Vyvíjejí svůj kód přes krátké a časté iterace. To jim umožňuje přijmout změny s jistotou, refaktorovat kód často a vyhnout se "velký design dopředu".
+Večeře teď používá SCRUM a extrémní programování. Mají velmi vysoké pokrytí testů a velmi nepodporovaný kód. Tím se minimalizují rizika vytvořením malých, ale funkčních verzí systému a následným přidáním funkcí. Vyvíjejí svůj kód v krátkých a častých iteracích. To jim umožní mít jistotu na změnu, často Refaktorovat kód a vyhnout se "velkému návrhu předem".
 
-Lucerne udržuje mnohem větší a komplexní sbírku systémů, z nichž některé jsou více než 40 let staré. Jsou velmi opatrní při provádění změn z důvodu složitosti a rozsahu staršího kódu. Řídí se přísnějším procesem vývoje, dávají přednost návrhu podrobných řešení a dokumentují návrh a změny, ke kterým dochází během vývoje.
+Společnost Lucerne udržuje mnohem větší a složitou kolekci systémů, z nichž některé jsou starší než 40 let. Jsou velmi opatrní při provádění změn z důvodu složitosti a rozsahu starší verze kódu. Dodržují přísnější proces vývoje, který předvedl návrh podrobných řešení a dokumentuje návrh a změny, ke kterým došlo během vývoje.
 
-Oba týmy používají diagramy modelování v sadě Visual Studio, které jim pomáhají vyvíjet systémy, které splňují potřeby uživatelů. Společně s dalšími nástroji používají team foundation server, který jim pomáhá plánovat, organizovat a spravovat jejich práci.
+Oba týmy používají diagramy modelování v aplikaci Visual Studio, které jim pomůžou vyvíjet systémy, které vyhovují potřebám uživatelů. Používají Team Foundation Server společně s dalšími nástroji, které jim pomohou naplánovat, uspořádat a spravovat jejich práci.
 
-Další informace o serveru Team Foundation Server naleznete v tématu:
+Další informace o Team Foundation Server najdete v tématech:
 
 - [Plánování a sledování práce](#plan-and-track-work)
 
-- [Testování, ověřování a vrácení aktualizovaného kódu se změnami](#TestValidateCheckInCode)
+- [Testování, ověřování a vrácení aktualizovaného kódu](#TestValidateCheckInCode)
 
-## <a name="roles-of-architecture-and-modeling-diagrams-in-software-development"></a><a name="ModelingDiagramsTools"></a>Role architektury a diagramů modelování ve vývoji softwaru
+## <a name="roles-of-architecture-and-modeling-diagrams-in-software-development"></a><a name="ModelingDiagramsTools"></a>Role architektury a modelování diagramů při vývoji softwaru
 
-Následující tabulka popisuje role, které mohou tyto nástroje hrát v různých a různých fázích životního cyklu vývoje softwaru:
+Následující tabulka popisuje role, které tyto nástroje mohou hrát během několika různých fází životního cyklu vývoje softwaru:
 
-||**Modelování požadavků uživatelů**|**Modelování obchodních procesů**|**Systémová architektura & návrh**|**Vizualizace kódu & průzkum**|**Ověření**|
+||**Modelování uživatelských požadavků**|**Modelování obchodních procesů**|**Architektura systému & návrh**|**Zkoumání & vizualizace kódu**|**Ověření**|
 |------|-|-|-|-|-|
-|Diagram jazyka specifického pro doménu (DSL)|Ano|Ano|Ano|||
-|Diagram závislostí, ověření vrstvy|||Ano|Ano|Ano|
+|Diagram DSL (Domain-Specific Language)|Ano|Ano|Ano|||
+|Diagram závislosti, ověřování vrstvy|||Ano|Ano|Ano|
 |Mapa kódu|||Ano|Ano|Ano|
-|Návrhář třídy (na základě kódu)||||Ano||
+|Návrhář tříd (založený na kódu)||||Ano||
 
-Chcete-li nakreslit diagramy závislostí, musíte vytvořit projekt modelování jako součást existujícího nebo nového řešení. Tyto diagramy musí být vytvořeny v projektu modelování.
-Položky na diagramy závislostí jsou umístěny v projektu modelování, ale nejsou uloženy ve společném modelu. Mapy kódu a diagramy tříd .NET vytvořené z kódu existují mimo projekt modelování.
+Chcete-li kreslit diagramy závislostí, je nutné vytvořit projekt modelování jako součást stávajícího řešení nebo nového. Tyto diagramy musí být vytvořeny v projektu modelování.
+Položky v diagramech závislostí se nacházejí v projektu modelování, ale nejsou uloženy ve společném modelu. Mapy kódu a diagramy tříd .NET vytvořené z kódu existují mimo projekt modelování.
 
 Přečtěte si:
 
@@ -101,138 +101,138 @@ Přečtěte si:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Oba týmy také použít ověření závislostí k ujistěte se, že kód ve vývoji zůstává konzistentní s návrhem. Přečtěte si:
+Oba týmy také používají ověření závislostí, aby se zajistilo, že kód ve vývoji zůstane v souladu s návrhem. Přečtěte si:
 
-- [Zachování kódu v souladu s návrhem](#ValidatingCode)
+- [Udržování kódu v souladu s návrhem](#ValidatingCode)
 
-- [Popište logickou architekturu: diagramy závislostí](#DescribeLayers)
+- [Popište logickou architekturu: diagramy závislosti](#DescribeLayers)
 
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)
 
 > [!NOTE]
-> Některé verze sady Visual Studio podporují ověřování závislostí a verze map kódu jen pro čtení pro vizualizaci a modelování. Informace o tom, které edice sady Visual Studio tuto funkci podporují, naleznete [v tématu Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+> Některé verze sady Visual Studio podporují ověřování závislostí a verze map kódu jen pro čtení pro vizualizaci a modelování. Pokud chcete zjistit, které edice sady Visual Studio podporují tuto funkci, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="understand-and-communicate-information-about-the-system"></a>Pochopení a sdělování informací o systému
 
-Neexistuje žádné předepsané pořadí pro použití diagramy modelování sady Visual Studio, takže je můžete použít tak, aby odpovídaly vašim potřebám nebo přístupu. Týmy obvykle v průběhu projektu iterativně a často znovu navštěvují své modely. Každý diagram nabízí konkrétní silné stránky, které vám pomohou pochopit, popsat a komunikovat různé aspekty systému ve vývoji.
+Neexistuje žádné předepsané pořadí pro použití diagramů modelování sady Visual Studio, takže je můžete použít tak, jak vyhovují vašim potřebám nebo přístupu. Týmy obvykle opakovaně přepínají své modely v rámci projektu. Každý diagram nabízí konkrétní sílu, které vám pomůžou pochopit, popsat a komunikovat různé aspekty systému ve vývoji.
 
-Večeře nyní a Lucerne komunikovat mezi sebou navzájem a se zúčastněnými stranami projektu pomocí diagramů jako jejich společný jazyk. Například Večeři nyní používá diagramy k provádění těchto úkolů:
+Večeře nyní a Lucerne komunikují mezi sebou a s účastníky projektu pomocí diagramů jako jejich společného jazyka. Například večeře teď používá diagramy k provádění těchto úkolů:
 
 - Vizualizujte existující kód.
 
-- Komunikujte s Lucerne o nových nebo aktualizovaných uživatelských scénářích.
+- Komunikujte s vojtěškou o nových nebo aktualizovaných uživatelských scénářích.
 
-- Identifikujte změny, které jsou nutné pro podporu nových nebo aktualizovaných uživatelských scénářů.
+- Identifikujte změny, které jsou potřeba k podpoře nových nebo aktualizovaných uživatelských scénářů.
 
-Lucerne používá diagramy k provádění těchto úkolů:
+Společnost Lucerne používá diagramy k provádění těchto úkolů:
 
-- Přečtěte si o obchodním procesu Večeři nyní.
+- Přečtěte si o tomto obchodním procesu večeři.
 
-- Pochopte návrh systému.
+- Pochopení návrhu systému.
 
-- Komunikujte s večeří nyní o nových nebo aktualizovaných požadavcích uživatelů.
+- Komunikujte s večeři teď o nových nebo aktualizovaných požadavcích uživatelů.
 
-- Aktualizace dokumentu systému.
+- Aktualizuje dokument do systému.
 
-Diagramy jsou integrovány se serverem Team Foundation Server, takže týmy mohou snadněji plánovat, spravovat a sledovat svou práci. Například používají modely k identifikaci testovacích případů a vývojových úloh a k odhadu jejich práce. Lucerne propojí pracovní položky team foundation server na prvky modelu tak, aby mohly sledovat průběh a ujistěte se, že systém splňuje požadavky uživatelů. Například propojují případy použití s pracovními položkami testovacího případu, aby viděli, že případy použití jsou splněny při průchodu všech testů.
+Diagramy jsou integrované s Team Foundation Server, takže týmy můžou snadněji plánovat, spravovat a sledovat práci. Například používají modely k identifikaci testových případů a vývojářských úloh a k odhadu jejich práce. Společnost Lucerne propojuje Team Foundation Server pracovní položky s prvky modelu tak, aby mohly sledovat průběh a ujistit se, že systém splňuje požadavky uživatelů. Například propojí případy použití s pracovními položkami testovacího případu, takže uvidí, že případy použití jsou splněné, když všechny testy proběhnou.
 
-Před týmy zkontrolovat jejich změny, ověří kód proti testy a návrh spuštěním sestavení, které zahrnují ověření závislostí a automatizované testy. To pomáhá zajistit, že aktualizovaný kód není v konfliktu s návrhem a přerušení dříve pracovní funkce.
+Než týmy zaregistrují změny, ověří kód proti testům a návrhu spuštěním sestavení, která zahrnují ověřování závislosti a automatizované testy. To pomáhá zajistit, že aktualizovaný kód není v konfliktu s návrhem a přerušit dříve funkční funkčnost.
 
-### <a name="identify-changes-to-the-existing-system"></a>Identifikovat změny stávajícího systému
+### <a name="identify-changes-to-the-existing-system"></a>Identifikujte změny stávajícího systému
 
-Večeře nyní musí odhadnout náklady na splnění nového požadavku. To částečně závisí na tom, jak moc tato změna ovlivní ostatní části systému. Chcete-li jim to pochopit, jeden z vývojářů večeři nyní vytvoří tyto mapy a diagramy z existujícího kódu:
+Večeře teď musí odhadnout náklady na splnění nového požadavku. Tato změna závisí částečně na tom, kolik změn bude mít vliv na ostatní části systému. Abychom jim mohli porozumět, jeden z vývojářů s večeři teď vytvoří tyto mapy a diagramy z existujícího kódu:
 
-|**Mapa nebo diagram**|**Ukazuje**|
+|**Mapa nebo diagram**|**Objeví**|
 |-|-|
-|*Mapa kódu*<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />- [Procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md)<br />- [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|Závislosti a další vztahy v kódu.<br /><br /> Například večeři nyní může začít kontrolou mapy kódu sestavení pro přehled sestavení a jejich závislosti. Mohou přejít k podrobnostem do mapy prozkoumat obory názvů a třídy v těchto sestaveních.<br /><br /> Večeře nyní můžete také vytvořit mapy prozkoumat konkrétní oblasti a jiné druhy vztahů v kódu. Pomocí Průzkumníka řešení vyhledávají a vybírají oblasti a vztahy, které je zajímají.|
-|*Diagram třídy založený na kódu*<br /><br /> Postup: [Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Existující třídy v kódu|
+|*Mapa kódu*<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />- [Procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md)<br />- [Přizpůsobení map kódu úpravou souborů DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|Závislosti a další vztahy v kódu.<br /><br /> Například večeře teď může začít kontrolou map kódu sestavení pro přehled sestavení a jejich závislostí. Mohou přejít k podrobnostem o mapách a prozkoumat obory názvů a třídy v těchto sestaveních.<br /><br /> Večeře teď může také vytvořit mapy k prozkoumání konkrétních oblastí a dalších druhů vztahů v kódu. Používají Průzkumník řešení k vyhledání a výběru oblastí a vztahů, které vás zajímají.|
+|*Diagram tříd založený na kódu*<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Existující třídy v kódu|
 
- Například vývojář vytvoří mapu kódu. Upraví svůj rozsah, aby se zaměřila na oblasti, které budou ovlivněny novým scénářem. Tyto oblasti jsou vybrány a zvýrazněny na mapě:
+ Například vývojář Vytvoří mapu kódu. Upraví svůj obor tak, aby se zaměřil na oblasti, které budou tímto novým scénářem ovlivněny. Tyto oblasti jsou vybrané a zvýrazněné na mapě:
 
- ![Graf závislostí oboru názvů](../modeling/media/namespace_reviewsystem.png)
+ ![Graf závislosti oboru názvů](../modeling/media/namespace_reviewsystem.png)
 
  **Mapa kódu oboru názvů**
 
- Vývojář rozbalí vybrané obory názvů, aby zotřil jejich třídy, metody a vztahy:
+ Vývojář rozšíří vybrané obory názvů tak, aby viděli jejich třídy, metody a vztahy:
 
- ![Rozšířený graf závislostí oboru názvů](../modeling/media/dep_reviewsystem.png)
+ ![Graf závislosti rozšířeného oboru názvů](../modeling/media/dep_reviewsystem.png)
 
- **Rozšířená mapa kódu oboru názvů s viditelnými odkazy mezi skupinami**
+ **Rozšířené mapování kódu oboru názvů s viditelnými odkazy mezi skupinami**
 
- Vývojář zkontroluje kód najít ovlivněné třídy a metody. Chcete-li zobrazit účinky každé změny při jejich vytvoření, regenerovat mapy kódu po každé změně. Viz [Vizualizace kódu](../modeling/visualize-code.md).
+ Vývojář prověřuje kód, aby našli příslušné třídy a metody. Chcete-li zobrazit účinky každé změny při jejich provádění, znovu vygenerujte mapy kódu po každé změně. Viz [vizualizuje kód](../modeling/visualize-code.md).
 
- Chcete-li popsat změny v jiných částech systému, jako jsou součásti nebo interakce, tým může čerpat tyto prvky na tabuli. Mohou také nakreslit následující diagramy v sadě Visual Studio tak, aby podrobnosti mohly být zachyceny, spravovány a pochopeny oběma týmy:
+ Aby bylo možné popsat změny v jiných částech systému, jako jsou komponenty nebo interakce, může tým vykreslit tyto prvky do tabulí. Mohou také nakreslit následující diagramy v aplikaci Visual Studio tak, aby bylo možné údaje zachytit, spravovat a pochopit v obou týmech:
 
-|**Diagramy**|**Popisuje**|
+|**Diagram**|**Udává**|
 |-|-|
-|*Diagram třídy založený na kódu*<br /><br /> Postup: [Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Existující třídy v kódu.|
+|*Diagram tříd založený na kódu*<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Existující třídy v kódu.|
 
-### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a>Zachovat kód v souladu s návrhem
- Večeři nyní musí ujistěte se, že aktualizovaný kód zůstane konzistentní s návrhem. Vytvářejí diagramy závislostí, které popisují vrstvy funkcí v systému, určují povolené závislosti mezi nimi a přidružují artefakty řešení k těmto vrstvám.
+### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a>Udržování kódu v souladu s návrhem
+ Večeře teď musí zajistit, aby aktualizovaný kód zůstával v souladu s návrhem. Vytvářejí diagramy závislostí, které popisují vrstvy funkčnosti v systému, určují povolené závislosti mezi nimi a přiřadí artefakty řešení těmto vrstvám.
 
-|**Diagram**|**Popisuje**|
+|**Diagram**|**Udává**|
 |-|-|
-|*Diagram závislostí*<br /><br /> Přečtěte si:<br /><br /> - [Vytvoření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Odkaz](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|Logická architektura kódu.<br /><br /> Diagram závislostí uspořádá a mapuje artefakty v řešení sady Visual Studio na abstraktní skupiny nazývané *vrstvy*. Tyto vrstvy identifikují role, úkoly nebo funkce, které tyto artefakty provádějí v systému.<br /><br /> Diagramy závislostí jsou užitečné pro popis zamýšleného návrhu systému a ověření vyvíjejícího se kódu proti tomuto návrhu.<br /><br /> Chcete-li vytvořit vrstvy, přetáhněte položky z Průzkumníka řešení, map kódu, zobrazení tříd a prohlížeče objektů. Chcete-li nakreslit nové vrstvy, použijte panel nástrojů nebo klepněte pravým tlačítkem myši na povrch diagramu.<br /><br /> Chcete-li zobrazit existující závislosti, klepněte pravým tlačítkem myši na povrch diagramu závislostí a potom klepněte na příkaz **Generovat závislosti**. Chcete-li určit zamýšlené závislosti, nakreslete nové závislosti.|
+|*Diagram závislosti*<br /><br /> Přečtěte si:<br /><br /> - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|Logická architektura kódu.<br /><br /> Diagram závislosti uspořádá a mapuje artefakty v řešení sady Visual Studio do abstraktních skupin nazývaných *vrstvy*. Tyto vrstvy identifikují role, úlohy nebo funkce, které tyto artefakty provádějí v systému.<br /><br /> Diagramy závislostí jsou užitečné pro popis zamýšleného návrhu systému a ověřování vývojového kódu s tímto návrhem.<br /><br /> Chcete-li vytvořit vrstvy, přetáhněte položky z Průzkumník řešení, mapy kódu, Zobrazení tříd a Prohlížeč objektů. Chcete-li nakreslit nové vrstvy, použijte panel nástrojů nebo klikněte pravým tlačítkem myši na plochu diagramu.<br /><br /> Chcete-li zobrazit existující závislosti, klikněte pravým tlačítkem na plochu diagramu závislosti a potom klikněte na možnost **Generovat závislosti**. Chcete-li zadat zamýšlené závislosti, nakreslete nové závislosti.|
 
-Například následující diagram závislostí popisuje závislosti mezi vrstvami a počet artefaktů, které jsou přidruženy ke každé vrstvě:
+Například následující diagram závislosti popisuje závislosti mezi vrstvami a počet artefaktů, které jsou spojeny s každou vrstvou:
 
-![Diagram závislostí integrovaného platebního systému](../modeling/media/layer_integrated_dnlucerne.png)
+![Diagram závislosti integrovaného platebního systému](../modeling/media/layer_integrated_dnlucerne.png)
 
- **Diagram závislostí**
+ **Diagram závislosti**
 
-Chcete-li se ujistit, že konflikty s návrhem nedochází během vývoje kódu, týmy používá ověření závislostí na sestavení, které jsou spuštěny na Azure DevOps. Také vytvořit vlastní úkol MSBuild vyžadovat ověření závislostí v jejich operacích vrácení se změnami. Používají sestavy sestavení ke shromažďování chyb ověření.
+Aby se zajistilo, že během vývoje kódu nedojde ke konfliktům s návrhem, týmy využívají ověřování závislostí na sestaveních, která běží na Azure DevOps. Také vytvoří vlastní úlohu MSBuild, která vyžaduje ověření závislosti v operacích vrácení se změnami. Používají sestavy sestavení ke shromáždění chyb ověřování.
 
 Přečtěte si:
 
 - [Použití vizuálního návrháře](/azure/devops/pipelines/get-started-designer)
 
-- [TFTVC gated vrácení se změnami](/azure/devops/pipelines/build/triggers)
+- [TFVC ověřované vrácení se změnami](/azure/devops/pipelines/build/triggers)
 
-- [Vytváření a vydávání úloh](/azure/devops/pipelines/tasks/index)
+- [Úkoly sestavení a vydání](/azure/devops/pipelines/tasks/index)
 
 ### <a name="general-tips-for-creating-and-using-models"></a>Obecné tipy pro vytváření a používání modelů
 
-- Většina diagramů se skládá z uzlů, které jsou propojeny čarami. Pro každý typ diagramu panel nástrojů poskytuje různé druhy uzlů a řádků.
+- Většina diagramů se skládá z uzlů, které jsou propojeny pomocí řádků. Pro každý typ diagramu poskytuje sada nástrojů různé druhy uzlů a řádků.
 
-   Chcete-li otevřít panel nástrojů, klepněte v nabídce **Zobrazení** na **položku Panel nástrojů**.
+   Chcete-li otevřít sadu nástrojů, klikněte v nabídce **zobrazení** na příkaz **Sada nástrojů**.
 
-- Chcete-li vytvořit uzel, přetáhněte jej z panelu nástrojů do diagramu. Některé druhy uzlů musí být přetaženy na existující uzly. Například v diagramu komponenty musí být do existující součásti přidán nový port.
+- Chcete-li vytvořit uzel, přetáhněte jej ze sady nástrojů do diagramu. Některé druhy uzlů musí být přetaženy na existující uzly. Například v diagramu komponent musí být do existující součásti přidán nový port.
 
-- Chcete-li vytvořit čáru nebo připojení, klepněte na příslušný nástroj v panelu nástrojů, klepněte na zdrojový uzel a potom klepněte na cílový uzel. Některé řádky lze vytvořit pouze mezi určitými druhy uzlů. Když přesunete ukazatel nad možný zdroj nebo cíl, ukazatel označuje, zda můžete vytvořit připojení.
+- Chcete-li vytvořit čáru nebo připojení, klikněte na příslušný nástroj na panelu nástrojů, klikněte na zdrojový uzel a potom klikněte na cílový uzel. Některé řádky lze vytvořit pouze mezi určitými typy uzlů. Když přesunete ukazatel na možný zdroj nebo cíl, ukazatel myši označuje, zda lze vytvořit připojení.
 
 ### <a name="plan-and-track-work"></a>Plánování a sledování práce
 
-Vizovací diagramy modelování jsou integrovány s Team Foundation Server, takže můžete plánovat, spravovat a sledovat práci snadněji. Oba týmy používají modely k identifikaci testovacích případů a vývojových úloh a k odhadu jejich práce. Lucerne vytvoří a propojí pracovní položky Team Foundation Server s prvky modelu, jako jsou případy použití nebo součásti. To jim pomáhá sledovat jejich průběh a sledovat jejich práci zpět k požadavkům uživatelů. To jim pomáhá zajistit, aby jejich změny i nadále splňovat tyto požadavky.
+Diagramy modelování sady Visual Studio jsou integrované s Team Foundation Server, takže můžete plánovat, spravovat a sledovat práci snadněji. Oba týmy používají modely k identifikaci testových případů a vývojářských úloh a k odhadování jejich práce. Společnost Lucerne vytvoří a propojí Team Foundation Server pracovní položky s prvky modelu, jako jsou například případy použití nebo komponenty. To pomáhá sledovat jejich průběh a sledovat jejich práci zpátky do požadavků uživatelů. To jim pomůže zajistit, aby jejich změny i nadále splňovaly tyto požadavky.
 
-Jak jejich práce postupuje, týmy aktualizovat své pracovní položky tak, aby odrážely čas, který strávili na jejich úkoly. Také monitorují a hlásí stav své práce pomocí následujících funkcí Team Foundation Server:
+Jak fungují, týmy aktualizují své pracovní položky tak, aby odrážely čas strávený na svých úkolech. Také monitorují a nastavují jejich práci pomocí následujících funkcí Team Foundation Server:
 
-- Denní *zprávy o vyhoření,* které ukazují, zda dokončí plánovanou práci v očekávaném čase. Generují další podobné sestavy ze serveru Team Foundation Server ke sledování průběhu chyb.
+- Každodenní *vypalování sestav* , které ukazují, zda budou dokončeny plánované práce v očekávaném čase. Generují další podobné sestavy z Team Foundation Server ke sledování průběhu chyb.
 
-- *Iterace list,* který používá aplikaci Microsoft Excel pomoci týmu sledovat a vyvažovat zatížení mezi jeho členy. Tento list je propojen se serverem Team Foundation A poskytuje fokus pro diskusi během jejich pravidelných schůzek o průběhu.
+- *List iterace* , který používá aplikaci Microsoft Excel k usnadnění monitorování týmu a vyrovnání zatížení mezi jeho členy. Tento list je propojen s Team Foundation Server a poskytuje fokus na diskuzi během pravidelných setkání o průběhu.
 
-- Řídicí *panel vývoje,* který pomocí aplikace Office Project informuje tým o důležitých informacích o projektu.
+- *Řídicí panel pro vývoj* , který používá Office Project, aby tým informoval o důležitých informacích o projektu.
 
 Přečtěte si:
 
-- [O agilních nástrojích a agilním řízení projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)
+- [O agilních nástrojích a agilních řízeních projektů](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)
 
 - [Grafy, řídicí panely a widgety (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts)
 
-- [Vytváření nevyřízených položek a úkolů pomocí Projectu](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
+- [Vytvoření nevyřízených položek a úkolů pomocí projektu](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
-### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a>Test, ověření a vrácení kódu se změnami
+### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a>Testování, ověřování a vrácení kódu se změnami
 
-Když týmy dokončí každý úkol, zkontrolují svůj kód do správy zdrojového kódu a obdrží připomenutí ze serveru Team Foundation, pokud zapomenou. Předtím, než Team Foundation Server přijme jejich vrácení se změnami, týmy spustit testování částí a ověření závislostí k ověření kódu proti jejich testovacích případů a návrhu. Používají Team Foundation Server ke spuštění sestavení, automatizované testy částí a ověřování závislostí pravidelně. To pomáhá zajistit, že kód splňuje následující kritéria:
+Jak týmy dokončí každý úkol, kontrolují svůj kód do správy zdrojového kódu a zobrazují připomenutí od Team Foundation Server, pokud je zapomenete. Než Team Foundation Server akceptuje jejich vrácení se změnami, týmy spustí testy jednotek a ověření závislostí pro ověření kódu proti testovacím případům a návrhu. Používají Team Foundation Server k pravidelnému spouštění buildů, automatizované testy jednotek a ověřování závislostí. To pomáhá zajistit, že kód splňuje následující kritéria:
 
-- Funguje to.
+- Funguje.
 
-- Nepřeruší dříve funkční kód.
+- Neruší předchozí pracovní kód.
 
-- Není v rozporu s návrhem.
+- Nekoliduje s návrhem.
 
-Večeře nyní má velkou sbírku automatizovaných testů, které Lucerne můžete znovu použít, protože téměř všechny stále platí. Lucerne můžete také stavět na těchto testech a přidat nové, které pokrývají nové funkce. Oba také použít Visual Studio spustit ruční testy.
+Večeře teď má velkou kolekci automatizovaných testů, které může společnost Lucerne použít, protože skoro všechno stále platí. Společnost Lucerne může také vytvořit tyto testy a přidat nové, aby se pokryly nové funkce. Zároveň aplikace Visual Studio používá ke spouštění manuálních testů.
 
-Chcete-li se ujistit, že kód odpovídá návrhu, týmy nakonfigurují jejich sestavení v Azure DevOps tak, aby zahrnovala ověření závislostí. Pokud dojde ke konfliktům, je generována sestava s podrobnostmi.
+Aby se zajistilo, že kód odpovídá návrhu, týmy konfigurují sestavení ve službě Azure DevOps tak, aby zahrnovaly ověřování závislostí. Pokud dojde k jakýmkoli konfliktům, vygeneruje se sestava s podrobnostmi.
 
 Přečtěte si:
 
@@ -240,19 +240,19 @@ Přečtěte si:
 
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)
 
-- [Použití správy verzí](/azure/devops/repos/tfvc/overview?view=azure-devops)
+- [Použít správu verzí](/azure/devops/repos/tfvc/overview?view=azure-devops)
 
 - [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)
 
 ## <a name="update-the-system-using-visualization-and-modeling"></a>Aktualizace systému pomocí vizualizace a modelování
 
-Lucerne a Večeře Nyní musí integrovat své platební systémy. Následující části ukazují diagramy modelování v sadě Visual Studio, které jim pomáhají provádět tento úkol:
+Společnost Lucerne a večeře teď musí integrovat své platební systémy. Následující části znázorňují diagramy modelování v aplikaci Visual Studio, které jim pomůžou provést tuto úlohu:
 
-- [Vizualizujte existující kód: Mapy kódu](#VisualizeCode)
+- [Vizualizovat existující kód: mapy kódu](#VisualizeCode)
 
-- [Definování glosáře typů: Diagramy tříd](#DefineClasses)
+- [Definování glosáře typů: diagramy tříd](#DefineClasses)
 
-- [Popište logickou architekturu: diagramy závislostí](#DescribeLayers)
+- [Popište logickou architekturu: diagramy závislosti](#DescribeLayers)
 
 Přečtěte si:
 
@@ -262,181 +262,181 @@ Přečtěte si:
 
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)
 
-### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a>Vizualizujte existující kód: Mapy kódu
+### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a>Vizualizovat existující kód: mapy kódu
 
-Mapy kódu zobrazují aktuální organizaci a vztahy v kódu. Položky jsou reprezentovány *uzly* na mapě a vztahy jsou reprezentovány *odkazy*. Mapy kódu vám mohou pomoci provádět následující typy úkolů:
+Mapy kódu ukazují aktuální organizaci a vztahy v kódu. Položky jsou reprezentovány *uzly* na mapě a vztahy jsou reprezentovány pomocí *odkazů*. Mapy kódu vám mohou pomáhat při provádění následujících typů úloh:
 
-- Prozkoumejte neznámý kód.
+- Prozkoumejte Neznámý kód.
 
-- Zjistěte, kde a jak může navrhovaná změna ovlivnit existující kód.
+- Pochopení, kde a jak může navrhovaná změna ovlivnit existující kód.
 
-- Najděte oblasti složitosti, přirozené závislosti nebo vzory nebo jiné oblasti, které mohou mít prospěch z vylepšení.
+- Najděte oblasti složitosti, přirozených závislostí nebo vzorů nebo jiných oblastí, které mohou využívat vylepšení.
 
-Například večeři nyní musí odhadnout náklady na aktualizaci PaymentProcessing komponenty. To částečně závisí na tom, jak moc tato změna ovlivní ostatní části systému. Chcete-li jim pomoci pochopit, jeden z vývojáři večeři nyní generuje mapy kódu z kódu a upravuje zaměření oboru na oblasti, které mohou být ovlivněny změnou.
+Například večeře teď musí odhadnout náklady na aktualizaci komponenty PaymentProcessing. Tato změna závisí částečně na tom, kolik změn bude mít vliv na ostatní části systému. Abychom jim mohli porozumět, jeden z vývojářů v současnosti nyní generuje mapy kódu z kódu a upraví fokus oboru na oblasti, které by mohly být ovlivněny změnou.
 
-Následující mapa zobrazuje závislosti mezi třídou PaymentProcessing a dalšími částmi systému Večeři, které se zobrazí jako vybrané:
+Následující mapa znázorňuje závislosti mezi třídou PaymentProcessing a dalšími částmi v systému večeře Now, která se zobrazí jako vybraná:
 
-![Graf závislostí pro platební systém Večeři nyní](../modeling/media/dep_dnpayment.png)
+![Graf závislosti pro platební systém pro večeři nyní](../modeling/media/dep_dnpayment.png)
 
-**Mapa kódu pro platební systém Večeři nyní**
+**Mapa kódu pro platební systém pro večeři Now**
 
-Vývojář prozkoumá mapu rozšířením třídy PaymentProcessing a výběrem jeho členů zobrazíte oblasti, které jsou potenciálně ovlivněny:
+Vývojář prozkoumá mapu rozbalením třídy PaymentProcessing a výběrem jejích členů zobrazíte oblasti, které jsou potenciálně ovlivněny:
 
 ![Metody uvnitř PaymentProcessing a závislosti](../modeling/media/depgraph_expandeddn.png)
 
 **Metody uvnitř třídy PaymentProcessing a jejich závislosti**
 
-Vygenerují následující mapu pro platební systém Lucerne ke kontrole jeho třídy, metody a závislosti. Tým vidí, že systém Lucerne může také vyžadovat práci na interakci s ostatními částmi večeři nyní:
+Generují následující mapu pro platební systém Lucerne ke kontrole jeho tříd, metod a závislostí. Tým uvidí, že systém Lucerne může také vyžadovat práci k interakci s ostatními součástmi večeře nyní:
 
-![Graf závislostí pro platební systém Lucerne](../modeling/media/depgraph_lucernepay.png)
+![Graf závislosti pro platební systém Lucerne](../modeling/media/depgraph_lucernepay.png)
 
 **Mapa kódu pro platební systém Lucerne**
 
-Oba týmy spolupracují na určení změn, které jsou nutné k integraci obou systémů. Rozhodnou se refaktorovat část kódu tak, aby bylo snazší jej aktualizovat. Třída PaymentApprover se přesune do oboru názvů DinnerNow.Business a bude vyžadovat některé nové metody. Večeře nyní třídy, které zpracovávají transakce bude mít svůj vlastní obor názvů. Týmy vytvářejí a používají pracovní položky k plánování, uspořádání a sledování své práce. Propojují pracovní položky s prvky modelu, kde je to užitečné.
+Oba týmy pracují společně, aby určily změny, které jsou potřeba k integraci těchto dvou systémů. Rozhodnou se k refaktorování kódu, aby bylo snazší ho aktualizovat. Třída PaymentApprover se přesune do oboru názvů DinnerNow. Business a bude vyžadovat některé nové metody. Třídy večeře Now, které zpracovávají transakce, budou mít svůj vlastní obor názvů. Týmy vytvářejí a používají pracovní položky k plánování, uspořádání a sledování práce. Propojí pracovní položky s prvky modelu, kde je to užitečné.
 
-Po reorganizaci kódu týmy vygenerují novou mapu kódu, aby zotřitili aktualizovanou strukturu a vztahy:
+Po reorganizaci kódu generují týmy novou mapu kódu pro zobrazení aktualizované struktury a vztahů:
 
-![Graf závislostí s reorganizovaným kódem](../modeling/media/depgraph_integrated.png)
+![Graf závislosti se stejným uspořádáním kódu](../modeling/media/depgraph_integrated.png)
 
-**Mapa kódu s reorganizovaným kódem**
+**Mapa kódu se stejným uspořádáním kódu**
 
-Tato mapa ukazuje, že Třída PaymentApprover je nyní v oboru názvů DinnerNow.Business a má některé nové metody. Třídy transakcí Večeři nyní mají svůj vlastní obor názvů PaymentSystem, což usnadňuje pozdější zpracování tohoto kódu.
+Tato mapa znázorňuje, že třída PaymentApprover je nyní v oboru názvů DinnerNow. Business a obsahuje některé nové metody. Třídy transakce večeře Now nyní mají svůj vlastní obor názvů PaymentSystem, což usnadňuje práci s tímto kódem později.
 
 #### <a name="creating-a-code-map"></a>Vytvoření mapy kódu
 
-- Rychlý přehled zdrojového kódu naleznete takto, chcete-li vygenerovat mapování kódu:
+- Chcete-li získat rychlý přehled o zdrojovém kódu, postupujte podle těchto kroků a vygenerujte mapu kódu:
 
-     V nabídce **Architektura** klepněte na **položku Generovat mapu kódu pro řešení**.
+     V nabídce **Architektura** klikněte na možnost **Generovat mapu kódu pro řešení**.
 
-     Chcete-li získat rychlý přehled o kompilovaném kódu, vytvořte prázdnou mapu kódu a potom přetáhněte soubory sestavení nebo binární soubory na povrch mapy.
+     Pro rychlý přehled zkompilovaného kódu vytvořte prázdnou mapu kódu a pak přetáhněte soubory sestavení nebo binární soubory na plochu rozvržení.
 
-- Chcete-li prozkoumat konkrétní kód nebo položky řešení, vyberte položky a vztahy, které chcete vizualizovat, pomocí Průzkumníka řešení. Poté můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Viz [Mapovat závislosti napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
+- Chcete-li prozkoumat konkrétní kód nebo položky řešení, použijte Průzkumník řešení k výběru položek a relací, které chcete vizualizovat. Pak můžete buď vygenerovat novou mapu, nebo přidat vybrané položky do existující mapy. Podívejte [se na téma mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md).
 
-- Chcete-li mapu prozkoumat, změňte uspořádání rozložení tak, aby vyhovovalo typům úkolů, které chcete provádět.
+- Abychom vám pomohli prozkoumat mapu, uspořádejte rozložení tak, aby vyhovovalo typům úloh, které chcete provést.
 
-     Chcete-li například vizualizovat vrstvení v kódu, vyberte rozložení stromu. Viz [Procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
+     Například pro vizualizaci vrstvení v kódu vyberte rozložení stromové struktury. Viz [procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md).
 
-#### <a name="summary-strengths-of-code-maps"></a>Shrnutí: Silné stránky kódových map
- Kódové mapy vám pomohou:
+#### <a name="summary-strengths-of-code-maps"></a>Shrnutí: síly map kódu
+ Mapy kódu vám pomůžou:
 
-- Další informace o organizaci a vztazích v existujícím kódu.
+- Přečtěte si o organizaci a vztazích v existujícím kódu.
 
-- Identifikujte oblasti, které by mohly být navrhovanou změnou ovlivněny.
+- Identifikujte oblasti, které mohou být ovlivněny navrhovanou změnou.
 
-- Najděte oblasti složitosti, vzorky, vrstvy nebo jiné oblasti, které byste mohli zlepšit, abyste usnadnili údržbu, změnu a opakované použití kódu.
+- Najděte oblasti složitosti, vzory, vrstvy nebo jiné oblasti, které byste mohli vylepšit, aby bylo snazší udržovat, měnit a opakovaně používat kód.
 
 #### <a name="relationship-to-other-diagrams"></a>Vztah k jiným diagramům
 
-|**Diagram**|**Popisuje**|
+|**Diagram**|**Udává**|
 |-|-|
-|Diagram závislostí|Logická architektura systému. Pomocí ověření závislostí se ujistěte, že kód zůstane konzistentní s návrhem.<br /><br /> Chcete-li identifikovat existující závislosti nebo zamýšlené závislosti, vytvořte mapování kódu a položky související se skupinou. Chcete-li vytvořit diagram závislostí, přečtěte si následující informace:<br /><br /> - [Vytvoření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)|
-|Diagram třídy (na základě kódu)|Existující třídy v kódu pro konkrétní projekt.<br /><br /> Chcete-li vizualizovat a upravovat existující třídu v kódu, použijte Návrhář tříd.<br /><br /> Postup: [Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|
+|Diagram závislosti|Logická architektura systému. Použijte ověřování závislostí a ujistěte se, že kód zůstává v souladu s návrhem.<br /><br /> Abyste mohli identifikovat existující závislosti nebo zamýšlené závislosti, vytvořte mapu kódu a položky související s seskupením. Chcete-li vytvořit diagram závislostí, přečtěte si téma:<br /><br /> - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)|
+|Diagram tříd (založený na kódu)|Existující třídy v kódu pro určitý projekt.<br /><br /> Chcete-li vizualizovat a upravit existující třídu v kódu, použijte Návrhář tříd.<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|
 
-### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a>Definování glosáře typů: Diagramy tříd
- Diagramy tříd definují entity, termíny nebo koncepty, které se účastní systému a jejich vzájemné vztahy. Tyto diagramy můžete například použít během vývoje k popisu atributů a operací pro každou třídu, bez ohledu na jejich jazyk implementace nebo styl.
+### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a>Definování glosáře typů: diagramy tříd
+ Diagramy tříd definují entity, pojmy nebo koncepty, které jsou součástí systému a jejich vztahů mezi sebou. Například můžete použít tyto diagramy během vývoje k popisu atributů a operací pro každou třídu, bez ohledu na jejich jazyk implementace nebo styl.
 
- Chcete-li pomoci Lucerne popsat a diskutovat o entity, které se účastní případu použití procesu platby, nakreslí následující diagram třídy:
+ Aby mohl společnost Lucerne popsat a diskutovat entity, které se účastní případu použití procesu platby, nakreslí následující diagram tříd:
 
- ![Zpracovat entity platby v diagramu třídy](../modeling/media/uml_payentities.png)
+ ![Zpracování entit plateb v diagramu tříd](../modeling/media/uml_payentities.png)
 
- **Zpracovat entity platby v diagramu třídy**
+ **Zpracování entit platby v diagramu tříd**
 
- Tento diagram ukazuje, že zákazník může mít mnoho objednávek a různé způsoby, jak platit za objednávky. BankAccount a CreditCard dědí z platby.
+ Tento diagram znázorňuje, že zákazník může mít mnoho objednávek a různé způsoby platby za objednávky. BankAccount a CreditCard dědí z platby.
 
- Během vývoje lucerne používá následující diagram třídy k popisu a diskusi o podrobnostech každé třídy:
+ Během vývoje používá společnost Lucerne následující diagram tříd k popisu a diskuzi o podrobnostech každé třídy:
 
- ![Zpracovat podrobnosti entity platby v diagramu třídy](../modeling/media/uml_payment.png)
+ ![Podrobnosti o zpracování platebních entit v diagramu tříd](../modeling/media/uml_payment.png)
 
- **Zpracovat podrobnosti platby v diagramu třídy**
+ **Podrobnosti o platbě procesu v diagramu tříd**
 
-#### <a name="drawing-a-class-diagram"></a>Kreslení diagramu třídy
+#### <a name="drawing-a-class-diagram"></a>Kreslení diagramu tříd
 
-Diagram třídy má následující hlavní funkce:
+Diagram tříd má následující hlavní funkce:
 
-- Typy, jako jsou třídy, rozhraní a výčty:
+- Typy jako třídy, rozhraní a výčty:
 
-  - *Třída* je definice objektů, které sdílejí specifické strukturální nebo behaviorální charakteristiky.
+  - *Třída* je definice objektů, které sdílejí konkrétní strukturální nebo behaviorální charakteristiky.
 
-  - *Rozhraní* definuje část externě viditelné chování objektu.
+  - *Rozhraní* definuje část externě viditelného chování objektu.
 
-  - *Výčet* je třídění, které obsahuje seznam literálových hodnot.
+  - *Výčet* je klasifikátor, který obsahuje seznam hodnot literálů.
 
-- *Atributy* jsou hodnoty určitého typu, které popisují každou instanci *třídění*. Třídění je obecný název pro typy, součásti, případy použití a dokonce i objekty actor.
+- *Atributy* jsou hodnoty určitého typu, které popisují každou instanci *třídění*. Klasifikátor je obecný název pro typy, komponenty, případy použití a dokonce i aktéry.
 
-- *Operace* jsou metody nebo funkce, které mohou provádět instance třídění.
+- *Operace* jsou metody nebo funkce, které mohou instance klasifikátoru provádět.
 
-- *Přidružení* označuje nějaký druh vztahu mezi dvěma klasifikátory.
+- *Asociace* označuje určitý druh vztahů mezi dvěma klasifikátory.
 
   - *Agregace* je přidružení, které označuje sdílené vlastnictví mezi klasifikátory.
 
-  - *Složení* je přidružení, které označuje vztah celé části mezi třídění.
+  - *Složení* je přidružení, které označuje vztah celku mezi tříděními.
 
-    Chcete-li zobrazit agregace nebo kompozice, nastavte vlastnost **Agregace** na přidružení. **Sdílené** zobrazuje agregace a **složené** zobrazuje kompozice.
+    Chcete-li zobrazit agregace nebo kompozice, nastavte vlastnost **agregace** u přidružení. **Shared** zobrazuje agregace a **složená** sestavení.
 
-- *Závislost* označuje, že změna definice jednoho třídění může změnit definici jiného třídění.
+- *Závislost* označuje, že změna definice jednoho klasifikátoru může změnit definici jiného třídění.
 
-- *Generalizace* označuje, že konkrétní třídění dědí část jeho definice z obecnétřídění. *Realizace* označuje, že třída implementuje operace a atributy nabízené rozhraním.
+- *Generalizace* značí, že konkrétní třídění dědí část své definice z obecného třídění. *Realizace* označuje, že třída implementuje operace a atributy nabízené rozhraním.
 
-     Chcete-li vytvořit tyto relace, použijte nástroj **dědičnost.** Alternativně může být realizace reprezentována jako *lízátko*.
+     Chcete-li vytvořit tyto relace, použijte nástroj **Dědičnost** . Alternativně může být realizace vyjádřena jako *Lupa*.
 
-- *Balíčky* jsou skupiny třídění, přidružení, životnosti, součásti a další balíčky. *Vztahy importu* označují, že jeden balíček obsahuje všechny definice jiného balíčku.
+- *Balíčky* jsou skupiny klasifikátorů, přidružení, životnosti, komponent a dalších balíčků. *Import* vztahů označuje, že jeden balíček zahrnuje všechny definice jiného balíčku.
 
-Jako výchozí bod prozkoumat a diskutovat o existující třídy, můžete použít Class Designer k vytvoření diagramy tříd z kódu.
+Jako výchozí bod pro zkoumání a diskuzi o existujících třídách můžete použít Návrhář tříd k vytváření diagramů tříd z kódu.
 
 - [Postupy: Přidání diagramů tříd do projektů (Návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
 
-#### <a name="summary-strengths-of-class-diagrams"></a>Shrnutí: Silné diagramy tříd
- Diagramy tříd vám pomohou definovat:
+#### <a name="summary-strengths-of-class-diagrams"></a>Shrnutí: silné stránky diagramů tříd
+ Diagramy tříd vám pomůžou definovat:
 
-- Společný glosář termínů, které se mají používat při diskusi o potřebách uživatelů a entitách, které se účastní systému. Viz [Požadavky uživatelů modelu](../modeling/model-user-requirements.md).
+- Společný Glosář termínů, který se má použít při projednávání potřeb uživatelů a entit, které jsou součástí systému. Viz [Model požadavky uživatelů na uživatele](../modeling/model-user-requirements.md).
 
-- Typy, které jsou používány části systému, jako jsou součásti, bez ohledu na jejich implementaci. Viz [Model architektury aplikace](../modeling/model-your-app-s-architecture.md).
+- Typy, které jsou používány částmi systému, jako jsou komponenty, bez ohledu na jejich implementaci. Podívejte [se na téma modelování architektury vaší aplikace](../modeling/model-your-app-s-architecture.md).
 
-- Vztahy, například závislosti, mezi typy. Můžete například zobrazit, že jeden typ může být přidružen k více instancím jiného typu.
+- Relace, například závislosti, mezi typy. Můžete například zobrazit, že jeden typ může být přidružen k více instancím jiného typu.
 
 #### <a name="relationship-to-other-diagrams"></a>Vztah k jiným diagramům
 
 |**Diagram**|**Popis**|
 |-|-|
-|Diagram závislostí|Definujte logickou architekturu systému, pokud se vztahuje k třídám.<br /><br /> Pomocí ověření závislostí se ujistěte, že kód zůstane konzistentní s návrhem.<br /><br /> Přečtěte si:<br /><br /> - [Vytvoření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Odkaz](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověření kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|
-|Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li identifikovat třídy, jejich vztahy a jejich metody, vytvořte mapu kódu, která zobrazuje tyto prvky.<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)|
+|Diagram závislosti|Definujte logickou architekturu systému v souvislosti se třídami.<br /><br /> Použijte ověřování závislostí a ujistěte se, že kód zůstává v souladu s návrhem.<br /><br /> Přečtěte si:<br /><br /> - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|
+|Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li identifikovat třídy, jejich vztahy a jejich metody, vytvořte mapu kódu, která tyto prvky zobrazí.<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)|
 
-### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a>Popište logickou architekturu: diagramy závislostí
- Diagramy závislostí popisují logickou architekturu systému uspořádáním artefaktů v řešení do abstraktních skupin nebo *vrstev*. Artefakty může být mnoho věcí, jako jsou například obory názvů, projekty, třídy, metody a tak dále. Vrstvy představují a popisují role nebo úkoly, které artefakty provádějí v systému. Můžete také zahrnout ověření vrstvy v sestavení a vrácení se změnami operace a ujistěte se, že kód zůstane konzistentní s jeho návrhu.
+### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a>Popište logickou architekturu: diagramy závislosti
+ Diagramy závislostí popisují logickou architekturu systému uspořádáním artefaktů ve vašem řešení do abstraktních skupin nebo *vrstev*. Artefakty mohou být mnoho věcí, například obory názvů, projekty, třídy, metody a tak dále. Vrstvy reprezentují a popisují role nebo úkoly, které artefakty provádějí v systému. Můžete také zahrnout ověřování vrstvy do sestavení a operace vrácení se změnami, abyste se ujistili, že kód zůstává v souladu s jeho návrhem.
 
- Chcete-li zachovat kód v souladu s návrhem, večeři nyní a Lucerne použít následující diagram závislostí k ověření jejich kódu, jak se vyvíjí:
+ Chcete-li zachovat kód v souladu s návrhem, večeře Now a Lucerne použijte následující diagram závislostí k ověření kódu při jeho vývoje:
 
- ![Diagram závislostí integrovaného platebního systému](../modeling/media/layer_integrated_dnlucerne.png)
+ ![Diagram závislosti integrovaného platebního systému](../modeling/media/layer_integrated_dnlucerne.png)
 
- **Diagram závislostí pro večeři nyní integrované s Lucerne**
+ **Diagram závislostí pro večeři je teď integrovaný s vojtěškou.**
 
- Vrstvy v tomto diagramu odkaz na odpovídající večeři nyní a Lucerne řešení artefakty. Například obchodní vrstva odkazy na DinnerNow.Business obor názvů a jeho členy, které nyní zahrnují PaymentApprover třídy. Vrstva Access prostředků odkazuje na obor názvů DinnerNow.Data. Šipky nebo *závislosti*určují, že funkci ve vrstvě Přístup u prostředků může používat pouze obchodní vrstva. Jak týmy aktualizují svůj kód, ověřování vrstev se provádí pravidelně zachytit konflikty, jak k nim dochází, a pomoci týmům je rychle vyřešit.
+ Vrstvy na tomto diagramu odkazují na odpovídající artefakty řešení večeře Now a Lucerne. Například obchodní vrstva odkazuje na obor názvů DinnerNow. Business a její členy, které nyní obsahují třídu PaymentApprover. Vrstva přístupu k prostředkům odkazuje na obor názvů DinnerNow. data. Šipky nebo *závislosti*určují, že funkce ve vrstvě přístupu k prostředkům může používat jenom obchodní vrstva. Jak týmy aktualizují svůj kód, provádí se pravidelné ověřování vrstev za účelem zachycení konfliktů při jejich výskytu a k usnadnění jejich řešení.
 
- Týmy spolupracují na postupné integraci a testování obou systémů. Nejprve se ujistěte, že PaymentApprover a zbytek večeři nyní úspěšně pracovat s sebou před tím, než se zabývají PaymentProcessing.
+ Týmy spolupracují na přírůstkové integraci a testování těchto dvou systémů. Nejprve se ujistěte, že PaymentApprover a zbytek hostina teď pracují s jiným systémem úspěšně, než budou pracovat s PaymentProcessing.
 
- Následující mapa kódu zobrazuje nová volání mezi večeří nyní a PaymentApprover:
+ Následující mapa kódu ukazuje nová volání mezi večeři Now a PaymentApprover:
 
- ![Aktualizovaný graf závislostí s integrovaným systémem](../modeling/media/depgraph_intsystem.png)
+ ![Aktualizovaný graf závislosti s integrovaným systémem](../modeling/media/depgraph_intsystem.png)
 
- **Mapa kódu s aktualizovanými voláními metod**
+ **Mapa kódu s aktualizovanými voláními metody**
 
- Poté, co potvrdí, že systém funguje podle očekávání, večeři nyní komentáře z PaymentProcessing kód. Sestavy ověření vrstvy jsou čisté a výsledné mapování kódu ukazuje, že neexistují žádné další závislosti PaymentProcessing:
+ Po potvrzení, že systém funguje podle očekávání, večeře teď Zakomentovat kód PaymentProcessing. Sestavy ověření vrstvy jsou čisté a výsledná mapa kódu ukazuje, že neexistují žádné další závislosti PaymentProcessing:
 
- ![Graf závislostí bez zpracování platby](../modeling/media/depgraph_nomore.png)
+ ![Graf závislosti bez PaymentProcessing](../modeling/media/depgraph_nomore.png)
 
- **Mapa kódu bez zpracování platby**
+ **Mapa kódu bez PaymentProcessing**
 
-#### <a name="drawing-a-dependency-diagram"></a>Kreslení diagramu závislostí
+#### <a name="drawing-a-dependency-diagram"></a>Vykreslení diagramu závislostí
 
 Diagram závislostí má následující hlavní funkce:
 
 - *Vrstvy* popisují logické skupiny artefaktů.
 
-- *Propojení* je přidružení mezi vrstvou a artefaktem.
+- *Odkaz* je přidružení mezi vrstvou a artefaktem.
 
-     Chcete-li vytvořit vrstvy z artefaktů, přetáhněte položky z Průzkumníka řešení, map kódu, zobrazení tříd nebo prohlížeče objektů. Chcete-li nakreslit nové vrstvy a pak je propojit s artefakty, použijte panel nástrojů nebo klepněte pravým tlačítkem myši na povrch diagramu a vytvořte vrstvy a pak položky přetáhněte do těchto vrstev.
+     Chcete-li vytvořit vrstvy z artefaktů, přetáhněte položky z Průzkumník řešení, mapy kódu, Zobrazení tříd nebo Prohlížeč objektů. Chcete-li nakreslit nové vrstvy a propojit je s artefakty, použijte panel nástrojů nebo klikněte pravým tlačítkem myši na plochu diagramu, vytvořte vrstvy a přetáhněte položky do těchto vrstev.
 
-     Číslo ve vrstvě zobrazuje počet artefaktů, které jsou propojeny s vrstvou. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále. Při interpretaci počtu artefaktů ve vrstvě si pamatujte následující:
+     Číslo ve vrstvě znázorňuje počet artefaktů, které jsou propojeny s vrstvou. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále. Při interpretaci počtu artefaktů ve vrstvě mějte na paměti následující:
 
   - Pokud vrstva odkazuje na artefakt, který obsahuje jiné artefakty, ale vrstva není propojena přímo s jiným artefaktem, pak číslo obsahuje pouze propojené artefakty. Jiné artefakty jsou však zahrnuty do analýzy během ověřování vrstvy.
 
@@ -444,11 +444,11 @@ Diagram závislostí má následující hlavní funkce:
 
   - Pokud například vrstva obsahuje jiné vrstvy, které jsou spojeny s artefakty, pak je vrstva kontejneru také propojena s těmito artefakty, i když číslo vrstvy kontejneru tyto artefakty neobsahuje.
 
-    Pokud chcete zobrazit artefakty, které jsou propojeny s vrstvou, klikněte pravým tlačítkem myši na závislost a potom klepnutím na **Zobrazit odkazy** otevřete **Průzkumníka vrstev**.
+    Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, klikněte pravým tlačítkem myši na závislost a potom kliknutím na možnost **Zobrazit odkazy** otevřete **Průzkumníka vrstev**.
 
-- *Závislost* označuje, že jedna vrstva může používat funkce v jiné vrstvě, ale ne naopak. *Obousměrná závislost* označuje, že jedna vrstva může používat funkce v jiné vrstvě a naopak.
+- *Závislost* znamená, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak. *Obousměrná závislost* znamená, že jedna vrstva může použít funkci v jiné vrstvě a naopak.
 
-     Chcete-li zobrazit existující závislosti v diagramu závislostí, klepněte pravým tlačítkem myši na povrch diagramu a potom klepněte na příkaz **Generovat závislosti**. Chcete-li popsat zamýšlené závislosti, nakreslete nové.
+     Chcete-li zobrazit existující závislosti v diagramu závislostí, klikněte pravým tlačítkem myši na plochu diagramu a potom klikněte na možnost **Generovat závislosti**. Chcete-li popsat zamýšlené závislosti, nakreslete nové.
 
 Přečtěte si:
 
@@ -460,11 +460,11 @@ Přečtěte si:
 
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)
 
-#### <a name="summary-strengths-of-dependency-diagrams"></a>Shrnutí: Silné diagramy závislostí
+#### <a name="summary-strengths-of-dependency-diagrams"></a>Shrnutí: síly diagramů závislostí
 
-Diagramy závislostí vám pomohou:
+Diagramy závislostí vám pomůžou:
 
-- Popište logickou architekturu systému podle funkčnosti jeho artefaktů.
+- Popište logickou architekturu systému v závislosti na funkcích jeho artefaktů.
 
 - Ujistěte se, že kód ve vývoji odpovídá zadanému návrhu.
 
@@ -472,17 +472,17 @@ Diagramy závislostí vám pomohou:
 
 |**Diagram**|**Popis**|
 |-|-|
-|Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li vytvořit vrstvy, vygenerujte mapu kódu a pak seskupte položky na mapě jako potenciální vrstvy. Přetáhněte skupiny z mapy do diagramu závislostí.<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />- [Procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md)|
+|Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li vytvořit vrstvy, vygenerujte mapu kódu a pak položky na mapě seskupte jako potenciální vrstvy. Přetáhněte skupiny z mapy do diagramu závislostí.<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)<br />- [Procházení a změna uspořádání map kódu](../modeling/browse-and-rearrange-code-maps.md)|
 
 ## <a name="external-resources"></a>Externí zdroje
 
 |**Kategorie**|**Odkazy**|
 |-|-|
-|**Fóra**|- [Nástroje pro vizualizaci & visual studia Visual Studio](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visualization Visualization & Modelování SDK (NÁSTROJE DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Fóra**|- [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vizualizace kódu](../modeling/visualize-code.md)
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
-- [Použití modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [Používání modelů v agilním vývoji](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
 - [Ověřování systému během vývoje](../modeling/validate-your-system-during-development.md)

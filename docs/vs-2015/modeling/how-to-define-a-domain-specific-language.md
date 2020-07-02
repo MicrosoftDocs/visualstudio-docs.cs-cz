@@ -18,28 +18,28 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 03c0da634ea740517380896542e9df5e6c7a5fbd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5ded7dcc05907f2f6a3d8c43af175ad55c499f56
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918597"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543322"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Jak se definuje jazyk specifický pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
+Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení ze šablony. Klíčovou součástí řešení je diagram definice DSL, který je uložený v DslDefinition. DSL. Definice DSL definuje třídy a tvary DSL. Po úpravě a přidání na tyto prvky můžete přidat programový kód pro přizpůsobení DSL.
 
-## <a name="templates"></a>Výběr řešení šablony
- Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
+## <a name="selecting-a-template-solution"></a><a name="templates"></a>Výběr řešení šablony
+ K definování DSL musíte mít nainstalované následující součásti:
 
-|||
+|Produkt|Odkaz ke stažení|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
-|Sada Visual Studio Visualization and Modeling SDK|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
+|Sada SDK pro vizualizaci a modelování sady Visual Studio|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
 
- Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí šablony projektu jazyka specifického pro doménu.
+ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení pomocí šablony projektu jazyka specifického pro doménu.
 
 #### <a name="to-create-a-dsl-solution"></a>Vytvoření řešení DSL
 
@@ -66,7 +66,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
        > [!NOTE]
        > Chcete-li vytvořit diagram tříd nebo diagram komponent, zvažte použití modelů UML. Nástroje pro modelování UML poskytují sadu diagramů integrovaných kolem jednoho modelu. Jsou rozšiřitelné a dají se integrovat s vaší DSL pomocí ModelBus. Další informace najdete v tématu [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md).
 
-   - Pokud chcete vytvořit DSL, která se zobrazí na model Windows Forms nebo na povrchu WPF, vyberte **minimální Návrhář DataGridView** nebo **Návrhář WPF** . Budete muset napsat kód, který definuje Editor. Další informace naleznete v následujících tématech:
+   - Pokud chcete vytvořit DSL, která se zobrazí na model Windows Forms nebo na povrchu WPF, vyberte **minimální Návrhář DataGridView** nebo **Návrhář WPF** . Budete muset napsat kód, který definuje Editor. Další informace najdete v následujících tématech:
 
         [Vytvoření jazyka specifického pro doménu založeného na modelu Windows Forms](../modeling/creating-a-windows-forms-based-domain-specific-language.md)
 
@@ -80,7 +80,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 4. Můžete buď upravit nastavení na ostatních stránkách, nebo ponechat výchozí hodnoty.
 
-5. Klikněte na **Dokončit**.
+5. Klikněte na **Finish** (Dokončit).
 
     Průvodce vytvoří řešení, které obsahuje dva nebo tři projekty a generuje kód z definice DSL.
 
@@ -93,17 +93,17 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 ### <a name="test-the-solution"></a>Testování řešení
  Řešení šablon poskytuje pracovní DSL, který můžete upravit nebo použít.
 
- Chcete-li řešení otestovat, stiskněte klávesu F5 nebo CTRL + F5. V experimentálním režimu se otevře nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Chcete-li řešení otestovat, stiskněte klávesu F5 nebo CTRL + F5. Nová instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se otevře v experimentálním režimu.
 
- V nové instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]v Průzkumník řešení otevřete vzorový soubor. Otevře se jako diagram se sadou nástrojů.
+ V nové instanci aplikace [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v Průzkumník řešení otevřete vzorový soubor. Otevře se jako diagram se sadou nástrojů.
 
- Pokud spustíte řešení, které jste vytvořili ze šablony **minimálního jazyka** , bude experimentální [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vypadat jako v následujícím příkladu:
+ Pokud spustíte řešení, které jste vytvořili ze šablony **minimálního jazyka** , bude experimentně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vypadat jako v následujícím příkladu:
 
  ![](../modeling/media/dsl-min.png "DSL_min")
 
  Experimentujte s nástroji. Vytvořte prvky a připojte je.
 
- Ukončete experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Zavřete experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 > [!NOTE]
 > Po úpravě DSL již nebudete moci zobrazit obrazce v ukázkovém testovacím souboru. Budete však moci vytvořit nové prvky.
@@ -121,7 +121,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
   Odstraňte nebo přejmenujte jiné třídy tak, aby vyhovovaly vašim požadavkům.
 
-## <a name="patterns"></a>Vzory pro definování DSL
+## <a name="patterns-for-defining-a-dsl"></a><a name="patterns"></a>Vzory pro definování DSL
  Doporučujeme, abyste vyvinuli DSL přidáním nebo úpravou jedné nebo dvou funkcí najednou. Přidejte funkci, spusťte DSL a otestujte ji a pak přidejte jednu nebo dvě další funkce. Typickou funkcí DSL může být:
 
 - Doménová třída, vztah vložení, který připojuje prvek k modelu, tvar potřebný k zobrazení prvků této třídy v diagramu a nástroje prvku, který umožňuje uživatelům vytvářet prvky.
@@ -148,7 +148,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 > [!NOTE]
 > "Model" odkazuje na instanci vaší DSL, kterou uživatelé vytvářejí, a obvykle se zobrazuje jako diagram. Toto téma popisuje diagram definice DSL i diagramy modelů, které se zobrazí při použití DSL.
 
-## <a name="classes"></a>Definování doménových tříd
+## <a name="defining-domain-classes"></a><a name="classes"></a>Definování doménových tříd
  Třídy domény reprezentují koncepty vaší DSL. Instance jsou *prvky modelu*. Například v **MusicLibrary** DSL můžete mít třídy domény s názvem **album** a **skladba**.
 
  Chcete-li vytvořit doménovou třídu, můžete přetáhnout z **pojmenovaného nástroje doménové třídy** do diagramu a pak přejmenovat třídu.
@@ -190,7 +190,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
  Ve třídě klikněte na **vlastnosti domény** , stiskněte klávesu ENTER a potom zadejte název vlastnosti. Výchozím typem doménové vlastnosti je řetězec. Chcete-li změnit typ, vyberte vlastnost doména a nastavte **typ** v okně **vlastnosti** . Pokud požadovaný typ není v rozevíracím seznamu, přečtěte si téma [Přidání typů vlastností](#addTypes).
 
- **Nastavte vlastnost názvu elementu.** Vyberte doménovou vlastnost, která se dá použít k identifikaci prvků v Průzkumníku jazyků. Například ve třídě doménová skladba můžete vybrat vlastnost doména názvu. V okně **vlastnosti** je nastavena vlastnost **název prvku na hodnotu** `true`.
+ **Nastavte vlastnost názvu elementu.** Vyberte doménovou vlastnost, která se dá použít k identifikaci prvků v Průzkumníku jazyků. Například ve třídě doménová skladba můžete vybrat vlastnost doména názvu. V okně **vlastnosti** je nastaveno na hodnotu **název elementu** `true` .
 
 ### <a name="create-derived-domain-classes"></a>Vytvořit odvozené doménové třídy
  Chcete-li, aby doménová třída měla varianty, které dědí její vlastnosti a vztahy, vytvořte třídy, které jsou z ní odvozeny. Například album může mít odvozené třídy WMA a MP3.
@@ -214,9 +214,9 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 1. Chcete-li vygenerovat kód návrháře DSL, **klikněte na možnost transformovat všechny šablony** na panelu nástrojů Průzkumník řešení. Tento krok můžete automatizovat. Další informace najdete v tématu [Jak automatizovat transformaci všech šablon](https://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a).
 
-2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
+2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
 
-3. **Otevřete Průzkumníka.** Na straně diagramu je okno Průzkumník jazyka, které se obvykle nazývá *YourLanguage* Explorer. Pokud toto okno nevidíte, může být na kartě pod Průzkumník řešení. Pokud ji nemůžete najít, v nabídce **zobrazení** přejděte na položku **ostatní okna**a klikněte na příkaz**Průzkumník**YourLanguage.
+3. **Otevřete Průzkumníka.** Na straně diagramu je okno Průzkumník jazyka, které se obvykle nazývá *YourLanguage* Explorer. Pokud toto okno nevidíte, může být na kartě pod Průzkumník řešení. Pokud ji nemůžete najít, v nabídce **zobrazení** přejděte na položku **ostatní okna**a klikněte na příkaz _YourLanguage_**Průzkumník**YourLanguage.
 
      Průzkumník nabízí stromové zobrazení modelu.
 
@@ -230,12 +230,12 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 7. **Uložte soubor, zavřete ho a znovu ho otevřete**. Po rozbalení uzlů by se měly zobrazit všechny instance, které jste vytvořili v Průzkumníkovi.
 
-## <a name="shapes"></a>Definování tvarů v diagramu
+## <a name="defining-shapes-on-the-diagram"></a><a name="shapes"></a>Definování tvarů v diagramu
  Můžete definovat třídy prvků, které se zobrazí v diagramu jako obdélníky, elipsy nebo ikony.
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>Definování třídy prvků, které se zobrazí jako tvary v diagramu
 
-1. **Definujte a otestujte doménovou třídu, jak je popsáno v**tématu[definování tříd domény](#classes) **.**
+1. **Definujte a otestujte doménovou třídu, jak je popsáno v**tématu[definování tříd domény](#classes) **.**  
 
    - Nadřazená třída by měla být kořenová třída. To znamená, že by měl být vztah vložení mezi kořenovou třídou a novou doménovou třídou.
 
@@ -312,7 +312,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 1. Chcete-li vygenerovat kód návrháře DSL, **klikněte na možnost transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
 
-2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
+2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
 
 3. **Ověřte, zda se nástroje prvku zobrazují v sadě nástrojů.**
 
@@ -326,7 +326,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
    Po prvním otestování tvaru možná budete chtít upravit některé vlastnosti a přidat ještě pokročilejší funkce. Další informace najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-## <a name="references"></a>Definování referenčních vztahů
+## <a name="defining-reference-relationships"></a><a name="references"></a>Definování referenčních vztahů
  Můžete definovat referenční vztah mezi jakoukoli doménovou třídou zdroje a libovolnou cílovou doménovou třídou. Referenční relace se obvykle zobrazují v diagramu jako konektory, které jsou čáry mezi obrazci.
 
  Například pokud jsou hudební alba a interprety zobrazovány jako obrazce v diagramu, můžete definovat relaci s názvem ArtistsAppearedOnAlbums, která propojuje interprety s alba, na kterých pracovali. Podívejte se na příklad na obrázku.
@@ -388,7 +388,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 1. Chcete-li vygenerovat kód návrháře DSL, **klikněte na možnost transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
 
-2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
+2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
 
 3. **Ověřte, zda se v sadě nástrojů zobrazuje nástroj připojení.**
 
@@ -408,7 +408,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
    Po prvním otestování konektoru budete možná chtít upravit některé vlastnosti a přidat ještě pokročilejší funkce. Další informace najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-## <a name="compartments"></a>Definování tvarů, které obsahují seznamy: obrazce oddílu
+## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a>Definování tvarů, které obsahují seznamy: obrazce oddílu
  Obrazec oddílu obsahuje jeden nebo více seznamů položek. Například v hudební knihovně DSL můžete k reprezentaci hudebních alb použít obrazce oddílů. V každém albu se nachází seznam písní.
 
  ![Obrazec oddílu](../modeling/media/compartmentshape.png "CompartmentShape")
@@ -489,7 +489,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 1. Chcete-li vygenerovat kód návrháře DSL, **klikněte na možnost transformovat všechny šablony** na panelu nástrojů Průzkumník řešení.
 
-2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
+2. **Sestavte a spusťte DSL.** Stisknutím klávesy F5 nebo CTRL + F5 spusťte novou instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v experimentálním režimu. V experimentální instanci nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] otevřete nebo vytvořte soubor, který má příponu názvu vaší DSL.
 
 3. **Ověřte, zda se nástroj zobrazuje v sadě nástrojů.**
 
@@ -536,22 +536,22 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
 7. Vyberte buď odkaz, nebo položku v obrazovém oddílu. Odkaz i položka by měly zmizet.
 
-## <a name="ports"></a>Definování portů na hranici jiného obrazce
+## <a name="defining-ports-on-the-boundary-of-another-shape"></a><a name="ports"></a>Definování portů na hranici jiného obrazce
  Port je tvar, který je umístěn na hranici jiného obrazce.
 
  Porty lze také použít k poskytnutí pevného spojovacího bodu na jiném obraze, na který může uživatel vykreslit konektory. V takovém případě můžete tvar portu označit jako průhledný.
 
  Pokud chcete zobrazit příklad, který používá porty, vyberte šablonu **diagramu komponent** při vytváření nového řešení DSL. Tento příklad ukazuje hlavní body, které lze vzít v úvahu při definování portů:
 
-- Existuje doménová třída, která představuje kontejner portů, `Component`.
+- Existuje doménová třída, která představuje kontejner portů, `Component` .
 
-- Existuje doménová třída, která představuje porty. V tomto příkladu je to `ComponentPort`.
+- Existuje doménová třída, která představuje porty. V tomto příkladu je to `ComponentPort` .
 
 - Existuje vztah vložení z třídy doména kontejneru do třídy domény portů. Další informace najdete v tématu [definování tříd domény](#classes).
 
-- Pokud chcete, aby byly různé typy portů smíchány na stejném kontejneru, můžete vytvořit podtřídy třídy doména portů. V příkladu `InPort` a `OutPort` dědí z `ComponentPort`.
+- Pokud chcete, aby byly různé typy portů smíchány na stejném kontejneru, můžete vytvořit podtřídy třídy doména portů. V příkladu `InPort` a `OutPort` dědí z `ComponentPort` .
 
-- Třída domény kontejneru může být mapována na libovolný typ obrazce. V tomto příkladu je `ComponentShape`. Další informace najdete v tématu [definování tvarů](#shapes).
+- Třída domény kontejneru může být mapována na libovolný typ obrazce. V tomto příkladu je to `ComponentShape` . Další informace najdete v tématu [definování tvarů](#shapes).
 
 - Třídy domény portu jsou namapovány na obrazce portů. Můžete buď namapovat odvozené třídy na samostatné třídy obrazců portů, nebo namapovat základní třídu na jednu třídu tvarů portů.
 
@@ -559,7 +559,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
   Další informace najdete v tématu [vlastnosti obrazců portů](../modeling/properties-of-port-shapes.md).
 
-## <a name="swimlanes"></a>Definice DSL, která má plavecké dráhy
+## <a name="defining-a-dsl-that-has-swimlanes"></a><a name="swimlanes"></a>Definice DSL, která má plavecké dráhy
  Plavecké dráhy jsou vodorovný nebo svislý oddíl diagramu. Každá plavecká dráha odpovídá prvku modelu. Definice DSL vyžaduje pro elementy plavecké dráhy jednu doménovou třídu.
 
  Nejlepším způsobem, jak vytvořit DSL pomocí plaveckých drah, je vytvořit nové řešení DSL a zvolit šablonu řešení flow (Task flow). V definici DSL je třída objektu actor doménová třída mapovaná na plaveckou dráhu. Přejmenujte tuto a další třídy tak, aby vyhovovaly vašemu projektu.
@@ -570,7 +570,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
  Další informace najdete v tématu [vlastnosti plaveckých drah](../modeling/properties-of-swimlanes.md).
 
-## <a name="addTypes"></a>Přidávání typů vlastností
+## <a name="adding-property-types"></a><a name="addTypes"></a>Přidávání typů vlastností
 
 ### <a name="domain-enumerations-and-literals"></a>Výčty a literály domény
  Výčet domény je typ s několika hodnotami literálů.
@@ -586,7 +586,7 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
  Pokud chcete přidat typ, klikněte pravým tlačítkem na kořen modelu v Průzkumníku DSL a pak klikněte na **Přidat nový externí typ**. V okno Vlastnosti nastavte název na **Color** a obor názvů na **System. Drawing**. Tento typ se nyní zobrazuje v Průzkumníkovi DSL v části **typy domén**. Můžete ji vybrat vždy, když nastavíte typ doménové vlastnosti.
 
-## <a name="custom"></a>Přizpůsobení DSL
+## <a name="customizing-the-dsl"></a><a name="custom"></a>Přizpůsobení DSL
  Pomocí technik popsaných v tomto tématu můžete rychle vytvořit DSL pomocí zápisu diagramatické, čitelného formuláře XML a základních nástrojů, které jsou nutné k vygenerování kódu a dalších artefaktů.
 
  Definice DSL se rozšiřuje na dvě metody:
@@ -606,19 +606,19 @@ Pokud chcete definovat jazyk specifický pro doménu (DSL), vytvoříte řešen�
 
  Viz také [Postupy: Změna oboru názvů jazyka specifického pro doménu](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
-## <a name="trouble"></a>Při
+## <a name="troubleshooting"></a><a name="trouble"></a>Při
  V následující tabulce jsou uvedeny některé nejběžnější problémy, které se vyskytly při návrhu DSL, spolu s návrhy na jejich řešení. Další rady jsou k dispozici na [fóru Extensibililty nástrojů pro vizualizaci](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx).
 
-|Problém|Doporučení|
+|Problém|Návrh|
 |-------------|----------------|
 |Změny provedené v souboru definice DSL nemají žádný vliv.|Na panelu nástrojů výše Průzkumník řešení klikněte na **transformovat všechny šablony** a znovu sestavte řešení.|
 |Tvar zobrazuje název dekoratér místo hodnoty vlastnosti.|Nastavte mapování dekoratér. V diagramu definice DSL klikněte na mapu prvku diagramu, což je šedý spojnice mezi doménovou třídou a třídou Shape.<br /><br /> Otevřete okno **Podrobnosti DSL** . Pokud ho nevidíte, přejděte v nabídce zobrazení na položku **ostatní okna**a klikněte na **Podrobnosti DSL**.<br /><br /> Klikněte na kartu **mapy dekoratér** . Vyberte název dekoratér. Ujistěte se, že je zaškrtnuté políčko vedle něho. V části **vlastnost zobrazení**vyberte název doménové vlastnosti.<br /><br /> Další informace najdete v tématu [tvary v diagramu](#shapes).|
 |V Průzkumníku DSL nejde přidat do kolekce. Například když kliknete pravým tlačítkem nástrojů, v nabídce není k dispozici příkaz Přidat nástroj.<br /><br /> V Průzkumníkovi pro moji DSL nemůžu přidat element do seznamu.|Klikněte pravým tlačítkem na položku nad uzlem, který zkoušíte. Pokud chcete přidat do seznamu, příkaz Přidat není v uzlu seznam, ale v jeho vlastníkovi.|
 |Vytvořil (a) jsem doménovou třídu, ale v Průzkumníkovi jazyka nemůžu vytvořit instance.|Každá doménová třída s výjimkou kořene musí být cílem relace vložení.|
 |V Průzkumníkovi pro moji DSL jsou elementy zobrazeny pouze s názvy jejich typů.|V definici DSL vyberte doménovou vlastnost třídy a ve okno Vlastnosti nastavte vlastnost **název elementu** na hodnotu true.|
-|Moje DSL se vždy otevírá v editoru XML.|K tomu může dojít z důvodu chyby při čtení souboru. I když tuto chybu opravíte, musíte explicitně resetovat Editor tak, aby byl vaším návrhářem DSL.<br /><br /> Klikněte pravým tlačítkem na položku projektu, klikněte na tlačítko **otevřít v** a vyberte _YourLanguage_ **návrháře (výchozí)** .|
+|Moje DSL se vždy otevírá v editoru XML.|K tomu může dojít z důvodu chyby při čtení souboru. I když tuto chybu opravíte, musíte explicitně resetovat Editor tak, aby byl vaším návrhářem DSL.<br /><br /> Klikněte pravým tlačítkem myši na položku projektu, klikněte na tlačítko **otevřít v** a vyberte _YourLanguage_**Designer (výchozí)**.|
 |Sada nástrojů moje DSL se po změně názvů sestavení nezobrazí.|Prohlédněte si a aktualizujte **DslPackage\GeneratedCode\Package.TT** , kde najdete další informace, viz [Postupy: Změna oboru názvů jazyka specifického pro doménu](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).|
-|Sada nástrojů mého DSL se nezobrazí, ale nezměnili jste název sestavení.<br /><br /> Nebo se zobrazí okno se zprávou, která hlásí selhání načtení rozšíření.|Obnovte experimentální instanci a znovu sestavte řešení.<br /><br /> 1. v nabídce Start ve Windows klikněte na **všechny programy**, rozbalte [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)], pak **nástroje**a potom klikněte na **resetovat Microsoft Visual Studio experimentální instanci**.<br />2. v nabídce **sestavení** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]klikněte na **znovu sestavit řešení**.|
+|Sada nástrojů mého DSL se nezobrazí, ale nezměnili jste název sestavení.<br /><br /> Nebo se zobrazí okno se zprávou, která hlásí selhání načtení rozšíření.|Obnovte experimentální instanci a znovu sestavte řešení.<br /><br /> 1. v nabídce Start systému Windows v části **všechny programy**rozbalte [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)] a pak **nástroje**a potom klikněte na **resetovat Microsoft Visual Studio experimentální instanci**.<br />2. v nabídce [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **sestavení** klikněte na **znovu sestavit řešení**.|
 
 ## <a name="see-also"></a>Viz také
  [Začínáme s jazyky specifickými](../modeling/getting-started-with-domain-specific-languages.md) pro doménu [Vytvoření jazyka specifického pro doménu založeného na model Windows Forms](../modeling/creating-a-windows-forms-based-domain-specific-language.md) [Vytvoření jazyka specifického pro doménu založeného na WPF](../modeling/creating-a-wpf-based-domain-specific-language.md)

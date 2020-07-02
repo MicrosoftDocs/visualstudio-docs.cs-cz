@@ -15,35 +15,35 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d1b4c0c5bcf22db6558f156fd1acd0be94026b08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e669d87ad5ecc53c1523db16ab77578c6a703a33
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661065"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545259"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: Deklarace volání nespravovaného kódu by měla být přenosná
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |Kategorie|Microsoft. přenositelnost|
 |Narušující změna|Přerušení – Pokud je volání nespravovaného modulu mimo sestavení viditelné. Bez přerušení – Pokud není volání nespravovaného volání mimo sestavení viditelné.|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Toto pravidlo vyhodnocuje velikost každého parametru a návratovou hodnotu volání nespravovaného kódu a ověřuje, zda je jejich velikost, je-li zařazování na nespravovaný kód na 32 a 64-bitových platforem správná. Nejběžnějším porušením tohoto pravidla je předávat celé číslo s pevnou velikostí, kde je vyžadována proměnná závislá na platformě a proměnné velikosti ukazatele.
 
 ## <a name="rule-description"></a>Popis pravidla
  Toto pravidlo je v rozporu s některým z následujících scénářů:
 
-- Návratová hodnota nebo parametr je zadán jako celé číslo pevné velikosti, pokud by měl být zadán jako `IntPtr`.
+- Návratová hodnota nebo parametr je zadán jako celé číslo pevné velikosti, pokud by měl být zadán jako `IntPtr` .
 
-- Vrácená hodnota nebo parametr jsou zadány jako `IntPtr`, pokud by měly být zadány jako celé číslo s pevnou velikostí.
+- Návratová hodnota nebo parametr je zadán jako, `IntPtr` když by měl být zadán jako celé číslo s pevnou velikostí.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Toto porušení můžete opravit pomocí `IntPtr` nebo `UIntPtr` k reprezentování popisovačů místo `Int32` nebo `UInt32`.
+ Toto porušení můžete opravit pomocí `IntPtr` nebo `UIntPtr` k reprezentování popisovačů místo `Int32` nebo `UInt32` .
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Toto upozornění byste neměli potlačit.
@@ -60,7 +60,7 @@ internal class NativeMethods
 }
 ```
 
- V tomto příkladu je parametr `nIconIndex` deklarovaný jako `IntPtr`, což je 4 bajty na platformě 32 a 8 bajtů v celé 64 platformě. V nespravované deklaraci, která následuje, vidíte, že `nIconIndex` je unsigned integer na všech platformách na 4 bajtech.
+ V tomto příkladu `nIconIndex` je parametr deklarovaný jako `IntPtr` , což je 4 bajty na platformě 32 a 8 bajtů v celé 64 platformě. V nespravované deklaraci, která následuje, můžete vidět, že `nIconIndex` je na všech platformách unsigned integer o velikosti 4 bajty.
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -79,4 +79,4 @@ internal class NativeMethods{
 ```
 
 ## <a name="see-also"></a>Viz také
- [Upozornění přenositelnosti](../code-quality/portability-warnings.md)
+ [Upozornění na přenositelnost](../code-quality/portability-warnings.md)

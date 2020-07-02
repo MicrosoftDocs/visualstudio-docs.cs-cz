@@ -15,25 +15,25 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 20238a844b45221207ca952d90d172ac720136ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b141d755c717ad6650d2a49c98c2b26547066b7a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655255"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545519"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Kolekce musí implementovat obecné rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|CollectionsShouldImplementGenericInterface|
 |CheckId|CA1010|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Externě viditelný typ implementuje rozhraní <xref:System.Collections.IEnumerable?displayProperty=fullName>, ale neimplementuje rozhraní <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> a [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] obsahující cíle sestavení. Toto pravidlo ignoruje typy, které implementují <xref:System.Collections.IDictionary?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Externě viditelný typ implementuje <xref:System.Collections.IEnumerable?displayProperty=fullName> rozhraní, ale neimplementuje <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> rozhraní a obsahuje cíle sestavení [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] . Toto pravidlo ignoruje typy, které implementují <xref:System.Collections.IDictionary?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Popis pravidla
  Použitelnost kolekce lze rozšířit implementací jednoho z rozhraní obecné kolekce. Potom lze kolekci použít k naplnění typů obecných kolekcí, jako jsou následující:
@@ -59,18 +59,18 @@ ms.locfileid: "72655255"
 ## <a name="example-violation"></a>Příklad porušení
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje třídu (typ odkazu), která je odvozena od neobecné třídy `CollectionBase`, která je v rozporu s tímto pravidlem.
+ Následující příklad ukazuje třídu (typ odkazu), která je odvozena od neobecné `CollectionBase` třídy, která toto pravidlo porušuje.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericViolation/cs/FxCop.Design.CollectionsGenericViolation.cs#1)]
 
 ### <a name="comments"></a>Komentáře
- Chcete-li opravit porušení tohoto porušení, měli byste buď implementovat Obecná rozhraní, nebo změnit základní třídu na typ, který již implementuje obecná i neobecná rozhraní, jako je například třída `Collection<T>`.
+ Chcete-li opravit porušení tohoto porušení, měli byste buď implementovat Obecná rozhraní, nebo změnit základní třídu na typ, který již implementuje obecná i neobecná rozhraní, jako je například `Collection<T>` Třída.
 
 ## <a name="fix-by-base-class-change"></a>Opravit se změnou základní třídy
 
 ### <a name="description"></a>Popis
- Následující příklad opravuje porušení změnou základní třídy kolekce z neobecné `CollectionBase` třídy na obecnou `Collection<T>` (`Collection(Of T)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) třídy.
+ Následující příklad opravuje porušení změnou základní třídy kolekce z neobecné `CollectionBase` třídy na obecnou `Collection<T>` ( `Collection(Of T)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) třídu.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericBase/cs/FxCop.Design.CollectionsGenericBase.cs#1)]
@@ -81,19 +81,19 @@ ms.locfileid: "72655255"
 ## <a name="fix-by-interface-implementation"></a>Oprava podle implementace rozhraní
 
 ### <a name="description"></a>Popis
- Následující příklad opravuje porušení implementací těchto obecných rozhraní: `IEnumerable<T>`, `ICollection<T>` a `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)` a `IList(Of T)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]).
+ Následující příklad opravuje porušení implementací těchto obecných rozhraní: `IEnumerable<T>` , `ICollection<T>` , a `IList<T>` (, a `IEnumerable(Of T)` `ICollection(Of T)` `IList(Of T)` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericInterface/cs/FxCop.Design.CollectionsGenericInterface.cs#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005: Vyhněte se nadbytečným parametrům u obecných typů](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
  [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006: Nevnořujte obecné typy do signatur členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
  [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 

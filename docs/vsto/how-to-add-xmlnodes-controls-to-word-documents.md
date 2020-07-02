@@ -67,7 +67,7 @@ ms.locfileid: "85543491"
 
      <xref:Microsoft.Office.Tools.Word.XMLNodes>Ovládací prvek je vytvořen a přidán do projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Ovládací prvek XMLNodes](../vsto/xmlnodes-control.md)
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)

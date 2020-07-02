@@ -1,5 +1,5 @@
 ---
-title: Kanály (zobrazení vláken) | Dokumentace Microsoftu
+title: Kanály (zobrazení vláken) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,42 +13,42 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 445eaf5269ce59e6f6f8fa323020a80648567f54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: df93a87285bdf1172e75b63ed956c1aa978fc71e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193622"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545532"
 ---
 # <a name="channels-threads-view"></a>Kanály (Zobrazení vláken)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vizualizátor souběžnosti zobrazí čtyři typy kanálů: vláken kanály, disk kanály, značky kanálů a kanály GPU.  
+Vizualizátor souběžnosti zobrazuje čtyři druhy kanálů: kanály vláken, kanály disku, kanály značek a grafické kanály GPU.  
   
-## <a name="thread-channels"></a>Vláken kanály  
- Vlákno kanálu zobrazí stav vlákna, pomocí barev, pro pouze jedno vlákno. Při přesunutí ukazatele myši na název kanálu, zobrazí se spuštění funkce pro dané vlákno. Vizualizátor souběžnosti zjistí, několik druhů vlákna. Nejběžnější typy jsou uvedeny v následující tabulce.  
+## <a name="thread-channels"></a>Kanály vláken  
+ Kanál vlákna zobrazuje stav vlákna podle barvy pro pouze jedno vlákno. Když na název kanálu pozastavíte, zobrazí se funkce spuštění daného vlákna. Vizualizátor souběžnosti detekuje několik druhů vláken. Nejběžnější druhy jsou uvedeny v následující tabulce.  
   
-|||  
+|Thread|Popis|  
 |-|-|  
-|Hlavní vlákno|Podproces, který spustil aplikaci.|  
-|Pracovní podproces|Vlákno, které bylo vytvořeno pomocí hlavního vlákna aplikace.|  
-|Pracovní vlákno CLR|Pracovní podproces, který byl vytvořen modulem common language runtime (CLR).|  
-|Nápověda ladicího programu|Pracovní podproces, který byl vytvořen pomocí ladicího programu sady Visual Studio.|  
-|Vlákno ConcRT|Podproces, který byl vytvořen pomocí modulu Runtime souběžnosti Microsoft.|  
-|Vlákno rozhraní GDI|Podproces, který byl vytvořen GDIPlus.|  
-|Vlákno OLE/RPC|Podproces, který byl vytvořen jako podproces RPC.|  
-|Vlákno RPC|Podproces, který byl vytvořen jako podproces RPC.|  
-|Vlákno rozhraní Winsock|Podproces, který byl vytvořen jako vlákno rozhraní Winsock.|  
-|Fondu vláken|Podproces, který byl vytvořen ve fondu vláken CLR.|  
+|Hlavní vlákno|Vlákno, které aplikaci spustilo.|  
+|Pracovní vlákno|Vlákno, které bylo vytvořeno hlavním vláknem aplikace.|  
+|Pracovní vlákno CLR|Pracovní vlákno, které bylo vytvořeno modulem CLR (Common Language Runtime).|  
+|Pomocník pro ladicí program|Pracovní vlákno, které vytvořil ladicí program sady Visual Studio.|  
+|Vlákno ConcRT|Vlákno, které vytvořila aplikace Microsoft Concurrency Runtime.|  
+|Vlákno GDI|Vlákno, které vytvořila služba GDIPlus.|  
+|Vlákno OLE/RPC|Vlákno, které bylo vytvořeno jako pracovní vlákno RPC.|  
+|Vlákno RPC|Vlákno, které bylo vytvořeno jako vlákno RPC.|  
+|Vlákno rozhraní Winsock|Vlákno, které bylo vytvořeno jako vlákno rozhraní Winsock.|  
+|Fond vláken|Vlákno, které bylo vytvořeno fondem vláken CLR.|  
   
-## <a name="disk-channels"></a>Kanály disku  
- Kanály disku odpovídají fyzické jednotky v počítači. Vzhledem k tomu, že pro každý fyzický disk systému existují samostatné kanály pro operace čtení a zápisu, každá jednotka má dva kanály. Čísla disků odpovídat názvu zařízení jádra. Disk kanál se zobrazí pouze pokud byla nějaká aktivita na disku.  
+## <a name="disk-channels"></a>Diskové kanály  
+ Diskové kanály odpovídají fyzickým jednotkám v počítači. Vzhledem k tomu, že pro každou fyzickou jednotku v systému existují samostatné kanály pro operace čtení a zápisu, mají jednotlivé jednotky dva kanály. Čísla disků odpovídají názvům zařízení jádra. Diskový kanál se zobrazí jenom v případě, že disk obsahuje aktivitu.  
   
-## <a name="marker-channels"></a>Kanály značky  
- Značky kanály odpovídají události generované modulem aplikace a knihovny, které používá. Například Task Parallel Library, knihovny Ppl a jazyka C++ AMP generovat události, které se zobrazí jako značky. Každý kanál značky je přidružená ID vlákna, které se zobrazí vedle popis kanálu. Identifikuje ID vlákna, které vygenerovalo událost. Popis kanálu obsahuje název zprostředkovatele trasování událostí pro Windows (ETW), který vygeneruje události. Pokud kanál se zobrazí události od [sada Vizualizátor souběžnosti SDK](../profiling/concurrency-visualizer-sdk.md), zobrazí se také název řady.  
+## <a name="marker-channels"></a>Kanály značek  
+ Kanály značek odpovídají událostem generovaným aplikací a knihovnám, které používá. Například úloha paralelní knihovna, knihovna paralelních vzorů a C++ AMP generuje události, které jsou zobrazeny jako značky. Každý kanál značek je přidružen k ID vlákna, které se zobrazí vedle popisu kanálu. ID identifikuje vlákno, které událost vygenerovalo. Popis kanálu zahrnuje název poskytovatele trasování událostí pro Windows (ETW), který události vygeneroval. Pokud kanál zobrazuje události ze [sady Vizualizátor souběžnosti SDK](../profiling/concurrency-visualizer-sdk.md), zobrazí se také název řady.  
   
 ## <a name="gpu-channels"></a>Kanály GPU  
- Kanály GPU zobrazení informací o činnosti rozhraní DirectX 11 v systému.  Každý motor rozhraní DirectX, který je spojen s grafickou kartu má samostatný kanál.  Jednotlivé segmenty představují čas, který má strávený zpracováním paketů DMA.  
+ Kanály GPU zobrazují informace o aktivitě rozhraní DirectX 11 v systému.  Každý modul DirectX, který je přidružený k grafické kartě, má samostatný kanál.  Jednotlivé segmenty reprezentují čas strávený zpracováním paketu DMA.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

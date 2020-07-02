@@ -15,28 +15,28 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 70a0bab8cfb3bf14a763f759e0e44a754ad878d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eff09fb8f4423560c4681c94507d909f5864c69e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662783"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545233"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operace by neměly přetéct
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda provede aritmetickou operaci a předem neověřuje operandy, aby se zabránilo přetečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Aritmetické operace by se neměly provádět bez prvotního ověření operandů, aby se zajistilo, že výsledek operace není mimo rozsah možných hodnot datových typů, které jsou v provozu. V závislosti na kontextu spuštění a na zahrnutých datových typech může aritmetické přetečení způsobit <xref:System.OverflowException?displayProperty=fullName> nebo nejvýznamnější bity výsledku.
+ Aritmetické operace by se neměly provádět bez prvotního ověření operandů, aby se zajistilo, že výsledek operace není mimo rozsah možných hodnot datových typů, které jsou v provozu. V závislosti na kontextu spuštění a v souvislosti s datovými typy může aritmetické přetečení způsobit, že dojde k <xref:System.OverflowException?displayProperty=fullName> zahození výsledku nebo z nejvýznamnějších bitů výsledku.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, před provedením operace ověřte operandy.
@@ -47,16 +47,16 @@ ms.locfileid: "72662783"
 ## <a name="example-of-a-violation"></a>Příklad porušení
 
 ### <a name="description"></a>Popis
- Metoda v následujícím příkladu zpracovává celé číslo, které toto pravidlo porušuje. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] vyžaduje, aby byla zablokována možnost **Odebrat** přetečení celého čísla, aby se aktivovala.
+ Metoda v následujícím příkladu zpracovává celé číslo, které toto pravidlo porušuje. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]k vyvolání této možnosti je nutné zakázat možnost **Odebrat** přetečení celého čísla.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]
  [!code-vb[FxCop.Usage.OperationOverflow#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/vb/FxCop.Usage.OperationOverflow.vb#1)]
 
 ### <a name="comments"></a>Komentáře
- Pokud je metoda v tomto příkladu předána <xref:System.Int32.MinValue?displayProperty=fullName>, operace by měla podtečení. To způsobí, že je nejvýznamnější bit výsledku zahozen. Následující kód ukazuje, jak se to stane.
+ Pokud je metoda v tomto příkladu předána <xref:System.Int32.MinValue?displayProperty=fullName> , operace by měla být podtečení. To způsobí, že je nejvýznamnější bit výsledku zahozen. Následující kód ukazuje, jak se to stane.
 
- [C#]
+ Jazyk
 
 ```
 public static void Main()
@@ -95,17 +95,17 @@ End Sub
 ## <a name="fix-with-a-checked-block"></a>Oprava pomocí kontrolovaného bloku
 
 ### <a name="description"></a>Popis
- Následující příklad opravuje předchozí porušení tím, že zabalí operaci do kontrolovaného bloku. Pokud operace způsobí přetečení, bude vyvolána <xref:System.OverflowException?displayProperty=fullName>.
+ Následující příklad opravuje předchozí porušení tím, že zabalí operaci do kontrolovaného bloku. Pokud operace způsobí přetečení, <xref:System.OverflowException?displayProperty=fullName> bude vyvolána výjimka.
 
- Všimněte si, že zaškrtnuté bloky nejsou v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] podporovány.
+ Všimněte si, že kontrolované bloky nejsou podporovány v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowChecked/cs/FxCop.Usage.OperationOverflowChecked.cs#1)]
 
 ## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Zapnout kontrolované aritmetické přetečení nebo podtečení
- Pokud zapnete kontrolované aritmetické přetečení nebo podtečení C#v, je ekvivalentem zabalení každé celočíselné operace do kontrolovaného bloku.
+ Pokud zapnete kontrolované aritmetické přetečení nebo podtečení v jazyce C#, je ekvivalentní zabalení všech celočíselných operací v kontrolovaném bloku.
 
- **Zapnutí kontrolovaného aritmetického přetečení nebo podtečení vC#**
+ **Zapnutí kontrolovaného aritmetického přetečení nebo podtečení v C #**
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a vyberte možnost **vlastnosti**.
 
@@ -114,4 +114,4 @@ End Sub
 3. Vyberte možnost **kontrolovat aritmetické přetečení a podtečení** a klikněte na tlačítko **OK**.
 
 ## <a name="see-also"></a>Viz také
- <xref:System.OverflowException?displayProperty=fullName> [ C# operátory](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) byly [zkontrolovány a nezaškrtnutoy](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e) .
+ <xref:System.OverflowException?displayProperty=fullName>[Operátory jazyka C#](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) byly [zkontrolovány a nezaškrtnutoy](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e) .

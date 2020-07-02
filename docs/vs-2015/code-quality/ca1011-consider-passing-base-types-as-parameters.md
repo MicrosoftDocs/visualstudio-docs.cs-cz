@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3968d81e8ee18b4b0a56bed50f7aa1f121e1c074
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f689dfd6c1d39bbd03d522a33ed8c5639a3da9f8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663243"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545480"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Zvažte předání základních typů jako parametrů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Deklarace metody obsahuje formální parametr, který je odvozeným typem, a metoda volá pouze členy základního typu parametru.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -46,18 +46,18 @@ ms.locfileid: "72663243"
 
 - Pokud metoda vyžaduje konkrétní funkce, které jsou poskytovány odvozeným typem
 
-   \- nebo-
+   \-ani
 
 - aby bylo možné vyhovět, že pouze odvozený typ nebo více odvozený typ, je předán metodě.
 
   V těchto případech bude kód robustnější z důvodu kontroly silného typu, který je poskytován kompilátorem a modulem runtime.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje metodu `ManipulateFileStream`, která se dá použít jenom s objektem <xref:System.IO.FileStream>, který porušuje toto pravidlo. Druhá metoda, `ManipulateAnyStream`, splňuje pravidlo tím, že nahrazuje parametr <xref:System.IO.FileStream> pomocí <xref:System.IO.Stream>.
+ Následující příklad ukazuje metodu, `ManipulateFileStream` , která se dá použít jenom s <xref:System.IO.FileStream> objektem, který porušuje toto pravidlo. Druhá metoda, `ManipulateAnyStream` splňuje pravidlo tím, že nahradí <xref:System.IO.FileStream> parametr pomocí <xref:System.IO.Stream> .
 
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cpp/FxCop.Design.ConsiderPassingBaseTypes.cpp#1)]
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cs/FxCop.Design.ConsiderPassingBaseTypes.cs#1)]
  [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/vb/FxCop.Design.ConsiderPassingBaseTypes.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1059: Členové by neměli zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+ [CA1059: Členy by neměly zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

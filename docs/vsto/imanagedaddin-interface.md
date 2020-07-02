@@ -22,7 +22,7 @@ ms.locfileid: "85541125"
 # <a name="imanagedaddin-interface"></a>IManagedAddin – rozhraní
   Implementací rozhraní IManagedAddin – Vytvořte komponentu, která načte spravované doplňky VSTO. Toto rozhraní bylo přidáno v 2007 systém Microsoft Office systému.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```csharp
 [
@@ -84,5 +84,5 @@ interface IManagedAddin : IUnknown
 > [!CAUTION]
 > Tento identifikátor CLSID je také používán *VSTOLoader.dll* v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Proto pokud k vytvoření vlastního zavaděče doplňku VSTO a komponenty prostředí runtime použijete IManagedAddin –, nemůžete tuto komponentu nasadit do počítačů, ve kterých jsou spuštěné doplňky VSTO, které jsou závislé na [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Nespravované Reference k rozhraní API &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)

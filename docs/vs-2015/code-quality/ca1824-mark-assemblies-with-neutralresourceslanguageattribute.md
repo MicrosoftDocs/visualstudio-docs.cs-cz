@@ -15,25 +15,25 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: efa328fdff9c357e0183fc2ca80e4d77d4f6782e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19077a63d5aa22bda3f968943703a82488e2745d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661120"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545285"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Označte sestavení pomocí atributu NeutralResourcesLanguageAttribute
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Označte sestavení pomocí NeutralResourcesLanguageAttribute
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|MarkAssembliesWithNeutralResourcesLanguage|
 |CheckId|CA1824|
 |Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Sestavení obsahuje prostředek založený na **RESX**, ale nemá na něj <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>.
+## <a name="cause"></a>Příčina
+ Sestavení obsahuje prostředek založený na **RESX**, ale nemá <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> k němu aplikovány.
 
 ## <a name="rule-description"></a>Popis pravidla
  Atribut **NeutralResourcesLanguage** informuje **Správce prostředků** jazyka, který se použil k zobrazení prostředků neutrální jazykové verze pro sestavení. Při vyhledávání prostředků ve stejné jazykové verzi jako jazyk neutrálních prostředků použije **správce** prostředků automaticky prostředky, které jsou umístěny v hlavním sestavení. Místo toho je třeba hledat satelitní sestavení, které má aktuální jazykovou verzi uživatelského rozhraní pro aktuální vlákno. To zlepšuje výkon vyhledávání při prvním získání prostředků a může zmenšit vaši pracovní sadu.
@@ -51,7 +51,7 @@ ms.locfileid: "72661120"
 
 3. V dialogovém okně **informace o sestavení** vyberte jazyk z rozevíracího seznamu **neutrální jazyk** .
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Je povoleno potlačit upozornění od tohoto pravidla. Výkon při spuštění se ale může snížit.

@@ -8,36 +8,36 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 558e205fa37569bfa12d7b93f989d0f8ebabab43
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2b3e06bb7a150c4bb07eefc0571818f1127fe460
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669064"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545116"
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: Spuštění nezabezpečeného skriptu XSLT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|InsecureXSLTScriptExecution|
 |CheckId|CA3076|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Pokud v aplikacích .NET nezabezpečeně vyplníte [Extensible Stylesheet Language Transformers (XSLT)](https://support.microsoft.com/kb/313997) , může procesor [vyřešit nedůvěryhodné odkazy identifikátorů URI](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , které by mohly zveřejnit citlivé informace pro útočníky, což vede k odepření. Útoky služby a mezi weby.
+## <a name="cause"></a>Příčina
+ Pokud v aplikacích .NET nezabezpečeně vyplníte [Extensible Stylesheet Language Transformers (XSLT)](https://support.microsoft.com/kb/313997) , může procesor [vyřešit nedůvěryhodné odkazy identifikátorů URI](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , které by mohly zveřejnit citlivé informace pro útočníky, což vede k odepření útoků služby a mezi weby.
 
 ## <a name="rule-description"></a>Popis pravidla
  [XSLT](https://msdn.microsoft.com/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) je standard konsorcium World Wide Web (W3C) pro transformaci dat XML. XSLT se obvykle používá k psaní šablon stylů pro transformaci dat XML do jiných formátů, jako je například HTML, text s pevnou délkou, text oddělený čárkami nebo jiný formát XML. I když je ve výchozím nastavení zakázaná, můžete ji povolit pro svůj projekt.
 
- Aby se zajistilo, že nezveřejňujete plochu pro útok, toto pravidlo se aktivuje při každém XslCompiledTransform. <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> přijímá nezabezpečené instance kombinace <xref:System.Xml.Xsl.XsltSettings> a <xref:System.Xml.XmlResolver>, což umožňuje škodlivé zpracování skriptů.
+ Aby se zajistilo, že nezveřejňujete plochu pro útok, toto pravidlo se aktivuje při každém XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> přijímá nezabezpečené instance kombinace <xref:System.Xml.Xsl.XsltSettings> a <xref:System.Xml.XmlResolver> , což umožňuje škodlivé zpracování skriptů.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
 
-- Nahraďte nezabezpečený argument XsltSettings pomocí XsltSettings. <xref:System.Xml.Xsl.XsltSettings.Default%2A> nebo s instancí, která má zakázanou funkci dokumentu a provádění skriptu.
+- Nahraďte nezabezpečený argument XsltSettings pomocí XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> nebo s instancí, která má zakázanou funkci dokumentu a provádění skriptu.
 
-- Nahraďte argument <xref:System.Xml.XmlResolver> hodnotou null nebo instancí <xref:System.Xml.XmlSecureResolver>.
+- Nahraďte <xref:System.Xml.XmlResolver> argument hodnotou null nebo <xref:System.Xml.XmlSecureResolver> instancí.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Pokud si nejste jistí, že je vstup z důvěryhodného zdroje známý, nedoporučujeme z tohoto upozornění pravidlo potlačit.

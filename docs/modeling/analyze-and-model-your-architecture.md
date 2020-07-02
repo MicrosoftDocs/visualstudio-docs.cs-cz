@@ -1,7 +1,7 @@
 ---
 title: Analýza a modelování vaší architektury
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - diagrams - modeling
 - architecture
@@ -17,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0c9bbb0e98fe717e696aa974f4af5ba29de498e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e1db28867ea47752aa74b7898c44e797c0704594
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590576"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544219"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Analýza a modelování vaší architektury
 
@@ -38,13 +38,13 @@ Viz [scénář: Změna návrhu pomocí vizualizace a modelování](../modeling/s
 
 ## <a name="article-reference"></a>Reference k článku
 
-|||
+|Scénář|Články|
 |-|-|
-|**Vizualizovat kód**:<br /><br />– Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů závislostí pro ověření kódu.|- [vizualizace kódu](../modeling/visualize-code.md)<br />- [práce s třídami a jinými typy (návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [video: Seznámení s návrhem z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [video: ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
-|**Definovat architekturu**:<br /><br />– Definovat a vynutit omezení závislostí mezi komponentami vašeho kódu vytvořením diagramů závislostí.|- [video: ověření závislostí architektury pomocí sady Visual Studio (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Ověřte svůj systém s požadavky a zamýšleným návrhem:**<br /><br />– Ověřte závislosti kódu pomocí diagramů závislostí, které popisují zamýšlenou architekturu a zabraňují změnám, které by mohly být v konfliktu s návrhem.|- [video: ověření závislostí architektury pomocí sady Visual Studio (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Přizpůsobení modelů a diagramů**:<br /><br />– Vytvořte vlastní jazyky specifické pro doménu.|[sada SDK pro - Modeling pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
-|**Generovat text pomocí šablon T4**:<br /><br />– Použijte textové bloky a ovládací logiku v šablonách k vygenerování textových souborů.<br /> -T4 šablona sestavení pomocí nástroje MSBuild, který je součástí sady Visual Studio|- [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
+|**Vizualizovat kód**:<br /><br />– Podívejte se na organizaci a vztahy kódu vytvořením map kódu. Vizualizujte závislosti mezi sestaveními, obory názvů, třídami, metodami a tak dále.<br />– Podívejte se na strukturu třídy a členy pro konkrétní projekt vytvořením diagramů tříd z kódu.<br />– Vyhledejte konflikty mezi vaším kódem a jeho návrh vytvořením diagramů závislostí pro ověření kódu.|- [Vizualizovat kód](../modeling/visualize-code.md)<br />- [Práce s třídami a jinými typy (Návrhář tříd)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Principy návrhu z kódu pomocí map kódu Visual Studio 2015](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
+|**Definovat architekturu**:<br /><br />– Definovat a vynutit omezení závislostí mezi komponentami vašeho kódu vytvořením diagramů závislostí.|- [Video: ověření závislostí architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**Ověřte svůj systém s požadavky a zamýšleným návrhem:**<br /><br />– Ověřte závislosti kódu pomocí diagramů závislostí, které popisují zamýšlenou architekturu a zabraňují změnám, které by mohly být v konfliktu s návrhem.|- [Video: ověření závislostí architektury pomocí sady Visual Studio (kanál 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**Přizpůsobení modelů a diagramů**:<br /><br />– Vytvořte vlastní jazyky specifické pro doménu.|- [Sada Modeling SDK pro Visual Studio – jazyky specifické pro doménu](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**Generovat text pomocí šablon T4**:<br /><br />– Použijte textové bloky a ovládací logiku v šablonách k vygenerování textových souborů.<br /> -T4 šablona sestavení pomocí nástroje MSBuild, který je součástí sady Visual Studio|- [Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)|
 |**Sdílení modelů, diagramů a map kódu pomocí správy verzí Team Foundation**:<br /><br />– Vložte mapy kódu, projekty a diagramy závislosti v rámci správy verzí Team Foundation, abyste je mohli sdílet.| |
 
 Pokud chcete zjistit, které edice sady Visual Studio podporují jednotlivé funkce, přečtěte si téma [Podpora edice pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport) .

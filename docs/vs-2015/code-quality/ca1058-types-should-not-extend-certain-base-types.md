@@ -15,24 +15,24 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9a4663fe3bc09b27bad9eeec05e325f07a3de6f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d8e267b1e6203759efc91936a3b13059368a3862
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603056"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545389"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy by neměly rozšířit určité základní typy
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy by neměly rozšiřovat určité základní typy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Externě viditelný typ rozšiřuje určité základní typy. V současné době toto pravidlo sestaví typy, které jsou odvozeny z následujících typů:
 
 - <xref:System.ApplicationException?displayProperty=fullName>
@@ -52,9 +52,9 @@ ms.locfileid: "72603056"
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Popis pravidla
- Pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze 1 se doporučuje odvodit nové výjimky z <xref:System.ApplicationException>. Doporučení se změnilo a nové výjimky by měly odvozovat z <xref:System.Exception?displayProperty=fullName> nebo jedné z jejích podtříd v oboru názvů <xref:System>.
+ Pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verzi 1 se doporučuje odvodit nové výjimky z <xref:System.ApplicationException> . Doporučení se změnilo a nové výjimky by měly být odvozeny z <xref:System.Exception?displayProperty=fullName> nebo jedné z jejích podtříd v <xref:System> oboru názvů.
 
- Nevytvářejte podtřídu <xref:System.Xml.XmlDocument>, pokud chcete vytvořit zobrazení XML základního objektového modelu nebo zdroje dat.
+ Nevytvářejte podtřídu, <xref:System.Xml.XmlDocument> Pokud chcete vytvořit zobrazení XML základního objektového modelu nebo zdroje dat.
 
 ### <a name="non-generic-collections"></a>Neobecné kolekce
  Pokud je to možné, používejte a rozšíříte obecné kolekce. Nezvětšujte neobecné kolekce v kódu, pokud jste ho předtím dodali.
@@ -87,4 +87,4 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
  Chcete-li opravit porušení tohoto pravidla, odvodit typ z jiného základního typu nebo z obecné kolekce.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění z tohoto pravidla na porušení <xref:System.ApplicationException>. Z tohoto pravidla je bezpečné potlačit upozornění na porušení <xref:System.Xml.XmlDocument>. Je bezpečné potlačit upozornění na neobecnou kolekci, pokud byl kód vydaný dříve.
+ Potlačit upozornění z tohoto pravidla pro porušení <xref:System.ApplicationException> . Z tohoto pravidla je bezpečné potlačit upozornění, které se týká porušení <xref:System.Xml.XmlDocument> . Je bezpečné potlačit upozornění na neobecnou kolekci, pokud byl kód vydaný dříve.

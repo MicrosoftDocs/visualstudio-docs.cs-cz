@@ -15,28 +15,28 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 099e5f3f9a09eef57ce1b888601f61e85ceb97c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 846ce010cddfd505bb967ec612a5c31dd8321977
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72643407"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544323"
 ---
 # <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122: Nezveřejňujte nepřímo metody s požadavky propojení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotIndirectlyExposeMethodsWithLinkDemands|
 |CheckId|CA2122|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejný nebo chráněný člen má odkaz na [požadavky](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) a je volán členem, který neprovádí žádné kontroly zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Požadavek propojení kontroluje pouze oprávnění bezprostředního volajícího. Pokud členský `X` neprovede žádné požadavky na zabezpečení svých volajících a volá kód chráněný požadavkem propojení, volající bez nezbytných oprávnění může použít `X` pro přístup k chráněnému členu.
+ Požadavek propojení kontroluje pouze oprávnění bezprostředního volajícího. Pokud člen `X` neprovede žádné požadavky na zabezpečení svých volajících a volá kód chráněný požadavkem propojení, volající bez nezbytných oprávnění může použít `X` pro přístup k chráněnému členu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Přidejte data zabezpečení [a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) nebo přidejte požadavek na člena, aby již neposkytoval nezabezpečený přístup k členovi, který je chráněn požadavkem propojení.
@@ -45,7 +45,7 @@ ms.locfileid: "72643407"
  Chcete-li bezpečně potlačit upozornění z tohoto pravidla, je nutné zajistit, aby váš kód neudělil volajícím přístup k operacím nebo prostředkům, které lze použít destruktivním způsobem.
 
 ## <a name="example"></a>Příklad
- Následující příklady znázorňují knihovnu, která porušuje pravidlo, a aplikaci, která demonstruje slabé stránky knihovny. Ukázková knihovna poskytuje dvě metody, které dohromady narušují pravidlo. Metoda `EnvironmentSetting` je zabezpečená požadavkem propojení pro neomezený přístup k proměnným prostředí. Metoda `DomainInformation` neprovede žádné požadavky na zabezpečení svých volajících před voláním `EnvironmentSetting`.
+ Následující příklady znázorňují knihovnu, která porušuje pravidlo, a aplikaci, která demonstruje slabé stránky knihovny. Ukázková knihovna poskytuje dvě metody, které dohromady narušují pravidlo. `EnvironmentSetting`Metoda je zabezpečena požadavkem propojení pro neomezený přístup k proměnným prostředí. `DomainInformation`Metoda neprovede žádné požadavky na zabezpečení svých volajících před voláním `EnvironmentSetting` .
 
  [!code-csharp[FxCop.Security.UnsecuredDoNotCall#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.UnsecuredDoNotCall/cs/FxCop.Security.UnsecuredDoNotCall.cs#1)]
 

@@ -8,17 +8,17 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c2c996c383c8834e44e16f382c14b695c83f26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: afadf41fc753051047e858758bfe0677987d726d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668998"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545064"
 ---
 # <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Nepoužívejte slabé kryptografické algoritmy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotUseWeakCryptographicAlgorithms|
 |CheckId|CA5350|
@@ -28,8 +28,8 @@ ms.locfileid: "72668998"
 > [!NOTE]
 > Toto upozornění se naposledy aktualizovalo od listopadu 2015.
 
-## <a name="cause"></a>příčina
- Algoritmy šifrování, jako jsou například <xref:System.Security.Cryptography.TripleDES> a algoritmy hash, jako je například <xref:System.Security.Cryptography.SHA1> a <xref:System.Security.Cryptography.RIPEMD160>, jsou považovány za slabé.
+## <a name="cause"></a>Příčina
+ Šifrovací algoritmy jako <xref:System.Security.Cryptography.TripleDES> a algoritmy hash, jako <xref:System.Security.Cryptography.SHA1> jsou a, <xref:System.Security.Cryptography.RIPEMD160> se považují za slabé.
 
  Tyto kryptografické algoritmy neposkytují žádné záruky zabezpečení jako pokročilejší protějšky. Kryptografické algoritmy hash <xref:System.Security.Cryptography.SHA1> a <xref:System.Security.Cryptography.RIPEMD160> poskytují méně kolizí proti kolizi než moderní algoritmy hash. Šifrovací algoritmus <xref:System.Security.Cryptography.TripleDES> poskytuje méně bitů zabezpečení než více moderních šifrovacích algoritmů.
 
@@ -41,9 +41,9 @@ ms.locfileid: "72668998"
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Používejte kryptograficky silnější možnosti:
 
-- Pro šifrování TripleDES použijte šifrování <xref:System.Security.Cryptography.Aes>.
+- Pro šifrování TripleDES použijte <xref:System.Security.Cryptography.Aes> šifrování.
 
-- V případě funkcí hash SHA1 nebo RIPEMD160 použijte ty v rodině [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (např. <xref:System.Security.Cryptography.SHA512>, <xref:System.Security.Cryptography.SHA384>, <xref:System.Security.Cryptography.SHA256>).
+- V případě funkcí hash SHA1 nebo RIPEMD160 používejte funkce v rodině [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) (např., <xref:System.Security.Cryptography.SHA512> <xref:System.Security.Cryptography.SHA384> <xref:System.Security.Cryptography.SHA256> ).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Potlačí upozornění od tohoto pravidla, pokud úroveň ochrany potřebná pro data nevyžaduje záruku zabezpečení.

@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 366932c83328c6810e0103308db1c73a3e3076cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ec48a1164c7065ba5033ef51eb704b8361dc1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671612"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544453"
 ---
-# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Názvy vlastností by neměly odpovídat metodám Get
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Názvy vlastností by se neměly shodovat s metodami Get
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|PropertyNamesShouldNotMatchGetMethods|
 |CheckId|CA1721|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název veřejného nebo chráněného člena začíná na Get a jinak odpovídá názvu vlastnosti Public nebo Protected. Například typ, který obsahuje metodu s názvem GetColor a vlastnost s názvem Color, porušuje toto pravidlo.
 
 ## <a name="rule-description"></a>Popis pravidla

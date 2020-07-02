@@ -115,7 +115,7 @@ ms.locfileid: "85544843"
 
 9. Sestavte projekt.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 - [Kombinování přizpůsobení na úrovni VBA a dokumentů](../vsto/combining-vba-and-document-level-customizations.md)

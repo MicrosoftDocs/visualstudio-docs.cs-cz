@@ -26,7 +26,7 @@ ms.locfileid: "85543556"
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection – &gt; element (vývoj pro Office v sadě Visual Studio)
   `entryPointsCollection`Element `vstav3` oboru názvů obsahuje všechny `entryPoints` prvky přidružené k řešením pro systém Office.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <entryPointsCollection>
@@ -177,7 +177,7 @@ ms.locfileid: "85543556"
     </vstav3:entryPointsCollection>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)

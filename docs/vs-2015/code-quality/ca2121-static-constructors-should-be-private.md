@@ -15,30 +15,30 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9f28c1dadaef2dc88a3d728322dee1053ccdd69c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7f95b33e1391ca755a6c0df261fa2bd05bd3c7a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663080"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544310"
 ---
 # <a name="ca2121-static-constructors-should-be-private"></a>CA2121: Statické konstruktory by měly být privátní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|StaticConstructorsShouldBePrivate|
 |CheckId|CA2121|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Typ má statický konstruktor, který není privátní.
 
 ## <a name="rule-description"></a>Popis pravidla
  Statický konstruktor, označovaný také jako konstruktor třídy, slouží k inicializaci typu. Systém volá statický konstruktor před vytvořením první instance typu nebo předtím, než jsou odkazovány jakékoli statické členy. Uživatel nemá žádné řízení při volání statického konstruktoru. Pokud statický konstruktor není soukromý, může být volán jiným kódem než kódem systému. V závislosti na operacích, které jsou provedeny v konstruktoru, to může způsobit neočekávané chování.
 
- Toto pravidlo je vynutilo C# kompilátory Visual Basic .NET.
+ Toto pravidlo je vynutilo kompilátory C# a Visual Basic .NET.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Porušení jsou obvykle způsobena některou z následujících akcí:

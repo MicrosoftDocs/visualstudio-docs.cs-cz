@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Skrytí ovládacích prvků na listech při tisku'
+title: 'Postupy: skrytí ovládacích prvků na listech při tisku'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,34 +15,34 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb7ee0a937e6cb901704763e1f4ead478d99e0e8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 336723f60a2cd90dc63db24e981dd06e0388cb9c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419443"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544804"
 ---
-# <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Postupy: Skrytí ovládacích prvků na listech při tisku
-  Při tisku dokumentu aplikace Microsoft Office Excel, který obsahuje ovládací prvky Windows Forms, ovládací prvky jsou viditelné na tisk listů. Ovládací prvky lze skrýt při tisku na listu.
+# <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Postupy: skrytí ovládacích prvků na listech při tisku
+  Když tisknete systém Microsoft Office excelový dokument, který obsahuje ovládací prvky model Windows Forms, ovládací prvky se zobrazí na vytištěném listu. Ovládací prvky lze skrýt při tisku listu.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 > [!NOTE]
-> Pokud skrýt ovládací prvky, které zobrazují data, například <xref:Microsoft.Office.Tools.Excel.Controls.TextBox>, nebudou viditelné v tištěné listu dat v ovládacím prvku.
+> Pokud skryjete ovládací prvky, které zobrazují data, jako například <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> , data v ovládacím prvku nebudou viditelná na vytištěném listu.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="to-hide-controls-when-a-worksheet-is-printed"></a>Chcete-li skrýt ovládací prvky, pokud list vytisknout
+## <a name="to-hide-controls-when-a-worksheet-is-printed"></a>Skrytí ovládacích prvků při tisku listu
 
-1. Vytvoření nebo otevření projektu aplikace Excel v sadě Visual Studio a ověřte, že **List1** je zobrazen v návrháři. Informace o vytváření projektů, naleznete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte nebo otevřete excelový projekt v aplikaci Visual Studio a ověřte, zda je v Návrháři zobrazená **List1** . Informace o vytváření projektů naleznete v tématu [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Z **běžné ovládací prvky** karty **nástrojů**, přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek buňky v `Sheet1`.
+2. Na kartě **běžné ovládací prvky** **panelu nástrojů**přetáhněte <xref:Microsoft.Office.Tools.Excel.Controls.Button> ovládací prvek na buňku v `Sheet1` .
 
-3. V **vlastnosti** okno, nastaveno <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> vlastnost **False**.
+3. V okně **vlastnosti** nastavte <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> vlastnost na **hodnotu NEPRAVDA**.
 
 ## <a name="see-also"></a>Viz také:
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
-- [Ovládací prvky Windows Forms na dokumenty Office – přehled](../vsto/windows-forms-controls-on-office-documents-overview.md)
-- [Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Přehled model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 - [Postupy: Změna velikosti ovládacích prvků v buňkách listu](../vsto/how-to-resize-controls-within-worksheet-cells.md)

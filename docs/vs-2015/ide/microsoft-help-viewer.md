@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 14bae318e052d0c1eb0e23638c0ad78b70e62f7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad2a26e36c83c4a3b3ad051504bc3944663ee2ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670410"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544973"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Help Viewer
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ Pomocí Microsoft Help Viewer můžete na místní počítač nainstalovat a zob
 ## <a name="navigating-the-help-viewer"></a>Navigace v programu Help Viewer
  Informace v nainstalovaném obsahu můžete najít pomocí navigačních karet, zobrazit nainstalovaného obsahu na kartě nebo na kartách témat a spravovat obsah pomocí karty **Spravovat obsah** . Další úkoly můžete provádět také pomocí tlačítek na panelu nástrojů a vyhledat další informace v pravém dolním rohu okna.
 
-|||
+|Scénář|Popis|
 |-|-|
 |Navigace|Pomocí karty **obsah** můžete zobrazit nainstalovaný obsah jako hierarchii a zadat kritéria pro filtrování zobrazených názvů.<br /><br /> Pomocí karty **Hledat** můžete hledat výrazy kdekoli v obsahu, včetně názvů kódu a témat.<br /><br /> Pomocí karty **index** můžete vyhledat index, zadat kritéria pro filtrování položek a vyžadovat, aby položky indexu buď obsahovaly nebo začínaly textem, který určíte.<br /><br /> Pomocí karty **Oblíbené** můžete uložit odkazy na témata, která často používáte, a můžete zobrazit seznam témat, která jste nedávno zobrazili.|
 |Zobrazení tématu|Každé téma se zobrazí na kartě a můžete současně otevřít více témat.|

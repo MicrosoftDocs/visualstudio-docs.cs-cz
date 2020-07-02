@@ -17,12 +17,12 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: db619767725159900adf9b18075c45c020df888d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 907d075f597799edd582c9f2bae693eac92c0b2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670379"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544960"
 ---
 # <a name="outlining"></a>Sbalování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,15 +40,15 @@ Můžete zvolit, že chcete skrýt nějaký kód ze zobrazení sbalením oblasti
 
  Následující příkazy lze najít v podnabídce **Upravit/osnova** .
 
-|||
+|Příkaz|Popis|
 |-|-|
-|Skrýt výběr|(CTRL + M, CTRL + H) – Sbalí vybraný blok kódu, který by normálně nebyl k dispozici pro sbalení, například blok `if`. Chcete-li odebrat vlastní oblast, použijte příkaz **zastavit skrývání aktuálního** umístění (nebo CTRL + M, CTRL + U). Není k dispozici v Visual Basic.|
+|Skrýt výběr|(CTRL + M, CTRL + H) – Sbalí vybraný blok kódu, který by normálně nebyl k dispozici pro sbalení, například `if` blok. Chcete-li odebrat vlastní oblast, použijte příkaz **zastavit skrývání aktuálního** umístění (nebo CTRL + M, CTRL + U). Není k dispozici v Visual Basic.|
 |Přepnout rozšíření osnovy|– Vrátí aktuální skrytý nebo rozbalený stav v rámci nejvnitřnější sekce sbalení, když je kurzor umístěný ve vnořeném sbaleném oddílu.|
 |Přepnout všechna sbalení|(CTRL + M, CTRL + L) – nastaví všechny oblasti na stejný sbalený nebo rozbalený stav. Pokud jsou některé oblasti rozbalené a některé sbalené, sbalené oblasti se rozbalí.|
 |Zastavit sbalení|(CTRL + M, CTRL + P) – Odebere všechny informace o sbalení celého dokumentu.|
 |Zastavit skrývání aktuálního|(CTRL + M, CTRL + U) – odebere informace o Sbalení aktuálně vybrané uživatelem definované oblasti. Není k dispozici v Visual Basic.|
 |Sbalit do definic|(CTRL + M, CTRL + O) – sbalí členy všech typů.|
-|Sbalit blok: \<logical hranici >|(Vizuální C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
-|Sbalit vše v: \<logical struktury >|(Vizuální C++) Sbalí všechny struktury uvnitř funkce.|
+|Sbalit blok:\<logical boundary>|(Visual C++) Sbalí oblast ve funkci, která obsahuje bod vložení. Například pokud bod vložení leží uvnitř smyčky, je smyčka skrytá.|
+|Sbalit vše v:\<logical structures>|(Visual C++) Sbalí všechny struktury uvnitř funkce.|
 
  Můžete také použít sadu Visual Studio SDK k definování textových oblastí, které chcete rozbalit nebo sbalit. Viz [Návod: sbalení](../extensibility/walkthrough-outlining.md).

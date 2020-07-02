@@ -57,6 +57,6 @@ Pokud exportujete mapu kódu jako soubor XPS, můžete ji zobrazit v prohlíže�
 
 3. Pojmenujte mapu kódu. Ujistěte se, že je pole **Uložit jako typ** nastaveno na **soubory XPS ( \* . XPS)**. Klikněte na tlačítko **Uložit**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Mapování závislostí pomocí map kódu](../modeling/map-dependencies-across-your-solutions.md)

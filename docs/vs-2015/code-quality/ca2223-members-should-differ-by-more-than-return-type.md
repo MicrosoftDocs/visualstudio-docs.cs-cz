@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4c1071617572af44a73f98953fd435623190e0e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658896"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540839"
 ---
-# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit o více než návratový typ
+# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit více než návratovým typem
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Dva veřejné nebo chráněné členy mají signatury, které jsou stejné s výjimkou návratového typu.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,7 +45,7 @@ ms.locfileid: "72658896"
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad v jazyce MSIL (Microsoft Intermediate Language) zobrazuje typ, který toto pravidlo porušuje. Všimněte si, že toto pravidlo nelze narušit pomocí C# ani Visual Basic .NET.
+ Následující příklad v jazyce MSIL (Microsoft Intermediate Language) zobrazuje typ, který toto pravidlo porušuje. Všimněte si, že toto pravidlo nelze narušit pomocí jazyka C# nebo Visual Basic .NET.
 
 ```
 

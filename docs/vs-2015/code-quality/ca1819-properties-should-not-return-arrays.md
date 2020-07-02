@@ -15,24 +15,24 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5c85efc3e601eb9e0d887043c50b30587e51321e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a96d2164cbd6c03cb0d191b2d0c3c4607468209c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668378"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545324"
 ---
 # <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Vlastnosti by neměly vracet pole
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|PropertiesShouldNotReturnArrays|
 |CheckId|CA1819|
 |Kategorie|Microsoft. Performance|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejná nebo chráněná vlastnost ve veřejném typu vrací pole.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -86,7 +86,7 @@ ms.locfileid: "72668378"
  [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyViolation/vb/FxCop.Performance.PropertyModifyViolation.vb#1)]
 
 ### <a name="comments"></a>Komentáře
- Následující příklad opravuje porušení změnou vlastnosti tak, aby vracela <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>.
+ Následující příklad opravuje porušení změnou vlastnosti tak, aby vrátila hodnotu <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName> .
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyFixed/cs/FxCop.Performance.PropertyModifyFixed.cs#1)]

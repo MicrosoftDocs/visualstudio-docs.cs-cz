@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3dda56e6980133b0e33893fbb814c4a3a7008c49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04109e821d3a739b96ad63e1a441089a5d479cd8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656062"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540774"
 ---
 # <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222: Nesnižujte viditelnost zděděného členu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotDecreaseInheritedMemberVisibility|
 |CheckId|CA2222|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Soukromá metoda v nezapečetěném typu má signaturu, která je shodná s veřejnou metodou deklarovanou v základním typu. Soukromá metoda není finální.
 
 ## <a name="rule-description"></a>Popis pravidla

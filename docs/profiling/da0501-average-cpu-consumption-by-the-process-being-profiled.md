@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 27537175b1df4a9b6d9ba10edf8257c71057c7df
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 7f03a65842664ec5d0ed2841f791dd168d82860e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332325"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544570"
 ---
 # <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: Průměrná spotřeba procesoru procesem profilace.
 
-|||
+|Položka|Hodnota|
 |-|-|
 |ID pravidla|DA501|
 |Kategorie|Monitorování prostředků|

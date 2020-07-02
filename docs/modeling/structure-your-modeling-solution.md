@@ -106,7 +106,7 @@ Například pokud často používáte řešení, která mají prezentační, obc
 
 [Uspořádání a Správa modelů](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
 - [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)

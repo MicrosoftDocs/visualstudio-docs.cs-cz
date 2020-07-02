@@ -15,26 +15,26 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0f5239ca22a30b171c53c96f3be33062b860f78b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 98e825fd5543b928569b99218c9054aff666e0fe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918766"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545142"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Implementujte správně metody serializace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Implementujte správně metody serializace](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ImplementSerializationMethodsCorrectly|
 |CheckId|CA2238|
-|Kategorie|Microsoft.Usage|
+|Kategorie|Microsoft. Usage|
 |Narušující změna|Přerušení – Pokud je metoda viditelná vně sestavení.<br /><br /> Bez přerušení – Pokud metoda není viditelná vně sestavení.|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda, která zpracovává událost serializace, nemá správný podpis, návratový typ nebo viditelnost.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -48,7 +48,7 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Imp
 
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
-  Obslužné rutiny událostí serializace přebírají jeden parametr typu <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>, vrátí `void`a mají `private` viditelnost.
+  Obslužné rutiny událostí serializace přebírají jeden parametr typu <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> , vrátí `void` a mají `private` viditelnost.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, opravte podpis, návratový typ nebo viditelnost obslužné rutiny události serializace.
@@ -63,16 +63,16 @@ Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA2238: Imp
  [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.SerializationEventHandlers/vb/FxCop.Usage.SerializationEventHandlers.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2236: Volejte metody třídy Base na typech ISerializable](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
+ [CA2236: Volejte metody základní třídy u typů ISerializable](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2240: Implementujte správně ISerializable](../code-quality/ca2240-implement-iserializable-correctly.md)
 
- [CA2229: Implementovat serializační konstruktory](../code-quality/ca2229-implement-serialization-constructors.md)
+ [CA2229: Implementujte serializační konstruktory](../code-quality/ca2229-implement-serialization-constructors.md)
 
  [CA2235: Označte všechna neserializovatelná pole](../code-quality/ca2235-mark-all-non-serializable-fields.md)
 
  [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
- [CA2239: Poskytujte metody deserializace pro nepovinné pole](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
+ [CA2239: Zadejte metody deserializace pro nepovinná pole](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
 
  [CA2120: Zabezpečte serializační konstruktory](../code-quality/ca2120-secure-serialization-constructors.md)

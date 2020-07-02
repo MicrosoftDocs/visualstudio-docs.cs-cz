@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bec8f129c094f94ba3eb4021092c402e8263812b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a722eb95561a1a81b0d17b8876df8b4bac048b5c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660261"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544258"
 ---
-# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Požadavky na přepsání odkazu musejí být identické s bází
+# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Požadavky na propojení přepisů by měly být identické s bází
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|
 |CheckId|CA2123|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Veřejná nebo chráněná metoda ve veřejném typu přepisuje metodu nebo implementuje rozhraní a nemá stejné [propojení](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) jako rozhraní nebo virtuální metoda.
 
 ## <a name="rule-description"></a>Popis pravidla

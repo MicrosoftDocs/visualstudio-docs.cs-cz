@@ -1,8 +1,8 @@
 ---
-title: 'Postupy: Vystavení kódu do VBA v C# projektu'
+title: 'Postupy: vystavení kódu pro jazyk VBA v projektu jazyka C#'
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,39 +16,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ac41f4da29b95ba1fcd1601f98104956d584212a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 21d7672d3c08012e75d73ee8bf4d9816b850eb2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419499"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544830"
 ---
-# <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>Postupy: Vystavení kódu do VBA ve Vizuálu C# projektu
-  Kód ve Vizuálu můžete zveřejnit C# projektu jazyka Visual Basic pro kód Applications (VBA) Pokud chcete, aby dva typy kódu komunikovat mezi sebou.
+# <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>Postupy: vystavení kódu pro jazyk VBA v projektu jazyka Visual C#
+  Můžete vystavit kód v projektu jazyka Visual C# do kódu jazyk Visual Basic for Application (VBA), pokud chcete, aby oba typy kódu byly vzájemně spolupracovaly.
 
- Vizuál C# proces se liší od procesu jazyka Visual Basic. Další informace najdete v tématu [jak: Vystavení kódu do VBA v projektu jazyka Visual Basic](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md).
+ Proces jazyka Visual C# se liší od Visual Basicho procesu. Další informace naleznete v tématu [How to: vystavení kódu pro jazyk VBA v projektu Visual Basic](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md).
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-## <a name="expose-code-in-a-visual-c-project"></a>Vystavení kódu ve Vizuálu C# projektu
- Povolit kód VBA pro volání kódu ve Vizuálu C# projektu a upravte kód tak, aby byl viditelný modulům COM, nastavte **ReferenceAssemblyFromVbaProject** vlastnost **True** v návrháři.
+## <a name="expose-code-in-a-visual-c-project"></a>Vystavení kódu v projektu jazyka Visual C#
+ Chcete-li povolit kód v jazyce VBA pro volání kódu v projektu jazyka Visual C#, upravte kód tak, aby byl viditelný pro model COM, a poté v Návrháři nastavte vlastnost **ReferenceAssemblyFromVbaProject** na **hodnotu true** .
 
- Návod, který ukazuje, jak volat metodu ve Vizuálu C# projektu z jazyka VBA, naleznete v tématu [názorný postup: Volání kódu z jazyka VBA v aplikaci Visual C&#35; projektu](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md).
+ Návod, který ukazuje, jak zavolat metodu v projektu jazyka Visual C# z jazyka VBA, naleznete v tématu [Návod: volání kódu z jazyka VBA v projektu jazyka Visual C&#35;](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md).
 
-### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>Vystavení kódu ve Vizuálu C# projektu pro jazyk VBA
+### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>Vystavení kódu v projektu jazyka Visual C# pro jazyk VBA
 
-1. Otevřete nebo vytvořte projekt úrovni dokumentu, který je založen na dokument aplikace Word, Excelový sešit nebo šablonu v Excelu, který podporuje makra a kód VBA, který již obsahuje.
+1. Otevřete nebo vytvořte projekt na úrovni dokumentu, který je založen na dokumentu aplikace Word, excelovém sešitu nebo šabloně aplikace Excel, který podporuje makra a který již obsahuje kód VBA.
 
-    Další informace o formátech soubor dokumentu, které podporují makra najdete v tématu [kombinovat VBA a přizpůsobení na úrovni dokumentu](../vsto/combining-vba-and-document-level-customizations.md).
+    Další informace o formátech souborů dokumentů, které podporují makra, najdete v tématu [kombinování úprav na úrovni dokumentu VBA a dokumentu](../vsto/combining-vba-and-document-level-customizations.md).
 
    > [!NOTE]
-   > Tuto funkci nelze použít v projektech aplikace Word šablony.
+   > Tuto funkci nelze použít v projektech šablon aplikace Word.
 
-2. Ujistěte se, že kód VBA v dokumentu může spustit bez výzvy pro uživatele povolit makra. VBA kód ke spuštění tak, že přidáte do seznamu důvěryhodných umístění v nastavení Centra zabezpečení pro aplikaci Word nebo Excel umístění projektu Office, kterému můžete důvěřovat.
+2. Ujistěte se, že kód VBA v dokumentu může běžet bez výzvy uživateli, aby povolil makra. Můžete důvěřovat kódu VBA pro spuštění přidáním umístění projektu Office do seznamu důvěryhodných umístění v nastavení centra zabezpečení pro Word nebo Excel.
 
-3. Přidat člena, který chcete zpřístupnit pro jazyk VBA veřejnou třídu ve vašem projektu a deklarace nového člena jako **veřejné**.
+3. Přidejte člena, který chcete zpřístupnit pro jazyk VBA, do veřejné třídy v projektu a deklarujte nového člena jako **veřejné**.
 
-4. Použijte následující <xref:System.Runtime.InteropServices.ComVisibleAttribute> a <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributy do třídy, které jsou vystaveny pro jazyk VBA. Tyto atributy zviditelnit třídy modelu COM, ale bez generování třídy rozhraní.
+4. Použijte následující <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributy a <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> pro třídu, kterou vystavujete do jazyka VBA. Tyto atributy nastaví třídu jako viditelnou pro model COM, ale bez generování rozhraní třídy.
 
    ```csharp
    [System.Runtime.InteropServices.ComVisible(true)]
@@ -56,9 +56,9 @@ ms.locfileid: "63419499"
        System.Runtime.InteropServices.ClassInterfaceType.None)]
    ```
 
-5. Přepsat **GetAutomationObject** metoda třídy položku hostitele ve vašem projektu a vrátit instanci třídy, které jsou vystaveny pro jazyk VBA:
+5. Přepište metodu **GetAutomationObject** třídy hostitelské položky v projektu tak, aby vracela instanci třídy, kterou vystavujete do jazyka VBA:
 
-   - Pokud jsou vystaveny položky třída hostitele pro jazyk VBA, má přednost před **GetAutomationObject** metodu, která patří do této třídy a vracet aktuální instance třídy.
+   - Pokud zveřejňujete třídu hostitelské položky do jazyka VBA, přepište metodu **GetAutomationObject** , která patří do této třídy, a vraťte aktuální instanci třídy.
 
      ```csharp
      protected override object GetAutomationObject()
@@ -67,7 +67,7 @@ ms.locfileid: "63419499"
      }
      ```
 
-   - Pokud jsou vystaveny třídu, která není položka hostitele pro jazyk VBA, má přednost před **GetAutomationObject** metoda libovolného hostitele položky ve vašem projektu a vrátit instanci třídy jiné než hostitelské položky. Například následující kód předpokládá, že jsou vystaveny třídu s názvem `DocumentUtilities` pro jazyk VBA.
+   - Pokud vystavuje třídu, která není položkou hostitele v jazyce VBA, přepište metodu **GetAutomationObject** jakékoli položky hostitele v projektu a vraťte instanci třídy položky mimo hostitele. Například následující kód předpokládá, že zveřejňujete třídu s názvem `DocumentUtilities` do jazyka VBA.
 
      ```csharp
      protected override object GetAutomationObject()
@@ -76,34 +76,34 @@ ms.locfileid: "63419499"
      }
      ```
 
-     Další informace o hostitelských položkách naleznete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+     Další informace o položkách hostitelů naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
-6. Extrahujte rozhraní ze třídy, které jsou vystaveny pro jazyk VBA. V **extrahování rozhraní** dialogovém okně vyberte veřejné členy, které chcete zahrnout v deklaraci rozhraní. Další informace najdete v tématu [extrahovat rozhraní refaktoring](../ide/reference/extract-interface.md).
+6. Extrahujte rozhraní ze třídy, kterou vystavujete do jazyka VBA. V dialogovém okně **rozbalte rozhraní** vyberte veřejné členy, které chcete zahrnout do deklarace rozhraní. Další informace najdete v tématu [extrakce refaktoringu rozhraní](../ide/reference/extract-interface.md).
 
-7. Přidat **veřejné** – klíčové slovo k deklaraci rozhraní.
+7. Přidejte klíčové slovo **Public** do deklarace rozhraní.
 
-8. Zkontrolujte viditelné modelu COM rozhraní přidáním následujícího kódu <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut rozhraní.
+8. Nastavte rozhraní jako viditelné pro model COM přidáním následujícího <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributu do rozhraní.
 
    ```csharp
    [System.Runtime.InteropServices.ComVisible(true)]
    ```
 
-9. Otevřete v Návrháři v dokumentu (pro aplikaci Word) nebo listu (Excel) [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+9. Otevřete dokument (pro Word) nebo list (pro Excel) v návrháři v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-10. V **vlastnosti** okna, vyberte **ReferenceAssemblyFromVbaProject** vlastnost a změňte hodnotu na **True**.
+10. V okně **vlastnosti** vyberte vlastnost **ReferenceAssemblyFromVbaProject** a změňte hodnotu na **true**.
 
     > [!NOTE]
-    > Pokud sešit nebo dokument už neobsahuje kód VBA, nebo pokud kód VBA v dokumentu není důvěryhodný pro spuštění, zobrazí se chybová zpráva při nastavení **ReferenceAssemblyFromVbaProject** vlastnost **True**. Je to proto, že Visual Studio nelze upravit projektu VBA v dokumentu v této situaci.
+    > Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **ReferenceAssemblyFromVbaProject** na **hodnotu true**chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
 
-11. Klikněte na tlačítko **OK** ve zprávě, která se zobrazí. Tato zpráva upozorní, že pokud přidáte VBA kód v sešitu nebo při spuštění projektu z dokumentu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], kód VBA budou ztraceny při příštím sestavení projektu. Je to proto, že dokument v buildu výstupní složky je přepsána pokaždé, když vytváříte projekt.
+11. Ve zprávě, která se zobrazí, klikněte na **OK** . Tato zpráva vás provede tím, že pokud přidáte kód VBA do sešitu nebo dokumentu při spuštění projektu z nástroje [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , kód VBA bude při příštím sestavení projektu ztracen. Důvodem je, že dokument ve výstupní složce sestavení je přepsán při každém sestavení projektu.
 
-     V tomto okamžiku sady Visual Studio nastaví projekt tak, aby projekt VBA může volat do sestavení. Visual Studio také přidá metodu s názvem `GetManagedClass` do projektu VBA. Tuto metodu lze volat z libovolného místa v projektu VBA pro přístup ke třídě, která je vystavena VBA.
+     V tomto okamžiku Visual Studio nakonfiguruje projekt tak, aby projekt VBA mohl zavolat do sestavení. Visual Studio také přidá metodu s názvem `GetManagedClass` do projektu VBA. Tuto metodu můžete zavolat z libovolného místa v projektu VBA pro přístup ke třídě, kterou jste vystavili v jazyce VBA.
 
 12. Sestavte projekt.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
-- [Kombinování přizpůsobení na úrovni dokumentu a VBA](../vsto/combining-vba-and-document-level-customizations.md)
-- [Návod: Volání kódu z jazyka VBA v aplikaci Visual C&#35; projektu](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)
-- [Postupy: Vystavení kódu do VBA v projektu jazyka Visual Basic](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
+- [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Kombinování přizpůsobení na úrovni VBA a dokumentů](../vsto/combining-vba-and-document-level-customizations.md)
+- [Návod: volání kódu z jazyka VBA ve Visual C&#35; projektu](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)
+- [Postupy: vystavení kódu v projektu Visual Basic v jazyce VBA](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)

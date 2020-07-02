@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60823c1fe17613f36e800a2cdf69dd19049ddb27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 382d5dc5ee416d901e1b73b7b2fb346e83abbef6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919107"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545571"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,11 +48,11 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 ## <a name="prerequisites"></a>Požadavky
  Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto komponenty:
 
-|||
+|Produkt|Odkaz ke stažení|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
-|Sada Visual Studio Visualization and Modeling SDK|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
+|Sada SDK pro vizualizaci a modelování sady Visual Studio|[Stažení sady SDK pro modelování](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-the-dsl-project"></a>Vytváření projektu DSL
  Vytvořte projekt pro jazyk specifický pro doménu.
@@ -65,17 +65,17 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
     1. Vyberte šablonu **MinimalLanguage** .
 
-    2. Pro jazyk specifický pro doménu `TrackingPropertyDSL`použijte výchozí název.
+    2. Pro jazyk specifický pro doménu použijte výchozí název `TrackingPropertyDSL` .
 
-    3. Nastavte rozšíření pro soubory modelu na `trackingPropertyDsl`.
+    3. Nastavte rozšíření pro soubory modelů na `trackingPropertyDsl` .
 
     4. Pro soubory modelu použijte výchozí ikonu šablony.
 
-    5. Nastavte název produktu na `Product Name`.
+    5. Nastavte název produktu na `Product Name` .
 
-    6. Nastavte název společnosti na `Company Name`.
+    6. Nastavte název společnosti na `Company Name` .
 
-    7. Použijte výchozí hodnotu pro kořenový obor názvů pro projekty v řešení, `CompanyName.ProductName.TrackingPropertyDSL`.
+    7. Použijte výchozí hodnotu pro kořenový obor názvů pro projekty v řešení, `CompanyName.ProductName.TrackingPropertyDSL` .
 
     8. Umožňuje průvodci vytvořit soubor klíče se silným názvem pro vaše sestavení.
 
@@ -96,27 +96,27 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 1. V Návrháři DSL klikněte pravým tlačítkem na doménovou třídu **ExampleModel** , přejděte na **Přidat**a pak klikněte na **doménová vlastnost**.
 
-    1. Pojmenujte `DefaultNamespace`novou vlastnost.
+    1. Pojmenujte novou vlastnost `DefaultNamespace` .
 
-    2. V okně **vlastnosti** nové vlastnosti nastavte **výchozí hodnota** na `DefaultNamespace`a nastavte **typ** na **řetězec**.
+    2. V okně **vlastnosti** nové vlastnosti nastavte **Výchozí hodnota** na `DefaultNamespace` a nastavte **typ** na **řetězec**.
 
-2. Do třídy domény **ExampleModel** přidejte doménovou vlastnost s názvem `CustomElements`.
+2. Do třídy domény **ExampleModel** přidejte doménovou vlastnost s názvem `CustomElements` .
 
      V okně **vlastnosti** nové vlastnosti nastavte **druh** na **počítané**.
 
-3. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `Namespace`.
+3. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `Namespace` .
 
      V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false**a nastavte **druh** na **nemá CustomStorage**.
 
-4. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `IsNamespaceTracking`.
+4. Do třídy domény **ExampleElement** přidejte doménovou vlastnost s názvem `IsNamespaceTracking` .
 
-     V okně **vlastnosti** pro novou vlastnost **je** nastaveno procházení na **false**, nastavte **výchozí hodnotu** na `true`a nastavte **typ** na **Boolean**.
+     V okně **vlastnosti** pro novou vlastnost je nastavena hodnota **Procházet** na **false**, nastavit **výchozí hodnotu** na `true` a nastavit **typ** na **Boolean**.
 
 #### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Aktualizace elementů diagramu a podrobností DSL
 
 1. V Návrháři DSL klikněte pravým tlačítkem myši na obrazec geometrie **ExampleShape** , přejděte na **Přidat**a pak klikněte na **text dekoratér**.
 
-    1. Pojmenujte nový text dekoratér `NamespaceDecorator`.
+    1. Pojmenujte nový text dekoratér `NamespaceDecorator` .
 
     2. V okně **vlastnosti** pro text dekoratér nastavte vlastnost **pozice** na **InnerBottomLeft**.
 
@@ -152,20 +152,20 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 #### <a name="to-create-the-code-files"></a>Vytvoření souborů kódu
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat**a pak klikněte na **Nová složka**. Pojmenujte `CustomCode`nové složky.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DSL** , přejděte na **Přidat**a pak klikněte na **Nová složka**. Pojmenujte novou složku `CustomCode` .
 
 2. Klikněte pravým tlačítkem na novou složku **CustomCode** , přejděte na **Přidat**a klikněte na **Nová položka**.
 
-3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs`a pak klikněte na **OK**.
+3. Vyberte šablonu **soubor kódu** , nastavte **název** na `NamespaceTrackingProperty.cs` a pak klikněte na **OK**.
 
      Soubor NamespaceTrackingProperty.cs se vytvoří a otevře pro úpravy.
 
-4. Ve složce vytvořte následující soubory kódu: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`a `TypeDescriptor.cs`.
+4. Ve složce vytvořte následující soubory kódu: `ExampleModel.cs,``HelperClasses.cs` , `Serialization.cs` , a `TypeDescriptor.cs` .
 
-5. V projektu **DslPackage** vytvořte také složku `CustomCode` a přidejte do ní soubor kódu `Package.cs`.
+5. V projektu **DslPackage** také vytvořte `CustomCode` složku a přidejte do ní `Package.cs` soubor kódu.
 
 ## <a name="adding-helper-classes-to-support-tracking-properties"></a>Přidávání pomocných tříd pro podporu vlastností sledování
- Do souboru HelperClasses.cs přidejte třídy `TrackingHelper` a `CriticalException` následujícím způsobem. Na tyto třídy se odkazuje později v tomto návodu.
+ Do souboru HelperClasses.cs přidejte `TrackingHelper` `CriticalException` třídy a následujícím způsobem. Na tyto třídy se odkazuje později v tomto návodu.
 
 #### <a name="to-add-the-helper-classes"></a>Přidání pomocných tříd
 
@@ -245,10 +245,10 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
     ```
 
 ## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>Přidání vlastního kódu pro popisovač vlastního typu
- Implementujte metodu `GetCustomProperties` pro popisovač typu pro `ExampleModel` doménovou třídu.
+ Implementujte `GetCustomProperties` metodu pro popisovač typu pro `ExampleModel` doménovou třídu.
 
 > [!NOTE]
-> Kód, který vygeneruje nástroje DSL pro vlastní popisovač typu pro `ExampleModel` volání `GetCustomProperties`; Nástroje DSL ale negenerují kód, který implementuje metodu.
+> Kód, který vygeneruje nástroje DSL pro vlastní deskriptor typu pro `ExampleModel` volání `GetCustomProperties` . nástroje DSL však negenerují kód, který implementuje metodu.
 
  Definování této metody vytvoří popisovač sledovacích vlastností pro vlastnost sledování oboru názvů. Poskytnutí atributů pro vlastnost sledování také umožňuje, aby okno **vlastností** zobrazilo vlastnost správně.
 
@@ -341,16 +341,16 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
     ```
 
 ## <a name="adding-custom-code-for-the-model"></a>Přidání vlastního kódu pro model
- Implementujte metodu `GetCustomElementsValue` pro `ExampleModel` doménovou třídu.
+ Implementujte `GetCustomElementsValue` metodu pro `ExampleModel` doménovou třídu.
 
 > [!NOTE]
-> Kód, který vygeneruje nástroje DSL pro `ExampleModel` volá `GetCustomElementsValue`; Nástroje DSL ale negenerují kód, který implementuje metodu.
+> Kód, který nástroje DSL generují pro `ExampleModel` volání. `GetCustomElementsValue` nástroje DSL však negenerují kód, který implementuje metodu.
 
- Definování metody `GetCustomElementsValue` poskytuje logiku pro vypočítanou vlastnost `ExampleModel`CustomElements. Tato metoda spočítá počet `ExampleElement` doménových tříd, které mají vlastnost sledování oboru názvů s uživatelsky aktualizovanou hodnotou, a vrátí řetězec, který představuje tento počet jako podíl celkových prvků v modelu.
+ Definování `GetCustomElementsValue` metody poskytuje logiku pro vypočítanou vlastnost CustomElements `ExampleModel` . Tato metoda spočítá počet `ExampleElement` tříd domény, které mají vlastnost sledování oboru názvů s uživatelem aktualizovanou hodnotou, a vrátí řetězec, který představuje tento počet jako podíl celkových prvků v modelu.
 
- Kromě toho přidejte `OnDefaultNamespaceChanged` metodu pro `ExampleModel`a přepište metodu `OnValueChanged` `DefaultNamespacePropertyHandler` vnořené třídy `ExampleModel` k volání `OnDefaultNamespaceChanged`.
+ Kromě toho přidejte `OnDefaultNamespaceChanged` metodu do `ExampleModel` a přepište `OnValueChanged` metodu `DefaultNamespacePropertyHandler` vnořené třídy `ExampleModel` pro volání `OnDefaultNamespaceChanged` .
 
- Vzhledem k tomu, že vlastnost DefaultNamespace se používá k výpočtu vlastnosti sledování oboru názvů, `ExampleModel` musí informovat všechny třídy domény `ExampleElement`, že se změnila hodnota DefaultNamespace.
+ Vzhledem k tomu, že vlastnost DefaultNamespace se používá k výpočtu vlastnosti sledování oboru názvů, `ExampleModel` musí upozorňovat na všechny `ExampleElement` třídy domény, že hodnota DefaultNamespace se změnila.
 
 #### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>Úprava obslužné rutiny vlastnosti pro sledovanou vlastnost
 
@@ -418,14 +418,14 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
     ```
 
 ## <a name="adding-custom-code-for-the-tracking-property"></a>Přidání vlastního kódu pro vlastnost sledování
- Do `ExampleElement` doménové třídy přidejte `CalculateNamespace` metodu.
+ Přidejte `CalculateNamespace` metodu do `ExampleElement` doménové třídy.
 
- Definování této metody poskytuje logiku pro CustomElements počítanou vlastnost `ExampleModel`. Tato metoda spočítá počet `ExampleElement` doménových tříd, které mají vlastnost sledování oboru názvů, která je aktualizována stavem uživatele, a vrátí řetězec, který představuje tento počet jako podíl celkových prvků v modelu.
+ Definování této metody poskytuje logiku pro vypočítanou vlastnost CustomElements `ExampleModel` . Tato metoda spočítá počet `ExampleElement` tříd domény, které mají vlastnost sledování oboru názvů, která je aktualizována stavem uživatele, a vrátí řetězec, který představuje tento počet jako podíl celkového prvku v modelu.
 
- Přidejte také úložiště pro a metody pro Get a set, vlastnost vlastního úložiště oboru názvů třídy `ExampleElement` domény.
+ Přidejte také úložiště pro a metody pro Get a set, vlastnost vlastního úložiště oboru názvů `ExampleElement` třídy Domain.
 
 > [!NOTE]
-> Kód, který nástroje DSL generuje pro `ExampleModel` volá metody Get a set; Nástroje DSL ale negenerují kód, který implementuje metody.
+> Kód, který nástroje DSL generuje pro `ExampleModel` volání metod get a set, ale nástroje DSL negenerují kód, který implementuje metody.
 
 #### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>Přidání metody pro vlastní popisovač typu
 
@@ -591,7 +591,7 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
  Přidejte kód pro podporu vlastního chování po načtení pro serializaci XML.
 
 > [!NOTE]
-> Kód, který generují nástroje DSL, volá `OnPostLoadModel` a `OnPostLoadModelAndDiagram` metody; Nástroje DSL ale negenerují kód, který tyto metody implementuje.
+> Kód, který generují nástroje DSL, volá `OnPostLoadModel` metody a, `OnPostLoadModelAndDiagram` ale nástroje DSL negenerují kód, který tyto metody implementuje.
 
 #### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Přidání kódu pro podporu vlastního chování po načtení
 
@@ -718,13 +718,13 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
     ```
 
 ## <a name="testing-the-language"></a>Testování jazyka
- Dalším krokem je sestavení a spuštění návrháře DSL v nové instanci [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)], abyste mohli ověřit, že vlastnost sledování pracuje správně.
+ Dalším krokem je sestavení a spuštění návrháře DSL v nové instanci nástroje [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] , abyste mohli ověřit, že vlastnost sledování pracuje správně.
 
 #### <a name="to-exercise-the-language"></a>Postup při cvičení jazyka
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
+1. V nabídce **sestavení** klikněte na příkaz **znovu sestavit řešení**.
 
-2. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.
+2. V nabídce **Ladit** klikněte na **Spustit ladění**.
 
      Experimentální sestavení [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] otevře **ladicí** řešení, které obsahuje prázdný testovací soubor.
 
@@ -760,5 +760,5 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
  Pokud plánujete použít více než jednu vlastnost sledování nebo implementovat vlastnosti sledování ve více než jedné DSL, můžete vytvořit textovou šablonu, která generuje společný kód pro podporu jednotlivých vlastností sledování. Další informace o textových šablonách naleznete v tématu [Code Generation and T4 text Templates](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="see-also"></a>Viz také
- <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor><xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
+ <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor> <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>
  [Definování jazyka specifického pro doménu](../modeling/how-to-define-a-domain-specific-language.md) [Postupy: vytvoření řešení jazyka](../modeling/how-to-create-a-domain-specific-language-solution.md) specifického pro doménu [: postup přizpůsobení definice jazyka specifického pro doménu](../misc/walkthrough-customizing-the-domain-specific-language-definition.md)

@@ -15,31 +15,31 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bb9574eb6e9f907d4b1fcc74f50fca0e7db85253
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fc5dc311fd85af2b6a0eb3e29e9932614ca55193
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668397"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543907"
 ---
-# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: Přepište rovná se a operátor rovnosti na hodnotových typech
+# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: Přepište rovnosti a operátory rovnosti u typů hodnot
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|OverrideEqualsAndOperatorEqualsOnValueTypes|
 |CheckId|CA1815|
 |Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
- Typ veřejné hodnoty nepřepisuje <xref:System.Object.Equals%2A?displayProperty=fullName>, nebo neimplementuje operátor rovnosti (= =). Toto pravidlo nekontroluje výčty.
+## <a name="cause"></a>Příčina
+ Typ veřejné hodnoty nepřepisuje <xref:System.Object.Equals%2A?displayProperty=fullName> nebo neimplementuje operátor rovnosti (= =). Toto pravidlo nekontroluje výčty.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pro typy hodnot zděděná implementace <xref:System.Object.Equals%2A> používá knihovnu reflexe a porovnává obsah všech polí. Reflexe je výpočetně náročná a porovnání rovnosti všech polí může být zbytečné. Pokud očekáváte, že uživatelé budou tyto instance porovnat nebo seřadit, nebo je použít jako klíče zatřiďovací tabulky, váš typ hodnoty by měl implementovat <xref:System.Object.Equals%2A>. Pokud váš programovací jazyk podporuje přetížení operátoru, měli byste také poskytnout implementaci operátorů rovnosti a nerovnosti.
+ U hodnotových typů zděděná implementace <xref:System.Object.Equals%2A> používá knihovnu reflexe a porovnává obsah všech polí. Reflexe je výpočetně náročná a porovnání rovnosti všech polí může být zbytečné. Pokud očekáváte, že uživatelé budou tyto instance porovnat nebo seřadit, nebo je použít jako klíče zatřiďovací tabulky, váš typ hodnoty by měl implementovat <xref:System.Object.Equals%2A> . Pokud váš programovací jazyk podporuje přetížení operátoru, měli byste také poskytnout implementaci operátorů rovnosti a nerovnosti.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, Poskytněte implementaci <xref:System.Object.Equals%2A>. Pokud můžete, implementujte operátor rovnosti.
+ Chcete-li opravit porušení tohoto pravidla, Poskytněte implementaci <xref:System.Object.Equals%2A> . Pokud můžete, implementujte operátor rovnosti.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Z tohoto pravidla je bezpečné potlačit upozornění, pokud se instance daného typu hodnoty nebudou porovnávat mezi sebou.
@@ -63,9 +63,9 @@ ms.locfileid: "72668397"
 ## <a name="related-rules"></a>Související pravidla
  [CA2224: Přepište Equals při přetížení operátoru rovnosti](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2231: Přetižte operátor equals při přepsání ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
- [CA2226: Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226: Operátory by měly mít symetrická přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
 ## <a name="see-also"></a>Viz také
  <xref:System.Object.Equals%2A?displayProperty=fullName>

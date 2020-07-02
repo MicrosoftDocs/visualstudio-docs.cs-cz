@@ -80,7 +80,7 @@ V tomto návodu byste měli mít nainstalované prostředí [Anaconda](https://w
 
 IPython má mnoho dalších užitečných funkcí, jako je například uvozovací znaky pro systémové prostředí, nahrazování proměnných, zachycení výstupu atd. Další informace najdete v [dokumentaci k IPython](https://ipython.org/documentation.html) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - Pokud chcete snadno používat Jupyter a bez instalace, vyzkoušejte bezplatnou [Azure Notebooks hostovanou službu](https://notebooks.azure.com/) , která vám umožní zachovat a sdílet poznámkové bloky s ostatními.
 

@@ -1,7 +1,7 @@
 ---
-title: '&lt;postactions –&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;postActions – &gt; element (vývoj pro Office v sadě Visual Studio)'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 548396e6393720824c93c07e55046ec2d91797a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfe9ae171f0f6fac1c2b5add5340de1c11f3da0f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561461"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544414"
 ---
-# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postactions –&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `postActions` Elementu `vstav3` obor názvů obsahuje všechny `postAction` prvky, které obsahují popis akcí po nasazení, které se spustí po dokončení instalace řešení pro systém Office.
+# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `postActions`Element `vstav3` oboru názvů obsahuje všechny `postAction` prvky, které popisují akce po nasazení, které se spouštějí po instalaci řešení Office.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,19 +38,19 @@ ms.locfileid: "62561461"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `postActions` Element je volitelný a je v `vstav3` oboru názvů. Existuje pouze jeden `postActions` element definovaný v manifestu aplikace.
+ `postActions`Element je nepovinný a je v `vstav3` oboru názvů. `postActions`V manifestu aplikace je definován pouze jeden prvek.
 
- `postActions` Prvek nemá žádné atributy.
+ `postActions`Element nemá žádné atributy.
 
- `postActions` má následující element.
+ `postActions`má následující element.
 
 ### <a name="postaction"></a>postAction
- Volitelné. Role `postAction` prvek `vstav3` obor názvů je definovaný v [ &#60;postAction&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/postaction-element-office-development-in-visual-studio.md).
+ Nepovinný parametr. Role `postAction` elementu v `vstav3` oboru názvů je definována v [&#60;postAction&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/postaction-element-office-development-in-visual-studio.md).
 
-## <a name="post-deployment-action-example"></a>Příklad akci po nasazení
+## <a name="post-deployment-action-example"></a>Příklad akce po nasazení
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje, `postActions` elementu v manifestu aplikace pro řešení Office nasazené s použitím [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `postActions` prvek v manifestu aplikace pro řešení Office nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -73,6 +73,6 @@ ms.locfileid: "62561461"
 
 ## <a name="see-also"></a>Viz také:
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

@@ -15,34 +15,34 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56d53717afc8cd966903e75f77e1745de0031745
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba654496d80654f0d9790a01bbc41326f7a5f13e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662849"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540488"
 ---
-# <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementovat serializační konstruktory
+# <a name="ca2229-implement-serialization-constructors"></a>CA2229: Implementujte serializační konstruktory
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|ImplementSerializationConstructors|
 |CheckId|CA2229|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Typ implementuje rozhraní <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>, není delegátem nebo rozhraním a platí jedna z následujících podmínek:
+## <a name="cause"></a>Příčina
+ Typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní, není delegát nebo rozhraní a jedna z následujících podmínek je pravdivá:
 
-- Typ nemá konstruktor, který přebírá objekt <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> a objekt <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> (signatura konstruktoru serializace).
+- Typ nemá konstruktor, který přebírá <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objekt a <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> objekt (signatura konstruktoru serializace).
 
 - Typ je nezapečetěný a modifikátor přístupu pro svůj Serializační konstruktor není chráněný (Family).
 
 - Typ je zapečetěný a modifikátor přístupu pro svůj Serializační konstruktor není privátní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo je relevantní pro typy, které podporují vlastní serializaci. Typ podporuje vlastní serializaci, pokud implementuje rozhraní <xref:System.Runtime.Serialization.ISerializable>. Konstruktor serializace je vyžadován k deserializaci nebo opětovnému vytvoření objektů, které byly serializovány pomocí metody <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>.
+ Toto pravidlo je relevantní pro typy, které podporují vlastní serializaci. Typ podporuje vlastní serializaci, pokud implementuje <xref:System.Runtime.Serialization.ISerializable> rozhraní. Konstruktor serializace je vyžadován k deserializaci nebo opětovnému vytvoření objektů, které byly serializovány pomocí <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> metody.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Implementací konstruktoru serializace se vyřeší porušení tohoto pravidla. Pro zapečetěnou třídu musí být konstruktor soukromý. V ostatních případech musí být chráněný.
@@ -59,5 +59,5 @@ ms.locfileid: "72662849"
  [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName><xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+ <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
  <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

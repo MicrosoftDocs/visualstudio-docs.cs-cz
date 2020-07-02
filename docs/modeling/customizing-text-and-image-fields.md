@@ -261,7 +261,7 @@ partial class ExampleShape
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Definování obrazců a konektorů](../modeling/defining-shapes-and-connectors.md)
 - [Nastavení obrázku pozadí v diagramu](../modeling/setting-a-background-image-on-a-diagram.md)

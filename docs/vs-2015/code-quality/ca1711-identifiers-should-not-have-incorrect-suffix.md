@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f59a1c88701cf132a46c66eb6550f03eb870d63d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e753083e9b4bda1e33553021ccb0027a2af2533
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669183"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544011"
 ---
 # <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Identifikátory by neměly mít nesprávnou příponu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
 |CheckId|CA1711|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Identifikátor nemá správnou příponu.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -43,15 +43,15 @@ ms.locfileid: "72669183"
 |Auditování|Základní typ/rozhraní|
 |------------|--------------------------|
 |Atribut|<xref:System.Attribute?displayProperty=fullName>|
-|Shromažďování|<xref:System.Collections.ICollection?displayProperty=fullName><br /><br /> <xref:System.Collections.IEnumerable?displayProperty=fullName><br /><br /> <xref:System.Collections.Queue?displayProperty=fullName><br /><br /> <xref:System.Collections.Stack?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName><br /><br /> <xref:System.Data.DataSet?displayProperty=fullName><br /><br /> <xref:System.Data.DataTable?displayProperty=fullName>|
-|Slovníku|<xref:System.Collections.IDictionary?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|
+|Kolekce|<xref:System.Collections.ICollection?displayProperty=fullName><br /><br /> <xref:System.Collections.IEnumerable?displayProperty=fullName><br /><br /> <xref:System.Collections.Queue?displayProperty=fullName><br /><br /> <xref:System.Collections.Stack?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName><br /><br /> <xref:System.Data.DataSet?displayProperty=fullName><br /><br /> <xref:System.Data.DataTable?displayProperty=fullName>|
+|Slovník|<xref:System.Collections.IDictionary?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|
 |EventArgs|<xref:System.EventArgs?displayProperty=fullName>|
 |EventHandler|Delegát obslužné rutiny události|
 |Výjimka|<xref:System.Exception?displayProperty=fullName>|
 |Oprávnění|<xref:System.Security.IPermission?displayProperty=fullName>|
 |Fronta|<xref:System.Collections.Queue?displayProperty=fullName>|
-|Rámec|<xref:System.Collections.Stack?displayProperty=fullName>|
-|Stream|<xref:System.IO.Stream?displayProperty=fullName>|
+|Zásobník|<xref:System.Collections.Stack?displayProperty=fullName>|
+|Datový proud|<xref:System.IO.Stream?displayProperty=fullName>|
 
  Kromě **toho by se neměly používat** následující přípony:
 

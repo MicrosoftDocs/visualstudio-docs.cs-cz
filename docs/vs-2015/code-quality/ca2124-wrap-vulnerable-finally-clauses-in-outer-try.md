@@ -15,34 +15,34 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7a2a296f5dd3680209c14849b5bd863c01e6351d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e191ca10456f133e1213961ca2d1ed9cb8e040b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660237"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544297"
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124: Zabalte ohroženou klauzuli finally do vnějšího bloku try
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|WrapVulnerableFinallyClausesInOuterTry|
 |CheckId|CA2124|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Ve verzích 1,0 a 1,1 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] obsahuje veřejná nebo chráněná metoda `try` / `catch` / `finally` bloku. Blok `finally` se jeví pro resetování stavu zabezpečení a není uzavřený v bloku `finally`.
+## <a name="cause"></a>Příčina
+ Ve verzích 1,0 a 1,1 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] obsahuje metoda Public nebo Protected `try` / `catch` / `finally` blok. `finally`Blokování se jeví jako resetování stavu zabezpečení a není uzavřeno v `finally` bloku.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo vyhledá `try` / `finally` bloky v kódu, které cílí na verze 1,0 a 1,1 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], které mohou být v zásobníku volání ohroženy škodlivými filtry výjimek. Pokud v bloku try dojde k citlivým operacím, jako je například zosobnění, a je vyvolána výjimka, může být filtr spuštěn před blokem `finally`. Pro příklad zosobnění to znamená, že se filtr spustí jako zosobněný uživatel. Filtry jsou aktuálně implementovány pouze v Visual Basic.
+ Toto pravidlo vyhledá `try` / `finally` bloky v kódu, které cílí na verze 1,0 a 1,1 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , které mohou být ohroženy škodlivými filtry výjimek přítomnými v zásobníku volání. Pokud v bloku try dojde k citlivým operacím, jako je například zosobnění, a je vyvolána výjimka, může být filtr spuštěn před `finally` blokem. Pro příklad zosobnění to znamená, že se filtr spustí jako zosobněný uživatel. Filtry jsou aktuálně implementovány pouze v Visual Basic.
 
 > [!WARNING]
-> Ve verzích 2,0 a novějších [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] modul runtime automaticky chrání `try` / `catch` /  `finally` bloku z škodlivých filtrů výjimek, pokud dojde k resetování přímo v rámci metody, která obsahuje blok výjimky.
+> Ve verzích 2,0 a novějších [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , modul runtime automaticky chrání `try` / `catch` /  `finally` blok před škodlivými filtry výjimek, pokud dojde k resetování přímo v rámci metody, která obsahuje blok výjimky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Umístit nezabalenou `try` / `finally` do vnějšího bloku try. Podívejte se na druhý příklad, který následuje. To vynutí spuštění `finally` před kódem filtru.
+ Umístěte nezabalený `try` / `finally` do vnějšího bloku try. Podívejte se na druhý příklad, který následuje. To vynutí, `finally` aby bylo provedeno před filtrem kódu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

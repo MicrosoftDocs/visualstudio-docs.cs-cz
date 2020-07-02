@@ -9,25 +9,25 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5d064f3d2bb382f1131d4e2365077f3db0b2e0ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a6a6ee7796ae437b564f6826376219291143e449
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669028"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545090"
 ---
 # <a name="ca5122-pinvoke-declarations-should-not-be-safe-critical"></a>CA5122: Deklarace volání nespravovaného kódu nesmí být kritické pro zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|PInvokesShouldNotBeSafeCriticalFxCopRule|
 |CheckId|CA5122|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Deklarace P/Invoke byla označena pomocí <xref:System.Security.SecuritySafeCriticalAttribute>:
+## <a name="cause"></a>Příčina
+ Deklarace P/Invoke byla označena jako <xref:System.Security.SecuritySafeCriticalAttribute> :
 
 ```csharp
 [assembly: AllowPartiallyTrustedCallers]

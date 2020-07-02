@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d23d9cc6006997c82451ac061e3ee0353e59b1b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d39c8d9d09cf457738df87e3c2e6e109f7bc1696
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671485"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543855"
 ---
-# <a name="ca1809-avoid-excessive-locals"></a>CA1809: Vyhněte se nadměrným místním hodnotám
+# <a name="ca1809-avoid-excessive-locals"></a>CA1809: Vyhněte se nadměrným lokálním hodnotám
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AvoidExcessiveLocals|
 |CheckId|CA1809|
 |Kategorie|Microsoft. Performance|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Člen obsahuje více než 64 místních proměnných, z nichž některé mohou být generovány kompilátorem.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -45,4 +45,4 @@ ms.locfileid: "72671485"
  Je bezpečné potlačit upozornění z tohoto pravidla nebo zakázat pravidlo, pokud se nejedná o problém s výkonem.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1804: Odeberte nepoužívané místní hodnoty](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Odeberte nepoužívané lokální hodnoty](../code-quality/ca1804-remove-unused-locals.md)

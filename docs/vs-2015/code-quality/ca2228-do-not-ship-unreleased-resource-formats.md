@@ -15,31 +15,31 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9297ea0bb24eed54d0134a5f3c0fce87e6757adb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4adcae1c1cc616cdbcf5a7aa15342d221c2f4300
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662877"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540579"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: Nedodávejte nevydané formáty prostředku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Soubor prostředků byl sestaven pomocí [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verze, která není aktuálně podporována.
+## <a name="cause"></a>Příčina
+ Soubor prostředků se vytvořil pomocí verze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , která se v tuto chvíli nepodporuje.
 
 ## <a name="rule-description"></a>Popis pravidla
- Soubory prostředků, které byly vytvořeny pomocí předprodejní verze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], nemusí být použitelné pro podporované verze .NET Framework.
+ Soubory prostředků, které byly vytvořeny pomocí předprodejní verze nástroje, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] nemusí být použitelné pro podporované verze .NET Framework.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, sestavte prostředek pomocí podporované verze [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]k.
+ Chcete-li opravit porušení tohoto pravidla, sestavte prostředek pomocí podporované verze nástroje [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] k.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

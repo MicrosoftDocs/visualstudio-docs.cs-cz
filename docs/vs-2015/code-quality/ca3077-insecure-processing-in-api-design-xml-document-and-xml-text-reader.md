@@ -8,17 +8,17 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ce48f9dee90e33782a92116ee4ec298e53770489
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c0d6a6f6ab42d69d4503741f6625627c46d4ef77
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300468"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545103"
 ---
 # <a name="ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader"></a>CA3077: Nezabezpečené zpracování v návrhu rozhraní API, dokumentu XML a čtečce textu XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|InsecureDTDProcessingInAPIDesign|
 |CheckId|CA3077|
@@ -26,20 +26,20 @@ ms.locfileid: "74300468"
 |Narušující změna|Bez přerušení|
 
 ## <a name="cause"></a>Příčina
- Při navrhování rozhraní API odvozeného z XMLDocument a XMLTextReader nezapomeňte <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>.  Použití nezabezpečených instancí DTDProcessing při odkazování na zdroje externích entit nebo jejich překládání na nezabezpečené hodnoty v XML může vést k odhalení informací.
+ Při navrhování rozhraní API odvozeného z XMLDocument a XMLTextReader si zavědomi <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> .  Použití nezabezpečených instancí DTDProcessing při odkazování na zdroje externích entit nebo jejich překládání na nezabezpečené hodnoty v XML může vést k odhalení informací.
 
 ## <a name="rule-description"></a>Popis pravidla
  [Definice typu dokumentu (DTD)](https://msdn.microsoft.com/library/aa468547.aspx) je jedním ze dvou způsobů, jak může analyzátor XML určit platnost dokumentu, jak je definováno v [konsorcium World Wide Web (W3C) jazyk XML (Extensible Markup Language) (XML) 1,0](https://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledává vlastnosti a instance, kde jsou přijímána nedůvěryhodná data, aby upozornila vývojáře na potenciální hrozby [zpřístupnění informací](https://msdn.microsoft.com/library/4064c89f-afa6-444a-aa7e-807ef072131c) , což může vést k útokům DOS [(Denial of Service)](https://msdn.microsoft.com/library/dfb150f3-d598-4697-a5e6-6779e4f9b600) . Toto pravidlo se aktivuje v těchto případech:
 
-- třídy <xref:System.Xml.XmlDocument> nebo <xref:System.Xml.XmlTextReader> používají pro zpracování DTD výchozí hodnoty překladače.
+- <xref:System.Xml.XmlDocument><xref:System.Xml.XmlTextReader>třídy nebo používají výchozí hodnoty překladače pro zpracování DTD.
 
-- Pro odvozenou třídu XmlDocument nebo XmlTextReader není definován žádný konstruktor nebo není pro <xref:System.Xml.XmlResolver>použita žádná zabezpečená hodnota.
+- Pro odvozené třídy XmlDocument nebo XmlTextReader není definován žádný konstruktor nebo není použita žádná bezpečná hodnota pro <xref:System.Xml.XmlResolver> .
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
 
 - Zachyťte a zpracujte všechny výjimky XmlTextReader správně, aby nedocházelo k odhalení informací o cestách.
 
-- Místo objekt XmlResolver použijte <xref:System.Xml.XmlSecureResolver>k omezení prostředků, ke kterým má přístup XmlTextReader přístup.
+- Použijte  <xref:System.Xml.XmlSecureResolver> místo objekt XmlResolver k omezení prostředků, ke kterým má přístup XmlTextReader přístup.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Pokud si nejste jistí, že je vstup z důvěryhodného zdroje známý, nedoporučujeme z tohoto upozornění pravidlo potlačit.

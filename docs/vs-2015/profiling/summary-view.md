@@ -1,5 +1,5 @@
 ---
-title: Zobrazení se souhrnnými | Dokumentace Microsoftu
+title: Souhrnné zobrazení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,46 +16,46 @@ caps.latest.revision: 42
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8c1b8b10234e8b297be471f596cc1739deab317d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f4346b0e7459ee3c78669ab9178555370ffac16d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65674176"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545506"
 ---
 # <a name="summary-view"></a>Souhrnné zobrazení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Souhrnné zobrazení zobrazuje informace o výkonu – nejdražší funkce nebo objekty během spuštění profilování. Toto zobrazení obsahuje graf časové osy a nejmíň dva seznamy nejdražší funkce nebo objekty založené na metodě profilování metriky výkonu. Data v tomto zobrazení, závisí na metodě profilování, která byla použita (vzorkování, instrumentace nebo souběžnosti) a určuje, zda byl shromážděn alokaci paměti .NET.  
+V souhrnném zobrazení se zobrazí informace o nejdražších funkcích nebo objektech, které jsou v rámci profilování výkonné. Toto zobrazení obsahuje graf časové osy a dva nebo více seznamů nejdražších funkcí nebo objektů na základě metrik výkonu metody profilace. Data v tomto zobrazení závisí na metodě profilování, která byla použita (vzorkování, instrumentace nebo souběžnost) a na tom, zda bylo shromážděno přidělení paměti .NET.  
   
- Pro všechny souhrnné zobrazení s výjimkou souhrnné zobrazení dat o souběžnosti časová osa grafu v souhrnném zobrazení ukazuje využití procesoru (CPU) profilované aplikace v čase, které profilaci došlo k chybě.  
+ Pro všechna Souhrnná zobrazení, s výjimkou souhrnného zobrazení dat souběžnosti, se v grafu časové osy v souhrnném zobrazení zobrazuje využití procesoru profilované aplikace v době, kdy k profilaci došlo.  
   
-- Pokud zadáte část času v grafu, můžete znovu analyzovat data pro tento segment nebo zvětšete si zobrazení časové osy na segment, který jste zadali. Další informace najdete v tématu [jak: Filtrování zobrazení sestav ze souhrnné časové osy](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)  
+- Zadáte-li v grafu segment času, můžete znovu analyzovat data pro daný segment nebo zvětšit zobrazení časové osy na segment, který jste zadali. Další informace najdete v tématu [Postup: filtrování zobrazení sestav na časové ose souhrnu.](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)  
   
-- Můžete kliknout na funkci v seznamu souhrnné zobrazení otevřete zobrazení detailů funkce pro funkci. Můžete také můžete kliknout pravým tlačítkem funkce pro další možnosti zobrazení.  
+- Kliknutím na funkci v seznamu souhrnných zobrazení můžete otevřít zobrazení podrobností funkce pro funkci. Můžete také kliknout pravým tlačítkem na funkci pro další možnosti zobrazení.  
   
-- Chcete-li změnit počet položek, které se objeví v zobrazení se souhrnnými seznamech, otevřete **nástroje** nabídky, přejděte k **možnosti**a potom klikněte na tlačítko **nástroje pro měření výkonu**. V části **obecné nastavení**, upravte **počet funkcí v souhrnném zobrazení** nastavení.  
+- Chcete-li upravit počet položek, které se zobrazí v seznamu souhrnných zobrazení, otevřete nabídku **nástroje** , přejděte na **možnost možnosti**a klikněte na položku **Nástroje pro sledování výkonu**. V části **Obecná nastavení**upravte nastavení **počet funkcí v souhrnném zobrazení** .  
   
-## <a name="notifications-links"></a>Oznámení odkazy  
- Můžete kliknout na odkazy v seznamu oznámení k nastavení možností zobrazení sestavy. Seznam je napravo od grafu časové osy.  
+## <a name="notifications-links"></a>Odkazy na oznámení  
+ Kliknutím na odkazy v seznamu oznámení můžete nastavit možnosti zobrazení sestavy. Seznam je napravo od grafu časové osy.  
   
-|||  
+|Možnost|Popis|  
 |-|-|  
-|**Zobrazení kódu nepocházejícího od uživatele**<br /><br /> **Zobrazit jen můj kód**|Není k dispozici, pro nativní kód nebo pro data profilace, která byla shromážděna pomocí metody instrumentace. Přepíná mezi zobrazením jenom data z uživatelského kódu (**zobrazit pouze můj kód**) a zobrazení dat v rámci veškerého kódu, včetně systému kódu (**zobrazit Neuživatelský kód**). Ve výchozím nastavení data jsou omezená na uživatelský kód. Chcete-li změnit nastavení, [jak: Nástroje pro profilaci filtr zobrazení sestav k zobrazení pouze vlastního kódu](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md).|  
-|**Zobrazit pokyny**|Zobrazí upozornění pravidel výkonu v **seznam chyb** okna. Další informace najdete v tématu [použití pravidel výkonu k analýze dat](../profiling/using-performance-rules-to-analyze-data.md)|  
+|**Zobrazit kód nesouvisející s uživatelem**<br /><br /> **Zobrazit Pouze můj kód**|Není k dispozici pro nativní kód nebo pro data profilace, která byla shromážděna pomocí metody instrumentace. Přepíná mezi zobrazením pouze dat z uživatelského kódu (**zobrazit pouze můj kód**) a zobrazením dat ze všech kódů, včetně systémového kódu (**Zobrazit kód nesouvisející s uživatelem**). Ve výchozím nastavení jsou data omezena na uživatelský kód. Chcete-li změnit nastavení, přečtěte si téma [Postup: filtrování nástroje pro profilaci zobrazení sestav pro zobrazení pouze můj kód](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md).|  
+|**Zobrazit doprovodné materiály**|Zobrazí upozornění pravidla výkonu v okně **Seznam chyb** . Další informace najdete v tématu [použití pravidel výkonu k analýze dat](../profiling/using-performance-rules-to-analyze-data.md) .|  
   
 ## <a name="report"></a>Sestava  
- Můžete kliknout na odkazy v seznamu sestav otevřete různá zobrazení a k porovnání, uložte nebo filtrování sestavy. Seznam je napravo od grafu časové osy.  
+ Kliknutím na odkazy v seznamu sestavy otevřete různá zobrazení a můžete sestavu porovnat, Uložit nebo filtrovat. Seznam je napravo od grafu časové osy.  
   
-|||  
+|Name|Popis|  
 |-|-|  
-|**Zobrazit oříznutý strom volání**|Nejdražší cesty spuštění se zobrazí v zobrazení stromu volání. Další informace najdete v tématu [zobrazení stromu volání](../profiling/call-tree-view.md).|  
-|**Zobrazit kritické řádky**|Není k dispozici pro profilaci dat, která byla shromážděna pomocí metody instrumentace. Nejdražší řádky zdrojového kódu se zobrazí v zobrazení řádků. Další informace najdete v tématu [zobrazení řádků](../profiling/lines-view.md).|  
-|**Porovnat sestavy**|Zobrazí **vybrat soubory analýzy k porovnání** dialogovému oknu, kde můžete určit jiný soubor dat profilování má být porovnán s aktuální soubor. Další informace najdete v tématu [porovnávání datových souborů výkonu](../profiling/comparing-performance-data-files.md).|  
-|**Export dat sestavy**|Zobrazí **Export sestavy** dialogovému oknu, kde můžete určit jeden nebo více zobrazení sestav pro uložení jako hodnoty oddělené čárkou (CSV) nebo soubory XML. Další informace najdete v tématu [jak: Nástroje pro profilaci export sestavy](https://msdn.microsoft.com/174b5bd3-df9b-4fd4-88d4-76032ab90451).|  
-|**Uložit analyzovanou sestavu**|Uloží aktuální soubor dat profilování jako .vsps soubor, který otevře rychleji v rozhraní [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Další informace najdete v tématu [jak: Uložit analyzovat, datovými soubory profilace](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556).|  
-|**Filtrovat Data sestavy**|Zobrazí profilování podokna filtru sestavy, ve kterém můžete zadat kritéria k omezení dat v zobrazení sestav. Další informace najdete v tématu [filtr zobrazení sestav výkonu](../profiling/performance-report-view-filter.md)|  
-|**Přepnout režim celé obrazovky**|Přepíná režim celé obrazovky pro zobrazení sestavy.|  
+|**Zobrazit oříznutý strom volání**|Zobrazí nejdražších cest spuštění v zobrazení stromu volání. Další informace naleznete v tématu [zobrazení stromu volání](../profiling/call-tree-view.md).|  
+|**Zobrazit horké řádky**|Není k dispozici pro data profilace, která byla shromážděna pomocí metody instrumentace. Zobrazí nejlevnější řádky zdrojového kódu v zobrazení řádků. Další informace najdete v tématu [zobrazení řádků](../profiling/lines-view.md).|  
+|**Porovnání sestav**|Zobrazí dialogové okno **Vybrat soubory analýzy pro porovnání** , kde můžete určit jiný soubor dat profilování pro porovnání s aktuálním souborem. Další informace najdete v tématu [porovnání datových souborů výkonu](../profiling/comparing-performance-data-files.md).|  
+|**Exportovat data sestavy**|Zobrazí dialogové okno **exportovat sestavu** , ve kterém můžete zadat jedno nebo více zobrazení sestav k uložení jako textový soubor s oddělovači (. csv) nebo soubory. XML. Další informace naleznete v tématu [How to: Export nástroje pro profilaci Reports](https://msdn.microsoft.com/174b5bd3-df9b-4fd4-88d4-76032ab90451).|  
+|**Uložit analyzovanou sestavu**|Uloží aktuální soubor dat profilování jako soubor. vsps, který se v rozhraní pro spustí rychleji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Další informace najdete v tématu [Postup: uložení analyzovaných datových souborů profilování](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556).|  
+|**Filtrovat data sestavy**|Zobrazí podokno filtru sestavy profilace, kde můžete zadat kritéria pro omezení dat v zobrazení sestavy. Další informace najdete v tématu [Filtr zobrazení sestav výkonu.](../profiling/performance-report-view-filter.md)|  
+|**Přepnout na celou obrazovku**|Přepne režim celé obrazovky pro zobrazení sestavy.|  
   
 ## <a name="see-also"></a>Viz také  
  [Souhrnné zobrazení](../profiling/summary-view-sampling-data.md)   

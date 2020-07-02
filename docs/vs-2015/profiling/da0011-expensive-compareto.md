@@ -14,27 +14,27 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2ed433612498a6b7d4b87291311d7fd6efcb0974
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: a66242554de28ab45cc797d523ea7b5a967e9e5d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918386"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542971"
 ---
-# <a name="da0011-expensive-compareto"></a>DA0011: Náročná metoda CompareTo
+# <a name="da0011-expensive-compareto"></a>DA0011: Náročná funkce CompareTo
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [DA0011: nákladných CompareTo](/visualstudio/profiling/da0011-expensive-compareto).  
   
-|||  
+|Položka|Hodnota|  
 |-|-|  
-|Id pravidla|DA0011|  
+|ID pravidla|DA0011|  
 |Kategorie|Využití .NET Framework|  
 |Metody profilace|Vzorkování<br /><br /> Paměť .NET|  
 |Zpráva|Funkce CompareTo by měly být levné a nesmí přidělit žádnou paměť. Pokud je to možné, snižte složitost funkce CompareTo.|  
 |Typ pravidla|Upozornění|  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Metoda CompareTo typu je nákladné nebo přiděluje paměť.  
   
 ## <a name="rule-description"></a>Popis pravidla  

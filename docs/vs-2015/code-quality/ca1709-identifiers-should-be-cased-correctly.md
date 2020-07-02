@@ -15,33 +15,33 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4da0414c9923a8ed7bb01456f38000433641522
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919224"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543998"
 ---
 # <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Malá a velká písmena identifikátorů by měla být použita správně
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1709: identifikátory by měly být použita správně](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldBeCasedCorrectly|
 |CheckId|CA1709|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Narušující změna|Přerušení – při vyvolání v sestaveních, oborech názvů, typech, členech a parametrech.<br /><br /> Nerozdělitelné – při vyvolání v parametrech obecného typu|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název identifikátoru není správně použita.
 
- \- nebo –
+ \-ani
 
  Název identifikátoru obsahuje zkratku se dvěma písmeny a druhé písmeno je malými písmeny.
 
- \- nebo –
+ \-ani
 
  Název identifikátoru obsahuje akronym o třech nebo více velkých písmenech.
 

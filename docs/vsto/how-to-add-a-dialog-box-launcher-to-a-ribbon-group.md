@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání spouštěče dialogového okna do skupiny pásu karet'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b930348845e04dca089cf153a11cc2a9fd29c880
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 29b260929d0478749296496db5b454326497d3ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255896"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541616"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Postupy: Přidání spouštěče dialogového okna do skupiny pásu karet
   Spouštěč dialogového okna můžete přidat do libovolné skupiny na pásu karet. Spouštěč dialogového okna je malá ikona, která se zobrazí ve skupině. Uživatelé kliknutím na tuto ikonu otevřou související dialogová okna nebo podokna úloh, která poskytují další možnosti vztahující se ke skupině.
@@ -42,13 +42,13 @@ ms.locfileid: "71255896"
 - [Návrhář pásu karet](../vsto/ribbon-designer.md)
 - [Přehled modelu objektů pásu karet](../vsto/ribbon-object-model-overview.md)
 - [Pás karet – XML](../vsto/ribbon-xml.md)
-- [Postupy: Export pásu karet z Návrháře pásu karet do XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
+- [Postupy: Export pásu karet z návrháře pásu karet do kódu XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)
 - [Postupy: Změna pozice karty na pásu karet](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
 - [Postupy: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md)
 - [Postupy: Přidání ovládacích prvků do zobrazení Backstage](../vsto/how-to-add-controls-to-the-backstage-view.md)
 - [Přizpůsobení pásu karet pro Outlook](../vsto/customizing-a-ribbon-for-outlook.md)
 - [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)
-- [Postupy: Zobrazit chyby uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Postupy: zobrazení chyb uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
 - [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
-- [Návod: Aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)
+- [Návod: aktualizace ovládacích prvků na pásu karet v době běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)
 - [Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)

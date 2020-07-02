@@ -15,26 +15,26 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fa0d771d99ac8e7a4f4091db90a607cce970bc38
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 10649b4106a280089fd6b086167c7e92bff1300b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917818"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545246"
 ---
-# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: Použijte pouze API z cílového rozhraní .NET Framework
+# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: Používejte jen rozhraní API z cílové architektury
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1903: Používejte pouze rozhraní API z cíleného rozhraní](/visualstudio/code-quality/ca1903-use-only-api-from-targeted-framework).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|UseOnlyApiFromTargetedFramework|
 |CheckId|CA1903|
 |Kategorie|Microsoft. přenositelnost|
 |Narušující změna|Přerušení – při vyvolání proti podpisu externě viditelného člena nebo typu.<br /><br /> Bez přerušení – při vyvolání v těle metody.|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Člen nebo typ používá člen nebo typ, který byl představen v aktualizaci Service Pack, která nebyla zahrnuta do cíleného rozhraní projektu.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -42,13 +42,13 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1903: Použ
 
  **Závislosti cílové architektury a aktualizace Service Pack**
 
-|||
+|Položka|Hodnota|
 |-|-|
 |Když je cílová architektura|Aktivuje se při použití členů představených v.|
-|.NET Framework 2.0|.NET Framework 2,0 SP1, .NET Framework 2,0 SP2|
+|.NET Framework 2,0|.NET Framework 2,0 SP1, .NET Framework 2,0 SP2|
 |.NET Framework 3.0|.NET Framework 2,0 SP1, .NET Framework 2,0 SP2, .NET Framework 3,0 SP1, .NET Framework 3,0 SP2|
-|.NET Framework 3.5|.NET Framework 3.5 SP1|
-|.NET Framework 4|NEUŽÍVÁ SE.|
+|.NET Framework 3.5|.NET Framework 3.5 SP1|
+|.NET Framework 4|–|
 
  Chcete-li změnit cílové rozhraní .NET Framework projektu, přečtěte si téma [cílení na konkrétní verzi .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md).
 
