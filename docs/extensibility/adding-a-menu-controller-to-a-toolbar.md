@@ -1,7 +1,7 @@
 ---
-title: Přidání ovladače nabídky na panel nástrojů | Dokumenty společnosti Microsoft
+title: Přidání řadiče nabídky na panel nástrojů | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - toolbars [Visual Studio], adding menu controllers
 - menus, adding menu controllers to toolbars
@@ -12,34 +12,34 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4dcb9e51f6633476a8f0eadea30da513e5ef760
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 32cbbbc7784c112b33b5f720b306b8c93269bb82
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903523"
 ---
-# <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání ovladače nabídky na panel nástrojů
-Tento návod se staví na [panelu nástrojů Přidat do návodu k oknu nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) a ukáže, jak přidat ovladač nabídky na panel nástrojů okna nástroje. Zde uvedené kroky lze také použít na panel nástrojů, který je vytvořen v [návodu k přidání panelu nástrojů.](../extensibility/adding-a-toolbar.md)
+# <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání řadiče nabídky na panel nástrojů
+Tento názorný postup sestaví na panelu nástrojů [Přidat panel nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) a ukazuje, jak přidat řadič nabídky do panelu nástrojů okna nástroje. Níže uvedené kroky lze použít také na panelu nástrojů, který je vytvořen v návodu [Přidat panel nástrojů](../extensibility/adding-a-toolbar.md) .
 
-Řadič nabídky je ovládací prvek rozdělení. Na levé straně ovladače nabídky se zobrazí naposledy použitý příkaz a můžete jej spustit klepnutím. Pravá strana ovladače nabídky je šipka, která po klepnutí otevře seznam dalších příkazů. Po klepnutí na příkaz v seznamu se příkaz spustí a nahradí příkaz na levé straně ovladače nabídky. Tímto způsobem ovladač nabídky funguje jako příkazové tlačítko, které vždy zobrazuje naposledy použitý příkaz ze seznamu.
+Kontroler nabídek je rozdělený ovládací prvek. Levá strana řadiče nabídky zobrazuje poslední použitý příkaz a můžete ho spustit kliknutím na něj. Pravá strana řadiče nabídky je šipka, kterou po kliknutí otevře seznam dalších příkazů. Když kliknete na příkaz v seznamu, příkaz se spustí a nahradí příkaz na levé straně řadiče nabídky. Tímto způsobem kontroler nabídek funguje jako příkazové tlačítko, které vždy zobrazuje poslední použitý příkaz ze seznamu.
 
-Ovladače nabídek se mohou zobrazit v nabídkách, ale nejčastěji se používají na panelech nástrojů.
+Řadiče nabídek se mohou zobrazovat v nabídkách, ale nejčastěji se používají na panelech nástrojů.
 
 ## <a name="prerequisites"></a>Požadavky
-Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-menu-controller"></a>Vytvoření ovladače nabídky
+## <a name="create-a-menu-controller"></a>Vytvoření kontroleru nabídek
 
-1. Postupujte podle postupů popsaných v [části Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) a vytvořte okno nástroje, které má panel nástrojů.
+1. Postupujte podle pokynů popsaných v tématu [Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) k vytvoření panelu nástrojů, který obsahuje panel nástrojů.
 
-2. V *souboru TWTestCommandPackage.vsct*přejděte do části Symboly. V prvku GuidSymbol s názvem **guidTWTestCommandPackageCmdSet**deklarujte řadič nabídky, skupinu řadičů nabídek a tři položky nabídky.
+2. V *TWTestCommandPackage. vsct*přejít do části symboly. V elementu GuidSymbol s názvem **guidTWTestCommandPackageCmdSet**deklarujte svůj kontroler nabídek, skupinu kontrolérů nabídky a tři položky nabídky.
 
     ```xml
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />
     ```
 
-3. V části Nabídky po poslední položce nabídky definujte ovladač nabídky jako nabídku.
+3. V části nabídky za poslední položkou nabídky definujte jako nabídku kontroler nabídek.
 
     ```xml
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">
@@ -54,9 +54,9 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     </Menu>
     ```
 
-    Příznaky `TextChanges` `TextIsAnchorCommand` a musí být zahrnuty, aby řadič nabídky odrážel poslední vybraný příkaz.
+    `TextChanges` `TextIsAnchorCommand` Aby mohl řadič nabídky odrážet poslední vybraný příkaz, musí být zahrnuté příznaky a.
 
-4. V části Skupiny přidejte po poslední položce skupiny skupinu řadiče nabídky.
+4. V části skupiny za poslední položkou skupiny přidejte skupinu řadičů nabídek.
 
     ```xml
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">
@@ -64,9 +64,9 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     </Group>
     ```
 
-    Nastavením řadiče nabídky jako nadřazeného se všechny příkazy umístěné v této skupině zobrazí v kontroleru nabídky. Atribut `priority` je vynechán, který jej nastaví na výchozí hodnotu 0, protože je jedinou skupinou na řadiči nabídky.
+    Nastavením řadiče nabídky jako nadřazeného objektu se zobrazí všechny příkazy, které jsou umístěny v této skupině, na řadiči nabídky. `priority`Atribut je vynechán, což nastaví výchozí hodnotu 0, protože se jedná o jedinou skupinu na řadiči nabídky.
 
-5. V části Tlačítka po poslední položce tlačítka přidejte prvek Button pro každou položku nabídky.
+5. V části tlačítka za položkou poslední tlačítko přidejte element Button pro každou položku nabídky.
 
     ```xml
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">
@@ -98,19 +98,19 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     </Button>
     ```
 
-6. V tomto okamžiku se můžete podívat na řadič nabídky. Sestavení projektu a začít ladění. Měli byste vidět experimentální instanci.
+6. V tomto okamžiku se můžete podívat na kontroler nabídek. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.
 
-   1. V nabídce **Zobrazení / Ostatní Windows** otevřete možnost Test **ToolWindow**.
+   1. V nabídce **Zobrazit/další Windows** otevřete **test panelu**.
 
-   2. Na panelu nástrojů v okně nástroje se zobrazí ovladač nabídky.
+   2. Kontroler nabídek se zobrazí na panelu nástrojů v okně nástroje.
 
-   3. Kliknutím na šipku na pravé straně ovladače nabídky zobrazíte tři možné příkazy.
+   3. Kliknutím na šipku na pravé straně řadiče nabídky zobrazíte tři možné příkazy.
 
-      Všimněte si, že po klepnutí na příkaz se název ovladače nabídky změní, aby se tento příkaz zobrazil. V další části přidáme kód pro aktivaci těchto příkazů.
+      Všimněte si, že když kliknete na příkaz, název řadiče nabídky se změní a zobrazí se tento příkaz. V další části přidáme kód, který bude tyto příkazy aktivovat.
 
 ## <a name="implement-the-menu-controller-commands"></a>Implementace příkazů řadiče nabídky
 
-1. V *TWTestCommandPackageGuids.cs*přidejte ID příkazů pro tři položky nabídky za existující ID příkazů.
+1. V *TWTestCommandPackageGuids.cs*přidejte identifikátory příkazů pro tři položky nabídky za existující identifikátory příkazů.
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -118,13 +118,13 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. V *TWTestCommand.cs*přidejte následující kód na `TWTestCommand` začátek třídy.
+2. V *TWTestCommand.cs*přidejte následující kód na začátek `TWTestCommand` třídy.
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command
     ```
 
-3. V konstruktoru TWTestCommand po posledním `AddCommand` volání metody přidejte kód pro směrování událostí pro každý příkaz prostřednictvím stejných obslužných rutin.
+3. V konstruktoru TWTestCommand po posledním volání `AddCommand` metody přidejte kód pro směrování událostí pro každý příkaz přes stejné obslužné rutiny.
 
     ```csharp
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=
@@ -145,7 +145,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-4. Přidejte obslužnou rutinu události do třídy **TWTestCommand** a označte vybraný příkaz jako zaškrtnutý.
+4. Přidejte obslužnou rutinu události do třídy **TWTestCommand** k označení vybraného příkazu jako zaškrtnutého.
 
     ```csharp
     private void OnMCItemQueryStatus(object sender, EventArgs e)
@@ -158,7 +158,7 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-5. Přidejte obslužnou rutinu události, která zobrazí messagebox, když uživatel vybere příkaz na řadiči nabídky:
+5. Přidejte obslužnou rutinu události, která zobrazí MessageBox, když uživatel vybere příkaz na řadiči nabídky:
 
     ```csharp
     private void OnMCItemClicked(object sender, EventArgs e)
@@ -208,19 +208,19 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-## <a name="testing-the-menu-controller"></a>Testování ovladače nabídky
+## <a name="testing-the-menu-controller"></a>Testování řadiče nabídky
 
-1. Sestavení projektu a začít ladění. Měli byste vidět experimentální instanci.
+1. Sestavte projekt a spusťte ladění. Měla by se zobrazit experimentální instance.
 
-2. Otevřete **okno testovacího nástroje** v nabídce Zobrazení / Ostatní **Windows.**
+2. V nabídce **Zobrazit/další Windows** otevřete **test panelu** .
 
-    V panelu nástrojů v okně nástroje se zobrazí kontrolka nabídky a zobrazí **položku MC 1**.
+    Kontroler nabídky se zobrazí na panelu nástrojů v okně nástroje a zobrazí **MC Item 1**.
 
-3. Klepněte na tlačítko ovladače nabídky vlevo od šipky.
+3. Klikněte na tlačítko řadiče nabídky nalevo od šipky.
 
-    Měli byste vidět tři položky, z nichž první je vybrána a má pole zvýraznění kolem ikony. Klepněte na **položku MC 3**.
+    Měli byste vidět tři položky, první z nich je vybraná a má zvýrazněné pole kolem ikony. Klikněte na tlačítko **MC položku 3**.
 
-    Zobrazí se dialogové okno se **zprávou: Vybraná položka menu Položka 3**. Všimněte si, že zpráva odpovídá textu na tlačítku řadiče nabídky. Na tlačítku ovladače nabídky se nyní zobrazí **položka MC 3**.
+    Zobrazí se dialogové okno se zprávou **, kterou jste vybrali jako položku řadiče nabídky 3**. Všimněte si, že zpráva odpovídá textu na tlačítku řadiče nabídky. Tlačítko řadič nabídky teď zobrazuje **položku 3**.
 
 ## <a name="see-also"></a>Viz také
 - [Přidání panelu nástrojů do okna nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md)

@@ -5,20 +5,20 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 53348dff-35a6-4303-b263-90c10af06bf3
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 7acbe2a5741fa94ac42470a85803d1720e0a8fa1
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: b43b16f46cc62b6c70460d79c194b5e0d2cfede0
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835274"
 ---
 # <a name="iactivescriptsitedebug32getdocumentcontextfromposition"></a>IActiveScriptSiteDebug32::GetDocumentContextFromPosition
-Používá se v jazykovém modulu k delegování `IDebugCodeContext::GetSourceContext`.  
+K delegování používá jazykový modul `IDebugCodeContext::GetSourceContext` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ HRESULT GetDocumentContextFromPosition(
   
 #### <a name="parameters"></a>Parametry  
  `dwSourceContext`  
- pro Zdrojový obsah, jak je uveden `ParseScriptText` nebo `AddScriptlet`.  
+ pro Zdrojový obsah, který je k dispozici pro `ParseScriptText` nebo `AddScriptlet` .  
   
  `uCharacterOffset`  
  pro Posun znaku vzhledem k začátku bloku skriptu nebo skriptletu.  
@@ -45,14 +45,14 @@ HRESULT GetDocumentContextFromPosition(
  mimo Kontext dokumentu odpovídající tomuto rozsahu pozice znaků.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Metoda vrací `HRESULT`. Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
+ Metoda vrátí `HRESULT` . Možné hodnoty zahrnují hodnoty v následující tabulce, ale nejsou na ně omezeny.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`S_OK`|Metoda byla úspěšná.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jazykové moduly používají tuto metodu k delegování `IDebugCodeContext::GetSourceContext`.  
+ Jazykové moduly používají tuto metodu k delegování `IDebugCodeContext::GetSourceContext` .  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [IActiveScriptSiteDebug32 – rozhraní](../../winscript/reference/iactivescriptsitedebug32-interface.md)
