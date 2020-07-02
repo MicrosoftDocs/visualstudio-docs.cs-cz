@@ -1,10 +1,10 @@
 ---
-title: 'Postup: Nastavení možností usnadnění ide'
-description: Naučte se, jak nastavit možnosti usnadnění v sadě Visual Studio, která usnadní jeho integrované vývojové prostředí (IDE) pro každého, včetně pro lidi, kteří mají slabozraké číst a pro lidi, kteří mají omezenou pohyblivost psát.
+title: 'Postupy: nastavení možností dostupnosti IDE'
+description: Naučte se, jak nastavit možnosti usnadnění přístupu v sadě Visual Studio, aby bylo možné využít integrované vývojové prostředí (IDE) pro všechny uživatele, a to včetně pro lidi, kteří mají nízkou vizi ke čtení a pro lidi, kteří mají omezená pohyblivost k zápisu.
 ms.date: 08/23/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
@@ -13,123 +13,123 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63bba4e8defcd727f05dbc209aa2f48f7d5f2c92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70107770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770278"
 ---
-# <a name="how-to-set-ide-accessibility-options"></a>Postup: Nastavení možností usnadnění ide
+# <a name="how-to-set-ide-accessibility-options"></a>Postupy: nastavení možností dostupnosti IDE
 
-Visual Studio obsahuje funkce, které usnadňují čtení lidem se zneviděníním a lidem s omezenou pohyblivostí k psaní. Můžete například změnit velikost a barvu textu v editorech, změnit velikost textu a tlačítek na panelech nástrojů a změnit nastavení, která vám pomohou dokončit funkci nebo příkaz.
+Visual Studio obsahuje funkce, které usnadňují uživatelům, kteří mají ke čtení nízkou pohyblivost, a pro lidi, kteří mají omezené možnosti psaní. Například můžete změnit velikost a barvu textu v editorech, změnit velikost textu a tlačítek na panelech nástrojů a změnit nastavení tak, aby vám pomohlo dokončit funkci nebo příkaz.
 
-Kromě toho Visual Studio podporuje rozložení klávesnice Dvorak, které usnadňují nejčastěji zadaným znakům. Můžete také přizpůsobit výchozí klávesové zkratky, které jsou k dispozici v sadě Visual Studio. Další informace naleznete v [tématu Identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+Kromě toho Visual Studio podporuje rozložení klávesnice Dvorak, které usnadňují přístup k nejčastěji zadaným znakům. Můžete také přizpůsobit výchozí klávesové zkratky, které jsou k dispozici v aplikaci Visual Studio. Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
 > [!NOTE]
-> Zobrazená dialogová okna a příkazy nabídek se mohou lišit od těch, které jsou zde popsány, což se může lišit v závislosti na aktivním nastavení nebo edici. Chcete-li změnit nastavení, zvolte **Nastavení importu a exportu** v nabídce **Nástroje.** Další informace naleznete v tématu [Reset settings](../environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch, které jsou zde popsané, které se mohou lišit v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [resetování nastavení](../environment-settings.md#reset-settings).
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Další informace o nedávných aktualizacích usnadnění najdete v tématu Vylepšení usnadnění v blogu [Visual Studia 2017 verze 15.3.](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/)
+> Další informace o nejnovějších aktualizacích usnadnění najdete v blogovém příspěvku o [vylepšeních dostupnosti v aplikaci Visual Studio 2017 verze 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) .
 
 ::: moniker-end
 
 ## <a name="editors-dialogs-and-tool-windows"></a>Editory, dialogová okna a okna nástrojů
 
-Ve výchozím nastavení používají dialogová okna a okna nástrojů v sadě Visual Studio stejnou velikost písma a barvy jako operační systém. Nastavení barev pro rámeček ide, dialogová okna, panely nástrojů a okna nástrojů jsou založeny na barevném schématu: světlénebo tmavé. Aktuální barevný motiv můžete změnit v [dialogovém okně Volby: Prostředí > Obecné](../../ide/reference/general-environment-options-dialog-box.md).
+Ve výchozím nastavení používají dialogová okna a okna nástrojů v aplikaci Visual Studio stejnou velikost písma a barvy jako operační systém. Nastavení barev pro rámeček rozhraní IDE, dialogová okna, panely nástrojů a okna nástrojů jsou založena na barevném schématu: světlá nebo tmavá. Aktuální barevný motiv můžete změnit v [dialogovém okně Možnosti: prostředí > obecné](../../ide/reference/general-environment-options-dialog-box.md).
 
-Můžete také zobrazit automaticky otevíraná okna v zobrazení Kód editoru. Tato okna vás mohou vyzvat k zadání s dostupnými členy aktuálního objektu a parametry k dokončení funkce nebo příkazu. Tato okna mohou být užitečná, pokud máte potíže s psaním. Však narušují fokus v editoru kódu, což může být problematické pro některé uživatele.
+Můžete také zobrazit automaticky otevíraná okna v zobrazení kódu editoru. Tato okna vás mohou vyzvat s dostupnými členy na aktuálním objektu a parametry k dokončení funkce nebo příkazu. Tato okna můžou být užitečná, pokud máte potíže při psaní. Nicméně narušují fokus v editoru kódu, což může být pro některé uživatele problematické.
 
-Zde je návod, jak vypnout automaticky otevíraná okna:
+Tady je postup, jak vypnout automaticky otevíraná okna:
 
-1. Z nabídky **Nástroje** zvolte **Možnosti**.
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-1. Zvolte **Textový editor** > **všechny obecné jazyky** > **.**
+1. Vyberte **Text Editor**  >  **All Languages**  >  **Obecné**jazyky.
 
-1. Zrušte zaškrtnutí políček **Automaticky seznam členů** a informací o **parametrech.**
+1. Zrušte zaškrtnutí políček **Členové automatického seznamu** a **informace o parametrech** .
 
-Můžete změnit uspořádání oken v integrovaném vývojovém prostředí (IDE) tak, aby co nejlépe vyhovovaly způsobu práce. Každé okno nástroje můžete ukotvit, uvolnit, skrýt nebo automaticky skrýt. Další informace o změně rozložení oken naleznete v [tématu Přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md).
+Můžete změnit uspořádání oken v integrovaném vývojovém prostředí (IDE) tak, aby nejlépe vyhovovala způsobu, jakým pracujete. Jednotlivá okna nástroje můžete ukotvit, floatovat, skrývat nebo automaticky skrývat. Další informace o tom, jak změnit rozložení oken, najdete v tématu [přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md).
 
 ### <a name="change-the-size-of-text"></a>Změna velikosti textu
 
-Nastavení textových oken nástrojů, například okna **Příkaz,** **Okno okamžité** a **Okno Výstup,** můžete změnit **pomocí** > nástrojů**Možnosti** > **prostředí** > **Písma a barvy**.
+Můžete změnit nastavení pro textová okna nástrojů, jako je okno **příkazového** řádku, okno **okamžité** okna a **výstup** pomocí **nástrojů**  >  **Možnosti**  >  **prostředí**  >  **písma a barvy**.
 
-Když v rozevíracím seznamu **Zobrazit nastavení pro** rozevírací seznam vyberete možnost **[Všechny textové nástroje Windows],** bude výchozí nastavení v rozevíracích seznamech **Popředí** položky a na **pozadí položky** uvedeno jako **Výchozí.** Chcete-li tato nastavení změnit, zvolte tlačítko **Vlastní.**
+Když vyberete **[všechna okna textových nástrojů]** v rozevíracím **seznamu zobrazit nastavení pro** , výchozí nastavení je uvedeno jako **výchozí** v rozevíracích seznamech **položky** a **pozadí položky** . Chcete-li změnit tato nastavení, klikněte na tlačítko **vlastní** .
 
-Můžete také změnit nastavení zobrazení textu v editoru. Jak na to:
+Můžete také změnit nastavení způsobu zobrazení textu v editoru. Jak na to:
 
-1. Z nabídky **Nástroje** zvolte **Možnosti**.
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-1. Zvolte**Písma a barvy** **prostředí** > .
+1. Vyberte **Environment**možnost  >  **písma a barvy**prostředí.
 
-1. V rozevírací nabídce **Zobrazit vyberte volbu.**
+1. Vyberte možnost v rozevírací nabídce **Zobrazit nastavení pro** .
 
-    Chcete-li změnit velikost písma pro text v editoru, zvolte **Textový editor**.
+    Chcete-li změnit velikost písma textu v editoru, vyberte možnost **textový editor**.
 
-    Chcete-li změnit velikost písma pro text v textových oknech nástrojů, zvolte **možnost [Všechny textové nástroje Windows]**.
+    Chcete-li změnit velikost písma textu v textových oknech nástrojů, vyberte možnost **[všechna okna textových nástrojů]**.
 
-    Chcete-li změnit velikost písma pro text popisu v editoru, zvolte **Editor Tooltip**.
+    Chcete-li změnit velikost písma textu popisku v editoru, klikněte na tlačítko **Editor popis**.
 
-    Chcete-li změnit velikost písma pro text v automaticky otevíraných líacích dokončování příkazů, zvolte **Dokončení výkazu**.
+    Chcete-li změnit velikost písma textu v místních oknech dokončování příkazů, vyberte možnost **dokončování příkazů**.
 
-1. V **možnosti Zobrazit položky**vyberte **položku Prostý text**.
+1. V **zobrazení položky**vyberte **prostý text**.
 
-1. V **části Písmo**vyberte nový typ písma.
+1. V **písma**vyberte nový typ písma.
 
-1. V **části Velikost**vyberte novou velikost písma.
+1. V rámečku **Velikost**vyberte novou velikost písma.
 
     > [!TIP]
-    > Chcete-li obnovit velikost textu pro textová okna a editory nástrojů, zvolte **Použít výchozí nastavení**.
+    > Chcete-li obnovit velikost textu textových oken a editorů založených na textu, vyberte možnost **použít výchozí**.
 
 7. Vyberte **OK**.
 
-### <a name="change-the-colors-that-are-used-in-the-ide"></a>Změna barev, které se používají v ide
+### <a name="change-the-colors-that-are-used-in-the-ide"></a>Změna barev použitých v integrovaném vývojovém prostředí
 
-Můžete změnit výchozí barvy pro text, indikátory okrajů, prázdné místo a prvky kódu v editoru. Jak na to:
+Můžete zvolit, že chcete změnit výchozí barvy pro text, indikátory okrajů, prázdné znaky a prvky kódu v editoru. Jak na to:
 
-1. Z nabídky **Nástroje** zvolte **Možnosti**.
+1. V nabídce **nástroje** klikněte na příkaz **Možnosti**.
 
-1. Ve složce **Prostředí** zvolte **Písma a barvy**.
+1. Ve složce **prostředí** vyberte možnost **písma a barvy**.
 
-1. V **části Zobrazit nastavení pro**zvolte Textový **editor**.
+1. V **zobrazení zobrazit nastavení pro**vyberte **textový editor**.
 
-1. V **rozesíláte položku**, jejíž zobrazení je třeba změnit, například **Prostý text**, Okraj **indikátoru**, **Viditelné prázdné místo**, Název **atributu HTML**nebo Atribut **XML**.
+1. V položce **Zobrazit položky**vyberte položku, jejíž zobrazení potřebujete změnit, například **prostý text**, **okraj indikátoru**, **viditelné prázdné znaky**, **název atributu HTML**nebo **atribut XML**.
 
-1. Vyberte nastavení zobrazení z následujících možností: **Popředí položky**, **Pozadí položky**a **Tučné**.
+1. Vyberte nastavení zobrazení z následujících možností: **popředí položky**, **pozadí položky**a **tučné**.
 
 1. Vyberte **OK**.
 
 > [!TIP]
-> Chcete-li použít barvy s vysokým kontrastem pro všechna okna aplikací v operačním systému, stiskněte **klávesu Left Alt**+**Left Shift**+**PrtScn**. Pokud je visual studio otevřené, zavřete a znovu otevřete, abyste plně implementovali barvy s vysokým kontrastem.
+> Chcete-li pro všechna okna aplikací v operačním systému použít barvy s vysokým kontrastem, stiskněte **levý ALT**levý klávesu + **SHIFT** + **Print Screen**. Pokud je Visual Studio otevřené, zavřete ho a znovu ho otevřete, abyste mohli plně implementovat barvy s vysokým kontrastem.
 
 ## <a name="toolbars"></a>Panely nástrojů
 
-Chcete-li zlepšit použitelnost a usnadnění přístupu panelu nástrojů, můžete přidat text do tlačítek panelu nástrojů.
+Pro zlepšení použitelnosti panelu nástrojů a usnadnění přístupu můžete přidat text na tlačítka panelu nástrojů.
 
-### <a name="to-assign-text-to-toolbar-buttons"></a>Přiřazení textu tlačítkům panelu nástrojů
+### <a name="to-assign-text-to-toolbar-buttons"></a>Přiřazení textu k tlačítkům panelu nástrojů
 
-1. V nabídce **Nástroje** zvolte **Přizpůsobit**.
+1. V nabídce **nástroje** vyberte možnost **přizpůsobit**.
 
-1. V dialogovém okně **Přizpůsobit** vyberte kartu **Příkazy.**
+1. V dialogovém okně **přizpůsobit** vyberte kartu **příkazy** .
 
-1. Vyberte **Panel nástrojů**a pak zvolte název panelu nástrojů, který obsahuje tlačítko, pro které chcete zobrazit text.
+1. Vyberte **panel nástrojů**a potom zvolte název panelu nástrojů, který obsahuje tlačítko, pro které chcete zobrazit text.
 
-1. V seznamu vyberte příkaz, který chcete změnit.
+1. V seznamu vyberte příkaz, který máte v úmyslu změnit.
 
-1. Zvolte **Změnit výběr**.
+1. Vyberte možnost **změnit výběr**.
 
-1. Zvolte **Obraz a Text**.
+1. Vyberte **obrázek a text**.
 
 ### <a name="to-modify-the-displayed-text-in-a-button"></a>Úprava zobrazeného textu v tlačítku
 
 1. Znovu vyberte **změnit výběr**.
 
-1. Přiléhající k In **Name**, vložte zadejte nový titulek pro vybrané tlačítko.
+1. Vedle pole **název**zadejte pro vybrané tlačítko Nový titulek.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-* [Funkce usnadnění v sadě Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
-* [Usnadnění pro Visual Studio pro Mac](/visualstudio/mac/accessibility/)
-* [Prostředky pro navrhování přístupných aplikací](../../ide/reference/resources-for-designing-accessible-applications.md)
+* [Funkce usnadnění v aplikaci Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Přístupnost pro Visual Studio pro Mac](/visualstudio/mac/accessibility/)
+* [Prostředky pro návrh přístupných aplikací](../../ide/reference/resources-for-designing-accessible-applications.md)

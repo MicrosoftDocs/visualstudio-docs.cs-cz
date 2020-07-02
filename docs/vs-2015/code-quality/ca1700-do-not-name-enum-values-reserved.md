@@ -1,5 +1,5 @@
 ---
-title: 'CA1700: Nejmenujte vyhrazené &#39;&#39; hodnoty výčtu | Microsoft Docs'
+title: 'CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39; | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9b5ddeb77a255bcfab121746cd8748c6fcb1f113
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57f2a2e5959860a99a921101ff5782f9bce9ace3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669306"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545649"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Nejmenujte vyhrazené hodnoty &#39;výčtu&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Nejmenujte hodnoty výčtu &#39;vyhrazené&#39;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotNameEnumValuesReserved|
 |CheckId|CA1700|
 |Kategorie|Microsoft. pojmenování|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název členu výčtu obsahuje slovo "rezervované".
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -40,11 +40,11 @@ ms.locfileid: "72669306"
 
  Místo použití rezervovaného člena přidejte do výčtu v budoucí verzi nového člena. Ve většině případů není přidání nového člena zásadní změnou, pokud sčítání nezpůsobí změnu hodnot původních členů.
 
- V omezeném počtu případů je přidání člena zásadní změnou, i když původní hodnoty zachovají původní členové. Primárně nemůže být nový člen vrácen z existujících cest kódu bez přerušení, které používají příkaz `switch` (`Select` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) na vrácené hodnotě, která zahrnuje celý seznam členů a který vyvolal výjimku ve výchozím případě. Sekundárním problémem je, že klientský kód nemusí zpracovávat změnu v chování z metod reflexe, jako je <xref:System.Enum.IsDefined%2A?displayProperty=fullName>. V případě, že by se měl nový člen vrátit z existujících metod nebo dojde k nekompatibilitě známé aplikace z důvodu nedostatečného využití reflexe, jediného nepřerušeného řešení je:
+ V omezeném počtu případů je přidání člena zásadní změnou, i když původní hodnoty zachovají původní členové. Primárně nemůže být nový člen vrácen z existujících cest kódu bez přerušení, které používají `switch` `Select` příkaz (in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) na vrácené hodnotě, která zahrnuje celý seznam členů a který vyvolá výjimku ve výchozím případě. Sekundárním problémem je, že klientský kód nemusí zpracovávat změnu v chování z metod reflexe, jako je <xref:System.Enum.IsDefined%2A?displayProperty=fullName> . V případě, že by se měl nový člen vrátit z existujících metod nebo dojde k nekompatibilitě známé aplikace z důvodu nedostatečného využití reflexe, jediného nepřerušeného řešení je:
 
 1. Přidejte nový výčet, který obsahuje původní a nové členy.
 
-2. Označte původní výčet atributem <xref:System.ObsoleteAttribute?displayProperty=fullName>.
+2. Označte původní výčet <xref:System.ObsoleteAttribute?displayProperty=fullName> atributem.
 
    Použijte stejný postup pro všechny externě viditelné typy nebo členy, které zveřejňují původní výčet.
 
@@ -57,9 +57,9 @@ ms.locfileid: "72669306"
 ## <a name="related-rules"></a>Související pravidla
  [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1712: Nezačínejte hodnoty výčtu s názvem typu](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+ [CA1712: Nezačínejte hodnoty výčtu názvem typu](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
- [CA1028: Úložiště výčtu by měl být Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
+ [CA1028: Úložiště výčtu by mělo být Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
  [CA1008: Výčty by měly mít nulovou hodnotu](../code-quality/ca1008-enums-should-have-zero-value.md)
 

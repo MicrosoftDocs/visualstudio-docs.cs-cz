@@ -1,8 +1,8 @@
 ---
-title: Element LocationField (šablony projektů sady Visual Studio) | Dokumenty společnosti Microsoft
+title: LocationField – – element (šablony projektů sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#LocationField
 helpviewer_keywords:
@@ -13,56 +13,57 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d993e84bec41486ef4dce6ad98c61f23ab2a46bd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 8a5f2f47eef9c3cb047b5550e466585ef70e8f4e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770022"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>Element LocationField (šablony projektů sady Visual Studio)
-Určuje, zda je textové pole **Umístění** v dialogovém okně **Nový projekt** pro šablonu projektu povoleno, zakázáno nebo skryto.
+# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField – – element (šablony projektů sady Visual Studio)
+Určuje, jestli je textové pole **umístění** v dialogovém okně **Nový projekt** povolené, zakázané nebo skryté pro šablonu projektu.
 
- \<> VSTemplate \<> \<TemplateData>
+ \<VSTemplate> \<TemplateData>
+ \<LocationField>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <LocationField> Enabled/Disabled/Hidden </LocationField>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Kategorizuje šablonu a definuje, jak se zobrazí v **novém projektu**.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v **novém projektu**.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
  Platné textové hodnoty jsou:
 
-- `Enabled`, který určuje, že je povoleno pole **Umístění** dialogového okna **Nový projekt.**
+- `Enabled`, který určuje, že je povoleno pole **umístění** v dialogovém okně **Nový projekt** .
 
-- `Disabled`, který určuje, že pole **Umístění** dialogového okna **Nový projekt** je zakázáno.
+- `Disabled`, který určuje, že pole **umístění** v dialogovém okně **Nový projekt** je zakázáno.
 
-- `Hidden`, který určuje, že pole **Umístění** dialogového okna **Nový projekt** je skryté.
+- `Hidden`, který určuje, že pole **umístění** v dialogovém okně **Nový projekt** je skryté.
 
 ## <a name="remarks"></a>Poznámky
  Výchozí hodnota je `Enabled`.
 
- Textové pole **Umístění** v dialogovém okně **Nový projekt** umožňuje uživatelům změnit výchozí adresář, ve kterém jsou uloženy nové projekty.
+ Textové pole **umístění** v dialogovém okně **Nový projekt** umožňuje uživatelům změnit výchozí adresář, ve kterém jsou uloženy nové projekty.
 
- Hodnota zadaná `Location` v prvku je dodržena pouze dialogovéokno, pokud základní systém projektu podporuje.
+ Hodnota zadaná v `Location` elementu je dodržena pouze v dialogovém okně, pokud je příslušný systém projektu podporuje.
 
 ## <a name="example"></a>Příklad
  Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu.
@@ -92,6 +93,6 @@ Určuje, zda je textové pole **Umístění** v dialogovém okně **Nový projek
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také:
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

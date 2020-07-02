@@ -1,8 +1,8 @@
 ---
 title: Možnosti zpětné vazby
-description: Zajímají nás vaše nápady na vylepšení našich produktů a dokumentace; Zde je návod, jak nám poslat zpětnou vazbu.
+description: Zajímá vás vaše nápady na vylepšení našich produktů a dokumentace; Tady je postup, jak nám poslat zpětnou vazbu.
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: seoapril2019
 helpviewer_keywords:
 - product support [Visual Studio]
@@ -15,36 +15,36 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 6577d49094cd4e2718507eb0c1f4f83ff146da05
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a9c71837b83aa31b56ba1bd8ccb3384e4552d1be
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75847466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769999"
 ---
-# <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby sady Visual Studio
+# <a name="visual-studio-feedback-options"></a>Možnosti zpětné vazby v aplikaci Visual Studio
 
-Proč nám posílat zpětnou vazbu? Protože bereme zpětnou vazbu od zákazníků vážně; Řídí hodně z toho, co děláme. Zde je návod, jak nás kontaktovat, abychom mohli směrovat vaši zpětnou vazbu na správnou osobu nebo tým.
+Proč nám poslat zpětnou vazbu? Vzhledem k tomu, že povedeme zpětnou vazbu zákazníků, To zahrnuje mnoho toho, co máme. Tady je postup, jak nás kontaktovat, abychom mohli směrovat vaši zpětnou vazbu ke správné osobě nebo týmu.
 
 ## <a name="report-a-problem"></a>Nahlášení problému
 
 ::: moniker range="vs-2019"
 
-Pokud narazíte na&mdash;problémy s Visual Studio, jako&mdash;jsou pády, pomalý výkon nebo neočekávané chování, dejte nám vědět pomocí nástroje **Nahlásit problém.** V sadě Visual Studio zvolte ikonu zpětné vazby v pravém horním rohu nebo zvolte **Odeslat** > **zpětnou vazbu** > **Nahlásit problém** z řádku nabídek.
+Pokud máte problémy se sadou Visual Studio &mdash; , jako jsou havárie, výkon pomalá nebo neočekávané chování, &mdash; dejte nám informace pomocí nástroje **nahlásit problém** . V aplikaci Visual Studio klikněte na ikonu zpětné vazby v pravém horním rohu nebo vyberte možnost **pomáhat**  >  **Odeslat zpětnou vazbu**  >  **nahlásit problém** z řádku nabídek.
 
-![Ikona Odeslat zpětnou vazbu v ide Sady Visual Studio 2019](./media/vs-2019/send-feedback-icon.png)
+![Ikona pro odeslání zpětné vazby v integrovaném vývojovém prostředí sady Visual Studio 2019](./media/vs-2019/send-feedback-icon.png)
 
-Dále Visual Studio otevře rozhraní [komunity pro vývojáře,](https://developercommunity.visualstudio.com) kde se můžete přihlásit a nahlásit problém. Další informace naleznete v [tématu Jak nahlásit problém s visual studio](how-to-report-a-problem-with-visual-studio.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud narazíte na&mdash;problémy s Visual Studio, jako&mdash;jsou pády, pomalý výkon nebo neočekávané chování, dejte nám vědět pomocí nástroje **Nahlásit problém.** V sadě Visual Studio zvolte ikonu zpětné vazby vedle vyhledávacího pole nebo zvolte **Odeslat** > **zpětnou vazbu** > **Nahlásit problém** z panelu nabídek.
+Pokud máte problémy se sadou Visual Studio &mdash; , jako jsou havárie, výkon pomalá nebo neočekávané chování, &mdash; dejte nám informace pomocí nástroje **nahlásit problém** . V aplikaci Visual Studio vyberte ikonu zpětné vazby vedle vyhledávacího pole nebo klikněte **na tlačítko**  >  **Odeslat zpětnou vazbu**  >  **ohlásit problém** z řádku nabídek.
 
-![Ikona Odeslat zpětnou vazbu v ide Sady Visual Studio 2019](./media/send-feedback-icon.png)
+![Ikona pro odeslání zpětné vazby v integrovaném vývojovém prostředí sady Visual Studio 2019](./media/send-feedback-icon.png)
 
-Dále Visual Studio otevře rozhraní [komunity pro vývojáře,](https://developercommunity.visualstudio.com) kde se můžete přihlásit a nahlásit problém. Další informace naleznete v [tématu Jak nahlásit problém s visual studio](how-to-report-a-problem-with-visual-studio.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a nahlásit problém. Další informace najdete v tématu [postup nahlášení problému se sadou Visual Studio](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
@@ -52,35 +52,35 @@ Dále Visual Studio otevře rozhraní [komunity pro vývojáře,](https://develo
 
 ::: moniker range="vs-2019"
 
-Pokud máte nápad nebo návrh, jak visual studio vylepšit, dejte nám vědět pomocí nástroje **Navrhnout funkci.** V sadě Visual Studio zvolte ikonu zpětné vazby v pravém horním rohu nebo zvolte **Odeslat** > **zpětnou vazbu** > **Navrhnout funkci** z panelu nabídek.
+Máte-li nápad nebo návrh, který aplikaci Visual Studio vylepší, dejte nám informace pomocí nástroje **navrhnout funkci** . V aplikaci Visual Studio klikněte na ikonu zpětné vazby v pravém horním rohu nebo vyberte možnost **help**  >  **Odeslat názor**  >  **navrhnout funkci** z řádku nabídek.
 
-Visual Studio dále otevře rozhraní [komunity pro vývojáře,](https://developercommunity.visualstudio.com) kde se můžete přihlásit a sdílet svůj nápad. Další informace naleznete [v tématu Suggest a feature for Visual Studio](suggest-a-feature.md).
+V dalším kroku Visual Studio otevře rozhraní [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Pokud máte nápad nebo návrh, jak visual studio vylepšit, dejte nám vědět pomocí nástroje **Poskytnout návrh.** V sadě Visual Studio zvolte ikonu zpětné vazby vedle vyhledávacího pole nebo zvolte **Odeslat** > **zpětnou vazbu** > **Poskytnout návrh** z panelu nabídek.
+Máte-li nápad nebo návrh, který aplikaci Visual Studio vylepší, dejte nám informace pomocí nástroje pro **poskytování návrhů** . V aplikaci Visual Studio vyberte ikonu zpětné vazby vedle vyhledávacího pole nebo klikněte **na tlačítko**  >  **Odeslat zpětnou vazbu**  >  **Zadejte návrh** z řádku nabídek.
 
-Visual Studio dále otevře stránku [Komunity vývojářů,](https://developercommunity.visualstudio.com) kde se můžete přihlásit a sdílet svůj nápad. Další informace naleznete [v tématu Suggest a feature for Visual Studio](suggest-a-feature.md).
+Dále Visual Studio otevře stránku [komunity vývojářů](https://developercommunity.visualstudio.com) , kde se můžete přihlásit a sdílet svůj nápad. Další informace najdete v tématu [navrhnout funkci pro Visual Studio](suggest-a-feature.md).
 
 ::: moniker-end
 
-## <a name="improve-the-documentation"></a>Zlepšete dokumentaci
+## <a name="improve-the-documentation"></a>Zlepšení dokumentace
 
-Existují dva způsoby, jak nám můžete pomoci zlepšit dokumentaci:
+Existují dva způsoby, jak nám pomoci zlepšit dokumentaci:
 
-* Použijte nástroj **Je tato stránka užitečná?**
-* Pomocí svého účtu GitHub můžete poskytnout zpětnou vazbu pro libovolnou stránku Visual Studia v [docs.microsoft.com](/visualstudio/). Chcete-li tak učinit, zvolte tlačítko **Odeslat zpětnou vazbu o** > **této stránce** v dolní části libovolné stránky dokumentace.
+* Použijte **tuto stránku: Tento nástroj je užitečný** pro odpověď v pravém horním rohu každé stránky dokumentace.
+* Použijte svůj účet GitHub k poskytnutí zpětné vazby k libovolné stránce sady Visual Studio na [docs.Microsoft.com](/visualstudio/). Provedete to tak, že v dolní části stránky dokumentace kliknete na tlačítko **Odeslat názor**na  >  **tuto stránku** .
 
 ## <a name="contact-microsoft-support"></a>Obraťte se na podporu Microsoftu
 
-Informace o podpoře sady Visual Studio najdete na stránce [Údržba životního cyklu produktu &.](/visualstudio/releases/2019/servicing/) Další produkty a služby společnosti Microsoft naleznete v [tématu podpora společnosti Microsoft](https://support.microsoft.com/) pro online nápovědu.
+Informace o podpoře pro Visual Studio najdete na stránce věnované [obsluze & životní cyklus produktu](/visualstudio/releases/2019/servicing/) . Další produkty a služby Microsoftu najdete v tématu [Podpora Microsoftu](https://support.microsoft.com/) pro online nápovědu.
 
 > [!NOTE]
-> Podpora mimo území Spojených států a Kanady se může lišit. Seznam regionálních kontaktů naleznete v [tématu Weby společnosti Microsoft po celém světě](https://www.microsoft.com/worldwide/).
+> Podpora mimo území Spojených států a Kanady se může lišit. Seznam regionálních kontaktů najdete na [webu Microsoft celosvětově](https://www.microsoft.com/worldwide/).
 
-Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou smlouvy k dispozici prostřednictvím různých nabídek podnikové podpory. Další informace naleznete v tématu [Řešení podnikové podpory společnosti Microsoft](https://www.microsoft.com/industry/services/support).
+Pro větší organizace, které vyžadují spravovanou podporu přímo od společnosti Microsoft, jsou k dispozici smlouvy prostřednictvím různých nabídek Enterprise support. Další informace najdete v tématu [řešení Microsoft Enterprise support](https://www.microsoft.com/industry/services/support).
 
 Pokud jste produkt obdrželi již nainstalovaný s novým počítačem nebo zařízením, výrobce hardwaru poskytuje technickou podporu a odbornou pomoc k tomuto softwaru. Pro podporu se obraťte přímo na výrobce.
 
@@ -88,15 +88,15 @@ Služby odborné pomoci společnosti Microsoft se řídí aktuálními cenami, t
 
 ## <a name="ask-the-community"></a>Zeptejte se komunity
 
-Pokud chcete sdílet otázky a odpovědi s ostatními vývojáři, zvažte spojení s nimi na následujících komunitních webech:
+Pokud chcete sdílet otázky a odpovědi s dalšími vývojáři, zvažte jejich připojení na následujících webech komunity:
 
-* [Fóra MSDN](https://social.msdn.microsoft.com/Forums/home)
-* Visual Studio na [Redditu](https://www.reddit.com/r/VisualStudio/)
+* [Fóra na webu MSDN](https://social.msdn.microsoft.com/Forums/home)
+* Visual Studio na [Reddit](https://www.reddit.com/r/VisualStudio/)
 * [Stack Overflow](https://stackoverflow.com/search?q=visual+studio+-code)
 
-Můžete také zobrazit kód od jiných vývojářů a sdílet své vlastní příklady na stránce [Procházet ukázky kódu.](/samples/browse/)
+Můžete si také zobrazit kód od jiných vývojářů a sdílet vlastní příklady na stránce [Procházet ukázky kódu](/samples/browse/) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-* [Poradce při potížích s instalací a upgradem](../install/troubleshooting-installation-issues.md)
+* [Řešení potíží s instalací a upgradem](../install/troubleshooting-installation-issues.md)
 * [Ochrana osobních údajů komunity vývojářů](developer-community-privacy.md)

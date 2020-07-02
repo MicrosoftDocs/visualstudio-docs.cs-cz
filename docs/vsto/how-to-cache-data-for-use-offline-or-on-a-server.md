@@ -59,7 +59,7 @@ ms.locfileid: "85546182"
 
 4. V okně **vlastnosti** nastavte vlastnost **modifikátory** na hodnotu **Public** (ve výchozím nastavení je to **interní**).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Data mezipaměti](../vsto/caching-data.md)
 - [Postupy: ukládání zdroje dat v dokumentu Office do mezipaměti prostřednictvím kódu programu](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
 - [Postupy: ukládání dat do mezipaměti v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)

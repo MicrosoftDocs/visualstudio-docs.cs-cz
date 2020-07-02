@@ -1,7 +1,7 @@
 ---
-title: Kopírování a vkládání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu
+title: Kopírování a vkládání obrazců v dokumentu Visia prostřednictvím kódu programu
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,40 +13,40 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 074a276fe37ef713d38078f60c4bee95145c4d8b
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 05b0d20ba7bd560fc60090bba84b78691bb3e753
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402226"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546091"
 ---
-# <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>Postupy: Programově kopírování a vkládání obrazců do dokumentů aplikace Visio
-  Programově můžete zkopírovat tvary na jedné stránce dokumentu a vložte je do novou stránku ve stejném dokumentu. Můžete vkládat do výchozího umístění (střední části okna aktivní) nebo do stejné souřadnice umístění měly na původní stránku.
+# <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>Postupy: kopírování a vkládání tvarů v dokumentu aplikace Visio prostřednictvím kódu programu
+  Můžete programově zkopírovat obrazce na jednu stránku dokumentu a vložit je do nové stránky do stejného dokumentu. Můžete zvolit jejich vložení do výchozího umístění (uprostřed aktivního okna) nebo do stejného umístění souřadnic, jako kdyby byla na původní stránce.
 
 ## <a name="copy-and-paste-shapes"></a>Kopírování a vkládání obrazců
- Podrobnosti o objektovém modelu najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Shape.DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle), [Microsoft.Office.Interop.Visio.Shape.DrawOval](/office/vba/api/Visio.Shape.DrawOval), [ Microsoft.Office.Interop.Visio.Shape.Copy](/office/vba/api/Visio.Shape.Copy), a [Microsoft.Office.Interop.Visio.Shape.Paste](/office/vba/api/Visio.Shape.Paste) metody a [ Microsoft.Office.Interop.Visio.VisCutCopyPasteCodes.visCopyPasteNormal](/office/vba/api/Visio.viscutcopypastecodes) příznak.
+ Podrobnosti o objektovém modelu naleznete v referenční dokumentaci k jazyku VBA pro [Microsoft. Office. Interop. Visio. Shape. DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle), [Microsoft. Office. Interop. Visio. Shape. DrawOval](/office/vba/api/Visio.Shape.DrawOval), [Microsoft. Office. Interop. Visio. Shape. Copy](/office/vba/api/Visio.Shape.Copy)a [Microsoft. Office. Interop. Visio. Shape. past](/office/vba/api/Visio.Shape.Paste) a Microsoft. [Office. Interop. Visio. VisCutCopyPasteCodes. visCopyPasteNormal](/office/vba/api/Visio.viscutcopypastecodes) .
 
-### <a name="to-copy-shapes-to-the-center-of-another-page"></a>Kopírování tvary do středu jinou stránku
+### <a name="to-copy-shapes-to-the-center-of-another-page"></a>Kopírování tvarů do středu jiné stránky
 
-- Následující příklad ukazuje, jak kopírovat tvary od první stránky a vkládat je do centra na druhé stránce.
+- Následující příklad ukazuje, jak zkopírovat tvary z první stránky a vložit je do středu druhé stránky.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#14)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#14)]
 
-## <a name="copy-and-paste-shapes-with-the-same-positions"></a>Kopírování a vkládání obrazců s na stejném místě
- Podrobnosti o objektovém modelu najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Shape.DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle), [Microsoft.Office.Interop.Visio.Shape.DrawOval](/office/vba/api/Visio.Shape.DrawOval), [ Microsoft.Office.Interop.Visio.Shape.Copy](/office/vba/api/Visio.Shape.Copy), a [Microsoft.Office.Interop.Visio.Shape.Paste](/office/vba/api/Visio.Shape.Paste) metody a [ Microsoft.Office.Interop.Visio.VisCutCopyPasteCodes.visCopyPasteNoTranslate](/office/vba/api/Visio.viscutcopypastecodes) příznak.
+## <a name="copy-and-paste-shapes-with-the-same-positions"></a>Kopírovat a vložit obrazce se stejnými umístěními
+ Podrobnosti o objektovém modelu naleznete v referenční dokumentaci k jazyku VBA pro [Microsoft. Office. Interop. Visio. Shape. DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle), [Microsoft. Office. Interop. Visio. Shape. DrawOval](/office/vba/api/Visio.Shape.DrawOval), [Microsoft. Office. Interop. Visio. Shape. Copy](/office/vba/api/Visio.Shape.Copy)a [Microsoft. Office. Interop. Visio. Shape. past](/office/vba/api/Visio.Shape.Paste) a Microsoft. [Office. Interop. Visio. VisCutCopyPasteCodes. visCopyPasteNoTranslate](/office/vba/api/Visio.viscutcopypastecodes) .
 
- Pokud je potřeba řídit formát vložených informací a (volitelně) vytvořit odkaz na zdrojový soubor (například dokument aplikace Microsoft Office Word), použijte metodu PasteSpecial.
+ Pokud potřebujete řídit formát vložených informací a (volitelně) vytvořit odkaz na zdrojový soubor (například systém Microsoft Office wordový dokument), použijte metodu PasteSpecial.
 
-### <a name="to-copy-shapes-and-shape-locations-to-another-page"></a>Zkopírujte tvary a umístění obrazce na jinou stránku
+### <a name="to-copy-shapes-and-shape-locations-to-another-page"></a>Kopírování obrazců a umístění obrazců na jinou stránku
 
-- Následující příklad ukazuje, jak zkopírovat tvary od první stránky a vložte je do druhé stránce s jejich původní souřadnici umístění.
+- Následující příklad ukazuje, jak zkopírovat obrazce z první stránky a vložit je do druhé stránky s jejich původními umístěními souřadnic.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#15)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#15)]
 
 ## <a name="see-also"></a>Viz také:
-- [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)
+- [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
 - [Práce s obrazci aplikace Visio](../vsto/working-with-visio-shapes.md)
-- [Postupy: Přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)
+- [Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)

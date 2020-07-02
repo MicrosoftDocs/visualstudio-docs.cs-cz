@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Změnit velikost ovládacích prvků v buňkách listu'
+title: 'Postupy: Změna velikosti ovládacích prvků v buňkách listu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 08c65be450c45d7797984105723d5ae1b01a2d63
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252078"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545870"
 ---
-# <a name="how-to-resize-controls-within-worksheet-cells"></a>Postupy: Změnit velikost ovládacích prvků v buňkách listu
+# <a name="how-to-resize-controls-within-worksheet-cells"></a>Postupy: Změna velikosti ovládacích prvků v buňkách listu
   Když změníte velikost sloupců nebo řádků na listu, všechny ovládací prvky hostitele v buňkách se automaticky změní na výšku nebo šířku buňky, u které se změnila velikost. Ovládací prvky model Windows Forms ve výchozím nastavení automaticky nemění velikost.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "71252078"
      Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek změní velikost tak, aby odpovídala buňce.
 
 ## <a name="resize-controls-at-run-time"></a>Změnit velikost ovládacích prvků za běhu
- Pokud přidáte model Windows Forms ovládací prvek za běhu a předáte <xref:Microsoft.Office.Interop.Excel.Range> ho jako umístění pro ovládací prvek, ovládací prvek se změní automaticky, když se změní velikost buňky listu, která obsahuje rozsah.
+ Pokud přidáte model Windows Forms ovládací prvek za běhu a předáte ho <xref:Microsoft.Office.Interop.Excel.Range> jako umístění pro ovládací prvek, ovládací prvek se změní automaticky, když se změní velikost buňky listu, která obsahuje rozsah.
 
 ### <a name="to-make-controls-resize-with-cells-at-run-time"></a>Chcete-li změnit velikost ovládacích prvků na buňky v době běhu
 
@@ -68,7 +68,7 @@ ms.locfileid: "71252078"
 
 ### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>Změna chování ovládacího prvku tak, aby se nezměnila velikost ani přesun s buňkou
 
-1. Zavolejte vlastnost umístění ovládacího prvku a nastavte hodnotu na <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>.
+1. Zavolejte vlastnost umístění ovládacího prvku a nastavte hodnotu na <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating> .
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]
@@ -76,6 +76,6 @@ ms.locfileid: "71252078"
 ## <a name="see-also"></a>Viz také:
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
 - [Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Postupy: Při tisku skrývat ovládací prvky na listech](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
+- [Postupy: skrytí ovládacích prvků na listech při tisku](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
 - [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Omezení model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

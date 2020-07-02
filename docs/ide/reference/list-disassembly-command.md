@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Debug.ListDisassembly command
 - list disassembly command
 ms.assetid: eb363e35-e86a-4121-966f-991210c27e2a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aaeab2e65088b8f1bfce3a6a12f8cd66c3245b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770652"
 ---
 # <a name="list-disassembly-command"></a>Zobrazit zpětný překlad – příkaz
-Zahájí proces ladění a umožňuje určit způsob zpracování chyb.
+Zahájí proces ladění a umožňuje určit, jak se mají chyby zpracovávat.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cmd
 Debug.ListDisassembly [/count:number] [/endaddress:expression]
@@ -32,31 +32,31 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ```
 
 ## <a name="switches"></a>Přepínače
-Každý přepínač lze vyvolat pomocí jeho kompletní formulář nebo krátký formulář.
+Každý přepínač lze vyvolat buď pomocí jeho úplného formátu, nebo krátkého tvaru.
 
-/count: `number` [or] /c: `number` [or] `number` /length: [or] /l:`number`
+/Count: `number` [nebo]/c: `number` [nebo]/length: `number` [nebo]/l:`number`
 
-Nepovinný parametr. Počet pokynů k zobrazení. Výchozí hodnota je 8.
+Nepovinný parametr. Počet instrukcí, které se mají zobrazit Výchozí hodnota je 8.
 
-/koncová `expression` adresa: [nebo] /e:`expression`
+/endaddress: `expression` [nebo]/e:`expression`
 
-Nepovinný parametr. Adresa, na které chcete zastavit demontáž.
+Nepovinný parametr. Adresa, na které se má zastavit zpětný překlad.
 
-/codebytes:`yes` `no`&#124;[nebo] /bytes:`yes`&#124;`no` [or] /b:`yes`&#124;`no`
+/codebytes: `yes`&#124;`no` [nebo]/bytes: `yes`&#124;`no` [nebo]/b: `yes`&#124;`no`
 
-Nepovinný parametr. Označuje, zda se mají zobrazit bajty kódu. Výchozí hodnota `no`je .
+Nepovinný parametr. Označuje, zda se mají zobrazovat bajty kódu. Výchozí hodnota je `no` .
 
-/zdroj:`yes` `no`&#124;[nebo]`yes` /s:&#124;`no`
+/Source: `yes`&#124;`no` [nebo]/s: `yes`&#124;`no`
 
-Nepovinný parametr. Označuje, zda se má zobrazit zdrojový kód. Výchozí hodnota `no`je .
+Nepovinný parametr. Označuje, zda se má zobrazit zdrojový kód. Výchozí hodnota je `no` .
 
-/symbolnames:`yes` `no`&#124;[or]`yes` /names:&#124;`no` [or] /n:`yes`&#124;`no`
+/symbolnames: `yes`&#124;`no` [nebo]/names: `yes`&#124;`no` [nebo]/n: `yes`&#124;`no`
 
-Nepovinný parametr. Označuje, zda se mají zobrazovat názvy symbolů. Výchozí hodnota `yes`je .
+Nepovinný parametr. Označuje, zda se mají zobrazovat názvy symbolů. Výchozí hodnota je `yes` .
 
- [/čísla`yes` řádků: `no`&#124;]
+ [/linenumbers: `yes`&#124;`no` ]
 
-Nepovinný parametr. Umožňuje zobrazení čísel řádků přidružených ke zdrojovému kódu. Přepínač /source musí mít `yes` hodnotu přepínače /linenumbers.
+Nepovinný parametr. Povoluje zobrazení čísel řádků přidružených ke zdrojovému kódu. Přepínač/source musí mít hodnotu `yes` pro použití přepínače/linenumbers.
 
 ## <a name="example"></a>Příklad
 
@@ -64,11 +64,11 @@ Nepovinný parametr. Umožňuje zobrazení čísel řádků přidružených ke z
 >Debug.ListDisassembly
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Listovat zásobník volání – příkaz](../../ide/reference/list-call-stack-command.md)
 - [Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Najít/Příkazové pole](../../ide/find-command-box.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

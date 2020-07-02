@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Zobrazení doplňku uživatele chyb rozhraní'
+title: 'Postupy: zobrazení chyb uživatelského rozhraní doplňku'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,35 +15,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78cc4d2e85e2f7a5347fe0c8927c855160fbb511
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 49985589c021192454bf0dd58929c9ef5646aec9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441790"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545779"
 ---
-# <a name="how-to-show-add-in-user-interface-errors"></a>Postupy: Zobrazení doplňku uživatele chyb rozhraní
-  Ve výchozím nastavení pokud doplňku VSTO pokusí pracovat s Microsoft Office uživatelského rozhraní (UI) a selže, žádná se chybová zpráva. Můžete ale nakonfigurovat aplikace Microsoft Office pro zobrazení zprávy pro chyby, které se vztahují na uživatelské rozhraní. Tyto zprávy můžete použít k určení toho, proč se nezobrazí vlastní pás karet nebo proč se zobrazí pásu karet, ale žádné ovládací prvky se zobrazí.
+# <a name="how-to-show-add-in-user-interface-errors"></a>Postupy: zobrazení chyb uživatelského rozhraní doplňku
+  Ve výchozím nastavení platí, že pokud se doplněk VSTO pokusí manipulovat s systém Microsoft Office uživatelském rozhraní (UI) a chyba, nezobrazí se žádná chybová zpráva. Můžete ale nakonfigurovat aplikace systém Microsoft Office, aby zobrazovaly zprávy o chybách, které se vztahují k uživatelskému rozhraní. Tyto zprávy můžete použít k určení, proč se nezobrazí vlastní pás karet, nebo proč se pás karet zobrazí, ale nezobrazí se žádné ovládací prvky.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-## <a name="to-show-vsto-add-in-user-interface-errors"></a>K zobrazení chyb rozhraní uživatele doplňku VSTO
+## <a name="to-show-vsto-add-in-user-interface-errors"></a>Zobrazení chyb uživatelského rozhraní doplňku VSTO
 
 1. Spusťte aplikaci.
 
-2. Klikněte na tlačítko **souboru** kartu.
+2. Klikněte na kartu **soubor** .
 
-3. Klikněte na tlačítko **možnosti**.
+3. Klikněte na tlačítko **Možnosti**.
 
-4. V podokně kategorie, klikněte na tlačítko **Upřesnit**.
+4. V podokně kategorie klikněte na **Upřesnit**.
 
-5. V podokně podrobností vyberte **doplňku VSTO zobrazení chyb uživatelského rozhraní**a potom klikněte na tlačítko **OK**.
+5. V podokně podrobností vyberte možnost **Zobrazit chyby uživatelského rozhraní doplňku VSTO**a pak klikněte na tlačítko **OK**.
 
     > [!NOTE]
-    > Pro aplikaci Outlook **doplňku VSTO zobrazení chyb uživatelského rozhraní** zaškrtávacího políčka se nachází v **Developer** části podokna podrobností. U ostatních aplikací se nachází na zaškrtávací políčko v **Obecné** části podokna podrobností.
+    > V případě aplikace Outlook je zaškrtávací políčko **Zobrazit chyby uživatelského rozhraní doplňku VSTO** umístěno v části **vývojář** v podokně podrobností. U ostatních aplikací se zaškrtávací políčko nachází v části **Obecné** v podokně podrobností.
 
 ## <a name="see-also"></a>Viz také:
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
-- [Vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md)
+- [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)

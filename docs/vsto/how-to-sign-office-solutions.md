@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Podepisování řešení pro Office'
+title: 'Postupy: podepisování řešení pro systém Office'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,39 +14,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1fff7555c17f4fdac43de2690f8e133cc32881db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 23afc171fd97620b3e6801b8d199da6890198d8b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971118"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545753"
 ---
-# <a name="how-to-sign-office-solutions"></a>Postupy: Podepisování řešení pro Office
-  Pokud podepíšete řešení, můžete udělit důvěryhodnosti řešení pomocí certifikátu prokázat. Můžete použít stejný certifikát pro více řešení, a všechna řešení budou důvěryhodné žádné další aktualizace zásad.
+# <a name="how-to-sign-office-solutions"></a>Postupy: podepisování řešení pro systém Office
+  Pokud podepíšete řešení, můžete k řešení důvěřovat pomocí certifikátu jako legitimace. Stejný certifikát můžete použít pro více řešení a všechna řešení budou důvěryhodná bez dalších aktualizací zásad zabezpečení.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Když ručně upravíte aplikace a manifesty nasazení s použitím Manifest Generation and Editing Tool (*mage.exe* a *mageui.exe*), musíte znovu podepsat manifesty, abyste mohli používat. Další informace najdete v tématu [jak: Znovu podepište manifesty aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+ Pokud ručně upravíte manifesty aplikace a nasazení pomocí Manifest Generation and Editing Tool (*mage.exe* a *mageui.exe*), musíte manifest znovu podepsat předtím, než je můžete použít. Další informace najdete v tématu [Postup: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
 ## <a name="sign-by-using-a-certificate"></a>Podepsat pomocí certifikátu
- Certifikát je soubor, který obsahuje jedinečný klíč a identita vydavatele řešení. Můžete koupit certifikáty od certifikační autority, nebo vytvořit svůj vlastní certifikát a nechat podepsat certifikační autority.
+ Certifikát je soubor, který obsahuje jedinečný klíč a identitu vydavatele řešení. Můžete koupit certifikáty od certifikační autority nebo vytvořit vlastní certifikát a vlastnit si ho certifikační autorita.
 
- Visual Studio podepíše řešení pro systém Office s dočasný certifikát pro povolení ladění. Dočasný certifikát byste neměli používat v nasazeném řešení jako důkaz.
+ Sada Visual Studio podepisuje řešení pro Office s dočasným certifikátem pro povolení ladění. V nasazených řešeních jako legitimace byste neměli používat dočasný certifikát.
 
-### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>K podepisování řešení pro Office s použitím certifikátu
+### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>Podepsání řešení Office pomocí certifikátu
 
-1. Na **projektu** nabídky, klikněte na tlačítko _SolutionName_**vlastnosti**.
+1. V nabídce **projekt** klikněte _na příkaz_**Vlastnosti vlastností**.
 
-2. Klikněte na tlačítko **podepisování** kartu.
+2. Klikněte na kartu **podepisování** .
 
 3. Vyberte **podepsat manifesty ClickOnce**.
 
-4. Vyhledejte certifikát kliknutím **vybírat Store** nebo **vybrat ze souboru** a přejdete k certifikátu.
+4. Vyhledejte certifikát kliknutím na **vybrat ze Storu** nebo **výběrem ze souboru** a přechodem na certifikát.
 
-5. Chcete-li ověřit, jestli se používá správný certifikát, klikněte na tlačítko **další podrobnosti** zobrazíte informace o certifikátu.
+5. Chcete-li ověřit, zda je používán správný certifikát, klikněte na tlačítko **Další podrobnosti** a zobrazte informace o certifikátu.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)
-- [Zajistit jeho důvěryhodnost do řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md)
-- [Stránka Podepisování, Návrhář projektu](../ide/reference/signing-page-project-designer.md)
+- [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)
+- [Stránka Podepisování, návrhář projektu (C#)](../ide/reference/signing-page-project-designer.md)

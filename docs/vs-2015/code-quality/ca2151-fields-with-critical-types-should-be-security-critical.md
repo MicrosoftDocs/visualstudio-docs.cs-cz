@@ -9,24 +9,24 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e5dee78ef3c487541363e9e290e54a8f3d68cf3b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 48c3f55b60add1691fe31c764f31673bbf1ab47b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667430"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546351"
 ---
 # <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: Pole s kritickými typy by měla být kritická pro zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName||
 |CheckId|CA2151|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Je deklarováno z hlediska zabezpečení transparentní pole nebo bezpečně kritické pole. Jeho typ je určen jako kritický z hlediska zabezpečení. Příklad:
 
 ```csharp
@@ -41,13 +41,13 @@ ms.locfileid: "72667430"
    }
 ```
 
- V tomto příkladu je `m_field` pole transparentní pro zabezpečení typu, který je kritický pro zabezpečení.
+ V tomto příkladu `m_field` je transparentní pole zabezpečení typu, které je kritické pro zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
  Chcete-li používat typy kritické z hlediska zabezpečení, musí být kód, který odkazuje na typ, buď kritický z hlediska zabezpečení, nebo bezpečně kritický z hlediska zabezpečení. To platí i v případě, že je odkaz nepřímý. Například při odkazu na transparentní pole kritického typu musí být váš kód buď kritický z hlediska zabezpečení, nebo bezpečný z hlediska zabezpečení. Proto je existence transparentního pole kritického z hlediska zabezpečení nebo transparentního pole bezpečně kritického z hlediska zabezpečení zavádějící, jelikož transparentní kód nebude mít k poli přístup.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení tohoto pravidla, označte pole atributem <xref:System.Security.SecurityCriticalAttribute> nebo vytvořte typ, na který je odkazováno v poli tomto Security Transparent nebo Safe Critical.
+ Chcete-li opravit porušení tohoto pravidla, označte pole <xref:System.Security.SecurityCriticalAttribute> atributem nebo vytvořte typ, na který je odkazováno v poli tomto Security Transparent nebo Safe Critical.
 
 ```csharp
 // Fix 1: Make the referencing field security critical

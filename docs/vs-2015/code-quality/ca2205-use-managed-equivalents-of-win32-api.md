@@ -15,28 +15,28 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 931b1e5099bf221fefc7a8f4a19524d2531a4418
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85e27ab04ca81f5513a0b09bc41548f4a7c2430d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609490"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547677"
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Použijte spravované ekvivalenty rozhraní Win32 API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|UseManagedEquivalentsOfWin32Api|
 |CheckId|CA2205|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
- Metoda Invoke platformy je definována a v knihovně tříd [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] existuje metoda s ekvivalentní funkcí.
+## <a name="cause"></a>Příčina
+ Metoda Invoke platformy je definována a v knihovně tříd existuje metoda s ekvivalentní funkcí [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
 ## <a name="rule-description"></a>Popis pravidla
- Metoda Invoke platformy se používá k volání nespravované funkce knihovny DLL a je definována pomocí atributu <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> nebo klíčového slova `Declare` v Visual Basic. Nesprávně definovaná metoda Invoke platformy může vést k výjimkám za běhu z důvodu problémů, jako je nesprávně pojmenovaná funkce, chybné mapování parametrů a návratové hodnoty datových typů a nesprávných specifikací polí, jako je konvence volání a znak. stanovenými. Je-li k dispozici, je všeobecně jednodušší a méně náchylné k chybám, aby volaly ekvivalentní spravovanou metodu, než pro definování a volání nespravované metody přímo. Volání metody Invoke platformy může také vést k dalším problémům zabezpečení, které je potřeba řešit.
+ Metoda Invoke platformy se používá k volání nespravované funkce knihovny DLL a je definována pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atributu nebo `Declare` klíčového slova v Visual Basic. Nesprávně definovaná metoda Invoke platformy může vést k výjimkám za běhu z důvodu problémů, jako je nesprávně pojmenovaná funkce, chybné mapování parametrů a návratové hodnoty datových typů a nesprávných specifikací polí, jako je konvence volání a znaková sada. Je-li k dispozici, je všeobecně jednodušší a méně náchylné k chybám, aby volaly ekvivalentní spravovanou metodu, než pro definování a volání nespravované metody přímo. Volání metody Invoke platformy může také vést k dalším problémům zabezpečení, které je potřeba řešit.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, nahraďte volání nespravované funkce voláním spravovaného ekvivalentu.
@@ -51,12 +51,12 @@ ms.locfileid: "72609490"
  [!code-vb[FxCop.Usage.ManagedEquivalents#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.ManagedEquivalents/vb/FxCop.Usage.ManagedEquivalents.vb#1)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1404: Volejte GetLastError ihned po volání nespravovaného kódu](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
+ [CA1404: volejte GetLastError hned po volání nespravovaného volání](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
 
- [CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
+ [CA1060: přesunout volání nespravovaného volání do třídy NativeMethods](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
 
- [CA1400: Vstupní body volání nespravovaného kódu by měly existovat](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
+ [CA1400: vstupní body volání nespravovaného volání by měly existovat](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
 
- [CA1401: Volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
+ [CA1401: volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
 
- [CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+ [CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného voláním](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)

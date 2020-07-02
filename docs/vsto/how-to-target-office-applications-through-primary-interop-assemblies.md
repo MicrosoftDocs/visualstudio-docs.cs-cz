@@ -1,7 +1,7 @@
 ---
-title: Cílová aplikace Office primárních sestaveních vzájemné spolupráce
+title: Cílové aplikace Office prostřednictvím primárních sestavení spolupráce
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,43 +16,43 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6e92b3b4dd46885de7f30f5364d30f39b5c2bd7
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 60e351a15af4994d2bf64a800e3019501cf0571d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328880"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545766"
 ---
-# <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>Postupy: Cílení na aplikace Office primárních sestaveních vzájemné spolupráce
-  Když vytvoříte nový projekt sady Office, Visual Studio automaticky přidá odkazy na aplikace Microsoft Office primární sestavení interop (PIA), které jsou nezbytné k sestavení projektu. Je nutné přidat odkazy na další sestavení PIA v následujících scénářích:
+# <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>Postupy: cílení aplikací Office prostřednictvím primárních sestavení spolupráce
+  Při vytváření nového projektu sady Office aplikace Visual Studio automaticky přidá odkazy na systém Microsoft Office primární spolupracující sestavení (PIA), která jsou vyžadována pro sestavení projektu. Odkazy na jiné PIA je nutné přidat v následujících scénářích:
 
-- Chcete používat funkce z jiné aplikace Microsoft Office ve vašem projektu. Můžete například chtít používat funkce aplikace Microsoft Office Excel v projektu pro aplikaci Microsoft Office Word.
+- Chcete v projektu používat funkce jiných systém Microsoft Office aplikací. Například můžete chtít použít funkce aplikace systém Microsoft Office Excel v projektu pro systém Microsoft Office Word.
 
-- Chcete automatizovat aplikace Microsoft Office, které nemají vyhrazené projekty v sadě Visual Studio, jako je například Microsoft Office Access.
+- Chcete automatizovat systém Microsoft Office aplikací, které nemají vyhrazené projekty v aplikaci Visual Studio, jako je například přístup systém Microsoft Office.
 
   [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="to-add-a-reference-to-a-primary-interop-assembly"></a>Chcete-li přidat odkaz na primární spolupracující sestavení
+## <a name="to-add-a-reference-to-a-primary-interop-assembly"></a>Přidání odkazu na primární definiční sestavení
 
-1. Otevřete si projekt Office a vyberte název projektu v **Průzkumníka řešení**.
+1. Otevřete projekt Office a vyberte název projektu v **Průzkumník řešení**.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **přidat odkaz**.
+2. V nabídce **projekt** klikněte na příkaz **Přidat odkaz**.
 
-3. Na **Framework** kartu, vyberte PIA, které chcete v **název komponenty** seznamu. Další informace o dostupných primární definiční sestavení Microsoft Office, naleznete v tématu [primární spolupracující sestavení Office](../vsto/office-primary-interop-assemblies.md).
+3. Na kartě **rozhraní** vyberte v seznamu **název součásti** požadované PIA. Další informace o dostupných systém Microsoft Office primárních spolupracujících sestavení naleznete v tématu věnovaném [primárním sestavením vzájemné](../vsto/office-primary-interop-assemblies.md)spolupráce pro Office.
 
-     Pokud projekt zaměřen [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, **Embed Interop Types** pro odkaz na sestavení je nastavena na **True** ve výchozím nastavení. Pomocí tohoto nastavení vaše řešení nevyžaduje PIA v počítačích koncových uživatelů. Další informace najdete v tématu [návrhu a vytvořte řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).
+     Pokud je projekt cílen na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, vlastnost **Embed Interop Types** pro odkaz na sestavení je ve výchozím nastavení nastavena na **hodnotu true** . Pomocí tohoto nastavení vaše řešení nevyžaduje na počítačích koncových uživatelů PIA. Další informace najdete v tématu [Návrh a vytváření řešení pro Office](../vsto/designing-and-creating-office-solutions.md).
 
     > [!NOTE]
-    > V projektech pro systém Office, vždy přidat odkazy na sestavení PIA sady Office pomocí **.NET** karty **přidat odkaz** dialogové okno místo **COM** kartu. Další informace najdete v tématu [primární spolupracující sestavení Office](../vsto/office-primary-interop-assemblies.md).
+    > V projektech pro systém Office vždy přidejte odkazy na PIA sady Office pomocí karty **.NET** dialogového okna **Přidat odkaz** místo na kartě **com** . Další informace najdete v tématu [primární spolupracující sestavení pro Office](../vsto/office-primary-interop-assemblies.md).
 
 4. Klikněte na **OK**.
 
-     Název sestavení se zobrazí v **odkazy** složky **Průzkumníka řešení**.
+     Název sestavení se zobrazí ve složce **odkazy** **Průzkumník řešení**.
 
 ## <a name="see-also"></a>Viz také:
-- [Primární spolupracující sestavení Office](../vsto/office-primary-interop-assemblies.md)
+- [Sestavení primární spolupráce pro Office](../vsto/office-primary-interop-assemblies.md)
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
-- [Postupy: Instalace primárních sestavení vzájemné spolupráce Office](../vsto/how-to-install-office-primary-interop-assemblies.md)
+- [Postupy: instalace primárních sestavení vzájemné spolupráce pro systém Office](../vsto/how-to-install-office-primary-interop-assemblies.md)

@@ -14,26 +14,26 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 96e0614bc5c08c83008af4e67a2aa865f08f74f3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918225"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547807"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726: Použijte upřednostňované výrazy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Používejte preferované výrazy](/visualstudio/code-quality/ca1726-use-preferred-terms).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Narušující změna|Přerušení – při vyvolání u sestavení<br /><br /> Nerozdělitelné – při vyvolání u parametrů typu|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název externě viditelného identifikátoru zahrnuje výraz, pro který existuje alternativní upřednostňovaný výraz. Alternativně název zahrnuje příznak nebo příznaky termínu.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -49,7 +49,7 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Použ
 |`Didnt`|`DidNot`|
 |`Doesnt`|`DoesNot`|
 |`Dont`|`DoNot`|
-|`Flag` Nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívejte.|
+|`Flag` nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívat.|
 |`Hadnt`|`HadNot`|
 |`Hasnt`|`HasNot`|
 |`Havent`|`HaveNot`|
@@ -73,4 +73,4 @@ Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [CA1726: Použ
  Potlačí upozornění z tohoto pravidla pouze v případě, že název identifikátoru je záměrné a vztahuje se konkrétně k původnímu termínu místo upřednostňovaného termínu.
 
 ## <a name="related-rules"></a>Související pravidla
- [Upozornění na pojmenování](../code-quality/naming-warnings.md)
+ [Upozornění pojmenovávání](../code-quality/naming-warnings.md)

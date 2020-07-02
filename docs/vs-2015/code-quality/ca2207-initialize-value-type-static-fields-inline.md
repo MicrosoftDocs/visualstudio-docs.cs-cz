@@ -15,30 +15,30 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a2b3c1faf4ecf3ecf79a3c78d0ded106b88345ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 792fe18a4f472d0b8a4fd62c652f2ae34fcf6864
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609368"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546299"
 ---
-# <a name="ca2207-initialize-value-type-static-fields-inline"></a>CA2207: Inicializujte vloženou hodnotu statických polí
+# <a name="ca2207-initialize-value-type-static-fields-inline"></a>CA2207: Inicializujte statická pole s typem hodnoty vloženě
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|InitializeValueTypeStaticFieldsInline|
 |CheckId|CA2207|
 |Kategorie|Microsoft. Usage|
 |Narušující změna|Bez přerušení|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Typ hodnoty deklaruje explicitní statický konstruktor.
 
 ## <a name="rule-description"></a>Popis pravidla
- Je-li deklarován typ hodnoty, je napřed výchozí inicializací, kde všechna pole typu hodnoty jsou nastavena na hodnotu nula a všechna pole typu odkazu jsou nastavena na hodnotu `null` (`Nothing` v Visual Basic). Explicitní statický konstruktor je zaručen pouze před tím, než je volán konstruktor instance nebo statický člen typu. Proto pokud je typ vytvořen bez volání konstruktoru instance, není zaručeno spuštění statického konstruktoru.
+ Je-li deklarován typ hodnoty, je napřed výchozí inicializací, kde jsou všechna pole typu hodnoty nastavena na hodnotu nula a všechna pole typu odkazu jsou nastavena na hodnotu `null` ( `Nothing` v Visual Basic). Explicitní statický konstruktor je zaručen pouze před tím, než je volán konstruktor instance nebo statický člen typu. Proto pokud je typ vytvořen bez volání konstruktoru instance, není zaručeno spuštění statického konstruktoru.
 
- Pokud jsou všechna statická data inicializována vložená a není deklarován žádný explicitní statický konstruktor C# , kompilátory a Visual Basic přidá příznak `beforefieldinit` do definice třídy jazyka MSIL. Kompilátory také přidávají privátní statický konstruktor, který obsahuje kód statické inicializace. Pro tento soukromý statický konstruktor je zaručeno, že bude spuštěn před tím, než budou k dispozici jakákoliv statická pole typu.
+ Pokud jsou všechna statická data inicializována vložená a není deklarován žádný explicitní statický konstruktor, kompilátory jazyka C# a Visual Basic přidají `beforefieldinit` příznak do definice třídy jazyka MSIL. Kompilátory také přidávají privátní statický konstruktor, který obsahuje kód statické inicializace. Pro tento soukromý statický konstruktor je zaručeno, že bude spuštěn před tím, než budou k dispozici jakákoliv statická pole typu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, proveďte inicializaci všech statických dat, je-li deklarována a odeberte statický konstruktor.

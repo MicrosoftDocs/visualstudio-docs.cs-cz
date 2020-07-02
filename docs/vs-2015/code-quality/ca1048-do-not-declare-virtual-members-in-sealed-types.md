@@ -15,30 +15,30 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9f843efe0aa17b6e87fdb047e1f98a3715ae11af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19ae3a4fdc620343f18aa0845c33e1d73529adfe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603318"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546793"
 ---
 # <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Nedeklarujte virtuální členy v zapečetěných typech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|DoNotDeclareVirtualMembersInSealedTypes|
 |CheckId|CA1048|
 |Kategorie|Microsoft. Design|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Veřejný typ je zapečetěn a deklaruje metodu, která je `virtual` (`Overridable` v Visual Basic) a není finální. Toto pravidlo neoznamuje porušení pro typy delegátů, které musí následovat po tomto vzoru.
+## <a name="cause"></a>Příčina
+ Veřejný typ je zapečetěn a deklaruje metodu, která je současně `virtual` ( `Overridable` v Visual Basic), a není finální. Toto pravidlo neoznamuje porušení pro typy delegátů, které musí následovat po tomto vzoru.
 
 ## <a name="rule-description"></a>Popis pravidla
  Typy deklarují metody jako virtuální, aby odvozující typy mohly přepsat implementaci virtuální metody. Podle definice nemůžete dědit z zapečetěného typu a vytvoření virtuální metody u zapečetěného typu bez významů.
 
- Rozhraní Visual Basic .NET a C# kompilátory neumožňují typům porušovat toto pravidlo.
+ Kompilátory Visual Basic .NET a C# neumožňují typům porušovat toto pravidlo.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, nastavte metodu jako nevirtuální, nebo zajistěte, aby byl typ dědičný.

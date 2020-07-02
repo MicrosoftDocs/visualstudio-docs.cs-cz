@@ -2,19 +2,19 @@
 title: Nahlášení problému se sadou Visual Studio
 description: Zjistěte, jak nahlásit problém se sadou Visual Studio.
 ms.date: 03/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: madskristensen
 ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37dcfd6351cfa3adde4c1825518dd2bea7ce9b34
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 1c985d6699c75a78900366204c8bd5275f4c051d
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769929"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -117,7 +117,7 @@ Pokud nechcete nebo nemůžete použít aplikaci Visual Studio k nahlášení pr
 
 Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také místo. Další informace najdete na stránce s [návrhem funkce](https://developercommunity.visualstudio.com/content/idea/post.html?space=8) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)

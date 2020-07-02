@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Změna velikosti ovládacích prvků záložek'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 99e5c789f65a1dff460bc22dd4a0c097e11c7e98
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 6cc7b26bb767c233ed8699519261d4b5b708306b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252221"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545857"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>Postupy: Změna velikosti ovládacích prvků záložek
   Velikost <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku se nastavuje při jeho přidání do systém Microsoft Office wordového dokumentu. Později můžete změnit její velikost.
@@ -31,7 +31,7 @@ ms.locfileid: "71252221"
 
    Kdykoli přidáte text do záložky, velikost záložky se automaticky zvětšuje tak, aby obsahovala nový text. Při odstranění textu se automaticky zmenší velikost záložky.
 
-- Změňte vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> ovládacího<xref:Microsoft.Office.Tools.Word.Bookmark> prvku a.
+- Změňte <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku a.
 
    To je užitečné v případě, že měníte velikost jenom pomocí několika znaků.
 
@@ -39,7 +39,7 @@ ms.locfileid: "71252221"
 
    To je užitečné v případě, že dojde k podstatné změně velikosti nebo umístění záložky.
 
-  V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu. Další informace najdete v tématu [jak: Přidejte ovládací prvky záložky do dokumentů](../vsto/how-to-add-bookmark-controls-to-word-documents.md)aplikace Word.
+  V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v projektu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu. Další informace najdete v tématu [Postup: Přidání ovládacích prvků záložek do dokumentů aplikace Word](../vsto/how-to-add-bookmark-controls-to-word-documents.md).
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -49,15 +49,15 @@ ms.locfileid: "71252221"
 
 1. V okně **vlastnosti** vyberte záložku.
 
-2. Zvyšte nebo snižte hodnotu <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> vlastnosti.
+2. Zvyšte nebo snižte hodnotu <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> Vlastnosti.
 
-3. Zvyšte nebo snižte hodnotu <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> vlastnosti.
+3. Zvyšte nebo snižte hodnotu <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> Vlastnosti.
 
 ### <a name="to-resize-a-bookmark-in-a-document-level-project-at-run-time"></a>Změna velikosti záložky v projektu na úrovni dokumentu v době běhu
 
-1. <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> Upravte vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> a,kteréjstevytvořilivdoběběhunebo<xref:Microsoft.Office.Tools.Word.Bookmark> v době návrhu.
+1. Upravte <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> vlastnosti a, <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> <xref:Microsoft.Office.Tools.Word.Bookmark> které jste vytvořili v době běhu nebo v době návrhu.
 
-     Následující příklad kódu přidá pět znaků na začátek záložky s názvem `SampleBookmark`. Tento kód předpokládá, že před záložkou je k dispozici alespoň pět znaků textu.
+     Následující příklad kódu přidá pět znaků na začátek záložky s názvem `SampleBookmark` . Tento kód předpokládá, že před záložkou je k dispozici alespoň pět znaků textu.
 
      [!code-csharp[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#2)]
      [!code-vb[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#2)]
@@ -69,9 +69,9 @@ ms.locfileid: "71252221"
 
 ### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>Změna velikosti záložky v projektu doplňku VSTO za běhu
 
-1. <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> Upravte vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> a,kteréjstevytvořili<xref:Microsoft.Office.Tools.Word.Bookmark> v době běhu.
+1. Upravte <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> vlastnosti a, <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> <xref:Microsoft.Office.Tools.Word.Bookmark> které jste vytvořili v době běhu.
 
-     Následující příklad kódu vytvoří objekt <xref:Microsoft.Office.Tools.Word.Bookmark> , který obsahuje text v prvním odstavci aktivního dokumentu a pak odebere pět znaků od začátku a konce. <xref:Microsoft.Office.Tools.Word.Bookmark>
+     Následující příklad kódu vytvoří objekt <xref:Microsoft.Office.Tools.Word.Bookmark> , který obsahuje text v prvním odstavci aktivního dokumentu a pak odebere pět znaků od začátku a konce <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
      [!code-vb[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#16)]
      [!code-csharp[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#16)]

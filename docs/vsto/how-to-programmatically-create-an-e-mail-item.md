@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Programové vytváření položek e-mailu'
+title: 'Postupy: vytváření položek e-mailu prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dd7a90853b22579557078dc0a407873e5401c36d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d22808b8d68c0fdb3b6a2374985ae25a539f0e8c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575165"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546039"
 ---
-# <a name="how-to-programmatically-create-an-email-item"></a>Postupy: Programové vytváření položek e-mailu
-  Tento příklad vytvoří e-mailovou zprávu v aplikaci Microsoft Office Outlook.
+# <a name="how-to-programmatically-create-an-email-item"></a>Postupy: vytváření položek e-mailu prostřednictvím kódu programu
+  Tento příklad vytvoří e-mailovou zprávu v aplikaci systém Microsoft Office Outlook.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 

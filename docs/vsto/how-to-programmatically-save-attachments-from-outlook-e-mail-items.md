@@ -1,7 +1,7 @@
 ---
-title: Ukládání příloh položek e-mailu aplikace Outlook prostřednictvím kódu programu
+title: Ukládat přílohy z e-mailových položek Outlooku programově
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -15,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7e0cff4761b26bac8265592b681d4e56f2ad92f
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 9fbe6099a8928397a7d885ac72c4f34da2da6af0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328954"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545883"
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Postupy: Ukládání příloh položek e-mailu aplikace Outlook prostřednictvím kódu programu
+# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Postupy: ukládání příloh z e-mailových položek Outlooku prostřednictvím kódu programu
 
-V tomto příkladu se uloží přílohy e-mailů do zadané složky při přijetí e-mailu v doručené poště.
+Tento příklad uloží přílohy e-mailu do zadané složky, když se e-mail obdrží v doručené poště.
 
 > [!IMPORTANT]
-> Tento příklad funguje pouze v případě, že přidáte složku s názvem **TestFileSave** v kořenovém adresáři.
+> Tento příklad funguje pouze v případě, že do kořene adresáře C přidáte složku s názvem **TestFileSave** .
 
 [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -38,6 +38,6 @@ V tomto příkladu se uloží přílohy e-mailů do zadané složky při přijet
 ## <a name="see-also"></a>Viz také:
 
 - [Práce s položkami pošty](../vsto/working-with-mail-items.md)
-- [Postupy: Programově načítání složek podle názvu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Postupy: Programově provádění akcí po přijetí e-mailovou zprávu](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
-- [Postupy: Hledání v rámci konkrétní složky prostřednictvím kódu programu](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
+- [Postupy: načítání složek podle názvu prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Postupy: provádění akcí po přijetí e-mailové zprávy prostřednictvím kódu programu](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
+- [Postupy: hledání v rámci konkrétní složky prostřednictvím kódu programu](../vsto/how-to-programmatically-search-within-a-specific-folder.md)

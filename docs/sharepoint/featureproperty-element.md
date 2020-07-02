@@ -1,5 +1,5 @@
 ---
-title: FeatureProperty – Element | Dokumentace Microsoftu
+title: Element FeatureProperty – | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 20d24192d8613a4f41d9cdfc04371fb9c9d02076
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 61eeea33c6941624ed18a00db482590590a44a8f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967302"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546520"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty – element
-  Představuje vlastní vlastnost, která je součástí funkce, když se nasadí do služby SharePoint. Po nasazení funkce můžete přistupovat k vlastnosti v kódu.
+  Představuje vlastní vlastnost, která je součástí funkce při nasazení do služby SharePoint. Po nasazení funkce můžete získat přístup k vlastnosti v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,8 +36,8 @@ ms.locfileid: "62967302"
 
 |Atribut|Popis|
 |---------------|-----------------|
-|**Key**|Vyžaduje **xs:string** atribut.<br /><br /> Klíč, který se používá k ukládání a načítání hodnoty vlastnosti. Každou vlastnost musí mít klíč, který je jedinečný v rámci funkce.|
-|**Hodnota**|Vyžaduje **xs:string** atribut.<br /><br /> Hodnota vlastnosti.|
+|**Klíč**|Požadován atribut **xs: String** .<br /><br /> Klíč, který se používá k ukládání a načítání hodnoty vlastnosti. Každá vlastnost musí mít klíč, který je jedinečný v rámci této funkce.|
+|**Hodnota**|Požadován atribut **xs: String** .<br /><br /> Hodnota vlastnosti|
 
 ### <a name="child-elements"></a>Podřízené prvky
  Žádné
@@ -46,20 +46,20 @@ ms.locfileid: "62967302"
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|Reprezentuje kolekci hodnot vlastností, které jsou součástí funkce, když se nasadí do služby SharePoint.|
+|[FeatureProperties –](../sharepoint/featureproperties-element.md)|Představuje kolekci hodnot vlastností, které jsou součástí funkce při nasazení do služby SharePoint.|
 
 ## <a name="remarks"></a>Poznámky
- Další informace o vlastnosti funkce, najdete v části [poskytování informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
+ Další informace o vlastnostech funkcí naleznete v tématu [poskytnutí informací o balíčku a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
 
 ## <a name="element-information"></a>Informace o elementu
 
-|||
+|Vlastnost|Hodnota|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Název schématu**|Schéma položky projektu služby SharePoint|
-|**Soubor ověření**|ProjectItemModelSchema.xsd|
-|**Může být prázdný**|Ne|
+|**Obor názvů**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Název schématu**|Schéma položek projektu služby SharePoint|
+|**Soubor ověření**|ProjectItemModelSchema. xsd|
+|**Může být prázdné**|Ne|
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Zadání informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [Poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

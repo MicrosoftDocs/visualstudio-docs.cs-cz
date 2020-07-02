@@ -1,7 +1,7 @@
 ---
 title: Zalamování řádků
 ms.date: 11/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - word wrap
 - editors, text viewing
@@ -12,46 +12,46 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.openlocfilehash: c4bf76643ce1ea6e2f449c54fbc31d441418becf
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81444801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770334"
 ---
-# <a name="how-to-manage-word-wrap-in-the-editor"></a>Postup: Správa zalamování slov v editoru
+# <a name="how-to-manage-word-wrap-in-the-editor"></a>Postupy: Správa zalamování řádků v editoru
 
-Můžete nastavit a vymazat možnost **zalamování aplikace Word.** Pokud je tato možnost nastavena, část dlouhého řádku, která přesahuje aktuální šířku okna Editor kódu, se zobrazí na dalším řádku. Pokud je tato možnost například vymazána, abyste usnadnili použití číslování řádků, můžete posunout doprava a zobrazit tak konce dlouhých čar.
+Můžete nastavit a vymazat možnost **zalamování slov** . Pokud je tato možnost nastavena, část dlouhé čáry, která přesahuje aktuální šířku okna editoru kódu, se zobrazí na dalším řádku. Pokud je tato možnost prázdná, například pro usnadnění použití číslování řádků, můžete přejít na pravé tlačítko a zobrazit konce dlouhých řádků.
 
 > [!NOTE]
-> Toto téma platí pro Visual Studio v systému Windows. Visual Studio pro Mac najdete [v tématu Zdrojový editor: Zalamování řádků](/visualstudio/mac/source-editor#word-wrap).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac naleznete v tématu [Editor zdrojového kódu: zalamování řádků](/visualstudio/mac/source-editor#word-wrap).
 
-## <a name="to-set-word-wrap-preferences"></a>Nastavení předvoleb zalamování slov
+## <a name="to-set-word-wrap-preferences"></a>Nastavení předvoleb zalamování řádků
 
 1. V nabídce **Tools** (Nástroje) vyberte **Options** (Možnosti).
 
-2. Ve složce **Textový editor** zvolte **obecné** možnosti v podsložce **Všechny jazyky,** chcete-li tuto možnost nastavit globálně.
+2. Ve složce **textový editor** výběrem možnosti **Obecné** v podsložce **všechny jazyky** nastavte tuto možnost globálně.
 
-     — nebo —
+     ani
 
-     Zvolte **obecné** možnosti v podsložce pro jazyk, ve kterém programujete.
+     V podsložce vyberte **Obecné** možnosti pro jazyk, ve kterém programujete.
 
-3. V části **Nastavení**vyberte nebo zrušte zaškrtnutí možnosti **zalamování aplikace Word.**
+3. V části **Nastavení**zaškrtněte nebo zrušte zaškrtnutí políčka **zalamování řádků** .
 
-     Když je vybraná volba **zalamování aplikace Word,** je povolena volba **Zobrazit vizuální glyfy pro zalamování řádků.**
+     Je-li vybrána možnost **zalamování řádků** , možnost **Zobrazit vizuální glyfy pro zalamování řádků** je povolena.
 
-4. Vyberte volbu **Zobrazit vizuální glyfy pro zalamování řádků,** pokud dáváte přednost zobrazení indikátoru návratové šipky, kde se dlouhá čára zalomí na druhý řádek. Zrušte zaškrtnutí této možnosti, pokud nechcete zobrazovat šipky indikátorů.
+4. Vyberte možnost **Zobrazit vizuální glyfy pro zalamování řádků** , pokud upřednostňujete zobrazení indikátoru pro návratové šipky, kde se dlouhá čára zalomí na druhý řádek. Tuto možnost zrušte, pokud nechcete zobrazovat šipky indikátorů.
 
     > [!NOTE]
-    > Tyto šipky připomenutí nejsou přidány do kódu; jsou pouze pro účely zobrazení.
+    > Tyto šipky připomenutí nejsou přidány do kódu; jsou jen pro účely zobrazení.
 
 ## <a name="known-issues"></a>Známé problémy
 
-Pokud jste obeznámeni s zalamování slov v Poznámkový blok ++, Sublime Text nebo Visual Studio Kód, být vědomi následujících problémů, kde Visual Studio chová odlišně od ostatních editorů:
+Pokud jste obeznámeni se zalamováním řádků v programu Notepad + +, podprogramový text nebo Visual Studio Code, pamatujte na následující problémy, kde se Visual Studio chová jinak než v jiných editorech:
 
-* [Trojité kliknutí nevybere celý řádek](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
-* [Dvakrát stisknutí klávesy End nepřesune kurzor na konec řádku.](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
+* [Třikrát kliknout na možnost nevybírat celý řádek](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
+* [Stisknutím klávesy END dvakrát nepřesunete kurzor na konec řádku.](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)

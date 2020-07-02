@@ -15,26 +15,26 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe362a58a047c8594d09bc6985c48d16f21d3b76
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919193"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545597"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Identifikátory by měly mít správnou předponu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Nejnovější dokumentaci k sadě Visual Studio naleznete v tématu [CA1715: identifikátory by měly mít správnou předponu](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Narušující změna|Přerušení – při vyvolání na rozhraní.<br /><br /> Nerozdělitelné – při vyvolání v parametrech obecného typu.|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Název externě viditelného rozhraní nezačíná velkým písmenem "I".
 
  -nebo-

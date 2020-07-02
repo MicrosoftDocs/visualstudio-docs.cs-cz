@@ -22,7 +22,7 @@ ms.locfileid: "85547898"
 # <a name="safecontrols-element"></a>SafeControls – element
   Kolekce ovládacích prvků ASPX a Webové části, které jsou označeny jako zabezpečené pro libovolného uživatele pro přístup k libovolné stránce ASPX na webu služby SharePoint.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```xml
 <SafeControls>
@@ -60,6 +60,6 @@ ms.locfileid: "85547898"
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)
 - [Poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

@@ -1,7 +1,7 @@
 ---
 title: Kopírování dat a formátování mezi listy prostřednictvím kódu programu
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b90704d6d9fe555920fb042939079bd53884cfbe
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 07baa23b6fd276e8fb8452934dc6361544d16038
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402214"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546104"
 ---
-# <a name="how-to-programmatically-copy-data-and-formatting-across-worksheets"></a>Postupy: Kopírování dat a formátování mezi listy prostřednictvím kódu programu
-  Můžete zkopírovat data z rozsahu na jeden seznam pro všechny ostatní listů v sešitu pomocí <xref:Microsoft.Office.Interop.Excel.Worksheets.FillAcrossSheets%2A> metody. Zadejte rozsah, a určuje, zda chcete zkopírovat data, formátování nebo obojí.
+# <a name="how-to-programmatically-copy-data-and-formatting-across-worksheets"></a>Postupy: kopírování dat a formátování mezi listy prostřednictvím kódu programu
+  Data z rozsahu na jednom listu můžete kopírovat do všech ostatních listů v sešitu pomocí <xref:Microsoft.Office.Interop.Excel.Worksheets.FillAcrossSheets%2A> metody. Zadejte rozsah a určete, zda chcete kopírovat data, formátování nebo obojí.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -31,11 +31,11 @@ ms.locfileid: "66402214"
  [!code-csharp[Trin_VstcoreExcelAutomation#44](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#44)]
  [!code-vb[Trin_VstcoreExcelAutomation#44](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#44)]
 
-## <a name="compile-the-code"></a>Kompilace kódu
- Tento příklad vyžaduje oblast s názvem `rangeData` v listu.
+## <a name="compile-the-code"></a>Kompilovat kód
+ Tento příklad vyžaduje rozsah s názvem `rangeData` v listu.
 
 ## <a name="see-also"></a>Viz také:
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Postupy: Přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
-- [Postupy: Změna formátování řádků listů obsahujících zvolené buňky prostřednictvím kódu programu](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md)
+- [Postupy: přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [Postupy: Změna formátování řádků listů obsahujících vybrané buňky prostřednictvím kódu programu](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

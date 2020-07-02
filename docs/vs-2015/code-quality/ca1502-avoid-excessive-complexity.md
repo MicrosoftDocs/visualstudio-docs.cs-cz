@@ -15,24 +15,24 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f7b830e9d3a045bb54394a91d94e036613af7d1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5da2e2bf26bb1894987caa8b748181d952bd7c18
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607878"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547833"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Vyhněte se nadměrné složitosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
 |Kategorie|Microsoft. udržovatelnost|
 |Narušující změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Metoda má nadměrně Cyklomatická složitost.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -50,14 +50,14 @@ ms.locfileid: "72607878"
  Chcete-li opravit porušení tohoto pravidla, refaktorujte metodu pro snížení složitosti cyklomatická.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Z tohoto pravidla je bezpečné potlačit upozornění, pokud složitost nelze snadno snížit a metodu je snadné pochopit, otestovat a udržovat. Konkrétně metoda, která obsahuje velký `switch` (`Select` in [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]), je kandidátem pro vyloučení. Riziko, že destabilizující základ kódu v cyklu vývoje nebo Představujeme neočekávanou změnu v chování za běhu v dříve dodaném kódu, může mít za následek převážení výhod udržovatelnosti refaktoringu kódu.
+ Z tohoto pravidla je bezpečné potlačit upozornění, pokud složitost nelze snadno snížit a metodu je snadné pochopit, otestovat a udržovat. Konkrétně metoda, která obsahuje velký `switch` ( `Select` v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) příkaz, je kandidátem pro vyloučení. Riziko, že destabilizující základ kódu v cyklu vývoje nebo Představujeme neočekávanou změnu v chování za běhu v dříve dodaném kódu, může mít za následek převážení výhod udržovatelnosti refaktoringu kódu.
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>Jak se počítá složitost cyklomatická
  Složitost cyklomatická se počítá přidáním 1 k následujícím akcím:
 
-- Počet větví (například `if`, `while` a `do`)
+- Počet větví (například `if` , `while` a `do` )
 
-- Počet příkazů `case` v `switch`
+- Počet `case` příkazů v`switch`
 
   Následující příklady znázorňují metody, které mají různé cyklomatická složité.
 

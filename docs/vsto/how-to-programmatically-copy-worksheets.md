@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Kopírování listů prostřednictvím kódu programu'
+title: 'Postupy: kopírování listů prostřednictvím kódu programu'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,42 +13,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17d248fb0805c83feb64b2f0a28a645b1fa29d49
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8226f337994c686d4d370e91831bc1262d3ef85e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422498"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546078"
 ---
-# <a name="how-to-programmatically-copy-worksheets"></a>Postupy: Kopírování listů prostřednictvím kódu programu
-  Můžete vytvořit kopii tohoto listu a listu vložte před nebo po existujícího listu v sešitu. Pokud nezadáte, kam chcete vložit do listu, Excel vytvoří nový sešit obsahující nový list.
+# <a name="how-to-programmatically-copy-worksheets"></a>Postupy: kopírování listů prostřednictvím kódu programu
+  Můžete vytvořit kopii listu a vložit tento list před nebo za existující list v sešitu. Pokud nezadáte místo pro vložení listu, aplikace Excel vytvoří nový sešit, který bude obsahovat nový list.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 > [!NOTE]
-> Ať už prostřednictvím kódu programu zkopírujte do listu, nebo koncový uživatel ručně zkopíruje do listu, není žádný kód za nový list a ovládacích prvků na nový list nefungují. Důvodem je, že je nově zkopírovaný list <xref:Microsoft.Office.Interop.Excel.Worksheet> objekt a ne <xref:Microsoft.Office.Tools.Excel.Worksheet> hostitelský objekt. Ovládacích prvků Windows Forms a hostitelských ovládacích prvků můžete přidat jenom do hostitelské položky. Další informace najdete v tématu [programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
+> Bez ohledu na to, jestli kopírujete list programově, nebo když koncový uživatel zkopíruje list ručně, není na novém listu žádný kód a ovládací prvky na novém listu nebudou fungovat. Důvodem je to, že nově kopírovaný list je <xref:Microsoft.Office.Interop.Excel.Worksheet> objekt, nikoli <xref:Microsoft.Office.Tools.Excel.Worksheet> položka hostitele. Ovládací prvky model Windows Forms a hostitelské ovládací prvky lze přidat pouze k položkám hostitele. Další informace najdete v tématu [programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
 
-## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-document-level-customization"></a>Chcete-li přidat zkopírovaný list do sešitu v přizpůsobení na úrovni dokumentu
+## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-document-level-customization"></a>Přidání zkopírovaného listu do sešitu v přizpůsobení na úrovni dokumentu
 
-1. Použití <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metoda kopírování první sešit v aktuálním sešitu a umístěte kopii za třetí list.
+1. Použijte <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metodu ke zkopírování prvního listu v aktuálním sešitu a kopii umístěte za třetí list.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#16)]
      [!code-vb[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#16)]
 
-## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-vsto-add-in"></a>Chcete-li přidat zkopírovaný list do sešitu v doplňku VSTO
+## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-vsto-add-in"></a>Přidání zkopírovaného listu do sešitu v doplňku VSTO
 
-1. Použití <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metoda kopírování první sešit v aktuálním sešitu a umístěte kopii za třetí list.
+1. Použijte <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A> metodu ke zkopírování prvního listu v aktuálním sešitu a kopii umístěte za třetí list.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#12)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#12)]
 
 ## <a name="see-also"></a>Viz také:
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Postupy: Přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Postupy: přidávání nových listů do sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
 - [Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
 - [Postupy: Výběr listů prostřednictvím kódu programu](../vsto/how-to-programmatically-select-worksheets.md)
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)

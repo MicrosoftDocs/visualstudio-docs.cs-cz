@@ -36,7 +36,7 @@ ms.locfileid: "85547482"
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#7](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#7)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#7](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#7)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
 - [Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)

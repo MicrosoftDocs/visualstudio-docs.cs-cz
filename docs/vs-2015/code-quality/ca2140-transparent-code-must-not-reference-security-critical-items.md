@@ -17,24 +17,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5c3e624e4210e59406fd1d5955cd37c2e83ed79a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6f11125f43fd06b0442d1c40cbd4da41e346fd1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602871"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546455"
 ---
 # <a name="ca2140-transparent-code-must-not-reference-security-critical-items"></a>CA2140: Transparentní kód nesmí odkazovat na položky kritické pro zabezpečení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|TransparentMethodsMustNotReferenceCriticalCode|
 |CheckId|CA2140|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
  Transparentní metoda:
 
 - zpracovává typ výjimky zabezpečení kritické pro zabezpečení.
@@ -54,16 +54,16 @@ ms.locfileid: "72602871"
 - Vrátí typ, který je označený jako kritický pro zabezpečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Prvek kódu označený atributem <xref:System.Security.SecurityCriticalAttribute> je kritický pro zabezpečení. Transparentní metoda nemůže použít prvek kritický pro zabezpečení. Pokud se transparentní typ pokusí použít typ, který je kritický pro zabezpečení, je vyvolána <xref:System.TypeAccessException>, <xref:System.MethodAccessException> nebo <xref:System.FieldAccessException>.
+ Prvek kódu, který je označen <xref:System.Security.SecurityCriticalAttribute> atributem, je kritický pro zabezpečení. Transparentní metoda nemůže použít prvek kritický pro zabezpečení. Pokud se transparentní typ pokusí použít typ a <xref:System.TypeAccessException> , <xref:System.MethodAccessException> nebo <xref:System.FieldAccessException> je vyvolán, nebo.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, proveďte jednu z následujících akcí:
 
-- Označte prvek kódu, který používá kód kritický pro zabezpečení s atributem <xref:System.Security.SecurityCriticalAttribute>.
+- Označte prvek kódu, který používá kód kritický pro zabezpečení s <xref:System.Security.SecurityCriticalAttribute> atributem.
 
-     \- nebo-
+     \-ani
 
-- Odeberte atribut <xref:System.Security.SecurityCriticalAttribute> z prvků kódu, které jsou označeny jako kritické pro zabezpečení, a místo toho je označte atributem <xref:System.Security.SecuritySafeCriticalAttribute> nebo <xref:System.Security.SecurityTransparentAttribute>.
+- Odeberte <xref:System.Security.SecurityCriticalAttribute> atribut z prvků kódu, které jsou označeny jako kritické pro zabezpečení a místo toho je označte <xref:System.Security.SecuritySafeCriticalAttribute> <xref:System.Security.SecurityTransparentAttribute> atributem or.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
@@ -74,7 +74,7 @@ ms.locfileid: "72602871"
  [!code-csharp[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2140.transparentmethodsmustnotreferencecriticalcode/cs/ca2140 - transparentmethodsmustnotreferencecriticalcode.cs#1)]
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Security.SecurityTransparentAttribute><xref:System.Security.SecurityCriticalAttribute>
+ <xref:System.Security.SecurityTransparentAttribute> <xref:System.Security.SecurityCriticalAttribute>
  <xref:System.Security.SecurityTransparentAttribute>
  <xref:System.Security.SecurityTreatAsSafeAttribute>
  <xref:System.Security?displayProperty=fullName>

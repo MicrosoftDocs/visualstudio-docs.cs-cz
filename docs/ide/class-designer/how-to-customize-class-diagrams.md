@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přizpůsobení diagramů tříd (návrhář tříd)'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, customizing
 - shapes, removing type from class diagrams
@@ -13,14 +13,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c55204983f9e7a546867621ec21070c8d69645
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4e8e4665790aa228bb30aac05ea4782cfe4a62f1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770176"
 ---
-# <a name="how-to-customize-class-diagrams"></a>Postup: Přizpůsobení diagramů tříd
+# <a name="how-to-customize-class-diagrams"></a>Postupy: přizpůsobení diagramů tříd
 
 Můžete změnit způsob, jak diagramy tříd zobrazují informace. Můžete přizpůsobit celý diagram nebo jednotlivé typy na ploše návrhu.
 
@@ -29,91 +29,91 @@ Můžete například upravit úroveň zvětšení celého diagramu tříd, změn
 > [!NOTE]
 > Upravením způsobu, jakým se tvary v diagramu zobrazují, nezměníte základní kód pro typy znázorněné v diagramu.
 
-Oddíly, které obsahují členy typu, například **vlastnosti** oddílu ve třídě, se nazývají oddíly. Jednotlivé oddíly a členy typu můžete skrýt nebo zobrazit.
+Oddíly, které obsahují členy typu, jako je například oddíl **Properties (vlastnosti** ) třídy, se nazývají oddíly. Jednotlivé oddíly a členy typu můžete skrýt nebo zobrazit.
 
 ## <a name="zoom-in-and-out-of-the-class-diagram"></a>Přiblížení a oddálení diagramu tříd
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
-2. Na panelu nástrojů **Návrhář eniciála tříd** můžete klepnutím na tlačítko **Přiblížit** nebo **Oddálit** změnit úroveň přiblížení povrchu návrháře.
+2. Na panelu nástrojů **Návrhář tříd** klikněte na tlačítko **přiblížení** nebo **oddálení** a změňte úroveň přiblížení plochy návrháře.
 
      – nebo –
 
-     Zadejte hodnotu přiblížení. Můžete použít rozevírací seznam **Lupa** nebo zadat platnou úroveň přiblížení (platný rozsah je mezi 10 % a 400 %).
+     Zadejte hodnotu přiblížení. Můžete použít rozevírací seznam **Lupa** nebo zadat platnou úroveň přiblížení (platný rozsah je mezi 10 a 400%).
 
     > [!NOTE]
     > Změna úrovně přiblížení neovlivní měřítko výtisku vašeho diagramu tříd.
 
 ## <a name="customize-grouping-and-sorting-of-type-members"></a>Přizpůsobení seskupování a řazení členů typu
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
-2. Klepněte pravým tlačítkem myši na prázdnou oblast na návrhové ploše a přejděte na **položku Členové skupiny**.
+2. Klikněte pravým tlačítkem myši na prázdnou oblast na návrhové ploše a nastavte ukazatel na **členy skupiny**.
 
 3. Vyberte jednu z dostupných možností:
 
-    - **Skupina podle druhu** odděluje jednotlivé členy typu do seskupeného seznamu vlastností, metod, událostí a polí. Jednotlivé skupiny závisí na definici entit: třída například nebude zobrazovat žádnou skupinu událostí, pokud pro danou třídu zatím nebyly definovány žádné události.
+    - **Seskupení podle druhu** odděluje jednotlivé členy typu do seskupeného seznamu vlastností, metod, událostí a polí. Jednotlivé skupiny závisí na definici entit: třída například nebude zobrazovat žádnou skupinu událostí, pokud pro danou třídu zatím nebyly definovány žádné události.
 
-    - **Skupina podle aplikace Access** odděluje jednotlivé členy typu do seskupeného seznamu na základě modifikátorů přístupu člena. Například veřejné a soukromé.
+    - **Seskupení podle přístupu** odděluje jednotlivé členy typu do seskupeného seznamu založeného na modifikátorech přístupu člena. Například veřejné a soukromé.
 
-    - **Seřadit abecedně** zobrazí položky, které tvoří entitu jako jeden abecední seznam. Seznam je seřazen vzestupně.
+    - **Řazení abecedně** zobrazuje položky, které tvoří entitu jako jeden abecední seznam. Seznam je seřazen vzestupně.
 
 ## <a name="hide-compartments-on-a-type"></a>Skrytí oddílů typu
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
-2. Klikněte pravým tlačítkem myši na kategorii členů typu, který chcete přizpůsobit (například vyberte uzel **Metody** ve třídě.
+2. Pravým tlačítkem myši klikněte na kategorii členů v typu, který chcete upravit (například vyberte uzel **metody** ve třídě.
 
-3. Klepněte na **skrýt přihrádku**.
+3. Klikněte na **Skrýt oddíl**.
 
      Vybraný oddíl zmizí z kontejneru typu.
 
 ## <a name="hide-individual-members-on-a-type"></a>Skrytí jednotlivých členů typu
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
 2. Klikněte pravým tlačítkem myši na člen v typu, který chcete skrýt.
 
-3. Klepněte na **tlačítko Skrýt**.
+3. Klikněte na tlačítko **Skrýt**.
 
      Vybraný člen zmizí z kontejneru typu.
 
 ## <a name="show-hidden-compartments-and-members-on-a-type"></a>Zobrazení skrytých oddílů a členů typu
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
 2. Klikněte pravým tlačítkem na název typu se skrytým oddílem.
 
-3. Klepněte na tlačítko **Zobrazit všechny členy**.
+3. Klikněte na **Zobrazit všechny členy**.
 
      Všechny skryté oddíly a členy se zobrazí v kontejneru typu.
 
 ## <a name="hide-relationships"></a>Skrytí vztahů
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
 2. Klikněte pravým tlačítkem myši na asociační čáru nebo čáru dědičnosti, kterou chcete skrýt.
 
-3. Klikněte na **Skrýt** pro asociační řádky a na **skrýt řádek dědičnosti** pro řádky dědičnosti.
+3. Klikněte na **Skrýt** pro asociační čáry a pak klikněte na **Skrýt čáru dědičnosti** pro čáry dědičnosti.
 
-4. Klepněte na tlačítko **Zobrazit všechny členy**.
+4. Klikněte na **Zobrazit všechny členy**.
 
      Všechny skryté oddíly a členy se zobrazí v kontejneru typu.
 
 ## <a name="show-hidden-relationships"></a>Zobrazení skrytých vztahů
 
-1. Otevřete a vyberte soubor diagramu třídy v **Návrháři tříd**.
+1. Otevřete a vyberte soubor diagramu tříd v **Návrhář tříd**.
 
 2. Klikněte pravým tlačítkem na typ se skrytým přidružením nebo dědičností.
 
-   Klikněte na **Zobrazit všechny členy** pro řádky přidružení a klikněte na Zobrazit základní **třídu** nebo **Zobrazit odvozené třídy** pro řádky dědičnosti.
+   Klikněte na **Zobrazit všechny členy** pro asociační linky a klikněte na **Zobrazit základní třídu** nebo **Zobrazit odvozené třídy** pro čáry dědičnosti.
 
 ## <a name="remove-a-shape-from-a-class-diagram"></a>Odebrání tvaru z diagramu tříd
 Můžete odebrat tvar typu z diagramu tříd bez ovlivnění základního kódu typu. Odebrání tvarů typu z diagramu tříd ovlivní pouze tento diagram: základní kód definující typ a ostatní diagramy, které typ zobrazují, ovlivněny nejsou.
 
 1. V diagramu tříd vyberte tvar typu, který chcete z diagramu odebrat.
 
-2. V nabídce **Úpravy** zvolte **Odebrat z diagramu**.
+2. V nabídce **Upravit** vyberte možnost **Odebrat z diagramu**.
 
      Tvar typu a čáry přidružení nebo dědičnosti spojené s tvarem se již v diagramu nezobrazí.
 
@@ -121,12 +121,12 @@ Můžete odebrat tvar typu z diagramu tříd bez ovlivnění základního kódu 
 
 1. Klikněte pravým tlačítkem myši na tvar na návrhové ploše.
 
-2. V místní nabídce vyberte **Odstranit kód.**
+2. V místní nabídce vyberte **Odstranit kód** .
 
      Tvar je odstraněn z diagramu a jeho základní kód je odstraněn z projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postup: Změna mezi zápisem členů a zápisem přidružení](how-to-change-between-member-notation-and-association-notation.md)
-- [Postup: Zobrazení existujících typů](how-to-view-existing-types.md)
+- [Postupy: Změna mezi zápisem člena a zápisem přidružení](how-to-change-between-member-notation-and-association-notation.md)
+- [Postupy: zobrazení existujících typů](how-to-view-existing-types.md)
 - [Zobrazování typů a vztahů](designing-and-viewing-classes-and-types.md)

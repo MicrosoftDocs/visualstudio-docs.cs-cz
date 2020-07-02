@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Zobrazení karty Vývojář na pásu karet'
+title: 'Postupy: zobrazení karty Vývojář na pásu karet'
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7b6641cca4ef2288452b2f6959482b311a5b07a4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551786"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545844"
 ---
-# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: Zobrazení karty Vývojář na pásu karet
+# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: zobrazení karty Vývojář na pásu karet
   Chcete-li získat přístup k kartě **vývojář** na pásu karet aplikace sady Office, je nutné ji nakonfigurovat tak, aby se tato karta zobrazila, protože se ve výchozím nastavení nezobrazuje. Například je třeba zobrazit tuto kartu, pokud chcete přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> do přizpůsobení na úrovni dokumentu pro aplikaci Word.
 
 > [!NOTE]
-> Tento návod se vztahuje pouze na aplikace Office 2010 nebo novější. Pokud chcete zobrazit tuto kartu v systému 2007 systém Microsoft Office, přečtěte si následující verzi tohoto tématu [: Na pásu karet](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
-)zobrazit kartu Vývojář.
+> Tento návod se vztahuje pouze na aplikace Office 2010 nebo novější. Chcete-li zobrazit tuto kartu v systému 2007 systém Microsoft Office, přečtěte si následující verzi tohoto tématu [: zobrazení karty Vývojář na pásu karet](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
+).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -60,7 +60,7 @@ ms.locfileid: "69551786"
 
 4. V seznamu hlavních karet zaškrtněte políčko **vývojář** .
 
-     Následující obrázek ukazuje zaškrtávací políčko **vývojář** ve wordu 2010 a [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]. Umístění tohoto zaškrtávacího políčka je podobné jako u všech ostatních aplikací, které jsou uvedeny v části "platí pro" v horní části tohoto tématu.
+     Následující obrázek ukazuje zaškrtávací políčko **vývojář** ve wordu 2010 a [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] . Umístění tohoto zaškrtávacího políčka je podobné jako u všech ostatních aplikací, které jsou uvedeny v části "platí pro" v horní části tohoto tématu.
 
      ![Zaškrtávací políčko Vývojář v dialogovém okně Možnosti aplikace Word](../vsto/media/vsto-office2010-developercheckbox.png "Zaškrtávací políčko Vývojář v dialogovém okně Možnosti aplikace Word")
 

@@ -111,6 +111,6 @@ Vzhled a chování Průzkumníka pro návrháře jazyka specifického pro domén
 
      Průzkumník by měl zobrazit pouze uzel **Actors** a neměl by zobrazovat uzel **Komentáře** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

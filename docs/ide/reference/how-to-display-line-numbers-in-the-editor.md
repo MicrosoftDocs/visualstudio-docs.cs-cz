@@ -1,7 +1,7 @@
 ---
 title: Zobrazit čísla řádků pro kód
 ms.date: 03/28/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - line numbers, displaying
 - Code Editor, line numbers
@@ -13,28 +13,28 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5392ad3efaee8a3c29e58bd2b75272e4206215a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ff6e0c50ab41f3d18458c736e48b0a4360b8b286
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770358"
 ---
-# <a name="how-to-display-line-numbers-in-the-editor"></a>Postup: Zobrazení čísel řádků v editoru
+# <a name="how-to-display-line-numbers-in-the-editor"></a>Postupy: zobrazení čísel řádků v editoru
 
 V kódu můžete zobrazit nebo skrýt číslování řádků.
 
-## <a name="display-line-numbers-in-code"></a>Zobrazení čísel řádků v kódu
+## <a name="display-line-numbers-in-code"></a>Zobrazit čísla řádků v kódu
 
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > . Rozbalte uzel **Editor textu** a pak vyberte jazyk, který používáte, nebo **Všechny jazyky,** chcete-li zapnout čísla řádků ve všech jazycích. (Nebo do vyhledávacího pole zadejte **číslo řádku** a z výsledků zvolte **Zapnout nebo vypnout čísla řádků.)**
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje. Rozbalte uzel **textový editor** a pak vyberte buď jazyk, který používáte, nebo **všechny jazyky** , abyste zapnuli čísla řádků ve všech jazycích. (Nebo, zadejte **číslo řádku** do vyhledávacího pole a z výsledků vyberte možnost **zapnout nebo vypnout čísla řádků** .)
 
-2. Zaškrtněte políčko **Čísla řádků.**
+2. Zaškrtněte políčko **čísla řádků** .
 
    ![Možnost zobrazení čísel řádků v editoru VS](../../ide/reference/media/line-numbers-option.png)
 
 > [!TIP]
-> Čísla řádků se do kódu nepřidávají. Jsou jen na posuzu. Pokud chcete, aby se čísla řádků vytiskla, zaškrtněte v dialogovém okně **Tisk** políčko **Zahrnout čísla řádků.**
+> Čísla řádků nejsou přidána do kódu; jsou jenom pro referenci. Pokud chcete tisknout čísla řádků, zaškrtněte políčko **Zahrnout čísla řádků** v dialogovém okně **Tisk** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)

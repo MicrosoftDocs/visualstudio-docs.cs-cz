@@ -16,28 +16,28 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f2fbb856ff53552ab99dabd4f650e9fd7f62a088
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a3a17a0db7dd4ad1c57d23104a313a78cd1289ed
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602971"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547690"
 ---
-# <a name="ca2136-members-should-not-have-conflicting-transparency-annotations"></a>CA2136: Členy nesmějí mít konfliktní poznámky transparentnosti
+# <a name="ca2136-members-should-not-have-conflicting-transparency-annotations"></a>CA2136: Členy by neměly mít konfliktní poznámky transparentnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Položka|Hodnota|
 |-|-|
 |TypeName|TransparencyAnnotationsShouldNotConflict|
 |CheckId|CA2136|
 |Kategorie|Microsoft.Security|
 |Narušující změna|Narušující|
 
-## <a name="cause"></a>příčina
- Toto pravidlo je vyvoláno, když je člen typu označen atributem zabezpečení <xref:System.Security>, který má odlišnou průhlednost než atribut zabezpečení kontejneru člena.
+## <a name="cause"></a>Příčina
+ Toto pravidlo je vyvoláno, když je člen typu označen <xref:System.Security> atributem zabezpečení, který má odlišnou průhlednost než atribut zabezpečení kontejneru člena.
 
 ## <a name="rule-description"></a>Popis pravidla
- Atributy transparentnosti jsou použity z prvků kódu většího rozsahu na prvky menšího rozsahu. Atributy transparentnosti prvků kódu, které mají větší rozsah, mají přednost před atributy transparentnosti prvků kódu, které jsou obsaženy v prvním prvku. Například třída, která je označena atributem <xref:System.Security.SecurityCriticalAttribute>, nesmí obsahovat metodu, která je označena atributem <xref:System.Security.SecuritySafeCriticalAttribute>.
+ Atributy transparentnosti jsou použity z prvků kódu většího rozsahu na prvky menšího rozsahu. Atributy transparentnosti prvků kódu, které mají větší rozsah, mají přednost před atributy transparentnosti prvků kódu, které jsou obsaženy v prvním prvku. Například třída, která je označena <xref:System.Security.SecurityCriticalAttribute> atributem, nesmí obsahovat metodu, která je označena <xref:System.Security.SecuritySafeCriticalAttribute> atributem.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li toto porušení opravit, odeberte atribut zabezpečení z prvku kódu, který má nižší rozsah, nebo změňte jeho atribut tak, aby byl stejný jako element obsahující prvek kódu.
@@ -46,6 +46,6 @@ ms.locfileid: "72602971"
  Potlačit upozornění z tohoto pravidla
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu je metoda označena atributem <xref:System.Security.SecuritySafeCriticalAttribute> a je členem třídy, která je označena atributem <xref:System.Security.SecurityCriticalAttribute>. Je nutné odebrat atribut zabezpečení Safe.
+ V následujícím příkladu je metoda označena <xref:System.Security.SecuritySafeCriticalAttribute> atributem a je členem třídy, která je označena <xref:System.Security.SecurityCriticalAttribute> atributem. Je nutné odebrat atribut zabezpečení Safe.
 
  [!code-csharp[FxCop.Security.CA2136.TransparencyAnnotationsShouldNotConflict#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2136.transparencyannotationsshouldnotconflict/cs/ca2136 - transparencyannotationsshouldnotconflict.cs#1)]
