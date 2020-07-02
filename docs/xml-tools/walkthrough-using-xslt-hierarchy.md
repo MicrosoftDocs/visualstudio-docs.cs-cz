@@ -1,22 +1,22 @@
 ---
 title: 'Návod: Používání hierarchie XSLT'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 940185687544b22325d3f75751eb92e950deb685
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815029"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>Návod: použití hierarchie XSLT
 
-Nástroj hierarchie XSLT zjednodušuje mnoho úloh vývoje XML. Šablona stylů XSLT často používá `includes` a `imports` pokyny. Kompilace začíná z hlavní šablony stylů, ale pokud se zobrazí chyba v důsledku kompilování šablony stylů XSLT, může být chyba z jiného zdroje než z hlavní šablony stylů. Oprava chyby nebo úprav šablony stylů může vyžadovat přístup k zahrnutým nebo importovaným šablonám stylů. Rozkrokování přes šablonu stylů v ladicím programu může otevřít zahrnuté a importované šablony stylů a v některých případech můžete chtít přidat zarážku v jedné nebo více zahrnutých šablonách stylů.
+Nástroj hierarchie XSLT zjednodušuje mnoho úloh vývoje XML. Šablony stylů XSLT často používají `includes` a `imports` pokyny. Kompilace začíná z hlavní šablony stylů, ale pokud se zobrazí chyba v důsledku kompilování šablony stylů XSLT, může být chyba z jiného zdroje než z hlavní šablony stylů. Oprava chyby nebo úprav šablony stylů může vyžadovat přístup k zahrnutým nebo importovaným šablonám stylů. Rozkrokování přes šablonu stylů v ladicím programu může otevřít zahrnuté a importované šablony stylů a v některých případech můžete chtít přidat zarážku v jedné nebo více zahrnutých šablonách stylů.
 
-Další situací, kdy může být užitečný nástroj hierarchie XSLT, je vložení zarážek na předdefinovaná pravidla šablony. Pravidla šablony jsou speciální šablony vygenerované pro každý režim šablony stylů a volány `xsl:apply-templates`, když se uzel neshoduje s žádnou jinou šablonou. Chcete-li implementovat ladění v předdefinovaných pravidlech šablon, ladicí program XSLT vytvoří soubor s pravidly v dočasné složce a zkompiluje je spolu s hlavní šablonou stylů. Bez krokování kódu z některých `xsl:apply-template`může být obtížné najít šablony stylů, které byly zahrnuty do hlavní šablony stylů, nebo vyhledat a otevřít šablonu stylů s vestavěnými pravidly šablon.
+Další situací, kdy může být užitečný nástroj hierarchie XSLT, je vložení zarážek na předdefinovaná pravidla šablony. Pravidla šablony jsou speciální šablony generované pro každý režim šablony stylů a volány v `xsl:apply-templates` případě, že uzel nevyhovuje žádné jiné šabloně. Chcete-li implementovat ladění v předdefinovaných pravidlech šablon, ladicí program XSLT vytvoří soubor s pravidly v dočasné složce a zkompiluje je spolu s hlavní šablonou stylů. Bez krokování kódu z některých `xsl:apply-template` může být obtížné najít šablony stylů, které byly zahrnuty do hlavní šablony stylů, nebo vyhledat a otevřít šablonu stylů s předdefinovanými pravidly šablon.
 
 Příklad v tomto tématu ukazuje ladění v odkazované šabloně stylů.
 
@@ -103,11 +103,11 @@ Příklad v tomto tématu ukazuje ladění v odkazované šabloně stylů.
     </xsl:stylesheet>
     ```
 
-4. Přidejte zarážku na instrukci `<xsl:include href="xslincludefile.xsl" />`.
+4. Přidejte zarážku na instrukci `<xsl:include href="xslincludefile.xsl" />` .
 
-5. Spusťte ladění.
+5. Spustit ladění.
 
-6. Po zastavení ladicího programu na `<xsl:include href="xslincludefile.xsl" />`instrukcí klikněte na tlačítko **Krokovat** s vnořením. Ladění lze pokračovat v odkazované šabloně stylů. Hierarchie je viditelná a Návrhář zobrazuje správnou cestu.
+6. Po zastavení ladicího programu na pokyn `<xsl:include href="xslincludefile.xsl" />` stiskněte tlačítko **Krok do** . Ladění lze pokračovat v odkazované šabloně stylů. Hierarchie je viditelná a Návrhář zobrazuje správnou cestu.
 
 ## <a name="see-also"></a>Viz také:
 

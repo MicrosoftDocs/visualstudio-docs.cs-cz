@@ -1,220 +1,220 @@
 ---
-title: Použití nástrojů sady Visual Studio pro jednotu | Dokumenty společnosti Microsoft
+title: Použití Visual Studio Tools for Unity | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d1bca9bed18de822de71ca441387adeaefc65ec3
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: f65945f28a577201c1308694bb7196d464330dc1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815159"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Používání Visual Studio Tools for Unity
 
-V této části se dozvíte, jak používat nástroje Visual Studio pro funkce integrace a produktivity Unity a jak používat ladicí program Visual Studio pro vývoj Unity.
+V této části se dozvíte, jak používat funkce integrace a produktivity Visual Studio Tools for Unity a jak používat ladicí program sady Visual Studio pro vývoj Unity.
 
-## <a name="open-unity-scripts-in-visual-studio"></a>Otevření skriptů Unity v sadě Visual Studio
+## <a name="open-unity-scripts-in-visual-studio"></a>Otevření skriptů Unity v nástroji Visual Studio
 
-Jakmile visual studio je [nastavenjako externí editor skriptů pro unity](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-for-use-with-visual-studio), otevření libovolného skriptu z editoru Unity se automaticky spustí nebo přepnout do Visual Studio s vybraným skriptem otevřené. Stačí dvakrát kliknout na skript v projektu Unity.
+Jakmile je sada Visual Studio [nastavená jako externí editor skriptu pro Unity](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-for-use-with-visual-studio), otevření skriptu z editoru Unity se automaticky spustí nebo přepne do sady Visual Studio s vybraným otevřeným skriptem. Stačí dvakrát kliknout na skript v projektu Unity.
 
-Případně můžete otevřít Visual Studio bez skriptu otevřeného ve zdrojovém editoru výběrem **open c# projektu** z nabídky **Datové zdroje** v unity.
+Alternativně můžete otevřít Visual Studio bez skriptu otevřeného ve zdrojovém editoru tak, že v nabídce **prostředky** v Unity vyberete **Otevřít projekt C#** .
 
-![Otevřít projekt Jazyka C#](media/vstu_open-csharp-project.png)
+![Otevřít projekt C#](media/vstu_open-csharp-project.png)
 
 ## <a name="unity-documentation-access"></a>Přístup k dokumentaci Unity
 
-Můžete rychle přistupovat k dokumentaci skriptování Unity z Visual Studia. Pokud Visual Studio Tools for Unity nenajde dokumentaci rozhraní API místně, pokusí se ji najít online.
+K rychlé dokumentaci ke skriptování Unity se dostanete ze sady Visual Studio. Pokud Visual Studio Tools for Unity nenalezne dokumentaci k rozhraní API místně, pokusí se ji najít online.
 
-- V sadě Visual Studio zvýrazněte nebo umístěte kurzor nad rozhraní Unity API, o kterém se chcete dozvědět, a pak stiskněte **kombinaci kláves Ctrl**+**Alt**+**M**, **Ctrl**+**H**
+- V aplikaci Visual Studio zvýrazněte nebo umístěte kurzor na rozhraní Unity API, se kterým chcete získat informace, a pak stiskněte **kombinaci kláves CTRL** + **+** + **M**, **CTRL** + **H** .
 
-## <a name="intellisense-for-unity-api-messages"></a>Intellisense pro zprávy unity API
+## <a name="intellisense-for-unity-api-messages"></a>IntelliSense pro zprávy rozhraní API Unity
 
-Dokončování kódu Intellisense usnadňuje implementaci zpráv Unity API ve skriptech MonoBehaviour a pomáhá s učením rozhraní Unity API. Použití zpráv IntelliSense for Unity:
+Technologie IntelliSense – dokončování kódu usnadňuje implementaci zpráv rozhraní API Unity ve skriptech MonoBehaviour a pomáhá se učením rozhraní API Unity. Použití technologie IntelliSense pro zprávy Unity:
 
-1. Umístěte kurzor na nový řádek uvnitř těla třídy, která je odvozena od `MonoBehaviour`.
+1. Umístěte kurzor na nový řádek v těle třídy, která je odvozena z `MonoBehaviour` .
 
-2. Začněte psát název zprávy Unity, `OnTriggerEnter`například .
+2. Začněte psát název zprávy Unity, třeba `OnTriggerEnter` .
 
-3. Po napsání písmen "**ontri**" se zobrazí seznam návrhů IntelliSense.
+3. Po zadání písmen "**ontri**" se zobrazí seznam návrhů technologie IntelliSense.
 
    ![Používání atributu IntelliSense](media/vstu_intellisense1.png)
 
 4. Výběr v seznamu lze změnit třemi způsoby:
 
-    - Pomocí kláves se šipkami **nahoru** a **dolů.**
+    - Pomocí šipek **nahoru** a **dolů** .
 
-    - Kliknutím myší na požadovanou položku.
+    - Kliknutím myši na požadovanou položku.
 
-    - Dalším zadáním názvu požadované položky.
+    - Tím, že budete pokračovat zadáním názvu požadované položky.
 
-5. Technologie IntelliSense může vložit vybranou zprávu Unity, včetně všech nezbytných parametrů:
+5. Technologie IntelliSense může vložit vybranou zprávu Unity, včetně nezbytných parametrů:
 
-    - Stisknutím **klávesy Tab**.
+    - Stisknutím klávesy **TAB**.
 
-    - Stisknutím **klávesy Enter**.
+    - Stisknutím klávesy **ENTER**.
 
-    - Poklepáním na vybranou položku.
+    - Dvojím kliknutím na vybranou položku.
 
-   ![Vložit zprávu Unity ze služby IntelliSense](media/vstu_intellisense2.png)
+   ![Vložení zprávy Unity z IntelliSense](media/vstu_intellisense2.png)
 
 ## <a name="unity-monobehavior-scripting-wizard"></a>Průvodce skriptováním Unity MonoBehavior
 
-Průvodce MonoBehavior můžete použít k zobrazení seznamu všech metod rozhraní UNITY API a rychlé implementaci prázdné definice. Tato funkce, zejména s **možnost generovat metodu komentáře** povolena, je užitečné, pokud jste stále učení, co je k dispozici v rozhraní API Unity.
+Průvodce MonoBehavior můžete použít k zobrazení seznamu všech metod rozhraní API Unity a k rychlé implementaci prázdné definice. Tato funkce, zejména v případě, že je povolená možnost **vygenerovat komentáře k metodám** , je užitečná, pokud stále víte, co je k dispozici v rozhraní API Unity.
 
-Chcete-li vytvořit prázdné definice metod MonoBehavior pomocí průvodce MonoBehavior:
+Vytvoření prázdných definic metod MonoBehavior pomocí Průvodce MonoBehavior:
 
-1. V sadě Visual Studio umístěte kurzor na místo, kam chcete vložit metody, a stisknutím **klávesctrl**+**shift**+**M** spusťte Průvodce monochováním.
+1. V aplikaci Visual Studio umístěte kurzor na místo, kam chcete přidat metody, a pak stisknutím **kombinace kláves CTRL** + **SHIFT** + **M** spusťte Průvodce MonoBehavior.
 
-2. V okně **Vytvořit metody skriptu** zaškrtněte políčko vedle názvu každé metody, kterou chcete přidat.
+2. V okně **vytvořit metody skriptu** označte zaškrtávací políčko vedle názvu každé metody, kterou chcete přidat.
 
-3. Pomocí rozevíracího souboru **Verze rozhraní** vyberte požadovanou verzi.
+3. Pomocí rozevíracího seznamu **verze rozhraní** vyberte požadovanou verzi.
 
-4. Ve výchozím nastavení jsou metody vloženy na pozici kurzoru. Případně můžete zvolit jejich vložení po libovolné metodě, která je již implementována ve vaší třídě změnou hodnoty rozevíracího **souboru kurzoru** na požadované umístění.
+4. Ve výchozím nastavení jsou metody vloženy do pozice kurzoru. Alternativně můžete zvolit, aby byly vloženy po libovolné metodě, která je již implementována ve vaší třídě, změnou hodnoty rozevíracího seznamu **míst vložení** do umístění, které chcete.
 
-5. Pokud chcete, aby průvodce generoval komentáře pro vybrané metody, zaškrtněte políčko **Generovat komentáře metody.** Tyto komentáře jsou určeny k tomu, aby vám pomohly pochopit, kdy je metoda volána a jaké jsou její obecné povinnosti.
+5. Chcete-li, aby průvodce vygeneroval komentáře pro vybrané metody, označte zaškrtávací políčko **generovat komentáře metody** . Tyto komentáře jsou určeny k tomu, aby vám pomohly pochopit, kdy je metoda volána a jaké jsou její obecné zodpovědnosti.
 
-6. Zvolte tlačítko **OK,** chcete-li průvodce ukončit a vložit metody do kódu.
+6. Kliknutím na tlačítko **OK** ukončete průvodce a vložte metody do kódu.
 
-   ![Dialogové okno průvodce monochováním.](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
+   ![Dialog Průvodce MonoBehavior](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")
 
-## <a name="unity-project-explorer"></a>Průzkumník projektu Unity
+## <a name="unity-project-explorer"></a>Průzkumník projektů Unity
 
-![Okno Průzkumníka projektu Unity.](../cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")
+![Okno Průzkumník projektů Unity.](../cross-platform/media/vstu_unity_project_explorer.png "vstu_unity_project_explorer")
 
-Unity Project Explorer zobrazuje všechny soubory projektu Unity a adresáře stejným způsobem, jako unity editor. To je jiný než navigace unity skripty s normální Visual Studio Průzkumník řešení, který je organizuje do projektů a řešení generované Visual Studio.
+Průzkumník projektů Unity zobrazuje všechny vaše soubory projektu Unity a adresáře stejným způsobem jako Editor Unity. To je jiné než navigace ve skriptech Unity s normálním Průzkumník řešení sady Visual Studio, které je uspořádá do projektů a řešení vygenerovaného sadou Visual Studio.
 
-- V hlavní nabídce Sady Visual Studio zvolte **Zobrazit > Průzkumníka projektů Unity**. Klávesová zkratka: **Alt**+**Shift**+**E**
+- V hlavní nabídce aplikace Visual Studio vyberte možnost **zobrazit > Průzkumník projektů Unity**. Klávesová zkratka: **ALT** + **SHIFT** + **E**
 
-   ![Zobrazení okna Průzkumníka projektu Unity.](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
+   ![Zobrazí okno Průzkumník projektů Unity.](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
 
-## <a name="unity-debugging"></a>Ladění jednoty
+## <a name="unity-debugging"></a>Ladění Unity
 
-Visual Studio Tools for Unity umožňuje ladit editor a herní skripty pro váš projekt Unity pomocí výkonného ladicího programu visual studia.
+Visual Studio Tools for Unity umožňuje ladit jak editor, tak herní skripty pro projekt Unity pomocí výkonného ladicího programu sady Visual Studio.
 
 ### <a name="debug-in-the-unity-editor"></a>Ladění v editoru Unity
 
-#### <a name="start-debugging"></a>Zahájit ladění
+#### <a name="start-debugging"></a>Spustit ladění
 
-1. Připojte visual studio k jednotě klepnutím na tlačítko **Přehrát** označené **připojit k jednotě**nebo pomocí klávesové zkratky **F5**.
+1. Připojte Visual Studio k Unity kliknutím na tlačítko **Přehrát** přidaných **k Unity**nebo použijte klávesovou zkratku **F5**.
 
-   ![Klikněte na Přehrát v Sadě Visual Studio.](media/vstu_play-button.png)
+   ![Klikněte na tlačítko Přehrát v aplikaci Visual Studio](media/vstu_play-button.png)
 
 2. Přepněte na Unity a kliknutím na tlačítko **Přehrát** spusťte hru v editoru.
 
-   ![Klikněte na Přehrát v jednotě](media/vstu_unity-play-button.png)
+   ![Klikněte na tlačítko Přehrát v Unity](media/vstu_unity-play-button.png)
 
-3. Když hra běží v editoru Unity při připojení k Visual Studio, všechny zarážky zjištěné pozastaví provádění hry a zobrazí řádek kódu, kde hra narazí na zarážku v sadě Visual Studio.
+3. Když je hra spuštěna v editoru Unity během připojení k aplikaci Visual Studio, všechny zjištěné zarážky pozastaví provádění hry a zobrazí řádek kódu, kde hra narazí na zarážku v aplikaci Visual Studio.
 
 #### <a name="stop-debugging"></a>Zastavit ladění
 
-- Klepněte na tlačítko **Zastavit** v sadě Visual Studio nebo použijte klávesovou zkratku **Shift + F5**.
+- Klikněte na tlačítko **zastavit** v aplikaci Visual Studio nebo použijte klávesovou zkratku **SHIFT + F5**.
 
-  ![Klikněte na Zastavit v sadě Visual Studio.](media/vstu_stop-debugger.png)
+  ![Klikněte na zastavit v aplikaci Visual Studio.](media/vstu_stop-debugger.png)
 
-Další informace o ladění v sadě Visual Studio najdete v [tématu První pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md).
+Další informace o ladění v aplikaci Visual Studio naleznete v tématu [první pohled na ladicí program sady Visual Studio](../debugger/debugger-feature-tour.md).
 
-#### <a name="attach-to-unity-and-play"></a>Připojte se k jednotě a přehrávání
+#### <a name="attach-to-unity-and-play"></a>Připojit k Unity a hrát
 
-Pro větší pohodlí můžete změnit **tlačítko Připojit k jednotě** připojit **k režimu Unity a Play.**
+Pro zvýšení pohodlí můžete změnit tlačítko **připojit k Unity** pro **připojení k režimu Unity a Play** .
 
-1. Klikněte na malou **šipku dolů** vedle tlačítka **Připojit k jednotě.**
+1. Klikněte na **šipku dolů** vedle tlačítka **připojit k Unity** .
 
-1. V rozevírací nabídce vyberte **Připojit k jednotě a přehrát.**
+1. V rozevírací nabídce vyberte **připojit k Unity a** stiskněte tlačítko Přehrát.
 
-    ![Připojení a přehrávání](media/vstu_attach-and-play.png)
+    ![Připojit a přehrát](media/vstu_attach-and-play.png)
 
-Tlačítko přehrávání se stane označeno **připojit k jednotě a přehrát**. Kliknutím na toto tlačítko nebo pomocí klávesové zkratky **F5** se nyní automaticky přepne do editoru Unity a spustí hru v editoru, kromě připojení ladicího programu Sady Visual Studio.
+Tlačítko Přehrát je označeno jako **připojit k Unity a hrát**. Po kliknutí na toto tlačítko nebo pomocí klávesové zkratky **F5** se nyní automaticky přepne do editoru Unity a spustí se hra v editoru, a to i při připojení ladicího programu sady Visual Studio.
 
-Kliknutím na tlačítko **Zastavit** v sadě Visual Studio nebo pomocí klávesové zkratky **Shift**+**F5** automaticky zastavíte hru v editoru Unity.
+Kliknutím na tlačítko **zastavit** v aplikaci Visual Studio nebo pomocí klávesové zkratky **SHIFT** + **F5** se hra automaticky zastaví v editoru Unity.
 
-### <a name="debug-unity-player-builds"></a>Ladění Unity hráč staví
+### <a name="debug-unity-player-builds"></a>Ladění sestavení v přehrávači Unity
 
-Můžete ladit vývoj sestavení různých unity přehrávače s Visual Studio.
+Pomocí sady Visual Studio můžete ladit vývojová sestavení různých přehrávačů Unity.
 
 #### <a name="enable-script-debugging-in-a-unity-player"></a>Povolení ladění skriptů v přehrávači Unity
 
-1. V unity otevřete nastavení sestavení výběrem **souboru > nastavení sestavení**.
+1. V Unity otevřete nastavení sestavení tak, že vyberete **soubor > nastavení sestavení**.
 
-2. V okně Nastavení sestavení označte zaškrtávací políčka **Ladění vývojového sestavení** a **skriptů.**
+2. V okně nastavení sestavení označte zaškrtávací políčka **vývojové sestavení** a **ladění skriptu** .
 
    ![Nakonfigurujte nastavení sestavení Unity pro ladění.](../cross-platform/media/vstu_debugging_build_settings.png "vstu_debugging_build_settings")
 
-#### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>Vyberte instanci Unity, ke které chcete připojit ladicí program.
+#### <a name="select-a-unity-instance-to-attach-the-debugger-to"></a>Vyberte instanci Unity pro připojení ladicího programu k
 
-- V sadě Visual Studio v hlavní nabídce zvolte **Ladění > připojit ladicí program jednoty**.
+- V aplikaci Visual Studio v hlavní nabídce vyberte možnost **ladění > připojit ladicí program Unity**.
 
    ![Připojte ladicí program Unity.](../cross-platform/media/vstu_debugging_attach_unity_debugger.png "vstu_debugging_attach_unity_debugger")
 
-   Dialogové okno **Vybrat jednotu instance** zobrazí některé informace o každé instanci Unity, ke které se můžete připojit.
+   V dialogovém okně **Vybrat instanci Unity** se zobrazí některé informace o jednotlivých instancích Unity, ke kterým se můžete připojit.
 
-   ![Zvolte instanci Unity, ke které se chcete připojit.](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
+   ![Vyberte instanci Unity, ke které se chcete připojit.](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
 
-   **Project**
+   **Projekt**
 
-   Název projektu Unity, který je spuštěn v této instanci Unity.
+   Název projektu Unity, který je spuštěný v této instanci Unity.
 
-   **Stroj** Název počítače nebo zařízení, na kterých je spuštěna tato instance Unity.
+   **Počítač** Název počítače nebo zařízení, ve kterém je tato instance Unity spuštěná.
 
-   **Editor typů,** **Editor** pokud je tato instance Unity spuštěna jako součást Editoru jednoty; **Přehrávač,** pokud je tato instance Unity samostatným hráčem.
+   **Type** **Editor** typů, pokud je tato instance Unity spuštěná jako součást editoru Unity; **Přehrávač** , pokud je tato instance Unity samostatným přehrávačem.
 
-   **Přístav** Číslo portu soketu UDP, přes který tato instance Unity komunikuje.
+   **Port** Číslo portu soketu UDP, přes který tato instance Unity komunikuje.
 
 > [!IMPORTANT]
-> Vzhledem k tomu, že Visual Studio Tools for Unity a instance Unity komunikují přes síťový soket UDP, může se na to vás zeptat brána firewall. Pokud k tomu dojde, budete muset autorizovat připojení tak, aby VSTU a Unity můžete komunikovat.
+> Vzhledem k tomu, že Visual Studio Tools for Unity a instance Unity komunikují přes síťový soket UDP, může to v bráně firewall požádat. Pokud k tomu dojde, budete muset autorizovat připojení, aby VSTU a Unity mohl komunikovat.
 
-### <a name="debug-a-dll-in-your-unity-project"></a>Ladění dll v projektu Unity
+### <a name="debug-a-dll-in-your-unity-project"></a>Ladění knihovny DLL v projektu Unity
 
-Mnoho vývojářů Unity píše součásti kódu jako externí knihovny DLL, takže funkce, které vyvíjejí, lze snadno sdílet s jinými projekty. Visual Studio Tools for Unity usnadňuje ladění kódu v těchto knihovnách DLL bez problémů s jiným kódem v projektu Unity.
-
-> [!NOTE]
-> V tuto chvíli Visual Studio Tools for Unity podporuje pouze spravované knihovny DLL. Nepodporuje ladění nativních kódů DLL, jako jsou například napsané v jazyce C++.
-
-Všimněte si, že scénář popsaný zde předpokládá, že máte zdrojový kód – to znamená, že vyvíjíte nebo znovu používáte vlastní kód první strany, nebo máte zdrojový kód do knihovny třetí strany a plánujete jeho nasazení v projektu Unity jako knihovnu DLL. Tento scénář nepopisuje ladění dll, pro které nemáte zdrojový kód.
-
-#### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Ladění spravovaného projektu DLL použitého v projektu Unity
-
-1. Přidejte existující projekt DLL do řešení Visual Studio generovaného nástroji Visual Studio Tools for Unity. Méně často se může spouštět nový spravovaný projekt DLL, který obsahuje součásti kódu v projektu Unity; Pokud tomu tak je, můžete přidat nový spravovaný projekt Knihovny DLL do řešení sady Visual Studio. Další informace o přidání nového nebo existujícího projektu do řešení naleznete v tématu [How to: Add Projects to a Solution](https://msdn.microsoft.com/library/ff460187.aspx).
-
-   ![Přidejte existující projekt DLL do řešení.](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
-
-   V obou případech Visual Studio Tools for Unity udržuje odkaz na projekt, i v případě, že má znovu obnovit soubory projektu a řešení, takže stačí provést tyto kroky jednou.
-
-2. Odkaz na správný profil architektury Unity v projektu DLL. V sadě Visual Studio ve vlastnostech projektu DLL nastavte vlastnost **Framework target** na verzi architektury Unity, kterou používáte. Toto je unity základní třídy knihovny, která odpovídá kompatibilitě rozhraní API, které váš projekt cíle, jako je například Unity úplné, mikro nebo webové základní třídy knihovny. Tím zabráníte vaší dll volání metod rozhraní, které existují v jiných architekturách nebo úrovně kompatibility, ale které nemusí existovat v rozhraní Unity verze, kterou používáte.
+Mnoho vývojářů Unity napisuje komponenty kódu jako externí knihovny DLL, aby bylo možné funkce, které vyvíjejí, snadno sdílet s ostatními projekty. Visual Studio Tools for Unity usnadňuje ladění kódu v těchto knihovnách DLL plynule s jiným kódem v projektu Unity.
 
 > [!NOTE]
-> Následující je vyžadováno pouze v případě, že používáte starší runtime Unity. Pokud používáte nový modul runtime Unity, už nemusíte používat tyto vyhrazené profily 3.5. Použijte profil .NET 4.x kompatibilní s verzí Unity.
+> V tuto chvíli Visual Studio Tools for Unity podporuje jenom spravované knihovny DLL. Nepodporuje ladění knihoven DLL nativního kódu, jako jsou například ty, které byly napsány v jazyce C++.
 
-   ![Nastavte cílovou architekturu dll na unity framework.](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")
+Všimněte si, že zde popsaný scénář předpokládá, že máte zdrojový kód – to znamená, že vyvíjíte nebo znovu používáte vlastní kód první strany, nebo máte zdrojový kód do knihovny třetích stran a naplánujete ho nasadit do projektu Unity jako knihovnu DLL. Tento scénář nepopisuje ladění knihovny DLL, pro kterou nemáte zdrojový kód.
 
-3. Zkopírujte knihovnu DLL do složky Asset projektu Unity. V Unity jsou datové zdroje soubory, které jsou zabaleny a nasazeny společně s vaší aplikací Unity, aby je bylo možné načíst za běhu. Vzhledem k tomu, že knihovny DLL jsou propojeny za běhu, musí být knihovny DLL nasazeny jako prostředky. Chcete-li být nasazenjako prostředek, Unity Editor vyžaduje Knihovny DLL, které mají být umístěny uvnitř složky Prostředky v projektu Unity. To lze provést dvěma způsoby:
+#### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Ladění projektu spravované knihovny DLL použitého v projektu Unity
 
-   - Upravte nastavení sestavení projektu DLL tak, aby zahrnovala úlohu po sestavení, která kopíruje výstupní soubory DLL a PDB z výstupní složky do složky **Datové zdroje** projektu Unity.
+1. Přidejte svůj existující projekt knihovny DLL do řešení sady Visual Studio generovaného Visual Studio Tools for Unity. Méně často, možná spouštíte nový projekt spravovaných knihoven DLL, který bude obsahovat komponenty kódu v projektu Unity; Pokud je to tento případ, můžete místo toho přidat nový projekt spravovaných knihoven DLL do řešení sady Visual Studio. Další informace o přidání nového nebo existujícího projektu k řešení naleznete v tématu [How to: Add Projects to a Solution (řešení](https://msdn.microsoft.com/library/ff460187.aspx)).
 
-   - Upravte nastavení sestavení projektu DLL a nastavte jeho výstupní složku tak, aby byla složky **Datové zdroje** projektu Unity. Soubory DLL i PDB budou umístěny do složky **Datové zdroje.**
+   ![Přidejte svůj existující projekt knihovny DLL do řešení.](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
 
-   Soubory PDB jsou potřebné pro ladění, protože obsahují ladicí symboly dll a mapovat kód DLL do formuláře zdrojového kódu. Pokud cílíte na starší runtime, Visual Studio Tools for Unity použije informace z DLL a PDB k vytvoření dll. MDB, což je formát ladicí symbol používaný starším skriptovacím strojem Unity. Pokud cílíte na nový runtime a pomocí portable-PDB, Visual Studio Tools for Unity se nebude snažit provést žádný převod symbolu jako nový runtime Unity je schopen nativně využívat přenosné pdbs.
+   V obou případech Visual Studio Tools for Unity udržuje odkaz na projekt, a to i v případě, že má znovu vygenerovat projekt a soubory řešení, takže je třeba provést tyto kroky pouze jednou.
 
-   Více informací o generaci PDB naleznete [zde](../debugger/how-to-set-debug-and-release-configurations.md). Pokud cílíte na nový runtime, ujistěte se, že "Ladění informace" je nastavena na "Portable", aby bylo možné správně generovat Portable-PDB. Pokud cílíte na starší runtime, musíte použít "Full".
+2. Odkaz na správný profil rozhraní Unity v projektu knihovny DLL. V sadě Visual Studio ve vlastnostech projektu knihovny DLL nastavte vlastnost **Cílová architektura** na verzi architektury Unity, kterou používáte. Jedná se o knihovnu tříd Unity Base, která odpovídá kompatibilitě rozhraní API, na kterou váš projekt cílí, jako je například třída Full, Micro nebo webová knihovna základních tříd. To brání vaší knihovně DLL v volání metod rozhraní, které existují v jiných rozhraních nebo úrovních kompatibility, ale které nemusí existovat v verzi rozhraní Unity, kterou používáte.
 
-4. Ladění kódu. Nyní můžete ladit zdrojový kód DLL společně se zdrojovým kódem projektu Unity a použít všechny funkce ladění, na které jste zvyklí, jako jsou zarážky a krokování kódu.
+> [!NOTE]
+> Toto je nutné jenom v případě, že používáte starší verzi modulu runtime Unity. Pokud používáte nový modul runtime Unity, nemusíte už tyto vyhrazené profily 3,5 používat. Použijte profil .NET 4. x kompatibilní s vaší verzí Unity.
+
+   ![Nastavte cílové rozhraní knihovny DLL na architekturu Unity.](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")
+
+3. Zkopírujte knihovnu DLL do složky assetů vašeho projektu Unity. V Unity jsou prostředky soubory, které jsou zabaleny a nasazeny společně s vaší aplikací Unity, aby je bylo možné načíst za běhu. Vzhledem k tomu, že knihovny DLL jsou propojeny v době běhu, knihovny DLL musí být nasazeny jako prostředky. Aby bylo možné nasadit jako prostředek, Editor Unity vyžaduje, aby byly knihovny DLL vloženy do složky assets v projektu Unity. Můžete to provést dvěma způsoby:
+
+   - Upravte nastavení sestavení projektu knihovny DLL tak, aby zahrnovalo sestavený úkol, který kopíruje výstupní knihovnu DLL a soubory PDB z výstupní složky do složky **assety** vašeho projektu Unity.
+
+   - Upravte nastavení sestavení projektu knihovny DLL tak, aby výstupní složka byla nastavena na složku **assets** vašeho projektu Unity. Soubory DLL a PDB budou umístěny do složky **assets (prostředky** ).
+
+   Soubory PDB jsou nutné pro ladění, protože obsahují symboly ladění knihovny DLL a mapují kód knihovny DLL na formulář zdrojového kódu. Pokud cílíte na starší verzi modulu runtime, Visual Studio Tools for Unity použije informace z knihovny DLL a PDB k vytvoření knihovny DLL. Soubor MDB, což je formát symbolu ladění používaný starším skriptovacím modulem Unity. Pokud cílíte na nový modul runtime a použijete přenositelného PDB, Visual Studio Tools for Unity se nebude pokoušet provést žádný převod symbolů, protože nový modul runtime Unity dokáže nativně spotřebovávat přenosné-soubory PDB.
+
+   Další informace o generování PDB najdete [tady](../debugger/how-to-set-debug-and-release-configurations.md). Pokud cílíte na nový modul runtime, ujistěte se, že je "ladicí informace" nastavené na "přenosné", aby bylo možné správně vygenerovat přenosné soubor PDB. Pokud cílíte na starší verzi modulu runtime, je nutné použít úplný.
+
+4. Ladění kódu. Nyní můžete ladit zdrojový kód vaší knihovny DLL společně se zdrojovým kódem vašeho projektu Unity a použít všechny funkce ladění, které jste použili pro, například zarážky a krokování prostřednictvím kódu.
 
 ## <a name="keyboard-shortcuts"></a>Klávesové zkratky
 
-Můžete rychle přistupovat k nástrojům Unity pro visual studio funkce pomocí jejich klávesové zkratky. Zde je přehled zkratek, které jsou k dispozici.
+Pomocí klávesových zkratek můžete rychle získat přístup k funkcím Unity Tools for Visual Studio. Tady je souhrn zástupců, které jsou k dispozici.
 
 |Příkaz|Zástupce|Název příkazu zástupce|
 |-------------|--------------|---------------------------|
-|Otevření Průvodce monochováním|**Ctrl**+**Shift**+**M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
-|Otevření Průzkumníka projektu Unity|**Alt**+**Shift**+**E**|**Aplikace View.UnityProjectExplorer**|
-|Přístup k dokumentaci Unity|**Ctrl**+**Alt**+**M, Ctrl**+**H**|**Help.UnityAPIReference**|
-|Připojit k ladicímu programu Unity (přehrávač nebo editor)|**_žádné výchozí nastavení_**|**Ladicí program:AttachUnityDebugger**|
+|Otevřít Průvodce MonoBehavior|**CTRL** + **Posun** + **M**|**EditorContextMenus. CodeWindow. ImplementMonoBehaviours**|
+|Otevřete Průzkumníka projektů Unity.|**ALT** + **Posun** + **E**|**Zobrazit. UnityProjectExplorer**|
+|Přístup k dokumentaci Unity|**CTRL** + **ALT** + **M, CTRL** + **H**|**Help. UnityAPIReference**|
+|Připojení k ladicímu programu Unity (přehrávač nebo Editor)|**_žádná výchozí_**|**Debug. AttachUnityDebugger**|
 
-Pokud se vám nelíbí výchozí nastavení, můžete změnit kombinace klávesových zkratek. Informace o tom, jak ji změnit, najdete [v tématu Identifikace a přizpůsobení klávesových zkratek v sadě Visual Studio](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+Pokud nechcete používat výchozí hodnoty, můžete změnit kombinace klávesových zkratek. Informace o tom, jak ho změnit, naleznete v tématu [identifikace a přizpůsobení klávesových zkratek v aplikaci Visual Studio](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).

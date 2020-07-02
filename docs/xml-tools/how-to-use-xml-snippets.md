@@ -1,19 +1,19 @@
 ---
 title: Používání fragmentů kódu XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: decc565eca9b7299761405e06c0cecf82f63319d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e72c5ef5d5c33c46a9f09eb604d0a2e40cf9a6e7
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815913"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
 
@@ -26,7 +26,7 @@ Po přidání fragmentu kódu XML do editoru jsou všechna upravitelná pole ve 
 Následující postupy popisují, jak získat přístup k příkazu **Vložit fragment** .
 
 > [!NOTE]
-> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL**+**K**a pak **CTRL**+**X**).
+> Příkaz **Vložit fragment** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K**a pak **CTRL** + **X**).
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Vložení fragmentů z místní nabídky
 
@@ -52,14 +52,14 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 1. Umístěte kurzor na místo, kam chcete vložit fragment kódu XML.
 
-2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **Ctrl**+**MEZERNÍK** pro jeho aktivaci.
+2. Začněte psát fragment kódu XML, který chcete přidat do souboru. Je-li automatické dokončování zapnuté, zobrazí se seznam slov kompletních funkcí IntelliSense. Pokud se nezobrazí, stiskněte klávesu **CTRL** + **Space** a aktivujte ji.
 
 3. Vyberte fragment kódu XML ze seznamu kompletních slov.
 
 4. Stiskněte **tabulátor**, **TAB** a volejte fragment kódu XML.
 
 > [!NOTE]
-> Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit prvek `xs:complexType` do uzlu `xs:element`, Editor negeneruje fragment kódu XML. Pokud je `xs:complexType` element použit uvnitř uzlu `xs:element`, nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
+> Můžou nastat případy, kdy fragment kódu XML není vyvolán. Například pokud se pokusíte vložit `xs:complexType` element do `xs:element` uzlu, Editor negeneruje fragment kódu XML. Pokud `xs:complexType` je v uzlu použit element `xs:element` , nejsou vyžadovány žádné atributy ani dílčí prvky, takže Editor neobsahuje žádná data, která by bylo možné vložit.
 
 ### <a name="to-insert-snippets-using-the-shortcut-name"></a>Vložení fragmentů kódu pomocí názvu zástupce
 
@@ -71,12 +71,12 @@ Následující postupy popisují, jak získat přístup k příkazu **Vložit fr
 
 4. Zadejte název zástupce fragmentu a stisknutím klávesy **TAB** volejte fragment XML.
 
-## <a name="surround-with"></a>Obklopit fragmentem
+## <a name="surround-with"></a>Obklopit
 
 Následující postupy popisují, jak získat přístup k příkazu **uzavřít pomocí** příkazu.
 
 > [!NOTE]
-> Příkaz **obklopit pomocí** je dostupný taky prostřednictvím klávesové zkratky (**CTRL**+**K**a pak **CTRL**+**S**).
+> Příkaz **obklopit pomocí** je také k dispozici prostřednictvím klávesové zkratky (**CTRL** + **K**a potom **CTRL** + **S**).
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Použití Surround with v místní nabídce
 
@@ -102,7 +102,7 @@ Následující postupy popisují, jak získat přístup k příkazu **uzavřít 
 
 Po výběru fragmentu kódu XML je text fragmentu kódu vložen automaticky na pozici kurzoru. Všechna upravitelná pole ve fragmentu kódu jsou zvýrazněna a první upravitelná pole je vybráno automaticky. Aktuálně vybrané pole je zabaleno.
 
-Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stisknutí **klávesy Shift** **+** přepínat mezi nimi v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
+Když je vybráno pole, můžete zadat novou hodnotu pole. Stisknutí klávesy **TAB** pomocí upravitelných polí fragmentu; stiskem klávesy **SHIFT**projdete + **Tab** je v opačném pořadí. Kliknutím na pole umístíte kurzor do pole a dvakrát kliknete na pole, které vyberete. Když je zvýrazněno pole, může se zobrazit popisek, který nabízí popis pole.
 
 Upravovat se dá jenom první instance daného pole. Když je toto pole zvýrazněno, ostatní instance tohoto pole jsou poznačené. Když změníte hodnotu upravitelného pole, toto pole se změní všude, kde se používá ve fragmentu.
 

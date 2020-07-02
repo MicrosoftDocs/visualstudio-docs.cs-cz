@@ -1,8 +1,8 @@
 ---
-title: Element ProjectItem (šablony položek sady Visual Studio) | Dokumenty společnosti Microsoft
+title: ProjectItem – element (šablony položek sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
@@ -14,22 +14,23 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6826440ed12e90f1ffced63dfef45bb3d86177ac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80701864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770726"
 ---
-# <a name="projectitem-element-visual-studio-item-templates"></a>Element ProjectItem (šablony položek sady Visual Studio)
+# <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem – element (šablony položek sady Visual Studio)
 Určuje soubor, který je součástí šablony položky.
 
 > [!NOTE]
-> Prvek `ProjectItem` přijímá různé atributy v závislosti na tom, zda je šablona pro projekt nebo položku. Toto téma `ProjectItem` vysvětluje prvek pro položku. Vysvětlení prvku pro `ProjectItem` šablony projektu naleznete v tématu [ProjectItem element (Šablony projektu Visual Studio)](../extensibility/projectitem-element-visual-studio-project-templates.md).
+> `ProjectItem`Element přijímá různé atributy v závislosti na tom, zda je šablona určena pro projekt nebo položku. Toto téma vysvětluje `ProjectItem` prvek pro položku. Vysvětlení `ProjectItem` prvku pro šablony projektů naleznete v tématu [element ProjectItem (šablony projektů sady Visual Studio)](../extensibility/projectitem-element-visual-studio-project-templates.md).
 
- \<VSTemplate \<> TemplateContent> \<položku projektu>
+ \<VSTemplate> \<TemplateContent>
+ \<ProjectItem>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <ProjectItem
@@ -42,46 +43,46 @@ Určuje soubor, který je součástí šablony položky.
 </ProjectItem>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
 
 | Atribut | Popis |
 |---------------------| - |
-| `SubType` | Nepovinný atribut.<br /><br /> Určuje podtyp položky v šabloně vícesouborové položky. Tato hodnota se používá k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] určení editoru, který se použije k otevření položky. |
-| `CustomTool` | Nepovinný atribut.<br /><br /> Nastaví Nástroj CustomTool pro položku v souboru projektu. |
-| `ItemType` | Nepovinný atribut.<br /><br /> Nastaví ItemType pro položku v souboru projektu. |
-| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota, která určuje, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota `false`je . |
-| `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název položky, která je vytvořena ze šablony. Tento atribut je užitečný pro použití nahrazení parametru k vytvoření názvu položky. |
+| `SubType` | Nepovinný atribut.<br /><br /> Určuje podtyp položky v šabloně položky s více soubory. Tato hodnota se používá k určení editoru, který [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bude použit k otevření položky. |
+| `CustomTool` | Nepovinný atribut.<br /><br /> Nastaví CustomTool pro položku v souboru projektu. |
+| `ItemType` | Nepovinný atribut.<br /><br /> Nastaví typ ItemType pro položku v souboru projektu. |
+| `ReplaceParameters` | Nepovinný atribut.<br /><br /> Logická hodnota určující, zda má položka hodnoty parametrů, které musí být nahrazeny při vytvoření projektu ze šablony. Výchozí hodnota je `false` . |
+| `TargetFileName` | Nepovinný atribut.<br /><br /> Určuje název položky, která je vytvořena ze šablony. Tento atribut je vhodný pro použití nahrazení parametru pro vytvoření názvu položky. |
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
-|Element|Popis|
+|Prvek|Popis|
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah šablony.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- A, `string` který představuje název souboru v souboru *.zip* šablony.
+ `string`Který představuje název souboru v souboru template *. zip* .
 
 ## <a name="remarks"></a>Poznámky
- `ProjectItem`je volitelné dítě `TemplateContent`.
+ `ProjectItem`je volitelnou podřízenou položkou `TemplateContent` .
 
- Atribut `TargetFileName` lze použít k přejmenování souborů s parametry. Pokud například soubor *MyFile.vb* existuje v kořenovém adresáři souboru *ZIP* šablony, ale chcete, aby byl soubor pojmenován na základě názvu souboru poskytnutého uživatelem v dialogovém okně Přidat **novou položku,** použijte následující xml:
+ `TargetFileName`Atribut lze použít k přejmenování souborů s parametry. Například pokud soubor *MyFile. vb* existuje v kořenovém adresáři souboru template *. zip* , ale chcete soubor pojmenovat na základě názvu souboru zadaného uživatelem v dialogovém okně **Přidat novou položku** , použijte následující kód XML:
 
 ```xml
 <ProjectItem TargetFileName="$fileinputname$.vb">MyFile.vb</ProjectItem>
 ```
 
- Když je položka vytvořena z této šablony, bude název souboru založen na názvu, který uživatel zadal v dialogovém okně **Přidat novou položku.** To je užitečné při vytváření šablon vícesouborových položek. Další informace naleznete v [tématu Postup: Vytvoření šablon vícesouborových položek](../ide/how-to-create-multi-file-item-templates.md) a [parametrů šablony](../ide/template-parameters.md).
+ Při vytvoření položky z této šablony bude název souboru založen na názvu, který uživatel zadal v dialogovém okně **Přidat novou položku** . To je užitečné při vytváření šablon položek s více soubory. Další informace najdete v tématu [Postupy: vytváření šablon položek](../ide/how-to-create-multi-file-item-templates.md) a [parametrů šablony](../ide/template-parameters.md)s více soubory.
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro šablonu standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] položky pro třídu.
+ Následující příklad ukazuje metadata pro standardní šablonu položky pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] třídu.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -99,8 +100,8 @@ Určuje soubor, který je součástí šablony položky.
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Viz také:
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Postup: Vytvoření šablon vícesouborových položek](../ide/how-to-create-multi-file-item-templates.md)
+- [Postupy: vytváření šablon položek s více soubory](../ide/how-to-create-multi-file-item-templates.md)
 - [Parametry šablony](../ide/template-parameters.md)

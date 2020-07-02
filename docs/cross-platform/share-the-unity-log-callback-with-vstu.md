@@ -1,27 +1,27 @@
 ---
-title: Sdílení volání protokolu Unity s VSTU | Dokumenty společnosti Microsoft
+title: Sdílení zpětného volání protokolu Unity s VSTU | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5d71f906-6e50-4399-b59b-d38c6dfef7ee
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: aa8a4a229102a6a9439ffb36582cd03e322a086b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dc54c51f078e5b800a9cc9f2de687db7b1fa0387
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62815662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815041"
 ---
 # <a name="share-the-unity-log-callback-with-vstu"></a>Sdílení zpětného volání protokolu Unity s VSTU
-Visual Studio Tools for Unity zaregistruje zpětné volání protokolu s Unity, aby bylo možné streamovat jeho konzole do sady Visual Studio. Pokud skripty editoru také zaregistrovat zpětné volání protokolu s Unity, zpětné volání VSTU může narušit zpětné volání. Chcete-li této možnosti zabránit, použijte `VisualStudioIntegration.LogCallback` událost ke spolupráci s VSTU.
+Visual Studio Tools for Unity zaregistruje zpětné volání protokolu s Unity, aby bylo možné streamovat svou konzolu do sady Visual Studio. Pokud vaše skripty v editoru také zaregistrují zpětné volání protokolu pomocí Unity, může zpětné volání VSTU kolidovat s vaším zpětným voláním. Chcete-li této možnosti zabránit, použijte `VisualStudioIntegration.LogCallback` událost ke spolupráci s VSTU.
 
 ## <a name="demonstrates"></a>Demonstruje
- Jak sdílet volání protokolu Unity vytvořené Visual Studio Nástroje pro jednotu.
+ Postup sdílení zpětného volání protokolu Unity vytvořeného nástrojem Visual Studio Tools for Unity.
 
 ## <a name="example"></a>Příklad
 
@@ -48,5 +48,5 @@ public class LogCallbackHook
 #endif
 ```
 
-## <a name="see-also"></a>Viz také
- [Příklad: Generování souboru projektu](../cross-platform/customize-project-files-created-by-vstu.md)
+## <a name="see-also"></a>Viz také:
+ [Příklad: generování souboru projektu](../cross-platform/customize-project-files-created-by-vstu.md)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 238b963aceebd2bfdae38c2f4032955c1bd0c0c6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 62f372be9ffa6ae76503550616c6b3612aad6146
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770862"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 
@@ -51,7 +51,7 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | CleanFile | Vše | Název souboru, který se použije jako "čistá mezipaměť". Čistá mezipaměť je seznam generovaných souborů, které mají být odstraněny během operace čištění. Soubor je umístěn do mezilehlé výstupní cesty procesem sestavení.<br /><br /> Tato vlastnost určuje pouze názvy souborů, které nemají informace o cestě. |
 | Stránky | .NET | Určuje znakovou stránku, která se má použít pro všechny soubory zdrojového kódu v kompilaci. Tato vlastnost je ekvivalentní `/codepage` přepínači kompilátoru. |
 | CompilerResponseFile | .NET | Volitelný soubor odpovědí, který lze předat úlohám kompilátoru. |
-| Konfigurace | Vše | Konfigurace, kterou vytváříte, buď "ladit" nebo "Release". |
+| Konfigurace | Vše | Konfigurace, kterou vytváříte, obecně `Debug` nebo `Release` , ale konfigurovatelné na úrovni řešení a projektu. |
 | CscToolPath | C# | Cesta *csc.exe*, kompilátor jazyka C#. |
 | CustomBeforeMicrosoftCommonTargets | Vše | Název souboru projektu nebo souboru cílů, který má být importován automaticky před importem běžných cílů. |
 | DebugSymbols | Vše | Logická hodnota, která určuje, zda jsou symboly generovány sestavením.<br /><br /> Nastavení **-p:DebugSymbols = false** na příkazovém řádku zakáže generování souborů symbolů databáze programu (*PDB*). |
@@ -134,6 +134,6 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 | Win32Manifest | .NET | Název souboru manifestu, který má být vložen do konečného sestavení. Tento parametr je ekvivalentní `/win32Manifest` přepínači kompilátoru. |
 | Win32Resource | .NET | Název souboru prostředku Win32, který se má vložit do konečného sestavení Tento parametr je ekvivalentní `/win32resource` přepínači kompilátoru. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

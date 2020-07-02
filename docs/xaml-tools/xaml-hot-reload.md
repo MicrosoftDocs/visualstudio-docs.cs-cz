@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bec1ca7ba801f4e3e0a7777e0cae62e78412dae6
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 875608fbaa2e5c7532371fd95858fe87cdc81ca1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85331959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815887"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
@@ -66,7 +66,7 @@ Při použití kódu XAML Hot reload může docházet k následujícím chybám.
 |Zajistěte selhání události|Chyba znamená, že se pokoušíte o přenos události do některého z vašich ovládacích prvků, které se při spuštění aplikace nepodporují.|
 |Tato změna není podporována nástrojem XAML Hot Loading a nebude použita během ladicí relace.|Chyba indikuje, že změna, kterou zkoušíte, není podporována kódováním XAML Hot reloading. Zastavte ladicí relaci, proveďte změnu a pak znovu spusťte ladicí relaci. Pokud zjistíte nepodporovaný scénář, který byste chtěli zobrazit, použijte naši novou možnost navrhnout funkci v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html). |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Řešení potíží s opětovným načítáním XAML za provozu](xaml-hot-reload-troubleshooting.md)
 * [Opětovné načítání XAML za provozu pro Xamarin.Forms](/xamarin/xamarin-forms/xaml/hot-reload)

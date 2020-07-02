@@ -1,18 +1,18 @@
 ---
 title: Editor XML
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10741daffff2213e8ababde2395663e78241fdc4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 64f36255a03939c649a91b4a91d15958475be3b5
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815016"
 ---
 # <a name="xml-editor"></a>Editor XML
 
@@ -60,4 +60,4 @@ Je vyvolán editor XML pro dobře známé přípony souborů, například *. XML
 - [Možnosti editoru XML – různé](../ide/reference/options-text-editor-xml-miscellaneous.md)
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
 - [Reference standardů XML](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)
-- [Nástroje XML v aplikaci Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)
+- [Nástroje XML v sadě Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

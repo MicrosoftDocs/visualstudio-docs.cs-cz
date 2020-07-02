@@ -3,7 +3,7 @@ title: Vyvolaná výjimka a nebyla zachycena | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5022
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 05a9e4f51d5daf7a9e1b1153acbbe8b76b539b72
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 44f207d2e32a7ca79ee0d5851a80261c5da9743d
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814587"
 ---
 # <a name="exception-thrown-and-not-caught"></a>Byla vyvolána výjimka, která nebyla zachycena
-Do kódu jste zahrnuli příkaz `throw`, který však nebyl uzavřený v rámci bloku **Try** , nebo nebyl k zachycení chyby přidružen žádný blok **catch** . Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** pomocí příkazu **catch** .  
+Do kódu jste zahrnuli `throw` příkaz, který ale není uzavřený v rámci bloku **Try** , nebo k ní nebyl přidružen žádný blok **catch** k zachycení této chyby. Výjimky jsou vyvolány v rámci bloku **Try** pomocí příkazu **throw** a zachyceny mimo blok **Try** pomocí příkazu **catch** .  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
@@ -33,6 +33,6 @@ Do kódu jste zahrnuli příkaz `throw`, který však nebyl uzavřený v rámci 
 - Pokud je výjimka znovu vyvolána, ujistěte se, že existuje další odpovídající příkaz catch.  
   
 ## <a name="see-also"></a>Viz také:  
- [Objekt Error](../../javascript/reference/error-object-javascript.md)   
-   [příkazu throw](../../javascript/reference/throw-statement-javascript.md)  
- [try...catch...finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)
+ [Error – objekt](../../javascript/reference/error-object-javascript.md)   
+ [throw – příkaz](../../javascript/reference/throw-statement-javascript.md)   
+ [zkusit... zachytit... Finally – příkaz](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

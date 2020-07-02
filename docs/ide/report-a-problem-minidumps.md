@@ -1,7 +1,7 @@
 ---
-title: Vytvoření minidumpů se všemi zásobníky volání
+title: Vytvoření Mini výpisy se všemi zásobníky volání
 ms.date: 06/27/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - minidumps for Visual Studio issues"
 author: corob-msft
@@ -14,34 +14,34 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Collect minidumps to send to Microsoft for help with troubleshooting issues with Visual Studio
-ms.openlocfilehash: 7b3be91e5d0d2e1f14724dd647670fc4885bcd4d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8af2ef642a1c2422d470c716e14dca7d2e0168eb
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77271183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770843"
 ---
-# <a name="create-minidumps-for-a-visual-studio-process-with-all-call-stacks"></a>Vytvoření minidumpů pro proces sady Visual Studio se všemi zásobníky volání
+# <a name="create-minidumps-for-a-visual-studio-process-with-all-call-stacks"></a>Vytvoření Mini výpisy pro proces sady Visual Studio se všemi zásobníky volání
 
-V některých případech může společnost Microsoft požádat o minidump spuštěného procesu sady Visual Studio s informacemi pro všechny zásobníky volání. Chcete-li tyto informace shromáždit, proveďte následující kroky:
+V některých případech může společnost Microsoft požádat o s minimálním výpisem spuštěného procesu sady Visual Studio s informacemi pro všechny zásobníky volání. Chcete-li shromáždit tyto informace, proveďte tyto kroky:
 
-## <a name="create-the-minidump-file"></a>Vytvoření souboru minidump
+## <a name="create-the-minidump-file"></a>Vytvoření souboru s minimálním výpisem
 
 1. Spusťte novou instanci sady Visual Studio.
-1. V hlavní nabídce zvolte **Ladit** > **připojit ke zpracování**.
-1. Zaškrtněte **příslušná spravovaná** a **nativní** políčka a stiskněte **tlačítko Připojit**.
+1. V hlavní nabídce vyberte možnost **ladit**  >  **připojit k procesu**.
+1. Zaškrtněte příslušná **spravovaná** a **nativní** zaškrtávací políčka a stiskněte **připojit**.
 
    ![Připojení k procesu](../ide/media/attach-to-process.png)
 
-1. Vyberte jinou instanci sady Visual Studio, ke které chcete připojit ze seznamu spuštěných procesů.
-1. V hlavní nabídce zvolte **Ladění** > **zalomení všech**.
-1. V hlavní nabídce zvolte **Debug** > **Save Dump As**.
+1. Vyberte jinou instanci sady Visual Studio, kterou chcete připojit, ze seznamu spuštěných procesů.
+1. V hlavní nabídce vyberte možnost **ladit**  >  **přerušit vše**.
+1. V hlavní nabídce klikněte na položku **ladit**  >  **Uložit výpis paměti jako**.
 
-## <a name="get-the-call-stacks-from-the-minidump"></a>Získejte zásobníky volání z minidumpu
+## <a name="get-the-call-stacks-from-the-minidump"></a>Získat zásobníky volání z s minimálním výpisem
 
-1. Otevřete soubor výpisu v sadě Visual Studio.
-1. Přejděte na**možnosti** >  **nástrojů** > **Ladění** > **symbolů** a ujistěte se, že **servery Symbol společnosti Microsoft** jsou kontrolovány v umístění **souboru symbolů (.pdb).**
-1. Otevření **okna Příkaz** **(Zobrazit** > další**okno s příkazy systému****Windows** > )
-1. Zadejte '~*k'. V okně se zobrazí všechny zásobníky volání všech vláken.
-1. Zkopírujte veškerý text z příkazového okna a uložte jej do textového souboru.
+1. Otevřete soubor s výpisem paměti v aplikaci Visual Studio.
+1. Přejdete na **nástroje**  >  **Možnosti**  >  **ladění**  >  **symboly** a ujistěte se, že jsou v **umístění souborů symbolů (. pdb)** zaškrtnuté políčko **servery symbolů společnosti Microsoft** .
+1. Otevřete okno **příkazového** řádku (**Zobrazit**  >  **jiné**  >  **příkazové okno**systému Windows).
+1. Typ ~ * k. V okně se zobrazí všechny zásobníky volání vláken.
+1. Zkopírujte veškerý text z příkazového okna a uložte ho do textového souboru.
 1. Připojte soubor txt k chybě.

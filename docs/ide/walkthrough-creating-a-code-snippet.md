@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Vytvoření fragmentu kódu'
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code snippets, creating
 - code snippets, shortcut
@@ -17,20 +17,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bfadb4b8d1836d131b669ea43f28f522f3fbd8b
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 8f46dc6a1871b6d44c37c1931bf65f1b4a11c9ae
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770788"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
-Fragment kódu můžete vytvořit pouze v několika krocích. Vše, co musíte udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj kód. Volitelně můžete použít náhradní parametry a odkazy na projekt. Importujte výstřižek do instalace sady Visual Studio pomocí tlačítka **Import ve** **Správci výstřižků kódu** **(Správce výstřižků kódu****nástrojů).** > 
+Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete udělat, je vytvořit soubor XML, vyplnit příslušné prvky a přidat do něj svůj kód. Volitelně můžete využít náhradní parametry a odkazy na projekt. Importujte fragment kódu do instalace sady Visual Studio pomocí tlačítka **importovat** ve **Správci fragmentů kódů** (**nástroje**  >  **Správce fragmentů kódů**).
 
-## <a name="snippet-template"></a>Šablona úryvku
+## <a name="snippet-template"></a>Šablona fragmentu
 
-Základní šablona výstřižku je následující kód XML:
+Následující kód XML je základní šablona fragmentu:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -50,16 +50,16 @@ Základní šablona výstřižku je následující kód XML:
 
 ## <a name="create-a-code-snippet"></a>Vytvoření fragmentu kódu
 
-1. Vytvořte nový soubor XML v sadě Visual Studio a přidejte výše uvedenou šablonu.
+1. Vytvořte nový soubor XML v aplikaci Visual Studio a přidejte šablonu uvedenou výše.
 
-2. Vyplňte název výstřižku v elementu **Název.** Použijte název **odmocnina**.
+2. Vyplňte název fragmentu v prvku **Nadpis** . Použijte název **druhé**odmocniny.
 
-3. Vyplňte jazyk úryvku v atributu **Language** elementu **Kód.** Pro C#použijte **CSharp**, pro Visual Basic, použijte **VB**a pro C++ použijte **CPP**.
+3. Vyplňte jazyk fragmentu v atributu **Language** elementu **Code** . Pro jazyk C# použijte **CSharp**, pro Visual Basic použijte **VB**a pro C++ použijte **cpp**.
 
    > [!TIP]
-   > Chcete-li zobrazit všechny dostupné hodnoty jazyka, projděte si [oddíl Atributy elementu Kód](code-snippets-schema-reference.md#attributes) na referenční stránce [schema fragmentů kódu.](code-snippets-schema-reference.md)
+   > Chcete-li zobrazit všechny dostupné jazykové hodnoty, Projděte si [část atributy elementu kódu](code-snippets-schema-reference.md#attributes) na [referenční stránce schématu fragmenty kódu](code-snippets-schema-reference.md) .
 
-4. Přidejte kód úryvku v části **CDATA** uvnitř elementu **Code.**
+4. Přidejte kód fragmentu do oddílu **CDATA** uvnitř elementu **kódu** .
 
    Pro C#:
 
@@ -69,7 +69,7 @@ Základní šablona výstřižku je následující kód XML:
    </Code>
    ```
 
-   Nebo pro visual basic:
+   Nebo pro Visual Basic:
 
    ```xml
    <Code Language="VB">
@@ -78,60 +78,60 @@ Základní šablona výstřižku je následující kód XML:
    ```
 
    > [!NOTE]
-   > Nelze určit, jak mají být řádky kódu v části **CDATA** fragmentu kódu odsazeny nebo formátovány. Po vložení služba jazyka automaticky zformátuje vložený kód.
+   > Nelze určit, jak mají být řádky kódu v oddílu **CDATA** fragment kódu odsazeny nebo formátovány. Po vložení služba jazyka automaticky zformátuje vložený kód.
 
-5. Uložte úryvek jako *SquareRoot.snippet* (můžete jej uložit kdekoli).
+5. Uložte fragment kódu jako *SquareRoot. fragment* (můžete ho uložit kdekoli).
 
 ## <a name="import-a-code-snippet"></a>Import fragmentu kódu
 
-1. Výstřižek můžete importovat do instalace sady Visual Studio pomocí **Správce výstřižků kódu**. Otevřete ji výběrem**Správce výstřižků kódu** **nástrojů** > .
+1. Fragment kódu můžete do instalace sady Visual Studio importovat pomocí **Správce fragmentů kódů**. Otevřete ho tak, že kliknete na **nástroje**  >  **Správce fragmentů kódů**.
 
-2. Klepněte na tlačítko **Importovat.**
+2. Klikněte na tlačítko **Import** .
 
-3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte ho a klepněte na **otevřít**.
+3. Přejděte do umístění, kam jste uložili fragment kódu v předchozím postupu, vyberte jej a klikněte na tlačítko **otevřít**.
 
-4. Otevře se dialogové okno **Importovat fragment kódu** s žádostí o výběr, kam chcete přidat úryvek z voleb v pravém podokně. Jednou z možností by měly být **výstřižky kódu**. Vyberte ji a klepněte na tlačítko **Dokončit**a potom **na ok**.
+4. Otevře se dialogové okno **importovat fragment kódu** a požádá vás, abyste zvolili, kam se má fragment přidat z voleb v pravém podokně. Jedna z možností by měla být **Moje fragmenty kódu**. Vyberte ji a klikněte na **Dokončit**a pak na **OK**.
 
-5. Úryvek se zkopíruje do jednoho z následujících umístění v závislosti na jazyku kódu:
+5. Fragment kódu je zkopírován do jednoho z následujících umístění v závislosti na jazyku kódu:
 
    ::: moniker range="vs-2017"
 
-   *%USERPROFILE%\Documents\Visual Studio 2017\Fragmenty kódu\Visual C#\Výstřižky*
-   kódu *%USERPROFILE%\Documents\Visual Studio 2017\Fragmenty kódu\Visual Basic\Výstřižky kódu*
+   *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual C# \My – fragmenty kódu* 
+    *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual Basic\My – fragmenty kódu*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%USERPROFILE%\Documents\Visual Studio 2019\Fragmenty kódu\Visual C#\Výstřižky*
-   kódu *%USERPROFILE%\Documents\Visual Studio 2019\Fragmenty kódu\Visual Basic\Výstřižky kódu*
+   *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual C# \My – fragmenty kódu* 
+    *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual Basic\My fragmenty kódu*
 
    ::: moniker-end
 
-6. Otestujte fragment otevřením projektu jazyka C# nebo Visual Basic. Když je soubor kódu otevřený v editoru, zvolte **Fragmenty** > **vložit výstřižky** z nabídky po kliknutí pravým tlačítkem myši a potom **na Moje výstřižky kódu**. Měli byste vidět úryvek s názvem **Druhá odmocnina**. Poklepejte na něj.
+6. Otestujte fragment tak, že otevřete projekt v jazyce C# nebo Visual Basic. Se souborem kódu otevřeným v editoru zvolte **fragmenty**  >  **vložení fragmentu** z nabídky po kliknutí pravým tlačítkem myši a pak **Moje fragmenty kódu**. Měl by se zobrazit fragment nazvaný **odmocnina**. Poklikejte na ni.
 
    Kód fragmentu je vložen do souboru kódu.
 
-## <a name="description-and-shortcut-fields"></a>Pole s popisem a zástupci
+## <a name="description-and-shortcut-fields"></a>Pole Popis a zástupce
 
 ::: moniker range="vs-2017"
 
-1. Pole popisu poskytují další informace o fragmentu kódu při zobrazení ve Správci výstřižků kódu. Zástupce je značka, kterou mohou uživatelé zadat za účelem vložení fragmentu. Přiěte nýtovaný soubor *%USERPROFILE%\Documents\Visual Studio 2017\Fragmenty\\kódu [Visual C# nebo Visual Basic]\Můj fragment kódu\SquareRoot.snippet*.
+1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2017 \ fragmenty kódu \\ [Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Pole popisu poskytují další informace o fragmentu kódu při zobrazení ve Správci výstřižků kódu. Zástupce je značka, kterou mohou uživatelé zadat za účelem vložení fragmentu. Přiěte nýtovaný soubor *%USERPROFILE%\Documents\Visual Studio 2019\Fragmenty\\kódu [Visual C# nebo Visual Basic]\Můj fragment kódu\SquareRoot.snippet*.
+1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru *%UserProfile%\Documents\Visual Studio 2019 \ fragmenty kódu \\ [Visual C# nebo Visual Basic] \My Code Snippet\SquareRoot.snippet*.
 
 ::: moniker-end
 
    > [!TIP]
-   > Vzhledem k tomu, že upravujete soubor v adresáři, do kterého jej Sada Visual Studio umístila, nemusíte jej znovu importovat do sady Visual Studio.
+   > Vzhledem k tomu, že upravujete soubor v adresáři, ve kterém je umístěn v aplikaci Visual Studio, nemusíte ho znovu naimportovat do sady Visual Studio.
 
-2. Přidejte prvky **Autor** **a Popis** do elementu **Záhlaví** a vyplňte je.
+2. Přidejte prvky **Author** a **Description** do elementu **header** a vyplňte je v.
 
-3. Element **Header** by měl vypadat nějak takto:
+3. Element **header** by měl vypadat přibližně takto:
 
    ```xml
    <Header>
@@ -141,11 +141,11 @@ Základní šablona výstřižku je následující kód XML:
    </Header>
    ```
 
-4. Otevřete **Správce úryvků kódu** a vyberte fragment kódu. V pravém podokně si všimněte, že pole **Popis** a **Autor** jsou nyní vyplněna.
+4. Otevřete **Správce fragmentů kódu** a vyberte svůj fragment kódu. V pravém podokně si všimněte, že pole **Popis** a **Autor** jsou nyní vyplněna.
 
    ![Popis fragmentu kódu ve Správci fragmentů kódu](media/code-snippet-description-author.png)
 
-5. Chcete-li přidat zástupce, přidejte prvek **Zástupce** do elementu **Záhlaví:**
+5. Chcete-li přidat zástupce, přidejte prvek **zástupce** v rámci elementu **header** :
 
    ```xml
    <Header>
@@ -156,17 +156,17 @@ Základní šablona výstřižku je následující kód XML:
     </Header>
    ```
 
-6. Soubor úryvku znovu uložte.
+6. Uložte soubor s fragmentem kódu znovu.
 
-7. Chcete-li zástupce otestovat, otevřete dříve použitý projekt, zadejte do editoru **sqrt** a stiskněte **klávesu Tab** (jednou pro jazyk Visual Basic, dvakrát pro C#).
+7. Chcete-li zástupce otestovat, otevřete projekt, který jste použili dříve, v editoru zadejte **Sqrt** a stiskněte klávesu **TAB** (jednou pro Visual Basic, dvakrát pro C#).
 
-   Je vložen kód fragmentu.
+   Kód fragmentu je vložen.
 
-## <a name="replacement-parameters"></a>Náhradní parametry
+## <a name="replacement-parameters"></a>Parametry nahrazení
 
-Můžete chtít části fragmentu kódu, které mají být nahrazeny uživatelem. Můžete například chtít, aby uživatel nahradil název proměnné názvem v aktuálním projektu. Můžete zadat dva typy nahrazení: literály a objekty. Pomocí [elementu Literal](code-snippets-schema-reference.md#literal-element) k identifikaci náhrady za část kódu, která je zcela obsažena ve fragmentu, ale bude pravděpodobně přizpůsobena po vložení do kódu (například řetězec nebo číselná hodnota). Pomocí [elementu Object](code-snippets-schema-reference.md#object-element) můžete identifikovat položku, která je vyžadována fragmentem kódu, ale pravděpodobně bude definována mimo samotný výstřižek (například instanci objektu nebo ovládací prvek).
+Možná budete chtít, aby části fragmentu kódu byly nahrazeny uživatelem. Například může být vhodné, aby uživatel nahradil název proměnné v aktuálním projektu jako jeden. Můžete zadat dva typy nahrazení: literály a objekty. Použijte [element Literal](code-snippets-schema-reference.md#literal-element) k identifikaci náhrady pro část kódu, která je zcela obsažena v rámci fragmentu, ale bude pravděpodobně upravena poté, co je vložena do kódu (například řetězec nebo číselná hodnota). Pomocí [elementu Object](code-snippets-schema-reference.md#object-element) Identifikujte položku, která je požadována fragmentem kódu, ale je pravděpodobně definována mimo samotný fragment (například instance objektu nebo ovládací prvek).
 
-1. Chcete-li uživateli umožnit snadnou výměnu čísla pro výpočet druhé odmocniny, upravte prvek **Úryvek** souboru *SquareRoot.snippet* následujícím způsobem:
+1. Chcete-li uživateli povolit snadné nahrazení čísla pro výpočet čtvercové odmocniny, upravte prvek **fragment** souboru *SquareRoot. fragmentu* následujícím způsobem:
 
    ```xml
    <Snippet>
@@ -183,28 +183,28 @@ Můžete chtít části fragmentu kódu, které mají být nahrazeny uživatelem
    </Snippet>
    ```
 
-   Všimněte si, že nahrazení literálu je dáno ID (`Number`). Toto ID je odkazováno z fragmentu kódu `$` tím, že jej obklopuje znaky:
+   Všimněte si, že nahrazení literálu je přiděleno IDENTIFIKÁTORu ( `Number` ). Na toto ID se odkazuje v rámci fragmentu kódu tím, že ho obklopují `$` znaky:
 
    ```xml
    <![CDATA[double root = Math.Sqrt($Number$);]]>
    ```
 
-2. Uložte soubor úryvku.
+2. Uložte soubor fragmentu.
 
-3. Otevřete projekt a vložte fragment.
+3. Otevřete projekt a vložte fragment kódu.
 
-   Fragment kódu je vložen a upravitelný literál je zvýrazněn pro nahrazení. Najeďte nad parametr nahrazení, abyste viděli popisek pro hodnotu.
+   Fragment kódu je vložen a upravitelný literál je zvýrazněn pro nahrazení. Pokud chcete zobrazit popis hodnoty, najeďte myší na náhradní parametr.
 
-   ![Popisek parametru nahrazení fragmentu kódu v sadě Visual Studio](media/snippet-replacement-parameter-tooltip.png)
+   ![Popis náhradního parametru fragmentu kódu v aplikaci Visual Studio](media/snippet-replacement-parameter-tooltip.png)
 
    > [!TIP]
-   > Pokud je ve fragmentu více než jeden parametr odvetného stavu, můžete stisknutím **klávesy Tab** přejít z jednoho na druhý a změnit hodnoty.
+   > V případě, že fragment kódu obsahuje více než jeden parametr, můžete změnit hodnoty stisknutím klávesy **TAB** a přejít z jedné na druhou.
 
 ## <a name="import-a-namespace"></a>Import oboru názvů
 
-Fragment kódu můžete použít k přidání `using` direktivy `Imports` (C#) nebo příkazu (Visual Basic) zahrnutím [elementu Imports](code-snippets-schema-reference.md#imports-element). U projektů rozhraní .NET Framework můžete také přidat odkaz na projekt pomocí [elementu References](code-snippets-schema-reference.md#references-element).
+Fragment kódu můžete použít k přidání `using` direktivy (C#) nebo `Imports` příkazu (Visual Basic) zahrnutím [elementu Imports](code-snippets-schema-reference.md#imports-element). Pro .NET Framework projekty lze také přidat odkaz na projekt pomocí [elementu REFERENCES](code-snippets-schema-reference.md#references-element).
 
-Následující kód XML zobrazuje fragment kódu, který `File.Exists` používá metodu v System.IO oboru názvů, a proto definuje prvek **Imports** pro import System.IO oboru názvů.
+Následující kód XML ukazuje fragment kódu, který používá metodu `File.Exists` v oboru názvů System.IO, a proto definuje prvek **Imports** pro import oboru názvů System.IO.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -228,6 +228,6 @@ Následující kód XML zobrazuje fragment kódu, který `File.Exists` použív�
 </CodeSnippets>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Referenční informace ke schématu fragmentů kódu](../ide/code-snippets-schema-reference.md)

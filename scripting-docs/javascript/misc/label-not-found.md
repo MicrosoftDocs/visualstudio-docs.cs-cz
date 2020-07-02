@@ -3,7 +3,7 @@ title: Popisek nebyl nalezen | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1026
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3af2451efdea5ac3f71ae17fc5919e9f443e86db
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815757"
 ---
 # <a name="label-not-found"></a>Návěstí nebylo nalezeno
 Vytvořili jste odkaz na popisek, který neexistuje. Popisky lze použít k označení bloků kódu, ale v rámci zadaného rozsahu musí být jedinečné.  
@@ -31,7 +31,7 @@ Vytvořili jste odkaz na popisek, který neexistuje. Popisky lze použít k ozna
 - Zajistěte, aby všechny odkazy na štítky byly vytvořeny na jmenovky, které byly definovány v aktuálním oboru (včetně předávajících definic).  
   
 ## <a name="see-also"></a>Viz také:  
-   [příkazu s popisky](../../javascript/reference/labeled-statement-javascript.md)  
-   [příkazu switch](../../javascript/reference/switch-statement-javascript.md)  
-   [příkazu break](../../javascript/reference/break-statement-javascript.md)  
- [continue – příkaz](../../javascript/reference/continue-statement-javascript.md)
+ [Příkaz s popiskem](../../javascript/reference/labeled-statement-javascript.md)   
+ [Příkaz switch](../../javascript/reference/switch-statement-javascript.md)   
+ [break – příkaz](../../javascript/reference/break-statement-javascript.md)   
+ [Continue – příkaz](../../javascript/reference/continue-statement-javascript.md)

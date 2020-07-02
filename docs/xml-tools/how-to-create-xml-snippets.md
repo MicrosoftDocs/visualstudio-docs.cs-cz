@@ -1,19 +1,19 @@
 ---
-title: 'Postupy: vytváření fragmentů kódu XML'
+title: 'Postupy: Vytváření fragmentů XML'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df3c2592036f085fcf89d80bcefb1a469b3c1e15
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2b86962221dcdeff59b1152baf7b7cddcc55293e
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815393"
 ---
 # <a name="how-to-create-xml-snippets"></a>Postupy: vytváření fragmentů kódu XML
 
@@ -33,7 +33,7 @@ Chcete-li vytvořit nový fragment kódu XML, vytvořte nový soubor XML a použ
 
 5. Proveďte všechny změny v novém fragmentu kódu.
 
-6. V nabídce **soubor** vyberte **uložit XMLFile. XML**.
+6. V nabídce **soubor** vyberte **Uložit XMLFile.xml**.
 
      Zobrazí se dialogové okno **Uložit soubor jako** .
 
@@ -56,16 +56,16 @@ Editor podporuje dva typy fragmentů:
 </SnippetTypes>
 ```
 
-Typ `Expansion` určuje, zda se má fragment kódu zobrazit při vyvolání příkazu **Vložit fragment** . Typ `SurroundsWith` určuje, zda se má fragment kódu zobrazit při vyvolání příkazu **s ohraničením** .
+`Expansion`Typ určuje, zda se má fragment kódu zobrazit při vyvolání příkazu **Vložit fragment** . `SurroundsWith`Typ určuje, zda se má fragment kódu zobrazit při vyvolání příkazu **s ohraničením** .
 
 ### <a name="code-element"></a>Element kódu
 
-Element `Code` definuje text XML, který bude vložen při vyvolání fragmentu kódu.
+`Code`Element definuje text XML, který bude vložen při vyvolání fragmentu kódu.
 
 > [!NOTE]
-> Text fragmentu XML musí být uzavřen do oddílu `<![CDATA[...]]>`.
+> Text fragmentu XML musí být uzavřen v `<![CDATA[...]]>` oddílu.
 
-Následuje `Code` element, který je vytvořen pomocí často používaného fragmentu kódu.
+Následuje `Code` prvek, který je vytvořen pomocí často používaného fragmentu kódu.
 
 ```xml
 <Code Language="XML">
@@ -75,15 +75,15 @@ Následuje `Code` element, který je vytvořen pomocí často používaného fra
 </Code>
 ```
 
-Element `Code` obsahuje tři proměnné.
+`Code`Element obsahuje tři proměnné.
 
-- $name $ je uživatelsky definovaná proměnná. Vytvoří prvek `name`, který má upravitelnou hodnotu, která má výchozí hodnotu "Name". Uživatelsky definované proměnné jsou definovány pomocí elementu `Literal`.
+- $name $ je uživatelsky definovaná proměnná. Vytvoří `name` prvek, který má upravitelnou hodnotu, která má výchozí hodnotu "Name". Uživatelsky definované proměnné jsou definovány pomocí `Literal` elementu.
 
 - $selected $ je předdefinovaná proměnná. Představuje text, který byl vybrán v editoru XML před vyvoláním fragmentu. Umístění této proměnné určuje, kde se vybraný text zobrazí ve fragmentu kódu, který tento výběr obklopuje.
 
 - $end $ je předdefinovaná proměnná. Když uživatel stiskne klávesu **ENTER** k dokončení úprav polí fragmentu kódu, tato proměnná Určuje, kde se kurzor (^) přesune na.
 
-  Výše uvedený element `Code` vloží následující text XML:
+  Výše uvedený `Code` element vloží následující text XML:
 
 ```xml
 <test>
@@ -95,7 +95,7 @@ Hodnota elementu Name je označena jako upravitelná oblast.
 
 ### <a name="literal-element"></a>Element Literal
 
-Element `Literal` slouží k identifikaci nahrazujícího textu, který lze přizpůsobit poté, co je vložen do souboru. Například literálové řetězce, číselné hodnoty a některé názvy proměnných lze deklarovat jako literály. Ve fragmentu kódu XML můžete definovat libovolný počet literálů a můžete na ně odkazovat několikrát v rámci fragmentu. Následuje příklad prvku `Literal` definující $name $ proměnná, jejíž výchozí hodnota je "Name".
+`Literal`Prvek slouží k identifikaci nahrazujícího textu, který lze přizpůsobit poté, co je vložen do souboru. Například literálové řetězce, číselné hodnoty a některé názvy proměnných lze deklarovat jako literály. Ve fragmentu kódu XML můžete definovat libovolný počet literálů a můžete na ně odkazovat několikrát v rámci fragmentu. Následuje příklad `Literal` prvku, který definuje $Name $ Variable, jejíž výchozí hodnota je "Name".
 
 ```xml
 <Literal>
@@ -104,7 +104,7 @@ Element `Literal` slouží k identifikaci nahrazujícího textu, který lze při
 </Literal
 ```
 
-Literály mohou také odkazovat na funkce. Editor XML obsahuje funkci s názvem **LookupPrefix**. Funkce **LookupPrefix** vyhledá daný identifikátor URI oboru názvů z umístění v dokumentu XML, ze kterého je tento fragment kódu vyvolán, a vrátí předponu oboru názvů, která je definována pro daný obor názvů, pokud existuje, a obsahuje dvojtečku (:) v tomto názvu. Následuje příklad prvku `Literal`, který používá funkci **LookupPrefix** .
+Literály mohou také odkazovat na funkce. Editor XML obsahuje funkci s názvem **LookupPrefix**. Funkce **LookupPrefix** vyhledá daný identifikátor URI oboru názvů z umístění v dokumentu XML, ze kterého je tento fragment kódu vyvolán, a vrátí předponu oboru názvů, která je definována pro daný obor názvů, pokud existuje, a obsahuje dvojtečku (:) v tomto názvu. Následuje příklad `Literal` prvku, který používá funkci **LookupPrefix** .
 
 ```xml
 <Literal Editable="false">

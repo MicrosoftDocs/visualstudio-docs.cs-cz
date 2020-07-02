@@ -3,7 +3,7 @@ title: Přehled sady Visual Studio
 titleSuffix: ''
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: vs-get-started
 author: TerryGLee
 f1_keywords:
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3707e06aa41c4f232a5525ca4422f3941fbe2d1a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5790d652ad98c684786efaa39a1fd23948d3b36e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770878"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Vítá vás integrované vývojové prostředí (IDE) sady Visual Studio
 
@@ -26,26 +26,26 @@ ms.locfileid: "75589354"
 
 ## <a name="next-steps"></a>Další kroky
 
-Prozkoumejte visual studio dále podle následujících spolu s jedním z těchto úvodních článků:
+Prozkoumejte Visual Studio dále pomocí jednoho z následujících úvodních článků:
 
-- Seznamte se s editorem kódu v [naučte se používat editor kódu](../get-started/tutorial-editor.md)
+- Seznámení s editorem kódu v části [informace o použití editoru kódu](../get-started/tutorial-editor.md)
 
-- Zjistěte, jak Visual Studio organizuje kód v [informacích o projektech a řešeních](../get-started/tutorial-projects-solutions.md)
+- Přečtěte si, jak Visual Studio organizuje kód v [tématu informace o projektech a řešeních](../get-started/tutorial-projects-solutions.md) .
 
-Pokud jste připraveni ponořit se do více kódování, jeden z následujících rychlých startů specifických pro jazyk je dobrým dalším krokem:
+Pokud jste připraveni podrobně na další kódování, je jedním z těchto rychlých startů specifických pro jazyk dobrý další krok:
 
-- [Vytvoření první webové aplikace pythonu pomocí Visual Studia](../ide/quickstart-python.md)
+- [Vytvoření první webové aplikace v Pythonu pomocí sady Visual Studio](../ide/quickstart-python.md)
 
-- [Vytvoření první webové aplikace C# pomocí Visual Studia](../ide/quickstart-aspnet-core.md)
+- [Vytvoření první webové aplikace v jazyce C# pomocí sady Visual Studio](../ide/quickstart-aspnet-core.md)
 
-- [Vytvoření první webové aplikace F# pomocí Visual Studia](../ide/quickstart-fsharp.md)
+- [Vytvoření první webové aplikace v jazyce F # pomocí sady Visual Studio](../ide/quickstart-fsharp.md)
 
-- [Vytvoření první aplikace Node.js pomocí Visual Studia](../ide/quickstart-nodejs.md)
+- [Vytvoření první aplikace Node.js pomocí sady Visual Studio](../ide/quickstart-nodejs.md)
 
-- [Vytvoření první konzolové aplikace C++ pomocí Visual Studia](/cpp/get-started/tutorial-console-cpp)
+- [Vytvoření první konzolové aplikace v jazyce C++ pomocí sady Visual Studio](/cpp/get-started/tutorial-console-cpp)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- Objevte [další funkce sady Visual Studio](../ide/advanced-feature-overview.md)
-- Navštivte [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-- Přečtěte si [blog visual ateliéru](https://devblogs.microsoft.com/visualstudio/)
+- Objevte [Další funkce sady Visual Studio](../ide/advanced-feature-overview.md)
+- Navštívit [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)
+- Přečtěte si [blog sady Visual Studio](https://devblogs.microsoft.com/visualstudio/) .

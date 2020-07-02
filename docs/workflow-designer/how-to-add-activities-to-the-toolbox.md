@@ -1,21 +1,21 @@
 ---
 title: 'Návrhář postupu provádění-postupy: přidání aktivit do sady nástrojů'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3cde4f3a41a1a07f982f85c0c19e9f16b047068
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0ebe3f4c3daf5ee3a0f64a0197967b6da62a467b
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815822"
 ---
-# <a name="how-to-add-activities-to-the-toolbox"></a>Postupy: přidání aktivit do sady nástrojů
+# <a name="how-to-add-activities-to-the-toolbox"></a>Postupy: Přidání aktivit do panelu nástrojů
 
 Aktivity lze do **sady nástrojů** ve vašem řešení přidat několika různými způsoby. Můžete je přidat v rámci aktuálního projektu, odkazovat na ně z jiného projektu nebo na ně odkazovat z jiného sestavení.
 
@@ -25,7 +25,7 @@ Aktivity lze do **sady nástrojů** ve vašem řešení přidat několika různ�
 
 2. Přidejte k aktivitě vlastní logiku.
 
-3. Sestavte projekt. Pokud bylo sestavení úspěšné, zobrazí se nová kategorie v **sadě nástrojů** s názvem "\<*projektu název*>" s vlastní aktivitou zahrnutou v této kategorii.
+3. Sestavte projekt. Pokud bylo sestavení úspěšné, zobrazí se nová kategorie v **sadě nástrojů** s názvem " \<*project name*> " s vlastní aktivitou zahrnutou v této kategorii.
 
     > [!NOTE]
     > Pokud je sada nástrojů resetována, vlastní aktivity budou odebrány i v případě, že je řešení znovu vytvořeno. Chcete-li znovu naplnit sadu nástrojů vlastními aktivitami po obnovení, restartujte aplikaci Visual Studio.
@@ -40,7 +40,7 @@ Aktivity lze do **sady nástrojů** ve vašem řešení přidat několika různ�
 
 1. Otevřete řešení, které obsahuje alespoň jeden projekt pracovního postupu, a buď vlastní projekt knihovny aktivit, nebo jiný projekt pracovního postupu, který definuje vlastní aktivitu.
 
-2. Sestavujte oba projekty. Pokud byla sestavení úspěšná, zobrazí se nová kategorie v **sadě nástrojů** s názvem "\<*projektu název*>" s vlastní aktivitou zahrnutou v této kategorii.
+2. Sestavujte oba projekty. Pokud byla sestavení úspěšná, zobrazí se nová kategorie v **sadě nástrojů** s názvem " \<*project name*> " s vlastní aktivitou zahrnutou v této kategorii.
 
 ## <a name="to-add-an-activity-to-the-toolbox-from-an-assembly"></a>Přidání aktivity do sady nástrojů ze sestavení
 
@@ -60,4 +60,4 @@ Aktivity lze do **sady nástrojů** ve vašem řešení přidat několika různ�
 
 ## <a name="see-also"></a>Viz také:
 
-- [Používání návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)
+- [Použití návrháře postupu provádění](developing-applications-with-the-workflow-designer.md)

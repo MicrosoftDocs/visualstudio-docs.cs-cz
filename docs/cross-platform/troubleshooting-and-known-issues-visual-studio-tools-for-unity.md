@@ -1,150 +1,150 @@
 ---
-title: Řešení problémů a známé problémy (Nástroje VS pro jednotu)
+title: Řešení potíží a známé problémy (nástroje VS Tools for Unity)
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 8f5db192-8d78-4627-bd07-dbbc803ac554
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d6856ff73f9aab2325a31e164e7983a919097d46
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0173c076a04c4c725565e63c41396b7c4d235952
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "66261119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815055"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Řešení potíží a známé problémy (Visual Studio Tools for Unity)
 
-V této části najdete řešení běžných problémů s Visual Studio Tools for Unity, popisy známých problémů a zjistěte, jak můžete pomoci vylepšit visual studio nástroje pro jednotu hlášením chyb.
+V této části najdete řešení běžných potíží s Visual Studio Tools for Unity, popisy známých problémů a Naučte se, jak můžete Visual Studio Tools for Unity vylepšit pomocí hlášení chyb.
 
-## <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Poradce při potížích s připojením mezi Unity a Visual Studio
+## <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Řešení potíží s připojením mezi Unity a Visual Studio
 
-### <a name="confirm-editor-attaching-is-enabled"></a>Potvrdit připojení editoru je povoleno.
+### <a name="confirm-editor-attaching-is-enabled"></a>Potvrďte, že připojení editoru je povolené.
 
-V nabídce Unity vyberte **Upravit předvolby >** a pak **Editor Attaching** vyberte kartu **Externí nástroje.** Další informace naleznete v [dokumentaci unity předvolby](https://docs.unity3d.com/Manual/Preferences.html).
+V nabídce Unity vyberte **upravit > předvolby** a pak vyberte kartu **externí nástroje** . Zkontrolujte, jestli je zaškrtnuté políčko **připojit Editor** . Další informace najdete v dokumentaci k [preferenceem Unity](https://docs.unity3d.com/Manual/Preferences.html).
 
-### <a name="unable-to-attach"></a>Nelze připojit
+### <a name="unable-to-attach"></a>Nelze se připojit
 
-- Pokuste se dočasně zakázat antivirový program nebo vytvořit pravidla vyloučení pro VS a Unity.
-- Pokuste se dočasně zakázat bránu firewall nebo vytvořte pravidla pro povolení sítí TCP/UDP mezi VS a Unity.
-- Některé programy, například Team Viewer, mohou narušit detekci procesů. Můžete se pokusit dočasně zastavit jakýkoli další software, abyste zjistili, zda něco změní.
-- Nepřejmenovávejte hlavní spustitelný soubor Unity, protože VSTU pouze monitoruje procesy "Unity.exe".
+- Pokuste se dočasně zakázat antivirový program nebo vytvořit pravidla vyloučení pro VS i Unity.
+- Zkuste dočasně zakázat bránu firewall nebo vytvořit pravidla pro povolení sítě TCP/UDP mezi VS a Unity.
+- Některé programy, jako je například prohlížeč týmu, mohou kolidovat s detekcí procesů. Můžete se pokusit dočasně zastavit veškerý další software, abyste viděli, jestli se něco změní.
+- Neměňte název hlavního spustitelného souboru Unity, protože VSTU sleduje pouze procesy "Unity.exe".
 
-## <a name="visual-studio-crashes"></a>Selhání sady Visual Studio
+## <a name="visual-studio-crashes"></a>Chyby sady Visual Studio
 
-Tento problém může být z důvodu poškození mezipaměti Visual Studio MEF.
+K tomuto problému může dojít kvůli poškození mezipaměti rozhraní MEF sady Visual Studio.
 
-Zkuste odebrat následující složku a obnovit mezipaměť MEF (před tím zavřete Visual Studio):
+Zkuste odebrat následující složku, aby se obnovila mezipaměť MEF (před provedením této akce zavřete Visual Studio):
 
 ```batch
 %localappdata%\Microsoft\VisualStudio\<version>\ComponentModelCache
 ```
 
-To by mělo vyřešit váš problém. V případě, že potíže stále přetrvávají, spusťte příkazový řádek pro vývojáře pro Visual Studio jako správce a použijte následující příkaz:
+Tato chyba by měla vyřešit váš problém. V případě, že stále dochází k potížím, spusťte Developer Command Prompt pro Visual Studio jako správce a použijte následující příkaz:
 
 ```batch
  devenv /setup
 ```
 
-## <a name="visual-studio-hangs"></a>Visual Studio zablokuje
+## <a name="visual-studio-hangs"></a>Visual Studio přestane reagovat
 
-Několik Unity pluginy jako Parse, FMOD, UMP (Universal Media Player), ZFBrowser, nebo Embedded Browser používají nativní vlákna. Je to problém, když plugin skončí připojení nativní vlákno na modul runtime, který pak dělá blokování volání operačního operačního es. To znamená, že Unity nelze přerušit toto vlákno pro ladicí program (nebo domény znovu načíst) a zablokuje.
+Několik modulů plug-in Unity jako analyze, FMOD –, UMP (Universal Media Player), ZFBrowser nebo Embedded Browser používá nativní vlákna. Jedná se o problém, když modul plug-in ukončí připojení nativního vlákna k modulu runtime, který pak zablokuje volání do operačního systému. To znamená, že Unity nemůže přerušit toto vlákno ladicího programu (nebo opětovného načtení domény) a zablokovat.
 
-Pro FMOD existuje řešení, můžete předat `FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` [příznak](https://www.fmod.com/resources/documentation-studio?version=2.0&page=https://fmod.com/resources/documentation-api?version=2.0&page=studio-api-system.html#fmod_studio_initflags) inicializace zakázat asynchronní zpracování a provést veškeré zpracování v hlavním vlákně.
+Pro FMOD – existuje alternativní řešení, pomocí kterého můžete předat `FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` [příznak](https://www.fmod.com/resources/documentation-studio?version=2.0&page=https://fmod.com/resources/documentation-api?version=2.0&page=studio-api-system.html#fmod_studio_initflags) inicializace, který zakáže asynchronní zpracování a provede veškeré zpracování v hlavním vlákně.
 
-## <a name="incompatible-project-in-visual-studio"></a>Nekompatibilní projekt v sadě Visual Studio
+## <a name="incompatible-project-in-visual-studio"></a>Nekompatibilní projekt v aplikaci Visual Studio
 
-Nejprve zkontrolujte, zda je Visual Studio nastaveno jako externí editor skriptů v unity (Upravit/Předvolby/Externí nástroje). Potom zkontrolujte, zda je modul plug-in sady Visual Studio nainstalován v unity (Nápověda/O musí zobrazit zprávu, jako je Microsoft Visual Studio Tools for Unity je povolena v dolní části). Potom zkontrolujte, zda je rozšíření správně nainstalováno v sadě Visual Studio (Nápověda/Popis).
+Nejdřív ověřte, že je sada Visual Studio nastavená jako váš externí editor skriptu v Unity (upravit/předvolby/externí nástroje). Potom zkontrolujte, jestli je modul plug-in sady Visual Studio nainstalovaný v Unity (v části help/o se musí zobrazit zpráva, například Microsoft Visual Studio nástroje pro Unity je v dolní části povolená). Pak zkontrolujte, jestli je rozšíření správně nainstalované v aplikaci Visual Studio (pomoc/o).
 
-## <a name="extra-reloads-or-visual-studio-losing-all-open-windows"></a>Extra znovu načtení nebo Visual Studio ztrácí všechna otevřená okna
+## <a name="extra-reloads-or-visual-studio-losing-all-open-windows"></a>Další opětovné načtení nebo aplikace Visual Studio ztratí všechna otevřená okna
 
-Nezapomeňte se nikdy nedotýkat souborů projektu přímo z procesoru datových zdrojů nebo jiného nástroje. Pokud opravdu potřebujete manipulovat se souborem projektu, zpřístupníme pro to rozhraní API. Zkontrolujte [část Problémy s odkazy](#assembly-reference-issues)na sestavení .
+Ujistěte se, že soubory projektu nemusíte upravovat přímo z procesoru assetů nebo jiného nástroje. Pokud skutečně potřebujete manipulovat se souborem projektu, zveřejňujeme pro něj rozhraní API. Podívejte se prosím do [oddílu problémy s odkazy na sestavení](#assembly-reference-issues).
 
-Pokud dochází k další opětovné načtení nebo pokud Visual Studio ztrácí všechny otevřené Windows při opětovném načtení, ujistěte se, že máte nainstalované správné balíčky cílení .NET. Další informace naleznete v následující části o rozhraních.
+Pokud se objeví další opakované načítání nebo pokud Visual Studio ztratí při opětovném spuštění všechny otevřené systémy Windows, ujistěte se, že máte nainstalované správné sady .NET targeting pack. Další informace najdete v následující části o rozhraních.
 
-## <a name="the-debugger-does-not-break-on-exceptions"></a>Ladicí program není porušit na výjimky
+## <a name="the-debugger-does-not-break-on-exceptions"></a>Ladicí program neprovádí přerušení při výjimkách
 
-Při použití starší unity runtime (.NET 3.5 ekvivalent), ladicí program bude vždy přerušit, když výjimka je neošetřené (= mimo try/catch bloku). Pokud je výjimka zpracována, ladicí program použije okno Nastavení výjimky k určení, zda je požadováno přerušení.
+Při použití starší verze prostředí Unity runtime (.NET 3,5 ekvivalentní) se ladicí program vždy přeruší, pokud je výjimka Neošetřená (= mimo blok try/catch). Pokud je výjimka zpracována, ladicí program použije okno Nastavení výjimek k určení, zda je přerušení požadováno nebo ne.
 
-S novým runtime (.NET 4.6 ekvivalent), Unity představil nový způsob správy výjimek uživatele a jako výsledek všechny výjimky jsou považovány za "user-handled" i v případě, že jsou mimo try/catch bloku. To je důvod, proč je nyní nutné explicitně zkontrolovat v okně Nastavení výjimky, pokud chcete, aby ladicí program došlo k přerušení.
+V rámci nového modulu runtime (.NET 4,6 Equivalent) představila Unity nový způsob, jak spravovat výjimky uživatelů, a v důsledku toho se všechny výjimky zobrazují jako "zpracování uživatelem", a to i v případě, že jsou mimo blok try/catch. To je důvod, proč je nyní nutné explicitně zkontrolovat v okně Nastavení výjimek, pokud chcete, aby byl ladicí program přerušen.
 
-V okně Nastavení výjimky (Ladění > Nastavení > výjimek) rozbalte uzel pro kategorii výjimek (například výjimky prostředí Common Language Runtime, což znamená výjimky .NET) a zaškrtněte políčko pro konkrétní výjimku, kterou chcete zachytit v rámci této kategorie (například System.NullReferenceException). Můžete také vybrat celou kategorii výjimek.
+V okně nastavení výjimky (ladění > > nastavení výjimek) rozbalte uzel pro kategorii výjimek (například výjimky modulu CLR (Common Language Runtime), tzn. výjimky rozhraní .NET) a zaškrtněte políčko pro konkrétní výjimku, kterou chcete zachytit v rámci této kategorie (například System. NullReferenceException). Můžete také vybrat celou kategorii výjimek.
 
-## <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>V systému Windows visual studio požádá o stažení rozhraní Unity target framework
+## <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Ve Windows se Visual Studio zeptá na stažení cílové architektury Unity.
 
-Visual Studio Tools for Unity vyžaduje rozhraní .NET framework 3.5, který není nainstalován ve výchozím nastavení na Windows 8 nebo 10. Chcete-li tento problém vyřešit, postupujte podle pokynů ke stažení a instalaci rozhraní .NET Framework 3.5.
+Visual Studio Tools for Unity vyžaduje rozhraní .NET Framework 3,5, které není ve výchozím nastavení nainstalované ve Windows 8 nebo 10. Chcete-li tento problém vyřešit, postupujte podle pokynů ke stažení a instalaci rozhraní .NET Framework 3,5.
 
-Při použití nového runtime Unity jsou také vyžadovány balíčky cílení .NET verze 4.6 a 4.7.1. K jejich rychlé instalaci je možné použít instalační program VS2017 (upravte instalaci VS2017, jednotlivé součásti, kategorii .NET, vyberte všechny balíčky cílení 4.x).
+Při použití nového modulu runtime Unity se vyžadují i sady .NET Targeting Packs verze 4,6 a 4.7.1. Pomocí instalačního programu VS2017 je možné rychle nainstalovat (změnit instalaci VS2017, jednotlivé komponenty, kategorii .NET, vybrat všechny 4. x cílené sady).
 
-## <a name="assembly-reference-issues"></a>Referenční problémy sestavení
+## <a name="assembly-reference-issues"></a>Problémy s odkazem na sestavení
 
-Pokud je váš projekt komplexní odkaz nebo pokud chcete lépe řídit tento krok generování, můžete použít naše [rozhraní API](../cross-platform/customize-project-files-created-by-vstu.md) pro manipulaci s obsahem generovaného projektu nebo řešení. Soubory [odpovědí](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) můžete také použít v projektu Unity a my je zpracujeme.
+Pokud je projekt složitým odkazem nebo pokud chcete lepší kontrolu nad tímto krokem generace, můžete použít naše [rozhraní API](../cross-platform/customize-project-files-created-by-vstu.md) pro manipulaci s generovaným obsahem projektu nebo řešení. V projektu Unity můžete také použít [soubory odpovědí](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) a my je zpracujeme.
 
 ## <a name="breakpoints-with-a-warning"></a>Zarážky s upozorněním
 
-Pokud Visual Studio nemůže najít zdrojové umístění pro konkrétní zarážku, zobrazí se upozornění kolem zarážky. Zkontrolujte, zda je skript, který používáte, správně načten nebo použit v aktuální scéně Unity.
+Pokud Visual Studio nemůže najít zdrojové umístění pro konkrétní zarážku, zobrazí se upozornění kolem zarážky. Ověřte, že skript, který používáte, je správně načtený nebo použitý v aktuální scéně.
 
-## <a name="breakpoints-not-hit"></a>Zarážky, které nebyly přístupů
+## <a name="breakpoints-not-hit"></a>Zarážky nejsou k dispozice
 
-Zkontrolujte, zda je skript, který používáte, správně načten nebo použit v aktuální scéně Unity. Ukončete aplikaci Visual Studio i\*Unity a \*odstraňte všechny generované soubory ( .csproj, .sln) a celou složku Knihovny.
+Ověřte, že skript, který používáte, je správně načtený nebo použitý v aktuální scéně. Ukončete aplikaci Visual Studio i Unity a pak odstraňte všechny generované soubory ( \* . csproj, \* . sln) a celou složku knihovny.
 
-## <a name="unable-to-debug-android-players"></a>Nelze ladit přehrávače Android
+## <a name="unable-to-debug-android-players"></a>Nepovedlo se ladit přehrávače pro Android.
 
-Pro detekci přehrávače používáme vícesměrové vysílání (což je výchozí mechanismus používaný Unity), ale poté k připojení ladicího programu použijeme běžné připojení TCP. Fáze detekce je hlavním problémem pro zařízení Android.
+Pro detekci přehrávačů používáme vícesměrové vysílání (což je výchozí mechanismus používaný v Unity), ale po použití běžného připojení TCP pro připojení ladicího programu. Fáze zjišťování je hlavním problémem pro zařízení s Androidem.
 
-Wifi je univerzální, ale super pomalý ve srovnání s USB kvůli latenci. Viděli jsme nedostatek řádné podpory vícesměrového vysílání pro některé směrovače nebo zařízení (řada Nexus je tím dobře známá).
+Wi-Fi je univerzální, ale ve srovnání s USB je v důsledku latence velmi pomalé. Zjistili jsme, že pro některé směrovače nebo zařízení chybí vhodná podpora vícesměrového vysílání (pro toto je dobře známá řada Nexus).
 
-USB je super rychlý pro ladění a Visual Studio Tools for Unity je nyní schopen detekovat zařízení USB a mluvit na server adb správně předávat porty pro ladění.
+USB je velmi rychlé pro ladění a Visual Studio Tools for Unity teď dokáže detekovat zařízení USB a komunikovat se serverem ADB a správně převinout porty pro ladění.
 
-## <a name="issues-with-visual-studio-2015-and-intellisense-or-code-coloration"></a>Problémy s Visual Studio 2015 a IntelliSense nebo zbarvení kódu
+## <a name="issues-with-visual-studio-2015-and-intellisense-or-code-coloration"></a>Problémy se sadou Visual Studio 2015 a IntelliSense nebo zbarvení kódu
 
-Zkuste upgradovat Visual Studio 2015 na aktualizaci 3.
+Zkuste upgradovat Visual Studio 2015 a aktualizovat 3.
 
 ## <a name="known-issues"></a>Známé problémy
 
- Existují známé problémy v Visual Studio Tools for Unity, které vyplývají z toho, jak ladicí program spolupracuje se starší verzí kompilátoru Jazyka C# Unity. Pracujeme na řešení těchto problémů, ale mezitím se mohou vyskytnou následující problémy:
+ V Visual Studio Tools for Unity jsou známé problémy, které vedou k tomu, jak ladicí program komunikuje se starší verzí kompilátoru jazyka C#. Pracujeme na tom, abychom vám pomohli tyto problémy vyřešit, ale mezitím se můžete setkat s následujícími problémy:
 
-- Při ladění Unity někdy dojde k chybě.
+- V případě ladění aplikace Unity někdy dochází k chybě.
 
-- Při ladění Unity někdy zamrzne.
+- V případě ladění se aplikace Unity někdy zablokuje.
 
-- Krokování a z metod se někdy chová nesprávně, zejména v iterátorech nebo v příkazech switch.
+- Rozkrokování a vyzkoušení metod se někdy chová nesprávně, zejména v iterátorech nebo v rámci příkazů Switch.
 
-## <a name="report-errors"></a>Hlášení chyb
+## <a name="report-errors"></a>Oznamovat chyby
 
- Pomozte nám zlepšit kvalitu nástrojů sady Visual Studio pro jednotu odesláním zpráv o chybách, když dojde k selhání, zamrznutí nebo jiným chybám. To nám pomáhá prozkoumat a opravit problémy v nástrojích Visual Studio pro jednotu. Děkujeme!
+ Pomůžeme nám vylepšit kvalitu Visual Studio Tools for Unity odesláním zpráv o chybách, když dojde k chybě, zablokování nebo dalším chybám. To nám pomůže prozkoumat a opravit problémy v Visual Studio Tools for Unity. Děkujeme!
 
-### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Jak nahlásit chybu při zamrznutí sady Visual Studio
+### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Jak ohlásit chybu při zablokování sady Visual Studio
 
- Existují zprávy, že Visual Studio někdy zamrzne při ladění s Visual Studio Tools for Unity, ale potřebujeme více dat k pochopení tohoto problému. Můžete nám pomoci prozkoumat pomocí následujících kroků.
+ K dispozici jsou sestavy, které Visual Studio někdy zablokuje při ladění pomocí Visual Studio Tools for Unity, ale potřebujeme více dat pro pochopení tohoto problému. Můžete nám pomohou prozkoumat podle následujících kroků.
 
-##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Chcete-li ohlásit, že Visual Studio zamrzne při ladění pomocí nástrojů Sady Visual Studio pro jednotu
+##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Chcete-li ohlásit, že aplikace Visual Studio zablokuje při ladění pomocí Visual Studio Tools for Unity
 
 *Ve Windows:*
 
 1. Otevřete novou instanci sady Visual Studio.
 
-1. Otevřete dialogové okno Připojit k procesu. V nové instanci sady Visual Studio v hlavní nabídce zvolte **Ladění**, **Připojit k procesu**.
+1. Otevřete dialog připojit k procesu. V hlavní nabídce v nové instanci aplikace Visual Studio vyberte možnost **ladit**, **připojit k procesu**.
 
-1. Připojte ladicí program k zmrazené instanci sady Visual Studio. V dialogovém okně **Připojit k procesu** vyberte zmrazenou instanci sady Visual Studio z tabulky **Dostupné procesy** a pak zvolte tlačítko **Připojit.**
+1. Připojte ladicí program k zmrazené instanci aplikace Visual Studio. V dialogovém okně **připojit k procesu** vyberte zmrazenou instanci sady Visual Studio z tabulky **Dostupné procesy** a pak klikněte na tlačítko **připojit** .
 
-1. Pozastavte ladicí program. V nové instanci sady Visual Studio v hlavní nabídce zvolte **Ladění**, **Break All**nebo stiskněte **kombinaci kláves Ctrl+Alt+Break**.
+1. Pozastavit ladicí program. V nové instanci aplikace Visual Studio v hlavní nabídce zvolte možnost **ladit**, **přerušit vše**nebo stačí stisknout **kombinaci kláves CTRL + ALT + BREAK**.
 
-1. Vytvořte výpis vlákna. V okně Příkaz zadejte následující příkaz a stiskněte **Enter**:
+1. Vytvořte výpis vlákna. V okno Příkaz zadejte následující příkaz a stiskněte klávesu **ENTER**:
 
     ```powershell
     Debug.ListCallStack /AllThreads /ShowExternalCode
     ```
 
-    Možná budete muset nejprve zviditelnit okno **Příkaz.** V sadě Visual Studio v hlavní nabídce zvolte **Zobrazit**, **Jiné Windows**, **Příkazové okno**.
+    Může být nutné okno **příkazového** řádku zviditelnit jako první. V aplikaci Visual Studio v hlavní nabídce vyberte možnost **zobrazení**, **ostatní**okna, **příkazové okno**.
 
 *Na počítači Mac:*
 
-1. Otevřete terminál a získejte PID visual studia pro Mac:
+1. Otevřete terminál a získejte PID Visual Studio pro Mac:
 
     ```shell
     ps aux | grep "[V]isual Studio.app"
@@ -156,16 +156,16 @@ Zkuste upgradovat Visual Studio 2015 na aktualizaci 3.
     lldb
     ```
 
-1. Připojte se k instanci Visual Studio pro Mac pomocí PID:
+1. Připojte se k instanci Visual Studio pro Mac pomocí identifikátoru PID:
 
     ```shell
     process attach --pid THE_PID_OF_THE_VSFM_PROCESS
     ```
 
-1. Načíst stacktrace pro všechny podprocesy:
+1. Načíst trasování zásobníku pro všechna vlákna:
 
     ```shell
     bt all
     ```
 
-Nakonec odešlete výpis [vstusp@microsoft.com](mailto:vstusp@microsoft.com)vlákna do aplikace spolu s popisem toho, co jste dělali, když visual studio zamrzlo.
+Nakonec pošlete výpis vlákna do [vstusp@microsoft.com](mailto:vstusp@microsoft.com) , spolu s popisem toho, co jste prováděli při zmrazení sady Visual Studio.

@@ -1,7 +1,7 @@
 ---
 title: Identifikování a přizpůsobení klávesových zkratek
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Keyboard
 helpviewer_keywords:
@@ -17,87 +17,87 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce87385314ec84c7c0ed9d30c806a6287bb91d9e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4b551e3f980e962733d2797924331e4cd6dbefa5
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770858"
 ---
-# <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identifikace a přizpůsobení klávesových zkratek v Sadě Visual Studio
+# <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identifikace a přizpůsobení klávesových zkratek v aplikaci Visual Studio
 
 Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkratky přizpůsobit a exportovat je, aby je mohli používat ostatní uživatelé. Mnoho zkratek vždy vyvolá stejné příkazy, ale chování zkratky se může lišit v závislosti na následujících podmínkách:
 
-- Které výchozí nastavení prostředí zvolíte při prvním&mdash;spuštění sady Visual Studio, například Obecné vývoj nebo Visual C#. (Informace o změně nebo obnovení nastavení naleznete v [tématu Nastavení prostředí](environment-settings.md).)
+- Které výchozí nastavení prostředí zvolíte při prvním spuštění sady Visual Studio &mdash; , například obecný vývoj nebo Visual C#. (Informace o změně nebo resetování nastavení naleznete v tématu [nastavení prostředí](environment-settings.md).)
 
 - Zda jste přizpůsobili chování zkratky.
 
-- Kontext použitý při výběru zástupce. Například zkratka **F2** vyvolá `Edit.EditCell` příkaz, pokud používáte **Návrhář nastavení** a `File.Rename` vyvolá příkaz, pokud používáte **Průzkumníka týmu**.
+- Kontext použitý při výběru zástupce. Například zástupce **F2** vyvolá `Edit.EditCell` příkaz, pokud používáte **Návrháře nastavení** a vyvolá `File.Rename` příkaz, pokud používáte **Team Explorer**.
 
-Bez ohledu na nastavení, přizpůsobení a kontext můžete vždy najít a změnit klávesovou zkratku v dialogovém okně **Možnosti.** Můžete také vyhledat výchozí klávesové zkratky pro několik desítek příkazů v [populární klávesové zkratky](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md). Úplný seznam všech výchozích klávesových zkratek (na základě nastavení **Obecného vývoje)** naleznete v tématu [Všechny klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Bez ohledu na nastavení, přizpůsobení a kontext můžete klávesovou zkratku vždycky najít a změnit v dialogovém okně **Možnosti** . Můžete také vyhledat výchozí klávesové zkratky pro několik desítek příkazů v [oblíbených klávesových zkratkách](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md). Úplný seznam všech výchozích klávesových zkratek (na základě **obecného nastavení vývoje** ) najdete v tématu [všechny klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-Pokud je zkratka přiřazena příkazu v *globálním* kontextu a bez jiných kontextů, bude tento zástupce vždy vyvolat tento příkaz. Klávesová zkratka může být však přiřazena k jednomu příkazu v globálním kontextu a k jinému příkazu ve specifickém kontextu. Používáte-li takovou klávesovou zkratku v konkrétním kontextu, tato zkratka vyvolá příkaz pro konkrétní kontext, nikoli pro globální kontext.
+Pokud je zástupce přiřazen k příkazu v *globálním* kontextu a žádné jiné kontexty, tento zástupce Tento příkaz vždycky vyvolá. Klávesová zkratka může být však přiřazena k jednomu příkazu v globálním kontextu a k jinému příkazu ve specifickém kontextu. Používáte-li takovou klávesovou zkratku v konkrétním kontextu, tato zkratka vyvolá příkaz pro konkrétní kontext, nikoli pro globální kontext.
 
 > [!NOTE]
-> Vaše nastavení a edice sady Visual Studio může změnit názvy a umístění příkazů nabídky a možnosti, které se zobrazí v dialogových oknech. Tato stránka je založena na profilu nastavení **obecného vývoje.**
+> Vaše nastavení a edice sady Visual Studio může změnit názvy a umístění příkazů nabídky a možnosti, které se zobrazí v dialogových oknech. Tato stránka je založena na profilu **obecného** nastavení pro vývoj.
 
 ## <a name="identify-a-keyboard-shortcut"></a>Identifikace klávesové zkratky
 
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > .
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
-2. Rozbalte **možnost Prostředí**a pak zvolte **Klávesnice**.
+2. Rozbalte položku **prostředí**a pak zvolte možnost **klávesnice**.
 
    ![Zobrazení klávesových zkratek v dialogovém okně Možnosti](../ide/media/optionskeyboard.png)
 
-3. Do pole **Zobrazit příkazy obsahující** zadejte celý název příkazu bez mezer nebo jeho část.
+3. V poli **Zobrazit příkazy** , které obsahují, zadejte celý příkaz nebo část názvu příkazu bez mezer.
 
-   Můžete například najít příkazy `solutionexplorer`pro .
+   Můžete například najít příkazy pro `solutionexplorer` .
 
 4. V seznamu zvolte správný příkaz.
 
-    Můžete například zvolit `View.SolutionExplorer`.
+    Můžete si například vybrat `View.SolutionExplorer` .
 
-5. Pokud má příkaz klávesovou zkratku, zobrazí se v seznamu **vybraných příkazů Zkratky.**
+5. Pokud má příkaz klávesovou zkratku, zobrazí se v **zkratkách pro vybraný seznam příkazů** .
 
-   ![Zobrazení zástupce určeného příkazu](../ide/media/viewshortcut.png)
+   ![Zobrazit zástupce pro zadaný příkaz](../ide/media/viewshortcut.png)
 
 ## <a name="customize-a-keyboard-shortcut"></a>Přizpůsobení klávesové zkratky
 
-1. Na řádku nabídek zvolte**Možnosti** **nástrojů** > .
+1. Na panelu nabídek vyberte **Tools**  >  **Možnosti**nástroje.
 
-2. Rozbalte **možnost Prostředí**a pak zvolte **Klávesnice**.
+2. Rozbalte položku **prostředí**a pak zvolte možnost **klávesnice**.
 
-3. Volitelné: Seznam příkazů můžete filtrovat zadáním celého názvu příkazu bez mezer nebo jeho části do pole **Zobrazit příkazy obsahující.**
+3. Volitelné: vyfiltrujte seznam příkazů zadáním celého názvu nebo části názvu příkazu bez mezer v poli **Zobrazit příkazy** , které obsahují.
 
 4. V seznamu vyberte příkaz, ke kterému chcete přiřadit klávesovou zkratku.
 
-   V seznamu **Použít nový zástupce vyberte** oblast funkcí, ve které chcete zástupce použít.
+   V seznamu **použít nového zástupce v** seznamu vyberte oblast funkcí, ve které chcete zástupce použít.
 
-   Můžete například zvolit **Globální,** pokud chcete, aby zástupce fungoval ve všech kontextech. Můžete použít jakoukoli zkratku, která není namapována (jako globální) v jiném editoru. V opačném případě editor zkratku přepíše.
+   Můžete například zvolit **globální** , pokud chcete, aby zástupce pracoval ve všech kontextech. Můžete použít jakoukoli zkratku, která není namapována (jako globální) v jiném editoru. V opačném případě editor zkratku přepíše.
 
    > [!NOTE]
-   > V **globálním programu**nelze přiřadit následující klávesy jako součást klávesové zkratky :
+   > Následující klíče nelze přiřadit jako součást klávesové zkratky v **globálním**formátu:
    >
-   > - Enter, Tab, Caps Lock
-   > - Tisk Scrn/Sys Rq, Scroll Lock, Pause/Break
-   > - Vložit, Domů, Konec, Stránka nahoru, Stránka dolů
-   > - Klávesa s logem Windows, klíč aplikace, kterákoli ze šipek
-   > - Uzamčení, odstranit nebo vymazat na numerické klávesnici
-   > - Kombinace kláves Ctrl+Alt+Delete
+   > - ENTER, TAB, CAPS LOCK
+   > - Tisk SCRN/SYS RQ, SCROLL LOCK, pozastavení/přerušení
+   > - Vložení, domů, konec, stránka nahoru, PageDown
+   > - Klávesa s logem Windows, klíč aplikace, kterákoli z kláves se šipkami
+   > - NUM LOCK, DELETE nebo Clear na numerické klávesnici
+   > - Kombinace kláves CTRL + ALT + DELETE
 
-6. Do pole **Stiskněte klávesové zkratky** zadejte zástupce, který chcete použít.
-
-    > [!NOTE]
-    > Můžete vytvořit zástupce, který kombinuje písmeno s klávesou **Alt,** klávesou **Ctrl** nebo oběma. Můžete také vytvořit zástupce, který kombinuje klávesu **Shift** a písmeno s klávesou **Alt,** klávesou **Ctrl** nebo obojím.
-
-     Pokud je zástupce již přiřazen k jinému příkazu, zobrazí se v poli **Zástupce aktuálně používaný.** V takovém případě zvolte klávesu **Backspace,** chcete-li odstranit tuto zkratku, než se pokusíte jinou.
-
-    ![Určení jiného zástupce příkazu](../ide/media/reassignshortcut.png)
-
-7. Zvolte tlačítko **Přiřadit.**
+6. V poli **stisknutí klávesových zkratek** zadejte klávesovou zkratku, kterou chcete použít.
 
     > [!NOTE]
-    > Pokud pro příkaz zadáte jinou zkratku, klepněte na **tlačítko Přiřadit**a klepnutím na tlačítko **Storno** zavřete dialogové okno, přiřazená zkratka se nevrátí zpět.
+    > Můžete vytvořit zástupce, který kombinuje písmeno s klávesou **ALT** , klávesou **CTRL** nebo obojím. Můžete také vytvořit zástupce, který kombinuje klávesu **SHIFT** a písmeno s klávesou **ALT** , klávesou **CTRL** nebo obojím.
+
+     Pokud je zástupce už přiřazený k jinému příkazu, zobrazí se v poli **zástupce, který aktuálně používá** . V takovém případě stiskněte klávesu **BACKSPACE** k odstranění tohoto zástupce před tím, než se pokusíte použít jiný příkaz.
+
+    ![Zadat jiný zástupce pro příkaz](../ide/media/reassignshortcut.png)
+
+7. Klikněte na tlačítko **přiřadit** .
+
+    > [!NOTE]
+    > Pokud pro příkaz zadáte jiný zástupce, klikněte na **přiřadit**a potom kliknutím na **Storno** zavřete dialogové okno, ale zástupce, který jste přiřadili, se nevrátí.
 
 ## <a name="share-custom-keyboard-shortcuts"></a>Sdílení vlastních klávesových zkratek
 
@@ -105,48 +105,48 @@ Vlastní klávesové zkratky je možné sdílet exportováním do souboru a pře
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>Export pouze klávesových zkratek
 
-1. Na řádku nabídek zvolte **Nástroje** > **importu a exportu nastavení**.
+1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. Zvolte **Exportovat vybraná nastavení prostředí**a pak zvolte **Další**.
+2. Zvolte možnost **Exportovat vybrané nastavení prostředí**a pak zvolte možnost **Další**.
 
-3. V části **Jaká nastavení chcete exportovat?** **All Settings** **Options** **Environment**
+3. V části **Jaké nastavení chcete exportovat?** zrušte zaškrtnutí políčka **všechna nastavení** , rozbalte položku Možnosti a potom rozbalte **možnost** **prostředí**.
 
-4. Zaškrtněte políčko **Klávesnice** a pak zvolte **Další**.
+4. Zaškrtněte políčko **klávesnice** a klikněte na tlačítko **Další**.
 
-   ![Exportovat pouze přizpůsobené klávesové zkratky](../ide/media/exportshortcuts.png)
+   ![Export pouze přizpůsobených klávesových zkratek](../ide/media/exportshortcuts.png)
 
-5. V části **Co chcete pojmenovat soubor nastavení** a Uložit soubor nastavení do těchto polí **adresáře,** ponechejte výchozí hodnoty nebo zadejte různé hodnoty a pak zvolte **Dokončit**.
+5. V poli **jak chcete pojmenovat soubor nastavení** a **Uložit soubor nastavení do tohoto adresáře** , buď ponechte výchozí hodnoty, nebo zadejte jiné hodnoty a pak zvolte **Dokončit**.
 
 ::: moniker range="vs-2017"
 
-Ve výchozím nastavení jsou zástupci uloženi v souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2017\Settings.* Název souboru odráží datum, kdy jste nastavení exportovali, a přípona je *.vssettings*.
+Ve výchozím nastavení se zástupci ukládají do souboru ve složce *%UserProfile%\Documents\Visual Studio 2017 \ Settings* . Název souboru odráží datum, kdy jste nastavení exportovali, a přípona je *. vssettings*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Ve výchozím nastavení jsou zástupci uloženi v souboru ve složce *%USERPROFILE%\Documents\Visual Studio 2019\Settings.* Název souboru odráží datum, kdy jste nastavení exportovali, a přípona je *.vssettings*.
+Ve výchozím nastavení se zástupci ukládají do souboru ve složce *%UserProfile%\Documents\Visual Studio 2019 \ Settings* . Název souboru odráží datum, kdy jste nastavení exportovali, a přípona je *. vssettings*.
 
 ::: moniker-end
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>Import pouze klávesových zkratek
 
-1. Na řádku nabídek zvolte **Nástroje** > **importu a exportu nastavení**.
+1. Na řádku nabídek klikněte na **nástroje**  >  **importovat a exportovat nastavení**.
 
-2. Zvolte tlačítko **Importovat vybrané nastavení prostředí** a pak zvolte **Další**.
+2. Zvolte možnost **Importovat vybrané nastavení prostředí** a pak klikněte na tlačítko **Další**.
 
-3. Zvolte **Ne, stačí importovat nová nastavení, přepsat tlačítko aktuálního nastavení** a pak zvolte **Další**.
+3. Klikněte na tlačítko **Ne, importovat nové nastavení, přepsat aktuální nastavení** a pak zvolte možnost **Další**.
 
-4. V části **Moje nastavení**vyberte soubor obsahující zástupce, které chcete importovat, nebo zvolte tlačítko **Procházet,** chcete-li najít správný soubor.
+4. V části **Moje nastavení**vyberte soubor obsahující zástupce, které chcete importovat, nebo klikněte na tlačítko **Procházet** a vyhledejte správný soubor.
 
 5. Zvolte **Další**.
 
-6. V části **Která nastavení chcete importovat?** **All Settings** **Options** **Environment**
+6. V části **které nastavení chcete importovat?** zrušte zaškrtnutí políčka **všechna nastavení** , rozbalte položku Možnosti a potom rozbalte **možnost** **prostředí**.
 
-7. Zaškrtněte políčko **Klávesnice** a pak zvolte **Dokončit**.
+7. Zaškrtněte políčko **klávesnice** a pak zvolte **Dokončit**.
 
-   ![Importovat pouze přizpůsobené klávesové zkratky](../ide/media/importshortcuts.png)
+   ![Import pouze přizpůsobených klávesových zkratek](../ide/media/importshortcuts.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Funkce usnadnění v sadě Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)
+- [Funkce usnadnění v aplikaci Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)

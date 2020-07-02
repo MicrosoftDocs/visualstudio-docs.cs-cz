@@ -1,7 +1,7 @@
 ---
 title: Způsoby ladění kódu XSLT
 ms.date: 03/05/2019
-ms.topic: conceptual
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: f6f4a1ce60f04bcea6e21b52db9347a95292dab2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d8e3885aa895cec5ed080b7a8b4d22522d2e9edf
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815614"
 ---
 # <a name="debugging-xslt"></a>Ladění XSLT
 
@@ -33,18 +33,18 @@ Můžete spustit ladicí program, pokud máte šablonu stylů nebo vstupní soub
 
 1. Otevřete šablonu stylů nebo soubor XML v aplikaci Visual Studio.
 
-1. V nabídce **XML** vyberte **Spustit ladění XSLT** nebo stiskněte klávesu **ALT**+**F5**.
+1. V nabídce **XML** vyberte **Spustit ladění XSLT** nebo stiskněte klávesu **ALT** + **F5**.
 
 ## <a name="debug-from-an-app-that-uses-xslt"></a>Ladění z aplikace, která používá XSLT
 
-Při ladění aplikace můžete krokovat s XSLT. Při stisknutí klávesy **F11** ve <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> volání může ladicí program KROKOVAT kód XSLT.
+Při ladění aplikace můžete krokovat s XSLT. Po stisknutí klávesy **F11** na <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> volání může ladicí program krokovat kód XSLT.
 
 > [!NOTE]
-> Krokování na transformaci XSLT z <xref:System.Xml.Xsl.XslTransform> třídy není podporováno. Třída <xref:System.Xml.Xsl.XslCompiledTransform> je jediným procesorem XSLT, který podporuje krokování do XSLT při ladění.
+> Krokování na transformaci XSLT z <xref:System.Xml.Xsl.XslTransform> třídy není podporováno. <xref:System.Xml.Xsl.XslCompiledTransform>Třída je jediný procesor XSLT, který podporuje krokování do XSLT při ladění.
 
 ### <a name="to-start-debugging-an-xslt-application"></a>Spuštění ladění aplikace XSLT
 
-1. Při vytváření instance objektu <xref:System.Xml.Xsl.XslCompiledTransform> nastavte parametr `enableDebug` na `true` ve vašem kódu. To oznamuje procesoru XSLT k vytváření ladicích informací při kompilování kódu.
+1. Při vytváření instance <xref:System.Xml.Xsl.XslCompiledTransform> objektu nastavte `enableDebug` parametr na hodnotu `true` ve vašem kódu. To oznamuje procesoru XSLT k vytváření ladicích informací při kompilování kódu.
 
 1. Stisknutím klávesy **F11** se můžete do kódu XSLT krokovat.
 

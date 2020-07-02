@@ -145,6 +145,7 @@ f1_keywords:
 - CA1802
 - CA1803
 - CA1804
+- CA1805
 - CA1806
 - CA1809
 - CA1810
@@ -288,12 +289,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d9c4834604d4f77d53dc0ff7bb725eae3312779
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.openlocfilehash: 3f8188a83a11811cc73a3b38c45df8dd7d27d1c1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85382676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814795"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -432,6 +433,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1801 | [CA1801: Zkontrolujte nepoužité parametry](../code-quality/ca1801.md) | Podpis metody obsahuje parametr, který není použit v těle metody. |
 | CA1802 |[CA1802: Použijte literály, kde je to vhodné](../code-quality/ca1802.md) |Pole je deklarováno jako static a jen pro čtení (Shared a ReadOnly in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ) a je inicializováno pomocí hodnoty, která je v době kompilace Compute. Vzhledem k tomu, že hodnota, která je přiřazena cílovému poli je COMPUTE v době kompilace, změňte deklaraci na pole const (const in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ), aby se hodnota vypočítala v době kompilace místo v době běhu. |
 | CA1804 | [CA1804: Odeberte nepoužívané lokální hodnoty](../code-quality/ca1804.md) | Nepoužívané místní proměnné a zbytečná přiřazení zvětšují velikost sestavení a snižují výkon. |
+| CA1805 | [CA1805: neinicializujte zbytečně](../code-quality/ca1805.md) | Modul runtime .NET inicializuje všechna pole odkazových typů na jejich výchozí hodnoty před spuštěním konstruktoru. Ve většině případů je explicitní inicializace pole na jeho výchozí hodnotu redundantní, což zvyšuje náklady na údržbu a může snížit výkon (například se zvýšenou velikostí sestavení). |
 | CA1806 | [CA1806: Neignorujte výsledky metody](../code-quality/ca1806.md) | Nový objekt je vytvořen, ale nikdy se nepoužije, nebo je zavolána metoda, která vytvoří a vrátí nový řetězec a ten se nikdy nepoužije, nebo metoda modulu COM nebo P/Invoke vrací hodnotu HRESULT nebo kód chyby, který se nikdy nepoužije. |
 | CA1809 |[CA1809: Vyhněte se nadměrným lokálním hodnotám](../code-quality/ca1809.md) | Běžnou optimalizací výkonu je uložení hodnoty v registru procesoru místo v paměti, což je označováno jako „uložení hodnoty do registru“. Chcete-li zvýšit pravděpodobnost, že jsou všechny místní proměnné registrován, omezte počet místních proměnných na 64. |
 | CA1810 | [CA1810: Inicializujte odkazový typ statického pole vloženě](../code-quality/ca1810.md) | Pokud typ deklaruje explicitní statický konstruktor, kompilátor just-in-time (JIT) ke každé statické metodě a konstruktoru instance tohoto typu přidá kontrolu, zda již byl dříve statický konstruktor zavolán. Kontroly statického konstruktoru mohou snížit výkon. |
@@ -452,7 +454,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1827 |[CA1827: Nepoužívejte Count/LongCount, když se dá použít Any](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A>nebo <xref:System.Linq.Enumerable.LongCount%2A> se použila metoda, kde <xref:System.Linq.Enumerable.Any%2A> by byla metoda efektivnější. |
 | CA1828 |[CA1828: Nepoužívejte CountAsync/LongCount, když se dá použít AnyAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A>nebo <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A> se použila metoda, kde <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> by byla metoda efektivnější. |
 | CA1829 |[CA1829: Použijte vlastnost Length/Count místo metody Enumerable.Count](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>Metoda LINQ byla použita pro typ, který podporuje ekvivalentní, efektivnější `Length` nebo `Count` vlastnost. |
-| CA1830 |[CA1830: preferovat silné typy připojení a vkládání metod v typu StringBuilder](../code-quality/ca1830.md) | <xref:System.Text.StringBuilder.Append%2A>a <xref:System.Text.StringBuilder.Insert%2A> Poskytněte přetížení pro více typů mimo <xref:System.String> .  Pokud je to možné, preferovat přetížení silného typu přes použití rozhraní ToString () a přetížení založeného na řetězci. |
+| CA1830 |[CA1830: Upřednostňovat pro StringBuilder přetížení metod Append a Insert silného typu](../code-quality/ca1830.md) | <xref:System.Text.StringBuilder.Append%2A>a <xref:System.Text.StringBuilder.Insert%2A> Poskytněte přetížení pro více typů mimo <xref:System.String> .  Pokud je to možné, preferovat přetížení silného typu přes použití rozhraní ToString () a přetížení založeného na řetězci. |
 | CA1831 |[CA1831: Tam, kde je to možné, používat u řetězců místo indexerů založených na rozsahu metodu AsSpan](../code-quality/ca1831.md) | Při použití rozsahu indexeru na řetězec a implicitně přiřadí hodnotu ReadOnlySpan &lt; &gt; typu char, metoda <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> bude použita místo <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části řetězce. |
 | CA1832 |[CA1832: Pro získání části ReadOnlySpan nebo ReadOnlyMemory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1832.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.ReadOnlySpan%601> <xref:System.ReadOnlyMemory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
 | CA1833 |[CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1833.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.Span%601> <xref:System.Memory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |

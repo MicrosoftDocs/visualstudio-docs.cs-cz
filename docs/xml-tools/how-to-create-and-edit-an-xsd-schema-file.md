@@ -1,19 +1,19 @@
 ---
 title: Vytvoření a úprava souboru schématu XSD
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 91b10cd7-c0cd-4e5a-a46b-4fed60dff542
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 976448709f7ecf9eaff0a563b867f12b3d9fa770
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 95f7b9d52f6eaf1aa95728b28268e6d4bcba8aed
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815406"
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>Postupy: vytvoření a úprava souboru schématu XSD
 
@@ -21,7 +21,7 @@ Toto téma popisuje, jak vytvořit nový soubor schématu XML (XSD) a pak přida
 
 ## <a name="to-create-a-new-xml-schema-file"></a>Vytvoření nového souboru schématu XML
 
-1. V aplikaci Visual Studio otevřete nabídku **soubor** a vyberte možnost **Nový** **soubor** > . Případně můžete použít klávesovou zkratku **Ctrl**+**N** .
+1. V aplikaci Visual Studio otevřete nabídku **soubor** a vyberte možnost **Nový**  >  **soubor**. Případně můžete použít klávesovou zkratku **CTRL** + **N** .
 
 2. V dialogovém okně **nový soubor** vyberte **schéma XML** a pak vyberte **otevřít**.
 
