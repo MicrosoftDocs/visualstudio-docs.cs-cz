@@ -1,60 +1,61 @@
 ---
 title: Sestavování a čištění projektů a řešení
-description: Tento článek popisuje, jak vytvořit projekt v Sadě Visual Studio pro Mac
+description: Tento článek popisuje, jak sestavit projekt v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
-ms.openlocfilehash: 924bdb08154ecb3caad04cabf7e860bed9204e98
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: a33b590290880a7e20e7c0ec44c0b12942b1240e
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "71128460"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939098"
 ---
-# <a name="building-and-cleaning-projects-and-solutions"></a>Stavební a úklidové projekty a řešení
+# <a name="building-and-cleaning-projects-and-solutions"></a>Sestavování a čištění projektů a řešení
 
-Postupujte podle kroků v tomto článku se dozvíte, jak vytvořit, znovu sestavit nebo vyčistit všechny nebo některé projekty v řešení.
+Podle kroků v tomto článku se dozvíte, jak sestavit, znovu sestavit nebo vyčistit všechny nebo některé projekty v řešení.
 
 > [!NOTE]
-> Toto téma se týká Visual Studia pro Mac. Visual Studio ve Windows najdete v [tématu vytváření a čištění projektů a řešení v sadě Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio).
+> Toto téma se týká Visual Studio pro Mac. V případě sady Visual Studio ve Windows, přečtěte si téma [sestavování a čištění projektů a řešení v aplikaci Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio).
 
-## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Vytvoření, opětovné sestavení nebo čištění celého řešení
+## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Sestavení, opětovné sestavení nebo vyčištění celého řešení
 
-1. Vyberte uzel Řešení v **panelu řešení**:
+1. Vyberte uzel řešení v **oblast řešení**:
 
     ![Výběr uzlu řešení](media/compiling-and-building-image1.png)
 
-2. Vyberte nabídku **Sestavit** na řádku nabídek a zvolte jednu z následujících voleb:
+2. V řádku nabídek vyberte nabídku **sestavení** a vyberte jednu z následujících možností:
 
-    ![výběr položky nabídky Sestavení vše](media/compiling-and-building-image2.png)
+    ![výběr položky nabídky sestavit vše](media/compiling-and-building-image2.png)
 
-    * Zvolte **Sestavit vše** pro kompilaci souborů a součástí v rámci projektu, které se změnily od posledního sestavení.
+    * Zvolením možnosti **sestavit vše** zkompilujte soubory a součásti v rámci projektu, které se od posledního sestavení změnily.
 
-    * Zvolte **Znovu sestavit vše** "vyčistit" řešení a pak vytvoří všechny soubory projektu a součásti.
+    * Zvolte možnost znovu sestavit vše do "vyčistit" řešení a poté **Sestavte** všechny soubory a součásti projektu.
 
-    * Zvolte **Vyčistit vše,** chcete-li odstranit všechny zprostředkující a výstupní soubory. S pouze projekt a dílčí soubory vlevo, nové instance zprostředkující a výstupní soubory pak mohou být vytvořeny.
+    * Chcete-li odstranit všechny mezilehlé a výstupní soubory, vyberte možnost **Vyčistit vše** . Pouze v případě, že zbývá pouze soubory projektu a součásti, lze sestavit nové instance zprostředkujících a výstupních souborů.
 
-## <a name="to-build-or-rebuild-a-single-project"></a>Vytvoření nebo opětovné sestavení jednoho projektu
+## <a name="to-build-or-rebuild-a-single-project"></a>Sestavení nebo opětovné sestavení jednoho projektu
 
-1. Vyberte projekt v panelu **řešení**.
+1. Vyberte projekt v **oblast řešení**.
 
-2. Z řádku nabídek vyberte nabídku **Sestavení.**
+2. V řádku nabídek vyberte nabídku **sestavení** .
 
-3. Zvolte buď Build[Název_projektu], Znovu sestavit[Název_projektu] nebo Vyčistit[Název_projektu].
+3. Vyberte buď sestavení [ProjectName], znovu sestavit [ProjectName], nebo vyčištění [ProjectName].
 
 ## <a name="to-stop-a-build"></a>Zastavení sestavení
 
 Chcete-li zastavit sestavení, použijte jednu z následujících možností:
 
-* Stiskněte červený čtverec ve stavové oblasti:
+* Ve stavové oblasti stiskněte červené čtverce:
 
-    ![Stisknutím červeného čtverce zastavíte sestavení](media/compiling-and-building-image3.png)
+    ![Stisknutím červeného čtverce zastavíte sestavování.](media/compiling-and-building-image3.png)
 
-* Použijte položku **Zastavit** v nabídce **Sestavení.**
+* Použijte položku **zastavit** v nabídce **sestavení** .
 
-* Stiskněte **tlačítko Cmd+Shift+Return**.
+* Stiskněte kombinaci kláves **Cmd + Shift + Return**.
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření a čištění projektů a řešení (Visual Studio ve Windows)](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)
+- [Sestavování a čištění projektů a řešení (Visual Studio ve Windows)](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)

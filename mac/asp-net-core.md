@@ -6,12 +6,13 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: 3ec4b28f9af769d4765750ab48048e3b155fb48e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: how-to
+ms.openlocfilehash: 5e9eb15ee006ba23328c53511263724140bca1f9
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180338"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939032"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
 
@@ -224,7 +225,7 @@ Chcete-li přidat kontroler, postupujte následovně:
 
     ![Spuštění aplikace v prohlížeči s argumenty](media/asp-net-core-image10.png)
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,12 (Sierra) a vyšší, udělejte toto:
 

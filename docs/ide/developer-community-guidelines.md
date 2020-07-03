@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53b29cc0b6af8fed9ee64a92b2d43e29062b498a
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.openlocfilehash: 5189278f8efe42e6e7916562e7ce4f5d6a964061
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837738"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938263"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -91,7 +91,7 @@ Sledujte průběh návrhu vaší funkce, který odkazuje na [stavy návrhů a ne
 
 Chcete-li zachovat jasný a transparentní konverzaci, omezte diskuzi na angličtinu a zajistěte, aby byly problémy relevantní. Considerate se na ostatní a vždycky se snaží Courteous a Professional.
 
-Další informace najdete v [kodexu chování komunity Microsoft](https://answers.microsoft.com/page/codeofconduct).
+Další informace najdete v [kodexu chování komunity Microsoft](https://answers.microsoft.com/en-us/page/codeofconduct).
 
 Každé porušení diskuze pravidlech používání žádostí může vést k odebrání komentáře a následně k jeho zakázání.
 

@@ -1,36 +1,37 @@
 ---
-title: Zakomentovat kód
-description: Tento článek popisuje použití komentářů ve zdrojovém editoru Visual Studia pro Mac
+title: Kód odhlašovacího komentáře
+description: Tento článek popisuje použití komentářů ve zdrojovém editoru Visual Studio pro Mac
 author: cobey
 ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: 0FE5E929-1846-4F48-B5E3-70990FAF9504
-ms.openlocfilehash: 2966d8b89a2609d3fbfc2b6b4561288433641ca1
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: a0aa3de91f1a2c75d73409d89f3cbc8894faacab
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "67693116"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939121"
 ---
 # <a name="comments"></a>Komentáře
 
-Při ladění nebo experimentování s kódem může být užitečné komentovat bloky kódu dočasně nebo dlouhodobě.
+Při ladění nebo experimentování s kódem může být užitečné komentovat bloky kódu buď dočasně, nebo dlouhodobě.
 
-Chcete-li zakomentovat celý blok kódu:
+Chcete-li přidat komentář k celému bloku kódu:
 
-* Vyberte kód a v místní nabídce vyberte **Přepnout komentáře** na řádku.
+* Vyberte kód a v místní nabídce vyberte **Přepnout komentáře k řádkům** .
 
 NEBO
 
-* Použijte `cmd + /` klíčitou vazbu na vybraný kód.
+* Použijte `cmd + /` pro vybraný kód vazbu klíčů.
 
-Tyto metody lze použít k komentáři a odkomentování oddílů kódu. V souborech Jazyka C# lze přidat další úrovně komentářů řádku, což umožňuje, aby oblasti kódů byly komentovány a bez komentáře, při zachování skutečných komentářů:
+Tyto metody lze použít pro komentáře a odkomentovat oddíly kódu. V souborech jazyka C# lze přidat další úrovně komentářů k řádkům, což umožňuje, aby oblasti kódů byly komentovány a odkomentovány, přičemž stále zachovává skutečné komentáře:
 
-![víceúrovňové komentáře](media/source-editor-image8.png)
+![komentáře na více úrovních](media/source-editor-image8.png)
 
-Komentáře jsou také užitečné pro dokumentaci kódu pro budoucí vývojáře, kteří mohou pracovat s ním. Ty se obvykle provádějí ve formě víceřádkových komentářů, které jsou přidány následujícím způsobem v každém jazyce:
+Komentáře jsou také užitečné pro dokumentaci kódu pro budoucí vývojáře, kteří s ním můžou pracovat. Ty se obvykle provádějí ve formě víceřádkových komentářů, které se v jednotlivých jazycích přidávají následujícím způsobem:
 
-**C #**
+**C#**
 
 ```csharp
 /*
@@ -39,7 +40,7 @@ Komentáře jsou také užitečné pro dokumentaci kódu pro budoucí vývojář
 */
 ```
 
-**F #**
+**F#**
 
 ```fsharp
 (*
@@ -50,4 +51,4 @@ Komentáře jsou také užitečné pro dokumentaci kódu pro budoucí vývojář
 
 ## <a name="see-also"></a>Viz také
 
-- [Zakomentování kódu (Visual Studio ve Windows)](/visualstudio/ide/quickstart-editor#comment-out-code)
+- [Kód odhlašovacího komentáře (Visual Studio ve Windows)](/visualstudio/ide/quickstart-editor#comment-out-code)

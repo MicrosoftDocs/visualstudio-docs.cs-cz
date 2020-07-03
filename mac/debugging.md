@@ -6,12 +6,13 @@ ms.author: johmil
 ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: a81eb9bbae905599cc5d953f27ac3a8d06441f8b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: overview
+ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183977"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939080"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Ladění pomocí Visual Studio pro Mac
 
@@ -89,7 +90,7 @@ Tady jsou čtyři tlačítka:
 
 ## <a name="change-which-statement-is-executed-next"></a>Změna příkazu, který je proveden jako další
 
-I když je ladicí program pozastaven, šipka na okraj ukazuje, který řádek kódu bude proveden jako další. Kliknutím a přetažením šipky na jiný řádek kódu můžete změnit, který příkaz bude proveden. Stejnou věc můžete dosáhnout také tak, že kliknete pravým tlačítkem na řádek kódu a vyberete **nastavit další příkaz** z kontextové nabídky.
+Když ladicí program pozastavíte, šipka na okraji ukazuje, který řádek kódu se spustí jako další. Pokud chcete spouštěný příkaz změnit, přetáhněte šipku na jiný řádek. Stejnou věc můžete dosáhnout také tak, že kliknete pravým tlačítkem na řádek kódu a vyberete **nastavit další příkaz** z kontextové nabídky.
 
 ![Šipkou a přetažením nastavíte další příkaz.](media/debugger-drag-setnextstatement.gif)
 

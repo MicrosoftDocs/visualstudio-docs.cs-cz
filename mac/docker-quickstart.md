@@ -1,44 +1,45 @@
 ---
-title: Začínáme s Dockerem
-description: Přečtěte si, jak přidat Docker do svých projektů ve Visual Studiu for Mac.
+title: Začínáme s Docker
+description: Naučte se, jak přidat Docker do vašich projektů v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 06/17/2019
-ms.openlocfilehash: 2c6bdd7d0b2c939ed9db9be962e89d9ee423e1d4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 5f21d55568328a9aeb9b7982e5978500f7ef715b
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984126"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939052"
 ---
-# <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Začínáme s Dockerem ve Visual Studiu pro Mac
+# <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Začínáme s Docker v Visual Studio pro Mac
 
-S Visual Studio pro Mac můžete snadno vytvářet, ladit a spouštět kontejnerizované aplikace ASP.NET Core a publikovat je do Azure.
+Pomocí Visual Studio pro Mac můžete snadno sestavovat, ladit a spouštět ASP.NET Core aplikace a publikovat je v Azure.
 
 ## <a name="prerequisites"></a>Požadavky
 
-* [Desktop Dockeru](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Visual Studio pro Mac 2019](https://visualstudio.microsoft.com/vs/mac)
 
 ## <a name="installation-and-setup"></a>Instalace a nastavení
 
-Pro instalaci Dockeru si přečtěte a postupujte podle informací na [adrese Install Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/).
+V případě instalace Docker zkontrolujte a použijte informace v části [instalace Docker Desktop pro Mac](https://docs.docker.com/docker-for-mac/install/).
 
-## <a name="creating-an-aspnet-core-web-application-and-adding-docker-support"></a>Vytvoření ASP.NET základní webové aplikace a přidání podpory Dockeru
+## <a name="creating-an-aspnet-core-web-application-and-adding-docker-support"></a>Vytvoření webové aplikace ASP.NET Core a přidání podpory Docker
 
-1. Vytvořte nové řešení tak, že přejdete na **Soubor > nové řešení**.
-1. V části **.NET Core >** App ![zvolte šablonu webové **aplikace:** Vytvoření nové aplikace ASP.NET](media/docker-quickstart-1.png)
-1. Vyberte cílovou architekturu. V tomto příkladu použijeme rozhraní .NET Core 2.2: ![Nastavení cílového rozhraní](media/docker-quickstart-2.png)
-1. Zadejte podrobnosti projektu, například název (_DockerDemo_ v tomto příkladu). Vytvořený projekt obsahuje všechny základy, které potřebujete k vytvoření a spuštění webu ASP.NET Core.
-1. V panelu řešení klikněte pravým tlačítkem myši na ![projekt DockerDemo a vyberte Přidat > Přidat podporu **Dockeru:** Přidat podporu dockeru](media/docker-quickstart-3.png)
+1. Nové řešení můžete vytvořit tak, že na **soubor > nové řešení**.
+1. V části **aplikace .NET Core >** vyberte šablonu **webové aplikace** : ![ vytvořit novou aplikaci ASP.NET.](media/docker-quickstart-1.png)
+1. Vyberte cílovou architekturu. V tomto příkladu použijeme .NET Core 2,2: ![ nastavení cílové platformy.](media/docker-quickstart-2.png)
+1. V tomto příkladu zadejte podrobnosti projektu, například název (_DockerDemo_ ). Vytvořený projekt obsahuje všechny základy, které potřebujete k vytvoření a spuštění webu ASP.NET Core.
+1. V Oblast řešení klikněte pravým tlačítkem na projekt DockerDemo a vyberte **přidat > přidat podporu Docker**: ![ Přidat podporu Docker.](media/docker-quickstart-3.png)
 
-Visual Studio pro Mac automaticky přidá nový projekt do vašeho řešení s názvem **docker-compose** a přidá **dockerfile** do vašeho stávajícího projektu.
+Visual Studio pro Mac automaticky přidá nový projekt do vašeho řešení s názvem **Docker-** **souboru Dockerfile** a přidá do existujícího projektu.
 
-![Generované soubory podpory dockeru](media/docker-quickstart-4.png)
+![Vygenerované soubory podpory Docker](media/docker-quickstart-4.png)
 
-## <a name="dockerfile-overview"></a>Přehled souborů Dockeru
+## <a name="dockerfile-overview"></a>Souboru Dockerfile – přehled
 
-Dockerfile je recept pro vytvoření konečné image Dockeru. Odkazovat na [odkaz Dockerfile](https://docs.docker.com/engine/reference/builder/) pro pochopení příkazů v něm.
+Souboru Dockerfile je recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) .
 
 ```
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
@@ -62,30 +63,30 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "DockerDemo.dll"]
 ```
 
-Předchozí *soubor Dockerfile* je založen na image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní bitové kopie vytvořením projektu a jeho přidáním do kontejneru.
+Předchozí *souboru Dockerfile* vychází z image [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) a obsahuje pokyny pro úpravu základní image sestavením projektu a jeho přidáním do kontejneru.
 
 > [!NOTE]
-> Výchozí soubor Dockerfile vytvořený visual studio pro Mac zveřejňuje Port 80 pro přenos y HTTP. Chcete-li povolit `Expose 443` přenoshttps, přidejte do Dockerfile.
+> Výchozí souboru Dockerfile vytvořený pomocí Visual Studio pro Mac zveřejňuje port 80 pro přenosy HTTP. Pokud chcete povolit přenosy přes protokol HTTPS, přidejte `Expose 443` do souboru Dockerfile.
 
-## <a name="debugging"></a>ladění
+## <a name="debugging"></a>Ladění
 
-Vyberte `docker-compose` projekt jako projekt po spuštění a spusťte ladění **(Spustit > spustit ladění**). To bude sestavení, nasazení a spuštění projektu ASP.NET v kontejneru.
+Vyberte `docker-compose` projekt jako spouštěný projekt a spusťte ladění (**Spustit > spustit ladění**). Tím se sestaví, nasadí a spustí projekt ASP.NET v kontejneru.
 
 > [!TIP]
-> Při prvním spuštění po instalaci aplikace Docker Desktop se při pokusu o ladění může zobrazit následující chyba:`Cannot start service dockerdemo: Mounts denied`
+> Při prvním spuštění po instalaci Docker desktopu se může při pokusu o ladění zobrazit následující chyba:`Cannot start service dockerdemo: Mounts denied`
 >
-> Přidat `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` na kartu Sdílení souborů v Docker desktopu:
+> Přidejte `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` na kartu Sdílení souborů v Docker desktopu:
 >
 > ![Přidání složky NuGetFallbackFolder do sdílení souborů](media/docker-quickstart-5.png)
 
-Po dokončení sestavení bude aplikace spuštěna v Safari:
+Po dokončení sestavení se aplikace spustí v Safari:
 
-![Výchozí projekt Dockeru spuštěný v Safari](media/docker-quickstart-6.png)
+![Výchozí projekt Docker běžící v Safari](media/docker-quickstart-6.png)
 
-Všimněte si, že kontejner bude `http://localhost:32768` naslouchat na portu, například a tento port se může lišit.
+Všimněte si, že kontejner naslouchá na portu, `http://localhost:32768` například, a tento port se může lišit.
 
-Chcete-li zobrazit seznam spuštěných `docker ps` kontejnerů, použijte příkaz v terminálu.
+Pokud chcete zobrazit seznam spuštěných kontejnerů, použijte `docker ps` příkaz v terminálu.
 
-Všimněte si portového relé na následujícím snímku obrazovky (v části **PORTY).** To ukazuje, že kontejner naslouchá na portu, který jsme viděli v Safari výše a předává požadavky internímu webovému serveru na portu 80 (jak je definováno v souboru Dockerfile). Z pohledu aplikace poslouchá na portu 80:
+Poznamenejte si port Relay na snímku obrazovky dole (v části **porty**). To ukazuje, že kontejner naslouchá na portu, který jsme viděli v Safari výše, a přenáší požadavky na interní WebServer na portu 80 (jak je definováno v souboru Dockerfile). Z perspektivy aplikace naslouchá na portu 80:
 
-![Seznam kontejnerů Dockeru](media/docker-quickstart-7.png)
+![Seznam kontejnerů Docker](media/docker-quickstart-7.png)
