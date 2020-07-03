@@ -511,6 +511,8 @@
                   href: ca1802.md
                 - name: 'CA1804: Odeberte nepoužívané lokální hodnoty'
                   href: ca1804.md
+                - name: 'CA1805: Nepoužívejte inicializaci zbytečně'
+                  href: ca1805.md
                 - name: 'CA1806: Neignorujte výsledky metody'
                   href: ca1806.md
                 - name: 'CA1809: Vyhněte se nadměrným lokálním hodnotám'
@@ -603,6 +605,8 @@
                   href: ca2014.md
                 - name: 'CA2015: Pro typy odvozené z MemoryManager<T> nedefinujte finalizační metody'
                   href: ca2015.md
+                - name: 'CA2016: Přeposlat parametr CancellationToken metodám, které ho přijmou'
+                  href: ca2016.md
             - name: Upozornění zabezpečení
               items:
                 - name: Přehled
