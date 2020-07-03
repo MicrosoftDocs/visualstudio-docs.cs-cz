@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Vytvoření vlastního editoru | Dokumenty společnosti Microsoft'
+title: 'Návod: Vytvoření vlastního editoru | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - create
 ms.assetid: d090abb6-d99f-4083-a3db-cd16bf81ce7d
@@ -10,41 +10,41 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7eb376637fd72f3856415ee2527ec622fea02950
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 4713931d70fd91dd57b85bc6fc749e62e03eb20b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905924"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>Návod: Vytvoření vlastního editoru
-Šablona projektu VSPackage může vytvořit jednoduchý vlastní editor v jazyce C++. Šablona projektu VSPackage již nepodporuje projekty jazyka C# nebo Visual Basic. Další informace naleznete v [tématu Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+Šablona projektu VSPackage může vytvořit jednoduchý vlastní editor v jazyce C++. Šablona projektu VSPackage již nepodporuje projekty C# nebo Visual Basic. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
 ## <a name="prerequisites"></a>Požadavky
- Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sady Visual Studio SDK. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="the-visual-studio-package-project-template"></a>Šablona projektu Balíček sady Visual Studio
- Šablonu projektu balíčku sady Visual Studio najdete v dialogovém okně **Nový projekt** ve složce **Rozšiřitelnost jazyka C++.**
+## <a name="the-visual-studio-package-project-template"></a>Šablona projektu balíčku sady Visual Studio
+ Šablonu projektu balíčku sady Visual Studio najdete v dialogovém okně **Nový projekt** ve složce **rozšiřitelnost C++** .
 
-### <a name="to-create-a-vspackage-using-the-visual-studio-package-template"></a>Vytvoření balíčku VSPackage pomocí šablony balíčku sady Visual Studio
+### <a name="to-create-a-vspackage-using-the-visual-studio-package-template"></a>Vytvoření VSPackage pomocí šablony balíčku sady Visual Studio
 
 1. Vytvořte projekt pomocí šablony balíčku sady Visual Studio.
 
-2. Vyberte možnost **Vlastní editor** a klepněte na tlačítko **Další**. Zobrazí se stránka **Možnosti editoru.**
+2. Vyberte možnost **vlastní editor** a klikněte na tlačítko **Další**. Zobrazí se stránka **Možnosti editoru** .
 
-3. Do pole **Název editoru** zadejte název editoru. Do pole Přípona souboru zadejte příponu souboru, kterou chcete přidružit k editoru, do pole **Přípona souboru.** Editor je k dispozici pro soubory s touto příponou. Přípona souboru je registrována pouze pro Visual Studio, ne pro Windows. Do pole **Výchozí název souboru** zadejte výchozí název souboru pro nové dokumenty vytvořené editorem.
+3. Do pole **název editoru** zadejte název svého editoru. Do pole **Přípona souboru** zadejte příponu souboru, kterou chcete přidružit k vašemu editoru. Editor je k dispozici pro soubory s tímto rozšířením. Přípona souboru je zaregistrována pouze pro aplikaci Visual Studio, nikoli pro systém Windows. Do pole **výchozí název souboru** zadejte výchozí název souboru pro nové dokumenty vytvořené pomocí editoru.
 
-4. Kliknutím na **Dokončit** vytvořte balíček VSPackage ve zadané složce.
+4. Kliknutím na tlačítko **Dokončit** vytvořte VSPackage ve složce, kterou jste určili.
 
 ### <a name="to-test-your-custom-editor"></a>Testování vlastního editoru
 
-1. V nabídce **Soubor** přejděte na **Nový** a potom klepněte na **příkaz Soubor**.
+1. V nabídce **soubor** přejděte na příkaz **Nový** a poté klikněte na možnost **soubor**.
 
-2. V podokně **Nainstalované šablony** dialogového okna **Nový soubor** vyberte šablonu souboru a pak typ souboru, který jste zaregistrovali.
+2. V podokně **Nainstalované šablony** v dialogovém okně **nový soubor** vyberte šablonu souboru a potom typ souboru, který jste zaregistrovali.
 
-3. Kliknutím na **Otevřít** dokument zobrazíte a upravíte.
+3. Kliknutím na **otevřít** můžete dokument zobrazit a upravit.
 
-     Editor podporuje operace vyjmutí a vložení, hledání a nahrazování a otevřených a zatěžovacích operací.
+     Editor podporuje operace vyjmutí a vložení, hledání a nahrazení a operací otevřít a načíst.
 
 ## <a name="see-also"></a>Viz také
 - [Balíčky VSPackage](../extensibility/internals/vspackages.md)

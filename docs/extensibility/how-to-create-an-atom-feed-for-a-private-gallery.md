@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Vytvoření informačního kanálu Atom pro soukromou galerii | Dokumenty společnosti Microsoft'
+title: 'Postupy: vytvoření informačního kanálu Atom pro soukromou galerii | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Atom feed, VSIX private galleries
 - VSIX private galleries, Atom feed
@@ -11,30 +11,30 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c72fbf2d3973ffd84de1cf6f33788c43511c3ce4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 269161e831fdb176dbfea844e951597efb467312
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905857"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Postup: Vytvoření informačního kanálu Atom pro soukromou galerii
-Můžete vytvořit informační kanál Atom (RSS) do umístění v intranetu, který obsahuje rozšíření, a přidat informační kanál do **rozšíření a aktualizací** jako soukromou galerii. Další informace naleznete v [tématu Soukromé galerie](../extensibility/private-galleries.md).
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Postupy: vytvoření informačního kanálu Atom pro soukromou galerii
+Informační kanál Atom (RSS) můžete vytvořit do umístění v intranetu, které obsahuje rozšíření a přidat informační kanál do **rozšíření a aktualizace** jako soukromou galerii. Další informace najdete v tématu [soukromé Galerie](../extensibility/private-galleries.md).
 
 ## <a name="create-an-atom-feed"></a>Vytvoření informačního kanálu Atom
- Chcete-li vytvořit informační kanál Atom jako soukromou galerii, nejprve shromážděte rozšíření *(soubory všest)* do složky. Pokud chcete, můžete je uspořádat do podsložek. Budete také potřebovat následující zdroje:
+ Chcete-li vytvořit informační kanál Atom jako soukromou galerii, nejprve Shromážděte rozšíření (soubory *. vsix* ) do složky. V případě potřeby je můžete uspořádat do podsložek. Budete také potřebovat následující prostředky:
 
-- Soubor *atom.xml,* který zpřístupňuje přípony jako soukromou galerii. Informace o připojení souboru *atom.xml* k **rozšířením a aktualizacím**naleznete [v tématu Soukromé galerie](../extensibility/private-galleries.md).
+- *atom.xml* soubor, který rozšíření zpřístupňují jako soukromou galerii. Informace o tom, jak připojit soubor *atom.xml* k **rozšíření a aktualizacím**, najdete v tématu [soukromé Galerie](../extensibility/private-galleries.md).
 
-- Složka obsahující všechny obrazové soubory, které byly extrahovány z rozšíření (například snímky obrazovek). Soubor *atom.xml* obsahuje relativní odkazy na tyto obrázky tak, aby byly k dispozici v **rozšíření a aktualizace**.
+- Složka, která obsahuje všechny soubory obrázků, které byly extrahovány z rozšíření (například snímky obrazovky). *atom.xml* soubor obsahuje relativní odkazy na tyto image, aby byly dostupné v **rozšířeních a aktualizacích**.
 
   Předpokládejme například, že jste shromáždili následující dvě rozšíření do složky:
 
-- *Template_Wizard_239.vsix*, což je prázdná šablona projektu VSIX.
+- *Template_Wizard_239. vsix*, což je prázdná šablona projektu VSIX.
 
-- *SelectionHighlight.vsix*, což je nástroj pro zvýraznění všech instancí vybraného slova.
+- *SelectionHighlight. vsix*, což je nástroj, který zvýrazní všechny instance vybraného slova.
 
-  Obsah souboru *atom.xml* by se podobal následujícímu příkladu:
+  Obsah souboru *atom.xml* by vypadal podobně jako v následujícím příkladu:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +70,7 @@ Můžete vytvořit informační kanál Atom (RSS) do umístění v intranetu, kt
 </feed>
 ```
 
- Všimněte si, že dvě značky odkazů odkazují na snímky obrazovek v generované složce obrázků.
+ Všimněte si, že dvě značky odkazů odkazují na snímky obrazovky ve vygenerované složce imagí.
 
 ## <a name="see-also"></a>Viz také
 - [Soukromé galerie](../extensibility/private-galleries.md)

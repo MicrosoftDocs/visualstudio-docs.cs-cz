@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Identifikace symbolů v knihovně | Dokumenty společnosti Microsoft'
+title: 'Postupy: identifikace symbolů v knihovně | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Call Browser tool, identifying symbols in the library
 - Call Browser tool
@@ -11,17 +11,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1fe920fabd05a875b336467fbba16e4229fa9613
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: fd091f003909110c696c2e42ad80d6c6ea4859d2
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80708007"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905402"
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>Postup: Identifikace symbolů v knihovně
-Nástroje pro procházení symbolů zobrazují hierarchické zobrazení symbolů. Symboly představují obory názvů, objekty, třídy, členy třídy a další prvky jazyka.
+# <a name="how-to-identify-symbols-in-a-library"></a>Postupy: identifikace symbolů v knihovně
+Nástroje pro procházení symbolů zobrazují hierarchická zobrazení symbolů. Symboly reprezentují obory názvů, objekty, třídy, členy třídy a další prvky jazyka.
 
- Každý symbol v hierarchii lze identifikovat podle navigačních informací [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] předaných knihovnou symbolů správci objektů prostřednictvím následujících rozhraní:
+ Každý symbol v hierarchii lze identifikovat pomocí navigační informace předané knihovnou symbolů do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Správce objektu prostřednictvím následujících rozhraní:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>
 
@@ -29,11 +29,11 @@ Nástroje pro procházení symbolů zobrazují hierarchické zobrazení symbolů
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.
 
- Umístění symbolu v hierarchii odlišuje symbol. Umožňuje nástroje pro procházení symbolů pro navigaci na konkrétní symbol. Jedinečné, plně kvalifikované cesta ke symbolu určuje umístění. Každý prvek v cestě je uzel. Cesta začíná uzlovým uzětem nejvyšší úrovně a končí určitým symbolem. Například pokud M1 metoda je členem třídy C1 a C1 je v oboru názvů N1, úplná cesta M1 metoda je N1. C1. M1. Tato cesta obsahuje tři uzly: N1, C1 a M1.
+ Umístění symbolu v hierarchii rozlišuje symbol. Umožňuje nástrojům pro procházení symbolů přejít na konkrétní symbol. Jedinečná úplná cesta k symbolu určuje umístění. Každý prvek v cestě je uzel. Cesta začíná uzlem nejvyšší úrovně a končí pomocí konkrétního symbolu. Pokud je například Metoda M1 členem třídy C1 a C1 je v oboru názvů N1, úplná cesta k metodě M1 je N1. C1. Kategorie. Tato cesta obsahuje tři uzly: N1, C1 a M1.
 
- Navigační informace umožňují [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů vyhledat, vybrat a zachovat vybrané symboly v hierarchii. Umožňuje navigaci z jednoho nástroje pro prohlížení do druhého. Při použití **prohlížeče objektů** k [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] procházení symbolů v projektu můžete klepnout pravým tlačítkem myši na metodu a spustit nástroj **Call Browser** a zobrazit metodu v grafu volání.
+ Navigační informace umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] správci objektů najít, vybrat a zachovat vybrané symboly v hierarchii. Umožňuje navigaci z jednoho nástroje pro procházení na jiný. Při použití **Prohlížeč objektů** k procházení symbolů v [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projektu můžete kliknout pravým tlačítkem myši na metodu a spustit nástroj **prohlížeč volání** pro zobrazení metody v grafu volání.
 
- Umístění symbolu popisují dva formuláře. Kanonický formulář je založen na plně kvalifikované cestě symbolu. Představuje jedinečnou pozici symbolu v hierarchii. Je nezávislý na nástroji pro prohlížení symbolů. Chcete-li získat informace o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kanonickém formuláři, správce objektů volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> metodu. Prezentační formulář popisuje umístění symbolu v rámci konkrétního nástroje pro procházení symbolů. Pozice symbolu je relativní vzhledem k umístění jiných symbolů v hierarchii. Daný symbol může mít několik cest prezentace, ale pouze jednu kanonické cesty. Pokud je například třída C1 zděděna z třídy C2 a obě třídy jsou v oboru názvů N1, **prohlížeč objektů** zobrazí následující hierarchický strom:
+ Umístění symbolu popisují dva formuláře. Kanonický tvar je založen na plně kvalifikované cestě k symbolu. Představuje jedinečnou pozici symbolu v hierarchii. Nezávisle na nástroji pro procházení symbolů. Chcete-li získat informace o kanonickém formuláři, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Správce objektů volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> metodu. Formulář prezentace popisuje umístění symbolu v rámci určitého nástroje pro procházení symbolů. Pozice symbolu je relativní vzhledem k pozici jiných symbolů v hierarchii. Daný symbol může mít několik prezentačních cest, ale jenom jednu kanonickou cestu. Například pokud je třída C1 zděděna z třídy C2 a obě třídy jsou v oboru názvů N1, **Prohlížeč objektů** zobrazí následující hierarchický strom:
 
 ```
 N1
@@ -46,15 +46,15 @@ N1
 
 ```
 
- Kanonická cesta třídy C2 je v tomto příkladu N1 + C2. Prezentační cesta C2 obsahuje uzly C1 a "Základy a rozhraní": N1 + C1 + "Základy a rozhraní" + C2.
+ Kanonická cesta třídy C2 v tomto příkladu je N1 + C2. Prezentační cesta C2 zahrnuje C1 a "základy a rozhraní" uzly: N1 + C1 + "základy a rozhraní" + C2.
 
- Chcete-li získat informace o formuláři prezentace, správce objektů volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> metodu.
+ Chcete-li získat informace o prezentačním formuláři, volá správce objektů <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> metodu.
 
-## <a name="to-obtain-canonical-and-presentation-forms-information"></a>Chcete-li získat informace o kanonických a prezentačních formulářích
+## <a name="to-obtain-canonical-and-presentation-forms-information"></a>Získání informací o kanonických a prezentačních formulářích
 
 1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> metodu.
 
-     Správce objektů volá tuto metodu k získání seznamu uzlů obsažených v kanonické cestě symbolu.
+     Správce objektů volá tuto metodu, aby získala seznam uzlů obsažených v kanonické cestě k symbolu.
 
     ```vb
     Public Function EnumCanonicalNodes(ByRef ppEnum As Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes) As Integer
@@ -77,9 +77,9 @@ N1
 
 2. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> metodu.
 
-     Správce objektů volá tuto metodu k získání seznamu uzlů obsažených v cestě prezentace symbolu.
+     Správce objektů volá tuto metodu, aby získala seznam uzlů obsažených v prezentační cestě k symbolu.
 
 ## <a name="see-also"></a>Viz také
 - [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)
-- [Postup: Registrace knihovny u správce objektů](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
-- [Postup: Vystavit seznamy symbolů poskytovaných knihovnou správci objektů](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+- [Postupy: registrace knihovny pomocí Správce objektů](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
+- [Postupy: vystavení seznamů symbolů poskytovaných knihovnou správci objektů](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

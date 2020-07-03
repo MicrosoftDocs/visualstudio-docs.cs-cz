@@ -1,100 +1,100 @@
 ---
-title: 'Postupy: Diagnostika výkonu rozšíření | Dokumentace Microsoftu'
+title: 'Postupy: Diagnostika výkonu rozšíření | Microsoft Docs'
 ms.date: 11/08/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
 author: BertanAygun
 ms.author: bertaygu
 manager: jillfra
 ms.workload:
 - bertaygu
-ms.openlocfilehash: 3d8fb5de23cbc4664ea322a9149653598956aed7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863284"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905902"
 ---
-# <a name="measuring-extension-impact-in-startup"></a>Měření dopadu rozšíření v po spuštění
+# <a name="measuring-extension-impact-in-startup"></a>Měření dopadu rozšíření při spuštění
 
-## <a name="focus-on-extension-performance-in-visual-studio-2017"></a>Zaměřte se na výkon rozšíření v sadě Visual Studio 2017
+## <a name="focus-on-extension-performance-in-visual-studio-2017"></a>Zaměření na výkon rozšíření v aplikaci Visual Studio 2017
 
-Na základě názorů zákazníků, jedna z oblasti zaměření pro verze sady Visual Studio 2017 se stále výkonu načítání řešení a spuštění. Jako platformu týmu sady Visual Studio pracujeme na vylepšení výkonu načítání řešení a spuštění. Obecně platí naše měření navrhnout nainstalovaná rozšíření může mít také významný dopad na tyto scénáře.
+Na základě zpětné vazby od zákazníků se dokončila jedna z oblastí pro fokus pro vydání sady Visual Studio 2017 a výkon načtení řešení. Jako tým platformy sady Visual Studio jsme pracovali na zlepšení výkonu při spouštění a načítání řešení. Obecně platí, že naše měření naznačují nainstalovaná rozšíření můžou mít na těchto scénářích značný vliv.
 
-Pomoc uživatelům porozumění tomuto vlivu, jsme přidali novou funkci v sadě Visual Studio, abyste upozornili uživatele, pomalé rozšíření. V některých případech sada Visual Studio zjistí novou příponu, která může zpomalit načítání řešení nebo při spuštění. Když se zjistí zpomalení, uživatelům se zobrazí oznámení v integrovaném vývojovém prostředí přejděte do dialogového okna Nový "Spravovat výkon sady Visual Studio". Toto dialogové okno můžete také vždy možný přes nabídku Nápověda k nalezení dříve detekované rozšíření.
+Abychom uživatelům pomohli tento dopad pochopit, Přidali jsme do sady Visual Studio novou funkci, která upozorní uživatele na pomalá rozšíření. V některých případech Visual Studio detekuje nové rozšíření, které zpomaluje načtení nebo spuštění řešení. Při zjištění zpomalení se uživatelům v rozhraní IDE zobrazí oznámení, že jim ukáže nové dialogové okno spravovat výkon sady Visual Studio. K tomuto dialogovému oknu se taky dá vždycky získat pøístup z nabídky Help k procházení dříve zjištěných rozšíření.
 
 ![spravovat výkon sady Visual Studio](media/manage-performance.png)
 
-Tento dokument, zaměřuje, což vývojářům rozšíření popisuje, jak se počítá rozšíření vliv. Tento dokument také popisuje, jak rozšíření dopad mohou být analyzovány místně. Místně analýza dopadu rozšíření určí, pokud rozšíření se může zobrazit jako výkon vliv na rozšíření.
+Tento dokument má za cíl pomáhat vývojářům rozšíření tím, že popisuje, jak se vypočítává dopad na rozšíření. Tento dokument také popisuje, jak lze analyzovat dopad na rozšíření v místním prostředí. Místní analýza dopadu na rozšíření určí, jestli se může rozšíření zobrazit jako rozšíření s vlivem na výkon.
 
 > [!NOTE]
-> Tento dokument se zaměřuje na dopadu rozšíření na zatížení při spuštění a řešení. Rozšíření také ovlivnit výkon sady Visual Studio, když způsobí uživatelského rozhraní přestane reagovat. Další informace o tomto tématu najdete v tématu [jak: Diagnostika uživatelského rozhraní způsobených rozšířeními zpoždění](how-to-diagnose-ui-delays-caused-by-extensions.md).
+> Tento dokument se zaměřuje na dopad rozšíření při spuštění a zatížení řešení. Rozšíření mají také vliv na výkon sady Visual Studio, když způsobí, že uživatelské rozhraní přestane reagovat. Další informace o tomto tématu naleznete v tématu [How to: diagnostice zpoždění uživatelského rozhraní způsobeného rozšířeními](how-to-diagnose-ui-delays-caused-by-extensions.md).
 
-## <a name="how-extensions-can-impact-startup"></a>Jak rozšíření může mít vliv na spuštění
+## <a name="how-extensions-can-impact-startup"></a>Jak můžou rozšíření ovlivnit spuštění
 
-Jedním z nejběžnějších způsobů pro rozšíření, která mají vliv na výkon při spuštění je výběrem automaticky načíst na některé ze známých spuštění uživatelského rozhraní kontexty například NoSolutionExists nebo ShellInitialized. Aktivovat při spuštění těchto kontextech uživatelského rozhraní. Všechny balíčky, které patří `ProvideAutoLoad` atribut v jejich definice s těmito kontexty bude načten a inicializován v daném čase.
+Jedním z nejběžnějších způsobů rozšíření pro ovlivnění výkonu při spuštění je výběr automatického načítání do jednoho ze známých kontextů uživatelského rozhraní pro spuštění, jako je NoSolutionExists nebo ShellInitialized. Tyto kontexty uživatelského rozhraní se aktivují během spouštění. Všechny balíčky, které obsahují `ProvideAutoLoad` atribut v definici s těmito kontexty, budou načteny a inicializovány v daném čase.
 
-Když budeme měřit dopad rozšíření, především zaměříme na času spotřebovaného přidělenými těchto rozšíření, které vybrat automatického zatížení v kontextech výše. Měří dobu by obsahovat, ale není omezena na:
+Při měření dopadu rozšíření se primárně zaměřujeme na čas strávený těmito rozšířeními, která se v kontextech vyberou k automatickému načtení. Měřené časy by zahrnovaly, ale nemusely být omezeny na:
 
 * Načítání sestavení rozšíření pro synchronní balíčky
-* Doba trvání v konstruktoru třídy balíčků pro synchronní balíčky
-* Doba trvání v metodě inicializace (nebo setsite –) balíčku pro synchronní balíčky
-* Pro asynchronní balíčky výše uvedené operace běží na vlákně na pozadí.  V důsledku toho operace jsou vyloučeny z monitorování.
-* Doba trvání jakékoli asynchronní práce během inicializace balíček naplánovány ke spuštění na hlavním vlákně
-* Doba trvání obslužné rutiny událostí, konkrétně prostředí inicializován kontext aktivace nebo změnu stavu zombie prostředí
-* Od Visual Studio 2017 Update 3, bude také začneme sledovat čas strávený ve volání nečinnosti před dokončením inicializace prostředí. Dlouhé operace v nečinnosti obslužné rutiny také způsobit reagovat integrovaného vývojového prostředí a přispívají k vnímaná spuštění uživatelem.
+* Doba strávená konstruktorem třídy balíčku pro synchronní balíčky
+* Doba strávená metodou inicializace balíčku (nebo SetSite) pro synchronní balíčky
+* V případě asynchronních balíčků jsou výše uvedené operace spouštěny ve vlákně na pozadí.  V takovém případě jsou operace vyloučeny z monitorování.
+* Čas strávený při jakékoli asynchronní práci naplánované během inicializace balíčku pro spuštění v hlavním vlákně
+* Čas strávený v obslužných rutinách událostí, konkrétně aktivace kontextu inicializace prostředí nebo změna stavu prostředí zombie
+* Počínaje verzí Visual Studio 2017 Update 3 začneme i čas monitorování strávený při nečinném volání před inicializací prostředí shell. Dlouhé operace v obslužných rutinách nečinných také způsobují nereagující IDE a přispívají ke zjištěnému času spuštění uživatelem.
 
-Přidali jsme řadu funkcí, které se spouští ze sady Visual Studio 2015. Tyto funkce pomůžou s odpadá nutnost k automatické načtení balíčků. Funkce také odložit potřebu balíčky k načtení do zvláštní případy. Tyto případy zahrnují příklady, kde uživatelé by určité více rozšíření nebo snížit dopad rozšíření při načítání automaticky.
+Přidali jsme spoustu funkcí počínaje verzí Visual Studio 2015. Tyto funkce vám pomůžou při odebírání potřebných balíčků k automatickému načtení. Tyto funkce také odloží nutnost načíst balíčky do více konkrétních případů. Mezi tyto případy patří příklady, kdy by se uživatelé lépe používali rozšíření nebo snížili dopad rozšíření při automatickém načítání.
 
 Další podrobnosti o těchto funkcích najdete v následujících dokumentech:
 
-[Podle pravidel kontexty uživatelského rozhraní](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): Bohatší modul podle pravidel vybudována okolo kontexty uživatelského rozhraní umožňuje vytvářet vlastní kontexty na základě typů projektů, typy a atributy. Vlastní kontexty slouží k načtení balíčku během konkrétnější scénáře. Mezi tyto konkrétní scénáře patří přítomnost projekt s konkrétní možnosti namísto spuštění. Vlastní kontextů také povolit [příkaz viditelnost vlastnit vlastní místní](visibilityconstraints-element.md) podle součásti projektu nebo jiné dostupné podmínky. Tato funkce eliminuje potřebu načíst balíček pro registraci obslužná rutina příkazu stav dotazu.
+[Kontexty uživatelského rozhraní založené na pravidlech](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md): bohatší modul založený na pravidlech, který je založený na KONTEXTECH uživatelského rozhraní, umožňuje vytvářet vlastní kontexty založené na typech projektů, charakterech a atributech. Vlastní kontexty lze použít k načtení balíčku během konkrétnějších scénářů. Tyto konkrétní scénáře zahrnují přítomnost projektu se specifickou funkcí místo spuštění. Vlastní [kontexty také umožňují, aby viditelnost příkazů bylo vázané na vlastní kontext](visibilityconstraints-element.md) založený na komponentách projektu nebo jiných dostupných podmínek. Tato funkce eliminuje nutnost načtení balíčku pro registraci obslužné rutiny dotazu na stav příkazu.
 
-[Podpora asynchronního balíčku](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md): Nové AsyncPackage základní třídy v sadě Visual Studio 2015 umožňuje balíčků sady Visual Studio mají být načteny na pozadí asynchronně Pokud balíček zatížení požadovanou automatické zatížení atribut nebo dotazu asynchronní služby. Toto načtení na pozadí umožňuje IDE, aby byla schopná reagovat. Rozhraní IDE je responzivní, dokonce i za běhu rozšíření je inicializován na pozadí a důležité scénáře, jako je spuštění a řešení zatížení nebude mít vliv.
+[Podpora asynchronních balíčků](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md): Nová základní třída AsyncPackage v aplikaci visual Studio 2015 umožňuje asynchronní načtení balíčků sady Visual Studio na pozadí, pokud je zatížení balíčku vyžádáno atributem auto Load nebo asynchronním dotazem na službu. Toto načítání na pozadí umožňuje, aby rozhraní IDE mohlo reagovat. Integrované vývojové prostředí (IDE) reaguje i v době, kdy se rozšíření inicializuje na pozadí a kritické scénáře, jako je například spuštění a načtení řešení, by ovlivnilo.
 
-[Asynchronní služby](how-to-provide-an-asynchronous-visual-studio-service.md): S podporou asynchronní balíček také přidali jsme podporu pro dotazování služby asynchronně a nebudou moct zaregistrovat asynchronní služby. Důležitější ale pracujeme na převod základních služeb Visual Studio pro podporu asynchronního dotazu tak, aby většina práce v dotazu asynchronní probíhá vláken na pozadí. SComponentModel (Visual Studio MEF hostitele) je jedním z hlavních služeb, které teď podporuje asynchronního dotazu umožňující rozšíření pro podporu zcela asynchronní načítání.
+[Asynchronní služby](how-to-provide-an-asynchronous-visual-studio-service.md): Díky podpoře asynchronních balíčků jsme také přidali podporu pro asynchronní dotazování na služby a mohli registrovat asynchronní služby. Důležitější je, že pracujeme na převedení základních služeb sady Visual Studio na podporu asynchronního dotazu tak, aby většina práce v asynchronním dotazu probíhat v vláknech na pozadí. SComponentModel (hostitel MEF sady Visual Studio) je jednou z hlavních služeb, které nyní podporují asynchronní dotaz, aby rozšíření podporovala kompletní asynchronní načítání.
 
-## <a name="reducing-impact-of-auto-loaded-extensions"></a>Snižuje dopad automaticky načíst rozšíření
+## <a name="reducing-impact-of-auto-loaded-extensions"></a>Omezení dopadu automaticky načtených rozšíření
 
-Pokud balíček přesto musí být načteny při spuštění automatického, je důležité, abyste minimalizovali práci během inicializace balíčku. Minimalizuje práci inicializace balíček snižuje možnost rozšíření na vliv. Po spuštění.
+Pokud je nutné při spuštění balíčku i nadále automaticky načíst balíček, je důležité minimalizovat práci prováděnou při inicializaci balíčku. Minimalizace práce při inicializaci balíčku snižuje pravděpodobnost, že by rozšíření ovlivnilo spuštění.
 
-Některé příklady, které by mohly způsobit balíček inicializace drahé jsou:
+Některé příklady, které by mohly způsobit nákladný inicializaci balíčku:
 
-### <a name="use-of-synchronous-package-load-instead-of-asynchronous-package-load"></a>Použití synchronní balíček zatížení namísto zatížení asynchronní balíčku
+### <a name="use-of-synchronous-package-load-instead-of-asynchronous-package-load"></a>Použití synchronního zatížení balíčku namísto asynchronního načtení balíčku
 
-Protože synchronní balíčky jsou načteny v hlavním vlákně ve výchozím nastavení, doporučujeme vlastníků rozšíření, které mají balíčky automaticky načíst místo toho, jak bylo zmíněno dříve použít základní třídy asynchronní balíčku. Změna k automaticky načíst balíček pro podporu asynchronní načítání se také usnadňují vyřešit následující problémy.
+Vzhledem k tomu, že synchronní balíčky jsou ve výchozím nastavení načítány do hlavního vlákna, doporučujeme, aby vlastníci rozšíření, které mají automaticky načtené balíčky, používali základní třídu balíčku, a to jak je uvedeno výše. Změna automaticky načteného balíčku pro podporu asynchronního načítání také usnadňuje řešení dalších problémů uvedených níže.
 
-### <a name="synchronous-filenetwork-io-requests"></a>Požadavků na vstupně-výstupních operací synchronní souboru/sítě
+### <a name="synchronous-filenetwork-io-requests"></a>Synchronní požadavky na vstupně-výstupní operace souborů/sítě
 
-V ideálním případě mělo by se vyhnout jakékoli synchronní vstupně-výstupní operace požadavku souboru nebo sítě v hlavním vlákně. Jejich dopad bude záviset na stav počítače a můžete zablokovat pro dlouhou dobu v některých případech.
+V ideálním případě by se měl v hlavním vlákně vyhnout Jakýkoli synchronní soubor nebo požadavek na vstupně-výstupní operace v síti. Jejich dopad bude záviset na stavu počítače a může v některých případech zablokovat dlouhou dobu.
 
-Pomocí balíčku asynchronní načítání a asynchronní vstupně-výstupní operace rozhraní API by měl Ujistěte se, že tento balíček inicializace nebrání v hlavní vlákno v takových případech. Uživatelé také mohou nadále pracovat se sadou Visual Studio během vstupně-výstupních požadavků dochází v pozadí.
+Použití asynchronního načítání balíčků a asynchronních vstupně-výstupních rozhraní API by mělo mít jistotu, že inicializace balíčku v takových případech neblokuje hlavní vlákno. Uživatelé mohou i nadále pracovat se sadou Visual Studio i v případě, že vstupně-výstupní požadavky probíhají na pozadí.
 
-### <a name="early-initialization-of-services-components"></a>Časná inicializace služby komponent
+### <a name="early-initialization-of-services-components"></a>Časná inicializace služeb, součástí
 
-Jednou z běžných vzorech v balíčku inicializace je inicializace služby používané nebo poskytované tento balíček v balíčku `constructor` nebo `initialize` metody. Přestože tím se zajistí, že služby jsou připravená k použití, můžete také přidat zbytečné náklady pro balíček načítání, pokud tyto služby nejsou okamžitě použity. Místo toho je třeba inicializovat tyto služby na vyžádání, abyste minimalizovali práci v balíčku inicializace.
+Jedním z běžných vzorů při inicializaci balíčku je inicializace služeb, které používá nebo poskytuje tento balíček v balíčku `constructor` nebo `initialize` metodě. I když to zajišťuje, aby byly služby připravené k použití, může také přidat zbytečné náklady na načtení balíčku, pokud se tyto služby nepoužijí okamžitě. Místo toho by se takové služby měly inicializovat na vyžádání, aby se minimalizovala práce při inicializaci balíčku.
 
-Pro zadaný balíček služeb global services, můžete použít `AddService` metody, které přebírají funkci laxně inicializovat službu pouze v případě, že je požadovaná komponenta. Pro služby používané v rámci balíčku, můžete použít opožděné\<T > nebo AsyncLazy\<T > aby se zajistilo, že služby jsou inicializována nebo dotazovat při prvním použití.
+U globálních služeb poskytovaných balíčkem můžete použít `AddService` metody, které přijímají funkci, aby laxně vytvářená inicializaci služby pouze v případě, že je požaduje komponenta. Pro služby, které jsou používány v rámci balíčku, můžete použít opožděné \<T> nebo AsyncLazy \<T> , abyste se ujistili, že se služby inicializují nebo dotazují při prvním použití.
 
-## <a name="measuring-impact-of-auto-loaded-extensions-using-activity-log"></a>Měření dopadu automaticky načíst rozšíření pomocí protokolu aktivit
+## <a name="measuring-impact-of-auto-loaded-extensions-using-activity-log"></a>Měření dopadu automaticky načtených rozšíření pomocí protokolu aktivit
 
-Od Visual Studio 2017 Update 3, protokol aktivit v sadě Visual Studio nyní obsahovala položky dopad na výkon balíčků při načítání řešení a spuštění. Chcete-li zobrazit tyto rozměry, budete muset otevřít Visual Studio s přepínačem/log a otevřete *ActivityLog.xml* souboru.
+Počínaje verzí Visual Studio 2017 Update 3 znamená, že protokol aktivit sady Visual Studio nyní obsahuje položky pro dopad na výkon balíčků během spouštění a načítání řešení. Chcete-li zobrazit tato měření, je nutné otevřít Visual Studio s přepínačem/log a otevřít soubor *ActivityLog.xml* .
 
-V protokolu aktivit položky bude v části "Spravovat výkon sady Visual Studio" zdroj a bude vypadat jako v následujícím příkladu:
+V protokolu aktivit budou položky pod položkou "spravovat výkon sady Visual Studio" a budou vypadat jako v následujícím příkladu:
 
 ```Component: 3cd7f5bf-6662-4ff0-ade8-97b5ff12f39c, Inclusive Cost: 2008.9381, Exclusive Cost: 2008.9381, Top Level Inclusive Cost: 2008.9381```
 
-Tento příklad ukazuje, že balíček s identifikátorem GUID "3cd7f5bf-6662-4ff0-ade8-97b5ff12f39c" strávený 2008 ms v po spuštění sady Visual Studio. Všimněte si, že Visual Studio bere v úvahu náklady na nejvyšší úrovni jako primární číslo při výpočtu dopad balíčku jako, který by tomu bylo, že úspory uživatelé uvidí, když se zakážou rozšíření pro tento balíček.
+Tento příklad ukazuje, že balíček s identifikátorem GUID "3cd7f5bf-6662-4ff0-ade8-97b5ff12f39c" strávil 2008 MS při spuštění sady Visual Studio. Všimněte si, že sada Visual Studio považuje náklady na nejvyšší úroveň jako primární číslo při výpočtu dopadu balíčku, který by byl uživatelům úspor zobrazený, když zakazují rozšíření pro daný balíček.
 
-## <a name="measuring-impact-of-auto-loaded-extensions-using-perfview"></a>Měření dopadu automaticky načíst rozšíření pomocí nástroje PerfView
+## <a name="measuring-impact-of-auto-loaded-extensions-using-perfview"></a>Měření dopadu automaticky načtených rozšíření pomocí PerfView
 
-Během analýzy kódu vám může pomoci identifikovat cesty kódu, které mohou zpomalit inicializace balíček, můžete také využít trasování pomocí aplikací, jako je PerfView na vědomí následky načtení balíčku v po spuštění sady Visual Studio.
+I když analýza kódu může pomoci identifikovat cesty kódu, které mohou zpomalit inicializaci balíčku, můžete také využít trasování pomocí aplikací, jako je PerfView, pro pochopení dopadu zátěže balíčku při spuštění sady Visual Studio.
 
-PerfView je nástroj pro trasování celého systému. Tento nástroj vám problémových míst v aplikaci buď z důvodu využití procesoru nebo blokování systémových volání. Tady je krátká ukázka analýzy Ukázka rozšíření pomocí nástroje PerfView k dispozici na [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=28567).
+PerfView je nástroj pro trasování v rámci systému. Tento nástroj vám pomůže pochopit cesty k provozu v aplikaci z důvodu využití procesoru nebo blokování systémových volání. Níže je uveden rychlý příklad analýzy ukázkového rozšíření pomocí PerfView, který je k dispozici na [webu Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=28567).
 
 **Příklad kódu:**
 
-Tento příklad je založen na ukázkový kód níže, která je navržena k zobrazení malá a velká několik běžných příčin zpoždění:
+Tento příklad vychází z níže uvedeného ukázkového kódu, který je navržený tak, aby zobrazoval případ některé běžné prodlevy:
 
 ```csharp
 protected override void Initialize()
@@ -135,47 +135,47 @@ private void DoMoreWork()
 }
 ```
 
-**Záznam trasování pomocí nástroje PerfView:**
+**Záznam trasování s PerfView:**
 
-Po nastavení prostředí sady Visual Studio pomocí rozšíření nainstalována, lze zaznamenat trasování spuštění otevřením PerfView a otevírání **shromažďovat** dialogu **shromažďovat** nabídky.
+Po nastavení prostředí sady Visual Studio s nainstalovaným rozšířením můžete zaznamenat trasování po spuštění otevřením PerfView a otevřením dialogového okna **shromáždit** v nabídce **shromáždit** .
 
-![shromažďování nabídky Nástroje perfview](media/perfview-collect-menu.png)
+![Nabídka Collect PerfView](media/perfview-collect-menu.png)
 
-Výchozí možnosti poskytne zásobníky volání pro využití procesoru, ale od nás zajímají i času blokování, byste také měli povolit **vlákna čas** zásobníků. Jakmile jsou připravené nastavení, můžete kliknout na **spustit shromažďování** a potom otevřete sadu Visual Studio po zaznamenání spustí.
+Výchozí možnosti budou poskytovat zásobníky volání pro spotřebu procesoru, ale vzhledem k tomu, že se zajímá i čas blokování, byste měli také povolit zásobníky **času vlákna** . Až budou nastavení připravena, můžete kliknout na **Start Collection (spustit shromažďování** ) a po zahájení nahrávání otevřít Visual Studio.
 
-Před zastavením shromažďování, budete chtít Ujistěte se, že Visual Studio je plně inicializován, je zcela viditelné hlavní okno a pokud vaše rozšíření obsahuje všechny částí uživatelského rozhraní, které automaticky zobrazují, jsou také viditelné. Když Visual Studio je zcela načten a inicializován rozšíření, můžete zastavit záznam analyzovat trasování.
+Než zastavíte shromažďování, chcete se ujistit, že je sada Visual Studio plně inicializovaná, hlavní okno je zcela viditelné a pokud má vaše rozšíření nějaké části uživatelského rozhraní, které se automaticky zobrazí, jsou také viditelné. Po úplném načtení sady Visual Studio a inicializaci rozšíření můžete zastavit nahrávání a analyzovat trasování.
 
-**Analýza trasování pomocí nástroje PerfView:**
+**Analýza trasování pomocí PerfView:**
 
-Po dokončení nahrávání PerfView automaticky otevřít sledování a možnosti $expand.
+Po dokončení nahrávání PerfView automaticky otevře možnosti trasování a rozbalí se.
 
-Pro účely tohoto příkladu nás zajímají hlavně **zásobníky vlákna čas** zobrazení, ve kterém najdete v části **skupinu rozšířené**. Toto zobrazení zobrazí celkový čas strávený na vlákně metodou včetně čas procesoru a čas zablokování, jako je například vstupně-výstupních operací disku nebo čeká na obslužné rutiny.
+Pro účely tohoto příkladu se primárně zajímáme o zobrazení **zásobníků času vlákna** , která můžete najít v části **Rozšířená skupina**. Toto zobrazení zobrazí celkový čas strávený na vlákně metodou, včetně času procesoru i času zablokování, jako je například vstupně-výstupní operace disku nebo čekání na popisovače.
 
- ![zásobníky vlákna čas](media/perfview-thread-time-stacks.png)
+ ![zásobníky času vlákna](media/perfview-thread-time-stacks.png)
 
- Při otevírání **zásobníky vlákna čas** zobrazit, měli byste zvolit **devenv** procesu se spustit analýzu.
+ Během otevírání zobrazení **zásobníků času vlákna** byste měli zvolit proces **devenv** pro spuštění analýzy.
 
-PerfView obsahuje podrobné pokyny o tom, jak číst vlákno zásobníky čas v rámci své vlastní nabídky Nápověda pro podrobnější analýzu. Pro účely tohoto příkladu chceme vyfiltrovat pouze včetně zásobníků s vláknem naše balíčky modulu název a spuštění dále v tomto zobrazení.
+PerfView obsahuje podrobné pokyny pro čtení zásobníků času vlákna v rámci vlastní nabídky Help pro podrobnější analýzu. Pro účely tohoto příkladu chceme toto zobrazení dál filtrovat tím, že zahrnete zásobníky s názvem modulu balíčků a spouštěcím vláknem.
 
-1. Nastavte **GroupPats** na prázdný text odebrat seskupení nepřidají ve výchozím nastavení.
-2. Nastavte **IncPats** zahrnout část názvu sestavení a spuštění vlákna kromě existující filtr procesu. V takovém případě by měl být **devenv; Spuštění podprocesu. MakeVsSlowExtension**.
+1. Pokud chcete odebrat jakékoli seskupení přidané ve výchozím nastavení, nastavte **GroupPats** na prázdný text.
+2. Nastavte **IncPats** tak, aby zahrnoval část názvu sestavení a spouštěcího vlákna společně s existujícím filtrem procesu. V takovém případě by měl být **devenv; Spouštěcí vlákno; MakeVsSlowExtension**.
 
-Nyní zobrazí se pouze náklady spojené s sestavení týkající se rozšíření. V tomto zobrazení, podle kdykoli **Inc (včetně nákladů)** sloupec spuštění vlákna se vztahuje na naše filtrované rozšíření a bude mít vliv na spuštění.
+Nyní zobrazení zobrazí pouze náklady, které jsou spojeny se sestaveními souvisejícími s rozšířením. V tomto zobrazení se pokaždé, když se ve sloupci **Inc (včetně nákladů)** v spouštěcím vlákně nachází v souvislosti s naším filtrovaným rozšířením, a bude mít vliv na spuštění.
 
-Například výše některé zajímavé volání zásobníků by:
+Pro příklad výše některých zajímavých zásobníků volání by byl:
 
-1. Vstupně-výstupních operací pomocí `System.IO` třídy: Celkové náklady na tyto snímky nemusí být moc drahé v trasování, ale jsou potenciální příčinou problému od souboru rychlost vstupně-výstupní operace se bude lišit počítač od počítače.
+1. V/v použití `System.IO` třídy: i když náklady na tyto rámce nemusí být v trasování příliš nákladné, jsou potenciální příčinou problému, protože se rychlost vstupně-výstupních operací souborů liší od počítače až po počítač.
 
-   ![vstupně-výstupních operací snímků systému](media/perfview-system-io-frames.png)
+   ![systémové vstupně-výstupní rámce](media/perfview-system-io-frames.png)
 
-2. Blokovat čekání na jiné asynchronní práce volání: V takovém případě celkový čas představuje čas, kdy hlavní vlákno blokované, po dokončení asynchronní práce.
+2. Blokování volání čekajících na jinou asynchronní práci: v tomto případě by celková doba představovala dobu, po kterou je hlavní vlákno blokováno při dokončení asynchronní práce.
 
-   ![blokování volání snímků](media/perfview-blocking-call-frames.png)
+   ![blokování rámců volání](media/perfview-blocking-call-frames.png)
 
-Jedna z ostatních zobrazení v trasování, které budou užitečné k určení vlivu se bude **Image zatížení zásobníky**. Můžete použít stejné filtry jako použitý pro **zásobníky vlákna čas** zobrazení a přečtěte si všechna sestavení načtená z důvodu prováděný balíčkem automaticky načíst kód.
+Jedno z dalších zobrazení v trasování, které bude užitečné k určení dopadu, budou **načtena jako zásobníky imagí**. Můžete použít stejné filtry jako použité v zobrazení **zásobníků času vlákna** a zjistit všechna sestavení načtená z důvodu kódu spuštěného automaticky načteným balíčkem.
 
-Je důležité minimalizovat počet načtených sestavení v balíčku inicializační rutina jako každé další sestavení bude zahrnovat další diskových operací, které mohou zpomalit spuštění podstatně pomalejší počítačích.
+Je důležité minimalizovat počet načtených sestavení v rámci rutiny inicializace balíčku, protože každé další sestavení bude zahrnovat další vstupně-výstupní operace disku, což může zpomalit spouštění významně na pomalejších počítačích.
 
 ## <a name="summary"></a>Souhrn
 
-Po spuštění sady Visual Studio byl jeden z oblasti, které jsme neustále získat zpětnou vazbu. Naším cílem jak bylo uvedeno dříve, je pro všechny uživatele, aby konzistentní spouštění prostředí bez ohledu na to, komponenty a rozšíření, která jste nainstalovali. Rádi bychom se práce s vlastníky rozšíření, aby to pomohl ostatním Pomozte nám dosažení tohoto cíle. Výše uvedené pokyny by měl být užitečné pro pochopení vlivu rozšíření na spuštění a buď odpadá nutnost auto zatížení nebo načíst asynchronně k minimalizaci vlivu na produktivitu uživatelů.
+Po spuštění sady Visual Studio byla jednou z oblastí, na které průběžně získáváme zpětnou vazbu. Náš cíl uvedený výše je pro všechny uživatele, kteří mají konzistentní prostředí pro spouštění bez ohledu na to, které součásti a rozšíření nainstalovaly. Rádi bychom mohli spolupracovat s vlastníky rozšíření, abychom jim pomohli dosáhnout tohoto cíle. Výše uvedené pokyny by měly být užitečné při porozumění vlivu rozšíření na spuštění a buď k tomu, aby se zabránilo nutnosti automatického načítání nebo načítání asynchronně, aby se minimalizoval dopad na produktivitu uživatelů.

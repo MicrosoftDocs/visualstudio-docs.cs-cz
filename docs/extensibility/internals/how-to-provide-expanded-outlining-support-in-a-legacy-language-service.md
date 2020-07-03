@@ -1,7 +1,7 @@
 ---
-title: Poskytování podpory v jazykové službě | Dokumenty společnosti Microsoft
+title: Poskytnutí podpory sbalení ve službě jazyka | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], outlining support
 - language services, supporting outlining
@@ -12,45 +12,45 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37deafa92477289a2124ecee101dd254e68ef01d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 450ef1430e86467d116cc635a27600756bc36075
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707973"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905281"
 ---
-# <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>Postup: Poskytování rozšířené podpory ve starší jazykové službě
-Existují dvě možnosti pro rozšíření osnovy podporu pro váš jazyk mimo podporu **Sbalit definice** příkazu. Můžete přidat oblasti osnovy řízené editorem a přidat oblasti osnovy řízené klientem.
+# <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>Postupy: poskytování rozšířené podpory sbalení ve službě starší verze jazyka
+Existují dvě možnosti, jak rozšířit podporu osnovy pro váš jazyk nad rámec podpory příkazu **sbalit na definice** . Můžete přidat oblasti osnovy řízené editorem a přidat oblasti osnovy řízené klientem.
 
-## <a name="adding-editor-controlled-outline-regions"></a>Přidání oblastí osnovy řízených editorem
- Tento přístup slouží k vytvoření oblasti osnovy a potom povolit editoru zpracování, zda je oblast rozbalená, sbalená a tak dále. Ze dvou možností poskytování podpory je tato možnost nejméně robustní. Pro tuto možnost vytvoříte novou oblast osnovy nad <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>zadaným rozsahem textu pomocí aplikace . Po vytvoření této oblasti je jeho chování řízeno editorem. Pomocí následujícího postupu implementujte oblasti osnovy řízené editorem.
+## <a name="adding-editor-controlled-outline-regions"></a>Přidávání oblastí obrysů řízených editorem
+ Použijte tento přístup k vytvoření oblasti osnovy a pak umožněte, aby Editor zpracoval, zda je oblast rozbalená, sbalená a tak dále. Z těchto dvou možností pro zajištění podpory sbalení je tato možnost nejméně robustní. Pro tuto možnost vytvoříte novou oblast osnovy přes zadaný rozsah textu pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> . Po vytvoření této oblasti je chování řízeno editorem. K implementaci oblastí obrysu řízených pomocí editoru použijte následující postup.
 
 ### <a name="to-implement-an-editor-controlled-outline-region"></a>Implementace oblasti osnovy řízené editorem
 
-1. Výzva `QueryService` k<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>
+1. Volání `QueryService` pro<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>
 
-     To vrátí ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>na .
+     Tím se vrátí ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager> .
 
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>, předávání ukazatele pro daný text vyrovnávací paměti. To vrátí ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> na objekt pro vyrovnávací paměť.
+2. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A> a předejte ukazatel pro danou textovou vyrovnávací paměť. Tím se vrátí ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> objekt pro vyrovnávací paměť.
 
-3. Volání <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> na ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession>na .
+3. Zavolejte <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> pro ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession> .
 
-4. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> pro přidání jedné nebo více nových oblastí osnovy najednou.
+4. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> na přidání jedné nebo více nových oblastí osnovy najednou.
 
-     Tato metoda umožňuje určit rozsah textu k osnově, zda jsou existující oblasti osnovy odebrány nebo zachovány a zda je oblast osnovy ve výchozím nastavení rozbalená nebo sbalená.
+     Tato metoda umožňuje zadat rozsah textu, který se má obrysem, zda jsou existující oblasti osnovy odebrány nebo zachované a zda je oblast osnovy ve výchozím nastavení rozbalená nebo sbalená.
 
-## <a name="add-client-controlled-outline-regions"></a>Přidání oblastí osnovy řízených klientem
- Tento přístup slouží k implementaci klientem řízeného (nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] inteligentního) osnovy, jako je ta, kterou používají jazykové služby a. [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Jazyková služba, která spravuje vlastní osnovu, monitoruje obsah textové vyrovnávací paměti, aby zničila staré oblasti osnovy, když se stanou neplatnými, a podle potřeby vytvořila nové oblasti osnovy.
+## <a name="add-client-controlled-outline-regions"></a>Přidat oblasti osnovy řízené klientem
+ Tento postup použijte k implementaci sbalení spravovaného na straně klienta (nebo inteligentního), jako je to, které používají [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] jazykové služby a. Služba jazyka, která spravuje vlastní osnovu, monitoruje obsah vyrovnávací paměti textu, aby se zničily staré oblasti obrysu, když se stanou neplatnými a podle potřeby vytvořily nové oblasti osnovy.
 
 ### <a name="to-implement-a-client-controlled-outline-region"></a>Implementace oblasti osnovy řízené klientem
 
-1. Výzva `QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>pro . To vrátí ukazatel <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>na .
+1. Volání `QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> . Tím se vrátí ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager> .
 
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>, předávání ukazatele pro daný text vyrovnávací paměti. To určuje, zda relace skrytého textu již existuje pro vyrovnávací paměť.
+2. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A> a předejte ukazatel pro danou textovou vyrovnávací paměť. Tato možnost určuje, zda již pro vyrovnávací paměť existuje relace skrytého textu.
 
-3. Pokud textová relace již existuje, není nutné ji vytvářet a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> je vrácen ukazatel na existující objekt. Tento ukazatel slouží k vytvoření výčtu a vytvoření oblastí osnovy. V opačném <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> případě volání vytvořit skryté textové relace pro vyrovnávací paměť. Je vrácen <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> ukazatel na objekt.
+3. Pokud již relace textu existuje, nemusíte ji vytvářet a je vrácen ukazatel na existující <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> objekt. Pomocí tohoto ukazatele můžete vytvořit výčet a vytvořit oblasti osnovy. V opačném případě zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> k vytvoření skryté textové relace pro vyrovnávací paměť. Vrátí se ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> objekt.
 
     > [!NOTE]
-    > Při volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>můžete určit skrytétextového klienta (to znamená <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient> objekt). Tento klient vás upozorní, když je skrytý text nebo oblast osnovy rozbalen nebo sbalen uživatelem.
+    > Při volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> můžete zadat klienta skrytého textu (tj <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient> . objekt). Tento klient vás upozorní, když uživatel rozbalí skrytý text nebo oblast osnovy a uživatel ho sbalí.
 
-4. Call <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> structure) parametr: Zadejte <xref:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE> `iType` hodnotu <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> v člen u člena struktury k označení, že vytváříte oblast osnovy, nikoli skrytou oblast. Určete, zda je oblast řízena klientem nebo editorem v `dwBehavior` členu <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Implementace inteligentního osnovy může obsahovat kombinaci oblastí osnovy řízených editorem a klientem. Zadejte text nápisu, který se zobrazí při sbalení oblasti osnovy, například "...", v `pszBanner` členu <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Výchozí text banneru editoru pro skrytou oblast je "...".
+4. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>Structure – parametr): zadejte hodnotu <xref:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE> v `iType` členu <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury, abyste označili, že vytváříte oblast obrysu místo skryté oblasti. Určete, zda je oblast řízena klientem nebo editorem řízená v `dwBehavior` členovi <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Vaše implementace inteligentního vkládání se může skládat z kombinace oblastí osnovy řízených editorem a klientem. Určuje text banneru zobrazený při sbalení oblasti osnovy, jako je například "..." v `pszBanner` členu <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> struktury. Výchozí text banneru v editoru pro skrytou oblast je "...".

@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Přidání vlastního xaml na úvodní stránku | Dokumenty společnosti Microsoft'
+title: 'Návod: Přidání vlastního XAML na úvodní stránku | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - custom start page
 - xaml start page
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 4e2afc90dc96978e8a8290afaa2d3278e8b621b3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: a13aada6cca9b54d8469885ab4c314a89cd06d6c
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905964"
 ---
-# <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>Návod: Přidání vlastního xaml na úvodní stránku
+# <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>Návod: Přidání vlastního kódu XAML na úvodní stránku
 
 Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studio, která obsahuje webový prohlížeč.
 
@@ -27,9 +27,9 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
 
 1. Vytvořte úvodní stránku podle pokynů v části [Vytvoření vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md).
 
-2. V souboru *MainWindow.xaml* \<vyhledejte oddíl Grid>.
+2. V souboru *MainWindow. XAML* Najděte \<Grid> oddíl.
 
-3. Přidejte \<prvek> TabControl a \<> \< položky TabItem uvnitř elementu Grid>, jak je znázorněno v následujícím příkladu.
+3. Přidejte \<TabControl> element a \<TabItem> uvnitř \< Grid> prvku, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <Grid>
@@ -41,7 +41,7 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
     </Grid>
     ```
 
-4. Přidejte \<druhou> Položky \<tabitem s prvkem Button>, který otevře nový projekt:
+4. Přidejte sekundu \<TabItem> s \<Button> elementem, který otevře nový projekt:
 
     ```xml
     <Grid>
@@ -61,31 +61,31 @@ Tento návod ukazuje, jak vytvořit vlastní úvodní stránku sady Visual Studi
 
 ## <a name="test-the-custom-start-page"></a>Testování vlastní úvodní stránky
 
-1. Stiskněte **klávesu F5**.
+1. Stiskněte klávesu **F5**.
 
-     Experimentální instance sady Visual Studio se otevře s nainstalovanou vlastní úvodní stránkou, ale není vybrána.
+     Spustí se experimentální instance aplikace Visual Studio s nainstalovanou vlastní úvodní stránkou, ale není vybraná.
 
-2. V experimentální instanci sady Visual Studio otevřete stránku **Nástroje /Možnosti / Prostředí.**
+2. V experimentální instanci aplikace Visual Studio otevřete stránku **nástroje/Options/prostředí** .
 
-3. Vyberte **možnost Spustit**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *.xaml* a klepněte na **tlačítko OK**.
+3. Vyberte možnost **po spuštění**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *. XAML* a klikněte na tlačítko **OK**.
 
-4. V nabídce **Zobrazení** klepněte na tlačítko **Úvodní stránka**.
+4. V nabídce **zobrazení** klikněte na možnost **Úvodní stránka**.
 
-5. Klikněte na kartu **Bing.**
+5. Klikněte na kartu **Bing** .
 
      Měla by se zobrazit webová stránka Bingu.
 
-6. Klepněte na kartu **MyButton.**
+6. Klikněte na kartu **myButton** .
 
-     Mělo by se zobrazit tlačítko **MyProject,** které otevře dialogové okno **Nový projekt.**
+     Mělo by se zobrazit tlačítko **MyProject** , ve kterém se otevře dialogové okno **Nový projekt** .
 
 7. Zavřete experimentální instanci.
 
-Chcete-li použít vlastní **Tools** > úvodní stránku, vyberte v části**Tools Options** > **Environment** **položku Startup**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *.xaml* a klepněte na **tlačítko OK**.
+Chcete-li použít vlastní úvodní stránku, vyberte v části **nástroje**  >  **Možnosti**  >  **prostředí**možnost **spuštění**. V seznamu **Přizpůsobit úvodní stránku** vyberte soubor *. XAML* a klikněte na tlačítko **OK**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Úvodní stránka sady Visual Studio nyní obsahuje kartu, která zobrazuje kartu webového prohlížeče a kartu MyButton. Pomocí modelu *s kódem na pozadí* můžete vytvořit vlastní úvodní stránky, které mají další funkce, a přidat tak vlastní dll, jak je znázorněno v části Přidání [uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md). Vlastní úvodní stránky můžete sdílet s ostatními uživateli publikováním výsledného souboru Vsix na webu [Webu Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo na jiném webu nebo sdílené síťové složce. Další informace naleznete v [tématu Nasazení vlastních úvodních stránek](../extensibility/deploying-custom-start-pages.md).
+Úvodní stránka sady Visual Studio nyní obsahuje kartu, která zobrazuje kartu webového prohlížeče a kartu MyButton. Můžete vytvořit vlastní úvodní stránky, které mají jiné funkce, pomocí modelu *kódu na pozadí* k přidání vlastní knihovny DLL, jak je znázorněno v části [Přidání uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md). Můžete sdílet vlastní úvodní stránky s ostatními uživateli publikováním výsledného souboru. VSIX na webu [Visual Studio Marketplace](https://marketplace.visualstudio.com/) , nebo do jiného webu nebo sdílené síťové složky. Další informace najdete v tématu [nasazení vlastních spouštěcích stránek](../extensibility/deploying-custom-start-pages.md).
 
 ## <a name="see-also"></a>Viz také
 

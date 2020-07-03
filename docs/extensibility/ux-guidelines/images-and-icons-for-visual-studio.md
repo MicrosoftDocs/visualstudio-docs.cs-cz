@@ -1,19 +1,19 @@
 ---
 title: Obrázky a ikony pro Visual Studio | Microsoft Docs
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7de4488a8304b21b578b2ad5ac2c29deafcf1b0a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537537"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906119"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Obrázky a ikony pro Visual Studio
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Použití obrázku v aplikaci Visual Studio
@@ -258,7 +258,7 @@ ms.locfileid: "85537537"
 ### <a name="base-palette"></a>Základní paleta
  Všechny standardní ikony obsahují tři základní barvy. Ikony neobsahují žádné přechody nebo vržené stíny, s jednou nebo dvěma výjimkami pro ikony 3D nástrojů.
 
-|Využití|Name|Hodnota (světlý motiv)|Barvu|Příklad|
+|Využití|Název|Hodnota (světlý motiv)|Barvu|Příklad|
 |-----------|----------|---------------------------|------------|-------------|
 |Pozadí/tmavá|VS BG|424242/66, 66, 66|![Vzorník 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Základní paleta – příklad](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
 |Popředí a světlo|VS FG|F0EFF1/240 239 241|![F0EFF1 vzorníku](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
@@ -271,7 +271,7 @@ ms.locfileid: "85537537"
 #### <a name="action-modifiers"></a>Modifikátory akcí
  Níže uvedené čtyři barvy označují typy akcí vyžadovaných modifikátory akce:
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Kladné|Zelená akce VS|388A34/56138, 52|![388A34 vzorníku](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
 |Záporný|Akce VS – červená|A1260D/161, 38, 13|![A1260D vzorníku](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
@@ -314,14 +314,14 @@ ms.locfileid: "85537537"
 
 #### <a name="folder"></a>Složka
 
-|Využití|Name|Value (všechny motivy)|Barvu|Příklad|
+|Využití|Název|Value (všechny motivy)|Barvu|Příklad|
 |-----------|----------|--------------------------|------------|-------------|
 |Složky|Složka|DCB67A/220 182 122|![DCB67A vzorníku](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![Ikona barvy složky](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Jazyky sady Visual Studio
  Všechny běžné jazyky nebo platformy, které jsou k dispozici v aplikaci Visual Studio, mají přidruženou barvu. Tyto barvy se používají na základní ikoně nebo na modifikátorech jazyka, které se zobrazují v pravém horním rohu složených ikon.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |ASP, HTML, WPF|ASP.NET HTML WPF – modrá|0095D7/0149 215|![0095D7 vzorníku](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|Fialová CPP|9B4F96/155, 79150|![9B4F96 vzorníku](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
@@ -346,7 +346,7 @@ ms.locfileid: "85537537"
 #### <a name="intellisense"></a>IntelliSense
  Ikony IntelliSense používají výhradní paletu barev. Tyto barvy slouží k usnadnění rozlišení mezi různými položkami v místním seznamu technologie IntelliSense.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Třída, událost|Oranžová akce VS|C27D1A/194125, 26|![C27D1A vzorníku](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 |Metoda rozšíření, metoda, modul, delegát|Fialová akce VS|652D90/101, 45144|![652D90 vzorníku](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
@@ -367,7 +367,7 @@ ms.locfileid: "85537537"
 ### <a name="notifications"></a>Oznámení
  Oznámení v aplikaci Visual Studio se používají k indikaci stavu. V paletě oznámení se k definování oznámení s následujícími úrovněmi stavu používá následující čtyři barvy a také černé nebo bílé možnosti výplně popředí.
 
-|Využití|Name|Value (všechny motivy)|Barvu|
+|Využití|Název|Value (všechny motivy)|Barvu|
 |-----------|----------|--------------------------|------------|
 |Stav: neutrální|Modré oznámení (VS Blue)|1BA1E2/27 161 226|![1BA1E2 vzorníku](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
 |Stav: pozitivní|Oznámení zeleně (VS. zeleně)|339933/51153, 51|![Vzorník 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|

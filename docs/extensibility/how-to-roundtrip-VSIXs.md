@@ -1,19 +1,19 @@
 ---
 title: Postup převodu rozšíření
 ms.date: 06/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
 author: willbrown
 ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ff2865080b7d36f1a7c3b8a7680d867b92ec9c08
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905783"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Postupy: zajištění kompatibility rozšíření se sadou Visual Studio 2019/2017 a sadou Visual Studio 2015
 
@@ -31,8 +31,8 @@ Tady je přehled kroků, které v tomto dokumentu dokončíte k tomu, abyste se 
     * Cíl instalace
     * Požadavky
 3. Aktualizovat CSProj:
-    * Aktualizace `<MinimumVisualStudioVersion>`.
-    * Přidejte vlastnost `<VsixType>`.
+    * Aktualizace `<MinimumVisualStudioVersion>` .
+    * Přidejte `<VsixType>` vlastnost.
     * Přidejte vlastnost ladění `($DevEnvDir)` 3 časy.
     * Přidejte podmínky pro import nástrojů sestavení a cílů.
 
@@ -49,16 +49,16 @@ V tomto dokumentu se předpokládá, že máte na svém počítači nainstalovan
 
 Důrazně doporučujeme tento upgrade spustit pomocí sady Visual Studio 2015 místo sady Visual Studio 2019 nebo 2017. Hlavní výhodou vývoje v aplikaci Visual Studio 2015 je zajistit, aby neodkazovala na sestavení, která nejsou k dispozici v aplikaci Visual Studio 2015. Pokud vyvíjíte v aplikaci Visual Studio 2019 nebo 2017, existuje riziko, že můžete zavést závislost na sestavení, které existuje pouze v aplikaci Visual Studio 2019 nebo 2017.
 
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>Ujistěte se, že neexistuje odkaz na Project. JSON.
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>Zajistěte, aby neexistovaly žádné odkazy na project.js
 
-Později v tomto dokumentu vložíme podmíněné příkazy import do souboru * *. csproj* . Tato činnost nebude fungovat, pokud jsou odkazy na NuGet uložené v *Project. JSON*. Proto doporučujeme přesunout všechny odkazy na NuGet do souboru *Packages. config* .
-Pokud projekt obsahuje soubor *Project. JSON* :
+Později v tomto dokumentu vložíme podmíněné příkazy import do souboru **. csproj* . Tato činnost nebude fungovat, pokud jsou odkazy na NuGet uložené v *project.js*. Proto doporučujeme přesunout všechny odkazy NuGet na soubor *packages.config* .
+Pokud projekt obsahuje *project.jsv* souboru:
 
-* Poznamenejte si odkazy v *Project. JSON*.
-* Z **Průzkumník řešení**odstraňte soubor *Project. JSON* z projektu. Tím se odstraní soubor *Project. JSON* a odebere se z projektu.
+* Poznamenejte si odkazy v *project.jsna*.
+* Z **Průzkumník řešení**odstraňte *project.jsv* souboru z projektu. Tím se odstraní *project.jsv* souboru a odebere se z projektu.
 * Přidejte do projektu odkazy NuGet zpátky:
   * Klikněte pravým tlačítkem na **řešení** a vyberte **Spravovat balíčky NuGet pro řešení**.
-  * Visual Studio automaticky vytvoří soubor *Packages. config* .
+  * Visual Studio automaticky vytvoří soubor *packages.config* .
 
 > [!NOTE]
 > Pokud váš projekt obsahuje balíčky EnvDTE, může být nutné přidat kliknutím pravým tlačítkem na **odkazy** vybrat **Přidat odkaz** a přidat příslušný odkaz. Použití balíčků NuGet může při pokusu o sestavení projektu vytvořit chyby.
@@ -69,12 +69,12 @@ Musíme přidat nástroje pro sestavení, které nám umožní sestavení a lad�
 
 K sestavení a nasazení nového vsixv3 v rámci sady Visual Studio 2015 a 2019/2017 budete potřebovat následující balíčky NuGet:
 
-Version | Sestavené nástroje
+Verze | Sestavené nástroje
 --- | ---
-Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
-Visual Studio 2019 nebo 2017 | Microsoft.VSSDK.BuildTool
+Visual Studio 2015 | Microsoft. VisualStudio. SDK. BuildTasks. 14.0
+Visual Studio 2019 nebo 2017 | Microsoft. VSSDK. BuildTool
 
-Postup:
+Postupujte následovně:
 
 * Přidejte do projektu balíček NuGet Microsoft. VisualStudio. SDK. BuildTasks. 14.0.
 * Pokud projekt neobsahuje Microsoft. VSSDK. BuildTools, přidejte ho.
@@ -109,7 +109,7 @@ Postup ručního provedení:
 </Prerequisites>
 ```
 
-* Soubor uložte a zavřete.
+* Uložte soubor a zavřete ho.
 
 > [!NOTE]
 > Možná budete muset ručně upravit požadovanou verzi, abyste zajistili, že je kompatibilní se všemi verzemi sady Visual Studio 2019 nebo 2017. Důvodem je, že návrhář vloží minimální verzi jako aktuální verzi sady Visual Studio (například 15.0.26208.0). Ale vzhledem k tomu, že jiní uživatelé můžou mít starší verzi, budete ji chtít ručně upravit na 15,0.
@@ -127,7 +127,7 @@ Důrazně doporučujeme mít při provádění tohoto kroku otevřený odkaz na 
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1. aktualizace MinimumVisualStudioVersion
 
-* Nastavte minimální verzi sady Visual Studio na `$(VisualStudioVersion)` a přidejte pro ni podmíněný příkaz. Přidejte tyto značky, pokud neexistují. Ujistěte se, že jsou značky nastaveny níže:
+* Nastavte minimální verzi sady Visual Studio na `$(VisualStudioVersion)` a přidejte do ní podmíněný příkaz. Přidejte tyto značky, pokud neexistují. Ujistěte se, že jsou značky nastaveny níže:
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
@@ -139,7 +139,7 @@ Důrazně doporučujeme mít při provádění tohoto kroku otevřený odkaz na 
 * Přidejte následující značku `<VsixType>v3</VsixType>` do skupiny vlastností.
 
 > [!NOTE]
-> Doporučuje se přidat pod značku `<OutputType></OutputType>`.
+> Doporučuje se přidat pod `<OutputType></OutputType>` značku.
 
 ### <a name="3-add-the-debugging-properties"></a>3. Přidejte vlastnosti ladění
 
@@ -163,7 +163,7 @@ Důrazně doporučujeme mít při provádění tohoto kroku otevřený odkaz na 
 
 ### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Přidání podmínek do importů nástrojů sestavení
 
-* Přidejte další podmíněné příkazy do značek `<import>` s odkazem na Microsoft. VSSDK. BuildTools. Vložte `'$(VisualStudioVersion)' != '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
+* Přidejte další podmíněné příkazy do `<import>` značek, které mají odkaz Microsoft. VSSDK. BuildTools. Vložte `'$(VisualStudioVersion)' != '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
 
 Příklad:
 
@@ -171,7 +171,7 @@ Příklad:
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* Přidejte další podmíněné příkazy do značek `<import>`, které mají sadu Microsoft. VisualStudio. SDK. BuildTasks. 14.0. Vložte `'$(VisualStudioVersion)' == '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
+* Přidejte další podmíněné příkazy do `<import>` značek, které mají sadu Microsoft. VisualStudio. SDK. BuildTasks. 14.0. Vložte `'$(VisualStudioVersion)' == '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v záhlaví a zápatí souboru csproj.
 
 Příklad:
 
@@ -179,7 +179,7 @@ Příklad:
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* Přidejte další podmíněné příkazy do značek `<Error>` s odkazem na Microsoft. VSSDK. BuildTools. Provedete to vložením `'$(VisualStudioVersion)' != '14.0' And` na začátku příkazu Condition. Tyto příkazy se zobrazí v zápatí souboru csproj.
+* Přidejte další podmíněné příkazy do `<Error>` značek, které mají odkaz Microsoft. VSSDK. BuildTools. Provedete to vložením `'$(VisualStudioVersion)' != '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v zápatí souboru csproj.
 
 Příklad:
 
@@ -187,7 +187,7 @@ Příklad:
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* Přidejte další podmíněné příkazy do značek `<Error>`, které mají sadu Microsoft. VisualStudio. SDK. BuildTasks. 14.0. Vložte `'$(VisualStudioVersion)' == '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v zápatí souboru csproj.
+* Přidejte další podmíněné příkazy do `<Error>` značek, které mají sadu Microsoft. VisualStudio. SDK. BuildTasks. 14.0. Vložte `'$(VisualStudioVersion)' == '14.0' And` na začátek příkazu Condition. Tyto příkazy se zobrazí v zápatí souboru csproj.
 
 Příklad:
 
@@ -207,7 +207,7 @@ V tomto okamžiku by měl být projekt připravený k vytvoření nového vsixv3
 * Přejděte do adresáře projektu.
 * Otevřete složku *\bin\debug* .
 * Dvakrát klikněte na soubor VSIX a nainstalujte své rozšíření do sady Visual Studio 2015 a Visual Studio 2019/2017.
-* Ujistěte se, že se vám rozšíření v části **nástroje** > **rozšíření a aktualizace** zobrazí v části **nainstalováno** .
+* Ujistěte se, že se v **Tools**  >  části **nainstalováno** zobrazuje rozšíření v části**rozšíření a aktualizace** nástrojů.
 * Pokuste se spustit nebo použít rozšíření pro kontrolu, že funguje.
 
 ![Najít VSIX](media/finding-a-VSIX-example.png)

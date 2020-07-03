@@ -1,76 +1,76 @@
 ---
-title: Výhoda programu Concierge Chat v předplaceném předplatném sady Visual Studio | Dokumenty společnosti Microsoft
+title: Zvýhodnění chatu concierge v Visual Studio Subscription | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
 ms.date: 03/25/2020
-ms.topic: conceptual
-description: Přečtěte si o výhodách concierge chatu zahrnutých v předplatných Visual Studia.
-ms.openlocfilehash: 6b6ed0635f86abb94fd3693d14b53a9ff1f7c936
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.topic: how-to
+description: Přečtěte si o zvýhodnění chatu concierge zahrnutém v předplatných sady Visual Studio.
+ms.openlocfilehash: 8c945a71d41a1545a4dc6155bbd63d3ddc78053c
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906048"
 ---
-# <a name="concierge-chat-in-visual-studio-subscriptions"></a>Concierge Chat v předplatných Visual Studia
-Služba Concierge Chat poskytuje pomoc při hledání informací o produktech a technické dokumentaci a také pomoc s využitím výhod předplatného sady Visual Studio.
+# <a name="concierge-chat-in-visual-studio-subscriptions"></a>Konverzace programu concierge v předplatných sady Visual Studio
+Chatová služba concierge nabízí pomoc při hledání informací o produktech a technickou dokumentaci a také k podpoře používání výhod předplatného sady Visual Studio.
 
-Služba je k dispozici 24 hodin denně, 7 dní v za hodině a v současné době je nabízena pouze v angličtině (v případě jiných otázek než účtů, fakturace a předplatných).
+Služba je dostupná 24/7 a aktuálně se nabízí jenom v angličtině (pro jiné otázky než účty, fakturace a předplatná).
 
 ## <a name="activation-steps"></a>Kroky aktivace
-Získání pomoci prostřednictvím služby Concierge Chat je velmi snadné.
-1. Přihlaste [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)se do .
+Získání pomoci prostřednictvím konverzační služby concierge je velmi snadné.
+1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. Vyhledejte dlaždici Concierge Chat v části Podpora na stránce výhod a klikněte na **Chat nyní**.
+2. Vyhledejte dlaždici chatu concierge v části Podpora na stránce výhody a pak klikněte na **Chat Now (Spustit nyní**).
     > [!div class="mx-imgBorder"]
-    > ![Dlaždice konverzace concierge](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
+    > ![Dlaždice chatu pro concierge](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
 
 3. Klikněte na **Pokračovat**.
 
-4. Otevře se okno chatu a zobrazí se čítač zobrazující vaši pozici ve frontě.
+4. Otevře se okno chatu a zobrazí se ve frontě počítadlo vaší pozice.
 
-5. Jakmile je k dispozici agent, chat se spustí.
+5. Když je agent dostupný, spustí se chat.
     > [!div class="mx-imgBorder"]
-    > ![Relace konverzace concierge](_img/vs-concierge-chat/vs-concierge-chat-session.png)
+    > ![Relace chatu concierge](_img/vs-concierge-chat/vs-concierge-chat-session.png)
 
-## <a name="eligibility"></a>Způsobilosti
-| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Obnovitelných zdrojů?    |
+## <a name="eligibility"></a>Vznik
+| Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standard)   | VL, Azure, Maloobchod, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano          |
-| Visual Studio Enterprise s GitHub Enterprise | Vl| K dispozici.       |  Ano          |
-| Visual Studio Professional (standard) | VL, Azure, Maloobchod                                       | K dispozici.                                                            |  Ano          |
-| Visual Studio Professional s GitHub Enterprise | Vl | K dispozici.                                                            |  Ano          |
-| Visual Studio Test Professional (standard)                         | VL, Maloobchod                                              | K dispozici.                                             |  Ano          |
-| Platformy MSDN (standardní)                                          | VL, Maloobchod                                              | K dispozici.                                              |  Ano          |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure | Není k dispozici. | Není dostupné. |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise | VL| K dispozici       |  Ano          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                            |  Ano          |
+| Visual Studio Professional s GitHubem Enterprise | VL | K dispozici                                                            |  Ano          |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici                                             |  Ano          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                              |  Ano          |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
 
-<sup>1</sup>  *Zahrnuje: Není pro další prodej (NFR), Visual Studio Průmysl Partner (VSIP), Microsoft Certified Trainer, BizSpark.  Nezahrnuje se: FTE, Most Valuable Professional (MVP), Regional Director (RD), Microsoft Partner Network (MPN), Imagine.*
+<sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark.  Nezahrnuje: FTE, nejvíc hodnotných Professional (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Představte si.*
 
 > [!NOTE]
-> Microsoft už nenabízí roční předplatná Visual Studio Professional a roční předplatná Visual Studia Enterprise v předplatných cloudu. Stávající zákazníci se nezmění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Noví zákazníci se [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) doporučuje přejít na prozkoumat různé možnosti nákupu Visual Studio.
+> Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) a prozkoumat různé možnosti nákupu sady Visual Studio.
 
-Nejste si jisti, které předplatné používáte?  Připojte [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) se k zobrazení všech předplatných přiřazených k vaší e-mailové adrese. Pokud nevidíte všechna předplatná, je možné, že máte jedno nebo více přiřazených k jiné e-mailové adrese.  Abyste se pomocí této e-mailové adresy zobcí, musíte se přihlásit pomocí této e-mailové adresy.
+Nejste si jistí, jaké Předplatné používáte?  Připojte se a [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) Zobrazte všechna předplatná přiřazená k vaší e-mailové adrese. Pokud nevidíte všechna Vaše předplatná, může být jedna nebo více přiřazená k jiné e-mailové adrese.  K zobrazení těchto předplatných se budete muset přihlásit pomocí této e-mailové adresy.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="q--is-the-chat-service-available-in-multiple-languages"></a>Otázka: Je chatová služba dostupná ve více jazycích?
-   A: Pomoc s účty, fakturace a předplatné problémy je k dispozici ve více jazycích.  Pomoc s vyhledáním informací o produktu a technické dokumentace je k dispozici v angličtině.
+### <a name="q--is-the-chat-service-available-in-multiple-languages"></a>Otázka: je služba chatu dostupná ve více jazycích?
+   Odpověď: pomoc s účty, problémy s fakturací a předplatnými jsou k dispozici v několika jazycích.  Pomoc při vyhledávání informací o produktech a technickou dokumentaci je k dispozici v angličtině.
 
-## <a name="support-resources"></a>Zdroje podpory
-- Chcete-li pomoci s prodejem, předplatným, účty a fakturací pro předplatná sady Visual Studio, obraťte se na [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio .
-- Máte dotaz týkající se ide sady Visual Studio, služeb Azure DevOps Services nebo jiných produktů nebo služeb sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
+## <a name="support-resources"></a>Prostředky podpory
+- Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
+- Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o nástrojích a službách společnosti Microsoft naleznete v dokumentaci k:
+Další informace o nástrojích a službách společnosti Microsoft najdete v dokumentaci pro:
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
-- [IDE visual studia](/visualstudio/)
+- [Integrované vývojové prostředí sady Visual Studio](/visualstudio/)
 
-Pokud jste ještě neaktivovali individuální kreditazure devTest, který [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) je součástí vašeho předplatného, navštivte a klikněte na dlaždici Azure v kategorii Nástroje a nastavte předplatné Azure a uplatněte si individuální kredit Azure DevTest.
+Pokud jste ještě neaktivovali zvýhodněné kredity Azure DevTest, která se dodává s vaším předplatným, přejděte na [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) dlaždici Azure v kategorii Nástroje a nastavte své předplatné Azure a uplatněte svůj jednotlivý kredit Azure DevTest.

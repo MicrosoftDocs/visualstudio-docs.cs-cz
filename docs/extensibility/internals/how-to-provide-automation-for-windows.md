@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Zajištění automatizace pro windows | Dokumenty společnosti Microsoft'
+title: 'Postupy: poskytnutí automatizace pro Windows | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - automation [Visual Studio SDK], tool windows
 - tool windows, automation
@@ -11,34 +11,34 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8716fbaa56cdb77063597fd5e07f6e469cc86a0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: fec2b9ef6612a294dc70d129cf4bdd3dde843262
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905259"
 ---
-# <a name="how-to-provide-automation-for-windows"></a>Postup: Zajištění automatizace pro okna
+# <a name="how-to-provide-automation-for-windows"></a>Postupy: poskytnutí automatizace pro Windows
 
-Můžete zajistit automatizaci pro okna dokumentů a nástrojů. Poskytování automatizace je vhodné vždy, když chcete zpřístupnit objekty automatizace v okně a prostředí již neposkytuje připravený objekt automatizace, jako je tomu u seznamu úloh.
+Můžete zajistit automatizaci pro okna dokumentů a nástrojů. Poskytnutí automatizace je vhodné kdykoli, když chcete objekty automatizace zpřístupnit v okně, a prostředí již neposkytuje předem připravený automatizační objekt, protože se jedná o seznam úkolů.
 
 ## <a name="automation-for-tool-windows"></a>Automatizace pro okna nástrojů
 
-Prostředí poskytuje automatizaci v okně nástroje <xref:EnvDTE.Window> vrácením standardního objektu, jak je vysvětleno v následujícím postupu:
+Prostředí poskytuje automatizaci v okně nástroje vrácením standardního <xref:EnvDTE.Window> objektu, jak je vysvětleno v následujícím postupu:
 
-1. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> metody prostřednictvím prostředí s [__VSFPROPID. VSFPROPID_ExtWindowObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID.VSFPROPID_ExtWindowObject>) `VSFPROPID` jako parametr `Window` získat objekt.
+1. Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> metodu prostřednictvím prostředí s [__VSFPROPID. VSFPROPID_ExtWindowObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID.VSFPROPID_ExtWindowObject>) jako `VSFPROPID` parametr pro získání `Window` objektu.
 
-2. Když volající požaduje objekt automatizace specifický pro VSPackage <xref:EnvDTE.Window.Object%2A>pro okno `QueryInterface` `IExtensibleObject`nástroje <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject>, `IDispatch` prostředí volá aplikace , nebo rozhraní. Oba `IExtensibleObject` `IVsExtensibleObject` a <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A> poskytují metodu.
+2. Když volající požaduje automatizační objekt pro VSPackage pro vaše okno nástroje prostřednictvím <xref:EnvDTE.Window.Object%2A> , prostředí volá `QueryInterface` `IExtensibleObject` <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject> rozhraní, nebo `IDispatch` . `IExtensibleObject`A `IVsExtensibleObject` poskytují <xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibleObject.GetAutomationObject%2A> metodu.
 
-3. Při volání `GetAutomationObject` metody předávací `NULL`, reagovat předáním zpět objektu specifické pro VSPackage.
+3. Když prostředí pak zavolá metodu, která je předávána `GetAutomationObject` `NULL` , odpovězte tím, že se vrátí objekt specifický pro VSPackage.
 
-4. Pokud `QueryInterface` volání `IExtensibleObject` `IVsExtensibleObject` a selže, pak `QueryInterface` `IDispatch`prostředí volá .
+4. Pokud zavoláte `QueryInterface` pro `IExtensibleObject` a `IVsExtensibleObject` selžou, prostředí se zavolá `QueryInterface` `IDispatch` .
 
 ## <a name="automation-for-document-windows"></a>Automatizace pro okna dokumentů
 
-<xref:EnvDTE.Document> Standardní objekt je také k dispozici z prostředí, i když <xref:EnvDTE.Document> editor může `IExtensibleObject` mít vlastní `GetAutomationObject`implementaci objektu implementací rozhraní a reagovat na .
+Standardní <xref:EnvDTE.Document> objekt je také k dispozici v prostředí, Přestože editor může mít vlastní implementaci <xref:EnvDTE.Document> objektu implementací `IExtensibleObject` rozhraní a reagování na `GetAutomationObject` .
 
-Kromě toho editor může poskytnout objekt automatizace specifické pro VSPackage, načtený prostřednictvím <xref:EnvDTE.Document.Object%2A> metody implementací rozhraní `IVsExtensibleObject` nebo. `IExtensibleObject` Ukázky [VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples) přispívají objektem automatizace specifickým pro dokument RTF.
+Kromě toho může editor poskytnout automatizační objekt specifický pro VSPackage, který je načten prostřednictvím <xref:EnvDTE.Document.Object%2A> metody, implementací `IVsExtensibleObject` `IExtensibleObject` rozhraní nebo. [Ukázky VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples) přispěje k objektu automatizace specifickému pro dokument RTF.
 
 ## <a name="see-also"></a>Viz také
 

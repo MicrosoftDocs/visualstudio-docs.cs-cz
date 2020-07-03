@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Aktualizace rozšíření sady Visual Studio | Dokumenty společnosti Microsoft'
+title: 'Postupy: aktualizace rozšíření sady Visual Studio | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - update package
 - update extension
@@ -12,53 +12,53 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 266c0a49db1bca03cec0eb68301445102173df3d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: ee81fe30e10253239bc51dd9d2f199340debc65a
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80710652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905623"
 ---
-# <a name="how-to-update-a-visual-studio-extension"></a>Postup: Aktualizace rozšíření sady Visual Studio
-Rozšíření sady Visual Studio v systému můžete aktualizovat pomocí **rozšíření a aktualizací** a nainstalovat aktualizovanou verzi. Pokud vytvoříte aktualizovanou verzi rozšíření, můžete ji znamenat jako aktualizovanou zvýšením čísla verze v manifestu VSIX.
+# <a name="how-to-update-a-visual-studio-extension"></a>Postupy: aktualizace rozšíření sady Visual Studio
+Rozšíření sady Visual Studio můžete v systému aktualizovat pomocí **rozšíření a aktualizací** pro instalaci aktualizované verze. Pokud vytvoříte aktualizovanou verzi rozšíření, můžete ji označit jako aktualizovanou zvýšením čísla verze v manifestu VSIX.
 
- Aktualizace jsou nainstalovány v případě, že manifest `ID` VSIX příchozí rozšíření `Version` má stejné jako nainstalované a vyšší číslo. Pokud `Version` je číslo stejné nebo nižší, balíček nelze nainstalovat. Pokud `ID` se hodnoty neshodují, balíček, který ještě není nainstalován, je rozpoznán jako samostatné rozšíření.
+ Aktualizace se instalují, když manifest VSIX příchozího rozšíření je stejný `ID` jako nainstalovaný a vyšší `Version` číslo. Pokud `Version` je číslo stejné nebo nižší, balíček nejde nainstalovat. Pokud se `ID` hodnoty neshodují, bude balíček, který ještě není nainstalovaný, rozpoznaný jako samostatná přípona.
 
- Chcete-li zabránit konfliktům během vývoje, doporučujeme odinstalovat starší verze probíhajících rozšíření a také odinstalovat nebo zakázat jakékoli jiné potenciálně konfliktní rozšíření.
+ Aby se zabránilo konfliktům při vývoji, doporučujeme odinstalovat předchozí verze rozšíření a také odinstalovat nebo zakázat jakákoli další potenciálně konfliktní rozšíření.
 
 ## <a name="to-update-an-extension-on-your-system"></a>Aktualizace rozšíření v systému
 
 1. V nabídce **Nástroje** klikněte na **Rozšíření a aktualizace**.
 
-2. V levém podokně klepněte na tlačítko **Aktualizace**.
+2. V levém podokně klikněte na **aktualizace**.
 
 3. V prostředním podokně klikněte na aktualizaci, kterou chcete nainstalovat.
 
      Číslo verze aktualizovaného rozšíření se zobrazí v pravém podokně spolu s dalšími informacemi.
 
-4. V dolní části pravého podokna klepněte na **tlačítko Aktualizovat**.
+4. V dolní části pravého podokna klikněte na **aktualizovat**.
 
 ## <a name="to-publish-an-update-of-an-extension"></a>Publikování aktualizace rozšíření
 
-1. V sadě Visual Studio otevřete řešení pro rozšíření, které chcete aktualizovat. Proveďte změny.
+1. V aplikaci Visual Studio otevřete řešení pro rozšíření, které chcete aktualizovat. Proveďte změny.
 
     > [!IMPORTANT]
-    > Nepodepsaná všechna uživatelská rozšíření se neaktualizují automaticky. Vždy byste měli podepsat rozšíření.
+    > Nepodepsaná všechna uživatelská rozšíření se automaticky neaktualizují. Vaše rozšíření byste měli vždycky podepisovat.
 
-2. V **Průzkumníku řešení**, open *source.extension.manifest*.
+2. V **Průzkumník řešení**otevřete *source. extension. manifest*.
 
-3. V návrháři manifestu zvyšte hodnotu čísla v poli **Verze.**
+3. V Návrháři manifestu zvyšte hodnotu čísla v poli **verze** .
 
 4. Uložte řešení a sestavte ho.
 
-5. Nahrajte nový soubor *.vsix* (ve složce\* *\bin\Debug projektu) na web [Webu Visual Studio Marketplace.](https://marketplace.visualstudio.com/vs)
+5. Nahrajte nový soubor *. vsix* (ve složce * \bin\debug \* projektu) na web [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) .
 
-     Pokud uživatel, který má starší verzi rozšíření, otevře **rozšíření a aktualizace**, zobrazí se nová verze v seznamu **Aktualizace** za předpokladu, že je nástroj nastaven tak, aby automaticky vyhledává aktualizace.
+     Když uživatel, který má starší verzi rozšíření, otevře **rozšíření a aktualizace**, zobrazí se nová verze v seznamu **aktualizace** za předpokladu, že nástroj je nastaven tak, aby automaticky hledal aktualizace.
 
-     Automatické kontroly aktualizací v dolní části podokna**Environment** >  **Aktualizace** můžete povolit nebo zakázat (**Povolit/zakázat automatickou detekci dostupných aktualizací**), které mění nastavení **Vyhledat aktualizace** v**rozšířeních a aktualizacích** **prostředí Tools** > **Options** > Environment .
+     Můžete povolit nebo zakázat automatickou kontrolu aktualizací v dolní části podokna **aktualizace** (**Povolit/zakázat automatickou detekci dostupných aktualizací**), která změní nastavení **Vyhledat aktualizace** v části **nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření a aktualizace**prostředí.
 
     > [!NOTE]
-    > Počínaje aktualizací Visual Studio 2015 Update 2 můžete zadat (v**Environment** > **rozšířeních prostředí a aktualizacích** **nástroje)** > **Options** > zda chcete automatické aktualizace pro rozšíření pro jednotlivé uživatele, všechna rozšíření uživatelů nebo obojí (výchozí nastavení).
+    > Počínaje verzí Visual Studio 2015 Update 2 můžete zadat ( **nástroje**  >  **Možnosti**  >  **Environment**  >  **rozšíření a aktualizace**prostředí), jestli chcete automatické aktualizace pro jednotlivá uživatelská rozšíření, všechna uživatelská rozšíření nebo obojí (výchozí nastavení).
 
 ## <a name="see-also"></a>Viz také
 - [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)
