@@ -1,40 +1,40 @@
 ---
-title: Vytvoření rozšíření s oknem nástroje | Dokumenty společnosti Microsoft
+title: Vytvoření rozšíření pomocí okna nástroje | Microsoft Docs
 ms.date: 3/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 585b0a3a-f85b-4f92-81bb-9ca499bb8a89
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17f72cf130c5ff0f2d6d03ca8c460aa98ea39111
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 597b84854dd398abee9dc21090e085273bc94c75
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739538"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903897"
 ---
-# <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástroje
+# <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástrojů
 
-V tomto postupu se dozvíte, jak použít šablonu projektu VSIX a šablonu **položky vlastní okno nástroje** k vytvoření rozšíření s oknem nástroje.
+V tomto postupu se naučíte používat šablonu projektu VSIX a šablonu položky **okna vlastních nástrojů** k vytvoření rozšíření s oknem nástrojů.
 
 ## <a name="prerequisites"></a>Požadavky
 
- Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="create-a-tool-window"></a>Vytvoření okna nástroje
+### <a name="create-a-tool-window"></a>Vytvořit okno nástroje
 
-1. Vytvořte projekt VSIX s názvem **FirstWindow**. Šablonu projektu VSIX najdete v dialogovém okně **Nový projekt** vyhledáním "vsix".
+1. Vytvořte projekt VSIX s názvem **FirstWindow**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Při otevření projektu přidejte šablonu položky okna nástroje s názvem **MyWindow**. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** přejděte na položku**Rozšiřitelnost** **jazyka Visual C#** > a vyberte **vlastní okno nástroje**. V poli **Název** v dolní části okna změňte název souboru okna nástroje na *MyWindow.cs*.
+2. Po otevření projektu přidejte šablonu položky okna nástroje s názvem **MyWindow**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní panel nástrojů**. V poli **název** v dolní části okna změňte název souboru okna nástroje na *MyWindow.cs*.
 
-3. Sestavení projektu a začít ladění.
+3. Sestavte projekt a spusťte ladění.
 
-   Zobrazí se experimentální instance sady Visual Studio. Další informace o experimentální instanci naleznete [v tématu Experimentální instance](../extensibility/the-experimental-instance.md).
+   Zobrazí se experimentální instance aplikace Visual Studio. Další informace o experimentální instanci naleznete v [experimentální instanci](../extensibility/the-experimental-instance.md).
 
-4. V experimentální instanci přejděte na **zobrazit** > **jiné windows**.
+4. V experimentální instanci přejdete do části **Zobrazit**  >  **ostatní okna**.
 
    Měla by se zobrazit položka nabídky pro **MyWindow**. Klikněte na něj.
 
-   Měli byste vidět okno nástroje s názvem **MyWindow** a tlačítko s nápisem **Click Me!.**
+   Měl by se zobrazit okno nástrojů s názvem **MyWindow** a tlačítkem **na mě.**

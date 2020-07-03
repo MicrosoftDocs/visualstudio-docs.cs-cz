@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Propojení typu obsahu s příponou názvu souboru | Dokumenty společnosti Microsoft'
+title: 'Návod: propojení typu obsahu s příponou názvu souboru | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link content type to file name extension
 ms.assetid: 21ee64ce-9afe-4b08-94a0-8389cc4dc67c
@@ -10,38 +10,38 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 328be013b5d522938cd7450fc53d4866c632abb3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: b4e5ba3cd82090b5fad76d48c4600e0814bd91eb
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904688"
 ---
-# <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Návod: Propojení typu obsahu s příponou názvu souboru
-Můžete definovat vlastní typ obsahu a propojit příponu názvu souboru pomocí rozšíření editoru Managed Extensibility Framework (MEF). V některých případech je přípona názvu souboru již definována jazykovou službou. Chcete-li jej však použít s mef, musíte jej stále propojit s typem obsahu.
+# <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Návod: propojení typu obsahu s příponou názvu souboru
+Můžete definovat vlastní typ obsahu a propojit s ním příponu názvu souboru pomocí rozšíření Editor Managed Extensibility Framework (MEF). V některých případech je přípona názvu souboru již definovaná jazykovou službou. Chcete-li však použít s MEF, je nutné stále propojit s typem obsahu.
 
 ## <a name="prerequisites"></a>Požadavky
- Počínaje Visual Studio 2015, nenainstalujete Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-mef-project"></a>Vytvoření projektu MEF
+## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
 
-1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **Vizuální C# / Rozšiřitelnost**a potom **v six projectu**.) Pojmenujte `ContentTypeTest`řešení .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest` .
 
-2. V souboru **source.extension.vsixmanifest** přejděte na kartu **Datové zdroje** a nastavte pole **Typ** na **Microsoft.VisualStudio.MefComponent**, pole **Zdroj** na projekt **v aktuálním řešení**a pole **Projekt** na název projektu.
+2. V souboru **source. extension. vsixmanifest** klikněte na kartu **aktiva** a nastavte pole **typ** na **Microsoft. VisualStudio. MefComponent**, **zdrojové** pole na **projekt v aktuálním řešení**a pole **projekt** na název projektu.
 
-## <a name="define-the-content-type"></a>Definování typu obsahu
+## <a name="define-the-content-type"></a>Definovat typ obsahu
 
-1. Přidejte soubor třídy `FileAndContentTypes`a pojmenujte jej .
+1. Přidejte soubor třídy a pojmenujte ho `FileAndContentTypes` .
 
 2. Přidejte odkazy na následující sestavení:
 
-    1. System.ComponentModel.Složení
+    1. System. ComponentModel. složení
 
-    2. Microsoft.VisualStudio.Text.Logic
+    2. Microsoft. VisualStudio. text. Logic
 
-    3. Microsoft.VisualStudio.CoreUtility
+    3. Microsoft. VisualStudio. CoreUtility
 
-3. Přidejte `using` následující direktivy.
+3. Přidejte následující `using` direktivy.
 
     ```csharp
     using System.ComponentModel.Composition;
@@ -57,7 +57,7 @@ Můžete definovat vlastní typ obsahu a propojit příponu názvu souboru pomoc
     {. . .}
     ```
 
-5. V této třídě <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> exportovat s názvem "hid" a deklarovat jeho základní definice je "text".
+5. V této třídě exportujte <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> název "HID" a deklarujte jeho základní definici jako "text".
 
     ```csharp
     internal static class FileAndContentTypeDefinitions
@@ -71,7 +71,7 @@ Můžete definovat vlastní typ obsahu a propojit příponu názvu souboru pomoc
 
 ## <a name="link-a-file-name-extension-to-a-content-type"></a>Propojení přípony názvu souboru s typem obsahu
 
-- Chcete-li tento typ obsahu namapovat <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> na příponu názvu souboru, exportujte a, která má příponu *HID* a typ obsahu "hid".
+- Chcete-li mapovat tento typ obsahu na příponu názvu souboru, exportujte soubor s <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> příponou *. HID* a typem obsahu "HID".
 
     ```csharp
     internal static class FileAndContentTypeDefinitions
@@ -90,11 +90,11 @@ Můžete definovat vlastní typ obsahu a propojit příponu názvu souboru pomoc
 
 ## <a name="add-the-content-type-to-an-editor-export"></a>Přidání typu obsahu do exportu editoru
 
-1. Vytvořte rozšíření editoru. Můžete například použít rozšíření okraje glyfu popsané v [návodu: Vytvoření okraje glyfu](../extensibility/walkthrough-creating-a-margin-glyph.md).
+1. Vytvořte rozšíření editoru. Můžete například použít rozšíření glyfu marže popsané v tématu [Návod: vytvoření glyfu marže](../extensibility/walkthrough-creating-a-margin-glyph.md).
 
 2. Přidejte třídu, kterou jste definovali v tomto postupu.
 
-3. Při exportu třídy rozšíření <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> přidejte typ "hid".
+3. Při exportování třídy rozšíření přidejte <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> do ní typ "HID".
 
     ```csharp
     [Export]
@@ -102,4 +102,4 @@ Můžete definovat vlastní typ obsahu a propojit příponu názvu souboru pomoc
     ```
 
 ## <a name="see-also"></a>Viz také
-- [Jazykové služby a rozšiřující body editoru](../extensibility/language-service-and-editor-extension-points.md)
+- [Rozšiřovací body služby jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)

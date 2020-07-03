@@ -1,7 +1,7 @@
 ---
-title: Vytvoření vlastního ladicího modulu | Dokumenty společnosti Microsoft
+title: Vytvoření vlastního ladicího stroje | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debug engines, implementing
 - debug engines, custom
@@ -12,47 +12,47 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a350d640fffcc6e09cf8f981c797b97071a0cacf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 241bc016d8a64905951bffef07ba425f1351a727
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903584"
 ---
 # <a name="create-a-custom-debug-engine"></a>Vytvoření vlastního ladicího stroje
-Ladicí modul (DE) je součást, která umožňuje ladění konkrétních architektur za běhu. Obvykle existuje pouze jedna implementace DE pro prostředí za běhu.
+Ladicí stroj (DE) je komponenta, která umožňuje ladění konkrétní architektury run-time. Obvykle je k dispozici pouze jedna DE Implementation pro každé prostředí za běhu.
 
 > [!NOTE]
-> Zatímco existují samostatné de implementace pro Transact-SQL a JScript, VBScript a JScript sdílejí jeden DE.
+> I když existují samostatné DE implementací pro Transact-SQL a JScript, VBScript a JScript sdílí jeden DE.
 
- De spolupracuje s interpretu nebo operačního systému poskytovat takové ladicí služby jako řízení provádění, zarážky a vyhodnocení výrazu. Tyto služby jsou implementovány prostřednictvím rozhraní DE a může způsobit ladicí program přechodu mezi různými provozními režimy. Další informace naleznete v [tématu Provozní režimy](../../extensibility/debugger/operational-modes.md).
+ DE funguje s překladačem nebo operačním systémem pro poskytování takových služeb ladění jako řízení spouštění, zarážky a vyhodnocení výrazu. Tyto služby jsou implementovány prostřednictvím rozhraní DE a mohou způsobit přechod ladicího programu mezi různými provozními režimy. Další informace najdete v tématu [provozní režimy](../../extensibility/debugger/operational-modes.md).
 
- Vytvoření DE se skládá z následujících kroků:
+ Vytváření DE se skládá z následujících kroků:
 
-1. Registrace DE v sadě Visual Studio
+1. Registrace DE se sadou Visual Studio
 
-2. Povolení odlažení programu
+2. Povolit ladění programu
 
-3. Implementace řízení provádění a vyhodnocení stavu
+3. Implementovat řízení provádění a vyhodnocení stavu
 
 4. Odesílání událostí
 
-5. Nastavit ukončení a odpojení
+5. Nastavení ukončení a odpojení
 
-## <a name="in-this-section"></a>V tomto oddílu
- [Registrace vlastního ladicího stroje](../../extensibility/debugger/registering-a-custom-debug-engine.md) Vysvětluje kroky potřebné k registraci ladicí modul s Visual Studio tak, aby jej lze použít.
+## <a name="in-this-section"></a>V této části
+ [Registrace vlastního ladicího stroje](../../extensibility/debugger/registering-a-custom-debug-engine.md) Vysvětluje kroky potřebné k registraci ladicího stroje se sadou Visual Studio, aby jej bylo možné použít.
 
- [Povolení odlažení programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md) Vysvětluje, že předtím, než de můžete ladit program, musíte nejprve spustit DE nebo jej připojit k existujícímu programu.
+ [Povolit ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md) Vysvětluje, že před tím, než může příkaz DE ladit program, je třeba nejprve spustit příkaz DE nebo ho připojit k existujícímu programu.
 
- [Implementace řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md) Popisuje, proč ladění aplikace vyžaduje implementaci funkcí řízení spuštění.
+ [Implementovat řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md) Popisuje, proč ladění aplikace vyžaduje implementaci funkcí řízení spouštění.
 
- [Odeslat události](../../extensibility/debugger/sending-events.md) Popisuje komunikaci mezi ladicím programem a DE jako model událostí založený na modelu DCOM.
+ [Odeslat události](../../extensibility/debugger/sending-events.md) Popisuje komunikaci mezi ladicím programem a DE jako modelem události na základě modelu DCOM.
 
- [Nastavit ukončení a odpojení](../../extensibility/debugger/termination-and-detaching.md) Vysvětluje, jak dosáhnout normální ukončení, což znamená, že neexistují žádné zarážky, výjimky, chyby za běhu nebo nekonečné smyčky v aplikaci, která má být laděna.
+ [Nastavení ukončení a odpojení](../../extensibility/debugger/termination-and-detaching.md) Vysvětluje, jak dosáhnout normálního ukončení, což znamená, že neexistují žádné zarážky, výjimky, chyby za běhu nebo nekonečné smyčky v aplikaci, která se má ladit.
 
- [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md) Dokumentuje pořadí volání událostí, ke kterým dochází v relaci ladění.
+ [Události ladicího programu volání](../../extensibility/debugger/calling-debugger-events.md) Dokumentuje pořadí volání událostí, ke kterým došlo v relaci ladění.
 
- [Postup: Ladění vlastního ladicího modulu](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md) Vysvětluje, jak ladit vlastní DE.
+ [Postupy: ladění vlastního ladicího stroje](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md) Vysvětluje, jak ladit vlastní DE.
 
 ## <a name="see-also"></a>Viz také
-- [Rozšiřitelnost ladicího programu visual studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Rozšiřitelnost ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

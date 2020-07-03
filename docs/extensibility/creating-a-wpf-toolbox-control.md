@@ -1,7 +1,7 @@
 ---
-title: Vytvoření ovládacího prvku WPF Toolbox | Dokumenty společnosti Microsoft
+title: Vytvoření ovládacího prvku panelu nástrojů WPF | Microsoft Docs
 ms.date: 3/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - toolbox control
 - toolbox
@@ -12,38 +12,38 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1400efb0095760bf1cee302dd33dcf6ebb90152
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: a6aa6051648e495e21f7954a737f7b572ce6a6f2
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903949"
 ---
-# <a name="create-a-wpf-toolbox-control"></a>Vytvoření ovládacího prvku WPF Toolbox
+# <a name="create-a-wpf-toolbox-control"></a>Vytvoření ovládacího prvku sady nástrojů WPF
 
-Šablona Ovládací prvek panelu nástrojů WPF (Windows Presentation Framework) umožňuje vytvářet ovládací prvky WPF, které jsou automaticky přidány do **panelu nástrojů** při instalaci rozšíření. Tento návod ukazuje, jak pomocí šablony vytvořit ovládací prvek **panelu nástrojů,** který můžete distribuovat ostatním uživatelům.
+Šablona ovládacího prvku panelu nástrojů WPF (Windows Presentation Framework) umožňuje vytvořit ovládací prvky WPF, které jsou automaticky přidány do **sady nástrojů** při instalaci rozšíření. Tento návod ukazuje, jak použít šablonu k vytvoření ovládacího prvku **sady nástrojů** , který můžete distribuovat dalším uživatelům.
 
-Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-the-toolbox-control"></a>Vytvoření ovládacího prvku Panelu nástrojů
+## <a name="create-the-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů
 
-### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>Vytvoření rozšíření pomocí ovládacího prvku WPF Toolbox
+### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>Vytvoření rozšíření pomocí ovládacího prvku sady nástrojů WPF
 
-1. Vytvořte projekt VSIX s názvem `MyToolboxControl`. Šablonu projektu VSIX najdete v dialogovém okně **Nový projekt** vyhledáním "vsix".
+1. Vytvořte projekt VSIX s názvem `MyToolboxControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
-2. Po otevření projektu přidejte šablonu **položky ovládacího prvku WPF Toolbox** s názvem `MyToolboxControl`. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** přejděte na položku**Rozšiřitelnost** **jazyka Visual C#** > a vyberte **ovládací prvek panelu nástrojů WPF**. V poli **Název** v dolní části okna změňte název příkazového souboru na *MyToolboxControl.cs*.
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku sady nástrojů WPF** s názvem `MyToolboxControl` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na rozšiřitelnost v jazyce **Visual C#**  >  **Extensibility** a vyberete **ovládací prvek sada nástrojů WPF**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolboxControl.cs*.
 
-    Řešení nyní obsahuje uživatelský ovládací `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> prvek, a který přidá ovládací prvek do **panelu nástrojů**a **položku Microsoft.VisualStudio.ToolboxControl** asset v manifestu VSIX pro nasazení.
+    Řešení nyní obsahuje uživatelský ovládací prvek, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> který přidá ovládací prvek do **panelu nástrojů**a položku prostředku **Microsoft. VISUALSTUDIO. ToolboxControl** v manifestu VSIX pro nasazení.
 
-#### <a name="to-create-the-control-ui"></a>Vytvoření ovládacího prvku
+#### <a name="to-create-the-control-ui"></a>Vytvoření uživatelského rozhraní ovládacího prvku
 
-1. Otevřete *mytoolboxControl.xaml* v návrháři.
+1. Otevřete *MyToolboxControl. XAML* v návrháři.
 
-    Návrhář zobrazí <xref:System.Windows.Controls.Grid> ovládací prvek, <xref:System.Windows.Controls.Button> který obsahuje ovládací prvek.
+    Návrhář zobrazí <xref:System.Windows.Controls.Grid> ovládací prvek, který obsahuje <xref:System.Windows.Controls.Button> ovládací prvek.
 
-2. Uspořádejte rozložení mřížky. Když vyberete <xref:System.Windows.Controls.Grid> ovládací prvek, modré ovládací pruhy se zobrazí na horním a levém okraji mřížky. Řádky a sloupce můžete do mřížky přidat kliknutím na pruhy.
+2. Uspořádat rozložení mřížky Když vyberete <xref:System.Windows.Controls.Grid> ovládací prvek, v horním a levém okraji mřížky se zobrazí modré ovládací panely. Řádky a sloupce můžete do mřížky přidat kliknutím na pruhy.
 
-3. Přidejte podřízené ovládací prvky do mřížky. Podřízený ovládací prvek můžete umístit přetažením z **panelu nástrojů** do části `Grid.Row` `Grid.Column` mřížky nebo nastavením jeho atributů a atributů v xaml. Následující příklad přidá dva popisky na horním řádku mřížky a tlačítko na druhém řádku.
+3. Přidejte do mřížky podřízené ovládací prvky. Podřízený ovládací prvek lze umístit přetažením ze **sady nástrojů** do části mřížky nebo nastavením jeho `Grid.Row` `Grid.Column` atributů a v jazyce XAML. Následující příklad přidá dva popisky na horní řádek mřížky a tlačítko na druhý řádek.
 
     ```xaml
     <Grid>
@@ -55,13 +55,13 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
 
 ## <a name="renaming-the-control"></a>Přejmenování ovládacího prvku
 
- Ve výchozím nastavení se ovládací prvek zobrazí v **panelu nástrojů** jako **MyToolboxControl** ve skupině s názvem **MyToolboxControl.MyToolboxControl**. Tyto názvy můžete změnit v *souboru MyToolboxControl.xaml.cs.*
+ Ve výchozím nastavení se ovládací prvek zobrazí v sadě **nástrojů** jako **MyToolboxControl** ve skupině s názvem **MyToolboxControl. MyToolboxControl**. Tyto názvy můžete změnit v souboru *MyToolboxControl.XAML.cs* .
 
-1. Otevřete *MyToolboxControl.xaml.cs* v zobrazení kódu.
+1. Otevřete *MyToolboxControl.XAML.cs* v zobrazení kódu.
 
-2. Najděte `MyToolboxControl` třídu a přejmenujte ji na TestControl. (Nejrychlejší způsob, jak to udělat, je přejmenovat třídu, pak vyberte **přejmenovat** z kontextové nabídky a dokončit kroky. (Další informace o příkazu **Přejmenovat** najdete v tématu [Přejmenování refaktoringu (C#)](../ide/reference/rename.md).)
+2. Najděte `MyToolboxControl` třídu a přejmenujte ji na TestControl. (Nejrychlejší způsob, jak to provést, je přejmenovat třídu a pak vybrat **Přejmenovat** z kontextové nabídky a dokončit kroky. (Další informace o příkazu **Přejmenovat** naleznete v tématu [refaktoringu přejmenování (C#)](../ide/reference/rename.md).)
 
-3. Přejděte `ProvideToolboxControl` na atribut a změňte hodnotu prvního parametru na **Test**. Toto je název skupiny, která bude obsahovat ovládací prvek v **panelu nástrojů**.
+3. Přejděte na `ProvideToolboxControl` atribut a změňte hodnotu prvního parametru na **test**. Toto je název skupiny, která bude obsahovat ovládací prvek v sadě **nástrojů**.
 
     Výsledný kód by měl vypadat takto:
 
@@ -76,17 +76,17 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
     }
     ```
 
-## <a name="build-test-and-deployment"></a>Sestavení, testování a nasazení
+## <a name="build-test-and-deployment"></a>Sestavování, testování a nasazování
 
- Při ladění projektu, měli byste najít ovládací prvek nainstalovaný v **panelu nástrojů** experimentální instance sady Visual Studio.
+ Při ladění projektu byste měli najít ovládací prvek nainstalovaný v **sadě nástrojů** experimentální instance sady Visual Studio.
 
-### <a name="to-build-and-test-the-control"></a>Vytvoření a testování ovládacího prvku
+### <a name="to-build-and-test-the-control"></a>Sestavení a otestování ovládacího prvku
 
-1. Znovu sestavte projekt a začněte ladění.
+1. Znovu sestavte projekt a spusťte ladění.
 
-2. V nové instanci sady Visual Studio vytvořte projekt aplikace WPF. Ujistěte se, že je otevřený Návrhář XAML.
+2. V nové instanci sady Visual Studio vytvořte projekt aplikace WPF. Ujistěte se, že je Návrhář XAML otevřeno.
 
-3. Najděte svůj ovládací prvek v **panelu nástrojů** a přetáhněte ho na návrhovou plochu.
+3. Vyhledejte ovládací prvek v **sadě nástrojů** a přetáhněte jej na návrhovou plochu.
 
 4. Spusťte ladění aplikace WPF.
 
@@ -94,10 +94,10 @@ Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby st
 
 ### <a name="to-deploy-the-control"></a>Nasazení ovládacího prvku
 
-1. Po sestavení testovaného projektu najdete soubor *.vsix* ve složce\* *\bin\debug projektu.
+1. Po sestavení testovaného projektu můžete najít soubor *. vsix* ve složce * \bin\debug \* projektu.
 
-2. Můžete jej nainstalovat do místního počítače poklepáním na soubor *.vsix* a podle postupu instalace. Chcete-li ovládací prvek odinstalovat, přejděte na**položku Rozšíření a aktualizace** **nástrojů** > a vyhledejte rozšíření ovládacího prvku a klepněte na tlačítko **Odinstalovat**.
+2. Můžete ji nainstalovat na místní počítač dvojitým kliknutím na soubor *. vsix* a podle postupu instalace. Chcete-li odinstalovat ovládací prvek, přejděte do části **nástroje**  >  **rozšíření a aktualizace** a vyhledejte rozšíření ovládacího prvku a pak klikněte na možnost **odinstalovat**.
 
-3. Nahrajte soubor *.vsix* do sítě nebo na web.
+3. Nahrajte soubor *. vsix* do sítě nebo na web.
 
-    Pokud soubor nahrajete na web [Webu Visual Studio Marketplace,](https://marketplace.visualstudio.com/) ostatní uživatelé mohou pomocí rozšíření **nástrojů** > **a aktualizací** v sadě Visual Studio najít ovládací prvek online a nainstalovat jej.
+    Pokud soubor nahrajete na [Visual Studio Marketplace](https://marketplace.visualstudio.com/) web, jiní uživatelé mohou pomocí rozšíření **nástrojů**  >  **a aktualizací** v aplikaci Visual Studio najít kontrolu online a nainstalovat ji.

@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Naučte se zakoupit předplatná sady Visual Studio v Microsoft Store a aktivovat je na portálu předplatných sady Visual Studio.
-ms.openlocfilehash: f8102a10f049c04695ba1d5415febd9cee3d7130
-ms.sourcegitcommit: 960bab34e126c9ca449560a76a839a8f8c3263fb
+ms.openlocfilehash: 217c19ea0f8c4a793fc11a84eaa8f276960af3da
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82072492"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903097"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Předplatná sady Visual Studio jsou k dispozici prostřednictvím Microsoft Store
 Předplatná sady Visual Studio jsou k dispozici prostřednictvím různých kanálů, včetně [multilicencí](https://www.microsoft.com/licensing/default), poskytovatelů cloudových řešení, [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)a Microsoft Store.  Tento článek vás seznámí s nákupem a aktivací předplatných prostřednictvím [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio).  
@@ -34,7 +34,7 @@ Každé z těchto předplatných nabízí možnost provést počáteční nákup
 Po zakoupení předplatného sady Visual Studio prostřednictvím Microsoft Store můžete zahájit proces aktivace na stránce s potvrzením platby nebo potvrzovacím e-mailem, který jste dostali po nákupu.
 
 1. Kliknutím **sem se přihlaste** k potvrzovacímu e-mailu nebo na stránce pro potvrzení nákupu.
-2. Budete přesměrováni na [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs).
+2. Budete přesměrováni na [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs) .
 3. Zadejte e-mailovou adresu, která vyžaduje přístup k předplatnému sady Visual Studio, a klikněte na **pokračovat**.
 4. V závislosti na typu účtu, který používáte, můžete být přesměrováni na jednu ze dvou různých přihlašovacích stránek:
     - Předplatitelé, kteří používají svůj osobní účet Microsoft (MSA), uvidí stránku heslo účtu Microsoft.
@@ -48,7 +48,7 @@ Po zakoupení předplatného sady Visual Studio prostřednictvím Microsoft Stor
 Pokud máte nějaké dotazy týkající se nákupu prostřednictvím Microsoft Store, je k dispozici nápovědu.  Kontaktujte [podporu Microsoft Store](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs).
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

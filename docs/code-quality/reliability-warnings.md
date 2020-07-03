@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3449723394f603b4b726fa8ebf2258e2c8f4c46c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 095631abc5678a27a4e79611433ff446337b956c
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283382"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835612"
 ---
 # <a name="reliability-warnings"></a>Upozornění spolehlivosti
 
@@ -36,7 +36,8 @@ Upozornění na spolehlivost podporují spolehlivost knihovny a aplikace, jako j
 |[CA2007: Nečekejte přímo na úlohu](../code-quality/ca2007.md)|Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task> přímo.|
 |[CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection](../code-quality/ca2009.md)|`ToImmutable`Metoda byla nutně volána pro neproměnlivou kolekci z <xref:System.Collections.Immutable> oboru názvů.|
 |[CA2011: Nepřiřazujte vlastnost v rámci její metody setter](../code-quality/ca2011.md) | Vlastnost byla omylem přiřazena hodnota v rámci vlastního [přístupového objektu set](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor). |
-|[CA2012: Používejte ValueTasks správně](../code-quality/ca2012.md) | ValueTasks vrácené z vyvolání členů mají být přímo očekávány.  Pokusí se využít ValueTask vícekrát nebo získat přímý přístup k jednomu výsledku před tím, než je známý k dokončení, může způsobit výjimku nebo poškození.  Ignorování takového ValueTask je pravděpodobně indikace funkční chyby a může snížit výkon. |
+|[CA2012: Správně použít hodnoty ValueTask](../code-quality/ca2012.md) | ValueTasks vrácené z vyvolání členů mají být přímo očekávány.  Pokusí se využít ValueTask vícekrát nebo získat přímý přístup k jednomu výsledku před tím, než je známý k dokončení, může způsobit výjimku nebo poškození.  Ignorování takového ValueTask je pravděpodobně indikace funkční chyby a může snížit výkon. |
 |[CA2013: Nepoužívejte ReferenceEquals s typy hodnot](../code-quality/ca2013.md) | Při porovnávání hodnot pomocí <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> , jsou-li objA a objB typy hodnot, jsou zabaleny před předáním do <xref:System.Object.ReferenceEquals%2A> metody. To znamená, že i když obě objA a objB reprezentují stejnou instanci typu hodnoty, <xref:System.Object.ReferenceEquals%2A> metoda ale přesto vrátí hodnotu false. |
 |[CA2014: Nepoužívejte stackalloc ve smyčce.](../code-quality/ca2014.md) | Prostor zásobníku přidělený stackalloc je vydaný jenom na konci vyvolání aktuální metody.  Použití ve smyčce může mít za následek neohraničený nárůst zásobníku a případné podmínky přetečení zásobníku. |
 |[CA2015: nedefinujte finalizační metody pro typy odvozené z MemoryManager &lt; T&gt;](../code-quality/ca2015.md) | Přidání finalizační metody do typu odvozeného z <xref:System.Buffers.MemoryManager%601> může umožnit uvolnění paměti, pokud je stále používána <xref:System.Span%601> . |
+|[CA2016: předejte parametr CancellationToken do metod, které jednu z nich přebírají.](ca2016.md) | Předejte `CancellationToken` parametr do metod, které jednu z nich přebírají, aby se zajistilo, že oznámení o zrušení operace budou správně šířena, nebo jestli se má explicitně předat označení, že se `CancellationToken.None` token nešíří. |

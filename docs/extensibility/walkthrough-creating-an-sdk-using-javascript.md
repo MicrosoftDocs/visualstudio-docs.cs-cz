@@ -1,45 +1,45 @@
 ---
-title: 'Návod: Vytvoření sady SDK pomocí JavaScriptu | Dokumenty společnosti Microsoft'
+title: 'Návod: vytvoření sady SDK pomocí JavaScriptu | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3a3fa110bd6521443521449898474299dd267d6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 29dac6cca7936dde8be2ebc57366f6370b8bcbc6
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904942"
 ---
-# <a name="walkthrough-create-an-sdk-using-javascript"></a>Návod: Vytvoření sady SDK pomocí JavaScriptu
-Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matematickou sadku SDK jako rozšíření sady Visual Studio (VSIX).  Návod je rozdělen do těchto částí:
+# <a name="walkthrough-create-an-sdk-using-javascript"></a>Návod: vytvoření sady SDK pomocí JavaScriptu
+Tento návod učí, jak pomocí JavaScriptu vytvořit jednoduchou sadu matematických SDK jako rozšíření sady Visual Studio (VSIX).  Návod je rozdělen do těchto částí:
 
-- [Vytvoření projektu sady SDK rozšíření SimpleMathVSIX](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
+- [Vytvoření projektu SimpleMathVSIX Extension SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
 
 - [Vytvoření ukázkové aplikace, která používá sadu SDK](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)
 
-  Pro JavaScript neexistuje žádný typ projektu knihovny tříd. V tomto návodu ukázkový *soubor aritmetic.js* je vytvořen přímo v projektu VSIX. V praxi doporučujeme nejprve sestavit a otestovat soubory JavaScriptu a CSS jako **Blank App** aplikaci pro Windows Store , než je vložíte do projektu VSIX.
+  Pro JavaScript není k dispozici žádný typ projektu knihovny tříd. V tomto návodu je ukázkový soubor *arithmetic.js* vytvořen přímo v projektu VSIX. V praxi doporučujeme nejprve sestavit a otestovat soubory JavaScript a CSS jako aplikaci pro Windows Store, například pomocí šablony **prázdná aplikace** , než je vložíte do projektu VSIX.
 
 ## <a name="prerequisites"></a>Požadavky
- Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sady Visual Studio SDK. Další informace naleznete v [tématu Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>Vytvoření projektu sady SDK rozšíření SimpleMathVSIX
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>Vytvoření projektu SimpleMathVSIX Extension SDK
 
-1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
+1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-2. V seznamu kategorií šablon vyberte v části **Visual C#** **možnost Rozšiřitelnost**a pak vyberte šablonu **projektu VSIX.**
+2. V seznamu kategorií šablon v části **Visual C#** vyberte **rozšiřitelnost**a potom vyberte šablonu **projektu VSIX** .
 
-3. V **Name** textovém poli `SimpleMathVSIX` Název zadejte a zvolte tlačítko **OK.**
+3. Do textového pole **název** zadejte `SimpleMathVSIX` a klikněte na tlačítko **OK** .
 
-4. Pokud se zobrazí **Průvodce balíčkem sady Visual Studio,** zvolte tlačítko **Další** na **úvodní** stránce a potom na stránce 1 **ze 7**zvolte tlačítko **Dokončit.**
+4. Pokud se zobrazí **Průvodce balíčkem sady Visual Studio** , klikněte na tlačítko **Další** na stránce **Vítejte** a pak na **stránce 1 z 7**klikněte na tlačítko **Dokončit** .
 
-     Přestože **se otevře Návrhář manifestu,** tento návod ponecháme jednoduchý přímo upravíme.
+     I když se otevře **Návrhář manifestu** , Tento názorný postup je jednoduchý, protože přímo upravujeme soubor manifestu.
 
-5. V **Průzkumníku řešení**otevřete místní nabídku souboru **source.extension.vsixmanifest** a pak zvolte **Zobrazit kód**. Tento kód slouží k nahrazení existujícího obsahu v souboru.
+5. V **Průzkumník řešení**otevřete místní nabídku pro soubor **source. extension. vsixmanifest** a pak zvolte možnost **Zobrazit kód**. Pomocí tohoto kódu nahraďte existující obsah v souboru.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -61,13 +61,13 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
     </PackageManifest>
     ```
 
-6. V **Průzkumníku řešení**otevřete místní nabídku pro projekt **SimpleMathVSIX** a pak zvolte **Přidat** > **novou položku**.
+6. V **Průzkumník řešení**otevřete místní nabídku pro projekt **SimpleMathVSIX** a pak zvolte možnost **Přidat**  >  **novou položku**.
 
-7. V kategorii **Data** vyberte **soubor XML** `SDKManifest.xml`, pojmenujte soubor a zvolte tlačítko **Přidat.**
+7. V kategorii **data** vyberte **soubor XML**, zadejte název souboru `SDKManifest.xml` a klikněte na tlačítko **Přidat** .
 
-8. V **Průzkumníku řešení**otevřete místní nabídku pro soubor **SDKManifest.xml** a pak zvolte **Otevřít,** chcete-li soubor zobrazit v **editoru XML**.
+8. V **Průzkumník řešení**otevřete místní nabídku pro soubor **SDKManifest.xml** a pak zvolte možnost **otevřít** . zobrazí se soubor v **editoru XML**.
 
-9. Přidejte následující kód do souboru **SDKManifest.xml.**
+9. Do souboru **SDKManifest.xml** přidejte následující kód.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -84,21 +84,21 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
 
     ```
 
-10. V **Průzkumníku řešení**zvolte v místní nabídce souboru **SDKManifest.xml** **možnost Vlastnosti**.
+10. V **Průzkumník řešení**v místní nabídce souboru **SDKManifest.xml** vyberte možnost **vlastnosti**.
 
-11. V okně **Vlastnosti** nastavte vlastnost **Zahrnout do vSIX** na **hodnotu True**.
+11. V okně **vlastnosti** nastavte vlastnost **zahrnout do VSIX** na **hodnotu true**.
 
-12. V **Průzkumníku řešení**v místní nabídce projektu **SimpleMathVSIX** zvolte **Přidat** >  `Redist`novou**složku**a pojmenujte složku .
+12. V **Průzkumník řešení**v místní nabídce projektu **SimpleMathVSIX** zvolte možnost **Přidat**  >  **novou složku**a potom složku pojmenujte `Redist` .
 
-13. Chcete-li vytvořit tuto strukturu složek, přidejte podsložky pod redist:
+13. Přidejte podsložky v rámci Redist a vytvořte tuto strukturu složek:
 
      *\Redist\CommonConfiguration\Neutral\SimpleMath\js\\*
 
-14. V místní nabídce složky **\js\\ ** zvolte **Přidat** > **novou položku**.
+14. V místní nabídce pro složku **\js \\ ** vyberte možnost **Přidat**  >  **novou položku**.
 
-15. V **části Visual C# položky**, vyberte **kategorii web** a vyberte položku **souboru JavaScript.** Pojmenujte `arithmetic.js`soubor a pak zvolte tlačítko **Přidat.**
+15. V části **Visual C# položky**vyberte kategorii **Web** a pak vyberte položku **soubor JavaScriptu** . Zadejte název souboru `arithmetic.js` a pak klikněte na tlačítko **Přidat** .
 
-16. Do *aritmetického*kódu vložte následující kód :
+16. Do *arithmetic.js*vložte následující kód:
 
     ```csharp
     (function (global) {
@@ -124,37 +124,37 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
 
     ```
 
-17. V **Průzkumníku řešení**v místní nabídce souboru **aritmetic.js** zvolte **Vlastnosti**. Proveďte tyto změny vlastností:
+17. V **Průzkumník řešení**v místní nabídce souboru **arithmetic.js** vyberte možnost **vlastnosti**. Nastavit tyto změny vlastností:
 
-    - Nastavte **vlastnost Zahrnout do VSIX** na **hodnotu True**.
+    - Nastavte vlastnost **Zahrnout v VSIX** na **hodnotu true**.
 
-    - Nastavte vlastnost **Kopírovat do výstupního adresáře** na **Kopírovat vždy**.
+    - Vlastnost **Kopírovat do výstupního adresáře** nastavte na hodnotu **vždy kopírovat**.
 
-18. V **Průzkumníku řešení**v místní nabídce projektu **SimpleMathVSIX** zvolte **Build**.
+18. V **Průzkumník řešení**v místní nabídce projektu **SimpleMathVSIX** vyberte možnost **sestavit**.
 
-19. Po úspěšném dokončení sestavení zvolte v místní nabídce projektu možnost **Otevřít složku v Průzkumníkovi souborů**. Přejděte na **\bin\debug\\**a spusťte jeho `SimpleMathVSIX.vsix` instalaci.
+19. Po úspěšném dokončení sestavení v místní nabídce projektu vyberte možnost **Otevřít složku v Průzkumníku souborů**. Přejděte na **\bin\debug \\ **a spusťte `SimpleMathVSIX.vsix` instalaci.
 
-20. Zvolte tlačítko **Instalovat** a nechte instalaci dokončit.
+20. Klikněte na tlačítko **nainstalovat** a nechte instalaci dokončeno.
 
 21. Restartujte sadu Visual Studio.
 
 ## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>Vytvoření ukázkové aplikace, která používá sadu SDK
 
-1. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
+1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-2. V seznamu kategorií šablon vyberte v **části JavaScript** **Windows Store**a pak vyberte šablonu **Blank App** .
+2. V seznamu kategorií šablon v části **JavaScript**vyberte **Windows Store**a pak vyberte šablonu **prázdná aplikace** .
 
-3. Do pole **Název** `ArithmeticUI`zadejte . Zvolte tlačítko **OK.**
+3. Do pole **název** zadejte `ArithmeticUI` . Klikněte na tlačítko **OK** .
 
-4. V **Průzkumníku řešení**otevřete místní nabídku pro projekt **AritmeticUI** a pak zvolte **Přidat** > **odkaz**.
+4. V **Průzkumník řešení**otevřete místní nabídku pro projekt **ArithmeticUI** a pak zvolte možnost **Přidat**  >  **odkaz**.
 
-5. V **části Windows**zvolte **Rozšíření**a všimněte si, že se zobrazuje **jednoduchá matematika.**
+5. V části **Windows**vyberte **rozšíření**a Všimněte si, že se zobrazí **jednoduché matematické** .
 
-6. Zaškrtněte políčko **Jednoduchá matematika** a pak zvolte tlačítko **OK.**
+6. Zaškrtněte políčko **jednoduché matematické** políčko a pak klikněte na tlačítko **OK** .
 
-7. V **Průzkumníku řešení**si v části **Reference**všimněte, že se zobrazí odkaz **Jednoduchá matematika.** Rozbalte ji a všimněte si, že existuje složka **\js,\\ ** která obsahuje **soubor arithmetic.js**. Soubor **Arithmetic.js** můžete otevřít a ověřit, zda byl nainstalován zdrojový kód.
+7. V **Průzkumník řešení**v části **References**si všimněte, že se zobrazí **jednoduchý matematický** odkaz. Rozbalte ho a Všimněte si, že existuje **Složka \\ \js** , která zahrnuje **arithmetic.js**. Můžete otevřít **arithmetic.js** a potvrdit, že byl váš zdrojový kód nainstalován.
 
-8. Pomocí následujícího kódu nahraďte obsah *souboru default.htm*.
+8. K nahrazení obsahu *default.htm*použijte následující kód.
 
    ```html
    <!DOCTYPE html>
@@ -192,7 +192,7 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
    </html>
    ```
 
-9. Pomocí následujícího kódu nahraďte obsah souboru *\js\default.js*.
+9. K nahrazení obsahu *\js\default.js*použijte následující kód.
 
     ```csharp
     (function () {
@@ -250,7 +250,7 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
     })();
     ```
 
-10. Nahraďte obsah souboru *\css\default.css* tímto kódem:
+10. Nahraďte obsah *\css\default.CSS* tímto kódem:
 
     ```xml
     form {
@@ -309,9 +309,9 @@ Tento návod učí, jak pomocí Jazyka JavaScript vytvořit jednoduchou matemati
 
     ```
 
-11. Zvolte klávesu **F5** pro sestavení a spuštění aplikace.
+11. Kliknutím na klávesu **F5** sestavíte a spustíte aplikaci.
 
-12. V unovém uzpo) aplikace zadejte libovolné dvě **=** čísla, vyberte operaci a pak zvolte tlačítko. Zobrazí se správný výsledek.
+12. V uživatelském rozhraní aplikace zadejte dvě čísla, vyberte operaci a pak klikněte na **=** tlačítko. Zobrazí se správný výsledek.
 
 ## <a name="see-also"></a>Viz také
 - [Vytvoření sady SDK (Software Development Kit)](../extensibility/creating-a-software-development-kit.md)

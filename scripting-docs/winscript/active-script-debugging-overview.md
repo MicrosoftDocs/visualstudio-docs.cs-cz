@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Active Script Debugging overview
 ms.assetid: ce4ec768-d017-4dfa-a7e3-cced3a29e679
@@ -13,12 +13,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8c06477b7cd9d069e416cfd7d86a8cd0cb7bfd5
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0181ee305c99a1d0af1d3e1e965c6ac8fe16f375
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835664"
 ---
 # <a name="active-script-debugging-overview"></a>Přehled ladění aktivních skriptů
 Rozhraní ladění aktivního skriptu umožňují jazykově neutrální a nezávislé ladění a podporují širokou škálu vývojových prostředí.  
@@ -26,7 +26,7 @@ Rozhraní ladění aktivního skriptu umožňují jazykově neutrální a nezáv
  ![Hostitelský proces skriptu](../winscript/media/scp56activdbgarchgif.gif "Scp56ActivDbgArchgif")  
 Obrázek 1  
   
- Jazykově neutrální ladicí prostředí může podporovat libovolný programovací jazyk nebo kombinaci programovacích jazyků, aniž by bylo nutné znát konkrétní znalosti těchto jazyků. Ladicí prostředí podporuje také rozjezd a zarážky mezi jazyky. (Tento přehled se zaměřuje hlavně na skriptovací jazyky, jako je VBScript a [!INCLUDE[javascript](../javascript/includes/javascript-md.md)].)  
+ Jazykově neutrální ladicí prostředí může podporovat libovolný programovací jazyk nebo kombinaci programovacích jazyků, aniž by bylo nutné znát konkrétní znalosti těchto jazyků. Ladicí prostředí podporuje také rozjezd a zarážky mezi jazyky. (Tento přehled se zaměřuje hlavně na jazykovou skriptovací jazyky, jako je například VBScript a [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] .)  
   
  Hostitelský ladicí program lze automaticky použít u libovolného aktivního skriptovacího hostitele, jako je například Internet Explorer nebo vlastní hostitel. Hostitel řídí, co ladicí program prezentuje uživateli, ze struktury stromu dokumentu až po obsah a barvy syntaxe dokumentů ladění. To umožňuje, aby byl laděný zdrojový kód zobrazen v kontextu hostitelského dokumentu. Například Internet Explorer může zobrazit skript na stránce HTML.  
   
@@ -111,10 +111,10 @@ Obrázek 1
   Poskytuje asynchronní přístup k synchronní operaci ladění.  
   
   [IDebugAsyncOperationCallBack – rozhraní](../winscript/reference/idebugasyncoperationcallback-interface.md)  
-  Poskytuje stavové události týkající se postupu vyhodnocení rozhraní `IDebugAsyncOperation`.  
+  Poskytuje události stavu související se průběhem `IDebugAsyncOperation` hodnocení rozhraní.  
   
   [IEnumDebugExpressionContexts – rozhraní](../winscript/reference/ienumdebugexpressioncontexts-interface.md)  
-  Vytvoří výčet kolekce objektů `IDebugExpressionContexts`.  
+  Vytvoří výčet kolekce `IDebugExpressionContexts` objektů.  
   
   [IProvideExpressionContexts – rozhraní](../winscript/reference/iprovideexpressioncontexts-interface.md)  
   Poskytuje způsob, jak vytvořit výčet kontextů výrazů známých určitou komponentou.  
@@ -125,7 +125,7 @@ Obrázek 1
   [IDebugStackFrameSnifferEx – rozhraní](../winscript/reference/idebugstackframesnifferex-interface.md)  
   Vytvoří výčet logických rámců zásobníku pro PDM.  
   
-## <a name="hosts"></a>Dvou  
+## <a name="hosts"></a>Hostitelé  
  Hostitel:  
   
 - Hostuje jazykové moduly.  
@@ -143,7 +143,7 @@ Obrázek 1
 - Inteligentní hostitel podporuje větší sadu rozhraní, která umožňuje definovat strom dokumentů, obsah dokumentů a barevné zvýrazňování syntaxe. Existuje sada pomocných rozhraní, která jsou popsaná v následující podčásti, což je mnohem snazší, aby hostitel byl inteligentním hostitelem.  
   
 ### <a name="smart-host-helper-interfaces"></a>Pomocná rozhraní pro inteligentní hostitele  
- Metody `IDebugDocumentHelper` poskytují výrazně zjednodušenou sadu rozhraní, kterou může hostitel použít k získání výhod inteligentního hostování bez nutnosti pracovat s úplnými složitostmi (a výkonem) úplných hostitelských rozhraní.  
+ `IDebugDocumentHelper`Metody poskytují výrazně zjednodušenou sadu rozhraní, kterou může hostitel použít k získání výhod inteligentního hostování bez nutnosti zajistit úplnou složitost (a sílu) úplných hostitelských rozhraní.  
   
  Hostitel není potřebný k použití těchto rozhraní. Použití těchto rozhraní se však může vyhnout implementaci nebo použití několika složitějších rozhraní.  
   
@@ -181,10 +181,10 @@ Obrázek 1
  Rozhraní implementovaná nástrojem PDM jménem hostitele:  
   
  [IDebugApplicationNode – rozhraní](../winscript/reference/idebugapplicationnode-interface.md)  
- Rozšiřuje funkčnost rozhraní `IDebugDocumentProvider` tím, že poskytuje kontext v rámci stromu projektu.  
+ Rozšiřuje funkčnost `IDebugDocumentProvider` rozhraní tím, že poskytuje kontext v rámci stromu projektu.  
   
 ## <a name="debugger-ide"></a>Rozhraní IDE pro ladicí program  
- Rozhraní IDE je uživatelské rozhraní pro ladění nezávislé na jazyce. Poskytuje:  
+ Rozhraní IDE je uživatelské rozhraní pro ladění nezávislé na jazyce. Tato služba poskytuje:  
   
 - Prohlížeče a editory dokumentů.  
   
@@ -207,13 +207,13 @@ Obrázek 1
   Poskytuje lepší kontrolu nad uživatelským rozhraním (UI) ladicího programu pro externí komponentu.  
   
   [IDebugExpressionCallBack – rozhraní](../winscript/reference/idebugexpressioncallback-interface.md)  
-  Poskytuje události stavu pro `IDebugExpression` průběh hodnocení.  
+  Poskytuje události stavu pro `IDebugExpression` průběh vyhodnocení.  
   
   [IDebugDocumentTextEvents – rozhraní](../winscript/reference/idebugdocumenttextevents-interface.md)  
   Poskytuje události indikující změny přidruženého textového dokumentu.  
   
   [IDebugApplicationNodeEvents – rozhraní](../winscript/reference/idebugapplicationnodeevents-interface.md)  
-  Poskytuje rozhraní události pro rozhraní `IDebugApplicationNode`.  
+  Poskytuje rozhraní události pro `IDebugApplicationNode` rozhraní.  
   
 ### <a name="machine-debug-manager"></a>Správce ladění počítače  
  Správce ladění počítače poskytuje propojení bod mezi virtuálními aplikacemi a ladicími programy tím, že uchovává a vytváří výčet seznamů aktivních virtuálních aplikací.  
@@ -225,7 +225,7 @@ Obrázek 1
  Primární rozhraní pro správce ladění počítače.  
   
  [IMachineDebugManagerCookie – rozhraní](../winscript/reference/imachinedebugmanagercookie-interface.md)  
- Podobně jako rozhraní `IMachineDebugManager`, ale toto rozhraní podporuje soubory cookie ladění.  
+ Podobně jako `IMachineDebugManager` rozhraní, ale toto rozhraní podporuje soubory cookie ladění.  
   
  [IMachineDebugManagerEvents – rozhraní](../winscript/reference/imachinedebugmanagerevents-interface.md)  
  Signalizuje změny v seznamu běžící aplikace udržované správcem ladění počítače.  
@@ -291,5 +291,5 @@ Obrázek 1
   [ISimpleConnectionPoint – rozhraní](../winscript/reference/isimpleconnectionpoint-interface.md)  
   Poskytuje jednoduchý způsob, jak popsat a vytvořit výčet událostí vyvolaných v určitém bodu připojení pro skriptovací stroje.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Rozhraní ladicího programu aktivních skriptů](../winscript/reference/active-script-debugger-interfaces.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postup: Ladění vlastního ladicího modulu | Dokumenty společnosti Microsoft'
+title: 'Postupy: ladění vlastního ladicího stroje | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debug engines, debugging
 - debugging [Debugging SDK], custom debug engines
@@ -11,67 +11,67 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c79790bfc9c9cd3767a453258b8c2d340f64d029
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: a65e69655c4e8699bd267f1835ec0c49603014d7
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80738588"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903312"
 ---
-# <a name="how-to-debug-a-custom-debug-engine"></a>Postup: Ladění vlastního ladicího modulu
-Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> metody. To znamená, že DE je spuštěn pod [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kontrolou instance řízení typu projektu. Tato instance však [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nelze ladit DE. Následuje postup, který umožňuje ladit vlastní DE.
+# <a name="how-to-debug-a-custom-debug-engine"></a>Postupy: ladění vlastního ladicího stroje
+Typ projektu spustí ladicí modul (DE) z <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> metody. To znamená, že DE se spustí pod kontrolou instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] řízení typu projektu. Nicméně, tato instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nemůže LADIT de. Níže jsou uvedené kroky, které vám umožní ladit vlastní DE.
 
 > [!NOTE]
-> : V postupu "Ladění vlastního ladicího stroje" musíte počkat, než se k němu de spustí. Pokud umístíte okno se zprávou v blízkosti začátku de, který se zobrazí při spuštění DE, můžete připojit v tomto okamžiku a zrušte zaškrtnutí maského okna pokračovat. Tímto způsobem můžete zachytit všechny události DE.
+> : V postupu ladění vlastního ladicího stroje musíte počkat, až se spustí, než se k němu můžete připojit. Pokud umístíte okno se zprávou poblíž začátku ovládacího panelu DE, který se zobrazí při zahájení spuštění, můžete se v tomto okamžiku připojit a pak zrušit zaškrtnutí okna se zprávou, abyste mohli pokračovat. Tímto způsobem můžete zachytit všechny události DE.
 
 > [!WARNING]
-> Před pokusem o následující postupy je nutné nainstalovat vzdálené ladění. Podrobnosti najdete [v tématu Vzdálené ladění.](../../debugger/remote-debugging.md)
+> Předtím, než se pokusíte provést následující postupy, musíte mít nainstalováno vzdálené ladění. Podrobnosti najdete v tématu [vzdálené ladění](../../debugger/remote-debugging.md) .
 
 ## <a name="debug-a-custom-debug-engine"></a>Ladění vlastního ladicího stroje
 
-1. Spusťte *nástroj msvsmon.exe*, vzdálený monitor ladění.
+1. Spusťte *msvsmon.exe*, sledování vzdáleného ladění.
 
-2. V nabídce **Nástroje** v *souboru msvsmon.exe*vyberte **Možnosti** a otevřete dialogové okno **Volby.**
+2. V nabídce **nástroje** v *msvsmon.exe*vyberte **Možnosti** a otevřete tak dialogové okno **Možnosti** .
 
-3. Vyberte možnost "žádné ověřování" a klepněte na tlačítko **OK**.
+3. Vyberte možnost bez ověřování a klikněte na tlačítko **OK**.
 
-4. Spusťte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instanci a otevřete vlastní projekt DE.
+4. Spusťte instanci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a otevřete vlastní de Project.
 
-5. Spusťte druhou [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instanci a otevřete vlastní projekt, který spustí DE (pro vývoj, to je obvykle v podregistru experimentální registru, který je nastaven při instalaci VSIP).
+5. Spusťte druhou instanci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a otevřete svůj vlastní projekt, který SPUSTÍ de (pro vývoj), obvykle se jedná o experimentální podregistr registru, který je nastaven při instalaci VSIP).
 
-6. V této druhé [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]instanci načíst zdrojový soubor z vlastního projektu a spustit program, který má být laděn. Počkejte několik okamžiků, aby DE načíst nebo počkejte, dokud je přístupů zarážka.
+6. V této druhé instanci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte zdrojový soubor z vlastního projektu a spusťte program, který se má ladit. Chvíli počkejte, aby bylo možné načíst DE Load, nebo počkejte, až se zarážka dorazí.
 
-7. V první instanci [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (s de projektu) vyberte připojit k **procesu** z nabídky **ladění.**
+7. V první instanci nástroje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (s projektem de) vyberte možnost **připojit k procesu** z nabídky **ladění** .
 
-8. V dialogovém okně **Připojit k procesu** změňte **přenos** na **vzdálený (nativní pouze bez ověřování).**
+8. V dialogovém okně **připojit k procesu** změňte **přenos** na **vzdálené (nativní pouze bez ověřování)**.
 
-9. Změňte **kvalifikátor** na název počítače (poznámka: existuje historie položek, takže tento název je třeba zadat pouze jednou).
+9. Změňte **kvalifikátor** na název počítače (Poznámka: existuje historie položek, takže je třeba zadat tento název pouze jednou).
 
-10. V seznamu **Dostupné procesy** vyberte instanci de, která je spuštěna, a klepněte na tlačítko **Připojit.**
+10. V seznamu **procesy k dispozici** vyberte instanci nástroje de, která běží, a klikněte na tlačítko **připojit** .
 
-11. Po načtení symbolů ve vašem DE umístěte zarážky v kódu DE.
+11. Poté, co byly symboly načteny do DE, umístěte zarážky do kódu DE.
 
-12. Pokaždé, když zastavíte a restartujete proces ladění, opakujte kroky 6 až 10.
+12. Pokaždé, když zastavíte a pak znovu spustíte proces ladění, opakujte kroky 6 až 10.
 
 ## <a name="debug-a-custom-project-type"></a>Ladění vlastního typu projektu
 
-1. Začněte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v podregistru normální registru a načtěte projekt typu projektu (toto je zdroj pro typ projektu, nikoli instance typu projektu).
+1. Spusťte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v normálním podregistru a načtěte projekt typu projektu (Toto je zdroj pro typ projektu, nikoli instanci typu projektu).
 
-2. Otevřete vlastnosti projektu a přejděte na stránku **Ladění.** Příkaz **emitován**zadejte [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] cestu k rozhraní IDE (ve výchozím nastavení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se jedná o soubor *[drive]* \Program Files\Microsoft 8\Common7\IDE\devenv.exe).
+2. Otevřete vlastnosti projektu a přejdete na stránku **ladění** . Pro **příkaz**zadejte cestu k [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ve výchozím nastavení to je *[jednotka]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe).
 
-3. Pro **argumenty příkazu**zadejte `/rootsuffix exp` podregistr experimentálního registru (vytvořený při instalaci VSIP).
+3. Pro **argumenty příkazu**zadejte `/rootsuffix exp` experimentální podregistr registru (vytvořený při instalaci VSIP).
 
-4. Klepnutím na **tlačítko OK** změny přijmete.
+4. Potvrďte změny kliknutím na tlačítko **OK** .
 
-5. Začněte s typem projektu stisknutím **klávesy F5**. Tím se spustí druhá [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]instance .
+5. Stisknutím klávesy **F5**spusťte typ projektu. Tím se spustí druhá instance [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-6. V tomto okamžiku můžete umístit zarážky ve zdrojovém kódu typu projektu.
+6. V tomto okamžiku můžete umístit zarážky do zdrojového kódu typu projektu.
 
-7. Ve druhé instanci aplikace [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]načtěte nebo vytvořte novou instanci typu projektu. Během načítání nebo vytváření může být přístupů zarážky.
+7. Ve druhé instanci aplikace [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte nebo vytvořte novou instanci typu projektu. Během zátěže nebo vytvoření může docházet ke zarážce.
 
-8. Ladění typu projektu.
+8. Ladit typ projektu.
 
-9. Pokud se rozhodnete ladit proces spouštění DE, můžete provést kroky v postupu "Ladění vlastního ladicího stroje", který se připojí k de po jeho spuštění. To vám dává tři [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instance spuštění: jeden pro zdroj typu projektu, druhý pro typ instance projektu a třetí připojené k DE.
+9. Pokud se rozhodnete ladit proces spuštění příkazu DE, můžete postupovat podle postupu v tématu "ladění vlastního ladicího stroje", aby se připojil ke složce DE po jejím spuštění. To poskytuje tři instance, které jsou [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spuštěny: jeden pro váš typ projektu, druhý pro instanci typu projektu a třetí připojený k de.
 
 ## <a name="see-also"></a>Viz také
-- [Vytvoření vlastního ladicího modulu](../../extensibility/debugger/creating-a-custom-debug-engine.md)
+- [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)

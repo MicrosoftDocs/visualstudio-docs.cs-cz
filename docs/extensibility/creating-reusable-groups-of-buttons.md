@@ -1,7 +1,7 @@
 ---
-title: Vytváření opakovaně použitelných skupin tlačítek | Dokumenty společnosti Microsoft
+title: Vytváření opakovaně použitelných skupin tlačítek | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - button groups, creating in VSPackages
 - VSPackages, creating reusable button groups
@@ -12,27 +12,27 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddfba6701890f73ce6438ddc03a338912841a37d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 477014ed77b60821ad191ba6842999be6f528fee
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903642"
 ---
 # <a name="create-reusable-groups-of-buttons"></a>Vytvoření opakovaně použitelných skupin tlačítek
-Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně v nabídce nebo panelu nástrojů. Libovolnou skupinu příkazů lze znovu použít přiřazením k různým nadřazeným nabídkám v části CommandPlacements souboru *.vsct.*
+Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně v nabídce nebo na panelu nástrojů. Libovolnou skupinu příkazů lze znovu použít přiřazením k různým nadřazeným nabídkám v části CommandPlacements souboru *. vsct* .
 
- Skupiny příkazů obvykle obsahují tlačítka, ale mohou také obsahovat jiné nabídky nebo pole se seznamem.
+ Skupiny příkazů obvykle obsahují tlačítka, ale mohou obsahovat také další nabídky nebo pole se seznamem.
 
 ## <a name="to-create-a-reusable-group-of-buttons"></a>Vytvoření opakovaně použitelné skupiny tlačítek
 
-1. Vytvořte projekt VSIX s názvem `ReusableButtons`. Další informace naleznete [v tématu Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Vytvořte projekt VSIX s názvem `ReusableButtons` . Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Při otevření projektu přidejte vlastní šablonu položky příkazu s názvem **ReusableCommand**. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel projektu a vyberte **přidat** > **novou položku**. V dialogovém okně **Přidat novou položku** přejděte na položku**Rozšiřitelnost** **jazyka Visual C#** > a vyberte **vlastní příkaz**. V poli **Název** v dolní části okna změňte název příkazového souboru na *ReusableCommand.cs*.
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **ReusableCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *ReusableCommand.cs*.
 
-3. V souboru *.vsct* přejděte do části Symboly a vyhledejte element GuidSymbol, který obsahuje skupiny a příkazy pro projekt. Měl by být pojmenován guidReusableCommandPackageCmdSet.
+3. V souboru *. vsct* přejít do části symboly a vyhledejte element GuidSymbol, který obsahuje skupiny a příkazy pro projekt. Měl by mít název guidReusableCommandPackageCmdSet.
 
-4. Přidejte Symbol ID pro každé tlačítko, které přidáte do skupiny, jako v následujícím příkladu.
+4. Přidejte IDSymbol pro každé tlačítko, které přidáte do skupiny, jak je uvedeno v následujícím příkladu.
 
     ```xml
     <GuidSymbol name="guidReusableCommandPackageCmdSet" value="{7f383b2a-c6b9-4c1d-b4b8-a26dc5b60ca1}">
@@ -42,9 +42,9 @@ Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně 
     </GuidSymbol>
     ```
 
-     Ve výchozím nastavení vytvoří šablona položky příkazu skupinu s názvem **MyMenuGroup** a tlačítko, které má zadaný název, spolu s položkou IDSymbol pro každou z nich.
+     Ve výchozím nastavení Šablona položky příkazu vytvoří skupinu s názvem **MyMenuGroup** a tlačítko s názvem, který jste zadali, spolu s položkou IDSymbol pro každou z nich.
 
-5. V části Skupiny vytvořte prvek Skupiny, který má stejné atributy GUID a ID jako ty, které jsou uvedeny v části Symboly. Můžete také použít existující skupinu nebo položku, která je poskytnuta šablonou příkazu, jako v následujícím příkladu. Tato skupina se zobrazí v nabídce **Nástroje.**
+5. V části skupiny vytvořte prvek skupiny, který má stejné atributy GUID a ID jako ty, které jsou uvedeny v části symboly. Můžete také použít existující skupinu nebo použít položku, která je poskytnuta šablonou příkazu, jak je uvedeno v následujícím příkladu. Tato skupina se zobrazí v nabídce **nástroje** .
 
     ```xml
     <Groups>
@@ -54,11 +54,11 @@ Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně 
     </Groups>
     ```
 
-## <a name="to-create-a-group-of-buttons-for-reuse"></a>Vytvoření skupiny tlačítek pro opakované použití
+## <a name="to-create-a-group-of-buttons-for-reuse"></a>Vytvoření skupiny tlačítek k opakovanému použití
 
-1. Příkaz nebo nabídku můžete umístit do skupiny buď pomocí skupiny jako nadřazené položky v definici příkazu nebo nabídky, nebo umístěním příkazu nebo nabídky do skupiny pomocí oddílu CommandPlacements.
+1. Příkaz nebo nabídku můžete do skupiny umístit buď pomocí skupiny jako nadřazený v definici příkazu nebo nabídky, nebo vložením příkazu nebo nabídky do skupiny pomocí oddílu CommandPlacements.
 
-     V části Tlačítka definujte tlačítko, které má vaši skupinu jako nadřazenou skupinu, nebo použijte tlačítko, které poskytuje šablona balíčku, jak je znázorněno v následujícím příkladu.
+     V části tlačítka definujte tlačítko, které má vaši skupinu jako nadřazenou, nebo použijte tlačítko poskytované šablonou balíčku, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <Button guid="guidReusableCommandPackageCmdSet" id="ReusableCommandId" priority="0x0100" type="Button">
@@ -70,7 +70,7 @@ Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně 
     </Button>
     ```
 
-2. Pokud se tlačítko musí zobrazit ve více než jedné skupině, vytvořte pro něj položku v části CommandPlacements, která musí být umístěna za oddíl Příkazy. Nastavte atributy GUID a ID elementu CommandPlacement tak, aby odpovídaly atributům tlačítka, které chcete umístit, a potom nastavte identifikátor GUID a ID jeho nadřazeného prvku na atributy cílové skupiny, jak je znázorněno v následujícím příkladu.
+2. Pokud se tlačítko musí objevit ve více než jedné skupině, vytvořte pro něj položku v části CommandPlacements, která se musí umístit za oddíl Commands. Nastavte identifikátory GUID a ID elementu CommandPlacement tak, aby odpovídaly tlačítkům, které chcete umístit, a pak nastavte identifikátor GUID a ID jeho nadřazeného prvku na ty, jak je znázorněno v následujícím příkladu.
 
     ```xml
     <CommandPlacements>
@@ -81,13 +81,13 @@ Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně 
     ```
 
     > [!NOTE]
-    > Hodnota pole Priorita určuje pozici příkazu v nové skupině příkazů. Priority nastavené v elementu CommandPlacement přepíší ty, které jsou nastaveny v definici položky. Příkazy s nižšími hodnotami priority jsou zobrazeny před příkazy, které mají vyšší hodnoty priority. Duplicitní hodnoty priority jsou povoleny, ale relativní umístění příkazů, které mají stejnou hodnotu priority nelze zaručit, protože pořadí, ve kterém příkaz **devenv /setup** vytvoří konečné rozhraní z registru nemusí být konzistentní.
+    > Hodnota pole Priorita určuje pozici příkazu v nové skupině příkazů. Priority nastavené v elementu CommandPlacement přepisují ty nastavené v definici položky. Příkazy, které mají hodnoty s nižší prioritou, se zobrazí před příkazy, které mají hodnoty s vyšší prioritou. Duplicitní hodnoty priority jsou povoleny, ale relativní umístění příkazů, které mají stejnou hodnotu priority, nelze zaručit, protože pořadí, ve kterém příkaz **devenv/Setup** vytvoří konečné rozhraní z registru, nemusí být konzistentní.
 
-## <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>V nabídce umístit opakovaně použitelnou skupinu tlačítek
+## <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>Vložení opakovaně použitelné skupiny tlačítek v nabídce
 
-1. Vytvořte položku `CommandPlacements` v oddílu. Nastavte identifikátor GUID a `CommandPlacement` ID prvku na identifikátory vaší skupiny a nastavte nadřazený identifikátor GUID a ID na identifikátory cílového umístění.
+1. Vytvořte položku v `CommandPlacements` části. Nastavte identifikátor GUID a ID `CommandPlacement` elementu na hodnoty ve vaší skupině a nastavte nadřazený identifikátor GUID a ID na hodnoty cílového umístění.
 
-    Sekce CommandPlacements by měla být umístěna hned za oddíl emaprovátek příkazy:
+    Oddíl CommandPlacements by měl být umístěn hned za oddílem Commands:
 
    ```xml
    <CommandTable>
@@ -98,9 +98,9 @@ Skupina příkazů je kolekce příkazů, které se vždy zobrazují společně 
    </CommandTable>
    ```
 
-    Skupinu příkazů lze zahrnout do více než jedné nabídky. Nadřazená nabídka může být ta, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kterou jste vytvořili, která je dodána (jak je popsáno v *shellcmddef.vsct* nebo *SharedCmdDef.vsct*) nebo ta, která je definována v jiném VSPackage. Počet vrstev rodičovství je neomezený, pokud je nadřazená nabídka nakonec připojena k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] místní nabídce, která je zobrazena v balíčku VSPackage.
+    Skupinu příkazů lze zahrnout do více než jedné nabídky. Nadřazená nabídka může být ta, kterou jste vytvořili, kterou poskytuje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (jak je popsáno v *ShellCmdDef. vsct* nebo *SharedCmdDef. vsct*), nebo v jednom, která je definována v jiné VSPackage. Počet nadřazených vrstev je neomezený, pokud je nadřazená nabídka nakonec připojena k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo k místní nabídce, která je zobrazena v VSPackage.
 
-    Následující příklad umístí skupinu na panelu nástrojů **Průzkumníka řešení** napravo od ostatních tlačítek.
+    Následující příklad umístí skupinu na panel nástrojů **Průzkumník řešení** na pravé straně ostatních tlačítek.
 
    ```xml
    <CommandPlacements>

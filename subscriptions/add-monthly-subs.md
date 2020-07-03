@@ -5,14 +5,14 @@ ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
 ms.date: 06/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Naučte se nově zakoupit měsíční předplatná sady Visual Studio na portálu pro správu předplatných.
-ms.openlocfilehash: abe0b7a84f0979de4bc1f59b6f82144c804c8c7e
-ms.sourcegitcommit: 60315ba949aca1ff06fe431dbcbcfb0fedc1e8d3
+ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85307018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904695"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Přidání nových měsíčních předplatných sady Visual Studio na portál pro správu předplatných
 Při nákupu nových měsíčních předplatných sady Visual Studio pomocí předplatného Azure je možná budete muset přidat na portál pro správu předplatných, aby je uživatelé mohli přiřadit.  

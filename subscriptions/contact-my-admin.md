@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného s žádostí o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: 117bdb82c878e498862dd967615fde9d6ba632eb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2bf4857ebb794baef8098194d90cff7fee1ecc8f
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904563"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
@@ -32,7 +32,7 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Prostředky
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>Viz také

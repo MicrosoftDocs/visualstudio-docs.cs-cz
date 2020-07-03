@@ -1,43 +1,43 @@
 ---
-title: Vytvoření sady pro vývoj softwaru | Dokumenty společnosti Microsoft
+title: Vytvoření sady SDK (Software Development Kit) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7cf6cf092edf96280c566018231cc00d34c0994
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904112"
 ---
-# <a name="create-a-software-development-kit"></a>Vytvoření sady pro vývoj softwaru
+# <a name="create-a-software-development-kit"></a>Vytvoření sady SDK (Software Development Kit)
 
-Sada Pro vývoj softwaru (SDK) je kolekce api, na které můžete odkazovat jako na jednu položku v sadě Visual Studio. Dialogové okno **Správce odkazů** obsahuje seznam všech sad SDK, které jsou relevantní pro projekt. Když přidáte sdk do projektu, rozhraní API jsou k dispozici v sadě Visual Studio.
+Sada SDK (Software Development Kit) je kolekce rozhraní API, která můžete odkazovat jako na jednu položku v sadě Visual Studio. Dialogové okno **Správce odkazů** obsahuje seznam všech sad SDK, které jsou relevantní pro projekt. Když přidáte sadu SDK do projektu, rozhraní API jsou k dispozici v sadě Visual Studio.
 
 Existují dva typy sad SDK:
 
-- Sady SDK platformy jsou povinné součásti pro vývoj aplikací pro platformu. Například [!INCLUDE[win81](../debugger/includes/win81_md.md)] sada SDK je [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] vyžadována k vývoji aplikací.
+- Sady SDK platforem jsou povinné komponenty pro vývoj aplikací pro platformu. [!INCLUDE[win81](../debugger/includes/win81_md.md)]Sada SDK je například nutná pro vývoj [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikací.
 
-- Sady SDK rozšíření jsou volitelné součásti, které rozšiřují platformu, ale nejsou povinné pro vývoj aplikací pro tuto platformu.
+- Sady SDK rozšíření jsou volitelné komponenty, které šíří platformu, ale nejsou povinné pro vývoj aplikací pro tuto platformu.
 
-Následující části popisují obecnou infrastrukturu sad SDK a jak vytvořit platformu SDK a rozšíření SDK.
+V následujících částech jsou popsány obecné infrastruktury sady SDK a postup vytvoření sady SDK platformy a sady SDK rozšíření.
 
 ## <a name="platform-sdks"></a>Sady SDK platformy
 
-Sady SDK platformy jsou nutné k vývoji aplikací pro platformu. [!INCLUDE[win81](../debugger/includes/win81_md.md)] Sada SDK je například vyžadována [!INCLUDE[win81](../debugger/includes/win81_md.md)]k vývoji aplikací pro .
+Sady SDK platformy se vyžadují pro vývoj aplikací pro platformu. [!INCLUDE[win81](../debugger/includes/win81_md.md)]Sada SDK je například nutná pro vývoj aplikací pro [!INCLUDE[win81](../debugger/includes/win81_md.md)] .
 
 ### <a name="installation"></a>Instalace
 
-Všechny sady SDK platformy budou nainstalovány na *adrese HKLM\Software\Microsoft\Microsoft SDK\\ @InstallationFolder [TPI]\v[TPV]\\= [Kořenová sada SDK]*. V souladu [!INCLUDE[win81](../debugger/includes/win81_md.md)] s tím je sada SDK nainstalována na adrese *HKLM\Software\Microsoft\Microsoft SDKs\Windows\v8.1*.
+Všechny sady SDK platformy se nainstalují na *HKLM\Software\Microsoft\Microsoft sady SDK \\ [TPI] \v [TPV] \\ @InstallationFolder = [kořen SDK]*. Proto se [!INCLUDE[win81](../debugger/includes/win81_md.md)] sada SDK nainstaluje na *HKLM\Software\Microsoft\Microsoft SDKs\Windows\v8.1*.
 
-### <a name="layout"></a>Rozložení
+### <a name="layout"></a>Layout
 
-Sady SDK platformy mají následující rozložení:
+Sady SDK platforem mají následující rozložení:
 
 ```
 \[InstallationFolder root]
@@ -52,35 +52,35 @@ Sady SDK platformy mají následující rozložení:
 
 | Node | Popis |
 |------------------------| - |
-| *Složka Reference* | Obsahuje binární soubory, které obsahují api, které mohou být kódovány proti. Ty mohou zahrnovat soubory nebo sestavení metadat systému Windows (WinMD). |
-| *Složka DesignTime* | Obsahuje soubory, které jsou potřeba pouze v době před spuštěním/laděním. Mohou mezi ně patřit dokumenty XML, knihovny, záhlaví, binární soubory návrhu panelu nástrojů, artefakty MSBuild atd.<br /><br /> Dokumenty XML by byly v ideálním případě umístěny do složky *\DesignTime,* ale dokumenty XML pro odkazy budou nadále umístěny vedle referenčního souboru v sadě Visual Studio. Například dokument XML pro referenci<em>\Reference\\[config]\\[arch]\sample.dll</em> bude *\Reference [config]\\\\[arch]\sample.xml*a lokalizovaná verze tohoto dokumentu bude *\Reference [config]\\\\[arch]\\[locale]\sample.xml*. |
-| *Konfigurační* složka | Mohou existovat pouze tři složky: *Ladění*, *Maloobchod* a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *commonconfiguration,* pokud by měla být spotřebována stejná sada souborů sady SDK, bez ohledu na konfiguraci, na kterou bude příjemce sady SDK cílit. |
-| *Složka Architektura* | Může existovat libovolná podporovaná složka *architektury.* Visual Studio podporuje následující architektury: x86, x64, ARM a neutrální. Poznámka: Win32 mapuje na x86 a AnyCPU mapy na neutrální.<br /><br /> MSBuild vypadá pouze v části *\CommonConfiguration\neutral* pro sady SDK platformy. |
-| *Soubor SDKManifest.xml* | Tento soubor popisuje, jak visual studio by měl využívat sdk. Podívejte se na manifest [!INCLUDE[win81](../debugger/includes/win81_md.md)]sady SDK pro:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** Hodnota, kterou prohlížeč objektů zobrazí v seznamu Procházet.<br /><br /> **Platformidentity:** Existence tohoto atributu říká Visual Studio a MSBuild, že Sada SDK je sada SDK platformy a že odkazy přidané z něj by neměly být zkopírovány místně.<br /><br /> **TargetFramework:** Tento atribut používá Visual Studio k zajištění, že pouze projekty, které cílí na stejné architektury, jak je uvedeno v hodnotě tohoto atributu můžete spotřebovat SDK.<br /><br /> **MinVSVersion:** Tento atribut používá visual studio využívat pouze sady SDK, které se na něj vztahují.<br /><br /> **Odkaz:** Tento atribut musí být určen pouze pro ty odkazy, které obsahují ovládací prvky. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete níže. |
+| *Odkazuje na* složku | Obsahuje binární soubory, které obsahují rozhraní API, se kterými se dá zakódovat. Ty můžou zahrnovat soubory Windows metadata (WinMD) nebo sestavení. |
+| *DesignTime* složka | Obsahuje soubory, které jsou potřeba pouze v době před spuštěním nebo ladění. Mezi ně můžou patřit dokumentace XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále.<br /><br /> Dokumentace XML by v ideálním případě měla být umístěna do složky *\DesignTime* , ale dokumenty XML pro reference budou nadále umístěny společně s referenčním souborem v aplikaci Visual Studio. Například DOC XML pro referenci<em>\References \\ [config] \\ [arch] \sample.dll</em> bude *\References \\ [config] \\ [arch] \sample.xml*a lokalizovaná verze tohoto dokumentu bude *\References \\ [config] \\ [arch] \\ [locale] \sample.xml*. |
+| *Konfigurační* složka | K dispozici můžou být jenom tři složky: *Debug*, *Retail* a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *CommonConfiguration* , pokud by měla být spotřebována stejná sada souborů sady SDK bez ohledu na konfiguraci, kterou bude příjemce sady SDK cílit. |
+| Složka *architektury* | Může existovat libovolná podporovaná složka *architektury* . Visual Studio podporuje následující architektury: x86, x64, ARM a neutrální. Poznámka: Win32 mapuje na x86 a AnyCPU se mapuje na neutrální.<br /><br /> Nástroj MSBuild hledá v sadách SDK platformy pouze *\CommonConfiguration\neutral* . |
+| *SDKManifest.xml* | Tento soubor popisuje, jak by měla sada Visual Studio využívat sadu SDK. Podívejte se na manifest sady SDK pro [!INCLUDE[win81](../debugger/includes/win81_md.md)] :<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **Zobrazovaný název:** Hodnota, kterou Prohlížeč objektů zobrazuje v seznamu procházení.<br /><br /> **PlatformIdentity:** Existence tohoto atributu oznamuje sadě Visual Studio a MSBuild, že sada SDK je Platform SDK a že odkazy z nich přidané by neměly být kopírovány lokálně.<br /><br /> **TargetFramework:** Tento atribut je používán sadou Visual Studio k zajištění toho, aby sada SDK mohla využívat pouze projekty, které cílí na stejné architektury, jak je uvedeno v hodnotě tohoto atributu.<br /><br /> **MinVSVersion:** Tento atribut používá aplikace Visual Studio ke zpracování pouze sad SDK, které na něj vztahují.<br /><br /> **Odkaz:** Tento atribut musí být zadán pouze pro odkazy obsahující ovládací prvky. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete níže. |
 
 ## <a name="extension-sdks"></a>Sady SDK rozšíření
 
-Následující části popisují, co je třeba udělat pro nasazení sady SDK rozšíření.
+Následující části popisují, co je třeba udělat k nasazení sady SDK rozšíření.
 
 ### <a name="installation"></a>Instalace
 
-Sady SDK rozšíření lze nainstalovat pro konkrétního uživatele nebo pro všechny uživatele bez zadání klíče registru. Chcete-li nainstalovat sadu SDK pro všechny uživatele, použijte následující cestu:
+Sady SDK rozšíření je možné nainstalovat pro konkrétního uživatele nebo pro všechny uživatele bez zadání klíče registru. Chcete-li nainstalovat sadu SDK pro všechny uživatele, použijte následující cestu:
 
-*%Program Files%\Cílová platforma\<\>sad Microsoft SDK \v<číslo\>verze platformy \ExtensionSDKs*
+*% Program Files%\Microsoft SDK \<target platform\> \v<číslo verze platformy \> \ExtensionSDKs*
 
-Pro instalaci specifickou pro uživatele použijte následující cestu:
+V případě instalace specifické pro uživatele použijte následující cestu:
 
-*%USERPROFILE%\AppData\Local\Microsoft SDKs cílová platforma\<\>\>\v<číslo verze platformy \ExtensionSDKs*
+*%USERPROFILE%\AppData\Local\Microsoft SDK \<target platform\> \v<číslo verze platformy \> \ExtensionSDKs*
 
-Pokud chcete použít jiné umístění, musíte udělat jednu ze dvou věcí:
+Pokud chcete použít jiné umístění, musíte udělat jednu z následujících dvou věcí:
 
-1. Zadejte jej v klíči registru:
+1. Zadejte ho do klíče registru:
 
-     **HKLM\Software\Microsoft\Microsoft\<SDKs cílová platforma>\v<\>číslo\<verze platformy \<\ExtensionSDKs SDKName>SDKVersion>**\
+     **HKLM\Software\Microsoft\Microsoft SDK \<target platform> \v<číslo verze platformy \> \ExtensionSDKs\<SDKName>\<SDKVersion>**\
 
-     a přidejte podklíč (Výchozí), který `<path to SDK><SDKName><SDKVersion>`má hodnotu .
+     a přidejte podklíč (výchozí), který má hodnotu `<path to SDK><SDKName><SDKVersion>` .
 
-2. Přidejte vlastnost `SDKReferenceDirectoryRoot` MSBuild do souboru projektu. Hodnota této vlastnosti je středník oddělený seznam adresářů, ve kterých rozšíření sady SDK, na které chcete odkazovat.
+2. Přidejte `SDKReferenceDirectoryRoot` do souboru projektu vlastnost MSBuild. Hodnota této vlastnosti je seznam adresářů oddělených středníky, ve kterých se nacházejí rozšiřující sady SDK, na které chcete odkazovat.
 
 ### <a name="installation-layout"></a>Rozložení instalace
 
@@ -103,13 +103,13 @@ Sady SDK rozšíření mají následující rozložení instalace:
 
 ```
 
-1. \\<SDKName\> \\<SDKVersion\>: název a verze rozšíření SDK je odvozen a odpovídající názvy složek v cestě ke kořenu sady SDK. MSBuild používá tuto identitu k vyhledání sady SDK na disku a Visual Studio zobrazí tuto identitu v okně **Vlastnosti** a **dialogovém okně Správce odkazů.**
+1. \\<SDKName \> \\<SDKVersion \> : název a verze sady SDK rozšíření jsou odvozeny z odpovídajících názvů složek v cestě k kořenu sady SDK. Nástroj MSBuild používá tuto identitu k nalezení sady SDK na disku a aplikace Visual Studio zobrazí tuto identitu v okně **vlastnosti** a v dialogovém okně **Správce odkazů** .
 
-2. *Složka odkazy:* binární soubory, které obsahují api. Mohou to být soubory nebo sestavení metadat systému Windows (WinMD).
+2. Složka *odkazů* : binární soubory, které obsahují rozhraní API. Můžou to být soubory nebo sestavení Windows metadata (WinMD).
 
-3. *Redist* složka: soubory, které jsou potřebné pro runtime/ladění a měly by být zabaleny jako součást aplikace uživatele. Všechny binární soubory by měly být umístěny pod *\redist\\<\> \\ config<\>arch*a binární názvy by měly mít následující formát, aby byla zajištěna jedinečnost: *]*\<> společnosti. \<> výrobku. \<účelu>. \<>prodlužování <em>. Například *Microsoft.Cpp.Build.dll</em>. Všechny soubory s názvy, které mohou kolidovat s názvy souborů z jiných sad SDK (například javascript, css, pri, xaml, png a jpg soubory) by měly být umístěny pod <em>\\ \redist\> \\<config\> \\<arch<\> \* sdkname s výjimkou souborů, které jsou spojeny s ovládacími prvky XAML. Tyto soubory by měly být\\ umístěny\> \\ pod\> \\ *\redist<config<arch<componentname\></em>.
+3. Složka *Redist* : soubory, které jsou potřebné pro modul runtime/ladění a měly by být zabaleny jako součást aplikace uživatele. Všechny binární soubory by se měly umístit pod *\redist \\<config \> \\<\> *a binární názvy by měly mít následující formát, aby se zajistila jedinečnost: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Například * Microsoft.Cpp.Build.dll</em>. Všechny soubory s názvy, které mohou kolidovat s názvy souborů z jiných sad SDK (například JavaScript, CSS, pri, XAML, PNG a jpg), by měly být umístěny pod <em>\redist \\<config \> \\<\> \\<sdkname \> \* s výjimkou souborů, které jsou spojeny s ovládacími prvky XAML. Tyto soubory by měly být umístěny pod * \redist \\<config \> \\<\> \\<součásti \> \\ </em>.
 
-4. *Složka DesignTime:* soubory, které jsou potřeba pouze v době před spuštěním/laděním a neměly by být zabaleny jako součást aplikace uživatele. Mohou to být dokumenty XML, knihovny, záhlaví, binární soubory návrhu panelu nástrojů, artefakty MSBuild atd. Každá sada SDK, která je určena ke spotřebě nativním projektem, musí mít soubor *SDKName.props.* Následující text ukazuje ukázku tohoto typu souboru.
+4. *DesignTime* složka: soubory, které jsou potřeba pouze v době před spuštěním a ladění, by neměly být zabaleny jako součást aplikace uživatele. Může se jednat o dokumentaci XML, knihovny, hlavičky, sady nástrojů pro vytváření binárních souborů v době návrhu, artefakty MSBuild a tak dále. Všechny sady SDK, které jsou určené pro spotřebu v nativním projektu, musí mít soubor *SDKName. props* . Následující příklad ukazuje ukázku tohoto typu souboru.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -127,15 +127,15 @@ Sady SDK rozšíření mají následující rozložení instalace:
 
    ```
 
-    Referenční dokumenty XML jsou umístěny vedle referenčního souboru. Referenční dokument XML pro sestavení *\Reference\\<\> \\ config\><arch \sample.dll* je například *\Reference\\<konfigurace\> \\<arch\>\sample.xml*a lokalizovaná verze tohoto dokumentu *\Reference\\<config\> \\<arch\> \\<národním prostředím\>\sample.xml*.
+    Referenční dokumenty XML jsou umístěny společně s referenčním souborem. Například referenční dokument XML pro *\References \\<config \> \\<arch \>\sample.dll* sestavení je *\References \\<config \> \\<\sample.xml\><* a lokalizovaná verze tohoto dokumentu je *\References \\<config \> \\<\sample.xml\> \\ locale \> *.
 
-5. *Konfigurační* složka: tři podsložky: *Ladění*, *Maloobchod*a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *commonconfiguration,* pokud by měla být spotřebována stejná sada souborů sady SDK, bez ohledu na konfiguraci, na kterou cílí příjemce sady SDK.
+5. *Konfigurační* složka: tři podsložky: *Debug*, *Retail*a *CommonConfiguration*. Autoři sady SDK mohou umístit své soubory do *CommonConfiguration* , pokud by se měla používat stejná sada souborů sady SDK, a to bez ohledu na konfiguraci, kterou uživatel SDK zacílí.
 
-6. *Složka architektury:* jsou podporovány následující architektury: x86, x64, ARM, neutrální. Win32 mapuje na x86 a AnyCPU mapy na neutrální.
+6. Složka *architektury* : podporovány jsou následující architektury: x86, x64, ARM, neutrální. Systém Win32 mapuje na x86 a AnyCPU se mapuje na neutrální.
 
-### <a name="sdkmanifestxml"></a>Soubor SDKManifest.xml
+### <a name="sdkmanifestxml"></a>SDKManifest.xml
 
-Soubor *SDKManifest.xml* popisuje, jak by měl visual studio využívat sadu SDK. Například:
+Soubor *SDKManifest.xml* popisuje, jak by měla sada Visual Studio využívat sadu SDK. Například:
 
 ```
 <FileList>
@@ -159,47 +159,47 @@ MoreInfo = "https://msdn.microsoft.com/MySDK">
 </FileList>
 ```
 
-V následujícím seznamu jsou uvedeny prvky souboru:
+Následující seznam obsahuje prvky souboru:
 
-1. DisplayName: hodnota, která se zobrazí ve Správci odkazů, Průzkumníku řešení, prohlížeči objektů a dalších umístěních v uživatelském rozhraní sady Visual Studio.
+1. DisplayName: hodnota, která se zobrazí ve Správci odkazů, Průzkumník řešení, Prohlížeč objektů a dalších místech v uživatelském rozhraní sady Visual Studio.
 
-2. ProductFamilyName: Celkový název produktu sady SDK. Sada [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] SDK má například název "Microsoft.WinJS.1.0" a "Microsoft.WinJS.2.0", které patří do stejné rodiny produktů sady SDK, "Microsoft.WinJS". Tento atribut umožňuje Visual Studio a MSBuild k vytvoření tohoto připojení. Pokud tento atribut neexistuje, název sady SDK se používá jako název rodiny produktů.
+2. ProductFamilyName: celkový název produktu SDK. Například [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] sada SDK má název "Microsoft. WinJS. 1.0" a "Microsoft. WinJS. 2.0", které patří do stejné rodiny produktů sady SDK "Microsoft. WinJS". Tento atribut umožňuje aplikaci Visual Studio a MSBuild vytvořit toto připojení. Pokud tento atribut neexistuje, použije se název sady SDK jako název řady produktů.
 
-3. FrameworkIdentity: Určuje závislost na jedné nebo více knihovnách součástí systému Windows. Hodnota tohoto atributu je vložena do manifestu náročné aplikace. Tento atribut je použitelný pouze pro knihovny součástí systému Windows.
+3. FrameworkIdentity: určuje závislost pro jednu nebo více knihoven součástí Windows. Hodnota tohoto atributu je vložena do manifestu využívajícího aplikaci. Tento atribut se vztahuje pouze na knihovny součástí systému Windows.
 
-4. TargetFramework: Určuje sady SDK, které jsou k dispozici ve Správci odkazů a panelu nástrojů. Toto je seznam názvů cílové horozhraní oddělených středníkem, například ".NET Framework, version=v2.0; .NET Framework, version=v4.5.1". Pokud je zadáno několik verzí stejného cílového rozhraní, správce odkazů používá pro účely filtrování nejnižší zadanou verzi. Například pokud ".NET Framework, version=v2.0; .NET Framework, version=v4.5.1" bude program Reference Manager používat ".NET Framework, version=v2.0". Pokud je zadán konkrétní profil cílového rozhraní, bude pro účely filtrování použit pouze tento profil správcem odkazů. Pokud je například zadáno "Silverlight, version=v4.0, profile=WindowsPhone", správce odkazů filtruje pouze profil Windows Phone; projekt zaměřený na úplnou architekturu Silverlight 4.0 Framework nevidí sadu SDK ve Správci odkazů.
+4. TargetFramework: Určuje sady SDK, které jsou k dispozici ve Správci odkazů a sadě nástrojů. Jedná se o středníkem oddělený seznam monikerů cílového rozhraní, například ".NET Framework, verze = v 2.0; .NET Framework, verze = v 4.5.1". Pokud jsou zadány různé verze stejného cílového rozhraní, Správce odkazů používá nejnižší určenou verzi pro účely filtrování. Například pokud je zadána možnost ".NET Framework, verze = v 2.0; .NET Framework, verze = v 4.5.1", Správce odkazů použije ".NET Framework, Version = v 2.0". Pokud je zadán konkrétní profil cílového rozhraní, bude správce odkazů pro účely filtrování používat pouze tento profil. Pokud je například zadáno "Silverlight, Version = v 4.0, profil = WindowsPhone", Správce odkazů bude filtrovat pouze v profilu Windows Phone; projekt, který cílí na úplné rozhraní Silverlight 4,0, nevidí sadu SDK ve Správci odkazů.
 
-5. MinVSVersion: Minimální verze sady Visual Studio.
+5. MinVSVersion: minimální verze sady Visual Studio.
 
-6. MaxPlatformVerson: Maximální verze cílové platformy by měla být použita k určení verze platformy, na kterých nebude fungovat sada Extension SDK. Například Balíček runtime Microsoft Visual C++ v11.0 by měl odkazovat pouze na projekty systému Windows 8. To znamená, že Windows 8 projektu MaxPlatformVersion je 8.0. To znamená, že Správce odkazů filtruje balíček microsoft visual c++ runtime pro projekt windows [!INCLUDE[win81](../debugger/includes/win81_md.md)] 8.1 a MSBuild vyvolá chybu, když na něj projekt odkazuje. Poznámka: Tento prvek je [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]podporován od začátku .
+6. MaxPlatformVerson: maximální verze cílové platformy by se měla použít k určení verzí platformy, na kterých vaše sada SDK rozšíření nebude fungovat. Například balíček Microsoft Visual C++ Runtime v 11.0 by měl být odkazován pouze v projektech se systémem Windows 8. Proto je MaxPlatformVersion projektu Windows 8 8,0. To znamená, že správce odkazů vyfiltruje balíček Microsoft Visual C++ Runtime pro projekt Windows 8.1 a MSBuild vyvolá chybu, když na [!INCLUDE[win81](../debugger/includes/win81_md.md)] něj projekt odkazuje. Poznámka: Tento element je podporován od začátku [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] .
 
-7. AppliesTo: Určuje sady SDK, které jsou k dispozici ve Správci odkazů zadáním příslušných typů projektů sady Visual Studio. Jsou rozpoznány devět hodnot: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed a Native. Autor sady SDK může používat a ("+') nebo ("&#124;"), nikoli ("!") operátory přesně určit rozsah typů projektů, které se vztahují k sdk.
+7. AppliesTo: Určuje sady SDK, které jsou k dispozici ve Správci odkazů, zadáním příslušných typů projektů aplikace Visual Studio. Rozpoznávají se devět hodnot: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed a Native. Autor sady SDK může použít a ("+"), nebo ("&#124;"), ne ("!") operátory pro určení přesně rozsahu typů projektu, které platí pro sadu SDK.
 
     WindowsAppContainer identifikuje projekty pro [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikace.
 
-8. SupportPrefer32Bit: Podporované hodnoty jsou "True" a "False". Výchozí hodnota je "True". Pokud je hodnota nastavena na hodnotu False, [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] msbuild vrátí chybu pro projekty (nebo upozornění pro projekty plochy), pokud projekt, který odkazuje na sadu SDK má Prefer32Bit povolena. Další informace o prefer32Bit, naleznete [v tématu sestavení stránky, Návrhář projektu (C#)](../ide/reference/build-page-project-designer-csharp.md) nebo [kompilace stránky, Návrhář projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md).
+8. SupportPrefer32Bit: podporované hodnoty jsou "true" a "false". Výchozí hodnota je "true". Pokud je hodnota nastavena na false, nástroj MSBuild vrátí chybu pro [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] projekty (nebo upozornění pro desktopové projekty), pokud je projekt, který odkazuje na sadu SDK, Prefer32Bit povolen. Další informace o Prefer32Bit naleznete v tématu [Stránka sestavení, Návrhář projektu (C#)](../ide/reference/build-page-project-designer-csharp.md) nebo [Stránka Kompilovat, návrhář projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md).
 
-9. SupportedArchitectures: Středník oddělený seznam architektur, které podporuje sada SDK. MSBuild zobrazí upozornění, pokud není podporována cílená architektura sady SDK ve náročném projektu. Pokud tento atribut není zadán, MSBuild nikdy zobrazí tento typ upozornění.
+9. SupportedArchitectures: seznam architektur, které podporuje sada SDK, oddělený středníky. Nástroj MSBuild zobrazí upozornění, pokud cílová architektura sady SDK v rámci náročného projektu není podporována. Pokud tento atribut není zadán, MSBuild nikdy nezobrazí tento typ upozornění.
 
-10. SupportsMultipleVersions: Pokud je tento atribut nastaven na **chybu** nebo **upozornění**, MSBuild označuje, že stejný projekt nemůže odkazovat na více verzí stejné řady sad SDK. Pokud tento atribut neexistuje nebo je nastavena na **povolit**, MSBuild nezobrazí tento typ chyby nebo upozornění.
+10. SupportsMultipleVersions: Pokud je tento atribut nastaven na hodnotu **Error** nebo **Warning**, MSBuild indikuje, že stejný projekt nemůže odkazovat na více verzí stejné řady SDK. Pokud tento atribut neexistuje nebo je nastaven na hodnotu **Allow**, nástroj MSBuild nezobrazí tento typ chyby nebo upozornění.
 
-11. AppX: Určuje cestu k balíčkům aplikací pro knihovnu součástí Windows na disku. Tato hodnota je předána registrační součásti knihovny komponent systému Windows během místního ladění. Konvence pojmenování pro název souboru je * \<společnost>.\< produktová>. \<Architektura>. \<Konfigurační>. Verze \<>.appx*. Konfigurace a architektura jsou volitelné v názvu atributu a hodnotu atributu, pokud se nevztahují na knihovnu komponent systému Windows. Tato hodnota je použitelná pouze pro knihovny součástí systému Windows.
+11. AppX: Určuje cestu k balíčkům aplikací pro knihovnu součástí Windows na disku. Tato hodnota je předána registrační komponentě knihovny součástí systému Windows během místního ladění. Konvence pojmenování pro název souboru je * \<Company> . \<Product> . \<Architecture> \<Configuration> . \<Version> . appx*. Konfigurace a architektura jsou nepovinné v názvu atributu a v případě hodnoty atributu, pokud se nevztahují na knihovnu součástí Windows. Tato hodnota se vztahuje pouze na knihovny součástí systému Windows.
 
-12. CopyRedistToSubDirectory: Určuje, kde by měly být soubory pod *\redist* složky zkopírovány vzhledem ke kořenu balíčku aplikace (to znamená **umístění balíčku** zvolenému v **průvodci vytvořením balíčku aplikace)** a kořenovému adresáři rozložení runtime. Výchozí umístění je kořen balíčku aplikace a rozložení **F5.**
+12. CopyRedistToSubDirectory: Určuje, kde se mají soubory ve složce *\redist* zkopírovat vzhledem k kořenovému adresáři balíčku aplikace (to znamená **umístění balíčku** zvolenému v průvodci **vytvořením balíčku aplikace** ) a kořenovému adresáři rozložení modulu runtime. Výchozím umístěním je kořen balíčku aplikace a rozložení **F5** .
 
-13. DependsOn: Seznam identit sady SDK, které definují sady SDK, na kterých tato sada SDK závisí. Tento atribut se zobrazí v podokně podrobností správce odkazů.
+13. DependsOn: seznam identit sady SDK, které definují sady SDK, na kterých tato sada SDK závisí. Tento atribut se zobrazí v podokně podrobností Správce odkazů.
 
-14. MoreInfo: Adresa URL webové stránky, která poskytuje nápovědu a další informace. Tato hodnota se používá v odkazu Další informace v pravém podokně Správce odkazů.
+14. MoreInfo: adresa URL webové stránky, která poskytuje podporu a další informace. Tato hodnota se používá na odkazu Další informace v pravém podokně Správce odkazů.
 
-15. Typ registrace: Určuje registraci WinMD v manifestu aplikace a je vyžadovánpro nativní WinMD, který má protějšek implementace DLL.
+15. Typ registrace: Určuje registraci WinMD v manifestu aplikace a vyžaduje se pro nativní soubor WinMD, který má knihovnu DLL implementace partnerského protějšku.
 
-16. Odkaz na soubor: Určeno pouze pro ty odkazy, které obsahují ovládací prvky nebo jsou nativní mise WinMD. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete [v tématu Určení umístění položek panelu nástrojů](#ToolboxItems) níže.
+16. Odkaz na soubor: zadaný pouze pro odkazy, které obsahují ovládací prvky nebo jsou nativní soubory WinMD. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete v tématu [určení umístění položek sady nástrojů](#ToolboxItems) níže.
 
-## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a>Určení umístění položek panelu nástrojů
+## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a>Zadejte umístění položek sady nástrojů.
 
-Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umístění položek panelu nástrojů v sadách SDK platformy i rozšíření. Následující příklady ukazují, jak určit různá umístění. To platí pro odkazy WinMD nebo DLL.
+Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umístění položek sady nástrojů v sadách SDK platforem a rozšíření. Následující příklady ukazují, jak zadat různá umístění. Tato možnost platí pro odkazy WinMD nebo DLL.
 
-1. Umístěte ovládací prvky do výchozí kategorie panelu nástrojů.
+1. Umístěte ovládací prvky do výchozí kategorie sady nástrojů.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -207,7 +207,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-2. Umístěte ovládací prvky pod název určité kategorie.
+2. Umístěte ovládací prvky pod název konkrétní kategorie.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -215,7 +215,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-3. Umístěte ovládací prvky pod názvy konkrétních kategorií.
+3. Umístěte ovládací prvky pod konkrétní názvy kategorií.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -226,7 +226,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-4. Umístěte ovládací prvky pod názvy různých kategorií v prolnutí a Visual Studiu.
+4. Umístěte ovládací prvky pod názvy různých kategorií v Blendu a v aplikaci Visual Studio.
 
     ```xml
     // Blend accepts a slightly different structure for the category name because it allows a path rather than a single category.
@@ -236,7 +236,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-5. Výčet konkrétní ovládací prvky odlišně v prolnutí a Visual Studio.
+5. Zobrazení výčtu konkrétních ovládacích prvků v Blendu a v aplikaci Visual Studio jinak.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -247,7 +247,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-6. Výčet konkrétní ovládací prvky a umístěte je pod visual studio společné cesty nebo pouze ve skupině všechny ovládací prvky.
+6. Vypsat konkrétní ovládací prvky a umístit je do společné cesty sady Visual Studio nebo pouze do skupiny všechny ovládací prvky.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -258,7 +258,7 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
     </File>
     ```
 
-7. Výčet konkrétních ovládacích prvků a zobrazit pouze určitou sadu v ChooseItems bez nich je v panelu nástrojů.
+7. Umožňuje vytvořit výčet konkrétních ovládacích prvků a v ChooseItems zobrazovat pouze konkrétní sadu, aniž by byla v sadě nástrojů.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -269,6 +269,6 @@ Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umíst�
 
 ## <a name="see-also"></a>Viz také
 
-- [Návod: Vytvoření sady SDK pomocí jazyka C++](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
-- [Návod: Vytvoření sady SDK pomocí jazyka C# nebo jazyka Visual Basic](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
+- [Návod: vytvoření sady SDK pomocí jazyka C++](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
+- [Návod: vytvoření sady SDK pomocí jazyka C# nebo Visual Basic](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
 - [Správa odkazů v projektu](../ide/managing-references-in-a-project.md)

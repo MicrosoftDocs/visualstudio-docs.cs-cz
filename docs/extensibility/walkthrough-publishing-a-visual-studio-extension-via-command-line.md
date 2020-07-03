@@ -1,7 +1,7 @@
 ---
-title: Publikovat rozšíření pomocí příkazového řádku
+title: Publikování rozšíření pomocí příkazového řádku
 ms.date: 07/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - publishing extensions
 - extension, publishing
@@ -11,31 +11,31 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 40be0252218f39b4ff98b58caedd7f9f20ce6d5d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904668"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Návod: Publikování rozšíření sady Visual Studio pomocí příkazového řádku
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>Návod: publikování rozšíření sady Visual Studio prostřednictvím příkazového řádku
 
-Tento návod ukazuje, jak publikovat rozšíření Sady Visual Studio na webu Visual Studio Marketplace pomocí příkazového řádku. Když přidáte rozšíření na Marketplace, vývojáři mohou použít rozšíření [**a aktualizace**](../ide/finding-and-using-visual-studio-extensions.md) dialogové okno procházet tam pro nové a aktualizované rozšíření.
+V tomto návodu se dozvíte, jak publikovat rozšíření sady Visual Studio na Visual Studio Marketplace pomocí příkazového řádku. Když přidáte rozšíření na web Marketplace, můžou vývojáři použít dialog [**rozšíření a aktualizace**](../ide/finding-and-using-visual-studio-extensions.md) k vyhledání nových a aktualizovaných rozšíření.
 
-VsixPublisher.exe je nástroj příkazového řádku pro publikování rozšíření sady Visual Studio na marketplace. Lze k němu získat přístup z programu ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe. Příkazy jsou k dispozici na tomto nástroji jsou: **publikovat**, **createPublisher**, **deletePublisher**, **deleteExtension**, **přihlášení**, **odhlášení**.
+VsixPublisher.exe je nástroj příkazového řádku pro publikování rozšíření sady Visual Studio na webu Marketplace. K němu se dá dostat z \VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe $ {VSInstallDir}. K dispozici jsou příkazy tohoto nástroje: **Publish**, **createPublisher**, **deletePublisher**, **deleteExtension**, **Login**, **logout**.
 
 ## <a name="commands"></a>Příkazy
 
 ### <a name="publish"></a>publish
 
-Publikuje rozšíření marketplace. Rozšíření může být vsix, exe/msi soubor nebo odkaz. Pokud rozšíření již existuje se stejnou verzí, přepíše rozšíření. Pokud rozšíření ještě neexistuje, vytvoří nové rozšíření.
+Publikuje rozšíření na webu Marketplace. Příponou může být VSIX, soubor exe/MSI nebo odkaz. Pokud rozšíření už existuje se stejnou verzí, toto rozšíření se přepíše. Pokud rozšíření ještě neexistuje, vytvoří se nové rozšíření.
 
 |Možnosti příkazu |Popis |
 |---------|---------|
-|užitečné zatížení (povinné) | Buď cesta k datové části publikovat nebo odkaz použít jako "více informací URL". |
-|publishManifest (povinné) | Cesta k souboru manifestu publikování, který chcete použít. |
-|ignoreWarnings | Seznam upozornění ignorovat při publikování rozšíření. Tato upozornění jsou při publikování rozšíření zobrazena jako zprávy příkazového řádku. (například "VSIXValidatorWarning01, VSIXValidatorWarning02")
-|aplikace personalAccessToken | Osobní přístupový token (PAT), který se používá k ověření vydavatele. Pokud není poskytnuta, PAT je získán od přihlášených uživatelů. |
+|datová část (povinné) | Buď cestu k datové části, která se má publikovat, nebo odkaz, který se má použít, jako adresa URL pro další informace. |
+|publishManifest (povinné) | Cesta k souboru manifestu publikování, který se má použít |
+|ignoreWarnings | Seznam upozornění, která se mají ignorovat při publikování rozšíření Tato upozornění se při publikování rozšíření zobrazují jako zprávy z příkazového řádku. (například "VSIXValidatorWarning01, VSIXValidatorWarning02")
+|personalAccessToken | Osobní přístupový token (PAT), který se používá k ověření vydavatele. Pokud není zadaný, získá se od přihlášených uživatelů. |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
@@ -43,27 +43,27 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 ### <a name="createpublisher"></a>createPublisher
 
-Vytvoří vydavatele na webu Marketplace. Také přihlásí vydavatele do počítače pro budoucí akce (například odstranění nebo publikování rozšíření).
+Vytvoří vydavatele na webu Marketplace. Také zaznamená vydavatele do počítače pro budoucí akce (například odstranění nebo publikování rozšíření).
 
 |Možnosti příkazu |Popis |
 |---------|---------|
-|displayName (povinné) | Zobrazovaný název vydavatele. |
-|název_vydavatele (povinné) | Název vydavatele (například identifikátor). |
+|DisplayName (povinné) | Zobrazovaný název vydavatele |
+|Vydavatel (povinné) | Název vydavatele (například identifikátor). |
 |personalAccessToken (povinné) | Osobní přístupový token, který se používá k ověření vydavatele. |
-|shortDescription | Krátký popis vydavatele (nikoli souboru). |
-|longDescription | Dlouhý popis vydavatele (nikoli souboru). |
+|shortDescription | Krátký popis vydavatele (nejedná se o soubor). |
+|longDescription | Dlouhý popis vydavatele (nejedná se o soubor). |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deletepublisher"></a>odstranitvydavatel
+### <a name="deletepublisher"></a>deletePublisher
 
 Odstraní vydavatele na webu Marketplace.
 
 |Možnosti příkazu |Popis |
 |---------|---------|
-|název_vydavatele (povinné) | Název vydavatele (například identifikátor). |
+|Vydavatel (povinné) | Název vydavatele (například identifikátor). |
 |personalAccessToken (povinné) | Osobní přístupový token, který se používá k ověření vydavatele. |
 
 ```
@@ -76,9 +76,9 @@ Odstraní rozšíření z webu Marketplace.
 
 |Možnosti příkazu |Popis |
 |---------|---------|
-|extensionName (povinné) | Název rozšíření odstranit. |
-|název_vydavatele (povinné) | Název vydavatele (například identifikátor). |
-|aplikace personalAccessToken | Osobní přístupový token, který se používá k ověření vydavatele. Pokud není k dispozici, pat je získán od přihlášených uživatelů. |
+|Přípona (povinné) | Název rozšíření, které se má odstranit |
+|Vydavatel (povinné) | Název vydavatele (například identifikátor). |
+|personalAccessToken | Osobní přístupový token, který se používá k ověření vydavatele. Pokud není zadaný, získá se od přihlášených uživatelů. |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
@@ -86,13 +86,13 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 ### <a name="login"></a>přihlášení
 
-Přihlásí vydavatele do počítače.
+Zaznamená vydavatele do počítače.
 
 |Možnosti příkazu |Popis |
 |---------|---------|
 |personalAccessToken (povinné | Osobní přístupový token, který se používá k ověření vydavatele. |
-|název_vydavatele (povinné) | Název vydavatele (například identifikátor). |
-|Přepsat | Určuje, že všechny existující vydavatele by měly být přepsány pomocí nového osobního přístupového tokenu. |
+|Vydavatel (povinné) | Název vydavatele (například identifikátor). |
+|Přepsat | Určuje, že by měl být stávající Vydavatel přepsán novým tokenem osobní přístup. |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
@@ -100,22 +100,22 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 ### <a name="logout"></a>logout
 
-Zaznamená vydavatele ze zařízení.
+Zaznamená vydavatele z počítače.
 
 |Možnosti příkazu |Popis |
 |---------|---------|
-|název_vydavatele (povinné) | Název vydavatele (například identifikátor). |
-|ignoreMissingPublisher | Určuje, že nástroj by se neměl chybově, pokud zadaný vydavatel ještě není přihlášen. |
+|Vydavatel (povinné) | Název vydavatele (například identifikátor). |
+|ignoreMissingPublisher | Určuje, že by nástroj neměl být v případě, že zadaný Vydavatel ještě není přihlášený, nechybí. |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
 ```
 
-## <a name="publishmanifest-file"></a>publishManifest soubor
+## <a name="publishmanifest-file"></a>soubor publishManifest
 
-Příkaz publishManifest používá soubor **publish.** Představuje všechna metadata o rozšíření, které marketplace potřebuje znát. Pokud rozšíření, které se nahrává, pochází z rozšíření VSIX, vlastnost "identity" musí mít pouze nastavenou "internalName". Důvodem je, že zbytek "identity" vlastnosti mohou být generovány ze souboru vsixmanifest. Pokud rozšíření je msi/exe nebo rozšíření propojení, uživatel musí poskytnout požadovaná pole ve vlastnosti "identity". Zbytek manifestu obsahuje informace specifické pro Marketplace (například kategorie, zda je povolena Q&A atd.).
+Příkaz **publikovat** používá soubor publishManifest. Představuje všechna metadata o rozšíření, které musí Marketplace znát. Pokud je rozšíření nahrává z rozšíření VSIX, vlastnost identity musí mít pouze sadu "Internal". Důvodem je, že zbývající vlastnosti identity mohou být vygenerovány ze souboru vsixmanifest. Pokud je přípona MSI/exe nebo rozšíření odkazu, musí uživatel zadat požadovaná pole ve vlastnosti identity. Zbytek manifestu obsahuje informace specifické pro web Marketplace (například kategorie, zda je povoleno Q&A, atd.).
 
-Přípona VSIX publishManifest ukázka souboru:
+Ukázka souboru publishManifest rozšíření VSIX:
 
 ```json
 {
@@ -134,7 +134,7 @@ Přípona VSIX publishManifest ukázka souboru:
 }
 ```
 
-Ukázka souboru manifestu msi/exe nebo link:
+Ukázka souborů MSI/EXE nebo propojení souboru publishManifest:
 
 ```json
 {
@@ -165,9 +165,9 @@ Ukázka souboru manifestu msi/exe nebo link:
 }
 ```
 
-## <a name="asset-files"></a>Soubory datových zdrojů
+## <a name="asset-files"></a>Soubory assetů
 
-Soubory datových zdrojů mohou být poskytnuty pro vkládání věcí, jako jsou obrázky do souboru readme. Například pokud rozšíření má následující "přehled" Markdown dokument:
+Soubory prostředků se dají zadat pro vkládání položek, jako jsou obrázky v souboru Readme. Například pokud má rozšíření následující dokument "Přehled" Markdownu:
 
 ```markdown
 TestExtension
@@ -176,7 +176,7 @@ This is test extension.
 ![Test logo](images/testlogo.png "Test logo")
 ```
 
-Chcete-li vyřešit "images/testlogo.png" v předchozím příkladu, uživatel může poskytnout "assetFiles" v jejich manifestu publikování, jako je níže:
+Aby bylo možné v předchozím příkladu vyřešit "image/testlogo.png", může uživatel zadat "assetFiles" v manifestu publikování, jak je znázorněno níže:
 
 ```json
 {
@@ -194,41 +194,41 @@ Chcete-li vyřešit "images/testlogo.png" v předchozím příkladu, uživatel m
 
 ### <a name="prerequisites"></a>Požadavky
 
-Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sady Visual Studio SDK. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="create-a-visual-studio-extension"></a>Vytvoření rozšíření sady Visual Studio
+### <a name="create-a-visual-studio-extension"></a>Vytvoření rozšíření pro Visual Studio
 
-V takovém případě použijeme výchozí rozšíření VSPackage, ale stejné kroky platí pro všechny druhy rozšíření.
+V tomto případě použijeme výchozí rozšíření VSPackage, ale stejný postup je platný pro všechny typy rozšíření.
 
-1. Vytvořte VSPackage v C# s názvem "TestPublish", který má příkaz nabídky. Další informace naleznete [v tématu Vytvoření prvního rozšíření: Hello World](../extensibility/extensibility-hello-world.md).
+1. Vytvořte VSPackage v jazyce C# s názvem "TestPublish", který obsahuje příkaz nabídky. Další informace najdete v tématu [Vytvoření prvního rozšíření: Hello World](../extensibility/extensibility-hello-world.md).
 
-### <a name="package-your-extension"></a>Zabalte rozšíření
+### <a name="package-your-extension"></a>Zabalení rozšíření
 
-1. Aktualizujte rozšíření vsixmanifest se správnými informacemi o názvu produktu, autorovi a verzi.
+1. Aktualizujte rozšíření vsixmanifest o správné informace o názvu produktu, autorovi a verzi.
 
    ![aktualizovat rozšíření vsixmanifest](media/update-extension-vsixmanifest.png)
 
-2. Vytvořte rozšíření v režimu **vydání.** Nyní bude vaše rozšíření zabaleno jako VSIX ve složce \bin\Release.
+2. Sestavte rozšíření v režimu **vydání** . Nyní bude rozšíření zabaleno jako VSIX ve složce \bin\Release.
 
-3. Instalaci můžete ověřit poklepáním na vsix.
+3. Pokud chcete ověřit instalaci, můžete dvakrát kliknout na VSIX.
 
-### <a name="test-the-extension"></a>Otestujte rozšíření
+### <a name="test-the-extension"></a>Test rozšíření
 
- Před distribucí rozšíření, sestavení a testování, ujistěte se, že je správně nainstalován v experimentální instanci sady Visual Studio.
+ Než rozšíříte rozšíření, sestavíte a otestujete, abyste se ujistili, že je správně nainstalován v experimentální instanci aplikace Visual Studio.
 
-1. V sadě Visual Studio spusťte ladění. otevřete experimentální instanci sady Visual Studio.
+1. V aplikaci Visual Studio spusťte ladění. pro otevření experimentální instance sady Visual Studio.
 
-2. V experimentální instanci přejděte do nabídky **Nástroje** a klikněte na **Rozšíření a aktualizace...**. Rozšíření TestPublish by se mělo zobrazit v prostředním podokně a být povoleno.
+2. V experimentální instanci přejděte do nabídky **nástroje** a klikněte na **rozšíření a aktualizace...**. Rozšíření TestPublish by se mělo zobrazit v prostředním podokně a povolit.
 
-3. V nabídce **Nástroje** zkontrolujte, zda se zobrazí příkaz test.
+3. V nabídce **nástroje** se ujistěte, že se zobrazí příkaz test.
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Publikování rozšíření na Marketplace pomocí příkazového řádku
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>Publikování rozšíření na webu Marketplace prostřednictvím příkazového řádku
 
-1. Ujistěte se, že jste vytvořili verzi rozšíření a že je aktuální.
+1. Ujistěte se, že máte vytvořenou verzi pro vydání rozšíření a že je aktuální.
 
-2. Ujistěte se, že jste vytvořili souborpublishmanifest.json a overview.md.
+2. Ujistěte se, že jste vytvořili publishmanifest.jsa overview.md soubory.
 
-3. Otevřete příkazový řádek a přejděte do adresáře ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\.
+3. Otevřete příkazový řádek a přejděte do adresáře $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\.
 
 4. Chcete-li vytvořit nového vydavatele, použijte následující příkaz:
 
@@ -236,13 +236,13 @@ V takovém případě použijeme výchozí rozšíření VSPackage, ale stejné 
    VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-5. Při úspěšném vytvoření vydavatele se zobrazí následující zpráva příkazového řádku:
+5. Po úspěšném vytvoření vydavatele se zobrazí následující zpráva příkazového řádku:
 
    ```
    Added 'Test VSIX Publisher' as a publisher on the Marketplace.
    ```
 
-6. Nového vydavatele, kterého jste vytvořili, můžete ověřit přechodem na [tržiště Sady Visual Studio.](https://marketplace.visualstudio.com/manage/publishers)
+6. Nový Vydavatel, který jste vytvořili, můžete ověřit tak, že přejdete na [Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers)
 
 7. Chcete-li publikovat nové rozšíření, použijte následující příkaz:
 
@@ -250,39 +250,39 @@ V takovém případě použijeme výchozí rozšíření VSPackage, ale stejné 
    VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
    ```
 
-8. Při úspěšném vytvoření vydavatele se zobrazí následující zpráva příkazového řádku:
+8. Po úspěšném vytvoření vydavatele se zobrazí následující zpráva příkazového řádku:
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. Nové rozšíření, které jste publikovali, můžete ověřit přechodem na [tržiště sady Visual Studio.](https://marketplace.visualstudio.com/)
+9. Nové rozšíření, které jste publikovali, můžete ověřit tak, že přejdete na [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Instalace rozšíření z webu Visual Studio Marketplace
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Nainstalovat rozšíření z Visual Studio Marketplace
 
-Teď, když je rozšíření publikováno, nainstalujte ho do sady Visual Studio a otestujte jej tam.
+Teď, když je rozšíření publikované, nainstalujte ho v aplikaci Visual Studio a otestujte tam.
 
-1. V sadě Visual Studio klikněte v nabídce **Nástroje** na **položku Rozšíření a aktualizace...**.
+1. V aplikaci Visual Studio v nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace...**.
 
-2. Klikněte na **Online** a vyhledejte TestPublish.
+2. Klikněte na **online** a vyhledejte TestPublish.
 
-3. Klepněte na tlačítko **Stáhnout**. Rozšíření pak bude naplánováno pro instalaci.
+3. Klikněte na tlačítko **Stáhnout**. Rozšíření bude pak naplánováno na instalaci.
 
-4. Chcete-li dokončit instalaci, zavřete všechny instance sady Visual Studio.
+4. Chcete-li dokončit instalaci, zavřete všechny instance aplikace Visual Studio.
 
 ## <a name="remove-the-extension"></a>Odebrání rozšíření
 
-Rozšíření můžete odebrat z webu Visual Studio Marketplace a z počítače.
+Rozšíření můžete odebrat z Visual Studio Marketplace a z počítače.
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Odebrání rozšíření z webu Marketplace pomocí příkazového řádku
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>Odebrání rozšíření z webu Marketplace prostřednictvím příkazového řádku
 
-1. Chcete-li rozšíření odebrat, použijte následující příkaz:
+1. Pokud chcete odebrat rozšíření, použijte následující příkaz:
 
    ```
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. Při úspěšném odstranění rozšíření se zobrazí následující zpráva příkazového řádku:
+2. Po úspěšném odstranění rozšíření se zobrazí následující zpráva příkazového řádku:
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
@@ -290,8 +290,8 @@ Rozšíření můžete odebrat z webu Visual Studio Marketplace a z počítače.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Odebrání rozšíření z počítače
 
-1. V sadě Visual Studio klikněte v nabídce **Nástroje** na **položku Rozšíření a aktualizace**.
+1. V aplikaci Visual Studio v nabídce **nástroje** klikněte na možnost **rozšíření a aktualizace**.
 
-2. Vyberte možnost MyVsixExtension a klepněte na tlačítko **Odinstalovat**. Rozšíření pak bude naplánováno na odinstalaci.
+2. Vyberte "MyVsixExtension" a pak klikněte na **odinstalovat**. Rozšíření bude pak naplánováno pro odinstalaci.
 
-3. Chcete-li provést odinstalaci, zavřete všechny instance sady Visual Studio.
+3. Chcete-li dokončit odinstalaci, zavřete všechny instance aplikace Visual Studio.

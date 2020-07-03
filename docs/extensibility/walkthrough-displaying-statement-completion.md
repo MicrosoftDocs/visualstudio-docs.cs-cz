@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Zobrazení dokončení výkazu | Dokumenty společnosti Microsoft'
+title: 'Návod: zobrazení dokončování příkazů | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - statement completion
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
@@ -13,196 +13,196 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d2f5499511c9dc0bbb6711d0da630315384f8e7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 472ff8c10e1346f25e7bc72ed5fd4ee9f31bbafa
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904784"
 ---
-# <a name="walkthrough-display-statement-completion"></a>Návod: Zobrazení dokončení příkazu
-Dokončení příkazu založeného na jazyce můžete implementovat definováním identifikátorů, pro které chcete poskytnout dokončení, a aktivací relace dokončení. Můžete definovat dokončení příkazu v kontextu jazykové služby, definovat vlastní příponu názvu souboru a typ obsahu a potom zobrazit dokončení právě pro tento typ. Nebo můžete aktivovat dokončování pro existující typ obsahu – například "prostý text". Tento návod ukazuje, jak aktivovat dokončení příkazu pro typ obsahu "ve formátu prostého textu", což je typ obsahu textových souborů. Typ obsahu "text" je předchůdcem všech ostatních typů obsahu, včetně kódu a souborů XML.
+# <a name="walkthrough-display-statement-completion"></a>Návod: dokončování příkazů zobrazení
+Doplňování příkazů založeného na jazyce můžete implementovat definováním identifikátorů, pro které chcete poskytnout dokončení, a následnou aktivací relace dokončení. Můžete definovat dokončování příkazů v kontextu jazykové služby, definovat vlastní příponu názvu souboru a typ obsahu a pak zobrazit dokončování pouze pro tento typ. Nebo můžete aktivovat dokončování pro existující typ obsahu, například "prostý text". Tento návod ukazuje, jak aktivovat dokončování příkazů pro typ obsahu "prostý text", což je typ obsahu textových souborů. Typ obsahu "text" je nadřazeným prvkem všech dalších typů obsahu, včetně kódu a souborů XML.
 
- Dokončení příkazu se obvykle spouští zadáním určitých znaků – například zadáním začátku identifikátoru, například "using". Obvykle se zavře stisknutím **mezerníku**, **tabulátoru**nebo **klávesy Enter** pro potvrzení výběru. Můžete implementovat funkce IntelliSense, které se aktivují při psaní znaku <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> pomocí obslužné rutiny <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> příkazů pro úhozy (rozhraní) a poskytovatele obslužné rutiny, který implementuje rozhraní. Chcete-li vytvořit zdroj dokončení, což je seznam identifikátorů, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> které se účastní dokončení, implementujte rozhraní a zprostředkovatele zdroje dokončení <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> (rozhraní). Zprostředkovatelé jsou součásti architektury spravované rozšiřitelnosti (MEF). Jsou zodpovědní za export tříd zdrojového a kontroleru a import služeb <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>a zprostředkovatelů – například <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, který umožňuje navigaci v textové vyrovnávací paměti, a , který aktivuje relaci dokončení.
+ Dokončení příkazu se obvykle aktivuje zadáním určitých znaků, například zadáním začátku identifikátoru, jako je "using". Obvykle se neodesílá, když stisknete klávesu **MEZERNÍK**, **TAB**nebo **ENTER** , potvrďte výběr. Můžete implementovat funkce technologie IntelliSense, které se aktivují při zadávání znaku pomocí obslužné rutiny příkazu pro stisknutí kláves ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní) a zprostředkovatele obslužné rutiny, který implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> rozhraní. Chcete-li vytvořit zdroj dokončení, což je seznam identifikátorů, které se účastní dokončení, implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> rozhraní a poskytovatele zdroje dokončení ( <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> rozhraní). Poskytovatelé jsou součásti komponenty Managed Extensibility Framework (MEF). Zodpovídá za exportování tříd source a Controller a importu služeb a zprostředkovatelů – například <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> , který umožňuje navigaci ve vyrovnávací paměti textu a na <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> , který spouští relaci dokončení.
 
- Tento návod ukazuje, jak implementovat dokončení příkazu pro pevně zakódovanou sadu identifikátorů. V úplných implementacích je za poskytnutí tohoto obsahu zodpovědná jazyková služba a jazyková dokumentace.
+ Tento návod ukazuje, jak implementovat dokončování příkazů pro pevně zakódovanou sadu identifikátorů. V úplných implementacích zodpovídá služba jazyka a jazykovou dokumentaci za poskytnutí tohoto obsahu.
 
 ## <a name="prerequisites"></a>Požadavky
- Počínaje Visual Studio 2015, nenainstalujete Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-mef-project"></a>Vytvoření projektu MEF
+## <a name="create-a-mef-project"></a>Vytvořit projekt MEF
 
 #### <a name="to-create-a-mef-project"></a>Vytvoření projektu MEF
 
-1. Vytvořte projekt C# VSIX. (V dialogovém okně **Nový projekt** vyberte možnost **Vizuální C# / Rozšiřitelnost**a potom **v six projectu**.) Pojmenujte `CompletionTest`řešení .
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `CompletionTest` .
 
-2. Přidejte do projektu šablonu položky třídění editoru. Další informace naleznete [v tématu Vytvoření rozšíření se šablonou položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+2. Přidejte do projektu šablonu položky klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
-3. Odstraňte existující soubory tříd.
+3. Odstraňte existující soubory třídy.
 
-4. Přidejte do projektu následující odkazy a ujistěte se, že **copylocal** je nastavena na `false`:
+4. Do projektu přidejte následující odkazy a ujistěte se, že je **CopyLocal** nastavené na `false` :
 
-     Microsoft.VisualStudio.Editor
+     Microsoft. VisualStudio. Editor
 
-     Microsoft.VisualStudio.Language.Intellisense
+     Microsoft. VisualStudio. Language. IntelliSense
 
-     Microsoft.VisualStudio.OLE.Interop
+     Microsoft. VisualStudio. OLE. Interop
 
-     Microsoft.VisualStudio.Shell.15.0
+     Microsoft. VisualStudio. Shell. 15.0
 
-     Microsoft.VisualStudio.Shell.Immutable.10.0
+     Microsoft. VisualStudio. Shell. unmutable. 10.0
 
-     Microsoft.VisualStudio.TextManager.Interop
+     Microsoft. VisualStudio. TextManager. Interop
 
 ## <a name="implement-the-completion-source"></a>Implementace zdroje dokončení
- Zdroj dokončení je zodpovědný za shromažďování sadu identifikátorů a přidání obsahu do okna dokončení, když uživatel zadá aktivační událost dokončení, například první písmena identifikátoru. V tomto příkladu jsou identifikátory a jejich popisy <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> pevně zakódovány v metodě. Ve většině reálných použití byste pomocí analyzátoru jazyka získali tokeny k naplnění seznamu dokončení.
+ Zdroj dokončení zodpovídá za shromáždění sady identifikátorů a přidání obsahu do okna dokončení, když uživatel zadá aktivační událost dokončení, například první písmena identifikátoru. V tomto příkladu jsou identifikátory a jejich popisy pevně kódované v <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> metodě. Ve většině reálných použití byste pomocí analyzátoru jazyka získali tokeny k naplnění seznamu dokončení.
 
 ### <a name="to-implement-the-completion-source"></a>Implementace zdroje dokončení
 
-1. Přidejte soubor třídy `TestCompletionSource`a pojmenujte jej .
+1. Přidejte soubor třídy a pojmenujte ho `TestCompletionSource` .
 
 2. Přidejte tyto importy:
 
      [!code-csharp[VSSDKCompletionTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_1.cs)]
      [!code-vb[VSSDKCompletionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_1.vb)]
 
-3. Upravte deklaraci `TestCompletionSource` třídy tak, aby implementovala <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>:
+3. Upravte deklaraci třídy pro `TestCompletionSource` tak, aby implementovala <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> :
 
      [!code-csharp[VSSDKCompletionTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_2.cs)]
      [!code-vb[VSSDKCompletionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_2.vb)]
 
-4. Přidejte soukromá pole pro zdrojového zprostředkovatele, <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> textovou vyrovnávací paměť a seznam objektů (které odpovídají identifikátorům, které se budou účastnit relace dokončení):
+4. Přidejte soukromá pole pro poskytovatele zdroje, textovou vyrovnávací paměť a seznam <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> objektů (které odpovídají identifikátorům, které se budou podílet na relaci dokončení):
 
      [!code-csharp[VSSDKCompletionTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_3.cs)]
      [!code-vb[VSSDKCompletionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_3.vb)]
 
-5. Přidejte konstruktor, který nastaví zdrojového zprostředkovatele a vyrovnávací paměť. Třída `TestCompletionSourceProvider` je definována v pozdějších krocích:
+5. Přidejte konstruktor, který nastaví zprostředkovatele zdroje a vyrovnávací paměť. `TestCompletionSourceProvider`Třída je definována v pozdějších krocích:
 
      [!code-csharp[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]
      [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]
 
-6. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> metodu přidáním sady dokončení, která obsahuje dokončení, které chcete poskytnout v kontextu. Každá sada dokončení obsahuje <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> sadu dokončení a odpovídá kartě okna dokončení. (V projektech jazyka Visual Basic karty okna dokončení s názvem **Společné** a **Všechny**.) Metoda `FindTokenSpanAtPosition` je definována v dalším kroku.
+6. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> metodu přidáním sady dokončení, která obsahuje dokončování, které chcete zadat v kontextu. Každá sada dokončení obsahuje sadu <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> dokončovacích operací a odpovídá kartě okna dokončení. (V Visual Basic projekty karty okna pro dokončení se nazývají **Common** a **All**.) `FindTokenSpanAtPosition`Metoda je definována v dalším kroku.
 
      [!code-csharp[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]
      [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]
 
-7. Následující metoda se používá k nalezení aktuální ho slova z pozice kurzoru:
+7. Následující metoda slouží k vyhledání aktuálního slova z pozice kurzoru:
 
      [!code-csharp[VSSDKCompletionTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_6.cs)]
      [!code-vb[VSSDKCompletionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_6.vb)]
 
-8. Zavést `Dispose()` metodu:
+8. Implementujte `Dispose()` metodu:
 
      [!code-csharp[VSSDKCompletionTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_7.cs)]
      [!code-vb[VSSDKCompletionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_7.vb)]
 
-## <a name="implement-the-completion-source-provider"></a>Implementace zprostředkovatele zdroje dokončení
- Zprostředkovatel zdroje dokončení je součást mef součást, která inkonzí zdroj dokončení.
+## <a name="implement-the-completion-source-provider"></a>Implementace poskytovatele zdroje dokončení
+ Poskytovatel zdroje dokončení je část komponenty MEF, která vytvoří instanci zdroje dokončení.
 
-### <a name="to-implement-the-completion-source-provider"></a>Implementace zprostředkovatele zdroje dokončení
+### <a name="to-implement-the-completion-source-provider"></a>Implementace poskytovatele zdroje dokončení
 
-1. Přidejte třídu s názvem, `TestCompletionSourceProvider` která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>. Exportujte tuto <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> třídu s "prostým textem" <xref:Microsoft.VisualStudio.Utilities.NameAttribute> a "dokončením testu".
+1. Přidejte třídu s názvem `TestCompletionSourceProvider` , která implementuje <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> . Exportujte tuto třídu s použitím <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "prostého textu" a typu <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "dokončení testu".
 
      [!code-csharp[VSSDKCompletionTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_8.cs)]
      [!code-vb[VSSDKCompletionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_8.vb)]
 
-2. Importace <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, která vyhledá aktuální slovo ve zdroji dokončení.
+2. Importujte <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> , který najde aktuální slovo ve zdroji dokončení.
 
      [!code-csharp[VSSDKCompletionTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_9.cs)]
      [!code-vb[VSSDKCompletionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_9.vb)]
 
-3. Implementujte <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> metodu k vytvoření instance zdroje dokončení.
+3. Implementací <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> metody vytvořte instanci zdroje dokončení.
 
      [!code-csharp[VSSDKCompletionTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_10.cs)]
      [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]
 
-## <a name="implement-the-completion-command-handler-provider"></a>Implementace zprostředkovatele obslužné rutiny příkazu dokončení
- Zprostředkovatel obslužné rutiny <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>příkazu dokončení je odvozen od aplikace , která <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>naslouchá události vytvoření textového zobrazení a převádí <xref:Microsoft.VisualStudio.Text.Editor.ITextView>zobrazení z –, které umožňuje přidání příkazu do řetězce příkazů prostředí sady Visual Studio – na . Vzhledem k tomu, že tato třída je export MEF, můžete také použít k importu služeb, které jsou vyžadovány obslužnou rutinou příkazu sám.
+## <a name="implement-the-completion-command-handler-provider"></a>Implementace zprostředkovatele obslužné rutiny příkazu pro dokončení
+ Zprostředkovatel obslužné rutiny příkazu pro dokončení je odvozen z typu <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> , který naslouchá události vytváření zobrazení textu a převádí zobrazení z <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> , což umožňuje přidání příkazu do řetězce příkazu prostředí sady Visual Studio – do <xref:Microsoft.VisualStudio.Text.Editor.ITextView> . Vzhledem k tomu, že tato třída je exportem MEF, můžete ji také použít k importu služeb, které jsou vyžadovány samotným obslužnou rutinou příkazu.
 
-#### <a name="to-implement-the-completion-command-handler-provider"></a>Implementace zprostředkovatele obslužné rutiny příkazu dokončení
+#### <a name="to-implement-the-completion-command-handler-provider"></a>Implementace zprostředkovatele obslužných rutin příkazu pro dokončení
 
-1. Přidejte soubor `TestCompletionCommandHandler`s názvem .
+1. Přidejte soubor s názvem `TestCompletionCommandHandler` .
 
-2. Přidejte tyto pomocí direktiv:
+2. Přidejte tyto direktivy direktivy using:
 
      [!code-csharp[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]
      [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]
 
-3. Přidejte třídu s názvem, `TestCompletionHandlerProvider` která implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>. Exportovat tuto <xref:Microsoft.VisualStudio.Utilities.NameAttribute> třídu s "obslužné rutiny dokončení tokenu", a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "prostý text" a a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> . <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>
+3. Přidejte třídu s názvem `TestCompletionHandlerProvider` , která implementuje <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Exportujte tuto třídu s <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "obslužným rutinou dokončení tokenu", <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "prostého textu" a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> a <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable> .
 
      [!code-csharp[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]
      [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]
 
-4. Importovat <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>, který umožňuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> převod <xref:Microsoft.VisualStudio.Text.Editor.ITextView>z <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>a <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> , a, a který umožňuje přístup ke standardním službám sady Visual Studio.
+4. Importujte <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> , který umožňuje převod z typu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> na <xref:Microsoft.VisualStudio.Text.Editor.ITextView> , a, a, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> který umožňuje přístup ke standardním službám sady Visual Studio.
 
      [!code-csharp[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]
      [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]
 
-5. Implementujte <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> metodu k vytvoření instance obslužné rutiny příkazu.
+5. Implementujte <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> metodu pro vytvoření instance obslužné rutiny příkazu.
 
      [!code-csharp[VSSDKCompletionTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_14.cs)]
      [!code-vb[VSSDKCompletionTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_14.vb)]
 
-## <a name="implement-the-completion-command-handler"></a>Implementace obslužné rutiny příkazu dokončení
- Vzhledem k tomu, že dokončení příkazu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> je spuštěno úhozy kláves, je nutné implementovat rozhraní pro příjem a zpracování úhozů, které aktivují, potvrdí a zamítnou relaci dokončení.
+## <a name="implement-the-completion-command-handler"></a>Implementace obslužné rutiny příkazu pro dokončení
+ Vzhledem k tomu, že dokončování příkazů se spouští pomocí klávesových úhozů, je nutné implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní pro příjem a zpracování klávesových úhozů, které aktivují, potvrzují a odstavují relaci dokončení.
 
-#### <a name="to-implement-the-completion-command-handler"></a>Implementace obslužné rutiny příkazu dokončení
+#### <a name="to-implement-the-completion-command-handler"></a>Implementace obslužné rutiny příkazu pro dokončení
 
-1. Přidejte třídu s názvem, `TestCompletionCommandHandler` která implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:
+1. Přidejte třídu s názvem `TestCompletionCommandHandler` , která implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> :
 
     [!code-csharp[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]
     [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]
 
-2. Přidejte soukromá pole pro další obslužnou rutinu příkazu (do které příkaz předáte), textové zobrazení, zprostředkovatele obslužné rutiny příkazu (který umožňuje přístup k různým službám) a relaci dokončení:
+2. Přidejte soukromá pole pro následující obslužnou rutinu příkazu (do kterého předáte příkaz), textové zobrazení, zprostředkovatele obslužné rutiny příkazů (umožňující přístup k různým službám) a relaci dokončení:
 
     [!code-csharp[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]
     [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]
 
-3. Přidejte konstruktor, který nastaví textové zobrazení a pole zprostředkovatele, a přidá příkaz do řetězce příkazů:
+3. Přidejte konstruktor, který nastaví textové zobrazení a pole poskytovatele a přidá příkaz do řetězce příkazu:
 
     [!code-csharp[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]
     [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]
 
-4. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu předáním příkazu:
+4. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu předáním příkazu společně:
 
     [!code-csharp[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]
     [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]
 
-5. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodu. Když tato metoda obdrží stisknutí klávesy, musí provést jednu z těchto věcí:
+5. Implementujte <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> metodu. Pokud tato metoda obdrží klávesovou zkratku, musí provést jednu z následujících akcí:
 
-   - Povolit znak, který má být zapsán do vyrovnávací paměti a potom aktivovat nebo filtr dokončení. (Tisk znaků to provést.)
+   - Umožňuje zapsat znak do vyrovnávací paměti a pak aktivovat nebo filtrovat dokončení. (Tisk znaků.)
 
-   - Potvrďte dokončení, ale nepovolte znak, který má být zapsán do vyrovnávací paměti. (Mezery, **Tabulátor**a **Enter** to dělají, když se zobrazí relace dokončení.)
+   - Potvrďte dokončení, ale nepovolujte, aby byl znak zapsaný do vyrovnávací paměti. (Prázdný znak, **tabulátor**a **Zadejte** , když se zobrazí relace dokončování.)
 
-   - Povolit předání příkazu další obslužné rutině. (Všechny ostatní příkazy.)
+   - Povolí předání příkazu k další obslužné rutině. (Všechny ostatní příkazy.)
 
-     Vzhledem k tomu, že <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> tato metoda může zobrazit uživatelské rozhraní, volání a ujistěte se, že není volána v kontextu automatizace:
+     Vzhledem k tomu, že tato metoda může zobrazit uživatelské rozhraní, zavolejte <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> a ujistěte se, že není volána v kontextu automatizace:
 
      [!code-csharp[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)]
      [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]
 
-6. Tento kód je soukromá metoda, která aktivuje relaci dokončení:
+6. Tento kód je soukromá metoda, která spustí relaci dokončení:
 
     [!code-csharp[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]
     [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]
 
-7. Dalším příkladem je soukromá metoda, která <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> se odhlásí z události:
+7. Dalším příkladem je soukromá metoda, která odhlašuje odběr <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> události:
 
     [!code-csharp[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]
     [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]
 
 ## <a name="build-and-test-the-code"></a>Sestavení a testování kódu
- Chcete-li otestovat tento kód, vytvořte řešení CompletionTest a spusťte jej v experimentální instanci.
+ Chcete-li otestovat tento kód, sestavte řešení CompletionTest a spusťte ho v experimentální instanci.
 
 #### <a name="to-build-and-test-the-completiontest-solution"></a>Sestavení a testování řešení CompletionTest
 
 1. Sestavte řešení.
 
-2. Při spuštění tohoto projektu v ladicím programu je spuštěna druhá instance sady Visual Studio.
+2. Při spuštění tohoto projektu v ladicím programu se spustí druhá instance sady Visual Studio.
 
-3. Vytvořte textový soubor a zadejte text, který obsahuje slovo "přidat".
+3. Vytvořte textový soubor a zadejte nějaký text, který obsahuje slovo "Přidat".
 
-4. Při psaní první "a" a pak "d", seznam, který obsahuje "sčítání" a "adaptace" by se měl zobrazit. Všimněte si, že je vybráno přidání. Když zadáte jiné "d", seznam by měl obsahovat pouze "sčítání", který je nyní vybrán. Přidání můžete potvrdit stisknutím **mezerníku**, **tabulátoru**nebo **klávesy Enter** nebo zavřením seznamu zadáním esc nebo jiné klávesy.
+4. Když zadáte první "a" a potom "d", zobrazí se seznam obsahující "sčítání" a "přizpůsobení". Všimněte si, že je vybraná možnost přidání. Když zadáte jiný text "d", seznam by měl obsahovat pouze "sčítání", které jsou nyní vybrány. Kliknutím na klávesu **MEZERNÍK**, **TAB**nebo **ENTER** můžete potvrdit "sčítání", nebo můžete seznam zavřít zadáním klávesy ESC nebo jiného klíče.
 
 ## <a name="see-also"></a>Viz také
-- [Návod: Propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [Návod: propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

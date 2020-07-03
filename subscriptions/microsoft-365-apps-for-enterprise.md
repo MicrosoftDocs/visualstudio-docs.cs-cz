@@ -5,14 +5,14 @@ ms.author: v-evwin
 manager: cabuschl
 ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Další informace o a instalaci aplikací Microsoft 365 pro podniky
-ms.openlocfilehash: 95eaece45d6d261605a653efbb80bc03d6199dbf
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 341598e323b004463d9af2f1b18d5096dea9f3b2
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85364094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902986"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aplikací pro Enterprise v předplatných sady Visual Studio
 Ve vybraných předplatných sady Visual Studio je k dispozici Microsoft 365 aplikace pro Enterprise (dříve Office 365 pro plus). 
@@ -55,8 +55,8 @@ Proces aktivace aplikací Microsoft 365 pro podnikové předplatné je jednoduch
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Yes          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Yes          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  –          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  –          |
 | Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  –          |

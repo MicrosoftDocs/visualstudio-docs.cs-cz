@@ -1,7 +1,7 @@
 ---
-title: Vytváření vlastních editorů a návrhářů | Dokumenty společnosti Microsoft
+title: Vytváření vlastních editorů a návrhářů | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - designers [Visual Studio SDK]
 - editors [Visual Studio SDK], custom
@@ -11,22 +11,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9f56b82225e1e40782b6753bea03d3c1780f596
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 0ddfe2b61c8ef08d77fbb7c841b3bb69c167af2f
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739484"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903739"
 ---
-# <a name="create-custom-editors-and-designers"></a>Vytvoření vlastních editorů a návrhářů
+# <a name="create-custom-editors-and-designers"></a>Vytváření vlastních editorů a návrhářů
 
-Integrované vývojové prostředí sady Visual Studio (IDE) může hostovat různé typy editoru:
+Integrované vývojové prostředí (IDE) sady Visual Studio může hostovat různé typy editoru:
 
-- Základní editor visual ateliéru
+- Základní editor sady Visual Studio
 
 - Vlastní editory
 
-- Externí redakce
+- Externí editory
 
 - Návrháři
 
@@ -34,42 +34,42 @@ Následující informace vám pomohou vybrat typ editoru, který potřebujete.
 
 ## <a name="types-of-editor"></a>Typy editoru
 
-Informace o základní editor u sady Visual Studio naleznete [v tématu Rozšíření editoru a jazykových služeb](../extensibility/extending-the-editor-and-language-services.md).
+Informace o základním editoru sady Visual Studio najdete v tématu věnovaném [rozšířenému editoru a jazykovým službám](../extensibility/extending-the-editor-and-language-services.md).
 
 ### <a name="custom-editors"></a>Vlastní editory
- Vlastní editor je ten, který je určen pro práci ve specializovaných okolností. Můžete například vytvořit editor, jehož funkcí je čtení a zápis dat do určitého úložiště, jako je například server Microsoft Exchange. Zvolte vlastní editor, pokud chcete editor, který pracuje pouze s typem projektu, nebo pokud chcete editor, který má pouze několik konkrétních příkazů. Všimněte si však, že uživatelé nebudou moci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] používat vlastní editor k úpravám standardních projektů.
+ Vlastní editor je ten, který je navržený tak, aby fungoval ve specializovaných případech. Můžete například vytvořit editor, jehož funkce je číst a zapisovat data do konkrétního úložiště, jako je například Microsoft Exchange Server. Vlastní editor vyberte, pokud chcete Editor, který pracuje pouze s typem projektu, nebo pokud chcete použít editor, který obsahuje pouze několik specifických příkazů. Upozorňujeme však, že uživatelé nebudou moci používat vlastní editor pro úpravu standardních [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektů.
 
- Vlastní editor můžete použít editor factory a přidat informace o editoru do registru. Typ projektu přidružené k vlastní editor však můžete vytvořit instanci vlastní editor jinými způsoby.
+ Vlastní editor může použít objekt pro vytváření editoru a přidat informace o editoru do registru. Typ projektu přidružený k vlastnímu editoru však může vytvořit instanci vlastního editoru jiným způsobem.
 
- Vlastní editor můžete použít buď na místě aktivace nebo zjednodušené vkládání k implementaci zobrazení.
+ Vlastní editor může použít buď místní aktivaci, nebo zjednodušené vkládání, aby bylo možné implementovat zobrazení.
 
-### <a name="external-editors"></a>Externí redaktoři
- Externí editory jsou editory, které nejsou integrovány do sady Visual Studio, například Microsoft Word, Poznámkový blok nebo Aplikace Microsoft FrontPage. Takový editor můžete volat, pokud mu například předáváte text z vašeho balíčku VSPackage. Externí editory zaregistrovat sami a lze použít mimo Visual Studio. Když zavoláte externí editor a může být vložen do okna hostitele, zobrazí se v okně v integrovaném rozhraní IDE. Pokud ne, pak ide vytvoří samostatné okno pro něj.
+### <a name="external-editors"></a>Externí editory
+ Externí editory jsou editory, které nejsou integrovány do sady Visual Studio, jako je například Microsoft Word, Poznámkový blok nebo Microsoft FrontPage. Takový editor můžete volat, pokud například předáváte text ze sady VSPackage. Externí editory se registrují samy a můžou se používat mimo Visual Studio. Když zavoláte externí editor a může být vložen do hostitelského okna, pak se zobrazí v okně v integrovaném vývojovém prostředí (IDE). Pokud není, rozhraní IDE pro něj vytvoří samostatné okno.
 
- Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> nastaví prioritu dokumentu <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> pomocí výčtu. Pokud `DP_External` je zadána hodnota, soubor lze otevřít externím editorem.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>Metoda nastaví prioritu dokumentu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> výčtu. `DP_External`Je-li zadána hodnota, soubor může být otevřen externím editorem.
 
-## <a name="editor-design-decisions"></a>Rozhodnutí editora návrhu
- Následující otázky týkající se návrhu vám pomohou vybrat typ editoru, který nejlépe vyhovuje vaší aplikaci:
+## <a name="editor-design-decisions"></a>Editor rozhodnutí o návrhu
+ Následující otázky návrhu vám pomůžou zvolit typ editoru, který nejlépe vyhovuje vaší aplikaci:
 
-- Uloží vaše aplikace svá data do souborů nebo ne? Pokud bude ukládat svá data do souborů, budou ve vlastním nebo standardním formátu?
+- Bude vaše aplikace ukládat data do souborů nebo ne? Pokud bude data ukládat v souborech, budou mít vlastní nebo standardní formát?
 
-   Pokud používáte standardní formát souboru, ostatní typy projektů kromě projektu budou moci otevřít a číst a zapisovat data do nich. Pokud však používáte vlastní formát souboru, bude možné otevřít a číst a zapisovat data pouze váš typ projektu.
+   Použijete-li standardní formát souboru, další typy projektů kromě projektu budou moci otevřít a číst a zapisovat data do nich. Pokud však použijete vlastní formát souboru, bude moci otevřít a číst a zapisovat data do nich pouze typ projektu.
 
-   Pokud váš projekt používá soubory, měli byste přizpůsobit standardní editor. Pokud váš projekt nepoužívá soubory, ale spíše používá položky v databázi nebo jiném úložišti, měli byste vytvořit vlastní editor.
+   Pokud projekt používá soubory, měli byste přizpůsobit standardní editor. Pokud váš projekt nepoužívá soubory, ale spíše používá položky v databázi nebo jiném úložišti, měli byste vytvořit vlastní editor.
 
-- Potřebuje váš editor hostovat ovládací prvky ActiveX?
+- Potřebuje váš Editor hostovat ovládací prvky ActiveX?
 
-   Pokud editor hostuje ovládací prvky ActiveX, implementujte editor aktivace na místě, jak je uvedeno [v aktivaci na místě](/visualstudio/misc/in-place-activation?view=vs-2015). Pokud nehostuje ovládací prvky ActiveX, použijte buď zjednodušený editor vkládání, nebo přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
+   Pokud editor hostuje ovládací prvky ActiveX, proveďte implementaci místního editoru aktivace, jak je uvedeno v [místní aktivaci](/visualstudio/misc/in-place-activation?view=vs-2015). Pokud nehostuje ovládací prvky ActiveX, použijte zjednodušený Editor vkládání nebo přizpůsobte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] výchozí editor.
 
-- Bude váš editor podporovat více zobrazení? Pokud chcete, aby zobrazení editoru byla viditelná současně s výchozím editorem, je nutné podporovat více zobrazení.
+- Bude váš Editor podporovat více zobrazení? Chcete-li zobrazit zobrazení editoru ve stejnou dobu jako výchozí editor, je nutné podporovat více zobrazení.
 
-   Pokud editor potřebuje podporovat více zobrazení, musí být data dokumentu a objekty zobrazení dokumentu pro editor samostatnými objekty. Další informace naleznete v [tématu Podpora více zobrazení dokumentu](../extensibility/supporting-multiple-document-views.md).
+   Pokud váš Editor potřebuje podporovat více zobrazení, data dokumentu a objekty zobrazení dokumentu pro Editor musí být samostatné objekty. Další informace najdete v tématu [Podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).
 
-   Pokud editor podporuje více zobrazení, plánujete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] použít implementaci<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (objekt) textové vyrovnávací paměti základního editoru pro datový objekt dokumentu? To znamená, že chcete podpořit zobrazení editoru vedle [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sebe s editorem jádra? Schopnost to provést je základem návrháře formulářů..
+   Pokud editor podporuje více zobrazení, máte v úmyslu použít [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> pro datový objekt dokumentu implementaci vyrovnávací paměti textu základního editoru? To znamená, že chcete podporovat zobrazení editoru vedle [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] základního editoru? Tato možnost je základem Návrháře formulářů.
 
-- Pokud potřebujete hostovat externí editor , může být [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]editor vložen uvnitř ?
+- Pokud potřebujete hostovat externí editor, můžete Editor vložit do služby [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ?
 
-   Pokud může být vložen, měli byste vytvořit okno hostitele pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> externí editor <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> a potom volat `DP_External`metodu a nastavit hodnotu výčtu na . Pokud editor nelze vložit, rozhraní IDE automaticky vytvoří samostatné okno pro něj.
+   Pokud může být vložena, měli byste vytvořit hostitelské okno pro externí editor a pak zavolat <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> metodu a nastavit <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> hodnotu výčtu na `DP_External` . Pokud Editor nelze vložit, rozhraní IDE pro něj automaticky vytvoří samostatné okno.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -82,25 +82,25 @@ Vysvětluje, jak přidat funkce do vlastního editoru.
 [Inicializace návrháře a konfigurace metadat](../extensibility/designer-initialization-and-metadata-configuration.md)\
 Vysvětluje, jak inicializovat návrháře.
 
-[Dodávat podporu pro odvádělte návrhářům](../extensibility/supplying-undo-support-to-designers.md)\
-Vysvětluje, jak poskytnout podporu pro návrháře.
+[Poskytnutí podpory pro vrácení zpět návrhářům](../extensibility/supplying-undo-support-to-designers.md)\
+Vysvětluje, jak poskytnout zpětnou podporu pro návrháře.
 
-[Syntaxe barvení ve vlastních editorech](../extensibility/syntax-coloring-in-custom-editors.md)\
-Vysvětluje rozdíl mezi vybarvením syntaxe v editoru jádra a ve vlastních editorech.
+[Barevné zvýrazňování syntaxe ve vlastních editorech](../extensibility/syntax-coloring-in-custom-editors.md)\
+Vysvětluje rozdíl mezi zvýrazněním syntaxe v základním editoru a ve vlastních editorech.
 
 [Zobrazení dat dokumentů a dokumentů ve vlastních editorech](../extensibility/document-data-and-document-view-in-custom-editors.md)\
-Vysvětluje, jak implementovat data dokumentu a zobrazení dokumentů ve vlastních editorech.
+Vysvětluje, jak implementovat data dokumentů a zobrazení dokumentů ve vlastních editorech.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [Starší rozhraní v editoru](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
-Vysvětluje, jak získat přístup k editoru jádra pomocí staršího rozhraní API.
+Vysvětluje, jak přistupovat k základnímu editoru prostřednictvím starší verze rozhraní API.
 
-[Vývoj služby starších jazyků](../extensibility/internals/developing-a-legacy-language-service.md)\
-Vysvětluje, jak implementovat jazykovou službu.
+[Vývoj služby starší verze jazyka](../extensibility/internals/developing-a-legacy-language-service.md)\
+Vysvětluje, jak implementovat službu jazyka.
 
-[Rozšíření dalších částí sady Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)\
-Vysvětluje, jak vytvořit prvky uživatelského [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]rozhraní, které odpovídají zbytku .
+[Rozšiřování dalších částí sady Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)\
+Vysvětluje, jak vytvořit prvky uživatelského rozhraní, které se shodují se zbytkem z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Viz také
 

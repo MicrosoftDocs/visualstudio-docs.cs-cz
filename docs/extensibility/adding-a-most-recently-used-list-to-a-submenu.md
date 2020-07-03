@@ -1,7 +1,7 @@
 ---
 title: Přidání seznamu naposledy použitých do podnabídky | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - MRU lists
 - menus, creating MRU list
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5624fe4a4f3c9ba774313e862f9e84a6f6d70862
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183272"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904204"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidat seznam naposledy použitých do podnabídky
 Tento názorný postup se sestavuje v předváděních v [nabídce Přidat podnabídku do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)a ukazuje, jak přidat dynamický seznam do podnabídky. Dynamický seznam tvoří základ pro vytvoření seznamu naposledy použitých položek.

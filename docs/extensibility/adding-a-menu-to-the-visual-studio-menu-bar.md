@@ -1,7 +1,7 @@
 ---
 title: Přidání nabídky do panelu nabídek aplikace Visual Studio | Microsoft Docs
 ms.date: 3/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - menus, creating top level
 - top-level menus
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b87fc73c1ed4b24ccfbd604e3bb08c9b02b62524
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 39dee051991efe05b9a661ce1d213e71b456590b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904258"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky do řádku nabídek sady Visual Studio
 
@@ -33,7 +33,7 @@ Po dokončení tohoto návodu můžete vytvořit nabídku s názvem **TestMenu**
 > Od sady Visual Studio 2019 jsou nabídky nejvyšší úrovně, které přispěly rozšířeními, umístěné v nabídce **rozšíření** .
 :::moniker-end
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

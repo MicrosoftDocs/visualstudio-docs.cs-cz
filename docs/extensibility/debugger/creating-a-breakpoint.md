@@ -1,7 +1,7 @@
 ---
-title: Vytvoření zarážky | Dokumenty společnosti Microsoft
+title: Vytváření zarážky | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - breakpoints, creating
 - debugging [Debugging SDK], creating breakpoints
@@ -11,18 +11,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d252f1310c3e251c44525cd94c4d9a2943d8171d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 3f89b99f15374ef7e0bbc6964ee1ff521eeb469f
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739055"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903618"
 ---
-# <a name="create-a-breakpoint"></a>Vytvoření zarážky
-Následující popisuje proces vytváření zarážky.
+# <a name="create-a-breakpoint"></a>Vytvořit zarážku
+Následující popis popisuje proces vytvoření zarážky.
 
-## <a name="methods-in-breakpoint-creation"></a>Metody při vytváření zarážky
- Když je načten modul, který je potřeba k vytvoření vazby zarážky, správce ladění relace (SDM) volá následující metody:
+## <a name="methods-in-breakpoint-creation"></a>Metody při vytváření zarážek
+ Když je načten modul, který je potřeba k navázání zarážky, zavolá Správce ladění relace (SDM) následující metody:
 
 1. [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)
 
@@ -31,11 +31,11 @@ Následující popisuje proces vytváření zarážky.
 3. [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)
 
     > [!NOTE]
-    > **CanBind** je volána pouze v případě, že uživatel vytvoří zarážku z okna **Zarážky.**
+    > **CanBind** se volá pouze v případě, že uživatel vytvoří zarážku z okna **zarážky** .
 
 4. [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
 
 5. [IDebugPendingBreakpoint2::EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)
 
 ## <a name="see-also"></a>Viz také
-- [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)
+- [Události ladicího programu volání](../../extensibility/debugger/calling-debugger-events.md)

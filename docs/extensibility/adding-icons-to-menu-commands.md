@@ -1,7 +1,7 @@
 ---
-title: Přidání ikon do příkazů nabídky | Dokumenty společnosti Microsoft
+title: Přidávání ikon do příkazů nabídky | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - icons [Visual Studio], adding to toolbars
 - toolbars [Visual Studio], adding icons to commands
@@ -12,39 +12,39 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4b71f981472451766f526cf62e975e571cf46da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c9f038dc43c1705a7cef47eb09a17607c535e307
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903432"
 ---
-# <a name="add-icons-to-menu-commands"></a>Přidání ikon do příkazů nabídky
-Příkazy se mohou zobrazit v nabídkách i panelech nástrojů. Na panelech nástrojů je běžné, že příkaz se zobrazí pouze s ikonou (pro úsporu místa), zatímco v nabídkách se příkaz obvykle zobrazí s ikonou i textem.
+# <a name="add-icons-to-menu-commands"></a>Přidat ikony do příkazů nabídky
+Příkazy se můžou objevit v nabídkách i na panelech nástrojů. Na panelech nástrojů je běžné, že se příkaz zobrazí jenom s ikonou (k uložení prostoru), zatímco v nabídkách se příkaz obvykle zobrazuje s ikonou i textem.
 
- Ikony jsou 16 pixelů široké a 16 pixelů vysoké a mohou být buď 8bitová barevná hloubka (256 barev) nebo 32bitová barevná hloubka (skutečná barva). Upřednostňovány jsou 32bitové ikony barev. Ikony jsou obvykle uspořádány do jednoho vodorovného řádku v jedné bitmapě, i když je povoleno více bitmap. Tato bitmapa je deklarována v souboru *.vsct* spolu s jednotlivými ikonami dostupnými v bitmapě. Další podrobnosti najdete v odkazu na [element Bitmaps.](../extensibility/bitmaps-element.md)
+ Ikony jsou 16 pixelů v šířce až 16 pixelů vysoké a může se jednat o 8bitové hloubky barev (256 barev) nebo 32 barev hloubkové hloubky (True Color). jsou preferované ikony bitových barev 32. Ikony jsou obvykle uspořádány do jednoho vodorovného řádku v jedné bitmapě, i když je povoleno více rastrových obrázků. Tato bitmapa je deklarována v souboru *. vsct* spolu s jednotlivými ikonami dostupnými v rastrovém obrázku. Další podrobnosti najdete v referenčních informacích k [elementu bitmapy](../extensibility/bitmaps-element.md) .
 
 ## <a name="add-an-icon-to-a-command"></a>Přidání ikony do příkazu
- Následující postup předpokládá, že máte existující projekt VSPackage s příkazem nabídky. Informace o tom, jak to provést, naleznete [v tématu Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
+ Následující postup předpokládá, že máte existující projekt VSPackage s příkazem nabídky. Další informace o tom, jak to provést, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-1. Vytvořte bitmapu s barevnou hloubkou 32 bitů. Ikona je vždy 16 x 16, takže tato bitmapa musí být 16 pixelů vysoká a násobkem 16 pixelů široký.
+1. Vytvořte rastrový obrázek s barevnou hloubkou 32-bitů. Ikona je vždy 16 × 16, takže tento rastrový obrázek musí být o 16 pixelů vysoký a násobkem 16 pixelů na šířku.
 
-     Každá ikona je umístěna na bitmapu vedle sebe v jednom řádku. Alfa kanál slouží k označení míst průhlednosti v každé ikoně.
+     Každá ikona je umístěna na rastrovém obrázku vedle sebe na jednom řádku. Použijte alfa kanál k označení míst průhlednosti v každé ikoně.
 
-     Pokud používáte 8bitovou barevnou hloubku, `RGB(255,0,255)`použijte jako průhlednost purpurovou , . Jsou však upřednostňovány 32bitové ikony barev.
+     Použijete-li 8bitové hloubku barev, jako průhlednost použijte purpurovou barvu `RGB(255,0,255)` . Nicméně jsou upřednostňovány 32 bitové ikony barev.
 
-2. Zkopírujte soubor ikony do *adresáře Zdroje* v projektu VSPackage. V **Průzkumníku řešení**přidejte ikonu do projektu. (Vyberte **Zdroje**a v místní nabídce klepněte na tlačítko **Přidat**, potom na **položku Existující**a vyberte soubor ikon.)
+2. Zkopírujte soubor ikony do adresáře *prostředků* v projektu VSPackage. V **Průzkumník řešení**přidejte ikonu do projektu. (Vyberte **prostředky**a v místní nabídce klikněte na **Přidat**, pak na **existující položku**a vyberte soubor ikony.)
 
-3. Otevřete soubor *.vsct* v editoru.
+3. Otevřete soubor *. vsct* v editoru.
 
-4. Přidejte `GuidSymbol` prvek s názvem **testIcon**. Vytvořte identifikátor GUID **(Nástroje** > **vytvářejí identifikátor GUID**, vyberte možnost Formát **registru** a klepněte na **kopírovat**) a vložte jej do atributu. `value` Výsledek by měl vypadat takto:
+4. Přidejte `GuidSymbol` element s názvem **testIcon**. Vytvořte identifikátor GUID (**nástroje**  >  **vytvořit GUID**, pak vyberte **Formát registru** a klikněte **na Kopírovat**) a vložte ho do `value` atributu. Výsledek by měl vypadat takto:
 
     ```xml
     <!-- Create your own GUID -->
     <GuidSymbol name="testIcon" value="{00000000-0000-0000-0000-0000}">
     ```
 
-5. Přidejte `<IDSymbol>` ikonu pro. Atributem `name` je ID ikony a `value` označuje jeho umístění na proužku, pokud existuje. Pokud existuje pouze jedna ikona, přidejte 1. Výsledek by měl vypadat takto:
+5. Přidejte `<IDSymbol>` pro ikonu. `name`Atribut je ID ikony a `value` označuje jeho polohu na pruhu, pokud existuje. Pokud je k dispozici pouze jedna ikona, přidejte 1. Výsledek by měl vypadat takto:
 
     ```xml
     <!-- Create your own GUID -->
@@ -53,21 +53,21 @@ Příkazy se mohou zobrazit v nabídkách i panelech nástrojů. Na panelech ná
     </GuidSymbol>
     ```
 
-6. Vytvořte `<Bitmap>` v `<Bitmaps>` části souboru *.vsct,* která představuje bitmapu obsahující ikony.
+6. Vytvořte `<Bitmap>` v `<Bitmaps>` části souboru *. vsct* , který bude představovat rastrový obrázek obsahující ikony.
 
     - Nastavte `guid` hodnotu na název `<GuidSymbol>` prvku, který jste vytvořili v předchozím kroku.
 
-    - Nastavte `href` hodnotu na relativní cestu bitmapového souboru (v tomto případě **zdroje\\<název\>souboru ikony**.
+    - Nastavte `href` hodnotu na relativní cestu k souboru rastrového obrázku (v tomto případě **prostředky \\<název \> souboru ikony**.
 
-    - Nastavte `usedList` hodnotu na IDSymbol, který jste vytvořili dříve. Tento atribut určuje seznam ikon oddělených čárkami, které mají být použity v balíčku VSPackage. Ikony, které nejsou v seznamu, jsou vyloučeny kompilace formuláře.
+    - Nastavte `usedList` hodnotu na IDSymbol, kterou jste vytvořili dříve. Tento atribut určuje seznam ikon oddělených čárkami, které mají být použity v VSPackage. Ikony, které nejsou v seznamu, jsou vyloučeny z kompilace.
 
-         Blok Bitmap by měl vypadat takto:
+         Blok rastrového obrázku by měl vypadat takto:
 
         ```xml
         <Bitmap guid="testIcon" href="Resources\<icon file name>" usedList="testIcon1"/>
         ```
 
-7. V existujícím `<Button>` prvku `Icon` nastavte prvek na hodnoty GUIDSymbol a IDSymbol, které jste vytvořili dříve. Tady je příklad prvku Button s těmito hodnotami:
+7. V existujícím `<Button>` elementu nastavte `Icon` element na hodnoty GUIDSymbol a IDSymbol, které jste vytvořili dříve. Tady je příklad prvku tlačítka s těmito hodnotami:
 
     ```xml
     <Button guid="guidAddIconCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -79,8 +79,8 @@ Příkazy se mohou zobrazit v nabídkách i panelech nástrojů. Na panelech ná
     </Button>
     ```
 
-8. Otestujte ikonu. Sestavení projektu a začít ladění. V experimentální instanci najděte příkaz. Měla by se zobrazit ikona, kterou jste přidali.
+8. Otestujte ikonu. Sestavte projekt a spusťte ladění. V experimentální instanci Najděte příkaz. Měla by se zobrazit ikona, kterou jste přidali.
 
 ## <a name="see-also"></a>Viz také
-- [Rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
-- [Odkaz na schéma XML VSCT](../extensibility/vsct-xml-schema-reference.md)
+- [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)
+- [Referenční dokumentace schématu VSCT XML](../extensibility/vsct-xml-schema-reference.md)

@@ -1,57 +1,57 @@
 ---
-title: Nabídka Smlouvy Azure Enterprise DevTest
+title: Nabídka Azure smlouva Enterprise DevTest
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 02/23/2020
-ms.topic: conceptual
-description: Přečtěte si, jak využít speciální ceny Azure DevTest dostupné zákazníkům se smlouvami Enterprise
-ms.openlocfilehash: 09da80ad735548e9b0c450b9675cebece0b0c60c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.topic: how-to
+description: Naučte se využívat speciální ceny Azure DevTest dostupné zákazníkům se smlouvou Enterprise.
+ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232647"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903136"
 ---
-# <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Smlouvy Azure Enterprise DevTest
+# <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Azure smlouva Enterprise DevTest
 
-Tato nabídka, která je součástí smlouvy Enterprise, je určena pro týmy aktivních předplatitelů sady Visual Studio ke spouštění úloh pro vývoj a testování v Microsoft Azure, které poskytují slevy na virtuálních počítačích s Windows a přístup k exkluzivním bitovým kopiím v Galerii Azure. Tato nabídka je omezena pouze na vývoj a testování použití a nelze ji použít ve výrobě.  
+Tato nabídka, která je součástí smlouva Enterprise, je určena pro týmy aktivních předplatitelů sady Visual Studio ke spouštění vývojových a testovacích úloh v Microsoft Azure a poskytuje zvýhodněné sazby na virtuální počítače s Windows a přístup k exkluzivním imagím v galerii Azure. Tato nabídka je omezená jenom na vývoj a testování a nedá se používat v produkčním prostředí.  
 
-Použití nabídek je dvoustupňový proces:
-1. Nabídky musí být povoleny správcem portálu EA.
-2. Jednotliví odběratelé musí vytvářet odběry pro jejich použití. 
+Použití nabídek je proces dvou kroků:
+1. Nabídky musí povolit správce na portálu EA.
+2. Jednotliví předplatitelé musí vytvořit předplatná pro jejich použití. 
 
-K dispozici je také [výukové video,](https://channel9.msdn.com/blogs/EA.Azure.com/Enabling-and-Creating-EA-DevTest-Subscriptions-through-the-EA-Portal) které tento proces demonstruje.  
+K předvedení tohoto procesu je k dispozici také [výukové video](https://channel9.msdn.com/blogs/EA.Azure.com/Enabling-and-Creating-EA-DevTest-Subscriptions-through-the-EA-Portal) .  
 
-## <a name="enable-offers-in-the-ea-portal"></a>Povolení nabídek na portálu EA
-Chcete-li povolit nabídky:
-1. Přihlaste [https://ea.azure.com/manage](https://ea.azure.com/manage)se do .
-0. Klikněte na nabídku **Účet.**
-0. Vyhledejte účet, pro který chcete povolit nabídky.  Pokud máte mnoho účtů, můžete použít **vyhledávání** k rychlému vyhledání účtu. 
-0. Najeďte na název účtu. 
-0. Klikněte na ikonu **úprav** (tužka) zcela vpravo. 
-0. Zaškrtněte políčko **Vývoj a testování.**
+## <a name="enable-offers-in-the-ea-portal"></a>Povolit nabídky na portálu EA
+Povolení nabídek:
+1. Přihlaste se k webu [https://ea.azure.com/manage](https://ea.azure.com/manage).
+0. Klikněte na nabídku **účet** .
+0. Vyhledejte účet, pro který chcete povolit nabídky.  Pokud máte mnoho účtů, možná budete chtít k rychlému vyhledání účtu použít **hledání** . 
+0. Najeďte myší na název účtu. 
+0. Úplně vpravo klikněte na ikonu pro **Úpravy** (tužka). 
+0. Klikněte na zaškrtávací políčko pro **vývoj/testování** .
 0. Klikněte na **Uložit**.
 
-## <a name="create-individual-subscriptions-within-the-account"></a>Vytvoření jednotlivých předplatných v rámci účtu
-Každý odběratel na účtu můžete vytvořit předplatné pomocí následujících kroků:
-1. Přihlaste [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True)se do .
-0. Zvolte nabídku **Enterprise Dev/Test.**
-0. Kliknutím na toto políčko potvrďte, že se předplatné řídí smlouvou Enterprise Agreement. 
-0. Klikněte na **Koupit**.  (S touto nabídkou ve skutečnosti nic nekupujete.)
+## <a name="create-individual-subscriptions-within-the-account"></a>Vytváření individuálních předplatných v rámci účtu
+Každý předplatitel účtu může vytvořit předplatné pomocí následujících kroků:
+1. Přihlaste se k webu [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True).
+0. Vyberte nabídku **Enterprise pro vývoj/testování** .
+0. Kliknutím na zaškrtávací políčko potvrďte, že se předplatné řídí smlouva Enterprise. 
+0. Klikněte na **Koupit**.  (S touto nabídkou nemusíte ve skutečnosti kupovat žádné položky.)
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení jednotlivých předplatných](assign-license.md)
 - [Přiřazení více předplatných](assign-license-bulk.md)
-- [Úpravy předplatných](edit-license.md)
+- [Úprava předplatných](edit-license.md)
 - [Odstranění předplatných](delete-license.md)
 - [Určení maximálního využití](maximum-usage.md)
 

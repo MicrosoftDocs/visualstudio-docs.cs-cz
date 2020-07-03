@@ -1,7 +1,7 @@
 ---
-title: Připojení přímo k programu | Dokumenty společnosti Microsoft
+title: Připojení přímo k programu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: ad2b7db8-821c-440c-ba07-c55c6a395e0f
@@ -10,36 +10,36 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a9a5699ee81b8c8ae36bcf492e93467615a9e89
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: dc78234b31b98865f1779dd65d743d4196f9cbf5
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903275"
 ---
-# <a name="attach-directly-to-a-program"></a>Připojení přímo k programu
-Uživatelé, kteří chtějí ladit programy v procesu, který je již spuštěn, obvykle postupujte podle tohoto procesu:
+# <a name="attach-directly-to-a-program"></a>Připojit přímo k programu
+Uživatelé, kteří chtějí ladit programy v procesu, který je již spuštěn, obvykle následují za tímto způsobem:
 
-1. V prostředí IDE zvolte příkaz **Procesy ladění** z nabídky **Nástroje.**
+1. V integrovaném vývojovém prostředí vyberte příkaz **ladit procesy** v nabídce **nástroje** .
 
-    Zobrazí se dialogové okno **Procesy.**
+    Zobrazí se dialogové okno **procesy** .
 
-2. Zvolte proces a klepněte na tlačítko **Připojit.**
+2. Vyberte proces a klikněte na tlačítko **připojit** .
 
-    Zobrazí se dialogové okno **Připojit k procesu** se seznamem všech ladicích motorů nainstalovaných v počítači.
+    Zobrazí se dialogové okno **připojit k procesu** , v němž jsou uvedeny všechny moduly ladění (des) nainstalované v počítači.
 
-3. Zadejte des, které mají být používány k ladění vybraného procesu, a klepněte na tlačítko **OK**.
+3. Zadejte algoritmus DEs, který se použije k ladění vybraného procesu, a pak klikněte na **OK**.
 
-   Ladicí balíček spustí relaci ladění a předá jí seznam des. Relace ladění zase předá tento seznam spolu s funkcí zpětného volání do vybraného procesu a potom požádá proces o výčet spuštěných programů.
+   Ladicí balíček spustí relaci ladění a předá do něj seznam DEs. Relace ladění zase předá tento seznam spolu s funkcí zpětného volání na vybraný proces a pak požádá o vytvoření výčtu spuštěných programů.
 
-   Programově v reakci na požadavek uživatele ladicí balíček vytvoří instance správce ladění relace (SDM) a předá mu seznam vybraných des. Spolu se seznamem ladicí balíček předá rozhraní SDM [IDebugCallbackback2.](../../extensibility/debugger/reference/idebugeventcallback2.md) Ladicí balíček předá seznam DEs vybranému procesu voláním [IDebugProcess2::Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md). SDM pak volá [IDebugProcess2::EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) na portu výčet programů spuštěných v procesu.
+   V rámci reakce na požadavek uživatele balíček ladění vytvoří instanci správce ladění relace (SDM) a předá do něj seznam zvolených algoritmů DEs. Společně se seznamem ladicí balíček předá rozhraní SDM rozhraní [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) . Ladicí balíček předá na vybraný proces seznam DEs voláním [IDebugProcess2:: Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md). Model SDM pak na portu zavolá [IDebugProcess2:: EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) , aby se vytvořil výčet programů spuštěných v procesu.
 
-   Od tohoto okamžiku je každý ladicí modul připojen k programu přesně tak podrobně popsanému v [připojování po spuštění](../../extensibility/debugger/attaching-after-a-launch.md), se dvěma výjimkami.
+   Od tohoto okamžiku se každý ladicí stroj připojí k programu přesně tak, jak je popsáno v části [připojení po spuštění](../../extensibility/debugger/attaching-after-a-launch.md), se dvěma výjimkami.
 
-   Z důvodu efektivity jsou des, které jsou implementovány ke sdílení adresního prostoru s SDM jsou seskupeny tak, aby každý DE má sadu programů, které bude připojit k. V tomto případě [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) volání [IDebugEngine2::Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) a předá pole programů připojit.
+   V případě efektivity je algoritmus DEs implementovaný pro sdílení adresního prostoru se službou SDM seskupený tak, aby každý DE měl sadu programů, ke kterým se připojí. V tomto případě volání [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) volá [IDebugEngine2:: Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) a předá jí pole programů, ke kterým se připojí.
 
-   Druhou výjimkou je, že události při spuštění odeslané de připojení k programu, který je již spuštěn obvykle nezahrnují událost vstupního bodu.
+   Druhou výjimkou je, že události spuštění odesílané nástrojem DE Attach do programu, který je již spuštěn, obvykle nezahrnují událost vstupního bodu.
 
 ## <a name="see-also"></a>Viz také
-- [Odesílání událostí spuštění po spuštění](../../extensibility/debugger/sending-startup-events-after-a-launch.md)
-- [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md)
+- [Posílání událostí po spuštění](../../extensibility/debugger/sending-startup-events-after-a-launch.md)
+- [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)

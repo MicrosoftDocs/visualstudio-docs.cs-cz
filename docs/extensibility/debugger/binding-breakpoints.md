@@ -1,7 +1,7 @@
 ---
-title: Závazná zarážky | Dokumenty společnosti Microsoft
+title: Zarážky vazeb | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - breakpoints, binding
 ms.assetid: 70737387-c52f-4dae-8865-77d4b203bf25
@@ -10,48 +10,48 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 680cff398a43d1ebe9ccf061ad42781500c7cf01
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: e839b6e0e7967c4802bee5617da3334c5d4033c5
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903234"
 ---
-# <a name="bind-breakpoints"></a>Zarážky vazby
-Pokud uživatel nastaví zarážku, například stisknutím klávesy **F9**, ide zformuluje požadavek a vyzve relaci ladění k vytvoření zarážky.
+# <a name="bind-breakpoints"></a>Vázání zarážek
+Pokud uživatel nastaví zarážku, třeba stisknutím klávesy **F9**, rozhraní IDE formuluje požadavek a vyzve relaci ladění, aby vytvořila zarážku.
 
 ## <a name="set-a-breakpoint"></a>Nastavení zarážky
- Nastavení zarážky je dvoustupňový proces, protože kód nebo data ovlivněná zarážkou ještě nemusí být k dispozici. Nejprve musí být popsána zarážka a poté, jakmile bude kód nebo data k dispozici, musí být vázána na tento kód nebo data takto:
+ Nastavení zarážky je proces se dvěma kroky, protože kód nebo data ovlivněná zarážkou nemusí být zatím k dispozici. Nejprve musí být zarážka popsána a poté, jak bude kód nebo data k dispozici, musí být vázány na tento kód nebo data, a to následujícím způsobem:
 
-1. Zarážka je požadována z příslušných ladicích modulů (DEs) a pak je zarážka vázána na kód nebo data, jakmile bude k dispozici.
+1. Zarážka je požadována z příslušných ladicích modulů (DEs) a pak je zarážka svázána s kódem nebo daty, jakmile budou k dispozici.
 
-2. Požadavek na zarážku je odeslán do relace ladění, která jej odešle všem příslušným dees. Všechny DE, který se rozhodne zpracovat zarážku vytvoří odpovídající čekající zarážka.
+2. Požadavek na zarážku se pošle do ladicí relace, která ho pošle do všech relevantních DEs. Jakýkoli DE, který se rozhodne zpracovat zarážku, vytvoří odpovídající nevyřízenou zarážku.
 
-3. Relace ladění shromažďuje čekající zarážky a odešle je zpět do balíčku ladění (ladicí součást sady Visual Studio).
+3. Ladicí relace shromažďuje nevyřízené zarážky a odesílá je zpět do ladicího balíčku (součást ladění sady Visual Studio).
 
-4. Ladicí balíček vyzve relaci ladění k vytvoření vazby čekající zarážky na kód nebo data. Relace ladění odešle tento požadavek všem příslušným des.
+4. Ladicí balíček vyzve relaci ladění, aby navázala nevyřízenou zarážku na kód nebo data. Ladicí relace odesílá tento požadavek do všech relevantních DEs.
 
-5. Pokud DE je schopen svázat zarážku, odešle událost vázanou na zarážku zpět do relace ladění. Pokud ne, odešle místo toho událost chyby zarážky.
+5. Pokud DE může svázat zarážku, pošle událost spojenou se zarážkou zpět do ladicí relace. Pokud ne, odešle místo toho událost chyby zarážky.
 
-## <a name="pending-breakpoints"></a>Čekající zarážky
- Čekající zarážka může vázat na více umístění kódu. Například řádek zdrojového kódu pro šablonu Jazyka C++ může být vytvořen na každou sekvenci kódu generovanou ze šablony. Relace ladění můžete použít událost vázanou na zarazán k výčet kontextu kódu vázané na zarážku v době, kdy byla událost odeslána. Další kontexty kódu mohou být vázány později, takže DE může odeslat více událostí vázaných na zarážky pro každý požadavek na vazby. De by však měla odeslat pouze jednu událost chyby zarážky na požadavek na vazby.
+## <a name="pending-breakpoints"></a>Nedokončené zarážky
+ Nevyřízená zarážka se může navazovat na více umístění kódu. Například řádek zdrojového kódu pro šablonu jazyka C++ se může přivážet ke každé sekvenci kódu generované ze šablony. Relace ladění může použít událost spojenou s zarážkou k vytvoření výčtu kontextů kódu vázaných na zarážku v době odeslání události. Další kontexty kódu mohou být vázány později, takže příkaz DE smí odeslat více událostí vázaných na zarážku pro každou žádost o vazbu. DE by ale měl odeslat jenom jednu chybovou událost zarážky na požadavek vazby.
 
 ## <a name="implementation"></a>Implementace
- Programově ladicí balíček volá správce ladění relace (SDM) a poskytuje rozhraní [IDebugBreakpointRequest2,](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) které zabalí [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) strukturu, která popisuje zarážku, která má být nastavena. Přestože zarážky mohou být z mnoha forem, nakonec vyřešit do kontextu kódu nebo dat.
+ Programově balíček ladění volá Správce ladění relace (SDM) a poskytuje mu rozhraní [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) , které zabalí strukturu [BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) , což popisuje, kterou zarážku má být nastavena. I když zarážky mohou mít mnoho formulářů, jejich konečné vyhodnocení na kód nebo kontext dat.
 
- SDM předá toto volání každé příslušné DE voláním jeho [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) metoda. Pokud DE se rozhodne zpracovat zarážku, vytvoří a vrátí rozhraní [IDebugPendingBreakpoint2.](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) SDM shromažďuje tato rozhraní a předá je zpět do `IDebugPendingBreakpoint2` balíčku ladění jako jediné rozhraní.
+ Model SDM předá toto volání ke všem relevantním DE voláním metody [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) . Pokud se DE zvolí pro zpracování zarážky, vytvoří a vrátí rozhraní [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) . SDM shromáždí tato rozhraní a předá je zpět do ladicího balíčku jako jediné `IDebugPendingBreakpoint2` rozhraní.
 
- Zatím nebyly generovány žádné události.
+ Zatím nejsou vygenerované žádné události.
 
- Ladicí balíček se pak pokusí svázat čekající zarážku s kódem nebo daty voláním [bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md), který je implementován DE.
+ Ladicí balíček se pak pokusí vytvořit vazby na nevyřízenou zarážku na kód nebo data voláním metody [BIND](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md), která je implementována pomocí příkazu de.
 
- Pokud je zarážka vázána, DE odešle rozhraní události [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) do ladicího balíčku. Ladicí balíček používá toto rozhraní k vytvoření výčtu všech kontextů kódu (nebo jednoho datového kontextu) vázaných na zarážku voláním [enumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md), který vrací jedno nebo více rozhraní [IDebugBoundBreakpoint2.](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) Rozhraní [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) vrátí rozhraní [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) a [Funkce GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) vrátí [BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) sjednocení obsahující ho kód nebo kontext dat.
+ Pokud je zarážka svázána, příkaz DE pošle rozhraní události [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) do balíčku pro ladění. Ladicí balíček používá toto rozhraní k zobrazení výčtu všech kontextů kódu (nebo jednoho kontextu dat) svázaného se zarážkou voláním [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md), která vrací jedno nebo více [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní. Rozhraní [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) vrací rozhraní [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) a [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) vrací sjednocení [BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) obsahující kód nebo kontext dat.
 
- Pokud DE nemůže svázat zarážku, odešle do ladicího balíčku jedno rozhraní události [IDebugBreakPointEventEvent2.](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) Ladicí balíček načte typ chyby (chyba nebo upozornění) a informační zprávu voláním [geterrorbreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md), následovaný [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) a [GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md). Vrátí [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) strukturu, která obsahuje typ chyby a zprávu.
+ Pokud DE není schopen navazovat zarážku, pošle jediné rozhraní události [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) do balíčku pro ladění. Ladicí balíček načte typ chyby (chyba nebo varování) a informační zprávu voláním [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md), za nímž následuje [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) a [GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md). Vrátí [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) strukturu, která obsahuje typ a zprávu o chybě.
 
- Pokud DE zpracovává zarážku, ale nelze ji svázat, vrátí chybu typu `BPET_TYPE_ERROR`. Ladicí balíček reaguje zobrazením chybového dialogového okna a rozhraní IDE umístí glyf vykřičníku do glyfu zarážky vlevo od řádku zdrojového kódu.
+ Pokud DE zpracuje zarážku, ale nemůže ji vytvořit, vrátí chybu typu `BPET_TYPE_ERROR` . Ladicí balíček reaguje zobrazením chybového dialogového okna a IDE umístí do glyfu zarážky symbol vykřičníku nalevo od řádku zdrojového kódu.
 
- Pokud DE zpracovává zarážku, nelze ji svázat, ale některé jiné DE může svázat, vrátí upozornění. IDE odpoví umístěním otázky glyfu uvnitř glyfu zarážky nalevo od řádku zdrojového kódu.
+ Pokud DE zpracuje zarážku, nemůže ji vytvořit, ale jiné metody DE ji mohou vytvořit, vrátí upozornění. Rozhraní IDE odpoví umístěním glyfu otázky uvnitř glyfu zarážky nalevo od řádku zdrojového kódu.
 
 ## <a name="see-also"></a>Viz také
-- [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md)
+- [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)

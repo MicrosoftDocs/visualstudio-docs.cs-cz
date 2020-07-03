@@ -1,32 +1,32 @@
 ---
-title: Poradce při potížích s zjišťováním šablony v sadě Visual Studio | Dokumenty společnosti Microsoft
+title: Řešení potíží se zjišťováním šablon v aplikaci Visual Studio | Microsoft Docs
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 078d06c797c3b228c1ea5b1d836dceb0394b3174
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c5225c741206e6a43ff024a5f184404f1ac2bc63
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80698938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904494"
 ---
-# <a name="troubleshooting-template-installation"></a>Poradce při potížích s instalací šablony
+# <a name="troubleshooting-template-installation"></a>Řešení potíží s instalací šablony
 
-Pokud narazíte na problémy s nasazením šablon projektu nebo položek, můžete povolit protokolování diagnostiky.
+Pokud narazíte na problémy s nasazením šablony projektu nebo položky, můžete povolit protokolování diagnostiky.
 
 ::: moniker range="vs-2017"
 
-1. Vytvořte soubor pkgdef ve složce *Common7\IDE\CommonExtensions* pro vaši instalaci. Například *C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
+1. Vytvořte soubor pkgdef ve složce *Common7\IDE\CommonExtensions* pro vaši instalaci. Například *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Vytvořte soubor pkgdef ve složce *Common7\IDE\CommonExtensions* pro vaši instalaci. Například *C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
+1. Vytvořte soubor pkgdef ve složce *Common7\IDE\CommonExtensions* pro vaši instalaci. Například *C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
 
 ::: moniker-end
 
@@ -37,38 +37,38 @@ Pokud narazíte na problémy s nasazením šablon projektu nebo položek, může
     "EnableTemplateDiscoveryLog"=dword:00000001
     ```
 
-3. Otevřete [příkazový řádek pro vývojáře](/dotnet/framework/tools/developer-command-prompt-for-vs) pro instalaci a spuštění `devenv /updateConfiguration`.
+3. Otevřete [Developer Command Prompt](/dotnet/framework/tools/developer-command-prompt-for-vs) pro instalaci a spuštění `devenv /updateConfiguration` .
 
 ::: moniker range="vs-2017"
 
-4. Otevřete Visual Studio a spusťte dialogové okna Nový projekt a Nová položka pro inicializaci obou stromů šablon.
+4. Otevřete Visual Studio a spusťte dialogová okna Nový projekt a nová položka k inicializaci obou stromů šablon.
 
-   Protokol šablony se nyní zobrazí v **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_[instanceid]\VsTemplateDiagnosticsList.csv** (instance odpovídá ID instalace instance sady Visual Studio). Každá inicializace stromu šablony připojí položky k tomuto protokolu.
+   Protokol šablony se nyní zobrazí v **%localappdata%\Microsoft\VisualStudio\15.0_ [InstanceId] \VsTemplateDiagnosticsList.csv** (InstanceId odpovídá ID instalace vaší instance sady Visual Studio). Každá inicializace stromu šablon připojuje položky do tohoto protokolu.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. Otevřete Visual Studio a spusťte dialogové **okna Vytvořit nový projekt** a Nová **položka** pro inicializaci obou stromů šablon.
+4. Otevřete Visual Studio a spusťte dialogová okna **vytvořit nový projekt** a **Nová položka** k inicializaci obou stromů šablon.
 
-   Protokol šablony se nyní zobrazí v **%LOCALAPPDATA%\Microsoft\VisualStudio\16.0_[instanceid]\VsTemplateDiagnosticsList.csv** (instance odpovídá ID instalace instance sady Visual Studio). Každá inicializace stromu šablony připojí položky k tomuto protokolu.
+   Protokol šablony se nyní zobrazí v **%localappdata%\Microsoft\VisualStudio\16.0_ [InstanceId] \VsTemplateDiagnosticsList.csv** (InstanceId odpovídá ID instalace vaší instance sady Visual Studio). Každá inicializace stromu šablon připojuje položky do tohoto protokolu.
 
 ::: moniker-end
 
 Soubor protokolu obsahuje následující sloupce:
 
-- **FullPathToTemplate**, který má následující hodnoty:
+- **FullPathToTemplate**, která má následující hodnoty:
 
   - 1 pro nasazení založené na manifestu
 
-  - 0 pro nasazení na disku
+  - 0 pro nasazení na základě disku
 
-- **Název souboru šablony**
+- **TemplateFileName**
 
-- Další vlastnosti šablony
+- Vlastnosti jiných šablon
 
 > [!NOTE]
-> Chcete-li protokolování zakázat, odeberte soubor `EnableTemplateDiscoveryLog` pkgdef nebo změňte hodnotu položky `dword:00000000`na položku a spusťte jej `devenv /updateConfiguration` znovu.
+> Pokud chcete protokolování zakázat, buď odeberte soubor pkgdef, nebo změňte hodnotu na a `EnableTemplateDiscoveryLog` `dword:00000000` pak znovu spusťte operaci `devenv /updateConfiguration` .
 
 ## <a name="see-also"></a>Viz také
 

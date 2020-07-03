@@ -1,75 +1,75 @@
 ---
-title: Nastavení správců pro měsíční odběry | Dokumenty společnosti Microsoft
+title: Nastavení správců pro měsíční odběry | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Nastavení správců pro měsíční předplatná
-ms.openlocfilehash: c9a1303d4111f0ec4a0c1249a25e49fc40cf26de
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: ef1536eb27beb501fc278d1a95521905c9d9485a
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232660"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903115"
 ---
-# <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>Nastavení správců měsíčních předplatných sady Visual Studio
+# <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>Nastavení měsíčních předplatných pro správce sady Visual Studio
 
-Měsíční předplatná sady Visual Studio spravují správci. Tito jednotlivci mohou přiřazovat předplatná, upravovat přiřazení, přidávat nebo odstraňovat odběry a provádět další úlohy správy předplatného.
+Měsíční předplatná sady Visual Studio spravuje správci. Tito uživatelé můžou přiřazovat předplatná, upravovat přiřazení, přidávat nebo odstraňovat předplatná a provádět další úlohy správy předplatných.
 
-## <a name="the-azure-subscription-owner-is-the-first-administrator"></a>Vlastník předplatného Azure je první správce
+## <a name="the-azure-subscription-owner-is-the-first-administrator"></a>Vlastníkem předplatného Azure je první správce.
 
-Když si koupíte měsíční předplatné Visual Studia, jako vlastník předplatného Azure použitého k nákupu, budete automaticky nastaveni jako správce pro tato předplatná.
+Při nákupu měsíčních předplatných sady Visual Studio se jako vlastník předplatného Azure, který se používá k nákupu, automaticky nastaví jako správce těchto předplatných.
 
-Měsíční předplatné si můžete zakoupit na [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)nebo kontaktováním poskytovatele cloudových řešení. Pokud nakupujete prostřednictvím webu Visual Studio Marketplace, budete mít na konci nákupního prostředí možnost spravovat uživatele. Výběrem této možnosti přejdete na portál [https://manage.visualstudio.com](https://manage.visualstudio.com)pro správu předplatných sady Visual Studio - .
+Můžete si koupit měsíční předplatná prostřednictvím [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)nebo kontaktovat poskytovatele Cloud Solution Provider. Pokud si koupíte Visual Studio Marketplace na konci nákupu, budete mít k dispozici možnost spravovat uživatele. Výběrem této možnosti přejdete na portál pro správu předplatných sady Visual Studio – [https://manage.visualstudio.com](https://manage.visualstudio.com) .
 
-Po zakoupení předplatného můžete kdykoli navštívit [portál pro správu.](https://manage.visualstudio.com) Stačí se přihlásit k portálu a vybrat příslušné předplatné Azure v levém horním rohu.
+Po zakoupení předplatných můžete kdykoli navštívit [portál pro správu portálu](https://manage.visualstudio.com) . Stačí se přihlásit k portálu a vybrat příslušné předplatné Azure v levém horním rohu.
 
-Jako vlastník předplatného Azure použitého k nákupu měsíčních předplatných můžete také přiřadit další správce.
+Jako vlastník předplatného Azure, který se používá k nákupu měsíčních předplatných, můžete také přiřadit další správce.
 
-## <a name="add-administrators"></a>Přidání správců
+## <a name="add-administrators"></a>Přidat správce
 
 Přidání správců:
 
-1. Připojte se k portálu Azure na [portal.azure.com](https://portal.azure.com).
-2. Přihlaste se pomocí účtu, který jste použili k nákupu měsíčních předplatných Sady Visual Studio.
-3. V části **Služby Azure**zvolte **Správa nákladů + Fakturace**.
+1. Připojte se k webu Azure Portal na adrese [Portal.Azure.com](https://portal.azure.com).
+2. Přihlaste se pomocí účtu, který jste použili k nákupu měsíčních předplatných sady Visual Studio.
+3. V části **služby Azure**vyberte **cost management + fakturace**.
    > [!div class="mx-imgBorder"]
-   > ![Zvolte Správa nákladů + Fakturace v rámci služeb Azure](_img/cloud-admin/azure-cost-billing.png)
-4. V seznamu **Moje předplatná** vyberte předplatné Azure, které jste použili k nákupu.
+   > ![Výběr možnosti Cost Management + fakturace pod službami Azure](_img/cloud-admin/azure-cost-billing.png)
+4. V seznamu **Moje předplatné** vyberte předplatné Azure, které jste použili k nákupu.
    > [!div class="mx-imgBorder"]
-   > ![Zvolte předplatné](_img/cloud-admin/subscription-list.png)
-5. Klepněte na **položku Řízení přístupu (IAM),** která se nachází v horní části seznamu v levém navigačním podokně.
-6. Klikněte na kartu **Přidat** v horní části stránky.
-7. Klepněte na tlačítko **Přidat přiřazení role**.
+   > ![Zvolit předplatné](_img/cloud-admin/subscription-list.png)
+5. Klikněte na **řízení přístupu (IAM)**, které se nachází poblíž horní části seznamu v levém navigačním podokně.
+6. V horní části stránky klikněte na kartu **Přidat** .
+7. Klikněte na **Přidat přiřazení role**.
    > [!div class="mx-imgBorder"]
-   > ![Zvolte řízení přístupu, Přidat, přidat přiřazení role.](_img/cloud-admin/access-control-add.png)
-8. V rozbalovacím podokně vpravo klikněte na rozevírací **seznam Role** v horní části podokna, posuňte se dolů a vyberte **Správce přístupu uživatelů**.
-9. V seznamu uživatelů přejděte dolů k uživateli, který chcete vytvořit správce, a vyberte ho. 
+   > ![Zvolit řízení přístupu, přidat, přidat přiřazení role](_img/cloud-admin/access-control-add.png)
+8. V podokně rozletět na pravé straně klikněte v horní části podokna na rozevírací nabídku **role** , přejděte dolů a vyberte **Správce přístupu uživatele**.
+9. V seznamu uživatelů se posuňte dolů k uživateli, který chcete nastavit jako správce, a vyberte je. 
    > [!div class="mx-imgBorder"]
-   > ![Zvolte Role, správce přístupu uživatele](_img/cloud-admin/add-role-user-access-admin.png)
+   > ![Zvolit roli, správce přístupu uživatele](_img/cloud-admin/add-role-user-access-admin.png)
 10. Klikněte na **Uložit**.
-11. Kliknutím na kartu **Přiřazení rolí** ověřte, zda se vybraný uživatel nyní zobrazuje jako správce přístupu uživatelů.
+11. Kliknutím na kartu **přiřazení rolí** ověřte, že uživatel, který jste vybrali, se teď zobrazí jako správce přístupu uživatele.
 
-Nový správce se teď může přihlásit k [portálu pro správu](https://manage.visualstudio.com), vybrat stejné předplatné Azure, které bylo použito k nákupu měsíčních předplatných ze seznamu v levém horním rohu stránky, a začít tato předplatná spravovat.
+Nový správce se teď může přihlásit k [portálu pro správu](https://manage.visualstudio.com), vybrat stejné předplatné Azure, které se použilo k nákupu měsíčních předplatných ze seznamu v levém horním rohu stránky a začít spravovat tato předplatná.
 
 > [!NOTE]
-> Pokud se zobrazí uživatelé s přístupem k úpravám měsíčních předplatných, které jste nevytvořili jako správci, mohou mít role v podkladovém předplatném Azure, které jim umožňují spravovat předplatná. Mezi tyto role patří: vlastník, přispěvatel, správce služby nebo spolusprávce. Další informace naleznete v nápovědě [k připojovacím manažerům](/azure/devops/organizations/billing/add-backup-billing-managers?view=vsts).
+> Pokud se zobrazí uživatelé s přístupem k úpravám měsíčních předplatných, která jste nevytvořili jako správci, můžou mít v předplatném Azure příslušné role, které jim umožní spravovat předplatná. Mezi tyto role patří: vlastník, přispěvatel, správce služeb nebo spolusprávce. Další informace najdete na webu [Přidání správců fakturace](/azure/devops/organizations/billing/add-backup-billing-managers?view=vsts).
 
-Informace o měsíčních předplatných Sady Visual Studio najdete v části [Přehled](vscloud-overview.md) v části Nákup předplatných. Chcete-li zakoupit měsíční předplatná sady Visual [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription)Studio, navštivte tržiště Sady Visual Studio na adrese .
+Informace o měsíčních předplatných sady Visual Studio najdete v [přehledu](vscloud-overview.md) v části nákup předplatných. Pokud si chcete koupit měsíční předplatná sady Visual Studio, navštivte Visual Studio Marketplace na adrese [https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription) .
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení jednotlivých předplatných](assign-license.md)
 - [Přiřazení více předplatných](assign-license-bulk.md)
-- [Úpravy předplatných](edit-license.md)
+- [Úprava předplatných](edit-license.md)
 - [Určení maximálního využití](maximum-usage.md)
 
 

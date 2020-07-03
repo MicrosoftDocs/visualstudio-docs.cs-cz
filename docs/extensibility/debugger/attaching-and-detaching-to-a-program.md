@@ -1,7 +1,7 @@
 ---
-title: Připojení a odpojení programu | Dokumenty společnosti Microsoft
+title: Připojení a odpojení programu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debug engines, attaching to programs
 - debug engines, detaching from programs
@@ -11,43 +11,43 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8bd6ea4b51c56a3cc42036b7bd26d34ff3a3eff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 42a751e6aa70c1aacd5df598e0c0e62da3b9d14b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903154"
 ---
-# <a name="attaching-and-detaching-to-a-program"></a>Připojení a odpojení k programu
+# <a name="attaching-and-detaching-to-a-program"></a>Připojení k programu a jeho odpojení
 Připojení ladicího programu vyžaduje odeslání správné posloupnosti metod a událostí se správnými atributy.
 
-## <a name="sequence-of-methods-and-events"></a>Posloupnost metod a událostí
+## <a name="sequence-of-methods-and-events"></a>Sekvence metod a událostí
 
-1. Správce ladění relace (SDM) volá [metodu OnAttach.](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)
+1. Správce ladění relace (SDM) volá metodu [Attach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) .
 
-    Na základě modelu procesu ladicí `IDebugProgramNodeAttach2::OnAttach` modul (DE) metoda vrátí jednu z následujících metod, která určuje, co se stane dál.
+    Na základě modelu procesu ladění (DE) `IDebugProgramNodeAttach2::OnAttach` Metoda vrátí jednu z následujících metod, která určuje, co se stane další.
 
-    Pokud `S_FALSE` je vrácena, ladicí modul byl úspěšně připojen k programu. V opačném případě [attach](../../extensibility/debugger/reference/idebugengine2-attach.md) metoda je volána k dokončení procesu připojení.
+    Pokud `S_FALSE` je vrácena, ladicí modul byl úspěšně připojen k programu. V opačném případě je volána metoda [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) k dokončení procesu připojení.
 
-    Pokud `S_OK` je vrácena, DE má být načten ve stejném procesu jako SDM. SDM provádí následující úkoly:
+    Pokud `S_OK` je vrácena, bude de načtena do stejného procesu jako SDM. SDM provádí následující úlohy:
 
-   1. Volání [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) získat informace o motoru DE.
+   1. Volá [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) pro získání informací o modulu de.
 
-   2. Spoluvytváří DE.
+   2. Společně vytvoří DE.
 
-   3. Volání [Připojit](../../extensibility/debugger/reference/idebugengine2-attach.md).
+   3. Volání – [připojit](../../extensibility/debugger/reference/idebugengine2-attach.md).
 
-2. DE odešle [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) do SDM `EVENT_SYNC` s atributem.
+2. DE pošle [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) do SDM s `EVENT_SYNC` atributem.
 
-3. DE odešle [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) do SDM `EVENT_SYNC` s atributem.
+3. DE pošle [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) do SDM s `EVENT_SYNC` atributem.
 
-4. DE odešle [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) do SDM `EVENT_SYNC_STOP` s atributem.
+4. DE pošle [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) do SDM s `EVENT_SYNC_STOP` atributem.
 
-   Odpojení od programu je jednoduchý dvoustupňový proces:
+   Odpojení od programu je jednoduchý proces se dvěma kroky, jak je znázorněno níže:
 
-5. SDM volání [Detach](../../extensibility/debugger/reference/idebugprogram2-detach.md).
+5. Volání SDM se [odpojí](../../extensibility/debugger/reference/idebugprogram2-detach.md).
 
-6. DE odešle [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md).
+6. DE pošle [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md).
 
 ## <a name="see-also"></a>Viz také
 - [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

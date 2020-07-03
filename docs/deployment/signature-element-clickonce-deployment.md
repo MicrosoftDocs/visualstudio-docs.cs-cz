@@ -1,5 +1,5 @@
 ---
-title: '&gt; element signatury &lt;(ClickOnce nasazení) | Microsoft Docs'
+title: '&lt;Signature – &gt; element (nasazení ClickOnce) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,32 +14,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f69dcec6bbee5358184b74a71274cb26e4de60b3
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: b6f07e2649d6f41e77f453f64c5838c746f22ad0
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806843"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835417"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>element&gt; Signature &lt;(nasazení ClickOnce)
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature – &gt; element (nasazení ClickOnce)
 Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 
-      <Signature> 
+<Signature> 
    XML signature information 
 </Signature>
 ```
 
 ## <a name="remarks"></a>Poznámky
- Podpis manifestu nasazení pomocí podpisu obálky je volitelný, ale doporučený. Další informace o podepisování souborů XML naleznete v konsorcium World Wide Web doporučení "XML – signatura a zpracování", popsané v [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/).
+ Podpis manifestu nasazení pomocí podpisu obálky je volitelný, ale doporučený. Další informace o podepisování souborů XML naleznete v konsorcium World Wide Web doporučení "XML-Signature a zpracování" popsané na adrese [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/) .
 
  Pokud chcete manifest podepsat, je nutné zadat hodnoty hash pro všechny soubory. Manifest se soubory, které nemají hodnotu hash, nelze podepsat, protože uživatelé nemohou ověřit obsah nezatřiďovacích souborů.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje `Signature` prvek v manifestu nasazení používaném v nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].
+ Následující příklad kódu ukazuje `Signature` prvek v manifestu nasazení používaném v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.
 
 ```xml
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -70,5 +70,5 @@ MIIHnTCCBoWgAwIBAgIKJY9+nwAHAAB...
 </Signature>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [ClickOnce – manifest nasazení](../deployment/clickonce-deployment-manifest.md)
