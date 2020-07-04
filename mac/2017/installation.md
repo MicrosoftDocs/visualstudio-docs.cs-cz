@@ -7,12 +7,13 @@ ms.date: 11/03/2018
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 962ca0cf3960195ffabefb5a9bd2c6cc7e72590c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.topic: how-to
+ms.openlocfilehash: decbdc244a7947b715b8ba5b27bda5aaf50d2266
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289414"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950608"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Instalace sady Visual Studio 2017 pro Mac
 
@@ -111,7 +112,7 @@ Instalace Visual Studio pro Mac umožňuje začít psát kód pro vaše aplikace
 1. [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 2. [Zřizování zařízení](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)(pro spuštění aplikace na zařízení).
 
-### <a name="android"></a>Android
+### <a name="android"></a>Telefon
 
 1. [Použití nástroje Xamarin Android SDK Manager](https://developer.xamarin.com/guides/android/getting_started/installation/android-sdk/?ide=xs)
 2. [Emulátor sady Android SDK](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)

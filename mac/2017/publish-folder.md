@@ -8,52 +8,53 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: 02175180e5217a14a4464e46c75d519adab2a332
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 4fe8f7e99f950bbc7a393712d0831f5a4a229481
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714505"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950049"
 ---
-# <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Publikování webové aplikace do složky pomocí Visual Studia pro Mac
+# <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Publikování webové aplikace do složky pomocí Visual Studio pro Mac
 
-Pomocí nástroje Publikovat můžete publikovat aplikace ASP.NET Core do složky.
+K publikování aplikací ASP.NET Core do složky můžete použít nástroj pro publikování.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- [Visual Studio 2017 pro Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) nainstalované s povoleným ASP.NET Core.
-- Projekt ASP.NET Core. Pokud ještě nemáte projekt, můžete [vytvořit nový](/visualstudio/mac/create-new-projects?view=vsmac-2017).
+- Je nainstalována [aplikace Visual Studio 2017 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) s povoleným ASP.NET Core.
+- ASP.NET Core projekt. Pokud projekt ještě nemáte, můžete [vytvořit nový](/visualstudio/mac/create-new-projects?view=vsmac-2017).
 
 ## <a name="publish-to-folder"></a>Publikování do složky
 
-Pomocí Visual Studia pro Mac můžete publikovat ASP.NET projekty Core do složky pomocí nástroje Publikovat. Po publikování do složky můžete soubory přenést na webový server a dostat je do jiného prostředí. Chcete-li publikovat do složky, postupujte takto.
+Pomocí Visual Studio pro Mac můžete publikovat ASP.NET Core projekty do složky pomocí nástroje Publikovat. Po publikování do složky můžete přenést soubory na webový server, abyste je získali do jiného prostředí. Chcete-li publikovat do složky, postupujte podle těchto kroků.
 
- 1. Na panelu řešení klikněte pravým tlačítkem myši na projekt a zvolte **Publikovat**.
+ 1. V Oblast řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**.
 
-    ![Publikovat místní nabídku](media/publish-context-menu.png)
+    ![Místní nabídka publikovat](media/publish-context-menu.png)
 
- 2. Pokud jste tento projekt publikovali dříve, zobrazí se profil publikování v nabídce. Vyberte tento profil publikování a spusťte proces publikování.
+ 2. Pokud jste tento projekt publikovali už dřív, zobrazí se v nabídce profil publikování. Kliknutím na tento profil publikování spusťte proces publikování.
 
- 3. Chcete-li tento projekt poprvé publikovat do složky, vyberte **publikovat do složky.**
+ 3. Chcete-li tento projekt publikovat do složky poprvé, vyberte možnost **publikovat do složky** .
 
-    ![Místní nabídka Publikovat do složky](media/publish-to-folder-context-menu.png)
+    ![Místní nabídka publikovat do složky](media/publish-to-folder-context-menu.png)
 
- 4. Zobrazí se dialogové okno **Publikovat do složky.** V tomto dialogovém okně můžete přizpůsobit složku, kde bude projekt publikován. Můžete to provést pomocí tlačítka **Procházet** nebo vložit do cesty.
+ 4. Zobrazí se dialogové okno **publikovat do složky** . V tomto dialogovém okně můžete přizpůsobit složku, do které bude projekt publikován. K provedení tohoto postupu nebo vložení do cesty můžete použít tlačítko **Procházet** .
 
- 5. Po kliknutí na **publikovat** se stane několik věcí. Nejprve je vytvořen profil publikování. Profil publikování je soubor MSBuild, který je importován do projektu během procesu publikování. Obsahuje vlastnosti, které se používají během procesu publikování. Tyto soubory jsou `Properties/PublishProfiles` uloženy v `.pubxml`a mají rozšíření . Dále je spuštěn proces publikování. Průběh můžete sledovat sledováním stavového řádku ve Visual Studiu pro Mac.
+ 5. Po kliknutí na **publikovat** se stane několik věcí. Nejprve je vytvořen profil publikování. Profil publikování je soubor MSBuild, který se importuje do projektu během procesu publikování. Obsahuje vlastnosti, které se používají během procesu publikování. Tyto soubory jsou uloženy v nástroji `Properties/PublishProfiles` a mají příponu `.pubxml` . V dalším kroku se spustí proces publikování. Průběh můžete sledovat sledováním stavového řádku v Visual Studio pro Mac.
 
-    ![Stavový řádek IDE se stavem Publikovat](media/publish-to-folder-status-bar.png)
+    ![Stavový řádek IDE se stavem publikování](media/publish-to-folder-status-bar.png)
 
- 6. Po úspěšném dokončení publikování se do složky publikování otevře okno Finderu. Nyní, když byl vytvořen profil publikování, se zobrazí v místní nabídce Publikovat.
+ 6. Po úspěšném dokončení publikování se otevře okno hledání ve složce pro publikování. Teď, když je profil publikování vytvořený, se zobrazí v místní nabídce publikovat.
 
-    ![Místní nabídka Publikovat s profilem složky](media/publish-context-menu-with-folder-profile.png)
+    ![Místní nabídka publikovat s profilem složky](media/publish-context-menu-with-folder-profile.png)
 
- 7. Chcete-li projekt znovu publikovat se stejným nastavením, můžete kliknout na profil v kontextové nabídce publikování.
+ 7. Pokud chcete projekt publikovat znovu se stejnými nastaveními, můžete kliknout na profil v místní nabídce publikovat.
 
 ## <a name="customize-publish-options"></a>Přizpůsobení možností publikování
 
-Chcete-li změnit název profilu publikování (který je zobrazen v místní nabídce publikování), přejmenujte soubor profilu publikování. Ujistěte se, že neměnit`.puxbml`příponu souboru ( ).
+Chcete-li změnit název profilu publikování (který se zobrazí v místní nabídce publikovat), přejmenujte soubor profilu publikování. Ujistěte se, že neměníte příponu souboru ( `.puxbml` ).
 
-Chcete-li změnit cestu ke složce publikování, otevřete profil publikování a upravte hodnotu. `publishUrl`
+Chcete-li změnit cestu ke složce pro publikování, otevřete profil publikování a upravte `publishUrl` hodnotu.
 
-Chcete-li změnit konfiguraci sestavení, `LastUsedBuildConfiguration` která se používá, změňte vlastnost v profilu publikování.
+Chcete-li změnit použitou konfiguraci sestavení, změňte `LastUsedBuildConfiguration` vlastnost v profilu publikování.

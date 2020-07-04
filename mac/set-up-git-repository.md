@@ -5,12 +5,13 @@ author: therealjohn
 ms.author: johmil
 ms.date: 05/13/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: 7e9dc8728a3115368f1772287362b2a9f21a4309
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: how-to
+ms.openlocfilehash: 9d6fd5ffefcd6696fa67302a8d59fd46e498a472
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173322"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950606"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git
 
@@ -148,7 +149,7 @@ Je možné, že budete muset pracovat s úložištěm GitHub, které existuje je
 > [!NOTE]
 > Pokud je úložiště větší než 4 GB, může docházet k problémům.
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 Pokud máte problémy s inicializací projektu s prázdným vzdáleným úložištěm, můžete vyzkoušet následující postup:
 

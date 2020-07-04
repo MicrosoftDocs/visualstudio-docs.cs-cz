@@ -1,167 +1,168 @@
 ---
 title: Nastavení úložiště Git
-description: Použití Gitu a Subversion ve Visual Studiu pro Mac.
+description: Použití Gitu a podverze v Visual Studio pro Mac.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 02/15/2018
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: e6dbe3b04a39a1ffd9a6e1b8f241b497ba8a6563
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 1d381bbfd0e83008b962968816c77f540e6a52f5
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984845"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950452"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git
 
-Git je distribuovaný systém správy verzí, který umožňuje týmům pracovat na stejných dokumentech současně. To znamená, že existuje jeden server, který obsahuje všechny soubory, ale vždy, když je úložiště rezervováno z tohoto centrálního zdroje, celé úložiště je klonováno místně do vašeho počítače.
+Git je distribuovaný systém správy verzí, který umožňuje týmům současně pracovat na stejných dokumentech. To znamená, že existuje jeden server, který obsahuje všechny soubory, ale kdykoli je úložiště rezervované z tohoto centrálního zdroje, celé úložiště se naklonuje místně do vašeho počítače.
 
-Existuje mnoho vzdálených hostitelů, které vám umožní pracovat s Gitem pro správu verzí, ale nejběžnějším hostitelem je GitHub. Následující příklad používá hostitele GitHubu, ale v Visual Studiu for Mac můžete použít libovolného hostitele Gitu pro správu verzí.
+Existuje mnoho vzdálených hostitelů, které vám umožňují pracovat s Git pro správu verzí, ale nejběžnější hostitel je GitHub. Následující příklad používá hostitele GitHub, ale můžete použít libovolného hostitele Git pro správu verzí v Visual Studio pro Mac.
 
-Pokud chcete používat GitHub, ujistěte se, že máte účet vytvořený a nakonfigurovaný před provedením kroků v tomto článku.
+Pokud chcete použít GitHub, ujistěte se, že máte vytvořený a nakonfigurovaný účet před provedením kroků v tomto článku.
 
 ## <a name="creating-a-remote-repo-on-github"></a>Vytvoření vzdáleného úložiště na GitHubu
 
-Následující příklad používá hostitele GitHubu, ale v Visual Studiu for Mac můžete použít libovolného hostitele Gitu pro správu verzí.
+Následující příklad používá hostitele GitHub, ale můžete použít libovolného hostitele Git pro správu verzí v Visual Studio pro Mac.
 
 Chcete-li nastavit úložiště Git, proveďte následující kroky:
 
-1. Vytvořte nové úložiště Git na github.com:
+1. Vytvořte nové úložiště Git na adrese github.com:
 
-    ![Vytvořit nové úložiště git](media/version-control-git1-sml.png)
+    ![Vytvořit nové úložiště Git](media/version-control-git1-sml.png)
 
-2. Nastavte název, popis a ochranu osobních údajů. **Neinicializovat** Repo. Nastavte .gitignore a licenci na žádný:
+2. Nastavte název, popis a ochranu osobních údajů úložiště. **Neinicializujte** úložiště. Nastavte gitignore a licenci na žádné:
 
-    ![Nastavení podrobností o úložišti git](media/version-control-git2.png)
+    ![Nastavení podrobností úložiště Git](media/version-control-git2.png)
 
-3. Na další stránce se zobrazí a zkopíruje adresa HTTPS nebo SSH do vytvořeného repo:
+3. Další stránka vám nabídne možnost zobrazit a zkopírovat adresu protokolu HTTPS nebo SSH do úložiště, které jste vytvořili:
 
-    ![zobrazit a zkopírovat adresu](media/version-control-git3.png)
+    ![Zobrazit a zkopírovat adresu](media/version-control-git3.png)
 
-   Budete potřebovat adresu HTTPS pro převoz Visual Studia pro Mac na toto repo.
+   K ukázání Visual Studio pro Mac do tohoto úložiště budete potřebovat adresu HTTPS.
 
 ## <a name="publishing-an-existing-project"></a>Publikování existujícího projektu
 
-Pokud máte existující projekt, který ještě _není_ ve správě verzí, nastavte ho v Gitu pomocí následujících kroků:
+Máte-li existující projekt, který ještě _není_ ve správě verzí, postupujte podle následujících kroků a nastavte ho v Gitu:
 
-1. Vyberte název řešení z panelu řešení v Sadě Visual Studio pro Mac.
+1. Vyberte název řešení z Oblast řešení v Visual Studio pro Mac.
 
-2. Na panelu nabídek vyberte příkaz **Správa verzí > publikování v ovládacím prvku verzí,** aby se zobrazil dialogové okno Vybrat **úložiště:**
+2. V řádku nabídek vyberte možnost Správa **verzí > publikovat v řízení verze** . zobrazí se dialogové okno **vybrat úložiště** :
 
-    ![Spuštění pokladny ve Visual Studiu pro Mac](media/version-control-git4-sml.png)
+    ![Spustit registraci v Visual Studio pro Mac](media/version-control-git4-sml.png)
 
-    Pokud se tato položka nabídky v nabídce zobrazí šedě, ujistěte se, že jste vybrali název řešení.
+    Pokud se tato položka nabídky v nabídce zobrazuje šedě, ujistěte se, že jste vybrali název řešení.
 
-3. Zvolte kartu **Registrované úložiště** a stiskněte tlačítko **Přidat:**
+3. Zvolte kartu **registrovaná úložiště** a stiskněte tlačítko **Přidat** :
 
     ![](media/version-control-git5.png)
 
-4. Zadejte název úložiště tak, jak chcete, aby se zobrazovalo místně, a vložte adresu URL z kroku #3. Dialogové okno Konfigurace úložiště by mělo vypadat podobně jako následující. Stiskněte tlačítko OK:
+4. Zadejte název úložiště tak, jak chcete, aby se zobrazil místně, a vložte adresu URL z kroku #3. Dialogové okno Konfigurace úložiště by mělo vypadat podobně jako v následujícím příkladu. Stiskněte OK:
 
-    ![Zadejte dialogové okno podrobností gitu](media/version-control-git6.png)
+    ![Dialogové okno pro zadání podrobností Git](media/version-control-git6.png)
 
-    Je také možné použít SSH pro připojení k Gitu.
+    K připojení k Gitu je taky možné použít SSH.
 
-5. Chcete-li se pokusit publikovat aplikaci na Git, vyberte úložiště a ujistěte se, že jsou vyplněna textová pole **Název modulu** i **Zpráva:**
+5. Chcete-li se pokusit o publikování aplikace do Gitu, vyberte úložiště a ujistěte se, že jsou dokončená pole **název modulu** a text **zprávy** :
 
-    ![Pokus o publikování projektu na git](media/version-control-git7.png)
+    ![Pokus o publikování projektu do Gitu](media/version-control-git7.png)
 
-6. Klikněte na **V pořádku**a potom **na Publish** from the alert dialog .
+6. Klikněte na **OK**a pak na **publikovat** v dialogovém okně Výstraha.
 
-7. V okně **Přihlašovací údaje Git** zadejte své uživatelské jméno a heslo GitHubu. 
+7. V okně **pověření Git** zadejte svoje uživatelské jméno a heslo GitHubu. 
 
 > [!NOTE]
-> Pokud je ve vašem účtu povoleno dvoufaktorové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste nevytvořili přístupový token, postupujte podle pokynů v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
+> Pokud má váš účet povolené dvojúrovňové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste přístupový token nevytvořili, postupujte podle kroků v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
 
-8. Zadejte uživatelské jméno a token osobního přístupu a stiskněte **tlačítko Ok**:
+8. Zadejte uživatelské jméno a osobní přístupový token a stiskněte **OK**:
 
-    ![Zadejte uživatelské jméno a heslo pro git](media/version-control-git9-sml.png)
+    ![Zadejte uživatelské jméno a heslo pro Git.](media/version-control-git9-sml.png)
 
-9. Po několika sekundách řešení by měla být zveřejněna s jeho počáteční potvrzení. Potvrďte, že byla publikována procházením položky nabídky Správa verzí, která by nyní měla být naplněna mnoha možnostmi:
+9. Po několika sekundách by se mělo řešení publikovat s jeho prvotním potvrzením. Potvrďte, že byla publikována, procházením položky nabídky správy verzí, která by nyní měla být naplněna mnoha možnostmi:
 
-    ![Nabídka Řízení verzí](media/version-control-git10.png)
+    ![Nabídka správy verzí](media/version-control-git10.png)
 
-10. Jakmile začnete provádět další změny, vyberte **Nabízené změny,** chcete-li změny posunout do **vzdáleného** úložiště. To umožní všem příslušným uživatelům zobrazit na github.com:
+10. Jakmile začnete dělat další změny, vyberte **nabízené změny** a nahrajte změny do **vzdáleného** úložiště. To umožní všem příslušným uživatelům, aby si ji mohli zobrazit na github.com:
 
-    ![Nabízené změny do vzdáleného úložiště](media/version-control-git11.png)
+    ![Doručovat změny do vzdáleného úložiště](media/version-control-git11.png)
 
 ## <a name="publishing-a-new-project"></a>Publikování nového projektu
 
-Dialogové okno nového projektu lze použít k vytvoření nového projektu s místním úložištěm git. Chcete-li ji povolit, zaškrtněte políčko **Použít git pro správu verzí,** jak je znázorněno na následujícím snímku obrazovky. Tím inicializujete úložiště a přidáte volitelný soubor Gitignore:
+Dialogové okno Nový projekt lze použít k vytvoření nového projektu s místním úložištěm Git. Pokud ho chcete povolit, zaškrtněte políčko **použít Git pro správu verzí** , jak je znázorněno na následujícím snímku obrazovky. Tím dojde k inicializaci úložiště a přidání volitelného souboru. gitignore:
 
-![Vytvoření nového projektu s podporou git](media/version-control-git-publish-new1.png)
+![Vytvořit nový projekt s podporou Gitu](media/version-control-git-publish-new1.png)
 
-Podle následujících kroků můžete nové místní úložiště převést do nového úložiště GitHubu:
+Pomocí následujících kroků Nahrajte nové místní úložiště do nového úložiště GitHub:
 
 > [!NOTE]
-> Pokud jste ještě nevytvořili úložiště GitHub, podívejte se na [vytvoření vzdáleného úložiště na GitHubu](#creating-a-remote-repo-on-github) části.
+> Pokud jste ještě nevytvořili úložiště GitHubu, přečtěte si část [vytvoření vzdáleného úložiště na GitHubu](#creating-a-remote-repo-on-github) .
 
-1. Vytvořte první potvrzení tak, že přejdete na **panel ubírek správy verzí > revizní ho a potvrzeného řešení.**
+1. Vytvořte první potvrzení tak, že v řádku nabídek přejdeme na **řízení verze > revize řešení a potvrzení** .
 
-2. Na kartě Stav zvolte **Potvrdit** v levém horním rohu.
+2. Na kartě stav vyberte **Potvrdit** v levém horním rohu.
 
-3. Napište zprávu o potvrzení, například "První potvrzení", a klikněte na **Potvrdit**:
+3. Napište potvrzovací zprávu, třeba First Commit, a pak klikněte na **potvrzení změn**:
 
-    ![Potvrzení počátečních změn v úložišti git](media/version-control-git-publish-new2.png)
+    ![Potvrdit počáteční změny v úložišti Git](media/version-control-git-publish-new2.png)
 
-4. Dále v panelu nabídek přejděte na **správu verzí > Spravovat větve a dálkové ovladače**.
+4. Dále v řádku nabídek přejděte na Správa **verzí > spravovat větve a vzdálené**části.
 
-5. Přejděte na kartu **Vzdálené zdroje** a klikněte na **Přidat**.
+5. Přejděte na kartu **vzdálené zdroje** a pak klikněte na **Přidat**.
 
-6. V okně **Vzdálený zdroj** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK**:
+6. V okně **vzdálené zdroje** přidejte podrobnosti o dříve vytvořeném úložišti GitHub a klikněte na **OK**:
 
-    ![Konfigurace vzdálených zdrojů pro úložiště git](media/version-control-git-publish-new3.png)
+    ![Konfigurace vzdálených zdrojů pro úložiště Git](media/version-control-git-publish-new3.png)
 
-7. Zavřete okno **Konfigurace úložiště Git** a potom na panelu nabídek přejděte na **položku Správa verzí > Změny push**.
+7. Zavřete okno **Konfigurace úložiště Git** a potom v řádku nabídek přejděte na správa **verzí > nabízených změn**.
 
-8. V okně **Push to Repository** klikněte na tlačítko **Stisknout změny:**
+8. V okně **push do úložiště** klikněte na tlačítko **nabízené změny** :
 
-    ![Posunout změny do vzdáleného úložiště](media/version-control-git-publish-new4.png)
+    ![Odeslat změny do vzdáleného úložiště](media/version-control-git-publish-new4.png)
 
 9. Po zobrazení výzvy zadejte uživatelské jméno a heslo GitHubu.
 
 > [!NOTE]
-> Pokud je ve vašem účtu povoleno dvoufaktorové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste nevytvořili přístupový token, postupujte podle pokynů v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
+> Pokud má váš účet povolené dvojúrovňové ověřování (2FA), budete muset vytvořit přístupový token, který se používá místo hesla. Pokud jste přístupový token nevytvořili, postupujte podle kroků v dokumentaci [k přístupovému tokenu](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) Git.
 
-Visual Studio pro Mac teď posune změny do vzdáleného úložiště GitHubu:
+Visual Studio pro Mac nyní vloží změny do vzdáleného úložiště GitHub:
 
-![Push operace úspěšně dokončena potvrzení](media/version-control-git11.png)
+![Potvrzení úspěšného dokončení operace push](media/version-control-git11.png)
 
 ## <a name="check-out-an-existing-repository"></a>Rezervovat existující úložiště
 
-Je pravděpodobné, že budete muset pracovat s úložištěm GitHub, které existuje pouze na dálkovém ovladači, nikoli v místním počítači. Visual Studio pro Mac umožňuje rychle zkontrolovat toto repo. Podle následujících kroků jej naklonujte do počítače:
+Je možné, že budete muset pracovat s úložištěm GitHub, které existuje jenom na vzdáleném, ne na vašem místním počítači. Visual Studio pro Mac slouží k rychlému vrácení tohoto úložiště. Pomocí následujících kroků naklonujte tento počítač do počítače:
 
-1. Na panelu nabídek vyberte **položku Správa verzí > pokladna**:
+1. V řádku nabídek vyberte možnost Správa **verzí > rezervace**:
 
-2. Zobrazí se karta **Připojit k úložišti:**
+2. Zobrazí se karta **připojit k úložišti** :
 
-    ![Karta Připojit k úložišti se zadanými podrobnostmi](media/version-control-git13.png)
+    ![Karta připojit k úložišti se zadanými podrobnostmi](media/version-control-git13.png)
 
-3. Na stránce GitHub vzdáleného úložiště stiskněte tlačítko **Klonování nebo Stáhnout** a zkopírujte zadaný url:
+3. Na stránce GitHub na vzdáleném úložišti stiskněte tlačítko **klonovat nebo stáhnout** a zkopírujte poskytnutou adresu URL:
 
-    ![zobrazí se adresa URL githubu](media/version-control-git14.png)
+    ![zobrazená adresa URL GitHubu](media/version-control-git14.png)
 
-4. Nahraďte veškerý text v poli položky **adresy URL** na kartě Připojit **k úložišti.** Tím se vyplní většina ostatních polí na této kartě za vás, jak je znázorněno na obrázku v kroku #2.
+4. V poli pro zadání **adresy URL** na kartě **připojit k úložišti** nahraďte veškerý text. Tím se na této kartě naplní většinu dalších polí, jak je znázorněno na obrázku v kroku #2.
 
-5. Zadejte adresář, do kterého chcete úložiště naklonovat, a stiskněte **klávesu Pokladna**.
+5. Zadejte adresář, do kterého chcete klonovat úložiště, a stiskněte tlačítko **Rezervovat**.
 
 > [!NOTE]
-> Pokud je úložiště větší než 4 GB, může dojít k problémům.
+> Pokud je úložiště větší než 4 GB, může docházet k problémům.
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-Pokud máte problémy s inicializací projektu s prázdným vzdáleným úložištěm, můžete zkusit následující kroky:
+Pokud máte problémy s inicializací projektu s prázdným vzdáleným úložištěm, můžete vyzkoušet následující postup:
 
-1. Přejděte do složky řešení.
-1. Stiskněte **klávesu Command + Shift + .** zobrazíte skryté soubory a složky.
-1. Pokud existuje složka **GIT,** odstraňte ji.
-1. Pokud existuje soubor **gitignore,** odstraňte jej.
-1. Stiskněte **klávesu Command + Shift + .** skryjete soubory a složky.
-1. Otevřete své řešení ve VS for Mac.
+1. Přejít do složky řešení.
+1. Stiskněte **příkaz + Shift +.** Chcete-li zobrazit skryté soubory a složky.
+1. Pokud je složka **. Git** , odstraňte ji.
+1. Pokud existuje soubor **gitignore** , odstraňte ho.
+1. Stiskněte **příkaz + Shift +.** skrytí souborů a složek.
+1. Otevřete své řešení v sadě VS pro Mac.
 1. Na panelu řešení vyberte uzel řešení.
-1. Přejděte do nabídky Správa verzí a zvolte **Publikovat v řízení verzí**.
-1. Postupujte podle kroků výše uvedeného kurzu od kroku 6.
+1. Přejděte do nabídky Správa verzí a v části **Správa verzí vyberte publikovat**.
+1. Postupujte podle kroků v předchozím kurzu počínaje krokem 6.
 
 ## <a name="see-also"></a>Viz také
 
-- [Správa verzí v sadě Visual Studio (ve Windows)](/visualstudio/version-control/)
+- [Správa verzí v aplikaci Visual Studio (ve Windows)](/visualstudio/version-control/)
