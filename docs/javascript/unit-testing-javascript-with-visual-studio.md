@@ -1,7 +1,7 @@
 ---
 title: Testování částí JavaScript a TypeScript
 description: Visual Studio poskytuje podporu testování částí JavaScriptu a kódu TypeScript pomocí nástrojů Node.js pro Visual Studio.
-ms.date: 06/06/2018
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: acac3eb306d12ff6976e19ae5dc1ad772691094c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
-ms.translationtype: MT
+ms.openlocfilehash: cdaff34c7eb2f9eba7c075127647c2eacbb736f9
+ms.sourcegitcommit: bcddb4647815e9ce2e175d9258e8df1b795e3e85
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288998"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033348"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Testování částí JavaScriptu a TypeScript v aplikaci Visual Studio
 
@@ -72,25 +71,32 @@ Po otevření Průzkumníka testů (zvolit **test**  >  **Windows**  >  **Průzk
 ![Průzkumník testů](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> Nepoužívejte `outdir` `outfile` možnost nebo v *tsconfig.jsna*, protože Průzkumník testů nebude moci nalézt testy jednotek v souborech TypeScript.
+> V případě TypeScript Nepoužívejte `outdir` `outfile` možnost nebo v *tsconfig.jsna*, protože Průzkumník testů nebude moci nalézt testy jednotek.
 
 ## <a name="run-tests"></a>Spouštění testů
 
-Můžete spustit testy v aplikaci Visual Studio 2017 nebo z příkazového řádku.
+Můžete spouštět testy v aplikaci Visual Studio nebo z příkazového řádku.
 
-### <a name="run-tests-in-visual-studio-2017"></a>Spuštění testů v aplikaci Visual Studio 2017
+### <a name="run-tests-in-visual-studio"></a>Spuštění testů v aplikaci Visual Studio
 
+::: moniker range=">=vs-2019"
+Testy můžete spustit kliknutím na odkaz **Spustit vše** v Průzkumníku testů. Nebo můžete spustit testy tak, že vyberete jeden nebo více testů nebo skupin, kliknete pravým tlačítkem myši a vyberete **Spustit** z místní nabídky. Testy běží na pozadí a Průzkumník testů automaticky aktualizuje a zobrazí výsledky. Kromě toho můžete také ladit vybrané testy kliknutím pravým tlačítkem a výběrem možnosti **ladit**.
+::: moniker-end
+::: moniker range="vs-2017"
 Testy můžete spustit kliknutím na odkaz **Spustit vše** v Průzkumníku testů. Nebo můžete spustit testy tak, že vyberete jeden nebo více testů nebo skupin, kliknete pravým tlačítkem myši a vyberete možnost **Spustit vybrané testy** z místní nabídky. Testy běží na pozadí a Průzkumník testů automaticky aktualizuje a zobrazí výsledky. Kromě toho můžete také ladit vybrané testy výběrem možnosti **ladit vybrané testy**.
+::: moniker-end
 
-> [!Warning]
-> Ladění testů jednotek pomocí uzlu 8 + v současné době funguje pouze pro testovací soubory jazyka JavaScript, testovací soubory TypeScript neumožní volání zarážek. Alternativním řešením je použití `debugger` klíčového slova.
+V případě TypeScript jsou testy jednotek spouštěny proti vygenerovanému kódu JavaScriptu.
+
+> [!NOTE]
+> Ve většině scénářů TypeScriptu můžete ladit test jednotek nastavením zarážky v kódu TypeScript, kliknutím pravým tlačítkem myši na test v Průzkumníku testů a výběrem možnosti **ladit**. Ve složitějších scénářích, například ve scénářích používajících zdrojové mapy, můžete mít potíže se zarážkami v kódu TypeScript. Jako alternativní řešení zkuste použít `debugger` klíčové slovo.
 
 > [!NOTE]
 > V současné době nepodporujeme testy profilování nebo pokrytí kódu.
 
 ### <a name="run-tests-from-the-command-line"></a>Spuštění testů z příkazového řádku
 
-Testy můžete spustit z [Developer Command Prompt](/dotnet/framework/tools/developer-command-prompt-for-vs) pro Visual Studio 2017 pomocí následujícího příkazu:
+Testy můžete spustit z [Developer Command Prompt](/dotnet/framework/tools/developer-command-prompt-for-vs) pro Visual Studio pomocí následujícího příkazu:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter

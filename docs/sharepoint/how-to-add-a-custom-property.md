@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidat vlastní vlastnost | Dokumentace Microsoftu'
+title: 'Postupy: Přidání vlastní vlastnosti | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Property_Editor
 dev_langs:
@@ -17,34 +17,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: caf2d0e63db724c8eb3c1e72c79a109548af8f9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62556843"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017084"
 ---
-# <a name="how-to-add-a-custom-property"></a>Postupy: Přidat vlastní vlastnost
-  Přidání vlastních vlastností do modelu s použitím **Editor vlastností**. Můžete zobrazit tyto vlastnosti v kódu a získejte informace, jako jsou připojovací řetězce a další data v době běhu.
+# <a name="how-to-add-a-custom-property"></a>Postupy: Přidání vlastní vlastnosti
+  Do modelu můžete přidat vlastní vlastnosti pomocí **editoru vlastností**. K těmto vlastnostem můžete přistupovat v kódu, abyste načetli informace, jako jsou připojovací řetězce a další data v době běhu.
 
-### <a name="to-add-a-custom-property"></a>Chcete-li přidat vlastní vlastnost
+### <a name="to-add-a-custom-property"></a>Přidání vlastní vlastnosti
 
-1. V **služby BDC Explorer**, vyberte uzel, který představuje prvek modelu, na který chcete použít vlastní vlastnost.
+1. V **Průzkumníku služby BDC**vyberte uzel, který představuje prvek modelu, pro který chcete použít vlastní vlastnost.
 
-2. V panelu nabídky zvolte **zobrazení** > **okno vlastností**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
-3. V **vlastnosti** okna, vyberte **vlastní vlastnosti** vlastnost a klikněte na tlačítko se třemi tečkami (![elipsa ASP.NET – Návrhář mobilních řešení](../sharepoint/media/mwellipsis.gif "ASP. Návrhář mobilních NET Elipsa")).
+3. V okně **vlastnosti** zvolte vlastnost **vlastní vlastnosti** a potom klikněte na tlačítko se třemi tečkami (![Elipsa ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")).
 
-     **Editor vlastností** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Editor vlastností** .
 
-4. V textovém poli v **název** sloupce, zadejte název vlastnosti.
+4. Do textového pole ve sloupci **název** zadejte název vlastnosti.
 
-5. Pro **typ** pole vlastní vlastnosti, vyberte odpovídající typ dat.
+5. Pro pole **typ** vlastní vlastnosti vyberte vhodný datový typ.
 
-6. Pro **hodnotu** vlastní vlastnosti, pole zadejte hodnotu a klikněte na tlačítko **OK** tlačítko.
+6. Pro pole **hodnota** vlastní vlastnosti zadejte hodnotu a pak klikněte na tlačítko **OK** .
 
 ## <a name="see-also"></a>Viz také:
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

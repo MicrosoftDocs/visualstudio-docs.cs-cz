@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přizpůsobení balíčku řešení služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: Přizpůsobení balíčku řešení služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerAdvanced
 - VS.SharePointTools.RAD.PackageDesigner.Manifest
@@ -17,75 +17,74 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0aa124d25e279b7e44292645d81d80829f5d3f8f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 77b66160d489f711b5588fdcdd024d13769d734f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420201"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016865"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>Postupy: Přizpůsobení balíčku řešení služby SharePoint
-  Návrháři balíčku můžete použít k vytvoření a přizpůsobení balíčku (*.wsp*). Například můžete přidat položky Sharepointového projektu a funkce, určete, jestli je webový server obnovit, když se řešení nasadí a nastavit typ serveru nasazení.
+  K vytvoření a přizpůsobení balíčku (*. wsp*) můžete použít návrháře balíčků. Můžete například přidat položky a funkce projektu služby SharePoint, určit, zda je webový server resetován při nasazení řešení, a nastavit typ serveru nasazení.
 
 ## <a name="open-the-package-designer"></a>Otevřít návrháře balíčků
 
-#### <a name="to-open-the-package-designer"></a>Chcete-li otevřít návrháře balíčků
+#### <a name="to-open-the-package-designer"></a>Otevření návrháře balíčků
 
-- V **Průzkumníka řešení**, dvakrát klikněte na panel **balíčku**, nebo zvolte **Návrhář zobrazení** v místní nabídce pro **balíčku**.
+- V **Průzkumník řešení**dvakrát klikněte na **balíček**nebo v místní nabídce pro **balíček**vyberte **Návrhář zobrazení** .
 
-## <a name="view-the-packaged-manifestffile"></a>Zobrazení zabalené manifestfFile
- Návrháři balíčku můžete použít k úpravě a generování souboru manifestu balíčku. Kód XML pro tento soubor pak můžete zobrazit v sadě Visual Studio.
+## <a name="view-the-packaged-manifestffile"></a>Zobrazit zabalený manifestfFile
+ Pomocí návrháře balíčků můžete upravit a vygenerovat zabalený soubor manifestu. Pak můžete zobrazit kód XML pro tento soubor v aplikaci Visual Studio.
 
-#### <a name="to-view-the-xml-source-file"></a>Chcete-li zobrazit zdrojový soubor XML
+#### <a name="to-view-the-xml-source-file"></a>Zobrazení zdrojového souboru XML
 
-1. V **návrháři balíčku**, zvolte **Manifest**.
+1. V **Návrháři balíčků**vyberte možnost **manifest**.
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Chcete-li zobrazit souboru manifestu balíčku pomocí Průzkumníka řešení
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Chcete-li zobrazit zabalený soubor manifestu pomocí Průzkumník řešení
 
-1. V **Průzkumníka řešení**, zvolte **zobrazit všechny soubory**.
+1. V **Průzkumník řešení**vyberte možnost **Zobrazit všechny soubory**.
 
-2. Rozbalte balíček, Rozbalit Package.package a pak otevřete *Package.Template.xml* souboru.
+2. Rozbalte položku balíček, rozbalte balíček. Package a pak otevřete soubor *Package.Template.xml* .
 
     > [!NOTE]
-    > Když otevřete soubor manifestu XML pro balíček šablony, soubory se automaticky ověří a můžete ignorovat upozornění, které se zobrazí v okně Seznam chyb.
+    > Když otevřete soubor XML manifestu pro šablonu balíčku, soubory budou automaticky ověřeny a můžete ignorovat upozornění, která se zobrazí v okně Seznam chyb.
 
-## <a name="change-the-manifest-template"></a>Změny v šabloně manifestu
- Můžete změnit kód XML pro zabalené soubor manifestu v editoru XML sady Visual Studio nebo v podokně šablony manifestu. Jakékoli změny kódu XML jsou sloučeny do souboru manifestu balíčku pro balíček.
+## <a name="change-the-manifest-template"></a>Změna šablony manifestu
+ Můžete změnit kód XML pro zabalený soubor manifestu v editoru XML sady Visual Studio nebo v podokně šablona manifestu. Všechny změny kódu XML jsou sloučeny do balíčku souboru manifestu balíčku.
 
-#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Chcete-li změnit šablonu manifestu pomocí editoru XML
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Změna šablony manifestu pomocí editoru XML
 
-1. V **návrháři balíčku**, zvolte **Manifest** kartu, rozbalte **upravit možnosti** uzel a klikněte na tlačítko **otevřené v editoru XML** odkaz.
+1. V **Návrháři balíčků**zvolte kartu **manifest** , rozbalte uzel **Možnosti úprav** a pak zvolte odkaz **otevřít v editoru XML** .
 
-     Změny do souboru XML jsou sloučeny do souboru manifestu balíčku.
+     Změny XML jsou sloučeny do zabaleného souboru manifestu.
 
-#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Chcete-li změnit šablonu manifestu pomocí podokna manifestu šablony
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Změna šablony manifestu pomocí podokna šablony manifestu
 
-1. V **návrháři balíčku**, zvolte **Manifest** kartu, rozbalte **upravit možnosti** uzel a poté změňte kód XML, který se zobrazí v podokně šablony manifestu.
+1. V **Návrháři balíčků**zvolte kartu **manifest** , rozbalte uzel **Možnosti úprav** a pak změňte XML, které se zobrazí v podokně šablona manifestu.
 
-     Změny v souboru XML se zobrazí v **ve verzi Preview ze zabalené Manifest** podokně.
+     Změny XML se zobrazí v podokně **verze Preview sbaleného manifestu** .
 
-## <a name="overwrite-the-packaged-manifest-file"></a>Přepsání souboru manifestu balíčku
- Můžete zakázat návrháře balíčků a vytvoření *manifest.xml* soubor ručně. Při prvním provedení tohoto postupu, aktuální nastavení v Návrháři balíčku se uloží do souboru XML balíčku šablony. Potom můžete upravit nebo přepsat kód XML.
+## <a name="overwrite-the-packaged-manifest-file"></a>Přepsat zabalený soubor manifestu
+ Můžete zakázat návrháře balíčků a vytvořit soubor *manifest.xml* ručně. Při prvním provedení tohoto postupu se aktuální nastavení v Návrháři balíčků uloží do souboru XML šablony balíčku. Pak můžete kód XML upravit nebo přepsat.
 
 > [!NOTE]
-> Je-li přidat nebo odebrat položky Sharepointového projektu a funkce v souboru XML, návrháři balíčku je zakázáno, tyto položky projektu a funkce nejsou zabaleny.
+> Pokud přidáte nebo odeberete položky projektu služby SharePoint a funkce v souboru XML v době, kdy je Návrhář balíčku zakázán, tyto položky projektu a funkce nejsou zabaleny.
 
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>K přepsání souboru manifestu balíčku zakázáním návrháře
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Přepsání zabaleného souboru manifestu tím, že zakážete návrháře
 
-1. V **návrháři balíčku**, zvolte **Manifest** kartu.
+1. V **Návrháři balíčků**klikněte na kartu **manifest** .
 
-2. Rozbalte **upravit možnosti** uzlu, vyberte **přepsat vygenerovaný kód XML a upravit manifest v editoru XML** propojit a klikněte na tlačítko **Ano** tlačítko.
+2. Rozbalte uzel **Možnosti úprav** , zvolte **přepsat vygenerované XML a upravit manifest v odkazu editoru XML** a pak klikněte na tlačítko **Ano** .
 
-     Šablona se aktualizuje aktuální soubor manifestu balíčku.
+     Šablona je aktualizována s aktuálním zabaleným souborem manifestu.
 
 ## <a name="enable-the-package-designer"></a>Povolit návrháře balíčků
- Můžete znovu povolit návrháři balíček si můžete přizpůsobit *manifest.xml* souboru.
+ Můžete znovu povolit návrháře balíčku pro přizpůsobení souboru *manifest.xml* .
 
-#### <a name="to-re-enable-the-designer"></a>Chcete-li znovu povolí návrháře
+#### <a name="to-re-enable-the-designer"></a>Opětovné povolení návrháře
 
-1. V **návrháři balíčku**, zvolte **zahodit úpravy manifestu a znovu povolí návrháře** propojit a klikněte na tlačítko **Ano** tlačítko.
+1. V **Návrháři balíčků**zvolte možnost **Zahodit úpravy manifestu a znovu povolit odkaz návrháře** a pak klikněte na tlačítko **Ano** .
 
-     Šablona se aktualizuje s původním textem a budou ztraceny všechny změny do souboru XML.
+     Šablona se aktualizuje s původním textem a všechny změny v souboru XML se ztratí.
 
 ## <a name="see-also"></a>Viz také:
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

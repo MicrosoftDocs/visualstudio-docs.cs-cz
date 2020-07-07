@@ -1,7 +1,7 @@
 ---
 title: Začínáme (vývoj pro SharePoint v aplikaci Visual Studio) | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,21 +14,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc6d6083b9a764acc915e6c0f800cb70569652b7
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
-ms.translationtype: MT
+ms.openlocfilehash: 999a23f8765a72feb22822120a11e1b38b9ac946
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586670"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017085"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>Začínáme (vývoj pro SharePoint v aplikaci Visual Studio)
-  Tato část vám pomůže začít pracovat s [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vývojem řešení SharePoint, která využívají [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a. [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]
+  Tato část vám pomůže začít pracovat s [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vývojem řešení SharePoint, která využívají [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] a [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
 
  Informace o SharePoint 2013 a doplňkůch pro SharePoint najdete v tématu [sharepoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) a [sestavení doplňků pro SharePoint](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
- SharePoint nabízí webovou platformu pro spolupráci. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]poskytuje mnoho šablon projektů pro vytváření webů a obsahu služby SharePoint, včetně definic seznamů, pracovních postupů, modelů připojení obchodních dat a definic webů. Kromě toho můžete vytvořit rozšíření pro projekty a nástroje služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]nástroji.
+ SharePoint nabízí webovou platformu pro spolupráci. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]poskytuje mnoho šablon projektů pro vytváření webů a obsahu služby SharePoint, včetně definic seznamů, pracovních postupů, modelů připojení obchodních dat a definic webů. Kromě toho můžete vytvořit rozšíření pro projekty a nástroje služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 |Téma|Popis|
 |-----------|-----------------|
@@ -38,7 +37,7 @@ ms.locfileid: "82586670"
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)|Popisuje vývoj pro SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]v.|
+|[Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)|Popisuje vývoj pro SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Nastavení obecného vývojového prostředí pro SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|Popisuje požadované instalace pro vytvoření řešení služby SharePoint.|
 |[Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)|Popisuje postup vytvoření vlastních sloupců webu, typů obsahu a seznamů pro službu SharePoint pomocí nástrojů sady Visual Studio pro vývoj služby SharePoint.|
 |[Vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md)|Popisuje návrh a vývoj pracovního postupu.|
@@ -51,7 +50,7 @@ ms.locfileid: "82586670"
 |[Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)|Popisuje, jak zabalit a nasadit řešení služby SharePoint.|
 |[Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|V této části najdete popis postupu rozšiřování nástrojů služby SharePoint pro vytváření potřebných funkcí.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
 - [Procházení připojení služby SharePoint pomocí Průzkumník serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)

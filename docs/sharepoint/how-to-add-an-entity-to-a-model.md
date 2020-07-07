@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání entity do modelu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - EntityTool
 dev_langs:
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b1a7ec1eab5cdcf2e415a4803c51c9da91be29c9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: b80f39494b98014a75d4265f228906be2ff45188
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016679"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>Postupy: Přidání entity do modelu
   Pokud chcete vytvořit entitu, přidejte ovládací prvek entity z **panelu nástrojů sady** Visual Studio do návrháře služby připojení obchodních dat.
@@ -33,7 +32,7 @@ ms.locfileid: "72985247"
 
 2. V **sadě nástrojů**ze skupiny **BusinessDataCatalog** přidejte ovládací prvek **entity** do návrháře.
 
-     Nová entita se zobrazí v návrháři. Visual Studio přidá prvek `<Entity>` do souboru XML modelu služby BDC v projektu. Další informace o atributech elementu entity najdete v tématu [entita](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
+     Nová entita se zobrazí v návrháři. Visual Studio přidá `<Entity>` prvek do XML souboru modelu služby BDC v projektu. Další informace o atributech elementu entity najdete v tématu [entita](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
 
 3. V Návrháři otevřete místní nabídku pro entitu, zvolte možnost **Přidat**a pak zvolte možnost **identifikátor**.
 

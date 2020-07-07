@@ -1,7 +1,7 @@
 ---
 title: Vytvořit webovou část Silverlight zobrazující OData pro SharePoint
 ms.date: 02/22/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.SPE.SilverlightWebPart
 dev_langs:
@@ -12,12 +12,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984828"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017173"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>Návod: Vytvoření webové části Silverlight, která zobrazuje OData pro SharePoint
   SharePoint 2010 zpřístupňuje svá data seznamu prostřednictvím protokolu OData. Služba OData je ve službě SharePoint implementovaná službou RESTful Service ListData. svc. Tento návod ukazuje, jak vytvořit webovou část služby SharePoint, která je hostitelem aplikace Silverlight. Aplikace Silverlight zobrazuje informace o seznamu oznámení služby SharePoint pomocí ListData. svc. Další informace najdete v tématu [rozhraní REST SharePoint Foundation](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) a [Open Data Protocol](https://www.odata.org/).
@@ -39,9 +38,9 @@ ms.locfileid: "72984828"
 
 #### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>Vytvoření aplikace Silverlight a webové části Silverlight
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt** . zobrazí se dialogové okno **Nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** pod možností **vizuál C#**  nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
 
 3. V podokně šablony vyberte šablonu **webové části SharePoint 2010 Silverlight** .
 
@@ -57,7 +56,7 @@ ms.locfileid: "72984828"
 
 7. V části **jak chcete přidružit webovou část technologie Silverlight** na stránce **Zadejte informace o konfiguraci Silverlightu** zvolte možnost **vytvořit nový projekt Silverlight a přidružte jej k přepínači webové části** .
 
-8. Změňte **název** na **SLApplication**, nastavte **jazyk** na hodnotu **Visual Basic** nebo **vizuál C#** a pak nastavte **verzi Silverlight** na **Silverlight 4,0**.
+8. Změňte **název** na **SLApplication**, nastavte **jazyk** na buď **Visual Basic** nebo **Visual C#** a pak nastavte **verzi Silverlight** na **Silverlight 4,0**.
 
 9. Klikněte na tlačítko **Dokončit** . Projekty se zobrazí v **Průzkumník řešení**.
 
@@ -75,15 +74,15 @@ ms.locfileid: "72984828"
     > [!NOTE]
     > Pokud používáte Visual Basic, musíte vybrat ikonu **Zobrazit všechny soubory** v horní části **Průzkumník řešení** a zobrazit tak uzel **odkazy** .
 
-3. Do pole Adresa v dialogovém okně **Přidat odkaz na službu** zadejte adresu URL webu služby SharePoint, například **http://MySPSite** , a pak klikněte na tlačítko **Přejít** .
+3. Do pole Adresa v dialogovém okně **Přidat odkaz na službu** zadejte adresu URL webu služby SharePoint, například **http://MySPSite** a pak klikněte na tlačítko **Přejít** .
 
-     Když Silverlight vyhledá službu SharePoint OData ListData. svc, nahradí ji úplnou adresou URL služby. V tomto příkladu se http://myserver http://myserver/_vti_bin/ListData.svc.
+     Když Silverlight vyhledá službu SharePoint OData ListData. svc, nahradí ji úplnou adresou URL služby. V tomto příkladu http://myserver se stala http://myserver/_vti_bin/ListData.svc .
 
 4. Kliknutím na tlačítko **OK** přidejte odkaz na službu do projektu a použijte výchozí název služby ServiceReference1.
 
-5. Na panelu nabídek vyberte **sestavení** **řešení**sestavení  > .
+5. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
-6. Přidejte do projektu nový zdroj dat na základě služby SharePoint. Chcete-li to provést, na panelu nabídek vyberte možnost **zobrazit**  >  jiné**zdroje dat** > **Windows** .
+6. Přidejte do projektu nový zdroj dat na základě služby SharePoint. To provedete tak, že na panelu nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
      V okně **zdroje dat** se zobrazují všechna dostupná data seznamu služby SharePoint, jako jsou například úkoly, oznámení a kalendář.
 
@@ -123,7 +122,7 @@ ms.locfileid: "72984828"
     DataServiceCollection<AnnouncementsItem> announcements = new DataServiceCollection<AnnouncementsItem>();
     ```
 
-11. Nahraďte `UserControl_Loaded` procedurou následujícím způsobem.
+11. Nahraďte `UserControl_Loaded` postup následujícím.
 
     ```vb
     Private Sub UserControl_Loaded_1(sender As Object, e As RoutedEventArgs)
@@ -223,7 +222,7 @@ ms.locfileid: "72984828"
 
 7. V seznamu **webové části** zvolte webovou část Silverlight a potom kliknutím na tlačítko **Přidat** přidejte webovou část do návrháře.
 
-8. Po provedení všech přidaných webových stránek, klikněte na kartu **Stránka** a pak na panelu nástrojů zvolte tlačítko **Uložit & Zavřít** .
+8. Po provedení všech přidaných webových stránek, klikněte na kartu **Stránka** a pak na panelu nástrojů zvolte tlačítko **Uložit & zavřít** .
 
      Webová část Silverlight by nyní měla zobrazovat data oznámení z webu služby SharePoint. Ve výchozím nastavení je stránka uložena v seznamu stránek webu na SharePointu.
 

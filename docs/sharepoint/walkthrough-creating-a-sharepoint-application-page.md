@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Vytvoření stránky aplikace služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0eaf7bda4ac4ed67dae79b8dd83bb59ba6985343
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985030"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016489"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>Návod: Vytvoření stránky aplikace služby SharePoint
 
@@ -45,7 +44,7 @@ Tento návod znázorňuje následující úlohy:
 
 Nejprve vytvořte **prázdný projekt služby SharePoint**. Později přidáte položku **stránky aplikace** do tohoto projektu.
 
-1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. Otevřete dialogové okno **Nový projekt** , rozbalte uzel **Office/SharePoint** v jazyce, který chcete použít, a pak zvolte uzel **řešení služby SharePoint** .
 
@@ -61,19 +60,19 @@ Chcete-li vytvořit stránku aplikace, přidejte do projektu položku **stránky
 
 1. V **Průzkumník řešení**vyberte projekt **MySharePointProject** .
 
-2. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
+2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
 3. V dialogovém okně **Přidat novou položku** vyberte **stránku aplikace (jenom šablona řešení farmy** ).
 
 4. Pojmenujte stránku **SearchItems**a pak klikněte na tlačítko **Přidat** .
 
-     Návrhář Visual Web Developer zobrazí stránku aplikace ve **zdrojovém** zobrazení, kde vidíte prvky HTML stránky. Návrhář zobrazí značky pro několik ovládacích prvků <xref:System.Web.UI.WebControls.Content>. Každý ovládací prvek se mapuje na ovládací prvek <xref:System.Web.UI.WebControls.ContentPlaceHolder>, který je definován na výchozí stránce předlohy aplikací.
+     Návrhář Visual Web Developer zobrazí stránku aplikace ve **zdrojovém** zobrazení, kde vidíte prvky HTML stránky. Návrhář zobrazí značky pro několik <xref:System.Web.UI.WebControls.Content> ovládacích prvků. Každý ovládací prvek se mapuje na <xref:System.Web.UI.WebControls.ContentPlaceHolder> ovládací prvek, který je definován na výchozí stránce předlohy aplikací.
 
 ## <a name="design-the-layout-of-the-application-page"></a>Návrh rozložení stránky aplikace
 
 Položka stránky aplikace umožňuje použít návrháře k přidání ovládacích prvků ASP.NET do stránky aplikace. Tento návrhář je stejný Návrhář, který se používá v aplikaci Visual Web Developer. Přidejte popisek, seznam přepínačů a tabulku do zobrazení **zdroje** návrháře a pak nastavte vlastnosti stejným způsobem jako při návrhu libovolné standardní stránky ASP.NET.
 
-1. Na panelu nabídek vyberte možnost **zobrazit** > **Sada nástrojů**.
+1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **sadu nástrojů**.
 
 2. V uzlu standardní v **sadě nástrojů**proveďte jeden z následujících kroků:
 
@@ -83,9 +82,9 @@ Položka stránky aplikace umožňuje použít návrháře k přidání ovládac
 
 3. Opakujte předchozí krok a přidejte položku **DropDownList** a položku **tabulky** do ovládacího prvku obsahu **PlaceHolderMain** .
 
-4. V Návrháři změňte hodnotu atributu `Text` ovládacího prvku popisek tak, aby **zobrazoval všechny položky**.
+4. V Návrháři změňte hodnotu `Text` atributu ovládacího prvku popisek tak, aby **zobrazoval všechny položky**.
 
-5. V Návrháři nahraďte prvek `<asp:DropDownList>` následujícím kódem XML.
+5. V Návrháři nahraďte `<asp:DropDownList>` prvek následujícím kódem XML.
 
     ```xml
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true"
@@ -97,13 +96,13 @@ Položka stránky aplikace umožňuje použít návrháře k přidání ovládac
 
 ## <a name="handle-the-events-of-controls-on-the-page"></a>Zpracování událostí ovládacích prvků na stránce
 
-Ovládání ovládacích prvků na stránce aplikace stejně jako jakékoli ASP.NET stránky. V tomto postupu zpracujete událost `SelectedIndexChanged` rozevíracího seznamu.
+Ovládání ovládacích prvků na stránce aplikace stejně jako jakékoli ASP.NET stránky. V tomto postupu zpracujete `SelectedIndexChanged` událost rozevíracího seznamu.
 
 1. V nabídce **zobrazení** vyberte položku **kód**.
 
      V editoru kódu se otevře soubor kódu stránky aplikace.
 
-2. Přidejte následující metodu do třídy `SearchItems`. Tento kód zpracovává událost <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> <xref:System.Web.UI.WebControls.DropDownList> voláním metody, kterou vytvoříte později v tomto návodu.
+2. Do třídy přidejte následující metodu `SearchItems` . Tento kód zpracovává <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> událost <xref:System.Web.UI.WebControls.DropDownList> voláním metody, kterou vytvoříte později v tomto návodu.
 
      [!code-vb[SP_ApplicationPage#5](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]
      [!code-csharp[SP_ApplicationPage#5](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]
@@ -113,12 +112,12 @@ Ovládání ovládacích prvků na stránce aplikace stejně jako jakékoli ASP.
      [!code-vb[SP_ApplicationPage#1](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#1)]
      [!code-csharp[SP_ApplicationPage#1](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#1)]
 
-4. Přidejte následující metodu do třídy `SearchItems`. Tato metoda projde všechny lokality na serverové farmě a vyhledá položky vytvořené nebo upravené aktuálním uživatelem.
+4. Do třídy přidejte následující metodu `SearchItems` . Tato metoda projde všechny lokality na serverové farmě a vyhledá položky vytvořené nebo upravené aktuálním uživatelem.
 
      [!code-vb[SP_ApplicationPage#2](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#2)]
      [!code-csharp[SP_ApplicationPage#2](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#2)]
 
-5. Přidejte následující metodu do třídy `SearchItems`. Tato metoda zobrazí položky vytvořené nebo upravené aktuálním uživatelem v tabulce.
+5. Do třídy přidejte následující metodu `SearchItems` . Tato metoda zobrazí položky vytvořené nebo upravené aktuálním uživatelem v tabulce.
 
      [!code-vb[SP_ApplicationPage#3](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#3)]
      [!code-csharp[SP_ApplicationPage#3](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#3)]
@@ -153,5 +152,5 @@ Další informace o návrhu obsahu stránky SharePointu pomocí vizuálního web
 
 ## <a name="see-also"></a>Viz také:
 
-[Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)
-[_layouts typu stránky](/previous-versions/office/aa979604(v=office.14)) aplikace
+[Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md) 
+ [Typ stránky _layouts aplikace](/previous-versions/office/aa979604(v=office.14))

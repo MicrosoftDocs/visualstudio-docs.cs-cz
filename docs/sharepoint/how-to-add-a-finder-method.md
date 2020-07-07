@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání vyhledávací metody | Dokumentace Microsoftu'
+title: 'Postupy: Přidání vyhledávací metody | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,57 +17,56 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 49f494fa2c0fb35f7d2a65dc2ccb6b6d2d761cbe
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1fa8f8eb34943cc17bc6cabca8e93ea7569a7ba6
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63428730"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016726"
 ---
 # <a name="how-to-add-a-finder-method"></a>Postupy: Přidání vyhledávací metody
-  Chcete-li povolit službu Business Data Connectivity (BDC) zobrazíte seznam entit v seznamu nebo webové části, musíte vytvořit *Finder* metoda. Metoda hledání je zvláštní metoda, která vrátí kolekci instancí entity. Další informace naleznete v tématu [Model Připojení obchodních dat návrhu](../sharepoint/designing-a-business-data-connectivity-model.md).
+  Chcete-li povolit službě BDC (Business Data Connectivity) zobrazit seznam entit ve webové části nebo seznamu, je nutné vytvořit *vyhledávací* metodu. Vyhledávací metoda je speciální metoda, která vrací kolekci instancí entit. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-### <a name="to-create-a-finder-method"></a>Chcete-li vytvořit metodu Finder
+### <a name="to-create-a-finder-method"></a>Vytvoření vyhledávací metody
 
-1. Na **návrháři služby BDC**, zvolit entitu.
+1. V **Návrháři BDC**vyberte entitu.
 
-    Další informace najdete v tématu [jak: Přidání entity do modelu](../sharepoint/how-to-add-an-entity-to-a-model.md).
+    Další informace naleznete v tématu [How to: Add a entity to a model](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. V panelu nabídky zvolte **zobrazení** > **ostatní Windows** > **podrobnosti metody služby BDC**.
+2. Na panelu nabídek vyberte **Zobrazit**  >  **Další**  >  **Podrobnosti o metodě služby Windows BDC**.
 
-    **Podrobnosti metody služby BDC** otevře se okno. Další informace o **podrobnosti metody služby BDC** okna, viz [přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
+    Otevře se okno **Podrobnosti metody služby BDC** . Další informace o okně **Podrobnosti metody služby BDC** najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. V **přidat metodu** seznam, zvolte **vytvořit vyhledávací metody**.
+3. V seznamu **Přidat metodu** vyberte možnost **vytvořit vyhledávací metodu**.
 
-    Visual Studio přidá metodu, návratový parametr a typ popisovače.
+    Visual Studio přidá metodu, návratový parametr a popisovač typu.
 
-4. Popisovač typu nakonfigurujte jako popisovač typu kolekce entity. Další informace o tom, jak vytvořit popisovač typu kolekce entit najdete v tématu [jak: Definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
+4. Nakonfigurujte popisovač typu jako popisovač typu kolekce entit. Další informace o tom, jak vytvořit popisovač typu kolekce entit, naleznete v tématu [How to: define Type Descriptor parametru](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
    > [!NOTE]
-   > Není nutné tento krok provést, pokud jste přidali do entity konkrétní vyhledávací metoda. Visual Studio používá popisovač typu, který jste definovali v konkrétní vyhledávací metoda.
+   > Pokud jste přidali konkrétní vyhledávací metodu k entitě, nemusíte tento krok provádět. Visual Studio používá popisovač typu, který jste definovali v konkrétní vyhledávací metodě.
 
-5. V **Průzkumníka řešení**, otevřete místní nabídku souboru služby kód, který byl vygenerován pro entitu a pak zvolte **zobrazit kód**. Další informace o souboru kód služby naleznete v tématu [vytvořit model připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+5. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**. Další informace o souboru kódu služby najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-6. Přidejte kód do metody hledání. Tento kód provede následující:
+6. Přidejte kód do metody Finder. Tento kód provádí následující úlohy:
 
    - Načte data ze zdroje dat.
 
-   - Vrátí seznam entit služby katalogu obchodních dat.
+   - Vrátí seznam entit služby BDC.
 
-     Následující příklad vrátí kolekci `Contact` entity pomocí dat z ukázkové databáze AdventureWorks pro SQL Server.
+     Následující příklad vrátí kolekci `Contact` entit pomocí dat z ukázkové databáze AdventureWorks pro SQL Server.
 
    > [!NOTE]
-   > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
+   > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
     [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
 
 ## <a name="see-also"></a>Viz také:
-- [Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Postupy: Přidání konkrétní vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
-- [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Postupy: Definování instance metody](../sharepoint/how-to-define-a-method-instance.md)
+- [Postupy: Přidání parametru do metody](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Postupy: definování instance metody](../sharepoint/how-to-define-a-method-instance.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Návod: profilace aplikace SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
-ms.translationtype: MT
+ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77277646"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017100"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: profilování aplikace SharePoint
   Tento návod ukazuje, jak používat nástroje pro profilaci v aplikaci Visual Studio k optimalizaci výkonu aplikace služby SharePoint. Ukázková aplikace je přijímač událostí funkce SharePointu, který obsahuje smyčku nečinnosti, která snižuje výkon přijímače událostí funkce. Profiler sady Visual Studio umožňuje vyhledat a eliminovat nejnákladný (nejpomalejší) část projektu, označovanou také jako *horká cesta*.
@@ -49,9 +48,9 @@ ms.locfileid: "77277646"
 
 ### <a name="to-create-a-sharepoint-project"></a>Vytvoření projektu služby SharePoint
 
-1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . zobrazí se dialogové okno **Nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte uzel **služby SharePoint** pod možností **vizuál C#**  nebo **Visual Basic**a pak vyberte uzel **2010** .
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
 
 3. V podokně šablony vyberte šablonu **projektu SharePoint 2010** .
 
@@ -92,7 +91,7 @@ ms.locfileid: "77277646"
     private string webUrl = "/";
     ```
 
-4. Nahraďte `FeatureActivated` procedurou následujícím kódem.
+4. Nahraďte `FeatureActivated` proceduru následujícím kódem.
 
     ```vb
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)
@@ -151,7 +150,7 @@ ms.locfileid: "77277646"
     }
     ```
 
-5. Níže uvedeným postupem `FeatureActivated`přidejte následující postup.
+5. Následující postup přidejte pod `FeatureActivated` proceduru.
 
     ```vb
 
@@ -212,7 +211,7 @@ ms.locfileid: "77277646"
      Průvodce povolí profilaci aplikace na serveru, zobrazí okno **prohlížeč výkonu** a poté sestaví, nasadí a spustí aplikaci služby SharePoint.
 
 ## <a name="run-the-sharepoint-application"></a>Spuštění aplikace SharePoint
- Aktivujte funkci ve službě SharePoint, která spustí spuštění kódu události `FeatureActivation`.
+ Aktivujte funkci ve službě SharePoint, která aktivuje `FeatureActivation` spuštění kódu události.
 
 ### <a name="to-run-the-sharepoint-application"></a>Spuštění aplikace SharePoint
 
@@ -222,7 +221,7 @@ ms.locfileid: "77277646"
 
 3. V seznamu **funkce** klikněte na tlačítko **aktivovat** vedle položky **ProfileTest Feature1**.
 
-     Pokud to uděláte, dojde k pozastavení v důsledku volání nečinné smyčky ve funkci `FeatureActivated`.
+     Pokud to uděláte, dojde k pozastavení v důsledku volání nečinné smyčky ve `FeatureActivated` funkci.
 
 4. Na panelu **Snadné spuštění** zvolte **seznamy** a potom v seznamu **seznamy** zvolte možnost **oznámení**.
 
@@ -237,17 +236,17 @@ ms.locfileid: "77277646"
 
 ### <a name="to-view-and-interpret-the-profile-results"></a>Zobrazení a interpretace výsledků profilu
 
-1. Ve funkcích, které **provádějí nejdůležitější pracovní** část sestavy profilace, si všimněte, že `TimeCounter` je poblíž začátku seznamu.
+1. Ve funkcích, které **provádějí Nejjednotlivější pracovní** část sestavy profilace vzorku, si všimněte, že `TimeCounter` je poblíž horní části seznamu.
 
-     Toto umístění indikuje, že `TimeCounter` byla jednou z funkcí s nejvyšším počtem vzorků, což znamená, že se jedná o jeden z největších problémů s výkonem v aplikaci. Tato situace se ale Nepřekvapivé, protože byla navržena záměrně pro demonstrační účely.
+     Toto umístění označuje, že `TimeCounter` byla jednou z funkcí s největším počtem vzorků, což znamená, že se jedná o jeden z největších problémů s výkonem v aplikaci. Tato situace se ale Nepřekvapivé, protože byla navržena záměrně pro demonstrační účely.
 
-2. Ve funkcích, které **provádějí většinu individuální práce** , vyberte odkaz `ProcessRequest`, abyste zobrazili distribuci nákladů pro funkci `ProcessRequest`.
+2. Ve funkcích, které **provádějí většinu individuální práce** , vyberte `ProcessRequest` odkaz pro zobrazení distribuce nákladů pro `ProcessRequest` funkci.
 
-     V oddílu **volané funkce** pro `ProcessRequest`si všimněte, že funkce **FeatureActiviated** je uvedena jako nejdražší volaná funkce.
+     V oddílu **volané funkce** pro si `ProcessRequest` Všimněte, že funkce **FeatureActiviated** je uvedena jako nejdražší volaná funkce.
 
 3. V části **volané funkce** klikněte na tlačítko **FeatureActivated** .
 
-     V oddílu **volané funkce** pro **FeatureActivated**je funkce `TimeCounter` uvedena jako nejdražší volaná funkce. V podokně **zobrazení kódu funkce** je zvýrazněný kód (`TimeCounter`) hotspot a indikuje, kde je nutná oprava.
+     V oddílu **volané funkce** pro **FeatureActivated** `TimeCounter` je funkce uvedena jako nejdražší volaná funkce. V podokně **zobrazení kódu funkce** je zvýrazněný kód ( `TimeCounter` ) hotspot a indikuje, kde je nutná oprava.
 
 4. Zavřete sestavu ukázka profilace.
 
@@ -258,7 +257,7 @@ ms.locfileid: "77277646"
 
 ### <a name="to-fix-the-code-and-reprofile-the-application"></a>Oprava kódu a znovu profilování aplikace
 
-1. V kódu přijímače událostí funkce přidejte do `FeatureActivated` volání metody `TimeCounter`, aby se zabránilo volání.
+1. V kódu přijímače událostí funkce přihlaste `TimeCounter` k metodě volání metody, `FeatureActivated` abyste zabránili jejímu volání.
 
 2. Uložte projekt.
 
@@ -274,5 +273,5 @@ ms.locfileid: "77277646"
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
-- [Průvodce začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md)
+- [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Hledání kritických bodů aplikace pomocí profileru sady Visual Studio](https://msdn.microsoft.com/magazine/cc337887.aspx)

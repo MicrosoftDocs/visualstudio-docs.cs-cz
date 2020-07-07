@@ -1,7 +1,7 @@
 ---
-title: Vytvoření uživatelského ovládacího prvku pro části stránky nebo webové aplikace služby SharePoint
+title: Vytvořit uživatelský ovládací prvek pro stránku aplikace SharePoint nebo webovou část
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,46 +13,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3a88a59e9b87a193329433e5eb0625afa1428026
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 2fbf1b646ae9e7fb697fcab93adfb8661a4372c6
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401483"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016975"
 ---
-# <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Postupy: Vytvoření uživatelského ovládacího prvku pro části stránky nebo webové aplikace služby SharePoint
-  Můžete také vytvářet vlastní uživatelské ovládací prvky, které poskytují vlastní funkce pro řešení služby SharePoint, a tyto funkce v rámci svého projektu znovu využívat. De webové části nebo do stránky aplikace lze zahrnout uživatelské ovládací prvky, přidat další ovládací prvky technologie ASP.NET, ovládací prvky služby SharePoint a definovat vlastnosti a metody pro ovládací prvek. Další informace o uživatelských ovládacích prvcích najdete v tématu [vytvořit opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) a [uživatelské ovládací prvky a ovládací prvky serveru ve službě SharePoint](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/).
+# <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Postupy: vytvoření uživatelského ovládacího prvku pro stránku aplikace SharePoint nebo webovou část
+  Můžete také vytvářet vlastní uživatelské ovládací prvky, které poskytují vlastní funkce pro řešení služby SharePoint, a tyto funkce v rámci svého projektu znovu využívat. De webové části nebo do stránky aplikace lze zahrnout uživatelské ovládací prvky, přidat další ovládací prvky technologie ASP.NET, ovládací prvky služby SharePoint a definovat vlastnosti a metody pro ovládací prvek. Další informace o uživatelských ovládacích prvcích naleznete v tématu [Create recyklovatelné ovládací prvky pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) a [uživatelské ovládací prvky a ovládací prvky serveru v SharePointu](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/).
 
 ### <a name="to-create-a-user-control-for-sharepoint"></a>Vytvoření uživatelského ovládacího prvku služby SharePoint.
 
 1. V aplikaci Visual Studio otevřete nebo vytvořte projekt služby SharePoint.
 
-     Zobrazit [SharePoint šablony položek projektu a projekt](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Viz [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. V **Průzkumníka řešení**, zvolte uzel projektu.
+2. V **Průzkumník řešení**vyberte uzel projektu.
 
-3. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
+3. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
-     **Přidat novou položku** zobrazí se dialogové okno.
+     Otevře se dialogové okno **Přidat novou položku** .
 
-4. V **nainstalováno** podokně, vyberte **Office/SharePoint** uzlu.
+4. V podokně **nainstalováno** vyberte uzel **Office/SharePoint** .
 
-5. V seznamu šablon služby SharePoint, zvolte **uživatelský ovládací prvek (pouze řešení farmy)** .
+5. V seznamu šablon služby SharePoint vyberte možnost **uživatelský ovládací prvek (pouze řešení farmy)**.
 
     > [!NOTE]
     > Uživatelské ovládací prvky fungují pouze pro řešení farmy.
 
-6. V **název** pole, zadejte název pro uživatelský ovládací prvek a klikněte na tlačítko **přidat** tlačítko.
+6. Do pole **název** zadejte název uživatelského ovládacího prvku a pak klikněte na tlačítko **Přidat** .
 
-     Aplikace Visual Studio přidá do projektu několik složek a souborů. Další informace o těchto souborech najdete v tématu [vytvořit opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
+     Aplikace Visual Studio přidá do projektu několik složek a souborů. Další informace o těchto souborech najdete v tématu [vytvoření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
 
-     Ve výchozím souboru uživatelského ovládacího prvku se zobrazí v **zdroj** zobrazení návrháře Visual Web Developer. V tomto zobrazení lze upravit značku XML ovládacího prvku. Můžete přepnout na **návrhu** zobrazit, pokud chcete navrhnout ovládacího prvku vizuálně přetažením ovládacích prvků **nástrojů**. Zobrazit [zobrazení návrhu, Designer webových stránek](/previous-versions/aspnet/ms178149\(v\=vs.100\)).
+     Ve výchozím nastavení se soubor uživatelského ovládacího prvku zobrazí v zobrazení **zdroj** v návrháři aplikace Visual Web Developer. V tomto zobrazení lze upravit značku XML ovládacího prvku. Pokud chcete ovládací prvek vizuálně navrhovat přetažením ovládacích prvků ze **sady nástrojů**, můžete přepnout do **návrhového** zobrazení. Viz [návrhové zobrazení, návrhář webových stránek](/previous-versions/aspnet/ms178149\(v\=vs.100\)).
 
 7. Pokud chcete zpracovávat události, ke kterým došlo v ovládacím prvku, přidejte kód do souboru kódu uživatelského ovládacího prvku.
 
-     Tento soubor se zobrazí v **Průzkumníka řešení** v souboru uživatelského ovládacího prvku a má *.cs* nebo *.vb* rozšíření, v závislosti na jazyce projektu.
+     Tento soubor se zobrazí v **Průzkumník řešení** v souboru uživatelského ovládacího prvku a má příponu *. cs* nebo *. vb* v závislosti na jazyku projektu.
 
 ## <a name="see-also"></a>Viz také:
-- [Vytvoření opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
-- [Vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)
-- [Vytvoření webové části pro SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [Vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)
+- [Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)

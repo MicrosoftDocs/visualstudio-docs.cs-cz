@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: definování instance metody | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e21900e87278ad500ee8497d1dd0c49350695d1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 170982a5d4abe33ca8cd705a979acc0737185a9c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981798"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016829"
 ---
 # <a name="how-to-define-a-method-instance"></a>Postupy: definování instance metody
   Pro každou metodu v modelu je nutné definovat alespoň jednu instanci metody.
 
- Přidejte instanci metody pomocí okna **Podrobnosti metody služby BDC** . Když přidáte instanci metody, Visual Studio přidá prvek `<MethodInstance>` do XML souboru modelu v projektu. Další informace o atributech `<MethodInstance>` elementu naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
+ Přidejte instanci metody pomocí okna **Podrobnosti metody služby BDC** . Když přidáte instanci metody, Visual Studio přidá `<MethodInstance>` prvek do XML souboru modelu v projektu. Další informace o atributech `<MethodInstance>` elementu naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
 ### <a name="to-define-a-method-instance"></a>Definování instance metody
 
@@ -35,7 +34,7 @@ ms.locfileid: "72981798"
 
      Pod uzlem **instance** se zobrazí nová instance metody.
 
-3. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
+3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
 4. V okně **vlastnosti** nastavte vlastnosti instance metody. Další informace o jednotlivých vlastnostech naleznete v tématu [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 

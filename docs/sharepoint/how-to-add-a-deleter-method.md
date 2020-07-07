@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání metody odstranění | Dokumentace Microsoftu'
+title: 'Postupy: Přidání metody odstranění | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,59 +19,58 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c9d005ef8bade9f83027c216d875d24aad602449
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: dd97d28936e9f0cc50e9064fdc1a6a64bb20fc77
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017039"
 ---
 # <a name="how-to-add-a-deleter-method"></a>Postupy: Přidání metody odstranění
-  Můžete povolit koncový uživatel odstranit záznam dat z externí seznam na Sharepointovém webu tak, že přidání metody odstranění do modelu. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+  Můžete povolit koncovému uživateli odstranit datový záznam z externího seznamu na webu služby SharePoint přidáním metody odstranění do modelu. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-### <a name="to-create-a-deleter-method"></a>Chcete-li vytvořit metodu Deleter
+### <a name="to-create-a-deleter-method"></a>Vytvoření metody odstranění
 
-1. Na **návrháři služby BDC**, zvolit entitu.
+1. V **Návrháři BDC**vyberte entitu.
 
-2. V panelu nabídky zvolte **zobrazení** > **ostatní Windows** > **podrobnosti metody služby BDC**.
+2. Na panelu nabídek vyberte **Zobrazit**  >  **Další**  >  **Podrobnosti o metodě služby Windows BDC**.
 
-    **Podrobnosti metody služby BDC** otevře se okno. Další informace o tomto okně najdete v tématu [přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
+    Otevře se okno **Podrobnosti metody služby BDC** . Další informace o tomto okně najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. V **přidejte metodu** klikněte na položku **vytvořit metodu Deleter**.
+3. V seznamu **Přidat metodu** vyberte možnost **vytvořit metodu odstranění**.
 
-    Visual Studio přidá následující prvky modelu. Tyto prvky se zobrazí v **podrobnosti metody služby BDC** okna.
+    Visual Studio přidá do modelu následující prvky. Tyto prvky se zobrazí v okně **Podrobnosti metody služby BDC** .
 
-   - Metodu s názvem **odstranit**.
+   - Metoda s názvem **Delete**
 
-   - Vstupní parametr metody.
+   - Vstupní parametr pro metodu.
 
-   - Popisovač typu pro parametr.
+   - Popisovač typu pro parametr
 
-   - Instance metody k metodě.
+   - Instance metody pro metodu.
 
-     Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+     Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-4. V **Průzkumníka řešení**, otevřete místní nabídku souboru služby kód, který byl vygenerován pro entitu a pak zvolte **zobrazit kód**.
+4. V **Průzkumník řešení**otevřete místní nabídku souboru kódu služby, který byl vygenerován pro danou entitu, a pak zvolte možnost **Zobrazit kód**.
 
-    Soubor kódu služby entity se otevře v editoru kódu. Další informace o souboru kód služby entity, naleznete v tématu [vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
+    V editoru kódu se otevře soubor kódu entity Service. Další informace o souboru kódu entity Service najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-5. Přidejte kód do metody odstranění, které chcete odstranit záznam. Následující příklad odstraní řádek z prodejní objednávky pomocí ukázkovou databází AdventureWorks pro SQL Server.
-
-   > [!NOTE]
-   > Tento příklad používá dva vstupní parametry.
+5. K odstranění záznamu přidejte do metody Delete kód. Následující příklad odstraní položku řádku z prodejní objednávky pomocí ukázkové databáze AdventureWorks pro SQL Server.
 
    > [!NOTE]
-   > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
+   > Metoda v tomto příkladu používá dva vstupní parametry.
+
+   > [!NOTE]
+   > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
     [!code-csharp[SP_BDC#6](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#6)]
     [!code-vb[SP_BDC#6](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#6)]
 
 ## <a name="see-also"></a>Viz také:
-- [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
+- [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)
 - [Postupy: Přidání konkrétní vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
-- [Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
-- [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Postupy: Definování instance metody](../sharepoint/how-to-define-a-method-instance.md)
+- [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md)
+- [Postupy: Přidání parametru do metody](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Postupy: definování instance metody](../sharepoint/how-to-define-a-method-instance.md)

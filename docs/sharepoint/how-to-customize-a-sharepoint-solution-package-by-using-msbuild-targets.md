@@ -1,7 +1,7 @@
 ---
-title: Přizpůsobení balíčku řešení SharePoint pomocí cílů nástroje MSBuild
+title: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,22 +12,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71665f6ccf22ace264ff39831521538a335aed93
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: e6570b1e3c16f1935813682e2c29051c4ac7d64a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401513"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016887"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Postupy: Přizpůsobení balíčku řešení služby SharePoint pomocí cílů nástroje MSBuild
-  Pomocí cílů nástroje MSBuild na příkazovém řádku můžete přizpůsobit, jak sada Visual Studio vytvoří soubory balíčku služby SharePoint ( *.wsp*). Například můžete upravit vlastnosti nástroje MSBuild, chcete-li změnit zprostředkující adresář balení a skupiny nástroje MSBuild položky, které určují výčtu souborů.
+  Pomocí cílů nástroje MSBuild v příkazovém řádku můžete přizpůsobit, jak sada Visual Studio vytváří soubory balíčku služby SharePoint (*. wsp*). Můžete například přizpůsobit vlastnosti nástroje MSBuild pro změnu zprostředkujícího adresáře balení a skupin položek MSBuild, které určují výčtové soubory.
 
-## <a name="customize-and-run-msbuild-targets"></a>Přizpůsobení a spuštění cíle nástroje MSBuild
- Pokud upravíte BeforeLayout a AfterLayout cíle, můžete provádět úlohy před rozložení balíčku, například přidávání, odebírání nebo úpravy souborů, které budou zabalené.
+## <a name="customize-and-run-msbuild-targets"></a>Přizpůsobení a spuštění cílů nástroje MSBuild
+ Pokud přizpůsobíte cíle BeforeLayout a AfterLayout, můžete provádět úlohy před rozložením balíčku, například přidáním, odebráním nebo úpravou souborů, které budou zabaleny.
 
-#### <a name="to-customize-the-beforelayout-target"></a>Chcete-li přizpůsobit BeforeLayout cíl
+#### <a name="to-customize-the-beforelayout-target"></a>Přizpůsobení cíle BeforeLayout
 
-1. Otevřete editor, třeba v poznámkovém bloku a potom přidejte následující kód.
+1. Otevřete Editor, například Poznámkový blok, a poté přidejte následující kód.
 
    ```xml
    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -37,15 +36,15 @@ ms.locfileid: "66401513"
    </Project>
    ```
 
-    Tento příklad zobrazí zprávu před balení tento cíl.
+    Tento příklad zobrazí zprávu před balením tohoto cíle.
 
-2. Název souboru **CustomLayout.SharePoint.targets**a pak ho uložte do složky projektu služby SharePoint.
+2. Pojmenujte soubor **CustomLayout. SharePoint. targets**a uložte jej do složky pro projekt služby SharePoint.
 
-3. Otevřete projekt, otevřete místní nabídku a zvolte **uvolnit projekt**.
+3. Otevřete projekt, otevřete místní nabídku a zvolte možnost **Uvolnit projekt**.
 
-4. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **upravit**  *\<ProjectName > .vbproj* nebo **upravit**  *\<ProjectName > .csproj*.
+4. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **Upravit** * \<ProjectName> . vbproj* nebo **Upravit** * \<ProjectName> . csproj*.
 
-5. Po `Import` řádek na konci souboru projektu, přidejte následující řádek.
+5. Po `Import` řádku poblíž konce souboru projektu přidejte následující řádek.
 
    ```xml
    <Import Project="CustomLayout.SharePoint.targets" />
@@ -53,17 +52,17 @@ ms.locfileid: "66401513"
 
 6. Uložte a zavřete soubor projektu.
 
-7. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **znovu načíst projekt**.
+7. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **znovu načíst projekt**.
 
-   Při publikování projektu, zpráva se zobrazí ve výstupu před zahájením balení.
+   Při publikování projektu se zpráva zobrazí ve výstupu před zahájením balení.
 
-#### <a name="to-customize-the-afterlayout-target"></a>Chcete-li přizpůsobit AfterLayout cíl
+#### <a name="to-customize-the-afterlayout-target"></a>Přizpůsobení cíle AfterLayout
 
-1. V panelu nabídky zvolte **souboru** > **otevřít** > **souboru**.
+1. Na řádku nabídek klikněte na **soubor**  >  **otevřít**  >  **soubor**.
 
-2. V **otevřít soubor** dialogové okno, přejděte do složky projektu, zvolte soubor CustomLayout.target a klikněte na tlačítko **otevřít** tlačítko.
+2. V dialogovém okně **otevřít soubor** přejděte do složky projektu, zvolte soubor CustomLayout. Target a pak klikněte na tlačítko **otevřít** .
 
-3. Těsně před `</Project>` značky, přidejte následující kód:
+3. Těsně před `</Project>` tagem přidejte následující kód:
 
    ```xml
    <Target Name="AfterLayout">
@@ -71,13 +70,13 @@ ms.locfileid: "66401513"
    </Target>
    ```
 
-    Tento příklad zobrazí zprávu po tento cíl je zabalená.
+    Tento příklad zobrazí zprávu po zabalení tohoto cíle.
 
 4. Uložte a zavřete soubor cílů.
 
-5. Restartujte sadu Visual Studio a pak otevřete projekt.
+5. Restartujte Visual Studio a pak otevřete projekt.
 
-   Při publikování tohoto projektu se zobrazí zpráva BeforeLayout před spuštěním balení a po dokončení vytváření balíčků, zobrazí se zpráva AfterLayout.
+   Při publikování projektu se zobrazí zpráva BeforeLayout před spuštěním balení a po dokončení balení se zobrazí zpráva AfterLayout.
 
 ## <a name="see-also"></a>Viz také:
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

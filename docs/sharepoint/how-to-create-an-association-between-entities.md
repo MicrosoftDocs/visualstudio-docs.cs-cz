@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: vytvoření přidružení mezi entitami | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - AssociationGroupTool
 dev_langs:
@@ -21,12 +21,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981837"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016938"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>Postupy: vytvoření přidružení mezi entitami
   Vytvořením přidružení můžete definovat vztahy mezi entitami v modelu služby připojení obchodních dat. Visual Studio generuje metody, které poskytují uživatelům modelu informace o jednotlivých přidruženích. Tyto metody mohou být využívány webovými částmi, seznamy nebo vlastními aplikacemi služby SharePoint pro zobrazení relací dat v uživatelském rozhraní (UI).
@@ -45,7 +44,7 @@ ms.locfileid: "72981837"
 
     1. Ve sloupci **ID zdroje** v tabulce **mapování identifikátorů** vyberte identifikátor vedle každého odpovídajícího popisovače typu, který se zobrazí ve sloupci **pole** .
 
-         Například ve sloupci **ID zdroje** vyberte `ContactID` vedle deskriptoru typu `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` a popisovač typu `ReadItem.salesOrder.SalesOrder.ContactID`.
+         Například ve sloupci **ID zdroje** vyberte možnost `ContactID` vedle `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` deskriptoru typu a `ReadItem.salesOrder.SalesOrder.ContactID` popisovače typu.
 
 4. Pokud chcete vytvořit přidružení cizího bez klíčů, zrušte zaškrtnutí políčka **je přidružení cizího klíče** .
 

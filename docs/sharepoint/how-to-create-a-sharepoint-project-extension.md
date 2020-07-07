@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytváření rozšíření projektu služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: Vytvoření rozšíření projektu služby SharePoint | Microsoft Docs'
 ms.date: 04/28/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,34 +14,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37f22e085334bf6a18ef1b5482b6b6c206690148
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 191f5d718064a4e094a2c28e3f584168b20fb3fc
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966871"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017150"
 ---
-# <a name="how-to-create-a-sharepoint-project-extension"></a>Postupy: Vytváření rozšíření projektu SharePoint
-  Vytváření rozšíření projektu, pokud chcete přidat funkce do jakéhokoli projektu SharePoint, který je otevřený v sadě Visual Studio. Další informace najdete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
+# <a name="how-to-create-a-sharepoint-project-extension"></a>Postupy: Vytvoření rozšíření projektu služby SharePoint
+  Vytvořte rozšíření projektu, pokud chcete přidat funkce do jakéhokoli projektu SharePoint, který je otevřen v aplikaci Visual Studio. Další informace najdete v tématu věnovaném [roztažení systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
 
-### <a name="to-create-a-project-extension"></a>Chcete-li vytvořit projekt rozšíření
+### <a name="to-create-a-project-extension"></a>Vytvoření rozšíření projektu
 
 1. Vytvořte projekt knihovny tříd.
 
 2. Přidejte odkazy na následující sestavení:
 
-    - Microsoft.VisualStudio.SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. složení
 
 3. Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> rozhraní.
 
-4. Přidat <xref:System.ComponentModel.Composition.ExportAttribute> do třídy. Tento atribut umožňuje sadě Visual Studio zjišťovat a načíst vaše <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> implementace. Předat <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> typ konstruktoru atributu.
+4. Přidejte <xref:System.ComponentModel.Composition.ExportAttribute> do třídy. Tento atribut umožňuje aplikaci Visual Studio vyhledat a načíst vaši <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> implementaci. Předejte <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> typ konstruktoru atributu.
 
-5. Ve vaší implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> metody, použijte členy *projectService* parametr definuje chování rozšíření. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt, který poskytuje přístup k události definované v <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> rozhraní.
+5. V implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> metody použijte členy parametru *ProjectService* k definování chování rozšíření. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt, který poskytuje přístup k událostem definovaným v <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> rozhraní.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje, jak vytvořit jednoduchý projekt rozšíření, která zpracovává většinu projektových událostí SharePoint, které jsou definovány <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> rozhraní. Pro otestování kódu, vytvořte projekt služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a pak přidejte další projekty do řešení, změně hodnot vlastností projektu, nebo odstranit nebo vyloučit projektu. Rozšíření vás upozorní na události napsáním zprávy **výstup** okno a **seznam chyb** okna.
+ Následující příklad kódu ukazuje, jak vytvořit jednoduché rozšíření projektu, které zpracovává většinu událostí projektu služby SharePoint, které jsou definovány <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> rozhraním. Chcete-li otestovat kód, vytvořte projekt služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a poté přidejte do řešení další projekty, změňte hodnoty vlastností projektu nebo odstraňte nebo vylučte projekt. Toto rozšíření vás upozorní na události tím, že zapisuje zprávy do okna **výstup** a **Seznam chyb** okno.
 
   ```vb
     Imports Microsoft.VisualStudio.SharePoint
@@ -185,22 +184,22 @@ ms.locfileid: "62966871"
   }
   ```
 
-Tento příklad používá k zápisu zprávy do projektu služby SharePoint **výstup** okno a **seznam chyb** okna. Další informace najdete v tématu [použijte službu projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md).
+V tomto příkladu se používá služba projektu SharePoint k zápisu zprávy do okna **výstupu** a v **Seznam chyb** okně. Další informace naleznete v tématu [použití služby projektu služby SharePoint](../sharepoint/using-the-sharepoint-project-service.md).
 
- Příklady, které ukazují, jak zpracovat <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> události, viz [jak: Přidání položky místní nabídky do projektů služby SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) a [jak: Přidání vlastnosti do projektů služby SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
+ Příklady, které demonstrují, jak <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> zpracovávat <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> události a, naleznete v tématu [How to: Add a a Shortcut menu and to SharePoint Project](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) and [to: Add a Property to and SharePoint Projects](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje odkazy na následující sestavení:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. složení
 
 ## <a name="deploy-the-extension"></a>Nasazení rozšíření
- Chcete-li nasadit rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) balíčku pro sestavení a všechny další soubory, které chcete distribuovat s příponou. Další informace najdete v tématu [nástroje nasazení rozšíření pro SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Chcete-li nasadit rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)
 - [Postupy: Přidání položky místní nabídky do projektů služby SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)
 - [Postupy: Přidání vlastnosti do projektů služby SharePoint](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
-- [Návod: Vytváření rozšíření projektu SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)
+- [Návod: Vytvoření rozšíření projektu služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)

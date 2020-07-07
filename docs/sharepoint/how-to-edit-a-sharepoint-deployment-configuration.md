@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Úprava konfigurace nasazení služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: Úprava konfigurace nasazení služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.Project.DeploymentConfig
 dev_langs:
@@ -14,42 +14,41 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ffa7923bbe7e8a7b44fec280a5528ab023feed37
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 74f6377bad0f62aa2c470e72afe64b85b3017ee6
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016775"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Postupy: Úprava konfigurace nasazení služby SharePoint
-  Můžete vytvořit konfiguraci nasazení nebo změnit existující konfiguraci nasazení. Můžete například spustit jednoho kroku nebo změnit pořadí kroků v procesu nasazení. Můžete vytvořit nebo upravit konfigurace nasazení, protože předdefinovaných a programově přidané konfigurace se nedá změnit.
+  Můžete vytvořit konfiguraci nasazení nebo upravit existující konfiguraci nasazení. Můžete například spustit jeden krok nebo změnit pořadí kroků v procesu nasazení. Konfigurace nasazení možná budete chtít vytvořit nebo upravit, protože předdefinované a programově přidané konfigurace nelze změnit.
 
 ## <a name="create-a-sharepoint-deployment-configuration"></a>Vytvoření konfigurace nasazení služby SharePoint
 
-#### <a name="to-create-a-sharepoint-deployment-configuration"></a>Chcete-li vytvořit konfigurace nasazení služby SharePoint
+#### <a name="to-create-a-sharepoint-deployment-configuration"></a>Vytvoření konfigurace nasazení služby SharePoint
 
-1. V **Průzkumníka řešení**, zvolte projektu služby SharePoint a pak na panelu nabídek zvolte **projektu**, _ProjectName_**vlastnosti**.
+1. V **Průzkumník řešení**zvolte projekt služby SharePoint a potom v řádku nabídek zvolte **projekt**,**vlastnosti** _ProjectName_.
 
-2. Na **SharePoint** , vyberte **nový** tlačítko.
+2. Na kartě **SharePoint** klikněte na tlačítko **Nový** .
 
-     **Přidat novou konfiguraci nasazení** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **Přidat novou konfiguraci nasazení** .
 
-3. V **název** textové pole, zadejte název pro konfiguraci nasazení.
+3. Do textového pole **název** zadejte název konfigurace nasazení.
 
-4. V **dostupné kroky nasazení** podokně, vyberte kroky, které chcete přidat ke konfiguraci nasazení, zvolte (**>**) a pak zvolte **OK** tlačítko.
+4. V podokně **dostupné kroky nasazení** vyberte kroky, které chcete přidat do konfigurace nasazení, klikněte na **>** tlačítko () a pak klikněte na tlačítko **OK** .
 
     > [!NOTE]
-    > Pokud jste nakonfigurovali příkaz před nasazením nebo příkaz po nasazení, tyto kroky spustit pouze v případě, že je přidáte do konfigurace přizpůsobená nasazení.
+    > Pokud jste nakonfigurovali příkaz k předběžnému nasazení nebo příkazu po nasazení, budou se tyto kroky spouštět jenom v případě, že je přidáte do přizpůsobené konfigurace nasazení.
 
-## <a name="change-the-active-deployment-configuration"></a>Změna konfigurace aktivního nasazení
+## <a name="change-the-active-deployment-configuration"></a>Změnit aktivní konfiguraci nasazení
 
-#### <a name="to-change-the-active-deployment-configuration"></a>Chcete-li změnit konfiguraci aktivního nasazení
+#### <a name="to-change-the-active-deployment-configuration"></a>Změna aktivního nastavení nasazení
 
-1. V **Průzkumníka řešení**, zvolte projektu služby SharePoint a pak na panelu nabídek zvolte **projektu** > **\<*ProjectName*> Vlastnosti**.
+1. V **Průzkumník řešení**zvolte projekt služby SharePoint a poté v panelu nabídky zvolte možnost **Project**  >  ** \<*ProjectName*> vlastnosti**projektu.
 
-2. Zvolte **SharePoint** kartu.
+2. Vyberte kartu **služby SharePoint** .
 
-3. V **aktivní konfiguraci nasazení** seznamu, zvolte název, který chcete použít konfiguraci nasazení.
+3. V rozevíracím seznamu **aktivní konfigurace nasazení** vyberte název konfigurace nasazení, kterou chcete použít.
 
 ## <a name="see-also"></a>Viz také:
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

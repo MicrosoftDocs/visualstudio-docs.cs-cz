@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání deskriptoru filtru do vyhledávací metody | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f9dd853142d970cd14de20f4782accb3ce3e17eb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 228afb2f49f4d528fa9b806e9bf8d2531f7de901
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016741"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Postupy: Přidání deskriptoru filtru do vyhledávací metody
   Deskriptory filtru umožňují spotřebitelům modelu předat hodnoty metodám před jejich spuštěním. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72986253"
 
 2. V okně **Podrobnosti metody** vyberte popisovač typu parametru.
 
-3. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
+3. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
 4. V okně **vlastnosti** nastavte vlastnost **název typu** na datový typ, který je vhodný pro filtr.
 
@@ -45,7 +44,7 @@ ms.locfileid: "72986253"
 
      Pod uzlem **popisovače filtru** se zobrazí nový popisovač filtru.
 
-7. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
+7. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
 8. V okně **vlastnosti** vyberte vlastnost **typ** .
 
@@ -62,7 +61,7 @@ ms.locfileid: "72986253"
      Následující příklad vrátí prodejní objednávky, které mají zadané datum objednávky.
 
     > [!NOTE]
-    > Hodnotu pole `ServerName` nahraďte názvem vašeho serveru.
+    > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání odkazu na výstup projektu | Dokumentace Microsoftu'
+title: 'Postupy: Přidání odkazu na výstup projektu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,33 +14,32 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2ae3965647416d7a8e11cf0ea5e24cef1e54a09b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: bea0f39ae161d8b695f872cb634c35d0cb205c91
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967250"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016757"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>Postupy: Přidání odkazu na výstup projektu
-  Nasazení do služby SharePoint bez Sharepointu sestavení projektu (nebo souborů .xap v projekty technologie Silverlight), přidejte je jako odkazu na výstup projektu.
+  Chcete-li nasadit sestavení projektu jiného typu než SharePoint (nebo soubory. xap v projektech Silverlight) do služby SharePoint, přidejte je jako výstupní odkaz projektu.
 
- Tento proces vytvoří závislost sestavení řešení mezi dva projekty. Projektů v souvislosti s odkazy na výstup projektu jsou sestaveny předtím, než je sestavíte a nasadíte projektu služby SharePoint.
+ Tento proces vytvoří závislost sestavení řešení mezi těmito dvěma projekty. Projekty spojené s odkazy na výstup projektu jsou sestaveny před sestavením a nasazením projektu služby SharePoint.
 
 ### <a name="to-add-a-project-output-reference"></a>Přidání odkazu na výstup projektu
 
-1. Načtení řešení, které obsahuje alespoň jeden projekt služby SharePoint a jeden projekt jiný než služby SharePoint.
+1. Načtěte řešení, které obsahuje alespoň jeden projekt služby SharePoint a jeden projekt, který není projektem služby SharePoint.
 
-2. V **Průzkumníka řešení**, zvolte položku v uzlu projektu služby SharePoint.
+2. V **Průzkumník řešení**vyberte položku v uzlu projektu služby SharePoint.
 
-3. V **vlastnosti** okna, vyberte **odkazy na výstup projektu** vlastnost a klikněte na tlačítko se třemi tečkami (![elipsa ASP.NET – Návrhář mobilních řešení](../sharepoint/media/mwellipsis.gif "ASP. Návrhář mobilních NET Elipsa")) vedle sebe tlačítko.
+3. V okně **vlastnosti** zvolte vlastnost **výstupní odkazy projektu** a potom klikněte na tlačítko se třemi tečkami (![Elipsa ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "Elipsa ASP.NET Mobile Designer")) vedle ní.
 
-4. V **odkazy na výstup projektu** dialogového okna zvolte **přidat** tlačítko.
+4. V dialogovém okně **výstupní odkazy projektu** klikněte na tlačítko **Přidat** .
 
-5. V podokně vlastností klikněte na šipku vedle položky **typ nasazení** vlastnost a pak zvolte příslušnou hodnotu pro položku mimo SharePoint odkazujete, jako například **ElementFile**.
+5. V podokně Vlastnosti klikněte na šipku vedle vlastnosti **typ nasazení** a pak zvolte vhodnou hodnotu pro položku, na kterou odkazujete, například **ElementFile**.
 
-6. Klikněte na šipku vedle položky **název projektu**, zvolte název položky projektu jiný než služby SharePoint a klikněte na tlačítko **OK** tlačítko.
+6. Zvolte šipku vedle pole **název projektu**, zvolte název položky projektu mimo službu SharePoint a pak klikněte na tlačítko **OK** .
 
 ## <a name="see-also"></a>Viz také:
-- [Zadání informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
-- [Postupy: Označení ovládacích prvků jako bezpečných](../sharepoint/how-to-mark-controls-as-safe-controls.md)
+- [Poskytnutí informací o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md)
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytvoření přijímače událostí pro specifickou instanci seznamu | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření přijímače událostí pro konkrétní instanci seznamu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,78 +13,77 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 34114c12ef47fb796de7354aa3133af1fc704267
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 54c384742afba3d5af7f08ee62a9ec56c7f1438c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408561"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016960"
 ---
-# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Postupy: Vytvoření přijímače událostí pro specifickou instanci seznamu
-  Příjemce událostí instance seznamu jsou reaguje na události, ke kterým dochází v žádné instanci definice seznamu. I když šablony příjemce události není povoleno zaměření na specifickou instanci seznamu, můžete upravit přijímače událostí, které působí na definici seznamu pro reakci na události v specifickou instanci seznamu.
+# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Postupy: vytvoření přijímače událostí pro specifickou instanci seznamu
+  Přijímač událostí instance seznamu reaguje na události, ke kterým dochází v jakékoli instanci definice seznamu. I když šablona příjemce událostí nepovoluje cílení na konkrétní instanci seznamu, můžete změnit přijímač událostí, který je vymezen na definici seznamu, aby odpovídal na události v konkrétní instanci seznamu.
 
- Cílit na specifickou instanci seznamu, v *Elements.xml* příjemce událostí, nahraďte `ListTemplateId` s `ListUrl` a přidejte adresu URL instance seznamu.
+ Chcete-li cílit na konkrétní instanci seznamu, v *Elements.xml* pro přijímače událostí nahraďte `ListTemplateId` `ListUrl` a přidejte adresu URL instance seznamu.
 
-## <a name="create-a-list-instance-event-receiver"></a>Vytvoření příjemce události instance seznamu
- Následující kroky ukazují, jak upravit příjemce události položky seznamu pro reagovat jen na události, ke kterým dochází v případě vlastní seznam oznámení.
+## <a name="create-a-list-instance-event-receiver"></a>Vytvoření přijímače událostí instance seznamu
+ Následující kroky ukazují, jak upravit přijímač událostí položky seznamu tak, aby odpovídal jenom událostem, ke kterým dochází v instanci Custom oznámení – seznam.
 
-#### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>Chcete-li změnit přijímače událostí na specifickou instanci seznamu
+#### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>Úprava přijímače událostí tak, aby reagoval na konkrétní instanci seznamu
 
 1. V prohlížeči otevřete web služby SharePoint.
 
-2. V navigačním podokně **uvádí** odkaz.
+2. V navigačním podokně **jsou uvedeny** odkazy.
 
-3. V **veškerý obsah webu** zvolte **vytvořit** odkaz.
+3. Na stránce **veškerý obsah webu** klikněte na odkaz **vytvořit** .
 
-4. V **vytvořit** dialogového okna zvolte **oznámení** zadejte, zadejte název oznámení **TestAnnouncements**a klikněte na tlačítko **vytvořit**tlačítko.
+4. V dialogovém okně **vytvořit** vyberte typ **oznámení** , pojmenujte oznámení **TestAnnouncements**a pak klikněte na tlačítko **vytvořit** .
 
-5. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vytvoření projektu příjemce událostí.
+5. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt přijímače událostí.
 
-6. V **jaký typ příjemce událostí požadujete?** klikněte na položku **události položky seznamu**.
+6. V seznamu **jaký typ přijímače událostí chcete?** vyberte možnost **události položky seznamu**.
 
     > [!NOTE]
-    > Můžete také vybrat jakýkoli jiný typ příjemce událostí, které obory, například s definicí seznamu **e-mailové události seznamu** nebo **události pracovního postupu seznamu**.
+    > Můžete také vybrat jakýkoli jiný typ přijímače událostí, který má obor na definici seznamu, například **vypsat události e-mailu** nebo **Zobrazit události pracovního postupu**.
 
-7. V **jaká položka by měla být zdroj událostí?** klikněte na položku **oznámení**.
+7. V seznamu **jaká položka by měla být zdroj události?** vyberte možnost **oznámení**.
 
-8. V **zpracovávat následující události** seznamu, vyberte **přidání položky** zaškrtněte políčko a klikněte na tlačítko **Dokončit** tlačítko.
+8. V seznamu **zpracovat následující události** vyberte zaškrtávací políčko a **přidejte položku** a pak klikněte na tlačítko **Dokončit** .
 
-9. V **Průzkumníka řešení**, v části EventReceiver1, otevřete *Elements.xml*.
+9. V **Průzkumník řešení**v části EventReceiver1 otevřete *Elements.xml*.
 
-     Příjemce událostí, který aktuálně odkazuje definice seznamu oznámení s použitím následující řádek:
+     Přijímač událostí aktuálně odkazuje na definici seznamu oznámení pomocí následujícího řádku:
 
     ```xml
     <Receivers ListTemplateId="104">
     ```
 
-     Změňte tento řádek následujícím textem:
+     Změňte tento řádek na následující text:
 
     ```xml
     <Receivers ListUrl="Lists/TestAnnouncements">
     ```
 
-     To přesměruje příjemce událostí, který odpovídá pouze na události, ke kterým dochází v novém **TestAnnouncements** seznam oznámení, který jste právě vytvořili. Můžete změnit `ListURL` atribut odkazovat na jakoukoli instanci seznamu na serveru SharePoint.
+     Tím příjemce událostí přesměruje jenom na události, ke kterým dojde v novém seznamu oznámení **TestAnnouncements** , který jste právě vytvořili. Můžete změnit `ListURL` atribut tak, aby odkazoval na libovolnou instanci seznamu na sharepointovém serveru.
 
-10. Otevřete soubor kódu pro příjemce událostí a přidejte zarážku v metodě ItemAdding.
+10. Otevřete soubor kódu pro přijímač událostí a vložte zarážku do metody ItemAdding.
 
-11. Zvolte **F5** klíče pro sestavení a spuštění řešení.
+11. Klikněte na klávesu **F5** a sestavte a spusťte řešení.
 
-12. Ve službě SharePoint, zvolte **TestAnnouncements** odkaz v navigačním podokně.
+12. V SharePointu klikněte v navigačním podokně na odkaz **TestAnnouncements** .
 
-13. Zvolte **přidat nové oznámení** odkaz.
+13. Klikněte na odkaz **Přidat nové oznámení** .
 
-14. Zadejte název oznámení a klikněte na tlačítko **Uložit** tlačítko.
+14. Zadejte název oznámení a pak klikněte na tlačítko **Uložit** .
 
-     Všimněte si, že je zarážka dosažena při přidání nové položky do seznamu vlastních oznámení.
+     Všimněte si, že při přidání nové položky do seznamu vlastních oznámení je dosaženo zarážky.
 
-15. Zvolte **F5** klíč obnovit.
+15. Pokračujte kliknutím na klávesu **F5** .
 
-16. V navigačním podokně, vyberte **uvádí** propojit a klikněte na tlačítko **oznámení** odkaz.
+16. V navigačním podokně klikněte na odkaz **seznamy** a pak zvolte odkaz **oznámení** .
 
-17. Přidáte nové oznámení.
+17. Přidejte nové oznámení.
 
-     Všimněte si, že příjemce událostí, který se neaktivuje na nové oznámení vzhledem k tomu, že příjemce je nakonfigurován, aby odpovídal pouze na události v instanci seznamu vlastní oznámení **TestAnnouncements**.
+     Všimněte si, že příjemce událostí se na novém oznámení neaktivuje, protože příjemce je nakonfigurovaný tak, aby reagoval jenom na události v instanci seznamu vlastní oznámení **TestAnnouncements**.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
+- [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

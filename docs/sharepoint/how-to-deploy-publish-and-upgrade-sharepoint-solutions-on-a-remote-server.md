@@ -1,7 +1,7 @@
 ---
-title: Nasazení, publikování a upgradování řešení služby SharePoint vzdáleně
+title: Vzdálená nasazení, publikování & upgrade řešení SharePoint
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,67 +15,66 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c8e9c46a9acaf8c70fa434514785276f9ba343d4
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: f05f42f8aed35696b962e71a5fce86c2956b3661
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401448"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016805"
 ---
-# <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Postupy: Nasazení, publikování a upgradování řešení služby SharePoint na vzdáleném serveru
-  Kromě nasazení řešení služby SharePoint do místního systému, můžete publikovat v izolovaném prostoru řešení SharePoint vzdálenými lokalitami nebo místní weby služby SharePoint. Tyto vzdálené kopie procesu publikování *.wsp* souboru na SharePoint serveru nainstaluje řešení a pak umožňuje aktivovat řešení. Rovněž lze upgradovat vzdálenou instalaci řešení služby SharePoint po provedení změn na ni.
+# <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru
+  Kromě nasazení řešení služby SharePoint do místního systému můžete publikovat řešení služby SharePoint v izolovaném prostoru na vzdálené weby nebo místní weby služby SharePoint. Proces vzdáleného publikování kopíruje soubor *. wsp* na server SharePoint, nainstaluje řešení a pak vám umožní toto řešení aktivovat. Můžete také upgradovat vzdálenou instalaci řešení SharePoint po provedení změn.
 
-## <a name="to-publish-a-sandboxed-sharepoint-solution-to-a-remote-sharepoint-server"></a>Chcete-li publikovat v izolovaném prostoru řešení SharePoint na vzdálený server služby SharePoint
+## <a name="to-publish-a-sandboxed-sharepoint-solution-to-a-remote-sharepoint-server"></a>Publikování řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru SharePoint
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku v izolovaném prostoru projektu služby SharePoint, kterou chcete publikovat a pak zvolte **publikovat**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro projekt služby SharePoint v izolovaném prostoru, který chcete publikovat, a pak zvolte **publikovat**.
 
-2. V **publikovat** dialogového okna zvolte **publikovat na webu služby SharePoint** přepínač a potom zadejte adresu URL webu online publikování třeba: `https://mytestsite.sharepoint.microsoftonline.com`.
+2. V dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a potom zadejte adresu URL webu pro publikování online, například: `https://mytestsite.sharepoint.microsoftonline.com` .
 
-3. Zvolte **otevřít v prohlížeči stránku Galerie řešení po publikování** přepínač a zobrazit seznam řešení **Galerie řešení** stránku po publikování.
+3. Po publikování kliknutím na tlačítko **otevřít v prohlížeči otevřete stránku Galerie** řešení, kde můžete zobrazit seznam řešení na stránce **Galerie řešení** .
 
-4. Zvolte **publikovat** tlačítko.
+4. Klikněte na tlačítko **publikovat** .
 
 5. Pokud se vyžaduje ověření uživatele, přihlaste se ke vzdálenému serveru.
 
-     V sadě Visual Studio se zobrazí průběh publikování **výstup** okna. Po dokončení procesu, řešení ( *.wsp*) soubor je nainstalovaný na vzdáleném serveru SharePoint. Nicméně je nutné stále ho aktivovat předtím, než je možné v Sharepointu.
+     Průběh publikování se zobrazí v okně **výstupu** sady Visual Studio. Po dokončení procesu se na vzdáleném serveru SharePoint nainstaluje soubor řešení (*. wsp*). Musí se ale ještě aktivovat předtím, než se bude moct použít na SharePointu.
 
-6. Na **Galerie řešení** stránky, vyberte aplikaci služby SharePoint a potom na pásu karet, zvolte **aktivovat** tlačítko.
+6. Na stránce **Galerie řešení** vyberte aplikaci SharePoint a pak na pásu karet klikněte na tlačítko **aktivovat** .
 
-7. V **aktivovat řešení** dialogovém okně na pásu karet, zvolte **aktivovat** tlačítko znovu.
+7. V dialogovém okně **aktivovat řešení** na pásu karet znovu klikněte na tlačítko **aktivovat** .
 
-     **Stav** sloupec **Galerie řešení** stránka indikuje, že je aplikace aktivní.
+     Sloupec **stav** na stránce **Galerie řešení** indikuje, že je aplikace aktivní.
 
-## <a name="to-upgrade-a-sandboxed-sharepoint-solution-on-a-remote-sharepoint-server"></a>Upgradovat řešení v izolovaném prostoru služby SharePoint na vzdáleném serveru SharePoint
- Pokud v izolovaném prostoru řešení SharePoint je již publikována na vzdáleném serveru, následující postup umožňuje upgradovat po provedení změn na aplikaci v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+## <a name="to-upgrade-a-sandboxed-sharepoint-solution-on-a-remote-sharepoint-server"></a>Upgrade řešení služby SharePoint v izolovaném prostoru na vzdáleném serveru SharePoint
+ Pokud je řešení SharePointu v izolovaném prostoru již Publikováno na vzdáleném serveru, následující postup vám umožní provést upgrade po provedení změn aplikace v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-1. Přejmenovat balíček Sharepointu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Chcete-li to provést, v **Průzkumníka řešení** otevření balíku. Zobrazí se v **Průzkumníku balíčků**.
+1. Přejmenujte balíček služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . To provedete tak, že v **Průzkumník řešení** otevřete balíček. Zobrazí se v **Průzkumníkovi balíčku**.
 
-2. V **Průzkumníku balíčků**v **název** pole, změňte název balíčku na jedinečný název.
+2. V **Průzkumníku balíčků**v poli **název** změňte název balíčku na jedinečný název.
 
 3. Uložte projekt.
 
-4. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **publikovat**.
+4. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **publikovat**.
 
-5. V **publikovat** dialogového okna zvolte **publikovat na webu služby SharePoint** přepínač a pokud chybí adresa URL pro vzdálený server, ve kterém je uložený řešení, zadejte ji.
+5. V dialogovém okně **publikovat** zvolte možnost **publikovat na webu služby SharePoint** a potom v případě, že chybí adresa URL vzdáleného serveru, na kterém je řešení uloženo, zadejte.
 
-6. Zvolte **otevřít v prohlížeči stránku Galerie řešení po publikování** přepínač a zobrazit seznam řešení **Galerie řešení** stránku po publikování.
+6. Po publikování kliknutím na tlačítko **otevřít v prohlížeči otevřete stránku Galerie** řešení, kde můžete zobrazit seznam řešení na stránce **Galerie řešení** .
 
-7. Zvolte **publikovat** tlačítko.
+7. Klikněte na tlačítko **publikovat** .
 
 8. Pokud se vyžaduje ověření uživatele, přihlaste se ke vzdálenému serveru.
 
-     Pokud jste přihlášení ke vzdálenému serveru nedávno, nemusí být vyžaduje ověřování.
+     Pokud jste se v nedávné době přihlásili ke vzdálenému serveru, nemusí se ověřování vyžadovat.
 
-     Starší verze aplikace, která má stejný název stále existuje na serveru SharePoint, zobrazí se chyba, že balíček se stejným názvem už na serveru SharePoint. Balíček je třeba přejmenovat na jedinečný název před publikováním.
+     Pokud na serveru SharePoint stále existuje starší verze aplikace, která má stejný název, zobrazí se chyba, že na serveru SharePoint již existuje balíček se stejným názvem. Před publikováním musíte balíček přejmenovat na jedinečný název.
 
-9. Zvolte Nová aplikace ve službě SharePoint a potom na pásu karet, zvolte **upgradovat** tlačítko.
+9. Zvolte novou aplikaci v SharePointu a pak na pásu karet klikněte na tlačítko **upgradovat** .
 
-10. V **Upgrade řešení** dialogovém okně na pásu karet, zvolte **upgradovat** tlačítko znovu. **Stav** sloupec **Galerie řešení** stránka by teď ukazují, že je aplikace aktivní.
+10. V dialogovém okně **řešení upgradu** na pásu karet znovu klikněte na tlačítko **upgradovat** . Sloupec **stav** na stránce **Galerie řešení** by nyní měl označovat, že je aplikace aktivní.
 
-     Stará verze řešení je deaktivováno, upgradovaná novou verzi řešení data udržovaná z původní řešení a nové řešení se aktivuje v Sharepointu.
+     Stará verze řešení se deaktivuje. nová verze řešení se upgraduje s daty udržovanými ze starého řešení a nové řešení se aktivuje na SharePointu.
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Nasazení a publikování řešení služby SharePoint na lokální stránce SharePoint](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)
+- [Postupy: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)
 - [Vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md)
 - [Postupy: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
-- [Postupy: Přidání nebo odebrání funkcí a položek z balíku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)
+- [Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)

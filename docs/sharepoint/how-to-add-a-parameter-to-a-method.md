@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání parametru do metody | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb1a1c1e8f11ac6daa46f9fe1468a1ff3509e135
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6d0496d0fd6a347683d56630990e50af585520ba
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986228"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016712"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Postupy: Přidání parametru do metody
   Použijte parametr pro předání informací do metody nebo pro vrácení informací z metody. Všechny metody musí mít alespoň jeden parametr. Další informace o tom, jak navrhnout parametr pro podporu typu metody, kterou chcete vytvořit, najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72986228"
 
 1. Přidejte do entity metodu.
 
-2. Na panelu nabídek vyberte možnost **zobrazit** > **Další Windows** > **Podrobnosti metody služby BDC**.
+2. Na panelu nabídek vyberte **Zobrazit**  >  **Další**  >  **Podrobnosti o metodě služby Windows BDC**.
 
      Otevře se okno **Podrobnosti metody služby BDC** . Další informace najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -43,7 +42,7 @@ ms.locfileid: "72986228"
 
      Nový parametr se zobrazí pod uzlem **parametry** .
 
-5. Na panelu nabídek vyberte možnost **zobrazit** > **okno Vlastnosti**.
+5. Na panelu nabídek vyberte možnost **Zobrazit**  >  **okno vlastností**.
 
 6. V okně **vlastnosti** nastavte vlastnost **název** na libovolný název, který dává smysl. Například pokud bude metoda vracet zákazníky, můžete pojmenovat metodu **GetCustomers**.
 
