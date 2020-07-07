@@ -6,11 +6,11 @@
       href: javascript-in-vs-2019.md
     - name: JavaScript v sadě Visual Studio 2017
       href: javascript-in-vs-2017.md
-- name: Šablony Rychlý start
+- name: Rychlý start
   items:
     - name: První seznámení s integrovaným vývojovým prostředím sady Visual Studio
       href: quickstart-ide-orientation-js.md
-    - name: Vytvoření projektu Node.js
+    - name: Vytvořit projekt Node.js
       href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
     - name: Vytvoření projektu Vue.js
       href: quickstart-vuejs-with-nodejs.md
@@ -38,11 +38,11 @@
       href: nodejs-interactive-repl.md
     - name: JavaScript IntelliSense
       href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
-    - name: Ladění aplikace v JavaScriptu
+    - name: Ladit
       href: debug-nodejs.md
-    - name: Testování částí v JavaScriptu
+    - name: Testování jednotek
       href: unit-testing-javascript-with-visual-studio.md
-- name: Zdroje
+- name: Prostředky
   items:
     - name: Konfigurace package.json
       href: configure-packages-with-package-json.md
