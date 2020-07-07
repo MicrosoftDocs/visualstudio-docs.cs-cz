@@ -1,7 +1,7 @@
 ---
 title: Vytváření řešení SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 97f5243b775f19d77bc8d5a5c1d29fddadd9f1c7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
-ms.translationtype: MT
+ms.openlocfilehash: 2a7aaa8a5e5c8e6079c04b05d887138d294116dd
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85541775"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016246"
 ---
 # <a name="create-sharepoint-solutions"></a>Vytváření řešení pro SharePoint
   Můžete vytvářet aplikace SharePoint v aplikaci Visual Studio jako alternativu k jejich vytváření v Návrháři služby SharePoint. Visual Studio podporuje rychlý vývoj pro SharePoint poskytnutím takových funkcí jako pokročilých ladicích nástrojů, IntelliSense, dokončování příkazů a šablon projektů. Visual Studio také využívá výhod rozšířených nástrojů a jazyků založených na .NET Framework. Projekty služby SharePoint můžete vyvíjet pomocí Visual Basic nebo Visual C# a můžete vyvíjet aplikace pro projekty služby SharePoint pomocí JavaScriptu.

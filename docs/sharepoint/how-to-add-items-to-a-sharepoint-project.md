@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání položek do projektu služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: Přidání položek do projektu služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,40 +12,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 572b466907fdbe43c5b9f094b74837ca05d1b212
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 1f7a36591d94e846a0024bce8c5d0b618479e647
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014695"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>Postupy: Přidání položek do projektu služby SharePoint
-  Řešení služby SharePoint obsahuje jeden nebo více projektů, z nichž každý obsahuje několik položek projektu služby SharePoint. Po otevření nebo vytvoření řešení služby SharePoint, můžete přidat nové nebo existující položky do těchto projektů. Například nové projekty pracovního postupu, které jsou součástí výchozí formulář, který je pojmenován default.aspx, ale můžete nahradit, které tvoří nového nebo jiného formuláře nebo přidat další ASPX formulář.
+  Řešení služby SharePoint obsahují jeden nebo více projektů, z nichž každý obsahuje více položek projektu služby SharePoint. Po otevření nebo vytvoření řešení služby SharePoint můžete do těchto projektů přidat buď nové nebo existující položky. Například nové projekty pracovního postupu jsou dodávány s výchozím formulářem s názvem default. aspx, ale tento formulář můžete nahradit novým nebo jiným formulářem nebo přidat další formulář ASPX.
 
-### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>Chcete-li přidat novou položku projektu do řešení služby SharePoint
+### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>Přidání nové položky projektu do řešení služby SharePoint
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevřete nebo vytvořte řešení služby SharePoint.
+1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete nebo vytvořte řešení služby SharePoint.
 
-2. V **Průzkumníka řešení**, vyberte uzel projektu.
+2. V **Průzkumník řešení**vyberte uzel projektu.
 
-3. V panelu nabídky zvolte **projektu** > **přidat novou položku** zobrazíte **přidat novou položku** dialogové okno.
+3. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat novou položku** , chcete-li zobrazit dialogové okno **Přidat novou položku** .
 
-4. V **nainstalované šablony** seznamu, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.
+4. V seznamu **Nainstalované šablony** rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
-5. V seznamu šablon položek projektu zvolte šablonu.
+5. V seznamu šablon položek projektu vyberte šablonu.
 
-6. V **název** textového pole zadejte název a klikněte na tlačítko **OK** tlačítko.
+6. Do textového pole **název** zadejte název a potom klikněte na tlačítko **OK** .
 
-### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>Chcete-li přidat existující položku projektu do řešení služby SharePoint
+### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>Přidání existující položky projektu do řešení služby SharePoint
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevřete nebo vytvořte řešení služby SharePoint.
+1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete nebo vytvořte řešení služby SharePoint.
 
-2. V **Průzkumníka řešení**, vyberte uzel projektu.
+2. V **Průzkumník řešení**vyberte uzel projektu.
 
-3. V panelu nabídky zvolte **projektu** > **přidat existující položku** zobrazíte **přidat existující položku** dialogové okno.
+3. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat existující položku** . zobrazí se dialogové okno **Přidat existující položku** .
 
-4. Přejděte do složky obsahující položky, které chcete přidat, vyberte jej a klikněte na tlačítko **přidat** tlačítko.
+4. Přejděte do složky, která obsahuje položku, kterou chcete přidat, vyberte ji a pak klikněte na tlačítko **Přidat** .
 
 ## <a name="see-also"></a>Viz také:
-- [A šablony položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md)
+- [Šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Určení lokalizovaných názvů, vlastností a oprávnění pomocí souboru prostředků | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fa2fec260921d66328b2c16075d44b38686c08de
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: a87cc8a3eb8f98ea19a87e93c37aae5303151ecf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982557"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015395"
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>Postupy: použití souboru prostředků k určení lokalizovaných názvů, vlastností a oprávnění
   Pomocí souboru prostředků můžete poskytnout lokalizované názvy, definovat vlastnosti a použít oprávnění pro objekty, které jsou definovány v modelu služby připojení obchodních dat. Chcete-li zadat tyto informace, přidejte položku **prostředku připojení obchodních dat** k projektu, který obsahuje položku **modelu připojení obchodních dat** . Pak můžete zadat názvy, vlastnosti a oprávnění úpravou XML pro soubor prostředků.
@@ -33,7 +32,7 @@ ms.locfileid: "72982557"
 
 1. V **Průzkumník řešení**rozbalte složku pro projekt služby SharePoint a pak zvolte složku, která obsahuje model služby BDC.
 
-2. Na panelu nabídek vyberte možnost **projekt**  > **Přidat novou položku**.
+2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
 3. Rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 

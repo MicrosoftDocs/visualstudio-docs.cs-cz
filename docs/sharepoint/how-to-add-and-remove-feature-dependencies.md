@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání a odebrání závislostí funkce | Dokumentace Microsoftu'
+title: 'Postupy: Přidání a odebrání závislostí funkcí | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - MICROSOFT.VISUALSTUDIO.SHAREPOINT.DESIGNERS.CUSTOMDEPENDENCYWINDOW
 - VS.SHAREPOINTTOOLS.RAD.FEATUREDESIGNERDEPENDENCY
@@ -15,56 +15,55 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9373ed07ec49bd41dad343dc447b4b2026793492
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: c318a7dc4672a10e993d0149ec77e7f94679d465
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967002"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014780"
 ---
-# <a name="how-to-add-and-remove-feature-dependencies"></a>Postupy: Přidání a odebrání závislostí funkce
-  Vaše funkce služby SharePoint může záviset na jiné funkce pro funkce nebo data. V těchto případech můžete tyto funkce označit jako závislosti pro vaši funkci. Tímto způsobem serveru SharePoint zajišťuje, že jsou závislé funkce aktivované předtím, než je zapnuta.
+# <a name="how-to-add-and-remove-feature-dependencies"></a>Postupy: Přidání a odebrání závislostí funkcí
+  Funkce SharePointu může záviset na dalších funkcích pro funkce nebo data. V těchto případech můžete tyto další funkce označit jako závislosti pro vaši funkci. Tímto způsobem server SharePoint zajišťuje, aby byly před aktivací vaší funkce aktivovány závislé funkce.
 
 ## <a name="add-dependencies"></a>Přidat závislosti
- Můžete přidat další funkce ve vašem řešení jako závislosti. Tímto způsobem zajistíte, že jsou nainstalované a aktivovat, než je nainstalována součást pro vaše požadované funkce.
+ Do řešení můžete přidat další funkce jako závislosti. Tímto způsobem se můžete ujistit, že jsou nainstalované a aktivované požadované funkce před instalací vaší funkce.
 
-#### <a name="to-add-a-dependency-on-a-feature-in-the-solution"></a>Chcete-li přidat závislost na funkci v řešení
+#### <a name="to-add-a-dependency-on-a-feature-in-the-solution"></a>Přidání závislosti na funkci v řešení
 
-1. Otevřete návrháře funkcí, rozbalte **závislosti aktivace funkce** uzel a klikněte na tlačítko **přidat** tlačítko.
+1. Otevřete návrháře funkcí, rozbalte uzel **závislosti aktivace funkcí** a pak klikněte na tlačítko **Přidat** .
 
-2. V **přidat závislosti aktivace funkce** dialogového okna zvolte **Přidat závislost na funkcích v řešení** přepínač, zvolte název funkce, které chcete přidat jako závislost a pak Zvolte **přidat** tlačítko.
+2. V dialogovém okně **přidat závislosti aktivace funkce** zvolte možnost **Přidat závislost na funkce** na tlačítku řešení, vyberte název funkce, kterou chcete přidat jako závislost, a poté klikněte na tlačítko **Přidat** .
 
-     Můžete přidat více než jednu funkci výběrem více názvů při výběru **Ctrl** klíč.
+     Více než jednu funkci můžete přidat tak, že při výběru klávesy **CTRL** vyberete více názvů.
 
 ## <a name="addi-custom-dependencies"></a>Addi vlastní závislosti
- Funkce, které jsou už nasazené na Sharepointovém serveru můžete přidat jako závislost. Tímto způsobem proces aktivace SharePoint zkontroluje, ujistěte se, že jsou všechny závislé funkce aktivované předtím, než je nainstalována součást pro vaše.
+ Můžete přidat funkce, které jsou již nasazeny na serveru SharePoint jako závislost. Tímto způsobem ověří proces aktivace služby SharePoint, aby se zajistilo, že všechny závislé funkce budou aktivovány před instalací vaší funkce.
 
-#### <a name="to-add-a-dependency-by-the-feature-id"></a>Chcete-li přidat závislost podle ID funkce
+#### <a name="to-add-a-dependency-by-the-feature-id"></a>Přidání závislosti podle ID funkce
 
-1. Otevřete návrháře funkcí, rozbalte **závislosti aktivace funkce** uzel a klikněte na tlačítko **přidat** tlačítko.
+1. Otevřete návrháře funkcí, rozbalte uzel **závislosti aktivace funkcí** a pak klikněte na tlačítko **Přidat** .
 
-2. V **přidat závislosti aktivace funkce** dialogového okna zvolte **přidat vlastní závislost** přepínač.
+2. V dialogovém okně **přidat závislosti aktivace funkce** klikněte na tlačítko možnosti **Přidat vlastní závislost** .
 
-3. V **ID funkce** textové pole, zadejte identifikátor GUID pro funkci, kterou chcete označit jako závislost aktivace a klikněte na tlačítko **přidat** tlačítko.
+3. Do textového pole **ID funkce** zadejte identifikátor GUID funkce, kterou chcete označit jako závislost aktivace, a pak klikněte na tlačítko **Přidat** .
 
 ## <a name="edit-custom-dependencies"></a>Upravit vlastní závislosti
- Můžete upravit vlastní závislosti, které jste přidali dříve. Závislé součásti, které jsou v řešení můžete pouze odebrat, ale ne upravovat.
+ Můžete upravit vlastní závislosti, které jste přidali dříve. Závislé funkce, které jsou ve vašem řešení, je ale možné odebrat, nikoli upravovat.
 
-#### <a name="to-change-a-dependency-on-a-feature-in-the-solution"></a>Chcete-li změnit závislosti na funkci v řešení
+#### <a name="to-change-a-dependency-on-a-feature-in-the-solution"></a>Změna závislosti funkce v řešení
 
-1. Otevřít návrháře funkcí a potom rozbalte **závislosti aktivace funkce** uzlu.
+1. Otevřete Návrhář funkcí a potom rozbalte uzel **závislosti aktivace funkcí** .
 
-2. Zvolte název funkce, kterou chcete upravit a klikněte na tlačítko **upravit** tlačítko.
+2. Zvolte název funkce, kterou chcete upravit, a pak klikněte na tlačítko **Upravit** .
 
-3. V **Upravit závislost aktivace vlastní funkce** dialogovém okně změnit název, ID funkce nebo popis a klikněte na tlačítko **odeslat** tlačítko.
+3. V dialogovém okně **Upravit závislost aktivace vlastních funkcí** změňte název, ID funkce nebo popis a pak klikněte na tlačítko **Odeslat** .
 
 ## <a name="remove-dependencies"></a>Odebrat závislosti
 
-#### <a name="to-remove-a-dependency-on-a-feature-in-the-solution"></a>Chcete-li odebrat závislost na funkci v řešení
+#### <a name="to-remove-a-dependency-on-a-feature-in-the-solution"></a>Postup odebrání závislosti na funkci v řešení
 
-1. V Návrháři funkci Rozbalit **závislosti aktivace funkce** uzlu, vyberte název funkce, které chcete odebrat a klikněte na tlačítko **odebrat** tlačítko.
+1. V Návrháři funkcí rozbalte uzel **závislosti aktivace funkcí** , vyberte název funkce, kterou chcete odebrat, a poté klikněte na tlačítko **Odebrat** .
 
 ## <a name="see-also"></a>Viz také:
 - [Vytvoření funkcí služby SharePoint](../sharepoint/creating-sharepoint-features.md)
-- [Postupy: Přizpůsobení funkce služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-feature.md)
-- [Postupy: Přidání a odebrání položek z funkcí služby SharePoint](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)
+- [Postupy: přizpůsobení funkce služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-feature.md)
+- [Postupy: přidávání a odebírání položek do funkcí služby SharePoint](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)

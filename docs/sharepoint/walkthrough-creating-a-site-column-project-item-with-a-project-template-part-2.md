@@ -1,7 +1,7 @@
 ---
 title: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
@@ -11,17 +11,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c3b2fc34807be6ae03fe5aacab64439c918a0f5e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.openlocfilehash: c3b84d901a1fd94d72ff14ec5c481e04676c5cbc
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016404"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
   Po definování vlastního typu položky projektu služby SharePoint a jejich přidružení k šabloně projektu v aplikaci Visual Studio můžete také pro šablonu poskytnout průvodce. Průvodce můžete použít ke shromáždění informací z uživatelů při použití šablony k vytvoření nového projektu, který obsahuje položku projektu. Informace, které shromáždíte, lze použít k inicializaci položky projektu.
 
- V tomto návodu přidáte průvodce do šablony projektu sloupce webu, která je znázorněna v [návodu Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). Když uživatel vytvoří projekt sloupce webu, průvodce shromáždí informace o sloupci webu (jako je jeho základní typ a skupina) a přidá tyto informace do souboru *Elements. XML* v novém projektu.
+ V tomto návodu přidáte průvodce do šablony projektu sloupce webu, která je znázorněna v [návodu Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). Když uživatel vytvoří projekt sloupce webu, průvodce shromáždí informace o sloupci webu (jako je jeho základní typ a skupina) a přidá tyto informace do souboru *Elements.xml* v novém projektu.
 
  Tento názorný postup ukazuje následující úlohy:
 
@@ -51,7 +50,7 @@ ms.locfileid: "73189136"
 
   Znalosti následujících konceptů jsou užitečné, ale nevyžadují se k dokončení tohoto postupu:
 
-- Průvodci pro šablony projektů a položek v aplikaci Visual Studio. Další informace najdete v tématu [Postupy: použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md) a rozhraním <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>.
+- Průvodci pro šablony projektů a položek v aplikaci Visual Studio. Další informace najdete v tématu [Postupy: použití průvodců se šablonami projektů](../extensibility/how-to-use-wizards-with-project-templates.md) a <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraním.
 
 - Sloupce webu ve službě SharePoint. Další informace najdete v tématu [sloupce](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14)).
 
@@ -60,16 +59,16 @@ ms.locfileid: "73189136"
 
 |Součást|Popis|
 |---------------|-----------------|
-|Implementace průvodce|Toto je třída s názvem `SiteColumnProjectWizard`, která implementuje rozhraní <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>. Toto rozhraní definuje metody, které Visual Studio volá při spuštění a dokončení průvodce, a v některých případech i při spuštění průvodce.|
-|Uživatelské rozhraní Průvodce|Toto je okno založené na WPF s názvem `WizardWindow`. Toto okno obsahuje dva uživatelské ovládací prvky s názvem `Page1` a `Page2`. Tyto uživatelské ovládací prvky reprezentují dvě stránky průvodce.<br /><br /> V tomto návodu <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> metoda implementace průvodce zobrazí uživatelské rozhraní průvodce.|
-|Model dat Průvodce|Toto je zprostředkující třída s názvem `SiteColumnWizardModel`, která poskytuje vrstvu mezi uživatelským rozhraním průvodce a implementací průvodce. Tato ukázka používá tuto třídu k tomu, aby usnadnila abstrakci implementace průvodce a uživatelské rozhraní průvodce. Tato třída není požadovaná součást všech průvodců.<br /><br /> V tomto návodu implementace průvodce předá objekt `SiteColumnWizardModel` do okna Průvodce při zobrazení uživatelského rozhraní průvodce. Uživatelské rozhraní Průvodce používá metody tohoto objektu k uložení hodnot ovládacích prvků v uživatelském rozhraní a k provádění úkolů, jako je ověření, že adresa URL vstupního webu je platná. Jakmile uživatel dokončí průvodce, implementace průvodce pomocí objektu `SiteColumnWizardModel` určí konečný stav uživatelského rozhraní.|
-|Správce podepisování projektu|Toto je pomocná třída s názvem `ProjectSigningManager`, kterou používá implementace průvodce pro vytvoření nového souboru key. snk v každé nové instanci projektu.|
+|Implementace průvodce|Toto je třída s názvem `SiteColumnProjectWizard` , která implementuje <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní. Toto rozhraní definuje metody, které Visual Studio volá při spuštění a dokončení průvodce, a v některých případech i při spuštění průvodce.|
+|Uživatelské rozhraní Průvodce|Toto je okno založené na WPF s názvem `WizardWindow` . Toto okno obsahuje dva uživatelské ovládací prvky s názvem `Page1` a `Page2` . Tyto uživatelské ovládací prvky reprezentují dvě stránky průvodce.<br /><br /> V tomto návodu <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> Metoda implementace průvodce zobrazí uživatelské rozhraní průvodce.|
+|Model dat Průvodce|Jedná se o zprostředkující třídu s názvem `SiteColumnWizardModel` , která poskytuje vrstvu mezi uživatelským rozhraním průvodce a implementací průvodce. Tato ukázka používá tuto třídu k tomu, aby usnadnila abstrakci implementace průvodce a uživatelské rozhraní průvodce. Tato třída není požadovaná součást všech průvodců.<br /><br /> V tomto návodu implementace průvodce předá `SiteColumnWizardModel` objekt do okna Průvodce při zobrazení uživatelského rozhraní průvodce. Uživatelské rozhraní Průvodce používá metody tohoto objektu k uložení hodnot ovládacích prvků v uživatelském rozhraní a k provádění úkolů, jako je ověření, že adresa URL vstupního webu je platná. Jakmile uživatel dokončí průvodce, implementace průvodce pomocí `SiteColumnWizardModel` objektu určí konečný stav uživatelského rozhraní.|
+|Správce podepisování projektu|Toto je pomocná třída s názvem `ProjectSigningManager` , která je použita implementací průvodce pro vytvoření nového souboru key. snk v každé nové instanci projektu.|
 |SharePoint – příkazy|Jedná se o metody, které jsou používány modelem dat Průvodce pro volání do místního webu služby SharePoint, když je spuštěn průvodce. Vzhledem k tomu, že příkazy služby SharePoint musí cílit na .NET Framework 3,5, jsou tyto příkazy implementovány v jiném sestavení než zbývající část kódu průvodce.|
 
 ## <a name="create-the-projects"></a>Vytváření projektů
  Chcete-li dokončit tento návod, je nutné přidat několik projektů do řešení SiteColumnProjectItem, které jste vytvořili v [návodu: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):
 
-- Projekt WPF. Implementujete rozhraní <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> a definujete uživatelské rozhraní průvodce v tomto projektu.
+- Projekt WPF. Implementujete <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní a definujete uživatelské rozhraní průvodce v tomto projektu.
 
 - Projekt knihovny tříd, který definuje příkazy služby SharePoint. Tento projekt musí být cílen na the.NET Framework 3,5.
 
@@ -77,17 +76,17 @@ ms.locfileid: "73189136"
 
 #### <a name="to-create-the-wpf-project"></a>Vytvoření projektu WPF
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevřete řešení SiteColumnProjectItem.
+1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete řešení SiteColumnProjectItem.
 
 2. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení **SiteColumnProjectItem** , zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
 3. V horní části dialogového okna **Přidat nový projekt** se ujistěte, že je v seznamu verzí .NET Framework zvolena možnost **.NET Framework 4,5** .
 
-4. Rozbalte uzel **vizuál C#**  nebo uzel **Visual Basic** a vyberte uzel **Windows** .
+4. Rozbalte uzel **Visual C#** nebo uzel **Visual Basic** a vyberte uzel **Windows** .
 
 5. V seznamu šablon projektu zvolte možnost **Knihovna uživatelských ovládacích prvků WPF**, pojmenujte projekt **ProjectTemplateWizard**a poté klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] do řešení přidá projekt **ProjectTemplateWizard** a otevře výchozí soubor UserControl1. XAML.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **ProjectTemplateWizard** do řešení a otevře výchozí soubor UserControl1. XAML.
 
 6. Odstraňte soubor UserControl1. XAML z projektu.
 
@@ -97,11 +96,11 @@ ms.locfileid: "73189136"
 
 2. V horní části dialogového okna **Přidat nový projekt** vyberte v seznamu verzí .NET Framework **.NET Framework 3,5** .
 
-3. Rozbalte uzel **vizuál C#**  nebo uzel **Visual Basic** a pak vyberte uzel **Windows** .
+3. Rozbalte uzel **Visual C#** nebo uzel **Visual Basic** a pak vyberte uzel **Windows** .
 
 4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **SharePointCommands**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] do řešení přidá projekt **SharePointCommands** a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **SharePointCommands** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -112,7 +111,7 @@ ms.locfileid: "73189136"
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu projektu **ProjectTemplateWizard** a poté zvolte možnost **vlastnosti**.
 
-2. V **Návrháři projektu**klikněte na kartu **aplikace** pro vizuální C# projekt nebo na kartu **kompilovat** pro projekt Visual Basic.
+2. V **Návrháři projektu**vyberte kartu **aplikace** pro projekt jazyka Visual C# nebo kartu **kompilovat** pro Visual Basic projekt.
 
 3. Ujistěte se, že je cílová architektura nastavena na .NET Framework 4,5, nikoli na profil klienta .NET Framework 4,5.
 
@@ -160,7 +159,7 @@ ms.locfileid: "73189136"
 
 13. Pokud vyvíjíte Visual Basic projekt, importujte obor názvů ProjectTemplateWizard do projektu pomocí **Návrháře projektu**.
 
-     Další informace najdete v tématu [Postup: Přidání nebo odebrání importovaných oborů &#40;názvů&#41;Visual Basic](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).
+     Další informace najdete v tématu [Postup: Přidání nebo odebrání importovaných oborů názvů &#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).
 
 #### <a name="to-configure-the-sharepointcommands-project"></a>Konfigurace projektu SharePointcommands
 
@@ -172,11 +171,11 @@ ms.locfileid: "73189136"
 
 4. Klikněte na šipku vedle tlačítka **Přidat** a potom v zobrazené nabídce zvolte možnost **Přidat jako odkaz** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá soubor kódu do projektu **SharePointCommands** jako odkaz. Soubor kódu je umístěn v projektu **ProjectTemplateWizard** , ale kód v souboru je také zkompilován v projektu **SharePointCommands** .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá soubor s kódem do projektu **SharePointCommands** jako odkaz. Soubor kódu je umístěn v projektu **ProjectTemplateWizard** , ale kód v souboru je také zkompilován v projektu **SharePointCommands** .
 
 5. V projektu **SharePointCommands** přidejte další soubor kódu s názvem Commands.
 
-6. Zvolte projekt SharePointCommands a pak na panelu nabídek zvolte **projekt** > **Přidat odkaz**.
+6. Zvolte projekt SharePointCommands a pak na panelu nabídek zvolte **projekt**  >  **Přidat odkaz**.
 
 7. Rozbalte uzel **sestavení** , zvolte uzel **rozšíření** a potom zaškrtněte políčka vedle následujících sestavení:
 
@@ -228,14 +227,14 @@ ms.locfileid: "73189136"
 
 1. V projektu ProjectTemplateWizard otevřete místní nabídku pro soubor WizardWindow. XAML a pak zvolte možnost **otevřít** . otevře se okno v návrháři.
 
-2. V zobrazení jazyka XAML návrháře nahraďte aktuální kód XAML následujícím XAML. Jazyk XAML definuje uživatelské rozhraní, které obsahuje záhlaví, <xref:System.Windows.Controls.Grid> obsahující stránky průvodce a navigační tlačítka v dolní části okna.
+2. V zobrazení jazyka XAML návrháře nahraďte aktuální kód XAML následujícím XAML. Jazyk XAML definuje uživatelské rozhraní, které obsahuje záhlaví, a <xref:System.Windows.Controls.Grid> obsahuje stránky průvodce a navigační tlačítka v dolní části okna.
 
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
 
     > [!NOTE]
-    > Okno, které je vytvořeno v tomto XAML, je odvozeno z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> základní třídy. Když přidáte vlastní dialogové okno WPF do sady Visual Studio, doporučujeme, abyste z této třídy odvodili dialogové okno tak, aby měly konzistentní styly s ostatními dialogovými okny sady Visual Studio, a aby se předešlo problémům s modálními dialogy, které by jinak mohly nastat. Další informace naleznete v tématu [vytváření a Správa modálních](../extensibility/creating-and-managing-modal-dialog-boxes.md)dialogových oken.
+    > Okno, které je vytvořeno v tomto XAML, je odvozeno od <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> základní třídy. Když přidáte vlastní dialogové okno WPF do sady Visual Studio, doporučujeme, abyste z této třídy odvodili dialogové okno tak, aby měly konzistentní styly s ostatními dialogovými okny sady Visual Studio, a aby se předešlo problémům s modálními dialogy, které by jinak mohly nastat. Další informace naleznete v tématu [vytváření a Správa modálních](../extensibility/creating-and-managing-modal-dialog-boxes.md)dialogových oken.
 
-3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z názvu třídy `WizardWindow` v atributu `x:Class` prvku `Window`. Tento prvek je na prvním řádku XAML. Až budete hotovi, první řádek by měl vypadat jako v následujícím příkladu.
+3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z `WizardWindow` názvu třídy v `x:Class` atributu `Window` elementu. Tento prvek je na prvním řádku XAML. Až budete hotovi, první řádek by měl vypadat jako v následujícím příkladu.
 
     ```xml
     <Window x:Class="WizardWindow"
@@ -243,7 +242,7 @@ ms.locfileid: "73189136"
 
 4. Otevřete soubor kódu na pozadí souboru WizardWindow. XAML.
 
-5. Nahraďte obsah tohoto souboru s výjimkou `using`ch deklarací v horní části souboru s následujícím kódem.
+5. Nahraďte obsah tohoto souboru s výjimkou `using` deklarací v horní části souboru s následujícím kódem.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]
@@ -256,13 +255,13 @@ ms.locfileid: "73189136"
 
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]
 
-3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z názvu třídy `Page1` v atributu `x:Class` prvku `UserControl`. Toto je první řádek XAML. Až skončíte, první řádek by měl vypadat nějak takto.
+3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z `Page1` názvu třídy v `x:Class` atributu `UserControl` elementu. Toto je první řádek XAML. Až skončíte, první řádek by měl vypadat nějak takto.
 
     ```xml
     <UserControl x:Class="Page1"
     ```
 
-4. Nahraďte obsah souboru Page1. XAML výjimkou deklarace `using` v horní části souboru s následujícím kódem.
+4. Nahraďte obsah souboru Page1. XAML s výjimkou `using` deklarací v horní části souboru s následujícím kódem.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]
@@ -277,19 +276,19 @@ ms.locfileid: "73189136"
 
      [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]
 
-3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z názvu třídy `Page2` v atributu `x:Class` prvku `UserControl`. Toto je první řádek XAML. Až skončíte, první řádek by měl vypadat nějak takto.
+3. Pokud vyvíjíte Visual Basic projekt, odeberte `ProjectTemplateWizard` obor názvů z `Page2` názvu třídy v `x:Class` atributu `UserControl` elementu. Toto je první řádek XAML. Až skončíte, první řádek by měl vypadat nějak takto.
 
     ```xml
     <UserControl x:Class="Page2"
     ```
 
-4. Nahraďte obsah souboru kódu na pozadí pro soubor Page2. XAML s výjimkou deklarace `using` v horní části souboru s následujícím kódem.
+4. Nahraďte obsah souboru kódu na pozadí souboru Page2. XAML s výjimkou `using` deklarací v horní části souboru s následujícím kódem.
 
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]
 
 ## <a name="implement-the-wizard"></a>Implementace průvodce
- Definujte hlavní funkčnost Průvodce implementací rozhraní <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>. Toto rozhraní definuje metody, které Visual Studio volá při spuštění a dokončení průvodce, a v některých případech i při spuštění průvodce.
+ Definujte hlavní funkčnost Průvodce implementací <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> rozhraní. Toto rozhraní definuje metody, které Visual Studio volá při spuštění a dokončení průvodce, a v některých případech i při spuštění průvodce.
 
 #### <a name="to-implement-the-wizard"></a>Implementace průvodce
 
@@ -312,12 +311,12 @@ ms.locfileid: "73189136"
      [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]
      [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]
 
-## <a name="checkpoint"></a>Kontrolní bod
+## <a name="checkpoint"></a>CheckPoint
  V tomto okamžiku v tomto návodu je veškerý kód průvodce nyní v projektu. Sestavte projekt, abyste se ujistili, že se zkompiluje bez chyb.
 
 #### <a name="to-build-your-project"></a>Sestavení projektu
 
-1. Na panelu nabídek vyberte **sestavení** **řešení**sestavení  > .
+1. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>Odebrání souboru key. snk ze šablony projektu
  V [tomto návodu: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), vytvořená šablona projektu obsahuje soubor Key. snk, který se používá k podepsání instance projektu sloupce webu. Tento soubor Key. snk již není nutný, protože průvodce nyní vygeneruje nový soubor Key. snk pro každý projekt. Odeberte soubor Key. snk ze šablony projektu a odeberte odkazy na tento soubor.
@@ -334,9 +333,9 @@ ms.locfileid: "73189136"
     <ProjectItem ReplaceParameters="false" TargetFileName="key.snk">key.snk</ProjectItem>
     ```
 
-4. Soubor uložte a zavřete.
+4. Uložte soubor a zavřete ho.
 
-5. V uzlu **SiteColumnProjectTemplate** otevřete soubor ProjectTemplate. csproj nebo ProjectTemplate. vbproj a poté z něj odeberte následující prvek `PropertyGroup`.
+5. V uzlu **SiteColumnProjectTemplate** otevřete soubor ProjectTemplate. csproj nebo ProjectTemplate. vbproj a poté `PropertyGroup` z něj odeberte následující prvek.
 
     ```xml
     <PropertyGroup>
@@ -345,13 +344,13 @@ ms.locfileid: "73189136"
     </PropertyGroup>
     ```
 
-6. Odeberte následující prvek `None`.
+6. Odeberte následující `None` prvek.
 
     ```xml
     <None Include="key.snk" />
     ```
 
-7. Soubor uložte a zavřete.
+7. Uložte soubor a zavřete ho.
 
 ## <a name="associating-the-wizard-with-the-project-template"></a>Přidružení průvodce k šabloně projektu
  Nyní, když jste implementovali průvodce, je nutné přidružit průvodce k šabloně projektu **sloupce webu** . Existují tři postupy, které je třeba provést:
@@ -368,11 +367,11 @@ ms.locfileid: "73189136"
 
 2. Na kartě **podepisování** vyberte zaškrtávací políčko **podepsat sestavení** .
 
-3. V seznamu **Vyberte soubor klíče se silným názvem** vyberte možnost **\<nový... >** .
+3. V seznamu **Vyberte soubor klíče se silným názvem** vyberte **\<New...>** .
 
 4. V dialogovém okně **vytvořit klíč se silným názvem** zadejte název nového souboru klíče, zrušte zaškrtnutí políčka **chránit soubor klíče heslem** a pak klikněte na tlačítko **OK** .
 
-5. Otevřete místní nabídku pro projekt **ProjectTemplateWizard** a pak zvolte možnost **sestavit** k vytvoření souboru ProjectTemplateWizard. dll.
+5. Otevřete místní nabídku pro projekt **ProjectTemplateWizard** a pak zvolte možnost **sestavit** a vytvořte soubor ProjectTemplateWizard.dll.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Získání tokenu veřejného klíče pro sestavení průvodce
 
@@ -380,13 +379,13 @@ ms.locfileid: "73189136"
 
      Otevře se okno příkazového řádku sady Visual Studio.
 
-2. Spusťte následující příkaz a nahraďte *PathToWizardAssembly* úplnou cestou k sestavenému sestavení ProjectTemplateWizard. dll pro projekt ProjectTemplateWizard ve vývojovém počítači:
+2. Spusťte následující příkaz a nahraďte *PathToWizardAssembly* úplnou cestou k sestavenému ProjectTemplateWizard.dll sestavení pro projekt ProjectTemplateWizard na vývojovém počítači:
 
     ```cmd
     sn.exe -T PathToWizardAssembly
     ```
 
-     Token veřejného klíče pro sestavení ProjectTemplateWizard. dll se zapisuje do okna příkazového řádku sady Visual Studio.
+     Token veřejného klíče pro sestavení ProjectTemplateWizard.dll se zapisuje do okna příkazového řádku sady Visual Studio.
 
 3. Nechte okno příkazového řádku sady Visual Studio otevřené. V dalším postupu budete potřebovat token veřejného klíče.
 
@@ -394,7 +393,7 @@ ms.locfileid: "73189136"
 
 1. V **Průzkumník řešení**rozbalte uzel projektu **SiteColumnProjectTemplate** a otevřete soubor SiteColumnProjectTemplate. vstemplate.
 
-2. Poblíž konce souboru přidejte následující prvek `WizardExtension` mezi značky `</TemplateContent>` a `</VSTemplate>`. Nahraďte hodnotu *tokenu* `PublicKeyToken` atributem tokenu veřejného klíče, který jste získali v předchozím postupu.
+2. Poblíž konce souboru přidejte následující `WizardExtension` prvek mezi `</TemplateContent>` `</VSTemplate>` značky a. Nahraďte hodnotu *tokenu* `PublicKeyToken` atributu tokenem veřejného klíče, který jste získali v předchozím postupu.
 
     ```xml
     <WizardExtension>
@@ -403,18 +402,18 @@ ms.locfileid: "73189136"
     </WizardExtension>
     ```
 
-     Další informace o prvku `WizardExtension` naleznete v tématu [WizardExtension – element &#40;&#41;Templates sady Visual Studio](../extensibility/wizardextension-element-visual-studio-templates.md).
+     Další informace o elementu naleznete `WizardExtension` v tématu [wizardextension – element &#40;Templates sady Visual Studio&#41;](../extensibility/wizardextension-element-visual-studio-templates.md).
 
-3. Soubor uložte a zavřete.
+3. Uložte soubor a zavřete ho.
 
-## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Přidání nahraditelných parametrů do souboru Elements. XML v šabloně projektu
- Do souboru *Elements. XML* v projektu SiteColumnProjectTemplate přidejte několik nahraditelných parametrů. Tyto parametry jsou inicializovány v metodě `RunStarted` ve třídě `SiteColumnProjectWizard`, kterou jste definovali dříve. Když uživatel vytvoří projekt sloupce webu, Visual Studio automaticky nahradí tyto parametry v souboru *Elements. XML* v novém projektu hodnotami, které jsou zadány v průvodci.
+## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Přidání nahraditelných parametrů do souboru Elements.xml v šabloně projektu
+ Do souboru *Elements.xml* v projektu SiteColumnProjectTemplate přidejte několik nahraditelných parametrů. Tyto parametry jsou inicializovány v `RunStarted` metodě ve `SiteColumnProjectWizard` třídě, kterou jste definovali dříve. Když uživatel vytvoří projekt sloupce webu, Visual Studio automaticky nahradí tyto parametry v souboru *Elements.xml* v novém projektu hodnotami uvedenými v průvodci.
 
  Nahraditelný parametr je token, který začíná a končí znakem dolaru ($). Kromě definování vlastních nahraditelných parametrů můžete použít předdefinované parametry, které jsou definovány a inicializovány systémem projektu služby SharePoint. Další informace najdete v tématu [nahraditelných parametrů](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Přidání nahraditelných parametrů do souboru Elements. XML
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Přidání nahraditelných parametrů do souboru Elements.xml
 
-1. V projektu SiteColumnProjectTemplate nahraďte obsah souboru *Elements. XML* následujícím kódem XML.
+1. V projektu SiteColumnProjectTemplate nahraďte obsah souboru *Elements.xml* následujícím kódem XML.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -428,9 +427,9 @@ ms.locfileid: "73189136"
     </Elements>
     ```
 
-     Nové XML změní hodnoty atributů `Name`, `DisplayName`, `Type`a `Group` na vlastní nahraditelný parametr.
+     Nové XML změní hodnoty `Name` `DisplayName` atributů,, `Type` a `Group` na vlastní nahraditelný parametr.
 
-2. Soubor uložte a zavřete.
+2. Uložte soubor a zavřete ho.
 
 ## <a name="add-the-wizard-to-the-vsix-package"></a>Přidání průvodce do balíčku VSIX
  Chcete-li nasadit průvodce pomocí balíčku VSIX, který obsahuje šablonu projektu sloupce webu, přidejte odkazy na projekt průvodce a projekt příkazy služby SharePoint do souboru source. extension. vsixmanifest v projektu VSIX.
@@ -461,7 +460,7 @@ ms.locfileid: "73189136"
 
 9. V seznamu **projekt** vyberte projekt **SharePointCommands** a pak klikněte na tlačítko **OK** .
 
-10. Na panelu nabídek zvolte **sestavení** > **Sestavit řešení**a pak se ujistěte, že se řešení vytváří bez chyb.
+10. V panelu nabídek zvolte sestavení sestavení **Build**  >  **sestavení**a pak se ujistěte, že řešení je sestavení bez chyb.
 
 ## <a name="test-the-wizard"></a>Otestování Průvodce
  Nyní jste připraveni otestovat Průvodce. Nejdřív začněte ladit řešení SiteColumnProjectItem v experimentální instanci sady Visual Studio. Pak otestujte průvodce pro projekt sloupce webu v experimentální instanci aplikace Visual Studio. Nakonec sestavte a spusťte projekt, abyste ověřili, že sloupec web funguje podle očekávání.
@@ -470,27 +469,27 @@ ms.locfileid: "73189136"
 
 1. Restartujte Visual Studio s přihlašovacími údaji správce a pak otevřete řešení SiteColumnProjectItem.
 
-2. V projektu ProjectTemplateWizard otevřete soubor kódu SiteColumnProjectWizard a poté přidejte zarážku do prvního řádku kódu v metodě `RunStarted`.
+2. V projektu ProjectTemplateWizard otevřete soubor kódu SiteColumnProjectWizard a poté přidejte zarážku do prvního řádku kódu v `RunStarted` metodě.
 
-3. Na panelu nabídek vyberte možnost **ladění** > **výjimky**.
+3. Na panelu nabídek vyberte možnost **ladění**  >  **výjimek**.
 
 4. V dialogovém okně **výjimky** ověřte, zda jsou **vyvolaná** a **uživatelem Neošetřená** zaškrtávací políčka pro **výjimky modulu CLR** vymazána a poté klikněte na tlačítko **OK** .
 
-5. Spusťte ladění výběrem klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění** > **Spustit ladění**.
+5. Spusťte ladění tak, že vyberete klávesu **F5** nebo v řádku nabídek vyberete **ladění**  >  **Spustit ladění**.
 
      Visual Studio nainstaluje rozšíření na%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 a spustí experimentální instanci sady Visual Studio. Otestujete položku projektu v této instanci aplikace Visual Studio.
 
 #### <a name="to-test-the-wizard-in-visual-studio"></a>Testování průvodce v aplikaci Visual Studio
 
-1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
+1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-2. Rozbalte uzel **vizuál C#**  nebo uzel **Visual Basic** (v závislosti na jazyku, který podporuje šablona projektu), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+2. Rozbalte uzel **Visual C#** nebo **Visual Basic** uzel (v závislosti na jazyku, který podporuje šablona projektu), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 3. V seznamu šablon projektu zvolte **sloupec web**, pojmenujte projekt **SiteColumnWizardTest**a pak klikněte na tlačítko **OK** .
 
-4. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v metodě `RunStarted`.
+4. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v `RunStarted` metodě.
 
-5. Pokračujte v ladění projektu volbou klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění** > **pokračovat**.
+5. Pokračujte v ladění projektu volbou klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění**  >  **pokračovat**.
 
 6. V **Průvodci vlastním nastavením služby SharePoint**zadejte adresu URL webu, který chcete použít pro ladění, a poté klikněte na tlačítko **Další** .
 
@@ -502,9 +501,9 @@ ms.locfileid: "73189136"
 
    - Do pole **název** zadejte **sloupec ano/ne**a pak klikněte na tlačítko **Dokončit** .
 
-     V **Průzkumník řešení**se zobrazí nový projekt a obsahuje položku projektu s názvem **pole1**a aplikace Visual Studio otevře soubor Project *Elements. XML* v editoru.
+     V **Průzkumník řešení**se zobrazí nový projekt a obsahuje položku projektu s názvem **pole1**a aplikace Visual Studio otevře soubor *Elements.xml* projektu v editoru.
 
-8. Ověřte, zda *Elements. XML* obsahuje hodnoty, které jste zadali v průvodci.
+8. Ověřte, zda *Elements.xml* obsahuje hodnoty, které jste zadali v průvodci.
 
 #### <a name="to-test-the-site-column-in-sharepoint"></a>Testování sloupce webu ve službě SharePoint
 
@@ -526,7 +525,7 @@ ms.locfileid: "73189136"
 
 #### <a name="to-clean-up-the-development-computer"></a>Vyčištění vývojového počítače
 
-1. V experimentální instanci aplikace Visual Studio na panelu nabídky vyberte **nástroje** > **rozšíření a aktualizace**.
+1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte **nástroje**  >  **rozšíření a aktualizace**.
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 
@@ -536,7 +535,7 @@ ms.locfileid: "73189136"
 
 4. Zavřete experimentální instanci sady Visual Studio a instanci, ve které je řešení CustomActionProjectItem otevřené.
 
-     Informace o tom, jak nasadit rozšíření [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], najdete v tématu [přenos rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
+     Informace o tom, jak nasadit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] rozšíření, najdete v tématu [odeslání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)

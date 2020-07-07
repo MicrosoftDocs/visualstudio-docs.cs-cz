@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Přidání a odebrání položek z funkcí služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: přidávání a odebírání položek funkcí služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.FeatureDesigner
 dev_langs:
@@ -14,43 +14,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f3454ca7c01b44dcae60156e93bffde351209cc5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 27c6ebfb0b0cdbff0a184859ffa2a73acab809c1
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966897"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014527"
 ---
-# <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>Postupy: Přidání a odebrání položek z funkcí služby SharePoint
-  Při vytváření řešení služby SharePoint, Visual Studio přidá výchozí položky projektu služby SharePoint do vaší funkce. Před nasazením můžete přidávat a odebírat položky Sharepointového projektu k úpravě funkce Sharepointu.
+# <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>Postupy: přidávání a odebírání položek do funkcí služby SharePoint
+  Když vytvoříte řešení služby SharePoint, Visual Studio přidá výchozí položky projektu služby SharePoint do vaší funkce. Před nasazením můžete přidat a odebrat položky projektu služby SharePoint pro úpravu funkce služby SharePoint.
 
-## <a name="add-sharepoint-project-items-to-a-feature"></a>Přidat položky Sharepointového projektu do funkce
+## <a name="add-sharepoint-project-items-to-a-feature"></a>Přidání položek SharePointového projektu do funkce
 
-#### <a name="to-add-sharepoint-project-items-with-the-feature-designer"></a>Chcete-li přidat položky projektu služby SharePoint pomocí návrháře funkcí
+#### <a name="to-add-sharepoint-project-items-with-the-feature-designer"></a>Přidání položek projektu služby SharePoint pomocí návrháře funkcí
 
-1. Otevřete návrháře funkcí.
+1. Otevřete Návrhář funkcí.
 
-    Další informace najdete v tématu [jak: Přizpůsobení funkce služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-feature.md).
+    Další informace naleznete v tématu [How to: Customize a SharePoint Feature](../sharepoint/how-to-customize-a-sharepoint-feature.md).
 
-2. Přidejte jednu nebo více položek ze **položky v řešení** do seznamu **položek ve funkci** seznamu pomocí provádí jeden nebo více z následujících kroků:
+2. Přidejte jednu nebo více položek z **položek v seznamu řešení** k **položkám v seznamu funkcí** provedením jednoho nebo několika následujících kroků:
 
-   - Dvakrát klikněte na všechny položky, které chcete přidat.
+   - Dvakrát klikněte na každou položku, kterou chcete přidat.
 
-   - Zvolte položku, kterou chcete přidat a potom klikněte **přidat** tlačítko (>).
+   - Zvolte položku, kterou chcete přidat, a poté klikněte na tlačítko **Přidat** (>).
 
-   - Zvolte **přidat všechny** tlačítko (>>).
+   - Klikněte na tlačítko **Přidat vše** (>>).
 
-     Položky projektu služby SharePoint se zobrazí v **položek ve funkci** seznamu.
+     Položky projektu služby SharePoint se zobrazí v **položkách v seznamu funkcí** .
 
-## <a name="remove-sharepoint-project-items-from-a-feature"></a>Odebrat položky Sharepointového projektu z funkce
+## <a name="remove-sharepoint-project-items-from-a-feature"></a>Odebrání položek projektu služby SharePoint z funkce
 
-#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>Odebrat položky služby SharePoint pomocí návrháře funkcí
+#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>Odebrání položek SharePointu pomocí návrháře funkcí
 
-1. Vyberte jeden nebo více položek v **položek ve funkci** seznamu.
+1. Vyberte jednu nebo více položek v **položkách v seznamu funkcí** .
 
-2. Zvolte **odebrat** chcete položky odstraňovat po druhém, nebo zvolte tlačítko (<) **odebrat všechny** tlačítko (<<) odebrat všechny položky.
+2. Chcete-li odebrat jednu položku najednou, klikněte na tlačítko **Odebrat** (<) nebo vyberte tlačítko **odebrat vše** (<<) a odeberte všechny položky.
 
-     Položky projektu služby SharePoint se zobrazí v **položky v řešení** seznamu.
+     Položky projektu služby SharePoint se zobrazí v **položkách v seznamu řešení** .
 
 ## <a name="see-also"></a>Viz také:
 - [Vytvoření funkcí služby SharePoint](../sharepoint/creating-sharepoint-features.md)

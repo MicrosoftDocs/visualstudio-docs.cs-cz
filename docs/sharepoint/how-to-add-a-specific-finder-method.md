@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Přidání konkrétní vyhledávací metody | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732921b021d7887faf31dd3f602f5400c1d06a59
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014818"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Postupy: Přidání konkrétní vyhledávací metody
   Jednu instanci entity můžete vrátit vytvořením *konkrétní vyhledávací* metody. Služba BDC (Business Data Connectivity) spouští konkrétní vyhledávací metodu, když uživatel zvolí entitu ve webové části nebo v externím seznamu obchodních dat. Další informace najdete v tématu [Návrh modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72985253"
 
     Informace o tom, jak přidat entitu do **návrháře služby BDC** v aplikaci Visual Studio, naleznete v tématu [How to: Add a entity to a model](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Na panelu nabídek vyberte možnost **zobrazit** > **ostatní okna**, **Podrobnosti metody služby BDC**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **ostatní okna**, **Podrobnosti metody služby BDC**.
 
     Otevře se okno **Podrobnosti metody služby BDC** . Další informace o tomto okně najdete v tématu [Přehled nástrojů pro návrh modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -71,7 +70,7 @@ ms.locfileid: "72985253"
 
     V editoru kódu se otevře soubor kódu entity Service. Další informace o souboru kódu entity Service najdete v tématu [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-9. Přidejte kód do konkrétní vyhledávací metody. Tento kód provede následující:
+9. Přidejte kód do konkrétní vyhledávací metody. Tento kód provádí následující úlohy:
 
    - Načte záznam ze zdroje dat.
 
@@ -80,7 +79,7 @@ ms.locfileid: "72985253"
      Následující příklad vrátí kontakt z ukázkové databáze AdventureWorks pro SQL Server.
 
      > [!NOTE]
-     > Hodnotu pole `ServerName` nahraďte názvem vašeho serveru.
+     > Hodnotu pole nahraďte `ServerName` názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]

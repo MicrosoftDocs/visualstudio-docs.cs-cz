@@ -1,7 +1,7 @@
 ---
-title: 'Návrháři balíčku: Přidání a odebrání funkcí a položek balíčku'
+title: 'Návrhář balíčku: Přidání & odebrání funkcí a položek do balíčku'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerDesign
 dev_langs:
@@ -14,49 +14,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fbd44bbf3b337815c8c72cea66dd4d56fc645ade
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 4dfbda711c42e475af5f17c8799e53b13e26611a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401616"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014604"
 ---
-# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Postupy: Přidání nebo odebrání funkcí a položek z balíku pomocí návrháře balíčků
-  Když vytvoříte řešení služby SharePoint, Visual Studio přidá výchozí funkce služby SharePoint do balíčku v řešení. Před posledním nasazení můžete přidávat a odebírat položky Sharepointového projektu a funkce, které chcete upravit balíček Sharepointu.
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí návrháře balíčků
+  Když vytvoříte řešení služby SharePoint, sada Visual Studio přidá do balíčku v řešení výchozí funkce služby SharePoint. Před konečným nasazením můžete přidat a odebrat položky a funkce projektu služby SharePoint pro úpravu balíčku služby SharePoint.
 
- Alternativně můžete použít Průzkumník balení přidávat a odebírat položky Sharepointového projektu. Můžete také zobrazit a změnit hierarchie položek projektu služby SharePoint a funkce, které jsou umístěny do balíčku (.wsp). Další informace najdete v tématu [jak: Přidání nebo odebrání funkcí a položek z balíku pomocí Průzkumníku balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).
+ Alternativně můžete použít Průzkumníka balíčků k přidání a odebrání položek projektu služby SharePoint. Můžete také zobrazit a změnit hierarchii položek projektu služby SharePoint a funkcí, které jsou vloženy do balíčku (. wsp). Další informace najdete v tématu [Postup: Přidání a odebrání funkcí a položek do balíčku pomocí Průzkumníka balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).
 
-## <a name="add-features-to-a-sharepoint-package"></a>Přidání funkcí do balíčku Sharepointu
- Návrháři balíčku můžete použít k přidání funkcí do balíčku Sharepointu.
+## <a name="add-features-to-a-sharepoint-package"></a>Přidání funkcí do balíčku služby SharePoint
+ K přidání funkcí do balíčku služby SharePoint můžete použít Návrhář balíčků.
 
 #### <a name="to-add-sharepoint-features-with-the-package-designer"></a>Přidání funkcí služby SharePoint pomocí návrháře balíčků
 
-1. Otevřít **balíček návrháře**.
+1. Otevřete **Návrháře balíčků**.
 
-    Další informace najdete v tématu [jak: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+    Další informace najdete v tématu [Postup: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
-2. Přidejte jeden nebo více funkcí služby SharePoint pomocí provádí jeden nebo více z následujících kroků:
+2. Pomocí jednoho nebo několika následujících kroků přidejte jednu nebo více funkcí služby SharePoint:
 
-   1. Dvakrát klikněte na každou položku v **položky v řešení** seznam, který chcete přidat.
+   1. Dvakrát klikněte na jednotlivé položky v seznamu **řešení** , které chcete přidat.
 
-   2. Zvolte položku, kterou chcete přidat a potom klikněte **přidat** tlačítko (>).
+   2. Zvolte položku, kterou chcete přidat, a poté klikněte na tlačítko **Přidat** (>).
 
-   3. Zvolte **přidat všechny** tlačítko (>>) Chcete-li přidat všechny položky najednou.
+   3. Klikněte na tlačítko **Přidat vše** (>>), chcete-li přidat všechny položky najednou.
 
-      Například můžete dvakrát kliknout na položku v **položky v řešení** seznamu a přidejte ji tak **položek v balíčku** seznamu.
+      Můžete například dvakrát kliknout na položku v seznamu **řešení** a přidat ji k **položkám v seznamu balíčků** .
 
-      Položky projektu služby SharePoint a funkce se zobrazí v **položek v balíčku** seznamu.
+      Položky projektu služby SharePoint a funkce se zobrazí v **položkách v seznamu balíčků** .
 
-## <a name="remove-features-from-a-sharepoint-package"></a>Odebrat funkce z balíčku služby SharePoint
- Návrháři balíčku můžete použít k odebrání funkce pro balíček služby SharePoint.
+## <a name="remove-features-from-a-sharepoint-package"></a>Odebrání funkcí ze SharePointového balíčku
+ K odebrání funkcí do balíčku služby SharePoint můžete použít Návrhář balíčků.
 
-#### <a name="to-remove-sharepoint-features-with-the-package-designer"></a>Chcete-li odebrat funkce služby SharePoint pomocí návrháře balíčků
+#### <a name="to-remove-sharepoint-features-with-the-package-designer"></a>Odebrání funkcí služby SharePoint pomocí návrháře balíčků
 
-1. V **položek v balíčku** seznamu, zvolte položku, kterou chcete odebrat a klikněte na tlačítko **odebrat** (<) tlačítko, nebo zvolte **odebrat všechny** tlačítko (<<) k odebrání všechny položky.
+1. V **položkách v seznamu balíček** zvolte položku, kterou chcete odebrat, a pak zvolte tlačítko **Odebrat** (<), nebo zvolte tlačítko **Odebrat vše** (<<) a odeberte všechny položky.
 
-     Položky služby SharePoint se zobrazí v **položky v řešení** seznamu.
+     Položky SharePointu se zobrazí v **položkách v seznamu řešení** .
 
 ## <a name="see-also"></a>Viz také:
 - [Vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md)
 - [Postupy: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
-- [Postupy: Vytvoření balíčku](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)
+- [Postupy: vytvoření balíčku](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)

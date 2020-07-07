@@ -1,7 +1,7 @@
 ---
 title: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc6782e4a83f259eb17632addec36c7804b27858
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
-ms.translationtype: MT
+ms.openlocfilehash: 9ce76c72bad138a5c6c40afe717aadafec02c677
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015265"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>Návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint
   Následující postupy ukazují, jak vytvořit vlastní sloupce webu služby SharePoint (nebo *pole*) a také typ obsahu, který používá sloupce lokality. Také ukazuje, jak vytvořit seznam, který používá nový typ obsahu.
@@ -44,26 +43,26 @@ ms.locfileid: "74879347"
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
-- Podporované edice systému Windows a SharePoint.
+- Podporované edice Windows a SharePointu.
 
 - [!INCLUDE[vsprvs-current](../sharepoint/includes/vsprvs-current-md.md)]
 
 ## <a name="create-custom-site-columns"></a>Vytváření vlastních sloupců webu
- Tento příklad vytvoří seznam pro správu pacientů v nemocnici. Nejprve je třeba vytvořit projekt služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a přidat do něj sloupce webu, a to následujícím způsobem.
+ Tento příklad vytvoří seznam pro správu pacientů v nemocnici. Nejprve je třeba vytvořit projekt služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a přidat do něj sloupce webu, a to následujícím způsobem.
 
 #### <a name="to-create-the-project"></a>Vytvoření projektu
 
-1. V nabídce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **soubor** vyberte **Nový** > **projekt**.
+1. V nabídce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **soubor** klikněte na příkaz **Nový**  >  **projekt**.
 ::: moniker range="=vs-2017"
-2. V dialogovém okně **Nový projekt** rozbalte v části **vizuál C#**  nebo **Visual Basic**uzel **Office/SharePoint** a pak vyberte **řešení SharePoint**.
+2. V dialogovém okně **Nový projekt** v části **Visual C#** nebo **Visual Basic**rozbalte uzel **Office/SharePoint** a pak vyberte **řešení SharePoint**.
 
 3. V podokně **šablony** vyberte **prázdný projekt SharePoint** pro konkrétní verzi SharePointu, kterou jste nainstalovali. Například pokud máte SharePoint 2016 nainstalovat, vyberte šablonu **projektu SharePoint 2016-Empty** .  
 
 4. Změňte název projektu na **Clinic**a pak klikněte na tlačítko **OK** .
 
-5. V dialogovém okně **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL místního webu služby SharePoint, ke kterému chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění (`http://<`*systémový*`>/)`.
+5. V dialogovém okně **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL místního webu služby SharePoint, ke kterému chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění ( `http://<` *systémový systém*) `>/)` .
 
-6. V části **co je úroveň důvěryhodnosti pro toto řešení služby SharePoint?** použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru (sandbox)** .
+6. V části **co je úroveň důvěryhodnosti pro toto řešení služby SharePoint?** použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru (sandbox)**.
 
      Další informace o řešeních v izolovaném prostoru a řešeních farmy najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
@@ -75,9 +74,9 @@ ms.locfileid: "74879347"
 
 3. Změňte název projektu na **Clinic**a pak klikněte na tlačítko **vytvořit** .
 
-4. V dialogovém okně **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL místního webu služby SharePoint, ke kterému chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění (`http://<`*systémový*`>/)`.
+4. V dialogovém okně **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL místního webu služby SharePoint, ke kterému chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění ( `http://<` *systémový systém*) `>/)` .
 
-5. V části **co je úroveň důvěryhodnosti pro toto řešení služby SharePoint?** použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru (sandbox)** .
+5. V části **co je úroveň důvěryhodnosti pro toto řešení služby SharePoint?** použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru (sandbox)**.
 
      Další informace o řešeních v izolovaném prostoru a řešeních farmy najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
@@ -86,11 +85,11 @@ ms.locfileid: "74879347"
 
 #### <a name="to-add-site-columns"></a>Přidání sloupců webu
 
-1. Přidá nový sloupec webu. To provedete tak, že v **Průzkumník řešení**kliknete pravým tlačítkem na projekt **Clinic** a pak zvolíte **Přidat** > **Nová položka**.
+1. Přidá nový sloupec webu. To provedete tak, že v **Průzkumník řešení**kliknete pravým tlačítkem na projekt **Clinic** a pak zvolíte **Přidat**  >  **novou položku**.
 
 2. V dialogovém okně **Přidat novou položku** zvolte **sloupec lokality**, změňte **název na jméno a potom**klikněte na tlačítko **Přidat** .
 
-3. V souboru *Elements. XML* sloupce webu ponechte nastavení **typ** jako **text**a změňte nastavení **skupiny** na hodnotu **Clinic Columns Columns**. Po dokončení by měl soubor *Elements. XML* sloupce webu vypadat jako v následujícím příkladu.
+3. V souboru *Elements.xml* sloupce webu ponechte nastavení **typ** jako **text**a změňte nastavení **skupiny** na považovat **sloupce webu**. Po dokončení by soubor *Elements.xml* sloupce webu měl vypadat jako v následujícím příkladu.
 
     ```xml
     <Field
@@ -116,9 +115,9 @@ ms.locfileid: "74879347"
 
 1. Přidejte do projektu typ obsahu. Chcete-li to provést, v **Průzkumník řešení**vyberte uzel projektu
 
-2. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
+2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
-3. V části **vizuál C#**  nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+3. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 4. V podokně **šablony** zvolte šablonu **typ obsahu** , změňte název na **informace o pacientech**a pak klikněte na tlačítko **Přidat** .
 
@@ -141,18 +140,18 @@ ms.locfileid: "74879347"
 
 10. Změňte **název skupiny** na **Clinicd Content Types**a ostatní nastavení ponechte na jejich výchozích hodnotách.
 
-11. V panelu nabídek zvolte možnost **soubor** > **Uložit vše**a pak Návrhář typu obsahu zavřete.
+11. V panelu **nabídek zvolte možnost**  >  **Uložit vše**a pak zavřete Návrhář typu obsahu.
 
-## <a name="create-a-list"></a>Vytvořit seznam
+## <a name="create-a-list"></a>Vytvoří seznam.
  Nyní vytvořte seznam, který používá nový typ obsahu a sloupce webu.
 
 #### <a name="to-create-a-list"></a>Vytvoření seznamu
 
 1. Přidejte do projektu seznam. Chcete-li to provést, v **Průzkumník řešení**vyberte uzel projektu.
 
-2. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
+2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
-3. V části **vizuál C#**  nebo **Visual Basic**rozbalte uzel **SharePoint** .
+3. V rámci **jazyka Visual C#** nebo **Visual Basic**rozbalte uzel **služby SharePoint** .
 
 4. V podokně **šablony** zvolte šablonu **seznamu** , změňte název na **pacienty**a pak klikněte na tlačítko **Přidat** .
 
@@ -172,7 +171,7 @@ ms.locfileid: "74879347"
 
     - Telefon domů
 
-    - E-mail
+    - E-Mail
 
     - Název lékaře
 
@@ -205,7 +204,7 @@ ms.locfileid: "74879347"
 
     - Telefon domů
 
-    - E-mail
+    - E-Mail
 
     - Název lékaře
 
@@ -222,7 +221,7 @@ ms.locfileid: "74879347"
 
 #### <a name="to-test-the-application"></a>Testování aplikace
 
-1. Na panelu nabídek vyberte možnost **soubor** > **Uložit vše**.
+1. V řádku nabídek vyberte **soubor**  >  **Uložit vše**.
 
 2. Spusťte aplikaci kliknutím na klávesu **F5** .
 
@@ -230,7 +229,7 @@ ms.locfileid: "74879347"
 
 3. Na panelu Rychlé navigace vyberte odkaz **pacienty** a zobrazte seznam **pacientů** .
 
-     Názvy sloupců v seznamu se musí shodovat s názvy, které jste zadali na kartě **zobrazení** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+     Názvy sloupců v seznamu se musí shodovat s názvy, které jste zadali na kartě **zobrazení** v části [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 4. Klikněte na odkaz **Přidat novou položku** a vytvořte kartu s informacemi o pacientech.
 

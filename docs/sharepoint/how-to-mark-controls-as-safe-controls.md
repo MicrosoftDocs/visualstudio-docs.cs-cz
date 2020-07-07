@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 232fef4908a6168d550d510a0d753fe8e39db02b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982729"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016253"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků
-  Z důvodu zabezpečení rozlišuje SharePoint mezi webovými ovládacími prvky, které jsou chráněny proti vkládání skriptu a webovým ovládacím prvkům, které nejsou. K chráněným ovládacím prvkům nebo *bezpečným ovládacím prvkům*může mít přístup nedůvěryhodní uživatelé. Ovládací prvky lze označit jako bezpečné v vlastnosti položky projektu služby SharePoint nebo v **Návrháři balíčku** při přidání sestavení do balíčku. Další informace naleznete v tématu
+  Z důvodu zabezpečení rozlišuje SharePoint mezi webovými ovládacími prvky, které jsou chráněny proti vkládání skriptu a webovým ovládacím prvkům, které nejsou. K chráněným ovládacím prvkům nebo *bezpečným ovládacím prvkům*může mít přístup nedůvěryhodní uživatelé. Ovládací prvky lze označit jako bezpečné v vlastnosti položky projektu služby SharePoint nebo v **Návrháři balíčku** při přidání sestavení do balíčku. Další informace najdete v tématu
 
-- [nastavení souboru Web. config mění](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) a [registruje sestavení webové části jako bezpečný ovládací prvek](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
+- [web.config nastavení souboru se změní](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) a [registruje sestavení webové části jako bezpečný ovládací prvek](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11)).
 
 > [!IMPORTANT]
 > Tyto postupy jsou pro ilustrativní účely. Označte ovládací prvky bezpečně pouze v případě, že jste si jisti, že jsou zabezpečené.
@@ -63,7 +62,7 @@ ms.locfileid: "72982729"
 
      Poznamenejte si obor názvů ovládacího prvku, protože je použit později.
 
-3. Na panelu nabídek vyberte **sestavení** > **Sestavit řešení** a sestavte projekt.
+3. Na panelu nabídek vyberte sestavit sestavení **Build**  >  **řešení** a sestavte projekt.
 
 4. Vytvořte další řešení SharePoint.
 

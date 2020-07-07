@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Přidání přijímačů událostí funkce | Dokumentace Microsoftu'
+title: 'Návod: Přidání přijímačů událostí funkce | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,108 +16,107 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0fc22e0c8ae0b0bdaf0729b3cdb3847cd25f580f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63008231"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015364"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>Návod: Přidání přijímačů událostí funkce
-  Přijímače událostí funkcí jsou metody, které jsou spuštěny při jedné z následujících událostí související s funkcí ve službě SharePoint:
+  Přijímače událostí funkcí jsou metody, které se spustí, když se v SharePointu vyskytne jedna z následujících událostí souvisejících s funkcemi:
 
-- Instalace součásti.
+- Je nainstalována funkce.
 
-- Se funkce aktivuje.
+- Aktivuje se funkce.
 
-- Funkce je deaktivováno.
+- Aktivuje se funkce.
 
-- Funkce se odebere.
+- Funkce je odebrána.
 
-  Tento návod ukazuje, jak přidat přijímače událostí funkcí v projektu služby SharePoint. To demonstruje následující úkoly:
+  Tento návod ukazuje, jak přidat přijímač událostí do funkce v projektu služby SharePoint. Ukazuje následující úlohy:
 
-- Vytvoření prázdného projektu pomocí příjemce událostí funkce.
+- Vytvoření prázdného projektu pomocí přijímače událostí funkce.
 
-- Zpracování **FeatureDeactivating** metody.
+- Zpracovává se metoda **FeatureDeactivating** .
 
-- Přidání oznámení do seznamu oznámení pomocí objektového modelu projektu SharePoint.
+- Pomocí modelu objektu projektu služby SharePoint můžete přidat oznámení do seznamu oznámení.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
-- Podporované vydání systému Microsoft Windows a SharePoint.
+- Podporované edice Microsoft Windows a SharePointu.
 
 - Visual Studio.
 
-## <a name="create-a-feature-event-receiver-project"></a>Vytvoření projektu příjemce událostí funkce
- Nejprve vytvořte projekt tak, aby obsahovala příjemce událostí funkce.
+## <a name="create-a-feature-event-receiver-project"></a>Vytvořit projekt přijímače událostí funkcí
+ Nejprve vytvořte projekt, který bude obsahovat přijímač událostí funkce.
 
-#### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Vytvoření projektu s příjemce událostí funkce
+#### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Vytvoření projektu s funkcí přijímače událostí
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** zobrazíte **nový projekt** dialogové okno.
+1. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-2. Rozbalte **SharePoint** uzlu buď **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **2010** uzlu.
+2. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
 
-3. V **šablony** podokně, vyberte **projektu služby SharePoint 2010** šablony.
+3. V podokně **šablony** vyberte šablonu **projektu SharePoint 2010** .
 
-     Tento typ projektu pro přijímačů událostí funkce použít, protože nemají žádné šablony projektu.
+     Tento typ projektu použijete pro přijímače událostí funkcí, protože nemají žádnou šablonu projektu.
 
-4. V **název** zadejte **FeatureEvtTest**a klikněte na tlačítko **OK** tlačítka pro zobrazení **Průvodce přizpůsobením SharePoint**.
+4. Do pole **název** zadejte **FeatureEvtTest**a potom kliknutím na tlačítko **OK** zobrazte **Průvodce přizpůsobením SharePointu**.
 
-5. Na **zadejte web a úroveň zabezpečení pro ladění** stránky, zadejte adresu URL webu služby SharePoint server, ke kterému chcete přidat novou položku vlastní pole nebo použijte výchozí umístění (http://\<*systému název*> /).
+5. Na stránce **Zadejte lokalitu a úroveň zabezpečení pro ladění** zadejte adresu URL serveru SharePoint Server, na který chcete přidat novou položku vlastního pole, nebo použijte výchozí umístění (http:// \<*system name*> /).
 
-6. V **co je úroveň důvěryhodnosti pro toto řešení SharePoint?** zvolte **nasadit jako řešení farmy** přepínač.
+6. V části **co je úroveň důvěryhodnosti pro toto řešení služby SharePoint?** vyberte možnost **nasadit jako řešení farmy** .
 
-     Další informace o řešení v izolovaném prostoru a řešení farmy najdete v tématu [aspekty řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
+     Další informace o řešeních v izolovaném prostoru a řešeních farmy najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
-7. Zvolte **Dokončit** tlačítko a Všimněte si, že funkce, která má název Feature1 je zobrazen **funkce** uzlu.
+7. Klikněte na tlačítko **Dokončit** a pak si všimněte, že se pod uzlem **funkce** zobrazí funkce s názvem Feature1.
 
-## <a name="add-an-event-receiver-to-the-feature"></a>Přidat přijímače událostí pro funkci
- V dalším kroku přidat přijímače událostí pro funkci a přidejte kód, který se spustí při deaktivaci funkce.
+## <a name="add-an-event-receiver-to-the-feature"></a>Přidání přijímače událostí do funkce
+ Dále přidejte do funkce přijímač událostí a přidejte kód, který se spustí při deaktivaci funkce.
 
-#### <a name="to-add-an-event-receiver-to-the-feature"></a>Chcete-li přidat přijímače událostí pro funkci
+#### <a name="to-add-an-event-receiver-to-the-feature"></a>Přidání přijímače událostí do funkce
 
-1. Otevřete místní nabídku pro uzel funkce a klikněte na tlačítko **přidat funkci** , aby vytvořil funkci.
+1. Otevřete místní nabídku uzlu funkce a pak zvolte možnost **Přidat funkci** a vytvořte funkci.
 
-2. V části **funkce** uzel, otevřete místní nabídku pro **Feature1**a klikněte na tlačítko **přidat příjemce událostí** přidat přijímače událostí pro funkci.
+2. V uzlu **funkce** otevřete místní nabídku pro **Feature1**a pak zvolte **Přidat přijímač událostí** a přidejte do této funkce přijímač událostí.
 
-     Tím se přidá soubor kódu v rámci Feature1. V takovém případě je buď název *Feature1.EventReceiver.cs* nebo *Feature1.EventReceiver.vb*, v závislosti na vývojovém jazyce vašeho projektu.
+     Tím se do Feature1 přidá soubor kódu. V tomto případě se jmenuje buď *Feature1.EventReceiver.cs* nebo *Feature1. EventReceiver. vb*, v závislosti na vývojovém jazyku vašeho projektu.
 
-3. Pokud váš projekt je napsán [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)], přidejte následující kód v horní části příjemce událostí, pokud ještě není:
+3. Pokud je projekt napsán v [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] , přidejte do horní části přijímače událostí následující kód, pokud tam ještě není:
 
      [!code-csharp[SP_FeatureEvt#1](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#1)]
 
-4. Přijímače událostí obsahuje několik metod komentovaná, které se chovají jako události. Nahradit **FeatureDeactivating** metoda následujícím kódem:
+4. Třída přijímač událostí obsahuje několik metod s komentářem, které fungují jako události. Metodu **FeatureDeactivating** nahraďte následujícím:
 
      [!code-vb[SP_FeatureEvt#2](../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb#2)]
      [!code-csharp[SP_FeatureEvt#2](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#2)]
 
-## <a name="test-the-feature-event-receiver"></a>Test příjemce událostí funkce
- V dalším kroku deaktivovat funkci otestovat, jestli **FeatureDeactivating** metoda výstup hlášení do seznamu Sharepointu oznámení.
+## <a name="test-the-feature-event-receiver"></a>Test přijímače událostí funkcí
+ Dále dezaktivujte funkci pro otestování, zda metoda **FeatureDeactivating** vypisuje oznámení do seznamu oznámení služby SharePoint.
 
-#### <a name="to-test-the-feature-event-receiver"></a>K otestování příjemce událostí funkce
+#### <a name="to-test-the-feature-event-receiver"></a>Otestování přijímače událostí funkcí
 
-1. Nastavte hodnotu vlastnosti projektu **aktivní konfiguraci nasazení** vlastnost **bez aktivace**.
+1. Nastavte hodnotu vlastnosti **Konfigurace aktivního nasazení** projektu na **bez aktivace**.
 
-     Nastavení této vlastnosti funkci brání aktivaci ve službě SharePoint a umožňuje ladění přijímačů událostí funkce. Další informace najdete v tématu [řešení ladění služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
+     Nastavením této vlastnosti zabráníte funkci v aktivaci služby SharePoint a budete moci ladit přijímače událostí funkcí. Další informace najdete v tématu [ladění řešení služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
 
-2. Zvolte **F5** klávesy spusťte projekt a nasaďte ji do služby SharePoint.
+2. Kliknutím na klávesu **F5** spusťte projekt a nasaďte ho na SharePoint.
 
-3. V horní části stránky na webu služby SharePoint, otevřete **Akce webu** nabídky a klikněte na tlačítko **nastavení webu**.
+3. V horní části webové stránky služby SharePoint otevřete nabídku **Akce webu** a zvolte možnost **Nastavení webu**.
 
-4. V části **Akce webu** část **nastavení webu** zvolte **spravovat funkce webu** odkaz.
+4. V části **Akce webu** na stránce **nastavení lokality** vyberte odkaz **Spravovat funkce webu** .
 
-5. Na **funkce** zvolte **aktivovat** vedle **FeatureEvtTest Feature1** funkce.
+5. Na stránce **funkce** klikněte na tlačítko **aktivovat** vedle funkce **FeatureEvtTest Feature1** .
 
-6. Na **funkce** zvolte **deaktivovat** vedle **FeatureEvtTest Feature1** funkce a klikněte na tlačítko **deaktivovat tuto funkci**  potvrzovacího odkazu deaktivace funkce.
+6. Na stránce **funkce** klikněte na tlačítko **deaktivovat** vedle funkce **FeatureEvtTest Feature1** a pak klikněte na odkaz **deaktivovat tuto funkci** pro deaktivaci této funkce.
 
-7. Zvolte **Domů** tlačítko.
+7. Klikněte na tlačítko **Domů** .
 
-     Všimněte si, že se zobrazí v oznámení **oznámení** seznamu po deaktivaci funkce.
+     Všimněte si, že se oznámení zobrazí v seznamu **oznámení** po deaktivaci této funkce.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
+- [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,7 +1,7 @@
 ---
-title: Import vlastní stránky předlohy a stránky webu s obrázkem
+title: Importovat vlastní stránku & stránky webu s obrázkem
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,49 +13,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bd2d9054571e52bc9fbb3906bc1880bb94e407a
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66400898"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015686"
 ---
-# <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Návod: Import vlastní stránky předlohy a stránky webu s obrázkem
-  Tento návod ukazuje, jak importovat vlastní stránku SharePoint předlohy a stránky webu s obrázkem do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.
+# <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>Návod: import vlastní stránky předlohy a stránky webu s obrázkem
+  Tento návod ukazuje, jak importovat vlastní stránku předlohy služby SharePoint a stránku webu, která obsahuje obrázek do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint.
 
  Tento návod ukazuje, jak provádět následující úlohy:
 
-- Vytvoření vlastní stránky předlohy a stránky webu s použitím image v SharePoint designeru.
+- Vytvoření vlastní stránky předlohy a stránky webu pomocí obrázku v aplikaci SharePoint Designer.
 
-- Exportovat vlastní stránku předlohy, image a stránku webu do řešení služby SharePoint ( *.wsp*) soubor.
+- Exportujte vlastní stránku předlohy, obrázek a stránku webu do souboru řešení služby SharePoint (*. wsp*).
 
-- Importujte a nasaďte *.wsp* do souboru [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint pomocí aplikace project importovat balíček řešení služby SharePoint.
+- Importujte a nasaďte soubor *. wsp* do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu služby SharePoint pomocí projektu Import balíčku řešení služby SharePoint.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Požadavky
- Musíte mít následující součásti k dokončení tohoto návodu:
+ K dokončení tohoto Názorného postupu musíte mít následující komponenty:
 
-- Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
+- Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
 
 - Visual Studio.
 
 - SharePoint Designer 2010.
 
-## <a name="create-items-in-sharepoint-designer"></a>Vytvoření položek v aplikaci SharePoint Designer
- Tento příklad ukazuje, jak vytvořit tři položky v SharePoint designeru pro export: vlastní stránku předlohy, stránku webu, který odkazuje na vlastní stránky předlohy a souboru obrázku, který se zobrazí na stránce webu. Na obrázku je přidána do /images/ složky v Sharepointu.
+## <a name="create-items-in-sharepoint-designer"></a>Vytváření položek v SharePoint designeru
+ Tento příklad ukazuje, jak vytvořit tři položky v Návrháři SharePoint pro export: vlastní stránku předlohy, stránku lokality, která odkazuje na vlastní stránku předlohy, a soubor obrázku, který se má zobrazit na stránce webu. Obrázek se přidá do složky/images/na SharePointu.
 
-#### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>Chcete-li vytvořit vlastní stránku předlohy v aplikaci SharePoint Designer
+#### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>Vytvoření vlastní stránky předlohy v Návrháři služby SharePoint
 
-1. V aplikaci SharePoint Designer, vyberte v navigačním podokně **stránky předlohy** objektu lokality.
+1. V Návrháři služby SharePoint v navigačním podokně vyberte objekt lokality **hlavní stránky** .
 
-2. Na **stránky předlohy** pásu karet, zvolte **prázdnou stránku předlohy**.
+2. Na pásu karet **stránky předlohy** vyberte možnost **prázdná stránka předlohy**.
 
-3. Zvolte nové stránky předlohy a potom na **stránky předlohy** pásu karet, zvolte **upravit soubor**.
+3. Zvolte novou stránku předlohy a pak na pásu karet **stránky předlohy** zvolte **Upravit soubor**.
 
-4. V dolní části návrháře služby SharePoint, zvolte **kód** kartu.
+4. V dolní části návrháře služby SharePoint klikněte na kartu **kód** .
 
-5. Nahraďte stávající kód následujícím kódem.
+5. Nahraďte existující kód následujícím kódem.
 
     ```aspx-csharp
     <%@ Master Language="C#" %>
@@ -76,39 +75,39 @@ ms.locfileid: "66400898"
     </html>
     ```
 
-6. Uložit na stránku, zvolte **stránky předlohy** kartu a přejmenovat na hlavní stránce jako **mybasic1.master**.
+6. Uložte stránku, klikněte na kartu **stránky předlohy** a přejmenujte stránku předlohy jako **mybasic1. Master**.
 
-## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>Přidání obrázku na databázi obsahu v aplikaci SharePoint Designer
- Nyní můžete přidat obrázek, který se zobrazí na stránce webu. Image bude nasazena na databázi obsahu služby SharePoint.
+## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>Přidání obrázku do databáze obsahu v Návrháři služby SharePoint
+ Nyní můžete přidat obrázek, který se zobrazí na stránce webu. Bitová kopie je nasazena do databáze obsahu služby SharePoint.
 
-#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>Chcete-li přidat bitovou kopii do databáze obsahu v aplikaci SharePoint Designer
+#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>Přidání obrázku do databáze obsahu v Návrháři služby SharePoint
 
-1. V navigačním podokně, vyberte **všechny soubory** lokality objektu a zvolte ve stromovém zobrazení klikněte **imagí** složky.
+1. V navigačním podokně zvolte objekt lokality **všechny soubory** a potom ve stromovém zobrazení zvolte složku **obrázky** .
 
-2. Na **všechny soubory** pásu karet, zvolte **Import souborů**, zvolte soubor podle vašeho výběru a klikněte na tlačítko **OK** tlačítko. V tomto příkladu je název souboru **myimg1.png**.
+2. Na pásu karet **všechny soubory** zvolte možnost **importovat soubory**, zvolte požadovaný soubor a pak klikněte na tlačítko **OK** . V tomto příkladu je soubor pojmenován **myimg1.png**.
 
-     Volitelně můžete vytvořit podsložku kvůli lepší organizaci bitové kopie.
+     Volitelně můžete vytvořit podsložku, která bude lépe organizovat obrázky.
 
-3. Zavřít **Import** dialogové okno.
+3. Zavřete dialogové okno **Import** .
 
 ## <a name="create-a-site-page"></a>Vytvoření stránky webu
- Tato stránka základního webu používá vlastní stránky předlohy a zobrazí obrázek, který jste přidali v předchozím kroku.
+ Tato stránka základního webového serveru používá vlastní stránku předlohy a zobrazuje obrázek, který jste přidali v předchozím kroku.
 
-#### <a name="to-create-a-site-page"></a>Chcete-li vytvořit stránku webu
+#### <a name="to-create-a-site-page"></a>Vytvoření stránky webu
 
-1. V navigačním podokně, vyberte **stránky webu** objektu.
+1. V navigačním podokně vyberte objekt **stránky webu** .
 
-2. Na **stránky** pásu karet, zvolte **stránky** tlačítko, zvolte **ASPX** typ stránky a potom zadejte název nového souboru **mycontentpage1.aspx**.
+2. Na pásu karet **stránky** klikněte na tlačítko **Stránka** , zvolte typ stránky **aspx** a potom zadejte název nového souboru **MyContentPage1. aspx**.
 
-     Volitelně můžete vytvořit podsložku kvůli lepší organizaci stránky webu.
+     Volitelně můžete vytvořit podsložku, která bude pomáhat organizovat stránky webu.
 
-3. V seznamu stránek webu zvolte **MyContentPage1.aspx** otevřete jeho stránku vlastností a pak v dolní části stránky zvolte **upravit soubor** odkaz.
+3. V seznamu stránky webu zvolte **MyContentPage1. aspx** , otevřete stránku vlastností a potom v dolní části stránky klikněte na odkaz **Upravit soubor** .
 
-     Pokud zpráva se zobrazí a říká, že tato stránka neobsahuje žádné oblasti, které lze upravit v nouzovém režimu a zeptá, jestli chcete tuto stránku otevřít v rozšířeném režimu, zvolte **Ano** tlačítko.
+     Pokud se zobrazí zpráva s oznámením, že tato stránka neobsahuje žádné oblasti, které lze upravovat v bezpečném režimu, a zeptá se, jestli chcete otevřít tuto stránku v rozšířeném režimu, klikněte na tlačítko **Ano** .
 
-4. V dolní části stránky zvolte **kód** tlačítko.
+4. V dolní části stránky klikněte na tlačítko **kód** .
 
-5. Nahraďte stávající kód následujícím kódem.
+5. Nahraďte existující kód následujícím kódem.
 
     ```aspx-csharp
     <%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
@@ -124,59 +123,59 @@ ms.locfileid: "66400898"
     </asp:Content>
     ```
 
-6. Uložte aktualizovaný web stránky.
+6. Uložte aktualizovanou stránku webu.
 
-## <a name="export-the-items-from-sharepoint"></a>Export položek ze Sharepointu
- Export položek ze Sharepointu do řešení služby SharePoint ( *.wsp*) soubor.
+## <a name="export-the-items-from-sharepoint"></a>Exportovat položky ze SharePointu
+ Exportujte položky ze SharePointu do souboru řešení služby SharePoint (*. wsp*).
 
-#### <a name="to-export-items-from-sharepoint-designer"></a>Export položky z aplikace SharePoint Designer
+#### <a name="to-export-items-from-sharepoint-designer"></a>Export položek z aplikace SharePoint Designer
 
-1. V aplikaci SharePoint Designer, vyberte v navigačním podokně **týmový web** objektu a potom na **lokality** pásu karet, zvolte **uložit jako šablonu**.
+1. V Návrháři služby SharePoint v navigačním podokně zvolte objekt **týmového webového serveru** a poté na pásu karet **Web** zvolte možnost **Uložit jako šablonu**.
 
-2. V **uložit jako šablonu** dialogového okna zadejte název souboru a název šablony, vyberte **zahrnout obsah** zaškrtněte políčko a klikněte na tlačítko **OK** tlačítko.
+2. V dialogovém okně **Uložit jako šablonu** zadejte název souboru a název šablony, zaškrtněte políčko **Zahrnout obsah** a pak klikněte na tlačítko **OK** .
 
-     Tato akce uloží obsah lokality *.wsp* souboru.
+     Tím se uloží obsah webu v souboru *WSP* .
 
-3. Až se exportuje řešení, zvolte **Galerie řešení** odkaz zobrazíte seznam souborů k dispozici řešení.
+3. Po exportu řešení vyberte odkaz **Galerie řešení** a zobrazte seznam dostupných souborů řešení.
 
-4. Otevřete místní nabídku pro nový *.wsp* souboru a klikněte na tlačítko **Uložit cíl jako** ji uložit do systému.
+4. Otevřete místní nabídku nového souboru *WSP* a zvolte možnost **Uložit cíl jako** a uložte ji do systému.
 
-## <a name="import-the-items-into-visual-studio"></a>Importovat položky do sady Visual Studio
- Import *.wsp* soubor do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Po importu obsahu můžete přizpůsobit ji, přidat další položky a potom ji nasadíte.
+## <a name="import-the-items-into-visual-studio"></a>Import položek do sady Visual Studio
+ Importujte soubor *. wsp* do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Po importu obsahu ho můžete přizpůsobit, přidat další položky a pak ho nasadit.
 
-#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Import položek ze souboru WSP do sady Visual Studio
+#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Import položek ze souboru. wsp do sady Visual Studio
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vytvořte **importovat balíček řešení služby SharePoint 2010** projektu.
+1. V nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvořte projekt **importu balíčku řešení SharePoint 2010** .
 
-2. Na **vybrat položky k importu** stránce v části **modulu** v **typ** sloupců, zaškrtněte políčka pro pouze soubory v následující tabulce pro import.
+2. Na stránce **Vybrat položky, které mají být importovány** v části **modul** ve sloupci **typ** zaškrtněte políčka pro import pouze ze souborů v následující tabulce.
 
    | Název souboru | Popis |
    |------------------------|-----------------------------------------------|
-   | \_catalogsmasterpage\_ | Vlastní stránky předlohy. |
-   | images_ | Soubor obrázku v systému souborů služby SharePoint. |
+   | \_catalogsmasterpage\_ | Vlastní stránka předlohy. |
+   | images_ | Soubor bitové kopie v systému souborů SharePoint. |
    | SitePages_ | Stránka webu. |
 
-3. Zvolte **Dokončit** tlačítko Import vybraných položek.
+3. Kliknutím na tlačítko **Dokončit** naimportujete vybrané položky.
 
-4. V **Průzkumníka řešení**, zvolte \_catalogsmasterpage\_ uzel a nastavte hodnotu jeho **řešení konfliktů při nasazení** vlastnost **automatické** .
+4. V **Průzkumník řešení**vyberte \_ \_ uzel catalogsmasterpage a nastavte hodnotu vlastnosti **řešení konfliktů nasazení** na hodnotu **automaticky**.
 
-    To pomáhá zajistit, že všechny konflikty nasazení jsou řešeny automaticky.
+    To pomáhá zajistit, aby byly všechny konflikty nasazení vyřešeny automaticky.
 
-5. Pokud vaše nová stránka předlohy má stejný název jako existující stránky, ujistěte se, že existující stránky není označena jako hlavní stránky výchozí nebo vlastní stránky předlohy v SharePoint designeru.
+5. Pokud má nová stránka předlohy stejný název jako existující stránka, ujistěte se, že existující stránka není označena jako výchozí stránka předlohy nebo vlastní stránka předlohy v Návrháři služby SharePoint.
 
-    Pokud stávající stránky předlohy je označená jako výchozí stránky předlohy nebo vlastní stránky předlohy, zobrazí se chyba nasazení, která uvádí, že nelze odstranit stránky předlohy. Chcete-li tomuto problému vyhnout, postupujte takto:
+    Pokud je existující stránka předlohy označená jako výchozí stránka předlohy nebo vlastní stránka předlohy, zobrazí se chyba nasazení, která uvádí, že nelze odstranit hlavní stránku. Chcete-li se tomuto problému vyhnout, postupujte takto:
 
-   - Pokud stávající stránky předlohy je nastavená na výchozí stránce předlohy, jiné stránky předlohy dočasně nastaví jako výchozí stránky předlohy. Poté, co nasadíte soubory do služby SharePoint, nastavte jako výchozí stránku předlohy nové stránky předlohy.
+   - Pokud je existující stránka předlohy nastavena jako výchozí stránka předlohy, dočasně nastavte jinou stránku předlohy jako výchozí stránku předlohy. Po nasazení souborů do služby SharePoint nastavte novou stránku předlohy jako výchozí stránku předlohy.
 
-   - Pokud je existující stránky předlohy nastavená jako vlastní stránky předlohy, dočasně nastaví jiné stránky předlohy jako vlastní stránky předlohy. Poté, co nasadíte soubory do služby SharePoint, nastavení nové stránky předlohy jako vlastní stránky předlohy.
+   - Pokud je existující stránka předlohy nastavena jako vlastní stránka předlohy, dočasně nastavte jinou stránku předlohy jako vlastní stránku předlohy. Po nasazení souborů do služby SharePoint nastavte novou stránku předlohy jako vlastní stránku předlohy.
 
-6. V panelu nabídky zvolte **sestavení** > **nasadit řešení**.
+6. Na panelu nabídek vyberte **sestavení**  >  **nasadit řešení**.
 
-7. Otevřete web služby SharePoint k zobrazení nasazené položky.
+7. Otevřete web služby SharePoint pro zobrazení nasazených položek.
 
-   Alternativní způsob importu souborů do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a nasazovat je do služby SharePoint, je přidat soubory do modulů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Jak: Import stránky předlohy nebo motivu](../sharepoint/how-to-import-a-master-page-or-theme.md) a [vložení souborů do řešení pomocí modulů](../sharepoint/using-modules-to-include-files-in-the-solution.md).
+   Alternativní způsob importu souborů do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] služby SharePoint a jejich nasazení do služby SharePoint je přidání souborů do modulů v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Postupy: Import stránky předlohy nebo motivu](../sharepoint/how-to-import-a-master-page-or-theme.md) a [použití modulů k zahrnutí souborů v řešení](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 
 ## <a name="see-also"></a>Viz také:
-- [Import položek z existující stránky SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [Import položek z existujícího webu služby SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
-- [Vytvoření opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Zahrnutí souborů pomocí modulu | Dokumentace Microsoftu'
+title: 'Postupy: zahrnutí souborů pomocí modulu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,55 +13,54 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5813a6f89062bf53f7f8c0b57b4ed3a8ef9c4edf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 1ada86be30e207e36c7e0d84d3fd5dd877605e4d
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813641"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016302"
 ---
-# <a name="how-to-include-files-by-using-a-module"></a>Postupy: Zahrnutí souborů pomocí modulu
-  *Moduly* (Nezaměňovat s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) jsou kontejnery, které vám umožňují nasazovat Image, textové soubory nebo soubory, jako jsou hlavní stránky ASPX do Sharepointu.
+# <a name="how-to-include-files-by-using-a-module"></a>Postupy: zahrnutí souborů pomocí modulu
+  *Moduly* (nezaměňovat s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) jsou kontejnery, které umožňují nasadit soubory, jako jsou hlavní stránky ASPX, textové soubory nebo obrázky, do SharePointu.
 
- Můžete k nasazení souboru do knihovny dokumentů nebo jako normální soubor (například default.aspx) mimo knihovnu dokumentů. Chcete-li přidat soubor do knihovny dokumentů, zadejte `Type="GhostableInLibrary"` jako atribut v **souboru** elementu. Toto nastavení nastaví Sharepointu vytvořit položku seznamu pro váš soubor při přidání do knihovny. Pokud chcete nasadit soubor mimo knihovnu dokumentů, zadejte `Type="Ghostable"` nebo jednoduše vynechejte **typ** atribut.
+ Můžete zvolit nasazení souboru do knihovny dokumentů nebo jako normální soubor (například default. aspx) mimo knihovnu dokumentů. Chcete-li přidat soubor do knihovny dokumentů, zadejte `Type="GhostableInLibrary"` jako atribut v elementu **File** . Toto nastavení dá službě SharePoint pokyn, aby při přidání do knihovny vytvořila položku seznamu, která má přejít k souboru. Chcete-li nasadit soubor mimo knihovnu dokumentů, buď zadejte `Type="Ghostable"` nebo pouze vynechejte atribut **Type** .
 
-## <a name="add-a-module-to-a-sharepoint-solution"></a>Přidat modul do řešení služby SharePoint
+## <a name="add-a-module-to-a-sharepoint-solution"></a>Přidání modulu do řešení služby SharePoint
 
-#### <a name="to-add-a-module"></a>Přidat modul
+#### <a name="to-add-a-module"></a>Přidání modulu
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], otevření nebo vytvoření projektu služby SharePoint.
+1. V aplikaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete nebo vytvořte projekt služby SharePoint.
 
-     Další informace najdete v tématu [SharePoint šablony položek projektu a projekt](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Další informace naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. V **Průzkumníka řešení**, zvolte uzel projektu a pak na panelu nabídek zvolte **projektu** > **přidat novou položku**.
+2. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
-     **Přidat novou položku** zobrazí se dialogové okno.
+     Otevře se dialogové okno **Přidat novou položku** .
 
-3. V seznamu šablon služby SharePoint, zvolte **modulu** šablony a klikněte na tlačítko **přidat** tlačítko.
+3. V seznamu šablon služby SharePoint zvolte šablonu **modulu** a pak klikněte na tlačítko **Přidat** .
 
-     Tento krok vytvoří uzel v projektu s názvem modulu 1.
+     Tento krok vytvoří uzel v projektu s názvem Module1.
 
-4. V části Module1, odstranit *ukázka.txt* souboru.
+4. V části Module1 odstraňte soubor *Sample.txt* .
 
-     Ukázka.txt je součástí všechny nové moduly například účely a není potřeba. (Všimněte si, že soubor odstranit také odebere jeho položku z modulu *Elements.xml* souboru.)
+     Sample.txt je součástí všech nových modulů pro účely tohoto příkladu a není potřeba. (Všimněte si, že odstranění souboru také odebere jeho položku z *Elements.xml* souboru modulu.)
 
-5. Pokud chcete, aby vaše soubory k nasazení do struktury konkrétní složky v Sharepointu, vytváření těchto složek v rámci modulu 1 v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kliknutím na možnost Module1 uzel a potom na panelu nabídek, výběrem **projektu**, **nový Složka**.
+5. Chcete-li, aby soubory byly nasazeny do konkrétní struktury složek v SharePointu, vytvořte tyto složky v oblasti Module1 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kliknutím na uzel Module1 a potom v řádku nabídek zvolte možnost **projekt**, **Nová složka**.
 
-6. Vyberte složku, ve které chcete přidat soubor a pak na panelu nabídek zvolte **projektu**, **přidat existující položku**.
+6. Zvolte složku, do které chcete soubor přidat, a poté v panelu nabídek zvolte možnost **projekt**, **Přidat existující položku**.
 
-7. Vyberte jeden nebo více souborů, které chcete nasadit do Sharepointu a klikněte na tlačítko **přidat** tlačítko.
+7. Zvolte jeden nebo více souborů, které chcete nasadit na SharePoint, a pak klikněte na tlačítko **Přidat** .
 
-     Při přidání souboru do projektu položku, se automaticky přidá do souboru Elements.xml modulu. Při nasazení projektu soubory se zkopírují na server SharePoint, vzhledem k projektu kořenový adresář, který je určený **souboru** elementu **Url** atribut, například `Url="Module1/New Folder/SomeFile.doc`. Pokud chcete změnit umístění nasazení pro soubor, buď ji přesunout do jiné složky v **Průzkumníka řešení** nebo změnit jeho **Url** nastavení.
+     Když do projektu přidáte soubor, automaticky se přidá položka pro tento soubor modulu Elements.xml. Po nasazení projektu jsou soubory zkopírovány na server SharePoint, relativně k kořenovému adresáři projektu, který je určen atributem **URL** elementu **souboru** , například `Url="Module1/New Folder/SomeFile.doc` . Pokud chcete změnit umístění nasazení souboru, přesuňte ho buď do jiné složky v **Průzkumník řešení** nebo změňte jeho nastavení **adresy URL** .
 
-8. Všechny soubory, které chcete zobrazit v knihovně dokumentů, připojte `Type="GhostableInLibrary"` atribut jejich záznamu ve *Elements.xml*. Například
+8. Pro všechny soubory, které se mají zobrazit v knihovně dokumentů, přidejte `Type="GhostableInLibrary"` atribut ke své položce v *Elements.xml*. Třeba
 
     ```xml
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />
     ```
 
-9. Nasazení projektu.
+9. Nasaďte projekt.
 
-     Zkopírujte soubory do určitých umístění ve službě SharePoint.
+     Soubory se zkopírují do zadaných umístění na SharePointu.
 
 ## <a name="see-also"></a>Viz také:
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

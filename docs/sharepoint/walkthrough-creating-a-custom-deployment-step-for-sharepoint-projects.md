@@ -1,7 +1,7 @@
 ---
 title: Vytvoření vlastního kroku nasazení pro projekty SharePoint
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0053b279dfdc0fd80608efb7fb663cacf217f1c7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984943"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015890"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint
   Když nasadíte projekt služby SharePoint, sada Visual Studio provede řadu kroků nasazení v určitém pořadí. Visual Studio obsahuje mnoho vestavěných kroků nasazení, ale můžete si také vytvořit vlastní.
@@ -67,11 +66,11 @@ ms.locfileid: "72984943"
 
 #### <a name="to-create-the-vsix-project"></a>Vytvoření projektu VSIX
 
-1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt**.
+2. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-3. V dialogovém okně **Nový projekt** rozbalte uzel **vizuály C#**  nebo **Visual Basic** a pak zvolte uzel **rozšiřitelnost** .
+3. V dialogovém okně **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** a pak zvolte uzel **rozšiřitelnost** .
 
     > [!NOTE]
     > Uzel **rozšiřitelnosti** je k dispozici pouze v případě, že instalujete sadu Visual Studio SDK. Další informace najdete v části požadavky výše v tomto tématu.
@@ -80,19 +79,19 @@ ms.locfileid: "72984943"
 
 5. Zvolte šablonu **projektu VSIX** , pojmenujte projekt **UpgradeDeploymentStep**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] přidá projekt **UpgradeDeploymentStep** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **UpgradeDeploymentStep** do **Průzkumník řešení**.
 
 #### <a name="to-create-the-extension-project"></a>Vytvoření projektu rozšíření
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení UpgradeDeploymentStep, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte uzel  **C# Visual** nebo **Visual Basic** a pak vyberte uzel **Windows** .
+2. V dialogovém okně **Nový projekt** rozbalte uzly **Visual C#** nebo **Visual Basic** a pak vyberte uzel **Windows** .
 
 3. V horní části dialogového okna vyberte v seznamu verzí .NET Framework **.NET Framework 4,5** .
 
 4. Zvolte šablonu projektu **Knihovna tříd** , pojmenujte projekt **DeploymentStepExtension**a pak klikněte na tlačítko **OK** .
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] do řešení přidá projekt **DeploymentStepExtension** a otevře soubor Default Class1 Code.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]přidá projekt **DeploymentStepExtension** do řešení a otevře soubor Default Class1 Code.
 
 5. Odstraňte soubor kódu Class1 z projektu.
 
@@ -100,7 +99,7 @@ ms.locfileid: "72984943"
 
 1. V **Průzkumník řešení**otevřete místní nabídku uzlu řešení UpgradeDeploymentStep, zvolte možnost **Přidat**a pak zvolte možnost **Nový projekt**.
 
-2. V dialogovém okně **Nový projekt** rozbalte položku  **C# Visual** nebo **Visual Basic**a pak vyberte uzel **Windows** .
+2. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic**a pak vyberte uzel **Windows** .
 
 3. V horní části dialogového okna vyberte v seznamu verzí .NET Framework **.NET Framework 3,5** .
 
@@ -140,7 +139,7 @@ ms.locfileid: "72984943"
     - Microsoft. VisualStudio. SharePoint. Commands
 
 ## <a name="define-the-custom-deployment-step"></a>Definování vlastního kroku nasazení
- Vytvořte třídu, která definuje krok upgradu nasazení. Chcete-li definovat krok nasazení, třída implementuje rozhraní <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>. Toto rozhraní implementujte vždy, když chcete definovat vlastní krok nasazení.
+ Vytvořte třídu, která definuje krok upgradu nasazení. Pro definování kroku nasazení třída implementuje <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> rozhraní. Toto rozhraní implementujte vždy, když chcete definovat vlastní krok nasazení.
 
 #### <a name="to-define-the-custom-deployment-step"></a>Definování vlastního kroku nasazení
 
@@ -155,7 +154,7 @@ ms.locfileid: "72984943"
 ## <a name="create-a-deployment-configuration-that-includes-the-custom-deployment-step"></a>Vytvoření konfigurace nasazení, která zahrnuje krok vlastního nasazení
  Vytvořte rozšíření projektu pro novou konfiguraci nasazení, které zahrnuje několik vestavěných kroků nasazení a nový krok nasazení upgradu. Vytvořením tohoto rozšíření pomůžete vývojářům služby SharePoint použít krok upgradu nasazení v projektech služby SharePoint.
 
- Chcete-li vytvořit konfiguraci nasazení, třída implementuje rozhraní <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>. Implementujte toto rozhraní vždy, když chcete vytvořit rozšíření projektu služby SharePoint.
+ Chcete-li vytvořit konfiguraci nasazení, třída implementuje <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> rozhraní. Implementujte toto rozhraní vždy, když chcete vytvořit rozšíření projektu služby SharePoint.
 
 #### <a name="to-create-the-deployment-configuration"></a>Vytvoření konfigurace nasazení
 
@@ -174,7 +173,7 @@ ms.locfileid: "72984943"
      [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#4)]
      [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#4)]
 
-## <a name="checkpoint"></a>Kontrolní bod
+## <a name="checkpoint"></a>CheckPoint
  V tomto okamžiku v tomto návodu se všechny kódy pro vlastní krok nasazení a příkazy služby SharePoint nyní nacházejí v projektech. Sestavujte je, abyste měli jistotu, že se zkompiluje bez chyb.
 
 #### <a name="to-build-the-projects"></a>Sestavení projektů
@@ -205,7 +204,7 @@ ms.locfileid: "72984943"
 6. V seznamu **typ** vyberte možnost **Microsoft. VisualStudio. MefComponent**.
 
     > [!NOTE]
-    > Tato hodnota odpovídá prvku `MefComponent` v souboru extension. vsixmanifest. Tento prvek určuje název sestavení rozšíření v balíčku VSIX. Další informace naleznete v tématu [MefComponent element (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
+    > Tato hodnota odpovídá `MefComponent` prvku v souboru extension. vsixmanifest. Tento prvek určuje název sestavení rozšíření v balíčku VSIX. Další informace naleznete v tématu [MefComponent element (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
 7. V seznamu **zdroj** vyberte **projekt v aktuálním řešení**.
 
@@ -224,7 +223,7 @@ ms.locfileid: "72984943"
 
 12. V seznamu **projekt** zvolte možnost **SharePointCommands**a pak klikněte na tlačítko **OK** .
 
-13. Na panelu nabídek zvolte **sestavit** > **Sestavit řešení**a pak se ujistěte, že se řešení zkompiluje bez chyb.
+13. V panelu nabídek zvolte **sestavit**  >  **sestavení řešení**a pak se ujistěte, že se řešení zkompiluje bez chyb.
 
 14. Ujistěte se, že výstupní složka sestavení pro projekt UpgradeDeploymentStep nyní obsahuje soubor UpgradeDeploymentStep. VSIX.
 
@@ -239,17 +238,17 @@ ms.locfileid: "72984943"
 
 1. Restartujte Visual Studio s přihlašovacími údaji správce a pak otevřete řešení UpgradeDeploymentStep.
 
-2. V projektu DeploymentStepExtension otevřete soubor kódu UpgradeStep a poté přidejte zarážku do prvního řádku kódu v metodě `CanExecute` a `Execute`.
+2. V projektu DeploymentStepExtension otevřete soubor kódu UpgradeStep a poté přidejte zarážku do prvního řádku kódu v `CanExecute` `Execute` metodách a.
 
-3. Spusťte ladění výběrem klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění** > **Spustit ladění**.
+3. Spusťte ladění tak, že vyberete klávesu **F5** nebo v řádku nabídek vyberete **ladění**  >  **Spustit ladění**.
 
 4. Visual Studio nainstaluje rozšíření pro%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Upgrade nasazení služby SharePoint Projects\1.0 a spustí experimentální instanci sady Visual Studio. Otestujete krok nasazení upgradu v této instanci aplikace Visual Studio.
 
 #### <a name="to-create-a-sharepoint-project-with-a-list-definition-and-a-list-instance"></a>Vytvoření projektu služby SharePoint s definicí seznamu a instancí seznamu
 
-1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
+1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-2. V dialogovém **okně Nový projekt** rozbalte uzel  **C# vizuál** nebo uzel **Visual Basic** , rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+2. V dialogovém okně **Nový projekt** rozbalte uzel **Visual C#** nebo **Visual Basic** uzel, rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 3. V horní části dialogového okna se ujistěte, že se v seznamu verzí .NET Framework zobrazí **.NET Framework 3,5** .
 
@@ -266,7 +265,7 @@ ms.locfileid: "72984943"
 
 7. Klikněte na tlačítko **Dokončit** .
 
-    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří projekt EmployeesListDefinition.
+    [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Vytvoří projekt EmployeesListDefinition.
 
 8. Otevřete místní nabídku projektu EmployeesListDefinition, zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
 
@@ -284,13 +283,13 @@ ms.locfileid: "72984943"
 
     3. V seznamu **vytvořit přizpůsobitelný seznam na základě:** je zvolena možnost **výchozí (prázdná)** .
 
-       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří položku seznamu zaměstnanci se sloupcem název a jedinou prázdnou instancí a otevře se Návrhář seznamu.
+       [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvoří položku seznamu zaměstnanci se sloupcem název a jedinou prázdnou instancí a otevře se Návrhář seznamu.
 
 12. V Návrháři seznamu na kartě **sloupce** vyberte řádek **Zadejte nový nebo existující název sloupce** a přidejte následující sloupce do seznamu **Zobrazovaný název sloupce** :
 
-    1. Křestní jméno
+    1. Jméno
 
-    2. Podnikový
+    2. Společnost
 
     3. Telefon do zaměstnání
 
@@ -300,7 +299,7 @@ ms.locfileid: "72984943"
 
 14. V **Průzkumník řešení**rozbalte uzel **seznam zaměstnanci** a potom rozbalte uzel **seznam zaměstnanců instance** podřízeného uzlu.
 
-15. V souboru *Elements. XML* nahraďte výchozí XML v tomto souboru následujícím kódem XML. Tento kód XML změní název seznamu na **Employees** a přidá informace pro zaměstnance s názvem jim Hance.
+15. V souboru *Elements.xml* nahraďte výchozí XML v tomto souboru následujícím kódem XML. Tento kód XML změní název seznamu na **Employees** a přidá informace pro zaměstnance s názvem jim Hance.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -325,7 +324,7 @@ ms.locfileid: "72984943"
     </Elements>
     ```
 
-16. Uložte a zavřete soubor *Elements. XML* .
+16. Uložte a zavřete soubor *Elements.xml* .
 
 17. Otevřete místní nabídku pro projekt EmployeesListDefinition a pak zvolte možnost **otevřít** nebo **vlastnosti**.
 
@@ -339,7 +338,7 @@ ms.locfileid: "72984943"
 
 2. V okně **vlastnosti** zkontrolujte, zda je vlastnost **Konfigurace aktivního nasazení** nastavena na hodnotu **výchozí**.
 
-3. Klikněte na klávesu **F5** nebo na panelu nabídek vyberte možnost **ladit** > **Spustit ladění**.
+3. Klikněte na klávesu **F5** nebo na panelu nabídek vyberte **ladění**  >  **Spustit ladění**.
 
 4. Ověřte, že se projekt úspěšně sestavil, že se webový prohlížeč otevře na webu služby SharePoint, že položka **seznamy** na panelu snadného spuštění obsahuje seznam nový **zaměstnanci** a že seznam **zaměstnanci** obsahuje položku pro jim Hance.
 
@@ -347,9 +346,9 @@ ms.locfileid: "72984943"
 
 #### <a name="to-modify-the-list-definition-and-list-instance-and-redeploy-them"></a>Úprava definice seznamu a instance seznamu a jejich opětovné nasazení
 
-1. V projektu EmployeesListDefinition otevřete soubor *Elements. XML* , který je podřízeným prvkem položky projektu **instance seznamu zaměstnanců** .
+1. V projektu EmployeesListDefinition otevřete *Elements.xml* soubor, který je podřízenou položkou položky projektu **instance seznamu zaměstnanců** .
 
-2. Odebráním prvku `Data` a jejích podřízených položek odeberte položku jim Hance ze seznamu.
+2. Odeberte `Data` prvek a jeho podřízené položky k odebrání položky jim Hance ze seznamu.
 
      Až skončíte, soubor by měl obsahovat následující kód XML.
 
@@ -365,7 +364,7 @@ ms.locfileid: "72984943"
     </Elements>
     ```
 
-3. Uložte a zavřete soubor *Elements. XML* .
+3. Uložte a zavřete soubor *Elements.xml* .
 
 4. Otevřete místní nabídku položky projektu **seznam zaměstnanců** a pak zvolte možnost **otevřít** nebo **vlastnosti**.
 
@@ -377,7 +376,7 @@ ms.locfileid: "72984943"
 
      Tato akce odebere tato pole z výchozího zobrazení seznamu **zaměstnanci** na webu služby SharePoint.
 
-8. Spusťte ladění výběrem klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění** > **Spustit ladění**.
+8. Spusťte ladění tak, že vyberete klávesu **F5** nebo v řádku nabídek vyberete **ladění**  >  **Spustit ladění**.
 
 9. Ověřte, že se zobrazí dialogové okno **konflikty nasazení** .
 
@@ -432,15 +431,15 @@ ms.locfileid: "72984943"
 
     Tato akce odebere tato pole z výchozího zobrazení seznamu **zaměstnanci** na webu služby SharePoint.
 
-5. Spusťte ladění výběrem klávesy **F5** nebo v řádku nabídek zvolte možnost **ladění** > **Spustit ladění**.
+5. Spusťte ladění tak, že vyberete klávesu **F5** nebo v řádku nabídek vyberete **ladění**  >  **Spustit ladění**.
 
-6. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v metodě `CanExecute`.
+6. Ověřte, zda se kód v jiné instanci sady Visual Studio zastaví na zarážce, kterou jste nastavili dříve v `CanExecute` metodě.
 
-7. Znovu stiskněte klávesu **F5** nebo v řádku nabídek vyberte možnost **ladění** > **pokračovat**.
+7. Znovu stiskněte klávesu **F5** nebo v řádku nabídek vyberte možnost **ladit**  >  **pokračovat**.
 
-8. Ověřte, že se kód zastaví na zarážce, kterou jste nastavili dříve v metodě `Execute`.
+8. Ověřte, že se kód zastaví na zarážce, kterou jste nastavili dříve v `Execute` metodě.
 
-9. Klikněte na klávesu **F5** nebo na panelu nabídek vyberte možnost **ladit** > **pokračovat** v konečném čase.
+9. Klikněte na klávesu **F5** nebo na panelu nabídek vyberte možnost **ladit**  >  **pokračovat** v konečném čase.
 
      Webový prohlížeč otevře web služby SharePoint.
 
@@ -467,13 +466,13 @@ ms.locfileid: "72984943"
 
 #### <a name="to-remove-the-list-definition-from-the-sharepoint-site"></a>Odebrání definice seznamu z webu služby SharePoint
 
-1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **sestavit** > **odvolávat**.
+1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **sestavení**  >  **odvolání**.
 
      Visual Studio odvolá definici seznamu z webu služby SharePoint.
 
 #### <a name="to-uninstall-the-extension"></a>Odinstalace rozšíření
 
-1. V experimentální instanci aplikace Visual Studio na panelu nabídky vyberte **nástroje** > **rozšíření a aktualizace**.
+1. V experimentální instanci aplikace Visual Studio, na panelu nabídek vyberte **nástroje**  >  **rozšíření a aktualizace**.
 
      Otevře se dialogové okno **rozšíření a aktualizace** .
 

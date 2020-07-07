@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Lokalizace značek ASPX | Dokumentace Microsoftu'
+title: 'Postupy: lokalizace značek ASPX | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,46 +13,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4cd3c17a9e771ad9a1aee7526f24e3a8282f208d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 63bd8ee614a78752069002820689a2cc6c0be783
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443104"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016289"
 ---
-# <a name="how-to-localize-aspx-markup"></a>Postupy: Lokalizace značek ASPX
-  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] stránky (.aspx) obvykle používají pevně zakódované řetězcové hodnoty. Chcete-li lokalizovat tyto řetězce, je nahraďte výrazy, které odkazují na lokalizované prostředky.
+# <a name="how-to-localize-aspx-markup"></a>Postupy: lokalizace značek ASPX
+  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)]stránky (. aspx) obvykle používají pevně kódované řetězcové hodnoty. Chcete-li lokalizovat tyto řetězce, nahraďte je výrazy, které odkazují na lokalizované prostředky.
 
 ## <a name="localize-aspx-markup"></a>Lokalizace značek ASPX
 
-#### <a name="to-localize-aspx-markup"></a>Lokalizace značek ASPX
+#### <a name="to-localize-aspx-markup"></a>Lokalizace kódu ASPX
 
-1. Přidání souborů prostředků: jeden pro výchozí jazyk a jeden pro každý lokalizovaný jazyk.
+1. Přidejte samostatné soubory prostředků: jeden pro výchozí jazyk a jeden pro každý lokalizovaný jazyk.
 
-     Pokud lokalizujete pouze značek a kódu není, přidejte položku projektu globální soubor prostředků. Pokud lokalizujete kódu a kódu, přidejte položku projektu souboru prostředků.
+     Pokud lokalizaci pouze kódu a nikoli kódu, přidejte položku projektu globální soubor prostředků. Pokud lokalizaci kódu a značky, přidejte položku projektu soubor prostředků.
 
-    1. Chcete-li přidat globální soubor prostředků v **Průzkumníka řešení**, otevřete místní nabídku pro položku Sharepointového projektu a klikněte na tlačítko **přidat** > **nová položka**. V části služby SharePoint **2010** uzlu, vyberte **globální soubor prostředků** šablony.
+    1. Chcete-li přidat soubor globálních prostředků, v **Průzkumník řešení**otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu SharePoint **2010** vyberte šablonu **souboru globálních zdrojů** .
 
-    2. Chcete-li přidat soubor prostředků v **Průzkumníka řešení**, otevřete místní nabídku pro položku Sharepointového projektu a klikněte na tlačítko **přidat** > **nová položka**. V části **jazyka Visual Basic** nebo **Visual C#**  uzlu, vyberte **soubor prostředků** šablony.
+    2. Chcete-li přidat soubor prostředků, v **Průzkumník řešení**otevřete místní nabídku pro položku sharepointového projektu a pak zvolte možnost **Přidat**  >  **novou položku**. V uzlu **Visual Basic** nebo **Visual C#** vyberte šablonu **soubor prostředků** .
 
     > [!NOTE]
-    > Ujistěte se, že přidání souborů prostředků do položky projektu služby SharePoint, který povolí vlastnost typ nasazení. Tato vlastnost je vyžadováno později v tomto postupu. Pokud vaše řešení nemá žádné položky projektu služby SharePoint, můžete přidat prázdný projekt SharePoint a odeberte výchozí *Elements.xml* souboru.
+    > Nezapomeňte přidat soubory prostředků do položky projektu služby SharePoint a povolit vlastnost typ nasazení. Tato vlastnost je povinná později v tomto postupu. Pokud vaše řešení neobsahuje položku SharePointového projektu, můžete přidat prázdný projekt SharePoint a odebrat jeho výchozí *Elements.xml* soubor.
 
-2. Pojmenujte soubor prostředků výchozího jazyka jméno dle vašeho výběru s *RESX* rozšíření, například MyAppResources.resx. Použijte stejný základní název pro každý lokalizovaný soubor prostředků, ale přidat jazykovou verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například pojmenujte německý lokalizovaný prostředek *MyAppResources.de-DE.resx*.
+2. Pojmenujte soubor prostředků výchozího jazyka názvem vaší volby, který je připojený s příponou *. resx* , jako je MyAppResources. resx. Použijte stejný základní název pro každý lokalizovaný soubor prostředků, ale přidejte jazykovou verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Například pojmenujte německý lokalizovaný prostředek *MyAppResources.de-de. resx*.
 
-3. Změňte hodnotu **typ nasazení** vlastnosti každého souboru prostředků na **AppGlobalResource** způsobit pro nasazení do složky App_GlobalResources serveru.
+3. Změňte hodnotu vlastnosti **typ nasazení** každého souboru prostředků na **AppGlobalResource** , aby se mohly nasadit do složky App_GlobalResources serveru.
 
-4. Pokud používáte prostředky k lokalizaci kódu kromě značek ASPX, ponechte hodnotu **akce sestavení** jednotlivých souborů jako **integrovaný prostředek**. Pokud používáte pouze k lokalizaci značky soubory prostředků, můžete volitelně změnit hodnotu vlastnosti soubory, které chcete **obsahu**. Další informace najdete v tématu [řešení služby SharePoint lokalizovat](../sharepoint/localizing-sharepoint-solutions.md).
+4. Pokud používáte prostředky k lokalizaci kódu kromě značek ASPX, ponechte hodnotu vlastnosti **Akce sestavení** každého souboru jako **vložený prostředek**. Pokud používáte soubory prostředků pouze k lokalizaci kódu, můžete volitelně změnit hodnotu vlastnosti souborů na **obsah**. Další informace najdete v tématu [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md).
 
-5. Otevřete každý soubor prostředků a přidejte lokalizované řetězce, pomocí stejná ID řetězce do každého souboru.
+5. Otevřete všechny soubory prostředků a v každém souboru přidejte lokalizované řetězce pomocí stejných ID řetězců.
 
-6. V [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] značky stránky ASPX a ovládací prvek, nahraďte pevně zakódované řetězce s hodnotami, které používají následující formát:
+6. V [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] kódu pro stránku ASPX nebo ovládací prvek nahraďte pevně kódované řetězce hodnotami, které jsou v následujícím formátu:
 
     ```aspx-csharp
     <%$Resources:Resource File Name, String ID%>
     ```
 
-     Například chcete-li lokalizovat text pro ovládací prvek popisek na stránku aplikace, změníte:
+     Například pro lokalizaci textu ovládacího prvku popisek na stránce aplikace byste změnili:
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -60,7 +59,7 @@ ms.locfileid: "63443104"
     </asp:Content>
     ```
 
-     až
+     na
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -68,14 +67,14 @@ ms.locfileid: "63443104"
     </asp:Content>
     ```
 
-7. Zvolte **F5** klíče pro sestavení a spuštění aplikace.
+7. Kliknutím na klávesu **F5** sestavíte a spustíte aplikaci.
 
-8. Ve službě SharePoint změňte jazyk zobrazení z výchozího.
+8. Ve službě SharePoint změňte jazyk zobrazení z výchozí hodnoty.
 
-     Lokalizované řetězce jsou zobrazeny v aplikaci. Chcete-li zobrazit lokalizované prostředky, musí mít SharePoint server nainstalovanou jazykovou sadu odpovídající jazykové verzi souboru prostředků.
+     Lokalizované řetězce se zobrazí v aplikaci. Chcete-li zobrazit lokalizované prostředky, musí mít server SharePoint nainstalovanou jazykovou sadu, která odpovídá jazykové verzi souboru prostředků.
 
 ## <a name="see-also"></a>Viz také:
 - [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)
 - [Postupy: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md)
-- [Postupy: Přidejte soubor prostředků](../sharepoint/how-to-add-a-resource-file.md)
+- [Postupy: Přidání souboru prostředků](../sharepoint/how-to-add-a-resource-file.md)
 - [Postupy: Lokalizace kódu](../sharepoint/how-to-localize-code.md)

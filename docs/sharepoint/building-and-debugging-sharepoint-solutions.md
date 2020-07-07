@@ -1,7 +1,7 @@
 ---
-title: Sestavování a ladění řešení služby SharePoint | Dokumentace Microsoftu
+title: Sestavování a ladění řešení služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -13,42 +13,41 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e91c1433fde85a9ec828a6a018bee986fdc7aa5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: e4b34df23c8cb612d72fed108a6c0aecbf57875c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016358"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>Sestavování a ladění řešení služby SharePoint
-  Obecně platí, sestavování a ladění řešení služby SharePoint je shodný sestavování a ladění ostatních typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Témata v této části popisují, které existují rozdíly.
+  Obecně platí, že sestavování a ladění řešení služby SharePoint je stejné jako sestavení a ladění jiných typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Témata v této části vysvětlují rozdíly, které existují.
 
 ## <a name="project-output-for-sharepoint-solutions"></a>Výstup projektu pro řešení služby SharePoint
- Vytváření řešení služby SharePoint vytvoří sestavení a balíček řešení ( *.wsp*) soubor. Následující tabulka uvádí umístění těchto souborů během sestavování.
+ Sestavování řešení SharePoint vytvoří sestavení a soubor balíčku řešení (*. wsp*). V následující tabulce jsou uvedena umístění těchto souborů během sestavení.
 
-|Vytvoření položky|Výstupní složka|
+|Položka sestavení|Výstupní složka|
 |----------------|-------------------|
-|Sestavení, databázi programu (*PDB*), a *.wsp* soubory.|*\<ProjectName > \bin\debug* nebo  *\<ProjectName > \bin\release*|
-|Soubory položek Sharepointového projektu.|*\<ProjectName > \pkg\debug* nebo  *\<ProjectName > \pkg\release*|
-|Zprostředkující soubory sestavení.|*\<ProjectName > \obj\debug* nebo  *\<ProjectName > \obj\release*|
-|Zprostředkující soubory balíčku.|*\<ProjectName > \pkgobj\debug* nebo  *\<ProjectName > \pkgobj\release*|
+|Sestavení, databáze programu (*PDB*) a soubory *. wsp* .|* \<ProjectName> \bin\debug* nebo * \<ProjectName> \bin\Release*|
+|Soubory položek projektu služby SharePoint.|* \<ProjectName> \pkg\debug* nebo * \<ProjectName> \pkg\release*|
+|Sestavujte mezilehlé soubory.|* \<ProjectName> \obj\debug* nebo * \<ProjectName> \obj\release*|
+|Balíčky zprostředkujících souborů.|* \<ProjectName> \pkgobj\debug* nebo * \<ProjectName> \pkgobj\release*|
 
-## <a name="build-sharepoint-solutions"></a>Sestavení řešení služby SharePoint
- K sestavení řešení služby SharePoint, musí mít vývojovém počítači správnou verzi serveru SharePoint server nainstalovaný. V opačném případě sestavení řešení služby SharePoint je stejné jako vytvoření jiných typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace najdete v tématu [jak: Sestavení řešení služby SharePoint](../sharepoint/how-to-build-sharepoint-solutions.md).
+## <a name="build-sharepoint-solutions"></a>Sestavení řešení pro SharePoint
+ Aby bylo možné sestavovat řešení služby SharePoint, musí mít vývojový počítač nainstalovanou správnou verzi SharePoint serveru. V opačném případě sestavování řešení služby SharePoint je stejné jako vytváření dalších typů projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace najdete v tématu [Postupy: sestavení řešení služby SharePoint](../sharepoint/how-to-build-sharepoint-solutions.md).
 
 ## <a name="debug-and-test-sharepoint-solutions"></a>Ladění a testování řešení služby SharePoint
- Před laděním, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] kopie *.wsp* balíček na server SharePoint, aktivuje na webu a rozsahem webové funkce a v některých případech se spustí projekt. V jiných případech budete muset otevřít projekt ručně. Další informace najdete v tématu [řešení potíží s SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md) a [řešení ladění služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
+ Před laděním [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkopíruje balíček *. wsp* na server služby SharePoint, aktivuje web a funkce v oboru webu a v některých případech spustí projekt. V jiných případech může být nutné projekt otevřít ručně. Další informace najdete v tématu [řešení potíží s řešeními služby SharePoint](../sharepoint/troubleshooting-sharepoint-solutions.md) a [ladění řešení služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
 
-## <a name="debug-and-verify-sharepoint-solutions-by-using-azure-devops-services-features"></a>Ladění a ověření řešení služby SharePoint pomocí funkce služby Azure DevOps
- Azure DevOps služby funkce, jako je IntelliTrace a testování vám umožní a další přesně přesně problémy v řešení služby SharePoint. Profilace umožňuje vyhledat a identifikovat problémová výkonu v řešení služby SharePoint. Další informace najdete v tématu [ověření a ladění kódu pro SharePoint](../sharepoint/verifying-and-debugging-sharepoint-code.md) a [profilace výkonu aplikací služby SharePoint](../sharepoint/profiling-the-performance-of-sharepoint-applications.md).
+## <a name="debug-and-verify-sharepoint-solutions-by-using-azure-devops-services-features"></a>Ladění a ověření řešení služby SharePoint pomocí Azure DevOps Servicesch funkcí
+ Azure DevOps Services funkce jako testování částí a IntelliTrace vám umožní přesněji určit problémy v řešeních služby SharePoint. Profilace umožňuje vyhledat a identifikovat oblasti problémů s výkonem v řešeních služby SharePoint. Další informace naleznete v tématu [ověřování a ladění kódu služby SharePoint](../sharepoint/verifying-and-debugging-sharepoint-code.md) a [profilace výkonu aplikací služby SharePoint](../sharepoint/profiling-the-performance-of-sharepoint-applications.md).
 
 ## <a name="security-during-the-build-process"></a>Zabezpečení během procesu sestavení
- Balíček nebo nasazení řešení služby SharePoint, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] musí mít oprávnění ke kopírování souborů na server SharePoint. Je nutné spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako proces se zvýšenými a uživatel účet musí být správcem kolekce webů na serveru SharePoint. Kromě toho musíte zadat, jestli je váš projekt řešení v izolovaném prostoru nebo řešení farmy. Další informace najdete v tématu [rozdíly mezi řešeními v izolovaném prostoru a řešení ve farmách](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
+ Aby bylo možné zabalit nebo nasadit řešení služby SharePoint, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] musí mít oprávnění ke kopírování souborů na server SharePoint. Musíte spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] jako proces se zvýšenými oprávněními a váš uživatelský účet musí být správcem kolekcí webů na sharepointovém serveru. Kromě toho musíte určit, jestli je váš projekt řešení v izolovaném prostoru nebo řešení farmy. Další informace najdete v tématu [rozdíly mezi řešeními v izolovaném prostoru a ve farmách](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
-## <a name="using-the-clean-command"></a>Pomocí příkazu vyčistit
- Při instalaci řešení služby SharePoint na server SharePoint pro ladění, **Vyčistit** příkaz neodinstaluje řešení. Místo toho je nutné deaktivovat funkce prostřednictvím konfigurace služby SharePoint.
+## <a name="using-the-clean-command"></a>Použití příkazu vyčistit
+ Pokud je řešení služby SharePoint nainstalováno na serveru SharePoint pro ladění, příkaz **vyčistit** neprovádí odinstalaci řešení. Místo toho je nutné funkce deaktivovat prostřednictvím konfigurace služby SharePoint.
 
 ## <a name="see-also"></a>Viz také:
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)
-- [Procházet připojení služby SharePoint pomocí Průzkumníka serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
+- [Procházení připojení služby SharePoint pomocí Průzkumník serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

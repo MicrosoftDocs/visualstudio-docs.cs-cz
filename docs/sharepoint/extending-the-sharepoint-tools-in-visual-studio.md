@@ -1,7 +1,7 @@
 ---
-title: Rozšíření nástrojů SharePoint v sadě Visual Studio | Dokumentace Microsoftu
+title: Rozšíření nástrojů služby SharePoint v aplikaci Visual Studio | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,46 +14,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d70d9b5bac260dc0731d06ebb11780114f0edf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 7dc0cc0d0af73d032d870629877b62c94e6b347b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967419"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016034"
 ---
-# <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Rozšíření nástrojů SharePoint v sadě Visual Studio
-  Nástroje služby SharePoint v sadě Visual Studio požadavkům mnoha scénářů vývoje aplikace. Však můžete narazit na případy, kdy neposkytují funkce, které vyžadují vy nebo ostatní vývojáři. V těchto případech můžete rozšířit nástroje služby SharePoint k vytvoření funkce, které potřebujete.
+# <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio
+  Nástroje služby SharePoint v aplikaci Visual Studio splňují požadavky mnoha scénářů vývoje aplikací. Můžete však zjistit případy, kdy neposkytují funkce, které požadujete vy nebo ostatní vývojáři. V těchto případech můžete nástroje služby SharePoint rozšíříte tak, aby se vytvořila funkčnost, kterou potřebujete.
 
-## <a name="how-to-extend-the-sharepoint-tools"></a>Rozšíření nástrojů SharePoint
- Můžete rozšířit systém projektu služby SharePoint a **připojení služby SharePoint** uzlu **Průzkumníka serveru** okna.
+## <a name="how-to-extend-the-sharepoint-tools"></a>Postup rozšiřování nástrojů služby SharePoint
+ Můžete roztáhnout systém projektu služby SharePoint a uzel **připojení služby SharePoint** v okně **Průzkumník serveru** .
 
-### <a name="extend-the-sharepoint-project-system"></a>Rozšíření systému projektu služby SharePoint
- Visual Studio obsahuje sadu šablon projektů a šablon položek, které můžete použít k vytvoření řešení služby SharePoint. Jsou například šablony pro přijímače událostí, definice seznamu, pracovních postupů a webové části. Ale můžete také definovat vlastní typy položek Sharepointového projektu pro vytváření komponent služby SharePoint, například pole nebo vlastní akce. Můžete také vytvořit rozšíření pro typů položek projektu služby SharePoint, které jsou již nainstalovány v sadě Visual Studio a můžete vytvořit rozšíření pro projekty služby SharePoint.
+### <a name="extend-the-sharepoint-project-system"></a>Rozšíří systém projektu služby SharePoint.
+ Sada Visual Studio obsahuje sadu šablon projektů a šablon položek, které můžete použít k vytvoření řešení služby SharePoint. Existují například šablony pro přijímače událostí, definice seznamů, pracovní postupy a Webové části. Můžete však také definovat vlastní typy položek projektu služby SharePoint pro vytváření komponent služby SharePoint, jako jsou například pole nebo vlastní akce. Můžete také vytvořit rozšíření pro typy položek projektu služby SharePoint, které jsou již nainstalovány v aplikaci Visual Studio, a můžete vytvořit rozšíření pro projekty služby SharePoint.
 
- Další informace najdete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
+ Další informace najdete v tématu věnovaném [roztažení systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).
 
-### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru
- V sadě Visual Studio, můžete použít **připojení služby SharePoint** uzlu **Průzkumníka serveru** okně zobrazíte mnoho součástí jednoho nebo více místních webů služby SharePoint v hierarchickém stromovém zobrazení. Můžete rozšířit také **připojení služby SharePoint** uzel následujícími způsoby:
+### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Rozšíří uzel připojení služby SharePoint v Průzkumník serveru
+ V aplikaci Visual Studio můžete použít uzel **připojení služby SharePoint** v okně **Průzkumník serveru** k zobrazení mnoha součástí jednoho nebo více místních webů služby SharePoint v hierarchickém stromovém zobrazení. Uzel **připojení služby SharePoint** můžete také roztáhnout následujícími způsoby:
 
-- Přidáním vlastních uzlů. To je užitečné, pokud chcete zobrazit součásti Sharepointové weby, které nejsou zobrazeny ve výchozím nastavení.
+- Přidáním vlastních uzlů. To je užitečné, pokud chcete zobrazit součásti webů SharePointu, které se ve výchozím nastavení nezobrazují.
 
-- Rozšířením existujících uzlů. Například můžete přidat nový podřízený uzel do existujícího uzlu, nebo můžete přidat položky místní nabídky k uzlu a provádět úlohy, když vývojář klikne na položku nabídky.
+- Rozšířením existujících uzlů. Můžete například přidat nový podřízený uzel do existujícího uzlu nebo můžete přidat položku místní nabídky do uzlu a provádět úlohy, když vývojář klikne na položku nabídky.
 
-  Další informace najdete v tématu [rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+  Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
-## <a name="development-computer-requirements"></a>Požadavky na vývojový počítač
- Jak vytvořit rozšíření pro nástroje služby SharePoint, vývojový počítač musí splňovat stejné požadavky na vytváření řešení služby SharePoint v sadě Visual Studio.
+## <a name="development-computer-requirements"></a>Požadavky na vývojového počítače
+ Chcete-li vytvořit rozšíření pro nástroje služby SharePoint, váš vývojový počítač musí splňovat stejné požadavky pro vytváření řešení služby SharePoint v aplikaci Visual Studio.
 
- Doporučujeme také nainstalovat [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. Sada SDK zahrnuje šablony projektů a nástrojů, které můžete použít rozšíření sady Visual Studio. Konkrétně se sada SDK zahrnuje šablony projektu, který vám umožní snadno vytvořit balíček rozšíření aplikace Visual Studio (VSIX). Balíčky VSIX jsou preferovaným způsobem, jak nasadit rozšíření sady Visual Studio v sadě Visual Studio. Všechna rozšíření nástrojů SharePoint musí být nasazené s použitím balíčků VSIX. Některé názorné postupy v této dokumentaci předpokládají, že máte [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] nainstalované.
+ Doporučujeme také nainstalovat [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] . Sada SDK obsahuje šablony projektů a nástroje, které můžete použít k rozšiřování sady Visual Studio. Konkrétně sada SDK obsahuje šablonu projektu, kterou můžete použít k snadnému vytvoření balíčku rozšíření sady Visual Studio (VSIX). Balíčky VSIX jsou preferovaným způsobem, jak nasadit rozšíření sady Visual Studio v aplikaci Visual Studio. Všechna rozšíření nástrojů služby SharePoint je nutné nasadit pomocí balíčků VSIX. Všechny návody v této dokumentaci předpokládají, že máte [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] nainstalovanou sadu.
 
- Instalaci sady Visual Studio SDK naleznete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md). Další informace o rozšíření sady Visual Studio najdete v tématu [spuštění pro vývoj rozšíření sady Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).
+ Chcete-li nainstalovat sadu Visual Studio SDK, přečtěte si téma [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md). Další informace o rozšířeních sady Visual Studio naleznete v tématu [zahájení vývoje rozšíření aplikace Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Přehled programovacího modelu SharePoint rozšíření nástrojů](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
-- [Rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Programování konceptů a funkcí pro rozšíření nástrojů SharePoint](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
-- [Referenční dokumentace &#40;rozšíření nástrojů SharePoint&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
-- [Ladění rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
-- [Nasazení rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Přehled programovacího modelu rozšíření nástrojů služby SharePoint](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
+- [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Programování konceptů a funkcí pro rozšíření nástrojů služby SharePoint](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
+- [Referenční informace &#40;rozšíření nástrojů služby SharePoint&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
+- [Rozšíření ladění pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

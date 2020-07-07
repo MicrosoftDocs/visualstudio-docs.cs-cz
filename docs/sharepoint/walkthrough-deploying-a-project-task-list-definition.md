@@ -1,7 +1,7 @@
 ---
 title: 'Návod: nasazení definice Seznam úkolů projektu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,16 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0b7f1b0668af8218017c5cc96712384ed5f275c
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
-ms.translationtype: MT
+ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661877"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015771"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>Návod: nasazení definice seznamu úkolů projektu
 
-V tomto návodu se dozvíte, jak použít [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] k vytvoření, přizpůsobení, ladění a nasazení SharePointového seznamu pro sledování úkolů projektu.
+Tento návod ukazuje, jak použít [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] k vytvoření, přizpůsobení, ladění a nasazení sharepointového seznamu pro sledování úkolů projektu.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -43,7 +42,7 @@ Vytvořte projekt SharePointového seznamu a přidružte definici seznamu k úko
 
 3. Zadejte místní web služby SharePoint, který používáte pro ladění, zvolte přepínač **nasadit jako řešení farmy** a pak klikněte na tlačítko **Dokončit** .
 
-4. Otevřete místní nabídku projektu a poté zvolte možnost **přidat** > **novou položku**.
+4. Otevřete místní nabídku projektu a pak zvolte možnost **Přidat**  >  **novou položku**.
 
 5. V podokně **šablony** zvolte šablonu **seznamu** a pak klikněte na tlačítko **Přidat** .
 
@@ -73,7 +72,7 @@ V seznamu úkolů můžete přidat přijímač událostí, který automaticky na
 
      Do projektu se přidá nový uzel přijímače událostí se souborem kódu s názvem **ProjectTaskListEventReceiver**.
 
-6. Přidejte kód do metody `ItemAdded` v souboru kódu **ProjectTaskListEventReceiver** . Pokaždé, když se přidá nový úkol, do úkolu se přidá výchozí datum splatnosti a popis. Výchozí datum splatnosti je 1. července 2009.
+6. Přidejte kód do `ItemAdded` metody v souboru kódu **ProjectTaskListEventReceiver** . Pokaždé, když se přidá nový úkol, do úkolu se přidá výchozí datum splatnosti a popis. Výchozí datum splatnosti je 1. července 2009.
 
      [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
      [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
@@ -136,13 +135,13 @@ Po sestavení a otestování seznamu úkolů projektu jej můžete nasadit do *m
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>Nasazení seznamu úkolů projektu do místního systému
 
-Na řádku nabídek sady Visual Studio vyberte **sestavení** > **nasadit řešení**.
+Na řádku nabídek sady Visual Studio vyberte **sestavení**  >  **nasadit řešení**.
 
-Sada Visual Studio recykluje fond aplikací služby IIS, odvolá všechny existující verze řešení, zkopíruje soubor balíčku řešení ( *. wsp*) do služby SharePoint a poté aktivuje jeho funkce. Nyní můžete použít řešení v SharePointu. Další informace o postupu konfigurace nasazení najdete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
+Sada Visual Studio recykluje fond aplikací služby IIS, odvolá všechny existující verze řešení, zkopíruje soubor balíčku řešení (*. wsp*) do služby SharePoint a poté aktivuje jeho funkce. Nyní můžete použít řešení v SharePointu. Další informace o postupu konfigurace nasazení najdete v tématu [Postupy: Úprava konfigurace nasazení služby SharePoint](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>Nasazení seznamu úkolů projektu do vzdáleného systému
 
-1. Na panelu nabídek aplikace Visual Studio vyberte možnost **sestavit** > **publikovat**.
+1. Na řádku nabídek sady Visual **Studio vyberte možnost**  >  **publikovat**.
 
 2. V dialogovém okně **publikovat** klikněte na tlačítko možnosti **publikovat do systému souborů** .
 
@@ -154,13 +153,13 @@ Sada Visual Studio recykluje fond aplikací služby IIS, odvolá všechny existu
 
 4. Zkopírujte soubor *. wsp* do vzdáleného systému SharePoint.
 
-5. Pomocí příkazu PowerShellu `Add-SPUserSolution` nainstalujte balíček do vzdálené instalace služby SharePoint. (Pro řešení farmy použijte příkaz `Add-SPSolution`.)
+5. `Add-SPUserSolution`K instalaci balíčku na vzdálené instalaci služby SharePoint použijte příkaz prostředí PowerShell. (Pro řešení farmy použijte `Add-SPSolution` příkaz.)
 
-     Například `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
+     Například, `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
 
-6. K nasazení řešení použijte příkaz `Install-SPUserSolution` PowerShellu. (Pro řešení farmy použijte příkaz `Install-SPSolution`.)
+6. `Install-SPUserSolution`K nasazení řešení použijte příkaz prostředí PowerShell. (Pro řešení farmy použijte `Install-SPSolution` příkaz.)
 
-     Například `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
+     Například, `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
 
      Další informace o vzdáleném nasazení najdete v tématu [používání řešení](/previous-versions/office/developer/sharepoint-2010/ee534972(v=office.14)) a [přidávání a nasazování řešení pomocí PowerShellu v SharePointu 2010](http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2009/12/02/adding-and-deploying-solutions-with-powershell-in-sharepoint-2010.aspx).
 

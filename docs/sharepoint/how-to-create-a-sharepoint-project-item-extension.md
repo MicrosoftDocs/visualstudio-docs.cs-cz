@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Vytváření rozšíření položky projektu služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: Vytvoření rozšíření položky projektu služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,54 +14,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c46b629227b1b3d73ee4bc6a265c867921937df2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 345bfa49da4bf5d5b73fe1d3f209675fe2814de2
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966960"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015346"
 ---
-# <a name="how-to-create-a-sharepoint-project-item-extension"></a>Postupy: Vytváření rozšíření položky projektu SharePoint
-  Vytváření rozšíření položky projektu, pokud chcete přidat funkce do položky projektu služby SharePoint, která je již nainstalována v sadě Visual Studio. Další informace najdete v tématu [položek projektu služby SharePoint rozšiřte](../sharepoint/extending-sharepoint-project-items.md).
+# <a name="how-to-create-a-sharepoint-project-item-extension"></a>Postupy: Vytvoření rozšíření položky projektu služby SharePoint
+  Vytvořte rozšíření položky projektu, pokud chcete přidat funkce do položky projektu služby SharePoint, která je již nainstalována v aplikaci Visual Studio. Další informace najdete v tématu věnovaném [rozšiřování položek projektu služby SharePoint](../sharepoint/extending-sharepoint-project-items.md).
 
-### <a name="to-create-a-project-item-extension"></a>Chcete-li vytvořit rozšíření položky projektu
+### <a name="to-create-a-project-item-extension"></a>Vytvoření rozšíření položky projektu
 
 1. Vytvořte projekt knihovny tříd.
 
 2. Přidejte odkazy na následující sestavení:
 
-    - Microsoft.VisualStudio.SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. složení
 
 3. Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> rozhraní.
 
-4. Přidejte do třídy následující atributy:
+4. Do třídy přidejte následující atributy:
 
-    - <xref:System.ComponentModel.Composition.ExportAttribute>. Tento atribut umožňuje sadě Visual Studio zjišťovat a načíst vaše <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> implementace. Předat <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> typ konstruktoru atributu.
+    - <xref:System.ComponentModel.Composition.ExportAttribute>. Tento atribut umožňuje aplikaci Visual Studio vyhledat a načíst vaši <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> implementaci. Předejte <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> typ konstruktoru atributu.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. V rozšíření položky projektu tento atribut určuje položku projektu, kterou chcete rozšířit. Předejte konstruktoru atributu ID položky projektu. Seznam ID položky projektu, které jsou součástí sady Visual Studio najdete v tématu [položek projektu služby SharePoint rozšiřte](../sharepoint/extending-sharepoint-project-items.md).
+    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. V rozšíření položky projektu tento atribut identifikuje položku projektu, kterou chcete rozšířit. Předejte ID položky projektu konstruktoru atributu. Seznam identifikátorů položek projektu, které jsou součástí sady Visual Studio, naleznete v části [extend SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md).
 
-5. Ve vaší implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> metody, použijte členy *projectItemType* parametr definuje chování rozšíření. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> objekt, který poskytuje přístup k události definované v <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> rozhraní. Přístup ke konkrétní instanci rozšiřování typu položky projektu, zpracování <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> událostech, například <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized>.
+5. V implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> metody použijte členy parametru *projectItemType* k definování chování rozšíření. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> objekt, který poskytuje přístup k událostem definovaným v <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> rozhraních a. Chcete-li získat přístup ke konkrétní instanci typu položky projektu, který rozšiřujete, zpracujte <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> události jako <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized> .
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje, jak vytvořit jednoduché rozšíření položky projektu příjemce událostí. Pokaždé, když uživatel přidá položku projektu příjemce událostí do projektu služby SharePoint, toto rozšíření zapíše zprávu do **výstup** okno a **seznam chyb** okna.
+ Následující příklad kódu ukazuje, jak vytvořit jednoduché rozšíření pro položku projektu přijímače událostí. Pokaždé, když uživatel přidá položku projektu příjemce události do projektu služby SharePoint, zapíše toto rozšíření zprávu do okna **výstup** a **Seznam chyb** okno.
 
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs#1)]
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb#1)]
 
- Tento příklad používá k zápisu zprávy do projektu služby SharePoint **výstup** okno a **seznam chyb** okna. Další informace najdete v tématu [použijte službu projektu SharePoint](../sharepoint/using-the-sharepoint-project-service.md).
+ V tomto příkladu se používá služba projektu SharePoint k zápisu zprávy do okna **výstupu** a v **Seznam chyb** okně. Další informace naleznete v tématu [použití služby projektu služby SharePoint](../sharepoint/using-the-sharepoint-project-service.md).
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje odkazy na následující sestavení:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. složení
 
 ## <a name="deploy-the-extension"></a>Nasazení rozšíření
- Chcete-li nasadit rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) balíčku pro sestavení a všechny další soubory, které chcete distribuovat s příponou. Další informace najdete v tématu [nasazení rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Chcete-li nasadit rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšíření položek projektu služby SharePoint](../sharepoint/extending-sharepoint-project-items.md)
-- [Návod: Rozšíření typu položky projektu SharePoint](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)
+- [Rozšiřování položek projektu služby SharePoint](../sharepoint/extending-sharepoint-project-items.md)
+- [Návod: rozšiřování typu položky projektu služby SharePoint](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)

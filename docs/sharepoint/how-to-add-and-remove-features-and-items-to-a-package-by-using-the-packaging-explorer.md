@@ -1,7 +1,7 @@
 ---
-title: 'Průzkumník balení: Přidání a odebrání funkcí a položek balíčku'
+title: 'Průzkumník balení: Přidání & odebrání funkcí & položek do balíčku'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.PackagingExplorer
 dev_langs:
@@ -14,53 +14,52 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f01ecb67cb82ffe325ea471ad5fb5913c8e4d28
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: c3ea7e30737855cbbb9434e8763f4903d80b82da
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401562"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014558"
 ---
-# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Postupy: Přidání nebo odebrání funkcí a položek z balíku pomocí Průzkumníku balíčků
-  Pokud chcete nakonfigurovat balíček pro nasazení služby SharePoint položky a funkce, můžete Průzkumníku balíčků. Můžete upravit položky Sharepointového projektu a funkce v souboru WSP.
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Postupy: Přidání a odebrání funkcí a položek do balíčku pomocí Průzkumníka balíčků
+  Chcete-li nakonfigurovat balíček pro nasazení položek a funkcí služby SharePoint, můžete použít Průzkumníka balíčků. Položky a funkce projektu služby SharePoint můžete upravit v souboru. wsp.
 
- Alternativně můžete použít Návrháře balíčku k zobrazení a změna pořadí funkce, které chcete změnit pořadí aktivace. Další informace najdete v tématu [jak: Přidání nebo odebrání funkcí a položek z balíku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
+ Alternativně můžete pomocí návrháře balení zobrazit a změnit pořadí funkcí pro změnu pořadí aktivace. Další informace najdete v tématu [Postup: Přidání a odebrání funkcí a položek do balíčku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
 
-## <a name="open-the-packaging-explorer"></a>Otevřete Průzkumník balení
- Následující postup slouží k otevření Průzkumníku balíčků, pokud řešení sady Visual Studio obsahuje alespoň jeden projekt služby SharePoint. Alternativně Průzkumník balení se automaticky otevře při zobrazení návrháře funkci nebo balíčku. Po zavření všechny funkce a balíku návrháře zavře se také Průzkumníku balíčků.
+## <a name="open-the-packaging-explorer"></a>Otevřít Průzkumníka balíčků
+ Pomocí následujícího postupu můžete otevřít Průzkumníka balíčků, pokud má řešení Visual Studio alespoň jeden projekt služby SharePoint. Případně se automaticky otevře Průzkumník balení při zobrazení funkce nebo návrháře balíčku. Po zavření všech návrhářů funkcí a balíčků se zavře i Průzkumník balíčků.
 
-#### <a name="to-open-the-packaging-explorer"></a>Chcete-li otevřít Průzkumník balení
+#### <a name="to-open-the-packaging-explorer"></a>Otevření Průzkumníka balíčků
 
-1. V panelu nabídky zvolte **zobrazení** > **ostatní Windows** > **Průzkumník balení**.
+1. Na panelu nabídek vyberte možnost **Zobrazit**  >  **Další**  >  **Průzkumníka balíčků**Windows.
 
-     **Průzkumník balení** se zobrazí v **nástrojů**.
+     V sadě **nástrojů**se zobrazí **Průzkumník balení** .
 
 ## <a name="adding-a-feature-to-a-package"></a>Přidání funkce do balíčku
- Nové funkce můžete přidat do balíčku pomocí Průzkumníku balíčků.
+ Do balíčku můžete přidat nové a existující funkce pomocí Průzkumníka balíčků.
 
-#### <a name="to-add-a-sharepoint-feature"></a>Chcete-li přidat funkce služby SharePoint
+#### <a name="to-add-a-sharepoint-feature"></a>Přidání funkce SharePointu
 
-1. Otevřete **Průzkumník balení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **přidat funkci**.
+1. Otevřete **Průzkumníka balíčků**, otevřete místní nabídku pro projekt a poté zvolte možnost **Přidat funkci**.
 
-#### <a name="to-move-an-existing-sharepoint-feature"></a>Chcete-li přesunout existující funkce Sharepointu
+#### <a name="to-move-an-existing-sharepoint-feature"></a>Přesunutí existující funkce SharePointu
 
-1. Otevřít **Průzkumník balení**a potom proveďte jednu z následujících kroků:
+1. Otevřete **Průzkumníka balíčků**a pak proveďte jeden z následujících kroků:
 
-    - Přetáhněte **funkce** z jednoho projektu do jiného projektu.
+    - Přetáhněte **funkci** z jednoho projektu do jiného projektu.
 
-    - Otevřete místní nabídku pro funkci, zvolte **Vyjmout**, otevřete místní nabídku pro projekt, do kterého chcete přesunout tuto funkci a klikněte na tlačítko **vložit**.
+    - Otevřete místní nabídku pro funkci, zvolte **Vyjmout**, otevřete místní nabídku pro projekt, na který chcete funkci přesunout, a pak zvolte **Vložit**.
 
     > [!NOTE]
     > Tento postup použijte, pokud máte více než jeden projekt služby SharePoint ve vašem řešení.
 
-## <a name="validate-a-feature-or-package"></a>Ověření funkcí nebo balíčku
- Tím, že ověří soubory lze identifikovat případné problémy v součásti služby SharePoint a balíčky. Upozornění a chyby se zobrazují v okně Výstup a v okně Seznam chyb.
+## <a name="validate-a-feature-or-package"></a>Ověření funkce nebo balíčku
+ Můžete identifikovat možné problémy v rámci funkcí a balíčků služby SharePoint pomocí ověření souborů. Upozornění a chyby se zobrazí v okně výstup a v Seznam chyb okně.
 
-#### <a name="to-validate-a-sharepoint-feature-or-package"></a>Ověřit funkce služby SharePoint nebo balíčku
+#### <a name="to-validate-a-sharepoint-feature-or-package"></a>Ověření funkce nebo balíčku služby SharePoint
 
-1. Otevřít **Průzkumník balení**.
+1. Otevřete **Průzkumníka balíčků**.
 
-2. Otevřete místní nabídku pro funkci nebo balíček a klikněte na tlačítko **ověřit**.
+2. Otevřete místní nabídku funkce nebo balíčku a zvolte možnost **ověřit**.
 
 ## <a name="see-also"></a>Viz také:
 - [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

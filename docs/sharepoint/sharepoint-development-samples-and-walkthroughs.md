@@ -1,7 +1,7 @@
 ---
-title: Ukázky vývoje pro SharePoint a názorné postupy | Dokumentace Microsoftu
+title: Ukázky a návody vývoje pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -13,24 +13,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f2c8894c5e2573c61ff54e38fa41ea0ed1cd3f77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 39f4d52b8a94409abeffb7cc9ce2329e463cf8bd
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976260"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015803"
 ---
-# <a name="sharepoint-development-samples-and-walkthroughs"></a>Ukázky vývoje pro SharePoint a názorné postupy
-  Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ukazují syntaxi, struktury a techniky použít k sestavení řešení služby SharePoint.
+# <a name="sharepoint-development-samples-and-walkthroughs"></a>Ukázky a návody vývoje pro SharePoint
+  Tato část obsahuje ukázkové aplikace, ukázkový kód a podrobné návody, které ilustrují syntaxi, strukturu a techniky, které slouží k sestavování řešení SharePoint.
 
- Ukázkový kód je určený pro vzdělávací účely a nesmí být použita v nasazeném řešení bez úprav. Zejména zabezpečení musí brát větší.
+ Vzorový kód je určený pro vzdělávací účely a neměl by se používat v nasazených řešeních bez úprav. Konkrétně je nutné vzít v úvahu zabezpečení.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)|Popisuje ukázkové aplikace, které ukazují, jak použít nástroje pro vývoj služby SharePoint v sadě Visual Studio.|
-|[Návody na vývoj pro SharePoint](../sharepoint/sharepoint-development-walkthroughs.md)|Obsahuje podrobné pokyny, které poskytuje úvod do nástroje pro vývoj pro SharePoint v sadě Visual Studio.|
+|[Ukázky vývoje pro SharePoint](../sharepoint/sharepoint-development-samples.md)|Popisuje ukázkové aplikace, které ukazují, jak používat vývojové nástroje pro SharePoint v aplikaci Visual Studio.|
+|[Návody pro vývoj pro SharePoint](../sharepoint/sharepoint-development-walkthroughs.md)|Obsahuje podrobné návody, které poskytují Úvod k vývojářským nástrojům služby SharePoint v aplikaci Visual Studio.|
 
 ## <a name="see-also"></a>Viz také:
-- [Vytvoření řešení služby SharePoint](../sharepoint/create-sharepoint-solutions.md)
+- [Vytváření řešení pro SharePoint](../sharepoint/create-sharepoint-solutions.md)

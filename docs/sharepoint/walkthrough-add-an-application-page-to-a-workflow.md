@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Přidání stránky aplikace do pracovního postupu | Dokumentace Microsoftu'
+title: 'Návod: Přidání stránky aplikace do pracovního postupu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,21 +15,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 032447051bc03b037abba2920d48473f0d73935f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63409550"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015489"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>Návod: Přidání stránky aplikace do pracovního postupu
-  Tento návod ukazuje, jak přidat stránku aplikace, která zobrazuje data odvozená z pracovního postupu do projektu pracovního postupu. Je nástavbou projektu je popsáno v tématu [názorný postup: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
+  Tento návod ukazuje, jak přidat stránku aplikace, která zobrazuje data odvozená z pracovního postupu do projektu pracovního postupu. Sestaví se na projektu popsaném v tématu [Názorný postup: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
 
- Tento návod demonstruje následující úkoly:
+ Tento názorný postup ukazuje následující úlohy:
 
-- Přidání stránky ASPX aplikace do projektu pracovního postupu služby SharePoint.
+- Přidání stránky aplikace ASPX do projektu pracovního postupu služby SharePoint.
 
-- Získání dat z projektu pracovního postupu a manipulaci.
+- Získávání dat z projektu pracovního postupu a manipulace s nimi.
 
 - Zobrazení dat v tabulce na stránce aplikace.
 
@@ -38,22 +37,22 @@ ms.locfileid: "63409550"
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
-- Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
+- Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
 
 - Visual Studio.
 
-- Máte také dokončení projektu v tématu [názorný postup: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
+- Také je nutné projekt dokončit v tématu [Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
 
-## <a name="ammend-the-workflow-code"></a>Ammend kód pracovního postupu
- Nejprve přidejte řádek kódu do pracovního postupu k nastavení hodnoty ve sloupci výsledek množství vyúčtování. Tato hodnota se používá později při výpočtu souhrnné sestavy výdajů.
+## <a name="ammend-the-workflow-code"></a>Ammend kódu pracovního postupu
+ Nejprve do pracovního postupu přidejte řádek kódu, který nastaví hodnotu sloupce výsledek na množství sestavy výdajů. Tato hodnota se používá později v souhrnném výpočtu sestavy výdajů.
 
-#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>Chcete-li nastavit hodnotu sloupce výsledku v pracovním postupu
+#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>Nastavení hodnoty sloupce výsledek v pracovním postupu
 
-1. Načíst dokončený projekt z tématu [názorný postup: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Načíst dokončený projekt z tématu [Návod: vytvoření pracovního postupu s formuláři přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Spustit kód pro *Workflow1.cs* nebo *Workflow1.vb* (v závislosti na programovacím jazyce).
+2. Otevřete kód pro *Workflow1.cs* nebo *Workflow1. vb* (v závislosti na vašem programovacím jazyce).
 
-3. K dolnímu okraji `createTask1_MethodInvoking` metodu, přidejte následující kód:
+3. Do dolní části `createTask1_MethodInvoking` metody přidejte následující kód:
 
     ```vb
     createTask1_TaskProperties1.ExtendedProperties("Outcome") =
@@ -66,15 +65,15 @@ ms.locfileid: "63409550"
     ```
 
 ## <a name="create-an-application-page"></a>Vytvoření stránky aplikace
- V dalším kroku přidejte formulář ASPX do projektu. Tento formulář zobrazí data z projektu pracovního postupu sestavy výdajů. K tomuto účelu se přidání stránky aplikace. Stránky aplikace používá stejnou stránku předlohy jako další stránky služby SharePoint, což znamená, že bude vypadat podobně jako jiné stránky na webu služby SharePoint.
+ Potom do projektu přidejte formulář ASPX. V tomto formuláři se zobrazí data získaná z projektu pracovního postupu sestavy výdajů. K tomu budete moct přidat stránku aplikace. Stránka aplikace používá stejnou stránku předlohy jako jiné stránky SharePoint, což znamená, že se bude podobat ostatním stránkám na webu služby SharePoint.
 
 #### <a name="to-add-an-application-page-to-the-project"></a>Přidání stránky aplikace do projektu
 
-1. Zvolte projekt ExpenseReport a pak na panelu nabídek zvolte **projektu** > **přidat novou položku**.
+1. Zvolte projekt ExpenseReport a pak na panelu nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
-2. V **šablony** podokně, vyberte **stránky aplikace** šablony, použití výchozího názvu pro položku projektu (**ApplicationPage1.aspx**) a zvolte **Přidat** tlačítko.
+2. V podokně **šablony** vyberte šablonu **stránky aplikace** , použijte výchozí název položky projektu (**ApplicationPage1. aspx**) a klikněte na tlačítko **Přidat** .
 
-3. V [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1.aspx, nahraďte `PlaceHolderMain` oddíl následujícím kódem:
+3. V [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1. aspx nahraďte `PlaceHolderMain` oddíl následujícím:
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -86,9 +85,9 @@ ms.locfileid: "63409550"
     </asp:Content>
     ```
 
-     Tento kód přidá na stránku spolu s název tabulky.
+     Tento kód přidá tabulku na stránku spolu s názvem.
 
-4. Přidat nadpis na stránce aplikace tak, že nahradíte `PlaceHolderPageTitleInTitleArea` oddíl následujícím kódem:
+4. Přidejte nadpis na stránku aplikace tím, že nahradíte `PlaceHolderPageTitleInTitleArea` oddíl následujícím způsobem:
 
     ```aspx-csharp
     <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >
@@ -96,14 +95,14 @@ ms.locfileid: "63409550"
     </asp:Content>
     ```
 
-## <a name="code-the-application-page"></a>Znaková stránka aplikace
- Dále přidejte kód, na stránce souhrnu aplikací sestavy výdajů. Při otevření stránky kontroluje kód v seznamu úloh ve službě SharePoint výdaje, který překročil přidělenou limit útraty. Tato sestava uvádí jednotlivé položky spolu s součet výdaje.
+## <a name="code-the-application-page"></a>Kód stránky aplikace
+ Dále přidejte kód na stránku souhrnnou aplikaci sestavy výdajů. Když otevřete stránku, kód vyhledá v seznamu úkolů na SharePointu výdaje, které překročily přidělený limit útraty. Sestava obsahuje všechny položky společně se součtem nákladů.
 
-#### <a name="to-code-the-application-page"></a>Do kódu stránky aplikace
+#### <a name="to-code-the-application-page"></a>Chcete-li kódovat stránku aplikace
 
-1. Zvolte **ApplicationPage1.aspx** uzel a potom na panelu nabídek zvolte **zobrazení** > **kód** k zobrazení kódu stránky aplikace.
+1. Zvolte uzel **ApplicationPage1. aspx** a pak na panelu nabídek zvolte **Zobrazit**  >  **kód** . zobrazí se kód za stránkou aplikace.
 
-2. Nahradit **pomocí** nebo **Import** příkazy (v závislosti na programovacím jazyce) v horní části třídy následujícím kódem:
+2. Nahraďte příkazy **using** nebo **Import** (v závislosti na vašem programovacím jazyce) v horní části třídy následujícím způsobem:
 
     ```vb
     Imports System
@@ -131,7 +130,7 @@ ms.locfileid: "63409550"
     using Microsoft.SharePoint.Navigation;
     ```
 
-3. Přidejte následující kód, který `Page_Load` metody:
+3. Do metody `Page_Load` přidejte následující kód:
 
     ```vb
     Try
@@ -295,61 +294,61 @@ ms.locfileid: "63409550"
     ```
 
     > [!WARNING]
-    > Nezapomeňte nahradit "TestServer" v kódu s názvem platný server, na kterém běží SharePoint.
+    > Nezapomeňte nahradit text "TestServer" v kódu názvem platného serveru, na kterém je spuštěna služba SharePoint.
 
-## <a name="test-the-application-page"></a>Otestování stránky aplikace
- Dál určete, zda stránka aplikace správně zobrazí data výdajů.
+## <a name="test-the-application-page"></a>Testování stránky aplikace
+ Dále určete, zda stránka aplikace zobrazuje data o výdajích správně.
 
 #### <a name="to-test-the-application-page"></a>Otestování stránky aplikace
 
-1. Zvolte **F5** klíč ke spuštění a nasazení projektu SharePoint.
+1. Klikněte na klávesu **F5** ke spuštění a nasazení projektu do SharePointu.
 
-2. Zvolte **Domů** tlačítko a klikněte na tlačítko **sdílené dokumenty** odkaz na panelu Rychlé spuštění a zobrazit seznam sdílených dokumentů na webu služby SharePoint.
+2. Klikněte na tlačítko **Domů** a potom kliknutím na odkaz **sdílené dokumenty** na panelu Rychlé spuštění zobrazte seznam sdílených dokumentů na webu služby SharePoint.
 
-3. K reprezentaci vyúčtování pro účely tohoto příkladu, nahrát několik nových dokumentů do seznam dokumentů výběrem **dokumenty** odkaz na **LibraryTools** kartě v horní části stránky a potom kliknete  **Nahrát dokument o** tlačítko na pásu karet.
+3. Chcete-li znázornit sestavy výdajů v tomto příkladu, nahrajte některé nové dokumenty do seznamu dokumentů tak, že na kartě **LibraryTools** v horní části stránky kliknete na odkaz **dokumenty** a pak na pásu karet nástroje kliknete na tlačítko **Nahrát dokument** .
 
-4. Po odeslání některé dokumenty instance pracovního postupu výběrem **knihovny** odkaz na **LibraryTools** kartě v horní části stránky a pak zvolíte **nastavení knihovny**tlačítko na pásu karet.
+4. Po nahrání některých dokumentů vytvořte instanci pracovního postupu tak, že na kartě **LibraryTools** v horní části stránky kliknete na odkaz **Knihovna** a pak na pásu karet nástroje kliknete na tlačítko **Nastavení knihovny** .
 
-5. V **nastavení knihovny dokumentů** zvolte **nastavení pracovního postupu** odkaz v **oprávnění a správa** oddílu.
+5. Na stránce **Nastavení knihovny dokumentů** klikněte v části **oprávnění a Správa** na odkaz **Nastavení pracovního postupu** .
 
-6. V **nastavení pracovního postupu** zvolte **přidat pracovní postup** odkaz.
+6. Na stránce **Nastavení pracovního postupu** klikněte na odkaz **Přidat pracovní postup** .
 
-7. V **přidat pracovní postup** zvolte **ExpenseReport - Workflow1** pracovního postupu, zadejte název pracovního postupu, jako například **ExpenseTest**a klikněte na tlačítko **Další** tlačítko.
+7. Na stránce **Přidat pracovní postup** zvolte pracovní postup **ExpenseReport-Workflow1** , zadejte název pracovního postupu, například **ExpenseTest**, a pak klikněte na tlačítko **Další** .
 
-    Zobrazí se formulář přidružení pracovního postupu. Sestava se používá částka omezení výdajů.
+    Zobrazí se formulář přidružení pracovního postupu. Použijte ji k oznámení částky limitu výdajů.
 
-8. Vyplňte formulář přidružení **1000** do **Limit pro automatické schvalování** pole a klikněte na tlačítko **přidružení pracovního postupu** tlačítko.
+8. Ve formuláři přidružení zadejte do pole **limit automatického schvalování** hodnotu **1000** a pak klikněte na tlačítko **přidružit pracovní postup** .
 
-9. Zvolte **domácí** tlačítko pro návrat na domovskou stránku služby SharePoint.
+9. Klikněte na tlačítko **Domů** a vraťte se na domovskou stránku služby SharePoint.
 
-10. Zvolte **sdílené dokumenty** odkaz na panelu Rychlé spuštění.
+10. Na panelu Rychlé spuštění klikněte na odkaz **sdílené dokumenty** .
 
-11. Vyberte jednu z nahraných dokumenty, které se zobrazí na šipku rozevíracího seznamu, vyberte jej a klikněte na tlačítko **pracovních postupů** položky.
+11. Zvolte jeden z odesílaných dokumentů, chcete-li zobrazit šipku rozevíracího seznamu, vyberte ji a potom zvolte položku **pracovní postupy** .
 
-12. Zvolte image vedle ExpenseTest zobrazíte inicializační formulář pracovního postupu.
+12. Vyberte obrázek vedle ExpenseTest k zobrazení inicializačního formuláře pracovního postupu.
 
-13. V **celkové výdaje** textového pole zadejte hodnotu, která je větší než 1 000 a klikněte na tlačítko **spuštění pracovního postupu** tlačítko.
+13. Do textového pole **Celkový počet výdajů** zadejte hodnotu, která je větší než 1000, a pak klikněte na tlačítko **Spustit pracovní postup** .
 
-     Když ohlášené výdajů překračuje velikost přidělené výdajů, přidá se do seznamu úkolů úlohy. Sloupec s názvem **ExpenseTest** s hodnotou **dokončeno** je taky přidaný ke položky sestavy výdajů v seznamu sdílených dokumentů.
+     Když hlášené náklady překročí přidělenou částku výdajů, přidá se do Seznam úkolů úkol. Do položky sestavy výdajů v seznamu Sdílené dokumenty se přidá také sloupec s názvem **ExpenseTest** s hodnotou **dokončeno** .
 
-14. Opakujte kroky 13. 11 pomocí jiných dokumentů v seznamu sdílených dokumentů. (Přesný počet dokumentů není důležité.)
+14. Opakujte kroky 11-13 s dalšími dokumenty v seznamu Sdílené dokumenty. (Přesný počet dokumentů není důležitý.)
 
-15. Zobrazit na stránce souhrnu aplikace expense sestavy tak, že otevřete následující adresu URL ve webovém prohlížeči: **http://**<em>SystemName</em>**/_layouts/ExpenseReport/ApplicationPage1.aspx**.
+15. Zobrazte stránku souhrnná aplikace sestavy výdajů otevřením následující adresy URL ve webovém prohlížeči: **http://**<em>System</em>**/_layouts/ExpenseReport/ApplicationPage1.aspx**.
 
-     Na stránce souhrnné sestavy výdajů uvádí všechny sestavy výdajů, který překročil přidělenou velikost, hodnota, kterou překročení jej a celkovou velikost pro všechny sestavy.
+     Stránka Souhrn sestavy výdajů obsahuje seznam všech sestav výdajů, které překročily přidělené množství, o částku, kterou ji překročil, a celkovou částku pro všechny sestavy.
 
 ## <a name="next-steps"></a>Další kroky
- Další informace o použití stránek služby SharePoint, naleznete v tématu [vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).
+ Další informace o stránkách aplikace SharePoint naleznete v tématu [Vytvoření stránek aplikace pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).
 
- Vám může Další informace o navrhování obsahu stránky služby SharePoint pomocí návrháře Visual Web v sadě Visual Studio naleznete v těchto tématech:
+ Další informace o návrhu obsahu stránky SharePointu pomocí vizuálního webového návrháře v aplikaci Visual Studio najdete v těchto tématech:
 
-- [Vytvoření webové části pro SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).
+- [Vytvořte webové části pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md).
 
-- [Vytvoření opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
+- [Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
+- [Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
 - [Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)
-- [Vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)
+- [Vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

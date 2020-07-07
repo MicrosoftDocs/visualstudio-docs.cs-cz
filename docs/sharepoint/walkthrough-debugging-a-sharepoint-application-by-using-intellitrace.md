@@ -1,7 +1,7 @@
 ---
 title: Ladění aplikace SharePoint pomocí IntelliTrace
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fe1130880db42e920e656d5efef1ea6a5af4d2d0
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015754"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Návod: ladění aplikace služby SharePoint pomocí IntelliTrace
 
@@ -73,9 +72,9 @@ Nejprve vytvořte prázdný projekt služby SharePoint, který má přijímač f
 
 ## <a name="add-code-to-the-feature-receiver"></a>Přidání kódu do příjemce funkce
 
-Dále do přijímače funkce přidejte kód do dvou metod: `FeatureActivated` a `FeatureDeactivating`. Tyto metody se aktivují pokaždé, když se aktivuje nebo deaktivuje funkce služby SharePoint v uvedeném pořadí.
+Dále do přijímače funkce přidejte kód do dvou metod: `FeatureActivated` a `FeatureDeactivating` . Tyto metody se aktivují pokaždé, když se aktivuje nebo deaktivuje funkce služby SharePoint v uvedeném pořadí.
 
-1. V horní části třídy `Feature1EventReceiver` přidejte následující kód, který deklaruje proměnné, které určují web služby SharePoint a podřízený web:
+1. V horní části `Feature1EventReceiver` třídy přidejte následující kód, který deklaruje proměnné, které určují web služby SharePoint a podřízený web:
 
     ```vb
     ' SharePoint site and subsite.
@@ -89,7 +88,7 @@ Dále do přijímače funkce přidejte kód do dvou metod: `FeatureActivated` a 
     private string webUrl = "/";
     ```
 
-2. Metodu `FeatureActivated` nahraďte následujícím kódem:
+2. Nahraďte metodu `FeatureActivated` následujícím kódem:
 
     ```vb
     Public Overrides Sub FeatureActivated(ByVal properties As SPFeatureReceiverProperties)
@@ -155,7 +154,7 @@ Dále do přijímače funkce přidejte kód do dvou metod: `FeatureActivated` a 
     }
     ```
 
-3. Metodu `FeatureDeactivating` nahraďte následujícím kódem:
+3. Nahraďte metodu `FeatureDeactivating` následujícím kódem:
 
     ```vb
     Public Overrides Sub FeatureDeactivating(ByVal properties As SPFeatureReceiverProperties)
@@ -295,7 +294,7 @@ Pokud nainstalujete Microsoft Monitoring Agent do systému, na kterém je spušt
 
 3. V okně PowerShellu spusťte příkaz [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) , který vytvoří soubor. iTrace, zastaví monitorování a restartuje řešení služby SharePoint.
 
-     **Stop-WebApplicationMonitoring**  *"\<SharePointSite >\\< SharePointAppName\>"*
+     **Stop-WebApplicationMonitoring***" \<SharePointSite> \\<SharePointAppName \> "*  
 
 ## <a name="debug-and-fix-the-sharepoint-solution"></a>Ladění a oprava řešení služby SharePoint
 

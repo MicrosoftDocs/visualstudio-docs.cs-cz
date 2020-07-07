@@ -1,7 +1,7 @@
 ---
-title: Procházení pomocí Průzkumníku serveru připojení služby SharePoint | Dokumentace Microsoftu
+title: Procházení připojení služby SharePoint pomocí Průzkumník serveru | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - VS.SharePointTools.SharePointExplorer.SharePointConnection
 dev_langs:
@@ -16,38 +16,37 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8dfde37125b78e2ff8077712321b3a19816582cf
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MT
+ms.openlocfilehash: baf580ace98ab14032de1e9a3edf18af2b2cfee8
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387809"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016344"
 ---
-# <a name="browse-sharepoint-connections-by-using-server-explorer"></a>Procházet připojení služby SharePoint pomocí Průzkumníka serveru
-  Nyní můžete procházet místní připojení služby SharePoint v **Průzkumníka serveru**. Tímto způsobem můžete procházet součásti webu služby SharePoint ve vašem systému. Součásti webu služby SharePoint, jako je například seznam definic a typy obsahu, se zobrazí v uzlu, který je pojmenován **připojení služby SharePoint** ve stromovém zobrazení **Průzkumníka serveru**. Chcete-li zobrazit **Průzkumníka serveru**, na panelu nabídek zvolte **zobrazení** > **Průzkumníka serveru**. Kromě zobrazení součásti webu služby SharePoint, můžete odebrat položky, zobrazení jejich vlastností nebo aktualizujte zobrazení stromové struktury pomocí příkazů v místní nabídce.
+# <a name="browse-sharepoint-connections-by-using-server-explorer"></a>Procházení připojení služby SharePoint pomocí Průzkumník serveru
+  Nyní můžete procházet místní připojení služby SharePoint v **Průzkumník serveru**. Pomocí této techniky můžete procházet komponenty webu služby SharePoint ve vašem systému. Komponenty SharePointového webu, jako jsou definice seznamů a typy obsahu, se zobrazí v uzlu s názvem **připojení služby SharePoint** ve stromovém zobrazení **Průzkumník serveru**. Chcete-li zobrazit **Průzkumník serveru**, na panelu nabídek vyberte možnost **Zobrazit**  >  **Průzkumník serveru**. Kromě zobrazení součástí webu služby SharePoint můžete odebrat položky, zobrazit jejich vlastnosti nebo aktualizovat stromové zobrazení pomocí příkazů v místní nabídce.
 
 > [!IMPORTANT]
-> Procházení webu služby SharePoint, musíte být správcem kolekce webů služby SharePoint a spuštění sady Visual Studio jako správce místního počítače. V opačném případě se zobrazí v lokalitě **Průzkumníka serveru**, ale nelze rozbalit její uzel. Pokud chcete ověřit, zda jste správcem kolekce webů, otevřete ve webovém prohlížeči otevřete web **Akce webu** nabídce zvolte **oprávnění webu**a pak klikněte na **oprávnění: Team web** zvolte **správci kolekce webů** příkaz **spravovat** na pásu karet. Název se zobrazí v textovém poli, pokud jste správcem kolekce webů. Pokud **správci kolekce webů** příkazu se nezobrazí v spravovat skupinu na pásu karet, nejste správcem kolekce webů a je nutné získat příslušná oprávnění od správce lokality.
+> Chcete-li procházet web služby SharePoint, musíte být správcem kolekce webů služby SharePoint a musíte mít aplikaci Visual Studio spuštěnou jako správce místního počítače. V opačném případě se web zobrazí v **Průzkumník serveru**, ale nemůžete rozbalit jeho uzel. Chcete-li ověřit, zda jste správcem kolekce webů, otevřete web ve webovém prohlížeči, otevřete nabídku **Akce webu** , zvolte možnost **oprávnění webového**serveru a poté na stránce **oprávnění: týmový web** zvolte příkaz **správce kolekce webů** ve skupině **Spravovat** na pásu karet. Pokud jste správcem kolekce webů, zobrazí se v textovém poli vaše jméno. Pokud se příkaz **správce kolekce webů** ve skupině Správa na pásu karet nezobrazí, nejste správcem této kolekce webů a musíte získat příslušná oprávnění od správce lokality.
 
-## <a name="server-explorer-nodes"></a>Uzly Průzkumníka serveru
- Všechny komponenty jsou ve webu služby SharePoint je reprezentována uzlu **Průzkumníka serveru** stromové zobrazení v sekci **připojení služby SharePoint**. Například výchozí Sharepointové weby obsahovat typ obsahu s názvem diskuze, který představuje typ diskuze, který se zobrazí v **diskuse** stránku webu služby SharePoint. Typ obsahu diskuse obsahuje několik polí. Chcete-li zobrazit tato pole v **Průzkumníka serveru**, rozbalte **ContentTypes** uzel a pak **diskuse** uzlu. V části se několik uzlů pole, jako je například textu, předmětu diskuze a název.
+## <a name="server-explorer-nodes"></a>Uzly Průzkumník serveru
+ Všechny komponenty webu služby SharePoint jsou reprezentovány uzlem ve stromovém zobrazení **Průzkumník serveru** v části **připojení služby SharePoint**. Například výchozí weby služby SharePoint zahrnují typ obsahu s názvem diskuze, který představuje typ diskuze, který se zobrazí na stránce **diskuze** na webu služby SharePoint. Typ obsahu diskuze obsahuje několik polí. Chcete-li zobrazit tato pole v **Průzkumník serveru**, rozbalte uzel **ContentTypes** a potom uzel **diskuze** . V rámci tohoto pole jsou k dispozici několik uzlů, například body, předmět diskuze a název.
 
 ## <a name="node-shortcut-menu-commands"></a>Příkazy místní nabídky uzlu
- Každý uzel má místní nabídky, ke kterým přístup tak, že pravým tlačítkem myši uzel nebo jej vyberete a potom kliknete **Shift**+**F10** klíče. Uzel příkazy mohou zahrnovat následující:
+ Každý uzel má místní nabídku, ke které máte přístup, kliknutím pravým tlačítkem myši na uzel nebo jeho výběrem a kliknutím na klávesy **SHIFT** + **F10** . Příkazy uzlu mohou zahrnovat následující:
 
 |Název příkazu|Popis|
 |------------------|-----------------|
-|Aktualizovat|Aktualizuje zobrazení stromové struktury tak, aby odrážela všechny změny, které mohly nastat od posledního uzlu se zobrazují.|
-|Odstranit|Odebere vybraného uzlu ve stromovém zobrazení. **Poznámka:**  Tento příkaz je povolen pouze na uvedené v části připojení služby SharePoint **připojení služby SharePoint** uzlu.|
-|Vlastnosti|Zobrazí dostupné vlastnosti pro vybraný uzel v **vlastnosti** okna. Vlastnosti jsou všechny jen pro čtení, a ne každý uzel nemá vlastnosti související s ním.|
-|Přidání připojení|Umožňuje určit web služby SharePoint, kterou chcete procházet. K dispozici na **připojení služby SharePoint** uzlů a uzly podřízeného webu.|
-|Zobrazit v prohlížeči|Zobrazí vybraný seznam ve webovém prohlížeči. Tento příkaz je k dispozici na některé seznamy v části **uvádí** uzel, který je součástí **seznamy a knihovny**.|
+|Aktualizovat|Aktualizuje stromové zobrazení tak, aby odrážel všechny změny, k nimž mohlo dojít od posledního zobrazení uzlu.|
+|Odstranit|Odebere vybraný uzel ze stromového zobrazení. **Poznámka:**  Tento příkaz je povolen pouze v připojeních služby SharePoint uvedených v uzlu **připojení služby SharePoint** .|
+|Vlastnosti|Zobrazí dostupné vlastnosti pro vybraný uzel v okně **vlastnosti** . Vlastnosti jsou jen pro čtení a ne každý uzel obsahuje přidružené vlastnosti.|
+|Přidat připojení|Umožňuje zadat web služby SharePoint, který chcete procházet. K dispozici na uzlu **připojení služby SharePoint** a uzlech podřízených webů.|
+|Zobrazit v prohlížeči|Zobrazí vybraný seznam ve webovém prohlížeči. Tento příkaz je k dispozici v některých seznamech pod uzlem **seznamy** , který je obsažen v **seznamech a knihovnách**.|
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Postupy: Přidání nebo odebrání připojení služby SharePoint](../sharepoint/how-to-add-or-remove-sharepoint-connections.md)|Popisuje kroky, které jsou požadovány pro přidání nového webu služby SharePoint **připojení služby SharePoint** uzel v **Průzkumníka serveru**.|
+|[Postupy: Přidání nebo odebrání připojení služby SharePoint](../sharepoint/how-to-add-or-remove-sharepoint-connections.md)|Popisuje kroky, které jsou požadovány pro přidání nového webu služby SharePoint do uzlu **připojení služby SharePoint** v **Průzkumník serveru**.|
 
 ## <a name="see-also"></a>Viz také:
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Sestavení řešení služby SharePoint | Dokumentace Microsoftu'
+title: 'Postupy: sestavení řešení služby SharePoint | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,24 +14,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 99109376c6c0279bcdd3852bd5bbadd8795c8564
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: d3beb1602a6572ed578208d6dd85951f1ea1c30b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966884"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014518"
 ---
-# <a name="how-to-build-sharepoint-solutions"></a>Postupy: Sestavení řešení služby SharePoint
+# <a name="how-to-build-sharepoint-solutions"></a>Postupy: sestavení řešení služby SharePoint
 
-Sestavení služby SharePoint řešení se nijak neliší od dalších aplikací v sadě Visual Studio. Další informace o vytváření aplikací, najdete v části [kompilace a sestavení v sadě Visual Studio](../ide/compiling-and-building-in-visual-studio.md). Diskuzi o některé aspekty, které jsou specifické pro řešení služby SharePoint, naleznete v tématu [jak: Nasazení a publikování řešení služby SharePoint na lokální stránce SharePoint](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
+Sestavení řešení služby SharePoint se neliší od vytváření jiných aplikací v aplikaci Visual Studio. Další informace o vytváření aplikací naleznete v tématu [kompilovat a sestavit v aplikaci Visual Studio](../ide/compiling-and-building-in-visual-studio.md). Diskuzi o některých faktorech, které jsou specifické pro řešení služby SharePoint, naleznete v tématu [How to: Deploy and Publish a Publishing a Publishing a Publishing a Publishing a Publishing Solution](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)
 
-## <a name="to-build-sharepoint-solutions"></a>K sestavení řešení služby SharePoint
+## <a name="to-build-sharepoint-solutions"></a>Sestavení řešení služby SharePoint
 
-1. Rozhodněte, jestli provádíte ladění nebo sestavení pro vydání. Další informace najdete v tématu [nastavení projektu ladicího programu](../debugger/debugger-project-settings.md).
+1. Rozhodněte, zda provádíte ladění nebo sestavení pro vydání. Další informace naleznete v tématu [nastavení projektu ladicího programu](../debugger/debugger-project-settings.md).
 
-2. Vyberte příslušnou možnost pro vytváření nebo opětovném sestavení vašeho řešení nebo projektu. Další informace najdete v tématu [kompilaci a vytváření ve Visual Studiu](../ide/compiling-and-building-in-visual-studio.md).
+2. Vyberte vhodnou možnost pro sestavení nebo nové sestavení řešení nebo projektu. Další informace naleznete v tématu [kompilace a sestavování v aplikaci Visual Studio](../ide/compiling-and-building-in-visual-studio.md).
 
-3. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
+3. Na řádku nabídek klikněte na **sestavit**sestavení  >  **řešení**.
 
 ## <a name="see-also"></a>Viz také:
 

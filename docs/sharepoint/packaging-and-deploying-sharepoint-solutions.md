@@ -1,7 +1,7 @@
 ---
 title: Balení a nasazení řešení služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45815e03d887f4d22f2559acf741f612cab34c49
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015598"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>Zabalení a nasazení řešení služby SharePoint
   Řešení služby SharePoint je obvykle nasazeno na server SharePoint pomocí souboru balíčku řešení (. wsp). Sadu Visual Studio můžete použít k uspořádání položek projektu služby SharePoint do funkcí a k vytvoření balíčku pro nasazení funkcí služby SharePoint.
@@ -37,7 +36,7 @@ ms.locfileid: "72986210"
 ## <a name="create-features-and-packages"></a>Vytváření funkcí a balíčků
  Sadu Visual Studio můžete použít k seskupení souvisejících prvků služby SharePoint do *funkce*. Například funkce pro definici seznamu kontaktů může zahrnovat instanci seznamu a definici seznamu. Tyto dva prvky můžete zkombinovat do jediné funkce pro účely nasazení. Další informace o funkcích naleznete v tématu [stavební blok: funkce](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
 
- V dalším kroku můžete vytvořit balíček řešení služby SharePoint ( *. wsp*) a seskupit více funkcí, definic webů, sestavení a dalších souborů do jednoho balíčku, který ukládá soubory ve formátu potřebném službou SharePoint k nasazení souborů na server. Další informace najdete v tématu [stavební blok: řešení](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
+ V dalším kroku můžete vytvořit balíček řešení služby SharePoint (*. wsp*) a seskupit více funkcí, definic webů, sestavení a dalších souborů do jednoho balíčku, který ukládá soubory ve formátu potřebném službou SharePoint k nasazení souborů na server. Další informace najdete v tématu [stavební blok: řešení](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
 
 ## <a name="feature-and-packaging-tool-support"></a>Podpora nástrojů pro balíčky a funkce
  Nástroje pro vývoj pro SharePoint v aplikaci Visual Studio můžete použít k rychlému uspořádání souborů SharePoint do funkcí a balíčků řešení pro snazší nasazení. K nakonfigurování funkce a balíčku řešení můžete použít následující nástroje.
@@ -95,7 +94,7 @@ ms.locfileid: "72986210"
 
  Chcete-li například přidat soubor *. XML* do projektu služby SharePoint, proveďte jednu z následujících akcí:
 
-- Přidejte do projektu mapovanou složku SharePointu rozložení. Tím se vytvoří **Průzkumník řešení** složka s názvem **Layouts** , která má podsložku pro projekt. Přidejte soubor *. XML* do nové podsložky. Ve výchozím nastavení je soubor nasazen do systému souborů služby SharePoint v části *.. \TEMPLATE\LAYOUTS\\název složky\<* . Informace o tom, jak přidat mapované složky, naleznete v tématu [How to: Add and Remove mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Přidejte do projektu mapovanou složku SharePointu rozložení. Tím se vytvoří **Průzkumník řešení** složka s názvem **Layouts** , která má podsložku pro projekt. Přidejte soubor *. XML* do nové podsložky. Ve výchozím nastavení je soubor nasazen do systému souborů služby SharePoint v části *.. \\\TEMPLATE\LAYOUTS \<Folder Name> *. Informace o tom, jak přidat mapované složky, naleznete v tématu [How to: Add and Remove mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 - Přidejte soubor *. XML* do složky položky projektu služby SharePoint a poté změňte vlastnost **typ nasazení** souboru *. XML* z **nasazení** na jiné nastavení, jako je například **RootFile** nebo **ElementFile**. Odpovídající nastavení **typu nasazení** závisí na souboru a projektu. Další informace o nastavení vlastností **typu nasazení** najdete v tématu [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Vytváření stránek pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 297ebf0e7c2ed1273dd5a8ac973ce497c4c64781
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 942891bc9281c07966160ea9df065408fcbfd5ff
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986345"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015171"
 ---
 # <a name="create-pages-for-sharepoint"></a>Vytváření stránek pro SharePoint
   Můžete vytvářet stránky aplikace, stránky webu, stránky předlohy a rozložení stránek pro web služby SharePoint.
@@ -62,7 +61,7 @@ ms.locfileid: "72986345"
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)|Popisuje postup přidání stránek aplikace: obsah *. aspx* , který je sloučen se stránkou předlohy služby SharePoint.|
 |[Postupy: Vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md)|Ukazuje, jak vytvořit ASP.NET stránky, které běží na webu služby SharePoint.|

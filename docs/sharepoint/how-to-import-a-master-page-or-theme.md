@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: Import stránky předlohy nebo motivu | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,23 +13,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c5078d31e2dcb7f11e5c19e0f8cb228e2f75d50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984190"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015299"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Postupy: Import stránky předlohy nebo motivu
-  Stránky na SharePointovém webu můžete poskytovat konzistentní vzhled vytvořením a použitím stránek předloh a motivů. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] neposkytuje šablony pro tyto prvky, ale můžete je vytvořit v aplikaci SharePoint Designer a pak je importovat do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) na webu společnosti Microsoft.
+  Stránky na SharePointovém webu můžete poskytovat konzistentní vzhled vytvořením a použitím stránek předloh a motivů. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]neposkytuje šablony pro tyto prvky, ale můžete je vytvořit v aplikaci SharePoint Designer a pak je importovat do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace naleznete v tématu [stavební blok: stránky a uživatelské rozhraní](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) na webu společnosti Microsoft.
 
 ### <a name="to-import-a-master-page-or-theme"></a>Import stránky předlohy nebo motivu
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]vytvořte nebo otevřete projekt služby SharePoint.
+1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] portálu vytvořte nebo otevřete projekt služby SharePoint.
 
      Informace o tom, jak vytvořit projekt služby SharePoint, naleznete v tématu [šablony projektů a položek projektu služby SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Na panelu nabídek vyberte možnost **projekt**  > **Přidat novou položku**.
+2. Na řádku nabídek klikněte na položku **projekt**  >  **Přidat novou položku**.
 
 3. V dialogovém okně **Přidat novou položku** rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
@@ -37,11 +36,11 @@ ms.locfileid: "72984190"
 
      Modul obsahuje soubory (například stránky předlohy nebo soubory motivů) pro nasazení do umístění, které zadáte na SharePointu.
 
-5. V modulu odstraňte výchozí soubor s názvem *Sample. txt*.
+5. V modulu odstraňte výchozí soubor s názvem *Sample.txt*.
 
 6. Vyberte uzel modul.
 
-7. Na panelu nabídek zvolte možnost **projekt** > **Přidat existující položku**a poté vyberte stránku předlohy nebo soubor motivu.
+7. V panelu nabídek zvolte **projekt**  >  **Přidat existující položku**a pak zvolte stránku předlohy nebo soubor motivu.
 
      Soubory stránky předlohy mají příponu. Master a soubory motivů mají příponu. thmx.
 
@@ -50,9 +49,9 @@ ms.locfileid: "72984190"
     > [!NOTE]
     > K chybám může dojít, pokud je název stránky předlohy stejný jako název existující stránky předlohy, která je označena jako výchozí stránka předlohy nebo vlastní stránka předlohy. Informace o tom, jak tento problém vyřešit, najdete v tématu [Návod: import vlastní stránky předlohy a stránky webu s obrázkem](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md).
 
-9. V modulu otevřete *Elements. XML*.
+9. V modulu otevřete *Elements.xml*.
 
-     Je nutné aktualizovat soubor *Elements. XML* , aby odkazoval na stránku předlohy nebo motiv, který jste přidali.
+     Je nutné aktualizovat soubor *Elements.xml* , aby odkazoval na stránku předlohy nebo motiv, který jste přidali.
 
 10. Pro stránku předlohy nahraďte existující značku modulu následujícím kódem.
 
@@ -74,7 +73,7 @@ ms.locfileid: "72984190"
 
      Nezapomeňte nahradit hodnoty zástupných znaků skutečnými názvy modulu a stránky předlohy nebo motivu.
 
-     Atribut `Type="GhostableInLibrary"` označuje, že položka je přidána do databáze obsahu, a atribut `Url` modulu určuje, kam se má uložit soubor v databázi obsahu služby SharePoint.
+     Atribut `Type="GhostableInLibrary"` označuje, že položka je přidána do databáze obsahu, a `Url` atribut Module určuje, kam uložit soubor v databázi obsahu služby SharePoint.
 
 11. Chcete-li změnit rozsah nasazení pro stránku předlohy, v **Průzkumník řešení**otevřete soubor funkce v Návrháři funkcí a pak zvolte nový obor nasazení ze seznamu **Rozsah** .
 
@@ -83,7 +82,7 @@ ms.locfileid: "72984190"
     > [!NOTE]
     > Vzhledem k tomu, že se motivy vztahují pouze na úroveň kolekce webů, doporučujeme nenastavit rozsah motivu na jinou hodnotu než **Web**. K chybám může dojít, pokud se motiv používá v podřízené lokalitě.
 
-12. Na panelu nabídek vyberte **sestavení** > **nasadit řešení**.
+12. Na panelu nabídek vyberte **sestavení**  >  **nasadit řešení**.
 
 13. Chcete-li ověřit, zda byly soubory správně nasazeny, otevřete web služby SharePoint, zvolte nabídku **Akce webu** , zvolte příkaz **nastavení lokality** a pak zvolte buď odkaz **hlavní stránky** nebo odkaz **motivy** .
 

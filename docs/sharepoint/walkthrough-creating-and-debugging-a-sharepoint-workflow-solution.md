@@ -1,7 +1,7 @@
 ---
 title: Vytvoření & ladění řešení pracovního postupu služby SharePoint
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.Workflow.WorkflowConditions
 - VS.SharePointTools.Workflow.WorkflowList
@@ -16,19 +16,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e51f346501b680b8183f8552aad48ffff84a71dd
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
-ms.translationtype: MT
+ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983729"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014615"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>Návod: vytvoření a ladění řešení pracovního postupu služby SharePoint
   Tento návod ukazuje, jak vytvořit šablonu základní sekvenční pracovní postup. Pracovní postup zkontroluje vlastnost sdílené knihovny dokumentů a určí, zda byl dokument zkontrolován. Pokud byl dokument revidován, pracovní postup se dokončí.
 
  Tento návod znázorňuje následující úlohy:
 
-- Vytvoření projektu sekvenčního pracovního postupu definice SharePointového seznamu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+- Vytváření projektu sekvenčního pracovního postupu definice SharePointového seznamu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - Vytváření aktivit pracovního postupu.
 
@@ -47,17 +46,17 @@ ms.locfileid: "73983729"
 - Visual Studio.
 
 ## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>Přidat vlastnosti do knihovny sdílených dokumentů SharePoint
- Chcete-li sledovat stav kontroly dokumentů v knihovně **sdílených dokumentů** , vytvoříme na webu služby SharePoint tři nové vlastnosti pro sdílené dokumenty: `Status`, `Assignee`a `Review Comments`. Tyto vlastnosti definujeme v knihovně **sdílených dokumentů** .
+ Chcete-li sledovat stav kontroly dokumentů v knihovně **sdílených dokumentů** , vytvoříme na webu služby SharePoint tři nové vlastnosti pro sdílené dokumenty:, a `Status` `Assignee` `Review Comments` . Tyto vlastnosti definujeme v knihovně **sdílených dokumentů** .
 
 #### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>Přidání vlastností do knihovny sdílených dokumentů SharePoint
 
-1. Ve webovém prohlížeči otevřete web služby SharePoint, například http://\<systémový název >/SitePages/Home.aspx.
+1. Ve webovém prohlížeči otevřete web služby SharePoint, například http:// \<system name> /SitePages/Home.aspx.
 
 2. Na panelu Rychlé spuštění klikněte na **SharedDocuments**.
 
 3. Zvolte **Knihovna** na pásu karet **nástroje knihovny** a pak kliknutím na tlačítko **vytvořit sloupec** na pásu karet vytvořte nový sloupec.
 
-4. Pojmenujte sloupec **Document status**, nastavte jeho typ na **Choice (nabídka pro výběr)** , zadejte následující tři možnosti a pak klikněte na tlačítko **OK** :
+4. Pojmenujte sloupec **Document status**, nastavte jeho typ na **Choice (nabídka pro výběr)**, zadejte následující tři možnosti a pak klikněte na tlačítko **OK** :
 
     - **Nutná kontrola**
 
@@ -87,11 +86,11 @@ ms.locfileid: "73983729"
 
 #### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>Vytvoření projektu sekvenčního pracovního postupu SharePointu
 
-1. Spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt** . zobrazí se dialogové okno **Nový projekt** .
+2. Na panelu nabídek vyberte možnost **soubor**  >  **Nový**  >  **projekt** . zobrazí se dialogové okno **Nový projekt** .
 
-3. Rozbalte uzel **služby SharePoint** pod možností **vizuál C#**  nebo **Visual Basic**a pak vyberte uzel **2010** .
+3. Rozbalte uzel **služby SharePoint** v rámci **jazyka Visual C#** nebo **Visual Basic**a pak vyberte uzel **2010** .
 
 4. V podokně **šablony** vyberte šablonu **projektu SharePoint 2010** .
 
@@ -103,9 +102,9 @@ ms.locfileid: "73983729"
 
      Tento krok nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, což je jediná dostupná možnost pro projekty pracovního postupu. Další informace najdete v tématu [požadavky na řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).
 
-7. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt** > **Přidat novou položku**.
+7. V **Průzkumník řešení**zvolte uzel projektu a potom v řádku nabídek zvolte **projekt**  >  **Přidat novou položku**.
 
-8. V části **vizuál C#**  nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+8. V části **Visual C#** nebo **Visual Basic**rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 9. V podokně **šablony** zvolte šablonu **sekvenční pracovní postup (pouze řešení farmy)** a pak klikněte na tlačítko **Přidat** .
 
@@ -172,7 +171,7 @@ ms.locfileid: "73983729"
 
 #### <a name="to-handle-activity-events"></a>Zpracování událostí aktivity
 
-1. V *Workflow1.cs* nebo *Workflow1. vb*přidejte následující pole na začátek třídy `Workflow1`. Toto pole se používá v aktivitě k určení, zda byl pracovní postup dokončen.
+1. V *Workflow1.cs* nebo *Workflow1. vb*přidejte následující pole do horní části `Workflow1` třídy. Toto pole se používá v aktivitě k určení, zda byl pracovní postup dokončen.
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -182,7 +181,7 @@ ms.locfileid: "73983729"
     Boolean workflowPending = true;
     ```
 
-2. Přidejte následující metodu do třídy `Workflow1`. Tato metoda kontroluje hodnotu vlastnosti `Document Status` seznamu dokumentů, aby zjistila, zda byl dokument zkontrolován. Pokud je vlastnost `Document Status` nastavena na `Review Complete`, pak metoda `checkStatus` nastaví pole `workflowPending` na **hodnotu false** , aby označovala, že pracovní postup je připravený k dokončení.
+2. Do třídy přidejte následující metodu `Workflow1` . Tato metoda kontroluje hodnotu `Document Status` Vlastnosti seznamu dokumentů, aby bylo možné zjistit, zda byl dokument zkontrolován. Pokud `Document Status` je vlastnost nastavena na `Review Complete` , pak `checkStatus` Metoda nastaví `workflowPending` pole na **hodnotu false** , aby označovala, že pracovní postup je připravený k dokončení.
 
     ```vb
     Private Sub checkStatus()
@@ -200,7 +199,7 @@ ms.locfileid: "73983729"
     }
     ```
 
-3. Přidejte následující kód do `onWorkflowActivated` a `onWorkflowItemChanged` metody pro volání metody `checkStatus`. Při spuštění pracovního postupu `onWorkflowActivated` metoda volá metodu `checkStatus` a určí, zda byl dokument již revidován. Pokud nebyl revidován, pracovní postup pokračuje. Po uložení dokumentu metoda `onWorkflowItemChanged` volá metodu `checkStatus` znovu a určí, zda byl dokument zkontrolován. I když je pole `workflowPending` nastaveno na **hodnotu true**, pracovní postup bude nadále spuštěn.
+3. Přidejte následující kód do `onWorkflowActivated` `onWorkflowItemChanged` metody a pro volání `checkStatus` metody. Při spuštění pracovního postupu `onWorkflowActivated` metoda volá `checkStatus` metodu k určení, zda byl dokument již revidován. Pokud nebyl revidován, pracovní postup pokračuje. Při uložení dokumentu `onWorkflowItemChanged` metoda volá `checkStatus` metodu znovu a určí, zda byl dokument zkontrolován. Když `workflowPending` je pole nastaveno na **hodnotu true**, pracovní postup bude nadále spuštěn.
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -226,7 +225,7 @@ ms.locfileid: "73983729"
     }
     ```
 
-4. Přidejte následující kód do metody `isWorkflowPending` pro kontrolu stavu vlastnosti `workflowPending`. Pokaždé, když se dokument uloží, aktivita **whileActivity1** zavolá metodu `isWorkflowPending`. Tato metoda prověřuje vlastnost <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> objektu <xref:System.Workflow.Activities.ConditionalEventArgs> a určí, zda má aktivita **whileActivity1** pokračovat nebo dokončit. Pokud je vlastnost nastavena na **hodnotu true**, aktivita pokračuje. V opačném případě se aktivita dokončí a pracovní postup se dokončí.
+4. Přidejte následující kód do `isWorkflowPending` metody pro kontrolu stavu `workflowPending` Vlastnosti. Pokaždé, když se dokument uloží, aktivita **whileActivity1** zavolá `isWorkflowPending` metodu. Tato metoda prověřuje <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> vlastnost <xref:System.Workflow.Activities.ConditionalEventArgs> objektu a určí, zda má aktivita **whileActivity1** pokračovat nebo dokončit. Pokud je vlastnost nastavena na **hodnotu true**, aktivita pokračuje. V opačném případě se aktivita dokončí a pracovní postup se dokončí.
 
     ```vb
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)
@@ -244,7 +243,7 @@ ms.locfileid: "73983729"
 5. Uložte projekt.
 
 ## <a name="test-the-sharepoint-workflow-template"></a>Testování šablony pracovního postupu služby SharePoint
- Po spuštění ladicího programu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nasadí šablonu pracovního postupu na server SharePoint a přidruží pracovní postup k seznamu **sdílené dokumenty** . Chcete-li otestovat pracovní postup, spusťte instanci pracovního postupu z dokumentu v seznamu **sdílené dokumenty** .
+ Když spustíte ladicí program, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nasadí šablonu pracovního postupu na server SharePoint a přidruží pracovní postup k seznamu **sdílené dokumenty** . Chcete-li otestovat pracovní postup, spusťte instanci pracovního postupu z dokumentu v seznamu **sdílené dokumenty** .
 
 #### <a name="to-test-the-sharepoint-workflow-template"></a>Testování šablony pracovního postupu služby SharePoint
 
@@ -262,7 +261,7 @@ ms.locfileid: "73983729"
 
      Tím se vybraný dokument nahraje do seznamu **sdílené dokumenty** a spustí se pracovní postup.
 
-6. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ověřte, zda ladicí program zastaví na zarážce vedle metody `onWorkflowActivated`.
+6. V nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ověřte, zda ladicí program zastaví na zarážce vedle `onWorkflowActivated` metody.
 
 7. Pro pokračování v provádění klikněte na klávesu **F5** .
 

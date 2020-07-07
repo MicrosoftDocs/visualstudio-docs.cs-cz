@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: Rozšíření uzlu služby SharePoint v Průzkumníku serveru | Dokumentace Microsoftu'
+title: 'Postupy: rozšiřování uzlu služby SharePoint v Průzkumník serveru | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,76 +13,75 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c5e617b57437033f4194d96647ebff9d1c4e2c2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: ea556d18641b96ea6a38ef5abf6efe4c93a44cdf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813994"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015030"
 ---
-# <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Postupy: Rozšíření uzlu služby SharePoint v Průzkumníku serveru
-  Uzly v rámci můžete rozšířit **připojení služby SharePoint** uzel v **Průzkumníka serveru**. To je užitečné, pokud chcete přidat nové podřízené uzly, položky místní nabídky nebo vlastnosti pro existující uzel. Další informace najdete v tématu [rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+# <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Postupy: rozšiřování uzlu služby SharePoint v Průzkumník serveru
+  Uzly můžete v uzlu **připojení služby SharePoint** v **Průzkumník serveru**zvětšit. To je užitečné, když chcete přidat nové podřízené uzly, položky místní nabídky nebo vlastnosti do existujícího uzlu. Další informace najdete v tématu věnovaném [rozšiřování uzlu připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
-### <a name="to-extend-a-sharepoint-node-in-server-explorer"></a>Rozšíření uzlu služby SharePoint v Průzkumníku serveru
+### <a name="to-extend-a-sharepoint-node-in-server-explorer"></a>Postup při rozšiřování uzlu služby SharePoint v Průzkumník serveru
 
 1. Vytvořte projekt knihovny tříd.
 
 2. Přidejte odkazy na následující sestavení:
 
-    - Microsoft.VisualStudio.SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - Microsoft.VisualStudio.SharePoint.Explorer.Extensions
+    - Microsoft. VisualStudio. SharePoint. Explorer. Extensions
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. složení
 
 3. Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> rozhraní.
 
-4. Přidat <xref:System.ComponentModel.Composition.ExportAttribute> atribut třídy. Tento atribut umožňuje sadě Visual Studio zjišťovat a načíst vaše <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> implementace. Předat <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> typ konstruktoru atributu.
+4. Přidejte <xref:System.ComponentModel.Composition.ExportAttribute> atribut do třídy. Tento atribut umožňuje aplikaci Visual Studio vyhledat a načíst vaši <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> implementaci. Předejte <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> typ konstruktoru atributu.
 
-5. Přidat <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute> atribut třídy. Tento atribut určuje identifikátor řetězce pro typ uzlu, který chcete rozšířit.
+5. Přidejte <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute> atribut do třídy. Tento atribut určuje identifikátor řetězce pro typ uzlu, který chcete zvětšit.
 
-     Určení typů integrované uzlem poskytovaný sadou Visual Studio, předejte jeden z následujících hodnot výčtu konstruktoru atributu:
+     Chcete-li určit předdefinované typy uzlů poskytované aplikací Visual Studio, předejte jednu z následujících hodnot výčtu konstruktoru atributu:
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Použijte tyto hodnoty zadat uzlů připojení lokality (uzly, které zobrazují adresy URL), lokality, nebo všechny ostatní nadřazené uzlů v **Průzkumníka serveru**.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Tyto hodnoty použijte k určení uzlů připojení lokality (uzly, které zobrazují adresy URL webu), uzlů webu nebo všech ostatních nadřazených uzlů v **Průzkumník serveru**.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Použijte tyto hodnoty určit jeden z předdefinovaných uzly, které představují jednotlivé součásti na Sharepointovém webu, jako je například uzel, který představuje seznam, pole nebo typ obsahu.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Pomocí těchto hodnot můžete zadat jeden z vestavěných uzlů, které představují jednotlivé komponenty na webu služby SharePoint, jako je například uzel, který představuje seznam, pole nebo typ obsahu.
 
-6. Ve vaší implementaci <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A> metody, použijte členy *nodeType* parametru se přidá funkce do uzlu. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType> objekt, který poskytuje přístup k události definované v <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents> rozhraní. Můžete například zpracovávat následující události:
+6. V implementaci <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A> metody pomocí členů parametru *NodeType* přidejte do uzlu funkce. Tento parametr je <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType> objekt, který poskytuje přístup k událostem definovaným v <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents> rozhraní. Například můžete zpracovat následující události:
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>: Zpracování této události pro přidání nové podřízené uzly uzlu. Další informace najdete v tématu [jak: Přidání vlastního uzlu služby SharePoint do Průzkumníka serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md).
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>: Zpracujte tuto událost pro přidání nových podřízených uzlů do uzlu. Další informace najdete v tématu [Postup: Přidání vlastního uzlu služby SharePoint do Průzkumník serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md).
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested>: Zpracování této události pro přidání položky vlastní místní nabídky k uzlu.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeMenuItemsRequested>: Zpracujte tuto událost, pokud chcete přidat vlastní položku místní nabídky do uzlu.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested>: Zpracování této události k přidání vlastních vlastností do uzlu. Vlastnosti se zobrazí v **vlastnosti** okno při výběru uzlu.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested>: Zpracujte tuto událost pro přidání vlastních vlastností do uzlu. Vlastnosti se zobrazí v okně **vlastnosti** , když je vybrán uzel.
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak vytvořit dva různé typy rozšíření uzlu:
 
-- Rozšíření, které se přidá položka kontextové nabídky do uzlů serveru SharePoint. Po kliknutí na položku nabídky, zobrazí název, který došlo ke kliknutí na uzel.
+- Rozšíření, které přidá položku kontextové nabídky do uzlů webu služby SharePoint. Po kliknutí na položku nabídky se zobrazí název uzlu, na který jste klikli.
 
-- Rozšíření, které přidá vlastní vlastnost s názvem **ContosoExampleProperty** na každém uzlu, který představuje pole s názvem **tělo**.
+- Rozšíření, které přidá vlastní vlastnost s názvem **ContosoExampleProperty** , do každého uzlu, který představuje pole s názvem **text**.
 
   [!code-csharp[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs#9)]
   [!code-vb[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb#9)]
 
-  Toto rozšíření přidá vlastnost upravit řetězec do uzlů. Můžete také vytvořit vlastní vlastnosti, které zobrazují jen pro čtení dat ze serveru SharePoint. Příklad, který ukazuje, jak to provést, najdete v části [názorný postup: Rozšíření Průzkumníka serveru pro zobrazení částí webu](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
+  Toto rozšíření přidá do uzlů upravitelnou vlastnost řetězce. Můžete také vytvořit vlastní vlastnosti, které zobrazují data jen pro čtení ze serveru SharePoint. Příklad, který ukazuje, jak to provést, naleznete v tématu [Návod: roztažení Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 
-## <a name="compile-the-code"></a>Kompilace kódu
+## <a name="compile-the-code"></a>Kompilovat kód
  Tento příklad vyžaduje odkazy na následující sestavení:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- Microsoft.VisualStudio.SharePoint.Explorer.Extensions
+- Microsoft. VisualStudio. SharePoint. Explorer. Extensions
 
-- System.ComponentModel.Composition
+- System. ComponentModel. složení
 
-- System.Windows.Forms
+- System. Windows. Forms
 
 ## <a name="deploy-the-extension"></a>Nasazení rozšíření
- K nasazení **Průzkumníka serveru** rozšíření, vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) balíčku pro sestavení a všechny další soubory, které chcete distribuovat s příponou. Další informace najdete v tématu [nasadit rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Chcete-li nasadit rozšíření **Průzkumník serveru** , vytvořte [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace naleznete v tématu [nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumníka serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)
-- [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Návod: Rozšíření Průzkumníka serveru pro zobrazení částí webu](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
-- [Přidružení vlastních dat k rozšíření nástrojů SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+- [Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumník serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)
+- [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Návod: roztažení Průzkumník serveru pro zobrazení webových částí](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Přidružit vlastní data k rozšířením nástrojů služby SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)

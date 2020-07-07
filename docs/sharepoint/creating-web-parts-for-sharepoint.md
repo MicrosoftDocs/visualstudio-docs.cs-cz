@@ -1,7 +1,7 @@
 ---
 title: Vytváření Webové části pro SharePoint | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - Microsoft.SharePoint.WebControls.DateTimeControl
 - Microsoft.SharePoint.WebControls.CssLink
@@ -23,12 +23,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82e0d860f21f0fe2744c8c05c4ebeb3590be68fc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984481"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015050"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>Vytváření webových částí pro službu SharePoint
   Pomocí webových částí můžete upravit obsah, vzhled a chování stránek webu služby SharePoint pomocí prohlížeče. Webové části jsou ovládací prvky na straně serveru, které běží na stránce webové části: jsou to stavební kameny stránek, které se zobrazují na webu služby SharePoint. Viz [stavební blok: webové části](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -45,7 +44,7 @@ ms.locfileid: "72984481"
 
 |Soubor|Popis|
 |----------|-----------------|
-|*Elements. XML*|Obsahuje informace, které soubor definice funkce v projektu používá k nasazení webové části.|
+|*Elements.xml*|Obsahuje informace, které soubor definice funkce v projektu používá k nasazení webové části.|
 |soubor. WebPart|Poskytuje informace, které SharePoint potřebuje k zobrazení webové části v galerii webových částí.|
 |Soubor s kódem|Obsahuje metody, které přidávají ovládací prvky do webové části a generují vlastní obsah v rámci webové části.|
 
@@ -67,7 +66,7 @@ ms.locfileid: "72984481"
 |[ProjectProperty](/previous-versions/office/sharepoint-server/ms478990(v=office.15))|Vrátí globální vlastnost aktuálního webu.|
 |[RssLink](/previous-versions/office/sharepoint-server/ms457574(v=office.15))|Vloží odkaz na informační kanál RSS do stránky *aspx* .|
 |[ScriptLink](/previous-versions/office/sharepoint-server/ms411959(v=office.15))|Poskytuje vlastnosti a metody pro registraci prostředků, jako jsou skripty, na stránce, aby je bylo možné požadovat při vykreslování stránky.|
-|[Použit](/previous-versions/office/sharepoint-server/ms460735(v=office.15))|Použije motiv na stránku *. aspx* .|
+|[Motiv](/previous-versions/office/sharepoint-server/ms460735(v=office.15))|Použije motiv na stránku *. aspx* .|
 
 ## <a name="debug-a-web-part"></a>Ladění webové části
  Můžete ladit projekt služby SharePoint, který obsahuje webovou část, stejně jako byste ladit jiné projekty aplikace Visual Studio. Když spustíte ladicí program sady Visual Studio, Visual Studio otevře web služby SharePoint.
@@ -93,14 +92,14 @@ ms.locfileid: "72984481"
 
 - Ladění vloženého [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] kódu musí být provedeno v souboru generovaného kódu namísto v souboru označení.
 
-- Vizuální webové části nepodporují použití direktivy `<@ Assembly Src=`.
+- Vizuální webové části nepodporují použití `<@ Assembly Src=` direktivy.
 
-- Webové ovládací prvky SharePointu a některé ovládací prvky [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] nejsou podporované v prostředí SharePointu v izolovaném prostoru. Pokud se nepodporované ovládací prvky používají ve vizuální webové části v řešení v izolovaném prostoru (sandbox), zobrazí se chyba "typ nebo název oboru názvů" Theme "v oboru názvů" Microsoft. SharePoint. WebControls "".
+- Webové ovládací prvky SharePointu a některé [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] ovládací prvky nejsou podporované v prostředí SharePointu v izolovaném prostoru. Pokud se nepodporované ovládací prvky používají ve vizuální webové části v řešení v izolovaném prostoru (sandbox), zobrazí se chyba "typ nebo název oboru názvů" Theme "v oboru názvů" Microsoft. SharePoint. WebControls "".
 
   Další informace o řešeních v izolovaném prostoru naleznete v tématu [rozdíly mezi řešeními v izolovaném prostoru a farmách](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>Vytvořit starší styl webových částí založených na SharePointu
- Pomocí šablon v aplikaci Visual Studio můžete vytvořit vlastní [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části pro službu SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části jsou postaveny na [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] infrastruktuře webové části a jsou doporučeným typem pro nové projekty.
+ Pomocí šablon v aplikaci Visual Studio můžete vytvořit vlastní [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] webové části pro službu SharePoint. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]webové části jsou postaveny nad [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] infrastrukturou webové části a jsou doporučeným typem pro nové projekty.
 
  V velmi málo případech může být nutné vytvořit webovou část pomocí webové části starší styl stylů SharePoint. Sadu Visual Studio můžete použít k vytvoření těchto typů webových částí, ale Visual Studio neposkytuje žádné šablony, které jsou navržené speciálně, aby vám pomohly je vytvořit.
 
@@ -108,7 +107,7 @@ ms.locfileid: "72984481"
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Postupy: Vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)|Ukazuje, jak vytvořit webové části pro SharePointové stránky.|
 |[Postupy: Vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)|Ukazuje, jak vytvořit webové části pro službu SharePoint pomocí vizuální návrhové plochy.|
