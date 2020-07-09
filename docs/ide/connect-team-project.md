@@ -1,16 +1,16 @@
 ---
 title: Připojení k projektům v Team Explorer
-ms.date: 05/19/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 8b79dff4815b8a03d81d66a3d64d0e23439e4021
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 31fab067ec9844b36c287b80ed481a68861b222e
+ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183701"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092320"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
 
@@ -42,6 +42,7 @@ Připojení k projektu:
 
 ## <a name="see-also"></a>Viz také
 
+- [Kurz: otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md)
 - [Referenční dokumentace k Team Exploreru](reference/team-explorer-reference.md)
 - [Připojení k projektu (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
 - [Řešení potíží s připojením k projektu](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops)

@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: daa1148a47919c12fa423bd90f6d63c030cf743c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
+ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770525"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092307"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Postupy: zobrazení a úpravy kódu pomocí funkce Náhled definice (Alt + F12)
 
@@ -74,7 +74,7 @@ Tyto klávesové zkratky můžete použít v okně **Náhled definice** :
 |-------------------|:-----------------------:|
 |Otevřít okno definice|**ALT** + **F12**|
 |Zavřít okno definice|**Esc**|
-|Povýšit okno definice na běžnou kartu dokumentu|**Posun** + **ALT** + **Domovská stránka**|
+|Povýšit okno definice na běžnou kartu dokumentu|**CTRL** + **ALT** + **Domovská stránka**|
 |Navigace mezi okny definice|**CTRL** + **Alt** + ALT **-** a **CTRL** + **+ ALT**+**=**|
 |Navigace mezi několika výsledky|**F8** a **SHIFT** + **F8**|
 |Přepnout mezi oknem editoru kódu a oknem definice|**Posun** + **Klávesa ESC**|
@@ -82,7 +82,7 @@ Tyto klávesové zkratky můžete použít v okně **Náhled definice** :
 > [!NOTE]
 > Můžete také použít stejné klávesové zkratky pro úpravu kódu v okně **Náhled definice** při použití jinde v aplikaci Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Navigace v kódu](../ide/navigating-code.md)
 - [Přejít k definici a Náhled definice](../ide/go-to-and-peek-definition.md)

@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5189278f8efe42e6e7916562e7ce4f5d6a964061
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: fb7f821a7b815b29c9f85b6ab0686edb0292866d
+ms.sourcegitcommit: 4d5cd0b9de7a87efb69f17b02c2331b749e6ec8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938263"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137563"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -64,6 +64,17 @@ Pokud problém neobsahuje důležité informace, přiřadíme stav _potřebuje v
 ### <a name="wont-fix-bugs"></a>Neopraví chyby
 
 Některé chyby zavřou, když se vyrovnává negativní náklady na zvýhodnění. Například pokud je oprava složitá a rizika pro mnoho uživatelů se regresí, oprava nemusí být přiměřená. Když tuto chybu zavřu, vysvětlíme, proč to máme.
+
+### <a name="other-product"></a>Jiný produkt
+
+V některých případech může při nahlášení problému dojít k tomu, že je způsoben jiným produktem a nikoli aplikací Visual Studio. Může se jednat o jinou související aplikaci nebo rozšíření. 
+
+Pokud k tomu dojde, problém povedeme a požádáme vás, abyste ho otevřeli s jiným produktem. Tady jsou některé běžné místo pro tyto problémy:
+
+* [SQL Server](https://feedback.azure.com/forums/908035-sql-server)
+* [Podpora Visual Studio Subscription](https://feedback.azure.com/forums/908035-sql-server)
+* [Office](https://support.office.com/article/how-do-i-give-feedback-on-microsoft-office-2b102d44-b43f-4dd2-9ff4-23cf144cfb11)
+* [Windows](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)
 
 #### <a name="additional-information"></a>Další informace
 
