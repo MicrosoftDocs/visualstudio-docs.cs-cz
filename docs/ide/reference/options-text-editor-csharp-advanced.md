@@ -10,57 +10,31 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0e04a011612cdebebd244fc061981b713b858a7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
+ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79431485"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86181063"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
-Stránka **Upřesnit** možnosti slouží k úpravě nastavení pro formátování editoru, refaktoring kódu a komentáře k dokumentaci XML pro jazyk C#. Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > a pak zvolte **Textový editor** > **C#** > **Upřesnit**.
+Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování editoru, refaktoringu kódu a dokumentačních komentářů XML pro jazyk C#. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte možnost **textový editor**  >  **C#**  >  **Upřesnit**.
 
 > [!NOTE]
-> Zde mohou být uvedeny všechny možnosti.
+> Ne všechny možnosti mohou být uvedeny zde.
 
 ## <a name="analysis"></a>Analýza
 
-- Analýza živého kódu nebo obor analýzy pozadí
+- Živá analýza kódu nebo obor analýzy na pozadí
 
-   Nakonfigurujte obor analýzy pozadí pro spravovaný kód. Další informace naleznete v [tématu Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Nakonfigurujte obor analýzy na pozadí pro spravovaný kód. Další informace naleznete v tématu [How to: Configure Live Code Analysis Scope for Managed Code](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
 
-## <a name="using-directives"></a>Používání směrnic
+## <a name="using-directives"></a>Direktivy using
 
-- Při řazení pomocí direktiv y nejprve umístěte direktivy "Systém"
+- Při řazení direktiv using umístit nejdřív direktivy System
 
-   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši seřadí `using` direktivy a umístí obory názvů Systém na začátek seznamu.
-
-   Před řazením:
-
-   ```csharp
-   using AutoMapper;
-   using FluentValidation;
-   using System.Collections.Generic;
-   using System.Linq;
-   using Newtonsoft.Json;
-   using System;
-   ```
-
-   Po seřazení:
-
-   ```csharp
-   using System;
-   using System.Collections.Generic;
-   using System.Linq;
-   using AutoMapper;
-   using FluentValidation;
-   using Newtonsoft.Json;
-   ```
-
-- Samostatné pomocí skupin direktiv
-
-   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši oddělí direktivy `using` vložením prázdného řádku mezi skupinami direktiv, které mají stejný kořenový obor názvů.
+   Pokud je tato možnost vybrána, příkazy **Remove a Sort using** v nabídce po kliknutí pravým tlačítkem myši seřadí `using` direktivy a umístí do horní části seznamu obory názvů System.
 
    Před řazením:
 
@@ -73,7 +47,33 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení pro formátován
    using System;
    ```
 
-   Po seřazení:
+   Po řazení:
+
+   ```csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using AutoMapper;
+   using FluentValidation;
+   using Newtonsoft.Json;
+   ```
+
+- Samostatné použití skupin direktiv
+
+   Pokud je tato možnost vybrána, příkaz **Odebrat a seřadit pomocí** v nabídce po kliknutí pravým tlačítkem myši oddělí `using` direktivy vložením prázdného řádku mezi skupiny směrnic, které mají stejný kořenový obor názvů.
+
+   Před řazením:
+
+   ```csharp
+   using AutoMapper;
+   using FluentValidation;
+   using System.Collections.Generic;
+   using System.Linq;
+   using Newtonsoft.Json;
+   using System;
+   ```
+
+   Po řazení:
 
    ```csharp
    using AutoMapper;
@@ -87,49 +87,56 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení pro formátován
    using System.Linq;
    ```
 
-- Navrhnout použití pro typy v sestaveních rozhraní .NET Framework
-- Navrhnout použití pro typy v balíčcích NuGet
+::: moniker range=">=vs-2019"                                              
+- Navrhnout použití typů v .NET Framework sestaveních
+::: moniker-end
+                                         
+::: moniker range="vs-2017"                                                
+- Navrhnout použití typů v referenčních sestaveních
+::: moniker-end                                                            
 
-   Pokud jsou vybrány tyto možnosti, [rychlá akce](../quick-actions.md) je k `using` dispozici k instalaci balíčku NuGet a přidat direktivu pro neodkazované typy.
+- Navrhnout použití typů v balíčcích NuGet
 
-   ![Rychlá akce pro instalaci balíčku NuGet v sadě Visual Studio](media/nuget-lightbulb.png)
+   Pokud jsou tyto možnosti vybrány, je k dispozici [rychlá akce](../quick-actions.md) pro instalaci balíčku NuGet a přidání `using` direktivy pro neodkazované typy.
+
+   ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
 
 ## <a name="highlighting"></a>Zvýraznění
 
-- Zvýraznění odkazů na symbol pod kurzorem
+- Zvýraznit odkazy na symbol pod kurzorem
 
-   Když je kurzor umístěn uvnitř symbolu nebo když klepnete na symbol, zvýrazní se všechny instance tohoto symbolu v souboru kódu.
+   Když je kurzor umístěný uvnitř symbolu nebo když kliknete na symbol, zvýrazní se všechny instance daného symbolu v souboru kódu.
 
 ## <a name="outlining"></a>Sbalování
 
-- Zadání režimu osnovy při otevření souborů
+- Po otevření souborů přejít do režimu sbalení
 
-   Když je tato volba vybraná, automaticky načrtne soubor kódu, který vytvoří sbalitelné bloky kódu. Při prvním otevření souboru #regions bloky a bloky neaktivní kód sbalí.
+   Když je tato možnost vybrána, automaticky popisuje soubor kódu, který vytvoří sbalitelný blok kódu. Při prvním otevření souboru #regions bloky a neaktivní bloky kódu budou sbaleny.
 
-- Zobrazit oddělovače čar procedury
+- Zobrazit oddělovače řádků procedury
 
-   Textový editor označuje vizuální rozsah procedur. Čára je nakreslena ve zdrojových souborech *CS* projektu v umístěních uvedených v následující tabulce:
+   Textový editor označuje vizuální rozsah procedur. Řádek je vykreslen ve zdrojových souborech *. cs* projektu v umístěních uvedených v následující tabulce:
 
-   |Umístění ve zdrojovém souboru .cs|Příklad umístění linky|
+   |Umístění ve zdrojovém souboru. cs|Příklad umístění řádku|
    |---------------------------------|------------------------------|
-   |Po uzavření konstrukce deklarace bloku|- Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />- Po vlastnosti, funkce nebo sub<br />- Ne mezi get a set klauzule v nemovitosti|
-   |Po sadě jednořádkových konstrukcí|- Po příkazech importu před definicí typu v souboru třídy<br />- Po proměnných deklarovaných ve třídě, před všemi postupy|
-   |Po deklaracích jednoho řádku (deklarace neblokové úrovně)|- Následující příkazy importu dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a deklarované příkazy dll.|
+   |Po ukončení konstrukce deklarace bloku|– Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />– Za vlastností, funkcí nebo sub<br />– Není mezi klauzulemi Get a set ve vlastnosti.|
+   |Po sadě jednoduchých konstrukcí|-Po příkazech importu před definicí typu v souboru třídy<br />– Po proměnných deklarovaných ve třídě, před všemi postupy|
+   |Po deklaracích s jedním řádkem (deklarace na úrovni bez blokování)|– Následující příkazy pro import dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a příkazy DLL Declare.|
 
-## <a name="block-structure-guides"></a>Vodítka blokové struktury
+## <a name="block-structure-guides"></a>Vodítka struktury bloku
 
-Zaškrtnutím těchto políček zobrazíte tečkované svislé čáry mezi složenými závorkami (**{}**) v kódu. Potom můžete snadno zobrazit jednotlivé bloky kódu pro úroveň deklarace a konstrukce úrovně kódu.
+Tato zaškrtávací políčka zaškrtněte, pokud chcete ve svém kódu zobrazit tečkované svislé čáry mezi složenou závorkou ( **{}** ). Pak můžete snadno zobrazit jednotlivé bloky kódu pro vaši úroveň deklarace a konstrukce na úrovni kódu.
 
-## <a name="editor-help"></a>Nápověda k editoru
+## <a name="editor-help"></a>Pomocník s editorem
 
-- Generovat komentáře dokumentace XML pro ///
+- Generovat dokumentační komentáře XML pro///
 
-   Když je tato volba vybraná, vloží elementy `///` XML pro komentáře dokumentace XML po zadání úvodu komentáře. Další informace o dokumentaci XML naleznete v [tématu Komentáře k dokumentaci XML (C# Programming Guide)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
+   Je-li vybrána tato možnost, vloží prvky XML pro dokumentační komentáře XML po zadání `///` úvodu komentáře. Další informace o dokumentaci XML naleznete v [dokumentaci XML (Průvodce programováním v C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
 ## <a name="see-also"></a>Viz také
 
-- [Postup: Vložení komentářů XML pro generování dokumentace](../../ide/reference/generate-xml-documentation-comments.md)
+- [Postupy: vložení komentářů XML pro generování dokumentace](../../ide/reference/generate-xml-documentation-comments.md)
 - [Dokumentační komentáře XML (Průvodce programováním v C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
-- [Dokumentujte kód pomocí komentářů XML (Průvodce C#)](/dotnet/csharp/codedoc)
-- [Nastavení možností editoru specifického pro jazyk](../../ide/reference/setting-language-specific-editor-options.md)
+- [Dokumentování kódu pomocí komentářů XML (Průvodce C#)](/dotnet/csharp/codedoc)
+- [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

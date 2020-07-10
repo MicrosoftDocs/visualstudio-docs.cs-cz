@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 31fab067ec9844b36c287b80ed481a68861b222e
-ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
+ms.openlocfilehash: bddb3afb602416159c75a5be9923fce14c089fc2
+ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092320"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86181050"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Připojení k projektům v Team Explorer
 
@@ -38,7 +38,7 @@ Připojení k projektu:
    ![Připojit se k projektu v Team Explorer](media/team-explorer/connect-project.png)
 
 > [!TIP]
-> Pokud potřebujete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si téma [Vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [Přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Pokud chcete otevřít projekt z úložiště, přečtěte si téma [otevření projektu z úložiště](../get-started/tutorial-open-project-from-repo.md). Pokud chcete vytvořit nový projekt nebo přidat uživatele do projektu, přečtěte si téma [Vytvoření projektu (Azure DevOps)](/azure/devops/organizations/projects/create-project) a [Přidání uživatelů do projektu nebo týmu (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
 
 ## <a name="see-also"></a>Viz také
 

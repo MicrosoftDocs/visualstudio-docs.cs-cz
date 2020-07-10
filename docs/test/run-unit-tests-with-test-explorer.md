@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de463fbc941273bed9b949958b9463be6ea1fa3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 35bd6f26b56ea7c3a1d578e5721504a91f60b74c
+ms.sourcegitcommit: 46547f0bf3fc1a81e1a906762106dec5855e6e4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285631"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156838"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -152,7 +152,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupuje test podle doby spuštění: **rychlá**, **střední**a **pomalá**.|
-|**Výsledek**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Zaznamenaný**|Seskupí testy podle výsledků spuštění: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 |**Traits**|Seskupí testy podle párů kategorií/hodnot, které definujete. Syntaxe pro určení kategorií vlastností a hodnot je definována v rámci testovacího rozhraní jednotky.|
 |**Projekt**|Seskupí testy podle názvu projektů.|
 ::: moniker-end
@@ -211,11 +211,21 @@ Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit 
 
 Seznam se otevře na nové kartě Průzkumník testů. Tento seznam je možné použít jednou a pak ho zahodit, nebo můžete kliknout na tlačítko **Uložit** na panelu nástrojů v okně seznamu stop a pak vybrat název a umístění pro uložení seznamu.
 
-![Seznam testů se otevře na samostatné kartě Průzkumníka testů.](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
+![Seznam testů se otevře na samostatné kartě Průzkumníka testů.](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
 **Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. Klikněte pravým tlačítkem a vyberte **Přidat do seznamu**testů  >  **Nový seznam**testů.
 
 **Chcete-li otevřít seznam**testů, zvolte ikonu seznamu stop na panelu nástrojů sady Visual Studio a v nabídce vyberte dříve uložený soubor seznamu testů.
+
+Pokud **chcete upravit seznam stop**, můžete kliknout pravým tlačítkem na libovolný test a pomocí možností nabídky ho přidat nebo odebrat ze seznamu testů.
+
+Počínaje verzí Visual Studio 2019 verze 16,7 můžete zvolit tlačítko **Upravit** na panelu nástrojů. Zaškrtávací políčka se zobrazí vedle testů, které ukazují, jaké testy jsou zahrnuty a vyloučeny v seznamu. Teď skupiny upravte podle potřeby.
+
+![Tlačítko Upravit seznam skladeb](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
+
+Můžete také zaškrtnout nebo zrušit kontrolu polí nadřazených skupin v hierarchii. Tato akce vytvoří dynamický seznam testů, který vždy aktualizuje seznam stop na základě testů, které jsou v dané skupině. Například pokud umístíte značku zaškrtnutí vedle třídy, všechny testy přidané z této třídy se stávají součástí tohoto seznamu testů. Pokud odstraníte test z této třídy, je odebrán ze seznamu. Další informace o pravidlech najdete tak, že seznam stop uložíte na panelu nástrojů na tlačítko Uložit a otevřete soubor *. playlist* , který je vytvořený na disku. Tento soubor obsahuje seznam všech pravidel a jednotlivých testů, které tvoří seznam testů.
+
+![Soubor XML se seznamem testů](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -272,7 +282,7 @@ Filtrování podle různých kritérií:
 |**Cesta k souboru**|Vyhledá shody v plně kvalifikovaném názvu souboru zdrojových souborů testu.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
 |**Výstup**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
-|**Výsledek**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
+|**Zaznamenaný**|Vyhledá názvy kategorií Průzkumníka testů pro shody: **neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 |Kvalifikátor|Popis|
