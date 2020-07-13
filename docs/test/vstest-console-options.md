@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b776599b484bef2b02c50528e838b9be82aa035
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: eaf282ca647310010c2e75e7279f11cbc90aad76
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289037"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211569"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe – možnosti příkazového řádku
 
@@ -52,7 +52,7 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest.Console.exe
 |**/ListExecutors**|Zobrazí seznam nainstalovaných prováděcích modulů testů.|
 |**/ListLoggers**|Zobrazí seznam nainstalovaných protokolovacích nástrojů testů.|
 |**/ListSettingsProviders**|Zobrazí seznam nainstalovaných zprostředkovatelů nastavení testů.|
-|**/Blame**|Sleduje testy při jejich provádění a, pokud proces hostitele testu selže, vygeneruje názvy testů v pořadí spuštění až do a včetně konkrétního testu, který byl spuštěn v době selhání. Tento výstup usnadňuje izolaci problematického testu a další diagnostiku. [Další informace](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md).|
+|**/Blame**|Spustí testy v režimu viny. Tato možnost je užitečná při izolaci problematických testů, které způsobují selhání hostitele testu. Při zjištění chyby vytvoří soubor sekvence v `TestResults/<Guid>/<Guid>_Sequence.xml` , který zachytí pořadí testů, které byly spuštěny před selháním. Další informace najdete v tématu [viny data collector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md).|
 |**/Diag: [*název souboru*]**|Zapíše protokoly trasování diagnostiky do zadaného souboru.|
 |**/ResultsDirectory: [*cesta*]**|Adresář výsledků testů bude vytvořen v zadané cestě, pokud neexistuje.<br />Příklad: `/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId: [*ParentProcessId*]**|ID procesu nadřazeného procesu zodpovědného za spuštění aktuálního procesu.|
@@ -64,24 +64,44 @@ V následující tabulce jsou uvedeny všechny možnosti pro *VSTest.Console.exe
 
 ## <a name="examples"></a>Příklady
 
-Syntaxe pro spuštění *VSTest.Console.exe* je:
+Syntaxe pro spuštění *vstest.console.exe* je:
 
-`Vstest.console.exe [TestFileNames] [Options]`
+`vstest.console.exe [TestFileNames] [Options]`
 
-Následující příkaz spustí *VSTest.Console.exe* pro **myTestProject.dll**knihovny testů:
+Následující příkaz spustí *vstest.console.exe* pro *myTestProject.dll*knihovny testů:
 
 ```cmd
 vstest.console.exe myTestProject.dll
 ```
 
-Následující příkaz se spustí *VSTest.Console.exe* s více testovacími soubory. Názvy testovacích souborů oddělte mezerami:
+Následující příkaz se spustí *vstest.console.exe* s více testovacími soubory. Názvy testovacích souborů oddělte mezerami:
 
 ```cmd
-Vstest.console.exe myTestFile.dll myOtherTestFile.dll
+vstest.console.exe myTestFile.dll myOtherTestFile.dll
 ```
 
-Následující příkaz se spustí *VSTest.Console.exe* s několika možnostmi. Spustí testy v souboru *myTestFile.dll* v izolovaném procesu a použije nastavení zadané v *místním souboru. runsettings* . Kromě toho spustí pouze testy označené "Priorita = 1" a zaprotokoluje výsledky do souboru *. TRX* .
+Následující příkaz se spustí *vstest.console.exe* s několika možnostmi. Spustí testy v souboru *myTestFile.dll* v izolovaném procesu a použije nastavení zadané v *místním souboru. runsettings* . Kromě toho spustí pouze testy označené "Priorita = 1" a zaprotokoluje výsledky do souboru *. TRX* .
 
 ```cmd
-vstest.console.exe  myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+```
+
+Následující příkaz se spustí *vstest.console.exe* s `/blame` možností pro *myTestProject.dll*knihovny testů:
+
+```cmd
+vstest.console.exe myTestFile.dll /blame
+```
+
+Pokud došlo k chybě hostitele testu, je vygenerován soubor *sequence.xml* . Soubor obsahuje plně kvalifikované názvy testů v pořadí spouštění až do a včetně konkrétního testu, který byl spuštěn v době selhání.
+
+Pokud nedojde k žádné chybě hostitele testu, *sequence.xml* soubor nebude vygenerován.
+
+Příklad vygenerovaného souboru *sequence.xml* : 
+
+```xml
+<?xml version="1.0"?>
+<TestSequence>
+  <Test Name="TestProject.UnitTest1.TestMethodB" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+  <Test Name="TestProject.UnitTest1.TestMethodA" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+</TestSequence>
 ```

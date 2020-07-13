@@ -15,18 +15,20 @@ helpviewer_keywords:
 - debugging [Visual Studio], engine selection
 - debugger, engine selection
 - debugging engine selection dialog box
+no-loc:
+- Blazor WebAssembly
 ms.assetid: 932269fe-94e3-43cb-8931-078f31afd177
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6831837853f2e8dd5502e57d0976899c5d31a1a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 9ccfe636cd8981c2f9dcc1375fb795d6c026b572
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285423"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211573"
 ---
 # <a name="select-code-type-dialog-box"></a>Dialogové okno Vybrat typ kódu
 
@@ -37,7 +39,7 @@ Chcete-li otevřít toto dialogové okno, otevřete dialogové okno **připojit 
 **Ladit tyto typy kódu:** Z poskytnutého seznamu vyberte typ (typy) kódu, který chcete ladit. To může být užitečné při [řešení potíží s nezdařeným připojením](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors). Tato možnost omezuje detekci pouze na typy kódu, které chcete ladit.
 
    ::: moniker range=">=vs-2019"
-   - Blazor WebAssembly – Blazor WebAssembly na straně klienta
+   - Blazor WebAssembly– Na straně klientaBlazor WebAssembly
    - GPU – software pro emulátor – kód C++ běžící na emulátoru softwaru GPU
    - JavaScript (Chrome) – JavaScript běžící v Chrome
    - JavaScript (Microsoft Edge-chrom) – JavaScript běžící v Microsoft Edge na bázi Chromu pro Windows 10

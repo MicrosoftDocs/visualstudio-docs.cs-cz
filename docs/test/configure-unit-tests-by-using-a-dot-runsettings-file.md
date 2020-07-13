@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e3ae90ae493fb216d89f0e0ee79fdf7e173a3e72
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e03400cf916319f963457af5740139bc88fc5105
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288764"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211600"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -67,7 +67,7 @@ Existují tři způsoby určení souboru parametrů běhu v aplikaci Visual Stud
     </Project>
     ```
 
-- V kořenovém adresáři vašeho řešení umístěte soubor parametrů běhu s názvem ". runsettings".
+- Do kořenového adresáře vašeho řešení umístěte soubor parametrů běhu s názvem *. runsettings* .
 
   Pokud je povoleno automatické zjišťování souborů parametrů běhu, nastavení v tomto souboru se aplikují ve všech testech běhu. Automatickou detekci souborů runsettings můžete zapnout ze dvou míst:
   
@@ -205,6 +205,11 @@ Následující kód XML ukazuje obsah typického souboru *. runsettings* . Každ
           </MediaRecorder>
         </Configuration>
       </DataCollector>
+
+      <!-- Configuration for blame data collector -->
+      <DataCollector friendlyName="blame" enabled="True">
+      </DataCollector>
+
     </DataCollectors>
   </DataCollectionRunSettings>
 
@@ -233,6 +238,7 @@ Následující kód XML ukazuje obsah typického souboru *. runsettings* . Každ
           <LogFileName>foo.html</LogFileName>
         </Configuration>
       </Logger>
+      <Logger friendlyName="blame" enabled="True" />
     </Loggers>
   </LoggerRunSettings>
 
@@ -271,7 +277,7 @@ Níže uvedené části obsahují podrobnosti o prvcích souboru *. runsettings*
 
 Element **RunConfiguration** může obsahovat následující prvky:
 
-|Node|Výchozí|Hodnoty|
+|Uzel|Výchozí|Hodnoty|
 |-|-|-|
 |**ResultsDirectory**||Adresář, ve kterém jsou umístěny výsledky testů.|
 |**TargetFrameworkVersion**|Framework40|`FrameworkCore10`pro zdroje .NET Core pro `FrameworkUap10` zdroje založené na technologii UWP, pro `Framework45` .NET Framework 4,5 a vyšší, `Framework40` pro .NET Framework 4,0 a `Framework35` pro .NET Framework 3,5.<br /><br />Toto nastavení určuje verzi testovacího rozhraní jednotky, která se používá ke zjišťování a provádění testů. Může se lišit od verze platformy .NET, kterou jste zadali ve vlastnostech sestavení projektu testování částí.<br /><br />Vynecháte `TargetFrameworkVersion` -li prvek ze souboru *. runsettings* , platforma automaticky určí verzi rozhraní na základě sestavených binárních souborů.|
@@ -310,6 +316,16 @@ Kolektor dat pokrytí kódu vytvoří protokol uvádějící, které části kó
 Kolektor dat videa zachycuje záznam obrazovky při spuštění testů. Tento záznam je vhodný pro řešení potíží s testy uživatelského rozhraní. Sada video DataCollection je k dispozici v **aplikaci Visual Studio 2017 verze 15,5** a novější.
 
 Chcete-li přizpůsobit jakýkoli jiný typ adaptérů diagnostických dat, použijte [soubor nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
+
+
+### <a name="blame-data-collector"></a>Kolekce dat viny
+
+```xml
+<DataCollector friendlyName="blame" enabled="True">
+</DataCollector>
+```
+
+Tato možnost vám může přispět k izolaci problematického testu, který způsobí selhání hostitele testu. Spuštění kolektoru vytvoří výstupní soubor (*Sequence.xml*) v *TestResults*, který zachycuje pořadí provádění testu před selháním. 
 
 ### <a name="testrunparameters"></a>TestRunParameters
 
@@ -356,7 +372,7 @@ Chcete-li použít parametry testovacího běhu, přidejte soukromé <xref:Micro
   </LoggerRunSettings>
 ```
 
-`LoggerRunSettings`oddíl definuje jeden nebo více protokolovacích nástrojů, které se mají použít pro testovací běh. Nejběžnější protokolovací nástroje jsou Console, TRX a HTML. 
+`LoggerRunSettings`Oddíl definuje jeden nebo více protokolovacích nástrojů, které se mají použít pro testovací běh. Nejběžnější protokolovací nástroje jsou Console, TRX a HTML. 
 
 ### <a name="mstest-run-settings"></a>MSTest nastavení spuštění
 
@@ -386,6 +402,33 @@ Tato nastavení jsou specifická pro testovací adaptér, který spouští testo
 |**MapInconclusiveToFailed**|false (nepravda)|Pokud je test dokončen s neprůkazovým stavem, je namapován na stav přeskočeno v **Průzkumníku testů**. Pokud chcete, aby se neprůkazné testy zobrazovaly jako neúspěšné, nastavte hodnotu na **true**.|
 |**InProcMode**|false (nepravda)|Pokud chcete, aby testy běžely ve stejném procesu jako adaptér MSTest, nastavte tuto hodnotu na **true**. Toto nastavení poskytuje malé zvýšení výkonu. Ale pokud se test ukončí s výjimkou, zbývající testy se nespustí.|
 |**AssemblyResolution**|false (nepravda)|Při hledání a spouštění testů jednotek můžete zadat cesty k dalším sestavením. Například použijte tyto cesty pro sestavení závislostí, která nejsou ve stejném adresáři jako testovací sestavení. Chcete-li zadat cestu, použijte element **cesty k adresáři** . Cesty můžou zahrnovat proměnné prostředí.<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
+
+## <a name="specify-environment-variables-in-the-runsettings-file"></a>Zadat proměnné prostředí v souboru *. runsettings*
+
+Proměnné prostředí lze nastavit v souboru *. runsettings* , který může přímo komunikovat s testovacím hostitelem. Zadání proměnných prostředí v souboru *. runsettings* je nezbytné pro podporu projektů netriviální, které vyžadují nastavení proměnných prostředí, jako je *DOTNET_ROOT*. Tyto proměnné jsou nastaveny při vytváření procesu testovacího hostitele a jsou k dispozici na hostiteli.
+
+### <a name="example"></a>Příklad
+
+Následující kód je ukázkový soubor *. runsettings* , který předává proměnné prostředí:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <!-- List of environment variables we want to set-->
+      <DOTNET_ROOT>C:\ProgramFiles\dotnet</DOTNET_ROOT>
+      <SDK_PATH>C:\Codebase\Sdk</SDK_PATH>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>
+```
+
+Uzel **RunConfiguration** by měl obsahovat uzel **EnvironmentVariables** . Proměnnou prostředí lze zadat jako název prvku a jeho hodnotu.
+
+> [!NOTE]
+> Vzhledem k tomu, že tyto proměnné prostředí by měly být vždy nastaveny při spuštění testovacího hostitele, testy by měly vždy běžet v samostatném procesu. V tomto případě se příznak */inisolation.* nastaví, když jsou proměnné prostředí, aby se testovací hostitel vždycky vyvolal.
 
 ## <a name="see-also"></a>Viz také
 

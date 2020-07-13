@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: 936216702113fbba2ec7251363418ab6182ade4a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906028"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211618"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
 Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
@@ -40,7 +40,7 @@ Každý s [vlastníkem](https://docs.microsoft.com/azure/role-based-access-contr
 
 4. Vyberte počet předplatných, která se mají koupit.
     > [!div class="mx-imgBorder"]
-    > ![Vybrat počet předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
+    > ![Vybrat počet předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Vyberte počet předplatných, která se mají koupit.")
 
     Pokud nechcete, aby se odběry přiřadily, zrušte **přiřazení tohoto předplatného mně**.
 
@@ -62,12 +62,18 @@ Pokud jste si koupili více než jedno předplatné, přejděte k [portálu pro 
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Zrušení obnovení předplatných cloudu, která jste zakoupili
 
-* Změna počtu zakoupených předplatných:
+Pokud chcete zrušit odběry, stačí nastavit počet předplatných pro vaši smlouvu na nulu (0).  Pomocí těchto kroků snižte počet předplatných:
+1. Přihlaste se k <https://manage.visualstudio.com>.
+1. Pokud máte více než jednu smlouvu, v rozevíracím seznamu vyberte požadovanou smlouvu.
+1. Kliknutím na ikonu **přehledu** v levém horním rohu zobrazíte informace o vašich předplatných.  
+> [!div class="mx-imgBorder"]
+> ![Zobrazit přehled předplatného](_img/buy-vs-subscriptions/overview-button.png "Kliknutím na tlačítko Přehled zobrazíte podrobnosti předplatného.")
+
+4. Vyhledejte položku pro odběry, které chcete zrušit, a klikněte na **změnit množství**.
+1. Nastavte množství na hodnotu nula (0). Vaše předplatná zůstanou v platnosti až do jejich plánovaného fakturačního data, ale neobnoví se při dosažení data fakturace.   
 
 > [!div class="mx-imgBorder"]
-> ![Změnit odběry](_img/buy-vs-subscriptions/manage-subscriptions.png)
-
-* Chcete-li zrušit tato předplatná, snižte počet předplatných na nulu (0). Neobnoví se na začátku dalšího fakturačního období (první z následujících měsíců pro měsíční předplatné v cloudu; 12 měsíců později pro roční cloudová předplatná).
+> ![Změnit odběry](_img/buy-vs-subscriptions/manage-subscriptions.png "Kliknutím na změnit množství zrušíte odběry.")
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
