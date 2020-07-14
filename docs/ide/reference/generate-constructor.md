@@ -1,97 +1,108 @@
 ---
-title: Generovat rychlou akci konstruktoru
-ms.date: 01/26/2018
+title: Rychlá akce při generování konstruktoru
+ms.date: 07/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3c8259841af4511bd782bca1be222353634638f5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ead3242c348acdf846fb57ec06057cc50c4b1c3b
+ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301809"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285407"
 ---
-# <a name="generate-a-constructor-in-visual-studio"></a>Generování konstruktoru v sadě Visual Studio
+# <a name="generate-a-constructor-in-visual-studio"></a>Generování konstruktoru v aplikaci Visual Studio
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje okamžitě vygenerovat kód pro nový konstruktor ve třídě.
+**Co:** Umožňuje okamžitě vygenerovat kód pro nový konstruktor třídy.
 
-**Kdy:** Zavedete nový konstruktor a chcete správně deklarovat automaticky nebo upravit existující konstruktor.
+**Když:** Zavádíte nový konstruktor a chcete jej správně deklarovat, nebo upravíte existující konstruktor.
 
-**Proč:** Před použitím můžete deklarovat konstruktor, ale tato funkce jej automaticky vygeneruje se správnými parametry. Kromě toho úprava existujícíkonstruktor vyžaduje aktualizaci všech callsites, pokud použít tuto funkci k jejich automatické aktualizaci.
+**Proč:** Je možné deklarovat konstruktor před jeho použitím, ale tato funkce je vygeneruje se správnými parametry automaticky. Navíc Změna existujícího konstruktoru vyžaduje aktualizaci všech callsites, pokud tuto funkci nepoužijete k automatické aktualizaci.
 
-**Jak:** Existuje několik způsobů, jak generovat konstruktor:
+**Jak:** Existuje několik způsobů, jak vytvořit konstruktor:
 
-- [Generovat členy konstruktoru a vyskladnění](#pick)
+- [Generovat konstruktor a vybrat členy](#pick)
+- [Generovat konstruktor s vlastnostmi](#with)
 - [Generovat konstruktor z vybraných polí](#selection)
 - [Generovat konstruktor z nového použití](#usage)
 - [Přidat parametr do existujícího konstruktoru](#addparameter)
-- [Vytvoření a inicializaci pole/vlastnosti z parametru konstruktoru](#create)
+- [Vytvoření a inicializace pole nebo vlastnosti z parametru konstruktoru](#create)
 
-## <a name="generate-constructor-and-pick-members-c-only"></a><a id = "pick"></a>Generovat členy konstruktoru a vyskladnění (pouze c#
+## <a name="generate-constructor-and-pick-members-c-only"></a><a id = "pick"></a>Generovat konstruktor a vybrat členy (jenom C#)
 
-1. Umístěte kurzor na libovolný prázdný řádek ve třídě:
+1. Umístěte kurzor do libovolného prázdného řádku ve třídě:
 
    ![Kurzor v prázdném řádku](media/constructor1-highlight-cs.png)
 
-1. Dále proveďte jeden z následujících akcí:
+1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Klikněte na ![Šroubovák](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na prázdném řádku ve třídě.
 
    ![Generovat náhled konstruktoru](media/constructor1-preview-cs.png)
 
-1. V rozevírací nabídce vyberte **Generovat konstruktor.**
+1. V rozevírací nabídce vyberte **vytvořit konstruktor** .
 
-   Otevře se dialogové okno **Vybrat členy.**
+   Otevře se dialogové okno **Vybrat členy** .
 
-1. Vyberte členy, které chcete zahrnout jako parametry konstruktoru. Můžete si je objednat pomocí šipek nahoru a dolů. Vyberte **OK**.
+1. Vyberte členy, které chcete zahrnout jako parametry konstruktoru. Můžete je seřadit pomocí šipek nahoru a dolů. Vyberte **OK**.
 
-   ![Dialogové okno Vybrat členy](media/constructor1-dialog-cs.png)
+   ![Dialog Vybrat členy](media/constructor1-dialog-cs.png)
 
    > [!TIP]
-   > Můžete zaškrtnout políčko **Přidat nulové kontroly** a automaticky generovat nulové kontroly parametrů konstruktoru.
+   > Zaškrtnutím políčka **přidat hodnoty null** můžete automaticky generovat kontroly hodnot null pro parametry konstruktoru.
 
-   Konstruktor je vytvořen se zadanými parametry.
+   Vytvoří se konstruktor se zadanými parametry.
 
    ![Generovat výsledek konstruktoru](media/constructor1-result-cs.png)
 
-## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a>Generovat konstruktor z vybraných polí (pouze C# )
+## <a name="generate-constructor-with-properties-c-only"></a><a id = "with"></a>Generovat konstruktor s vlastnostmi (jenom C#)
 
-1. Zvýrazněte členy, které chcete mít ve vašem generovaném konstruktoru:
+1. Umístěte kurzor na instanci.
+
+2. Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
+
+3. **V `<QualifiedName>` (s vlastnostmi) vyberte generovat konstruktor**.
+
+   ![Generovat náhled konstruktoru](media/generate-constructor-with-properties.png)
+
+## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a>Generovat konstruktor z vybraných polí (jenom C#)
+
+1. Zvýrazněte členy, které chcete mít ve vytvořeném konstruktoru:
 
    ![Zvýraznit členy](media/constructor2-highlight-cs.png)
 
-1. Dále proveďte jeden z následujících akcí:
+1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Klikněte na ![Šroubovák](media/screwdriver.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s výběrem.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud je textový kurzor již na řádku s výběrem.
 
       ![Generovat náhled konstruktoru](media/constructor2-preview-cs.png)
 
-1. V rozevírací nabídce vyberte **Generovat konstruktor TypeName(...).**
+1. V rozevírací nabídce vyberte **Generovat konstruktor TypeName (...)** .
 
-   Konstruktor je vytvořen s vybranými parametry.
+   Vytvoří se konstruktor s vybranými parametry.
 
    ![Generovat výsledek konstruktoru](media/constructor2-result-cs.png)
 
 ## <a name="generate-constructor-from-new-usage-c-and-visual-basic"></a><a id="usage"></a>Generovat konstruktor z nového použití (C# a Visual Basic)
 
-1. Umístěte kurzor na čáru, kde je červená vlnovka. Červená vlnovka označuje volání konstruktoru, který ještě neexistuje.
+1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka indikuje volání konstruktoru, který ještě neexistuje.
 
    - C#:
 
@@ -101,23 +112,23 @@ Toto generování kódu se vztahuje na:
 
        ![Zvýrazněný kód VB](media/constructor-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Najeďte přes červenou vlnovku a klikněte na ![chybová žárovka](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![chybová žárovka](media/error-bulb.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s červenou vlnovkou.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
       ![Generovat náhled konstruktoru](media/constructor-preview-cs.png)
 
-3. V rozevírací nabídce vyberte **Generovat konstruktor v '*TypeName*'.**
+3. V rozevírací nabídce vyberte **vytvořit konstruktor v '*TypeName*'** .
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v dolní části okna náhledu [zobrazíte všechny změny,](../../ide/preview-changes.md) které budou provedeny před provedením výběru.
+   > Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
 
-   Konstruktor je vytvořen, s všechny parametry odvozené z jeho použití.
+   Vytvoří se konstruktor s případnými parametry odvozenými z jeho využití.
 
    - C#:
 
@@ -127,58 +138,58 @@ Toto generování kódu se vztahuje na:
 
        ![Generovat výsledek metody VB](media/constructor-result-vb.png)
 
-## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a>Přidat parametr do existujícího konstruktoru (pouze C#
+## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a>Přidat parametr do existujícího konstruktoru (pouze C#)
 
-1. Přidejte parametr do volání existujícího konstruktoru.
+1. Přidejte parametr do existujícího volání konstruktoru.
 
-2. Umístěte kurzor na čáru, kde je červená vlnovka označující, že jste použili konstruktor, který ještě neexistuje.
+2. Umístěte kurzor na řádek, kde je červená vlnovka, což značí, že jste použili konstruktor, který ještě neexistuje.
 
-    ![Generovat zvýraznění konstruktoru](media/constructor4-highlight-cs.png)
+    ![Vygenerovat zvýraznění konstruktoru](media/constructor4-highlight-cs.png)
 
-3. Dále proveďte jeden z následujících akcí:
+3. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Najeďte přes červenou vlnovku a klikněte na ![chybová žárovka](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![chybová žárovka](media/error-bulb.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s červenou vlnovkou.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
       ![Generovat náhled konstruktoru](media/constructor4-preview-cs.png)
 
-4. V rozevírací nabídce vyberte Přidat **parametr do typename(...).**
+4. Z rozevírací nabídky vyberte **Přidat parametr do TypeName (...)** .
 
-   Parametr je přidán do konstruktoru, s jeho typem odvodit z jeho použití.
+   Parametr se přidá do konstruktoru s jeho typem odvozeným z jeho využití.
 
    ![Generovat výsledek konstruktoru](media/constructor4-result-cs.png)
 
-Můžete také přidat parametr do existující metody. Další informace naleznete v tématu [Add parameter to a method](add-parameter.md).
+Můžete také přidat parametr do existující metody. Další informace naleznete v tématu [Přidání parametru do metody](add-parameter.md).
 
-## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a>Vytvoření a inicializaci pole nebo vlastnosti z parametru konstruktoru (pouze C#
+## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a>Vytvoření a inicializace pole nebo vlastnosti z parametru konstruktoru (pouze C#)
 
 1. Najděte existující konstruktor a přidejte parametr:
 
-   ![Generovat zvýraznění konstruktoru](media/constructor5-highlight-cs.png)
+   ![Vygenerovat zvýraznění konstruktoru](media/constructor5-highlight-cs.png)
 
 1. Umístěte kurzor do nově přidaného parametru.
 
-1. Dále proveďte jeden z následujících akcí:
+1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Klikněte na ![Šroubovák](media/screwdriver.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s přidaným parametrem.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Klikněte na ![screwdriver](media/screwdriver.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s přidaným parametrem.
 
    ![Generovat náhled konstruktoru](media/constructor5-preview-cs.png)
 
-1. V rozevírací nabídce vyberte **Vytvořit a inicializovat vlastnost** nebo Vytvořit a **inicializovat pole.**
+1. V rozevírací nabídce vyberte možnost **vytvořit a inicializovat vlastnost** nebo **vytvořit a inicializovat pole** .
 
-   Pole nebo vlastnost je deklarována a automaticky pojmenována tak, aby odpovídala vašim typům. Řádek kódu je také přidán k inicializaci pole nebo vlastnosti v těle konstruktoru.
+   Pole nebo vlastnost jsou deklarovány a automaticky pojmenovány tak, aby odpovídaly vašim typům. Také je přidána řádka kódu pro inicializaci pole nebo vlastnosti v těle konstruktoru.
 
    ![Generovat výsledek konstruktoru](media/constructor5-result-cs.png)
 
 ## <a name="see-also"></a>Viz také
 
 - [Generování kódu](../code-generation-in-visual-studio.md)
-- [Náhled změn](../../ide/preview-changes.md)
+- [Zobrazit náhled změn](../../ide/preview-changes.md)
