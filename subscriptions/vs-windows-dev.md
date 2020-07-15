@@ -7,12 +7,12 @@ ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Seznamte se s vývojářským účtem Windows, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: a39b52f98cb476858e02ae34a4a9422e55dee888
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 659c2b1d792eb02d74ac5d52773f81bdda198a7a
+ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906003"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301457"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Vývojářský účet pro Windows v předplatných sady Visual Studio
 Váš účet pro vývojáře ve Windows, který je součástí vybraného předplatného sady Visual Studio, umožňuje odeslat bezplatné a placené aplikace pro Windows do Windows Storu.
@@ -26,7 +26,7 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 2. V části nástroje Najděte dlaždici účet pro vývojáře Windows a klikněte na odkaz **získat kód** v dolní části dlaždice výhody.  Zkopírujte kód do schránky a pak klikněte na **aktivovat**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Windows Developer výhody](_img/vs-windows-dev/vs-windows-dev-tile.png)
-3. V [https://developer.microsoft.com](https://developer.microsoft.com) lokalitě můžete zahájit proces registrace.  Pokračujte kliknutím na **zaregistrovat** .
+3. V [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/) lokalitě můžete zahájit proces registrace.  Pokračujte kliknutím na **zaregistrovat** .
    > [!div class="mx-imgBorder"]
    > ![Registrace výhody vývojářů pro Windows](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
 4. Přihlaste se ke svému předplatnému.  Pokud máte více účtů, vyberte účet přidružený k vašemu firemnímu předplatnému.
@@ -36,7 +36,7 @@ Pro tento proces doporučujeme vytvořit okno prohlížeče "soukromé".  Např�
 7. Vytvořte zobrazované jméno vydavatele.  Bude to jedinečný název, který se zákazníkům zobrazí v souvislosti s vašimi aplikacemi, doplňky a službami.
 8. Zadejte kontaktní informace a preferovaný e-mailový jazyk a pak klikněte na **Další**.
 9. Může se zobrazit výzva k ověření hesla.  Zadejte ho a klikněte na **Přihlásit se**.
-10. Na stránce registrace – platba vložte kód, který jste zkopírovali dříve do pole propagační kód.  Stránka se aktualizuje a ukáže, že *není potřeba žádná platba*.  Klikněte na **Další**.
+10. Na stránce registrace – platba vložte kód, který jste zkopírovali dříve do pole propagační kód.  Stránka se aktualizuje a ukáže, že *není potřeba žádná platba*.  Klikněte na **Next** (Další).
 11. Projděte si informace o účtu, přečtěte si smlouvu pro vývojáře aplikace a kliknutím na zaškrtávací políčko označíte, že souhlasíte s podmínkami a ujednáními.  Klikněte na **Dokončit**.
 12. Kliknutím na **Přejít na řídicí panel** můžete začít používat vývojářský účet pro Windows.
 

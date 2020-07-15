@@ -1,5 +1,5 @@
 ---
-title: Přidat hlavičku souboru
+title: Přidání hlavičky souboru
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -7,14 +7,14 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44cf9c34a69d665186a9f386e7ec34c5a59b8cdc
-ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
+ms.openlocfilehash: 779092e277ac5b6eed3afcaceaf55b26ee2759dd
+ms.sourcegitcommit: 025816f8e388b29e58761d304b0fda755ac5a613
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285378"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374166"
 ---
-# <a name="add-file-header"></a>Přidat hlavičku souboru
+# <a name="add-file-header"></a>Přidání hlavičky souboru
 
 Tato generace kódu platí pro:
 
