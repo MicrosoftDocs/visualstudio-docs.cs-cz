@@ -730,6 +730,20 @@
                   href: ca2328.md
                 - name: 'CA2329: Nepoužívejte s JsonSerializer deserializaci pomocí nezabezpečené konfigurace'
                   href: ca2329.md
+                - name: 'CA2350: Ujistěte se, že vstup pro DataTable.ReadXml() je důvěryhodný'
+                  href: ca2350.md
+                - name: 'CA2351: Ujistěte se, že vstup pro DataSet.ReadXml() je důvěryhodný'
+                  href: ca2351.md
+                - name: 'CA2352: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu může být zranitelná vůči útokům vzdáleného spuštění kódu'
+                  href: ca2352.md
+                - name: 'CA2353: Nezabezpečená datová sada nebo datová tabulka serializovatelného typu'
+                  href: ca2353.md
+                - name: 'CA2354: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů může být zranitelná vůči útoku vzdáleného spuštění kódu'
+                  href: ca2354.md
+                - name: 'CA2355: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů'
+                  href: ca2355.md
+                - name: 'CA2356: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů webu'
+                  href: ca2356.md
                 - name: 'CA2330: Ujistěte se, že JsonSerializer má při deserializaci zabezpečenou konfiguraci'
                   href: ca2330.md
                 - name: 'CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu'

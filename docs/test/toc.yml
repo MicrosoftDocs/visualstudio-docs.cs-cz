@@ -42,6 +42,8 @@
       items:
         - name: Spouštění testů částí pomocí Průzkumníka testů
           href: run-unit-tests-with-test-explorer.md
+        - name: Ladění testů částí pomocí Průzkumníka testů
+          href: debug-unit-tests-with-test-explorer.md
         - name: Průzkumník testů – nejčastější dotazy
           href: test-explorer-faq.md
     - name: Spuštění testů z příkazového řádku
@@ -103,7 +105,7 @@
       items:
         - name: Test jednotek knihovny DLL pro UPW v jazyce C++
           href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-        - name: 'Test jednotek kódu v jazyce Visual C# v aplikacích pro UPW'
+        - name: Test jednotek kódu v jazyce Visual C# v aplikacích pro UPW
           href: unit-testing-visual-csharp-code-in-a-store-app.md
         - name: "Návod: Vytváření a\_spouštění testů jednotek pro aplikace pro UPW"
           href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
