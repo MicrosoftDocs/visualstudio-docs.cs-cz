@@ -5,16 +5,17 @@ metadata:
   title: Nasazení v sadě Visual Studio
   description: Naučte se používat Visual Studio k nasazení aplikací, služeb a komponent.
   ms.topic: landing-page
+  ms.technology: vs-ide-deployment
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
-  ms.openlocfilehash: a2fc975c390283104fc4aa2c79244dba7e4e669e
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: eb2ad45606c71687d3fdb7d95c09b656883551b6
+  ms.sourcegitcommit: ad13d7b427303b0e801d54dc521dfb3c1e2bf6e4
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "71238094"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86405371"
 landingContent:
 - title: Informace o nasazení
   linkLists:
