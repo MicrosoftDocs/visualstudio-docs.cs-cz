@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Krok | Dokumenty společnosti Microsoft
+title: 'IDebugProcess3:: Step | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,18 +15,18 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c5c4927f3f997b7fdbdca2b32977f2aa31a51219
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 054cfc305400e3916ed7ba796a74370dfc2c77a5
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80723549"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386690"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
-Způsobí, že proces krok jeden instrukce nebo příkaz.
+Způsobí, že proces krokuje jednu instrukci nebo příkaz.
 
 > [!NOTE]
-> Tato metoda by měla být použita namísto [Step](../../../extensibility/debugger/reference/idebugprogram2-step.md).
+> Tato metoda by se měla použít místo [kroku](../../../extensibility/debugger/reference/idebugprogram2-step.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,21 +48,21 @@ int Step(
 
 ## <a name="parameters"></a>Parametry
 `pThread`\
-[v] [Objekt IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) představující krokování vlákna.
+pro Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje povýšení vlákna.
 
 `sk`\
-[v] Jedna z hodnot [STEPKIND.](../../../extensibility/debugger/reference/stepkind.md)
+pro Jedna z hodnot [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)
 
 `step`\
-[v] Jedna z hodnot [STEPUNIT.](../../../extensibility/debugger/reference/stepunit.md)
+pro Jedna z hodnot [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V případě, že existuje synchronizace vláken nebo komunikace mezi vlákny, ostatní vlákna v procesu by měla být spuštěna, když je určité vlákno krokování.
+ V případě, že dojde ke synchronizaci vlákna nebo komunikaci mezi vlákny, by se měly spouštět další vlákna v procesu, když konkrétní vlákno krokuje.
 
- **Upozornění** Neodesílejte událost zastavení nebo okamžitou (synchronní) událost na [událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto hovoru; jinak může zavěsit ladicí program.
+ **Upozornění** Neodesílat událost zastavení nebo okamžitou (synchronní) událost k [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) během zpracování tohoto volání; v opačném případě může ladicí program přestat reagovat.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

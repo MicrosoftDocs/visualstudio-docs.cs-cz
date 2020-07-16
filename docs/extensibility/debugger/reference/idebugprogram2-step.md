@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Krok | Dokumenty společnosti Microsoft
+title: 'IDebugProgram2:: Step | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,18 +15,18 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 194e72eba5a3f137e4650752a090d91ad7c402fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c6a70a96014ebf18984c75df60cfeb75ba0d0577
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80722755"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387236"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
 Provede krok.
 
 > [!NOTE]
-> Tato metoda je zastaralé. Místo toho použijte metodu [Step.](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+> Tato metoda je zastaralá. Místo toho použijte metodu [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,22 +48,22 @@ int Step( 
 
 ## <a name="parameters"></a>Parametry
 `pThread`\
-[v] [Objekt IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, které je stupňovaný.
+pro Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje nejladěné vlákno.
 
 `sk`\
-[v] Hodnota z výčtu [STEPKIND,](../../../extensibility/debugger/reference/stepkind.md) který určuje druh kroku.
+pro Hodnota z výčtu [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) , která určuje druh kroku.
 
 `step`\
-[v] Hodnota z výčtu [STEPUNIT,](../../../extensibility/debugger/reference/stepunit.md) která určuje jednotku kroku (například příkazem nebo instrukcí).
+pro Hodnota z výčtu [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) , která určuje jednotku kroku (například podle příkazu nebo instrukce).
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V případě, že existuje synchronizace vláken nebo komunikace mezi vlákny, ostatní vlákna v programu by měla být spuštěna, když je určité vlákno krokování.
+ V případě, že dojde ke synchronizaci vlákna nebo komunikaci mezi vlákny, by se měly spouštět další vlákna v programu při krokování určitého vlákna.
 
 > [!WARNING]
-> Neodesílejte událost zastavení nebo okamžitou (synchronní) událost na [událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto hovoru; jinak může zavěsit ladicí program.
+> Neodesílat událost zastavení nebo okamžitou (synchronní) událost k [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) během zpracování tohoto volání; v opačném případě může ladicí program přestat reagovat.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 3155c2cdc9ea3dc5208a52e5fe37f697a4ad5ef6
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903862"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386118"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>Zakázání ladicího programu pro ladění za běhu
 
@@ -32,15 +32,15 @@ Pokud nemáte nainstalovanou aplikaci Visual Studio, můžete zabránit ladění
 
 - Pokud se pokoušíte spustit webovou aplikaci, zakažte ladění skriptů:
 
-  V **ovládacím panelu** Windows > možnosti **síť a Internet** > **Internet**vyberte možnost **Zakázat ladění skriptů (Internet Explorer)** a **Zakázat ladění skriptů (jiné)** . Přesné kroky a nastavení závisí na vaší verzi Windows a v prohlížeči.
+  V **Ovládacích panelech Windows**  >  možnosti**sítě a Internet**  >  **Internet**vyberte možnost **Zakázat ladění skriptů (Internet Explorer)** a **Zakázat ladění skriptů (jiné)**. Přesné kroky a nastavení závisí na vaší verzi Windows a v prohlížeči.
 
   ![JIT – možnosti Internetu](../debugger/media/jitinternetoptions.png "JIT – možnosti Internetu")
 
 - Pokud jste hostitelem webové aplikace v ASP.NET ve službě IIS, zakažte ladění na straně serveru:
 
   1. V **zobrazení funkcí**Správce služby IIS v části **ASP.NET** dvakrát klikněte na **kompilace rozhraní .NET**nebo vyberte možnost **otevřít funkci** v podokně **Akce** .
-  1. V části **chování** > **ladění**vyberte **false (NEPRAVDA**). Postup se liší ve starších verzích služby IIS.
+  1. V **Behavior**části  >  **ladění**chování vyberte **false (NEPRAVDA**). Postup se liší ve starších verzích služby IIS.
 
 Po deaktivaci ladění za běhu může aplikace být schopná zpracovat chybu a normálně běžet.
 
-Pokud má aplikace stále neošetřenou chybu, může se zobrazit chybová zpráva nebo může dojít k chybě nebo zablokování aplikace. Aplikace nebude fungovat normálně, dokud nebude chyba opravena. Můžete se pokusit kontaktovat vlastníka aplikace a požádat je o opravu.
+Pokud má aplikace stále neošetřenou chybu, může se zobrazit chybová zpráva nebo může dojít k chybě aplikace nebo zastavení odezvy. Aplikace nebude fungovat normálně, dokud nebude chyba opravena. Můžete se pokusit kontaktovat vlastníka aplikace a požádat je o opravu.

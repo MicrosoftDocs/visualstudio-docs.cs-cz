@@ -1,18 +1,18 @@
 ---
 title: Instalace systémů testování částí od třetích stran
-ms.date: 04/01/2019
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: fb9a08d0d3119724e8db631841aca35c6c6e9fe5
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: c274f203b9bf2746716c0625c61141aaa332977a
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286970"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387184"
 ---
 # <a name="install-unit-test-frameworks"></a>Nainstalovat rozhraní pro testování částí
 
@@ -20,7 +20,12 @@ Průzkumník testů sady Visual Studio může spouštět testy z libovolného ro
 
 Řešení sady Visual Studio může obsahovat projekty testování částí, které používají různá rozhraní a cílí na různé jazyky.
 
+::: moniker range=">=vs-2019"
+Pro .NET, [MSTest, nunit a xUnit](getting-started-with-unit-testing.md) jsou testovací architektury poskytované aplikací Visual Studio, které jsou nainstalovány ve výchozím nastavení.
+::: moniker-end
+::: moniker range="vs-2017"
 [MSTest](getting-started-with-unit-testing.md) je testovací rozhraní, které poskytuje Visual Studio a ve výchozím nastavení je nainstalované.
+::: moniker-end
 
 ## <a name="acquire-frameworks"></a>Získat rozhraní
 

@@ -1,7 +1,7 @@
 ---
-title: Spuštění a ladění testů jednotek pomocí Průzkumníka testů
-description: Naučte se spouštět testy pomocí Průzkumníka testů v aplikaci Visual Studio. Toto téma popisuje, jak povolit automatické testovací běhy po sestavení, zobrazení výsledků testů, seskupení a filtrování seznamu testů, vytvoření seznamů stop, ladění testů a používání klávesových zkratek.
-ms.date: 07/29/2019
+title: Spouštění testů částí pomocí Průzkumníka testů
+description: Naučte se spouštět testy pomocí Průzkumníka testů v aplikaci Visual Studio. V tomto tématu se dozvíte, jak povolit automatické testovací běhy po sestavení, zobrazení výsledků testů, seskupení a filtrování seznamu testů, vytvoření seznamů a používání testovacích zástupců.
+ms.date: 07/14/2020
 ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
@@ -10,24 +10,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35bd6f26b56ea7c3a1d578e5721504a91f60b74c
-ms.sourcegitcommit: 46547f0bf3fc1a81e1a906762106dec5855e6e4a
+ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86156838"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386638"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
-Pomocí Průzkumníka testů spusťte testy jednotek ze sady Visual Studio nebo projektů testování částí třetích stran. Můžete také použít Průzkumníka testů k seskupení testů do kategorií, filtrování seznamu testů a vytváření, ukládání a spouštění seznamů testů. Můžete ladit testy a analyzovat výkon testu a pokrytí kódu.
+Pomocí Průzkumníka testů spusťte testy jednotek ze sady Visual Studio nebo projektů testování částí třetích stran. Můžete také použít Průzkumníka testů k seskupení testů do kategorií, filtrování seznamu testů a vytváření, ukládání a spouštění seznamů testů. Můžete také analyzovat pokrytí kódu a [ladit testy jednotek](../test/debug-unit-tests-with-test-explorer.md).
+
+**Průzkumník testů** může spustit testy z více projektů testů v řešení a z testovacích tříd, které jsou součástí projektů produkčního kódu. Testovací projekty mohou používat různé architektury testování částí. Při zápisu testovaného kódu pro rozhraní .NET může být testovací projekt napsán v jakémkoli jazyce, který také cílí na rozhraní .NET bez ohledu na jazyk cílového kódu. Nativní projekty kódu C/C++ musí být testovány pomocí rozhraní pro testování částí v jazyce C++.
+
+## <a name="build-your-test-project"></a>Sestavení testovacího projektu
+
+Pokud ještě nemáte projekt testů nastavený v řešení sady Visual Studio, musíte nejprve vytvořit a sestavit testovací projekt.
+
+- [Začínáme s testováním částí (.NET)](../test/getting-started-with-unit-testing.md)
+- [Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)
 
 Visual Studio obsahuje rozhraní pro testování částí společnosti Microsoft pro spravovaný i nativní kód. Nicméně Průzkumník testů může také spustit libovolné rozhraní testování částí, které implementovalo adaptér Průzkumníka testů. Další informace o instalaci rozhraní pro testování částí třetích stran najdete v tématu [instalace rozhraní pro testování částí třetích stran](../test/install-third-party-unit-test-frameworks.md) .
 
-**Průzkumník testů** může spustit testy z více projektů testů v řešení a z testovacích tříd, které jsou součástí projektů produkčního kódu. Testovací projekty mohou používat různé architektury testování částí. Při zápisu testovaného kódu pro rozhraní .NET může být testovací projekt napsán v jakémkoli jazyce, který také cílí na rozhraní .NET bez ohledu na jazyk cílového kódu. Nativní projekty kódu C/C++ musí být testovány pomocí rozhraní pro testování částí v jazyce C++. Další informace najdete v tématu [zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md).
-
 ## <a name="run-tests-in-test-explorer"></a>Spustit testy v Průzkumníku testů
 
-Při [sestavování testovacího projektu](../test/getting-started-with-unit-testing.md)se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
+Při sestavování testovacího projektu se testy zobrazí v Průzkumníku testů. Pokud není Průzkumník testů viditelný, zvolte možnost **test** v nabídce aplikace Visual Studio, zvolte možnost **Windows**a pak zvolte možnost **Průzkumník testů**.
 
 ::: moniker range="vs-2017"
 ![Průzkumník testů jednotek](../test/media/ute_failedpassednotrunsummary.png)
@@ -304,23 +311,6 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 Například `FullName:"MyClass" - FullName:"PerfTest"` vrátí všechny testy, které zahrnují "MyClass" v názvu, s výjimkou testů, které také zahrnují "PerfTest" v názvu.
 
-## <a name="debug-and-analyze-unit-tests"></a>Ladit a analyzovat testy jednotek
-
-Pomocí Průzkumníka testů můžete spustit ladicí relaci pro testy. Krokování kódu pomocí ladicího programu sady Visual Studio plynule přebírá mezi testy jednotek a testovaným projektem zpět. Spuštění ladění:
-
-1. V editoru sady Visual Studio nastavte zarážku v jedné nebo více testovacích metodách, které chcete ladit.
-
-    > [!NOTE]
-    > Vzhledem k tomu, že testovací metody lze spustit v libovolném pořadí, nastavte zarážky ve všech testovacích metodách, které chcete ladit.
-
-2. V Průzkumníku testů vyberte testovací metody a pak zvolte možnost **ladit vybrané testy** v místní nabídce kliknutím pravým tlačítkem myši.
-
-   Další informace o ladicím programu naleznete v tématu [ladění v aplikaci Visual Studio](../debugger/debugger-feature-tour.md).
-
-### <a name="diagnose-test-method-performance-issues"></a>Diagnostika problémů s výkonem testovacích metod
-
-Chcete-li diagnostikovat, proč testovací metoda trvá příliš dlouho, vyberte metodu v Průzkumníku testů a pak zvolte možnost **profilovat vybraný test** v místní nabídce kliknutím pravým tlačítkem myši. Viz [Sestava profilace instrumentace](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
-
 ### <a name="analyze-unit-test-code-coverage"></a>Analýza pokrytí kódu testu jednotek
 
 Množství kódu produktu, který je skutečně testován pomocí testů jednotek, můžete určit pomocí nástroje pokrytí kódu sady Visual Studio, který je k dispozici v edici Visual Studio Enterprise. Můžete spustit pokrytí kódu pro vybrané testy nebo pro všechny testy v řešení.
@@ -351,7 +341,7 @@ Další informace naleznete v tématu [Použití pokrytí kódu k určení, koli
 
 ## <a name="test-shortcuts"></a>Zástupci testů
 
-Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v editoru kódu na test a výběrem možnosti **Spustit test** nebo pomocí výchozího [zástupce Průzkumníka testů](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) v aplikaci Visual Studio. Některé zástupce jsou založené na kontextu. To znamená, že spouštějí nebo ladí testy na základě toho, kde je kurzor v editoru kódu. Pokud je kurzor uvnitř testovací metody, pak se tato testovací metoda spustí. Pokud je kurzor na úrovni třídy, pak se spustí všechny testy v této třídě. To je stejné i pro úrovni oboru názvů.
+Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v editoru kódu na test a výběrem možnosti **Spustit test** nebo pomocí výchozího [zástupce Průzkumníka testů](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) v aplikaci Visual Studio. Některé zástupce jsou založené na kontextu. To znamená, že spouštějí nebo [ladí testy](../test/debug-unit-tests-with-test-explorer.md) na základě toho, kde je kurzor v editoru kódu. Pokud je kurzor uvnitř testovací metody, pak se tato testovací metoda spustí. Pokud je kurzor na úrovni třídy, pak se spustí všechny testy v této třídě. To je stejné i pro úrovni oboru názvů.
 
 |Časté příkazy| Klávesové zkratky|
 |-|------------------------|
@@ -366,5 +356,6 @@ Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v 
 ## <a name="see-also"></a>Viz také
 
 - [Testování částí kódu](../test/unit-test-your-code.md)
+- [Ladění testů částí pomocí Průzkumníka testů](../test/debug-unit-tests-with-test-explorer.md)
 - [Spuštění testování částí v podobě 64bitového procesu](../test/run-a-unit-test-as-a-64-bit-process.md)
 - [Průzkumník testů – nejčastější dotazy](test-explorer-faq.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Upgrade ze zkušební verze | Dokumentace Microsoftu'
+title: 'Postupy: upgrade ze zkušební verze | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -9,28 +9,28 @@ caps.latest.revision: 28
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ecef4536ec11d2319007602b195c96a9df7d3719
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a9af78dc373734905c703a3b9ee5c9462af3e116
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298063"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386677"
 ---
 # <a name="how-to-upgrade-from-a-trial-edition-of-visual-studio"></a>Postupy: Upgrade ze zkušební edice sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete si vyzkoušet předběžnou verzi sady Visual Studio za 14 dní bez registrace produktu. Až dokončíte registraci, když se přihlásíte pomocí účtu Microsoft, licence předběžnou verzi platí až do času bomb data.
+Předběžnou verzi sady Visual Studio můžete vyhodnotit na 14 dní bez registrace produktu. Po registraci pomocí účet Microsoft se předběžná verze licence bude platit až do data vypršení platnosti.
 
- Můžete si vyzkoušet verzi edice Professional a Enterprise sady Visual Studio po dobu 30 dnů od instalace produktu. [Přihlášení k Visual Studiu](../ide/signing-in-to-visual-studio.md) do zkušebního období přidá 60 dní, celkem 90 dní. Pokud zkušební edici sady Visual Studio nezaregistrujete do 30 dnů, zkušební období vyprší 30 dnů po instalaci.
+ Můžete vyhodnotit vydání verze Professional a Enterprise sady Visual Studio po dobu 30 dnů od instalace produktu. [Přihlášení k Visual Studiu](../ide/signing-in-to-visual-studio.md) do zkušebního období přidá 60 dní, celkem 90 dní. Pokud zkušební edici sady Visual Studio nezaregistrujete do 30 dnů, zkušební období vyprší 30 dnů po instalaci.
 
- Pokud například stáhnete a použijete [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] po dobu 10 dnů a pak ji zaregistrujete, můžete ji použít po dobu dalších 80 dní. A pokračujte v používání produktu po 90 dnech, musíte poskytnout platný kód product key nebo přihlášení do sady Visual Studio s účtem Microsoft nebo účet organizace, který je přidružený k předplatnému MSDN nebo předplatného sady Visual Studio Online. Informace o tom, jak najít nebo získat kód Product Key, najdete v tématu [How to: najít Product Key sady Visual Studio](../install/how-to-locate-the-visual-studio-product-key.md) a [Jak koupit Visual Studio](https://visualstudio.microsoft.com/vs/pricing/).
+ Pokud například stáhnete a použijete [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 10 dní a pak ho zaregistrujete, můžete ho použít po dobu dalších 80 dní. Pokud chcete produkt dál používat po 90 dnech, musíte buď zadat platný kód Product Key, nebo se přihlásit k Visual Studiu pomocí účet Microsoft nebo účtu organizace, který je přidružený k předplatnému MSDN nebo k předplatnému sady Visual Studio Online. Informace o tom, jak najít nebo získat kód Product Key, najdete v tématu [How to: najít Product Key sady Visual Studio](../install/how-to-locate-the-visual-studio-product-key.md) a [Jak koupit Visual Studio](https://visualstudio.microsoft.com/vs/pricing/).
 
 > [!IMPORTANT]
-> Zkušební období pro edice Express sady Visual Studio verze je také 30 dní. Chcete-li zkušební období pro edice Express sady Visual Studio neomezeně prodloužit, přihlaste se k sadě Visual Studio nebo produkt zaregistrujte.
+> Zkušební období pro verze edice Express sady Visual Studio je také 30 dnů. Chcete-li zkušební období pro edice Express sady Visual Studio neomezeně prodloužit, přihlaste se k sadě Visual Studio nebo produkt zaregistrujte.
 
  Než začnete s upgradem, doporučujeme si stáhnout a prohlédnout si [dokument white paper o licencování sady Visual Studio a MSDN](https://www.microsoft.com/download/details.aspx?id=13350) na webu společnosti Microsoft. Další pomoc najdete v tématu [Podpora pro Visual Studio](https://support.microsoft.com/ph/1117/en-us).
 
-### <a name="to-upgrade-from-a-trial-edition-of-visual-studio-professional-or-enterprise"></a>Upgrade ze zkušební edice sady Visual Studio Professional nebo Enterprise
+### <a name="to-upgrade-from-a-trial-edition-of-visual-studio-professional-or-enterprise"></a>Upgrade ze zkušební edice Visual Studio Professional nebo Enterprise
 
 1. Spusťte aplikaci Visual Studio v režimu **Spustit jako správce** .
 

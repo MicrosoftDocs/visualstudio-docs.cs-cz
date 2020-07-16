@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca7feade173db9ccf8c86daaeb1399ef3e10a08b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350768"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386248"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
 Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzdáleném počítači.
@@ -50,7 +50,7 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
 
 - Máte nainstalovaný software zabezpečení sítě v počítači, který způsobil, že síťový zásobník je nespolehlivý a že přestaly pakety, které přechází z místního hostitele. Zkuste zakázat veškerý software zabezpečení sítě a zjistit, jestli ho vyřeší. Pokud ano, nahlaste se od dodavatele softwaru zabezpečení sítě, že software je v konfliktu s provozem localhost.
 
-- Pracujete v rámci sady Visual Studio k problémům se zachováním nebo zablokování. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv.exe) a pracovní proces (msvsmon.exe) a odeslat je do Microsoftu. Informace o tom, jak nahlásit problém, najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
+- Máte potíže s tím, že aplikace Visual Studio přestane reagovat nebo se jedná o jiný problém s výkonem. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv.exe) a pracovní proces (msvsmon.exe) a odeslat je do Microsoftu. Informace o tom, jak nahlásit problém, najdete v tématu [postup nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také
 

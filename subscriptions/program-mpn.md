@@ -7,12 +7,12 @@ ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Podrobnosti o tom, jaká předplatná jsou nabízená, jaká pravidla se použijí a kolik předplatných se nabízí v programu MPN.
-ms.openlocfilehash: fb19f84c480fb1291d225dcce8c0e140a953826b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: da7f4cccab1354d0ab563868f3a874539f63c7c6
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183051"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387145"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Předplatná sady Visual Studio nabízená partnerům v Microsoft Partner Network (MPN)
 
@@ -44,7 +44,7 @@ Počet předplatných sady Visual Studio bez ohledu na to, kolik kompetence part
 
 | Maximální výhody pro partnery, kteří mají jenom stříbrné kompetence                   | Maximální výhody pro partnery s aspoň jednou Gold Competency               |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| 25 Visual Studio Enterprise předplatných na zemi; 75 po celém světě          | 50 Visual Studio Enterprise předplatných na zemi; 150 po celém světě         |
+| 25 Visual Studio Enterprise předplatných na zemi nebo oblast; 75 po celém světě          | 50 Visual Studio Enterprise předplatných na zemi nebo oblast; 150 po celém světě         |
 
 ## <a name="subscriptions-for-partners-purchasing-the-action-pack"></a>Předplatná pro partnery, kteří kupují sadu Action Pack
 
@@ -70,7 +70,7 @@ Toto interní omezení jen pro použití v podstatě znamená, že partneři nem
 
 V případě předplatných sady Visual Studio nabízených přes MPN se musí licencovaný uživatel přihlásit k aplikaci Visual Studio pomocí stejné identity nebo přihlašovacího jména, které bylo použito k aktivaci předplatného sady Visual Studio. Kódy Product Key nejsou nabízeny k odemknutí produktu; jediným možností pro spuštění sady Visual Studio je přihlášení. Předplatitel sady Visual Studio může pracovat offline až po dobu 30 dnů, než přestane fungovat Visual Studio. Při práci v režimu online Visual Studio tiše aktualizuje stav licence uživatele pravidelně, aby bylo zajištěno, že předplatné je stále platné.
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Prostředky
 
 - [Průvodce Microsoft Partner Network programy](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [Přiřazení předplatných sady Visual Studio zaměstnancům programu MPN](manage-mpn-subscriptions.md)

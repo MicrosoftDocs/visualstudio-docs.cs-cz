@@ -17,12 +17,12 @@ caps.latest.revision: 38
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 56e5b76b000fd269d76d535e635ba86e72912bad
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: c0eaa719bb3eeca2eb3dfe558184699ccca42819
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916008"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387197"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,33 +33,33 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
   
  Chcete-li ladit 64 aplikaci, která běží na vzdáleném počítači, přečtěte si téma [vzdálené ladění](../debugger/remote-debugging.md).  
   
- K místnímu ladění 64 aplikací Visual Studio používá 64 pracovní proces (Msvsmon. exe) k provedení operací nízké úrovně, které nelze provést v procesu 32-bit sady Visual Studio.  
+ K místnímu ladění 64 aplikací Visual Studio používá 64 pracovní proces (msvsmon.exe) k provedení operací nízké úrovně, které nelze provést v procesu 32-bit sady Visual Studio.  
   
  Ladění ve smíšeném režimu není podporováno pro 64 procesy, které používají .NET Framework verze 3,5 nebo starší.  
   
 ## <a name="debug-a-64-bit-application"></a>Ladění 64 aplikace  
  Chcete-li vyzkoušet ladění 64 aplikace:  
   
-1. Vytvořte řešení sady Visual Studio, například C# konzolovou aplikaci.  
+1. Vytvořte řešení sady Visual Studio, například konzolovou aplikaci v jazyce C#.  
   
 2. Nastavte konfiguraci na 64-bit pomocí Configuration Manager. Další informace najdete v tématu [Postupy: konfigurace projektů pro cílové platformy](../ide/how-to-configure-projects-to-target-platforms.md).  
   
-3. V tomto okamžiku se spustí 64 verze vzdáleného ladicího programu (Msvsmon. exe). Spustí se, pokud je otevřené řešení s 64 konfigurací.  
+3. V tomto okamžiku se spustí 64 verze vzdáleného ladicího programu (msvsmon.exe). Spustí se, pokud je otevřené řešení s 64 konfigurací.  
   
-4. Spusťte ladění. Měli byste mít stejné prostředí jako s 32 konfigurací. Pokud se zobrazí chyby, přečtěte si část řešení potíží níže.  
+4. Spustit ladění. Měli byste mít stejné prostředí jako s 32 konfigurací. Pokud se zobrazí chyby, přečtěte si část řešení potíží níže.  
   
 ## <a name="troubleshooting-64-bit-debugging"></a>Řešení potíží s 64 bitového ladění  
- Může se zobrazit chyba: "64-bitová operace ladění trvá déle, než se čekalo." V tomto případě aplikace Visual Studio odeslala požadavek na 64. exe msvsmon. exe, ale výsledek této žádosti se vrátí zpět.  
+ Může se zobrazit chyba: "64-bitová operace ladění trvá déle, než se čekalo." V tomto případě aplikace Visual Studio odeslala požadavek na 64 verzi msvsmon.exe a v důsledku toho se výsledek této žádosti může vrátit zpět.  
   
  K této chybě dochází dvěma hlavními příčinami:  
   
 - Máte nainstalovaný software zabezpečení sítě v počítači, který způsobil, že síťový zásobník je nespolehlivý a že přestaly pakety, které přechází z místního hostitele. Zkuste zakázat veškerý software zabezpečení sítě a zjistit, jestli ho vyřeší. Pokud ano, nahlaste se od dodavatele softwaru zabezpečení sítě, že software je v konfliktu s provozem localhost.  
   
-- Pracujete v rámci sady Visual Studio k problémům se zachováním nebo zablokování. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv. exe) a pracovní proces (Msvsmon. exe) a odeslat je do Microsoftu. 
+- Dochází k problému, kdy aplikace Visual Studio přestane reagovat nebo se jedná o jiný problém s výkonem. Pokud k problému dochází pravidelně, můžete shromáždit výpisy sady Visual Studio (devenv.exe) a pracovní proces (msvsmon.exe) a odeslat je do Microsoftu. 
   
 ## <a name="see-also"></a>Viz také  
- [64  bitových aplikací](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)  
- [Konfigurace programů pro 64-Bit](https://msdn.microsoft.com/library/cb99f72b-8c74-48f4-846a-8921b37b97e9)   
- [Visual Studio IDE 64-bitová podpora](../ide/visual-studio-ide-64-bit-support.md)   
+ [64 – bitové aplikace](https://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)   
+ [Konfigurace programů pro 64. bit](https://msdn.microsoft.com/library/cb99f72b-8c74-48f4-846a-8921b37b97e9)   
+ [Visual Studio IDE 64 – Podpora bitových procesorů](../ide/visual-studio-ide-64-bit-support.md)   
  [Použití souborů výpisu paměti](../debugger/using-dump-files.md)   
  [Vzdálené ladění](../debugger/remote-debugging.md)

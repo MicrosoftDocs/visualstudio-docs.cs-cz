@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c985d6699c75a78900366204c8bd5275f4c051d
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 15a1d497b5b4217cd7a404cb591c20bb1196b04b
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769929"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387314"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
@@ -69,7 +69,7 @@ Soubory s výpisem paměti trasování a haldy jsou užitečné při pomoci diag
 
 1. Vyberte kartu **záznam** .
 
-1. V části **zaznamenat vaše akce**vyberte aktuální instanci sady Visual Studio, pokud zde můžete reprodukování problému. Pokud nemůžete, například pokud je aplikace Visual Studio zavěšena, vyberte **\<Create a new instance>** pro záznam akcí v nové instanci sady Visual Studio.
+1. V části **zaznamenat vaše akce**vyberte aktuální instanci sady Visual Studio, pokud zde můžete reprodukování problému. Pokud nemůžete, například pokud Visual Studio přestane reagovat, vyberte, **\<Create a new instance>** Chcete-li zaznamenávat akce v nové instanci sady Visual Studio.
 
 1. Vyberte **Spustit záznam**. Udělte oprávnění ke spuštění tohoto nástroje.
 
@@ -117,7 +117,7 @@ Pokud nechcete nebo nemůžete použít aplikaci Visual Studio k nahlášení pr
 
 Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také místo. Další informace najdete na stránce s [návrhem funkce](https://developercommunity.visualstudio.com/content/idea/post.html?space=8) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)

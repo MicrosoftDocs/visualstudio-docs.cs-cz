@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Pokračovat | Dokumenty společnosti Microsoft
+title: 'IDebugProcess3:: Continue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,18 +15,18 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8fa2e21e31297279a173c9c9edd087adc560903
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: aba0863ad7c50bf5c14e7a30c06097825b8cf5ec
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80723780"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386794"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
-Pokračuje ve spuštění tohoto procesu z zastaveného stavu. Jakýkoli předchozí stav spuštění (například krok) je zachována a proces spustí znovu.
+Pokračuje v běhu tohoto procesu ze stavu Zastaveno. Veškerý předchozí stav spuštění (například krok) se zachová a proces se začne znovu spouštět.
 
 > [!NOTE]
-> Tato metoda by měla být použita namísto [Pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md).
+> Tato metoda by se měla použít místo [pokračování](../../../extensibility/debugger/reference/idebugprogram2-continue.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,15 +44,15 @@ int Continue(
 
 ## <a name="parameters"></a>Parametry
 `pThread`\
-[v] [Objekt IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) představující vlákno, které má pokračovat.
+pro Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) představující vlákno, které se má pokračovat.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána na tento proces bez ohledu na to, kolik procesů jsou laděny nebo který proces generoval zastavení události. Implementace musí zachovat předchozí stav spuštění (například krok) a pokračovat v provádění, jako by nikdy zastavena před dokončením jeho předchozí spuštění. To znamená, že pokud vlákno v tomto procesu provádělo operaci krok přes `Continue` a bylo zastaveno, protože byl zastaven jiný proces a poté byl volán, zadaný podproces musí dokončit původní operaci krok přes.
+ Tato metoda se volá na tomto procesu bez ohledu na to, kolik procesů je právě laděno nebo který proces vygeneroval událost zastavení. Implementace musí uchovávat předchozí stav spuštění (například krok) a pokračovat v provádění, jako by se ještě nezastavila před dokončením předchozího spuštění. To znamená, že pokud vlákno v tomto procesu provádělo operaci převzetí operacemi krok za sebou a zastavilo se, protože se zastavil nějaký jiný proces a potom `Continue` byl volán, zadané vlákno musí dokončit původní operaci převzetí služeb.
 
- **Upozornění** Neodesílejte událost zastavení nebo okamžitou (synchronní) událost na [událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto hovoru; jinak může zavěsit ladicí program.
+ **Upozornění** Neodesílat událost zastavení nebo okamžitou (synchronní) událost k [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) během zpracování tohoto volání; v opačném případě může ladicí program přestat reagovat.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

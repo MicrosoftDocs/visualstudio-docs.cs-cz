@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 06/30/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 08190b7c2109f8a5344264786b5c1e3906c4c7b5
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 63a9929ea4e70a085f41e0f3dd2f8a71c1eb487e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770923"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386183"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,11 +29,16 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.7.0 | Preview 4 | 14. července 2020 | 16.7.30310.162 |
+| 16.6.4 | Vydaná verze | 14. července 2020 | 16.6.30309.148 |
+| 16.4.11 | Vydaná verze | 14. července 2020 | 16.4.30308.118 |
+| 16.0.16 | Vydaná verze | 14. července 2020 | 16.0.28803.791 |
 | 16.6.3 | Vydaná verze | 30. června 2020 | 16.6.30225.117 |
 | 16.7.0 | Verze Preview 3,1 | 25. června 2020 | 16.7.30223.230 |
 | 16.7.0 | Preview 3 | 23. června 2020 | 16.7.30218.91 |
 | 16.0.15 | Vydaná verze | 9\. června 2020 | 16.0.28803.753 |
 | 16.6.2 | Vydaná verze | 9\. června 2020 | 16.6.30204.135 |
+| 16.4.10 | Vydaná verze | 9\. června 2020 | 16.4.30204.51 |
 | 16.7.0 | Preview 2 | 2. června 2020 | 16.7.30128.36 |
 | 16.6.1 | Vydaná verze | 1\. června 2020 | 16.6.30128.74 |
 | 16.4.9 | Vydaná verze | 27. května 2020 | 16.4.30120.98 |
@@ -156,6 +161,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.25 | Vydaná verze | 14. července 2020 | 15.9.28307.1216 |
 | 15.9.24 | Vydaná verze | 9\. června 2020 | 15.9.28307.1177 |
 | 15.9.23 | Vydaná verze | 12. května 2020 | 15.9.28307.1146 |
 | 15.9.22 | Vydaná verze | 14. dubna 2020 | 15.9.28307.1093 |

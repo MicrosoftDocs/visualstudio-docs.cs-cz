@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f687672de4bc3511fa0c9198f7ad4145b26dcd11
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 76a655e2994e1eaa1c5ac65e7b8782ec5b9d6f72
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460795"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386716"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Chyba: vyhodnocování funkce &#39;funkce&#39; vypršel časový limit a bylo nutné je přerušit nebezpečným způsobem.
 
 Úplný text zprávy: při vyhodnocování funkce Function vypršel časový limit a bylo nutné ho přerušit nebezpečným způsobem. To může mít poškozený cílový proces.
 
-Aby bylo snazší zkontrolovat stav objektů .NET, ladicí program automaticky vynutí laděný proces, aby spouštěl další kód (obvykle metody getter vlastností a funkce ToString). Ve většině scénářů se tyto funkce dokončí rychle a ladění je mnohem jednodušší. Ladicí program však aplikaci nespustí v izolovaném prostoru (sandbox). V důsledku toho metoda get nebo ToString, která volá do nativní funkce, která přestane reagovat, může vést k dlouhým časovým limitům, které nemusí být obnovitelné. Pokud se zobrazí tato chybová zpráva, došlo k této chybě.
+Aby bylo snazší zkontrolovat stav objektů .NET, ladicí program automaticky vynutí laděný proces, aby spouštěl další kód (obvykle metody getter vlastností a funkce ToString). Ve většině scénářů se tyto funkce dokončí rychle a ladění je mnohem jednodušší. Ladicí program však aplikaci nespustí v izolovaném prostoru (sandbox). V důsledku toho metoda get nebo ToString, která volá do nativní funkce, která přestane reagovat, může způsobit dlouhé časové limity, které nemusí být obnovitelné. Pokud se zobrazí tato chybová zpráva, došlo k této chybě.
 
 Jednou z běžných příčin tohoto problému je, že když ladicí program vyhodnotí vlastnost, umožňuje pouze kontrolované vlákno. Takže pokud vlastnost čeká na spuštění jiných vláken uvnitř laděné aplikace a pokud čeká způsobem, že modul runtime .NET nemůže provést přerušení, dojde k tomuto problému.
 

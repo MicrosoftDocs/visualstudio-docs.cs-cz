@@ -1,5 +1,5 @@
 ---
-title: Diagnostická data a protokoly generované systémem
+title: Diagnostická data a systémem generované protokoly
 ms.date: 05/24/2018
 ms.topic: conceptual
 author: jillre
@@ -7,26 +7,26 @@ ms.author: michma
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9702439569fa9db1ff8687e914d5c9d20865e2b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b3f3774a816ca31bfcdd4013d35dadbb1737e5ab
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72652465"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387249"
 ---
-# <a name="system-generated-logs-collected-by-visual-studio"></a>Protokoly generované systémem shromážděné souborem Visual Studio
+# <a name="system-generated-logs-collected-by-visual-studio"></a>Systémem generované protokoly shromážděné aplikací Visual Studio
 
-Visual Studio shromažďuje protokoly generované systémem k opravě problémů a zlepšení kvality produktu prostřednictvím [programu Visual Studio Customer Experience Improvement Program](visual-studio-experience-improvement-program.md). Tento článek obsahuje některé informace o typech dat, které shromažďujeme, a o tom, jak je používáme. Poskytuje také tipy, jak se autoři rozšíření mohou vyhnout neúmyslnému zveřejnění osobních nebo citlivých informací.
+Visual Studio shromažďuje systémem generované protokoly, aby opravila problémy a vylepšila kvalitu produktu prostřednictvím program Zlepšování softwaru a služeb na základě zkušeností uživatelů sady [Visual Studio](visual-studio-experience-improvement-program.md). Tento článek poskytuje některé informace o typech shromažďovaných dat a o tom, jak ji používáme. Poskytuje také tipy, jak mohou autoři rozšíření zabránit nechtěnému zveřejnění osobních nebo citlivých informací.
 
-## <a name="types-of-collected-data"></a>Typy shromážděných údajů
+## <a name="types-of-collected-data"></a>Typy shromážděných dat
 
-Visual Studio shromažďuje protokoly generované systémem pro selhání, zablokování, nereagující uživatelské rozhraní a vysoké využití procesoru nebo paměti. Shromažďujeme také informace o chybách, ke kterým došlo při instalaci nebo používání produktu. Shromážděná data se liší v závislosti na chybě a mohou zahrnovat trasování zásobníku, výpisy stavu paměti a informace o výjimce:
+Visual Studio shromažďuje systémem generované protokoly chyb, nereagující z uživatelského rozhraní a vysokého využití procesoru nebo paměti. Shromažďujeme také informace o chybách, ke kterým došlo při instalaci nebo použití produktu. Shromážděná data se liší v závislosti na chybě a mohou zahrnovat trasování zásobníku, výpisy paměti a informace o výjimce:
 
-- Pro vysoké využití procesoru a neodpovídá, zásobníktrasy příslušných podprocesů sady Visual Studio jsou shromažďovány.
+- Pro zajištění vysokého využití procesoru a nereagují se shromažďují záznamy zásobníku relevantních vláken sady Visual Studio.
 
-- V případech, kdy trasování zásobníku některých vláken nestačí k určení hlavní příčiny problému, například selhání, zablokování nebo vysoké využití paměti, shromažďujeme *výpis*stavu paměti . Výpis představuje stav procesu, kdy došlo k chybě.
+- V případě, že trasování zásobníku některých vláken nestačí k určení původní příčiny problému, například chyby, nereagující nebo vysoké využití paměti, shromažďujeme *Výpis*paměti. Výpis stavu paměti představuje stav procesu, kdy došlo k chybě.
 
-- Pro neočekávané chybové stavy, například výjimku při pokusu o zápis do souboru na disku, shromažďujeme informace o výjimce. Informace zahrnují název výjimky, trasování zásobníku vlákna, kde došlo k výjimce, zprávu přidruženou k výjimce a další informace týkající se konkrétní výjimky.
+- V případě neočekávaných chybových stavů, například při pokusu o zápis do souboru na disku, shromažďujeme informace o výjimce. Informace obsahují název výjimky, trasování zásobníku vlákna, kde došlo k výjimce, zprávu spojenou s výjimkou a další informace, které jsou relevantní pro konkrétní výjimku.
 
    Následující příklad shromážděných dat zobrazuje název výjimky, trasování zásobníku a zprávu o výjimce:
 
@@ -46,31 +46,31 @@ Visual Studio shromažďuje protokoly generované systémem pro selhání, zablo
    "Reserved.DataModel.Fault.Exception.Message": " The process cannot access the file 'C:\\Users\\[UserName]\\AppData\\Local\\Microsoft\\VisualStudio\\Packages\\_Channels\\4CB340F5\\channelManifest.json' because it is being used by another process."
    ```
 
-## <a name="how-we-use-system-generated-logs"></a>Jak používáme protokoly generované systémem
+## <a name="how-we-use-system-generated-logs"></a>Jak používat systémem generované protokoly
 
-Pracovní postup k určení hlavní příčiny chyby se liší v závislosti na typu chyby a její závažnosti.
+Pracovní postup, který určí hlavní příčinu chyby, se liší v závislosti na typu chyby a jeho závažnosti.
 
 ### <a name="error-classification"></a>Klasifikace chyb
 
-Na základě protokolů jsou chyby klasifikovány a počítány tak, aby upřednostňovaly jejich vyšetřování. Například můžeme zjistit, že "System.IO. \__Error.WinIOError" na "System.IO.FileStream.Init" došlo 500 \<krát ve verzi x> produktu a má nejvyšší rychlost výskytu v této verzi.
+Na základě protokolů jsou chyby klasifikovány a počítány, aby bylo možné určit prioritu jejich šetření. Můžeme například zjistit, že "System.IO. \_ _Error. WinIOError "na" System.IO.FileStream.Init "nastala 500 časů ve verzi \<x> produktu a má nejvyšší četnost výskytů v této verzi.
 
 ### <a name="work-items-for-tracking"></a>Pracovní položky pro sledování
 
-Pracovní položky pro jednotlivé chyby s prioritou jsou vytvořeny a přiřazeny technikům k šetření. Tyto pracovní položky obvykle obsahují informace o klasifikaci, prioritě a diagnostice týkající se typu chyby. Tyto informace jsou odvozeny ze shromážděných protokolů generovaných systémem pro chybu. Například pracovní položka pro selhání může obsahovat trasování zásobníku, kde dochází k chybě.
+Pracovní položky pro jednotlivé a prioritní chyby se vytvářejí a přiřazují technikům k šetření. Tyto pracovní položky obvykle obsahují klasifikaci, prioritu a diagnostické informace, které jsou relevantní pro typ chyby. Tyto informace jsou odvozeny z shromážděných protokolů vygenerovaných systémem pro chybu. Například pracovní položka pro selhání může obsahovat trasování zásobníku, ve kterém došlo k chybě.
 
-### <a name="error-investigation"></a>Šetření chyb
+### <a name="error-investigation"></a>Chyba při šetření
 
-Inženýři použít informace, které jsou k dispozici v pracovní položce k určení hlavní příčinu chyby. V některých případech potřebují více informací než co je k dispozici v pracovní položce, v takovém případě odkazují na původní protokol generovaný systémem, který byl shromážděn. Například technik může zkontrolovat výpis stavu paměti pochopit selhání produktu.
+Technici využívají informace, které jsou k dispozici v pracovní položce k určení hlavní příčiny chyby. V některých případech potřebují více informací, než jaké jsou přítomny v pracovní položce. v takovém případě odkazují na původní shromažďovaný protokol generovaný systémem. Pracovník může například zkontrolovat výpis paměti a pochopit tak selhání produktu.
 
 ## <a name="tips-for-extension-authors"></a>Tipy pro autory rozšíření
 
-Autoři rozšíření by měli omezit expozici osobních informací tím, že nebudou používat osobní nebo jiné citlivé informace v názvech svých modulů, typů a metod. Pokud dojde k selhání nebo podobné chybové podmínky s tímto kódem v zásobníku, tyto informace získá shromážděny jako součást protokoly generované systémem.
+Autoři rozšíření by měli omezit expozici osobních údajů tím, že nepoužívají osobní nebo jiné citlivé informace v názvech jejich modulů, typů a metod. Pokud se v tomto kódu v zásobníku vyskytne chybový nebo podobný chybový stav, shromažďují se tyto informace jako součást protokolů generovaných systémem.
 
-## <a name="opt-out-of-data-collection"></a>Odhlásit se ze shromažďování údajů
+## <a name="opt-out-of-data-collection"></a>Odhlásit se od shromažďování dat
 
-Vzhledem k účelu shromažďovacích údajů a omezením jejich přístupu a uchovávání doporučujeme použít výchozí nastavení ochrany osobních údajů pro sady Visual Studio a systém Windows. Můžete se však [odhlásit](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) z programu Visual Studio Experience Improvement Program. Pokud se chcete odhlásit ze systémově generované kolekce protokolů pro všechny programy, přečtěte si část [Diagnostika, zpětná vazba a ochrana osobních údajů ve Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Možnosti se mohou lišit v závislosti na verzi systému Windows, kterou používáte.
+S ohledem na účel shromažďovaných dat a omezení přístupu a uchování doporučujeme použít výchozí nastavení ochrany osobních údajů pro sadu Visual Studio a Windows. Můžete se ale odhlásit [od program Zlepšování sady Visual Studio na základě zkušeností uživatelů](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) . Pokud chcete odhlásit vygenerované systémové shromažďování protokolů pro všechny programy, přečtěte si téma [Diagnostika, zpětná vazba a ochrana osobních údajů ve Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Možnosti se můžou lišit v závislosti na verzi systému Windows, kterou používáte.
 
 ## <a name="see-also"></a>Viz také
 
-- [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio](visual-studio-experience-improvement-program.md)
+- [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů](visual-studio-experience-improvement-program.md)
 - [Diagnostika, zpětná vazba a ochrana osobních údajů ve Windows 10](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)

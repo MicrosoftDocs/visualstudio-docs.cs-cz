@@ -7,12 +7,12 @@ ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Seznamte se s výhodou LinkedIn Learning zahrnutou jako součást předplatného LinkedIn Premium, které jsou součástí vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: f3ce676232742f712a926dbeb70e8fd2505ff18a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 580b565ad2eeecc0c5923963243ee63c1069b86f
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904419"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387132"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Zvýhodnění učení LinkedInu v předplatných sady Visual Studio
 
@@ -36,7 +36,7 @@ Jak aktivovat předplatné LinkedIn Premium a zvýhodněné učení LinkedInu:
 
 5. Zadejte své osobní údaje, vyberte uživatelské jméno a heslo a klikněte na **připojit nyní**.
 
-6. Zadejte zemi a PSČ a pak klikněte na **Další**.
+6. Zadejte země/oblast a PSČ a pak klikněte na **Další**.
 
 7. Dále vám poskytneme nějaké informace o vašem profilu.  Určete, jestli jste studenta, a zadejte nejnovější název, společnost a odvětví.
 
