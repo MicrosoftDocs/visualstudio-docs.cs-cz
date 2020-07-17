@@ -23,7 +23,7 @@
       href: /aspnet/web-pages/overview/getting-started/introducing-razor-syntax-vb
     - name: Vytvoření aplikace modelu Windows Forms
       href: ../../ide/create-a-visual-basic-winform-in-visual-studio.md?toc=/visualstudio/get-started/visual-basic/toc.json&bc=/visualstudio/get-started/visual-basic/breadcrumb/toc.json
-- name: Learn Visual Studio
+- name: Poznejte Visual Studio
   expanded: true
   items:
     - name: Otevření projektu z úložiště
@@ -34,7 +34,7 @@
       href: ../../ide/compiling-and-building-in-visual-studio.md
     - name: Ladění kódu
       href: ../visual-basic/tutorial-debugger.md
-    - name: Testování částí
+    - name: Testování jednotek
       href: ../../test/getting-started-with-unit-testing.md?toc=/visualstudio/get-started/visual-basic/toc.json&bc=/visualstudio/get-started/visual-basic/breadcrumb/toc.json
     - name: Nasazení projektu
       href: ../../deployment/index.yml

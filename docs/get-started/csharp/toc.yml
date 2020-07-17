@@ -1,4 +1,4 @@
-- name: 'Kurzy k jazyku C#'
+- name: Kurzy k jazyku C#
   href: index.yml
 - name: Přehled
   items:
@@ -13,7 +13,7 @@
 - name: Vytvoření aplikace
   expanded: true
   items:
-    - name: 'Vytvoření první aplikace v C#'
+    - name: Vytvoření první aplikace jazyka C#
       href: tutorial-console.md
     - name: Vytvoření webové aplikace
       href: tutorial-aspnet-core.md
@@ -35,7 +35,7 @@
           href: tutorial-aspnet-core-ef-step-04.md
         - name: '5: Nasazení aplikace ASP.NET Core do Azure'
           href: tutorial-aspnet-core-ef-step-05.md
-- name: Learn Visual Studio
+- name: Poznejte Visual Studio
   expanded: true
   items:
     - name: Spuštění programu
@@ -48,7 +48,7 @@
       href: ../../ide/compiling-and-building-in-visual-studio.md
     - name: Ladění kódu
       href: ../csharp/tutorial-debugger.md
-    - name: Testování částí
+    - name: Testování jednotek
       href: ../../test/getting-started-with-unit-testing.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: Nasazení projektu
       href: ../../deployment/index.yml
