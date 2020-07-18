@@ -1,6 +1,6 @@
 ---
 title: Prostředky pro řešení chyb
-ms.date: 11/04/2016
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -93,35 +93,35 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc3b1524b97b68e54574badcb003e608924e476d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a7b4dea467c0ed233b2db917e231a5a4d787f09
+ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593613"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86459278"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení problémů s chybami integrovaného vývojového prostředí
+# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje informací pro řešení potíží s integrovaným vývojovým prostředím
 
-Ne všechny chybové zprávy mají specifické přidružené téma nápovědy. Pokud vám informace v chybové zprávě nepomohou problém vyřešit, můžete se seznámit s dalšími materiály, jako jsou články znalostní báze Knowledge Base, fóra nebo odborná pomoc.
+Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Pokud informace v chybové zprávě vám nepomůžou problém vyřešit, můžete si prostudovat jiné prostředky, jako jsou články znalostní báze, fóra nebo Podpora produktů.
 
 > [!NOTE]
-> Toto téma platí pro Visual Studio v systému Windows. V jazyce Visual Studio for Mac [najdete článek Poradce při potížích s Visual Studio pro Mac](/visualstudio/mac/troubleshooting).
+> Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [řešení potíží s Visual Studio pro Mac](/visualstudio/mac/troubleshooting).
 
-## <a name="knowledge-base-articles"></a>Články znalostní báze Knowledge Base
+## <a name="knowledge-base-articles"></a>Články znalostní báze
 
-Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. K článkům kb můžete přistupovat na webu [podpory společnosti Microsoft.](https://support.microsoft.com)
+Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. K článkům znalostní báze můžete získat přístup na webu [Podpora Microsoftu](https://support.microsoft.com) . Můžete si také zobrazit kolekci článků znalostní báze pro sadu Visual Studio na stránce [Poradce při potížích se systémem Visual Studio](/troubleshoot/visualstudio/welcome-visual-studio/) .
 
-## <a name="developer-forums"></a>Vývojářská fóra
+## <a name="developer-forums"></a>Vývojářské fóra
 
 Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.
 
-Na webu [Technických komunit společnosti Microsoft](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) můžete přistupovat k fórům, blogům, chatům a dalším zdrojům.
+Na webu [technické komunity Microsoftu](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) můžete získat přístup k fórům, blogům, chatům a dalším prostředkům.
 
 ## <a name="product-support"></a>Podpora produktu
 
-Pokud máte i po vyzkoušení jiných prostředků otázky, můžete se obrátit na služby podpory společnosti Microsoft na webu [podpory společnosti Microsoft.](https://support.microsoft.com/en-us) Informace o podpoře produktů, které jsou k dispozici ve vaší oblasti, naleznete na stránce [možností zpětné vazby sady Visual Studio.](../../ide/feedback-options.md)
+Pokud máte i po vyzkoušení dalších prostředků nějaké dotazy, můžete kontaktovat služby podpory Microsoftu na webu [Podpora Microsoftu](https://support.microsoft.com/en-us) . Informace o podpoře produktu dostupné ve vaší oblasti najdete na stránce [Možnosti zpětné vazby pro Visual Studio](../../ide/feedback-options.md) .
 
 ## <a name="see-also"></a>Viz také
 
-* [Poradce při potížích s chybami souvisejícími se sítí nebo proxy serverem](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
-* [Poradce při potížích (Visual Studio pro Mac)](/visualstudio/mac/troubleshooting)
+* [Řešení chyb souvisejících se sítí nebo proxy serverem](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [Řešení potíží (Visual Studio pro Mac)](/visualstudio/mac/troubleshooting)

@@ -1,23 +1,23 @@
 ---
 title: Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
-ms.date: 11/04/2016
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 3f05874459553b0b83c5e43f326a5deb6b0d4798
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
+ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592936"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86459291"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
 
 Tento článek popisuje panely rozložení a ovládací prvky pro Návrhář XAML.
 
-Představte si, kde byste chtěli, aby se objekty zobrazovaly na stránce&mdash;objekty, jako jsou obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
+Představte si, kde byste chtěli zobrazit objekty na objektech stránky, jako jsou &mdash; obrázky, tlačítka a videa. Možná budete chtít, aby se zobrazovaly v řádcích a sloupcích, na jednom řádku svisle nebo vodorovně nebo na pevných pozicích.
 
 Až budete mít možnost si představit, jak se stránka může zobrazit, vyberte panel rozložení. Všechny stránky začínají na jednom, protože potřebujete něco, ke kterému přidáte objekty. Ve výchozím nastavení je to **Mřížka**, ale můžete ji změnit.
 
@@ -71,7 +71,7 @@ Uspořádejte objekty tak, aby zůstaly nebo *ukotveny*k jednomu okraji panelu.
 
 ![Panel rozložení DockPanel](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**Podívejte se na krátké video:** ![tlačítko Přehrát](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**Podívejte se na krátké video:** ![ Tlačítko Přehrát ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF – DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>Ovládací prvky rozložení
 
@@ -99,11 +99,9 @@ Umožní uživatelům procházet stránku nebo oblast stránky. Do **ScrollViewe
 
 Škálujte objekty podobně, jako byste měli ovládací prvek Lupa. Do **Viewbox**můžete přidat pouze jeden objekt. Chcete-li tento efekt použít pro více než jeden objekt, přidejte do **Viewbox**panel rozložení a pak přidejte ovládací prvky do tohoto panelu rozložení.
 
-(K dispozici pouze pro projekty WPF.)
-
 ![Ovládací prvek rozložení ViewBox](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Práce s elementy v Návrháři XAML](../xaml-tools/working-with-elements-in-xaml-designer.md)
 - [Vytvoření uživatelského rozhraní pomocí Návrháře XAML](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
