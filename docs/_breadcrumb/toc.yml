@@ -76,6 +76,15 @@
             - name: Pravidla pro práci s uživatelským prostředím
               tocHref: /visualstudio/extensibility/ux-guidelines/
               topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
+        - name: Začínáme (CSharp)
+          tocHref: /visualstudio/get-started/csharp/
+          topicHref: /visualstudio/get-started/csharp/index
+        - name: Začínáme (Visual Basic)
+          tocHref: /visualstudio/get-started/visual-basic/
+          topicHref: /visualstudio/get-started/visual-basic/index
+        - name: Nástroje pro kontejnery
+          tocHref: /visualstudio/containers/
+          topicHref: /visualstudio/containers/index
         - name: MSBuild
           tocHref: /visualstudio/msbuild/
           topicHref: /visualstudio/msbuild/msbuild

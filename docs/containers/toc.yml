@@ -11,16 +11,14 @@
           href: container-tools.md
         - name: Jednostránková aplikace React.js v kontejneru
           href: container-tools-react.md
-        - name: Vývoj na bázi Kubernetes se službou Azure Dev Spaces >>
-          href: /azure/dev-spaces/quickstart-netcore-visualstudio
+        - name: Vývoj na platformě Kubernetes
+          href: local-process-kubernetes.md
     - name: Kurzy
       expanded: true
       items:
         - name: Vícekontejnerová aplikace s použitím nástroje Docker Compose
           href: tutorial-multicontainer.md
-        - name: Kubernetes v sadě ‏Visual Studio
-          href: tutorial-kubernetes-tools.md
-    - name: Postup
+    - name: Postupy
       items:
         - name: Ladění aplikace v místním kontejneru Dockeru
           href: edit-and-refresh.md
@@ -38,9 +36,9 @@
       items:
         - name: Jak Visual Studio vytváří kontejnerizované aplikace
           href: container-build.md
-    - name: Řešení potíží
+    - name: Poradce při potížích
       href: troubleshooting-docker-errors.md
-    - name: Referenční informace
+    - name: Odkaz
       items:
         - name: Vlastnosti nástroje MSBuild pro kontejnerové projekty
           href: container-msbuild-properties.md
@@ -48,3 +46,11 @@
           href: docker-compose-properties.md
         - name: Nastavení spuštění
           href: container-launch-settings.md
+- name: Vývoj pomocí Kubernetes
+  items:
+    - name: Kubernetes v sadě ‏Visual Studio
+      href: tutorial-kubernetes-tools.md
+    - name: Místní proces s Kubernetes (Preview)
+      href: local-process-kubernetes.md
+    - name: Jak funguje místní proces s Kubernetes (Preview)
+      href: overview-local-process-kubernetes.md

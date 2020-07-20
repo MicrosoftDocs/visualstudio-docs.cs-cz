@@ -563,6 +563,8 @@
                   href: ca1833.md
                 - name: 'CA1835: Pro metody Stream ReadAsync/WriteAsync preferovat přetížení paměti'
                   href: ca1835.md
+                - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
+                  href: ca1836.md
             - name: Upozornění přenositelnosti
               items:
                 - name: Přehled
