@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 63a9929ea4e70a085f41e0f3dd2f8a71c1eb487e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 641119c278f5bd489eb45b4e97ad2c89c4529c59
+ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386183"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86476027"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -337,9 +337,10 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Frekvence vydávání nových verzí sady Visual Studio](/visualstudio/productinfo/release-rhythm/)
+* [Visual Studio Roadmap](/visualstudio/productinfo/vs-roadmap)
+* [Frekvence vydávání nových verzí sady Visual Studio](/visualstudio/productinfo/release-rhythm)
 * [Příručka správce sady Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
