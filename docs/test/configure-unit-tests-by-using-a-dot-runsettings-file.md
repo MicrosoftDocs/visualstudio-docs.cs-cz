@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0918ee1fc0676f37445f14b078c48c365144644c
-ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
+ms.openlocfilehash: 1a840d4aca1a6eda3f549278e36a1d64725cd8ad
+ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86476014"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869617"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -238,9 +238,7 @@ Tato možnost vám může přispět k izolaci problematického testu, který zp�
 </DataCollector>
 ```
 
-## <a name="testrunparameters-element"></a>Element TestRunParameters
-
-Parametry testovacího běhu poskytují způsob, jak definovat proměnné a hodnoty, které jsou k dispozici pro testy v době běhu. 
+### <a name="testrunparameters"></a>TestRunParameters
 
 ```xml
 <TestRunParameters>
@@ -249,17 +247,20 @@ Parametry testovacího běhu poskytují způsob, jak definovat proměnné a hodn
 </TestRunParameters>
 ```
 
-V testovacím kódu přístup k parametrům pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties%2A?displayProperty=nameWithType> vlastnosti:
+Parametry testovacího běhu poskytují způsob, jak definovat proměnné a hodnoty, které jsou k dispozici pro testy v době běhu. Přístup k parametrům pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties%2A?displayProperty=nameWithType> vlastnosti MSTest (nebo nunit [TestContext](https://docs.nunit.org/articles/nunit/writing-tests/TestContext.html)):
 
 ```csharp
-[TestMethod]
+private string _appUrl;
+public TestContext TestContext { get; set; }
+
+[TestMethod] // [Test] for NUnit
 public void HomePageTest()
 {
-    string appURL = TestContext.Properties["webAppUrl"];
+    string _appURL = TestContext.Properties["webAppUrl"];
 }
 ```
 
-Chcete-li použít parametry testovacího běhu, přidejte soukromé <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> pole a veřejnou <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> vlastnost do vaší třídy testu.
+Chcete-li použít parametry testovacího běhu, přidejte veřejnou <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> vlastnost do vaší testovací třídy.
 
 ## <a name="loggerrunsettings-element"></a>Element LoggerRunSettings
 

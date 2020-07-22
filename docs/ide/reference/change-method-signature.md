@@ -1,7 +1,7 @@
 ---
 title: Změna podpisu metody
 description: Přidat, odebrat nebo změnit pořadí parametrů metody. Klikněte pravým tlačítkem na metodu, vyberte rychlé akce a refaktoring a vyberte změnit signaturu.
-ms.date: 06/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 947f44700ef43815eb29bc3e90563afe1be68f2b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2d91406b65950515afb3659c0d5918841465b2fc
+ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283869"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869565"
 ---
 # <a name="change-a-method-signature-refactoring"></a>Změna refaktoringu signatury metody
 
@@ -75,18 +75,9 @@ Tento refaktoring platí pro:
 
     ![Dialogové okno Přidat parametr-C #](media/add-parameter-dialog.png)
 
-5. Až dokončíte přidávání parametru, stiskněte tlačítko **OK** , aby se změny zobrazily.
+5. Až dokončíte přidávání parametru, klikněte na **OK** , aby se změny zobrazily.
 
     ![Dialogové okno změnit podpis](media/change-signature.png)
-
-6. Kliknutím na tlačítko **OK** zobrazíte změny.
-   - C#:
-
-      ![Změnit výsledek podpisu – C #](media/changesignature-result-cs.png)
-
-   - Visual Basic:
-
-      ![Změnit výsledek podpisu – Visual Basic](media/changesignature-result-vb.png)
 
 ## <a name="see-also"></a>Viz také
 
