@@ -7,12 +7,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1457b8178a48ac867ee8407df9501dee56afd45b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 4ee29937b11110ee6aae65628b81ea49588fdd22
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905567"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972306"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio
 
@@ -105,7 +105,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
     name: "Test auto load",
     expression: "(SingleProject | MultipleProjects) & DotConfig",
     termNames: new[] { "SingleProject", "MultipleProjects","DotConfig" },
-    termValues: new[] { VSConstants.UICONTEXT_SolutionHasSingleProject_string , VSConstants.UICONTEXT_SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
+    termValues: new[] { VSConstants.UICONTEXT.SolutionHasSingleProject_string , VSConstants.UICONTEXT.SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
 ```
 
  Nyní výraz odkazuje na tři výrazy. První dvě slova "SingleProject" a "MultipleProjects" odkazují na další dobře známé kontexty uživatelského rozhraní (podle jejich identifikátorů GUID). Třetí výraz "DotConfig" je kontext uživatelského rozhraní založeného na pravidlech definovaný dříve v tomto článku.
@@ -129,7 +129,7 @@ Kontext uživatelského rozhraní založeného na pravidlech lze použít různ�
 
 Tady jsou různé typy termínů, které jsou podporované:
 
-|Pojem|Popis|
+|Termín|Popis|
 |-|-|
 |{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|Identifikátor GUID odkazuje na kontext uživatelského rozhraní. Pokud je kontext uživatelského rozhraní aktivní a v opačném případě false, bude podmínka pravdivá.|
 |HierSingleSelectionName:\<pattern>|Podmínka bude pravdivá vždy, když je výběr v aktivní hierarchii jedinou položkou a název vybrané položky odpovídá regulárnímu výrazu .NET, který je dán "vzorem".|

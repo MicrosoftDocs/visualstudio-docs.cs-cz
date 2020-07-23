@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f9e9963e05b0991beaea7da4027f4db3df4e4eb
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7c8639ede4a01157718f0ab1a1514927e620fa8d
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903925"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972332"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Vytvoření rozšíření pomocí příkazu nabídky
 
@@ -32,7 +32,17 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem **FirstMenuCommand**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".
 
+::: moniker range="vs-2017"
+
 2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **FirstCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** , přejít na **Visual C#**  >  **rozšiřitelnost** jazyka Visual C# a vybrat **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *FirstCommand.cs*.
+
+::: moniker-end
 
 3. Sestavte projekt a spusťte ladění.
 
@@ -50,7 +60,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker-end
 
-Nyní přejděte do nabídky **nástroje** v experimentální instanci. Měl by se zobrazit příkaz **Invoke FirstCommand** . V tomto okamžiku příkaz zobrazí okno se zprávou, které říká **FirstCommandPackage uvnitř FirstMenuCommand. FirstCommand. MenuItemCallback ()**. V další části se dozvíte, jak ve skutečnosti spustit program Poznámkový blok z tohoto příkazu.
+Nyní přejděte do nabídky **nástroje** v experimentální instanci. Měl by se zobrazit příkaz **Invoke FirstCommand** . V tomto okamžiku příkaz zobrazí okno se zprávou, které říká **FirstCommand uvnitř FirstMenuCommand. FirstCommand. MenuItemCallback ()**. V další části se dozvíte, jak ve skutečnosti spustit program Poznámkový blok z tohoto příkazu.
 
 ## <a name="change-the-menu-command-handler"></a>Změna obslužné rutiny příkazu nabídky
 
@@ -77,11 +87,13 @@ Nyní aktualizujeme obslužnou rutinu příkazu na spustit Poznámkový blok.
     }
     ```
 
-3. Odeberte `MenuItemCallback` metodu a přidejte `StartNotepad` metodu, která bude jednoduše spouštět program Poznámkový blok:
+3. Odeberte `Execute` metodu a přidejte `StartNotepad` metodu, která bude jednoduše spouštět program Poznámkový blok:
 
     ```csharp
     private void StartNotepad(object sender, EventArgs e)
     {
+        ThreadHelper.ThrowIfNotOnUIThread();
+
         Process proc = new Process();
         proc.StartInfo.FileName = "notepad.exe";
         proc.Start();
@@ -102,7 +114,7 @@ Tento skript se dá získat jedním ze dvou způsobů:
 
 2. Z příkazového řádku spusťte následující příkaz:
 
-    ```xml
+    ```cmd
     <VSSDK installation>\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe /Reset /VSInstance=<version> /RootSuffix=Exp && PAUSE
 
     ```
@@ -113,7 +125,7 @@ Teď, když máte vaše rozšíření nástroje spuštěné požadovaným způso
 
 Soubor *. vsix* pro toto rozšíření najdete v adresáři *FirstMenuCommand* bin. Konkrétně za předpokladu, že jste vytvořili konfiguraci vydané verze, bude v:
 
-*\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\ FirstMenuCommand. vsix*
+*\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\FirstMenuCommand.vsix*
 
 Chcete-li nainstalovat rozšíření, váš přítel potřebuje zavřít všechny otevřené instance aplikace Visual Studio a potom poklikejte na soubor *. vsix* , který spustí **instalační program VSIX**. Soubory se zkopírují do adresáře * \<version> \Extensions%localappdata%\Microsoft\VisualStudio* .
 

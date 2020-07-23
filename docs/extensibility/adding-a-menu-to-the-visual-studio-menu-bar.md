@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39dee051991efe05b9a661ce1d213e71b456590b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 61321555a6896fad926d2ee38c5d73d50801d6b9
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904258"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972345"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky do řádku nabídek sady Visual Studio
 
@@ -26,7 +26,7 @@ Před přidáním nové nabídky do řádku nabídek sady Visual Studio zvažte,
 
 Nabídky jsou deklarovány v souboru *. vsct* projektu. Další informace o nabídkách a souborech *. vsct* naleznete v tématech [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
-Po dokončení tohoto návodu můžete vytvořit nabídku s názvem **TestMenu** , která obsahuje jeden příkaz.
+Po dokončení tohoto návodu můžete vytvořit nabídku s názvem **Nabídka testu** , která obsahuje jeden příkaz.
 
 :::moniker range=">=vs-2019"
 > [!NOTE]
@@ -41,7 +41,17 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `TopLevelMenu` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** hledáním "VSIX".  Další informace najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).
 
+::: moniker range="vs-2017"
+
 2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+2. Po otevření projektu přidejte šablonu vlastní položky příkazu s názvem **TestCommand**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >   **novou položku**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *TestCommand.cs*.
+
+::: moniker-end
 
 ## <a name="create-a-menu-on-the-ide-menu-bar"></a>Vytvoření nabídky na řádku nabídek rozhraní IDE
 
@@ -49,13 +59,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. V **Průzkumník řešení**otevřete *TestCommandPackage. vsct*.
 
-    Na konci souboru je \<Symbols> uzel, který obsahuje několik \<GuidSymbol> uzlů. V uzlu s názvem guidTestCommandPackageCmdSet přidejte nový symbol následujícím způsobem:
+    Na konci souboru je `<Symbols>` uzel, který obsahuje několik `<GuidSymbol>` uzlů. V uzlu s názvem `guidTestCommandPackageCmdSet` přidejte nový symbol následujícím způsobem:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. Vytvořte \<Menus> v uzlu prázdný uzel \<Commands> těsně před \<Groups> . V \<Menus> uzlu přidejte \<Menu> uzel následujícím způsobem:
+2. Vytvořte `<Menus>` v uzlu prázdný uzel `<Commands>` těsně před `<Groups>` . V `<Menus>` uzlu přidejte `<Menu>` uzel následujícím způsobem:
 
    ```xml
    <Menus>
@@ -63,8 +73,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
            <Parent guid="guidSHLMainMenu"
                    id="IDG_VS_MM_TOOLSADDINS" />
            <Strings>
-             <ButtonText>TestMenu</ButtonText>
-             <CommandName>TestMenu</CommandName>
+             <ButtonText>Test Menu</ButtonText>
            </Strings>
        </Menu>
    </Menus>
@@ -74,9 +83,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     `guid`Hodnoty a `id` nadřazené pozice v nabídce v části řádku nabídek sady Visual Studio, které obsahují nabídky nástroje a doplňky.
 
-    Hodnota `CommandName` řetězce určuje, že se má text zobrazit v položce nabídky.
+    `<ButtonText>`Prvek určuje, že se má text zobrazit v položce nabídky.
 
-3. V \<Groups> části vyhledejte \<Group> a změňte element tak, aby \<Parent> odkazoval na nabídku, kterou jste právě přidali:
+3. V `<Groups>` části vyhledejte `<Group>` a změňte element tak, aby `<Parent>` odkazoval na nabídku, kterou jste právě přidali:
 
    ```xml
    <Groups>
@@ -94,13 +103,13 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. V **Průzkumník řešení**otevřete *TopLevelMenuPackage. vsct*.
 
-    Na konci souboru je \<Symbols> uzel, který obsahuje několik \<GuidSymbol> uzlů. V uzlu s názvem guidTopLevelMenuPackageCmdSet přidejte nový symbol následujícím způsobem:
+    Na konci souboru je `<Symbols>` uzel, který obsahuje několik `<GuidSymbol>` uzlů. V uzlu s názvem `guidTopLevelMenuPackageCmdSet` přidejte nový symbol následujícím způsobem:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. Vytvořte \<Menus> v uzlu prázdný uzel \<Commands> těsně před \<Groups> . V \<Menus> uzlu přidejte \<Menu> uzel následujícím způsobem:
+2. Vytvořte `<Menus>` v uzlu prázdný uzel `<Commands>` těsně před `<Groups>` . V `<Menus>` uzlu přidejte `<Menu>` uzel následujícím způsobem:
 
    ```xml
    <Menus>
@@ -108,8 +117,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
            <Parent guid="guidSHLMainMenu"
                    id="IDG_VS_MM_TOOLSADDINS" />
            <Strings>
-             <ButtonText>TestMenu</ButtonText>
-             <CommandName>TestMenu</CommandName>
+             <ButtonText>Test Menu</ButtonText>
            </Strings>
        </Menu>
    </Menus>
@@ -119,9 +127,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     `guid`Hodnoty a `id` nadřazené pozice v nabídce v části řádku nabídek sady Visual Studio, které obsahují nabídky nástroje a doplňky.
 
-    Hodnota `CommandName` řetězce určuje, že se má text zobrazit v položce nabídky.
+    `<ButtonText>`Prvek určuje, že se má text zobrazit v položce nabídky.
 
-3. V \<Groups> části vyhledejte \<Group> a změňte element tak, aby \<Parent> odkazoval na nabídku, kterou jste právě přidali:
+3. V `<Groups>` části vyhledejte `<Group>` a změňte element tak, aby `<Parent>` odkazoval na nabídku, kterou jste právě přidali:
 
    ```xml
    <Groups>
@@ -135,7 +143,9 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker-end
 
-4. Vyhledejte `Buttons` část. Všimněte si, že [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Šablona balíčku vygenerovala `Button` prvek, který má svou nadřazenou sadu nastavenou na `MyMenuGroup` . V důsledku toho se tento příkaz zobrazí v nabídce.
+4. V `<Buttons>` části vyhledejte `<Button>` uzel. Poté v `<Strings>` uzlu změňte `<ButtonText>` element na `Test Command` .
+
+    Všimněte si, že [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Šablona balíčku vygenerovala `Button` prvek, který má svou nadřazenou sadu nastavenou na `MyMenuGroup` . V důsledku toho se tento příkaz zobrazí v nabídce.
 
 ## <a name="build-and-test-the-extension"></a>Sestavení a otestování rozšíření
 
@@ -143,19 +153,19 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 ::: moniker range="vs-2017"
 
-2. Panel nabídek v experimentální instanci by měl obsahovat **TestMenu** nabídku.
+2. Panel nabídek v experimentální instanci by měl obsahovat nabídku **nabídky testu** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Nabídka **rozšíření** v experimentální instanci by měla obsahovat **TestMenu** nabídku.
+2. Nabídka **rozšíření** v experimentální instanci by měla obsahovat nabídku **nabídky testu** .
 
 ::: moniker-end
 
-3. V nabídce **TestMenu** klikněte na příkaz **vyvolat test Command**.
+3. V nabídce **Nabídka test** klikněte na **příkaz Test příkazu**.
 
-     Zobrazí se okno se zprávou a zobrazí se zpráva "balíček TestCommand" v TopLevelMenu. TestCommand. MenuItemCallback () ".
+    Zobrazí se okno se zprávou a zobrazí se zpráva "TestCommand uvnitř TopLevelMenu. TestCommand. MenuItemCallback ()".
 
 ## <a name="see-also"></a>Viz také
 
