@@ -82,6 +82,8 @@
               href: install/update-a-network-installation-of-visual-studio.md
             - name: Aktualizace sady Visual Studio v servisním směrném plánu
               href: install/update-servicing-baseline.md
+            - name: Aktualizace sady Visual Studio s minimálním offline rozložením
+              href: install/update-minimal-layout.md
             - name: Řízení aktualizací nasazení sady Visual Studio
               href: install/controlling-updates-to-visual-studio-deployments.md
             - name: Správa změn datových částí balíčků
@@ -948,7 +950,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: Produkty a služby pro usnadnění přístupu od Microsoftu
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: Odkaz
+- name: Referenční informace
   items:
     - name: Klávesové zkratky
       items:
