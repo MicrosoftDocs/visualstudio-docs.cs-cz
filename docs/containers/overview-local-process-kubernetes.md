@@ -6,12 +6,12 @@ ms.topic: conceptual
 description: Popisuje procesy pro připojení vašeho vývojového počítače ke clusteru Kubernetes pomocí místního procesu s Kubernetes.
 keywords: Místní proces s Kubernetes, Docker, Kubernetes, Azure, kontejnery
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: adde9d8ecab93bdb6f0aebbd74730ef60bd80cf6
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.openlocfilehash: 93bfc509eb21545cde812b8d6d71bb9a93a109e8
+ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86454304"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133970"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Jak funguje místní proces s Kubernetes
 
@@ -40,6 +40,44 @@ Když místní proces s Kubernetes vytvoří připojení ke clusteru,:
 
 Po navázání připojení ke clusteru můžete spustit a ladit kód nativně ve vašem počítači bez vytváření kontejnerů a kód může přímo pracovat se zbytkem vašeho clusteru. Veškerý síťový provoz, který vzdálený agent obdrží, se přesměruje na místní port zadaný během připojení, takže váš nativní běžící kód může přijmout a zpracovat tento provoz. Proměnné prostředí, svazky a tajné klíče z vašeho clusteru jsou zpřístupněny kódu běžícímu na vašem vývojovém počítači. Kromě toho, že z důvodu položek souborů hosta a přesměrování portů přidaných do vašeho vývojářského počítače místním procesem s Kubernetes, může váš kód odesílat síťový provoz do služeb spuštěných ve vašem clusteru pomocí názvů služeb z vašeho clusteru a tento provoz se předává do služeb spuštěných ve vašem clusteru. Provoz se směruje mezi vývojovým počítačem a vaším clusterem a celou dobu, po kterou jste se připojili.
 
+## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Používání možností směrování pro vývoj v izolaci
+
+Ve výchozím nastavení místní proces s Kubernetes přesměruje veškerý provoz pro službu do vašeho vývojového počítače. Máte také možnost použít možnosti směrování jenom pro přesměrování požadavků do služby pocházející z subdomény do vašeho vývojového počítače. Tyto možnosti směrování umožňují používat místní proces s Kubernetes pro vývoj v izolaci a vyhnout se přerušení ostatních přenosů ve vašem clusteru.
+
+Následující animace znázorňuje dva vývojáře pracující na stejném clusteru v izolaci:
+
+![Animovaný obrázek ve formátu GIF – ilustrující izolaci](media/local-process-kubernetes/lpk-graphic-isolated.gif)
+
+Když povolíte izolaci v izolovaném režimu, místní proces s Kubernetes provede následující kromě připojení ke clusteru Kubernetes:
+
+* Ověří, jestli cluster Kubernetes nemá povolený Azure Dev Spaces.
+* Provede replikaci zvolené služby v clusteru ve stejném oboru názvů a přidá popisek *Routing.VisualStudio.IO/Route-from=service_name* a *Routing.VisualStudio.IO/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* anotaci.
+* Nakonfiguruje a spustí Správce směrování ve stejném oboru názvů v clusteru Kubernetes. Správce směrování používá selektor popisku k vyhledání popisku *Routing.VisualStudio.IO/Route-from=service_name* a *Routing.VisualStudio.IO/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* anotace při konfiguraci směrování ve vašem oboru názvů.
+
+Pokud místní proces s Kubernetes zjistí, že je ve vašem clusteru Kubernetes povolený Azure Dev Spaces, budete vyzváni k zakázání Azure Dev Spaces předtím, než budete moci použít místní proces s Kubernetes.
+
+Správce směrování při spuštění provede následující kroky:
+* Duplikuje všechny příchozí přenosy nalezené v oboru názvů pomocí *GENERATED_NAME* pro subdoménu. 
+* Vytvoří zástupné pod pro každou službu přidruženou s duplicitními příchozími přenosy s *GENERATED_NAME* subdoménou.
+* Vytvoří další zástupné pod pro službu, na které pracujete, v izolaci. To umožňuje směrovat požadavky s subdoménou do vašeho vývojového počítače.
+* Konfiguruje pravidla směrování pro každý zástupné pod tím, aby zpracovávala směrování služeb s subdoménou.
+
+Při přijetí žádosti s poddoménou *GENERATED_NAME* v clusteru se do žádosti přidá hlavička *Kubernetes-Route-as = GENERATED_NAME* . Zástupné lusky zařídí směrování, které požaduje příslušnou službu v clusteru. Pokud je požadavek směrován do služby, která se zpracovává v izolaci, je tento požadavek přesměrován do vývojového počítače vzdáleným agentem.
+
+Pokud je v clusteru přijata žádost bez subdomény *GENERATED_NAME* , do žádosti se nepřidá žádné záhlaví. Zástupné lusky zařídí směrování, které požaduje příslušnou službu v clusteru. Pokud je požadavek směrován do služby, která je měněna, je místo vzdáleného agenta směrován do původní služby.
+
+> [!IMPORTANT]
+> Každá služba v clusteru musí při vytváření dalších požadavků předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Například když *Služba* obdrží požadavek, odešle požadavek na *serviceB* před vrácením odpovědi. V tomto příkladu musí *služba Service* . v žádosti o *serviceB*předávat hlavičku *Kubernetes-Route-as = GENERATED_NAME* . Některé jazyky, například [ASP.NET][asp-net-header], mohou mít metody pro zpracování šíření hlaviček.
+
+Když se odpojíte od clusteru, bude ve výchozím nastavení místní proces s Kubernetes odebrat všechny zástupné lusky a duplicitní služby. 
+
+> ZNAČTE Nasazení a služba správy směrování v oboru názvů zůstanou spuštěné. Chcete-li odebrat nasazení a službu, spusťte následující příkazy pro váš obor názvů.
+>
+> ```azurecli
+> kubectl delete deployment routingmanager-deployment -n NAMESPACE
+> kubectl delete service routingmanager-service -n NAMESPACE
+> ```
+
 ## <a name="diagnostics-and-logging"></a>Diagnostika a protokolování
 
 Při použití místního procesu s Kubernetes pro připojení ke clusteru se diagnostické protokoly z vašeho clusteru protokolují do [dočasného adresáře][azds-tmp-dir]vašeho vývojového počítače.
@@ -52,11 +90,17 @@ Místní proces s Kubernetes má následující omezení:
 * Služba musí být za účelem připojení k této službě zajištěna jedním pod. Nemůžete se připojit ke službě s více lusky, jako je třeba služba s replikami.
 * Objekt pod může mít v takovém případě pouze jeden kontejner spuštěný pro místní proces s Kubernetes pro úspěšné připojení. Místní proces s Kubernetes se nemůže připojit ke službám s lusky, které mají další kontejnery, jako jsou například kontejnery na postranní vozíky vložené pomocí sítí služby.
 * Místní proces s Kubernetes potřebuje zvýšená oprávnění ke spuštění ve vývojovém počítači, aby bylo možné upravit soubor hostitelů.
+* Místní proces s Kubernetes se nedá použít u clusterů s povoleným Azure Dev Spaces.
+
+### <a name="local-process-with-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Místní proces s Kubernetes a clustery s povoleným Azure Dev Spaces
+
+V clusteru Azure Dev Spaces s Kubernetes není možné použít místní proces s. Pokud chcete použít místní proces s Kubernetes v clusteru s povoleným Azure Dev Spaces, je nutné před připojením ke clusteru zakázat Azure Dev Spaces.
 
 ## <a name="next-steps"></a>Další kroky
 
 Pokud chcete začít používat místní proces s Kubernetes a připojit se k místnímu počítači pro vývoj ke svému clusteru, přečtěte si téma [použití místního procesu s Kubernetes](local-process-kubernetes.md).
 
+[asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
 [azds-tmp-dir]: /azure/dev-spaces/troubleshooting#before-you-begin
 [azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest
