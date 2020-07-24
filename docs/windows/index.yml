@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 85929f803733026dfbf7ced8cf8553c3e96ed1c3
+  ms.sourcegitcommit: 239a8ed2c4474769297b42b5ce1f7c8694d62856
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "77904058"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86944591"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -122,7 +122,7 @@ tools:
     url: /visualstudio/rtvs/?view=vs-2017
 additionalContent:
   sections:
-  - title: Úlohy
+  - title: Úkoly
     items:
     - title: Vývoj
       summary: Vytváření a správa kódu pomocí editoru kódu
@@ -130,7 +130,7 @@ additionalContent:
     - title: Sestavení
       summary: Kompilace a sestavení zdrojového kódu
       url: ../ide/compiling-and-building-in-visual-studio.md
-    - title: Ladění
+    - title: Ladit
       summary: Prošetřování a opravy chyb v kódu
       url: ../debugger/index.yml
     - title: Test
@@ -160,7 +160,7 @@ additionalContent:
     - title: Vývoj s využitím kontejnerů Dockeru
       summary: Izolace modulárních součástí a zlepšení škálovatelnosti pomocí kontejnerů Dockeru
       url: ../containers/index.yml
-  - title: Úlohy
+  - title: Úkoly
     items:
     - title: Web a cloud
       links:
@@ -193,7 +193,7 @@ additionalContent:
       - text: Vývoj mobilních aplikací v jazyce JavaScript
         url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017
         note: (jen Visual Studio 2017 a 2015)
-    - title: Hraní her
+    - title: Hry
       links:
       - text: Vývoj her pomocí Unity
         url: ../cross-platform/visual-studio-tools-for-unity.md
@@ -205,6 +205,6 @@ additionalContent:
         url: ../extensibility/index.yml
       - text: Vývoj linuxových aplikací v jazyce C++
         url: /cpp/linux/
-      - text: Vývoj aplikací pro různé platformy pomocí rozhraní .NET Core
+      - text: Vývoj multiplatformních aplikací pomocí rozhraní .NET Core
         url: /dotnet/core/
-  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Hlášení problémů](../ide/talk-to-us.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Hlášení problémů](../ide/talk-to-us.md) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Řešení potíží](/troubleshoot/visualstudio/welcome-visual-studio)'
