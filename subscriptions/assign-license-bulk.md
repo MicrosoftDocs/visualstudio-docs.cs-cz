@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci přiřazovat licence k několika předplatitelům pomocí funkce hromadného přidání nebo skupin Microsoft Azure Active Directory.
-ms.openlocfilehash: 459220c7fb2103da05f15607787390963863e622
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8bda423ccd5362fba6389195814a44cca286b5a7
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903276"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235131"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Přiřazení předplatných více uživatelům
 Portál pro správu předplatných umožňuje přidat uživatele v jednom okamžiku nebo ve velkých skupinách.  Chcete-li přidat jednotlivé uživatele, přečtěte si téma [přidání jednotlivých uživatelů](assign-license.md).
@@ -30,7 +30,7 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 
 1. Hromadné přidání používá šablonu Microsoft Excelu k nahrání informací o odběrateli. V dialogovém okně nahrát několik předplatitelů klikněte na **Stáhnout** a stáhněte šablonu.
    > [!div class="mx-imgBorder"]
-   > ![Stáhněte si excelovou šablonu pro nahrání více odběratelů.](media/download-template-upload-subscribers.png)
+   > ![Stáhněte si excelovou šablonu pro nahrání více odběratelů.](media/download-template-upload-subscribers.png "Stáhněte si prázdnou excelovou šablonu a začněte proces hromadného přiřazování.")
    >
    > [!NOTE]
    > Vždy stáhnout nejnovější verzi této šablony. Pokud používáte starší verzi, může hromadné nahrání selhat.
@@ -50,17 +50,17 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 
 1. Vraťte se na portál pro správu předplatných sady Visual Studio. V dialogovém okně **nahrát několik předplatitelů** klikněte na **Procházet**.
    > [!div class="mx-imgBorder"]
-   > ![Pokud chcete nahrát několik předplatitelů, přejděte k uložené šabloně.](media/bulk-add-browse-saved-template.png)
+   > ![Pokud chcete nahrát několik předplatitelů, přejděte k uložené šabloně.](media/bulk-add-browse-saved-template.png "Můžete přejít do umístění souboru nebo ho přetáhnout do tohoto dialogového okna.")
 
 1. Přejděte do excelového souboru, který jste uložili, a pak klikněte na **OK**.
    > [!div class="mx-imgBorder"]
-   > ![Nahrání excelové šablony pro nahrání více předplatitelů](media/bulk-upload-subscribers.png)
+   > ![Nahrání excelové šablony pro nahrání více předplatitelů](media/bulk-upload-subscribers.png "Tady se zobrazí šablona s Vašimi daty.  Kliknutím na OK zahajte nahrávání.")
 
     Zobrazí se dialogové okno s průběhem nahrávání.
 
     Pokud šablona obsahuje chyby, nahrávání se nezdaří a zobrazí se chyby, abyste mohli šablonu opravit a znovu se pokusit o hromadné nahrání.
    > [!div class="mx-imgBorder"]
-   > ![Chybová zpráva, pokud nahrávání více předplatitelů neproběhne úspěšně](_img/assign-license-bulk/bulk-add-upload-failure.png)
+   > ![Chybová zpráva, pokud nahrávání více předplatitelů neproběhne úspěšně](_img/assign-license-bulk/bulk-add-upload-failure.png "Tato zpráva se zobrazí, pokud soubor, který jste odeslali, obsahoval chyby.  Vyřešte chyby a znovu proveďte hromadně přidaný proces.")
 
    Pokud dojde k selhání, postupujte podle následujících kroků:
    1. Otevřete excelový soubor, který jste vytvořili, opravte problémy a uložte soubor.
@@ -72,7 +72,7 @@ Pokud chcete přidat velké skupiny uživatelů, můžete použít funkci hromad
 
     Po úspěšném nahrání se zobrazí seznam předplatitelů a potvrzovací zpráva.
    > [!div class="mx-imgBorder"]
-   > ![Zpráva s potvrzením úspěšného odeslání více předplatitelů](_img/assign-license-bulk/bulk-add-upload-success.png)
+   > ![Zpráva s potvrzením úspěšného odeslání více předplatitelů](_img/assign-license-bulk/bulk-add-upload-success.png "Po úspěšném dokončení nahrávání se zobrazí potvrzovací zpráva.")
 
 ## <a name="use-azure-active-directory-groups-to-assign-subscriptions"></a>Přiřazení předplatných pomocí skupin Azure Active Directory 
 Díky této funkci se můžete snadno soustředit na přiřazení předplatného. Na portálu pro správu předplatných můžete přidat skupiny zabezpečení Azure Active Directory, které zajistí, že se k odběru všech jednotlivců ve skupině přiřadí předplatné. A aby bylo snazší, když jednotlivci opustí vaši organizaci a jsou odstraněné z Azure Active Directory, odeberou se také jejich přístup k předplatným. 
@@ -100,14 +100,14 @@ Díky této funkci se můžete snadno soustředit na přiřazení předplatného
 3. Zvolte kartu **Přidat** a pak v rozevíracím seznamu vyberte **Azure Active Directory skupina** .  
 
    > [!div class="mx-imgBorder"]
-   > ![Volba hromadného přidání pomocí Azure AD](_img/assign-license-bulk/bulk-add-aad.png)
+   > ![Volba hromadného přidání pomocí Azure AD](_img/assign-license-bulk/bulk-add-aad.png "Pokud chcete předplatitele vyžádat ze skupiny Azure Active Directory, vyberte možnost hromadně přidat pomocí Azure AD.")
 
 4. Začněte zadáním názvu skupiny Azure AD, kterou chcete přidat do pole formuláře. Tato akce vyhledá dostupné skupiny Azure AD v rámci vaší organizace. 
 
 5. Když vyberete skupinu, pole se automaticky vyplní názvem skupiny. Budete mít možnost Zobrazit uživatele v této skupině, než je přidáte. V dalším kroku můžete zvolit úroveň předplatného, práva ke stažení a předvolby komunikace pro skupinu. Pokud chcete, můžete do pole Reference přidat podrobnosti. 
 
    > [!div class="mx-imgBorder"]
-   > ![Volba hromadného přidání pomocí Azure AD](_img/assign-license-bulk/bulk-add-aad-details.png)
+   > ![Výběr skupiny Azure AD](_img/assign-license-bulk/bulk-add-aad-details.png "Pokud chcete přidat předplatitele z této skupiny, vyberte název vaší skupiny Azure AD.")
 
 6. Klikněte na **Přidat** a **potvrďte**. 
 
@@ -129,8 +129,8 @@ Odpověď: ne. Pokud chcete upravit informace pro jednotlivé odběratele, budet
 ### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>Otázka: jsem přidal uživatele do skupiny zabezpečení Azure AD, ale nevidím ho na portálu pro správu předplatných a nemá předplatné. Proč ne?  
 Odpověď: v závislosti na tom, jak vaše organizace nakonfigurovala Azure AD, se může zobrazit zpoždění až 24 hodin, než se uživatel přidá. Pokud je delší než 24 hodin, obraťte se na [podporu](https://visualstudio.microsoft.com/support/support-overview-vs).  
 
-## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také:
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 588396f3f152222c4e79b03a1d733524a8ff3ca9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8bfbe4b11c22d6cfd147783f9fb662843cf57fe9
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905731"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234949"
 ---
 # <a name="how-to-troubleshoot-services"></a>Postupy: řešení potíží se službami
 K dispozici je několik běžných problémů, ke kterým může dojít při pokusu o získání služby:
@@ -66,7 +66,8 @@ if (log == null) return;
 
     Pokud okno nástroje hostuje uživatelský ovládací prvek nebo jiný kontejner ovládacích prvků, bude tento kontejner zadaný modelem komponent Windows a nebude mít přístup k žádným [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] službám. Můžete zavolat <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> pro získání poskytovatele služby VSPackage z kontejneru ovládacího prvku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Seznam dostupných služeb](../extensibility/internals/list-of-available-services.md)
 - [Použití a poskytování služeb](../extensibility/using-and-providing-services.md)
 - [Základy služby](../extensibility/internals/service-essentials.md)
+- [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

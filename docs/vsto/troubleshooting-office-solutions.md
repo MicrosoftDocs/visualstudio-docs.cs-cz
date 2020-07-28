@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7bc8db3478f6856b5d3b511e53656c65d762446c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 82fbb41bb1bf0d7ba3da046eb7d22eb8606a7529
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537213"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234715"
 ---
 # <a name="troubleshoot-office-solutions"></a>Řešení potíží s řešeními pro systém Office
   Tato část obsahuje tipy pro řešení běžných problémů, se kterými se můžete setkat při vytváření řešení pomocí vývojářských nástrojů pro Office v sadě Visual Studio.
@@ -57,3 +57,7 @@ ms.locfileid: "85537213"
 - [Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)
 
  Zobrazuje seznam nejčastějších dotazů týkajících se programování řešení Office a obsahuje odkazy na témata, která vám pomůžou vyřešit běžné problémy.
+
+## <a name="see-also"></a>Viz také:
+
+- [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

@@ -7,12 +7,12 @@ ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 03/17/2020
 ms.topic: conceptual
 description: Přečtěte si, jak nastavit předvolby pro jazyky, kontakty, úroveň předplatného a další na portálu pro správu.
-ms.openlocfilehash: b719e60771ef8cca9b956626ca6e9e3dd91edce5
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e34b9cf1ed32abc81b9c2ebb3ef7c370818c9089
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234611"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Nastavení předvoleb pro vaše smlouvy na portálu pro správu
 Super správci můžou nastavit určité Předvolby na portálu pro správu (portál pro správu), které se použijí globálně pro každou smlouvu.  Tyto preference automaticky naplní údaje o předplatném pro vaše správce, když přidávají předplatitele a můžou je globálně upravovat jenom správci super.  
@@ -24,13 +24,13 @@ Nastavení předvoleb:
 1. Přihlaste se k portálu pro správu s ID, které má oprávnění superuživatele.
 2. Klikněte na kartu **Správa správců** .
    > [!div class="mx-imgBorder"]
-   > ![Tlačítko Předvolby správce](_img/admin-prefs/admin-prefs-button.png)
+   > ![Tlačítko Předvolby správce](_img/admin-prefs/admin-prefs-button.png "Kliknutím na Správa správců a pak na Předvolby smlouvy zobrazíte předvolby.")
 
 3. Klikněte na **Předvolby smlouvy**.
 Panel se otevře vpravo a zobrazí se vaše dostupné předvolby. 
 
    > [!div class="mx-imgBorder"]
-   > ![Dialogová okna Předvolby pro správu](_img/admin-prefs/admin-prefs-flyout.png)
+   > ![Dialogová okna Předvolby pro správu](_img/admin-prefs/admin-prefs-flyout.png "Nastavte předvolby a klikněte na Uložit.")
 
 ## <a name="set-your-preferences"></a>Nastavit předvolby
 Pojďme prozkoumat všechny dostupné předvolby a jejich účinky. 
@@ -74,8 +74,8 @@ Odpověď: Pokud v předvolbách **kontaktní e-mailová** adresa není nastaven
 ## <a name="resources"></a>Zdroje a prostředky
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
-## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také:
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
@@ -86,6 +86,3 @@ Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení více předplatných](assign-license-bulk.md)
 - [Úprava předplatných](edit-license.md)
 - [Určení maximálního využití](maximum-usage.md)
-
-
-

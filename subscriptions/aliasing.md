@@ -1,108 +1,108 @@
 ---
-title: Přihlášení k předplatným sady Visual Studio může selhat při použití aliasů | Dokumenty společnosti Microsoft
+title: Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat. | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
 ms.date: 03/02/2020
 ms.topic: conceptual
-description: Přihlášení může selhat, pokud jsou použity aliasy nebo popisné názvy
-ms.openlocfilehash: 0f5ed4fe67dbd863a7ba4c22f10946cbeb1c36b0
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+description: Přihlášení se nemusí zdařit, pokud se používají aliasy nebo popisné názvy.
+ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79509054"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234637"
 ---
-# <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může selhat při použití aliasů
-V závislosti na typu účtu použitého k přihlášení nemusí být dostupná [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)předplatná při přihlášení k aplikaci správně zobrazena. Jednou z možných příčin je použití "aliasy" nebo "popisné názvy" místo přihlašovací identity, ke kterému je přiřazeno předplatné. Tomu se říká "aliasing".
+# <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Přihlášení k předplatným sady Visual Studio může při použití aliasů selhat.
+V závislosti na typu účtu použitého k přihlášení nemusí být dostupné odběry při přihlášení ke správnému zobrazení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Jednou z možných příčin je použití "aliasů" nebo "popisných názvů" místo přihlašovací identity, ke které je předplatné přiřazeno. Tento název se nazývá "aliasing".
 
 ## <a name="what-is-aliasing"></a>Co je aliasing?
-Termín "aliasování" označuje uživatele, kteří mají různé identity pro přihlášení k systému Windows (nebo službě Active Directory) a přístup k e-mailu.
+Pojem "aliasing" odkazuje na uživatele, kteří mají různé identity pro přihlášení k Windows (nebo službě Active Directory) a pro přístup k e-mailu.
 
-Aliasing u sebe může narazit, pokud má společnost pro přihlášeníJohnD@contoso.comk adresáři službu Microsoft Online Service, napříkladJohn.Doe@contoso.com" ", ale uživatelé přistupují ke svým e-mailovým účtům pomocí aliasů nebo popisných názvů, například " . Ujistěte se, že vaši uživatelé používají "Přihlašovací e-mailovou adresu", jak je uvedeno na portálu pro správu na adrese https://manage.visualstudio.com pro přístup k jejich odběry. 
+Aliasing se může vyskytnout, když má společnost Microsoft Online Service pro své adresáře, jako JohnD@contoso.com je, ale uživatelé mají přístup k e-mailovým účtům pomocí aliasů nebo popisných názvů, jako je například John.Doe@contoso.com . Zajistěte, aby vaši uživatelé používali e-mailovou adresu pro přihlášení, jak je uvedeno na portálu pro správu v https://manage.visualstudio.com aplikaci pro přístup ke svým předplatným. 
 
 ## <a name="what-are-the-potential-issues"></a>Jaké jsou potenciální problémy?
 
-V závislosti na typu účtu odběratele se mohou vyskytnou jeden ze dvou problémů. 
+V závislosti na typu účtu předplatitele se můžou setkat s jedním ze dvou problémů. 
 
-### <a name="work-or-school-account-upn-mismatch-issue"></a>Problém neshody pracovního nebo školního účtu 
-Neshoda hlavního názvu uživatele může dojít, pokud společnost má nastavenslužbu Active Directory, kde UserPrincipalName (UPN) není stejný jako primární adresa SMTP. 
+### <a name="work-or-school-account-upn-mismatch-issue"></a>Problém s neshodou uživatelského jména v pracovním nebo školním účtu 
+Neshoda hlavního názvu uživatele (UPN) se může vyskytnout, když má společnost nastavenou službu Active Directory, kde název UserPrincipalName (UPN) není stejný jako primární adresa SMTP. 
 
-#### <a name="how-to-detect-if-your-sign-in-address-is-impacted-by-a-upn-mismatch"></a>Jak zjistit, zda je vaše přihlašovací adresa ovlivněna neshodou upn 
+#### <a name="how-to-detect-if-your-sign-in-address-is-impacted-by-a-upn-mismatch"></a>Jak zjistit, jestli je vaše přihlašovací adresa ovlivněná neshodou hlavního názvu uživatele (UPN) 
 
-1. Přihlaste se pomocí https://my.visualstudio.com/subscriptions přihlašovací adresy uvedené v e-mailu o přiřazení předplatného.
+1. Přihlaste https://my.visualstudio.com/subscriptions se pomocí přihlašovací adresy uvedené v e-mailu s přiřazením předplatného.
 
-2. Ověřte, zda přihlašovací e-mailová adresa uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud tomu tak není, váš upn je neodpovídající a nebudete moci zobrazit vaše předplatné. 
+2. Ověřte, že e-mailová adresa pro přihlášení uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud tomu tak není, váš hlavní název uživatele se neshoduje a nebudete moct zobrazit vaše předplatné. 
 
 > [!div class="mx-imgBorder"]
-> ![Přihlásit se e-mailovou adresu](_img//aliasing/sign-in-email.png)
+> ![E-mailová adresa pro přihlášení](_img//aliasing/sign-in-email.png "Ujistěte se, že e-mailová adresa zobrazená v pravém horním rohu odpovídá hodnotě, kterou používáte pro přihlášení.")
 
-#### <a name="how-to-fix-a-upn-mismatch"></a>Jak opravit neshodu upn
+#### <a name="how-to-fix-a-upn-mismatch"></a>Jak opravit hlavní název uživatele (UPN)
 
 1. Přístup k portálu pro správu správy sady Visual Studio[https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
-2. Vyhledejte odběratele s problémem neshody hlavního uživatele. (Funkce [Filtr](search-license.md) může usnadnit nalezení odběratele.)
+2. Vyhledejte předplatitele, který má neshodu hlavního názvu uživatele (UPN). (Funkce [Filter](search-license.md) může snadno najít předplatitele.)
 
-3. Změna přihlašovací e-mailové adresy na hlavní číslo uživatele 
+3. Změňte přihlašovací e-mailovou adresu na hlavní název uživatele (UPN) odběratele. 
 
-0. Uložení změn 
+0. Uložit změny 
 
-0. Informujte účastníka, aby se odhlásit z portálu odběratele a přístup znovu pomocí UPN 
+0. Informujte předplatitele, aby se odhlásil z portálu odběratele a znovu k němu přistoupí pomocí hlavního názvu uživatele. 
 
-### <a name="personal-account-aliasing-issue"></a>Problém s aliasováním osobního účtu
+### <a name="personal-account-aliasing-issue"></a>Problém s aliasem osobního účtu
 
-Osobní účty předplatného může také dojít k problémům, pokud e-mailová adresa použitá k přihlášení k portálu předplatných Sady Visual Studio neodpovídá e-mailové adrese přidružené k předplatnému. 
+Pokud se e-mailová adresa použitá k přihlášení k portálu předplatných sady Visual Studio neshoduje s e-mailovou adresou přidruženou k předplatnému, může docházet k problémům i u osobních účtů. 
 
-#### <a name="how-to-detect-if-your-personal-subscription-account-is-impacted-by-an-aliasing-issue"></a>Jak zjistit, zda je váš osobní účet předplatného ovlivněn problémem s aliasováním
+#### <a name="how-to-detect-if-your-personal-subscription-account-is-impacted-by-an-aliasing-issue"></a>Jak zjistit, jestli má váš účet osobní předplatné vliv na problém s aliasem
 
 1. Přihlásit se k[https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions)
 
-0. Ověřte, zda přihlašovací e-mailová adresa uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud se přihlašovací e-mailová adresa neshodne jako e-mailová adresa použitá pro přístup k webu, dojde ke konfliktu mezi vaším účtem a aliasem.
+0. Ověřte, že e-mailová adresa pro přihlášení uvedená v pravém horním rohu stránky odpovídá adrese, kterou jste použili k přihlášení.  Pokud se e-mailová adresa, která se přihlásila, neshoduje s e-mailovou adresou použitou pro přístup na web, dojde ke konfliktu mezi vaším účtem a aliasem.
 
-#### <a name="how-to-fix-an-alias-issue"></a>Jak opravit problém aliasu
+#### <a name="how-to-fix-an-alias-issue"></a>Oprava problému s aliasem
 
-Platforma Visual Studio upřednostňuje primární alias, aby zobrazovala podrobnosti o předplatném. 
+Platforma sady Visual Studio určuje prioritu primárního aliasu, aby se zobrazily podrobnosti předplatného. 
 
-1. Přejděte na **Odkaz Spravovat způsob přihlášení k Microsoftu**. Pokud se zobrazí výzva, přihlaste se ke svému účtu Microsoft. 
+1. Přejít ke **správě způsobu přihlášení k Microsoftu** Pokud se zobrazí výzva, přihlaste se ke svému účet Microsoft. 
 
-2. V části Aliasy účtu vyberte **Vytvořit primární** vedle e-mailové adresy použité k přiřazení předplatného. 
+2. V části Aliasy účtu vyberte **nastavit jako primární** vedle e-mailové adresy, která se používá k přiřazení předplatného. 
 
 > [!div class="mx-imgBorder"]
-> ![Nastavení primární e-mailové adresy](_img//aliasing/account-aliases.png)
+> ![Nastavte primární e-mailovou adresu.](_img//aliasing/account-aliases.png "Pomocí odkazu vytvořit primární vyberte primární alias pro vaše předplatné.")
 
-3. Odhlášení z portálu předplatných sady Visual Studio (https://my.visualstudio.com) 
+3. Odhlaste se z portálu předplatných sady Visual Studio (https://my.visualstudio.com) 
 
-4. Přihlaste se zpět pomocí účtu, který slouží k přiřazení předplatného, který by měl být nyní nakonfigurován jako primární alias. 
+4. Znovu se přihlaste pomocí účtu, který se používá k přiřazení předplatného, které se teď má nakonfigurovat jako primární alias. 
 
-## <a name="preventing-aliasing-issues"></a>Zabránění problémům se aliasy
+## <a name="preventing-aliasing-issues"></a>Prevence potíží s aliasy
 
-Jako správce existují dvě možnosti, jak zajistit, aby vaši [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)odběratelé měli úspěšné přihlašovací prostředí na aplikaci .
-- První možností (doporučeno) je využít účet adresáře jako přihlášení k portálu https://my.visualstudio.compředplatných sady Visual Studio na adrese .  
-- Druhou možností (méně bezpečnou) je umožnit odběratelům přihlásit se pomocí jiné e-mailové adresy, než je jejich e-mailová adresa adresáře.
+Jako správce máte k dispozici dvě možnosti, jak zajistit, aby vaši předplatitelé měli úspěšné prostředí pro přihlášení [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
+- První možností (doporučeno) je použít účet adresáře jako přihlášení k portálu předplatných sady Visual Studio na adrese https://my.visualstudio.com .  
+- Druhá možnost (méně bezpečná) znamená, že se předplatitelům umožní přihlásit se pomocí jiné e-mailové adresy, než je jejich e-mailová adresa.
 
-Obě tyto možnosti jsou konfigurovány na portálu pro správu provedením následujících kroků:  
+Obě tyto možnosti se konfigurují na portálu pro správu, a to provedením následujících kroků:  
 1. Přihlásit se[https://manage.visualstudio.com](https://manage.visualstudio.com) 
 
-0. Pokud měníte jednoho uživatele, vyberte tohoto uživatele v tabulce a kliknutím pravým tlačítkem myši jej upravte. Otevře se panel, kde můžete upravit přihlašovací e-mailovou adresu. Proveďte potřebné aktualizace v poli přihlašovací e-mailové adresy. Klikněte na uložit a změny se projeví.  
+0. Pokud upravujete jednoho uživatele, vyberte tohoto uživatele v tabulce a klikněte pravým tlačítkem na Upravit. Otevře se panel, kde můžete upravit e-mailovou adresu přihlášení. V poli e-mailová adresa pro přihlášení proveďte potřebné aktualizace. Klikněte na Uložit a změny se projeví.  
 
-0. Pokud potřebujete provést tyto změny u velkého množství uživatelů, můžete využít funkci hromadných úprav. Další informace načtete v článku [Úpravy více odběratelů pomocí hromadné úpravy.](https://docs.microsoft.com/visualstudio/subscriptions/edit-license#edit-multiple-subscribers-using-bulk-edit)
+0. Pokud potřebujete provést tyto změny velkému počtu uživatelů, můžete využít funkci hromadného úprav. Další informace najdete v článku věnovaném [úpravám více odběratelů pomocí hromadného úprav](https://docs.microsoft.com/visualstudio/subscriptions/edit-license#edit-multiple-subscribers-using-bulk-edit) .
 
 > [!NOTE]
-> U individuálních i hromadných změn obdrží odběratelé e-mail s pokyny, že se změnila jejich přihlašovací e-mailová adresa a budou se muset přihlásit pomocí aktualizované e-mailové adresy. Je také důležité si uvědomit, že pokud účastník dříve aktivované výhody pod jinou přihlašovací adresu, bude muset pokračovat v používání jiné přihlašovací adresu pro přístup k nim.  
+> U individuálních i hromadných změn předplatitel obdrží e-mail s pokyny, že se změnila e-mailová adresa pro přihlášení a bude se muset přihlásit pomocí aktualizované e-mailové adresy. Je také důležité si uvědomit, že pokud předplatitel předtím aktivoval výhody v rámci jiné přihlašovací adresy, bude muset pro přístup k nim nadále používat další přihlašovací adresu.  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 
 ## <a name="next-steps"></a>Další kroky
 Přečtěte si další informace o správě předplatných sady Visual Studio.
 - [Přiřazení jednotlivých předplatných](assign-license.md)
 - [Přiřazení více předplatných](assign-license-bulk.md)
-- [Úpravy předplatných](edit-license.md)
+- [Úprava předplatných](edit-license.md)
 - [Určení maximálního využití](maximum-usage.md)
 
 

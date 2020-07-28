@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2141d2fd7d046f61ba6febecc427066d7a09ba18
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: f79bfcb73749992365b167bae84a15de17d2440d
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235027"
 ---
 # <a name="troubleshooting-vspackages"></a>Řešení potíží s rozšířením VSPackages
 Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou VSPackage a tipy k řešení těchto problémů.
@@ -123,5 +123,6 @@ Níže jsou uvedené běžné problémy, se kterými se můžete setkat se sadou
 
    Ujistěte se, že položka InprocServer32 má správnou cestu k knihovně VSPackage dll.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Balíčky VSPackage](../extensibility/internals/vspackages.md)
+- [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

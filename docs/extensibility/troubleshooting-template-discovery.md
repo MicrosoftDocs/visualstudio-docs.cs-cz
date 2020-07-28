@@ -7,12 +7,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5225c741206e6a43ff024a5f184404f1ac2bc63
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 89ff5b9974f20841378f367c3cb631a8d4cf7787
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904494"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235040"
 ---
 # <a name="troubleshooting-template-installation"></a>Řešení potíží s instalací šablony
 
@@ -70,6 +70,7 @@ Soubor protokolu obsahuje následující sloupce:
 > [!NOTE]
 > Pokud chcete protokolování zakázat, buď odeberte soubor pkgdef, nebo změňte hodnotu na a `EnableTemplateDiscoveryLog` `dword:00000000` pak znovu spusťte operaci `devenv /updateConfiguration` .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření vlastních šablon projektů a položek](creating-custom-project-and-item-templates.md)
+- [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

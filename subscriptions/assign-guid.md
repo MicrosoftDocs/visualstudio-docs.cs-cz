@@ -1,73 +1,73 @@
 ---
-title: Přiřazení konkrétních identifikátorů GUID předplatitelům sady Visual Studio | Dokumenty společnosti Microsoft
+title: Přiřazení konkrétních identifikátorů GUID předplatitelům sady Visual Studio | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 04/20/2020
 ms.topic: conceptual
-description: Zjistěte, jak mohou správci určit guid předplatného pro předplatitele
-ms.openlocfilehash: e2e8cd4f5d07f218fc23c0b7b6f28ababc25263f
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+description: Zjistěte, jak můžou správci určit identifikátor GUID předplatného pro předplatitele.
+ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235183"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
 
-Správci teď můžou pomocí portálu pro správu předplatných sady Visual Studio přiřadit konkrétní předplatná jednotlivým odběratelům.  To může být užitečné v situacích, kdy organizace má dočasné zaměstnance nebo dodavatele, kteří potřebují přístup k předplatnému na krátkou dobu.  Správci mohou přiřadit předplatné, které již bylo částečně použito, takže jejich nová předplatná jsou delší dobu.  
+Správci teď můžou používat portál pro správu předplatných sady Visual Studio k přiřazení konkrétních předplatných jednotlivým předplatitelům.  To může být užitečné v situacích, kdy organizace má dočasné zaměstnance nebo dodavatele, kteří potřebují po krátkou dobu mít přístup k předplatnému.  Správci můžou přiřadit předplatné, které už je částečně používané, a nechat si nové předplatné pro delší použití.  
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t4cl]
 
 
-## <a name="assign-specific-subscription-guids-to-users"></a>Přiřazení identifikátorů GUID konkrétního předplatného uživatelům
+## <a name="assign-specific-subscription-guids-to-users"></a>Přiřaďte uživatelům konkrétní identifikátory GUID předplatného.
 
-Proces přiřazování konkrétních předplatných jednotlivcům zahrnuje využití dvou existujících procesů správy k přiřazení konkrétních jedinečných identifikátorů předplatného (GUID) jednotlivým uživatelům.  Třístupňový proces zahrnuje export seznamu aktuálních předplatných a přiřazení, použití tohoto seznamu k identifikaci konkrétních identifikátorů GUID, které chcete přiřadit, a následné použití procesu hromadného přidání k nahrání nových přiřazení.
+Proces pro přiřazení konkrétních odběrů jednotlivcům zahrnuje využití dvou existujících procesů správy k přiřazení globálně jedinečných identifikátorů (GUID) pro konkrétní předplatné jednotlivým uživatelům.  Tento proces se skládá z exportu seznamu aktuálních předplatných a přiřazení. pomocí tohoto seznamu Identifikujte konkrétní identifikátory GUID, které chcete přiřadit, a potom pomocí procesu hromadného přidání nahrajte nová přiřazení.
 
-### <a name="export-your-subscriptions-information"></a>Export informací o předplatných
+### <a name="export-your-subscriptions-information"></a>Exportovat informace o předplatných
 
 Provedení exportu:
-1. Přihlaste se na [Portál pro správu](https://manage.visualstudio.com).
-2. Vyberte kartu **Exportovat** a soubor se stáhne do místního počítače. Soubor bude obsahovat název smlouvy, která obsahuje vaše uživatelské odběry, stejně jako datum exportu.
+1. Přihlaste se k [portálu pro správu](https://manage.visualstudio.com).
+2. Vyberte kartu **exportovat** a soubor se stáhne do místního počítače. Tento soubor bude obsahovat název smlouvy, která obsahuje vaše uživatelská předplatná, a také datum exportu.
 > [!div class="mx-imgBorder"]
-> ![Exportovat předplatitele](_img/exporting-subscriptions/exporting-subscriptions.png)
+> ![Exportovat předplatitele](_img/exporting-subscriptions/exporting-subscriptions.png "Kliknutím na Exportovat uložte seznam vašich přiřazených odběrů s informacemi o odběrateli.")
 
-### <a name="identify-the-guids-you-want-to-assign"></a>Identifikujte identifikátory GUID, které chcete přiřadit
+### <a name="identify-the-guids-you-want-to-assign"></a>Identifikujte identifikátory GUID, které chcete přiřadit.
 
-Pokud jste nástroj Export použili dříve, zjistíte, že do vytvořené tabulky byla přidána nová pole.  Ty vám pomohou určit stav každého předplatného a ty, které chcete přiřadit uživatelům.  
+Pokud jste dříve používali nástroj pro export, Všimněte si, že do tabulky, která je vytvořená, byla přidána nová pole.  Ty vám pomůžou určit stav každého předplatného a které chcete přiřadit uživatelům.  
 
-- **Stav předplatného**: Toto pole bude označovat buď "přiřazeno" nebo "nepřiřazené".  Pokud má předplatné stav "přiřazeno", bude k němu přidruženy také informace o uživateli, jako je jméno, e-mail atd. 
-- **Stav použití**: Stav použití bude označovat buď "nový", což znamená, že nikdy nebyl přiřazen uživateli, nebo "použitý", což znamená, že byl uživateli přiřazen v určitém okamžiku.  
+- **Stav odběru**: Toto pole indikuje buď "přiřazeno" nebo "Nepřiřazeno".  Pokud má předplatné stav "přiřazeno", budou také k němu přidruženy informace o uživateli, například jméno, e-mail atd. 
+- **Stav použití**: stav použití bude označovat "nové", což znamená, že nikdy nebylo přiřazeno uživateli nebo "použito", což znamená, že byl v určitém bodě přiřazen uživateli.  
 
-Hodnoty v těchto polích spolu s dalšími informacemi v tabulce můžete použít k určení, která předplatná chcete přiřadit jednotlivým uživatelům. Můžete použít filtr v aplikaci Excel, který vám pomůže zúžit seznam podle stavu, úrovně předplatného, data vypršení platnosti atd. 
+Hodnoty v těchto polích spolu s dalšími informacemi v tabulce můžete použít k určení, které odběry chcete přiřadit jednotlivým uživatelům. Můžete použít filtr v aplikaci Excel, který vám umožní zúžit seznam podle stavu, úrovně předplatného, data vypršení platnosti atd. 
 
-### <a name="upload-your-new-assignments"></a>Nahrání nových úkolů
+### <a name="upload-your-new-assignments"></a>Nahrávání nových přiřazení
 
-Posledním krokem je stažení šablony **hromadného přidání,** vyplnění požadovaných informací pro odběry, které chcete přiřadit, a nahrání šablony.  Úplný popis tohoto procesu naleznete v našem článku [Přidat více uživatelů.](assign-license-bulk.md)  
+Posledním krokem je stažení šablony **hromadného přidání** , vyplnění požadovaných informací pro předplatná, která chcete přiřadit, a nahrání šablony.  Úplný popis tohoto procesu najdete v článku věnovaném [Přidání více uživatelů](assign-license-bulk.md) .  
 
 > [!IMPORTANT]
-> Chcete-li zajistit úspěšné nahrání, ujistěte se, že:
-> - Šablonu propojenou v dialogovém okně používáte, když vyberete **možnost Hromadné přidání**.  Nepoužívejte místně uloženou kopii šablony, protože nemusí obsahovat všechna požadovaná pole.  Použití staré šablony způsobí selhání nahrávání. 
-> - Všechna pole zobrazená jako **Povinná** v šabloně jsou úplná.
-> - Ve sloupci **Chybová zpráva** nejsou uvedeny žádné chyby.
-> - Každý identifikátor GUID se v šabloně používá pouze jednou. 
-> - Úroveň předplatného v šabloně odpovídá předplatnému identifikátoru GUID v exportovaném seznamu. 
-> - Identifikátor GUID není již přiřazen jinému uživateli v exportovaném seznamu. 
+> Aby se zajistilo úspěšné nahrání, ujistěte se prosím, že:
+> - Šablonu propojenou v dialogovém okně používáte při výběru **hromadného přidání**.  Nepoužívejte místně uloženou kopii šablony, protože nemusí obsahovat všechna povinná pole.  Použití staré šablony způsobí selhání nahrávání. 
+> - Všechna pole zobrazená podle **požadavků** v šabloně jsou dokončená.
+> - Ve sloupci **chybové zprávy** nejsou uvedené žádné chyby.
+> - Každý identifikátor GUID se v šabloně používá jenom jednou. 
+> - Úroveň předplatného v šabloně odpovídá předplatnému GUID v seznamu exportovaných položek. 
+> - Identifikátor GUID již není přiřazen jinému uživateli v seznamu exportovaných. 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
-### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Otázka: Jak změním, které předplatné je aktuálně přiřazeno jednotlivému uživateli?
-A: Pokud chcete změnit, který identifikátor GUID je přiřazen uživateli, musíte nejprve odstranit předplatné pro tohoto uživatele.  Další informace naleznete v našem článku [Smazat odběry.](delete-license.md)  Po odstranění předplatného pro tohoto uživatele použijte výše uvedený proces k exportu seznamu a nahrání nových informací o předplatném.  
+### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Q:How změn, které předplatné je aktuálně přiřazené k individuálnímu uživateli?
+Odpověď: Chcete-li změnit identifikátor GUID, který je přiřazen uživateli, musíte nejprve odstranit odběr daného uživatele.  Další informace najdete v článku věnovaném [odstranění odběrů](delete-license.md) , kde najdete další informace.  Po odstranění odběru pro daného uživatele použijte postup uvedený výše k exportu seznamu a nahrání nových informací o předplatném.  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Dokumentace sady Visual Studio](/visualstudio/)
-- [Dokumentace k Azure DevOps](/azure/devops/)
+- [Dokumentace ke službě Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
-- [Dokumentace k Microsoftu 365](/microsoft-365/)
+- [Dokumentace k Microsoft 365](/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
-Teď, když jste uživatelům přiřadili předplatná, zjistěte, jak provádět další úlohy správy.
+Teď, když jste přiřadili odběry uživatelům, zjistěte, jak provádět další úlohy správy.
 - [Přiřazení jednotlivých předplatných](assign-license.md)
 - [Přiřazení více předplatných](assign-license-bulk.md)
 - [Úprava předplatných](edit-license.md)

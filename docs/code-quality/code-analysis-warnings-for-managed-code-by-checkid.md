@@ -100,6 +100,7 @@ f1_keywords:
 - CA1413
 - CA1414
 - CA1415
+- CA1417
 - CA1500
 - CA1501
 - CA1502
@@ -291,12 +292,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ecf66c26838b6e276188eea1c6fa04d3f5d1799
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.openlocfilehash: b216252ca33495a065c1dbcc6e091a2e5244de78
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86454186"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235092"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -397,6 +398,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1413 | [CA1413: Vyhněte se neveřejným polím v typech hodnot viditelných modulem COM](../code-quality/ca1413.md) | Neveřejná pole instancí hodnotových typů viditelných moduly COM jsou viditelná klientům typu COM. Zkontrolujte obsah polí, zda neobsahují informace, které by neměly být vystaveny nebo které budou mít nežádoucí účinky na návrh nebo zabezpečení. |
 | CA1414 | [CA1414: označte logické argumenty P/Invoke s MarshalAs](../code-quality/ca1414.md) | Datový typ Boolean má v nespravovaném kódu různé reprezentace. |
 | CA1415 | [CA1415: deklarujte správně volání nespravovaných kódů](../code-quality/ca1415.md) | Toto pravidlo vyhledá deklarace metod s operačním systémem, které cílí [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] na funkce, které mají ukazatel na PŘEkrývající se parametr struktury a odpovídající spravovaný parametr není ukazatel na strukturu System. Threading. NativeOverlapped. |
+| CA1417 | [CA1417: Nepoužívejte pro `OutAttribute` řetězcové parametry pro volání nespravovaného volání.](../code-quality/ca1417.md) | Řetězcové parametry předávané hodnotou s `OutAttribute` může destabilizovat modul runtime, pokud je řetězec interně řetězec. |
 | CA1500 | [CA1500: Názvy proměnných by neměly odpovídat názvům polí](../code-quality/ca1500.md) | Metoda instance deklaruje parametr nebo lokální proměnnou, jejichž název odpovídá poli instance deklarovaného typu, což vede k chybám. |
 | CA1501 | [CA1501: Vyhněte se nadměrné dědičnosti](../code-quality/ca1501.md) | Typ je více než čtyři úrovně hluboko v hierarchii dědičnosti. Hluboce vnořené hierarchie typů může být obtížné sledovat, pochopit a udržovat. |
 | CA1502 | [CA1502: Vyhněte se nadměrné složitosti](../code-quality/ca1502.md) | Toto pravidlo měří počet lineárně nezávislých cest skrze metodu, což je určeno počtem a složitostí podmínkových větví. |

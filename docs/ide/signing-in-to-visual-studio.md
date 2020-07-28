@@ -2,7 +2,7 @@
 title: Přihlášení k sadě Visual Studio
 titleSuffix: ''
 ms.custom: seodec18
-ms.date: 03/10/2020
+ms.date: 07/24/2020
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: ornellaalt
@@ -10,12 +10,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d4be9ffd8d1f5ccc6c6d1a1ba5f83e7f0fccf6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4d6bf69050348cbe078cfdf7ae2d419f1dd13745
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285293"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235196"
 ---
 # <a name="sign-in-to-visual-studio"></a>Přihlášení k sadě Visual Studio
 
@@ -38,7 +38,7 @@ Když se přihlašujete, vylepšit prostředí sady Visual Studio. Když se nap�
 Tady je úplný seznam toho, co můžete očekávat a co můžete udělat po přihlášení:
 - **Prodloužení zkušebního období sady Visual Studio** – můžete použít Visual Studio Professional nebo Visual Studio Enterprise po dobu dalších 90 dní, a nikoli omezit na zkušební dobu 30 dní. Další informace najdete v tématu o [prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
 
-- **Odemkněte Visual Studio Community Edition** – Pokud vás instalace edice Community vyzve k zadání licence, přihlaste se k IDE a Odblokujte si je.
+- **Pokračujte v používání sady Visual Studio Community Edition** – Pokud vás instalace edice Community vyzve k zadání licence, přihlaste se k integrovanému vývojovému prostředí a pokračujte v používání sady Visual Studio Community **zdarma**. 
 
 - **Pokud používáte účet, který je přidružený k předplatnému sady Visual Studio nebo organizaci Azure DevOps, odemkněte Visual Studio**. Podrobné pokyny najdete v tématu [prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md).
 
@@ -80,7 +80,7 @@ Pokud se odhlásíte, budete automaticky přihlášeni k aplikaci Visual Studio 
 
 Pokud narazíte na problémy při přihlašování, získáte pomoc na stránce [podpory předplatného](https://visualstudio.microsoft.com/subscriptions/support/) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Prodloužení zkušební verze nebo aktualizace licence](../ide/how-to-unlock-visual-studio.md)
 * [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)

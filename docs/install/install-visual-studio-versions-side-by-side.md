@@ -1,6 +1,6 @@
 ---
 title: Souběžná instalace různých verzí sady Visual Studio
-ms.date: 03/05/2019
+ms.date: 07/24/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: conceptual
@@ -11,48 +11,64 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: 428c41a96de90494167d04ded8722d49c76afc71
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2b77315363c404cd0647555e5a6ad21d36ac86b
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114643"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234988"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
-Visual Studio můžete nainstalovat do počítače, ve které je starší nebo novější verze sady Visual Studio, která je již nainstalovaná.
+Sadu Visual Studio můžete nainstalovat na počítači, ve kterém je již nainstalována dřívější nebo novější verze sady Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Před instalací verzí vedle sebe zkontrolujte následující podmínky:
+Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
-* Pokud používáte Visual Studio 2017 k otevření řešení, které bylo vytvořeno v Sadě Visual Studio 2015, můžete později otevřít a upravit řešení znovu v předchozí verzi, pokud jste neimplementovali žádné funkce, které jsou specifické pro Visual Studio 2017.
+* Pokud používáte Visual Studio 2017 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2015, můžete později otevřít a upravit řešení znovu v předchozí verzi, pokud jste neimplementovali žádné funkce, které jsou specifické pro Visual Studio 2017.
 
-* Pokud se pokusíte pomocí Visual Studia 2017 otevřít řešení, které bylo vytvořeno v sadě Visual Studio 2015 nebo starší verze, bude pravděpodobně nutné upravit vaše projekty a soubory tak, aby byly kompatibilní s Visual Studio 2017. Další informace naleznete na stránce [Port, migrate a upgrade aplikace Visual Studio Projects.](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
+* Pokud se pokusíte použít Visual Studio 2017 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2015 nebo v dřívější verzi, může být nutné upravit projekty a soubory tak, aby byly kompatibilní se sadou Visual Studio 2017. Další informace najdete na stránce [port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017) .
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-Před instalací verzí vedle sebe zkontrolujte následující podmínky:
+Než nainstalujete verze vedle sebe, Projděte si následující podmínky:
 
-* Pokud používáte Visual Studio 2019 k otevření řešení, které bylo vytvořeno v Sadě Visual Studio 2017, můžete později otevřít a upravit řešení znovu v předchozí verzi, pokud jste neimplementovali žádné funkce, které jsou specifické pro Visual Studio 2019.
+* Pokud používáte Visual Studio 2019 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2017, můžete později otevřít a upravit řešení znovu v předchozí verzi, pokud jste neimplementovali žádné funkce, které jsou specifické pro Visual Studio 2019.
 
-* Pokud se pokusíte pomocí Visual Studia 2019 otevřít řešení, které bylo vytvořeno v sadě Visual Studio 2017 nebo starší verze, bude pravděpodobně nutné upravit vaše projekty a soubory tak, aby byly kompatibilní s Visual Studio 2019. Další informace naleznete na stránce [Port, migrate a upgrade aplikace Visual Studio Projects.](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+* Pokud se pokusíte použít Visual Studio 2019 k otevření řešení, které bylo vytvořeno v aplikaci Visual Studio 2017 nebo v dřívější verzi, může být nutné upravit projekty a soubory tak, aby byly kompatibilní se sadou Visual Studio 2019. Další informace najdete na stránce [port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md) .
 
 ::: moniker-end
 
-* Pokud odinstalujete verzi sady Visual Studio v počítači, který má nainstalovanou více než jednu verzi, budou přidružení souborů sady Visual Studio odebrána pro všechny verze.
+* Pokud odinstalujete verzi sady Visual Studio na počítači, ve kterém je nainstalována více než jedna verze, přidružení souborů pro sadu Visual Studio budou odebrána pro všechny verze.
 
-* Visual Studio automaticky neupgraduje rozšíření, protože ne všechna rozšíření jsou kompatibilní. Rozšíření je nutné přeinstalovat z [webu Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo vydavatele softwaru.
+* Visual Studio neupgraduje automaticky rozšíření, protože ne všechna rozšíření jsou kompatibilní. Rozšíření je nutné přeinstalovat z [Visual Studio Marketplace](https://marketplace.visualstudio.com/) nebo z vydavatele softwaru.
 
-## <a name="net-framework-versions-and-side-by-side-installations"></a>Verze rozhraní .NET Framework a souběžné instalace
+## <a name="install-minor-visual-studio-versions-side-by-side"></a>Souběžná instalace menších verzí sady Visual Studio
 
-Projekty Visual Basic, Visual C# a Visual F# používají možnost **Cílové rozhraní** v **Návrháři projektu** k určení, kterou verzi rozhraní .NET Framework používá projekt. U projektu jazyka C++ můžete ručně změnit cílovou architekturu úpravou souboru .vcxproj. Další informace naleznete v části Kompatibilita verzí na stránce [rozhraní .NET Framework.](/dotnet/framework/migration-guide/version-compatibility)
+Při upgradu z jedné dílčí verze sady Visual Studio na další bude instalační program sady Visual Studio aktualizovat vaši aktuální instalaci na další verzi v tomto kanálu ve výchozím nastavení. Například při instalaci 16.6.4 ve verzi Preview se instalační program pokusí nahradit vaši aktuální instalaci 16.6.3 Preview, protože obě verze jsou v kanálu verze 16,6 Preview. To pomáhá zajistit, že starší verze sady Visual Studio nezabírají místo na svém počítači. V některých specifických případech může být užitečné nainstalovat dílčí verze vedle sebe. V našem příkladu by to znamenalo, že 16.6.3 i 16.6.4 ve stejném počítači.
 
-Při vytváření projektu můžete určit, kterou verzi rozhraní .NET Framework cílí projekt v seznamu **rozhraní .NET Framework** v dialogovém okně **Nový projekt.**
+1. Stáhněte si [soubor zaváděcího nástroje sady Visual Studio](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) pro podverzi, kterou byste chtěli nainstalovat souběžně s vašimi stávajícími verzemi sady Visual Studio.
+2. Otevřete příkazový řádek v režimu správce. Provedete to tak, že otevřete nabídku Start systému Windows, zadáte "cmd", kliknete pravým tlačítkem myši na výsledek hledání příkazového řádku a vyberete možnost **Spustit jako správce**. V příkazovém řádku změňte adresář na složku, ve které se nachází soubor zaváděcího nástroje sady Visual Studio.
+3. Spusťte následující příkaz, určete novou cestu ke složce pro umístění instalace a nahraďte název souboru. exe odpovídajícím názvem zaváděcího programu pro verzi sady Visual Studio, kterou instalujete. Název souboru. exe by měl odpovídat nebo být podobný jednomu z následujících souborů:
+   * vs_community.exe pro Visual Studio Community
+   * vs_professional.exe pro Visual Studio Professional
+   * vs_enterprise.exe pro Visual Studio Enterprise
 
-Informace o jazyce naleznete v příslušném tématu v následující tabulce.
+```
+vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+```
+4. Pomocí dialogových oken instalačního programu vyberte součásti, které pro instalaci potřebujete. Další informace najdete v tématu [instalace sady Visual Studio](install-visual-studio.md#step-4---choose-workloads).
+
+## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework verze a souběžné instalace
+
+Projekty Visual Basic, Visual C# a Visual F# používají k určení verze .NET Framework, které projekt používá, možnost **cílové rozhraní** v **Návrháři projektu** . V případě projektu jazyka C++ lze cílový rámec ručně změnit úpravou souboru. vcxproj. Další informace najdete v tématu [Kompatibilita verzí](/dotnet/framework/migration-guide/version-compatibility) na stránce .NET Framework.
+
+Při vytváření projektu můžete určit, která verze .NET Framework projekt cílí v seznamu **.NET Framework** v dialogovém okně **Nový projekt** .
+
+Informace specifické pro jazyk najdete v příslušném tématu v následující tabulce.
 
 ::: moniker range="vs-2017"
 
@@ -60,16 +76,16 @@ Informace o jazyce naleznete v příslušném tématu v následující tabulce.
 |--------------|-----------|
 | Visual Basic | [Stránka Aplikace, návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017) |
 | Visual C# | [Stránka Aplikace, návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017) |
-| Visual F# | [Vývoj s Visual F# v sadě Visual Studio](../ide/fsharp-visual-studio.md?view=vs-2017) |
-|C++ | [Postup: Úprava cílového rozhraní a sady nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
+| Visual F# | [Vývoj pomocí Visual F# v aplikaci Visual Studio](../ide/fsharp-visual-studio.md?view=vs-2017) |
+|C++ | [Postupy: Změna cílové architektury a sady nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Instalace sady Visual Studio](install-visual-studio.md?view=vs-2017)
 * [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
-* [Vytváření izolovaných aplikací C/C++ a souběžných sestav](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
+* [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end
 
@@ -79,15 +95,15 @@ Informace o jazyce naleznete v příslušném tématu v následující tabulce.
 |--------------|-----------|
 | Visual Basic | [Stránka Aplikace, návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) |
 | Visual C# | [Stránka Aplikace, návrhář projektu (C#)](../ide/reference/application-page-project-designer-csharp.md) |
-| Visual F# | [Vývoj s Visual F# v sadě Visual Studio](../ide/fsharp-visual-studio.md) |
-| C++ | [Postup: Úprava cílového rozhraní a sady nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
+| Visual F# | [Vývoj pomocí Visual F# v aplikaci Visual Studio](../ide/fsharp-visual-studio.md) |
+| C++ | [Postupy: Změna cílové architektury a sady nástrojů platformy](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
-* [Vytváření izolovaných aplikací C/C++ a souběžných sestav](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
+* [Sestavení izolovaných aplikací C/C++ a souběžných sestavení](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end
