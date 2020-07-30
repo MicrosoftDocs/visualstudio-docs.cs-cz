@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f67c41f860417a27a6003a19672d4cd617d37a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
+ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284723"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390259"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Postupy: Přidání nebo odebrání odkazů pomocí Správce odkazů
 
@@ -47,6 +47,9 @@ Dialogové okno Správce odkazů zobrazuje na levé straně různé kategorie v 
 - **Windows**s podskupinami **základní** a **rozšíření** . Můžete prozkoumat odkazy v sadách SDK Windows SDK nebo rozšíření pomocí **Prohlížeč objektů**.
 
 - **Procházet**, s **Poslední** podskupinou
+ 
+    > [!NOTE]
+    > Pokud vyvíjíte projekty C++, nemusí se vám v dialogovém okně Správce odkazů zobrazovat **procházení** .
 
 ## <a name="add-a-reference"></a>Přidat odkaz
 
@@ -205,10 +208,10 @@ Při odkazování na soubor winmd je očekávané rozložení, že soubory * \<F
 
 **Sestavení**, **com**, **Windows**a **procházení** jednotlivých **podporovaných karet,** které vyčíslují seznam komponent, které byly nedávno přidány do projektů.
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
 
 Panel hledání v dialogovém okně Správce odkazů funguje na kartě, která je zaostření. Pokud například uživatel zadá na panelu hledání text "System", zatímco je karta **řešení** aktivní, hledání nevrátí žádné výsledky, pokud se toto řešení neskládá z názvu projektu, který obsahuje "System".
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Správa odkazů v projektu](../ide/managing-references-in-a-project.md)

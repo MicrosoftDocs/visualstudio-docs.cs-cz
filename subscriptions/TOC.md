@@ -30,7 +30,6 @@
 #### [Azure EA DevTest](azure-ea-devtest.md)
 #### [CAST Highlight](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
-#### [Enterprise Mobility + Security](vs-ems.md)
 #### [Microsoft 365 Apps pro velké organizace](microsoft-365-apps-for-enterprise.md)
 #### [Office 365 pro vývojáře](vs-m365.md)
 #### [Parasoft](vs-parasoft.md)
