@@ -2,7 +2,7 @@
 title: Příručka správce sady Visual Studio
 titleSuffix: ''
 description: Přečtěte si další informace o tom, jak nasadit Visual Studio v podnikovém prostředí.
-ms.date: 03/09/2020
+ms.date: 07/29/2020
 ms.custom: seodec18
 ms.topic: overview
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 70eb53c2e2a1625f167844d1e774915fdb1304ac
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: db1e57097b492a8847be6d96719054a6b917e4bd
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85419260"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425404"
 ---
 # <a name="visual-studio-administrator-guide"></a>Příručka správce sady Visual Studio
 
@@ -40,13 +40,17 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro zákazníky v Enterprise a Professional*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) a také v tématu [Postupy: aktualizace sady Visual Studio na stránce směrného plánu údržby](update-servicing-baseline.md) .
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace najdete v části ***Možnosti podpory pro zákazníky v Enterprise a Professional*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) , jakož i na stránce [směrného plánu údržby aktualizace sady Visual Studio](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
 * Určete model aktualizace.
 
   Kam chcete, aby jednotlivé klientské počítače získaly aktualizace? Konkrétně se rozhodněte, jestli chcete získávat aktualizace z Internetu nebo z místní sdílené složky v rámci společnosti. Pokud se pak rozhodnete použít místní sdílenou složku, rozhodněte se, jestli jednotliví uživatelé můžou aktualizovat svoje vlastní klienty, nebo jestli chcete, aby správce aktualizoval klienty programově.
+
+  Je možné aktualizovat rozložení instalace sítě sady Visual Studio s nejnovějšími aktualizacemi produktu, aby bylo možné je použít jako bod instalace pro nejnovější aktualizaci sady Visual Studio, a také zachovat instalace, které jsou již nasazeny na klientských pracovních stanicích. Další informace najdete v tématu [aktualizace síťové instalace sady Visual Studio](../install/update-a-network-installation-of-visual-studio.md).
+
+  Pro počítače, které nejsou připojené k Internetu, je vytvoření minimálního rozložení nejjednodušší a nejrychlejší způsob aktualizace offline instancí sady Visual Studio. Další informace najdete v tématu [aktualizace sady Visual Studio s minimálním rozložením offline](update-minimal-layout.md).
 
 * Rozhodněte, jaké [úlohy a komponenty](workload-and-component-ids.md?view=vs-2019) vaše společnost potřebuje.
 
@@ -62,13 +66,17 @@ Před nasazením sady Visual Studio napříč vaší organizací je potřeba pro
 
 * Rozhodněte se o potřebě údržby.
 
-  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace naleznete v části ***Podpora pro starší verze sady Visual Studio*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) a také [Postupy: aktualizace sady Visual Studio na stránce směrného plánu údržby](update-servicing-baseline.md) .
+  Pokud vaše společnost potřebuje zůstat v sadě funkcí delší, ale stále chce získávat pravidelné aktualizace, naplánujte použití standardních hodnot údržby. Další informace naleznete v části ***Podpora pro starší verze sady Visual Studio*** na stránce [životní cyklus a údržba produktu Visual Studio](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) a také na stránce [směrného plánu pro údržbu aktualizace sady Visual Studio](update-servicing-baseline.md) .
 
   Pokud plánujete použít aktualizace pro údržbu spolu s kumulativními aktualizacemi funkcí, můžete zvolit nejnovější bity.
 
 * Určete model aktualizace.
 
   Kam chcete, aby jednotlivé klientské počítače získaly aktualizace? Konkrétně se rozhodněte, jestli chcete získávat aktualizace z Internetu nebo z místní sdílené složky v rámci společnosti. Pokud se pak rozhodnete použít místní sdílenou složku, rozhodněte se, jestli jednotliví uživatelé můžou aktualizovat svoje vlastní klienty, nebo jestli chcete, aby správce aktualizoval klienty programově.
+
+  Je možné aktualizovat rozložení instalace sítě sady Visual Studio s nejnovějšími aktualizacemi produktu, aby bylo možné je použít jako bod instalace pro nejnovější aktualizaci sady Visual Studio, a také zachovat instalace, které jsou již nasazeny na klientských pracovních stanicích. Další informace najdete v tématu [aktualizace síťové instalace sady Visual Studio](../install/update-a-network-installation-of-visual-studio.md).
+
+  Pro počítače, které nejsou připojené k Internetu, je vytvoření minimálního rozložení nejjednodušší a nejrychlejší způsob aktualizace offline instancí sady Visual Studio. Další informace najdete v tématu [aktualizace sady Visual Studio s minimálním rozložením offline](update-minimal-layout.md).
 
 * Rozhodněte, jaké [úlohy a komponenty](workload-and-component-ids.md?view=vs-2017) vaše společnost potřebuje.
 
@@ -174,7 +182,7 @@ Registr se nachází v adresáři * Software\Microsoft\VisualStudio\15.0_ {Insta
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Instalace certifikátů vyžadovaných pro instalaci sady Visual Studio offline](install-certificates-for-visual-studio-offline.md)

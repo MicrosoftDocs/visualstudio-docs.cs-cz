@@ -1,5 +1,5 @@
 ---
-title: MSBuild Známá metadata zboží | Dokumenty společnosti Microsoft
+title: Metadata známé položky nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,16 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e9320525d770344f131d9e3f04b357de43b5e73
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c810e166ef6f04befdbf7a5d18fe20bb65b8a299
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633093"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425378"
 ---
-# <a name="msbuild-well-known-item-metadata"></a>MSBuild dobře známá metadata položky
+# <a name="msbuild-well-known-item-metadata"></a>Metadata známé položky nástroje MSBuild
 
-Následující tabulka popisuje metadata přiřazená každé položce při vytvoření. V každém příkladu byla do projektu zahrnuta následující deklarace položky pro zahrnutí souboru *C:\MyProject\Source\Program.cs.*
+Metadata položky jsou hodnoty připojené k položkám. Některé jsou přiřazeny nástrojem MSBuild pro položky při vytváření položek, ale můžete také definovat libovolná metadata, která potřebujete. Některé uživatelsky definované hodnoty metadat mají význam pro MSBuild, konkrétní úkoly nebo sady SDK, jako je například sada .NET SDK.
+
+První tabulka v tomto článku popisuje metadata přiřazená každé položce při jejich vytvoření. Následující tabulka obsahuje některá volitelná metadata, která mají význam pro MSBuild, který můžete definovat pro řízení chování sestavení. V každém příkladu byla následující deklarace položky použita k zahrnutí souboru *C:\MyProject\Source\Program.cs* do projektu.
 
 ```xml
 <ItemGroup>
@@ -35,20 +37,21 @@ Následující tabulka popisuje metadata přiřazená každé položce při vytv
 
 |Metadata položky|Popis|
 |-------------------|-----------------|
-|%(Úplná cesta)|Obsahuje úplnou cestu položky. Například:<br /><br /> *C:\MyProject\Source\Program.cs*|
-|%(RootDir)|Obsahuje kořenový adresář položky. Například:<br /><br /> *C:\\*|
-|%(Název souboru)|Obsahuje název souboru položky bez přípony. Například:<br /><br /> *Program*|
-|%(Rozšíření)|Obsahuje příponu názvu souboru položky. Například:<br /><br /> *.cs*|
-|%(RelativeDir)|Obsahuje cestu zadanou `Include` v atributu až do\\konečného zpětného lomítka ( ). Například:<br /><br /> *Zdroj\\*<br /><br /> Pokud `Include` je atribut úplnou `%(RelativeDir)` cestou, začíná `%(RootDir)`kořenovým adresářem .  Například: <br /><br /> *C:\MyProject\Zdroj\\*|
-|%(Adresář)|Obsahuje adresář položky bez kořenového adresáře. Například:<br /><br /> *Zdroj\\myproject\\*|
-|%(Rekurzivní dir)|Pokud `Include` atribut obsahuje zástupný znak \* \*, tato metadata určuje část cesty, která nahradí zástupný znak. Další informace o zástupných zástupcích naleznete v [tématu Postup: Vyberte soubory, které chcete vytvořit](../msbuild/how-to-select-the-files-to-build.md).<br /><br /> Pokud složka *C:\MySolution\MyProject\Source\\ * obsahuje soubor *Program.cs*a pokud soubor projektu obsahuje tuto položku:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> pak hodnota `%(MyItem.RecursiveDir)` by *mysolution\MyProject\Source\\*.|
-|%(Identita)|Položka zadaná `Include` v atributu. Například:<br /><br /> *Zdroj\Program.cs*|
-|%(Upravený čas)|Obsahuje časové razítko z posledního okamžiku, kdy byla položka změněna. Například:<br /><br /> `2004-07-01 00:21:31.5073316`|
-|%(CreatedTime)|Obsahuje časové razítko od okamžiku, kdy byla položka vytvořena. Například:<br /><br /> `2004-06-25 09:26:45.8237425`|
-|%(AccessedTime)|Obsahuje časové razítko z posledního přístupu k položce.<br /><br /> `2004-08-14 16:52:36.3168743`|
+|% (FullPath)|Obsahuje úplnou cestu položky. Příklad:<br /><br /> *C:\MyProject\Source\Program.cs*|
+|%(RootDir)|Obsahuje kořenový adresář položky. Příklad:<br /><br /> *R\\*|
+|% (Název souboru)|Obsahuje název souboru položky bez přípony. Příklad:<br /><br /> *Program*|
+|% (Rozšíření)|Obsahuje příponu názvu souboru položky. Příklad:<br /><br /> *. cs*|
+|%(RelativeDir)|Obsahuje cestu zadanou v `Include` atributu, až po konečné zpětné lomítko ( \\ ). Příklad:<br /><br /> *Zdroj\\*<br /><br /> Pokud `Include` je atributem úplná cesta, `%(RelativeDir)` začíná kořenovým adresářem `%(RootDir)` .  Příklad: <br /><br /> *C:\MyProject\Source\\*|
+|% (Adresář)|Obsahuje adresář položky bez kořenového adresáře. Příklad:<br /><br /> *MyProject \\ zdroj\\*|
+|%(RecursiveDir)|Pokud `Include` atribut obsahuje zástupný znak \* \* , tato metadata určují část cesty, která nahrazuje zástupný znak. Další informace o zástupných znacích najdete v tématu [Postupy: výběr souborů pro sestavení](../msbuild/how-to-select-the-files-to-build.md).<br /><br /> Pokud složka *C:\MySolution\MyProject\Source \\ * obsahuje soubor *program.cs*a soubor projektu obsahuje tuto položku:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> hodnota by pak byla `%(MyItem.RecursiveDir)` * \\ MySolution\MyProject\Source*.|
+|% (Identita)|Položka zadaná v `Include` atributu Příklad:<br /><br /> *Source\Program.cs*|
+|%(ModifiedTime)|Obsahuje časové razítko od poslední změny položky. Příklad:<br /><br /> `2004-07-01 00:21:31.5073316`|
+|%(CreatedTime)|Obsahuje časové razítko od okamžiku, kdy byla položka vytvořena. Příklad:<br /><br /> `2004-06-25 09:26:45.8237425`|
+|%(AccessedTime)|Obsahuje časové razítko od posledního otevření položky.<br /><br /> `2004-08-14 16:52:36.3168743`|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Items](../msbuild/msbuild-items.md)
+- [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)
+- [Položky](../msbuild/msbuild-items.md)
 - [Dávkování](../msbuild/msbuild-batching.md)
-- [Odkaz na sestavení msbuild](../msbuild/msbuild-reference.md)
+- [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

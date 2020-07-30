@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e728f6c4c04e0a3c9ce567c4aaae83ce15cb0cc
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182908"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425391"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
 
@@ -41,7 +41,7 @@ Představuje odkaz sestavení (spravovaného) v projektu.
 |Fusion|Volitelný řetězec. Určuje jednoduchý nebo silný název fúze pro položku.<br /><br /> Pokud je tento atribut přítomen, může ušetřit čas, protože soubor sestavení není nutné otevřít, aby získal název fúze.|
 |SpecificVersion|Volitelná logická hodnota. Určuje, zda má být odkazována pouze verze v názvu fúze.|
 |Aliasy|Volitelný řetězec. Všechny aliasy pro referenci|
-|Soukromé|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
+|Soukromá|Volitelná logická hodnota. Určuje, zda má být odkaz zkopírován do výstupní složky. Tento atribut odpovídá vlastnosti **Copy Local** odkazu, který je v integrovaném vývojovém prostředí sady Visual Studio.|
 
 ### <a name="comreference"></a>COMReference
 
@@ -55,7 +55,7 @@ Představuje odkaz na komponentu modelu COM (nespravovaný) v projektu. Tato pol
 |VersionMinor|Povinný řetězec. Vedlejší část čísla verze součásti. Například "46", pokud je číslo úplné verze "5,46".|
 |LCID|Volitelný řetězec. LocaleID pro komponentu|
 |WrapperTool|Volitelný řetězec. Název nástroje obálky, který se používá pro komponentu, například "Tlbimp".|
-|Izolovaný|Volitelná logická hodnota. Určuje, zda je komponenta komponentou bez registrace.|
+|Isolated|Volitelná logická hodnota. Určuje, zda je komponenta komponentou bez registrace.|
 
 ### <a name="comfilereference"></a>COMFileReference
 
@@ -128,7 +128,7 @@ Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vl
 | Viditelné | Volitelná logická hodnota. Označuje, zda se má soubor zobrazit v **Průzkumník řešení** v aplikaci Visual Studio. |
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 
-### <a name="none"></a>Žádná
+### <a name="none"></a>Žádné
 
 Představuje soubory, které by neměly mít žádné role v procesu sestavení.
 
@@ -166,7 +166,8 @@ Představuje projekt FxCop, který se má importovat.
 
 Představuje sestavení, jejichž obory názvů by měly být importovány Visual Basic kompilátorem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Vlastnosti nástroje MSBuild pro projekty .NET Core SDK](/dotnet/core/project-sdk/msbuild-props)
+- [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62f372be9ffa6ae76503550616c6b3612aad6146
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 08c790af5504c902bf5fe37d2cddba9b9f63aa40
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770862"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425365"
 ---
 # <a name="common-msbuild-project-properties"></a>Obecné vlastnosti projektu nástroje MSBuild
 
@@ -137,3 +137,5 @@ V následující tabulce jsou uvedeny často používané vlastnosti, které jso
 ## <a name="see-also"></a>Viz také:
 
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
+- [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)
+- [Rezervované a dobře známé vlastnosti nástroje MSBuild](msbuild-reserved-and-well-known-properties.md)
