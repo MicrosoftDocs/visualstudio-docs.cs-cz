@@ -10,19 +10,19 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0f4fff1b13f8e3827d685ee16ccea55e78f733a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f48e7a8be8d902a487ae4f7fdac9e6d85f7b5517
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289089"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453760"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Naučte se používat editor kódu.
 
 V tomto krátkém úvodu do editoru kódu v aplikaci Visual Studio se podíváme na některé ze způsobů, které Visual Studio umožňuje psát, navigovat a pochopit kód jednodušeji.
 
 > [!TIP]
-> Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma. V závislosti na typu vývoje aplikací budete možná muset nainstalovat **Node.js vývojové úlohy** se sadou Visual Studio.
+> Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma. V závislosti na typu vývoje aplikací budete možná muset nainstalovat **Node.js vývojové úlohy** se sadou Visual Studio. Další informace o tom, jak získat službu jazyka pro TypeScript, najdete v tématu [Podpora TypeScript](../javascript/javascript-in-vs-2019.md#typescript-support).
 
 V tomto článku se předpokládá, že už jste obeznámeni s vývojem JavaScriptu. Pokud ne, doporučujeme, abyste se vyhledali v kurzu, jako je třeba [vytvoření Node.js a aplikace Express](../javascript/tutorial-nodejs.md) .
 
@@ -65,6 +65,8 @@ V dolním podokně můžete kliknout na kartu **Seznam chyb** a zobrazit tak upo
 ![Zobrazit seznam chyb](../javascript/media/write-code-error-list.png)
 
 Tento kód můžete opravit přidáním čárky ( `,` ) před `"data"` .
+
+Další informace o linting najdete v tématu [linting](https://github.com/microsoft/JSTSdocs/blob/master/articles/editor/linting.md).
 
 ## <a name="comment-out-code"></a>Kód odhlašovacího komentáře
 

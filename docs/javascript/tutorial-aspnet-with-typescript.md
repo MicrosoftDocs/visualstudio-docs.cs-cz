@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e8a12c16c4c53ab2d0850bf5b768488160fa729a
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283564"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453697"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Kurz: Vytvoření aplikace ASP.NET Core pomocí TypeScriptu v aplikaci Visual Studio
 
@@ -42,7 +42,7 @@ V tomto kurzu se naučíte:
 > * Spuštění aplikace
 > * Přidání knihovny třetí strany pomocí npm
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 * Musíte mít nainstalovanou aplikaci Visual Studio a úlohu vývoje webu ASP.NET.
 
@@ -91,9 +91,6 @@ V tomto kurzu začnete s jednoduchým projektem obsahujícím kód pro ASP.NET C
    ![Přidat balíček NuGet](../javascript/media/aspnet-core-ts-nuget.png)
 
    Sada Visual Studio přidá balíček NuGet pod uzel **závislosti** v Průzkumník řešení.
-
-   > [!NOTE]
-   > Tento kurz vyžaduje balíček NuGet. Případně můžete ve svých vlastních aplikacích chtít použít [balíček TypeScript npm](https://www.npmjs.com/package/typescript).
 
 1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **přidat > novou položku**. Zvolte **konfigurační soubor JSON pro TypeScript**a pak klikněte na **Přidat**.
 

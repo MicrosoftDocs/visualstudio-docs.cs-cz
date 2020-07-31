@@ -2,17 +2,17 @@
 title: Upravit odběry na portálu pro správu | Microsoft Docs
 author: evanwindom
 ms.author: lank
-manager: lank
+manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 03/03/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 description: Přečtěte si, jak můžou správci upravovat přiřazení předplatného.
-ms.openlocfilehash: 32d430ac4afe88541fd839827652ec7613ba03b1
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: fb43f9ceae86acf5804a6cd32dd383dcd2e9af38
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902932"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453736"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Upravit přiřazení předplatných sady Visual Studio
 Jako správce předplatného můžete provádět změny v předplatných přiřazených jednotlivcům ve vaší organizaci.  Tento článek popisuje typy změn, které lze provést, a poskytuje potřebné kroky.
@@ -25,7 +25,7 @@ Můžete upravit informace předplatitele a opravit chyby nebo aktualizovat info
 
 Pokud chcete odběratele upravit, vyberte tři tečky (...), které se zobrazí vedle e-mailové adresy předplatitele, když na ni najedete myší. Zobrazí se rozevírací seznam.  Výběrem **Upravit** upravíte podrobnosti odběratele. 
 > [!div class="mx-imgBorder"]
-> ![Vyberte odběratele, kterého chcete upravit.](_img/edit-license/select-subscriber.png)
+> ![Vyberte odběratele, kterého chcete upravit.](_img/edit-license/select-subscriber.png "Klikněte na tlačítko se třemi tečkami a vyberte možnost Upravit.")
 
 Můžete aktualizovat křestní jméno, příjmení, úroveň předplatného, e-mailovou adresu, zemi, jazyk, soubory ke stažení a referenční pole. Upravte informace o odběrateli a klikněte na **Uložit**.
 
@@ -45,18 +45,18 @@ Pomocí procesu hromadného úprav můžete upravovat více předplatitelů naje
 
 2. Hromadná úprava používá excelovou šablonu k provádění úprav informací o odběrateli. V poli Hromadná úprava klikněte na **exportovat tento Excel** a Stáhněte si aktuální seznam předplatitelů včetně všech jejich informací.
    > [!div class="mx-imgBorder"]
-   > ![Úprava seznamu hromadných úprav pro export licencí](_img/edit-license/edit-license-bulk-edit-export.png)
+   > ![Úprava seznamu hromadných úprav pro export licencí](_img/edit-license/edit-license-bulk-edit-export.png "Kliknutím na exportovat tento Excel vytvořte seznam aktuálních předplatných.")
 
 3. Potom uložte soubor místně, abyste ho mohli snadno najít a provést potřebné změny před jeho odesláním. Aby se zajistilo úspěšné nahrání, neupravujte v souboru hromadného úprav **úroveň předplatného nebo identifikátor GUID předplatného** , což způsobí selhání nahrávání.
 
 4. Vraťte se na portál pro správu předplatných sady Visual Studio a v dialogovém okně hromadné úpravy klikněte na **Procházet**. Vyberte excelový soubor, který jste uložili, a klikněte na **OK**. Na obrazovce se zobrazí průběh nahrávání.
    > [!div class="mx-imgBorder"]
-   > ![Úprava nahrávání souboru s hromadnou úpravou licencí](_img/edit-license/edit-license-bulk-file-upload1.png)
+   > ![Úprava nahrávání souboru s hromadnou úpravou licencí](_img/edit-license/edit-license-bulk-file-upload1.png "Přejděte do umístění dokončeného souboru aplikace Excel, vyberte jej a klikněte na tlačítko OK.")
 
 5. Po nahrání souboru se zobrazí oznámení o tom, že bylo úspěšné. V tomto okamžiku se vaše úpravy projeví v informacích o odběrateli.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
@@ -65,5 +65,3 @@ Pomocí procesu hromadného úprav můžete upravovat více předplatitelů naje
 - Potřebujete přiřadit konkrétní ID předplatného? Podívejte se na přiřazení ID předplatného. 
 - Nápovědu k vyhledání konkrétního předplatného najdete v tématu [hledání předplatného](search-license.md).
 - Potřebujete vytvořit seznam všech vašich předplatných?  Podívejte se na [Export předplatných](exporting-subscriptions.md).
-
-

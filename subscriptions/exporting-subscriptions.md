@@ -1,48 +1,48 @@
 ---
-title: Informace o vývozním předplatném | Dokumenty společnosti Microsoft
+title: Exportovat informace o předplatném | Microsoft Docs
 author: evanwindom
 ms.author: lank
-manager: lank
+manager: cabuschl
 ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Přečtěte si, jak exportovat seznam odběratelů a podrobnosti o jejich přiřazení předplatného.
-ms.openlocfilehash: dd24e9deb6225b3a8b88a461904fefb42ba4a912
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+description: Naučte se exportovat seznam předplatitelů a podrobnosti jejich přiřazení předplatných.
+ms.openlocfilehash: ff0941dc25d16ad520b20613c2d4136c3c63c937
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232500"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453571"
 ---
 # <a name="export-subscription-information"></a>Export informací o předplatném
-Na [portálu pro správu](https://manage.visualstudio.com)předplatných sady Visual Studio můžete exportovat seznam odběratelů a podrobnosti o jejich přiřazeních. Tyto informace zahrnují jejich jméno, e-mailovou adresu, alternativní e-mailovou adresu, úroveň předplatného, přiřazené datum, stav aktivace, datum vypršení platnosti, referenční pole, zda jsou povoleny stahování, země, jazyk, stav předplatného a předplatné Identifikátor guid.  Seznam je exportován jako soubor CSV, který lze snadno otevřít v aplikaci Microsoft Excel pro vytváření grafů, kontů a dalších artefaktů.
+Na [portálu pro správu](https://manage.visualstudio.com)předplatných sady Visual Studio můžete exportovat seznam předplatitelů a podrobnosti o jejich přiřazeních. Tyto informace zahrnují jejich jméno, e-mailovou adresu, alternativní e-mailovou adresu, úroveň předplatného, datum přiřazení, stav aktivace, datum vypršení platnosti, referenční pole, ať už jsou soubory ke stažení povolené, země, jazyk, stav předplatného a identifikátor GUID  Seznam je exportován jako soubor CSV, který lze snadno otevřít v aplikaci Microsoft Excel pro vytváření grafů, pivotů a dalších artefaktů.
 
-Mít všechny informace o odběrateli na jednom místě vám může pomoci dělat věci, jako jsou:
-- Získejte celkový přehled o tom, která předplatná se používají týmem nebo umístěním v celé organizaci.
-- Vyvíjejte plány a rozpočty pro budoucí nákupy předplatného. 
-- Povzbuďte uživatele, kteří mají přiřazená předplatná k aktivaci.
-- Před vypršením platnosti předplatného proaktivně akci provádějte.  
-- Určete, kde mohou být odběry přetížené. 
-- Přiřaďte předplatná pomocí ID předplatného k řízení, které datum vypršení platnosti vaši předplatitelé mají na jejich odběry. 
+Informace o všech vašich předplatitelích na jednom místě vám umožní dělat například tyto věci:
+- Získejte celkový přehled o tom, které předplatné používá tým nebo umístění v rámci vaší organizace.
+- Vývoj plánů a rozpočtů pro budoucí nákupy předplatného. 
+- Doporučte uživatelům, kteří mají přiřazená předplatná, která se mají aktivovat.
+- Než vyprší platnost předplatného, proveďte proaktivní akci.  
+- Určete, kde mohou být předplatná navrácena. 
+- Přiřaďte odběry pomocí ID předplatného k určení, které datum vypršení platnosti mají vaši předplatitelé na svých předplatných. 
 
 ## <a name="export-your-subscriptions"></a>Export předplatných
 Provedení exportu:
-1. Přihlaste se na [Portál pro správu](https://manage.visualstudio.com).
-2. Vyberte kartu **Exportovat** a soubor se stáhne do místního počítače. Soubor bude obsahovat název smlouvy, která obsahuje vaše uživatelské odběry, stejně jako datum exportu.
+1. Přihlaste se k [portálu pro správu](https://manage.visualstudio.com).
+2. Vyberte kartu **exportovat** a soubor se stáhne do místního počítače. Tento soubor bude obsahovat název smlouvy, která obsahuje vaše uživatelská předplatná, a také datum exportu.
 > [!div class="mx-imgBorder"]
-> ![Exportovat předplatitele](_img/exporting-subscriptions/exporting-subscriptions.png)
+> ![Exportovat předplatitele](_img/exporting-subscriptions/exporting-subscriptions.png "Kliknutím na Exportovat si stáhněte úplný seznam vašich přiřazených odběrů.")
 
 ## <a name="see-also"></a>Viz také
 - [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
-- [Dokumentace k Azure DevOps](https://docs.microsoft.com/azure/devops/)
-- [Dokumentace azure](https://docs.microsoft.com/azure/)
-- [Dokumentace k Microsoftu 365](https://docs.microsoft.com/microsoft-365/)
+- [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
+- [Dokumentace k Azure](https://docs.microsoft.com/azure/)
+- [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Další kroky
 - Další informace o správě předplatných najdete v těchto užitečných tématech:
-    - [Předplatné s prošlou platností](handle-expired-license.md)
+    - [Předplatná po konci platnosti](handle-expired-license.md)
     - [Nadměrná přidělení](handle-overclaimed-license.md)
     - [Maximální využití](maximum-usage.md)
-- Potřebujete pomoc s jakýmkoli aspektem správy předplatných?  Obraťte se na [podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
+- Potřebujete pomoc s jakýmkoli aspektem správy předplatných?  Obraťte [se na podporu správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs).
 
 

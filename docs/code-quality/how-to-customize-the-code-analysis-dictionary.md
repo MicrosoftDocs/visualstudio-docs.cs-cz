@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01c3ad83cea8dc1a28a817677be102c87ebc8f87
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371869"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453638"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Postupy: Přizpůsobení slovníku Analýzy kódu
 
@@ -266,12 +266,12 @@ Podmínky v uzlu Dictionary/Akronyms/CasingExceptions jsou aplikovány na násle
 
 1. V **Průzkumník řešení**použijte jeden z následujících postupů:
 
-2. Chcete-li přidat slovník do jednoho projektu, klikněte pravým tlačítkem myši na název projektu a pak klikněte na položku **Přidat existující položku**. Zadejte soubor v dialogovém okně **Přidat existující položku** .
+    - Chcete-li přidat slovník do jednoho projektu, klikněte pravým tlačítkem myši na název projektu a pak klikněte na položku **Přidat existující položku**. Zadejte soubor v dialogovém okně **Přidat existující položku** .
+  
+    - Chcete-li přidat slovník, který je sdílen mezi dvěma nebo více projekty, vyhledejte soubor pro sdílení v dialogovém okně **Přidat existující položku** , klikněte na šipku dolů na tlačítku **Přidat** a potom klikněte na tlačítko **Přidat jako odkaz**.
 
-3. Chcete-li přidat slovník, který je sdílen mezi dvěma nebo více projekty, vyhledejte soubor pro sdílení v dialogovém okně **Přidat existující položku** , klikněte na šipku dolů na tlačítku **Přidat** a potom klikněte na tlačítko **Přidat jako odkaz**.
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název souboru **CustomDictionary.xml** a klikněte na **vlastnosti**.
 
-4. V **Průzkumník řešení**klikněte pravým tlačítkem myši na název souboru **CustomDictionary.xml** a klikněte na **vlastnosti**.
+3. V seznamu **Akce sestavení** vyberte možnost **CodeAnalysisDictionary**.
 
-5. V seznamu **Akce sestavení** vyberte možnost **CodeAnalysisDictionary**.
-
-6. V seznamu **Kopírovat do výstupního adresáře** vyberte **Nekopírovat**.
+4. V seznamu **Kopírovat do výstupního adresáře** vyberte **Nekopírovat**.
