@@ -449,6 +449,8 @@
           href: msbuild-well-known-item-metadata.md
         - name: Soubory odezvy nástroje MSBuild
           href: msbuild-response-files.md
+        - name: Filtry řešení v nástroji MSBuild
+          href: solution-filters.md
         - name: Referenční dokumentace WPF
           items:
             - name: Přehled

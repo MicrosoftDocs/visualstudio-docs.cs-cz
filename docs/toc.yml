@@ -402,8 +402,8 @@
                   href: ide/reference/extract-local-function.md
                 - name: Vložená dočasná proměnná
                   href: ide/reference/inline-temporary-variable.md
-                - name: Neimportované typy dokončování IntelliSense
-                  href: ide/reference/intellisense-completion-unimported-types.md
+                - name: Dokončování IntelliSense pro neimportované typy a rozšiřující metody
+                  href: ide/reference/intellisense-completion-unimported-types-extension-methods.md
                 - name: Invertování podmíněných výrazů a logických operací
                   href: ide/reference/invert-conditional-logical.md
                 - name: Invertování příkazů if

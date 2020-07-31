@@ -415,6 +415,8 @@
                   href: ca1414.md
                 - name: 'CA1415: Deklarujte správně volání nespravovaných kódů'
                   href: ca1415.md
+                - name: 'CA1417: Nepoužívat OutAttribute v parametrech řetězce pro volání nespravovaného kódu'
+                  href: ca1417.md
             - name: Upozornění udržovatelnosti
               items:
                 - name: Přehled
