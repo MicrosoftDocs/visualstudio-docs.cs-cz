@@ -7,12 +7,12 @@ ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 06/16/2020
 ms.topic: how-to
 description: Zjistěte, jak můžou správci odstraňovat přiřazení předplatného.
-ms.openlocfilehash: e6ce84aa84e25bcdeb44b93954289a65a3454010
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 4f952f574132afbd405c82c75fcddfc952bffb48
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902902"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434270"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Odstranit přiřazení v předplatných sady Visual Studio
 Pokud již předplatitel nevyžaduje předplatné sady Visual Studio, například když odejdou ze společnosti, dokončí projekt nebo přepne na novou roli úlohy, můžete odebrat jejich předplatné a přiřadit ho někomu jinému. Upozorňujeme, že při opětovném přiřazení předplatného dojde k resetování všech výhod předplatitele.  Nový uživatel bude moci vyžádat všechny neoprávněné klíče a zobrazit dříve požadované klíče, ale omezení deklarací identity nebudou **resetována** .  Pro organizace, které mají smlouvy Enterprise (EA), se všechny výhody, které použil původní uživatel, jako je třeba školení Pluralsight, resetují. 
@@ -24,13 +24,13 @@ Pokud již předplatitel nevyžaduje předplatné sady Visual Studio, napříkla
 2. Pokud chcete vybrané odběratele odstranit, klikněte na **Odstranit**.
 3. Jakmile se zobrazí zpráva s výzvou k potvrzení odstranění, klikněte na tlačítko **OK**.
    > [!div class="mx-imgBorder"]
-   > ![Odstranit předplatitele](_img/delete-license/delete-subscribers.png)
+   > ![Odstranit předplatitele](_img/delete-license/delete-subscribers.png "Vyberte uživatele, které chcete odstranit, a klikněte na Odstranit. Pomocí kláves CTRL a Shift můžete vybrat více odběratelů.")
 
    > [!NOTE]
    > Hromadné odstranění pomocí šablony není k dispozici. Organizace, které spravují přiřazení předplatného prostřednictvím skupin zabezpečení Azure Active Directory, najdete v [našem článku](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) , kde najdete další informace o tom, jak dochází k odstranění.  
 
-## <a name="see-also"></a>Viz také
-- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také:
+- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)
