@@ -42,6 +42,8 @@
       items:
         - name: Přehled
           href: install/visual-studio-administrator-guide.md
+        - name: Příručka pro Visual Studio Enterprise
+          href: install/visual-studio-enterprise-guide.md
         - name: Použití příkazového řádku
           items:
             - name: Instalace sady Visual Studio s použitím parametrů příkazového řádku
