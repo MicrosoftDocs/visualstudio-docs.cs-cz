@@ -3,7 +3,11 @@ title: Měření výkonu pomocí nástrojů pro profilaci
 description: Podívejte se na krátké zobrazení různých diagnostických nástrojů, které jsou k dispozici v aplikaci Visual Studio.
 ms.custom: mvc
 ms.date: 06/03/2020
-ms.topic: quickstart
+ms.topic: overview
+f1_keywords:
+- vs.diagnosticshub.overview
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - diagnostic tools
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
@@ -12,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c1f2583b0624691405ec3ef5a88aa11cb796327
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85816692"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507986"
 ---
 # <a name="first-look-at-profiling-tools"></a>První seznámení s nástroji pro profilaci
 
@@ -131,7 +135,7 @@ V případě aplikací .NET Core, které používají ADO.NET nebo Entity Framew
 
 Nástroj zobrazí každý dotaz v zobrazení seznamu. Můžete zobrazit informace, jako je čas zahájení a doba trvání dotazu.
 
-![Vyhrazen](./media/db-gotosource.png "Přidělování")
+![Přidělování](./media/db-gotosource.png "Přidělování")
 
 ::: moniker-end
 
@@ -199,7 +203,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 |Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
 |[Tipy pro výkon](../profiling/perftips.md)|ano|ano|ano|
-|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Alokace objektů .NET](../profiling/dotnet-alloc-tool.md)|Ano (jenom .NET)|ano|ano|
 |[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
@@ -214,7 +218,7 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker range="vs-2017"
 |Nástroj Performance Tool|Plocha Windows|UPW|Jádro ASP.NET/ASP.NET|
 |----------------------|---------------------|-------------|-------------|
-|[Využití CPU](../profiling/cpu-usage.md)|ano|ano|ano|
+|[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|ano|
 |[Využití paměti](../profiling/memory-usage.md)|ano|ano|ano|
 |[Využití GPU](/visualstudio/debugger/graphics/gpu-usage)|ano|ano|ne|
 |[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|
@@ -227,5 +231,5 @@ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Vi
 ::: moniker-end
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md)

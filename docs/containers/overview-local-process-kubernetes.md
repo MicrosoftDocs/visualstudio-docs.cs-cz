@@ -6,12 +6,15 @@ ms.topic: conceptual
 description: Popisuje procesy pro připojení vašeho vývojového počítače ke clusteru Kubernetes pomocí místního procesu s Kubernetes.
 keywords: Místní proces s Kubernetes, Docker, Kubernetes, Azure, kontejnery
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 93bfc509eb21545cde812b8d6d71bb9a93a109e8
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+manager: jillfra
+author: ghogen
+ms.author: ghogen
+ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133970"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507882"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Jak funguje místní proces s Kubernetes
 
@@ -20,6 +23,9 @@ Místní proces s Kubernetes umožňuje spouštět a ladit kód na vašem vývoj
 Místní proces s Kubernetes zabraňuje sestavení a nasazení kódu do clusteru, a to tak, že vytvoří připojení přímo mezi vývojovým počítačem a vaším clusterem. Připojení vývojového počítače ke clusteru během ladění umožňuje rychlou otestování a vývoj vaší služby v kontextu plné aplikace bez vytvoření jakékoli konfigurace Docker nebo Kubernetes.
 
 Místní proces s Kubernetes přesměruje provoz mezi připojeným clusterem Kubernetes a vaším vývojovým počítačem. Toto přesměrování provozu umožňuje kódu na vašem vývojovém počítači a službách spuštěných v clusteru Kubernetes komunikovat jako v případě, že jsou ve stejném clusteru Kubernetes. Místní proces s Kubernetes také poskytuje způsob, jak replikovat proměnné prostředí a připojené svazky k dispozici do lusků ve vašem clusteru Kubernetes ve vývojovém počítači. Poskytnutí přístupu k proměnným prostředí a připojeným svazkům ve vývojovém počítači vám umožní rychle pracovat na svém kódu, aniž byste tyto závislosti museli replikovat ručně.
+
+> [!WARNING]
+> Místní proces pro Kubernetes je určený pro použití pouze ve scénářích vývoje a testování. Není určena ani podporována pro použití s provozními clustery nebo službami Live v aktivním použití.
 
 ## <a name="using-local-process-with-kubernetes"></a>Použití místního procesu s Kubernetes
 
@@ -39,6 +45,12 @@ Když místní proces s Kubernetes vytvoří připojení ke clusteru,:
 * Spustí běh a ladění kódu ve vývojovém počítači. Pokud je to nutné, místní proces s Kubernetes uvolní požadované porty ve vývojovém počítači tím, že zastavuje služby nebo procesy, které tyto porty aktuálně používají.
 
 Po navázání připojení ke clusteru můžete spustit a ladit kód nativně ve vašem počítači bez vytváření kontejnerů a kód může přímo pracovat se zbytkem vašeho clusteru. Veškerý síťový provoz, který vzdálený agent obdrží, se přesměruje na místní port zadaný během připojení, takže váš nativní běžící kód může přijmout a zpracovat tento provoz. Proměnné prostředí, svazky a tajné klíče z vašeho clusteru jsou zpřístupněny kódu běžícímu na vašem vývojovém počítači. Kromě toho, že z důvodu položek souborů hosta a přesměrování portů přidaných do vašeho vývojářského počítače místním procesem s Kubernetes, může váš kód odesílat síťový provoz do služeb spuštěných ve vašem clusteru pomocí názvů služeb z vašeho clusteru a tento provoz se předává do služeb spuštěných ve vašem clusteru. Provoz se směruje mezi vývojovým počítačem a vaším clusterem a celou dobu, po kterou jste se připojili.
+
+Kromě toho místní proces s Kubernetes poskytuje způsob, jak replikovat proměnné prostředí a připojené soubory, které jsou k dispozici ve vašem clusteru ve vývojovém počítači, prostřednictvím `KubernetesLocalProcessConfig.yaml` souboru. Tento soubor můžete také použít k vytvoření nových proměnných prostředí a připojení svazků.
+
+## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Další konfigurace pomocí KubernetesLocalProcessConfig. yaml
+
+`KubernetesLocalProcessConfig.yaml`Soubor umožňuje replikovat proměnné prostředí a připojené soubory, které jsou k dispozici pro vaše lusky v clusteru. Další informace o dalších možnostech konfigurace najdete v tématu [Konfigurace místního procesu pomocí Kubernetes][using-config-yaml].
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Používání možností směrování pro vývoj v izolaci
 
@@ -108,3 +120,4 @@ Pokud chcete začít používat místní proces s Kubernetes a připojit se k m�
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[using-config-yaml]: configure-local-process-with-kubernetes.md
