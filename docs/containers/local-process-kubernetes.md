@@ -2,16 +2,19 @@
 title: Použití místního procesu s Kubernetes s využitím sady Visual Studio (Preview)
 ms.technology: vs-azure
 ms.date: 06/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Naučte se používat místní proces s Kubernetes a sadou Visual Studio k propojení vývojového počítače s clusterem Kubernetes.
 keywords: Místní proces pomocí Kubernetes, Azure Dev Spaces, vývojových prostorů, Docker, Kubernetes, Azure, Containers
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: fd2e456f1ffdaaea90c0594b73d5367e51c8f655
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+ms.author: ghogen
+author: ghogen
+manager: jillfra
+ms.openlocfilehash: 29a3c8563660507a2378a58595ba5ea64788b417
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133993"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507895"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>Použití místního procesu s Kubernetes (Preview)
 
@@ -137,6 +140,10 @@ Odstraňte zarážku tak, že umístíte kurzor na řádek 26 v a zapnete `Bikes
 >
 > Pokud Visual Studio náhle ukončí připojení ke clusteru nebo skončí, služba, kterou přesměrováváte, nemusí být obnovená do původního stavu předtím, než se připojíte k místnímu procesu pomocí Kubernetes. Chcete-li tento problém vyřešit, přečtěte si [příručku Poradce při potížích][troubleshooting].
 
+## <a name="additional-configuration"></a>Další konfigurace
+
+Místní proces s Kubernetes může zpracovávat směrování provozu a replikovat proměnné prostředí bez jakékoli další konfigurace. Potřebujete-li stáhnout všechny soubory, které jsou připojeny ke kontejneru v clusteru Kubernetes, jako je například soubor ConfigMap, můžete vytvořit a `KubernetesLocalProcessConfig.yaml` stáhnout tyto soubory do vývojového počítače. Další informace najdete v tématu [použití KubernetesLocalProcessConfig. yaml pro další konfiguraci s pro místní proces s Kubernetes][kubernetesLocalProcessConfig-yaml].
+
 ## <a name="using-logging-and-diagnostics"></a>Používání protokolování a diagnostiky
 
 Diagnostické protokoly můžete najít v `Azure Dev Spaces` adresáři v [ *dočasném* adresáři vašeho vývojového počítače][azds-tmp-dir].
@@ -170,3 +177,4 @@ Přečtěte si, jak Kubernetes místního procesu funguje.
 [troubleshooting]: /azure/dev-spaces/troubleshooting#fail-to-restore-original-configuration-of-deployment-on-cluster
 [visual-studio]: https://www.visualstudio.com/vs/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[kubernetesLocalProcessConfig-yaml]: configure-local-process-with-kubernetes.md

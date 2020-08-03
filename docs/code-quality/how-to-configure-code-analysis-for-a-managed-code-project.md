@@ -5,6 +5,11 @@ ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
 - vs.codeanalysis.propertypages.solution
+- vs.codeanalysis.propertypages.asp
+dev_langs:
+- CSharp
+- VB
+- FSharp
 helpviewer_keywords:
 - code analysis, selecting rule sets
 - code analysis, rule sets
@@ -13,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c922f0fc952cede53b9961e2e772e71a19cbb9
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 985f14446f17d1a4df3cfd14e156f21b7a7ce0de
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371947"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507856"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
