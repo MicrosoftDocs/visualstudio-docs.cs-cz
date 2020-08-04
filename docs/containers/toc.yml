@@ -11,8 +11,6 @@
           href: container-tools.md
         - name: Jednostránková aplikace React.js v kontejneru
           href: container-tools-react.md
-        - name: Vývoj na platformě Kubernetes
-          href: local-process-kubernetes.md
     - name: Kurzy
       expanded: true
       items:
@@ -54,3 +52,5 @@
       href: local-process-kubernetes.md
     - name: Jak funguje místní proces s Kubernetes (Preview)
       href: overview-local-process-kubernetes.md
+    - name: Konfigurace místního procesu s Kubernetes
+      href: configure-local-process-with-kubernetes.md
