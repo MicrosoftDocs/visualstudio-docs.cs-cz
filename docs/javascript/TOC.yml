@@ -26,18 +26,26 @@
       href: publish-nodejs-app-azure.md
 - name: Návody
   items:
-    - name: Psaní kódu a jeho úpravy
-      href: write-and-edit-code.md
-    - name: Vytvoření aplikace Vue.js
-      href: create-application-with-vuejs.md
+    - name: Editor
+      items:
+        - name: Psaní kódu a jeho úpravy
+          href: write-and-edit-code.md
+        - name: JavaScript IntelliSense
+          href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
+    - name: Sestavení
+      items:
+        - name: Kompilace kódu TypeScript pomocí tsc
+          href: compile-typescript-code-npm.md
+        - name: Kompilování kódu TypeScript pomocí NuGetu
+          href: compile-typescript-code-nuget.md
     - name: Správa balíčků npm
       href: npm-package-management.md
     - name: Vývoj bez projektů nebo řešení (Otevřít složku)
       href: develop-javascript-code-without-solutions-projects.md
+    - name: Vytvoření aplikace Vue.js
+      href: create-application-with-vuejs.md
     - name: Použití interaktivního okna REPL v Node.js
       href: nodejs-interactive-repl.md
-    - name: JavaScript IntelliSense
-      href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
     - name: Ladit
       href: debug-nodejs.md
     - name: Testování jednotek
