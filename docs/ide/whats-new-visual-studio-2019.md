@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 05/20/2020
+ms.date: 08/05/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c8e647943b6e99946c2a9123ee17e2be8cc5c2
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
+ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387041"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87818583"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
-**Aktualizováno pro [verzi 16,6](/visualstudio/releases/2019/release-notes/)**
+**Aktualizováno pro [verzi 16,7](/visualstudio/releases/2019/release-notes/)**
 
 >[!div class="button"]
 >[Stáhněte si Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -86,7 +86,7 @@ Další informace o IntelliCode najdete v tématu popisujícím [obecnou dostupn
 
 ### <a name="code-cleanup"></a>Vyčištění kódu
 
-Párování s novým indikátorem stavu dokumentu je nový příkaz pro vyčištění kódu. Pomocí tohoto nového příkazu můžete identifikovat a opravit upozornění i návrhy kliknutím na tlačítko.
+Párování s novým indikátorem stavu dokumentu je nový příkaz pro vyčištění kódu. Pomocí tohoto nového příkazu můžete identifikovat a opravit upozornění i návrhy s jednou akcí (nebo kliknutím na tlačítko).
 
 Vyčištění naformátuje kód a použije všechny opravy kódu navrhované [aktuálním nastavením](code-styles-and-code-cleanup.md) a [soubory. editorconfig](create-portable-custom-editor-options.md).
 
@@ -156,7 +156,7 @@ Zavádíme nové rozšíření, které můžete stáhnout pro použití se sadou
 
 Další informace najdete v příspěvku na blogu o [revizích kódu pomocí rozšíření pro žádosti o získání dat v aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) .
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete s přesným cílem v průběhu ladění vynulovat. <br><br>*Délka videa: 3,54 minut*
 
@@ -178,7 +178,7 @@ Pravděpodobně jste to předtím, a to v okno Kukátko pro řetězec mezi sadou
 
    ![Animace, která zobrazuje okno hledání ladění v aplikaci Visual Studio 2019](media/vs-2019/debug-window-search.gif)
 
-Můžete také formátovat, jak se hodnota zobrazuje v oknech kukátko, místní hodnoty a automatické hodnoty.  Dvakrát klikněte na jednu z položek v některém z oken a přidejte čárku (",") pro přístup k rozevíracímu seznamu možných specifikátorů formátu, z nichž každý obsahuje popis zamýšleného efektu.
+Můžete také formátovat, jak se hodnota zobrazuje v oknech kukátko, místní hodnoty a automatické hodnoty. Vyberte (dvojitým kliknutím) jednu z položek v některém z oken a přidejte čárku (",") pro přístup k rozevíracímu seznamu možných specifikátorů formátu, z nichž každý obsahuje popis zamýšleného efektu.
 
    ![Funkce New okno Kukátko a Format Values v aplikaci Visual Studio 2019](media/search-watch-window.png)
 
@@ -208,11 +208,25 @@ Další informace najdete v článku [ladění živých ASP.NET aplikací Azure 
 
 Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit spravované objekty podle svého příspěvku na](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/) blogu.
 
-## <a name="whats-next"></a>Kam dál
+## <a name="whats-next"></a>Co dál
 
 Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). Záznam o tom, co jsme vydali v předběžné verzi Preview, najdete v [poznámkách k verzi Preview](/visualstudio/releases/2019/release-notes-preview/). Seznam toho, co plánujeme vydávat dál, najdete v tématu plán sady [Visual Studio](/visualstudio/productinfo/vs-roadmap).
 
-Chcete získat další informace o tom, co je jinde v sadě Works for Visual Studio 2019? Podívejte se na [plán sady Visual Studio](/visualstudio/productinfo/vs-roadmap/).
+V současné době jsou zde některé nové funkce, které jsou aktuálně v sadě Works.
+
+- **Podpora sady Visual Studio 2019 pro Visual Studio Codespaces (Preview)**
+
+  Vývojáři jsou nyní více než kdy dřív Juggling více projektů v práci a doma. Nové funkce, opravy chyb, revize žádosti o přijetí změn, &amp; prototypy všech soutěží za dobu a vyžadují konstantní přepínání kontextu. [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) vám může pomáhat. Můžete vyvíjet zcela v cloudu a vytvářet vyhrazená vlastní prostředí pro jednotlivé projekty během několika sekund. Pomocí sady Visual Studio 2019 se můžete připojit k codespace a pracovat stejně jako v místním prostředí.
+
+  Další informace najdete na stránce [co je Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline/) .
+
+- **Vylepšené prostředí Git v aplikaci Visual Studio 2019 (Preview)**
+
+   I nadále Iterujte na přepracované prostředí Git a Vylepšete svou produktivitu při práci s kódem na GitHubu, Azure Repos a dalších službách vzdáleného hostování. V rámci sady Visual Studio 2019 můžete inicializovat a vkládat s jednou akcí (nebo kliknutím). Můžete také vytvářet nové větve, spravovat aktuální větve a řešit konflikty sloučení.
+
+   Další informace najdete v příspěvku na blogu v rámci sady [Visual Studio Skvělé nové aktualizace prostředí Git](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) .
+
+Další informace o verzi Preview &mdash; a odkazu ke stažení &mdash; najdete na stránce s **[náhledem sady Visual Studio](https://visualstudio.microsoft.com/vs/preview/)** .
 
 ## <a name="give-us-feedback"></a>Sdělte nám svůj názor
 
