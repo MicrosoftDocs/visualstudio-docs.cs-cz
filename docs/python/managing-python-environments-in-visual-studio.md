@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e8deed53d2789afb964989e4e995e3120e9842bd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85543842"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913317"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Jak vytvářet a spravovat prostředí Pythonu v aplikaci Visual Studio
 
@@ -160,7 +160,7 @@ Prostředí conda je vytvořeno pomocí `conda` nástroje nebo s integrovanou sp
     | Pole | Popis |
     | --- | --- |
     | Project | Projekt, ve kterém má být prostředí vytvořeno (Pokud máte více projektů ve stejném řešení sady Visual Studio). |
-    | Name | Název prostředí conda |
+    | Název | Název prostředí conda |
     | Přidat balíčky z | Vyberte **soubor prostředí** , pokud máte soubor *Environment. yml* popisující vaše závislosti, nebo vyberte **jeden nebo více názvů balíčků Anaconda** a v níže uvedeném poli uveďte aspoň jeden balíček Pythonu nebo verzi Pythonu. Seznam balíčků instruuje Conda, aby vytvořil prostředí Pythonu. K instalaci nejnovější verze Pythonu použijte `python` ; k instalaci konkrétní verze použijte `python=,major>.<minor>` jako v `python=3.7` . Pomocí tlačítka balíček můžete také vybrat verze Pythonu a běžné balíčky z řady nabídek. |
     | Nastavit jako aktuální prostředí | Aktivuje nové prostředí ve vybraném projektu po vytvoření prostředí. |
     | Nastavit jako výchozí prostředí pro nové projekty | Automaticky nastaví a aktivuje prostředí conda v jakémkoli novém projektu vytvořeném v sadě Visual Studio. Tato možnost je stejná jako při použití možnosti **nastavit toto výchozí prostředí pro nové projekty** v okně **prostředí Pythonu** . |
@@ -262,7 +262,7 @@ Chcete-li opravit prostředí, které chcete zachovat, zkuste použít proces **
 Chcete-li opravit prostředí, které nemá možnost opravit, nebo odebrat neplatné prostředí, použijte následující postup pro úpravu registru přímo. Když provedete změny v registru, Visual Studio automaticky aktualizuje okno **prostředí Pythonu** .
 
 1. Spusťte *regedit.exe*.
-1. Přejděte na **HKEY_LOCAL_MACHINE \software\python**. Pro Ironpythonu hledejte místo toho **ironpythonu** .
+1. Přejděte na **HKEY_LOCAL_MACHINE \software\python** nebo **HKEY_CURRENT_USER \software\python**. Pro Ironpythonu hledejte místo toho **ironpythonu** .
 1. Rozbalte uzel, který odpovídá distribuci, jako je **Python Core** pro CPython nebo **ContinuumAnalytics** pro Anaconda. V případě Ironpythonu rozbalte uzel číslo verze.
 1. Zkontrolujte hodnoty v uzlu **InstallPath** :
 
@@ -270,7 +270,8 @@ Chcete-li opravit prostředí, které nemá možnost opravit, nebo odebrat nepla
 
     - Pokud prostředí stále v počítači existuje, změňte hodnotu **ExecutablePath** na správné umístění. V případě potřeby opravte také **(výchozí)** a **WindowedExecutablePath** hodnoty.
     - Pokud prostředí již v počítači neexistuje a chcete ho odebrat z okna **prostředí Pythonu** , odstraňte nadřazený uzel **InstallPath**, například **3,6** na obrázku výše.
-
+    - Neplatná nastavení v **HKEY_CURRENT_USER \software\python** přepisují nastavení v **HKEY_LOCAL_MACHINE \software\python** .
+    
 ## <a name="see-also"></a>Viz také
 
 - [Instalace interpretů Pythonu](installing-python-interpreters.md)

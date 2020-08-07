@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 02a672321a11889d88a8af3305e64a66fe779080
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7778019e73119a4b8b1a5842bb7a8c04ef017143
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283187"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913298"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Začínáme s nástroji Visual Studio Kubernetes Tools
 
@@ -21,7 +21,7 @@ Nástroje Visual Studio Kubernetes vám pomůžou zjednodušit vývoj kontejnero
 
 Tento kurz se zabývá používáním sady Visual Studio pro přidání podpory Kubernetes do projektu a publikování do AKS. Pokud se primárně zajímá použití [Azure dev Spaces](/azure/dev-spaces/) k ladění a testování projektu běžícího na AKS, můžete místo toho přejít na [Azure dev Spaces kurz](/azure/dev-spaces/get-started-netcore-visualstudio) .
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Abyste mohli využít tuto novou funkci, budete potřebovat:
 
@@ -123,7 +123,7 @@ Přidané soubory jsou:
 
 - *azds. yaml*. Obsahuje nastavení pro Azure Dev Spaces, které poskytuje rychlé a iterativní možnosti ladění ve službě Azure Kubernetes. Další informace najdete [v dokumentaci k Azure dev Spaces](/azure/dev-spaces/azure-dev-spaces).
 
-::: moniker range="vs-2017"
+:::moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Publikování do služby Azure Kubernetes (AKS)
 
@@ -165,7 +165,17 @@ Chcete-li to provést, musíte nejprve dvakrát ověřit, zda jste nainstalovali
 
 ::: moniker-end
 
-Gratulujeme! Nyní můžete využívat plnou sílu sady Visual Studio pro všechny aplikace Kubernetes pro vývoj aplikací.
+Blahopřejeme vám. Nyní můžete využívat plnou sílu sady Visual Studio pro všechny aplikace Kubernetes pro vývoj aplikací.
+
+## <a name="remove-kubernetes-support"></a>Odebrat podporu Kubernetes
+
+1. V **Průzkumník řešení**v části **vlastnosti**otevřete *launchSettings.jsna*.
+
+1. Odstraňte kontejner oddílu **v Kubernetes**.
+
+1. Pokud přecházíte do sestavení Docker, vyberte tento projekt v **Průzkumník řešení**, klikněte pravým tlačítkem a zvolte **nastavit jako projekt po spuštění**.
+
+1. Volitelné Můžete také odstranit další artefakty uvedené výše v článku, například složku **grafy** a *azds. yaml*.
 
 ## <a name="next-steps"></a>Další kroky
 

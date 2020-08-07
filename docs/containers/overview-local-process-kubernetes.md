@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.openlocfilehash: 5b6c07d5987c52d818a35babd16681652ddf5830
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2020
-ms.locfileid: "87507882"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913259"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Jak funguje místní proces s Kubernetes
 
@@ -47,6 +47,9 @@ Když místní proces s Kubernetes vytvoří připojení ke clusteru,:
 Po navázání připojení ke clusteru můžete spustit a ladit kód nativně ve vašem počítači bez vytváření kontejnerů a kód může přímo pracovat se zbytkem vašeho clusteru. Veškerý síťový provoz, který vzdálený agent obdrží, se přesměruje na místní port zadaný během připojení, takže váš nativní běžící kód může přijmout a zpracovat tento provoz. Proměnné prostředí, svazky a tajné klíče z vašeho clusteru jsou zpřístupněny kódu běžícímu na vašem vývojovém počítači. Kromě toho, že z důvodu položek souborů hosta a přesměrování portů přidaných do vašeho vývojářského počítače místním procesem s Kubernetes, může váš kód odesílat síťový provoz do služeb spuštěných ve vašem clusteru pomocí názvů služeb z vašeho clusteru a tento provoz se předává do služeb spuštěných ve vašem clusteru. Provoz se směruje mezi vývojovým počítačem a vaším clusterem a celou dobu, po kterou jste se připojili.
 
 Kromě toho místní proces s Kubernetes poskytuje způsob, jak replikovat proměnné prostředí a připojené soubory, které jsou k dispozici ve vašem clusteru ve vývojovém počítači, prostřednictvím `KubernetesLocalProcessConfig.yaml` souboru. Tento soubor můžete také použít k vytvoření nových proměnných prostředí a připojení svazků.
+
+> [!NOTE]
+> Po dobu trvání připojení ke clusteru (plus dalších 15 minut) spustí místní proces s Kubernetes proces nazvaný *EndpointManager* s oprávněními správce v místním počítači.
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>Další konfigurace pomocí KubernetesLocalProcessConfig. yaml
 
@@ -92,7 +95,7 @@ Když se odpojíte od clusteru, bude ve výchozím nastavení místní proces s 
 
 ## <a name="diagnostics-and-logging"></a>Diagnostika a protokolování
 
-Při použití místního procesu s Kubernetes pro připojení ke clusteru se diagnostické protokoly z vašeho clusteru protokolují do [dočasného adresáře][azds-tmp-dir]vašeho vývojového počítače.
+Při použití místního procesu s Kubernetes pro připojení ke clusteru se diagnostické protokoly z vašeho clusteru protokolují do *dočasného* adresáře vašeho vývojového počítače v *místním procesu se* složkou Kubernetes.
 
 ## <a name="limitations"></a>Omezení
 
