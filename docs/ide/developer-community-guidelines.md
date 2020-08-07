@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb7f821a7b815b29c9f85b6ab0686edb0292866d
-ms.sourcegitcommit: 4d5cd0b9de7a87efb69f17b02c2331b749e6ec8d
+ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
+ms.sourcegitcommit: 615c8f39216ee2500161fa3aa1b3fe2f3e4386fa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87972470"
 ---
 # <a name="developer-community-guidelines"></a>Pokyny pro komunitu vývojářů
 
@@ -89,12 +89,15 @@ Pokud jste navrhli funkci, možná jste disappointedi, že neplánujeme vaši ž
 
 V našem procesu rozhodování se podíváme na následující charakteristiky návrhu funkcí:
 
+- Odpovídá našemu obecnému směru produktu?
 - Můžu si ho pro Build a údržbu dovolit?
 - Je v souladu s naší celkovou strategií pro [plány](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) ?
 - Má komunitní podpora, jak je uvedeno ve hlasy a komentářích?
 - Líbí se vám to i s nízkou podporou komunity?
 
 Když nemůžeme na některé z těchto otázek odpovědět "Ano", my ji zavřeme. Ale často návrh zůstane _v rámci revize_ otevřený, aby se získalo více vašich názorů na komunitu.
+
+Pokud se návrh neshoduje s celkovým směrem produktu, budeme ho uzavřít jako *mimo rozsah*. Například můžeme mít podobné investice i v jiných členech řady produktů sady Visual Studio. Nebo navrhovaná funkce může být relevantní jenom pro několik lidí, takže rozšíření je lépe uzpůsobené pro zajištění.
 
 Sledujte průběh návrhu vaší funkce, který odkazuje na [stavy návrhů a nejčastější dotazy](https://docs.microsoft.com/visualstudio/ide/report-a-problem).
 
