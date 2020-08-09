@@ -441,6 +441,8 @@
           href: common-msbuild-project-properties.md
         - name: Společné položky projektu nástroje MSBuild
           href: common-msbuild-project-items.md
+        - name: Společná metadata položky MSBuild
+          href: common-msbuild-item-metadata.md
         - name: "Referenční dokumentace pro použití nástroje MSBuild v\_příkazovém řádku"
           href: msbuild-command-line-reference.md
         - name: MSBuild – soubory .targets
