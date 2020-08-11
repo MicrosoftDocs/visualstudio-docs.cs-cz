@@ -748,6 +748,10 @@
                   href: ca2355.md
                 - name: 'CA2356: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů webu'
                   href: ca2356.md
+                - name: 'CA2361: Zajistěte, aby se automaticky vygenerovaná třída obsahující DataSet.ReadXml() nepoužívala s nedůvěryhodnými daty.'
+                  href: ca2361.md
+                - name: 'CA2362: Nezabezpečená datová sada nebo datová tabulka v automaticky vygenerovaném serializovatelném typu může být zranitelná vůči útokům vzdáleného spuštění kódu.'
+                  href: ca2362.md
                 - name: 'CA2330: Ujistěte se, že JsonSerializer má při deserializaci zabezpečenou konfiguraci'
                   href: ca2330.md
                 - name: 'CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu'
