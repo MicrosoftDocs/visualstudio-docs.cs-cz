@@ -16,6 +16,7 @@
 ### [Přihlášení účtem Microsoft](sign-in-msa.md)
 ### [Přihlášení pracovním/školním účtem](sign-in-work.md)
 ### [Přihlášení pomocí GitHubu](sign-in-github.md)
+### [Připojené identity](use-connected-identities.md)
 ### [Alternativní identity](vs-alternate-identity.md)
 ### [Problémy s přihlášením](sign-in-issues.md)
 ### [Anonymizace údajů o předplatitelích](anonymization.md)
