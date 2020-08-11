@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e7a21a010cf98da3d7adb9627105c2847b7571e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 9b5a03c9cb7ae7c5a5c81bd452dbb04d8db4c09d
+ms.sourcegitcommit: ed17ca9ae5f92c229c4e46233bcfe0a49d29ec43
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386352"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052619"
 ---
 # <a name="security-warnings"></a>Upozornění zabezpečení
 
@@ -96,6 +96,8 @@ Upozornění zabezpečení podporují bezpečnější knihovny a aplikace. Tato 
 |[CA2354: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů může být zranitelná vůči útoku vzdáleného spuštění kódu](ca2354.md)|Deserializace pomocí <xref:System.Runtime.Serialization.IFormatter?displayProperty=nameWithType> serializovaného objektu a grafu objektů přetypování typu může obsahovat <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> .|
 |[CA2355: Nezabezpečená datová sada nebo datová tabulka v grafu deserializovaných objektů](ca2355.md)|Deserializace v případě, že graf objektu přetypování nebo zadaného typu může obsahovat <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> .|
 |[CA2356: nezabezpečená datová sada nebo DataTable ve webovém deserializovaném objektu grafu](ca2356.md)|Metoda s <xref:System.Web.Services.WebMethodAttribute?displayProperty=nameWithType> <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> parametrem nebo má parametr, který může odkazovat na <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> .|
+|[CA2361: Ujistěte se, že automaticky vygenerovaná třída obsahující DataSet. ReadXml () se nepoužívá s nedůvěryhodnými daty.](ca2361.md)|Při deserializaci a <xref:System.Data.DataSet> s nedůvěryhodným vstupem může útočník vytvořit útok se zlými úmysly, aby provedl útok na dostupnost služby. Může dojít k neznámému ohrožení vzdáleného spuštění kódu.|
+|[CA2362: nebezpečná datová sada nebo DataTable v automaticky generovaném serializovatelným typu může být zranitelná proti útokům na vzdálené spuštění kódu.](ca2362.md)|Při deserializaci nedůvěryhodného vstupu pomocí <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> a deserializovaný graf objektu obsahuje <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> může útočník vytvořit škodlivý datový prvek, který provede útok na vzdálené spuštění kódu.|
 |[CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu](../code-quality/ca3001.md)|Při práci s nedůvěryhodnými vstupy a příkazy SQL Zajistěte útokům prostřednictvím injektáže SQL. Útok na injektáže SQL může spouštět škodlivé příkazy SQL a ohrozit tak zabezpečení a integritu vaší aplikace.|
 |[CA3002: Zkontrolujte ohrožení zabezpečení proti XSS v kódu](../code-quality/ca3002.md)|Při práci s nedůvěryhodným vstupem z webových požadavků zajistěte útoky skriptování XSS (mezi weby). Útok XSS vloží nedůvěryhodný vstup do nezpracovaného výstupu HTML a umožní útočníkovi spustit škodlivé skripty nebo škodlivým způsobem upravovat obsah na webové stránce.|
 |[CA3003: Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu](../code-quality/ca3003.md)|Při práci s nedůvěryhodným vstupem z webových požadavků nezapomeňte při zadávání cest k souborům použít vstup, který je řízený uživatelem.|
