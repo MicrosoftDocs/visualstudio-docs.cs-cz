@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetNextDispID | Dokumentace Microsoftu
+title: 'IDispatchEx –:: GetNextDispID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,16 +17,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d964a8744f1f0a28704dd0a1d5e0fd2e67aab1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8811e828a6701769badf45ca7c37f9c53529150f
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997358"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144426"
 ---
 # <a name="idispatchexgetnextdispid"></a>IDispatchEx::GetNextDispID
 
-Vytvoří výčet členy objektu.
+Vytvoří výčet členů objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,29 +41,29 @@ HRESULT GetNextDispID(
 ## <a name="parameters"></a>Parametry
 
 `grfdex`\
-Určuje, které sadu položek vytvořit výčet. To může být kombinací následujícího:
+Určuje, která sada položek má být vyčíslena. Může se jednat o kombinaci následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|fdexEnumDefault|Požadavky, že objekt vytvoří výčet výchozími prvky. Objekt může vytvořit výčet všech sadu elementů.|
-|fdexEnumAll|Požadavky, že objekt vytvoří výčet všech prvků. Objekt může vytvořit výčet všech sadu elementů.|
+|fdexEnumDefault|Požaduje, aby objekt vytvořil výčet výchozích prvků. Objekt může vytvořit výčet libovolné sady prvků.|
+|fdexEnumAll|Požaduje, aby objekt vyčísluje všechny prvky. Objekt může vytvořit výčet libovolné sady prvků.|
 
 `id`\
-Identifikuje aktuálního člena. Getnextdispid – načte položku ve výčtu po tomto požadavku. Getdispid – nebo předchozí volání getnextdispid – používá k získání tento identifikátor. Použije se hodnota DISPID_STARTENUM získat první identifikátor první položky.
+Identifikuje aktuálního člena. GetNextDispID načítá položku ve výčtu po tomto. K získání tohoto identifikátoru používá GetDispID nebo předchozí volání GetNextDispID. Používá hodnotu DISPID_STARTENUM k získání prvního identifikátoru první položky.
 
 `pid`\
-Adresa proměnné DISPID, která přijímá identifikátor na další položku ve výčtu.
+Adresa proměnné DISPID, která přijímá identifikátor další položky ve výčtu.
 
-Pokud je člen odstraní `DeleteMemberByName` nebo `DeleteMemberByDispID`, `DISPID` jsou dál platné pro je potřeba `GetNextDispID`.
+Pokud člen odstraní `DeleteMemberByName` nebo `DeleteMemberByDispID` , `DISPID` musí zůstat platné pro `GetNextDispID` .
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Vrátí jednu z následujících hodnot:
 
-|||
+|Hodnota|Význam|
 |-|-|
 |`S_OK`|Úspěch.|
-|`S_FALSE`|Výčet je Hotovo.|
+|`S_FALSE`|Výčet je hotový.|
 
 ## <a name="example"></a>Příklad
 
@@ -88,7 +88,7 @@ Vrátí jednu z následujících hodnot:
    }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)
 - [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)

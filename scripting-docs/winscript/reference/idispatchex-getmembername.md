@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f68b0157e8e352b34885ae94d14026a51c4a6e97
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 8dbfb82e986ed6d1738bcc0cffeec35e5ba4515c
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574111"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144607"
 ---
 # <a name="idispatchexgetmembername"></a>IDispatchEx::GetMemberName
 Načte název člena.  
@@ -38,17 +38,17 @@ HRESULT GetMemberName(
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- Identifikuje člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
+ Identifikuje člena. Pomocí `GetDispID` nebo `GetNextDispID` Získá identifikátor odeslání.  
   
  `pbstrName`  
- Adresa `BSTR` přijímajícího název člena. Volající aplikace zodpovídá za uvolnění této hodnoty.  
+ Adresa `BSTR` , která přijímá název člena. Volající aplikace zodpovídá za uvolnění této hodnoty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|||  
+|Hodnota|Význam|
 |-|-|  
-|`S_OK`|Nástup.|  
+|`S_OK`|Úspěch.|  
 |`DISP_E_UNKNOWNNAME`|Název nebyl znám.|  
   
 ## <a name="example"></a>Příklad  
@@ -74,7 +74,7 @@ HRESULT hr;
    }  
 ```  
   
-## <a name="see-also"></a>Viz také:  
-   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+## <a name="see-also"></a>Viz také  
+ [Rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)   
  [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

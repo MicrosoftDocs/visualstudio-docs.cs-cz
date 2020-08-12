@@ -17,15 +17,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57f0faf6004e2219600f0dbd63749a7e65ca438c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 81bb33a1e793f38e15dc51b37c4fa062eb54e7fa
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576600"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144530"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
-Mapuje jeden název členu na jeho odpovídající identifikátor DISPID, který se pak může použít při dalších voláních `IDispatchEx::InvokeEx`.  
+Mapuje jeden název členu na jeho odpovídající identifikátor DISPID, který se pak může použít při následných voláních `IDispatchEx::InvokeEx` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ HRESULT GetDispID(
 |Hodnota|Význam|  
 |-----------|-------------|  
 |fdexNameCaseSensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který rozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání citlivé na velká a malá písmena.|  
-|fdexNameEnsure|Požaduje, aby byl člen vytvořen, pokud ještě neexistuje. Nový člen by měl být vytvořen s hodnotou `VT_EMPTY`.|  
+|fdexNameEnsure|Požaduje, aby byl člen vytvořen, pokud ještě neexistuje. Nový člen by měl být vytvořen s hodnotou `VT_EMPTY` .|  
 |fdexNameImplicit|Indikuje, že volající vyhledává objekty pro člena určitého názvu, pokud není explicitně zadaný základní objekt.|  
 |fdexNameCaseInsensitive|Požaduje, aby se vyhledávání názvů provádělo způsobem, který nerozlišuje velká a malá písmena. Může být ignorováno objektem, který nepodporuje vyhledávání bez rozlišování velkých a malých písmen.|  
   
@@ -57,18 +57,18 @@ HRESULT GetDispID(
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|||  
+|Hodnota|Význam|
 |-|-|  
-|`S_OK`|Nástup.|  
+|`S_OK`|Úspěch.|  
 |`E_OUTOFMEMORY`|Nedostatek paměti|  
 |`DISP_E_UNKNOWNNAME`|Název nebyl znám.|  
   
 ## <a name="remarks"></a>Poznámky  
- `GetDispID` lze použít místo `GetIDsOfNames` k získání DISPID pro daného člena.  
+ `GetDispID`dá se použít místo `GetIDsOfNames` k získání DISPID pro daného člena.  
   
- Vzhledem k tomu, že `IDispatchEx` umožňuje přidání a odstranění členů, sada identifikátorů DISPID nezůstane pro životnost objektu konstantní.  
+ Vzhledem k tomu `IDispatchEx` , že umožňuje přidání a odstranění členů, sada identifikátorů DISPID nezůstane pro životnost objektu konstantní.  
   
- Nepoužitý parametr `riid` v `IDispatch::GetIDsOfNames` byl odebrán.  
+ Nepoužitý `riid` parametr v `IDispatch::GetIDsOfNames` byl odebrán.  
   
 ## <a name="example"></a>Příklad  
   
@@ -82,5 +82,5 @@ BSTR bstrName;
    // Use dispid  
 ```  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)

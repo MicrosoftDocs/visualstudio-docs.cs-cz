@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2abb562f65885ee1d12f2ec9b2300fcddd3be37b
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: cf62972b192d73bd130d15066d79ea70fe24beb8
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576613"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144594"
 ---
 # <a name="idispatchexdeletememberbyname"></a>IDispatchEx::DeleteMemberByName
 Odstraní člena podle názvu.  
@@ -51,13 +51,13 @@ HRESULT DeleteMemberByName(
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|||  
+|Hodnota|Význam|
 |-|-|  
-|`S_OK`|Nástup.|  
+|`S_OK`|Úspěch.|  
 |`S_FALSE`|Člen existuje, ale nelze jej odstranit.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID`.  
+ Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID` .  
   
  Pokud se člen s daným názvem odstraní a později se znovu vytvoří člen se stejným názvem, identifikátor DISPID by měl být stejný. (Zda jsou členy, které se liší pouze písmeny, jsou "stejné" závislé na objektu.)  
   
@@ -71,5 +71,5 @@ IDispatchEx *pdex;
 pdex->DeleteMemberByName(bstrName, fdexNameCaseSensitive);  
 ```  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [IDispatchEx – rozhraní](../../winscript/reference/idispatchex-interface.md)

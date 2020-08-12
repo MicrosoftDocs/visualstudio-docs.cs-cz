@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8016eef7b6e0da9b9fc88695db845cba7f608ff3
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 488f8790ec25532fb611f18e8b24e7e7dba2e2f4
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574089"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144544"
 ---
 # <a name="idispatchexgetmemberproperties"></a>IDispatchEx::GetMemberProperties
 Načte vlastnosti člena.  
@@ -39,7 +39,7 @@ HRESULT GetMemberProperties(
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- Identifikuje člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
+ Identifikuje člena. Pomocí `GetDispID` nebo `GetNextDispID` Získá identifikátor odeslání.  
   
  `grfdexFetch`  
  Určuje, které vlastnosti se mají načíst. Může se jednat o kombinaci hodnot uvedených v části `pgrfdex` a/nebo kombinaci následujících hodnot:  
@@ -52,7 +52,7 @@ HRESULT GetMemberProperties(
 |grfdexPropAll|Kombinuje grfdexPropCanAll, grfdexPropCannotAll a grfdexPropExtraAll.|  
   
  `pgrfdex`  
- Adresa `DWORD`, která přijímá požadované vlastnosti. Může se jednat o kombinaci následujících hodnot:  
+ Adresa `DWORD` , která přijímá požadované vlastnosti. Může se jednat o kombinaci následujících hodnot:  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
@@ -74,9 +74,9 @@ HRESULT GetMemberProperties(
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|||  
+|Hodnota|Význam|
 |-|-|  
-|`S_OK`|Nástup.|  
+|`S_OK`|Úspěch.|  
 |`DISP_E_UNKNOWNNAME`|Název nebyl znám.|  
   
 ## <a name="example"></a>Příklad  
@@ -96,7 +96,7 @@ BSTR bstrName;
    }  
 ```  
   
-## <a name="see-also"></a>Viz také:  
-   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+## <a name="see-also"></a>Viz také  
+ [Rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)   
  [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)

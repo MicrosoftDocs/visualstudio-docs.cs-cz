@@ -10,12 +10,12 @@ ms.assetid: f33e454c-69d8-4cab-9150-d1e7fd04786d
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: e26b5cb1790cab38a6544a04307b7e336a952519
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.openlocfilehash: 9fd497dcda7e40cf0dbe6409193019ddae84c80b
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85835365"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144399"
 ---
 # <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
 Analyzuje daný kód skriptletu, přidává deklarace do oboru názvů a podle potřeby vyhodnocuje kód.  
@@ -38,7 +38,7 @@ HRESULT ParseScriptText(
   
 #### <a name="parameters"></a>Parametry  
   
-|||  
+| Parametr | Popis |  
 |-|-|  
 |`pstrCode`|pro Adresa skriptletu textu, který se má vyhodnotit Výklad tohoto řetězce závisí na skriptovacím jazyce.|  
 |`pstrItemName`|pro Adresa názvu položky, která poskytuje kontext, ve kterém má být skriptletu vyhodnocena. Pokud má tento parametr hodnotu NULL, kód se vyhodnotí v globálním kontextu skriptovacího modulu.|  
@@ -54,7 +54,7 @@ HRESULT ParseScriptText(
 |SCRIPTTEXT_ISPERSISTENT|Označuje, že kód přidaný během tohoto volání by měl být uložen v případě, že je skriptovací modul uložen (například prostřednictvím volání `IPersist*::Save` ), nebo pokud je skriptovací modul resetován pomocí přechodu zpět do inicializovaného stavu.|  
 |SCRIPTTEXT_ISVISIBLE|Indikuje, že by měl být text skriptu viditelný (a proto se dá volat pomocí názvu) jako globální metoda v názvovém prostoru skriptu.|  
   
-|||  
+| Parametr | Popis |  
 |-|-|  
 |`pvarResult`|mimo Adresa vyrovnávací paměti, která přijímá výsledky zpracování skriptletu, nebo `NULL` Pokud volající neočekává žádný výsledek (to znamená, že hodnota SCRIPTTEXT_ISEXPRESSION není nastavena).|  
 |`pexcepinfo`|mimo Adresa struktury, která obdrží informace o výjimce. Tato struktura je vyplněna `IActiveScriptParse::ParseScriptText` , pokud funkce vrátí DISP_E_EXCEPTION.|  

@@ -13,22 +13,21 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c20947a125766547565d99c5762c20e23652da1a
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3567a22eac2ad270739e62e0f0fb9914bdf4a9ec
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561668"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144568"
 ---
 # <a name="iactivescriptparseprocedure"></a>IActiveScriptParseProcedure
-Pokud skriptovací stroj systému Windows umožňuje přidat do skriptu text zdrojového kódu pro procedury, implementuje rozhraní `IActiveScriptParseProcedure`. V případě interpretovaných skriptovacích jazyků, které nemají nezávislé vývojové prostředí, jako je například VBScript, toto poskytuje alternativní mechanismus (jiný než `IActiveScriptParse` nebo `IPersist` *) pro přidání procedur skriptu do oboru názvů.  
+Pokud skriptovací stroj Windows umožňuje, aby text zdrojového kódu pro procedury byly přidány do skriptu, implementuje `IActiveScriptParseProcedure` rozhraní. Pro interpretované skriptovací jazyky, které nemají nezávislé vývojové prostředí, jako je například VBScript, to poskytuje alternativní mechanizmus (jiný než `IActiveScriptParse` nebo `IPersist` *) pro přidání procedur skriptu do oboru názvů.  
   
 ## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
   
-|||  
-|-|-|  
-|Metoda|Popis|  
+|Metoda|Popis|
+|-|-|
 |[IActiveScriptParseProcedure::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedure-parseproceduretext.md)|Analyzuje daný postup kódu a přidá proceduru do oboru názvů.|  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Rozhraní aktivních skriptů](../../winscript/reference/active-script-interfaces.md)

@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2f4733bd52e44409ec9c2cc9a1e8828864712ceb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286827"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144685"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Použití testovacího prostředí pro DevOps
 
@@ -28,15 +28,20 @@ Testovací prostředí je kolekce virtuálních a fyzických počítačů, kter�
 
 Tady jsou příklady běžných topologií testovacího prostředí:
 
-| Topologie | Popis |
+| Topologie | Description |
 |---|---|
 |![Topologie pouze serveru](../media/topology_backend.png)| Toto testovací prostředí má *topologii serveru*, která se často používá ke spouštění manuálních testů u serverových aplikací a který umožňuje testerům používat vlastní klientské počítače k ověření chyb v prostředí. V back-endu topologie obsahuje testovací prostředí pouze servery. Když použijete tento typ topologie, obvykle se k serverům v testovacím prostředí připojíte pomocí klientského počítače, který není součástí prostředí.|
 |![Cloudové testovací prostředí](../media/topology_cloud.png)| Toto testovací prostředí poskytuje podobné možnosti a funkce jako _topologie serveru_, ale odebírá požadavek fyzických nebo virtuálních počítačů spuštěných v místním prostředí. což může zkrátit dobu nastavení, zjednodušit údržbu a minimalizovat náklady. Nastavení více webů a virtuálních počítačů společně s vlastními sítěmi je rychlé a snadné v cloudovém prostředí, jako je Microsoft Azure.|
 |![Testovací prostředí klienta a serveru](../media/topology_clientserver.png)| V tomto testovacím prostředí je *topologie typu klient-server*, která se často používá k otestování aplikace, která má součásti serveru a klienta. V topologii klienta/serveru jsou všechny počítače klienta a serveru, které se používají k testování vaší aplikace, ve vašem testovacím prostředí. Při použití této topologie můžete shromažďovat testovací data z každého počítače, který má vliv na testy.|
 
-| | |
-|---|---|
-| ![ikona filmové kamery pro video](../../install/media/video-icon.png) | [Podívejte se na video](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing) o správě testovacích prostředí pro testování. |
+:::row:::
+    :::column:::
+        ![ikona filmové kamery pro video](../../install/media/video-icon.png)
+    :::column-end:::
+    :::column:::
+        [Podívejte se na video](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing) o správě testovacích prostředí pro testování.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Použití cloudu s Azure Pipelines nebo Team Foundation Server sestavení a vydání
 
@@ -96,26 +101,26 @@ Standardní prostředí a prostředí SCVMM podporují mnoho stejných funkcí. 
 |Schopnost|Prostředí SCVMM|Standardní prostředí|
 |-|------------------------|-|
 |**Testování**|||
-|Spuštění manuálních testů|Podporuje se|Podporuje se|
-|Spuštění kódovaného uživatelského rozhraní a dalších automatizovaných testů|Podporuje se|Podporuje se|
-|Soubor s bohatou chybou pomocí diagnostických adaptérů|Podporuje se|Podporuje se|
+|Spuštění manuálních testů|Podporováno|Podporováno|
+|Spuštění kódovaného uživatelského rozhraní a dalších automatizovaných testů|Podporováno|Podporováno|
+|Soubor s bohatou chybou pomocí diagnostických adaptérů|Podporováno|Podporováno|
 |**Nasazení buildu**|||
-|Automatické pracovní postupy sestavení-nasazení-testování|Podporuje se|Podporuje se|
+|Automatické pracovní postupy sestavení-nasazení-testování|Podporováno|Podporováno|
 |**Vytváření a Správa prostředí**|||
-|Použití fyzických počítačů kromě virtuálních počítačů|Nepodporuje se|Podporuje se|
-|Použití virtuálních počítačů třetích stran|Nepodporuje se|Podporuje se|
-|Automaticky instalovat testovací agenty do počítačů v testovacím prostředí|Podporuje se|Podporuje se|
-|Uložení a nasazení stavu testovacího prostředí pomocí snímků prostředí|Podporuje se|Nepodporuje se|
-|Vytváření testovacích prostředí z šablon virtuálních počítačů|Podporuje se|Nepodporuje se|
-|Prostředí pro spuštění/zastavení/snímek|Podporuje se|Nepodporuje se|
-|Připojení k prostředí pomocí prohlížeče prostředí|Podporuje se|Podporuje se|
-|Spuštění více kopií prostředí současně pomocí izolace sítě|Podporuje se|Nepodporuje se|
+|Použití fyzických počítačů kromě virtuálních počítačů|Nepodporováno|Podporováno|
+|Použití virtuálních počítačů třetích stran|Nepodporováno|Podporováno|
+|Automaticky instalovat testovací agenty do počítačů v testovacím prostředí|Podporováno|Podporováno|
+|Uložení a nasazení stavu testovacího prostředí pomocí snímků prostředí|Podporováno|Nepodporováno|
+|Vytváření testovacích prostředí z šablon virtuálních počítačů|Podporováno|Nepodporováno|
+|Prostředí pro spuštění/zastavení/snímek|Podporováno|Nepodporováno|
+|Připojení k prostředí pomocí prohlížeče prostředí|Podporováno|Podporováno|
+|Spuštění více kopií prostředí současně pomocí izolace sítě|Podporováno|Nepodporováno|
 
 ### <a name="lab-management-concepts"></a>Koncepty správy testovacího prostředí
 
 Tady je několik dalších konceptů, které byste před pokračováním měli znát:
 
-|Pojem|Popis|
+|Termín|Popis|
 |-|-----------------|
 |Centrum testovacích prostředí|Oblast Microsoft Test Manager, kde můžete vytvářet a spravovat testovací prostředí.|
 |Testovací prostředí projektu Azure DevOps|Kolekce laboratorních prostředí, která byla nastavena, abyste se k nim mohli připojit a spouštět jejich virtuální počítače.|
@@ -127,7 +132,7 @@ Další informace o správě testovacího prostředí najdete v těchto tématec
 * [Plánování testovacího prostředí](https://msdn.microsoft.com/library/ff756575%28v=vs.140%29.aspx)
 * [Správa testovacího prostředí](https://msdn.microsoft.com/library/dd936084%28v=vs.140%29.aspx)
 * [Nastavení pro prostředí SCVMM](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
-* [Spravovat oprávnění](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
+* [Správa oprávnění](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
 * [Změnit nastavení](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
 * [Řešení potíží](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
 

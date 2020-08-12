@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 38ead33fb51caff1103ca9abe6bc01f3e0aa6aa3
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0c3dbb040e39fd15b77e42b2eaa9fb2cdda0b1b2
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576641"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144633"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
 Odstraní člena podle identifikátoru DISPID.  
@@ -37,18 +37,18 @@ HRESULT DeleteMemberByDispID(
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- Identifikátor člena. K získání identifikátoru odeslání používá `GetDispID` nebo `GetNextDispID`.  
+ Identifikátor člena. Pomocí `GetDispID` nebo `GetNextDispID` Získá identifikátor odeslání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
   
-|||  
+|Hodnota|Význam|
 |-|-|  
-|`S_OK`|Nástup.|  
+|`S_OK`|Úspěch.|  
 |`S_FALSE`|Člen existuje, ale nelze jej odstranit.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID`.  
+ Pokud je člen odstraněn, musí identifikátor DISPID zůstat platný pro `GetNextDispID` .  
   
  Pokud se člen s daným názvem odstraní a později se znovu vytvoří člen se stejným názvem, identifikátor DISPID by měl být stejný. (Zda se názvy členů, které se liší pouze písmeny, jsou závislé na objektu.)  
   
@@ -64,7 +64,7 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
     pdex->DeleteMemberByDispID(dispid);  
 ```  
   
-## <a name="see-also"></a>Viz také:  
-   [rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)  
+## <a name="see-also"></a>Viz také  
+ [Rozhraní IDispatchEx –](../../winscript/reference/idispatchex-interface.md)   
  [IDispatchEx –:: GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)
