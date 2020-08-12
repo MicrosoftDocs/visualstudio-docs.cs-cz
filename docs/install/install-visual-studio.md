@@ -3,8 +3,8 @@ title: Instalace sady Visual Studio
 titleSuffix: ''
 description: Přečtěte si, jak nainstalovat Visual Studio, krok za krokem.
 ms.date: 12/13/2019
-ms.custom: seodec18
-ms.topic: how-to
+ms.custom: contperfq1
+ms.topic: conceptual
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 132aaa8da49814c10afe3089e21d391aa2964673
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: 3f0d17fcaf856799ded82ebe684d671b358cb8df
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85419156"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114268"
 ---
 # <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
@@ -113,7 +113,7 @@ Další informace o tom, jak to udělat, najdete na stránce pro stažení [pře
 Chcete-li to provést, zvolte následující tlačítko, zvolte požadovanou verzi sady Visual Studio, zvolte možnost **Uložit**a pak zvolte možnost **Otevřít složku**.
 
  > [!div class="button"]
- > [Stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads)
+ > [Stáhnout Visual Studio](https://visualstudio.microsoft.com/downloads)
 
 ::: moniker-end
 

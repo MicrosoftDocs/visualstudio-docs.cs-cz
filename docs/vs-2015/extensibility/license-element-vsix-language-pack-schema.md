@@ -8,19 +8,19 @@ ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: f1299d97cbda78049732d3367a9231272397e2ec
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 91f0792f64e09292836a3b2d60f669c67903b3a7
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77477078"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114166"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>License – element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Volitelné. Cesta k lokalizované verzi souboru s licencí pro rozšíření.  
+Nepovinný parametr. Cesta k lokalizované verzi souboru s licencí pro rozšíření.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <License>FilePath\license.txt</License>  
@@ -33,17 +33,17 @@ Volitelné. Cesta k lokalizované verzi souboru s licencí pro rozšíření.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Žádná||  
+|Žádné||  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Žádná||  
+|Žádné||  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[LanguagePack – element VSIX](../extensibility/vsixlanguagepack-element-vsix-language-pack-schema.md)|Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX.|  
   
@@ -51,18 +51,44 @@ Volitelné. Cesta k lokalizované verzi souboru s licencí pro rozšíření.
  Relativní cesta k lokalizovanému souboru s licencí, která se má zobrazit  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je definován element `License`, zobrazí se text určeného licenčního souboru během instalace a uživatel musí licenci přijmout, aby bylo možné pokračovat.  
+ Pokud `License` je definován element, pak se text určeného licenčního souboru zobrazí během instalace a uživatel musí licenci přijmout, aby bylo možné pokračovat.  
   
 ## <a name="element-information"></a>Informace o elementu  
-  
-|                 |                                                           |
-|-----------------|-----------------------------------------------------------|
-|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
-|   Název schématu   |                 Schéma jazykové sady VSIX                 |
-| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
-|  Může být prázdné   |                      Neuvedeno                       |
+
+:::row:::
+    :::column:::
+        Obor názvů  
+    :::column-end:::
+    :::column:::
+        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Název schématu
+    :::column-end:::
+    :::column:::
+        Schéma jazykové sady VSIX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Soubor ověření
+    :::column-end:::
+    :::column:::
+        VSIXLanguagePackSchema. xsd
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Může být prázdné
+    :::column-end:::
+    :::column:::
+        Neuvedeno
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Viz také  
- [Referenční  schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)  
+ [Referenční dokumentace schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)   
  [Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)   
  [Referenční dokumentace schématu rozšíření VSIX 1,0](/previous-versions/dd393700(v=vs.110))

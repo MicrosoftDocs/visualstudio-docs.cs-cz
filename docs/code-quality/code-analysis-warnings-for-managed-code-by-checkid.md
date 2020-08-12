@@ -286,18 +286,19 @@ f1_keywords:
 - CA2247
 - CA5122
 - CA5374
+- IL3000
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b216252ca33495a065c1dbcc6e091a2e5244de78
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: aca6889b46b58828db59be634275e99d6721ee49
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235092"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114146"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -603,3 +604,4 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA5400 | [CA5400 zajistěte, aby kontrola seznamu odvolaných certifikátů HttpClient není zakázaná](../code-quality/ca5400.md) | Odvolaný certifikát už není důvěryhodný. Může je použít útočníky, kteří předávají některá škodlivá data nebo ukrást citlivá data v komunikaci přes protokol HTTPS. |
 | CA5401 | [CA5401 nepoužívá CreateEncryptor s jiným než výchozím IV](../code-quality/ca5401.md) | Symetrické šifrování by mělo vždy používat neopakovaný inicializační vektor, aby se zabránilo útokům na slovník. |
 | CA5402 | [CA5402 použít CreateEncryptor s výchozí IV](../code-quality/ca5402.md) | Symetrické šifrování by mělo vždy používat neopakovaný inicializační vektor, aby se zabránilo útokům na slovník. |
+| IL3000 | [IL3000 vyhnout se použití cesty k souboru sestavení při publikování jako jeden soubor](../code-quality/il3000.md) | Nepoužívejte přístup k cestě k souboru sestavení při publikování jako jeden soubor. |

@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 102e41e45caac8d0567786579130e0953ec68b30
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 7b351e9f4983f5a2497406f7ca49503254d9fb71
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85521235"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114114"
 ---
 # <a name="image-service-and-catalog"></a>Služba vyhledávání a katalog obrázků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -128,7 +128,7 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
 |Systém|Složka Windows\System32|  
 |Adresář|Hodnota proměnné prostředí% WinDir%|  
 
- **Image**  
+ **Obrázek**  
 
  \<Image>Prvek definuje obrázek, na který může odkazovat moniker. Identifikátor GUID a ID, které se přijímají společně tvoří moniker bitové kopie. Moniker obrázku musí být v celé knihovně imagí jedinečný. Pokud má více než jeden obrázek daný moniker, při sestavování knihovny je ten, který se zachovává.  
 
@@ -157,16 +157,14 @@ Tento kuchařka obsahuje doprovodné materiály a osvědčené postupy pro přij
  </Source>  
 ```  
 
-|               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Atribut** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Definice**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      Identifikátor URI      |                                                                                                                                                                                                                                                                                                               Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek                                                                                                                                                                                                                                                                                                               |
-|  Pozadí   | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
-|               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|**Atribut**|**Definice**|  
+|-|-|  
+| Identifikátor URI | Požadovanou Identifikátor URI, který definuje, ze kterého může být obrázek načten. Může to být jedna z následujících:<br /><br /> – [Identifikátor URI balíčku](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx) pomocí autority Application:///<br />– Odkaz na prostředek absolutní součásti<br />– Cesta k souboru, který obsahuje nativní prostředek |
+| Pozadí  | Volitelné Označuje, jaký typ pozadí má zdroj použít.<br /><br /> Může to být jedna z následujících:<br /><br /> *Světlá:* Zdroj lze použít na světlém pozadí.<br /><br /> <em>Tmavě tmavá:</em> Zdroj lze použít na tmavém pozadí.<br /><br /> *HighContrast:* Zdroj lze použít na jakémkoli pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastLight:* Zdroj lze použít na světlém pozadí v režimu Vysoký kontrast.<br /><br /> *HighContrastDark:* Zdroj lze použít na tmavém pozadí v režimu Vysoký kontrast.<br /><br /> Pokud je atribut Background vynechán, lze zdroj použít na jakémkoli pozadí.<br /><br /> Pokud je pozadí *světlé*, *tmavé*, *HighContrastLight*nebo *HighContrastDark*, barvy zdroje se nikdy nezmění. Pokud je pozadí vynecháno nebo je nastaveno na *HighContrast*, je inverze barev zdroje řízena atributem **AllowColorInversion** obrázku. |
 
  \<Source>Element může mít přesně jeden z následujících volitelných dílčích elementů:  
 
-|**Objekt**|**Atributy (všechny povinné)**|**Definice**|  
+|**Prvek**|**Atributy (všechny povinné)**|**Definice**|  
 |-|-|-|  
 |\<Size>|Hodnota|Zdroj se použije pro obrázky dané velikosti (v jednotkách zařízení). Obrázek bude čtvercový.|  
 |\<SizeRange>|MinSize, MaxSize|Zdroj bude použit pro obrázky z MinSize do MaxSize (v jednotkách zařízení) včetně. Obrázek bude čtvercový.|  
@@ -647,7 +645,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 ## <a name="additional-resources"></a>Další zdroje  
 
-### <a name="samples"></a>ukázky  
+### <a name="samples"></a>Ukázky  
  Několik ukázek sady Visual Studio na GitHubu bylo aktualizováno, aby ukázaly, jak používat službu Image jako součást různých bodů rozšiřitelnosti sady Visual Studio.  
 
  Podívejte [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) se na nejnovější ukázky.  
@@ -667,7 +665,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  Nástroj Prohlížeč knihovny obrázků může načíst manifesty obrázků a umožňuje uživatelům manipulovat stejným způsobem, jako by se v aplikaci Visual Studio zajistilo správné vytváření manifestu. Uživatel může změnit nastavení pozadí, velikosti, DPI, Vysoký kontrast a dalších nastavení. Zobrazuje také informace o načítání pro hledání chyb v manifestech a zobrazuje zdrojové informace pro každý obrázek v manifestu.  
 
-## <a name="faq"></a>Časté otázky  
+## <a name="faq"></a>Nejčastější dotazy  
 
 - Existují nějaké závislosti, které je potřeba zahrnout při načítání \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ?  
 
@@ -750,7 +748,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Aktualizujem poskytovatele seznamu pro doplňování. Co **KnownMonikers** odpovídá starým hodnotám **StandardGlyphGroup** a **StandardGlyph** ?  
 
-    |Name|Name|Name|  
+    |Název|Název|Název|  
     |-|-|-|  
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|  
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|  
@@ -940,7 +938,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupJSharpInterface|GlyphItemShortcut|InterfaceShortcut|  
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||ClassFile|  
-    |GlyphAssembly||Referenční informace|  
+    |GlyphAssembly||Odkaz|  
     |GlyphLibrary||Knihovna|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  

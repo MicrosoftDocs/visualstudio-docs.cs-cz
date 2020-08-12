@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f79ead04e1c8a77ba605d4463bf8b2009f7ce71
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 6eff6ef8f5415ecd4dc1c6dcce5046c976ce0e7c
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536185"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114255"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 
@@ -27,7 +27,7 @@ Tento článek obsahuje následující úlohy pro integrátory aplikace Visual S
 
 - Přidání pomocníka do prostředí sady Visual Studio (integrovaný nebo izolovaný režim)
 
-- Další zdroje
+- Další materiály
 
 ## <a name="create-a-topic-f1-support"></a>Vytvoření tématu (podpora F1)
 
@@ -445,16 +445,16 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 
 **Branding.xml**
 
-| | |
+| Funkce | Popis |
 | - | - |
 | Zapnut | **CollapsibleArea** |
 | Použije | Rozbalit sbalí text ovládacího prvku obsahu. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | ExpandText | Rozbalit |
 | CollapseText | Sbalit |
 | Zapnut | **CodeSnippet** |
 | Použije | Text ovládacího prvku fragmentu kódu  Poznámka: obsah fragmentu kódu s "neprůlomovým" místem bude změněn na mezeru. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | CopyToClipboard | Kopírovat do schránky |
 | ViewColorizedText | Zobrazit barevné barvy |
 | CombinedVBTabDisplayLanguage | Visual Basic (ukázka) |
@@ -462,8 +462,8 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | VBUsage | Využití |
 | Zapnut | **Zpětná vazba, zápatí a logo** |
 | Použije | Poskytněte řízení zpětné vazby zákazníkovi, aby vám poskytl zpětnou vazbu k aktuálnímu tématu prostřednictvím e-mailu.  Text copyrightu pro obsah  Definice loga. |
-| **Objekt** | **Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)** |
-| Úprava | © 2013 Microsoft Corporation. Všechna práva vyhrazena. |
+| **Prvek** | **Hodnota (tyto řetězce lze upravit tak, aby splňovala požadavky na přijetí obsahu.)** |
+| Úprava | © 2013 Microsoft Corporation. All rights reserved. |
 | SendFeedback | \<a href="{0}" {1}>Pošlete nám svůj názor \</a> na toto téma společnosti Microsoft. |
 | FeedbackLink | |
 | LogoTitle | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
@@ -471,7 +471,7 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | LogoFileNameHC | vs_logo_wh.gif |
 | Zapnut | **Disclaimer** |
 | Použije | Sada omezení specifických pro velká a malá písmena pro Strojově přeložený obsah. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | MT_Editable | Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | MT_NonEditable | Tento článek byl Strojově přeložený. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | MT_QualityEditable | Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
@@ -480,14 +480,14 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | MT_BetaRecycledContents | Tento článek byl ručně přeložen pro předběžnou verzi. Pokud máte připojení k Internetu, zvolte "zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem. |
 | Zapnut | **Propojování** |
 | Použije | Podpora pro online odkazy na témata |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | LinkTableTitle | Propojit tabulku |
 | TopicEnuLinkText | Zobrazit anglickou verzi \</a> tohoto tématu, která je k dispozici ve vašem počítači. |
 | TopicOnlineLinkText | Zobrazit toto téma \<a href="{0}" {1}> online\</a> |
 | OnlineText | Online |
 | Zapnut | **Ovládací prvek zvuk videa** |
 | Použije | Zobrazit elementy a text pro obsah videa |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | MultiMediaNotSupported | Pro podporu obsahu je třeba nainstalovat aplikaci Internet Explorer 9 nebo vyšší {0} . |
 | VideoText | zobrazení videa |
 | AudioText | streamování zvuku |
@@ -495,25 +495,25 @@ Poznámka: proměnné zaznamenané "{n}" mají závislosti kódu – odebrání 
 | OnlineAudioLinkText | \<p>Pokud chcete naslouchat zvukovému programu přidruženému k tomuto tématu, klikněte {0} \<a href="{1}"> {2} sem \</a> .\</p> |
 | Zapnut | **Ovládací prvek nenainstalovaného obsahu** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování contentnotinstalled.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | ContentNotInstalledTitle | V počítači nebyl nalezen žádný obsah. |
 | ContentNotInstalledDownloadContentText | \<p>Chcete-li stáhnout obsah do vašeho počítače, \<a href="{0}" {1}> klikněte na kartu spravovat \</a> .\</p> |
 | ContentNotInstalledText | \<p>V počítači není nainstalován žádný obsah. Prohlédněte si správce pro místní instalaci obsahu aplikace.\</p> |
 | Zapnut | **Nebylo nalezeno řízení tématu.** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování topicnotfound.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | TopicNotFoundTitle | V počítači nelze najít požadované téma. |
 | TopicNotFoundViewOnlineText | \<p>Téma, které jste požadovali, nebylo v počítači nalezeno, ale můžete \<a href="{0}" {1}> Zobrazit téma online \</a> .\</p> |
 | TopicNotFoundDownloadContentText | \<p>V navigačním podokně najdete odkazy na podobná témata nebo \<a href="{0}" {1}> klikněte na kartu spravovat a \</a> Stáhněte obsah do svého počítače.\</p> |
 | TopicNotFoundText | \<p>Téma, které jste požadovali, nebylo v počítači nalezeno.\</p> |
 | Zapnut | **Téma má poškozený ovládací prvek.** |
 | Použije | Textové prvky (řetězce) používané pro vykreslování topiccorrupted.htm |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | TopicCorruptedTitle | Nelze zobrazit požadované téma. |
 | TopicCorruptedViewOnlineText | \<p>Nástroj Help Viewer nemůže zobrazit požadované téma. Může se jednat o chybu v obsahu tématu nebo o základní systémové závislosti.\</p> |
 | Zapnut | **Ovládací prvek domovské stránky** |
 | Použije | Text, který podporuje zobrazení obsahu uzlu nejvyšší úrovně aplikace Help Viewer. |
-| **Objekt** | **Hodnota** |
+| **Prvek** | **Hodnota** |
 | HomePageTitle | Domovská stránka prohlížeče nápovědy |
 | HomePageIntroduction | \<p>Vítá vás Microsoft Help Viewer, což je důležitý zdroj informací pro všechny uživatele, kteří používají nástroje, produkty, technologie a služby společnosti Microsoft. V aplikaci Help Viewer získáte přístup k odkazům na postupy a referenční informace, vzorový kód, technické články a další. Pokud chcete najít potřebný obsah, Projděte si obsah, používejte fulltextové vyhledávání, nebo procházejte obsahem pomocí klíčového slova index.\</p> |
 | HomePageContentInstallText | \<p>\<br />Pomocí \<a href="{0}" {1}> karty spravovat obsah \</a> můžete provést následující akce: \<ul> \<li> Přidat obsah do počítače. \</li> \<li> Vyhledejte aktualizace místního obsahu. \</li> \<li> Odeberte obsah z počítače.\</li>\</ul>\</p> |
@@ -563,7 +563,7 @@ branding.js soubor obsahuje jazyk JavaScript, který používají prvky nápově
 
 Balíček branding obsahuje sadu souborů HTM, které podporují scénáře pro komunikaci s klíčovými informacemi, například domovskou stránku obsahující část popisující, které sady obsahu jsou nainstalovány a stránky sdělují uživateli, když témata nelze najít v místní sadě témat. Tyto soubory HTM lze upravovat pro jednotlivé produkty.  Dodavatelé prostředí ISO Shell mohou pořizovat výchozí balíček brandingu a změnit chování a obsah těchto stránek na Suite, které potřebují.  Tyto soubory odkazují na příslušný balíček brandingu, aby značky brandingu získaly odpovídající obsah z branding.xml souboru.
 
-|**File**|**Použití**|**Zobrazený zdroj obsahu**|
+|**Soubor**|**Použije**|**Zobrazený zdroj obsahu**|
 |-|-|-|
 |homepage.htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a všechny další zprávy, které jsou vhodné k tomu, aby uživatel mohl o svém obsahu prezentovat.  Tento soubor obsahuje další atribut meta data "Microsoft.Help.Id" content = "-1", který tento obsah umístí na začátek místního obsahu obsahu.||
 ||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, značka\<HomePageTitle>|
@@ -597,7 +597,7 @@ Brandingování souborů. CSS zahrnuje definice pro prezentaci tématu sady Visu
 
 Obsah sady Visual Studio zobrazuje logo Visual studia i další grafiku.  Úplný seznam grafických souborů v balíčku nápovědy aplikace Visual Studio Help Viewer je uveden níže.
 
-|**File**|**Použití**|**Příklady**|
+|**Soubor**|**Použije**|**Příklady**|
 |-|-|-|
 |clear.gif|Slouží k vykreslení sbalitelné oblasti.||
 |footer_slice.gif|Prezentace zápatí||

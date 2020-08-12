@@ -8,19 +8,19 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e2e1df362fddeab5be98ff90460a8a1a7d4b7876
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: cd3ed1477d1c4d345e5fc6f6496d12044d4af244
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558000"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114226"
 ---
 # <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>VSIXLanguagePack – element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX. Jazyková sada VSIX poskytuje lokalizované informace o instalaci balíčku VSIX.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <VSIXLanguagePack>  
@@ -48,27 +48,53 @@ Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX. Jazyková 
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[LocalizedName – element](../extensibility/localizedname-element-vsix-language-pack-schema.md)|Povinná hodnota. Lokalizovaný název rozšíření, které má být nainstalováno.|  
 |[LocalizedDescription – element](../extensibility/localizeddescription-element-vsix-language-pack-schema.md)|Povinná hodnota. Lokalizovaný popis rozšíření, které se má nainstalovat|  
-|[MoreInfoURL – element](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)|Volitelné. Odkaz na lokalizované informace o rozšíření.|  
-|[License – element](../extensibility/license-element-vsix-language-pack-schema.md)|Volitelné. Cesta k lokalizované verzi souboru s licencí pro rozšíření.|  
+|[MoreInfoURL – element](../extensibility/moreinfourl-element-vsix-language-pack-schema.md)|Nepovinný parametr. Odkaz na lokalizované informace o rozšíření.|  
+|[License – element](../extensibility/license-element-vsix-language-pack-schema.md)|Nepovinný parametr. Cesta k lokalizované verzi souboru s licencí pro rozšíření.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Žádná||  
+|Žádné||  
   
 ## <a name="element-information"></a>Informace o elementu  
-  
-|                 |                                                           |
-|-----------------|-----------------------------------------------------------|
-|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
-|   Název schématu   |                 Schéma jazykové sady VSIX                 |
-| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
-|  Může být prázdné   |                            Ne                             |
+
+:::row:::
+    :::column:::
+        Obor názvů
+    :::column-end:::
+    :::column:::
+        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Název schématu
+    :::column-end:::
+    :::column:::
+        Schéma jazykové sady VSIX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Soubor ověření
+    :::column-end:::
+    :::column:::
+        VSIXLanguagePackSchema. xsd
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Může být prázdné
+    :::column-end:::
+    :::column:::
+        Ne
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na schéma VSX Language Pack – referenční](../extensibility/vsx-language-pack-schema-reference.md) [dokumentace](../extensibility/localizing-vsix-packages.md) [schématu rozšíření VSIX](/previous-versions/dd393700(v=vs.110)) balíčku VSIX – Referenční dokumentace schématu 1,0
