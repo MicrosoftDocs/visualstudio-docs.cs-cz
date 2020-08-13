@@ -1,7 +1,7 @@
 ---
 title: Nastavení důvěryhodnosti pro soubory a složky
-description: Přečtěte si, jak změnit nastavení důvěryhodnosti souborů a složek, aby visual studio zůstalo zabezpečené.
-author: abuchholtzau
+description: Naučte se, jak změnit nastavení důvěryhodnosti pro soubory a složky, aby se zajistila bezpečnost sady Visual Studio.
+author: 2percentsilk
 ms.author: allisb
 ms.date: 09/05/2018
 ms.topic: reference
@@ -13,59 +13,59 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 011673bca7be569b5b350dc264148d5a7890d39c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 492a94962d255a9d18dcabdababf7fa6a540ada1
+ms.sourcegitcommit: 935e1388281df0f04147802606b5cb7f513d45ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62789623"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88197391"
 ---
-# <a name="configure-trust-settings-for-files-and-folders"></a>Konfigurace nastavení důvěryhodnosti souborů a složek
+# <a name="configure-trust-settings-for-files-and-folders"></a>Konfigurace nastavení důvěryhodnosti pro soubory a složky
 
-Visual Studio vyzve ke schválení uživatele před otevřením projektů, které mají [značku webu](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)). Chcete-li získat větší zabezpečení, můžete aplikaci Visual Studio také nakonfigurovat tak, aby před otevřením libovolného souboru nebo složky, která má značku webového atributu nebo která není označena jako *důvěryhodná*, vyzvala uživatele ke schválení . Kontroly souborů a složek jsou ve výchozím nastavení zakázány.
+Visual Studio vyzývá ke schválení uživatelem před otevřením projektů, které mají [značku webu](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)). Pro zvýšení zabezpečení můžete také nakonfigurovat sadu Visual Studio tak, aby se před otevřením libovolného souboru nebo složky s označením webového atributu nebo neurčeného jako *důvěryhodného*zobrazila výzva k schválení uživatele. Kontroly souborů a složek jsou ve výchozím nastavení zakázané.
 
 > [!WARNING]
-> Před schválením souboru, složky nebo řešení byste se měli ujistit, že soubor, složka nebo řešení pocházejí od důvěryhodné osoby nebo důvěryhodného umístění.
+> Před schválením souboru, složky nebo řešení byste se měli ujistit, že pochází od důvěryhodné osoby nebo z důvěryhodného umístění.
 
 ## <a name="configure-trust-settings"></a>Konfigurace nastavení důvěryhodnosti
 
-Chcete-li změnit nastavení důvěryhodnosti, postupujte takto:
+Chcete-li změnit nastavení důvěryhodnosti, postupujte podle těchto kroků:
 
-1. Otevřete**Možnosti** >  **nástrojů** > **Důvěřovat nastavení** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti.**
+1. Otevřete **nástroje**  >  **Možnosti**  >  **Nastavení důvěryhodnosti** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti** .
 
-2. Zvolte úroveň kontrol, které chcete u souborů a složek. Pro každou z nich můžete mít různé kontroly. Dostupné možnosti:
+2. Vyberte úroveň kontrol, které chcete pro soubory a složky. Můžete mít různé kontroly pro každé z nich. Dostupné možnosti:
 
-   * **Žádné ověření**: Visual Studio neprovádí žádné kontroly.
+   * **Bez ověření**: Visual Studio neprovede žádné kontroly.
 
-   * **Ověřte značku webového atributu**: Pokud soubor nebo složka obsahuje značku webového atributu, visual studio zablokuje a požádá o povolení k otevření.
+   * **Ověřit označení webového atributu**: Pokud má soubor nebo složka značku webového atributu, aplikace Visual Studio zablokuje a požádá o oprávnění k otevření.
 
-   * **Ověření, že cesta je důvěryhodná**: Pokud cesta k souboru nebo složce není součástí seznamu **Důvěryhodné cesty,** sada Visual Studio zablokuje a požádá o oprávnění k otevření.
+   * **Ověřte, že cesta je důvěryhodná**: Pokud cesta k souboru nebo složce není součástí seznamu **důvěryhodných cest** , aplikace Visual Studio zablokuje a požádá o oprávnění k otevření.
 
    ![Možnosti ověření důvěryhodnosti](media/trust-settings.png)
 
-## <a name="add-trusted-paths"></a>Přidání důvěryhodných cest
+## <a name="add-trusted-paths"></a>Přidat důvěryhodné cesty
 
-Chcete-li přidat důvěryhodné cesty, postupujte takto:
+K přidání důvěryhodných cest použijte následující postup:
 
-1. Otevřete**Možnosti** >  **nástrojů** > **Důvěřovat nastavení** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti.**
+1. Otevřete **nástroje**  >  **Možnosti**  >  **Nastavení důvěryhodnosti** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti** .
 
-2. V dialogovém okně **Důvěřovat nastavením** klepněte na **tlačítko Přidat** a pak vyberte **Soubor** nebo **složku**.
+2. V dialogovém okně **nastavení vztahu důvěryhodnosti** klikněte na **Přidat** a pak vyberte **soubor** nebo **Složka**.
 
-3. Přejděte do seznamu důvěryhodných položek a vyberte je.
+3. Přejděte na adresu a vyberte soubor nebo složku, které chcete přidat do seznamu důvěryhodných souborů.
 
-   Cesta k souboru nebo složce se zobrazí v seznamu **Důvěryhodné cesty.**
+   Cesta k souboru nebo složce se zobrazí v seznamu **důvěryhodných cest** .
 
-   ![Přidány důvěryhodné cesty](media/trusted-paths.png)
+   ![Přidaných důvěryhodných cest](media/trusted-paths.png)
 
 ## <a name="remove-trusted-paths"></a>Odebrání důvěryhodných cest
 
-Chcete-li odebrat důvěryhodné cesty, postupujte takto:
+K odebrání důvěryhodných cest použijte následující postup:
 
-1. Otevřete**Možnosti** >  **nástrojů** > **Důvěřovat nastavení** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti.**
+1. Otevřete **nástroje**  >  **Možnosti**  >  **Nastavení důvěryhodnosti** a v pravém podokně vyberte odkaz **Konfigurovat nastavení důvěryhodnosti** .
 
-2. V seznamu **Důvěryhodné cesty** vyberte cestu, kterou chcete odebrat, a klepněte na tlačítko **Odebrat**.
+2. V seznamu **důvěryhodné cesty** vyberte cestu, kterou chcete odebrat, a potom klikněte na **Odebrat**.
 
    > [!TIP]
-   > Chcete-li vybrat více položek, podržte při výběru cest stisknutou klávesu **Shift.**
+   > Chcete-li vybrat více položek, podržte při výběru cest stisknutou **klávesu SHIFT** .
 
-   Vybrané cesty budou odebrány ze seznamu **Důvěryhodné cesty.**
+   Vybrané cesty se odeberou ze seznamu **důvěryhodných cest** .
