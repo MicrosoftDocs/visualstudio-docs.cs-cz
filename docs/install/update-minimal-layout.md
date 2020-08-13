@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 849cad46463ffb52e2f4f2a930f05daf66f7d737
-ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
+ms.openlocfilehash: 2b9c86c17b89258145613e867ba6a91b2219fe0d
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869878"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168746"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>Aktualizace sady Visual Studio s minimálním offline rozložením
 
@@ -56,19 +56,20 @@ Tento nástroj vytvoří rozložení aktualizací pro Visual Studio 2017 (15,9) 
 #### <a name="commands"></a>Příkazy
 * **Preview**: pomocí tohoto příkazu můžete zobrazit náhled toho, kolik balíčků se stáhne, a celkové místo využité k vytvoření tohoto rozložení. 
 * **Vygenerovat**: Tento příkaz slouží k vygenerování minimálního rozložení pro aktualizaci sady Visual Studio.
-* **Znovu vygenerovat**: pomocí tohoto příkazu můžete znovu vygenerovat rozložení pomocí existujícího souboru odpovědi na minimální rozložení. Každé minimální rozložení vytvoří `MinimalLayout.json` soubor odezvy, který obsahuje původní vstupní parametry minimálního rozložení. K opětovnému vygenerování minimálního rozložení můžete použít příkaz **znovu vygenerovat** a `MinimalLayout.json` soubor odpovědí. To je užitečné, pokud chcete vytvořit minimální rozložení nové aktualizace sady Visual Studio založené na předchozím souboru odpovědi na minimální rozložení. 
-   - Pro tento příkaz `MinimalLayout.json` je vyžadována cesta k souboru z již vygenerovaného rozložení. 
+* **Znovu vygenerovat**: pomocí tohoto příkazu můžete znovu vygenerovat rozložení pomocí existujícího souboru odpovědi na minimální rozložení. Každé minimální rozložení vytvoří `MinimalLayout.json` soubor odezvy, který obsahuje původní vstupní parametry minimálního rozložení. K opětovnému vygenerování minimálního rozložení můžete použít příkaz **znovu vygenerovat** a `MinimalLayout.json` soubor odpovědí. To je užitečné, pokud chcete vytvořit minimální rozložení nové aktualizace sady Visual Studio založené na předchozím souboru odpovědi na minimální rozložení.
 
-        ```cmd
-        MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
-        ```
+   Pro tento příkaz `MinimalLayout.json` je vyžadována cesta k souboru z již vygenerovaného rozložení. 
+
+    ```cmd
+    MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
+    ```
 
 * **Ověřit**: pomocí tohoto příkazu určete, zda je složka rozložení poškozena.
 * **Oprava**: Tento příkaz použijte k opravě poškozené složky rozložení, včetně nahrazení všech chybějících balíčků ze složky rozložení.
 
 #### <a name="options"></a>Možnosti 
 
-|Možnosti    |Popis    |Požadováno/volitelné |Příklad |
+|Možnosti    |Description    |Požadováno/volitelné |Příklad |
 |:----------|:-----------|:------------|:--------------|
 |--targetLocation &lt; adresář&gt; |Určuje adresář, ve kterém má být vytvořeno minimální rozložení offline.       |Vyžadováno        |--targetLocation c:\VSLayout\ |
 |-- &lt; verze baseVersion&gt;|Od této verze se vygeneruje minimální rozložení offline.   |Vyžadováno|--baseVersion 16.4.0 |

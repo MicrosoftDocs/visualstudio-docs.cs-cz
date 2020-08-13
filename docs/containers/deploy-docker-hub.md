@@ -8,12 +8,13 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: f1c02e1fdc0c72ac23cb65605f324608a7fc33d7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+monikerRange: '>=vs-2019'
+ms.openlocfilehash: cd17726d5ba09dcb901fd529e6bdfd97dee52f31
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536887"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168628"
 ---
 # <a name="deploy-to-docker-hub"></a>Nasazení do Docker Hubu
 
@@ -29,9 +30,13 @@ Pokud nemáte úložiště Docker Hub, vytvořte ho v [Dock hub](https://hub.doc
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **publikovat...**. Zobrazí se obrazovka se zobrazenými možnostmi nasazení.
 
-   ![Snímek obrazovky s možnostmi nasazení](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![Snímek obrazovky s možnostmi nasazení](media/container-tools/vs-2019/docker-container-registry.png)
 
-1. V části **Vyberte cíl publikování**zvolte možnost **Container Registry**a pak zvolte **Docker Hub**. Zobrazí se dialogové okno **centrum Docker** .
+1. Zvolte **docker Container Registry**a pak zvolte **Docker Hub**.
+
+   ![Snímek obrazovky dialogového okna pro publikování – výběr centra Docker](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+
+1. Zadejte svoje přihlašovací údaje Docker.
 
    ![Snímek obrazovky s dialogovým oknem Docker Hub](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
@@ -49,7 +54,7 @@ Publikování do [Azure Container Registry](/azure/container-registry/) podle kr
 
 Pomocí [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops)nastavte průběžnou integraci a doručování (CI/CD).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Nasadit do Azure App Service](deploy-app-service.md) 
  [Nástroje kontejneru sady Visual Studio](/visualstudio/containers/).

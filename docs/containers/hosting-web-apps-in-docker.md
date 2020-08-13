@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.technology: vs-azure
 ms.date: 03/14/2019
 ms.author: ghogen
-ms.openlocfilehash: 9778590d804a72ff896b190a743fc08293f5b9ca
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4626b64f5e733fec049d56dfe53407cc0fe31566
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283135"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168687"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>Nasazení kontejneru ASP.NET do registru kontejneru pomocí sady Visual Studio
 
@@ -23,9 +23,9 @@ ms.locfileid: "85283135"
 Docker je odlehčený modul kontejnerů, podobně jako některé z různých způsobů virtuálního počítače, který můžete použít k hostování aplikací a služeb.
 V tomto kurzu se seznámíte s použitím sady Visual Studio k publikování vašich kontejnerových aplikací na [Azure Container Registry](https://azure.microsoft.com/services/container-registry).
 
-Pokud ještě nemáte předplatné Azure, [vytvořte si bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs), ještě než začnete.
+Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Pro absolvování tohoto kurzu potřebujete:
 
@@ -38,6 +38,7 @@ Pro absolvování tohoto kurzu potřebujete:
 * Nainstalovat [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="create-an-aspnet-core-web-app"></a>Vytvoření webové aplikace ASP.NET Core
+
 Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core, která se bude používat v tomto kurzu. Pokud již máte projekt, můžete tuto část přeskočit.
 
 ::: moniker range="vs-2017"
@@ -47,9 +48,12 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
 [!INCLUDE [create-aspnet5-app](../azure/includes/vs-2019/create-aspnet5-app-2019.md)]
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
 ## <a name="publish-your-container-to-azure-container-registry"></a>Publikování kontejneru do Azure Container Registry
+
 1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
-2. V dialogovém okně Publikovat cíl vyberte kartu **Container Registry** .
+2. V dialogovém okně **Publikovat cíl** vyberte možnost **Container Registry**.
 3. Vyberte **nový Azure Container Registry** a klikněte na **publikovat**.
 4. Do pole **vytvořit nový Azure Container Registry**zadejte požadované hodnoty.
 
@@ -58,12 +62,41 @@ Následující kroky vás provedou vytvořením základní aplikace ASP.NET Core
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
 
-5. Klikněte na **vytvořit** .
+5. Klikněte na **Vytvořit**.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="publish-your-container-to-azure-container-registry"></a>Publikování kontejneru do Azure Container Registry
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
+2. V dialogovém okně **publikovat** vyberte **Docker Container Registry**.
+
+   ![Snímek obrazovky s dialogem publikovat – vyberte Docker Container Registry](media/container-tools/vs-2019/docker-container-registry.png)
+
+3. Vyberte **vytvořit novou Azure Container Registry**.
+ 
+   ![Snímek obrazovky dialogového okna pro publikování – vyberte vytvořit novou Azure Container Registry](media/container-tools/vs-2019/select-existing-or-create-new-azure-container-registry.png)
+
+4. Zadejte požadované hodnoty na obrazovce **Azure Container Registry** .
+
+    | Nastavení      | Navrhovaná hodnota  | Popis                                |
+    | ------------ |  ------- | -------------------------------------------------- |
+    | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
+    | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
+    | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
+    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
+
+    ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png)
+
+5. Klikněte na možnost **Vytvořit**.
+
+6. Kliknutím na **Dokončit** proces dokončete.
+::: moniker-end
 
 Kontejner teď můžete načíst z registru do libovolného hostitele, který podporuje spouštění imagí Docker, například [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
