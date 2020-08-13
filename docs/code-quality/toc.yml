@@ -983,3 +983,9 @@
                   href: ca2248.md
             - name: Automatické pozastavení funkce
               href: automatic-feature-suspension.md
+            - name: Publikování upozornění
+              items:
+                - name: Přehled
+                  displayName: publish warnings
+                - name: 'IL3000: Při publikování jednoho souboru nepoužívat přístup k cestě souboru sestavení'
+                  href: il3000.md
