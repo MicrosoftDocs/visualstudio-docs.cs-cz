@@ -6,12 +6,12 @@ ms.author: johmil
 ms.date: 05/13/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 9d6fd5ffefcd6696fa67302a8d59fd46e498a472
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950606"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214697"
 ---
 # <a name="set-up-a-git-repository"></a>Nastavení úložiště Git
 
@@ -55,7 +55,7 @@ Máte-li existující projekt, který ještě _není_ ve správě verzí, postup
 
 3. Zvolte kartu **vybrat z registrováno** a stiskněte tlačítko **Přidat** :
 
-    ![](media/version-control-git5.png)
+    ![Přidejte dialogové okno registrované úložiště.](media/version-control-git5.png)
 
 4. Zadejte název úložiště tak, jak chcete, aby se zobrazil místně, a vložte adresu URL z kroku #3. Dialogové okno Konfigurace úložiště by mělo vypadat podobně jako v následujícím příkladu. Stiskněte OK:
 

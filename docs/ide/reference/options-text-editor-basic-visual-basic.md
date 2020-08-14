@@ -1,6 +1,6 @@
 ---
-title: Možnosti, Textový editor, základní (VB), upřesnit
-ms.date: 01/16/2019
+title: Možnosti, textový editor, Basic (VB), Upřesnit
+ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic.Editor
@@ -13,99 +13,106 @@ f1_keywords:
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
-author: TerryGLee
-ms.author: tglee
+author: akhera99
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 562358ca90e223a07926aaa383ded41a5f7557cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 778cd1f9c126b176cafad8b33a147d284bea1b67
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79431472"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214642"
 ---
-# <a name="options-text-editor-basic-visual-basic-advanced"></a>Možnosti, Textový editor, základní (Visual Basic), upřesnit
-Stránka **vlastností VB Specific** ve složce **Základní** ve složce **Textový editor** v dialogovém okně **Možnosti** **(Nástroje)** obsahuje následující vlastnosti:
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>Možnosti, textový editor, Basic (Visual Basic), Upřesnit
+Stránka **vlastností specifická pro VB** se nachází ve složce **základní** ve složce **textový editor** v dialogovém okně **Možnosti** (nabídka**nástroje** ), která obsahuje následující vlastnosti:
 
 ## <a name="analysis"></a>Analýza
 
-- Analýza živého kódu nebo obor analýzy pozadí
+- Živá analýza kódu nebo obor analýzy na pozadí
 
-   Nakonfigurujte obor analýzy pozadí pro spravovaný kód. Další informace naleznete v [tématu Postup: Konfigurace oboru analýzy živého kódu pro spravovaný kód](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Nakonfigurujte obor analýzy na pozadí pro spravovaný kód. Další informace naleznete v tématu [How to: Configure Live Code Analysis Scope for Managed Code](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
 
-## <a name="using-directives"></a>Používání směrnic
+## <a name="using-directives"></a>Direktivy using
 
-- Při řazení pomocí direktiv y nejprve umístěte direktivy "Systém"
+- Při řazení direktiv using umístit nejdřív direktivy System
 
-   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši seřadí `using` direktivy a umístí obory názvů Systém na začátek seznamu.
+   Pokud je tato možnost vybrána, příkazy **Remove a Sort using** v nabídce po kliknutí pravým tlačítkem myši seřadí `using` direktivy a umístí do horní části seznamu obory názvů System.
 
-- Samostatné pomocí skupin direktiv
+- Samostatné použití skupin direktiv
 
-   Když je tato volba vybraná, příkaz **Odebrat a seřadit usings** v nabídce po kliknutí pravým tlačítkem myši oddělí direktivy `using` vložením prázdného řádku mezi skupinami direktiv, které mají stejný kořenový obor názvů.
+   Pokud je tato možnost vybrána, příkaz **Odebrat a seřadit pomocí** v nabídce po kliknutí pravým tlačítkem myši oddělí `using` direktivy vložením prázdného řádku mezi skupiny směrnic, které mají stejný kořenový obor názvů.
 
-- Navrhnout použití pro typy v referenčních sestavách
-- Navrhnout použití pro typy v balíčcích NuGet
+- Navrhnout použití typů v referenčních sestaveních
+- Navrhnout použití typů v balíčcích NuGet
 
-   Pokud jsou vybrány tyto možnosti, [rychlá akce](../quick-actions.md) je k `using` dispozici k instalaci balíčku NuGet a přidat direktivu pro neodkazované typy.
+   Pokud jsou tyto možnosti vybrány, je k dispozici [rychlá akce](../quick-actions.md) pro instalaci balíčku NuGet a přidání `using` direktivy pro neodkazované typy.
 
-   ![Rychlá akce pro instalaci balíčku NuGet v sadě Visual Studio](media/nuget-lightbulb.png)
+   ![Rychlá akce pro instalaci balíčku NuGet v aplikaci Visual Studio](media/nuget-lightbulb.png)
 
 ## <a name="highlighting"></a>Zvýraznění
 
- **Povolení zvýraznění odkazů a klíčových slov**
+ **Povolit zvýraznění odkazů a klíčových slov**
 
-Textový editor může zvýraznit všechny výskyty symbolu nebo `If..Then` `While...End While`všech `Try...Catch...Finally`klíčových slov v klauzuli, například , nebo . Mezi zvýrazněnými odkazy nebo klíčovými slovy můžete přecházet stisknutím kláves **Ctrl** + **Shift** + **Down nebo** **Ctrl** + **Shift** + Shift**arrow**.
+Textový editor může zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli, jako například `If..Then` , `While...End While` nebo `Try...Catch...Finally` . Můžete přecházet mezi zvýrazněnými odkazy nebo klíčovými slovy stisknutím **kombinace kláves CTRL**  +  **+**  +  **šipka dolů** nebo **kombinací kláves CTRL**  +  **+**  +  **šipka nahoru**.
 
 ## <a name="outlining"></a>Sbalování
 
-**Povolení režimu osnovy**
+**Povolit režim sbalení**
 
-Když otevřete soubor v editoru kódu, můžete dokument zobrazit v režimu osnovy. Další informace naleznete [v tématu Osnova.](../../ide/outlining.md) Když je tato volba vybraná, funkce osnovy se aktivuje při otevření souboru.
+Když otevřete soubor v editoru kódu, můžete zobrazit dokument v režimu sbalení. Další informace najdete v tématu [popisujícím sbalení](../../ide/outlining.md) . Když je vybraná tato možnost, funkce sbalení se aktivuje při otevření souboru.
 
-**Zobrazit oddělovače čar procedury**
+**Zobrazit oddělovače řádků procedury**
 
-Textový editor označuje vizuální rozsah procedur. Čára je nakreslena ve zdrojových souborech *.vb* projektu v umístěních uvedených v následující tabulce:
+Textový editor označuje vizuální rozsah procedur. Řádek se vykreslí ve zdrojových souborech *. vb* projektu v umístěních uvedených v následující tabulce:
 
-|Umístění ve zdrojovém souboru .vb|Příklad umístění linky|
+|Umístění ve zdrojovém souboru. vb|Příklad umístění řádku|
 |---------------------------------|------------------------------|
-|Po uzavření konstrukce deklarace bloku|- Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />- Po vlastnosti, funkce nebo sub<br />- Ne mezi get a set klauzule v nemovitosti|
-|Po sadě jednořádkových konstrukcí|- Po příkazech importu před definicí typu v souboru třídy<br />- Po proměnných deklarovaných ve třídě, před všemi postupy|
-|Po deklaracích jednoho řádku (deklarace neblokové úrovně)|- Následující příkazy importu dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a deklarované příkazy dll.|
+|Po ukončení konstrukce deklarace bloku|– Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />– Za vlastností, funkcí nebo sub<br />– Není mezi klauzulemi Get a set ve vlastnosti.|
+|Po sadě jednoduchých konstrukcí|-Po příkazech importu před definicí typu v souboru třídy<br />– Po proměnných deklarovaných ve třídě, před všemi postupy|
+|Po deklaracích s jedním řádkem (deklarace na úrovni bez blokování)|– Následující příkazy pro import dědí příkazy, deklarace proměnných, deklarace událostí, deklarace delegátů a příkazy DLL Declare.|
 
-## <a name="block-structure-guides"></a>Vodítka blokové struktury
+## <a name="block-structure-guides"></a>Vodítka struktury bloku
 
-Když je tato volba vybraná, v editoru se zobrazí svislé čáry, které jsou zaokřovány do strukturovaných bloků kódu, což umožňuje snadno identifikovat jednotlivé bloky kódu. Například byste viděli čáru `Sub` mezi `EndSub` a `Sub` v příkazu.
+Je-li vybrána tato možnost, zobrazí se v editoru svislé čáry, které se zařadí do strukturovaných bloků kódu, což vám umožní snadno identifikovat jednotlivé bloky kódu. Například by se zobrazil řádek mezi `Sub` a `EndSub` v `Sub` příkazu.
 
-## <a name="editor-help"></a>Nápověda k editoru
+## <a name="editor-help"></a>Pomocník s editorem
 
-**Pretty Výpis (přeformátování) kódu** Textový editor přeformátuje váš kód podle potřeby. Pokud je vybrána tato možnost, editor kódu:
+::: moniker range=">=vs-2019"
+**Parametry názvu vloženého parametru**    
+Je-li vybrána tato možnost, vloží parametry názvu parametru pro literály, přetypováníný literál a instance objektů před každý argument ve volání funkce.  
 
-- Zarovnání kódu do správné polohy karty
+![Parametry názvu vloženého parametru pro Visual Basic](media/inline-parameter-name-hints-visualbasic.png)
+::: moniker-end
 
-- Přesuzovat klíčová slova, proměnné a objekty do správného případu
+**Poměrně se seznamem (přeformátování) kódu** Textový editor přeformátuje kód podle potřeby. Pokud je vybrána tato možnost, Editor kódu bude:
 
-- Přidání chybějícího `Then` `If...Then` do příkazu
+- Zarovnejte kód se správnou polohou tabulátoru.
 
-- Přidání závorek pro funkční volání
+- Případná klíčová slova, proměnné a objekty se správným případem
 
-- Přidání chybějících koncových uvozovek do řetězců
+- Přidat chybějící `Then` `If...Then` příkaz do příkazu
 
-- Přeformátovaný exponenciální zápis
+- Přidání závorek do volání funkce
+
+- Přidat chybějící koncové uvozovky do řetězců
+
+- Přeformátovat exponenciální zápis
 
 - Přeformátovat data
 
-**Automatické vkládání koncových konstrukcí**
+**Automatické vložení koncových konstrukcí**
 
-Když píšete – například první řádek deklarace procedury `Sub Main`– a stiskněte `End Sub` **Enter**, textový editor přidá odpovídající řádek. Podobně pokud přidáte [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) smyčky, textový editor přidá `Next` odpovídající příkaz. Když je vybrána tato možnost, editor kódu automaticky přidá koncovou konstrukci.
+Když zadáte, například první řádek deklarace procedury, `Sub Main` a stisknete klávesu **ENTER**, textový editor přidá shodný `End Sub` řádek. Podobně pokud přidáte smyčku [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) , textový editor přidá shodný `Next` příkaz. Pokud je vybrána tato možnost, Editor kódu automaticky přidá koncovou konstrukci.
 
-**Automatické vkládání členů Rozhraní a MustOverride**
+**Automatické vložení členů rozhraní a MustOverride**
 
-Když potvrdíte `Implements` příkaz `Inherits` nebo příkaz pro třídu, textový editor vloží prototypy pro členy, které mají být implementovány nebo přepsány.
+Při potvrzení `Implements` příkazu nebo `Inherits` příkazu pro třídu vloží textový editor prototypy pro členy, kteří mají být implementováni nebo přepsáni v uvedeném pořadí.
 
 **Povolit návrhy oprav chyb**
 
-Textový editor může navrhnout řešení běžných chyb a umožnit vám vybrat příslušnou opravu, která se pak použije na váš kód.
+Textový editor může navrhovat řešení běžných chyb a umožňuje vybrat příslušnou opravu, která se pak použije na váš kód.
 
 ## <a name="see-also"></a>Viz také
 

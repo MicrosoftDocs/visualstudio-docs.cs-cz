@@ -1,21 +1,21 @@
 ---
 title: Možnosti, textový editor, C#, upřesnit
-ms.date: 01/16/2019
+ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: TerryGLee
-ms.author: tglee
+author: akhera99
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
-ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
+ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86181063"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214683"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
@@ -128,7 +128,13 @@ Stránka **Upřesnit** možnosti slouží k úpravě nastavení formátování e
 Tato zaškrtávací políčka zaškrtněte, pokud chcete ve svém kódu zobrazit tečkované svislé čáry mezi složenou závorkou ( **{}** ). Pak můžete snadno zobrazit jednotlivé bloky kódu pro vaši úroveň deklarace a konstrukce na úrovni kódu.
 
 ## <a name="editor-help"></a>Pomocník s editorem
-
+::: moniker range=">=vs-2019"
+- Parametry názvu vloženého parametru 
+    
+    Je-li vybrána tato možnost, vloží parametry názvu parametru pro literály, přetypováníný literál a instance objektů před každý argument ve volání funkce.  
+    
+    ![Parametry názvu vloženého parametru pro CSharp](media/inline-parameter-name-hints-csharp.png)
+::: moniker-end
 - Generovat dokumentační komentáře XML pro///
 
    Je-li vybrána tato možnost, vloží prvky XML pro dokumentační komentáře XML po zadání `///` úvodu komentáře. Další informace o dokumentaci XML naleznete v [dokumentaci XML (Průvodce programováním v C#)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
