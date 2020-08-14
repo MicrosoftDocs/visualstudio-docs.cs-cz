@@ -92,6 +92,10 @@
       href: data-visualizations.md
     - name: Ladění balíčků NuGet pomocí odkazu na zdroj
       href: source-link.md
+- name: Testování
+  items:
+    - name: Přehled
+      href: testing.md
 - name: Kompilace a sestavení
   items:
     - name: Přehled
