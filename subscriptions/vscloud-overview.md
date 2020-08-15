@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na měsíční nebo roční úrovni, a to bez dlouhodobé smlouvy.
-ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211618"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248343"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup Visual Studio Professional a Visual Studio Enterprise cloudových předplatných
 Můžete zakoupit [Visual Studio Professional a Visual Studio Enterprise odběry](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Ty se nazývají **"cloudové předplatné"**.
@@ -65,15 +65,15 @@ Pokud jste si koupili více než jedno předplatné, přejděte k [portálu pro 
 Pokud chcete zrušit odběry, stačí nastavit počet předplatných pro vaši smlouvu na nulu (0).  Pomocí těchto kroků snižte počet předplatných:
 1. Přihlaste se k <https://manage.visualstudio.com>.
 1. Pokud máte více než jednu smlouvu, v rozevíracím seznamu vyberte požadovanou smlouvu.
-1. Kliknutím na ikonu **přehledu** v levém horním rohu zobrazíte informace o vašich předplatných.  
+1. Výběrem ikony **přehledu** v levém horním rohu zobrazíte informace o vašich předplatných.  
 > [!div class="mx-imgBorder"]
 > ![Zobrazit přehled předplatného](_img/buy-vs-subscriptions/overview-button.png "Kliknutím na tlačítko Přehled zobrazíte podrobnosti předplatného.")
 
-4. Vyhledejte položku pro odběry, které chcete zrušit, a klikněte na **změnit množství**.
+4. Vyhledejte položku pro odběry, které chcete zrušit, a vyberte **změnit množství**.
 1. Nastavte množství na hodnotu nula (0). Vaše předplatná zůstanou v platnosti až do jejich plánovaného fakturačního data, ale neobnoví se při dosažení data fakturace.   
 
 > [!div class="mx-imgBorder"]
-> ![Změnit odběry](_img/buy-vs-subscriptions/manage-subscriptions.png "Kliknutím na změnit množství zrušíte odběry.")
+> ![Změnit odběry](_img/buy-vs-subscriptions/manage-subscriptions.png "Vyberte změnit množství pro zrušení předplatných.")
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 

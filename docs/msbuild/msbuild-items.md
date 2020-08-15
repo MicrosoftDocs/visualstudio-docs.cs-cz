@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4689985d159bd832bc3cadfb54eb17fae2ae71a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183662"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247590"
 ---
 # <a name="msbuild-items"></a>Položky nástroje MSBuild
 
@@ -124,7 +124,7 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 
  Položka může mít nula nebo více hodnot metadat. Hodnoty metadat můžete kdykoli změnit. Pokud nastavíte metadata na prázdnou hodnotu, můžete ji efektivně odebrat ze sestavení.
 
-### <a name="reference-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a>Metadata položky reference v souboru projektu
+### <a name="reference-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a> Metadata položky reference v souboru projektu
 
  Metadata položky můžete odkazovat v celém souboru projektu pomocí syntaxe%( \<ItemMetadataName> ). Pokud existuje nejednoznačnost, můžete kvalifikovat odkaz pomocí názvu typu položky. Můžete například zadat%( \<ItemType.ItemMetaDataName> ). Následující příklad používá metadata zobrazení k dávkování úlohy zprávy. Další informace o tom, jak používat metadata položek pro dávkování, najdete v tématu [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md).
 
@@ -144,11 +144,11 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 </Project>
 ```
 
-### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a>Dobře známá metadata položky
+### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a> Dobře známá metadata položky
 
  Když je položka přidána do typu položky, je tato položka přiřazena dobře známým metadatům. Například všechny položky mají dobře známé metadata%( \<Filename> ), jehož hodnota je název souboru položky (bez přípony). Další informace najdete v tématu [známá metadata položek](../msbuild/msbuild-well-known-item-metadata.md).
 
-### <a name="transform-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a>Transformace typů položek pomocí metadat
+### <a name="transform-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a> Transformace typů položek pomocí metadat
 
  Seznamy položek můžete transformovat do seznamů nové položky pomocí metadat. Například můžete převést typ položky `CppFiles` , který obsahuje položky, které reprezentují soubory *. cpp* , do odpovídajícího seznamu souborů *. obj* pomocí výrazu `@(CppFiles -> '%(Filename).obj')` .
 
@@ -191,7 +191,7 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 
  Počínaje .NET Framework 3,5 `Target` prvky mohou obsahovat prvky [položky](../msbuild/itemgroup-element-msbuild.md) , které mohou obsahovat prvky položky. Atributy v této části jsou platné, pokud jsou zadány pro položku v objektu `ItemGroup` , který je v `Target` .
 
-### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a>Odebrat atribut
+### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a> Odebrat atribut
 
  `Remove`Atribut odebere konkrétní položky (soubory) z typu položky. Tento atribut byl představen v .NET Framework 3,5 (pouze uvnitř cílů). V MSBuild 15,0 jsou podporovány jak uvnitř, tak mimo cíle.
 
@@ -205,7 +205,7 @@ Další informace o zástupných znacích naleznete v tématu [How to: vyberte s
 </Target>
 ```
 
-### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a>KeepMetadata – atribut
+### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata – atribut
 
  Pokud je položka generována v rámci cíle, element Item může `KeepMetadata` atribut obsahovat. Pokud je tento atribut zadán, budou ze zdrojové položky do cílové položky přenesena pouze metadata, která jsou zadána v seznamu názvů oddělených středníkem. Prázdná hodnota pro tento atribut je ekvivalentní s jeho zadáním. `KeepMetadata`Atribut byl představen v .NET Framework 4,5.
 
@@ -248,7 +248,7 @@ Output:
 -->
 ```
 
-### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a>RemoveMetadata – atribut
+### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata – atribut
 
  Pokud je položka generována v rámci cíle, element Item může `RemoveMetadata` atribut obsahovat. Je-li tento atribut zadán, jsou všechna metadata přenesena ze zdrojové položky do cílové položky s výjimkou metadat, jejichž názvy jsou obsaženy v seznamu názvů oddělených středníkem. Prázdná hodnota pro tento atribut je ekvivalentní s jeho zadáním. `RemoveMetadata`Atribut byl představen v .NET Framework 4,5.
 
@@ -298,9 +298,9 @@ Output:
 -->
 ```
 
-### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a>KeepDuplicates – atribut
+### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> KeepDuplicates – atribut
 
- Pokud je položka generována v rámci cíle, element Item může `KeepDuplicates` atribut obsahovat. `KeepDuplicates`je `Boolean` atribut, který určuje, zda má být položka přidána do cílové skupiny, pokud je položka přesným duplikátem existující položky.
+ Pokud je položka generována v rámci cíle, element Item může `KeepDuplicates` atribut obsahovat. `KeepDuplicates` je `Boolean` atribut, který určuje, zda má být položka přidána do cílové skupiny, pokud je položka přesným duplikátem existující položky.
 
  Pokud má zdrojová a cílová položka stejnou hodnotu zahrnutí, ale odlišná metadata, položka je přidána i v případě, že `KeepDuplicates` je nastavena na `false` . Prázdná hodnota pro tento atribut je ekvivalentní s jeho zadáním. `KeepDuplicates`Atribut byl představen v .NET Framework 4,5.
 
@@ -338,7 +338,7 @@ Output:
 -->
 ```
 
-##  <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Aktualizace metadat u položek v instanci položky mimo cíl
+## <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Aktualizace metadat u položek v instanci položky mimo cíl
 
 V položkách mimo cílů mohou být jejich existující metadata aktualizována prostřednictvím `Update` atributu. Tento atribut není k dispozici pro položky, **které jsou v** cíli.
 
@@ -598,7 +598,7 @@ Item1: notebook
 - [Item – Element (MSBuild)](../msbuild/item-element-msbuild.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)
 - [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [Nástroji](../msbuild/msbuild.md)
 - [Postupy: výběr souborů k sestavení](../msbuild/how-to-select-the-files-to-build.md)
 - [Postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Postupy: zobrazení seznamu položek oddělených čárkami](../msbuild/how-to-display-an-item-list-separated-with-commas.md)

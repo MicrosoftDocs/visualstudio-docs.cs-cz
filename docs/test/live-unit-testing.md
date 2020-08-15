@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 185d722f65dce0062dc58a06a05590aacb68138b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 1084b79fceda34cceed51ae8d4a5a84d7ebfb016
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906220"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249897"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Konfigurace a použití Live Unit Testing
 
@@ -142,7 +142,7 @@ V okně **Průzkumník testů** si můžete všimnout, že některé testy jsou 
 
 ![Neúspěšný test v Průzkumníku testů](media/lut-test-explorer.png)
 
-Můžete znovu spustit všechny testy, které se projeví na zvolna, a to výběrem možnosti **Spustit vše** nebo **Spustit** z nabídky **Průzkumník testů** . Nebo vyberte jeden nebo více testů v nabídce **Průzkumník testů** , klikněte pravým tlačítkem myši a vyberte možnost **Spustit vybrané testy** nebo **ladit vybrané testy** z místní nabídky. Při spuštění testů se tyto testy dostanou nahoru.
+Můžete znovu spustit všechny testy, které se projeví na zvolna, a to výběrem možnosti **Spustit vše** nebo **Spustit** z nabídky **Průzkumník testů** . Nebo vyberte jeden nebo více testů v nabídce  **Průzkumník testů** , klikněte pravým tlačítkem myši a vyberte možnost **Spustit vybrané testy** nebo **ladit vybrané testy** z místní nabídky. Při spuštění testů se tyto testy dostanou nahoru.
 
 Některé rozdíly mezi Live Unit Testing automaticky spouští a aktualizují výsledky testů a explicitně spouštějící testy z **Průzkumníka testů**. Mezi tyto rozdíly patří:
 
@@ -191,16 +191,16 @@ Pro řešení s mnoha testovacími projekty můžete určit, které projekty a j
 
 Chcete-li vybrat jednotlivé projekty v testování částí, proveďte následující po spuštění Live Unit Testing:
 
-1. Klikněte pravým tlačítkem na řešení v **Průzkumník řešení** a vyberte možnost **živé testy**  >  k**vyloučení** pro vyloučení celého řešení.
-1. Klikněte pravým tlačítkem na každý projekt testů, který chcete zahrnout do testů, a vyberte možnost **živé testy**  >  **včetně**.
+1. Klikněte pravým tlačítkem na řešení v **Průzkumník řešení** a vyberte možnost **Live Unit Testing**  >  **vyloučit** pro vyloučení celého řešení.
+1. Klikněte pravým tlačítkem na každý testovací projekt, který chcete zahrnout do testů, a vyberte **Live Unit Testing**  >  **Zahrnout**.
 
 ### <a name="exclude-individual-tests-from-the-code-editor-window"></a>Vyloučit jednotlivé testy z okna editoru kódu
 
 Můžete použít okno editoru kódu k zahrnutí nebo vyloučení jednotlivých testovacích metod. Klikněte pravým tlačítkem na podpis testovací metody v okně editoru kódu a vyberte jednu z následujících možností:
 
-- **Živé testy**  >  **Zahrnout \<selected method> **
-- **Živé testy**  >  **Vyloučit \<selected method> **
-- **Živé testy**  >  **Vyloučit všechny kromě \<selected method> **
+- **Live Unit Testing**  >  **Zahrnout \<selected method> **
+- **Live Unit Testing**  >  **Vyloučit \<selected method> **
+- **Live Unit Testing**  >  **Vyloučit všechny kromě \<selected method> **
 
 ### <a name="exclude-tests-programmatically"></a>Vyloučení testů prostřednictvím kódu programu
 
@@ -208,15 +208,15 @@ Atribut můžete použít <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeC
 
 Pomocí následujících atributů vylučte jednotlivé metody z Live Unit Testing:
 
-- Pro xUnit:`[Trait("Category", "SkipWhenLiveUnitTesting")]`
-- Pro NUnit:`[Category("SkipWhenLiveUnitTesting")]`
-- Pro MSTest:`[TestCategory("SkipWhenLiveUnitTesting")]`
+- Pro xUnit: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
+- Pro NUnit: `[Category("SkipWhenLiveUnitTesting")]`
+- Pro MSTest: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
 Pomocí následujících atributů vylučte celé sestavení testů z Live Unit Testing:
 
-- Pro xUnit:`[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
-- Pro NUnit:`[assembly: Category("SkipWhenLiveUnitTesting")]`
-- Pro MSTest:`[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
+- Pro xUnit: `[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
+- Pro NUnit: `[assembly: Category("SkipWhenLiveUnitTesting")]`
+- Pro MSTest: `[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
 
 ## <a name="see-also"></a>Viz také
 

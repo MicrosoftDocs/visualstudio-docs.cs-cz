@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 32766fdf69136f3882186bbcad08aaf83d2e573e
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: a8f3e183bd72e9894eae55a5ed7c4f9322d44953
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85815744"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250093"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Začínáme s Visual Studio Tools for Unity
 
@@ -66,13 +66,11 @@ Pokud už máte nainstalovanou aplikaci Visual Studio nebo pokud chcete ručně 
 
 1. Klikněte na **Upravit** (Pokud je už nainstalovaný) nebo **nainstalujte** (pro nové instalace) v pravém dolním rohu okna instalačního programu.
 
-
 #### <a name="check-for-updates-to-visual-studio"></a>Vyhledat aktualizace sady Visual Studio
 
 Doporučuje se zkontrolovat aktualizace v sadě Visual Studio, abyste měli jistotu, že máte přístup k nejnovějším nástrojům a funkcím. Tím nedojde k přerušení vašeho projektu Unity.
 
 - [Aktualizace sady Visual Studio](../install/update-visual-studio.md)
-
 
 ## <a name="configure-unity-for-use-with-visual-studio"></a>Konfigurace Unity pro použití se sadou Visual Studio
 
@@ -98,7 +96,6 @@ Od Unity 2018,1 by měl být Visual Studio výchozím editorem externích skript
    ![Vybrat Visual Studio](media/vs-2019/vstu-unity-external-tools.png)
    :::moniker-end
 
-
 4. Pokud jste vybrali možnost **Procházet...** , přejděte do adresáře **Common7/IDE** v instalačním adresáři sady Visual Studio a vyberte **devenv.exe**. Pak klikněte na **otevřít**.
 
    :::moniker range="vs-2017"
@@ -123,7 +120,6 @@ Stáhněte a nainstalujte Visual Studio Tools for Unity z Visual Studio Marketpl
 > [!NOTE]
 > Visual Studio Tools for Unity vyžaduje Unity 5,2 a vyšší a také verzi sady Visual Studio, která podporuje rozšíření, jako je Visual Studio Community, Professional, Premium nebo Enterprise. Pokud chcete ověřit, že je ve vaší instalaci Unity povolený Visual Studio Tools for Unity, vyberte z nabídky **help** možnost **o Unity** a vyhledejte text "Microsoft Visual Studio nástrojů pro Unity Enabled" v levém dolním rohu dialogového okna.
 > ![o Unity](media/vs-2019/vstu-about-unity.png)
-
 
 ## <a name="next-steps"></a>Další kroky
 

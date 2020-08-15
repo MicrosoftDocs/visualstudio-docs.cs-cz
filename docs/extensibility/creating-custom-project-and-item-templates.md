@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c702aaaa51d86e2b8aac18a6b55201be03a635f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 2d520c92e84286ab05f13ad140a9e2e5a3454e09
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903322"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248570"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Vytváření vlastních šablon projektů a položek
 
@@ -72,9 +72,9 @@ V případě scénářů pro základní vytváření šablon byste měli použí
 
 1. Vytvořte projekt VSIX. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).
 
-2. Nastavte projekt VSIX jako spouštěný projekt. V **Průzkumník řešení**vyberte uzel projekt VSIX, klikněte pravým tlačítkem myši a vyberte **nastavit jako spouštěný projekt**.
+2. Nastavte projekt VSIX jako spouštěný projekt. V **Průzkumník řešení**vyberte uzel projekt VSIX, vyberte a podržení (nebo klikněte pravým tlačítkem myši) a vyberte **nastavit jako spouštěný projekt**.
 
-3. Nastavte projekt šablony projektu jako Asset projektu VSIX. Otevřete soubor *. vsixmanifest* . Přejděte na kartu **assets (prostředky** ) a klikněte na **Nový**.
+3. Nastavte projekt šablony projektu jako Asset projektu VSIX. Otevřete soubor *. vsixmanifest* . Přejít na kartu **assety** a vyberte **Nový**.
 
     1. Nastavte pole **typ** na **Microsoft. VisualStudio. ProjectTemplate** nebo **Microsoft. VisualStudio. ItemTemplate**.
 
@@ -82,7 +82,7 @@ V případě scénářů pro základní vytváření šablon byste měli použí
 
 4. Sestavte řešení a stiskněte klávesu **F5**. Objeví se experimentální instance.
 
-5. V projektu šablony projektu by se měla zobrazit šablona projektu uvedená v dialogovém okně **Nový projekt** (**soubor**  >  **Nový**  >  **projekt**) v uzlu Visual C# nebo Visual Basic. Pro projekt šablony položky by se měla zobrazit Šablona položky uvedená v dialogovém okně **Přidat novou položku** . Chcete-li zobrazit dialogové okno **Přidat novou položku** , vyberte z **Průzkumník řešení**uzel projektu a klikněte na tlačítko **Přidat**  >  **novou položku**).
+5. V projektu šablony projektu by se měla zobrazit šablona projektu uvedená v dialogovém okně **Nový projekt** (**soubor**  >  **Nový**  >  **projekt**) v uzlu Visual C# nebo Visual Basic. Pro projekt šablony položky by se měla zobrazit Šablona položky uvedená v dialogovém okně **Přidat novou položku** . Chcete-li zobrazit dialogové okno **Přidat novou položku** , vyberte z **Průzkumník řešení**uzel projektu a vyberte **Přidat**  >  **novou položku**).
 
 ## <a name="see-also"></a>Viz také
 

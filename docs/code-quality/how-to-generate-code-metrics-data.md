@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 078bce0778122b296dcd918d4a9074eed5397f54
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 51c125942f82b43cf786591bc0e364764dc1965e
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371843"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250539"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -163,6 +163,7 @@ Build succeeded.
 Generovaný výstup XML má následující formát:
 
 ::: moniker range=">=vs-2019"
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <CodeMetricsReport Version="1.0">
@@ -217,8 +218,10 @@ Generovaný výstup XML má následující formát:
   </Targets>
 </CodeMetricsReport>
 ```
+
 ::: moniker-end
 ::: moniker range="vs-2017"
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <CodeMetricsReport Version="1.0">
@@ -269,6 +272,7 @@ Generovaný výstup XML má následující formát:
   </Targets>
 </CodeMetricsReport>
 ```
+
 ::: moniker-end
 
 ### <a name="metricsexe"></a>Metrics.exe
@@ -277,7 +281,7 @@ Pokud balíček NuGet nechcete instalovat, můžete *Metrics.exe* spustitelný s
 
 1. Naklonujte úložiště [dotnet/Roslyn-analyzers](https://github.com/dotnet/roslyn-analyzers) .
 2. Otevřete Developer Command Prompt pro Visual Studio jako správce.
-3. Z kořenového adresáře úložiště **Roslyn-Analyzer** spusťte následující příkaz:`Restore.cmd`
+3. Z kořenového adresáře úložiště **Roslyn-Analyzer** spusťte následující příkaz: `Restore.cmd`
 4. Změňte adresář na *src\Tools*.
 5. Spuštěním následujícího příkazu Sestavte projekt **metriky. csproj** :
 

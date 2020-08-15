@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 424b325b244499a18077cc1df0ff9164c41763d2
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: a190790b915ac8dd011bc9843fe8abdf2d7381ae
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85815458"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249575"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: vytvoření dokumentu XML na základě schématu XSD
 
@@ -31,7 +31,7 @@ Tato funkce obvykle generuje platné dokumenty XML. Pokud však schéma obsahuje
 
 - `xs:key` `xs:keyref` Omezení identity, a `xs:unique` .
 
-- `xs:pattern`omezující vlastnosti.
+- `xs:pattern` omezující vlastnosti.
 
 - Výčty `xs:QName` typu.
 
@@ -43,7 +43,7 @@ Také si všimněte, že `xs:base64Binary` obsah bude vygenerován pouze v pří
 
 1. Postupujte podle kroků v tématu [Postupy: vytvoření a úprava souboru schématu XSD](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md).
 
-2. V [Průzkumníku schémat XML](../xml-tools/xml-schema-explorer.md)klikněte pravým tlačítkem na `PurchaseOrder` globální prvek. Vyberte **vytvořit ukázkový kód XML**.
+2. V [Průzkumníku schémat XML](../xml-tools/xml-schema-explorer.md)vyberte a podržení (nebo klikněte pravým tlačítkem) na `PurchaseOrder` globální prvek a pak vyberte **vytvořit ukázkový kód XML**.
 
      Když vyberete tuto možnost, PurchaseOrder. soubor *XML* s následujícím ukázkovým obsahem XML bude vygenerován a otevřen v editoru XML:
 

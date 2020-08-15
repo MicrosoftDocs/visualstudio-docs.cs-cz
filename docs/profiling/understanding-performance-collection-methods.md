@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a37d58d1bd18ef19f610602ec8f2238816405e4
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ecbabae86b762c9143dba6be5aa0e4683a92b0dd
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285748"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250767"
 ---
 # <a name="understand-performance-collection-methods"></a>Vysvětlení metod shromažďování výkonu
 
@@ -86,21 +86,21 @@ Pomocí metody instrumentace můžete také shromažďovat čítače výkonu CPU
 
 Profilace souběžnosti shromažďuje informace o vícevláknových aplikacích. Profilování kolizí prostředků shromažďuje podrobné informace o zásobníku volání, kdykoli konkurenční vlákna čekají na přístup ke sdílenému prostředku. Vizualizace souběžnosti také shromažďuje obecnější informace o tom, jak aplikace s více vlákny spolupracuje s:
 
-  - Využít.
-  - Hardware.
-  - Operační systém.
-  - Jiné procesy v hostitelském počítači.
+- Využít.
+- Hardware.
+- Operační systém.
+- Jiné procesy v hostitelském počítači.
 
 V sestavách prostředku a obsahu se zobrazují celkový počet sporů. Také oznamují celkový čas, po který jsou moduly, funkce, řádky zdrojového kódu a instrukce pro určitý prostředek očekávány. Grafy časové osy zobrazují spory, jak se objevily.
 
 Vizualizátor souběžnosti zobrazuje grafické informace, které vám pomůžou najít:
 
-  - Kritická místa výkonu.
-  - Nevyužití procesoru.
-  - Spor vlákna.
-  - Migrace vlákna.
-  - Zpoždění synchronizace.
-  - Oblasti překrývajících se vstupně-výstupní operace.
+- Kritická místa výkonu.
+- Nevyužití procesoru.
+- Spor vlákna.
+- Migrace vlákna.
+- Zpoždění synchronizace.
+- Oblasti překrývajících se vstupně-výstupní operace.
 
   Pokud je to možné, grafický výstup odkazuje na data ze zásobníku volání a zdrojového kódu. Data vizualizace souběžnosti se dají shromažďovat jenom pro aplikace z příkazového řádku a pro aplikace pro Windows.
 

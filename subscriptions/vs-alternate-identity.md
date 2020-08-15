@@ -7,12 +7,12 @@ ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Jak přidat alternativní identitu pro předplatné sady Visual Studio, která se má použít pro Azure DevOps a Azure
-ms.openlocfilehash: f8b634bd2f59bf3de038e7200900ee9930d79fff
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0db6f0f37127c600d529734085da23c30df73b9b
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289367"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248410"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Identity pro předplatitele sady Visual Studio
 Při aktivaci předplatného sady Visual Studio propojíme identitu (nebo přihlášení), kterou jste použili během aktivace v rámci předplatného sady Visual Studio. Tímto způsobem můžeme na [portálu pro předplatitele Visual studia](https://my.visualstudio.com?wt.mc_id=o~msft~docs), v Azure DevOps a v Azure.
@@ -33,7 +33,7 @@ U všech předplatných můžete přidat pracovní nebo školní účet, abyste 
 
 ### <a name="add-the-alternate-account"></a>Přidání alternativního účtu
 1. Přihlaste se k portálu předplatitele sady Visual Studio pomocí účet Microsoft ( https://my.visualstudio.com) .
-2. Klikněte na kartu **předplatná** .
+2. Vyberte kartu **předplatná** .
 3. Vyberte **Přidat alternativní účet**.
 4. Přidejte svůj pracovní nebo školní účet.
     > [!div class="mx-imgBorder"]
@@ -43,7 +43,7 @@ U všech předplatných můžete přidat pracovní nebo školní účet, abyste 
 
 Váš alternativní účet se přidá do předplatného sady Visual Studio, což umožňuje, aby obě identity využily výhod předplatného, které vyžaduje, abyste se přihlásili pomocí alternativního účtu (IDE, Azure DevOps a Azure).
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 ### <a name="q--why-doesnt-azure-devops-recognize-me-as-a-visual-studio-subscriber"></a>Otázka: Proč Azure DevOps nerozpozná mě jako předplatitel sady Visual Studio?
 

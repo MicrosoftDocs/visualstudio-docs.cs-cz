@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
 ms.topic: how-to
-ms.openlocfilehash: ee30af4ed578bbc59924fcd8968b97dcf9306619
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 518dd80d230e3d2518ae69520781818826363ecc
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950027"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247464"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
 
@@ -198,10 +198,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Pro starší verze je nutné ručně odebrat následující artefakty:
 
-* Odstranit aplikaci sešitů na`"/Applications/Xamarin Workbooks.app"`
-* Odstranit aplikaci Inspector na`"Applications/Xamarin Inspector.app"`
-* Odstraňte doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Odstraňte inspektor a podpůrné soubory zde: `/Library/Frameworks/Xamarin.Interactive.framework` a`/Library/Frameworks/Xamarin.Inspector.framework`
+* Odstranit aplikaci sešitů na `"/Applications/Xamarin Workbooks.app"`
+* Odstranit aplikaci Inspector na `"Applications/Xamarin Inspector.app"`
+* Odstraňte doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Odstraňte inspektor a podpůrné soubory zde: `/Library/Frameworks/Xamarin.Interactive.framework` a `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Odinstalace Xamarin Profiler
 
@@ -222,11 +222,7 @@ rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
 
-* * * 
-
-
-
-
+* * *
 
 ## <a name="uninstall-visual-studio-2019-for-mac-preview"></a>Odinstalace sady Visual Studio 2019 for Mac Preview
 

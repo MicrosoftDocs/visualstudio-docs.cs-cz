@@ -14,11 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d8b5e05fb234e9997bce615f7b2de1d790c1ae0
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.openlocfilehash: 7fe560ae0c639ec8c400719738ea1f52b5315a9a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86014583"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247657"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>Návod: Vytvoření webové části pro službu SharePoint
 
@@ -203,7 +204,7 @@ Chcete-li naplnit datovou mřížku, která se zobrazí ve webové části, zade
 
 ## <a name="test-the-web-part-verb"></a>Testování příkazu webové části
 
-Kliknutím na položku, která se zobrazí v nabídce příkazy webové části, zobrazte a skryjte zaměstnance, kteří nejsou manažeři.
+Umožňuje zobrazit a skrýt zaměstnance, kteří nejsou manažeři, a to tak, že vyberete položku, která se zobrazí v nabídce příkazy webové části.
 
 1. Zvolte šipku, která se zobrazí na pravé straně webové části, a zvolte možnost **Zobrazit správce pouze** z nabídky, která se zobrazí.
 
@@ -213,7 +214,7 @@ Kliknutím na položku, která se zobrazí v nabídce příkazy webové části,
 
      Všichni zaměstnanci se zobrazí ve webové části.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
  [Postupy: Vytvoření webové části](../sharepoint/how-to-create-a-sharepoint-web-part.md) 

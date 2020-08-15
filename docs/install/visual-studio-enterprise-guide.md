@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3d223d6e1e6ed3bf4b75b1c66bcc0f9dc897cfed
-ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
+ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87440673"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247644"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Příručka pro Visual Studio Enterprise
 Pokud chcete ušetřit čas během vaší společnosti, která běží na Visual Studiu, začněte tady. Tato podniková příručka obsahuje tipy, které vám pomohou při instalaci a aktualizaci sady Visual Studio v běžných podnikových scénářích, odblokování, pokud dojde k problémům, a Naučte se, jak ohlásit problém, pokud potřebujete další pomoc. 
@@ -67,9 +67,6 @@ Přečtěte si, jak úspěšně aktualizovat Visual Studio a opravit problémy s
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také: 
+## <a name="see-also"></a>Viz také 
 
 - [Průvodce produktivitou pro Visual Studio](../ide/productivity-features.md)
-
-
-

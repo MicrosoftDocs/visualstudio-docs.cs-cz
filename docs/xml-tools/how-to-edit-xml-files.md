@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ce3e41b2fe9dfdb080e23fb4270454bbd57f7ef
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 02f078d9293fa8b02267c5003a92d1d60134e1a4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85817200"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249513"
 ---
 # <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
 
@@ -22,7 +22,7 @@ Editor XML je nový editor pro soubory XML. Dá se použít v samostatném soubo
 > [!NOTE]
 > Dokumenty XHTML jsou zpracovávány editorem HTML.
 
-Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravit.
+Chcete-li upravit soubor XML, otevřete soubor, který chcete upravit.
 
 ## <a name="add-a-new-xml-file-to-a-project"></a>Přidat nový soubor XML do projektu
 
@@ -50,7 +50,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 2. Vyberte **soubor XML** , chcete-li vytvořit nový soubor XML; nebo vyberte **soubor XSLT** pro vytvoření nové šablony stylů XSLT.
 
-3. Klikněte na **Otevřít**.
+3. Vyberte **Otevřít**.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>Vytvoření prázdného projektu pro soubory XML
 
@@ -62,7 +62,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 2. Vyberte jazyk kódu, který chcete zvolit, a pak vyberte šablonu **prázdného projektu (.NET Framework)** .
 
-3. Klikněte na **OK**.
+3. Vyberte **OK**.
 
 ::: moniker-end
 
@@ -70,9 +70,9 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
 1. V nabídce **soubor** vyberte možnost **Nový** > **projekt**.
 
-2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak klikněte na **Další**.
+2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak vyberte **Další**.
 
-3. Klikněte na **Vytvořit**.
+3. Vyberte **Vytvořit**.
 
 ::: moniker-end
 
@@ -80,7 +80,7 @@ Chcete-li upravit soubor XML, dvakrát klikněte na soubor, který chcete upravi
 
    Editor XML vyhledá schémata, která přidáte do tohoto projektu, a použije je pro ověřování a IntelliSense v jakémkoli souboru XML, schématu nebo souboru XSLT, které upravíte v otevřeném projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Editor XML](../xml-tools/xml-editor.md)
 - [Vlastnosti dokumentu XML, okno vlastností](../xml-tools/xml-document-properties-properties-window.md)

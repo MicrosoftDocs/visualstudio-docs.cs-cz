@@ -1,7 +1,7 @@
 ---
-title: Výuka flask v kroku 4 sady Visual Studio, šablony webových projektů
+title: Kurz k seznámení s kurzem v aplikaci Visual Studio Step 4, šablony webových projektů
 titleSuffix: ''
-description: Návod základy Flask v kontextu projektů sady Visual Studio, konkrétně funkce poskytované flask webový projekt a flask/ Jade web project šablony.
+description: Návod základů v baňce v kontextu projektů aplikace Visual Studio, konkrétně o funkcích poskytovaných šablonami webového projektu na baňce a na baňce/Jade.
 ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,82 +11,82 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9f4c165f3e882cea71ee4aaff9f2358c27ce6a2b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: fa59197e584c6c8062c13354178f883b60b36442
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62957233"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250567"
 ---
-# <a name="step-4-use-the-full-flask-web-project-template"></a>Krok 4: Použití úplné šablony webového projektu Flask
+# <a name="step-4-use-the-full-flask-web-project-template"></a>Krok 4: použití šablony webového projektu na celé baňce
 
-**Předchozí krok: [Obsluha statických souborů, přidávání stránek a používání dědičnosti šablony](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)**
+**Předchozí krok: [poskytování statických souborů, přidávání stránek a použití dědičnosti šablon](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)**
 
-Teď, když jste prozkoumali základy Flask vytvořením aplikace na šabloně "Blank Flask App Project" v sadě Visual Studio, můžete snadno pochopit plnější aplikaci, která je vytvořena šablonou "Flask Web Project".
+Teď, když jste prozkoumali základy baňky vytvořením aplikace v šabloně projektu "prázdná aplikace" v aplikaci Visual Studio, můžete snadno pochopit celou aplikaci, která je vytvořená šablonou "webový projekt v baňce".
 
-V tomto kroku nyní:
+V tomto kroku teď:
 
 > [!div class="checklist"]
-> - Vytvořte plnější webovou aplikaci Flask pomocí šablony "Flask Web Project" a prohlédněte si strukturu projektu (krok 4-1)
-> - Porozumět zobrazením a šablonám stránek vytvořeným šablonou projektu, které se skládají ze tří stránek, které dědí ze základní šablony stránky a které využívají statické knihovny JavaScriptu, jako je jQuery a Bootstrap (krok 4-2)
-> - Principy směrování adres URL poskytovaného šablonou (krok 4-3)
+> - Vytvoření webové aplikace s celými baňkami pomocí šablony "webový projekt v baňce" a kontrola struktury projektu (krok 4-1)
+> - Seznamte se s zobrazeními a šablonami stránek vytvořenými šablonou projektu, které se skládají ze tří stránek, které dědí ze základní šablony stránky a které využívají statické knihovny JavaScriptu jako jQuery a Bootstrap (krok 4-2).
+> - Pochopení směrování adres URL poskytovaného šablonou (krok 4-3)
 
-Tento článek se vztahuje také na šablonu "Flask/Jade Web Project", která vytváří aplikaci, která je shodná s aplikací "Flask Web Project" pomocí modulu Jade templating místo Jinja. Další podrobnosti jsou uvedeny na konci tohoto článku.
+Tento článek se vztahuje také na šablonu "webový projekt v baňce/Jade", která vytvoří aplikaci, která je shodná s verzí "webový projekt v baňce" pomocí modulu Jade šablonování namísto Jinja. Další podrobnosti jsou uvedeny na konci tohoto článku.
 
-## <a name="step-4-1-create-a-project-from-the-template"></a>Krok 4-1: Vytvoření projektu ze šablony
+## <a name="step-4-1-create-a-project-from-the-template"></a>Krok 4-1: vytvoření projektu ze šablony
 
-1. V sadě Visual Studio přejděte do **Průzkumníka řešení**, klepněte pravým tlačítkem myši na řešení **LearningFlask** vytvořené dříve v tomto kurzu a vyberte **přidat** > **nový projekt**. (Pokud chcete použít nové řešení, vyberte místo toho **možnost Soubor** > **nového** > **projektu.)**
+1. V aplikaci Visual Studio přejděte na **Průzkumník řešení**, klikněte pravým tlačítkem na řešení **LearningFlask** vytvořené dříve v tomto kurzu a vyberte **Přidat**  >  **Nový projekt**. (Případně, pokud chcete použít nové řešení, vyberte **soubor**  >  **Nové**  >  Místo toho **projekt** .)
 
-1. V novém dialogovém okně projektu vyhledejte a vyberte šablonu **webového projektu Flask,** zavolejte projekt "FlaskWeb" a vyberte **OK**.
+1. V dialogovém okně Nový projekt vyhledejte a vyberte šablonu **webového projektu baňky** , zavolejte projekt "FlaskWeb" a vyberte **OK**.
 
-1. Vzhledem k tomu, že šablona opět obsahuje soubor *requirements.txt,* Visual Studio se zeptá, kam nainstalovat tyto závislosti. Zvolte možnost Instalovat **do virtuálního prostředí**a v dialogovém okně Přidat virtuální **prostředí** vyberte **Vytvořit,** abyste přijali výchozí hodnoty.
+1. Vzhledem k tomu, že šablona znovu obsahuje soubor *requirements.txt* , Visual Studio zobrazí výzvu k instalaci těchto závislostí. Zvolte možnost, **nainstalujte ji do virtuálního prostředí**a v dialogovém okně **Přidat virtuální prostředí** vyberte **vytvořit** a přijměte výchozí hodnoty.
 
-1. Po dokončení nastavení virtuálního prostředí nastavte projekt **FlaskWeb** jako výchozí pro řešení sady Visual Studio klepnutím pravým tlačítkem myši na tento projekt v **Průzkumníkovi řešení** a výběrem **možnosti Nastavit jako projekt po spuštění**. Projekt spuštění, který je zobrazen tučně, je to, co je spuštěno při spuštění ladicího programu.
+1. Jakmile sada Visual Studio dokončí nastavení virtuálního prostředí, nastavte projekt **FlaskWeb** jako výchozí pro řešení sady Visual Studio tak, že kliknete pravým tlačítkem na projekt v **Průzkumník řešení** a vyberete **nastavit jako spouštěný projekt**. Spouštěný projekt, který je zobrazen tučně, je spuštěn při spuštění ladicího programu.
 
-    ![Průzkumník řešení zobrazující projekt FlaskWeb jako spouštěcí projekt](media/flask/step04-second-project-in-solution-set-as-startup-project.png)
+    ![Průzkumník řešení zobrazení projektu FlaskWeb jako spouštěného projektu](media/flask/step04-second-project-in-solution-set-as-startup-project.png)
 
-1. Vyberte **Možnost Ladění** > **spouštět ladění** **(F5)** nebo pomocí tlačítka Webový **server** na panelu nástrojů spusťte server:
+1. Vyberte **ladit**  >  **Spustit ladění** (**F5**) nebo pomocí tlačítka **webový server** na panelu nástrojů spusťte server:
 
-    ![Tlačítko Panelu nástrojů webového serveru v sadě Visual Studio](media/flask/run-web-server-toolbar-button.png)
+    ![Spustit tlačítko na panelu nástrojů webového serveru v sadě Visual Studio](media/flask/run-web-server-toolbar-button.png)
 
-1. Aplikace vytvořená šablonou má tři stránky, Domovská stránka, Informace a Kontakt, mezi nimiž procházíte pomocí nav panelu. Udělejte si minutu nebo dvě, abyste prozkoumali různé části aplikace. Chcete-li se s aplikací ověřit pomocí příkazu **Přihlásit,** použijte dříve vytvořená pověření superuživatele.
+1. Aplikace vytvořená šablonou má tři stránky, domů, o a kontakt, které můžete procházet pomocí navigačního panelu. Podíváme se na jednu minutu nebo dvě, abyste prozkoumali různé části aplikace. K ověřování pomocí aplikace pomocí příkazu **Přihlásit** použijte přihlašovací údaje uživatele, které jste vytvořili dříve.
 
-    ![Zobrazení celého prohlížeče aplikace Flask Web Project](media/flask/step04-full-app-desktop-view.png)
+    ![Úplné zobrazení prohlížeče aplikace webového projektu v baňce](media/flask/step04-full-app-desktop-view.png)
 
-1. Aplikace vytvořená šablonou "Flask Web Project" používá Bootstrap pro responzivní rozložení, které vyhovuje mobilním tvarovým faktorům. Chcete-li zobrazit tuto odezvu, změňte velikost prohlížeče do úzkého zobrazení tak, aby se obsah vykresloval svisle a nav panel se změní na ikonu nabídky:
+1. Aplikace vytvořená šablonou webového projektu v baňce používá Bootstrap pro reakce na rozložení, které vyhovuje faktorům pro mobilní zařízení. Chcete-li zobrazit tuto odezvu, změňte velikost prohlížeče tak, aby se obsah nakreslovat svisle a navigační panel se změní na ikonu nabídky:
 
-    ![Mobilní (úzký) pohled na aplikaci Flask Web Project](media/flask/step04-full-app-mobile-view.png)
+    ![Mobilní (úzké) zobrazení aplikace webového projektu v baňce](media/flask/step04-full-app-mobile-view.png)
 
-1. Aplikaci můžete nechat spuštěnou pro následující oddíly.
+1. Aplikaci můžete ponechat spuštěnou v následujících oddílech.
 
-    Pokud chcete aplikaci zastavit a [potvrdit změny správy zdrojového kódu](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control), otevřete **nejprve** stránku Změny v **Průzkumníkovi týmu**, klepněte pravým tlačítkem myši na složku virtuálního prostředí (pravděpodobně **env)** a vyberte **Ignorovat tyto místní položky**.
+    Pokud chcete zastavit aplikaci a [Potvrdit změny ve správě zdrojového kódu](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control), otevřete nejprve stránku **změny** v **Team Explorer**, klikněte pravým tlačítkem myši na složku virtuálního prostředí (pravděpodobně **ENV**) a vyberte možnost **ignorovat tyto místní položky**.
 
-### <a name="examine-what-the-template-creates"></a>Zkontrolujte, co šablona vytváří
+### <a name="examine-what-the-template-creates"></a>Kontrola vytvoření šablony
 
-Šablona "Flask Web Project" vytvoří níže uvedenou strukturu. Obsah je velmi podobný tomu, co jste vytvořili v předchozích krocích. Rozdíl je v tom, že šablona "Flask Web Project" obsahuje více struktury ve *statické* složce, protože obsahuje jQuery a Bootstrap pro responzivní návrh. Šablona také přidá stránku Kontakt. Celkově pokud jste postupovali podle předchozích kroků v tomto kurzu, vše ze šablony by mělo být známé.
+Šablona "webový projekt v baňce" vytvoří strukturu níže. Obsah je velmi podobný tomu, co jste vytvořili v předchozích krocích. Rozdílem je, že šablona "webový projekt v baňce" obsahuje více struktury ve *statické* složce, protože zahrnuje jQuery a Bootstrap pro návrh s odezvou. Šablona také přidá stránku kontaktů. Pokud jste postupovali podle předchozích kroků v tomto kurzu, měli byste si být vědomi všeho ze šablony.
 
-- Soubory v kořenovém adresáři projektu:
+- Soubory v kořenu projektu:
   - *runserver.py*, skript pro spuštění aplikace na vývojovém serveru.
-  - *requirements.txt* obsahující závislost na Flask 0.x.
+  - *requirements.txt* , který obsahuje závislost na baňce 0. x.
 - Složka *FlaskWeb* obsahuje všechny soubory aplikace:
-  - init.py označí kód aplikace jako modul Pythonu, vytvoří objekt Flask a importuje zobrazení aplikace. * \_ \_\_ *
+  - init.py označí kód aplikace jako modul Pythonu, vytvoří objekt v baňce a naimportuje zobrazení aplikace. * \_ \_ \_ \_ *
   - *views.py* obsahuje kód pro vykreslení stránek.
-  - *Statická* složka obsahuje podsložky s názvem *obsah* (soubory CSS), *písma* (soubory písem) a *skripty* (soubory JavaScriptu).
-  - Složka *šablony* obsahuje základní šablonu *layout.html* spolu s *about.html*, *contact.html*a *index.html* pro konkrétní stránky, které rozšiřují *layout.html*.
+  - *Statická* složka obsahuje podsložky s názvem *Content* (soubory CSS), *písma* (soubory písem) a *skripty* (soubory JavaScriptu).
+  - Složka *šablony* obsahuje základní šablonu *layout.html* spolu s *about.html*, *contact.html*a *index.html* pro konkrétní stránky, které každá rozšiřuje *layout.html*.
 
-### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Otázka: Je možné sdílet virtuální prostředí mezi projekty sady Visual Studio?
+### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Otázka: je možné sdílet virtuální prostředí mezi projekty sady Visual Studio?
 
-Odpověď: Ano, ale s vědomím, že různé projekty pravděpodobně používají různé balíčky v průběhu času, a proto sdílené virtuální prostředí musí obsahovat všechny balíčky pro všechny projekty, které jej používají.
+Odpověď: Ano, ale udělejte to s vědomím, že různé projekty nejspíš v průběhu času používají různé balíčky, a proto sdílené virtuální prostředí musí obsahovat všechny balíčky pro všechny projekty, které ji používají.
 
-Chcete-li však použít existující virtuální prostředí, postupujte takto:
+Chcete-li však použít stávající virtuální prostředí, postupujte následovně:
 
-1. Po zobrazení výzvy k instalaci závislostí v sadě Visual Studio vyberte **možnost Nainstalovat je sám.**
-1. V **Průzkumníku řešení**klepněte pravým tlačítkem myši na uzel **Prostředí Pythonu** a vyberte **přidat existující virtuální prostředí**.
-1. Přejděte do složky obsahující virtuální prostředí a vyberte ji a pak vyberte **OK**.
+1. Až se zobrazí výzva k instalaci závislostí v aplikaci Visual Studio, vyberte možnost **instalovat** vlastní.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte **Přidat existující virtuální prostředí**.
+1. Přejděte na složku obsahující virtuální prostředí a vyberte ji a pak vyberte **OK**.
 
-## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Krok 4-2: Pochopení zobrazení a šablon stránek vytvořených šablonou projektu
+## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Krok 4-2: porozumění zobrazením a šablonám stránek vytvořeným šablonou projektu
 
-Jak zjistíte při spuštění projektu, aplikace obsahuje tři zobrazení: Domů, O a Kontakt. Kód pro tato zobrazení se nachází v *FlaskWeb/views.py*. Každá funkce zobrazení `flask.render_template` jednoduše volá s cestou k šabloně a seznamem proměnných pro hodnoty, které mají být šabloně uvedeny. Například O stránce je zpracována `about` funkce (jehož decorator poskytuje směrování URL):
+Při spuštění projektu aplikace obsahuje tři zobrazení: domů, o aplikaci a kontakt. Kód pro tato zobrazení najdete v *FlaskWeb/views. py*. Každá funkce zobrazení jednoduše volá `flask.render_template` cestu k šabloně a seznam argumentů proměnných pro hodnoty, které mají být do šablony zadány. Například stránka about je zpracována `about` funkcí (jejíž dekoratér poskytuje směrování adres URL):
 
 ```python
 @app.route('/about')
@@ -100,9 +100,9 @@ def about():
     )
 ```
 
-Funkce `home` `contact` a jsou téměř identické, s podobnými dekoratéry a mírně odlišnými argumenty.
+`home`Funkce a `contact` jsou téměř identické, s podobným dekoratéry a mírně odlišnými argumenty.
 
-Šablony jsou *umístěny* ve složce šablony aplikace. Základní *šablona, layout.html*, je nejrozsáhlejší. Odkazuje na všechny potřebné statické soubory (JavaScript a CSS), definuje blok s názvem "obsah", který ostatní stránky přepsat, a poskytuje další blok s názvem "skripty". Následující poznámky z *layout.html* ukazují tyto specifické oblasti:
+Šablony se nacházejí ve složce *šablony* aplikace. Základní šablona, *layout.html*, je nejrozsáhlejší. Odkazuje na všechny nezbytné statické soubory (JavaScript a CSS), definuje blok s názvem "obsah", na který se přepíší jiné stránky, a poskytuje další blok s názvem "skripty". Následující výňatky uvedené v poznámce z *layout.html* znázorňují tyto konkrétní oblasti:
 
 ```html
 <!DOCTYPE html>
@@ -141,7 +141,7 @@ Funkce `home` `contact` a jsou téměř identické, s podobnými dekoratéry a m
 </html>
 ```
 
-Jednotlivé šablony *stránek, about.html*, *contact.html*a *index.html*, každá rozšířit základní šablony *layout.html*. *about.html* je nejjednodušší a `{% extends %}` zobrazuje `{% block content %}` a tagy:
+Jednotlivé šablony stránky, *about.html*, *contact.html*a *index.html*, každý rozšiřuje základní šablonu *layout.html*. *about.html* je nejjednodušší a ukazuje `{% extends %}` `{% block content %}` značky a:
 
 ```html
 {% extends "app/layout.html" %}
@@ -156,23 +156,23 @@ Jednotlivé šablony *stránek, about.html*, *contact.html*a *index.html*, každ
 {% endblock %}
 ```
 
-*index.html* a *contact.html* používají stejnou strukturu a poskytují delší obsah v bloku "obsah".
+*index.html* a *contact.html* používají stejnou strukturu a poskytují lengthier obsah v bloku Content.
 
-## <a name="the-flaskjade-web-project-template"></a>Šablona webového projektu Flask/Jade
+## <a name="the-flaskjade-web-project-template"></a>Šablona webového projektu pro baňky nebo Jade
 
-Jak je uvedeno na začátku tohoto článku, Visual Studio poskytují šablonu "Flask/Jade Web Project", která vytvoří aplikaci, která je vizuálně identická s tím, co je produkován "Flask Web Project". Hlavním rozdílem je, že používá motor Jade templating, což je rozšíření jinja, které implementuje stejné koncepty s stručnějším jazykem. Jade konkrétně používá klíčová slova namísto značek uzavřených například v oddělovačích {% %} a umožňuje odkazovat na styly CSS a prvky HTML pomocí klíčových slov.
+Jak je uvedeno na začátku tohoto článku, Visual Studio poskytuje šablonu pro webový projekt ve formátu "baněk/Jade", která vytvoří aplikaci, která je vizuálně shodná s tím, co je vytvořeno pomocí "webové projekty v baňce". Hlavním rozdílem je to, že používá modul Jade šablonování, což je rozšíření Jinja, které implementuje stejné koncepty s pokročilejším jazykem. Konkrétně Jade používá klíčová slova namísto značek uzavřených do {%%} oddělovačů, například a umožňuje odkazování stylů CSS a prvků HTML pomocí klíčových slov.
 
-Chcete-li povolit Jade, šablona projektu nejprve obsahuje balíček pyjade v *requirements.txt*.
+Aby bylo možné povolit Jade, šablona projektu nejprve zahrnuje balíček pyjade v *requirements.txt*.
 
-Soubor * \_ \_init\_\_.py* aplikace obsahuje řádek
+Soubor * \_ \_ init \_ \_ . py* aplikace obsahuje řádek pro
 
 ```python
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 ```
 
-Ve složce *šablony* se místo šablon *HTML* zobrazují soubory *.jade* a zobrazení v *views.py* odkazují `flask.render_template`na tyto soubory v jejich volání . V opačném případě je kód zobrazení stejný.
+Ve složce *šablony* se zobrazí soubory *. Jade* namísto šablon *. html* a zobrazení v *views.py* odkazují na tyto soubory v volání `flask.render_template` . V opačném případě je kód zobrazení stejný.
 
-Otevření jednoho ze souborů *.jade,* můžete vidět stručnější výraz šablony. Například zde je obsah *šablon/layout.jade,* jak je vytvořen šablonou "Flask/Jade Web Project":
+Otevřením jednoho ze souborů *. Jade* můžete zobrazit výstižnější výraz šablony. Tady je například obsah *šablony/layout. Jade* , jak je vytvořený šablonou webového projektu "baňka/Jade":
 
 ```jade
 doctype html
@@ -214,7 +214,7 @@ html
     block scripts
 ```
 
-A tady je obsah *šablon / about.jade*, `#{ <name>}` ukazující použití pro zástupné symboly:
+A tady je obsah *šablon/About. Jade*, který ukazuje použití `#{ <name>}` zástupných symbolů:
 
 ```jade
 extends layout
@@ -225,15 +225,15 @@ block content
   p Use this area to provide additional information.
 ```
 
-Neváhejte a experimentujte se syndaněmi Jinja i Jade a zjistěte, který z nich vám nejlépe vyhovuje.
+Nebojte se experimentovat s Jinja a Jade syntaxemi, abyste viděli, které z nich nejlépe vyhovuje.
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Šablona webového projektu Polls Flask](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+> [Šablona webového projektu v baňce k dotazům](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
 
-## <a name="go-deeper"></a>Jděte hlouběji
+## <a name="go-deeper"></a>Přejít hlouběji
 
-- [Psaní první flask app, část 4 - formuláře a obecná zobrazení](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
-- [Jade na GitHib (dokumentace)](https://github.com/liuliqiang/pyjade) (github.com)
-- Zdrojový kód kurzu na [GitHubu: Microsoft/python-sample-vs-learning-baňka](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- [Vytvoření první aplikace v baňce, část 4 – formuláře a obecná zobrazení](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
+- [Jade na GitHubu (dokumentace)](https://github.com/liuliqiang/pyjade) (GitHub.com)
+- Kurz zdrojového kódu na GitHubu: [Microsoft/Python-Sample-vs-Learning-baněk](https://github.com/Microsoft/python-sample-vs-learning-flask)

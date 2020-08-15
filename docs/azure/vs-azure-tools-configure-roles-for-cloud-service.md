@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: d90567e86d782a64f42f7fdbd06f295a5f130b3a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6f05f97155427d75b88bb509a6bfb09644d8c686
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280860"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250847"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudová služba Azure může mít jednu nebo víc pracovních rolí nebo webových rolí. Pro každou roli musíte definovat způsob nastavení této role a také nakonfigurovat, jak se tato role spouští. Další informace o rolích v cloudových službách najdete v tématu [Úvod do Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
@@ -112,7 +112,7 @@ Při použití jiné hodnoty pro každou konfiguraci služby nemusíte v cloudov
 
 1. V dialogovém okně **vytvořit připojovací řetězec úložiště** vyberte možnost **připojit pomocí**. Pak postupujte podle pokynů pro vybranou možnost:
 
-    - **Microsoft Azure emulátor úložiště** – Pokud vyberete tuto možnost, zbývající nastavení v dialogovém okně budou zakázaná, protože se vztahují jenom na Azure. Vyberte **OK**.
+    - **Emulátor úložiště Microsoft Azure** – Pokud vyberete tuto možnost, zbývající nastavení v dialogovém okně jsou zakázaná, protože se vztahují jenom na Azure. Vyberte **OK**.
     - **Vaše předplatné** – Pokud vyberete tuto možnost, použijte rozevírací seznam k výběru a přihlášení do účet Microsoft nebo přidejte účet Microsoft. Vyberte předplatné Azure a účet úložiště. Vyberte **OK**.
     - **Ručně zadané přihlašovací údaje** – zadejte název účtu úložiště a buď primární, nebo druhý klíč. Vyberte možnost **připojení** (protokol HTTPS se doporučuje pro většinu scénářů). Vyberte **OK**.
 

@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
 ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného s žádostí o pomoc s dotazy nebo problémy.
-ms.openlocfilehash: 1ee5b5091c9321a76117f7d7e1c232973f3c2dd5
-ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
+ms.openlocfilehash: d3469fa5c8ba69cf5a4d4dab6d5c4b6be070f4d8
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87434249"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247433"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Získat pomoc od správce předplatného
 Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci nebo ve škole, je pravděpodobné, že vám byl přiřazen správce předplatných nebo "admin".  Správci můžou přiřadit nebo odebírat předplatná, měnit e-mailové adresy, určit, jestli máte možnost stahovat software, a provádět další funkce související s vaším předplatným.
@@ -20,14 +20,14 @@ Pokud máte vaše předplatné sady Visual Studio k dispozici ve své práci neb
 Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi toho, kdo je správce, takže může být obtížné vědět, kde získat nápovědu.  Do portálu pro předplatitele jsme přidali novou funkci, která vám pomůže kontaktovat svého správce.   
 
 ## <a name="how-to-contact-your-admin"></a>Jak kontaktovat správce
-1. Přihlaste se k portálu pro předplatitele na adrese<https://my.visualstudio.com>
-2. Klikněte na kartu **předplatná** . 
-3. Klikněte na tlačítko **Kontakt na správce** v pravém horním rohu. 
+1. Přihlaste se k portálu pro předplatitele na adrese <https://my.visualstudio.com>
+2. Vyberte kartu **předplatná** . 
+3. V pravém horním rohu vyberte tlačítko **kontaktujte správce** . 
    > [!div class="mx-imgBorder"]
-   > ![Kontaktujte správce](_img/contact-my-admin/contact-my-admin-button.png "Klikněte na tlačítko kontakt na správce, zadejte svou zprávu a klikněte na Odeslat.")
+   > ![Kontaktujte správce](_img/contact-my-admin/contact-my-admin-button.png "Vyberte tlačítko kontaktujte správce, zadejte zprávu a vyberte Odeslat.")
 4. Zadejte zprávu pro správce.
-5. Pokud chcete dostávat kopii zprávy odeslané vašemu správci, klikněte na zaškrtávací políčko **Odeslat do kopie** . 
-6. Nakonec klikněte na **Odeslat**.
+5. Pokud chcete dostávat kopii zprávy odeslané správci, klikněte na zaškrtávací políčko **Odeslat kopii** . 
+6. Nakonec vyberte **Odeslat**.
 
 > [!NOTE]
 > **Super správci:**  Chcete-li nastavit e-mailovou adresu, na kterou jsou odesílány žádosti "kontaktujte my admin", zadejte tuto adresu v [předvolbách smlouvy](admin-prefs.md#contact-email-address).
@@ -35,8 +35,8 @@ Vzhledem k velikosti a složitosti mnoha organizací si nemusíte být vědomi t
 ## <a name="resources"></a>Zdroje a prostředky
 - [Podpora správy a předplatných sady Visual Studio](https://visualstudio.microsoft.com/support/support-overview-vs)
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

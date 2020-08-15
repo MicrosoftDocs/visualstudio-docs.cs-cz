@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ccfe636cd8981c2f9dcc1375fb795d6c026b572
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: a6fefcea57b97ad3b31e4d10330756565c005184
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211573"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248776"
 ---
 # <a name="select-code-type-dialog-box"></a>Dialogové okno Vybrat typ kódu
 
@@ -38,26 +38,26 @@ Chcete-li otevřít toto dialogové okno, otevřete dialogové okno **připojit 
 
 **Ladit tyto typy kódu:** Z poskytnutého seznamu vyberte typ (typy) kódu, který chcete ladit. To může být užitečné při [řešení potíží s nezdařeným připojením](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors). Tato možnost omezuje detekci pouze na typy kódu, které chcete ladit.
 
-   ::: moniker range=">=vs-2019"
-   - Blazor WebAssembly– Na straně klientaBlazor WebAssembly
-   - GPU – software pro emulátor – kód C++ běžící na emulátoru softwaru GPU
-   - JavaScript (Chrome) – JavaScript běžící v Chrome
-   - JavaScript (Microsoft Edge-chrom) – JavaScript běžící v Microsoft Edge na bázi Chromu pro Windows 10
-   - Ladicí program JavaScriptu CDP (V3) – DevTools Protocol verze 3, který se používá pro ladění v klientovi CDP
-   - Spravované (CoreCLR) – .NET Core
-   - Spravované (nativní kompilace) – kód C++/CLR
-   - Managed (v 3.5, v 3.0, v 2.0) – kód .NET Framework pro .NET Framework 2,0 a vyšší (až 3,5)
-   - Spravované (v. 4.6, v 4.5, v 4.0) – kód .NET Framework .NET Framework 4,0 a vyšší
-   - Nativní – C/C++
-   - Node.js ladění – kód hostovaný modulem runtime Node.js
-   - Python – Python 
-   - Skript – určuje obecný ladicí program skriptu pro JavaScript. Použijte více omezující možnosti, pokud se vztahují na váš scénář, jako je například JavaScript (Chrome).
-   - T-SQL-Transact-SQL
-   - Unity – Unity
-   - Spravovaný režim kompatibility – určuje starší ladicí program pro spravovaný kód, který se obvykle používá pro ladění ve smíšeném režimu s C++/CLR Code (umožňuje upravit a pokračovat pro smíšený režim) nebo pro podporu rozšíření, která cílí na starší verzi ladicího programu. Ve většině scénářů ladění ve smíšeném režimu vyberte **nativní** a odpovídající typy **spravovaných** kódů místo spravovaného režimu kompatibility.
-   ::: moniker-end
+::: moniker range=">=vs-2019"
+- Blazor WebAssembly – Na straně klienta Blazor WebAssembly
+- GPU – software pro emulátor – kód C++ běžící na emulátoru softwaru GPU
+- JavaScript (Chrome) – JavaScript běžící v Chrome
+- JavaScript (Microsoft Edge-chrom) – JavaScript běžící v Microsoft Edge na bázi Chromu pro Windows 10
+- Ladicí program JavaScriptu CDP (V3) – DevTools Protocol verze 3, který se používá pro ladění v klientovi CDP
+- Spravované (CoreCLR) – .NET Core
+- Spravované (nativní kompilace) – kód C++/CLR
+- Managed (v 3.5, v 3.0, v 2.0) – kód .NET Framework pro .NET Framework 2,0 a vyšší (až 3,5)
+- Spravované (v. 4.6, v 4.5, v 4.0) – kód .NET Framework .NET Framework 4,0 a vyšší
+- Nativní – C/C++
+- Node.js ladění – kód hostovaný modulem runtime Node.js
+- Python – Python 
+- Skript – určuje obecný ladicí program skriptu pro JavaScript. Použijte více omezující možnosti, pokud se vztahují na váš scénář, jako je například JavaScript (Chrome).
+- T-SQL-Transact-SQL
+- Unity – Unity
+- Spravovaný režim kompatibility – určuje starší ladicí program pro spravovaný kód, který se obvykle používá pro ladění ve smíšeném režimu s C++/CLR Code (umožňuje upravit a pokračovat pro smíšený režim) nebo pro podporu rozšíření, která cílí na starší verzi ladicího programu. Ve většině scénářů ladění ve smíšeném režimu vyberte **nativní** a odpovídající typy **spravovaných** kódů místo spravovaného režimu kompatibility.
+::: moniker-end
 
-   Ve většině scénářů není podporováno připojení více ladicích programů ve stejné relaci ladění. To lze provést pomocí druhé instance aplikace Visual Studio.
+Ve většině scénářů není podporováno připojení více ladicích programů ve stejné relaci ladění. To lze provést pomocí druhé instance aplikace Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

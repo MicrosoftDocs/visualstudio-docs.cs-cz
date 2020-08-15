@@ -1,6 +1,6 @@
 ---
-title: 'Krok 3: Práce s daty ve vaší aplikaci ASP.NET Core'
-description: Začněte pracovat s daty pomocí entity Framework Core ve vašem ASP.NET Core Web App s tímto instruktážním videu a podrobnými pokyny.
+title: 'Krok 3: práce s daty v aplikaci ASP.NET Core'
+description: Pomocí tohoto výukového kurzu a podrobného postupu začněte pracovat s daty pomocí Entity Framework Core v ASP.NET Core webové aplikaci.
 ms.custom: get-started
 ms.date: 03/31/2019
 ms.technology: vs-ide-general
@@ -16,28 +16,28 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: cef0db7e5615d08fb5b22c38604a24124c853ebd
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 42bc0442dc5901f92fc8a83b7af41c1fc42f4be4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580064"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250805"
 ---
-# <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: Práce s daty pomocí entity Framework
+# <a name="step-3-work-with-data-using-entity-framework"></a>Krok 3: práce s daty pomocí Entity Framework
 
-Podle těchto kroků začněte pracovat s daty pomocí entity Framework Core ve vašem ASP.NET Core Web App.
+Pomocí následujícího postupu můžete začít pracovat s daty pomocí Entity Framework Core ve webové aplikaci ASP.NET Core.
 
-_Podívejte se na toto video a postupujte podle pokynů a přidejte data do první aplikace ASP.NET Core._
+_Podívejte se na toto video a sledujte, jak přidat data do první ASP.NET Core aplikace._
 
 > [!VIDEO https://www.youtube.com/embed/dulJCwNrqhM]
 
-## <a name="open-your-project"></a>Otevření projektu
+## <a name="open-your-project"></a>Otevřete projekt
 
-Pokud sledujete tato videa, otevřete projekt webové aplikace, který jste vytvořili v předchozí části. Pokud začínáte tady, musíte vytvořit nový projekt a zvolit **ASP.NET webovou aplikaci** a pak **webovou aplikaci**. Zbývající možnosti ponechejte jako výchozí.
+Pokud spolu s těmito videi sledujete, otevřete projekt webové aplikace, který jste vytvořili v předchozí části. Pokud začínáte zde, je nutné vytvořit nový projekt a zvolit **webovou aplikaci ASP.NET** a **webovou aplikaci**. Zbývající možnosti ponechte jako výchozí.
 
 ## <a name="add-your-model"></a>Přidání modelu
 
-První věc, kterou musíte udělat pro práci s daty v aplikaci ASP.NET Core, je popsat, jak by měla data vypadat. Říkáme tomu vytvoření *modelu* věcí, které se týkají problému, který se snažíme vyřešit. V reálných aplikacích přidáme k těmto modelům vlastní obchodní logiku, aby se mohly určitým způsobem chovat a automatizovat úkoly. Pro tuto ukázku vytvoříme jednoduchý systém pro sledování deskových her. Potřebujeme třídu, která představuje hru a obsahuje některé vlastnosti, které bychom mohli chtít zaznamenat o této hře, jako kolik hráčů může podporovat. Tato třída přejde do nové složky, kterou vytvoříme v kořenovém adresáři webového projektu s názvem *Modely*.
+První věc, kterou potřebujete udělat pro práci s daty v aplikaci ASP.NET Core, je popište, jak by měla vypadat. Voláme, že vytváříme *model* věcí, které se účastní problému, který se snažíme vyřešit. V reálných aplikacích přidáme do těchto modelů vlastní obchodní logiku, aby se mohla chovat určitým způsobem a automatizovat úkoly pro nás. V této ukázce vytvoříme jednoduchý systém pro sledování her na vývěsce. Potřebujeme třídu, která představuje hru, a obsahuje některé vlastnosti, které můžeme chtít nahrávat o této hře, třeba kolik hráčů může podporovat. Tato třída přejde do nové složky, kterou vytvoříme v kořenu webového projektu, který se nazývá *modely*.
 
 ```csharp
 public class Game
@@ -50,36 +50,36 @@ public class Game
 }
 ```
 
-## <a name="create-the-pages-to-manage-your-game-library"></a>Vytvoření stránek pro správu knihovny her
+## <a name="create-the-pages-to-manage-your-game-library"></a>Vytvořit stránky pro správu herní knihovny
 
-Nyní jsme připraveni vytvořit stránky, které použijeme ke správě naší knihovny her. To může znít skličující, ale je to vlastně úžasně snadné. Nejprve se musíme rozhodnout, kde v naší aplikaci by tato funkce měla žít. Otevřete složku Stránky ve webovém projektu a přidejte tam novou složku. Nazvěme to *hry*.
+Teď jsme připraveni vytvořit stránky, které budeme používat ke správě naší knihovny her. To může být zvuk těžké, ale ve skutečnosti je to úžasné snadné. Nejdřív musíme rozhodnout, kde v naší aplikaci by měla být tato funkce živá. Otevřete složku stránky ve webovém projektu a přidejte do ní novou složku. Zavolejte IT *hry*.
 
-Nyní klikněte pravým tlačítkem myši na hry a zvolte **Přidat** > **nový scaffolded položky**. Zvolte volbu Razor Pages using **Entity Framework (CRUD).** CRUD je zkratka pro "Vytvořit, Číst, Aktualizovat, Odstranit" a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky "seznam všech" a stránky "zobrazit podrobnosti o jedné položce").
+Nyní klikněte pravým tlačítkem na hry a vyberte **Přidat**  >  **novou vygenerované položky**. Vyberte možnost Razor Pages pomocí **Entity Framework (CRUD)** . CRUD představuje možnost vytvořit, číst, aktualizovat, odstranit a tato šablona vytvoří stránky pro každou z těchto operací (včetně stránky seznam všech) a "zobrazení podrobností jedné položky".
 
-![Visual Studio 2019 ASP.NET Základní Přidat scaffolded stránky](media/vs-2019/vs2019-add-scaffold.png)
+![Visual Studio 2019 ASP.NET Core Přidání vygenerovaných stránek](media/vs-2019/vs2019-add-scaffold.png)
 
-Vyberte třídu herního modelu a pomocí ikony +přidejte novou třídu kontextu Dat. Pojmenujte ji `AppDbContext`. Zbytek ponechejte jako výchozí a klepněte na **tlačítko Přidat**.
+Vyberte třídu herního modelu a pomocí ikony + přidejte novou třídu datového kontextu. Pojmenujte ji `AppDbContext`. Nechejte zbývající výchozí hodnoty a klikněte na **Přidat**.
 
-Do složky Hry se zobrazí následující stránky Razor:
+Na složku hry se zobrazí následující Razor Pages:
 
-- Vytvořit.cshtml
-- Odstranit.cshtml
-- Details.cshtml
-- Upravit.cshtml
+- Vytvořit. cshtml
+- Odstranit. cshtml
+- Podrobnosti. cshtml
+- Upravit. cshtml
 - Soubor Index.cshtml
 
-![Visual Studio 2019 ASP.NET stránky s kládaným vzorem](media/vs-2019/vs2019-scaffolded-pages.png)
+![Sady Visual Studio 2019 ASP.NET Core vygenerované stránky](media/vs-2019/vs2019-scaffolded-pages.png)
 
-Kromě přidání stránek do složky *Hry* přidala operace lešení kód do mé *třídy Startup.cs.* Při pohledu na metodu `ConfigureServices` v této třídě uvidíte, že tento kód byl přidán:
+Kromě přidávání stránek ve složce *hry* , operace generování uživatelského rozhraní přidala kód do třídy *Startup.cs* . Při hledání v `ConfigureServices` metodě v této třídě se zobrazí tento kód:
 
 ```csharp
 services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 ```
 
-Najdete zde také `AppDbContext` připojení řetězec byl přidán do projektu *appsettings.json* souboru.
+Také najdete připojovací řetězec, který byl `AppDbContext` přidán do *appsettings.jsprojektu v* souboru.
 
-Pokud spustíte aplikaci nyní, může selhat, protože zatím nebyla vytvořena žádná databáze. Aplikaci můžete nakonfigurovat tak, aby v případě potřeby automaticky vytvářela databázi [přidáním nějakého kódu, který Program.cs](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main):
+Pokud aplikaci teď spustíte, může selhat, protože se ještě nevytvořila žádná databáze. Aplikaci můžete nakonfigurovat tak, aby v případě potřeby automaticky vytvořila databázi, a to tak, že [do program.cs přidáte nějaký kód](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main):
 
 ```csharp
 public static void Main(string[] args)
@@ -92,7 +92,7 @@ public static void Main(string[] args)
 
         try
         {
-            var context = services.GetRequiredService<AppDbContext>();
+            var context = services.GetRequiredService<Data.AppDbContext>();
             context.Database.EnsureCreated();
         }
         catch (Exception ex)
@@ -106,34 +106,34 @@ public static void Main(string[] args)
 }
 ```
 
-Chcete-li přeložit názvy typů v předchozím kódu, přidejte následující příkazy using, které *Program.cs* na konci existujícího bloku using statements:
+Chcete-li přeložit TypeName v předchozím kódu, přidejte následující příkazy using do *program.cs* na konci existujícího bloku using příkaz:
 
 ```csharp
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication1.Models;
 ```
 
-Ujistěte se, že použít název projektu namísto WebApplication1 v kódu.
+Nezapomeňte použít název projektu místo WebApplication1 ve vašem kódu.
 
-Většina kódu je pouze pro zpracování chyb a `AppDbContext` poskytnout přístup k EF Core před spuštěním aplikace. Důležitý řádek je ten, `context.Database.EnsureCreated()`který říká , který vytvoří databázi, pokud již neexistuje. Nyní je aplikace připravena ke spuštění.
+Většina kódu je jenom pro zpracování chyb a poskytuje přístup k EF Core `AppDbContext` před spuštěním aplikace. Důležitý řádek je ten, který říká `context.Database.EnsureCreated()` , že databáze bude vytvořena, pokud ještě neexistuje. Aplikace je teď připravená ke spuštění.
 
 ## <a name="test-it-out"></a>Testování
 
-Spusťte aplikaci `/Games` a přejděte na adresu v panelu Adresa. Zobrazí se prázdná stránka se seznamem. Kliknutím na **Vytvořit** nový `Game` přidejte do kolekce nové. Vyplňte formulář a klepněte na **tlačítko Vytvořit**. Měli byste ji vidět v zobrazení seznamu. Kliknutím na **Podrobnosti** zobrazíte podrobnosti o jednom záznamu.
+Spusťte aplikaci a `/Games` v adresním řádku přejděte na adresu. Zobrazí se prázdná stránka seznamu. Kliknutím na **vytvořit novou** přidejte `Game` do kolekce nový. Vyplňte formulář a klikněte na **vytvořit**. Měla by se zobrazit v zobrazení seznamu. Kliknutím na **Podrobnosti** zobrazíte podrobnosti o jednom záznamu.
 
-Přidejte další záznam. Kliknutím na *Upravit* můžete změnit podrobnosti záznamu nebo **odstranit** a odebrat ho, což vás vyzve k potvrzení před jeho skutečně odstraněním záznamu.
+Přidejte další záznam. Můžete kliknout na *Upravit* a změnit podrobnosti záznamu nebo **Odstranit** , abyste ho odebrali, což vás vyzve k potvrzení před skutečným odstraněním záznamu.
 
-![Visual Studio 2019 ASP.NET v prohlížeči stránky s kládaným vzorem](media/vs-2019/vs2019-game-list.png)
+![Sady Visual Studio 2019 ASP.NET Core vygenerované stránky v prohlížeči](media/vs-2019/vs2019-game-list.png)
 
-To je vše, co bylo třeba začít pracovat s daty v aplikaci ASP.NET Core pomocí EF Core a Visual Studio 2019.
+To je všechno, co trvalo začít pracovat s daty v aplikaci ASP.NET Core pomocí EF Core a sady Visual Studio 2019.
 
 ## <a name="next-steps"></a>Další kroky
 
-V dalším videu se dozvíte, jak do aplikace přidat podporu webového rozhraní API.
+V dalším videu se dozvíte, jak do vaší aplikace přidat podporu webového rozhraní API.
 
-[Krok 4: Vystavení webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
+[Krok 4: zpřístupnění webového rozhraní API z aplikace ASP.NET Core](tutorial-aspnet-core-ef-step-04.md)
 
 ## <a name="see-also"></a>Viz také
 
-- [Razor stránky s jádrem entity frameworku v ASP.NET jádru](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
-- [ASP.NET jádro holicí strojek stránky s EF Core](/aspnet/core/data/?view=aspnetcore-2.1)
+- [Razor Pages s Entity Framework Core v ASP.NET Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
+- [ASP.NET Core Razor Pages s EF Core](/aspnet/core/data/?view=aspnetcore-2.1)

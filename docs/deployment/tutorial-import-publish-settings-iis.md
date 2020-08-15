@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b18d1b123e32807575ac2c6601166891d6c25be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: fff3ded8607f7faf534e6e61a27bd4d3e38d9e38
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183298"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247564"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Publikování aplikace do služby IIS importem nastavení publikování v aplikaci Visual Studio
 
@@ -58,15 +58,15 @@ Soubor nastavení publikování (* \* . publishsettings*) se liší od publikač
 
 1. V počítači se sadou Visual Studio vytvořte nový projekt.
 
-    Vyberte správnou šablonu. V tomto příkladu zvolte buď **ASP.NET webová aplikace (.NET Framework)** , nebo (pouze pro C#) **ASP.NET Core webové aplikace**a klikněte na tlačítko **OK**.
+    Vyberte správnou šablonu. V tomto příkladu zvolte buď **ASP.NET webová aplikace (.NET Framework)** , nebo (pouze pro C#) **ASP.NET Core webové aplikace**a pak vyberte **OK**.
 
-    Pokud nevidíte zadané šablony projektu, klikněte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Nainstalujte úlohu **vývoje ASP.NET a webu** .
+    Pokud se zadané šablony projektu nezobrazuje, přejděte na odkaz **otevřít instalační program pro Visual Studio** v levém podokně dialogového okna **Nový projekt** . Spustí se instalační program pro Visual Studio. Nainstalujte úlohu **vývoje ASP.NET a webu** .
 
     Šablona projektu, kterou zvolíte (ASP.NET nebo ASP.NET Core), musí odpovídat verzi ASP.NET nainstalované na webovém serveru.
 
-1. Zvolte **MVC** (.NET Framework) nebo **Webová aplikace (Model-View-Controller)** (pro .NET Core) a ujistěte se, že není vybrané **žádné ověřování** , a pak klikněte na **OK**.
+1. Zvolte **MVC** (.NET Framework) nebo **Webová aplikace (Model-View-Controller)** (pro .NET Core) a ujistěte se, že není vybrané **žádné ověřování** , a pak vyberte **OK**.
 
-1. Zadejte název jako **MyWebApp** a klikněte na **OK**.
+1. Zadejte název jako **MyWebApp** a vyberte **OK**.
 
     Visual Studio vytvoří projekt.
 

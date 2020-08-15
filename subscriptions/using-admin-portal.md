@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 03/03/2020
 ms.topic: overview
 description: Naučte se, jak začít spravovat předplatná sady Visual Studio ve vaší organizaci pomocí portálu pro správu předplatných.
-ms.openlocfilehash: 94ce9e8ceec46403ef816c39115a5418f1ee9e03
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902944"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249862"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Přehled portálu pro správu předplatných sady Visual Studio
 
@@ -42,7 +42,7 @@ Po přiřazení předplatných poskytuje karta spravovat předplatitele podrobn�
 
 V levé horní části stránky je několik ikon, které můžete vybrat k zobrazení přehledu přiřazení předplatného, podrobností o smlouvě a sestavy maximálního využití.
 
-Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, klikněte na ikonu nahoru a povolte tak panel pro posunutí.
+Chcete-li zobrazit další informace o počtu zakoupených a přiřazených licencí k předplatnému, které jsou ve vaší organizaci k dispozici pro každou smlouvu, vyberte ikonu nahoru a povolte tak panel pro vybírání snímků.
 > [!div class="mx-imgBorder"]
 > ![Stránka předplatitelů portálu pro správu předplatných sady Visual Studio](_img/using-admin-portal/subscribers-page.png)
 

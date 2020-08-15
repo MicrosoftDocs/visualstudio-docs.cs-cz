@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b1e4362755bbbfa9ea220fcbdf92abf92723521
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85462120"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249181"
 ---
 # <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Postupy: Konfigurace oboru dynamické analýzy kódu pro spravovaný kód
 
@@ -25,17 +25,17 @@ ms.locfileid: "85462120"
 Visual Studio provádí spoustu živých analýz kódu, označovaných také jako *Analýza na pozadí*, zatímco upravujete zdrojové soubory v editoru. U některých z nich je vyžadována minimální analýza přijatelného prostředí pro úpravu prostředí Visual Studio IDE. Některé z nich jsou pro lepší odezvu funkcí IDE. I když je některé z nich, je možné povolit další funkce IDE, jako jsou diagnostika a opravy kódu z analyzátorů Roslyn. Na základě těchto funkcí je možné tyto analýzy seskupit následujícím způsobem:
 
 - **Výpočet diagnostiky na pozadí**: Analýza chyb, varování a návrhů ve zdrojových souborech. Tyto diagnostiky se zobrazují jako položky v seznamu chyb a jako vlnovky v editoru. Můžou být klasifikované do dvou kategorií:
-    - Diagnostika kompilátoru C# a Visual Basic
-    - Diagnostika analyzátoru Roslyn, která zahrnuje:
+  - Diagnostika kompilátoru C# a Visual Basic
+  - Diagnostika analyzátoru Roslyn, která zahrnuje:
 
-        - Integrované analyzátory IDE pro návrhy stylu kódu a
-        - Balíčky analyzátoru třetích stran [nainstalované](./install-roslyn-analyzers.md) pro projekty v aktuálním řešení.
+    - Integrované analyzátory IDE pro návrhy stylu kódu a
+    - Balíčky analyzátoru třetích stran [nainstalované](./install-roslyn-analyzers.md) pro projekty v aktuálním řešení.
 
 - **Další analýzy na pozadí**: analýza pro zlepšení rychlosti odezvy a interakce sady Visual Studio pro funkce IDE. Mezi příklady takových analýz patří:
-    - Analýza otevřených souborů na pozadí
-    - Kompilace projektů na pozadí s otevřenými soubory k přijetí symbolů pro lepší odezvu určitých funkcí IDE.
-    - Vytváření syntaxí a mezipamětí symbolů.
-    - Zjišťování přidružení návrháře pro zdrojové soubory, jako jsou formuláře, ovládací prvky atd.
+  - Analýza otevřených souborů na pozadí
+  - Kompilace projektů na pozadí s otevřenými soubory k přijetí symbolů pro lepší odezvu určitých funkcí IDE.
+  - Vytváření syntaxí a mezipamětí symbolů.
+  - Zjišťování přidružení návrháře pro zdrojové soubory, jako jsou formuláře, ovládací prvky atd.
 
 ## <a name="default-analysis-scope"></a>Výchozí obor analýzy
 

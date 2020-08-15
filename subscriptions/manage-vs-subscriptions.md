@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Přečtěte si, jak využít předplatná sady Visual Studio na maximum.
-ms.openlocfilehash: 19b4bd7c6fce88aa99b336d98d6bf471509af556
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: da78c4f9212341636d85453ad19dde549ddb0e20
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453683"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248436"
 ---
 # <a name="managing-subscriptions"></a>Správa předplatných
 
@@ -30,8 +30,8 @@ Na stránce výhody se používané předplatné výrazně zobrazuje v modré hl
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>K přepínání mezi předplatnými můžete:
 
-- V pravém horním rohu klikněte na rozevírací nabídku a vyberte předplatné ze seznamu.
-- Klikněte na kartu předplatná a potom klikněte na požadované předplatné.
+- Vyberte rozevírací nabídku v pravém horním rohu a vyberte předplatné ze seznamu.
+- Vyberte kartu předplatná a potom vyberte požadované předplatné.
   > [!div class="mx-imgBorder"]
   > ![Přepínání předplatných](_img/manage-vs-subscriptions/change-subscription-resized.png "Kliknutím na kartu předplatná zobrazíte podrobné informace o všech vašich předplatných a mezi nimi přepínat.")
 
@@ -68,17 +68,17 @@ Portál předplatných umožňuje vytvořit a spravovat profil, který usnadňuj
 
 V profilu můžete snadno změnit kontaktní informace a předvolby.
 
-1. V pravém horním rohu portálu pro předplatitele klikněte na své jméno.
+1. V pravém horním rohu portálu pro předplatitele vyberte své jméno.
 2. Klikněte na tlačítko **Upravit profil** .
 3. Na kartě **o** aplikaci můžete změnit své jméno, e-mail, zemi nebo oblast, profilový obrázek a kontaktní preference. Na kartě **Předvolby** můžete vybrat preferovaný jazyk, vzory data a času, časové pásmo a motiv uživatelského rozhraní.
-4. Po dokončení změn klikněte na **Uložit**.
+4. Po dokončení změn vyberte **Uložit**.
 5. Kliknutím na tlačítko **zpět** v prohlížeči se vraťte na stránku výhody.
 
 ### <a name="setting-communications-preferences"></a>Nastavení předvoleb komunikace
 Pokud chcete dostávat periodické aktualizace o vašem předplatném a výhodách, včetně bulletinu měsíčních předplatných sady Visual Studio, [aktualizujte předvolby](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) zaškrtnutím políčka u předplatných sady Visual Studio v profilu sady Visual Studio. Tyto předvolby můžete kdykoli změnit a zrušit odběr. 
 
    > [!div class="mx-imgBorder"]
-   > ![Nastavení předvoleb](_img/manage-vs-subscriptions/change-prefs.png "Pro příjem aktualizací klikněte na zaškrtávací políčko pro e-maily programu Visual Studio Subscriptions.")
+   > ![Nastavení předvoleb](_img/manage-vs-subscriptions/change-prefs.png "Pro příjem aktualizací zaškrtněte políčko pro e-maily programu Visual Studio Subscriptions.")
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>Propojení předplatného s existujícím předplatným Azure DevOps Services nebo Azure
 Pokud se přihlašujete k předplatnému pomocí osobního účet Microsoft (MSA) a máte předplatné, které zahrnuje Azure DevOps Services nebo Microsoft Azure pomocí pracovního nebo školního účtu spravovaného službou Azure, můžete propojit tyto dva odběry. Nazývá se to "alternativní účet" a umožňuje dál používat MSA pro přihlášení k vašemu předplatnému a přitom mít přístup k existujícím prostředkům Azure, Azure DevOps Services nebo IDE, které jsou přidružené k vašim školním nebo pracovním účtům.
@@ -88,11 +88,11 @@ I když oba účty používají stejnou e-mailovou adresu, je třeba přidat sv�
 Postup přidání alternativního účtu:
 
 1. Přihlaste se k [portálu předplatitele](https://my.visualstudio.com?wt.mc_id=o~msft~docs) pomocí svého účtu Microsoft (MSA).
-2. Klikněte na kartu **předplatná** .
+2. Vyberte kartu **předplatná** .
 3. V části **související odkazy**vyberte **Přidat alternativní účet**.
-4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a klikněte na **Přidat**.
+4. Zadejte svoji e-mailovou adresu pracovního/školního účtu a vyberte **Přidat**.
 
-Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že kliknete na kartu **předplatná** a zvolíte příslušnou možnost v části **související odkazy** .
+Po přidání alternativního účtu ho můžete kdykoli aktualizovat nebo odebrat tak, že vyberete kartu **předplatná** a zvolíte příslušnou možnost v části **související odkazy** .
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
@@ -114,7 +114,7 @@ Odpověď: v závislosti na nákupním kanálu udržuje společnost Microsoft z�
 > - Pokud máte aktivní předplatné, nebudeme plně odebírat všechna vaše osobní data.
 
 ## <a name="see-also"></a>Viz také
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

@@ -1,21 +1,21 @@
 ---
-title: Nástroje kontejneru sady Visual Studio s ASP.NET Core a reagují. js
+title: Nástroje kontejneru sady Visual Studio s ASP.NET Core a React.js
 author: ghogen
 description: Naučte se používat nástroje sady Visual Studio Container a Docker for Windows
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: f7dfc0aa1346c4e888f64f7cd8f23add3056c070
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 321d85537f210d17414be115b8f6b3f8b8d5b3c9
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182782"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249201"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Rychlý Start: použití Docker s nareagující jednostránkové aplikace v aplikaci Visual Studio
 
-Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět ASP.NET Coreé aplikace, včetně těch, které jsou v JavaScriptu na straně klienta, jako je například aplikace s jednou stránkou reagují. js, a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
+Pomocí sady Visual Studio můžete snadno sestavovat, ladit a spouštět ASP.NET Core aplikace s kontejnerem, včetně těch, které jsou s JavaScriptem na straně klienta, jako je například React.js jednostránkové aplikace, a publikovat je do Azure Container Registry (ACR), Docker Hub, Azure App Service nebo vlastního registru kontejneru. V tomto článku budeme publikovat na ACR.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -43,9 +43,9 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 
 ::: moniker range="vs-2017"
 1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
-1. Vyberte možnost **reagovat. js**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat po vytvoření projektu.
+1. Vyberte **React.js**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat po vytvoření projektu.
 
-   ![Snímek obrazovky nového projektu reakce. js](media/container-tools-react/vs2017/new-react-project.png)
+   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs2017/new-react-project.png)
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** > **podporu Docker** a přidejte do svého projektu souboru Dockerfile.
 
@@ -55,9 +55,9 @@ Pro instalaci Docker si nejdřív přečtěte informace v části [Docker Deskto
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. Vytvořte nový projekt pomocí šablony **ASP.NET Core webové aplikace** .
-1. Vyberte **reagovat. js**a klikněte na **vytvořit**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat později.
+1. Vyberte **React.js**a klikněte na **vytvořit**. Nemůžete vybrat možnost **Povolit podporu Docker**, ale nedělejte si starosti, můžete tuto podporu přidat později.
 
-   ![Snímek obrazovky nového projektu reakce. js](media/container-tools-react/vs2019/new-react-project.png)
+   ![Snímek obrazovky s novým projektem React.js](media/container-tools-react/vs2019/new-react-project.png)
 
 1. Klikněte pravým tlačítkem na uzel projektu a vyberte **Přidat** > **podporu Docker** a přidejte do svého projektu souboru Dockerfile.
 
@@ -72,7 +72,7 @@ Další krok se liší v závislosti na tom, jestli používáte kontejnery Linu
 
 *Souboru Dockerfile*je v projektu vytvořen recept pro vytvoření finální image Docker. Porozumění příkazům, které jsou v něm, najdete v [referenčních informacích k souboru Dockerfile](https://docs.docker.com/engine/reference/builder/) .
 
-Otevřete *souboru Dockerfile* v projektu a přidejte následující řádky pro instalaci Node. js 10. x do kontejneru. Nezapomeňte přidat tyto řádky v první části, chcete-li přidat instalaci správce balíčků *npm. exe* do základní image a také v `build` části.
+Otevřete *souboru Dockerfile* v projektu a přidejte následující řádky pro instalaci Node.js 10. x do kontejneru. Nezapomeňte přidat tyto řádky v první části, chcete-li přidat instalaci správce balíčků node *npm.exe* do základní image a také v `build` části.
 
 ```Dockerfile
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
@@ -123,7 +123,7 @@ Otevřete soubor projektu dvojitým kliknutím na uzel projektu a aktualizujte s
 Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce zkopíruje uzel a npm do kontejneru.
 
    1. Přidat ``# escape=` `` na první řádek souboru Dockerfile
-   1. Přidejte následující řádky před`FROM … base`
+   1. Přidejte následující řádky před `FROM … base`
 
       ```Dockerfile
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
@@ -133,7 +133,7 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
       Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
       ```
 
-   1. Přidejte následující řádek před a za`FROM … build`
+   1. Přidejte následující řádek před a za `FROM … build`
 
       ```Dockerfile
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
@@ -177,13 +177,13 @@ Aktualizujte souboru Dockerfile přidáním následujících řádků. Tato akce
       ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       ```
 
-1. Aktualizujte soubor. dockerignore odebráním `**/bin` .
+   1. Aktualizujte soubor. dockerignore odebráním `**/bin` .
 
 ## <a name="debug"></a>Ladění
 
 V rozevíracím seznamu ladění na panelu nástrojů vyberte **Docker** a spusťte ladění aplikace. Může se zobrazit zpráva s výzvou k důvěřování certifikátu. Chcete-li pokračovat, vyberte možnost důvěryhodného certifikátu.  Při prvním sestavení, Docker stáhne základní image, takže může trvat delší dobu.
 
-V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobrazují akce, které probíhají. Měli byste vidět kroky instalace přidružené k *npm. exe*.
+V okně **výstup** se zobrazí možnost **nástroje kontejneru** , kde se zobrazují akce, které probíhají. Měli byste vidět kroky instalace přidružené k *npm.exe*.
 
 V prohlížeči se zobrazí domovská stránka aplikace.
 
@@ -231,12 +231,12 @@ Jakmile se cyklus vývoje a ladění aplikace dokončí, můžete vytvořit prov
     | **Předpona DNS** | Globálně jedinečný název | Název, který jedinečně identifikuje váš registr kontejneru. |
     | **Předplatné** | Zvolte vaše předplatné. | Předplatné Azure, které se má použít. |
     | **[Skupina prostředků](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Název skupiny prostředků, ve které se má vytvořit registr kontejneru Pokud chcete vytvořit novou skupinu prostředků, zvolte **Nová**.|
-    | **[SKU](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
+    | **[Skladová jednotka (SKU)](/azure/container-registry/container-registry-skus)** | Standard | Úroveň služby registru kontejneru  |
     | **Umístění registru** | Umístění, které je blízko vás | Vyberte umístění v [oblasti](https://azure.microsoft.com/regions/) poblíž nebo v blízkosti jiných služeb, které budou používat váš registr kontejneru. |
 
     ![Dialog pro vytváření Azure Container Registry v aplikaci Visual Studio][0]
 
-1. Klikněte na **Vytvořit**.
+1. Klikněte na možnost **Vytvořit**.
 
    ![Snímek obrazovky znázorňující úspěšné publikování](media/container-tools/publish-succeeded.png)
 

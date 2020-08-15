@@ -7,12 +7,12 @@ ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 03/09/2020
 ms.topic: how-to
 description: Přiřazení předplatných sady Visual Studio koncovým uživatelům pro partnery programu MPN.
-ms.openlocfilehash: fc35178a0d66a048a41ee04d27ae2993949972c8
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: e6e15ed5893ce15d162d69b3bff4471c01633065
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902871"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250723"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Správa předplatných sady Visual Studio nabízených prostřednictvím Microsoft Partner Network (MPN)
 Partneři, kteří získají kompetenci nebo kteří si zakoupí akční Pack v programu MPN, mají nárok na použití předplatných sady Visual Studio. Tato předplatná jsou licencovaná na uživatele a jsou platná jenom v případě, že jsou přiřazená konkrétnímu pojmenovanému uživateli, který pro partnerský produkt pracuje.
@@ -29,7 +29,7 @@ Předplatitelé Microsoft Action Pack a předplatná sady Visual Studio
 6. Vybrat **oprávnění**
 7. Výběr **předplatných sady Visual Studio** (Poznámka: čeká se na aktualizace předplatného sady Visual Studio)
 8. Vybrat požadovanou **osobu**
-9. Klikněte na **Odeslat** .
+9. Vybrat **Odeslat**
 10. Jednotlivec dostane e-mail.
 11. Přiřazená osoba bude mít přístup [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) k přihlašování.
 12. Může se zobrazit Stránka s profilem sady Visual Studio, včetně:
@@ -43,7 +43,7 @@ Předplatitelé Microsoft Action Pack a předplatná sady Visual Studio
 2. Vybrat **oprávnění**
 3. Vyberte **Předplatná MSDN** (Poznámka: brzo se přiznačí "předplatná sady Visual Studio").
 4. Vyhledat požadovanou **osobu**
-5. Klikněte na **Odeslat** .
+5. Vybrat **Odeslat**
 6. Jednotlivec dostane e-mail.
 7. Přiřazená osoba bude mít přístup [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) k přihlašování.
 8. Může se zobrazit Stránka s profilem sady Visual Studio.

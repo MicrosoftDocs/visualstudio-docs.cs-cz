@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Informace o tom, jak můžou správci přiřazovat licence předplatitelům
-ms.openlocfilehash: e8eba6ad97d0f5e7e1da0e75093c33658f26a56a
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: aa3c219a605b552ea1c4b785ff8fb1f92edf04ac
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235014"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249469"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení licencí na portálu pro správu předplatných sady Visual Studio
 Jako správce předplatných sady Visual Studio můžete použít portál pro správu k přiřazení předplatných jednotlivým uživatelům a skupinám uživatelů.
@@ -34,7 +34,7 @@ Zde je postup přiřazení předplatného sady Visual Studio novému uživateli,
 1. Přihlaste se k [portálu pro správu](https://manage.visualstudio.com).
 2. Pokud chcete přiřadit licenci jednomu předplatiteli sady Visual Studio, vyberte v horní části tabulky možnost **Přidat**a pak zvolte **jednotlivé odběratele**.
    > [!div class="mx-imgBorder"]
-   > ![Přidání jednoho předplatitele](_img/assign-license-add/add-subscriber-individual.png "Klikněte na Přidat a pak vyberte jednotlivé odběratele, abyste přiřadili jedno předplatné.")
+   > ![Přidání jednoho předplatitele](_img/assign-license-add/add-subscriber-individual.png "Vyberte Přidat a pak zvolte jednotlivé odběratele k přiřazení jednoho předplatného.")
 3. Zadejte informace do polí formuláře pro nového předplatitele. Pokud vaše organizace používá Azure Active Directory, pole **název** slouží jako vyhledávací funkce pro hledání osob v aktuálním adresáři, abyste mohli vybrat správného uživatele z výsledků hledání. Po výběru této osoby se automaticky vyplní e-mail s oznámením o přihlášení a oznámení.
    > [!div class="mx-imgBorder"]
    > ![Podrobnosti předplatitele](_img/assign-license-add/subscriber-details.png "Zadejte název předplatitele a další podrobnosti nebo si vyberte ze členů tenanta.")
@@ -53,13 +53,13 @@ Zde je postup přiřazení předplatného sady Visual Studio novému uživateli,
 
     Po výběru možností a zadání dat pro odběratele zvolte **Přidat** v dolní části **Přidat předplatitele** .
    > [!div class="mx-imgBorder"]
-   > ![Klikněte na tlačítko Přidat.](media/add-button.png "Kliknutím na Přidat uložte informace a přiřaďte předplatné k odběrateli.")
+   > ![Klikněte na tlačítko Přidat.](media/add-button.png "Vyberte Přidat a uložte informace a přiřaďte předplatné k odběrateli.")
 
 ## <a name="resend-assignment-emails"></a>Znovu odeslat e-maily přiřazení
-Po přidání odběratele se e-mail s přiřazením automaticky pošle novému předplatiteli s dalšími pokyny. E-mail s přiřazením můžete kdykoli odeslat, a to tak, že vyberete odběratele a kliknete na tlačítko **znovu odeslat** v horní nabídce.  Chcete-li znovu odeslat e-maily více uživatelům, podržte při výběru odběratelů klávesu **CTRL** .  Po kliknutí na tlačítko **znovu odeslat** se zobrazí dialogové okno s výzvou, abyste potvrdili, že chcete tomuto předplatiteli znovu odeslat.  
+Po přidání odběratele se e-mail s přiřazením automaticky pošle novému předplatiteli s dalšími pokyny. E-mail s přiřazením můžete kdykoli odeslat, a to tak, že vyberete odběratele a potom v horní nabídce vyberete tlačítko pro **opětovné odeslání** .  Chcete-li znovu odeslat e-maily více uživatelům, podržte při výběru odběratelů klávesu **CTRL** .  Po výběru tlačítka **znovu odeslat** se zobrazí dialogové okno s výzvou, abyste potvrdili, že se těmto předplatitelům chcete znovu odeslat.  
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5970e7e4408c826058cb27590254b278d4cdb9b7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f4b4a90cc06396f9fb6afb8a356385e966ed1b3d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85281003"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249217"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Připojení ladicího programu sady Visual Studio ke spuštěným procesům
 
@@ -44,7 +44,7 @@ Pomocí příkazu **připojit k procesu** můžete ladit spuštěné aplikace v 
 > [!TIP]
 > Nejste si jisti, jestli pro váš scénář ladění chcete použít **připojit k procesu** ? Viz [běžné scénáře ladění](#BKMK_Scenarios).
 
-## <a name="attach-to-a-running-process-on-your-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a>Připojte se k běžícímu procesu na místním počítači.
+## <a name="attach-to-a-running-process-on-your-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a> Připojte se k běžícímu procesu na místním počítači.
 
 Chcete-li se rychle znovu připojit k procesu, který jste k dřív připojili, přečtěte si téma [opětovné připojení k procesu](#BKMK_reattach).
 
@@ -85,7 +85,7 @@ Chcete-li se rychle znovu připojit k procesu, který jste k dřív připojili, 
 >[!NOTE]
 >Můžete se připojit k více aplikacím pro ladění, ale v ladicím programu je aktivní jenom jedna aplikace. Aktivní aplikaci můžete nastavit na panelu nástrojů nebo v okně **procesy** ladění Visual Studio **umístění** .
 
-## <a name="attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>Připojit k procesu ve vzdáleném počítači
+## <a name="attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> Připojit k procesu ve vzdáleném počítači
 
 Můžete také vybrat vzdálený počítač v dialogovém okně **připojit k procesu** , zobrazit seznam dostupných procesů spuštěných v tomto počítači a připojit se k jednomu nebo více procesům pro ladění. Vzdálený ladicí program (*msvsmon.exe*) musí být spuštěný na vzdáleném počítači. Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).
 
@@ -157,7 +157,7 @@ Podrobnější pokyny pro ladění aplikací ASP.NET, které byly nasazeny do sl
 
 V některých případech se při ladění v relaci vzdálené plochy (Terminálové služby) nezobrazí seznam **procesy k** dispozici všechny dostupné procesy. Pokud používáte aplikaci Visual Studio jako uživatel s omezeným uživatelským účtem, seznam **procesy k dispozici** nebude zobrazovat procesy spuštěné v relaci 0. Relace 0 se používá pro služby a jiné serverové procesy, včetně *w3wp.exe*. Problém můžete vyřešit tak, že spustíte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] účet správce nebo spustíte [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] z konzoly serveru místo relace Terminálové služby.
 
-Pokud ani jedno z těchto řešení není možné, je třetí možností připojit se k procesu spuštěním `vsjitdebugger.exe -p <ProcessId>` z příkazového řádku Windows. ID procesu můžete určit pomocí *tlist.exe*. Chcete-li získat *tlist.exe*, Stáhněte a nainstalujte ladicí nástroje pro Windows, které jsou k dispozici na adrese [WDK a programu WinDbg ke stažení](/windows-hardware/drivers/download-the-wdk).
+Pokud ani jedno z těchto řešení není možné, je třetí možností připojit se k procesu spuštěním `vsjitdebugger.exe -p <ProcessId>` z příkazového řádku Windows. ID procesu můžete určit pomocí *tlist.exe*. Chcete-li získat *tlist.exe*, Stáhněte a nainstalujte ladicí nástroje pro Windows, které jsou k dispozici na adrese  [WDK a programu WinDbg ke stažení](/windows-hardware/drivers/download-the-wdk).
 
 ::: moniker range=">= vs-2019"
 
@@ -165,7 +165,7 @@ Pokud ani jedno z těchto řešení není možné, je třetí možností připoj
 
 Další informace najdete v tématu [vzdálené ladění .NET Core běžící na Linux pomocí SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md).
 
-## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a>Připojení k procesu běžícímu na kontejneru Docker platformy Linux
+## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a> Připojení k procesu běžícímu na kontejneru Docker platformy Linux
 
 Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v kontejneru Docker platformy Linux .NET Core na místním nebo vzdáleném počítači pomocí dialogového okna **připojit k procesu** .
 
@@ -199,17 +199,15 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
         ![Připojit ke vzdálenému systému](../debugger/media/connect-remote-system.png "Připojit ke vzdálenému systému")
         1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k SSH nebo procesu démona, a pak stiskněte **OK**.
 
-    
     1. ***Nastavení cíle ke vzdálenému kontejneru se spuštěným procesem prostřednictvím [démona Docker](https://docs.docker.com/engine/reference/commandline/dockerd/)***
         1. Zadejte adresu démona (tj. přes TCP, IP adresu atd.) v části **hostitel Docker (volitelné)** a klikněte na odkaz aktualizovat.
         1. Vyberte běžící kontejner, ke kterému se připojíte po úspěšném připojení k procesu démona, a pak stiskněte **OK**.
 
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C# v aplikaci Visual Studio!
 
-    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")
-    
+    ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete.png "Nabídka připojit k systému Linux Docker je dokončená")    
 
-## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a>Připojení k procesu běžícímu na kontejneru Docker systému Windows
+## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> Připojení k procesu běžícímu na kontejneru Docker systému Windows
 
 Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v kontejneru Docker systému Windows na místním počítači pomocí dialogového okna **připojit k procesu** .
 
@@ -238,21 +236,19 @@ Můžete připojit ladicí program sady Visual Studio k procesu běžícímu v k
 4. Zvolte odpovídající proces kontejneru ze seznamu **dostupných procesů** a vyberte **připojit** a spusťte ladění procesu kontejneru C#.
 
     ![Nabídka připojit k Docker je dokončená](../debugger/media/docker-attach-complete-windows.png "Dokončená nabídka připojit k programu Windows Docker")
-    
 
 5.  Vyberte odpovídající proces kontejneru ze seznamu dostupných procesů a klikněte na tlačítko **připojit** a spusťte ladění procesu kontejneru C#.
 
-
 ::: moniker-end
 
-## <a name="reattach-to-a-process"></a><a name="BKMK_reattach"></a>Opětovné připojení k procesu
+## <a name="reattach-to-a-process"></a><a name="BKMK_reattach"></a> Opětovné připojení k procesu
 
 Můžete se rychle znovu připojit k procesům, které jste předtím připojili k procesu, a to tak, že zvolíte možnost **ladění**znovu  >  **připojit k procesu** (**SHIFT** + **ALT** + **P**). Když vyberete tento příkaz, ladicí program se okamžitě pokusí připojit k poslednímu procesu, ke kterému jste se připojili, a to tak, že se pokusí vyhledat předchozí ID procesu a pokud selže, a to tak, že bude odpovídat předchozímu názvu procesu. Pokud se nenajde žádné shody nebo pokud má několik procesů stejný název, otevře se dialogové okno **připojit k procesu** , abyste mohli vybrat správný proces.
 
 > [!NOTE]
 > Příkaz znovu **připojit k procesu** je k dispozici od začátku v aplikaci Visual Studio 2017.
 
-## <a name="common-debugging-scenarios"></a><a name="BKMK_Scenarios"></a>Běžné scénáře ladění
+## <a name="common-debugging-scenarios"></a><a name="BKMK_Scenarios"></a> Běžné scénáře ladění
 
 V následující tabulce je uvedeno několik běžných scénářů ladění, které vám pomůžou určit, jestli se má použít **k procesu připojení** a jaký proces se má připojit, a to s odkazy na další pokyny, které jsou k dispozici. (Seznam není vyčerpávající.)
 
@@ -286,7 +282,7 @@ Pro scénáře vzdáleného ladění musíte mít zdrojový kód (nebo kopii zdr
 
 V některých místních scénářích ladění můžete ladit v aplikaci Visual Studio bez přístupu ke zdroji, pokud jsou v aplikaci k dispozici správné soubory symbolů. Ve výchozím nastavení to vyžaduje sestavení ladění. Další informace najdete v tématu [Určení symbolů a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a>Řešení chyb připojení
+## <a name="troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a> Řešení chyb připojení
 
 V některých scénářích může ladicí program potřebovat, aby mohl správně identifikovat typ kódu, který se má ladit. Pokud jsou hodnoty připojení správně nastavené (můžete zobrazit správný proces v seznamu **procesy k dispozici** ), ale ladicí program se nepodaří připojit, zkuste vybrat nejvhodnější typ připojení v seznamu **Typ připojení** , který může být potřeba, například když ladíte aplikaci pro Linux nebo Python. Pokud používáte výchozí typ připojení, můžete alternativně vybrat konkrétní typ kódu, ke kterému se chcete připojit, jak je popsáno dále v této části.
 

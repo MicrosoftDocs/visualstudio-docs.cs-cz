@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 2e5718740b9219ee988859e530591305394fb239
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284305"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250514"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Jak zvýšit pravděpodobnost vyřešeného problému s výkonem
 
@@ -32,15 +32,15 @@ Mnohé problémy nemusí mít k dispozici žádný rozlišující podpis ani kro
 
 Popsané níže jsou problémy, které je obtížné diagnostikovat bez dobrých diagnostických souborů. Po určení případu, který nejlépe popisuje váš problém, postupujte podle kroků pro zpětnou vazbu, které jsou specifické pro tento případ.
 
--   [Selhání:](#crashes) Dojde k chybě při neočekávaném ukončení procesu (Visual Studio).
+- [Selhání:](#crashes) Dojde k chybě při neočekávaném ukončení procesu (Visual Studio).
 
--   [Nereagující rychlost:](#unresponsiveness) VS přestane po delší dobu reagovat.
+- [Nereagující rychlost:](#unresponsiveness) VS přestane po delší dobu reagovat.
 
--   [Problémy s pomalým výkonem:](#slowness-and-high-cpu-issues) Všechny konkrétní akce v VS jsou pomalejší než požadované
+- [Problémy s pomalým výkonem:](#slowness-and-high-cpu-issues) Všechny konkrétní akce v VS jsou pomalejší než požadované
 
--   [Vysoký procesor:](#slowness-and-high-cpu-issues) Rozšířená období neočekávaného vysokého využití procesoru
+- [Vysoký procesor:](#slowness-and-high-cpu-issues) Rozšířená období neočekávaného vysokého využití procesoru
 
--   [Problémy mimo proces:](#out-of-process-issues) Problém způsobený satelitním procesem sady Visual Studio
+- [Problémy mimo proces:](#out-of-process-issues) Problém způsobený satelitním procesem sady Visual Studio
 
 ## <a name="crashes"></a>Chybě
 Dojde k chybě při neočekávaném ukončení procesu (Visual Studio).
@@ -57,14 +57,13 @@ Přímo reprodukovatelná selhání jsou případy, které mají následující 
 
 V případě těchto potíží postupujte podle kroků v části[Jak nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)a nezapomeňte zahrnout:
 
--   Kroky pro reprodukování problému
+- Kroky pro reprodukování problému
 
--   Samostatný projekt reprodukci, jak je popsáno výše. Pokud není možné samostatně reprodukci, uveďte prosím:
+- Samostatný projekt reprodukci, jak je popsáno výše. Pokud není možné samostatně reprodukci, uveďte prosím:
 
-    -   Jazyk otevřených projektů (C \# , C++ atd.)
+  - Jazyk otevřených projektů (C \# , C++ atd.)
 
-    -   Druh projektu (Konzolová aplikace, ASP.NET atd.)
-
+  - Druh projektu (Konzolová aplikace, ASP.NET atd.)
 
 > [!NOTE]
 > Nejužitečnější **Váš názor:** V tomto případě je nejužitečnější zpětná vazba sada kroků pro reprodukování problému spolu s ukázkovým zdrojovým kódem.
@@ -99,11 +98,11 @@ Pokaždé, když Visual Studio selže, vytvoří soubor s výpisem paměti **dev
 
 Pak použijte Visual Studio "nahlásit problém..." zapnut. Umožní vám připojit příslušný výpis paměti.
 
-1.  Vyhledejte soubor s výpisem paměti pro chybu, kterou vytváříte (vyhledejte soubor se správným časem vytvoření).
+1. Vyhledejte soubor s výpisem paměti pro chybu, kterou vytváříte (vyhledejte soubor se správným časem vytvoření).
 
-2.  Pokud je to možné, \* před odesláním zpětné vazby soubor zip (. zip) zmenšete jeho velikost.
+2. Pokud je to možné, \* před odesláním zpětné vazby soubor zip (. zip) zmenšete jeho velikost.
 
-3.  Postupujte podle kroků v části[Jak nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)a připojit výpis haldy k nové položce zpětné vazby.
+3. Postupujte podle kroků v části[Jak nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)a připojit výpis haldy k nové položce zpětné vazby.
 
 > [!NOTE] 
 > Nejužitečnější **Váš názor:** V tomto případě je nejužitečnou zpětnou vazbou výpis paměti zachycený v době selhání.
@@ -135,33 +134,33 @@ Pokud je například psaní a navigace pomalé, postupujte podle následujícíc
 
 Nejlepších výsledků při zaznamenávání výkonu získáte pomocí následujících kroků:
 
-1.  Pokud ještě není spuštěný, máte k dispozici kopii sady Visual Studio, kde bude problém reprodukován.
+1. Pokud ještě není spuštěný, máte k dispozici kopii sady Visual Studio, kde bude problém reprodukován.
 
-    -   Máte všechno nastavené pro reprodukování problému. Pokud například potřebujete, aby určitý projekt byl načten se specifickým otevřeným souborem, ujistěte se, že oba tyto kroky byly dokončeny, než budete pokračovat.
+    - Máte všechno nastavené pro reprodukování problému. Pokud například potřebujete, aby určitý projekt byl načten se specifickým otevřeným souborem, ujistěte se, že oba tyto kroky byly dokončeny, než budete pokračovat.
 
-    -   Pokud neoznamujete problém, *který je specifický* pro načtení řešení, zkuste počkat 5-10 minut (nebo více, v závislosti na velikosti řešení) po otevření řešení před zavedením trasování výkonu. Proces načtení řešení vytvoří velké množství dat, takže čekání na několik minut nám pomůže soustředit se na konkrétní problém, který vytváříte.
+    - Pokud neoznamujete problém, *který je specifický* pro načtení řešení, zkuste počkat 5-10 minut (nebo více, v závislosti na velikosti řešení) po otevření řešení před zavedením trasování výkonu. Proces načtení řešení vytvoří velké množství dat, takže čekání na několik minut nám pomůže soustředit se na konkrétní problém, který vytváříte.
 
-2.  Spustit druhou kopii sady Visual Studio *bez otevřeného řešení*
+2. Spustit druhou kopii sady Visual Studio *bez otevřeného řešení*
 
-3.  V nové kopii sady Visual Studio otevřete nástroj **nahlásit problém** .
+3. V nové kopii sady Visual Studio otevřete nástroj **nahlásit problém** .
 
-4.  Postupujte podle kroků v tématu [postup nahlášení problému](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) , dokud nedosáhnete kroku "poskytnutí trasování a výpis paměti haldy (volitelné)".
+4. Postupujte podle kroků v tématu [postup nahlášení problému](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) , dokud nedosáhnete kroku "poskytnutí trasování a výpis paměti haldy (volitelné)".
 
-5.  Vyberte, chcete-li zaznamenat první kopii sady Visual Studio (u kterých došlo k potížím s výkonem) a spusťte záznam.
+5. Vyberte, chcete-li zaznamenat první kopii sady Visual Studio (u kterých došlo k potížím s výkonem) a spusťte záznam.
 
-    -   Zobrazí se aplikace záznam postupu a začne se nahrávat.
+    - Zobrazí se aplikace záznam postupu a začne se nahrávat.
 
-    -   **Během nahrávání** proveďte problematickou akci v první kopii sady Visual Studio. Je nám obtížné opravit konkrétní problémy s výkonem, pokud se neobjeví v zaznamenaném čase.
+    - **Během nahrávání** proveďte problematickou akci v první kopii sady Visual Studio. Je nám obtížné opravit konkrétní problémy s výkonem, pokud se neobjeví v zaznamenaném čase.
 
-    -   Pokud je akce kratší než 30 sekund a lze ji snadno opakovat, opakujte akci, abyste mohli problém dále prověřit.
+    - Pokud je akce kratší než 30 sekund a lze ji snadno opakovat, opakujte akci, abyste mohli problém dále prověřit.
 
-    -   Ve většině případů je trasování 60 sekund dostačující k předvedení problémů, zejména v případě, že problematická akce byla naposled (nebo byla opakována) po dobu delší než 30 sekund. Dobu trvání lze upravit podle potřeby pro zachycení chování, které chcete opravit.
+    - Ve většině případů je trasování 60 sekund dostačující k předvedení problémů, zejména v případě, že problematická akce byla naposled (nebo byla opakována) po dobu delší než 30 sekund. Dobu trvání lze upravit podle potřeby pro zachycení chování, které chcete opravit.
 
-6.  Po dokončení operace pomalé nebo vysoké události procesoru, kterou chcete ohlásit, klikněte na tlačítko Zastavit záznam v záznamu postupu. Zpracování trasování výkonu může trvat několik minut.
+6. Po dokončení operace pomalé nebo vysoké události procesoru, kterou chcete ohlásit, klikněte na tlačítko Zastavit záznam v záznamu postupu. Zpracování trasování výkonu může trvat několik minut.
 
-7.  Po dokončení bude vaše zpětná vazba obsahovat několik příloh. Připojte všechny další soubory, které mohou přispět k reprodukování problému (ukázkový projekt, snímky obrazovky, videa atd.).
+7. Po dokončení bude vaše zpětná vazba obsahovat několik příloh. Připojte všechny další soubory, které mohou přispět k reprodukování problému (ukázkový projekt, snímky obrazovky, videa atd.).
 
-8.  Odešlete zpětnou vazbu.
+8. Odešlete zpětnou vazbu.
 
 Při nahrávání trasování výkonu se v případě, že pomalá operace nebo vysoký procesor, který vytváříte, stane na konci, a poté záznam ihned zastaví. Pokud je shromažďováno příliš mnoho informací, nejstarší informace budou přepsány. Pokud trasování není po zajímavé operaci brzy zastaveno (během několika sekund), užitečná data trasování se přepíší.
 
@@ -183,13 +182,13 @@ Existuje několik satelitních procesů, které běží paralelně se systémem 
 
 Díky tomu, co tyto typy problémů nejvíce řeší, je poskytnout další protokoly, které se dají shromáždit pomocí následujících kroků:
 
-1.  Pokud se jedná o přímo reprodukovatelný problém, začněte tím, že odstraníte složku **% TEMP%/servicehub/logs** . Pokud tento problém nemůžete reprodukován, nechejte prosím tuto složku nedotčenou a ignorujte následující odrážky:
+1. Pokud se jedná o přímo reprodukovatelný problém, začněte tím, že odstraníte složku **% TEMP%/servicehub/logs** . Pokud tento problém nemůžete reprodukován, nechejte prosím tuto složku nedotčenou a ignorujte následující odrážky:
 
-    -   Nastavit globální proměnnou prostředí **ServiceHubTraceLevel** na **všechny**
-    -   Reprodukujte problém.
+    - Nastavit globální proměnnou prostředí **ServiceHubTraceLevel** na **všechny**
+    - Reprodukujte problém.
 
-2.  Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://www.microsoft.com/download/details.aspx?id=12493)
-3.  Spusťte nástroj. Výstup souboru zip do **% TEMP%/vslogs.zip**. Připojte prosím tento soubor ke své zpětné vazbě.
+2. Stáhněte si nástroj pro shromažďování protokolů Microsoft Visual Studio a [.NET Framework.](https://www.microsoft.com/download/details.aspx?id=12493)
+3. Spusťte nástroj. Výstup souboru zip do **% TEMP%/vslogs.zip**. Připojte prosím tento soubor ke své zpětné vazbě.
 
 ## <a name="see-also"></a>Viz také
 
