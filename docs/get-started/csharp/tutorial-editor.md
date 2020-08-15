@@ -12,14 +12,14 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72a74c967849703feeb427d89891a023326ca6b7
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 8122f42fb5d2ec4c31ec553407b644e59e9f4418
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234962"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248292"
 ---
-# <a name="learn-to-use-the-code-editor-with-c"></a>Naučte se používat editor kódu s C. #
+# <a name="learn-to-use-the-code-editor-with-c"></a>Naučte se používat editor kódu s C.\#
 
 V tomto 10 minutách úvodu do editoru kódu v aplikaci Visual Studio přidáme kód do souboru, abyste se mohli podívat na některé způsoby, jak Visual Studio dělá psaní, navigaci a porozumění kódu v jazyce C#.
 
@@ -188,7 +188,7 @@ Nikdo nezíská kód napravo poprvé a jedna z věcí, kterou je třeba změnit,
 > [!div class="nextstepaction"]
 > [Další informace o projektech a řešeních](../tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fragmenty kódu](../../ide/code-snippets.md)
 - [Navigace v kódu](../../ide/navigating-code.md)

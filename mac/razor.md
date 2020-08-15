@@ -7,12 +7,12 @@ ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
 ms.topic: how-to
-ms.openlocfilehash: 008052c9b78f93b84e650329cd7ebaf6200d21f1
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 26575367d7aff2b92c64dc5d07068b4900b24e7f
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950525"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249539"
 ---
 # <a name="create-razor-web-apps"></a>Vytváření webových aplikací Razor
 
@@ -48,10 +48,10 @@ Webové aplikace Razor obsahují následující součásti.
 ### <a name="pages-folder"></a>Složka stránky
 
 Tato složka obsahuje webové stránky projektu spolu s kódem na pozadí pro každý:
-   - Soubor * \* . cshtml* pro značky HTML a syntaxe Razor.
-   - Soubor * \* . cshtml.cs* pro kód C# na pozadí pro zpracování událostí stránky.
+- Soubor * \* . cshtml* pro značky HTML a syntaxe Razor.
+- Soubor * \* . cshtml.cs* pro kód C# na pozadí pro zpracování událostí stránky.
 
-Podpůrné soubory mají názvy začínající podtržítkem. Například soubor _Layout. cshtml nakonfiguruje prvky uživatelského rozhraní společné pro všechny stránky. Tento soubor nastaví navigační nabídku v horní části stránky a oznámení o autorských právech dole. Další informace najdete v tématu [rozložení v ASP.NET Core](/aspnet/core/mvc/views/layout).
+Podpůrné soubory mají názvy začínající podtržítkem. Například soubor * \_ layout. cshtml* NAKONFIGURUJE prvky uživatelského rozhraní společné pro všechny stránky. Tento soubor nastaví navigační nabídku v horní části stránky a oznámení o autorských právech dole. Další informace najdete v tématu [rozložení v ASP.NET Core](/aspnet/core/mvc/views/layout).
 
 ### <a name="launch-settings"></a>Nastavení spuštění
 

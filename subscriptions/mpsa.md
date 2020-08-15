@@ -7,12 +7,12 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Předplatná sady Visual Studio v rámci smlouvy o produktech a službách společnosti Microsoft (MPSA)
-ms.openlocfilehash: d38da1784eb543519f1a36ba7342f0b13ab2b1ac
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6ce2208e6d1028e1e697b216d41cdd825dfc0d33
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289349"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247314"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Předplatná sady Visual Studio v rámci smlouvy o produktech a službách společnosti Microsoft (MPSA)
 Pokud jste si zakoupili předplatná sady Visual Studio prostřednictvím programu MPSA, měli byste si být vědomi, že před tím, než se stanete správcem předplatných sady Visual Studio a přiřadíte odběry uživatelům. Pokud jste již nastavili jako správce, můžete přejít přímo na [portál pro správu](https://manage.visualstudio.com/)předplatných sady Visual Studio.
@@ -39,14 +39,14 @@ Tady je několik požadavků/kroků potřebných k tomu, abyste se stali správc
 
 Jakmile splníte kritéria výše, můžete k vašemu tenantovi přidružit svůj nákupní účet podle následujících kroků.
 1. Přihlaste se do [centra Business Center](https://businessaccount.microsoft.com/Customer).
-2. Klikněte na kartu **účet** a vyberte **přidružit domény**.
+2. Vyberte kartu **účet** a zvolte **přidružit domény**.
 3. Vyberte svůj **Nákupní účet** (Pokud máte víc než jeden).
 4. Vyberte svého **tenanta** (například contoso.onmicrosoft.com).
-5. Klikněte na **přidružit doménu**.
+5. Vyberte **přidružená doména**.
 
 Při přidružení budou všichni uživatelé, kteří splňují kritéria, obvykle zřizovat jako správci předplatných sady Visual Studio během několika minut. V časech ale může trvat až 24 hodin. Po zřízení tenanta budete mít přístup k portálu pro správu předplatných sady Visual Studio. Pokud bude trvat déle než 24 hodin, kontaktujte prosím podporu MPSA pomocí těchto kroků:
-1. Připojit k<https://www.microsoft.com/licensing/mpsa/default>
-2. Klikněte na nabídku **Další** v horní části stránky. 
+1. Připojit k <https://www.microsoft.com/licensing/mpsa/default>
+2. V horní části stránky vyberte nabídku **Další** . 
 3. Zvolit **podporu**
 4. Zvolit **podporu licencování**
 5. Vyberte možnost podpory, která nejlépe vyhovuje vašim potřebám. 

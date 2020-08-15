@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Další informace o a instalaci aplikací Microsoft 365 pro podniky
-ms.openlocfilehash: 341598e323b004463d9af2f1b18d5096dea9f3b2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8ece49244d5bdecadc5992cda4e56d0785666e2a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902986"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250749"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aplikací pro Enterprise v předplatných sady Visual Studio
 Ve vybraných předplatných sady Visual Studio je k dispozici Microsoft 365 aplikace pro Enterprise (dříve Office 365 pro plus). 
@@ -25,38 +25,38 @@ Vytvořte nejlepší práci. Pracujte odkudkoli s aplikacemi, které se vždycky
 ## <a name="activation-steps"></a>Kroky aktivace
 Proces aktivace aplikací Microsoft 365 pro podnikové předplatné je jednoduchý.  Pomocí těchto kroků aktivujte předplatné a nainstalujte své aplikace:
 
-1. Přihlaste se k předplatnému sady Visual Studio na adrese[https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-1. Vyhledejte dlaždici aplikace Microsoft 365 pro podniky a klikněte na **aktivovat**.
+1. Přihlaste se k předplatnému sady Visual Studio na adrese [https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+1. Vyhledejte dlaždici aplikace Microsoft 365 pro podniky a vyberte **aktivovat**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice aplikace Microsoft 365 pro podniky](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Klikněte na aktivovat a začněte s vaším předplatným.")
+   > ![Dlaždice aplikace Microsoft 365 pro podniky](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Pokud chcete začít s vaším předplatným, vyberte aktivovat.")
 
-1. V uvítacím okně se dozvíte, jak vás zajímá, zadejte požadované osobní kontaktní údaje a potom klikněte na **Další**.
+1. V uvítacím okně se dozvíte, jak vás zajímá, zadejte požadované osobní kontaktní informace a pak vyberte **Další**.
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 aplikace pro informace o zákaznících v podniku](_img/microsoft-365-apps-for-enterprise/get-to-know-you.png "Zadejte kontaktní informace")
 
-1. V dialogovém okně vytvořit ID uživatele vytvořte své uživatelské jméno a heslo pro vašeho tenanta a pak klikněte na **vytvořit účet**.
+1. V dialogovém okně vytvořit ID uživatele vytvořte své uživatelské jméno a heslo pro vašeho tenanta a pak vyberte **vytvořit účet**.
    > [!div class="mx-imgBorder"]
    > ![Aplikace Microsoft 365 pro vytváření ID podnikového uživatele](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "Vytvoření uživatelského ID a hesla")
 
-1. V dalším kroku budete požádáni o poskytnutí kódu pro důkaz, že nejste robot.  Můžete vám poslat kód jako textovou zprávu.  Zadejte kód a klikněte na tlačítko **Další**. 
+1. V dalším kroku budete požádáni o poskytnutí kódu pro důkaz, že nejste robot.  Můžete vám poslat kód jako textovou zprávu.  Zadejte kód a vyberte **Další**. 
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 aplikací pro podniky prokáže, že nejste robot](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "Pokud chcete pokračovat, vyžádejte si kód a zadejte ho.")
 
-1. Po úspěšném vytvoření účtu se zobrazí dialogové okno zobrazující přihlašovací stránku pro portál Office a nové ID uživatele.  Poznamenejte si tyto informace pro pozdější použití a kliknutím na **Spustit instalaci** začněte s instalací aplikací Microsoft 365.
+1. Po úspěšném vytvoření účtu se zobrazí dialogové okno zobrazující přihlašovací stránku pro portál Office a nové ID uživatele.  Poznamenejte si tyto informace pro pozdější použití a vyberte **spustit instalační program** a začněte instalovat aplikace Microsoft 365.
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 aplikací pro podnik uložit tyto informace](_img/microsoft-365-apps-for-enterprise/save-this-info.png "Uložte své nové ID uživatele a odkaz na portál Office.")
 
-1. Automaticky se přihlásíte na portál Office a teď jste připraveni nainstalovat své aplikace.  Začněte tím, že kliknete na tlačítko **nainstalovat** .
+1. Automaticky se přihlásíte na portál Office a teď jste připraveni nainstalovat své aplikace.  Začněte tím, že vyberete tlačítko **nainstalovat** .
    > [!div class="mx-imgBorder"]
-   > ![Microsoft 365 aplikací pro podnikovou instalaci](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "Klikněte na tlačítko nainstalovat a nainstalujte své aplikace.")
+   > ![Microsoft 365 aplikací pro podnikovou instalaci](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "Vyberte tlačítko nainstalovat a nainstalujte své aplikace.")
 1. Podle pokynů nainstalujte vybrané aplikace.  
 
 ## <a name="eligibility"></a>Vznik
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici       |  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano          |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail| K dispozici.       |  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano          |
 | Visual Studio Enterprise (Standard)   | NFR<sup>1</sup> | Není k dispozici       |  –          |
 | Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                            |  –          |
 | Visual Studio Professional s GitHubem Enterprise | VL | Není k dispozici         |  –          |

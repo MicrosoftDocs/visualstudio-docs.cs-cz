@@ -1,47 +1,47 @@
 ---
-title: podpora pro launchSettings.json
-description: Tento dokument popisuje podporu pro spuštěníSettings.json v Sadě Visual Studio pro Mac
+title: Podpora souboru launchSettings.json
+description: Tento dokument popisuje podporu launchSettings.jsv v Visual Studio pro Mac
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 09/18/2019
 ms.assetid: a556f9d7-86a8-408e-aa54-392584845889
-ms.openlocfilehash: d35bfed901dca960ae21b4e2cf2fa75067c1b3ee
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: df702b5d49e5204e65675c1c57d222e490a33824
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73715930"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247930"
 ---
 # <a name="launchsettingsjson"></a>launchSettings.json
 
-Při vývoji ASP.NET základní projekty, můžete nakonfigurovat, jak by měl být projekt spuštěn ve scénářích vývoje přizpůsobením obsahu souboru launchSettings.json. V sadě Visual Studio for Mac můžete tento soubor aktualizovat pomocí uj. Tento soubor je stejný konfigurační soubor, který můžete použít při `dotnet`spuštění sady Visual Studio v systému Windows nebo z příkazového řádku až po aplikaci . Tento soubor je uložen v projektu ve složce Vlastnosti.
+Při vývoji ASP.NET Core projektů můžete nakonfigurovat, jak má být projekt spuštěn ve scénářích vývoje, přizpůsobením obsahu launchSettings.jsv souboru. V Visual Studio pro Mac můžete tento soubor aktualizovat pomocí uživatelského rozhraní možností projektu nebo přímo úpravou. Tento soubor je stejný konfigurační soubor, který lze použít při spuštění sady Visual Studio ve Windows nebo z příkazového řádku pomocí `dotnet` . Tento soubor je uložený v projektu ve složce Properties (vlastnosti).
 
-Podrobnější informace najdete [v tématu Použití více prostředí v ASP.NET jádra](/aspnet/core/fundamentals/environments). V tomto článku se budeme zabývat tím, jak tento soubor aktualizovat ve Visual Studiu pro Mac.
+Podrobnější informace najdete v tématu [použití více prostředí v ASP.NET Core](/aspnet/core/fundamentals/environments). V tomto článku se dozvíte, jak tento soubor aktualizovat v Visual Studio pro Mac.
 
-## <a name="update-the-start-configuration-by-using-visual-studio-for-mac"></a>Aktualizace počáteční konfigurace pomocí Visual Studia pro Mac
+## <a name="update-the-start-configuration-by-using-visual-studio-for-mac"></a>Aktualizujte počáteční konfiguraci pomocí Visual Studio pro Mac
 
-Soubor launchSettings.json můžete přímo upravit v sadě Visual Studio for Mac nebo můžete upravit pomocí možností projektu. Chcete-li se dostat k možnostem projektu, klepněte pravým tlačítkem myši na projekt a vyberte **možnosti**.
+launchSettings.jsmůžete přímo upravit v souboru v Visual Studio pro Mac, nebo můžete použít možnosti projektu k jeho úpravám. Chcete-li se dostat k možnostem projektu, klikněte pravým tlačítkem myši na projekt a vyberte **možnost možnosti**.
 
-![Místní nabídka projektu s vybranou možností Možnosti](media/vsmac-ctx-proj-options.png)
+![Místní nabídka projektu s vybranou možností možnosti](media/vsmac-ctx-proj-options.png)
 
-Vyberte **možnost Spustit** > **výchozí konfigurace** > **.**
+Vyberte **Run**  >  **Konfigurace**spustit  >  **výchozí**.
 
-!["Spustit", "Konfigurace" a "Výchozí" v možnostech projektu](media/vsmac-run-config-default.png)
+!["Spuštění", "konfigurace" a "výchozí" v možnostech projektu](media/vsmac-run-config-default.png)
 
-V první řadě zde nakonfigurujete dvě věci:
+Primárně nakonfigurujete dvě věci:
 
- - Proměnné prostředí
- - Adresa URL aplikace pro projekt
+- Proměnné prostředí
+- Adresa URL aplikace pro projekt
 
 ## <a name="configure-environment-variables"></a>Konfigurace proměnných prostředí
 
-Mřížku můžete použít k určení hodnot pro proměnné prostředí. Tyto proměnné prostředí se nastaví při spuštění aplikace v sadě Visual Studio for Mac. Při vývoji ASP.NET základní aplikace, měli byste `ASPNETCORE_ENVIRONMENT` si být vědomi proměnné speciální prostředí. Další informace najdete [v tématu Použití více prostředí v ASP.NET jádra](/aspnet/core/fundamentals/environments).
+Pomocí mřížky můžete zadat hodnoty pro proměnné prostředí. Tyto proměnné prostředí se nastaví při spuštění aplikace v Visual Studio pro Mac. Při vývoji ASP.NET Corech aplikací byste měli znát speciální `ASPNETCORE_ENVIRONMENT` proměnnou prostředí. Další informace najdete v tématu [použití více prostředí v ASP.NET Core](/aspnet/core/fundamentals/environments).
 
 
 ## <a name="configure-the-start-url"></a>Konfigurace počáteční adresy URL
 
-Chcete-li nakonfigurovat adresu URL, se kterou bude aplikace spuštěna, přejděte na kartu **ASP.NET jádro.**
+Pokud chcete nakonfigurovat adresu URL, ve které bude aplikace spuštěná, navštivte kartu **ASP.NET Core** .
 
 ![Adresa URL aplikace v možnostech projektu](media/vsmac-run-config-default-aspnetcore.png)
 
-Zde můžete zadat adresu URL, kterou bude aplikace poslouchat při spuštění.
+Tady můžete zadat adresu URL, na které bude aplikace po spuštění naslouchat.

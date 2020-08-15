@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: how-to
 description: Naučte se aktivovat zvýhodnění pro jednotlivé kredity Azure DevTest, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 3c529b746d647f0f26306e89c56c73171ba50c1d
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 276475393de374970685202079831bb06bedea6f
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902920"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247329"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Použití Microsoft Azure v předplatných sady Visual Studio
 Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez dalších poplatků.  S vaším [měsíčním kreditem Azure DevTest](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)je Azure vaším osobním izolovaným prostorem pro vývoj a testování.  Můžete zřídit virtuální počítače, cloudové služby a další prostředky Azure.  Částky kreditu se liší podle úrovně předplatného.
@@ -20,19 +20,19 @@ Jako předplatitelé sady Visual Studio můžete použít Microsoft Azure bez da
 ## <a name="activation-steps"></a>Kroky aktivace
 1. Přihlaste se k webu [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. Vyhledejte dlaždici Azure v části nástroje na stránce výhody a klikněte na odkaz **aktivovat** v dolní části dlaždice výhody.
+2. Vyhledejte dlaždici Azure v části nástroje na stránce výhody a v dolní části dlaždice výhody vyberte odkaz **aktivovat** .
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Azure](_img/vs-azure/vs-azure-tile.png)
 
-3. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření vašeho předplatného Azure.  Prvním krokem je poskytnout vaše osobní údaje a potom kliknout na **Další**.
+3. Pokud nemáte existující předplatné Azure, budete požádáni o vyplnění požadovaných informací k vytvoření vašeho předplatného Azure.  Prvním krokem je poskytnout vaše osobní údaje a pak vybrat **Další**.
    > [!div class="mx-imgBorder"]
    > ![Registrace Azure](_img/vs-azure/vs-azure-about-you.png)
 
-4. V dalším kroku budete muset ověřit identitu pomocí jednoduchého ověřovacího kódu. Zadejte své telefonní číslo a určete, jestli chcete kód přijmout pomocí textu nebo telefonu.  Zadejte kód, který obdržíte, a klikněte na **ověřit kód**.   
+4. V dalším kroku budete muset ověřit identitu pomocí jednoduchého ověřovacího kódu. Zadejte své telefonní číslo a určete, jestli chcete kód přijmout pomocí textu nebo telefonu.  Zadejte kód, který jste obdrželi, a vyberte **ověřit kód**.   
    > [!div class="mx-imgBorder"]
    > ![Příprava na Azure](_img/vs-azure/vs-azure-identity.png)
 
-5. V posledním kroku kliknutím na zaškrtávací políčko přijměte podmínky a pak klikněte na **zaregistrovat**.  A je to!
+5. V posledním kroku zaškrtněte políčko, pokud chcete podmínky přijmout, a pak vyberte **zaregistrovat**se.  A je to!
    > [!div class="mx-imgBorder"]
    > ![Příprava na Azure](_img/vs-azure/vs-azure-agreement.png)
 
@@ -111,7 +111,7 @@ O: duševní vlastnictví vytvářené zaměstnancem vytvořeným v prostředcí
 
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete s Azure pomáhat?  Podívejte se na tyto materiály:
-  - Technická podpora:[https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
+  - Technická podpora: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
   - [Tipy k Azure & triky](https://microsoft.github.io/AzureTipsAndTricks/ "Tipy k Azure & triky") 
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
