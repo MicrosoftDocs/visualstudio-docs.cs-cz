@@ -1,5 +1,5 @@
 ---
-title: Informace o parametrech ve službě staršího jazyka2 | Dokumenty společnosti Microsoft
+title: Informace o parametrech ve starším jazyce Jazyka2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,38 +12,38 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2c40c9ca5c038a70714545f4133db0c0dd686d5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: dff6e871320d0727ed2fbec4188e8f7af2e5c5fe
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80706751"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88237955"
 ---
-# <a name="parameter-info-in-a-legacy-language-service"></a>Informace o parametrech ve službě starší verze jazyka
-Informace o parametrech IntelliSense je popis, který zobrazuje podpis metody, když uživatel zadá počáteční znak seznamu parametrů (obvykle otevřenou závorku) pro seznam parametrů metody. Při zadání každého parametru a zadání oddělovače parametrů (obvykle čárky) se popisek aktualizuje tak, aby zobrazoval další parametr tučně.
+# <a name="parameter-info-in-a-legacy-language-service-2"></a>Informace o parametrech ve službě starší verze jazyka 2
+Informace o parametrech IntelliSense je popis, který zobrazí signaturu metody, když uživatel zadá spouštěcí znak seznamu parametrů (obvykle levou závorku) pro seznam parametrů metody. Při zadání každého parametru a zadání oddělovače parametrů (obvykle čárka) se popis aktualizuje a zobrazí se další parametr tučným písmem.
 
- Třídy Framework spravovaného balíčku (MPF) poskytují podporu pro správu popisku Informace o parametrech. Analyzátor musí zjistit počáteční parametr, parametr next a koncové znaky parametru a musí zadat seznam podpisů metody a jejich přidružené parametry.
+ Třídy spravovaného balíčku architektury (MPF) poskytují podporu pro správu popisů parametrů pro informace o parametrech. Analyzátor musí detekovat počáteční znaky parametrů, parametry Next a end a musí poskytovat seznam signatur metod a jejich přidružených parametrů.
 
- Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace naleznete v [tématu Rozšíření editoru a jazykových služeb](../../extensibility/extending-the-editor-and-language-services.md).
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace najdete v tématu [rozšíření editoru a jazykových služeb](../../extensibility/extending-the-editor-and-language-services.md).
 
 > [!NOTE]
-> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
 
 ## <a name="implementation"></a>Implementace
- Analyzátor by měl nastavit <xref:Microsoft.VisualStudio.Package.TokenTriggers> hodnotu aktivační události je nastavena, když najde počáteční znak seznamu parametrů (často otevřené závorky). Měl by <xref:Microsoft.VisualStudio.Package.TokenTriggers> nastavit aktivační událost, když najde oddělovač parametrů (často čárku). To způsobí, že popisek Informace o parametrech bude aktualizován a zobrazí se další parametr tučně. Analyzátor by měl nastavit <xref:Microsoft.VisualStudio.Package.TokenTriggers> hodnotu aktivační události, pokud najde koncový znak seznamu parametrů (často zavřít závorku).
+ Analyzátor by měl nastavit hodnotu triggeru, <xref:Microsoft.VisualStudio.Package.TokenTriggers> když najde spouštěcí znak seznamu parametrů (často levou závorku). Měla by být nastavena <xref:Microsoft.VisualStudio.Package.TokenTriggers> Trigger, když najde oddělovač parametrů (často čárka). To způsobí, že se popisek informace parametru aktualizuje a zobrazí se další parametr tučným písmem. Analyzátor by měl nastavit hodnotu triggeru, <xref:Microsoft.VisualStudio.Package.TokenTriggers> když nalezne koncový znak seznamu parametrů (často pravá závorka).
 
- Hodnota <xref:Microsoft.VisualStudio.Package.TokenTriggers> aktivační události iniciuje volání <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> metody, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> která zase volá analyzátor <xref:Microsoft.VisualStudio.Package.ParseReason>metody s důvodem analýzy . Pokud analyzátor zjistí, že identifikátor před počátečním znakem seznamu parametrů je rozpoznaný název <xref:Microsoft.VisualStudio.Package.AuthoringScope> metody, vrátí seznam odpovídajících podpisů metody v objektu. Pokud byly nalezeny nějaké podpisy metody, zobrazí se popis ekvalizér Informace o parametrech s prvním podpisem v seznamu. Tento popis je pak aktualizován jako další podpis je zadán. Při zadání znaku konce seznamu parametrů je ze zobrazení odebrán popis informace o parametrech.
+ <xref:Microsoft.VisualStudio.Package.TokenTriggers>Hodnota triggeru zahájí volání <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> metody, která zase volá <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> analyzátor metody s důvodem analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> . Pokud analyzátor určí, že identifikátor před počátečním znakem seznamu parametrů je rozpoznaným názvem metody, vrátí seznam odpovídající signatury metody v <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektu. Pokud byly nalezeny jakékoli signatury metod, v seznamu se zobrazí popisek informace o parametru s prvním podpisem. Tento popis se pak aktualizuje, protože se zapíše další podpis. Při zadání koncového znaku seznamu parametrů je popisek informace o parametru odebrán ze zobrazení.
 
 > [!NOTE]
-> Chcete-li zajistit, aby byl popis informací o parametru správně <xref:Microsoft.VisualStudio.Package.Methods> formátován, je nutné přepsat vlastnosti třídy a zadat příslušné znaky. Základní <xref:Microsoft.VisualStudio.Package.Methods> třída předpokládá podpis metody jazyka C#style. Podrobnosti <xref:Microsoft.VisualStudio.Package.Methods> o tom, jak toho lze provést, najdete ve třídě.
+> Chcete-li zajistit, aby byl popisek informací o parametrech správně naformátován, je nutné přepsat vlastnosti <xref:Microsoft.VisualStudio.Package.Methods> třídy, aby poskytovaly příslušné znaky. Základní <xref:Microsoft.VisualStudio.Package.Methods> Třída předpokládá podpis metody ve stylu jazyka C#. Podrobnosti o <xref:Microsoft.VisualStudio.Package.Methods> tom, jak to lze provést, naleznete v třídě.
 
-## <a name="enabling-support-for-the-parameter-info"></a>Povolení podpory pro informace o parametrech
- Chcete-li podporovat popisky informace `ShowCompletion` o parametrech, musíte nastavit pojmenovaný parametr parametru <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> na . `true` Jazyková služba přečte hodnotu této <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> položky registru z vlastnosti.
+## <a name="enabling-support-for-the-parameter-info"></a>Povolení podpory pro informace o parametru
+ Chcete-li podporovat informace o parametrech, je nutné nastavit `ShowCompletion` pojmenovaný parametr <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> pro `true` . Služba jazyka načte hodnotu této položky registru z <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> Vlastnosti.
 
- Kromě toho <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> musí být vlastnost `true` nastavena na pro popis informací o parametrech, které mají být zobrazeny.
+ Kromě toho <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> musí být vlastnost nastavena na hodnotu `true` pro zobrazení popisku informace o parametru.
 
 ### <a name="example"></a>Příklad
- Zde je zjednodušený příklad zjištění znaků seznamu parametrů a nastavení příslušných aktivačních událostí. Tento příklad je pouze pro ilustrační účely. Předpokládá, že skener obsahuje `GetNextToken` metodu, která identifikuje a vrací tokeny z řádku textu. Ukázkový kód jednoduše nastaví aktivační události vždy, když vidí správný druh znaku.
+ Tady je zjednodušený příklad rozpoznávání znaků seznamu parametrů a nastavení příslušných triggerů. Tento příklad je určen pouze pro ilustrativní účely. Předpokládá, že váš skener obsahuje metodu `GetNextToken` , která identifikuje a vrací tokeny z řádku textu. Vzorový kód jednoduše nastaví triggery vždy, když uvidí správný druh znaku.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -91,17 +91,17 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Podpora popisku informací o parametrech v analyzátoru
- Třída <xref:Microsoft.VisualStudio.Package.Source> provede některé předpoklady o <xref:Microsoft.VisualStudio.Package.AuthoringScope> obsahu <xref:Microsoft.VisualStudio.Package.AuthoringSink> a třídy při zobrazení a aktualizaci popisek Informace o parametrech.
+## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Podpora popisu parametru informace v analyzátoru
+ <xref:Microsoft.VisualStudio.Package.Source>Třída provede některé předpoklady týkající se obsahu <xref:Microsoft.VisualStudio.Package.AuthoringScope> <xref:Microsoft.VisualStudio.Package.AuthoringSink> tříd a při zobrazení a aktualizaci popisu parametru informace.
 
-- Analyzátor je zadán <xref:Microsoft.VisualStudio.Package.ParseReason> při zadání počátečního znaku seznamu parametrů.
+- Analyzátor je uveden <xref:Microsoft.VisualStudio.Package.ParseReason> při zadání počátečního znaku seznamu parametrů.
 
-- Umístění uvedené v <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu je bezprostředně za počátečním znakem seznamu parametrů. Analyzátor musí shromažďovat podpisy všech deklarací metod, které jsou k dispozici na této <xref:Microsoft.VisualStudio.Package.AuthoringScope> pozici, a uložit je do seznamu ve vaší verzi objektu. Tento seznam obsahuje název metody, typ metody (nebo návratový typ) a seznam možných parametrů. Tento seznam je později vyhledán pro podpis metody nebo podpisy, které se mají zobrazit v popisku Informace o parametrech.
+- Umístění zadané v <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu je ihned po počátečním znaku seznamu parametrů. Analyzátor musí shromažďovat podpisy všech deklarací metod dostupných na této pozici a ukládat je do seznamu ve vaší verzi <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektu. Tento seznam obsahuje název metody, typ metody (nebo návratový typ) a seznam možných parametrů. V tomto seznamu se později vyhledal podpis metody nebo signatury, které se mají zobrazit v popisu parametru informace.
 
-  Analyzátor pak musí analyzovat řádek určený <xref:Microsoft.VisualStudio.Package.ParseRequest> objektem shromáždit název zadané metody, jakož i jak daleko podél uživatele je v parametrech zadávání. Toho je dosaženo předáním názvu metody <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> na metodu <xref:Microsoft.VisualStudio.Package.AuthoringSink> na objekt <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> a potom volání metody při analýzu <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> znaku start seznamu parametrů, volání metody při <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> analyzování seznamu parametrů další znak a nakonec volání metody při analýzu znaku seznamu parametrů. Výsledky těchto volání metody jsou <xref:Microsoft.VisualStudio.Package.Source> používány třídy odpovídajícím způsobem aktualizovat popisek Informace o parametrech.
+  Analyzátor musí potom analyzovat řádek určený <xref:Microsoft.VisualStudio.Package.ParseRequest> objektem, aby shromáždil název metody, která se zadává, a také to, jak daleko podél uživatele je zadání parametrů. To se provádí předáním názvu metody do <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> metody <xref:Microsoft.VisualStudio.Package.AuthoringSink> objektu a následným voláním <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> metody, když je analyzovaný spouštěcí znak seznamu parametrů, voláním <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> metody při analýze dalšího znaku seznamu parametrů a nakonec voláním <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> metody při analýze koncového znaku seznamu parametrů. Výsledky těchto volání metody jsou používány <xref:Microsoft.VisualStudio.Package.Source> třídou pro správné aktualizace popisku parametru informace.
 
 ### <a name="example"></a>Příklad
- Zde je řádek textu, který může uživatel zadat. Čísla pod čárou označují, který krok je proveden analyzátorem na této pozici v řádku (za předpokladu, že analýza se přesune zleva doprava). Předpokladem je, že vše před řádek již byla analyzována pro podpisy metody, včetně "testfunc" podpis metody.
+ Tady je řádek textu, který uživatel může zadat. Čísla pod řádkem označují, který krok se provádí analyzátorem na této pozici na řádku (za předpokladu, že se analýza přesune doleva). Předpokladem je, že vše před řádkem již bylo analyzováno pro signatury metod, včetně signatury metody "testfunc".
 
 ```
 testfunc("a string",3);
@@ -109,12 +109,12 @@ testfunc("a string",3);
      12          3 4
 ```
 
- Kroky, které analyzátor provede, jsou uvedeny níže:
+ Postup analýzy je popsaný níže:
 
-1. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> s textem "testfunc".
+1. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> text "testfunc".
 
-2. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>.
+2. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> .
 
-3. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>.
+3. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> .
 
-4. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>.
+4. Analyzátor volá <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> .

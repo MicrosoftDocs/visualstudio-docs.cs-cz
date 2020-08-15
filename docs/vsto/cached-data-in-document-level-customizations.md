@@ -18,48 +18,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62b0d04e37072af1f0053a6e395edcb856a115c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9985dd25ba62cc9c0735a8a8f4008a4c0abe0558
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939316"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238345"
 ---
 # <a name="cached-data-in-document-level-customizations"></a>Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu
-  Primární cílem přizpůsobení na úrovni dokumentu je oddělení dat ze zobrazení v dokumentech systému Office. Data představují informace, které jsou uloženy v dokumentu, včetně čísel a text. Zobrazení odkazuje na uživatelské rozhraní a objektový model Microsoft Office Word a Microsoft Office Excel.
+  Hlavním cílem přizpůsobení na úrovni dokumentu je oddělení dat od zobrazení v dokumentech Office. Data odkazují na informace, které jsou uloženy v dokumentu, včetně čísel a textu. Zobrazení odkazuje na uživatelské rozhraní a objektový model systém Microsoft Office Word a systém Microsoft Office Excel.
 
- Visual Studio tím, že data mají být vloženy jako data odděluje ze zobrazení v přizpůsobeních na úrovni dokumentu *datový ostrůvek*, označované také jako *přístupů do datové mezipaměti*. Může číst nebo upravovat data přímo, bez spuštění aplikace Word nebo Excel. To je užitečné, když budete chtít upravovat data v dokumentech na serveru, který nemá nainstalovanou sadu Microsoft Office. Aplikace Word a Excel jsou určeny k použití v prostředí klienta; nejsou určeny k použití na serveru.
+ Visual Studio odděluje data ze zobrazení v přizpůsobeních na úrovni dokumentu tím, že povoluje vkládání dat jako *datové ostrůvky*, označované také jako *mezipaměť dat*. Data můžete číst nebo upravovat přímo bez spuštění Wordu nebo Excelu. To je užitečné v případě, že potřebujete upravit data v dokumentech na serveru, na kterém není nainstalovaná aplikace systém Microsoft Office. Word a Excel jsou určené pro použití v klientských prostředích; nejsou určeny ke spouštění na serveru.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Další informace o přizpůsobení na úrovni dokumentu naleznete v tématu [přehled vývoje řešení pro Office &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) a [architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).
+ Další informace o přizpůsobení na úrovni dokumentu najdete v tématu [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) a [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).
 
-## <a name="understand-the-cached-data-programming-model"></a>Vysvětlení programovací model dat uložených v mezipaměti
- Data ostrov může obsahovat libovolný objekt v rámci vašeho řešení, která splňuje určité požadavky. Mezi tyto objekty patří <xref:System.Data.DataSet> objekty, <xref:System.Data.DataTable> objekty a jakýkoli jiný objekt, který lze serializovat pomocí <xref:System.Xml.Serialization.XmlSerializer> třídy. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).
+## <a name="understand-the-cached-data-programming-model"></a>Princip programovacího modelu pro data v mezipaměti
+ Datový ostrůvek může ve vašem řešení obsahovat libovolný objekt, který splňuje určité požadavky. Tyto objekty zahrnují <xref:System.Data.DataSet> objekty, <xref:System.Data.DataTable> objekty a jakýkoli jiný objekt, který může být serializován <xref:System.Xml.Serialization.XmlSerializer> třídou. Další informace najdete v tématu [cache data](../vsto/caching-data.md).
 
- Zajištění zobrazení pro data uložená v mezipaměti, můžete svázat ovládací prvky Windows Forms a *hostování ovládacích prvků* pro dokument k objektům v ostrov data. Vytváření datových vazeb mezi ovládacími prvky vázané na data a datový ostrůvek zajišťuje dvě synchronizované. Můžete také přidat kód pro ověření dat, která je nezávislá ovládací prvky. Další informace najdete v tématu [vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
+ Chcete-li poskytnout zobrazení pro data uložená v mezipaměti, můžete navazovat ovládací prvky model Windows Forms a *hostitelské ovládací prvky* v dokumentu na objekty v datovém ostrovu. Datová vazba mezi datovým ostrůvkem a ovládacími prvky svázanými s daty udržuje dvě synchronizované. Můžete také přidat ověřovací kód pro data, která jsou nezávislá na ovládacích prvcích. Další informace najdete v tématu [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
- Hostitelské ovládací prvky jsou rozšířeny verze nativních objektů v objektové modely Excelu a Wordu. Na rozdíl od nativních objektů hostitelské ovládací prvky lze vázat přímo spravovaných datových objektů. Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [ovládací prvky Windows Forms v přehledu dokumenty Office](../vsto/windows-forms-controls-on-office-documents-overview.md).
+ Hostitelské ovládací prvky jsou rozšířené verze nativních objektů v objektových modelech aplikace Excel a Word. Na rozdíl od nativních objektů lze hostitelské ovládací prvky svázat přímo se spravovanými datovými objekty. Další informace najdete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [model Windows Forms ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
-## <a name="access-cached-data-on-the-server"></a>Přístup do mezipaměti dat na serveru
- Chcete-li získat přístup k data uložená v mezipaměti v dokumentu, můžete použít <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy. Tato třída je součástí [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], a je možné na server bez spuštěné aplikace Excel nebo Word. Když uživatel otevře dokument po upravovat data uložená v mezipaměti, všechny ovládací prvky, které jsou vázány na data se automaticky synchronizují na změny a uživateli se zobrazí aktualizovaná data. Další informace najdete v tématu [přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md).
+## <a name="access-cached-data-on-the-server"></a>Přístup k datům uloženým v mezipaměti na serveru
+ Chcete-li získat přístup k datům uloženým v mezipaměti v dokumentu, můžete použít <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídu. Tato třída je součástí a je [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] možné ji použít na serveru bez spuštění aplikace Excel nebo Word. Když uživatel otevře dokument po úpravě dat uložených v mezipaměti, všechny ovládací prvky, které jsou vázány na data, budou automaticky synchronizovány se změnami a uživatel se zobrazí s aktualizovanými daty. Další informace najdete v tématu [přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md).
 
- Excelu a Wordu nejsou potřeba k zápisu dat na serveru pouze k zobrazení na straně klienta. Excelu a Wordu ještě nemusí být nainstalován na serveru. To poskytuje lepší škálovatelnost a schopnost provádět rychlé dávkové zpracování dokumentů, které obsahují datové ostrůvky.
+ Aplikace Excel a Word není nutné zapisovat na data na serveru, pouze k jejich zobrazení na klientovi. Aplikace Excel a Word není dokonce nutné instalovat na server. To poskytuje lepší škálovatelnost a možnost provádět rychlé dávkové zpracování dokumentů, které obsahují datové ostrůvky.
 
-## <a name="data-caching-for-offline-use"></a>Ukládání dat do mezipaměti pro použití v offline režimu
- Ukládání dat v data ostrov umožňuje scénáře v režimu offline. Když uživatel poprvé otevře dokument nebo vyžádá dokument ze serveru, je datový ostrůvek vyplněna nejnovější data. Ostrov data se uloží do mezipaměti v dokumentu a je pak k dispozici v režimu offline. Uživatel (a váš kód) můžete pracuje s daty, i když není k dispozici žádné živé připojení. Když se uživatel znovu připojí, můžete změny v datech šířeny zpět do zdroje dat serveru.
+## <a name="data-caching-for-offline-use"></a>Ukládání dat do mezipaměti pro použití v režimu offline
+ Ukládání dat v datovém ostrově umožňuje offline scénáře. Když uživatel poprvé otevře dokument nebo požádá o dokument od serveru, datový ostrůvek se vyplní nejnovějšími daty. Datový ostrůvek je uložen do mezipaměti v dokumentu a je pak k dispozici v režimu offline. Uživatel (a váš kód) může manipulovat s daty, i když není k dispozici žádné živé připojení. Když se uživatel znovu připojí, změny dat se dají rozšířit zpátky do zdroje dat na serveru.
 
-## <a name="cached-data-and-custom-xml-parts-compared"></a>Data uložená v mezipaměti a vlastní části XML, porovnání
- Vlastní části XML byly zavedeny v systému Microsoft Office 2007 jako způsob, jak ukládat libovolné části XML v dokumentu. I když jsou užitečné v mnoha stejné scénáře jako mezipaměť dat vlastní části XML, existují určité rozdíly mezi datový ostrůvek a vlastní části XML. Další informace o vlastních částí XML, naleznete v tématu [Přehled vlastních částí XML](../vsto/custom-xml-parts-overview.md).
+## <a name="cached-data-and-custom-xml-parts-compared"></a>Porovnání dat uložených v mezipaměti a vlastních částí XML
+ Vlastní části XML byly představeny v 2007 systém Microsoft Office systému jako způsob ukládání libovolných částí XML do dokumentu. I když jsou vlastní části XML užitečné v mnoha stejných scénářích jako mezipaměť dat, existují určité rozdíly mezi datovými ostrovy a vlastními částmi XML. Další informace o vlastních částech XML naleznete v tématu [Custom XML Parts Overview](../vsto/custom-xml-parts-overview.md).
 
  V následující tabulce jsou uvedeny některé rozdíly a podobnosti.
 
-||Mezipaměť dat|Vlastní části XML|
+|Otázka/charakteristika|Mezipaměť dat|Vlastní části XML|
 |-|----------------|----------------------|
-|Aplikace Office, které mohou využívat?|Přizpůsobení na úrovni dokumentu v následujících aplikacích:<br /><br /> -   Excel<br />-   Word|Řešení na úrovni dokumentu a úrovni aplikace v následujících aplikacích:<br /><br /> -   Excel<br />-PowerPoint<br />-   Word|
-|Jaké typy dat můžete ukládat?|Všechny veřejné objektu vlastního nastavení sestavení, který splňuje určité požadavky. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).|Žádná data XML.|
-|Může přistupovat k datům bez spuštění aplikace Microsoft Office?|Ano, s použitím <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy poskytované [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].|Ano, s využitím tříd v <xref:System.IO.Packaging> obor názvů, nebo pomocí sady SDK formát Open XML.|
+|Které aplikace Office je můžou používat?|Přizpůsobení na úrovni dokumentu pro následující aplikace:<br /><br /> – Excel<br />– Word|Řešení na úrovni dokumentu a na úrovni aplikace pro následující aplikace:<br /><br /> – Excel<br />– PowerPoint<br />– Word|
+|Jaké typy dat můžete ukládat?|Všechny veřejné objekty v sestavení vlastního nastavení, které splňují určité požadavky. Další informace najdete v tématu [cache data](../vsto/caching-data.md).|Všechna data XML.|
+|Máte přístup k datům, aniž byste museli spouštět aplikace systém Microsoft Office?|Ano, pomocí <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy poskytované [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .|Ano, pomocí tříd v <xref:System.IO.Packaging> oboru názvů nebo pomocí Open XML Format SDK.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Data v řešeních pro systém Office](../vsto/data-in-office-solutions.md)
-- [Architektura řešení pro Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [Architektura řešení pro systém Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)

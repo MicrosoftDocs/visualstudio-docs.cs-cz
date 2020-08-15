@@ -1,5 +1,5 @@
 ---
-title: Funkce služby starší jazykové služby2 | Dokumenty společnosti Microsoft
+title: Features2 služby starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,25 +10,25 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33f12e816476aa54f334988b99b9e86e820784f6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 04e7df7fc5c7532d2db45bc2b643a249d1e566c7
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707373"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88237903"
 ---
-# <a name="legacy-language-service-features"></a>Funkce služby starší verze jazyka
-V následujících tématech jsou uvedeny některé funkce služby starších jazyků, které můžete poskytnout.
+# <a name="legacy-language-service-features-2"></a>Funkce služby starší verze jazyka 2
+V následujících tématech najdete seznam některých funkcí služby starší verze jazyka, které můžete poskytnout.
 
- Starší jazykové služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkcí služby jazyka je použití rozšíření MEF. Další informace o novém způsobu implementace jazykové služby naleznete v [tématu Editor and Language Service Extensions](../../extensibility/editor-and-language-service-extensions.md).
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace o novém způsobu implementace jazykové služby najdete v tématu [rozšíření pro Editor a jazykové služby](../../extensibility/editor-and-language-service-extensions.md).
 
 > [!NOTE]
-> Doporučujeme, abyste co nejdříve začali používat nové rozhraní API editoru. Tím se zlepší výkon služby jazyka a umožní vám využít nové funkce editoru.
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 - [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
 
- Vysvětluje, jak implementovat syntaxe zbarvení.
+ Vysvětluje, jak implementovat barvy syntaxe.
 
 - [Automatické formátování ve službě starší verze jazyka](../../extensibility/internals/automatic-formatting-in-a-legacy-language-service.md)
 
@@ -36,7 +36,7 @@ V následujících tématech jsou uvedeny některé funkce služby starších ja
 
 - [Informace o parametrech ve službě starší verze jazyka](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)
 
- Vysvětluje, jak implementovat popis informací o parametrech Technologie IntelliSense.
+ Vysvětluje, jak implementovat ovládací prvek informace o parametru technologie IntelliSense.
 
 - [Dokončování příkazů ve službě starší verze jazyka](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)
 
@@ -44,10 +44,10 @@ V následujících tématech jsou uvedeny některé funkce služby starších ja
 
 - [Osnova a skrytý text ve službě starší verze jazyka](../../extensibility/internals/outlining-and-hidden-text-in-a-legacy-language-service.md)
 
- Vysvětluje, jak implementovat osnovu nebo skrytý text.
+ Vysvětluje, jak implementovat sbalení nebo skrytý text.
 
 - [Postupy: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Vysvětluje některé kroky při implementaci podpory ladicího programu..
+ Popisuje některé kroky v tématu Implementace podpory ladicího programu..
 
 ## <a name="related-sections"></a>Související oddíly

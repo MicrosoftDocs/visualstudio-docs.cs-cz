@@ -1,5 +1,5 @@
 ---
-title: Analýza kódu pro spravovaný kód
+title: Starší verze analýzy pro spravovaný kód
 ms.date: 06/12/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4eac88d56399b7f8552962afa50b52c8431232b9
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 18c4ebf61e7136d908ad1e444616b0af7ac59a48
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974925"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238371"
 ---
-# <a name="overview-of-code-analysis-for-managed-code-in-visual-studio"></a>Přehled analýzy kódu pro spravovaný kód v aplikaci Visual Studio
+# <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Přehled starší verze analýzy pro spravovaný kód v aplikaci Visual Studio
 
 Visual Studio může analyzovat kód spravovaného kódu dvěma způsoby: pomocí [starší verze analýzy](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md), označované také jako FxCop statická analýza spravovaných sestavení a s pokročilejšími [analyzátory kódu](../code-quality/roslyn-analyzers-overview.md)založeného na .NET Compiler Platform. Toto téma se zabývá analýzou starší verze. Další informace o analýze kódu na základě .NET Compiler Platform najdete v tématu [Přehled analyzátorů založených na .NET Compiler Platform](../code-quality/roslyn-analyzers-overview.md).
 
@@ -26,7 +26,7 @@ Analýza kódu pro spravovaný kód analyzuje spravovaná sestavení a sestavuje
 Nástroj pro analýzu představuje kontroly, které provádí během analýzy, jako varovné zprávy. Varovné zprávy identifikují relevantní problémy s programováním a návrhem a, pokud je to možné, poskytují informace o tom, jak tento problém vyřešit.
 
 > [!NOTE]
-> Pro projekty .NET Core a .NET Standard v aplikaci Visual Studio není podporována starší verze analýzy (Analýza statického kódu). Pokud jako součást MSBuild spustíte analýzu kódu v projektu .NET Core nebo .NET Standard, zobrazí se chyba podobná **chybě: CA0055: nelze identifikovat platformu pro \<>. dll**. Chcete-li analyzovat kód v projektech .NET Core nebo .NET Standard, použijte místo toho [analyzátory kódu](../code-quality/roslyn-analyzers-overview.md) .
+> Pro projekty .NET Core a .NET Standard v aplikaci Visual Studio není podporována starší verze analýzy (Analýza statického kódu). Pokud jako součást MSBuild spustíte analýzu kódu v projektu .NET Core nebo .NET Standard, zobrazí se chyba podobná **chybě: CA0055: nelze identifikovat platformu pro \<your.dll> **. Chcete-li analyzovat kód v projektech .NET Core nebo .NET Standard, použijte místo toho [analyzátory kódu](../code-quality/roslyn-analyzers-overview.md) .
 
 ## <a name="ide-integrated-development-environment-integration"></a>Integrace integrovaného vývojového prostředí (IDE)
 
@@ -34,7 +34,7 @@ Můžete spustit analýzu kódu v projektu ručně nebo automaticky.
 
 Chcete-li spustit analýzu kódu pokaždé, když sestavíte projekt, vyberte možnost na stránce vlastností **Analýza kódu** projektu. Další informace najdete v tématu [Postup: povolení a zákaz automatické analýzy kódu](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
-Chcete-li spustit analýzu kódu ručně v projektu, z panelu nabídek vyberte možnost **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<> projektu**.
+Chcete-li spustit analýzu kódu ručně v projektu, z panelu nabídek vyberte možnost **analyzovat**  >  **spuštění analýza kódu**  >  **Spustit analýzu kódu \<project> na **.
 
 ## <a name="rule-sets"></a>Sady pravidel
 
@@ -59,7 +59,7 @@ Další informace najdete v tématu [potlačení upozornění](../code-quality/i
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Pokud migrujete projekt do sady Visual Studio 2017, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni opravit upozornění, můžete je potlačit výběrem možnosti **analyzovat** > **Spustit analýzu kódu a potlačit aktivní problémy**.
+> Pokud migrujete projekt do sady Visual Studio 2017, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni na opravu upozornění, můžete je potlačit kliknutím na možnost **analyzovat**  >  **spuštění analýza kódu a potlačit aktivní problémy**.
 >
 > ![Spustit analýzu kódu a potlačit problémy v aplikaci Visual Studio](media/suppress-active-issues.png)
 
@@ -68,7 +68,7 @@ Další informace najdete v tématu [potlačení upozornění](../code-quality/i
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Pokud migrujete projekt do sady Visual Studio 2019, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni opravit upozornění, můžete je potlačit výběrem možnosti **analyzovat** > **sestavení a potlačení aktivních problémů**.
+> Pokud migrujete projekt do sady Visual Studio 2019, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni opravit upozornění, můžete je potlačit výběrem možnosti **analyzovat**  >  **sestavení a potlačit aktivní problémy**.
 
 ::: moniker-end
 
@@ -84,10 +84,10 @@ To můžete provést zadáním zásad vracení se změnami. Další informace na
 
 ## <a name="team-build-integration"></a>Integrace sestavení týmu
 
-Můžete použít integrované funkce systému sestavení ke spuštění nástroje pro analýzu jako součást procesu sestavení. Další informace najdete v tématu [kanály Azure](/azure/devops/pipelines/index?view=vsts).
+Můžete použít integrované funkce systému sestavení ke spuštění nástroje pro analýzu jako součást procesu sestavení. Další informace najdete v tématu [Azure Pipelines](/azure/devops/pipelines/index?view=vsts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů založených na .NET Compiler Platform](../code-quality/roslyn-analyzers-overview.md)
 - [Použití sad pravidel k seskupování pravidel analýzy kódu](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-- [Postupy: Povolení a zakázání automatické analýzy kódu](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [Postupy: Povolení a zákaz automatické analýzy kódu](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

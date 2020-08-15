@@ -7,19 +7,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 226111f7bd2c064fa2aec3cbd4f94a0adeb0e5b8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6a4761703610a87818cd1512f96530a0f865faf0
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596564"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238540"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Začínáme s jazyky specifickými pro doménu
 
 Toto téma vysvětluje základní pojmy při definování a používání jazyka DSL (Domain Specific Language) vytvořeného pomocí sady Modeling SDK pro Visual Studio.
 
 > [!NOTE]
-> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v tématu [tento příspěvek na blogu](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
+> Sada text Template Transform SDK a sada Visual Studio Modeling SDK jsou nainstalovány automaticky při instalaci specifických funkcí sady Visual Studio. Další podrobnosti najdete v [tomto blogovém příspěvku](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
 
 Pokud s DSL začínáte, doporučujeme vám pracovat přes **testovací prostředí nástrojů DSL**, které najdete na tomto webu: [vizualizace a sada SDK pro modelování](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
@@ -39,9 +39,9 @@ Zbytek tohoto přehledu je návod, který zavádí základní operace vytvářen
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pokud chcete definovat DSL, musíte mít nainstalovaný následující komponenty:
+K definování DSL musíte mít nainstalované následující součásti:
 
-| | |
+| Komponenta | Odkaz |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
@@ -61,7 +61,7 @@ Chcete-li vytvořit nový jazyk specifický pro doménu, vytvořte nové řešen
 
      ![Dialog vytvořit DSL](../modeling/media/create_dsldialog.png)
 
-4. Do pole **název** zadejte **FamilyTree**. Klikněte na tlačítko **OK**.
+4. Do pole **název** zadejte **FamilyTree**. Klikněte na **OK**.
 
      Spustí se **Průvodce jazykem specifickým pro doménu** a zobrazí se seznam řešení DSL šablon.
 
@@ -100,7 +100,7 @@ Všimněte si následujících aspektů nového řešení:
 
 - **Projekt DslPackage** Tento projekt obsahuje kód, který umožňuje otevřít a upravit instance DSL v aplikaci Visual Studio.
 
-## <a name="Debugging"></a>Spuštění DSL
+## <a name="running-the-dsl"></a><a name="Debugging"></a> Spuštění DSL
 
 Řešení DSL můžete spustit hned po jeho vytvoření. Později můžete definici DSL upravit postupně a znovu spustit řešení po každé změně.
 
@@ -119,7 +119,7 @@ Všimněte si následujících aspektů nového řešení:
 
 3. V experimentální instanci aplikace Visual Studio otevřete soubor modelu s názvem **test** z **Průzkumník řešení**.
 
-     \- nebo –
+     \- ani
 
      Klikněte pravým tlačítkem na projekt ladění, přejděte na **Přidat**a pak klikněte na **položka**. V dialogovém okně **Přidat položku** vyberte typ souboru vaší DSL.
 
@@ -141,19 +141,19 @@ Experimentální Visual Studio bude vypadat jako v následujícím příkladu:
 
 ### <a name="the-content-of-a-model"></a>Obsah modelu
 
-Obsah souboru, který je instancí DSL, se nazývá *model*. Model obsahuje prvky *modelu* a *propojení* mezi prvky. Definice DSL určuje, které typy prvků modelu a odkazy mohou existovat v modelu. Například v DSL vytvořené ze šablony minimálního jazyka je jeden typ elementu modelu a jeden typ odkazu.
+Obsah souboru, který je instancí DSL, se nazývá *model*. Model obsahuje prvky *modelu* <em>elements</em> a *propojení* mezi prvky. Definice DSL určuje, které typy prvků modelu a odkazy mohou existovat v modelu. Například v DSL vytvořené ze šablony minimálního jazyka je jeden typ elementu modelu a jeden typ odkazu.
 
 Definice DSL může určovat způsob, jakým se model zobrazuje v diagramu. Můžete vybírat z nejrůznějších stylů obrazců a konektorů. Můžete určit, že se některé obrazce zobrazí uvnitř jiných tvarů.
 
 Model můžete zobrazit jako strom v zobrazení **Průzkumníka** při úpravách modelu. Při přidávání tvarů do diagramu se prvky modelu zobrazí také v Průzkumníkovi. Průzkumník lze použít i v případě, že není k dispozici žádný diagram.
 
-Pokud nevidíte Průzkumníka v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna**a potom klikněte na příkaz *\<jazyka >* **Explorer**.
+Pokud Průzkumník nevidíte v instanci ladění aplikace Visual Studio, v nabídce **zobrazení** přejděte na položku **ostatní okna**a klikněte na příkaz *\<Your Language>* **Průzkumník**.
 
 ### <a name="the-api-of-your-dsl"></a>Rozhraní API vaší DSL
 
 Vaše DSL vygeneruje rozhraní API, které umožňuje čtení a aktualizaci modelů, které jsou instancemi DSL. Jednou z aplikací rozhraní API je generování textových souborů z modelu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
-V řešení ladění otevřete soubory šablon s příponou ". tt". Tyto ukázky ukazují, jak můžete vygenerovat text z modelů a umožní vám otestovat rozhraní API vaší DSL. Jedna z ukázek je napsaná v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], druhá v [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].
+V řešení ladění otevřete soubory šablon s příponou ". tt". Tyto ukázky ukazují, jak můžete vygenerovat text z modelů a umožní vám otestovat rozhraní API vaší DSL. Jedna z ukázek je napsána v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] , druhá v [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 V každém souboru šablony je soubor, který generuje. Rozbalte soubor šablony v Průzkumník řešení a otevřete vygenerovaný soubor.
 
@@ -171,7 +171,7 @@ Při změně souboru modelu se zobrazí odpovídající změny v generovaných s
 
 3. Klikněte na možnost **transformovat všechny šablony** na panelu nástrojů **Průzkumník řešení**.
 
-     \- nebo –
+     \- ani
 
      Klikněte pravým tlačítkem na šablony, které chcete znovu vygenerovat, a pak klikněte na **Spustit vlastní nástroj**.
 
@@ -201,7 +201,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 1. V diagramu DslDefinition přejmenujte **ExampleModel** na **FamilyTreeModel**, **ExampleElement** na **Person**, **cílení** na **rodiče**a **zdroje** na **podřízené**. Pro změnu můžete kliknout na jednotlivé štítky.
 
-     ![Model stromu řady &#45; diagram definice DSL](../modeling/media/familyt_person.png)
+     ![Diagram definice DSL &#45; model struktury řady](../modeling/media/familyt_person.png)
 
 2. Přejmenujte prvky a nástroje spojnice.
 
@@ -209,7 +209,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     2. Otevřete okno Vlastnosti a umístěte ho, aby se zobrazily současně Průzkumník DSL a vlastnosti.
 
-    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů**, *\<> DSL*a pak **nástroje**.
+    3. V Průzkumníku DSL rozbalte **Editor**, **karty nástrojů** *\<your DSL>* a **nástroje**.
 
     4. Klikněte na **ExampleElement**. Toto je položka sady nástrojů, která se používá k vytvoření prvků.
 
@@ -333,7 +333,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
     1. V **Průzkumníku DSL**rozbalte **Editor** a pak vyberte **karty nástrojů**.
 
-    2. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj element**.
+    2. Klikněte pravým tlačítkem *\<your DSL>* a potom klikněte na tlačítko **Přidat nový prvek nástroje**.
 
     3. Nastavte vlastnost **název** nového nástroje a vlastnost **Class** nastavte na město.
 
@@ -341,7 +341,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 7. Vytvořte nástroj konektoru pro vytvoření propojení mezi městy a lidmi.
 
-    1. Klikněte pravým tlačítkem na *\<> DSL* a pak klikněte na **Přidat nový nástroj konektoru**.
+    1. Klikněte pravým tlačítkem *\<your DSL>* a pak klikněte na **Přidat nový nástroj konektoru**.
 
     2. Nastavte vlastnost název nového nástroje.
 
@@ -394,7 +394,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
  Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="Reset"></a>Odebrání starých experimentálních DSL
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Odebrání starých experimentálních DSL
  Pokud jste vytvořili experimentální DSL, které už nechcete, můžete je z počítače odebrat resetováním experimentální instance sady Visual Studio.
 
  Tím se z počítače odebere všechna experimentální DSL a další experimentální rozšíření sady Visual Studio. Jedná se o rozšíření, která byla spuštěna v režimu ladění.
@@ -407,7 +407,7 @@ Přejmenujte existující doménové třídy a vztahy. Například od definice D
 
 2. Znovu sestavte všechna experimentální DSL nebo jiná experimentální rozšíření sady Visual Studio, která chcete dál používat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Porozumění modelům, třídám a vztahům](../modeling/understanding-models-classes-and-relationships.md)
 - [Jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md)

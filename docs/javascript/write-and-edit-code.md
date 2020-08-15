@@ -10,14 +10,14 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f48e7a8be8d902a487ae4f7fdac9e6d85f7b5517
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: a033c0fe1fd80edc7959c5f49993714982ecc805
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453760"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238177"
 ---
-# <a name="learn-to-use-the-code-editor"></a>Naučte se používat editor kódu.
+# <a name="learn-to-use-the-code-editor-for-javascript"></a>Naučte se používat editor kódu pro JavaScript.
 
 V tomto krátkém úvodu do editoru kódu v aplikaci Visual Studio se podíváme na některé ze způsobů, které Visual Studio umožňuje psát, navigovat a pochopit kód jednodušeji.
 

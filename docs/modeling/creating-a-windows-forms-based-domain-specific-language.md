@@ -7,12 +7,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57507775a03bcfd0649f4efbf8a7771fefc8e20b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: c52b3bd352c2ecb2272ad8e229a0fe52a9ee5b41
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85547313"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238358"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Vytvoření jazyka specifického pro doménu založeného na model Windows Forms
 
@@ -30,10 +30,8 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
 
     V tomto návodu se předpokládají následující názvy:
 
-   | | |
-   |-|-|
-   | Název řešení a DSL | FarmApp |
-   | Obor názvů | Společnost. FarmApp |
+    - Název řešení a DSL: `FarmApp`
+    - Hosting `Company.FarmApp`
 
 2. Experimentujte s úvodním příkladem, který šablona poskytuje:
 
@@ -51,9 +49,9 @@ Následující obrázek ukazuje uživatelské rozhraní formuláře Windows a Pr
 
    V hlavní instanci aplikace Visual Studio si všimněte následujících bodů řešení DSL:
 
-- `DslDefinition.dsl`neobsahuje žádné prvky diagramu. Důvodem je, že nebudete používat diagramy DSL k zobrazení modelů instancí této DSL. Místo toho navážete formulář Windows na model a prvky ve formuláři zobrazí model.
+- `DslDefinition.dsl` neobsahuje žádné prvky diagramu. Důvodem je, že nebudete používat diagramy DSL k zobrazení modelů instancí této DSL. Místo toho navážete formulář Windows na model a prvky ve formuláři zobrazí model.
 
-- Kromě `Dsl` `DslPackage` projektů a obsahuje řešení i třetí projekt s názvem `UI.` projekt **uživatelského rozhraní** obsahuje definici model Windows Formsho ovládacího prvku. `DslPackage`závisí na `UI` a `UI` závisí na `Dsl` .
+- Kromě `Dsl` `DslPackage` projektů a obsahuje řešení i třetí projekt s názvem `UI.` projekt **uživatelského rozhraní** obsahuje definici model Windows Formsho ovládacího prvku. `DslPackage` závisí na `UI` a `UI` závisí na `Dsl` .
 
 - V `DslPackage` projektu `UI\DocView.cs` obsahuje kód, který zobrazuje model Windows Forms ovládací prvek, který je definován v `UI` projektu.
 
@@ -86,9 +84,9 @@ V tomto návodu se používá následující definice DSL.
 
 4. Pomocí nástroje **pojmenované doménové třídy** vytvořte následující doménové třídy:
 
-    - `Field`– Poskytněte tuto další doménovou vlastnost s názvem `Size` .
+    - `Field` – Poskytněte tuto další doménovou vlastnost s názvem `Size` .
 
-    - `Animal`-V okno Vlastnosti nastavte **Modifikátor dědičnosti** na **abstract**.
+    - `Animal` -V okno Vlastnosti nastavte **Modifikátor dědičnosti** na **abstract**.
 
 5. Pomocí nástroje **doménová třída** vytvořte následující třídy:
 
@@ -162,7 +160,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
      Nastavte vlastnost **DataMember** na hodnotu **zvířata** nebo **pole**.
 
-10. Nastavte vlastnosti **DataSource** `AnimalGridView` pro a na `AnimalBinding` `FieldGridView` `FieldBinding` .
+10. Nastavte vlastnosti **DataSource** `AnimalGridView` pro a na `AnimalBinding`  `FieldGridView` `FieldBinding` .
 
 11. Upravte rozložení ovládacího prvku farmy na svou chuť.
 
@@ -220,7 +218,7 @@ Nyní můžete vytvořit nový uživatelský ovládací prvek, ve kterém budou 
 
 3. V **Průzkumníku FarmApp**otevřete místní nabídku na kořenovém uzlu **farmy** a vyberte možnost **Přidat novou kozy**.
 
-     `Goat1`zobrazí se v zobrazení **zvířata** .
+     `Goat1` zobrazí se v zobrazení **zvířata** .
 
     > [!WARNING]
     > Je nutné použít místní nabídku uzlu **farma** , nikoli uzel **zvířata** .

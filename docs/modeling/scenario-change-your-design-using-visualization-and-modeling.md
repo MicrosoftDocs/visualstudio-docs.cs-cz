@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c0e971a2a38013ae75287467404e3321e3c4d37
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: db584adc01a3f0f161d451d73df6a8deab08b869
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85544193"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238891"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Scénář: Změna návrhu pomocí vizualizace a modelování
 
@@ -75,11 +75,11 @@ Další informace o Team Foundation Server najdete v tématech:
 
 - [Testování, ověřování a vrácení aktualizovaného kódu](#TestValidateCheckInCode)
 
-## <a name="roles-of-architecture-and-modeling-diagrams-in-software-development"></a><a name="ModelingDiagramsTools"></a>Role architektury a modelování diagramů při vývoji softwaru
+## <a name="roles-of-architecture-and-modeling-diagrams-in-software-development"></a><a name="ModelingDiagramsTools"></a> Role architektury a modelování diagramů při vývoji softwaru
 
 Následující tabulka popisuje role, které tyto nástroje mohou hrát během několika různých fází životního cyklu vývoje softwaru:
 
-||**Modelování uživatelských požadavků**|**Modelování obchodních procesů**|**Architektura systému & návrh**|**Zkoumání & vizualizace kódu**|**Ověření**|
+|Nástroj nebo role|Modelování uživatelských požadavků|Modelování obchodních procesů|Architektura systému & návrh|Zkoumání & vizualizace kódu|Ověření|
 |------|-|-|-|-|-|
 |Diagram DSL (Domain-Specific Language)|Ano|Ano|Ano|||
 |Diagram závislosti, ověřování vrstvy|||Ano|Ano|Ano|
@@ -167,7 +167,7 @@ Večeře teď musí odhadnout náklady na splnění nového požadavku. Tato zm�
 |-|-|
 |*Diagram tříd založený na kódu*<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Existující třídy v kódu.|
 
-### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a>Udržování kódu v souladu s návrhem
+### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a> Udržování kódu v souladu s návrhem
  Večeře teď musí zajistit, aby aktualizovaný kód zůstával v souladu s návrhem. Vytvářejí diagramy závislostí, které popisují vrstvy funkčnosti v systému, určují povolené závislosti mezi nimi a přiřadí artefakty řešení těmto vrstvám.
 
 |**Diagram**|**Udává**|
@@ -220,7 +220,7 @@ Přečtěte si:
 
 - [Vytvoření nevyřízených položek a úkolů pomocí projektu](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
-### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a>Testování, ověřování a vrácení kódu se změnami
+### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a> Testování, ověřování a vrácení kódu se změnami
 
 Jak týmy dokončí každý úkol, kontrolují svůj kód do správy zdrojového kódu a zobrazují připomenutí od Team Foundation Server, pokud je zapomenete. Než Team Foundation Server akceptuje jejich vrácení se změnami, týmy spustí testy jednotek a ověření závislostí pro ověření kódu proti testovacím případům a návrhu. Používají Team Foundation Server k pravidelnému spouštění buildů, automatizované testy jednotek a ověřování závislostí. To pomáhá zajistit, že kód splňuje následující kritéria:
 
@@ -262,7 +262,7 @@ Přečtěte si:
 
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)
 
-### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a>Vizualizovat existující kód: mapy kódu
+### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a> Vizualizovat existující kód: mapy kódu
 
 Mapy kódu ukazují aktuální organizaci a vztahy v kódu. Položky jsou reprezentovány *uzly* na mapě a vztahy jsou reprezentovány pomocí *odkazů*. Mapy kódu vám mohou pomáhat při provádění následujících typů úloh:
 
@@ -332,7 +332,7 @@ Tato mapa znázorňuje, že třída PaymentApprover je nyní v oboru názvů Din
 |Diagram závislosti|Logická architektura systému. Použijte ověřování závislostí a ujistěte se, že kód zůstává v souladu s návrhem.<br /><br /> Abyste mohli identifikovat existující závislosti nebo zamýšlené závislosti, vytvořte mapu kódu a položky související s seskupením. Chcete-li vytvořit diagram závislostí, přečtěte si téma:<br /><br /> - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)|
 |Diagram tříd (založený na kódu)|Existující třídy v kódu pro určitý projekt.<br /><br /> Chcete-li vizualizovat a upravit existující třídu v kódu, použijte Návrhář tříd.<br /><br /> Viz [Postupy: Přidání diagramů tříd do projektů (návrhář tříd)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|
 
-### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a>Definování glosáře typů: diagramy tříd
+### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a> Definování glosáře typů: diagramy tříd
  Diagramy tříd definují entity, pojmy nebo koncepty, které jsou součástí systému a jejich vztahů mezi sebou. Například můžete použít tyto diagramy během vývoje k popisu atributů a operací pro každou třídu, bez ohledu na jejich jazyk implementace nebo styl.
 
  Aby mohl společnost Lucerne popsat a diskutovat entity, které se účastní případu použití procesu platby, nakreslí následující diagram tříd:
@@ -401,7 +401,7 @@ Jako výchozí bod pro zkoumání a diskuzi o existujících třídách můžete
 |Diagram závislosti|Definujte logickou architekturu systému v souvislosti se třídami.<br /><br /> Použijte ověřování závislostí a ujistěte se, že kód zůstává v souladu s návrhem.<br /><br /> Přečtěte si:<br /><br /> - [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)<br />- [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)<br />- [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)|
 |Mapa kódu|Vizualizujte organizaci a vztahy v existujícím kódu.<br /><br /> Chcete-li identifikovat třídy, jejich vztahy a jejich metody, vytvořte mapu kódu, která tyto prvky zobrazí.<br /><br /> Přečtěte si:<br /><br /> - [Mapování závislostí napříč vašimi řešeními](../modeling/map-dependencies-across-your-solutions.md)|
 
-### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a>Popište logickou architekturu: diagramy závislosti
+### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a> Popište logickou architekturu: diagramy závislosti
  Diagramy závislostí popisují logickou architekturu systému uspořádáním artefaktů ve vašem řešení do abstraktních skupin nebo *vrstev*. Artefakty mohou být mnoho věcí, například obory názvů, projekty, třídy, metody a tak dále. Vrstvy reprezentují a popisují role nebo úkoly, které artefakty provádějí v systému. Můžete také zahrnout ověřování vrstvy do sestavení a operace vrácení se změnami, abyste se ujistili, že kód zůstává v souladu s jeho návrhem.
 
  Chcete-li zachovat kód v souladu s návrhem, večeře Now a Lucerne použijte následující diagram závislostí k ověření kódu při jeho vývoje:
@@ -480,7 +480,7 @@ Diagramy závislostí vám pomůžou:
 |-|-|
 |**Fóra**|- [Nástroje pro vizualizaci sady Visual Studio & modelování](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Sada Visual Studio vizualizace & Modeling SDK (nástroje DSL)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vizualizace kódu](../modeling/visualize-code.md)
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)

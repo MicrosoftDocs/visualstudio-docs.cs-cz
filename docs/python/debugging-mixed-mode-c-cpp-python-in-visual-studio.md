@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 953ff26a6094a9de9dcf974d5e4cb5a02aaa503f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 0b55a0bbeee7c5a8c38a0df61db0a1b17ae5e033
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533559"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238657"
 ---
 # <a name="debug-python-and-c-together"></a>Ladění Pythonu a C++ společně
 
@@ -36,9 +36,8 @@ Mezi funkce ladění ve smíšeném režimu patří následující, jak je vysv�
 
 ![Ladění ve smíšeném režimu pro Python v aplikaci Visual Studio](media/mixed-mode-debugging.png)
 
-|   |   |
-|---|---|
-| ![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") | Úvod k sestavování, testování a ladění nativních modulů jazyka C v aplikaci Visual Studio naleznete v tématu [hluboká podrobně: vytváření nativních modulů](https://youtu.be/D9RlT06a1EI) (YouTube.com, 9 min 09s). Video se vztahuje i na Visual Studio 2015 i 2017. |
+![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") Úvod k sestavování, testování a ladění nativních modulů jazyka C v aplikaci Visual Studio naleznete v tématu [hluboká podrobně: vytváření nativních modulů](https://youtu.be/D9RlT06a1EI) (YouTube.com, 9 min 09s). Video se vztahuje i na Visual Studio 2015 i 2017.
+
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Povolit ladění ve smíšeném režimu v projektu Pythonu
 
