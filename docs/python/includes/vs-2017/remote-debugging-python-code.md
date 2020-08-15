@@ -10,20 +10,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 82c22143f70bc53a358cd25e6ff2ad91eff1e2e9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a1f8c145d7c9c072adcc902cae9f2b6ae36937cd
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85541067"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88246154"
 ---
 Visual Studio může spouštět a ladit aplikace v Pythonu místně a vzdáleně na počítači s Windows (viz [vzdálené ladění](../../../debugger/remote-debugging.md)). Můžete ho také vzdáleně ladit na jiném operačním systému, zařízení nebo implementaci Pythonu než CPython pomocí [knihovny ptvsd](https://pypi.python.org/pypi/ptvsd).
 
 Při použití ptvsd kód Pythonu, který se právě ladí, hostuje ladicí Server, ke kterému se může připojit Visual Studio. Toto hostování vyžaduje pro import a povolení serveru malou úpravu kódu a může vyžadovat konfiguraci sítě nebo brány firewall na vzdáleném počítači, aby bylo možné povolit připojení TCP.
 
-|   |   |
-|---|---|
-| ![ikona filmové kamery pro video](../../../install/media/video-icon.png "Přehrát video") | Úvod ke vzdálenému ladění najdete v tématu [hluboká podrobně: vzdálené ladění pro různé platformy](https://youtu.be/y1Qq7BrV6Cc) (YouTube.com, 6m22s), které platí pro Visual Studio 2015 a 2017. |
+![ikona filmové kamery pro video](../../../install/media/video-icon.png "Přehrát video") Úvod ke vzdálenému ladění najdete v tématu [hluboká podrobně: vzdálené ladění pro různé platformy](https://youtu.be/y1Qq7BrV6Cc) (YouTube.com, 6m22s), které platí pro Visual Studio 2015 a 2017.
 
 ## <a name="set-up-a-linux-computer"></a>Nastavení počítače se systémem Linux
 

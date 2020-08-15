@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: a2b77315363c404cd0647555e5a6ad21d36ac86b
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234988"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250253"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Souběžná instalace různých verzí sady Visual Studio
 
@@ -57,9 +57,10 @@ Při upgradu z jedné dílčí verze sady Visual Studio na další bude instala�
    * vs_professional.exe pro Visual Studio Professional
    * vs_enterprise.exe pro Visual Studio Enterprise
 
-```
-vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
-```
+   ```
+   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+   ```
+
 4. Pomocí dialogových oken instalačního programu vyberte součásti, které pro instalaci potřebujete. Další informace najdete v tématu [instalace sady Visual Studio](install-visual-studio.md#step-4---choose-workloads).
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework verze a souběžné instalace
@@ -81,7 +82,7 @@ Informace specifické pro jazyk najdete v příslušném tématu v následujíc�
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md?view=vs-2017)
 * [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
@@ -100,7 +101,7 @@ Informace specifické pro jazyk najdete v příslušném tématu v následujíc�
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
 * [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
