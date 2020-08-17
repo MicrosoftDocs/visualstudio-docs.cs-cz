@@ -567,6 +567,8 @@
                   href: ca1835.md
                 - name: 'CA1836: Upřednostňovat IsEmpty před Count, pokud je k dispozici'
                   href: ca1836.md
+                - name: 'CA1838: Nepoužívejte parametry StringBuilder pro volání nespravovaného kódu'
+                  href: ca1838.md
             - name: Upozornění přenositelnosti
               items:
                 - name: Přehled
