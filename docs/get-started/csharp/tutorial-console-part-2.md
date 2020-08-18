@@ -15,16 +15,16 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aae83c43a106fd68b03a83124ad2ddcea4652c8d
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87377149"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507953"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Kurz: roztažení jednoduché konzolové aplikace v jazyce C#
 
-V tomto kurzu se naučíte, jak pomocí sady Visual Studio zvětšit konzolovou aplikaci, kterou jste vytvořili v první části. Seznamte se s některými funkcemi v aplikaci Visual Studio, které vám pomůžou zvýšit produktivitu jako vývojář, jako je například použití pokročilých funkcí editoru a ladění.
+V tomto kurzu se naučíte, jak pomocí sady Visual Studio zvětšit konzolovou aplikaci, kterou jste vytvořili v první části. Seznamte se s některými funkcemi v aplikaci Visual Studio, které budete potřebovat pro každodenní vývoj, jako je například Správa více projektů a odkazování na balíčky třetích stran.
 
 Pokud jste právě dokončili [první část](tutorial-console.md) této série, už máte konzolovou aplikaci kalkulačky.  Pokud chcete přeskočit část 1, můžete začít otevřením projektu z úložiště GitHub. Aplikace kalkulačky pro C# je v [úložišti vs-tutorial-Samples](https://github.com/MicrosoftDocs/vs-tutorial-samples), takže můžete postupovat podle kroků v [kurzu: otevření projektu z úložiště](../tutorial-open-project-from-repo.md) a zahájení práce.
 

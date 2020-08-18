@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 00798f5eb7261df0a039c82566018cbb0efe710a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 691e6c3b994649a9f0fa2d0e92a990f317a16208
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183285"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88508175"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Kurz: Vytvoření jednoduché konzolové aplikace v jazyce C# v aplikaci Visual Studio
 
@@ -378,7 +378,7 @@ Pusťme se do toho.
 
     ```
 
-1. Pak přidejte novou `Program` třídu následujícím způsobem:
+1. Pak přidejte novou  `Program` třídu následujícím způsobem:
 
     ```csharp
     class Program
@@ -600,12 +600,12 @@ namespace Calculator
 
 ## <a name="next-steps"></a>Další kroky
 
-Blahopřejeme k dokončení tohoto kurzu! Pokud se chcete dozvědět ještě víc, pokračujte v následujících kurzech.
+Pokračujte v druhé části tohoto kurzu:
 
 > [!div class="nextstepaction"]
-> [Pokračovat s dalšími kurzy C#](/dotnet/csharp/tutorials/)
+> [Pokračovat s částí 2](tutorial-console-part-2.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
 * [Naučte se ladit kód C# v aplikaci Visual Studio.](tutorial-debugger.md)

@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: ba5915e687bd4e1f6afb200f4ca3e7a866c6151c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 56007fcb3b951f9b313a25092e89c234d52eb15e
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285841"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507996"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
@@ -27,7 +27,7 @@ Pomocí nástrojů příkazového řádku můžete shromažďovat informace o v�
 
 V příkladu popsaném v tomto článku shromažďujete informace o výkonu pro Microsoft Notepad, ale stejnou metodu lze použít k profilování jakéhokoli procesu.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 * Visual Studio 2019 nebo novější verze
 
@@ -41,9 +41,9 @@ Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diag
 
 1. Spusťte Poznámkový blok a otevřete Správce úloh a získejte jeho ID procesu (PID). Ve Správci úloh Najděte na kartě **Podrobnosti** PID.
 
-1. Otevřete příkazový řádek a přejděte do adresáře se spustitelným souborem agenta shromažďování, obvykle tady.
+1. Otevřete příkazový řádek a přejděte do adresáře se spustitelným souborem agenta shromažďování, obvykle zde (pro Visual Studio Enterprise).
 
-   ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
+   ```<Visual Studio installation folder>\2019\Enterprise\Team Tools\DiagnosticsHub\Collector\```
 
 1. Spusťte *VSDiagnostics.exe* zadáním následujícího příkazu.
 
@@ -53,9 +53,15 @@ Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diag
 
    Argumenty, které musí být zahrnuty:
 
-   * \<*id*>Identifikuje relaci shromažďování. ID musí být číslo mezi 1-255.
-   * \<*pid*>, PID procesu, který chcete profilovat, v tomto případě PID, který jste našli v kroku 1
+   * \<*id*> Identifikuje relaci shromažďování. ID musí být číslo mezi 1-255.
+   * \<*pid*>, PID procesu, který chcete profilovat, v tomto případě PID, který jste našli v kroku 1.
    * \<*configFile*>, konfigurační soubor pro agenta shromažďování, který chcete spustit. Další informace najdete v tématu [konfigurační soubory pro agenty](#config_file).
+
+   Například můžete použít následující příkaz pro agenta CPUUsageBase nahrazením *identifikátoru PID* , jak je popsáno výše.
+
+   ```cmd
+   VSDiagnostics.exe start 1 /attach:<pid> /loadConfig:AgentConfigs\CPUUsageLow.json
+   ```
 
 1. Změňte velikost poznámkového bloku nebo něco do něj zadejte, abyste se ujistili, že jsou shromažďovány zajímavé informace o profilaci.
 
@@ -65,9 +71,11 @@ Profilace pomocí nástrojů rozhraní příkazového řádku Visual Studio Diag
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. V předchozím příkazu přejdete na výstup souboru a otevřete ho v aplikaci Visual Studio a Projděte shromážděné informace.
+1. Vyhledejte výstup souboru *. diagsession* z předchozího příkazu a otevřete ho v aplikaci Visual Studio (**soubor**  >  **otevřen**) a Projděte si shromažďované informace.
 
-## <a name="agent-configuration-files"></a><a name="config_file"></a>Konfigurační soubory agenta
+   Chcete-li analyzovat výsledky, přečtěte si dokumentaci k příslušnému nástroji pro sledování výkonu. Může to být například [využití CPU](../profiling/cpu-usage.md), [Nástroj pro přidělování objektů .NET](../profiling/dotnet-alloc-tool.md)nebo [databázový](../profiling/analyze-database.md) nástroj.
+
+## <a name="agent-configuration-files"></a><a name="config_file"></a> Konfigurační soubory agenta
 
 Agenti kolekcí jsou vzájemně zaměnitelné komponenty, které shromažďují různé typy dat v závislosti na tom, co se snažíte změřit.
 

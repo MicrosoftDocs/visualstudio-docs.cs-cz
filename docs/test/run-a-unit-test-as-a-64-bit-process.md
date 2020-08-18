@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 04895e3dd72a7cb4f0373c970db0f12582506ef9
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 3c5cb51232457a43200c8a71ace51cc4b8a63e02
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285553"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507983"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>Spuštění testování částí v podobě 64bitového procesu
 
@@ -30,7 +30,7 @@ Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace 
    ::: moniker-end
 
     > [!TIP]
-    > Pro zajištění maximální flexibility zkompilujte testovací projekty s **libovolnou konfigurací procesoru** . Pak můžete spustit na 32 i 64 bitových agentů. Neexistují žádné výhody kompilace testovacích projektů s **64** konfigurací.
+    > Pro zajištění maximální flexibility zkompilujte testovací projekty s **libovolnou konfigurací procesoru** . Pak můžete spustit na 32 i 64 bitových agentů. Není k dispozici žádná výhoda pro kompilování projektů testů s **64** konfigurací, pokud nevoláte kód, který je podporován pouze na 64-bit.
 
 2. Nastavte testy jednotek tak, aby se spouštěly jako 64 proces.
 
@@ -41,11 +41,11 @@ Pokud máte 64 počítač, můžete spustit testy jednotek a zachytit informace 
    V nabídce aplikace Visual Studio zvolte možnost **test**, zvolte možnost **nastavení testu**a pak zvolte možnost **Architektura procesoru**. Zvolením možnosti **x64** spustíte testy jako 64 proces.
    ::: moniker-end
 
-   \-ani
+   \- ani
 
    Zadejte `<TargetPlatform>x64</TargetPlatform>` v souboru *. runsettings* . Výhodou této metody je, že můžete určit skupiny nastavení v různých souborech a rychle přepínat mezi různými nastaveními. Můžete také kopírovat nastavení mezi řešeními. Další informace najdete v tématu [konfigurace testů jednotek pomocí souboru. runsettings](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Spouštění testů částí pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md)
 - [Testování částí kódu](../test/unit-test-your-code.md)

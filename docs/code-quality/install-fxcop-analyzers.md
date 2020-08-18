@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 105583486a9f1420f1670a16abcb28e8268b293d
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: df9d345e8557f10d764dce6e56c7491d2c026747
+ms.sourcegitcommit: 0d3d157949b539c78bc101a3c3b456bbcb5af7de
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88286650"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Instalace analyzátorů FxCop v aplikaci Visual Studio
 
@@ -32,7 +32,7 @@ V aplikaci Visual Studio 2019 verze 16,3 a novější můžete balíček NuGet [
 
    ![Instalace balíčku FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page.png)
 
-2. Vyberte **Nainstalovat**.
+2. Vyberte **Install** (Nainstalovat).
 
    Sada Visual Studio nainstaluje nejnovější verzi balíčku Microsoft. CodeAnalysis. FxCopAnalyzers. Sestavení se zobrazí v **Průzkumník řešení** v **References**části  >  **analyzátory**odkazů.
 
@@ -73,7 +73,7 @@ Pomocí následujících pokynů určete, která verze balíčku FxCop Analyzer 
 | Verze sady Visual Studio | Verze balíčku analyzátoru FxCop |
 | - | - |
 | Visual Studio 2019 (všechny verze) | [nejnovější](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) | 
-| Visual Studio 2017 verze 15,9 | [2.9.9](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.9) |
+| Visual Studio 2017 verze 15,9 | [2.9.10](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.10) |
 | Visual Studio 2017 verze 15,5 až 15,8 | [2.6.4](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.4) |
 | Visual Studio 2017 verze 15,3 až 15,4 | [2.3.0 – Beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |
 | Visual Studio 2017 verze 15,0 až 15,2 | [2.0.0 – beta2](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.0.0-beta2) |
@@ -121,7 +121,7 @@ Rozšíření [Microsoft Code Analysis 2019](https://marketplace.visualstudio.co
 
 ::: moniker-end
 
-4. Vyberte **Download** (Stáhnout).
+4. Vyberte **Stáhnout**.
 
    Rozšíření se stáhne.
 
@@ -153,7 +153,7 @@ Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
 - [Použití analyzátorů kódu v aplikaci Visual Studio](../code-quality/use-roslyn-analyzers.md)
