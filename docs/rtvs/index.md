@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 1132a7a0363e2d508d6eff1026192aad3407fca4
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 89aa8b9d1b1f288e19252b8a111666f5b4e3e087
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "73189251"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238709"
 ---
 # <a name="work-with-r-in-visual-studio"></a>Práce s jazykem R v sadě Visual Studio
 
@@ -34,20 +34,18 @@ Potom postupujte podle odkazů níže a získejte další informace o funkcích 
 | Funkce | Popis | Obecná dokumentace sady Visual Studio |
 | --- | --- | --- |
 | [Projektový systém sady Visual Studio](r-projects-in-visual-studio.md) | Mějte související soubory uspořádané v přehledné struktuře, která usnadní jejich správu, a využívejte efektivní šablony pro kódování v jazyce R, dokumentaci k jazyku R, nástroj R Markdown, příkazy jazyka SQL a uložené procedury. Práci vám usnadní také [správce balíčků](r-package-manager-in-visual-studio.md) a [integrace SQL Serveru](integrating-sql-server-with-r.md).  | [Řešení a projekty v sadě Visual Studio](../ide/solutions-and-projects-in-visual-studio.md) |
-| [Pracovní prostor](r-workspaces-in-visual-studio.md) | Rozšíření RTVS lze navázat na místní i vzdálené pracovní prostory, takže kód v jazyce R můžete vyvíjet místně pomocí menších datových sad a následně ho spustit na výkonnějších cloudových počítačích a pracovat s výrazně většími datovými sadami. | není k dispozici |
-| [Možnosti rozšíření Nástroje R](options-for-r-tools-in-visual-studio.md) | Mějte pod kontrolou různé aspekty rozšíření RTVS. | [Dialogové okno Možnosti](../ide/reference/options-dialog-box-visual-studio.md) |
+| [Pracovní prostor](r-workspaces-in-visual-studio.md) | Rozšíření RTVS lze navázat na místní i vzdálené pracovní prostory, takže kód v jazyce R můžete vyvíjet místně pomocí menších datových sad a následně ho spustit na výkonnějších cloudových počítačích a pracovat s výrazně většími datovými sadami. | Není k dispozici |
+| [Možnosti rozšíření Nástroje R](options-for-r-tools-in-visual-studio.md) | Mějte pod kontrolou různé aspekty rozšíření RTVS. | [Možnosti – dialogové okno](../ide/reference/options-dialog-box-visual-studio.md) |
 | [Široká škála úprav, IntelliSense a fragmenty kódu](editing-r-code-in-visual-studio.md) | Zahrnuje barevné zvýrazňování syntaxe, funkci [IntelliSense](r-intellisense.md) napříč všemi kódy a knihovnami, formátování kódu, nápovědu pro podpis, příkazy Go to Definition (Přejít k definici), Find All References (Vyhledat všechny odkazy) [fragmenty kódu](code-snippets-for-r.md) a další. | [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [R Markdown](rmarkdown-with-r-in-visual-studio.md) | Dokumenty nástroje R Markdown vám pomůžou sdílet výsledky práce s daty, včetně integrovaného kódu R uvnitř bloků kódu jazyka Markdown. | není k dispozici |
-| [Okno Interactive](interactive-repl-for-r-in-visual-studio.md) | Poskytuje plnohodnotné prostředí REPL pro jazyk R a umožňuje snadno spustit kód ve zdrojovém souboru v interaktivním okně. | není k dispozici |
-| [Vizualizace dat](visualizing-data-with-r-in-visual-studio.md) | Vykreslení diagramů je nedílnou součástí prostředí jazyka R a rozšíření RTVS podporuje několik nezávislých oken diagramů, z nichž má každé vlastní historii, a umožňuje diagramy mezi nimi přesouvat. Diagramy lze ukládat jako rastrové obrázky nebo do souborů PDF, případně kopírovat do schránky jako rastrové obrázky nebo metasoubory.  | není k dispozici |
-| [Průzkumník proměnných](variable-explorer.md) | Prozkoumejte proměnné v globálním oboru nebo v oboru konkrétního balíčku a využívejte funkce pro zobrazení tabulek s možností třídění a exportu do souboru CSV. | není k dispozici |
+| [R Markdown](rmarkdown-with-r-in-visual-studio.md) | Dokumenty nástroje R Markdown vám pomůžou sdílet výsledky práce s daty, včetně integrovaného kódu R uvnitř bloků kódu jazyka Markdown. | Není k dispozici |
+| [Okno Interactive](interactive-repl-for-r-in-visual-studio.md) | Poskytuje plnohodnotné prostředí REPL pro jazyk R a umožňuje snadno spustit kód ve zdrojovém souboru v interaktivním okně. | Není k dispozici |
+| [Vizualizace dat](visualizing-data-with-r-in-visual-studio.md) | Vykreslení diagramů je nedílnou součástí prostředí jazyka R a rozšíření RTVS podporuje několik nezávislých oken diagramů, z nichž má každé vlastní historii, a umožňuje diagramy mezi nimi přesouvat. Diagramy lze ukládat jako rastrové obrázky nebo do souborů PDF, případně kopírovat do schránky jako rastrové obrázky nebo metasoubory.  | Není k dispozici |
+| [Průzkumník proměnných](variable-explorer.md) | Prozkoumejte proměnné v globálním oboru nebo v oboru konkrétního balíčku a využívejte funkce pro zobrazení tabulek s možností třídění a exportu do souboru CSV. | Není k dispozici |
 | [Bohaté funkce ladění](debugging-r-in-visual-studio.md) | Zahrnují integraci s oknem Interactive. | [Ladění v sadě Visual Studio](../debugger/debugger-feature-tour.md) |
 
 Přečtěte si [nejčastější dotazy](faq.md).
 
-|   |   |
-|---|---|
-| ![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") | [Podívejte se na video (na youtube.com)](https://www.youtube.com/watch?v=dll3IS1bfWQ), které představuje Nástroje R pro Visual Studio (12m 36s). Podívejte se také na [další videa o nástrojích jazyka R](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio). |
+![ikona filmové kamery pro video](../install/media/video-icon.png "Přehrát video") [Podívejte se na video (na youtube.com)](https://www.youtube.com/watch?v=dll3IS1bfWQ), které představuje Nástroje R pro Visual Studio (12 min 36 s). Podívejte se také na [další videa o nástrojích jazyka R](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio).
 
 ## <a name="send-us-your-feedback"></a>Vyjádřete svůj názor.
 

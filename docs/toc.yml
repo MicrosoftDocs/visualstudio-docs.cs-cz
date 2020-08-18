@@ -390,6 +390,8 @@
                   href: ide/reference/convert-if-statement-to-switch-statement-or-switch-expression.md
                 - name: Konverze dotazu LINQ na příkaz foreach
                   href: ide/reference/convert-linq-to-foreach.md
+                - name: Převedení typeof na nameof
+                  href: ide/reference/convert-typeof-to-nameof.md
                 - name: Převedení příkazu switch na výraz switch
                   href: ide/reference/convert-switch-statement-to-switch-expression.md
                 - name: Doplňování řetězcových literálů DateTime a TimeSpan
@@ -430,6 +432,8 @@
                   href: ide/reference/rename.md
                 - name: Zjednodušení logických výrazů
                   href: ide/reference/simplify-conditional-expression.md
+                - name: Zjednodušení výrazu LINQ
+                  href: ide/reference/simplify-linq-expression.md
                 - name: Zjednodušení interpolace řetězců
                   href: ide/reference/simplify-string-interpolation.md
                 - name: Řazení direktiv using
