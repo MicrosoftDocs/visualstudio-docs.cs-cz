@@ -5,19 +5,19 @@ description: Seznam vydaných verzí a čísel sestavení pro sadu Visual Studio
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 08/11/2020
+ms.date: 08/18/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 263df4e98053eea6ee0ee447f2f0e12e0f32226f
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 284237edf805ba4d41bbeb17b3675d662efcbd89
+ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114281"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584512"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Čísla sestavení a data vydání sady Visual Studio
 
@@ -29,6 +29,7 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 
 | **Verze**| **Kanál** | **Datum vydání** | **Verze buildu** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.7.2 | Vydat | 18. srpna 2020 | 16.7.30413.136 |
 | 16.7.1 | Vydat | 11. srpna 2020 | 16.7.30406.217 |
 | 16.4.12 | Vydat | 11. srpna 2020 | 16.4.30406.169 |
 | 16.0.17 | Vydat | 11. srpna 2020 | 16.0.28803.806 |
@@ -205,138 +206,138 @@ V následující tabulce jsou uvedena čísla sestavení a datum vydání sady V
 | 15.9.2 | Vydat | 19. listopadu 2018 | 15.9.28307.108 |
 | 15.9.1 | Vydat | 15. listopadu 2018 | 15.9.28307.105 |
 | 15.9.0 | Vydat | 13. listopadu 2018 | 15.9.28307.53 |
-| 15.9.0 Preview 6 | Náhled | 13. listopadu 2018 | 15.9.28307.53 |
-| 15.9.0 Preview 5 | Náhled | 6. listopadu 2018 | 15.9.28302.56 |
+| 15.9.0 Preview 6 | Preview | 13. listopadu 2018 | 15.9.28307.53 |
+| 15.9.0 Preview 5 | Preview | 6. listopadu 2018 | 15.9.28302.56 |
 | 15.8.9 | Vydat | 2. listopadu 2018 | 15.8.28010.2050 |
 | 15.8.8 | Vydat | 24. října 2018 | 15.8.28010.2048 |
-| 15.9.0 Preview 4 | Náhled | 23. října 2018 | 15.9.28219.56 |
+| 15.9.0 Preview 4 | Preview | 23. října 2018 | 15.9.28219.56 |
 | 15.8.7 | Vydat | 10. října 2018 | 15.8.28010.2046 |
 | 15.0.19 | Vydat | 10. října 2018 | 15.0.26228.57 |
-| 15.9.0 Preview 3 | Náhled | 2. října 2018 | 15.9.28128.56 |
+| 15.9.0 Preview 3 | Preview | 2. října 2018 | 15.9.28128.56 |
 | 15.8.6 | Vydat | 2. října 2018 | 15.8.28010.2041 |
 | 15.8.5 | Vydat | 20. září 2018 | 15.8.28010.2036 |
-| 15.9.0 Preview 2 | Náhled | 11. září 2018 | 15.9.28107.0 |
+| 15.9.0 Preview 2 | Preview | 11. září 2018 | 15.9.28107.0 |
 | 15.8.4 | Vydat | 11. září 2018 | 15.8.28010.2026 |
 | 15.8.3 | Vydat | 6. září 2018 | 15.8.28010.2019 |
 | 15.8.2 | Vydat | 28. srpna 2018 | 15.8.28010.2016 |
 | 15.0.18 | Vydat | 28. srpna 2018 | 15.0.26228.52 |
-| 15.9.0 Preview 1 | Náhled | 20. srpna 2018 | 15.9.28016.0 |
+| 15.9.0 Preview 1 | Preview | 20. srpna 2018 | 15.9.28016.0 |
 | 15.8.1 | Vydat | 17. srpna 2018 | 15.8.28010.2003 |
 | 15.8.0 | Vydat | 14. srpna 2018 | 15.8.28010.0 |
 | 15.0.17 | Vydat | 14. srpna 2018 | 15.0.26228.49 |
 | 15.7.6 | Vydat | 2. srpna 2018 | 15.7.27703.2047 |
 | 15.0.16 | Vydat | 2. srpna 2018 | 15.0.26228.48 |
-| 15.8.0 Preview 5 | Náhled | 26. července 2018 | 15.8.27924.0 |
-| 15.8.0 Preview 4 | Náhled | 10. července 2018 | 15.8.27906.1 |
+| 15.8.0 Preview 5 | Preview | 26. července 2018 | 15.8.27924.0 |
+| 15.8.0 Preview 4 | Preview | 10. července 2018 | 15.8.27906.1 |
 | 15.7.5 | Vydat | 10. července 2018 | 15.7.27703.2042 |
 | 15.0.15 | Vydat | 10. července 2018 | 15.0.26228.43 |
-| 15.8.0 Preview 3 | Náhled | 26. června 2018 | 15.8.27825.0 |
+| 15.8.0 Preview 3 | Preview | 26. června 2018 | 15.8.27825.0 |
 | 15.7.4 | Vydat | 18. června 2018 | 15.7.27703.2035 |
 | 15.7.3 | Vydat | 31. května 2018 | 15.7.27703.2026 |
 | 15.0.14 | Vydat | 31. května 2018 | 15.0.26228.37 |
-| 15.8.0 Preview 2 | Náhled | 31. května 2018 | 15.8.27729.1 |
+| 15.8.0 Preview 2 | Preview | 31. května 2018 | 15.8.27729.1 |
 | 15.7.2 | Vydat | 21. května 2018 | 15.7.27703.2018 |
-| 15.8.0 Preview 1 | Náhled | 8. května 2018 | 15.8.27705.2000 |
+| 15.8.0 Preview 1 | Preview | 8. května 2018 | 15.8.27705.2000 |
 | 15.7.1 | Vydat | 8. května 2018 | 15.7.27703.2000 |
-| 15.8.0 Preview 1 | Náhled | 7. května 2018 | 15.8.27705.0 |
+| 15.8.0 Preview 1 | Preview | 7. května 2018 | 15.8.27705.0 |
 | 15.7.0 | Vydat | 7. května 2018 | 15.7.27703.1 |
-| 15.7.0 Preview 6 | Náhled | 3. května 2018 | 15.7.27701.1 |
-| 15.7.0 Preview 5 | Náhled | 26. dubna 2018 | 15.7.27625.0 |
+| 15.7.0 Preview 6 | Preview | 3. května 2018 | 15.7.27701.1 |
+| 15.7.0 Preview 5 | Preview | 26. dubna 2018 | 15.7.27625.0 |
 | 15.6.7 | Vydat | 26. dubna 2018 | 15.6.27428.2043 |
 | 15.0.13 | Vydat | 26. dubna 2018 | 15.0.26228.31 |
-| 15.7.0 Preview 4 | Náhled | 18. dubna 2018 | 15.7.27617.1 |
+| 15.7.0 Preview 4 | Preview | 18. dubna 2018 | 15.7.27617.1 |
 | 15.6.6 | Vydat | 10. dubna 2018 | 15.6.27428.2037 |
 | 15.0.12 | Vydat | 10. dubna 2018 | 15.0.26228.30 |
-| 15.7.0 Preview 3 | Náhled | 9. dubna 2018 | 15.7.27604.0 |
+| 15.7.0 Preview 3 | Preview | 9. dubna 2018 | 15.7.27604.0 |
 | 15.6.5 | Vydat | 4. dubna 2018 | 15.6.27428.2027 |
 | 15.6.4 | Vydat | 22. března 2018 | 15.6.27428.2015 |
-| 15.7.0 Preview 2 | Náhled | 21. března 2018 | 15.7.27520.0 |
+| 15.7.0 Preview 2 | Preview | 21. března 2018 | 15.7.27520.0 |
 | 15.6.3 | Vydat | 19. března 2018 | 15.6.27428.2011 |
-| 15.7.0 Preview 1 | Náhled | 13. března 2018 | 15.7.27512.0 |
+| 15.7.0 Preview 1 | Preview | 13. března 2018 | 15.7.27512.0 |
 | 15.6.2 | Vydat | 13. března 2018 | 15.6.27428.2005 |
 | 15.0.11 | Vydat | 13. března 2018 | 15.0.26228.29 |
 | 15.6.1 | Vydat | 8. března 2018 | 15.6.27428.2002 |
-| 15.6.1 Preview 1 | Náhled | 8. března 2018 | 15.6.27428.2002 |
+| 15.6.1 Preview 1 | Preview | 8. března 2018 | 15.6.27428.2002 |
 | 15.6.0 | Vydat | 5. března 2018 | 15.6.27428.1 |
-| 15.6.0 Preview 7 | Náhled | 2. března 2018 | 15.6.27428.1 |
-| 15.6.0 Preview 6 | Náhled | 23. února 2018 | 15.6.27421.1 |
+| 15.6.0 Preview 7 | Preview | 2. března 2018 | 15.6.27428.1 |
+| 15.6.0 Preview 6 | Preview | 23. února 2018 | 15.6.27421.1 |
 | 15.0.10 | Vydat | 21. února 2018 | 15.0.26228.28 |
 | 15.5.7 | Vydat | 20. února 2018 | 15.0.27130.2036 |
-| 15.6.0 Preview 5 | Náhled | 14. února 2018 | 15.6.27413.0 |
-| 15.6.0 Preview 4 | Náhled | 7. února 2018 | 15.6.27406.0 |
+| 15.6.0 Preview 5 | Preview | 14. února 2018 | 15.6.27413.0 |
+| 15.6.0 Preview 4 | Preview | 7. února 2018 | 15.6.27406.0 |
 | 15.0.9 | Vydat | 2. února 2018 | 15.0.26228.23 |
 | 15.5.6 | Vydat | 29. ledna 2018 | 15.0.27130.2027 |
 | 15.5.5 | Vydat | 25. ledna 2018 | 15.0.27130.2026 |
-| 15.6.0 Preview 3 | Náhled | 25. ledna 2018 | 15.6.27323.2 |
+| 15.6.0 Preview 3 | Preview | 25. ledna 2018 | 15.6.27323.2 |
 | 15.5.4 | Vydat | 16. ledna 2018 | 15.0.27130.2024 |
-| 15.6.0 Preview 2 | Náhled | 10. ledna 2018 | 15.6.27309.0 |
+| 15.6.0 Preview 2 | Preview | 10. ledna 2018 | 15.6.27309.0 |
 | 15.5.3 | Vydat |  9. ledna 2018 | 15.0.27130.2020 |
 | 15.0.8 | Vydat |  9. ledna 2018 | 15.0.26228.21 |
 | 15.5.2 | Vydat | 14. prosince 2017 | 15.0.27130.2010 |
-| 15.6.0 Preview 1 | Náhled | 14. prosince 2017 | 15.6.27205.2004 |
+| 15.6.0 Preview 1 | Preview | 14. prosince 2017 | 15.6.27205.2004 |
 | 15.5.1 | Vydat | 7. prosince 2017 | 15.0.27130.2003 |
-| 15.6.0 Preview 1 | Náhled | 7. prosince 2017 | 15.6.27205.0 |
+| 15.6.0 Preview 1 | Preview | 7. prosince 2017 | 15.6.27205.0 |
 | 15.0.7 | Vydat | 6. prosince 2017 | 15.0.26228.18 |
 | 15.5.0 | Vydat | 4. prosince 2017 | 15.0.27130.0 |
-| 15.5.0 Preview 5 | Náhled | 30. listopadu 2017 | 15.0.27128.1 |
+| 15.5.0 Preview 5 | Preview | 30. listopadu 2017 | 15.0.27128.1 |
 | 15.4.5 | Vydat | 27. listopadu 2017 | 15.0.27004.2010 |
-| 15.5.0 Preview 4 | Náhled | 14. listopadu 2017 | 15.0.27110.0 |
+| 15.5.0 Preview 4 | Preview | 14. listopadu 2017 | 15.0.27110.0 |
 | 15.4.4 | Vydat | 14. listopadu 2017 | 15.0.27004.2009 |
 | 15.0.6 | Vydat | 14. listopadu 2017 | 15.0.26228.17 |
 | 15.4.3 | Vydat | 8. listopadu 2017 | 15.0.27004.2008 |
-| 15.5.0 Preview 3 | Náhled | 6. listopadu 2017 | 15.0.27102.0 |
+| 15.5.0 Preview 3 | Preview | 6. listopadu 2017 | 15.0.27102.0 |
 | 15.4.2 | Vydat | 31. října 2017 | 15.0.27004.2006 |
-| 15.5.0 Preview 2 | Náhled | 23. října 2017 | 15.0.27019.1 |
+| 15.5.0 Preview 2 | Preview | 23. října 2017 | 15.0.27019.1 |
 | 15.4.1 | Vydat | 19. října 2017 | 15.0.27004.2005 |
-| 15,5 Preview 1 | Náhled | 11. října 2017 | 15.0.27009.1 |
+| 15,5 Preview 1 | Preview | 11. října 2017 | 15.0.27009.1 |
 | 15.4.0 | Vydat | 9. října 2017 | 15.0.27004.2002 |
-| 15,4 Preview 6 | Náhled | 9. října 2017| 15.0.27004.20002 |
-| 15,4 Preview 5 | Náhled | 6. října 2017 | 15.0.27004.2000 |
-| 15,4 Preview 4 | Náhled | 2. října 2017 | 15.0.26929.2 |
-| 15,4 Preview 3 | Náhled | 21. září 2017 | 15.0.26923.00 |
+| 15,4 Preview 6 | Preview | 9. října 2017| 15.0.27004.20002 |
+| 15,4 Preview 5 | Preview | 6. října 2017 | 15.0.27004.2000 |
+| 15,4 Preview 4 | Preview | 2. října 2017 | 15.0.26929.2 |
+| 15,4 Preview 3 | Preview | 21. září 2017 | 15.0.26923.00 |
 | 15.3.5 | Vydat | 19. září 2017 | 15.0.26730.16 |
 | 15.0.5 | Vydat | 18. září 2017 | 15.0.26228.16 |
 | 15.3.4 | Vydat | 12. září 2017 | 15.0.26730.15 |
-| 15,4 Preview 2 | Náhled | 11. září 2017 | 15.0.26906.1 |
+| 15,4 Preview 2 | Preview | 11. září 2017 | 15.0.26906.1 |
 | 15.3.3| Vydat | 29. srpna 2017 | 15.0.26730.12 |
-| 15,4 Preview 1 | Náhled | 24. srpna 2017 | 15.0.26823.01 |
+| 15,4 Preview 1 | Preview | 24. srpna 2017 | 15.0.26823.01 |
 | 15.3.2 | Vydat | 22. srpna 2017 | 15.0.26730.10 |
 | 15.3.1 | Vydat | 18. srpna 2017 | 15.0.26730.08 |
-| 15.3.1 Preview 1 | Náhled | 18. srpna 2017 | 15.0.26730.08 |
+| 15.3.1 Preview 1 | Preview | 18. srpna 2017 | 15.0.26730.08 |
 | 15.3.1  | Vydat | 18. srpna 2017 | 15.0.26730.08 |
-| 15,4 Preview 1 | Náhled | 24. srpna 2017 | 15.0.26823.1 |
+| 15,4 Preview 1 | Preview | 24. srpna 2017 | 15.0.26823.1 |
 | 15.3.0 | Vydat | 14. srpna 2017 | 15.0.26730.3 |
-| 15,3 Preview 7,1 | Náhled | 11. srpna 2017 | 15.0.26730.3 |
-| 15,3 Preview 7 | Náhled | Od 1. srpna 2017 | 15.0.26730.0 |
-| 15,3 Preview 6 | Náhled | 26. července 2017 | 15.0.26724.1 |
-| 15,3 Preview 5 | Náhled | 24. července 2017 | 15.0.26720.02 |
+| 15,3 Preview 7,1 | Preview | 11. srpna 2017 | 15.0.26730.3 |
+| 15,3 Preview 7 | Preview | Od 1. srpna 2017 | 15.0.26730.0 |
+| 15,3 Preview 6 | Preview | 26. července 2017 | 15.0.26724.1 |
+| 15,3 Preview 5 | Preview | 24. července 2017 | 15.0.26720.02 |
 | 15.2.6  | Vydat | 17. července 2017 | 15.0.26430.16 |
-| 15,3 Preview 4 | Náhled | 12. července 2017 | 15.0.26711.1 |
+| 15,3 Preview 4 | Preview | 12. července 2017 | 15.0.26711.1 |
 | 15.2.5  | Vydat | 6. července 2017 | 15.0.26430.15 |
-| 15,3 Preview 3 | Náhled | 26. června 2017 | 15.0.26621.2 |
+| 15,3 Preview 3 | Preview | 26. června 2017 | 15.0.26621.2 |
 | 15.2.4  | Vydat | 21. června 2017 | 15.0.26430.14 |
-| 15,3 Preview 2,1 | Náhled | 20. června 2017 | 15.0.26608.5 |
+| 15,3 Preview 2,1 | Preview | 20. června 2017 | 15.0.26608.5 |
 | 15.2.3  | Vydat | 9. června 2017 | 15.0.26430.13 |
-| 15,3 Preview 2 | Náhled | 8. června 2017 | 15.0.26606.0 |
+| 15,3 Preview 2 | Preview | 8. června 2017 | 15.0.26606.0 |
 | 15.2.2  | Vydat | 30. května 2017 | 15.0.26430.12 |
 | 15.0.4  | Vydat | 23. května 2017 | 15.0.26228.13 |
 | 15.2.1  | Vydat | 12. května 2017 | 15.0.26430.6 |
-| 15,3 Preview 1,1 | Náhled | 11. května 2017 | 15.0.26510.0 |
-| 15,3 Preview 1 | Náhled | 10. května 2017 | 15.0.26507.0 |
+| 15,3 Preview 1,1 | Preview | 11. května 2017 | 15.0.26510.0 |
+| 15,3 Preview 1 | Preview | 10. května 2017 | 15.0.26507.0 |
 | 15.2.0 | Vydat | 10. května 2017 | 15.0.26430.4 |
-| 15,2 Preview 4 | Náhled | 3. května 2017 | 15.0.26430.1 |
-| 15,2 Preview 3 | Náhled | 26. dubna 2017 | 15.0.26424.2 |
-| 15,2 Preview 2 | Náhled | 20. dubna 2017 | 15.0.26419.1 |
-| 15,2 Preview 1 | Náhled | 17. dubna 2017 | 15.0.26412.1 |
+| 15,2 Preview 4 | Preview | 3. května 2017 | 15.0.26430.1 |
+| 15,2 Preview 3 | Preview | 26. dubna 2017 | 15.0.26424.2 |
+| 15,2 Preview 2 | Preview | 20. dubna 2017 | 15.0.26419.1 |
+| 15,2 Preview 1 | Preview | 17. dubna 2017 | 15.0.26412.1 |
 | 15.1.2  | Vydat | 17. dubna 2017 | 15.0.26403.7 |
 | 15.1.1 | Vydat | 10. dubna 2017 | 15.0.26403.3 |
 | 15.1.0 | Vydat | 5. dubna 2017 | 15.0.26403.0 |
 | 15.0.3  | Vydat | 31. března 2017 | 15.0.26228.12 |
 | 15.0.2 | Vydat | 28. března 2017 | 15.0.26228.10 |
-| 15,1 Preview 3 | Náhled | 27. března 2017 | 15.0.26323.1 |
-| 15,1 Preview 2 | Náhled | 16. března 2017 | 15.0.26315.0 |
+| 15,1 Preview 3 | Preview | 27. března 2017 | 15.0.26323.1 |
+| 15,1 Preview 2 | Preview | 16. března 2017 | 15.0.26315.0 |
 | 15.0.1  | Vydat | 14. března 2017 | 15.0.26228.9 |
-| 15,1 Preview 1 | Náhled | 7. března 2017 | 15.0.26304.0 |
+| 15,1 Preview 1 | Preview | 7. března 2017 | 15.0.26304.0 |
 | 15.0.0 | Vydat | 7. března 2017 | 15.0.26228.4 |
 
 > [!NOTE]

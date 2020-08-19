@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95623d72e70e572ca7605c34e2e25e7186c284e1
-ms.sourcegitcommit: 4a77403b6bd33c5a6e66a3eefd42c81c39fb67ca
+ms.openlocfilehash: ca095bf424420fb73ba8f369f7e41daea92fe33d
+ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87330957"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584499"
 ---
 # <a name="report-a-problem-states-and-faq"></a>Nahlášení problému: stavy a nejčastější dotazy
 
@@ -52,7 +52,7 @@ Po nahlášení problému se stavem označují, kde se vaše příspěvky nachá
 
 ![Pro vytváření sestav problémů na komunitě vývojářů potřebujete více informací o stavu](../ide/media/ProblemStates/NeedMoreInfo.jpg)
 
-**Potřebujete další informace o** tom, že od vás potřebujeme další diagnostické informace, abychom mohli pokračovat v šetření.  [Přečtěte si, jak reagovat na nutnost dalších žádostí o informace.](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed-need-more-info)
+**Potřebujete další informace o** tom, že od vás potřebujeme další diagnostické informace, abychom mohli pokračovat v šetření.  [Přečtěte si, jak reagovat na nutnost dalších žádostí o informace.](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed)
 
 - - -
 
@@ -82,7 +82,7 @@ Po nahlášení problému se stavem označují, kde se vaše příspěvky nachá
 
 ![Uzavřeno – nejedná se o stav chyby pro hlášení problémů na komunitě vývojářů.](../ide/media/ProblemStates/ClosedNotABug.jpg)
 
-**Uzavřeno – není chyba** znamená, že jsme zjistili, že se jedná o aktuální návrh.
+**Uzavřeno – není chyba**  znamená, že jsme zjistili, že se jedná o aktuální návrh.
 
 - - -
 
@@ -98,7 +98,7 @@ Po nahlášení problému se stavem označují, kde se vaše příspěvky nachá
 
 - - -
 
-## <a name="faq"></a>Nejčastější dotazy
+## <a name="faq"></a>Časté otázky
 
 ### <a name="how-can-i-increase-the-chance-of-my-problem-getting-resolved-quickly"></a>Jak můžu zvýšit pravděpodobnost, že se problém vyřeší rychle?
 

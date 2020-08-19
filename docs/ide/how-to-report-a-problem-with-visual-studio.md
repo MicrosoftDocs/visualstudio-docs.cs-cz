@@ -9,107 +9,75 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a1d497b5b4217cd7a404cb591c20bb1196b04b
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 2e5f64ebdf93384b7def728ac5d01bcbaf6b0271
+ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387314"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584555"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Jak ohlásit problém se sadou Visual Studio nebo Instalační program pro Visual Studio
 
 > [!NOTE]
 > Visual Studio pro Mac najdete v tématu [postup nahlášení problému v Visual Studio pro Mac](/visualstudio/mac/report-a-problem).
 
-Problém můžete nahlásit buď ze sady Visual Studio, nebo z jeho instalačního programu pomocí nástroje zpětné vazby, který je v nich zahrnutý. Nástroj pro zpětnou vazbu vám umožňuje snadno zahrnout diagnostické informace do vašeho názoru a pomáhá týmům v programu Visual Studio diagnostikovat a opravovat problémy mnohem efektivněji. Tady je postup nahlášení problému.
+Problém můžete ohlásit buď ze sady Visual Studio, nebo z jeho instalačního programu. Integrovaný nástroj zpětné vazby umožňuje snadno přidat diagnostické informace, které týmům sady Visual Studio pomáhají diagnostikovat a opravovat problémy. Tady je postup nahlášení problému.
 
 1. **V aplikaci Visual Studio**vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém. K nástroji pro zpětnou vazbu můžete získat přístup také **z nabídky**  >  **Odeslat zpětnou vazbu**  >  **s oznámením o problému**.
-![Nahlášení problému v komunitě vývojářů sady Visual Studio ](media/vsfeedbackentry.png) nebo nahlášení problému v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat Visual Studio nebo není možné získat přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
+![Nahlášení problému v komunitě vývojářů sady Visual Studio ](media/feedback-button.png) nebo nahlášení problému v **instalační program pro Visual Studio** , pokud nemůžete nainstalovat Visual Studio nebo není možné získat přístup k nástroji pro zpětnou vazbu v sadě Visual Studio.  V instalačním programu vyberte ikonu zpětné vazby v pravém horním rohu a vyberte Nahlásit problém.
 ![Nahlášení problému v komunitě vývojářů sady Visual Studio](media/installer.png)
 
-1. Pokud není přihlášený, vyberte **Přihlásit** se, jak je znázorněno na následujícím snímku obrazovky. Pokud se chcete přihlásit, postupujte podle pokynů na obrazovce.
+1. Kliknutím na **nahlásit problém** otevřete váš výchozí prohlížeč a přihlásíte se k němu pomocí stejného účtu, který používáte k přihlášení do sady Visual Studio.
 
-   ![Přihlášení k nahlášení problému](../ide/media/sign-in-new-ux.png)
+   ![Přihlášení k nahlášení problému](../ide/media/feedback-browser-top.png)
 
-   K nahlášení problému stačí jenom v případě, že jste přihlášení, ale můžete také hlasovat a komentovat jakékoli stávající názory.
+1. Začněte zadáním popisného názvu zprávy o chybě. Musí mít aspoň 25 znaků.
 
-1. Jakmile se přihlásíte, budete moci zobrazit **problémy** a **aktivitu** na obrazovce **položky** , které sleduji.
+    ![Nahlášení problému](../ide/media/feedback-report.png)
 
-   ![Položky, které sleduji](../ide/media/items-i-follow.png)
+1. Po zahájení psaní se v poli title zobrazí možné duplicity.
 
-1. Visual Studio poskytuje rozhraní pro vyhledání vašeho problému a zjištění, jestli ho jiní uživatelé oznámili. Pokud si ji někdo nahlásil, "Hlasujte", abychom nás věděli.
-   > [!NOTE]
-   > Chcete-li hledat, zadejte požadovaný text do vyhledávacího pole a klikněte na tlačítko zadat nebo stiskněte klávesu ENTER.
+    ![Vyhledat duplicity](../ide/media/feedback-search.png)
 
-   ![Hledání podobných problémů a hlasování](../ide/media/search-and-vote.png)
+1. Vyberte možné duplicitní sestavy chyb, abyste viděli, jestli existuje jeden vyhovující problém. Pokud k tomu dojde, Hlasujte místo vytvoření vlastního lístku.
 
-1. Pokud nenajdete problém, ke kterému jste narazili, v dolní části obrazovky vyberte možnost **ohlásit nový problém** .
+    ![Hlasujte pro duplicity](../ide/media/feedback-duplicate.png)
 
-1. Vytvořte popisný název problému, který nám pomůže ho směrovat na správný tým sady Visual Studio.
+2. Pokud nebyly nalezeny žádné duplicity, pokračujte zadáním popisu problému. Je důležité, aby bylo co nejblíže jasné, aby bylo možné tuto chybu reprodukována. Nezapomeňte zahrnout jasné kroky reprodukce.
 
-1. Pokud je to možné, uveďte další podrobnosti a připojte postup, abychom mohli problém reprodukovat.
+3. Pokud se jedná o zprávu o chybě, poznamenejte si snímek obrazovky zaškrtnutím políčka Zahrnout do sady *Visual Studio screenshot* .
 
-   ![Ohlásit nový problém](../ide/media/report-new-problem.png)
+    ![Pořídit snímek obrazovky ](../ide/media/feedback-screenshot.png) *jenom technici Microsoftu, kteří můžou zobrazit snímek obrazovky*
 
-1. Kliknutím na tlačítko **Další** přejdete na kartu **přílohy** . Tady můžete zachytit aktuální obrazovku a odeslat ji do Microsoftu. Chcete-li připojit další snímky obrazovky nebo jiné soubory, vyberte možnost **připojit další soubory**.
+    Snímek obrazovky můžete dokonce oříznout přímo v prohlížeči, abyste mohli odebrat jakékoli citlivé nebo nesouvisející části.
 
-   ![Připojení snímku obrazovky k sestavě problému sady Visual Studio](media/report-a-problem-screenshot.png)
+4. Jedním z nejlepších způsobů, jak může technický tým sady Visual Studio problém vyřešit, je poskytnout trasování a soubory s výpisem paměti, aby je bylo možné procházet. Můžete to snadno udělat tak, že zaznamenáte kroky, které vedly k chybě. 
 
-1. Pokud nechcete připojit snímek obrazovky nebo [nahrát reprodukci](#record-a-repro), klikněte na tlačítko **Další** a přejděte na kartu **Souhrn** .
+    ![Zaznamenání akcí ](../ide/media/feedback-recording.png) *, které může záznam sledovat pouze technici Microsoftu*
 
-1. Vyberte **Odeslat** , pokud chcete odeslat sestavu, včetně všech imagí a souborů trasování nebo výpisu paměti. (Pokud je tlačítko **Odeslat** zobrazeno šedě, ujistěte se, že jste zadali název a popis sestavy.)
+5. Zkontrolujte připojené soubory a nahrajte další soubory, pokud se domníváte, že by to pomohla diagnostikovat problém.   
 
-   Informace o tom, jaká data se shromažďují, najdete v článku shromažďovaná [data](developer-community-privacy.md#data-we-collect).
+    ![Připojené soubory – ](../ide/media/feedback-attachments.png) *připojené soubory můžou zobrazit jenom technici Microsoftu* .
 
-## <a name="record-a-repro"></a>Zaznamenání reprodukci
+6. Posledním krokem je klepnutí na tlačítko **Odeslat** . Odesláním sestavy se pošle přímo do interního systému zasílání zpráv o chybách sady Visual Studio, který čeká na třídění.
 
-Soubory s výpisem paměti trasování a haldy jsou užitečné při pomoci diagnostikovat problémy. Vážíme si toho, když použijete nástroj **ohlásit problém** k zaznamenání reprodukci kroků a odešlete data do Microsoftu. Tady je postup:
+## <a name="when-further-information-is-needed"></a>Když je potřeba další informace
 
-1. Po zadání názvu a popisu problému vyberte **Další** a přejděte na kartu **přílohy** .
+Pokud problém neobsahuje důležité informace, přiřadíme stav **potřebuje více informací** . K tomuto problému přiřadíme konkrétní informace, které potřebujeme, a obdržíte e-mailové oznámení. Pokud tyto informace do sedmi dnů neobdržíme, pošleme vám připomenutí. Potom uzavřete lístek po 14 dnech nečinnosti.
 
-1. Vyberte kartu **záznam** .
+1. Použijte odkaz v e-mailu na zprávu o problému nebo přejděte na moji zpětnou vazbu a zobrazte si všechny sestavy ve stavu **vyžaduje více informací** .
 
-1. V části **zaznamenat vaše akce**vyberte aktuální instanci sady Visual Studio, pokud zde můžete reprodukování problému. Pokud nemůžete, například pokud Visual Studio přestane reagovat, vyberte, **\<Create a new instance>** Chcete-li zaznamenávat akce v nové instanci sady Visual Studio.
+    ![Moje zpětná vazba](../ide/media/feedback-my-feedback.png)
 
-1. Vyberte **Spustit záznam**. Udělte oprávnění ke spuštění tohoto nástroje.
+1. Kliknutím na odkaz poskytnout další informace v sestavě problém přejdete na novou obrazovku. Tady uvidíte, jaké informace se vyžadují.
 
-   ![Výběr možnosti Spustit záznam pro poskytnutí trasování a souboru výpisu haldy v sestavě problému se systémem Visual Studio](../ide/media/record-dialog-box.png)
-
-1. Jakmile se zobrazí nástroj pro **záznam kroků** , proveďte kroky, které reprodukovaly problém.
-
-1. Až budete hotovi, klikněte na tlačítko **Zastavit záznam** .
-
-1. Počkejte několik minut, než sada Visual Studio shromáždí a zabalí informace, které jste si poznamenali.
-
-   Informace o tom, jaká data se shromažďují, najdete v článku shromažďovaná [data](developer-community-privacy.md#data-we-collect).
-
-## <a name="when-further-information-is-needed-need-more-info"></a>Když se vyžadují další informace (vyžaduje další informace)
-
-Počínaje verzí Visual Studio 2017 verze 15,5 je k dispozici nový pracovní postup, který uživatelům pomůžou poskytnout další informace o hlášeních o problémech.
-
-1. Když Microsoft inženýr nastavil problém [komunity vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/) na stav **vyžadovat více informací** , pošle se oznámení v nástroji **ohlásit problém** v sadě Visual Studio oznámení na základě tohoto problému.
-
-   ![V aplikaci Visual Studio je nutné mít k informační oznámení.](../ide/media/nmi-notification.png)
-
-1. Kliknutím na odkaz **Zobrazit problémy** můžete filtrovat a řadit zobrazení na problémy, které vyžadují pozornost. Tyto problémy mají také vedle sebe indikátor, aby je bylo možné odlišit Při obecném vyhledávání.
-
-1. Kliknutím na problém zobrazíte zobrazení Podrobnosti o problému.
-
-   ![Vyžadovat další informace oznámení](../ide/media/nmi-details-view.png)
-
-1. Chcete-li zobrazit žádost o **vyžadování více informací** , klikněte na odkaz **zobrazit jejich žádost a odpověď** v zobrazení Podrobnosti o problému. Zobrazí se dialogové okno s žádostí.
-
-   ![Vyžadovat další informace oznámení](../ide/media/nmi-request.png)
+   ![Moje zpětná vazba](../ide/media/feedback-need-more-info.png)
 
 1. Další informace můžete zadat přidáním komentářů, příloh nebo kroků záznamu. Toto prostředí je podobné jako hlášení nového problému nebo poskytnutí dalších informací při hlasování o problému.
 
 1. Žádající pracovník Microsoftu obdrží oznámení o dalších poskytnutých informacích. Pokud mají dostatek informací k prozkoumání, změní se stav problému. V opačném případě se inženýr zeptá ještě více informací.
 
-   > [!NOTE]
-   > * Když odpovíte, oznámení zmizí. Místo toho se zobrazí banner, který vás zavede a usnadňuje vám možnost poskytnout ještě více informací.
-   > * Jakmile se stav změny změní, oznámení se neukončí pro všechny, kteří se k problému dostanou.
-   > * Více než jedna osoba může odpovědět na stejný požadavek **vyžadující více informací** .
-   > * V [komunitě vývojářů](https://developercommunity.visualstudio.com/) **nepotřebujeme další** pracovní postup, když k ní přistupujete přímo přes webový prohlížeč, ale můžete tam zadat i komentáře a přílohy.
+Tyto žádosti vidíte na obrazovce **Moje zpětná vazba** spolu se všemi dalšími **problémy** a **návrhy**.
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>Hledání řešení nebo poskytnutí zpětné vazby
 
@@ -119,6 +87,7 @@ Pokud nemáte problém se sestavou, ale chcete navrhnout funkci, je to také mí
 
 ## <a name="see-also"></a>Viz také
 
+* [Pokyny pro komunitu vývojářů](https://docs.microsoft.com/visualstudio/ide/developer-community-guidelines)
 * [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
 * [Nahlášení problému s Visual Studio pro Mac](/visualstudio/mac/report-a-problem)
 * [Nahlášení problému s C++](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
