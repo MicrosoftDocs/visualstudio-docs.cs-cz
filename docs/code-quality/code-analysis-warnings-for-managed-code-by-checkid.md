@@ -288,18 +288,19 @@ f1_keywords:
 - CA5122
 - CA5374
 - IL3000
+- IL3001
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 040df1edf85f2879cd2666e79768e76969464522
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: daaf6854b56b31419408691c27af245c4001ea42
+ms.sourcegitcommit: 328ab0d8e5770f1067e37dcc266c2b50ea07783c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214606"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88612874"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -375,7 +376,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1070 | [CA1070: Nedeklarujte pole událostí jako virtuální.](../code-quality/ca1070.md) | [Událost podobná poli](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) byla deklarována jako Virtual. |
 | CA1200 | [CA1200: Nepoužívejte značky cref s předponou](../code-quality/ca1200.md) | Atribut [cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute) v dokumentaci XML označuje označení "odkaz na kód". Určuje, zda je vnitřní text značky prvkem kódu, jako je například typ, metoda nebo vlastnost. Vyhněte se použití `cref` značek s předponami, protože brání kompilátoru v ověřování odkazů. Zároveň zabrání integrovanému vývojovému prostředí (IDE) sady Visual Studio najít a aktualizovat tyto odkazy na symboly během refaktoringu. |
 | CA1300 | [CA1300: Určete MessageBoxOptions](../code-quality/ca1300.md) | Chcete-li správně zobrazit okno pro kultury, které používají směr čtení zprava doleva, musí být členy RightAlign a RtlReading výčtu MessageBoxOptions předány metodě Show. |
-| CA1301 | [CA1301: Vyhněte se duplicitním akcelerátorům](../code-quality/ca1301.md) | Přístupová klávesa neboli akcelerátor umožňuje klávesnici přístup k ovládacímu prvku pomocí klávesy ALT. Pokud má více ovládacích prvků duplicitní přístupové klíče, není chování přístupového klíče správně definované. |
+| CA1301 | [CA1301: Vyhněte se duplicitním akcelerátorům](../code-quality/ca1301.md) | Přístupová klávesa neboli akcelerátor umožňuje klávesnici přístup k ovládacímu prvku pomocí klávesy ALT. Když má více ovládacích prvků duplicitní přístupové klávesy, není chování přístupové klávesy dobře definováno. |
 | CA1302 | [CA1302: Nekódujte pevně řetězce závislé na národním prostředí](../code-quality/ca1302.md) | Výčet System.Environment.SpecialFolder obsahuje členy, které odkazují na speciální systémové složky. Umístění těchto složek mohou mít různé hodnoty v různých operačních systémech; uživatel může změnit některé z míst; a místa jsou lokalizována. Metoda Environment.GetFolderPath vrátí lokace, které jsou spojené s výčtem Environment.SpecialFolder, lokalizované a vhodné pro aktuálně spuštěný počítač. |
 | CA1303 | [CA1303: Nepředávejte literály jako lokalizované parametry](../code-quality/ca1303.md) | Externě viditelná metoda předává řetězcový literál jako parametr konstruktoru nebo metodě .NET a tento řetězec by měl být Lokalizovatelný. |
 | CA1304 | [CA1304: Určete CultureInfo](../code-quality/ca1304.md) | Metoda nebo konstruktor volá člen, který má přetížení přijímající parametr System.Globalization.CultureInfo, a tato metoda nebo konstruktor nevolá přetížení přebírající parametr CultureInfo. Pokud objekt CultureInfo nebo System.IFormatProvider není zadán, nemusí mít výchozí hodnota zadaná pomocí přetíženého členu ve všech národních prostředích požadovaný efekt. |
@@ -606,4 +607,5 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA5400 | [CA5400 zajistěte, aby kontrola seznamu odvolaných certifikátů HttpClient není zakázaná](../code-quality/ca5400.md) | Odvolaný certifikát už není důvěryhodný. Může je použít útočníky, kteří předávají některá škodlivá data nebo ukrást citlivá data v komunikaci přes protokol HTTPS. |
 | CA5401 | [CA5401 nepoužívá CreateEncryptor s jiným než výchozím IV](../code-quality/ca5401.md) | Symetrické šifrování by mělo vždy používat neopakovaný inicializační vektor, aby se zabránilo útokům na slovník. |
 | CA5402 | [CA5402 použít CreateEncryptor s výchozí IV](../code-quality/ca5402.md) | Symetrické šifrování by mělo vždy používat neopakovaný inicializační vektor, aby se zabránilo útokům na slovník. |
-| IL3000 | [IL3000 vyhnout se použití cesty k souboru sestavení při publikování jako jeden soubor](../code-quality/il3000.md) | Nepoužívejte přístup k cestě k souboru sestavení při publikování jako jeden soubor. |
+| IL3000 | [IL3000 vyhnout se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](../code-quality/il3000.md) | Nepoužívejte přístup k cestě k souboru sestavení při publikování jako jeden soubor. |
+| IL3001 | [IL3001 vyhnout se přístupu k cestě k souboru sestavení při publikování jako jeden soubor](../code-quality/il3001.md) | Nepoužívat cestu k souboru sestavení při publikování jako jeden soubor |
