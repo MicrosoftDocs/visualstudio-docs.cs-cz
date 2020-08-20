@@ -1,45 +1,53 @@
 ---
 title: Přidání Azure Storage pomocí připojených služeb | Microsoft Docs
-description: Přidání Azure Storage do aplikace pomocí dialogového okna Přidat připojené služby v aplikaci Visual Studio
+description: Přidání závislosti služby Azure Storage do aplikace pomocí připojených služeb sady Visual Studio
 author: ghogen
 manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
-ms.date: 03/26/2017
+ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: ddb0f2610473841a69ec69600cf9ef83cb898340
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4a1b7bcc8b95b30ea3737dc2561c5abb280e2b5c
+ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280680"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88639416"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio
 
-Pomocí sady Visual Studio můžete pomocí dialogového okna **Přidat připojené služby** připojit kterýkoli z následujících Azure Storage:
+Pomocí sady Visual Studio můžete pomocí funkce **připojené služby** připojit kterýkoli z následujících Azure Storage:
 
-- Cloudová služba C#
-- Mobilní služba back-endu .NET
-- Web nebo služba ASP.NET
-- Služba ASP.NET Core
-- Služba Azure WebJob
+- .NET Framework Konzolová aplikace
+- ASP.NET MVC (.NET Framework) 
+- ASP.NET Core
+- .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
+- Role pracovního procesu .NET Core
+- Azure Functions
+- Aplikace Univerzální platforma Windows
+- Xamarin
+- Cordova
 
 Funkce připojené služby přidá všechny potřebné odkazy a kód připojení k vašemu projektu a patřičně upraví konfigurační soubory.
 
-Po dokončení se v dialogovém okně **Přidat připojené služby** automaticky zobrazí dokumentace s podrobnostmi o krocích potřebných pro zahájení práce s úložištěm objektů blob, frontami a tabulkami.
-
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [připojené služby v Visual Studio pro Mac](/visualstudio/mac/connected-services).
+## <a name="prerequisites"></a>Předpoklady
 
-## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>Připojení k Azure Storage pomocí dialogového okna připojené služby
+- Visual Studio s nainstalovanou úlohou Azure
+- Projekt jednoho z podporovaných typů
 
-1. Otevřete projekt v aplikaci Visual Studio
+## <a name="connect-to-azure-storage-using-connected-services"></a>Připojení k Azure Storage pomocí připojených služeb
+
+::: moniker range="vs-2017"
+
+1. Otevřete svůj projekt v sadě Visual Studio.
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
 
-    ![Přidat připojenou službu Azure](./media/vs-azure-tools-connected-services-storage/IC796702.png)
+    ![Přidat připojenou službu Azure](./media/vs-azure-tools-connected-services-storage/add-connected-service.png)
 
 1. Na stránce **připojené služby** vyberte **cloudové úložiště s Azure Storage**.
 
@@ -62,19 +70,55 @@ Po dokončení se v dialogovém okně **Přidat připojené služby** automatick
    1. Po zobrazení dialogového okna **Azure Storage** se v seznamu zobrazí nový účet úložiště. V seznamu vyberte nový účet úložiště a pak vyberte **Přidat**.
 
 1. Služba připojená k úložišti se zobrazí pod uzlem **odkazy na služby** vašeho projektu.
+:::moniker-end
 
-## <a name="how-your-project-is-modified"></a>Způsob úpravy projektu
+:::moniker range=">=vs-2019"
 
-Po dokončení dialogu Visual Studio přidá odkazy a upraví určité konfigurační soubory. Konkrétní změny závisí na typu projektu:
+1. Otevřete svůj projekt v sadě Visual Studio.
 
-- ASP.NET projekt – [co se stalo – projekty ASP.NET](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
-- ASP.NET Core projekt – [co se stalo – projekty ASP.NET 5](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
-- Projekt cloudové služby (webové role a role pracovního procesu) – [co se stalo – projekty cloudových služeb](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
-- Projekt webové úlohy – [co se stalo – projekty WebJob](/azure/visual-studio/vs-storage-webjobs-what-happened)
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel **připojené služby** a v místní nabídce vyberte **Přidat připojenou službu**.
+
+    ![Přidat připojenou službu Azure](./media/vs-azure-tools-connected-services-storage/vs-2019/add-connected-service.png)
+
+1. Na kartě **připojené služby** vyberte ikonu + pro **závislosti služby**.
+
+    ![Přidat závislost služby](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
+
+1. Na stránce **Přidat závislost** vyberte **Azure Storage**.
+
+    ![Přidat Azure Storage](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
+
+    Pokud ještě nejste přihlášení, přihlaste se k účtu Azure. Pokud účet Azure nemáte, můžete si zaregistrovat [bezplatnou zkušební verzi](https://azure.microsoft.com/account/free).
+
+1. Na obrazovce **konfigurace Azure Storage** vyberte existující účet úložiště a **pak vyberte další**.
+
+    Pokud potřebujete vytvořit účet úložiště, pokračujte na další krok. V opačném případě přejděte ke kroku 6.
+
+    ![Přidat existující účet úložiště do projektu](./media/vs-azure-tools-connected-services-storage/vs-2019/select-azure-storage-account.png)
+
+1. Vytvoření účtu úložiště:
+
+   1. V dolní části dialogového okna vyberte **vytvořit účet úložiště** .
+
+   1. Vyplňte **Azure Storage: vytvořit nový** dialog a vyberte **vytvořit**.
+
+       ![Nový účet úložiště Azure](./media/vs-azure-tools-connected-services-storage/vs-2019/create-storage-account.png)
+
+   1. Po zobrazení dialogového okna **Azure Storage** se v seznamu zobrazí nový účet úložiště. V seznamu vyberte nový účet úložiště a **pak vyberte další**.
+
+1. Zadejte název připojovacího řetězce a vyberte, zda chcete připojovací řetězec Uložit do místního souboru tajných klíčů, nebo v [Azure Key Vault](/azure/key-vault).
+
+   ![Zadat připojovací řetězec](./media/vs-azure-tools-connected-services-storage/vs-2019/connection-string.png)
+
+1. Obrazovka **Souhrn změn** zobrazuje všechny změny, které budou provedeny v projektu, pokud jste dokončili proces. Pokud se změní vzhled tlačítka OK, klikněte na tlačítko **Dokončit**.
+
+   ![Souhrn změn](./media/vs-azure-tools-connected-services-storage/vs-2019/summary-of-changes.png)
+
+1. Služba připojená k úložišti se zobrazí pod uzlem **odkazy na služby** vašeho projektu.
+:::moniker-end
 
 ## <a name="see-also"></a>Viz také
 
-- [Fórum MSDN: Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Blog týmu Microsoft Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Fórum Azure Storage](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Dokumentace ke službě Azure Storage](/azure/storage/)
 - [Připojené služby (Visual Studio pro Mac)](/visualstudio/mac/connected-services)
