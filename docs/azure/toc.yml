@@ -17,12 +17,22 @@
 - name: Připojení ke službám Azure
   expanded: false
   items:
-    - name: Přidání služby Azure Storage
-      href: vs-azure-tools-connected-services-storage.md
-    - name: Přidání služby Azure Key Vault
-      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: Přidání služby Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Přidání služby Azure App Insights
+      href: azure-app-insights-add-connected-service.md
+    - name: Přidání služby Azure Cache for Redis
+      href: azure-cache-for-redis-add-connected-service.md
+    - name: Přidání služby Azure CosmosDB
+      href: azure-cosmosdb-add-connected-service.md
+    - name: Přidání služby Azure Key Vault
+      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Přidání služby Azure SignalR
+      href: azure-signalr-add-connected-service.md
+    - name: Přidání služby Azure SQL Database
+      href: azure-sql-database-add-connected-service.md
+    - name: Přidání služby Azure Storage
+      href: vs-azure-tools-connected-services-storage.md
 - name: Vývoj pro Azure Cloud Services
   expanded: false
   items:
