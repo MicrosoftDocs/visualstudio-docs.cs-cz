@@ -18,18 +18,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fea7763bf1cbce5fac36ce2cd5e54c40e1da989a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5994e3f5b17f50d707c4c5a00666d60c2efd3184
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289232"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711700"
 ---
 # <a name="msbuild-conditions"></a>Podmínky nástroje MSBuild
 
 Nástroj MSBuild podporuje konkrétní sadu podmínek, které lze použít všude, kde `Condition` je atribut povolen. Tyto podmínky jsou vysvětleny v následující tabulce.
 
-|Podmínka|Popis|
+|Stav|Popis|
 |---------------|-----------------|
 |'`stringA`' == '`stringB`'|Vyhodnotí jako, `true` Pokud `stringA` je rovno `stringB` .<br /><br /> Příklad:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky. U této kontroly se nerozlišují malá a velká písmena.|
 |'`stringA`' != '`stringB`'|Vyhodnotí, `true` Pokud `stringA` není rovno `stringB` .<br /><br /> Příklad:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Pro jednoduché alfanumerické řetězce nebo logické hodnoty se nevyžadují jednoduché uvozovky. Pro prázdné hodnoty jsou však požadovány jednoduché uvozovky. U této kontroly se nerozlišují malá a velká písmena.|
@@ -58,8 +58,14 @@ Můžete použít řetězcové metody v podmínkách, jak je znázorněno v nás
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také
+V souborech projektu MSBuild neexistuje žádný pravdivý typ Boolean. Logická data jsou reprezentována ve vlastnostech, které mohou být prázdné nebo nastaveny na libovolnou hodnotu. Proto `'$(Prop)' == 'true'` znamená "if Prop is" `true` , ",", ale znamená "," je-li nastavena možnost "nebo" `'$(Prop)' != 'false'` `true` na něco jiného. "
+
+Logická logika je vyhodnocována pouze v kontextu podmínek, takže nastavení vlastností, jako `<Prop2>'$(Prop1)' == 'true'</Prop>` jsou reprezentována jako řetězec (po rozšíření proměnné), není vyhodnoceno jako logické hodnoty.  
+
+Nástroj MSBuild implementuje několik speciálních pravidel zpracování, což usnadňuje práci s řetězcovými vlastnostmi, které jsou používány jako logické hodnoty. Logické literály jsou přijaty, takže `Condition="true"` a `Condition="false"` fungují podle očekávání. Nástroj MSBuild také obsahuje zvláštní pravidla pro podporu logického operátoru negace. Takže pokud `$(Prop)` je "true", `!$(Prop)` rozbalí se a tato hodnota se rovná `!true` `false` , jak byste očekávali.
+
+## <a name="see-also"></a>Viz také:
 
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
 - [Podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md)
-- [Návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)
+- [Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: cílový proces se ukončil s kódem &#39;kódem&#39; při vyhodnocování funkce &#39;funkcí&#39; | Microsoft Docs'
+title: 'Chyba: cílový proces byl ukončen s kódem kódu &apos; &apos; při vyhodnocování funkce Function &apos; &apos; | Microsoft Docs'
 ms.date: 4/06/2018
 ms.topic: error-reference
 f1_keywords:
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 94effc8a5f75e7b38fb7275d175eb324c479a7a9
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460775"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711635"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Chyba: cílový proces se ukončil s kódem &#39;kódem&#39; při vyhodnocování funkce &#39;funkce&#39;
 

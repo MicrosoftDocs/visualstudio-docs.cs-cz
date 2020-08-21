@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity<T> Návrhář postupu provádění FlowSwitch
+title: Návrhář aktivity Návrhář postupu provádění – FlowSwitch &lt; T &gt;
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,38 +13,38 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8271100936b9cf70e17c0e6279297d583714f018
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d6637682bd6ba649f27c1a53f3b1448629f03736
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597149"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711570"
 ---
-# <a name="flowswitcht-activity-designer"></a>Návrhář aktivit > FlowSwitch\<T
+# <a name="flowswitcht-activity-designer"></a>Návrhář aktivity FlowSwitch\<T>
 
-Aktivita <xref:System.Activities.Statements.FlowSwitch%601> je podmíněný uzel, který poskytuje větvení pro tok řízení na základě kritéria shody, pokud jsou vyžadovány více než dvě alternativní větve. Pokud větve toku vyžaduje pouze dvě cesty, použijte místo toho <xref:System.Activities.Statements.FlowDecision> aktivitu.
+<xref:System.Activities.Statements.FlowSwitch%601>Aktivita je podmíněný uzel, který poskytuje větvení pro tok řízení na základě kritéria shody, pokud jsou vyžadovány více než dvě alternativní větve. Pokud větve toku vyžaduje pouze dvě cesty, použijte <xref:System.Activities.Statements.FlowDecision> místo toho aktivitu.
 
-## <a name="the-flowswitcht-activity"></a>Aktivita > FlowSwitch\<T
+## <a name="the-flowswitcht-activity"></a>Aktivita FlowSwitch \<T>
 
-Aktivita <xref:System.Activities.Statements.FlowSwitch%601> obsahuje <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>, která vrací hodnotu typu *t* (zadanou obecným parametrem) při vyhodnocování. Aktivita také obsahuje sadu <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>, která určuje jedinečné mapování z možných výsledků tohoto vyhodnocení na sadu <xref:System.Activities.Statements.FlowNode> objektů. Spouštěný <xref:System.Activities.Statements.FlowNode> je ten, jehož objekt typu *t* odpovídá hodnotě vyhodnoceného <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>. V případě, že se nezíská shoda, může být <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> případ (volitelně).
+<xref:System.Activities.Statements.FlowSwitch%601>Aktivita obsahuje objekt <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> , který vrací hodnotu typu *T* (zadanou obecným parametrem) při vyhodnocování. Aktivita obsahuje také sadu <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> , která určuje jedinečné mapování z možných výsledků tohoto vyhodnocení na sadu <xref:System.Activities.Statements.FlowNode> objektů. <xref:System.Activities.Statements.FlowNode>Spustí se ten, jehož objekt typu *T* odpovídá hodnotě vyhodnocené <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . <xref:System.Activities.Statements.FlowSwitch%601.Default%2A>Případ může (volitelně) být k dispozici pro případ, kdy se nezíská shoda.
 
-### <a name="using-the-flowswitcht-activity-designer"></a>Použití návrháře aktivit > FlowSwitch\<T
+### <a name="using-the-flowswitcht-activity-designer"></a>Pomocí \<T> Návrháře aktivity FlowSwitch
 
-Návrhář aktivity **FlowSwitch\<t >** můžete najít v kategorii **vývojové diagramy** v **sadě nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL**+**ALT**+**X**.
+Návrhář **aktivity \<T> FlowSwitch** lze najít v kategorii **vývojové diagramy** na **panelu nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** na levé straně Návrhář postupu provádění. Případně vyberte v nabídce **zobrazení** možnost **Sada nástrojů** nebo stiskněte klávesovou **zkratku CTRL** + **+** + **X**.
 
-Návrhář aktivity **FlowSwitch\<t >** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění povrch v Návrháři aktivity **vývojového diagramu** . Použijte okno **vybrat typy** , které se zobrazí, chcete-li určit typ (přidružený v kódu s <xref:System.Activities.Statements.FlowSwitch%601> podle jeho obecného parametru) získaného při vyhodnocování <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>. Tento postup vytvoří <xref:System.Activities.Statements.FlowSwitch%601> aktivitu označenou **přepínačem** v rámci aktivity <xref:System.Activities.Statements.Flowchart>. <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> lze zadat do pole **výrazu** v okně **vlastnosti** kliknutím na místo, kde text nápovědy říká "zadejte výraz VB".
+Návrhář **aktivity \<T> FlowSwitch** lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu v Návrháři aktivity **vývojového diagramu** . Použijte okno **vybrat typy** , které se zobrazí, chcete-li určit typ (přidružený v kódu pomocí <xref:System.Activities.Statements.FlowSwitch%601> jeho obecného parametru) získaného z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Tento postup vytvoří <xref:System.Activities.Statements.FlowSwitch%601> aktivitu označenou **přepínačem** v rámci <xref:System.Activities.Statements.Flowchart> aktivity. Typ <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> lze zadat v poli **výrazu** v okně **vlastnosti** kliknutím na místo, kde text nápovědy říká "zadejte výraz VB".
 
-Myš nad **FlowSwitch\<t >** návrháři aktivity způsobí, že čtvercové úchyty, které se používají k propojení <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>, se zobrazí kolem jeho okrajů. Po přetažení návrháře aktivity **FlowSwitch < T\>** a dalších návrhářů aktivit do **vývojového diagramu**se objekty <xref:System.Activities.Activity>, které představují, připravené propojit dohromady, aby určovaly pořadí spouštění. Chcete-li vytvořit jednu z <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> přidružených k <xref:System.Activities.Statements.FlowSwitch%601>, klikněte na jeden z čtvercového táhla na okraji **FlowSwitch < t\>** a přetáhněte ho (tak, že podržíte tlačítko myši) k jednomu z popisovačů, které se zobrazí podobným způsobem kolem cílové aktivity, když ukazatel myši setrvá na návrháři. Po uvolnění tlačítka myši a šipky z **FlowSwitch < T\>** do cílového návrháře se zobrazí zpráva, která představuje tento případ. Výchozí hodnota pro tento případ se zobrazí na šipce a může být upravena v poli **případ** v okně **vlastnosti** .
+Myš nad Návrhář **aktivity \<T> FlowSwitch** , která způsobí, že čtvercové popisovače, které se použijí k propojení, se <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> zobrazí kolem jeho okrajů. Po přetažení návrháře aktivity **FlowSwitch \><T** a dalších návrhářů aktivit do tohoto **vývojového diagramu** <xref:System.Activities.Activity> jsou objekty, které představují, připravené propojit dohromady, aby určovaly pořadí spouštění. Chcete-li vytvořit jednu z <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> přidružených k <xref:System.Activities.Statements.FlowSwitch%601> , klikněte na jeden z čtvercového táhla na okraji **FlowSwitch<T \> ** a přetáhněte ho (tak, že podržíte tlačítko myši) k jednomu z popisovačů, které se zobrazí podobným způsobem kolem cílové aktivity, když ukazatel myši setrvá na návrháři. Po uvolnění tlačítka myši a šipky z **FlowSwitch<T \> ** do cílového návrháře se zobrazí text, který představuje tento případ. Výchozí hodnota pro tento případ se zobrazí na šipce a může být upravena v poli **případ** v okně **vlastnosti** .
 
-### <a name="the-flowswitcht-properties"></a>Vlastnosti FlowSwitch\<T >
+### <a name="the-flowswitcht-properties"></a>Vlastnosti FlowSwitch \<T>
 
-V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.FlowSwitch%601> a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností nebo na návrhové ploše.
+V následující tabulce jsou uvedeny <xref:System.Activities.Statements.FlowSwitch%601> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat v mřížce vlastností nebo na návrhové ploše.
 
-|Název vlastnosti|Požadováno|Použití|
+|Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Pravda|Určuje výraz, který se vyhodnocuje, aby se určilo, na který <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> se má přepnout v cestě k provedení.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|Nepravda|Určuje jedinečné mapování z možných výsledků získaných z vyhodnocování <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> do sady objektů <xref:System.Activities.Statements.FlowNode>.|
-|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Pravda|Určuje mapování, pokud vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> neodpovídá jedné z hodnot obsažených v objektu <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|Ano|Určuje výraz, který je vyhodnocován pro určení, který z <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> přepínačů má být v cestě k provedení přepnut.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|Ne|Určuje jedinečné mapování z možných výsledků získaných z vyhodnocení <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> do sady <xref:System.Activities.Statements.FlowNode> objektů.|
+|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|Ano|Určuje mapování, pokud vyhodnocení neodpovídá <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> jedné z hodnot obsažených v <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> objektu.|
 
 ## <a name="see-also"></a>Viz také:
 
