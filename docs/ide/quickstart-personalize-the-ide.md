@@ -1,5 +1,5 @@
 ---
-title: Použití tmavého motivu a změna barvy textu v aplikaci Visual Studio
+title: Použití tmavého motivu a změna barvy textu v editoru
 description: Naučte se, jak nastavit výchozí barevný motiv sady Visual Studio na tmavý režim a změnit barvy písma v textovém editoru.
 ms.date: 08/20/2020
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec0015f6abd434884d039407209d741febd41121
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 3b0e7b11fae63b9a2233b7391805760d3fdd7d27
+ms.sourcegitcommit: cf5b5437f0b43c6d52c479e1a2c443338bd27cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711713"
+ms.locfileid: "88724923"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-text-editor"></a>Postupy: přizpůsobení rozhraní IDE a textového editoru sady Visual Studio
 
@@ -68,7 +68,7 @@ Výchozí barevný motiv pro uživatelské rozhraní sady Visual Studio se nazý
 
 ::: moniker-end
 
-## <a name="change-text-color"></a>Změna barvy textu
+## <a name="change-text-colors-in-the-editor"></a>Změna barev textu v editoru
 
 Teď přizpůsobíme některé barvy textu pro Editor. Nejprve vytvoříme nový soubor XML pro zobrazení výchozích barev.
 
@@ -128,7 +128,7 @@ Teď přizpůsobíme některé barvy textu pro Editor. Nejprve vytvoříme nový
 
 Prozkoumali jsme pouze několik způsobů přizpůsobení barev v aplikaci Visual Studio. Doufáme, že prozkoumáte další možnosti vlastního nastavení v dialogovém okně **Možnosti** , abyste mohli aplikaci Visual Studio skutečně dělat sami.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Změna písem, barev a možností vysokého kontrastu v aplikaci Visual Studio](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 - [Přizpůsobení editoru](../ide/how-to-change-text-case-in-the-editor.md)
