@@ -1,5 +1,5 @@
 ---
-title: Chyba – ladění není&#39;možné, protože v systému je povolen ladicí program jádra | Microsoft Docs
+title: Chyba – ladění &apos; není možné, protože v systému je povolen ladicí program jádra | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80c27ef642697a8514a0809095b980d8c38a47d8
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 5c94d605459720722b0e1360ab3a56539667d51e
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460862"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706630"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Chyba: ladění není&#39;možné, protože v systému je povolen ladicí program jádra.
 Při ladění spravovaného kódu se může zobrazit následující chybová zpráva:
@@ -98,6 +98,6 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
      `gn`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

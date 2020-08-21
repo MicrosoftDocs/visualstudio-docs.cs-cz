@@ -1,5 +1,5 @@
 ---
-title: Možnosti konfigurace analyzátoru FxCop
+title: Možnosti konfigurace analyzátoru kvality kódu .NET
 ms.date: 09/23/2019
 ms.topic: reference
 author: mikejo5000
@@ -7,21 +7,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d6b56bec2174ca71cc66f5424b7bdc309330d95
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 0370688b53e87cf6ea1f5079d2e5c706777dd0c7
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248796"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706565"
 ---
-# <a name="rule-scope-options-for-fxcop-analyzers"></a>Možnosti oboru pravidla pro analyzátory FxCop
+# <a name="rule-scope-options-for-net-code-quality-analyzers"></a>Možnosti oboru pravidla pro analyzátory kvality kódu .NET
 
-Některá pravidla analyzátoru FxCop umožňují Upřesnit, na které části základů kódu by se měly použít. Tato stránka obsahuje seznam dostupných možností konfigurace oboru, jejich povolených hodnot a pravidla, na která lze použít. Chcete-li použít tyto možnosti, zadejte je do [souboru EditorConfig](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
-
-Tyto možnosti konfigurace jsou k dispozici od verze 2.6.3 balíčku NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) .
+Některá pravidla analyzátoru kvality kódu .NET vám umožňují vylepšit, které části základu kódu by měly být aplikovány na. Tato stránka obsahuje seznam dostupných možností konfigurace oboru, jejich povolených hodnot a pravidla, na která lze použít. Chcete-li použít tyto možnosti, zadejte je do [souboru EditorConfig](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
 > [!TIP]
-> Úplný seznam možností, které jsou k dispozici pro danou verzi balíčku FxCopAnalyzers, najdete v souboru *analyzátoru Configuration.MD* ve složce *dokumentace* pro daný balíček. Soubor se nachází v souboru *% USERPROFILE% \\ . nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version\> \documentation\Analyzer Configuration.MD*. Tento soubor dokumentace konfigurace je součástí každé verze balíčku počínaje verzí 2.6.5. Tady je příklad, jak je možnost popsána v souboru *analyzátoru Configuration.MD* :
+> Úplný seznam dostupných možností najdete v tomto [souboru analyzátoru Configuration.MD](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md). Tady je příklad, jak je možnost popsána v souboru *analyzátoru Configuration.MD* :
 >
 > Název možnosti: `sufficient_IterationCount_for_weak_KDF_algorithm`\
 > Hodnoty možností: integrální hodnoty \

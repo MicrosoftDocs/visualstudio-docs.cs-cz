@@ -1,24 +1,26 @@
 ---
-title: Konfigurace analyzátorů FxCop pomocí editorconfig
+title: Konfigurace analyzátorů kvality kódu .NET pomocí editorconfig
 ms.date: 09/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
+- .NET analyzers
 - FxCop analyzers, configuring
+- code quality
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 182042db9a744d037e295a8448f8c49a9c7b3a97
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: fbd30859c5ee3dbbea80c6d88d68c0211da62c88
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184793"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706578"
 ---
-# <a name="configure-fxcop-analyzers"></a>Konfigurace analyzátorů FxCop
+# <a name="configure-net-code-quality-analyzers"></a>Konfigurace analyzátorů kvality kódu .NET
 
-[Balíček analyzátorů FxCop](install-fxcop-analyzers.md) se skládá z nejdůležitějších pravidel "FxCop" z analyzátoru starších verzí převedených na analyzátory kódu založené na .NET Compiler Platform. U určitých pravidel FxCop můžete upřesnit, které části základu kódu by měly být aplikovány na [Konfigurovatelné možnosti](fxcop-analyzer-options.md). Každá možnost je určena přidáním páru klíč-hodnota k souboru [EditorConfig](https://editorconfig.org) . Konfigurační soubor může být [specifický pro projekt](#per-project-configuration) nebo může být [sdílen](#shared-configuration) mezi dvěma nebo více projekty.
+Pro určité analyzátory kvality kódu .NET (které mají začínající identifikátory `CA` ) můžete upřesnit, které části základu kódu by měly být aplikovány na [Konfigurovatelné možnosti](fxcop-analyzer-options.md). Každá možnost je určena přidáním páru klíč-hodnota k souboru [EditorConfig](https://editorconfig.org) . Konfigurační soubor může být specifický pro soubor, projekt, řešení nebo celé úložiště.
 
 > [!TIP]
 > Kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a vybráním možnosti **Přidat**  >  **novou položku**přidejte do projektu soubor. editorconfig. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
@@ -31,10 +33,7 @@ Informace o konfiguraci závažnosti pravidla (například o tom, jestli se jedn
 
 ::: moniker-end
 
-Zbývající část tohoto článku popisuje obecnou syntaxi pro [Možnosti, které upřesňují](fxcop-analyzer-options.md) , kde se používají pravidla FxCop.
-
-> [!NOTE]
-> Starší pravidla FxCop nejde nakonfigurovat pomocí souboru EditorConfig. Informace o rozdílech mezi staršími analyzátory analýz a FxCop najdete v tématu [Nejčastější dotazy k analyzátorům FxCop](fxcop-analyzers-faq.md).
+Zbývající část tohoto článku popisuje obecnou syntaxi pro [Možnosti, které upřesňují](fxcop-analyzer-options.md) , kde se používají analyzátory kvality kódu .NET.
 
 ## <a name="option-scopes"></a>Obory možností
 
@@ -44,7 +43,7 @@ Každou možnost zpřesnění lze nakonfigurovat pro všechna pravidla, pro kate
 
 Syntaxe pro konfiguraci možnosti pro *všechna* pravidla je následující:
 
-|Syntaxe|Příklad|
+|Syntax|Příklad|
 |-|-|
 | dotnet_code_quality. Parametr Option = OptionValue | `dotnet_code_quality.api_surface = public` |
 
@@ -52,7 +51,7 @@ Syntaxe pro konfiguraci možnosti pro *všechna* pravidla je následující:
 
 Syntaxe pro konfiguraci možnosti pro *kategorii* pravidel (například pojmenování, návrh nebo výkon) je následující:
 
-|Syntaxe|Příklad|
+|Syntax|Příklad|
 |-|-|
 | dotnet_code_quality. RuleCategory. Option = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
 
@@ -60,13 +59,11 @@ Syntaxe pro konfiguraci možnosti pro *kategorii* pravidel (například pojmenov
 
 Syntaxe pro konfiguraci možnosti pro *konkrétní* pravidlo je následující:
 
-|Syntaxe|Příklad|
+|Syntax|Příklad|
 |-|-|
 | dotnet_code_quality. RuleId. Option = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
 
 ## <a name="enabling-editorconfig-based-configuration"></a>Povolení konfigurace založené na Editorconfig
-
-### <a name="vs2019-163-and-later--fxcopanalyzers-package-version-33x-and-later"></a>VS2019 16,3 a novější + balíček FxCopAnalyzers verze 3.3. x a novější
 
 Pro následující rozsahy je možné povolit konfiguraci analyzátoru založené na EditorConfig:
 
@@ -78,48 +75,8 @@ Pro následující rozsahy je možné povolit konfiguraci analyzátoru založen�
 
 Chcete-li povolit konfiguraci, přidejte soubor *. editorconfig* s možnostmi v příslušném adresáři. Tento soubor může také obsahovat konfigurační položky konfigurace diagnostiky založené na EditorConfig. Další podrobnosti najdete [tady](use-roslyn-analyzers.md#rule-severity).
 
-### <a name="prior-to-vs2019-163-or-using-an-fxcopanalyzers-package-version-prior-to-33x"></a>Před VS2019 16,3 nebo použitím verze balíčku FxCopAnalyzers před 3.3. x
+## <a name="see-also"></a>Viz také:
 
-#### <a name="per-project-configuration"></a>Konfigurace pro jednotlivé projekty
-
-Chcete-li povolit konfiguraci analyzátoru založeného na EditorConfig pro konkrétní projekt, přidejte soubor *. EditorConfig* do kořenového adresáře projektu.
-
-#### <a name="shared-configuration"></a>Sdílená konfigurace
-
-Můžete sdílet soubor. editorconfig pro konfiguraci FxCop Analyzer mezi dvěma nebo více projekty, ale vyžaduje některé další kroky.
-
-1. Uložte soubor *. editorconfig* do společného umístění.
-
-2. Vytvořte soubor *. props* s následujícím obsahem:
-
-   ```xml
-   <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-     <PropertyGroup>
-       <SkipDefaultEditorConfigAsAdditionalFile>true</SkipDefaultEditorConfigAsAdditionalFile>
-     </PropertyGroup>
-     <ItemGroup Condition="Exists('<your path>\.editorconfig')" >
-       <AdditionalFiles Include="<your path>\.editorconfig" />
-     </ItemGroup>
-   </Project>
-   ```
-
-3. Přidejte řádek do souboru *. csproj* nebo *. vbproj* pro import souboru *. props* , který jste vytvořili v předchozím kroku. Tento řádek musí být umístěn před řádky, které importují soubory FxCop Analyzer *. props* . Například pokud má soubor. props název *editorconfig. props*:
-
-   ```xml
-   ...
-   <Import Project="..\..\editorconfig.props" Condition="Exists('..\..\editorconfig.props')" />
-   <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
-   ...
-   ```
-
-4. Znovu načtěte projekt.
-
-> [!NOTE]
-> Libovolné sdílené umístění souboru EditorConfig popsaného zde se vztahuje pouze na konfiguraci rozsahu určitých pravidel nástroje FxCop Analyzer. Pro další nastavení, jako je závažnost pravidla, nastavení obecného editoru a styl kódu, musí být soubor EditorConfig vždy umístěn ve složce projektu nebo v nadřazené složce.
-
-## <a name="see-also"></a>Viz také
-
-- [Možnosti oboru pravidla pro analyzátory FxCop](fxcop-analyzer-options.md)
+- [Možnosti oboru pravidla pro analyzátory kvality kódu .NET](fxcop-analyzer-options.md)
 - [Konfigurace analyzátoru](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)
-- [Analyzátory FxCop](install-fxcop-analyzers.md)
 - [Konvence kódování .NET pro EditorConfig](../ide/editorconfig-code-style-settings-reference.md)
