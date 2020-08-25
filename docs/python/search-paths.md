@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3a23afff970405bf7ae1bbd1c8aad326eb133780
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 10430c6eba57c97dd46a706d0ec2f532cd08d4f3
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520377"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801162"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Jak Visual Studio používá cesty hledání v Pythonu
 
@@ -29,7 +29,7 @@ Sada Visual Studio ignoruje proměnnou prostředí vyhledávacích cest, ale i k
 
 Visual Studio proto poskytuje způsob, jak určit cesty hledání přímo v prostředích a projektech. Kód spouštěný nebo ladění v aplikaci Visual Studio přijímá cesty hledání v hodnotě `PYTHONPATH` (a dalších ekvivalentních proměnných). Když přidáte cesty pro hledání, Visual Studio v těchto umístěních zkontroluje knihovny a v případě potřeby vytvoří databáze IntelliSense (Visual Studio 2017 verze 15,5 a starší). vytváření databáze může v závislosti na počtu knihoven trvat delší dobu.
 
-Pokud chcete přidat cestu pro hledání, přejděte na **Průzkumník řešení**, rozbalte uzel projektu, klikněte pravým tlačítkem na **cesty pro hledání**a vyberte **Přidat složku do cesty pro hledání**:
+Chcete-li přidat cestu pro hledání, přejděte na **Průzkumník řešení**, rozbalte uzel projektu, klikněte pravým tlačítkem na **cesty pro hledání**a vyberte **Přidat složku do cesty pro hledání**:
 
 ::: moniker range="vs-2017"
 ![Přidat složku do cesty pro hledání na cestách pro hledání v Průzkumník řešení](media/search-paths-command.png)
@@ -46,7 +46,7 @@ Po přidání složek do vyhledávacích cest aplikace Visual Studio použije ty
 
 Soubory s příponou *. zip* nebo *. vaječný* se dají přidat taky jako cesty pro hledání, a to tak, že vyberete **Přidat archiv zip do příkazu pro hledání cesty** . Stejně jako u složek se obsah těchto souborů kontroluje a zpřístupňuje IntelliSense.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu v aplikaci Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)

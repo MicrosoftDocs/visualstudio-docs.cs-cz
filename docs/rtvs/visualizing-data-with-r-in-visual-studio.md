@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: fb16f4a573a7b905484982871dc838143b125591
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.openlocfilehash: dbb3984385e0042c669f8aad1d5bb4a2f64de917
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801617"
 ---
 # <a name="create-visual-data-plots-with-r"></a>Vytváření vizuálních dat pomocí jazyka R
 
@@ -71,7 +71,7 @@ Nové okno vykreslení vytvoříte pomocí tlačítka panelu nástrojů nebo **n
 
 Jsou to také nezávislé objekty, což znamená, že je můžete kopírovat nebo přesouvat mezi okny vykreslování pomocí myši nebo pomocí myši nebo pomocí příkazů **kopírování**, **vyjmutí**a **vložení** v kontextu a **úpravách** v nabídce klikněte pravým tlačítkem myši.
 
-Výchozí chování při přetahování je kopií; Chcete-li přesunout, přetáhněte klávesu **SHIFT** .
+Výchozí chování při přetahování je kopií; Pokud se chcete pohybovat, přetáhnutím klávesy **SHIFT** můžete přetahovat myší.
 
 ## <a name="plot-history"></a>Historie grafu
 
@@ -82,7 +82,7 @@ Historie nabízí seznam miniatur pro zobrazení zobrazené v tomto okně seskup
 
 ![Okno historie grafu](media/plotting-plot-history-window.png)
 
-Chcete-li otevřít vykreslení v přidruženém okně, dvakrát klikněte na tento graf, vyberte jej a potom vyberte tlačítko **Zobrazit** panel nástrojů nebo klikněte pravým tlačítkem myši a vyberte možnost **Zobrazit vykreslení**. Můžete také vybrat jednotlivé vykreslení a kopírovat, vyjmout nebo odstranit v kontextu nebo v nabídkách pro **Úpravy** klikněte pravým tlačítkem myši.
+Chcete-li otevřít vykreslení v přidruženém okně, dvakrát klikněte na tento graf, vyberte jej a pak vyberte tlačítko **Zobrazit** panel nástrojů pro vykreslení. Můžete také kliknout pravým tlačítkem myši na vykreslení a vybrat **Zobrazit graf**. Můžete také vybrat jednotlivé vykreslení a kopírovat, vyjmout nebo odstranit v místních nebo **upravitelných** nabídkách.
 
 Doba života historie grafu napříč všemi okny je vázána na celou dobu života interaktivní relace jazyka R. Pokud resetujete relaci jazyka R nebo ukončíte a restartujete aplikaci Visual Studio, vaše historie vykreslení se resetuje.
 

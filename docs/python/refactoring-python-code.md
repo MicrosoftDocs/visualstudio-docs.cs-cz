@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ea735dd5cc3da8d5509961dbc8b27eb6106fd2af
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: be93ac7b8bc0659da522abcf6000d97ec05d46b9
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801331"
 ---
 # <a name="refactor-python-code"></a>Refaktoring Python Code
 
@@ -71,7 +71,7 @@ Nakonec, pokud by se něco normálně vyloučilo, ale má další hodnoty, kter�
 
 Při psaní kódu je snadné ukončit `import` příkazy pro moduly, které nejsou používány vůbec. Vzhledem k tomu, že Visual Studio analyzuje váš kód, může automaticky určit, zda je `import` třeba použít importovaný název v rámci následujícího oboru, kde se vyskytuje příkaz.
 
-Klikněte pravým tlačítkem myši kdekoli v editoru a vyberte možnost **Odebrat importy**, které vám umožní odebrat ze **všech oborů** nebo jenom z **aktuálního rozsahu**:
+V Editoru klikněte pravým tlačítkem myši a vyberte možnost **Odebrat importy**, které vám umožní odebrat ze **všech oborů** nebo jenom z **aktuálního rozsahu**:
 
 ![Nabídka odebrat importy](media/code-refactor-remove-imports-1.png)
 

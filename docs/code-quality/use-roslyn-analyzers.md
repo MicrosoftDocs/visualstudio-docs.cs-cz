@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e7349717478f18b676b74908da8fb8a6a2fc413
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: edb9cb30be9d62a533e6d011cbb8d0436ef898b1
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184585"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801604"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -28,11 +28,11 @@ Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky ana
 
 ![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem (nebo vyberte a podržte) na pravidle a vyberte **vlastnosti**, nebo vyberte pravidlo a pak vyberte **ALT +** + **ENTER**.
 
 ![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
 
-Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem na diagnostiku a vyberte **Zobrazit nápovědu**.
+Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem (nebo vyberte a podržte) v diagnostice a vyberte **Zobrazit nápovědu**.
 
 Ikony vedle každé diagnostiky v **Průzkumník řešení** odpovídají ikonám, které vidíte v sadě pravidel při jejich otevírání v editoru:
 
@@ -66,7 +66,7 @@ V následující tabulce jsou uvedeny různé možnosti závažnosti:
 | Upozornění | `warning` | Porušení se zobrazí jako *Upozornění* v seznam chyb a ve výstupu sestavení příkazového řádku, ale nezpůsobí selhání sestavení. | Poškozený kód je podtržen zelenou vlnovkou a označený malým zeleným polem na posuvníku. |
 | Informace | `suggestion` | Porušení se zobrazí jako *zprávy* v seznam chyb, a ne vůbec ve výstupu sestavení příkazového řádku. | Poškozený kód je podtržený šedou vlnovkou a označený malým šedým polem na posuvníku. |
 | Skrytý | `silent` | Uživatel není viditelný. | Uživatel není viditelný. Diagnostika se oznamuje diagnostickému modulu IDE, ale. |
-| Žádná | `none` | Zcela potlačeno. | Zcela potlačeno. |
+| Žádné | `none` | Zcela potlačeno. | Zcela potlačeno. |
 | Výchozí | `default` | Odpovídá výchozí závažnosti pravidla. Chcete-li určit výchozí hodnotu pravidla, podívejte se do okno Vlastnosti. | Odpovídá výchozí závažnosti pravidla. |
 
 Následující snímek obrazovky editoru kódu ukazuje tři odlišná porušení s různými závažnostmi. Všimněte si barvy vlnovek a malého a barevného čtverce v posuvníku vpravo.
@@ -147,11 +147,11 @@ Existuje několik způsobů, jak převést existující soubor RuleSet na soubor
 
        ![Převod RuleSet na soubor EditorConfig v editoru RuleSet](media/convert-ruleset-to-editorconfig-file-ruleset-editor.png)
 
-    2. **Klikněte** na odkaz na informační panel.
+    2. Vyberte odkaz na **informační panel** .
 
        Mělo by se otevřít dialogové okno **Uložit jako** , ve kterém můžete vybrat adresář, ve kterém chcete vytvořit soubor EditorConfig.
 
-    3. **Kliknutím** na tlačítko **Uložit** vygenerujte soubor EditorConfig.
+    3. Vyberte tlačítko **Uložit** pro vygenerování souboru EditorConfig.
 
        Vygenerovaný EditorConfig by měl být otevřen v editoru. Kromě toho se vlastnost MSBuild `CodeAnalysisRuleSet` aktualizuje v souboru projektu tak, že už neodkazuje na původní soubor RuleSet.
 
@@ -212,7 +212,7 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
    ![Konfigurace závažnosti pravidla z nabídky světlé žárovky v aplikaci Visual Studio](media/configure-rule-severity.png)
 
-3. Tam vyberte jednu z možností závažnosti.
+3. Odtud vyberte jednu z možností závažnosti.
 
    ![Nakonfigurovat závažnost pravidla jako návrh](media/configure-rule-severity-suggestion.png)
 
@@ -225,13 +225,13 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
 Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla z kontextové nabídky seznamu chyb.
 
-1. Po porušení klikněte pravým tlačítkem myši na položku diagnostiky v seznamu chyb.
+1. Jakmile dojde k porušení, klikněte pravým tlačítkem myši (nebo vyberte a podržte) položku diagnostiky v seznamu chyb.
 
 2. V místní nabídce vyberte **nastavit závažnost**.
 
    ![Konfigurace závažnosti pravidla ze seznamu chyb v aplikaci Visual Studio](media/configure-rule-severity-error-list.png)
 
-3. Tam vyberte jednu z možností závažnosti.
+3. Odtud vyberte jednu z možností závažnosti.
 
    Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň.
 
@@ -242,12 +242,12 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
 
-1. V Průzkumník řešení rozbalte položku **References**  >  **analyzátory** odkazů (nebo **Dependencies**  >  **analyzátory** závislostí pro projekty .NET Core).
+1. V Průzkumník řešení vyberte možnost **References**  >  **analyzátory** odkazů (nebo **Dependencies**  >  **analyzátory** závislostí pro projekty .NET Core).
 
 2. Rozbalte sestavení, které obsahuje pravidlo, pro které chcete nastavit závažnost.
 
 ::: moniker range=">=vs-2019"
-3. Klikněte pravým tlačítkem na pravidlo a vyberte **nastavit závažnost**. V místní nabídce vyberte jednu z možností závažnosti.
+3. Klikněte pravým tlačítkem (nebo vyberte a podržte) pravidlo a vyberte **nastavit závažnost**. V místní nabídce vyberte jednu z možností závažnosti.
 
    Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň. Pokud váš projekt používá soubor RuleSet namísto souboru EditorConfig, je položka závažnost přidána do souboru ruleset.
 
@@ -256,7 +256,7 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-3. Klikněte pravým tlačítkem na pravidlo a vyberte **nastavit závažnost sady pravidel**. V místní nabídce vyberte jednu z možností závažnosti.
+3. Klikněte pravým tlačítkem (nebo vyberte a podržte) pravidlo a vyberte **nastavit závažnost sady pravidel**. V místní nabídce vyberte jednu z možností závažnosti.
 
    Závažnost pravidla se uloží do souboru aktivní sady pravidel.
 ::: moniker-end
@@ -265,16 +265,19 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 
 ![Soubor sady pravidel v Průzkumník řešení](media/ruleset-in-solution-explorer.png)
 
-1. Otevřete aktivní soubor sady pravidel tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v nabídce, která se zobrazí po kliknutí pravým tlačítkem myši **References**  >  uzlu**analyzátory** odkazů, nebo výběrem možnosti **otevřít** na stránce vlastností **analýzy kódu** projektu.
+1. Otevřete soubor aktivní sady pravidel jedním z následujících způsobů:
 
-   Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho * \<projectname> . ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
+- V **Průzkumník řešení**dvakrát klikněte na soubor, klikněte pravým tlačítkem myši na uzel analyzátory **odkazů**(nebo vyberte a podržení)  >  **Analyzers** a vyberte **Otevřít aktivní sadu pravidel**.
+- Na stránce vlastností **Analýza kódu** projektu vyberte možnost **otevřít** .
+
+  Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho * \<projectname> . ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
 
    > [!NOTE]
    > Projekty .NET Core a .NET Standard nepodporují příkazy nabídky pro sady pravidel v **Průzkumník řešení**, například **otevřete aktivní sadu pravidel**. Chcete-li určit nevýchozí sadu pravidel pro projekt .NET Core nebo .NET Standard, přidejte do souboru projektu ručně [vlastnost **CodeAnalysisRuleSet** ](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) . Pravidla můžete konfigurovat v rámci sady pravidel v uživatelském rozhraní editoru sad pravidel sady Visual Studio.
 
 1. Přejděte k pravidlu tak, že rozbalíte jeho obsahující sestavení.
 
-1. Ve sloupci **Akce** výběrem hodnoty otevřete rozevírací seznam a v seznamu vyberte požadovanou závažnost.
+1. Ve sloupci **Akce** výběrem hodnoty otevřete rozevírací seznam a v seznamu zvolte požadovanou závažnost.
 
    ![Soubor sady pravidel je otevřen v editoru.](media/ruleset-file-in-editor.png)
 
@@ -333,13 +336,13 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z **editoru kódu**
 
-  Umístěte kurzor na řádek kódu s porušením a stisknutím klávesy **CTRL** + **(.)** otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX**  >  **ve zdroji nebo v souboru potlačení**.
+  Umístěte kurzor na řádek kódu s porušením a vyberte **CTRL** + **tečka (.)** a otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX**  >  **ve zdroji nebo v souboru potlačení**.
 
   ![Potlačit diagnostiku z nabídky rychlé akce](media/suppress-diagnostic-from-editor.png)
 
 - Z **Seznam chyb**
 
-  Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit**  >  **ve zdroji nebo v souboru potlačení**.
+  Zvolte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši (nebo vyberte a podržte) a vyberte **potlačit**  >  **ve zdroji/v souboru potlačení**.
 
   - Pokud potlačíte **ve zdroji**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
 
@@ -369,7 +372,7 @@ Při sestavování projektu na příkazovém řádku se porušení pravidla zobr
 Podrobnosti výstupu sestavení neovlivňují, zda jsou zobrazena porušení pravidel. I při **tiché** podrobnostech se ve výstupu sestavení zobrazí porušení pravidel.
 
 > [!TIP]
-> Pokud jste zvyklí spouštět starší verzi analýzy z příkazového řádku, a to buď pomocí *FxCopCmd. exe* , nebo pomocí nástroje MSBuild s příznakem **RunCodeAnalysis** , zde je postup, jak to udělat pomocí analyzátorů kódu.
+> Pokud jste zvyklí spouštět starší verzi analýzy z příkazového řádku, a to buď pomocí *FxCopCmd.exe* nebo prostřednictvím nástroje MSBuild s příznakem **RunCodeAnalysis** , zde je postup, jak to udělat pomocí analyzátorů kódu.
 
 Chcete-li zobrazit narušení analyzátoru na příkazovém řádku při sestavování projektu pomocí nástroje MSBuild, spusťte příkaz podobný tomuto:
 

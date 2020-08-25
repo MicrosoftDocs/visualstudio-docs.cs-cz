@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 06344d536f0bb6db5f13329ece2c5202205bcefb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 68b64b3097d2b26d30593ac63de5e531d6cc7736
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280710"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800486"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Ladění cloudové služby Azure nebo virtuálního počítače v aplikaci Visual Studio
 
@@ -29,7 +29,7 @@ Emulátor simuluje službu Azure COMPUTE a spustí ji v místním prostředí, a
 
 ### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Ladění cloudové služby v místním počítači
 
-1. Na panelu nabídek vyberte možnost **ladit**, **Spustit ladění** a spusťte projekt cloudové služby Azure. Alternativně můžete stisknout klávesu F5. Zobrazí se zpráva, že se spouští emulátor Compute. Po spuštění emulátoru se ikona na hlavním panelu systému potvrdí.
+1. Na řádku nabídek vyberte **ladit**  >  **Spustit ladění** a spusťte projekt cloudové služby Azure. Alternativně můžete stisknout klávesu F5. Zobrazí se zpráva, že se spouští emulátor Compute. Po spuštění emulátoru se ikona na hlavním panelu systému potvrdí.
 
     ![Emulátor Azure na hlavním panelu systému](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
@@ -37,7 +37,7 @@ Emulátor simuluje službu Azure COMPUTE a spustí ji v místním prostředí, a
 
     V levém podokně uživatelského rozhraní se zobrazují služby, které jsou aktuálně nasazené do emulátoru služby COMPUTE a instance rolí, na kterých je každá služba spuštěná. Můžete zvolit službu nebo role pro zobrazení životního cyklu, protokolování a diagnostické informace v pravém podokně. Pokud umístíte fokus do horního okraje zahrnutého okna, rozbalí se, aby se naplnilo pravé podokno.
 
-3. Proveďte krokování aplikace výběrem příkazů v nabídce **ladění** a nastavením zarážek ve vašem kódu. Při procházení aplikace v ladicím programu se podokna aktualizují s aktuálním stavem aplikace. Při zastavení ladění se nasazení aplikace odstraní. Pokud vaše aplikace obsahuje webovou roli a nastavili jste vlastnost Akce spuštění pro spuštění webového prohlížeče, Visual Studio spustí webovou aplikaci v prohlížeči. Pokud změníte počet instancí role v konfiguraci služby, musíte zastavit svou cloudovou službu a pak znovu spustit ladění, abyste mohli ladit tyto nové instance role.
+3. Projděte aplikaci výběrem příkazů v nabídce **ladění** a nastavením zarážek ve vašem kódu. Při procházení aplikace v ladicím programu se podokna aktualizují s aktuálním stavem aplikace. Při zastavení ladění se nasazení aplikace odstraní. Pokud vaše aplikace obsahuje webovou roli a nastavili jste vlastnost Akce spuštění pro spuštění webového prohlížeče, Visual Studio spustí webovou aplikaci v prohlížeči. Pokud změníte počet instancí role v konfiguraci služby, musíte zastavit svou cloudovou službu a pak znovu spustit ladění, abyste mohli ladit tyto nové instance role.
 
     > [!NOTE]
     > Když zastavíte nebo ladíte službu, místní emulátor služby COMPUTE a emulátor úložiště se nezastaví. Je nutné je explicitně zastavit z oznamovací oblasti.
@@ -79,7 +79,7 @@ Pokud povolíte vzdálené ladění pro cloudovou službu, neprojeví se tím sn
 
     ![Dialog Vybrat typ kódu – dialogové okno](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, otevřete dialogové okno procesy v panelu nabídek a zvolte možnost ladění, Windows, procesy. (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
+4. Chcete-li identifikovat procesy, ke kterým je připojen ladicí program, vyberte v řádku nabídek možnost **ladit**  >  **procesy systému Windows**  >  **Processes**a otevřete dialogové okno **procesy** . (Klávesnice: CTRL + ALT + Z) Chcete-li odpojit určitý proces, otevřete místní nabídku a vyberte možnost **Odpojit proces**. Nebo vyhledejte uzel instance v Průzkumník serveru, najděte proces, otevřete místní nabídku a pak vyberte **Odpojit proces**.
 
     ![Ladění procesů](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
@@ -120,7 +120,7 @@ Můžete ladit programy, které běží na virtuálních počítačích Azure po
 
 3. Po dokončení instalace rozšíření vzdáleného ladění otevřete místní nabídku virtuálního počítače a vyberte **připojit ladicí program...**
 
-    Azure získá seznam procesů na virtuálním počítači a zobrazí je v dialogovém okně připojit k procesu.
+    Azure získá seznam procesů na virtuálním počítači a zobrazí je v dialogovém okně **připojit k procesu** .
 
     ![Příkaz připojit ladicí program](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
@@ -149,13 +149,13 @@ Projekty Visual Studio ASP.NET nabízejí možnost vytvořit praktický virtuál
     > [!NOTE]
     > Pokud ještě nejste přihlášení, zobrazí se výzva, abyste se přihlásili ke svému účtu Azure.
 
-3. Vyberte různá nastavení virtuálního počítače a pak vyberte **OK**. Další informace najdete v tématu [Virtual Machines](/azure/virtual-machines/) .
+3. Zvolte různá nastavení virtuálního počítače a pak vyberte **OK**. Další informace najdete v tématu [Virtual Machines](/azure/virtual-machines/) .
 
     Název, který zadáte jako název DNS, bude název virtuálního počítače.
 
     ![Dialogové okno vytvořit virtuální počítač v Azure](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746724.png)
 
-    Azure vytvoří virtuální počítač a pak zřídí a nakonfiguruje koncové body, jako je třeba Vzdálená plocha a Nasazení webu
+    Azure vytvoří virtuální počítač a pak zřídí a nakonfiguruje koncové body, jako je třeba Vzdálená plocha a Nasazení webu.
 
 4. Jakmile je virtuální počítač plně nakonfigurovaný, vyberte uzel virtuálního počítače v Průzkumník serveru.
 
@@ -175,7 +175,7 @@ Projekty Visual Studio ASP.NET nabízejí možnost vytvořit praktický virtuál
 
 8. Po publikování projektu vyberte v místní nabídce virtuálního počítače v Průzkumník serveru **připojit ladicí program...**
 
-    Azure získá seznam procesů na virtuálním počítači a zobrazí je v dialogovém okně připojit k procesu.
+    Azure získá seznam procesů na virtuálním počítači a zobrazí je v dialogovém okně **připojit k procesu** .
 
     ![Příkaz připojit ladicí program](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 

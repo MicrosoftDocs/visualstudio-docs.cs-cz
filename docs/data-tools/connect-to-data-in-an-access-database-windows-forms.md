@@ -12,24 +12,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 03c92476e8083106a0d301655be3a1779709c1c1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 3a94467dbfa0c11fdb7bb6ba7aa4d304fef3979f
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85282732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800629"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Připojení k datům v accessové databázi
 
 Pomocí sady Visual Studio se můžete připojit k databázi aplikace Access (soubor *. mdb* nebo soubor *. accdb* ). Po definování připojení se data zobrazí v okně **zdroje dat** . Odtud můžete přetáhnout tabulky nebo zobrazení na návrhovou plochu.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Chcete-li použít tyto postupy, potřebujete projekt model Windows Forms nebo WPF a buď databázi aplikace Access (soubor *. accdb* ), nebo databázi Access 2000-2003 (soubor *. mdb* ). Postupujte podle kroků odpovídajících vašemu typu souboru.
 
 ## <a name="create-a-dataset-for-an-accdb-file"></a>Vytvoření datové sady pro soubor. accdb
 
-Pomocí následujícího postupu se můžete připojit k databázím vytvořeným pomocí sady Office 365, přistupovat ke 2013, přístupové 2010 nebo získat přístup ke 2007.
+Pomocí následujícího postupu se připojte k databázím vytvořeným pomocí Microsoft 365, Access 2013, Access 2010 nebo Access 2007.
 
 1. Otevřete projekt aplikace model Windows Forms nebo WPF v aplikaci Visual Studio.
 

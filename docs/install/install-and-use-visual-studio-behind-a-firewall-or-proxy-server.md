@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 05f2984f135ef363d1a5acfb55f4705404f4ea7d
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 5692589192ee4377194f6c42c25d391636f5f42a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87375856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800239"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Nainstalujte a použijte Visual Studio a služby Azure za bránou firewall nebo proxy server
 
@@ -94,7 +94,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | URL<br>řešení | go.microsoft.com<br><br>aka.ms | | Slouží k zkrácení adres URL, které se pak předají do delších adres URL. |
 | Úvodní stránka | vsstartpage.blob.core.windows.net | 443 | Slouží k zobrazení příspěvků vývojáře zobrazených na úvodní stránce (pouze Visual Studio 2017). |
 | Targeted<br> Notification (Oznámení) <br>Služba | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Slouží k filtrování globálního seznamu oznámení do seznamu, který se vztahuje pouze na konkrétní typy počítačů nebo scénářů použití. |
-| Linka <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
+| Rozšíření <br>aktualizovat kontrolu | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Slouží k poskytování oznámení v případě, že je k dispozici aktualizace nainstalovaného rozšíření. <br><br> Používá se jako přihlašovací umístění. |
 | Projekt AI <br>Integrace | az861674.vo.msecnd.net | 443<br> | Slouží ke konfiguraci nových projektů k odesílání dat o využití do vašeho registrovaného Application Insights účtu. |
 | Čočka kódu | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Slouží k zadání informací v editoru týkající se poslední aktualizace souboru, časové osy změn, pracovních položek, ke kterým jsou změny přidruženy, autorů a dalších. |
 | Experimentální <br>povolení funkcí | visualstudio-devdiv-c2s.msedge.net | 80 | Slouží k aktivaci experimentálních nových funkcí nebo změn funkcí. |
@@ -110,7 +110,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Cookiecutter<br>Šablona Průzkumníka<br>zjišťování <br><br>Cookiecutter <br>Projekt Průzkumníka<br> vytvořena | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https/443<br> | Používá se ke zjišťování online šablon z našeho doporučeného informačního kanálu a z úložišť GitHubu. <br><br>Používá se k vytvoření projektu ze šablony cookiecutter, která vyžaduje jednorázovou instalaci cookiecutter sady Python na vyžádání z indexu balíčku Pythonu (PyPI). |
 | Balíček Pythonu <br>zjišťování<br><br>Balíček Pythonu <br>správa<br><br>Nová <br>Python <br> projekt <br>šablony | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | Poskytuje možnost Hledat balíčky PIP.<br><br>Používá se k automatické instalaci PIP, pokud chybí. <br><br>Používá se k překladu následujících nových šablon projektů Pythonu na adresy URL šablon cookiecutter:<br> – Projekt klasifikátoru<br>-Clustering – projekt <br> – Regresní projekt <br> – PyGame pomocí PyKinect <br> – Projekt Pyvot |
 | Web Office <br>doplněk <br> Manifest <br>Ověření <br>Služba | verificationservice.osi.office.net | https/443 | Slouží k ověření manifestů pro webové Doplňky Office. |
-| SharePoint a <br>Doplňky pro Office | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https/443 | Používá se k publikování a testování doplňků pro SharePoint a Office do SharePointu Online a Office 365. |
+| SharePoint a <br>Doplňky pro Office | sharepoint.com<br> microsoft.com/microsoft-365<br> microsoftonline.com <br> outlook.com | https/443 | Používá se k publikování a testování doplňků pro SharePoint a Office do SharePointu Online a Microsoft 365 |
 | Správce pracovního postupu <br>Testovací služba<br> Hostitel | | http/12292 | Pravidlo brány firewall, které se automaticky vytvoří pro testování doplňků pro SharePoint s pracovními postupy |
 | Automaticky shromážděné <br>statistiky spolehlivosti <br>a jiné <br>Prostředí pro zákazníky <br>Programy zlepšování softwaru (CEIP)<br> pro sadu Azure SDK a <br>pro nástroje SQL <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Slouží k odesílání statistik spolehlivosti (data o chybách/nereagujících) od uživatele do Microsoftu. Pokud je povoleno Zasílání zpráv o chybách systému Windows, budou odeslány skutečné výpisy chyb/nereagující. Potlačí se jenom statistické informace; <br>Používá se k odhalení anonymních způsobů použití pro rozšíření sady Azure Tools SDK do sady Visual Studio a pro vzory využití nástrojů SQL pro Visual Studio. |
 | Visual Studio <br> Prostředí pro zákazníky <br>Program zlepšování softwaru (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Slouží ke shromažďování anonymních způsobů používání a protokolů chyb. <br><br>Používá se ke sledování problémů zablokování uživatelského rozhraní. |
@@ -118,7 +118,7 @@ Pokud chcete mít jistotu, že máte přístup ke všemu, co potřebujete, když
 | Aktualizované nástroje publikování webu <br>kontroly a rozšíření <br>doporučit | marketplace.visualstudio.com | https/443 | Používá se pro kontrolu dostupnosti aktualizovaných nástrojů pro publikování. Pokud je tato možnost zakázaná, nemusí se zobrazit možné Doporučené rozšíření pro publikování na webu. |
 | Aktualizovaný prostředek Azure <br>Informace o vytvoření koncového bodu | \*.blob.core.windows.net | https/443 | Používá se k aktualizaci koncových bodů používaných k vytváření prostředků Azure pro určité služby Azure. Pokud je zakázané, místo toho se použije poslední stažený nebo sestavená umístění koncových bodů. |
 | Vzdálené ladění a <br>Vzdálené profilování <br>Azure websites | &#42;. cloudapp.net <br> &#42;. azurewebsites.net | 4022 | Slouží k připojení vzdáleného ladicího programu k Azure websites. Pokud je tato akce zakázaná, připojení vzdáleného ladicího programu k webům Azure nebude fungovat. |
-| Active Directory <br>Graph | graph.windows.net | https/443 | Slouží ke zřízení nových aplikací Azure Active Directory. Používá se také poskytovatelem služby MSGraph, který je připojen k Office 365. |
+| Active Directory <br>Graph | graph.windows.net | https/443 | Slouží ke zřízení nových aplikací Azure Active Directory. Používá se také Microsoft 365 poskytovatelem služeb připojeného k MSGraph. |
 | Azure Functions <br>Aktualizace rozhraní příkazového řádku <br>Zaškrtnout | functionscdn.azureedge.net | https/443 | Používá se ke kontrole aktualizovaných verzí Azure Functions CLI. V případě zakázání se místo toho použije kopie v mezipaměti (nebo kopie převedená Azure Functions komponent) rozhraní příkazového řádku. |
 | Cordova | npmjs.org<br>gradle.org | & http/80<br/>https/443 | HTTP se používá pro stahování Gradle během sestavování; Pomocí protokolu HTTPS se zahrnou moduly plug-in Cordova v projektech. |
 | Průzkumník cloudu | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. koncový bod správy &#60;&#62;<br>Obecné cloudové Expy <br>3. &#60;koncový bod grafu&#62;<br>Obecné cloudové Expy<br>4. &#60;koncový bod účtu úložiště&#62;<br>Uzly úložiště <br>5. &#60;Azure Portal adresy URL&#62;<br>Obecné cloudové Expy <br>6. &#60;koncové body trezoru klíčů&#62; <br>Azure Resource Manager uzly virtuálních počítačů<br>7. &#60;PublicIPAddressOfCluster&#62;<br>Service Fabric vzdálené ladění a trasování ETW | <br>1. https/19080<br>2. https/443<br>3. https/443<br>4. https/443<br>5. https/443<br>6. https/443<br>7. TCP/dynamická | 1. Příklad: test12.eastus.cloudapp.com<br>2. načítá odběry a načítá nebo spravuje prostředky Azure.<br>3. načte Azure Stack předplatná<br>4. spravuje prostředky úložiště (například: mystorageaccount.blob.core.windows.net).<br>5. možnost otevřít v portálu kontextová nabídka (otevře prostředek v Azure Portal)<br>6. vytvoří a použije trezory klíčů pro ladění virtuálních počítačů (například: myvault.vault.azure.net). <br><br>7. dynamicky přiděluje blok portů na základě počtu uzlů v clusteru a dostupných portů. <br><br>Blok portů se pokusí získat třikrát počet uzlů s minimálním počtem 10 portů.<br><br>Pro trasování streamování se provede pokus o získání bloku portů z 810. Pokud je již použit některý z těchto bloků portů, je proveden pokus o získání dalšího bloku a tak dále. (Nástroj pro vyrovnávání zatížení je prázdný, porty od 810 se pravděpodobně používají.) <br><br>Podobně jako u ladění jsou rezervované čtyři sady bloků portů: <br>-connectorPort: 30398, <br>-forwarderPort: 31398, <br>-forwarderPortx86:31399,<br>-fileUploadPort: 32398<br> |
@@ -157,7 +157,7 @@ Tady je několik dalších možností podpory:
 * Navrhněte funkci, Sledujte problémy s produkty a vyhledejte odpovědi v [komunitě vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/).
 * Využijte svůj účet [GitHub](https://github.com/) ke komunikaci s námi a dalšími vývojáři sady Visual Studio v [konverzaci Visual studia v komunitě gitteru](https://gitter.im/Microsoft/VisualStudio).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 * [Požadavky na připojení pro Live Share](/visualstudio/liveshare/reference/connectivity/)
 * [Vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md)

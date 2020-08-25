@@ -7,12 +7,12 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 07/29/2020
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: aa0784694b3407c621e8efb1916ed5fe41aee0c7
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: d1d885bbe9322f6d15cecff7e44d879aceb63d4c
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248223"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801825"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
@@ -22,7 +22,7 @@ Na stránce [ke stažení](https://my.visualstudio.com/downloads/featured) se zo
 Pokud vaše předplatné zajišťuje vaše práce nebo škola, správce předplatných řídí, jestli máte přístup k souborům ke stažení. Zakázáním přístupu ke stažení také zakážete přístup k klíčům Product Key. Pokud nemáte přístup ke stažení a kódy Product Key a potřebujete je, obraťte se na [správce](contact-my-admin.md).
 
 > [!NOTE]
-> Máme na problému informace týkající se dostupnosti kódů Product Key pro Office 365.  Zkoumáme příčinu a tento článek aktualizujeme, až bude problém vyřešen. 
+> Víme o problémech, které se týkají dostupnosti Microsoft 365 kódů Product Key.  Zkoumáme příčinu a tento článek aktualizujeme, až bude problém vyřešen. 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Návody najít soubory ke stažení na portálu odběratele?
 Když navštívíte stránku se [soubory ke stažení](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) , uvidíte oblíbené soubory ke stažení uspořádané do skupin podle typu produktu.  Můžete vybrat jeden z oblíbených souborů ke stažení nebo vyhledat libovolný produkt pomocí panelu hledání v horní části stránky.

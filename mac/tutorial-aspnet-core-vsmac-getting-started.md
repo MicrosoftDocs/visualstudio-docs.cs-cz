@@ -1,17 +1,18 @@
 ---
 title: Začínáme s ASP.NET Core s použitím sady Visual Studio pro Mac
+titleSuffix: ''
 description: Tento dokument obsahuje výukové kurzy, které ukazují, jak začít s ASP.NET Core v Visual Studio pro Mac.
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 10/18/2019
 ms.assetid: 591b21ee-8c3f-446b-9505-7d41bfc86701
 ms.topic: tutorial
-ms.openlocfilehash: 3dcd5dc3ae3a3a373d0fed471c4577b859acbf9e
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 1dc07f0ebde1fcf28dd5c379d9360730e357c1ca
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85949955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801630"
 ---
 # <a name="tutorial-getting-started-with-aspnet-core-in-visual-studio-for-mac"></a>Kurz: Začínáme s ASP.NET Core v Visual Studio pro Mac
 

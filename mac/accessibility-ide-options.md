@@ -1,17 +1,17 @@
 ---
 title: Nastavení možností usnadnění přístupu v integrovaném vývojovém prostředí
 description: Úvod k nastavení možností usnadnění v Visual Studio pro Mac
-author: alanjclark
+author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 87D22340-2BE6-40EE-ACFD-3CF1BA886175
 ms.topic: how-to
-ms.openlocfilehash: 265ad820ea478ac59d8209cc14ce4fe6be29c7af
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 7b0959c8a2f91e340a8b173d94fb2dbd9e2d9474
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85939160"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801812"
 ---
 # <a name="set-ide-accessibility-options"></a>Nastavení možností usnadnění přístupu v integrovaném vývojovém prostředí
 
@@ -28,7 +28,7 @@ Kromě funkcí integrovaných přímo do macOS má Visual Studio pro Mac řadu f
 
 ## <a name="change-the-content-font-and-size"></a>Změna písma a velikosti obsahu
 
-Je možné přizpůsobit písmo a velikost obsahu ve většině odVisual Studio pro Mac. Jak na to:
+Je možné přizpůsobit písmo a velikost obsahu ve většině odVisual Studio pro Mac. Zde je uveden postup:
 
 1. Přejít na předvolby **aplikace Visual Studio (nabídka)**  >  **... (&#8984;,)**.
 

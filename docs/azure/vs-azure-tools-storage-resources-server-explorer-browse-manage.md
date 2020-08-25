@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: ad7d2ca7738d4ba0e05e3a75a2a4b6b155e46dbd
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 1a36dc743108d2cfbf9e5405af727b79aeda4808
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800473"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
 
@@ -24,7 +24,7 @@ ms.locfileid: "72911696"
 
 Pokud jste nainstalovali nástroje Azure pro Microsoft Visual Studio, můžete zobrazit data objektů blob, front a tabulek z účtů úložiště pro Azure. Uzel **úložiště** Azure v Průzkumník serveru zobrazuje data, která jsou v účtu emulátoru místního úložiště a v dalších účtech úložiště Azure.
 
-Chcete-li zobrazit Průzkumník serveru v aplikaci Visual Studio, vyberte v řádku nabídek možnost **zobrazit** > **Průzkumník serveru**. Uzel **úložiště** zobrazí všechny účty úložiště, které existují v rámci každého předplatného nebo certifikátu Azure, ke kterému jste připojení. Pokud se Váš účet úložiště nezobrazí, můžete ho přidat podle pokynů níže [v tomto článku](#add-storage-accounts-by-using-server-explorer).
+Chcete-li zobrazit Průzkumník serveru v aplikaci Visual Studio, vyberte v řádku nabídek možnost **Zobrazit**  >  **Průzkumník serveru**. Uzel **úložiště** zobrazí všechny účty úložiště, které existují v rámci každého předplatného nebo certifikátu Azure, ke kterému jste připojení. Pokud se Váš účet úložiště nezobrazí, můžete ho přidat podle pokynů níže [v tomto článku](#add-storage-accounts-by-using-server-explorer).
 
 Od verze Azure SDK 2,7 můžete použít také Průzkumníka cloudu k zobrazení a správě prostředků Azure. Další informace najdete v tématu [Správa prostředků Azure pomocí Průzkumníka cloudu](vs-azure-tools-resources-managing-with-cloud-explorer.md).
 
@@ -72,7 +72,7 @@ Pomocí tlačítek v pravém horním rohu zobrazení kontejneru objektů blob m�
 
 ### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Vytvoření složky nebo podsložky v kontejneru objektů BLOB
 
-1. V Průzkumníku cloudu vyberte kontejner objektů BLOB. V okně kontejner vyberte tlačítko **nahrát objekt BLOB** .
+1. V **Průzkumníku cloudu**vyberte kontejner objektů BLOB. V okně kontejner vyberte tlačítko **nahrát objekt BLOB** .
 
 1. V dialogovém okně **nahrát nový soubor** vyberte tlačítko **Procházet** a zadejte soubor, který chcete odeslat, a potom zadejte název složky do pole **Složka (volitelné)** .
 
@@ -94,7 +94,7 @@ Vzhledem k tomu, že složky v kontejnerech objektů BLOB jsou virtuálními slo
 
 Můžete filtrovat objekty blob, které se zobrazí, zadáním společné předpony.
 
-Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** ( **!** ), zobrazí se pouze objekty blob začínající na "Hello".
+Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** (**!**), zobrazí se pouze objekty blob začínající na "Hello".
 
 ![Filtrovat textové pole](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
@@ -102,7 +102,7 @@ Textové pole filtru rozlišuje velká a malá písmena a nepodporuje filtrován
 
 ### <a name="to-download-blob-data"></a>Stažení dat objektu BLOB
 
-V Průzkumníku cloudu použijte některou z následujících metod:
+V **Průzkumníku cloudu**použijte některou z následujících metod:
 
 * Otevřete místní nabídku pro jeden nebo více objektů BLOB a pak vyberte **otevřít**.
 * Zvolte název objektu BLOB a potom vyberte tlačítko **otevřít** .
@@ -166,12 +166,12 @@ Služba Azure Table Storage ukládá velké objemy strukturovaných dat. Služba
 
 ### <a name="to-create-a-table"></a>Vytvoření tabulky
 
-1. V Průzkumníku cloudu vyberte uzel **tabulky** účtu úložiště a pak vyberte **vytvořit tabulku**.
+1. V **Průzkumníku cloudu**vyberte uzel **tabulky** účtu úložiště a pak vyberte **vytvořit tabulku**.
 1. V dialogovém okně **vytvořit tabulku** zadejte název tabulky.
 
 ### <a name="to-view-table-data"></a>Zobrazení dat tabulky
 
-1. V Průzkumníku cloudu otevřete uzel **Azure** a pak otevřete uzel **úložiště** .
+1. V **Průzkumníku cloudu**otevřete uzel **Azure** a pak otevřete uzel **úložiště** .
 1. Otevřete uzel účtu úložiště, který vás zajímá, a pak otevřete uzel **tabulky** , kde se zobrazí seznam tabulek pro účet úložiště.
 1. Otevřete místní nabídku pro tabulku a pak vyberte **Zobrazit tabulku**.
 
@@ -181,20 +181,20 @@ Tabulka je uspořádána podle entit (zobrazených v řádcích) a vlastnosti (z
 
 ### <a name="to-edit-table-data"></a>Úprava dat tabulky
 
-V Návrháři tabulky otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnost (jediná buňka) a pak vyberte **Upravit**.
+V **Návrháři tabulky**otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnost (jediná buňka) a pak vyberte **Upravit**.
 
 ![Přidat nebo upravit entitu tabulky](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
 Entity v jedné tabulce nemusejí mít stejnou sadu vlastností (sloupců). Mějte na paměti následující omezení pro zobrazení a úpravy tabulkových dat:
 
-* Binární data (`type byte[]`) nemůžete zobrazit ani upravit, ale můžete je Uložit do tabulky.
-* Nemůžete upravovat hodnoty **PartitionKey** nebo **RowKey** , protože úložiště tabulek v Azure nepodporuje tuto operaci.
+* Binární data () nemůžete zobrazit ani upravovat `type byte[]` , ale můžete je Uložit do tabulky.
+* Nemůžete upravovat hodnoty **PartitionKey** nebo **RowKey** , protože služba Azure Table Storage nepodporuje tuto operaci.
 * Vlastnost s názvem **timestamp**nelze vytvořit. Služby Azure Storage používají vlastnost s tímto názvem.
 * Pokud zadáte hodnotu **DateTime** , musíte dodržovat formát, který je vhodný pro nastavení oblasti a jazyka vašeho počítače (například mm/dd/rrrr hh: mm: ss [am | PM] pro AMERICKou angličtinu).
 
 ### <a name="to-add-entities"></a>Přidání entit
 
-1. V Návrháři tabulky vyberte tlačítko **Přidat entitu** .
+1. V **Návrháři tabulky**vyberte tlačítko **Přidat entitu** .
 
     ![Tlačítko Přidat entitu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655336.png)
 
@@ -235,7 +235,7 @@ Když se Průzkumník serveru připojí k účtu úložiště nebo získá data,
 ### <a name="to-refresh-table-data"></a>Aktualizace dat tabulky
 
 * V části **úložiště**vyberte uzel **tabulky** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
-* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v Návrháři tabulky, vyberte v Návrháři tabulky tlačítko **Spustit** .
+* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v **Návrháři tabulky**, vyberte v Návrháři tabulky tlačítko **Spustit** .
 
 ### <a name="to-refresh-queue-data"></a>Aktualizace dat fronty
 
@@ -260,9 +260,9 @@ Existují dva způsoby, jak přidat účty úložiště pomocí Průzkumník ser
    * Oblast nebo skupina vztahů (například Západní USA nebo Východní Asie).
    * Typ replikace, kterou chcete použít pro účet úložiště, například místně redundantní.
 
-   ![Vytvoření účtu služby Azure Storage](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
+   ![Vytvoření účtu úložiště Azure](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. Vyberte **vytvořit**.
+1. Vyberte **Vytvořit**.
 
 Nový účet úložiště se zobrazí v seznamu **úložiště** v Průzkumník řešení.
 

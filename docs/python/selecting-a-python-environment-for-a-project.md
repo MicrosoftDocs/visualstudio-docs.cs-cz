@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8bcb349f8ff99d1567bf94b83a96be6b2824c208
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 11808eeabee4d45d1d3d3b1b5cd5d6636249e7cb
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520468"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801201"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Jak vybrat prostředí Pythonu pro projekt
 
@@ -46,7 +46,7 @@ Kontextová nabídka uzlu **prostředí Pythonu** také nabízí další příka
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Chcete-li změnit prostředí pro projekt, klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte možnost **Přidat prostředí**nebo vyberte možnost **Přidat prostředí** z rozevíracího seznamu prostředí na panelu nástrojů Python.
+Chcete-li změnit prostředí pro projekt, klikněte pravým tlačítkem myši na uzel **prostředí Python** a vyberte možnost **Přidat prostředí**. Na panelu nástrojů Python můžete také vybrat **Přidat prostředí** z rozevíracího seznamu prostředí.
 
 Jednou v dialogovém okně **Přidat prostředí** vyberte kartu **existující prostředí** a pak v rozevíracím seznamu **prostředí** vyberte nové prostředí:
 
@@ -86,7 +86,7 @@ Nové virtuální prostředí můžete vytvořit přímo v aplikaci Visual Studi
 
 1. Vyberte prostředí jako základní překladač a vyberte **vytvořit**. Visual Studio zobrazí indikátor průběhu a nakonfiguruje prostředí a stáhne všechny potřebné balíčky. Po dokončení se virtuální prostředí zobrazí v okně **prostředí Pythonu** pro projekt, který ho obsahuje.
 
-1. Virtuální prostředí není ve výchozím nastavení aktivované. Pokud ho chcete pro projekt aktivovat, klikněte na něj pravým tlačítkem a vyberte **aktivovat prostředí**.
+1. Virtuální prostředí není ve výchozím nastavení aktivované. Chcete-li aktivovat virtuální prostředí pro projekt, klikněte na něj pravým tlačítkem myši a vyberte **aktivovat prostředí**.
 
 > [!Note]
 > Pokud cesta k umístění identifikuje existující virtuální prostředí, Visual Studio automaticky detekuje základní interpret (pomocí *orig-prefix.txt* souboru v adresáři *lib* prostředí) a změní tlačítko **vytvořit** na **Přidat**.
@@ -169,9 +169,9 @@ Mějte na paměti, že zobrazené položky nemusí být vždy přesné a instala
 Všimněte si také, že Visual Studio předem neposílá podporu `conda` k instalaci balíčků do prostředí conda. `conda`Místo toho použijte příkaz z příkazového řádku.
 
 > [!Tip]
-> Běžným případem, kdy PIP nedokáže nainstalovat balíček, je, že balíček obsahuje zdrojový kód pro nativní komponenty v souborech * \* . PYD* . Bez nainstalované požadované verze sady Visual Studio nemůže PIP tyto součásti zkompilovat. Chybová zpráva zobrazená v této situaci je **Chyba: nepovedlo se najít vcvarsall.bat**. `easy_install`je často schopný stahovat předkompilované binární soubory a můžete si stáhnout vhodný kompilátor pro starší verze Pythonu [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Další podrobnosti najdete v článku [jak řešit potíže s "nelze nalézt vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na blogu týmu nástrojů Python Tools.
+> Běžným případem, kdy PIP nedokáže nainstalovat balíček, je, že balíček obsahuje zdrojový kód pro nativní komponenty v souborech * \* . PYD* . Bez nainstalované požadované verze sady Visual Studio nemůže PIP tyto součásti zkompilovat. Chybová zpráva zobrazená v této situaci je **Chyba: nepovedlo se najít vcvarsall.bat**. `easy_install` je často schopný stahovat předkompilované binární soubory a můžete si stáhnout vhodný kompilátor pro starší verze Pythonu [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Další podrobnosti najdete v článku [jak řešit potíže s "nelze nalézt vcvarsallbat"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) na blogu týmu nástrojů Python Tools.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Správa prostředí Pythonu v aplikaci Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Použít requirements.txt pro závislosti](managing-required-packages-with-requirements-txt.md)

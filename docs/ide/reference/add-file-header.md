@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 779092e277ac5b6eed3afcaceaf55b26ee2759dd
-ms.sourcegitcommit: 025816f8e388b29e58761d304b0fda755ac5a613
+ms.openlocfilehash: 2c69f73989e898c44bdef6cf008d48f6c918652a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374166"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801318"
 ---
 # <a name="add-file-header"></a>Přidání hlavičky souboru
 
@@ -34,12 +34,12 @@ Tato generace kódu platí pro:
 
 2. Do souboru EditorConfig přidejte následující pravidlo: *file_header_template*.
 
-3. Nastavte hodnotu pravidla tak, aby se rovnala textu záhlaví, který chcete použít.
+3. Nastavte hodnotu pravidla tak, aby se rovnala textu záhlaví, který chcete použít. Můžete použít `{fileName}` jako zástupný symbol pro název souboru.
 
     ![Pravidlo záhlaví souboru EditorConfig](media/add-file-header-rule.png)
 
-> [!NOTE]
-> V EditorConfig nemůžete mít explicitní víceřádkové řádky a k vložení nových řádků bude potřeba použít znak nového řádku UNIX.
+    > [!NOTE]
+    > V EditorConfig nemůžete mít explicitní víceřádkové řádky a k vložení nových řádků bude potřeba použít znak nového řádku UNIX.
 
 4. Umístěte blikající kurzor na první řádek jakéhokoli souboru C# nebo Visual Basic.
 

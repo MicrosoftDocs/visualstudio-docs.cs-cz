@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 985f14446f17d1a4df3cfd14e156f21b7a7ce0de
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.openlocfilehash: c94742b452bfd665dc35c59ef831bca2cdacf1f5
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2020
-ms.locfileid: "87507856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801045"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
@@ -40,7 +40,7 @@ V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/
 
    - Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
 
-2. V seznamech **Konfigurace** a **platforma** vyberte položku konfigurace sestavení a cílová platforma.
+2. V seznamech **Konfigurace** a **platforma** vyberte konfigurace sestavení a cílová platforma.
 
 ::: moniker range="vs-2017"
 
@@ -89,11 +89,11 @@ Ve výchozím nastavení se všechny spravované projekty řešení přiřazují
 
 4. Pro jeden nebo více projektů můžete zadat sadu pravidel:
 
-    - Chcete-li zadat sadu pravidel pro jednotlivé projekty, vyberte název projektu.
+    - Chcete-li zadat sadu pravidel pro jednotlivé projekty, zvolte název projektu.
 
-    - Chcete-li zadat sadu pravidel pro více projektů, podržte stisknutou **klávesu CTRL** a vyberte názvy projektů.
+    - Chcete-li zadat sadu pravidel pro více projektů, vyberte možnost **CTRL** a názvy projektů.
 
-    - Chcete-li zadat všechny projekty v řešení, podržte klávesu **SHIFT** a klikněte v seznamu projektu.
+    - Chcete-li zadat všechny projekty v řešení, vyberte možnost **SHIFT** a seznam projektu.
 
 5. Vyberte pole **sada pravidel** projektu a potom vyberte název sady pravidel, kterou chcete použít.
 

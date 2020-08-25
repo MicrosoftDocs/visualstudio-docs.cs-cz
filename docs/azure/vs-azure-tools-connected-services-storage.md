@@ -9,19 +9,19 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: 4a1b7bcc8b95b30ea3737dc2561c5abb280e2b5c
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88639416"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800512"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Přidání služby Azure Storage pomocí připojených služeb sady Visual Studio
 
 Pomocí sady Visual Studio můžete pomocí funkce **připojené služby** připojit kterýkoli z následujících Azure Storage:
 
 - .NET Framework Konzolová aplikace
-- ASP.NET MVC (.NET Framework) 
+- ASP.NET MVC (.NET Framework)
 - ASP.NET Core
 - .NET Core (včetně konzolové aplikace, WPF, model Windows Forms, knihovny tříd)
 - Role pracovního procesu .NET Core
@@ -34,7 +34,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [připojené služby v Visual Studio pro Mac](/visualstudio/mac/connected-services).
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Visual Studio s nainstalovanou úlohou Azure
 - Projekt jednoho z podporovaných typů
@@ -51,7 +51,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Na stránce **připojené služby** vyberte **cloudové úložiště s Azure Storage**.
 
-    ![Přidat Azure Storage](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
+    ![Přidání služby Azure Storage](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
 
 1. V dialogovém okně **Azure Storage** vyberte existující účet úložiště a vyberte **Přidat**.
 
@@ -86,7 +86,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 1. Na stránce **Přidat závislost** vyberte **Azure Storage**.
 
-    ![Přidat Azure Storage](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
+    ![Přidání služby Azure Storage](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
 
     Pokud ještě nejste přihlášení, přihlaste se k účtu Azure. Pokud účet Azure nemáte, můžete si zaregistrovat [bezplatnou zkušební verzi](https://azure.microsoft.com/account/free).
 

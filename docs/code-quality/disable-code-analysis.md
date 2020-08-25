@@ -8,12 +8,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 163b925423ba5afc62b84866e839c5d86a6444e0
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: d2cac7ad0502d82309aa664b8e8fe6bdd0301815
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371934"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800695"
 ---
 # <a name="how-to-disable-source-code-analysis-for-managed-code"></a>Zakázání analýzy zdrojového kódu pro spravovaný kód
 
@@ -41,13 +41,13 @@ Chcete-li otevřít tuto stránku, klikněte pravým tlačítkem myši na uzel p
 - Chcete-li zakázat živou analýzu zdroje, zrušte volbu možnosti **Spustit při analýze za provozu** .
 
 > [!NOTE]
-> V rámci sady Visual Studio 2019 verze 16,5, pokud upřednostňujete pracovní postup provádění analýzy kódu na vyžádání, můžete vypnout provádění analyzátoru během živé analýzy nebo sestavit a ručně aktivovat analýzu kódu na základě projektu nebo řešení na vyžádání. Informace o ručním spuštění analýzy kódu naleznete v tématu [How to: Run Code Analysis for Managed Code Manual](how-to-run-code-analysis-manually-for-managed-code.md).  
+> V rámci sady Visual Studio 2019 verze 16,5, pokud upřednostňujete pracovní postup provádění analýzy kódu na vyžádání, můžete vypnout provádění analyzátoru během živé analýzy nebo sestavit a ručně aktivovat analýzu kódu na základě projektu nebo řešení na vyžádání. Informace o ručním spuštění analýzy kódu naleznete v tématu [How to: Run Code Analysis for Managed Code Manual](how-to-run-code-analysis-manually-for-managed-code.md).
 
 ## <a name="net-framework-projects"></a>.NET Framework projekty
 
 Chcete-li vypnout analýzu zdrojového kódu pro analyzátory, přidejte do [souboru projektu](../ide/solutions-and-projects-in-visual-studio.md#project-file)jednu nebo více následujících vlastností nástroje MSBuild.
 
-| Vlastnost MSBuild | Description | Výchozí |
+| Vlastnost MSBuild | Popis | Výchozí |
 | - | - | - |
 | `RunAnalyzersDuringBuild` | Určuje, zda jsou analyzátory spouštěny v době sestavení. | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | Určuje, zda analyzátory analyzují kód v době návrhu za provozu. | `true` |
@@ -67,7 +67,7 @@ Příklady:
 
 ## <a name="source-analysis"></a>Zdrojová analýza
 
-Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z seznam chyb, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
+Nemůžete vypnout [analýzu zdrojů](roslyn-analyzers-overview.md) v aplikaci Visual Studio 2017. Pokud chcete vymazat chyby analyzátoru z **Seznam chyb**, můžete potlačit všechna aktuální porušení výběrem možnosti **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy** na řádku nabídek. Další informace najdete v tématu [potlačení porušení](use-roslyn-analyzers.md#suppress-violations).
 
 Počínaje verzí Visual Studio 2019 verze 16,3 můžete vypnout analýzu zdrojového kódu nebo ji spustit na vyžádání. Zvažte upgrade na Visual Studio 2019.
 

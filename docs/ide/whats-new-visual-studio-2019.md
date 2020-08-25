@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 08/05/2020
+ms.date: 08/21/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
-ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
+ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87818583"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801058"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -152,11 +152,11 @@ Další informace najdete v příspěvku na blogu [Visual Studio Live Share pro 
 
 Zavádíme nové rozšíření, které můžete stáhnout pro použití se sadou Visual Studio 2019. S tímto novým rozšířením můžete kontrolovat, spouštět a dokonce ladit žádosti o přijetí změn od týmu bez nutnosti opustit Visual Studio. Podporujeme kód v úložištích GitHub a Azure DevOps.
 
-   ![Snímek obrazovky s novým oknem Start v aplikaci Visual Studio 2019](media/vs-2019/pr-experience.png)
+   ![Snímek obrazovky s novými rozšířeními žádostí o přijetí změn v aplikaci Visual Studio 2019](media/vs-2019/pr-experience.png)
 
 Další informace najdete v příspěvku na blogu o [revizích kódu pomocí rozšíření pro žádosti o získání dat v aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) .
 
-## <a name="debug"></a>Ladit
+## <a name="debug"></a>Ladění
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete s přesným cílem v průběhu ladění vynulovat. <br><br>*Délka videa: 3,54 minut*
 
@@ -208,7 +208,7 @@ Další informace najdete v článku [ladění živých ASP.NET aplikací Azure 
 
 Další informace najdete v tématu [vlastnosti Pinnable: Debug & zobrazit spravované objekty podle svého příspěvku na](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/) blogu.
 
-## <a name="whats-next"></a>Co dál
+## <a name="whats-next"></a>Kam dál
 
 Visual Studio 2019 aktualizujeme často o nové funkce, které můžou zlepšit vývojové prostředí. Další informace o našich nejnovějších inovacích najdete v blogu sady [Visual Studio](https://devblogs.microsoft.com/visualstudio/). Záznam o tom, co jsme vydali v předběžné verzi Preview, najdete v [poznámkách k verzi Preview](/visualstudio/releases/2019/release-notes-preview/). Seznam toho, co plánujeme vydávat dál, najdete v tématu plán sady [Visual Studio](/visualstudio/productinfo/vs-roadmap).
 
@@ -241,9 +241,9 @@ Proč odeslat zpětnou vazbu týmu sady Visual Studio? Vzhledem k tomu, že pove
 * [Zpráva k vydání verze pro Visual Studio 2019](/visualstudio/releases/2019/release-notes/)
 * [Zpráva k vydání verze pro Visual Studio 2019 for Mac](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Co je nového v sadě Visual Studio 2019 SDK](../extensibility/whats-new-visual-studio-2019-sdk.md)
-* [Novinky v jazyce C++ v sadě Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio.md)
-* [Co je nového v jazyce C# 8,0](/dotnet/csharp/whats-new/csharp-8.md)
-* [Co je nového v .NET Core 3.1](/dotnet/core/whats-new/dotnet-core-3-1.md)
-* [Co je nového v .NET Framework](/dotnet/framework/whats-new.md)
+* [Novinky v jazyce C++ v sadě Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio/)
+* [Co je nového v jazyce C# 8,0](/dotnet/csharp/whats-new/csharp-8/)
+* [Co je nového v .NET Core 3.1](/dotnet/core/whats-new/dotnet-core-3-1/)
+* [Co je nového v .NET Framework](/dotnet/framework/whats-new/)
 * [Konference Microsoftu o sestavení](https://www.microsoft.com/build)
 * [Microsoft Ignite conference](https://www.microsoft.com/ignite)

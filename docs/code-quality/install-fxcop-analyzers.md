@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: df9d345e8557f10d764dce6e56c7491d2c026747
-ms.sourcegitcommit: 0d3d157949b539c78bc101a3c3b456bbcb5af7de
+ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88286650"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800967"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Instalace analyzátorů FxCop v aplikaci Visual Studio
 
@@ -28,7 +28,7 @@ Tyto analyzátory FxCop můžete nainstalovat buď jako balíček NuGet, nebo ja
 
 V aplikaci Visual Studio 2019 verze 16,3 a novější můžete balíček NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) nainstalovat přímo ze stránky vlastností analýzy kódu projektu:
 
-1. Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
+1. Klikněte pravým tlačítkem (nebo vyberte a podržte) na uzlu projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak přejděte na kartu **Analýza kódu** .
 
    ![Instalace balíčku FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page.png)
 
@@ -59,7 +59,7 @@ Pokud používáte starší verzi sady Visual Studio 2019, nainstalujte balíče
 
 ### <a name="custom-installation"></a>Vlastní instalace
 
-Pro vlastní instalaci, například chcete-li zadat jinou verzi balíčku, vyberte tlačítko se třemi tečkami (...) na stránce vlastností analýzy kódu projektu. Toto tlačítko otevře správce balíčků NuGet s názvem Microsoft. CodeAnalysis. FxCopAnalyzers jako hledaný řetězec.
+Pro vlastní instalaci, například pokud chcete zadat jinou verzi balíčku, vyberte tlačítko se třemi tečkami (...) na stránce vlastností analýzy kódu projektu. Toto tlačítko otevře správce balíčků NuGet s názvem Microsoft. CodeAnalysis. FxCopAnalyzers jako hledaný řetězec.
 
 ![Instalace vlastních balíčků FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page-ellipsis.png)
 
@@ -153,7 +153,7 @@ Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte **rozšíření
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přehled analyzátorů kódu v aplikaci Visual Studio](../code-quality/roslyn-analyzers-overview.md)
 - [Použití analyzátorů kódu v aplikaci Visual Studio](../code-quality/use-roslyn-analyzers.md)

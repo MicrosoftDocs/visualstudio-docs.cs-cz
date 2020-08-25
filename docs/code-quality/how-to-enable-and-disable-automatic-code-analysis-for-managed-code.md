@@ -5,12 +5,12 @@ ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 532fe62ceee3ab32fc203976af58dd867b97b453
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: eb4422a12620d7650b4fe150313b10fe59835064
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371882"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801019"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Postupy: povolení a zákaz analýzy binárního kódu pro spravovaný kód
 
@@ -21,9 +21,9 @@ Můžete nakonfigurovat starší verzi analýzy kódu (binární analýzu), kter
 
 Povolení nebo zakázání analýzy starších verzí kódu:
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a zvolte možnost **vlastnosti**.
+1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
 
-2. V dialogovém okně Vlastnosti projektu klikněte na kartu **Analýza kódu** .
+2. V dialogovém okně Vlastnosti projektu, přejít na kartu **Analýza kódu** .
 
 3. Zadejte typ sestavení v **konfiguraci** a cílovou platformu na **platformě**. (Jenom projekty Non-.NET Core/. NET Standard)
 

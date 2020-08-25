@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 11f8480a3a48c1fdee514deb51411e2623055f09
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 831e0216bcecff2e9ac6551184ddbfda56a4b525
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85816459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801292"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>Kurz: Začínáme s Návrhář formulářů
 
@@ -111,7 +111,7 @@ Ovládací prvek DemoCalculator obsahuje několik ovládacích prvků model Wind
 
 Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací prvek DemoCalculator tlačítky a zobrazením.
 
-1. V **sadě nástrojů**poklikejte na `TextBox` ikonu ovládacího prvku.
+1. V **panelu nástrojů**vyberte `TextBox` ikonu ovládacího prvku.
 
    `TextBox`Ovládací prvek je umístěn v první buňce `TableLayoutPanel` ovládacího prvku.
 
@@ -129,11 +129,11 @@ Nyní, když je nastaveno rozložení ovládacího prvku, lze naplnit ovládací
 
 6. Vyberte `TableLayoutPanel` ovládací prvek.
 
-7. Na **panelu nástrojů**dvakrát klikněte na `Button` ikonu.
+7. V **panelu nástrojů**vyberte `Button` ikonu.
 
    `Button`Ovládací prvek je umístěn v další otevřené buňce `TableLayoutPanel` ovládacího prvku.
 
-8. V **sadě nástrojů**dvakrát klikněte na `Button` ikonu čtyřikrát k naplnění druhého řádku `TableLayoutPanel` ovládacího prvku.
+8. V **sadě nástrojů**vyberte `Button` ikonu čtyřikrát a naplňte druhý řádek `TableLayoutPanel` ovládacího prvku.
 
 9. Vyberte všechna pět `Button` ovládacích prvků tak, že je vyberete a podržíte klávesu **SHIFT** . Stisknutím **kombinace kláves CTRL** + **C** zkopírujte `Button` ovládací prvky do schránky.
 
@@ -161,7 +161,7 @@ Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, 
 
    Okno Osnova dokumentu zobrazuje stromové zobrazení ovládacího prvku DemoCalculator a jeho ovládacích prvků na jeho prvku. Ovládací prvky kontejneru, jako je `SplitContainer` například zobrazit jejich podřízené ovládací prvky jako poduzly ve stromové struktuře. Můžete také přejmenovat ovládací prvky na místě pomocí okna Osnova dokumentu.
 
-2. V okně **Osnova dokumentu** klepněte pravým tlačítkem myši na tlačítko **Button1**a pak vyberte možnost **Přejmenovat**. Změňte jeho název na sevenButton.
+2. V okně **Osnova dokumentu** klikněte pravým tlačítkem myši na možnost **Button1**a pak vyberte možnost **Přejmenovat**. Změňte jeho název na sevenButton.
 
 3. Pomocí okna **Osnova dokumentu** přejmenujte `Button` ovládací prvky z názvu vygenerovaného návrhářem na název výroby podle následujícího seznamu:
 
@@ -233,7 +233,7 @@ Když se ovládací prvek nebo formulář naplní několika ovládacími prvky, 
 
    - Změňte vlastnost text ovládacího prvku zeroButton na **hodnotu 0** .
 
-   - Změňte vlastnost text ovládacího prvku changeSignButton na**+/-**
+   - Změňte vlastnost text ovládacího prvku changeSignButton na **+/-**
 
    - Změňte vlastnost text ovládacího prvku decimalButton na **.** (tečka)
 
@@ -247,11 +247,11 @@ Tím se dokončí návrh ovládacího prvku DemoCalculator. To vše zůstává k
 
 ## <a name="implement-event-handlers"></a>Implementace obslužných rutin událostí
 
-Tlačítka na ovládacím prvku DemoCalculator mají obslužné rutiny událostí, které lze použít k implementaci mnohem logiky kalkulačky. Návrhář formulářů umožňuje implementovat zástupné procedury všech obslužných rutin událostí pro všechna tlačítka jediným kliknutím.
+Tlačítka na ovládacím prvku DemoCalculator mají obslužné rutiny událostí, které lze použít k implementaci mnohem logiky kalkulačky. Návrhář formulářů umožňuje implementovat zástupné procedury všech obslužných rutin událostí pro všechna tlačítka jediným výběrem.
 
 1. Na návrhové ploše vyberte všechny `Button` ovládací prvky tak, že je vyberete, a přitom podržíte klávesu **SHIFT** .
 
-2. Dvakrát klikněte na jeden z `Button` ovládacích prvků.
+2. Vyberte jeden z `Button` ovládacích prvků.
 
    Editor kódu se otevře v obslužných rutinách událostí generovaných návrhářem.
 
@@ -277,7 +277,7 @@ Prvním krokem je vytvoření projektu aplikace. Pomocí tohoto projektu sestav�
 
 2. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt **DemoCalculatorTest** a pak vyberte **Přidat odkaz** . tím otevřete dialogové okno **Přidat odkaz** .
 
-3. Vyberte kartu **projekty** a potom poklikejte na projekt DemoCalculatorLib, abyste přidali odkaz na projekt testů.
+3. Pokud chcete přidat odkaz na testovací projekt, klikněte na kartu **projekty** a potom vyberte projekt DemoCalculatorLib.
 
 4. V **Průzkumník řešení**klikněte pravým tlačítkem na **DemoCalculatorTest**a pak vyberte **nastavit jako spouštěný projekt**.
 
@@ -297,7 +297,7 @@ Chcete-li použít ovládací prvek DemoCalculator v aplikaci, je nutné jej um�
 
 4. Přesuňte `Button` ovládací prvek kolem ovládacího prvku DemoCalculator a sledujte, kde se zobrazuje zarovnávacím čárám. Pomocí této funkce můžete zarovnat ovládací prvky přesně a snadno. `Button`Po dokončení tento ovládací prvek odstraňte.
 
-5. Pravým tlačítkem myši vyberte ovládací prvek DemoCalculator a pak vyberte **vlastnosti**.
+5. Klikněte pravým tlačítkem myši na ovládací prvek DemoCalculator a pak vyberte **vlastnosti**.
 
 6. Změňte hodnotu `Dock` vlastnosti na `Fill` .
 
@@ -311,7 +311,7 @@ Chcete-li použít ovládací prvek DemoCalculator v aplikaci, je nutné jej um�
 
 Tento článek ukazuje, jak vytvořit uživatelské rozhraní pro jednoduchou kalkulačku. Chcete-li pokračovat, můžete svou funkčnost nasadit pomocí logiky kalkulačky a pak [aplikaci publikovat pomocí technologie ClickOnce](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md). Nebo můžete pokračovat v jiném kurzu, kde [vytvoříte prohlížeč obrázků pomocí model Windows Forms](../ide/tutorial-1-create-a-picture-viewer.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/)
 - [Usnadnění pro model Windows Forms ovládací prvky](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)

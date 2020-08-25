@@ -10,18 +10,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 026953ff52f4aa5c34dd4656432fed8ef2a48580
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85535145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801578"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Použití rozšíření Cookiecutter
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) poskytuje grafické uživatelské rozhraní pro zjišťování šablon, možností vstupní šablony a vytváření projektů a souborů. Je součástí sady Visual Studio 2017 nebo novější a lze ji nainstalovat samostatně v dřívějších verzích sady Visual Studio.
 
-Cookiecutter vyžaduje Python 3,3 nebo novější (32 nebo 64-bit) nebo Anaconda 3 4,2 nebo novější (32 nebo 64). Pokud není k dispozici vhodný překladač Pythonu, sada Visual Studio zobrazí upozornění. Pokud při spuštění sady Visual Studio nainstalujete interpret Pythonu, klikněte na tlačítko **Domů** na panelu nástrojů Cookiecutter a zjistěte nově instalovaný Interpret. (Obecné informace o prostředích najdete v tématu [prostředí Pythonu](managing-python-environments-in-visual-studio.md) .)
+Cookiecutter vyžaduje Python 3,3 nebo novější (32 nebo 64-bit) nebo Anaconda 3 4,2 nebo novější (32 nebo 64). Pokud není k dispozici vhodný překladač Pythonu, sada Visual Studio zobrazí upozornění. Pokud při spuštění sady Visual Studio nainstalujete interpret Pythonu, vyberte na panelu nástrojů Cookiecutter tlačítko **Domů** a zjistěte nově instalovaný Interpret. (Obecné informace o prostředích najdete v tématu [prostředí Pythonu](managing-python-environments-in-visual-studio.md) .)
 
 Po instalaci vyberte **Zobrazit**  >  **Průzkumníka Cookiecutter** a otevřete jeho okno:
 
@@ -38,9 +38,9 @@ Na domovské stránce Cookiecutter se zobrazuje seznam šablon, ze kterých mů�
 | Skupina | Popis |
 | --- | --- |
 | **Nainstalovaný** | Šablony, které byly nainstalovány do místního počítače. Při použití šablony online se její úložiště automaticky naklonuje na podsložku *~/.cookiecutters*. Vybranou nainstalovanou šablonu můžete odstranit stisknutím klávesy **Delete**. |
-| **Doporučil** | Šablony načtené z doporučeného informačního kanálu Výchozí kanál je založen na společnosti Microsoft. Podrobnosti o přizpůsobení informačního kanálu najdete v části [Možnosti Cookiecutter](#cookiecutter-options) níže. |
-| **GitHubu** | Výsledky hledání na GitHubu pro klíčové slovo cookiecutter Pokud jsou k dispozici další výsledky, zobrazí se výsledky z GitHubu, pokud je k dispozici více výsledků, **zatížení** se zobrazí na konci seznamu. |
-| **Uživatelská** | Když do vyhledávacího pole zadáte vlastní umístění, zobrazí se v této skupině. Můžete buď zadat úplnou cestu k úložišti GitHub, nebo úplnou cestu ke složce na místním disku. |
+| **Doporučeno** | Šablony načtené z doporučeného informačního kanálu Výchozí kanál je založen na společnosti Microsoft. Podrobnosti o přizpůsobení informačního kanálu najdete v části [Možnosti Cookiecutter](#cookiecutter-options) níže. |
+| **GitHub** | Výsledky hledání na GitHubu pro klíčové slovo cookiecutter Pokud jsou k dispozici další výsledky, zobrazí se výsledky z GitHubu, pokud je k dispozici více výsledků, **zatížení** se zobrazí na konci seznamu. |
+| **Vlastní** | Když do vyhledávacího pole zadáte vlastní umístění, zobrazí se v této skupině. Můžete buď zadat úplnou cestu k úložišti GitHub, nebo úplnou cestu ke složce na místním disku. |
 
 ### <a name="cloning"></a>Klonování
 
@@ -99,7 +99,7 @@ Toto vykreslování je možné vylepšit zadáním dalších metadat v *cookiecu
 | --- | --- |
 | Popisek | Určuje, co se zobrazí nad editorem proměnné namísto názvu proměnné. |
 | Popis | Určuje popisek, který se zobrazí v ovládacím prvku pro úpravy namísto výchozí hodnoty pro tuto proměnnou. |
-| URL | Změní popisek na hypertextový odkaz s popisem, který zobrazuje adresu URL. Kliknutím na hypertextový odkaz se otevře výchozí prohlížeč uživatele v této adrese URL. |
+| URL | Změní popisek na hypertextový odkaz s popisem, který zobrazuje adresu URL. Výběrem hypertextového odkazu se otevře výchozí prohlížeč uživatele v této adrese URL. |
 | Volič | Umožňuje přizpůsobit editor pro proměnnou. V současné době jsou podporovány následující selektory:<ul><li>`string`: Standardní textové pole, výchozí pro řetězce.</li><li>`list`: Standardní pole se seznamem, výchozí pro seznamy.</li><li>`yesno`: Pole se seznamem pro výběr mezi `y` a `n` , pro řetězce.</li><li>`odbcConnection`: Textové pole s tlačítkem **...** , které vyvolá dialog připojení databáze.</li></ul> |
 
 Příklad:
@@ -170,7 +170,7 @@ Pokud nepotřebujete předávat argument, ponechte ho prázdný řetězec nebo h
 ]
 ```
 
-Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeho hodnotu na samostatné argumenty a používejte správné quoty. Příklad:
+Použijte pole pro více argumentů. U přepínačů rozdělte přepínač a jeho hodnotu na samostatné argumenty a používejte správné quoty. Například:
 
 ```json
 "_visual_studio_post_cmds": [

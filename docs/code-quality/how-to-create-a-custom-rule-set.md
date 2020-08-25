@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81462db07941c73b847c009ef8353b00d28fff4f
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 643ee48f798c90851d5ff323685070f9d7268f04
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371908"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801032"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -26,9 +26,9 @@ Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb pr
 
 Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash; , můžete například zobrazit upozornění nebo chybu.
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
 
-2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
+2. Na stránkách **vlastnosti** přejdete na kartu **Analýza kódu** .
 
 ::: moniker range="vs-2017"
 
@@ -44,7 +44,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \-ani
+     \- ani
 
    - Tuto možnost vyberte **\<Browse>** , pokud chcete zadat existující sadu pravidel, která není v seznamu.
 
@@ -57,11 +57,11 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
 V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo stiskněte klávesu **CTRL** + **N**.
+1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo vyberte **CTRL** + **N**.
 
 2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
-3. Vyberte **Open** (Otevřít).
+3. Vyberte **Otevřít**.
 
    Nový soubor *. ruleset* se otevře v editoru sad pravidel.
 
@@ -70,9 +70,9 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 > [!NOTE]
 > Následující postup neplatí pro projekty .NET Core, které nemají kartu vlastnost **analýzy kódu** .
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
 
-2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
+2. Na stránkách **vlastnosti** přejdete na kartu **Analýza kódu** .
 
 ::: moniker range="vs-2017"
 

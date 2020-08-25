@@ -1,6 +1,6 @@
 ---
-title: Použití tmavého motivu a změna barvy textu v editoru
-description: Naučte se, jak nastavit výchozí barevný motiv sady Visual Studio na tmavý režim a změnit barvy písma v textovém editoru.
+title: Nastavení tmavého motivu sady Visual Studio a změna barev textu
+description: Naučte se, jak změnit výchozí barevný motiv sady Visual Studio na tmavý režim a změnit barvy písma v editoru kódu.
 ms.date: 08/20/2020
 ms.topic: how-to
 ms.custom: contperfq1
@@ -9,16 +9,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b0e7b11fae63b9a2233b7391805760d3fdd7d27
-ms.sourcegitcommit: cf5b5437f0b43c6d52c479e1a2c443338bd27cda
+ms.openlocfilehash: d58bf3a00d3db208abfad23a67bd115914f14a15
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88724923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801396"
 ---
-# <a name="how-to-personalize-the-visual-studio-ide-and-text-editor"></a>Postupy: přizpůsobení rozhraní IDE a textového editoru sady Visual Studio
+# <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>Postupy: Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio a editoru
 
-V tomto článku s postupem se přizpůsobí barevný motiv sady Visual Studio výběrem tmavého motivu. Také přizpůsobíme barvy pro dva různé typy textu v textovém editoru.
+V tomto článku s postupem budeme přizpůsobovat barevný motiv sady Visual Studio z výchozího modrého motivu na tmavý motiv. Pak přizpůsobíme barvy pro dva různé typy textu v editoru kódu.
 
 ::: moniker range="vs-2017"
 
@@ -126,10 +126,10 @@ Teď přizpůsobíme některé barvy textu pro Editor. Nejprve vytvoříme nový
 
    ![Soubor XML s novými barvami písma](media/quickstart-personalize-xml-file-new-colors.png)
 
-Prozkoumali jsme pouze několik způsobů přizpůsobení barev v aplikaci Visual Studio. Doufáme, že prozkoumáte další možnosti vlastního nastavení v dialogovém okně **Možnosti** , abyste mohli aplikaci Visual Studio skutečně dělat sami.
+Prozkoumali jsme pouze několik způsobů přizpůsobení barev v aplikaci Visual Studio. Doufáme, že prozkoumáte další možnosti vlastního nastavení v dialogovém okně [**Možnosti**](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) , abyste mohli aplikaci Visual Studio skutečně dělat sami.
 
 ## <a name="see-also"></a>Viz také
 
-- [Změna písem, barev a možností vysokého kontrastu v aplikaci Visual Studio](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
-- [Přizpůsobení editoru](../ide/how-to-change-text-case-in-the-editor.md)
-- [Integrované vývojové prostředí sady Visual Studio – přehled](../get-started/visual-studio-ide.md)
+- [Postupy: Změna písma, barev a motivů v aplikaci Visual Studio](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Postupy: Změna velikosti písmen textu v editoru](../ide/how-to-change-text-case-in-the-editor.md)
+- [Přehled integrovaného vývojového prostředí sady Visual Studio](../get-started/visual-studio-ide.md)

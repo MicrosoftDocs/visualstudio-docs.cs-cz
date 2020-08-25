@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 461b99261eb88d5267b062cb5d471f1b6ed4ee60
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800304"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Publikování webové aplikace do služby Azure App Service pomocí sady Visual Studio
 
@@ -31,7 +31,7 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
 ## <a name="publish-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky**publikovat** sestavení).
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu a vyberte **publikovat** (nebo použijte **Build**  >  položku nabídky**publikovat** sestavení).
 
     ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
@@ -51,7 +51,7 @@ Tento článek popisuje, jak používat nástroj pro **publikování** pro nasaz
 
     ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
 
-1. V dialogovém okně **publikovat** se nově vytvořená instance automaticky vybrala. Až budete připraveni, klikněte na **Dokončit**.
+1. V dialogovém okně **publikovat** se nově vytvořená instance automaticky vybrala. Až budete připraveni, vyberte **Dokončit**.
 
     ![Zvolit Azure App Service](../deployment/media/quickstart-publish-windows-select-instance.png)
 

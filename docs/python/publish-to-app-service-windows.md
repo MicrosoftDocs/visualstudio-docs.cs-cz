@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 649d40a3b95f9e3d4df51cc4ab22a3fb79ac1498
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 9a3aee5dc1c2d1272c3814fa6cfb2561f6cb4564
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85531843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801305"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Publikování do Azure App Service ve Windows
 
@@ -34,7 +34,7 @@ Proces publikování se mezi Visual Studio 2017 a novějším a Visual Studio 20
 
 Pro tento návod potřebujete projekt webové aplikace založený na láhvi, baňce nebo Djangoch architekturách. Pokud projekt ještě nemáte a chcete vyzkoušet proces publikování, vytvořte jednoduchý testovací projekt následujícím způsobem:
 
-1. V aplikaci Visual Studio vyberte **soubor > nový > projekt**, vyhledejte "láhev", vyberte **webový projekt láhve**, zadejte název a název a cestu k projektu a klikněte na tlačítko **OK**. (Šablona láhve je součástí úlohy vývoje v Pythonu; viz [instalace](installing-python-support-in-visual-studio.md).)
+1. V aplikaci Visual Studio vyberte **soubor > nový > projekt**, vyhledejte "láhev", vyberte **webový projekt láhve**, zadejte název a název a cestu k projektu, vyberte **OK**. (Šablona láhve je součástí úlohy vývoje v Pythonu; viz [instalace](installing-python-support-in-visual-studio.md).)
 
 1. Podle zobrazených výzev nainstalujte externí balíčky, vyberte možnost **nainstalovat do virtuálního prostředí** a preferovaný základní překladač pro virtuální prostředí. Obvykle se tato volba shoduje s verzí Pythonu nainstalovanou na App Service.
 
@@ -185,7 +185,7 @@ Publikování do Azure App Service ze sady Visual Studio 2017 a novější zkop�
 > [!Note]
 > Krátké video o tomto procesu najdete v [kurzu Pythonu pro Visual Studio: vytváření webů](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6) (YouTube.com, 3m10s).
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a vyberte **publikovat**.
+1. V **Průzkumníku řešení** klikněte pravým tlačítkem na požadovaný projekt a vyberte **Publikovat**.
 
 1. V dialogovém okně **publikovat** vyberte **Microsoft Azure App Service**:
 

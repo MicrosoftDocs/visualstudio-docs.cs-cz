@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f46dc6a1871b6d44c37c1931bf65f1b4a11c9ae
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 46744decddcc2d50fd05ea86cc6ebfad9d210031
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800499"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
 
@@ -96,15 +96,15 @@ Následující kód XML je základní šablona fragmentu:
 
    ::: moniker range="vs-2017"
 
-   *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual C# \My – fragmenty kódu* 
-    *%UserProfile%\Documents\Visual Studio 2017 \ Code Snippets\Visual Basic\My – fragmenty kódu*
+   *%USERPROFILE%\Documents\Visual Studio 2017 \ Code Snippets\Visual C# \My – fragmenty kódu*  
+   *%USERPROFILE%\Documents\Visual Studio 2017 \ Code Snippets\Visual Basic\My – fragmenty kódu*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual C# \My – fragmenty kódu* 
-    *%UserProfile%\Documents\Visual Studio 2019 \ Code Snippets\Visual Basic\My fragmenty kódu*
+   *%USERPROFILE%\Documents\Visual Studio 2019 \ Code Snippets\Visual C# \My – fragmenty kódu*  
+   *%USERPROFILE%\Documents\Visual Studio 2019 \ Code Snippets\Visual Basic\My fragmenty kódu*
 
    ::: moniker-end
 
@@ -228,6 +228,6 @@ Následující kód XML ukazuje fragment kódu, který používá metodu `File.E
 </CodeSnippets>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční informace ke schématu fragmentů kódu](../ide/code-snippets-schema-reference.md)

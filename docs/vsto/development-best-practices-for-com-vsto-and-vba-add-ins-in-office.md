@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 716345cd2df3e941ea3d50cfc1519dc86dcd7077
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: d5dd8864484e2b41a1146f1da495251663afdb6a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918629"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801500"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office
   Pokud vyvíjíte doplňky modelu COM, VSTO nebo VBA pro Office, postupujte podle osvědčených postupů pro vývoj popsaných v tomto článku.   To vám pomůže zajistit:
@@ -57,7 +57,7 @@ Pokud se řešení skládá z doplňku a procesu, který je externí pro sadu Of
 Nastavte číslo verze binárních souborů ve vašem řešení a zvyšte je pomocí každé aktualizace. To uživatelům usnadňuje identifikaci změn mezi verzemi a posouzení kompatibility.
 
 ## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>Poskytněte příkazy podpory pro nejnovější verze Office.
-Zákazníci žádají nezávislé výrobce softwaru, aby poskytovali příkazy podpory pro Doplňky modelu COM, VSTO a VBA, které běží v Office. Seznamte se s vašimi explicitními příkazy podpory, pomocí kterých si zákazníci můžou vyrozumět vaší podpoře prostřednictvím nástrojů připravenosti pro Office 365.
+Zákazníci žádají nezávislé výrobce softwaru, aby poskytovali příkazy podpory pro Doplňky modelu COM, VSTO a VBA, které běží v Office. Výpisy explicitních příkazů podpory pomáhají zákazníkům, kteří využívají Microsoft 365 aplikací pro nástroje Readiness Enterprise, pochopit vaši podporu.
 
 Chcete-li poskytnout příkazy podpory pro klientské aplikace Office (například Word nebo Excel), nejprve ověřte, zda se doplňky spouštějí v aktuální verzi sady Office, a pak potvrďte poskytnutí aktualizací, pokud je doplněk v budoucí verzi. Nemusíte testovat doplňky, když společnost Microsoft uvolňuje nové sestavení nebo aktualizuje sadu Office. Microsoft zřídka mění platformu rozšiřitelnosti COM, VSTO a VBA v Office a tyto změny budou dobře zdokumentovány.
 

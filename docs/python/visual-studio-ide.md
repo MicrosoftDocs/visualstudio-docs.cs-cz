@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b97655efac3fc42f5e5790e32c97de169e61a6b5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 943c0567e3726d014f7dae01915916864e09ed9b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520585"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801643"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Vítejte v integrovaném vývojovém prostředí sady Visual Studio | Python
 
@@ -95,8 +95,8 @@ Některé z oblíbených funkcí v aplikaci Visual Studio, které vám pomůžou
 ::: moniker-end
 
 - [Spolupráce v sadě Visual Studio](/visualstudio/liveshare/)
-  
-    Visual Studio Live Share umožňuje spolupracovat s ostatními uživateli v reálném čase, a to bez ohledu na to, jaký programovací jazyk používáte, nebo typy aplikací, které vytváříte. 
+
+    Visual Studio Live Share umožňuje spolupracovat s ostatními uživateli v reálném čase, a to bez ohledu na to, jaký programovací jazyk používáte, nebo typy aplikací, které vytváříte.
 
 - [Interaktivní REPL Pythonu](python-interactive-repl-in-visual-studio.md)
 
@@ -144,7 +144,7 @@ Prozkoumejte Python v aplikaci Visual Studio dále pomocí jednoho z následují
 > [!div class="nextstepaction"]
 > [Začínáme s webovým rozhraním v baňce v aplikaci Visual Studio](learn-flask-visual-studio-step-01-project-solution.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - Objevte [Další funkce sady Visual Studio](../ide/advanced-feature-overview.md)
 - Navštívit [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)

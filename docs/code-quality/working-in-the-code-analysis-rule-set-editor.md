@@ -1,5 +1,5 @@
 ---
-title: Použití editoru sad pravidel pro analýzu kódu
+title: Použití editoru sad pravidel analýzy kódu
 ms.date: 04/04/2018
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea828cd0cba0bdab60a1f7cf4f74dbf20bd01d2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 796818d376df477df84f845b5b0a17ace60bd1f2
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587131"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801539"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
 
@@ -27,8 +27,8 @@ V následující tabulce jsou uvedeny možnosti závažnosti:
 |-|-|
 |Upozornění|Vygeneruje upozornění v **Seznam chyb** a také v čase sestavení.|
 |Chyba|Vygeneruje chybu v **Seznam chyb** a také v čase sestavení.|
-|Informace o|Vygeneruje zprávu v **Seznam chyb**.|
-|Hidden|Toto porušení není pro uživatele viditelné. Integrované vývojové prostředí (IDE) je však oznámeno porušení.|
+|Informace|Vygeneruje zprávu v **Seznam chyb**.|
+|Skrytý|Toto porušení není pro uživatele viditelné. Integrované vývojové prostředí (IDE) je však oznámeno porušení.|
 |Žádné|Pravidlo je potlačeno. Chování je stejné jako při odebrání pravidla ze sady pravidel.|
 
 Editor zobrazuje pravidla ve stromové struktuře, která seskupují pravidla podle zadaného pole sady pravidel. Chcete-li přidat nebo odebrat pravidla ze sady pravidel, proveďte jeden nebo více následujících kroků:
@@ -38,9 +38,9 @@ Editor zobrazuje pravidla ve stromové struktuře, která seskupují pravidla po
    > [!TIP]
    > Způsob seskupení pravidel můžete změnit v rozevíracím seznamu **Seskupit podle** .
 
-- Klikněte na pole **Akce** skupiny a pak zadejte akci, která se má použít pro všechna pravidla ve skupině.
+- V poli **Akce** skupiny zadejte akci, která se má použít pro všechna pravidla ve skupině.
 
-- Zaškrtněte nebo zrušte zaškrtnutí políčka pro jednotlivá pravidla. Když zaškrtnete políčko pro pravidlo, pravidlo je nastaveno na akci upozornění.
+- Zaškrtněte nebo zrušte zaškrtnutí políčka pro jednotlivá pravidla. Když zaškrtnete políčko pro pravidlo, pravidlo je nastaveno na akci **Upozornění** .
 
 ## <a name="toolbar"></a>Panel nástrojů
 
@@ -52,7 +52,7 @@ Následující tabulka popisuje ovládací prvky na panelu nástrojů editoru sa
 |---------------------|-----------------|
 |**Rozbalit vše**|Zobrazuje pravidla ve všech skupinách.|
 |**Sbalit vše**|Skryje pravidla ve všech skupinách.|
-|**Seskupit podle**|Určuje pole, podle kterého se pravidla seskupují. Kliknutím na **\<None >** zobrazíte pravidla bez skupin.|
+|**Seskupit podle**|Určuje pole, podle kterého se pravidla seskupují. Kliknutím **\<None>** zobrazíte pravidla bez skupin.|
 |**Možnosti sloupců**|Určuje pole pravidla, která se mají zobrazit.|
 |**Skrýt pravidla, která se nevztahují na aktuální řešení**|Zobrazí nebo skryje pravidla, která nejsou stejného cílového typu jako řešení.|
 |**Zobrazit pravidla, která mohou generovat chyby analýzy kódu**|Zobrazí nebo skryje pravidla, kterým je přiřazena akce chyby.|
@@ -69,10 +69,10 @@ V následující tabulce jsou popsána pole sady pravidel:
 
 |Pole|Popis|
 |-----------|-----------------|
-|**ID**|Identifikátor pravidla|
+|**ÚČET**|Identifikátor pravidla|
 |**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md).|
-|**Jméno**|Název pravidla|
-|**Namespace**|Obor názvů pravidla|
+|**Název**|Název pravidla|
+|**Obor názvů**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
 |**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|
 |**Zdrojové sady pravidel**|Sada pravidel, která obsahuje pravidlo|
@@ -81,10 +81,10 @@ V následující tabulce jsou popsána pole sady pravidel:
 
 Z záhlaví sloupců mřížky sady pravidel můžete seřadit a filtrovat pravidla podle hodnot pole.
 
-- Pokud chcete seznam sad pravidel seřadit, klikněte na záhlaví sloupce pole, podle kterého chcete řadit. Pokud jsou sady pravidel seskupené, jednotlivé skupiny se jednotlivě seřadí.
+- Pokud chcete seznam sad pravidel seřadit, vyberte záhlaví sloupce pole, podle kterého chcete řadit. Pokud jsou sady pravidel seskupené, jednotlivé skupiny se jednotlivě seřadí.
 
-- Chcete-li filtrovat sady pravidel podle hodnoty pole, klikněte na tlačítko Filtr v záhlaví sloupce pole, podle kterého chcete filtrovat. Zaškrtněte políčka u hodnot, které chcete zobrazit, a zrušte zaškrtnutí políček u hodnot, které chcete skrýt.
+- Chcete-li filtrovat sady pravidel podle hodnoty pole, vyberte tlačítko Filtr v záhlaví sloupce pole, podle kterého chcete filtrovat. Zaškrtněte políčka u hodnot, které chcete zobrazit, a zrušte zaškrtnutí políček u hodnot, které chcete skrýt.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vytvoření vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md)

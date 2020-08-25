@@ -1,22 +1,22 @@
 ---
-title: Kurz – vytvoření aplikace s více kontejnery pomocí Docker Compose
+title: Aplikace s více kontejnery s Docker Compose
 description: Naučte se spravovat více než jeden kontejner a komunikovat mezi nimi v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: b15ba0200520d8a04abc30b606b5b10215e3c22e
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: 4dd8695ccf8f1fcf13b9b52387d28c68f8812aec
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425420"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800720"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Vytvoření vícekontejnerové aplikace pomocí nástroje Docker Compose
 
 V tomto kurzu se naučíte spravovat více než jeden kontejner a mezi nimi komunikovat při použití Docker Compose v Visual Studio pro Mac.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Visual Studio pro Mac 2019](https://visualstudio.microsoft.com/vs/mac)

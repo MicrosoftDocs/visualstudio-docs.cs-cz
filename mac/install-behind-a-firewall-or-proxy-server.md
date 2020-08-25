@@ -1,16 +1,17 @@
 ---
-title: Instalace a použití Visual Studio pro Mac za bránou firewall nebo proxy server
+title: Instalace a použití Visual Studio pro Mac s bránou firewall nebo proxy server
+titleSuffix: ''
 description: Tento dokument obsahuje seznam hostitelů, které musí být v bráně firewall povolené, aby bylo možné Visual Studio pro Mac (a jeho zatížení, včetně Xamarin) pro práci v podnikovém prostředí.
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
-ms.openlocfilehash: 817fce7958ce2b3e4bc3684e639197da8f69e40d
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 25a4597c8d523b63e7ceb0cf8b5eff71af58071a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938990"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800408"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Instalace a použití Visual Studio pro Mac za bránou firewall nebo proxy server
 
@@ -26,7 +27,7 @@ Vzhledem k tomu, že instalační program Visual Studio pro Mac stahuje z různ�
 
 ### <a name="microsoft-domains"></a>Domény Microsoft
 
-| Domain (Doména)| Účel |
+| Doména| Účel |
 | ----------------------------------- |---------------------------|
 | *.live.com| Správa přihlašovacích údajů |
 | app.vssps.visualstudio.com| Metadata instalačního programu|
@@ -43,7 +44,7 @@ Vzhledem k tomu, že instalační program Visual Studio pro Mac stahuje z různ�
 
 ### <a name="third-party-domains"></a>Domény třetích stran
 
-| Domain (Doména)| Účel |
+| Doména| Účel |
 | --------------------------|-------------------------|
 | dl.google.com | Android SDK |
 | download.oracle.com | Java SDK|
@@ -55,7 +56,7 @@ Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v
 
 ### <a name="general"></a>Obecné
 
-| Domain (Doména) | Port(y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | go.microsoft.com | 80/443|Překlad adresy URL Microsoftu |
 | vsstartpage.blob.core.windows.net| 80/443| Data počáteční stránky|
@@ -66,7 +67,7 @@ Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v
 
 ### <a name="identity"></a>Identita
 
-| Domain (Doména) | Port(y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | login.microsoftonline.com | 80/443| Zprostředkovatel identity|
 | secure.aadcdn.microsoftonline-p.com | 80/443|Zprostředkovatel identity|
@@ -75,14 +76,14 @@ Abyste se ujistili, že máte přístup ke všem funkcím, které potřebujete v
 
 ### <a name="nuget"></a>NuGet
 
-| Domain (Doména) | Port(y)|Účel|
+| Doména | Port(y)|Účel|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
 | secure.aadcdn.microsoftonline-p.com |80/443| Zprostředkovatel identity|
 
 ### <a name="android-projects"></a>Projekty pro Android
 
-| Domain (Doména)| Účel|
+| Doména| Účel|
 | ------------------------------------|------------------------------------|
 | time.android.com| Časový server pro Android Emulator |
 | connectivitycheck.gstatic.com | Připojení pro Android Emulator|

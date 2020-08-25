@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 5a69fb83f28f4446a91e4125e75706400401ea1f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 175aa7111d77e92fb29a3983db7365e068abba2f
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800382"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Správa prostředků přidružených k účtům Azure v Průzkumníkovi cloudu sady Visual Studio
 
@@ -28,13 +28,13 @@ Podobně jako u [Azure Portal](https://portal.azure.com)je Cloud Explorer postav
 * Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) nebo [aktivovat výhody pro předplatitele sady Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Chcete-li zobrazit Průzkumníka cloudu, stiskněte klávesu **Ctrl**+**Q** pro aktivaci vyhledávacího pole a pak zadejte **Průzkumníka cloudu**.
+> Chcete-li zobrazit Průzkumníka cloudu, stiskněte klávesu **CTRL** + **Q** pro aktivaci vyhledávacího pole a poté zadejte **Průzkumníka cloudu**.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Přidat účet Azure do Průzkumníka cloudu
 
 Pokud chcete zobrazit prostředky přidružené k účtu Azure, musíte nejdřív přidat účet do **Průzkumníka cloudu**.
 
-1. V **Průzkumníku cloudu**klikněte na tlačítko **Správa účtů** .
+1. V **Průzkumníku cloudu**vyberte tlačítko **Správa účtů** .
 
    ![Ikona nastavení účtu Azure v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
@@ -48,7 +48,7 @@ Pokud chcete zobrazit prostředky přidružené k účtu Azure, musíte nejdří
 
    ![Průzkumník cloudu: vyberte předplatná Azure, která chcete zobrazit.](./media/vs-azure-tools-resources-managing-with-cloud-explorer/select-subscriptions.png)
 
-1. Po výběru předplatných, jejichž prostředky chcete procházet, se tyto odběry a prostředky zobrazí v Průzkumníku cloudu.
+1. Po výběru předplatných, jejichž prostředky chcete procházet, se tyto odběry a prostředky zobrazí v **Průzkumníku cloudu**.
 
    ![Seznam prostředků v Průzkumníkovi cloudu pro účet Azure](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-listed.png)
 
@@ -101,7 +101,7 @@ V závislosti na prostředku Azure se můžou objevit i další akce a hodnoty v
 
 ## <a name="find-resources-in-cloud-explorer"></a>Najít prostředky v Průzkumníkovi cloudu
 
-Pokud chcete v předplatných účtu Azure vyhledat prostředky s určitým názvem, zadejte název do **vyhledávacího** pole v Průzkumníku cloudu.
+Pokud chcete v předplatných účtu Azure vyhledat prostředky s určitým názvem, zadejte název do **vyhledávacího** pole v **Průzkumníku cloudu**.
 
   ![Hledání prostředků v Průzkumníkovi cloudu](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 

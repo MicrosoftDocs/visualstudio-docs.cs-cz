@@ -1,5 +1,6 @@
 ---
 title: Vytvoření ovládacího prvku panelu nástrojů model Windows Forms | Microsoft Docs
+description: Tento návod ukazuje, jak použít šablonu ovládacího prvku panelu nástrojů model Windows Forms k vytvoření jednoduchého ovládacího prvku čítače pomocí sady Visual Studio SDK.
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb0f0e66d623f53c641126f1e07edaa476d831ae
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: b8dd62c01bad3ac50a57062729fe96588a7ef5be
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248600"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801864"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Vytvoření ovládacího prvku panelu nástrojů model Windows Forms
 
@@ -35,7 +36,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 1. Vytvořte projekt VSIX s názvem `MyWinFormsControl` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** , a to tak, že vyhledáte "VSIX".
 
-2. Po otevření projektu přidejte šablonu položky **ovládacího prvku panelu nástrojů model Windows Forms** s názvem `Counter` . V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na uzel projektu a vyberte **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >  **Extensibility** a vybrat **model Windows Forms ovládací prvek panelu nástrojů**
+2. Po otevření projektu přidejte šablonu položky **ovládacího prvku panelu nástrojů model Windows Forms** s názvem `Counter` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte možnost **Přidat**  >  **novou položku**. V dialogovém okně **Přidat novou položku** přejít na rozšiřitelnost **Visual C#**  >  **Extensibility** a vybrat **model Windows Forms ovládací prvek panelu nástrojů**
 
 3. Tím přidáte uživatelský ovládací prvek, který `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> umístí ovládací prvek do **panelu nástrojů**, a položku **Microsoft. VisualStudio. ToolboxControl** Asset v manifestu VSIX pro nasazení.
 
@@ -45,7 +46,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 #### <a name="to-build-the-user-interface"></a>Sestavení uživatelského rozhraní
 
-1. V **Průzkumník řešení**dvakrát klepněte nebo dvakrát klikněte na *Counter.cs* a otevřete ho v návrháři.
+1. V **Průzkumník řešení**poklikejte na *Counter.cs* a otevře se v návrháři.
 
 2. Odeberte **kliknutím sem.** tlačítko, které je součástí výchozího nastavení, když přidáte šablonu ovládacího prvku model Windows Forms panelu nástrojů.
 
@@ -67,7 +68,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 #### <a name="to-code-the-user-control"></a>Pro kód uživatelského ovládacího prvku
 
-1. Poklepáním nebo dvojitým kliknutím na formulář otevřete jeho obslužnou rutinu události načtení v okně Code (kód).
+1. Dvojím kliknutím na formulář otevřete jeho obslužnou rutinu události načtení v okně Code (kód).
 
 2. Nad metodou obslužné rutiny události, ve třídě ovládacího prvku, vytvořte celé číslo pro uložení hodnoty čítače a řetězec pro uložení zobrazovaného textu, jak je znázorněno v následujícím příkladu.
 
@@ -130,7 +131,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
     Volající mohou přidat do této události obslužné rutiny, aby reagovaly na změny v hodnotě čítače.
 
-7. Vraťte se do návrhového zobrazení a poklikáním nebo dvojím kliknutím na tlačítko **obnovit** vygenerujte `btnReset_Click` obslužnou rutinu události. Pak ho vyplňte tak, jak je znázorněno v následujícím příkladu.
+7. Vraťte se do návrhového zobrazení a dvakrát klikněte na tlačítko **obnovit** pro vygenerování `btnReset_Click` obslužné rutiny události. Pak ho vyplňte tak, jak je znázorněno v následujícím příkladu.
 
     ```csharp
     private void btnReset_Click(object sender, EventArgs e)
@@ -162,7 +163,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 2. V experimentální instanci aplikace Visual Studio vytvořte projekt **aplikace model Windows Forms** .
 
-3. V **Průzkumník řešení**poklikejte nebo poklikejte na *Form1.cs* a otevřete ho v návrháři, pokud ještě není otevřený.
+3. V **Průzkumník řešení**dvakrát klikněte na *Form1.cs* a otevřete ho v návrháři, pokud ještě není otevřený.
 
 4. V sadě **nástrojů** `Counter` by měl být ovládací prvek zobrazen v části **Obecné** .
 
@@ -172,7 +173,7 @@ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažen
 
 7. Přetáhněte <xref:System.Windows.Forms.Button> ovládací prvek do formuláře a potom nastavte vlastnosti název a text tlačítka na `Test` .
 
-8. Poklikáním nebo dvojitým kliknutím na tlačítko otevřete *Form1.cs* v zobrazení kódu a vytvořte obslužnou rutinu Click.
+8. Dvojím kliknutím na tlačítko otevřete *Form1.cs* v zobrazení kódu a vytvořte obslužnou rutinu Click.
 
 9. V obslužné rutině Click volejte `counter1.Increment()` .
 

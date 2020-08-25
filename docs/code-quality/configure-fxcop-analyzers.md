@@ -11,19 +11,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: fbd30859c5ee3dbbea80c6d88d68c0211da62c88
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: a131b7d69eec61f9b9106f7a4274b3882c51f0ff
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88706578"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800733"
 ---
 # <a name="configure-net-code-quality-analyzers"></a>Konfigurace analyzátorů kvality kódu .NET
 
 Pro určité analyzátory kvality kódu .NET (které mají začínající identifikátory `CA` ) můžete upřesnit, které části základu kódu by měly být aplikovány na [Konfigurovatelné možnosti](fxcop-analyzer-options.md). Každá možnost je určena přidáním páru klíč-hodnota k souboru [EditorConfig](https://editorconfig.org) . Konfigurační soubor může být specifický pro soubor, projekt, řešení nebo celé úložiště.
 
 > [!TIP]
-> Kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a vybráním možnosti **Přidat**  >  **novou položku**přidejte do projektu soubor. editorconfig. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
+> Přidejte soubor. editorconfig do projektu kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a výběrem možnosti **Přidat**  >  **novou položku**. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
 >
 > ![Přidat soubor editorconfig do projektu v aplikaci Visual Studio](media/add-editorconfig-file.png)
 
@@ -75,7 +75,7 @@ Pro následující rozsahy je možné povolit konfiguraci analyzátoru založen�
 
 Chcete-li povolit konfiguraci, přidejte soubor *. editorconfig* s možnostmi v příslušném adresáři. Tento soubor může také obsahovat konfigurační položky konfigurace diagnostiky založené na EditorConfig. Další podrobnosti najdete [tady](use-roslyn-analyzers.md#rule-severity).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Možnosti oboru pravidla pro analyzátory kvality kódu .NET](fxcop-analyzer-options.md)
 - [Konfigurace analyzátoru](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)

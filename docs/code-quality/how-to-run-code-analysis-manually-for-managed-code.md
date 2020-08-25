@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 874d95b65b99af4b5a6b00d45101236f62db3df1
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 1077e2cdae790fe8a7b7309b1e6427cd3ef81b48
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769364"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800161"
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Postupy: ruční spuštění analýzy kódu pro spravovaný kód (vyžaduje Visual Studio 2019 verze 16,5 nebo novější)
 Ve výchozím nastavení .NET Compiler Platform ("Roslyn") analyzátory kódu analyzují kód C# nebo Visual Basic při psaní, a to pomocí živé analýzy a také během sestavování. Proto byste normálně nemuseli aktivovat analýzu kódu ručně. Existují však situace, kdy lze chtít ručně aktivovat analýzu kódu:
@@ -26,8 +26,8 @@ Ve výchozím nastavení .NET Compiler Platform ("Roslyn") analyzátory kódu an
 
 ### <a name="run-code-analysis-manually"></a>Ruční spuštění analýzy kódu
 
-1. V **Průzkumník řešení**klikněte na projekt.
+1. V **Průzkumník řešení**vyberte projekt.
 
-2. V nabídce **analyzovat** klikněte na možnost **Spustit analýzu kódu na** *název projektu*.
+2. V nabídce **analyzovat** vyberte možnost **Spustit analýzu kódu pro** *název projektu*.
 
 Analýza kódu začne spouštět na pozadí. V levém dolním rohu by se měla zobrazit zpráva **spuštění analýzy kódu pro \<project> ...** ve stavovém řádku sady Visual Studio. Po dokončení analýzy kódu se stavová zpráva změní na **analýzu kódu dokončenou pro \<project> **. Seznam chyb bude brzy aktualizován všemi diagnostikami analýzy kódu.

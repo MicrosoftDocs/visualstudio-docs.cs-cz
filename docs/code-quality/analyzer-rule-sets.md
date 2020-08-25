@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b3ed77a309448a854d733453c932fc007f7f591
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 11b99bb08c82725f19f7985a97656edf65f112d5
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800213"
 ---
 # <a name="enable-a-category-of-rules"></a>Povolení kategorie pravidel
 
@@ -33,12 +33,12 @@ Balíček NuGet pro FxCop Analyzer obsahuje předdefinované sady pravidel a sou
 - Globalizace
 - Interoperabilita
 - Udržovatelnost
-- pojmenování
+- Pojmenování
 - Výkon
 - Portovaná z FxCop
 - Spolehlivost
-- Zabezpečení –
-- Použití
+- Zabezpečení
+- Využití
 
 Každá z těchto kategorií pravidel má EditorConfig nebo soubor sady pravidel:
 
@@ -53,13 +53,13 @@ Každá z těchto kategorií pravidel má EditorConfig nebo soubor sady pravidel
 
 ## <a name="predefined-editorconfig-files"></a>Předdefinované soubory EditorConfig
 
-Předdefinované soubory EditorConfig pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\editorconfig* . Například soubor EditorConfig, který povolí všechna pravidla zabezpečení, se nachází v *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\editorconfig\SecurityRulesEnabled\\. EditorConfig*.
+Předdefinované soubory EditorConfig pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \editorconfig* . Například soubor EditorConfig pro povolení všech pravidel zabezpečení je umístěný v souboru *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \editorconfig\SecurityRulesEnabled \\ . EditorConfig*.
 
 Zkopírujte zvolený soubor. editorconfig do kořenového adresáře vašeho projektu.
 
 ## <a name="predefined-rule-sets"></a>Předdefinované sady pravidel
 
-Předdefinované soubory sady pravidel pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\rulesets* . Například soubor sady pravidel, který povolí všechna pravidla zabezpečení, se nachází v *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<verze\>\rulesets\SecurityRulesEnabled.ruleset*.
+Předdefinované soubory sady pravidel pro balíček Microsoft. CodeAnalysis. FxCopAnalyzers Analyzer jsou umístěné v adresáři *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \rulesets* . Například soubor sady pravidel pro povolení všech pravidel zabezpečení je umístěný v *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \rulesets\SecurityRulesEnabled.ruleset*.
 
 Zkopírujte jednu nebo více sad pravidel a vložte je do adresáře, který obsahuje projekt aplikace Visual Studio, nebo přímo do **Průzkumník řešení**.
 
@@ -84,25 +84,25 @@ Chcete-li nastavit pravidlo jako aktivní sadu pravidel pro analýzu v projektec
 
 Chcete-li nastavit pravidlo pro nastavení aktivní sady pravidel pro analýzu v .NET Framework projekty:
 
-- V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
+- Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**.
 
 - Na stránkách vlastností projektu vyberte kartu **Analýza kódu** .
 
 ::: moniker range="vs-2017"
 
-- V části **Spustit tuto sadu pravidel**vyberte **Procházet**a pak vyberte požadovanou sadu pravidel, kterou jste zkopírovali do adresáře projektu.
+- V části **Spustit tuto sadu pravidel**vyberte **Procházet**a pak zvolte požadovanou sadu pravidel, kterou jste zkopírovali do adresáře projektu.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V části **aktivní pravidla**vyberte **Procházet**a pak vyberte požadovanou sadu pravidel, kterou jste zkopírovali do adresáře projektu.
+- V části **aktivní pravidla**vyberte **Procházet**a pak zvolte požadovanou sadu pravidel, kterou jste zkopírovali do adresáře projektu.
 
 ::: moniker-end
 
    Pro tato pravidla, která jsou povolená ve vybrané sadě pravidel, se teď zobrazují jenom porušení pravidel.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nejčastější dotazy k analyzátorům](analyzers-faq.md)
 - [Přehled analyzátorů .NET Compiler Platform](roslyn-analyzers-overview.md)

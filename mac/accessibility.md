@@ -1,19 +1,19 @@
 ---
-title: Přístupnost
+title: Usnadnění
 description: Představení funkcí pro usnadnění přístupu v Visual Studio pro Mac a jak je možné je povolit.
-author: alanjclark
+author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
 ms.topic: overview
-ms.openlocfilehash: d50f92e6de777205f1289f710b27f4a719b61eef
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: d082cd5efbb41c6f20bc0abb8e5de9b3a25186ba
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85939060"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800187"
 ---
-# <a name="accessibility"></a>Přístupnost
+# <a name="accessibility"></a>Usnadnění
 
 Součástí macOS je řada nástrojů a funkcí pro usnadnění, které vám pomůžou s Visual Studio pro Mac.  Kromě těchto Visual Studio pro Mac mají také následující funkce, aby je bylo lépe dostupné pro lidi s různou schopností:
 
@@ -21,7 +21,7 @@ Součástí macOS je řada nástrojů a funkcí pro usnadnění, které vám pom
 * Zvětšení textu v panelu
 * Přizpůsobení barevného motivu editoru kódu
 * Přizpůsobení klávesových zkratek
-* Procházení pomocí klávesnice
+* Navigace přes klávesnici
 
 > [!NOTE]
 > Tato příručka se týká Visual Studio pro Mac. Informace o aplikaci Visual Studio ve Windows najdete v tématu [funkce usnadnění v aplikaci Visual Studio](/visualstudio/ide/reference/accessibility-features-of-visual-studio).

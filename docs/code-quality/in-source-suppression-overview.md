@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f7ff64d43714fa69c2543a9bb12bb3cd12826c8
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: f1cc2fd460a2087eaaac40abbb1ba04c8126a9aa
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88706487"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800850"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
@@ -35,7 +35,7 @@ V jazyce C++/CLI použijte \_ \_ \_ \_ k přidání atributu v hlavičkovém sou
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Pokud migrujete projekt do sady Visual Studio 2017, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni na opravu upozornění, můžete je potlačit kliknutím na možnost **analyzovat**  >  **spuštění analýza kódu a potlačit aktivní problémy**.
+> Pokud migrujete projekt do sady Visual Studio 2017, může dojít k náhlému vynechání velkého počtu upozornění analýzy kódu. Pokud nejste připraveni opravit upozornění, můžete je potlačit tak, že vyberete **analyzovat**  >  **Spustit analýzu kódu a potlačit aktivní problémy**.
 >
 > ![Spustit analýzu kódu a potlačit problémy v aplikaci Visual Studio](media/suppress-active-issues.png)
 
@@ -50,7 +50,7 @@ V jazyce C++/CLI použijte \_ \_ \_ \_ k přidání atributu v hlavičkovém sou
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage – atribut
 
-Pokud zvolíte možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb**, přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
+Když vyberete možnost **potlačit** z kontextu nebo kliknout pravým tlačítkem myši na upozornění analýzy kódu v **Seznam chyb**, <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atribut se přidá do vašeho kódu nebo do globálního souboru potlačení projektu.
 
 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Atribut má následující formát:
 
@@ -98,11 +98,11 @@ Když se v aplikaci Visual Studio zobrazí upozornění, můžete zobrazit pří
 
 Upozornění analýzy kódu jsou potlačena na úrovni, na kterou <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> je atribut použit. Atribut lze například použít na úrovni sestavení, modulu, typu, člena nebo parametru. Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
 
-Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Příklad:
+Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Například:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Příklad:
+Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Například:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
@@ -195,7 +195,7 @@ Pro analýzu starší verze kódu můžete zvolit, zda chcete potlačit upozorn�
 > [!NOTE]
 > Analýza kódu se ignoruje `GeneratedCodeAttribute` , když se použije na celé sestavení nebo na jeden parametr.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>

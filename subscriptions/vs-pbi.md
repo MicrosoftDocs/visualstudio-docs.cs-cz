@@ -7,12 +7,12 @@ ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
 ms.date: 03/26/2020
 ms.topic: how-to
 description: Seznamte se s předplatným Power BI Pro zahrnutým ve vybraných předplatných sady Visual Studio.
-ms.openlocfilehash: dd16d8f28f78a7496ad3c93ab1db8eb51ebcf43b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902992"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801682"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro v předplatných sady Visual Studio
 
@@ -29,7 +29,7 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
    > [!div class="mx-imgBorder"]
    > ![Dlaždice výhody Power BI Pro](_img/vs-pbi/vs-pbi-tile.png)
 
-3. Pokud jste aktivovali některé jiné výhody předplatného, jako je například předplatné pro vývojáře Office 365 nebo Enterprise Mobility + Security, můžete účet už mít.  Pokud se najde existující účet, budete mít možnost přidat své předplatné Power BI Pro k vašemu stávajícímu účtu nebo si zaregistrovat nový účet.  Důrazně doporučujeme přidat ho do vašeho existujícího účtu, abyste měli k různým výhodám přístup pomocí jednoho ID uživatele.
+3. Pokud jste aktivovali nějaké jiné výhody předplatného, jako je Microsoft 365 předplatné pro vývojáře nebo Enterprise Mobility + Security, možná už účet máte.  Pokud se najde existující účet, budete mít možnost přidat své předplatné Power BI Pro k vašemu stávajícímu účtu nebo si zaregistrovat nový účet.  Důrazně doporučujeme přidat ho do vašeho existujícího účtu, abyste měli k různým výhodám přístup pomocí jednoho ID uživatele.
    > [!div class="mx-imgBorder"]
    > ![Power BI Pro výhod stávající účet](_img/vs-pbi/vs-pbi-existing-account.png)
 
@@ -55,21 +55,21 @@ Pokud chcete použít Power BI Pro, budete muset nastavit účet nebo se přihl�
     > [!div class="mx-imgBorder"]
     > ![Kontaktní informace pro Power BI Pro výhod](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png)
 
-11. Další stránka potvrzuje, že jste nastavili, aby bylo možné začít používat Power BI Pro.  Stránka obsahuje odkaz na přihlašovací stránku.  Doporučujeme nahrávat odkaz na přihlašovací stránku i vaše ID uživatele.  (Uvítací e-mail se zobrazí také na adrese, kterou jste zadali při vytváření účtu.)  Můžete se také podívat na automatizované okno pomocníka Office 365, které můžete použít, pokud máte nějaké dotazy.  Pokračujte **tím,** že kliknete na začít.
+11. Další stránka potvrzuje, že jste nastavili, aby bylo možné začít používat Power BI Pro.  Stránka obsahuje odkaz na přihlašovací stránku.  Doporučujeme nahrávat odkaz na přihlašovací stránku i vaše ID uživatele.  (Uvítací e-mail se zobrazí také na adrese, kterou jste zadali při vytváření účtu.)  Můžete se také podívat na okno automatizovaného pomocníka Microsoft 365, které můžete použít, pokud máte nějaké dotazy.  Pokračujte **tím,** že kliknete na začít.
 
-12. Teď, když je váš účet Power BI Pro nastavený, uvidíte centrum pro správu Office 365, kde můžete spravovat uživatele a domény, instalovat software Office a získat informace o Office 365.  A to je vše!  Jste připravení přejít.
+12. Teď, když je váš účet Power BI Pro nastavený, uvidíte centrum pro správu Microsoft 365, kde můžete spravovat uživatele a domény, instalovat software Office a získat informace o Microsoft 365.  A to je vše!  Jste připravení přejít.
 
 ## <a name="eligibility"></a>Vznik
 
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici       |  Ano|
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici       |  Ano|
-| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |NA         |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |NA         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |NA         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici       |  Ano|
-| Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |NA|
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | K dispozici.       |  Ano|
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.       |  Ano|
+| Visual Studio Professional (standardní, měsíční Cloud) | VL, Azure, Retail                                       | Není k dispozici                                                            |Není k dispozici         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                            |Není k dispozici         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                            |Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici.       |  Ano|
+| Visual Studio Enterprise (měsíční Cloud) | Azure                                       | Není k dispozici                                  |Není k dispozici|
 ||
 
 <sup>1</sup>  *zahrnuje: Not for Reprodej (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT software & Services Developer, MCT software & Service, MVP Professional (MVP), oblastní ředitel (RD).  Nezahrnuje se: Microsoft Partner Network (MPN), FTE, představte.*
@@ -91,7 +91,7 @@ Odpověď: Ano, můžete ji použít v produkčním prostředí se dvěma důle�
 - Tuto Power BI Pro výhodu nelze použít u tenantů státní správy.
 
 ### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>Otázka: při pokusu o aktivaci Power BI Pro se zobrazí zpráva "již máte účet prostřednictvím práce".  Můžu I nadále využívat výhod?
-Odpověď: Ano.  Zpráva znamená, že jste přihlášeni k doméně, která již má aktivní klienty Office 365, na kterých nejste správcem.  Chcete-li přidat Power BI Pro do tenanta, musíte být správcem tohoto tenanta.  Pokud chcete tento problém vyřešit, postupujte podle těchto kroků a vytvořte svého vlastního tenanta.
+Odpověď: Ano.  Zpráva znamená, že jste přihlášeni k doméně, která již má aktivní Microsoft 365 klienty, u kterých nejste správcem.  Chcete-li přidat Power BI Pro do tenanta, musíte být správcem tohoto tenanta.  Pokud chcete tento problém vyřešit, postupujte podle těchto kroků a vytvořte svého vlastního tenanta.
 1. Když se zobrazí zpráva, že již máte účet prostřednictvím práce, klikněte na **vytvořit nový účet**.
 
 2. Na další obrazovce zadejte kontaktní informace a klikněte na **Další**.

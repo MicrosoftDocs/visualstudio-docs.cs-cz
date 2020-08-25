@@ -7,19 +7,19 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžete využít výhod virtuálního klienta Microsoft Windows prostřednictvím předplatného sady Visual Studio.
-ms.openlocfilehash: b84527f7bdaf3e9218585bd52af0743ef23a5637
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 865e18d7b8672520fcb771a1db56141fb6fd9f0a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183584"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800603"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Přístup k virtuálnímu počítači s Windows v předplatných 
 Předplatitelé sady Visual Studio teď můžou využívat svoje jednotlivé kredity Azure pro vývoj/testování pro služby Microsoft Windows Virtual Desktop.  
-Virtuální počítač s Windows je komplexní služba virtualizace plochy a aplikací spuštěná v cloudu. Je to jediná infrastruktura virtuálních klientských počítačů (VDI), která nabízí zjednodušenou správu, Windows 10 s více relacemi, optimalizace pro Office 365 ProPlus a podporu pro prostředí vzdálené plochy (RDS). Nasaďte a škálujte stolní počítače a aplikace Windows v Azure během několika minut a Získejte integrované funkce zabezpečení a dodržování předpisů.
+Virtuální počítač s Windows je komplexní služba virtualizace plochy a aplikací spuštěná v cloudu. Je to jediná infrastruktura virtuálních klientských počítačů (VDI), která nabízí zjednodušenou správu, Windows 10 s více relacemi, optimalizace pro Microsoft 365 aplikací pro podniky a podporu pro prostředí vzdálené plochy (RDS). Nasaďte a škálujte stolní počítače a aplikace Windows v Azure během několika minut a Získejte integrované funkce zabezpečení a dodržování předpisů.
 Tady je seznam toho, co můžete udělat při spuštění virtuální plochy Windows v Azure:
 - Nastavení nasazení s více relacemi s Windows 10, které poskytuje plnou sadu Windows 10 s škálovatelností
-- Virtualizujte Office 365 ProPlus a optimalizujte pro spouštění ve virtuálních scénářích s více uživateli.
+- Virtualizace Microsoft 365ch aplikací pro podniky a jejich optimalizaci pro spouštění ve virtuálních scénářích s více uživateli
 - Poskytněte virtuálním klientům Windows 7 bezplatné rozšířené aktualizace zabezpečení.
 - Přenesení stávajících klientských počítačů a aplikací pro vzdálenou plochu (RDS) a Windows serveru do libovolného počítače
 - Virtualizujte desktopy i aplikace
@@ -46,14 +46,14 @@ Pokud jsou splněné všechny požadavky, budete chtít provést několik akcí,
 ## <a name="eligibility"></a>Vznik
 | Úroveň předplatného                                                 |     Kanály                                            | Výhoda                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici|  Ano          |
-| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici|  Ano          |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici                                                             |  Ano             |
-| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici                                        |  Ano           |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici|  Ano          |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici                                         |  Ano          |
-| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | – |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | – |
+| Visual Studio Enterprise (Standard)   | VL, Azure, Retail, | K dispozici.|  Ano          |
+| Visual Studio Enterprise s GitHubem Enterprise  | VL | K dispozici.|  Ano          |
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | K dispozici.                                                             |  Ano             |
+| Visual Studio Professional s GitHubem Enterprise | VL                                       | K dispozici.                                        |  Ano           |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | K dispozici.|  Ano          |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | K dispozici.                                         |  Ano          |
+| Visual Studio Enterprise (Standard)  | NFR<sup>1</sup> |Není k dispozici  | Není k dispozici |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure | Není k dispozici | Není k dispozici |
 
 <sup>1</sup>*zahrnuje: Not for Reprodej (NFR), FTE, (MVP), oblastní ředitel (RD), Microsoft Partner Network (MPN), Visual Studio Industry Partner (VSIP), Microsoft Certified Trainer, BizSpark, představte* si  
 
