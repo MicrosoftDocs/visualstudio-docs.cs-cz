@@ -302,3 +302,7 @@
               href: customerrorreporting-element-clickonce-deployment.md
         - name: Referenční dokumentace nespravovaného rozhraní API ClickOnce
           href: clickonce-unmanaged-api-reference.md
+    - name: Referenční dokumentace k rozšíření Visual Studio Installer Projects
+      items:
+        - name: Rozšíření Visual Studio Installer Projects a .NET Core 3.1
+          href: installer-projects-net-core.md
