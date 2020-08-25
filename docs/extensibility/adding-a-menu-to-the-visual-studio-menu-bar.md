@@ -33,7 +33,7 @@ Po dokončení tohoto návodu můžete vytvořit nabídku s názvem **Nabídka t
 > Od sady Visual Studio 2019 jsou nabídky nejvyšší úrovně, které přispěly rozšířeními, umístěné v nabídce **rozšíření** .
 :::moniker-end
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 

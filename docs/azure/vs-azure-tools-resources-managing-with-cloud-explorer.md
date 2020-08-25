@@ -22,7 +22,7 @@ Průzkumník cloudu umožňuje zobrazit prostředky a skupiny prostředků Azure
 
 Podobně jako u [Azure Portal](https://portal.azure.com)je Cloud Explorer postaven na Azure Resource Manager Stack. Proto Průzkumník cloudu rozumí prostředky, jako jsou skupiny prostředků Azure a služby Azure, jako jsou Logic Apps a API Apps, a podporuje [řízení přístupu na základě role](/azure/role-based-access-control/role-assignments-portal) (RBAC).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Visual Studio 2017 nebo novější (viz [Stažení sady Visual Studio](https://visualstudio.microsoft.com/downloads)) se zvolenou **úlohou Azure** . Můžete také použít starší verzi sady Visual Studio s [Microsoft Azure SDK pro .NET 2,9](https://www.microsoft.com/download/details.aspx?id=51657).
 * Účet Microsoft Azure – Pokud účet nemáte, můžete si [zaregistrovat bezplatnou zkušební verzi](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) nebo [aktivovat výhody pro předplatitele sady Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).

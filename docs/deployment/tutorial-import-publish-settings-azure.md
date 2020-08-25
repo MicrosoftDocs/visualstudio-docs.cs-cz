@@ -35,7 +35,7 @@ Soubor nastavení publikování (* \* . publishsettings*) se liší od publikač
 > [!NOTE]
 > Pokud potřebujete kopírovat profil publikování sady Visual Studio (soubor* \* . pubxml* ) z jedné instalace sady Visual Studio na jiný, můžete najít profil publikování * \<profilename\> . pubxml*ve složce * \\<ProjectName \> \Properties\PublishProfiles* pro spravované typy projektů. Pro weby se podívejte do složky *\ App_Data* . Profily publikování jsou soubory XML MSBuild.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range=">=vs-2019"
 

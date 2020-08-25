@@ -34,7 +34,7 @@ Funkce připojené služby přidá všechny potřebné odkazy a kód připojení
 
 > [!NOTE]
 > Toto téma se týká sady Visual Studio ve Windows. Visual Studio pro Mac najdete v tématu [připojené služby v Visual Studio pro Mac](/visualstudio/mac/connected-services).
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Visual Studio s nainstalovanou úlohou Azure
 - Projekt jednoho z podporovaných typů
