@@ -10,21 +10,21 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/17/2019
-  ms.openlocfilehash: eb2ad45606c71687d3fdb7d95c09b656883551b6
-  ms.sourcegitcommit: ad13d7b427303b0e801d54dc521dfb3c1e2bf6e4
+  ms.openlocfilehash: 6ca826d6bf02ee87523c1a5269328e8fd3aaf850
+  ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "86405371"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88800174"
 landingContent:
 - title: Informace o nasazení
   linkLists:
   - linkListType: overview
     links:
-    - text: Přehled nasazování
-      url: deploying-applications-services-and-components-resources.md
     - text: První seznámení s nasazováním
       url: deploying-applications-services-and-components.md
+    - text: Nasazení do složky, služby IIS nebo Azure
+      url: deploying-applications-services-and-components-resources.md
 - title: Začínáme
   linkLists:
   - linkListType: quickstart
@@ -51,15 +51,7 @@ landingContent:
     links:
     - text: Zabalení desktopové aplikace pro Windows Store
       url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-- title: Nasazení balíčků .NET do NuGet.org
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Publikování do NuGet.org (.NET Standard)
-      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
-    - text: Publikování do NuGet.org (.NET Framework)
-      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework
-- title: Nasazení aplikací ASP.NET
+- title: Nasazení aplikací ASP.NET Core
   linkLists:
   - linkListType: tutorial
     links:
@@ -89,3 +81,11 @@ landingContent:
     links:
     - text: Publikování do App Service pro Linux
       url: ../javascript/publish-nodejs-app-azure.md
+- title: Nasazení balíčků .NET do NuGet.org
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Publikování do NuGet.org (.NET Standard)
+      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+    - text: Publikování do NuGet.org (.NET Framework)
+      url: /nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework

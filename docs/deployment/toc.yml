@@ -2,12 +2,12 @@
   href: index.yml
 - name: Přehled
   items:
-    - name: Přehled nasazování
-      href: deploying-applications-services-and-components-resources.md
-- name: Rychlý start
-  items:
     - name: První seznámení s nasazováním
       href: deploying-applications-services-and-components.md
+    - name: 'Nasazení do složky, služby IIS nebo Azure'
+      href: deploying-applications-services-and-components-resources.md
+- name: Rychlé starty
+  items:
     - name: Nasazení do Azure App Service
       href: quickstart-deploy-to-azure.md
     - name: Nasazení do App Service pro Linux
