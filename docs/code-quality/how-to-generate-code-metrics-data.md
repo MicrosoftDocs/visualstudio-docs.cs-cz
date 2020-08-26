@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab0bbed64f9f85b8b508c3fe14fda4ec59d45f10
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 145525dc12070d98dae83d592ae86a675bb605d2
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800954"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893408"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Postupy: generování dat metrik kódu
 
@@ -62,7 +62,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
    V tomto příkladu je [CA1502](ca1502.md) pravidla nastavená tak, aby se aktivovalo, když je cyklomatickáá složitost větší než 10.
 
-3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Například:
+3. V okně **vlastnosti** aplikace Visual Studio nebo v souboru projektu označte akci sestavení konfiguračního souboru jako [**AdditionalFiles**](../ide/build-actions.md#build-action-values). Příklad:
 
    ```xml
    <ItemGroup>
@@ -72,7 +72,7 @@ Můžete nakonfigurovat prahové hodnoty, při kterých se pravidla metrik kódu
 
 ## <a name="calculate-code-metrics-menu-command"></a>Příkaz nabídky pro výpočet metriky kódu
 
-Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí, a to tak, že se vrátíte do nabídky **analyzovat**  >  **metriky kódu** .
+Vygenerujte metriky kódu pro jeden nebo všechny otevřené projekty v integrovaném vývojovém prostředí pomocí nabídky **analyzovat**  >  **metriky kódu** .
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Generování výsledků metrik kódu pro celé řešení
 
@@ -80,7 +80,7 @@ Můžete generovat Výsledky metrik kódu pro celé řešení některým z násl
 
 - V řádku nabídek vyberte možnost **analyzovat**  >  **výpočet metrik kódu**  >  **pro řešení**.
 
-- V **Průzkumník řešení**vyberte a držte (nebo klikněte pravým tlačítkem) řešení a pak vyberte **Vypočítat metriky kódu**.
+- V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a pak vyberte **Vypočítat metriky kódu**.
 
 - V okně **výsledků metrik kódu** vyberte tlačítko **Vypočítat metriky kódu pro řešení** .
 
@@ -111,7 +111,7 @@ Data metriky kódu můžete vygenerovat z příkazového řádku pro projekty v 
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Balíček NuGet Microsoft. CodeAnalysis. Metrics
 
-Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Například:
+Nejjednodušší způsob, jak generovat data metrik kódu z příkazového řádku, je instalace balíčku NuGet [Microsoft. CodeAnalysis. Metrics](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) . Po instalaci balíčku spusťte `msbuild /t:Metrics` z adresáře, který obsahuje soubor projektu. Příklad:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Například:
+Název výstupního souboru můžete přepsat zadáním `/p:MetricsOutputFile=<filename>` . Data metriky kódu [starší verze](#previous-versions) můžete získat také zadáním `/p:LEGACY_CODE_METRICS_MODE=true` . Příklad:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -293,7 +293,7 @@ Pokud balíček NuGet nechcete instalovat, můžete *Metrics.exe* spustitelný s
 
 #### <a name="metricsexe-usage"></a>Využití Metrics.exe
 
-Chcete-li spustit *Metrics.exe*, zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Například:
+Chcete-li spustit *Metrics.exe*, zadejte projekt nebo řešení a výstupní soubor XML jako argumenty. Příklad:
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml

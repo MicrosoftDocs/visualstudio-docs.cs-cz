@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: f1cc2fd460a2087eaaac40abbb1ba04c8126a9aa
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 745bc0c53738370816ad74be9249b721f236ad87
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893369"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
@@ -50,7 +50,7 @@ V jazyce C++/CLI použijte \_ \_ \_ \_ k přidání atributu v hlavičkovém sou
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage – atribut
 
-Když vyberete možnost **potlačit** z kontextu nebo kliknout pravým tlačítkem myši na upozornění analýzy kódu v **Seznam chyb**, <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atribut se přidá do vašeho kódu nebo do globálního souboru potlačení projektu.
+Když vyberete možnost **potlačit** z kontextu nebo v místní nabídce upozornění analýzy kódu v **Seznam chyb**, přidá se do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kódu nebo do globálního souboru potlačení projektu atribut.
 
 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Atribut má následující formát:
 
@@ -98,11 +98,11 @@ Když se v aplikaci Visual Studio zobrazí upozornění, můžete zobrazit pří
 
 Upozornění analýzy kódu jsou potlačena na úrovni, na kterou <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> je atribut použit. Atribut lze například použít na úrovni sestavení, modulu, typu, člena nebo parametru. Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
 
-Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Například:
+Obecná podoba potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Příklad:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Například:
+Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, je možné název pravidla vynechat. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Příklad:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 

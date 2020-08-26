@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d789299212ec7420f40135dd655056f16b6e4f35
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800967"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893343"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Instalace analyzátorů FxCop v aplikaci Visual Studio
 
@@ -28,7 +28,7 @@ Tyto analyzátory FxCop můžete nainstalovat buď jako balíček NuGet, nebo ja
 
 V aplikaci Visual Studio 2019 verze 16,3 a novější můžete balíček NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) nainstalovat přímo ze stránky vlastností analýzy kódu projektu:
 
-1. Klikněte pravým tlačítkem (nebo vyberte a podržte) na uzlu projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak přejděte na kartu **Analýza kódu** .
+1. Klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**, vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
 
    ![Instalace balíčku FxCop Analyzer z vlastností stránky v aplikaci Visual Studio](media/install-fxcop-properties-page.png)
 
@@ -72,7 +72,7 @@ Pomocí následujících pokynů určete, která verze balíčku FxCop Analyzer 
 
 | Verze sady Visual Studio | Verze balíčku analyzátoru FxCop |
 | - | - |
-| Visual Studio 2019 (všechny verze) | [nejnovější](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) | 
+| Visual Studio 2019 (všechny verze) | [nejnovější](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) |
 | Visual Studio 2017 verze 15,9 | [2.9.10](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.10) |
 | Visual Studio 2017 verze 15,5 až 15,8 | [2.6.4](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.4) |
 | Visual Studio 2017 verze 15,3 až 15,4 | [2.3.0 – Beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |

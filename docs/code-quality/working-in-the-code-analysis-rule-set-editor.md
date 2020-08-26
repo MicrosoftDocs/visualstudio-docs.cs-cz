@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796818d376df477df84f845b5b0a17ace60bd1f2
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801539"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893304"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
 
@@ -38,7 +38,7 @@ Editor zobrazuje pravidla ve stromové struktuře, která seskupují pravidla po
    > [!TIP]
    > Způsob seskupení pravidel můžete změnit v rozevíracím seznamu **Seskupit podle** .
 
-- V poli **Akce** skupiny zadejte akci, která se má použít pro všechna pravidla ve skupině.
+- Klikněte na pole **Akce** skupiny a zadejte akci, která se má použít pro všechna pravidla ve skupině.
 
 - Zaškrtněte nebo zrušte zaškrtnutí políčka pro jednotlivá pravidla. Když zaškrtnete políčko pro pravidlo, pravidlo je nastaveno na akci **Upozornění** .
 

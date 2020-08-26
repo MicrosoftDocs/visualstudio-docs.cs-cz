@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: edb9cb30be9d62a533e6d011cbb8d0436ef898b1
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801604"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893421"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -28,11 +28,11 @@ Z **Průzkumník řešení**můžete provádět většinu úprav diagnostiky ana
 
 ![Uzel analyzátorů v Průzkumník řešení](media/analyzers-expanded-in-solution-explorer.png)
 
-V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem (nebo vyberte a podržte) na pravidle a vyberte **vlastnosti**, nebo vyberte pravidlo a pak vyberte **ALT +** + **ENTER**.
+V okně **vlastnosti** můžete zobrazit vlastnosti diagnostiky, včetně jeho popisu a výchozí závažnosti. Chcete-li zobrazit vlastnosti, klikněte pravým tlačítkem na pravidlo a vyberte **vlastnosti**, nebo vyberte pravidlo a stiskněte klávesu **ALT** + **ENTER**.
 
 ![Diagnostické vlastnosti v okno Vlastnosti](media/analyzer-diagnostic-properties.png)
 
-Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem (nebo vyberte a podržte) v diagnostice a vyberte **Zobrazit nápovědu**.
+Pokud chcete zobrazit online dokumentaci pro diagnostiku, klikněte pravým tlačítkem na diagnostiku a vyberte **Zobrazit nápovědu**.
 
 Ikony vedle každé diagnostiky v **Průzkumník řešení** odpovídají ikonám, které vidíte v sadě pravidel při jejich otevírání v editoru:
 
@@ -225,7 +225,7 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
 Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla z kontextové nabídky seznamu chyb.
 
-1. Jakmile dojde k porušení, klikněte pravým tlačítkem myši (nebo vyberte a podržte) položku diagnostiky v seznamu chyb.
+1. Po porušení klikněte pravým tlačítkem myši na položku diagnostiky v seznamu chyb.
 
 2. V místní nabídce vyberte **nastavit závažnost**.
 
@@ -242,12 +242,12 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Nastavit závažnost pravidla z Průzkumník řešení
 
-1. V Průzkumník řešení vyberte možnost **References**  >  **analyzátory** odkazů (nebo **Dependencies**  >  **analyzátory** závislostí pro projekty .NET Core).
+1. V Průzkumník řešení rozbalte položku **References**  >  **analyzátory** odkazů (nebo **Dependencies**  >  **analyzátory** závislostí pro projekty .NET Core).
 
 2. Rozbalte sestavení, které obsahuje pravidlo, pro které chcete nastavit závažnost.
 
 ::: moniker range=">=vs-2019"
-3. Klikněte pravým tlačítkem (nebo vyberte a podržte) pravidlo a vyberte **nastavit závažnost**. V místní nabídce vyberte jednu z možností závažnosti.
+3. Klikněte pravým tlačítkem na pravidlo a vyberte **nastavit závažnost**. V místní nabídce vyberte jednu z možností závažnosti.
 
    Visual Studio přidá položku do souboru EditorConfig, aby nakonfigurovala pravidlo na požadovanou úroveň. Pokud váš projekt používá soubor RuleSet namísto souboru EditorConfig, je položka závažnost přidána do souboru ruleset.
 
@@ -256,7 +256,7 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-3. Klikněte pravým tlačítkem (nebo vyberte a podržte) pravidlo a vyberte **nastavit závažnost sady pravidel**. V místní nabídce vyberte jednu z možností závažnosti.
+3. Klikněte pravým tlačítkem na pravidlo a vyberte **nastavit závažnost sady pravidel**. V místní nabídce vyberte jednu z možností závažnosti.
 
    Závažnost pravidla se uloží do souboru aktivní sady pravidel.
 ::: moniker-end
@@ -267,7 +267,7 @@ Visual Studio také nabízí pohodlný způsob konfigurace závažnosti pravidla
 
 1. Otevřete soubor aktivní sady pravidel jedním z následujících způsobů:
 
-- V **Průzkumník řešení**dvakrát klikněte na soubor, klikněte pravým tlačítkem myši na uzel analyzátory **odkazů**(nebo vyberte a podržení)  >  **Analyzers** a vyberte **Otevřít aktivní sadu pravidel**.
+- V **Průzkumník řešení**dvakrát klikněte na soubor, klikněte pravým tlačítkem na uzel **referenční**  >  **analyzátory** a vyberte **Otevřít aktivní sadu pravidel**.
 - Na stránce vlastností **Analýza kódu** projektu vyberte možnost **otevřít** .
 
   Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ho * \<projectname> . ruleset*a přidá ho do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
@@ -336,13 +336,13 @@ Existuje několik způsobů, jak potlačit porušení pravidel:
 
 - Z **editoru kódu**
 
-  Umístěte kurzor na řádek kódu s porušením a vyberte **CTRL** + **tečka (.)** a otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX**  >  **ve zdroji nebo v souboru potlačení**.
+  Umístěte kurzor na řádek kódu s porušením a stisknutím klávesy **CTRL** + **(.)** otevřete nabídku **rychlé akce** . Vyberte možnost **potlačit CAXXXX**  >  **ve zdroji nebo v souboru potlačení**.
 
   ![Potlačit diagnostiku z nabídky rychlé akce](media/suppress-diagnostic-from-editor.png)
 
 - Z **Seznam chyb**
 
-  Zvolte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši (nebo vyberte a podržte) a vyberte **potlačit**  >  **ve zdroji/v souboru potlačení**.
+  Vyberte pravidla, která chcete potlačit, a potom klikněte pravým tlačítkem myši a vyberte možnost **potlačit**  >  **ve zdroji nebo v souboru potlačení**.
 
   - Pokud potlačíte **ve zdroji**, otevře se dialogové okno **Náhled změn** , ve kterém se zobrazí náhled [#pragma upozornění](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) a direktiva Visual Basic [#Disable upozornění](/dotnet/visual-basic/language-reference/directives/directives) , která je přidána do zdrojového kódu.
 

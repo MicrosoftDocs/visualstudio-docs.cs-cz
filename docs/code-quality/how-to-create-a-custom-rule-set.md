@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 643ee48f798c90851d5ff323685070f9d7268f04
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801032"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893265"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
@@ -26,9 +26,9 @@ Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb pr
 
 Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušeno &mdash; , můžete například zobrazit upozornění nebo chybu.
 
-1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
-2. Na stránkách **vlastnosti** přejdete na kartu **Analýza kódu** .
+2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
 ::: moniker range="vs-2017"
 
@@ -57,7 +57,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 
 V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo vyberte **CTRL** + **N**.
+1. Vyberte **soubor**  >  **Nový**  >  **soubor**nebo stiskněte klávesu **CTRL** + **N**.
 
 2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
@@ -70,9 +70,9 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 > [!NOTE]
 > Následující postup neplatí pro projekty .NET Core, které nemají kartu vlastnost **analýzy kódu** .
 
-1. V **Průzkumník řešení**vyberte a podržte (nebo klikněte pravým tlačítkem myši) na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
-2. Na stránkách **vlastnosti** přejdete na kartu **Analýza kódu** .
+2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
 ::: moniker range="vs-2017"
 
@@ -98,7 +98,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
 ## <a name="rule-precedence"></a>Priorita pravidla
 
-- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Například:
+- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Příklad:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -113,7 +113,7 @@ V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravid
 
    **CA0063: nepovedlo se načíst soubor sady pravidel ' \[ Your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel.**
 
-- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Například:
+- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
 
    ```xml
    <!-- Parent rule set -->
