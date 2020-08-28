@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 56007fcb3b951f9b313a25092e89c234d52eb15e
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: 6de4291d08b3a6b6897b3ae41562f70fad5372b1
+ms.sourcegitcommit: 5823b184bf47fbedaca40e32ca0b3f640a643cd0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88507996"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053426"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Měření výkonu aplikace z příkazového řádku
 
@@ -27,7 +27,7 @@ Pomocí nástrojů příkazového řádku můžete shromažďovat informace o v�
 
 V příkladu popsaném v tomto článku shromažďujete informace o výkonu pro Microsoft Notepad, ale stejnou metodu lze použít k profilování jakéhokoli procesu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 * Visual Studio 2019 nebo novější verze
 
@@ -92,6 +92,7 @@ Chcete-li stáhnout a zobrazit konfigurační soubory agenta, přečtěte si ná
 - https://aka.ms/vs/diaghub/agentconfig/dotnetasyncbase
 - https://aka.ms/vs/diaghub/agentconfig/dotnetallocbase
 - https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
+- https://aka.ms/vs/diaghub/agentconfig/dotnetcountersbase
 
 Konfigurace CpuUsage (základní/vysoká/nízká) odpovídají datům shromážděným pro nástroj profilace [využití procesoru](../profiling/cpu-usage.md) .
 Konfigurace DotNetObjectAlloc (základní/nízká) odpovídají datům shromážděným pro [Nástroj přidělování objektů .NET](../profiling/dotnet-alloc-tool.md).
