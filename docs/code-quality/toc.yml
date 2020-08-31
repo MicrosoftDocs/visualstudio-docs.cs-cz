@@ -1,6 +1,6 @@
 - name: Dokumentace k analýze kódu
   href: index.yml
-- name: Analýza spravovaného kódu
+- name: Analýza kódu .NET
   items:
     - name: Přehled
       href: code-analysis-for-managed-code-overview.md
@@ -10,38 +10,28 @@
         - name: Přehled
           displayName: 'roslyn analyzers, source analysis'
           href: roslyn-analyzers-overview.md
-        - name: Instalace analyzátorů zdrojového kódu
+        - name: Instalace analyzátorů jiných výrobců
           href: install-roslyn-analyzers.md
-        - name: Konfigurace analyzátorů zdrojového kódu
-          href: use-roslyn-analyzers.md
-        - name: Rozsah dynamické analýzy kódu
-          href: configure-live-code-analysis-scope-managed-code.md
-        - name: Ruční spuštění analýzy kódu
-          href: how-to-run-code-analysis-manually-for-managed-code.md
-        - name: Zakázání analýzy kódu
-          href: disable-code-analysis.md
+        - name: Konfigurace
+          items:
+            - name: Konfigurace analýzy zdrojového kódu
+              href: use-roslyn-analyzers.md
+            - name: Konfigurace analýzy kvality kódu
+              href: configure-fxcop-analyzers.md
+            - name: Konfigurace kategorií analýzy kvality kódu
+              href: analyzer-rule-sets.md
+            - name: Možnosti analýzy kvality kódu
+              href: fxcop-analyzer-options.md
+            - name: Rozsah dynamické analýzy kódu
+              href: configure-live-code-analysis-scope-managed-code.md
+            - name: Ruční spuštění analýzy kódu
+              href: how-to-run-code-analysis-manually-for-managed-code.md
+            - name: Zakázání analýzy kódu
+              href: disable-code-analysis.md
+            - name: Potlačení analýzy kódu
+              href: in-source-suppression-overview.md
         - name: Nejčastější dotazy
           href: analyzers-faq.md
-        - name: Analyzátory FxCop
-          items:
-            - name: Instalace analyzátorů FxCop
-              href: install-fxcop-analyzers.md
-            - name: Migrace na analyzátory FxCop
-              items:
-                - name: Migrace ze starší verze analýzy na analyzátory FxCop
-                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
-                - name: Nejčastější dotazy
-                  href: fxcop-analyzers-faq.md
-                - name: Přenesená pravidla
-                  href: fxcop-rule-port-status.md
-            - name: Konfigurace analyzátorů FxCop
-              items:
-                - name: Konfigurace pravidel a projektů
-                  href: configure-fxcop-analyzers.md
-                - name: Možnosti oboru
-                  href: fxcop-analyzer-options.md
-                - name: Povolení kategorie pravidel
-                  href: analyzer-rule-sets.md
     - name: Starší verze analýzy
       items:
         - name: Přehled
@@ -137,16 +127,60 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: Kompatibilita verzí
               href: version-compatibility-for-code-analysis-check-in-policies.md
-    - name: Sady pravidel
-      items:
-        - name: Přehled
-          href: using-rule-sets-to-group-code-analysis-rules.md
-        - name: Konfigurace sad pravidel
-          href: how-to-configure-code-analysis-for-a-managed-code-project.md
-        - name: Vytvoření vlastní sady pravidel
-          href: how-to-create-a-custom-rule-set.md
-        - name: Použití editoru sad pravidel
-          href: working-in-the-code-analysis-rule-set-editor.md
+        - name: Analyzátory FxCop
+          items:
+            - name: Instalace analyzátorů FxCop
+              href: install-fxcop-analyzers.md
+            - name: Migrace na analyzátory FxCop
+              items:
+                - name: Migrace ze starší verze analýzy na analyzátory FxCop
+                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+                - name: Nejčastější dotazy
+                  href: fxcop-analyzers-faq.md
+                - name: Přenesená pravidla
+                  href: fxcop-rule-port-status.md
+            - name: Konfigurace analyzátorů FxCop
+              items:
+                - name: Sady pravidel
+                  items:
+                    - name: Přehled
+                      href: rule-set-reference.md
+                    - name: Všechna pravidla
+                      href: all-rules-rule-set.md
+                    - name: Základní pravidla správnosti
+                      href: basic-correctness-rules-rule-set-for-managed-code.md
+                    - name: Základní pravidla obecných zásad návrhu
+                      href: basic-design-guideline-rules-rule-set-for-managed-code.md
+                    - name: Rozšířená pravidla správnosti
+                      href: extended-correctness-rules-rule-set-for-managed-code.md
+                    - name: Rozšířená pravidla obecných zásad návrhu
+                      href: extended-design-guidelines-rules-rule-set-for-managed-code.md
+                    - name: Pravidla globalizace
+                      href: globalization-rules-rule-set-for-managed-code.md
+                    - name: Minimální pravidla pro spravovaný kód
+                      href: managed-minimum-rules-rule-set-for-managed-code.md
+                    - name: Doporučená pravidla pro spravovaný kód
+                      href: managed-recommended-rules-rule-set-for-managed-code.md
+                    - name: Smíšená minimální pravidla
+                      href: mixed-minimum-rules-rule-set.md
+                    - name: Smíšená doporučená pravidla
+                      href: mixed-recommended-rules-rule-set.md
+                    - name: Nativní minimální pravidla
+                      href: native-minimum-rules-rule-set.md
+                    - name: Nativní doporučená pravidla
+                      href: native-recommended-rules-rule-set.md
+                    - name: Pravidla zabezpečení
+                      href: security-rules-rule-set-for-managed-code.md
+        - name: Sady pravidel
+          items:
+            - name: Přehled
+              href: using-rule-sets-to-group-code-analysis-rules.md
+            - name: Konfigurace sad pravidel
+              href: how-to-configure-code-analysis-for-a-managed-code-project.md
+            - name: Vytvoření vlastní sady pravidel
+              href: how-to-create-a-custom-rule-set.md
+            - name: Použití editoru sad pravidel
+              href: working-in-the-code-analysis-rule-set-editor.md
     - name: Metriky kódu
       items:
         - name: Přehled
@@ -158,43 +192,11 @@
           href: working-with-code-metrics-data.md
     - name: Odkaz
       items:
-        - name: Sady pravidel
-          items:
-            - name: Přehled
-              href: rule-set-reference.md
-            - name: Všechna pravidla
-              href: all-rules-rule-set.md
-            - name: Základní pravidla správnosti
-              href: basic-correctness-rules-rule-set-for-managed-code.md
-            - name: Základní pravidla obecných zásad návrhu
-              href: basic-design-guideline-rules-rule-set-for-managed-code.md
-            - name: Rozšířená pravidla správnosti
-              href: extended-correctness-rules-rule-set-for-managed-code.md
-            - name: Rozšířená pravidla obecných zásad návrhu
-              href: extended-design-guidelines-rules-rule-set-for-managed-code.md
-            - name: Pravidla globalizace
-              href: globalization-rules-rule-set-for-managed-code.md
-            - name: Minimální pravidla pro spravovaný kód
-              href: managed-minimum-rules-rule-set-for-managed-code.md
-            - name: Doporučená pravidla pro spravovaný kód
-              href: managed-recommended-rules-rule-set-for-managed-code.md
-            - name: Smíšená minimální pravidla
-              href: mixed-minimum-rules-rule-set.md
-            - name: Smíšená doporučená pravidla
-              href: mixed-recommended-rules-rule-set.md
-            - name: Nativní minimální pravidla
-              href: native-minimum-rules-rule-set.md
-            - name: Nativní doporučená pravidla
-              href: native-recommended-rules-rule-set.md
-            - name: Pravidla zabezpečení
-              href: security-rules-rule-set-for-managed-code.md
-        - name: Potlačení upozornění
-          href: in-source-suppression-overview.md
-        - name: Upozornění spravovaného kódu
+        - name: Pravidla analýzy kódu .NET
           items:
             - name: Přehled
               href: code-analysis-for-managed-code-warnings.md
-            - name: Upozornění podle CheckId
+            - name: Přehled pravidel pro kvalitu kódu
               href: code-analysis-warnings-for-managed-code-by-checkid.md
             - name: Upozornění kryptografie
               items:

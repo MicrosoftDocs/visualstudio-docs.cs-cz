@@ -1,24 +1,24 @@
 ---
-title: Instalace analyzátorů Roslyn
-ms.date: 08/03/2018
-ms.topic: how-to
+title: Nainstalovat analyzátory třetích stran
+ms.date: 08/27/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce30dd25c43f1ac8254dbdb6b04b747a976f3557
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 9da78f4c8e76f4e5b79f4cbdb0739d34fc465330
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371752"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091448"
 ---
-# <a name="install-net-compiler-platform-code-analyzers"></a>Nainstalovat .NET Compiler Platform analyzátory kódu
+# <a name="install-third-party-analyzers"></a>Nainstalovat analyzátory třetích stran
 
 Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform (*Roslyn*). Tyto analyzátory jsou vždycky zapnuté. Můžete nainstalovat další analyzátory buď jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v souborech *VSIX* .
 
@@ -26,7 +26,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 1. Najděte balíček analyzátoru, který chcete nainstalovat na www.nuget.org.
 
-   Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#nuget-package) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné. Případně můžete nainstalovat [StyleCop. analyzers](https://www.nuget.org/packages/stylecop.analyzers/) pro hledání problémů se stylem v základu kódu.
+   Například můžete chtít nainstalovat [StyleCop. analyzers](https://www.nuget.org/packages/stylecop.analyzers/) pro hledání problémů se stylem v základu kódu.
 
 2. Nainstalujte balíček v aplikaci Visual Studio pomocí [konzoly Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
 
@@ -63,7 +63,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 3. Do vyhledávacího pole zadejte název rozšíření analyzátoru, které chcete nainstalovat. Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#vsix) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné.
 
-4. Vyberte **Download** (Stáhnout).
+4. Vyberte **Stáhnout**.
 
    Rozšíření se stáhne.
 

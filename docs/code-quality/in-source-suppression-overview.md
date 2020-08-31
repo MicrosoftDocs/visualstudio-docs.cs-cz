@@ -1,12 +1,12 @@
 ---
-title: Potlačit upozornění analýzy kódu
-ms.date: 12/01/2018
+title: Potlačit porušení analýzy kódu
+ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
 - code analysis, source suppression
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 745bc0c53738370816ad74be9249b721f236ad87
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.openlocfilehash: aa650197f291c48c0c025563098181ea1cfa19a7
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88893369"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091435"
 ---
-# <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
+# <a name="suppress-code-analysis-violations"></a>Potlačit porušení analýzy kódu
 
 Je často vhodné označit, že upozornění není k dispozici. To znamená, že členové týmu byli zkontrolováni kód a že je možné upozornění potlačit. In-source potlačení (ISS) používá <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atribut k potlačení upozornění. Atribut může být umístěn blízko segmentu kódu, který vygeneroval upozornění. Atribut můžete přidat <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> do zdrojového souboru jeho zadáním do, nebo můžete použít místní nabídku na upozornění v **Seznam chyb** k jeho automatickému přidání.
 

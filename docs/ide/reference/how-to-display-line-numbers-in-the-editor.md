@@ -1,6 +1,6 @@
 ---
 title: Zobrazit čísla řádků pro kód
-ms.date: 03/28/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 helpviewer_keywords:
 - line numbers, displaying
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff6e0c50ab41f3d18458c736e48b0a4360b8b286
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 02d26a452315f144e52a78d7fcea737d39052f59
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770358"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091470"
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>Postupy: zobrazení čísel řádků v editoru
 
@@ -32,9 +32,9 @@ V kódu můžete zobrazit nebo skrýt číslování řádků.
 
    ![Možnost zobrazení čísel řádků v editoru VS](../../ide/reference/media/line-numbers-option.png)
 
-> [!TIP]
-> Čísla řádků nejsou přidána do kódu; jsou jenom pro referenci. Pokud chcete tisknout čísla řádků, zaškrtněte políčko **Zahrnout čísla řádků** v dialogovém okně **Tisk** .
+> [!NOTE]
+> Čísla řádků nejsou přidána do kódu; jsou jenom pro referenci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)
