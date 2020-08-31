@@ -1,5 +1,5 @@
 ---
-title: Přehled pravidel kvality kódu
+title: Přehled pravidel pro kvalitu kódu
 ms.date: 08/27/2020
 ms.topic: reference
 f1_keywords:
@@ -295,12 +295,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 485d3a066ec7d6044082367c36136db8bea03362
-ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
+ms.openlocfilehash: 61c15689e92132d4e3e089823bc94fc90852d4ed
+ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89091483"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176062"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -577,6 +577,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA2245 | [CA2245: Nepřiřazujte vlastnost k ní samotné.](../code-quality/ca2245.md) | Vlastnost byla omylem přiřazena sama sobě. |
 | CA2246 | [CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.](../code-quality/ca2246.md) | Přiřazení symbolu a jeho členu, tedy pole nebo vlastnost, ve stejném příkazu není doporučeno. Není jasné, jestli má členský přístup za cíl použít starou hodnotu symbolu před přiřazením nebo novou hodnotou z přiřazení v tomto prohlášení. |
 | CA2247 | [CA2247: argument předaný konstruktoru TaskCompletionSource by měl být parametr TaskCreationOptions enum namísto typ TaskContinuationOptions Enum.](../code-quality/ca2247.md) | TaskCompletionSource má konstruktory, které přijímají parametr TaskCreationOptions, které ovládají podkladovou úlohu a konstruktory, které přijímají stav objektu, který je uložen v úloze.  Náhodné předání typ TaskContinuationOptions namísto parametr TaskCreationOptions způsobí, že volání zpracuje možnosti jako stav. |
+| CA2249 | [CA2249: CA2249: Zvažte použití řetězce. obsahuje namísto String. IndexOf.](../code-quality/ca2249.md) | Volání na `string.IndexOf` místo, kde je použit výsledek pro kontrolu přítomnosti nebo absence podřetězce, může být nahrazena `string.Contains` . |
 | CA5122 | [Deklarace CA5122 P/Invoke by neměly být bezpečné kritické](../code-quality/ca5122.md) | Metody jsou při provádění operace citlivé na zabezpečení označeny jako SecuritySafeCritical, ale lze je také bezpečně použít transparentním kódem. Transparentní kód nesmí nikdy přímo volat nativní kód prostřednictvím P/Invoke. Proto označení P/Invoke jako bezpečně kritické z hlediska zabezpečení neumožní transparentnímu kódu vyvolat je a je zavádějící pro analýzu zabezpečení. |
 | CA5359 | [CA5359 Nezakázat ověřování certifikátu](../code-quality/ca5359.md) | Certifikát může pomáhat ověřit identitu serveru. Klienti by měli ověřit certifikát serveru, aby se zajistilo, že se požadavky odesílají na určený server. Pokud se ServerCertificateValidationCallback vždycky vrátí `true` , certifikát se předá ověření. |
 | CA5360 | [CA5360 nevolá nebezpečné metody v deserializaci.](../code-quality/ca5360.md) | Nezabezpečená deserializace je ohrožení zabezpečení, ke kterému dochází, pokud se nedůvěryhodná data používají k zneužití logiky aplikace, což způsobuje útok DoS (Denial of Service), nebo dokonce spouštějí libovolný kód, který je deserializován. Je často možné, že uživatelé se zlými úmysly můžou tyto funkce deserializace zneužít, když aplikace deserializace nedůvěryhodných dat, která jsou pod jejich ovládacími prvky. Konkrétně volejte nebezpečné metody v procesu deserializace. Nezabezpečené útoky na deserializaci by mohly útočníkovi umožnit provést útoky, jako jsou útoky DoS, obcházení ověřování a vzdálené spuštění kódu. |
