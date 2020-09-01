@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5502989e3866cb28d05e36d4c88e38574e5987c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 03bd4d286ab0bcba37c9c1761c0331ce1347f313
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587599"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219670"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>Sada pravidel Pravidla globalizace pro spravovaný kód
 
@@ -28,7 +28,8 @@ Použijte pravidlo Microsoft globalizace pravidla, která se zaměřují na prob
 |[CA1304](../code-quality/ca1304.md)|Určete CultureInfo|
 |[CA1305](../code-quality/ca1305.md)|Určete IFormatProvider|
 |[CA1306](../code-quality/ca1306.md)|Nastavte národního prostředí pro datové typy|
-|[CA1307](../code-quality/ca1307.md)|Určete StringComparison|
+|[CA1307](../code-quality/ca1307.md)|Zadejte StringComparison pro přehlednost.|
 |[CA1308](../code-quality/ca1308.md)|Normalizujte řetězce na velká písmena|
 |[CA1309](../code-quality/ca1309.md)|Použijte řadový StringComparison|
+|[CA1310](../code-quality/ca1310.md)|Zadejte StringComparison pro správnost.|
 |[CA2101](../code-quality/ca2101.md)|Určete zařazování pro argumenty řetězce volání nespravovaného kódu|
