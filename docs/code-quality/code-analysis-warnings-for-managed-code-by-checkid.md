@@ -84,6 +84,7 @@ f1_keywords:
 - CA1307
 - CA1308
 - CA1309
+- CA1310
 - CA1400
 - CA1401
 - CA1402
@@ -173,6 +174,7 @@ f1_keywords:
 - CA1833
 - CA1835
 - CA1836
+- CA1837
 - CA1838
 - CA1900
 - CA1901
@@ -184,6 +186,7 @@ f1_keywords:
 - CA2004
 - CA2006
 - CA2007
+- CA2008
 - CA2009
 - CA2011
 - CA2012
@@ -295,12 +298,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61c15689e92132d4e3e089823bc94fc90852d4ed
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.openlocfilehash: 05937cef7187726134a7116edae4d74ee004de1d
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176062"
+ms.locfileid: "89219748"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>Upozornění analýzy kódu pro spravovaný kód podle CheckId
 
@@ -382,9 +385,10 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1304 | [CA1304: Určete CultureInfo](../code-quality/ca1304.md) | Metoda nebo konstruktor volá člen, který má přetížení přijímající parametr System.Globalization.CultureInfo, a tato metoda nebo konstruktor nevolá přetížení přebírající parametr CultureInfo. Pokud objekt CultureInfo nebo System.IFormatProvider není zadán, nemusí mít výchozí hodnota zadaná pomocí přetíženého členu ve všech národních prostředích požadovaný efekt. |
 | CA1305 | [CA1305: Určete IFormatProvider](../code-quality/ca1305.md) | Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení přijímající parametr System.IFormatProvider, a tato metoda nebo konstruktor nevolá přetížení, která přebírá parametr IFormatProvider. Pokud objekt System.Globalization.CultureInfo nebo IFormatProvider není zadán, nemusí mít výchozí hodnota zadaná pomocí přetíženého členu ve všech národních prostředích požadovaný efekt. |
 | CA1306 | [CA1306: Nastavte národního prostředí pro datové typy](../code-quality/ca1306.md) | Národní prostředí určuje prvky prezentace specifické kultury pro data, například formátování použité pro číselné hodnoty, symboly měny a pořadí řazení. Při vytváření objektu DataSet nebo DataTable byste měli explicitně nastavit národní prostředí. |
-| CA1307 | [CA1307: Určete StringComparison](../code-quality/ca1307.md) | Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison. |
+| CA1307 | [CA1307: určení StringComparison pro přehlednost](../code-quality/ca1307.md) | Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison. |
 | CA1308 |[CA1308: Normalizujte řetězce na velká písmena](../code-quality/ca1308.md) | Řetězce by měly být normalizovány na velká písmena. Malá skupina znaků nedokáže po převodu na malá písmena provést zpáteční cestu. |
 | CA1309 | [CA1309: Použijte řadový StringComparison](../code-quality/ca1309.md) | Nelingvistická operace porovnání řetězců nemá nastaven parametr StringComparison na hodnotu Ordinal ani na hodnotu OrdinalIgnoreCase. Explicitním nastavením parametru na hodnotu StringComparison.Ordinal nebo StringComparison.OrdinalIgnoreCase dojde ke zrychlení kódu a zvýšení přesnosti a spolehlivosti. |
+| CA1310 | [CA1310: zadejte StringComparison pro správnost](../code-quality/ca1310.md) | Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison a ve výchozím nastavení používá porovnávání řetězců specifické pro jazykovou verzi. |
 | CA1400 | [CA1400: vstupní body volání nespravovaného volání by měly existovat](../code-quality/ca1400.md) |Veřejná nebo chráněná metoda je označena pomocí atributu System.Runtime.InteropServices.DllImportAttribute. Nespravovanou knihovnu nelze nalézt nebo nelze metodu porovnat s funkcí v knihovně. |
 | CA1401 | [CA1401: volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401.md) | Veřejná nebo chráněná metoda ve veřejném typu má atribut System.Runtime.InteropServices.DllImportAttribute (také implementováno pomocí klíčového slova Declare v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ). Tyto metody by neměly být vystaveny. |
 | CA1402 |[CA1402: Vyhněte se přetížení ve viditelných rozhraních modelu COM](../code-quality/ca1402.md) | Když jsou přetížené metody vystaveny klientům modulu COM, zachová svůj název pouze první přetížení metody. Následná přetížení jsou jednoznačně přejmenována přidáním podtržítka (_) a celého čísla odpovídajícího pořadí deklarace tohoto přetížení. |
@@ -467,6 +471,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA1833 |[CA1833: Pro získání části Span nebo Memory pole používat místo indexerů založených na rozsahu metodu AsSpan nebo AsMemory](../code-quality/ca1833.md) | Při použití rozsahu indexeru v poli a implicitně přiřadí hodnotu <xref:System.Span%601> <xref:System.Memory%601> typu nebo, bude <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> použita metoda namísto <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , která vytvoří kopii požadované části pole. |
 | CA1835 |[CA1835: preferovat přetížení založené na Memory' pro ReadAsync a WriteAsync](../code-quality/ca1835.md) | ' Stream ' má přetížení ' ReadAsync ', které jako první argument přebírá ' paměť &lt; Byte &gt; ' a přetížení ' WriteAsync ', které jako první argument přebírá ' &lt; ReadOnlyMemory byte &gt; '. Preferovat volání přetížení založeného na paměti, což je efektivnější. |
 | CA1836 |[CA1836: preferovat více, je- `IsEmpty` `Count` li k dispozici](../code-quality/ca1836.md) | Preferovat `IsEmpty` vlastnost, která je efektivnější než `Count` , `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> nebo <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> k určení, zda objekt obsahuje nebo neobsahuje žádné položky. |
+| CA1837 | [CA1837: použijte `Environment.ProcessId` místo `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` je jednodušší a rychlejší než `Process.GetCurrentProcess().Id` . |
 | CA1838 | [CA1838: Vyhněte se `StringBuilder` parametrům pro volání nespravovaného volání](../code-quality/ca1838.md) | Zařazování ' StringBuilder ' vždy vytvoří nativní kopii vyrovnávací paměti, což vede k vícenásobnému přidělení pro jednu operaci zařazování. |
 | CA1900 | [CA1900: Pole typů hodnot by měla být přenosná](../code-quality/ca1900.md) | Toto pravidlo kontroluje, zda struktury, které jsou deklarovány pomocí explicitního rozložení, budou při zařazení na nespravovaný kód v 64bitových operačních systémech správně zarovnány. |
 | CA1901 | [CA1901: deklarace P/Invoke by měly být přenosné](../code-quality/ca1901.md) | Toto pravidlo vyhodnotí velikost každého parametru a vrácené hodnoty vyvolání P/Invoke a ověří, zda je velikost parametru správná při zařazení na nespravovaný kód na 32bitových a 64bitových operačních systémech. |
@@ -478,6 +483,7 @@ Následující tabulka obsahuje seznam upozornění analýzy kódu pro spravovan
 | CA2004 | [CA2004: Odeberte volání GC.KeepAlive](../code-quality/ca2004.md) | Pokud převádíte na použití SafeHandle, odeberte veškerá volání GC.KeepAlive (object). V tomto případě by třídy neměly volat metodu GC.KeepAlive. To předpokládá, že nemají destruktor, ale spoléhají na SafeHandle, že dokončí popisovač operačního systému za ně. |
 | CA2006 | [CA2006: Použijte SafeHandle k zapouzdření nativních prostředků](../code-quality/ca2006.md) | Použití IntPtr ve spravovaném kódu může znamenat možný problém zabezpečení a spolehlivosti. Všechna použití IntPtr musí být přezkoumána za účelem určení, zda je použití SafeHandle (nebo podobné technologie) na tomto místě vyžadováno. |
 | CA2007 | [CA2007: Nečekejte přímo na úlohu](ca2007.md) | Asynchronní metoda [čeká](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task> přímo. Když asynchronní metoda čeká <xref:System.Threading.Tasks.Task> přímo, pokračování probíhá ve stejném vláknu, které úlohu vytvořilo. Toto chování může být nákladné v souvislosti s výkonem a může způsobit zablokování ve vlákně uživatelského rozhraní. Zvažte volání <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> , abyste vyvolali svůj záměr na pokračování. |
+| CA2008 | [CA2008: Nevytvářejte úlohy bez předávání TaskScheduler](ca2008.md) | Operace vytvoření nebo pokračování úlohy používá přetížení metody, které neurčuje <xref:System.Threading.Tasks.TaskScheduler> parametr. |
 | CA2009 | [CA2009: Nevolejte ToImmutableCollection pro hodnotu ImmutableCollection](ca2009.md) | `ToImmutable` Metoda byla nutně volána pro neproměnlivou kolekci z <xref:System.Collections.Immutable> oboru názvů. |
 | CA2011 | [CA2011: Nepřiřazujte vlastnost v rámci její metody setter](ca2011.md) | Vlastnost byla omylem přiřazena hodnota v rámci vlastního [přístupového objektu set](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor). |
 | CA2012 | [CA2012: Správně použít hodnoty ValueTask](ca2012.md) | ValueTasks vrácené z vyvolání členů mají být přímo očekávány.  Pokusí se využít ValueTask vícekrát nebo získat přímý přístup k jednomu výsledku před tím, než je známý k dokončení, může způsobit výjimku nebo poškození.  Ignorování takového ValueTask je pravděpodobně indikace funkční chyby a může snížit výkon. |

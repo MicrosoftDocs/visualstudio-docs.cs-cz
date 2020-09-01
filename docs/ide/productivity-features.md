@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33eb146ce36bfa36dbe28fdcec0f7dfb85daa59b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184078"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219761"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Průvodce produktivitou pro Visual Studio
 
@@ -24,7 +24,7 @@ Informace o užitečných klávesových zkratkách najdete v tématu věnovaném
 
 Šetřete čas prozkoumá prostřednictvím nabídek, a to tak, že rychle vyhledáte cokoli, co potřebujete, včetně příkazů, nastavení, dokumentace a možností instalace. V sadě Visual Studio najdete klávesové zkratky pro příkazy v rámci výsledků hledání, abyste je mohli snadno nepamatují. 
 
-- **Kód v seznamu úkolů**. Pokud nemáte dostatek požadavků k dokončení části kódu, použijte Seznam úkolů ke sledování komentářů kódu, které používají tokeny, jako jsou `TODO` a `HACK` , nebo vlastní tokeny, a ke správě zástupců, které vás přejímají přímo na předdefinované umístění v kódu. Další informace najdete v tématu [použití seznam úkolů](../ide/using-the-task-list.md.).
+- **Kód v seznamu úkolů**. Pokud nemáte dostatek požadavků k dokončení části kódu, použijte Seznam úkolů ke sledování komentářů kódu, které používají tokeny, jako jsou `TODO` a `HACK` , nebo vlastní tokeny, a ke správě zástupců, které vás přejímají přímo na předdefinované umístění v kódu. Další informace najdete v tématu [použití seznam úkolů](../ide/using-the-task-list.md).
 
 - **Použijte zástupce Průzkumník řešení**. Pokud s Visual Studiem začínáte, budou tyto klávesové zkratky užitečné a ušetříte si čas, kdy budete mít k dispaměti nový základ kódu. Úplný seznam klávesových zkratek naleznete v tématu [výchozí klávesové zkratky v aplikaci Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL).
 
@@ -60,7 +60,7 @@ Vytvářejte kód rychleji pomocí následujících funkcí.
 
 - **Použijte ukázkové aplikace**. Vývoj aplikací můžete urychlit stažením a instalací ukázkových aplikací ze [sítě Microsoft Developer Network](https://code.msdn.microsoft.com/). Můžete si také přečíst konkrétní technologii nebo programovací koncept stažením a prozkoumáním ukázkové sady pro tuto oblast.
 
-- **Změna formátování složených závorek s formátováním/novými řádky** Pomocí stránky možnosti **formátování** můžete nastavit možnosti formátování kódu v editoru kódu, včetně nových řádků. Další informace o tom, jak používat toto nastavení v jazyce C#, naleznete v [dialogovém okně Možnosti: textový Editor > C# > stylu kódu > formátování](../ide/reference/options-text-editor-csharp-formatting.md). Jazyk C++ naleznete [v tématu Nastavení předvoleb kódování jazyka c++ v sadě Visual Studio](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Pro Python si přečtěte téma [formátování kódu Pythonu](../python/formatting-python-code.md).
+- **Změna formátování složených závorek s formátováním/novými řádky** Pomocí stránky možnosti **formátování**  můžete nastavit možnosti formátování kódu v editoru kódu, včetně nových řádků. Další informace o tom, jak používat toto nastavení v jazyce C#, naleznete v [dialogovém okně Možnosti: textový Editor > C# > stylu kódu > formátování](../ide/reference/options-text-editor-csharp-formatting.md). Jazyk C++ naleznete [v tématu Nastavení předvoleb kódování jazyka c++ v sadě Visual Studio](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Pro Python si přečtěte téma [formátování kódu Pythonu](../python/formatting-python-code.md).
 
 - **Změňte odsazení pomocí tabulátorů**. Použijte vlastní nastavení editoru, které je přizpůsobené každému základu kódu, k vykonání konzistentních stylů kódování pro více vývojářů pracujících na stejném projektu napříč různými editory a architekturou IDEs. Zajistěte, aby celý tým měl stejné jazykové konvence, konvence pojmenování a pravidla formátování. Vzhledem k tomu, že jsou tato vlastní nastavení přenosné a cestovaná s vaším kódem, můžete vymáhat styly kódování i mimo sadu Visual Studio. Další informace najdete v tématu [Možnosti, textový editor, všechny jazyky, karty](../ide/reference/options-text-editor-all-languages-tabs.md#tabs).
 
@@ -112,7 +112,7 @@ Můžete hledat v integrovaném vývojovém prostředí (IDE) pro příkazy, sou
 
    Stiskněte klávesu **CTRL** + **Q** pro přechod přímo do vyhledávacího pole.
 
-## <a name="debug-code"></a>Ladicí kód
+## <a name="debug-code"></a>Ladění kódu
 
 Ladění může spotřebovat spoustu času, ale následující tipy vám pomůžou tento proces urychlit.
 
@@ -134,7 +134,7 @@ Ladění může spotřebovat spoustu času, ale následující tipy vám pomůž
 
      Chcete-li přidat DataTip, musí být ladicí program v režimu pozastavení. Umístěte kurzor na proměnnou a pak zvolte tlačítko Připnout na DataTip, které se zobrazí. Při zastavení ladění se ve zdrojovém souboru vedle řádku kódu, který obsahuje proměnnou, zobrazí ikona modrého kódu PIN. Pokud navedete ukazatel na modrý kód PIN, zobrazí se hodnota proměnné z poslední relace ladění.
 
-- **Vymažte okno Immediate**. Obsah [okamžitého okna](../ide/reference/immediate-window.md) můžete vymazat v době návrhu zadáním `>cls` nebo`>Edit.ClearAll`
+- **Vymažte okno Immediate**. Obsah [okamžitého okna](../ide/reference/immediate-window.md) můžete vymazat v době návrhu zadáním `>cls` nebo `>Edit.ClearAll`
 
      Další informace o dalších příkazech naleznete v tématu [Aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).
 

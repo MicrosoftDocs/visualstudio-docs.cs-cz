@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 84b37bce062ec5f1f406bc6ef9f6507399820af9
-ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
+ms.openlocfilehash: c3d9c1dfa45251d0f64a93bb9a5142dcec76b7c7
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82189473"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219722"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -68,14 +68,14 @@ ID pravidla | Nadpis
 [CA1063](ca1063.md) | Implementovat správně IDisposable
 [CA1064](ca1064.md) | Výjimky by měly být veřejné
 [CA1065](ca1065.md) | Nevyvolávejte výjimky v neočekávaných umístěních
-[CA1066](ca1066.md) | Typ {0} by měl implementovat\<IEquatable T>, protože přepisuje rovnost
-[CA1067](ca1067.md) | Přepsat Object. Equals (objekt) při implementaci IEquatable\<T>
+[CA1066](ca1066.md) | Typ {0} by měl implementovat IEquatable \<T> , protože přepisuje rovnost
+[CA1067](ca1067.md) | Přepsat Object. Equals (Object) při implementaci IEquatable\<T>
 [CA1068](ca1068.md) | Parametry CancellationToken musí být poslední.
 CA1200 | Nepoužívejte značky cref s předponou
 [CA1303](ca1303.md) | Nepředávejte literály jako lokalizované parametry
 [CA1304](ca1304.md) | Určete CultureInfo
 [CA1305](ca1305.md) | Určete IFormatProvider
-[CA1307](ca1307.md) | Určete StringComparison
+[CA1307](ca1307.md) | Zadejte StringComparison pro přehlednost.
 [CA1308](ca1308.md) | Normalizujte řetězce na velká písmena
 [CA1309](ca1309.md) | Použít ordinální porovnávání řetězců
 [CA1401](ca1401.md) | Volání nespravovaných kódů by neměla být viditelná
@@ -119,7 +119,7 @@ CA1826 | Nepoužívejte vyčíslitelné metody pro indexované kolekce. Místo t
 [CA2000](ca2000.md) | Uvolňujte objekty před ztrátou oboru
 [CA2002](ca2002.md) | Nepoužívejte zámky u objektů se slabou identitou
 [CA2007](ca2007.md) | Zvažte možnost zavolat ConfigureAwait na očekávaný úkol.
-CA2008 | Nevytvářejte úlohy bez předávání TaskScheduler
+[CA2008](ca2008.md) | Nevytvářejte úlohy bez předávání TaskScheduler
 CA2009 | Nevolejte ToImmutableCollection na hodnotu neměnnécollection
 CA2010 | Vždycky spotřebovat hodnotu vrácenou metodami označenými pomocí třídu PreserveSigAttribute nelze
 [CA2100](ca2100.md) | Zkontrolujte chyby zabezpečení u dotazů SQL

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.openlocfilehash: e20427ae3d64a485bb25da2f4482bbbec51e3dda
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88893421"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219774"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -102,6 +102,9 @@ Můžete nastavit závažnost pro specifickou kategorii pravidel analyzátoru ne
 - Nastavte závažnost pravidla pro všechna pravidla analyzátoru:
 
 `dotnet_analyzer_diagnostic.severity = <severity>`
+
+> [!NOTE]
+> Položky, které se mají nakonfigurovat víc pravidel analyzátoru najednou, se použijí jenom na pravidla, která jsou *ve výchozím nastavení povolená*. Pravidla analyzátoru, která jsou ve výchozím nastavení označena jako zakázaná v balíčku analyzátoru, musí být povolená prostřednictvím explicitních `dotnet_diagnostic.<rule ID>.severity = <severity>` záznamů.
 
 Pokud máte více položek, které se vztahují na ID konkrétního pravidla, je následující pořadí priorit výběru příslušné položky:
 
