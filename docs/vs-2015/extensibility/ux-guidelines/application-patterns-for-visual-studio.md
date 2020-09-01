@@ -8,17 +8,17 @@ ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: af70b191e4b9061d08acdc7f76ade843dee41709
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: cc14aadfafb16fcae571ab66e5811ea465cb55a9
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114117"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284402"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Vzory aplikací pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a>Interakce oken
+## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Interakce oken
 
 ### <a name="overview"></a>Přehled
  Dva hlavní typy oken používané v aplikaci Visual Studio jsou editory dokumentů a okna nástrojů. Vzácná, ale možná, jsou velká nemodální dialogová okna. I když jsou v prostředí všechny nemodální, jejich vzory jsou zásadním rozdílem. Toto téma popisuje rozdíl mezi okny dokumentu, okny nástrojů a nemodálními dialogy. V [dialogových oknech](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs)jsou pokryté modální vzory dialogových oken.
@@ -40,7 +40,7 @@ ms.locfileid: "88114117"
 |**Instance**|*Více instancí*<br /><br /> Několik editorů lze současně otevřít a upravovat různé soubory, zatímco některé editory také umožňují otevření stejného souboru ve více než jednom editoru (pomocí příkazu **window > New Window** ).<br /><br /> Jeden editor může upravovat jeden nebo více souborů současně (Návrhář projektu).|*Jedna nebo více instancí*<br /><br /> Obsah se mění tak, aby odrážel kontext (jako v prohlížeči vlastností), nebo předávat fokus/kontext do jiných oken (Seznam úkolů Průzkumník řešení).<br /><br /> Okna s aktivním dokumentem by mělo být přidruženo k oknu s aktivním dokumentem, pokud neexistuje přesvědčivý důvod.|*Jedna instance*|
 |**Příklady**|**Editory textu**, jako je editor kódu<br /><br /> **Návrhové plochy**, jako je Návrhář formuláře nebo plocha modelování<br /><br /> **Rozložení ovládacích prvků podobně jako dialogová okna**, jako je například Návrhář manifestu|**Průzkumník řešení** poskytuje řešení a projekty obsažené v řešení.<br /><br /> **Průzkumník serveru** poskytuje hierarchické zobrazení serverů a datových připojení, která uživatel zvolí k otevření v okně. Otevření objektu z hierarchie databáze, jako je například dotaz, otevře okno dokumentu a umožní uživateli upravit dotaz.<br /><br /> **Prohlížeč vlastností** zobrazuje vlastnosti objektu vybraného buď v okně dokumentu, nebo v jiném okně nástroje. Vlastnosti jsou uvedeny buď v hierarchickém zobrazení mřížky, nebo v komplexních ovládacích prvcích podobného dialogu a umožňují uživateli nastavit hodnoty těchto vlastností.||
 
-## <a name="tool-windows"></a><a name="BKMK_ToolWindows"></a>Okna nástrojů
+## <a name="tool-windows"></a><a name="BKMK_ToolWindows"></a> Okna nástrojů
 
 ### <a name="overview"></a>Přehled
  Okna nástrojů podporují práci uživatele, která se nachází v oknech dokumentů. Lze je použít k zobrazení hierarchie reprezentující základní kořenový objekt, který poskytuje aplikace Visual Studio a může s nimi manipulovat.
@@ -120,7 +120,7 @@ ms.locfileid: "88114117"
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Automatické hodnoty||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Projev||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Výstup|Okno výstup lze použít vždy, když máte textové události nebo stav k deklaraci.|
-|**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Memory (Paměť)||
+|**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Paměť||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Zarážky||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Spuštěný||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Dokumenty||
@@ -131,7 +131,7 @@ ms.locfileid: "88114117"
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Registrovat||
 |**Debugger:** skupina Windows specifická pro ladění úloh a monitorování aktivit|Vlákna||
 
-## <a name="document-editor-conventions"></a><a name="BKMK_DocumentEditorConventions"></a>Konvence editoru dokumentů
+## <a name="document-editor-conventions"></a><a name="BKMK_DocumentEditorConventions"></a> Konvence editoru dokumentů
 
 ### <a name="document-interactions"></a>Interakce dokumentů
  "Document redocuments" je největší místo v rámci rozhraní IDE a je tam, kde se uživatel obecně zaměřuje na jejich pozornost, aby mohl dokončit své úkoly, což je pomocná pro další okna nástrojů. Editory dokumentů reprezentují základní pracovní jednotky, které uživatel otevře a ukládá v rámci sady Visual Studio. Zachovají silný smysl výběru vázaných na Průzkumník řešení nebo jiná okna s aktivní hierarchií. Uživatel by měl být schopný nasměrovat na jedno z těchto oken hierarchie a zjistit, kde je dokument obsažený, a jeho vztah k řešení, projektu nebo jinému kořenovému objektu poskytovanému balíčkem sady Visual Studio.
@@ -239,7 +239,7 @@ ms.locfileid: "88114117"
 
 - Uživatelé musí být schopni pracovat s ovládacími prvky pouze pomocí klávesnice, a to buď aktivací editoru a procházením pomocí ovládacích prvků, nebo pomocí standardních symbolických instrukcí.
 
-## <a name="dialogs"></a><a name="BKMK_Dialogs"></a>Dialogových oknech
+## <a name="dialogs"></a><a name="BKMK_Dialogs"></a> Dialogových oknech
 
 ### <a name="introduction"></a>Úvod
  Dialogová okna v aplikaci Visual Studio by obvykle podporovala jednu diskrétní jednotku práce uživatele a pak byla zrušena.
@@ -295,14 +295,14 @@ ms.locfileid: "88114117"
 
 - [Průvodci](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Wizards) jsou užitečné pro přesměrování uživatele prostřednictvím logické sekvence kroků k dokončení úkolu. Řady možností jsou nabízeny v sekvenčních panelech, někdy ale zabývají různé pracovní postupy ("větve") závislé na výběru provedeném na předchozím panelu.
 
-#### <a name="simple-dialogs"></a><a name="BKMK_SimpleDialogs"></a>Jednoduchá dialogová okna
+#### <a name="simple-dialogs"></a><a name="BKMK_SimpleDialogs"></a> Jednoduchá dialogová okna
  Jednoduchý dialog je prezentace ovládacích prvků v jednom modálním okně. Tato prezentace může zahrnovat variace složitých vzorů ovládacích prvků, jako je například výběr polí. Pro jednoduché dialogy použijte standardní obecné rozložení a také všechna konkrétní rozložení nutná pro komplexní seskupení ovládacích prvků.
 
  ![Jednoduchý dialog v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0704-01-createstrongnamekey.png "0704 – 01_CreateStrongNameKey")
 
  **Vytvoření klíče se silným názvem je příkladem jednoduchého dialogového okna v aplikaci Visual Studio.**
 
-#### <a name="layered-dialogs"></a><a name="BKMK_LayeredDialogs"></a>Vrstvená dialogová okna
+#### <a name="layered-dialogs"></a><a name="BKMK_LayeredDialogs"></a> Vrstvená dialogová okna
  Vrstvená dialogová okna zahrnují karty, řídicí panely a vložené stromy. Používají se k maximalizaci skutečné nemovitosti, pokud je v jedné části uživatelského rozhraní nabídnuto více skupin ovládacích prvků. Seskupení jsou vrstvená tak, aby si uživatel mohl kdykoli zobrazit.
 
  V nejjednodušším případě je mechanismus pro přepínání mezi seskupeními ovládací prvek karta. K dispozici je několik alternativ. Jak zvolit nejvhodnější styl, najdete v tématu určení priorit a vrstvení.
@@ -313,7 +313,7 @@ ms.locfileid: "88114117"
 
  **Nástroje > možnosti jsou příkladem vrstveného dialogového okna v aplikaci Visual Studio.**
 
-#### <a name="wizards"></a><a name="BKMK_Wizards"></a>Průvodc
+#### <a name="wizards"></a><a name="BKMK_Wizards"></a> Průvodc
  Průvodci jsou užitečné pro přesměrování uživatele prostřednictvím logické sekvence kroků při dokončení úkolu. Řada možností je nabízena v sekvenčních panelech a uživatel musí pokračovat v každém kroku, než bude pokračovat na další. Jakmile jsou k dispozici dostatečné výchozí hodnoty, je tlačítko **Dokončit** povolené.
 
  Modální průvodci se používají pro úlohy, které:
@@ -394,7 +394,7 @@ ms.locfileid: "88114117"
 #### <a name="imagery"></a>Obrázcích
  Používejte v dialogových oknech jenom obrázky. Nepoužívejte velké ikony v dialogových oknech pouze k použití prostoru. Použijte image jenom v případě, že jsou důležitou součástí předávání zprávy uživateli, jako jsou ikony upozornění nebo animace stavu.
 
-### <a name="prioritizing-and-layering"></a><a name="BKMK_PrioritizingAndLayering"></a>Stanovení priorit a vrstvení
+### <a name="prioritizing-and-layering"></a><a name="BKMK_PrioritizingAndLayering"></a> Stanovení priorit a vrstvení
 
 #### <a name="prioritizing-your-ui"></a>Určení priorit uživatelského rozhraní
  Může být nutné přenést do Forefrontu určité prvky uživatelského rozhraní a umístit pokročilejší chování a možnosti (včetně překrytí příkazů) do dialogových oken. Vydejte do Forefrontu často používané funkce tím, že pro ni využijete místo a v uživatelském rozhraní se zobrazí textový popisek, když se zobrazí dialogové okno.
@@ -425,7 +425,7 @@ ms.locfileid: "88114117"
 ##### <a name="adaptive-ui"></a>Adaptivní uživatelské rozhraní
  Zobrazení nebo skrytí uživatelského rozhraní na základě využití nebo přihlášeného prostředí uživatele je dalším způsobem, jak předkládat potřebné uživatelské rozhraní při skrývání dalších částí. V sadě Visual Studio to nedoporučujeme, protože algoritmy pro rozhodování o zobrazení nebo skrytí uživatelského rozhraní můžou být obtížné a pravidla budou v některých případech vždy chybná.
 
-## <a name="projects"></a><a name="BKMK_Projects"></a>Projekty
+## <a name="projects"></a><a name="BKMK_Projects"></a> Projekty
 
 ### <a name="projects-in-the-solution-explorer"></a>Projekty v Průzkumník řešení
  Většina projektů je klasifikována jako založená na odkazech, v adresáři nebo v kombinaci. Všechny tři typy projektů jsou v Průzkumník řešení podporovány současně. V rámci tohoto okna se koná kořen uživatelského prostředí při práci s projekty. I když různé uzly projektu jsou referenční, adresář nebo projekty typu kombinovaného režimu, existuje společný vzor interakce, který by měl být použit jako výchozí bod před rozdílním na uživatelské vzory specifické pro projekt.
@@ -491,7 +491,7 @@ ms.locfileid: "88114117"
 #### <a name="reference-based-projects"></a>Projekty založené na odkazech
  Následující tabulka shrnuje operace přetahování (a také funkce vyjmout/kopírovat/vložit), které by se měly provést na základě povýšení pro cílové projekty určené pro odkazy na základě povahy zdrojové položky a modifikačních kláves:
 
-|Modifikátor|Operace|Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
+|||Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Žádný modifikátor|Akce|Přesunout|Odkaz|
 |Žádný modifikátor|Cíl|Přidá odkaz na původní položku.|Přidá odkaz na původní položku.|
@@ -522,7 +522,7 @@ ms.locfileid: "88114117"
 #### <a name="directory-based-projects"></a>Projekty založené na adresářích
  Následující tabulka shrnuje operace přetahování (a také funkce vyjmout/kopírovat/vložit), které by se měly provádět na základě povýšení pro cílové projekty v adresářích, a to v závislosti na povaze zdrojové položky a modifikačních kláves:
 
-|Modifikátor|Operace|Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
+|||Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Žádný modifikátor|Akce|Přesunout|Přesunout|
 |Žádný modifikátor|Cíl|Zkopíruje položku do cílového umístění.|Zkopíruje položku do cílového umístění.|
@@ -549,7 +549,7 @@ ms.locfileid: "88114117"
 #### <a name="mixed-target-projects"></a>Smíšené cílové projekty
  Následující tabulka shrnuje operace přetahování (a také funkce vyjmout/kopírovat/vložit), které by se měly provádět na základě povaze zdrojové položky a modifikačních kláves pro projekty se smíšeným cílem:
 
-|Modifikátor|Operace|Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
+|||Zdrojová položka: odkaz nebo odkaz|Zdrojová položka: fyzická položka nebo systém souborů (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Žádný modifikátor|Akce|Přesunout|Přesunout|
 |Žádný modifikátor|Cíl|Přidá odkaz na původní položku.|Zkopíruje položku do cílového umístění.|

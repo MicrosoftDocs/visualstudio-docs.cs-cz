@@ -8,12 +8,12 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cd3ed1477d1c4d345e5fc6f6496d12044d4af244
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: e2e1df362fddeab5be98ff90460a8a1a7d4b7876
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114226"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284331"
 ---
 # <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>VSIXLanguagePack – element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,39 +62,13 @@ Povinná hodnota. Poskytuje kořenový prvek pro jazykovou sadu VSIX. Jazyková 
 |Žádné||  
   
 ## <a name="element-information"></a>Informace o elementu  
-
-:::row:::
-    :::column:::
-        Obor názvů
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Název schématu
-    :::column-end:::
-    :::column:::
-        Schéma jazykové sady VSIX
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Soubor ověření
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema. xsd
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Může být prázdné
-    :::column-end:::
-    :::column:::
-        Ne
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Název schématu   |                 Schéma jazykové sady VSIX                 |
+| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
+|  Může být prázdné   |                            Ne                             |
   
 ## <a name="see-also"></a>Viz také  
  [Odkaz na schéma VSX Language Pack – referenční](../extensibility/vsx-language-pack-schema-reference.md) [dokumentace](../extensibility/localizing-vsix-packages.md) [schématu rozšíření VSIX](/previous-versions/dd393700(v=vs.110)) balíčku VSIX – Referenční dokumentace schématu 1,0

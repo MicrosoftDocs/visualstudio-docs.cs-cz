@@ -8,12 +8,12 @@ ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 983a5d91fee40245f6a7d6877ccf38e666fa586e
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 2cd3c16437829e9701a2354b4f40c557a654f466
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114138"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284406"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Složené vzory pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 - [Dotykové zadání](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)
 
-## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a>Vizualizace dat
+## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a> Vizualizace dat
 
 ### <a name="overview"></a>Přehled
  Grafy představují vizuální způsob agregace a vizualizace dat s cílem zlepšit rozhodování. Můžou uživatelům pomáhat s velkým množstvím dat, ale málo znamenají, co zachovává pozornost a co by mohlo potřebovat akci.
@@ -83,7 +83,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 |![79D7F2 vzorníku](../../extensibility/ux-guidelines/media/0711-79d7f2.png "0711_79D7F2")|#79D7F2|121 215 242|
 |![B5B5B5 vzorníku](../../extensibility/ux-guidelines/media/0711-b5b5b5.png "0711_B5B5B5")|#B5B5B5|181 181 181|
 
-## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a>Uživatelské rozhraní pro objekty a prohlížení
+## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a> Uživatelské rozhraní pro objekty a prohlížení
  V této části je uveden kontext pro prohlížení, označovaný také jako náhled kódu, typ uživatelského rozhraní pro objekty, který je jedinečný pro sadu Visual Studio.
 
 ### <a name="overview"></a>Přehled
@@ -249,7 +249,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 - **Nikdy** nezobrazovat obsah při najetí myší, který je možná upravitelný nebo pozve na interakci uživatele Toto chování může frustrovat uživatele, pokud se pokusí přesunout kurzor nad obsah s podrobnostmi, protože standardní chování pro popis tlačítka se okamžitě odvolá, když ukazatel už není nad hlavním obsahem, který ho vytvořil.
 
-## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a>Modely výběru
+## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a> Modely výběru
 
 ### <a name="overview"></a>Přehled
  Model výběru je mechanismus používaný k označení a potvrzení operací na jednom nebo více objektech, které mají zájem v rámci uživatelského rozhraní. Toto téma popisuje vzory interakcí výběru v rámci editorů dokumentů sady Visual Studio: textové editory, návrhové plochy a povrchy modelování.
@@ -274,7 +274,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 - Oblast
 
-#### <a name="scope"></a>Rozsah
+#### <a name="scope"></a>Obor
  Nejdůležitější součástí výběru je zajistit, že uživatel ví, ve kterém okně pracují (aktivace) a kde se nachází fokus (výběr). Visual Studio rozšiřuje funkce správy oken ve Windows, ale schéma aktivace je stejné: interakce s oknem přináší fokus na okno. Visual Studio má dva indikátory pro aktivaci: jeden pro okna dokumentů a jeden pro okna nástrojů.
 
  V případě oken dokumentů je aktivní okno označeno na kartě okna dokumentu, které přichází dopředu a mění jeho barvu pozadí:
@@ -392,10 +392,10 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
  **Primární výběr se dvěma sekundárními výběry**
 
-#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a>Vzhled výběru grafického objektu
+#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Vzhled výběru grafického objektu
  Popisovače výběru jsou čtverce vykreslené v obdélníkovém vzoru kolem ohraničujícího rámečku objektu. Následující graf ukazuje příklady různých stavů, které může grafický objekt mít s popisovačem, velikostí a místním zobrazením úprav. Velikost popisovačů by měla být svázaná s metrikami ohraničení a okraje okna pomocí rozhraní API **GetSystemMetrics** .
 
-|          State          |  Příznaky   |                                                                  Podrobnosti vizuálu                                                                  |
+|          Stav          |  Příznaky   |                                                                  Podrobnosti vizuálu                                                                  |
 |-------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 |     **Nevybrané**      |    Výchozí    |                 ![Výchozí stav tlačítka](../../extensibility/ux-guidelines/media/0713-10-defaultstate.png "0713 – 10_DefaultState")                 |
 |  **Primární výběr**  |   Možností změny velikosti   |       ![Primární výběr s úchyty pro změnu velikosti](../../extensibility/ux-guidelines/media/0713-11-primaryresize.png "0713 – 11_PrimaryResize")        |
@@ -473,7 +473,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 - Klávesa F2 aktivuje místní úpravy pro aktuálně vybranou buňku.
 
-## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a>Nastavení trvalosti a ukládání
+## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a> Nastavení trvalosti a ukládání
 
 ### <a name="overview"></a>Přehled
  I když je každá součást softwaru v aplikaci Visual Studio obvykle zodpovědná za svůj stav a trvalost, Visual Studio automaticky ukládá nastavení v některých případech, například u velikostí oken a umístění. Tabulka níže je kombinací nastavení automaticky uložených a nastavení, které vyžaduje, aby se provedla explicitní akce uživatele nebo programu.
@@ -508,7 +508,7 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 #### <a name="profile-specific-layouts"></a>Rozložení pro konkrétní profil
  Každý profil zahrnuje rozložení oken nástrojů uspořádaná způsobem, který je obeznámen se specifickým vývojářům osoby (Visual C++ vývojářům očekávat **Průzkumník řešení** na levé straně rozhraní IDE, zatímco vývojáři v jazyce C# očekávají, že **Průzkumník řešení** na pravé straně). Rozložení okna pro konkrétní profil se načítají poté, co uživatel zvolí profil při spuštění. Autor balíčku by měl určit rozložení oken nejvhodnější pro činnost svého zákazníka, a to s vědomím, že změny, které uživatel provede v konfiguraci okna, budou trvalé.
 
-## <a name="touch-input"></a><a name="BKMK_TouchInput"></a>Dotykové zadání
+## <a name="touch-input"></a><a name="BKMK_TouchInput"></a> Dotykové zadání
  U zařízení s dotykovým ovládáním se uživatelům stále častěji používají vývojové produkty Microsoftu. Existují však bariéry, které usnadňují použití vývojářských nástrojů na dotykové zařízeních. Uživatelé očekávají, že naše produkty budou poskytovat spolehlivé a přesné možnosti dotykového ovládání. Účelem těchto pokynů je informovat o rozhodnutích o tom, které dotykové možnosti začlenit a podpořit konzistentní možnosti dotykového ovládání v rámci sady Visual Studio a souvisejících produktů.
 
 ### <a name="levels-of-experience"></a>Úrovně zkušeností
@@ -522,13 +522,13 @@ Složené vzory kombinují interakce a prvky návrhu v různých konfiguracích.
 
 ||Základní prostředí|Optimalizované prostředí|Prostředí se zvýšenými oprávněními|
 |-|----------------------|--------------------------|-------------------------|
-|**Povoluje uživatelům...**|Opravit kód a řešení/projekt-úroveň čtení bez mrtvých konců|Provádění údržby, refaktorů a navigačních úloh|Spolehlivá, intuitivní a plynulé zážitky v provozu|
-|**Editor**|Posouvání dotykem a výběr<br /><br /> Klávesa ScrollBar – dotykové ovládání a stisknutí klávesy Ctrl + přetažení|Gesto roztažení prstů přiblížení<br /><br /> Rychlý posun<br /><br /> Výběr<br /><br /> Snadné použití místní nabídky||
-|**Okna hlavních nástrojů**|Posouvání seznamu<br /><br /> Výběr položky<br /><br /> Klávesa ScrollBar – dotykové ovládání a stisknutí klávesy Ctrl + přetažení|Snadné posouvání a výběr položek||
-|**Oken**||Změnit velikost okna<br /><br /> Rychlý přístup||
-|**Dobře zdokumentovat**||Snadná navigace mezi otevřenými soubory||
-|**Gesta**||Zajištění fungování běžných gest napříč IDE|Akce založené na gestech<br /><br /> Podpora přetahování a návrhářů|
-|**Další důležité informace**|||Vlastní klávesnice na obrazovce|
+|Povoluje uživatelům...|Opravit kód a řešení/projekt-úroveň čtení bez mrtvých konců|Provádění údržby, refaktorů a navigačních úloh|Spolehlivá, intuitivní a plynulé zážitky v provozu|
+|Editor|Posouvání dotykem a výběr<br /><br /> Klávesa ScrollBar – dotykové ovládání a stisknutí klávesy Ctrl + přetažení|Gesto roztažení prstů přiblížení<br /><br /> Rychlý posun<br /><br /> Výběr<br /><br /> Snadné použití místní nabídky||
+|Okna hlavních nástrojů|Posouvání seznamu<br /><br /> Výběr položky<br /><br /> Klávesa ScrollBar – dotykové ovládání a stisknutí klávesy Ctrl + přetažení|Snadné posouvání a výběr položek||
+|Oken||Změnit velikost okna<br /><br /> Rychlý přístup||
+|Dobře zdokumentovat||Snadná navigace mezi otevřenými soubory||
+|Gesta||Zajištění fungování běžných gest napříč IDE|Akce založené na gestech<br /><br /> Podpora přetahování a návrhářů|
+|Další důležité informace|||Vlastní klávesnice na obrazovce|
 
 #### <a name="gestures"></a>Gesta
  Gesta poskytují uživatelům zástupce pro příkazy, které by jinak vyžadovaly složitější interakci. Přečtěte si pokyny pro systém Windows na [běžných gest dotykového ovládání pro aplikace klasické pracovní plochy](https://msdn.microsoft.com/library/windows/desktop/dd940543\(v=vs.85\).aspx)a postupujte podle těchto pokynů pro většinu gest, včetně jednoduchých gest, jako je například posouvání a přiblížení.

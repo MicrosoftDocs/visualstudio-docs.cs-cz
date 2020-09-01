@@ -8,12 +8,12 @@ ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 91f0792f64e09292836a3b2d60f669c67903b3a7
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: f1299d97cbda78049732d3367a9231272397e2ec
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114166"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284379"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>License – element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,39 +54,13 @@ Nepovinný parametr. Cesta k lokalizované verzi souboru s licencí pro rozší�
  Pokud `License` je definován element, pak se text určeného licenčního souboru zobrazí během instalace a uživatel musí licenci přijmout, aby bylo možné pokračovat.  
   
 ## <a name="element-information"></a>Informace o elementu  
-
-:::row:::
-    :::column:::
-        Obor názvů  
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Název schématu
-    :::column-end:::
-    :::column:::
-        Schéma jazykové sady VSIX
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Soubor ověření
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema. xsd
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Může být prázdné
-    :::column-end:::
-    :::column:::
-        Neuvedeno
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Název schématu   |                 Schéma jazykové sady VSIX                 |
+| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
+|  Může být prázdné   |                      Není                       |
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)   

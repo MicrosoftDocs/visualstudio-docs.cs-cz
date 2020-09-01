@@ -8,12 +8,12 @@ ms.assetid: 57b7f502-3b04-42d9-90d5-f57772a7c757
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 64d8430dbcf563ca232d1b8d850678925770219f
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 58e491290122a9d525ff8129333ac0f52ac5f778
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114170"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284335"
 ---
 # <a name="localizedname-element-vsix-language-pack-schema"></a>Lokalizovaný element (schéma jazykové sady VSIX)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,39 +51,13 @@ Povinná hodnota. Lokalizovaný název rozšíření, které má být nainstalov
  Povinná hodnota. Název jazykové sady v cílovém jazyce.  
   
 ## <a name="element-information"></a>Informace o elementu  
-
-:::row:::
-    :::column:::
-        Obor názvů
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Název schématu
-    :::column-end:::
-    :::column:::
-        Schéma jazykové sady VSIX
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Soubor ověření
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema. xsd
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Může být prázdné
-    :::column-end:::
-    :::column:::
-        Neuvedeno
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    Obor názvů    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Název schématu   |                 Schéma jazykové sady VSIX                 |
+| Soubor ověření |                VSIXLanguagePackSchema. xsd                 |
+|  Může být prázdné   |                      Není                       |
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace schématu VSX Language Pack](../extensibility/vsx-language-pack-schema-reference.md)   
