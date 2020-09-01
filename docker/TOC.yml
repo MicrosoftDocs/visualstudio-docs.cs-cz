@@ -1,2 +1,34 @@
-- name: Index
-  href: index.md
+- name: Docker
+  expanded: true
+  items:
+    - name: Úvod do Dockeru pro uživatele VS Code
+      expanded: true
+      items:
+        - name: Začínáme
+          href: tutorials/docker-tutorial.md
+        - name: 'Část 1: Aplikace'
+          href: tutorials/your-application.md
+        - name: 'Část 2: Aktualizace aplikace'
+          href: tutorials/update-your-app.md
+        - name: 'Část 3: Sdílení aplikace'
+          href: tutorials/share-your-app.md
+        - name: 'Část 4: Uchování databáze'
+          href: tutorials/persist-your-data.md
+        - name: 'Část 5: Použití připojení vazeb'
+          href: tutorials/use-bind-mounts.md
+        - name: 'Část 6: Vícekontejnerové aplikace'
+          href: tutorials/multi-container-apps.md
+        - name: 'Část 7: Použití Docker Compose'
+          href: tutorials/use-docker-compose.md
+        - name: 'Část 8: Osvědčené postupy pro vytváření imagí'
+          href: tutorials/image-building-best-practices.md
+        - name: 'Část 9: Nasazení do cloudu'
+          href: tutorials/deploy-to-cloud.md
+        - name: Co dále?
+          href: tutorials/whats-next.md
+        - name: zdroje
+          items:
+            - name: Příklady
+              href: 'https://github.com/docker/awesome-compose'
+            - name: Docker ACI Integration
+              href: 'https://github.com/docker/aci-integration-beta/'
