@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2225ce416fed4e97e998a50f70a0dc4c25908476
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664474"
 ---
 # <a name="how-to-export-a-shader"></a>Postupy: Exportování shaderu
@@ -40,11 +40,11 @@ Tento dokument ukazuje, jak pomocí Návrháře shaderu exportovat shader DGSL (
 
      Můžete zvolit následující formáty:
 
-     **HLSL pixel shader (\*. HLSL)** Exportuje shader jako zdrojový kód HLSL (High Level shader Language). Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale také usnadňuje uživateli upravit váš shader nežádoucím způsobem – například pro získání nerovné výhody v konkurenční hře. Může také prodloužit dobu načítání shaderu.
+     **HLSL pixel shader ( \* . HLSL)** exportuje shader jako zdrojový kód HLSL (High Level shader Language). Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale také usnadňuje uživateli upravit váš shader nežádoucím způsobem – například pro získání nerovné výhody v konkurenční hře. Může také prodloužit dobu načítání shaderu.
 
-     **Kompilovaný pixel shader (\*. CSO)** Exportuje shader jako HLSLový kód. Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale vzhledem k tomu, že shader je předem zkompilován, neposkytuje dodatečnou režii za běhu, když je shader načten aplikací. Dostatečně zkušení uživatelé mohou i nadále upravovat shader nevyžádanými způsoby, ale kompilování shaderu to dělá mnohem obtížnější.
+     **Kompilovaný pixel shader ( \* . CSO)** exportuje shader jako bytového kódu HLSL. Tato možnost umožňuje změnit shader později i po jeho nasazení v aplikaci. To může zjednodušit ladění a opravování kódu na základě problémů koncových uživatelů, ale vzhledem k tomu, že shader je předem zkompilován, neposkytuje dodatečnou režii za běhu, když je shader načten aplikací. Dostatečně zkušení uživatelé mohou i nadále upravovat shader nevyžádanými způsoby, ale kompilování shaderu to dělá mnohem obtížnější.
 
-     **Header (\*. h) C++**  Exportuje shader jako záhlaví ve stylu jazyka C, které definuje bajtové pole obsahující HLSL bajt. Tato možnost může být časově náročná na ladění a opravování kódu na základě problémů koncových uživatelů, protože aplikace musí být znovu zkompilována pro otestování opravy. Vzhledem k tomu, že tato možnost je obtížné, ale není nemožné, pro úpravu shaderu po jeho nasazení v aplikaci, prezentuje největší obtíže uživateli, který chce změnit shader nevyžádanými způsoby.
+     **Záhlaví C++ ( \* . h)** exportuje shader jako záhlaví ve stylu jazyka C, které definuje bajtové pole obsahující HLSL bajt. Tato možnost může být časově náročná na ladění a opravování kódu na základě problémů koncových uživatelů, protože aplikace musí být znovu zkompilována pro otestování opravy. Vzhledem k tomu, že tato možnost je obtížné, ale není nemožné, pro úpravu shaderu po jeho nasazení v aplikaci, prezentuje největší obtíže uživateli, který chce změnit shader nevyžádanými způsoby.
 
 4. V poli se seznamem **název souboru** zadejte název exportovaného shaderu a pak klikněte na tlačítko **Uložit** .
 

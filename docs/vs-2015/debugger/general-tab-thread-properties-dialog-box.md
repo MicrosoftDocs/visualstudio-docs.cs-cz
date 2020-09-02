@@ -1,5 +1,5 @@
 ---
-title: Karta Obecné, dialogové okno vlastností vláken | Dokumentace Microsoftu
+title: Karta Obecné, dialogové okno vlastností vlákna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,32 +13,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b1a8e6fd583f6035fc84f0c86adcee059562235d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159945"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Karta Obecné, dialogové okno vlastností vlákna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použijte toto dialogové okno pro další informace o konkrétním vlákně. Zobrazíte dialogovému oknu přesunout fokus [zobrazení vláken](../debugger/threads-view.md) okna, nebo otevřete [zobrazení zpráv](../debugger/messages-view.md) a rozbalení zprávy. Vyberte jakékoli vlákno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.  
+Pomocí tohoto dialogového okna můžete zjistit více o konkrétním vlákně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení vlákna](../debugger/threads-view.md) nebo otevřete [zobrazení zprávy](../debugger/messages-view.md) a rozbalte zprávu. Ve stromové struktuře vyberte libovolný uzel vlákna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .  
   
- **Vlastností vlákna** dialogové okno obsahuje jedno podokno, **Obecné** kartu. K dispozici jsou následující nastavení:  
+ Dialogové okno **vlastnosti vlákna** obsahuje jedno podokno, kartu **Obecné** . K dispozici jsou následující nastavení:  
   
 |Entry|Popis|  
 |-----------|-----------------|  
 |**Název modulu**|Název modulu.|  
-|**ID vlákna**|Jedinečné ID tohoto vlákna. Všimněte si, že jsou opakovaně využívána ID vlákna; vlákno identifikují pouze po dobu životnosti toto vlákno.|  
-|**ID procesu**|Jedinečný Identifikátor tohoto procesu. Čísla ID procesu jsou opakovaně využívána, takže identifikují proces pouze po dobu životnosti procesu. Typ objektu procesu se vytvoří při spuštění programu. Všechna vlákna v procesu sdílet stejnou adresní prostor a mají přístup ke stejným datům. Zvolte tuto hodnotu a zobrazte vlastnosti ID procesu.|  
-|**Stav vlákna**|Aktuální stav vlákna. Používá spuštěných vláken na procesor; vlákno úsporného režimu je pomocí. Připraveno vlákno čeká na použít na procesor, protože není zdarma. Vlákno v přechodném stavu čeká prostředek pro provádění, jako je například čekání na jeho zásobníku spouštění k stránkování v z disku. Vlákno čekání nepotřebuje procesor, protože se čeká na periferní na dokončení operace nebo prostředek pro uvolnění.|  
-|**Důvod čekání**|To platí pouze v případě, vlákno je ve stavu čekání. Dvojice událostí se používají ke komunikaci s chráněné subsystémů.|  
-|**Čas procesoru**|Celkový Procesorový čas strávený na tento proces a jeho vlákna. Rovno uživatelského času + privilegovaného času.|  
-|**Čas uživatele**|Celkový uplynulý čas, který má toto vlákno stráví prováděním kódu v uživatelském režimu. Aplikace jsou spouštěny v uživatelském režimu, stejně jako podsystémy jako správce oken a stroj grafiky.|  
-|**Privilegovaného času**|Celkový uplynulý čas, který má toto vlákno stráví prováděním kódu v privilegovaném režimu. Při volání služby systému Windows, služba se spustí často v privilegovaném režimu získat přístup k datům systému privátní. Tato data jsou chráněna před přístupem tím, že vlákna provádění v uživatelském režimu. Může být explicitní volání systému nebo může být implicitní, třeba když dojde k selhání stránky nebo přerušení.|  
-|**Uplynulý čas**|Celkový uplynulý čas (v sekundách) toto vlákno byla spuštěna.|  
-|**Aktuální priorita**|Aktuální dynamické prioritu tohoto vlákna. Vlákna v rámci procesu můžete zvýšit a snížit své vlastní základní priorita relativní k základní priorita procesu.|  
-|**Základní priorita**|Aktuální základní priorita toto vlákno.|  
+|**ID vlákna**|Jedinečné ID tohoto vlákna. Všimněte si, že se znovu používají čísla ID vlákna; identifikují vlákno pouze po dobu života tohoto vlákna.|  
+|**ID procesu**|Jedinečné ID tohoto procesu. Čísla ID procesu se znovu používají, takže identifikují proces jenom za dobu života tohoto procesu. Typ objektu procesu se vytvoří při spuštění programu. Všechna vlákna v procesu sdílejí stejný adresní prostor a mají přístup ke stejným datům. Tuto hodnotu vyberte, pokud chcete zobrazit vlastnosti ID procesu.|  
+|**Stav vlákna**|Aktuální stav vlákna. Běžící vlákno používá procesor; v pohotovostním vlákně se chystá použít jeden z nich. Připravené vlákno čeká na použití procesoru, protože jeden z nich není bezplatný. Vlákno v přechodu čeká na spuštění prostředku, jako je například čekání na stránkování zásobníku spuštění z disku. Čekající vlákno nepotřebuje procesor, protože čeká na dokončení periferní operace nebo je prostředek zadarmo.|  
+|**Důvod čekání**|To platí pouze v případě, že vlákno je ve stavu čekání. Páry událostí slouží ke komunikaci s chráněnými subsystémy.|  
+|**Čas procesoru**|Celkový čas procesoru strávený tímto procesem a jeho vlákny. Rovná se času uživatele + privilegovaného času.|  
+|**Čas uživatele**|Celkový uplynulý čas, po který toto vlákno strávilo spouštění kódu v uživatelském režimu. Aplikace se spouští v uživatelském režimu jako subsystémy, jako je například správce oken a grafický modul.|  
+|**Privilegovaný čas**|Celkový uplynulý čas, po který toto vlákno strávilo spouštění kódu v privilegovaném režimu. Když je zavolána systémová služba systému Windows, služba bude často spuštěna v privilegovaném režimu, aby získala přístup k datům privátního systému. Tato data jsou chráněná před přístupem pomocí vláken prováděných v uživatelském režimu. Volání systému můžou být explicitní nebo můžou být implicitní, například když dojde k chybě stránky nebo přerušení.|  
+|**Uplynulý čas**|Celkový uplynulý čas (v sekundách), po který je toto vlákno spuštěno.|  
+|**Aktuální Priorita**|Aktuální dynamická priorita tohoto vlákna. Vlákna v rámci procesu mohou zvýšit a snížit svou vlastní základní prioritu vzhledem k základní prioritě procesu.|  
+|**Základní priorita**|Aktuální základní priorita tohoto vlákna.|  
 |**Počáteční adresa**|Spouští se virtuální adresa pro toto vlákno.|  
-|**Počítač uživatele**|Čítač programu uživatele pro vlákno.|  
-|**Přepnutí kontextu**|Počet přepínače z jednoho vlákna do druhého. Vlákno přepínače může dojít v jediném procesu nebo napříč procesy. Přepnout vlákno může být způsobeno jedno vlákno s dotazem, další informace, nebo je přerušeno při vyšší priorita vlákna připravena ke spuštění vlákna.|
+|**POČÍTAČ uživatele**|Čítač uživatelského programu pro vlákno.|  
+|**Přepnutí kontextu**|Počet přepínačů z jednoho vlákna do druhého. K přepínačům vlákna může dojít uvnitř jednoho nebo více procesů. Přepnutí vlákna může být způsobeno jedním vláknem, které požádá o další informace, nebo podprocesem, který je přerušen, když je vlákno s vyšší prioritou připraveno ke spuštění.|

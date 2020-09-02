@@ -15,100 +15,100 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 31a17fdf51e838405c93efca79d7994cd40ece5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62978584"
 ---
 # <a name="secure-office-solutions"></a>Zabezpečení řešení pro systém Office
-  Model zabezpečení pro Office řešení zahrnuje několik technologií: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)], v Centru zabezpečení v Microsoft Office a zónu lokalit s omezeným přístupem aplikace Internet Explorer. Následující části popisují, jak fungují různé funkce zabezpečení:
+  Model zabezpečení pro řešení Office zahrnuje několik technologií: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] , [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] , Centrum zabezpečení v systém Microsoft Office a zónu serverů s omezeným přístupem v Internet Exploreru. Následující části popisují, jak fungují různé funkce zabezpečení:
 
-- [Zajistit jeho důvěryhodnost do řešení pro systém Office](#GrantingTrustToSolutions)
+- [Udělení vztahu důvěryhodnosti řešením pro systém Office](#GrantingTrustToSolutions)
 
-- [Zajistit jeho důvěryhodnost do dokumentů](#GrantingTrustToDocuments)
+- [Udělení důvěryhodnosti k dokumentům](#GrantingTrustToDocuments)
 
-- [Zajistit jeho důvěryhodnost při použití Instalační služby systému Windows](#GrantingTrustWindowsInstaller)
+- [Udělit důvěryhodnost při použití Instalační služba systému Windows](#GrantingTrustWindowsInstaller)
 
-- [Specifické aspekty zabezpečení pro řešení pro systém Office](#Security)
+- [Konkrétní požadavky na zabezpečení pro řešení Office](#Security)
 
-- [Zabezpečení během vývoje.](#SecurityDuringDeployment)
+- [Zabezpečení během vývoje](#SecurityDuringDeployment)
 
 - [Visual Studio Tools for Office runtime](#VisualStudioToolsForOfficeRuntime)
 
   [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="GrantingTrustToSolutions"></a> Zajistit jeho důvěryhodnost do řešení pro systém Office
- Muselo důvěřovat řešení pro systém Office znamená, že úprava zásady zabezpečení jednotlivých koncových uživatelů důvěřovat řešení pro Office podle následujících informací:
+## <a name="grant-trust-to-office-solutions"></a><a name="GrantingTrustToSolutions"></a> Udělení vztahu důvěryhodnosti řešením pro systém Office
+ Udělení vztahu důvěryhodnosti řešením pro systém Office znamená úpravu zásad zabezpečení pro každého koncového uživatele, aby důvěřovali řešení Office v závislosti na následujících důkazech:
 
 - Certifikát použitý k podepsání manifestu nasazení.
 
 - Adresa URL manifestu nasazení.
 
-  Další informace najdete v tématu [zajištění důvěryhodnosti řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md).
+  Další informace najdete v tématu [udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md).
 
-## <a name="GrantingTrustToDocuments"></a> Zajistit jeho důvěryhodnost do dokumentů
- Přizpůsobení úrovni dokumentu vyžaduje, aby v adresáři, který je určený jako důvěryhodné umístění dokumentu. Další informace najdete v tématu [udělit důvěryhodnost dokumenty](../vsto/granting-trust-to-documents.md).
+## <a name="grant-trust-to-documents"></a><a name="GrantingTrustToDocuments"></a> Udělení důvěryhodnosti k dokumentům
+ Přizpůsobení na úrovni dokumentu vyžaduje, aby byl dokument v adresáři, který je určen jako důvěryhodné umístění. Další informace najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
-## <a name="GrantingTrustWindowsInstaller"></a> Zajistit jeho důvěryhodnost při použití Instalační služby systému Windows
- Instalační služby systému Windows slouží k vytvoření soubor MSI, který chcete nainstalovat řešení pro systém Office v adresáři Program Files, což vyžaduje oprávnění správce. Pro řešení pro systém Office v adresáři Program Files Visual Studio 2010 Tools for Office runtime bere v úvahu tyto řešení Office na důvěryhodné a nezobrazuje výzvy důvěryhodnosti ClickOnce.
+## <a name="grant-trust-when-using-windows-installer"></a><a name="GrantingTrustWindowsInstaller"></a> Udělit důvěryhodnost při použití Instalační služba systému Windows
+ Pomocí Instalační služba systému Windows můžete vytvořit soubor MSI pro instalaci řešení Office do adresáře Program Files, který vyžaduje oprávnění správce. V případě řešení pro systém Office v adresáři Program Files aplikace Visual Studio 2010 Tools for Office runtime posuzuje tato řešení pro systém Office jako důvěryhodná a nezobrazuje výzvu k zobrazení výzvy k zadání důvěryhodnosti ClickOnce.
 
-## <a name="Security"></a> Specifické aspekty zabezpečení pro řešení pro systém Office
- Funkcích zabezpečení poskytovaných [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], a Microsoft Office může pomoct chránit proti různým druhům možné bezpečnostní hrozby v řešeních pro systém Office. Další informace najdete v tématu [specifické aspekty zabezpečení pro řešení Office](../vsto/specific-security-considerations-for-office-solutions.md).
+## <a name="specific-security-considerations-for-office-solutions"></a><a name="Security"></a> Konkrétní požadavky na zabezpečení pro řešení Office
+ Funkce zabezpečení poskytované [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] , [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] a systém Microsoft Office můžou přispět k ochraně před nejrůznějšími případnými bezpečnostními hrozbami v řešeních pro systém Office. Další informace najdete v tématu [specifické požadavky na zabezpečení pro řešení Office](../vsto/specific-security-considerations-for-office-solutions.md).
 
-## <a name="SecurityDuringDeployment"></a> Zabezpečení během vývoje.
- Abychom usnadnili vašeho vývojového procesu, Visual Studio nastaví zásady zabezpečení, které je potřeba spustit a ladit vaše řešení ve vašem počítači pokaždé, když sestavení projektu. V některých případech můžete potřebovat udělat dodatečné zabezpečení k vývoji projektu.
+## <a name="security-during-development"></a><a name="SecurityDuringDeployment"></a> Zabezpečení během vývoje
+ Aby byl proces vývoje snazší, sada Visual Studio nastaví zásady zabezpečení, které jsou nutné ke spuštění a ladění řešení v počítači při každém sestavení projektu. V některých scénářích může být nutné provést další kroky zabezpečení pro vývoj projektu.
 
 ### <a name="document-level-solutions"></a>Řešení na úrovni dokumentu
- Plně kvalifikovanou cestu k dokumentu musí přidat do seznamu důvěryhodných umístění v aplikaci Microsoft Office, pokud vyvíjíte následující typy projektů:
+ Plně kvalifikovaná cesta k dokumentu musí být přidána do seznamu důvěryhodných umístění v aplikaci systém Microsoft Office, pokud vyvíjíte následující typy projektů:
 
-- Řešení, která jsou ve sdílené síti, jako je například na úrovni dokumentu  *\\\servername\sharename*.
+- Řešení na úrovni dokumentu, která jsou v síťové sdílené složce, například * \\ \servername\sharename*.
 
-- Dokument úrovni řešení pro Word, použít *doc* nebo *DOCM* soubory.
+- Řešení na úrovni dokumentu pro Word, které používají soubory. *doc* nebo *. docm* .
 
-  Zahrnout podadresáře přidejte umístění dokumentu do seznamu důvěryhodných umístění nebo konkrétně zahrnout ladění a vytvoření složky. Další informace najdete v článku Microsoft Office Online nápověda [vytvoření, odebrání nebo změna důvěryhodného umístění pro soubory](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
+  Zahrňte podadresáře, když přidáte umístění dokumentu do seznamu důvěryhodných umístění nebo konkrétně zahrnete složky pro ladění a sestavení. Další informace najdete v článku systém Microsoft Office online nápovědě pro [Vytvoření, odebrání nebo změnu důvěryhodného umístění souborů](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
 
 ### <a name="temporary-certificates"></a>Dočasné certifikáty
- Visual Studio vytvoří dočasný certifikát, pokud podpisový certifikát ještě neexistuje. Doporučujeme použít tento dočasný certifikát pouze během vývoje a zakoupit certifikát oficiální pro nasazení.
+ Pokud podpisový certifikát ještě neexistuje, Visual Studio vytvoří dočasný certifikát. Tento dočasný certifikát byste měli použít jenom během vývoje a koupit oficiální certifikát pro nasazení.
 
- Dočasný certifikát je vygenerovaný po prvním sestavení projektu pro Office. Při příštím stisknutí klávesy **F5**, znovu projekt je vytvořen, protože projekt je označen jako změnit, pokud je certifikát přidat.
+ Po prvním sestavení projektu Office se vygeneruje dočasný certifikát. Při příštím stisknutí klávesy **F5**se projekt znovu sestaví, protože projekt je po přidání certifikátu označen jako změněný.
 
- Po chvíli se může být velký počet certifikátů dočasné tak dočasné certifikáty byste měli vymazat čas od času.
+ Po chvíli může existovat spousta dočasných certifikátů, proto byste měli dočasné certifikáty vymazat občas.
 
-## <a name="VisualStudioToolsForOfficeRuntime"></a> Visual Studio Tools for Office runtime
- [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Obsahuje funkce, které chcete ověřit identitu vydavatele a oprávnění, která jsou udělena pro přizpůsobení. Ověřuje tato oprávnění pomocí sekvence kontroly zabezpečení.
+## <a name="visual-studio-tools-for-office-runtime"></a><a name="VisualStudioToolsForOfficeRuntime"></a> Modul runtime Visual Studio Tools for Office
+ [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Obsahuje funkce pro ověření identity vydavatele a oprávnění, která jsou udělena pro vlastní nastavení. Ověřuje tato oprávnění prostřednictvím posloupnosti kontrol zabezpečení.
 
-### <a name="security-during-customization-loading"></a>Zabezpečení během načítání vlastního nastavení
- Při načtení přizpůsobení na úrovni dokumentu [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vždy kontroluje, zda je dokument v seznamu důvěryhodných umístění. Kromě toho modul runtime zkontroluje, jestli řešení požadavků FullTrust v manifestu aplikace. Při načítání vlastního nastavení provede žádné další kontroly zabezpečení.
+### <a name="security-during-customization-loading"></a>Zabezpečení při načítání vlastního nastavení
+ Když je načteno přizpůsobení na úrovni dokumentu, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vždy zkontroluje, zda je dokument v seznamu důvěryhodných umístění. Kromě toho modul runtime kontroluje, zda řešení požaduje FullTrust v manifestu aplikace. Během načítání přizpůsobení neprovede žádné další kontroly zabezpečení.
 
-### <a name="sequence-of-security-checks-during-installation"></a>Posloupnost kontroly zabezpečení během instalace
- Při instalaci nebo aktualizaci, řešení pro Office [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] provede sadu kontroly zabezpečení v určitém pořadí pro provedení rozhodnutí důvěryhodnosti. Řešení instalaci nebo aktualizaci pouze v případě, že modul runtime určuje, že řešení je důvěryhodný.
+### <a name="sequence-of-security-checks-during-installation"></a>Sekvence kontrol zabezpečení při instalaci
+ Při instalaci nebo aktualizaci řešení pro systém Office provede aplikace [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] sadu kontrol zabezpečení v určitém pořadí, aby bylo možné rozhodnout o důvěryhodnosti. Řešení je nainstalováno nebo aktualizováno pouze v případě, že modul runtime zjistí, že řešení je důvěryhodné.
 
- Můžete zahájit proces instalace v jedné ze čtyř způsobů: spuštěním instalační program, otevřou manifest nasazení, otevřením hostitele aplikace Microsoft Office nebo spuštěním *VSTOInstaller.exe*.
+ Proces instalace můžete spustit jedním ze čtyř způsobů: spuštěním instalačního programu, otevřením manifestu nasazení, otevřením hostitele aplikace systém Microsoft Office nebo spuštěním *VSTOInstaller.exe*.
 
- První kontrola zabezpečení se vztahuje pouze na řešeních na úrovni dokumentu. Řešení úrovni dokumentu dokument musí být v důvěryhodném umístění. Pokud dokument je ve sdílené složce vzdálené sítě nebo má *doc* nebo *DOCM* příponu názvu souboru umístění dokumentu musí být přidané do seznamu důvěryhodných umístění. Další informace najdete v tématu [udělit důvěryhodnost dokumenty](../vsto/granting-trust-to-documents.md).
+ První kontrolu zabezpečení platí pouze pro řešení na úrovni dokumentu. Dokument řešení na úrovni dokumentu musí být v důvěryhodném umístění. Pokud se dokument nachází ve vzdálené síťové sdílené složce nebo má příponu názvu souboru *. doc* nebo *. docm* , musí být umístění dokumentu přidáno do seznamu důvěryhodných umístění. Další informace najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
- ![Zabezpečení VSTO – instalace z aplikace Microsoft Office](../vsto/media/host-install.png "VSTO zabezpečení – instalace z aplikace Microsoft Office")
+ ![Zabezpečení VSTO – instalace z systém Microsoft Office](../vsto/media/host-install.png "Zabezpečení VSTO – instalace z systém Microsoft Office")
 
- Další sadu kontroly zabezpečení jsou z [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] a ClickOnce. K předání těchto kontrol, řešení pro systém Office musí požádat o oprávnění FullTrust, byly podepsány certifikátem, který není uvedený v seznamu nedůvěryhodných vydavatele a být v umístění, které se nenachází v zóně Internet Exploreru s omezeným přístupem. Pokud je certifikát v seznamu Důvěryhodné vydavatele, řešení nainstalováno okamžitě. V opačném případě pokud jejího selhání není jedna z kontrol, řešení dál obsahuje závěrečnou sadu kontroly.
+ Další sada kontrol zabezpečení je z rozhraní [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] a ClickOnce. Aby bylo možné tyto kontroly předat, musí řešení pro systém Office vyžadovat oprávnění FullTrust, být podepsána certifikátem, který není uveden v seznamu nedůvěryhodných vydavatelů, a musí být v umístění, které není v zóně s omezeným přístupem aplikace Internet Explorer. Pokud je certifikát v seznamu důvěryhodných vydavatelů, řešení se nainstaluje hned. V opačném případě, pokud nedošlo k selhání jedné z kontrol, řešení pokračuje v závěrečné sadě kontrol.
 
- ![Zabezpečení VSTO pro instalaci řešení](../vsto/media/installing.png "VSTO zabezpečení pro instalaci řešení")
+ ![Zabezpečení VSTO pro instalaci řešení](../vsto/media/installing.png "Zabezpečení VSTO pro instalaci řešení")
 
- Pokud [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] povolený výzva vztahu důvěryhodnosti a řešení dosud nebyl udělen vztahu důvěryhodnosti, modul runtime vám umožní rozhodnutí důvěryhodnosti, který má být provedeno koncovým uživatelem. Pokud uživatel uděluje vztah důvěryhodnosti k řešení, bude položka přidána do seznamu povolených položek uživatele. Všechna řešení v seznamu povolených položek uživatelů úplný vztah důvěryhodnosti a může být nainstalován a spuštěn.
+ Pokud [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] je povolená výzva vztahu důvěryhodnosti a řešení ještě nebylo uděleno jako důvěryhodný, modul runtime umožní, aby uživatel učinil rozhodnutí o důvěryhodnosti koncového uživatele. Pokud uživatel pro řešení udělí důvěru, přidá se do seznamu povolených uživatelů položka. Všechna řešení v seznamu pro zahrnutí uživatelů mají úplný vztah důvěryhodnosti a můžou být nainstalovaná a spuštěná.
 
- Spouští se v sadě Visual Studio 2010, seznam povolených položek přeskočí nainstalovali řešení sady Office pomocí Instalační služby systému Windows (MSI) do adresáře Program Files. Další informace najdete v tématu [řešení důvěřovat Office s použitím seznamů povolených položek](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
+ Počínaje sadou Visual Studio 2010 se seznam zahrnutí obejít, pokud je řešení Office nainstalované pomocí Instalační služba systému Windows (MSI) do adresáře Program Files. Další informace najdete v tématu [důvěřující řešení pro Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
 
- ![Zabezpečení VSTO – instalace pomocí instalačního programu](../vsto/media/setup-vstoinstaller.png "VSTO zabezpečení – instalace pomocí instalačního programu")
+ ![Zabezpečení VSTO – použití instalačního programu k instalaci](../vsto/media/setup-vstoinstaller.png "Zabezpečení VSTO – použití instalačního programu k instalaci")
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Zajistit jeho důvěryhodnost do řešení pro systém Office](../vsto/granting-trust-to-office-solutions.md)
-- [Zajistit jeho důvěryhodnost do dokumentů](../vsto/granting-trust-to-documents.md)
-- [Vztah důvěryhodnosti řešení pro systém Office s použitím seznamů povolených položek](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
-- [Postupy: Konfigurace zabezpečení se seznamem povolených položek](../vsto/how-to-configure-inclusion-list-security.md)
-- [Postupy: Podepisování řešení pro Office](../vsto/how-to-sign-office-solutions.md)
+- [Udělení vztahu důvěryhodnosti řešením pro systém Office](../vsto/granting-trust-to-office-solutions.md)
+- [Udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md)
+- [Důvěryhodná řešení pro Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
+- [Postupy: Konfigurace zabezpečení seznamu zahrnutí](../vsto/how-to-configure-inclusion-list-security.md)
+- [Postupy: podepisování řešení pro systém Office](../vsto/how-to-sign-office-solutions.md)
 - [Řešení potíží se zabezpečením řešení pro systém Office](../vsto/troubleshooting-office-solution-security.md)
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [Referenční dokumentace technologie ClickOnce](../deployment/clickonce-reference.md)
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Odkaz na ClickOnce](../deployment/clickonce-reference.md)
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

@@ -8,10 +8,10 @@ ms.date: 04/15/2020
 ms.topic: how-to
 description: Naučte se nastavit účet Azure s průběžnými platbami.
 ms.openlocfilehash: 057230d4b3b54e1d514a06f6db2de7412eb2c995
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85902895"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Předplatné Azure DevTest s průběžnými platbami
@@ -39,7 +39,7 @@ Spolupracujte se svým týmem v cloudu.  Vytvořte si několik předplatných pr
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>Otázka: Co když chci udělat změny v tomto předplatném?
 Odpověď: Chcete-li provést změny v rámci předplatných Azure:
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com).
 2. V seznamu v levém podokně vyberte **cost management + fakturace**.
 3. V poli **Moje předplatné** se zobrazí seznam vašich předplatných. Klikněte na požadované předplatné.
 4. Nyní budete mít možnost spravovat nebo rušit předplatné, přejmenovat ho, změnit adresář nebo přenést vlastnictví fakturace.

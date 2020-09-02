@@ -1,5 +1,5 @@
 ---
-title: Obor názvů souběžnosti (vizualizér souběžnosti) | Dokumenty společnosti Microsoft
+title: Concurrency – obor názvů (Vizualizátor souběžnosti) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 258cb5964946d5dbf136463538905d970346b8df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63001077"
 ---
-# <a name="concurrency-namespace-concurrency-visualizer"></a>Obor názvů souběžnosti (vizualizér souběžnosti)
-Obor `Concurrency` názvů poskytuje třídy a funkce, které vám poskytují přístup k souběžnosti Runtime, souběžné programovací rámec pro C++. Další informace naleznete v [tématu Souběžnost Runtime](/cpp/parallel/concrt/concurrency-runtime).
+# <a name="concurrency-namespace-concurrency-visualizer"></a>Concurrency – obor názvů (Vizualizátor souběžnosti)
+`Concurrency`Obor názvů poskytuje třídy a funkce, které vám umožní přístup k Concurrency Runtime, souběžně programovací rozhraní pro C++. Další informace najdete v tématu [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 namespace Concurrency;
@@ -32,12 +32,12 @@ namespace Concurrency;
 
 ### <a name="namespaces"></a>Obory názvů
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[diagnostický obor názvů](../profiling/diagnostic-namespace.md)|Obor `diagnostics` názvů poskytuje funkce pro vyzařování značek vizualizérů souběžnosti.|
+|[Obor názvů diagnostiky](../profiling/diagnostic-namespace.md)|`diagnostics`Obor názvů poskytuje funkce pro generování značek Vizualizátor souběžnosti.|
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** cvmarkersobj.h
+ **Záhlaví:** cvmarkersobj. h
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na knihovnu C](../profiling/c-library-reference.md)
+- [Referenční dokumentace knihovny jazyka C](../profiling/c-library-reference.md)

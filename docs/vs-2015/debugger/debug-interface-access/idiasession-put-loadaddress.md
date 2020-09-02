@@ -1,5 +1,5 @@
 ---
-title: Idiasession::put_loadaddress – | Dokumentace Microsoftu
+title: IDiaSession::p ut_loadAddress | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f697384874726904960fc5ba04733c3acfe1cd06
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438455"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64778217"
 ---
-# <a name="idiasessionputloadaddress"></a>IDiaSession::put_loadAddress
+# <a name="idiasessionput_loadaddress"></a>IDiaSession::put_loadAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví adresu zatížení pro spustitelný soubor, který odpovídá na symboly v tomto úložišti symbolů.  
+Nastaví adresu zatížení pro spustitelný soubor, který odpovídá symbolům v tomto úložišti symbolů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT put_loadAddress ( 
   
 #### <a name="parameters"></a>Parametry  
  `NewVal`  
- [in] Načtení adresy pro spustitelný soubor.  
+ pro Načíst adresu pro spustitelný soubor.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnosti virtuální adresy (VA) symbol jsou vypočítány pomocí hodnoty této metody. Virtuální adresy nejsou vypočítat, pokud je tato vlastnost nastavená na nenulovou.  
+ Vlastnosti virtuální adresy symbolu (VA) se vypočítávají pomocí hodnoty této metody. Pokud je tato vlastnost nastavená na nenulovou hodnotu, virtuální adresy se nepočítají.  
   
 > [!NOTE]
-> Tato metoda musí volat, když dostanete [idiasession –](../../debugger/debug-interface-access/idiasession.md) objektu a před zahájením používání objektu, pokud je třeba použít všechny virtuální vlastnosti na symboly.  
+> Tato metoda musí být volána, když získáte objekt [IDiaSession](../../debugger/debug-interface-access/idiasession.md) a před tím, než začnete používat objekt, pokud potřebujete použít jakékoli virtuální vlastnosti na symbolech.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

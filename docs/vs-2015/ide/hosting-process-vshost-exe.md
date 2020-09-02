@@ -1,5 +1,5 @@
 ---
-title: Hostitelský proces (vshost. exe) | Microsoft Docs
+title: Hostitelský proces (vshost.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a998246f514f13a575f6a7fef850f9f705f92553
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645532"
 ---
 # <a name="hosting-process-vshostexe"></a>Proces hostování (vshost.exe)
@@ -25,7 +25,7 @@ ms.locfileid: "72645532"
 Hostitelský proces je funkce v aplikaci Visual Studio, která vylepšuje výkon ladění, umožňuje ladění s částečným vztahem důvěryhodnosti a umožňuje vyhodnocování výrazů v době návrhu. Soubory procesu hostování obsahují VSHost v názvu souboru a jsou umístěny do výstupní složky vašeho projektu. Další informace naleznete v tématu [ladění a hostující proces](../debugger/debugging-and-the-hosting-process.md).
 
 > [!NOTE]
-> Soubory procesu hostování (. VSHost. exe) jsou používány sadou Visual Studio a neměly by být spouštěny přímo nebo nasazeny s vaší aplikací.
+> Soubory procesu hostování (.vshost.exe) jsou pro použití v aplikaci Visual Studio a neměly by být spouštěny přímo nebo nasazeny s vaší aplikací.
 
 ## <a name="improved-debugging-performance"></a>Vylepšený výkon ladění
  Hostitelský proces vytvoří doménu aplikace a přidruží ladicí program k aplikaci. Provádění těchto úloh může způsobit znatelné zpoždění mezi začátkem ladění a časem spuštění aplikace. Proces hostování pomáhá zvýšit výkon vytvořením aplikační domény a přidružením ladicího programu na pozadí a uložením aplikační domény a stavu ladicího programu mezi spuštění aplikace. Další informace o doménách aplikací naleznete v tématu [aplikační domény](https://msdn.microsoft.com/library/113a8bbf-6875-4a72-a49d-ca2d92e19cc8).

@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 55418f40f57e2279100fbb1c9ba4d12fae83a19c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664448"
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>Postupy: Export textury obsahující mipmapy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kanál obsahu obrázku může vygenerovat mipmapy ze zdrojového obrázku jako součást fáze sestavení vašeho projektu. Pokud nepotřebujete určit obsah obrázku na každé úrovni MIP ručně, protože při vytváření mipmapy při sestavování nebudete muset mipmap obsah zajímat a eliminují se náklady na výkon při generování mipmapy v době běhu.
+Kanál obsahu obrázku může vygenerovat mipmapy ze zdrojového obrázku jako součást fáze sestavení vašeho projektu. Pokud nepotřebujete určit obsah obrázku na každé úrovni MIP ručně, protože při sestavování mipmapy v čase sestavení zajistíte, aby se mipmap obsah nikdy nesynchronizoval a eliminoval náklady na výkon při generování mipmapy v době běhu.
 
  Tento dokument znázorňuje tyto aktivity:
 
@@ -36,7 +36,7 @@ Kanál obsahu obrázku může vygenerovat mipmapy ze zdrojového obrázku jako s
 
 2. Nakonfigurujte soubor textury, který jste právě vytvořili, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury, který jste právě vytvořili, a pak zvolte **vlastnosti**. Na stránce **Vlastnosti konfigurace**, **Obecné** nastavte vlastnost **typ položky na položku** **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
 
-3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval mipmapy. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **Generovat MIPS** na **Ano (/generatemips)** .
+3. Nakonfigurujte kanál obsahu obrázku tak, aby generoval mipmapy. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **Generovat MIPS** na **Ano (/generatemips)**.
 
 4. Klikněte na tlačítko **OK** .
 

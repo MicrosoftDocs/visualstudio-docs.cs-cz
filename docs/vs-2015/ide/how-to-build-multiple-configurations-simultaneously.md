@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 719b31e834b5410dd137a0c5b69cc07ae01651e3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645476"
 ---
 # <a name="how-to-build-multiple-configurations-simultaneously"></a>Postupy: Sestavení více konfigurací současně
@@ -21,7 +21,7 @@ ms.locfileid: "72645476"
 
 Většinu typů projektů s více nebo dokonce i všemi konfiguracemi sestavení můžete sestavit současně pomocí dialogového okna **dávkové sestavení** . Nemůžete však sestavit následující typy projektů ve více konfiguracích sestavení současně:
 
-1. [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace sestavené pro Windows pomocí JavaScriptu.
+1. [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] aplikace sestavené pro Windows pomocí JavaScriptu
 
 2. Všechny projekty Visual Basic.
 

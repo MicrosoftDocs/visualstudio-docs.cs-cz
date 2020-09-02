@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetProcessId | Dokumenty společnosti Microsoft
+title: 'IDebugProcess2:: GetProcessId – | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 12e575979e5bd1527dfa0d8e15b290d6b78e36ff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723901"
 ---
 # <a name="idebugprocess2getprocessid"></a>IDebugProcess2::GetProcessId
-Získá identifikátor GUID pro tento proces.
+Získá identifikátor GUID tohoto procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetProcessId(
 
 ## <a name="parameters"></a>Parametry
 `pguidProcessId`\
-[out] Vrátí identifikátor GUID pro tento proces.
+mimo Vrátí identifikátor GUID pro tento proces.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Globálně jedinečný identifier (GUID) identifikuje tento proces ze všech ostatních procesů spuštěných v systému.
+ Globálně jedinečný identifikátor (GUID) identifikuje tento proces ze všech ostatních procesů spuštěných v systému.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

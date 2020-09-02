@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f1a0d10dabdace7ef7ab3805a59b892548cf6556
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645521"
 ---
 # <a name="how-to-add-class-diagrams-to-projects-class-designer"></a>Postupy: Přidání diagramů tříd do projektů (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte diagram tříd do aplikace Visual C# .net, Visual Basic .NET nebo C++ projektu. Chcete-li vizualizovat různé části kódu v projektu, přidejte do projektu více diagramů tříd.
+Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte diagram tříd do projektu Visual C# .NET, Visual Basic .NET nebo C++. Chcete-li vizualizovat různé části kódu v projektu, přidejte do projektu více diagramů tříd.
 
  Diagramy tříd nemůžete vytvářet z projektů, které sdílejí kód napříč více aplikacemi. Chcete-li vytvořit diagramy tříd UML, přečtěte si téma [vytváření projektů a diagramů modelování UML](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
@@ -30,7 +30,7 @@ Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte di
 
 1. V Průzkumníku řešení klikněte pravým tlačítkem myši na název projektu. Pak zvolte **Přidat novou položku** nebo **Přidat**, **Nová položka**.
 
-2. V seznamu šablon vyberte **Diagram tříd**. V případě C++ vizuálních projektů zkontrolujte v části **šablony**a potom v části **Nástroj** Najděte tuto šablonu.
+2. V seznamu šablon vyberte **Diagram tříd**. U Visual C++ projektů vyhledejte v části **šablony**a potom v části **Nástroj** Najděte tuto šablonu.
 
      Diagram tříd se otevře v Návrháři tříd a zobrazí se jako soubor s příponou .cd v hierarchii projektu v Průzkumníku řešení. Pomocí sady nástrojů Návrháře tříd přetáhněte do diagramu tvary a čáry.
 
@@ -51,4 +51,4 @@ Chcete-li navrhovat, upravovat a Refaktorovat třídy a jiné typy, přidejte di
      Vytvoří se automaticky vyplněný diagram tříd.
 
 ## <a name="see-also"></a>Viz také
- [Postupy: vytváření typů pomocí Návrhář tříd](../ide/how-to-create-types-by-using-class-designer.md) [Postupy: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md) [navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md) [zobrazení typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md) [pro práci s diagramy tříd ( Návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)
+ [Postupy: vytváření typů pomocí Návrhář tříd](../ide/how-to-create-types-by-using-class-designer.md) [Postupy: zobrazení existujících typů (návrhář tříd)](../ide/how-to-view-existing-types-class-designer.md) [navrhování tříd a typů (návrhář tříd)](../ide/designing-classes-and-types-class-designer.md) [zobrazení typů a vztahů (návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md) [pro práci s diagramy tříd (návrhář tříd)](../ide/working-with-class-diagrams-class-designer.md)

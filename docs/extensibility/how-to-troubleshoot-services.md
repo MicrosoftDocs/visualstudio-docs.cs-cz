@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8bfbe4b11c22d6cfd147783f9fb662843cf57fe9
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234949"
 ---
 # <a name="how-to-troubleshoot-services"></a>Postupy: řešení potíží se službami
@@ -56,7 +56,7 @@ if (log == null) return;
 
    2. K rozhraní není explicitně přiřazen žádný identifikátor GUID. Proto systém vytvoří pro objekt výchozí identifikátor GUID podle potřeby.
 
-3. Ujistěte se, že rozhraní VSPackage požadující službu byla zablokována. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]lokality vytvoří VSPackage po jeho sestavení a před voláním <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
+3. Ujistěte se, že rozhraní VSPackage požadující službu byla zablokována. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] lokality vytvoří VSPackage po jeho sestavení a před voláním <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
 
     Pokud máte kód v konstruktoru VSPackage, který potřebuje službu, přesuňte ho do `Initialize` metody.
 
@@ -66,7 +66,7 @@ if (log == null) return;
 
     Pokud okno nástroje hostuje uživatelský ovládací prvek nebo jiný kontejner ovládacích prvků, bude tento kontejner zadaný modelem komponent Windows a nebude mít přístup k žádným [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] službám. Můžete zavolat <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> pro získání poskytovatele služby VSPackage z kontejneru ovládacího prvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Seznam dostupných služeb](../extensibility/internals/list-of-available-services.md)
 - [Použití a poskytování služeb](../extensibility/using-and-providing-services.md)
 - [Základy služby](../extensibility/internals/service-essentials.md)

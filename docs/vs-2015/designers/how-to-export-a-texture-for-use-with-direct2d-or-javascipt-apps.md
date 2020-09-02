@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1bb08a617574839432ee581d563079648cd06976
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664461"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>Postupy: Export textury pro použití s rozhraním Direct2D nebo aplikacemi JavaScript
@@ -40,11 +40,11 @@ Kanál obsahu obrázku může generovat textury, které jsou kompatibilní s Dir
 
 - Textura musí být zadána ve formátu. DDS pomocí jednoho z těchto formátů komprese bloku:
 
-  - Komprese BC1_UNORM
+  - BC1_UNORM komprese
 
-  - Komprese BC2_UNORM
+  - BC2_UNORM komprese
 
-  - Komprese BC3_UNORM
+  - BC3_UNORM komprese
 
 - Mipmapy se nepodporují.
 
@@ -54,12 +54,12 @@ Kanál obsahu obrázku může generovat textury, které jsou kompatibilní s Dir
 
 2. Nakonfigurujte soubor textury tak, aby byl zpracován kanálem obsahu obrázku. V **Průzkumník řešení**otevřete místní nabídku pro soubor textury, který jste právě vytvořili, a pak zvolte **vlastnosti**. Na stránce **Vlastnosti konfigurace**, **Obecné** nastavte vlastnost **typ položky na položku** **kanál obsahu obrázku**. Ujistěte se, že vlastnost **Content** je nastavena na **hodnotu Ano** a možnost **vyloučit ze sestavení** je nastavena na hodnotu **ne**, a poté klikněte na tlačítko **použít** . Zobrazí se stránka vlastností konfigurace **kanálu obsahu obrázku** .
 
-3. Nastavte formát výstupu na jeden z formátů komprimovaných blokem. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **compress** na **BC3_UNORM Compression (/Compress: BC3_UNORM)** . V závislosti na vašich požadavcích můžete zvolit libovolný z dalších formátů BC1, BC2 nebo BC3. Direct2D v současné době nepodporuje textury BC4, BC5, BC6 nebo BC7. Další informace o různých formátech BC naleznete v tématu [Block Compression (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531.aspx).
+3. Nastavte formát výstupu na jeden z formátů komprimovaných blokem. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **komprimace** na **BC3_UNORM Compression (/Compress: BC3_UNORM)**. V závislosti na vašich požadavcích můžete zvolit libovolný z dalších formátů BC1, BC2 nebo BC3. Direct2D v současné době nepodporuje textury BC4, BC5, BC6 nebo BC7. Další informace o různých formátech BC naleznete v tématu [Block Compression (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb694531.aspx).
 
    > [!NOTE]
    > Formát komprese, který je určen, určuje formát souboru, který je vytvořen kanálem obsahu obrázku. To se liší od vlastnosti **Formát** zdrojového obrázku v editoru obrázků, který určuje formát zdrojového souboru bitové kopie, který je uložen na disku – to znamená *pracovní formát*. Obvykle nechcete mít komprimovaný pracovní formát.
 
-4. Nakonfigurujte kanál obsahu obrázku tak, aby vytvořil výstup, který používá předem vynásobený alfa. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)** .
+4. Nakonfigurujte kanál obsahu obrázku tak, aby vytvořil výstup, který používá předem vynásobený alfa. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **převést na předem vynásobené alfa formát** na **Ano (/generatepremultipliedalpha)**.
 
 5. Nakonfigurujte kanál obsahu obrázku tak, aby negeneroval mipmapy. Na stránce **Vlastnosti konfigurace**, **kanál obsahu obrázku**, **Obecné** nastavte vlastnost **Generovat MIPS** na **ne**.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DjeableENC | Dokumenty společnosti Microsoft
+title: IDebugProcess3::D isableENC | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5b39bb448501bacd5ab458b7e61bb1a5044bc8a3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723729"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-Tato metoda explicitně zakáže upravit a pokračovat v tomto procesu (a všechny programy, které obsahuje). Dodavatel vlastního portu `E_NOTIMPL`by měl vždy vrátit .
+Tato metoda explicitně zakáže funkci upravit a pokračovat v tomto procesu (a všechny programy, které obsahuje). Vlastní dodavatel portu by měl vždycky vracet `E_NOTIMPL` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ HRESULT DisableENC(
 
 ## <a name="parameters"></a>Parametry
 `reason`\
-[v] Hodnota z [encUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) výčtu.
+pro Hodnota z výčtu [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 > [!NOTE]
-> Dodavatel vlastního portu `E_NOTIMPL`by měl vždy vrátit .
+> Vlastní dodavatel portu by měl vždycky vracet `E_NOTIMPL` .
 
 ## <a name="remarks"></a>Poznámky
- Jakmile upravit a pokračovat je zakázán pro proces, může být znovu povolena pouze restartováním procesu.
+ Jakmile je operace Upravit a pokračovat pro proces zakázaná, můžete ji znovu povolit jenom restartováním procesu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

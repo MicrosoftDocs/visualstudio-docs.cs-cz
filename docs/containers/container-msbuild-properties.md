@@ -7,10 +7,10 @@ ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: reference
 ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283200"
 ---
 # <a name="container-tools-build-properties"></a>Vlastnosti sestavení kontejnerových nástrojů
@@ -31,7 +31,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro projekty 
 
 | Název vlastnosti | Popis | Výchozí hodnota  | Verze balíčku NuGet|
 |---------------|-------------|----------------|----------------------|
-| ContainerDevelopmentMode | Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Světl |1.0.1872750 nebo novější|
+| ContainerDevelopmentMode | Určuje, jestli je povolená optimalizace optimalizace sestavení na úrovni hostitele (rychlý režim).  Povolené hodnoty jsou **rychlé** a **pravidelné**. | Rychlý |1.0.1872750 nebo novější|
 | ContainerVsDbgPath | Cesta k ladicímu programu VSDBG | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 nebo novější|
 | DockerDebuggeeArguments | Při ladění je ladicí program vyzván k předání těchto argumentů spuštěnému spustitelnému souboru. | Nedá se použít pro projekty ASP.NET .NET Framework. |1.7.8 nebo novější|
 | DockerDebuggeeProgram | Při ladění je ladicí program vyzván ke spuštění tohoto spustitelného souboru. | Pro projekty .NET Core: dotnet, ASP.NET .NET Framework projekty: nejde použít (služba IIS se vždycky používá). |1.7.8 nebo novější|
@@ -86,4 +86,4 @@ Informace o vlastnostech MSBuildu obecně naleznete v tématu [vlastnosti MSBuil
 
 [Nastavení spuštění nástrojů kontejneru](container-launch-settings.md)
 
-[Rezervované a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[Vyhrazené a známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)

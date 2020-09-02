@@ -8,10 +8,10 @@ ms.date: 02/23/2020
 ms.topic: how-to
 description: Naučte se využívat speciální ceny Azure DevTest dostupné zákazníkům se smlouvou Enterprise.
 ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903136"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Nabídka Azure smlouva Enterprise DevTest

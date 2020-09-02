@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::FindAlias | Dokumenty společnosti Microsoft
+title: 'IDebugBinder3:: FindAlias | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f0a697e39d21b1c25a98c09ad6cc4837cca7a293
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735863"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
-Tato metoda vyhledá alias, daný název. Tím se prohledají všechny aliasy v programu.
+Tato metoda vyhledá alias s daným názvem. Prohledají se všechny aliasy v programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +43,16 @@ int FindAlias(
 
 ## <a name="parameters"></a>Parametry
 `pcstrName`\
-[v] Název aliasu, který chcete najít.
+pro Název hledaného aliasu.
 
 `ppAlias`\
-[out] Alias nalezen (pokud existuje) reprezentované [rozhraníM IDebugAlias.](../../../extensibility/debugger/reference/idebugalias.md)
+mimo Byl nalezen alias (pokud existuje) reprezentovaný rozhraním [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném `S_FALSE` případě vrátí (pokud alias nebyl nalezen) nebo kód chyby.
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` (Pokud se alias nenalezne) nebo kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda inicializuje cílový objekt na hodnotu null před voláním; pak testuje hodnotu null později k určení, zda byl nalezen alias.
+ Tato metoda inicializuje cílový objekt na hodnotu null před voláním; potom otestuje hodnotu null a následně určí, zda byl alias nalezen.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

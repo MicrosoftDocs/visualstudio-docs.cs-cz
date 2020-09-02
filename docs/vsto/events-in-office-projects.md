@@ -33,10 +33,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c8e8aca881ba25df134c675ac504ea0794c4b051
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986120"
 ---
 # <a name="events-in-office-projects"></a>Události v projektech pro systém Office
@@ -52,7 +52,7 @@ ms.locfileid: "72986120"
 
  Když vytváříte projekt na úrovni dokumentu, Visual Studio vytvoří obslužné rutiny události pro událost **spuštění** v generovaných souborech kódu:
 
-- V případě systém Microsoft Officech projektů aplikace Word je obslužná rutina události pojmenována `ThisDocument_Startup`.
+- V případě systém Microsoft Officech projektů aplikace Word je obslužná rutina události pojmenována `ThisDocument_Startup` .
 
 - Pro systém Microsoft Office excelové projekty mají obslužné rutiny událostí následující názvy:
 
@@ -69,7 +69,7 @@ ms.locfileid: "72986120"
 
  Když vytvoříte projekt na úrovni dokumentu, Visual Studio vytvoří obslužné rutiny události pro událost **vypnutí** ve vygenerovaných souborech kódu:
 
-- V případě systém Microsoft Officech projektů aplikace Word je obslužná rutina události pojmenována `ThisDocument_Shutdown`.
+- V případě systém Microsoft Officech projektů aplikace Word je obslužná rutina události pojmenována `ThisDocument_Shutdown` .
 
 - Pro systém Microsoft Office excelové projekty mají obslužné rutiny událostí následující názvy:
 
@@ -85,7 +85,7 @@ ms.locfileid: "72986120"
 > Neodstraňujte programově ovládací prvky během obslužné rutiny události **vypnutí** v dokumentu. Prvky uživatelského rozhraní dokumentu již nejsou k dispozici, pokud dojde k události **vypnutí** . Chcete-li odebrat ovládací prvky před zavřením aplikace, přidejte svůj kód do jiné obslužné rutiny události, jako je například **BeforeClose** nebo **BeforeSave**.
 
 ### <a name="event-handler-method-declarations"></a>Deklarace metod obslužné rutiny událostí
- Každé deklaraci metody obslužné rutiny události jsou předány stejné argumenty: *sender* a *e*. V Excelu argument *sender* odkazuje na list, například `Sheet1` nebo `Sheet2`; v aplikaci Word odkazuje argument *odesílatele* na dokument. Argument *e* odkazuje na standardní argumenty události, které se v tomto případě nepoužívají.
+ Každé deklaraci metody obslužné rutiny události jsou předány stejné argumenty: *sender* a *e*. V aplikaci Excel odkazuje argument *odesílatele* na list, jako je například `Sheet1` nebo `Sheet2` ; ve slově argument *Odesílatel* odkazuje na dokument. Argument *e* odkazuje na standardní argumenty události, které se v tomto případě nepoužívají.
 
  Následující příklad kódu ukazuje výchozí obslužné rutiny událostí v projektech na úrovni dokumentu ve Wordu.
 
@@ -95,7 +95,7 @@ ms.locfileid: "72986120"
  Následující příklad kódu ukazuje výchozí obslužné rutiny událostí v projektech na úrovni dokumentu v aplikaci Excel.
 
 > [!NOTE]
-> Následující příklad kódu ukazuje obslužné rutiny událostí ve třídě `Sheet1`. Názvy obslužných rutin událostí v jiných třídách hostitelů odpovídají názvu třídy. Například ve třídě `Sheet2` je obslužná rutina události **spuštění** pojmenována `Sheet2_Startup`. Ve třídě `ThisWorkbook` je obslužná rutina události **spuštění** pojmenována `ThisWorkbook_Startup`.
+> Následující příklad kódu ukazuje obslužné rutiny událostí ve `Sheet1` třídě. Názvy obslužných rutin událostí v jiných třídách hostitelů odpovídají názvu třídy. Například ve `Sheet2` třídě je obslužná rutina události **spuštění** pojmenována `Sheet2_Startup` . Ve `ThisWorkbook` třídě je obslužná rutina události **spuštění** pojmenována `ThisWorkbook_Startup` .
 
  [!code-csharp[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#83)]
  [!code-vb[Trin_VstcoreExcelAutomation#83](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#83)]
@@ -128,31 +128,31 @@ ms.locfileid: "72986120"
     Pořadí je určeno při kompilování projektu. Pokud uživatel změní uspořádání listů za běhu, nezmění pořadí, v jakém jsou události vyvolány při příštím otevření nebo zavření sešitu.
 
 ## <a name="vsto-add-in-projects"></a>Projekty doplňku VSTO
- Visual Studio poskytuje generovaný kód v doplňcích VSTO. Tento kód vyvolává dvě různé události: <xref:Microsoft.Office.Tools.AddInBase.Startup> a <xref:Microsoft.Office.Tools.AddInBase.Shutdown>.
+ Visual Studio poskytuje generovaný kód v doplňcích VSTO. Tento kód vyvolává dvě různé události: <xref:Microsoft.Office.Tools.AddInBase.Startup> a <xref:Microsoft.Office.Tools.AddInBase.Shutdown> .
 
 ### <a name="startup-event"></a>událost spuštění
- Událost <xref:Microsoft.Office.Tools.AddIn.Startup> se vyvolá po načtení doplňku VSTO a spuštění veškerého inicializačního kódu v sestavení. Tato událost je zpracována metodou `ThisAddIn_Startup` ve vygenerovaném souboru kódu.
+ <xref:Microsoft.Office.Tools.AddIn.Startup>Událost je vyvolána po načtení doplňku VSTO a spuštění veškerého inicializačního kódu v sestavení. Tato událost je zpracována `ThisAddIn_Startup` metodou ve vygenerovaném souboru kódu.
 
- Kód v obslužné rutině události `ThisAddIn_Startup` je prvním uživatelským kódem, který se má spustit, pokud doplněk VSTO nepřepisuje metodu <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>. V tomto případě je `ThisAddIn_Startup` obslužná rutina události volána po <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>.
+ Kód v `ThisAddIn_Startup` obslužné rutině události je prvním uživatelským kódem, který se má spustit, pokud doplněk VSTO nepřepisuje <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metodu. V tomto případě `ThisAddIn_Startup` je obslužná rutina události volána po <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> .
 
- Nepřidávejte kód do obslužné rutiny události `ThisAdd-In_Startup`, pokud kód vyžaduje otevření dokumentu. Místo toho přidejte tento kód do události, kterou aplikace Office vyvolá, když uživatel vytvoří nebo otevře dokument. Další informace najdete v tématu [přístup k dokumentu při spuštění aplikace Office](../vsto/programming-vsto-add-ins.md#AccessingDocuments).
+ Nepřidávejte kód do `ThisAdd-In_Startup` obslužné rutiny události, pokud kód vyžaduje otevření dokumentu. Místo toho přidejte tento kód do události, kterou aplikace Office vyvolá, když uživatel vytvoří nebo otevře dokument. Další informace najdete v tématu [přístup k dokumentu při spuštění aplikace Office](../vsto/programming-vsto-add-ins.md#AccessingDocuments).
 
  Další informace o úvodní sekvenci doplňků VSTO najdete v tématu [architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md).
 
 ### <a name="shutdown-event"></a>událost vypnutí
- Událost <xref:Microsoft.Office.Tools.AddInBase.Shutdown> je vyvolána, když je doména aplikace, ve které je váš kód načten v, uvolněna. Tato událost je zpracována metodou `ThisAddIn_Shutdown` ve vygenerovaném souboru kódu. Tato obslužná rutina události je poslední uživatelský kód, který se spustí při uvolnění doplňku VSTO.
+ <xref:Microsoft.Office.Tools.AddInBase.Shutdown>Událost je vyvolána, když je doména aplikace, v níž je načten váš kód, uvolněna. Tato událost je zpracována `ThisAddIn_Shutdown` metodou ve vygenerovaném souboru kódu. Tato obslužná rutina události je poslední uživatelský kód, který se spustí při uvolnění doplňku VSTO.
 
 #### <a name="shutdown-event-in-outlook-vsto-add-ins"></a>Událost vypnutí v doplňkových doplňcích pro Outlook VSTO
- Událost <xref:Microsoft.Office.Tools.AddInBase.Shutdown> se vyvolá pouze v případě, že uživatel zakáže doplněk VSTO pomocí dialogového okna doplňky modelu COM v aplikaci Outlook. Není vyvolána, když je aplikace Outlook ukončena. Pokud máte kód, který musí být spuštěn při ukončení aplikace Outlook, zpracujte jednu z následujících událostí:
+ <xref:Microsoft.Office.Tools.AddInBase.Shutdown>Událost se vyvolá jenom v případě, že uživatel zakáže doplněk VSTO pomocí dialogového okna doplňky modelu COM v aplikaci Outlook. Není vyvolána, když je aplikace Outlook ukončena. Pokud máte kód, který musí být spuštěn při ukončení aplikace Outlook, zpracujte jednu z následujících událostí:
 
-- Událost <xref:Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.Quit> objektu <xref:Microsoft.Office.Interop.Outlook.Application>
+- <xref:Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.Quit>Událost <xref:Microsoft.Office.Interop.Outlook.Application> objektu.
 
-- Událost <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> objektu <xref:Microsoft.Office.Interop.Outlook.Explorer>
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close>Událost <xref:Microsoft.Office.Interop.Outlook.Explorer> objektu.
 
 > [!NOTE]
-> Můžete vynutit, aby aplikace Outlook vyvolala událost <xref:Microsoft.Office.Tools.AddInBase.Shutdown>, když se ukončí úpravou registru. Pokud však správce toto nastavení vrátí, veškerý kód, který přidáte do metody `ThisAddIn_Shutdown`, již nebude při ukončení aplikace Outlook spuštěn. Další informace najdete v tématu [vypnutí změn pro Outlook 2010](/previous-versions/office/developer/office-2010/ee720183(v=office.14)).
+> Můžete vynutit, aby aplikace Outlook vyvolala <xref:Microsoft.Office.Tools.AddInBase.Shutdown> událost při ukončení úpravou registru. Pokud však správce toto nastavení vrátí, veškerý kód, který přidáte do `ThisAddIn_Shutdown` metody, již nebude při ukončení aplikace Outlook spuštěn. Další informace najdete v tématu [vypnutí změn pro Outlook 2010](/previous-versions/office/developer/office-2010/ee720183(v=office.14)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 - [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)

@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986137"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
 
-Naučte se vytvářet Instalační služba systému Windows pro vaše řešení pro Office pomocí [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)].
+Naučte se vytvářet Instalační služba systému Windows pro vaše řešení pro Office pomocí [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] .
 
 Pomocí sady Visual Studio k vytvoření Instalační služba systému Windows můžete nasadit řešení pro Office, které vyžaduje přístup správce v počítači koncového uživatele. Například můžete použít takový soubor k instalaci řešení pouze jednou pro všechny uživatele počítače. Řešení Office můžete nasadit také pomocí technologie ClickOnce, ale toto řešení je nutné nainstalovat samostatně pro každého uživatele počítače.
 
@@ -59,9 +59,9 @@ Pomocí sady Visual Studio k vytvoření Instalační služba systému Windows m
 
 Další informace o tom, jak nasadit řešení pro Office pomocí ClickOnce, najdete v tématu [nasazení řešení pro Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-Informace o tom, jak vytvořit soubor Instalační služba systému Windows pomocí [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)], najdete v tématu [nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10)).
+Informace o tom, jak vytvořit soubor Instalační služba systému Windows pomocí [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] , najdete v tématu [nasazení nástrojů sady Visual Studio 2010 pro řešení Office pomocí Instalační služba systému Windows](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10)).
 
-## <a name="Download"></a>Stáhnout ukázky
+## <a name="download-samples"></a><a name="Download"></a>Stažení ukázek
 Toto téma se týká následujících ukázek ke stažení.
 
 |Ukázka<br /><br />|Popis<br /><br />|
@@ -69,7 +69,7 @@ Toto téma se týká následujících ukázek ke stažení.
 |[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|Doplněk VSTO pro Excel, který můžete nainstalovat na počítač, na kterém běží 32 nebo 64 verze systému Office.<br /><br />|
 |[ExcelWorkbook](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|Přizpůsobení na úrovni dokumentu aplikace Excel, které můžete nainstalovat na počítač, na kterém běží 32 nebo 64 bitová verze systému Office.<br /><br />|
 
-## <a name="ApplySecurity"></a>Rozhodnutí o tom, jak udělit důvěru k řešení
+## <a name="decide-how-to-grant-trust-to-the-solution"></a><a name="ApplySecurity"></a>Rozhodnutí o tom, jak udělit důvěru k řešení
 Předtím, než může být řešení spuštěno v počítačích uživatelů, je nutné udělit důvěryhodnost jedním z následujících způsobů nebo uživatelé musí při instalaci řešení reagovat na výzvu k zadání vztahu důvěryhodnosti.
 
 - Podepište manifesty pomocí certifikátu, který identifikuje známého a důvěryhodného vydavatele. Další informace najdete v tématu [důvěřování řešení pomocí podepisování manifestů aplikace a nasazení](../vsto/granting-trust-to-office-solutions.md#Signing).
@@ -79,13 +79,13 @@ Předtím, než může být řešení spuštěno v počítačích uživatelů, j
 > [!NOTE]
 > V případě přizpůsobení na úrovni dokumentu musí být umístění dokumentu také důvěryhodné. Další informace najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
-## <a name="Obtain"></a>Získat InstallShield s omezením edice
+## <a name="get-installshield-limited-edition"></a><a name="Obtain"></a>Získat InstallShield s omezením edice
 
 Soubor Instalační služba systému Windows můžete vytvořit pomocí nástroje InstallShield omezené Edition (ISLE), který je zdarma, pokud jste nainstalovali aplikaci Visual Studio. ISLE nahrazuje funkce šablon projektů pro nastavení a nasazení, které jsou k dispozici v předchozích verzích sady Visual Studio.
 
 ### <a name="to-get-installshield-limited-edition"></a>Získání InstallShield omezené edice
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt**.
+1. Na panelu nabídek vyberte **soubor**  >  **Nový**  >  **projekt**.
 
    Otevře se dialogové okno **Nový projekt** .
 
@@ -101,13 +101,13 @@ Soubor Instalační služba systému Windows můžete vytvořit pomocí nástroj
 
    Po stažení, instalaci a aktivaci produktu se v aplikaci Visual Studio zobrazí šablona **projektu InstallShield s omezeným vydáním** .
 
-## <a name="Create"></a>Vytvořit projekt instalace
+## <a name="create-a-setup-project"></a><a name="Create"></a>Vytvořit projekt instalace
 
-1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevřete projekt Office, který chcete nasadit.
+1. V nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevřete projekt Office, který chcete nasadit.
 
    Ukázky doplňku VSTO spojené s tímto tématem obsahují projekt s názvem **ExcelAddIn**. Ukázky přizpůsobení na úrovni dokumentu obsahují projekt s názvem **ExcelWorkbook**. Toto téma bude odkazovat na projekt sady Office ve vašem řešení pomocí jednoho z těchto dvou názvů.
 
-2. Na panelu nabídek vyberte možnost **soubor**  > **Přidat**  > **Nový projekt**.
+2. Na řádku nabídek klikněte na položku **soubor**  >  **Přidat**  >  **Nový projekt**.
 
    Otevře se dialogové okno **Přidat nový projekt** .
 
@@ -119,7 +119,7 @@ Soubor Instalační služba systému Windows můžete vytvořit pomocí nástroj
 
    Ukázky pro toto téma obsahují projekt instalace s názvem **OfficeAddInSetup**. Toto téma bude odkazovat na projekt instalace ve vašem řešení pomocí stejného názvu.
 
-## <a name="Add"></a>Přidat výstup projektu
+## <a name="add-the-project-output"></a><a name="Add"></a>Přidat výstup projektu
 
 Projekt **OfficeAddInSetup** nakonfigurujete tak, aby zahrnoval výstup projektu Office. V případě projektů doplňku VSTO je výstupem projektu pouze sestavení řešení. Pro projekty přizpůsobení na úrovni dokumentu zahrnuje výstup projektu nejen sestavení řešení, ale také samotný dokument.
 
@@ -129,7 +129,7 @@ Projekt **OfficeAddInSetup** nakonfigurujete tak, aby zahrnoval výstup projektu
 
    ![Soubor pomocníka projektu v Průzkumník řešení](../vsto/media/installshield-projectassistant.png "Soubor pomocníka projektu v Průzkumník řešení")
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 3. V dolní části stránky **Pomocník projektu** klikněte na tlačítko **soubory aplikace** , které ukazuje následující obrázek.
 
@@ -139,7 +139,7 @@ Projekt **OfficeAddInSetup** nakonfigurujete tak, aby zahrnoval výstup projektu
 
 5. V dialogovém okně **selektor výstupu sady Visual Studio** zaškrtněte políčko **primární výstup** a pak klikněte na tlačítko **OK** .
 
-## <a name="AddD"></a>Přidat manifesty nasazení a aplikace
+## <a name="add-the-deployment-and-application-manifests"></a><a name="AddD"></a>Přidat manifesty nasazení a aplikace
 
 1. Na stránce **soubory aplikace** klikněte na tlačítko **Přidat soubory** .
 
@@ -147,13 +147,13 @@ Projekt **OfficeAddInSetup** nakonfigurujete tak, aby zahrnoval výstup projektu
 
    Výstupní adresář je obvykle podsložkou **bin\Release** kořenového adresáře projektu v závislosti na konfiguraci sestavení, kterou zvolíte.
 
-3. Ve výstupním adresáři zvolte soubory **ExcelAddIn. VSTO** a **ExcelAddIn. dll. manifest** a pak klikněte na tlačítko **otevřít** .
+3. Ve výstupním adresáři zvolte soubory **ExcelAddIn. VSTO** a **ExcelAddIn.dll. manifest** a pak klikněte na tlačítko **otevřít** .
 
    Stránka **soubory aplikace** nyní obsahuje výstupní soubor projektu, manifest nasazení a manifest aplikace, jak ukazuje následující obrázek.
 
    ![Výstupní soubory projektu instalace.](../vsto/media/installshield-outputfiles.png "Výstupní soubory projektu instalace.")
 
-## <a name="Configure"></a>Konfigurace závislých komponent jako požadovaných součástí
+## <a name="configure-the-dependent-components-as-prerequisites"></a><a name="Configure"></a>Konfigurace závislých komponent jako požadovaných součástí
 
 V aplikaci pro instalaci musíte zahrnout nejen následující součásti, ale také všechny další komponenty, které jsou potřebné pro spuštění vašeho řešení.
 
@@ -167,17 +167,17 @@ V aplikaci pro instalaci musíte zahrnout nejen následující součásti, ale t
 
    ![Distribuovatelný soubor v Průzkumník řešení](../vsto/media/installshield-redistributablesfile.png "Distribuovatelný soubor v Průzkumník řešení")
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
    Otevře se stránka **distribuovatelné** součásti.
 
 3. V seznamu distribuovatelné součásti zaškrtněte políčko pro verzi .NET Framework, na kterou je vaše řešení cíleno.
 
-   Pokud se například vaše řešení zaměřuje na [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], zaškrtněte políčko **Microsoft .NET Framework 4,5 úplné** . Může se zobrazit dialogové okno s dotazem, zda chcete nainstalovat distribuovatelné komponenty, které InstallShield vyžaduje předtím, než budete moci součást přidat jako požadavek. Pokud se toto dialogové okno nezobrazí, komponenta již v počítači existuje.
+   Například pokud vaše řešení cílí na [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , zaškrtněte políčko **Microsoft .NET Framework 4,5 úplné** . Může se zobrazit dialogové okno s dotazem, zda chcete nainstalovat distribuovatelné komponenty, které InstallShield vyžaduje předtím, než budete moci součást přidat jako požadavek. Pokud se toto dialogové okno nezobrazí, komponenta již v počítači existuje.
 
 4. Pokud se zobrazí toto dialogové okno, klikněte na tlačítko **ne** .
 
-### <a name="AddToolsForOffice"></a>Přidejte sadu Visual Studio 2010 Tools for Office runtime.
+### <a name="add-the-visual-studio-2010-tools-for-office-runtime"></a><a name="AddToolsForOffice"></a>Přidejte sadu Visual Studio 2010 Tools for Office runtime.
 
 Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010 Runtime**, ale odkazuje na starší verzi modulu runtime. Proto můžete ručně vytvořit konfigurační soubor, který odkazuje na nejnovější verzi. Pak je nutné umístit tento soubor do stejného adresáře jako konfigurační soubory pro všechny ostatní položky, které se zobrazí na stránce **distribuovatelné** .
 
@@ -209,18 +209,18 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
 
 4. V programu Poznámkový blok nahraďte text, na který se **odkazuje identifikátor GUID** , VLOŽENÍm identifikátoru GUID na místo.
 
-   Prvek **&lt;properties &gt;** souboru se podobá následujícímu.
+   Element ** &lt; Properties &gt; ** souboru se podobá následujícímu.
 
    ```xml
    <properties Id="{87989B73-21DC-4403-8FD1-0C68A41A6D8C}" Description="This prerequisite installs the most recent version of the Microsoft Visual Studio 2010 Tools for Office Runtime." >
    </properties>
    ```
 
-5. Na panelu nabídek v programu Poznámkový blok vyberte **soubor**  > **Uložit**.
+5. Na panelu nabídek v programu Poznámkový **File**blok klikněte na  >  **Uložit**soubor.
 
 6. V dialogovém okně **Uložit jako** vyhledejte složku **plocha** .
 
-7. V seznamu **Uložit jako typ** vyberte možnost **všechny soubory (&#42;.&#42;)** .
+7. V seznamu **Uložit jako typ** vyberte možnost **všechny soubory (&#42;. &#42;)**.
 
 8. Do pole **název souboru** zadejte **Visual Studio 2010 Tools for Office runtime. prq**a pak klikněte na tlačítko **Uložit** .
 
@@ -231,9 +231,9 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
 
 10. Ze složky **plocha** zkopírujte soubor *Visual Studio 2010 Tools for Office runtime. prq* do jednoho z následujících adresářů v počítači.
 
-   Pro 32 operační systémy: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites\\*
+   Pro 32 operační systémy: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\ *
 
-   Pro 64 – bitové operační systémy: *% ProgramFiles (x86)% \ 2013LE \ SetupPrerequisites\\*
+   Pro 64 operační systémy: *% ProgramFiles (x86)% \ 2013LE \ SetupPrerequisites \\ *
 
 11. V rámci **Redistribuovatelné** stránky projektu InstallShield klikněte na tlačítko **aktualizovat** , čímž aktualizujete seznam distribuovatelných komponent, jak je znázorněno na následujícím obrázku.
 
@@ -245,11 +245,11 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
 
 13. Pokud se zobrazí toto dialogové okno, klikněte na tlačítko **ne** .
 
-## <a name="Location"></a>Určete, kam se má v počítači uživatele nainstalovat řešení.
+## <a name="specify-where-to-install-the-solution-on-the-users-computer"></a><a name="Location"></a>Určete, kam se má v počítači uživatele nainstalovat řešení.
 
 1. V **Průzkumník řešení**rozbalte uzel **OfficeAddInSetup** , rozbalte uzel **Uspořádat nastavení** a pak zvolte soubor **Obecné informace** .
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 3. V seznamu vlastností klikněte na tlačítko **Procházet** vedle vlastnosti **INSTALLDIR** .
 
@@ -258,7 +258,7 @@ Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010
    > [!NOTE]
    > V dialogovém okně **nastavit INSTALLDIR** můžete také vytvořit podadresáře tak, že otevřete místní nabídku pro všechny složky v seznamu.
 
-## <a name="ConfigureRegistry"></a>Konfigurace doplňku VSTO
+## <a name="configure-a-vsto-add-in"></a><a name="ConfigureRegistry"></a>Konfigurace doplňku VSTO
 
 Můžete určit, jestli se má doplněk VSTO nainstalovat pro všechny uživatele počítače (pro jednotlivé počítače), nebo jenom pro uživatele, který provádí instalaci (podle uživatele).
 
@@ -273,13 +273,13 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 
 1. V **Průzkumník řešení**rozbalte uzel projektu **OfficeAddInSetup** , rozbalte uzel **Uspořádat nastavení** a pak zvolte soubor **Obecné informace** .
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
    Zobrazí se vlastnosti projektu instalace.
 
 3. V seznamu vlastnosti **AllUSERS** určete, zda chcete toto řešení nainstalovat pro všechny uživatele počítače, nebo pouze pro uživatele, který toto řešení instaluje.
 
-   Chcete-li nainstalovat doplněk VSTO pro aktuálního uživatele, vyberte možnost **allusers = "" (instalace vázaná na uživatele)** . Chcete-li nainstalovat doplněk VSTO pro všechny uživatele počítače, vyberte možnost **AllUsers = 1 (instalace vázaná na počítač)** .
+   Chcete-li nainstalovat doplněk VSTO pro aktuálního uživatele, vyberte možnost **allusers = "" (instalace vázaná na uživatele)**. Chcete-li nainstalovat doplněk VSTO pro všechny uživatele počítače, vyberte možnost **AllUsers = 1 (instalace vázaná na počítač)** .
 
    V dalším postupu vytvoříte klíče registru, které aplikaci Office umožní zjistit a načíst doplněk VSTO. Viz [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
@@ -287,7 +287,7 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 
 1. V **Průzkumník řešení**vyberte uzel **pomocníka projektu** .
 
-   Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+   Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 2. V dolní části stránky **Pomocník projektu** klikněte na tlačítko **registr aplikace** , které ukazuje následující obrázek.
 
@@ -303,21 +303,21 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 
    **Instalační program pro jednotlivé uživatele**
 
-   **HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
+   **HKEY_CURRENT_USER \Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
 
    **Instalační programy pro jednotlivé počítače založené na verzi Office**
 
-| Verze Office<br /><br /> | Konfigurační cesta InstallShield<br /><br /> |
+| Verze sady Office<br /><br /> | Konfigurační cesta InstallShield<br /><br /> |
 |----------------------------| - |
-| 32bitová<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE (32bitová verze) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64bitová<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE (64 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32bitová<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64bitová<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (64 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    **Instalační programy pro jednotlivé počítače založené na verzi Windows**
 
-| Verze Windows<br /><br /> | Konfigurační cesta InstallShield<br /><br /> |
+| Verze systému Windows<br /><br /> | Konfigurační cesta InstallShield<br /><br /> |
 |-----------------------------| - |
-| 32bitová<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE (32bitová verze) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64bitová<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE (32bitová verze) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE (64 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32bitová<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64bitová<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE \SOFTWARE (64 bitů) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    > [!NOTE]
    > Instalační služba systému Windows pro 64 vyžaduje dvě cesty registru, protože je možné, že uživatelé spouštějí 32 a 64 bitových verzí systému Office v počítači, na kterém 64 běží systém Windows v 16bitovém.
@@ -333,7 +333,7 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 
 7. Tento postup opakujte, pokud chcete vytvořit následující hodnoty.
 
-|Typ hodnoty<br /><br />|Name<br /><br />|
+|Typ hodnoty<br /><br />|Název<br /><br />|
 |--------------|--------|
 |Řetězcová hodnota<br /><br />|**FriendlyName**<br /><br />|
 |Hodnota DWORD<br /><br />|**LoadBehavior**<br /><br />|
@@ -374,7 +374,7 @@ Instalace pro jednotlivé uživatele vyžadují jenom jeden instalační program
 > [!IMPORTANT]
 > Pokud vytvoříte vlastní oblast formuláře v doplňku VSTO pro Outlook, musíte vytvořit další položky registru pro registraci oblasti v Outlooku. Další informace najdete v tématu [položky registru pro oblasti formulářů Outlooku](../vsto/registry-entries-for-vsto-add-ins.md#OutlookEntries).
 
-## <a name="ConfigureDocument"></a>Konfigurace přizpůsobení na úrovni dokumentu
+## <a name="configure-a-document-level-customization"></a><a name="ConfigureDocument"></a>Konfigurace přizpůsobení na úrovni dokumentu
 
 Tato část platí pouze v případě, že nasazujete přizpůsobení na úrovni dokumentu. Pokud doplněk VSTO nasazujete, můžete hned přejít k části [sestavení projektu instalace](#Build) .
 
@@ -384,7 +384,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
 ### <a name="to-create-a-program-that-modifies-document-properties"></a>Vytvoření programu, který upraví vlastnosti dokumentu
 
-1. Na panelu nabídek vyberte možnost **soubor**  > **Přidat**  > **Nový projekt**.
+1. Na řádku nabídek klikněte na položku **soubor**  >  **Přidat**  >  **Nový projekt**.
 
    Zobrazí se dialogové okno **Přidat nový projekt** .
 
@@ -402,9 +402,9 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
    - Microsoft. VisualStudio. Tools. Applications. ServerDocument
 
-7. V **Průzkumník řešení**vyberte soubor **program.cs** (pro C# aplikace) nebo soubor **Module1. vb** (pro Visual Basic aplikace).
+7. V **Průzkumník řešení**vyberte soubor **program.cs** (pro aplikace v jazyce C#) nebo soubor **Module1. vb** (pro Visual Basic aplikace).
 
-8. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+8. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 9. Obsah celého souboru nahraďte následujícím kódem.
 
@@ -419,7 +419,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
    ![Soubor pomocníka projektu v Průzkumník řešení](../vsto/media/installshield-projectassistant.png "Soubor pomocníka projektu v Průzkumník řešení")
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
 3. V dolní části stránky **Pomocník projektu** klikněte na tlačítko **soubory aplikace** , které ukazuje následující obrázek.
 
@@ -433,7 +433,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
 6. V **Průzkumník řešení**pod uzlem **OfficeAddInSetup** rozbalte uzel **definovat požadavky na nastavení a akce** a pak zvolte složku **vlastní akce** .
 
-7. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+7. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
    Seznam událostí se zobrazí v podokně vedle obrazovky.
 
@@ -461,9 +461,9 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
     Otevře se složka, která obsahuje vaše řešení.
 
-13. V programu Poznámkový blok otevřete soubor projektu svého řešení. U Visual Basic projektů je název souboru *ExcelWorkbook. vbproj*. Pro C# projekty je název souboru *ExcelWorkbook. csproj*.
+13. V programu Poznámkový blok otevřete soubor projektu svého řešení. U Visual Basic projektů je název souboru *ExcelWorkbook. vbproj*. V případě projektů v jazyce C# je název souboru *ExcelWorkbook. csproj*.
 
-14. V souboru projektu vyhledejte prvek **&lt;SolutionID &gt;** , zkopírujte jeho hodnotu do schránky a pak zavřete Poznámkový blok.
+14. V souboru projektu vyhledejte element ** &lt; SolutionId &gt; ** , zkopírujte jeho hodnotu do schránky a pak zavřete Poznámkový blok.
 
     Tuto hodnotu předáte do aplikace konzoly jako parametr.
 
@@ -476,33 +476,33 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 16. Nahraďte **ID řešení** číslem ID řešení, které jste zkopírovali do schránky.
 
    > [!IMPORTANT]
-   > Otestujte instalační program, abyste ověřili, že aplikace konzoly, kterou tato vlastní akce spustí, má přístup k dokumentům v adresáři [INSTALLDIR]. Některé adresáře v počítači uživatele mohou vyžadovat přístup správce (například adresář Program Files). Pokud nasazujete řešení do adresáře, který vyžaduje přístup správce, měli byste otevřít dialogové okno **vlastnosti** souboru *Setup. exe* , zvolit kartu **Kompatibilita** a pak vybrat **Spustit tento program jako Správce** před distribucí instalačního programu. Pokud nechcete, aby uživatelé spustili instalační program s oprávněními správce, nastavte vlastnost [INSTALLDIR] na adresář, ke kterému má uživatel pravděpodobně již přístup, například adresář **dokumentů** . Další informace najdete v části [určení, kam chcete řešení nainstalovat, v části počítač uživatele](#Location) v tomto tématu.
+   > Otestujte instalační program, abyste ověřili, že aplikace konzoly, kterou tato vlastní akce spustí, má přístup k dokumentům v adresáři [INSTALLDIR]. Některé adresáře v počítači uživatele mohou vyžadovat přístup správce (například adresář Program Files). Pokud nasazujete řešení do adresáře, který vyžaduje přístup správce, měli byste otevřít dialogové okno **vlastnosti** souboru *setup.exe* , vybrat kartu **Kompatibilita** a potom před distribucí instalačního programu zaškrtnout políčko **Spustit tento program jako správce** . Pokud nechcete, aby uživatelé spustili instalační program s oprávněními správce, nastavte vlastnost [INSTALLDIR] na adresář, ke kterému má uživatel pravděpodobně již přístup, například adresář **dokumentů** . Další informace najdete v části [určení, kam chcete řešení nainstalovat, v části počítač uživatele](#Location) v tomto tématu.
 
-## <a name="Build"></a>Sestavení projektu instalace
+## <a name="build-the-setup-project"></a><a name="Build"></a>Sestavení projektu instalace
 
 1. V **Průzkumník řešení**rozbalte uzel **Příprava pro vydání** a pak zvolte soubor **vydání** .
 
-2. Na panelu nabídek vyberte možnost **zobrazit**  > **otevřít**.
+2. Na panelu nabídek vyberte možnost **Zobrazit**  >  **otevřené**.
 
    Průzkumník **sestavení** se otevře v bočním podokně, abyste mohli vybrat typ vydaných verzí, který chcete vytvořit.
 
 3. V Průzkumníku **sestavení** vyberte složku **možnost SingleImage** .
 
-4. V podokně vedle Průzkumníka **sestavení** klikněte na kartu **Setup. exe** .
+4. V podokně vedle Průzkumníka **sestavení** klikněte na kartu **Setup.exe** .
 
-5. Na stránce vlastností **Setup. exe** vyberte v seznamu **umístění požadavků InstallShield** možnost **stáhnout z webu**.
+5. Na stránce vlastností **Setup.exe** v seznamu **umístění požadavků InstallShield** vyberte možnost **stáhnout z webu**.
 
-6. Na panelu nabídek vyberte možnost **sestavit**  > **Configuration Manager**.
+6. Na panelu nabídek vyberte možnost **sestavit**  >  **Configuration Manager**.
 
 7. V seznamu **aktivní konfigurace řešení** vyberte možnost **možnost SingleImage**.
 
 8. V tabulce **kontexty projektu** ve sloupci **Konfigurace** projektu **OfficeAddInSetup** zvolte možnost **možnost SingleImage**a poté klikněte na tlačítko **Zavřít** .
 
-9. Na panelu nabídek vyberte **sestavení**  > **OfficeAddInSetup sestavení**.
+9. Na panelu nabídek vyberte sestavení sestavení **Build**  >  **OfficeAddInSetup**.
 
-   Po dokončení sestavení můžete vyhledat soubor *Setup. exe* projektu **OfficeAddInSetup** v následujícím umístění: <em>OfficeAddInSetupProjectRoot</em> **\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\**
+   Po dokončení sestavení můžete najít soubor *setup.exe* projektu **OfficeAddInSetup** v následujícím umístění: <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\ **
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Požadavky na řešení systému Office pro nasazení](https://msdn.microsoft.com/library/9f672809-43a3-40a1-9057-397ce3b5126e)
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

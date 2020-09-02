@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986066"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>Začínáme (vývoj pro Office v sadě Visual Studio)
@@ -26,14 +26,14 @@ ms.locfileid: "72986066"
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Přehled &#40;vývoje řešení pro systém Office VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+## <a name="in-this-section"></a>V této části
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
  Poskytuje základní informace pro vývoj řešení pro systém Office v sadě Visual Studio.
 
 - [Změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
- Popisuje nový návrh projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, a uvádí zásadní změny kódu v projektech Office, které migrujete do [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novějšího.
+ Popisuje nový návrh projektů Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, a uvádí zásadní změny kódu v projektech Office, které migrujete do [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo později.
 
 - [Dostupné funkce podle aplikace systému Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md)
 
@@ -74,7 +74,7 @@ ms.locfileid: "72986066"
 
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 
- Poskytuje informace o tom, jak vytvořit projekt Office a nakonfigurovat projekt v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Poskytuje informace o tom, jak vytvořit projekt Office a nakonfigurovat projekt v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přístup k vestavěné písma a barvy schéma | Dokumentace Microsoftu'
+title: 'Postupy: přístup k vestavěným písmům a barevnému schématu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,75 +13,75 @@ caps.latest.revision: 24
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a43fb3a22ecb2d04542eacf07bf883590868b75b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685312"
 ---
-# <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>Postupy: Přístup k vestavěné písma a barvy schéma
+# <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>Postupy: Přístup k předdefinovaným písmům a barevnému schématu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Integrovaného vývojového prostředí (IDE) sady Visual Studio obsahuje schéma písma a barvy, který je spojen s okno editoru. Toto schéma prostřednictvím můžete přistupovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní.  
+Integrované vývojové prostředí (IDE) sady Visual Studio má schéma písem a barev, které je spojeno s oknem editoru. K tomuto schématu máte přístup prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní.  
   
- Pokud chcete použít integrované písma a barvy schéma, musíte VSPackage:  
+ Chcete-li použít Vestavěná Schémata písem a barev, VSPackage musí:  
   
-- Definujte kategorie pro použití s výchozí služba písma a barvy.  
+- Definujte kategorii, která se má použít u výchozích písem a barev služby.  
   
-- Zaregistrujte si kategorie ve výchozí server písma a barvy.  
+- Zaregistrujte kategorii pomocí výchozích písem a barev serveru.  
   
-- Doporučte rozhraní IDE, že konkrétní okno používá integrované zobrazit položky a kategorie pomocí `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` a `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` rozhraní.  
+- Poradí rozhraní IDE, které konkrétní okno používá předdefinované položky a kategorie zobrazení, pomocí `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` rozhraní a.  
   
-  Integrované vývojové prostředí používá výsledný kategorie jako popisovač okna. Název kategorie se zobrazí v **zobrazit nastavení pro:** v rozevíracím seznamu **písma a barvy** stránku vlastností.  
+  Rozhraní IDE používá výslednou kategorii jako popisovač okna. Název kategorie se zobrazí v rozevíracím seznamu **Zobrazit nastavení pro:** na stránce vlastností **písma a barvy** .  
   
-### <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>Chcete-li definovat kategorie pomocí integrované písmo a barvy  
+### <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>Definování kategorie pomocí vestavěných písem a barev  
   
 1. Vytvořte libovolný identifikátor GUID.  
   
-    Tento identifikátor GUID slouží k jednoznačné identifikaci kategorii<strong>.</strong> Rozhraní IDE výchozí písma a barvy specifikace opětovně používá tuto kategorii.  
+    Tento identifikátor GUID slouží k jednoznačné identifikaci kategorie<strong>.</strong> Tato kategorie znovu používá výchozí písma a barvy v integrovaném vývojovém prostředí (IDE).  
   
    > [!NOTE]
-   > Při načítání dat písma a barvy s <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> nebo jiných rozhraní rozšíření VSPackages použít tento identifikátor GUID k odkazování předdefinované informace.  
+   > Při načítání písma a barev dat pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> nebo jiných rozhraní VSPackage používají tento identifikátor GUID k odkazování na předdefinované informace.  
   
-2. Název kategorie musí přidat do tabulky řetězců uvnitř sady VSPackage soubor prostředků (.rc), tak, aby může být lokalizována, podle potřeby při zobrazení v rozhraní IDE.  
+2. Název kategorie musí být přidán do tabulky řetězce v souboru prostředků sady VSPackage (. RC), aby mohl být v rámci zobrazení v integrovaném vývojovém prostředí (IDE) lokalizován podle potřeby.  
   
-    Další informace najdete v tématu [přidání nebo odstranění řetězce](https://msdn.microsoft.com/library/077077b4-0f4b-4633-92d6-60b321164cab).  
+    Další informace najdete v tématu [Přidání nebo odstranění řetězce](https://msdn.microsoft.com/library/077077b4-0f4b-4633-92d6-60b321164cab).  
   
-### <a name="to-register-a-category-using-built-in-fonts-and-colors"></a>K registraci kategorie pomocí integrované písmo a barvy  
+### <a name="to-register-a-category-using-built-in-fonts-and-colors"></a>Registrace kategorie pomocí vestavěných písem a barev  
   
-1. Vytvořte zvláštní druh položky registru kategorie v následujícím umístění:  
+1. Vytvořte speciální typ položky registru kategorie v následujícím umístění:  
   
-     [HKLM\SOFTWARE\Microsoft \Visual Studio\\*\<Visual Studio version>* \FontAndColors\\*\<Category>*]  
+     [HKLM\SOFTWARE\Microsoft \Visual Studio \\ *\<Visual Studio version>* \FontAndColors \\ *\<Category>* ]  
   
-     *\<Kategorie >* je nelokalizovaný název kategorie.  
+     *\<Category>* je nelokalizovaný název kategorie.  
   
-2. Naplnění registru uložených písma a barvy schéma pomocí čtyři hodnoty:  
+2. Naplnění registru pro použití burzovních písem a barevného schématu se čtyřmi hodnotami:  
   
-    |Name|Typ|Data|Popis|  
+    |Název|Typ|Data|Popis|  
     |----------|----------|----------|-----------------|  
-    |Kategorie|REG_SZ|GUID|Libovolné GUID, který určuje kategorii, která obsahuje základní schéma písma a barvy.|  
-    |Balíček|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> Všechny balíčky VSPackages, které používají výchozí písmo a barvu konfigurace používá tento identifikátor GUID.|  
-    |NameID|REG_DWORD|ID|ID prostředku název lokalizovatelné kategorie v sady VSPackage.|  
-    |ToolWindowPackage|REG_SZ|GUID|Identifikátor GUID balíčku VSPackage implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní.|  
+    |Kategorie|REG_SZ|Identifikátor GUID|Libovolný identifikátor GUID, který identifikuje kategorii obsahující zásobu písma a barevného schématu.|  
+    |Balíček|REG_SZ|Identifikátor GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> Tento identifikátor GUID je používán všemi VSPackage, které používají výchozí nastavení písma a barev.|  
+    |NameID|REG_DWORD|ID|ID prostředku lokalizovatelnýho názvu kategorie v VSPackage|  
+    |ToolWindowPackage|REG_SZ|Identifikátor GUID|Identifikátor GUID VSPackage, který implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní|  
   
 3. 
   
-### <a name="to-initiate-the-use-of-system-provided-fonts-and-colors"></a>K zahájení používání nástroje poskytované systémem písma a barvy  
+### <a name="to-initiate-the-use-of-system-provided-fonts-and-colors"></a>Zahájení používání písem a barev poskytovaných systémem  
   
-1. Vytvoření instance `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` rozhraní jako součást implementace okna a inicializace.  
+1. Vytvořte instanci `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer` rozhraní v rámci implementace a inicializace okna.  
   
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> metodu k získání instance `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` rozhraní odpovídá aktuální <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> instance.  
+2. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer.GetPropertyCategory%2A> metodu pro získání instance `T:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer` rozhraní odpovídající aktuální <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> instanci.  
   
-3. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> dvakrát.  
+3. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer.SetProperty%2A> dvakrát.  
   
-   - Volání s jednou `VSEDITPROPID_ViewGeneral_ColorCategory`jako argument.  
+   - Zavolejte jednou `VSEDITPROPID_ViewGeneral_ColorCategory` jako argument.  
   
-   - Volání s jednou `VSEDITPROPID_ViewGeneral_FontCategory` jako argument.  
+   - Zavolejte jednou `VSEDITPROPID_ViewGeneral_FontCategory` jako argument.  
   
-     Toto nastaví a poskytuje výchozí písmo a barvy služby jako vlastnost okna.  
+     Tato sada nastavuje a zpřístupňuje výchozí písma a barvy služeb jako vlastnost okna.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad inicializuje použití předdefinovaných písma a barvy.  
+ Následující příklad inicializuje použití vestavěných písem a barev.  
   
 ```  
 CComVariant vt;  
@@ -98,7 +98,7 @@ if (spPropCatContainer != NULL){
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití písem a barev](../extensibility/using-fonts-and-colors.md)   
- [Písma a barvy informace pro barevné zvýraznění textu](../extensibility/getting-font-and-color-information-for-text-colorization.md)   
- [Přístup k uložené písma a barev](../extensibility/accessing-stored-font-and-color-settings.md)   
+ [Používání písem a barev](../extensibility/using-fonts-and-colors.md)   
+ [Získání informací o písmech a barvách pro obarvení textu](../extensibility/getting-font-and-color-information-for-text-colorization.md)   
+ [Přístup k uloženým písmům a nastavením barev](../extensibility/accessing-stored-font-and-color-settings.md)   
  [Přehled písem a barev](../extensibility/font-and-color-overview.md)

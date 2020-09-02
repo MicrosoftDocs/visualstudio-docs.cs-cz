@@ -1,6 +1,6 @@
 ---
-title: Příprava k publikování nebo nasazení cloudové služby
-description: Další postupy pro nastavení účtu služby pro cloud a úložiště a nakonfigurovat svoji aplikaci Azure.
+title: Příprava na publikování nebo nasazení cloudové služby
+description: Naučte se postup nastavení služeb cloudu a účtu úložiště a konfiguraci aplikace Azure.
 author: ghogen
 manager: jillfra
 ms.assetid: 92ee2f9e-ec49-4c7a-900d-620abe5e9d8a
@@ -12,73 +12,73 @@ ms.topic: conceptual
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: 571079b7de52c4dbebbe842b232e4f889a9f0eef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62989790"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Příprava na publikování nebo nasazení cloudové služby v sadě Visual Studio
 
-Chcete-li publikovat projekt cloudové služby, musíte nastavit tyto služby jak je popsáno v tomto článku:
+Chcete-li publikovat projekt cloudové služby, musíte nastavit následující služby, jak je popsáno v tomto článku:
 
-* A **Cloudová služba** ke spuštění vaší rolí v prostředí Azure a
-* A **účtu úložiště** , která poskytuje přístup ke službám Blob, Queue a Table.
+* **Cloudová služba** pro spouštění vašich rolí v prostředí Azure a
+* **Účet úložiště** , který poskytuje přístup ke službám blob, Queue a Table.
 
-## <a name="create-a-cloud-service"></a>Vytvořit cloudovou službu
+## <a name="create-a-cloud-service"></a>Vytvoření cloudové služby
 
-Cloudová služba spustí své role v prostředí Azure. Můžete vytvořit cloudovou službu v sadě Visual Studio nebo prostřednictvím [webu Azure portal](https://portal.azure.com/) jak je popsáno v následující části.
+Cloudová služba spouští vaše role v prostředí Azure. Cloudovou službu můžete vytvořit buď v aplikaci Visual Studio, nebo prostřednictvím [Azure Portal](https://portal.azure.com/) , jak je popsáno v následujících částech.
 
-### <a name="create-a-cloud-service-from-visual-studio"></a>Vytvořit cloudovou službu v sadě Visual Studio
+### <a name="create-a-cloud-service-from-visual-studio"></a>Vytvoření cloudové služby ze sady Visual Studio
 
-1. S dříve vytvořeném projektu cloudové služby, klikněte pravým tlačítkem na projekt vyberte **publikovat**.
-1. V případě potřeby, přihlaste se pomocí Microsoft nebo účet organizace přidružený k vašemu předplatnému Azure a pak vyberte **Další** pro přechod **nastavení** stránky.
-1. A **vytvořit Cloudovou službu a účet úložiště** se zobrazí dialogové okno (Pokud ne, vyberte **vytvořit nový** z **Cloudovou službu** seznamu).
-1. Zadejte název velkých a malých písmen pro cloudovou službu, která je součástí adresy URL a musí být jedinečný. Také vyberte oblast nebo skupina vztahů a vyberte možnost replikace.
+1. V dříve vytvořeném projektu cloudové služby klikněte pravým tlačítkem na projekt vybrat **publikovat**.
+1. V případě potřeby se přihlaste pomocí účtu Microsoft nebo organizace přidruženého k vašemu předplatnému Azure a pak kliknutím na tlačítko **Další** přejděte na stránku **Nastavení** .
+1. Zobrazí se dialogové okno **vytvořit cloudovou službu a účet úložiště** (Pokud ne, vyberte **vytvořit nový** ze seznamu **cloudové služby** ).
+1. Zadejte pro cloudovou službu název nerozlišující malá a velká písmena, která tvoří část vaší adresy URL a musí být jedinečná. Zvolte také oblast nebo skupinu vztahů a vyberte možnost replikace.
 
-### <a name="create-a-cloud-service-through-the-azure-portal"></a>Vytvoření cloudové služby na webu Azure portal
+### <a name="create-a-cloud-service-through-the-azure-portal"></a>Vytvoření cloudové služby prostřednictvím Azure Portal
 
-1. Přihlaste se k [webu Azure portal](https://portal.azure.com/).
-1. Vyberte **cloudové služby (klasické)** na levé straně stránky.
-1. Vyberte **+ přidat**, potom zadejte požadované informace (DNS název předplatného, skupiny prostředků a umístění). Není nutné v tomto okamžiku nahrání balíčku, protože můžete udělat později v sadě Visual Studio.
-1. Vyberte **vytvořit** proces dokončete.
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com/).
+1. Na levé straně stránky vyberte **Cloud Services (Classic)** .
+1. Vyberte **+ Přidat**a zadejte požadované informace (název DNS, předplatné, skupina prostředků a umístění). V tomto okamžiku není nutné nahrávat balíček, protože to provedete později v aplikaci Visual Studio.
+1. Pro dokončení procesu vyberte **vytvořit** .
 
-## <a name="create-a-storage-account"></a>Vytvoření účtu úložiště
+## <a name="create-a-storage-account"></a>vytvořit účet úložiště
 
-Účet úložiště poskytuje přístup ke službám Blob, Queue a Table. Můžete vytvořit účet úložiště pomocí sady Visual Studio nebo [webu Azure portal](https://portal.azure.com/).
+Účet úložiště poskytuje přístup ke službám blob, Queue a Table. Účet úložiště můžete vytvořit pomocí sady Visual Studio nebo [Azure Portal](https://portal.azure.com/).
 
 ### <a name="create-a-storage-account-from-visual-studio"></a>Vytvoření účtu úložiště ze sady Visual Studio
 
-1. V **Průzkumníka řešení** s dříve vytvořeném projektu cloudové služby, vyhledejte **připojené služby** uzlu v rámci projektu role, klikněte pravým tlačítkem a vyberte **přidat připojenou službu**. (V sadě Visual Studio 2015, klikněte pravým tlačítkem myši **úložiště** uzel a vyberte možnost **vytvořit účet úložiště**.)
-1. V **připojené služby** seznam, který se zobrazí, vyberte **cloudové úložiště se službou Azure Storage**.
-1. V dialogovém okně služby Azure Storage, který se zobrazí, vyberte **+ vytvořit nový účet úložiště**, který se zobrazí dialogové okno, ve kterém můžete zadat vašeho předplatného, název fo účet, cenovou úroveň, skupinu prostředků a umístění.
-1. Vyberte **vytvořit** po dokončení. Nový účet úložiště se zobrazí v seznamu účtů úložiště k dispozici v rámci vašeho předplatného.
-1. Vyberte, že účet a vyberte **přidat**.
+1. V **Průzkumník řešení** s dříve vytvořeným projektem cloudové služby vyhledejte uzel **připojené služby** v rámci projektu role, klikněte pravým tlačítkem myši a vyberte **Přidat připojenou službu**. (V aplikaci Visual Studio 2015 klikněte pravým tlačítkem myši na uzel **úložiště** a vyberte **vytvořit účet úložiště**.)
+1. V seznamu **připojené služby** , který se zobrazí, vyberte **cloudové úložiště s Azure Storage**.
+1. V zobrazeném dialogovém okně Azure Storage vyberte **+ vytvořit nový účet úložiště**, ve kterém se zobrazí dialogové okno, ve kterém můžete zadat předplatné, název účtu, cenovou úroveň, skupinu prostředků a umístění.
+1. Až budete hotovi, vyberte **vytvořit** . V seznamu dostupných účtů úložiště ve vašem předplatném se zobrazí nový účet úložiště.
+1. Vyberte tento účet a vyberte **Přidat**.
 
-### <a name="create-a-storage-account-through-the-azure-portal"></a>Vytvoření účtu úložiště na webu Azure portal
+### <a name="create-a-storage-account-through-the-azure-portal"></a>Vytvořte účet úložiště pomocí Azure Portal
 
-1. Přihlaste se k [webu Azure portal](https://portal.azure.com/).
-1. Vyberte **+ nová** v levém horním rohu.
-1. Vyberte **úložiště** v části "Azure Marketplace," pak **účet úložiště – objekt blob, soubor, tabulka, fronta** z pravé strany.
-1. Zadejte požadované informace (název, model nasazení a tak dále.
-1. Vyberte **vytvořit** proces dokončete.
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com/).
+1. V levém horním rohu vyberte **+ Nový** .
+1. V části "Azure Marketplace" vyberte **úložiště** **účet úložiště – objekt blob, soubor, tabulka, fronta** z pravé strany.
+1. Zadejte požadované informace (název, model nasazení a tak dále).
+1. Pro dokončení procesu vyberte **vytvořit** .
 
-## <a name="configure-your-app-to-use-the-storage-account"></a>Konfigurace aplikace pro použití účtu úložiště
+## <a name="configure-your-app-to-use-the-storage-account"></a>Konfigurace aplikace tak, aby používala účet úložiště
 
-Po vytvoření účtu úložiště se k němu chce připojit ze sady Visual Studio automaticky aktualizuje konfigurace služby pro projekt, včetně adresy URL a přístupové klíče.
+Po vytvoření účtu úložiště se k němu připojíte ze sady Visual Studio a automaticky se aktualizují konfigurace služby pro projekt, včetně adres URL a přístupových klíčů.
 
-Pokud jste vytvořili cloudové služby pomocí sady Visual Studio **přidat připojenou službu**, připojení můžete zkontrolovat tak, že otevřete `ServiceConfiguration.Cloud.cscfg` a `ServiceConfiguration.Local.cscfg`.
+Pokud jste vytvořili cloudovou službu ze sady Visual Studio pomocí **Přidat připojenou službu**, můžete ověřit připojení tak, že otevřete `ServiceConfiguration.Cloud.cscfg` a `ServiceConfiguration.Local.cscfg` .
 
-Pokud jste vytvořili cloudové služby na webu Azure portal, postupujte podle stejných kroků v [vytvoření účtu úložiště ze sady Visual Studio](#create-a-storage-account-from-visual-studio) ale vyberte existující účet, spíše než vytvářet novou. Visual Studio pak aktualizuje konfiguraci za vás.
+Pokud jste vytvořili cloudovou službu prostřednictvím Azure Portal, postupujte podle stejných kroků v části [Vytvoření účtu úložiště ze sady Visual Studio](#create-a-storage-account-from-visual-studio) , ale místo vytvoření nového účtu vyberte existující účet. Visual Studio potom aktualizuje konfiguraci za vás.
 
-Chcete-li konfigurovat nastavení ručně, použijte stránky vlastností v sadě Visual Studio na příslušné roli v projektu cloudové služby (pravým tlačítkem myši na roli a vyberte **vlastnosti**). Další informace najdete v tématu [konfigurace připojovacího řetězce k účtu úložiště](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account).
+Pokud chcete nakonfigurovat nastavení ručně, použijte stránky vlastností v aplikaci Visual Studio pro příslušnou roli v projektu cloudové služby (klikněte pravým tlačítkem na roli a vyberte **vlastnosti**). Další informace najdete v tématu [Konfigurace připojovacího řetězce k účtu úložiště](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account).
 
-### <a name="about-access-keys"></a>Informace o přístupových klíčů
+### <a name="about-access-keys"></a>O přístupových klíčích
 
-Na webu Azure portal zobrazuje adresy URL, můžete použít pro přístup k prostředkům v každém ze služby Azure storage a primární a sekundární přístupové klíče pro váš účet. Tyto klíče použijete k ověření požadavků na přístup služby úložiště.
+Azure Portal zobrazuje adresy URL, které můžete použít k přístupu k prostředkům v každé ze služeb Azure Storage, a také k primárním a sekundárním přístupovým klíčům pro váš účet. Tyto klíče použijete k ověření požadavků provedených u služby úložiště.
 
-Sekundární přístupový klíč poskytuje stejný přístup k vašemu účtu úložiště jako primární přístupový klíč a je generována jako záložní primární přístupový klíč k narušení. Kromě toho doporučujeme znovu vygenerovat přístupové klíče ke svému v pravidelných intervalech. Můžete upravit nastavení připojovacího řetězce používat sekundární klíč znovu vygenerovat primární klíč, a můžete je změnit a znovu vygenerovalo primární klíč použít, když znovu vygenerovat sekundární klíč.
+Sekundární přístupový klíč poskytuje stejný přístup k vašemu účtu úložiště jako primární přístupový klíč a vygeneruje se jako záloha, aby byl váš primární přístupový klíč zneužit. Kromě toho se doporučuje znovu vygenerovat přístupové klíče v pravidelných intervalech. Nastavení připojovacího řetězce můžete upravit tak, aby při opětovném generování primárního klíče používalo sekundární klíč, a pak ho můžete upravit tak, aby používalo znovu vygenerovaný primární klíč při opětovném vygenerování sekundárního klíče.
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o publikování aplikace do Azure ze sady Visual Studio, naleznete v tématu [publikování cloudové služby pomocí nástroje Azure](vs-azure-tools-publishing-a-cloud-service.md).
+Další informace o publikování aplikací do Azure ze sady Visual Studio najdete v tématu [publikování cloudové služby pomocí nástrojů Azure](vs-azure-tools-publishing-a-cloud-service.md).

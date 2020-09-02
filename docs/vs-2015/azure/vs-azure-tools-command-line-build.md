@@ -1,6 +1,6 @@
 ---
-title: Sestavení z příkazového řádku Azure | Dokumentace Microsoftu
-description: Sestavení z příkazového řádku Azure
+title: Sestavení příkazového řádku pro Azure | Microsoft Docs
+description: Sestavení příkazového řádku pro Azure
 author: ghogen
 manager: jillfra
 assetId: 94b35d0d-0d35-48b6-b48b-3641377867fd
@@ -12,26 +12,26 @@ ms.topic: conceptual
 ms.date: 03/05/2017
 ms.author: ghogen
 ms.openlocfilehash: 8c96713a06c66fe34e34417e9e8595ba07e50485
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62989821"
 ---
-# <a name="building-azure-projects-from-the-command-line"></a>Sestavování projektů Azure z příkazového řádku
-Microsoft Build Engine (MSBuild) můžete vytvářet produkty v prostředích sestavení testovacího prostředí, kde není nainstalovaná sada Visual Studio. Nástroj MSBuild používá formát XML pro soubory projektu, které je rozšiřitelný a plně podporovaný microsoftem. Pomocí nástroje MSBuild formát souboru, můžete popsat, co položky musí být vytvořená pro jeden nebo více platformách a konfiguracích.
+# <a name="building-azure-projects-from-the-command-line"></a>Vytváření projektů Azure z příkazového řádku
+Pomocí Microsoft Build Engine (MSBuild) můžete vytvářet produkty v prostředích pro vytváření sestavení, kde není nainstalována aplikace Visual Studio. Nástroj MSBuild používá formát XML pro soubory projektu, které jsou rozšiřitelné a plně podporované Microsoftem. Pomocí formátu souboru MSBuild můžete popsat, které položky musí být sestaveny pro jednu nebo více platforem a konfigurací.
 
-Můžete také spustit nástroj MSBuild na příkazovém řádku a v tomto tématu popisuje tento přístup. Nastavením vlastnosti na příkazovém řádku můžete vytvářet konkrétní konfigurace projektu. Podobně můžete také definovat cíle, které sestavení nástroje MSBuild. Další informace o parametrech příkazového řádku a nástroje MSBuild naleznete v tématu [MSBuild Reference k příkazovému řádku](https://msdn.microsoft.com/library/ms164311.aspx).
+Nástroj MSBuild můžete spustit také na příkazovém řádku a toto téma popisuje tento přístup. Nastavením vlastností na příkazovém řádku můžete sestavit konkrétní konfiguraci projektu. Podobně můžete také definovat cíle, které nástroj MSBuild vytvoří. Další informace o parametrech příkazového řádku a nástroji MSBuild naleznete v tématu [Reference k příkazovému řádku nástroje MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 
 ## <a name="msbuild-parameters"></a>Parametry nástroje MSBuild
-Chcete-li spustit nástroj MSBuild s je nejjednodušší způsob, jak vytvořit balíček `/t:Publish` možnost. Ve výchozím nastavení, tento příkaz vytvoří adresář ve vztahu ke kořenové složce projektu, jako například `<ProjectDirectory>\bin\Configuration\app.publish\`. Když vytvoříte projekt Azure, jsou generovány dva soubory: balíček samotný soubor a související konfigurační soubor:
+Nejjednodušší způsob, jak vytvořit balíček, je spustit MSBuild s `/t:Publish` možností. Ve výchozím nastavení tento příkaz vytvoří adresář ve vztahu ke kořenové složce projektu, například `<ProjectDirectory>\bin\Configuration\app.publish\` . Při sestavování projektu Azure se generují dva soubory: samotný soubor balíčku a přiložený konfigurační soubor:
 
-* Soubor balíčku (`project.cspkg`)
-* Konfigurační soubor (`ServiceConfiguration.TargetProfile.cscfg`)
+* Soubor balíčku ( `project.cspkg` )
+* Konfigurační soubor ( `ServiceConfiguration.TargetProfile.cscfg` )
 
-Ve výchozím nastavení obsahuje každý projekt Azure jeden soubor konfigurace služby pro místní sestavení (ladění) a druhý pro sestavení můžou v cloudu (přípravné nebo produkční). Můžete však přidat nebo odebrat soubory konfigurace služby podle potřeby. Při vytváření balíčku v rámci sady Visual Studio, zobrazí se výzva který soubor konfigurace služby zahrnout spolu s balíček. Při vytváření balíčku pomocí nástroje MSBuild je standardní součástí místní služby konfigurační soubor. Chcete-li zahrnout jiný soubor konfigurace služby, nastavte `TargetProfile` vlastnost příkaz MSBuild (`MSBuild /t:Publish /p:TargetProfile=ProfileName`).
+Ve výchozím nastavení každý projekt Azure zahrnuje jeden konfigurační soubor služby pro místní (ladicí) sestavení a druhý pro sestavení cloudu (pracovní nebo produkční). V případě potřeby však můžete přidat nebo odebrat konfigurační soubory služby. Při sestavování balíčku v sadě Visual Studio se zobrazí dotaz, který konfigurační soubor služby má být zahrnut společně s balíčkem. Když vytváříte balíček pomocí nástroje MSBuild, je ve výchozím nastavení součástí místní konfigurační soubor služby. Chcete-li zahrnout jiný konfigurační soubor služby, nastavte `TargetProfile` vlastnost příkazu MSBuild ( `MSBuild /t:Publish /p:TargetProfile=ProfileName` ).
 
-Pokud chcete použít jiný adresář pro uložené balíček a konfigurační soubory, nastavte cestu s použitím `/p:PublishDir=Directory\` možností, včetně koncové oddělovače zpětné lomítko.
+Pokud chcete pro uložené balíčky a konfigurační soubory použít alternativní adresář, nastavte cestu pomocí `/p:PublishDir=Directory\` Možnosti, včetně koncového oddělovače zpětného lomítka.
 
 ## <a name="next-steps"></a>Další kroky
-Jakmile je balíček vytvořen, můžete ji nasadit do Azure.
+Po sestavení balíčku ho můžete nasadit do Azure.

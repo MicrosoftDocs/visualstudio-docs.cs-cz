@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessDestroyEvent2 | Dokumenty společnosti Microsoft
+title: IDebugProcessDestroyEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,31 +13,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7d7c93c1e5811ec3aed5d44f3c306de1c09cced9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723456"
 ---
 # <a name="idebugprocessdestroyevent2"></a>IDebugProcessDestroyEvent2
-Toto rozhraní je odeslána při ukončení procesu, ukončí atypically nebo je odpojen od.
+Toto rozhraní se pošle, když se ukončí proces, ukončí se v neobvyklých případech nebo se odpojí od.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProcessDestroyEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul (DE) nebo dodavatel vlastního portu implementují toto rozhraní, aby ohlásili, že proces byl ukončen. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá [QueryInterface](/cpp/atl/queryinterface) pro `IDebugEvent2` přístup k rozhraní.
+ Modul ladění (DE) nebo vlastní dodavatel portu implementují toto rozhraní, aby nahlásilo, že proces byl ukončen. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- De nebo dodavatel vlastního portu vytvoří a odešle tento objekt události k hlášení ukončení procesu. DE odešle tuto událost pomocí funkce zpětného volání [IDebugCallBack2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) která je poskytována sdm, když je připojen k programu, který je laděn. Dodavatel vlastního portu odešle tuto událost pomocí rozhraní [IDebugPortEvents2.](../../../extensibility/debugger/reference/idebugportevents2.md)
+ DE nebo vlastní dodavatel portu vytvoří a pošle tento objekt události, aby nahlásil ukončení procesu. DE pošle tuto událost pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu. Vlastní dodavatel portu odešle tuto událost pomocí rozhraní [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

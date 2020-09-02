@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetDebugReason | Dokumenty společnosti Microsoft
+title: 'IDebugProcess3:: GetDebugReason | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2fa12b74b44761761a08e232a9f3efa845fa73a7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723662"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
-Tato metoda vrátí důvod, že proces byl spuštěn pro ladění.
+Tato metoda vrací důvod, proč byl proces spuštěn pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetDebugReason(
 
 ## <a name="parameters"></a>Parametry
 `pReason`\
-[out] Vrátí hodnotu z [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) výčtu.
+mimo Vrací hodnotu z výčtu [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

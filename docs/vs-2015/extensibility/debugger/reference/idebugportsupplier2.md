@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2 | Dokumentace Microsoftu
+title: IDebugPortSupplier2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6d9c3f8b45affd192d4109db08454345dcd0814
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188232"
 ---
 # <a name="idebugportsupplier2"></a>IDebugPortSupplier2
@@ -24,17 +24,17 @@ ms.locfileid: "68188232"
 
 Toto rozhraní poskytuje porty pro správce ladění relace (SDM).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortSupplier2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Dodavatel port. Tento vlastní port implementuje toto rozhraní k reprezentaci dodavatele portu.  
+ Vlastní dodavatel portu implementuje toto rozhraní, aby představovalo dodavatele portu.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání `CoCreateInstance` s dodavatele portu `GUID` vrátí toto rozhraní (to je typické způsob, jak získat toto rozhraní). Příklad:  
+ Volání `CoCreateInstance` s poskytovatelem portu `GUID` vrátí toto rozhraní (Toto je typický způsob, jak získat toto rozhraní). Příklad:  
   
 ```cpp#  
 IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)  
@@ -51,34 +51,34 @@ IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)
 }  
 ```  
   
- Volání [GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md) vrátí toto rozhraní představující aktuální dodavatele portu, která je používána ve [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Volání [GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md) vrátí toto rozhraní, které představuje aktuálního dodavatele portu používaného v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
- [GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md) vrátí toto rozhraní představující dodavatele portu, který vytvořili port.  
+ [GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md) vrátí toto rozhraní, které představuje dodavatele portu, který vytvořil port.  
   
- [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) představuje seznam `IDebugPortSupplier` rozhraní ( `IEnumDebugPortSuppliers` rozhraní se získávají z [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md), značila všechno dodavatelé portů zaregistrovaného [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]).  
+ [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) představuje seznam `IDebugPortSupplier` rozhraní ( `IEnumDebugPortSuppliers` rozhraní se získává z [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md), které představuje všechny dodavatele portů zaregistrované v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ).  
   
- Ladicí stroj obvykle nekomunikuje s dodavatele portu.  
+ Ladicí stroj obvykle nekomunikuje s dodavatelem portu.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDebugPortSupplier2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDebugPortSupplier2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetPortSupplierName](../../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md)|Získá název dodavatele portu.|  
 |[GetPortSupplierId](../../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)|Získá identifikátor dodavatele portu.|  
-|[GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md)|Získá od jiného dodavatele portu port.|  
-|[EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)|Vytvoří výčet porty, které už existují.|  
-|[CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)|Ověřuje, že dodavatele portu podporuje přidání nové porty.|  
+|[GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md)|Získá port od dodavatele portu.|  
+|[EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)|Vytvoří výčet portů, které již existují.|  
+|[CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)|Ověřuje, že dodavatel portu podporuje přidávání nových portů.|  
 |[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)|Přidá port.|  
 |[RemovePort](../../../extensibility/debugger/reference/idebugportsupplier2-removeport.md)|Odebere port.|  
   
 ## <a name="remarks"></a>Poznámky  
- Dodavatele portu můžete identifikovat podle názvu a ID, přidat a odebrat porty a výčet všechny porty, které poskytuje dodavatele portu.  
+ Dodavatel portu se může identifikovat podle názvu a ID, přidat a odebrat porty a vytvořit výčet všech portů, které dodavatel portů poskytuje.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

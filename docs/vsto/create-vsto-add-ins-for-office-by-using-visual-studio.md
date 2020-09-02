@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986151"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Vytváření doplňků VSTO pro Office s použitím sady Visual Studio
   Pomocí nástrojů systém Microsoft Office Developer Tools v sadě Visual Studio můžete vytvářet .NET Framework aplikace, které rozšíří Office. Tyto aplikace se také nazývají *řešení pro systém Office*.
 
- Nástroje Office Developer Tools poskytují funkce, které vám pomůžou vytvářet řešení pro systém Office tak, aby vyhovovala různým obchodním potřebám. Nástroje obsahují šablony projektu, které vám pomohou vytvořit řešení pro systém Office pomocí Visual Basic C#nebo vizuálu a vizuálních návrhářů, které vám pomohou vytvořit vlastní uživatelská rozhraní pro vaše řešení pro systém Office.
+ Nástroje Office Developer Tools poskytují funkce, které vám pomůžou vytvářet řešení pro systém Office tak, aby vyhovovala různým obchodním potřebám. Nástroje obsahují šablony projektu, které vám pomohou vytvořit řešení pro systém Office pomocí Visual Basic nebo Visual C# a vizuálních návrhářů, které vám pomohou vytvořit vlastní uživatelská rozhraní pro vaše řešení pro systém Office.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
  Nejnovější informace o vývoji pro Office najdete v centru pro [vývojáře systém Microsoft Office](https://developer.microsoft.com/office/docs).
 
-## <a name="in-this-section"></a>V tomto oddílu
-- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
+## <a name="in-this-section"></a>V této části
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 
  Obsahuje odkazy na informace o tom, jak nakonfigurovat vývojový počítač pro vytváření řešení pro systém Office, jak začít vytvářet řešení pro systém Office a co je nového pro vývoj pro Office v sadě Visual Studio.
 
@@ -79,11 +79,11 @@ ms.locfileid: "72986151"
 
 - [Sestavování řešení pro systém Office](building-office-solutions.md)
 
- Poskytuje informace o rozdílech mezi vytvářením projektů Office a dalšími typy projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Poskytuje informace o rozdílech mezi vytvářením projektů Office a dalšími typy projektů v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Ladění projektů Office](debugging-office-projects.md)
 
- Poskytuje informace o rozdílech mezi laděním projektů Office a dalšími typy projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Poskytuje informace o rozdílech mezi laděním projektů Office a dalšími typy projektů v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Zabezpečení řešení pro systém Office](securing-office-solutions.md)
 
@@ -97,15 +97,15 @@ ms.locfileid: "72986151"
 
  Obsahuje odkazy na ukázkové aplikace a témata, které poskytují podrobné pokyny pro provádění běžných úloh.
 
-- [Obecný referenční &#40;vývoj pro Office v sadě Visual Studio&#41;](general-reference-office-development-in-visual-studio.md)
+- [Obecné referenční informace &#40;vývoj pro Office v sadě Visual Studio&#41;](general-reference-office-development-in-visual-studio.md)
 
  Obsahuje odkazy na podrobné informace o sestaveních, manifestech, prvcích uživatelského rozhraní a chybových zprávách Office pro primární spolupráci.
 
-- [Spravované referenční &#40;materiály pro vývoj pro Office v sadě Visual Studio&#41;](managed-reference-office-development-in-visual-studio.md)
+- [Spravované referenční materiály &#40;vývoj pro Office v sadě Visual Studio&#41;](managed-reference-office-development-in-visual-studio.md)
 
- Obsahuje odkazy na informace o oborech názvů a typech rozhraní API, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office cílených na .NET Framework 3,5, najdete v následující referenční části dokumentace k sadě Visual Studio 2008: [2007 reference spravovaná systémem](managed-reference-office-development-in-visual-studio.md).
+ Obsahuje odkazy na informace o oborech názvů a typech rozhraní API, které se používají v projektech Office, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Referenční dokumentace k rozhraní API pro obory názvů a typy, které se používají v projektech Office cílených na .NET Framework 3,5, najdete v následující referenční části dokumentace k sadě Visual Studio 2008: [2007 reference spravovaná systémem](managed-reference-office-development-in-visual-studio.md).
 
-- [Nespravované reference &#40;k rozhraní API vývoj pro Office v sadě Visual Studio&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
+- [Nespravované Reference k rozhraní API &#40;vývoj pro Office v sadě Visual Studio&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
 
  Obsahuje odkazy na informace o rozhraních COM, která můžete použít k provádění akcí, jako je načítání a uvolňování spravovaných doplňků VSTO v aplikacích Office.
 
@@ -118,4 +118,4 @@ ms.locfileid: "72986151"
 
 - [Vývoj aplikací v aplikaci Visual Studio](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) Obsahuje odkazy na témata, která vysvětlují, jak můžete pomocí sady Visual Studio navrhovat, vyvíjet, ladit a nasazovat webové aplikace, webové služby XML a tradiční klientské aplikace.
 
-- [.NET Framework programování v aplikaci Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Popisuje vývoj aplikací pomocí .NET Framework v Visual Basic a vizuálu C#.
+- [.NET Framework programování v aplikaci Visual Studio](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Popisuje vývoj aplikací pomocí .NET Framework v Visual Basic a Visual C#.

@@ -12,10 +12,10 @@ ms.author: zorio
 author: zoeyr
 manager: jillfra
 ms.openlocfilehash: f97fd5aee27cdc97cf6eb5731da9fad9cb999e18
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78169336"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>Referenční dokumentace schématu 2,0 pro jazykové sady VSIX
@@ -24,21 +24,21 @@ Schéma jazykové sady VSIX poskytuje lokalizované informace o instalaci balí�
 
 ## <a name="language-pack-schema"></a>Schéma jazykové sady
 
-Kořenový prvek souboru jazykové sady je `<PackageLanguagePackManifest>`s atributem `Version`, který je verze formátu jazykové sady. Tento článek popisuje verzi 2,0 formátu jazykové sady, která je zadána v manifestu nastavením atributu `Version` na hodnotu `Version="2.0.0"`. Kořenový element obsahuje přesně jeden podřízený `<Metadata>` element.
+Kořenový prvek souboru jazykové sady je `<PackageLanguagePackManifest>` , s atributem `Version` , který je verze formátu jazykové sady. Tento článek popisuje verzi 2,0 formátu jazykové sady, která je zadána v manifestu, nastavením `Version` atributu na hodnotu `Version="2.0.0"` . Kořenový element obsahuje přesně jeden podřízený `<Metadata>` element.
 
 ### <a name="packagelanguagepackmanifest-element"></a>Element PackageLanguagePackManifest
 
-V elementu `<PackageLanguagePackManifest>` musí existovat následující element:
+V rámci `<PackageLanguagePackManifest>` elementu musí existovat následující element:
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |`<Metadata>`| Nadřazený element pro všechna lokalizovaná metadata balíčku
 
 ### <a name="metadata-element"></a>Element metadata
 
-V rámci prvku `<Metadata>` můžete mít následující prvky:
+V rámci `<Metadata>` elementu můžete mít následující prvky:
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |`<DisplayName>`|Lokalizovaný název rozšíření, které se má nainstalovat|
 |`<Description>`|Lokalizovaný popis rozšíření, které se má nainstalovat|
@@ -65,7 +65,7 @@ V rámci prvku `<Metadata>` můžete mít následující prvky:
 
 ## <a name="see-also"></a>Viz také
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)|Ukazuje, jak poskytnout lokalizovanou podporu instalace balíčku VSIX.|
 |[Referenční dokumentace schématu rozšíření VSIX 2,0](../extensibility/vsix-extension-schema-2-0-reference.md)|Manifest VSIX popisuje obsah souboru nasazení *. vsix* . Soubor nasazení umožňuje nainstalovat rozšíření sady Visual Studio pomocí dialogového okna **rozšíření a aktualizace** .|

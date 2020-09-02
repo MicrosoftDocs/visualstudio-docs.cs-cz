@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 93e2d5abb9c8fda9d4a1300a9bb0958ac9266499
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986175"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Vázání dat k ovládacím prvkům v řešeních pro systém Office
@@ -35,11 +35,11 @@ ms.locfileid: "72986175"
  Model Windows Forms i hostitelské ovládací prvky používají model model Windows Forms Data Binding, který podporuje *Jednoduché vázání dat* i *složité datové vazby* ke zdrojům dat, jako jsou datové sady a tabulky dat. Úplné informace o modelu vázání dat v model Windows Forms naleznete v tématu [BIND a model Windows Forms dat](/dotnet/framework/winforms/data-binding-and-windows-forms).
 
 ## <a name="simple-data-binding"></a>Jednoduchá datová vazba
- Jednoduchá vazba dat existuje, pokud je vlastnost ovládacího prvku svázána s jedním datovým prvkem, například hodnotou v tabulce dat. Například ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange> má vlastnost <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A>, která může být svázána s polem v datové sadě. Když se změní pole v datové sadě, změní se také hodnota v pojmenovaném rozsahu. Všechny hostitelské ovládací prvky, s výjimkou ovládacího prvku <xref:Microsoft.Office.Tools.Word.XMLNodes>, podporují jednoduchou datovou vazbu. Ovládací prvek <xref:Microsoft.Office.Tools.Word.XMLNodes> je kolekce, a proto nepodporuje datovou vazbu.
+ Jednoduchá vazba dat existuje, pokud je vlastnost ovládacího prvku svázána s jedním datovým prvkem, například hodnotou v tabulce dat. Například <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek má <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnost, která může být svázána s polem v datové sadě. Když se změní pole v datové sadě, změní se také hodnota v pojmenovaném rozsahu. Všechny hostitelské ovládací prvky, s výjimkou <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládacího prvku, podporují jednoduchou datovou vazbu. <xref:Microsoft.Office.Tools.Word.XMLNodes>Ovládací prvek je kolekce, a proto nepodporuje datovou vazbu.
 
- Chcete-li provést jednoduchou datovou vazbu na hostitelský ovládací prvek, přidejte <xref:System.Windows.Forms.Binding> do vlastnosti `DataBindings` ovládacího prvku. Objekt <xref:System.Windows.Forms.Binding> představuje jednoduchou vazbu mezi hodnotou vlastnosti ovládacího prvku a hodnotou datového elementu.
+ Chcete-li provést jednoduchou datovou vazbu na hostitelský ovládací prvek, přidejte <xref:System.Windows.Forms.Binding> do `DataBindings` vlastnosti ovládacího prvku. <xref:System.Windows.Forms.Binding>Objekt představuje jednoduchou vazbu mezi hodnotou vlastnosti ovládacího prvku a hodnotou datového elementu.
 
- Následující příklad ukazuje, jak vytvořit navázání vlastnosti <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> na datový prvek v projektu na úrovni dokumentu.
+ Následující příklad ukazuje, jak vytvořit vazby <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnosti na datový prvek v projektu na úrovni dokumentu.
 
  [!code-vb[Trin_BindableComponent#4](../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb#4)]
  [!code-csharp[Trin_BindableComponent#4](../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs#4)]
@@ -47,11 +47,11 @@ ms.locfileid: "72986175"
  Návody, které ilustrují jednoduchou datovou vazbu, najdete v tématu [Návod: jednoduché datové vazby v projektu na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) pro projekt na úrovni dokumentu a [Návod: jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) pro projekt doplňku VSTO.
 
 ## <a name="complex-data-binding"></a>Složitá datová vazba
- Pokud je vlastnost ovládacího prvku svázaná s více než jedním datovým prvkem, jako je například více sloupců v tabulce dat, existuje složitá datová vazba. Ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject> pro Excel je jediným ovládacím prvkem hostitele, který podporuje složitou datovou vazbu. Existuje také řada model Windows Formsch ovládacích prvků, které podporují složitou datovou vazbu, jako je například ovládací prvek <xref:System.Windows.Forms.DataGridView>.
+ Pokud je vlastnost ovládacího prvku svázaná s více než jedním datovým prvkem, jako je například více sloupců v tabulce dat, existuje složitá datová vazba. <xref:Microsoft.Office.Tools.Excel.ListObject>Ovládací prvek pro Excel je jediným ovládacím prvkem hostitele, který podporuje složitou datovou vazbu. Existuje také řada model Windows Formsch ovládacích prvků, které podporují složitou datovou vazbu, jako je například <xref:System.Windows.Forms.DataGridView> ovládací prvek.
 
- Chcete-li provést složitou datovou vazbu, nastavte vlastnost `DataSource` ovládacího prvku na objekt zdroje dat, který je podporován složitými datovými vazbami. Například vlastnost <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> ovládacího prvku <xref:Microsoft.Office.Tools.Excel.ListObject> může být vázána na více sloupců v tabulce dat. Všechna data v datové tabulce se zobrazí v ovládacím prvku <xref:Microsoft.Office.Tools.Excel.ListObject> a data v tabulce dat se změní <xref:Microsoft.Office.Tools.Excel.ListObject> také. Seznam zdrojů dat, které lze použít pro složitou datovou vazbu, najdete v tématu [zdroje dat podporované nástrojem model Windows Forms](/dotnet/framework/winforms/data-sources-supported-by-windows-forms).
+ Chcete-li provést složitou datovou vazbu, nastavte `DataSource` vlastnost ovládacího prvku na objekt zdroje dat, který je podporován složitou datovou vazbou. Například <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku může být svázána s více sloupci v tabulce dat. Všechna data v datové tabulce se zobrazí v <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacím prvku a data v tabulce dat se <xref:Microsoft.Office.Tools.Excel.ListObject> také změní. Seznam zdrojů dat, které lze použít pro složitou datovou vazbu, najdete v tématu [zdroje dat podporované nástrojem model Windows Forms](/dotnet/framework/winforms/data-sources-supported-by-windows-forms).
 
- Následující příklad kódu vytvoří <xref:System.Data.DataSet> se dvěma objekty <xref:System.Data.DataTable> a naplní jednu z tabulek daty. Kód potom sváže <xref:Microsoft.Office.Tools.Excel.ListObject> s tabulkou, která obsahuje data. Tento příklad je pro projekt na úrovni dokumentu aplikace Excel.
+ Následující příklad kódu vytvoří <xref:System.Data.DataSet> se dvěma <xref:System.Data.DataTable> objekty a naplní jednu z tabulek daty. Kód pak váže na <xref:Microsoft.Office.Tools.Excel.ListObject> tabulku, která obsahuje data. Tento příklad je pro projekt na úrovni dokumentu aplikace Excel.
 
  [!code-csharp[Trin_ExcelListObject#18](../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs#18)]
  [!code-vb[Trin_ExcelListObject#18](../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb#18)]
@@ -64,9 +64,9 @@ ms.locfileid: "72986175"
 ### <a name="drag-controls-from-the-data-sources-window"></a>Přetáhněte ovládací prvky z okna zdroje dat.
  Ovládací prvek je v dokumentu vytvořen při přetažení objektu z okna **zdroje dat** . Typ ovládacího prvku, který je vytvořen, závisí na tom, zda vytváříte vazbu na jeden sloupec dat nebo více sloupců dat.
 
- V aplikaci Excel je na listu vytvořen ovládací prvek <xref:Microsoft.Office.Tools.Excel.NamedRange> pro každé jednotlivá pole a pro každý rozsah dat, který obsahuje více řádků a sloupců, je vytvořen ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject>. Toto výchozí nastavení můžete změnit tak, že v okně **zdroje dat** vyberete tabulku nebo pole a v rozevíracím seznamu vyberete jiný ovládací prvek.
+ V aplikaci Excel <xref:Microsoft.Office.Tools.Excel.NamedRange> je na listu vytvořen ovládací prvek pro jednotlivá jednotlivá pole a <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek je vytvořen pro každý rozsah dat, který obsahuje více řádků a sloupců. Toto výchozí nastavení můžete změnit tak, že v okně **zdroje dat** vyberete tabulku nebo pole a v rozevíracím seznamu vyberete jiný ovládací prvek.
 
- Do dokumentů je přidán ovládací prvek <xref:Microsoft.Office.Tools.Word.ContentControl>. Typ ovládacího prvku obsahu závisí na typu dat pole, které jste vybrali.
+ <xref:Microsoft.Office.Tools.Word.ContentControl>Do dokumentů je přidán ovládací prvek. Typ ovládacího prvku obsahu závisí na typu dat pole, které jste vybrali.
 
 ### <a name="bind-data-in-document-level-projects-at-design-time"></a>Vázání dat v projektech na úrovni dokumentu v době návrhu
  V následujících tématech jsou uvedeny příklady vazeb data v době návrhu:
@@ -91,13 +91,13 @@ ms.locfileid: "72986175"
 ## <a name="update-data-that-is-bound-to-host-controls"></a>Aktualizace dat vázaných na hostitelské ovládací prvky
  Datová vazba mezi zdrojem dat a ovládacím prvkem hostitele zahrnuje aktualizaci dat s obousměrnou aktualizací. V jednoduché datové vazbě se změny ve zdroji dat automaticky odrážejí v hostitelském ovládacím prvku, ale změny v ovládacím prvku host vyžadují explicitní volání pro aktualizaci zdroje dat. Důvodem je, že v některých případech nejsou změny v jednom poli vázané na data přijaty, pokud nejsou doprovázeny změnami v jiném poli vázaného na data. Můžete mít například dvě pole, jednu pro věk a jednu pro roky. Prostředí nemůže překročit stáří. Uživatel nemůže aktualizovat stáří z 50 na 25 a potom z 30 až 10, pokud změny neprovádí ve stejnou dobu. Chcete-li tento problém vyřešit, pole s jednoduchou datovou vazbou nejsou aktualizována, dokud nebudou aktualizace explicitně odesílány pomocí kódu.
 
- Chcete-li aktualizovat zdroj dat z hostitelských ovládacích prvků, které umožňují jednoduchou datovou vazbu, je nutné odeslat aktualizace zdroje dat v paměti (například <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable>) a do back-endové databáze, pokud vaše řešení používá jednu z nich.
+ Chcete-li aktualizovat zdroj dat z hostitelských ovládacích prvků, které umožňují jednoduchou datovou vazbu, je nutné odeslat aktualizace zdroje dat v paměti (například <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable> ) a do back-endové databáze, pokud vaše řešení používá jeden.
 
- Pokud provádíte komplexní datovou vazbu pomocí ovládacího prvku <xref:Microsoft.Office.Tools.Excel.ListObject>, nemusíte explicitně aktualizovat zdroj dat v paměti. V takovém případě se změny automaticky odesílají do zdroje dat v paměti bez dalšího kódu.
+ Pokud provádíte komplexní datovou vazbu pomocí ovládacího prvku, nemusíte explicitně aktualizovat zdroj dat v paměti <xref:Microsoft.Office.Tools.Excel.ListObject> . V takovém případě se změny automaticky odesílají do zdroje dat v paměti bez dalšího kódu.
 
  Další informace najdete v tématu [Postup: aktualizace zdroje dat s daty z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Datová vazba a model Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)
 - [Postupy: vytvoření jednoduchého ovládacího prvku vázaného na formulář Windows](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)
 - [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

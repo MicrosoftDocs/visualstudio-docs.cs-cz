@@ -10,10 +10,10 @@ ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
 ms.openlocfilehash: 699580689bcf00d00d2a6e07f814be4d1265bb1d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283543"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Jak používat Visual Studio s účty, které vyžadují Multi-Factor Authentication

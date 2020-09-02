@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetMemoryContext64 | Dokumenty společnosti Microsoft
+title: 'IDebugBinder3:: GetMemoryContext64 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3f76d84f0403a853ae7e297084f8745d7428386a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735739"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-Převede umístění objektu nebo adresu 64bitové paměti na kontext paměti.
+Převede buď umístění objektu, nebo 64 adresu paměti na kontext paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,16 +44,16 @@ int GetMemoryContext64 (
 
 ## <a name="parameters"></a>Parametry
 `pField`\
-[v] [Pole IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který popisuje objekt vyhledejte. Pokud `NULL`, `dwConstant` použijte místo.
+pro [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který popisuje objekt, který se má najít. IF `NULL` a `dwConstant` místo toho použít.
 
 `uConstant`\
-[v] 64bitová adresa paměti, například 0x50000000.
+pro 64 adresa paměti, například 0x50000000.
 
 `ppMemCxt`\
-[out] Vrátí rozhraní [IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) které představuje adresu objektu nebo adresu v paměti.
+mimo Vrátí rozhraní [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) , které představuje adresu objektu, nebo adresu v paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 Následující příklady vytvoří objekt, který implementuje rozhraní [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) a používá tuto metodu k načtení kontextu paměti.

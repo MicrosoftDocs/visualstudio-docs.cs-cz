@@ -1,5 +1,5 @@
 ---
-title: Sestava operací disku (zobrazení vláken) | Dokumenty společnosti Microsoft
+title: Sestava diskových operací (zobrazení vláken) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +13,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 69cbef53bcca74cceba4f9409b578fca45a58806
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62970067"
 ---
 # <a name="disk-operations-report-threads-view"></a>Sestava diskových operací (Zobrazení vláken)
-Sestava operací disku zobrazuje vstupně-nosné operace disku v diskových kanálech.
+Sestava operací disku zobrazuje vstupně-výstupní operace disku v kanálech disku.
 
- Pro každý přístup k disku, ke kterému dochází jménem procesu, který je profilován v aktuálně viditelném časovém okně, jsou tyto informace hlášeny:
+ Pro každý přístup k disku, ke kterému dochází jménem procesu, který je profilované v okně aktuálně zobrazeného času, se zobrazí tyto informace:
 
 - Název a PID procesu, který provedl přístup k disku
 
-- ID vlákna, které přistupovalo k disku
+- ID vlákna, které získalo přístup k disku
 
-- Název souboru, ke kterému byl přistupován
+- Název souboru, ke kterému byl přidaný
 
 - Počet čtení na soubor
 

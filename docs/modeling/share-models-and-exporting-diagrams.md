@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2347ad9f01634fe7fee243a7d5e1a24a6d9ba3b3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591915"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Sdílení modelů a export diagramů
@@ -43,12 +43,12 @@ V aplikaci Visual Studio můžete sdílet modely a diagramy s kolegy několika z
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-|-|
 |[Strukturování řešení modelování](../modeling/structure-your-modeling-solution.md)|Sdílení modelů ve velkém nebo středním projektu.|
 |[Exportování diagramů jako obrázků](../modeling/export-diagrams-as-images.md)|Části diagramů můžete kopírovat do aplikací, jako je například PowerPoint nebo Word, nebo tisknout diagram do souboru XPS.|
 |[Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)|Přehled modelů a diagramů.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)

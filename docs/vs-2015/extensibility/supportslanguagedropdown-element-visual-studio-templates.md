@@ -1,5 +1,5 @@
 ---
-title: Supportslanguagedropdown – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: SupportsLanguageDropDown – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 53703d6178c81758650fdd00aada0a5952734caa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160487"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, jestli je stejný jako pro řadu jazyků webové šablony položky a zda **jazyk** je zapnutá možnost **přidat novou položku** dialogové okno.  
+Určuje, zda je šablona položky webu identická pro více jazyků a zda je v dialogovém okně **Přidat novou položku** možnost **jazyk** povolená.  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<Supportslanguagedropdown – >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<SupportsLanguageDropDown>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <SupportsLanguageDropDown> true/false </SupportsLanguageDropDown>  
@@ -46,24 +46,24 @@ Určuje, jestli je stejný jako pro řadu jazyků webové šablony položky a zd
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která udává, zda je či není **jazyk** možnost je k dispozici **přidat novou položku** dialogové okno.  
+ Text musí být buď `true` nebo `false` , což značí, zda je možnost **jazyka** k dispozici v dialogovém okně **Přidat novou položku** .  
   
 ## <a name="remarks"></a>Poznámky  
  `SupportsLanguageDropDown` je volitelný prvek. Výchozí hodnota je `false`.  
   
- `SupportsLanguageDropDown` Element je dostupná jenom pro webové šablony položek.  
+ `SupportsLanguageDropDown`Element je k dispozici pouze pro šablony webových položek.  
   
- Je nastavena na hodnotu pro tento element `true`, šablona položky je shodné pro všechny programovací jazyky a **jazyk** možnost je povolena **přidat novou položku** dialogové okno. Tato možnost umožní vám vybrat programovací jazyk nová položka, kterou chcete vytvořit ze šablony.  
+ Pokud je hodnota tohoto prvku nastavena na `true` , je šablona položky shodná pro všechny programovací jazyky a možnost **jazyk** je povolena v dialogovém okně **Přidat novou položku** . Tato možnost umožňuje zvolit programovací jazyk nové položky, kterou chcete vytvořit z šablony.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad určuje zobrazíte **jazyk** rozevírací seznam možností.  
+ Následující příklad určuje, že se má zobrazit možnost rozevíracího seznamu **jazyka** .  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  
@@ -88,5 +88,5 @@ Určuje, jestli je stejný jako pro řadu jazyků webové šablony položky a zd
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

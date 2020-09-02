@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fe77e8cb0f21789c7311d9c337b3b973c4dd44f9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645507"
 ---
 # <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>Postupy: Přidání komentářů do diagramů tříd (návrhář tříd)

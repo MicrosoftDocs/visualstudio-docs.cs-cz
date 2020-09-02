@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: acf7178a6b5456d048421533b8497682d69c2ee0
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85381961"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>Postupy: určení stránky publikování pro aplikaci ClickOnce

@@ -16,18 +16,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 75299dae66a07b2bc1671dbfcda935fc4af2b284
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645502"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Postupy: Přidání nebo odebrání importovaných oborů názvů (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem kódu bez úplného zařazení prvku. Například pokud chcete získat přístup k metodě `Create` ve třídě `System.Messaging.MessageQueue`, můžete importovat `System.Messaging` obor názvů a pouze odkazovat na prvek, který potřebujete v kódu jako `MessageQueue.Create`.
+Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem kódu bez úplného zařazení prvku. Například pokud chcete získat přístup k `Create` metodě ve `System.Messaging.MessageQueue` třídě, můžete importovat `System.Messaging` obor názvů a pouze odkazovat na prvek, který potřebujete v kódu jako `MessageQueue.Create` .
 
- Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu**. Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru (`/imports`) a platí pro všechny soubory v projektu. Použijte příkaz `Imports` pro použití oboru názvů v jednom souboru zdrojového kódu.
+ Importované obory názvů jsou spravovány na stránce **odkazy** v **Návrháři projektu**. Importy, které zadáte v tomto dialogovém okně, jsou předány přímo kompilátoru ( `/imports` ) a platí pro všechny soubory v projektu. Použijte `Imports` příkaz pro použití oboru názvů v jednom souboru zdrojového kódu.
 
 ### <a name="to-add-an-imported-namespace"></a>Přidání importovaného oboru názvů
 
@@ -49,9 +49,9 @@ Import oboru názvů umožňuje použít prvky z tohoto oboru názvů ve vašem 
 3. V seznamu **importované obory názvů** zrušte zaškrtnutí políčka pro obor názvů, který chcete odebrat.
 
 ## <a name="user-imports"></a>Importy uživatelů
- Importy uživatelů umožňují importovat konkrétní třídu v rámci oboru názvů, nikoli celý obor názvů. Například vaše aplikace může mít import pro obor názvů `Systems.Diagnostics`, ale jediná třída v rámci tohoto oboru názvů, o kterou vás zajímá, je `Debug` třída. Můžete definovat `System.Diagnostics.Debug` jako import uživatele a pak odebrat import pro `System.Diagnostics`.
+ Importy uživatelů umožňují importovat konkrétní třídu v rámci oboru názvů, nikoli celý obor názvů. Například vaše aplikace může mít import pro `Systems.Diagnostics` obor názvů, ale jediná třída v rámci tohoto oboru názvů, které vás zajímá, je `Debug` Třída. Můžete definovat `System.Diagnostics.Debug` jako import uživatele a pak odebrat import pro `System.Diagnostics` .
 
- Pokud se později rozhodnete, že jste si sami rozmysleli, že se skutečně `EventLog` třída, kterou jste potřebovali, mohli byste do `System.Diagnostics.EventLog` zadat import a přepsat `System.Diagnostics.Debug` pomocí funkce aktualizace.
+ Pokud se později rozhodnete, že jste si sami mysleli, že skutečně jste `EventLog` potřebovali, můžete zadat `System.Diagnostics.EventLog` jako import a přepsat uživatele `System.Diagnostics.Debug` pomocí funkce aktualizace.
 
 #### <a name="to-add-a-user-import"></a>Přidání importu uživatele
 

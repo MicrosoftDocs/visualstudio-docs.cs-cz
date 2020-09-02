@@ -1,5 +1,5 @@
 ---
-title: Lokalizace příkazů nabídky | Dokumentace Microsoftu
+title: Lokalizace příkazů nabídky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -16,39 +16,39 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c879072b55729e249b1aecd665d6f470f4138a75
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686124"
 ---
 # <a name="localizing-menu-commands"></a>Lokalizace příkazů nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytváření souborů .vsct lokalizované a lokalizované soubory .resx pro váš balíček VSPackage správy kódu a následně aktualizovat soubory projektu změny.  
+Lokalizovaný text pro příkazy nabídky a panelu nástrojů můžete poskytnout vytvořením lokalizovaných souborů. vsct a lokalizovaných souborů. resx pro svůj VSPackage a následnou aktualizací souborů projektu pro zahrnutí změn.  
   
- Informace o tom, jak lokalizovat prostředí instalace najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md).  
+ Informace o lokalizaci instalačního prostředí naleznete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md).  
   
 ## <a name="localizing-command-names"></a>Lokalizace názvů příkazů  
- V balíčcích VSPackage příkazy nabídky a tlačítka panelu nástrojů jsou definovány v souboru .vsct.  
+ V rozhraních VSPackage jsou příkazy nabídky a tlačítka panelu nástrojů definovány v souboru. vsct.  
   
-1. V **Průzkumníka řešení**, změňte název souboru .vsct z *filename*.vsct k *filename*.en-US.vsct.  
+1. V **Průzkumník řešení**změňte název souboru. vsct z *filename*. vsct na *filename*. en-US. vsct.  
   
-2. Vytvořte kopii *filename*.en-US.vsct pro každý lokalizovaný jazyk.  
+2. Vytvořte kopii *filename*. en-US. vsct pro každý lokalizovaný jazyk.  
   
-    Název každé kopie *filename*. *Národní prostředí*.vsct, kde *národní prostředí* je název konkrétní jazykové verze. Seznam hodnot název jazykové verze, najdete v části [ID národního prostředí přiřazené společností Microsoft](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx).  
+    Pojmenujte název každého *souboru*kopie. *Locale*. vsct, kde *národní prostředí* je konkrétní název jazykové verze. Seznam hodnot názvů jazykových verzí najdete v tématu [ID národního prostředí přiřazené společností Microsoft](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx).  
   
-    Tyto *filename*. *Národní prostředí*soubory .vsct bude obsahovat text lokalizované nabídky pro svůj balíček.  
+    Tyto *názvy souborů*. Soubory *locale*. vsct budou obsahovat lokalizovaný text nabídky pro váš balíček.  
   
-3. Otevřete každý *filename*. *Národní prostředí*souboru .vsct lokalizovat text.  
+3. Otevřete každý *název souboru*. *Locale*. vsct soubor pro lokalizaci textu.  
   
-   1. Upravit [ButtonText](../extensibility/buttontext-element.md) elementu hodnoty podle potřeby pro konkrétní jazyk.  
+   1. Upravte hodnoty prvku [ButtonText](../extensibility/buttontext-element.md) podle potřeby pro konkrétní jazyk.  
   
-   2. Pokud zadáte lokalizované ikony, upravte [rastrový obrázek](../extensibility/bitmap-element.md) hodnoty tak, aby odkazoval na cílové soubory.  
+   2. Pokud budete poskytovat lokalizované ikony, upravte hodnoty [rastrového obrázku](../extensibility/bitmap-element.md) tak, aby odkazovaly na cílové soubory.  
   
-      Následující příklad ukazuje angličtinu a slovenštinu text tlačítka pro příkaz pro otevření panelu nástrojů Průzkumník řady stromu.  
+      Následující příklad ukazuje text tlačítka v angličtině a španělštině pro příkaz k otevření okna nástroje Průzkumník stromu rodiny.  
   
-      [FamilyTree.en-US.vsct]  
+      [FamilyTree. en-US. vsct]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -61,7 +61,7 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
    </Button>  
    ```  
   
-    [FamilyTree.es-ES.vsct]  
+    [FamilyTree.es-ES. vsct]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -75,24 +75,24 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
   
    ```  
   
-## <a name="localizing-other-text-resources"></a>Lokalizace prostředků jiných Text  
- Text prostředků než názvy příkazů jsou definovány v souborech prostředky (RESX).  
+## <a name="localizing-other-text-resources"></a>Lokalizace jiných textových prostředků  
+ Textové prostředky jiné než názvy příkazů jsou definovány v souborech prostředků (. resx).  
   
-1. Přejmenujte VSPackage.resx VSPackage.en US.resx.  
+1. Přejmenujte VSPackage. resx na VSPackage. en-US. resx.  
   
-2. Vytvořte kopii souboru VSPackage.en US.resx pro každý lokalizovaný jazyk.  
+2. Vytvořte kopii souboru VSPackage. en-US. resx pro každý lokalizovaný jazyk.  
   
-     Název každé kopie balíčku VSPackage. *Národní prostředí*.resx, kde *národní prostředí* je název konkrétní jazykové verze.  
+     Pojmenujte každou kopii VSPackage. *Locale*. resx, kde *národní prostředí* je konkrétní název jazykové verze.  
   
-3. Přejmenujte na názvy Resources.en US.resx Resources.resx.  
+3. Přejmenujte Resources. resx na Resources. en-US. resx.  
   
-4. Vytvořte kopii souboru názvy Resources.en US.resx pro každý lokalizovaný jazyk.  
+4. Vytvořte kopii souboru Resources. en-US. resx pro každý lokalizovaný jazyk.  
   
-     Název každé kopie prostředků. *Národní prostředí*.resx, kde *národní prostředí* je název konkrétní jazykové verze.  
+     Pojmenujte jednotlivé prostředky kopírování. *Locale*. resx, kde *národní prostředí* je konkrétní název jazykové verze.  
   
-5. Otevřete oba soubory .resx a upravit hodnoty řetězce podle potřeby pro konkrétní jazyk a jazykovou verzi. Následující příklad ukazuje definici lokalizovaný prostředek pro záhlaví panelu nástrojů.  
+5. Otevřete jednotlivé soubory. resx pro úpravu hodnot řetězce podle potřeby pro konkrétní jazyk a jazykovou verzi. Následující příklad ukazuje lokalizovanou definici prostředků v záhlaví okna nástroje.  
   
-     [Resources.en-US.resx]  
+     [Resources. en-US. resx]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -100,7 +100,7 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
     </data>  
     ```  
   
-     [Resources.es-ES.resx]  
+     [Resources.es-ES. resx]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -109,10 +109,10 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
   
     ```  
   
-## <a name="incorporating-localized-resources-into-the-project"></a>Začlenění lokalizované prostředky do projektu  
- Je třeba upravit soubor assemblyinfo.cs a soubor projektu a začlenit lokalizované prostředky.  
+## <a name="incorporating-localized-resources-into-the-project"></a>Zahrnutí lokalizovaných prostředků do projektu  
+ Je nutné upravit soubor assemblyinfo.cs a soubor projektu pro zahrnutí lokalizovaných prostředků.  
   
-1. Z **vlastnosti** uzel v **Průzkumníka řešení**, otevřete soubor assemblyinfo.cs nebo assemblyinfo.vb v editoru.  
+1. V uzlu **vlastnosti** v **Průzkumník řešení**otevřete v editoru AssemblyInfo.cs nebo AssemblyInfo. vb.  
   
 2. Přidejte následující položku.  
   
@@ -120,15 +120,15 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
     [assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]  
     ```  
   
-     Tím se nastaví Angličtina (USA) jako výchozí jazyk.  
+     V češtině se nastaví jako výchozí jazyk.  
   
 3. Uvolněte projekt.  
   
 4. Otevřete soubor projektu v editoru.  
   
-5. Vyhledejte `ItemGroup` element, který obsahuje `EmbeddedResource` elementy.  
+5. Vyhledejte `ItemGroup` prvek, který obsahuje `EmbeddedResource` prvky.  
   
-6. V `EmbeddedResource` nahraďte element, který volá VSPackage.en-US.resx `ManifestResourceName` element s `LogicalName` elementu, nastavte na `VSPackage.en-US.Resources`, následujícím způsobem.  
+6. V `EmbeddedResource` elementu, který volá VSPackage. en-US. resx, nahraďte `ManifestResourceName` element `LogicalName` elementem, nastaveným na `VSPackage.en-US.Resources` , následovně.  
   
     ```xml  
     <EmbeddedResource Include="VSPackage.en-US.resx">  
@@ -137,9 +137,9 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
     </EmbeddedResource>  
     ```  
   
-7. Pro každý lokalizovaný jazyk, zkopírujte `EmbeddedResource` – element pro VsPackage.en-US a nastavte **zahrnout** atribut a **LogicalName** element kopírovat do cílového národního prostředí, jak je znázorněno v následujícím Příklad.  
+7. Pro každý lokalizovaný jazyk zkopírujte  `EmbeddedResource` element pro VSPackage. en-US a nastavte atribut **include** a element **logického** atributu pro kopírování do cílového národního prostředí, jak je znázorněno v následujícím příkladu.  
   
-8. Pro každý lokalizovaný `VSCTCompile` elementu, přidejte `ResourceName` element, který odkazuje na `Menus.ctmenu`, jak je znázorněno v následujícím příkladu.  
+8. Do každého lokalizovaného `VSCTCompile` prvku přidejte `ResourceName` element, který odkazuje na `Menus.ctmenu` , jak je znázorněno v následujícím příkladu.  
   
     ```xml  
     <ItemGroup>  
@@ -149,13 +149,13 @@ Můžete zadat lokalizovaný text nabídky a panelu nástrojů příkazy ve vytv
     </ItemGroup>  
     ```  
   
-9. Uložte soubor projektu a znovu načíst projekt.  
+9. Uložte soubor projektu a znovu načtěte projekt.  
   
 10. Sestavte projekt.  
   
-     Tím se vytvoří do hlavního sestavení a sestavení prostředků pro jednotlivé jazyky. Informace o lokalizaci procesu nasazení najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)  
+     Tím se vytvoří hlavní sestavení a sestavení prostředků pro jednotlivé jazyky. Informace o lokalizaci procesu nasazení najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřování nabídek a příkazů](../extensibility/extending-menus-and-commands.md)   
- [MenuCommands Vs. OleMenuCommands](../misc/menucommands-vs-olemenucommands.md)   
+ [MenuCommands vs. OleMenuCommands](../misc/menucommands-vs-olemenucommands.md)   
  [Globalizace a lokalizace](https://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02)

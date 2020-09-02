@@ -1,5 +1,5 @@
 ---
-title: Ochrana dokumentů Office heslem
+title: Ochrana heslem v dokumentech Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,28 +17,28 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e3c9521389ce348a482f35ec95c9766edea49f5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62977897"
 ---
-# <a name="password-protection-on-office-documents"></a>Ochrana dokumentů Office heslem
-  Je možné nastavit heslo na dokumentů Microsoft Office Word a sešitů aplikace Microsoft Office Excel, aby jejich nelze otevřít někdo, kdo není znát heslo. Tato možnost se nazývá **heslo při otevření**.
+# <a name="password-protection-on-office-documents"></a>Ochrana heslem v dokumentech Office
+  Je možné nastavit heslo v systém Microsoft Office dokumentech aplikace Word a sešitech aplikace Excel systém Microsoft Office, aby je nikdo neznal. Tato možnost se nazývá **heslo při otevření**.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Můžete vytvořit projekty na úrovni dokumentu pomocí stávající dokumenty a sešity, které mají **heslo při otevření** povolena. Chování v sadě Visual Studio se liší pro dokumenty Wordu a Excelu, které mají **heslo při otevření** povolena.
+ Projekty na úrovni dokumentu můžete vytvořit pomocí existujících dokumentů a sešitů, které mají **při otevření** zapnuté heslo. Chování v aplikaci Visual Studio se liší pro dokumenty aplikace Word a Excel, které mají **při otevření** zapnuté heslo.
 
- Informace o povolení **heslo při otevření**, naleznete v tématu nápovědy v aplikaci Word nebo Excel.
+ Informace o povolení **hesla při otevření**najdete v nápovědě ve Wordu nebo Excelu.
 
 ## <a name="behavior-of-excel-and-word"></a>Chování Excelu a Wordu
- Při každém otevření sešitu aplikace Excel v sadě Visual Studio, který má **heslo při otevření** povoleno, aplikace Excel vás vyzve k zadání hesla. Při sestavování řešení se výzva k zadání hesla znovu, protože dokument je otevřen během sestavování.
+ Pokaždé, když otevřete excelový sešit v aplikaci Visual Studio, který má zapnuté **heslo při otevření** , zobrazí se v Excelu výzva k zadání hesla. Při sestavování řešení se zobrazí výzva k zadání hesla, protože dokument je otevřen během sestavování.
 
- Při prvním otevření dokumentu aplikace Word v sadě Visual Studio, který má **heslo při otevření** povolena, Word vás vyzve k zadání hesla. Po úspěšném zadání hesla, **heslo při otevření** se odebere z dokumentu a otevření dokumentu se už nevyžadují heslo. Pokud chcete dokument ve vašem řešení vyžadovat heslo, aby mohli ji můžete otevřít, je nutné povolit **heslo při otevření** po poslední sestavení a před nasazením řešení.
+ Při prvním otevření dokumentu aplikace Word v aplikaci Visual Studio, který má zapnuté **heslo při otevření** , se v aplikaci Word zobrazí výzva k zadání hesla. Po úspěšném zadání hesla se **heslo při otevření** odebere z dokumentu a otevírání dokumentu už nebude vyžadovat heslo. Pokud chcete, aby dokument ve vašem řešení vyžadoval heslo, než bude možné ho otevřít, musíte po konečném sestavení a před nasazením řešení povolit **heslo** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Ochrana dokumentů v řešeních na úrovni dokumentu](../vsto/document-protection-in-document-level-solutions.md)
-- [Přehled rozšíření spravovaného kódu a správy přístupových práv](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
-- [Postupy: Povolit kód ke spuštění pozadí dokumentů s omezenými oprávněními](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Přehled správy přístupových práv k informacím a rozšíření spravovaného kódu](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [Postupy: povolení spuštění kódu na pozadí dokumentů s omezenými oprávněními](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)

@@ -8,15 +8,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a1ee58c29be3c4dfb5e2148c54464a7a511d1839
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591850"
 ---
 # <a name="t4-include-directive"></a>T4 – direktiva Include
 
-V textové šabloně v aplikaci Visual Studio můžete zahrnout text z jiného souboru pomocí direktivy `<#@include#>`. Můžete umístit direktivy `include` kdekoli v textové šabloně před tím, `<#+ ... #>`blok funkce první třídy. Zahrnuté soubory mohou obsahovat také direktivy `include` a další direktivy. Díky tomu můžete kód šablony a často používaný text sdílet mezi šablonami.
+V textové šabloně v aplikaci Visual Studio můžete vložit text z jiného souboru pomocí `<#@include#>` direktivy. `include`Direktivy lze umístit kdekoli v textové šabloně před blok funkce první třídy `<#+ ... #>` . Zahrnuté soubory mohou obsahovat také `include` direktivy a další direktivy. Díky tomu můžete kód šablony a často používaný text sdílet mezi šablonami.
 
 ## <a name="using-include-directives"></a>Použití direktiv include
 
@@ -26,9 +26,9 @@ V textové šabloně v aplikaci Visual Studio můžete zahrnout text z jiného s
 
 - `filePath` může být absolutní nebo relativní k aktuálnímu souboru šablony.
 
-   Kromě toho můžou konkrétní rozšíření sady Visual Studio určovat vlastní adresáře pro hledání souborů k zahrnutí. Pokud jste například nainstalovali sadu pro vizualizaci a modelování sady SDK (DSL Tools), přidá se do seznamu zahrnutí následující složka: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`.
+   Kromě toho můžou konkrétní rozšíření sady Visual Studio určovat vlastní adresáře pro hledání souborů k zahrnutí. Pokud jste například nainstalovali sadu pro vizualizaci a modelování sady SDK (DSL Tools), přidá se do seznamu zahrnutí následující složka: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates` .
 
-   Tyto další složky vkládaných souborů mohou záviset na příponě vkládaného souboru. Například složka pro zahrnutí nástrojů DSL je dostupná jenom pro zahrnutí souborů s příponou souboru `.tt`
+   Tyto další složky vkládaných souborů mohou záviset na příponě vkládaného souboru. Například složka pro zahrnutí nástrojů DSL je dostupná jenom pro zahrnutí souborů, které mají příponu souboru. `.tt`
 
 - `filePath` může obsahovat proměnné prostředí, které jsou odděleny znakem "%". Příklad:
 
@@ -36,17 +36,17 @@ V textové šabloně v aplikaci Visual Studio můžete zahrnout text z jiného s
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
   ```
 
-- Název zahrnutého souboru nemusí používat rozšíření `".tt"`.
+- Název zahrnutého souboru nemusí používat rozšíření `".tt"` .
 
-   Pro zahrnuté soubory můžete chtít použít jinou příponu, například `".t4"`. To proto, že když do projektu přidáte `.tt` soubor, sada Visual Studio automaticky nastaví svoji vlastní vlastnost **nástroje** na hodnotu `TextTemplatingFileGenerator`. Vkládané soubory obvykle nechcete transformovat individuálně.
+   Možná budete chtít použít jinou příponu, například `".t4"` pro zahrnuté soubory. Důvodem je, že když přidáte `.tt` soubor do projektu, sada Visual Studio automaticky nastaví **vlastní vlastnost nástroje** na `TextTemplatingFileGenerator` . Vkládané soubory obvykle nechcete transformovat individuálně.
 
    Na druhé straně byste měli vědět, že v některých případech přípona souboru ovlivňuje, v jakých dalších složkách se budou hledat vkládané soubory. To může být důležité, pokud máte vkládaný soubor, který obsahuje jiné soubory.
 
-- Vložený obsah se zpracuje téměř jako kdyby byl součástí textové šablony, která ho vkládá. Můžete však zahrnout soubor, který obsahuje blok funkce třídy `<#+...#>` i v případě, že je direktiva `include` následována běžným textem a standardními řídicími bloky.
+- Vložený obsah se zpracuje téměř jako kdyby byl součástí textové šablony, která ho vkládá. Můžete však zahrnout soubor, který obsahuje blok funkcí třídy `<#+...#>` i v případě, že `include` je za direktivou následován běžný text a standardní řídicí bloky.
 
-- Pomocí `once="true"` zajistěte, aby byla šablona zahrnuta pouze jednou, a to i v případě, že je vyvolána z více než jednoho jiného vloženého souboru.
+- Použijte `once="true"` k zajištění toho, že šablona je obsažena pouze jednou, i když je vyvolána z více než jednoho jiného vloženého souboru.
 
-   Tato funkce usnadňuje sestavování knihovny opakovaně použitelných fragmentů T4, které můžete zahrnout do, aniž byste se museli zabývat dalšími fragmenty kódu, které jsou již zahrnuty.  Předpokládejme například, že máte knihovnu velmi jemně odstupňovaných fragmentů kódu, které se zabývat zpracováním a C# generováním šablony.  Tato možnost je používána některými dalšími nástroji pro konkrétní úkoly, jako je generování výjimek, které pak můžete použít ze všech dalších šablon specifických pro aplikace. Pokud si nakreslíte graf závislostí, uvidíte, že některé fragmenty kódu budou vloženy několikrát. Ale parametr `once` zabrání následným zahrnutím.
+   Tato funkce usnadňuje sestavování knihovny opakovaně použitelných fragmentů T4, které můžete zahrnout do, aniž byste se museli zabývat dalšími fragmenty kódu, které jsou již zahrnuty.  Předpokládejme například, že máte knihovnu velmi jemně odstupňovaných fragmentů, které se zabývat zpracováním šablon a generováním C#.  Tato možnost je používána některými dalšími nástroji pro konkrétní úkoly, jako je generování výjimek, které pak můžete použít ze všech dalších šablon specifických pro aplikace. Pokud si nakreslíte graf závislostí, uvidíte, že některé fragmenty kódu budou vloženy několikrát. Parametr ale `once` zabrání následným zahrnutím.
 
   **MyTextTemplate.tt:**
 
@@ -91,7 +91,7 @@ void AnotherGenerateMessage(int n)
 #>
 ```
 
- **Výsledný generovaný soubor MyTextTemplate. txt:**
+ **Výsledný vygenerovaný soubor MyTextTemplate.txt:**
 
 ```
 Output message 1 (from top template).
@@ -105,10 +105,10 @@ Output message 5 (from top template).
        Output Message 7 (from AnotherGenerateMessage method).
 ```
 
-## <a name="msbuild"></a>Používání vlastností projektu v nástroji MSBuild a v aplikaci Visual Studio
+## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a> Používání vlastností projektu v nástroji MSBuild a v aplikaci Visual Studio
  I když v direktivě include můžete použít makra sady Visual Studio, jako je $ (SolutionDir), nefungují v nástroji MSBuild. Chcete-li transformovat šablony v sestavovacím počítači, je nutné místo toho použít vlastnosti projektu.
 
- Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myIncludeFolder`:
+ Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myIncludeFolder` :
 
 ```xml
 <!-- Define a project property, myIncludeFolder: -->

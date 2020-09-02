@@ -1,5 +1,5 @@
 ---
-title: Idiatable::get_Name – | Dokumentace Microsoftu
+title: 'IDiaTable:: get_name | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d4865bff057165405cac89f169348576f8b4c0fc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145717"
 ---
-# <a name="idiatablegetname"></a>IDiaTable::get_name
+# <a name="idiatableget_name"></a>IDiaTable::get_name
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Načte název tabulky.  
@@ -35,10 +35,10 @@ HRESULT get_name ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí název tabulky.  
+ mimo Vrátí název tabulky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

@@ -14,69 +14,69 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ef13b959d4e106b451ea0cfb336835059667ce4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592071"
 ---
 # <a name="view-type-and-member-definitions"></a>Zobrazení definic typů a členů
 
-Vývojáři často potřebují zobrazit definice zdrojového kódu pro typy nebo členy třídy, které používají ve svém kódu. V sadě Visual Studio umožňují funkce **Přejít na definici** a **náhled** snadno zobrazit definici typu nebo člena. Pokud zdrojový kód není k dispozici, zobrazí se místo toho metadata.
+Vývojáři často potřebují zobrazit definice zdrojového kódu pro typy nebo členy třídy, které používají ve svém kódu. V aplikaci Visual Studio umožňují funkce **Přejít k** definici a **Náhled definice** snadno zobrazit definici typu nebo člena. Pokud není zdrojový kód k dispozici, zobrazí se místo toho metadata.
 
-## <a name="go-to-definition"></a>Přejít na definici
+## <a name="go-to-definition"></a>Přejít k definici
 
-Funkce **Přejít na definici** přejde ke zdroji typu nebo člena a otevře výsledek na nové kartě. Pokud jste uživatel klávesnice, umístěte textový kurzor někde uvnitř názvu symbolu a stiskněte **klávesu F12**. Pokud jste uživatel myši, vyberte v nabídce pravým tlačítkem myši možnost **Přejít na definici** nebo použijte funkci **se stisknutou klávesou Ctrl** popsanou v následující části.
+Funkce **Přejít k definici** přejde ke zdroji typu nebo členu a otevře výsledek na nové kartě. Pokud jste uživatel klávesnice, umístěte textový kurzor do názvu symbolu a stiskněte klávesu **F12**. Pokud jste uživatel myši, vyberte možnost **Přejít k definici** z nabídky po kliknutí pravým tlačítkem myši nebo použijte funkci se **stisknutou klávesou Ctrl** popsanou v následující části.
 
-### <a name="ctrl-click-go-to-definition"></a>Ctrl-klepnout na Přejít na definici
+### <a name="ctrl-click-go-to-definition"></a>Ctrl + kliknutí přejít k definici
 
-**Ctrl**+**click** je zkratka pro uživatele myši pro rychlý přístup **k definici přejít na .** Symboly se stanou klikacími, když stisknete **klávesu Ctrl** a najedete na text nebo člen. Chcete-li rychle přejít na definici symbolu, stiskněte klávesu **Ctrl** a klikněte na ni. Je to tak snadné!
+**CTRL** + **klikněte na** klávesovou zkratku pro uživatele myši k rychlému přístupu **Přejít k definici**. Když stisknete **klávesu CTRL** a najedete myší na daný typ nebo člen, symboly se stanou kliknutím. Pokud chcete rychle přejít k definici symbolu, stiskněte klávesu **CTRL** a pak na ni klikněte. Tak je to snadné!
 
-![Kliknutím myši přejdete na animaci definic](../ide/media/click_gotodef.gif)
+![Myš kliknutí na přejít k definici animace](../ide/media/click_gotodef.gif)
 
-Modifikátor klávesy pro přechod na **definici** kliknutím myši můžete změnit tak, že přejdete na**Options** > **Texteditor** >  **u nástrojů** > **– obecné**a v rozevíracím seznamu **Použít modifikační klávesu** vyberete **alt** nebo **ctrl**+**Alt** alt. Můžete také zakázat klepnutí myší na **přejít na definici** zrušením zaškrtnutí políčka **Povolit klepnutí myší na provedení příkazu Přejít na definici.**
+Můžete změnit modifikační klávesu pro myš – klikněte na **Přejít k definici** tak, že přejdete do části **nástroje**  >  **Možnosti**  >  **textový editor**  >  **Obecné**a v **Ctrl** **Alt** + rozevíracím seznamu **použít klávesu pro použití modifikátoru** vyberte ALT nebo CTRL**ALT** . Můžete také zakázat myš – klikněte na **Přejít k definici** tím, že zrušíte zaškrtnutí políčka **Povolit možnost přejít k definici** .
 
-![Povolení klepnutí myší přejít na definici](../ide/media/editor_options_mouse_click_gotodef.png)
+![Povolení kliknutí myší na položku Přejít k definici](../ide/media/editor_options_mouse_click_gotodef.png)
 
 ## <a name="peek-definition"></a>Náhled definice
 
-Funkce **Definice náhledu** umožňuje zobrazit náhled definice typu, aniž byste opustili aktuální umístění v editoru. Pokud jste uživatel klávesnice, umístěte textový kurzor někde uvnitř textového nebo členského jména a stiskněte **klávesu Alt + F12**. Pokud jste uživatel myši, můžete v nabídce po kliknutí pravým tlačítkem myši vybrat **možnost Definice náhledu.**
+Funkce **Náhled definice** umožňuje zobrazit náhled definice typu bez nutnosti opustit aktuální umístění v editoru. Pokud jste uživatel klávesnice, umístěte textový kurzor do pole typ nebo název členu a stiskněte klávesy **Alt + F12**. Pokud jste uživatelem myši, můžete v nabídce kliknutím pravým tlačítkem vybrat možnost **Náhled definice** .
 
-Chcete-li povolit funkci**klepnutí** **na klávesu Ctrl,**+přejděte na**obecné editor****textových editorů** > **možností** >  **nástrojů** > . Vyberte volbu **Otevřít definici v náhledovém zobrazení** a klepnutím na **OK** zavřete dialogové okno **Volby.**
+Chcete-li povolit funkce **stisknutí klávesy CTRL** + **click** , přejděte do možnosti **nástroje**  >  **Options**  >  **textový editor**  >  **Obecné**. **V zobrazení Náhled vyberte možnost otevřená definice** a kliknutím na tlačítko **OK** zavřete dialogové okno **Možnosti** .
 
-![Nastavení možnosti definice náhledu klepnutím myši](../ide/media/editor_options_peek_view.png)
+![Nastavení možnosti Náhled definice v nabídce myši](../ide/media/editor_options_peek_view.png)
 
-Potom stiskněte **kombinaci kláves (nebo** libovolné modifikační klávesy v **části Možnosti**) a klikněte na typ nebo člen.
+Pak stiskněte klávesu **CTRL** (nebo se v **možnostech**vybere jakákoli modifikační klávesa) a klikněte na typ nebo člen.
 
-![Animace definice náhledu](../ide/media/peek_definition.gif)
+![Animace náhledu definice](../ide/media/peek_definition.gif)
 
-Pokud se podíváte na jinou definici z vyskakovacího okna, spustíte cestu s popisem cesty, kterou můžete procházet pomocí kruhů a šipek, které se zobrazují nad vyskakovacím oknem.
+Pokud si z překryvného okna zobrazíte další definici, spustíte cestu s popisem cesty, pomocí které můžete procházet kružnice a šipky, které se zobrazí nad automaticky otevírané okno.
 
-Další informace naleznete v [tématu How to: View and edit code pomocí Peek Definition (Alt+F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md).
+Další informace najdete v tématu [Postup: zobrazení a úpravy kódu pomocí funkce Náhled definice (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md).
 
 ## <a name="view-metadata-as-source-code-c"></a>Zobrazit metadata jako zdrojový kód (C#)
 
-Při zobrazení definice c# typy nebo členy, jejichž zdrojový kód není k dispozici, jejich metadata se zobrazí místo. Můžete zobrazit deklarace typů a členů, ale ne jejich implementace.
+Pokud zobrazíte definici typů nebo členů jazyka C#, jejichž zdrojový kód není k dispozici, zobrazí se místo nich jejich metadata. Můžete zobrazit deklarace typů a členů, ale ne jejich implementace.
 
-Při spuštění příkazu **Přejít na definici** nebo **definici náhledu** pro položku, jejíž zdrojový kód není k dispozici, se v editoru kódu zobrazí dokument s kartami, který obsahuje zobrazení metadat této položky zobrazené jako zdrojový kód. Název typu následovaný **[z metadat]** se zobrazí na kartě dokumentu.
+Když spustíte příkaz **Přejít na definici** nebo **Náhled definice** pro položku, jejíž zdrojový kód není k dispozici, dokument s kartami, který obsahuje zobrazení metadat této položky, zobrazený jako zdrojový kód, se zobrazí v editoru kódu. Název typu, za nímž následuje **[from metadata]**, se zobrazí na kartě dokumentu.
 
-Pokud například spustíte příkaz **Přejít na definici** pro <xref:System.Console>, metadata pro <xref:System.Console> se zobrazí v editoru kódu jako zdrojový kód Jazyka C#. Kód se podobá jeho deklaraci, ale nezobrazuje implementaci.
+Například pokud spustíte příkaz **Přejít na definici** pro <xref:System.Console> , <xref:System.Console> zobrazí se metadata v editoru kódu jako zdrojový kód C#. Kód se podobá deklaraci, ale nezobrazuje implementaci.
 
 ![Metadata jako zdroj](../ide/media/metadatasource.png)
 
 > [!NOTE]
-> Při pokusu o spuštění příkazu **Přejít na definici** nebo **náhled definice** pro typy nebo členy, které jsou označeny jako interní, Visual Studio nezobrazí jejich metadata jako zdrojový kód, bez ohledu na to, zda odkazující sestavení je přítel nebo ne.
+> Když se pokusíte spustit příkaz **Přejít k definici** nebo **Náhled definice** pro typy nebo členy, které jsou označeny jako interní, Visual Studio nezobrazuje své metadata jako zdrojový kód, bez ohledu na to, zda odkazující sestavení je přítel nebo ne.
 
-### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Zobrazit dekompilované zdrojové definice místo metadat (C#)
+### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Zobrazit dekompilované definice zdrojů namísto metadat (C#)
 
-Můžete nastavit možnost zobrazit dekompilovaný zdrojový kód při zobrazení definice typu C# nebo člena, jehož zdrojový kód není k dispozici. Chcete-li tuto funkci zapnout, zvolte**Možnosti** **nástrojů** > z panelu nabídek. Potom rozbalte **text editor c#** > **C#** > **Upřesnit**a vyberte **Povolit navigaci dekompilované zdroje**.
+Můžete nastavit možnost Zobrazit dekompilovaný zdrojový kód při zobrazení definice typu nebo členu jazyka C#, jehož zdrojový kód není k dispozici. Pokud chcete tuto funkci zapnout, na **Tools**  >  panelu nabídek vyberte**Možnosti** nástrojů. Pak rozbalte položku **textový editor**  >  **C#**  >  **Upřesnit**a vyberte možnost **Povolit navigaci na dekompilované zdroje**.
 
-![Zobrazení dekompilované definice](media/go-to-definition-decompiled-sources.png)
+![Zobrazení definice dekompilovaných](media/go-to-definition-decompiled-sources.png)
 
 > [!NOTE]
-> Visual Studio rekonstruuje těla metod pomocí ILSpy dekompilace. Při prvním přístupu k této funkci musíte souhlasit s právním prohlášením o udělení odpovědnosti v souvislosti se zákonem o licencování softwaru a autorských právech a ochranných známkách.
+> Visual Studio rekonstruuje tělo metody pomocí ILSpy dekompilace. Při prvním přístupu k této funkci musíte souhlasit s právním omezením týkajícím se licencování softwaru a autorských práv a ochranných známek.
 
 ## <a name="see-also"></a>Viz také
 
 - [Navigace v kódu](../ide/navigating-code.md)
-- [Postup: Zobrazení a úprava kódu pomocí definice náhledu (Alt+F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [Postupy: zobrazení a úpravy kódu pomocí funkce Náhled definice (Alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)

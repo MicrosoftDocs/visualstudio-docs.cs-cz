@@ -1,5 +1,5 @@
 ---
-title: třída rozpětí | Dokumenty společnosti Microsoft
+title: span class | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d8f31d24dc6c6c2ea20b50c9bf8af1cb4a9f9af
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62979754"
 ---
-# <a name="span-class"></a>třída rozpětí
+# <a name="span-class"></a>span – třída
 Definuje fázi aplikace.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class span;
@@ -30,20 +30,20 @@ class span;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-constructors"></a>Veřejní konstruktéři
+### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[span::span – konstruktor](../profiling/span-span-constructor.md)|Inicializuje novou instanci třídy. `span`|
-|[span::~span – destruktor](../profiling/span-tilde-span-destructor.md)|Zničí `span` objekt a uvolní jeho prostředky.|
+|[span::span – konstruktor](../profiling/span-span-constructor.md)|Inicializuje novou instanci `span` třídy.|
+|[span::~span – destruktor](../profiling/span-tilde-span-destructor.md)|Odstraní `span` objekt a uvolní jeho prostředky.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
  `span`
 
 ## <a name="requirements"></a>Požadavky
- **Záhlaví:** *cvmarkersobj.h*
+ **Záhlaví:** *cvmarkersobj. h*
 
- **Obor názvů:** Souběžnost::diagnostik
+ **Obor názvů:** Concurrency::d odeslání diagnostických
 
 ## <a name="see-also"></a>Viz také
-- [diagnostický obor názvů](../profiling/diagnostic-namespace.md)
+- [obor názvů diagnostiky](../profiling/diagnostic-namespace.md)
