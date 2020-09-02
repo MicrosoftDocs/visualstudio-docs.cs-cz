@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::UnpublishProgram | Dokumentace Microsoftu
+title: 'IDebugProgramPublisher2:: UnpublishProgram | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 05efc566cec0e7e885b16a4bb7c7e7d6256ac7b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146285"
 ---
 # <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Díky programu k ladění není k dispozici.  
+Vytvoří program, který se nebude ladit.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int UnpublishProgram(
   
 #### <a name="parameters"></a>Parametry  
  `pDebuggeeInterface`  
- [in] `IUnknown` Rozhraní do programu. To je stejná jako hodnota předaná [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metoda a jednoznačně identifikuje program odebírá (to znamená, slouží jako soubor cookie).  
+ pro `IUnknown` Rozhraní pro program. Jedná se o stejnou hodnotu poskytnutou metodě [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) a jednoznačně identifikuje odebraný program (to znamená, že se používá jako soubor cookie).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li zpřístupnit program k ladění modulů a správce ladění relace, použijte [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metody.  
+ Chcete-li zpřístupnit program pro moduly ladění a správce ladění relace, použijte metodu [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

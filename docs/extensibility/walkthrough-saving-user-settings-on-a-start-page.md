@@ -10,10 +10,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 8dd20513defd1db8848cf6a80a29e04c127c9dd4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903166"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>Návod: uložení uživatelských nastavení na úvodní stránce
@@ -26,7 +26,7 @@ Když je spuštěn v experimentální instanci aplikace Visual Studio, uloží n
 
 Další informace o tom, jak zachovat nastavení, najdete v tématu [rozšíření uživatelských nastavení a možností](../extensibility/extending-user-settings-and-options.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 > [!NOTE]
 > Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).

@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Dokumentace Microsoftu
+title: 'IDebugProviderProgramNode2:: UnmarshalDebuggeeInterface | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3007d13ec3eae46511e4775497d0aad5b6325b2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146254"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá zadaný rozhraní přes hranice procesu.  
+Získá zadané rozhraní napříč hranicemi procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int UnmarshalDebuggeeInterface(
   
 #### <a name="parameters"></a>Parametry  
  `riid`  
- [in] Identifikátor GUID rozhraní získat.  
+ pro Identifikátor GUID rozhraní, které se má získat  
   
  `ppvObject`  
- [out] Vrátí objekt implementaci požadovaných rozhraní. [C++] to může být převeden přímo na typ požadované rozhraní. [C#] použít <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metodu k získání požadovaných rozhraní.  
+ mimo Vrátí objekt implementující požadované rozhraní. [C++] Tato možnost může být převedena přímo na požadovaný typ rozhraní. [C#] <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> k získání požadovaného rozhraní použijte metodu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá při spuštění ladicího stroje [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] prostoru procesu a laděný program běží ve vlastním procesu.  
+ Tato metoda se používá v případě, že ladicí stroj běží v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] prostoru procesu a program, který se právě ladí, běží ve vlastním prostoru procesu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)
