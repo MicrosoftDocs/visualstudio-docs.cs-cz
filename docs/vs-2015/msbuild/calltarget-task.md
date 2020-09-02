@@ -1,5 +1,5 @@
 ---
-title: Calltarget – úloha | Dokumentace Microsoftu
+title: Úloha CallTarget – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,36 +18,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9093b35cc444fc0b346f81a91d20afe73bd476cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160421"
 ---
 # <a name="calltarget-task"></a>CallTarget – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vyvolá zadané cílů v rámci souboru projektu.  
+Vyvolá zadané cíle v rámci souboru projektu.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
- Následující tabulka popisuje parametry `CallTarget` úloh.  
+ Následující tabulka popisuje parametry `CallTarget` úkolu.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`RunEachTargetSeparately`|Volitelné `Boolean` výstupní parametr.<br /><br /> Pokud `true`, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] modul se volá jednou pro každý cíl. Pokud `false`, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] modul se volá jednou pro všechny cíle sestavení. Výchozí hodnota je `false`.|  
-|`TargetOutputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výstupy sestavených cílů všechny.|  
-|`Targets`|Volitelné `String[]` parametru.<br /><br /> Určuje cíl nebo cíle sestavení.|  
-|`UseResultsCache`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, výsledky uložené v mezipaměti je vrácena, pokud jsou k dispozici.<br /><br /> **Poznámka:** při MSBuild – úloha běží, výstup se uloží do mezipaměti v oboru (ProjectFileName, GlobalProperties) [TargetNames] jako seznam položek sestavení.|  
+|`RunEachTargetSeparately`|Volitelný `Boolean` výstupní parametr.<br /><br /> Pokud `true` [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] je modul volán jednou na cíl. Pokud `false` [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] je modul volán jednou pro sestavení všech cílů. Výchozí hodnota je `false`.|  
+|`TargetOutputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje výstupy všech sestavených cílů.|  
+|`Targets`|Volitelný `String[]` parametr.<br /><br /> Určuje cíl nebo cíle, které se mají sestavit.|  
+|`UseResultsCache`|Volitelný `Boolean` parametr.<br /><br /> `true`Je-li k dispozici, vrátí výsledek uložený v mezipaměti.<br /><br /> **Poznámka:** Je-li spuštěn úkol MSBuild, jeho výstup je uložen do mezipaměti v oboru (ProjectFileName, GlobalProperties) [Cílový_názevs] jako seznam položek sestavení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud zadaný cíl v `Targets` selže a `RunEachTargetSeparately` je `true`, úloha pokračuje na zbývající cíle sestavení.  
+ Pokud cíl zadaný v poli `Targets` selhává a `RunEachTargetSeparately` je `true` , úloha pokračuje v sestavování zbývajících cílů.  
   
- Pokud chcete k sestavení výchozích cílů, použijte [úlohy nástroje MSBuild](../msbuild/msbuild-task.md) a nastavit `Projects` parametr roven `$(MSBuildProjectFile)`.  
+ Pokud chcete sestavit výchozí cíle, použijte [úlohu MSBuild](../msbuild/msbuild-task.md) a nastavte `Projects` parametr Equal `$(MSBuildProjectFile)` .  
   
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad volá `TargetA` z uvnitř `CallOtherTargets`.  
+ Následující příklad volá `TargetA` zevnitř `CallOtherTargets` .  
   
 ```  
 <Project DefaultTargets="CallOtherTargets"  
@@ -65,5 +65,5 @@ Vyvolá zadané cílů v rámci souboru projektu.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Cíle](../msbuild/msbuild-targets.md)
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
+ [Targets](../msbuild/msbuild-targets.md)
