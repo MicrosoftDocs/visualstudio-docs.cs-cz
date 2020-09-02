@@ -53,7 +53,7 @@ string output = engine.ProcessTemplate(templateString, host);
 ## <a name="in-this-section"></a>V tomto oddílu
  [Návod: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md) Ukazuje, jak vytvořit vlastního hostitele textových šablon, který zpřístupňuje funkce textových šablon mimo aplikaci Visual Studio.
 
-## <a name="reference"></a>Referenční informace
+## <a name="reference"></a>Odkaz
  [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
 
 ## <a name="related-sections"></a>Související oddíly

@@ -1,5 +1,5 @@
 ---
-title: Cl Úkol | Dokumenty společnosti Microsoft
+title: CL – úloha | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,431 +22,431 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb0e1feee1f7e1d271dd436a1879731354cbd8bb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78865333"
 ---
 # <a name="cl-task"></a>CL – úloha
 
-Zalomí kompilátorový nástroj Microsoft *C++cl.exe*. Kompilátor vytváří spustitelné soubory (*EXE*), soubory dynamické knihovny (*DLL*) nebo modul kódu (*.netmodule*). Další informace naleznete v [tématech Možnosti kompilátoru](/cpp/build/reference/compiler-options) a [Použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a Použití sady nástrojů Microsoft [C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
+Zabalí nástroj kompilátoru Microsoft C++, *cl.exe*. Kompilátor vytváří spustitelné soubory (*. exe*), soubory dynamické knihovny (*. dll*) nebo soubory modulu kódu (*. netmodule*). Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options) a [použití nástroje MSBuild z příkazového řádku](/cpp/build/msbuild-visual-cpp) a [použití sady nástrojů Microsoft C++ z příkazového řádku](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametry
 
- Následující seznam popisuje parametry úlohy **CL.** Většina parametrů úlohy a několik sad parametrů odpovídají možnosti příkazového řádku.
+ Následující seznam popisuje parametry úlohy **CL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.
 
-- **Další includeředitelé adresáře**
+- **AdditionalIncludeDirectories**
 
-   Volitelný parametr String[].
+   Parametr volitelného řetězce [].
 
-   Přidá adresář do seznamu adresářů, které jsou vyhledávány zahrnout soubory.
+   Přidá adresář do seznamu adresářů, ve kterých jsou vyhledávány soubory k zahrnutí.
 
-   Další informace naleznete [v tématu /I (Další zahrnutí adresářů)](/cpp/build/reference/i-additional-include-directories).
+   Další informace najdete v tématu [/i (další adresáře k zahrnutí)](/cpp/build/reference/i-additional-include-directories).
 
-- **Další možnosti**
+- **AdditionalOptions**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Seznam možností příkazového řádku. Například "/\<option1\<> /\<option2> / option#>". Tento parametr slouží k určení možností příkazového řádku, které nejsou reprezentovány žádným jiným parametrem úkolu.
+   Seznam možností příkazového řádku Například "/ \<option1>  / \<option2>  / \<option#> ". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy.
 
    Další informace naleznete v tématu [Možnosti kompilátoru](/cpp/build/reference/compiler-options).
 
-- **Další použitíadresářů**
+- **AdditionalUsingDirectories**
 
-   Volitelný parametr String[].
+   Parametr volitelného řetězce [].
 
-   Určuje adresář, který bude kompilátor hledat, aby vyřešil odkazy na soubory předané direktivě **#using.**
+   Určuje adresář, který kompilátor bude hledat k překladu odkazů na soubory předaných do direktivy **#using** .
 
-   Další informace naleznete [v tématu /AI (Zadejte adresáře metadat).](/cpp/build/reference/ai-specify-metadata-directories)
+   Další informace najdete v tématu [/AI (určení adresářů metadat)](/cpp/build/reference/ai-specify-metadata-directories).
 
 - **AlwaysAppend**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Řetězec, který se vždy dostane na příkazovém řádku. Jeho výchozí hodnota je "**/c**".
+   Řetězec, který je vždy generován na příkazovém řádku. Výchozí hodnota je "**/c**".
 
-- **Umístění AssemblerListing**
-
-   Vytvoří soubor výpisu, který obsahuje kód sestavení.
-
-   Další informace naleznete v tématu **/Fa** možnost [/FA, /Fa (Výpis souboru)](/cpp/build/reference/fa-fa-listing-file).
-
-- **Výstup assembleru**
-
-   Volitelný parametr String.
+- **AssemblerListingLocation**
 
    Vytvoří soubor výpisu, který obsahuje kód sestavení.
 
-   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
+   Další informace naleznete v možnosti **/Fa** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
 
-  - **NoListing žádný** - >*\<*
+- **AssemblerOutput**
 
-  - **AssemblyCode** - **/DM**
+   Volitelný řetězcový parametr.
 
-  - **AssemblyAndMachineCode** - **/FAc**
-
-  - **AssemblyandSourceCode** - **/FAs**
-
-  - **Všechny** - **/FAcs**
-
-    Další informace naleznete v tématech **/FA**, **/FAc**, **/FA**, a **/FAcs** options in [/FA, /Fa (Listing file)](/cpp/build/reference/fa-fa-listing-file).
-
-- **Základní kontroly běhu**
-
-   Volitelný parametr String.
-
-   Povolí a zakáže funkci kontroly chyb za běhu ve spojení s [runtime_checks](/cpp/preprocessor/runtime-checks) pragma.
+   Vytvoří soubor výpisu, který obsahuje kód sestavení.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí** -                          *žádný>\<*
+  - **Seznam není** - *\<none>*
 
-  - **StackFrameRuntimeCheck** - **/RTC**
+  - **AssemblyCode**  -  **/FA**
 
-  - **UninitializedLocalUsageCheck** - **/RTCu**
+  - **AssemblyAndMachineCode**  -  **/FAc**
 
-  - **EnableFastChecks** -                          **/RTC1**
+  - **AssemblyAndSourceCode**  -  **/FAS**
 
-    Další informace naleznete v tématu [/RTC (Run-time kontroly chyb)](/cpp/build/reference/rtc-run-time-error-checks).
+  - **Vše**  -  **/FAcs**
 
-- **ProcházetInformace**
+    Další informace najdete v tématu možnosti **/Fa**, **/FAc**, **/FAS**a **/FAcs** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
 
-   Volitelný logický parametr.
+- **BasicRuntimeChecks**
 
-   Pokud `true`vytvoří soubor informací o procházení.
+   Volitelný řetězcový parametr.
 
-   Další informace naleznete v tématu **/FR** možnost v [/FR, /Fr (Vytvořit soubor SBR)](/cpp/build/reference/fr-fr-create-dot-sbr-file).
-
-- **Soubor BrowseInformationFile**
-
-   Volitelný parametr String.
-
-   Určuje název souboru informačního souboru procházení.
-
-   Další informace naleznete v parametru **BrowseInformation** v této tabulce a také v [tématu /FR, /Fr (Create.sbr file).](/cpp/build/reference/fr-fr-create-dot-sbr-file)
-
-- **Kontrola zabezpečení vyrovnávací paměti**
-
-   Volitelný logický parametr.
-
-   Pokud `true`zjistí některé přetečení vyrovnávací paměti, které přepíší zpáteční adresu, běžnou techniku pro zneužití kódu, který nevynucuje omezení velikosti vyrovnávací paměti.
-
-   Další informace naleznete [v tématu /GS (Kontrola zabezpečení vyrovnávací paměti).](/cpp/build/reference/gs-buffer-security-check)
-
-- **BuildinginiDE**
-
-   Volitelný logický parametr.
-
-   Pokud `true`, označuje, že **MSBuild** je vyvolána ide. V opačném případě je **msbuild** vyvolán na příkazovém řádku.
-
-- **VoláníÚmluvy**
-
-   Volitelný parametr String.
-
-   Určuje konvence volání, která určuje pořadí, ve kterém jsou argumenty funkce posunuty do zásobníku, zda volající funkce nebo volaná funkce odebere argumenty ze zásobníku na konci volání a konvence zdobení názvů, které kompilátor používá k identifikaci jednotlivých funkcí.
+   Povolí nebo zakáže funkci kontroly chyb za běhu ve spojení s direktivou pragma [runtime_checks](/cpp/preprocessor/runtime-checks) .
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Cdecl** - **/Gd**
+  - **Výchozí** -                          *\<none>*
 
-  - **Rychlé volání** -                          **/Gr**
+  - **StackFrameRuntimeCheck**  -  **/RTCs**
 
-  - **Volání StdCall** -                          **/Gz**
+  - **UninitializedLocalUsageCheck**  -  **/RTCu**
 
-    Další informace naleznete [v tématu /Gd, /Gr, /Gv, /Gz (Konvence volání)](/cpp/build/reference/gd-gr-gv-gz-calling-convention).
+  - **EnableFastChecks**  -                           **/RTC1**
 
-- **Kompilovat**
+    Další informace naleznete v tématu [/RTC (kontrola chyb za běhu)](/cpp/build/reference/rtc-run-time-error-checks).
 
-   Volitelný parametr String.
+- **BrowseInformation**
+
+   Volitelný logický parametr.
+
+   Pokud `true` se vytvoří soubor s informacemi o procházení.
+
+   Další informace naleznete v možnosti **/fr** v [/fr,/fr (Create. sbr File)](/cpp/build/reference/fr-fr-create-dot-sbr-file).
+
+- **BrowseInformationFile**
+
+   Volitelný řetězcový parametr.
+
+   Určuje název souboru s informacemi o procházení.
+
+   Další informace naleznete v parametru **BrowseInformation** v této tabulce a také v tématu [/fr,/fr (Create. sbr File)](/cpp/build/reference/fr-fr-create-dot-sbr-file).
+
+- **BufferSecurityCheck**
+
+   Volitelný logický parametr.
+
+   Pokud `true` aplikace zjistí některé přetečení vyrovnávací paměti, které přepíší zpáteční adresu, jedná se o běžnou techniku pro zneužití kódu, který nevynutil omezení velikosti vyrovnávací paměti.
+
+   Další informace najdete v tématu [/GS (kontrolní zabezpečení vyrovnávací paměti)](/cpp/build/reference/gs-buffer-security-check).
+
+- **BuildingInIDE**
+
+   Volitelný logický parametr.
+
+   Pokud `true` , označuje, že nástroj **MSBuild** je vyvolán rozhraním IDE. V opačném případě je nástroj **MSBuild** vyvolán na příkazovém řádku.
+
+- **CallingConvention**
+
+   Volitelný řetězcový parametr.
+
+   Určuje konvenci volání, která určuje pořadí, ve kterém jsou argumenty funkce vloženy do zásobníku, zda volající funkce nebo volaná funkce odebere argumenty ze zásobníku na konci volání a konvenci názvu-upravení, kterou kompilátor používá k identifikaci jednotlivých funkcí.
+
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
+
+  - **CDECL**  -  **/GD**
+
+  - **FastCall**  -                           **/Gr**
+
+  - **STDCALL**  -                           **/GZ**
+
+    Další informace naleznete v tématu [/GD,/GR,/GV,/GZ (konvence volání)](/cpp/build/reference/gd-gr-gv-gz-calling-convention).
+
+- **CompileAs**
+
+   Volitelný řetězcový parametr.
 
    Určuje, zda má být vstupní soubor kompilován jako zdrojový soubor jazyka C nebo C++.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí** - *žádný>\<*
+  - **Výchozí** - *\<none>*
 
-  - **Kompilovat** - **/TC**
+  - **CompileAsC**  -  **/TC**
 
-  - **KompilaceAsCpp** - **/TP**
+  - **CompileAsCpp**  -  **/TP**
 
-    Další informace naleznete v tématu [/Tc, /Tp, /TC, /TP (Zadejte typ zdrojového souboru).](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)
+    Další informace naleznete v tématu [/TC,/TP,/TC,/TP (určení typu zdrojového souboru)](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type).
 
 - **CompileAsManaged**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Umožňuje aplikacím a komponentám používat funkce z clr (COMMON Language runtime).
+   Umožňuje aplikacím a komponentám používat funkce z modulu CLR (Common Language Runtime).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **falešný** - *žádný>\<*
+  - **chybné** - *\<none>*
 
-  - **true** - **/clr**
+  - **hodnota true**  -  **/CLR**
 
-  - **Čistý** - **/clr:čistý**
+  - **Čistý**  -  **/clr: Pure**
 
-  - **Bezpečné** - **/clr:bezpečné**
+  - **Bezpečná**  -  **/clr: Safe**
 
-  - **oldSyntax** - **/clr:oldSyntax**
+  - **OldSyntax**  -  **/clr: oldSyntax**
 
-    Další informace naleznete v tématu [/clr (Kompilace za běhu běžného jazyka).](/cpp/build/reference/clr-common-language-runtime-compilation)
+    Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).
 
-- **Vytvořit obrázek VytvořithotpatchableImage**
+- **CreateHotpatchableImage**
 
    Volitelný logický parametr.
 
-   Pokud `true`, řekne kompilátoru připravit obraz pro *horké opravy*. Tento parametr zajišťuje, že první instrukce každé funkce je dva bajty, které jsou vyžadovány pro horké opravy.
+   Pokud `true` aplikace, instruuje kompilátor, aby připravil obrázek pro *Hot patching*. Tento parametr zajišťuje, že první instrukce každé funkce jsou dvě bajty, které jsou požadovány pro Hot patching.
 
-   Další informace naleznete v tématu [/hotpatch (Create hotpatchable image).](/cpp/build/reference/hotpatch-create-hotpatchable-image)
+   Další informace najdete v tématu [/hotpatch (Create opravitelnou za provozu image)](/cpp/build/reference/hotpatch-create-hotpatchable-image).
 
 - **DebugInformationFormat**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Vybere typ informací o ladění vytvořených pro váš program a to, zda jsou tyto informace uloženy v souborech objektů (*OBJ*) nebo v databázi programů (PDB).
+   Vybere typ ladicích informací vytvořených pro program a zda jsou tyto informace uloženy v souborech objektů (*. obj*) nebo v databázi programu (PDB).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Starý styl** - **/Z7**
+  - **OldStyle**  -  **/Z7**
 
-  - **ProgramDatabáze** - **/Zi**
+  - **ProgramDatabase**  -  **/Zi**
 
-  - **EditAndContinue** - **/ZI**
+  - **EditAndContinue**  -  **/Zi**
 
-    Další informace naleznete v tématu [/Z7, /Zi, /ZI (formát informací o ladění).](/cpp/build/reference/z7-zi-zi-debug-information-format)
+    Další informace naleznete v tématu [/Z7,/Zi,/Zi (formát ladicích informací)](/cpp/build/reference/z7-zi-zi-debug-information-format).
 
-- **Zakázat rozšíření jazyků**
+- **DisableLanguageExtensions**
 
    Volitelný logický parametr.
 
-   Pokud **true**, říká kompilátoru vyzařovat chybu pro konstrukce jazyka, které nejsou kompatibilní s ANSI C nebo ANSI C ++.
+   Pokud je **true**, instruuje kompilátor, aby vygeneroval chybu pro jazykové konstrukce, které nejsou kompatibilní se standardem ANSI C nebo ANSI C++.
 
-   Další informace naleznete v tématu **/Za,** [/Ze (Zakázat rozšíření jazyka)](/cpp/build/reference/za-ze-disable-language-extensions).
+   Další informace najdete v možnosti **/za** v [/za,/ze (zakázání jazykových rozšíření)](/cpp/build/reference/za-ze-disable-language-extensions).
 
-- **Zakázatspecifickávarování**
+- **DisableSpecificWarnings**
 
-   Volitelný parametr String[].
+   Parametr volitelného řetězce [].
 
-   Zakáže čísla upozornění, která jsou určena v seznamu odděleném středníkem.
+   Zakáže čísla upozornění, která jsou uvedena v seznamu středníkem oddělených.
 
-   Další informace naleznete `/wd` v možnosti [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
+   Další informace najdete `/wd` v tématu možnost v příkazech [/W,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 
 - **EnableEnhancedInstructionSet**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Určuje architekturu pro generování kódu, která používá streamovaná rozšíření SIMD (SSE) a streamovací rozšíření SIMD 2 (SSE2).
-
-   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
-
-  - **StreamingSIMDExtensions** - **/arch:SSE**
-
-  - **StreamingSIMDExtensions2** - **/arch:SSE2**
-
-    Další informace naleznete v tématu [/arch (x86)](/cpp/build/reference/arch-x86).
-
-- **EnableFiberSafeOptimalizace**
-
-   Volitelný logický parametr.
-
-   Pokud `true`podporují zabezpečení vláken pro data přidělená pomocí statického místního úložiště `__declspec(thread)`podprocesu, to znamená data přidělená pomocí .
-
-   Další informace naleznete v tématu [/GT (Support fiber-safe thread-local storage)](/cpp/build/reference/gt-support-fiber-safe-thread-local-storage).
-
-- **Povolit PREfast**
-
-   Volitelný logický parametr.
-
-   Pokud `true`povolte analýzu kódu.
-
-   Další informace naleznete v tématu [/analyze (Analýza kódu).](/cpp/build/reference/analyze-code-analysis)
-
-- **Hlášení chyb**
-
-   Volitelný parametr String.
-
-   Umožňuje poskytovat informace o interní chybě kompilátoru (ICE) přímo společnosti Microsoft. Ve výchozím nastavení je nastavení v sestaveních ide **Prompt** a nastavení v sestaveních příkazového řádku je **Fronta**.
+   Určuje architekturu pro generování kódu, která používá instrukce Streaming SIMD Extensions (SSE) a Streaming SIMD Extensions 2 (SSE2).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Žádné** - **/errorReport:none**
+  - **StreamingSIMDExtensions**  -  **/arch: SSE**
 
-  - **Výzva** - **/errorReport:výzva**
+  - **StreamingSIMDExtensions2**  -  **/arch: SSE2**
 
-  - **Fronta** - **/errorReport:fronta**
+    Další informace najdete v tématu [/arch (x86)](/cpp/build/reference/arch-x86).
 
-  - **Odeslat** - **/errorReport:odeslat**
+- **EnableFiberSafeOptimizations**
 
-    Další informace naleznete v tématu [/errorReport (Report internal compiler errors).](/cpp/build/reference/errorreport-report-internal-compiler-errors)
+   Volitelný logický parametr.
 
-- **Zpracování výjimek**
+   Pokud `true` podporuje bezpečnost vlákna pro data přidělená pomocí statického úložiště místního vlákna, to znamená data přidělená pomocí `__declspec(thread)` .
 
-   Volitelný parametr String.
+   Další informace najdete v tématu [/gt (podpora místního úložiště s vlákny pro vlákno)](/cpp/build/reference/gt-support-fiber-safe-thread-local-storage).
+
+- **EnablePREfast**
+
+   Volitelný logický parametr.
+
+   Pokud chcete `true` Povolit analýzu kódu.
+
+   Další informace naleznete v tématu [/analyze (analýza kódu)](/cpp/build/reference/analyze-code-analysis).
+
+- **ErrorReporting**
+
+   Volitelný řetězcový parametr.
+
+   Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo společnosti Microsoft. Ve výchozím nastavení je nastavení v rozhraní IDE **vyzváné** a nastavení v sestavení příkazového řádku je **Queue**.
+
+   Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
+
+  - **Žádné**  -  **/errorreport: none**
+
+  - **Zobrazit výzvu**  -  **/errorreport: prompt**
+
+  - **Fronta**  -  **/errorreport: Queue**
+
+  - **Odeslat**  -  **/errorreport: Send**
+
+    Další informace najdete v tématu [/errorreport (hlášení chyb interních kompilátorů)](/cpp/build/reference/errorreport-report-internal-compiler-errors).
+
+- **ExceptionHandling**
+
+   Volitelný řetězcový parametr.
 
    Určuje model zpracování výjimek, který má kompilátor použít.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **falešný** - *žádný>\<*
+  - **chybné** - *\<none>*
 
-  - **Asynchronní** - **/EHa**
+  - **Asynchronní**  -  operace **/EHa**
 
-  - **Synchronizace** - **/EHsc**
+  - **Synchronizovat**  -  **/EHsc**
 
-  - **SyncCThrow** - **/EHs**
+  - **SyncCThrow**  -  **/EHS**
 
-    Další informace naleznete v tématu [/EH (Model zpracování výjimek)](/cpp/build/reference/eh-exception-handling-model).
+    Další informace naleznete v tématu [/EH (model zpracování výjimek)](/cpp/build/reference/eh-exception-handling-model).
 
-- **Rozbalitatribut**
+- **ExpandAttributedSource**
 
    Volitelný logický parametr.
 
-   Pokud `true`vytvoří soubor výpisu, který má rozšířené atributy vložené do zdrojového souboru.
+   Pokud `true` , vytvoří soubor výpisu s rozbalenými atributy vloženými do zdrojového souboru.
 
-   Další informace naleznete v tématu [/Fx (Merge injected code)](/cpp/build/reference/fx-merge-injected-code).
+   Další informace najdete v tématu [/FX (sloučení vloženého kódu)](/cpp/build/reference/fx-merge-injected-code).
 
 - **FavorSizeOrSpeed**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Určuje, zda má být upřednostňována velikost kódu nebo rychlost kódu.
+   Určuje, zda má být upřednostněna velikost kódu nebo rychlost kódu.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Ani** - *žádný>\<*
+  - **Ani** - *\<none>*
 
-  - **Velikost** - **/Os**
+  - **Velikost**  -  **/OS**
 
-  - **Rychlost** - **/Ot**
+  - **Rychlost**  -  **/Ot**
 
-    Další informace naleznete [v tématu /Os, /Ot (Favor malý kód, favor rychlý kód)](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code).
+    Další informace najdete v tématu [/OS,/ot (upřednostnění malého kódu, upřednostnění rychlého kódu)](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code).
 
-- **Výjimky s plovoucím bodem**
+- **FloatingPointExceptions**
 
    Volitelný logický parametr.
 
-   Pokud `true`, umožňuje spolehlivý model výjimky s plovoucí desetinnou desetinnou desetinnou tázkou. Výjimky budou vyvolány ihned po jejich aktivaci.
+   `true`V případě, umožňuje spolehlivý model výjimek s plovoucí desetinnou čárkou. Výjimky budou vyvolány okamžitě po aktivaci.
 
-   Další informace naleznete v tématu /**fp:except** option in [/fp (Specify floating-point behavior)](/cpp/build/reference/fp-specify-floating-point-behavior).
+   Další informace naleznete v tématu/**FP: except** – možnost v [/FP (určení chování s plovoucí](/cpp/build/reference/fp-specify-floating-point-behavior)desetinnou čárkou).
 
-- **PlovoucíPointModel**
+- **FloatingPointModel**
 
-   Volitelný parametr String.
+   Volitelný řetězcový parametr.
 
-   Nastaví model s plovoucí desetinnou tázkou.
+   Nastaví model plovoucí desetinné čárky.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Přesné** - **/fp:přesné**
+  - **Přesná**  -  **/FP: přesný**
 
-  - **Striktní** - **/fp:striktní**
+  - **Striktní**  -  **/FP: Strict**
 
-  - **Rychlé** - **/fp:rychlé**
+  - **Rychlé**  -  **/FP: Fast**
 
-    Další informace naleznete v tématu [/fp (Zadejte chování s plovoucí desetinnou tázkem).](/cpp/build/reference/fp-specify-floating-point-behavior)
+    Další informace najdete v tématu [/FP (určení chování s plovoucí](/cpp/build/reference/fp-specify-floating-point-behavior)desetinnou čárkou).
 
 - **ForceConformanceInForLoopScope**
 
    Volitelný logický parametr.
 
-   Pokud `true`implementuje standardní chování jazyka C++ v [pro](/cpp/cpp/for-statement-cpp) smyčky, které používají rozšíření Microsoft ([/Ze](/cpp/build/reference/za-ze-disable-language-extensions)).
+   Pokud `true` , implementuje standardní chování C++ v [pro](/cpp/cpp/for-statement-cpp) smyčky, které používají rozšíření Microsoft Extensions ([/ze](/cpp/build/reference/za-ze-disable-language-extensions)).
 
-   Další informace naleznete v tématu [/Zc:forScope (Force conformance in for loop scope).](/cpp/build/reference/zc-forscope-force-conformance-in-for-loop-scope)
+   Další informace najdete v tématu [/Zc: forScope (vynucení shody v oboru for Loop)](/cpp/build/reference/zc-forscope-force-conformance-in-for-loop-scope).
 
-- **Vynucené includesoubory**
+- **ForcedIncludeFiles**
 
    Volitelný `String[]` parametr.
 
    Způsobí, že preprocesor zpracuje jeden nebo více zadaných souborů hlaviček.
 
-   Další informace naleznete v tématu [/FI (Název vynucený soubor zahrnutí)](/cpp/build/reference/fi-name-forced-include-file).
+   Další informace najdete v tématu [/Fi (soubor s vynuceným zahrnutím názvu)](/cpp/build/reference/fi-name-forced-include-file).
 
 - **ForcedUsingFiles**
 
-   Volitelný **parametr String[].**
+   Parametr volitelného **řetězce []** .
 
-   Způsobí, že preprocesor zpracuje jeden nebo více určených **souborů #using.**
+   Způsobí, že preprocesor zpracuje jeden nebo více zadaných **#using** souborů.
 
-   Další informace naleznete v tématu [/FU (Název vynucený #using soubor)](/cpp/build/reference/fu-name-forced-hash-using-file).
+   Další informace najdete v tématu [/Fu (název vynuceného #using souboru)](/cpp/build/reference/fu-name-forced-hash-using-file).
 
-- **FunkceLevelLinking**
+- **FunctionLevelLinking**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`umožňuje kompilátoru sbalit jednotlivé funkce ve formě balených funkcí (COMDAts).
+   Pokud `true` , umožňuje kompilátoru zabalit jednotlivé funkce ve formě zabalených funkcí (sekvence COMDAT).
 
-   Další informace naleznete v tématu [/Gy (Povolit propojení na úrovni funkce).](/cpp/build/reference/gy-enable-function-level-linking)
+   Další informace najdete v tématu [/Gy (povolení propojení na úrovni funkcí)](/cpp/build/reference/gy-enable-function-level-linking).
 
 - **GenerateXMLDocumentationFiles**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`způsobí, že kompilátor zpracuje komentáře dokumentace v souborech zdrojového kódu a vytvoří soubor *XDC* pro každý soubor zdrojového kódu, který má komentáře k dokumentaci.
+   Pokud `true` Nástroj způsobí, že kompilátor zpracuje dokumentační komentáře v souborech zdrojového kódu a vytvoří soubor *. xdc* pro každý soubor zdrojového kódu, který obsahuje dokumentační komentáře.
 
-   Další informace naleznete v tématu [/doc (Zpracování dokumentů komentáře) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp). Viz také parametr **XMLDocumentationFileName** v této tabulce.
+   Další informace naleznete v tématu [/doc (zpracování dokumentačních komentářů) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp). V této tabulce se také zobrazí parametr **XMLDocumentationFileName** .
 
-- **Ignorovat cestu standardních zahrnutí**
+- **IgnoreStandardIncludePath**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`zabraňuje kompilátoru v hledání zahrnout soubory v adresářích určených v path a include proměnné prostředí.
+   Pokud `true` , zabrání kompilátoru v hledání souborů include v adresářích zadaných v cestě a proměnných prostředí include.
 
-   Další informace naleznete v tématu [/X (Ignorovat standardní zahrnout cesty)](/cpp/build/reference/x-ignore-standard-include-paths).
+   Další informace naleznete v části [/x (ignorování standardních cest zahrnutí)](/cpp/build/reference/x-ignore-standard-include-paths).
 
 - **InlineFunctionExpansion**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
-   Určuje úroveň rozšíření vřadné funkce pro sestavení.
+   Určuje úroveň rozšíření vložené funkce pro sestavení.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí** - *žádný>\<*
+  - **Výchozí** - *\<none>*
 
-  - **Zakázáno** - **/Ob0**
+  - **Zakázáno**  -  **/Ob0**
 
-  - **OnlyExplicitInline** - **/Ob1**
+  - **OnlyExplicitInline**  -  **/OB1**
 
-  - **AnySuitable** - **/Ob2**
+  - **AnySuitable**  -  **/Ob2**
 
-    Další informace naleznete v tématu [/Ob (Rozšíření funkce inline).](/cpp/build/reference/ob-inline-function-expansion)
+    Další informace naleznete v tématu [/ob (rozšíření vložené funkce)](/cpp/build/reference/ob-inline-function-expansion).
 
-- **Vnitřní funkce**
+- **IntrinsicFunctions**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, nahradí některé volání funkce vnitřní nebo jinak zvláštní formy funkce, které pomáhají aplikace běžet rychleji.
+   Pokud `true` , nahradí některá volání funkce vnitřními nebo jinak speciálními formami funkce, které pomůžou aplikaci rychleji běžet.
 
-   Další informace naleznete [v tématu /Oi (Generovat vnitřní funkce).](/cpp/build/reference/oi-generate-intrinsic-functions)
+   Další informace najdete v tématu [/Oi (generování vnitřních funkcí)](/cpp/build/reference/oi-generate-intrinsic-functions).
 
 - **MinimalRebuild**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, umožňuje minimální opětovné sestavení, které určuje, zda je nutné znovu zkompilovat zdrojové soubory jazyka C++, které obsahují změněné definice tříd jazyka C++ (uložené v souborech záhlaví (.h).
+   Pokud `true` , umožňuje minimální opětovné sestavení, které určuje, zda je nutné znovu zkompilovat zdrojové soubory jazyka c++, které obsahují změněné definice tříd c++ (uložené v hlavičkových souborech (. h)).
 
-   Další informace naleznete v tématu [/Gm (Povolit minimální znovusestavit)](/cpp/build/reference/gm-enable-minimal-rebuild).
+   Další informace najdete v tématu [/GM (povolení minimálního opětovného sestavení)](/cpp/build/reference/gm-enable-minimal-rebuild).
 
-- **Kompilace více procesorů**
+- **MultiProcessorCompilation**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, použijte více procesorů ke kompilaci. Tento parametr vytvoří proces pro každý efektivní procesor v počítači.
+   Pokud `true` chcete kompilovat více procesorů, použijte. Tento parametr vytvoří proces pro každý efektivní procesor v počítači.
 
-   Další informace naleznete v tématu [/MP (Sestavení s více procesy).](/cpp/build/reference/mp-build-with-multiple-processes) Viz také parametr **ProcessorNumber** v této tabulce.
+   Další informace naleznete v tématu [/MP (sestavení s více procesy)](/cpp/build/reference/mp-build-with-multiple-processes). Viz také parametr **ProcessorNumber** v této tabulce.
 
-- **Název objektu ObjectFileName**
+- **ObjectFileName**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
-   Určuje název souboru nebo adresáře objektu (obj), který má být použit místo výchozího.
+   Určuje název souboru objektu (. obj) nebo adresář, který má být použit místo výchozí.
 
-   Další informace naleznete v tématu [/Fo (Název souboru objektu).](/cpp/build/reference/fo-object-file-name)
+   Další informace naleznete v tématu [/FO (název souboru objektu)](/cpp/build/reference/fo-object-file-name).
 
-- **Objektové soubory**
+- **ObjectFiles**
 
-   Volitelný **parametr String[].**
+   Parametr volitelného **řetězce []** .
 
    Seznam souborů objektů.
 
@@ -454,191 +454,191 @@ Zalomí kompilátorový nástroj Microsoft *C++cl.exe*. Kompilátor vytváří s
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`vyneche výchozí název knihovny C run-time ze souboru objektu (*obj*). Ve výchozím nastavení kompilátor vloží název knihovny do souboru *OBJ,* aby nasměroval propojovací program do správné knihovny.
+   Pokud `true` , vynechá výchozí název běhové knihovny jazyka C ze souboru objektu (*. obj*). Ve výchozím nastavení kompilátor umístí do souboru *. obj* název knihovny a nasměruje linker do správné knihovny.
 
-   Další informace naleznete v tématu [/Zl (Vynechání výchozího názvu knihovny).](/cpp/build/reference/zl-omit-default-library-name)
+   Další informace najdete v tématu [/zl (vynechání názvu výchozí knihovny)](/cpp/build/reference/zl-omit-default-library-name).
 
-- **Vynechat ukazatele rámce**
-
-   Volitelný `Boolean` parametr.
-
-   Pokud `true`potlačí vytváření ukazatelů rámce v zásobníku volání.
-
-   Další informace naleznete v tématu [/Oy (Vynechání ukazatele rámce)](/cpp/build/reference/oy-frame-pointer-omission).
-
-- **Podpora OpenMPSupport**
+- **OmitFramePointers**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`způsobí, že kompilátor zpracuje klauzule OpenMP a direktivy.
+   Pokud `true` , potlačí vytváření ukazatelů rámců v zásobníku volání.
 
-   Další informace naleznete v tématu [/openmp (Povolit podporu OpenMP 2.0)](/cpp/build/reference/openmp-enable-openmp-2-0-support).
+   Další informace naleznete v tématu [/Oy (vynechání ukazatele na rámec)](/cpp/build/reference/oy-frame-pointer-omission).
+
+- **OpenMPSupport**
+
+   Volitelný `Boolean` parametr.
+
+   Pokud `true` Nástroj způsobí, že kompilátor zpracuje klauzule a direktivy OpenMP.
+
+   Další informace najdete v tématu [/OpenMP (povolení podpory openmp 2,0)](/cpp/build/reference/openmp-enable-openmp-2-0-support).
 
 - **Optimalizace**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
    Určuje různé optimalizace kódu pro rychlost a velikost.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Zakázáno** - **/Od**
+  - **Zakázáno**  -  **/Od**
 
-  - **MinSpace** - **/O1**
+  - **MinSpace**  -  **/O1**
 
-  - **Maximální rychlost** - **/O2**
+  - **MaxSpeed**  -  **/O2**
 
-  - **Plný** - **/Ox**
+  - **Úplný**  -  **/Ox**
 
-    Další informace naleznete v tématu [/O Options (Optimalizace kódu)](/cpp/build/reference/o-options-optimize-code).
+    Další informace najdete v tématu [Možnosti/o (optimalizace kódu)](/cpp/build/reference/o-options-optimize-code).
 
-- **Předkompilované záhlaví**
+- **PrecompiledHeader**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
-   Vytvořte nebo použijte předkompilovaný soubor záhlaví (*.pch)* během sestavení.
+   Během sestavování vytvořte nebo použijte soubor předkompilované hlavičky (*. pch*).
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Nepoužívat žádný** - >*\<*
+  - **NotUsing** - *\<none>*
 
-  - **Vytvořit** - **/Yc**
+  - **Vytvořit**  -  **/YC**
 
-  - **Použít** - **/Yu**
+  - **Použití**  -  **/Yu**
 
-    Další informace naleznete [v tématech /Yc (Vytvoření předkompilovaného souboru hlaviček)](/cpp/build/reference/yc-create-precompiled-header-file) a [/Yu (Použít předkompilovaný soubor záhlaví).](/cpp/build/reference/yu-use-precompiled-header-file) Viz také parametry **PrecompiledHeaderFile** a **PrecompiledHeaderOutputFile** v této tabulce.
+    Další informace naleznete v tématu [/Yc (Create a Compiled hlavičkový soubor)](/cpp/build/reference/yc-create-precompiled-header-file) a [/Yu (použít předkompilovaný hlavičkový soubor)](/cpp/build/reference/yu-use-precompiled-header-file). Podívejte se také na parametry **PrecompiledHeaderFile** a **PrecompiledHeaderOutputFile** v této tabulce.
 
-- **Předkompilovaný soubor záhlaví**
+- **PrecompiledHeaderFile**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
-   Určuje předkompilovaný název souboru záhlaví, který chcete vytvořit nebo použít.
+   Určuje název souboru předkompilované hlavičky, který se má vytvořit nebo použít.
 
-   Další informace naleznete [v tématech /Yc (Vytvoření předkompilovaného souboru hlaviček)](/cpp/build/reference/yc-create-precompiled-header-file) a [/Yu (Použít předkompilovaný soubor záhlaví).](/cpp/build/reference/yu-use-precompiled-header-file)
+   Další informace naleznete v tématu [/Yc (Create a Compiled hlavičkový soubor)](/cpp/build/reference/yc-create-precompiled-header-file) a [/Yu (použít předkompilovaný hlavičkový soubor)](/cpp/build/reference/yu-use-precompiled-header-file).
 
-- **Předkompilovanýsoubor Hlavička Výstupu**
+- **PrecompiledHeaderOutputFile**
 
-   Volitelný **parametr String.**
+   Volitelný **řetězcový** parametr.
 
-   Určuje název cesty pro předkompilované záhlaví namísto použití výchozího názvu cesty.
+   Určuje název cesty pro předkompilovanou hlavičku namísto použití výchozího názvu cesty.
 
-   Další informace naleznete v tématu [/Fp (Název .pch file)](/cpp/build/reference/fp-name-dot-pch-file).
+   Další informace naleznete v tématu [/FP (pojmenování souboru. pch)](/cpp/build/reference/fp-name-dot-pch-file).
 
-- **Předběžné zobrazení keepkomentáře**
+- **PreprocessKeepComments**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`zachová komentáře během předběžného zpracování.
+   Pokud `true` aplikace zachová komentáře během předběžného zpracování.
 
-   Další informace naleznete [v tématu /C (Zachovat komentáře během předběžného zpracování)](/cpp/build/reference/c-preserve-comments-during-preprocessing).
+   Další informace najdete v tématu [/c (zachování komentářů během předběžného zpracování)](/cpp/build/reference/c-preserve-comments-during-preprocessing).
 
-- **Definice preprocesoru**
+- **PreprocessorDefinitions**
 
    Volitelný `String[]` parametr.
 
-   Definuje symbol předběžného zpracování zdrojového souboru.
+   Definuje symbol předzpracování pro zdrojový soubor.
 
-   Další informace naleznete v tématu [/D (Definice preprocesoru).](/cpp/build/reference/d-preprocessor-definitions)
+   Další informace naleznete v tématu [/d (Definice preprocesoru)](/cpp/build/reference/d-preprocessor-definitions).
 
-- **Předprocesvýstup**
+- **PreprocessOutput**
 
    Volitelný `ITaskItem[]` parametr.
 
-   Definuje pole výstupních položek preprocesoru, které mohou být spotřebovány a vydávány úkoly.
+   Definuje pole výstupních položek preprocesoru, které mohou být spotřebovány a generovány úlohami.
 
-- **Předprocesoutputpath**
+- **PreprocessOutputPath**
 
    Volitelný `String` parametr.
 
-   Určuje název výstupního souboru, do kterého parametr **PreprocessToFile** zapisuje předem zpracovaný výstup.
+   Určuje název výstupního souboru, do kterého parametr **PreprocessToFile** zapisuje předzpracovaný výstup.
 
-   Další informace naleznete v tématu [/Fi (Název výstupního souboru před zpracováním).](/cpp/build/reference/fi-preprocess-output-file-name)
+   Další informace naleznete v tématu [/Fi (předběžné zpracování názvu výstupního souboru)](/cpp/build/reference/fi-preprocess-output-file-name).
 
 - **PreprocessSuppressLineNumbers**
 
    Volitelný `Boolean` parametr.
 
-   If `true`, preprocesses C a C++ source files and copies the preprocessed files to the standard output device.
+   Pokud `true` , předzpracovává zdrojové soubory C a C++ a kopíruje soubory předzpracovaného na standardní výstupní zařízení.
 
-   Další informace naleznete [v tématu /EP (Preprocess to stdout bez #line direktivy).](/cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives)
+   Další informace naleznete v tématu [/EP (předzpracování do stdout bez #line direktiv)](/cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives).
 
-- **Předprocestosoubor**
+- **PreprocessToFile**
 
    Volitelný `Boolean` parametr.
 
-   If `true`, preprocesses C a C++ source files and writes the preprocessed output to a file.
+   Pokud `true` , předzpracovává zdrojové soubory C a C++ a zapisuje předzpracovaný výstup do souboru.
 
-   Další informace naleznete v tématu [/P (Předběžná proces k souboru).](/cpp/build/reference/p-preprocess-to-a-file)
+   Další informace naleznete v tématu [/p (předběžné zpracování souboru)](/cpp/build/reference/p-preprocess-to-a-file).
 
-- **Číslo procesoru**
+- **ProcessorNumber**
 
    Volitelný `Integer` parametr.
 
-   Určuje maximální počet procesorů, které mají být používány v kompilaci s více procesory. Tento parametr použijte v kombinaci s parametrem **MultiProcessorCompilation.**
+   Určuje maximální počet procesorů, které se mají použít při kompilaci ve více procesorech. Tento parametr použijte v kombinaci s parametrem **MultiProcessorCompilation** .
 
-- **Název souboru ProgramDataBase**
+- **ProgramDataBaseFileName**
 
    Volitelný `String` parametr.
 
-   Určuje název souboru databáze programů (PDB).
+   Určuje název souboru pro soubor databáze programu (PDB).
 
-   Další informace naleznete v tématu [/Fd (Název souboru databáze programu).](/cpp/build/reference/fd-program-database-file-name)
+   Další informace najdete v tématu [/FD (název souboru databáze programu)](/cpp/build/reference/fd-program-database-file-name).
 
 - **RuntimeLibrary**
 
    Volitelný `String` parametr.
 
-   Označuje, zda je vícevláknový modul knihovnou DLL, a vybere maloobchodní nebo ladicí verze knihovny za běhu.
+   Označuje, zda je vícevláknový modul knihovnou DLL, a vybere prodejní nebo ladicí verze knihovny run-time.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Vícevláknové** - **/MT**
+  - **Vícevláknové**  -  **/Mt**
 
-  - **VícethreadedDebug** - **/MTd**
+  - **MultiThreadedDebug**  -  **/MTD**
 
-  - **Vícevláknová dll** - **/MD**
+  - **MultiThreadedDLL**  -  **/MD**
 
-  - **VícethreadedDebugDLL** - **/MDd**
+  - **MultiThreadedDebugDLL**  -  **/MDD**
 
-    Další informace naleznete v tématu [/MD, /MT, /LD (Použít knihovnu za běhu).](/cpp/build/reference/md-mt-ld-use-run-time-library)
+    Další informace naleznete v tématu [/MD,/MT,/LD (použití běhové knihovny)](/cpp/build/reference/md-mt-ld-use-run-time-library).
 
-- **Informace o typu runtimetype**
-
-   Volitelný `Boolean` parametr.
-
-   Pokud `true`, přidá kód pro kontrolu typů objektů Jazyka C++ za běhu (informace o typu za běhu).
-
-   Další informace naleznete v tématu [/GR (Povolit informace o typu za běhu).](/cpp/build/reference/gr-enable-run-time-type-information)
-
-- **Zobrazit zahrnuje**
+- **RuntimeTypeInfo**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`způsobí, že kompilátor výstup seznamu zahrnout soubory.
+   Pokud `true` , přidá kód pro kontrolu typů objektů jazyka C++ za běhu (informace o typu za běhu).
 
-   Další informace naleznete v tématu [/showIncludes (Seznam zahrnutí souborů)](/cpp/build/reference/showincludes-list-include-files).
+   Další informace najdete v tématu [/gr (povolení informací o běhovém typu)](/cpp/build/reference/gr-enable-run-time-type-information).
+
+- **ShowIncludes –**
+
+   Volitelný `Boolean` parametr.
+
+   Pokud `true` dojde k tomu, vyvolá kompilátor výstup seznamu souborů k zahrnutí.
+
+   Další informace najdete v tématu [/showIncludes (seznam vložených souborů)](/cpp/build/reference/showincludes-list-include-files).
 
 - **SmallerTypeCheck**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`aplikace nahlásí chybu za běhu, pokud je hodnota přiřazena menšímu datovému typu a způsobí ztrátu dat.
+   `true`V případě, že hlásí chybu za běhu, pokud je přiřazena hodnota k menšímu datovému typu a způsobuje ztrátu dat.
 
-   Další informace naleznete v tématu **/RTCc** možnost [/RTC (Run-time kontroly chyb)](/cpp/build/reference/rtc-run-time-error-checks).
+   Další informace naleznete v možnosti **/RTCc** v [/RTC (kontrola chyb za běhu)](/cpp/build/reference/rtc-run-time-error-checks).
 
-- **Zdrojů**
+- **zdroje**
 
    Požadovaný parametr `ITaskItem[]`.
 
    Určuje seznam zdrojových souborů oddělených mezerami.
 
-- **Sdružování řetězců**
+- **StringPooling**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`umožňuje kompilátoru vytvořit jednu kopii identických řetězců v bitové kopii programu.
+   Pokud `true` , umožňuje kompilátoru vytvořit jednu kopii stejných řetězců v imagi programu.
 
-   Další informace naleznete v tématu [/GF (Odstranění duplicitních řetězců).](/cpp/build/reference/gf-eliminate-duplicate-strings)
+   Další informace najdete v tématu [/GF (odstranění duplicitních řetězců)](/cpp/build/reference/gf-eliminate-duplicate-strings).
 
 - **StructMemberAlignment**
 
@@ -648,160 +648,160 @@ Zalomí kompilátorový nástroj Microsoft *C++cl.exe*. Kompilátor vytváří s
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Výchozí** - **/Zp1**
+  - **Výchozí nastavení**  -  **/Zp1**
 
-  - **1Bajt** - **/Zp1**
+  - **1Byte**  -  **/Zp1**
 
-  - **2BajTy** - **/Zp2**
+  - **2Bytes**  -  **/Zp2**
 
-  - **4Bajty** - **/Zp4**
+  - **4Bytes**  -  **/Zp4**
 
-  - **8BajTů** - **/Zp8**
+  - **8bytes**  -  **/ZP8**
 
-  - **16Bajtů** - **/Zp16**
+  - **16Bytes**  -  **/Zp16**
 
-    Další informace naleznete v tématu [/Zp (Struct member alignment).](/cpp/build/reference/zp-struct-member-alignment)
+    Další informace naleznete v tématu [/zp (zarovnání členů struktury)](/cpp/build/reference/zp-struct-member-alignment).
 
-- **PotlačitStartupBanner**
+- **SuppressStartupBanner**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`aplikace zabraňuje zobrazení zprávy o autorských právech a čísle verze při spuštění úlohy.
+   Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.
 
-   Další informace naleznete v tématu [/nologo (Potlačit spouštěcí banner) (C/C++)](/cpp/build/reference/nologo-suppress-startup-banner-c-cpp).
+   Další informace naleznete v tématu [/nologo (potlačení úvodního nápisu při spouštění) (C/C++)](/cpp/build/reference/nologo-suppress-startup-banner-c-cpp).
 
 - **TrackerLogDirectory**
 
    Volitelný `String` parametr.
 
-   Určuje zprostředkující adresář, ve kterém jsou uloženy protokoly sledování pro tuto úlohu.
+   Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.
 
-   Další informace naleznete v parametrech **TLogReadFiles** a **TLogWriteFiles** v této tabulce.
+   Další informace najdete v tématu parametry **TLogReadFiles** a **TLogWriteFiles** v této tabulce.
 
 - **TreatSpecificWarningsAsErrors**
 
-   Volitelný **parametr String[].**
+   Parametr volitelného **řetězce []** .
 
-   Považuje zadaný seznam upozornění kompilátoru za chyby.
+   Zachází s zadaným seznamem upozornění kompilátoru jako s chybami.
 
-   Další informace naleznete v možnosti **/we** `n` v [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Úroveň varování)](/cpp/build/reference/compiler-option-warning-level).
+   Další informace najdete v tématu možnost **/We** `n` v [/W,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 
-- **TreatWarningAsChyba**
+- **TreatWarningAsError**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, považovat všechna upozornění kompilátoru jako chyby.
+   Pokud `true` , považovat všechna upozornění kompilátoru za chyby.
 
-   Další informace naleznete v tématu **/WX** option in [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
+   Další informace najdete v tématu **/WX** Option v [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 
 - **TreatWChar_tAsBuiltInType**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, `wchar_t` považovat typ jako nativní typ.
+   Pokud `true` je typ považován za `wchar_t` nativní typ.
 
-   Další informace naleznete v tématu [/Zc:wchar_t (wchar_t je nativní typ).](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type)
+   Další informace naleznete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type).
 
-- **UndefineAllPreprocessorDefinitions UndefineAllPreprocessorDefinitions UndefineAllPreprocessorDefinitions Undefine**
+- **UndefineAllPreprocessorDefinitions**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`, undefines microsoft specifické symboly, které definuje kompilátor.
+   Pokud `true` , zruší definici symbolů specifických pro společnost Microsoft, které definuje kompilátor.
 
-   Další informace naleznete v tématu **/u** možnost v [/U, /u (Nedefinovat symboly)](/cpp/build/reference/u-u-undefine-symbols).
+   Další informace naleznete v možnosti **/u** v části [/u,/u (nedefinované symboly)](/cpp/build/reference/u-u-undefine-symbols).
 
-- **UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions UndefinePreprocessorDefinitions Undefine**
+- **UndefinePreprocessorDefinitions**
 
    Volitelný `String[]` parametr.
 
    Určuje seznam jednoho nebo více symbolů preprocesoru, které mají být nedefinovány.
 
-   Další informace naleznete v tématu **/U** option in [/U, /u (Undefine symbols)](/cpp/build/reference/u-u-undefine-symbols).
+   Další informace naleznete v části **/u** Option v [/u,/u (nedefinované symboly)](/cpp/build/reference/u-u-undefine-symbols).
 
 - **UseFullPaths**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`aplikace , zobrazí úplnou cestu souborů zdrojového kódu předaných kompilátoru v diagnostice.
+   Pokud `true` , zobrazí úplnou cestu souborů se zdrojovým kódem předaných kompilátoru v diagnostice.
 
-   Další informace naleznete v tématu [/FC (Úplná cesta souboru zdrojového kódu v diagnostice)](/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics).
+   Další informace naleznete v tématu [/FC (úplná cesta k souboru zdrojového kódu v diagnostice)](/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics).
 
-- **PoužitíUnicodeForAssemblerListing**
+- **UseUnicodeForAssemblerListing**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`způsobí, že výstupní soubor, který má být vytvořen ve formátu UTF-8.
+   Pokud `true` Nástroj způsobí, že se výstupní soubor vytvoří ve formátu UTF-8.
 
-   Další informace naleznete v tématu **/FAu** option in [/FA, /Fa (Listing file)](/cpp/build/reference/fa-fa-listing-file).
+   Další informace naleznete v možnosti **/FAU** v [/FA,/FA (soubor výpisu)](/cpp/build/reference/fa-fa-listing-file).
 
-- **Úroveň upozornění**
+- **WarningLevel**
 
    Volitelný `String` parametr.
 
-   Určuje nejvyšší úroveň upozornění, která má být generována kompilátorem.
+   Určuje nejvyšší úroveň upozornění, které má kompilátor generovat.
 
    Zadejte jednu z následujících hodnot, z nichž každá odpovídá možnosti příkazového řádku.
 
-  - **Vypnoutvšechna varování** - **/W0**
+  - **TurnOffAllWarnings**  -  **/W0**
 
-  - **Úroveň1** - **/W1**
+  - **Level1**  -  **/W1**
 
-  - **Úroveň2** - **/W2**
+  - **Level2**  -  **/W2**
 
-  - **Úroveň3** - **/W3**
+  - **Level3**  -  **/W3**
 
-  - **Úroveň4** - **/W4**
+  - **Level4**  -  **/W4**
 
-  - **EnableAllWarnings** - **/Wall**
+  - **Povolit všechna upozornění**  -  **/Wall**
 
-    Další informace naleznete v možnosti **/W**_n_ v [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
+    Další informace naleznete v části **/w**_n_ v příkazu [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](/cpp/build/reference/compiler-option-warning-level).
 
 - **WholeProgramOptimization**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`umožňuje optimalizaci celého programu.
+   Pokud `true` , povolí optimalizaci celého programu.
 
-   Další informace naleznete v tématu [/GL (Optimalizace celého programu).](/cpp/build/reference/gl-whole-program-optimization)
+   Další informace naleznete v tématu [/GL (celá optimalizace programu)](/cpp/build/reference/gl-whole-program-optimization).
 
-- **Název souboru XMLDocumentationFileName**
+- **XMLDocumentationFileName**
 
    Volitelný `String` parametr.
 
    Určuje název generovaných souborů dokumentace XML. Tento parametr může být název souboru nebo adresáře.
 
-   Další informace naleznete `name` v argumentu [/doc (Zpracování dokumentů komentáře) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp). Viz také parametr **GenerateXMLDocumentationFiles** v této tabulce.
+   Další informace naleznete `name` v argumentu v [/doc (Process dokumentačních komentářů) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp). V této tabulce se také zobrazí parametr **GenerateXMLDocumentationFiles** .
 
 - **MinimalRebuildFromTracking**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`se provádí sledované přírůstkové sestavení; pokud `false`je provedeno opětovné sestavení.
+   Je-li `true` provedeno sledované přírůstkové sestavení, je-li `false` provedeno opětovné sestavení.
 
-- **Tlogready**
-
-   Volitelný `ITaskItem[]` parametr.
-
-   Určuje pole položek, které představují *protokoly sledování souborů pro čtení*.
-
-   Protokol sledování souborů pro čtení (*Tlog*) obsahuje názvy vstupních souborů, které jsou čteny úlohou, a používá se systémem sestavení projektu k podpoře přírůstkových sestavení. Další informace naleznete v parametrech **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
-
-- **Tlogwritefiles**
+- **TLogReadFiles**
 
    Volitelný `ITaskItem[]` parametr.
 
-   Určuje pole položek, které představují *protokoly sledování souborů zápisu*.
+   Určuje pole položek, které reprezentují *protokoly sledování čtecího souboru*.
 
-   Protokol sledování souborů zápisu (*.tlog*) obsahuje názvy výstupních souborů, které jsou zapsány úlohou, a používá se systémem sestavení projektu k podpoře přírůstkových sestavení. Další informace naleznete v parametrech **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
+   Protokol sledování souboru Readme (*. tlog*) obsahuje názvy vstupních souborů, které jsou čteny úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
 
-- **Přístup trackfileaccess**
+- **TLogWriteFiles**
+
+   Volitelný `ITaskItem[]` parametr.
+
+   Určuje pole položek, které reprezentují *protokoly sledování souborů*.
+
+   Protokol sledování zápisu souboru (*. tlog*) obsahuje názvy výstupních souborů, které jsou zapsány úlohou a které používá systém sestavení projektu pro podporu přírůstkových sestavení. Další informace najdete v tématu parametry **TrackerLogDirectory** a **TrackFileAccess** v této tabulce.
+
+- **TrackFileAccess**
 
    Volitelný `Boolean` parametr.
 
-   Pokud `true`sleduje vzor přístupu k souborům.
+   Pokud `true` aplikace sleduje vzory přístupu k souborům.
 
-   Další informace naleznete v parametrech **TLogReadFiles** a **TLogWriteFiles** v této tabulce.
+   Další informace najdete v tématu parametry **TLogReadFiles** a **TLogWriteFiles** v této tabulce.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

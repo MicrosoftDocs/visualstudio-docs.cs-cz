@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0a79caca18c7813605ff851eea6bda642e6300a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645617"
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>Hierarchická organizace zdrojů pro lokalizaci
@@ -50,4 +50,4 @@ V aplikaci Visual Studio jsou lokalizované prostředky (data, jako jsou napří
   ![Obrázek NeutralSpecificResources](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")
 
 ## <a name="see-also"></a>Viz také
- [Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md) [zabezpečení a lokalizované satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md) [lokalizace aplikací](../ide/localizing-applications.md) [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md) [Postupy: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro model Windows Forms Globalizace](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) [Postup: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro globalizaci webové stránky v ASP.NET](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)
+ [Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md) [zabezpečení a lokalizované satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md) [lokalizace aplikací](../ide/localizing-applications.md) [globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md) [Postupy: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro model Windows Forms globalizace](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) [: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro globalizaci webové stránky ASP.NET](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)

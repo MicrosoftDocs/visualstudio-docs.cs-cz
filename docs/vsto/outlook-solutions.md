@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985676"
 ---
 # <a name="outlook-solutions"></a>řešení pro aplikaci Outlook
@@ -38,9 +38,9 @@ ms.locfileid: "72985676"
  Další informace o tom, jak vytvořit projekt doplňku VSTO, najdete v tématu [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md). Další informace o šablonách projektů naleznete v tématu [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md).
 
 ## <a name="outlook-vsto-add-in-programming-model"></a>Programovací model doplňku aplikace Outlook VSTO
- Když vytvoříte projekt doplňku VSTO pro Outlook, Visual Studio vygeneruje třídu nazvanou `ThisAddIn`, což je základem vašeho řešení. Tato třída poskytuje výchozí bod pro psaní kódu a také zpřístupňuje objektový model aplikace Outlook pro doplněk VSTO.
+ Když vytvoříte projekt doplňku VSTO pro Outlook, Visual Studio vygeneruje třídu, `ThisAddIn` která je volána, což je základem vašeho řešení. Tato třída poskytuje výchozí bod pro psaní kódu a také zpřístupňuje objektový model aplikace Outlook pro doplněk VSTO.
 
- Další informace o třídě `ThisAddIn` a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu [Programová doplňky VSTO](../vsto/programming-vsto-add-ins.md).
+ Další informace o `ThisAddIn` třídě a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu [Programová doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
 ## <a name="automate-outlook-by-using-the-outlook-object-model"></a>Automatizace Outlooku pomocí objektového modelu aplikace Outlook
  Objektový model aplikace Outlook zpřístupňuje mnoho typů, které lze použít k automatizaci aplikace Outlook. Tyto typy umožňují psát kód pro provádění běžných úloh:
@@ -55,7 +55,7 @@ ms.locfileid: "72985676"
 
 ## <a name="customize-the-user-interface-of-an-outlook-application"></a>Přizpůsobení uživatelského rozhraní aplikace Outlook
 
-|Úloha|Další informace|
+|Úkol|Další informace|
 |----------|--------------------------|
 |Přidejte vlastní karty na pás karet nástroje Outlook Inspector.|[Přehled pásu karet](../vsto/ribbon-overview.md)|
 |Přidejte vlastní skupiny do předdefinované karty v okně pro kontrolu aplikace Outlook.|[Postupy: Přizpůsobení předdefinované karty](../vsto/how-to-customize-a-built-in-tab.md)|
@@ -66,7 +66,7 @@ ms.locfileid: "72985676"
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md)|Poskytuje přehled o objektech, které jsou k dispozici v objektovém modelu aplikace Outlook.|
 |[Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)|Vysvětluje nástroje poskytované aplikací Visual Studio, které usnadňují návrh, vývoj a ladění oblastí formuláře.|

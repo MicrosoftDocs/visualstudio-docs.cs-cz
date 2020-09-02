@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a80488408f680530ed3c9b4094b2997e97484ce3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544440"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML
@@ -47,7 +47,7 @@ ms.locfileid: "85544440"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85544440"
 
 1. Vytvořte projekt wordového dokumentu s názvem **EmployeeControls**. Vytvořte nový dokument pro řešení. Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevře nový wordový dokument v návrháři a přidá projekt **EmployeeControls** do **Průzkumník řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře nový wordový dokument v návrháři a přidá projekt **EmployeeControls** do **Průzkumník řešení**.
 
 ## <a name="add-content-controls-to-the-document"></a>Přidat do dokumentu ovládací prvky obsahu
  Vytvoří tabulku, která obsahuje tři různé typy ovládacích prvků obsahu, kde může uživatel zobrazit nebo upravit informace o zaměstnanci.
@@ -78,7 +78,7 @@ ms.locfileid: "85544440"
    |-|
    |**Jméno zaměstnance**|
    |**Datum nástupu**|
-   |**Nadpis**|
+   |**Název**|
 
 4. Ve druhém sloupci tabulky vyberte první řádek (vedle **pole jméno zaměstnance**).
 
@@ -148,7 +148,7 @@ ms.locfileid: "85544440"
 
      Otevře se Návrhář schémat.
 
-4. V **Průzkumník řešení**otevřete místní nabídku pro **Employees. xsd**a pak zvolte **Zobrazit kód**.
+4. V **Průzkumník řešení**otevřete místní nabídku pro  **Employees. xsd**a pak zvolte  **Zobrazit kód**.
 
 5. Obsah souboru **Employees. xsd** nahraďte následujícím schématem.
 
@@ -225,7 +225,7 @@ ms.locfileid: "85544440"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>Přidání vlastní části XML do dokumentu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro **ThisDocument.cs** nebo **ThisDocument. vb**a pak zvolte **Zobrazit kód**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro  **ThisDocument.cs** nebo **ThisDocument. vb**a pak zvolte **Zobrazit kód**.
 
 2. Do třídy přidejte následující deklarace `ThisDocument` . Tento kód deklaruje několik objektů, které použijete k přidání vlastní části XML do dokumentu.
 
@@ -277,7 +277,7 @@ ms.locfileid: "85544440"
     |-|-|
     |**Jméno zaměstnance**|**Karina Leal**|
     |**Datum nástupu**|**1. dubna 1999**|
-    |**Nadpis**|**Manager**|
+    |**Název**|**Manager**|
 
 3. Vyberte buňku napravo od buňky **název zaměstnance** a zadejte jiný název.
 

@@ -1,5 +1,5 @@
 ---
-title: Emulátor Visual Studia pro Android | Dokumenty společnosti Microsoft
+title: Emulátor sady Visual Studio pro Android | Microsoft Docs
 ms.custom: ''
 ms.prod: visual-studio-dev15
 ms.date: 03/09/2020
@@ -13,21 +13,21 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 36836d8e65f6ef8b5d31b5d2fa3d3a27ba8fecda
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79023516"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Emulátor sady Visual Studio pro Android
 
-Emulátor Visual Studio pro Android je desktopová aplikace pro emulace zařízení Android. V Sadě Visual Studio 2015 se nepoužívá a není podporovaná ve Visual Studiu 2017 nebo Visual Studiu 2019. Doporučujeme místo toho používat emulátory Google Android. Chcete-li zobrazit emulátor Visual Studio pro Android pokyny pro Visual Studio 2015, zvolte Visual Studio 2015 ve výběru verze dokumentace.
+Emulátor sady Visual Studio pro Android je desktopová aplikace pro emulaci zařízení se systémem Android. Je zastaralá v aplikaci Visual Studio 2015 a není podporována v aplikaci Visual Studio 2017 nebo Visual Studio 2019. Doporučujeme místo toho používat emulátory Google Android. Pokyny k emulátoru sady Visual Studio pro Android pro Visual Studio 2015 naleznete v tématu Visual Studio 2015 v dokumentaci pro selektory verzí dokumentace.
 
 > [!IMPORTANT]
-> Ve většině scénářů je emulátor Google Android doporučen pro použití namísto emulátoru Visual Studio pro Android:
-> - Emulátor Visual Studia pro Android není po Visual Studiu 2015 podporován.
-> - Obrázky emulátoru novější než Android verze 6.0 nejsou k dispozici pro emulátor Visual Studio pro Android.
-> - Google Android Emulátor nyní podporuje [Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v).
-> - Jak C++ pro vývoj mobilních zařízení, tak nástroje Visual Studio pro Apache Cordova spolupracují s emulátorem Google Android. Další informace najdete v [tématu Spuštění aplikace Apache Cordova v systému Android](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator). (Již není třeba zakázat Hyper-V, jak je vysvětleno v tomto článku).
+> Ve většině scénářů se emulátor Google Android doporučuje použít místo emulátoru sady Visual Studio pro Android:
+> - Emulátor sady Visual Studio pro Android se po aplikaci Visual Studio 2015 nepodporuje.
+> - Image emulátoru novější než Android verze 6,0 nejsou dostupné pro emulátor sady Visual Studio pro Android.
+> - Google Android Emulator teď podporuje [Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v).
+> - C++ pro vývoj mobilních zařízení a Visual Studio Tools pro Apache Cordova spolupracuje s Android Emulator Google. Další informace najdete v tématu [spuštění aplikace Apache Cordova v Androidu](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator). (Už nemusíte zakázat technologii Hyper-V, jak je vysvětleno v tomto článku).
 >
-> Další informace o konfiguraci a používání emulátoru Google Android naleznete v [tématu Nastavení emulátoru Android](/xamarin/android/get-started/installation/android-emulator/).
+> Další informace o konfiguraci a používání emulátoru Google Android najdete v tématu [Android Emulator Setup](/xamarin/android/get-started/installation/android-emulator/).

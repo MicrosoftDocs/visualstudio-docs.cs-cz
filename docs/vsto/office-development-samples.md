@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b9e20f0d14b2940fdbe8096442848f38183b1db7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985725"
 ---
 # <a name="office-development-samples"></a>Ukázky vývoje pro Office
@@ -40,5 +40,5 @@ ms.locfileid: "72985725"
 |Ukázka správce uživatelského rozhraní|Ukazuje, jak vytvořit přizpůsobení pásu karet, vlastní podokno úloh a vlastní oblast formuláře pro Outlook implementací rozhraní rozšíření v doplňku VSTO. Každá instance pásu karet, podokna úloh a oblasti formuláře může správně komunikovat mezi sebou.|
 |Ukázka interoperability VBA a VSTO|Ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro Excel z jazyk Visual Basic for Application (VBA) kódu v sešitu.<br /><br /> Tato ukázka je k dispozici pouze online.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)

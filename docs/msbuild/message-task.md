@@ -1,5 +1,5 @@
 ---
-title: Úkol zprávy | Dokumenty společnosti Microsoft
+title: Úloha zprávy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78865359"
 ---
 # <a name="message-task"></a>úloha zprávy
 
-Zaznamená zprávu během sestavení.
+Zaprotokoluje zprávu během sestavení.
 
 ## <a name="parameters"></a>Parametry
 
@@ -35,22 +35,22 @@ Zaznamená zprávu během sestavení.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Importance`|Volitelný `String` parametr.<br /><br /> Určuje důležitost zprávy. Tento parametr může mít `high` `normal` hodnotu , nebo `low`. Výchozí hodnota je `normal`.|
-|`Text`|Volitelný `String` parametr.<br /><br /> Text chyby protokolu.|
+|`Importance`|Volitelný `String` parametr.<br /><br /> Určuje důležitost zprávy. Tento parametr může mít hodnotu `high` `normal` nebo `low` . Výchozí hodnota je `normal`.|
+|`Text`|Volitelný `String` parametr.<br /><br /> Chybový text, který se má protokolovat|
 
 ## <a name="remarks"></a>Poznámky
 
- Úkol `Message` umožňuje MSBuild projekty vydávat zprávy úhozy kláves v různých krocích v procesu sestavení.
+ `Message`Úloha umožňuje projektům nástroje MSBuild vystavovat zprávy do protokolovacích nástrojů v různých krocích procesu sestavení.
 
- Pokud `Condition` parametr vyhodnotí na `true`, `Text` hodnota parametru bude zaznamenána a sestavení bude pokračovat v provádění. Pokud `Condition` parametr neexistuje, je zaznamenán text zprávy. Další informace o protokolování naleznete v [tématu Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
+ Pokud se `Condition` parametr vyhodnotí jako `true` , hodnota `Text` parametru se zaprotokoluje a sestavení bude i nadále spuštěno. Pokud `Condition` parametr neexistuje, text zprávy se zaznamená do protokolu. Další informace o protokolování naleznete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
- Ve výchozím nastavení je zpráva odeslána všem registrovaným úhozům. Protokolovací protokol `Importance` interpretuje parametr. Obvykle je zpráva nastavena na `high` je odeslána, když <xref:Microsoft.Build.Framework.LoggerVerbosity>je nastavena podrobnost protokolování na .`Minimal` nebo vyšší. Zpráva nastavena `low` na je odeslána, když <xref:Microsoft.Build.Framework.LoggerVerbosity>je nastavena verbosita protokolování na . `Detailed`.
+ Ve výchozím nastavení je zpráva odeslána všem registrovaným protokolovacím nástrojům. Protokolovací nástroj interpretuje `Importance` parametr. Zpráva nastavená na je obvykle `high` odeslána, když je podrobnost protokolovacího nástroje nastavena na <xref:Microsoft.Build.Framework.LoggerVerbosity> .`Minimal` nebo vyšší. Zpráva nastavená na `low` je odeslána, když je podrobnost protokolovacího nástroje nastavena na <xref:Microsoft.Build.Framework.LoggerVerbosity> . `Detailed` .
 
- Kromě výše uvedených parametrů tato úloha dědí <xref:Microsoft.Build.Tasks.TaskExtension> parametry z třídy, <xref:Microsoft.Build.Utilities.Task> která sama dědí z třídy. Seznam těchto dalších parametrů a jejich popisy naleznete v tématu [TaskExtension base class](../msbuild/taskextension-base-class.md).
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Příklad
 
- Následující příklad kódu protokoluje zprávy všem registrovaným úhozům.
+ Následující příklad kódu protokoluje zprávy do všech registrovaných protokolovacích nástrojů.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -64,5 +64,5 @@ Zaznamená zprávu během sestavení.
 
 ## <a name="see-also"></a>Viz také
 
-- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
 - [Získat protokoly sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)

@@ -1,5 +1,5 @@
 ---
-title: Podpora arabštiny a hebrejštiny
+title: Podpora pro arabštinu a hebrejštinu
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,40 +13,40 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 57bccfccb77c5a80fd2630680564f88f08d7ca5b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591993"
 ---
-# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Podpora obousměrných jazyků v sadě Visual Studio
+# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Podpora obousměrných jazyků v aplikaci Visual Studio
 
-Visual Studio může správně zobrazit arabský a hebrejský text a umožňuje zadat obousměrný text pro názvy a hodnoty objektů.
+Visual Studio může zobrazit arabský a hebrejský text správně a umožňuje zadat obousměrný text pro názvy a hodnoty objektů.
 
 > [!NOTE]
-> Chcete-li zadávat a zobrazovat obousměrné jazyky, musíte pracovat s verzí systému Windows, která je nakonfigurována s příslušným jazykem. Může se jedná buď o anglickou verzi systému Windows s nainstalovanou příslušnou jazykovou sadou, nebo o vhodně lokalizovanou verzi systému Windows.
+> Aby bylo možné zadávat a zobrazovat obousměrné jazyky, musíte pracovat s verzí systému Windows, která je nakonfigurovaná s odpovídajícím jazykem. Může to být buď Anglická verze systému Windows s nainstalovanou příslušnou jazykovou sadou, nebo odpovídající lokalizovaná verze systému Windows.
 
 ## <a name="fully-supported-features"></a>Plně podporované funkce
 
-V době návrhu v sadě Visual Studio můžete používat obousměrné jazyky při zadávání textu, pojmenovávání objektů a při ukládání a otevírání souborů.
+V době návrhu v aplikaci Visual Studio můžete používat obousměrné jazyky při zadávání textu, pojmenovávání objektů a při ukládání a otevírání souborů.
 
 ### <a name="text-entry"></a>Zadání textu
 
-Visual Studio podporuje Unicode, takže pokud je váš systém nastaven na příslušné národní prostředí a vstupní jazyk, můžete zadat text v arabštině nebo hebrejštině. (Arabská podpora zahrnuje Kašidu a diakritiku.)
+Sada Visual Studio podporuje kódování Unicode, takže pokud je systém nastavený na odpovídající národní prostředí a vstupní jazyk, můžete zadat text v arabštině nebo hebrejštině. (Podpora arabštiny zahrnuje kašidy a diakritická znaménka.)
 
-### <a name="arabic-or-hebrew-object-names"></a>Názvy arabských nebo hebrejských objektů
+### <a name="arabic-or-hebrew-object-names"></a>Arabské nebo hebrejské názvy objektů
 
-Obousměrné jazyky můžete použít k přiřazení názvů řešením, projektům, souborům, složkám a tak dále. V kódu můžete použít obousměrné jazyky pro názvy proměnných, tříd, objektu, atributů, metadat a dalších prvků. Při práci s arabštinou můžete použít libovolné arabské znaky včetně Kašidy a diakritiky.
+Obousměrné jazyky můžete použít k přiřazení názvů k řešením, projektům, souborům, složkám a tak dále. V kódu můžete použít obousměrné jazyky pro názvy proměnných, tříd, objektů, atributů, metadat a dalších prvků. Při práci s Arabština můžete použít všechny arabské znaky včetně kašidy a diakritiky.
 
-Následující prvky mohou být pojmenovány pomocí arabštiny nebo hebrejštiny a jsou správně zpracovány Visual Studio:
+Následující prvky mohou být pojmenovány pomocí arabštiny nebo hebrejštiny a jsou zpracovány správně pomocí sady Visual Studio:
 
-- Názvy řešení, projektu a souborů, včetně všech složek, které zahrnete do cesty projektu.
+- Názvy řešení, projektů a souborů, včetně všech složek, které jsou obsaženy v cestě projektu.
 
-   **Průzkumník řešení** zobrazí názvy řešení a prvků správně.
+   **Průzkumník řešení** zobrazuje správně názvy řešení a prvků.
 
 - Obsah souboru.
 
-   Soubory můžete otevírat nebo ukládat pomocí kódování Unicode nebo s vybranou znakovou stránkou.
+   Soubory můžete otevřít nebo uložit s kódováním Unicode nebo pomocí vybrané znakové stránky.
 
 - Datové prvky.
 
@@ -58,34 +58,34 @@ Následující prvky mohou být pojmenovány pomocí arabštiny nebo hebrejštin
 
 - Hodnoty vlastností.
 
-   V okně **Vlastnosti** můžete použít arabský nebo hebrejský text. Okno umožňuje přepínat mezi pořadím čtení zprava doleva a zleva doprava pomocí standardních úhozů systému Windows **(Ctrl**+**RightShift** pro right-to-left a **Ctrl**+**LeftShift** pro zleva doprava).
+   V okně **vlastnosti** můžete použít arabský nebo Hebrejská text. Okno umožňuje přepínat mezi směry čtení zprava doleva a zleva doprava pomocí standardních klávesových úhozů systému Windows (**CTRL** + **RightShift** for zprava doleva a **kombinací kláves CTRL** + **LeftShift** zleva doprava).
 
-- Kód a doslovný text.
+- Kód a literální text.
 
-   V editoru kódu můžete použít arabštinu nebo hebrejštinu k pojmenování tříd, funkcí, proměnných, vlastností, řetězcových literál, atributů a tak dále. Editor však nepodporuje pořadí čtení zprava doleva; text vždy začíná na levém okraji.
+   V editoru kódu můžete použít arabštinu nebo hebrejštinu k pojmenování tříd, funkcí, proměnných, vlastností, řetězcových literálů, atributů a tak dále. Editor však nepodporuje pořadí čtení zprava doleva; text vždy začíná levým okrajem.
 
    > [!TIP]
-   > Měli byste umístit řetězcové literály do souborů prostředků namísto jejich pevného kódování do programů. Další informace naleznete [v tématu Prostředky v aplikacích klasické pracovní plochy (.NET Framework)](/dotnet/framework/resources/index).
+   > Řetězcové literály byste měli umístit do souborů prostředků namísto jejich hardwarového kódování do programů. Další informace najdete v tématu [prostředky v aplikacích klasické pracovní plochy (.NET Framework)](/dotnet/framework/resources/index).
 
    > [!NOTE]
-   > Musíte být konzistentní v tom, jak odkazujete na objekty pojmenované v arabštině a hebrejštině. Pokud například používáte Kašidu při pojmenování arabské proměnné, musíte vždy použít Kašidu, když odkazujete na tuto proměnnou, nebo dojde k chybám.
+   > Musíte být konzistentní v tom, jak odkazujete na objekty s názvem v arabštině a hebrejštině. Pokud například použijete kašidy při pojmenování arabské proměnné, je nutné vždy použít kašidy při odkazování na tuto proměnnou nebo chyby.
 
-- Komentáře kódu. Komentáře můžete vytvářet v arabštině nebo hebrejštině. Tyto jazyky můžete také použít v nástroji pro tvorbu poznámek.
+- Komentáře ke kódu. Můžete vytvářet komentáře v arabštině nebo hebrejštině. Tyto jazyky můžete použít také v nástroji Tvůrce poznámek.
 
-### <a name="file-encoding"></a>Kódování souborů
+### <a name="file-encoding"></a>Kódování souboru
 
-Soubory můžete ukládat a otevírat pomocí kódování specifického pro jazyk nebo kódování Unicode. Další informace naleznete v [tématu Postup: Ukládání a otevírání souborů pomocí kódování](../ide/how-to-save-and-open-files-with-encoding.md).
+Soubory můžete ukládat a otevírat pomocí kódování pro konkrétní jazyk nebo Unicode. Další informace najdete v tématu [Postupy: ukládání a otevírání souborů s kódováním](../ide/how-to-save-and-open-files-with-encoding.md).
 
 ## <a name="right-to-left-reading-order"></a>Pořadí čtení zprava doleva
 
-Visual Studio má omezenou podporu pro pořadí čtení zprava doleva. Ve výchozím nastavení ovládací prvky zadávání textu v sadě Visual Studio používají pořadí čtení zleva doprava. Ve většině případů můžete k přepnutí pořadí čtení použít standardní gesta systému Windows. Můžete například stisknutím **klávesy Ctrl**+**RightShift** přepnout okno **Vlastnosti** pro podporu pořadí čtení zprava doleva pro hodnoty vlastností.
+Visual Studio má omezené podpory pro pořadí čtení zprava doleva. Ve výchozím nastavení používají ovládací prvky pro zadávání textu v aplikaci Visual Studio směr čtení zleva doprava. Ve většině případů můžete použít standardní gesta Windows k přepínání pořadí čtení. Můžete například stisknout **kombinaci kláves CTRL** + **RightShift** a přepnout okno **vlastnosti** tak, aby se pro hodnoty vlastností podporovalo pořadí čtení zprava doleva.
 
-Pořadí čtení zprava doleva není v aplikaci Visual Studio podporováno na následujících místech:
+Směr čtení zprava doleva není podporován na následujících místech v aplikaci Visual Studio:
 
 - Zaškrtávací políčka, rozevírací seznamy a další ovládací prvky v dialogových oknech sady Visual Studio vždy používají pořadí čtení zleva doprava.
 
-- Editor kódu (a textový editor) nepodporuje pořadí čtení zprava doleva. Text můžete zadávat obousměrným jazykem, ale pořadí čtení je vždy zleva doprava.
+- Editor kódu (a textový editor) nepodporuje pořadí čtení zprava doleva. Text můžete zadat v obousměrném jazyce, ale pořadí čtení je vždy zleva doprava.
 
 ## <a name="see-also"></a>Viz také
 
-- [Vývoj globalizovaných a lokalizovaných aplikací](globalizing-and-localizing-applications.md)
+- [Vývoj globálních a lokalizovaných aplikací](globalizing-and-localizing-applications.md)

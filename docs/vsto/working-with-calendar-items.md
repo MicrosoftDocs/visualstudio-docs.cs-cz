@@ -19,26 +19,26 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8d9c0f634ce95814ba746325e8efd67228653775
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63008726"
 ---
 # <a name="work-with-calendar-items"></a>Práce s položkami kalendáře
-  <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> Třída obsahuje metody a vlastnosti, které můžete použít k provádění úloh s položkami kalendáře.
+  <xref:Microsoft.Office.Interop.Outlook.AppointmentItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úkolů s položkami kalendáře.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
-|Vytvořit schůzku s cílem a přidejte příjemce.|[Postupy: Vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)|
-|Odstranění instance opakované události.|[Postupy: Odstraňování událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-appointments.md)|
-|Vytvořte složku kalendáře a přidat položky události.|[Postupy: Vytváření vlastních kalendářů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
-|Vytvoření žádosti o schůzku a jeho odeslání.|[Postupy: Vytváření žádostí o schůzku prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-meeting-request.md)|
+|Vytvořte schůzku a přidejte příjemce.|[Postupy: vytváření událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-create-appointments.md)|
+|Odstraní instanci opakované události.|[Postupy: odstraňování událostí prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-appointments.md)|
+|Vytvořte složku kalendáře a přidejte položku události.|[Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
+|Vytvořte žádost o schůzku a odešlete ji.|[Postupy: vytváření žádostí o schůzku prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-meeting-request.md)|
 
- Další informace o úkolech Outlooku a modelu objektů aplikace Outlook, naleznete v tématu [přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md).
+ Další informace o úlohách Outlooku a modelu objektů aplikace Outlook najdete v tématu [Přehled modelu objektů aplikace](../vsto/outlook-object-model-overview.md)Outlook.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
 - [Práce se složkami](../vsto/working-with-folders.md)
 - [Práce s položkami pošty](../vsto/working-with-mail-items.md)
-- [Řešení pro aplikaci Outlook](../vsto/outlook-solutions.md)
+- [Řešení pro Outlook](../vsto/outlook-solutions.md)

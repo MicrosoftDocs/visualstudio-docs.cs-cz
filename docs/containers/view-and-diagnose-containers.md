@@ -8,17 +8,17 @@ ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
 ms.openlocfilehash: c870378cf277a6008f17ec42d960e07e18a53e86
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283122"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Jak zobrazit a diagnostikovat kontejnery a obrázky v aplikaci Visual Studio
 
 Můžete zobrazit, co se chystá v kontejnerech, které hostují vaši aplikaci pomocí okna **kontejnery** . Pokud jste použili k používání příkazového řádku ke spuštění příkazů Docker k zobrazení a diagnostice toho, co se v kontejnerech chystá, toto okno poskytuje pohodlnější způsob, jak monitorovat kontejnery bez nutnosti opustit prostředí Visual Studio IDE.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Visual studio 2019 verze 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) nebo novější nebo pokud používáte starší verzi sady Visual Studio 2019, nainstalujte [rozšíření okna kontejnery](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions).

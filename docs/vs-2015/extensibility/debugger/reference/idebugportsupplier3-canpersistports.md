@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::CanPersistPorts | Dokumentace Microsoftu
+title: 'IDebugPortSupplier3:: CanPersistPorts | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: edc989771b41cc4a5cc5b4710de4cbb5632873e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188181"
 ---
 # <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda určuje, zda dodavatele portu můžete zachovaly porty (je zápis na disk) mezi vyvolání ladicího programu.  
+Tato metoda určuje, zda dodavatel portu může zachovat porty (jejich zápisem na disk) mezi voláními ladicího programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +38,10 @@ int CanPersistPorts();
  Žádné  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `S_OK` Pokud porty můžete nastavit jako trvalý, nebo `S_FALSE` k označení, že porty nelze nastavit jako trvalý.  
+ `S_OK` Pokud je možné porty zachovat nebo je `S_FALSE` Označit, že porty nelze zachovat.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud dodavatele portu můžete zachovat porty, měl by to dělat, když je zničen a při vytváření její instance znovu je načtěte.  
+ Pokud dodavatel portu může zachovat porty, měl by tak učinit, když je zničený, a po opětovném vytvoření instance ho znovu načítat.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro profilaci | Dokumentace Microsoftu
+title: Nástroje pro profilaci | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,89 +12,89 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bcb230532da4a0b84ea0102d86534c28afe35558
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686274"
 ---
 # <a name="profiling-tools"></a>Nástroje pro profilaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profilace a Diagnostika nástroje pomáhají diagnostikovat paměť a využití procesoru a dalších problémů na úrovni aplikací. Pomocí těchto nástrojů můžete shromažďování dat (třeba hodnoty proměnných, volání funkce a událostí) za čas, kdy spustíte svou aplikaci v ladicím programu. Můžete zobrazit stav vaší aplikace v různých fázích během provádění kódu.  
+Nástroje pro profilaci a diagnostiku vám pomohou diagnostikovat využití paměti a procesoru a další problémy na úrovni aplikace. Pomocí těchto nástrojů můžete shromažďovat data (například hodnoty proměnných, volání funkcí a události) v době, kdy spustíte aplikaci v ladicím programu. Stav aplikace můžete zobrazit v různých okamžicích během provádění kódu.  
   
- Podívejte se na souhrn v dolní části můžete zobrazit, jaké nástroje jsou k dispozici pro váš typ projektu (například plocha, UPW, technologie ASP.NET).  
+ Podívejte se na shrnutí v dolní části a zjistěte, jaké nástroje jsou k dispozici pro váš typ projektu (například Desktop, UWP, ASP.NET).  
   
- Dostanete pomocí nástrojů pro profilaci **ladění / Windows / zobrazit diagnostické nástroje** při použití nástroje během vaší relace ladění nebo s použitím **ladění / Profiler výkonu...**  jak provádět analýzu cílené výkonu.  Zobrazit [spuštění profilování nástroje s nebo bez ladicího programu](../profiling/running-profiling-tools-with-or-without-the-debugger.md) Další informace o různých přístupů.  
+ K nástrojům pro profilaci můžete přistupovat pomocí příkazu **Debug/Windows/Show diagnostické nástroje** k použití nástrojů během relace ladění nebo pomocí **profileru ladění/výkonu** ... k provedení cílené analýzy výkonu.  Další informace o různých metodách naleznete v tématu [spuštění nástroje pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md) .  
   
  ![DebugDiagnosticsToolsMenu](../profiling/media/debugdiagnosticstoolsmenu.png "DebugDiagnosticsToolsMenu")  
   
- Zobrazit [co je nového v nástrojích pro profilaci](../profiling/what-s-new-in-profiling-tools.md) Další informace o nových funkcích pro tuto verzi.  
+ Další informace o nových funkcích této verze najdete [v tématu Novinky v nástroje pro profilaci](../profiling/what-s-new-in-profiling-tools.md) .  
   
- Následující části popisují jiné výkonové nástroje, které jsou k dispozici v sadě Visual Studio.  
+ V následujících částech jsou popsány různé nástroje pro výkon, které jsou k dispozici v aplikaci Visual Studio.  
   
 ## <a name="memory-usage"></a>Využití paměti  
  ![DiagMemorySmall](../profiling/media/diagmemorysmall.png "DiagMemorySmall")  
   
- Vyhledání nevrácené paměti a neefektivní paměti během ladění s **využití paměti** nástroj. Nástroj umožňuje pořizovat snímky paměti spravovaný a nativní haldě. Tento nástroj můžete použít s aplikací klasické pracovní plochy, Windows Universal apps a aplikací ASP.NET. **Využití paměti** nástroj můžete spustit z **diagnostické nástroje** okno při ladění (**ladění / Windows / zobrazit diagnostické nástroje**) nebo mimo ladicí program (**Ladění / Profiler výkonu...**). Zobrazit [využití paměti](../profiling/memory-usage.md) a [využití paměti bez ladění](https://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0) Další informace.  
+ Při ladění pomocí nástroje **využití paměti** Najděte nevracení paměti a neefektivní paměť. Nástroj umožňuje pořizovat snímky haldy spravované a nativní paměti. Tento nástroj můžete použít u aplikací klasické pracovní plochy, univerzálních aplikací pro Windows a aplikací ASP.NET. Nástroj **využití paměti** lze spustit z okna **diagnostické nástroje** při ladění (**ladění/Windows/show diagnostické nástroje**) nebo mimo ladicí program (**Profiler ladění/výkon...**). Další informace najdete v tématu  [využití paměti](../profiling/memory-usage.md) a [využití paměti bez ladění](https://msdn.microsoft.com/library/8883bc5f-df86-4f84-aa2b-a21150f499b0) .  
   
 ## <a name="cpu-usage"></a>Využití procesoru  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  
   
- **Využití procesoru** nástroj ukazuje, kde procesor stráví doba provádění C++, C# / VB a kód jazyka JavaScript.  Tento nástroj můžete použít s jak desktop a Windows Universal apps, tak i aplikací Azure App Services. **Využití procesoru** nástroj můžete spustit z **diagnostické nástroje** okno při ladění (**ladění / Windows / zobrazit diagnostické nástroje**) nebo mimo ladicí program (**Ladění / Profiler výkonu...**). Zobrazit [využití procesoru](../profiling/cpu-usage.md) Další informace.  
+ Nástroj **využití CPU** vám ukáže, kde CPU stráví čas, který spouští C++, C#/VB a javascriptový kód.  Tento nástroj můžete použít jak pro aplikace Desktop, tak pro univerzální aplikace pro Windows, tak i pro Azure App Services. Nástroj **využití CPU** lze spustit z okna **diagnostické nástroje** při ladění (**ladění/Windows/show diagnostické nástroje**) nebo mimo ladicí program (**Profiler ladění/výkon...**). Další informace najdete v tématu [využití procesoru](../profiling/cpu-usage.md) .  
   
 ## <a name="performance-explorer"></a>Prohlížeč výkonu  
  ![PerfTools](../profiling/media/perftools.png "PerfTools")  
   
- **Prohlížeč výkonu** (**ladění / Profiler a prohlížeč výkonu**) umožňuje použít řadu různých nástrojů, včetně **vzorkování procesoru**,  **Instrumentace**, **alokaci paměti .NET**, a **kolize prostředků**. Pomocí nástrojů prohlížeče výkonu s aplikací klasické pracovní plochy a aplikace v ASP.NET, ale ne Windows Universal apps. Další informace najdete v tématu [prohlížeč výkonu](../profiling/performance-explorer.md).  
+ **Prohlížeč výkonu** (**ladění/Profiler/prohlížeč výkonu**) vám umožní používat spoustu různých nástrojů, včetně **vzorkování procesoru**, **instrumentace**, **alokace paměti .NET**a kolizí **prostředků**. Můžete použít nástroje Prohlížeč výkonu s aplikacemi klasické pracovní plochy a aplikací ASP.NET, ale ne univerzálními aplikacemi pro Windows. Další informace najdete v tématu [prohlížeč výkonu](../profiling/performance-explorer.md).  
   
 ## <a name="gpu-usage"></a>Využití GPU  
  ![DiagGPUUsage](../profiling/media/diaggpuusage.png "DiagGPUUsage")  
   
- Použití [využití GPU](../debugger/gpu-usage.md) nástroje pro lepší pochopení využití vysoké úrovně hardwaru aplikace Direct3D. Tento nástroj můžete použít s desktop a Windows Universal apps ale není aplikace v ASP.NET. **Využití GPU** nástroj můžete spustit z **diagnostické nástroje** okno při ladění (**ladění / zobrazit diagnostické nástroje**) nebo mimo ladicí program (**Ladění / Profiler výkonu...**).  
+ Použijte nástroj [využití GPU](../debugger/gpu-usage.md) k lepšímu pochopení vysokého využití hardwaru aplikace Direct3D. Tento nástroj můžete použít společně s aplikacemi Desktop i Windows Universal, ale ne s aplikacemi ASP.NET. Nástroj **využití GPU** lze spustit z okna **diagnostické nástroje** při ladění (**ladění/zobrazení diagnostické nástroje**) nebo mimo ladicí program (**ladit/výkon Profiler...**).  
   
 ## <a name="application-timeline"></a>Časová osa aplikace  
  ![DiagAppTimeline](../profiling/media/diagapptimeline.png "DiagAppTimeline")  
   
- [Časová osa aplikace](../profiling/application-timeline.md) nástroj pomáhá zlepšit výkon aplikací XAML tím, že poskytuje podrobné zobrazení využití prostředků. Můžete použít **časová osa aplikace** s desktop a Windows Universal apps, ale ne aplikace technologie ASP.NET. **Časová osa aplikace** nástroj můžete spustit z **diagnostické nástroje** okno (**ladění / Profiler výkonu...** ).  
+ Nástroj [Časová osa aplikace](../profiling/application-timeline.md) pomáhá zlepšit výkon aplikací XAML tím, že poskytuje podrobné zobrazení jejich spotřeby prostředků. Můžete použít **Časová osa aplikace** s aplikacemi Desktop a Windows Universal Apps, ale ne aplikace ASP.NET. Nástroj **Časová osa aplikace** lze spustit z okna **diagnostické nástroje** (**ladění/výkon Profiler**).  
   
 ## <a name="perftips"></a>Tipy pro výkon  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
   
- Pokud ladicí program zastaví provedení u zarážky a krokování operace, uplynulý čas přerušení od předchozí zarážky se zobrazí jako popis tlačítka v okně editoru. Tyto [tipy pro výkon](../profiling/perftips.md) dozvíte, jak monitorovat a analyzovat výkon vaší aplikace během ladění. Můžete zobrazit **tipy pro výkon** v desktopu, Windows Universal a aplikací ASP.NET.  
+ Když ladicí program zastaví provádění na operaci zarážky nebo krokování, uplynulý čas mezi přerušením a předchozí zarážkou se zobrazí jako Tip v okně editoru. Tyto [tipy pro výkon](../profiling/perftips.md) vám pomůžou monitorovat a analyzovat výkon aplikace při ladění. **Tipy pro výkon** můžete zobrazit v aplikacích Desktop, Windows Universal a ASP.NET.  
   
-## <a name="javascript-memory"></a>Paměti jazyka JavaScript  
+## <a name="javascript-memory"></a>Paměť (JavaScript)  
  ![DiagJSMemory](../profiling/media/diagjsmemory.png "DiagJSMemory")  
   
- [Paměti jazyka JavaScript](../profiling/javascript-memory.md) nástroj umožňuje měřit, vyhodnotit a řešit problémy související s výkonem ve vašem kódu pomocí shromažďování informací o časování v vstupu a výstupu jednotlivých funkcí ve vaší aplikaci. Tento nástroj můžete použít s aplikacemi pro Windows Universal HTML. **Časování funkcí jazyka JavaScript** nástroj můžete spustit z **diagnostické nástroje** okno (**ladění / Profiler výkonu...** ).  
+ Nástroj pro [paměť JavaScriptu](../profiling/javascript-memory.md) umožňuje měřit, vyhodnocovat a směrovat problémy související s výkonem v kódu tím, že shromažďují informace o časování na začátku a na konci jednotlivých funkcí v aplikaci. Tento nástroj můžete použít s aplikacemi Windows Universal HTML. Nástroj pro **časování funkcí JavaScriptu** se dá spustit z okna **diagnostické nástroje** (**ladění/výkon Profiler...**).  
   
-## <a name="html-ui-responsiveness"></a>Rychlost odezvy HTML UI  
+## <a name="html-ui-responsiveness"></a>Odezva uživatelského rozhraní HTML  
  ![DiagHTMLResp](../profiling/media/diaghtmlresp.png "DiagHTMLResp")  
   
- [Rychlost odezvy HTML UI](../profiling/html-ui-responsiveness.md) nástroj pomáhá izolovat problémy s výkonem v aplikacích, včetně nedostatečné rychlost odezvy, pomalé načítání času, a časté vizuální aktualizace, které jsou menší, než se očekávalo. Tento nástroj můžete použít s aplikacemi pro Windows Universal HTML. **Rychlosti odezvy uživatelského rozhraní HTML** nástroj můžete spustit z **diagnostické nástroje** okno (**ladění / Profiler výkonu...** ).  
+ Nástroj pro [odezvu uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md) pomáhá izolovat problémy s výkonem ve vašich aplikacích, včetně nedostatku odezvy, pomalé doby načítání a vizuálních aktualizací, které jsou méně časté, než se očekávalo. Tento nástroj můžete použít s aplikacemi Windows Universal HTML. Nástroj pro **odezvu uživatelského rozhraní HTML** se dá spustit z okna **diagnostické nástroje** (**ladit/výkon Profiler...**).  
   
 ## <a name="intellitrace"></a>IntelliTrace  
  ![DiagIntelliTrace](../profiling/media/diagintellitrace.png "DiagIntelliTrace")  
   
- [IntelliTrace](../debugger/intellitrace.md) umožňuje zaznamenat konkrétní události, zkontrolujte data v **lokální** okno během událostí ladicího programu a volání funkce a debug – chyby, které je těžké reprodukovat.  Nástroj IntelliTrace je primárně ladicí nástroj, ale také poskytuje informace, které lze použít pro vyšetřování výkonu. Tento nástroj v sadě Visual Studio Enterprise, můžete použít s plochy, Windows Universal a aplikace C# ASP.NET. Můžete najít v IntelliTrace **diagnostické nástroje** okno při ladění (**ladění / Windows / zobrazit diagnostické nástroje**).  
+ [IntelliTrace](../debugger/intellitrace.md) umožňuje zaznamenávat konkrétní události, kontrolovat data v okně **místní** hodnoty během událostí ladicího programu a volání funkcí a ladit chyby, které je těžké regenerovat.  IntelliTrace je primárně Nástroj pro ladění, ale poskytuje také informace, které lze použít pro vyšetřování výkonu. Tento nástroj můžete použít jenom v Visual Studio Enterprise s aplikacemi Desktop, Windows Universal a ASP.NET C#. Při ladění můžete najít IntelliTrace v okně **diagnostické nástroje** (**ladění/Windows/zobrazit diagnostické nástroje**).  
   
 ## <a name="profiling-in-production"></a>Profilace v produkčním prostředí  
- Doporučený postup pro profilování v produkčním prostředí, je provádět profilaci z [příkazového řádku pomocí vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) shromažďovat profil využití procesoru. Podpora vzdáleného profilování ve službě Azure App Service, můžete provádět profilaci prostřednictvím [Průzkumníku serveru nebo webu Kudu Portal](https://azure.microsoft.com/blog/remote-profiling-support-in-azure-app-service/).  
+ Doporučený postup pro profilování v produkčním prostředí je profilování z [příkazového řádku pomocí vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) ke shromáždění profilu procesoru. Pro podporu vzdáleného profilování v Azure App Service můžete profilovat prostřednictvím [portálu Průzkumník serveru nebo Kudu](https://azure.microsoft.com/blog/remote-profiling-support-in-azure-app-service/).  
   
-## <a name="which-tool-should-i-use"></a>Jaké nástroje můžu použít?  
- Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Visual Studio a různých typech projektů je můžete využít s:  
+## <a name="which-tool-should-i-use"></a>Který nástroj mám použít?  
+ Tady je tabulka, která obsahuje seznam různých nástrojů, které nabízí Visual Studio, a různé typy projektů, pomocí kterých můžete:  
   
-|Nástroje výkonu|Plocha Windows|Windows Universal/Store|ASP.NET|  
+|Nástroj Performance Tool|Plocha Windows|Windows Universal/Store|ASP.NET|  
 |----------------------|---------------------|------------------------------|-------------|  
-|[Využití paměti](../profiling/memory-usage.md)|ano|ano|Ne|  
+|[Využití paměti](../profiling/memory-usage.md)|ano|ano|ne|  
 |[Využití procesoru](../profiling/cpu-usage.md)|ano|ano|Pouze Azure App Service|  
-|[Využití GPU](../debugger/gpu-usage.md)|ano|ano|Ne|  
-|[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|Ne|  
-|[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro kód HTML|Ne|  
-|[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|Ne|ano|  
-|[IntelliTrace](../debugger/intellitrace.md)|Pouze .NET Enterprise|Pouze .NET Enterprise|Pouze .NET Enterprise|  
-|[Rychlost odezvy uživatelského rozhraní HTML](../profiling/html-ui-responsiveness.md)|Ne|Ano pro kód HTML, ne pro XAML|Ne|  
-|[Paměť JavaScriptu](../profiling/javascript-memory.md)|Ne|Ano pro kód HTML, ne pro XAML|Ne|  
+|[Využití GPU](../debugger/gpu-usage.md)|ano|ano|ne|  
+|[Časová osa aplikace](../profiling/application-timeline.md)|ano|ano|ne|  
+|[Tipy pro výkon](../profiling/perftips.md)|ano|Ano pro XAML, ne pro HTML|ne|  
+|[Prohlížeč výkonu](../profiling/performance-explorer.md)|ano|ne|ano|  
+|[IntelliTrace](../debugger/intellitrace.md)|Jenom .NET Enterprise|Jenom .NET Enterprise|Jenom .NET Enterprise|  
+|[Rychlost odezvy uživatelského rozhraní (HTML)](../profiling/html-ui-responsiveness.md)|ne|Ano pro HTML, ne pro XAML|ne|  
+|[Paměť JavaScriptu](../profiling/javascript-memory.md)|ne|Ano pro HTML, ne pro XAML|ne|  
   
 ## <a name="see-also"></a>Viz také  
  [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)

@@ -1,5 +1,5 @@
 ---
-title: Přidání kódu za komentáře ve službě staršího jazyka | Dokumenty společnosti Microsoft
+title: Komentování kódu ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,32 +12,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5450199fde29f581dafdf9b2884c88ef26ea4ce7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709438"
 ---
-# <a name="comment-code-in-a-legacy-language-service"></a>Kód komentáře ve službě starších jazyků
-Programovací jazyky obvykle poskytují prostředky k oslnění nebo komentář kód. Komentář je část textu, která poskytuje další informace o kódu, ale je ignorována během kompilace nebo interpretace.
+# <a name="comment-code-in-a-legacy-language-service"></a>Kód komentáře ve službě starší verze jazyka
+Programovací jazyky obvykle poskytují způsob, jak opatřit poznámky nebo komentovat kód. Komentář je část textu, která poskytuje další informace o kódu, ale je ignorována během kompilace nebo výkladu.
 
- Třídy Framework spravovaného balíčku (MPF) poskytují podporu pro komentování a odkomentování vybraného textu.
+ Třídy spravovaného balíčku architektury (MPF) poskytují podporu pro přidávání komentářů a odkomentování vybraného textu.
 
 ## <a name="comment-styles"></a>Styly komentářů
-Existují dva obecné styly komentáře:
+Existují dva obecné styly komentářů:
 
-1. Komentáře řádku, kde je komentář na jednom řádku.
+1. Komentáře k řádku, kde je komentář na jednom řádku.
 
-2. Blokovat komentáře, kde komentář může obsahovat více řádků.
+2. Zablokuje komentáře, kde komentář může obsahovat více řádků.
 
-Komentáře řádku mají obvykle počáteční znak (nebo znaky), zatímco blokové komentáře mají počáteční i koncové znaky. Například v c#, řádek komentář `//`začíná a poznámky `/*` bloku `*/`začíná a končí .
+Komentáře k řádkům obvykle mají počáteční znak (nebo znaky), zatímco komentáře bloku mají jak počáteční, tak koncové znaky. Například v jazyce C# začíná řádkový komentář `//` a komentář bloku začíná `/*` a končí na `*/` .
 
-Když uživatel vybere příkaz **Výběr poznámek** z nabídky **Upravit** > **upřesnit,** <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> příkaz je <xref:Microsoft.VisualStudio.Package.Source> směrován na metodu třídy. Když uživatel vybere příkaz **Odkomentovat výběr**, příkaz <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> je směrován k metodě.
+Když uživatel vybere příkaz pro **Výběr komentáře** z nabídky **Upravit**  >  **Upřesnit** , příkaz se směruje do <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> metody <xref:Microsoft.VisualStudio.Package.Source> třídy. Když uživatel vybere příkaz pro zrušení **komentáře výběru**, je příkaz směrován do <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> metody.
 
-## <a name="support-code-comments"></a>Komentáře kódu podpory
- Komentáře kódu podpory jazykové služby můžete `EnableCommenting` mít pomocí <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> pojmenovaného parametru . Tím nastavíte <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> <xref:Microsoft.VisualStudio.Package.LanguagePreferences> vlastnost třídy. Další informace o nastavení funkcí služby jazyka naleznete v [tématu Registrace služby starších jazyků](../../extensibility/internals/registering-a-legacy-language-service1.md).
+## <a name="support-code-comments"></a>Komentáře k kódu podpory
+ Je možné, že vaše jazyková služba podporuje komentáře kódu prostřednictvím `EnableCommenting` pojmenovaného parametru <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . Tím se nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Další informace o nastavení funkcí jazykové služby najdete v tématu [Registrace starší verze jazykové služby](../../extensibility/internals/registering-a-legacy-language-service1.md).
 
- Je také nutné <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> přepsat metodu <xref:Microsoft.VisualStudio.Package.CommentInfo> vrátit strukturu s znaky komentáře pro váš jazyk. C#-style znaky komentářů řádku jsou výchozí.
+ Musíte také přepsat <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> metodu pro vrácení <xref:Microsoft.VisualStudio.Package.CommentInfo> struktury se znaky komentáře pro váš jazyk. Znaky komentáře řádku ve stylu jazyka C# jsou výchozí.
 
 ### <a name="example"></a>Příklad
  Zde je příklad implementace <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> metody.
@@ -62,5 +62,5 @@ namespace MyLanguagePackage
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Funkce služby starších jazyků](../../extensibility/internals/legacy-language-service-features1.md)
-- [Registrace služby staršího jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)
+- [Funkce služby starší verze jazyka](../../extensibility/internals/legacy-language-service-features1.md)
+- [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)

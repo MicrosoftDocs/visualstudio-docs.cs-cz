@@ -1,5 +1,5 @@
 ---
-title: Zastavit ladění do dialogového okna průběhu | Dokumentace Microsoftu
+title: Ukončit probíhající ladění – dialogové okno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,22 +24,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4fc4b72987be726ab06aeb92a0e3eec2a338949e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684952"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>Dialogové okno Ukončit probíhající ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto dialogové okno se zobrazí, když ladicí program se pokouší zastavit ladicí relace, ale zastavuje se relace je, že přejdete na nějakou dobu trvat. Zastavuje se relace ladění je obvykle velmi rychlý a toto dialogové okno se nezobrazí. V některých případech však trvá určitou dobu trvat odpojit od všech procesů, který se právě ladí. Zastavuje se relace trvá déle než několik sekund (nebo pokud dojde k chybě odpojení), zobrazí se toto dialogové okno. Pokud k tomu dochází často, může být kvůli internímu problému a můžete chtít obraťte se na oddělení technické podpory.  
+Toto dialogové okno se zobrazí, když se ladicí program pokouší zastavit relaci ladění, ale zastavení relace bude nějakou dobu trvat. Zastavení relace ladění je obvykle velmi rychlé a toto dialogové okno se nezobrazí. V některých případech ale může trvat i déle, než se odpojí všechny procesy, které jsou laděny. Pokud zastavování relace trvá déle než několik sekund (nebo dojde k chybě odpojení), zobrazí se toto dialogové okno. Pokud k tomu dochází často, může to být způsobeno interním problémem a možná budete chtít kontaktovat služby technické podpory.  
   
- Počkejte procesy, které chcete odpojit a toto dialogové okno zmizí, nebo použijte **Zastavit** tlačítko vynutit okamžité ukončení.  
+ Můžete počkat, až se procesy odpojí a toto dialogové okno zmizí, nebo použijte tlačítko **Zastavit nyní** k vynucení okamžitého ukončení.  
   
- **Zastavit nyní**  
- Kliknutím na toto tlačítko k ukončení relace ladění okamžitě. Pomocí **Zastavit**bude ukončen, spíše než odpojování procesů, který se právě ladí. Pokud ladíte systémové procesy, ukončuje se tyto procesy s **Zastavit** může mít neočekávané a nežádoucí účinky.  
+ **Zastavit hned**  
+ Kliknutím na toto tlačítko ukončíte ladicí relaci okamžitě. Místo odpojení procesů, které se právě ladí, bude použití operace **Zastavit nyní**ukončeno. Pokud ladíte systémové procesy, ukončení těchto procesů pomocí **stop Now** může mít neočekávané a nežádoucí účinky.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Odpojuje se programy](https://msdn.microsoft.com/f2c756c2-8079-474b-94c2-01c19a141a01)
+ [Odpojování programů](https://msdn.microsoft.com/f2c756c2-8079-474b-94c2-01c19a141a01)

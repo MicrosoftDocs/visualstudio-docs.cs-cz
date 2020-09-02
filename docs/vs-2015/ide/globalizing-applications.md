@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af49535233a809006f6109449ae524611b1adc45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645601"
 ---
 # <a name="globalizing-applications"></a>Globalizace aplikací
@@ -33,6 +33,6 @@ Globalizace je proces navrhování a vývoje softwarového produktu, který fung
 
  [Globalizace a lokalizace](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) Obsahuje odkazy na stránky pro nápovědu o globalizaci stránek webových formulářů.
 
- [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) V této části se seznámíte se základními koncepty vývoje softwaru pro mezinárodní trh C#pomocí Visual Basic nebo vizuálu.
+ [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) V této části se seznámíte se základními koncepty vývoje softwaru pro mezinárodní trh pomocí Visual Basic nebo Visual C#.
 
  [Osvědčené postupy pro vývoj aplikací připravených pro použití ve světě](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c) Poskytuje informace o programování pro mezinárodní cílovou skupinu, jako jsou problémy s návrhem a terminologie.

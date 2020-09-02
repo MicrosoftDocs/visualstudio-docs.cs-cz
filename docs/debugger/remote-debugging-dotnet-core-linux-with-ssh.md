@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23bc0fa990a79b1855ec382f42248a0f847c3c9c
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78200921"
 ---
 # <a name="remote-debug-net-core-on-linux-using-ssh"></a>Vzdálené ladění .NET Core na platformě Linux pomocí SSH
@@ -34,21 +34,21 @@ sudo apt-get install openssh-server unzip curl
 
 Příprava aplikace pro ladění:
 
-- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte **nástroje** > **Možnosti** > **ladění**a potom zrušte zaškrtnutí políčka **Povolit pouze můj kód**.
+- Zvažte použití konfigurace ladění při sestavování aplikace. Je mnohem obtížnější ladit kód kompilovaný v maloobchodě (konfigurace vydané verze) než ladicí kód kompilovaný. Pokud potřebujete použít konfiguraci vydané verze, nejdřív zakažte Pouze můj kód. Chcete-li toto nastavení zakázat, zvolte možnost **nástroje**  >  **Options**  >  **ladění**a potom zrušte zaškrtnutí možnosti **Povolit pouze můj kód**.
 
-- Ujistěte se, že je projekt nakonfigurován tak, aby vytvořil [přenosné soubory PDB](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (což je výchozí nastavení), a ujistěte se, že je PBDs ve stejném umístění jako knihovna DLL. Chcete-li provést konfiguraci v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt a pak zvolte možnost **vlastnosti** > **sestavovat** > **Pokročilé** > **informace o ladění**.
+- Ujistěte se, že je projekt nakonfigurován tak, aby vytvořil [přenosné soubory PDB](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (což je výchozí nastavení), a ujistěte se, že je PBDs ve stejném umístění jako knihovna DLL. Pokud chcete tuto možnost nakonfigurovat v aplikaci Visual Studio, klikněte pravým tlačítkem na projekt a pak zvolte **vlastnosti**  >  **sestavit**  >  **Pokročilé**  >  **ladicí informace**.
 
-K nasazení aplikace před laděním můžete použít několik metod. Můžete například provést následující věci:
+K nasazení aplikace před laděním můžete použít několik metod. Můžete například:
 
-- Zkopírujte zdroje do cílového počítače a sestavte je pomocí ```dotnet build``` na počítači se systémem Linux.
+- Zkopírujte zdroje do cílového počítače a sestavte ```dotnet build``` je v počítači se systémem Linux.
 
-- Sestavte aplikaci ve Windows a přeneste artefakty sestavení do počítače se systémem Linux. (Artefakty sestavení se skládají z samotné aplikace, všechny běhové knihovny, na kterých může záviset, a soubor *. DEPS. JSON* .)
+- Sestavte aplikaci ve Windows a přeneste artefakty sestavení do počítače se systémem Linux. (Artefakty sestavení se skládají z samotné aplikace, všechny běhové knihovny, na kterých může záviset, a *.deps.jsv* souboru.)
 
 ## <a name="attach-the-debugger"></a>Připojit ladicí program
 
 Po nakonfigurování počítačů spusťte aplikaci na počítači se systémem Linux a potom jste připraveni připojit ladicí program.
 
-1. V aplikaci Visual Studio vyberte možnost **ladit** > **připojit k procesu...** .
+1. V aplikaci Visual Studio vyberte možnost **ladění**  >  **připojit k procesu...**.
 
 1. V seznamu **Typ připojení** vyberte **SSH**.
 
@@ -64,7 +64,7 @@ Po nakonfigurování počítačů spusťte aplikaci na počítači se systémem 
 
 1. Klikněte na tlačítko **připojit**.
 
-1. V dialogovém okně, které se zobrazí, vyberte typ kódu, který chcete ladit. Vyberte možnost **Managed (.NET Core pro UNIX)** .
+1. V dialogovém okně, které se zobrazí, vyberte typ kódu, který chcete ladit. Vyberte možnost **Managed (.NET Core pro UNIX)**.
 
 1. K ladění aplikace použijte funkce ladění sady Visual Studio.
 
