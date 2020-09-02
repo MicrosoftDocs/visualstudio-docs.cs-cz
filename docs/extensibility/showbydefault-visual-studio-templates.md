@@ -1,5 +1,5 @@
 ---
-title: Element ShowByDefault (šablony sady Visual Studio)
+title: ShowByDefault – element (šablony sady Visual Studio)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 711cff06637957b796525543a02bfdd376e04284
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700096"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>Element ShowByDefault (šablony sady Visual Studio)
-Pokud `false`aplikace určuje, že šablona bude zobrazena pouze pod zadaným [položkou TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md).
+# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault – element (šablony sady Visual Studio)
+Pokud `false` Určuje, že se šablona bude zobrazovat pouze pod zadaným [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md).
 
- \<Šablona VSTemplate \< \<> Data> ShowByDefault>
+ \<VSTemplate> \<TemplateData>
+ \<ShowByDefault>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <ShowByDefault> true/false </ShowByDefault>
@@ -36,24 +37,24 @@ Pokud `false`aplikace určuje, že šablona bude zobrazena pouze pod zadaným [p
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být `true` `false`buď nebo . Pokud true, určuje, že šablona se zobrazí pro všechny typy projektů. Pokud false, šablona se zobrazí pouze `TemplateGroupID`pod zadaným .
+ Text musí být buď `true` nebo `false` . Pokud má hodnotu true, určuje, že se šablona zobrazí pro všechny typy projektů. Pokud má hodnotu false, šablona se zobrazí jenom pod zadaným polem `TemplateGroupID` .
 
 ## <a name="remarks"></a>Poznámky
- `ShowByDefault`je volitelný prvek. Výchozí hodnota je `true`.
+ `ShowByDefault` je volitelný prvek. Výchozí hodnota je `true`.
 
 ## <a name="example"></a>Příklad
  Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu.

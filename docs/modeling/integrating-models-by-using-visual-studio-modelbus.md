@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536939"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Integrace modelů pomocí Visual Studio Modelbus
@@ -31,10 +31,10 @@ Další informace a ukázku kódu naleznete v tématu:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="providing-access-to-a-dsl"></a><a name="provide"></a>Poskytnutí přístupu k DSL
+## <a name="providing-access-to-a-dsl"></a><a name="provide"></a> Poskytnutí přístupu k DSL
  Než budete moci vytvořit ModelBus odkazy na model nebo jeho prvky, je nutné definovat ModelBusAdapter pro DSL. Nejjednodušší způsob, jak to provést, je použít rozšíření sběrnice sady Visual Studio, které přidá příkazy do návrháře DSL.
 
-### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a>Vystavení definice DSL pro sběrnici modelu
+### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a> Vystavení definice DSL pro sběrnici modelu
 
 1. Otevřete soubor definice DSL. Klikněte pravým tlačítkem myši na návrhovou plochu a pak klikněte na **povolit ModelBus**.
 
@@ -82,7 +82,7 @@ Aby bylo zajištěno, že identifikátory prvků jsou trvalé:
 
 - Přepište `ResolveElementReference` pro vyhledání správného prvku z odkazu sběrnice modelu.
 
-## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a>Přístup k DSL z jiné DSL
+## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a> Přístup k DSL z jiné DSL
 
 Odkazy na sběrnici modelu můžete uložit v doménové vlastnosti v DSL a můžete napsat vlastní kód, který je používá. Můžete také dát uživateli možnost vytvořit odkaz na sběrnici vyvoláním souboru modelu a elementu v něm.
 
@@ -386,7 +386,7 @@ ModelBusReference elementReferenceRestored =
 
  Hlavní spouštěcí záznam (MBR) je deserializovaný ve dvou fázích:
 
-- `ModelBusReferencePropertySerializer`je standardní serializátor, který se zabývá hlavičkou MBR. Používá standardní `SerializationContext` kontejner vlastností DSL, který je uložený v `ReferenceContext` kódu pomocí klíče `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` . Konkrétně `SerializationContext` by měl obsahovat instanci `ModelBus` .
+- `ModelBusReferencePropertySerializer` je standardní serializátor, který se zabývá hlavičkou MBR. Používá standardní `SerializationContext` kontejner vlastností DSL, který je uložený v `ReferenceContext` kódu pomocí klíče `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` . Konkrétně `SerializationContext` by měl obsahovat instanci `ModelBus` .
 
 - Váš adaptér ModelBus se zabývá součástí hlavního spouštěcího záznamu (MBR), které jsou specifické pro adaptér. Může použít další informace uložené v ReferenceContext hlavního spouštěcího panelu. Jednoduchý adaptér založený na souboru udržuje cesty kořenových souborů pomocí klíčů `FilePathLoadContextKey` a `FilePathSaveContextKey` .
 
@@ -510,11 +510,11 @@ Po kliknutí pravým tlačítkem na diagram definice DSL klikněte na **povolit 
 
 - `ModelBusAdapter`Do řešení se přidá nový projekt.
 
-- Odkaz na `ModelBusAdapter` je přidán do `DslPackage` projektu. `ModelBusAdapter`má odkaz na `Dsl` projekt.
+- Odkaz na `ModelBusAdapter` je přidán do `DslPackage` projektu. `ModelBusAdapter` má odkaz na `Dsl` projekt.
 
 - V **DslPackage\source.extention.TT** `|ModelBusAdapter|` je přidána jako Komponenta MEF.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Otevření modelu ze souboru v kódu programu](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Dokumenty společnosti Microsoft
+title: 'IDebugField:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1b3251db3426f87901ca0768800feaa36fef5373
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728840"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
-Tato metoda získá zobrazitelné informace o poli.
+Tato metoda získá informace o poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>Parametry
 `dwFields`\
-[v] Kombinace [konstant FIELD_INFO_FIELDS,](../../../extensibility/debugger/reference/field-info-fields.md) která vybere informace, které mají být zobrazeny. Pokud pole představuje symbol, obvykle se jedná o název a typ symbolu.
+pro Kombinace [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) konstant, které vyberou informace, které se mají zobrazit Pokud pole představuje symbol, obvykle se jedná o název a typ symbolu.
 
 `pFieldInfo`\
-[out] Vrátí informace v zadané [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) struktuře.
+mimo Vrátí informace v zadané struktuře [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

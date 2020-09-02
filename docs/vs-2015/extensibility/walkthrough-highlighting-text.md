@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Zvýraznění textu | Dokumentace Microsoftu'
+title: 'Návod: zvýraznění textu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,52 +11,52 @@ caps.latest.revision: 43
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d398164e910f7700645c01d26afbc631b1d434bc
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65693326"
 ---
 # <a name="walkthrough-highlighting-text"></a>Návod: Zvýraznění textu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte Managed Extensibility Framework (MEF) součásti. Tento návod ukazuje, jak zvýraznit všechny výskyty aktuálního slova v textovém souboru. Pokud dojde u slov velká k více než jednou do textového souboru a umístěte blikající kurzor o jeden výskyt, je zvýrazněn výskyt.  
+Můžete přidat různé vizuální efekty do editoru vytvořením částí komponenty Managed Extensibility Framework (MEF). Tento návod ukazuje, jak zvýraznit všechny výskyty aktuálního slova v textovém souboru. Pokud se v textovém souboru vyskytne slovo více než jednou, a umístíte blikající kurzor do jednoho výskytu, zvýrazní se všechny výskyty.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>Vytvoření projektu rozhraní MEF  
+## <a name="creating-a-mef-project"></a>Vytvoření projektu MEF  
   
-1. Vytvořte projekt VSIX C#. (V **nový projekt** dialogového okna, vyberte **Visual C# / rozšíření**, pak **projekt VSIX**.) Pojmenujte řešení `HighlightWordTest`.  
+1. Vytvoří projekt VSIX v jazyce C#. (V dialogovém okně **Nový projekt** vyberte **Visual C#/rozšiřitelnost**a potom **projekt VSIX**.) Pojmenujte řešení `HighlightWordTest` .  
   
-2. Přidejte do projektu šablony položky editoru třídění. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Přidejte do projektu šablonu položky klasifikátoru editoru. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Odstraníte existující soubory tříd.  
+3. Odstraňte existující soubory třídy.  
   
 ## <a name="defining-a-textmarkertag"></a>Definování TextMarkerTag  
- Prvním krokem při zvýraznění textu je podtřídou <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> a definují jeho vzhled.  
+ První krok zvýraznění textu je podtřídou <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> a definuje jeho vzhled.  
   
-#### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>Chcete-li definovat TextMarkerTag a MarkerFormatDefinition  
+#### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>Definování TextMarkerTag a MarkerFormatDefinition  
   
 1. Přidejte soubor třídy a pojmenujte ho **HighlightWordTag**.  
   
 2. Přidejte následující odkazy:  
   
-    1. Microsoft.VisualStudio.CoreUtility  
+    1. Microsoft. VisualStudio. CoreUtility  
   
-    2. Microsoft.VisualStudio.Text.Data  
+    2. Microsoft. VisualStudio. text. data  
   
-    3. Microsoft.VisualStudio.Text.Logic  
+    3. Microsoft. VisualStudio. text. Logic  
   
-    4. Microsoft.VisualStudio.Text.UI  
+    4. Microsoft. VisualStudio. text. UI  
   
-    5. Microsoft.VisualStudio.Text.UI.Wpf  
+    5. Microsoft. VisualStudio. text. UI. WPF  
   
-    6. System.ComponentModel.Composition  
+    6. System. ComponentModel. složení  
   
-    7. Presentation.Core  
+    7. Prezentace. Core  
   
-    8. Presentation.Framework  
+    8. Presentation. Framework  
   
 3. Importujte následující obory názvů.  
   
@@ -75,7 +75,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     using System.Windows.Media;  
     ```  
   
-4. Vytvořte třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> a pojmenujte ho `HighlightWordTag`.  
+4. Vytvořte třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> , a pojmenujte ji `HighlightWordTag` .  
   
     ```csharp  
     internal class HighlightWordTag : TextMarkerTag  
@@ -84,11 +84,11 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-5. Vytvořte druhé třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>a pojmenujte ho HighlightWordFormatDefinition. Chcete-li použít tento formát definice pro vaši značku, je nutné ho exportovat s následujícími atributy:  
+5. Vytvořte druhou třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> , a pojmenujte ji HighlightWordFormatDefinition. Aby bylo možné použít tuto definici formátu pro značku, je nutné ji exportovat s následujícími atributy:  
   
-    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: značky využit k odkazují na tento formát  
+    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: Tags používá tuto informaci k odkazování na tento formát.  
   
-    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: To způsobí, že formát, který se zobrazí v uživatelském rozhraní  
+    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: způsobí zobrazení formátu v uživatelském rozhraní.  
   
     ```csharp  
   
@@ -101,7 +101,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-6. V konstruktoru pro HighlightWordFormatDefinition Definujte zobrazovaný název a vzhled. Vlastnost pozadí definuje barvu výplně, zatímco popředí vlastnost určuje barvu ohraničení.  
+6. V konstruktoru pro HighlightWordFormatDefinition definujte jeho zobrazované jméno a vzhled. Vlastnost Background definuje barvu výplně, zatímco vlastnost popředí definuje barvu ohraničení.  
   
     ```csharp  
     public HighlightWordFormatDefinition()  
@@ -113,18 +113,18 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-7. V konstruktoru pro HighlightWordTag předejte název formátu definice, kterou jste právě vytvořili.  
+7. V konstruktoru pro HighlightWordTag předejte název definice formátu, kterou jste právě vytvořili.  
   
     ```  
     public HighlightWordTag() : base("MarkerFormatDefinition/HighlightWordFormatDefinition") { }  
     ```  
   
 ## <a name="implementing-an-itagger"></a>Implementace ITagger  
- Dalším krokem je implementace <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> rozhraní. Toto rozhraní se přiřadí k dané textovou vyrovnávací paměť, značky, které poskytují zvýraznění textu a jiných vizuálních efektů.  
+ Dalším krokem je implementace <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> rozhraní. Toto rozhraní přiřadí k dané textové vyrovnávací paměti značky, které poskytují zvýraznění textu a jiné vizuální efekty.  
   
-#### <a name="to-implement-a-tagger"></a>K implementaci označovatel  
+#### <a name="to-implement-a-tagger"></a>Implementace autor značky  
   
-1. Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> typu `HighlightWordTag`a pojmenujte ho `HighlightWordTagger`.  
+1. Vytvořte třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> typ `HighlightWordTag` a pojmenujte ji `HighlightWordTagger` .  
   
     ```csharp  
     internal class HighlightWordTagger : ITagger<HighlightWordTag>  
@@ -133,23 +133,23 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-2. Přidejte následující soukromé pole a vlastnosti do třídy:  
+2. Do třídy přidejte následující soukromá pole a vlastnosti:  
   
-    - <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, Která odpovídá aktuálnímu zobrazení textu.  
+    - Objekt <xref:Microsoft.VisualStudio.Text.Editor.ITextView> , který odpovídá aktuálnímu zobrazení textu.  
   
-    - <xref:Microsoft.VisualStudio.Text.ITextBuffer>, Která odpovídá textové vyrovnávací paměti, které je základem zobrazení textu.  
+    - <xref:Microsoft.VisualStudio.Text.ITextBuffer>, Který odpovídá textové vyrovnávací paměti, která je umístěná v textovém zobrazení.  
   
-    - <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>, Který se používá k vyhledání textu.  
+    - Objekt <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> , který se používá k vyhledání textu.  
   
-    - <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>, Která obsahuje metody pro navigaci v textu rozsahy.  
+    - Objekt <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> , který obsahuje metody pro navigaci v rámci jednotlivých textů.  
   
-    - A <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>, který obsahuje sadu slov, abyste měli na očích.  
+    - A <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection> , který obsahuje sadu slov, která mají být zvýrazněna.  
   
-    - A <xref:Microsoft.VisualStudio.Text.SnapshotSpan>, která odpovídá aktuálního slova.  
+    - A <xref:Microsoft.VisualStudio.Text.SnapshotSpan> , který odpovídá aktuálnímu slovu.  
   
-    - A <xref:Microsoft.VisualStudio.Text.SnapshotPoint>, která odpovídá aktuální pozici blikajícího kurzoru.  
+    - A <xref:Microsoft.VisualStudio.Text.SnapshotPoint> , který odpovídá aktuální pozici blikajícího kurzoru.  
   
-    - Zámek objektu.  
+    - Objekt zámku.  
   
     ```csharp  
     ITextView View { get; set; }  
@@ -163,7 +163,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
   
     ```  
   
-3. Přidat konstruktor, který inicializuje vlastností uvedených výše a přidá <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> a <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> obslužných rutin událostí.  
+3. Přidejte konstruktor, který inicializuje výše uvedené vlastnosti a přidá <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> obslužné rutiny události a.  
   
     ```csharp  
     public HighlightWordTagger(ITextView view, ITextBuffer sourceBuffer, ITextSearchService textSearchService,  
@@ -181,7 +181,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
   
     ```  
   
-4. Obě volání obslužné rutiny událostí `UpdateAtCaretPosition` metody.  
+4. Obslužné rutiny událostí volají `UpdateAtCaretPosition` metodu.  
   
     ```csharp  
     void ViewLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)  
@@ -199,12 +199,12 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-5. Musíte taky přidat `TagsChanged` událost, která bude volat metodu aktualizace.  
+5. Musíte také přidat `TagsChanged` událost, která bude volána metodou aktualizace.  
   
      [!code-csharp[VSSDKHighlightWordTest#10](../snippets/csharp/VS_Snippets_VSSDK/vssdkhighlightwordtest/cs/highlightwordtag.cs#10)]
      [!code-vb[VSSDKHighlightWordTest#10](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhighlightwordtest/vb/highlightwordtag.vb#10)]  
   
-6. `UpdateAtCaretPosition()` Metoda vyhledá ve vyrovnávací paměti textu, který je stejný jako word, kde je umístěn ukazatel a vytvoří seznam všech slov <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objekty, které odpovídají výskyty slova. Poté zavolá `SynchronousUpdate`, která vyvolává `TagsChanged` událostí.  
+6. `UpdateAtCaretPosition()`Metoda najde každé slovo v textové vyrovnávací paměti, které je identické se slovem, kde je kurzor umístěn, a vytvoří seznam <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objektů, které odpovídají výskytům slova. Potom volá `SynchronousUpdate` , což vyvolá `TagsChanged` událost.  
   
     ```csharp  
     void UpdateAtCaretPosition(CaretPosition caretPosition)  
@@ -286,7 +286,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
   
     ```  
   
-7. `SynchronousUpdate` Provádí synchronní aktualizace `WordSpans` a `CurrentWord` vlastnosti a vyvolá `TagsChanged` událostí.  
+7. `SynchronousUpdate`Provede synchronní aktualizaci `WordSpans` vlastností a a `CurrentWord` vyvolá `TagsChanged` událost.  
   
     ```vb  
     void SynchronousUpdate(SnapshotPoint currentRequest, NormalizedSnapshotSpanCollection newSpans, SnapshotSpan? newCurrentWord)  
@@ -306,11 +306,11 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-8. Je nutné implementovat <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> metody. Tato metoda vezme kolekci <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objekty a vrátí výčet značku rozpětí.  
+8. Je nutné implementovat <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> metodu. Tato metoda přebírá kolekci <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objektů a vrací výčet rozsahů značek.  
   
-     V jazyce C# Implementujte tuto metodu jako iterátor příkazu yield, která umožňuje opožděné vyhodnocení (to znamená, vyhodnocení sady pouze v případě, že jednotlivé položky jsou přístupné) značek. V jazyce Visual Basic přidání značek do seznamu a vrátí seznam.  
+     V jazyce C# Implementujte tuto metodu jako iterátor yield, který umožňuje opožděné vyhodnocení (tj. vyhodnocení sady pouze v případě, že jsou k dispozici jednotlivé položky) značek. V Visual Basic přidejte značky do seznamu a vraťte seznam.  
   
-     Tady metoda vrátí <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> objekt, který má "blue" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>, poskytující modrým pozadím.  
+     V tomto případě metoda vrátí <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> objekt, který má "modrý" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> , který poskytuje modré pozadí.  
   
     ```csharp  
     public IEnumerable<ITagSpan<HighlightWordTag>> GetTags(NormalizedSnapshotSpanCollection spans)  
@@ -349,15 +349,15 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-## <a name="creating-a-tagger-provider"></a>Vytvoření zprostředkovatele Označovatel  
- Pokud chcete vytvořit váš označovatel, je nutné implementovat <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>. Tato třída je součást MEF, proto musíte nastavit správné atributy tak, aby toto rozšíření je rozpoznán.  
+## <a name="creating-a-tagger-provider"></a>Vytvoření poskytovatele autor značky  
+ Chcete-li vytvořit autor značky, musíte implementovat <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> . Tato třída je součástí komponenty MEF, takže musíte nastavit správné atributy, aby bylo toto rozšíření rozpoznáno.  
   
 > [!NOTE]
-> Další informace o rozhraní MEF, naleznete v tématu [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).  
+> Další informace o MEF naleznete v tématu [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde).  
   
-#### <a name="to-create-a-tagger-provider"></a>K vytvoření poskytovatele označovatel  
+#### <a name="to-create-a-tagger-provider"></a>Vytvoření poskytovatele autor značky  
   
-1. Vytvořte třídu s názvem `HighlightWordTaggerProvider` , který implementuje <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>a exportujte ho pomocí <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text" a <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> z <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>.  
+1. Vytvořte třídu s názvem `HighlightWordTaggerProvider` , která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> , a exportujte ji s <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text" a <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> .  
   
     ```csharp  
     [Export(typeof(IViewTaggerProvider))]  
@@ -367,7 +367,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     { }  
     ```  
   
-2. Je nutné naimportovat dvě služby editoru <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, k vytvoření instance označovatel.  
+2. Chcete <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> -li vytvořit instanci autor značky, je nutné importovat dvě služby editoru, a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> .  
   
     ```csharp  
     [Import]  
@@ -378,7 +378,7 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
   
     ```  
   
-3. Implementace <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> metoda vrátí instanci `HighlightWordTagger`.  
+3. Implementujte <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> metodu pro vrácení instance `HighlightWordTagger` .  
   
     ```csharp  
     public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag  
@@ -394,18 +394,18 @@ Různých vizuálních efektů můžete přidat do editoru tak, že vytvoříte 
     }  
     ```  
   
-## <a name="building-and-testing-the-code"></a>Vytváření a testování kódu  
- K otestování tohoto kódu sestavte řešení HighlightWordTest a spusťte v experimentální instanci.  
+## <a name="building-and-testing-the-code"></a>Sestavování a testování kódu  
+ Chcete-li otestovat tento kód, sestavte řešení HighlightWordTest a spusťte ho v experimentální instanci.  
   
-#### <a name="to-build-and-test-the-highlightwordtest-solution"></a>Pro vytváření a testování HighlightWordTest řešení  
+#### <a name="to-build-and-test-the-highlightwordtest-solution"></a>Sestavení a testování řešení HighlightWordTest  
   
 1. Sestavte řešení.  
   
-2. Při spuštění tohoto projektu v ladicím programu, je vytvořena instance druhou instanci aplikace Visual Studio.  
+2. Při spuštění tohoto projektu v ladicím programu je vytvořena instance druhé instance aplikace Visual Studio.  
   
-3. Vytvořte textový soubor a zadejte nějaký text, ve které se opakují slova, například "hello hello hello".  
+3. Vytvořte textový soubor a zadejte nějaký text, ve kterém se slova opakují, například Hello Hello Hello.  
   
-4. Umístěte kurzor do jednoho z výskytů řetězce "hello". Každý výskyt by měl být zvýrazněn modrá.  
+4. Umístěte kurzor do jednoho z výskytů "Hello". Všechny výskyty by měly být zvýrazněny modře.  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Propojení typu obsahu s příponou názvu souboru](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

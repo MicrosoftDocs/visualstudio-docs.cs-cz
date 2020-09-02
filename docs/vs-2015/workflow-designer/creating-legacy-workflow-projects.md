@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 644676393a606dfd7fbf6aa400a625dce2db3697
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656894"
 ---
 # <a name="creating-legacy-workflow-projects"></a>Vytváření projektů pracovních postupů starších verzí
-Tato část popisuje, jak vytvořit projekty pracovního postupu pomocí starších [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytovaných nástrojem VS2010. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]. Obsahuje informace o tom, jak používat šablony projektu pracovního postupu, které jsou uvedeny v následující tabulce.
+Tato část popisuje, jak vytvořit projekty pracovního postupu pomocí starších verzí [!INCLUDE[wfd1](../includes/wfd1-md.md)] poskytovaných nástrojem VS2010. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] . Obsahuje informace o tom, jak používat šablony projektu pracovního postupu, které jsou uvedeny v následující tabulce.
 
 |Šablona projektu|Popis|
 |----------------------|-----------------|

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aeb404c479edec5dec89f28e80584d435f5c370a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670647"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Postupy: Potlačení upozornění kompilátoru
@@ -22,7 +22,7 @@ ms.locfileid: "72670647"
 
 Protokol sestavení můžete zaměnit zadáním jednoho nebo více druhů upozornění kompilátoru, které nechcete, aby obsahovaly. Můžete například použít tuto techniku ke kontrole některých, ale ne všech informací, které jsou generovány automaticky při nastavení podrobností protokolu sestavení na normální, podrobné nebo diagnostické. Další informace o podrobnostech najdete v tématu [Postup: zobrazení, uložení a konfigurace souborů protokolu sestavení](../ide/how-to-view-save-and-configure-build-log-files.md).
 
-### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Chcete-li potlačit specifická C# upozornění pro Visual nebo F \#
+### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Chcete-li potlačit specifická upozornění pro jazyk Visual C# nebo F\#
 
 1. V **Průzkumník řešení**vyberte projekt, ve kterém chcete potlačit upozornění.
 
@@ -32,13 +32,13 @@ Protokol sestavení můžete zaměnit zadáním jednoho nebo více druhů upozor
 
 4. V poli **potlačit upozornění** určete chybové kódy upozornění, která chcete potlačit, oddělte je středníky a pak znovu sestavte řešení.
 
-### <a name="to-suppress-specific-warnings-for-visual-c"></a>Chcete-li potlačit specifická upozornění pro vizuálC++
+### <a name="to-suppress-specific-warnings-for-visual-c"></a>Chcete-li potlačit specifická upozornění pro Visual C++
 
 1. V **Průzkumník řešení**vyberte projekt nebo zdrojový soubor, ve kterém chcete potlačit upozornění.
 
 2. Na panelu nabídek vyberte možnost **zobrazení**, **stránky vlastností**.
 
-3. Zvolte kategorii **Vlastnosti konfigurace** , zvolte kategorii **CC++ /** kategorie a potom zvolte stránku **Upřesnit** .
+3. Zvolte kategorii **Vlastnosti konfigurace** , zvolte kategorii **C/C++** a pak zvolte stránku **Upřesnit** .
 
 4. Proveďte jeden z následujících kroků:
 
@@ -58,13 +58,13 @@ Můžete skrýt specifická upozornění kompilátoru pro Visual Basic úpravou 
 
 2. V panelu nabídek vyberte položku **projekt**, **Uvolnit projekt**.
 
-3. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **Upravit**_ProjectName_ **. vbproj**.
+3. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **Upravit**_ProjectName_**. vbproj**.
 
     Soubor projektu je otevřen v editoru kódu.
 
-4. Vyhledejte prvek `<NoWarn></NoWarn>` v konfiguraci sestavení, se kterou sestavíte.
+4. Vyhledejte `<NoWarn></NoWarn>` prvek v konfiguraci sestavení, se kterou sestavíte.
 
-    Následující příklad ukazuje prvek `<NoWarn></NoWarn>` v tučném textu pro konfiguraci sestavení ladění na platformě x86:
+    Následující příklad ukazuje `<NoWarn></NoWarn>` prvek tučným textem pro konfiguraci sestavení ladění na platformě x86:
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -81,7 +81,7 @@ Můžete skrýt specifická upozornění kompilátoru pro Visual Basic úpravou 
      </PropertyGroup>
    ```
 
-5. Přidejte jedno nebo více čísel upozornění jako hodnotu prvku `<NoWarn>`. Pokud zadáte více čísel upozornění, oddělte je čárkami, jak ukazuje následující příklad.
+5. Přidejte jedno nebo více čísel upozornění jako hodnotu `<NoWarn>` prvku. Pokud zadáte více čísel upozornění, oddělte je čárkami, jak ukazuje následující příklad.
 
    ```xml
    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření izolovaného prostředí | Dokumentace Microsoftu
+title: Rozšíření izolovaného prostředí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,112 +11,112 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ea55039de769598b26868727a93cfa11726e4838
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443917"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64799312"
 ---
 # <a name="extending-the-isolated-shell"></a>Rozšíření izolovaného prostředí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Prostředí sady Visual Studio, samostatný můžete rozšířit přidáním VSPackage, součást Managed Extensibility Framework (MEF) nebo projektu s obecným VSIX do vaší aplikace izolovaného prostředí.  
+Izolované prostředí sady Visual Studio můžete roztáhnout přidáním součásti VSPackage, komponenty Managed Extensibility Framework (MEF) nebo obecného projektu VSIX do aplikace izolovaného prostředí.  
   
 > [!NOTE]
-> Následující kroky předpokládají, že jste vytvořili základní aplikace izolovaného prostředí pomocí Visual Studio Shell izolované šablony projektu. Další informace o této šabloně projektu naleznete v tématu [názorný postup: Vytvoření základní aplikace prostředí izolované](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md).  
+> Následující kroky presuppose, že jste vytvořili základní aplikaci izolovaného prostředí pomocí šablony projektu izolované prostředí sady Visual Studio. Další informace o této šabloně projektu naleznete v tématu [Návod: Vytvoření základní aplikace izolovaného prostředí](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md).  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablony sady Visual Studio balíčku projektu  
- Šablona projektu balíček Visual Studio najdete ve třech různých umístěních v **nový projekt** dialogové okno:  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablonu projektu balíčku sady Visual Studio  
+ Šablona projektu balíčku sady Visual Studio se dá najít ve třech různých umístěních v dialogovém okně **Nový projekt** :  
   
-1. V části **jazyka Visual Basic**, **rozšiřitelnost**. Je výchozí jazyk projektu jazyka Visual Basic.  
+1. V **Visual Basic**části Visual Basic **rozšiřitelnost**. Výchozí jazyk projektu je Visual Basic.  
   
-2. V části **Visual C#**, **rozšiřitelnost**. Je výchozí jazyk projektu C#.  
+2. V části **Visual C#** **rozšiřitelnost**. Výchozím jazykem projektu je C#.  
   
-3. V části **ostatní typy projektů**, **rozšiřitelnost**. Výchozí jazyk projektu je C++.  
+3. V části **ostatní typy projektů** **rozšiřitelnost**. Výchozí jazyk projektu je C++.  
   
-## <a name="adding-a-vspackage"></a>Přidání VSPackage  
- VSPackage můžete přidat do vaší aplikace izolovaného prostředí. Následující kroky ukazují, jak vytvořit takový, který přidá příkazy nabídky.  
+## <a name="adding-a-vspackage"></a>Přidání balíčku VSPackage  
+ Do aplikace izolovaného prostředí můžete přidat VSPackage. Následující kroky ukazují, jak vytvořit jeden, který přidá příkazy nabídky.  
   
-#### <a name="to-add-a-new-vspackage"></a>Chcete-li přidat nový VSPackage  
+#### <a name="to-add-a-new-vspackage"></a>Přidání nového balíčku VSPackage  
   
-1. Přidat projekt balíčku Visual Studio s názvem `MenuCommandsPackage`.  
+1. Přidejte projekt balíčku sady Visual Studio s názvem `MenuCommandsPackage` .  
   
-2. Na **základní informace o sadě VSPackage** stránku průvodce, nastavte **název společnosti** k `Fabrikam` a **název balíčku VSPackage** k `FabrikamMenuCommands`. Zvolte **Další** tlačítko.  
+2. Na stránce **základní informace** o rozhraní VSPackage průvodce nastavte **název společnosti** na `Fabrikam` a **název VSPackage** na `FabrikamMenuCommands` . Klikněte na tlačítko **Další** .  
   
-3. Na další stránce vyberte **příkazu nabídky** a klikněte na tlačítko **Další**.  
+3. Na další stránce vyberte **příkaz nabídky** a klikněte na tlačítko **Další**.  
   
-4. Na další stránku, nastavte **název příkazu** k `Fabrikam Command` a **ID příkazu** k `cmdidFabrikamCommand`a klikněte na tlačítko **Další**.  
+4. Na další stránce nastavte **název příkazu** na `Fabrikam Command` a **ID příkazu** na a pak klikněte na `cmdidFabrikamCommand` tlačítko **Další**.  
   
-5. Na **vyberte možnosti projektu testování** stránce, zrušte zaškrtnutí možnosti testování a klikněte na tlačítko **Dokončit** tlačítko.  
+5. Na stránce **Vybrat možnosti projektu testu** zrušte zaškrtnutí možnosti testu a pak klikněte na tlačítko **Dokončit** .  
   
-6. V projektu ShellExtensionsVSIX otevřete soubor source.extension.vsixmanifest.  
+6. V projektu ShellExtensionsVSIX otevřete soubor source. extension. vsixmanifest.  
   
-     **Prostředky** oddíl by měl obsahovat položku VSShellStub.AboutBoxPackage projektu.  
+     Oddíl **assets** by měl obsahovat položku pro projekt VSShellStub. AboutBoxPackage.  
   
-7. Zvolte **nový** tlačítko.  
+7. Klikněte na tlačítko **Nový** .  
   
-8. V **přidat nové aktivum** okno v **typ** seznamu vyberte **Microsoft.VisualStudio.VsPackage**.  
+8. V okně **Přidat nový prostředek** vyberte v seznamu **typ** možnost **Microsoft. VisualStudio. VSPackage**.  
   
-9. V **zdroj** seznamu, ujistěte se, že **projekt v aktuálním řešení** zaškrtnuto. V **projektu** pole se seznamem, vyberte **MenuCommandsPackage**.  
+9. V seznamu **zdroj** se ujistěte, že je vybrán **projekt v aktuálním řešení** . V poli seznam **projektu** vyberte možnost **MenuCommandsPackage**.  
   
-10. Soubor uložte a zavřete.  
+10. Uložte soubor a zavřete ho.  
   
-11. Znovu sestavte řešení a spustit ladění izolovaného prostředí.  
+11. Znovu sestavte řešení a spusťte ladění izolovaného prostředí.  
   
-12. V panelu nabídky zvolte **nástroje** nabídce a potom **Fabrikam příkaz**.  
+12. Na řádku nabídek klikněte na nabídku **nástroje** a pak na **příkaz Fabrikam**.  
   
-     By se zobrazit okno se zprávou.  
+     Mělo by se zobrazit okno se zprávou.  
   
-13. Zastavte ladění aplikace.  
+13. Zastavit ladění aplikace  
   
-## <a name="adding-a-mef-component-part"></a>Přidání součásti MEF  
- Následující kroky ukazují, jak do vaší aplikace izolovaného prostředí přidat součást MEF.  
+## <a name="adding-a-mef-component-part"></a>Přidání části součásti MEF  
+ Následující kroky ukazují, jak přidat součást MEF do aplikace izolovaného prostředí.  
   
-#### <a name="to-add-a-mef-component"></a>K přidání komponenty MEF  
+#### <a name="to-add-a-mef-component"></a>Přidání komponenty MEF  
   
-1. V **přidat nový projekt** dialogovém okně **Visual C#**, **rozšiřitelnost**, použijte **okraj editoru** šablonu pro přidání do projektu. Pojmenujte ji `ShellEditorMargin`.  
+1. V dialogovém okně **Přidat nový projekt** v části **Visual C#** **rozšiřitelnost**použijte šablonu **okraje editoru** k přidání projektu. Pojmenujte ji `ShellEditorMargin`.  
   
-2. V projektu ShellExtensionsVSIX otevřete soubor Source.extension.vsixmanifest v zobrazení návrhu zobrazení kódu.  
+2. V projektu ShellExtensionsVSIX otevřete soubor source. extension. vsixmanifest v zobrazení Návrh, nikoli v zobrazení kódu.  
   
-3. V `Asset` zvolte **přidat obsah**.  
+3. V `Asset` části vyberte možnost **Přidat obsah**.  
   
-4. V **přidat nové aktivum** okno v **typ** seznamu vyberte **Microsoft.VisualStudio.MefComponent**.  
+4. V okně **Přidat nový prostředek** vyberte v seznamu **typ** možnost **Microsoft. VisualStudio. MefComponent**.  
   
-5. V **zdroj** seznamu, ujistěte se, že **projekt v aktuálním řešení** zaškrtnuto. V **projektu** pole se seznamem, vyberte **ShellEditorMargin**.  
+5. V seznamu **zdroj** se ujistěte, že je vybrán **projekt v aktuálním řešení** . V poli seznam **projektu** vyberte možnost **ShellEditorMargin**.  
   
-6. Soubor uložte a zavřete.  
+6. Uložte soubor a zavřete ho.  
   
-7. Znovu sestavte řešení a spustit ladění izolovaného prostředí.  
+7. Znovu sestavte řešení a spusťte ladění izolovaného prostředí.  
   
 8. Otevřete textový soubor.  
   
-     Zelená okraj obsahující slova "Hello world!" má být zobrazena v dolní části okna textového souboru.  
+     Zelený okraj, který obsahuje slova "Hello World!" by se mělo zobrazit v dolní části okna textový soubor.  
   
-9. Zastavte ladění aplikace.  
+9. Zastavit ladění aplikace  
   
-## <a name="adding-a-generic-vsix-project"></a>Přidání projektu VSIX obecné  
+## <a name="adding-a-generic-vsix-project"></a>Přidání obecného projektu VSIX  
   
 #### <a name="to-add-a-generic-vsix-project"></a>Přidání obecného projektu VSIX  
   
-1. V **přidat nový projekt** dialogovém okně **Visual C#**, **rozšiřitelnost**, použijte **VSIXProject** šablonu pro přidání do projektu. Pojmenujte ji `EmptyVSIX`.  
+1. V dialogovém okně **Přidat nový projekt** v části **Visual C#** **rozšiřitelnost**použijte šablonu **VSIXProject** pro přidání projektu. Pojmenujte ji `EmptyVSIX`.  
   
-2. V projektu ShellExtensionsVSIX otevřete soubor Source.extensions.vsixmanifest v zobrazení návrhu zobrazení kódu.  
+2. V projektu ShellExtensionsVSIX otevřete soubor source. Extensions. vsixmanifest v zobrazení Návrh, nikoli v zobrazení kódu.  
   
-3. V `Assets` zvolte **nový**.  
+3. V `Assets` části vyberte možnost **Nový**.  
   
-4. V **přidat nové aktivum** okno v **typ** vyberte typ obsahu, které chcete přidat.  
+4. V okně **Přidat nový prostředek** v seznamu **typ** vyberte typ obsahu, který chcete přidat.  
   
-5. V **zdroj**, ujistěte se, že **projekt v aktuálním řešení** je vybraná možnost. V rozevíracím seznamu vyberte název vaším projektem VSIX.  
+5. V části **zdroj**se ujistěte, že je vybrána možnost **projekt v aktuální řešení** . V poli seznam vyberte název projektu VSIX.  
   
-6. Soubor uložte a zavřete.  
+6. Uložte soubor a zavřete ho.  
   
-7. Pokud tento projekt obsahuje zkompilovaný kód, je nutné upravit projektu tak, aby sestavení je zahrnout do výstupu.  
+7. Pokud tento projekt obsahuje zkompilovaný kód, je nutné upravit projekt tak, aby bylo sestavení zahrnuto do výstupu.  
   
     1. Uvolněte projekt VSIX a otevřete soubor projektu.  
   
-    2. V prvním `<PropertyGroup>` blokovat, změňte hodnotu vlastnosti `<CopyBuildOutputToOutputDirectory>` k `true`.  
+    2. V prvním `<PropertyGroup>` bloku změňte hodnotu `<CopyBuildOutputToOutputDirectory>` na `true` .  
   
-    3. Uložit a znovu načíst projekt.  
+    3. Uložte a znovu načtěte projekt.  
   
 8. Sestavte a spusťte řešení.  
   

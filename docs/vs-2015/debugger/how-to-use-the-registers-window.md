@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití okna registry | Dokumentace Microsoftu'
+title: 'Postupy: použití okna Registry | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,36 +28,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 233092af638824c462a6d9a47865a1c6f5fd9397
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697470"
 ---
-# <a name="how-to-use-the-registers-window"></a>Postupy: Použití okna registry
+# <a name="how-to-use-the-registers-window"></a>Postupy: Použití okna Registry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Okno registrů je k dispozici pouze v případě, že je povoleno ladění úrovni adres v **možnosti** dialogovém okně **ladění** uzlu **Obecné** kategorie.  
+Okno Registry je dostupné pouze v případě, že je povoleno ladění na úrovni adres v dialogovém okně **Možnosti** , uzel **ladění** , **Obecné** kategorie.  
   
- **Zaregistruje** okně se zobrazí obsah registru. Pokud uchováváte **zaregistruje** okna průběhu prostřednictvím programu open, můžete zobrazit registr hodnoty změnit, jak se spustí váš kód. Hodnoty, které se změnily nedávno se zobrazí červeně. Můžete upravit hodnot registru. Další informace najdete v tématu [jak: Úprava hodnoty registru](../debugger/how-to-edit-a-register-value.md).  
+ V okně **Registry** se zobrazí obsah registru. Pokud ponecháte okno **Registry** otevřené v průběhu provádění programu, můžete zobrazit změny hodnot registru při spuštění kódu. Hodnoty, které se nedávno změnily, se zobrazí červeně. Hodnoty registru můžete upravovat. Další informace najdete v tématu [Postupy: Úprava hodnoty registru](../debugger/how-to-edit-a-register-value.md).  
   
- K odebrání nepotřebných prvků, **zaregistruje** okno uspořádá registry do skupiny, které se liší podle platformy a procesor typu. Můžete zobrazit nebo skrýt skupin, jak chcete. Další informace najdete v tématu [jak: Zobrazení a skrytí nabídky registrovat skupiny](../debugger/how-to-display-and-hide-register-groups.md).  
+ Chcete-li snížit přehlednost, okno **Registry** uspořádá Registry do skupin, které se liší podle typu platformy a procesoru. Můžete zobrazit nebo skrýt skupiny podle svých potřeby. Další informace najdete v tématu [Postup: zobrazení a skrytí skupin registrů](../debugger/how-to-display-and-hide-register-groups.md).  
   
- Podrobný úvod ke konceptům za registry a o okně registr, najdete v části [základní informace o ladění: Registr – okno](../debugger/debugging-basics-registers-window.md).  
+ Úvod do konceptů za registry a v okně Registry najdete v části [základy ladění: Registry Window](../debugger/debugging-basics-registers-window.md).  
   
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-display-the-registers-window"></a>Chcete-li zobrazit okno registrů  
+### <a name="to-display-the-registers-window"></a>Zobrazení okna Registry  
   
-- Na **ladění** nabídce zvolte **Windows**a klikněte na tlačítko **zaregistruje**.  
+- V nabídce **ladit** zvolte **okna**a pak zvolte **Registry**.  
   
-     Ladicí program musí být spuštěná nebo v režimu pozastavení.  
+     Ladicí program musí být spuštěný nebo v režimu přerušení.  
   
     > [!NOTE]
-    > Informace o registru není k dispozici pro skript nebo aplikace SQL.  
+    > Informace o registraci nejsou k dispozici pro skripty nebo aplikace SQL.  
   
 ## <a name="see-also"></a>Viz také  
- [Základy ladění: Registr – okno](../debugger/debugging-basics-registers-window.md)   
+ [Základy ladění: okno Registry](../debugger/debugging-basics-registers-window.md)   
  [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)   
- [Základy ladění: Okno Registry](../debugger/debugging-basics-registers-window.md)
+ [Základní informace k ladění: okno registrů](../debugger/debugging-basics-registers-window.md)

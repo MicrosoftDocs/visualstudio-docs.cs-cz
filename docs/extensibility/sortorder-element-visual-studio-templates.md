@@ -1,5 +1,5 @@
 ---
-title: Prvek SortOrder (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: Element prořazení (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 935d00335a21d3e129e79ce351e554ea93787447
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699956"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder – element (šablony sady Visual Studio)
-Určuje hodnotu, která se používá k uspořádání šablony, mimo jiné šablony ve stejné kategorii, jak se zobrazí v dialogovém okně **Nový projekt** nebo Přidat **novou položku.**
+Určuje hodnotu, která se používá k uspořádání šablony, mezi ostatními šablonami ve stejné kategorii, jak se zobrazuje v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .
 
- \<VSTemplate \<> TemplateData> \<pořadí řazení>
+ \<VSTemplate> \<TemplateData>
+ \<SortOrder>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SortOrder> ... </SortOrder>
@@ -36,28 +37,28 @@ Určuje hodnotu, která se používá k uspořádání šablony, mimo jiné šab
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- A, `integer` který představuje hodnotu pořadí řazení.
+ `integer`Hodnota, která představuje hodnotu pořadí řazení.
 
 ## <a name="remarks"></a>Poznámky
- `SortOrder`je volitelný prvek. Výchozí hodnota je 100 a všechny hodnoty musí být násobky 10.
+ `SortOrder` je volitelný prvek. Výchozí hodnota je 100 a všechny hodnoty musí být násobkem 10.
 
- Prvek `SortOrder` je ignorován pro uživatelem vytvořené šablony. Všechny uživatelem vytvořené šablony jsou seřazeny abecedně.
+ `SortOrder`Element je ignorován pro uživatelem vytvořené šablony. Všechny uživatelem vytvořené šablony jsou seřazené abecedně.
 
- Šablony s nízkými hodnotami pořadí řazení se zobrazí v dialogovém okně **Nový projekt** nebo Nová **přidat položku** před šablonami s vysokými hodnotami pořadí řazení.
+ Šablony s nízkou hodnotou pořadí řazení se zobrazí v dialogovém okně **Nový projekt** nebo **Nový přidat položku** před šablonami, které mají vysoké hodnoty pořadí řazení.
 
 ## <a name="example"></a>Příklad
  Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablonu standardní třídy.
@@ -79,7 +80,7 @@ Určuje hodnotu, která se používá k uspořádání šablony, mimo jiné šab
 </VSTemplate>
 ```
 
- V tomto příkladu `SortOrder` je prvek poměrně vysoký. Je pravděpodobné, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] že jiné šablony `SortOrder` položek budou `290` mít hodnotu nižší než a zobrazí se před touto šablonou v dialogovém okně **Nová položka.**
+ V tomto příkladu `SortOrder` je prvek relativně vysoký. Je pravděpodobnější, že ostatní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony položek budou mít `SortOrder` hodnotu nižší než `290` a zobrazí se před touto šablonou v dialogovém okně **Nová položka** .
 
 ## <a name="see-also"></a>Viz také
 - [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

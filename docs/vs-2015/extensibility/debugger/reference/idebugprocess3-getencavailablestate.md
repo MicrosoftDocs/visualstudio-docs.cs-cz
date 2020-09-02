@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::GetENCAvailableState | Dokumentace Microsoftu
+title: 'IDebugProcess3:: GetENCAvailableState | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5cf5941ff75360c64add85e72a4c02c3ad716309
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405660"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802582"
 ---
 # <a name="idebugprocess3getencavailablestate"></a>IDebugProcess3::GetENCAvailableState
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte aktuální stav funkce upravit a pokračovat procesu. Dodavatel port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.  
+Tato metoda získá aktuální stav operace Upravit a pokračovat. Vlastní dodavatel portu by měl vždycky vracet `E_NOTIMPL` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +40,16 @@ int GetENCAvailableState(
   
 #### <a name="parameters"></a>Parametry  
  `pReason`  
- [out] Hodnota z [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) výčtu.  
+ mimo Hodnota z výčtu [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 > [!NOTE]
-> Dodavatel port. Tento vlastní port byste vždy vrátí `E_NOTIMPL`.  
+> Vlastní dodavatel portu by měl vždycky vracet `E_NOTIMPL` .  
   
 ## <a name="remarks"></a>Poznámky  
- Tento stav může být ovlivněna [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
+ Tento stav může mít vliv na [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

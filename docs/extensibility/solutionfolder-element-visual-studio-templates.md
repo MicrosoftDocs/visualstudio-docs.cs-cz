@@ -1,5 +1,5 @@
 ---
-title: Element_složky_řešení (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: SolutionFolder – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3262a5dcc0f226a0ac1b3aa08219fb89dbf70e83
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700004"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder – element (šablony sady Visual Studio)
 Seskupuje projekty do víceprojektových šablon.
 
- \<VSTemplate \<> TemplateContent \<> \<ProjectCollection>>
+ \<VSTemplate> \<TemplateContent>
+ \<ProjectCollection>
+ \<SolutionFolder>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SolutionFolder Name="DirectoryName">
@@ -41,7 +43,7 @@ Seskupuje projekty do víceprojektových šablon.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Požadovaný atribut.<br /><br /> Název složky řešení.|
+|`Name`|Požadovaný atribut.<br /><br /> Název složky řešení|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
@@ -58,10 +60,10 @@ Seskupuje projekty do víceprojektových šablon.
 |`SolutionFolder`|Seskupuje projekty do víceprojektových šablon.|
 
 ## <a name="remarks"></a>Poznámky
- Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. Prvek `SolutionFolder` se používá k uspořádání projektů v šabloně do skupin. Složky určené `SolutionFolder` prvky jsou vytvořeny jako [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]složky řešení v projektu v aplikaci . Další informace o šablonách pro více projektů naleznete v [tématu How to: Create Multi-Project Templates](../ide/how-to-create-multi-project-templates.md).
+ Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `SolutionFolder`Prvek slouží k uspořádání projektů v šabloně do skupin. Složky určené `SolutionFolder` prvky jsou vytvořeny jako složky řešení v projektu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Další informace o šablonách více projektů naleznete v tématu [How to: Create Multi-Project Templates](../ide/how-to-create-multi-project-templates.md).
 
 ## <a name="example"></a>Příklad
- Tento příklad `SolutionFolder` používá prvek k rozdělení šablony více `Math Classes` projektů `Graphics Classes`do dvou skupin a . Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny v každé složce řešení.
+ V tomto příkladu se používá `SolutionFolder` element k rozdělení šablony více projektů do dvou skupin `Math Classes` a `Graphics Classes` . Šablona obsahuje čtyři projekty, z nichž dva jsou umístěny do každé složky řešení.
 
 ```
 <VSTemplate Version="3.0.0" Type="ProjectGroup"

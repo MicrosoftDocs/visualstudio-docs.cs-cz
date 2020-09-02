@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ef802958817b43dd66973db66a80d328454aa83
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329260"
 ---
 # <a name="optimizing-profiler-settings"></a>Optimalizace nastavení profileru
@@ -49,5 +49,5 @@ Některé nástroje, například nástroj [využití CPU](../profiling/cpu-usage
 ## <a name="see-also"></a>Viz také
 
 - [Spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-- [Současné použití více nástrojů profileru](../profiling/use-multiple-profiler-tools-simultaneously.md)
+- [Souběžné používání více nástrojů profileru](../profiling/use-multiple-profiler-tools-simultaneously.md)
 - [Porozumění metodám shromažďování údajů o výkonu](../profiling/understanding-performance-collection-methods-perf-profiler.md)

@@ -25,10 +25,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 569254c9df668c7755116f37a819fe65a3ecaa59
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670464"
 ---
 # <a name="install-and-manage-local-content"></a>Instalace a správa místního obsahu
@@ -52,7 +52,7 @@ Pomocí Microsoft Help Viewer můžete přidat, odebrat, aktualizovat a přesuno
 
     - Zadejte cestu k souboru. msha nebo adresu URL koncového bodu služby.
 
-    - Klikněte na tlačítko Procházet ( **...** ) a přejděte k souboru. msha.
+    - Klikněte na tlačítko Procházet (**...**) a přejděte k souboru. msha.
 
     - V seznamu vyberte položku, která se naposledy používala.
 
@@ -125,4 +125,4 @@ Pomocí Microsoft Help Viewer můžete přidat, odebrat, aktualizovat a přesuno
 3. Po přesunutí obsahu klikněte na tlačítko **Zavřít** .
 
 ## <a name="see-also"></a>Viz také
- [Microsoft Help Viewer 2.2](../ide/microsoft-help-viewer.md)
+ [Microsoft Help Viewer](../ide/microsoft-help-viewer.md)

@@ -74,10 +74,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22307c44e4f82056887fadf6e8fde9e1449a19a5
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247940"
 ---
 # <a name="crt-debug-heap-details"></a>Podrobnosti haldy ladění CRT
@@ -147,7 +147,7 @@ Každý blok paměti v haldě ladění je přiřazen k jednomu z pěti typů alo
 
 `_CRT_BLOCK` Bloky paměti, které jsou přiděleny interně mnoha funkcím knihovny run-time, jsou označeny jako bloky CRT, aby mohly být zpracovány samostatně. V důsledku toho nemusí být detekce nevracení a jiné operace ovlivněny. Přidělení nesmí nikdy přidělit, znovu přidělit nebo uvolnit libovolný blok typu CRT.
 
-`_CLIENT_BLOCK` Aplikace může uchovávat zvláštní sledování dané skupiny přidělení pro účely ladění jejich přidělením jako tento typ bloku paměti pomocí explicitních volání funkcí ladění haldy. Knihovna MFC například přiděluje všechny **objektů CObject** jako klientské bloky; jiné aplikace mohou v klientských blocích uchovávat různé paměťové objekty. Podtypy klientských bloků lze také zadat pro lepší členitost sledování. Chcete-li určit podtypy klientských bloků, posunete číslo nalevo o 16 bitech a `OR` s `_CLIENT_BLOCK` . Například:
+`_CLIENT_BLOCK` Aplikace může uchovávat zvláštní sledování dané skupiny přidělení pro účely ladění jejich přidělením jako tento typ bloku paměti pomocí explicitních volání funkcí ladění haldy. Knihovna MFC například přiděluje všechny **objektů CObject** jako klientské bloky; jiné aplikace mohou v klientských blocích uchovávat různé paměťové objekty. Podtypy klientských bloků lze také zadat pro lepší členitost sledování. Chcete-li určit podtypy klientských bloků, posunete číslo nalevo o 16 bitech a `OR` s `_CLIENT_BLOCK` . Příklad:
 
 ```cpp
 #define MYSUBTYPE 4
@@ -181,10 +181,10 @@ Příznak **_crtDbgFlag** obsahuje následující bitová pole:
 |Bitové pole|Výchozí<br /><br /> value|Popis|
 |---------------|-----------------------|-----------------|
 |**_CRTDBG_ALLOC_MEM_DF**|Zapnout|Zapne alokaci ladění. Když je tento bit vypnutý, přidělení zůstane zřetězené společně, ale jeho typ bloku je **_IGNORE_BLOCK**.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|Vypnout|Zabraňuje ve skutečném uvolnění paměti, jako při simulaci podmínek s nízkou pamětí. Pokud je tento bit zapnutý, uvolněné bloky jsou uchovávány v propojeném seznamu haldy ladění, ale jsou označeny jako **_FREE_BLOCK** a jsou vyplněny speciální bajtovou hodnotou.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|Vypnout|Způsobí, že **_CrtCheckMemory** být volány při každém přidělení a zrušení přidělení. To zpomaluje provádění, ale rychle zachycuje chyby.|
-|**_CRTDBG_CHECK_CRT_DF**|Vypnout|Způsobí, že bloky označené jako Type **_CRT_BLOCK** mají být zahrnuty do operací detekce nevracení a rozdíl stavu. Pokud je tento bit vypnutý, paměť používaná interně knihovnou runtime se během takových operací ignoruje.|
-|**_CRTDBG_LEAK_CHECK_DF**|Vypnout|Způsobuje kontrolu nevracení při ukončení programu prostřednictvím volání **_CrtDumpMemoryLeaks**. Pokud aplikace nedokázala uvolnit veškerou přidělenou paměť, bude vygenerována zpráva o chybách.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|Vypnuto|Zabraňuje ve skutečném uvolnění paměti, jako při simulaci podmínek s nízkou pamětí. Pokud je tento bit zapnutý, uvolněné bloky jsou uchovávány v propojeném seznamu haldy ladění, ale jsou označeny jako **_FREE_BLOCK** a jsou vyplněny speciální bajtovou hodnotou.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|Vypnuto|Způsobí, že **_CrtCheckMemory** být volány při každém přidělení a zrušení přidělení. To zpomaluje provádění, ale rychle zachycuje chyby.|
+|**_CRTDBG_CHECK_CRT_DF**|Vypnuto|Způsobí, že bloky označené jako Type **_CRT_BLOCK** mají být zahrnuty do operací detekce nevracení a rozdíl stavu. Pokud je tento bit vypnutý, paměť používaná interně knihovnou runtime se během takových operací ignoruje.|
+|**_CRTDBG_LEAK_CHECK_DF**|Vypnuto|Způsobuje kontrolu nevracení při ukončení programu prostřednictvím volání **_CrtDumpMemoryLeaks**. Pokud aplikace nedokázala uvolnit veškerou přidělenou paměť, bude vygenerována zpráva o chybách.|
 
 ![Zpět na obsah nejvyšší úrovně](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [Contents](#BKMK_Contents)
 

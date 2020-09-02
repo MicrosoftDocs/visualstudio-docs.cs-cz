@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateObject | Dokumenty společnosti Microsoft
+title: 'IDebugFunctionObject2:: CreateObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6de1a30a032919a90fbb3d760837d5eeca00feaf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728475"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
-Vytvoří objekt, který používá konstruktor dané nastavení hodnocení příznak a hodnotu časového času.
+Vytvoří objekt, který používá konstruktor se zadaným nastavením příznaku vyhodnocení a hodnotou časového limitu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,28 +50,28 @@ int CreateObject (
 
 ## <a name="parameters"></a>Parametry
 `pConstructor`\
-[v] [Objekt IDebugFunctionObject,](../../../extensibility/debugger/reference/idebugfunctionobject.md) který představuje konstruktor objektu, který má být vytvořen.
+pro Objekt [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) , který představuje konstruktor objektu, který má být vytvořen.
 
 `dwArgs`\
-[v] Počet parametrů v `pArg` poli. Představuje počet parametrů předaných konstruktoru.
+pro Počet parametrů v `pArg` poli. Představuje počet parametrů předaných konstruktoru.
 
 `pArgs`\
-[v] Pole [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekty, které představuje parametry předané konstruktoru.
+pro Pole objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , které představují parametry předané konstruktoru.
 
 `dwEvalFlags`\
-[v] Kombinace příznaků z výčtu [EVALFLAGS,](../../../extensibility/debugger/reference/evalflags.md) které určují, jak má být hodnocení provedeno.
+pro Kombinace příznaků z výčtu [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) , která určuje, jak má být provedeno vyhodnocení.
 
 `dwTimeout`\
-[v] Maximální doba v milisekundách čekání před návratem z této metody. Použití **INFINITE** čekat neomezeně dlouho.
+pro Maximální doba (v milisekundách), po kterou se má čekat, než se vrátí z této metody. Nepoužívejte **nekonečné** čekání na neomezenou dobu.
 
 `ppObject`\
-[out] Vrátí **objekt IDebugObject** představující nově vytvořený objekt.
+mimo Vrátí **IDebugObject** představující nově vytvořený objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volání této metody k vytvoření objektu, který představuje instanci třídy nebo jiného komplexního typu, který vyžaduje konstruktor, který je parametrem.
+ Zavolejte tuto metodu pro vytvoření objektu, který představuje instanci třídy, nebo jiného komplexního typu, který vyžaduje konstruktor, který je parametrem.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

@@ -13,18 +13,18 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 3a49859a8cd1c4ffb01f93bf2539fc16c42f8c4c
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277880"
 ---
 # <a name="demo-sample"></a>Demonstrační ukázka
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kódu C/C++ v případě vad](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Postupy vytvoří:  
+Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kódu C/C++ pro vady](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Postupy vytvoří:  
   
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] řešení s názvem CppDemo.  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Řešení s názvem CppDemo.  
   
 - Statický projekt knihovny s názvem CodeDefects.  
   
@@ -36,9 +36,9 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 1. Klikněte na nabídku **soubor** , přejděte na příkaz **Nový**a poté klikněte na možnost **Nový projekt**.  
   
-2. V seznamu stromu **typů projektů** není vizuál C++ ve výchozím jazyku v sadě vs. **Další jazyky**.  
+2. V seznamu stromu **typů projektu** , pokud Visual C++ není výchozím jazykem v sadě Visual Studio a rozšířit **ostatní jazyky**.  
   
-3. Rozbalte **vizuál C++** a pak klikněte na **Obecné**.  
+3. Rozbalte položku **Visual C++** a potom klikněte na možnost **Obecné**.  
   
 4. V nabídce **šablony**klikněte na **prázdný projekt**.  
   
@@ -56,17 +56,17 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 3. V seznamu **Obecné** vyberte text ve sloupci vedle položku **cílové rozšíření**a pak zadejte **. lib**.  
   
-4. V části **výchozí nastavení projektu**klikněte na sloupec vedle možnosti **typ konfigurace**a pak klikněte na **Statická knihovna lib (. lib)** .  
+4. V části **výchozí nastavení projektu**klikněte na sloupec vedle možnosti **typ konfigurace**a pak klikněte na **Statická knihovna lib (. lib)**.  
   
 ### <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Přidání záhlaví a zdrojového souboru do projektu CodeDefects  
   
 1. V Průzkumník řešení rozbalte **CodeDefects**, klikněte pravým tlačítkem na **hlavičkové soubory**, klikněte na **Přidat**a pak klikněte na **Nová položka**.  
   
-2. V dialogovém okně **Přidat novou položku** klikněte na **kód**a pak klikněte na **hlavičkový soubor (. h)** .  
+2. V dialogovém okně **Přidat novou položku** klikněte na **kód**a pak klikněte na **hlavičkový soubor (. h)**.  
   
 3. Do pole **název** zadejte text **Chyba. cpp** a potom klikněte na tlačítko **Přidat**.  
   
-4. Zkopírujte následující kód a vložte ho do souboru **Chyba. cpp** v editoru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+4. Zkopírujte následující kód a vložte ho do souboru **Chyba. cpp** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] editoru.  
   
     ```  
     #include <windows.h>  
@@ -90,11 +90,11 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 5. V Průzkumník řešení klikněte pravým tlačítkem myši na **zdrojové soubory**, přejděte na **Nový**a klikněte na **Nová položka**.  
   
-6. V dialogovém okně **Přidat novou položku** klikněte na  **C++ soubor (. cpp)** .  
+6. V dialogovém okně **Přidat novou položku** klikněte na **soubor C++ (. cpp)** .  
   
 7. Do pole **název** zadejte text **Chyba. cpp** a potom klikněte na tlačítko **Přidat**.  
   
-8. Zkopírujte následující kód a vložte ho do souboru. h chyby v editoru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+8. Zkopírujte následující kód a vložte ho do souboru. h chyby v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] editoru.  
   
     ```  
     #include <stdlib.h>  
@@ -160,7 +160,7 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 1. V Průzkumník řešení klikněte na **CppDemo**, přejděte na **Přidat**a pak klikněte na **Nový projekt**.  
   
-2. V dialogovém okně **Přidat nový projekt** rozbalte položku vizuál C++, klikněte na položku **Obecné**a poté klikněte na možnost **prázdný projekt**.  
+2. V dialogovém okně **Přidat nový projekt** rozbalte Visual C++, klikněte na **Obecné**a pak klikněte na **prázdný projekt**.  
   
 3. Do textového pole **název** zadejte **Anotace**a potom klikněte na tlačítko **Přidat**.  
   
@@ -170,17 +170,17 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 6. V seznamu **Obecné** vyberte text ve sloupci vedle položku **cílové rozšíření**a pak zadejte **. lib**.  
   
-7. V části **výchozí nastavení projektu**klikněte na sloupec vedle možnosti **typ konfigurace**a pak klikněte na **Statická knihovna lib (. lib)** .  
+7. V části **výchozí nastavení projektu**klikněte na sloupec vedle možnosti **typ konfigurace**a pak klikněte na **Statická knihovna lib (. lib)**.  
   
 ### <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Přidat hlavičkový soubor a zdrojový soubor do projektu poznámky  
   
 1. V Průzkumník řešení rozbalte položku **poznámky**, klikněte pravým tlačítkem myši na **hlavičkové soubory**, klikněte na **Přidat**a pak klikněte na **Nová položka**.  
   
-2. V dialogovém okně **Přidat novou položku** klikněte na **soubor hlaviček (. h)** .  
+2. V dialogovém okně **Přidat novou položku** klikněte na **soubor hlaviček (. h)**.  
   
 3. Do pole **název** zadejte **Anotace. h** a potom klikněte na tlačítko **Přidat**.  
   
-4. Zkopírujte následující kód a vložte ho do souboru **poznámky. h** v editoru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+4. Zkopírujte následující kód a vložte ho do souboru **poznámky. h** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] editoru.  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  
@@ -199,11 +199,11 @@ Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kó
   
 5. V Průzkumník řešení klikněte pravým tlačítkem myši na **zdrojové soubory**, přejděte na **Nový**a klikněte na **Nová položka**.  
   
-6. V dialogovém okně **Přidat novou položku** klikněte na **kód** a potom klikněte na  **C++ soubor (. cpp)** .  
+6. V dialogovém okně **Přidat novou položku** klikněte na **kód** a potom klikněte na **soubor C++ (. cpp)** .  
   
 7. Do pole **název** zadejte **Anotace. cpp** a potom klikněte na tlačítko **Přidat**.  
   
-8. Zkopírujte následující kód a vložte ho do souboru **poznámky. cpp** v editoru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+8. Zkopírujte následující kód a vložte ho do souboru **poznámky. cpp** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] editoru.  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  

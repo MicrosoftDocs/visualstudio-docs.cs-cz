@@ -1,5 +1,5 @@
 ---
-title: Prostředky v balíčcích VSPackage | Dokumentace Microsoftu
+title: Prostředky v VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,44 +13,44 @@ caps.latest.revision: 24
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 90674d17cdc3fb8956fd6eedeb3acb27226620cb
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696089"
 ---
 # <a name="resources-in-vspackages"></a>Prostředky v balíčcích VSPackage
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Lokalizované prostředky lze vložit v nativní satelitní knihovny DLL uživatelského rozhraní, spravovaných satelitních knihoven DLL, nebo ve spravované VSPackage samotný.  
+Lokalizované prostředky můžete vkládat do nativních knihoven DLL satelitního uživatelského rozhraní, spravovaných satelitních knihoven DLL nebo ve spravovaném VSPackage.  
   
- Některé prostředky nemůže být vložený v balíčcích VSPackage. Následující spravované typy lze vložit:  
+ Některé prostředky nelze vložit do VSPackage. Je možné vložit následující spravované typy:  
   
 - Řetězce  
   
-- Klíče načtení balíku sady (které jsou také řetězců)  
+- Klíče načtení balíčku (také řetězce)  
   
-- Ikony okno nástroje  
+- Ikony okna nástrojů  
   
-- Zkompilované soubory výstupní tabulky příkaz (c)  
+- Soubory výstupu zkompilované tabulky (technický ředitel)  
   
 - Rastrové obrázky technický ředitel  
   
-- Nápověda k příkazovému řádku  
+- Help příkazového řádku  
   
-- O dat dialogového okna  
+- O datech dialogových oken  
   
-  Prostředky v spravovaného balíčku jsou vybrány pomocí ID prostředku. Výjimka je soubor technický ředitel, který musí mít název CTMENU. Technologický ředitel souboru musí být uvedena v tabulce prostředků jako `byte[]`. Všechny ostatní položky prostředků se identifikují podle typu.  
+  Prostředky ve spravovaném balíčku se vyberou podle ID prostředku. Výjimkou je soubor technický ředitel, který musí být pojmenovaný CTMENU. Soubor technický ředitel se musí nacházet v tabulce prostředků jako `byte[]` . Všechny ostatní položky prostředků jsou identifikovány podle typu.  
   
-  Můžete použít <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> atribut skutečnost [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , spravované prostředky jsou k dispozici.  
+  Můžete použít <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> atribut k označení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] spravovaných prostředků, které jsou k dispozici.  
   
   [!code-csharp[VSSDKResources#1](../../snippets/csharp/VS_Snippets_VSSDK/vssdkresources/cs/vssdkresourcespackage.cs#1)]
   [!code-vb[VSSDKResources#1](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkresources/vb/vssdkresourcespackage.vb#1)]  
   
-  Nastavení <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> tímto způsobem znamená, že [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ignorovat nespravované satelitní knihovny DLL při vyhledávání prostředků, například pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>. Pokud [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zaznamená dva nebo více zdrojů, které mají stejné ID prostředku, použije první prostředek, které nalezne.  
+  Nastavení <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> tímto způsobem označuje, že [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] by měl ignorovat nespravované satelitní knihovny DLL při hledání prostředků, například pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A> . Pokud [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nalezne dva nebo více prostředků, které mají stejné ID prostředku, použije první nalezený prostředek.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu je spravované reprezentace ikonu okna nástroje.  
+ Následující příklad je spravovaná reprezentace ikony okna nástroje.  
   
 ```  
 <data name="1001"  
@@ -66,7 +66,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>  
 ```  
   
- Následující příklad ukazuje postup vložení technologický ředitel bajtové pole, které musí mít název CTMENU.  
+ Následující příklad ukazuje, jak vložit pole technický ředitel Byte, které musí mít název CTMENU.  
   
 ```  
 <data name="CTMENU"  
@@ -83,12 +83,12 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 ```  
   
 ## <a name="implementation-notes"></a>Poznámky k implementaci  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zpoždění načítání rozšíření VSPackages, kdykoli je to možné. Vložení souboru technologický ředitel v sadě VSPackage důsledkem je, že [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] musí načíst všechny takové rozšíření VSPackages paměti během instalace, což je při vytváření tabulky sloučené příkazů. Prostředky můžete extrahovat z VSPackage prozkoumáním metadata bez spuštění kódu v sady VSPackage. V tuto chvíli není inicializován sady VSPackage, tak ztrátě výkonu je minimální.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zpoždění načítání VSPackage, kdykoli je to možné. V důsledku vložení souboru technický ředitel do VSPackage je [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nutné načíst všechny takové sady VSPackage v paměti během instalace, což je při sestavení sloučených příkazových tabulek. Prostředky je možné extrahovat ze sady VSPackage tím, že prozkoumáte metadata bez spuštění kódu v VSPackage. Rozhraní VSPackage není v tuto chvíli inicializováno, takže ztráta výkonu je minimální.  
   
- Když [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] žádostí o prostředku z balíčku VSPackage po dokončení instalace, tento balíček je pravděpodobně již načten a inicializován, takže ke ztrátě výkonu je minimální.  
+ Když aplikace [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] po instalaci vyžádá prostředek ze sady VSPackage, může být tento balíček již načten a inicializován, takže ztráta výkonu je minimální.  
   
 ## <a name="see-also"></a>Viz také  
- [Spravovaná rozšíření VSPackages](../../misc/managed-vspackages.md)   
- [Správa rozšíření VSPackages](../../extensibility/managing-vspackages.md)   
- [Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](https://msdn.microsoft.com/library/3a1100ae-a9c8-47b5-adbd-cbedef5992ef)   
- [Spravovaná rozšíření VSPackages](../../misc/managed-vspackages.md)
+ [Spravované VSPackage](../../misc/managed-vspackages.md)   
+ [Správa VSPackage](../../extensibility/managing-vspackages.md)   
+ [Lokalizované prostředky v aplikacích MFC: satelitní knihovny DLL](https://msdn.microsoft.com/library/3a1100ae-a9c8-47b5-adbd-cbedef5992ef)   
+ [Spravované VSPackage](../../misc/managed-vspackages.md)

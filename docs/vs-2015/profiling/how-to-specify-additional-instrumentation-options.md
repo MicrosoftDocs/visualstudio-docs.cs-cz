@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení dalších možností instrumentace | Dokumentace Microsoftu'
+title: 'Postupy: určení dalších možností instrumentace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,36 +16,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d4bc6eeb208ab6d80168431f110f0f6169abbc82
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442141"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64794727"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>Postupy: Určení dalších možností instrumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vám umožňuje instrumentovat binární soubory z [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] integrované vývojové prostředí (IDE) nebo pomocí nástrojů příkazového řádku. Pokud jste instrumentovali binární soubor z integrovaného vývojového prostředí, můžete určit objem dat shromážděných během instrumentace zadáním dalších možností instrumentace do [VSInstr](../profiling/vsinstr.md) nástroj. Tyto možnosti jsou dostupné na cílové úrovni nebo relace. Například pokud chcete zahrnout nebo vyloučit určité funkce během procesu instrumentace, použijte možnost Další instrumentaci na cílové úrovni.  
+Můžete instrumentovat binární soubory z [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] integrovaného vývojového prostředí (IDE) nebo pomocí nástrojů příkazového řádku. Pokud instrumentovat binární data z integrovaného vývojového prostředí (IDE), můžete řídit objem dat shromažďovaných během instrumentace tím, že zadáte další možnosti instrumentace pro nástroj [VSInstr](../profiling/vsinstr.md) . Tyto možnosti jsou k dispozici v relaci nebo na cílové úrovni. Pokud například chcete zahrnout nebo vyloučit konkrétní funkce během procesu instrumentace, použijte možnost Další instrumentace na cílové úrovni.  
   
  **Požadavky**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!IMPORTANT]
-> Každý test, který je vložen mírně změní chování původního programu. Tato změna způsobí, že režii během analýzy. I když je odečtena aproximaci Tato dodatečná režie, má stále drobným časování dopady na aplikací s více vlákny. [VSInstr](../profiling/vsinstr.md) možnosti nápovědy řízení shromažďování dat během profilace nástroj.  
+> Každý vložený test upraví chování původního programu mírně. Tato změna způsobí režii v době analýzy. I když je aproximace této režie odečtena, má stále jemný efekt časování u vícevláknových aplikací. Možnosti nástroje [VSInstr](../profiling/vsinstr.md) slouží k řízení shromažďování dat během profilace.  
   
-### <a name="to-specify-additional-instrumentation-option"></a>Chcete-li určit možnost Další instrumentace  
+### <a name="to-specify-additional-instrumentation-option"></a>Určení dalších možností instrumentace  
   
-1. V **prohlížeč výkonu**, vyberte **relace výkonu** a pak klikněte pravým tlačítkem a vyberte **vlastnosti**.  
+1. V **prohlížeč výkonu**vyberte **relaci výkonu** , klikněte na ni pravým tlačítkem a vyberte **vlastnosti**.  
   
-2. V **stránky vlastností**, klikněte na tlačítko **Upřesnit** vlastnosti.  
+2. Na **stránkách vlastnosti**klikněte na **Upřesnit** vlastnosti.  
   
-3. Zadejte možnosti **dalších možností instrumentace** pole.  
+3. Možnosti typu v poli **Další možnosti instrumentace** .  
   
-     Například použijte /CONTROL:THREAD k určení profilování úrovně. Úplný seznam možností najdete v tématu [VSInstr](../profiling/vsinstr.md).  
+     Například použijte/CONTROL: THREAD k určení úrovně profilace. Úplný seznam možností najdete v tématu [VSInstr](../profiling/vsinstr.md).  
   
 4. Klikněte na **OK**.  
   
 ## <a name="see-also"></a>Viz také  
- [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)   
+ [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)   
  [Profilace prostřednictvím příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

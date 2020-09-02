@@ -1,5 +1,5 @@
 ---
-title: Přihlášení k odběru události | Dokumenty společnosti Microsoft
+title: Přihlášení k odběru události | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,29 +12,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6aefe2efce897aefc26f63835844b0cc705fb5b1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699684"
 ---
 # <a name="subscribing-to-an-event"></a>Přihlášení k odběru události
-Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na události v tabulce spuštěného dokumentu (RDT). Okno nástroje je hostitelem uživatelského ovládacího prvku, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>. Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> spojuje rozhraní s událostmi.
+Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na události v běžící tabulce dokumentů (RDT). Okno nástroje je hostitelem uživatelského ovládacího prvku, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Metoda připojuje rozhraní k událostem.
 
-## <a name="prerequisites"></a>Požadavky
- Počínaje Visual Studio 2015 neinstalujete sady Visual Studio SDK ze služby stažení. Je součástí volitelné funkce v nastavení sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace naleznete [v tématu Instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
+## <a name="prerequisites"></a>Předpoklady
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="subscribing-to-rdt-events"></a>Přihlášení k odběru událostí RDT
 
-#### <a name="to-create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástroje
+#### <a name="to-create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s oknem nástrojů
 
-1. Vytvořte projekt s názvem **RDTExplorer** pomocí šablony VSIX a přidejte vlastní šablonu položky okna nástroje s názvem **RDTExplorerWindow**.
+1. Vytvořte projekt s názvem **RDTExplorer** pomocí šablony VSIX a přidejte šablonu položky vlastního okna nástroje s názvem **RDTExplorerWindow**.
 
-     Další informace o vytvoření rozšíření pomocí okna nástroje naleznete v [tématu Vytvoření rozšíření s oknem nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).
+     Další informace o vytváření rozšíření pomocí panelu nástrojů naleznete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-#### <a name="to-subscribe-to-rdt-events"></a>Chcete-li se přihlásit k odběru událostí RDT
+#### <a name="to-subscribe-to-rdt-events"></a>Přihlášení k odběru událostí RDT
 
-1. Otevřete soubor RDTExplorerWindowControl.xaml a `button1`odstraňte tlačítko s názvem . Přidejte <xref:System.Windows.Forms.ListBox> ovládací prvek a přijměte výchozí název. Prvek Grid by měl vypadat takto:
+1. Otevřete soubor RDTExplorerWindowControl. XAML a odstraňte tlačítko s názvem `button1` . Přidejte <xref:System.Windows.Forms.ListBox> ovládací prvek a přijměte výchozí název. Element Grid by měl vypadat takto:
 
     ```xml
     <Grid>
@@ -45,7 +45,7 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     </Grid>
     ```
 
-2. Otevřete soubor RDTExplorerWindow.cs v zobrazení kódu. Přidejte následující pomocí direktivy na začátek souboru.
+2. Otevřete soubor RDTExplorerWindow.cs v zobrazení kódu. Na začátek souboru přidejte následující direktivy using.
 
     ```csharp
     using Microsoft.VisualStudio;
@@ -53,18 +53,18 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-3. Upravte `RDTExplorerWindow` třídu tak, aby kromě odvození <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> z třídy <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> implementuje rozhraní.
+3. Upravte `RDTExplorerWindow` třídu tak, aby kromě odvození od <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> třídy implementovala <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> rozhraní.
 
     ```csharp
     public class RDTExplorerWindow : ToolWindowPane, IVsRunningDocTableEvents
     {. . .}
     ```
 
-4. Implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>.
+4. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> .
 
-    - Implementujte rozhraní. Umístěte kurzor na název IVsRunningDocTableEvents. Měli byste vidět žárovku na levém okraji. Klepněte na šipku dolů vpravo od žárovky a vyberte **implementovat rozhraní**.
+    - Implementujte rozhraní. Umístěte kurzor na název IVsRunningDocTableEvents. Na levém okraji by se měla zobrazit žárovka. Klikněte na šipku dolů napravo od žárovky a vyberte **implementovat rozhraní**.
 
-5. V každé metodě v rozhraní `throw new NotImplementedException();` nahraďte řádek tímto:
+5. V každé metodě v rozhraní nahraďte řádek `throw new NotImplementedException();` tímto:
 
     ```csharp
     return VSConstants.S_OK;
@@ -76,9 +76,9 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     private uint rdtCookie;
     ```
 
-     To obsahuje soubor cookie, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> který je vrácen metodou.
+     To uchovává soubor cookie vrácený <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> metodou.
 
-7. Přepsat metodu Initialize() rdtexplorerwindow pro registraci událostí RDT. Vždy byste měli získat služby v Metodě Initialize() nástroje ToolWindowPane, nikoli v konstruktoru.
+7. Přepište metodu Initialize () RDTExplorerWindow k registraci pro události RDT. Vždy byste měli získat služby v metodě Initialize () třídy ToolWindowPane, nikoli v konstruktoru.
 
     ```csharp
     protected override void Initialize()
@@ -89,9 +89,9 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     }
     ```
 
-     Služba <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> je volána <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> k získání rozhraní. Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> spojuje události RDT s objektem, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>, v tomto případě objekt RDTExplorer.
+     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>Služba se volá za účelem získání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Metoda propojuje události RDT s objektem, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> , v tomto případě objekt RDTExplorer.
 
-8. Aktualizujte metodu Dispose() služby RDTExplorerWindow.
+8. Aktualizujte metodu Dispose () RDTExplorerWindow.
 
     ```csharp
     protected override void Dispose(bool disposing)
@@ -105,9 +105,9 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     }
     ```
 
-     Metoda <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A> odstraní spojení mezi `RDTExplorer` oznámením události RDT.
+     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>Metoda odstraní propojení mezi `RDTExplorer` a RDT oznámení události.
 
-9. Přidejte následující řádek do <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A> těla obslužné rutiny těsně před `return` příkaz.
+9. Přidejte následující řádek do těla <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A> obslužné rutiny těsně před `return` příkaz.
 
     ```csharp
     public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
@@ -117,7 +117,7 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     }
     ```
 
-10. Přidejte podobný řádek do <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A> těla obslužné rutiny a k dalším událostem, které chcete zobrazit v seznamu.
+10. Přidejte podobný řádek do těla <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A> obslužné rutiny a dalším událostem, které chcete zobrazit v seznamu.
 
     ```csharp
     public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
@@ -127,12 +127,12 @@ Tento návod vysvětluje, jak vytvořit okno nástroje, které reaguje na událo
     }
     ```
 
-11. Sestavení projektu a začít ladění. Zobrazí se experimentální instance sady Visual Studio.
+11. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance sady Visual Studio.
 
-12. Otevřete **okno RDTExplorerWindow** (**Zobrazení / Ostatní Windows / RDTExplorerWindow**).
+12. Otevřete **RDTExplorerWindow** (**Zobrazit/další Windows/RDTExplorerWindow**).
 
      Otevře se okno **RDTExplorerWindow** s prázdným seznamem událostí.
 
 13. Otevřete nebo vytvořte řešení.
 
-     Jako `OnBeforeLastDocument` `OnAfterFirstDocument` události jsou aktivována, oznámení o každé události se zobrazí v seznamu událostí.
+     `OnBeforeLastDocument`Události a `OnAfterFirstDocument` jsou aktivovány, oznámení o každé události se zobrazí v seznamu událostí.

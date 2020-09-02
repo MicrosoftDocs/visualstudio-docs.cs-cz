@@ -1,5 +1,5 @@
 ---
-title: Požadavky na systém pro emulátor pro Android | Dokumentace Microsoftu
+title: Požadavky na systém pro emulátor pro Android | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -9,150 +9,150 @@ caps.latest.revision: 7
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: b1b77dc7e01ae791379dda52b305ebcdbbf68447
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433915"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64791045"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Systémové požadavky pro emulátor sady Visual Studio pro Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Emulátor Visual Studia pro Android běží jako virtuální počítač na Hyper-V, technologie virtualizace pro Windows 8 a novějších verzích. Pokud chcete spustit emulátor, musí počítač splňovat požadavky na spuštění technologie Hyper-V, jak je popsáno v tomto tématu.
+Emulátor sady Visual Studio pro Android běží jako virtuální počítač na technologii Hyper-V, technologie virtualizace pro systém Windows 8 a novější verze. Chcete-li spustit emulátor, musí počítač splňovat požadavky na spuštění technologie Hyper-V, jak je popsáno v tomto tématu.
 
- Instalační program se pokusí o konfiguraci těchto předpokladů pro vás tiše při instalaci emulátoru. Když instalační program úspěšně nakonfiguruje požadavky, emulátor jednoduše funguje podle očekávání. Jinak budete muset ručně povolte tyto požadavky. Pokud máte ručně konfigurovat požadavky související s postupy a nástroje se o tytéž kroky popsané [tady](https://msdn.microsoft.com/library/windows/apps/jj863509\(v=vs.105\).aspx) pro emulátor Windows Phone.
+ Instalační program se pokusí tyto požadavky nakonfigurovat pro tichou instalaci emulátoru. Když instalační program úspěšně nakonfiguruje požadavky, emulátor jednoduše funguje podle očekávání. V opačném případě bude možná nutné tyto požadavky povolit ručně. Pokud je nutné požadavky nakonfigurovat ručně, postupy a nástroje jsou stejný postup, který je popsaný [tady](https://msdn.microsoft.com/library/windows/apps/jj863509\(v=vs.105\).aspx) pro emulátor Windows Phone.
 
 > [!IMPORTANT]
-> Instalační program pro emulátor zkontroluje požadavky pro spuštění emulátoru Visual Studia pro Android. Pokud požadavky nejsou k dispozici, ale nevyžaduje je zobrazí upozornění.
+> Instalační program pro emulátor kontroluje předpoklady pro spuštění emulátoru sady Visual Studio pro Android. Zobrazí se upozornění, pokud požadavky nejsou k dispozici, ale nevyžadují je.
 
- Toto téma obsahuje následující části.
+ Toto téma obsahuje tyto části:
 
-- [Rychlé kontrolního seznamu](#Checklist)
+- [Rychlý kontrolní seznam](#Checklist)
 
 - [Požadavky na systém](#System)
 
-- [Požadavky na síť](#Network)
+- [Požadavky sítě](#Network)
 
 - [Požadavky technologie Hyper-V](#HyperV)
 
-- [Spouštění v emulátoru ze spouštěcí virtuální pevný disk se nepodporuje.](#BootableVHD)
+- [Spuštění emulátoru ze spustitelného virtuálního pevného disku se nepodporuje.](#BootableVHD)
 
-- [Technologie Hyper-V vyžaduje nešifrované a nekomprimované soubory](#Files)
+- [Technologie Hyper-V vyžaduje nekomprimované a nešifrované soubory.](#Files)
 
-## <a name="Checklist"></a> Rychlé kontrolního seznamu
- Tady je rychlý kontrolní seznam požadavky na spuštění emulátoru Visual Studia pro Android. Podrobnější informace najdete v tématu v následujících oddílech v tomto tématu.
+## <a name="quick-checklist"></a><a name="Checklist"></a> Rychlý kontrolní seznam
+ Tady je rychlý kontrolní seznam požadavků na spuštění emulátoru sady Visual Studio pro Android. Podrobnější informace najdete v následujících částech tohoto tématu.
 
  Požadavky na systém
 
-- Podpora technologie Hyper-V (viz níže uvedené požadavky technologie Hyper-V)
+- Podpora technologie Hyper-V (viz požadavky technologie Hyper-V níže)
 
-- 6 GB nebo více paměti RAM.
+- minimálně 6 GB paměti RAM.
 
-- 64bitová verze vydání verze Pro Windows 8, Windows 8.1, Windows 10 nebo vyšší
+- 64-bitová verze edice pro Windows 8, Windows 8.1, Windows10 nebo novější
 
 - Procesor, který podporuje SSSE3 nebo novější.
 
-  Požadavky na síť
+  Požadavky sítě
 
 - DHCP
 
-- Automaticky nakonfigurované DNS a nastavení brány
+- Automaticky nakonfigurovaná nastavení DNS a brány
 
   Požadavky technologie Hyper-V
 
 - V systému BIOS musí být podporovány následující funkce:
 
-  - Hardwarově řízenou virtualizaci
+  - Virtualizace s hardwarovým řízením
 
-  - Druhý překlad adres úrovně (SLAT)
+  - Překlad adres druhé úrovně (SLAT)
 
-  - Zabránění spuštění dat založené na hardwaru (DEP)
+  - Prevence spouštění dat pomocí hardwaru (DEP)
 
-- Ve Windows Hyper-V musí být povolený a spuštěný.
+- V systému Windows musí být technologie Hyper-V povolená a spuštěná.
 
-- Musíte být členem místní skupiny Správci Hyper-V.
+- Musíte být členem místní skupiny Administrators technologie Hyper-V.
 
-## <a name="System"></a> Požadavky na systém
+## <a name="system-requirements"></a><a name="System"></a> Požadavky na systém
  Počítač musí splňovat následující požadavky:
 
-- Podpora technologie Hyper-V (viz [požadavky technologie Hyper-V](#HyperV))
+- Podpora technologie Hyper-V (viz [požadavky technologie Hyper-v](#HyperV))
 
-- 6 GB nebo více paměti RAM.
+- minimálně 6 GB paměti RAM.
 
-- verze 64-bit edition Pro Windows 8, Windows 8.1, Windows 10 nebo vyšší.
+- 64-bitová verze edice pro Windows 8, Windows 8.1, Windows10 nebo vyšší
 
-  Chcete-li zkontrolovat požadavky na paměť RAM a Windows v Ovládacích panelech zvolte systém a zabezpečení a zvolte systému.
+  Chcete-li ověřit požadavky na paměť RAM a systém Windows, v Ovládacích panelech zvolte možnost systém a zabezpečení a pak zvolte možnost systém.
 
-  ![Zkontrolujte požadavky na systém](../cross-platform/media/android-emu-system-requirements.png "Android_Emu_System_Requirements")
+  ![Ověření systémových požadavků](../cross-platform/media/android-emu-system-requirements.png "Android_Emu_System_Requirements")
 
-## <a name="Network"></a> Požadavky na síť
- Síť musí splňovat následující požadavky:
+## <a name="network-requirements"></a><a name="Network"></a> Požadavky na síť
+ Vaše síť musí splňovat následující požadavky:
 
 - DHCP
 
-   Emulátor vyžaduje DHCP, protože samotný nakonfiguruje jako samostatnou zařízení v síti s jeho vlastní IP adresu.
+   Emulátor vyžaduje protokol DHCP, protože nakonfiguruje sám sebe jako samostatné zařízení v síti s vlastní IP adresou.
 
-- Automaticky nakonfigurované DNS a nastavení brány
+- Automaticky nakonfigurovaná nastavení DNS a brány
 
-   Není možné konfigurovat nastavení DNS a bránu ručně pro emulátor.
+   Pro emulátor není možné ručně nakonfigurovat nastavení DNS a brány.
 
-  Řešení potíží s problémy se sítí se spustila v emulátoru, naleznete v následujících tématech:
+  Řešení potíží se sítí v emulátoru najdete v následujících tématech:
 
 - [Poradce při potížích s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
 
-## <a name="HyperV"></a> Požadavky technologie Hyper-V
- Požadavky technologie Hyper-V v systému BIOS
+## <a name="hyper-v-requirements"></a><a name="HyperV"></a> Požadavky technologie Hyper-V
+ Požadavky na technologii Hyper-V v systému BIOS
 
- Systém BIOS počítače musí podporovat následující požadavky a musí být povolena:
+ Systém BIOS vašeho počítače musí podporovat následující požadavky a musí být povolen:
 
-- Hardwarově řízenou virtualizaci
+- Virtualizace s hardwarovým řízením
 
-- Druhý překlad adres úrovně (SLAT)
+- Překlad adres druhé úrovně (SLAT)
 
-- Zabránění spuštění dat založené na hardwaru (DEP)
+- Prevence spouštění dat pomocí hardwaru (DEP)
 
-  Požadavky technologie Hyper-V ve Windows
+  Požadavky na technologii Hyper-V ve Windows
 
-  Pokud váš počítač a nastavení systému BIOS jsou již nakonfigurována pro podporu technologie Hyper-V, instalační program povolí a spustí Hyper-V. Jinak budete muset ručně povolte tyto požadavky.
+  Pokud jsou nastavení počítače a systému BIOS již nakonfigurována pro podporu technologie Hyper-V, instalační program povolí a spustí technologii Hyper-V. V opačném případě bude možná nutné tyto požadavky povolit ručně.
 
-|Požadavek|Zkontrolujte a povolte tento požadavek|
+|Požadavek|Jak tento požadavek ověřit a povolit|
 |-----------------|----------------------------------------------|
-|Musí být nainstalována technologie Hyper-V|Použijte stejné pokyny jako pro [povolení technologie Hyper-V pro Windows Phone emulator](https://msdn.microsoft.com/library/windows/apps/jj863509\(v=vs.105\).aspx).<br /><br /> Zkontrolujte stav **Správa virtuálních počítačů Hyper-V** služby v modulu snap-in služby.|
-|Technologie Hyper-V musí běžet.|Další informace o správě služby najdete v následujících tématech:<br /><br /> -   [Spustit, zastavit, pozastavit, obnovit nebo restartovat službu](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Konfigurace spuštění služby](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
+|Technologie Hyper-V musí být nainstalovaná.|Použijte stejné pokyny jako pro [Povolení technologie Hyper-V pro emulátor Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj863509\(v=vs.105\).aspx).<br /><br /> V modulu snap-in služby ověřte stav služby **správy virtuálních počítačů Hyper-v** .|
+|Technologie Hyper-V musí být spuštěná.|Další informace o správě služeb najdete v následujících tématech:<br /><br /> -   [Spuštění, zastavení, pozastavení, pokračování nebo restartování služby](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [Konfigurace způsobu spuštění služby](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
- Musíte být členem místní skupiny Správci Hyper-V.
+ Musíte být členem místní skupiny Administrators technologie Hyper-V.
 
- Pokud chcete spustit emulátor Visual Studia pro Android bez opakované výzvy ke zvýšení vaše práva, budete muset být členem místní skupiny Správci Hyper-V. Pokud jste už místním správcem na počítači, při instalaci sady SDK, instalační program sady SDK můžete přidá do skupiny Správci technologie Hyper-V. V opačném případě bude pravděpodobně nutné ručně povolit tento požadavek.
+ Pokud chcete spustit emulátor sady Visual Studio pro Android bez opakované výzvy ke zvýšení oprávnění, musíte být členem místní skupiny Administrators technologie Hyper-V. Pokud jste již při instalaci sady SDK místním správcem počítače, instalační program sady SDK vás přidá do skupiny Správci technologie Hyper-V. V opačném případě bude pravděpodobně nutné tento požadavek povolit ručně.
 
- Při spuštění emulátoru, pokud si nejste již členem skupiny Správci Hyper-V, zobrazí se výzva k připojení ke skupině (dialogových oken odkazuje na emulátoru Windows Phone). Propojení skupiny vyžaduje oprávnění správce.
+ Pokud ještě nejste členem skupiny správců technologie Hyper-V, zobrazí se výzva, abyste se připojili ke skupině (dialogové okno se vztahuje k emulátoru Windows Phone). Připojení ke skupině vyžaduje oprávnění správce.
 
 > [!IMPORTANT]
-> Po připojení k skupině odhlásit nebo restartovat, aby se změna projevila.
+> Jakmile se připojíte ke skupině, odhlaste se nebo restartujte, aby se změna projevila.
 
- ![Spojování Hyper&#45;skupiny zabezpečení Správci V](../cross-platform/media/android-emu-hyperv-admin.png "Android_Emu_HyperV_Admin")
+ ![Připojení ke skupině zabezpečení správců Hyper&#45;V](../cross-platform/media/android-emu-hyperv-admin.png "Android_Emu_HyperV_Admin")
 
- Pokud chcete sami ručně přidat do skupiny, otevřete místní uživatelé a skupiny modul snap-in.
+ Chcete-li se do skupiny přidat ručně, otevřete modul snap-in Místní uživatelé a skupiny.
 
-## <a name="BootableVHD"></a> Spouštění v emulátoru ze spouštěcí virtuální pevný disk se nepodporuje.
- Při pokusu o spuštění aplikace v emulátoru Visual Studia pro Android při spuštění Windows ze spouštěcí virtuální pevný disk, emulátor obvykle trvá několik minut nebo nepodaří spustit. Emulátor nepodaří spustit, zobrazí se následující zpráva: Nasazení aplikace se nezdařilo. Zkuste to prosím znovu.
+## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a><a name="BootableVHD"></a> Spuštění emulátoru ze spustitelného virtuálního pevného disku se nepodporuje.
+ Pokud se pokusíte spustit aplikaci v emulátoru sady Visual Studio pro Android, zatímco používáte systém Windows ze spouštěcího virtuálního pevného disku, emulátor obvykle trvá několik minut, než se spustí nebo nespustí. Po neúspěšném spuštění emulátoru se zobrazí následující zpráva: nasazení aplikace se nezdařilo. Zkuste to prosím znovu.
 
- Tato konfigurace není podporována. Informace o problémech souvisejících s najdete v tématu [řešení potíží s Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).
+ Tato konfigurace není podporovaná. Informace o souvisejících problémech najdete v tématu [Poradce při potížích s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md).
 
-## <a name="Files"></a> Technologie Hyper-V vyžaduje nešifrované a nekomprimované soubory
- Na pevný disk nakonfigurovaný pomocí systému souborů NTFS musíte být nekomprimovaný a nešifrované soubory virtuálního pevného disku používá technologie Hyper-V. Ujistěte se, že nejsou v následujících adresářích komprimované nebo zašifrované:
+## <a name="hyper-v-requires-uncompressed-and-unencrypted-files"></a><a name="Files"></a> Technologie Hyper-V vyžaduje nekomprimované a nešifrované soubory.
+ Na pevném disku nakonfigurovaném se systémem souborů NTFS musí být soubory virtuálních pevných disků, které používá technologie Hyper-V, nekomprimované a nešifrované. Ujistěte se, že následující adresáře nejsou komprimované ani šifrované:
 
 - %localappdata%\Microsoft\XDE
 
-- C:\Program soubory (x86) \Microsoft Emulator Manager
+- C:\Program Files (x86) \Microsoft emulátor Manageru
 
-- C:\Program soubory (x86) \Microsoft Visual Studio Emulator for Android
+- C:\Program Files (x86) \Microsoft Visual Studio emulátor pro Android
 
 - %localappdata%\Microsoft\VisualStudioEmulator
 
-  V systému souborů ReFS soubory virtuálního pevného disku nesmí mít integrity bit sady.
+  V systému souborů ReFS nesmí mít soubory virtuálních pevných disků nastaven bit integrity.
 
-## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Požadavky na hardware grafiky předávání (podpora OpenGL ES)
- Pro emulátor pro emulaci volání do GPU, jako jsou ty používané OpenGL ES váš počítač musí mít kompatibilním grafickým Procesorem DirectX s odpovídající nainstalované ovladače rozhraní DirectX.
+## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>Požadavky na přesměrování hardwarové grafiky (podpora OpenGL ES)
+ Aby emulátor mohl emulovat volání GPU, jako jsou například ty, které používá OpenGL ES, musí mít počítač GPU kompatibilní s rozhraním DirectX s nainstalovanými příslušnými ovladači DirectX.
 
 ## <a name="see-also"></a>Viz také
  [Poradce při potížích s emulátorem sady Visual Studio pro Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

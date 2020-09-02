@@ -1,5 +1,5 @@
 ---
-title: Text a nápověda k unám pro visual studio | Dokumenty společnosti Microsoft
+title: Text uživatelského rozhraní a nápovědu pro Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -9,317 +9,317 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698301"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Text uživatelského rozhraní a nápověda pro Visual Studio
-## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a>Text a terminologie ui
- Srozumitelný text je rozhodující pro efektivní uI. Uživatelé softwaru mají tendenci nejprve číst štítky, a to ty, které jsou nejdůležitější pro dokončení úkolu. Statický text se čte s menší frekvencí. Naplánujte uživatelům zahájení pracovních relací pomocí rychlého prohledání celého okna, po kterém následuje čtení uživatelského okna v tomto přibližném pořadí:
+## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> Text uživatelského rozhraní a terminologie
+ Srozumitelnější text je zásadní pro efektivní uživatelské rozhraní. Uživatelé softwaru obvykle čtou štítky, konkrétně ty, které jsou relevantní pro dokončení úlohy. Statický text je čten s menší frekvencí. Naplánujte uživatelům, aby si spouštěli své pracovní relace s rychlou kontrolou celého okna a za tímto přibližným pořadím přečetli uživatelské rozhraní.
 
-1. Interaktivní ovládací prvky uprostřed
+1. Interaktivní ovládací prvky v centru
 
 2. Tlačítka potvrzení
 
 3. Interaktivní ovládací prvky nalezené jinde
 
-4. Hlavní instrukce
+4. Hlavní pokyny
 
-5. Doplňující vysvětlení
+5. Doplňková vysvětlení
 
 6. Název okna
 
-7. Jiný statický text v hlavním těle
+7. Další statický text v hlavním těle
 
-### <a name="usage-patterns-for-ui-text"></a>Vzory použití textu ui
+### <a name="usage-patterns-for-ui-text"></a>Vzorce používání pro text uživatelského rozhraní
 
 #### <a name="title-bar-text"></a>Text záhlaví
- Text záhlaví se musí shodovat s příkazem, který vytvořil ui.
+ Text záhlaví se musí shodovat s příkazem, který vytvořil uživatelské rozhraní.
 
 #### <a name="instructional-text-helper-text"></a>Instruktážní text (pomocný text)
- V některých dialogových oknech je užitečné poskytnout hlavní pokyny, které vysvětlují, co dělat v okně nebo na stránce. To se někdy označuje jako "pomocný text."
+ V některých dialogových oknech je užitečné poskytnout nejvýraznější hlavní pokyny, které vám pomůžou vysvětlit, co dělat v okně nebo na stránce. V takovém případě se někdy označuje jako "text nápovědy".
 
-##### <a name="writing-style-rules-for-helper-text"></a>Pravidla stylu psaní pro pomocné texty
+##### <a name="writing-style-rules-for-helper-text"></a>Psaní pravidel stylu pro text nápovědy
 
-- Nevysvětluj to, co je zřejmé. Pokud to není nezbytně nutné, nezahrnovat instruktážní text.
+- Nevysvětlí zjevné. Pokud není nezbytně nutné, nezahrnujte instruktážní text.
 
-- Instruktážní text je vždy umístěn v horní části dialogového okna a měl by odkazovat na prováděnou úlohu.
+- Instruktážní text je vždycky umístěný v horní části dialogového okna a měl by se vztahovat na úkol, který se má provést.
 
-- Přesně vysvětlit uživatelům, co je třeba udělat. Vyhněte se nadměrné komunikaci a redundanci.
+- Přesně Vysvětlete uživatele, co potřebují. Vyhněte se nadměrné komunikaci a redundanci.
 
-- Zkontrolujte každé okno a odstraňte duplicitní slova a příkazy.
+- Zkontrolujte jednotlivá okna a Eliminujte duplicitní slova a příkazy.
 
-- Udržujte instruktážní text krátký. Pokud je pro určité uživatele nebo scénáře nezbytné další informace, zadejte odkaz na podrobné koncepční online téma.
+- Stručně ponechte text s pokyny. Pokud jsou pro určité uživatele nebo scénáře potřeba další informace, zadejte odkaz na podrobné koncepční téma online.
 
-- Napište text tak, aby každé slovo má váhu a je nezbytné.
+- Napište svůj text tak, aby každé slovo mělo váhu a bylo nezbytné.
 
-- Postupujte podle existujících pokynů společnosti Microsoft pro text a [styl a tón](/windows/desktop/uxguide/text-style-tone) [uživatelského rozhraní](/windows/desktop/uxguide/text-ui) .
+- Řiďte se stávajícími pokyny Microsoftu pro [text uživatelského rozhraní](/windows/desktop/uxguide/text-ui) a [styl a tón](/windows/desktop/uxguide/text-style-tone).
 
 #### <a name="supplemental-instructions"></a>Doplňkové pokyny
- Doplňkové pokyny poskytují další informace, které pomáhají uživateli pochopit ovládací prvky nebo seskupení ovládacích prvků. To může také zahrnovat text nápovědy potřebný k pochopení, jaký formát vstupní ovládací prvek očekává. Používejte doplňkové pokyny střídmě. Rezervujte je pro případy, kdy je pravděpodobné, že uživatel nebude plně pochopit důsledky volby, které dělají.
+ Doplňkové pokyny poskytují další informace, které pomáhají uživatelům pochopit ovládací prvky nebo seskupení ovládacích prvků. Může to také zahrnovat text nápovědy, který je nezbytný k pochopení toho, jaký formát vstupní ovládací prvek očekává. Používejte doplňkové pokyny zřídka. Rezervujte je pro případy, kdy je pravděpodobnější, že uživatel nebude plně rozumět vlivům volby, které provádějí.
 
- ![Doplňkový text v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
+ ![Doplňkový text v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601 – b_SupplementalText1")
 
- **Doplňkový text v sadě Visual Studio**
+ **Doplňkový text v aplikaci Visual Studio**
 
- ![Doplňkový text v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
+ ![Doplňkový text v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601 – c_SupplementalText2")
 
- **Doplňkový text v sadě Visual Studio**
+ **Doplňkový text v aplikaci Visual Studio**
 
-#### <a name="infotips"></a>Informační tipy
- Často může být instruktážní text příliš zdlouhavý na to, aby se umístil na místě v uživatelském uživatelském nastavení, nebo může být užitečný pouze pro nové uživatele, což má pocit, že zkušení uživatelé jsou nepořádkem. V takovém případě by měl být instruktážní/informační text umístěn jako popis pod informačním tipem.
+#### <a name="infotips"></a>Informační popisy
+ Často je možné, že text s pokyny může být příliš dlouhý na pozici v uživatelském rozhraní nebo může být užitečný jenom pro nové uživatele, takže zkušení uživatelé mají hodně na dobrém místě. V takovém případě by se pokyny a informační text měly umístit jako popis v popisu.
 
- Informační tipy by měly být umístěny v blízkosti ovládacích prvků, které souvisejí s a měly by používat konkrétní ikonu InfoTip, která je nenápadná, ale znatelná.
+ Informační popisy by se měly umístit poblíž ovládacích prvků, ke kterým se vztahují, a měly by používat konkrétní ikonu informačního popisu, která se ještě nevšimla.
 
- ![Informační tip v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
+ ![Informační Tip v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601 – d_InfoTip")
 
- **Příklad informačního tipu v sadě Visual Studio**
+ **Příklad informačního popisu v aplikaci Visual Studio**
 
-##### <a name="writing-style-rules-for-infotips"></a>Pravidla stylu psaní pro informační tipy
+##### <a name="writing-style-rules-for-infotips"></a>Psaní pravidel stylu pro informační popisy
 
-- Napište informační tipy jako úplné věty. Vyžadují specifická slovesa, velká písmena věta a koncová interpunkce.
+- Zápis informačního popisu jako úplných vět. Vyžadují konkrétní slovesa, Velká a koncová interpunkční znaménka.
 
-- Pomocí informačních tipů doplníte hlavní pokyny nebo informace. Pokud právě používáte různá slova, abyste přeformulovali hlavní myšlenku, nepotřebujete infotip.
+- K doplnění vaší hlavní instrukce nebo informací použijte informační popis. Pokud k restavování hlavní myšlenky používáte jenom různá slova, nebudete potřebovat informační Tip.
 
-- Mějte InfoTips krátké a sladké. Používejte malá slova a prostý, každodenní jazyk, který podporuje a povzbuzuje uživatele.
+- Ponechte krátké a sladké informační popisy. Používejte malá slova a obyčejný, každodenní jazyk, který podporuje a podporuje uživatele.
 
-- Postupujte podle existujících pokynů společnosti Microsoft pro text a [styl a tón](/windows/desktop/uxguide/text-style-tone) [uživatelského rozhraní](/windows/desktop/uxguide/text-ui) .
+- Řiďte se stávajícími pokyny Microsoftu pro [text uživatelského rozhraní](/windows/desktop/uxguide/text-ui) a [styl a tón](/windows/desktop/uxguide/text-style-tone).
 
 #### <a name="control-labels"></a>Popisky ovládacích prvků
- Popisky ovládacích prvků by měly být krátké, stručné a podle [pokynů pro ovládací prvky na ploše systému Windows](/windows/desktop/uxguide/controls).
+ Popisky ovládacích prvků by měly být krátké, stručné a postupovat podle [pokynů pro stolní počítače s Windows](/windows/desktop/uxguide/controls).
 
- Další informace o formátu popisku ovládacího prvku a umístění v uživatelském rozhraní naleznete [v části Rozložení pro visual studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
+ Další informace o formátu a umístění popisků ovládacích prvků v uživatelském rozhraní naleznete v tématu [layout for Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
 
-#### <a name="help-links"></a>Odkazy na nápovědu
- Odkazy nápovědy lze umístit do instruktážního textu nebo do těla hlavního použití. Mohou se na ně vymknou odkazy na nápovědu nebo spustí interní dialogová okna.
+#### <a name="help-links"></a>Odkazy na Help
+ Odkazy na help lze umístit do popisného textu nebo do těla uživatelského rozhraní. Můžou se jednat o odkazy, které pomohou nebo spouštějí interní dialogová okna.
 
-##### <a name="visual-style-rules-for-help-links"></a>Pravidla vizuálního stylu pro odkazy nápovědy
+##### <a name="visual-style-rules-for-help-links"></a>Pravidla vizuálního stylu pro odkazy na nápovědu
 
-- Pro hypertextové odkazy použijte správné barvy prostředí. Správně stylizovaný hypertextový odkaz nebude po klepnutí krátce blikat červeně. Pokud se zobrazí toto, pak je to údaj, že barvy prostředí nejsou používány.
+- Použijte správné barvy prostředí pro hypertextové odkazy. Hypertextový odkaz s správným stylem nebude při kliknutí krátce blikat červený. Pokud se to zobrazí, je indikace, že se nepoužívají barvy prostředí.
 
-- Podtržení by se mělo používat pouze při najetí přes nebo když je odkaz vložen do odstavce.
+- Podtržení by mělo být použito pouze při najetí myší nebo v případě, že je odkaz vložen do odstavce.
 
-- Podrobnější informace o vizuálních stylech a stylech interakce pro hypertextové odkazy naleznete v tématu Tlačítka a hypertextové odkazy.
+- Podrobnější informace o vizuálních a stylech interakce pro hypervazby najdete v tématu tlačítka a hypertextové odkazy.
 
-##### <a name="writing-style-rules-for-help-links"></a>Psaní pravidel stylu pro odkazy nápovědy
+##### <a name="writing-style-rules-for-help-links"></a>Psaní pravidel stylu pro odkazy na nápovědu
 
-- Při spouštění dialogových oken udržujte standardy pro tři tečky: žádné tři tečky pro navigaci, tři tečky, pokud úloha vyžaduje další uživatelské tlačítko.
+- Když spouštíte dialogy, udržujte standardy pro tři tečky: žádné tři tečky pro navigaci, tři tečky, pokud úkol vyžaduje další uživatelské rozhraní.
 
-     ![Odkaz nápovědy v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601-e_HelpLink")
+     ![Odkaz na Help v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601 – e_HelpLink")
 
-     **Tři tečky (...) v odkazu nápovědy označují, že úloha bude vyžadovat další uI.**
+     **Tři tečky (...) v odkazu na help označuje, že úkol bude vyžadovat další uživatelské rozhraní.**
 
-- Odkazy by neměly začínat "Učit se", protože to není záměr uživatele. Uživatel chce odpovědět na konkrétní otázku, ne získat všeobecné vzdělání.
+- Odkazy by neměly začínat "učit", protože to není záměr uživatele. Uživatel chce odpovědět na konkrétní otázku a získat obecné vzdělávání.
 
-- Fráze nápověda odkazy tak, aby se zeptat na otázku, že téma bude odpovídat.
+- Fráze nápovědy odkazují, aby se dotazoval na otázku, že téma bude odpovídat.
 
-     Nesprávné: Další informace o cenách mobilních služeb Windows Azure
+     Nesprávné: Přečtěte si další informace o cenách Windows Azure Mobile Services.
 
-     Správně: "Jaké možnosti cen jsou dostupné pro mobilní služby Windows Azure?"
+     Správné: "jaké cenové možnosti jsou k dispozici pro Windows Azure Mobile Services?"
 
-- Nikdy nepoužívejte *Click...* na text odkazu.
+- Nikdy *nepoužívejte text odkazu na odkaz* .
 
-- Nikdy nespojuj jen slovo "tady". To je problematické pro některé programy pro čtení z obrazovky, které budou vyjadřovat pouze slovo s hypertextovým odkazem.
+- Nikdy nepropojit pouze slovo "zde". To je problematické pro některé čtečky obrazovky, které budou hlas pouze hypertextovým slovem s hypertextovými odkazy.
 
-     Nesprávné: "Najít informace o mobilních službách Windows Azure **zde**"
+     Nesprávné: **tady**najdete informace v systému Windows Azure Mobile Services
 
-     Správně: "Jaké možnosti cen jsou dostupné pro mobilní služby Windows Azure?"
+     Správné: "jaké cenové možnosti jsou k dispozici pro Windows Azure Mobile Services?"
 
-- Další informace o správném stylu psaní odkazů nápovědy naleznete v [nápovědě k ploše systému Windows](/windows/desktop/uxguide/winenv-help).
+- Další informace o správném stylu psaní pro odkazy na nápovědu naleznete v doprovodné příručce k [ploše systému Windows](/windows/desktop/uxguide/winenv-help).
 
 #### <a name="hint-text"></a>Text nápovědy
- Text nápovědy se zobrazí jako vodoznak v ovládacím prvku nebo pod ovládacím prvkem. Správné formátování bude použito pomocí příslušného tokenu `Environment.GrayText`VSColors .
+ Text nápovědy se zobrazí jako vodoznak v rámci ovládacího prvku nebo pod ovládacím prvkem. Správné formátování se použije pomocí odpovídajícího tokenu VSColors `Environment.GrayText` .
 
  Může se objevit v několika formách.
 
-- Místo kontrolního štítku:
+- Místo popisku ovládacího prvku:
 
-     ![Text nápovědy v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
+     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601 – f_HintText1")
 
-- Se slovesem, dávat pokyny:
+- Pomocí příkazu, který poskytuje pokyny:
 
-     ![Text nápovědy v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
+     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601 – g_HintText2")
 
-- S textem označujícím požadovanou položku:
+- S textem, který označuje požadovanou položku:
 
-     ![Text nápovědy v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
+     ![Text nápovědy v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601 – h_HintText3")
 
 #### <a name="watermark-text"></a>Text vodoznaku
- Na prázdné návrhové ploše by měl text označovat, co dělat, a v případě potřeby poskytnout odkazy na otevření dalších souvisejících oken:
+ Na prázdné návrhové ploše by měl text indikovat, co dělat, a také poskytnout odkazy na otevírání dalších souvisejících oken, pokud je to vhodné:
 
- ![Text vodoznaku v Sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601-i_WatermarkText")
+ ![Text vodoznaku v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-i_watermarktext.png "0601 – i_WatermarkText")
 
- **Příklad textu vodoznaku v sadě Visual Studio**
+ **Příklad textu vodoznaku v aplikaci Visual Studio**
 
-### <a name="common-terminology"></a>Běžná terminologie
+### <a name="common-terminology"></a>Společná terminologie
 
-|Označení|Vysvětlení|Poznámka|
+|Označení|Vysvětlení|Komentář|
 |----------|-----------------|-------------|
-|Přihlásit se / odhlásit|Slovesa používaná jako synonymum pro web pro reprezentaci ověřování do webové vlastnosti. V rámci klientů to jednou používáme jako pojem nejvyšší úrovně pro přihlášení a odhlášení z připojení uživatelů ide, což představuje identitu nejvyšší úrovně, která poskytuje vyšší úrovně funkcí, jako je roaming a licencování, které nejsou k dispozici u všech ostatních připojení.|Uživatel ide je jedinou funkcí, která by měla představovat přihlášení / odhlásit sloveso, protože představuje uživatele ide nejvyšší úrovně.|
-|Připojit / odpojit|Používá se v místech, kde funkce udržuje jedno připojení k online službě.|Průzkumník serveru, kde můžete mít současně jenom jedno aktivní připojení Azure, je příkladem připojení nebo odpojení.|
-|Přidat / odebrat|Nedestruktivní. Používá se při přidávání nebo odebírání něčeho ze seznamu.|Dialogové okno seznamu serveru Správce připojení TFS je příkladem doplňku Přidat nebo odebrat.|
-|Odstranit|Destruktivní. Použijte pouze v případě, že odebraný prvek bude trvale zahozen nebo odstraněn z disku.|"Odstranit" obvykle vyžaduje výzvu, pokud výsledek odstraní soubor z disku.|
+|Přihlášení nebo odhlášení|Příkazy používané jako synonymaem na webu pro reprezentaci ověřování do webové vlastnosti. V rámci klientů používáme tuto možnost jednou jako pojem nejvyšší úrovně pro přihlašování a odhlašování pomocí uživatelského připojení IDE, které představuje identitu nejvyšší úrovně, která poskytuje funkce vyšší úrovně, jako je například roaming a licencování, které nejsou k dispozici u všech ostatních připojení.|Jenom uživatel IDE je jedinou funkcí, která by měla představovat operaci přihlášení nebo odhlášení, protože představuje uživatele integrovaného vývojového prostředí (IDE) nejvyšší úrovně.|
+|Připojit nebo odpojit|Použijte v místech, kde funkce zachovává jedno připojení k online službě.|Průzkumník serveru, kde můžete mít v jednom okamžiku aktivní připojení k Azure, je příkladem připojení nebo odpojení.|
+|Přidat nebo odebrat|Není destruktivní. Použijte při přidávání nebo odebírání něčeho ze seznamu.|Dialogové okno seznam serverů Správce připojení TFS je příkladem přidání/odebrání.|
+|Odstranit|Stejné. Použijte pouze v případě, že odebraný prvek bude trvale vyřazen nebo odstraněn z disku.|Při odstranění se obvykle vyžaduje, aby se zobrazila výzva, pokud výsledek odstraňuje soubor z disku.|
 
 ## <a name="error-messages"></a>Chybové zprávy
 
 ### <a name="overview"></a>Přehled
- Dochází k chybám. Nastavení omezení na to, co uživatel může udělat, je rozumný první krok v prevenci vyhnout chybové zprávy. Pokud však dojde k chybě, může dobře napsaná chybová zpráva ujít dlouhou cestu ke zmírnění problému. Chybové zprávy jsou pravděpodobně jedním z nejdůležitějších typů oznámení, které uživatel vidí, protože jsou synchronní a označují problém, který je třeba vyřešit. Špatně napsané chybové zprávy nechávají uživatele samy o sobě, aby rozhodli o příčině chyb a možných řešeních.
+ Dojde k chybám. Nastavení omezení pro to, co může uživatel provádět, je rozumné prvním krokem při předcházení neoprávněným chybovým zprávám. Pokud ale dojde k chybě, může být dobře napsaná chybová zpráva náročná na to, aby problém zmírnit. Chybové zprávy se pravděpodobně jedním z nejdůležitějších typů oznámení, které uživatel vidí, protože jsou synchronní a označují problém, který je potřeba vyřešit. Špatně napsané chybové zprávy přinechávají uživatelům své vlastní rozhodnutí, aby mohli určit příčinu chyb a všechna možná řešení.
 
- Uživatelé mohou přestat věnovat pozornost nadpoužívaným nebo matoucím chybové zprávy, takže napište pouze nezbytné zprávy, které přidávají hodnotu uživatelskému prostředí. Pokud je zpráva jednoduše oznámení, použijte alternativní prezentaci.
+ Uživatelé můžou přestat věnovat pozornost nepoužitým nebo nematoucím chybovým zprávám, takže zapisují jenom nezbytné zprávy, které přidávají k uživatelskému prostředí hodnotu. Pokud je zpráva pouhým oznámením, použijte alternativní prezentaci.
 
 ### <a name="rules-for-creating-an-error-message"></a>Pravidla pro vytvoření chybové zprávy
 
-- Při vytváření chybových zpráv zvolte příslušnou úroveň chyb pro cílovou skupinu. Zaměřte se na jednoduché souhrny, které poskytují akci, kterou může uživatel provést, pokud je to možné. Neuvázejte nic, co uživatel nemusí vědět.
+- Při sestavování chybových zpráv vyberte příslušnou úroveň chyby pro cílovou skupinu. Cílem pro jasné souhrny, které poskytují akci, kterou může uživatel přijmout (je-li k dispozici). Nestavte nic, co uživatel nemusí znát.
 
-- Poskytovat konstruktivní pomoc. Je snazší číst a jednat na chybovou zprávu, která obsahuje instrukce.
+- Poskytněte konstruktivní pomoc. Čtení a zpracování chybové zprávy, která obsahuje instrukci, je snazší.
 
-- Nepoužívejte dvojité negativy.
+- Nepoužívejte dvojité záporné.
 
-- U všech chybových zpráv, které napíšete, proveďte automatickou i ruční kontrolu gramatiky a pravopisu.
+- Proveďte automatickou i ruční kontrolu pravopisu a kontrolu pravopisu u libovolné chybové zprávy, kterou píšete.
 
-- U složitých chybových zpráv se vyhněte sekvenční komunikaci. Nikdy nepoužívejte f1 přípojku pro chybovou zprávu. Samotná zpráva by měla být dostatečná.
+- U složitých chybových zpráv se vyhnete sekvenční komunikaci. Pro chybovou zprávu nikdy nepoužívejte propojení F1. Zpráva by měla být dostačující.
 
 - Použijte správnou ikonu.
 
-- Usnadnit pochopení a použití tlačítek, která mají jasné volby, například "Odstranit" a Zrušit.
+- Zjednodušte pochopení a používání tlačítek, která mají jasné možnosti, jako je například "odstranění" nebo "zrušit".
 
-- U varování si ujasněte, jaký bude důsledek řízení. Tlačítka by měla uvádět důsledek.
+- Pro upozornění je jasné, co je to v souvislosti s tím, jak bude pokračovat. Tlačítka by měla označovat důsledek.
 
-- V případě chyb popište, co může uživatel provést k vyřešení problému. Tlačítka by měla být akce nebo vyslovit "Zavřít". Nepoužívejte tlačítko "OK" pro chybovou zprávu.
+- V případě chyb popište, co může uživatel provést k vyřešení problému. Tlačítka by měla být akce nebo vyslovit "Zavřít". Pro chybovou zprávu nepoužívejte tlačítko OK.
 
-- Několik otázek, které si můžete položit při vytváření chybové zprávy:
+- Některé otázky pro dotazování při vytváření chybové zprávy:
 
-  - Může uživatel zjistit, jak vyřešit problém s touto chybou sám?
+  - Může uživatel zjistit, jak problém vyřešit jedinou chybou?
 
-  - Používá uživatel stejnou slovní zásobu jako tato chyba?
+  - Používá uživatel stejný slovník jako tuto chybu?
 
-  - Je tato chyba ambigious nebo sdílené v několika situacích? Pokud ano, jak navádíte uživatele k řešení, které potřebují?
+  - Je tato chyba ambigious nebo sdílená ve více situacích? Pokud ano, jak si můžete vyřídit uživatele pro řešení, které potřebují?
 
 #### <a name="build-errors"></a>Chyby sestavení
- Vzhledem k tomu, že Visual Studio je nástroj pro vývoj softwaru, mnoho jeho součástí mají kompilaci, převod nebo kódování krok převést práci vývojáře do binární formě. Tyto převody mohou způsobit chyby, když kompilátor nemůže zpracovat nesprávně vytvořené soubory nebo když nebyly správně nastaveny možnosti kompilátoru.
+ Vzhledem k tomu, že Visual Studio je nástroj pro vývoj softwaru, mnoho z jeho komponent má krok kompilace, převodu nebo kódování pro převod práce vývojáře do binárního formátu. Tyto převody mohou způsobit chyby, pokud kompilátor nemůže zpracovat nesprávně vytvořené soubory nebo když nejsou správně nastaveny možnosti kompilátoru.
 
- Uživatelé sady Visual Studio mohou strávit obrovský počet hodin vývoje při řešení chyb sestavení. Tato doba řešení se zvyšuje, pokud chyby mají závislosti nebo pokud jsou chybové zprávy špatně napsané, což může ztížit odhalení zdroje chyby.
+ Uživatelé sady Visual Studio můžou při řešení chyb sestavení strávit mimořádně mnoho hodin vývoje. Tato doba řešení se zvyšuje, když chyby mají závislosti, nebo pokud jsou chybové zprávy špatně napsány, což může ztížit zjištění zdroje chyby.
 
- Nejlepší chyby sestavení jsou ty, které se nevyskytují v první řadě, což je důvod, proč Visual Studio poskytuje automatické dokončování a IntelliSense klikyháky. Validátory schématu a podobné nástroje poskytují stejný druh zpětné vazby. Tyto mechanismy proaktivně vést uživatele k vytvoření dobře formátovaný kód, snižuje pravděpodobnost chybsestavení.
+ Nejlepší chyby sestavení jsou ty, které se nevyskytují v prvním místě, což je proč Visual Studio poskytuje funkce AutoComplete a IntelliSense. Validátory schémat a podobné nástroje poskytují stejný druh zpětné vazby. Tyto mechanismy proaktivně napomáhají uživateli vytvořit kód ve správném formátu a snížit pravděpodobnost chyb sestavení.
 
- Visual Studio poskytuje okno nástroje, kde uživatelé mohou číst a procházet chyby, ke kterým došlo v jejich oknech dokumentu. Klávesové zkratky jsou k dispozici tak, aby uživatel mohl rychle procházet velké množství kódu a přejít přímo na umístění problému. Visual Studio také umožňuje, aby byla každá chyba sestavení svázána s určitým id klíčového slova nebo kontextu nápovědy, aby uživatel mohl přejít přímo na téma nápovědy, které poskytuje podrobnější informace o chybě.
+ Visual Studio poskytuje okno nástrojů, kde mohou uživatelé číst a procházet chyby, ke kterým došlo v oknech dokumentů. Klávesové zkratky jsou k dispozici, aby uživatel mohl rychle procházet velké množství kódu a přejít přímo do umístění problému. Visual Studio také umožňuje, aby každá chyba sestavení byla vázaná na konkrétní klíčové slovo nebo kontextové ID nápovědy, takže uživatel může přejít přímo k tématu nápovědy, které poskytuje podrobné informace o této chybě.
 
- Napište jasné, stručné chyby sestavení:
+ Zapsat jasné a stručné chyby sestavení:
 
-- **Použijte prostý jazyk,** který vysvětluje problém s malým nebo žádným žargonem kompilátoru. Text chyby sestavení by neměl být příliš technický.
+- **Používejte prostý jazyk** , který vysvětluje problém s malým nebo nežargonum kompilátoru. Text chyby sestavení by neměl být příliš technický.
 
-- **Nastínit možné příčiny.** Například "Chybí dvojtečka mezi vlastnosta a hodnota v deklaraci '(vlastnost) : (hodnota)"."
+- **Vytvořte si možné příčiny.** Například "chybí dvojtečka mezi vlastností a hodnotou v deklaraci" (vlastnost): (hodnota) ".
 
-- Uveďte podrobnosti o možných opravách. Pokud není dostatek místa, mohou být do odpovídajícího tématu nápovědy vloženy další podrobnosti.
+- Poskytněte podrobnosti o potenciálních opravách. Pokud není dostatek místa, mohou být do odpovídajícího tématu nápovědy vloženy další podrobnosti.
 
 ### <a name="components-of-a-well-written-error-message"></a>Součásti dobře napsané chybové zprávy
 
-#### <a name="use-the-shell-dialog-service-for-error-messages"></a>Chybové zprávy slouží k použití dialogového okna prostředí.
- Pomocí služby dialogového okna prostředí umožňuje řídit vzhled zprávy, písma zejména bez větších změn jednotlivých prvků. Použijte mechanismy **IErrorInfo** a oznamte je pomocí **prostředí IVsUIShell::SetErrorInfo/ReportErrorInfo**.
+#### <a name="use-the-shell-dialog-service-for-error-messages"></a>Pro chybové zprávy použijte službu dialog prostředí.
+ Pomocí služby dialogu prostředí můžete ovládat vzhled zprávy, zejména písma, a to bez podstatných změn v jednotlivých prvcích. Použijte mechanismy **IErrorInfo** a Sestavujte je pomocí **IVsUIShell:: SetErrorInfo/ReportErrorInfo**.
 
-#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Zvolte efektivní a vhodnou prezentaci oznámení.
- Modální dialogové okno s kritickým upozorněním použijte, pokud je nutná okamžitá akce, aby se zabránilo ztrátě dat (synchronní oznámení). Kritické ikony jsou vyhrazeny pro situace, ve kterých zavření zprávy bez čtení může vést k negativním důsledkům. Ztráta dat je kritická situace, která vyžaduje odezvu na úrovni alarmu. Nadužívání kritické ikony znecitlivuje uživatele k jeho důležitosti. Pokud je chybová zpráva informační povahy, zvažte alternativy k modálnímu dialogu (asynchronní oznámení).
+#### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Vyberte efektivní a odpovídající prezentaci oznámení.
+ Pokud chcete zabránit ztrátě dat (synchronní oznámení), použijte modální dialog s kritickým upozorněním. Kritické ikony jsou vyhrazené pro situace, kdy se zpráva uzavírá bez jejich čtení, může vést k negativním důsledkům. Ztráta dat je kritická situace, která vyžaduje reakci na úrovni alarmu. Nadměrné využití ikony kritická má za uživatele desenzibilizující důležitost. Pokud je chybová zpráva v podstatě informativní, zvažte alternativy modálního dialogového okna (asynchronní oznámení).
 
-#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Poskytněte čisté a stručné vysvětlení, proč k problému došlo, spíše než technické vysvětlení.
- Přetížení uživatelů s technickými podrobnostmi v vysvětlení způsobí, že budou více ignorovat chybové zprávy. Příklady dobrých zpráv:
+#### <a name="provide-a-clean-succinct-explanation-of-why-the-problem-occurred-rather-than-a-technical-explanation"></a>Poskytněte čisté a stručné vysvětlení, proč k problému došlo, a ne technické vysvětlení.
+ Přetěžující uživatelé s technickými podrobnostmi v vysvětlení budou pravděpodobněji ignorovat chybové zprávy. Příklady správného zasílání zpráv:
 
-- "Požadovaný soubor nelze otevřít."
+- "Nepovedlo se otevřít požadovaný soubor."
 
-- "Nelze se připojit k Internetu."
+- "Nelze se připojit k Internetu".
 
-#### <a name="provide-information-about-how-to-fix-the-problem"></a>Zadejte informace o tom, jak problém vyřešit.
- Nabídněte uživatelům návrhy, jak problém vyřešit. Buďte k uživateli upřímní, pokud nejsou žádné návrhy. Poskytněte přímé odkazy na alternativní online zdroje, jako je technická podpora nebo komunitní podpora. Pokuste se nasměrovat uživatele na konkrétní online informace týkající se problému. Chcete-li získat ID chyby, zvažte propojení uživatelů s diskusním vláknem o této konkrétní chybě. Příklady dobrých zpráv:
+#### <a name="provide-information-about-how-to-fix-the-problem"></a>Zadejte informace o tom, jak tento problém vyřešit.
+ Nabízí návrhy uživatelů, jak tento problém vyřešit. Pokud nejsou k dispozici žádné návrhy, je nutné, abyste byli na uživateli velmi velmi velmi Poskytněte přímé odkazy na alternativní online zdroje, jako je technická podpora nebo podpora komunity. Pokuste se uživatele nasměrovat na konkrétní online informace, které se týkají problému. Pro ID chyby zvažte možnost propojit uživatele s diskuzním vláknem o této konkrétní chybě. Příklady správného zasílání zpráv:
 
-- "Ujistěte se, že jste připojeni k Internetu, a akci opakujte."
+- "Ujistěte se, že jste připojení k Internetu, a zkuste tuto operaci znovu."
 
-- "Ujistěte se, že soubor existuje a že máte oprávnění k jeho otevření."
+- "Zkontrolujte, zda soubor existuje a zda máte oprávnění k jeho otevření."
 
-#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Napište zprávu, která je krátká a k věci.
- Chybová zpráva může upozornit, vysvětlit a nabídnout řešení, ale stále ignorovat, pokud je příliš rozvláčný. Jedním z řešení je použití progresivního zveřejnění s tlačítkem podrobností. Uveďte například krátký popis/řešení a poté pod tlačítko podrobnosti uveďte další podrobnosti. Pokud se uživatelé rozhodnou přečíst si další informace o chybě, mohou tak učinit.
+#### <a name="write-a-message-that-is-short-and-to-the-point"></a>Napište zprávu, která je krátká a k bodu.
+ Chybová zpráva může informovat, vysvětlit a nabízet řešení, ale i nadále ignorovat, pokud je příliš slovo. Jedním z řešení je použití postupného vyzrazení s tlačítkem Details (podrobnosti). Zadejte například krátký popis/řešení a potom na tlačítko Podrobnosti vložte více podrobností. Pokud se uživatel rozhodne přečíst si další informace o chybě, může to provést.
 
- Jazyk ve zprávě by měl být:
+ Jazyk ve zprávě by měl:
 
-- **Vhodné pro doménu.** Používejte jazyk, kterému uživatel bude rozumět. I když jsou naši zákazníci vývojáři, často nemají kontext a terminologii, kterou máme.
+- **Odpovídající doméně.** Použijte jazyk, který bude uživatel rozumět. I když naši zákazníci jsou vývojáři, často nemají kontext a terminologii, které máme.
 
-- **Specifické.** Vyhněte se vágní formulace a uveďte konkrétní názvy a umístění objektů zapojených. Například chybová zpráva, například "znak je neplatný" není užitečné. Jakou postavu? "Soubor nebyl nalezen." Který soubor?
+- **Konkrétní.** Vyhněte se Vague slovům a poskytněte konkrétní názvy a umístění souvisejících objektů. Například chybová zpráva, například "znak je neplatný", není užitečná. Který znak? "Soubor nebyl nalezen." Který soubor?
 
-- **Zdvořilý.** Neobviňujte uživatele, nebo aby se cítili hloupě. Vyhněte se nepřátelské nebo urážlivé jazyk (zabít, provést, ukončit, fatální, nelegální). Vyhněte se textu s velkými písmeny, který je často považován za křik a není tak čitelný. Nepoužívej humor.
+- **Courteous.** Neviny uživatele nebo se mu nedaří Stupid. Vyhněte se nepřátelským nebo urážlivému jazyku (kill, Execute, ukončení, kritický, neplatný). Nepoužívejte text na velká písmena, který se často zobrazuje jako Shouting a není tak čitelný. Nepoužívejte humor.
 
-- **Správné.** Používejte správný pravopis a gramatiku (i v alfách). Překlepy jsou neprofesionální a trapné.
+- **Odstranění.** Používejte správnou kontrolu pravopisu a gramatiky (i v alfa). Překlepy jsou neprofesionální a absolutně.
 
-- **Kontextově vhodné.** Použijte odpovídající text tlačítka. Vyhněte se tlačítku "OK" a místo toho použijte "Pokračovat" nebo "Ano/Ne".
+- **Podle kontextového závislosti.** Použijte odpovídající text tlačítka. Vyhněte se tlačítku "OK" a místo toho použít "pokračovat" nebo "Ano/ne".
 
 ### <a name="error-message-examples"></a>Příklady chybových zpráv
 
 |Dobré|Chybné|
 |----------|---------|
-|"Číslo, které jste vytočili, již není v provozu. Zkontrolujte číslo a vytočte znovu nebo vytočte 0 pro operátora."|- "Chyba (449): Nelegální číslo"<br />- "Tato neošetřená chyba výjimky označuje, že operace byla úspěšně dokončena."<br /><br /> ![Chybná chybová zpráva v sadě Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602-a_ErrorDialog")|
+|"Číslo, které jste vytočili, již není součástí služby. Zkontrolujte číslo a znovu ho vytočte nebo pro něj použijte volání 0. "|-"Error (449): neplatné číslo"<br />-"Tato Neošetřená chyba výjimky indikuje, že operace byla úspěšně dokončena."<br /><br /> ![Chybná chybová zpráva v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602 – a_ErrorDialog")|
 
 ## <a name="accessing-help"></a>Přístup k nápovědě
 
 ### <a name="overview"></a>Přehled
- Kromě dokumentace v msdn, visual studio uživatel má několik přístupových bodů, které pomáhají uživateli v uživatelském rozhraní. Aby bylo zajištěno, že tyto přístupové body jsou konzistentně k dispozici, musí týmy funkcí využít systém nápovědy, který nabízí prostředí. Tyto přístupové body jsou:
+ Kromě dokumentace na webu MSDN má uživatel sady Visual Studio několik přístupových bodů, které uživateli pomáhají při práci v uživatelském rozhraní. Aby se zajistilo, že jsou tyto přístupové body trvale dostupné, týmy funkcí potřebují využít systém pro usnadnění, který nabízí prostředí. Tyto přístupové body jsou:
 
-- **Instruktážní a doplňkový text v dialogových oknech.** Statický text, který poskytuje směr nebo vysvětlení, buď na povrchu uj.
+- **Instruktážní a doplňkový text v dialogových oknech.** Statický text, který poskytuje směr nebo vysvětlení, buď na povrchu uživatelského rozhraní, nebo dostupný při najetí myší na ikonu informačního panelu
 
-- **Nápověda F1** (pouze editor). V editoru sady Visual Studio může uživatel kdykoli důvěřovat, že stisknutím klávesy F1 zobrazíte téma nápovědy specifické pro aktuální výběr. Ujistěte se, že témata spojená s F1 jsou vhodné a informativní.
+- **Nápověda F1** (pouze Editor). V rámci editoru sady Visual Studio může uživatel kdykoli důvěřovat, když stisknutím klávesy F1 zobrazíte téma nápovědy specifické pro aktuální výběr. Zajistěte, aby témata přidružená k F1 byla vhodná a informativní.
 
-- **Hypertextové odkazy na témata nápovědy.** Hypertextový odkaz v dialogovém okně, okně nástroje nebo návrhové ploše, který spouští téma, které pomáhá uživateli dozvědět se více o technologii, schopnostech nebo informacích o tom, jak provést úkol.
+- **Hypertextové odkazy na témata nápovědy** Hypertextový odkaz v dialogovém okně, panelu nástrojů nebo návrhové ploše, který spustí téma, které uživateli pomáhá naučit se více o technologii, schopnosti nebo informace o tom, jak provést úlohu.
 
-- **Pomocné mechanismy ui, jako jsou inteligentní značky a vytváření dialogových oken.** Tyto mechanismy pomáhají uživateli pochopit prvek uživatelského rozhraní nebo usnadňují úlohu, jako jsou inteligentní značky nebo dialogová okna tvůrce.
+- **Mechanismy pomocníka uživatelského rozhraní, jako jsou inteligentní značky a vytváření dialogových oken.** Tyto mechanismy pomáhají uživateli v porozumění prvku uživatelského rozhraní nebo usnadnění úlohy, jako jsou například inteligentní značky nebo dialogy tvůrce.
 
-- **Tlačítka nápovědy ui** (zastaralé). Viditelný indikátor v záhlaví, který umožňuje přístup k souvisejícímu tématu nápovědy F1.
+- **Tlačítka pro pomocníka uživatelského rozhraní** (zastaralé). Viditelný indikátor v záhlaví, který poskytuje přístup k souvisejícímu tématu nápovědy F1.
 
 ### <a name="text"></a>Text
 
 #### <a name="instructional-and-supplemental-text-in-dialogs"></a>Instruktážní a doplňkový text v dialogových oknech
- V dialogových oknech, které podporují složité úkoly, může být potřeba poskytnout instruktážní text v rámci uj. Podrobnosti o stylu psaní najdete v [textu a terminologii](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) uj.
+ V dialogových oknech, které podporují složité úlohy, může být nutné poskytnout pokyny v uživatelském rozhraní, často v horní části dialogového okna nebo blízko složitých ovládacích prvků. Podrobnosti o psaní stylu naleznete v tématu [text a terminologie uživatelského rozhraní](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) .
 
-#### <a name="infotips"></a>Informační tipy
- Často může být instruktážní text příliš zdlouhavý na to, aby se umístil v uživatelském uživatelském nastavení, nebo může být užitečný pouze pro nové uživatele, což má pro zkušené uživatele pocit nepořádek. V takovém případě by měl být instruktážní/informační text umístěn jako popis pod informačním tipem.
+#### <a name="infotips"></a>Informační popisy
+ V uživatelském rozhraní se často může jednat o instruktážní text, který je příliš dlouhý, nebo může být užitečný jenom pro nové uživatele, takže zkušení uživatelé mají hodně na dobrém místě. V takovém případě by se pokyny a informační text měly umístit jako popis v popisu.
 
- Informační tipy by měly být umístěny v blízkosti ovládacích prvků, které souvisejí s a měly by používat konkrétní ikonu InfoTip, která je nenápadná, ale znatelná.
+ Informační popisy by se měly umístit poblíž ovládacích prvků, ke kterým se vztahují, a měly by používat konkrétní ikonu informačního popisu, která se ještě nevšimla.
 
- ![Informační tip v sadě Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601-d_InfoTip")
+ ![Informační Tip v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/0601-d_infotip.png "0601 – d_InfoTip")
 
- **Příklad informačního tipu v sadě Visual Studio**
+ **Příklad informačního popisu v aplikaci Visual Studio**
 
-### <a name="interactive-help-mechanisms"></a>Interaktivní mechanismy nápovědy
+### <a name="interactive-help-mechanisms"></a>Interaktivní mechanismy pomocníka
 
 #### <a name="f1-help"></a>F1 – nápověda
- F1 Nápověda je vyžadována v editoru nebo návrhu povrchu, ale ne jinde v prostředí sady Visual Studio.
+ Nápověda F1 se vyžaduje v rámci editoru nebo návrhové plochy, ale ne jinde v prostředí Visual studia.
 
 #### <a name="hyperlinks-to-help-topics"></a>Hypertextové odkazy na témata nápovědy
- Hypertextové odkazy lze použít k provedení akce, navigaci v rámci prostředí IDE nebo spuštění nápovědy v prohlížeči. Podrobnosti o jazyce a tlačítkách a hypertextových odkazech 07.10.01 najdete v tématu Text uživatelského rozhraní [a terminologie.](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)
+ Hypertextové odkazy lze použít k provedení akce, navigaci v rámci integrovaného vývojového prostředí (IDE) nebo spuštění nápovědě v prohlížeči. Podrobnosti o pravidlech a 07.10.01 tlačítek a hypertextových odkazech pro vizuální a rozložení najdete v tématu [text a terminologie uživatelského rozhraní](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology) .
 
-#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>Tlačítka nápovědy [?] v záhlaví dialogového okna (zastaralé)
- Tlačítka nápovědy [?] v záhlaví dialogových oken jsou z větší části zastaralá. Témata s ui již nejsou součástí našeho modelu doc, a proto nemusí být relevantní téma, na které by bylo možné odkazovat. V podstatě bylo tlačítko záhlaví totéž jako nápověda F1 a to již není v dialogových oknech vyžadováno. V některých případech to lze stále použít jako indikátor, že je k dispozici více koncepčních nebo procedurálních informací, ačkoli hypertextové odkazy se častěji používají v novějším uzly.
+#### <a name="help--buttons-in-dialog-title-bars-deprecated"></a>Tlačítko Help [?] v záhlaví dialogových oken (zastaralé)
+ Pro většinu částí jsou tlačítka Help [?] v záhlaví dialogových oken zastaralá. Témata uživatelského rozhraní již nejsou součástí našeho modelu doc, a proto nemusí být k dispozici příslušné téma k propojení. V podstatě bylo tlačítko záhlaví stejné jako Nápověda F1 a v dialogových oknech již není vyžadováno. V některých případech je možné tuto možnost i nadále používat jako indikátor, že jsou k dispozici více koncepčních nebo procedurálních informací, i když se hypertextové odkazy v novějším uživatelském rozhraní častěji používají.
 
-##### <a name="dialogs-created-through-the-environment"></a>Dialogy vytvořené prostřednictvím prostředí
- Mnoho dialogových oken prostředí je vytvořeno pomocí funkce **VBDialogBoxParam.** Tato sdílená funkce byla aktualizována, aby pomohla přesunout tlačítko **Nápověda** z dialogového okna do **okna ?** a zároveň zachovat architekturu, která je zpětně kompatibilní a rozšiřitelná.
+##### <a name="dialogs-created-through-the-environment"></a>Dialogová okna vytvořená v prostředí
+ Pomocí funkce **VBDialogBoxParam** se vytvářejí spousta dialogových oken prostředí. Tato sdílená funkce se aktualizovala, aby vám pomohla při přesunu tlačítka **pomoci** z tohoto dialogového okna do **?** tlačítko při zachování architektury, která je zpětně kompatibilní a rozšiřitelná.
 
- Konkrétně funkce **VBDialogBoxParam** vyhledá šablonu dialogu pro tlačítko, jehož ID je **IDHELP** (9) nebo popisek je **nápověda** nebo **&nápověda**. Pokud je nalezeno tlačítko nápovědy, je skryté a **WS_EX_CONTEXTHELP** styl je přidán do dialogového okna, který umístí **?** v záhlaví dialogu.
+ Konkrétně funkce **VBDialogBoxParam** podívá se na šablonu dialogového okna pro **tlačítko, jehož** ID je **IDHELP** (9) nebo popisek je Help nebo **&nápovědu**. Pokud je nalezeno tlačítko Help, je skryto a do dialogového okna je přidán **WS_EX_CONTEXTHELP** styl, který umístí **?** na záhlaví dialogového okna.
 
- Po vytvoření dialogového okna odešle dialogové okno proc do zásobníku a vyvolá dialogové okno s dialogem proc proc s názvem **DialogPreProc**. Když **se ?** kliknul, odešle do dialogu **WM_SYSCOMMAND** **SC_CONTEXTHELP.** **DialogPreProc** zachytí tento příkaz a změní jej na **zprávu WM_HELP,** která je předána původní dialogové okno proc.
+ Po vytvoření dialogového okna se tato procedura vloží do zásobníku a vyvolá dialogové okno s předzpracováním procedury dialogového okna s názvem **DialogPreProc**. Když **?** kliknete na tlačítko, pošle **WM_SYSCOMMAND** **SC_CONTEXTHELP** dialogového okna. **DialogPreProc** tento příkaz zachytí a změní jej na **WM_HELPovou** zprávu, která je předána do původní procedury dialogu.
 
- Většina dialogových oken vytvořených prostředím má v dialogovém okně tlačítko Nápověda. Když se zobrazí dialogové okno, tlačítko Nápověda je automaticky skryto a pouze **?** tlačítko funguje. Pokud **se ?** je někdy odstraněn nebo změněn v systému Windows, toto řešení umožňuje rychle přejít zpět na původní tlačítka nápovědy.
+ Většina dialogových oken vytvořených v prostředí má v dialogovém okně tlačítko pro podporu. Po zobrazení dialogového okna je tlačítko Help automaticky skryto a pouze **?** tlačítko funguje. Pokud **?** tlačítko se v systému Windows někdy odebralo nebo změnilo, toto řešení vám umožní rychle přejít zpátky na původní tlačítka.
 
- Toto řešení vytváří čtyři předpoklady, které by mohly způsobit chyby:
+ Toto řešení vytvoří čtyři předpoklady, které by mohly způsobit chyby:
 
-- Tlačítko nápovědy dialogového okna je **IDHELP** (9).
+- Tlačítko Help dialogového okna je **IDHELP** (9).
 
-- Dialogové okno vypadá správně, když je tlačítko Nápověda skryté.
+- Pokud je tlačítko Help skryté, dialogové okno vypadá správně.
 
-- Dialogové okno nenahrazuje jeho winproc.
+- Dialogové okno nenahrazuje své návrat WinProc.
 
-- Dialogové okno není vloženo do jiného dialogového okna.
+- Dialogové okno není vložené uvnitř jiného dialogového okna.
 
-  Pokud váš dialog je umístěn v msenv a nepoužívá **VBDialogBoxParam**, prozkoumejte využití **VBDialogBoxParam** před implementací vlastní obslužné rutiny.
+  Pokud se vaše dialogové okno nachází v Msenv a nepoužívá **VBDialogBoxParam**, prozkoumejte využití **VBDialogBoxParam** před implementací vlastní obslužné rutiny.
 
-##### <a name="dialogs-created-through-other-packages"></a>Dialogy vytvořené prostřednictvím jiných balíčků
- Můžete implementovat vlastní řešení pro dialogy, které jsou umístěny mimo msenv. Pro sdílené dialogové okno třídy v VSPackage, zvažte přesunutí tlačítka do záhlaví nebo implementace obslužné rutiny v každém dialogovém okně. Následující kód je kostra implementace, které vám pomohou začít:
+##### <a name="dialogs-created-through-other-packages"></a>Dialogová okna vytvořená prostřednictvím jiných balíčků
+ Můžete implementovat vlastní řešení pro dialogy, které se nacházejí mimo Msenv. Pro sdílenou třídu dialogového okna ve VSPackage zvažte přesunutí tlačítka na záhlaví nebo implementaci obslužné rutiny v každém dialogovém okně. Následující kód je kostrou implementace, která vám může pomáhat začít:
 
 ```
 struct DLGPROCITEM
@@ -375,8 +375,8 @@ INT_PTR CALLBACK DialogPreProc(HWND hwndDlg, UINT uMsg,
 }
 ```
 
-##### <a name="help-buttons-in-managed-code"></a>Tlačítka nápovědy ve spravovaném kódu
- Přepsání výchozího chování tlačítka nápovědy záhlaví okna je ve spravovaném kódu snadné. Níže je kompletní demo aplikace, která demonstruje toto chování. V podstatě je třeba přepsat metodu **WndProc** formuláře a poté vypálit žádosti nápovědy F1, když je zachycena **SC_CONTEXTHELP** zpráva.
+##### <a name="help-buttons-in-managed-code"></a>Tlačítka pro podporu ve spravovaném kódu
+ Přepsání výchozího chování tlačítka panelu záhlaví okna je snadné ve spravovaném kódu. Níže je kompletní ukázková aplikace, která demonstruje toto chování. V podstatě musíte přepsat metodu **WndProc** formuláře a pak při zachycení zprávy **SC_CONTEXTHELP** vyvolávat žádosti o nápovědu F1.
 
 ```
 using System;

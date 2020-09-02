@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace cílů a úloh | Dokumentace Microsoftu'
+title: 'Postupy: Konfigurace cílů a úloh | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -10,28 +10,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8ef52638858160822fcc271a53513b130afc3f4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440042"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64806040"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>Postupy: Konfigurace cílů a úloh
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí, které cílí, bez ohledu na prostředí, které vývojovém počítači. Například pokud používáte 64bitový počítač k sestavení aplikace pro danou architekturu cíle 32-bit, vybrané úlohy se spouštějí v 32bitový proces.  
+Vybrané úlohy nástroje MSBuild je možné nastavit tak, aby běžely v prostředí, na které cílí, bez ohledu na prostředí vývojového počítače. Pokud například použijete 64 počítač k vytvoření aplikace, která se zaměřuje na 32 bitovou architekturu, vybrané úlohy se spustí v procesu 32.  
   
 > [!NOTE]
-> Pokud úloha sestavení je napsaný v jazyce .NET, jako je Visual C# nebo Visual Basic a nepoužívá nativní prostředky nebo nástroje, pak se spustí v libovolném kontextu cílového bez přizpůsobení.  
+> Pokud je úloha sestavení napsána v jazyce .NET, jako je například Visual C# nebo Visual Basic, a nepoužívá nativní prostředky nebo nástroje, pak bude spuštěna v jakémkoli cílovém kontextu bez nutnosti přizpůsobení.  
   
-## <a name="usingtask-attributes-and-task-parameters"></a>Usingtask – atributy a parametry úlohy  
- Následující `UsingTask` ovlivňují všechny operace úloh v procesu sestavení konkrétní atributy:  
+## <a name="usingtask-attributes-and-task-parameters"></a>Atributy UsingTask a parametry úlohy  
+ Následující `UsingTask` atributy ovlivňují všechny operace úlohy v rámci určitého procesu sestavení:  
   
-- `Runtime` Atribut, pokud jsou k dispozici, nastaví společné jazykové verzi modulu runtime (CLR) a můžete provést některou z těchto hodnot: `CLR2`, `CLR4`, `CurrentRuntime`, nebo `*` (žádné runtime).  
+- `Runtime`Atribut je-li k dispozici, nastaví verzi modulu CLR (Common Language Runtime) a může přijmout jednu z těchto hodnot: `CLR2` , `CLR4` , `CurrentRuntime` nebo `*` (jakýkoli modul runtime).  
   
-- `Architecture` Atribut, pokud jsou k dispozici, nastaví platformy a počtu bitů a můžete provést jednu z těchto hodnot: `x86`, `x64`, `CurrentArchitecture`, nebo `*` (všechny architektury).  
+- `Architecture`Atribut, pokud je k dispozici, nastaví platformu a bitová verze a může mít jednu z těchto hodnot: `x86` , `x64` , `CurrentArchitecture` nebo `*` (jakákoli architektura).  
   
-- `TaskFactory` Atribut, pokud jsou k dispozici, nastaví továrny úloh, která vytvoří a spustí instanci úlohy a přijímá pouze hodnotu `TaskHostFactory`. Další informace najdete v části továrny úloh dále v tomto dokumentu.  
+- `TaskFactory`Atribut je-li k dispozici, nastaví objekt pro vytváření úloh, který vytvoří a spustí instanci úlohy, a převezme pouze hodnotu `TaskHostFactory` . Další informace najdete v části věnované ukazatelům úloh dále v tomto dokumentu.  
   
 ```  
 <UsingTask TaskName="SimpleTask"   
@@ -40,7 +40,7 @@ Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí,
    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v3.5.dll" />  
 ```  
   
- Můžete také použít `MSBuildRuntime` a `MSBuildArchitecture` parametry se mají nastavit cílový kontext jednotlivé úlohy.  
+ Pomocí parametrů a můžete také `MSBuildRuntime` `MSBuildArchitecture` nastavit cílový kontext jednotlivého úkolu.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -50,12 +50,12 @@ Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí,
 </Project>  
 ```  
   
- Předtím, než MSBuild spustí úlohu, vyhledá odpovídající `UsingTask` , který má stejný cílový kontext.  Parametry, které jsou určené v `UsingTask` , ale ne v odpovídající úlohy jsou považovány za odpovídat.  Parametry zadané v úloze, ale ne v odpovídající `UsingTask` jsou také považovány za odpovídat. Pokud nejsou zadány hodnoty parametrů buď `UsingTask` nebo úlohou, výchozí hodnoty `*` (žádné parametry).  
+ Předtím, než nástroj MSBuild spustí úlohu, vyhledá shodu `UsingTask` , která má stejný cílový kontext.  Parametry, které jsou zadány v, `UsingTask` ale ne v odpovídající úloze, se považují za shodné.  Parametry, které jsou zadány v úloze, ale nejsou v odpovídajícím, `UsingTask` jsou také považovány za shodné. Pokud nejsou zadány hodnoty parametrů buď v `UsingTask` úloze, nebo, hodnotami výchozí hodnotou `*` (libovolný parametr).  
   
 > [!WARNING]
-> Pokud více než jeden `UsingTask` existuje a mít odpovídající `TaskName`, `Runtime`, a `Architecture` atributy, posledním blokem, který se má vyhodnotit nahradí ostatní.  
+> Pokud existuje více než jedna `UsingTask` a všechny mají stejné `TaskName` `Runtime` atributy,, a, poslední z `Architecture` nich bude vyhodnocen, nahradí ostatní.  
   
- Pokud parametry nejsou nastavené na úkolu, MSBuild, pokusí se najít `UsingTask` , který odpovídá tyto parametry nebo alespoň, není konfliktu s nimi.  Více než jeden `UsingTask` můžete určit cílový kontext stejnou úlohu.  Úloha, která má jinou spustitelné soubory pro jiné cílové prostředí může vypadat například tento:  
+ Pokud jsou v úloze nastaveny parametry, MSBuild se pokusí najít `UsingTask` , který odpovídá těmto parametrům nebo, alespoň, nekoliduje s nimi.  Více než jeden `UsingTask` může určovat cílový kontext stejné úlohy.  Například úloha, která má jiné spustitelné soubory pro různá cílová prostředí, může vypadat takto:  
   
 ```  
 <UsingTask TaskName="MyTool"   
@@ -77,7 +77,7 @@ Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí,
 ```  
   
 ## <a name="task-factories"></a>Továrny úloh  
- Před spuštěním úkolu, zkontroluje MSBuild, zda je určený pro spouštění v aktuálním kontextu softwaru.  Pokud úloha je určena, nástroj MSBuild ji předá AssemblyTaskFactory, který se spouští v aktuálním procesu; v opačném případě se předá MSBuild TaskHostFactory, který se spouští úloha v procesu, který odpovídá cílový kontext úkolu. I v případě, že aktuální kontext a cílový kontext shodují, můžete vynutit spuštění úlohy mimo proces (pro izolaci, zabezpečení nebo z jiných důvodů) tak, že nastavíte `TaskFactory` k `TaskHostFactory`.  
+ Před spuštěním úlohy MSBuild zkontroluje, zda je určeno ke spuštění v aktuálním softwarovém kontextu.  Pokud je úkol označen jako označený, nástroj MSBuild ho předá do AssemblyTaskFactory, který ho spustí v aktuálním procesu. v opačném případě nástroj MSBuild projde úlohu do TaskHostFactory, který úlohu spustí v procesu, který odpovídá cílovému kontextu. I v případě, že se aktuální kontext a cílový kontext shodují, můžete vynutit spuštění úlohy mimo proces (pro izolaci, zabezpečení nebo jiné důvody) nastavením `TaskFactory` na `TaskHostFactory` .  
   
 ```  
 <UsingTask TaskName="MisbehavingTask"   
@@ -87,7 +87,7 @@ Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí,
 ```  
   
 ## <a name="phantom-task-parameters"></a>Parametry fiktivní úlohy  
- Další parametry úlohy, jako jsou `MSBuildRuntime` a `MSBuildArchitecture` lze nastavit z vlastností sestavení.  
+ Stejně jako jakékoli jiné parametry úlohy `MSBuildRuntime` a `MSBuildArchitecture` lze nastavit z vlastností sestavení.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -100,15 +100,15 @@ Vybrané úlohy nástroje MSBuild může nastaven na spouštění v prostředí,
 </Project>  
 ```  
   
- Na rozdíl od jiných parametry úlohy `MSBuildRuntime` a `MSBuildArchitecture` nejsou zřejmé vlastní úloha.  Zapsat úlohu, která ví o kontextu, ve které běží, musíte otestovat kontextu voláním rozhraní .NET Framework nebo pomocí sestavení vlastností předávat informace o kontextu prostřednictvím jiné parametry úlohy.  
+ Na rozdíl od jiných parametrů úlohy `MSBuildRuntime` a `MSBuildArchitecture` není zřejmé pro samotný úkol.  Chcete-li napsat úkol, který je informován o kontextu, ve kterém je spuštěn, je nutné otestovat kontext voláním .NET Framework, nebo pomocí vlastností sestavení předat kontextové informace prostřednictvím dalších parametrů úlohy.  
   
 > [!NOTE]
-> `UsingTask` atributy lze nastavit z vlastnosti sadu nástrojů a prostředí.  
+> `UsingTask` atributy lze nastavit z vlastností sady nástrojů a prostředí.  
   
- `MSBuildRuntime` a `MSBuildArchitecture` parametry poskytují nejflexibilnější způsob, jak nastavit cílový kontext, ale také nejvíc omezenou v oboru.  Na jedné straně protože jsou nastaveny na samotné instanci úlohy a nebudou vyhodnoceny, dokud není spuštěn úkol, následně mohli proniknout jejich hodnoty z vlastnosti, které jsou k dispozici na zkušební dobu a čas sestavení v plném rozsahu.  Na druhé straně tyto parametry platí jenom pro konkrétní instanci úlohy v konkrétnímu cíli.  
+ `MSBuildRuntime`Parametry a `MSBuildArchitecture` poskytují nejpružnější způsob nastavení cílového kontextu, ale také nejvíce omezeného rozsahu.  Na jedné straně, protože se nastavují v samotné instanci úlohy a nejsou vyhodnocovány, dokud se úloha nespustí, může odvodit jejich hodnotu od úplného rozsahu vlastností dostupných jak v době hodnocení, tak i v době sestavení.  Na druhé straně se tyto parametry vztahují pouze na konkrétní instanci úlohy v konkrétním cíli.  
   
 > [!NOTE]
-> Parametry úlohy se vyhodnocují v rámci nadřazeného uzlu, nejsou v rámci hostitele úloh. Proměnné prostředí, které se modul runtime nebo architektura závislé (jako je například umístění programových souborů) se vyhodnotí na hodnotu, která odpovídá nadřazený uzel.  Ale pokud stejnou proměnnou prostředí přečte přímo úkol, je správně se vyhodnotí v kontextu bude hostitel úloh.  
+> Parametry úlohy jsou vyhodnocovány v kontextu nadřazeného uzlu, nikoli v kontextu hostitele úkolu. Proměnné prostředí, které jsou závislé na architektuře nebo běhu (například umístění programových souborů), se vyhodnotí na hodnotu, která odpovídá nadřazenému uzlu.  Pokud je však stejná proměnná prostředí čtena přímo úlohou, bude vyhodnocena správně v kontextu hostitele úkolu.  
   
 ## <a name="see-also"></a>Viz také  
  [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsEncOutdated | Dokumentace Microsoftu
+title: 'IDebugObject2:: IsEncOutdated | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fa4acd0476a0df75644738840da562db97a34bf6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431680"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64796273"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda určuje, zda funkce upravit a pokračovat stav tohoto objektu nebo jeho nadřazeného kontejneru je zastaralá. Vyhodnocovací filtr vlastních výrazů neimplementuje tuto metodu a vždy vrátí `E_NOTIMPL`.  
+Tato metoda určuje, zda je stav úpravy a pokračování tohoto objektu nebo nadřazeného kontejneru zastaralý. Filtr vlastního výrazu neimplementuje tuto metodu a vždy vrátí `E_NOTIMPL` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int IsEncOutdated(
   
 #### <a name="parameters"></a>Parametry  
  `pfEncOutdated`  
- [out] Nenulová (`TRUE`) Pokud státu upravit a pokračovat není aktuální, nula (`FALSE`) Pokud není.  
+ mimo Nenulová ( `TRUE` ), pokud je stav úpravy a pokračování zastaralé, nula (), `FALSE` Pokud není.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 > [!NOTE]
-> Vyhodnocovací filtr vlastních výrazů by měla vždy vrátit `E_NOTIMPL`.  
+> Filtr vlastního výrazu by měl vždycky vracet `E_NOTIMPL` .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

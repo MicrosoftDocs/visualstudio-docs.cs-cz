@@ -1,5 +1,5 @@
 ---
-title: Poskytování podpory odčinit návrháře | Dokumenty společnosti Microsoft
+title: Poskytnutí podpory pro vrácení zpět pro návrháře | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,96 +11,96 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0580f974c362a71c3e400946f2ad34f565ad1232
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699677"
 ---
-# <a name="supply-undo-support-to-designers"></a>Dodávat podporu pro odvádělte návrhářům
+# <a name="supply-undo-support-to-designers"></a>Poskytnutí podpory pro vrácení zpět návrhářům
 
-Návrháři, jako jsou editory, obvykle potřebují podporovat operace zpět, aby uživatelé mohli stornovat své poslední změny při úpravách prvku kódu.
+Návrháři, jako jsou editory, obvykle potřebují podporovat operace vrácení zpět, aby uživatelé mohli vrátit poslední změny při změně elementu kódu.
 
-Většina návrhářů implementovaných v sadě Visual Studio má podporu "vrátit" automaticky poskytovanou prostředím.
+Většina návrhářů implementovaných v aplikaci Visual Studio má podporu "zpět", která je automaticky poskytována prostředím.
 
-Návrhářské implementace, které potřebují poskytnout podporu pro funkci vrátit:
+Implementace návrháře, které musí poskytovat podporu pro funkci vrácení zpět:
 
-- Zadejte správu vrátit se k nápravě implementací abstraktní základní třídy<xref:System.ComponentModel.Design.UndoEngine>
+- Poskytnutí správy zpět pomocí implementace abstraktní základní třídy <xref:System.ComponentModel.Design.UndoEngine>
 
-- Zabezpečení napájení a CodeDOM podporu <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> implementací a <xref:System.ComponentModel.Design.IComponentChangeService> třídy.
+- Zadávejte trvalost a podporu CodeDOM pomocí implementace <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  <xref:System.ComponentModel.Design.IComponentChangeService> tříd a.
 
-Další informace o psaní návrhářů pomocí rozhraní .NET Framework naleznete [v tématu Rozšíření podpory návrhu .](/previous-versions/37899azc(v=vs.140))
+Další informace o psaní návrháře pomocí .NET Framework najdete v tématu [prodloužení podpory v době návrhu](/previous-versions/37899azc(v=vs.140)).
 
-Poskytuje [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] výchozí infrastrukturu vrátit do aplikace:
+[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]Poskytuje výchozí infrastrukturu pro vrácení zpět podle:
 
-- Poskytování implementace správy vrátit <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> vrátit <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> prostřednictvím a třídy.
+- Poskytování implementací pro vrácení zpět <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> prostřednictvím <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> tříd a.
 
-- Poskytování perzistence a codedom podporu prostřednictvím výchozí <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> a <xref:System.ComponentModel.Design.IComponentChangeService> implementace.
+- Dodávání Persistence a podpora CodeDOM prostřednictvím výchozích <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> a <xref:System.ComponentModel.Design.IComponentChangeService> implementací.
 
-## <a name="obtain-undo-support-automatically"></a>Získat podporu vrátit do aplikace automaticky
+## <a name="obtain-undo-support-automatically"></a>Získat podporu pro vrácení zpět automaticky
 
-Každý návrhář vytvořený v sadě Visual Studio má automatickou a úplnou podporu vrátit, pokud návrhář:
+Libovolný Návrhář vytvořený v aplikaci Visual Studio má podporu automatického a úplného vrácení zpět, pokud je, Návrhář:
 
-- Využívá třídu <xref:System.Windows.Forms.Control> založenou pro své uživatelské rozhraní.
+- Využívá <xref:System.Windows.Forms.Control> třídu založenou na svém uživatelském rozhraní.
 
-- Používá standardní codedom na generování kódu a analýzy systému pro generování kódu a trvalost.
+- Využívá standardní generování a analýzu kódu založené na CodeDOM pro generování kódu a trvalost.
 
-   Další informace o práci s podporou Visual Studio CodeDOM naleznete [v tématu Dynamické generování zdrojového kódu a kompilace](/dotnet/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation).
+   Další informace o práci s podporou CodeDOM sady Visual Studio naleznete v tématu [dynamické generování a kompilace zdrojového kódu](/dotnet/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation).
 
-## <a name="when-to-use-explicit-designer-undo-support"></a>Kdy použít podporu explicitního návrháře vrátit se k podpoře
- Návrháři musí zadat vlastní správu vrátit se k nápravě, pokud používají grafické uživatelské <xref:System.Windows.Forms.Control>rozhraní, označované jako adaptér zobrazení, jiné než dodané společností .
+## <a name="when-to-use-explicit-designer-undo-support"></a>Kdy použít explicitní podporu pro vrácení návrháře
+ Aby návrháři používali grafické uživatelské rozhraní, které je označováno jako adaptér zobrazení, jiné než ten, který poskytuje, musí vytvořit vlastní správu zpět <xref:System.Windows.Forms.Control> .
 
- Příkladem může být vytvoření produktu s webovým grafickým návrhovým rozhraním, nikoli s grafickým rozhraním založeným na rozhraní .NET Framework.
+ Příkladem může být vytvoření produktu s webovým grafickým návrhovým rozhraním, nikoli .NET Framework grafické rozhraní založené na.
 
- V takových případech by bylo nutné zaregistrovat tento <xref:Microsoft.VisualStudio.Shell.Design.ProvideViewAdapterAttribute>adaptér zobrazení pomocí sady Visual Studio a poskytnout explicitní správu vrátit vrátit.
+ V takových případech by jeden musel zaregistrovat tento adaptér zobrazení v sadě Visual Studio pomocí <xref:Microsoft.VisualStudio.Shell.Design.ProvideViewAdapterAttribute> a poskytnout explicitní správu zpět.
 
- Návrháři musí poskytnout CodeDOM a trvalost podporu, pokud nepoužívají model <xref:System.CodeDom> generování kódu sady Visual Studio k dispozici v oboru názvů.
+ Aby návrháři nepoužívali model generování kódu sady Visual Studio, který je k dispozici v oboru názvů, je nutné poskytnout podporu CodeDOM a trvalosti <xref:System.CodeDom> .
 
-## <a name="undo-support-features-of-the-designer"></a>Vrátit funkce podpory návrháře
- Sada Environment SDK poskytuje výchozí implementace rozhraní potřebných k poskytování podpory vrátit <xref:System.Windows.Forms.Control> do aplikace, kterou mohou použít návrháři, kteří nepoužívají třídy založené pro jejich uživatelská rozhraní nebo standardní model CodeDOM a perzistence.
+## <a name="undo-support-features-of-the-designer"></a>Vrátit funkce podpory v Návrháři
+ Sada SDK prostředí poskytuje výchozí implementaci rozhraní, která jsou nutná k zajištění podpory pro vrácení zpět, kterou mohou používat návrháři, kteří nepoužívají <xref:System.Windows.Forms.Control> třídy založené na jejich uživatelských rozhraních nebo standardní model CodeDOM a trvalost.
 
- Třída <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> je odvozena od <xref:System.ComponentModel.Design.UndoEngine> třídy .NET <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> Framework pomocí implementace třídy ke správě operací vrátit se k aplikaci.
+ <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>Třída je odvozena z .NET Framework <xref:System.ComponentModel.Design.UndoEngine> třídy pomocí implementace <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> třídy pro správu operací vrácení zpět.
 
- Visual Studio poskytuje následující funkce pro návrháře vrátit:
+ Visual Studio poskytuje následující funkci pro vrácení návrháře zpět:
 
-- Propojené funkce vrátit do aplikace mezi více návrháři.
+- Propojené funkce zrušení napříč několika návrháři.
 
-- Podřízené jednotky v rámci návrháře mohou <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> komunikovat <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>se svými rodiči implementací a zapnutou .
+- Podřízené jednotky v Návrháři mohou komunikovat s jejich rodičem implementací <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> a <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> on <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> .
 
-Sada Environment SDK poskytuje codedom a trvalost podporu tím, že poskytuje:
+Sada SDK prostředí poskytuje podporu CodeDOM a trvalosti tím, že poskytuje:
 
-- <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>jako provádění<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>
+- <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> jako implementace <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>
 
-- Poskytované <xref:System.ComponentModel.Design.IComponentChangeService> hostitele mno že návrže sady Visual Studio.
+- A <xref:System.ComponentModel.Design.IComponentChangeService> poskytnutý hostitelem pro návrh sady Visual Studio.
 
-## <a name="use-the-environment-sdk-features-to-supply-undo-support"></a>Použití funkcí sady Environment SDK k poskytování podpory zrušení
+## <a name="use-the-environment-sdk-features-to-supply-undo-support"></a>Použití funkcí sady SDK pro prostředí k poskytnutí podpory pro vrácení zpět
 
-Chcete-li získat podporu vrátit, objekt implementující návrháře musí vytvořit instanci a inicializovat instanci <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> třídy s platnou <xref:System.IServiceProvider> implementací. Tato <xref:System.IServiceProvider> třída musí poskytovat následující služby:
+Chcete-li získat podporu pro vrácení zpět, objekt implementující návrháře musí vytvořit instanci a inicializovat instanci <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> třídy s platnou <xref:System.IServiceProvider> implementací. Tato <xref:System.IServiceProvider> Třída musí poskytovat následující služby:
 
 - <xref:System.ComponentModel.Design.IDesignerHost>.
 
 - <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>
 
-   Návrháři pomocí serializace Visual Studio CodeDOM může zvolit použití <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> dodaný [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] s jako jeho implementace <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>.
+   Návrháři pomocí serializace CodeDOM sady Visual Studio se mohou rozhodnout použít <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] jako implementaci rozhraní <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> .
 
-   V tomto případě <xref:System.IServiceProvider> třídy poskytované <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> konstruktoru by měl vrátit <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> tento objekt jako implementace třídy.
+   V tomto případě <xref:System.IServiceProvider> by třída poskytnutá <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> konstruktoru měla vracet tento objekt jako implementaci <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> třídy.
 
 - <xref:System.ComponentModel.Design.IComponentChangeService>
 
-   Návrháři pomocí <xref:System.ComponentModel.Design.DesignSurface> výchozí poskytované hostitele návrhu sady Visual Studio je <xref:System.ComponentModel.Design.IComponentChangeService> zaručeno, že výchozí implementaci třídy.
+   Návrháři, kteří používají výchozí hodnoty <xref:System.ComponentModel.Design.DesignSurface> poskytované hostitelem pro návrh sady Visual Studio, mají zaručenou výchozí implementaci <xref:System.ComponentModel.Design.IComponentChangeService> třídy.
 
-Návrháři implementující mechanismus zpět <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> na základě automaticky sleduje změny, pokud:
+Návrháři implementující <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> mechanismus vrácení zpět automaticky sledují změny, pokud:
 
-- Změny vlastností jsou <xref:System.ComponentModel.TypeDescriptor> prováděny prostřednictvím objektu.
+- Změny vlastností se provádí prostřednictvím <xref:System.ComponentModel.TypeDescriptor> objektu.
 
-- <xref:System.ComponentModel.Design.IComponentChangeService>události jsou generovány ručně při zrušení změny je potvrzena.
+- <xref:System.ComponentModel.Design.IComponentChangeService> události jsou generovány ručně, pokud je potvrzena zpětná změna.
 
-- Modifikace na projektantu byla <xref:System.ComponentModel.Design.DesignerTransaction>vytvořena v kontextu .
+- Změny v Návrháři byly vytvořeny v kontextu <xref:System.ComponentModel.Design.DesignerTransaction> .
 
-- Návrhář se rozhodne explicitně vytvořit jednotky vrátit pomocí standardní jednotky vrátit <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> do aplikace poskytované implementací aplikace <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit>nebo specifické pro implementaci sady Visual Studio , která je odvozena <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> z a také poskytuje implementaci obou <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> a <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit>.
+- Návrhář rozhodne explicitně vytvořit jednotky akcí zpět pomocí standardní jednotky pro vrácení zpět, která je poskytována implementací <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> nebo implementací specifickou pro sadu Visual Studio <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> , která je odvozena z <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> a také poskytuje implementaci obou <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> i <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> .
 
 ## <a name="see-also"></a>Viz také
 
 - <xref:System.ComponentModel.Design.UndoEngine>
 - <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>
-- [Rozšířit podporu návrhu](/previous-versions/37899azc(v=vs.140))
+- [Prodloužená podpora při návrhu](/previous-versions/37899azc(v=vs.140))

@@ -1,5 +1,5 @@
 ---
-title: Přehled cílení na více verzí nástroje MSBuild | Dokumentace Microsoftu
+title: Přehled cílení na více verzí nástroje MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -10,43 +10,43 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f5b60f44dd1d32a9d19814b4d2194e7586d86865
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426853"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64784771"
 ---
 # <a name="msbuild-multitargeting-overview"></a>Přehled cílení na více verzí nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v jedné z několika verzí rozhraní .NET Framework a v jedné z několika platformách systému. Například můžete zkompilovat aplikaci pro spuštění v rozhraní .NET Framework 2.0 na 32bitové platformě a zkompilovat stejnou aplikaci spustit v rozhraní .NET Framework 4.5 na 64bitové platformě.  
+Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v libovolné z několika verzí .NET Framework a na některé z několika systémových platforem. Například můžete zkompilovat aplikaci pro spuštění na .NET Framework 2,0 na 32 platformě a zkompilovat stejnou aplikaci, která bude spuštěna na .NET Framework 4,5 64 na 64bitové platformě.  
   
 > [!IMPORTANT]
-> Bez ohledu název "cílení na více verzí" můžete projekt cílit pouze jedno rozhraní a pouze jedné platformy najednou.  
+> Navzdory názvu "cílení na více verzí" se projekt může zaměřit pouze na jedno rozhraní a vždy pouze na jednu platformu.  
   
- Toto jsou některé funkce cílí na MSBuild:  
+ Jedná se o některé funkce cílení na MSBuild:  
   
-- Můžete vyvíjet aplikace, která se zaměřuje na starší verzi rozhraní .NET Framework, například verze 2.0, 3.5 nebo 4.  
+- Můžete vyvíjet aplikaci, která cílí na starší verzi .NET Framework, například verze 2,0, 3,5 nebo 4.  
   
-- Můžete cílit rozhraní než .NET Framework, například rozhraní Silverlight.  
+- Můžete cílit na jiné rozhraní než .NET Framework, například na rozhraní Silverlight.  
   
-- Můžete cílit *profil rozhraní*, což je předdefinovaná podmnožina cílového rozhraní framework.  
+- Můžete cílit na *profil rozhraní*, což je předdefinovaná podmnožina cílové architektury.  
   
-- Pokud bude vydána aktualizace service pack pro aktuální verzi rozhraní .NET Framework, může ji zaměřit.  
+- Pokud se uvolní aktualizace Service Pack pro aktuální verzi .NET Framework, můžete na ni cílit.  
   
-- Cílení na MSBuild zaručuje, že aplikace používá pouze funkce, které jsou k dispozici v cíleného rozhraní a platformu.  
+- Nástroj MSBuild cílí na to, že aplikace používá pouze funkce, které jsou k dispozici v cílovém rozhraní a platformě.  
   
-## <a name="target-framework-and-platform"></a>Cílové architektury a platformy  
- A *Cílová architektura* je verze rozhraní .NET Framework, která je vytvořená projekt spustit, a *cílovou platformu* je platforma systému sestavení ke spuštění v projektu.  Můžete například chtít cílová aplikace rozhraní .NET Framework 2.0 na 32bitové platformě, která je kompatibilní s 802 x 86 procesorů (x86) spuštění. Kombinace Cílová architektura a cílová platforma se označuje jako *cílový kontext*. Další informace najdete v tématu [Cílová architektura a cílová platforma](../msbuild/msbuild-target-framework-and-target-platform.md).  
+## <a name="target-framework-and-platform"></a>Cílová architektura a platforma  
+ *Cílová verze rozhraní .NET Framework* je verze .NET Framework, na které je projekt sestaven, a *cílová platforma* je systémovou platformou, na které je projekt sestaven.  Například můžete chtít cílit na aplikaci .NET Framework 2,0, která bude běžet na 32 platformě, která je kompatibilní s řadou procesorů 802x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext*. Další informace naleznete v tématu [Cílová architektura a cílová platforma](../msbuild/msbuild-target-framework-and-target-platform.md).  
   
 ## <a name="toolset-toolsversion"></a>Sada nástrojů (atribut ToolsVersion)  
- Sada nástrojů shromažďuje společně nástroje, úlohy a cíle, které se používají k vytvoření aplikace. Sada nástrojů obsahuje kompilátory jako csc.exe a vbc.exe, běžné souboru cíle (cílů microsoft.common.targets), a běžné úkoly souborů (microsoft.common.tasks). Rozhraní 4.5 sadu nástrojů lze použít na cílové rozhraní .NET Framework verze 2.0, 3.0, 3.5, 4 a 4.5. Ale 2.0 nástrojů jde použít jenom k cílení rozhraní .NET Framework verze 2.0. Další informace najdete v tématu [sada nástrojů (atribut ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).  
+ Sada nástrojů shromažďuje dohromady nástroje, úlohy a cíle, které se používají k vytvoření aplikace. Sada nástrojů obsahuje kompilátory, jako jsou csc.exe a vbc.exe, soubor Common TARGETS (Microsoft. Common. targets) a soubor běžné úlohy (Microsoft. Common. Tasks). Sadu nástrojů 4,5 lze použít k cílení na .NET Framework verze 2,0, 3,0, 3,5, 4 a 4,5. Sada nástrojů 2,0 se ale dá použít jenom k cílení na verzi .NET Framework 2,0. Další informace najdete v tématu [Sada nástrojů (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).  
   
 ## <a name="reference-assemblies"></a>Referenční sestavení  
- Referenční sestavení, které jsou uvedeny v sadu nástrojů můžete navrhovat a sestavovat aplikace. Tyto referenční sestavení jenom povolit konkrétní cíl sestavení, ale také na ty, které jsou kompatibilní s cílem omezit komponenty a funkce v integrovaném vývojovém prostředí sady Visual Studio. Další informace najdete v tématu [překlad sestavení v době návrhu](../msbuild/resolving-assemblies-at-design-time.md)  
+ Referenční sestavení, která jsou uvedena v sadě nástrojů, vám pomohou navrhovat a sestavovat aplikace. Tato referenční sestavení nepovolují pouze konkrétní cílové sestavení, ale také omezují komponenty a funkce v integrovaném vývojovém prostředí sady Visual Studio na ty, které jsou kompatibilní s cílem. Další informace naleznete v tématu [řešení sestavení v době návrhu](../msbuild/resolving-assemblies-at-design-time.md) .  
   
 ## <a name="configuring-targets-and-tasks"></a>Konfigurace cílů a úloh  
- Můžete nakonfigurovat cíle nástroje MSBuild a aby úlohy běžely na více instancí procesu pomocí nástroje MSBuild tak, že je možné cílit na kontextu, které se značně liší než ten, který spustíte v.  Aplikace rozhraní .NET Framework 2.0 32-bit, například můžete cílit na 64bitové platformě s rozhraním .NET Framework 4.5 je spuštěn vývojovém počítači. Další informace najdete v tématu [konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md).  
+ Cíle a úlohy nástroje MSBuild můžete nakonfigurovat tak, aby běžely mimo proces s nástrojem MSBuild, abyste mohli cílit na kontexty, které jsou výrazně jiné než ten, na kterém je spuštěný.  Můžete například cílit na 32, .NET Framework 2,0 aplikace, zatímco vývojový počítač běží na platformě 64 s .NET Framework 4,5. Další informace najdete v tématu [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md).  
   
-## <a name="troubleshooting"></a>Poradce při potížích  
- Pokud se pokusíte k odkazování na sestavení, které není součástí cílový kontext, mohou se vyskytnout chyby. Další informace o těchto chyb a co dělat, o nich najdete v tématu [řešení chyb cílí na .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
+## <a name="troubleshooting"></a>Řešení potíží  
+ Při pokusu o odkaz na sestavení, které není součástí cílového kontextu, může dojít k chybám. Další informace o těchto chybách a o tom, co s nimi dělat, najdete v tématu [řešení potíží s chybami cílení .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

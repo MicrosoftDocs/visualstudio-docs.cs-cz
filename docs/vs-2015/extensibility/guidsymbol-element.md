@@ -1,5 +1,5 @@
 ---
-title: Guidsymbol – Element | Dokumentace Microsoftu
+title: Element GuidSymbol | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5f11ed48d9dcf961228957cf15db3815c00d14d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204226"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`GuidSymbol` Prvek obsahuje GUID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz. ID pochází z `IDSymbol` prvek `GuidSymbol` elementu. `GuidSymbol` Element má `name` atribut, který poskytuje popisný název pro identifikátor GUID, který je součástí `value` atribut.  
+`GuidSymbol`Element obsahuje identifikátor GUID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz. ID pochází z `IDSymbol` prvku v `GuidSymbol` elementu. `GuidSymbol`Element má `name` atribut, který poskytuje popisný název identifikátoru GUID, který je obsažen v `value` atributu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">  
@@ -39,23 +39,23 @@ ms.locfileid: "68204226"
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|name|Povinný parametr. Název symbolu identifikátor GUID.|  
-|value|Povinný parametr. Identifikátor GUID symbol identifikátor GUID.|  
+|name|Povinná hodnota. Název symbolu GUID|  
+|value|Povinná hodnota. Identifikátor GUID symbolu GUID|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[IDSymbol – element](../extensibility/idsymbol-element.md)|Obsahuje ID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz.|  
+|[IDSymbol – element](../extensibility/idsymbol-element.md)|Obsahuje ID páru identifikátorů GUID: ID, který představuje nabídku, skupinu nebo příkaz.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Symbols – element](../extensibility/symbols-element.md)|Skupiny `GuidSymbol` elementy v souboru .vsct.|  
+|[Symbols – element](../extensibility/symbols-element.md)|Seskupí `GuidSymbol` elementy v souboru. vsct.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle souboru .vsct obsahuje tři `GuidSymbol` prvků v jeho `Symbols` části, jeden pro samotném balíčku, z nich je pro příkaz set (kolekce nabídek, skupiny a příkazy, které zpřístupní balíček) a jeden pro rastrové obrázky, zadejte ikony pro tlačítka a další vizuální komponenty. Každý `IDSymbol` element v danou `GuidSymbol` element musí mít jedinečný `value`. Ale `IDSymbol` prvky, které mají stejné hodnoty může existovat v balíčku tak dlouho, dokud mají jiné nadřazené položky.  
+ Soubor. vsct obvykle obsahuje tři `GuidSymbol` prvky v jeho `Symbols` části, jednu pro samotný balíček, jednu pro sadu příkazů (kolekci nabídek, skupin a příkazů, které balíček zpřístupňuje), a jeden pro rastrové obrázky, které poskytují ikony pro tlačítka a další vizuální komponenty. Každý `IDSymbol` prvek v daném `GuidSymbol` elementu musí mít jedinečný `value` . Nicméně `IDSymbol` prvky, které mají stejné hodnoty, mohou existovat v balíčku, pokud mají různé nadřazené položky.  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
