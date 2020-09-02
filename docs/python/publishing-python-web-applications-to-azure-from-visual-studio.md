@@ -1,6 +1,6 @@
 ---
-title: Publikování aplikace Pythonu do služby Azure App Service
-description: Možnosti publikování aplikace Pythonu do služby Azure App Service, včetně nasazení Gitu a kontejnerů pro Linux a nasazení do Služby IIS.
+title: Publikování aplikace v Pythonu pro Azure App Service
+description: Možnosti publikování aplikace v Pythonu pro Azure App Service, včetně nasazení a kontejnerů Git pro Linux a nasazení do služby IIS.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -12,40 +12,40 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: c3c8d6c16f2f7e432b6b5e988bf63521f3dfc8c0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62784112"
 ---
 # <a name="publish-to-azure-app-service"></a>Publikování do Azure App Service
 
-V současné době je Python podporovaný ve službě Azure App Service pro Linux a můžete publikovat aplikace pomocí [gitnasazení](#publish-to-app-service-on-linux-using-git-deploy) a [kontejnerů](#publish-to-app-service-on-linux-using-containers), jak je popsáno v tomto článku.
+V současnosti je Python podporován v Azure App Service pro Linux a aplikace můžete publikovat pomocí nasazení a [kontejnerů](#publish-to-app-service-on-linux-using-containers) [Git](#publish-to-app-service-on-linux-using-git-deploy) , jak je popsáno v tomto článku.
 
 > [!Note]
-> Podpora Pythonu ve službě Azure App Service pro Windows se oficiálně zastaralá. V důsledku toho je příkaz **Publikovat** v sadě Visual Studio oficiálně podporován pouze pro [cíl služby IIS](#publish-to-iis)a vzdálené ladění ve službě Azure App Service již není oficiálně podporováno.
+> Podpora Pythonu pro Azure App Service pro Windows je oficiálně zastaralá. V důsledku toho je příkaz **publikovat** v sadě Visual Studio oficiálně podporován pouze pro [Cíl služby IIS](#publish-to-iis)a vzdálené ladění v Azure App Service již není oficiálně podporováno.
 >
-> Publikování na app service v [systému Windows](publish-to-app-service-windows.md) funkce však stále funguje v současné době, jako rozšíření Pythonu pro službu aplikace v systému Windows zůstávají k dispozici, ale nebudou obsluhovány nebo aktualizovány.
+> [Publikování na App Service ve funkcích Windows](publish-to-app-service-windows.md) ale pořád funguje v době, protože rozšíření Pythonu pro App Service ve Windows zůstávají dostupná, ale nebudou se obsluhovat ani aktualizovat.
 
-## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Publikování do služby App Service na Linuxu pomocí nasazení Gitu
+## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Publikování na App Service v systému Linux pomocí nasazení Git
 
-Git deploy propojuje službu App Service v Linuxu s určitou větví úložiště Git. Potvrzení kódu do této větve se automaticky nasadí do služby App Service a služba App Service automaticky nainstaluje všechny závislosti uvedené v *souboru requirements.txt*. V tomto případě app service na Linuxu spustí váš kód v předem nakonfigurované image kontejneru, který používá webový server Gunicorn. V současné době je tato služba ve verzi Preview a není podporována pro produkční použití.
+Nasazení Git připojí App Service v systému Linux ke konkrétní větvi úložiště Git. Potvrzení kódu do této větve se automaticky nasadí do App Service a App Service automaticky nainstaluje všechny závislosti uvedené v *requirements.txt*. V takovém případě App Service v systému Linux spustí kód v předem nakonfigurované imagi kontejneru, která používá webový server Gunicorn. V současné době je tato služba ve verzi Preview a není podporovaná pro produkční použití.
 
 Další informace najdete v následujících článcích v dokumentaci k Azure:
 
-- [Úvodní příručka: Vytvoření webové aplikace Pythonu ve službě App Service](/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json) poskytuje krátký návod procesu nasazení Gitu pomocí jednoduché aplikace Flask a nasazení z místního úložiště Git.
-- [Jak nakonfigurovat Python](/azure/app-service/containers/how-to-configure-python) popisuje charakteristiky app service na linuxovém kontejneru a jak přizpůsobit příkaz spuštění Gunicorn pro vaši aplikaci.
+- [Rychlý Start: Vytvoření webové aplikace v Pythonu v App Service](/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json) poskytuje krátký návod k procesu nasazení Git pomocí jednoduché aplikace a nasazení z místního úložiště Git.
+- [Postup konfigurace Pythonu](/azure/app-service/containers/how-to-configure-python) popisuje charakteristiky App Service v kontejneru Linux a postup přizpůsobení spouštěcího příkazu Gunicorn pro vaši aplikaci.
 
-## <a name="publish-to-app-service-on-linux-using-containers"></a>Publikovat do služby App Service na Linuxu pomocí kontejnerů
+## <a name="publish-to-app-service-on-linux-using-containers"></a>Publikování na App Service v systému Linux pomocí kontejnerů
 
-Místo spoléhání se na předem sestavený kontejner se službou App Service na Linuxu můžete poskytnout vlastní kontejner. Tato možnost umožňuje zvolit, které webové servery používáte, a přizpůsobit chování kontejneru.
+Místo toho, abyste se spoléhali na předem sestavený kontejner s App Service v systému Linux, můžete poskytnout vlastní kontejner. Tato možnost umožňuje vybrat webové servery, které používáte, a přizpůsobit chování kontejneru.
 
-Kontejnery můžete vytvářet, spravovat a vystrnadit dvě možnosti:
+Existují dvě možnosti pro sestavování, správu a vložení kontejnerů:
 
-- Použijte visual studio kód a rozšíření Dockeru, jak je popsáno v [nasazení Pythonu pomocí kontejnerů Dockeru](https://code.visualstudio.com/docs/python/tutorial-deploy-containers). I v případě, že nepoužíváte Visual Studio kód, článek poskytuje užitečné podrobnosti o vytváření ibližů kontejnerů pro flask a Django aplikace pomocí produkční uwsgi a nginx webové servery. Potom můžete nasadit stejný kontejner pomocí azure cli.
+- Použijte Visual Studio Code a rozšíření Docker, jak je popsáno v tématu [nasazení Pythonu pomocí kontejnerů Docker](https://code.visualstudio.com/docs/python/tutorial-deploy-containers). I v případě, že Visual Studio Code nepoužíváte, článek poskytuje užitečné informace o vytváření imagí kontejnerů pro aplikace v baňce a Django, které využívají webové servery uwsgi a Nginx připravené pro produkční prostředí. Pak můžete stejný kontejner nasadit pomocí rozhraní příkazového řádku Azure CLI.
 
-- Použijte příkazový řádek a Azure CLI, jak je popsáno na [použití vlastní image Dockeru](/azure/app-service/containers/tutorial-custom-docker-image) v dokumentaci K Azuru. Tato příručka je však obecná a není specifická pro Python.
+- Použijte příkazový řádek a Azure CLI, jak je popsáno v dokumentaci k Azure v tématu [použití vlastní image Docker](/azure/app-service/containers/tutorial-custom-docker-image) . Tato příručka je obecná, ale není specifická pro Python.
 
-## <a name="publish-to-iis"></a>Publikovat do iis
+## <a name="publish-to-iis"></a>Publikování ve službě IIS
 
-Z visual studia můžete publikovat do virtuálního počítače se systémem Windows nebo jiného počítače podporujícího službu IIS pomocí příkazu **Publikovat.** Při používání služby IIS nezapomeňte vytvořit nebo upravit soubor *web.config* v aplikaci, která informuje službu IIS, kde nalezne překladač Pythonu. Další informace naleznete v [tématu Konfigurace webových aplikací pro službu IIS](configure-web-apps-for-iis-windows.md).
+Ze sady Visual Studio můžete publikovat na virtuálním počítači s Windows nebo do jiného počítače s podporou služby IIS pomocí příkazu **publikovat** . Při používání služby IIS nezapomeňte v aplikaci vytvořit nebo upravit soubor *web.config* , který oznamuje službě IIS, kde se nachází interpret Pythonu. Další informace najdete v tématu [Konfigurace webových aplikací pro službu IIS](configure-web-apps-for-iis-windows.md).

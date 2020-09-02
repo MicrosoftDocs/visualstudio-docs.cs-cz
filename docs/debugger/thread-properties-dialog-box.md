@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno vlastností vláken | Dokumentace Microsoftu
+title: Dialogové okno vlastnosti vlákna | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,29 +12,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 371314bff934fdceeb301f61e976224034333559
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929718"
 ---
 # <a name="thread-properties-dialog-box"></a>Dialogové okno vlastností vláken
-Pomocí tohoto dialogového okna Najít pole Další informace o konkrétním vlákně. Zobrazíte dialogovému oknu přesunout fokus [zobrazení vláken](../debugger/threads-view.md) okna, nebo otevřete [zobrazení zpráv](../debugger/messages-view.md) a rozbalení zprávy. Vyberte jakékoli vlákno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.
+Pomocí tohoto dialogového okna najdete další informace o konkrétním vlákně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno [zobrazení vlákna](../debugger/threads-view.md) nebo otevřete [zobrazení zprávy](../debugger/messages-view.md) a rozbalte zprávu. Ve stromové struktuře vyberte libovolný uzel vlákna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
- **Obecné** je karta jenom karta zobrazí. V operačních systémech Windows 98 a Windows 95 zobrazí se upravenou verzi na této kartě.
+ Karta **Obecné** je jediná zobrazená karta. V operačních systémech Windows 98 a Windows 95 se zobrazí upravená verze této karty.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Karta Obecné, dialogové okno vlastností vlákna](../debugger/general-tab-thread-properties-dialog-box.md) používat toto dialogové okno a zjistěte více o zvoleném vlákně.
+ [Karta Obecné, dialogové okno vlastností vlákna](../debugger/general-tab-thread-properties-dialog-box.md) Pomocí tohoto dialogového okna můžete zjistit více o vybraném vlákně.
 
 ## <a name="related-sections"></a>Související oddíly
- [Dialogové okno hledání vláken](../debugger/thread-search-dialog-box.md) použit k vyhledání konkrétního vlákna v zobrazení vláken uzlu.
+ [Dialogové okno hledání vláken](../debugger/thread-search-dialog-box.md) Slouží k vyhledání uzlu pro konkrétní vlákno v zobrazení vlákna.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.
 
- [Hledání vlákna v zobrazení vláken](../debugger/how-to-search-for-a-thread-in-threads-view.md) vysvětluje, jak najít konkrétní vlákno v zobrazení vláken.
+ [Hledání vlákna v zobrazení vláken](../debugger/how-to-search-for-a-thread-in-threads-view.md) Vysvětluje, jak najít konkrétní vlákno v zobrazení vláken.
 
- [Zobrazit vlákna](../debugger/threads-view.md) zobrazuje stromovou strukturu aktivní vlákna.
+ [Zobrazení vláken](../debugger/threads-view.md) Zobrazí stromové zobrazení aktivních vláken.
 
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.

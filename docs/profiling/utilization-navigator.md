@@ -1,5 +1,5 @@
 ---
-title: Využití Navigator | Dokumenty společnosti Microsoft
+title: Navigátor využití | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94e2562e86af36d935679916c2bfb9669be1758d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62823479"
 ---
 # <a name="utilization-navigator"></a>Navigátor využití
-Pomocí navigátoru využití v vizualizéru souběžnosti můžete vybrat časový interval v trasování. Vizualizér souběžnosti zobrazuje využití procesorových jader cílovým procesem v průběhu času. To usnadňuje zkoumání vzorců využití procesoru a také umožňuje porovnání mezi daty využití a daty v jiných zobrazeních. Navigátor využití se zobrazí v horní části každého zobrazení ve vizualizéru souběžnosti. Následující obrázek znázorňuje navigátor využití.
+Můžete použít Navigátor využití v Vizualizátor souběžnosti k výběru časového intervalu v trasování. Vizualizátor souběžnosti zobrazuje využití PROCESORových jader cílovým procesem v průběhu času. Díky tomu je snazší vyšetřit vzory využití procesoru a zároveň také porovnat data o využití a data v jiných zobrazeních. Navigátor využití se zobrazí v horní části každého zobrazení ve Vizualizátor souběžnosti. Následující ilustrace znázorňuje navigátor využití.
 
- ![Navigátor využití zobrazující vybraný časový rámec](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator") Využití Navigátoru a vybraného časového rámce
+ ![Navigátor využití znázorňující vybraný časový rámec](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator") Navigátor využití a vybraný časový rámec
 
- Na obrázku je vybraný interval definován červeným obdélníkem, známým jako *palec*.
+ Na obrázku je vybraný interval definován červeným obdélníkem *, který je*známý jako jezdec.
 
- Zde je návod, jak můžete použít navigátor využití k manipulaci se zobrazeným časovým rozsahem:
+ Tady je postup, jak můžete pomocí Navigátoru využití manipulovat se zobrazeným časovým rozsahem:
 
-- Posouváním palce mažete palec doleva nebo doprava. (Klávesnice: Přesuňte zaostření na palec a stiskněte klávesu se šipkou vlevo nebo vpravo.)
+- Posunutím jezdce doleva nebo doprava můžete přetáhnout. (Klávesnice: přesune fokus na palec a potom stiskněte klávesu šipka doleva nebo doprava.)
 
-- Rozsah intervalu můžete změnit přetažením jednoho z úchytů. (Klávesnice: Přesuňte fokus na úchyt a stiskněte klávesu se šipkou vpravo nebo vlevo.)
+- Rozsah intervalu můžete změnit přetažením jednoho z popisovačů. (Klávesnice: přesune fokus na popisovač a potom stiskněte klávesu šipka vpravo nebo vlevo.)
 
-  Pokud změníte interval pomocí jiného ovládacího prvku zvětšení vizuálu souběžnosti, navigátor využití se aktualizuje tak, aby odrážel změnu.
+  Změníte-li interval pomocí jiného ovládacího prvku přiblížení Vizualizátor souběžnosti, zobrazí se v Navigátoru využití aktualizace, aby odrážely změnu.

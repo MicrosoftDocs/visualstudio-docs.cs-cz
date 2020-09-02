@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky vyhledávání | Dokumentace Microsoftu
+title: Příkazy nabídky Hledat | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c61dc9e752dccee909baa742e4c8d677df865a8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929806"
 ---
 # <a name="search-menu-commands"></a>Příkazy nabídky vyhledávání
-**Hledání** nabídka poskytuje příkazy k vyhledání konkrétního systému windows.
+V nabídce **Hledat** jsou k dispozici příkazy pro hledání konkrétních oken.
 
- **Najít okno/procesu/vlákno nebo zprávu** otevře **okno**/**procesu**/**vlákna** /  **MessageSearch** dialogové okno, kde můžete použít **FinderTool** nebo určení kritérií hledání.
+ **Najít okno/proces/vlákno/zprávu** Otevře **Window** / **Process** / dialogové okno proces okna**Thread** / **MessageSearch** vlákna, kde můžete použít **FinderTool** nebo zadat kritéria hledání.
 
- **Najít další** vyhledá další odpovídající okno, proces, vlákno nebo zprávu aktuální zobrazení. Tato položka nabídky (a související tlačítka) je k dispozici pouze v případě, že je výsledek platný hledání, který není jedinečný.
+ **Najít další** Vyhledá v aktuálním zobrazení další vyhovující okno, proces, vlákno nebo zprávu. Tato položka nabídky (a související tlačítko panelu nástrojů) je k dispozici pouze v případě, že existuje platný výsledek hledání, který není jedinečný.
 
- **Najít předchozí** vyhledá předchozí odpovídající okno, proces, vlákno nebo zprávu aktuální zobrazení. Tato položka nabídky (a související tlačítka) je k dispozici pouze v případě, že je výsledek platný hledání, který není jedinečný.
+ **Najít předchozí** Vyhledá v aktuálním zobrazení předchozí vyhovující okno, proces, vlákno nebo zprávu. Tato položka nabídky (a související tlačítko panelu nástrojů) je k dispozici pouze v případě, že existuje platný výsledek hledání, který není jedinečný.

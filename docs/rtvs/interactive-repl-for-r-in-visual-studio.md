@@ -1,6 +1,6 @@
 ---
 title: Interaktivní REPL pro R
-description: Použití interaktivního prostředí REPL pro r inVisual Studio, které je integrováno s okny editoru.
+description: Jak používat interaktivní prostředí REPL pro R inVisual Studio, které je integrováno do oken editoru.
 ms.date: 06/28/2017
 ms.topic: conceptual
 author: kraigb
@@ -9,91 +9,91 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 7109e74e858aa308b8f49e6e1e335478f801070b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62814880"
 ---
 # <a name="work-with-the-r-interactive-window"></a>Práce s interaktivním oknem R
 
-Nástroje R pro visual studio (RTVS) poskytuje interaktivní okno R, označované také jako okno **REPL** (Read-Evaluate-Print-Loop), ve kterém můžete zadat kód R a okamžitě zobrazit výsledky. Všechny moduly, syntaxe a proměnné, stejně jako IntelliSense, je k dispozici v interaktivním okně.
+Nástroje R pro Visual Studio (RTVS) poskytuje interaktivní okno R, označované také jako okno **REPL** (čtení-vyhodnocení-tisk-cyklus), ve kterém můžete zadat kód R a okamžitě zobrazit výsledky. Všechny moduly, syntaxe a proměnné i IntelliSense jsou k dispozici v interaktivním okně.
 
-Interaktivní okno je také integrováno s běžnými okny editoru R. Můžete vybrat kód a stisknout **kombinaci kláves Ctrl**+**Enter**nebo klepnout pravým tlačítkem myši a vybrat příkaz Spustit **v interaktivním**a kód se spustí řádek po řádku v interaktivním okně, jako byste jej zadali přímo. Když je kurzor na jednom řádku v okně editoru, **aplikace Ctrl**+**Enter** odešle tento řádek do interaktivního okna a potom kurzor přesune na další řádek. Tímto způsobem stačí opakovaně stisknout **kombinaci kláves Ctrl**+**Enter** a procházet kódem.
+Interaktivní okno je integrováno také v oknech s pravidelným editorem R. Můžete vybrat kód a stisknout **klávesu CTRL** + **ENTER**, kliknout pravým tlačítkem myši a vybrat možnost **provést v interaktivním**okně a kód je spuštěn v interaktivním okně jako přímo při psaní přímo do řádku. Pokud se ukazatel myši nachází na jednom řádku v okně editoru, **klávesa CTRL** + **ENTER** tuto čáru pošle do interaktivního okna a potom přesune kurzor na další řádek. Tímto způsobem můžete jednoduše stisknout **kombinaci kláves CTRL +** + **ENTER** a krokovat kód.
 
-Chcete-li tyto funkce například získat, postupujte podle návodu [Začínáme s R](getting-started-with-r.md) a v částech v tomto článku. [Fragmenty kódu](code-snippets-for-r.md) také fungují v interaktivním okně stejně jako v oknech editoru R.
+Pokud chcete tyto funkce vyzkoušet, postupujte podle pokynů v tématu [Začínáme s R](getting-started-with-r.md) a také v částech v tomto článku. [Fragmenty kódu](code-snippets-for-r.md) také fungují v interaktivním okně jako v oknech editoru R.
 
 ## <a name="overview-of-the-interactive-window"></a>Přehled interaktivního okna
 
-Zadáním platného kódu R a stisknutím **klávesy Enter** na konci řádku spustíte kód na tomto řádku:
+Zadáním platného kódu R a stisknutím klávesy **ENTER** na konci řádku se spustí kód na řádku:
 
 ```repl
 > 3 + 3
 [1] 6
 ```
 
-Stisknutím **klávesy Enter** kdekoli na jednořádkovém vstupu se tato čára také spustí.
+Stisknutím klávesy **ENTER** kdekoli na jednom řádku se spustí také tento řádek.
 
-Všechny předchozí vstupy a výstupy v REPL jsou jen pro čtení a nelze je změnit. Můžete však kdykoli vybrat a zkopírovat text z okna a vložit jej. Vložený kód běží, jako by byl zadán řádek po řádku.
+Všechny předchozí vstupy a výstupy ve REPL jsou jen pro čtení a nejde je změnit. Můžete ale kdykoli vybrat a zkopírovat text z okna a také vložit. Vložený kód se spustí, jako kdyby byl zadaný řádek po řádku.
 
-To znamená, že když začnete psát příkaz a stiskněte **klávesu Enter**, RTVS ví, kdy musí příkaz pokračovat, a přejde do víceřádkového režimu s výzvou + vlevo a příslušným odsazením. RTVS také doplňuje závorky, závorky a složené závorky:
+To znamená, že když začnete psát příkaz a stisknete klávesu **ENTER**, RTVS ví, že příkaz musí pokračovat a přejde do víceřádkového režimu s použitím klávesy + na levé straně a příslušné odsazení. RTVS také dokončí závorky, závorky a složené závorky:
 
-![Víceřádková položka výkazu v interaktivním okně](media/repl-multiline-entry.png)
+![Položka víceřádkového příkazu v interaktivním okně](media/repl-multiline-entry.png)
 
-V tomto víceřádkovém režimu spustí klávesa **Enter** blok kódu pouze v případě, že je umístěn na konci bloku, jinak vloží nový řádek. Můžete však stisknout **kombinaci kláves Ctrl**+**Enter** na libovolné pozici a okamžitě spustit tento blok kódu.
+V tomto víceřádkovém režimu spustí klávesa **ENTER** blok kódu pouze v případě, že je umístěn na konci bloku. v opačném případě vloží nový řádek. Můžete však stisknout klávesu **CTRL** + **ENTER** na libovolné pozici pro okamžité spuštění bloku kódu.
 
 ### <a name="toolbar-commands"></a>Příkazy panelu nástrojů
 
-Zde je interaktivní okno s panelem nástrojů:
+Toto je interaktivní okno s jeho panelem nástrojů:
 
 ![Interaktivní okno s panelem nástrojů](media/repl-window.png)
 
-Příkazy panelu nástrojů jsou následující, z nichž většina má ekvivalenty klávesnice a jsou také k dispozici v nabídkách**Relace r** **tools** > a **R Tools** > **Working Directory** (nebo jak je uvedeno):
+Příkazy panelu nástrojů jsou následující, většina z nich má ekvivalenty klávesnice a jsou k dispozici také v nabídce **Nástroje jazyka r**a v nabídce  >  **Session** pracovních adresářů **nástroje**r  >  **Working Directory** (nebo jak je uvedeno):
 
 | Tlačítko | Příkaz | Kombinace kláves | Popis |
 | --- | --- | --- | --- |
-| ![Tlačítko Obnovit](media/repl-toolbar-01-reset.png) | Resetovat | **Ctrl**+**Shift**+**F10** | Obnoví interaktivní relaci okna a vymaže všechny proměnné a historii. |
-| ![Tlačítko Vymazat](media/repl-toolbar-02-clear.png) | Vymazat | **Ctrl**+**L** | Vymaže výstup zobrazený v interaktivním okně; nemá vliv na proměnné relace nebo historii. |
-| ![Tlačítka historie](media/repl-toolbar-03-history.png) | Příkaz Předchozí historie<br/>Další příkaz historie | **Nahoru,** **dolů**<br/>**Alt**+**nahoru,** **alt**+**dolů** | Posouvá historii s určitýmchováním pro víceřádkové bloky kódu. Viz [Historie](#history). |
-| ![Tlačítko Načíst pracovní prostor](media/repl-toolbar-04-load-workspace.png) | Načíst pracovní prostor | neuvedeno | Načte předchozí uložený pracovní prostor (viz [Pracovní prostory a relace](#workspaces-and-sessions). |
-| ![Uložit pracovní prostor jako tlačítko](media/repl-toolbar-05-save-workspace-as.png)| Uložit pracovní prostor jako | neuvedeno | Uloží aktuální stav relace jako pracovní prostor (viz [Pracovní prostory a relace](#workspaces-and-sessions). |
-| ![Tlačítko skriptu zdrojového r](media/repl-toolbar-06-source-r-script.png) | Skript zdrojového r | **Ctrl**+**Shift**+**S** | Volání `source` s aktuálně aktivní skript R v editoru Visual Studio, který spustí kód.  Toto tlačítko se zobrazí pouze v případě, že je v editoru sady Visual Studio otevřen soubor R. |
-| ![Zdrojový skript R s tlačítkem ozvěny](media/repl-toolbar-07-source-r-script-with-echo.png) | Skript zdrojového r s ozvěnou | **Ctrl**+**Shift**+**Enter** | Stejné jako zdrojový skript R, ale zobrazuje obsah skriptu v interaktivním okně. |
-| ![Tlačítko Přerušit R](media/repl-toolbar-08-interrupt-r.png)| Přerušení R | **Esc** | Zastaví jakýkoli spuštěný kód v interaktivním okně, jako je například `while` smyčka na snímku obrazovky, která se zobrazí na začátku této části. |
-| ![Tlačítko Připojit ladicí program](media/repl-toolbar-09b-attach-debugger.png)| Připojit ladicí program | neuvedeno | K dispozici také pomocí příkazu **Připojit ladění** > **k r interaktivní.** |
-| ![Nastavit pracovní adresář na tlačítko umístění zdrojového souboru](media/repl-toolbar-10-set-working-directory-source.png)| Nastavit pracovní adresář na umístění zdrojového souboru | **Ctrl**+**Shift**+**E** | Nastaví pracovní adresář na naposledy zdrojový soubor načtený `source`do interaktivního okna (pomocí ). Viz [Pracovní adresář](#working-directory). |
-| ![Nastavit pracovní adresář na tlačítko umístění projektu](media/repl-toolbar-11-set-working-directory-to-project.png) | Nastavit pracovní adresář na umístění projektu | **Ctrl**+**Shift**+**P** | Nastaví pracovní adresář do kořenového adresáře aktuálně načteného projektu v sadě Visual Studio. Viz [Pracovní adresář](#working-directory). |
-| (Textové pole) | Vybrat pracovní adresář | neuvedeno | Přímé vstupní pole pro pracovní adresář. Viz [Pracovní adresář](#working-directory). |
+| ![Tlačítko obnovit](media/repl-toolbar-01-reset.png) | Resetovat | **CTRL** + **Posun** + **F10** | Obnoví interaktivní relaci okna a vymaže všechny proměnné a historii. |
+| ![Tlačítko Vymazat](media/repl-toolbar-02-clear.png) | Vymazat | **CTRL** + **L** | Vymaže výstup zobrazený v interaktivním okně. nemá vliv na proměnné relace ani na historii. |
+| ![Tlačítka historie](media/repl-toolbar-03-history.png) | Předchozí historie – příkaz<br/>Další historie – příkaz | **Nahoru**, **dolů**<br/>**ALT** + **Nahoru**, **ALT +** + **šipka dolů** | Posuňte se přes historii s určitým chováním pro bloky víceřádkového kódu. Podívejte se na [historii](#history). |
+| ![Tlačítko načíst pracovní prostor](media/repl-toolbar-04-load-workspace.png) | Načíst pracovní prostor | Není k dispozici | Načte předchozí uložený pracovní prostor (viz [pracovní prostory a relace](#workspaces-and-sessions). |
+| ![Uložit pracovní prostor jako tlačítko](media/repl-toolbar-05-save-workspace-as.png)| Uložit pracovní prostor jako | Není k dispozici | Uloží aktuální stav relace jako pracovní prostor (viz [pracovní prostory a relace](#workspaces-and-sessions). |
+| ![Zdrojový skript R – tlačítko](media/repl-toolbar-06-source-r-script.png) | Zdrojový skript R | **CTRL** + **Posun** + **S** | Volání `source` s aktuálně aktivním skriptem R v editoru sady Visual Studio, ve kterém je spuštěný kód.  Toto tlačítko se zobrazí pouze v případě, že je soubor R otevřen v editoru sady Visual Studio. |
+| ![Zdrojový skript R s tlačítkem echo](media/repl-toolbar-07-source-r-script-with-echo.png) | Zdrojový skript R s echo | **CTRL** + **Posun** + **Zadejte** | Stejné jako zdrojový skript R, ale zobrazuje obsah skriptu v interaktivním okně. |
+| ![Tlačítko R přerušení](media/repl-toolbar-08-interrupt-r.png)| Přerušení R | **Esc** | Zastaví veškerý běžící kód v interaktivním okně, jako je například `while` smyčka na snímku obrazovky, se zobrazí na začátku této části. |
+| ![Tlačítko připojit ladicí program](media/repl-toolbar-09b-attach-debugger.png)| Připojit ladicí program | Není k dispozici | K dispozici také pomocí příkazu **ladit**  >  **připojit k interaktivní R** . |
+| ![Tlačítko nastavit pracovní adresář na umístění zdrojového souboru](media/repl-toolbar-10-set-working-directory-source.png)| Nastavit pracovní adresář na umístění zdrojového souboru | **CTRL** + **Posun** + **E** | Nastaví pracovní adresář na nejaktuálnější zdrojový soubor, který je načten do interaktivního okna (pomocí `source` ). Podívejte se na [pracovní adresář](#working-directory). |
+| ![Tlačítko nastavit pracovní adresář na umístění projektu](media/repl-toolbar-11-set-working-directory-to-project.png) | Nastavit pracovní adresář na umístění projektu | **CTRL** + **Posun** + **P** | Nastaví pracovní adresář na kořen aktuálně načteného projektu v sadě Visual Studio. Podívejte se na [pracovní adresář](#working-directory). |
+| (Textové pole) | Vybrat pracovní adresář | Není k dispozici | Pole s přímým vstupem pro pracovní adresář Podívejte se na [pracovní adresář](#working-directory). |
 
 ## <a name="workspaces-and-sessions"></a>Pracovní prostory a relace
 
-Spuštění kódu v interaktivním okně vytvoří kontext v aktuální relaci. Kontext se skládá z globálních proměnných, definice funkcí, knihovny zatížení a tak dále. Tento kontext se souhrnně nazývá *pracovní prostor*a pracovní prostory můžete kdykoli uložit a načíst.
+Při spuštění kódu v interaktivním okně se v aktuální relaci vytvoří kontext. Kontext se skládá z globálních proměnných, definic funkcí, načtení knihoven a tak dále. Tento kontext je souhrnně označován jako *pracovní prostor*a pracovní prostory můžete ukládat a načítat kdykoli.
 
-Výběrtlačítka **Uložit pracovní prostor jako** nebo pomocí příkazu**Session** > **Uložit pracovní prostor** **nástroje** > R Jako příkaz zobrazí výzvu k zadání umístění a názvu souboru (výchozí přípona je *. RData*).
+Když vyberete tlačítko **Uložit pracovní prostor jako** nebo pomocí příkazu **R**  >  **Session**  >  **pracovní prostor uložit jako** , zobrazí se výzva k zadání umístění a názvu souboru (výchozí přípona je *. RData*).
 
-Uložení pracovního prostoru pomocí určitého názvu souboru (výchozí je *. RData*), klikněte na tlačítko **Uložit pracovní prostor** v REPL:
+Uložení pracovního prostoru pomocí konkrétního názvu souboru (výchozí hodnota je *. RData*) klikněte na tlačítko **Uložit pracovní prostor** v REPL:
 
-Chcete-li znovu načíst dříve uložený pracovní prostor, vyberte tlačítko **Načíst pracovní prostor** nebo použijte**pracovní prostor Načtení** **relace** >  **Nástroje R** > a přejděte do souboru pracovního prostoru.
+Chcete-li znovu načíst dříve uložený pracovní prostor, vyberte tlačítko **načíst pracovní prostor** nebo použijte **R Tools**  >  **Session**  >  **pracovní prostor pro načtení** relace nástroje R a přejděte k souboru pracovního prostoru.
 
-Tlačítko **Obnovit** nebo**Obnovení** **relace** >  **nástrojů** > R vymaže kontext relace. Pokud používáte vzdálenou relaci, resetování také odstraní profil uživatele ve vzdáleném počítači, aby se odstranily všechny soubory, které jsou v něm uloženy. (Viz [Pracovní prostory](r-workspaces-in-visual-studio.md#directories-on-local-and-remote-computers).)
+Resetování relace tlačítko **obnovit** nebo **nástroje R Tools**  >  **Session**  >  **Reset** vymaže kontext relace. Pokud používáte vzdálenou relaci, resetování také odstraní profil uživatele na vzdáleném počítači, aby se vymazaly všechny soubory, které jsou v něm uložené. (Viz [pracovní prostory](r-workspaces-in-visual-studio.md#directories-on-local-and-remote-computers).)
 
 ## <a name="working-directory"></a>Pracovní adresář
 
-Vývojáři obvykle chtějí změnit svůj pracovní adresář v interaktivní relaci. Různé příkazy, které jsou k dispozici na panelu nástrojů, v nabídce**adresáře Nástroje** **R** > Pracovní a kontextové nabídky projektu umožňují snadno nastavit pracovní adresář na umístění zdrojového souboru, umístění nebo projektu nebo jiného libovolného umístění. To vám pomůže vyhnout se psaní úplných názvů cest nebo dlouhých relativních názvů cest při odkazování na soubory.
+Vývojáři obvykle chtějí během interaktivní relace změnit jejich pracovní adresář. Různé příkazy, které jsou k dispozici na **R Tools**panelu nástrojů, v  >  nabídce**pracovní adresář** nástroje R a v místní nabídce projektu, umožňují snadno nastavit pracovní adresář na umístění zdrojového souboru, umístění nebo projektu nebo jakékoli jiné libovolné umístění. V takovém případě vám pomůže při odkazování na soubory vyhnout se zadání úplných cest nebo délek relativních cest.
 
 ## <a name="history"></a>Historie
 
-Každý řádek, který zadáte do interaktivního okna, obsahuje řádky odeslané z editoru, je zachován v historii REPL. Poté můžete procházet historii pomocí kláves se šipkami nahoru a dolů, jak jste pravděpodobně zvyklí na příkazovém řádku.
+Každý řádek, který zadáte do interaktivního okna, obsahuje řádky odesílané z editoru, které jsou zachovány v historii REPL. Pak můžete procházet historii pomocí kláves se šipkou nahoru a dolů, protože se na příkazovém řádku pravděpodobně nezvyklí.
 
-Jeden rozdíl je, že pokud začnete psát na aktuální řádek a stiskněte tlačítko Nahoru, tento aktuální řádek je zachován ve vaší historii i přes jste nespustili tento řádek ještě.
+Jediným rozdílem je to, že pokud začnete psát na aktuální řádek a stisknete klávesu ENTER, aktuální řádek se zachová v historii, i když jste ho ještě nespouštěli.
 
-Historie v interaktivním okně také inteligentně pracuje s příkazy jiného bloku kódu, které pokrývají řádky. Při procházení historií pomocí kláves se šipkami nahoru a dolů se víceřádkové bloky kódu načítají jako celek a zobrazují se jako aktuální položka. V tomto okamžiku klávesy se šipkami procházet tento kód bloku řádek po řádku, dokud je dosaženo horní nebo dolní. V horní části bloku kódu šipka nahoru načte předchozí položku v historii; na spodním řádku šipka dolů načte další položku.
+Historie v interaktivním okně také funguje inteligentně s příkazy jiného bloku kódu, který pokrývá řádky. Při procházení historie pomocí šipek nahoru a dolů se víceřádkové bloky kódu načítají jako celá jednotka a zobrazují se jako aktuální položka. V tomto okamžiku klávesy se šipkami procházejí přes řádek, který je řádek, až do dosažení horního nebo dolního okraje. Šipka nahoru v horní části bloku kódu načte předchozí položku v historii; v dolním řádku se u šipky dolů načte další položka.
 
-Toto chování se přizpůsobí typickému případu opětovného spuštění poslední položky v historii pomocí kombinace kláves nahoru a **klávesového** stisknutí klávesy, přičemž přirozeně umožňuje úpravy víceřádkového bloku kódu stisknutím šipky Nahoru a přejděte do ní.
+Toto chování se dohlíží na běžný případ opětovného spuštění poslední položky v historii se šipkou nahoru a **zadáním** kombinace klávesových zkratek a přirozeně umožňuje úpravu víceřádkového bloku, a to tak, že stisknete šipku nahoru a přejdete do něj.
 
-Chcete-li se vyhnout navigaci do víceřádkových bloků kódu, použijte tlačítka panelu nástrojů nebo **Alt**+**Up** a **Alt**-**Down**a všechny tyto bloky jsou považovány za jeden řádek.
+Chcete-li se vyhnout navigaci do víceřádkových bloků kódu, použijte tlačítka panelu nástrojů nebo **klávesové zkratky ALT +** + **Up** **Alt** - **šipka dolů**a všechny takové bloky jsou považovány za jeden řádek.
 
-Nejjednodušší způsob, jak zažít funkce historie, je vyzkoušet si je sami v interaktivním okně. Níže uvedený kód poskytuje několik vhodných jednořádkových a víceřádkových příkazů. Pomocí copy-paste s každým příkazem jednotlivě však vytvořte odpovídající historii. (Můžete také vložit kód do samostatného souboru kódu a pak odeslat řádky do interaktivního okna s **Ctrl**+**Enter**.)
+Nejjednodušší způsob, jak se seznámit s funkcemi historie, je vyzkoušet si je pro sebe v interaktivním okně. Následující kód poskytuje několik vhodných příkazů s jedním a více řádky. Pokud ale chcete vytvořit příslušnou historii, použijte kopírování a vkládání u každého příkazu samostatně. (Můžete také vložit kód do samostatného souboru kódu a pak řádky odeslat do interaktivního okna pomocí **CTRL** + **Zadejte**.)
 
 ```R
 3 + 3

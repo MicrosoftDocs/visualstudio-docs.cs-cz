@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky nápovědy | Dokumentace Microsoftu
+title: Příkazy nabídky Help | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c58bc069b3d38c4086a5642d13bb907528923bb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62895099"
 ---
 # <a name="help-menu-commands"></a>Příkazy nabídky nápovědy
-**Pomáhají** nabídka obsahuje příkazy, které otevřete soubory nápovědy.
+Nabídka **help** poskytuje příkazy pro otevření souborů s příponou help.
 
- **Index** Otevře obrazovku obsah pro Nápověda nástroje Spy ++.
+ **Index** Otevře obrazovku obsah pro nápovědu nástroje Spy + +.
 
- **Přes nabídku Nápověda** otevře soubor nápovědy, který popisuje, jak použít nápovědu.
+ **Používání pomoci** Otevře soubor s popisem, který popisuje, jak používat help.
 
- **O nástroji Spy ++** zobrazí software verzi a autorských právech informace o nástroji Spy ++.
+ **O nástroji Spy + +** Zobrazuje verzi softwaru a informace o autorských právech pro Spy + +.

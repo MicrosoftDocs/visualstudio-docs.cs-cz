@@ -1,5 +1,5 @@
 ---
-title: Úvodní stránky pro Snapshot Debugger
+title: Úvodní stránka pro Snapshot Debugger
 ms.date: 07/14/2018
 robots: noindex, nofollow
 ms.topic: reference
@@ -9,66 +9,66 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cf2aba33089623dc98a90c23166291bb2d6e7123
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905245"
 ---
 # <a name="getting-started-with-the-snapshot-debugger"></a>Začínáme s Snapshot Debugger
 
-Visual Studio Snapshot Debugger je teď připojený k vaší službě a můžete spustit shromažďování snímků pomoci s laděním.
+Visual Studio Snapshot Debugger je teď připojený ke službě a vy můžete začít shromažďovat snímky, které vám pomůžou s laděním.
 
-Použití ladicího programu snímků, nastavit některé snímkovací body ve vašem kódu, klikněte na tlačítko a začněte shromažďovat snímky a spusťte váš scénář. Při spuštění kódu v které jste nastavili snímkovacího bodu, se pořídí snímek vaší aplikace. Otevřete v sadě Visual Studio v okně diagnostické nástroje kliknutím na snímek. Teď můžete ladit snímek služby stejným způsobem, jako je místní. Podrobné pokyny pokračujte ve čtení.
+Pokud chcete použít Snapshot Debugger, nastavte v kódu snímkovací body, klikněte na tlačítko a začněte shromažďovat snímky a potom scénář spusťte. Při spuštění kódu, ve kterém jste nastavili snímkovací bod, se vytvoří snímek aplikace. Pak otevřete snímek kliknutím na něj v aplikaci Visual Studio v okně Diagnostické nástroje. Nyní můžete tento snímek z vaší služby ladit stejně jako místní. Podrobné pokyny najdete v tématu o tom, jak dál číst.
 
-## <a name="collect-and-view-snapshots"></a>Umožňuje shromáždit a zobrazit snímky
+## <a name="collect-and-view-snapshots"></a>Shromažďování a zobrazování snímků
 
-Snapshot Debugger shromažďuje snímky z vaší aplikace. Snímky jsou podobné obrázky z vašich aplikací v bodě v čase. Visual Studio říct, kdy a kde získá snímek nastavením snímkovacího bodu v kódu. V snímkovacích bodů nastavte všechny podmínky, které potřebujete, abyste měli jistotu, že získat snímek problém, který hledáte.
+Snapshot Debugger shromažďuje snímky z vaší aplikace. Snímky jsou jako obrázky Appication v určitém časovém okamžiku. Aplikaci Visual Studio sdělíte, kdy a kde se má shromáždit snímek nastavením snímkovací bod v kódu. V snímkovací bod můžete nastavit podmínky, které potřebujete, abyste měli jistotu, že získáte snímek problému, který zkoumáte.
 
-### <a name="set-a-snappoint"></a>Nastavte snímkovacího bodu
+### <a name="set-a-snappoint"></a>Nastavení snímkovací bod
 
-1. V editoru kódu klikněte na levém hřbetu vedle řádku kódu, které vás zajímají nastavení snímkovacího bodu. Ujistěte se, že je kód, o kterém víte, že se spustí.
+1. V editoru kódu klikněte na levé tlačítko vedle řádku kódu, který vás zajímá, a nastavte snímkovací bod. Ujistěte se, že se jedná o kód, který víte, že se spustí.
 
-    ![Nastavení snímkovacího bodu v editoru](../media/snapshot-startpage-set-snappoint.png)
+    ![Nastavení snímkovací bod v editoru](../media/snapshot-startpage-set-snappoint.png)
 
-    Fialový šestiúhelník se zobrazí, pokud kliknete na levé straně.
+    Po kliknutí na levou stranu se zobrazí fialový šestiúhelník.
 
-2. Klikněte na tlačítko **spustit shromažďování** zapnout snímkovacího bodu.
+2. Kliknutím na **Spustit shromažďování** zapněte snímkovací bod.
 
 ### <a name="open-a-snapshot"></a>Otevření snímku
 
-1. Při dosažení snímkovacího bodu, se zobrazí v okně diagnostické nástroje na pravé straně snímku. Pokud se okno se neotevře, které můžete otevřít výběrem **ladění** > **Windows** > **zobrazit diagnostické nástroje**.
+1. Když je dosaženo snímkovací bod, zobrazí se snímek v okně Diagnostické nástroje napravo. Pokud se okno neotevře, můžete ho otevřít výběrem možnosti **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje**.
 
-    ![Snímek v okně diagnostické nástroje](../media/snapshot-startpage-diagsession-window.png)
+    ![Snímek v okně Diagnostické nástroje](../media/snapshot-startpage-diagsession-window.png)
 
-2. Dvakrát klikněte na snímek můžete otevřít.
+2. Dvakrát klikněte na snímek a otevřete ho.
 
-### <a name="inspect-snapshot-data"></a>Kontrolovat data snímku
+### <a name="inspect-snapshot-data"></a>Kontrola dat snímku
 
-V tomto zobrazení můžete najedete myší proměnné k zobrazení datových tipech, pomocí místních hodnot, kukátek a volání zásobníku systému windows a také vyhodnocujte výrazy.
+Z tohoto zobrazení můžete na proměnné umístit ukazatel myši a zobrazit tak tipy, použít místní okna, kukátka a zásobník volání a také vyhodnotit výrazy.
 
-Je webem jako takovým stále aktivní a nejsou to vliv na koncové uživatele. Ve výchozím nastavení je pouze jeden snímek zachycena na snímkovacího bodu. To znamená, že po zachytávání snímku snímkovací bod vypne. Pokud chcete zaznamenat další snímek na snímkovacího bodu, můžete zapnout snímkovací bod zpět kliknutím **aktualizovat shromažďování**.
+Samotný web je stále živý a koncoví uživatelé na něj nebudou mít vliv. Ve výchozím nastavení je pro každý snímkovací bod zachycen pouze jeden snímek. To znamená, že po zachycení snímku se snímkovací bod vypne. Pokud chcete zachytit jiný snímek na snímkovací bod, můžete snímkovací bod znovu zapnout kliknutím na **aktualizovat kolekci**.
 
-### <a name="set-a-logpoint"></a>Nastavte protokolovacích bodů:
+### <a name="set-a-logpoint"></a>Nastavení protokolovací bod
 
-1. Klikněte pravým tlačítkem na ikonu snímkovací bod (fialová šestiúhelník) a zvolte **nastavení**.
+1. Klikněte pravým tlačítkem myši na ikonu snímkovací bod (purpurový šestiúhelník) a vyberte **Nastavení**.
 
-2. V **snímkovací bod nastavení** okně **akce**.
+2. V okně **Nastavení snímkovací bod** vyberte **Akce**.
 
-    ![Snímkovací bod podmínky](../media/snapshot-startpage-logpoint.png)
+    ![Podmínky snímkovací bod](../media/snapshot-startpage-logpoint.png)
 
-3. V **zpráva** zadejte zprávu protokolu, který chcete zaznamenat. Můžete také vyhodnotit proměnné ve zprávě protokolu je umístit uvnitř složených závorek.
+3. Do pole **zpráva** zadejte protokolovou zprávu, kterou chcete protokolovat. Můžete také vyhodnotit proměnné ve zprávě protokolu jejich umístěním do složených závorek.
 
-    Pokud se rozhodnete **odeslat do okna výstup**, zpráva se zobrazí v okně diagnostické nástroje, když protokolovacích bodů: dosažení.
+    Pokud zvolíte možnost **Odeslat do okno výstup**, zpráva se zobrazí v okně diagnostické nástroje, když se protokolovací bod.
 
-    Pokud se rozhodnete **odeslat do protokolu aplikace**, zobrazí se zpráva kdekoli, zobrazí se zprávy z `System.Diagnostics.Trace` (nebo `ILogger` v .NET Core), jako jsou App Insights, při dosažení protokolovacích bodů:.
+    Pokud zvolíte **Odeslat do protokolu aplikace**, zobrazí se zpráva kdekoli, kde můžete zobrazit zprávy z `System.Diagnostics.Trace` (nebo `ILogger` v .NET Core), jako je například App Insights, když se protokolovací bod.
 
-## <a name="learn-more"></a>Víc se uč
+## <a name="learn-more"></a>Další informace
 
-Další informace o ladicím programu snímků můžete najít na [stránky dokumentace](../debug-live-azure-applications.md). Další informace o nastavení podmínky, aby bylo snazší najít chyby.
+Další informace o Snapshot Debugger najdete na [stránce docs](../debug-live-azure-applications.md). Přečtěte si další informace o nastavení podmínek usnadňujících vyhledání chyb.
 
-## <a name="dont-show-me-this-again"></a>Není "zprávu již nezobrazovat
+## <a name="dont-show-me-this-again"></a>Tento dialog už příště nezobrazovat
 
-Chcete-li již nezobrazovat Snapshot Debugger úvodní stránky při připojování ladicího programu snímků, změňte **Show "Začínáme" stránku při spuštění relace** možnost **nástroje**  >   **Možnosti** > **Snapshot Debugger**.
+Chcete-li nikdy po připojení Snapshot Debugger znovu zobrazit úvodní stránku Snapshot debugger, změňte možnost **Zobrazit stránku Začínáme při spuštění relace** v **nabídce**  >  **Možnosti**nástroje  >  **Snapshot Debugger**.
 
-![Stránka – možnost nástroje ladicího programu snímků](../media/snapshot-startpage-tools-options.png)
+![Stránka možností nástroje Snapshot Debugger](../media/snapshot-startpage-tools-options.png)

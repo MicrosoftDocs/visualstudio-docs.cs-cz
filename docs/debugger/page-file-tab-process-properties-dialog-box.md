@@ -1,5 +1,5 @@
 ---
-title: Karta soubor stránky, dialogové okno vlastností procesu | Dokumentace Microsoftu
+title: Karta soubor stránky, dialogové okno vlastností procesu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25dc3b0aca1b58c18ae4038540c14fc4dbfe4036
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62904104"
 ---
 # <a name="page-file-tab-process-properties-dialog-box"></a>Karta Soubor stránky, dialogové okno vlastností procesu
-Použití **stránkovací soubor** kartu prozkoumat stránkovacího souboru procesu. Pro zobrazení [dialogové okno vlastností procesu](../debugger/process-properties-dialog-box.md), přesunout fokus [zobrazení procesů](../debugger/processes-view.md) okno. Vyberte libovolný uzel procesu ve stromové struktuře a pak zvolte **vlastnosti** z **zobrazení** nabídky.
+Použijte kartu **soubor stránky** k prohlédnutí stránkovacího souboru procesu. Chcete-li zobrazit [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md), přesuňte fokus do okna [zobrazení procesů](../debugger/processes-view.md) . Ve stromové struktuře vyberte libovolný uzel procesu a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
- Následující nastavení jsou k dispozici na **stránkovací soubor** kartu:
+ Na kartě **soubor stránky** jsou k dispozici následující nastavení:
 
 |Entry|Popis|
 |-----------|-----------------|
-|**Bajty stránkovacího souboru**|Aktuální číslo stránky, které tento proces používá ve stránkovacím souboru. Stránkovací soubor uloží stránek využívané procesem, ale nejsou obsažené v jiných souborech. Stránkovací soubor je používán všechny procesy a nedostatečné místo ve stránkovacím souboru mohou způsobit chyby, zatímco jiné procesy jsou spuštěny.|
-|**Bajty stránkovacího souboru – Špička**|Maximální počet stránek, které tento proces se má použít ve stránkovacím souboru.|
-|**Chyby stránek**|Počet chyb stránek podle vlákna provádění v tomto procesu. Stránkování nastane, pokud vlákno odkazuje na stránku virtuální paměti, která není v jeho pracovního sadě v hlavní paměti. Díky tomu se na stránce nebudou načteny z disku Pokud je na seznamu a proto již do paměti, nebo pokud jej používá jiný proces se na stránce se sdílí.|
+|**Bajty stránkovacího souboru**|Aktuální počet stránek, které tento proces používá ve stránkovacím souboru. Stránkovací soubor ukládá stránky dat, která proces používá, ale není obsažen v jiných souborech. Stránkovací soubor je používán všemi procesy a nedostatek místa ve stránkovacím souboru může způsobit chyby, pokud jsou spuštěné jiné procesy.|
+|**Bajty stránkovacího souboru ve špičce**|Maximální počet stránek, které tento proces použil ve stránkovacím souboru.|
+|**Chyby stránky**|Počet chyb stránek podle vláken spuštěných v tomto procesu. K chybě stránky dojde, když vlákno odkazuje na stránku virtuální paměti, která není v pracovní sadě v hlavní paměti. Proto se stránka z disku nenačte, pokud se nachází v pohotovostním seznamu, takže už je v hlavní paměti, nebo pokud ji používá jiný proces, se kterým se stránka sdílí.|

@@ -1,5 +1,5 @@
 ---
-title: Nasazení nezbytných součástí pro 64bitové aplikace | Dokumentace Microsoftu
+title: Nasazování požadavků pro 64 – bitové aplikace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,29 +19,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c70b58577f8aa6e391215658afb7f8fa43c9bb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62928883"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>Nasazení nezbytných součástí pro 64bitové aplikace
-ClickOnce – nasazení podporuje instalaci aplikací na 64bitových platformách. Cílové platformy jsou **x86** pro 32bitové platformy, **x64** pro počítače podporuje AMD64 a podporou technologie EM64T instrukční sadu, a **Itanium** pro procesor Itanium 64-bit.
+Nasazení ClickOnce podporuje instalaci aplikací na 64 platforem. Cílové platformy jsou **x86** pro 32 platforem, **x64** pro počítače, které podporují INSTRUKČNÍ sady AMD64 a EM64T a **Itanium** pro procesor s procesorem Itanium pro 64.
 
-## <a name="prerequisites"></a>Požadavky
- V následující tabulce jsou uvedeny distribuovatelné součásti, které můžete použít jako požadavky na instalaci 64bitové aplikace.
+## <a name="prerequisites"></a>Předpoklady
+ V následující tabulce jsou uvedeny distribuovatelné součásti, které můžete použít jako předpoklady pro instalaci vaší 64 bitové aplikace.
 
- Pokud vyberete požadovanou součást, která se nevyznačuje 64bitové komponenty, může se zobrazit upozornění oznamující, že vybrané balíčky nejsou k dispozici pro 64bitovou platformu.
+ Pokud vyberete požadovanou součást, která nemá 64 bitové součásti, může se zobrazit upozornění, že vybrané balíčky nejsou k dispozici pro 64 platformu.
 
 | Distribuovatelné součásti | Podpora x64 | Podpora IA64 |
 | - |-------------|--------------|
 | [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Ano | Ne |
-| Knihovny Visual C++ 2010 Runtime (IA64) | Ne | Ano |
-| Knihovny Visual C++ 2010 Runtime (x64) | Ano | Ne |
+| Knihovny runtime Visual C++ 2010 (IA64) | Ne | Ano |
+| Běhové knihovny Visual C++ 2010 (x64) | Ano | Ne |
 | Microsoft .NET Framework 4 (x86 a x64) | Ano | |
-| Microsoft .NET Framework 4 Client Profile (x86 a x64) | Ano | |
+| Profil klienta Microsoft .NET Framework 4 (x86 a x64) | Ano | |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nasazení aplikací, služeb a komponent](../deployment/deploying-applications-services-and-components.md)
 - [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
-- [64bitové aplikace](/dotnet/framework/64-bit-apps)
+- [64 – bitové aplikace](/dotnet/framework/64-bit-apps)

@@ -1,5 +1,5 @@
 ---
-title: THUNK_ORDINAL – | Dokumentace Microsoftu
+title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b98098c0b6e1de9c3c2ceda5c644bc2957ab22bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62576405"
 ---
-# <a name="thunkordinal"></a>THUNK_ORDINAL
+# <a name="thunk_ordinal"></a>THUNK_ORDINAL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určuje typy převodní rutina.  
+Určuje typy převodů.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum THUNK_ORDINAL {   
@@ -43,31 +43,31 @@ typedef enum THUNK_ORDINAL { 
   
 ## <a name="elements"></a>Elementy  
  THUNK_ORDINAL_NOTYPE  
- Standardní převodní rutina.  
+ Standardní převolání.  
   
  THUNK_ORDINAL_ADJUSTOR  
- A `this` likvidátor převodní rutina.  
+ Převod pomocí `this` kódu pro úpravy  
   
  THUNK_ORDINAL_VCALL  
- Virtuální volání převodní rutina.  
+ Virtuální volání je převoláno.  
   
  THUNK_ORDINAL_PCODE  
- Převodní rutina P-code.  
+ P-code převod.  
   
  THUNK_ORDINAL_LOAD  
- Převodní rutina zatížení zpoždění.  
+ Zpožděné načtení převodu do kódu  
   
  THUNK_ORDINAL_TRAMP_INCREMENTAL  
- Převodní rutina přírůstkové trampoline (trampoline převodní rutina se používá k odraz volání z jednoho paměťového prostoru do jiného).  
+ Přírůstkové Trampoline převodu (Trampoline převodu se používá pro odskok volání z jednoho paměťového prostoru na jiný).  
   
  THUNK_ORDINAL_TRAMP_BRANCHISLAND  
- Převodní rutina trampoline bod větve.  
+ Trampoline převodu na bod větve.  
   
 ## <a name="remarks"></a>Poznámky  
- Během volání se vrátí hodnoty v tento výčet [idiasymbol::get_thunkordinal –](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metody.  
+ Hodnoty v tomto výčtu jsou vráceny ze volání metody [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: cvconst.h  
+ Záhlaví: cvconst. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   

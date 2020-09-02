@@ -1,5 +1,5 @@
 ---
-title: Visibilityitem – Element | Dokumentace Microsoftu
+title: Element VisibilityItem | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6f71e145282d1d6e340060b9798ca54c9af9f4e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62584834"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`VisibilityItem` Element určuje statické viditelnost příkazů a panelů nástrojů. Každá položka identifikuje příkaz nebo nabídky a také objekt context přidružený příkaz uživatelského rozhraní. Sada Visual Studio zjistí bez načítání rozšíření VSPackages, který je definovat příkazy, nabídek a panelů nástrojů a jejich viditelnost. Využívá integrovaného vývojového prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> metodou ke zjištění, jestli je aktivní kontext uživatelského rozhraní příkazů.  
+`VisibilityItem`Prvek určuje statickou viditelnost příkazů a panelů nástrojů. Každá položka identifikuje příkaz nebo nabídku a také kontext uživatelského rozhraní příkazu. Visual Studio detekuje příkazy, nabídky a panely nástrojů a jejich viditelnost, aniž by bylo nutné načítat sady VSPackage, které je definují. Rozhraní IDE používá <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> metodu k určení, zda je kontext uživatelského rozhraní příkazu aktivní.  
   
- Po načtení sady VSPackage, Visual Studio očekává, že příkaz viditelnost bude určen sady VSPackage místo `VisibilityItem`. K určení přehled o svých rukou, můžete implementovat buď <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> obslužná rutina události nebo <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metoda, v závislosti na tom, jak jste implementovali svých rukou.  
+ Po načtení sady VSPackage aplikace Visual Studio očekává, že je viditelnost příkazu určena rozhraním VSPackage, nikoli `VisibilityItem` . Chcete-li zjistit viditelnost příkazu, můžete implementovat buď <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> obslužnou rutinu události, nebo <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu, v závislosti na způsobu implementace příkazu.  
   
- Příkaz nebo nabídky, která má `VisibilityItem` elementu se zobrazí pouze v případě, souvisejícího kontextu je aktivní. Můžete přidružit jediným příkazem, nabídku nebo panel nástrojů jeden nebo více kontexty příkaz uživatelského rozhraní zahrnutím záznam pro každou kombinaci kontext příkazů. Pokud příkaz nebo nabídky je spojeno s více kontexty příkaz uživatelského rozhraní, příkaz nebo nabídky je viditelné při aktivním některou z uživatelského rozhraní kontexty přidružený příkaz.  
+ Příkaz nebo nabídka, která má `VisibilityItem` element, se zobrazí pouze v případě, že je přidružený kontext aktivní. Jeden nebo více příkazů, nabídek nebo panelů nástrojů můžete přidružit k jednomu nebo více kontextům uživatelského rozhraní, a to tak, že zahrnete položku pro každou kombinaci kontextu příkazů. Pokud je příkaz nebo nabídka přidružená k více kontextům uživatelského rozhraní příkazu, pak je příkaz nebo nabídka zobrazená, pokud je aktivní kterýkoli z přidružených kontextů uživatelského rozhraní příkazu.  
   
- `VisibilityItem` Element platí pouze pro příkazy, nabídky a panely nástrojů, ne do skupin. Element, který nemá se souvisejícím `VisibilityItem` pokaždé, když je aktivní nabídku nadřazené je element viditelný.  
+ `VisibilityItem`Element se vztahuje pouze na příkazy, nabídky a panely nástrojů, nikoli na skupiny. Element, který nemá související `VisibilityItem` prvek, je viditelný, kdykoli je jeho nadřazená nabídka aktivní.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <VisibilityItem  
@@ -45,22 +45,22 @@ ms.locfileid: "62584834"
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|identifikátor GUID|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|  
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|  
-|kontext|Povinný parametr. Kontext uživatelského rozhraní, ve kterém je příkaz viditelný.|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|  
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|  
+|kontext|Povinná hodnota. Kontext uživatelského rozhraní, ve kterém je příkaz viditelný.|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
- Žádný  
+ Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[VisibilityConstraints – element](../extensibility/visibilityconstraints-element.md)|`VisibilityConstraints` Prvek určuje statické viditelnost skupiny příkazů a panely nástrojů.|  
+|[VisibilityConstraints – element](../extensibility/visibilityconstraints-element.md)|`VisibilityConstraints`Prvek určuje statickou viditelnost skupin příkazů a panelů nástrojů.|  
   
 ## <a name="remarks"></a>Poznámky  
- Standardní uživatelské rozhraní Visual Studio kontexty jsou definovány v *cestu instalace sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc\vsshlids.h soubor stejně jako v <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> a <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> třídy. Úplnější sadu kontexty uživatelského rozhraní je definováno v <xref:Microsoft.VisualStudio.VSConstants> třídy.  
+ Standardní kontexty uživatelského rozhraní sady Visual Studio jsou definovány v souboru *instalační cesty sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc\vsshlids.h a také v <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> třídách a. Ve třídě je definována úplnější sada kontextů uživatelského rozhraní <xref:Microsoft.VisualStudio.VSConstants> .  
   
 ## <a name="example"></a>Příklad  
   
@@ -77,5 +77,5 @@ ms.locfileid: "62584834"
  <xref:Microsoft.VisualStudio.VSConstants>   
  <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids>   
  <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>   
- [Visibilityconstraints – Element](../extensibility/visibilityconstraints-element.md)   
+ [Element VisibilityConstraints](../extensibility/visibilityconstraints-element.md)   
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

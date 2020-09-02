@@ -1,6 +1,6 @@
 ---
 title: Co je ladění?
-description: Vysvětlení, co to znamená, že dovolují ladit aplikaci
+description: Vysvětlení toho, co znamená ladění aplikace
 ms.custom: debug-experiment
 ms.date: 10/17/2018
 ms.topic: conceptual
@@ -12,46 +12,46 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c01317f3b8fa92cf1bc17c3745f708e0d3f26e5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62901217"
 ---
 # <a name="what-is-debugging"></a>Co je ladění?
 
-Ladicí program sady Visual Studio je mocný nástroj. Předtím, než vám ukážeme, jak ji používat, chceme mluvit o některé podmínky, jako *ladicí program*, *ladění*, a *režimu ladění*. Tímto způsobem, když později mluvíme o nacházením a odstraňováním chyb, jsme budete mluvit o stejnou věc.
+Ladicí program sady Visual Studio je výkonný nástroj. Než si ukážeme, jak ho používat, chceme mluvit o některých pojmech, jako je například *ladicí program*, *ladění*a *režim ladění*. V takovém případě budeme mluvit o tom, co se chystáme najít a opravit chyby.
 
-## <a name="debugger-vs-debugging"></a>Ladicí program a ladění
+## <a name="debugger-vs-debugging"></a>Ladicí program vs. ladění
 
-Termín *ladění* může znamenat spoustu různých věcí, ale většina doslova znamená odebrání chyb z uživatelského kódu. Nyní existuje mnoho způsobů, jak to provést. Například můžete ladit naskenováním kódu hledá překlepy nebo pomocí nástroje code analyzer. Pomocí profileru výkonu může být ladění kódu. Nebo může být ladění pomocí *ladicí program*.
+Termín *ladění* může znamenat spoustu různých věcí, ale nejvíce doslova znamená odebrání chyb z kódu. Nyní existuje mnoho způsobů, jak to provést. Můžete například ladit kontrolou kódu, který hledá překlepy, nebo pomocí analyzátoru kódu. Můžete ladit kód pomocí profileru výkonu. Nebo může ladit pomocí *ladicího programu*.
 
-Ladicí program je velmi specializované vývojářský nástroj, který připojí k vaší běžící aplikaci a umožňuje vám umožní zkontrolovat váš kód. V dokumentaci k ladění pro Visual Studio to je obvykle co myslíme, když říkáme "ladění".
+Ladicí program je vysoce specializovaný vývojářský nástroj, který se připojuje ke svojí spuštěné aplikaci a umožňuje vám kontrolovat váš kód. V dokumentaci ladění pro Visual Studio je to obvykle to, co znamenáme, když říkáme "ladění".
 
-## <a name="debug-mode-vs-running-your-app"></a>Režim a vaše aplikace běžela ladění
+## <a name="debug-mode-vs-running-your-app"></a>Režim ladění vs. spuštění aplikace
 
-Při prvním spuštění aplikace v sadě Visual Studio, můžete ho začít stisknutím tlačítka zelenou šipku ![spustit ladění](../debugger/media/dbg-tour-start-debugging.png "spustit ladění") na panelu nástrojů (nebo **F5**). Ve výchozím nastavení **ladění** hodnota se zobrazí v rozevíracím seznamu vlevo. Pokud jste ještě sadu Visual Studio, tím můžete nechat dojem, že něco, co můžete dělat s spuštění ladění vaší aplikace má vaše aplikace – které nemá – ale toto jsou v podstatě dvě značně odlišný úkol.
+Při prvním spuštění aplikace v sadě Visual Studio je možné ji spustit stisknutím zeleného tlačítka se šipkou ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů (nebo **F5**). Ve výchozím nastavení se hodnota **ladění** zobrazí v rozevíracím seznamu vlevo. Pokud se sadou Visual Studio ještě nepoužíváte, může to zůstat dojem, že ladění vaší aplikace má něco dělat, když máte spuštěnou aplikaci – to ale má zásadní význam dvou velmi odlišných úloh.
 
-![Vyberte sestavení pro ladění](../debugger/media/what-is-debugging-debug-build.png)
+![Vybrat sestavení pro ladění](../debugger/media/what-is-debugging-debug-build.png)
 
-A **ladění** hodnota určuje konfiguraci ladění. Při spuštění aplikace (stisknutím klávesy na zelenou šipku nebo **F5**) v konfiguraci ladění, spusťte aplikaci *režimu ladění*, což znamená, že spustíte aplikaci s připojen jiný ladicí program. To umožňuje kompletní sadu funkcí ladění, které vám umožní vám pomůže najít chyby v aplikaci.
+Hodnota **ladění** označuje konfiguraci ladění. Při spuštění aplikace (stiskněte zelenou šipku nebo **F5**) v konfiguraci ladění spustíte aplikaci v *režimu ladění*, což znamená, že máte spuštěnou aplikaci s připojeným ladicím programem. To umožňuje úplnou sadu funkcí ladění, které vám pomůžou najít chyby ve vaší aplikaci.
 
-Pokud máte otevřen projekt, zvolte rozevírací selektor, kde říká **ladění** a zvolte **vydání** místo.
+Pokud máte projekt otevřený, vyberte rozevírací selektor, kde říká **ladění** , a vyberte místo toho možnost **vydat** .
 
-![Vyberte sestavení pro vydání](../debugger/media/what-is-debugging-release-build.png)
+![Vybrat Build pro vydání](../debugger/media/what-is-debugging-release-build.png)
 
-Po přepnutí tohoto nastavení změnit projekt z konfigurace ladění na konfiguraci release. Projekty aplikace Visual Studio mají samostatné verze a ladění konfigurace pro váš program. Vytváření verzí ladění pro ladění a verze vydání pro konečnou distribuci vydání. Sestavení pro vydání je optimalizován pro výkon, ale je lepší pro ladění sestavení pro ladění.
+Když přepnete toto nastavení, změníte projekt z konfigurace ladění na konfiguraci vydané verze. Projekty sady Visual Studio mají samostatné konfigurace vydaných verzí a ladění pro váš program. Sestavíte ladicí verzi pro ladění a verzi Release pro konečnou distribuci vydaných verzí. Sestavení pro vydání je optimalizováno pro výkon, ale sestavení ladění je vhodnější pro ladění.
 
 ## <a name="when-to-use-a-debugger"></a>Kdy použít ladicí program
 
-Ladicí program je to důležitý nástroj, můžete najít a opravit chyby ve svých aplikacích. Však má kontextu a je potřeba využívat všechny nástroje k vaší na jedno použití k vám pomůže rychle eliminovat chyby. Právo "nástroje" v některých případech může být způsobem lépe kódování. Podle studijního, kdy se má použít ladicí program nebo nějaký jiný nástroj, bude také zjistěte, jak použít ladicí program efektivněji.
+Ladicí program je základním nástrojem pro hledání a opravy chyb ve vašich aplikacích. Kontext je však krále a je důležité využít všechny nástroje na více než jedno, což vám pomůže rychle eliminovat chyby nebo chyby. V některých případech se může jednat o lepší postup při kódování. Když se naučíte používat ladicí program vs. nějaký jiný nástroj, naučíte se také, jak použít ladicí program efektivněji.
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto článku jste se seznámili s několika koncepty obecné ladění. V dalším kroku můžete začít ladění pomocí sady Visual Studio a tom, jak psát kód s méně chyb. Následující články Zobrazit C# příklady kódu, ale konceptů platí pro všechny jazyky podporované v aplikaci Visual Studio.
+V tomto článku jste se dozvěděli o několika obecných konceptech ladění. Dále můžete začít s učením, jak ladit se sadou Visual Studio a jak psát kód s méně chybami. Následující články ukazují příklady kódu C#, ale koncepty platí pro všechny jazyky, které podporuje Visual Studio.
 
 > [!div class="nextstepaction"]
 > [Ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md)
 
 > [!div class="nextstepaction"]
-> [Nástroje a techniky ladění](../debugger/write-better-code-with-visual-studio.md)
+> [Techniky ladění a související nástroje](../debugger/write-better-code-with-visual-studio.md)

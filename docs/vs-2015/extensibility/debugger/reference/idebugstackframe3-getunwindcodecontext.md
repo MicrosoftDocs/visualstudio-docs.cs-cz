@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Dokumentace Microsoftu
+title: 'IDebugStackFrame3:: GetUnwindCodeContext | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5a3fdaf9ca21841a43041f0ad5c1dc7b1507085
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62546886"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vrátí kontext kódu představující umístění, pokud operace unwind zásobníku došlo k chybě.  
+Vrátí kontext kódu představující umístění v případě, že došlo k operaci unwind zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int GetUnwindCodeContext(
   
 #### <a name="parameters"></a>Parametry  
  `ppCodeContext`  
- [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje místní umístění kódu, pokud došlo k odvíjení zásobníku.  
+ mimo Vrátí objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který představuje umístění kontextu kódu v případě, že došlo k odvíjení zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- I když tato metoda může vrátit kontext kódu pro umístění po odvíjení zásobníku, neznamená nutně, že odvíjení zásobníku ve skutečnosti může dojít v aktuální rámec zásobníku.  
+ I když tato metoda může vracet kontext kódu pro umístění po unwind zásobníku, nemusí to nutně znamenat, že unwind zásobníku může být skutečně v aktuálním bloku zásobníku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   

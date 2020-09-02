@@ -1,5 +1,5 @@
 ---
-title: Nastavení pro projektu C# ladění config | Dokumentace Microsoftu
+title: Nastavení projektu pro konfiguraci ladění jazyka C# | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/21/2018
 ms.topic: reference
@@ -22,43 +22,43 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: a5108e195e5df245c72436752316e8ee91781e7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62903954"
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>Nastavení projektu pro konfiguraci ladění jazyka C#
 
-Můžete změnit C# nastavení ladění v projektu [karty ladění](#debug-tab) a [karta sestavení](#build-tab) stránky vlastností projektu.
+Nastavení ladění projektu C# můžete změnit na [kartě ladění](#debug-tab) a na [kartě sestavení](#build-tab) stránky vlastností projektu.
 
-K otevření stránek vlastností, vyberte projekt v **Průzkumníka řešení** a pak vyberte **vlastnosti** ikonu, nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
+Chcete-li otevřít stránky vlastností, vyberte projekt v **Průzkumník řešení** a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem myši na projekt a vyberte možnost **vlastnosti**.
 
-Další informace najdete v tématu [pro ladění a vydání konfigurace](how-to-set-debug-and-release-configurations.md).
+Další informace najdete v tématu [Konfigurace ladění a vydání](how-to-set-debug-and-release-configurations.md).
 
 >[!IMPORTANT]
->Tato nastavení neplatí pro aplikace .NET Core, ASP.NET nebo UWP. Konfigurace nastavení ladění pro aplikace pro UPW, naleznete v tématu [spustíte relaci ladění pro aplikace pro UPW](start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).
+>Tato nastavení se nevztahují na aplikace .NET Core, ASP.NET a UWP. Pokud chcete nakonfigurovat nastavení ladění pro aplikace pro UWP, přečtěte si téma [spuštění ladicí relace pro aplikaci pro UWP](start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).
 
-## <a name="debug-tab"></a>Ladění kartu
+## <a name="debug-tab"></a>Karta ladění
 
 |Nastavení|Popis|
 |-------------------------------------| - |
-| **Konfigurace** | Nastaví režim pro aplikaci. Vyberte **aktivní (ladění)**, **ladění**, **vydání**, nebo **všechny konfigurace** z rozevíracího seznamu. |
-| **Spustit akci** | Určuje akci, když vyberete **Start** v konfiguraci ladění.<br />- **Spustit projekt** je výchozí nastavení a spuštění projektu po spuštění pro ladění. Další informace najdete v tématu [výběr spouštěného projektu](/previous-versions/visualstudio/visual-studio-2010/0s590bew(v=vs.100)).<br />- **Spustit externí program** spustí a připojí se k aplikaci, která není součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [připojení ke spuštěným procesům pomocí ladicího programu](attach-to-running-processes-with-the-visual-studio-debugger.md).<br />- **Spustit prohlížeč s adresou URL** umožňuje ladění webové aplikace. |
-| **Možnosti spuštění** > **argumenty příkazového řádku** | Určuje argumenty příkazového řádku pro aplikaci, který se právě ladí. Název příkazu je název aplikace uvedený v **externí program Start**. |
-| **Možnosti spuštění** > **pracovní adresář** | Určuje pracovní adresář aplikace, který se právě ladí. V C#, v pracovním adresáři *\bin\debug* ve výchozím nastavení.
-| **Možnosti spuštění** > **použít vzdálený počítač**|Pro vzdálené ladění, vyberte tuto možnost a zadejte název cíl vzdáleného ladění nebo [název serveru Msvsmon](../debugger/remote-debugging.md). <br />Je určená umístění aplikace ve vzdáleném počítači, **výstupní cesta** vlastnost **sestavení** kartu. Umístění musí být sdíleném adresáři na vzdáleném počítači.
-| **Modul ladicího programu** > **povolit ladění nespravovaného kódu** | Ladí volání nativního (nespravovaného) kódu Win32 ze spravovaných aplikací. |
-| **Modul ladicího programu** > **povolit ladění SQL serveru** | Ladí objekty databáze systému SQL Server. |
+| **Konfigurace** | Nastaví režim pro sestavování aplikace. V rozevíracím seznamu vyberte **aktivní (ladění)**, **ladění**, **vydání**nebo **všechny konfigurace** . |
+| **Spustit akci** | Určuje akci, když v konfiguraci ladění vyberete **Spustit** .<br />- **Spustit projekt** je výchozí a spustí spouštěný projekt pro ladění. Další informace najdete v tématu [Výběr spouštěného projektu](/previous-versions/visualstudio/visual-studio-2010/0s590bew(v=vs.100)).<br />- Spustí se **spuštění externího programu** a připojí se k aplikaci, která není součástí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projektu. Další informace najdete v tématu [připojení ke spuštěným procesům pomocí ladicího programu](attach-to-running-processes-with-the-visual-studio-debugger.md).<br />- **Spustit prohlížeč s adresou URL** vám umožní ladit webovou aplikaci. |
+| **Možnosti spuštění**  >  **Argumenty příkazového řádku** | Určuje argumenty příkazového řádku pro laděnou aplikaci. Název příkazu je název aplikace zadaný v části **spustit externí program**. |
+| **Možnosti spuštění**  >  **Pracovní adresář** | Určuje pracovní adresář laděné aplikace. V jazyce C# je pracovní adresář ve výchozím nastavení *\bin\debug* .
+| **Možnosti spuštění**  >  **Použít vzdálený počítač**|Pro vzdálené ladění vyberte tuto možnost a zadejte název cíle vzdáleného ladění nebo [název serveru msvsmon](../debugger/remote-debugging.md). <br />Umístění aplikace na vzdáleném počítači je určeno vlastností **výstupní cesta** na kartě **sestavení** . Umístění musí být sdílená složka na vzdáleném počítači.
+| Modul ladicího **programu**  >  **Povolit ladění nespravovaného kódu** | Provede ladění volání nativního (nespravovaného) kódu Win32 ze spravované aplikace. |
+| Modul ladicího **programu**  >  **Povolit ladění SQL Server** | Vyladí SQL Server databázových objektů. |
 
-## <a name="build-tab"></a>Vytvořit kartu
+## <a name="build-tab"></a>Karta sestavení
 
 |Nastavení|Popis|
 |-------------|-----------------|
-|**Obecné** > **symboly podmíněné kompilace**|Definujte konstanty ladění a trasování, pokud vybraná.<br /><br /> Tyto konstanty povolit podmíněné kompilace [Debug – třída](/dotnet/api/system.diagnostics.debug) a [Trasovací třída](/dotnet/api/system.diagnostics.trace). Pomocí těchto konstanty definované, ladění a trasování metody třídy generovat výstup do [okno výstup](../ide/reference/output-window.md). Bez těchto konstanty nejsou zkompilovány metody třídy ladění a trasování a nebude vygenerován žádný výstup.<br /><br />LADĚNÍ je obvykle definované v ladicí verzi sestavení a nedefinované ve vydané verzi. TRASOVÁNÍ je definována v ladění i vydání verze.|
-|**Obecné** > **optimalizovat kód**|Pokud se zobrazí chyby pouze v optimalizovaném kódu, nechte toto nastavení nevybraných pro sestavení pro ladění. Optimalizovaný kód je těžší ladit, protože pokyny neodpovídají přímo pro příkazy ve zdrojovém kódu.|
-|**Výstup** > **výstupní cesta**|Obvykle nastavena na *bin\Debug* pro ladění.|
-|**Pokročilé** tlačítko|Informace o pokročilé možnosti ladění, naleznete v tématu [dialogové okno nastavení rozšířené sestavení (C#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md). Přenosný formát pro symbol (*PDB*) souborů je poslední formát pro různé platformy, pro aplikace .NET Core.
+|**Obecné**  >  **Symboly podmíněné kompilace**|Definujte konstanty ladění a trasování, pokud je vybrána možnost.<br /><br /> Tyto konstanty umožňují podmíněnou kompilaci [třídy ladění](/dotnet/api/system.diagnostics.debug) a [třídy trasování](/dotnet/api/system.diagnostics.trace). Pomocí těchto konstant třídy ladění a trasování generují výstup do [okna výstup](../ide/reference/output-window.md). Bez těchto konstant nejsou kompilovány metody třídy ladění a trasování a není vygenerován žádný výstup.<br /><br />LADĚNÍ je obvykle definováno v ladicí verzi sestavení a není definováno v vydané verzi. TRASOVÁNÍ je definováno v ladicí verzi i ve verzi Release.|
+|**Obecné**  >  **Optimalizovat kód**|Pokud se chyba neobjeví pouze v optimalizovaném kódu, nechte toto nastavení pro ladění sestavení nevybrané. Optimalizovaný kód je těžší ladit, protože pokyny neodpovídají přímo příkazům ve zdrojovém kódu.|
+|**Výstup**  >  **Výstupní cesta**|Obvykle nastaveno na *bin\Debug* pro ladění.|
+|**Rozšířené** tlačítko|Informace o pokročilých možnostech ladění naleznete v [dialogovém okně Upřesnit nastavení sestavení (C#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md). Přenosový formát souborů symbolů (*. pdb*) je nedávný formát pro různé platformy pro aplikace .NET Core.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

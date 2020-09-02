@@ -1,5 +1,5 @@
 ---
-title: Zobrazení událostí s IntelliTrace | Dokumentace Microsoftu
+title: Zobrazení událostí s IntelliTrace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
@@ -9,33 +9,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929422"
 ---
-# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Zobrazit události pomocí nástroje IntelliTrace v sadě Visual Studio Enterprise (C#, Visual Basic)
+# <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Zobrazení událostí s IntelliTrace v Visual Studio Enterprise (C#, Visual Basic)
 
-Nástroj IntelliTrace můžete použít ke shromažďování informací o určité události a kategorie událostí, nebo o voláních jednotlivé funkce kromě události. Následující postupy ukazují, jak to udělat.
+IntelliTrace můžete použít ke shromažďování informací o konkrétních událostech nebo kategoriích událostí nebo o jednotlivých voláních funkcí kromě událostí. Následující postupy ukazují, jak to provést.
 
-Můžete použít nástroj IntelliTrace v sadě Visual Studio Enterprise edition, ale ne edice Professional nebo Community.
+IntelliTrace můžete použít v edici Visual Studio Enterprise, ale ne v edicích Professional nebo Community.
 
-## <a name="GettingStarted"></a> Konfigurace technologie IntelliTrace
+## <a name="configure-intellitrace"></a><a name="GettingStarted"></a> Konfigurace IntelliTrace
 
-Můžete zkusit ladění pouze události IntelliTrace. Mezi události IntelliTrace patří události ladicího programu, výjimky, události rozhraní .NET Framework a další systémové události. By měl zapnout nebo vypnout určité události k řízení událostí, které nástroj IntelliTrace zaznamenává před zahájením ladění. Další informace najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).
+Můžete vyzkoušet ladění s pouhými IntelliTrace událostmi. Události IntelliTrace jsou události ladicího programu, výjimky, události .NET Framework a další systémové události. Můžete zapnout nebo vypnout konkrétní události pro řízení událostí, které IntelliTrace záznamy před spuštěním ladění. Další informace najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).
 
-- Zapněte události IntelliTrace pro přístup k souborům. Přejděte na **nástroje > Možnosti > Nástroje IntelliTrace > události IntelliTrace** stránce a rozbalte **souboru** kategorie. Zkontrolujte, **souboru** kategorie události. To způsobí, že všechny souboru události (přístup, zavřít, delete) která se má zkontrolovat.
+- Zapněte událost IntelliTrace pro přístup k souboru. V **nabídce nástroje > možnosti > IntelliTrace > události IntelliTrace** a rozbalte kategorii **soubor** . Podívejte se do kategorie událost **souboru** . Dojde k tomu ke zkontrolování všech událostí souboru (přístup, zavření, odstranění).
 
 ## <a name="create-your-app"></a>Vytvoření aplikace
 
-1. Vytvořte konzolovou aplikaci C#. V souboru Program.cs přidejte následující `using` – příkaz:
+1. Vytvořte konzolovou aplikaci C#. Do souboru Program.cs přidejte následující `using` příkaz:
 
     ```csharp
     using System.IO;
     ```
 
-2. Vytvoření <xref:System.IO.FileStream> v metodu Main, čtení z něj, zavřete ho a stejný soubor odstranit také. Přidáte další řádek, jen aby místo, kde můžete nastavit zarážku:
+2. Vytvořte <xref:System.IO.FileStream> v metodě Main, přečtěte si z něho, zavřete ho a odstraňte soubor. Přidat další řádek, který má místo pro nastavení zarážky:
 
     ```csharp
     static void Main(string[] args)
@@ -49,42 +49,42 @@ Můžete zkusit ladění pouze události IntelliTrace. Mezi události IntelliTra
     }
     ```
 
-3. Nastavení zarážky v `Console.WriteLine("done");`
+3. Nastavit zarážku na `Console.WriteLine("done");`
 
-## <a name="start-debugging-and-view-intellitrace-events"></a>Spustit ladění a zobrazení události IntelliTrace
+## <a name="start-debugging-and-view-intellitrace-events"></a>Spuštění ladění a zobrazení událostí IntelliTrace
 
-1. Spusťte ladění obvyklým způsobem. (Stiskněte **F5** nebo klikněte na tlačítko **ladit > Spustit ladění**.)
+1. Spusťte ladění obvyklým způsobem. (Stiskněte klávesu **F5** nebo klikněte na **ladění > spustit ladění**.)
 
     > [!TIP]
-    > Zachovat **lokální** a **automatické hodnoty** windows otevřete během ladění zobrazovat a poznamenejte si hodnoty v těchto oknech.
+    > Nechte okna **místní** hodnoty a **Automatické** hodnoty otevřené, zatímco provádíte ladění, abyste mohli zobrazit a zaznamenat hodnoty v těchto oknech.
 
-2. Provádění zastaví na zarážce. Pokud se nezobrazí **diagnostické nástroje** okna, klikněte na tlačítko **ladit > Windows > události IntelliTrace**.
+2. Spuštění se zastaví na zarážce. Pokud nevidíte okno **diagnostické nástroje** , klikněte na **ladění > Windows > IntelliTrace události**.
 
-    V **diagnostické nástroje** okně Najít **události** kartu (3 karty, by se měla zobrazit **události**, **využití paměti**, a **procesoru Využití**). **Události** karta zobrazuje chronologický seznam událostí, s poslední událostí před přerušením provádění ladicí program. Měli byste vidět událost s názvem **přístup WordSearchInputs.txt**.
+    V okně **diagnostické nástroje** Najděte kartu **události** (měli byste vidět 3 karty, **události**, **využití paměti**a **využití CPU**). Karta **události** zobrazuje chronologický seznam událostí končící poslední událostí před spuštěním ladicího programu podařilo přerušit. Měla by se zobrazit událost s názvem **Access WordSearchInputs.txt**.
 
-    Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.
+    Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
-    ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")
+    ![IntelliTrace&#45;-datum1](../debugger/media/intellitrace-update1.png "IntelliTrace-v-datum1")
 
-3. Vyberte událost rozbalíte její podrobnosti.
+3. Výběrem události rozbalíte její podrobnosti.
 
-    Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.
+    Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")
 
-    Můžete zvolením odkazu cesty otevřete soubor. Pokud není k dispozici, úplná cesta **otevřít soubor** zobrazí se dialogové okno.
+    Můžete zvolit odkaz cesta k otevření souboru. Pokud úplná cesta není k dispozici, zobrazí se dialogové okno **otevřít soubor** .
 
-    Klikněte na tlačítko **aktivovat historické ladění**, který nastaví kontext ladicího programu na čas, kdy byla zvolená událost shromážděných, zobrazení historických dat **zásobník volání**, **místníchhodnot** a dalších zúčastněných ladicího programu systému windows. Pokud zdrojový kód je k dispozici, Visual Studio přesune ukazatel na odpovídající kód v okně zdroje tak, aby jej můžete prozkoumat.
+    Klikněte na **aktivovat historické ladění**, které nastaví kontext ladicího programu na čas, kdy se vybraná událost shromáždila, zobrazí se historická data v **zásobníku volání**, **místní** a ostatní okna zapojeného ladicího programu. Pokud je zdrojový kód k dispozici, Visual Studio přesune ukazatel na odpovídající kód v okně zdrojového kódu, abyste ho mohli prohlédnout.
 
-    Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.
+    Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.
 
-    ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")
+    ![HistoricalDebugging&#45;-datum1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-v-datum1")
 
-4. Pokud jste nenašli chyba, zkuste zkoumání další události vedoucí k chybě. Můžete také mít IntelliTrace zaznamenávat informace o voláních, takže můžete krokovat volání funkcí.
+4. Pokud jste tuto chybu nenalezli, zkuste zkoumat další události, které se zavedou k chybě. IntelliTrace můžete také zaznamenat informace o volání, abyste mohli krokovat prostřednictvím volání funkcí.
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete použít některé pokročilé funkce IntelliTrace s historické ladění:
+Můžete použít některé z pokročilých funkcí IntelliTrace s historickým laděním:
 
-- Chcete-li zobrazit snímků, najdete v článku [kontrolovat předchozí nové aplikace pomocí nástroje IntelliTrace](../debugger/view-historical-application-state.md)
-- Zjistěte, jak kontrolovat proměnné a vyhledání kódu, naleznete v tématu [Kontrola aplikace s využitím historického ladění](../debugger/historical-debugging-inspect-app.md)
+- Pokud chcete zobrazit snímky, přečtěte si téma [Kontrola předchozích stavů aplikace pomocí IntelliTrace](../debugger/view-historical-application-state.md) .
+- Informace o tom, jak kontrolovat proměnné a procházet kód, najdete v tématu [Kontrola aplikace pomocí historických ladění](../debugger/historical-debugging-inspect-app.md) .

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce – nespravované rozhraní API | Dokumentace Microsoftu
+title: Reference nespravovaného rozhraní API pro ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 api_name:
 - CleanOnlineAppCache
@@ -29,65 +29,65 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b536a17df4f54158aa6f157a0d9795cf359ddc0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900268"
 ---
-# <a name="clickonce-unmanaged-api-reference"></a>ClickOnce – nespravované rozhraní API
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nespravované veřejného rozhraní API z dfshim.dll.
+# <a name="clickonce-unmanaged-api-reference"></a>Reference nespravovaného rozhraní API ClickOnce
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Nespravovaná veřejná rozhraní API z dfshim.dll.
 
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache
- Čistí nebo odinstaluje všechny aplikace, které jsou z online [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] mezipaměti aplikace.
+ Vyčistí nebo odinstaluje všechny online aplikace z [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] mezipaměti aplikace.
 
-### <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; jinak vrátí hodnotu, která představuje chybu HRESULT. Pokud dojde k spravované výjimky, vrátí 0x80020009 (DISP_E_EXCEPTION).
+### <a name="return-value"></a>Vrácená hodnota
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí hodnotu HRESULT, která představuje chybu. Pokud dojde k spravované výjimce, vrátí 0x80020009 (DISP_E_EXCEPTION).
 
 ### <a name="remarks"></a>Poznámky
- Volání CleanOnlineAppCache zapne [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] služby, pokud ještě není spuštěná.
+ Volání CleanOnlineAppCache spustí službu, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Pokud ještě není spuštěná.
 
 ## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest
- Načte informace o nasazení z manifestu a aktivace adresy URL.
+ Načte informace o nasazení z manifestu a adresy URL aktivace.
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|Type|
+|Parametr|Popis|Typ|
 |---------------|-----------------|----------|
-|`pcwzActivationUrl`|Ukazatel `ActivationURL`.|LPCWSTR|
-|`pcwzPathToDeploymentManifest`|Ukazatel `PathToDeploymentManifest`.|LPCWSTR|
-|`pwzApplicationIdentity`|Ukazatel do vyrovnávací paměti pro příjem řetězec zakončený hodnotou NULL, který určuje, vrátí identitu celou aplikaci.|LPWSTR|
-|`pdwIdentityBufferLength`|Ukazatel na DWORD, který je délka `pwzApplicationIdentity` v WCHARs vyrovnávací paměti. Zahrnuje to prostor pro ukončovací znak NULL.|LPDWORD|
-|`pwzProcessorArchitecture`|Ukazatel do vyrovnávací paměti pro příjem řetězec zakončený hodnotou NULL, který určuje architekturu procesoru nasazení aplikace z manifestu.|LPWSTR|
-|`pdwArchitectureBufferLength`|Ukazatel na DWORD, který je délka `pwzProcessorArchitecture` v WCHARs vyrovnávací paměti.|LPDWORD|
-|`pwzApplicationManifestCodebase`|Ukazatel do vyrovnávací paměti pro příjem řetězec zakončený hodnotou NULL, který určuje základ kódu manifestu aplikace z manifestu.|LPWSTR|
-|`pdwCodebaseBufferLength`|Ukazatel na DWORD, který je délka `pwzApplicationManifestCodebase` v WCHARs vyrovnávací paměti.|LPDWORD|
-|`pwzDeploymentProvider`|Ukazatel do vyrovnávací paměti pro příjem řetězec zakončený hodnotou NULL, která určuje, poskytovatele nasazení z manifestu, pokud jsou k dispozici. V opačném případě je vrácen prázdný řetězec.|LPWSTR|
-|`pdwProviderBufferLength`|Ukazatel na DWORD, který je délka `pwzProviderBufferLength`.|LPDWORD|
+|`pcwzActivationUrl`|Ukazatel na `ActivationURL` .|LPCWSTR|
+|`pcwzPathToDeploymentManifest`|Ukazatel na `PathToDeploymentManifest` .|LPCWSTR|
+|`pwzApplicationIdentity`|Ukazatel na vyrovnávací paměť, který získá řetězec zakončený hodnotou NULL, který určuje úplnou identitu aplikace vrácenou.|LPWSTR|
+|`pdwIdentityBufferLength`|Ukazatel na DWORD, který je délkou `pwzApplicationIdentity` vyrovnávací paměti v WCHARs. To zahrnuje místo pro ukončovací znak NULL.|LPDWORD|
+|`pwzProcessorArchitecture`|Ukazatel na vyrovnávací paměť pro příjem řetězce zakončeného hodnotou NULL, který určuje architekturu procesoru pro nasazení aplikace, z manifestu.|LPWSTR|
+|`pdwArchitectureBufferLength`|Ukazatel na DWORD, který je délkou `pwzProcessorArchitecture` vyrovnávací paměti v WCHARs.|LPDWORD|
+|`pwzApplicationManifestCodebase`|Ukazatel na vyrovnávací paměť pro příjem řetězce zakončeného hodnotou NULL, který určuje základ kódu manifestu aplikace, z manifestu.|LPWSTR|
+|`pdwCodebaseBufferLength`|Ukazatel na DWORD, který je délkou `pwzApplicationManifestCodebase` vyrovnávací paměti v WCHARs.|LPDWORD|
+|`pwzDeploymentProvider`|Ukazatel na vyrovnávací paměť pro příjem řetězce zakončeného hodnotou NULL, který určuje poskytovatele nasazení z manifestu, pokud je k dispozici. V opačném případě je vrácen prázdný řetězec.|LPWSTR|
+|`pdwProviderBufferLength`|Ukazatel na DWORD, který je délkou `pwzProviderBufferLength` .|LPDWORD|
 
-### <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; jinak vrátí hodnotu, která představuje chybu HRESULT. Vrátí HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER), pokud vyrovnávací paměť je příliš malá.
+### <a name="return-value"></a>Vrácená hodnota
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí hodnotu HRESULT, která představuje chybu. Vrátí HRESULTFROMWIN32 (ERROR_INSUFFICIENT_BUFFER), pokud je vyrovnávací paměť příliš malá.
 
 ### <a name="remarks"></a>Poznámky
  Ukazatele nesmí mít hodnotu null. `pcwzActivationUrl` a `pcwzPathToDeploymentManifest` nesmí být prázdný.
 
- Je odpovědností volajícího k vyčištění aktivační adrese URL. Například přidání řídicích znaků, kde jsou potřeba nebo odebrání řetězce dotazu.
+ Je zodpovědností volajícího vyčistit adresu URL aktivace. Například přidávání řídicích znaků tam, kde jsou potřeba, nebo odebrání řetězce dotazu.
 
- Je odpovědností volajícího a omezit délku vstupu. Maximální délka adresy URL je například 2KB.
+ Je zodpovědností volajícího omezit délku vstupu. Například maximální délka adresy URL je 2 KB.
 
 ## <a name="launchapplication"></a>LaunchApplication
- Spustí nebo instaluje aplikace pomocí adresy URL nasazení.
+ Spustí nebo nainstaluje aplikaci pomocí adresy URL nasazení.
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|Type|
+|Parametr|Popis|Typ|
 |---------------|-----------------|----------|
-|`deploymentUrl`|Ukazatel na řetězec zakončený hodnotou NULL, který obsahuje adresu URL v manifestu nasazení.|LPCWSTR|
-|`data`|Vyhrazeno pro budoucí použití. Musí mít hodnotu NULL.|LPVOID –|
-|`flags`|Vyhrazeno pro budoucí použití. Musí být 0.|DWORD|
+|`deploymentUrl`|Ukazatel na řetězec zakončený hodnotou NULL, který obsahuje adresu URL manifestu nasazení.|LPCWSTR|
+|`data`|Vyhrazeno pro budoucí použití. Musí mít hodnotu NULL.|LPVOID|
+|`flags`|Vyhrazeno pro budoucí použití. Musí mít hodnotu 0.|DWORD|
 
-### <a name="return-value"></a>Návratová hodnota
- V případě úspěchu vrátí hodnotu S_OK; jinak vrátí hodnotu, která představuje chybu HRESULT. Pokud dojde k spravované výjimky, vrátí 0x80020009 (DISP_E_EXCEPTION).
+### <a name="return-value"></a>Vrácená hodnota
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí hodnotu HRESULT, která představuje chybu. Pokud dojde k spravované výjimce, vrátí 0x80020009 (DISP_E_EXCEPTION).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

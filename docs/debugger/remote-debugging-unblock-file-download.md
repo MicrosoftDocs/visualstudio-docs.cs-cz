@@ -1,5 +1,5 @@
 ---
-title: Odblokovat vzdálené nástroje pro stažení
+title: Odblokovat stahování vzdálených nástrojů
 ms.date: 07/19/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,33 +10,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a243033bf5831952d83fdf688302651e02b76b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62903018"
 ---
-# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Postupy: Odblokování stáhnout nástroje remote tools v systému Windows Server
+# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Postupy: odblokování stahování nástrojů Remote Tools na Windows serveru
 
-Výchozí nastavení zabezpečení v aplikaci Internet Explorer ve Windows serveru může být časově náročné ke stažení komponenty, například nástroje remote tools.
+Výchozím nastavením zabezpečení v aplikaci Internet Explorer na Windows serveru může být časově náročné stahovat součásti, jako jsou třeba vzdálené nástroje.
 
-* Je povoleno rozšířené nastavení zabezpečení v Internet Exploreru, což brání websites otevírání a zpřístupňování webových prostředků, pokud nejsou explicitně povolená na doménu obsahující zdroj (to znamená, důvěryhodná). I když můžete toto nastavení zakážete, nedoporučujeme ji protože to může představovat bezpečnostní riziko.
+* Konfigurace rozšířeného zabezpečení je povolena v aplikaci Internet Explorer, která zabraňuje otevření webů a přístupu k webovým prostředkům, pokud není doména obsahující prostředek výslovně povolená (tj. důvěryhodná). I když toto nastavení můžete zakázat, nedoporučujeme ho, protože může představovat bezpečnostní riziko.
 
-* V systému Windows Server 2016, výchozí nastavení **Možnosti Internetu** > **zabezpečení** > **Internet**  >   **Vlastní úroveň** > **stáhne** také zakáže stahování souborů. Pokud chcete stáhnout remote tools přímo v systému Windows Server, je nutné povolit stahování souborů.
+* V systému Windows Server 2016 je ve výchozím nastavení na webu **Možnosti Internetu**  >  **Security**  >  **Internet**  >  **Custom Level**  >  **soubory ke stažení** na vlastní úrovni internetu také zakázáno stahování souborů. Pokud se rozhodnete stáhnout vzdálené nástroje přímo na Windows serveru, musíte povolit stahování souborů.
 
-Pokud chcete stáhnout nástroje pro Windows Server, doporučujeme jednu z následujících akcí:
+Pro stažení nástrojů na Windows Server doporučujeme jednu z následujících akcí:
 
-* Stáhnout nástroje remote tools na jiném počítači, jako je například jeden spuštěné Visual Studio a zkopírujte *.exe* soubor do systému Windows Server.
+* Stáhněte si nástroje Remote Tools na jiný počítač, jako je třeba aplikace se sadou Visual Studio, a pak zkopírujte soubor *. exe* do Windows serveru.
 
-* Spustit vzdálený ladicí program [ze sdílené složky](../debugger/remote-debugging.md#fileshare_msvsmon) na svém počítači Visual Studio.
+* Spusťte vzdálený ladicí program [ze sdílené složky](../debugger/remote-debugging.md#fileshare_msvsmon) na počítači se systémem Visual Studio.
 
-* Stáhnout nástroje pro vzdálenou přímo v systému Windows Server a přijímal výzvy k přidání důvěryhodných serverů. Moderní weby často zahrnují mnoho materiály třetích stran tak může dojít k mnoha výzvy. Kromě toho přesměrovaného odkazy muset přidat ručně. Můžete nastavit některé z důvěryhodných lokalit přidat před zahájením stahování. Přejděte na **Možnosti Internetu > zabezpečení > Důvěryhodné servery > servery** a přidejte následující weby.
+* Stáhněte si nástroje Remote Tools přímo na Windows Server a přijměte výzvy k přidání důvěryhodných lokalit. Moderní weby často obsahují mnoho prostředků třetích stran, takže to může mít za následek mnoho výzev. Kromě toho může být nutné přidat přesměrované odkazy ručně. Před zahájením stahování se můžete rozhodnout přidat některé důvěryhodné servery. Přejít na **Možnosti internetu > zabezpečení > důvěryhodné servery > lokality** a přidat následující lokality.
 
   * visualstudio.microsoft.com
   * download.visualstudio.microsoft.com
   * o: prázdné
 
-  Pro starší verze ladicího programu na my.visualstudio.com přidejte tyto další lokality, abyste měli jistotu, že je tento přihlášení úspěšné:
+  Pro starší verze ladicího programu na my.visualstudio.com přidejte tyto další lokality, abyste se ujistili, že přihlášení proběhlo úspěšně:
 
   * microsoft.com
   * go.microsoft.com
@@ -51,8 +51,8 @@ Pokud chcete stáhnout nástroje pro Windows Server, doporučujeme jednu z násl
   * vlscppe.microsoft.com
   * query.prod.cms.rt.microsoft.com
 
-    Pokud budete chtít přidat tyto domény při stahování nástroje remote tools a pak zvolte **přidat** po zobrazení výzvy.
+    Pokud se rozhodnete tyto domény přidat při stahování nástrojů Remote Tools, po zobrazení výzvy zvolte **Přidat** .
 
-    ![Dialogové okno o blokovaném obsahu pole](../debugger/media/remotedbg-blocked-content.png)
+    ![Blokovaný obsah – dialogové okno](../debugger/media/remotedbg-blocked-content.png)
 
-    Když si stáhnete software, získat některé další požadavky pro udělení oprávnění k načítání různých skriptů na webu a prostředky. Na my.visualstudio.com doporučujeme vám, že přidáte další domény, abyste měli jistotu, že je tento přihlášení úspěšné.
+    Po stažení softwaru získáte další požadavky na udělení oprávnění k načtení různých skriptů a prostředků webu. Na my.visualstudio.com doporučujeme přidat další domény, abyste se ujistili, že přihlášení bylo úspěšné.

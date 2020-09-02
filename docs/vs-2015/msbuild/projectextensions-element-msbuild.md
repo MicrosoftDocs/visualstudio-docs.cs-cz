@@ -1,5 +1,5 @@
 ---
-title: Projectextensions – Element (MSBuild) | Dokumentace Microsoftu
+title: ProjectExtensions – – element (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,21 +20,21 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0afc4f73ed287f753acf87bd0b112e6f5303e996
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551248"
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions – element (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Umožňuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubory tak, aby obsahovala jinou hodnotu než projektu[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] informace. Cokoli uvnitř sady `ProjectExtensions` element se bude ignorovat ve [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+Povoluje, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] aby soubory projektu obsahovaly neobsahující [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] informace. Cokoli uvnitř `ProjectExtensions` elementu bude ignorováno [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  \<Project>  
  \<ProjectExtensions>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ProjectExtensions>  
@@ -53,15 +53,15 @@ Umožňuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubory tak,
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
+|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový prvek [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pouze jeden `ProjectExtensions` může být použit element v [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projektu.  
+ `ProjectExtensions`V projektu lze použít pouze jeden prvek [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje informace z integrovaného vývojového prostředí uložené v `ProjectExtensions` elementu.  
+ Následující příklad kódu ukazuje informace z integrovaného vývojového prostředí, které je uloženo v `ProjectExtensions` prvku.  
   
 ```  
 <ProjectExtensions>  
@@ -77,4 +77,4 @@ Umožňuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubory tak,
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)  
- [MSBuild](msbuild.md)
+ [Nástroji](msbuild.md)

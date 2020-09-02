@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení souborů projektu vytvořených službou VSTU | Dokumenty společnosti Microsoft
+title: Přizpůsobení souborů projektu vytvořených pomocí VSTU | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
@@ -11,17 +11,17 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: ad52e9f97dfbb9a5d0b3d65085c6c2627ccb2232
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62819526"
 ---
-# <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených službou VSTU
-Visual Studio Tools for Unity poskytuje volání ve stylu Unity během generování souboru projektu. Zaregistrujte `VisualStudioIntegration.ProjectFileGeneration` se s událostí a upravte soubor projektu vždy, když je znovu vygenerován.
+# <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených pomocí VSTU
+Visual Studio Tools for Unity poskytuje zpětné volání ve stylu Unity během generování souboru projektu. Zaregistrujte se s `VisualStudioIntegration.ProjectFileGeneration` událostí pro úpravu souboru projektu pokaždé, když se znovu vygeneruje.
 
 ## <a name="demonstrates"></a>Demonstruje
- Jak přizpůsobit soubory projektu sady Visual Studio generované visual studio nástroje pro jednotu.
+ Jak přizpůsobit soubory projektu sady Visual Studio vygenerované Visual Studio Tools for Unity.
 
 ## <a name="example"></a>Příklad
 
@@ -70,4 +70,4 @@ public class ProjectFileHook
 ```
 
 ## <a name="see-also"></a>Viz také
- [Příklad: Zpětné volání protokolu](../cross-platform/share-the-unity-log-callback-with-vstu.md)
+ [Příklad: zpětné volání protokolu](../cross-platform/share-the-unity-log-callback-with-vstu.md)

@@ -1,5 +1,5 @@
 ---
-title: Definování typů položek projektu služby SharePoint vlastní | Dokumentace Microsoftu
+title: Definování vlastních typů položek projektu služby SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,38 +15,38 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e5f32abba4c4cbdeab59ed66e38019d913e704e6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580781"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>Definování vlastních typů položek projektu služby SharePoint
-  Pokud chcete vytvořit nový typ položky projektu služby SharePoint, definujte novému typu položky projektu služby SharePoint. Například Visual Studio neobsahuje položky Sharepointového projektu pro přidání polí nebo vlastní akce na Sharepointový Web. Můžete definovat vlastní typy položek Sharepointového projektu pro vytvoření pole, vlastní akce nebo jiné typy součásti služby SharePoint.
+  Definujte nový typ položky projektu služby SharePoint, pokud chcete vytvořit nový druh položky projektu služby SharePoint. Například Visual Studio nezahrnuje položky SharePointového projektu pro přidání polí nebo vlastních akcí do webu služby SharePoint. Můžete definovat vlastní typy položek projektu služby SharePoint pro vytváření polí, vlastní akce nebo jiné typy komponent služby SharePoint.
 
 ## <a name="tasks-for-defining-sharepoint-project-item-types"></a>Úlohy pro definování typů položek projektu služby SharePoint
- K definování typu položky projektu vlastní, vytváření sestavení rozšíření sady Visual Studio, který implementuje <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> rozhraní. Další informace najdete v tématu [jak: Definování typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
+ Chcete-li definovat vlastní typ položky projektu, sestavte sestavení rozšíření sady Visual Studio, které implementuje <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> rozhraní. Další informace naleznete v tématu [How to: define a Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
- Při definování vlastního typu položky projektu, můžete také přidat následující funkce do položky projektu:
+ Při definování vlastního typu položky projektu můžete také přidat následující funkce do položky projektu:
 
-- Přidání položky místní nabídky do položky projektu. Položka nabídky se zobrazí, když otevřete místní nabídku pro položku projektu v **Průzkumníka řešení** pravým tlačítkem na položku projektu nebo jej vyberete a potom kliknete **Shift** +  **F10** klíče. Další informace najdete v tématu [jak: Přidání položky místní nabídky do vlastního typu položky projektu SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md).
+- Přidejte položku místní nabídky do položky projektu. Položka nabídky se zobrazí po otevření místní nabídky pro položku projektu v **Průzkumník řešení** kliknutím pravým tlačítkem myši na položku projektu nebo výběrem možnosti a následným stisknutím klávesy **SHIFT** + **F10** . Další informace naleznete v tématu [Postupy: Přidání položky místní nabídky do vlastního typu položky projektu služby SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md).
 
-- Přidání vlastních vlastností do položky projektu. Vlastnost se zobrazí v **vlastnosti** okno při výběru položky projektu v **Průzkumníka řešení**. Další informace najdete v tématu [jak: Přidání vlastnosti do vlastního typu položky projektu SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
+- Přidejte vlastní vlastnost do položky projektu. Vlastnost se zobrazí v okně **vlastnosti** při výběru položky projektu v **Průzkumník řešení**. Další informace naleznete v tématu [Postupy: Přidání vlastnosti do vlastního typu položky projektu služby SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
-  Pokud chcete povolit ostatním vývojářům použít vaši položku projektu v sadě Visual Studio, vytvořte soubor .spdata a vytvořte šablonu položky nebo šablony projektu, který je přidružený k položce projektu. Další informace najdete v tématu [položky vytvářet šablony a šablony projektů pro položky Sharepointového projektu](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+  Chcete-li povolit jiným vývojářům používat položku projektu v aplikaci Visual Studio, vytvořte soubor. spdata a vytvořte šablonu položky nebo šablonu projektu, která je spojena s položkou projektu. Další informace naleznete v tématu [Vytvoření šablon položek a šablon projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
 
-## <a name="understand-the-relationship-between-project-item-types-and-project-item-instances"></a>Porozumět vztahu mezi typů položek projektu a instance položky projektu
- Při definování typu položky projektu služby SharePoint sady Visual Studio načte vaše rozšíření při přidání položky projektu přidruženého typu do projektu služby SharePoint. Například, pokud definujete nový **vlastní akce** typu položky projektu, Visual Studio načte vaše rozšíření, když uživatel přidá **vlastní akce** položku projektu do projektu. Visual Studio používá stejnou instanci rozšíření pro všechny výskyty typ položky přidružený projekt. V předchozím příkladu, pokud uživatel přidá sekundy **vlastní akce** položku projektu do projektu, stejnou instanci rozšíření se používá k úpravě druhé položky projektu.
+## <a name="understand-the-relationship-between-project-item-types-and-project-item-instances"></a>Pochopení vztahu mezi typy položek projektu a instancemi položek projektu
+ Při definování typu položky projektu služby SharePoint aplikace Visual Studio načte rozšíření při přidání položky projektu přidruženého typu do projektu služby SharePoint. Například pokud definujete nový typ položky projektu **vlastní akce** , Visual Studio načte vaše rozšíření, když uživatel přidá do projektu vlastní položku projektu **Akce** . Visual Studio používá stejnou instanci rozšíření pro všechny instance přidruženého typu položky projektu. Pokud uživatel v předchozím příkladu přidá do projektu druhou položku projektu **vlastní akce** , použije se stejná instance rozšíření pro přizpůsobení druhé položky projektu.
 
- Přístup ke konkrétní instanci typu položky projektu, zpracovat jeden z <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> události *projectItemTypeDefinition* parametrů ve vaší implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> metody. Například pokud chcete zjistit, při přidání vlastního typu položky projektu do projektu, zpracovat <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> událostí. Další informace najdete v tématu [jak: Definování typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
+ Chcete-li získat přístup ke konkrétní instanci typu položky projektu, zpracujte jednu z <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> událostí parametru *ProjectItemTypeDefinition* v implementaci <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> metody. Například chcete-li zjistit, kdy je položka projektu vlastního typu přidána do projektu, zpracujte <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> událost. Další informace naleznete v tématu [How to: define a Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Definování typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
-- [Postupy: Přidání vlastnosti do vlastního typu položky projektu SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
-- [Postupy: Přidání položky místní nabídky do vlastního typu položky projektu SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)
-- [Vytváření šablon položek a projektů pro položky projektu SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: definování typu položky projektu SharePoint](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
+- [Postupy: Přidání vlastnosti do vlastního typu položky projektu služby SharePoint](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
+- [Postupy: Přidání položky místní nabídky do vlastního typu položky projektu služby SharePoint](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)
+- [Vytváření šablon položek a šablon projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 - [Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
-- [Návod: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
+- [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
 - [Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)
-- [Návod: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
-- [Nasazení rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Návod: vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
+- [Nasazení rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

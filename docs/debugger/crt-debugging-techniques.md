@@ -1,5 +1,5 @@
 ---
-title: Techniky ladění CRT | Dokumentace Microsoftu
+title: Techniky ladění CRT | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,41 +20,41 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 88cdc78fd739de412b4cf796d0ca7a42f9174e0a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62564031"
 ---
 # <a name="crt-debugging-techniques"></a>Techniky ladění CRT
-Pokud ladíte program, který používá knihovny run-time jazyka C, může být užitečné tyto techniky ladění.
+Pokud ladíte program, který používá knihovnu run-time jazyka C, mohou být tyto techniky ladění užitečné.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Použití knihovny ladění CRT](../debugger/crt-debug-library-use.md)
 
- Popisuje podporu ladění poskytovaných knihovnou Run-Time jazyka C a poskytuje pokyny pro přístup k nástroji.
+ Popisuje podporu ladění, kterou poskytuje knihovna run-time jazyka C, a poskytuje pokyny pro přístup k nástrojům.
 
  [Makra pro vytváření sestav](../debugger/macros-for-reporting.md)
 
- Poskytuje informace o **_RPTn** a **_RPTFn** makra (definovaná v CRTDBG. H), který nahradí použití `printf` příkazy pro ladění.
+ Poskytuje informace o **_RPTn** a **_RPTFn** makrech (definovaných v souboru Crtdbg. H), které nahradí použití `printf` příkazů pro ladění.
 
  [Ladění verzí funkcí přidělení haldy](../debugger/debug-versions-of-heap-allocation-functions.md)
 
- Tento článek popisuje zvláštní ladění verzí funkcí přidělení haldy, včetně: jak CRT mapuje volání, výhody volání je explicitně, jak se vyhnout převod sledování samostatné typy přidělení v blocích klienta a výsledky není definování _ LADĚNÍ.
+ Tento článek popisuje speciální ladicí verze funkcí přidělení haldy, včetně: Jak volání map CRT nahlasují, jaké jsou výhody volání explicitně, jak vyhnout konverzi, sledovat samostatné typy přidělení v klientských blocích a výsledky nedefinovat _DEBUG.
 
  [Podrobnosti haldy ladění CRT](../debugger/crt-debug-heap-details.md)
 
- Obsahuje odkazy na správu paměti a halda ladění, typy bloků na haldě ladění pomocí haldy ladění, stavu haldy funkce generování sestav a sledování požadavků na přidělení haldy.
+ Poskytuje odkazy na správu paměti a haldu ladění, typy bloků v haldě ladění, použití haldy ladění, funkce vytváření sestav o stavu haldy a sledování požadavků na přidělení haldy.
 
- [Zápis funkce volání pro ladění](../debugger/debug-hook-function-writing.md)
+ [Zápis funkce háku ladění](../debugger/debug-hook-function-writing.md)
 
- Seznamy odkazů na klientský blok integrovat funkce, funkce háku přidělení, háky přidělení a přidělení paměti CRT a funkce háku sestavy.
+ Obsahuje odkazy na funkce zavěšení bloků klienta, funkce zavěšení přidělení, zavěšení přidělení a přidělení paměti CRT a funkce zavěšení sestav.
 
  [Hledání nevrácené paměti pomocí knihovny CRT](../debugger/finding-memory-leaks-using-the-crt-library.md)
 
- Popisuje postupy pro zjištění a izolace nevrácené paměti pomocí ladicího programu a knihovny jazyka C Run-Time.
+ Zahrnuje techniky pro detekci a izolaci nevracení paměti pomocí ladicího programu a knihovny run-time jazyka C.
 
 ## <a name="related-sections"></a>Související oddíly
 
-- [Ladění nativního kódu](../debugger/debugging-native-code.md) – Tento článek popisuje některé běžné problémy ladění a techniky pro aplikace C a C++.
-- [Zabezpečení ladicího programu](../debugger/debugger-security.md) – poskytuje doporučení pro zabezpečení ladění.
+- [Ladění nativního kódu](../debugger/debugging-native-code.md) – popisuje některé běžné problémy s laděním a techniky pro aplikace v jazyce C a C++.
+- [Zabezpečení ladicího programu](../debugger/debugger-security.md) – poskytuje doporučení pro bezpečnější ladění.

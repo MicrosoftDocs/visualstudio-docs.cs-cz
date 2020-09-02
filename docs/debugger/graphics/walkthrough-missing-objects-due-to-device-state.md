@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Chybějící objekty z důvodu stavu zařízení | Dokumentace Microsoftu'
+title: 'Návod: chybějící objekty z důvodu stavu zařízení | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -9,99 +9,99 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62895442"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>Návod: Chybějící objekty z důvodu stavu zařízení
-Tento návod ukazuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky k prozkoumání objekt, který je z důvodu chybějící správně nakonfigurovaný. stav zařízení.
+Tento návod ukazuje, jak použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Diagnostika grafiky k prozkoumání objektu, který chybí kvůli nesprávně nakonfigurovanému stavu zařízení.
 
  Tento návod ukazuje, jak:
 
-- Použití **seznam událostí grafiky** k vyhledání potenciálních zdrojů problému.
+- K vyhledání potenciálních zdrojů problému použijte **seznam událostí grafiky** .
 
-- Použití **fáze zřetězení grafiky** okna zkontrolovat dopad `DrawIndexed` volání rozhraní API Direct3D.
+- Pomocí okna **fáze zřetězení grafiky** můžete kontrolovat účinek `DrawIndexed` volání rozhraní Direct3D API.
 
-- Použití **historie pixelů grafiky** okno přesněji řečeno nalezení problému.
+- Pomocí okna **Historie pixelů grafiky** můžete najít problém přesněji.
 
-- Kontrolovat stav zařízení pro potenciální problémy nebo chyby v konfiguraci.
+- Zkontrolujte stav zařízení a vyhledejte možné problémy nebo chyby konfigurace.
 
 ## <a name="scenario"></a>Scénář
- Jedním z důvodů, že objekty neobjeví, kde se očekává v 3D aplikaci je chybná konfigurace zařízení grafiky, která způsobí, že objekty, které chcete vyloučit z vykreslování – například když pořadí vinutí způsobí, že trojúhelníky vyřazeny chybu , nebo když hloubky testovací funkce způsobí, že všechny obrazové body v objekt, který má být odmítnut.
+ Jeden z důvodů, proč se objekty nemusí zobrazit tam, kde jsou očekávány v 3D aplikaci, je chybná konfigurace grafického zařízení, které způsobuje, že objekty budou vyloučeny z vykreslování – například v případě, že pořadí vinutí způsobuje odstranění trojúhelníků v chybě nebo když funkce hloubkového testu způsobí, že všechny pixely v objektu budou odmítnuty.
 
- Ve scénáři, který je popsaný v tomto podrobném návodu stačí dosáhli prvního milníku při vývoji aplikace pro 3D a jsou připraveny k testování poprvé. Při spuštění aplikace uživatelského rozhraní vykreslen na obrazovku. Pomocí diagnostiky grafiky můžete zaznamenat problém do soubor protokolu grafiky, tak, že ladíte aplikaci. Problém je v aplikace vypadá například takto:
+ Ve scénáři, který je popsaný v tomto návodu, jste právě dosáhli prvního milníku ve vývoji vaší 3D aplikace a jste připraveni ho otestovat poprvé. Při spuštění aplikace se ale na obrazovku vykresluje jenom uživatelské rozhraní. Pomocí Diagnostika grafiky zachytíte problém do souboru protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:
 
- ![Aplikace předtím, než se problém nevyřeší](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
+ ![Aplikace před tímto problémem se opravila.](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
 
- Informace o tom, jak zachytit problémy s grafikou v protokolu grafiky, naleznete v tématu [Capturing Graphics Information](capturing-graphics-information.md).
+ Informace o tom, jak zachytit problémy s grafikou v protokolu grafiky, najdete v tématu [zachycení grafických informací](capturing-graphics-information.md).
 
 ## <a name="investigation"></a>Šetření
- Pomocí nástrojů diagnostiky grafiky můžete načíst soubor protokolu grafiky kontrolovat rámce, které se zaznamenalo během testu.
+ Pomocí nástrojů Diagnostika grafiky můžete načíst soubor protokolu grafiky a zkontrolovat rámce, které byly zachyceny během testu.
 
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Přezkoumání snímku v protokolu grafiky
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Prohlédnutí snímku v protokolu grafiky
 
-1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načtěte protokol grafiky, který obsahuje rámec vykazující chybí model. Nová karta Diagnostika grafiky se zobrazí v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. V horní části této karty je výstup cíle vykreslení vybraného snímku. V dolní části je **seznam snímků**, který zobrazuje jako obrázek miniatury každého zachyceného snímku.
+1. V nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načtěte protokol grafiky, který obsahuje rámeček, který vykazuje chybějící model. V nástroji se zobrazí nová karta Diagnostika grafiky [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . V horní části této karty je výstup cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje jednotlivé zachycené rámce jako obrázek miniatury.
 
-2. V **seznam snímků**, vyberte snímek, který ukazuje, že se model zobrazen. Cíl vykreslování se aktualizuje tak, aby odrážely vybraného snímku. V tomto scénáři vypadá karta protokolu grafiky:
+2. V **seznamu snímků**vyberte rámec, který ukazuje, že model není zobrazen. Cíl vykreslování se aktualizuje tak, aby odrážel vybraný snímek. V tomto scénáři vypadá karta protokol grafiky takto:
 
-    ![.Vsglog kartu framebuffer ve verzi preview a rámce seznamu](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
+    ![Karta. vsglog framebuffer náhled a seznam snímků](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
 
-   Po vybrání rámce, který znázorňuje problém, můžete použít **seznam událostí grafiky** k její diagnostice. **Seznam událostí grafiky** obsahuje každé volání API rozhraní Direct3D, která byla vytvořená pro vykreslení aktivního rámce, například volání rozhraní API k nastavení stavu zařízení můžete taky vytvářet a aktualizovat vyrovnávací paměti a chcete-li nakreslit objekty, které se zobrazují v rámci. Různé druhy volání je zajímavé, protože není často (ale ne vždy) odpovídající změnu cíle vykreslování, pokud aplikace funguje podle očekávání, například kreslení, odesílání, kopírování nebo vymazat volání. Volání příkazu pro vykreslení jsou zvlášť zajímavý, protože každé z nich představuje geometrii, která vykresluje aplikace (odeslání volání může také vykreslit geometrii).
+   Po výběru rámce, který demonstruje problém, můžete k jeho diagnostice použít **seznam událostí grafiky** . **Seznam událostí grafiky** obsahuje každé volání rozhraní Direct3D API, které bylo provedeno pro vykreslení aktivního rámce, například volání rozhraní API pro nastavení stavu zařízení, pro vytváření a aktualizaci vyrovnávacích pamětí a pro kreslení objektů, které se zobrazí v rámci rámečku. Mnoho druhů volání je zajímavé, protože často (ale ne vždy) odpovídající změna v cíli vykreslování, když aplikace funguje podle očekávání, například kreslení, odesílání, kopírování nebo vymazání volání. Volání remíz jsou obzvláště zajímavá, protože každá z nich představuje geometrii, kterou vygenerovala aplikace (volání expedice může také vykreslovat geometrii).
 
-#### <a name="to-ensure-that-draw-calls-are-being-made"></a>K zajištění, které kreslí uskutečněných volání
+#### <a name="to-ensure-that-draw-calls-are-being-made"></a>Aby bylo zajištěno, že budou vyvolána volání draw
 
-1. Otevřít **seznam událostí grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **seznam událostí**.
+1. Otevřete okno **seznam událostí grafiky** . Na panelu nástrojů **Diagnostika grafiky** vyberte možnost **seznam událostí**.
 
-2. Zkontrolujte **seznam událostí grafiky** pro kreslení volání. Abychom to usnadnili, zadejte "Draw" **hledání** pole v pravém horním rohu **seznam událostí grafiky** okna. Vyfiltruje seznam tak, aby obsahoval pouze události, které mají "Draw" v názvech. V tomto scénáři zjistíte, že byly provedeny několik volání draw:
+2. Zkontrolujte **seznam událostí grafiky** pro volání draw. To lze usnadnit zadáním příkazu "Draw" do **vyhledávacího** pole v pravém horním rohu okna **seznam událostí grafiky** . Tím se seznam vyfiltruje tak, aby obsahoval jenom události, které mají v názvech "Draw". V tomto scénáři zjistíte, že bylo provedeno několik volání remíz:
 
-    ![Seznam událostí grafiky zobrazující zachycené události](media/vsg_walkthru1_.png "vsg_walkthru1_")
+    ![Seznam událostí grafiky znázorňující zachycené události](media/vsg_walkthru1_.png "vsg_walkthru1_")
 
-   Jakmile potvrdíte, které kreslí uskutečněných volání, můžete určit, která z nich odpovídá chybějící geometry. Protože víte, že není právě chybějící geometrie vykreslovány cíl vykreslování (v tomto případě), můžete použít **fáze zřetězení grafiky** okna můžete určit, které nakreslit volání odpovídá chybějící geometry. **Fáze zřetězení grafiky** okno zobrazuje geometrii, která byla odeslána pro každé volání draw, bez ohledu na jeho dopad na cíl vykreslování. Při procházení volání draw, fáze zřetězení se aktualizuje a zobrazí geometrii, která souvisí s voláním a výstup cíle vykreslení se aktualizuje a zobrazí stav cíle vykreslování po volání bylo dokončeno.
+   Po potvrzení, že jsou vytvářena volání vykreslování, můžete určit, která z nich odpovídá chybějící geometrii. Protože víte, že chybějící geometrie není vykreslována do cíle vykreslování (v tomto případě), můžete použít okno **fáze zřetězení grafiky** k určení, které volání vykreslování odpovídá chybějící geometrii. Okno **fáze zřetězení grafiky** zobrazuje geometrii, která byla odeslána každému volání vykreslení bez ohledu na jeho vliv na cíl vykreslování. Při procházení volání vykreslování jsou fáze zřetězení aktualizovány tak, aby zobrazovaly geometrii, která je přidružena k tomuto volání, a výstup cíle vykreslování je aktualizován tak, aby zobrazoval stav cíle vykreslování po dokončení volání.
 
-#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>K vyhledání volání draw pro chybějící geometrie
+#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Vyhledání volání remíz pro chybějící geometrii
 
-1. Otevřít **fáze zřetězení grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **fáze zřetězení**.
+1. Otevřete okno **fáze zřetězení grafiky** . Na panelu nástrojů **Diagnostika grafiky** vyberte **fáze zřetězení**.
 
-2. Pohyb v každé volání draw při sledování **fáze zřetězení grafiky** okně chybí model. **Vstupní Assembler** fázi zobrazí data o nezpracovanou modelu. **Vertex Shader** fázi zobrazí data o transformovaných modelu. **Pixel Shader** fáze zobrazuje výstup pixel shaderu. **Slučovací modul výstupu** fáze ukazuje cíle vykreslování sloučené toto volání draw a všech předchozích volání draw.
+2. Procházejte každým voláním remíz při sledování okna **fáze zřetězení grafiky** pro chybějící model. **Vstupní fáze assembleru** zobrazuje nezpracovaná data modelu. Fáze **vertex shader** zobrazuje transformovaná data modelu. Fáze **pixel shaderu** zobrazuje výstup pixel shaderu. Fáze **Výstup-fúze** zobrazuje sloučený cíl vykreslování tohoto volání vykreslování a všechna předchozí volání vykreslování.
 
-3. Zastavte, když jste dosáhli volání draw, která odpovídá chybí model. V tomto scénáři **fáze zřetězení grafiky** okno označuje, že geometrii vykreslil ale nebyla součástí cíle vykreslování:
+3. Zastavit, pokud jste dosáhli volání vykreslování, které odpovídá chybějícímu modelu. V tomto scénáři okno **fáze zřetězení grafiky** indikuje, že geometrie byla vykreslena, ale nebyla zobrazena v cíli vykreslování:
 
-    ![Prohlížeč zřetězení zobrazující chybí objekt](media/vsg_walkthru1_pipeline.png "vsg_walkthru1_pipeline")
+    ![Prohlížeč kanálů zobrazující chybějící objekt](media/vsg_walkthru1_pipeline.png "vsg_walkthru1_pipeline")
 
-   Jakmile potvrdíte, že aplikace vykreslí chybějící geometrie a vyhledejte odpovídající volání draw, můžete vybrat část výstup cíle vykreslení, který by měl zobrazit chybějící geometrie a pak použít **historie pixelů grafiky** okno a zjistěte, proč byly vyloučeny pixely. Historie pixelů obsahuje seznam každé volání draw, která by mohla obsahovat vliv na jeden konkrétní bod. Každý draw volání v **historie pixelů grafiky** okna je identifikován číslo, které se zobrazí také ve **seznam událostí grafiky** okna. Díky tomu můžete potvrdit, že je pixel by měl zobrazit chybějící geometrie a chcete zjistit, proč byl vyloučen, je pixel
+   Po potvrzení, že aplikace vygenerovala chybějící geometrii a vyhledáte odpovídající volání metody Draw, můžete vybrat část výstupu cíle vykreslování, která by měla zobrazovat chybějící geometrii, a pak pomocí okna **Historie pixelů grafiky** zjistit, proč byly pixely vyloučeny. Historie pixelů obsahuje seznam všech volání remíz, která by mohla mít vliv na určitý pixel. Každé volání remízy v okně **Historie pixelů grafiky** je určeno číslem, které je také zobrazeno v okně **seznam událostí grafiky** . To vám pomůže potvrdit, že pixel by měl zobrazovat chybějící geometrii a zjistit, proč byl pixel vyloučený.
 
-#### <a name="to-determine-why-the-pixel-was-excluded"></a>Chcete-li zjistit, proč byl vyloučen, je pixel
+#### <a name="to-determine-why-the-pixel-was-excluded"></a>Určení důvodu vyloučení pixelu
 
-1. Otevřít **historie pixelů grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **historie pixelů**.
+1. Otevřete okno **Historie pixelů grafiky** . Na panelu nástrojů **Diagnostika grafiky** vyberte položku **Historie pixelů**.
 
-2. Na základě **Pixel Shader** miniaturu, vyberte pixel v framebuffer výstup, který by měl obsahovat část chybí geometry. V tomto scénáři by výstup pixel shaderu pokrýval většinu cíle vykreslování; Po výběru pixel **historie pixelů grafiky** okno vypadá takto:
+2. Na základě miniatury funkce **pixel shader** vyberte pixel ve výstupu framebuffer, který by měl obsahovat část chybějící geometrie. V tomto scénáři by výstup pixel shaderu měl pokrývat většinu cílů vykreslování; Po výběru pixelu okno **Historie pixelů grafiky** vypadá takto:
 
-    ![Okno historie pixelů zobrazující související nakreslit volání](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
+    ![Okno Historie pixelů zobrazující související volání vykreslování](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
 
-3. Potvrďte, že pixel cíl vykreslování vybrané obsahuje část geometrii to provede spárováním odpovídajících počet volání draw při kontrole (z **seznam událostí grafiky** okno) do jednoho volání draw v **grafiky Historie pixelů** okna. Pokud žádná volání v **historie pixelů grafiky** okno Shoda volání draw, že zkontrolujete, opakujte tyto kroky (s výjimkou kroku 1) dokud najít shoda. V tomto scénáři odpovídající volání draw vypadá například takto:
+3. Potvrďte, že vybraný cílový pixel vykreslování obsahuje část geometrie, a to tak, že odpovídá počtu volání remíz, které kontrolujete (z okna **seznam událostí grafiky** ) k jednomu z volání vykreslování v okně **Historie pixelů grafiky** . Pokud se žádné volání v okně **Historie pixelů grafiky** neshoduje s voláním vykreslování, které jste prohlédli, opakujte tento postup (s výjimkou kroku 1), dokud nenajdete shodu. V tomto scénáři vypadá vyhovující volání draw takto:
 
-    ![Okno historie pixelů informace o fragmentu](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
+    ![Okno Historie pixelů zobrazující informace o fragmentaci](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
 
-4. Můžete najít shodu, rozbalte položku odpovídající volání příkazu pro vykreslení v **historie pixelů grafiky** okno a potvrďte, že je pixel byl vyloučen. Každý draw volání v **historie pixelů grafiky** okna odpovídá jedné nebo více geometrické primitivních elementů (body, čáry nebo trojúhelníky), které prolínají obrazového bodu v důsledku geometrie odpovídajícího objektu. Každý takový průnik může přispět k konečnou barvu pixelu. Jednoduchého typu, která je vyloučená, protože se má neprošel testem hloubky je reprezentován ikonou, která zobrazuje písmeno Z za šipkou dolů svažuje zleva doprava.
+4. Po nalezení shody rozbalte odpovídající volání vykreslování v okně **Historie pixelů grafiky** a ověřte, zda byl pixel vyloučen. Každé volání remízy v okně **Historie pixelů grafiky** odpovídá jednomu nebo více geometrickým primitivním prvkům (body, řádky nebo trojúhelníky), které se protínají jako výsledek geometrie odpovídajícího objektu. Každé takové průsečíky může přispívat k konečné barvě pixelu. Primitivum, které se vyloučilo, protože došlo k selhání testu hloubky, je reprezentované ikonou, která zobrazuje písmeno Z na šipku, která se šikmo dolů od levého pravé strany.
 
-5. Rozbalte vyloučené primitivem a další kontrolu stavu, který způsobil, že mají být vyloučeny. V **slučovací modul výstupu** skupině, přesuňte ukazatel myši **výsledek**. Popisek označuje, proč byl vyloučen, primitivní vlastnost. V tomto scénáři zkoumání odhalí, že primitivní vlastnost byl vyloučen, protože se neprošel testem hloubky a proto nepřispěl k konečnou barvu pixelu.
+5. Rozbalení vyloučené primitivy k dalšímu zjištění stavu, který způsobil, že bude vyloučen. Ve **výstupní skupině fúze** přesuňte ukazatel na **výsledek**. Popisek indikuje, proč se primitivum vyloučilo. V tomto scénáři zkoumání odhalí, že primitivní byla vyloučena, protože neprošel testem hloubky, a proto nepřispěla k konečné barvě pixelu.
 
-   Pokud zjistíte, že geometrie se nezobrazí, protože jste jeho primitivy neprošel testem hloubky, může být máte podezření, jestli problém souvisí s stavu nesprávné konfigurace zařízení. Stav zařízení a jiných rozhraní Direct3D objekt pomocí se dají prozkoumat data **Graphics Object Table**.
+   Až zjistíte, že se geometrie nezobrazí, protože její primitivní prvky selhaly při testování hloubky, možná budete mít podezření, že tento problém souvisí s chybně konfigurovaným stavem zařízení. Data o stavu zařízení a dalších objektech Direct3D lze prozkoumat pomocí **tabulky objekt grafiky**.
 
-#### <a name="to-examine-device-state"></a>Pro zjištění stavu zařízení
+#### <a name="to-examine-device-state"></a>Kontrola stavu zařízení
 
-1. Otevřít **Graphics Object Table** okna. Na **diagnostiky grafiky** nástrojů, zvolte **tabulky objektů**.
+1. Otevřete okno **tabulka objektů grafiky** . Na panelu nástrojů **Diagnostika grafiky** vyberte **tabulka objektů**.
 
-2. Vyhledejte **zařízením D3D10** objekt **Graphics Object Table**a pak otevřete **zařízením D3D10** objektu. Nový **zařízením d3d10** kartě se otevře v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Abychom to usnadnili, můžete seřadit **Graphics Object Table** podle **typ**:
+2. Vyhledejte objekt **zařízení d3d10** v **tabulce objekt grafiky**a pak otevřete objekt **zařízení d3d10** . Otevře se nová karta **zařízení d3d10** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Chcete-li to usnadnit, můžete seřadit **tabulku objektu grafiky** podle **typu**:
 
-    ![Tabulka grafických objektů a související zařízení stavu](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
+    ![Tabulka grafických objektů a související stav zařízení](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
 
-3. Zkontrolovat stav zařízení, která se zobrazí **zařízením d3d10** kartu pro potenciální problémy. Protože geometrii nezobrazí, protože jeho primitivy mají neprošel testem hloubky, můžete se zaměřit na stavu zařízení, jako je například hloubky, která ovlivňuje testem hloubky. V tomto scénáři **popis vzorníku hloubky** (v části **výstup stavu fúze**) obsahuje běžné hodnotu pro **hloubka funkce** člena, `D3D10_COMPARISON_GREATER`:
+3. Projděte si stav zařízení, který se zobrazí na kartě **zařízení d3d10** , kde bude možné problémy vyřešit. Vzhledem k tomu, že se geometrie nezobrazí, protože její primitivní prvky selhaly při testování hloubky, můžete se zaměřit na stav zařízení, jako je například vzorník hloubky, který má vliv na test hloubky. V tomto scénáři obsahuje **Popis vzorníku hloubky** (ve **stavu fúze výstupu**) neobvyklou hodnotu člena **funkce hloubky** `D3D10_COMPARISON_GREATER` :
 
-    ![Okno zařízení D3D10 informace vzorníku hloubky](media/vsg_walkthru1_devicestate.png "vsg_walkthru1_devicestate")
+    ![Okno zařízení D3D10 zobrazující informace o vzorníku hloubky](media/vsg_walkthru1_devicestate.png "vsg_walkthru1_devicestate")
 
-   Pokud zjistíte, že příčinu problému vykreslování může být nesprávně nakonfigurované hloubka funkce, můžete tyto informace slouží společně s svoje znalosti v oblasti kódu najít, kde byl nesprávně nastaveny hloubka funkce a pak tento problém vyřešit. Pokud nejste obeznámeni s kódem, můžete pro problém vyhledat pomocí příčiny, které jste shromáždili během kdybyste ladili – například na základě **popis vzorníku hloubky** v tomto scénáři můžete vyhledat kód slova například "hloubky" nebo "Vyšší". Po opravě kód její opětovné sestavení a spuštění aplikace znovu a zjistit, že je vyřešen problém vykreslování:
+   Jakmile zjistíte, že příčinou potíží s vykreslováním může být chybná nakonfigurovaná hloubka, můžete tyto informace použít spolu s vaším vědomím kódu a vyhledat tak, kde byla funkce hloubky nastavena nesprávně, a pak problém vyřešit. Pokud nejste obeznámeni s kódem, mohli byste vyhledat problém pomocí označení, které jste shromáždili během ladění – například v závislosti na **popisu vzorníku hloubky** v tomto scénáři můžete hledat v kódu slova jako "Hloubka" nebo "větší". Po opravě kódu ho znovu sestavte a znovu spusťte aplikaci, abyste zjistili, že problém vykreslování je vyřešen:
 
-   ![Aplikace, po vyřešení problému](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")
+   ![Aplikace po vyřešení problému](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")

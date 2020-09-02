@@ -1,5 +1,5 @@
 ---
-title: Sledovat příkazy nabídky | Dokumentace Microsoftu
+title: Příkazy nabídky Spy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 036a99fc0f25f2302c82d043fa20cf6e35687668
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929759"
 ---
 # <a name="spy-menu-commands"></a>Příkazy nabídky nástroje Spy
-**Spy** nabídka obsahuje příkazy pro práci s nástroji Spy ++ Windows a zobrazení.
+Nabídka **Spy** nabízí příkazy pro práci s okny a zobrazeními nástroje Spy.
 
- **Windows** otevře nové zobrazení Windows.
+ **Systém Windows** Otevře nové zobrazení systému Windows.
 
- **Procesy** otevře nové zobrazení procesy.
+ **Procesy** Otevře nové zobrazení procesů.
 
- **Vlákna** otevře nové zobrazení vlákna.
+ **Vlákna** Otevře nové zobrazení vlákna.
 
- **Protokolování zpráv** otevře nové zobrazení zpráv a otevře [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md) pro zobrazení.
+ **Zprávy protokolu** Otevře nové zobrazení zpráv a otevře [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md) pro zobrazení.
 
- **Najít okno** zobrazí **FindWindow** dialogové okno Vyberte okno pomocí myši.
+ **Najít okno** Zobrazí dialogové okno **FindWindow** , ve kterém můžete vybrat okno pomocí myši.
 
- **Ukončení** nástroje Spy ++ se zavře.
+ **Konec** Ukončí nástroj Spy + +.

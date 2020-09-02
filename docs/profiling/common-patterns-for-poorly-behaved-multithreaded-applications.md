@@ -1,5 +1,5 @@
 ---
-title: Běžné vzory pro špatně-choval multithreaded aplikace | Dokumenty společnosti Microsoft
+title: Běžné vzory pro vícevláknové aplikace, které se nesprávně chovají | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,61 +12,61 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62788853"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 
-Vizualizér souběžnosti pomáhá vývojářům vizualizovat chování vícevláknové aplikace. Tento nástroj obsahuje galerii běžných vzorů pro vícevláknové aplikace, které se chovají špatně. Galerie obsahuje typické a rozpoznatelné vizuální vzory, které jsou vystaveny prostřednictvím nástroje, spolu s vysvětlením chování, které je reprezentováno každým vzorem, pravděpodobným výsledkem tohoto chování a nejběžnějším přístupem k jeho vyřešení.
+Vizualizátor souběžnosti pomáhá vývojářům vizualizovat chování vícevláknové aplikace. Tento nástroj zahrnuje galerii běžných vzorů pro vícevláknové aplikace, které se chovají chybně. Galerie obsahuje typické a rozpoznatelné vizuální vzory, které jsou zpřístupněny prostřednictvím nástroje, spolu s vysvětlením chování, které je reprezentováno jednotlivými vzory, pravděpodobným výsledkem tohoto chování a Nejběžnějším přístupem k jeho vyřešení.
 
-## <a name="lock-contention-and-serialized-execution"></a>Konflikty zámků a serializované spuštění
+## <a name="lock-contention-and-serialized-execution"></a>Kolize zámků a serializovaného spouštění
 
-![Konflikty zámků, které vedou k serializovanému spuštění](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
+![Kolize zámku vyplývající z serializovaného spuštění](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
 
-Někdy paralelizované aplikace tvrdohlavě pokračuje v sériovém spuštění, i když má několik podprocesů a počítač má dostatečný počet logických jader. Prvním příznakem je špatný výkon s více vlákny, možná i o něco pomalejší než sériová implementace. V zobrazení vláken nevidíte více vláken spuštěných paralelně; místo toho uvidíte, že pouze jedno vlákno je spuštěna kdykoli. V tomto okamžiku pokud klepnete na segment synchronizace ve vlákně, zobrazí se zásobník volání pro blokované vlákno (blokování zásobníku volání) a vlákno, které odstranilo podmínku blokování (odblokování zásobníku volání). Kromě toho pokud dojde k odblokování zásobníku volání v procesu, který analyzujete, zobrazí se konektor připravený pro přístup pod procesu. Od tohoto okamžiku můžete přejít na váš kód z blokování a odblokování zásobníky volání prozkoumat příčinu serializace ještě více.
+V některých případech je stubbornly paralelní aplikace i nadále spouštěna i v případě, že má několik vláken a počítač má dostatečný počet logických jader. Prvním příznakem je nízký výkon s více vlákny, možná i trochu pomalejší než implementace sériového portu. V zobrazení vláken se nezobrazuje paralelní spuštění více vláken; místo toho vidíte, že pouze jedno vlákno je prováděno v jednom okamžiku. Pokud v tomto okamžiku kliknete na segment synchronizace ve vlákně, můžete zobrazit zásobník volání pro blokované vlákno (blokující zásobník volání) a vlákno, které odebralo podmínku blokování (odblokování zásobníku volání). Kromě toho, pokud dojde k odblokování zásobníku volání v procesu, který analyzujete, je zobrazen konektor připravený pro vlákno. Od tohoto okamžiku můžete přejít k vašemu kódu z zásobníků volání blokující a odblokovat, aby bylo možné zjistit příčinu serializace ještě více.
 
-Jak je znázorněno na následujícím obrázku, vizualizér souběžnosti může také vystavit tento příznak v zobrazení využití procesoru, kde i přes přítomnost více vláken aplikace spotřebovává pouze jedno logické jádro.
+Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak zobrazit také v zobrazení využití procesoru, kde navzdory přítomnosti více vláken aplikace spotřebovává pouze jeden logický jádro.
 
-Další informace naleznete v části "Start with the Problem section" v článku časopisu MSDN [Thread Performance - Profilování souběžnosti konfliktů prostředků v sadě Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx).
+Další informace najdete v části "Začínáme s problémem" v článku o výkonu vlákna na webu MSDN Magazine [v tématu profilace souběžnosti kolizí prostředků v aplikaci Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx).
 
-![Konflikty zámků](../profiling/media/lockcontention_2.png "LockContention_2")
+![Uzamknout spory](../profiling/media/lockcontention_2.png "LockContention_2")
 
-## <a name="uneven-workload-distribution"></a>Distribuce nerovnoměrného pracovního vytížení
+## <a name="uneven-workload-distribution"></a>Nerovnoměrné rozdělení úloh
 
-![Nerovnoměrné pracovní zatížení](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
+![Nerovnoměrné zatížení](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
 
-Dojde-li k nepravidelnému rozdělení práce v několika paralelních vláknech v aplikaci, zobrazí se při dokončení práce každého vlákna typický vzor krok schodiště, jak je znázorněno na předchozím obrázku. Vizualizér souběžnosti nejčastěji zobrazuje velmi blízké časy zahájení pro každé souběžné vlákno. Tato vlákna však obvykle končí nepravidelným způsobem namísto ukončení současně. Tento vzor označuje nepravidelné rozdělení práce mezi skupinou paralelních vláken, což by mohlo vést ke snížení výkonu. Nejlepším přístupem k takovému problému je přehodnotit algoritmus, podle kterého byla práce rozdělena mezi paralelní vlákna.
+Pokud dojde k nepravidelné distribuci práce napříč několika paralelními vlákny v aplikaci, typický vzor schodišťového kroku se zobrazí jako každé vlákno dokončí svou práci, jak je znázorněno na předchozím obrázku. Vizualizátor souběžnosti nejčastěji zobrazuje dobu ukončení u každého souběžného vlákna. Nicméně tato vlákna obvykle končí neoprávněným způsobem místo toho, aby bylo souběžně ukončeno. Tento model označuje nepravidelnou distribuci práce mezi skupinou paralelních vláken, což může vést ke snížení výkonu. Nejlepším způsobem, jak tento problém vyřešit, je znovu vyhodnotit algoritmus, podle kterého byla práce rozdělena mezi paralelní vlákna.
 
-Jak je znázorněno na následujícím obrázku, vizualizér souběžnosti může také vystavit tento příznak v zobrazení využití procesoru jako postupný krok dolů v využití procesoru.
+Jak je znázorněno na následujícím obrázku, Vizualizér souběžnosti může tento příznak také vystavit v zobrazení využití procesoru jako postupný krok v využití procesoru.
 
-![Nerovnoměrné pracovní zatížení](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
+![Nerovnoměrné zatížení](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
 
-## <a name="oversubscription"></a>Přeplatný odběr
+## <a name="oversubscription"></a>Kompenzace
 
-![Přeplatný odběr](../profiling/media/oversubscription.png "Přeplatný odběr")
+![Kompenzace](../profiling/media/oversubscription.png "Kompenzace")
 
-V případě oversubscription počet aktivních podprocesů v procesu je větší než počet dostupných logických jader v systému. Předchozí obrázek znázorňuje výsledky oversubscription, s významným preemption pruhování ve všech aktivních vláken. Kromě toho legenda ukazuje velké procento času stráveného v preemption (84 procent v tomto příkladu). To může znamenat, že proces žádá systém o spuštění více souběžných vláken než počet logických jader. To však může také znamenat, že jiné procesy v systému používají prostředky, o kterých se předpokládalo, že jsou pro tento proces k dispozici.
+V případě nadvýšení předplatného je počet aktivních vláken v procesu větší než počet dostupných logických jader v systému. Na předchozím obrázku vidíte výsledky předaného předplatného s významným pásmem přerušení ve všech aktivních vláknech. Kromě toho legenda zobrazuje velké procento času stráveného přerušením (84 procent v tomto příkladu). To může znamenat, že proces žádá systém, aby provedl více souběžných vláken, než je počet logických jader. To však může také znamenat, že jiné procesy v systému používají prostředky, které byly k dispozici pro tento proces.
 
-Při vyhodnocování tohoto problému byste měli zvážit následující:
+Při vyhodnocování tohoto problému byste měli vzít v úvahu následující skutečnosti:
 
-- Celkový systém může být přepsán. Zvažte, že jiné procesy v systému může být preempting vaše podprocesy. Když pozastavíte preemption segment v zobrazení vláken, popisek identifikuje vlákno a proces, který předběhl vlákno. Tento proces není nutně ten, který byl proveden po celou dobu, že váš proces byl preempted, ale poskytuje nápovědu o tom, co vytvořilo preemption tlak proti procesu.
+- Celkový systém může být přehlášený za předplacený. Vezměte v úvahu, že další procesy v systému mohou přerušování vašich vláken. Když pozastavíte převzetí na segment přerušení v zobrazení vláken, ovládací prvek bude identifikovat vlákno a proces, který zrušil vlákno. Tento proces nemusí nutně být ten, který se provedl během celého procesu, který byl zrušen, ale poskytuje nápovědu k tomu, jak vzdálení způsobilo protitlak proti vašemu procesu.
 
-- Vyhodnoťte, jak proces určuje příslušný počet podprocesů pro spuštění během této fáze práce. Pokud váš proces přímo vypočítá počet aktivních paralelních vláken, zvažte úpravu tohoto algoritmu tak, aby lépe zohledňoval počet dostupných logických jader v systému. Pokud používáte souběžnost Runtime, paralelní knihovna úloh nebo PLINQ, tyto knihovny provádět práci výpočtu počtu podprocesů.
+- Vyhodnoťte způsob, jakým proces určí příslušný počet vláken pro spuštění během této fáze práce. Pokud váš proces přímo vypočítá počet aktivních paralelních vláken, zvažte úpravu tohoto algoritmu, aby lépe zohlednil počet dostupných logických jader v systému. Použijete-li Concurrency Runtime, Task Parallel Library nebo PLINQ, tato knihovna provede práci výpočtu počtu vláken.
 
-## <a name="inefficient-io"></a>Neefektivní vstupně-nosné
+## <a name="inefficient-io"></a>Neefektivní vstupně-výstupní operace
 
 ![Neefektivní I&#47;O](../profiling/media/inefficient_io.png "Inefficient_IO")
 
-Nadměrné používání nebo zneužití vstupně-va je častou příčinou neefektivnosti v aplikacích. Zvažte předchozí obrázek. Profil viditelné časové osy ukazuje, že 44 procent viditelného času vlákna je spotřebováno vstupně-v. Časová osa zobrazuje velké množství vstupně-va, což znamená, že profilované aplikace je často blokován vstupně-v. Chcete-li zobrazit podrobnosti o typech vstupně-va a kde je program blokován, přibližte problematické oblasti, prohlédněte si profil viditelné časové osy a kliknutím na konkrétní blok vstupně-out zobrazilte aktuální zásobníky volání.
+Vyvýšení nebo zneužití vstupně-výstupních operací je běžné příčinou neefektivity v aplikacích. Vezměte v úvahu předchozí obrázek. Profil viditelné časové osy ukazuje, že v/v se spotřebuje 44 procent viditelného času vlákna. Časová osa zobrazuje velké objemy vstupně-výstupních operací, což znamená, že profilovaná aplikace je často blokovaná pomocí vstupně-výstupních operací. Chcete-li zobrazit podrobnosti o druzích vstupně-výstupních operací a o tom, kde je program zablokován, přihlaste se k problematickým oblastem, Prohlédněte si profil viditelné časové osy a kliknutím na konkrétní vstupně-výstupní blok zobrazte aktuální zásobníky volání.
 
-## <a name="lock-convoys"></a>Zamknutí konvojů
+## <a name="lock-convoys"></a>Zamknout convoys
 
-![Zamknutí konvojů](../profiling/media/lock_convoys.png "Lock_Convoys")
+![Zamknout convoys](../profiling/media/lock_convoys.png "Lock_Convoys")
 
-Uzamčení konvoje dojít, když aplikace získá zámky v pořadí kdo dřív přijde, je dřív na řadě, a když je rychlost příjezdu na zámku vyšší než míra pořízení. Kombinace těchto dvou podmínek způsobí, že požadavky na zámek spustit zálohování. Jedním ze způsobů, jak bojovat proti tomuto problému, je použití "nespravedlivé" zámky, nebo zámky, které poskytují přístup k první vlákno najít v odemčených státech. Předchozí obrázek znázorňuje toto chování konvoje. Chcete-li problém vyřešit, zkuste snížit kolize pro objekty synchronizace a zkuste použít nespravedlivé zámky.
+K uzamčení convoys dojde v případě, že aplikace získá zámky v rámci prvního přihlášeného, prvního dodávaného pořadí a když je míra doručení na zámek vyšší než sazba pořízení. Kombinace těchto dvou podmínek způsobí, že požadavky na zámek zahájí zálohování. Jedním ze způsobů, jak tento problém vyřešit, je použití "nenekalých" zámků, nebo zámků, které poskytují přístup k prvnímu vláknu, aby je bylo možné v odemčených stavech. Předchozí obrázek znázorňuje toto chování convoy. Chcete-li tento problém vyřešit, zkuste snížit kolizí pro synchronizační objekty a zkuste použít nekalé zámky.
 
 ## <a name="see-also"></a>Viz také
 

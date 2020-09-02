@@ -1,5 +1,5 @@
 ---
-title: IDiaStackFrame::get_rawLVarInstanceValue | Microsoft Docs
+title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8ff78c38ad077084b3dea9c96e3251ffddb2206
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62573011"
 ---
-# <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
+# <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tato metoda načte hodnotu místní proměnné zadané jako nezpracovaný bajtů.  
+Tato metoda načte hodnotu zadané místní proměnné jako nezpracované bajty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,19 +38,19 @@ HRESULT get_rawLVarInstanceValue(
   
 #### <a name="parameters"></a>Parametry  
  `pInstance`  
- [in] `IDiaLVarInstance` Objekt představující instance má být získána hodnota pro lokální proměnné.  
+ pro `IDiaLVarInstance` Objekt představující instanci lokální proměnné pro získání hodnoty pro.  
   
  `cbDataMax`  
- [in] Maximální počet bajtů ve vyrovnávací paměti na které odkazuje `pbData`. To může být maximálně 8 bajtů (`sizeof(ULONGLONG)`).  
+ pro Maximální počet bajtů ve vyrovnávací paměti, na které ukazuje `pbData` . Může to být maximálně 8 bajtů ( `sizeof(ULONGLONG)` ).  
   
  `pcbData`  
- [out] Vrátí skutečný počet bajtů uložených do vyrovnávací paměti.  
+ mimo Vrátí skutečný počet bajtů uložených ve vyrovnávací paměti.  
   
  `pbData`  
- [out] Vyrovnávací paměti, která vyplní data. IP adresa nesmí být `NULL`.  
+ mimo Vyrovnávací paměť, která se má vyplnit daty. To nemůže být `NULL` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

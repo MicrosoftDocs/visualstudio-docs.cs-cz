@@ -1,5 +1,5 @@
 ---
-title: Zobrazení zpráv | Dokumentace Microsoftu
+title: Zobrazení zpráv | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,61 +13,61 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b20ed28518c9156e82c6fe75ecceda74c66615d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62845846"
 ---
 # <a name="messages-view"></a>Zobrazení zpráv
-Každé okno má datové proudy přidružené zpráv. Zobrazí okno pro zobrazení zprávy tohoto datového proudu zpráv. Popisovač okna, kód zprávy a zpráva se zobrazí. Můžete vytvořit zobrazení zprávy pro vlákna nebo procesu stejně. To umožňuje zobrazit zprávy, pošle se všem oknům vlastní konkrétní proces nebo vlákno, které je zvláště užitečné pro zaznamenání inicializace zprávy okna.
+Každé okno má přidružený datový proud zprávy. Tento datový proud zpráv se zobrazí v okně zobrazení zpráv. Zobrazí se popisovač okna, kód zprávy a zpráva. Můžete také vytvořit zobrazení zpráv pro vlákno nebo proces. To vám umožní zobrazit zprávy odesílané do všech oken vlastněných konkrétním procesem nebo vláknem, což je zvláště užitečné při zachytávání inicializačních zpráv oken.
 
- Typické okno zobrazení zpráv se zobrazí pod. Mějte na paměti, že první sloupec obsahuje popisovač okna a druhý sloupec obsahuje kód zprávy (podrobně [kódy zpráv](../debugger/message-codes.md)). Dekódovaná zpráva parametry a návratové hodnoty se na pravé straně.
+ Zobrazí se okno typické zobrazení zpráv. Všimněte si, že první sloupec obsahuje popisovač okna a druhý sloupec obsahuje kód zprávy (vysvětlení najdete v části [kódy zpráv](../debugger/message-codes.md)). Dekódovatelné parametry zprávy a návratové hodnoty jsou napravo.
 
- ![Spy&#43; &#43; zobrazení zpráv](../debugger/media/spy--_messagesview.png "nástroje Spy ++ _MessagesView") zobrazení zpráv Spy ++
+ ![Zobrazení zpráv Spy&#43;&#43; ](../debugger/media/spy--_messagesview.png "_MessagesView nástroje Spy + +") Zobrazení zpráv Spy + +
 
 ## <a name="procedures"></a>Procedury
 
-#### <a name="to-open-a-messages-view-for-a-window-process-or-thread"></a>Otevření zobrazení zpráv pro okna, procesu nebo vlákna
+#### <a name="to-open-a-messages-view-for-a-window-process-or-thread"></a>Otevření zobrazení zpráv pro okno, proces nebo vlákno
 
-1. Přesuňte fokus [zobrazení Windows](../debugger/windows-view.md), [zobrazení procesů](../debugger/processes-view.md), nebo [zobrazení vláken](../debugger/threads-view.md) okno.
+1. Přesuňte fokus na zobrazení [systému Windows](../debugger/windows-view.md), [procesy](../debugger/processes-view.md)nebo okno [zobrazení vláken](../debugger/threads-view.md) .
 
-2. Najít uzel pro položku, jejíž zprávy, které chcete prověřit a vyberte ji.
+2. Vyhledejte uzel pro položku, jejíž zprávy chcete prošetřit, a vyberte ji.
 
-3. Z **Spy** nabídce zvolte **zprávy protokolu**.
+3. V nabídce **Spy** vyberte **protokolové zprávy**.
 
-     [Dialogové okno možností zpráv](../debugger/message-options-dialog-box.md) otevře.
+     Otevře se [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md) .
 
-4. Vyberte požadované možnosti pro zprávu, kterou chcete zobrazit.
+4. Vyberte možnosti pro zprávu, kterou chcete zobrazit.
 
-5. Stisknutím klávesy **OK** zahájíte protokolování zpráv.
+5. Kliknutím na tlačítko **OK** zahajte protokolování zpráv.
 
-     Otevře se okno pro zobrazení zprávy a s **zprávy** nabídka se přidá na panel nástrojů nástroje Spy ++. V závislosti na vybrané možnosti, zprávy začít Streamovat do aktivního okna zobrazení zprávy.
+     Otevře se okno zobrazení zprávy a do panelu nástrojů Spy + + se přidá nabídka **zprávy** . V závislosti na vybraných možnostech zprávy zahájí streamování do okna zobrazení aktivní zprávy.
 
-6. Pokud máte dostatek zpráv, zvolte **zastavit protokolování** z **zprávy** nabídky.
+6. Máte-li dostatek zpráv, v nabídce **zprávy** vyberte možnost **zastavit protokolování** .
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Řízení zobrazení zpráv](../debugger/how-to-control-messages-view.md) vysvětluje, jak spravovat zobrazení zpráv.
+ [Řízení zobrazení zpráv](../debugger/how-to-control-messages-view.md) Vysvětluje, jak spravovat zobrazení zpráv.
 
- [Otevření zobrazení zpráv z okna Najít](../debugger/how-to-open-messages-view-from-find-window.md) vysvětluje, jak otevření zobrazení zpráv z dialogového okna Najít okno.
+ [Otevření zobrazení zpráv z okna hledání](../debugger/how-to-open-messages-view-from-find-window.md) Vysvětluje, jak otevřít zobrazení zpráv v dialogovém okně Najít okno.
 
- [Hledání zprávy v zobrazení zpráv](../debugger/how-to-search-for-a-message-in-messages-view.md) vysvětluje, jak najít konkrétní zprávu v zobrazení zpráv.
+ [Hledání zprávy v zobrazení zpráv](../debugger/how-to-search-for-a-message-in-messages-view.md) Vysvětluje, jak najít konkrétní zprávu v zobrazení zprávy.
 
- [Spuštění a zastavení displeje protokolu zpráv](../debugger/how-to-start-and-stop-the-message-log-display.md) vysvětluje, jak spustit a zastavit protokolování zpráv.
+ [Spuštění a zastavení zobrazení protokolu zpráv](../debugger/how-to-start-and-stop-the-message-log-display.md) Vysvětluje, jak spustit a zastavit protokolování zpráv.
 
- [Kódy zpráv](../debugger/message-codes.md) definuje kódy pro zprávy uvedené v zobrazení zpráv.
+ [Kódy zpráv](../debugger/message-codes.md) Definuje kódy pro zprávy uvedené v zobrazení zprávy.
 
- [Zobrazení vlastností zpráv](../debugger/how-to-display-message-properties.md) jak zobrazit další informace o zprávě.
+ [Zobrazení vlastností zprávy](../debugger/how-to-display-message-properties.md) Jak zobrazit další informace o zprávě
 
 ## <a name="related-sections"></a>Související oddíly
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.
 
- [Dialogové okno možností zpráv](../debugger/message-options-dialog-box.md) použity k výběru zprávy, které jsou uvedené v zobrazení aktivního zprávy.
+ [Dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md) Slouží k výběru zpráv, které jsou uvedeny v zobrazení aktivní zprávy.
 
- [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) použit k vyhledání uzel pro konkrétní zprávu v zobrazení zpráv.
+ [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) Slouží k vyhledání uzlu pro určitou zprávu v zobrazení zprávy.
 
- [Dialogové okno Vlastnosti zprávy](../debugger/message-properties-dialog-box.md) slouží k zobrazení vlastnosti zprávy vybrána v zobrazení zpráv.
+ [Dialogové okno Vlastnosti zprávy](../debugger/message-properties-dialog-box.md) Slouží k zobrazení vlastností zprávy vybrané v zobrazení zprávy.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

@@ -1,5 +1,5 @@
 ---
-title: Karta zprávy, dialogové okno možností zpráv | Dokumentace Microsoftu
+title: Karta zprávy, dialogové okno Možnosti zprávy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de50e6fe997ce10266cbb51f2fd91c318ab2bd1f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905526"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>Karta Zprávy, dialogové okno možností zpráv
-Použití **zprávy** kartu, vyberte v seznamu typů zpráv, které [zobrazení zpráv](../debugger/messages-view.md)a určení kritérií hledání zpráv. Chcete-li zobrazit [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md), zvolte **zprávy protokolu** z **Spy** nabídky.
+Karta **zprávy** slouží k výběru typů zpráv, které se mají [Zobrazit v zobrazení zprávy](../debugger/messages-view.md), a k určení kritérií vyhledávání zpráv. Chcete-li zobrazit [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md), vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .
 
- Obvykle nejprve vybrat **skupiny zpráv**a poté doladit tak, že vyberete jednotlivé výběr **zprávy do zobrazení**. **Všechny** tlačítko vybere všechny typy zpráv a **žádný** tlačítko zruší výběr všech typů.
+ Obvykle nejprve vyberete **skupiny zpráv**a potom vyladíte výběr výběrem jednotlivých **zpráv, které chcete zobrazit**. Tlačítko **vše** vybere všechny typy zpráv a tlačítko **žádné** zruší všechny typy.
 
- Následující nastavení jsou k dispozici na **zprávy** kartu:
+ Na kartě **zprávy** jsou k dispozici následující nastavení:
 
- **Zprávy do zobrazení** vyberte konkrétní zprávy pro zobrazení. Při vytváření nové okno zprávy může zobrazit všechny zprávy. Při filtrování zpráv **zprávy** kartu, tento filtr platí jenom pro nové zprávy, ne zprávy, které již byly zobrazeny v zobrazení Windows.
+ **Zprávy k zobrazení** Vyberte konkrétní zprávy pro zobrazení. Když vytvoříte nové okno zpráv, může se zobrazit všechny zprávy. Když filtrujete zprávy z karty **zprávy** , tento filtr se vztahuje pouze na nové zprávy, nikoli na zprávy, které již byly zobrazeny v zobrazení systému Windows.
 
- **Zpráva skupiny** vybrat skupiny zprávy pro zobrazení. Dostupné skupiny patří:
+ **Skupiny zpráv** Vyberte skupiny zpráv pro zobrazení. K dispozici jsou tyto skupiny:
 
-- WM_USER: s kódem větší než nebo rovna hodnotě WM_USER
+- WM_USER: s kódem, který je větší nebo roven WM_USER
 
-- Registrovaný: zaregistrované **RegisterWindowMessage** volání
+- Registrováno: registrováno s voláním **RegisterWindowMessage**
 
-- Neznámé: neznámé zprávy v rozsahu 0 až (WM_USER - 1)
+- Neznámé: neznámé zprávy v rozsahu 0 až (WM_USER-1)
 
-  Všimněte si, že tyto **skupiny zpráv** nelze namapovat na konkrétní položky v rámci **zobrazení zpráv**. Když vyberete skupinu, je výběr použitých přímo na datové proudy zpráv.
+  Všimněte si, že tyto **skupiny zpráv** nejsou namapovány na konkrétní položky v části **zprávy k zobrazení**. Když vyberete skupinu, použije se tento výběr přímo na datový proud zprávy.
 
-  Šedým zaškrtávací políčko v rámci **skupiny zpráv** znamená, že **zobrazení zpráv** se změnila pole se seznamem pro zprávy v dané skupině; jsou vybrány všechny typy zpráv v této skupině.
+  Šedé zaškrtávací políčko v rámci **skupin zpráv** označuje, že se pro zprávy v této skupině změnilo seznam **zprávy k zobrazení** . Ne všechny typy zpráv v této skupině jsou vybrány.
 
-  **Uložit nastavení jako výchozí** uložit aktuální nastavení pro pozdější použití jako možnosti hledání zpráv. Tato nastavení jsou také uloženy při ukončení nástroje Spy ++.
+  **Uložit nastavení jako výchozí** Uložte aktuální nastavení pro pozdější použití jako možnosti hledání zpráv. Tato nastavení se ukládají i při ukončení nástroje Spy + +.

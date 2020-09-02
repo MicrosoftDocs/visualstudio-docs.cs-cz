@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro hledání pro zobrazení nástroje Spy ++ | Dokumentace Microsoftu
+title: Vyhledávací nástroje pro zobrazení nástroje Spy + + | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,29 +12,29 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7df3b27164eab0b78cdce72a8f938cb6e9743bcf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62902645"
 ---
 # <a name="search-tools-for-spy-views"></a>Vyhledávací nástroje pro zobrazení nástroje Spy++
-Můžete určit, jaká data se zobrazí okno zobrazení nástroje Spy ++ tyto dialogy:
+Tato dialogová okna slouží k určení dat, která se zobrazí v okně zobrazení nástroje Spy + +:
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Dialogové okno Najít](../debugger/find-window-dialog-box.md) slouží k zobrazení vlastnosti nebo zprávy z konkrétní okno.
+ [Dialogové okno Najít okno](../debugger/find-window-dialog-box.md) Slouží k zobrazení vlastností nebo zpráv z konkrétního okna.
 
- [Dialogové okno hledání](../debugger/window-search-dialog-box.md) použit k vyhledání uzel pro konkrétní okno v zobrazení pro Windows.
+ Okno [hledání oken](../debugger/window-search-dialog-box.md) Slouží k vyhledání uzlu pro konkrétní okno v zobrazení systému Windows.
 
- [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) použit k vyhledání uzel pro konkrétní zprávu v zobrazení zpráv.
+ [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) Slouží k vyhledání uzlu pro určitou zprávu v zobrazení zprávy.
 
- [Dialogové okno hledání procesů](../debugger/process-search-dialog-box.md) použit k vyhledání konkrétního procesu v zobrazení procesu uzlu.
+ [Dialogové okno pro hledání procesů](../debugger/process-search-dialog-box.md) Slouží k vyhledání uzlu pro určitý proces v zobrazení procesu.
 
- [Dialogové okno hledání vláken](../debugger/thread-search-dialog-box.md) použit k vyhledání konkrétního vlákna v zobrazení vláken uzlu.
+ [Dialogové okno hledání vláken](../debugger/thread-search-dialog-box.md) Slouží k vyhledání uzlu pro konkrétní vlákno v zobrazení vlákna.
 
 ## <a name="related-sections"></a>Související oddíly
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

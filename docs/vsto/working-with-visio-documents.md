@@ -15,24 +15,24 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 82dbf0858266fe2f07d4ae51c8171e0e8a900861
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62815047"
 ---
 # <a name="work-with-visio-documents"></a>Práce s dokumenty aplikace Visio
-  Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace Microsoft Office Visio pro práci s dokumenty v projektech pro systém Office.
+  Témata v této části poskytují podrobné postupy a příklady kódu pro použití objektového modelu aplikace systém Microsoft Office Visio pro práci s dokumenty v projektech Office.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
-|Vytvořte prázdný dokument Visia, nebo nový dokument, který je založen na stávající šablony, vzorníku nebo dokument Visia.|[Postupy: Vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)|
-|Otevře existující dokument aplikace Visio a určete možnosti pro čtení a zápis, jen pro čtení a ukotvených.|[Postupy: Otevírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-open-visio-documents.md)|
-|Zavřete aktivní dokument Visia.|[Postupy: Zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)|
-|Uložte dokument se stejným názvem nebo nový název.|[Postupy: Ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)|
-|Vytisknete celý dokument nebo zadané stránky.|[Postupy: Tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)|
+|Vytvoření prázdného dokumentu aplikace Visio nebo nového dokumentu, který je založen na existující šabloně, vzorníku nebo dokumentu aplikace Visio.|[Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)|
+|Otevřete existující dokument aplikace Visio a zadejte možnosti pro čtení/zápis, jen pro čtení a ukotvení.|[Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-open-visio-documents.md)|
+|Zavře aktivní dokument Visia.|[Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)|
+|Uloží dokument se stejným názvem nebo novým názvem.|[Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-save-visio-documents.md)|
+|Vytiskne celý dokument nebo zadanou stránku.|[Postupy: tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)|
 
-## <a name="see-also"></a>Viz také:
-- [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)
+## <a name="see-also"></a>Viz také
+- [Řešení aplikace Visio](../vsto/visio-solutions.md)
 - [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)
-- [Přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)

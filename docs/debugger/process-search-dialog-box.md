@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno hledání procesů | Dokumentace Microsoftu
+title: Dialogové okno pro hledání procesů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,32 +11,32 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 190ec35d014e6b443a9f80bf79433ac14b8fb8ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62903766"
 ---
 # <a name="process-search-dialog-box"></a>Dialogové okno hledání procesů
-Pomocí tohoto dialogového najděte a vyberte uzel pro konkrétní proces v [zobrazení procesy](../debugger/processes-view.md). Zobrazíte dialogovému oknu přesunout fokus **procesy** zobrazení okna. Klikněte na tlačítko **najít proces** z **hledání** nabídky.
+Pomocí tohoto dialogového okna můžete vyhledat a vybrat uzel pro konkrétní proces v [zobrazení procesy](../debugger/processes-view.md). Chcete-li zobrazit toto dialogové okno, přesuňte fokus na okno zobrazení **procesů** . Pak v nabídce **hledání** zvolte **Najít proces** .
 
  K dispozici jsou následující nastavení:
 
- **Proces** ID procesu pro hledání.
+ **Zpracování** ID procesu, který se má vyhledat.
 
- **Modul** hledaný řetězec modulu.
+ **Modul** Řetězec modulu, který se má vyhledat.
 
- **Hledání směrem nahoru nebo dolů** Počáteční směr hledání.
+ **Směr hledání směrem nahoru nebo dolů** Počáteční směr hledání.
 
 ## <a name="related-sections"></a>Související oddíly
- [Hledání procesu v zobrazení procesů](../debugger/how-to-search-for-a-process-in-processes-view.md) vysvětluje, jak najít konkrétní proces v zobrazení procesů.
+ [Hledání procesu v zobrazení procesů](../debugger/how-to-search-for-a-process-in-processes-view.md) Vysvětluje, jak najít konkrétní proces v zobrazení procesů.
 
- [Zobrazení procesů](../debugger/processes-view.md) zobrazuje stromovou strukturu aktivní procesy.
+ [Zobrazení procesů](../debugger/processes-view.md) Zobrazí stromové zobrazení aktivních procesů.
 
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.
 
- [Dialogové okno vlastností procesů](../debugger/process-properties-dialog-box.md) slouží k zobrazení vlastností procesu vybrána v zobrazení procesy.
+ [Dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md) Slouží k zobrazení vlastností procesu vybraného v zobrazení procesů.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

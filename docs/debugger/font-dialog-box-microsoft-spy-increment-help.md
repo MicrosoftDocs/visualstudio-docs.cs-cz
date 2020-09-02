@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno písem (Nápověda nástroje Spy ++ Microsoft) | Dokumentace Microsoftu
+title: Dialogové okno písmo (Microsoft Spy + + Help) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,28 +11,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1746b8419c342b5627e1c6374b2b29f08f7ee75c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62849865"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>Dialogové okno písem (nápověda nástroje Microsoft Spy++)
-Pomocí tohoto dialogového znak písmo použité v konfiguraci [zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) okna. Chcete-li zobrazit toto dialogové okno, rozbalte **zobrazení** nabídku a zvolte **písmo**.
+Pomocí tohoto dialogového okna můžete nakonfigurovat písmo znaků používané v okně [zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) . Chcete-li zobrazit toto dialogové okno, rozbalte nabídku **zobrazení** a vyberte možnost **písmo**.
 
  K dispozici jsou následující nastavení:
 
- **Písmo** písmo okna zobrazení nástroje Spy ++, který má právě fokus.
+ **Písmo** Písmo znaku pro okno zobrazení nástroje Spy + +, které má fokus.
 
- **Styl písma** styl písma pro zobrazení nástroje Spy ++ okně, které má fokus.
+ **Styl písma** Styl písma okna zobrazení nástroje Spy + +, který má fokus.
 
- **Velikost** velikost písma pro zobrazení nástroje Spy ++ okně, které má fokus.
+ **Velikost** Velikost písma okna zobrazení nástroje Spy + +, která má fokus.
 
- **Uložit jako výchozí písmo** uloží aktuální nastavení písma jako vaše předvolby při otevírání zobrazení nástroje Spy ++.
+ **Uložit písmo jako výchozí** Při otevírání zobrazení nástroje Spy + + uloží aktuální nastavení písma jako předvolby.
 
 ## <a name="related-sections"></a>Související oddíly
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

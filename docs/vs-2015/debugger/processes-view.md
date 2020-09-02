@@ -1,5 +1,5 @@
 ---
-title: Zobrazení procesů | Dokumentace Microsoftu
+title: Zobrazení procesů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,31 +14,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d8b9c04d1cabd44418c70725ef331c9c4b5ec67e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580494"
 ---
 # <a name="processes-view"></a>Zobrazení procesů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazí se v zobrazení zobrazí strom všech aktivních procesů ve vašem systému. Název modulu a ID procesu se zobrazí. Zobrazení procesů použijte, pokud chcete prozkoumat konkrétní systém procesu, která obvykle odpovídá prováděnému programu. Procesy jsou označeny názvů modulů, nebo jsou určené "systémové procesy."  
+Zobrazení procesy zobrazuje strom všech aktivních procesů v systému. Zobrazí se ID procesu a název modulu. Použijte zobrazení procesy, pokud chcete prošetřit konkrétní systémový proces, který obvykle odpovídá spuštěnému programu. Procesy se identifikují podle názvů modulů nebo jsou určené "systémové procesy".  
   
- Microsoft Windows podporuje víc procesů. Každý proces může mít jednu nebo více vláken a každé vlákno má jednu nebo více přidružených oknům nejvyšší úrovně. Každé okno nejvyšší úrovně může vlastnit řady windows. A + symbol označuje, zda je sbalen úroveň. Sbalené zobrazení se skládá z jednoho řádku proces. Klikněte + symbol rozšířit na úroveň.  
+ Systém Microsoft Windows podporuje více procesů. Každý proces může mít jeden nebo více vláken a každé vlákno může mít jednu nebo více přidružených oken nejvyšší úrovně. Každé okno nejvyšší úrovně může mít řadu oken. Symbol + označuje, že je úroveň sbalená. Sbalené zobrazení se skládá z jednoho řádku na proces. Kliknutím na symbol + rozbalte úroveň.  
   
- Zobrazení procesů použijte, pokud chcete prozkoumat konkrétní systém procesu, která obvykle odpovídá prováděnému programu. Procesy jsou označeny názvů modulů, nebo jsou určené "systémové procesy." Chcete-li najít proces, sbalit strom a v seznamu vyhledejte.  
+ Použijte zobrazení procesy, pokud chcete prošetřit konkrétní systémový proces, který obvykle odpovídá spuštěnému programu. Procesy se identifikují podle názvů modulů nebo jsou určené "systémové procesy". Chcete-li najít proces, sbalte strom a vyhledejte seznam.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-open-the-processes-view"></a>Chcete-li otevřít zobrazení procesů  
+#### <a name="to-open-the-processes-view"></a>Otevření zobrazení procesů  
   
-1. Z **Spy** nabídce zvolte **procesy**.  
+1. V nabídce **Spy** vyberte možnost **procesy**.  
   
-   ![Spy&#43; &#43; zobrazení procesů](../debugger/media/spy-processes.png "nástroje Spy ++ _Processes")  
-   Zobrazení procesů nástroje Spy ++  
+   ![Zobrazení Spy&#43;&#43; ch procesů](../debugger/media/spy-processes.png "_Processes nástroje Spy + +")  
+   Zobrazení procesů Spy + +  
   
-   Obrázek nahoře ukazuje zobrazení procesů pomocí procesů a vláken uzly rozšířit.  
+   Výše uvedený obrázek ukazuje zobrazení procesů s rozbalenými uzly procesu a vlákna.  
   
 ### <a name="in-this-section"></a>V tomto oddílu  
  [Hledání procesu v zobrazení procesů](../debugger/how-to-search-for-a-process-in-processes-view.md)  
@@ -49,16 +49,16 @@ Zobrazí se v zobrazení zobrazí strom všech aktivních procesů ve vašem sys
   
 ### <a name="related-sections"></a>Související oddíly  
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Dialogové okno hledání procesů](../debugger/process-search-dialog-box.md)  
- Umožňuje najít uzel pro konkrétní proces v zobrazení procesů.  
+ Slouží k vyhledání uzlu pro určitý proces v zobrazení procesů.  
   
  [Dialogové okno vlastností procesů](../debugger/process-properties-dialog-box.md)  
- Zobrazí vlastnosti procesu vybrána v zobrazení procesy.  
+ Zobrazí vlastnosti procesu vybraného v zobrazení procesů.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

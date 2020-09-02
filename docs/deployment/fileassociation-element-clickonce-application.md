@@ -1,5 +1,5 @@
 ---
-title: '&lt;fileAssociation&gt; – Element (aplikace ClickOnce) | Dokumentace Microsoftu'
+title: '&lt;Element Association &gt; (aplikace ClickOnce) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d3a43af5b2c7d50034cbed9d7da16e65b402f70
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62928529"
 ---
-# <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt; – element (aplikace ClickOnce)
-Určuje příponu souboru, který se má přidružit aplikaci.
+# <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;element Association &gt; (aplikace ClickOnce)
+Určuje příponu souboru, která má být přidružena k aplikaci.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <fileAssociation
@@ -38,22 +38,22 @@ Určuje příponu souboru, který se má přidružit aplikaci.
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `fileAssociation` Element je volitelné. Element má následující atributy.
+ `fileAssociation`Element je nepovinný. Element má následující atributy.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`extension`|Povinný parametr. Přípona souboru, který má být přidružena k aplikaci.|
-|`description`|Povinný parametr. Popis typu souboru pro použití v prostředí.|
-|`progid`|Povinný parametr. Název jednoznačně identifikující tento typ souboru.|
-|`defaultIcon`|Povinný parametr. Určuje ikonu pro soubory s touto příponou. Soubor ikony musí být zadaný pomocí [ \<soubor > – Element](../deployment/file-element-clickonce-application.md) v rámci [ \<sestavení > Element](../deployment/assembly-element-clickonce-application.md) , který obsahuje tento element.|
+|`extension`|Povinná hodnota. Přípona souboru, která má být přidružena k aplikaci.|
+|`description`|Povinná hodnota. Popis typu souboru pro použití prostředím|
+|`progid`|Povinná hodnota. Název, který jednoznačně identifikuje typ souboru.|
+|`defaultIcon`|Povinná hodnota. Určuje ikonu, která se má použít pro soubory s tímto rozšířením. Soubor ikony musí být zadán pomocí [ \<file> elementu](../deployment/file-element-clickonce-application.md) v rámci [ \<assembly> elementu](../deployment/assembly-element-clickonce-application.md) , který obsahuje tento element.|
 
 ## <a name="remarks"></a>Poznámky
- Tento element musí obsahovat odkaz na obor názvů XML "urn: schémata-microsoft-com:clickonce.v1". Pokud `<fileAssociation>` element se používá, musí být pozdější než `<application>` v nadřazeném prvku [ \<sestavení > Element](../deployment/assembly-element-clickonce-application.md).
+ Tento prvek musí zahrnovat odkaz na obor názvů XML na "urn: schemas-microsoft-com: ClickOnce. v1". Pokud `<fileAssociation>` je element použit, musí být za `<application>` prvkem v jeho nadřazeném [ \<assembly> elementu](../deployment/assembly-element-clickonce-application.md).
 
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nepřepíše existující přidružení souborů. Aplikace ClickOnce však můžete přepsat příponu souboru pro aktuálního uživatele. Po odinstalaci aplikace ClickOnce ClickOnce odstraní přidružení souborů pro uživatele a znovu je aktivní přidružení vázaná na počítač.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nebude přepisovat existující přidružení souborů. Aplikace ClickOnce však může přepsat příponu souboru pouze pro aktuálního uživatele. Po odinstalaci aplikace ClickOnce odstraní ClickOnce přidružení souboru pro uživatele a přidružení vázané na počítač bude opět aktivní.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje `fileAssociation` prvky v aplikaci manifestu pro textový editor aplikace nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Tento příklad kódu také zahrnuje [ \<soubor > – Element](../deployment/file-element-clickonce-application.md) požadavku `defaultIcon` atribut.
+ Následující příklad kódu ukazuje `fileAssociation` prvky v manifestu aplikace pro aplikaci textový editor nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Tento příklad kódu také obsahuje [ \<file> element](../deployment/file-element-clickonce-application.md) vyžadovaný `defaultIcon` atributem.
 
 ```xml
 <file name="text.ico" size="4286">
@@ -78,5 +78,5 @@ Určuje příponu souboru, který se má přidružit aplikaci.
 <fileAssociation xmlns="urn:schemas-microsoft-com:clickonce.v1" extension=".writing" description="Writings (ClickOnce)" progid="Writing.Document" defaultIcon="writing.ico" />
 ```
 
-## <a name="see-also"></a>Viz také:
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+## <a name="see-also"></a>Viz také
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

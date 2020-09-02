@@ -1,5 +1,5 @@
 ---
-title: Karta výstup, dialogové okno možností zpráv | Dokumentace Microsoftu
+title: Karta výstup, dialogové okno Možnosti zprávy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,35 +11,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 63268fdbc320e78a697c181112dbeaaf8ad161ab
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905072"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>Karta Výstup, dialogové okno možností zpráv
-Použití **výstup** kartu a určit, jaká data z každé zprávy do seznamu v [zobrazení zpráv](../debugger/messages-view.md). Chcete-li zobrazit [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md), zvolte **zprávy protokolu** z **Spy** nabídky.
+Kartu **výstup** použijte k určení toho, jaká data z každé zprávy mají být v [zobrazení zprávy](../debugger/messages-view.md). Chcete-li zobrazit [dialogové okno Možnosti zprávy](../debugger/message-options-dialog-box.md), vyberte možnost **Protokolovat zprávy** z nabídky **Spy** .
 
- Následující nastavení jsou k dispozici na **výstup** kartu:
+ Na kartě **výstup** jsou k dispozici následující nastavení:
 
- **Čísla řádků** zobrazení čísel řádků.
+ **Čísla řádků** Zobrazit čísla řádků
 
- **Zpráva úroveň vnoření** předpony vnořené zprávy s jednu tečku na úroveň.
+ **Úroveň vnořování zprávy** Začíslovat vnořené zprávy s jednou tečkou na úroveň.
 
- **Nezpracované parametry zpráv** zobrazit šestnáctkového **wParam** a **lParam** hodnoty.
+ **Parametry nezpracovaných zpráv** Zobrazí hexadecimální hodnoty **wParam** a **lParam** .
 
- **Dekódované parametry zpráv** zobrazit výsledky specifické pro zprávy dekódování **wParam** a **lParam** hodnoty.
+ **Dekódovat parametry zprávy** Zobrazí výsledky dekódování specifických pro zprávy hodnot **wParam** a **lParam** .
 
- **Nezpracované hodnoty vrátí** zobrazit šestnáctkového **lResult** návratovou hodnotu.
+ **Nezpracované návratové hodnoty** Zobrazí **získání výsledku LRESULT** návratovou hodnotu v šestnáctkové soustavě.
 
- **Dekódovat vrátit hodnoty** zobrazit výsledky specifické pro zprávy dekódování **lResult** návratovou hodnotu.
+ **Dekódovat návratové hodnoty** Zobrazí výsledky dekódování specifického pro zprávu pro návratovou hodnotu **získání výsledku LRESULT** .
 
- **Původní čas zprávy** uplynulý čas od spuštění systému Windows (jenom pro publikované zprávy).
+ **Čas počátku zprávy** Uplynulý čas od spuštění systému Windows (jenom pro vystavené zprávy)
 
- **Zpráva pozice myši** obrazovky souřadnice myši, když byla publikována zpráva (jenom pro publikované zprávy).
+ **Pozice myši pro zprávu** Souřadnice obrazovky myši při odeslání zprávy (pouze pro vystavené zprávy)
 
- **Řádků Max** omezit počet řádků, které jsou zachovány v aktuálně vybrané zobrazení zpráv.
+ **Řádky – maximum** Omezte počet řádků, které jsou zachovány v zobrazení aktuálně vybrané zprávy.
 
- **Do souboru také zprávy protokolu** zadejte výstupní soubor pro protokol zpráv. Tento výstupní soubor je současně napsané v okně zprávy protokolu.
+ **Protokolovat také zprávy do souboru** Zadejte výstupní soubor protokolu zpráv. Tento výstupní soubor se zapisuje současně s oknem protokolu zpráv.
 
- **Uložit nastavení jako výchozí** uložit předchozí nastavení pro nový datový proud zpráv – windows. Tato nastavení se uloží po ukončení nástroje Spy ++.
+ **Uložit nastavení jako výchozí** Uložte předchozí nastavení pro nová okna služby Stream zpráv. Tato nastavení se uloží po ukončení nástroje Spy + +.

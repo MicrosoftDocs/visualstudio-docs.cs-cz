@@ -1,5 +1,5 @@
 ---
-title: Karta Windows, dialogové okno Vlastnosti okna | Dokumentace Microsoftu
+title: Karta okna, dialogové okno Vlastnosti okna | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,21 +11,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ce1015741b2a1e7ba1608eea7f198b726e808f7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900780"
 ---
 # <a name="windows-tab-window-properties-dialog-box"></a>Karta Okna, dialogové okno vlastnosti okna
-Použití **Windows** kartu zobrazíte informace o windows související s vybrané okno. Zobrazíte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus [zobrazení Windows](../debugger/windows-view.md) okna. Vyberte jakékoli okno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.
+Pomocí karty **Windows** můžete zobrazit informace o systému Windows, které souvisí s vybraným oknem. Chcete-li zobrazit [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
- Následující nastavení jsou k dispozici na **Windows** kartu:
+ Na kartě **Windows** jsou k dispozici následující nastavení:
 
 |Entry|Popis|
 |-----------|-----------------|
-|**Další okna**|Popisovač okna na stejné úrovni dalšího ve stejném pořadí (pořadí vykreslování) zobrazí ve stromovém zobrazení okna ("none" Pokud neexistuje žádné další okno). Zvolte tuto položku, chcete-li zobrazit vlastnosti dalšího okna.|
-|**Předchozí okno**|Popisovač předchozího okna na stejné úrovni ve stejném pořadí (pořadí vykreslování) zobrazí ve stromovém zobrazení okna ("none" Pokud neexistuje žádný předchozí okno). Zvolte tuto položku, chcete-li zobrazit vlastnosti předchozího okna.|
-|**Nadřazené okno**|Popisovač toto okno nadřazené okno ("none" Pokud neexistuje žádný nadřazený objekt). Zvolte tuto položku, chcete-li zobrazit vlastnosti nadřazeného okna.|
-|**Prvním podřízeným objektem**|Popisovač toto okno první podřízené okno, v sekvenci (pořadí vykreslování) zobrazí ve stromovém zobrazení okna ("none" Pokud neexistují žádné podřízená okna). Zvolte tuto hodnotu a zobrazte vlastnosti první podřízené okno.|
-|**Okno vlastníka**|Popisovač okno vlastníka tohoto okna. Hlavní okno aplikace obvykle vlastní dialogové okno modální systému windows, například ("none" Pokud neexistuje žádný vlastník). Zvolte tuto položku, chcete-li zobrazit vlastnosti nadřazenému oknu.|
+|**Další okno**|Obslužná rutina dalšího okna na stejné úrovni ve stejné sekvenci (pořadí vykreslování) zobrazené v zobrazení stromu okna ("none", pokud neexistuje žádné další okno). Výběrem této položky zobrazíte vlastnosti dalšího okna.|
+|**Předchozí okno**|Popisovač předchozího okna na stejné úrovni ve stejné sekvenci (pořadí vykreslování) zobrazené v zobrazení stromu okna ("none", pokud neexistuje žádné předchozí okno). Vyberte tuto položku, chcete-li zobrazit vlastnosti předchozího okna.|
+|**Nadřazené okno**|Popisovač nadřazeného okna tohoto okna ("none", pokud není k dispozici žádná nadřazená položka). Vyberte tuto položku, chcete-li zobrazit vlastnosti nadřazeného okna.|
+|**První podřízená položka**|Obslužná rutina prvního podřízeného okna tohoto okna v sekvenci (pořadí vykreslování) zobrazené v zobrazení stromu okna ("none", pokud nejsou k dispozici žádná podřízená okna). Tuto hodnotu vyberte, chcete-li zobrazit vlastnosti prvního podřízeného okna.|
+|**Vlastník – okno**|Popisovač okna vlastníka tohoto okna Hlavní okno aplikace obvykle vlastní dialogová okna v systému, například "none", pokud není k dispozici vlastník). Výběrem této položky zobrazíte vlastnosti okna vlastníka.|

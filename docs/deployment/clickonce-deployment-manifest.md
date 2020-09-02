@@ -1,5 +1,5 @@
 ---
-title: ClickOnce – Manifest nasazení | Dokumentace Microsoftu
+title: Manifest nasazení ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,44 +16,44 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d2f3383731fcfa314c3b936cd42002186012439
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900476"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce – manifest nasazení
-Manifest nasazení je soubor XML, který popisuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, včetně identifikace aktuální [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] verze aplikace pro nasazení.
+Manifest nasazení je soubor XML, který popisuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, včetně identifikace aktuální [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] verze aplikace, která má být nasazena.
 
- Manifesty nasazení mají následující prvky a atributy.
+ Manifesty nasazení mají následující elementy a atributy.
 
-| Prvek | Popis | Atributy |
+| Element | Popis | Atributy |
 | - | - | - |
-| [Element \<assembly>](../deployment/assembly-element-clickonce-deployment.md) | Povinný parametr. Element nejvyšší úrovně. | `manifestVersion` |
-| [Element \<assemblyIdentity>](../deployment/assemblyidentity-element-clickonce-deployment.md) | Povinný parametr. Identifikuje manifest aplikace pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace. | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture` |
-| [Element \<description>](../deployment/description-element-clickonce-deployment.md) | Povinný parametr. Určuje informace o aplikaci použít k vytvoření prostředí prezentace a **přidat nebo odebrat programy** v Ovládacích panelech. | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
-| [Element \<deployment>](../deployment/deployment-element-clickonce-deployment.md) | Volitelné. Určuje atributy použité pro nasazení aktualizací a vystavení systému. | `install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters` |
-| [Element \<compatibleFrameworks>](../deployment/compatibleframeworks-element-clickonce-deployment.md) | Povinný parametr. Určuje verzi rozhraní .NET Framework, ve kterém můžete tuto aplikaci nainstalovat a spustit. | `SupportUrl` |
-| [Element \<dependency>](../deployment/dependency-element-clickonce-deployment.md) | Povinný parametr. Určuje verzi aplikace k instalaci pro nasazení a umístění manifestu aplikace. | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
-| [Element \<publisherIdentity>](../deployment/publisheridentity-element-clickonce-deployment.md) | Vyžaduje se pro podepsané manifesty. Obsahuje informace o vydavateli, který podepsal manifestu nasazení. | `Name`<br /><br /> `issuerKeyHash` |
-| [Element \<signature>](../deployment/signature-element-clickonce-deployment.md) | Volitelné. Obsahuje informace potřebné k digitálnímu podpisu manifestu nasazení. | Žádné |
-| [Element \<customErrorReporting>](../deployment/customerrorreporting-element-clickonce-deployment.md) | Volitelné. Určuje identifikátor URI, chcete-li zobrazit, když dojde k chybě. | Uri |
+| [\<assembly> Objekt](../deployment/assembly-element-clickonce-deployment.md) | Povinná hodnota. Element nejvyšší úrovně. | `manifestVersion` |
+| [\<assemblyIdentity> Objekt](../deployment/assemblyidentity-element-clickonce-deployment.md) | Povinná hodnota. Identifikuje manifest aplikace pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci. | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture` |
+| [\<description> Objekt](../deployment/description-element-clickonce-deployment.md) | Povinná hodnota. Identifikuje informace o aplikaci používané k vytvoření stavu prostředí a položky **Přidat nebo odebrat programy** v Ovládacích panelech. | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
+| [\<deployment> Objekt](../deployment/deployment-element-clickonce-deployment.md) | Nepovinný parametr. Určuje atributy používané pro nasazení aktualizací a expozici systému. | `install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters` |
+| [\<compatibleFrameworks> Objekt](../deployment/compatibleframeworks-element-clickonce-deployment.md) | Povinná hodnota. Identifikuje verze .NET Framework, kde se tato aplikace může nainstalovat a spustit. | `SupportUrl` |
+| [\<dependency> Objekt](../deployment/dependency-element-clickonce-deployment.md) | Povinná hodnota. Určuje verzi aplikace, která se má nainstalovat pro nasazení, a umístění manifestu aplikace. | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
+| [\<publisherIdentity> Objekt](../deployment/publisheridentity-element-clickonce-deployment.md) | Vyžaduje se pro podepsané manifesty. Obsahuje informace o vydavateli, který podepsal tento manifest nasazení. | `Name`<br /><br /> `issuerKeyHash` |
+| [\<Signature> Objekt](../deployment/signature-element-clickonce-deployment.md) | Nepovinný parametr. Obsahuje nezbytné informace pro Digitální podepsání tohoto manifestu nasazení. | Žádné |
+| [\<customErrorReporting> Objekt](../deployment/customerrorreporting-element-clickonce-deployment.md) | Nepovinný parametr. Určuje identifikátor URI, který se má zobrazit, když dojde k chybě. | Identifikátor URI |
 
 ## <a name="remarks"></a>Poznámky
- Identifikuje soubor manifestu nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace, včetně aktuální verze a další nastavení nasazení. Odkazuje na manifest aplikace, která popisuje aktuální verzi aplikace a všechny soubory obsažené v nasazení.
+ Soubor manifestu nasazení identifikuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace, včetně aktuální verze a dalších nastavení nasazení. Odkazuje na manifest aplikace, který popisuje aktuální verzi aplikace a všechny soubory obsažené v nasazení.
 
- Další informace najdete v tématu [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md).
+ Další informace najdete v tématu [zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md).
 
 ## <a name="file-location"></a>Umístění souboru
- Soubor manifestu nasazení odkazuje na správný manifest aplikace pro aktuální verzi aplikace. Když vytvoříte novou verzi nasazení aplikace k dispozici, je nutné aktualizovat manifest nasazení pro odkazování na nový manifest aplikace.
+ Soubor manifestu nasazení odkazuje na správný manifest aplikace pro aktuální verzi aplikace. Pokud zpřístupníte novou verzi nasazení aplikace, je nutné aktualizovat manifest nasazení, aby odkazoval na nový manifest aplikace.
 
  Soubor manifestu nasazení musí mít silný název a může také obsahovat certifikáty pro ověření vydavatele.
 
 ## <a name="file-name-syntax"></a>Syntaxe názvu souboru
- Název souboru manifestu nasazení musí končit *.application* rozšíření.
+ Název souboru manifestu nasazení musí končit příponou *. Application* .
 
 ## <a name="examples"></a>Příklady
- Následující příklad kódu ukazuje manifestu nasazení.
+ Následující příklad kódu ukazuje manifest nasazení.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,5 +117,5 @@ Manifest nasazení je soubor XML, který popisuje [!INCLUDE[ndptecclick](../depl
 </Signature></asmv1:assembly>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)

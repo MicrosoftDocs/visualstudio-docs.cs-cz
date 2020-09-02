@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazení vlastností procesu | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení vlastností procesu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,21 +12,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 59cdf89d1427aa8a080ed119831d7775ca750111
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62575855"
 ---
 # <a name="how-to-display-process-properties"></a>Postupy: Zobrazení vlastností procesu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Další informace o procesu uvedené v [zobrazení procesy](../debugger/processes-view.md), použijte [dialogové okno vlastností procesu](../debugger/process-properties-dialog-box.md).  
+Chcete-li zjistit více o procesu uvedeném v [zobrazení procesů](../debugger/processes-view.md), použijte [dialogové okno Vlastnosti procesu](../debugger/process-properties-dialog-box.md).  
   
-### <a name="to-open-a-process-properties-dialog-box"></a>Chcete-li otevřít dialogové okno vlastností procesu  
+### <a name="to-open-a-process-properties-dialog-box"></a>Otevření dialogového okna vlastností procesu  
   
-1. Vyberte ze stromu se zobrazí v procesu **zobrazení procesů**.  
+1. Vyberte proces ze stromu zobrazeného v **zobrazení procesů**.  
   
-2. Z **zobrazení** nabídce zvolte **vlastnosti**.  
+2. V nabídce **zobrazení** klikněte na příkaz **vlastnosti**.  
   
-   Dialogová okna vlastnosti nejsou modální, takže můžete kliknout na jiné položce v zobrazení oken a dialogových oken se zobrazí informace na vybranou položku.
+   Dialogová okna vlastností nejsou modální, takže můžete kliknout na jinou položku v okně zobrazení a v dialogovém okně se zobrazí informace o vybrané položce.

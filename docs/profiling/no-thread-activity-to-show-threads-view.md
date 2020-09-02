@@ -1,5 +1,5 @@
 ---
-title: Žádná aktivita vlákna k zobrazení (zobrazení vláken) | Dokumenty společnosti Microsoft
+title: Žádná aktivita vláken k zobrazení (zobrazení vláken) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91cc840a69135edf59603ba62d15985eb541df0e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62794465"
 ---
-# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vlákna (zobrazení vláken)
+# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (zobrazení vláken)
 Tato oblast zobrazuje data o neskrytých vláknech v aktuálně viditelném časovém rozsahu.
 
- Pokud nejsou zobrazeny žádné informace, zkontrolujte následující nastavení:
+ Pokud nejsou viditelné žádné informace, podívejte se na následující nastavení:
 
-- Je úroveň přiblížení vysoká? Zkuste oddálit nebo posouvat, aby se více aktivity vláken v dosahu.
+- Je úroveň přiblížení vysoká? Zkuste oddálení nebo posouvání, aby se do rozsahu přiblížila více aktivit vlákna.
 
-- Je příliš mnoho vláken skrytých? Pokud ano, zkuste ukázat všechna vlákna
+- Jsou skryté příliš mnoho vláken? Pokud ano, zkuste zobrazit všechna vlákna
 
-- Pokud je **vybrána možnost Jen můj kód,** můžete zobrazit pouze data o kódu. Zkuste vymazat nastavení a zjistit, zda existuje nějaká aktivita podprocesu systému.
+- Pokud je vybrána možnost **pouze můj kód** , můžete zobrazit pouze data o svém kódu. Zkuste vymazat nastavení, abyste zjistili, jestli existuje nějaká aktivita systémového vlákna.
 
-- Ujistěte se, že redukce šumu je nastavena na nízkou prahovou hodnotu.
+- Ujistěte se, že je snížení šumu nastaveno na nízkou prahovou hodnotu.
 
 ## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

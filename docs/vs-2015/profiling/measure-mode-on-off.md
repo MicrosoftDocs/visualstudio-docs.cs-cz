@@ -1,5 +1,5 @@
 ---
-title: Zapnutí nebo vypnutí režimu měření | Dokumentace Microsoftu
+title: Zapnutý režim měření | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 92db719f8af2688dc70ddb5ac253c17095302766
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563269"
 ---
 # <a name="measure-mode-onoff"></a>Zapnutí nebo vypnutí režimu míry
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí tohoto nástroje můžete přesně změřit dobu na časové ose. Pokud chcete povolit režim míry, klikněte na tlačítko měr, (který má ikonu pravítka) a potom přetáhněte na časové ose. Při přetahování, Všimněte si, že oblast pod ukazatelem je zvýrazněn žlutě a měření času se zobrazí na panelu nástrojů na pravé straně tlačítka. Tato hodnota se vypočítá dynamicky při přetahování tak, aby umožňují okamžitě zjistit, jak dlouho trvá konkrétní události. Když uvolníte tlačítko myši, časová hodnota zůstává viditelná.  
+Pomocí tohoto nástroje můžete přesně změřit dobu trvání časové osy. Chcete-li povolit režim měření, klikněte na tlačítko míra (s ikonou pravítka) a pak na časovou osu přetáhněte. Při přetahování si všimněte, že je oblast pod ukazatelem zvýrazněna žlutou a zobrazený čas se zobrazí na panelu nástrojů napravo od tlačítka. Tato hodnota je počítána dynamicky při přetahování, takže můžete okamžitě zjistit, jak dlouho určitá událost trvá. Po uvolnění tlačítka myši zůstane časová hodnota viditelná.  
   
- Měření procesu můžete opakovat, ale je zobrazena pouze nejnovější měření. Klikněte na tlačítko míru znovu k vypnutí režimu míry.  
+ Proces měření můžete opakovat, ale zobrazí se jenom poslední měření. Opětovným kliknutím na tlačítko míra zapněte režim měření.  
   
 ## <a name="see-also"></a>Viz také  
  [Správa kanálů](../profiling/manage-channels.md)   

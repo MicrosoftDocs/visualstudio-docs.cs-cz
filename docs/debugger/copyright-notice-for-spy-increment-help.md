@@ -1,5 +1,5 @@
 ---
-title: Informace o autorských právech pro nápovědu nástroje Spy ++ | Dokumentace Microsoftu
+title: Oznámení o autorských právech pro nápovědu nástroje Spy + + | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d16628dc634fe58843c71867b4795dae21a6341f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62565495"
 ---
 # <a name="copyright-notice-for-spy-help"></a>Poznámka o autorských právech pro nápovědu nástroje Spy++
-Informace v tomto dokumentu se může měnit bez předchozího upozornění. Společnosti, názvy a údaje použité v ukázkách jsou smyšlené, pokud není uvedeno jinak. Žádná část tohoto dokumentu je možné reprodukovat nebo přenášet v libovolné formě nebo jakýmkoli způsobem, ať už elektronicky nebo mechanickým, za jakýmkoli účelem bez výslovného písemného povolení společnosti Microsoft Corporation.
+Informace v tomto dokumentu se mohou změnit bez předchozího upozornění. Společnosti, názvy a data použitá v příkladech v ukázkách jsou smyšlené, pokud není uvedeno jinak. Žádná část tohoto dokumentu nemůže být reprodukována ani přenášena v jakékoli formě nebo jakýmkoli prostředkem, elektronickým nebo mechanickou pro jakékoli účely bez výslovného písemného svolení společnosti Microsoft Corporation.
 
- © 1993-2010 Microsoft Corporation. Všechna práva vyhrazena.
+ © 1993-2010 Microsoft Corporation. All rights reserved.
 
- Je registrovaná ochranná známka společnosti Microsoft a Windows a Windows NT jsou ochranné známky společnosti Microsoft Corporation.
+ Microsoft je registrovaná ochranná známka a Windows NT jsou ochranné známky společnosti Microsoft Corporation.

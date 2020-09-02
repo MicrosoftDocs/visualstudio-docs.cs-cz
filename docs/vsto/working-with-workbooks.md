@@ -14,32 +14,32 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3d4d6eec08ae75efbd9104ace25409d336e45f40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62814685"
 ---
 # <a name="work-with-workbooks"></a>Práce se sešity
-  <xref:Microsoft.Office.Tools.Excel.Workbook> a <xref:Microsoft.Office.Interop.Excel.Workbooks> třída obsahuje metody a vlastnosti, které můžete použít k provádění úloh se sešity.
+  <xref:Microsoft.Office.Tools.Excel.Workbook>Třída a <xref:Microsoft.Office.Interop.Excel.Workbooks> obsahuje metody a vlastnosti, které slouží k provádění úkolů se sešity.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
-|Vytvořte nový sešit.|[Postupy: Vytváření nových sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-workbooks.md)|
-|Otevření zadaného sešitu.|[Postupy: Otevírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-workbooks.md)|
-|Zavřete zadaného sešitu a uložte změny.|[Postupy: Zavírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-close-workbooks.md)|
-|Sešity v Excelu formáty nebo formátu XML.|[Postupy: Ukládání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-save-workbooks.md)|
-|Aktivujte aktuální sešit nebo jiný sešit.|
-|[Postupy: Zamykání sešitů](../vsto/how-to-programmatically-protect-workbooks.md)|
-|Získáte kolekci sešitu naposledy použitých souborů.|[Postupy: Vytváření seznamů naposledy použitých souborů sešitů](../vsto/how-to-programmatically-list-recently-used-workbook-files.md)|
-|Otevírání textových souborů jako sešitů.|[Postupy: Otevírání textových souborů jako sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)|
+|Vytvoří nový sešit.|[Postupy: vytváření nových sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-workbooks.md)|
+|Otevře zadaný sešit.|[Postupy: otevírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-workbooks.md)|
+|Zavře zadaný sešit a uloží změny.|[Postupy: zavírání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-close-workbooks.md)|
+|Uložte sešity ve formátech aplikace Excel nebo ve formátu XML.|[Postupy: ukládání sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-save-workbooks.md)|
+|Přepněte fokus na aktuální sešit nebo na jiný sešit.|
+|[Postupy: Ochrana sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-protect-workbooks.md)|
+|Získá kolekci naposledy použitých souborů sešitu.|[Postupy: zobrazení seznamu naposledy použitých souborů sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-list-recently-used-workbook-files.md)|
+|Otevřete textové soubory jako sešity.|[Postupy: otevírání textových souborů jako sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)|
 
- Další informace o úlohy aplikace Excel a model objektů aplikace Excel, naleznete v tématu [přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md).
+ Další informace o úlohách aplikace Excel a modelu objektu aplikace Excel naleznete v tématu [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md).
 
- V některých případech se liší od způsoby, jak je provést v přizpůsobeních na úrovni dokumentu způsoby, jak provádět tyto úlohy v doplňcích VSTO.
+ V některých případech se způsoby provádění těchto úkolů v Doplňkech VSTO liší od způsobů, jak je provádíte v přizpůsobení na úrovni dokumentu.
 
-## <a name="see-also"></a>Viz také:
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+## <a name="see-also"></a>Viz také
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Práce s oblastmi](../vsto/working-with-ranges.md)
-- [Použití ovládacích prvků Windows Forms na listech aplikace Excel](../vsto/using-windows-forms-controls-on-excel-worksheets.md)
+- [Práce s rozsahy](../vsto/working-with-ranges.md)
+- [Použití ovládacích prvků model Windows Forms v listech aplikace Excel](../vsto/using-windows-forms-controls-on-excel-worksheets.md)

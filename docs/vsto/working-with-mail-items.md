@@ -16,28 +16,28 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1a0e5007163d10aee15e39759448928e44ae5a68
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62815430"
 ---
 # <a name="work-with-mail-items"></a>Práce s položkami pošty
-  <xref:Microsoft.Office.Interop.Outlook.MailItem> Třída obsahuje metody a vlastnosti, které můžete použít k provádění úloh s e-mailové zprávy.
+  <xref:Microsoft.Office.Interop.Outlook.MailItem>Třída obsahuje metody a vlastnosti, které slouží k provádění úloh s e-mailovými zprávami.
 
-|Úloha|Postup|
+|Úkol|Postup|
 |----------|---------------|
-|Vytvořte e-mailové zprávy.|[Postupy: Programové vytváření položek e-mailu](../vsto/how-to-programmatically-create-an-e-mail-item.md)|
-|Odeslání e-mailové zprávy.|[Postupy: Odeslání e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|
-|Reagovat na nové e-mailové zprávy s vlastní akci.|[Postupy: Programově provádění akcí po přijetí e-mailovou zprávu](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)|
-|Uložení příloh.|[Postupy: Ukládání příloh položek e-mailu aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)|
-|Přidání příloh|[Postupy: Připojování souborů k položkám e-mailu aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-attach-files-to-outlook-e-mail-items.md)|
-|Iterujte přes všechny nepřečtené zprávy.|[Postupy: Načítání nepřečtených zpráv ze složky Doručená pošta prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-unread-messages-from-the-inbox.md)|
+|Vytvořte e-mailovou zprávu.|[Postupy: vytváření položek e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-create-an-e-mail-item.md)|
+|Odešlete e-mailovou zprávu.|[Postupy: odesílání e-mailů prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)|
+|Reakce na nové e-mailové zprávy s vlastní akcí.|[Postupy: provádění akcí po přijetí e-mailové zprávy prostřednictvím kódu programu](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)|
+|Uložte přílohy.|[Postupy: ukládání příloh z e-mailových položek Outlooku prostřednictvím kódu programu](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)|
+|Přidat přílohy|[Postupy: připojování souborů k položkám e-mailů aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-attach-files-to-outlook-e-mail-items.md)|
+|Projde všemi nepřečtenými zprávami.|[Postupy: načítání nepřečtených zpráv z doručené pošty prostřednictvím kódu programu](../vsto/how-to-programmatically-retrieve-unread-messages-from-the-inbox.md)|
 
- Další informace o úkolech Outlooku a modelu objektů aplikace Outlook, naleznete v tématu [přehled modelu objektů aplikace Outlook](../vsto/outlook-object-model-overview.md).
+ Další informace o úlohách Outlooku a modelu objektů aplikace Outlook najdete v tématu [Přehled modelu objektů aplikace](../vsto/outlook-object-model-overview.md)Outlook.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)
 - [Práce se složkami](../vsto/working-with-folders.md)
 - [Práce s položkami kalendáře](../vsto/working-with-calendar-items.md)
-- [Řešení pro aplikaci Outlook](../vsto/outlook-solutions.md)
+- [Řešení pro Outlook](../vsto/outlook-solutions.md)

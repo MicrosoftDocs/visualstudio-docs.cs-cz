@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Vlastnosti okna | Dokumentace Microsoftu
+title: Dialogové okno Vlastnosti okna | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c27f10298f3a5621bc68e31bc2b150663955d6c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929218"
 ---
 # <a name="window-properties-dialog-box"></a>Dialogové okno vlastností oken
-Použijte toto dialogové okno pro další informace o konkrétní okno. Zobrazíte dialogovému oknu přesunout fokus [zobrazení Windows](../debugger/windows-view.md) okna. Vyberte jakékoli okno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.
+Pomocí tohoto dialogového okna můžete zjistit více o konkrétním okně. Chcete-li zobrazit toto dialogové okno, přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Karta Obecné. Dialogové okno Vlastnosti okna](../debugger/general-tab-window-properties-dialog-box.md) s informacemi o vybrané okno.
+ [Karta Obecné – dialogové okno Vlastnosti okna](../debugger/general-tab-window-properties-dialog-box.md) Zobrazuje informace o vybraném okně.
 
- [Karta se styly. Dialogové okno Vlastnosti okna](../debugger/styles-tab-window-properties-dialog-box.md) ukazuje styly použitý pro vybrané okno.
+ [Karta styly, dialogové okno Vlastnosti okna](../debugger/styles-tab-window-properties-dialog-box.md) Zobrazuje styly použité pro vybrané okno.
 
- [Karta Windows. Dialogové okno Vlastnosti okna](../debugger/windows-tab-window-properties-dialog-box.md) ve windows související s vybrané okno s informacemi.
+ [Karta okna – dialogové okno Vlastnosti okna](../debugger/windows-tab-window-properties-dialog-box.md) Zobrazí informace o systému Windows, které souvisejí s vybraným oknem.
 
- [Třída – karta. Dialogové okno Vlastnosti okna](../debugger/class-tab-window-properties-dialog-box.md) ve třídě vybrané okno s informacemi.
+ [Karta třída – dialogové okno vlastností okna](../debugger/class-tab-window-properties-dialog-box.md) Zobrazí informace o třídě vybraného okna.
 
- [Karta proces. Dialogové okno Vlastnosti okna](../debugger/process-tab-window-properties-dialog-box.md) identifikuje proces vybrané okno.
+ [Karta Process. dialogové okno Vlastnosti okna](../debugger/process-tab-window-properties-dialog-box.md) Identifikuje proces vybraného okna.
 
 ## <a name="related-sections"></a>Související oddíly
- [Dialogové okno hledání](../debugger/window-search-dialog-box.md) použit k vyhledání uzel pro konkrétní okno v zobrazení pro Windows.
+ Okno [hledání oken](../debugger/window-search-dialog-box.md) Slouží k vyhledání uzlu pro konkrétní okno v zobrazení systému Windows.
 
- [Referenční dokumentace nástroje Spy ++](../debugger/spy-increment-reference.md) obsahuje oddíly s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ [Referenční dokumentace nástroje Spy + +](../debugger/spy-increment-reference.md) Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.
 
- [Tažením nástroje hledání pomocí](../debugger/how-to-use-the-finder-tool.md) ukazuje, jak tento nástroj kontroluje windows pro vlastnosti nebo zprávy.
+ [Použití nástroje Finder](../debugger/how-to-use-the-finder-tool.md) Ukazuje, jak tento nástroj skenuje okna pro vlastnosti nebo zprávy.
 
- [Hledání okna v zobrazení Windows](../debugger/how-to-search-for-a-window-in-windows-view.md) vysvětluje, jak najít konkrétní okno v zobrazení pro Windows.
+ [Hledání okna v zobrazení Windows](../debugger/how-to-search-for-a-window-in-windows-view.md) Vysvětluje, jak najít konkrétní okno v zobrazení systému Windows.
 
- [Zobrazení Windows](../debugger/windows-view.md) zobrazí stromové zobrazení dostupných oken a ovládacích prvků.
+ [Zobrazení systému Windows](../debugger/windows-view.md) Zobrazí stromové zobrazení dostupných oken a ovládacích prvků.
 
- [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) vysvětluje zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ [Zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.
 
- [Použití nástroje Spy ++](../debugger/using-spy-increment.md) zavádí nástroje Spy ++ a vysvětluje, jak je možné.
+ [Pomocí nástroje Spy + +](../debugger/using-spy-increment.md) Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.

@@ -1,5 +1,5 @@
 ---
-title: '&lt;publisherIdentity&gt; – Element (nasazení ClickOnce) | Dokumentace Microsoftu'
+title: '&lt;publisherIdentity – – &gt; element (nasazení ClickOnce) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 995b002784c1e76ceed36e51edb1ae893448f448
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62927536"
 ---
-# <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt; – element (nasazení ClickOnce)
-Obsahuje informace o vydavateli, který podepsal manifestu nasazení.
+# <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity – – &gt; element (nasazení ClickOnce)
+Obsahuje informace o vydavateli, který podepsal tento manifest nasazení.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <publisherIdentity
@@ -36,16 +36,16 @@ Obsahuje informace o vydavateli, který podepsal manifestu nasazení.
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `publisherIdentity` Vyžádáním – element pro podepsané manifesty. V následující tabulce jsou uvedeny atributy, které `publisherIdentity` elementu podporuje.
+ `publisherIdentity`Element je vyžadován pro podepsané manifesty. V následující tabulce jsou uvedeny atributy, které `publisherIdentity` prvek podporuje.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`name`|Povinný parametr. Popisuje identity stranu, která publikovala tuto aplikaci.|
-|`issuerKeyHash`|Povinný parametr. Obsahuje hodnotu hash SHA-1 veřejného klíče certifikátu vystavitele.|
+|`name`|Povinná hodnota. Popisuje identitu strany, která publikovala tuto aplikaci.|
+|`issuerKeyHash`|Povinná hodnota. Obsahuje hodnotu hash SHA-1 veřejného klíče vystavitele certifikátu.|
 
 #### <a name="parameters"></a>Parametry
 
-## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
+## <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
 
 ## <a name="exceptions"></a>Výjimky
 
@@ -53,4 +53,4 @@ Obsahuje informace o vydavateli, který podepsal manifestu nasazení.
 
 ## <a name="requirements"></a>Požadavky
 
-## <a name="subhead"></a>Podnadpis
+## <a name="subhead"></a>Dílčí Head

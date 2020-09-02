@@ -1,5 +1,5 @@
 ---
-title: Skrývání vlastností, které mají podřízené vlastnosti | Dokumentace Microsoftu
+title: Skrytí vlastností s podřízenými vlastnostmi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,26 +11,26 @@ ms.assetid: 6003607e-fc19-4bf9-a299-9f6adf8e92eb
 caps.latest.revision: 13
 manager: jillfra
 ms.openlocfilehash: 1d20b865c6f07d76320a7df8402810c82869ddfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62822383"
 ---
-# <a name="hiding-properties-that-have-child-properties"></a>Skrývání vlastností, které mají podřízené vlastnosti
-Chcete skrýt vlastnosti, které mají podřízené vlastnosti:  
+# <a name="hiding-properties-that-have-child-properties"></a>Skrytí vlastností s podřízenými vlastnostmi
+Chcete skrýt vlastnosti s podřízenými vlastnostmi:  
   
-- Pokud máte vnořených projektů, kde nadřazený projekt programově řídí některé aspekty podřízeného projektu.  
+- Pokud máte vnořené projekty, kde nadřízený projekt programově řídí některé aspekty podřízeného projektu.  
   
-- Pokud používáte ovládací prvek s specializované návrháře a nechcete dávají vývojářům úplný přístup ke všem vlastnostem ovládacího prvku.  
+- Použijete-li ovládací prvek se specializovaným návrhářem a nechcete vývojářům poskytnout úplný přístup ke všem vlastnostem ovládacího prvku.  
   
-- Pokud máte obor vlastnictví objektu a chcete omezit zobrazení vlastností.  
+- Pokud máte vlastnictví oboru objektu a chcete omezit zobrazení vlastností.  
   
-### <a name="to-hide-properties-that-have-child-properties"></a>Skrýt vlastnosti, které mají podřízené vlastnosti  
+### <a name="to-hide-properties-that-have-child-properties"></a>Skrytí vlastností s podřízenými vlastnostmi  
   
-1. Nastavte `pfDisplay` parametr <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> k `FALSE`.  
+1. Nastavte `pfDisplay` parametr v <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> na `FALSE` .  
   
-2. Nastavte `pfHide` parametr <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> k `TRUE`.  
+2. Nastavte `pfHide` parametr v <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> na `TRUE` .  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení mřížky okna Vlastnosti](../extensibility/internals/properties-display-grid.md)

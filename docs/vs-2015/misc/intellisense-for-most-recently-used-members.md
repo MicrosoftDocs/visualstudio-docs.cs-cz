@@ -1,5 +1,5 @@
 ---
-title: IntelliSense pro naposledy použité členy | Dokumentace Microsoftu
+title: IntelliSense pro naposledy použité členy | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: jillfra
 ms.openlocfilehash: 20dfe17c2051ddcbffc30df5661535ad61102512
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62838656"
 ---
 # <a name="intellisense-for-most-recently-used-members"></a>IntelliSense pro naposledy použité členy
-Tento obsah přešel na [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md).
+Tento obsah se přesunul do [jazyka Visual C# IntelliSense](../ide/visual-csharp-intellisense.md).

@@ -1,5 +1,5 @@
 ---
-title: Souhrnná sestava podle vlákna | Dokumenty společnosti Microsoft
+title: Sestava souhrnu jednotlivých vláken | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,21 +13,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ab5e88db9f539dd79482044ab3834b27a6b1747
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62794323"
 ---
-# <a name="per-thread-summary-report"></a>Souhrnná sestava podle vlákna
-Tento pruhový graf zobrazuje podíl času, který každé neskryté vlákno stráví v každé kategorii aktivity během aktuálně viditelného časového rozsahu. "Spuštění" znamená, že vlákno je spuštěn; všechny ostatní kategorie znamenají, že vlákno na něco čeká.
+# <a name="per-thread-summary-report"></a>Sestava souhrnu podle vláken
+Tento pruhový graf znázorňuje podíl času každého neskrytého vlákna v každé kategorii aktivity během aktuálně viditelného časového rozsahu. "Provádění" znamená, že vlákno je prováděno; všechny ostatní kategorie znamenají, že vlákno čeká na nějakou akci.
 
 ## <a name="see-also"></a>Viz také
 - [Doba spuštění (zobrazení vláken)](../profiling/execution-time-threads-view.md)
-- [Vstupně-no čas (zobrazení vláken)](../profiling/i-o-time-threads-view.md)
+- [Čas I/O (zobrazení vláken)](../profiling/i-o-time-threads-view.md)
 - [Čas správy paměti](../profiling/memory-management-time.md)
-- [Doba prevence](../profiling/preemption-time.md)
-- [Doba spánku](../profiling/sleep-time.md)
+- [Čas přerušení](../profiling/preemption-time.md)
+- [Doba přechodu do režimu spánku](../profiling/sleep-time.md)
 - [Čas synchronizace](../profiling/synchronization-time.md)
-- [Doba zpracování ui](../profiling/ui-processing-time.md)
+- [Doba zpracování uživatelského rozhraní](../profiling/ui-processing-time.md)
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

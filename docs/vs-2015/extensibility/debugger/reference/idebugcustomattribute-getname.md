@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName | Dokumentace Microsoftu
+title: 'IDebugCustomAttribute:: GetName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4463fc4f9d321b26487e885255843a7acd945f76
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62569267"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
@@ -40,13 +40,13 @@ int GetName(
   
 #### <a name="parameters"></a>Parametry  
  `bstrName`  
- [out] Vrátí řetězec obsahující název vlastního atributu.  
+ mimo Vrátí řetězec obsahující název vlastního atributu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pojmenované vrácený touto metodou odpovídá názvu třídy, který deklaruje atribut. To může přesně odpovídat názvu vlastní třídy vlastní atribut jako C# umožňuje příponu "Atribut" chcete vyřadit z názvu vlastního atributu při použití v deklaraci.  
+ Název vrácený touto metodou odpovídá názvu třídy používané k deklaraci atributu. To nemusí přesně odpovídat názvu vlastní třídy vlastního atributu jako C# umožňuje, aby byla přípona Attribute vyřazena z názvu vlastního atributu při použití v deklaraci.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
