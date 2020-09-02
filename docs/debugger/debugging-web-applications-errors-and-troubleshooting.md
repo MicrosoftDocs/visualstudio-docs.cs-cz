@@ -28,33 +28,33 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f4cb60f4d378daab829713cb4bbbb670ef8ed25a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188345"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Ladění webových aplikací: chyby a řešení potíží
 Při pokusu o ladění webových aplikací může dojít k následujícím chybám.
 
-- [Odstraňování potíží](../debugger/debugging-web-applications-troubleshooting.md)
+- [Řešení potíží](../debugger/debugging-web-applications-troubleshooting.md)
 
-- [Chyba: Server používá IP adresu](../debugger/error-site-uses-ip-address.md)
+- [Chyba: lokalita používá IP adresu](../debugger/error-site-uses-ip-address.md)
 
-- [Chyba: Kontrola zabezpečení selhala, protože služba správy služby IIS neodpověděla.](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
+- [Chyba: nepovedlo se ověřit zabezpečení, protože služba správy služby IIS neodpověděla.](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
 
-- [Chyba: Prostředí ASP.NET není nainstalované.](../debugger/error-aspnet-not-installed.md)
+- [Chyba: ASP.NET není nainstalován.](../debugger/error-aspnet-not-installed.md)
 
-- [Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povolené.](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
+- [Chyba: ladění se nezdařilo, protože není povolené integrované ověřování systému Windows.](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
 
 - [Chyba: Webový server není správně nakonfigurován.](../debugger/error-the-web-server-is-not-configured-correctly.md)
 
-- [Chyba: Webový server byl uzamčen a blokuje příkaz DEBUG.](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
+- [Chyba: webový server byl uzamčen a blokuje operaci ladění](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
 
-- [Chyba: Během ladění webových služeb vypršel časový limit.](../debugger/error-timeout-while-debugging-web-services.md)
+- [Chyba: při ladění webových služeb vypršel časový limit.](../debugger/error-timeout-while-debugging-web-services.md)
 
-- [Chyba: Nepodařilo se zahájit ladění na webovém serveru.](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
+- [Chyba: nepovedlo se spustit ladění na webovém serveru.](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění webových aplikací a skriptu](how-to-enable-debugging-for-aspnet-applications.md)

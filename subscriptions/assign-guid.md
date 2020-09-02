@@ -7,10 +7,10 @@ ms.date: 04/20/2020
 ms.topic: conceptual
 description: Zjistěte, jak můžou správci určit identifikátor GUID předplatného pro předplatitele.
 ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235183"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Přiřazení konkrétních předplatných na portálu pro správu předplatných sady Visual Studio
@@ -60,8 +60,8 @@ Posledním krokem je stažení šablony **hromadného přidání** , vyplnění 
 ### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Q:How změn, které předplatné je aktuálně přiřazené k individuálnímu uživateli?
 Odpověď: Chcete-li změnit identifikátor GUID, který je přiřazen uživateli, musíte nejprve odstranit odběr daného uživatele.  Další informace najdete v článku věnovaném [odstranění odběrů](delete-license.md) , kde najdete další informace.  Po odstranění odběru pro daného uživatele použijte postup uvedený výše k exportu seznamu a nahrání nových informací o předplatném.  
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace sady Visual Studio](/visualstudio/)
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](/azure/devops/)
 - [Dokumentace k Azure](/azure/)
 - [Dokumentace k Microsoft 365](/microsoft-365/)

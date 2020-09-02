@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: b8470c8d7708bc51916a6f57f5aa135c3267e355
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89178241"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Sestavení a spuštění ukázkové aplikace todo

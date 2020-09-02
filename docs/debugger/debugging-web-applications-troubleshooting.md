@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6907ba5f0b48721646c57964012bf0aaa0838b60
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188316"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Ladění webových aplikací: řešení potíží
@@ -34,4 +34,4 @@ Tato část obsahuje běžné postupy, které je možné použít k řešení ch
 ## <a name="related-sections"></a>Související oddíly
  [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md) Vysvětluje řešení potíží a řešení chyb.
 
- [Ladění webových aplikací a skriptů](how-to-enable-debugging-for-aspnet-applications.md) Přehled ladění webových aplikací, jako jsou [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], webové služby XML a serverové projekty ATL.
+ [Ladění webových aplikací a skriptů](how-to-enable-debugging-for-aspnet-applications.md) Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] jsou webové služby XML a serverové projekty ATL.

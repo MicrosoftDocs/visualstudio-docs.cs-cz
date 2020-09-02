@@ -16,33 +16,33 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76c26a110d88d3dee8bf7540647ea0bfde4e7c4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62949484"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Spolupráce na vývoji řešení pro systém Office
-  Více vývojářů může pracovat na projektu pro Office v stejně, jako jsou spolupráce na jiné projekty sady Visual Studio. Visual Studio správně vyhledá instalace Microsoft Office na každém počítači i v případě Office je nainstalovaná v různých umístěních. Existují však některé důležité informace, je potřeba vědět.
+  V projektu Office může pracovat s více vývojáři stejným způsobem jako spolupracovat na jiných projektech sady Visual Studio. Visual Studio správně vyhledá systém Microsoft Office instalaci na každém počítači, i když je Office nainstalovaný v různých umístěních. Je ale potřeba mít na paměti několik důležitých informací.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="debug-properties-are-not-shared"></a>Ladění se nesdílejí vlastnosti
- Ladit vlastnosti nejsou sdílí několik uživatelů pod správou zdrojových kódů. Visual Basic a Visual C# projekty uložit vlastnosti ladění do souboru konkrétního uživatele (*ProjectName*. vbproj.user nebo *ProjectName*. csproj.user), a tento soubor není pod správou zdrojových kódů . Pokud je ladění více než jednou osobou, každý uživatel, který musíte zadat vlastnosti ladění ručně.
+## <a name="debug-properties-are-not-shared"></a>Vlastnosti ladění nejsou sdílené.
+ Vlastnosti ladění nejsou sdíleny mezi více uživateli v rámci správy zdrojového kódu. Projekty Visual Basic a Visual C# ukládají vlastnosti ladění do souboru specifického pro uživatele (*ProjectName*. vbproj. User nebo *ProjectName*. csproj. User) a tento soubor není pod správou zdrojových kódů. Pokud je ladění více než jedna osoba, musí každá osoba zadat vlastnosti ladění ručně.
 
- V případě, že projekt je umístěno do sdílené síťové složky místo ve správě zdrojového kódu, několik kroků navíc musí přesměrováni k povolení spolupráce vývojářům otevřete řešení a testovací sestavení.
+ Pokud je projekt umístěn ve sdílené síťové složce místo ve správě zdrojového kódu, je nutné provést některé další kroky, aby mohli vývojáři spolupracovat na otevření řešení a testování sestavení.
 
-## <a name="source-control-requires-checking-out-all-files"></a>Správa zdrojů vyžaduje nástroj rezervuje se všechny soubory
- Pokud používáte správy zdrojového kódu pro projekty, měli byste zkontrolovat všechny soubory v souboru kódu v **Průzkumníka řešení** (například *ThisDocument*, *ThisWorkbook*, nebo *ThisAddIn* soubory kódu) pokaždé, když změníte soubor kódu, dokonce i soubory, které jsou ve výchozím nastavení skrytá. Pokud rezervovat pouze soubor kódu nejvyšší úrovně mohou být změny ztraceny.
+## <a name="source-control-requires-checking-out-all-files"></a>Správa zdrojového kódu vyžaduje rezervaci všech souborů.
+ Použijete-li pro své projekty správu zdrojového kódu, měli byste rezervovat všechny soubory v souboru kódu v **Průzkumník řešení** (například soubory kódu *ThisDocument*, *ThisWorkbook*nebo *ThisAddIn* ) pokaždé, když změníte soubor s kódem, dokonce i soubory, které jsou ve výchozím nastavení skryté. Pokud se rezervuje jenom soubor s kódem nejvyšší úrovně, změny se můžou ztratit.
 
- Když provedete změny, zkontrolujte, zda že všechny soubory ve zpět. Další informace o souborech skryté kód v projektech, naleznete v tématu [projektech pro systém Office v prostředí sady Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
+ Až provedete změny, zkontrolujte všechny soubory zpátky. Další informace o skrytých souborech kódu v projektech naleznete v tématu [projekty pro systém Office v prostředí Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
 
-## <a name="security-for-informal-collaboration-on-a-network"></a>Zabezpečení pro spolupráci neformálních v síti
- Pro všechna řešení na úrovni dokumentu, které jsou v umístění v síti (například \\ \\ *Servername*\\*Sharename*), plně kvalifikované umístění musí být přidané do seznam důvěryhodných složek v aplikaci Microsoft Office, které pracujete. Vyberte možnost zahrnout podsložky ve složce hlavní nebo konkrétně přidat ladění a vytvoření složky do seznamu důvěryhodných složek. Další informace o tom, jak to provést, najdete v části [udělit důvěryhodnost dokumenty](../vsto/granting-trust-to-documents.md).
+## <a name="security-for-informal-collaboration-on-a-network"></a>Zabezpečení pro neoficiální spolupráci v síti
+ Pro všechna řešení na úrovni dokumentu, která jsou v síťovém umístění (například \\ \\ *servername* \\ *název_sdílené_položky*), je nutné do seznamu důvěryhodných složek v aplikaci systém Microsoft Office, se kterou pracujete, přidat plně kvalifikované umístění. Vyberte možnost zahrnutí podadresářů do hlavní složky, nebo konkrétně přidejte složky pro ladění a sestavení do seznamu důvěryhodných složek. Další informace o tom, jak to provést, najdete v tématu [udělení důvěryhodnosti k dokumentům](../vsto/granting-trust-to-documents.md).
 
- Dočasné certifikáty, které jsou automaticky generovány v okamžiku sestavení nejsou zabezpečeny nástrojem hesla. Certifikáty obsahovat přihlašovací jméno pro vývojáře a jiné osobní informace. Pokud nasazujete přizpůsobení, které jsou podepsány certifikáty dočasné, jiná můžou být schopni přistupovat k těmto informacím.
+ Dočasné certifikáty, které jsou automaticky generovány při sestavování, nejsou zabezpečeny heslem. Certifikáty obsahují přihlašovací jméno vývojáře a další osobní údaje. Pokud nasadíte vlastní nastavení, která jsou podepsaná dočasnými certifikáty, můžou k těmto informacím mít přístup i ostatní.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
-- [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Sestavování řešení pro systém Office](../vsto/building-office-solutions.md)

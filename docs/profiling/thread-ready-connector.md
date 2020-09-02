@@ -1,5 +1,5 @@
 ---
-title: Konektor pro připravená pro závity | Dokumenty společnosti Microsoft
+title: Konektor připravené pro vlákno | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +13,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20842cc277246bba6c9e05c6c59a937a89b5f6bc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62943491"
 ---
-# <a name="thread-ready-connector"></a>Konektor pro připravenost i pro závity
-Po klepnutí na segment blokování zobrazíte zásobník volání a jeho odblokování zásobníku, může se také zobrazit konektor připravený pro vlákno. Pokud došlo k události odblokování v jiném vlákně v aktuálním procesu, konektor připravený pro vlákno vizuálně identifikuje vlákno a segment spuštění, který umožnil blokovanému vláknu pokračovat v provádění.
+# <a name="thread-ready-connector"></a>Konektor připravený pro vlákno
+Když kliknete na blokující segment a zobrazíte zásobník volání a jeho Zásobník odblokování, může se také zobrazit konektor připravený pro vlákno. Pokud došlo k odblokování události v jiném vlákně aktuálního procesu, konektor připravený pro vlákno vizuálně identifikuje vlákno a spouštěcí segment, který umožňuje blokovanému vláknu pokračovat v provádění.

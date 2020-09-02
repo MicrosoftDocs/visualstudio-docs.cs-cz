@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 9513a3414a38aa02f6a4607a8c95bbf02c0e1cf6
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89178225"
 ---
 # <a name="multi-container-apps"></a>Vícekontejnerové aplikace
@@ -136,7 +136,7 @@ K tomu je potřeba použít kontejner [nicolaka/NetShoot](https://github.com/nic
 
 ## <a name="run-your-app-with-mysql"></a>Spuštění aplikace pomocí MySQL
 
-Aplikace TODO podporuje nastavení několika proměnných prostředí, které určují nastavení připojení MySQL. Jedná se o tyto peeringy:
+Aplikace TODO podporuje nastavení několika proměnných prostředí, které určují nastavení připojení MySQL. Jsou to tyto:
 
 - `MYSQL_HOST` – název hostitele spuštěného serveru MySQL
 - `MYSQL_USER` – uživatelské jméno, které se má použít pro připojení

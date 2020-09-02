@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f77df2eae643b658e915662e0f50f6a376141d27
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188469"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Ladění a proces hostování
@@ -36,11 +36,11 @@ Proces hostování sady Visual Studio vylepšuje výkon ladicího programu a umo
  Výraz při návrhu vždy používá hostitelský proces. Zakázání hostitelského procesu ve **vlastnostech projektu** zakáže vyhodnocení výrazu v době návrhu pro projekty knihovny tříd. Pro jiné typy projektů není vyhodnocení výrazu v době návrhu zakázáno. Místo toho Visual Studio spustí skutečný spustitelný soubor a použije ho pro vyhodnocení v době návrhu bez hostujícího procesu. Tento rozdíl může způsobit odlišné výsledky.
 
 ## <a name="appdomaincurrentdomainfriendlyname-differences"></a>Rozdíly v AppDomain. CurrentDomain. FriendlyName
- `AppDomain.CurrentDomain.FriendlyName` vrátí různé výsledky v závislosti na tom, zda je proces hostování povolen. Pokud zavoláte `AppDomain.CurrentDomain.FriendlyName` s povoleným hostitelským procesem, vrátí *app_name*`.vhost.exe`. Pokud je zavoláte, je hostitelský proces zakázán, vrátí *app_name*`.exe`.
+ `AppDomain.CurrentDomain.FriendlyName` vrátí různé výsledky v závislosti na tom, zda je povolen hostitelský proces. Pokud zavoláte `AppDomain.CurrentDomain.FriendlyName` s povoleným hostitelským procesem, vrátí *APP_NAME* `.vhost.exe` . Pokud je zavoláte, je hostitelský proces zakázán, vrátí *APP_NAME* `.exe` .
 
 ## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). Nafullname rozdíly
- `Assembly.GetCallingAssembly().FullName` vrátí různé výsledky v závislosti na tom, zda je proces hostování povolen. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s povoleným hostitelským procesem, vrátí `mscorlib`. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s hostitelským procesem zakázán, vrátí název aplikace.
+ `Assembly.GetCallingAssembly().FullName` vrátí různé výsledky v závislosti na tom, zda je povolen hostitelský proces. Pokud zavoláte `Assembly.GetCallingAssembly().FullName` s povoleným hostitelským procesem, vrátí se `mscorlib` . Pokud zavoláte `Assembly.GetCallingAssembly().FullName` se zakázaným hostitelským procesem, vrátí název aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Ladění aplikace s částečnou důvěryhodností](debugger-security.md)

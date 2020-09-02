@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 66d78988ef70e4f991dd02cb16a164cbf48e55f1
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89176075"
 ---
 # <a name="usage-warnings"></a>Upozornění využití
@@ -77,4 +77,4 @@ Upozornění použití podporují správné použití .NET.
 |[CA2246: Nepřiřazujte symbol a jeho člena v témže příkazu.](../code-quality/ca2246.md)|Přiřazení symbolu a jeho členu, tedy pole nebo vlastnost, ve stejném příkazu není doporučeno. Není jasné, jestli má členský přístup za cíl použít starou hodnotu symbolu před přiřazením nebo novou hodnotou z přiřazení v tomto prohlášení.|
 |[CA2247: Argument předaný konstruktoru TaskCompletionSource by měl být výčet TaskCreationOptions, nikoli výčet TaskContinuationOptions](../code-quality/ca2246.md)|TaskCompletionSource má konstruktory, které přijímají parametr TaskCreationOptions, které ovládají podkladovou úlohu a konstruktory, které přijímají stav objektu, který je uložen v úloze.  Náhodné předání typ TaskContinuationOptions namísto parametr TaskCreationOptions způsobí, že volání zpracuje možnosti jako stav.|
 |[CA2248: Zadejte správný argument enum pro Enum. HasFlag.](../code-quality/ca2248.md)|Typ výčtu předaný jako argument pro `HasFlag` volání metody se liší od volajícího typu výčtu.|
-|[CA2249: Zvažte použití řetězce. obsahuje namísto String. IndexOf.](../code-quality/ca2249.md)|Volání na `string.IndexOf` místo, kde je použit výsledek pro kontrolu přítomnosti nebo absence podřetězce může být nahrazena `string.Contains` .|
+|[CA2249: Zvážit možnost místo string.IndexOf použít string.Contains](../code-quality/ca2249.md)|Volání na `string.IndexOf` místo, kde je použit výsledek pro kontrolu přítomnosti nebo absence podřetězce může být nahrazena `string.Contains` .|
