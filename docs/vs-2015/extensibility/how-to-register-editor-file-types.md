@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Registrace typů souborů Editor | Dokumentace Microsoftu'
+title: 'Postupy: registrace typů souborů editoru | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,22 +11,22 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8d22e61d88b5f6e3959a369f6957efbc824384b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204121"
 ---
 # <a name="how-to-register-editor-file-types"></a>Postupy: Registrace typů souborů editoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejjednodušší způsob, jak zaregistrovat editor typů souborů se s použitím atributů registrace k dispozici jako součást [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] managed package framework (MPF) třídy. Při implementaci vašeho balíčku v nativním [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], můžete také napsat skript registru, která se registruje editor a související rozšíření.  
+Nejjednodušší způsob, jak registrovat typy souborů editoru, je použití registračních atributů, které jsou k dispozici jako součást [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] tříd třídy MPF (Managed Package Framework). Pokud balíček implementujete v nativním režimu [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , můžete také napsat skript registru, který registruje Editor a přidružená rozšíření.  
   
-## <a name="registration-using-mpf-classes"></a>Registrace pomocí třídy MPF  
+## <a name="registration-using-mpf-classes"></a>Registrace pomocí tříd MPF  
   
-#### <a name="to-register-editor-file-types-using-mpf-classes"></a>Editor typů souborů pomocí třídy MPF registrace  
+#### <a name="to-register-editor-file-types-using-mpf-classes"></a>Registrace typů souborů editoru pomocí tříd MPF  
   
-1. Zadejte <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> třídy s příslušnými parametry pro editor ve třídě vašeho balíčku VSPackage.  
+1. Poskytněte <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> třídu příslušným parametrům pro váš Editor ve třídě VSPackage.  
   
     ```  
     [Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute(typeof(EditorFactory), ".Sample", 32,   
@@ -35,17 +35,17 @@ Nejjednodušší způsob, jak zaregistrovat editor typů souborů se s použití
          NameResourceID = 106)]  
     ```  
   
-     Kde ". Ukázka"je rozšíření, který je registrovaný pro tento editor a"32"je její úroveň priority.  
+     Kde ". Ukázka "je přípona, která je zaregistrovaná pro tento editor, a" 32 "je úroveň priority.  
   
-     `projectGuid` Je identifikátor GUID pro soubor různé typy, definované v <xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid>. Poskytuje různé přípony, tak, aby výsledný soubor nebude jako součást procesu sestavení.  
+     `projectGuid`Je identifikátor GUID pro různé typy souborů definované v <xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid> . K dispozici je typ souboru různé, takže výsledný soubor nebude součástí procesu sestavení.  
   
-     `TemplateDir` představuje složku obsahující soubory šablon, které jsou součástí ukázkové spravované základní editor.  
+     `TemplateDir` představuje složku, která obsahuje soubory šablony, které jsou součástí ukázky spravovaného základního editoru.  
   
-     `NameResourceID` je definována v souboru Resources.h BasicEditorUI projektu a identifikuje editor jako "Moje editoru".  
+     `NameResourceID` je definována v souboru Resources. h projektu BasicEditorUI a identifikuje editor jako "můj editor".  
   
-2. Přepsat <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody.  
+2. Přepsat <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metodu.  
   
-     Ve vaší implementaci <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody, volání <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> a předáte instanci továrna pro editaci jako znázorněno níže.  
+     V implementaci <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody zavolejte <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> metodu a předejte instanci objektu pro vytváření editoru, jak je znázorněno níže.  
   
     ```  
     protected override void Initialize()  
@@ -59,18 +59,18 @@ Nejjednodušší způsob, jak zaregistrovat editor typů souborů se s použití
     }  
     ```  
   
-     Tento krok zaregistruje objekt factory editoru a přípony souborů editoru.  
+     Tento krok registruje jak objekt pro vytváření editoru, tak i přípony souborů editoru.  
   
-3. Zrušit registraci objekty pro vytváření editoru.  
+3. Zrušte registraci pro objekty editory.  
   
-     Objekty pro vytváření editoru jsou automaticky odregistrovat při uvolnění sady VSPackage. Pokud objekt factory editoru, který implementuje <xref:System.IDisposable> rozhraní, jeho `Dispose` metoda se volá, když byla Neregistrovaný objekt pro vytváření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+     Objekty pro vytváření editorů jsou při uvolnění VSPackage automaticky odregistrovány. Pokud objekt factory editoru implementuje <xref:System.IDisposable> rozhraní, `Dispose` je jeho metoda volána po zrušení registrace továrny [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-## <a name="registration-using-a-registry-script"></a>Registrace pomocí skript registru  
- Zaregistrovat objekty pro vytváření editoru a typy souborů v nativním [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] se provádí pomocí skriptu registru k zápisu do registru systému windows, jak je znázorněno v následující.  
+## <a name="registration-using-a-registry-script"></a>Registrace pomocí skriptu registru  
+ Registrace tříd pro vytváření editorů a typů souborů v nativním formátu [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] se provádí pomocí skriptu registru pro zápis do registru Windows, jak je znázorněno v následujícím seznamu.  
   
-#### <a name="to-register-editor-file-types-using-a-registry-script"></a>K registraci skripty registru typy souborů editoru  
+#### <a name="to-register-editor-file-types-using-a-registry-script"></a>Registrace typů souborů editoru pomocí skriptu registru  
   
-1. Ve vašem skriptu registru definovat objekt pro vytváření editoru a objektu pro vytváření editoru řetězec GUID jak je znázorněno `GUID_BscEditorFactory` část tento skript registru. Navíc definujte rozšíření a prioritu rozšíření editoru:  
+1. Ve svém skriptu registru Definujte objekt pro vytváření editoru a řetězec GUID objektu pro vytváření editoru, jak je znázorněno v `GUID_BscEditorFactory` části následujícího skriptu registru. Také definujte rozšíření a prioritu rozšíření editoru:  
   
     ```  
   
@@ -90,13 +90,13 @@ Nejjednodušší způsob, jak zaregistrovat editor typů souborů se s použití
     }  
     ```  
   
-     Přípona souboru editoru v tomto příkladu je označen jako ".rtf" a jeho priorita je "50". Identifikátor GUID řetězce jsou definovány v souboru Resource.h BscEdit ukázkového projektu.  
+     Přípona souboru editoru v tomto příkladu je označena jako ". RTF" a její priorita je "50". Řetězce GUID jsou definovány v souboru Resource. h v ukázkovém projektu BscEdit.  
   
-2. Registrace sady VSPackage.  
+2. Zaregistrujte VSPackage.  
   
 3. Zaregistrujte objekt pro vytváření editoru.  
   
-     Objekt factory editoru je registrován v <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> implementace.  
+     Objekt pro vytváření editoru je zaregistrován v <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> implementaci.  
   
     ```  
     // create editor factory.  
@@ -127,4 +127,4 @@ Nejjednodušší způsob, jak zaregistrovat editor typů souborů se s použití
     }  
     ```  
   
-     Identifikátor GUID řetězce jsou definovány v souboru Resource.h BscEdit projektu.
+     Řetězce GUID jsou definovány v souboru Resource. h v projektu BscEdit.

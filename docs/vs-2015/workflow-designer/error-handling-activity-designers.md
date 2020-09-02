@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b829f98597afb6ab1430d61022306ec840decb12
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656747"
 ---
 # <a name="error-handling-activity-designers"></a>Návrháři aktivit zpracování chyb
-Návrháři aktivity zpracovávající chyby se používají ke správě zpracování chyb v [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Témata v této části poskytují pokyny pro použití [!INCLUDE[wfd2](../includes/wfd2-md.md)] aktivity a návrháře šablon.
+Návrháři aktivity zpracovávající chyby se používají ke správě zpracování chyb v [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Témata obsažená v této části poskytují pokyny k používání [!INCLUDE[wfd2](../includes/wfd2-md.md)] návrháře aktivit a šablon.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- Znovu [vyvolat](../workflow-designer/rethrow-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Rethrow>.
+ Znovu [vyvolat](../workflow-designer/rethrow-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.Rethrow> aktivity.
 
- [Throw](../workflow-designer/throw-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.Throw>.
+ [Throw](../workflow-designer/throw-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.Throw> aktivity.
 
- [TryCatch](../workflow-designer/trycatch-activity-designer.md) Slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.TryCatch>.
+ [TryCatch](../workflow-designer/trycatch-activity-designer.md) Slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.TryCatch> aktivity.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
 
 ## <a name="related-sections"></a>Související oddíly

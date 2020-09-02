@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Dokumentace Microsoftu
+title: 'IDebugStackFrame2:: GetInfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6ebfda26b58bb1e7048b969133fa1672edad8a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164782"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
@@ -44,16 +44,16 @@ int GetInfo ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- [in] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčet, který určuje, jaké pole `pFrameInfo` parametr mají být vyplněna.  
+ pro Kombinace příznaků z výčtu [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) , která určuje, která pole `pFrameInfo` parametru mají být vyplněna.  
   
  `nRadix`  
- [in] Základ, který se má použít v jakékoli číselné informace o formátování.  
+ pro Číselná soustava, která se má použít při formátování číselných informací  
   
  `pFrameInfo`  
- [out] A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struktura, která se vyplní popis rámce zásobníku.  
+ mimo Struktura [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) , která je vyplněna popisem rámce zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

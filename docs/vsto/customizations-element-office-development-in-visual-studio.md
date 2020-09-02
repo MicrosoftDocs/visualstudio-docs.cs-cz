@@ -1,5 +1,5 @@
 ---
-title: '&lt;přizpůsobení&gt; – element (vývoj pro Office v sadě Visual Studio)'
+title: '&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 58d88f865e5f220000bf021b548e4b9c4b8745f6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445507"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64790009"
 ---
-# <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení&gt; – element (vývoj pro Office v sadě Visual Studio)
-  `customizations` Elementu `vstov4` obor názvů obsahuje všechny informace o instalaci a načítání každé řešení Office.
+# <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení – &gt; element (vývoj pro Office v sadě Visual Studio)
+  `customizations`Element `vstov4` oboru názvů obsahuje všechny informace o instalaci a načítání jednotlivých řešení pro systém Office.
 
 ## <a name="syntax-for-document-level-customizations"></a>Syntaxe pro přizpůsobení na úrovni dokumentu
 
@@ -39,7 +39,7 @@ ms.locfileid: "63445507"
 </customizations>
 ```
 
-## <a name="syntax-for-vsto-add-ins"></a>Syntaxe pro doplňky VSTO
+## <a name="syntax-for-vsto-add-ins"></a>Syntaxe doplňků VSTO
 
 ```xml
 <customizations>
@@ -57,22 +57,22 @@ ms.locfileid: "63445507"
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `customizations` Prvek obsahuje konkrétní informace o jednotlivých řešeních Office. Tento element musí být v následujícím oboru názvů: `vstov4=urn:schemas-microsoft-com:vsto.v4`. Podřízené prvky prvku sestavení musí být také v tomto oboru názvů.
+ `customizations`Element obsahuje konkrétní informace o jednotlivých řešeních pro systém Office. Tento element musí být v následujícím oboru názvů: `vstov4=urn:schemas-microsoft-com:vsto.v4` . Podřízené elementy sestavení musí být také v tomto oboru názvů.
 
- `customizations` Prvek nemá žádné atributy.
+ `customizations`Element nemá žádné atributy.
 
- `customizations` Element má následující podřízený prvek.
+ `customizations`Element má následující podřízený element.
 
 ### <a name="customization"></a>Přizpůsobení
- Povinný parametr. `customization` Prvek `vstov4` obor názvů je definovaný v [ &#60;přizpůsobení&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).
+ Povinná hodnota. `customization`Element v `vstov4` oboru názvů je definován v [&#60;přizpůsobení&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).
 
 ## <a name="example-of-a-document-level-customization"></a>Příklad přizpůsobení na úrovni dokumentu
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje, `customizations` – element pro přizpůsobení na úrovni dokumentu.
+ Následující příklad kódu ukazuje `customizations` prvek pro přizpůsobení na úrovni dokumentu.
 
 > [!NOTE]
-> Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+> Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -89,7 +89,7 @@ ms.locfileid: "63445507"
 ## <a name="example-of-a-vsto-add-in"></a>Příklad doplňku VSTO
 
 ### <a name="description"></a>Popis
- Následující příklad kódu ukazuje, `customizations` – element pro doplňku VSTO. Toto je VSTO pro Outlook doplněk, který zahrnuje oblasti formuláře. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
+ Následující příklad kódu ukazuje `customizations` prvek doplňku VSTO. Toto je doplněk VSTO pro Outlook, který obsahuje oblasti formuláře. Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).
 
 ### <a name="code"></a>Kód
 
@@ -121,8 +121,8 @@ ms.locfileid: "63445507"
 </vstov4:customizations>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)
-- [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
+- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

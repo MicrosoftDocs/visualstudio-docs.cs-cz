@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac188bcf7975b8da1bbc71a90d3b6c34b095d424
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845582"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>Návod: Vytvoření fragmentu kódu
@@ -85,13 +85,13 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`
 
-6. Otestujte fragment tak, že otevřete projekt Visual Basic a otevřete soubor kódu. V souboru klikněte v místní nabídce na **Vložit fragment** a pak na **Moje fragmenty kódu**. Měl by se zobrazit fragment s názvem **můj Visual Basic fragment kódu**. Poklepejte na něj.
+6. Otestujte fragment tak, že otevřete projekt Visual Basic a otevřete soubor kódu. V souboru klikněte v místní nabídce na **Vložit fragment** a pak na **Moje fragmenty kódu**. Měl by se zobrazit fragment s názvem **můj Visual Basic fragment kódu**. Poklikejte na ni.
 
-7. V kódu by se měla zobrazit `Console.WriteLine("Hello, World!")` vložená.
+7. Mělo by se zobrazit `Console.WriteLine("Hello, World!")` vložené v kódu.
 
 ### <a name="adding-description-and-shortcut-fields"></a>Přidání polí popis a zástupce
 
-1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Upravte fragment, který jste přidali, otevřením souboru `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`.
+1. Pole popisu poskytují více informací o fragmentu kódu při zobrazení ve Správci fragmentů kódu. Zástupce je značka, kterou mohou uživatelé zadat pro vložení fragmentu. Úpravou fragmentu, který jste přidali, otevřete soubor `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` .
 
 2. Přidejte prvky Author a Description do elementu header a vyplňte je v.
 
@@ -122,11 +122,11 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
 6. Uložte soubor s fragmentem kódu znovu.
 
-7. Chcete-li zástupce otestovat, otevřete Visual Basic projekt a otevřete soubor kódu. Do souboru zadejte `hello` a stiskněte klávesu TAB. Kód fragmentu by měl být vložen.
+7. Chcete-li zástupce otestovat, otevřete Visual Basic projekt a otevřete soubor kódu. `hello`Do souboru zadejte a stiskněte klávesu TAB. Kód fragmentu by měl být vložen.
 
 ### <a name="to-add-references-and-imports"></a>Přidání odkazů a importů
 
-1. S Visual Basic fragmenty kódu můžete přidat odkaz na projekt pomocí elementu References a přidat deklaraci import pomocí elementu Imports. (Fragmenty v jiných jazycích tuto funkci nemají.) Například pokud změníte `Console.WriteLine` v příkladu kódu na `MessageBox.Show`, bude pravděpodobně nutné přidat do projektu sestavení System. Windows. Forms. dll.
+1. S Visual Basic fragmenty kódu můžete přidat odkaz na projekt pomocí elementu References a přidat deklaraci import pomocí elementu Imports. (Fragmenty v jiných jazycích tuto funkci nemají.) Například pokud změníte `Console.WriteLine` v příkladu kódu na `MessageBox.Show` , může být nutné přidat sestavení System.Windows.Forms.dll do projektu.
 
 2. Otevřete svůj fragment kódu.
 
@@ -169,7 +169,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
     ```
 
-9. Podívejte se na vlastnosti projektu. Karta odkazy obsahuje odkaz na System. Windows. Forms. dll.
+9. Podívejte se na vlastnosti projektu. Karta odkazy obsahuje odkaz na System.Windows.Forms.dll.
 
 ### <a name="adding-replacements"></a>Přidání nahrazení
 
@@ -230,7 +230,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
     </Declarations>
     ```
 
-6. V části Code (kód) odkazujete na náhrady s okolními znaménky $, například `$replacement$`:
+6. V části Code (kód) odkazujete na náhrady pomocí okolních znaků $, například `$replacement$` :
 
     ```
     <Code Language="VB" Kind="method body">
@@ -248,7 +248,7 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
 
 8. Otevřete Visual Basic projekt a přidejte fragment kódu.
 
-9. Kód by měl vypadat jako následující, kde jsou náhrady `SQL connection string` a `dcConnection` zvýrazněny světle oranžová. Stisknutím klávesy TAB přejděte mezi sebou.
+9. Kód by měl vypadat jako následující, kde `SQL connection string` jsou nahrazení a `dcConnection` zvýrazněna světle oranžová. Stisknutím klávesy TAB přejděte mezi sebou.
 
     ```
     Dim daCustomers As SqlDataAdapter
@@ -262,4 +262,4 @@ Fragment kódu můžete vytvořit pouze s několika kroky. Vše, co potřebujete
     ```
 
 ## <a name="see-also"></a>Viz také
- [Fragmenty kódu – odkaz schématu](../ide/code-snippets-schema-reference.md)
+ [Reference ke schématu fragmentů kódu](../ide/code-snippets-schema-reference.md)

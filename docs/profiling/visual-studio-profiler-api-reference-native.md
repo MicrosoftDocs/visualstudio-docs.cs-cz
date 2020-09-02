@@ -15,19 +15,19 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89dadc3213620b668160752e919679cccead90bc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778021"
 ---
-# <a name="visual-studio-profiler-api-reference-native"></a>Odkaz na rozhraní API profileru sady Visual Studio (nativní)
-Apis profiler sady Visual Studio umožňují programově řídit množství shromažďovaných dat a vložit časové razítko a profilové značky během profilování. Chcete-li použít nativní api, zahrňte soubor záhlaví *VSPerf.h* a přidejte v projektu *soubor VSPerf.lib.*
+# <a name="visual-studio-profiler-api-reference-native"></a>Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)
+Rozhraní API profileru sady Visual Studio umožňují programově řídit množství shromažďovaných dat a během profilace vkládat jak časové razítko, tak značky profilu. Chcete-li použít nativní rozhraní API, je třeba zahrnout hlavičkový soubor *VSPerf. h* a přidat *VSPerf. lib* do projektu.
 
 > [!NOTE]
-> Chcete-li získat cestu k nástrojům profilování, přečtěte si informace [o určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
+> Postup získání cesty k nástrojům pro profilaci najdete v tématu [Určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)
 
 [CommentMarkProfile](../profiling/commentmarkprofile.md)
@@ -48,5 +48,5 @@ Apis profiler sady Visual Studio umožňují programově řídit množství shro
 
 ## <a name="see-also"></a>Viz také
 
-- [Api nástrojů pro profilování](../profiling/profiling-tools-apis.md)
+- [Rozhraní API nástrojů pro profilaci](../profiling/profiling-tools-apis.md)
 - [Návod: Použití rozhraní API profileru](../profiling/walkthrough-using-profiler-apis.md)

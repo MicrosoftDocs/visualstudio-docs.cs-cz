@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateArrayObject | Dokumenty společnosti Microsoft
+title: 'IDebugFunctionObject:: CreateArrayObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bd4c07f2b95ff3077de79d4bc63f4fad19b0c6fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728616"
 ---
 # <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
-Vytvoří objekt pole. Toto pole může obsahovat buď hodnoty primitivnínebo objektové instance.
+Vytvoří objekt Array. Toto pole může obsahovat hodnoty primitivního nebo instančního objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,28 +51,28 @@ int CreateArrayObject(
 
 ## <a name="parameters"></a>Parametry
 `ot`\
-[v] Určuje hodnotu z [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) výčtu označující typ nového objektu pole.
+pro Určuje hodnotu z výčtu [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) , která označuje typ nového objektu Array.
 
 `pClassField`\
-[v] Objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující třídu objektu, pokud vytvářípole hodnot instancí objektu. Pokud vytváříte pole primitivních objektů, je tento parametr nulovou hodnotou.
+pro Objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující třídu objektu, pokud se vytváří pole hodnot instance objektu. Pokud vytváříte pole primitivních objektů, tento parametr je hodnota null.
 
 `dwRank`\
-[v] Pořadí nebo počet dimenzí pole.
+pro Rozměr nebo počet rozměrů pole.
 
 `dwDims`\
-[v] Velikosti každé dimenze pole.
+pro Velikosti jednotlivých rozměrů pole.
 
 `dwLowBounds`\
-[v] Počátek každé dimenze (obvykle 0 nebo 1).
+pro Původ každé dimenze (obvykle 0 nebo 1).
 
 `ppObject`\
-[out] Vrátí objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující nově vytvořené pole. Toto je ve skutečnosti objekt [IDebugArrayObject.](../../../extensibility/debugger/reference/idebugarrayobject.md)
+mimo Vrátí objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující nově vytvořené pole. Toto je vlastně objekt [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Volání této metody k vytvoření objektu, který představuje parametr pole pro funkci, která je reprezentována rozhraním [IDebugFunctionObject.](../../../extensibility/debugger/reference/idebugfunctionobject.md)
+ Zavolejte tuto metodu pro vytvoření objektu, který představuje parametr pole pro funkci, která je reprezentovaná [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraním.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

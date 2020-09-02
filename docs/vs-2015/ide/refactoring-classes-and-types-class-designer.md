@@ -21,29 +21,29 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5803b720ae1271d8319310820d1f0dc159db8bf9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670271"
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>Refaktoring tříd a typů (návrhář tříd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při refaktorování kódu je snazší pochopit, udržovat a zefektivnit změnou jeho vnitřní struktury a způsobu návrhu jeho objektů, nikoli vnějšího chování. Pomocí Návrhář tříd a okna podrobností třídy můžete snížit práci, kterou je třeba provést, a šance na zavedení chyb při refaktorování Visual C# .net, Visual Basic .NET nebo C++ kódu v projektu sady Visual Studio.
+Při refaktorování kódu je snazší pochopit, udržovat a zefektivnit změnou jeho vnitřní struktury a způsobu návrhu jeho objektů, nikoli vnějšího chování. Pomocí Návrhář tříd a okna podrobností třídy můžete snížit práci, kterou je třeba provést, a šance na zavedení chyb při refaktorování kódu jazyka Visual C# .NET, Visual Basic .NET nebo C++ v projektu sady Visual Studio.
 
 > [!NOTE]
 > Soubory projektu mohou být pouze pro čtení, protože projekt je v rámci správy zdrojového kódu a není rezervován; je to odkazovaný projekt; nebo jsou soubory na disku označeny jako jen pro čtení. Když pracujete v projektu v jednom z těchto stavů, budete mít k dispozici různé způsoby, jak uložit práci v závislosti na stavu projektu. To platí pro refaktoring kódu a také kódu, který změníte jiným způsobem, jako je například přímo v úpravách. Další informace najdete v tématu [zobrazení informací jen pro čtení (návrhář tříd)](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a).
 
 ## <a name="common-tasks"></a>Obecné úlohy
 
-|Úloha|Podpůrný obsah|
+|Úkol|Podpůrný obsah|
 |----------|------------------------|
-|**Třídy refaktoringu:** Operace refaktoringu můžete použít k rozdělení třídy na částečné třídy nebo k implementaci abstraktní základní třídy.|-   [Postupy: rozdělení třídy na částečné třídy (návrhář tříd)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md)|
-|**Práce s rozhraními:** V Návrhář tříd můžete implementovat rozhraní v diagramu tříd tím, že ho propojíte s třídou, která poskytuje kód pro metody rozhraní.|-   [Postupy: implementace rozhraní (návrhář tříd)](../ide/how-to-implement-an-interface-class-designer.md)|
-|**Refaktoring typů, členů typu a parametrů:** Pomocí Návrhář tříd můžete přejmenovat typy, přepsat členy typu nebo je přesunout z jednoho typu do jiného. Můžete také vytvořit typy s možnou hodnotou null.|-   [přejmenování typů a členů typu](../ide/refactoring-classes-and-types-class-designer.md#RenamingTypesAndMembers)<br />-   [přesunu členů typu z jednoho typu do druhého](../ide/refactoring-classes-and-types-class-designer.md#MovingTypeMembers) .<br />-   [Postupy: vytvoření typu s možnou hodnotou null (návrhář tříd)](../ide/how-to-create-a-nullable-type-class-designer.md)|
+|**Třídy refaktoringu:** Operace refaktoringu můžete použít k rozdělení třídy na částečné třídy nebo k implementaci abstraktní základní třídy.|-   [Postupy: rozdělení třídy na částečné třídy (Návrhář tříd)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md)|
+|**Práce s rozhraními:** V Návrhář tříd můžete implementovat rozhraní v diagramu tříd tím, že ho propojíte s třídou, která poskytuje kód pro metody rozhraní.|-   [Postupy: implementace rozhraní (Návrhář tříd)](../ide/how-to-implement-an-interface-class-designer.md)|
+|**Refaktoring typů, členů typu a parametrů:** Pomocí Návrhář tříd můžete přejmenovat typy, přepsat členy typu nebo je přesunout z jednoho typu do jiného. Můžete také vytvořit typy s možnou hodnotou null.|-   [Přejmenování typů a členů typu](../ide/refactoring-classes-and-types-class-designer.md#RenamingTypesAndMembers)<br />-   [Přesun členů typu z jednoho typu na jiný](../ide/refactoring-classes-and-types-class-designer.md#MovingTypeMembers)<br />-   [Postupy: vytvoření typu s možnou hodnotou null (Návrhář tříd)](../ide/how-to-create-a-nullable-type-class-designer.md)|
 
-### <a name="RenamingTypesAndMembers"></a>Přejmenování typů a členů typu
+### <a name="renaming-types-and-type-members"></a><a name="RenamingTypesAndMembers"></a> Přejmenování typů a členů typu
  V Návrhář tříd můžete přejmenovat typ nebo člen typu v diagramu tříd nebo v okno Vlastnosti. V okně podrobností třídy můžete změnit název člena, ale ne typ. Přejmenování typu nebo členu typu se rozšíří do všech oken a umístění kódu, kde se objevil starý název.
 
 ##### <a name="to-rename-a-name-in-the-class-designer"></a>Přejmenování názvu v Návrhář tříd
@@ -77,7 +77,7 @@ Při refaktorování kódu je snazší pochopit, udržovat a zefektivnit změnou
 
      Nový název se rozšíří do všech oken a umístění kódu v aktuálním projektu, ve kterém se objevil starý název.
 
-### <a name="MovingTypeMembers"></a>Přesun členů typu z jednoho typu na jiný
+### <a name="moving-type-members-from-one-type-to-another"></a><a name="MovingTypeMembers"></a> Přesun členů typu z jednoho typu na jiný
  Pomocí **Návrhář tříd**lze přesunout člen typu z jednoho typu na jiný typ, pokud jsou obě zobrazeny v aktuálním diagramu třídy.
 
 ##### <a name="to-move-a-type-member-from-one-type-to-another"></a>Přesunutí člena typu z jednoho typu na jiný
@@ -90,7 +90,7 @@ Při refaktorování kódu je snazší pochopit, udržovat a zefektivnit změnou
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Zobrazování typů a vztahů (Návrhář tříd)](../ide/viewing-types-and-relationships-class-designer.md)||
 |[Navrhování tříd a typů (Návrhář tříd)](../ide/designing-classes-and-types-class-designer.md)||

@@ -9,22 +9,22 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c561555df40bc02c3c9f3090ee1de4c0f329bcdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657174"
 ---
 # <a name="using-microsoftvisualstudiotesttoolscppunittestframework"></a>Používání atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma obsahuje seznam veřejných členů oboru názvů `Microsoft::VisualStudio::CppUnitTestFramework`.
+Toto téma obsahuje seznam veřejných členů `Microsoft::VisualStudio::CppUnitTestFramework` oboru názvů.
 
- Hlavičkové soubory jsou umístěny ve složce _VisualStudio2012 [x86] InstallFolder_ **\VC\UnitTest\include** .
+ Hlavičkové soubory jsou umístěny ve složce  _VisualStudio2012 [x86] InstallFolder_**\VC\UnitTest\include** .
 
- Soubory LIB se nacházejí ve složce _VisualStudio2012 [x86] InstallFolder_ **\VC\UnitTest\lib** .
+ Soubory LIB se nacházejí ve složce  _VisualStudio2012 [x86] InstallFolder_**\VC\UnitTest\lib** .
 
-## <a name="BKMK_In_this_topic"></a>V tomto tématu
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu
  [CppUnitTest. h](#BKMK_CppUnitTest_h)
 
 - [Vytváření testovacích tříd a metod](#BKMK_Create_test_classes_and_methods)
@@ -67,7 +67,7 @@ Toto téma obsahuje seznam veřejných členů oboru názvů `Microsoft::VisualS
 
     - [Je false](#BKMK_General_Is_False)
 
-    - [Proběhne](#BKMK_General_Fail)
+    - [Neúspěch](#BKMK_General_Fail)
 
   - [prostředí Windows Runtime kontrolní výrazy](#BKMK_WinRT_Asserts)
 
@@ -93,15 +93,15 @@ Toto téma obsahuje seznam veřejných členů oboru názvů `Microsoft::VisualS
 
     - [Zapsat zprávu](#BKMK_Write_Message)
 
-## <a name="BKMK_CppUnitTest_h"></a>CppUnitTest. h
+## <a name="cppunittesth"></a><a name="BKMK_CppUnitTest_h"></a> CppUnitTest. h
 
-### <a name="BKMK_Create_test_classes_and_methods"></a>Vytváření testovacích tříd a metod
+### <a name="create-test-classes-and-methods"></a><a name="BKMK_Create_test_classes_and_methods"></a> Vytváření testovacích tříd a metod
 
 ```cpp
 TEST_CLASS(className)
 ```
 
- Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS` musí být deklarované v oboru namescape.
+ Vyžaduje se pro každou třídu obsahující testovací metody. Identifikuje *ClassName* jako testovací třídu. `TEST_CLASS` musí být deklarována v oboru namescape.
 
 ```cpp
 TEST_METHOD(methodName)
@@ -111,11 +111,11 @@ TEST_METHOD(methodName)
 
 ```
 
- Definuje *methodName* jako testovací metodu. `TEST_METHOD` musí být deklarované v rozsahu třídy metody.
+ Definuje *methodName* jako testovací metodu. `TEST_METHOD` musí být deklarován v rozsahu třídy metody.
 
-### <a name="BKMK_Initialize_and_cleanup"></a>Inicializovat a vyčistit
+### <a name="initialize-and-cleanup"></a><a name="BKMK_Initialize_and_cleanup"></a> Inicializovat a vyčistit
 
-#### <a name="BKMK_Test_methods"></a>Testovací metody
+#### <a name="test-methods"></a><a name="BKMK_Test_methods"></a> Testovací metody
 
 ```cpp
 TEST_METHOD_INITIALIZE(methodName)
@@ -125,7 +125,7 @@ TEST_METHOD_INITIALIZE(methodName)
 
 ```
 
- Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE` lze definovat pouze jednou v testovací třídě a musí být definovány ve třídě testu.
+ Definuje *methodName* jako metodu, která se spustí před spuštěním každé testovací metody. `TEST_METHOD_INITIALIZE` dá se definovat jenom jednou v testovací třídě a musí se definovat ve třídě test.
 
 ```cpp
 TEST_METHOD_CLEANUP(methodName)
@@ -135,9 +135,9 @@ TEST_METHOD_CLEANUP(methodName)
 
 ```
 
- Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
+ Definuje *methodName* jako metodu, která se spustí po spuštění každé testovací metody. `TEST_METHOD_CLEANUP` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
-#### <a name="BKMK_Test_classes"></a>Testovací třídy
+#### <a name="test-classes"></a><a name="BKMK_Test_classes"></a> Testovací třídy
 
 ```cpp
 TEST_CLASS_INITIALIZE(methodName)
@@ -147,7 +147,7 @@ TEST_CLASS_INITIALIZE(methodName)
 
 ```
 
- Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_INITIALIZE` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
+ Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_INITIALIZE` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
 ```cpp
 TEST_CLASS_CLEANUP(methodName)
@@ -157,9 +157,9 @@ TEST_CLASS_CLEANUP(methodName)
 
 ```
 
- Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP` lze definovat pouze jednou v testovací třídě a musí být definovány v oboru třídy testu.
+ Definuje *methodName* jako metodu, která se spustí po vytvoření každé třídy testu. `TEST_CLASS_CLEANUP` dá se definovat jenom jednou v testovací třídě a musí se definovat v oboru třídy testu.
 
-#### <a name="BKMK_Test_modules"></a>Testovací moduly
+#### <a name="test-modules"></a><a name="BKMK_Test_modules"></a> Testovací moduly
 
 ```cpp
 TEST_MODULE_INITIALIZE(methodName)
@@ -168,17 +168,17 @@ TEST_MODULE_INITIALIZE(methodName)
 }
 ```
 
- Definuje metodu *methodName* , která se spustí při načtení modulu. `TEST_MODULE_INITIALIZE` lze v testovacím modulu definovat pouze jednou a musí být deklarována v oboru názvů.
+ Definuje metodu *methodName* , která se spustí při načtení modulu. `TEST_MODULE_INITIALIZE` dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
 
 ```cpp
 TEST_MODULE_CLEANUP(methodName)
 ```
 
- Definuje metodu *methodName* , která se spustí, když se modul uvolní. `TEST_MODULE_CLEANUP` lze v testovacím modulu definovat pouze jednou a musí být deklarována v oboru názvů.
+ Definuje metodu *methodName* , která se spustí, když se modul uvolní. `TEST_MODULE_CLEANUP` dá se definovat jenom jednou v testovacím modulu a musí se deklarovat v oboru názvů.
 
-### <a name="BKMK_Create_test_attributes"></a>Vytvořit atributy testu
+### <a name="create-test-attributes"></a><a name="BKMK_Create_test_attributes"></a> Vytvořit atributy testu
 
-#### <a name="BKMK_Test_method_attributes"></a>Atributy testovací metody
+#### <a name="test-method-attributes"></a><a name="BKMK_Test_method_attributes"></a> Atributy testovací metody
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
@@ -189,9 +189,9 @@ END_TEST_METHOD_ATTRIBUTE()
 
  Přidá atributy definované s jedním nebo více `TEST_METHOD_ATTRIBUTE` makry do metody testu *testClassName*.
 
- Makro `TEST_METHOD_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+ `TEST_METHOD_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="BKMK_Test_class_attributes"></a>Atributy třídy testu
+#### <a name="test-class-attributes"></a><a name="BKMK_Test_class_attributes"></a> Atributy třídy testu
 
 ```cpp
 BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
@@ -202,9 +202,9 @@ END_TEST_CLASS_ATTRIBUTE()
 
  Přidá atributy definované s jedním nebo více `TEST_CLASS_ATTRIBUTE` makry do testovací třídy *testClassName*.
 
- Makro `TEST_CLASS_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+ `TEST_CLASS_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="BKMK_Test_module_attributes"></a>Atributy testovacího modulu
+#### <a name="test-module-attributes"></a><a name="BKMK_Test_module_attributes"></a> Atributy testovacího modulu
 
 ```cpp
 BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
@@ -215,10 +215,10 @@ END_TEST_MODULE_ATTRIBUTE()
 
  Přidá atributy definované s jedním nebo více `TEST_MODULE_ATTRIBUTE` makry do modulu testu *testModuleName*.
 
- Makro `TEST_MODULE_ATTRIBUTE` definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
+ `TEST_MODULE_ATTRIBUTE`Makro definuje atribut s názvem *attributeName* a hodnotou *vlastnost AttributeValue*.
 
-#### <a name="BKMK_Pre_defined_attributes"></a>Předdefinované atributy
- Tato Předdefinovaná makra atributů mohou být nahrazena makry `TEST_METHOD_ATTRIBUTE`, `TEST_CLASS_ATTRIBUTE` nebo `TEST_MODULE_ATTRIBUTE` popsané výše.
+#### <a name="pre-defined-attributes"></a><a name="BKMK_Pre_defined_attributes"></a> Předdefinované atributy
+ Tato Předdefinovaná makra atributů mohou být nahrazena makry `TEST_METHOD_ATTRIBUTE` , `TEST_CLASS_ATTRIBUTE` nebo `TEST_MODULE_ATTRIBUTE` popsanými výše.
 
 ```cpp
 TEST_OWNER(ownerAlias)
@@ -248,13 +248,13 @@ TEST_WORKITEM(workitem)
 TEST_IGNORE()
 ```
 
- Definuje atribut s názvem `Ignore` a hodnotou atributu `true`.
+ Definuje atribut s názvem `Ignore` a hodnotou atributu `true` .
 
-## <a name="BKMK_CppUnitTestAssert_h"></a>CppUnitTestAssert. h
+## <a name="cppunittestasserth"></a><a name="BKMK_CppUnitTestAssert_h"></a> CppUnitTestAssert. h
 
-### <a name="BKMK_General_Asserts"></a>Obecné kontrolní výrazy
+### <a name="general-asserts"></a><a name="BKMK_General_Asserts"></a> Obecné kontrolní výrazy
 
-#### <a name="BKMK_General_Are_Equal"></a>Je rovno
+#### <a name="are-equal"></a><a name="BKMK_General_Are_Equal"></a> Je rovno
  Ověření, zda jsou dva objekty stejné
 
 ```cpp
@@ -310,7 +310,7 @@ static void AreEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Not_Equal"></a>Se nerovná
+#### <a name="are-not-equal"></a><a name="BKMK_General_Are_Not_Equal"></a> Se nerovná
  Ověřte, že dvě dvojité znaménko nejsou stejné.
 
 ```cpp
@@ -344,7 +344,7 @@ static void AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
- Ověřte, že se neshodují dva řetězce w_char *.
+ Ověřte, že se neshodují dva w_char * řetězce.
 
 ```cpp
 static void AreNotEqual(
@@ -366,7 +366,7 @@ static void AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Same"></a>Jsou stejné
+#### <a name="are-same"></a><a name="BKMK_General_Are_Same"></a> Jsou stejné
  Ověřte, že dva odkazy odkazují na stejnou instanci objektu (identita).
 
 ```cpp
@@ -378,7 +378,7 @@ static void AreSame(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Not_Same"></a>Nejsou stejné
+#### <a name="are-not-same"></a><a name="BKMK_General_Are_Not_Same"></a> Nejsou stejné
  Ověřte, že dva odkazy neodkazují na stejnou instanci objektu (identita).
 
 ```cpp
@@ -390,7 +390,7 @@ static void AreNotSame (
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_Null"></a>Má hodnotu null
+#### <a name="is-null"></a><a name="BKMK_General_Is_Null"></a> Má hodnotu null
  Ověřte, že ukazatel má hodnotu NULL.
 
 ```cpp
@@ -401,7 +401,7 @@ static void IsNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_Not_Null"></a>Není null
+#### <a name="is-not-null"></a><a name="BKMK_General_Is_Not_Null"></a> Není null
  Ověřte, že ukazatel nemá hodnotu NULL.
 
 ```cpp
@@ -412,7 +412,7 @@ static void IsNotNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_True"></a>Má hodnotu true
+#### <a name="is-true"></a><a name="BKMK_General_Is_True"></a> Má hodnotu true
  Ověřte, že podmínka je pravdivá.
 
 ```cpp
@@ -422,7 +422,7 @@ static void IsTrue(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_False"></a>Je false
+#### <a name="is-false"></a><a name="BKMK_General_Is_False"></a> Je false
  Ověřte, že podmínka je nepravdivá.
 
 ```cpp
@@ -432,7 +432,7 @@ static void IsFalse(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Fail"></a>Proběhne
+#### <a name="fail"></a><a name="BKMK_General_Fail"></a> Proběhne
  Vynutit, aby se výsledek testovacího případu nezdařil
 
 ```cpp
@@ -441,9 +441,9 @@ static void Fail(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-### <a name="BKMK_WinRT_Asserts"></a>prostředí Windows Runtime kontrolní výrazy
+### <a name="windows-runtime-asserts"></a><a name="BKMK_WinRT_Asserts"></a> prostředí Windows Runtime kontrolní výrazy
 
-#### <a name="BKMK_WinRT_Are_Equal"></a>Je rovno
+#### <a name="are-equal"></a><a name="BKMK_WinRT_Are_Equal"></a> Je rovno
  Ověřuje, že jsou dva ukazatele prostředí Windows Runtime stejné.
 
 ```
@@ -466,7 +466,7 @@ static void AreEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Same"></a>Jsou stejné
+#### <a name="are-same"></a><a name="BKMK_WinRT_Are_Same"></a> Jsou stejné
  Ověřuje, že dva prostředí Windows Runtime odkazy odkazují na stejný objekt.
 
 ```
@@ -478,7 +478,7 @@ static void AreSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Not_Equal"></a>Se nerovná
+#### <a name="are-not-equal"></a><a name="BKMK_WinRT_Are_Not_Equal"></a> Se nerovná
  Ověřuje, že se neshodují dva ukazatele prostředí Windows Runtime.
 
 ```
@@ -501,7 +501,7 @@ static void AreNotEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Not_Same"></a>Nejsou stejné
+#### <a name="are-not-same"></a><a name="BKMK_WinRT_Are_Not_Same"></a> Nejsou stejné
  Ověřuje, že dva prostředí Windows Runtime odkazy neodkazují na stejný objekt.
 
 ```
@@ -513,7 +513,7 @@ static void AreNotSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Is_Null"></a>Má hodnotu null
+#### <a name="is-null"></a><a name="BKMK_WinRT_Is_Null"></a> Má hodnotu null
  Ověřuje, že ukazatel prostředí Windows Runtime je nullptr.
 
 ```
@@ -524,7 +524,7 @@ static void IsNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Is_Not_Null"></a>Není null
+#### <a name="is-not-null"></a><a name="BKMK_WinRT_Is_Not_Null"></a> Není null
  Ověřuje, že prostředí Windows Runtime ukazatel není nullptr.
 
 ```
@@ -535,9 +535,9 @@ static void IsNotNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-### <a name="BKMK_Exception_Asserts"></a>Kontrolní výrazy výjimek
+### <a name="exception-asserts"></a><a name="BKMK_Exception_Asserts"></a> Kontrolní výrazy výjimek
 
-#### <a name="BKMK_Expect_Exception"></a>Očekávat výjimku
+#### <a name="expect-exception"></a><a name="BKMK_Expect_Exception"></a> Očekávat výjimku
  Ověřte, že funkce vyvolává výjimku:
 
 ```
@@ -558,16 +558,16 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
     const __LineInfo* pLineInfo = NULL)
 ```
 
-## <a name="BKMK_CppUnitTestLogger_h"></a>CppUnitTestLogger. h
+## <a name="cppunittestloggerh"></a><a name="BKMK_CppUnitTestLogger_h"></a> CppUnitTestLogger. h
 
-### <a name="BKMK_Logger"></a>Nástroj
+### <a name="logger"></a><a name="BKMK_Logger"></a> Nástroj
  Třída protokolovacího nástroje obsahuje statické metody pro zápis do
 
 ```
 class Logger
 ```
 
-### <a name="BKMK_Write_Message"></a>Zapsat zprávu
+### <a name="write-message"></a><a name="BKMK_Write_Message"></a> Zapsat zprávu
 
 ```
 static void
@@ -651,4 +651,4 @@ public:
 ```
 
 ## <a name="see-also"></a>Viz také
- [Testování částí kódu](../test/unit-test-your-code.md) [testování nativního kódu pomocí Průzkumníka testů](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c) [Přidání testů částí do stávajících C++ aplikací](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
+ [Testování částí kódu](../test/unit-test-your-code.md) [testování nativního kódu pomocí Průzkumníka testů](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c) [Přidání testů částí do stávajících aplikací C++](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)

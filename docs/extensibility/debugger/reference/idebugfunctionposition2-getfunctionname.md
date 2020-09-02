@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionPosition2::GetFunctionName | Dokumenty společnosti Microsoft
+title: 'IDebugFunctionPosition2:: GetFunction | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 771dbe369154200805fb9d344dd5b457353e34dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728421"
 ---
 # <a name="idebugfunctionposition2getfunctionname"></a>IDebugFunctionPosition2::GetFunctionName
-Získá název funkce, na které odkazuje tato pozice.
+Získá název funkce, na kterou odkazuje tato pozice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int GetFunctionName(
 
 ## <a name="parameters"></a>Parametry
 `pbstrFunctionName`\
-[out] Vrátí název funkce.
+mimo Vrátí název funkce.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)

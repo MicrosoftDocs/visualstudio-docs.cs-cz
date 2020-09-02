@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Dokumentace Microsoftu
+title: 'IDebugSymbolSearchEvent2:: Getsymbolsearchinfo – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c8ef097ed02ae90b03289e3a2f3a1ad3f0ad8618
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446036"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64788153"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Volá obslužnou rutinou události k načtení výsledků o proces načítání symbolů.  
+Volá se obslužnou rutinou události, která načte výsledky procesu načtení symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,22 +45,22 @@ int GetSymbolSearchInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pModule`  
- [out] IDebugModule3 objekt, který reprezentuje modul, pro kterou byly načteny symboly.  
+ mimo Objekt IDebugModule3 představující modul, pro který byly načteny symboly.  
   
  `pbstrDebugMessage`  
- [out v] Vrátí řetězec obsahující všechny chybové zprávy z modulu. Pokud se nezobrazí žádná chyba, tento řetězec bude obsahovat pouze název modulu ale nikdy je prázdný.  
+ [in, out] Vrátí řetězec obsahující jakékoli chybové zprávy z modulu. Pokud nedojde k žádné chybě, bude tento řetězec obsahovat pouze název modulu, ale není nikdy prázdný.  
   
 > [!NOTE]
-> [C++] `pbstrDebugMessage` nemůže být `NULL` a musí být uvolněna pomocí operátoru `SysFreeString`.  
+> [C++] `pbstrDebugMessage` nemůže být `NULL` a musí být uvolněn s `SysFreeString` .  
   
  `pdwModuleInfoFlags`  
- [out] Kombinace příznaků z [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) výčet označující, zda nebyly načteny žádné symboly.  
+ mimo Kombinace příznaků z výčtu [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) , která označuje, zda byly načteny nějaké symboly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když se obdrží obslužnou rutinu [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) událost po pokusu o načtení symbolů ladění pro modul, obslužná rutina může volat thismethod k určení výsledků zátěž.  
+ Když obslužná rutina obdrží událost [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) po provedení pokusu o načtení symbolů ladění pro modul, může obslužná rutina volat Thismethod pro určení výsledků tohoto zatížení.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::Vyhodnotit | Dokumenty společnosti Microsoft
+title: 'IDebugFunctionObject:: Evaluate | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 529a5f67c808efa258bc0cb9899f546dbb90d431
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728506"
 ---
 # <a name="idebugfunctionobjectevaluate"></a>IDebugFunctionObject::Evaluate
@@ -47,22 +47,22 @@ int Evaluate(
 
 ## <a name="parameters"></a>Parametry
 `ppParams`\
-[v] Pole [iDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekty představující vstupní parametry. Každý z těchto parametrů byl vytvořen `Create` jednou z metod v rozhraní [IDebugFunctionObject.](../../../extensibility/debugger/reference/idebugfunctionobject.md)
+pro Pole objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představujících vstupní parametry. Každý z těchto parametrů byl vytvořen pomocí jedné z `Create` metod v rozhraní [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) .
 
 `dwParams`\
-[v] Počet parametrů v `ppParams` poli.
+pro Počet parametrů v `ppParams` poli.
 
 `dwTimeout`\
-[v] Určuje maximální dobu v milisekundách, po kterou se má čekat před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 `ppResult`\
-[out] Vrátí [objekt IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující hodnotu funkce jako objekt.
+mimo Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující hodnotu funkce jako objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda nastaví a provede volání funkce reprezentované objektem [IDebugFunctionObject.](../../../extensibility/debugger/reference/idebugfunctionobject.md)
+ Tato metoda nastaví a spustí volání funkce reprezentované objektem [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

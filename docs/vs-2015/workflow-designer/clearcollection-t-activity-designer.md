@@ -1,5 +1,5 @@
 ---
-title: Vymazatcollection &lt;T &gt; návrháře aktivit | Microsoft Docs
+title: Zrušit &lt; &gt; Návrháře aktivitycollection T | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-workflow-designer
@@ -12,31 +12,31 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8c2f1e0264d39c65601a70e8c24b51c7eceadf4a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657025"
 ---
-# <a name="clearcollectionlttgt-activity-designer"></a>Vymazatcollection &lt;T &gt; návrháře aktivit
-Návrhář aktivity **clearcollection \<T >** slouží k vytvoření a konfiguraci aktivity <xref:System.Activities.Statements.ClearCollection%601>.
+# <a name="clearcollectionlttgt-activity-designer"></a>Zrušit &lt; &gt; Návrháře aktivitycollection T
+Návrhář aktivity **ClearCollection \<T> ** slouží k vytvoření a konfiguraci <xref:System.Activities.Statements.ClearCollection%601> aktivity.
 
-## <a name="the-clearcollectiont-activity"></a>Aktivita ClearCollection \<T >
- Aktivita <xref:System.Activities.Statements.ClearCollection%601> vymaže zadanou kolekci všech položek.
+## <a name="the-clearcollectiont-activity"></a>Aktivita ClearCollection \<T>
+ Tato <xref:System.Activities.Statements.ClearCollection%601> Aktivita vymaže zadanou kolekci všech položek.
 
-### <a name="using-the-clearcollectiont-activity-designer"></a>Použití návrháře \<T > aktivity ClearCollection
- Návrhář aktivity **clearcollection \<T >** lze najít v kategorii **kolekce** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně můžete vybrat **panel nástrojů** z **Zobrazit** nabídku nebo CTRL + ALT + X.)
+### <a name="using-the-clearcollectiont-activity-designer"></a>Pomocí \<T> návrháře aktivit ClearCollection
+ Návrhář ** \<T> aktivity ClearCollection** se dá najít v kategorii **kolekce** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panelu nástrojů** [!INCLUDE[wfd2](../includes/wfd2-md.md)] (případně vyberte **panel nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).
 
- Návrhář aktivity **clearcollection \<T >** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity, například uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří aktivita <xref:System.Activities.Statements.ClearCollection%601> s výchozí <xref:System.Activities.Activity.DisplayName%2A>ou ClearCollection \<Int32 >. (Ve výchozím nastavení je *pro TypeArgument* typu **Int32**. To lze změnit v mřížce vlastností.) Hodnotu <xref:System.Activities.Activity.DisplayName%2A> lze upravit v hlavičce návrháře aktivity **clearcollection \<T >** nebo v poli **DisplayName** v mřížce vlastností. Ostatní vlastnosti je nutné upravit v mřížce vlastností.
+ Návrhář aktivity **ClearCollection \<T> ** lze přetáhnout ze **sady nástrojů** a umístit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence> . Tím se vytvoří <xref:System.Activities.Statements.ClearCollection%601> aktivita s výchozím nastavením <xref:System.Activities.Activity.DisplayName%2A> ClearCollection \<Int32> . (Ve výchozím nastavení je *pro TypeArgument* typu **Int32**. To lze změnit v mřížce vlastností.) <xref:System.Activities.Activity.DisplayName%2A>Hodnotu lze upravit v záhlaví návrháře aktivity **ClearCollection \<T> ** nebo v poli **DisplayName** v mřížce vlastností. Ostatní vlastnosti je nutné upravit v mřížce vlastností.
 
-### <a name="the-clearcollectiont-properties"></a>Vlastnosti ClearCollection \<T >
- V následující tabulce jsou uvedeny vlastnosti <xref:System.Activities.Statements.ClearCollection%601> a popisuje, jak se používají v návrháři.
+### <a name="the-clearcollectiont-properties"></a>Vlastnosti ClearCollection \<T>
+ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.ClearCollection%601> vlastnosti a popisuje, jak se používají v návrháři.
 
-|Název vlastnosti|Požadováno|Použití|
+|Název vlastnosti|Požaduje se|Využití|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Určuje nepovinný popisný název aktivity <xref:System.Activities.Statements.ClearCollection%601>. Výchozí hodnota je ClearCollection \<Int32 >. I když hodnota <xref:System.Activities.Activity.DisplayName%2A> není bezpodmínečně nutná, je osvědčeným postupem použití jednoho.|
-|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Podmínka|Určuje kolekci, do které mají být položky vymazány. Tato kolekce je typu **ICollection \<TypeArgument >.** Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
-|*Pro TypeArgument*|Podmínka|Určuje typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601>. Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Určuje nepovinný popisný název <xref:System.Activities.Statements.ClearCollection%601> aktivity. Výchozí hodnota je ClearCollection \<Int32> . I když není <xref:System.Activities.Activity.DisplayName%2A> hodnota striktně nutná, je osvědčeným postupem použití jednoho.|
+|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Ano|Určuje kolekci, do které mají být položky vymazány. Tato kolekce je typu **ICollection \<TypeArgument> .** Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
+|*Pro TypeArgument*|Ano|Určuje typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601> . Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
 
 ## <a name="see-also"></a>Viz také
- [Kolekce](../workflow-designer/collection-activity-designers.md) [AddToCollection \<T >](../workflow-designer/addtocollection-t-activity-designer.md) [ExistsInCollection \<T >](../workflow-designer/existsincollection-t-activity-designer.md) [RemoveFromCollection \<T >](../workflow-designer/removefromcollection-t-activity-designer.md)
+ [Collection](../workflow-designer/collection-activity-designers.md) [AddToCollection \<T> ](../workflow-designer/addtocollection-t-activity-designer.md) kolekce [ExistsInCollection \<T> ](../workflow-designer/existsincollection-t-activity-designer.md) [RemoveFromCollection \<T> ](../workflow-designer/removefromcollection-t-activity-designer.md)

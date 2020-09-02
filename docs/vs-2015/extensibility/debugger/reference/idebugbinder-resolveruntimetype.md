@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveRuntimeType | Dokumentace Microsoftu
+title: 'IDebugBinder:: ResolveRuntimeType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 69b1418c76e01b87bcd6d992a82ce58287e79ceb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192290"
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda určí run-time typu objektu.  
+Tato metoda určuje typ běhu objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int ResolveRuntimeType(
   
 #### <a name="parameters"></a>Parametry  
  `pObject`  
- [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) vyřešit.  
+ pro [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , který se má vyřešit.  
   
  `ppResolved`  
- [out] Vrátí typ objektu jako [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ mimo Vrátí typ objektu jako objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Za běhu typ objektu není vždy znám v době kompilace. Například pomocí polymorfismus, argument může být předán funkci jako její základní třídě, jako je například třída tlačítek. Skutečný argument může být odvozené třídy, jako je například třída tlačítek přepínače.  
+ Běhový typ objektu není vždy znám v době kompilace. Například pomocí polymorfismus lze argument předat funkci jako základní třídu, jako je například třída Button. Skutečný argument může být odvozenou třídou, jako je například třída přepínačů.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

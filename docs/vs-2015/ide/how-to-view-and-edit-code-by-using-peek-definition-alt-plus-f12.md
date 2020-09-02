@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40772919031200466999df2dfbf651fae3ee01e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670572"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Postupy: Zobrazení a úpravy kódu s použitím funkce Náhled definice (ALT+F12)
@@ -21,7 +21,7 @@ ms.locfileid: "72670572"
 
 Pomocí příkazu **Náhled definice** můžete zobrazit a upravit kód bez přepínání mimo kód, který píšete. **Náhled definice** a **Přejít k definici** zobrazí stejné informace, ale **Náhled definice** je zobrazí v místním okně a **Přejít k definici** zobrazuje kód v samostatném okně kódu. **Přejít k definici** způsobí, že váš kontext (tj. aktivní okno kódu, aktuální řádek a pozice kurzoru) přepne do okna kód definice. Pomocí **náhledu definice**můžete zobrazit a upravit definici a přesunout se v rámci souboru definice a přitom zachovat místo v původním souboru kódu.
 
- Můžete použít **Náhled definice** s C#, Visual Basic a C++ Code. V Visual Basic **Náhled definice** zobrazuje odkaz na **Prohlížeč objektů** pro symboly, které nemají metadata definice (například .NET Framework typů, které jsou integrovány).
+ Můžete použít **Náhled definice** s kódem C#, Visual Basic a C++. V Visual Basic **Náhled definice** zobrazuje odkaz na **Prohlížeč objektů** pro symboly, které nemají metadata definice (například .NET Framework typů, které jsou integrovány).
 
 > [!IMPORTANT]
 > Tento příkaz nelze použít v žádné verzi Express sady Visual Studio 2013.
@@ -32,11 +32,11 @@ Pomocí příkazu **Náhled definice** můžete zobrazit a upravit kód bez pře
 
 1. **Náhled definice** můžete najít tak, že otevřete místní nabídku pro metodu, kterou chcete prozkoumat. (Klávesnice: Alt+F12)
 
-     Tento obrázek ukazuje okno **Náhled definice** pro metodu s názvem `Print()`:
+     Tento obrázek ukazuje okno **Náhled definice** pro metodu s názvem `Print()` :
 
      ![Náhled okna](../ide/media/peekwindow.png "PeekWindow")
 
-     Okno definice se zobrazí pod `printer.Print(“Hello World!”)`m řádkem v původním souboru. Okno neskryje žádný kód v původním souboru. Řádky, které následují volání `printer.Print(“Hello World!”)`, se zobrazí pod oknem definice.
+     Okno definice se zobrazí pod `printer.Print(“Hello World!”)` řádkem v původním souboru. Okno neskryje žádný kód v původním souboru. Řádky, které následují `printer.Print(“Hello World!”)` volání, se zobrazí pod oknem definice.
 
 2. Kurzor můžete přesunout na jiné místo v okně definice kódu. Můžete se i nadále pohybovat v původním okně kódu nad nebo pod oknem definice.
 
@@ -79,4 +79,4 @@ Pomocí příkazu **Náhled definice** můžete zobrazit a upravit kód bez pře
     > Můžete také použít stejné klávesové zkratky pro úpravu kódu v okně **Náhled definice** při použití jinde v aplikaci Visual Studio.
 
 ## <a name="see-also"></a>Viz také
- [Tipy pro vyšší produktivitu](../ide/productivity-tips-for-visual-studio.md)
+ [Tipy pro produktivitu](../ide/productivity-tips-for-visual-studio.md)

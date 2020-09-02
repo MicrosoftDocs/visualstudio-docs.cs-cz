@@ -1,5 +1,5 @@
 ---
-title: Vlastní položky které lze zabarvit | Dokumentace Microsoftu
+title: Vlastní barevné položky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,63 +12,63 @@ caps.latest.revision: 25
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 24a4db907ec859c6075c06956f86939047379897
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63409361"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795751"
 ---
 # <a name="custom-colorable-items"></a>Vlastní položky, které lze zabarvit
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Seznam typů můžete přepsat pro barevné označování, jako jsou klíčová slova a komentáře, díky implementaci vlastní, které lze zabarvit položky jako součást služby jazyka.  
+Můžete přepsat seznam typů pro Colorizing, jako jsou klíčová slova a komentáře, implementací vlastních barevně vypsaných položek jako součást vaší jazykové služby.  
   
-## <a name="user-settings-of-colorable-items"></a>Uživatelská nastavení položek, které lze zabarvit  
- Můžete zobrazit **písma a barvy** dialogové okno tak, že vyberete **možnosti** na **nástroje** nabídky a následným výběrem **písma a barvy** v části **prostředí**. Když vyberte zobrazení, jako je například **textový Editor** nebo **příkazové okno**, **zobrazení položek** seznamu jsou uvedeny všechny které lze zabarvit položky, které zobrazují. Můžete zobrazit a změnit písmo, velikost, barvu popředí a barva pozadí pro každou položku které lze zabarvit. Vaše volby jsou uloženy v mezipaměti v registru a přistupuje, které lze zabarvit název.  
+## <a name="user-settings-of-colorable-items"></a>Uživatelské nastavení barevných položek  
+ Můžete zobrazit dialogové okno **písma a barvy** výběrem možnosti v nabídce **nástroje** a následným výběrem **Možnosti** **písma a barvy** v části **prostředí**. Když vyberete zobrazení, například **textový editor** nebo **příkazové okno**, zobrazí se v seznamu **položky zobrazení** všechny barvy, které lze zobrazit. Můžete zobrazit a změnit písmo, velikost, barvu popředí a barvu pozadí pro každou položku barev. Vaše volby se ukládají do mezipaměti v registru a jsou dostupné pro barevný název položky.  
   
-## <a name="presentation-of-colorable-items"></a>Prezentace položek, které lze zabarvit  
- Protože zpracovává přepsání uživatele, které lze zabarvit položek v rozhraní IDE **písma a barvy** dialogové okno, je nutné zadat pouze položky vlastní které lze zabarvit s názvem. Tento název se, co se zobrazuje **zobrazení položek** seznamu. Zobrazí položky, které lze zabarvit v abecedním pořadí. K seskupení vlastní služba jazyka, které lze zabarvit položky, můžete začít názvem název jazyka, například **NewLanguage - komentář** a **NewLanguage – klíčové slovo**.  
+## <a name="presentation-of-colorable-items"></a>Prezentace barevně vydaných položek  
+ Vzhledem k tomu, že rozhraní IDE zpracovává přepsání barev uživatelem v dialogovém okně **písma a barvy** , potřebujete pouze každou vlastní barevnou položku s názvem. Tento název se zobrazí v seznamu **položky zobrazení** . Vybarvení položek se zobrazí v abecedním pořadí. Chcete-li seskupit vlastní barevné položky vaší jazykové služby, můžete začít s názvem jazyka, například **NewLanguage-Comment** a **NewLanguage-klíčové slovo**.  
   
 > [!CAUTION]
-> V které lze zabarvit název pro zabránění kolizím s existující názvy, které lze zabarvit položky, měli byste zahrnout název jazyka. Pokud změníte název jedné z položek aplikace které lze zabarvit během vývoje, je nutné obnovit, který byl vytvořen při prvním získal přístup k které lze zabarvit položky mezipaměti. Můžete resetovat experimentální mezipaměť nástroj CreateExpInstance, který se instaluje se sadou Visual Studio SDK, obvykle v adresáři  
+> V názvu barevné položky byste měli zahrnout název jazyka, abyste se vyhnuli kolizím s existujícími názvy položek barev. Pokud změníte název jedné z položek barev během vývoje, musíte resetovat mezipaměť, která byla vytvořena při prvním použití barevně vydaných položek. Experimentální mezipaměť můžete obnovit pomocí nástroje CreateExpInstance, který se instaluje se sadou Visual Studio SDK, obvykle v adresáři.  
 >   
-> **C:\Program Files (x86)\Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin**  
+> **C:\Program Files (x86) \Microsoft Visual Studio 14.0 \ VSSDK\VisualStudioIntegration\Tools\Bin**  
 >   
-> Resetování mezipaměti, volejte `CreateExpInstance /Reset`. Další informace o CreateExpInstance najdete v tématu [nástroj CreateExpInstance](../../extensibility/internals/createexpinstance-utility.md).  
+> Chcete-li obnovit mezipaměť, zavolejte `CreateExpInstance /Reset` . Další informace o CreateExpInstance najdete v tématu [CreateExpInstance Utility](../../extensibility/internals/createexpinstance-utility.md).  
   
- První položka v seznamu položek, které lze zabarvit nikdy odkazován. První položka odpovídá na 0, které lze zabarvit položky index a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] vždy poskytuje výchozí barvy textu a atributy pro danou položku. Nejjednodušší způsob práci s touto položkou neodkazovaná je zadat zástupný symbol které lze zabarvit položku v seznamu jako první položku.  
+ Na první položku v seznamu položek, na které jsou barvy, se nikdy neodkazuje. První položka odpovídá indexu položek s barvou 0 a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] vždy poskytuje výchozí barvy textu a atributy pro tuto položku. Nejjednodušší způsob, jak se vypořádat s touto neodkaznou položkou, je dodat v seznamu zástupnou položku s barvou barvy jako první položku.  
   
-## <a name="implementing-custom-colorable-items"></a>Implementace vlastních položek které lze zabarvit  
+## <a name="implementing-custom-colorable-items"></a>Implementace vlastních barevně vybarvené položky  
   
-1. Definujte, co musí barevně zvýrazněné v jazyce, třeba – klíčové slovo, operátor a identifikátor.  
+1. Definujte, co musí být zabarvení v jazyce, například klíčové slovo, operátor a identifikátor.  
   
-2. Vytvořte výčet těchto položek, které lze zabarvit.  
+2. Vytvořte výčet těchto položek barev.  
   
-3. Přiřaďte typy tokenů vrátil z analyzátor a skener s výčtové hodnoty.  
+3. Přidružte typy tokenů vrácené z analyzátoru nebo skeneru k výčtovým hodnotám.  
   
-    Hodnoty, představující typy tokenů může být například stejné hodnoty, které lze zabarvit vlastní položky výčtu.  
+    Například hodnoty reprezentující typy tokenů mohou být stejné hodnoty ve výčtu vlastních vybarvenéch položek.  
   
-4. Ve vaší implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metoda ve vaší <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> objektu, naplnění seznamu atributy s hodnotami z vaší vlastní, které lze zabarvit položky výčtu odpovídající typy tokenů vrátil analyzátor a skener.  
+4. V implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metody v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> objektu vyplní seznam atributů hodnotami z vlastního výčtu položek, které odpovídají typům tokenů vráceným z analyzátoru nebo skeneru.  
   
-5. Ve stejné třídě, která implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní, implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> rozhraní a jeho dvě metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>.  
+5. Ve stejné třídě, která implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní, implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> rozhraní a jeho dvě metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> .  
   
 6. Implementujte rozhraní <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>.  
   
-7. Pokud chcete zajistit podporu barvu 24-bit nebo vysoké hodnoty, implementovat taky <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> rozhraní.  
+7. Pokud chcete podporovat 24bitové nebo vysoké hodnoty barev, implementujte také <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> rozhraní.  
   
-8. V objektu služby jazyka, vytvořte seznam, který obsahuje vaše <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> objekty, pro které lze zabarvit položky můžete určit analyzátor a skener.  
+8. V objektu jazykové služby vytvořte seznam obsahující vaše <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> objekty, jednu pro každou barevnou položku, kterou může váš analyzátor nebo skener identifikovat.  
   
-    Každá položka v seznamu můžete přistupovat pomocí odpovídající hodnotu z výčtu vlastní, které lze zabarvit položky. Použijte hodnoty výčtu jako index do seznamu. Nikdy je nevyužili první položku v seznamu, protože výchozí text odpovídá stylu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] vždy zpracovává samotný. To se může kompenzovat vložením které lze zabarvit položky zástupný text na začátku seznamu.  
+    K jednotlivým položkám v seznamu můžete přistupovat pomocí odpovídající hodnoty z výčtu vlastních vybarvenéch položek. Použijte hodnoty výčtu jako index do seznamu. První položka v seznamu nikdy neproběhla, protože odpovídá výchozímu stylu textu, který se [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] vždy sám zpracovává. Můžete to kompenzovat vložením zástupné položky barvy na začátek seznamu.  
   
-9. Ve vaší implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> metody, vrátí počet položek, které ve vaší vlastní, které lze zabarvit položky seznamu.  
+9. V implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> metody vrátí počet položek v seznamu vlastních položek barevně.  
   
-10. Ve vaší implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> metodu, vrací požadovaná které lze zabarvit položku ze seznamu.  
+10. V implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> metody vraťte požadovanou barevnou položku ze seznamu.  
   
-    Příklad toho, jak implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> rozhraní, naleznete v tématu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>.  
+    Příklad implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> rozhraní a naleznete v tématu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> .  
   
 ## <a name="see-also"></a>Viz také  
  [Model služby starší verze jazyka](../../extensibility/internals/model-of-a-legacy-language-service.md)   
  [Barevné zvýrazňování syntaxe ve vlastních editorech](../../extensibility/syntax-coloring-in-custom-editors.md)   
  [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
- [Implementace barevného zvýrazňování syntaxe](../../extensibility/internals/implementing-syntax-coloring.md)   
+ [Implementace Obarvení syntaxe](../../extensibility/internals/implementing-syntax-coloring.md)   
  [Postupy: Použití předdefinovaných položek, které lze zabarvit](../../extensibility/internals/how-to-use-built-in-colorable-items.md)

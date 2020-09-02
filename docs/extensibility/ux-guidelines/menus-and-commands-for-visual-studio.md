@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c1f22b7ac4377b600208c079b6af1eff7fc3cbfc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698389"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Nabídky a příkazy pro Visual Studio
@@ -75,7 +75,7 @@ ms.locfileid: "80698389"
 
 ##### <a name="core-menus"></a>Základní nabídky
 
-- File
+- Soubor
 
 - Upravit
 
@@ -93,7 +93,7 @@ ms.locfileid: "80698389"
 
 - Sestavení
 
-- Ladit
+- Ladění
 
 ##### <a name="context-specific-menus"></a>Konkrétní kontextové nabídky
 
@@ -111,7 +111,7 @@ ms.locfileid: "80698389"
 
 - Formát
 
-- Table
+- Tabulka
 
 ##### <a name="when-designing-main-menus-adhere-to-these-rules"></a>Při navrhování hlavních nabídek dodržovat tato pravidla:
 

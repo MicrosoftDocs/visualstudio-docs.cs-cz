@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Selhání přihlášení pracovní skupiny vzdálené | Dokumentace Microsoftu'
+title: 'Chyba: selhání vzdáleného přihlášení pracovní skupiny | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,64 +24,64 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 09f018982b81535ae23eafe7158aa88c0b6b08a7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438339"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64798713"
 ---
-# <a name="error-workgroup-remote-logon-failure"></a>Chyba: Selhání přihlášení vzdálené pracovní skupiny
+# <a name="error-workgroup-remote-logon-failure"></a>Chyba: Selhání vzdáleného přihlášení pracovní skupiny
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Přečte tuto chybu:  
+Tato chyba čte:  
   
- Chyba přihlášení: Neznámé uživatelské jméno nebo špatné heslo  
+ Chyba přihlášení: neznámé uživatelské jméno nebo špatné heslo  
   
  **Příčina**  
   
- Této chybě může dojít při ladění z počítače v pracovní skupině a zkuste se připojit ke vzdálenému počítači. Mezi možné příčiny patří:  
+ K této chybě může dojít při ladění z počítače v pracovní skupině a pokusu o připojení ke vzdálenému počítači. Mezi možné příčiny patří:  
   
-- Neexistuje žádný účet s odpovídajícím názvem a hesel na vzdáleném počítači.  
+- Ve vzdáleném počítači není žádný účet se shodným jménem a heslem.  
   
-- Pokud počítač Visual Studio a vzdálený počítač jsou v pracovních skupinách, této chybě může dojít z důvodu výchozí **místní zásady zabezpečení** nastavení na vzdáleném počítači. Ve výchozím nastavení **místní zásady zabezpečení** nastavení je **Guest - místní uživatelé ověřit jako hosta**. Chcete-li ladit na tento instalační program, je nutné změnit nastavení ve vzdáleném počítači, na **Classic - místní uživatelé ověřováni pomocí svých účtů**.  
+- Pokud je počítač se systémem Visual Studio i vzdálený počítač v pracovních skupinách, k této chybě může dojít z důvodu výchozího nastavení **místních zásad zabezpečení** na vzdáleném počítači. Výchozí nastavení **místních zásad zabezpečení** je **jenom hosté – místní uživatelé se ověřují jako host**. Chcete-li provést ladění v této instalaci, je třeba změnit nastavení na vzdáleném počítači na **klasický – místní uživatelé se ověřují jako sami**.  
   
 > [!NOTE]
-> Musíte být správcem provádět následující úlohy.  
+> Chcete-li provést následující úkoly, musíte být správcem.  
   
-### <a name="to-open-the-local-security-policy-window"></a>Chcete-li otevřít okno místní zásady zabezpečení  
+### <a name="to-open-the-local-security-policy-window"></a>Otevření okna místní zásady zabezpečení  
   
-1. Spustit **secpol.msc** modul snap-in konzoly Microsoft Management Console. Zadejte secpol.msc ve službě Windows search pole spustit Windows nebo na příkazovém řádku.  
+1. Spusťte modul snap-in **secpol. msc** Microsoft Management Console. Zadejte secpol. msc ve Windows Search, v poli Windows Run nebo na příkazovém řádku.  
   
-### <a name="to-add-user-rights-assignments"></a>Chcete-li přidat přiřazení uživatelských práv  
+### <a name="to-add-user-rights-assignments"></a>Přidání přiřazení uživatelských práv  
   
-1. Otevřete místní  
+1. Otevřete Loca  
   
-2. Otevřít **místní zásady zabezpečení** okna.  
+2. Otevřete okno **místní zásady zabezpečení** .  
   
-3. Rozbalte **místní zásady** složky.  
+3. Rozbalte složku **místní zásady** .  
   
-4. Klikněte na tlačítko **přiřazení uživatelských práv**.  
+4. Klikněte na **přiřazení uživatelských práv**.  
   
-5. V **zásady** sloupce, klikněte dvakrát na **ladit programy** zobrazíte aktuální přiřazení zásad místní skupiny v **nastavení místních zásad zabezpečení** dialogové okno.  
+5. Ve sloupci **zásady** poklikejte na **ladit programy** a zobrazte aktuální přiřazení místních zásad skupiny v dialogovém okně **Nastavení místních zásad zabezpečení** .  
   
-     ![Local Security Policy User Rights](../debugger/media/dbg-err-localsecuritypolicy-userrightsdebugprograms.png "DBG_ERR_LocalSecurityPolicy_UserRightsDebugPrograms")  
+     ![Uživatelská práva místních zásad zabezpečení](../debugger/media/dbg-err-localsecuritypolicy-userrightsdebugprograms.png "DBG_ERR_LocalSecurityPolicy_UserRightsDebugPrograms")  
   
-6. Pokud chcete přidat nové uživatele, klikněte na tlačítko **přidat uživatele nebo skupinu** tlačítko.  
+6. Chcete-li přidat nové uživatele, klikněte na tlačítko **Přidat uživatele nebo skupinu** .  
   
-### <a name="to-change-the-sharing-and-security-model"></a>Chcete-li změnit sdílení a modelu zabezpečení  
+### <a name="to-change-the-sharing-and-security-model"></a>Změna modelu sdílení a zabezpečení  
   
-1. Otevřít **místní zásady zabezpečení** okna.  
+1. Otevřete okno **místní zásady zabezpečení** .  
   
-2. Rozbalte **místní zásady** složky.  
+2. Rozbalte složku **místní zásady** .  
   
-3. Klikněte na tlačítko **možnosti zabezpečení**.  
+3. Klikněte na možnost **Možnosti zabezpečení**.  
   
-4. V **zásady** sloupce, klikněte dvakrát na **přístup k síti: Model sdílení a zabezpečení pro místní účty**.  
+4. Ve sloupci **zásady** poklikejte na **přístup k síti: sdílení a model zabezpečení místních účtů**.  
   
-5. V **přístup k síti: Model sdílení a zabezpečení pro místní účty** dialogové okno pole, změňte hodnotu na **Classic - místní uživatelé ověřováni pomocí svých účtů** a klikněte na tlačítko **použít** tlačítko.  
+5. V dialogovém okně **přístup k síti: model sdílení a zabezpečení místních účtů** změňte hodnotu na **klasický – místní uživatelé se ověřují jako sami** a klikněte na tlačítko **použít** .  
   
-     ![Local Security Policy Security Options](../debugger/media/dbg-err-localsecuritypolicy-securityoptions-networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")  
+     ![Možnosti zabezpečení místních zásad zabezpečení](../debugger/media/dbg-err-localsecuritypolicy-securityoptions-networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")  
   
 ## <a name="see-also"></a>Viz také  
- [Vzdálené ladění chyby a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Chyby vzdáleného ladění a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Vzdálené ladění](../debugger/remote-debugging.md)

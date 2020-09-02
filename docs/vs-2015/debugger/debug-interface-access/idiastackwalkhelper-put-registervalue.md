@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::put_registerValue | Dokumentace Microsoftu
+title: IDiaStackWalkHelper::p ut_registerValue | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 97494f2180d0aede2dfd8e1a539a0d957f9a0bcb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150076"
 ---
-# <a name="idiastackwalkhelperputregistervalue"></a>IDiaStackWalkHelper::put_registerValue
+# <a name="idiastackwalkhelperput_registervalue"></a>IDiaStackWalkHelper::put_registerValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Nastaví hodnotu registru.  
@@ -36,16 +36,16 @@ HRESULT put_registerValue ( 
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- [in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující k zápisu do registru.  
+ pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) určující registraci, do které se má zapisovat.  
   
  `NewVal`  
- [in] Nové hodnoty registru.  
+ pro Nová hodnota registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Bez ohledu na velikost hodnota by měla implementace ukládání co do registru obvykle obsahuje pouze. Například 8bitový registr, by uchovával jen nejnižší 8 bitů předané hodnoty.  
+ Navzdory velikosti hodnoty by implementace měla ukládat pouze to, co registr obvykle uchovává. Například 8bitové Registry by obsahovaly pouze nejnižší 8 bitů dané hodnoty.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

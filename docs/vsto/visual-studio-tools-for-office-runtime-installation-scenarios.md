@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Tools for Office runtime instalace scénáře
+title: Scénáře instalace Visual Studio Tools for Office runtime
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,59 +13,59 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 507bce496405f615343a9c109ff71196d814af08
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438728"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64800188"
 ---
-# <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Visual Studio Tools for Office runtime instalace scénáře
-  Můžete nainstalovat Visual Studio 2010 Tools for Office runtime třemi způsoby:
+# <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Scénáře instalace Visual Studio Tools for Office runtime
+  Sady Visual Studio 2010 Tools for Office runtime můžete nainstalovat třemi způsoby:
 
 - Při instalaci sady Visual Studio.
 
-- Při instalaci aplikace Microsoft Office.
+- Při instalaci systém Microsoft Office.
 
-- Když instalujete Visual Studio 2010 Tools for Office runtime redistributable.
+- Při instalaci nástroje Visual Studio 2010 Tools for Office Runtime Redistributable.
 
-  Součásti modulu runtime, které jsou nainstalovány, závisí na konfiguraci počítače a instalačního scénáře.
+  Nainstalované komponenty modulu Runtime závisí na konfiguraci počítače a scénáři instalace.
 
-## <a name="runtime-components-that-are-installed-in-each-installation-scenario"></a>Součásti modulu runtime, které jsou nainstalovány v každém scénáři instalace
- Visual Studio 2010 Tools for Office runtime má tři komponenty: zavaděče řešení Office, rozšíření Office pro rozhraní .NET Framework 3.5 a rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Při instalaci modulu runtime, je vždy nainstalován zavaděče řešení Office. Instalace rozšíření Office pro rozhraní .NET Framework, závisí na konfiguraci počítače a instalačního scénáře. Pokud některé z rozšíření Office nejde nainstalovat při první instalaci modulu runtime, modul runtime automaticky nainstaluje chybějící rozšíření Office později, pokud jsou splněny některé požadavky. Tato funkce modulu runtime se nazývá *na požádání nainstalovat*.
+## <a name="runtime-components-that-are-installed-in-each-installation-scenario"></a>Běhové komponenty, které jsou nainstalovány v každém scénáři instalace
+ Sady Visual Studio 2010 Tools for Office runtime mají tři komponenty: zavaděč řešení Office, rozšíření Office pro .NET Framework 3,5 a rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Při instalaci modulu runtime je vždy nainstalován zavaděč řešení Office. Instalace rozšíření Office pro .NET Framework závisí na konfiguraci počítače a scénáři instalace. Pokud se jedno z rozšíření Office nedá nainstalovat při první instalaci modulu runtime, modul runtime automaticky nainstaluje chybějící rozšíření Office později, až budou splněné určité požadavky. Tato funkce modulu runtime se nazývá *instalace na vyžádání*.
 
- Následující tabulka uvádí, které součásti modulu runtime jsou nainstalovány ve výchozím nastavení v každém scénáři instalace modulu runtime. Později se zobrazí další informace o jednotlivých scénářů.
+ Následující tabulka ukazuje, které součásti modulu runtime jsou nainstalovány ve výchozím nastavení v každém scénáři instalace modulu runtime. Další informace o jednotlivých scénářích se zobrazí později.
 
-|Scénáře instalace modulu runtime|Zavaděče řešení Office|Rozšíření Office pro rozhraní .NET Framework 3.5|Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]|Rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]|
+|Scénář instalace modulu runtime|Zavaděč řešení pro Office|Rozšíření Office pro .NET Framework 3,5|Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]|Rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]|
 |-----------------------------------|----------------------------|--------------------------------------------------| - |---------------------------------------------------------------------------|
-|S [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] a novější|Ano|Ano, pokud je již nainstalováno rozhraní .NET Framework 3.5.|Ano|Ano|
-|s [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Ano|Ano, pokud je již nainstalováno rozhraní .NET Framework 3.5.|Ne|Ne|
-|S Office 2010 Service Pack 1 (SP1) nebo novější|Ano|Ano, pokud je již nainstalováno rozhraní .NET Framework 3.5.|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalována.|Ne|
-|S modulem runtime redistributable|Ano|Ano, pokud je již nainstalováno rozhraní .NET Framework 3.5|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalována.|Ano, pokud [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] je již nainstalována.|
+|S [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] a novější|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ano|Ano|
+|Řetězce [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ne|Ne|
+|S aktualizací Office 2010 Service Pack 1 (SP1) nebo novější|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno.|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|Ne|
+|S redistribuovatelným modulem runtime|Ano|Ano, pokud je již .NET Framework 3,5 nainstalováno|Ano, pokud [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] je již nainstalováno.|Ano, pokud [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] je již nainstalováno.|
 
-### <a name="install-the-runtime-with-visual-studio-or-the-microsoft-office-developer-tools-for-visual-studio"></a>Instalace modulu runtime pomocí sady Visual Studio nebo nástroje Microsoft Office Developer Tools pro Visual Studio
- Při instalaci nástroje Office developer tools v sadě Visual Studio, rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] a [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] se vždy instalují na vývojovém počítači. Rozšíření Office pro rozhraní .NET Framework 3.5 instalují pouze v případě, že rozhraní .NET Framework 3.5 už existuje ve vývojovém počítači. Pokud je po instalaci nainstalovat rozhraní .NET Framework 3.5 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], modul runtime automaticky nainstaluje rozšíření Office pro rozhraní .NET Framework 3.5 při prvním vytvoření projektu aplikace Office cílí na rozhraní .NET Framework 3.5.
+### <a name="install-the-runtime-with-visual-studio-or-the-microsoft-office-developer-tools-for-visual-studio"></a>Instalace modulu runtime se sadou Visual Studio nebo Microsoft Office Developer Tools for Visual Studio
+ Při instalaci sady Office Developer Tools v sadě Visual Studio jsou rozšíření Office pro a nástroje [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] vždy nainstalovány ve vývojovém počítači. Rozšíření Office pro .NET Framework 3,5 jsou nainstalována pouze v případě, že je ve vývojovém počítači již .NET Framework 3,5. Pokud po instalaci nainstalujete .NET Framework 3,5 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , modul runtime automaticky nainstaluje rozšíření Office pro .NET Framework 3,5 při prvním vytvoření projektu Office, který cílí na .NET Framework 3,5.
 
 > [!WARNING]
-> Nelze vytvořit projekt sady Office, který se zaměřuje rozhraní .NET Framework 3.5 pomocí [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] nebo novější.
+> Nemůžete vytvořit projekt Office, který cílí na .NET Framework 3,5 pomocí [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] nebo novějšího.
 
- Další informace o tom, jak Office developer tools nainstalovat, naleznete v tématu [jak: Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md).
+ Další informace o tom, jak nainstalovat sadu Office Developer Tools, najdete v tématu [How to: Configure a Computer for the Office Solutions](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md).
 
-### <a name="install-the-runtime-with-office"></a>Nainstalovat modul runtime sady Office
- Při instalaci sady Office, rozšíření Office pro rozhraní .NET Framework 3.5 instalují, pokud rozhraní .NET Framework 3.5 už existuje v počítači. Pokud po Office nainstalovat rozhraní .NET Framework 3.5, modul runtime automaticky nainstaluje rozšíření Office pro rozhraní .NET Framework 3.5 první čas, který se některé aplikace Office se pokusí načíst řešení, který cílí rozhraní .NET Framework 3.5.
+### <a name="install-the-runtime-with-office"></a>Instalace modulu runtime v Office
+ Když nainstalujete Office, nainstalují se rozšíření Office pro .NET Framework 3,5, pokud se v počítači už nachází .NET Framework 3,5. Pokud nainstalujete .NET Framework 3,5 po Office, modul runtime automaticky nainstaluje rozšíření Office pro .NET Framework 3,5 při prvním pokusu aplikace Office o načtení řešení, které cílí na .NET Framework 3,5.
 
- Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, nejsou nainstalovány se sadou Office, i v případě, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější je již k dispozici při instalaci sady Office.
+ Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější nejsou nainstalovaná s Office, i když [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] už při instalaci Office existuje nebo novější.
 
- Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] jsou nainstalovány se sadou Office. Získat rozšíření Office pro koncové uživatele [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] instalací aktualizace Windows.
+ Rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] jsou nainstalována v systému Office. Koncoví uživatelé můžou získat rozšíření Office pro [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] pomocí instalace služby Windows Update.
 
- Pokud chcete zajistit, aby uživatelé měli potřebnými rozšířeními ke používají vaše aplikace, zahrňte nejnovější verzi sady Visual Studio 2010 Tools for Office runtime redistributable, což je nezbytná podmínka pro vaše řešení. Další informace o požadavcích najdete v části [požadavky řešení Office na nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e).
+ Chcete-li zajistit, aby vaši uživatelé měli potřebná rozšíření pro použití vaší aplikace, zahrňte nejnovější verzi nástroje Visual Studio 2010 Tools for Office Runtime redistributable jako předpoklad pro vaše řešení. Další informace o požadavcích najdete v tématu [předpoklady pro řešení pro systém Office pro nasazení](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e).
 
-### <a name="install-the-runtime-by-using-the-runtime-redistributable"></a>Instalace modulu runtime pomocí modulu runtime redistributable
- Modul runtime můžete nainstalovat ručně spuštěním Visual Studio 2010 Tools for Office runtime redistributable nebo zahrnutím distribuovatelné jako předpoklad při nasazení řešení Office.
+### <a name="install-the-runtime-by-using-the-runtime-redistributable"></a>Instalace modulu runtime pomocí prostředí Runtime Redistributable
+ Modul runtime můžete nainstalovat spuštěním sady Visual Studio 2010 Tools for Office Runtime redistributable ručně nebo zahrnutím distribuovat jako předpokladu při nasazení řešení pro systém Office.
 
- Při instalaci modulu runtime pomocí nástroje Visual Studio 2010 Tools pro systém Office runtime redistributable, rozšíření Office pro rozhraní .NET Framework 3.5, rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo později jsou nainstalovány, pokud odpovídající verze rozhraní .NET Rozhraní jsou již přítomny v počítači. Pokud počítači chybí, některou z těchto verzí rozhraní .NET Framework při instalaci modulu runtime, rozšíření Office pro chybějící verzi rozhraní .NET Framework nejsou nainstalovány v daném čase. Pokud nainstalujete chybějící verzi rozhraní Framework .NET, modul runtime automaticky nainstaluje odpovídající rozšíření Office, které se řešení, které vyžaduje rozšíření je nainstalované (Pokud byl nainstalován modul runtime s řešením, který byl nasazen s použitím technologie ClickOnce) nebo načtena (Pokud modul runtime byla nainstalována pomocí řešení, který je nasazený pomocí Instalační služby systému Windows).
+ Když nainstalujete modul runtime pomocí nástrojů Visual Studio 2010 Tools for Office Runtime redistributable, nainstalují se rozšíření Office pro .NET Framework 3,5 a rozšíření Office pro [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, pokud v počítači již existují odpovídající verze .NET Framework. Pokud v počítači chybí jedna z následujících verzí .NET Framework při instalaci modulu runtime, nejsou v tuto chvíli nainstalovaná rozšíření Office pro chybějící verze .NET Framework. Pokud nainstalujete chybějící verzi .NET Framework později, modul runtime automaticky nainstaluje odpovídající rozšíření Office až do příštího řešení, které vyžaduje instalaci rozšíření (pokud byl modul runtime instalován s řešením nasazeným pomocí technologie ClickOnce) nebo načten (pokud byl modul runtime instalován s řešením, které bylo nasazeno pomocí Instalační služba systému Windows).
 
- Další informace týkající se požadované součásti v řešení technologie ClickOnce naleznete v tématu [jak: Instalace požadovaných součástí na počítačích koncových uživatelů, které spouštějí řešení Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98). Další informace o tom, jak nainstalovat modul runtime z balíčku redistributable ručně, najdete v části [jak: Nainstalovat Visual Studio Tools for Office runtime redistributable](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md).
+ Další informace o tom, jak zahrnout požadavky v řešení ClickOnce, najdete v tématu [Postup: instalace požadovaných součástí na počítačích koncových uživatelů ke spouštění řešení pro systém Office](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98). Další informace o tom, jak nainstalovat modul runtime z redistribuovatelného balíčku ručně, naleznete v tématu [How to: Install the Visual Studio Tools for Office Redistributable runtime](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md).
 
-## <a name="see-also"></a>Viz také:
-- [Visual Studio Tools for Office runtime – přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md)
-- [Sestavení v nástrojích Visual Studio Tools pro systém Office runtime](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)
+## <a name="see-also"></a>Viz také
+- [Přehled prostředí Visual Studio Tools for Office runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md)
+- [Sestavení v modulu runtime Visual Studio Tools for Office](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)

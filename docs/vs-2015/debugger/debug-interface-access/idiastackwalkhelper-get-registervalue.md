@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::get_registerValue | Dokumentace Microsoftu
+title: 'IDiaStackWalkHelper:: get_registerValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4dde30ebcda46d75271b15ec5b7f7c1ac49f384b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150113"
 ---
-# <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
+# <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Načte hodnotu registru.  
@@ -36,16 +36,16 @@ HRESULT get_registerValue ( 
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- [in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující, které zaregistrovat k získání hodnoty z.  
+ pro Hodnota z výčtu [výčtu CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) určující, ze kterého registru se má získat hodnota.  
   
  `pRetVal`  
- [out] Vrátí aktuální hodnotu registru.  
+ mimo Vrátí aktuální hodnotu registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Bez ohledu na velikost `pRetVal` parametr, implementace by měla být uložena pouze co do registru obvykle obsahuje. Například 8bitový registr obsahuje pouze nejnižší 8 bitů předané hodnoty. Tato hodnota 8 bitů rozbalen do 64 bitů když tato metoda vrátí.  
+ Navzdory velikosti `pRetVal` parametru by implementace měla ukládat pouze to, co registr obvykle uchovává. Například 8bitový registr obsahuje pouze nejnižší 8 bitů dané hodnoty. Tato 16bitová hodnota je rozšířena na 64-bity při návratu z této metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

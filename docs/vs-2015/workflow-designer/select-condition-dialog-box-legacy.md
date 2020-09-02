@@ -14,18 +14,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bece06c618e5fcc0e91dcbd683b961979fd76dcf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846181"
 ---
 # <a name="select-condition-dialog-box-legacy"></a>Dialogové okno Vybrat podmínku (starší verze)
-Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší [!INCLUDE[wfd2](../includes/wfd2-md.md)] potřeba cílit na platformu [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Dialogové okno **vybrat podmínku** slouží k výběru podmínky deklarativního pravidla, které se má přiřadit k vlastnosti podmínky aktivity. Tyto podmínky pravidla jsou zpřístupněny jako vlastnosti v následujících programovací model Windows Workflow Foundation nedostupné aktivity:
 
-- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
+- [Aktivitou skupiny ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
 - [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 
@@ -42,7 +42,7 @@ Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve star
 |**Nové...**|Kliknutím otevřete [dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) a vytvořte novou podmínku pravidla.|
 |**Upravit...**|Kliknutím otevřete [dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) a upravte vybranou podmínku pravidla.|
 |**Přejmenovat...**|Kliknutím otevřete dialogové okno, které slouží k přejmenování vybrané podmínky pravidla.|
-|**Delete**|Kliknutím odstraníte vybranou podmínku pravidla.|
+|**Odstranit**|Kliknutím odstraníte vybranou podmínku pravidla.|
 |**Náhled podmínky**|Zobrazí výraz podmínky pro vybranou podmínku pravidla.|
 |**OK**|Kliknutím přiřadíte podmínku vybrané pravidlo k podmínce aktivity.|
 
@@ -51,4 +51,4 @@ Toto téma popisuje, jak používat dialogové okno **vybrat podmínku** ve star
  Další informace o podmínkách najdete v tématu [použití podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx).
 
 ## <a name="see-also"></a>Viz také
- [Dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [: vytvoření deklarativní podmínky pravidla (starší verze)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md) [pomocí podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx) pomocí aktivity [aktivitou skupiny ConditionedActivityGroup pomocí](https://msdn2.microsoft.com/library/bb675237.aspx) [IfElseBranchActivity](https://msdn2.microsoft.com/library/bb628465.aspx) [aktivity pomocí](https://msdn2.microsoft.com/library/bb628544.aspx) [](https://msdn2.microsoft.com/library/bb628552.aspx) [Návrháře starší verze pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)
+ [Dialogové okno Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) [: vytvoření deklarativní podmínky pravidla (starší verze)](../workflow-designer/how-to-create-a-declarative-rule-condition-legacy.md) [pomocí podmínek v pracovních postupech](https://msdn2.microsoft.com/library/bb628447.aspx) pomocí aktivity [aktivitou skupiny ConditionedActivityGroup pomocí](https://msdn2.microsoft.com/library/bb675237.aspx) [IfElseBranchActivity](https://msdn2.microsoft.com/library/bb628465.aspx) [aktivity pomocí](https://msdn2.microsoft.com/library/bb628544.aspx) [Using the WhileActivity Activity](https://msdn2.microsoft.com/library/bb628552.aspx) [Návrháře starší verze pro programovací model Windows Workflow Foundation nápovědu k uživatelskému rozhraní](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

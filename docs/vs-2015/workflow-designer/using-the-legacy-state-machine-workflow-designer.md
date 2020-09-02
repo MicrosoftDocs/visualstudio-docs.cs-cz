@@ -19,14 +19,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 77bb2c7abb49dbf6fe973ebc80f8340000e4afbd
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846009"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>Používání starší verze návrháře postupu provádění stavového stroje
-Když vytváříte nový projekt pracovního postupu stavového stroje v [!INCLUDE[vs2010](../includes/vs2010-md.md)], který cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)], můžete použít buď **konzolovou aplikaci stavového pracovního postupu** , nebo šablonu projektu **stavová knihovna pracovního postupu stavového stroje** . Zvolíte-li jednu z těchto šablon projektu stavového počítače, zobrazí se Návrhář stavového počítače jako starší uživatelské rozhraní návrháře pracovních postupů. Informace o šablonách projektu se starší verzí stavů najdete v tématu [How to: Create a Application Workflow State Applications Console (starší verze)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) a [How to: Create a State Machine Workflows Library (starší verze)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
+Když vytváříte nový projekt pracovního postupu stavového stroje v [!INCLUDE[vs2010](../includes/vs2010-md.md)] , který cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] , můžete použít buď **konzolovou aplikaci stavového pracovního postupu** , nebo šablonu starší verze projektu **knihovny pracovního postupu stavového stroje** . Zvolíte-li jednu z těchto šablon projektu stavového počítače, zobrazí se Návrhář stavového počítače jako starší uživatelské rozhraní návrháře pracovních postupů. Informace o šablonách projektu se starší verzí stavů najdete v tématu [How to: Create a Application Workflow State Applications Console (starší verze)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) a [How to: Create a State Machine Workflows Library (starší verze)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
 
  Pracovní postup stavového stroje se skládá ze sady stavů. Jeden stav je označený jako počáteční stav. Každý stav může přijmout určitou sadu událostí. V závislosti na události lze přechod provést do jiného stavu. Pracovní postup stavového počítače může mít konečný stav. Při přechodu do konečného stavu se pracovní postup dokončí.
 

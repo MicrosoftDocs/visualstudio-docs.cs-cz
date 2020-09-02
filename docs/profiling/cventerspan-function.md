@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a5bb034d4a2501175d117256364082966a97af8a
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328973"
 ---
 # <a name="cventerspan-function"></a>Cventerspan – – funkce
@@ -102,17 +102,17 @@ HRESULT CvEnterSpanExVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList`Seznam argumentů
+ `argList` Seznam argumentů
 
- `category`Kategorie rozsahu
+ `category` Kategorie rozsahu
 
- `level`Úroveň důležitosti rozpětí.
+ `level` Úroveň důležitosti rozpětí.
 
- `pMarkerSeries`Platný kontext řady značek Nemůže mít hodnotu NULL.
+ `pMarkerSeries` Platný kontext řady značek Nemůže mít hodnotu NULL.
 
- `pMessage`Řetězec formátu zprávy Nemůže mít hodnotu NULL.
+ `pMessage` Řetězec formátu zprávy Nemůže mít hodnotu NULL.
 
- `ppSpan`Adresa proměnné, která bude obsahovat výsledný objekt span. Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
+ `ppSpan` Adresa proměnné, která bude obsahovat výsledný objekt span. Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
 
 ## <a name="return-value"></a>Návratová hodnota
  S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

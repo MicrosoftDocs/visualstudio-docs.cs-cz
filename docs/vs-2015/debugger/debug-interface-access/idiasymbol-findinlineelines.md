@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findInlineeLines | Dokumentace Microsoftu
+title: 'IDiaSymbol:: findInlineeLines | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 67803ae362c8a377593f77e100ab094f184483a0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149959"
 ---
 # <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte výčet, který umožňuje klientovi k iteraci v rámci informace čísla řádku všech funkcí, které jsou vloženy, přímo nebo nepřímo v tento symbol.  
+Načte výčet, který umožňuje klientovi iterovat informace o číslech řádků všech funkcí, které jsou vloženy přímo nebo nepřímo v tomto symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,14 +33,14 @@ HRESULT findInlineeLines ( 
   
 #### <a name="parameters"></a>Parametry  
  `ppResult`  
- [out] Obsahuje `IDiaEnumLineNumbers` objekt, který obsahuje seznam čísel řádků, které jsou načteny.  
+ mimo Obsahuje `IDiaEnumLineNumbers` objekt obsahující seznam čísel řádků, které jsou načteny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
- [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [Symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
- [Idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [Výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md)   
+ [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSession::findInlineeLines](../../debugger/debug-interface-access/idiasession-findinlineelines.md)

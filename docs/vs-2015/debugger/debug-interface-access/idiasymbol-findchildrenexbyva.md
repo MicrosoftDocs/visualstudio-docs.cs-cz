@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::findChildrenExByVA | Dokumentace Microsoftu
+title: 'IDiaSymbol:: findChildrenExByVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6798f3a1dfd8979db926960a6155c5b07e255f21
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149974"
 ---
 # <a name="idiasymbolfindchildrenexbyva"></a>IDiaSymbol::findChildrenExByVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte podřízené objekty daného symbolu, které jsou platné v zadané virtuální adresy.  
+Načte podřízené objekty symbolu, které jsou platné v zadané virtuální adrese.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,36 +39,36 @@ HRESULT findChildrenExByVA ( 
   
 #### <a name="parameters"></a>Parametry  
  `symtag`  
- [in] Určuje symbol značky podřízené položky, které se mají načíst, jak jsou definovány v [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené objekty, které se mají načíst.  
+ pro Určuje značky symbolů podřízených objektů, které mají být načteny, jak je definováno ve [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md). Nastavte na hodnotu `SymTagNull` pro všechny podřízené položky, které mají být načteny.  
   
  `name`  
- [in] Určuje název podřízenou položku, která se má načíst. Nastavte na `NULL` pro všechny podřízené objekty, které se mají načíst.  
+ pro Určuje název podřízených objektů, které mají být načteny. Nastavte na hodnotu `NULL` pro všechny podřízené položky, které mají být načteny.  
   
  `compareFlags`  
- [in] Určení možností porovnání uplatňovat na odpovídající název. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.  
+ pro Určuje možnosti porovnání, které se mají použít pro porovnávání názvů. Hodnoty výčtového výčtu [namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md) lze použít samostatně nebo v kombinaci.  
   
  `address`  
- [in] Určuje virtuální adresu.  
+ pro Určuje virtuální adresu.  
   
  `ppResult`  
- [out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) načíst objekt, který obsahuje seznam podřízenými symboly.  
+ mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` Pokud byl nalezen nejméně jeden podřízený prvek symbolu nebo vrátí `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.  
+ Vrátí `S_OK` , zda byl nalezen alespoň jeden podřízený symbol, nebo vrátí, `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky. v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Lokální symboly, které jsou vráceny zahrnovat informace o rozsahu za provozu.  
+ Mezi vracené místní symboly patří informace o živém rozsahu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia100.dll  
+ KNIHOVNA DLL: msdia100.dll  
   
 ## <a name="see-also"></a>Viz také  
- [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [Symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
- [Idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md)   
- [Idiasession::findchildren –](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [Výčet SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md)   
+ [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
+ [IDiaSession:: findChildren –](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md)

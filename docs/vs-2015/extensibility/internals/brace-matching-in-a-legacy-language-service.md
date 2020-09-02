@@ -1,5 +1,5 @@
 ---
-title: Související závorky ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Spárování složených závorek ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,47 +12,47 @@ caps.latest.revision: 28
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d6d7243c8032b22f9abe89021af138f638729011
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437637"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64787061"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>Související závorky ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Párování závorek pomáhá vývojářům sledovat prvky jazyka, které se musí se provést současně, jako je například závorky a složené závorky. Když vývojář přejde do pravé složené závorky, je zvýrazněn levou složenou závorku.  
+Spárování složených závorek pomáhá vývojářům sledovat prvky jazyka, které musí probíhat společně, například kulaté závorky a složené závorky. Když vývojář zadá pravou složenou závorku, zvýrazní se levá složená závorka.  
   
- Můžete porovnat dvě nebo tři společně se vyskytující prvky nazývané páry a trojic. Trojic jsou sady společně se vyskytující tři prvky. Například v jazyce C# `foreach` příkaz forms s trojitými: "`foreach()`","`{`", a "`}`". Po zadání pravé složené závorce, jsou zvýrazněny všechny tři prvky.  
+ Můžete porovnat dva nebo tři opakující se prvky, nazývané páry a tři. Tři jsou množiny tří prvků, které se společně vyskytují. Například v jazyce C# `foreach` příkaz tvoří Troji: " `foreach()` ", " `{` " a " `}` ". Po zadání pravé složené závorky se zvýrazní všechny tři prvky.  
   
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace o nový způsob implementace párování závorek, najdete v tématu [názorný postup: Zobrazení odpovídající složené závorky](../../extensibility/walkthrough-displaying-matching-braces.md).  
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace o novém způsobu implementace spárování složených závorek naleznete v tématu [Návod: zobrazení vyhovujících složených závorek](../../extensibility/walkthrough-displaying-matching-braces.md).  
   
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.  
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.  
   
- <xref:Microsoft.VisualStudio.Package.AuthoringSink> Třída podporuje obě páry a triples s <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> a <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> metody.  
+ <xref:Microsoft.VisualStudio.Package.AuthoringSink>Třída podporuje dvojice i Trojnásobky s <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> metodami a.  
   
 ## <a name="implementation"></a>Implementace  
- Služba jazyka je potřeba identifikovat všechny odpovídající elementy v jazyce a vyhledejte všechny odpovídající dvojice. To je obvykle provedeno pomocí implementace <xref:Microsoft.VisualStudio.Package.IScanner> ke zjištění odpovídající jazyk a poté použijete <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu tak, aby odpovídaly prvky.  
+ Služba jazyka potřebuje identifikovat všechny odpovídající prvky v jazyce a potom najít všechny odpovídající páry. To se obvykle provádí implementací <xref:Microsoft.VisualStudio.Package.IScanner> k detekci odpovídajícího jazyka a následným použitím <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody pro porovnání prvků.  
   
- <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> Metoda volá skener tokenizovat řádku a vrátíte se token těsně před blikajícím kurzorem. Skener označuje, že byla nalezena dvojice elementů jazyk tak, že nastavíte hodnotu tokenu aktivační událost <xref:Microsoft.VisualStudio.Package.TokenTriggers> na aktuální token. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> Volání metod <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> metodu, která volá <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> metody s hodnotou z důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> najít odpovídající prvek jazyka. Když je nalezena odpovídající prvek jazyka, jsou zvýrazněny oba prvky.  
+ <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Metoda volá skener, aby tokenizovat čáru a vrátila token těsně před blikajícím kurzorem. Skener indikuje, že byl nalezen pár jazykových prvků nastavením hodnoty triggeru tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> u aktuálního tokenu. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Metoda volá <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> metodu, která zase volá <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> metodu s hodnotou důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> pro nalezení odpovídajícího prvku jazyka. Při nalezení odpovídajícího prvku jazyka se zvýrazní oba elementy.  
   
- Úplný popis jak psát složenou závorku aktivuje zvýraznění závorek, najdete v části "Příklad analyzovat operace" v tématu [starší verze jazyka analyzátor a skener služby](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
+ Úplný popis způsobu, jakým se při zadávání složené závorky aktivují zvýrazňování složených závorek, najdete v části "ukázková operace analýzy" v tématu [analyzátor a skener služby starší verze jazyka](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
   
-## <a name="enabling-support-for-brace-matching"></a>Povolení podpory pro párování závorek  
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> Atribut lze nastavit `MatchBraces`, `MatchBracesAtCaret`, a `ShowMatchingBrace` pojmenované parametry, které nastavte odpovídající vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Jazykové předvolby vlastnosti můžete také nastavit uživatelem.  
+## <a name="enabling-support-for-brace-matching"></a>Povolení podpory pro spárování složených závorek  
+ <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>Atribut může nastavit `MatchBraces` `MatchBracesAtCaret` parametry, a `ShowMatchingBrace` s názvem, které nastaví odpovídající vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Vlastnosti jazykové předvolby může nastavit i uživatel.  
   
-|Položky registru|Vlastnost|Popis|  
+|Položka registru|Vlastnost|Popis|  
 |--------------------|--------------|-----------------|  
-|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Povolí párování závorek|  
-|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Povolí párování složených závorek jako blikající kurzor přesouvá.|  
-|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Zvýrazní odpovídající závorce.|  
+|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Povoluje spárování složených závorek.|  
+|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Povoluje spárování složených závorek s přesunutím blikajícího kurzoru.|  
+|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Zvýrazní spárovánou závorku.|  
   
-## <a name="matching-conditional-statements"></a>Odpovídající podmíněné příkazy  
- Můžete porovnat podmíněné příkazy, jako například `if`, `else if`, a `else`, nebo `#if`, `#elif`, `#else`, `#endif`, stejně jako odpovídající oddělovače. Je možné podtřídy <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy a zadejte metodu, která můžete přidat text a zahrnuje i oddělovačů vnitřní pole odpovídajících prvků.  
+## <a name="matching-conditional-statements"></a>Vyhovující podmíněné příkazy  
+ Můžete se shodovat s podmíněnými příkazy, jako `if` jsou, `else if` , a `else` , nebo,,, `#if` `#elif` `#else` `#endif` a stejným způsobem jako odpovídající oddělovače. Třídu můžete podtřídit <xref:Microsoft.VisualStudio.Package.AuthoringSink> a poskytnout metodu, která může přidat text a také oddělovače do interního pole odpovídající prvky.  
   
-## <a name="setting-the-trigger"></a>Nastavení aktivační události  
- Následující příklad ukazuje, jak detekovat odpovídající závorky, složených závorek a hranatých závorkách a nastavení aktivační události pro něj v skeneru. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> Metodu <xref:Microsoft.VisualStudio.Package.Source> třídy detekuje aktivační událost a volá analyzátor najít odpovídající dvojici (viz oddíl "Hledání shodu" v tomto tématu). V tomto příkladu je pouze pro ilustraci. Předpokládá, že skener obsahuje metodu `GetNextToken` , který identifikuje a vrátí tokeny z řádku textu.  
+## <a name="setting-the-trigger"></a>Nastavení triggeru  
+ Následující příklad ukazuje, jak detekovat párové závorky, složené závorky a hranaté závorky a nastavit pro ni aktivační událost ve skeneru. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Metoda ve <xref:Microsoft.VisualStudio.Package.Source> třídě detekuje Trigger a volá analyzátor, aby nalezl odpovídající dvojici (viz část hledání shody v tomto tématu). Tento příklad je určen pouze pro ilustrativní účely. Předpokládá, že váš skener obsahuje metodu `GetNextToken` , která identifikuje a vrací tokeny z řádku textu.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -86,8 +86,8 @@ namespace TestLanguagePackage
         }  
 ```  
   
-## <a name="matching-the-braces"></a>Odpovídající složené závorky  
- Tady je zjednodušený příklad pro závorek {} prvky jazyka, () a [] č. a jejich rozpětí k přidání <xref:Microsoft.VisualStudio.Package.AuthoringSink> objektu. Tento přístup není doporučený postup pro analýzu zdrojového kódu; je pouze pro ilustraci.  
+## <a name="matching-the-braces"></a>Sjednocení složených závorek  
+ Zde je zjednodušený příklad pro porovnání prvků jazyka {}, () a [] a přidání jejich rozsahů do <xref:Microsoft.VisualStudio.Package.AuthoringSink> objektu. Tento přístup není doporučeným přístupem k analýze zdrojového kódu; je určen pouze pro ilustrativní účely.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  

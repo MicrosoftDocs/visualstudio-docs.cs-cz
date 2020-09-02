@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_typeIds | Microsoft Docs
+title: 'IDiaSymbol:: get_typeIds | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 410f8afdac24139791c19c3936049c855a51d4f9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64798158"
 ---
-# <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
+# <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte pole hodnot typu specifických pro kompilátor identifikátor pro tento symbol.  
+Načte pole hodnot identifikátoru specifického pro kompilátor pro tento symbol.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT get_typeIds ( 
   
 #### <a name="parameters"></a>Parametry  
  `cTypeIds`  
- [in] Velikost vyrovnávací paměti pro data.  
+ pro Velikost vyrovnávací paměti pro uchovávání dat.  
   
  `pcTypeIds`  
- [out] Vrátí počet `typeIds` zapsána, nebo pokud `typeIds` je `NULL`, pak celkový počet identifikátorů typu k dispozici.  
+ mimo Vrátí počet `typeIds` napsaných čísel, nebo pokud `typeIds` je `NULL` , a celkový počet dostupných identifikátorů typů.  
   
  `typeIds[]`  
- [out] Pole, které se vyplní identifikátory typu.  
+ mimo Pole, které se má vyplnit identifikátory typu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

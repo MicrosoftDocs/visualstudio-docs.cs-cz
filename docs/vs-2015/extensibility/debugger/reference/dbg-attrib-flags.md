@@ -13,18 +13,18 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 74694c903040b278ed8864b46756cac66381405a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445001"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64789139"
 ---
-# <a name="dbgattribflags"></a>DBG_ATTRIB_FLAGS
+# <a name="dbg_attrib_flags"></a>DBG_ATTRIB_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje různé atributy pro [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nebo [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) rozhraní. Člen [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury.  
+Popisuje různé atributy pro rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nebo [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) . Člen struktury [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 #define DBG_ATTRIB_NONE                 0x0000000000000000,  
@@ -166,150 +166,150 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
   
 ## <a name="members"></a>Členové  
  DBG_ATTRIB_NONE  
- Označuje žádné atributy.  
+ Neurčuje žádné atributy.  
   
  DBG_ATTRIB_ALL  
  Označuje všechny atributy.  
   
  DBG_ATTRIB_OBJ_IS_EXPANDABLE  
- Znamená, že odkaz nebo vlastnost má podřízené položky.  
+ Označuje, že odkaz nebo vlastnost má podřízené položky.  
   
  DBG_ATTRIB_OBJ_HAS_ID  
- Určuje, zda byl vytvořen ID pro tento objekt.  
+ Indikuje, že ID pro tento objekt bylo vytvořeno.  
   
  DBG_ATTRIB_OBJ_CAN_HAVE_ID  
- Označuje, že ID pro tento objekt je možné vytvořit.  
+ Označuje, že ID tohoto objektu lze vytvořit.  
   
  DBG_ATTRIB_VALUE_READONLY  
  Označuje, že hodnota je jen pro čtení.  
   
  DBG_ATTRIB_VALUE_ERROR  
- Značí, že je hodnota chybu.  
+ Označuje, že hodnota je chyba.  
   
  DBG_ATTRIB_VALUE_SIDE_EFFECT  
- Naznačuje, že hodnocení vedlejší účinek.  
+ Indikuje, že vyhodnocení má vedlejší účinky.  
   
  DBG_ATTRIB_OVERLOADED_CONTAINER  
- Označuje, že tato vlastnost je ve skutečnosti kontejner přetížení.  
+ Označuje, že tato vlastnost je ve skutečnosti kontejnerem přetížení.  
   
  DBG_ATTRIB_VALUE_BOOLEAN  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` je logická hodnota.  
+ Označuje, že hodnota v `DEBUG_PROPERTY_INFO::bstrValue` je logická hodnota.  
   
  DBG_ATTRIB_VALUE_BOOLEAN_TRUE  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` je logická hodnota a `TRUE`.  
+ Označuje, že hodnota v `DEBUG_PROPERTY_INFO::bstrValue` je Boolean a `TRUE` .  
   
  DBG_ATTRIB_VALUE_INVALID  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` není platný.  
+ Označuje, že hodnota v `DEBUG_PROPERTY_INFO::bstrValue` není platná.  
   
  DBG_ATTRIB_VALUE_NAT  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` je "*není věc*" (NAT). NAT popisuje zaregistrovat u procesorů Intel 64-bit označuje příznakem odložené spekulativního výjimky.  
+ Označuje, že hodnota v poli `DEBUG_PROPERTY_INFO::bstrValue` je "*není věc*" (NAT). Překlad adres (NAT) popisuje příznak registru v procesorech Intel 64, které označují odložené spekulativní výjimky.  
   
  DBG_ATTRIB_VALUE_AUTOEXPANDED  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` byla pravděpodobně automaticky rozbaleny.  
+ Označuje, že hodnota v poli `DEBUG_PROPERTY_INFO::bstrValue` se možná automaticky rozšířila.  
   
  DBG_ATTRIB_VALUE_TIMEOUT  
- Označuje, že k vyhodnocení vypršel.  
+ Indikuje, že vypršel časový limit pro vyhodnocení.  
   
  DBG_ATTRIB_VALUE_RAW_STRING  
- Označuje, že hodnota ve `DEBUG_PROPERTY_INFO::bstrValue` může být reprezentován nezpracovaného řetězce.  
+ Označuje, že hodnota v `DEBUG_PROPERTY_INFO::bstrValue` může být reprezentována nezpracovaným řetězcem.  
   
  DBG_ATTRIB_VALUE_CUSTOM_VIEWER  
- Označuje, že tato vlastnost má alespoň jednu vlastní prohlížeč s ním spojená.  
+ Označuje, že k této vlastnosti je přidružen alespoň jeden vlastní prohlížeč.  
   
  DBG_ATTRIB_ACCESS_NONE  
- Určuje objekt, který nemá `public`, `private`, ani `protected` typ přístupu.  
+ Označuje objekt, který nemá ani `public` `private` `protected` přístup typu, ani typ.  
   
  DBG_ATTRIB_ACCESS_PUBLIC  
- Určuje objekt, který má přístup public.  
+ Označuje objekt, který má veřejný přístup.  
   
  DBG_ATTRIB_ACCESS_PRIVATE  
- Určuje objekt, který má privátní přístup.  
+ Označuje objekt, který má privátní přístup.  
   
  DBG_ATTRIB_ACCESS_PROTECTED  
- Určuje objekt, který chrání přístup.  
+ Označuje objekt, který má chráněný přístup.  
   
  DBG_ATTRIB_ACCESS_FINAL  
- Určuje objekt s posledním přístupem.  
+ Označuje objekt, který má konečný přístup.  
   
  DBG_ATTRIB_ACCESS_ALL  
- Maska pro extrahování přístupové atributy z `DBG_ATTRIB_FLAGS`.  
+ Maska pro extrakci atributů přístupu z `DBG_ATTRIB_FLAGS` .  
   
  DBG_ATTRIB_STORAGE_NONE  
- Označuje, že není zadaný žádný typ úložiště.  
+ Indikuje, že není zadaný žádný typ úložiště.  
   
  DBG_ATTRIB_STORAGE_GLOBAL  
- Určuje globální úložiště.  
+ Označuje globální úložiště.  
   
  DBG_ATTRIB_STORAGE_STATIC  
- Určuje statické úložiště.  
+ Označuje statické úložiště.  
   
  DBG_ATTRIB_STORAGE_REGISTER  
- Určuje úložiště do registru.  
+ Označuje úložiště v registru.  
   
  DBG_ATTRIB_STORAGE_ALL  
- Maska pro extrahování úložiště atributů z `DBG_ATTRIB_FLAGS`.  
+ Maska, ze které se mají extrahovat atributy úložiště `DBG_ATTRIB_FLAGS`  
   
  DBG_ATTRIB_TYPE_NONE  
- Označuje, že neexistuje žádná modifikátor typu.  
+ Indikuje, že není k dispozici žádný modifikátor typu.  
   
  DBG_ATTRIB_TYPE_VIRTUAL  
- Označuje, že je virtuálního typu objektu.  
+ Označuje, že typ objektu je virtuální.  
   
  DBG_ATTRIB_TYPE_CONSTANT  
- Označuje konstantní typ objektu.  
+ Označuje, že typ objektu je konstantní.  
   
  DBG_ATTRIB_TYPE_SYNCHRONIZED  
- Označuje, že typ objektu, který se synchronizují.  
+ Indikuje, že se jedná o synchronizovaný typ objektu.  
   
  DBG_ATTRIB_TYPE_VOLATILE  
- Označuje, že typ objektu, který je typu volatile.  
+ Označuje, že typ objektu je volatile.  
   
  DBG_ATTRIB_TYPE_ALL  
- Maska pro extrahování atributy typu z `DBG_ATTRIB_FLAGS`.  
+ Maska pro extrakci atributů typu z `DBG_ATTRIB_FLAGS` .  
   
  DBG_ATTRIB_DATA  
- Označuje, zda tento objekt je datové pole.  
+ Označuje, že tento objekt je datové pole.  
   
  DBG_ATTRIB_METHOD  
- Označuje, zda tento objekt je metoda.  
+ Označuje, že tento objekt je metoda.  
   
  DBG_ATTRIB_PROPERTY  
- Označuje, zda tento objekt je vlastnost.  
+ Označuje, že se jedná o vlastnost tohoto objektu.  
   
  DBG_ATTRIB_CLASS  
- Označuje, že je tento objekt třídy.  
+ Označuje, že tento objekt je třída.  
   
  DBG_ATTRIB_BASECLASS  
- Označuje, zda tento objekt je základní třídou.  
+ Označuje, že tento objekt je základní (Base) třída.  
   
  DBG_ATTRIB_INTERFACE  
- Označuje, zda tento objekt je rozhraní.  
+ Označuje, že tento objekt je rozhraní.  
   
  DBG_ATTRIB_INNERCLASS  
- Označuje, že tento objekt je vnitřní třídu.  
+ Označuje, že je tento objekt vnitřní třídou.  
   
  DBG_ATTRIB_MOSTDERIVED  
- Označuje, že je tento objekt "*nejvíce odvozenému*". Termín "*nejvíce odvozenému*" znamená, že skutečný typ objektu a ne na typu odkaz.  
+ Označuje, že tento objekt je*nejvíc odvozený*. Termín "*nejvíc odvozené*" "označuje skutečný typ objektu, a nikoli typ jeho odkazu.  
   
  DBG_ATTRIB_CHILD_ALL  
- Označuje maskou `DBG_ATTRIB_DATA` prostřednictvím `DBG_ATTRIB_MOSTDERIVED`.  
+ Označuje masku `DBG_ATTRIB_DATA` `DBG_ATTRIB_MOSTDERIVED` .  
   
  DBG_ATTRIB_MULTI_CUSTOM_VIEWERS  
- Označuje, že objekt má více vlastních prohlížečů, které s ním spojená.  
+ Indikuje, že k objektu je přidruženo více vlastních prohlížečů.  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
-> Hodnoty v tento výčet nejsou ve skutečnosti definovány v sestavení pro jazyk C#. Definice místo toho musíte zkopírovat do zdrojového souboru.  
+> Hodnoty v tomto výčtu nejsou ve skutečnosti definovány v sestavení pro jazyk C#. Místo toho je nutné zkopírovat definice do zdrojového souboru.  
   
- Tyto příznaky se taky používají k filtrování podřízených objektů objektu, například když předána jako argument [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md). Hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto příznaky slouží také k filtrování podřízených objektů objektu, například při předání jako argumentu [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md). Hodnoty mohou být kombinovány s bitovým operátorem `OR` .  
   
- `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` Příznak slouží jako ukazatel toho k [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] získat [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) rozhraní z [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní a volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) seznam vlastních prohlížečů.  
+ `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`Příznak je náznakem pro [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] získání rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) z rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) a volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) pro seznam vlastních prohlížečů.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

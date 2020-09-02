@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 73d8e54938659920227b3614046b8a8f933023ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670218"
 ---
 # <a name="add-existing-project-command"></a>Přidat existující projekt – příkaz
@@ -32,10 +32,10 @@ Přidá existující projekt k aktuálnímu řešení.
 File.AddExistingProject filename
 ```
 
-## <a name="arguments"></a>Arguments
- `filename` volitelné. Úplná cesta a název projektu s příponou projektu, který se má přidat do řešení.
+## <a name="arguments"></a>Argumenty
+ `filename` Volitelné. Úplná cesta a název projektu s příponou projektu, který se má přidat do řešení.
 
- Pokud argument `filename` obsahuje mezery, musí být uzavřen v uvozovkách.
+ Pokud `filename` argument obsahuje mezery, musí být uzavřen v uvozovkách.
 
  Pokud není zadán žádný název souboru, příkaz otevře dialogové okno souboru, aby mohl uživatel vybrat projekt.
 
@@ -43,7 +43,7 @@ File.AddExistingProject filename
  Automatické dokončování se snaží vyhledat správnou cestu a název souboru při psaní.
 
 ## <a name="example"></a>Příklad
- Tento příklad přidá projekt [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] TestProject1 k aktuálnímu řešení.
+ Tento příklad přidá [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projekt TestProject1 do aktuálního řešení.
 
 ```
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"

@@ -14,10 +14,10 @@ caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d6a4f7f1631ac4bfc651f5df347db010cf47a656
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657139"
 ---
 # <a name="using-the-assert-classes"></a>Používání tříd Assert
@@ -26,7 +26,7 @@ ms.locfileid: "72657139"
 Pro ověření konkrétních funkcí použijte třídy Assert oboru názvů UnitTestingFramework. Metoda testování částí vykonává kód metody v kódu vývoje, ale oznamuje správnost chování kódu pouze v případě, že zahrnete příkazy Assert.
 
 ## <a name="kinds-of-asserts"></a>Druhy kontrolních výrazů
- Obor názvů <xref:Microsoft.VisualStudio.TestTools.UnitTesting> poskytuje několik druhů kontrolních tříd:
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Obor názvů poskytuje několik druhů kontrolních tříd:
 
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 
@@ -60,4 +60,4 @@ Pro ověření konkrétních funkcí použijte třídy Assert oboru názvů Unit
  Upraví testovací metodu s atributem ExpectedExceptionAttribute, pokud chcete, aby metoda testu ověřila, že výjimka, kterou očekáváte vyvolat metodou v kódu vývoje, je ve skutečnosti vyvolána v této metodě.
 
 ## <a name="see-also"></a>Viz také
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> [vytváření a spouštění testů jednotek pro existující kód](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting>[Vytváření a spouštění testů jednotek pro existující kód](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)

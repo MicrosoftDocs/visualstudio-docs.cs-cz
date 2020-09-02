@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2 | Dokumentace Microsoftu
+title: IDebugProviderProgramNode2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,43 +13,43 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a81668d5c45dd4b3363821972914e3f9dc10266a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65692218"
 ---
 # <a name="idebugproviderprogramnode2"></a>IDebugProviderProgramNode2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní zařazuje rozhraní týkající se programu přes hranice procesu.  
+Toto rozhraní zařazování rozhraní souvisejících s programy napříč hranicemi procesů.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugProviderProgramNode2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Ladicí stroj (DE) implementuje toto rozhraní na stejný objekt, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) pro podporu zařazování rozhraní přes hranice procesu.  
+ Ladicí stroj (DE) implementuje toto rozhraní na stejném objektu, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) pro podporu zařazování rozhraní napříč hranicemi procesů.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na `IDebugProgramNode2` rozhraní k získání tohoto rozhraní. Pokud toto rozhraní nelze získat, nepodporuje DE zařazování rozhraní.  
+ [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) `IDebugProgramNode2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface. Pokud toto rozhraní nelze získat, DE nepodporuje zařazování rozhraní.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
  Toto rozhraní implementuje následující metodu:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[UnmarshalDebuggeeInterface](../../../extensibility/debugger/reference/idebugproviderprogramnode2-unmarshaldebuggeeinterface.md)|Získá zadaný rozhraní přes hranice procesu.|  
+|[UnmarshalDebuggeeInterface](../../../extensibility/debugger/reference/idebugproviderprogramnode2-unmarshaldebuggeeinterface.md)|Získá zadané rozhraní napříč hranicemi procesu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní je implementováno po DE spuštění v prostoru procesu odděleně od laděného programu: třeba když DE běží v prostoru procesu Visual Studio namísto procesního prostoru programu, který se právě ladí.  
+ Toto rozhraní je implementováno, když je DE spuštěna v odděleném prostoru procesu z laděného programu: například při spuštění DE v prostoru procesu sady Visual Studio namísto procesu ladění programu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

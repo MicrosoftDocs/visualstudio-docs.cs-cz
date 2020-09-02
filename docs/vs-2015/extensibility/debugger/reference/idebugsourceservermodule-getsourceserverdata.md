@@ -1,5 +1,5 @@
 ---
-title: IDebugSourceServerModule::GetSourceServerData | Dokumentace Microsoftu
+title: 'IDebugSourceServerModule:: Getsourceserverdata – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6e40c8542dad9ea64dda3041f8781d0d38b4e6bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164812"
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte pole informace o zdrojovém serveru.  
+Načte pole informací o zdrojovém serveru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +40,16 @@ public int GetSourceServerData(
   
 #### <a name="parameters"></a>Parametry  
  `pDataByteCount`  
- [out] Počet bajtů v poli data.  
+ mimo Počet bajtů v datovém poli.  
   
  `ppData`  
- [out] Odkaz na pole data.  
+ mimo Odkaz na datové pole  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CModule** objekt, který zveřejňuje [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CModule** , který zpřístupňuje rozhraní [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) .  
   
 ```cpp#  
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)  

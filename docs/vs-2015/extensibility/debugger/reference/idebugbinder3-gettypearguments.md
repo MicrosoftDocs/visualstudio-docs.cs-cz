@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetTypeArguments | Dokumentace Microsoftu
+title: 'IDebugBinder3:: GetTypeArguments – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,15 +13,15 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1f7b6038013370ad85a665d9899d367e621aa991
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192282"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
-Tato metoda načte seznam typů argumentů, které jsou přidružené k tomuto objektu.
+Tato metoda načte seznam typů argumentů přidružených k tomuto objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,25 +47,25 @@ int GetTypeArguments(
 
  `skip`
 
- [in] Počet polí, přejděte před získáním typy argumentů.
+ pro Počet polí, která se mají přeskočit před získáním typů argumentů
 
  `count`
 
- [in] Počet polí argument vrátit (také určuje velikost `ppFields` pole).
+ pro Počet polí argumentu, která se mají vrátit (určuje také velikost `ppFields` pole).
 
  `ppFields`
 
- [out v] Pole polí, která bude vyplněno při návratu tato metoda.
+ [in, out] Pole polí, která budou při návratu této metody vyplněna.
 
  `pFetched`
 
- [out] Počet argumentů typu polí skutečně vrácených (volitelné).
+ mimo Počet skutečně vrácených polí typu argumentu (volitelné).
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Počet typů argumentů, které lze získat předem s [gettypeargumentcount –](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).
+ Počet typů argumentů lze předem získat pomocí [GetTypeArgumentCount –](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).
 
 ## <a name="see-also"></a>Viz také
 

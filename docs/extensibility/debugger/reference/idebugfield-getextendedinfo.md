@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetExtendedInfo | Dokumenty společnosti Microsoft
+title: 'IDebugField:: GetExtendedInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: dc414dd57e86149e38d7c85d11252eb93efced51
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728875"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
-Tato metoda získá rozšířené informace o pole.
+Tato metoda načte rozšířené informace o poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ int GetExtendedInfo(
 
 ## <a name="parameters"></a>Parametry
 `guidExtendedInfo`\
-[v] Vybere informace, které mají být vráceny. Platné hodnoty jsou:
+pro Vybere informace, které mají být vráceny. Platné hodnoty jsou:
 
 |Hodnota|Popis|
 |-----------|-----------------|
@@ -53,16 +53,16 @@ int GetExtendedInfo(
 |`guidConstantType`|Typ jako podpis typu.|
 
 `prgBuffer`\
-[out] Vrátí rozšířené informace.
+mimo Vrátí rozšířené informace.
 
 `pdwLen`\
-[dovnitř, ven] Vrátí velikost rozšířených informací v bajtech.
+[in, out] Vrátí velikost rozšířených informací v bajtech.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- V současné době tato metoda vrátí pouze typ nebo hodnotu konstanty. Volající musí uvolnit vyrovnávací `prgBuffer` paměť vrácenou `CoTaskMemFree` voláním funkce MODELU <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> COM (C++) nebo (C#).
+ V současné době tato metoda vrátí pouze typ nebo hodnotu konstanty. Volající musí uvolnit vyrovnávací paměť vrácenou `prgBuffer` voláním `CoTaskMemFree` funkce com (C++) nebo <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).
 
 ## <a name="see-also"></a>Viz také
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
