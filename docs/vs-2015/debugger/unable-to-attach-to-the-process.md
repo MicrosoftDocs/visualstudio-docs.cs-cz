@@ -1,5 +1,5 @@
 ---
-title: Nelze se připojit k procesu | Dokumentace Microsoftu
+title: Nelze se připojit k procesu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,49 +17,49 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c74799daf57ca031c4b3ce6bf76f72e453eeb0b3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64824205"
 ---
 # <a name="unable-to-attach-to-the-process"></a>Nelze připojit k procesu.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nelze se připojit k procesu. Komponenty ladicího programu na server přijal při připojení k tomuto počítači byl zamítnut přístup.  
+K procesu se nelze připojit. Komponenta ladicího programu na serveru obdržela při připojování k tomuto počítači odepřený přístup.  
   
- Existují dva běžné scénáře, které způsobí tuto chybu:  
+ Tato chyba je způsobená dvěma běžnými scénáři:  
   
- **Scénář 1:** A počítač se systémem Windows XP. Počítač B používá Windows Server 2003. Registru v počítači B obsahuje následující hodnotu DWORD:  
+ **Scénář 1:** Počítač A používá systém Windows XP. Počítač B používá systém Windows Server 2003. Registr v počítači B obsahuje následující hodnotu DWORD:  
   
  `HKLM\Software\Microsoft\MachineDebugManager\AllowLaunchAsOtherUser=1`  
   
- Uživatel 1 spustí relaci terminálového serveru (relace 1) v počítači B a spustí spravované aplikace z této relace.  
+ Uživatel 1 spustí relaci terminálového serveru (relace 1) na počítači B a spustí spravovanou aplikaci z této relace.  
   
- Přihlášení uživatele 2, kdo je správce na obou počítačích, na počítač A. Odtud uživatel pokusí připojit k aplikaci spuštěné v relaci 1 na počítač B.  
+ Uživatel 2, který je správcem obou počítačů, je přihlášen do počítače A. Odtud se pokusí připojit k aplikaci spuštěné v relaci 1 na počítači B.  
   
- **Scénář 2:** Jeden uživatel je přihlášený dva počítače, A a B, ve stejné pracovní skupině v obou počítačích pomocí stejné heslo. Ladicí program je spuštěn v počítači A a pokusu o připojení ke spravované aplikaci běžící na počítač B. počítač A má **přístup k síti: Model sdílení a zabezpečení pro místní účty** nastavena na **hosta**.  
+ **Scénář 2:** Jeden uživatel je přihlášen do dvou počítačů, a a B ve stejné pracovní skupině, přičemž používá stejné heslo na obou počítačích. Ladicí program je spuštěn v počítači a a pokouší se připojit ke spravované aplikaci běžící na počítači B. počítač A má **přístup k síti: model sdílení a zabezpečení místních účtů** nastavených na hodnotu **Host**.  
   
-### <a name="to-solve-scenario-1"></a>Chcete-li vyřešit scénář 1  
+### <a name="to-solve-scenario-1"></a>Řešení scénáře 1  
   
-- Spuštění ladicího programu a spravované aplikace v rámci stejné uživatelské jméno a heslo.  
+- Spusťte ladicí program a spravovanou aplikaci pod stejným názvem a heslem uživatelského účtu.  
   
-### <a name="to-solve-scenario-2"></a>Chcete-li vyřešit scénář 2  
+### <a name="to-solve-scenario-2"></a>Řešení scénáře 2  
   
-1. Z **Start** nabídce zvolte **ovládací panely**.  
+1. V nabídce **Start** klikněte na položku **Ovládací panely**.  
   
-2. V Ovládacích panelech poklikejte na **nástroje pro správu**.  
+2. V Ovládacích panelech poklikejte na **Nástroje pro správu**.  
   
-3. V okně nástroje pro správu, klikněte dvakrát na **místní zásady zabezpečení**.  
+3. V okně nástroje pro správu poklikejte na **místní zásady zabezpečení**.  
   
-4. V okně místní zásady zabezpečení, vyberte **místní zásady**.  
+4. V okně místní zásady zabezpečení vyberte **místní zásady**.  
   
-5. V **zásady** sloupce, klikněte dvakrát na **přístup k síti: Model sdílení a zabezpečení pro místní účty**.  
+5. Ve sloupci **zásady** poklikejte na **přístup k síti: model sdílení a zabezpečení místních účtů**.  
   
-6. V **přístup k síti: Model sdílení a zabezpečení pro místní účty** dialogové okno pole, změňte nastavení zabezpečení na **Classic**a klikněte na tlačítko **OK**.  
+6. V dialogovém okně **přístup k síti: model sdílení a zabezpečení místních účtů** změňte místní nastavení zabezpečení na **Classic**a klikněte na tlačítko **OK**.  
   
     > [!CAUTION]
-    > Změna modelu zabezpečení a klasickým modelem může způsobit neočekávaný přístup ke sdíleným souborům a komponenty DCOM. Pokud tuto změnu ověřit vzdáleného uživatele s vaší místní uživatelský účet a spíše než hosta. Pokud vzdálený uživatel odpovídá uživatelské jméno a heslo, tento uživatel bude mít přístup k žádné složky nebo objekt modelu DCOM, se kterými jste sdíleli navýšení kapacity. Pokud používáte tento model zabezpečení, ujistěte se, že všechny uživatelské účty na počítači silná hesla nebo nastavení ostrůvku izolované sítě pro ladění a ladit počítače před neoprávněným přístupem.  
+    > Změna modelu zabezpečení na klasický může mít za následek neočekávaný přístup ke sdíleným souborům a komponentám DCOM. Pokud tuto změnu provedete, vzdálený uživatel se bude moci ověřit pomocí místního uživatelského účtu místo hosta. Pokud vzdálený uživatel odpovídá vašemu uživatelskému jménu a heslu, bude mít tento uživatel přístup ke všem složkám nebo objektům DCOM, které jste sdíleli. Pokud použijete tento model zabezpečení, ujistěte se, že všechny uživatelské účty v počítači mají silná hesla, nebo nastavte izolovaný síťový ostrůvek pro ladění a laděné počítače, aby se zabránilo neoprávněnému přístupu.  
   
 7. Zavřete všechna okna.  
   

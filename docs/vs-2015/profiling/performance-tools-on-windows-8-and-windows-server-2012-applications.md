@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a2fa9581d94b3b70ca427c292c147562a11d55a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75847988"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Nástroje pro měření výkonu v aplikacích pro Windows 8 a Windows Server 2012
@@ -24,7 +24,7 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
 > [!NOTE]
 > Nástroje výkonu pro jiné podporované verze systému Windows (Windows 7, Windows Server 2008 R2) se nezměnily.  
   
-## <a name="BKMK_In_this_topic"></a> V tomto tématu  
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu  
  [Shromažďování dat z aplikací pro Windows Store z integrovaného vývojového prostředí sady Visual Studio](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -35,8 +35,8 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
   
   [Shromažďování dat o interakcích vrstev (TIP)](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-## <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a>Shromažďování dat z aplikací pro Windows Store z integrovaného vývojového prostředí sady Visual Studio  
- Při profilování aplikace pro Windows Store, která je napsaná v JavaScriptu a HTML 5, shromažďujete data instrumentace pro kód JavaScriptu. Při profilování aplikace pro Windows Store nebo součásti, která je napsaná C++v jazyce C#visual, vizuálů nebo Visual Basic, shromažďujete data vzorkování pro nativní a spravovaný kód. Svou aplikaci můžete profilovat lokálně nebo na vzdáleném počítači.  
+## <a name="collecting-data-on-windows-store-apps-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Shromažďování dat z aplikací pro Windows Store z integrovaného vývojového prostředí sady Visual Studio  
+ Při profilování aplikace pro Windows Store, která je napsaná v JavaScriptu a HTML 5, shromažďujete data instrumentace pro kód JavaScriptu. Při profilování aplikace pro Windows Store nebo součásti, která je napsána v Visual C++, Visual C# nebo Visual Basic, shromažďujete data vzorkování pro nativní a spravovaný kód. Svou aplikaci můžete profilovat lokálně nebo na vzdáleném počítači.  
   
  Při profilování aplikací pro Windows Store se tyto funkce a možnosti profilování nepodporují:  
   
@@ -68,27 +68,27 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
   
 - [Analýza dat časování funkcí JavaScriptu](https://msdn.microsoft.com/library/b5aea8d8-36df-47ba-a7ca-95406700ca9b)  
   
-- [Profilace C++vizuálu, C#vizuálu a Visual Basic kódu v aplikacích pro Windows Store v místním počítači](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)  
+- [Profilace Visual C++, jazyka Visual C# a kódu Visual Basic v aplikacích pro Windows Store v místním počítači](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)  
   
-- [Profilace C++vizuálu, C#vizuálu a Visual Basic kódu v aplikacích pro Windows Store na vzdáleném zařízení](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
+- [Profilování Visual C++, Visual C# a kódu Visual Basic v aplikacích pro Windows Store na vzdáleném zařízení](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)  
   
-- [Analýza údajů o výkonu pro C++vizuál, C#vizuál a Visual Basic kódu v aplikacích pro Windows Store](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
+- [Analýza údajů o výkonu pro Visual C++, Visual C# a kód Visual Basic v aplikacích pro Windows Store](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)  
   
   [V tomto tématu](#BKMK_In_this_topic)  
   
-## <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a>Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio  
+## <a name="collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Shromažďování dat z aplikací běžících na desktopu Windows 8 nebo na Windows Serveru 2012 z integrovaného vývojového prostředí (IDE) sady Visual Studio  
  Profilace pomocí metody instrumentace se pro systém Windows 8 nezměnila.  
   
  Profilace interakce vrstev (TIP) není podporována pomocí metody vzorkování.  
   
-### <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a>Shromažďování dat na aplikace spuštěné na počítači s Windows 8 nebo na Windows Serveru 2012 pomocí vzorkování z integrovaného vývojového prostředí (IDE) sady Visual Studio  
+### <a name="collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Shromažďování dat na aplikace spuštěné na počítači s Windows 8 nebo na Windows Serveru 2012 pomocí vzorkování z integrovaného vývojového prostředí (IDE) sady Visual Studio  
  Tyto funkce profilování a možnosti se nepodporují při profilování aplikací pro stolní počítače s Windows 8 nebo Windows Server 2012 pomocí metody vzorkování:  
   
 - Profilace interakce vrstev (TIP). Shromažďování dat s tipem je podporované pomocí instrumentace.  
   
 - Možnosti vzorkování, jako je například nastavení události vzorkování a intervalu časování nebo shromažďování dalších dat čítače výkonu.  
   
-## <a name="BKMK_Profiling_from_the_command_line"></a>Profilace z příkazového řádku  
+## <a name="profiling-from-the-command-line"></a><a name="BKMK_Profiling_from_the_command_line"></a> Profilace z příkazového řádku  
  K shromažďování dat profilování na zařízeních se systémem Windows 8 a Windows Server 2012 můžete použít dva nástroje příkazového řádku, včetně zařízení, která nemají instalaci sady Visual Studio:  
   
 |Název nástroje|Popis|  
@@ -111,16 +111,16 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
   
 - Shromažďování dat z webových aplikací Windows 8 a Windows Server 2012 pomocí režimu vzorkování s [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md).  
   
-- Shromažďování dat vzorkování pomocí VsPerfCmd. exe.  
+- Shromažďování dat vzorkování pomocí VsPerfCmd.exe.  
   
 - Možnosti vzorkování, jako je například nastavení události vzorkování a intervalu časování nebo shromažďování dalších dat čítače výkonu.  
   
-## <a name="BKMK_Collecting_tier_interaction__TIP__data"></a>Shromažďování dat o interakcích vrstev (TIP)  
+## <a name="collecting-tier-interaction-tip-data"></a><a name="BKMK_Collecting_tier_interaction__TIP__data"></a> Shromažďování dat o interakcích vrstev (TIP)  
  Profilace interakce vrstev poskytuje další informace o době spuštění funkcí vícevrstvých aplikací, které komunikují s databázemi prostřednictvím služby ADO.NET Services. Data jsou shromažďována pouze pro volání synchronních funkcí.  
   
  **Edice sady Visual Studio**  
   
- Data profilování interakce vrstev je možné shromažďovat pomocí [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]nebo [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)]. Data profilování interakce vrstev ale můžete zobrazit jenom v [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] a [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)].  
+ Data profilace interakce vrstev se dají shromažďovat pomocí [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] , [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] nebo [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)] . Data profilování interakce vrstev ale můžete zobrazit jenom v [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] a [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] .  
   
  **Windows 8 a Windows Server 2012**  
   
@@ -136,13 +136,13 @@ Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vy
   
    **Shromažďování dat s tipem na vzdáleném počítači**  
   
-   Chcete-li shromažďovat data o interakcích vrstev na vzdáleném počítači, je nutné zkopírovat sadu **vs\_profiler\_** _\<Platform >_ **\_** _\<souboru jazyka >_ **. exe** ze složky _% VSINSTALLDIR%_ **\Team Tools\Performance** v počítači sady Visual Studio do vzdáleného počítače a nainstalovat ji. Nástroje pro profilaci nelze použít v balíčku ke stažení pro [vzdálené nástroje sady Visual Studio](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) .  
+   Chcete-li shromažďovat data o interakcích vrstev na vzdáleném počítači, je nutné zkopírovat soubor **vs \_ Profiler \_ ** _\<Platform>_ **\_** _\<Language>_ **. exe** ze složky _% VSINSTALLDIR%_**\Team Tools\Performance Tools\Setups** počítače Visual Studio do vzdáleného počítače a nainstalovat jej. Nástroje pro profilaci nelze použít v balíčku ke stažení pro [vzdálené nástroje sady Visual Studio](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) .  
   
    K shromažďování dat profilace můžete použít [VSPerfCmd](../profiling/vsperfcmd.md) nebo [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) .  
   
    **Sestavy tipů**  
   
-   Data interakce vrstev se dají zobrazit jenom v [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] nebo [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] IDE. Sestavy interakce na úrovni souborů prostřednictvím [VSPerfReport](../profiling/vsperfreport.md) nejsou k dispozici.  
+   Data interakce vrstev lze zobrazit pouze v [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] rozhraní IDE nebo. Sestavy interakce na úrovni souborů prostřednictvím [VSPerfReport](../profiling/vsperfreport.md) nejsou k dispozici.  
   
 ## <a name="see-also"></a>Viz také  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)   

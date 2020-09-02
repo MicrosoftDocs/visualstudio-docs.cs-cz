@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::InterceptCurrentException | Dokumentace Microsoftu
+title: 'IDebugStackFrame3:: InterceptCurrentException – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 42472690431d48a9baafbb0abee27c1a07d24fcd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63428693"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64858186"
 ---
 # <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Voláno rozhraním ladicího programu na aktuální rámec zásobníku, když chce zachytit aktuální výjimku.  
+Volá se ladicím programem v aktuálním bloku zásobníku, když chce zachytit aktuální výjimku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,31 +42,31 @@ int InterceptCurrentException(
   
 #### <a name="parameters"></a>Parametry  
  `dwFlags`  
- [in] Určuje různé akce. V současné době pouze [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) hodnotu `IEA_INTERCEPT` je podporován a musí být zadán.  
+ pro Určuje různé akce. V současné době je podporována pouze hodnota [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) `IEA_INTERCEPT` a je třeba ji zadat.  
   
  `pqwCookie`  
- [out] Jedinečná hodnota identifikaci konkrétní výjimce.  
+ mimo Jedinečná hodnota identifikující určitou výjimku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
- Následují nejčastější vrátí chyba.  
+ Níže jsou uvedené nejběžnější chyby.  
   
 |Chyba|Popis|  
 |-----------|-----------------|  
-|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|Nelze zachytit aktuální výjimku.|  
-|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|Aktuální rámec provádění ještě nebyl byla prohledána pro obslužnou rutinu.|  
-|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|Tato metoda není podporována pro tento rámec.|  
+|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|Aktuální výjimku nelze zachytit.|  
+|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|V aktuálním snímku provádění nebyl dosud prohledána obslužná rutina.|  
+|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|Tato metoda není pro tento rámec podporována.|  
   
 ## <a name="remarks"></a>Poznámky  
- Když dojde k výjimce, ladicí program získá kontrolu v době běhu na klíčových místech během zpracování procesu výjimek. Během těchto klíčových momentů ladicí program můžete požádat o aktuální rámec zásobníku Pokud rámce chce zachytit výjimku. Tímto způsobem zachycené výjimky je v podstatě na průběžné obslužné rutiny výjimky pro blok zásobníku i v případě, že rámec zásobníku nemá obslužné rutiny výjimky (například bloku try/catch v kódu programu).  
+ Když je vyvolána výjimka, ladicí program získá řízení z doby běhu v klíčových bodech během procesu zpracování výjimky. Během tohoto klíčového momentu může ladicí program požádat o aktuální rámec zásobníku, pokud rámec chce zachytit výjimku. Tímto způsobem je zachycená výjimka v podstatě průběžná obslužná rutina výjimky pro rámec zásobníku, i když tento rámec zásobníku nemá obslužnou rutinu výjimky (například blok try/catch v programovém kódu).  
   
- Pokud ladicí program se chce vědět, pokud by měl být zachycena výjimka, volá tuto metodu na aktuální objekt rámce zásobníku. Tato metoda je zodpovědná za zpracování všech podrobnosti o výjimce. Pokud [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) rozhraní není implementováno nebo `InterceptStackException` metoda vrátí všechny chyby, bude ladicí program pokračovat, obvykle zpracování výjimky.  
+ Když ladicí program chce zjistit, zda by měla být výjimka zachycena, volá tuto metodu na aktuální objekt rámce zásobníku. Tato metoda zodpovídá za zpracování všech podrobností o výjimce. Pokud rozhraní [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) není implementováno nebo `InterceptStackException` Metoda vrátí jakoukoli chybu, ladicí program pokračuje ve zpracování výjimky normálně.  
   
 > [!NOTE]
-> Výjimky mohou být zachyceny pouze ve spravovaném kódu, to znamená, že při spuštění programu, který se právě ladí v .NET, dobu běhu. Samozřejmě můžete implementovat třetích stran jazyk implementátory `InterceptStackException` ve své vlastní ladicími stroji, pokud se tedy rozhodne.  
+> Výjimky se můžou zachytit jenom ve spravovaném kódu, to znamená, že když je program laděný, běží v době běhu rozhraní .NET. Implementací jazyků třetích stran je samozřejmě možné implementovat `InterceptStackException` ve vlastních ladicích modulech, pokud si je zvolíte.  
   
- Po dokončení zachycení [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) signalizován.  
+ Po dokončení zachycení se [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) signál.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   

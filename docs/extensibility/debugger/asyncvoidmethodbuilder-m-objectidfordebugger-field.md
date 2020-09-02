@@ -1,5 +1,5 @@
 ---
-title: AsyncVoidMethodBuilder.m_objectIdForDebugger Pole | Dokumenty společnosti Microsoft
+title: AsyncVoidMethodBuilder. m_objectIdForDebugger pole | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +11,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 10d63a92e2648c269c51faddc9521323c76116b1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739324"
 ---
-# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>Pole AsyncVoidMethodBuilder.m_objectIdForDebugger
-Představuje líně inicializovaný objekt používaný ladicím programem k jednoznačné identifikaci tohoto tvůrce.
+# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>AsyncVoidMethodBuilder. m_objectIdForDebugger – pole
+Představuje inicializovaný objekt laxně vytvářená, který ladicí program používá k jednoznačné identifikaci tohoto tvůrce.
 
  **Obor názvů:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Sestava:** mscorlib (v mscorlib.dll)
+ **Sestavení:** mscorlib (v mscorlib.dll)
 
- Vzhledem k tomu, že k tomuto internímu členu nelze získat přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
+ Vzhledem k tomu, že nemůžete získat přístup k tomuto internímu členovi z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field private object m_objectIdForDebugger
@@ -34,4 +34,4 @@ Představuje líně inicializovaný objekt používaný ladicím programem k jed
 
 ## <a name="see-also"></a>Viz také
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Vnitřní rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

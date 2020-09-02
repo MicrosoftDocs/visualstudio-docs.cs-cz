@@ -1,6 +1,6 @@
 ---
-title: Procházet a spravovat prostředky úložiště pomocí Průzkumníku serveru | Dokumentace Microsoftu
-description: Procházení a Správa prostředků úložiště pomocí Průzkumníka serveru
+title: Procházení a Správa prostředků úložiště pomocí Průzkumník serveru | Microsoft Docs
+description: Procházení a Správa prostředků úložiště pomocí Průzkumník serveru
 author: ghogen
 manager: jillfra
 assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
 ms.openlocfilehash: 7b7ec05e8d849f7e802ab1c1ff4464e0552ab6d6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849861"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Procházení a správa prostředků úložiště pomocí Průzkumníka serveru
@@ -24,274 +24,274 @@ ms.locfileid: "75849861"
 
 ## <a name="overview"></a>Přehled
 
-Pokud jste nainstalovali nástroje Azure pro sadu Microsoft Visual Studio, můžete zobrazit objektů blob, fronty a tabulky dat z účtu úložiště Azure. Azure **úložiště** uzel v Průzkumníku serveru zobrazuje data, která jsou v účtu emulátor místního úložiště a dalších účtů úložiště Azure.
+Pokud jste nainstalovali nástroje Azure pro Microsoft Visual Studio, můžete zobrazit data objektů blob, front a tabulek z účtů úložiště pro Azure. Uzel **úložiště** Azure v Průzkumník serveru zobrazuje data, která jsou v účtu emulátoru místního úložiště a v dalších účtech úložiště Azure.
 
-Chcete-li zobrazit Průzkumník serveru v sadě Visual Studio na řádku nabídek, vyberte **zobrazení** > **Průzkumníka serveru**. **Úložiště** uzlu se zobrazuje všechny účty úložiště, které existují v rámci každého předplatného Azure nebo certifikát, který jste připojeni k. Pokud váš účet úložiště se nezobrazí, můžete ho přidat podle pokynů [dále v tomto článku](#add-storage-accounts-by-using-server-explorer).
+Chcete-li zobrazit Průzkumník serveru v aplikaci Visual Studio, vyberte v řádku nabídek možnost **Zobrazit**  >  **Průzkumník serveru**. Uzel **úložiště** zobrazí všechny účty úložiště, které existují v rámci každého předplatného nebo certifikátu Azure, ke kterému jste připojení. Pokud se Váš účet úložiště nezobrazí, můžete ho přidat podle pokynů níže [v tomto článku](#add-storage-accounts-by-using-server-explorer).
 
-Od verze Azure SDK 2.7, můžete také pomocí Průzkumníka cloudu můžete zobrazit a spravovat prostředky Azure. Další informace najdete v tématu [prostředky správy Azure pomocí Průzkumníka cloudu](vs-azure-tools-resources-managing-with-cloud-explorer.md).
+Od verze Azure SDK 2,7 můžete použít také Průzkumníka cloudu k zobrazení a správě prostředků Azure. Další informace najdete v tématu [Správa prostředků Azure pomocí Průzkumníka cloudu](vs-azure-tools-resources-managing-with-cloud-explorer.md).
 
-## <a name="view-and-manage-storage-resources-in-visual-studio"></a>Umožňuje zobrazit a spravovat prostředky úložiště v sadě Visual Studio
+## <a name="view-and-manage-storage-resources-in-visual-studio"></a>Zobrazení a Správa prostředků úložiště v aplikaci Visual Studio
 
-Průzkumník serveru automaticky zobrazí seznam objektů BLOB, frontám a tabulkám v účtu úložiště emulátoru. Emulátor účet úložiště je uvedený v Průzkumníku serveru pod **úložiště** jako uzel **vývoj** uzlu.
+Průzkumník serveru automaticky zobrazuje seznam objektů blob, front a tabulek v účtu emulátoru úložiště. Účet emulátoru úložiště je uvedený v části Průzkumník serveru pod uzlem **úložiště** jako **vývojový** uzel.
 
-Zobrazit prostředky účtu emulátor úložiště, rozbalte **vývoj** uzlu. Pokud na emulátor úložiště nebylo spuštěno při rozšiřování **vývoj** uzlu, automaticky spustí. Tento proces může trvat několik sekund. Můžete pokračovat v práci v jiných oblastech sady Visual Studio při spuštění emulátoru úložiště.
+Prostředky účtu emulátoru úložiště zobrazíte tak, že rozbalíte uzel pro **vývoj** . Pokud se emulátor úložiště nespustí, když rozbalíte **vývojový** uzel, automaticky se spustí. Tento proces může trvat několik sekund. Během spouštění emulátoru úložiště můžete pokračovat v práci v jiných oblastech sady Visual Studio.
 
-Chcete-li zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumníkovi serveru, kde uvidíte **objekty BLOB**, **fronty**, a **tabulky** uzly.
+Pokud chcete zobrazit prostředky v účtu úložiště, rozbalte uzel účtu úložiště v Průzkumník serveru, kde vidíte uzly **BLOB**, **Queues**a **Tables** .
 
-## <a name="work-with-blob-resources"></a>Pracovat s prostředky objektů blob
+## <a name="work-with-blob-resources"></a>Práce s prostředky objektů BLOB
 
-**Objekty BLOB** uzel se zobrazí seznam kontejnerů pro vybraný účet úložiště. Kontejnery objektů BLOB obsahují soubory objektů blob a tyto objekty BLOB můžete uspořádat do složek a podsložek. Další informace najdete v tématu [použití Blob storage pomocí technologie .NET](/azure/storage/blobs/storage-dotnet-how-to-use-blobs).
+Uzel **objekty blob** zobrazuje seznam kontejnerů pro vybraný účet úložiště. Kontejnery objektů BLOB obsahují soubory objektů BLOB a tyto objekty blob můžete uspořádat do složek a podsložek. Další informace najdete v tématu [Jak používat úložiště objektů BLOB z rozhraní .NET](/azure/storage/blobs/storage-dotnet-how-to-use-blobs).
 
-### <a name="to-create-a-blob-container"></a>Chcete-li vytvořit kontejner objektů blob
+### <a name="to-create-a-blob-container"></a>Vytvoření kontejneru objektů BLOB
 
-1. Otevřete místní nabídku **objekty BLOB** uzlu a pak vyberte **vytvořit kontejner objektů Blob**.
-1. V **vytvořit kontejner objektů Blob** dialogovém okně zadejte název nového kontejneru.  
-1. Vyberte možnost Enter na klávesnici nebo můžete kliknutím nebo klepnutím mimo pole názvu pro uložení objektů blob v kontejneru.
+1. Otevřete místní nabídku uzlu **objekty blob** a pak vyberte **vytvořit kontejner objektů BLOB**.
+1. V dialogovém okně **vytvořit kontejner objektů BLOB** zadejte název nového kontejneru.  
+1. Na své klávesnici vyberte Enter nebo můžete kliknutím nebo klepnutím mimo pole název Uložit kontejner objektů BLOB.
 
    > [!NOTE]
-   > Název kontejneru objektu blob musí začínat číslicí (0-9) nebo malým písmenem (a-z).
+   > Název kontejneru objektů BLOB musí začínat číslicí (0-9) nebo malým písmenem (a-z).
 
-### <a name="to-delete-a-blob-container"></a>Chcete-li odstranit kontejner objektů blob
+### <a name="to-delete-a-blob-container"></a>Odstranění kontejneru objektů BLOB
 
-Otevřete místní nabídku pro kontejner objektů blob, který chcete odebrat a pak vyberte **odstranit**.
+Otevřete místní nabídku pro kontejner objektů blob, který chcete odebrat, a pak vyberte **Odstranit**.
 
-### <a name="to-display-a-list-of-the-items-in-a-blob-container"></a>Chcete-li zobrazit seznam položek v kontejneru objektů blob
+### <a name="to-display-a-list-of-the-items-in-a-blob-container"></a>Zobrazení seznamu položek v kontejneru objektů BLOB
 
-Otevřete místní nabídku pro název kontejneru objektů blob v seznamu a pak vyberte **otevřít**.
+Otevřete místní nabídku pro název kontejneru objektů BLOB v seznamu a pak vyberte **otevřít**.
 
-Při zobrazení obsahu kontejneru objektů blob, se zobrazí na kartě označuje jako zobrazení objektů blob v kontejneru.
+Když zobrazíte obsah kontejneru objektů blob, zobrazí se na kartě, která se označuje jako zobrazení kontejneru objektů BLOB.
 
 ![Zobrazení kontejneru objektů BLOB](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC749016.png)
 
-Pomocí tlačítka v pravém horním rohu zobrazení objektů blob v kontejneru můžete provádět následující operace pro objekty BLOB:
+Pomocí tlačítek v pravém horním rohu zobrazení kontejneru objektů blob můžete v objektech blob provádět následující operace:
 
 * Zadejte hodnotu filtru a použijte ji.
-* Aktualizujte seznam objektů BLOB v kontejneru.
+* Aktualizuje seznam objektů BLOB v kontejneru.
 * Nahrajte soubor.
-* Odstraňte objekt blob. (Při odstranění souboru z kontejneru objektů blob nedojde k odstranění základního souboru. Pouze odebere ho z kontejneru objektů blob.)
-* Otevřete objekt blob.
+* Odstraní objekt BLOB. (Odstranění souboru z kontejneru objektů BLOB neodstraní příslušný soubor. Odebere ho jenom z kontejneru objektů BLOB.)
+* Otevřete objekt BLOB.
 * Uložte objekt blob do místního počítače.
 
-### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Chcete-li vytvořit složku nebo podsložku v kontejneru objektů blob
+### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Vytvoření složky nebo podsložky v kontejneru objektů BLOB
 
-1. Vyberte kontejner objektů blob v Průzkumníku cloudu. V okně kontejneru vyberte **nahrát objekt Blob** tlačítko.
+1. V Průzkumníku cloudu vyberte kontejner objektů BLOB. V okně kontejner vyberte tlačítko **nahrát objekt BLOB** .
 
-1. V **nahrát nový soubor** dialogové okno, vyberte **Procházet** tlačítko k určení souboru, který chcete nahrát a pak zadejte název složky v **složky (volitelné)** pole.
+1. V dialogovém okně **nahrát nový soubor** vyberte tlačítko **Procházet** a zadejte soubor, který chcete odeslat, a potom zadejte název složky do pole **Složka (volitelné)** .
 
-   ![Po nahrání souboru do složky objektů blob](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766037.png)
+   ![Nahrání souboru do složky objektů BLOB](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766037.png)
 
-   Můžete přidat podsložky ve složkách kontejneru pomocí stejného kroku. Pokud nezadáte název složky, nahrání souboru na nejvyšší úrovni kontejneru objektů blob. Soubor se zobrazí v určené složce v kontejneru.
+   Podsložky můžete přidat do složek kontejneru pomocí stejného kroku. Pokud nezadáte název složky, soubor se nahraje na nejvyšší úroveň kontejneru objektů BLOB. Soubor se zobrazí v zadané složce v kontejneru.
 
-   ![Složka přidá do kontejneru objektů blob](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766038.png)
+   ![Složka přidaná do kontejneru objektů BLOB](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766038.png)
 
-1. Klikněte dvakrát na složku nebo stisknutím klávesy Enter zobrazit obsah složky. Pokud jste ve složce kontejneru, můžete přejít zpět do kořenového adresáře kontejneru tak, že vyberete **otevřít nadřazený adresář** tlačítko (šipka).
+1. Dvojím kliknutím na složku nebo výběrem Enter zobrazíte obsah složky. Když jste ve složce kontejneru, můžete se vrátit do kořenového adresáře kontejneru tak, že vyberete tlačítko **Otevřít nadřazený adresář** (šipka).
 
-### <a name="to-delete-a-container-folder"></a>Chcete odstranit nějakou složku kontejneru
+### <a name="to-delete-a-container-folder"></a>Odstranění složky kontejneru
 
 Odstraňte všechny soubory ve složce.
 
-Protože složky v kontejnerech objektů blob jsou virtuální složky, nelze vytvořit prázdnou složku. Také nelze odstranit složku, do které odstraňte její obsah souboru, ale místo toho musíte odstranit celý obsah složky odstranit samotné složce.
+Vzhledem k tomu, že složky v kontejnerech objektů BLOB jsou virtuálními složkami, nemůžete vytvořit prázdnou složku. Nemůžete také odstranit složku pro odstranění jejího obsahu, ale místo toho je nutné odstranit celý obsah složky, aby se odstranila samotná složka.
 
-### <a name="to-filter-blobs-in-a-container"></a>Chcete-li filtrovat objekty BLOB v kontejneru
+### <a name="to-filter-blobs-in-a-container"></a>Filtrování objektů BLOB v kontejneru
 
-Můžete filtrovat objekty BLOB, které jsou zobrazeny zadáním běžnou předponu.
+Můžete filtrovat objekty blob, které se zobrazí, zadáním společné předpony.
 
-Například, pokud zadáte předponu **hello** do filtru textového pole a pak vyberte **Execute** ( **!** ) se zobrazí tlačítko, pouze na objekty BLOB, které začínají řetězcem "hello".
+Pokud například zadáte předponu **Hello** do textového pole Filter a potom vyberete tlačítko **Spustit** (**!**), zobrazí se pouze objekty blob začínající na "Hello".
 
 ![Filtrovat textové pole](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
-Do textového pole filtru je velká a malá písmena a nepodporuje filtrování se zástupnými znaky. Objekty BLOB se dá filtrovat jenom podle předpony. Předpona, která může zahrnovat oddělovač, pokud používáte oddělovač pro uspořádání objektů BLOB v hierarchii virtuální. Například filtrování na této předponě "HelloFabric /" vrátí všechny objekty BLOB, které začínají tento řetězec.
+Textové pole filtru rozlišuje velká a malá písmena a nepodporuje filtrování se zástupnými znaky. Objekty blob lze filtrovat pouze pomocí předpony. Předpona může obsahovat oddělovač, pokud používáte oddělovač k uspořádání objektů BLOB ve virtuální hierarchii. Například filtrování předpony "HelloFabric/" vrátí všechny objekty blob, které začínají daným řetězcem.
 
-### <a name="to-download-blob-data"></a>Chcete-li stáhnout data objektů blob
+### <a name="to-download-blob-data"></a>Stažení dat objektu BLOB
 
 V Průzkumníku cloudu použijte některou z následujících metod:
 
 * Otevřete místní nabídku pro jeden nebo více objektů BLOB a pak vyberte **otevřít**.
-* Zvolte název objektu blob a pak vyberte **otevřít** tlačítko.
-* Dvakrát klikněte na název objektu blob.
+* Zvolte název objektu BLOB a potom vyberte tlačítko **otevřít** .
+* Dvakrát klikněte na název objektu BLOB.
 
-Zobrazí se v průběhu stahování objektů blob **protokolu aktivit Azure** okna.
+Průběh stahování objektů BLOB se zobrazí v okně **protokolu aktivit Azure** .
 
-Objekt blob se otevře v editoru výchozí pro daný typ souboru. Pokud operační systém rozpozná typ souboru, soubor se otevře v lokálně nainstalované aplikace. V opačném případě budete vyzváni k výběru aplikace, která je vhodná pro typ souboru objektu blob. Místní soubor, který je vytvořen při stažení objektu blob je určen jen pro čtení.
+Objekt BLOB se otevře ve výchozím editoru pro daný typ souboru. Pokud operační systém rozpoznává typ souboru, otevře se soubor v lokálně nainstalované aplikaci. Jinak budete vyzváni k výběru aplikace, která je vhodná pro typ souboru objektu BLOB. Místní soubor, který se vytvoří při stažení objektu blob, je označený jen pro čtení.
 
-Data objektů blob je v místní mezipaměti a porovnávána s časem poslední změny objektu blob v úložišti objektů Blob v Azure. Pokud se objekt blob byl aktualizována mezitím než byla naposledy stažena, je stažen znovu. V opačném případě se načte objekt blob z místního disku.
+Data objektů BLOB se ukládají do mezipaměti místně a v úložišti objektů BLOB v Azure se zkontrolují s časem poslední změny objektu BLOB. Pokud se objekt BLOB od posledního stažení aktualizoval, stáhne se znovu. V opačném případě je objekt BLOB načten z místního disku.
 
-Ve výchozím nastavení se stáhne objekt blob do dočasného adresáře. Ke stažení objektů blob pro konkrétní adresář, otevřete místní nabídku pro názvy vybraných objektů blob a vyberte **uložit jako**. Při ukládání objektu blob tímto způsobem není otevřený soubor objektu blob a místní soubor se vytvoří s atributy pro čtení a zápis.
+Ve výchozím nastavení je objekt BLOB stažený do dočasného adresáře. Chcete-li stáhnout objekty blob do určitého adresáře, otevřete místní nabídku pro vybrané názvy objektů BLOB a vyberte **Uložit jako**. Při ukládání objektu BLOB tímto způsobem není otevřen soubor BLOB a místní soubor je vytvořen s atributy pro čtení a zápis.
 
-### <a name="to-upload-blobs"></a>K nahrání objektů BLOB
+### <a name="to-upload-blobs"></a>Nahrání objektů BLOB
 
-K nahrání objektů BLOB, vyberte **nahrát objekt Blob** tlačítko při otevření pro zobrazení v zobrazení kontejneru objektů blob v kontejneru.
+Pokud chcete nahrát objekty blob, vyberte tlačítko **nahrát objekt BLOB** , když je kontejner otevřený pro zobrazení v zobrazení kontejneru objektů BLOB.
 
-Můžete vybrat jeden nebo více souborů k nahrání a můžete nahrát soubory libovolného typu. **Protokolu aktivit Azure** okno zobrazuje průběh nahrávání. Další informace o tom, jak pracovat s daty objektů blob najdete v tématu [jak používat Azure Blob storage v rozhraní .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).
+Můžete vybrat jeden nebo více souborů, které chcete nahrát, a můžete nahrát soubory libovolného typu. V okně **Protokol aktivit Azure** se zobrazuje průběh nahrávání. Další informace o tom, jak pracovat s daty objektů blob, najdete v tématu [Jak používat úložiště objektů BLOB v Azure v .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).
 
-### <a name="to-view-logs-transferred-to-blobs"></a>Chcete-li zobrazit protokoly přenosu k objektům BLOB
+### <a name="to-view-logs-transferred-to-blobs"></a>Zobrazení protokolů přenesených do objektů BLOB
 
-Pokud používáte Azure Diagnostics protokolování dat z aplikace Azure a jste přenesli protokoly do vašeho účtu úložiště, uvidíte kontejnery, které Azure vytvořilo pro tyto protokoly. Zobrazování těchto protokolů v Průzkumníku serveru je snadný způsob, jak identifikovat problémy s vaší aplikací, zejména v případě, že se nasazuje do Azure.
+Pokud používáte Azure Diagnostics k protokolování dat z aplikace Azure a přenesli jste protokoly do svého účtu úložiště, zobrazí se kontejnery, které Azure vytvořil pro tyto protokoly. Zobrazení těchto protokolů v Průzkumník serveru představuje snadný způsob, jak identifikovat problémy s vaší aplikací, zejména v případě, že je nasazená do Azure.
 
-Další informace o diagnostice Azure najdete v tématu [shromažďování dat protokolování pomocí diagnostiky Azure pomocí](https://msdn.microsoft.com/library/azure/gg433048.aspx).
+Další informace o Azure Diagnostics najdete v tématu [shromáždění dat protokolování pomocí Azure Diagnostics](https://msdn.microsoft.com/library/azure/gg433048.aspx).
 
-### <a name="to-get-the-url-for-a-blob"></a>Získat adresu URL pro objekt blob
+### <a name="to-get-the-url-for-a-blob"></a>Získání adresy URL pro objekt BLOB
 
-Otevřete jeho místní nabídku a zvolte **kopírování adresy URL**.
+Otevřete místní nabídku objektu BLOB a pak vyberte **Kopírovat adresu URL**.
 
-### <a name="to-edit-a-blob"></a>Chcete-li upravit objekt blob
+### <a name="to-edit-a-blob"></a>Úprava objektu BLOB
 
-Vyberte objekt blob a pak vyberte **otevřít objekt Blob** tlačítko.
+Vyberte objekt BLOB a pak klikněte na tlačítko **otevřít objekt BLOB** .
 
-Soubor se stáhnou do dočasného umístění a otevřít v místním počítači. Nahrajte objekt blob znovu po provedení změn.
+Soubor se stáhne do dočasného umístění a otevře se v místním počítači. Po provedení změn znovu nahrajte objekt BLOB.
 
-## <a name="work-with-queue-resources"></a>Pracovat s prostředky fronty
+## <a name="work-with-queue-resources"></a>Práce s prostředky ve frontě
 
-Fronty služby Storage jsou hostované v účtu služby Azure storage. Můžete využít k povolení cloudové rolí služby pro komunikaci mezi sebou a s jinými službami předávání zpráv mechanismem. Fronty můžete přistupovat prostřednictvím kódu programu přes cloudovou službu a přes webovou službu pro externí klienty. Fronty můžete také přistupovat přímo pomocí Průzkumníka serveru v sadě Visual Studio.
+Fronty služby Storage se hostují v účtu úložiště Azure. Můžete je použít k tomu, aby mohly vaše role cloudové služby vzájemně komunikovat a s jinými službami pomocí mechanismu předávání zpráv. Ke frontě se můžete dostat programově prostřednictvím cloudové služby a přes webovou službu pro externí klienty. K frontě můžete přistupovat také přímo pomocí Průzkumník serveru v aplikaci Visual Studio.
 
-Když vyvíjíte cloudovou službu, která používá fronty, můžete chtít použít Visual Studio k vytvoření fronty a s nimi interaktivně pracovat při vývoji a testování kódu.
+Když vyvíjíte cloudovou službu, která používá fronty, můžete pomocí sady Visual Studio vytvořit fronty a interaktivně pracovat s nimi během vývoje a testování kódu.
 
-V Průzkumníku serveru můžete zobrazit fronty v účtu úložiště, vytvářet a odstraňovat fronty, otevření fronty k zobrazení jeho zpráv a přidání zpráv do fronty. Při otevření fronty pro zobrazení můžete zobrazit jednotlivé zprávy a můžete provádět následující akce ve frontě pomocí tlačítek v levém horním rohu:
+V Průzkumník serveru můžete zobrazit fronty v účtu úložiště, vytvořit a odstranit fronty, otevřít frontu a zobrazit tak jejich zprávy a přidat zprávy do fronty. Když otevřete frontu pro zobrazení, můžete zobrazit jednotlivé zprávy a ve frontě můžete provádět následující akce pomocí tlačítek v levém horním rohu:
 
-* Aktualizujte zobrazení fronty.
-* Přidání zprávy do fronty.
-* Odstranit nejvyššího zprávu z fronty.
+* Aktualizuje zobrazení fronty.
+* Přidejte do fronty zprávu.
+* Odřadí zprávu nejvyšší úrovně.
 * Vymažte celou frontu.
 
-Následující obrázek znázorňuje frontu, která obsahuje dvě zprávy:
+Následující obrázek ukazuje frontu, která obsahuje dvě zprávy:
 
 ![Zobrazení fronty](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC651470.png)
 
-Další informace o službě storage services fronty, naleznete v tématu [Začínáme s Azure Queue storage pomocí .NET](https://www.windowsazure.com/develop/net/how-to-guides/queue-service/). Informace o webové službě storage services fronty, naleznete v tématu [koncepty služby front](https://msdn.microsoft.com/library/windowsazure/dd179353.aspx). Informace o tom, jak odesílat zprávy do fronty služby storage s použitím sady Visual Studio najdete v tématu [odesílání zpráv do fronty služby Storage](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
+Další informace o frontách služby úložiště najdete v tématu [Začínáme s úložištěm Azure Queue pomocí rozhraní .NET](https://www.windowsazure.com/develop/net/how-to-guides/queue-service/). Informace o webových službách pro fronty služby úložiště najdete v tématu [Koncepty služby Queue](https://msdn.microsoft.com/library/windowsazure/dd179353.aspx). Informace o tom, jak odesílat zprávy do fronty služby úložiště pomocí sady Visual Studio, najdete v tématu [posílání zpráv do fronty služby úložiště](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
 
 > [!NOTE]
-> Fronty služby Storage se liší od fronty Azure Service Bus. Další informace o fronty služby Service Bus, najdete v části [fronty služby Service Bus, témat a odběrů](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions).
+> Fronty služby Storage se liší od Azure Service Busch front. Další informace o frontách Service Bus najdete v tématu [Service Bus fronty, témata a předplatná](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions).
 
-## <a name="work-with-table-resources"></a>Pracovat s prostředky tabulky
+## <a name="work-with-table-resources"></a>Práce s prostředky tabulky
 
-Azure Table storage ukládá velké objemy strukturovaných dat. Tato služba je úložiště dat typu NoSQL, která přijímá ověřených volání z uvnitř i mimo Azure cloud. Jsou ideální pro ukládání strukturovaných, nerelačních dat tabulky Azure.
+Služba Azure Table Storage ukládá velké objemy strukturovaných dat. Služba je úložiště dat NoSQL, které přijímá ověřená volání zevnitř i mimo cloud Azure. Tabulky Azure jsou ideální pro ukládání strukturovaných, nerelačních dat.
 
-### <a name="to-create-a-table"></a>Pokud chcete vytvořit tabulku
+### <a name="to-create-a-table"></a>Vytvoření tabulky
 
-1. V Průzkumníku cloudu, vyberte **tabulky** uzel účtu úložiště a pak vyberte **Create Table**.
-1. V **Create Table** dialogovém okně zadejte název tabulky.
+1. V Průzkumníku cloudu vyberte uzel **tabulky** účtu úložiště a pak vyberte **vytvořit tabulku**.
+1. V dialogovém okně **vytvořit tabulku** zadejte název tabulky.
 
-### <a name="to-view-table-data"></a>Chcete-li zobrazit data tabulky
+### <a name="to-view-table-data"></a>Zobrazení dat tabulky
 
-1. V Průzkumníku cloudu otevřete **Azure** uzlu a pak otevřete **úložiště** uzlu.
-1. Otevřete uzel účtu úložiště, který vás zajímá a pak otevřete **tabulky** uzlu zobrazíte seznam tabulek pro účet úložiště.
-1. Otevřete místní nabídku pro tabulku a pak vyberte **zobrazení tabulky**.
+1. V Průzkumníku cloudu otevřete uzel **Azure** a pak otevřete uzel **úložiště** .
+1. Otevřete uzel účtu úložiště, který vás zajímá, a pak otevřete uzel **tabulky** , kde se zobrazí seznam tabulek pro účet úložiště.
+1. Otevřete místní nabídku pro tabulku a pak vyberte **Zobrazit tabulku**.
 
-    ![Tabulku Azure v Průzkumníku řešení](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
+    ![Tabulka Azure v Průzkumník řešení](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
 
-V tabulce jsou uspořádána podle entity (viz řádky) a vlastnosti (zobrazené sloupce). Například následující obrázek znázorňuje entity v Návrháři tabulek.
+Tabulka je uspořádána podle entit (zobrazených v řádcích) a vlastnosti (zobrazené ve sloupcích). Například následující ilustrace znázorňuje entity uvedené v Návrháři tabulky.
 
-### <a name="to-edit-table-data"></a>Chcete-li upravit data v tabulce
+### <a name="to-edit-table-data"></a>Úprava dat tabulky
 
-V Návrháři tabulek, otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnosti (jedinou buňku) a pak vyberte **upravit**.
+V Návrháři tabulky otevřete místní nabídku pro entitu (jeden řádek) nebo vlastnost (jediná buňka) a pak vyberte **Upravit**.
 
 ![Přidat nebo upravit entitu tabulky](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
-Entity v jedné tabulce nejsou musí mít stejnou sadu vlastnosti (sloupce). Mějte na paměti následující omezení pro prohlížení a úpravy dat tabulky:
+Entity v jedné tabulce nemusejí mít stejnou sadu vlastností (sloupců). Mějte na paměti následující omezení pro zobrazení a úpravy tabulkových dat:
 
-* Nelze zobrazit nebo upravit binárních dat (`type byte[]`), ale můžete ho uložit v tabulce.
-* Nelze upravovat **PartitionKey** nebo **RowKey** hodnoty, protože služba Table storage v Azure nepodporuje danou operaci.
-* Nejde vytvořit vlastnost s názvem **časové razítko**. Služby Azure storage použijte vlastnost s tímto názvem.
-* Pokud zadáte **data a času** hodnotu, musí odpovídat formátu, který je vhodný pro místní a jazykové nastavení vašeho počítače (například MM/DD/RRRR HH: mm: [AM | PM] pro jazykovou verzi US English).
+* Binární data () nemůžete zobrazit ani upravovat `type byte[]` , ale můžete je Uložit do tabulky.
+* Nemůžete upravovat hodnoty **PartitionKey** nebo **RowKey** , protože úložiště tabulek v Azure nepodporuje tuto operaci.
+* Vlastnost s názvem **timestamp**nelze vytvořit. Služby Azure Storage používají vlastnost s tímto názvem.
+* Pokud zadáte hodnotu **DateTime** , musíte dodržovat formát, který je vhodný pro nastavení oblasti a jazyka vašeho počítače (například mm/dd/rrrr hh: mm: ss [am | PM] pro AMERICKou angličtinu).
 
 ### <a name="to-add-entities"></a>Přidání entit
 
-1. V Návrháři tabulek, vyberte **Přidat entitu** tlačítko.
+1. V Návrháři tabulky vyberte tlačítko **Přidat entitu** .
 
-    ![Přidání tlačítka Entity](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655336.png)
+    ![Tlačítko Přidat entitu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655336.png)
 
-1. V **Přidat entitu** dialogového okna zadejte hodnoty **PartitionKey** a **RowKey** vlastnosti.
+1. V dialogovém okně **Přidat entitu** zadejte hodnoty vlastností **PartitionKey** a **RowKey** .
 
-    ![Přidat entitu – dialogové okno](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655335.png)
+    ![Přidání entity – dialogové okno](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655335.png)
 
-    Zadejte hodnoty pečlivě. Nelze je změnit po zavření dialogových oken, není-li odstranit entitu a potom ho znovu přidejte.
+    Zadejte hodnoty pečlivě. Po zavření dialogového okna je nemůžete změnit, pokud entitu neodstraníte a znovu přidáte.
 
-### <a name="to-filter-entities"></a>Chcete-li filtrovat entity
+### <a name="to-filter-entities"></a>Filtrování entit
 
-Můžete přizpůsobit sadu entit, které se zobrazí v tabulce v případě, že pomocí Tvůrce dotazů.
+Pokud používáte Tvůrce dotazů, můžete přizpůsobit sadu entit, které se zobrazí v tabulce.
 
-1. Chcete-li otevřít Tvůrce dotazů, otevřete na tabulku pro zobrazení.
-1. Vyberte **Tvůrce dotazů** tlačítko na panelu nástrojů zobrazení tabulky.
+1. Chcete-li otevřít Tvůrce dotazů, otevřete tabulku pro zobrazení.
+1. Na panelu nástrojů v zobrazení tabulky vyberte tlačítko **Tvůrce dotazů** .
 
-    **Tvůrce dotazů** zobrazí se dialogové okno. Následující obrázek znázorňuje dotaz, který má být sestaven v editoru dotazů.
+    Zobrazí se dialogové okno **Tvůrce dotazů** . Následující ilustrace znázorňuje dotaz, který je sestaven v Tvůrci dotazů.
 
     ![Tvůrce dotazů](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC652231.png)
-1. Po dokončení sestavení dotazu, zavřete dialogové okno. Výsledný text formulář dotazu se zobrazí v textovém poli jako filtr datových služeb WCF.
-1. Spusťte dotaz, vyberte ikonu zelený trojúhelník.
+1. Až budete hotovi s vytvářením dotazu, zavřete dialogové okno. Výsledný text formuláře dotazu se zobrazí v textovém poli jako filtr WCF Data Services.
+1. Chcete-li spustit dotaz, vyberte ikonu zeleného trojúhelníku.
 
-Můžete také filtrovat data entity, které se zobrazí v Návrháři tabulek Pokud zadáte řetězec filtru služeb WCF Data Services přímo do textového pole filtru. Tento typ řetězce je podobná klauzuli WHERE příkazu SQL, ale je odeslána na server jako požadavek HTTP. Informace o tom, jak vytvářet řetězce filtru najdete v tématu [Constructing řetězce filtru pro návrháře tabulky](/azure/vs-azure-tools-table-designer-construct-filter-strings).
+Můžete také filtrovat data entity, která se zobrazí v Návrháři tabulky, pokud zadáte řetězec filtru WCF Data Services přímo do textového pole Filtr. Tento druh řetězce je podobný klauzuli WHERE SQL, ale pošle se na server jako požadavek HTTP. Informace o tom, jak vytvořit řetězce filtru, naleznete v tématu [konstrukce řetězců filtru pro návrháře tabulky](/azure/vs-azure-tools-table-designer-construct-filter-strings).
 
-Následující obrázek znázorňuje příklad řetězce platný filtr:
+Následující ilustrace znázorňuje příklad platného řetězce filtru:
 
 ![Řetězec filtru](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655337.png)
 
-## <a name="refresh-storage-data"></a>Aktualizace úložiště dat
+## <a name="refresh-storage-data"></a>Aktualizovat data úložiště
 
-Pokud Průzkumník serveru se připojí k nebo získá data z účtu úložiště, operace může trvat až jednu minutu na dokončení. Pokud se Průzkumník serveru nemůže připojit, může časový limit operace trvat. Při načítání dat můžete pokračovat v práci v jiných částech sady Visual Studio. Chcete-li zrušit operaci, pokud je trvá moc dlouho, vyberte **Zastavit aktualizaci** tlačítko na panelu nástrojů Průzkumníka serveru.
+Když se Průzkumník serveru připojí k účtu úložiště nebo získá data, může trvat až minutu, než se operace dokončí. Pokud se Průzkumník serveru nemůže připojit, může časový limit operace trvat. Při načítání dat můžete pokračovat v práci v jiných částech sady Visual Studio. Pokud chcete operaci zrušit, pokud trvá moc dlouho, vyberte na panelu nástrojů Průzkumník serveru tlačítko **Zastavit aktualizaci** .
 
-### <a name="to-refresh-blob-container-data"></a>Aktualizovat data objektů blob v kontejneru
+### <a name="to-refresh-blob-container-data"></a>Aktualizace dat kontejneru objektů BLOB
 
-* Vyberte **objekty BLOB** uzlu pod **úložiště**a pak vyberte **aktualizovat** tlačítko na panelu nástrojů Průzkumníka serveru.
-* Chcete-li aktualizovat seznam objektů BLOB, který se zobrazí, vyberte **Execute** tlačítko.
+* V části **úložiště**vyberte uzel **objekty blob** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
+* Chcete-li aktualizovat seznam objektů blob, které se zobrazí, vyberte tlačítko **Spustit** .
 
-### <a name="to-refresh-table-data"></a>Chcete-li aktualizovat data v tabulce
+### <a name="to-refresh-table-data"></a>Aktualizace dat tabulky
 
-* Vyberte **tabulky** uzlu pod **úložiště**a pak vyberte **aktualizovat** tlačítko na panelu nástrojů Průzkumníka serveru.
-* Chcete-li aktualizovat seznam entit, který se zobrazí v Návrháři tabulek, vyberte **Execute** tlačítko v Návrháři tabulek.
+* V části **úložiště**vyberte uzel **tabulky** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
+* Chcete-li aktualizovat seznam entit, které jsou zobrazeny v Návrháři tabulky, vyberte v Návrháři tabulky tlačítko **Spustit** .
 
-### <a name="to-refresh-queue-data"></a>Chcete-li aktualizovat data ve frontě
+### <a name="to-refresh-queue-data"></a>Aktualizace dat fronty
 
-Vyberte **fronty** uzlu pod **úložiště**a pak vyberte **aktualizovat** tlačítko na panelu nástrojů Průzkumníka serveru.
+V části **úložiště**vyberte uzel **fronty** a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
 
-### <a name="to-refresh-all-items-in-a-storage-account"></a>Chcete-li aktualizovat všechny položky v účtu úložiště
+### <a name="to-refresh-all-items-in-a-storage-account"></a>Aktualizace všech položek v účtu úložiště
 
-Zvolte název účtu a pak vyberte **aktualizovat** tlačítko na panelu nástrojů Průzkumníka serveru.
+Zvolte název účtu a pak na panelu nástrojů Průzkumník serveru vyberte tlačítko **aktualizovat** .
 
-## <a name="add-storage-accounts-by-using-server-explorer"></a>Přidání účtů úložiště pomocí Průzkumníka serveru
+## <a name="add-storage-accounts-by-using-server-explorer"></a>Přidání účtů úložiště pomocí Průzkumník serveru
 
-Existují dva způsoby, jak přidat účty úložiště pomocí Průzkumníka serveru. Ve vašem předplatném Azure můžete vytvořit účet úložiště, nebo můžete připojit existující účet úložiště.
+Existují dva způsoby, jak přidat účty úložiště pomocí Průzkumník serveru. V předplatném Azure můžete vytvořit účet úložiště, nebo můžete připojit existující účet úložiště.
 
-### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Vytvoření účtu úložiště pomocí Průzkumníka serveru
+### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Vytvoření účtu úložiště pomocí Průzkumník serveru
 
-1. V Průzkumníku serveru, otevřete místní nabídku **úložiště** uzlu a pak vyberte **vytvořit účet úložiště**.
+1. V Průzkumník serveru otevřete místní nabídku uzlu **úložiště** a pak vyberte **vytvořit účet úložiště**.
 
-1. V **vytvořit účet úložiště** dialogové okno Vyberte nebo zadejte následující informace:
+1. V dialogovém okně **vytvořit účet úložiště** vyberte nebo zadejte následující informace:
 
-   * Předplatné Azure, ke kterému chcete přidat účet úložiště.
+   * Předplatné Azure, do kterého chcete přidat účet úložiště.
    * Název, který chcete použít pro nový účet úložiště.
-   * Oblast nebo skupina vztahů (třeba západní USA nebo jihovýchodní Asie).
-   * Typ replikace, kterou chcete použít pro účet úložiště, jako místně redundantní.
+   * Oblast nebo skupina vztahů (například Západní USA nebo Východní Asie).
+   * Typ replikace, kterou chcete použít pro účet úložiště, například místně redundantní.
 
-   ![Vytvoření účtu služby Azure storage](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
+   ![Vytvoření účtu úložiště Azure](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. Vyberte **vytvořit**.
+1. Vyberte **Create** (Vytvořit).
 
-Nový účet úložiště se zobrazí v **úložiště** seznamu v Průzkumníku řešení.
+Nový účet úložiště se zobrazí v seznamu **úložiště** v Průzkumník řešení.
 
-### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Připojit existující účet úložiště pomocí Průzkumníka serveru
+### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Připojení existujícího účtu úložiště pomocí Průzkumník serveru
 
-1. V Průzkumníku serveru, otevřete místní nabídku pro Azure **úložiště** uzlu a pak vyberte **připojit externí úložiště**.
+1. V Průzkumník serveru otevřete místní nabídku uzlu **úložiště** Azure a pak vyberte **připojit externí úložiště**.
 
-    ![Přidání existující účet úložiště](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
-1. V **vytvořit účet úložiště** dialogové okno Vyberte nebo zadejte následující informace:
+    ![Přidává se existující účet úložiště.](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
+1. V dialogovém okně **vytvořit účet úložiště** vyberte nebo zadejte následující informace:
 
-   * Název existující účet úložiště, který chcete připojit.
-   * Klíč pro vybraný účet úložiště. Tato hodnota se většinou poskytuje vám při výběru účtu úložiště. Pokud chcete Visual Studio a klíč účtu úložiště mějte na paměti, vyberte **klíč účtu zapamatovat** zaškrtávací políčko.
-   * Protokol, který se má použít pro připojení k účtu úložiště, jako je například HTTP, HTTPS nebo vlastního koncového bodu. Další informace o vlastních koncových bodech najdete v tématu [postupy konfigurace připojovacích řetězců](https://msdn.microsoft.com/library/azure/ee758697.aspx).
+   * Název existujícího účtu úložiště, který chcete připojit.
+   * Klíč pro vybraný účet úložiště Tato hodnota je obvykle k dispozici při výběru účtu úložiště. Pokud chcete, aby aplikace Visual Studio pamatovala klíč účtu úložiště, zaškrtněte políčko **Zapamatovat si klíč účtu** .
+   * Protokol, který se má použít pro připojení k účtu úložiště, například HTTP, HTTPS nebo vlastní koncový bod. Další informace o vlastních koncových bodech naleznete v tématu [How to Configure Connection Strings](https://msdn.microsoft.com/library/azure/ee758697.aspx).
 
-### <a name="to-view-the-secondary-endpoints"></a>Chcete-li zobrazit sekundární koncových bodů
+### <a name="to-view-the-secondary-endpoints"></a>Zobrazení sekundárních koncových bodů
 
-Pokud jste nevytvořili účet úložiště pomocí **geograficky redundantní s přístupem pro čtení** možnost replikace můžete zobrazit jeho sekundární koncových bodů tak, že otevřete místní nabídku pro název účtu a pak vyberte **vlastnosti**.
+Pokud jste vytvořili účet úložiště pomocí možnosti **geograficky redundantní replikace s přístupem pro čtení** , můžete zobrazit jeho sekundární koncové body otevřením místní nabídky pro název účtu a pak vybrat **vlastnosti**.
 
-![Sekundární koncových bodů úložiště](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766040.png)
+![Sekundární koncové body úložiště](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766040.png)
 
-### <a name="to-remove-a-storage-account-from-server-explorer"></a>Chcete-li odebrat účet úložiště z Průzkumníka serveru
+### <a name="to-remove-a-storage-account-from-server-explorer"></a>Odebrání účtu úložiště z Průzkumník serveru
 
-V Průzkumníku serveru, otevřete místní nabídku pro název účtu a pak vyberte **odstranit**. 
+V Průzkumník serveru otevřete místní nabídku pro název účtu a pak vyberte **Odstranit**. 
 
-Pokud odstraníte účet úložiště, odeberou se také žádné uložené informace o klíči pro tento účet.
+Když odstraníte účet úložiště, odeberou se taky všechny uložené informace o klíči pro tento účet.
 
-Pokud odstraníte účet úložiště z Průzkumníka serveru, to nemá vliv na váš účet úložiště nebo všechna data, která obsahuje. Jednoduše odebere odkaz z Průzkumníka serveru. Chcete-li trvale odstranit účet úložiště, použijte [webu Azure portal](https://portal.azure.com/).
+Pokud odstraníte účet úložiště z Průzkumník serveru, nebude to mít vliv na váš účet úložiště ani na žádná data, která obsahuje. Jednoduše odebere odkaz z Průzkumník serveru. Pokud chcete účet úložiště trvale odstranit, použijte [Azure Portal](https://portal.azure.com/).
 
 ## <a name="next-steps"></a>Další kroky
 

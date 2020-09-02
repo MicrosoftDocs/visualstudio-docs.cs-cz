@@ -1,5 +1,5 @@
 ---
-title: Glosář ladicího programu sady Visual Studio | Dokumentace Microsoftu
+title: Glosář ladicího programu sady Visual Studio | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,79 +12,79 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 19d82f006bb1c37981f60e1a0b2710588eb0053c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204780"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Slovníček pro Visual Studio Debugger
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Následují termínů používaných v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ladění sady SDK.  
+Níže jsou uvedené výrazy používané v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sadě SDK pro ladění.  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  vázaná zarážka  
- Abstrakce pro zarážky nastavené v kódu. Existuje vztah 1: 1 mezi vázaná zarážka a instrukce zarážky v kódu. Pokud kód uvolní, může zrušení vazby zarážky vazby.  
+ Abstrakce pro zarážku nastavenou v kódu. Existuje vztah 1:1 mezi vázanou zarážkou a instrukcí zarážky v datovém proudu kódu. Při uvolnění kódu mohou být navázány vázané zarážky.  
   
- příčiny  
- Poskytuje možnost sledovat logické vlákno provádění v rámci více fyzických vláken, procesy a počítačů a k rekonstrukci tohoto logického vlákna v libovolném časovém okamžiku zásobníku volání během životnosti toto vlákno.  
+ kauzalita  
+ Poskytuje možnost sledovat logické vlákno provádění napříč více fyzickými vlákny, procesy a počítači a pro rekonstrukci zásobníku volání daného logického vlákna v kterémkoli daném okamžiku v rámci tohoto vlákna.  
   
- Kontext kódu  
- Poskytuje abstrakci na umístění v kódu známé ladicí stroj. Pro většinu za běhu architektury je kontext kódu adresa ve službě stream instrukce programu. Pro netradičních jazyky, ve kterých kód nemůže být reprezentována pokyny, mohou být zastoupeny kontext kódu jiným způsobem.  
+ kontext kódu  
+ Poskytuje abstrakci pozice v kódu známého pro ladicí stroj. Pro většinu architektur běhu je kontext kódu adresa v datovém proudu instrukcí programu. Pro netradiční jazyky, ve kterých kód nemůže být reprezentován pokyny, kontext kódu může být reprezentován jiným způsobem.  
   
  cesta kódu  
- Představuje bod provádění v kódu, ve kterém je větev nebo je provedeno volání funkce. Trasování zásobníku je v podstatě seznam cest kódu funkce volání.  
+ Představuje bod spuštění v kódu, kde je vytvořena větev, nebo je provedeno volání funkce. Trasování zásobníku je v podstatě seznam cest kódu volání funkcí.  
   
  ladicí stroj (DE)  
- Komponenta, která umožňuje ladění za běhu architektury. Ladicí stroj funguje ve spojení s překladač nebo operačního systému a poskytuje ladění služeb, jako je spouštění ovládacího prvku, zarážky a výraz hodnocení.  
+ Komponenta, která umožňuje ladění architektury run-time. Ladicí stroj funguje ve spojení s překladačem nebo operačním systémem a poskytuje služby ladění, jako je například řízení spouštění, zarážky a vyhodnocení výrazu.  
   
- Kontext dokumentu  
- Poskytuje abstrakci pozice ve zdrojovém souboru dokumentu známé ladicí stroj. Většina jazyků je kontext dokumentu pozice ve zdrojovém souboru. Pro netradičních jazyky, pro které nemusí být zdrojový soubor text, může být reprezentován kontext dokumentu jiným způsobem. Viz také *pozice dokumentu*.  
+ kontext dokumentu  
+ Poskytuje abstrakci pozice v dokumentu zdrojového souboru známého ladicímu modulu. Pro většinu jazyků je kontext dokumentu pozice ve zdrojovém souboru. Pro netradiční jazyky, pro které zdrojový soubor nemusí být text, může být kontext dokumentu reprezentován jiným způsobem. Viz také *pozice dokumentu*.  
   
- Pozice dokumentu  
- Poskytuje abstrakci pozice ve zdrojovém souboru ví, rozhraní IDE. Většina jazyků dokumentu pozice je pozice ve zdrojovém souboru. Netradičních jazyků může být reprezentován pozice dokumentu jinými způsoby. Viz také *kontext dokumentu*.  
+ pozice dokumentu  
+ Poskytuje abstrakci pozice ve zdrojovém souboru známém rozhraním IDE. Ve většině jazyků je umístěním dokumentu pozice ve zdrojovém souboru. V případě netradičních jazyků může být pozice dokumentu reprezentovaná jinými způsoby. Viz také *kontext dokumentu*.  
   
  Chyba zarážky  
- Abstrakce pro popisující chybu v čekající zarážkou. K chybě zarážka může popisují chybu v umístění čekající zarážkou, výraz přidružený k čekající zarážka nebo Další informace, které brání čekající zarážka vazby do umístění kódu.  
+ Abstrakce popisující chybu v nedokončené zarážce. Zarážka chyby může popsat chybu v umístění čeká na zarážce, výraz přidružený k nevyřízené zarážce nebo jiné informace, které brání nevyřízené zarážce ve vazbě na umístění kódu.  
   
- Kontext vyhodnocení  
- Poskytuje abstrakci programovacím kontextu pro vyhodnocování výrazů. Objekt context hodnocení je obvykle obor. Při provádění vyhodnocení výrazu v kontextu výrazu, poskytuje kontext Výraz pravidla rozsahu, které odpovídají jeho vytvoření. Například objekt context výraz vytvořené v rámci zásobníku obsahují souvislosti za vaše rozhodnutí vyzkoušet lokální proměnné, parametry metody, členy třídy (Pokud je k dispozici) a globální proměnné.  
+ kontext vyhodnocení  
+ Poskytuje abstrakci programovacího kontextu pro vyhodnocení výrazu. Kontext vyhodnocení je obvykle oborem. Při provádění vyhodnocení výrazu v kontextu výrazu poskytuje kontext výrazu pravidla oboru, která odpovídají jeho bodu vytváření. Například kontext výrazu vytvořený v bloku zásobníku poskytne kontext pro vyhodnocení místních proměnných, parametrů metod, členů třídy (Pokud je k dispozici) a globálních proměnných.  
   
- zachycené výjimky  
- Výjimka, která je zachycena ladicí stroj i v případě, že žádný mechanismus zpracování výjimek se používají v aktuální rámec zásobníku.  
+ zachycená výjimka  
+ Výjimka, která je zachycena ladicím strojem, i když není v aktuálním bloku zásobníku k dispozici žádný mechanismus zpracování výjimek.  
   
  JustMyCode  
- Koncept ladění pouze kód, který patří uživateli a ignoruje všechny mezikódu, jako je například kód systému – i v případě, že zdrojový kód je k dispozici pro tento kód systému.  
+ Koncept ladění pouze kódu, který patří uživateli a ignorování veškerého zprostředkujícího kódu, jako je například systémový kód, i v případě, že je zdrojový kód k dispozici pro tento systémový kód.  
   
- čekající zarážka  
- Poskytuje abstrakci pro zarážky před, během a po kód je načten a způsob, jak Virtualizovat zarážky. A až do zarážky:  
+ čeká na zarážku  
+ Poskytuje abstrakci pro zarážky před, během a po načtení kódu a způsob, jak virtualizovat zarážky. Nevyřízená zarážka:  
   
-- Obsahuje všechny informace potřebné k vytvoření vazby zarážku do kódu v jedné nebo více programů.  
+- Obsahuje všechny informace potřebné k navázání zarážky na kód v jednom nebo více programech.  
   
-- Může vytvořit vazbu na několika místech kódu v jedné nebo více programů.  
+- Může vytvořit vazby na více umístění kódu v jednom nebo více programech.  
   
-- Nikdy vytvoří vazbu samotný kód.  
+- Nikdy se neváže ke kódu.  
   
-  Načte každý kódu v době, všech čekajících zarážek v programu zvoleny zobrazíte, pokud lze svázat. Čekající zarážka se říká, že obsahuje všechny vazby zarážky, které se váže.  
+  Pokaždé, když se načte kód, jsou zkontrolovány všechny probíhající zarážky v programu, aby se zobrazily, zda mohou vytvořit vazby. Čeká se na zarážku, která obsahuje všechny svázané zarážky, které váže.  
   
   zpracování  
-  Fyzické proces Win32. Proces může obsahovat více programů. Viz také *program*.  
+  Fyzický proces Win32. Proces může obsahovat více programů. Viz také *program*.  
   
   program  
-  Jeden obor názvů běží uvnitř konkrétní architektura za běhu. Viz také *procesu*.  
+  Jeden obor názvů běžící v rámci určité architektury run-time. Viz také *proces*.  
   
   Správce ladění relace (SDM)  
-  Spravuje libovolný počet ladicími stroji ladění libovolný počet programy ve více procesech v libovolném počtu počítačů. Na úrovni basic je SDM multiplexor modulů ladění. Kromě toho SDM poskytuje jednotný přehled o relaci ladění do integrovaného vývojového prostředí.  
+  Spravuje libovolný počet ladicích modulů, které ladí libovolný počet programů ve více procesech na libovolném počtu počítačů. Na úrovni Basic je model SDM multiplexou ladicích modulů. SDM navíc poskytuje jednotný přehled o relaci ladění IDE.  
   
   rámec zásobníku  
-  Představuje stav výpočet na konkrétní snímek a určitou úroveň volání vnořených funkcí.  
+  Představuje stav výpočtu pro konkrétní rámec a konkrétní úroveň volání vnořených funkcí.  
   
   vlákno  
-  Zobecněný pojem instrukce založené na zásobníku spouštění používané alespoň jeden program.  
+  Zobecněný pojem spuštění instrukcí založeného na zásobníku, který běží aspoň v jednom programu.  
   
-  upozornění zarážky  
-  Abstrakce pro popis upozornění v čekající zarážkou. Upozornění zarážky popisuje důvod, proč čekající zarážka nebyla dosud vázán na místa v kódu. Je možné, že kód nenačetl ještě pro umístění popsal čekající zarážka nebo z nějakého důvodu.  
+  zarážka upozornění  
+  Abstrakce pro popis upozornění v nedokončené zarážce. Zarážka varování popisuje důvod, proč se nevyřízená zarážka ještě neváže k umístění kódu. To může být způsobeno tím, že kód ještě nebyl načten pro umístění popsané v nedokončené zarážce, nebo z jiného důvodu.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřitelnost programu Visual Studio Debugger](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

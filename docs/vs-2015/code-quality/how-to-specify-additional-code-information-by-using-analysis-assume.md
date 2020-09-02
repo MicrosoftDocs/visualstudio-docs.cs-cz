@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: f2f18c9284ec96de7a7b8663aff485962d194282
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277972"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-__analysis_assume"></a>Postupy: Určení dalších informací o kódu pomocí __analysis_assume
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete poskytnout nápovědu nástroji pro analýzu kódu pro C/C++ kód, který pomůže procesu analýzy a omezit upozornění. Chcete-li zadat další informace, použijte následující funkci:  
+Můžete poskytnout nápovědu pro kód C/C++ pro analýzu kódu, který pomůže procesu analýzy a omezit upozornění. Chcete-li zadat další informace, použijte následující funkci:  
   
  `__analysis_assume(`  `expr`  `)`  
   
@@ -32,7 +32,7 @@ Můžete poskytnout nápovědu nástroji pro analýzu kódu pro C/C++ kód, kter
  Nástroj Analýza kódu předpokládá, že podmínka reprezentovaná výrazem je pravdivá v místě, kde je funkce zobrazena a zůstává true, dokud není výraz změněn, například přiřazením proměnné.  
   
 > [!NOTE]
-> `__analysis_assume` nemá vliv na optimalizaci kódu. Mimo nástroj pro analýzu kódu je `__analysis_assume` definováno jako No-op.  
+> `__analysis_assume` nemá vliv na optimalizaci kódu. Mimo nástroj pro analýzu kódu `__analysis_assume` je definován jako No-op.  
   
 ## <a name="example"></a>Příklad  
  Následující kód používá `__analysis_assume` k opravě upozornění analýzy kódu [C6388](../code-quality/c6388.md):  

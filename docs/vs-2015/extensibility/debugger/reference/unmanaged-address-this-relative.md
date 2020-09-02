@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_THIS_RELATIVE | Dokumentace Microsoftu
+title: UNMANAGED_ADDRESS_THIS_RELATIVE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: aaed99b669946f4d2885009ff328ce4e2e62fcae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204759"
 ---
-# <a name="unmanagedaddressthisrelative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
+# <a name="unmanaged_address_this_relative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura představuje adresu, která je vzhledem k `this` ukazatel (`Me` v jazyce Visual Basic).  
+Tato struktura představuje adresu, která je relativní vzhledem k `this` ukazateli ( `Me` v Visual Basic).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagUNMANAGED_THIS_RELATIVE {  
@@ -42,23 +42,23 @@ public struct UNMANAGED_THIS_RELATIVE {
 }  
 ```  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  dwOffset  
- Posun bajtu od základní umístění (například začátek třídy vtable).  
+ Posun bajtů od základní pozice (například začátek třídy vtable).  
   
  dwBitOffset  
- Posun v bitech od základní pozice (vždy 0 Pokud odkazující na bitové pole).  
+ Posun v bitech od základní pozice (Always 0, pokud se neodkazuje na bitové pole)  
   
  dwBitLength  
- Počet bitů představující adresu (vždy 0 Pokud odkazující na bitové pole).  
+ Počet bitů, které představují adresu (Always 0, pokud se neodkazuje na bitové pole).  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení ve struktuře [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , když `dwKind` `DEBUG_ADDRESS_UNION` je pole struktury nastaveno na `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` (hodnota z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) ).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

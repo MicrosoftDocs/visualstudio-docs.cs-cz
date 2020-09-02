@@ -1,5 +1,5 @@
 ---
-title: Cvleavespan – funkce | Dokumentace Microsoftu
+title: Funkce Cvleavespan – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d1f17de6df465408e9bec3b6db4e1620f0181fd9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177768"
 ---
 # <a name="cvleavespan-function"></a>CvLeaveSpan – funkce
@@ -35,13 +35,13 @@ HRESULT CvLeaveSpan(
   
 #### <a name="parameters"></a>Parametry  
  `pSpan`  
- Objekt vrácený z předchozího volání cventerspan – * span. Nemůže mít hodnotu NULL.  
+ Objekt span vrácený předchozím voláním Cventerspan – *. Nemůže mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** cvmarkers. h  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+ [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

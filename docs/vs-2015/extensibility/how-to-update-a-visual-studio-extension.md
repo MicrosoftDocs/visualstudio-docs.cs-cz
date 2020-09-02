@@ -1,5 +1,5 @@
 ---
-title: Aktualizovat rozšíření | Dokumentace Microsoftu
+title: Aktualizovat rozšíření | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,54 +13,54 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0d1464cdd2be79cd93a3e98bcf8769e8f4b8b89f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435887"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64837247"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>Postupy: Aktualizace rozšíření sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozšíření sady Visual Studio můžete aktualizovat v systému s použitím **rozšíření a aktualizace** k instalaci aktualizované verze. Pokud vytvoříte aktualizovanou verzi rozšíření, můžete ho místo při aktualizaci zvyšující číslo verze v manifestu VSIX.
+Rozšíření sady Visual Studio můžete v systému aktualizovat pomocí **rozšíření a aktualizací** pro instalaci aktualizované verze. Pokud vytvoříte aktualizovanou verzi rozšíření, můžete ji označit jako aktualizovanou zvýšením čísla verze v manifestu VSIX.
 
- Aktualizace se nainstalují při manifest VSIX příchozí rozšíření má stejnou `ID` jako je nainstalovaný a vyšší `Version` číslo. Pokud `Version` číslo je stejná nebo nižší, nejde nainstalovat balíček. Pokud `ID` se hodnoty neshodují, je balíček, který dosud není nainstalován rozpoznán jako samostatné rozšíření.
+ Aktualizace se instalují, když manifest VSIX příchozího rozšíření je stejný `ID` jako nainstalovaný a vyšší `Version` číslo. Pokud `Version` je číslo stejné nebo nižší, balíček nejde nainstalovat. Pokud se `ID` hodnoty neshodují, bude balíček, který ještě není nainstalovaný, rozpoznaný jako samostatná přípona.
 
- Abyste líp zabránili konfliktům během vývoje, doporučujeme, odinstalovat starší verze rozšíření probíhá a také odinstalujete nebo další potenciálně konfliktním rozšíření zakázat.
+ Aby se zabránilo konfliktům při vývoji, doporučujeme odinstalovat předchozí verze rozšíření a také odinstalovat nebo zakázat jakákoli další potenciálně konfliktní rozšíření.
 
-### <a name="to-update-an-extension-on-your-system"></a>Chcete-li aktualizovat rozšíření ve vašem systému
+### <a name="to-update-an-extension-on-your-system"></a>Aktualizace rozšíření v systému
 
-1. Na **nástroje** nabídky, klikněte na tlačítko **rozšíření a aktualizace**.
+1. V nabídce **Nástroje** klikněte na **Rozšíření a aktualizace**.
 
-2. V levém podokně klikněte na tlačítko **aktualizace**.
+2. V levém podokně klikněte na **aktualizace**.
 
 3. V prostředním podokně klikněte na aktualizaci, kterou chcete nainstalovat.
 
-     Číslo verze aktualizované rozšíření se zobrazí v pravém podokně, společně s další informace.
+     Číslo verze aktualizovaného rozšíření se zobrazí v pravém podokně spolu s dalšími informacemi.
 
-4. Dole v pravém podokně klikněte na tlačítko **aktualizace**.
+4. V dolní části pravého podokna klikněte na **aktualizovat**.
 
-### <a name="to-publish-an-update-of-an-extension"></a>Chcete-li publikovat aktualizace rozšíření
+### <a name="to-publish-an-update-of-an-extension"></a>Publikování aktualizace rozšíření
 
-1. V sadě Visual Studio otevřete řešení rozšíření, které chcete aktualizovat. Proveďte požadované změny.
+1. V aplikaci Visual Studio otevřete řešení pro rozšíření, které chcete aktualizovat. Proveďte změny.
 
     > [!IMPORTANT]
-    > Hodnota bez znaménka že všechna rozšíření uživatele aktualizován automaticky. Měli byste vždy podepsat vaše rozšíření.
+    > Nepodepsaná všechna uživatelská rozšíření se automaticky neaktualizují. Vaše rozšíření byste měli vždycky podepisovat.
 
-2. V **Průzkumníka řešení**, otevřete source.extension.manifest.
+2. V **Průzkumník řešení**otevřete source. extension. manifest.
 
-3. V Návrháři manifestu zvýšit hodnotu čísla v **verze** pole.
+3. V Návrháři manifestu zvyšte hodnotu čísla v poli **verze** .
 
 4. Uložte řešení a sestavte ho.
 
-5. Nahrát nový soubor .vsix (ve složce \bin\Debug\ projektu) do [Visual Studio Marketplace](https://marketplace.visualstudio.com/) webu.
+5. Nahrajte nový soubor. vsix (ve složce \bin\Debug\ projektu) na web [Visual Studio Marketplace](https://marketplace.visualstudio.com/) .
 
-     Když se otevře uživatel, který má starší verzi rozšíření **rozšíření a aktualizace**, nová verze zobrazí v **aktualizace** seznamu, za předpokladu, že nástroj je nastavena automaticky vyhledat aktualizace.
+     Když uživatel, který má starší verzi rozšíření, otevře **rozšíření a aktualizace**, zobrazí se nová verze v seznamu **aktualizace** za předpokladu, že nástroj je nastaven tak, aby automaticky hledal aktualizace.
 
-     Můžete povolit nebo zakázat automatické zjišťování aktualizací v dolní části **aktualizace** podokně (**povolí nebo zakáže automatické zjišťování dostupných aktualizací**), které změny **vyhledat aktualizace** nastavení **Nástroje / možnosti / prostředí / rozšíření a aktualizace**.
+     Můžete povolit nebo zakázat automatickou kontrolu aktualizací v dolní části podokna **aktualizace** (**Povolit/zakázat automatickou detekci dostupných aktualizací**), která změní nastavení **Vyhledat aktualizace** v **nabídce Nástroje/možnosti/prostředí/rozšíření a aktualizace**.
 
     > [!NOTE]
-    > Od verze Visual Studio 2015 Update 2, můžete zadat (v **Nástroje / možnosti / prostředí / rozšíření a aktualizace**) určuje, zda chcete automatické aktualizace pro rozšíření vázaná na uživatele, všechna rozšíření uživatele nebo obě (výchozí nastavení).
+    > Počínaje verzí Visual Studio 2015 Update 2 můžete určit (v části **Nástroje/možnosti/prostředí/rozšíření a aktualizace**), jestli chcete automatické aktualizace pro jednotlivá uživatelská rozšíření, všechna uživatelská rozšíření nebo obojí (výchozí nastavení).
 
 ## <a name="see-also"></a>Viz také
  [Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md) [hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS | Dokumentace Microsoftu
+title: SYMBOL_SEARCH_INFO_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a988e8f5409a3a9e1f9fd8a4b5bd863a3309acc3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429036"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831139"
 ---
-# <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
+# <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje typ informací o symbolu pro načtení.  
+Určuje druh informací o symbolech, které se mají načíst.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_SYMBOL_SEARCH_INFO_FIELDS  
@@ -46,21 +46,21 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
   
 ## <a name="members"></a>Členové  
  SSIF_NONE  
- Označuje žádné příznaky  
+ Neindikuje žádné příznaky.  
   
  SSIF_VERBOSE_SEARCH_INFO  
- Vrátí všechny vyhledávání cesty pro hledání symbolů  
+ Vrátí všechny cesty pro hledání použité pro hledání symbolů.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou předávány jako parametr [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) vrácená metodou ke zjištění množství informací.  
+ Tyto příznaky jsou předány jako parametr metodě [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) k určení množství vrácených informací.  
   
 > [!NOTE]
-> V současné době pouze `SSIF_VERBOSE_SEARCH_INFO` se podporuje, a musí být zadán jako `dwFlags` parametr `IDebugModule3::GetSymbolInfo`. Všechny ostatní hodnoty vrátí chybu.  
+> V současné době `SSIF_VERBOSE_SEARCH_INFO` se podporuje jenom a musí se zadat jako `dwFlags` parametr pro `IDebugModule3::GetSymbolInfo` . Všechny ostatní hodnoty vrátí chybu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

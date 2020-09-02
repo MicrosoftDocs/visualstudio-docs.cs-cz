@@ -1,5 +1,5 @@
 ---
-title: Čas synchronizace | Dokumentace Microsoftu
+title: Čas synchronizace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,22 +14,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 218f333f97e8252993f87893238a0f51f964d6c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151389"
 ---
 # <a name="synchronization-time"></a>Čas synchronizace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako synchronizace. Pokud vlákno je označena jako blokováno při synchronizaci, je vyjádřena jednu z těchto věcí:  
+Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorií jako synchronizace. Pokud je vlákno označeno jako blokované při synchronizaci, předpokládá se jedna z těchto věcí:  
   
-- Provádění vlákna bylo pravděpodobně způsobeno při volání k synchronizaci dobře známé vlákno rozhraní API, jako `EnterCriticalSection()` nebo `WaitForSingleObject()`.  
+- Výsledkem provedení vlákna může být volání známého rozhraní API synchronizace vláken, například `EnterCriticalSection()` nebo `WaitForSingleObject()` .  
   
-- Porovnávací algoritmus rozhraní API nemůže být zcela komplexní, a proto některá rozhraní API, která by mohla být namapovány na jiných kategorií může také dojít, protože synchronizace, protože rámce při volání funkce zásobníku nakonec dosažena základní jádra blokování primitivní, který byl mapovat do této kategorie.  
+- Algoritmus odpovídající rozhraní API se nedá úplně komplexní, takže některá rozhraní API, která se dají namapovat na jiné kategorie, se můžou zobrazit jako synchronizace, protože rámec v zásobníku volání nakonec dosáhl základní třídy blokujícího jádra, která se namapovala na tuto kategorii.  
   
-  Informace o tom základní příčinu události blokování vlákna, pečlivě zkontrolujte blokování zásobníky volání a profilu, sestavy.  
+  Pro pochopení základní příčiny události blokující vlákno pečlivě prověřte blokující zásobníky volání a sestavy profilů.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

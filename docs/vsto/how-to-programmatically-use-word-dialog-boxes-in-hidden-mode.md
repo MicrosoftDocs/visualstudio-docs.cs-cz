@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 923fc7ddec0350f254968fe17494ecbe27f76b13
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537576"
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Postupy: používání dialogových oken aplikace Word ve skrytém režimu prostřednictvím kódu programu
@@ -38,7 +38,7 @@ ms.locfileid: "85537576"
 
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: používání předdefinovaných dialogových oken v aplikaci Word prostřednictvím kódu programu](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)
 - [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md)

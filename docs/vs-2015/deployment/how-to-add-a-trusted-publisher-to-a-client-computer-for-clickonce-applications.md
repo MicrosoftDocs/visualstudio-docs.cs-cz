@@ -17,23 +17,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 296aec3b2b5cd307400b230375a7171f158fee60
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75847699"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Postupy: Přidání důvěryhodného vydavatele na klientskou stanici pro aplikace ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské počítače tak, aby vaše aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr. exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.  
+Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské počítače tak, aby [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace běžely s vyšší úrovní důvěryhodnosti bez zobrazení výzvy uživateli. Následující postupy ukazují, jak pomocí nástroje příkazového řádku CertMgr.exe přidat certifikát vydavatele do úložiště důvěryhodných vydavatelů v klientském počítači.  
   
  Příkazy, které použijete, se mírně liší v závislosti na tom, jestli certifikační autorita (CA), která certifikát vystavila, je součástí důvěryhodného kořenového certifikátu klienta. Pokud je klientský počítač se systémem Windows součástí domény, bude obsahovat v seznamu certifikační autority, které jsou považovány za důvěryhodné kořenové adresáře. Tento seznam je obvykle nakonfigurovaný správcem systému. Pokud certifikát vystavila jedna z těchto důvěryhodných kořenových adresářů nebo certifikační autorita, která je zřetězena s jednou z těchto důvěryhodných kořenových adresářů, můžete certifikát přidat do důvěryhodného kořenového úložiště klienta. Pokud na druhé straně váš certifikát nevydala jedna z těchto důvěryhodných kořenových adresářů, musíte certifikát přidat do důvěryhodného kořenového úložiště klienta i do úložiště důvěryhodných vydavatelů.  
   
 > [!NOTE]
-> Certifikáty je třeba přidat na každý klientský počítač, do kterého plánujete nasadit aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], která vyžaduje zvýšená oprávnění. Certifikáty přidáte buď ručně, nebo prostřednictvím aplikace, kterou nasadíte do klientů. Tyto počítače je třeba nakonfigurovat pouze jednou, a poté můžete nasadit libovolný počet aplikací [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] podepsaných stejným certifikátem.  
+> Certifikáty je třeba přidat na každý klientský počítač, do kterého plánujete nasadit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci, která vyžaduje zvýšená oprávnění. Certifikáty přidáte buď ručně, nebo prostřednictvím aplikace, kterou nasadíte do klientů. Tyto počítače je třeba nakonfigurovat pouze jednou, a poté můžete nasadit libovolný počet [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikací podepsaný se stejným certifikátem.  
   
- Do úložiště můžete také přidat certifikát programově pomocí třídy <xref:System.Security.Cryptography.X509Certificates.X509Store>.  
+ Do úložiště můžete také přidat certifikát programově pomocí <xref:System.Security.Cryptography.X509Certificates.X509Store> třídy.  
   
  Přehled nasazení důvěryhodných aplikací najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).  
   
@@ -45,7 +45,7 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr.exe -add certificate.cer -c -s -r localMachine TrustedPublisher**  
+     **certmgr.exe – přidání certifikátu. cer-c-s-r localMachine TrustedPublisher**  
   
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Přidání certifikátu do úložiště důvěryhodných vydavatelů pod jiným kořenem  
   
@@ -55,15 +55,15 @@ Při nasazení důvěryhodných aplikací můžete nakonfigurovat klientské po�
   
 3. Z příkazového řádku v klientských počítačích spusťte následující příkaz:  
   
-     **certmgr.exe -add good.cer -c -s -r localMachine Root**  
+     **certmgr.exe – přidat dobrý. cer-c-s-r localMachine root**  
   
-     **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**  
+     **certmgr.exe – přidat dobrý. cer-c-s-r localMachine TrustedPublisher**  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
  [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)   
- [ClickOnce a  Authenticode](../deployment/clickonce-and-authenticode.md)  
+ [ClickOnce a Authenticode](../deployment/clickonce-and-authenticode.md)   
  [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md)   
  [Postupy: povolení nastavení zabezpečení ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)   
  [Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   

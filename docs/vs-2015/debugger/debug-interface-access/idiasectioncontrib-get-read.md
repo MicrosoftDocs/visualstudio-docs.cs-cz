@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_read – | Dokumentace Microsoftu
+title: 'IDiaSectionContrib:: get_read | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c06a618d0278d6a02409c33a73cd179f3b228e7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150505"
 ---
-# <a name="idiasectioncontribgetread"></a>IDiaSectionContrib::get_read
+# <a name="idiasectioncontribget_read"></a>IDiaSectionContrib::get_read
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak označující, zda můžete přečíst v části.  
+Načte příznak, který označuje, zda lze oddíl přečíst.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,10 @@ HRESULT get_read ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud najdete v části; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda lze oddíl číst. v opačném případě vrátí `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

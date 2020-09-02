@@ -1,5 +1,5 @@
 ---
-title: Ladění ve smíšeném režimu je podporováno pouze při použití rozhraní Microsoft .NET Framework 2.0 nebo 3.0. | Dokumentace Microsoftu
+title: Ladění ve smíšeném režimu se podporuje jenom v případě, že používáte Microsoft .NET Framework 2,0 nebo 3,0 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,44 +17,44 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc45927ad6cc1189ed1d08328b4dd362821cdcb6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696468"
 ---
 # <a name="mixed-mode-debugging-is-only-supported-when-using-microsoft-net-framework-20-or-30"></a>Ladění ve smíšeném režimu je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo 3.0.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Verze rozhraní Microsoft .NET Framework starší než 2.0 se neposkytuje podporu pro pracující v kombinovaném režimu ladění 64bitových procesů. To znamená, že nelze přejdete ze spravovaného kódu do nativního kódu nebo z nativního kódu pro spravovaný kód při ladění.  
+Verze Microsoft .NET Framework starší než 2,0 neposkytují podporu pro ladění ve smíšeném režimu pro 64 procesy. To znamená, že nemůžete krokovat ze spravovaného kódu do nativního kódu nebo z nativního kódu do spravovaného kódu při ladění.  
   
- Chcete-li tento problém obejít, můžete:  
+ Pokud chcete tento problém obejít, můžete:  
   
-- Aktualizujte projekt pro použití buď rozhraní Microsoft .NET Framework 2.0 nebo 3.0.  
+- Aktualizujte projekt tak, aby používal buď Microsoft .NET Framework 2,0 nebo 3,0.  
   
-- Ladění spravovaného a nativního kódu v samostatné relace ladění.  
+- Ladění spravovaného a nativního kódu v samostatných ladicích relacích.  
   
-- Ladit smíšený kód jako 32bitový proces, jak je popsáno v následujících postupech.  
+- Ladit smíšený kód jako 32 proces, jak je popsáno v následujících postupech.  
   
-### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>Chcete-li změnit operační systém na 32 bitů (Visual Basic nebo C#)  
+### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>Změna operačního systému na 32-bit (Visual Basic nebo C#)  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti** v místní nabídce.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a potom klikněte na možnost **vlastnosti** v místní nabídce.  
   
-2. Na stránkách vlastností, klikněte na tlačítko **kompilaci** nebo **ladění** kartu.  
+2. Na stránkách vlastností klikněte na kartu **kompilovat** nebo **ladit** .  
   
-3. Klikněte na tlačítko **platformy**a pak vyberte **x86** ze seznamu platformy.  
+3. Klikněte na **platforma**a v seznamu platforem vyberte **x86** .  
   
-     Ve výchozím nastavení kompilátory jazyků Visual Basic a C# vytvářet kód pro spuštění na jakýkoli procesor. Na 64bitovém počítači spusťte tyto binární soubory jako 64bitové procesy. Ke spuštění na 32bitový proces, musíte zvolit **Win32**, nikoli **AnyCPU**.  
+     Ve výchozím nastavení kompilátor Visual Basic a C# vytváří kód pro spuštění na jakémkoli procesoru. Na 64 počítači se tyto binární soubory spouští jako 64 procesy. Pro spuštění na 32 procesu je nutné zvolit **Win32**, nikoli **anycpu**.  
   
-### <a name="to-change-the-operating-system-to-32-bit-cc"></a>Chcete-li změnit operační systém na 32 bitů (C/C++)  
+### <a name="to-change-the-operating-system-to-32-bit-cc"></a>Změna operačního systému na 32-bit (C/C++)  
   
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti** v místní nabídce.  
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a potom klikněte na možnost **vlastnosti** v místní nabídce.  
   
-     Na stránkách vlastností, klikněte na tlačítko **platformy**a pak vyberte **Win32** ze seznamu platformy.  
+     Na stránkách vlastností klikněte na možnost **platforma**a v seznamu platforem vyberte položku **Win32** .  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-- Zobrazit [nastavení ladění SQL](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3).  
+- Viz [nastavení ladění SQL](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění 64bitových aplikací](../debugger/debug-64-bit-applications.md)

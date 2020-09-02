@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Shromažďování dat čítačů Windows | Dokumentace Microsoftu'
+title: 'Postupy: shromažďování dat čítače Windows | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,43 +17,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9743fa7defbbf3321636d2ba4799454713a647db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432784"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64836778"
 ---
 # <a name="how-to-collect-windows-counter-data"></a>Postupy: Shromažďování dat čítačů Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Čítače Windows jsou systémové čítače výkonu, které mohou být shromážděných během profilace v nastavených intervalech. V zobrazení sestav nástrojů pro profilaci sady značek je označen řádek **AutoMark** pro každý interval shromažďování. Tento řádek obsahuje sloupce, které popisují hodnoty čítače výkonu v tomto intervalu. Chcete-li omezit analýzu na určitou dobu mezi dvěma konkrétními značkami, vyberte značky, klikněte pravým tlačítkem a pak vyberte **filtrovat podle** ->  **značky** z místní nabídky.  
+Čítače systému Windows jsou čítače výkonu systému, které lze shromažďovat v nastavených intervalech během profilace. V zobrazení značek Nástroje pro profilaci sestavy je řádek pro každý interval kolekce označen jako automatického **označení** . Řádek obsahuje sloupce, které popisují hodnoty čítače výkonu v tomto intervalu. Chcete-li omezit analýzu na určitou dobu mezi dvěma konkrétními značkami, vyberte značky, klikněte pravým tlačítkem myši a vyberte možnost **filtrovat podle**  ->   **značky** z místní nabídky.  
   
  **Požadavky**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. Aplikace Windows Store také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro Windows Store vyžadují také nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-### <a name="to-collect-windows-counter-data"></a>Ke shromažďování dat čítačů Windows  
+### <a name="to-collect-windows-counter-data"></a>Shromažďování dat čítače Windows  
   
-1. V prohlížeči výkonu, klikněte pravým tlačítkem na relaci, pro kterou chcete konfigurovat čítače Windows a vyberte **vlastnosti**.  
+1. V Prohlížeč výkonu klikněte pravým tlačítkem na relaci, pro kterou chcete nakonfigurovat čítače Windows, a vyberte **vlastnosti**.  
   
-2. V **stránky vlastností**, klikněte na tlačítko **čítače Windows**.  
+2. Na **stránkách vlastností**klikněte na **čítače systému Windows**.  
   
-3. Vyberte **shromáždit čítače Windows** zaškrtávací políčko.  
+3. Zaškrtněte políčko **shromáždit čítače systému Windows** .  
   
-4. V **intervalem sběru hodnot (MS)** textové pole, zadejte časový interval.  
+4. Do textového pole **interval shromažďování (MS)** zadejte časový interval.  
   
-5. Vybrat kategorii z **kategorie čítače** rozevíracího seznamu.  
+5. V rozevíracím seznamu **kategorie čítače** vyberte kategorii.  
   
-6. Vyberte instanci, ze **Instance** rozevíracího seznamu.  
+6. V rozevíracím seznamu **instance** vyberte instanci.  
   
 7. Vyberte čítače, které chcete použít při profilování aplikace.  
   
-8. Klikněte na tlačítko **použít.**  
+8. Klikněte na **použít.**  
   
 ## <a name="see-also"></a>Viz také  
- [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)   
+ [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)   
  [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)   
  [Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)

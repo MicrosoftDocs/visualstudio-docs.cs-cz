@@ -1,5 +1,5 @@
 ---
-title: Element CustomDataSignature (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: CustomDataSignature – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,46 +13,47 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739439"
 ---
-# <a name="customdatasignature-element-visual-studio-templates"></a>Element CustomDataSignature (šablony sady Visual Studio)
-Určuje textový podpis pro vyhledání vlastních dat.
+# <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature – – element (šablony sady Visual Studio)
+Určuje podpis textu pro vyhledání vlastních dat.
 
- \<VSTemplate \<> TemplateData> \<CustomDataSignature>
+ \<VSTemplate> \<TemplateData>
+ \<CustomDataSignature>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <CustomDataSignature>"string"</CustomDataSignature>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text je řetězec, který má textový podpis, který je nutný k vyhledání vlastních dat.
+ Text je řetězec s podpisem textu, který je požadován k vyhledání vlastních dat.
 
 ## <a name="remarks"></a>Poznámky
- `CustomDataSignature`je volitelný prvek.
+ `CustomDataSignature` je volitelný prvek.
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na schéma šablony sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

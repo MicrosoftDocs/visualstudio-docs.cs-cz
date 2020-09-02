@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c099839cda87819ec0ec7932c2b2e6aa7698fa52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670874"
 ---
-# <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
+# <a name="how-to-edit-xml-files"></a>Postupy: Úpravy souborů XML
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Editor XML je nový editor pro soubory XML. Dá se použít v samostatném souboru XML nebo v souboru přidruženém k projektu sady Visual Studio. Editor XML je přidružen k následujícím příponám souborů:. config,. DTD,. XML,. xsd,. XDR,. XSL,. XSLT a. vssettings. Editor XML je také přidružen k jinému typu souboru, který nemá registrován žádný konkrétní editor a který obsahuje obsah XML nebo DTD.
@@ -36,7 +36,7 @@ Editor XML je nový editor pro soubory XML. Dá se použít v samostatném soubo
 
 3. Do pole **název** zadejte název souboru a stiskněte **Přidat**.
 
-     Soubor XML se přidá do projektu a otevře se v editoru XML. Soubor obsahuje výchozí deklaraci XML `<?xml version="1.0" encoding="utf-8" ?>`.
+     Soubor XML se přidá do projektu a otevře se v editoru XML. Soubor obsahuje výchozí deklaraci XML, `<?xml version="1.0" encoding="utf-8" ?>` .
 
 ### <a name="to-add-an-existing-xml-file-to-a-project"></a>Přidání existujícího souboru XML do projektu
 
@@ -54,13 +54,13 @@ Editor XML je nový editor pro soubory XML. Dá se použít v samostatném soubo
 
 2. Vyberte **soubor XML** , chcete-li vytvořit nový soubor XML; nebo vyberte **soubor XSLT** pro vytvoření nové šablony stylů XSLT.
 
-3. Klikněte na **otevřít**.
+3. Klikněte na **Otevřít**.
 
 ### <a name="to-create-a-project-for-xml-files"></a>Vytvoření projektu pro soubory XML
 
 1. V nabídce **soubor** vyberte **Nový**a pak vyberte **projekt**.
 
-     Zobrazí se dialogové okno **Nový projekt** .
+     Zobrazí se dialogové okno **Nový projekt**.
 
 2. Vyberte jazyk kódu, který chcete zvolit, vyberte **prázdný projekt**a klikněte na **OK**.
 

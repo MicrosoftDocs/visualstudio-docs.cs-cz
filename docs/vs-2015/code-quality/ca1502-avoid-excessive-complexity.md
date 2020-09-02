@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 5da2e2bf26bb1894987caa8b748181d952bd7c18
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547833"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Vyhněte se nadměrné složitosti
@@ -57,7 +57,7 @@ ms.locfileid: "85547833"
 
 - Počet větví (například `if` , `while` a `do` )
 
-- Počet `case` příkazů v`switch`
+- Počet `case` příkazů v `switch`
 
   Následující příklady znázorňují metody, které mají různé cyklomatická složité.
 

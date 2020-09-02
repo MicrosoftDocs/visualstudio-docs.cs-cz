@@ -1,5 +1,5 @@
 ---
-title: Řízení spouštění aplikace pro Store v ladicí relace pro aplikace Windows Store (JavaScript) | Dokumentace Microsoftu
+title: Řízení spouštění aplikace pro Store v relaci ladění pro aplikace pro Windows Store (JavaScript) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,292 +15,292 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9238bd4f42291af23a1279c9caa83f1039c8f249
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437762"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64828619"
 ---
-# <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Řízení spouštění aplikace pro Store v ladicí relaci sady Visual Studio pro aplikace Windows Store (JavaScript)
+# <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Řízení spouštění aplikace pro Store v ladicí relaci sady Visual Studio pro aplikace pro Windows Store (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento rychlý start ukazuje, jak pro navigaci v ladicím programu sady Visual Studio a jak zobrazit stav programu v relaci.
+Tento rychlý Start ukazuje, jak navigovat v ladicím programu sady Visual Studio a jak zobrazit stav programu v relaci.
 
- Tento rychlý start je pro vývojáře, kteří jsou nové pro ladění v sadě Visual Studio a pro vývojáře, kteří chtějí získat další informace o navigaci v sadě Visual Studio relace ladění. To se nezabývá techniky ladění samotný. Funkce ve vzorovém kódu slouží pouze k předvedení ladění postupů popsaných v tomto tématu. Funkce není dodržovat doporučené postupy návrhu aplikace nebo funkce. Ve skutečnosti rychle zjistíte, že funkce a aplikace, není vhodné použít co nejvíce všeho vůbec.
+ Tento rychlý Start je určen vývojářům, kteří jsou novinkou k ladění pomocí sady Visual Studio a pro vývojáře, kteří se chtějí dozvědět více o navigaci v ladicí relaci sady Visual Studio. Neučí grafiku samotného ladění. Funkce v ukázkovém kódu jsou určeny pouze k předvedení postupů ladění popsaných v tomto tématu. Funkce nevyužívají osvědčené postupy pro aplikace nebo návrh funkcí. Ve skutečnosti rychle zjistíte, že funkce a samotná aplikace nedělají všechno vůbec.
 
- Části tohoto rychlého startu byly navržené jako jako nezávislé, jako je to možné, takže můžete přeskočit všechny části, která obsahuje informace, které jste už obeznámení s. Také není nutné k vytvoření ukázkové aplikace. Ale doporučujeme ho a provedli proces co nejjednodušší.
+ Části tohoto rychlého startu byly navržené tak, aby byly co nezávisle, takže můžete přeskočit všechny části, které obsahují informace, se kterými už jste obeznámeni. Nemusíte také vytvářet ukázkovou aplikaci. Doporučujeme ho ale doporučit a co nejjednodušší je udělat.
 
- **Ladicí program klávesové zkratky.** Navigace v ladicím programu sady Visual Studio je optimalizovaná pro myš a klávesnici. Celá řada kroků v tomto tématu patří klávesové zkratky nebo klávesovou zkratku v kulatých závorek příspěvku. Například (klávesnice: F5) označuje zadáním klávesu F5, spustí nebo pokračuje v provádění ladicího programu.
+ **Klávesové zkratky pro ladicí program.** Navigace v ladicím programu sady Visual Studio je optimalizovaná pro myš i klávesnici. Mnohé z kroků v tomto tématu zahrnují klávesovou zkratku nebo klávesovou zkratku v případě přeznačení kulatého kulatého závorky. Například (klávesnice: F5) označuje, že psaní klávesy F5 se spustí nebo pokračuje v provádění ladicího programu.
 
 > [!NOTE]
 > **Vzor modulu**
 >
-> Aplikace Windows Store často používají jazyk JavaScript *modulu vzor* k zapouzdření data a funkce na stránce. Vzor modul používá jeden, samostatně prováděného a anonymní uzavření udržovat odděleně od globální obor názvů funkce stránky. V tomto tématu se budeme volat tuto funkci *modulu*.
+> Aplikace pro Windows Store často používají *model modulu* JavaScript k zapouzdření dat a funkcí na stránce. Vzor modulu používá jedno, samostatně vykonávajícího a anonymního uzavření, aby funkce stránky byly oddělené od globálního oboru názvů. V tomto tématu budeme volat tuto funkci *modulu*.
 
 ## <a name="in-this-topic"></a>V tomto tématu
- Můžete získat informace tom, jak:
+ Můžete se dozvědět, jak:
 
  [Vytvoření ukázkové aplikace](#BKMK_Create_the_sample_app)
 
- [Nastavit a spusťte zarážku, krokování s vnořením do funkce a prozkoumejte data programu](#BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data)
+ [Nastavení a spuštění na zarážku, krok do funkce a kontrola dat programu](#BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data)
 
- [Krokovat do, nad a z funkce](#BKMK_Step_into__over__and_out_of_functions)
+ [Krokovat s vnořením funkcí](#BKMK_Step_into__over__and_out_of_functions)
 
- [Nastavení podmíněné zarážky, přechod ke kurzoru a vizualizovat proměnné](#BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable)
+ [Nastavte podmíněnou zarážku, spusťte ji na kurzor a vizualizujte proměnnou.](#BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable)
 
  [Zobrazení dat proměnných v okně místních hodnot](#BKMK_View_variable_data_in_the_Locals_window)
 
-- [Zobrazit data proměnných a řetězec prototypu objektu](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)
+- [Zobrazení dat proměnných a řetězce prototypu objektu](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)
 
-- [Prozkoumejte data řetězce oboru](#BKMK_Examine_scope_chain_data)
+- [Prověřte data řetězu oboru](#BKMK_Examine_scope_chain_data)
 
-  [Přejít ke kódu pomocí okna zásobník volání](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)
+  [Přechod na kód pomocí okna zásobník volání](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)
 
-## <a name="BKMK_Create_the_sample_app"></a> Vytvoření ukázkové aplikace
- Ladění je kód, takže ukázková aplikace používá rozhraní framework aplikace Windows Store pouze k vytvoření zdrojového souboru, ve kterém uvidíte fungování navigace ladicí relaci a tom, jak zkontrolovat stav programu. Veškerý kód, který bude volat funkce je volána z `module` funkce soubor default.js. Žádné ovládací prvky jsou přidány a jsou zpracovány žádné události.
+## <a name="create-the-sample-app"></a><a name="BKMK_Create_the_sample_app"></a> Vytvoření ukázkové aplikace
+ Ladění je o kódu, takže ukázková aplikace používá architekturu aplikace pro Windows Store pouze k vytvoření zdrojového souboru, ve kterém vidíte, jak navigace ladicí relace funguje a jak kontrolovat stav programu. Veškerý kód, který budete volat, je volán z `module` funkce default.js souboru. Nepřidaly se žádné ovládací prvky a nezpracovávají se žádné události.
 
-1. **Vytvořte prázdnou aplikaci pro Windows Store jazyka JavaScript.** Otevřít Visual Studio. Na domovské stránce, zvolte **nový projekt** odkaz. Na **nový projekt** dialogového okna zvolte **JavaScript** v **nainstalováno** seznamu a klikněte na tlačítko **Windows Store**. V seznamu šablon projektu vyberte **prázdná aplikace**. Visual Studio vytvoří nová řešení a projektu a zobrazí souboru default.htm v editoru kódu.
+1. **Vytvoření prázdné aplikace pro Windows Store v JavaScriptu** Otevřete sadu Visual Studio. Na domovské stránce klikněte na odkaz **Nový projekt** . V dialogovém okně **Nový projekt** zvolte v seznamu **nainstalované** možnost **JavaScript** a pak zvolte **Windows Store**. V seznamu šablon projektu vyberte možnost **prázdná aplikace**. Visual Studio vytvoří nové řešení a projekt a zobrazí soubor default.htm v editoru kódu.
 
-    Mějte na paměti, která jsou načtena do stránky soubory skriptů.
+    Poznamenejte si soubory skriptu, které jsou načteny na stránku.
 
-   - `base.js` a `ui.js` vytvoření souborů **knihovnu Windows pro jazyk JavaScript**. Knihovna Windows pro jazyk JavaScript je sada JavaScript a soubory šablon stylů CSS, které usnadňují vytváření aplikací pro Windows Store pomocí jazyka JavaScript. Použijete ho spolu s HTML, CSS a prostředí Windows Runtime k vytvoření vaší aplikace.
+   - `base.js`Soubory a `ui.js` vytvoří **knihovnu Windows Library pro JavaScript**. Knihovna Windows pro jazyk JavaScript je sada souborů JavaScript a CSS, které usnadňují vytváření aplikací pro Windows Store pomocí jazyka JavaScript. Můžete ji použít společně s HTML, CSS a prostředí Windows Runtime k vytvoření aplikace.
 
-   - Váš kód se spustí v `default.js` souboru.
+   - Kód začíná v `default.js`  souboru.
 
-2. **Otevřete zdrojový soubor default.js.** V Průzkumníku řešení otevřete **js** uzlu a zvolte `default.js`.
+2. **Otevřete zdrojový soubor default.js.** V Průzkumník řešení otevřete uzel **js** a vyberte `default.js` .
 
-3. **Nahraďte obsah stránky se vzorovým kódem.** Odstranit veškerý obsah z `default.js` souboru. Na tomto odkazu: [Ladicí program vzorový kód pro navigaci (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)a potom zkopírujte kód uvedený v části jazyka JavaScript do schránky. (Zvolte **zpět** v prohlížeči nebo prohlížeč nápovědy se vraťte na tuto stránku rychlý start.) V editoru sady Visual Studio, vložte kód do prázdné nyní `default.js`. Zvolte **Ctrl + S** k uložení souboru.
+3. **Nahraďte obsah stránky ukázkovým kódem.** Odstraní ze souboru veškerý obsah `default.js` . Použijte tento odkaz: [ladicí program pro navigaci v ladicím programu (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)a potom zkopírujte kód uvedený v oddílu JavaScript do schránky. (Kliknutím na tlačítko **zpět** v prohlížeči nebo v prohlížeči nápovědy se vraťte na tuto stránku rychlý Start.) V editoru sady Visual Studio vložte kód do pole nyní prázdné `default.js` . Klikněte na tlačítko **CTRL + S** a soubor uložte.
 
-   Teď můžete sledovat, spolu s příklady v tomto tématu.
+   Teď můžete postupovat podle příkladů v tomto tématu.
 
-## <a name="BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data"></a> Nastavit a spusťte zarážku, krokování s vnořením do funkce a prozkoumejte data programu
- Nejběžnější způsob spuštění ladicí relace je zvolit **spustit ladění** z **ladění** nabídce (klávesnice: F5). Aplikace spustí a pokračuje v provádění, dokud není dosaženo zarážky, můžete ručně pozastavení provádění, dojde k výjimce nebo ukončení aplikace.
+## <a name="set-and-run-to-a-breakpoint-step-into-a-function-and-examine-program-data"></a><a name="BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data"></a> Nastavení a spuštění na zarážku, krok do funkce a kontrola dat programu
+ Nejběžnější způsob, jak spustit relaci ladění, je zvolit možnost **Spustit ladění** z nabídky **ladění** (klávesnice: F5). Aplikace se spustí a pokračuje, dokud není dosaženo zarážky, dojde k ručnímu pozastavení provádění, dojde k výjimce nebo skončí aplikace.
 
- Když je spuštění pozastaveno v ladicím programu, můžete zobrazit hodnotu active proměnné v popisu dat. když pozastavíte myší na proměnnou.
+ Pokud je spuštění pozastaveno v ladicím programu, můžete zobrazit hodnotu aktivní proměnné v datovém tipu pozastavením myši na proměnné.
 
- Po pozastavení provádění aplikace (označuje se také rozdělení do ladicího programu), řídit způsob, jakým spouští zbývající části kódu programu. Můžete dál řádek po řádku přesouvá z volání funkce do funkce samotná, nebo volané funkce lze provést v jediném kroku. Tyto postupy jsou volány krokování aplikace. Můžete také obnovit standardní provádění, spuštěnou aplikaci až k další zarážce, kterou jste nastavili, nebo na řádku tam, kam jste umístili kurzor. Můžete zastavit ladicí relaci v každém okamžiku. Ladicí program je určena k provedení nezbytných operací čištění a ukončí provádění.
+ Po pozastavení provádění aplikace (která se také označuje jako rozdělení do ladicího programu) můžete řídit způsob, jakým se spustí zbytek programového kódu. Můžete pokračovat řádek po řádku, přesunutím z volání funkce do samotné funkce nebo můžete spustit volanou funkci v jednom kroku. Tyto postupy se nazývají krokování aplikace. Můžete také obnovit standardní spuštění aplikace, spuštění na další zarážku, kterou jste nastavili, nebo na řádek, na který jste umístili kurzor. Ladicí relaci můžete kdykoli zastavit. Ladicí program je navržen tak, aby prováděl nezbytné operace vyčištění a ukončila provádění.
 
-### <a name="BKMK_Example_1"></a> Příklad 1
- V tomto příkladu nastavte zarážku v těle `module` fungovat v `default.js` volá první příkazy našich uživatelů. Poté krokovat s vnořením funkci, zobrazení hodnot proměnných v datových tipech ladicího programu a poté zastavte ladění.
+### <a name="example-1"></a><a name="BKMK_Example_1"></a> Příklad 1
+ V tomto příkladu nastavíte zarážku v těle `module` funkce v `default.js` , protože volá první z našich uživatelských příkazů. Pak se můžete krokovat s vnořením do funkce, zobrazit hodnoty proměnných v tipech pro data ladicího programu a pak zastavit ladění.
 
-1. **Nastavte zarážku.** Nastavit zarážku na příkaz `callTrack = "module function";` , který vyvolá hned po volání `app.start()`. Zvolte řádek na vystínovanou ovládací prvek editoru zdrojového kódu (klávesnice: Umístěte kurzor na řádek a zvolte **F9** klíč).
+1. **Nastavte zarážku.** Nastavte zarážku na příkaz `callTrack = "module function";` , který se nachází hned po volání `app.start()` . Vyberte čáru ve stínovém rámečku editoru zdrojového kódu (klávesnice: Umístěte kurzor na řádek a vyberte klávesu **F9** ).
 
-    ![Nastavit zarážku na test1](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")
+    ![Nastavení zarážky v priklad1](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")
 
-    Ikona zarážky se zobrazí ve hřbetu.
+    Ikona zarážky se zobrazí na hřbetu.
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5).
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5).
 
-    Aplikace začne spouštět a pozastaví provádění bezprostředně před příkaz, ve kterém můžete nastavit zarážku. Aktuální ikona řádku na ovládací prvek určuje umístění a aktuální příkaz je zvýrazněn.
+    Aplikace začne provádět a pozastaví provádění přímo před příkazem, na kterém jste nastavili zarážku. Ikona aktuálního řádku na hřbetu označuje vaše umístění a zvýrazní se aktuální příkaz.
 
-    ![Spusťte zarážku](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")
+    ![Spustit na zarážku](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")
 
-    Nyní jsou v řízení spouštění aplikace a můžete zkontrolovat stav programu krocích příkazy programu.
+    Nyní máte kontrolu nad prováděním aplikace a můžete zkontrolovat stav programu při procházení příkazů programu.
 
-3. **Krokovat s vnořením funkcí.** Na **ladění** nabídce zvolte **Krokovat s vnořením** (klávesnice: **F11**).
+3. **Krok do funkce.** V nabídce **ladění** vyberte možnost **Krokovat** s vnořením (klávesnice: **F11**).
 
-    ![Krokování s vnořením do řádku kódu](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")
+    ![Krokovat na řádek kódu](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")
 
-    Všimněte si, že ladicí program se přesune na další řádek, který je volání `example1` funkce. Zvolte **Krokovat s vnořením** znovu. Ladicí program se přesune na první řádek kódu `example1` funkce. Zvýrazněný řádek nebyl proveden, ale načetl funkci v zásobníku volání a byla přidělena paměť pro lokální proměnné.
+    Všimněte si, že ladicí program se přesune na další řádek, který je voláním `example1` funkce. Vyberte znovu **Krok** . Ladicí program se přesune na první řádek kódu `example1` funkce. Zvýrazněný řádek nebyl proveden, ale funkce byla načtena do zásobníku volání a byla přidělena paměť pro lokální proměnné.
 
-4. Když vejdete do jediného řádku kódu provede ladicí program jednu z následujících akcí:
+4. Při kroku na řádek kódu provede ladicí program jednu z následujících akcí:
 
-   - Pokud další příkaz není voláním funkce ve vašem řešení, ladicí program provede příkaz, přesune na další příkaz a následně pozastaví provádění kódu.
+   - Pokud další příkaz není voláním funkce ve vašem řešení, ladicí program provede příkaz, přesune se k dalšímu příkazu a pak pozastaví provádění.
 
-   - Pokud je příkaz voláním funkce ve vašem řešení, ladicí program se přesune na první řádek volané funkce a následně pozastaví provádění kódu.
+   - Pokud je příkaz volání funkce ve vašem řešení, ladicí program se přesune na první řádek volané funkce a pak pozastaví provádění.
 
-     Nadále můžete krokovat s vnořením opustí `example1` dokud jste dosáhli výstupním bodě. Ladicí program zvýrazní uzavírací složenou závorku funkce.
+     Pokračujte krokem do příkazů, `example1` dokud nedosáhnete bodu ukončení. Ladicí program zvýrazní pravou složenou závorku funkce.
 
-5. **Zobrazení hodnot proměnných v datových tipech.** Nadále můžete krokovat s vnořením opustí `example1` dokud jste dosáhli výstupním bodě. Ladicí program zvýrazní uzavírací složenou závorku funkce. Při pozastavení myši na název proměnné, zobrazí se název a hodnotu proměnné v popisu dat.
+5. **Zobrazit hodnoty proměnných v tipech k datům.** Pokračujte krokem do příkazů, `example1` dokud nedosáhnete bodu ukončení. Ladicí program zvýrazní pravou složenou závorku funkce. Když pozastavíte myš na název proměnné, zobrazí se název a hodnota proměnné v popisku dat.
 
-    ![Zobrazení hodnot proměnných v popisu dat](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")
+    ![Zobrazit hodnoty proměnných v popisku dat](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")
 
-6. **Přidáte kukátko callTrack proměnné.** `callTrack` k zobrazit funkce volané v příkladech se používá v rámci tohoto rychlého startu proměnná. Aby bylo snazší zobrazit hodnotu proměnné, přidejte ho do okna kukátka. Vyberte název proměnné v editoru a klikněte na tlačítko **Přidat kukátko** z místní nabídky.
+6. **Přidejte kukátko pro proměnnou callTrack.** `callTrack`Proměnná se používá v rámci tohoto rychlého startu k zobrazení funkcí volaných v příkladech. Chcete-li usnadnit zobrazení hodnoty proměnné, přidejte ji do okno Kukátko. Vyberte název proměnné v editoru a pak zvolte **Přidat kukátko** z místní nabídky.
 
-    ![Podívejte se na proměnnou](../debugger/media/dbg-jsnav-watch-window.png "DBG_JSNAV_watch_window")
+    ![Sledovat proměnnou](../debugger/media/dbg-jsnav-watch-window.png "DBG_JSNAV_watch_window")
 
-    Podívejte se na více proměnných v okně kukátko. Hodnoty proměnných sledovaných, jako je hodnot v oknech tip dat, se aktualizují pokaždé, když je spuštění pozastaveno. Sledované proměnné jsou uloženy napříč relacemi ladění.
+    V okně kukátka můžete sledovat více proměnných. Hodnoty sledovaných proměnných, jako jsou hodnoty v oknech s popisem dat, se aktualizují pokaždé, když je spuštění pozastaveno. Sledované proměnné jsou uloženy napříč relacemi ladění.
 
-7. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: **Shift+F5**). Ukončí relaci ladění.
+7. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: **SHIFT + F5**). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_Step_into__over__and_out_of_functions"></a> Krokovat do, nad a z funkce
- Na rozdíl od krokování s vnořením do funkcí volaných funkcí nadřazené, krokování přes funkci provede podřízené funkce a následně pozastaví provádění kódu ve funkci volání jako obnoví nadřazený. Pokud jste obeznámeni s způsob, jak funkce funguje a si jisti, že jeho spuštění nebude mít vliv na problém, který se objeví prošetřovaná může Krokovat přes funkci.
+## <a name="step-into-over-and-out-of-functions"></a><a name="BKMK_Step_into__over__and_out_of_functions"></a> Krokovat s vnořením funkcí
+ Na rozdíl od krokování do funkce, která je volána nadřazenou funkcí, krokování na funkci provede podřízenou funkci a poté pozastaví provádění ve volání funkce jako nadřazené operace obnovení. Pokud jste obeznámeni se způsobem fungování funkce a jste se ujistili, že její spuštění nebude mít vliv na problém, který zkoumáte, můžete na funkci krokovat.
 
- Krokování přes jediného řádku kódu, které nebude obsahovat volání funkce spustí řádku stejně jako krokování s vnořením do řádku.
+ Krokování nad řádkem kódu, který neobsahuje volání funkce, provede řádek stejně jako krokování do řádku.
 
- Krokování ve funkci podřízené pokračuje v provádění funkce a následně pozastaví provádění po vrácení funkce k její volání funkce. Až zjistíte, že zbytek funkce není důležité, může být vystoupení ze dlouhé funkce.
+ Krokování mimo podřízenou funkci pokračuje v provádění této funkce a pak je vykoná, jakmile se funkce vrátí ke své volající funkci. Pokud určíte, že zbytek funkce není významný, může dojít k zakrokování na dlouhou funkci.
 
- Krokování přes i krokování ve funkci spuštění funkce.
+ Při krokování a krokování ven z funkce se spustí funkce.
 
- ![Krok do, nad a z metody](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
+ ![Krokovat s vnořením metod](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
 
-### <a name="BKMK_Example_2"></a> Příklad 2
- V tomto příkladu můžete krokovat do, nad a z funkce.
+### <a name="example-2"></a><a name="BKMK_Example_2"></a> Příklad 2
+ V tomto příkladu můžete krokovat s funkcemi.
 
-1. **Volání funkce priklad2 ve funkci modulu.** Upravit `module` fungovat a nahraďte tento řádek `var callTrack = "module function"` s `example2();`.
+1. **Ve funkci modulu volejte funkci example2.** Upravte `module` funkci a nahraďte řádek následujícím: `var callTrack = "module function"` `example2();` .
 
-     ![Volání funkce priklad2](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")
+     ![Volání funkce example2](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5). Ladicí program pozastaví provádění kódu na zarážce.
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5). Ladicí program pozastaví provádění na zarážce.
 
-3. **Krokovat přes řádek kódu.** Na **ladění** nabídce zvolte **Krokovat s přeskočením** (klávesnice: F10). Ladicí program provede `var callTrack = "module function"` příkaz stejným způsobem jako vstup do příkazu.
+3. **Krok za řádkem kódu.** V nabídce **ladění** vyberte možnost **Krokovat přes** (klávesnice: F10). Ladicí program spustí `var callTrack = "module function"` příkaz stejným způsobem jako krokování příkazu.
 
-4. **Krokovat s vnořením priklad2 a example2_a.** Zvolte **F11** klíče krokování s vnořením `example2` funkce. Dál můžete krokovat s vnořením `example2` příkazů, dokud se nedostanete na řádku `var x = example2_a();`. Znovu, Krokovat s vnořením tento řádek, přejděte na vstupní bod `example2_a`. Dál můžete krokovat s vnořením každý příkaz `example2_a` postupně se vraťte do `example2`.
+4. **Krok do example2 a example2_a.** Vyberte klávesu **F11** ke kroku do `example2` funkce. Pokračujte krokem do příkazů, `example2` dokud se nedostanete na řádek `var x = example2_a();` . Opakujte krok do tohoto řádku, aby se přesunul na vstupní bod `example2_a` . Pokračujte krokem do každého příkazu, `example2_a` dokud se nevrátíte do `example2` .
 
-     ![Krok přes funkci](../debugger/media/dbg-jsnav-example2-a.png "DBG_JSNAV_example2_a")
+     ![Krokovat s funkcí](../debugger/media/dbg-jsnav-example2-a.png "DBG_JSNAV_example2_a")
 
-5. **Krokovat přes funkci.** Všimněte si, že se na další řádek v `example2`, `var y = example2_a();` je v podstatě stejný jako předchozí řádek. Můžete bezpečně Krokovat přes tento řádek. Zvolte **F10** klíč k přesunutí z opětovné `example2` do této druhé volání `example2_a`. Všimněte si, že `callTrack` řetězec označuje `example2_a` funkce byla spuštěna dvakrát.
+5. **Krokovat s funkcí** Všimněte si, že další řádek v `example2` , `var y = example2_a();` je v podstatě stejný jako předchozí řádek. Přes tento řádek můžete bezpečně krokovat. Vyberte klávesu **F10** pro přechod z obnovení `example2` do tohoto druhého volání `example2_a` . Všimněte si, že `callTrack` řetězec označuje, že `example2_a` funkce byla provedena dvakrát.
 
-6. **Krok z funkce.** Zvolte **F11** klíče krokování s vnořením `example2_b` funkce. Všimněte si, že `example2_b` není příliš neliší od `example2_a`. Chcete-li mimo funkci, zvolte **Krokovat s Vystoupením** na **ladění** nabídce (klávesnice: **Shift+F11**). Všimněte si, že `callTrack` proměnné označuje, že `example2_b` se provedl a, který ladicí program vrátil do bodu kde `example2` obnoví.
+6. **Krok ven z funkce** Vyberte klávesu **F11** ke kroku do `example2_b` funkce. Všimněte si, že `example2_b` se neliší od `example2_a` . Chcete-li krok z funkce krokovat, v nabídce **ladění** vyberte možnost **Krok ven** (klávesnice: **SHIFT + F11**). Všimněte si, že `callTrack` Proměnná označuje, že `example2_b` byla provedena a že se ladicí program vrátil do bodu, kde `example2` pokračuje.
 
-7. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: **Shift+F5**). Ukončí relaci ladění.
+7. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: **SHIFT + F5**). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable"></a> Nastavení podmíněné zarážky, přechod ke kurzoru a vizualizovat proměnné
- Podmíněné zarážky Určuje podmínku, která způsobí, že ladicí program k pozastavení provádění. Podmínka je zadaný libovolný výraz kód, který může být vyhodnocen jako true nebo false. Můžete například použít podmíněné zarážky prozkoumat stav programu v často volaných funkcí pouze v případě, že proměnné dosáhne určité hodnoty.
+## <a name="set-a-conditional-breakpoint-run-to-the-cursor-and-visualize-a-variable"></a><a name="BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable"></a> Nastavte podmíněnou zarážku, spusťte ji na kurzor a vizualizujte proměnnou.
+ Podmíněná zarážka Určuje podmínku, která způsobí, že ladicí program zastaví provádění. Podmínka je určena jakýmkoli výrazem kódu, který lze vyhodnotit jako true nebo false. Můžete například použít podmíněnou zarážku k prohlédnutí stavu programu často volanou funkci pouze v případě, že proměnná dosáhne určité hodnoty.
 
- Provést do pozice kurzoru je třeba nastavit jednorázové zarážku. Když je spuštění pozastaveno, můžete vybrat řádek ve zdroji a obnovit spuštění, dokud nebude dosaženo vybraný řádek. Například je může krokování smyčku ve funkci a určit, že kód ve smyčce pracuje správně. Místo procházení každé iteraci smyčky, můžete spustit na kurzor, který je umístěn po provedení smyčky je.
+ Běžící na kurzor je jako nastavení jednorázové zarážky. Když je spuštění pozastavené, můžete vybrat řádek ve zdroji a pokračovat v provádění, dokud se nedosáhne vybraného řádku. Například můžete prohloubit smyčku ve funkci a určit, že kód ve smyčce provádí správné fungování. Namísto krokování v každé iteraci smyčky můžete spustit na ukazatel, který je umístěn po provedení smyčky.
 
- V některých případech je zobrazíte hodnotu proměnné v řádku popisu dat nebo jiné okno data obtížná. Ladicí program může zobrazit řetězce, HTML a Xml ve vizualizéru text, který představuje formátovaný zobrazení hodnoty v posuvného okna.
+ Někdy je obtížné zobrazit hodnotu proměnné na řádku tipu dat nebo v jiném okně dat. Ladicí program může zobrazit řetězce, HTML a XML v Vizualizér textu, který prezentuje formátované zobrazení hodnoty v rolovacím okně.
 
-### <a name="BKMK_Example_3"></a> Příklad 3
- V tomto příkladu je nastavit podmíněné zarážky zarážku konkrétní iteraci smyčky a pak spustit na kurzor, který je umístěn po smyčce. Můžete také zobrazit hodnotu proměnné v vizualizátor textu.
+### <a name="example-3"></a><a name="BKMK_Example_3"></a> Příklad 3
+ V tomto příkladu nastavíte podmíněnou zarážku na přerušení v konkrétní iteraci smyčky a pak ji spustíte na kurzor, který je umístěný po smyčce. Také se zobrazí hodnota proměnné v Vizualizér textu.
 
-1. **Volání funkce example3 ve funkci modulu.** Upravit `module` fungovat a nahraďte tento řádek `var callTrack = "module function";` řádek `example3();`.
+1. **Ve funkci modulu volejte funkci example3.** Upravte `module` funkci a nahraďte řádek následujícím `var callTrack = "module function";` řádkem `example3();` .
 
-     ![Volání example3](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")
+     ![Example3 volání](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: **F5**). Ladicí program pozastaví provádění kódu na zarážce v `module` funkce.
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: **F5**). Ladicí program pozastaví provádění na zarážce ve `module` funkci.
 
-3. **Krokovat s vnořením example3 funkce.** Zvolte **Krokovat s vnořením** na **ladění** nabídce (klávesnice: **F11**) přesunout do vstupní bod `example3` funkce. Pokračovat, dokud máte provést iteraci smyčky jednu nebo dvě z krokování do funkce `for` bloku. Všimněte si, že ho by vám neměl zabrat dlouhou dobu, chcete-li si všechny 1000 iterací.
+3. **Krok do funkce example3** Zvolením možnosti **Krokovat** v nabídce **ladění** (klávesnice: **F11**) přejděte na vstupní bod `example3` funkce. Pokračujte v krokování do funkce, dokud neprovedete iteraci jednoho nebo dvou smyček `for` bloku. Všimněte si, že provedete dlouhou dobu ke krokování všech iterací 1000.
 
-4. **Nastavení podmíněné zarážky.** V levém hřbetu okna kódu, klikněte pravým tlačítkem na řádku `s += i.toString() + "\n";` a klikněte na tlačítko **podmínku** v místní nabídce.
+4. **Nastavte podmíněnou zarážku.** V levém horním rohu okna Code klikněte pravým tlačítkem myši na řádek `s += i.toString() + "\n";` a pak zvolte možnost **Podmínka** v místní nabídce.
 
-     Vyberte **podmínku** zaškrtněte políčko a potom zadejte `i == 500;` v textovém poli. Zvolte **platí** možnost a vyberte **OK**. Zarážky můžete ke kontrole hodnoty v 500th iterace `for` smyčky. Ikona podmíněné zarážky může identifikovat podle jeho bílé mezi.
+     Zaškrtněte políčko **Podmínka** a zadejte `i == 500;` do textového pole. Vyberte možnost **je true** a klikněte na **tlačítko OK**. Zarážka umožňuje kontrolovat hodnotu v iteraci 500th `for` smyčky. Můžete určit podkladovou ikonu zarážky pomocí bílé křížení.
 
      ![Ikona zarážky podmíněný](../debugger/media/dbg-jsnav-breakpoint-condition-icon.png "DBG_JSNAV_Breakpoint_Condition_icon")
 
-5. **Spusťte zarážku.** Na **ladění** nabídce zvolte **pokračovat** (klávesnice: **F5**). Zastavte se na `i` potvrdit, že aktuální hodnotu `i` je 500. Všimněte si také, že proměnná `s` je vyjádřena jako jeden řádek a je mnohem delší než okno tipů data.
+5. **Spustit na zarážku.** V nabídce **ladění** vyberte možnost **pokračovat** (klávesnice: **F5**). Pozastavením na `i` pro potvrďte, že aktuální hodnota `i` je 500. Všimněte si také, že proměnná `s` je reprezentována jako jeden řádek a je mnohem delší než okno s tipem dat.
 
-6. **Vizualizujte proměnnou s řetězcem.** Klikněte na ikonu lupy v popisu dat z `s`.
+6. **Vizualizujte proměnnou řetězce.** Klikněte na ikonu lupy v datovém hrotu v `s` .
 
-     Zobrazí se okno Vizualizátor textu a hodnotou řetězce je zobrazen jako Víceřádkový řetězec.
+     Zobrazí se okno Vizualizér textu a hodnota řetězce je prezentována jako víceřádkový řetězec.
 
-     ![Ladění vizualizátor textu](../debugger/media/dbg-jsnav-text-visualizer.png "DBG_JSNAV_Text_Visualizer")
+     ![Vizualizér ladění textu](../debugger/media/dbg-jsnav-text-visualizer.png "DBG_JSNAV_Text_Visualizer")
 
-7. **Přechod ke kurzoru.** Vyberte řádek `callTrack += "->example3";` a klikněte na tlačítko **spustit ke kurzoru** v místní nabídce (klávesnice: **CTRL + F10**). Ladicí program dokončí iterací smyčky a následně pozastaví provádění kódu na řádku.
+7. **Spustit na kurzor.** Vyberte řádek `callTrack += "->example3";` a pak zvolte možnost **Spustit pro kurzor** v místní nabídce (klávesnice: **CTRL + F10**). Ladicí program dokončí iterace smyčky a pak pozastaví provádění na řádku.
 
-8. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: **Shift+F5**). Ukončí relaci ladění.
+8. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: **SHIFT + F5**). Tím skončí vaše ladicí relace.
 
-### <a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> Použití spustit ke kurzoru se vraťte do vašeho kódu a odstranění zarážky
- Provést do pozice kurzoru může být velmi užitečné, když jste vkročili knihovny kódu od společnosti Microsoft nebo třetích stran. Krokování kódem knihovny mohou být informativní, často může trvat dlouhou dobu. A obvykle jsou mnohem více zajímá váš vlastní kód. V tomto cvičení se dozvíte, jak na to.
+### <a name="use-run-to-cursor-to-return-to-your-code-and-delete-a-breakpoint"></a><a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> Pomocí kurzoru spustit pro se vrátíte do kódu a odstraníte zarážku.
+ Běžící na kurzor může být velmi užitečné, pokud jste se přihlásili ke kódu knihovny od společnosti Microsoft nebo třetí strany. Při procházení kódu knihovny může být informativní, často může trvat dlouhou dobu. A obvykle ještě mnohem více zajímáte o vlastní kód. V tomto cvičení se dozvíte, jak to provést.
 
-1. **Nastavení zarážky na volání app.start.** V `module` fungovat, nastavte zarážku na řádku `app.start()`
+1. **Nastavte zarážku ve volání app. Start.** Ve `module` funkci nastavte zarážku na řádku. `app.start()`
 
-2. **Spusťte zarážku a můžete krokovat s vnořením funkce knihovny.**
+2. **Spusťte na zarážku a krok do funkce Library.**
 
-     Při krokování s vnořením `app.start()`, zobrazuje kód v editoru `base.js`. Krokovat s vnořením několik více řádků.
+     Při krokovat s vnořením `app.start()` v editoru se zobrazí kód v `base.js` . Proveďte krok do několika dalších řádků.
 
-3. **Krok nad a z funkcí.** Jak Krokovat přes (**F10**) a krok z celkového počtu (**SHIFT + F11**) kódu v `base.js`, může dojít k závěru zkoumání složitost a délka – spuštění funkce je, co nechcete dělat.
+3. **Krokování funkcí a převzetí služeb při selhání.** Při krokování (**F10**) a krok ven z (**SHIFT + F11**) kódu v `base.js` můžete přijít k závěru, že zkoumání složitosti a délky spouštěcí funkce není to, co chcete dělat.
 
-4. **Nastavte kurzor do vašeho kódu a spustit na ni.** Přepněte zpět `default.js` souboru v editoru kódu. Vyberte první řádek kódu po `app.start()` (nemůžete spustit na komentář nebo na prázdný řádek). Zvolte **spustit ke kurzoru** z místní nabídky. Ladicí program pokračuje v provádění funkce app.start a pozastaví provádění kódu na zarážce.
+4. **Nastavte kurzor na svůj kód a spusťte jej.** Přepněte zpět do `default.js` souboru v editoru kódu. Vyberte první řádek kódu za `app.start()` (nemůžete spustit do komentáře nebo prázdného řádku). Z místní nabídky vyberte možnost **Spustit ke kurzoru** . Ladicí program pokračuje v provádění funkce App. Start a pozastaví provádění na zarážce.
 
-## <a name="BKMK_View_variable_data_in_the_Locals_window"></a> Zobrazení dat proměnných v okně místních hodnot
- Lokální windows je stromové zobrazení parametry a proměnné v oboru řetězci aktuálně prováděné funkci.
+## <a name="view-variable-data-in-the-locals-window"></a><a name="BKMK_View_variable_data_in_the_Locals_window"></a> Zobrazení dat proměnných v okně místních hodnot
+ Okna místních hodnot jsou stromové zobrazení parametrů a proměnných v řetězci oboru aktuálně vykonávané funkce.
 
-### <a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> Zobrazit data proměnných a řetězec prototypu objektu
+### <a name="view-variable-data-and-the-prototype-chain-of-an-object"></a><a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> Zobrazení dat proměnných a řetězce prototypu objektu
 
-1. **Přidání pole objektu funkce modulu.** Upravit `module` fungovat a nahraďte tento řádek `var callTrack = "module function"` s `var myArray = new Array(1, 2, 3);`
+1. **Přidejte objekt Array funkce modulu.** Upravte `module` funkci a nahraďte řádek následujícím: `var callTrack = "module function"``var myArray = new Array(1, 2, 3);`
 
-     ![definice pole](../debugger/media/dbg-jsnav-myarray.png "DBG_JSNAV_myArray")
+     ![definice myArray](../debugger/media/dbg-jsnav-myarray.png "DBG_JSNAV_myArray")
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: **F5**). Ladicí program pozastaví provádění kódu na zarážce. Krokovat s vnořením do řádku.
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: **F5**). Ladicí program pozastaví provádění na zarážce. Krokovat s vnořením na řádek.
 
-3. **Otevřete v okně místních hodnot.** Na **ladění** nabídky, přejděte k **Windows**a klikněte na tlačítko **lokální**. (Klávesnice: Alt+4).
+3. **Otevřete okno místní hodnoty.** V nabídce **ladění** přejděte na příkaz **Windows**a vyberte možnost **místní**. (Klávesnice: ALT + 4).
 
-4. **Zkontrolujte místní proměnné ve funkci modulu** The lokální systém windows zobrazí proměnné aktuálně prováděné funkci ( `module` funkce) jako na nejvyšší úrovni uzly stromu. Při zadání funkce jazyka JavaScript vytvoří všechny proměnné a poskytne jim hodnotu `undefined`. Funkce, které jsou definovány ve funkci mají jejich text jako hodnotu.
+4. **Kontrola místních proměnných ve funkci modulu** Okna místní hodnoty zobrazí proměnné aktuálně vykonávané funkce ( `module` funkce) jako uzly nejvyšší úrovně stromu. Když zadáte funkci, JavaScript vytvoří všechny proměnné a poskytne jim hodnotu `undefined` . Funkce, které jsou definovány ve funkci, mají jejich text jako hodnotu.
 
-     ![Okno místních hodnot](../debugger/media/dbg-jsnav-locals-window.png "DBG_JSNAV_Locals_window")
+     ![Místní hodnoty – okno](../debugger/media/dbg-jsnav-locals-window.png "DBG_JSNAV_Locals_window")
 
-5. **Projděte skrze definice callTrack a pole.** Najdete callTrack a pole proměnných v okně místních hodnot. Krokovat přes (**F10**) dvě definice a Všimněte si, že **hodnotu** a **typ** pole se změní. V okně místních hodnot zvýrazní hodnoty proměnných, které se změnily od posledního pozastavení.
+5. **Projděte si definice callTrack a myArray.** V okně místní hodnoty Najděte proměnné callTrack a myArray. Krok za (**F10**) dvě definice a Všimněte si, že pole **hodnota** a **typ** se změnila. Okno místních hodnot zvýrazní hodnoty proměnných, které se od posledního přerušení změnily.
 
-6. **Zkontrolujte pole objektu** Rozbalit `myArray` proměnné. Každý prvek pole je uveden **[prototypu]** uzel, který obsahuje hierarchii dědičnosti `Array` objektu. Rozbalte tento uzel.
+6. **Prověřte objekt myArray** . Rozbalte `myArray` proměnnou. Každý prvek pole je uveden v uzlu **[prototyp]** , který obsahuje hierarchii dědičnosti `Array` objektu. Rozbalte tento uzel.
 
      ![Řetězec prototypu v okně místních hodnot](../debugger/media/dbg-jsnav-locals-proto-chain.png "DBG_JSNAV_Locals_proto_chain")
 
-    - **Metody** uzel obsahuje všechny metody `Array` objektu.
+    - Uzel **metody** obsahuje seznam všech metod `Array` objektu.
 
-    - **[Prototypu]** uzel obsahuje prototyp funkce `Object` objekt, ze kterého `Array` pochází. **[prototypu]**  uzly mohou být rekurzivní. Každý nadřazený objekt v hierarchii objektů je popsána v **[prototypu]** jeho podřízeného uzlu.
+    - Uzel **[prototyp]** obsahuje prototyp `Object` objektu, ze kterého `Array` je odvozen. uzly **[prototyp]** mohou být rekurzivní. Každý nadřazený objekt v hierarchii objektů je popsán v uzlu **[prototyp]** svého podřízeného objektu.
 
-7. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: SHIFT + F5). Ukončí relaci ladění.
+7. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: Shift + F5). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_Examine_scope_chain_data"></a> Prozkoumejte data řetězce oboru
- *Oboru řetězu* funkce zahrnuje všechny proměnné, které jsou aktivní a je dostupný prostřednictvím funkce. Globální proměnné jsou součástí řetězce rozsahu, jako jsou objekty (včetně funkcí), která jsou definována ve funkci, která definuje aktuálně prováděné funkci. Například `callTrack` proměnné, která je definována v `module` funkce `default.js` je dostupná pro všechny funkce, které je definováno v `module` funkce. Každý obor zobrazeny v okně místních hodnot.
+## <a name="examine-scope-chain-data"></a><a name="BKMK_Examine_scope_chain_data"></a> Prověřte data řetězu oboru
+ *Řetěz rozsahu* funkce zahrnuje všechny proměnné, které jsou aktivní a dosažitelné funkcí. Globální proměnné jsou součástí řetězu oboru, stejně jako všechny objekty (včetně funkcí), které jsou definovány ve funkci, která definuje aktuálně prováděnou funkci. Například `callTrack` Proměnná, která je definována ve `module` funkci, `default.js` je dosažitelná všemi funkcemi, které jsou definovány ve `module` funkci. Každý obor je uveden samostatně v okně místní hodnoty.
 
-- Proměnné aktuálně prováděné funkce jsou zobrazeny v horní části okna.
+- Proměnné aktuálně vykonávané funkce jsou uvedeny v horní části okna.
 
-- Proměnné každý obor funkce v řetězci rozsahu patří **[oboru]** uzlu funkce. Obor funkcí jsou seřazeny podle jejich pořadí v řetězu certifikátů z funkce, která definuje aktuální funkci k nejzevnější funkce řetězce.
+- Proměnné každého oboru funkce v řetězu oboru jsou uvedeny pod uzlem **[scope]** pro danou funkci. Funkce oboru jsou uvedeny podle jejich pořadí v řetězci, ze funkce, která definuje aktuální funkci na vnější funkci řetězce.
 
-- **[Globální parametry]** uzel uvádí globální objekty, které jsou definovány mimo všechny funkce.
+- Uzel **[globals]** obsahuje seznam globálních objektů, které jsou definovány mimo jakoukoliv funkci.
 
-  Obor řetězce může být matoucí a jsou znázorněny nejlépe podle příkladu. V následujícím příkladu je vidět způsob, jakým `module` funkce vytvoří vlastní rozsah a jak můžete vytvořit další úrovně oboru tak, že vytvoříte uzavřenou.
+  Řetězy rozsahu mohou být matoucí a jsou nejlépe znázorněny příkladem. V následujícím příkladu vidíte, jak `module` funkce vytvoří svůj vlastní obor a jak můžete vytvořit další úroveň rozsahu vytvořením uzávěru.
 
-### <a name="BKMK_Example_4"></a> Příklad 4:
+### <a name="example-4"></a><a name="BKMK_Example_4"></a> Příklad 4
 
-1. **Volání funkce example4 z funkce modulu.** Upravit `module` fungovat a nahraďte tento řádek `var callTrack = "module function"` s `example4()`:
+1. **Volejte funkci example4 z funkce modulu.** Upravte `module` funkci a nahraďte řádek následujícím `var callTrack = "module function"` `example4()` :
 
-     ![Volání example4](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")
+     ![Example4 volání](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: **F5**). Ladicí program pozastaví provádění kódu na zarážce.
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: **F5**). Ladicí program pozastaví provádění na zarážce.
 
-3. **Otevřete v okně místních hodnot.** V případě potřeby na **ladění** nabídky, přejděte k **Windows**a klikněte na tlačítko **lokální**. (Klávesnice: **ALT+ 4**). Všimněte si, že v okně zobrazí seznam všech proměnných a funkcí v `module` fungovat a obsahuje také **[globální parametry]** uzlu.
+3. **Otevřete okno místní hodnoty.** V případě potřeby v nabídce **ladění** přejděte na možnost **Windows**a pak zvolte možnost **místní**. (Klávesnice: **ALT + 4**). Všimněte si, že okno obsahuje všechny proměnné a funkce ve `module` funkci a také obsahuje uzel **[globals]** .
 
-4. **Prozkoumejte globální proměnné.** Rozbalte **[globální parametry]** uzlu. Objekty a proměnné v globální byly nastavené zásadami knihovny Windows pro jazyk JavaScript. Přidejte vlastní proměnné pro globální obor.
+4. **Prověřte globální proměnné.** Rozbalte uzel **[globals]** . Objekty a proměnné v globální sadě byly nastaveny knihovnou Windows Library for JavaScript. Do globálního oboru můžete přidat vlastní proměnné.
 
-5. **Krokovat s vnořením example4 a zkontrolujte jeho místní a obor proměnné** Krokovat s vnořením (klávesnice: **F11**) `example4` funkce. Protože `example4` je definována v `module` funkce, `module` funkce stane nadřazený obor. `example4` můžete volat jakékoli funkce v `module` fungovat a přístup ke své proměnné. Rozbalte **[oboru]** uzel v okně místních hodnot a Všimněte si, že obsahuje stejné a proměnné `module` funkce.
+5. **Krok do example4 a přezkoumání jeho místních proměnných a proměnných oboru** Krokovat s vnořením funkce (klávesnice: **F11**) `example4` . Vzhledem k tomu `example4` , že je ve `module` funkci definován, funkce se `module` stala nadřazeným oborem. `example4` může volat libovolné funkce ve `module` funkci a přistupovat k jejím proměnným. Rozbalte uzel **[scope]** v okně místní hodnoty a Všimněte si, že obsahuje stejné a proměnné `module` funkce.
 
      ![Obory metody example4](../debugger/media/dbg-jsnav-locals-example4-scope.png "DBG_JSNAV_Locals_example4_scope")
 
-6. **Krokovat s vnořením example4_a a zkontrolujte jeho místní a obor proměnné** i nadále můžete krokovat s vnořením `example4` a do volání `example4_a`. Všimněte si, že místní proměnné se teď z `example4_a`a že **[oboru]** uzel pokračuje k uložení proměnné `module` funkce. I když proměnné `example4` jsou aktivní, nesmí být dosažitelný podle `example4_a` a nadále již nebudou součástí řetězce oboru.
+6. **Krok do example4_a a prohlédnutí jeho místních proměnných a proměnných oboru** Pokračujte krokem do `example4` a do volání `example4_a` . Všimněte si, že místní proměnné jsou nyní z `example4_a` a že uzel **[scope]** nadále drží proměnné `module` funkce. I když proměnné `example4` jsou aktivní, nemohou být dostupné v `example4_a` a již nejsou součástí řetězu oboru.
 
-7. **Krokovat s vnořením multiplyByA a zkontrolujte jeho místní a obor proměnné** projít zbývající část `example4_a` a do řádku `var x = multiplyByA(b);`.
+7. **Krok do multiplyByA a přezkoumání jeho místních proměnných a proměnných oboru** Projděte si zbytek `example4_a` a na řádek `var x = multiplyByA(b);` .
 
-     Proměnnou funkce `multiplyByA` byla nastavena `multiplyClosure` funkce, která je *uzavření*. `multiplyClosure` definuje a vrátí vnitřní funkce `multiplyXby`a zachytí (zavře přes) proměnné a parametru. Vrácené vnitřní funkce v uzávěru, má přístup k datům vnější funkce a proto vytvoří vlastní úroveň oboru.
+     Proměnná funkce `multiplyByA` byla nastavena na `multiplyClosure` funkci, která je *uzavřená*. `multiplyClosure` definuje a vrátí vnitřní funkci, `multiplyXby` , a zachycuje (ukončí) jeho parametr a proměnnou. Při uzavření má vrácená vnitřní funkce přístup k datům vnější funkce a vytvoří svou vlastní úroveň rozsahu.
 
-     Při krokování s vnořením `var x = multiplyByA(b);`, přejdete `return a * b;` řádku v `multiplyXby` vnitřní funkce.
+     Když přejdete na krok do, přejdete `var x = multiplyByA(b);` na `return a * b;` řádek `multiplyXby` vnitřní funkce.
 
-8. V okně místních hodnot, pouze parametr `b` je uveden jako místní proměnné v `multiplyXby`, ale nové **[oboru]** úroveň se přidala. Rozbalením tohoto uzlu, uvidíte, že obsahuje parametry, funkce a proměnné `multiplyClosure`, včetně `a` proměnná volána v prvním řádku `multiplyXby`. Rychlá kontrola druhého **[oboru]** uzel ukáže proměnné funkce modulu, který `multiplyXby` přistupuje k jeho dalším řádku.
+8. V okně místní hodnoty je pouze parametr `b` uveden jako místní proměnná v `multiplyXby` , ale byla přidána nová úroveň **[scope]** . Rozbalením tohoto uzlu vidíte, že obsahuje parametry, funkce a proměnné `multiplyClosure` , včetně `a` proměnné s názvem v prvním řádku `multiplyXby` . Rychlá kontroly druhého uzlu **[scope]** odhalí proměnné funkcí modulu, které `multiplyXby` přistupují k dalšímu řádku.
 
-9. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: **Shift+F5**). Ukončí relaci ladění.
+9. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: **SHIFT + F5**). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_Navigate_to_code_by_using_the_Call_Stack_window"></a> Přejít ke kódu pomocí okna zásobník volání
- Zásobník volání je datová struktura, která obsahuje informace o funkcích, které jsou spuštěny v aktuálním vlákně aplikace. Při dosažení zarážky v okně zásobník volání zobrazí seznam všech funkcí, které jsou aktivní v zásobníku. Aktuálně prováděné funkce je v horní části seznamu okna zásobník volání. Funkce, která inicializuje vlákno je v dolní části seznamu. Funkce mezi zobrazit cestu volání z inicializační funkce na aktuální funkci.
+## <a name="navigate-to-code-by-using-the-call-stack-window"></a><a name="BKMK_Navigate_to_code_by_using_the_Call_Stack_window"></a> Přechod na kód pomocí okna zásobník volání
+ Zásobník volání je datová struktura, která obsahuje informace o funkcích, které jsou spuštěny v aktuálním vlákně aplikace. Když zaškrtnete zarážku, okno zásobník volání zobrazí seznam všech funkcí, které jsou v zásobníku aktivní. Aktuálně vykonávaná funkce je v horní části seznamu oken zásobníku volání. Funkce, která inicializuje vlákno, je na konci seznamu. Funkce v mezi zobrazují cestu volání z funkce iniciace do aktuální funkce.
 
- Kromě zobrazení volání cestu k aktuálně prováděné funkci, v okně zásobník volání je možné přejít ke kódu v editoru kódu. Tato funkce může být důležité, když pracujete s více soubory a chcete rychle přesunout do konkrétní funkce.
+ Kromě zobrazení cesty volání k aktuálně vykonávané funkci lze okno zásobník volání použít k přechodu na kód v editoru kódu. Tato funkce může být užitečná, když pracujete s více soubory a chcete rychle přejít na konkrétní funkci.
 
-### <a name="BKMK_Example_5"></a> Příklad 5
- V tomto příkladu můžete krokovat s vnořením volání cestu, která obsahuje pět uživatelem definované funkce.
+### <a name="example-5"></a><a name="BKMK_Example_5"></a> Příklad 5
+ V tomto příkladu je třeba Krokovat s cestou volání, která obsahuje pět uživatelsky definovaných funkcí.
 
-1. **Volání funkce example5 ve funkci modulu.** Upravit `module` fungovat a nahraďte tento řádek `var callTrack = "module function";` řádek `example5();`.
+1. **Ve funkci modulu volejte funkci example5.** Upravte `module` funkci a nahraďte řádek následujícím `var callTrack = "module function";` řádkem `example5();` .
 
-     ![Volání example5](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")
+     ![Example5 volání](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")
 
-2. **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: **F5**). Ladicí program pozastaví provádění na zarážku ve funkci modulu.
+2. **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: **F5**). Ladicí program pozastaví provádění na zarážce ve funkci modulu.
 
-3. **Otevření okna zásobník volání.** Na **ladění** nabídce zvolte **Windows**a klikněte na tlačítko **zásobník volání** (klávesnice: Alt+7). Všimněte si, že v okně zásobník volání se zobrazí dvě funkce:
+3. **Otevřete okno zásobník volání.** V nabídce **ladění** zvolte **okna**a pak zvolte **zásobník volání** (klávesnice: ALT + 7). Všimněte si, že okno zásobník volání zobrazuje dvě funkce:
 
-    - **Globální kódu** je vstupním bodem `module` funkce v dolní části zásobníku volání.
+    - **Globální kód** je vstupním bodem `module` funkce v dolní části zásobníku volání.
 
-    - **Anonymní funkce** ukazuje na řádku `module` funkce, kde je spuštění pozastaveno. Toto je začátek zásobníku volání.
+    - **Anonymní funkce** zobrazuje řádek ve `module` funkci, kde je provádění pozastaveno. Toto je horní část zásobníku volání.
 
-4. **Krokovat s vnořením funkce k dosažení example5_d funkce.** Zvolte **Krokovat s vnořením** na **ladění** nabídce (klávesnice: **F11**) k provedení volání v cestě k volání, dokud se nedostanete vstupní bod funkce example5_d. Všimněte si, že pokaždé, když, že funkce volá funkci, číslo řádku volání funkce se uloží a volaná funkce je umístěn v horní části zásobníku. Číslo řádku volání funkce je bod, ve kterém byla pozastavena volání funkce spuštění. Žlutá šipka odkazuje na aktuálně prováděné funkci.
+4. **Krok do funkcí pro dosažení example5_d funkce.** Zvolením možnosti **Krokovat** v nabídce **ladění** (klávesnice: **F11**) spusťte volání v cestě volání, dokud nedosáhnete vstupního bodu funkce example5_d. Všimněte si, že pokaždé, když funkce volá funkci, je uloženo číslo řádku volající funkce a volaná funkce je umístěna v horní části zásobníku. Číslo řádku funkce volání je bod, ve kterém volající funkce pozastavila provádění. Žlutá šipka ukazuje na aktuálně vykonávanou funkci.
 
-     ![Okno zásobník volání](../debugger/media/dbg-jsnav-callstack-windows.png "DBG_JSNAV_CallStack_windows")
+     ![Okno zásobníku volání](../debugger/media/dbg-jsnav-callstack-windows.png "DBG_JSNAV_CallStack_windows")
 
-5. **Použití okna zásobník volání pro přechod na kód example5_a a nastavte zarážku.** V okně zásobník volání, vyberte `example5_a` položky seznamu a klikněte na tlačítko **přejděte ke zdroji** v místní nabídce. Editor kódu nastaví jeho kurzoru do řádku vrácení funkce. Nastavte zarážku na tomto řádku. Všimněte si, že aktuální řádek provádění se nemění. Má přesunout kurzor editoru.
+5. **Pomocí okna zásobník volání přejděte na kód example5_a a nastavte zarážku.** V okně zásobník volání vyberte `example5_a` položku seznamu a v místní nabídce zvolte možnost **Přejít ke zdroji** . Editor kódu nastaví jeho kurzor na návratovou řádku funkce. Nastaví zarážku na tomto řádku. Všimněte si, že aktuální řádek spuštění se nemění. Přesunul se pouze kurzor editoru.
 
-6. **Krokovat s vnořením funkce a spusťte zarážku.** Pokračujte v krokování s vnořením do `example5_d`. Všimněte si, že při návratu z funkce se odebírá ze zásobníku volání. Stisknutím klávesy **F5** pro pokračování ve spouštění programu. Zastavení na zarážce vytvořili v předchozím kroku.
+6. **Krok do funkcí a následné spuštění na zarážku.** Pokračujte v krokování `example5_d` . Všimněte si, že když se vrátíte z funkce, je vyvoláno v zásobníku volání. Stisknutím klávesy **F5** pokračujte v provádění programu. Zastavíte se na zarážce vytvořené v předchozím kroku.
 
-7. **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: **Shift+F5**). Ukončí relaci ladění.
+7. **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: **SHIFT + F5**). Tím skončí vaše ladicí relace.
 
 ## <a name="see-also"></a>Viz také
- [Spuštění ladicí relace (JavaScript)](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md) [rychlý start: Ladicí program navigace (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) [rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md) [aktivační události pozastavení, obnovení a událostí na pozadí pro Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)
+ [Spuštění ladicí relace (JavaScript)](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md) [rychlý Start: navigace ladicího programu (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) : ladění aktivačních událostí [HTML a šablon stylů CSS](../debugger/quickstart-debug-html-and-css.md) [pozastavení, obnovení a události na pozadí pro Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [ladění aplikací v aplikaci Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)

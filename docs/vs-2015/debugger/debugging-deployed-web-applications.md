@@ -1,5 +1,5 @@
 ---
-title: Ladění nasazených webových aplikací | Dokumentace Microsoftu
+title: Ladění nasazených webových aplikací | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,27 +22,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9608643801255d6c2cbf278cbfd96908f1f3911d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444073"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64832443"
 ---
 # <a name="debugging-deployed-web-applications"></a>Ladění nasazených webových aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Budete potřebovat pro ladění webové aplikace, na kterém běží na provozním serveru, má počítat opatrně. Pokud se připojíte k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces pro ladění a použijte zarážku, například všechny spravovaného kódu v procesu zastaví pracovního procesu. Zastavení veškerému spravovanému kódu v pracovním procesu, může způsobit zastavení práce pro všechny uživatele na serveru. Před ladění na provozním serveru vezměte v úvahu potenciální dopad na produkční práci.  
+Pokud potřebujete ladit webovou aplikaci, která běží na provozním serveru, měli byste to dělat opatrně. Pokud se připojíte k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovnímu procesu pro ladění a zaškrtnete-li se zarážka, například veškerý spravovaný kód v pracovním procesu se zastaví. Zastavení veškerého spravovaného kódu v pracovním procesu může způsobit přerušení práce pro všechny uživatele na serveru. Než začnete ladit na provozním serveru, vezměte v úvahu potenciální dopad na produkční práci.  
   
- Použití [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladění nasazených aplikací, je nutné se připojit k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovních procesů zpracování a ujistěte se, že ladicí program má přístup k symbolům pro aplikaci. Musíte také najít a otevřít zdrojové soubory pro aplikaci. Další informace najdete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md), [jak: Hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md), a [požadavky na systém](../debugger/aspnet-debugging-system-requirements.md).  
+ Chcete-li použít nástroj [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k ladění nasazené aplikace, je nutné se připojit k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovnímu procesu a zajistit, aby ladicí program měl přístup ke symbolům pro aplikaci. Je také nutné vyhledat a otevřít zdrojové soubory aplikace. Další informace naleznete v tématu [určení symbolu (PDB) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md), [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md)a [systémových požadavků](../debugger/aspnet-debugging-system-requirements.md).  
   
 > [!NOTE]
-> Mnoho [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webových aplikací odkazovat na knihovny DLL, které obsahují obchodní logikou nebo jiné užitečné kódu. Takový odkaz automaticky zkopíruje knihovny DLL ze svého místního počítače do složky \bin virtuální adresář webové aplikace. Při ladění, mějte na paměti, že vaše webová aplikace odkazuje na kopii knihovny DLL a nelze zkopírovat do místního počítače.  
+> Mnoho [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webových aplikací odkazuje na knihovny DLL, které obsahují obchodní logiku nebo jiný užitečný kód. Takový odkaz automaticky zkopíruje knihovnu DLL z místního počítače do složky \Bin virtuálního adresáře webové aplikace. Při ladění nezapomeňte, že vaše webová aplikace odkazuje na tuto kopii knihovny DLL a nikoli na kopii na místním počítači.  
   
- Pro připojení k procesu [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovního procesu je stejné jako připojení k jiné vzdálený proces. Pokud jste se připojili, pokud nemáte otevřený správný projekt, zobrazí se dialogové okno když se aplikace zastaví. Toto dialogové okno požádá o umístění zdrojových souborů pro aplikaci. Název souboru zadaný v symboly ladění na webovém serveru musí odpovídat názvu souboru, který zadáte v dialogovém okně. Další informace najdete v tématu [připojení k běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ Proces pro připojení k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovnímu procesu je stejný jako připojení k jinému vzdálenému procesu. Pokud jste připojeni, pokud nemáte otevřený správný projekt, zobrazí se dialogové okno při přerušení aplikace. V tomto dialogovém okně se zobrazí výzva k zadání umístění zdrojových souborů aplikace. Název souboru, který zadáte v dialogovém okně, se musí shodovat s názvem souboru zadaným v symbolech ladění na webovém serveru. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [Ladění webových aplikací a skriptu](../debugger/debugging-web-applications-and-script.md)   
- [Postupy: Povolit ladění pro aplikace ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
- [Postupy: Hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md)   
+ [Ladění webových aplikací a skriptů](../debugger/debugging-web-applications-and-script.md)   
+ [Postupy: povolení ladění pro aplikace ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)   
+ [Postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md)   
  [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

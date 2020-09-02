@@ -1,5 +1,5 @@
 ---
-title: Efektivní využívání paměti při sestavování rozsáhlých projektů | Dokumentace Microsoftu
+title: Efektivní použití paměti při sestavování rozsáhlých projektů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,18 +14,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 28d9f3d43faa53731b101dfdf58fe1e68a0920c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178303"
 ---
 # <a name="using-memory-efficiently-when-you-build-large-projects"></a>Efektivní využívání paměti při sestavování rozsáhlých projektů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Velké projekty často obsahovat mnoho dílčích projektů a další závislosti, a ty můžou spotřebovat velké množství systémové paměti v okamžiku sestavení. Když je snížení dostupné systémové paměti, může také snížit výkon systému. Starší verze [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty zůstala v paměti nebo ve verzi 3.5 projekty byly odebrány, ale zachovali výsledků sestavení v mezipaměti pro pozdější načtení.  
+Velké projekty často obsahují mnoho dílčích projektů a další závislosti a ty mohou spotřebovat spoustu systémové paměti v době sestavení. Pokud dojde k poklesu dostupné systémové paměti, může se také snížit výkon systému. Starší verze [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projektů zůstaly v paměti nebo ve verzi 3,5 byly odebrány projekty, ale při pozdějším načtení zachovaly výsledky sestavení v mezipaměti.  
   
- Verze 4.0 zpracovává správy paměti automaticky, nebudou muset použít vlastnosti, jako je ukládání projektů `UnloadProjectsOnCompletion` a `UseResultsCache`.  
+ Verze 4,0 zpracovává tuto správu paměti automaticky a ukládá projekty z nutnosti používat vlastnosti, jako jsou  `UnloadProjectsOnCompletion` a `UseResultsCache` .  
   
 ## <a name="see-also"></a>Viz také  
- [Paralelní sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
+ [Paralelní sestavování více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)

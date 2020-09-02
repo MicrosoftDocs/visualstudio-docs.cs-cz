@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_COMPARE | Dokumentace Microsoftu
+title: REFERENCE_COMPARE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d617d428c9551bc821e1c72fa517497769e6f047
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204913"
 ---
-# <a name="referencecompare"></a>REFERENCE_COMPARE
+# <a name="reference_compare"></a>REFERENCE_COMPARE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Určuje typ porovnání pro odkazy.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_REFERENCE_COMPARE {   
@@ -45,24 +45,24 @@ public enum enum_REFERENCE_COMPARE { 
   
 ## <a name="members"></a>Členové  
  REF_COMPARE_EQUAL  
- Určuje porovnávání rovnosti.  
+ Určuje porovnání se stejnou hodnotou.  
   
  REF_COMPARE_LESS_THAN  
- Určuje symbol méně – než porovnání.  
+ Určuje porovnání menší než.  
   
  REF_COMPARE_GREATER_THAN  
- Určuje, větší-než porovnání.  
+ Určuje větší než porovnání.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako argument [porovnání](../../../extensibility/debugger/reference/idebugreference2-compare.md) metody.  
+ Byl předán jako argument metody [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)
+ [Porovnání](../../../extensibility/debugger/reference/idebugreference2-compare.md)

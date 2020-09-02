@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::get_imagealign – | Dokumentace Microsoftu
+title: 'IDiaAddressMap:: get_imageAlign | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f3e7a326c78207976fb8493905b412df65e0c63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178229"
 ---
-# <a name="idiaaddressmapgetimagealign"></a>IDiaAddressMap::get_imageAlign
+# <a name="idiaaddressmapget_imagealign"></a>IDiaAddressMap::get_imageAlign
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Načte aktuální zarovnání obrázku.  
@@ -35,13 +35,13 @@ HRESULT get_imageAlign ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu zarovnání obrázku ze spustitelného souboru.  
+ mimo Vrátí hodnotu zarovnání obrázku ze spustitelného souboru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Image je zarovnán konkrétní paměti hranice v závislosti, jak byl obrázek načten a vytvořili. Zarovnání je obvykle na hranicích 1, 2, 4, 8, 16, 32 nebo 64 bajtů. Zarovnání obrázku můžete nastavit pomocí volání [idiaaddressmap::put_imagealign –](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) metody.  
+ Obrázky jsou zarovnané na konkrétní hranice paměti v závislosti na tom, jak byl obrázek načten a vytvořen. Zarovnání je obvykle na 1, 2, 4, 8, 16, 32 nebo 64 bajtových hranic. Zarovnání obrázku lze nastavit voláním metody [IDiaAddressMap::p ut_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   

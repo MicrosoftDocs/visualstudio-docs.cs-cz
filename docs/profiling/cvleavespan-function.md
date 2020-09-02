@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 113d6aafbd09f6b726613405a8c1eb82f9e202e5
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330035"
 ---
 # <a name="cvleavespan-function"></a>Cvleavespan – – funkce
@@ -31,7 +31,7 @@ HRESULT CvLeaveSpan(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pSpan`Objekt span vrácený předchozím voláním Cventerspan – *. Nemůže mít hodnotu NULL.
+ `pSpan` Objekt span vrácený předchozím voláním Cventerspan – *. Nemůže mít hodnotu NULL.
 
 ## <a name="return-value"></a>Návratová hodnota
  S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

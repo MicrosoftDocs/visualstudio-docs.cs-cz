@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce | Dokumentace Microsoftu'
+title: 'Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,26 +20,26 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 58e5f0e9154137097a94637799966ee94818fca4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150832"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Postupy: Konfigurace chování výzvy důvěryhodnosti ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, jestli koncovým uživatelům se zobrazí možnost instalace aplikace ClickOnce, jako je například aplikace Windows Forms, aplikace Windows Presentation Foundation, konzolové aplikace a prohlížeč WPF – aplikace a řešení pro systém Office. Konfigurace potvrzení důvěryhodnosti nastavením klíčů registru v počítači koncového uživatele.  
+Můžete nakonfigurovat výzvu vztahu důvěryhodnosti pro ClickOnce, která určuje, jestli mají koncoví uživatelé možnost instalovat aplikace ClickOnce, například model Windows Forms aplikace, Windows Presentation Foundation aplikace, konzolové aplikace, aplikace pro prohlížeč WPF a řešení pro Office. Výzvu pro důvěryhodnost konfigurujete nastavením klíčů registru pro jednotlivé počítače koncového uživatele.  
   
- V následující tabulce jsou uvedeny možnosti konfigurace, které lze použít u všech pět zóny (Internet, UntrustedSites, tento počítač, LocalIntranet a TrustedSites).  
+ V následující tabulce jsou uvedeny možnosti konfigurace, které lze použít pro každou z pěti zón (Internet, UntrustedSites, MyComputer, LocalIntranet a TrustedSites).  
   
 |Možnost|Hodnota nastavení registru|Popis|  
 |------------|----------------------------|-----------------|  
-|Povolte výzvu vztahu důvěryhodnosti.|`Enabled`|Výzvy důvěryhodnosti ClickOnce je zobrazení tak, aby koncoví uživatelé můžou udělit důvěryhodnost aplikace ClickOnce.|  
-|Omezte výzvu vztahu důvěryhodnosti.|`AuthenticodeRequired`|Výzvy důvěryhodnosti ClickOnce se zobrazí jenom v případě aplikace ClickOnce, které jsou podepsané certifikátem, který identifikuje vydavatele.|  
-|Zakáže výzvu vztahu důvěryhodnosti.|`Disabled`|Výzvy důvěryhodnosti ClickOnce se nezobrazuje u všech aplikací ClickOnce, které nejsou podepsané explicitně důvěryhodný certifikát.|  
+|Povolte dotaz Trust.|`Enabled`|Zobrazí se výzva vztahu důvěryhodnosti ClickOnce, aby koncoví uživatelé mohli udělovat důvěru aplikacím ClickOnce.|  
+|Omezení výzvy vztahu důvěryhodnosti.|`AuthenticodeRequired`|Výzva k zobrazení výzvy důvěryhodnosti ClickOnce se zobrazí pouze v případě, že jsou aplikace ClickOnce podepsány certifikátem, který identifikuje vydavatele.|  
+|Zakažte zobrazení výzvy vztahu důvěryhodnosti.|`Disabled`|Výzva k zobrazení výzvy důvěryhodnosti ClickOnce se nezobrazí pro žádné aplikace ClickOnce, které nejsou podepsané explicitně důvěryhodným certifikátem.|  
   
- V následující tabulce jsou uvedeny výchozí chování pro každou zónu. Sloupec aplikace odkazuje na aplikace Windows Forms, aplikace Windows Presentation Foundation, aplikací prohlížeče WPF a konzolové aplikace.  
+ Následující tabulka ukazuje výchozí chování pro každou zónu. Sloupec aplikace odkazuje na model Windows Forms aplikace, Windows Presentation Foundation aplikace, aplikace prohlížeče WPF a konzolové aplikace.  
   
 |Zóna|Aplikace|řešení Office|  
 |----------|------------------|----------------------|  
@@ -49,28 +49,28 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
 |`Internet`|`Enabled`|`AuthenticodeRequired`|  
 |`UntrustedSites`|`Disabled`|`Disabled`|  
   
- Tato nastavení můžete přepsat povolením, omezení nebo zakázáním vztahu důvěryhodnosti ClickOnce.  
+ Tato nastavení můžete přepsat povolením, omezením nebo zakázáním výzvy vztahu důvěryhodnosti ClickOnce.  
   
-## <a name="enabling-the-clickonce-trust-prompt"></a>Povolení vztahu důvěryhodnosti ClickOnce  
- Povolte výzvu vztahu důvěryhodnosti pro zónu, když chcete koncovým uživatelům se zobrazí možnost instalace a spuštění jakékoli aplikace ClickOnce, která pochází z této zóny.  
+## <a name="enabling-the-clickonce-trust-prompt"></a>Povolení výzvy vztahu důvěryhodnosti ClickOnce  
+ Pokud chcete, aby se koncovým uživatelům zobrazila možnost instalace a spuštění jakékoli aplikace ClickOnce, která pochází z této zóny, povolte výzvu k zadání vztahu důvěryhodnosti pro zónu.  
   
-#### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Povolení vztahu důvěryhodnosti ClickOnce pomocí Editoru registru  
+#### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Povolení výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru  
   
-1. Otevřete editor registru:  
+1. Otevřete editor registru: .  
   
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.  
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.  
   
-    2. V **otevřít** zadejte `regedit` (nebo `regedit32` na Windows 32-bit) a potom klikněte na tlačítko **OK**.  
+    2. Do pole **otevřít** zadejte `regedit` (nebo `regedit32` v 32 Windows) a pak klikněte na **OK**.  
   
 2. Vyhledejte následující klíč registru:  
   
-     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
+     \ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel  
   
      Pokud klíč neexistuje, vytvořte ho.  
   
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami, které jsou uvedeny v následující tabulce.  
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.  
   
-    |Hodnota řetězce podklíče|Value|  
+    |Řetězcová hodnota – podklíč|Hodnota|  
     |-------------------------|-----------|  
     |`Internet`|`Enabled`|  
     |`UntrustedSites`|`Disabled`|  
@@ -78,13 +78,13 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
     |`LocalIntranet`|`Enabled`|  
     |`TrustedSites`|`Enabled`|  
   
-     Pro řešení Office `Internet` má výchozí hodnotu `AuthenticodeRequired` a `UntrustedSites` má hodnotu `Disabled`. Pro všechny ostatní `Internet` má výchozí hodnotu `Enabled`.  
+     U řešení pro systém Office `Internet` má výchozí hodnotu `AuthenticodeRequired` a `UntrustedSites` má hodnotu `Disabled` . Pro všechny ostatní `Internet` má výchozí hodnotu `Enabled` .  
   
-#### <a name="to-enable-the-clickonce-trust-prompt-programmatically"></a>Povolení vztahu důvěryhodnosti ClickOnce prostřednictvím kódu programu  
+#### <a name="to-enable-the-clickonce-trust-prompt-programmatically"></a>Postup při povolení výzvy vztahu důvěryhodnosti ClickOnce programově  
   
-1. Vytvoření konzolové aplikace v jazyce Visual Basic nebo Visual C# v sadě Visual Studio.  
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C# v aplikaci Visual Studio.  
   
-2. Otevřete soubor Program.vb nebo Program.cs soubor pro úpravy a přidejte následující kód.  
+2. Otevřete soubor program. vb nebo Program.cs pro úpravy a přidejte následující kód.  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -110,26 +110,26 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
   
 3. Sestavte a spusťte aplikaci.  
   
-## <a name="restricting-the-clickonce-trust-prompt"></a>Omezení vztahu důvěryhodnosti ClickOnce  
- Omezení výzvu vztahu důvěryhodnosti, takže řešení musí být podepsány pomocí technologie Authenticode certifikáty, které mají známé identity, než se uživatelům zobrazí výzva rozhodnutí důvěryhodnosti.  
+## <a name="restricting-the-clickonce-trust-prompt"></a>Omezení výzvy vztahu důvěryhodnosti pro ClickOnce  
+ Omezte dotaz na vztah důvěryhodnosti, aby bylo možné řešení podepsat pomocí certifikátů Authenticode, které mají známou identitu před tím, než se uživatelům zobrazí výzva k rozhodnutí o důvěryhodnosti.  
   
-#### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Omezení vztahu důvěryhodnosti ClickOnce pomocí Editoru registru  
+#### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Omezení výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru  
   
-1. Otevřete editor registru:  
+1. Otevřete editor registru: .  
   
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.  
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.  
   
-    2. V **otevřít** zadejte `regedit` (nebo `regedit32` na Windows 32-bit) a potom klikněte na tlačítko **OK**.  
+    2. Do pole **otevřít** zadejte `regedit` (nebo `regedit32` v 32 Windows) a pak klikněte na **OK**.  
   
 2. Vyhledejte následující klíč registru:  
   
-     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
+     \ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel  
   
      Pokud klíč neexistuje, vytvořte ho.  
   
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami, které jsou uvedeny v následující tabulce.  
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.  
   
-    |Hodnota řetězce podklíče|Value|  
+    |Řetězcová hodnota – podklíč|Hodnota|  
     |-------------------------|-----------|  
     |`UntrustedSites`|`Disabled`|  
     |`Internet`|`AuthenticodeRequired`|  
@@ -137,11 +137,11 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
     |`LocalIntranet`|`AuthenticodeRequired`|  
     |`TrustedSites`|`AuthenticodeRequired`|  
   
-#### <a name="to-restrict-the-clickonce-trust-prompt-programmatically"></a>Omezení vztahu důvěryhodnosti ClickOnce prostřednictvím kódu programu  
+#### <a name="to-restrict-the-clickonce-trust-prompt-programmatically"></a>Postup při programovému omezení výzvy vztahu důvěryhodnosti ClickOnce  
   
-1. Vytvoření konzolové aplikace v jazyce Visual Basic nebo Visual C# v sadě Visual Studio.  
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C# v aplikaci Visual Studio.  
   
-2. Otevřete soubor Program.vb nebo Program.cs soubor pro úpravy a přidejte následující kód.  
+2. Otevřete soubor program. vb nebo Program.cs pro úpravy a přidejte následující kód.  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -167,26 +167,26 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
   
 3. Sestavte a spusťte aplikaci.  
   
-## <a name="disabling-the-clickonce-trust-prompt"></a>Zakazuje zobrazení výzvy důvěryhodnosti ClickOnce  
- Výzvu vztahu důvěryhodnosti můžete zakázat, aby koncovým uživatelům se zobrazí možnost instalace řešení, které nejsou v jejich zásady zabezpečení již důvěryhodné.  
+## <a name="disabling-the-clickonce-trust-prompt"></a>Zakázání výzvy vztahu důvěryhodnosti ClickOnce  
+ Můžete zakázat zobrazení výzvy vztahu důvěryhodnosti, aby koncoví uživatelé neměli možnost instalovat řešení, která ještě nejsou ve svých zásadách zabezpečení důvěryhodná.  
   
-#### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Chcete-li zakázat výzvy důvěryhodnosti ClickOnce pomocí Editoru registru  
+#### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Zakázání výzvy vztahu důvěryhodnosti ClickOnce pomocí Editoru registru  
   
-1. Otevřete editor registru:  
+1. Otevřete editor registru: .  
   
-    1. Klikněte na tlačítko **Start**a potom klikněte na tlačítko **spustit**.  
+    1. Klikněte na tlačítko **Start**a potom na příkaz **Spustit**.  
   
-    2. V **otevřít** zadejte `regedit` (nebo `regedit32` na Windows 32-bit) a potom klikněte na tlačítko **OK**.  
+    2. Do pole **otevřít** zadejte `regedit` (nebo `regedit32` v 32 Windows) a pak klikněte na **OK**.  
   
 2. Vyhledejte následující klíč registru:  
   
-     \HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel  
+     \ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel  
   
      Pokud klíč neexistuje, vytvořte ho.  
   
-3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přiřazenými hodnotami, které jsou uvedeny v následující tabulce.  
+3. Přidejte následující podklíče jako **řetězcovou hodnotu**, pokud ještě neexistují, s přidruženými hodnotami, které jsou uvedeny v následující tabulce.  
   
-    |Hodnota řetězce podklíče|Value|  
+    |Řetězcová hodnota – podklíč|Hodnota|  
     |-------------------------|-----------|  
     |`UntrustedSites`|`Disabled`|  
     |`Internet`|`Disabled`|  
@@ -194,11 +194,11 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
     |`LocalIntranet`|`Disabled`|  
     |`TrustedSites`|`Disabled`|  
   
-#### <a name="to-disable-the-clickonce-trust-prompt-programmatically"></a>Chcete-li zakázat výzvy důvěryhodnosti ClickOnce prostřednictvím kódu programu  
+#### <a name="to-disable-the-clickonce-trust-prompt-programmatically"></a>Postup při programovém vypnutí výzvy vztahu důvěryhodnosti ClickOnce  
   
-1. Vytvoření konzolové aplikace v jazyce Visual Basic nebo Visual C# v sadě Visual Studio.  
+1. Vytvořte Visual Basic nebo konzolovou aplikaci Visual C# v aplikaci Visual Studio.  
   
-2. Otevřete soubor Program.vb nebo Program.cs soubor pro úpravy a přidejte následující kód.  
+2. Otevřete soubor program. vb nebo Program.cs pro úpravy a přidejte následující kód.  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -226,13 +226,13 @@ Vztahu důvěryhodnosti ClickOnce pro ovládací prvek můžete nakonfigurovat, 
 3. Sestavte a spusťte aplikaci.  
   
 ## <a name="see-also"></a>Viz také  
- [Zabezpečování aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
+ [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
  [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)   
- [ClickOnce a kód Authenticode](../deployment/clickonce-and-authenticode.md)   
+ [ClickOnce a Authenticode](../deployment/clickonce-and-authenticode.md)   
  [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md)   
- [Postupy: Povolení nastavení zabezpečení ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)   
- [Postupy: Nastavení zóny zabezpečení pro aplikaci ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [Postupy: Nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [Postupy: Ladění aplikace ClickOnce s omezenými oprávněními](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [Postupy: Přidání důvěryhodného vydavatele na klientský počítač pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [Postupy: povolení nastavení zabezpečení ClickOnce](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [Postupy: nastavení zóny zabezpečení pro aplikaci ClickOnce](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [Postupy: nastavení vlastních oprávnění pro aplikaci ClickOnce](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [Postupy: ladění aplikace ClickOnce s omezenými oprávněními](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [Postupy: Přidání důvěryhodného vydavatele do klientského počítače pro aplikace ClickOnce](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
  [Postupy: Opětovné podepisování manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

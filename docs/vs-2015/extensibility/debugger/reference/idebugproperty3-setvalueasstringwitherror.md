@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Dokumentace Microsoftu
+title: 'IDebugProperty3:: SetValueAsStringWithError | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 58b2c487e0259ec2381638c77608f8773af3e159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193380"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Nastaví hodnotu této vlastnosti a vrátí chybovou zprávu, pokud je to nutné.  
+Nastaví hodnotu této vlastnosti a v případě potřeby vrátí chybovou zprávu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,25 +46,25 @@ int SetValueAsStringWithError(
   
 #### <a name="parameters"></a>Parametry  
  `pszValue`  
- [in] Hodnota k nastavení.  
+ pro Hodnota, kterou chcete nastavit.  
   
  `dwRadix`  
- [in] Základ číselné soustavy nastaví se hodnota.  
+ pro Základ hodnoty, která je nastavena.  
   
  `dwTimeout`  
- [in] Doba čekání nastavit hodnotu (`INFINITE` znamená, že stále čekat).  
+ pro Doba, po kterou se má čekat na nastavení hodnoty (znamená to, že se bude `INFINITE` čekat trvale).  
   
  `errorString`  
- [out] Pokud došlo k chybě, nastavením této hodnoty, to obsahuje příčinu selhání.  
+ mimo Pokud při nastavování hodnoty došlo k chybě, bude to mít důvod selhání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Příchozí hodnotou může být výraz, který se má vyhodnotit.  
+ Příchozí hodnota může být výraz, který se má vyhodnotit.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CProperty** objekt, který zveřejňuje [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CProperty** , který zpřístupňuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) .  
   
 ```cpp#  
 HRESULT CProperty::SetValueAsStringWithError(   

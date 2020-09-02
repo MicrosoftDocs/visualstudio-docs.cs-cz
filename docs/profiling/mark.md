@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b3049a253dca37090d128748b71f278aa2f7e63
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330794"
 ---
 # <a name="mark"></a>Označení
@@ -28,9 +28,9 @@ VSPerfCmd.exe /Mark:MarkID,[MarkName]
 ```
 
 #### <a name="parameters"></a>Parametry
- `MarkID`Uživatelsky definované celé číslo, které je uvedeno jako ID značky v zobrazeních a sestavách profileru. `MarkID`nemusí být jedinečný.
+ `MarkID` Uživatelsky definované celé číslo, které je uvedeno jako ID značky v zobrazeních a sestavách profileru. `MarkID` nemusí být jedinečný.
 
- `MarkName`Volitelné Uživatelem definovaný řetězec, který je uveden jako název značky v zobrazeních a sestavách profileru. Není `MarkName` -li parametr zadán, je pole název značky v seznamu značek prázdné. Uzavřete řetězce, které obsahují mezery nebo lomítka ("/") v uvozovkách.
+ `MarkName` Volitelné Uživatelem definovaný řetězec, který je uveden jako název značky v zobrazeních a sestavách profileru. Není `MarkName` -li parametr zadán, je pole název značky v seznamu značek prázdné. Uzavřete řetězce, které obsahují mezery nebo lomítka ("/") v uvozovkách.
 
 ## <a name="example"></a>Příklad
  Tento příklad vloží značku s ID 123 a názvem "TestMark".

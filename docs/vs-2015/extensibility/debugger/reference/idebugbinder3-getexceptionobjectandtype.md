@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+title: 'IDebugBinder3:: GetExceptionObjectAndType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6da9b1259518f3796968712b11c725a08aa9a01
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443951"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64834361"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte výjimky přidružené k objektu, pokud existuje.  
+Tato metoda načte výjimku přidruženou k objektu, pokud existuje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int GetExceptionObjectAndType(
   
 #### <a name="parameters"></a>Parametry  
  `ppException`  
- [out] Vrátí objekt představující výjimku.  
+ mimo Vrátí objekt představující výjimku.  
   
  `ppField`  
- [out] Vrátí objekt představující konkrétní pole, které mohou způsobit výjimku (to může mít hodnotu null).  
+ mimo Vrátí objekt reprezentující určité pole, které mohlo způsobit výjimku (Tato hodnota může být null).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 > [!NOTE]
-> Pokud chcete ověřit, zda dojde k výjimce, zkontrolujte hodnoty vrácené `ppException`: Pokud je hodnota null, pak tento objekt přidružen žádná výjimka.  
+> Chcete-li ověřit, zda existuje výjimka, zkontrolujte hodnotu vrácenou `ppException` : Pokud je hodnota null, není k tomuto objektu přidružena žádná výjimka.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

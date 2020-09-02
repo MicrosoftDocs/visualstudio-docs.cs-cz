@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c713759a8ea75eed3048469327f962668efa4f70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657644"
 ---
 # <a name="link-a-use-case-to-documents-and-diagrams"></a>Propojení případu použití s dokumenty a diagramy
@@ -74,14 +74,14 @@ V diagramu případu použití můžete propojit případ použití s jiným dia
 
 ### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Připojení ke sdílenému dokumentu, prvku OneNotu nebo webové stránce
 
-1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající na ' \\ \\ ', nebo webová stránka nebo adresa URL SharePointu začínající na ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
+1. Získejte adresu URL sdíleného elementu. Může to být například cesta k síťovému souboru začínající \\ \\ na ' ', nebo webová stránka nebo adresa URL SharePointu začínající ' http://', nebo odkaz na oddíl, stránku nebo odstavec aplikace OneNote začínající na ' OneNote: '.
 
 2. V sadě nástrojů klikněte na **artefakt** a pak klikněte v diagramu případu použití.
 
 3. Vyberte nový artefakt a zadejte nebo vložte adresu URL do vlastnosti **hypertextový odkaz** .
 
     > [!NOTE]
-    > Pokud chcete zadat cestu k souboru, je nejlepší zvolit soubor buď v běžném pracovním prostoru (počínaje "\\ \\"), nebo v rámci řešení sady Visual Studio. Tím se zajistí, že cesta k souboru zůstane platná v počítači jiného člena týmu, nebo pokud je řešení přesunuto. Pokud chcete do řešení přidat dokument, jako je wordový dokument, klikněte pravým tlačítkem na řešení v Průzkumník řešení, přejděte na **Přidat** a pak klikněte na **existující položka**.
+    > Pokud chcete zadat cestu k souboru, je nejlepší zvolit soubor buď v běžném pracovním prostoru (začínajícím na ' \\ \\ ') nebo v rámci řešení sady Visual Studio. Tím se zajistí, že cesta k souboru zůstane platná v počítači jiného člena týmu, nebo pokud je řešení přesunuto. Pokud chcete do řešení přidat dokument, jako je wordový dokument, klikněte pravým tlačítkem na řešení v Průzkumník řešení, přejděte na **Přidat** a pak klikněte na **existující položka**.
 
 ## <a name="see-also"></a>Viz také
  [Diagramy případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md) k [úpravám modelů a diagramů UML](../modeling/edit-uml-models-and-diagrams.md) [vytvoření modelů pro vaši aplikaci](../modeling/create-models-for-your-app.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakEvent2 | Dokumentace Microsoftu
+title: IDebugBreakEvent2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,36 +13,36 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 98e8c1b1669b3fdd1f442c6987e4e9d2b9fc4835
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65675383"
 ---
 # <a name="idebugbreakevent2"></a>IDebugBreakEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní informuje správce ladění relace (SDM), že asynchronní přerušení byla úspěšně dokončena.  
+Toto rozhraní oznamuje správci ladění relace (SDM), že asynchronní přerušení bylo úspěšně dokončeno.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugBreakEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní pro podporu uživatelů konce v programu. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí implementovat rozhraní na stejný objekt jako toto rozhraní (SDM používá [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup `IDebugEvent2` rozhraní).  
+ DE implementuje toto rozhraní pro podporu přerušení uživatele v programu. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) se musí implementovat na stejný objekt jako toto rozhraní (SDM používá pro přístup k rozhraní [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) `IDebugEvent2` .).  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání SDM [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) když uživatel požaduje program laděn, která se má pozastavit. Když se program úspěšně byla pozastavena, DE odešle `IDebugBreakEvent2` událostí. Tato událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) poskytnutých SDM při připojení k laděnému programu funkce zpětného volání.  
+ Volání SDM zavolá [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) , když si uživatel vyžádá, aby byl program laděn. Po úspěšném pozastavení programu zruší událost DE zprávu `IDebugBreakEvent2` . Tato událost se posílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , kterou poskytuje služba SDM, když je připojená k laděnému programu.  
   
 ## <a name="remarks"></a>Poznámky  
- Například může uživatel vybrat **přerušit vše** příkaz **ladění** nabídky, aby program, který běží v nekonečné smyčce. SDM říká programu, aby zastavit voláním [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md). Odešle DE `IDebugBreakEvent2` při nakonec zastavení programu.  
+ Uživatel může například vybrat příkaz **Break All** v nabídce **ladění** pro přerušení programu, na kterém běží nekonečné smyčky. Model SDM oznamuje programu zastavení voláním [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md). DE pošle, `IDebugBreakEvent2` když se program nakonec zastaví.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPortSuppliers2::GetCount | Dokumenty společnosti Microsoft
+title: 'IEnumDebugPortSuppliers2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 355b7434bb6c0392b93e4395c2ae7a04e796e708
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80716050"
 ---
 # <a name="ienumdebugportsuppliers2getcount"></a>IEnumDebugPortSuppliers2::GetCount
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametry
 `pcelt`\
-[out] Vrátí počet prvků ve výčtu.
+mimo Vrátí počet prvků ve výčtu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není součástí rozhraní pro výčet com, které `Next`určuje, `Skip`že `Reset` je třeba implementovat pouze metody , `Clone`, a metody.
+ Tato metoda není součástí vlastního rozhraní výčtu modelu COM, které určuje, že `Next` `Clone` `Skip` `Reset` je nutné implementovat pouze metody,, a.
 
 ## <a name="see-also"></a>Viz také
 - [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

@@ -1,5 +1,5 @@
 ---
-title: Upozornění portu | Dokumentace Microsoftu
+title: Oznamování portu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,40 +11,40 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8cf3969dda783882f24d02a748f345cdb66fe413
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63410074"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64857986"
 ---
 # <a name="notifying-the-port"></a>Upozornění portu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Po spuštění programu, port, který musí být upozorněn, následujícím způsobem:  
+Po spuštění programu musí být port upozorněn následujícím způsobem:  
   
-1. Když port obdrží nový uzel programu, odešle událost vytvoření programu zpět do relace ladění. Událost provede s ní rozhraní, které představuje program.  
+1. Když port obdrží nový uzel programu, pošle událost vytvoření programu zpátky do ladicí relace. Událost přenáší rozhraní, které představuje program.  
   
-2. Relace ladění dotazů pro identifikátor ladicího stroje (DE), který může připojit k programu.  
+2. Ladicí relace se dotazuje programu na identifikátor ladicího modulu (DE), který se může připojit k.  
   
-3. Kontroluje, jestli DE je na seznamu povolených DEs pro daný program relace ladění. Ladicí relaci získá tento seznam z nastavení aktivní program řešení, původně předána do ní balíček ladění.  
+3. Relace ladění zkontroluje, zda je v seznamu povolených algoritmů DEs pro daný program. Relace ladění získá tento seznam z nastavení aktivního programu řešení, které bylo původně předáno balíčkem pro ladění.  
   
-    DE musí být na seznamu povolených, jinak je DE nebude připojen k programu.  
+    Příkaz DE musí být v seznamu povolených, jinak se v programu DE nebude připojovat.  
   
-   Prostřednictvím kódu programu, když je port nejprve obdrží nový uzel program, vytvoří [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) rozhraní k reprezentaci program.  
-  
-> [!NOTE]
-> Tento model nelze zaměňovat s `IDebugProgram2` rozhraní vytvořit později pomocí ladicího stroje (DE).  
-  
- Port, který odešle [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) událost vytvoření programu zpět do Správce ladění relace (SDM) prostřednictvím COM `IConnectionPoint` rozhraní.  
+   Programově, když port nejprve obdrží nový uzel programu, vytvoří rozhraní [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) , které bude reprezentovat program.  
   
 > [!NOTE]
-> Tento model nelze zaměňovat s `IDebugProgramCreateEvent2` rozhraní, které odesílají DE později.  
+> Nemělo by se zaměňovat s `IDebugProgram2` rozhraním vytvořeným později modulem ladění (de).  
   
- Spolu s událostí rozhraní samotného, port, který odešle [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md), [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md), a [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) rozhraní, které představují port, zpracovávat, a programování v uvedeném pořadí. Volání SDM [IDebugProgram2::GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) získat GUID DE, který lze ladit program. Identifikátor GUID byl původně získaných [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.  
+ Port pošle událost vytvoření programu [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) zpět do Správce ladění relace (SDM) prostřednictvím `IConnectionPoint` rozhraní com.  
   
- SDM zkontroluje, jestli je DE je na seznamu povolených DEs. Tento seznam SDM získá z nastavení aktivní program řešení, původně předána do ní balíček ladění. DE musí být na seznamu povolených, jinak jej nebude připojen k programu.  
+> [!NOTE]
+> To by nemělo být zaměněno s `IDebugProgramCreateEvent2` rozhraním, které je odesláno později pomocí de.  
   
- Jakmile identity DE je známo, SDM je připraven pro připojení k programu.  
+ Spolu s samotným rozhraním událostí odesílá port rozhraní [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md), [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)a [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) , která reprezentují port, proces a program. Volání SDM [IDebugProgram2:: GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) Získá identifikátor GUID příkazu de, který může ladit program. Identifikátor GUID byl původně získán z rozhraní [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) .  
+  
+ SDM zjistí, zda je v seznamu povolených algoritmů DEs. Model SDM získá tento seznam z nastavení aktivního programu řešení, které bylo původně předáno balíčkem pro ladění. Příkaz DE musí být v seznamu povolených nebo jinak nebude připojen k programu.  
+  
+ Jakmile je známa identita DE, je model SDM připraven ho připojit k programu.  
   
 ## <a name="see-also"></a>Viz také  
  [Spuštění programu](../../extensibility/debugger/launching-a-program.md)   

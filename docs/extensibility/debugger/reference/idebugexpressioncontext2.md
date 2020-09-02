@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2 | Dokumenty společnosti Microsoft
+title: IDebugExpressionContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 344ae287b3784ceca87fbbab09ad2b2e0a304205
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729638"
 ---
 # <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
 Toto rozhraní představuje kontext pro vyhodnocení výrazu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugExpressionContext2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Ladicí modul (DE) implementuje toto rozhraní představují kontext, ve kterém lze vyhodnocovat výraz.
+ Ladicí stroj (DE) implementuje toto rozhraní, aby představovalo kontext, ve kterém lze výraz vyhodnotit.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) vrátí toto rozhraní. Toto rozhraní je přístupné pouze v případě, že byl laděný program pozastaven a je k dispozici rámec zásobníku.
+ Volání [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) vrací toto rozhraní. Toto rozhraní je přístupné pouze v případě, že je program laděn a je k dispozici rámec zásobníku.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugExpressionContext2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugExpressionContext2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetName](../../../extensibility/debugger/reference/idebugexpressioncontext2-getname.md)|Načte název kontextu hodnocení.|
+|[GetName](../../../extensibility/debugger/reference/idebugexpressioncontext2-getname.md)|Načte název kontextu vyhodnocení.|
 |[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)|Analyzuje textový výraz pro vyhodnocení.|
 
 ## <a name="remarks"></a>Poznámky
- Kontext hodnocení lze považovat za obor pro provádění vyhodnocení výrazu.
+ Kontext vyhodnocení lze představit jako obor pro provádění vyhodnocení výrazu.
 
- Pokud program byl zastaven, správce ladění relace (SDM) získá rámec zásobníku z DE s voláním [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md). SDM pak volá [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) `IDebugExpressionContext2` získat rozhraní. Následuje volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k vytvoření rozhraní [IDebugExpression2,](../../../extensibility/debugger/reference/idebugexpression2.md) které představuje analyzovaný výraz připravený k vyhodnocení.
+ Po zastavení programu Správce ladění relace (SDM) získá rámec zásobníku z DE s voláním metody [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md). Model SDM pak zavolá [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) , aby získal `IDebugExpressionContext2` rozhraní. Toto je následováno voláním [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k vytvoření rozhraní [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) , které představuje analyzovaný výraz připravený k vyhodnocení.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
