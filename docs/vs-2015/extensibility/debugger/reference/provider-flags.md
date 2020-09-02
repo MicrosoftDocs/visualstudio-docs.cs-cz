@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FLAGS | Dokumentace Microsoftu
+title: PROVIDER_FLAGS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c39aa316308f313bf23ef2c5680671585636f0a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204942"
 ---
-# <a name="providerflags"></a>PROVIDER_FLAGS
+# <a name="provider_flags"></a>PROVIDER_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje požadované vlastnosti ho získat od zprostředkovatele programu.  
+Určuje požadované vlastnosti, které se mají získat od poskytovatele programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum enum_PROVIDER_FLAGS {  
@@ -56,22 +56,22 @@ public enum enum_PROVIDER_FLAGS {
  Nebyly zadány žádné příznaky.  
   
  PFLAG_REMOTE_PORT  
- Volající vyžaduje seznam programů na jiném počítači než [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Volající chce seznam programů na jiném počítači než [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
  PFLAG_DEBUGGEE  
- Proces je momentálně laděna touto instancí [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ V tuto chvíli probíhá ladění procesu v této instanci [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] je připojen k laděnému programu, ale se nespustila.  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] je připojen k programu, který je laděn, ale nebyl spuštěn.  
   
  PFLAG_REASON_WATCH  
  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sleduje události.  
   
  PFLAG_GET_PROGRAM_NODES  
- Volající vyžaduje `ProgramNodes` pole [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury.  
+ Volající chce `ProgramNodes` pole struktury [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) .  
   
  PFLAG_GET_IS_DEBUGGER_PRESENT  
- Volající vyžaduje `fIsTheDebuggerPresent` pole `PROVIDER_PROCESS_DATA` struktury.  
+ Volající chce `fIsTheDebuggerPresent` pole `PROVIDER_PROCESS_DATA` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto příznaky jsou předány do následujících metod:  
@@ -82,12 +82,12 @@ public enum enum_PROVIDER_FLAGS {
   
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
-  Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+  Tyto hodnoty lze kombinovat s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

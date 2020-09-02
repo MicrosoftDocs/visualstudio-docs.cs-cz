@@ -1,5 +1,5 @@
 ---
-title: Izolované prostředí parametry vstupních bodů (C++) | Dokumentace Microsoftu
+title: Parametry vstupního bodu izolovaného prostředí (C++) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9e736343212c4bf6acd833f5740b996c6c032c3f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439809"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825151"
 ---
 # <a name="isolated-shell-entry-point-parameters-c"></a>Parametry vstupních bodů izolovaného prostředí (C++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při spuštění aplikace založené na prostředí Visual Studio, které volá vstupní bod spuštění z prostředí sady Visual Studio. Tato nastavení lze přepsat při volání funkce vstupní bod spuštění prostředí. Popis jednotlivých nastavení najdete v tématu [. Soubory Pkgdef](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
+Když se spustí aplikace založené na prostředí Visual Studio, zavolá počáteční vstupní bod prostředí Visual Studio. Následující nastavení lze přepsat voláním počátečního vstupního bodu prostředí. Popis jednotlivých nastavení naleznete v tématu [. Soubory pkgdef](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
   
 - AddinsAllowed  
   
@@ -57,27 +57,27 @@ Při spuštění aplikace založené na prostředí Visual Studio, které volá 
   
 - UserOptsFileExt  
   
-  Visual Studio Shell izolované šablona vytvoří zdrojový soubor *solutionName*.cpp, kde *solutionName* je název řešení pro aplikaci. Tento soubor definuje hlavní vstupní bod pro aplikaci _tWinMain funkce. Tato funkce vyvolá vstupní bod spuštění prostředí.  
+  Šablona izolovaného prostředí sady Visual Studio vytvoří zdrojový soubor, název *řešení*. cpp, kde název sady je *název řešení pro* aplikaci. Tento soubor definuje hlavní vstupní bod pro aplikaci, funkci _tWinMain. Tato funkce vyvolá počáteční vstupní bod prostředí.  
   
-  Můžete změnit chování aplikace změnou tohoto nastavení při spuštění aplikace.  
+  Chování aplikace můžete změnit změnou těchto nastavení při spuštění aplikace.  
   
 ## <a name="parameters"></a>Parametry  
- Vstupní bod spuštění z prostředí sady Visual Studio definuje pěti parametry. Neměňte první čtyři parametry. Pátý parametr přebírá seznam přepsání nastavení. Vstupní bod spuštění prostředí je volána z hlavní vstupní bod aplikace.  
+ Počáteční vstupní bod prostředí sady Visual Studio definuje pět parametrů. Neměňte první čtyři parametry. Pátý parametr přebírá seznam přepsání nastavení. Počáteční vstupní bod prostředí se volá z hlavního vstupního bodu aplikace.  
   
- Vstupní bod spuštění prostředí má následující podpis.  
+ Spouštěcí vstupní bod prostředí má následující podpis.  
   
 ```  
 typedef int (__cdecl *STARTFCN)(LPSTR, LPWSTR, int, GUID *, WCHAR *pszSettings);  
 ```  
   
- Pokud nechcete přepsat nastavení aplikace, ponechte hodnotu nastavení přepište parametr jako ukazatel s hodnotou null.  
+ Pokud nechcete přepsat žádná nastavení aplikace, ponechte hodnotu parametru přepsat nastavení jako ukazatel s hodnotou null.  
   
- K přepsání minimálně jedno nastavení, předejte řetězec znaků Unicode, který obsahuje nastavení přepsání. Řetězec se středníkem oddělený seznam dvojic název hodnota. Každý pár obsahuje název nastavení chcete přepsat, za nímž následuje rovnítko (=), za nímž následuje hodnota, která má použít k nastavení.  
+ Chcete-li přepsat jedno nebo více nastavení, předejte řetězec Unicode, který obsahuje nastavení, která mají být přepsána. Řetězec je seznam párů název-hodnota oddělený středníkem. Každý pár obsahuje název nastavení, které se má přepsat, následovaný symbolem rovná se (=) následovaný hodnotou, která se má použít pro nastavení.  
   
 > [!NOTE]
-> Nezahrnujte prázdné znaky do řetězce Unicode.  
+> Do řetězců Unicode nezahrnujte prázdné znaky.  
   
- Pro logickou nastavení následující řetězce představují hodnoty true; všechny ostatní řetězce představují hodnotu false. Tyto řetězce jsou malá a velká písmena.  
+ U logických nastavení představuje následující řetězce hodnotu true; všechny ostatní řetězce reprezentují hodnotu false. U těchto řetězců se nerozlišují malá a velká písmena.  
   
 - \+  
   
@@ -92,7 +92,7 @@ typedef int (__cdecl *STARTFCN)(LPSTR, LPWSTR, int, GUID *, WCHAR *pszSettings);
 - ano  
   
 ## <a name="example"></a>Příklad  
- Zakázat doplňky a změnit výchozí umístění projektů aplikace, můžete nastavit poslední parametr "AddinsAllowed=false;DefaultProjectsLocation=%USERPROFILE%\temp".  
+ Chcete-li zakázat doplňky a změnit výchozí umístění projektů pro vaši aplikaci, můžete nastavit poslední parametr na "AddinsAllowed = false; DefaultProjectsLocation =%USERPROFILE%\temp".  
   
 ## <a name="see-also"></a>Viz také  
  [Přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md)   

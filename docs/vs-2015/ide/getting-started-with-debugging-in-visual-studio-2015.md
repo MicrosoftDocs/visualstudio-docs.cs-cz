@@ -11,10 +11,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ca3f3806f9097082d71dd80e74ccf48cd78c951b
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386885"
 ---
 # <a name="getting-started-with-debugging-in-visual-studio-2015"></a>Začínáme s laděním v sadě Visual Studio 2015
@@ -34,7 +34,7 @@ Sada Visual Studio 2015 poskytuje výkonnou integrovanou sadu nástrojů pro ses
 
  ![Tlačítko pro sestavení ladění sady Visual Studio](../ide/media/vs-ide-gs-debug-build-type1.PNG "Vs_ide_gs_debug_build_type1")
 
- Můžete také zadat konkrétní platformu sestavení, kterou chcete cílit, jako je například **x86** (32 procesory Intel), **x64** (64 procesory Intel) a **ARM** (procesory ARM, podporované jenom pro určité typy aplikací). Výchozí hodnota je **x86** pro spravované a nativní projekty. Pokud ho chcete změnit, klikněte na rozevírací seznam Build Platform a vyberte jinou platformu nebo **Configuration Manager...**
+ Můžete také zadat konkrétní platformu sestavení, kterou chcete cílit, jako je například **x86** (32 procesory Intel), **x64** (64 procesory Intel) a **ARM** (procesory ARM, podporované jenom pro určité typy aplikací). Výchozí hodnota je  **x86** pro spravované a nativní projekty. Pokud ho chcete změnit, klikněte na rozevírací seznam Build Platform a vyberte jinou platformu nebo **Configuration Manager...**
 
  ![Okno Správce konfiguračních souborů sady Visual Studio](../ide/media/vs-ide-gs-debug-build-cf-mgr.PNG "Vs_ide_gs_debug_build_cf_mgr")
 

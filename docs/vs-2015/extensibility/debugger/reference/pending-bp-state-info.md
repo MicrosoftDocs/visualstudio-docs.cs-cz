@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_INFO | Dokumentace Microsoftu
+title: PENDING_BP_STATE_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: af22ef2d8a77b8c44b9e494736630480a0614162
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205075"
 ---
-# <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
+# <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Obsahuje informace o stavu, který je připravený k připojení k umístění kódu zarážku.  
+Obsahuje informace o stavu zarážky, která je připravena k vytvoření vazby na umístění kódu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagPENDING_BP_STATE_INFO {   
@@ -42,18 +42,18 @@ public struct PENDING_BP_STATE_INFO { 
   
 ## <a name="members"></a>Členové  
  state  
- Hodnota z [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) výčet, který určuje stav čekající zarážka.  
+ Hodnota z výčtu [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) , která určuje stav čeká na zarážce.  
   
  příznaky  
- Kombinace příznaků z [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) výčet, který určuje, zda je virtualizovaný zarážku.  
+ Kombinace příznaků z výčtu [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) , která určuje, zda je zarážka virtualizovaná.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) metody, kde je vyplněna.  
+ Tato struktura je předána metodě [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) , kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

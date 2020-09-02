@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: db6d4e8bc5b2f09194e03bbadc8f49b773d24f1e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386950"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Soubory s výpisem paměti v ladicím programu sady Visual Studio
@@ -39,7 +39,7 @@ Výpisy paměti se většinou používají k ladění problémů z počítačů,
 
 Ladicí program Visual Studio může uložit soubory s výpisem paměti pro spravovaný nebo nativní kód. Může ladit soubory výpisu paměti vytvořené pomocí sady Visual Studio nebo jiné aplikace, které ukládají soubory ve formátu *s minimálním výpisem* .
 
-## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a>Požadavky a omezení
+## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Požadavky a omezení
 
 - Chcete-li ladit soubory výpisu paměti z 64-bitových počítačů, musí být v systému Visual Studio spuštěna na 64 počítači.
 
@@ -51,7 +51,7 @@ Ladicí program Visual Studio může uložit soubory s výpisem paměti pro spra
 
 - Ladění souborů s výpisem paměti pro optimalizaci kódu může být matoucí. Například vkládání kompilátoru funkcí může mít za následek neočekávané zásobníky volání a jiné optimalizace mohou změnit životnost proměnných.
 
-## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a>Soubory s výpisem paměti s haldami nebo bez haldy
+## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a> Soubory s výpisem paměti s haldami nebo bez haldy
 
 Soubory výpisu paměti mohou nebo nemusí obsahovat informace o haldě.
 
@@ -59,7 +59,7 @@ Soubory výpisu paměti mohou nebo nemusí obsahovat informace o haldě.
 
 - **Soubory výpisu paměti bez hald** jsou mnohem menší než výpisy paměti s haldami, ale ladicí program musí načíst binární soubory aplikace, aby mohl najít informace o symbolech. Načtené binární soubory se musí přesně shodovat s těmi, které jsou spuštěny během vytváření výpisu paměti. Soubory s výpisem paměti bez haldy uloží pouze hodnoty proměnných zásobníku.
 
-## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a>Vytvoření souboru s výpisem paměti
+## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a> Vytvoření souboru s výpisem paměti
 
 Při ladění procesu v aplikaci Visual Studio můžete uložit výpis paměti, když se ladicí program zastaví na výjimku nebo zarážku.
 
@@ -76,7 +76,7 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
 >[!NOTE]
 >Soubory s výpisem paměti můžete vytvořit pomocí libovolného programu, který podporuje formát s minimálním výpisem Windows. Například nástroj příkazového řádku **ProcDump** ze [systému Windows Sysinternals](https://technet.microsoft.com/sysinternals/default) může vytvořit soubory s výpisem stavu systému procesu v závislosti na triggerech nebo na vyžádání. V tématu [požadavky a omezení](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) najdete informace o použití jiných nástrojů pro vytváření souborů s výpisem paměti.
 
-## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a>Otevření souboru s výpisem paměti
+## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a> Otevření souboru s výpisem paměti
 
 1. V aplikaci Visual Studio vyberte **soubor**  >  **otevřít**  >  **soubor**.
 
@@ -90,7 +90,7 @@ Když je povoleno [ladění za běhu](../debugger/just-in-time-debugging-in-visu
    - Chcete-li nastavit umístění pro načítání symbolů, vyberte možnost **nastavit cesty k symbolům**.
    - Chcete-li spustit ladění, vyberte možnost **ladit pouze se spravovanými**, **ladit pouze s nativním**, **laděním se smíšeným**nebo **laděním pomocí spravované paměti**.
 
-## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a>Najít. exe,. pdb a zdrojové soubory
+## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Najít. exe,. pdb a zdrojové soubory
 
 Pro použití úplných funkcí ladění pro soubor s výpisem paměti vyžaduje aplikace Visual Studio:
 

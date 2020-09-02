@@ -1,5 +1,5 @@
 ---
-title: Zřetězení grafiky | Dokumentace Microsoftu
+title: Fáze zřetězení grafiky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,120 +12,120 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9eee83ba90248c15387771f355919e345375ff05
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420163"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64824966"
 ---
 # <a name="graphics-pipeline-stages"></a>Fáze zřetězení grafiky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V okně fáze zřetězení grafiky pomáhá pochopit, jak je transformovat volání draw jednotlivé každá fáze zřetězení grafiky Direct3D.  
+Okno fáze zřetězení grafiky vám pomůže pochopit, jak je jednotlivé volání vykreslování transformované všemi fázemi grafického kanálu Direct3D.  
   
- Toto je v okně fáze zřetězení:  
+ Toto je okno fáze zřetězení:  
   
- ![3&#45;D objekt prochází fáze zřetězení. ](../debugger/media/gfx-diag-demo-pipeline-stages-orientation.png "gfx_diag_demo_pipeline_stages_orientation")  
+ ![3&#45;D prochází fázemi zřetězení.](../debugger/media/gfx-diag-demo-pipeline-stages-orientation.png "gfx_diag_demo_pipeline_stages_orientation")  
   
-## <a name="understanding-the-graphics-pipeline-stages-window"></a>Principy v okně fáze zřetězení grafiky  
- V okně fáze zřetězení vizualizuje výsledek každé fáze zřetězení grafiky samostatně, pro každé volání draw. Za normálních okolností jsou skryté výsledky fáze uprostřed kanálu, kvůli tomu obtížné zjistit, kde k problému vykreslování spuštěna. Každá fáze samostatně vizualizací, v okně fáze zřetězení umožňuje snadno zjistit, kde začíná problém – například můžete snadno vidět při fázi vertex shader neočekávaně způsobí, že objekt chcete kreslit obrazovku.  
+## <a name="understanding-the-graphics-pipeline-stages-window"></a>Principy okna fáze zřetězení grafiky  
+ Okno fáze zřetězení vizualizuje výsledek každé fáze grafických kanálů samostatně pro každé volání remíz. Obvykle jsou výsledky fází uprostřed kanálu skryté, takže je obtížné zjistit, kde byl problém s vykreslováním spuštěn. Když vizualizujete každou fázi samostatně, okno fáze zřetězení usnadňuje zobrazení místa, kde se problém spouští – například můžete snadno zobrazit, kdy se neočekávaně fáze vrcholu shaderu způsobí, že se objekt nakreslí mimo obrazovku.  
   
- Po identifikaci fáze, ve kterém k problému dochází, můžete prozkoumat, jak se data interpretovat nebo transformovat dalších analyzátoru grafiky sady nástrojů. Problémů s vykreslováním, které se zobrazují v fáze zřetězení jsou často související nesprávné vrcholu formátu popisovače, obsahujícím chyby shaderu programy nebo nesprávně nakonfigurované stavu.  
+ Po zjištění fáze, ve které dojde k problému, můžete pomocí dalších nástrojů analyzátoru grafiky zjistit, jak se data interpretují nebo transformují. Problémy s vykreslováním, které se zobrazují ve fázích zřetězení, jsou často v souvislosti s nesprávným popisovačem formátu vrcholů, laděnými programy shaderů nebo chybou nakonfigurovaným stavem.  
   
-### <a name="links-to-related-graphics-objects"></a>Odkazy na související grafických objektů  
- Někdy další kontext je potřeba zjistit, proč volání draw komunikuje s zřetězení grafiky určitým způsobem. Pro usnadnění tohoto další kontext najít odkazy okna fáze zřetězení grafiky na jeden nebo více objektů, které poskytnete další kontext související co se děje v zřetězení grafiky.  
+### <a name="links-to-related-graphics-objects"></a>Odkazy na související grafické objekty  
+ Někdy je potřeba další kontext, který určuje, proč volání vykreslování komunikuje určitým způsobem s grafickým kanálem. Aby bylo snazší tento další kontext najít, okno fáze zřetězení grafiky odkazuje na jeden nebo více objektů, které poskytují další kontext související s tím, co se děje v grafickém kanálu.  
   
-- V Direct3D 12 tento objekt je obvykle seznam příkazů.  
+- V Direct3D 12 je tento objekt obvykle seznam příkazů.  
   
-- V Direct3D 11 tento objekt je obvykle kontextu zařízení grafiky.  
+- V Direct3D 11 je tento objekt obvykle kontextem grafického zařízení.  
   
-  Tyto odkazy jsou součástí aktuálního podpisu událostí grafiky, který se nachází v levém horním rohu okna fáze zřetězení grafiky. Postupovat podle některého z těchto odkazů prozkoumat další podrobnosti o objektu.  
+  Tyto odkazy jsou součástí aktuálního podpisu události grafiky, který je umístěný v levém horním rohu okna fáze zřetězení grafiky. Pomocí kteréhokoli z těchto odkazů prověřte další podrobnosti o objektu.  
   
 ### <a name="viewing-and-debugging-shader-code"></a>Zobrazení a ladění kódu shaderu  
- Můžete prozkoumat a ladění kódu pro vrchol, trupu, domény, geometrie a pixel shadery pomocí ovládacích prvků na konci jejich odpovídajících fází v okně fáze zřetězení.  
+ Pomocí ovládacích prvků v dolní části příslušných fází v okně fáze zřetězení můžete prozkoumávat a ladit kód pro funkce vertex shader, trup, doména, geometrie a pixel.  
   
-##### <a name="to-view-a-shaders-source-code"></a>Chcete-li zobrazit zdrojový kód shaderu  
+##### <a name="to-view-a-shaders-source-code"></a>Zobrazení zdrojového kódu shaderu  
   
-- V **fáze zřetězení grafiky** okně vyhledejte fázi shaderu, který odpovídá shaderu chcete prověřit. Pak níže image ve verzi preview použijte odkaz na název fázi shaderu – například pomocí následujícího odkazu **Vertex Shader obj:30** Chcete-li zobrazit zdrojový kód shaderu vrcholu.  
+- V okně **fáze zřetězení grafiky** vyhledejte fázi shaderu, která odpovídá shaderu, který chcete prošetřit. Pak pod odkazem na obrázek verze Preview použijte odkaz na název fáze shaderu, například pomocí **vrcholu vertex shaderu Link obj: 30** zobrazte zdrojový kód vertex shader.  
   
     > [!TIP]
-    > Číslo objektu **obj:30**, identifikuje tento shader v celém rozhraní analyzátoru grafiky sady například v okně objekt tabulky a pixel historie.  
+    > Číslo objektu, **obj: 30**, identifikuje tento shader v celém rozhraní analyzátoru grafiky, jako je například v okně tabulka objektů a Historie pixelů.  
   
-##### <a name="to-debug-a-shader"></a>K ladění shaderu  
+##### <a name="to-debug-a-shader"></a>Ladění shaderu  
   
-- V **fáze zřetězení grafiky** okně vyhledejte fázi shaderu, který odpovídá shaderu chcete ladit. Zvolte níže obrázek náhledu **spustit ladění**. Tento vstupní bod do výchozí nastavení ladicího programu HLSL, aby před prvním vyvoláním služby shaderu pro odpovídající fázi, tedy první pixel, vrchol nebo primitivní hodnota, která zpracovává shaderu během volání příkazu pro vykreslení. Vyvolání tento shader pro konkrétní pixelů nebo vrchol je přístupná prostřednictvím **historie pixelů grafiky**.  
+- V okně **fáze zřetězení grafiky** vyhledejte fázi shaderu, která odpovídá shaderu, který chcete ladit. Potom pod obrázkem náhledu zvolte možnost **Spustit ladění**. Tento vstupní bod do ladicího programu HLSL se nastaví jako první vyvolání shaderu pro odpovídající fázi, tj. první pixel, vrchol nebo primitivum, která je zpracována shaderem během tohoto volání metody Draw. K vyvolání tohoto shaderu pro určitý pixel nebo vrchol se dá dostat prostřednictvím **Historie pixelů grafiky**.  
   
 ### <a name="the-pipeline-stages"></a>Fáze zřetězení  
- V okně fáze zřetězení vizualizuje pouze fáze kanálu, které byly aktivní během volání draw. Každá fáze zřetězení grafiky transformuje vstupu z předchozí fáze a předá výsledek do další fáze. Úplně první fáze – vstupního assembleru – přebírá index a vrcholu data z vaší aplikace jako vstup; poslední fáze – slučovací modul výstupu – kombinuje nově vykresleny spolu s aktuálním obsahu framebuffer pixelů nebo cíl vykreslování jako jeho výstup, chcete-li vytvořit finální image se zobrazí na obrazovce.  
+ Okno fáze zřetězení vizualizuje pouze fáze kanálu, které byly aktivní během volání metody Draw. Každá fáze kanálu grafiky transformuje vstup z předchozí fáze a předá výsledek do další fáze. První fáze – vstupní Assembler – přebírá data indexu a vrcholu z vaší aplikace jako svůj vstup. poslední fáze – sloučení výstupu – sloučí nově vykreslené pixely spolu s aktuálním obsahem framebuffer nebo cíle vykreslování jako svůj výstup, aby se vytvořil finální obrázek, který vidíte na obrazovce.  
   
 > [!NOTE]
-> Výpočetní shadery nepodporuje **fáze zřetězení grafiky** okna.  
+> V okně **fáze zřetězení grafiky** nejsou podporované výpočetní shadery.  
   
  **Vstupní Assembler**  
- Vstupní Assembler načte index a vrcholu dat zadaný hodnotou vaší aplikace a sestavuje pro hardwarovou akceleraci.  
+ Vstupní Assembler přečte data indexu a vrcholu určená vaší aplikací a sestaví ho pro grafický hardware.  
   
- V okně fáze zřetězení je výstup assembleru vstup vizualizovat jako drátový model. Chcete-li podrobněji podíváme na výsledek, vyberte **vstupní Assembler** v **fáze zřetězení grafiky** okně deskách vrcholy v úplnou 3D pomocí Editoru modelů.  
-  
-> [!NOTE]
-> Pokud `POSITION` sémantické se nenachází ve výstupu vstupní assembler a nezobrazí se v **vstupního assembleru** fázi.  
-  
- **Vertex Shader**  
- Shader vrcholů fáze zpracovává vrcholy, obvykle provádí operace, jako je transformace, změny vzhledu a osvětlení. Vrchol shaderů vytvořit stejný počet vrcholů, které tyto přebírá jako vstup.  
-  
- V okně fáze zřetězení je výstup Vertex Shader vizualizuje jako drátěný rastrového obrázku. Chcete-li podrobněji podíváme na výsledek, vyberte **Vertex Shader** v **fáze zřetězení grafiky** windows zobrazíte zpracovaných vrcholy v editoru obrázků.  
+ V okně fáze zřetězení je výstup vstupního assembleru vizuálně vizuální jako model drátěného modelu. Pokud se chcete podívat na výsledek, vyberte **vstupní Assembler** v okně **fáze zřetězení grafiky** , abyste zobrazili sestavené vrcholy v plném 3D pomocí editoru modelů.  
   
 > [!NOTE]
-> Pokud `POSITION` nebo `SV_POSITION` sémantiku nejsou k dispozici ve výstupu vertex shader a nezobrazí se v **Vertex Shader** fázi.  
+> Pokud se `POSITION` sémantika nevyskytuje ve vstupním výstupu assembleru, ve **vstupní fázi assembleru** se nic nezobrazuje.  
   
- **Shader trupu** (Direct3D 11 a Direct3D 12 jenom)  
- Procesy hull shader fáze řízení body, které definují nižšího řádu surface například řádku, trojúhelník nebo quad. Jako výstup produkuje opravu vyššího řádu geometrie a konstanty opravy, které jsou předány do fáze teselace – funkce.  
+ **Vertex shader**  
+ Fáze vertex shader zpracovává vrcholy, obvykle provádí operace jako transformace, změny vzhledu a osvětlení. Funkce vertex shadery vytvoří stejný počet vrcholů, které jako vstup přebírají.  
   
- Fázi shaderu trupu není vizualizovat v okně fáze zřetězení.  
+ V okně fáze zřetězení se výstup vrcholu shaderu vizuálně rozpravuje jako rastrový obrázek drátěného modelu. Pokud se chcete podívat na výsledek, vyberte v oknech **fáze zřetězení grafiky** možnost **vertex shader** , abyste zobrazili zpracované vrcholy v editoru imagí.  
   
- **Fáze tessellator** (Direct3D 11 a Direct3D 12 jenom)  
- Fáze tessellator je jednotka hardwaru fixed – funkce (Neprogramovatelná), který upraví domény reprezentována výstup shaderu trupu. Jako výstup, vytvoří vzorkování model domény a sadu menších primitivy – body, řádky, trojúhelníky – připojení, které tyto ukázky.  
+> [!NOTE]
+> Pokud `POSITION` `SV_POSITION` ve výstupu vertex shader neexistují sémantika nebo, pak se ve fázi **vertex shader** nezobrazí žádné výsledky.  
   
- Fáze tessellator není vizualizovat v okně fáze zřetězení.  
+ **Shader trupu** (jenom Direct3D 11 a Direct3D 12)  
+ Fáze shaderu trupu zpracovává řídicí body, které definují plochu s nízkým pořadím, například čáru, trojúhelník nebo quad. Jako výstup vytvoří fázi geometrie s vyšším pořadím a konstanty opravy, které jsou předány do fáze teselace pevné funkce.  
   
- **Shader domény** (Direct3D 11 a Direct3D 12 jenom)  
- Fáze shader domény zpracovává vyššího řádu geometrie opravy z shader trupu společně teselace z teselace fáze. Teselace, může být faktory zahrnují tessellator vstupních faktorů, stejně jako výstup faktorů. Jako výstup vypočítá pozici vrcholu bodu na opravě výstup podle tessellator faktorů.  
+ Fáze shaderu trupu není v okně fáze zřetězení vizuálů.  
   
- Fázi shaderu domény není vizualizovat v okně fáze zřetězení.  
+ **Fáze teselace** (jenom Direct3D 11 a Direct3D 12)  
+ Fáze teselace je pevná funkce (Neprogramovatelná) hardwarová jednotka, která předzpracovává doménu představovanou výstupem shaderu trupu. Jako výstup vytvoří vzorek vzorkování domény a sadu menších primitivních prvků – body, čáry, trojúhelníky, které spojují tyto ukázky.  
+  
+ Fáze teselace není v okně fáze zřetězení vizuálů.  
+  
+ **Domain shader** (pouze Direct3D 11 a Direct3D 12)  
+ Fáze shaderu domény zpracovává z shaderu trupu vyšší pořadí oprav geometrie, včetně faktorů teselace z fáze teselace. Faktory teselace můžou zahrnovat vstupní faktory teselace a také výstupní faktory. Jako výstup vypočítá pozice vrcholu bodu na výstupní opravě podle faktorů teselace.  
+  
+ V okně fáze zřetězení se nezobrazuje fáze prostředí domény.  
   
  **Shader geometrie**  
- Fáze shader geometrie zpracuje celý primitivy – body, čáry nebo trojúhelníky – spolu s daty volitelné vrcholu pro okraje vedle primitiv. Na rozdíl od shader vrcholu shader geometrie můžete vytvořit více nebo méně primitivních elementů než přijímají jako vstup.  
+ Fáze geometrie shaderu zpracovává celé primitivní prvky – body, čáry nebo trojúhelníky, spolu s nepovinnými daty vrcholů pro sousední primitivní prvky. Na rozdíl od vertex shaderu mohou geometrie shadery způsobovat více nebo méně primitivních primitiv, než jako vstup.  
   
- V okně fáze zřetězení jsou vizualizována geometry shader výstup jako drátěný rastrového obrázku. Chcete-li podrobněji podíváme na výsledek, vyberte **Shader geometrie** v **fáze zřetězení grafiky** okně zpracovaných primitiv v editoru obrázků.  
+ V okně fáze zřetězení se výstup geometrie shaderu vizuálně rozpravuje jako rastrový obrázek drátěného modelu. Chcete-li se podívat na výsledek, vyberte v okně **fáze zřetězení grafiky** možnost **geometrie shader** a zobrazte zpracovávané primitivy v editoru obrázků.  
   
- **Fáze výstupní Stream**  
- Fáze výstupní datový proud může zachytávat transformovaný primitiv před rasterizační a jejich zápisu do paměti. odtud data můžete posbírán jako vstup pro předchozí fáze zřetězení grafiky nebo číst zpět procesoru.  
+ **Fáze výstupu streamu**  
+ Fáze výstupu streamu může zachytit transformované primitivní prvky před rastrování a zapsat je do paměti. odtud se data dají znovu rozšiřovat jako vstup do předchozích fází grafického kanálu nebo si ho můžou přečíst i procesor.  
   
- Fáze výstupní datový proud není vizualizovat v okně fáze zřetězení.  
+ Fáze výstupu streamu není v okně fáze zřetězení vizuálů.  
   
- **Fáze rasterizéru**  
- Fáze rasterizéru je jednotka fixed – funkce (Neprogramovatelná) hardwaru, který převádí primitivních elementů vektorové – body, řádky, trojúhelníky – do rastrových obrázků pomocí provádí převod kontroly řádku. Během rasterizační vrcholy se transformuje na homogenní prostoru klipu a oříznut. Jako výstup jsou mapovány pixel shaderů a atributy na vrcholu jsou interpolovaných napříč primitivní vlastnost a přípravu k pixel shader.  
+ **Fáze rastrového rámečku**  
+ Fáze rastrového obrázku je pevná funkce (Neprogramovatelná) hardwarová jednotka, která převádí vektorové primitivy – body, čáry, trojúhelníky – na rastrový obrázek pomocí převodu prověřování na řádku. Při rastrových vrcholech se transformují do homogenního prostoru pro Klipart a oříznuté. Jako výstup jsou namapovány funkce pixel shadery a atributy na vrchol jsou interpolované napříč primitivy a připravené pro funkci pixel shader.  
   
- Fáze rasterizéru není vizualizovat v okně fáze zřetězení.  
+ V okně fáze zřetězení se nevizuální fáze Rastrováním nezobrazuje.  
   
- **Pixel Shader**  
- Například barvy a hloubka hodnoty pixel shader fázi procesy rastrový prvkům spolu s daty interpolované vrcholu a generovat jednotlivých pixelů.  
+ **Pixel shader**  
+ Fáze funkce pixel shader zpracovává rastrované primitivy společně s interpolovaná data vrcholů za účelem generování hodnot na pixel, jako je barva a hloubka.  
   
- V okně fáze zřetězení je výstup pixel shaderu vizualizovat jako barevné rastrového obrázku. Chcete-li podrobněji podíváme na výsledek, vyberte **Pixel Shader** v **fáze zřetězení grafiky** okně zpracovaných primitiv v editoru obrázků.  
+ V okně fáze zřetězení je výstup pixel shaderu vizuální jako rastrový obrázek s plnou barvou. Chcete-li se podívat na výsledek, vyberte **pixel shader** v okně **fáze zřetězení grafiky** k zobrazení zpracovaných primitivních prvků v editoru obrázků.  
   
- **Output Merger**  
- Fáze fúze výstup kombinuje efekt pixelů nově vykresleny spolu s existující obsah své vyrovnávací paměti odpovídající – barva hloubky a vzorníku – k vytvoření nové hodnoty v těchto vyrovnávací paměti.  
+ **Sloučení výstupu**  
+ Výstupní fáze fúze kombinuje účinek nově vykreslených pixelů spolu s existujícím obsahem jejich odpovídajících vyrovnávacích pamětí – barvy, hloubky a vzorníku, aby se vytvořily nové hodnoty v těchto vyrovnávacích pamětech.  
   
- V okně fáze zřetězení je výstup spojení výstup vizualizuje jako barevné rastrového obrázku. Abyste mohli na ně podívat výsledky, vyberte **slučovací modul výstupu** v **fáze zřetězení grafiky** okně sloučené framebuffer.  
+ Výstup fúze v okně fáze zřetězení je vizuální jako rastrový obrázek s plnou barvou. Pokud se chcete podívat na výsledky, vyberte sloučení **výstupu** v okně **fáze zřetězení grafiky** , abyste viděli sloučenou framebuffer.  
   
-### <a name="vertex-shader-preview"></a>Vertex shader ve verzi preview  
- Když vyberete fázi vertex shader v **fáze zřetězení grafiky** okně **vyrovnávací paměti vstup** zobrazen panel. Tady najdete podrobnosti o seznam vrcholů do vertex shaderu zadaný po se zřizují podle fáze vstupního assembleru.  
+### <a name="vertex-shader-preview"></a>Vertex shader Preview  
+ Když vyberete fázi vertex shader v okně **fáze zřetězení grafiky** , zobrazí se panel **vstupní vyrovnávací paměti** . Tady najdete podrobnosti o seznamu vrcholů dodaných do vertex shaderu poté, co byly sestaveny vstupní fází assembleru.  
   
- ![Prohlížeč vstupní vyrovnávací paměť vrcholů shaderu fázi](../debugger/media/gfx-diag-vertex-shader-inbuffers.png "gfx_diag_vertex_shader_inbuffers")  
+ ![Prohlížeč vstupní vyrovnávací paměti fáze vertex shaderu](../debugger/media/gfx-diag-vertex-shader-inbuffers.png "gfx_diag_vertex_shader_inbuffers")  
   
- Chcete-li zobrazit výsledek fázi vertex shaderu zvolte miniaturu fáze Vertex Shader zobrazíte reklamy, rastrový obrázek oka po jeho byly transformovány sadou vertex shader.  
+ Chcete-li zobrazit výsledek fáze vertex shader, klikněte na miniaturu fáze vrcholu shaderu, abyste zobrazili rastrový obrázek v plné velikosti a rastrovaný drátěný model po jeho transformaci pomocí vrcholu shaderu.  
   
- ![Náhledu výsledku vertex shader fázi](../debugger/media/gfx-diag-vertex-shader-preview.png "gfx_diag_vertex_shader_preview")  
+ ![Náhled výsledku fáze vertex shaderu](../debugger/media/gfx-diag-vertex-shader-preview.png "gfx_diag_vertex_shader_preview")  
   
 ## <a name="see-also"></a>Viz také  
- [Návod: Chybějící objekty z důvodu použití funkce Vertex Shading](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)   
- [Návod: Ladění chyb při vykreslování, které jsou způsobené stínováním](../debugger/walkthrough-debugging-rendering-errors-due-to-shading.md)
+ [Návod: chybějící objekty z důvodu stínování vrcholu](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)   
+ [Návod: Ladění chyb vykreslování způsobených stínováním](../debugger/walkthrough-debugging-rendering-errors-due-to-shading.md)

@@ -1,5 +1,5 @@
 ---
-title: Locationfieldmruprefix – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Locationfieldmruprefix – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,18 +14,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d0579a6783debf261290538e3f3346640d58e415
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194436"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje cesty (MRU) nedávno použité v **nový projekt** a **přidat novou položku** dialogové okno.  
+Určuje cesty naposledy použitých (MRU) v dialogovém okně **Nový projekt** a **Přidat novou položku** .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>  
@@ -42,13 +42,13 @@ Určuje cesty (MRU) nedávno použité v **nový projekt** a **přidat novou pol
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="remarks"></a>Poznámky  
- Tento element lze používat pouze pro šablony vytvořené prostřednictvím [!INCLUDE[vsipprvsip](../includes/vsipprvsip-md.md)].  
+ Tento element by měl být použit pouze pro šablony vytvořené prostřednictvím [!INCLUDE[vsipprvsip](../includes/vsipprvsip-md.md)] .  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

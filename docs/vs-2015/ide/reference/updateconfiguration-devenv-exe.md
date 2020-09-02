@@ -1,5 +1,5 @@
 ---
-title: -Updateconfiguration (devenv. exe) | Microsoft Docs
+title: -Updateconfiguration (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,28 +14,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 50773821b328ea81381744bc6f32b3907cd1c5bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657910"
 ---
-# <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv. exe)
+# <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Oznamuje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ke sloučení balíčků [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v systému a kontrolu mezipaměti MEF pro všechny změny.
+Upozorňuje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] na sloučení [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] balíčků v systému a Prohlédněte si všechny změny v mezipaměti MEF.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /updateconfiguration
 ```
 
 ## <a name="remarks"></a>Poznámky
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] spustí tento příkaz automaticky při instalaci balíčku VSIX. Po opravování souborů byste měli spustit `devenv.exe /updateconfiguration`, aby [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aktualizovat mezipaměť MEF. To vám umožní vyhodnotit, jestli je vaše oprava adekvátní.
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] spustí tento příkaz automaticky při instalaci balíčku VSIX. Měli byste spustit `devenv.exe /updateconfiguration` po opravě souborů tak, aby [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se aktualizace mezipaměti MEF. To vám umožní vyhodnotit, jestli je vaše oprava adekvátní.
 
 ## <a name="example"></a>Příklad
- Následující příkazový řádek způsobí, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sloučit balíčky [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] v systému a ověřit mezipaměť MEF pro všechny změny.
+ Následující příkazový řádek způsobí, že [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sloučí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] balíčky v systému a ZKONTROLUJE mezipaměť MEF pro všechny změny.
 
 ```
 Devenv.exe /updateconfiguration

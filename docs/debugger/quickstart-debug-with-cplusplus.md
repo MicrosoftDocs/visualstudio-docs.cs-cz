@@ -1,5 +1,5 @@
 ---
-title: Ladění jazyka C++
+title: Ladit C++
 description: Ladění nativního kódu pomocí ladicího programu sady Visual Studio
 ms.custom: mvc
 ms.date: 08/06/2018
@@ -13,32 +13,32 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b619b2b6c93da8be399b2fc35d81ffe226f408ad
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65679405"
 ---
-# <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Úvodní příručka: Ladění pomocí jazyka C++ pomocí ladicího programu sady Visual Studio
+# <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Rychlý Start: ladění pomocí jazyka C++ pomocí ladicího programu sady Visual Studio
 
-Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které vám pomohou ladit aplikace. Toto téma poskytuje rychlý způsob, jak se naučit některé základní funkce.
+Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které vám pomůžou s laděním aplikací. Toto téma nabízí rychlý způsob, jak se naučit některé základní funkce.
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
 
 1. Otevřete Visual Studio a vytvořte projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím **klávesy Esc** zavřete počáteční okno. Zadejte **Ctrl + Q,** otevřete vyhledávací pole, zadejte **c++**, zvolte **Šablony**a pak zvolte Vytvořit nový **projekt konzolové aplikace**. V zobrazeném dialogovém okně zvolte **Vytvořit**.
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte **C++**, zvolte **šablony**a pak zvolte **vytvořit nový projekt konzolové aplikace**. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **nového** > **projektu**. V levém podokně dialogového okna **Nový projekt** v části **Visual C++** zvolte **Plochu systému Windows**a potom v prostředním podokně zvolte Aplikace **konzoly systému Windows**. Potom zadejte název jako **MyDbgApp** a klepněte na tlačítko **OK**.
+    V horním řádku nabídek vyberte **soubor**  >  **Nový**  >  **projekt**. V levém podokně dialogového okna **Nový projekt** , v části **Visual C++** zvolte možnost **plocha systému Windows**a potom v prostředním podokně zvolte možnost **Konzolová aplikace systému Windows**. Pak zadejte název jako **MyDbgApp** a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud šablonu projektu **aplikace konzoly systému Windows** nevidíte, přejděte na **nástrojové** > **nástroje a nástroje...**, který otevře Instalační službu sady Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte vývoj plochy s úlohami **C++** a pak zvolte **Změnit**.
+    Pokud nevidíte šablonu projektu **Konzolová aplikace systému Windows** , přejděte do části **nástroje**  >  **získat nástroje a funkce...**, čímž otevřete instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací pomocí C++** a pak zvolte **Upravit**.
 
     Visual Studio vytvoří projekt.
 
-1. V souboru MyDbgApp.cpp nahraďte následující kód
+1. V MyDbgApp. cpp nahraďte následující kód.
 
     ```c++
     int main()
@@ -47,7 +47,7 @@ Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které v
     }
     ```
 
-    s tímto kódem `#include "stdafx.h"`(neodstraňujte ):
+    s tímto kódem (neodstraňujte `#include "stdafx.h"` ):
 
     ```c++
     #include <list>
@@ -78,64 +78,64 @@ Ladicí program sady Visual Studio poskytuje mnoho výkonných funkcí, které v
 
 ## <a name="set-a-breakpoint"></a>Nastavení zarážky
 
-*Zarážka* je značka, která označuje, kde visual studio by měl pozastavit spuštěný kód, takže můžete podívat na hodnoty proměnných nebo chování paměti, nebo zda je či není větev kódu stále spuštěna. Jedná se o nejzákladnější funkci ladění.
+*Zarážka* je značka, která označuje, kde má aplikace Visual Studio pozastavit běžící kód, abyste se mohli podívat na hodnoty proměnných nebo chování paměti nebo zda je nebo není větev kódu spouštěna. Je to nejzákladnější funkce ladění.
 
-1. Chcete-li nastavit zarážku, klepněte do `doWork` kanálu vlevo od volání funkce (nebo vyberte řádek kódu a stiskněte **klávesu F9**).
+1. Chcete-li nastavit zarážku, klikněte na hřbet nalevo od `doWork` volání funkce (nebo vyberte řádek kódu a stiskněte **F9**).
 
     ![Nastavení zarážky](../debugger/media/dbg-qs-set-breakpoint.png "Nastavení zarážky")
 
-2. Nyní stiskněte **klávesu F5** (nebo zvolte **ladění > Spusťte ladění).**
+2. Nyní stiskněte klávesu **F5** (nebo zvolte **ladění > spustit ladění**).
 
-    ![Zásah do zarážky](../debugger/media/dbg-qs-hit-breakpoint.png "Zásah do zarážky")
+    ![Stiskněte zarážku](../debugger/media/dbg-qs-hit-breakpoint.png "Stiskněte zarážku")
 
-    Ladicí program pozastaví, kde nastavíte zarážku. Příkaz, kde je pozastaveno ladicí program a spuštění aplikace je označen žlutou šipkou. Řádek s `doWork` voláním funkce ještě nebyl proveden.
+    Ladicí program pozastaví, kde jste nastavili zarážku. Příkaz, ve kterém je pozastavený ladicí program a spuštění aplikace, je označen žlutou šipkou. Řádek s `doWork` voláním funkce nebyl dosud proveden.
 
     > [!TIP]
-    > Pokud máte zarážku ve smyčce nebo rekurzi, nebo pokud máte mnoho zarážek, které často krokovat, použijte [podmíněné zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) a ujistěte se, že váš kód je pozastavena pouze při splnění určité podmínky. Podmíněná zarážka šetří čas a může také usnadnit ladění problémů, které je obtížné reprodukovat.
+    > Pokud máte zarážku ve smyčce nebo rekurze, nebo pokud máte mnoho zarážek, které často procházíte, použijte [podmíněný bod přerušení](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) a ujistěte se, že je váš kód pozastaven pouze v případě, že jsou splněny určité podmínky. Podmíněná zarážka šetří čas a může také usnadnit ladění problémů, které je těžké rekládat.
 
-    Při pokusu o ladění chyb souvisejících s pamětí v jazyce C++ můžete také použít zarážky ke kontrole hodnot adres (vyhledejte hodnotu NULL) a počty odkazů.
+    Při pokusu o ladění chyb souvisejících s pamětí v jazyce C++ můžete také použít zarážky pro kontrolu hodnot adres (hledání hodnoty NULL) a počty odkazů.
 
 ## <a name="navigate-code"></a>Navigace v kódu
 
-Existují různé příkazy, které dávají pokyn ladicímu programu, aby pokračoval. Zobrazujeme užitečný příkaz navigace kódu, který je k dispozici od visual studia 2017.
+Existují různé příkazy k tomu, aby ladicí program mohl pokračovat. Zobrazujeme užitečný příkaz pro navigaci v kódu, který je k dispozici od začátku v aplikaci Visual Studio 2017.
 
-Při pozastavení na zarážky, najeďte `c1.push_back(20)` nad příkaz, dokud se nezobrazí zelené tlačítko **Spustit kliknutím** ![Spustit na tlačítko A Klepněte](../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko a pak stisknutím tlačítka Spustit **klikněte.**
+Při pozastavení na zarážce umístěte ukazatel myši na příkaz, `c1.push_back(20)` dokud se nezobrazí tlačítko ![Spustit](../debugger/media/dbg-tour-run-to-click.png "RunToClick") zeleným tlačítkem **Spustit pro kliknutí** , a pak stiskněte tlačítko **Spustit pro kliknutí** .
 
-![Spustit a kliknout](../debugger/media/dbg-qs-run-to-click.png "Spustit a kliknout")
+![Spustit kliknutím](../debugger/media/dbg-qs-run-to-click.png "Spustit kliknutím")
 
-Aplikace pokračuje v `doWork`provádění, volání a pozastavení na řádku kódu, kde jste klikli na tlačítko.
+Aplikace pokračuje v provádění, volání `doWork` a pozastavení na řádku kódu, kde jste klikli na tlačítko.
 
-Běžné klávesové příkazy používané k prostolých kódů zahrnují **F10** a **F11**. Podrobnější pokyny naleznete v [tématu První pohled na ladicí program](../debugger/debugger-feature-tour.md).
+Mezi běžné klávesové příkazy použité pro krokování kódu patří **F10** a **F11**. Podrobné pokyny najdete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-## <a name="inspect-variables-in-a-datatip"></a>Kontrola proměnných v datovém tipu
+## <a name="inspect-variables-in-a-datatip"></a>Kontrola proměnných v DataTip
 
-1. V aktuálním řádku kódu (označené žlutýukazatel spuštění), `c1` najeďte myší nad objektem a zobrazte datatip.
+1. V aktuálním řádku kódu (označeného žlutým ukazatelem spuštění) umístěte ukazatel `c1` myši na objekt pomocí myši, aby se zobrazila DataTip.
 
-    ![Zobrazení datového tipu](../debugger/media/dbg-qs-data-tip.png "Zobrazení datového tipu")
+    ![Zobrazit DataTip](../debugger/media/dbg-qs-data-tip.png "Zobrazit DataTip")
 
-    Tip data zobrazuje aktuální hodnotu `c1` proměnné a umožňuje zkontrolovat její vlastnosti. Při ladění, pokud se zobrazí hodnota, kterou neočekáváte, pravděpodobně máte chybu v předchozích nebo volajících řádcích kódu.
+    DataTip zobrazí aktuální hodnotu `c1` proměnné a umožní vám zkontrolovat její vlastnosti. Pokud se při ladění zobrazí hodnota, kterou neočekáváte, pravděpodobně máte chybu v předchozím nebo volajícím řádku kódu.
 
-2. Rozbalte datový tip a podívejte se `c1` na aktuální hodnoty vlastností objektu.
+2. Rozbalte DataTip a podívejte se na aktuální hodnoty vlastností `c1` objektu.
 
-3. Pokud chcete připnout datový tip, abyste mohli `c1` při spuštění kódu nadále vidět hodnotu, klikněte na malou ikonu špendlíku. (Připnutý datový tip můžete přesunout na vhodné místo.)
+3. Pokud chcete DataTip připnout, abyste mohli i nadále vidět hodnotu `c1` při spouštění kódu, klikněte na ikonu malého kódu PIN. (Připnuté DataTip můžete přesunout do pohodlného umístění.)
 
 ## <a name="edit-code-and-continue-debugging"></a>Úprava kódu a pokračování ladění
 
-Pokud identifikujete změnu, kterou chcete otestovat v kódu uprostřed relace ladění, můžete to udělat také.
+Pokud identifikujete změnu, kterou chcete testovat ve vašem kódu během relace ladění, můžete to udělat i vy.
 
-1. Klepněte na `c2.front()` druhou `c2.front()` instanci a změňte na `c2.back()`.
+1. Klikněte na druhou instanci `c2.front()` a změňte `c2.front()` na `c2.back()` .
 
-2. Stiskněte **klávesu F10** (nebo **Ladění > krok přes)** několikrát předem ladicí program a spustit upravený kód.
+2. Stisknutím klávesy **F10** (nebo **ladění > Step over) několikrát zajděte**ladicí program a spusťte upravený kód.
 
     ![Upravit a pokračovat](../debugger/media/dbg-qs-edit-and-continue.gif "Upravit a pokračovat")
 
-    **F10** předem ladicí program jeden příkaz najednou, ale kroky přes funkce namísto krokování do nich (kód, který přeskočíte stále provádí).
+    **F10** posune ladicí program po jednom příkazu najednou, ale kroky nad funkcí místo do jejich krokování (kód, který přeskočíte, se pořád spustí).
 
-Další informace o používání omezení pro úpravy a pokračování a o funkcích naleznete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).
+Další informace o použití funkcí upravit a pokračovat a o omezeních funkcí najdete v tématu [Upravit a pokračovat](../debugger/edit-and-continue.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto kurzu jste se naučili, jak spustit ladicí program, krokovat kód a kontrolovat proměnné. Možná budete chtít získat na vysoké úrovni podívat na ladicí prvky spolu s odkazy na další informace.
+V tomto kurzu jste se naučili, jak spustit ladicí program, krokovat kód a kontrolovat proměnné. Můžete chtít získat nejdůležitější pohled na funkce ladicího programu společně s odkazy na Další informace.
 
 > [!div class="nextstepaction"]
 > [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

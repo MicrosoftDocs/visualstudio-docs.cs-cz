@@ -1,5 +1,5 @@
 ---
-title: IDebugEventCallback2::Událost | Dokumenty společnosti Microsoft
+title: 'IDebugEventCallback2:: Event | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0b60c09b21d531326e343dddd2f1cc69cfb0e5d2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729904"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
-Odešle oznámení o událostech ladění.
+Odesílá oznámení o událostech ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,33 +53,33 @@ int Event( 
 
 ## <a name="parameters"></a>Parametry
 `pEngine`\
-[v] [Objekt IDebugEngine2,](../../../extensibility/debugger/reference/idebugengine2.md) který představuje ladicí modul (DE), který odesílá tuto událost. K vyplnění tohoto parametru je nutné DE.
+pro Objekt [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) , který představuje ladicí stroj (de), který odesílá tuto událost. K vyplnění tohoto parametru je vyžadován DE.
 
 `pProcess`\
-[v] [Objekt IDebugProcess2,](../../../extensibility/debugger/reference/idebugprocess2.md) který představuje proces, ve kterém dojde k události. Tento parametr je vyplněn správcem ladění relace (SDM). De de vždy předá hodnotu null pro tento parametr.
+pro Objekt [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) , který představuje proces, ve kterém dojde k události. Tento parametr vyplní Správce ladění relace (SDM). Hodnota DE vždy předá hodnotu null pro tento parametr.
 
 `pProgram`\
-[v] [Objekt IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) který představuje program, ve kterém dojde k této události. Pro většinu událostí tento parametr není nulovou hodnotou.
+pro Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, ve kterém k této události dojde. U většiny událostí tento parametr není hodnotou null.
 
 `pThread`\
-[v] [Objekt IDebugThread2,](../../../extensibility/debugger/reference/idebugthread2.md) který představuje vlákno, ve kterém dojde k této události. Pro zastavení události tento parametr nemůže být nulovou hodnotu jako rámec zásobníku je získán z tohoto parametru.
+pro Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje vlákno, ve kterém k této události dochází. Pro zastavování událostí nemůže tento parametr hodnotu null, protože rámec zásobníku je získán z tohoto parametru.
 
 `pEvent`\
-[v] Objekt [IDebugEvent2,](../../../extensibility/debugger/reference/idebugevent2.md) který představuje událost ladění.
+pro Objekt [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) , který představuje událost ladění.
 
 `riidEvent`\
-[v] GUID, který určuje, které rozhraní `pEvent` události získat z parametru.
+pro Identifikátor GUID, který určuje rozhraní události, které se má získat z `pEvent` parametru.
 
 `dwAttrib`\
-[v] Kombinace příznaků z výčtu [EVENTATTRIBUTES.](../../../extensibility/debugger/reference/eventattributes.md)
+pro Kombinace příznaků z výčtu [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Při volání této `dwAttrib` metody musí parametr odpovídat hodnotě vrácené z metody [GetAttributes,](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) jak je volána na objekt události předaný v parametru. `pEvent`
+ Při volání této metody `dwAttrib` musí parametr odpovídat hodnotě vrácené z metody [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) , jak je volána u objektu události předaného v `pEvent` parametru.
 
- Všechny ladicí události jsou zaúčtovány asynchronně, bez ohledu na to, zda je samotná událost asynchronní nebo ne. Při volání DE tuto metodu, vrácená hodnota neoznačuje, zda byla událost zpracována, pouze zda byla událost přijata. Ve skutečnosti ve většině případů událost nebyla zpracována při této metodě vrátí.
+ Všechny události ladění jsou odesílány asynchronně bez ohledu na to, zda je událost sama o sobě nebo není asynchronní. Když metoda DE volá tuto metodu, návratová hodnota neurčuje, zda byla událost zpracována, a to pouze bez ohledu na to, zda byla událost přijata. Ve většině případů není událost zpracována při návratu této metody.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

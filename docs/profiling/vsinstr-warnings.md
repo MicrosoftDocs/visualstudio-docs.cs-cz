@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3af98372102da49e7553d2f2992f3804cf0a619e
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330536"
 ---
 # <a name="vsinstr-warnings"></a>Upozornění VSInstr
@@ -29,15 +29,15 @@ V následující tabulce jsou uvedena upozornění vydaná nástrojem *VSInstr.e
 |--------------------|-----------------|
 |**VSP1026**|Pokrytí není podporováno u knihoven, které neodkazují na MSCorLib. To je často případ pro přenosné knihovny.<br /><br />Možnost příkazového řádku [/EnableCodeCoverage](../test/vstest-console-options.md) se vyžaduje pro .NET Core.|
 |**VSP2000**|Vnitřní chyba Nelze získat název souboru modulu pro tento spustitelný soubor.|
-|**VSP2001**|\<assembly name>je silně pojmenované sestavení. Předtím, než bude možné provést zpracování, je nutné ho znovu podepsat.<br /><br /> K tomuto upozornění dochází, je-li instrumentované sestavení instrumentované. Můžete použít nástroj *sn.exe* pro opětovné podepsání binárního souboru nebo k dočasnému vypnutí požadavku silného názvu. Další informace najdete v tématu [Sn.exe (Nástroj pro silný název)](/dotnet/framework/tools/sn-exe-strong-name-tool).|
+|**VSP2001**|\<assembly name> je silně pojmenované sestavení. Předtím, než bude možné provést zpracování, je nutné ho znovu podepsat.<br /><br /> K tomuto upozornění dochází, je-li instrumentované sestavení instrumentované. Můžete použít nástroj *sn.exe* pro opětovné podepsání binárního souboru nebo k dočasnému vypnutí požadavku silného názvu. Další informace najdete v tématu [Sn.exe (Nástroj pro silný název)](/dotnet/framework/tools/sn-exe-strong-name-tool).|
 |**VSP2002**|V souboru se nenašla funkce. \<funcname>\<filename><br /><br /> K tomuto upozornění dochází, pokud funkce nemůže být umístěna v zadaném souboru.|
 |**VSP2003**|V souboru nelze nalézt žádné přeskakování pro funkci \<funcname> \<filename> .<br /><br /> K tomuto upozornění dochází, pokud VSInstr nemůže nezruší průřezy. Pro optimalizaci kódu se používají různé přeskakování.|
 |**VSP2004**|Funkce \<funcname> byla vyloučena pomocí přepínače příkazového řádku Exclude, ale byla požadována, protože obsahovala křížové skoky.<br /><br /> K tomuto upozornění dochází, pokud byla funkce vyloučena pomocí možnosti vyloučit, ale je nutná během procesu instrumentace. Profiler automaticky obsahuje požadovanou funkci.|
-|**VSP2005**|Vnitřní chyba instrumentace\<error text><br /><br /> Toto upozornění je vydáno, pokud instrumentaci nelze provést. Zkontrolujte text chyby a určete, zda může být opraven.|
-|**VSP2006**|Nelze najít soubor PDB pro\<name><br /><br /> K tomuto upozornění dochází, pokud soubor PDB v cestě pro hledání neexistuje nebo se neshoduje s binárním souborem.|
-|**VSP2007**|\<filename>neobsahuje žádný instrumentující kód.<br /><br /> Toto upozornění se vydá, pokud jsou všechny funkce v binárním souboru vyloučené nebo pokud zadaný soubor obsahuje pouze prostředky.|
-|**VSP2008**|Nelze získat atributy zabezpečení z \<name> . Kód chyby\<code><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá READ_DAC přístup k původnímu binárnímu souboru.|
-|**VSP2009**|Nelze nastavit atributy zabezpečení pro \<name> . Kód chyby\<error number><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění WRITE_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá WRITE_DAC přístup k novému binárnímu souboru.|
+|**VSP2005**|Vnitřní chyba instrumentace \<error text><br /><br /> Toto upozornění je vydáno, pokud instrumentaci nelze provést. Zkontrolujte text chyby a určete, zda může být opraven.|
+|**VSP2006**|Nelze najít soubor PDB pro \<name><br /><br /> K tomuto upozornění dochází, pokud soubor PDB v cestě pro hledání neexistuje nebo se neshoduje s binárním souborem.|
+|**VSP2007**|\<filename> neobsahuje žádný instrumentující kód.<br /><br /> Toto upozornění se vydá, pokud jsou všechny funkce v binárním souboru vyloučené nebo pokud zadaný soubor obsahuje pouze prostředky.|
+|**VSP2008**|Nelze získat atributy zabezpečení z \<name> . Kód chyby \<code><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění READ_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá READ_DAC přístup k původnímu binárnímu souboru.|
+|**VSP2009**|Nelze nastavit atributy zabezpečení pro \<name> . Kód chyby \<error number><br /><br /> K tomuto upozornění dochází, pokud uživatel nemá oprávnění WRITE_DAC. Během procesu instrumentace se Profiler pokusí zachovat původní seznam DACL pro binární soubor. Vzhledem k tomu, že je původní binární soubor nahrazen novým binárním souborem, je nutné zkopírovat seznam DACL z původního binárního souboru a použít ho na nový binární soubor. To může selhat, pokud uživatel nemá WRITE_DAC přístup k novému binárnímu souboru.|
 |**VSP2010**|Pro instrumentaci se konkrétně neberou žádné funkce, protože možnosti-INCLUDE/-EXCLUDE nejsou k dispozici.|
 |**VSP2011**|Include/Exclude funcspec \<name> se neshodují s žádnými funkcemi.|
 |**VSP2012**|Obrázek neobsahuje žádný kód, který by bylo možné instrumentovat pro pokrytí kódu.<br /><br /> Profiler neinstrumentuje následující typ kódu:<br /><br /> – Statické funkce CRT<br />-Spravované metody s atributem NonUserCodeAttribute<br />-Spravované metody s atributem DebuggerHiddenAttribute neovlivňuje<br />– Bloky MASM<br /><br /> Toto upozornění je generováno, pokud po tomto filtrování není ponechán žádný kód.|

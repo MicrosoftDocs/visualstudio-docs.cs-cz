@@ -1,5 +1,5 @@
 ---
-title: PROGRAM_NODE_ARRAY | Dokumentace Microsoftu
+title: PROGRAM_NODE_ARRAY | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ffbefd03bccc215dd68c30bae3cebb28c85654d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204996"
 ---
-# <a name="programnodearray"></a>PROGRAM_NODE_ARRAY
+# <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Obsahuje pole objektů, které popisují programy, které vás zajímají.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct tagPROGRAM_NODE_ARRAY {  
@@ -42,18 +42,18 @@ public struct tagPROGRAM_NODE_ARRAY {
   
 ## <a name="members"></a>Členové  
  dwCount  
- Počet objektů v `Members` pole.  
+ Počet objektů v `Members` poli.  
   
  Členové  
- Pole [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) popisující programy požadované objekty.  
+ Pole objektů [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) popisujících požadované programy.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury, což zase je vyplněna voláním [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metody.  
+ Tato struktura je součástí struktury [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) , která je zase vyplněna voláním metody [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

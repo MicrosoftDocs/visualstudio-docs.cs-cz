@@ -1,5 +1,5 @@
 ---
-title: Registrace a zrušení registrace rozšíření VSPackages | Dokumentace Microsoftu
+title: Registrace a zrušení registrace VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,21 +12,21 @@ caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1f6bc85fb00c15831dcf1a9f64e4b886272df218
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193821"
 ---
 # <a name="registering-and-unregistering-vspackages"></a>Registrace a zrušení registrace rozšíření VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použít atributy k evidenci VSPackage, ale  
+Atributy můžete použít k registraci VSPackage, ale  
   
-## <a name="registering-a-vspackage"></a>Registrace VSPackage  
- Atributy můžete použít k řízení registrací spravovaných rozšíření VSPackages. Veškeré informace o registraci je obsažen v souboru .pkgdef. Další informace o registraci na základě souboru, naleznete v tématu [nástroj CreatePkgDef](../extensibility/internals/createpkgdef-utility.md).  
+## <a name="registering-a-vspackage"></a>Registrace balíčku VSPackage  
+ Pomocí atributů můžete řídit registraci spravovaných VSPackage. Všechny registrační informace jsou obsaženy v souboru. pkgdef. Další informace o registraci na základě souborů naleznete v tématu [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md).  
   
- Následující kód ukazuje, jak používat atributy standardní registrace k registraci vašeho balíčku VSPackage.  
+ Následující kód ukazuje, jak použít standardní registrační atributy k registraci sady VSPackage.  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -35,16 +35,16 @@ public sealed class BasicPackage : Package
 {. . .}  
 ```  
   
-## <a name="unregistering-an-extension"></a>Zrušení registrace rozšíření  
- Pokud byl experimentování s spoustu různých rozšíření VSPackages a chcete ho odebrat z experimentální instanci, můžete pouze spustit **resetování** příkazu. Vyhledejte **resetovat experimentální instanci aplikace Visual Studio** na úvodní stránce vašeho počítače nebo spuštěním tohoto příkazu z příkazového řádku:  
+## <a name="unregistering-an-extension"></a>Rušení registrace rozšíření  
+ Pokud jste experimentování s velkým množstvím různých VSPackage a chcete je odebrat z experimentální instance, stačí spustit příkaz pro **obnovení** . Na úvodní stránce počítače vyhledejte **resetování experimentální instance sady Visual Studio** nebo spusťte tento příkaz z příkazového řádku:  
   
 ```vb  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp  
 ```  
   
- Pokud chcete odinstalovat rozšíření, které jste nainstalovali na vývoj instanci sady Visual Studio, přejděte na **nástrojů / rozšíření a aktualizace**najít rozšíření a klikněte na tlačítko **odinstalovat**.  
+ Pokud chcete odinstalovat rozšíření, které jste nainstalovali do vývojové instance sady Visual Studio, přejděte na **nástroje, rozšíření a aktualizace**, Najděte rozšíření a klikněte na **odinstalovat**.  
   
- Pokud z nějakého důvodu ani jeden z těchto metod úspěšná na odinstalovat rozšíření, můžete zrušit registraci balíčku VSPackage sestavení z příkazového řádku takto:  
+ Pokud z nějakého důvodu neuspěje žádná z těchto metod při odinstalaci rozšíření, můžete zrušit registraci sestavení VSPackage z příkazového řádku následujícím způsobem:  
   
 ```  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg” /unregister <pathToVSPackage assembly>  

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 025d76f8e946dd3021141d6736c6b4bd40d57170
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539083"
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305: Určete IFormatProvider
@@ -61,7 +61,7 @@ ms.locfileid: "85539083"
  Z tohoto pravidla je bezpečné potlačit upozornění, když je jisté, že výchozí poskytovatel jazykové verze nebo formátu je správným výběrem a kde udržovatelnost kódu není důležitou prioritou pro vývoj.
 
 ## <a name="example"></a>Příklad
- V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod`opraví první porušení předáním invariantní jazykové verze k <xref:System.String.Compare%2A> a opraví druhé porušení předáním aktuální jazykové verze do, <xref:System.String.ToLower%2A> protože `string3` se zobrazí uživateli.
+ V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod` opraví první porušení předáním invariantní jazykové verze k <xref:System.String.Compare%2A> a opraví druhé porušení předáním aktuální jazykové verze do, <xref:System.String.ToLower%2A> protože `string3` se zobrazí uživateli.
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 

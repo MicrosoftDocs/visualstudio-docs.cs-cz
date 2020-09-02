@@ -1,5 +1,5 @@
 ---
-title: Správa rozšíření VSPackages | Dokumentace Microsoftu
+title: Správa VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,34 +14,34 @@ caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0b56ab490342cfbda9c16408aa0937abd80728c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194375"
 ---
 # <a name="managing-vspackages"></a>Správa rozšíření VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ve většině případů nemusíte starat o správu rozšíření VSPackages, protože šablony projektů a položek registrovat a automaticky načíst balíček. Ale v některých případech budete muset naučit něco, aby správu balíčků.  
+Ve většině případů se nemusíte starat o správu VSPackage, protože šablony projektů a položek registrují a automaticky načítají balíček. V některých případech se ale může vyžadovat, abyste se o správě balíčku dozvěděli trochu víc.  
   
-## <a name="using-the-experimental-instance"></a>Používáte-li experimentální instanci  
- Další informace o experimentální instanci najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
+## <a name="using-the-experimental-instance"></a>Použití experimentální instance  
+ Další informace o experimentální instanci naleznete v [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
 ## <a name="registering-and-unregistering-vspackages"></a>Registrace a zrušení registrace rozšíření VSPackages  
- Jak vytvářet a rušit registraci rozšíření VSPackages a jinými typy rozšíření najdete v tématu [registrace a zrušení registrace rozšíření VSPackages](../extensibility/registering-and-unregistering-vspackages.md).  
+ Chcete-li zjistit, jak registrovat a odregistrovat sady VSPackage a jiné typy rozšíření, přečtěte si téma [registrace a zrušení registrace VSPackage](../extensibility/registering-and-unregistering-vspackages.md).  
   
 ## <a name="loading-a-vspackage"></a>Načítání VSPackage  
- Rozšíření VSPackages lze nastavit na autoload Pokud konkrétní identifikátor GUID CMDUICONTEXT zapnutá. Další informace najdete v tématu [načítání rozšíření VSPackages](../extensibility/loading-vspackages.md).  
+ Sady VSPackage lze nastavit na automatické načtení, pokud je zapnut konkrétní CMDUICONTEXT identifikátor GUID. Další informace najdete v tématu [načítání VSPackage](../extensibility/loading-vspackages.md).  
   
-## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>Použití AsyncPackage k načtení rozšíření VSPackages na pozadí  
- Třída AsyncPackage umožňuje balíček načítání ve vlákně na pozadí pro lepší odezvy uživatelského rozhraní v sadě Visual Studio. Další informace najdete v tématu [jak: Použití AsyncPackage k načtení rozšíření VSPackages na pozadí](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md).  
+## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>Načtení VSPackage na pozadí pomocí AsyncPackage  
+ Třída AsyncPackage umožňuje načtení balíčku ve vlákně na pozadí pro lepší rychlost odezvy uživatelského rozhraní v aplikaci Visual Studio. Další informace naleznete v tématu [How to: use AsyncPackage (načíst sady VSPackage](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md)) na pozadí.  
   
-## <a name="rule-based-ui-context-for-extensions"></a>Kontext založený na pravidlech uživatelského rozhraní pro rozšíření  
- Kontexty uživatelského rozhraní založeného na pravidlech umožňuje autorům rozšíření určit přesné podmínky, za kterých se aktivuje kontextu uživatelského rozhraní a načíst přidružené balíčky VSPackages. Další informace najdete v tématu [jak: Použití kontextu uživatelského rozhraní založeného na pravidlo pro rozšíření sady Visual Studio](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
+## <a name="rule-based-ui-context-for-extensions"></a>Kontext uživatelského rozhraní založeného na pravidlech pro rozšíření  
+ Kontexty uživatelského rozhraní založeného na pravidlech umožňují autorům rozšíření definovat přesné podmínky, za kterých je kontext uživatelského rozhraní aktivovaný a které přidružené sady VSPackage jsou načtené. Další informace najdete v tématu [Postupy: použití kontextu uživatelského rozhraní založeného na pravidlech pro rozšíření sady Visual Studio](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
   
 ## <a name="troubleshooting-vspackages"></a>Řešení potíží s rozšířením VSPackages  
- Přečtěte si techniky pro řešení potíží s rozšířením VSPackages, který se nenačtou nebo dochází k chybám: [Řešení potíží s rozšířením VSPackages](../extensibility/troubleshooting-vspackages.md)  
+ Přečtěte si postupy pro řešení potíží s VSPackage, které se nečtou nebo dochází k chybám: [řešení problémů VSPackage](../extensibility/troubleshooting-vspackages.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

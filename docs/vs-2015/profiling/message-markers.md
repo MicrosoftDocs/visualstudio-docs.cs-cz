@@ -1,5 +1,5 @@
 ---
-title: Zpráva značky | Dokumentace Microsoftu
+title: Značky zpráv | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,20 +12,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 84c7a173bf0b7f5b3dc2187c0c8574819b2317a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176911"
 ---
 # <a name="message-markers"></a>Značky zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zpráva značky představuje výstup protokolu. Zpráva je řetězec, který vystavila konkrétním vlákně v určitém čase. Zprávy můžete exportovat do textového souboru pro použití s dalšími nástroji. Přesuňte ukazatel na zprávu zobrazíte řetězec zprávy ve vizualizátoru souběžnosti. A můžete zobrazit všechny značky zpráv v [sestava značek](../profiling/markers-report.md).  Následující obrázek znázorňuje zprávu značky.  
+Značka zprávy představuje výstup protokolu. Zpráva je řetězec, který je vydaný konkrétním vláknem v určitou dobu. Zprávy můžete exportovat do textového souboru, aby je bylo možné použít s jinými nástroji. Pokud chcete zobrazit řetězec zprávy, můžete na zprávu v Vizualizátor souběžnosti ponechit ukazatel. A můžete zobrazit všechny značky zpráv v [sestavě značek](../profiling/markers-report.md).  Následující obrázek znázorňuje značku zprávy.  
   
-## <a name="message-aggregation-markers"></a>Značky zpráv agregace  
- Někdy více zpráv probíhá tak blízko sebe Vizualizátor souběžnosti, že se nedá vykreslit jednotlivě. Pokud k tomu dojde, *zprávu značky agregace* , že se zobrazí představuje základní zprávy. Když ukazatel myši na jednu z těchto ikon, zobrazí popisek počet základní zprávy, které jsou reprezentovány. Chcete-li zobrazit zprávy, Přiblížit.  Pokud přiblížíte úplně a zachovat si značku agregace, můžete zobrazit základní zprávy v [sestava značek](../profiling/markers-report.md).  
+## <a name="message-aggregation-markers"></a>Značky agregace zpráv  
+ V některých případech se může stát, že v Vizualizátor souběžnosti dojde k několika zprávám, které se nedají kreslit jednotlivě. V takovém případě je zobrazena *značka agregace zprávy* , která představuje podkladové zprávy. Když umístíte ukazatel myši na jednu z těchto ikon, zobrazí se popis, který znázorňuje počet základních zpráv, které jsou reprezentovány. Chcete-li zobrazit zprávy, přiblížte se.  Pokud se přiblížíte ke všemu způsobem a stále získáte značku agregace, můžete zobrazit podkladové zprávy v [sestavě značek](../profiling/markers-report.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Značky Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)   
+ [Značky Vizualizátor souběžnosti](../profiling/concurrency-visualizer-markers.md)   
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

@@ -1,5 +1,5 @@
 ---
-title: Enumerátor zpráv | Dokumentace Microsoftu
+title: Enumerátor zprávy | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6bd42c825cd45068e13178856e524268b426ec53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194342"
 ---
 # <a name="message-enumerator"></a>Enumerátor zpráv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Následující příznaky se používají pro `TEXTOUTPROC` funkce, což je funkce zpětného volání, která poskytuje integrované vývojové prostředí při volání [sccopenproject –](../extensibility/sccopenproject-function.md) (naleznete v tématu [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) podrobnosti o zpětné volání funkce).  
+Následující příznaky jsou použity pro `TEXTOUTPROC` funkci, což je funkce zpětného volání, která rozhraní IDE poskytuje při volání [SccOpenProject](../extensibility/sccopenproject-function.md) (podrobnosti o funkci zpětného volání naleznete v tématu [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) ).  
   
- Pokud integrovaného vývojového prostředí se zobrazí výzva, proces zrušení, může zobrazit jedna z zprávy Storno. V tomto případě používá modul plug-in ovládací prvek zdroje `SCC_MSG_STARTCANCEL` žádat rozhraní IDE zobrazíte **zrušit** tlačítko. Potom může být odeslán libovolnou sadu normální zprávy. Pokud některý z těchto vrátí `SCC_MSG_RTN_CANCEL`, modul plug-in operace se ukončí a vrátí. Modul plug-in také dotazuje `SCC_MSG_DOCANCEL` pravidelně k určení, pokud uživatel operaci zrušil. Když se provádějí všechny operace, nebo pokud uživatel zrušil, modul plug-in odešle `SCC_MSG_STOPCANCEL`. `SCC_MSG_INFO`, SCC_MSG_WARNING, a SCC_MSG_ERROR typy se používají pro zprávy, která se zobrazí v posuvný seznam zpráv. `SCC_MSG_STATUS` je speciální typ, který označuje, že text by se zobrazit na stavovém řádku nebo dočasné oblasti. Není trvale zůstanou v seznamu.  
+ Pokud je rozhraní IDE požádáno o zrušení procesu, může se zobrazit jedna z zpráv zrušení. V tomto případě modul plug-in správy zdrojových kódů používá k tomu, aby `SCC_MSG_STARTCANCEL` se zobrazilo tlačítko **Zrušit** , aby se zobrazilo tlačítko Storno. V takovém případě může být odeslána jakákoli sada běžných zpráv. Pokud některý z těchto `SCC_MSG_RTN_CANCEL` operací vrátí, modul plug-in ukončí operaci a vrátí. Modul plug-in se také pravidelně dotazuje `SCC_MSG_DOCANCEL` , aby zjistil, jestli uživatel operaci zrušil. Když jsou všechny operace dokončené nebo pokud se uživatel zrušil, modul plug-in ho pošle `SCC_MSG_STOPCANCEL` . `SCC_MSG_INFO`Typy, SCC_MSG_WARNING a SCC_MSG_ERROR se používají pro zprávy, které se zobrazují v seznamu posouvaných zpráv. `SCC_MSG_STATUS` je speciální typ, který označuje, že se má text zobrazit ve stavovém řádku nebo v dočasné zobrazované oblasti. Nezůstane v seznamu trvale.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum {   
@@ -43,32 +43,32 @@ enum { 
   
 ## <a name="members"></a>Členové  
  SCC_MSG_RTN_CANCEL  
- Návrat z zpětného volání k označení zrušit.  
+ Vraťte se ze zpětného volání k označení Cancel.  
   
  SCC_MSG_RTN_OK  
- Vrátí ze zpětného volání, abyste mohli pokračovat.  
+ Pokračujte návratem ze zpětného volání.  
   
  SCC_MSG_INFO  
  Zpráva je informační.  
   
  SCC_MSG_WARNING  
- Zpráva se upozornění.  
+ Zpráva je upozornění.  
   
  SCC_MSG_ERROR  
- Zpráva se o chybu.  
+ Zpráva je chyba.  
   
  SCC_MSG_STATUS  
- Zpráva je určená pro stavový řádek.  
+ Zpráva je určena pro stavový řádek.  
   
  SCC_MSG_DOCANCEL  
- Žádný text. Vrátí IDE `SCC_MSG_RTN_OK` nebo `SCC_MSG_RTN_CANCEL`.  
+ Žádný text; IDE vrátí `SCC_MSG_RTN_OK` nebo `SCC_MSG_RTN_CANCEL` .  
   
  SCC_MSG_STARTCANCEL  
- Zahájí cyklus Storno.  
+ Spustí smyčku zrušení.  
   
  SCC_MSG_STOPCANCEL  
- Ukončí smyčku Storno.  
+ Zastaví smyčku Cancel.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)   
+ [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

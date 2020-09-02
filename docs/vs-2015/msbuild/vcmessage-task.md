@@ -1,5 +1,5 @@
 ---
-title: Vcmessage – úloha | Dokumentace Microsoftu
+title: Úloha VCMessage – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -21,28 +21,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 508d1fe33046f6051c9c5c1b8e54036e78ae7d2f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193352"
 ---
 # <a name="vcmessage-task"></a>VCMessage – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Protokoly upozornění a chybové zprávy během sestavení.  
+Zaznamená upozornění a chybové zprávy během sestavení.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato úloha pomáhá implementovat MSBuild pro Visual C++ a není určena k volání uživatelem. Další informace naleznete v tématu <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.  
+ Tato úloha pomáhá implementovat nástroj MSBuild pro Visual C++ a není určen pro volání uživatelem. Další informace naleznete v tématu <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **vcmessage –** úloh.  
+ Následující tabulka popisuje parametry úlohy **VCMessage –** .  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**Argumenty**|Volitelné **řetězec** parametru.<br /><br /> Středníkem oddělený seznam zpráv k zobrazení.|  
-|**Kód**|Vyžaduje **řetězec** parametru.<br /><br /> Číslo chyby, která kvalifikuje zprávy.|  
-|**Typ**|Volitelné **řetězec** parametru.<br /><br /> Určuje typ zprávy a vygenerovat. Zadejte buď `"Warning"` vygenerovat upozornění, nebo `"Error"` generovat chybovou zprávu.|  
+|**Arguments**|Volitelný **řetězcový** parametr.<br /><br /> Seznam zpráv, které se mají zobrazit, oddělený středníkem.|  
+|**Kód**|Povinný parametr **řetězce**<br /><br /> Číslo chyby, která tuto zprávu kvalifikuje.|  
+|**Typ**|Volitelný **řetězcový** parametr.<br /><br /> Určuje druh zprávy, která se má vygenerovat. Určete `"Warning"` , že se má vygenerovat zpráva upozornění, nebo `"Error"` se má vygenerovat chybová zpráva.|  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

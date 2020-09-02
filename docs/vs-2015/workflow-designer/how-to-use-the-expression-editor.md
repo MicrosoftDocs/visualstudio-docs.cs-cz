@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 54099bc5c0f249cdb3697715d153a94a596ac344
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849237"
 ---
-# <a name="how-to-use-the-expression-editor"></a>Postupy: použití editoru výrazů
+# <a name="how-to-use-the-expression-editor"></a>Postupy: Používání editoru výrazů
 Editor výrazů je [!INCLUDE[wfd1](../includes/wfd1-md.md)] ovládací prvek, který se používá v mnoha aktivitách pracovního postupu jako způsob, jak zadávat a vyhodnocovat tyto výrazy. Editor výrazů poskytuje podrobnějším prostředí pro úpravy integrovaného vývojového prostředí (IDE), včetně IntelliSense, barev, ParamInfo, chybových vlnovek, mimo jiné funkce. Kompilátor po zadání vyhodnotí výraz. Pokud je výraz neplatný, zobrazí se ikona chyby. Editor lze také otevřít jako dialogové okno **Editor výrazů** .
 
- Výrazy jsou hodnoty literálu nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (např. proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby vydávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=") namísto ("= ="), logické operátory jsou slova "a" nebo "namísto symbolů" & & "&#124;&#124;a" "a namísto **hodnoty null**nejsou použity **žádné** místo. Další informace o výrazech a operátorech v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a některých ukázkách naleznete v tématu [operátory a výrazy v Visual Basic](https://msdn.microsoft.com/library/a1w3te48(VS.100).aspx).
+ Výrazy jsou hodnoty literálu nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] kód vázaný na argumenty nebo vlastnosti. Obsahují prvky hodnoty (např. proměnné, konstanty, literály, vlastnosti), které jsou kombinovány s operacemi, aby vydávaly novou hodnotu. Výrazy jsou zapisovány pomocí syntaxe VB.NET, i když je aplikace v programu pomocí jazyka C#. To znamená, že při použití velkých a malých písmen je porovnávání provedeno pomocí jednoho znaménka rovná se ("=") namísto ("= ="), logické operátory jsou slova "a" nebo "namísto symbolů" && "a" &#124;&#124; "a namísto **hodnoty null**nejsou použity **žádné** hodnoty. Další informace o výrazech a operátorech v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] a pro některé ukázky naleznete v tématu [operátory a výrazy v Visual Basic](https://msdn.microsoft.com/library/a1w3te48(VS.100).aspx).
 
  **Editor výrazů** se chová takto:
 
@@ -32,20 +32,20 @@ Editor výrazů je [!INCLUDE[wfd1](../includes/wfd1-md.md)] ovládací prvek, kt
 - Pokud se zaměříte na Editor výrazů v rámci přehostovaného návrháře pracovního postupu, chová se jako textové pole. Když dojde ke ztrátě fokusu v Návrháři pracovního postupu pro opětovné hostování, Editor výrazů vypadá jako regulární TextBlock znovu.
 
 > [!NOTE]
-> IntelliSense pro Editor výrazů je k dispozici pouze uvnitř [!INCLUDE[vs2010](../includes/vs2010-md.md)]. V [!INCLUDE[vs2010](../includes/vs2010-md.md)] i ve scénářích opětovného hostování kompilátor po jeho zadání ověří výraz a Editor výrazů zobrazí chybovou ikonu, pokud je výraz neplatný.
+> IntelliSense pro Editor výrazů je k dispozici pouze uvnitř [!INCLUDE[vs2010](../includes/vs2010-md.md)] . V scénářích i v případě opětovného [!INCLUDE[vs2010](../includes/vs2010-md.md)] hostování kompilátor po jeho zadání ověří výraz a v případě, že je výraz neplatný, zobrazí v editoru výrazů chybovou ikonu.
 
 ### <a name="using-the-expression-editor"></a>Použití editoru výrazů
 
-1. V [!INCLUDE[vs2010](../includes/vs2010-md.md)]otevřete nový nebo existující projekt pracovního postupu.
+1. V aplikaci [!INCLUDE[vs2010](../includes/vs2010-md.md)] otevřete nový nebo existující projekt pracovního postupu.
 
-2. Přidejte například aktivitu <xref:System.Activities.Statements.Assign> do pracovního postupu.
+2. Přidejte například <xref:System.Activities.Statements.Assign> aktivitu do pracovního postupu.
 
     > [!NOTE]
-    > Několik aktivit pracovního postupu má editory výrazů. Výraz TextBlocks se také zobrazí v Návrháři proměnných, v Návrháři argumentů a v Návrháři dynamického argumentu. Jako příklad se používá aktivita <xref:System.Activities.Statements.Assign>.
+    > Několik aktivit pracovního postupu má editory výrazů. Výraz TextBlocks se také zobrazí v Návrháři proměnných, v Návrháři argumentů a v Návrháři dynamického argumentu. <xref:System.Activities.Statements.Assign>Aktivita se používá jako příklad.
 
-3. Klikněte na levý Editor výrazů v Návrháři aktivit pro aktivitu <xref:System.Activities.Statements.Assign>.
+3. Klikněte na levý Editor výrazů v Návrháři aktivit pro <xref:System.Activities.Statements.Assign> aktivitu.
 
-     Šedé řetězce vodoznaku **\<do >** a **\<zadejte výraz VB >** jsou výchozí textové řetězce pro Editor výrazů v aktivitě <xref:System.Activities.Statements.Assign>.
+     Šedé řetězce vodoznaku **\<To>** a **\<Enter a VB Expression>** jsou výchozí textové řetězce pro Editor výrazů v <xref:System.Activities.Statements.Assign> aktivitě.
 
 4. Zadejte svůj výraz. Pokud zadáte řetězec, nezapomeňte kolem řetězce vložit uvozovky. Pokud se rozhodnete vytvořit vazbu argumentu výrazu na proměnnou, ponechte uvozovky vypnuté.
 

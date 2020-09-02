@@ -1,5 +1,5 @@
 ---
-title: Vytvoření panelu nástrojů s více instancemi | Dokumentace Microsoftu
+title: Vytvoření okna nástroje s více instancemi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,29 +12,29 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0dcdfe3f6e488514bb2ee1ca950e952b16039b42
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433847"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64830100"
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>Vytvoření panelu nástrojů s více instancemi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Panel nástrojů můžete naprogramovat tak, aby více instancí může být otevřeno současně. Ve výchozím nastavení nástroj windows může mít pouze jednu instanci otevřete.  
+Můžete programovat okno nástroje, aby bylo možné současně otevřít více instancí. Ve výchozím nastavení může být v oknech nástrojů otevřená jenom jedna instance.  
   
- Při použití panelu nástrojů s více instancemi můžete zobrazit několik souvisejících zdroje informací ve stejnou dobu. Můžete například umístit více řádky <xref:System.Windows.Forms.TextBox> ovládacího prvku panel nástrojů s více instancemi tak, že jsou během relace programovací současně k dispozici několik fragmentů kódu. Také například můžete umístit <xref:System.Windows.Forms.DataGrid> ovládacího prvku a rozevírací seznam pole v panelu nástrojů s více instancemi tak, aby několik zdrojů dat v reálném čase lze sledovat současně.  
+ Když použijete okno s více instancemi, můžete zobrazit několik souvisejících zdrojů informací současně. Můžete například umístit víceřádkové <xref:System.Windows.Forms.TextBox> řízení v okně nástroje s více instancemi tak, aby byly během relace programování současně k dispozici několik fragmentů kódu. Můžete například vložit <xref:System.Windows.Forms.DataGrid> ovládací prvek a rozevírací seznam do okna nástroje s více instancemi, aby bylo možné současně sledovat několik datových zdrojů v reálném čase.  
   
-## <a name="creating-a-basic-single-instance-tool-window"></a>Vytvoření okna nástroje Basic (Single-Instance)  
+## <a name="creating-a-basic-single-instance-tool-window"></a>Vytvoření základního okna nástroje (s jednou instancí)  
   
-1. Vytvoření projektu s názvem **MultiInstanceToolWindow** VSIX šablony a přidat šablonu vlastního nástroje okna položku s názvem **MIToolWindow**.  
+1. Vytvořte projekt s názvem **MultiInstanceToolWindow** pomocí šablony VSIX a přidejte šablonu položky vlastního okna nástroje s názvem **MIToolWindow**.  
   
     > [!NOTE]
-    > Další informace o vytváření rozšíření pomocí panelu nástrojů najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).  
+    > Další informace o vytváření rozšíření pomocí panelu nástrojů naleznete v tématu [Vytvoření rozšíření s oknem nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="making-a-tool-window-multi-instance"></a>Provádění více instancí nástroje okna  
+## <a name="making-a-tool-window-multi-instance"></a>Vytvoření více instancí okna nástrojů  
   
-1. Otevřít **MIToolWindowPackage.cs** souborů a vyhledejte `ProvideToolWindow` atribut. a `MultiInstances=true` parametru, jak je znázorněno v následujícím příkladu.  
+1. Otevřete soubor **MIToolWindowPackage.cs** a vyhledejte `ProvideToolWindow` atribut. a `MultiInstances=true` parametr, jak je znázorněno v následujícím příkladu.  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -46,15 +46,15 @@ Panel nástrojů můžete naprogramovat tak, aby více instancí může být ote
     {. . .}  
     ```  
   
-2. V souboru MIToolWindowCommand.cs najdete metodu ShowToolWindos(). V této metodě volání <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metoda a nastavte jeho `create` příznak `false` tak, aby se iterovat přes existující instance okno nástrojů do dostupného `id` nenajde.  
+2. V souboru MIToolWindowCommand.cs Najděte metodu ShowToolWindos (). V této metodě zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metodu a nastavte její `create` příznak na `false` tak, aby se opakovala prostřednictvím existujících instancí okna nástrojů, dokud `id` není nalezen.  
   
-3. Chcete-li vytvořit instanci okna nástroje, zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metoda a nastavte jeho `id` dostupné hodnotu a jeho `create` příznak `true`.  
+3. Chcete-li vytvořit instanci okna nástroje, zavolejte <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metodu a nastavte `id` ji na dostupnou hodnotu a její `create` příznak na `true` .  
   
-     Ve výchozím nastavení mají hodnotu `id` parametr <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> je metoda `0`. Díky tomu okno nástroje jednou instancí. Pro více než jednu instanci zajistit také jejich hostování, každá instance musí mít svůj vlastní jedinečný `id`.  
+     Ve výchozím nastavení `id` je hodnota parametru <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> metody `0` . Tím se vytvoří okno nástroje s jednou instancí. Pro více než jednu instanci, která má být hostována, musí mít každá instance vlastní jedinečný identifikátor `id` .  
   
-4. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> metodu na <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objekt, který je vrácený <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> vlastnost instance okno nástroje.  
+4. Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> metodu pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objekt, který je vrácen <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> vlastností instance okna nástroje.  
   
-5. Ve výchozím nastavení `ShowToolWindow` metodu, která je vytvořen pomocí šablony položky okna nástroje vytvoří panel nástrojů s jednou instancí. Následující příklad ukazuje, jak změnit `ShowToolWindow` metodu pro vytvoření víc instancí.  
+5. Ve výchozím nastavení `ShowToolWindow` metoda, která je vytvořena šablonou položky okna nástroje, vytvoří okno nástroje s jednou instancí. Následující příklad ukazuje, jak upravit `ShowToolWindow` metodu pro vytvoření více instancí.  
   
     ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::GetName | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionContext2:: GetName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 500d5c1788e837a27b4affada50ecc59db122e8a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729660"
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
-Načte název kontextu hodnocení.
+Načte název kontextu vyhodnocení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetName( 
 
 ## <a name="parameters"></a>Parametry
 `pbstrName`\
-[out] Vrátí název kontextu vyhodnocení.
+mimo Vrátí název kontextu vyhodnocení.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Název je popis tohoto kontextu hodnocení. Obvykle je něco, co lze analyzovat vyhodnocení výrazu, který odkazuje na tento přesný kontext hodnocení. Například v jazyce C++ je název následující:
+ Název je popis tohoto kontextu vyhodnocení. Obvykle je to něco, co lze analyzovat pomocí vyhodnocovacího filtru výrazů, který odkazuje na tento přesný kontext vyhodnocení. Například v jazyce C++ je název následující:
 
 ```
 "{ function-name, source-file-name, module-file-name }"

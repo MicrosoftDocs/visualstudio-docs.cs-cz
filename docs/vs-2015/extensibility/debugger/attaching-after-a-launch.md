@@ -1,5 +1,5 @@
 ---
-title: Připojení po spuštění | Dokumentace Microsoftu
+title: Připojení po spuštění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,49 +11,49 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 693cf6d746f51862415f2f30e46d48a998047f14
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437438"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64835345"
 ---
 # <a name="attaching-after-a-launch"></a>Připojení po spuštění
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Poté, co byl spuštěn program, relace ladění je připraven k připojit ladicí stroj (DE) do uvedeného programu.  
+Po spuštění programu je relace ladění připravena připojit ladicí stroj (DE) k uvedenému programu.  
   
 ## <a name="design-decisions"></a>Rozhodnutí o návrhu  
- Protože komunikace je snazší v rámci sdílené adresní prostor, musíte se rozhodnout, jestli je vhodnější k umožnění komunikace mezi ladicí relaci a DE nebo mezi DE a program. Zvolte z následujících možností:  
+ Vzhledem k tomu, že komunikace je snazší v rámci sdíleného adresního prostoru, je nutné se rozhodnout, zda je vhodnější, aby bylo možné zjednodušit komunikaci mezi ladicí relací a DE nebo mezi programem DE a. Vyberte si z těchto možností:  
   
-- Pokud to dává větší smysl pro usnadnění komunikace mezi ladicí relaci a DE, relace ladění společně vytvoří DE a požádá DE se připojit k programu. To opustí ladicí relaci a DE společně v jeden adresní prostor a běhového prostředí a program společně v jiném.  
+- Pokud je smysluplnější zjednodušit komunikaci mezi ladicí relací a DE, pak relace ladění společně vytvoří příkaz DE a požádá o připojení k programu. Tím se relace ladění a odpojí v jednom adresním prostoru a prostředí modulu runtime a program dohromady v jiném.  
   
-- Pokud to dává větší smysl pro usnadnění komunikace mezi DE a program, běhové prostředí společně vytvoří DE. Kvůli tomu SDM v jeden adresní prostor a DE, běhové prostředí a program v jiném společně. Toto je typická Zavedenými, které je implementováno s interpretu pro spuštění skriptovací jazyky.  
+- Pokud je smysluplnější zjednodušit komunikaci mezi DE a programem, pak prostředí za běhu společně vytvoří rutinu DE. To znamená, že se SDM bude nabývat v jednom adresním prostoru a v prostředí DE, běhového prostředí a programu společně v jiném. To je typický z výrazu DE, který je implementován s překladačem pro spouštění skriptovacích jazyků.  
   
     > [!NOTE]
-    > Jak DE připojí k programu je závislý na implementaci. Komunikace mezi DE a program je také závislý na implementaci.  
+    > Způsob, jakým je příkaz DE připojen k programu, je závislý na implementaci. Komunikace mezi DE a programem je také závislá na implementaci.  
   
 ## <a name="implementation"></a>Implementace  
- Prostřednictvím kódu programu, když správce ladění relace (SDM) nejprve obdrží [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) objektu, který představuje program spustit, volá [připojit](../../extensibility/debugger/reference/idebugprogram2-attach.md) metodu předáním [ IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) objektu, který je pozdější sloužící k předávání výjimky ladění zpět do SDM. `IDebugProgram2::Attach` Pak zavolá metodu [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) metody. Další informace o způsobu SDM přijímá `IDebugProgram2` rozhraní najdete v tématu [upozornění portu](../../extensibility/debugger/notifying-the-port.md).  
+ Programově, když správce ladění relace (SDM) nejprve přijme objekt [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, který má být spuštěn, volá metodu [Attach](../../extensibility/debugger/reference/idebugprogram2-attach.md) a předá jí objekt [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) , který je později použit k předání událostí ladění zpět do SDM. `IDebugProgram2::Attach`Metoda pak zavolá metodu [Attach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) . Další informace o tom, jak model SDM obdrží `IDebugProgram2` rozhraní, najdete v tématu [informování portu](../../extensibility/debugger/notifying-the-port.md).  
   
- Pokud vaše DE je potřeba spustit ve stejném adresním prostoru jako laděného programu, obvykle vzhledem k tomu, že je DE je součástí interpretu spuštění skriptu, `IDebugProgramNodeAttach2::OnAttach` vrátí metoda `S_FALSE`, označující, že dokončení procesu připojování.  
+ Pokud DE potřebuje běžet ve stejném adresním prostoru jako program, který je právě laděný, obvykle proto, že je DE součástí překladače, který spouští skript, `IDebugProgramNodeAttach2::OnAttach` vrátí metoda `S_FALSE` , která indikuje, že dokončila proces připojení.  
   
- Pokud na druhé straně DE běží v adresním prostoru SDM, `IDebugProgramNodeAttach2::OnAttach` metoda vrátí hodnotu `S_OK` nebo [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) rozhraní není implementováno vůbec na [IDebugProgramNode2 ](../../extensibility/debugger/reference/idebugprogramnode2.md) objekt přidružený k laděnému programu. V takovém případě [připojit](../../extensibility/debugger/reference/idebugengine2-attach.md) nakonec je volána metoda k dokončení operace připojení.  
+ Pokud je na druhé straně rutina DE spuštěna v adresním prostoru SDM, `IDebugProgramNodeAttach2::OnAttach` Metoda vrátí `S_OK` nebo rozhraní [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) není implementováno vůbec u objektu [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) přidruženého k laděnému programu. V tomto případě je metoda [připojení](../../extensibility/debugger/reference/idebugengine2-attach.md) nakonec volána k dokončení operace připojení.  
   
- V druhém případě je nutné volat [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodu na `IDebugProgram2` objekt, který byl předán `IDebugEngine2::Attach` metody, úložiště `GUID` v místní aplikaci objekt a vraťte se tím `GUID` při `IDebugProgram2::GetProgramId` u tohoto objektu je následně volána metoda. `GUID` Slouží k identifikaci program jednoznačně mezi různými komponentami ladění.  
+ V druhém případě je třeba zavolat metodu [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) na `IDebugProgram2` objekt, který byl předán `IDebugEngine2::Attach` metodě, uložit `GUID` do objektu lokálního programu a vrátit tuto hodnotu, `GUID` Pokud `IDebugProgram2::GetProgramId` je metoda následně volána na tomto objektu. `GUID`Slouží k jednoznačné identifikaci programu v různých ladicích součástech.  
   
- Všimněte si, že v případě třídy `IDebugProgramNodeAttach2::OnAttach` metody vracející `S_FALSE`, `GUID` pro program je předán do metody a je `IDebugProgramNodeAttach2::OnAttach` metodu, která nastaví `GUID` na objekt místní program.  
+ Všimněte si, že v případě, že se `IDebugProgramNodeAttach2::OnAttach` vrátí metoda `S_FALSE` , která `GUID` má být použita pro program, je předána této metodě a jedná se o `IDebugProgramNodeAttach2::OnAttach` metodu, která nastaví `GUID` objekt místní program.  
   
- DE je teď připojený k programu a připravena k odeslání události při spuštění.  
+ DE je nyní připojen k programu a je připraven k odeslání jakékoli události po spuštění.  
   
 ## <a name="see-also"></a>Viz také  
  [Připojení přímo k programu](../../extensibility/debugger/attaching-directly-to-a-program.md)   
- [Upozornění portu](../../extensibility/debugger/notifying-the-port.md)   
- [Ladění úloh](../../extensibility/debugger/debugging-tasks.md)   
+ [Oznamování portu](../../extensibility/debugger/notifying-the-port.md)   
+ [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)   
  [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)   
- [Připojení](../../extensibility/debugger/reference/idebugprogram2-attach.md)   
+ [Pojovat](../../extensibility/debugger/reference/idebugprogram2-attach.md)   
  [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)   
  [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
- [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [Připojit](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
+ [Připojit](../../extensibility/debugger/reference/idebugengine2-attach.md)

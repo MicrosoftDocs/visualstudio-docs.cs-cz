@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e7de0b3985e09f61fd0c63d1764304b150503883
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657935"
 ---
 # <a name="debugging-or-disabling-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
@@ -59,7 +59,7 @@ V mnoha případech může být Neošetřená výjimka v Návrháři XAML způso
 
 6. V nové instanci aplikace Visual Studio, na panelu nabídek vyberte možnost **ladit**, **připojit k procesu**.
 
-7. V dialogovém okně **připojit k procesu** zvolte v seznamu **procesy k dispozici** možnost **XDesProc. exe**a poté klikněte na tlačítko **připojit** .
+7. V dialogovém okně **připojit k procesu** vyberte v seznamu **procesy k dispozici** možnost **XDesProc.exe**a pak klikněte na tlačítko **připojit** .
 
      ![Proces návrháře XAML](../designers/media/xaml-attach.png "XAML_Attach")
 

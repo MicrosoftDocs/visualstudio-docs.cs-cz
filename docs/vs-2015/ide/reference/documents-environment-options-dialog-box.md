@@ -34,10 +34,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 705b1a5992d1a3e7931c316c713d46e7e8c7f72e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657774"
 ---
 # <a name="documents-environment-options-dialog-box"></a>Dokumenty, prostředí, dialogové okno Možnosti
@@ -69,7 +69,7 @@ Pomocí této stránky dialogového okna **Možnosti** můžete řídit zobrazen
 > [!NOTE]
 > Tuto možnost vyberte, pokud chcete povolit příkaz **Zobrazit v prohlížeči** v nabídce **soubor** pro webové dokumenty, které nejsou součástí aktivní webové aplikace.
 
- **\<** *n* **> položky uložené v projektu různé soubory** určuje počet souborů, které se mají zachovat ve složce **MiscellaneousFiles** **Průzkumník řešení**. Tyto soubory jsou uvedeny i v případě, že již nejsou otevřeny v editoru. Můžete zadat libovolné celé číslo od 0 do 256. Výchozí hodnota je 0.
+ ** \<** *n* **> položky uložené v projektu různé soubory** určují počet souborů, které mají být uchovány ve složce **MiscellaneousFiles** **Průzkumník řešení**. Tyto soubory jsou uvedeny i v případě, že již nejsou otevřeny v editoru. Můžete zadat libovolné celé číslo od 0 do 256. Výchozí hodnota je 0.
 
  Například pokud nastavíte tuto možnost na 5 a máte otevřené 10 různých souborů, při zavření všech 10 souborů se ve složce **různé soubory** stále zobrazí prvních 5.
 

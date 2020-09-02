@@ -1,5 +1,5 @@
 ---
-title: Funkce SccEnumChangedFiles | Dokumenty společnosti Microsoft
+title: Funkce SccEnumChangedFiles | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0b1826a87b20d6bc92254fc4a86b8e0b756400ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700909"
 ---
-# <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles
-Vzhledem k tomu, seznam místních souborů, tato funkce určuje, které soubory se liší od odpovídajícíverze v databázi správy zdrojového kódu.
+# <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles – funkce
+Vzhledem k seznamu místních souborů Tato funkce určuje, které soubory se liší od odpovídajících verzí v databázi správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,33 +35,33 @@ SCCRTN SccEnumChangedFiles(
 ```
 
 ### <a name="parameters"></a>Parametry
- pKontext
+ pContext
 
-[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
- Hwnd
+ hWnd
 
-[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- cSoubory
+ cFiles
 
-[v] Počet názvů souborů zadaných v `lpFileNames` poli. Také určuje velikost `plIsFileDifferent` pole.
+pro Počet názvů souborů zadaných v `lpFileNames` poli Určuje také velikost `plIsFileDifferent` pole.
 
- lpNázev souboru
+ lpFileNames
 
-[v] Pole místních názvů souborů ke kontrole.
+pro Pole místních názvů souborů, které chcete kontrolovat.
 
  plIsFileDifferent
 
-[dovnitř, ven] Pole hodnot označujících rozdílový stav každého souboru `cFiles` (pole musí mít alespoň položky). Nenulová znamená, že soubor se liší.
+[in, out] Pole hodnot, které označují stav rozdílů jednotlivých souborů (pole musí obsahovat alespoň `cFiles` položky). Nenulové znamená, že soubor je jiný.
 
-## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+## <a name="return-value"></a>Vrácená hodnota
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Operace byla úspěšně dokončena.|
-|SCC_UNSPECIFIEDERROR|Obecná chyba.|
+|SCC_OK|Operace se úspěšně dokončila.|
+|SCC_UNSPECIFIEDERROR|Obecná chyba|
 
 ## <a name="see-also"></a>Viz také
-- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
+- [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

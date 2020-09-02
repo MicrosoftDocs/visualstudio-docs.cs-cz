@@ -19,10 +19,10 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: f7cc538fed6011dd3d972df7763a221c3deee985
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386846"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Novinky v sadě Visual Studio 2017
@@ -32,7 +32,7 @@ ms.locfileid: "86386846"
 Hledáte upgrade z předchozí verze sady Visual Studio? Zde je uvedeno, co vám Visual Studio 2017 může nabídnout: nesrovnatelnou produktivitu pro jakékoli vývojové, libovolné aplikace a platformy. Pomocí sady Visual Studio 2017 můžete vyvíjet aplikace pro Android, iOS, Windows, Linux, web i Cloud. Svůj kód můžete rychle psát, snadno ladit a diagnostikovat, často testovat a bez obav vydávat. Navíc si můžete sadu Visual Studio rozšířit a přizpůsobit pomocí svých vlastních rozšíření. Používejte správu verzí, agilní a efektivní spolupráci s touto verzí!
 
 >[!div class="button"]
->[Stažení sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+>[Stáhnout Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 
 Zde je rekapitulace vysoké úrovně změn, které byly provedeny od předchozí verze, Visual Studio 2015:
 
@@ -391,4 +391,4 @@ V některých případech není zpráva dostatečně velká, aby mohla předáva
 * [Co je nového v jazyce C#](/dotnet/csharp/whats-new)
 * [Co je nového pro Team Foundation Server](/azure/devops/server/whats-new)
 * [Co je nového v Visual Studio pro Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
-* [Novinky v sadě Visual Studio 2019](whats-new-visual-studio-2019.md)
+* [Co je nového v aplikaci Visual Studio 2019](whats-new-visual-studio-2019.md)
