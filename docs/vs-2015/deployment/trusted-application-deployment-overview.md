@@ -18,18 +18,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 673cc3d9b936131e6423a015af5c78486846fbe7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75847709"
 ---
 # <a name="trusted-application-deployment-overview"></a>Přehled nasazení důvěryhodných aplikací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se zvýšenými oprávněními pomocí technologie nasazení důvěryhodných aplikací.  
+Toto téma poskytuje přehled o tom, jak nasadit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace se zvýšenými oprávněními pomocí technologie nasazení důvěryhodných aplikací.  
   
- Nasazení důvěryhodných aplikací, součást technologie nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], usnadňuje organizacím libovolné velikosti přístup k spravované aplikaci zabezpečeným bezpečnějším způsobem bez výzvy uživatele. V případě nasazení důvěryhodných aplikací může organizace nakonfigurovat pouze klientský počítač tak, aby měl seznam důvěryhodných vydavatelů, kteří jsou identifikováni pomocí certifikátů technologie Authenticode. Pak všechny [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace podepsané jedním z těchto důvěryhodných vydavatelů obdrží vyšší úroveň důvěryhodnosti.  
+ Nasazení důvěryhodných aplikací, které je součástí [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] technologie nasazení, usnadňuje organizacím libovolné velikosti přístup k spravované aplikaci, a to bez nutnosti zobrazení výzvy uživateli. V případě nasazení důvěryhodných aplikací může organizace nakonfigurovat pouze klientský počítač tak, aby měl seznam důvěryhodných vydavatelů, kteří jsou identifikováni pomocí certifikátů technologie Authenticode. Potom jakákoliv [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace podepsaná jedním z těchto důvěryhodných vydavatelů obdrží vyšší úroveň důvěryhodnosti.  
   
 > [!NOTE]
 > Nasazení důvěryhodných aplikací vyžaduje jednorázovou konfiguraci počítače uživatele. Ve spravovaných prostředích plochy se tato konfigurace dá provést pomocí globálních zásad. Pokud to pro vaši aplikaci nechcete, použijte místo toho zvýšení oprávnění. Další informace najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
@@ -41,9 +41,9 @@ Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick]
 |--------------------|-----------------|  
 |správce|Organizační entita zodpovědná za aktualizace a údržbu klientských počítačů|  
 |správce vztahu důvěryhodnosti|Podsystém v rámci modulu CLR (Common Language Runtime), který je zodpovědný za vynucování zabezpečení klientských aplikací.|  
-|publisher|Entita, která zapisuje a udržuje aplikaci.|  
+|vydavatel|Entita, která zapisuje a udržuje aplikaci.|  
 |modul pro nasazení|Entita, kterou aplikace balí a distribuuje uživatelům.|  
-|certificate|Kryptografický podpis, který se skládá z veřejného a privátního klíče; obecně vydané certifikační autoritou (CA), která může zaručí za jeho pravost.|  
+|certifikát|Kryptografický podpis, který se skládá z veřejného a privátního klíče; obecně vydané certifikační autoritou (CA), která může zaručí za jeho pravost.|  
 |Certifikát Authenticode|Certifikát s vloženými metadaty, které popisují mimo jiné použití, pro které může být certifikát zaměstnán.|  
 |certifikační autorita|Organizace, která ověřuje identitu vydavatelů a vydává jim certifikáty vložené s metadaty vydavatele.|  
 |Kořenová autorita|Certifikační autorita, která zmocňuje jiné certifikační autority k vystavování certifikátů.|  
@@ -54,7 +54,7 @@ Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick]
   
 - Vydavatel je skupina, která vytváří [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci.  
   
-- Modul pro nasazení je skupina, obvykle oddělení informačních technologií (IT), která distribuuje [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace do firemních stolních počítačů.  
+- Modul pro nasazení je skupina, obvykle oddělení informačních technologií (IT), která distribuuje [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci do firemních stolních počítačů.  
   
   Chcete-li využít výhod nasazení důvěryhodných aplikací, je nutné postupovat podle těchto kroků:  
   
@@ -62,48 +62,48 @@ Toto téma poskytuje přehled o tom, jak nasadit aplikace [!INCLUDE[ndptecclick]
   
 2. Přidejte vydavatele do úložiště důvěryhodných vydavatelů na všech klientech.  
   
-3. Vytvořte aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)].  
+3. Vytvořte [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci.  
   
 4. Podepište manifest nasazení s certifikátem vydavatele.  
   
 5. Publikujte nasazení aplikace do klientských počítačů.  
   
 ### <a name="obtain-a-certificate-for-the-publisher"></a>Získání certifikátu pro vydavatele  
- Digitální certifikáty jsou základní součástí systému ověřování a zabezpečení technologie Authenticode společnosti Microsoft. Technologie Authenticode je standardní součástí operačního systému Windows. Všechny [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace musí být podepsané digitálním certifikátem, bez ohledu na to, jestli se účastní nasazení důvěryhodné aplikace. Úplné vysvětlení, jak technologie Authenticode funguje s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], naleznete v tématu [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md).  
+ Digitální certifikáty jsou základní součástí systému ověřování a zabezpečení technologie Authenticode společnosti Microsoft. Technologie Authenticode je standardní součástí operačního systému Windows. Všechny [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace musí být podepsané digitálním certifikátem bez ohledu na to, jestli se účastní nasazení důvěryhodné aplikace. Úplné vysvětlení, jak technologie Authenticode pracuje s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , naleznete v tématu [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md).  
   
 ### <a name="add-the-publisher-to-the-trusted-publishers-store"></a>Přidat vydavatele do úložiště důvěryhodných vydavatelů  
- Aby vaše aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] získala vyšší úroveň důvěryhodnosti, je nutné přidat certifikát jako důvěryhodného vydavatele do každého klientského počítače, na kterém bude aplikace spuštěna. Provádění této úlohy je jednorázová konfigurace. Po dokončení můžete nasadit tolik aplikací [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] podepsaných vaším vydavatelem certifikátu a všechny budou spuštěny s vysokou důvěryhodností.  
+ Aby [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace získala vyšší úroveň důvěryhodnosti, je nutné přidat certifikát jako důvěryhodného vydavatele do každého klientského počítače, na kterém bude aplikace spuštěna. Provádění této úlohy je jednorázová konfigurace. Po dokončení můžete nasadit tolik [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikací podepsaných vaším certifikátem vydavatele podle potřeby a všechny budou spouštěny s vysokou důvěryhodností.  
   
  Pokud nasazujete aplikaci ve spravovaném desktopovém prostředí; například podnikový intranet s operačním systémem Windows; můžete přidat důvěryhodné vydavatele do úložiště klienta vytvořením nového seznamu důvěryhodných certifikátů (CTL) pomocí Zásady skupiny. Další informace najdete v tématu [Vytvoření seznamu důvěryhodných certifikátů pro objekt Zásady skupiny](https://technet.microsoft.com/library/2c03582f-00b2-43e5-ae1d-493894ad0fd7).  
   
  Pokud nechcete aplikaci nasazovat do spravovaného desktopového prostředí, máte k dispozici následující možnosti pro přidání certifikátu do úložiště důvěryhodných vydavatelů:  
   
-- Obor názvů <xref:System.Security.Cryptography?displayProperty=fullName>.  
+- <xref:System.Security.Cryptography?displayProperty=fullName>Obor názvů.  
   
-- CertMgr. exe, který je součástí aplikace Internet Explorer a je proto v systému Windows 98 a všech novějších verzích. Další informace najdete v tématu [certmgr. exe (nástroj Certificate Manager)](https://msdn.microsoft.com/library/7e953b43-1374-4bbc-814f-53ca1b6b52bb).  
+- CertMgr.exe, která je součástí aplikace Internet Explorer a je proto v systému Windows 98 a všech novějších verzích. Další informace najdete v tématu [Certmgr.exe (nástroj Správce certifikátů)](https://msdn.microsoft.com/library/7e953b43-1374-4bbc-814f-53ca1b6b52bb).  
   
 ### <a name="create-a-clickonce-application"></a>Vytvoření aplikace ClickOnce  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace je [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] klientská aplikace v kombinaci se soubory manifestu, které popisují aplikaci a poskytují parametry instalace. Program můžete převést do [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace pomocí příkazu **publikovat** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Případně můžete vygenerovat všechny soubory potřebné pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení pomocí nástrojů, které jsou součástí [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Podrobný postup nasazení [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Aplikace je [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] klientská aplikace kombinovaná se soubory manifestu, které popisují aplikaci a poskytují parametry instalace. Program můžete převést do [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace pomocí příkazu **publikovat** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Případně můžete vygenerovat všechny soubory potřebné pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení pomocí nástrojů, které jsou součástí nástroje [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] . Podrobné pokyny k [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení najdete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  
   
- Nasazení důvěryhodných aplikací je specifické pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]a lze je používat pouze s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikacemi.  
+ Nasazení důvěryhodných aplikací je specifické pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] a lze je používat pouze s [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikacemi.  
   
 ### <a name="sign-the-deployment"></a>Podepsat nasazení  
- Po získání certifikátu ho musíte použít k podepsání vašeho nasazení. Pokud nasazujete aplikaci pomocí Průvodce publikováním [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], průvodce automaticky vygeneruje testovací certifikát, pokud jste nezadali certifikát sami. K poskytnutí certifikátu poskytnutého certifikační autoritou ale můžete použít také okno [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Návrháře projektu.  Viz také [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) nebo [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)).  
+ Po získání certifikátu ho musíte použít k podepsání vašeho nasazení. Pokud nasazujete aplikaci pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Průvodce publikováním, průvodce automaticky vygeneruje testovací certifikát, pokud jste nezadali certifikát sami. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]K poskytnutí certifikátu poskytnutého certifikační autoritou ale můžete použít také okno Návrháře projektu.  Viz také [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) nebo [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](https://msdn.microsoft.com/library/31kztyey\(v=vs.110\)).  
   
 > [!CAUTION]
 > Nedoporučujeme, aby se aplikace nasadila s testovacím certifikátem.  
   
- Můžete také podepsat aplikaci pomocí nástrojů Mage. exe nebo MageUI. exe SDK. Další informace naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Úplný seznam možností příkazového řádku souvisejících s podepisováním nasazení najdete v tématu [Mage. exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1).  
+ Aplikaci můžete podepsat také pomocí nástrojů Mage.exe nebo MageUI.exe SDK. Další informace naleznete v tématu [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Úplný seznam možností příkazového řádku souvisejících s podepisováním nasazení najdete v tématu [Mage.exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1).  
   
 ### <a name="publish-the-application"></a>Publikování aplikace  
- Jakmile budete mít podepsané [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestů, aplikace je připravena k publikování do svého umístění instalace. Umístění instalace může být webovým serverem, sdílenou složkou nebo místním diskem. Při prvním přístupu klienta k manifestu nasazení musí správce vztahu důvěryhodnosti zvolit, zda byla aplikace [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] udělena autoritě nebo aby neběžela na vyšší úrovni vztahu důvěryhodnosti nainstalovaného důvěryhodného vydavatele. Správce vztahu důvěryhodnosti tuto volbu provede porovnáním certifikátu použitého k podepsání nasazení s certifikáty uloženými v důvěryhodném úložišti vydavatelů klienta. Pokud správce vztahu důvěryhodnosti najde shodu, aplikace se spustí s vysokou důvěryhodností.  
+ Jakmile budete mít podepsané [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifesty, aplikace je připravena k publikování do umístění instalace. Umístění instalace může být webovým serverem, sdílenou složkou nebo místním diskem. Při prvním přístupu klienta k manifestu nasazení musí správce vztahu důvěryhodnosti zvolit, zda byla [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci udělena autoritě nebo aby neběžela na vyšší úrovni vztahu důvěryhodnosti nainstalovaného důvěryhodného vydavatele. Správce vztahu důvěryhodnosti tuto volbu provede porovnáním certifikátu použitého k podepsání nasazení s certifikáty uloženými v důvěryhodném úložišti vydavatelů klienta. Pokud správce vztahu důvěryhodnosti najde shodu, aplikace se spustí s vysokou důvěryhodností.  
   
 ## <a name="trusted-application-deployment-and-permission-elevation"></a>Nasazení důvěryhodné aplikace a zvýšení oprávnění  
  Pokud aktuální Vydavatel není důvěryhodný vydavatel, správce vztahu důvěryhodnosti použije zvýšení oprávnění k dotazování uživatele na to, jestli chce udělit aplikaci zvýšená oprávnění. Pokud správce zakáže zvýšení oprávnění, aplikace ale nemůže získat oprávnění ke spuštění. Aplikace nebude spuštěna a uživateli se nezobrazí žádné oznámení. Další informace o zvýšení oprávnění najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).  
   
 ## <a name="limitations-of-trusted-application-deployment"></a>Omezení nasazení důvěryhodné aplikace  
- Nasazení důvěryhodné aplikace můžete použít k udělení zvýšené důvěryhodnosti [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikacím nasazeným přes web nebo prostřednictvím podnikové sdílení souborů. Nemusíte používat nasazení důvěryhodných aplikací pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikací distribuovaných na disku CD, protože ve výchozím nastavení jsou těmto aplikacím udělený úplný vztah důvěryhodnosti.  
+ Nasazení důvěryhodné aplikace můžete použít k udělení zvýšené důvěryhodnosti [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikacím nasazeným přes web nebo prostřednictvím podnikové sdílené složky. Nemusíte používat důvěryhodné nasazení aplikací pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace distribuované na disku CD, protože ve výchozím nastavení jsou těmto aplikacím udělený úplný vztah důvěryhodnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [Mage. exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
+ [Mage.exe (Manifest Generation and Editing Tool)](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
  [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)

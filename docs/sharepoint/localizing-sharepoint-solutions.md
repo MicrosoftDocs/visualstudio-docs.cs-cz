@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0a7b04ab1f77eba15f2bc617f89514a8d0952674
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017140"
 ---
 # <a name="localize-sharepoint-solutions"></a>Lokalizace řešení služby SharePoint
@@ -108,7 +109,7 @@ $Resources:String ID
 ### <a name="localize-code"></a>Lokalizovat kód
  Kromě lokalizace řetězců a [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] značek funkcí je také nutné lokalizovat řetězce zpráv a chybové řetězce, které se zobrazí v kódu řešení. Lokalizované informativní a chybové zprávy jsou obsaženy v satelitních sestaveních. Satelitní sestavení obsahují řetězce, které jsou viditelné uživatelům, například [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] textové a výstupní zprávy, jako jsou výjimky.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]používá standardní .NET Framework hub a paprskový model. Centrum nebo sestavení hlavní aplikace obsahuje výchozí jazykové prostředky. Paprsky nebo satelitní sestavení obsahují prostředky specifické pro jazyk. Další informace najdete v tématu [balení a nasazení prostředků](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Satelitní sestavení jsou zkompilována ze souborů prostředků (*. resx*). Když do projektu a balíčku řešení přidáte soubory prostředků pro konkrétní jazyk, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkompiluje soubory prostředků do satelitních sestavení s názvem *{Project Name} .resources.dll*.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] používá standardní .NET Framework hub a paprskový model. Centrum nebo sestavení hlavní aplikace obsahuje výchozí jazykové prostředky. Paprsky nebo satelitní sestavení obsahují prostředky specifické pro jazyk. Další informace najdete v tématu [balení a nasazení prostředků](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Satelitní sestavení jsou zkompilována ze souborů prostředků (*. resx*). Když do projektu a balíčku řešení přidáte soubory prostředků pro konkrétní jazyk, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] zkompiluje soubory prostředků do satelitních sestavení s názvem *{Project Name} .resources.dll*.
 
  Stejně jako u značek ASPX můžete lokalizovat kód aplikace SharePoint přidáním samostatných prostředků souborových položek projektu do projektu; jeden pro výchozí jazyk a jeden pro každý lokalizovaný jazyk. Jak již bylo zmíněno dříve, pokud již máte soubory prostředků pro lokalizaci značek ASPX, můžete je znovu použít pro lokalizaci kódu. Pokud potřebujete vytvořit soubory prostředků, pojmenujte soubor prostředků výchozího jazyka názvem vaší volby, který je připojený s příponou *. resx* . Pojmenujte lokalizované soubory prostředků se stejným názvem, který je připojený k jazykově specifické jazykové verzi [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Nastavte vlastnost Akce sestavení každého souboru prostředků na integrovaný prostředek, aby bylo možné vytvořit satelitní sestavení prostředků.
 
@@ -127,7 +128,7 @@ HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")
 
  V odvozené třídě odkaz na ID řetězce ze souboru prostředků a objektu ResourceManager pro získání lokalizované hodnoty pro ID řetězce. Vrátí tuto hodnotu k atributu editoru vlastností.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: Lokalizace funkce](../sharepoint/how-to-localize-a-feature.md)
 - [Postupy: lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)
 - [Postupy: Lokalizace kódu](../sharepoint/how-to-localize-code.md)

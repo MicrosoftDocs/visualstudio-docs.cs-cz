@@ -1,5 +1,5 @@
 ---
-title: Kontextové parametry | Dokumentace Microsoftu
+title: Kontextové parametry | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,58 +12,58 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 679bf567d2f44564d31d70b62c8663e665e1ea65
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697290"
 ---
 # <a name="context-parameters"></a>Kontextové parametry
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE), můžete přidat průvodce, kteří **nový projekt**, **přidat novou položku**, nebo **přidat dílčí projekt** dialogových oknech. Přidání průvodců jsou k dispozici na **souboru** nabídek nebo kliknutím pravým tlačítkem myši projekt v **Průzkumníka řešení**. Integrovaného vývojového prostředí předá parametr kontextu pro implementaci průvodce. Kontextové parametry definovat stav projektu při integrovaném vývojovém prostředí volá průvodce.  
+V [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaném vývojovém prostředí (IDE) můžete přidat průvodce do dialogového okna **Nový projekt**, **Přidat novou položku**nebo **Přidat dílčí projekt** . Přidaní průvodci jsou k dispozici v nabídce **soubor** nebo kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení**. Rozhraní IDE předá parametry kontextu implementaci průvodce. Kontextové parametry definují stav projektu, když rozhraní IDE zavolá průvodce.  
   
- Spuštění rozhraní IDE Průvodce nastavením <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> příznak při volání funkce rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> metodu pro projekt. Pokud nastavíte, projekt musíte zajistit, aby `IVsExtensibility::RunWizardFile` má být spuštěna s použitím Průvodce registrovaný název nebo identifikátor GUID a další kontextové parametry, které se předá rozhraní IDE.  
+ Rozhraní IDE spustí Průvodce nastavením <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> příznaku v volání rozhraní IDE do <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> metody pro projekt. Při nastavení musí projekt způsobit `IVsExtensibility::RunWizardFile` spuštění metody pomocí registrovaného názvu průvodce nebo identifikátoru GUID a dalších kontextových parametrů, které do něj rozhraní IDE předává.  
   
 ## <a name="context-parameters-for-new-project"></a>Kontextové parametry pro nový projekt  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`WizardType`|Registrovaný typ průvodce (<xref:EnvDTE.Constants.vsWizardNewProject>) nebo identifikátor GUID, který určuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] je implementace, identifikátor GUID pro Průvodce {0F90E1D0-4999-11D1-B6D1-00A0C90F2744}.|  
+|`WizardType`|Registrovaný typ průvodce ( <xref:EnvDTE.Constants.vsWizardNewProject> ) nebo identifikátor GUID, který označuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] implementaci je identifikátor GUID pro Průvodce {0F90E1D0-4999-11D1-B6D1-00A0C90F2744}.|  
 |`ProjectName`|Řetězec, který je jedinečný [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] název projektu.|  
-|`LocalDirectory`|Místní umístění pracovní soubory projektu.|  
-|`InstallationDirectory`|Cestu k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
-|`FExclusive`|Logický příznak, který označuje, že by se měla zavřít projekt otevřete řešení.|  
-|`SolutionName`|Název souboru řešení bez část adresáře a přípony .sln. Název souboru .suo také vytvoření s použitím `SolutionName`. Pokud tento argument není prázdný řetězec, použije průvodce <xref:EnvDTE._Solution.Create%2A> před přidáním projektu pomocí <xref:EnvDTE._Solution.AddFromTemplate%2A>. Pokud tento název je prázdný řetězec, použijte <xref:EnvDTE._Solution.AddFromTemplate%2A> bez volání <xref:EnvDTE._Solution.Create%2A>.|  
-|`Silent`|Logická hodnota, která označuje, zda by průvodce měl běžet tiše jakoby **Dokončit** bylo kliknuto (`TRUE`).|  
+|`LocalDirectory`|Místní umístění pracovních souborů projektu.|  
+|`InstallationDirectory`|Cesta k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
+|`FExclusive`|Příznak Boolean, který označuje, že projekt by měl zavřít otevřená řešení.|  
+|`SolutionName`|Název souboru řešení bez části adresáře nebo rozšíření. sln Název souboru. suo je také vytvořen pomocí `SolutionName` . Pokud tento argument není prázdným řetězcem, průvodce použije <xref:EnvDTE._Solution.Create%2A> před přidáním projektu s <xref:EnvDTE._Solution.AddFromTemplate%2A> . Pokud je tento název prázdným řetězcem, použijte <xref:EnvDTE._Solution.AddFromTemplate%2A> bez volání <xref:EnvDTE._Solution.Create%2A> .|  
+|`Silent`|Logická hodnota, která označuje, zda má být průvodce spuštěn tiše jako při kliknutí na tlačítko **Dokončit** `TRUE` .|  
   
 ## <a name="context-parameters-for-add-new-item"></a>Kontextové parametry pro přidání nové položky  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`WizardType`|Registrovaný typ průvodce (<xref:EnvDTE.Constants.vsWizardAddItem>) nebo identifikátor GUID, který určuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] je implementace, identifikátor GUID pro Průvodce {0F90E1D1-4999-11D1-B6D1-00A0C90F2744}.|  
+|`WizardType`|Registrovaný typ průvodce ( <xref:EnvDTE.Constants.vsWizardAddItem> ) nebo identifikátor GUID, který označuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] implementaci je identifikátor GUID pro Průvodce {0F90E1D1-4999-11D1-B6D1-00A0C90F2744}.|  
 |`ProjectName`|Řetězec, který je jedinečný [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] název projektu.|  
 |`ProjectItems`|Místní umístění, které obsahuje pracovní soubory projektu.|  
-|`ItemName`|Název položky, která se má přidat. Tento název je výchozí název souboru nebo název souboru, který uživatel zadá z **přidat položky** dialogové okno. Příznaky, které jsou nastaveny v souboru .vsdir je podle názvu. Název může obsahovat hodnotu null.|  
-|`InstallationDirectory`|Cestu k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
-|`Silent`|Logická hodnota, která označuje, zda by průvodce měl běžet tiše jakoby **Dokončit** bylo kliknuto (`TRUE`).|  
+|`ItemName`|Název položky, která se má přidat Tento název je buď výchozím názvem souboru, nebo názvem souboru, který uživatel používá v dialogovém okně **Přidat položky** . Název je založen na příznacích, které jsou nastaveny v souboru. vsdir. Název může být hodnota null.|  
+|`InstallationDirectory`|Cesta k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
+|`Silent`|Logická hodnota, která označuje, zda má být průvodce spuštěn tiše jako při kliknutí na tlačítko **Dokončit** `TRUE` .|  
   
 ## <a name="context-parameters-for-add-sub-project"></a>Kontextové parametry pro přidat dílčí projekt  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`WizardType`|Registrovaný typ průvodce (<xref:EnvDTE.Constants.vsWizardAddSubProject>) nebo identifikátor GUID, který určuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] je implementace, identifikátor GUID pro Průvodce {0F90E1D2-4999-11D1-B6D1-00A0C90F2744}.|  
+|`WizardType`|Registrovaný typ průvodce ( <xref:EnvDTE.Constants.vsWizardAddSubProject> ) nebo identifikátor GUID, který označuje typ průvodce. V [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] implementaci je identifikátor GUID pro Průvodce {0F90E1D2-4999-11D1-B6D1-00A0C90F2744}.|  
 |`ProjectName`|Řetězec, který je jedinečný [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] název projektu.|  
-|`ProjectItems`|Ukazatel `ProjectItems` kolekce, ve kterém funguje průvodce. Tento ukazatel je předán na základě výběru hierarchie projektu průvodce. Uživatel vybere obvykle složku, do které chcete vložit položky a pak zavolá projektu **přidat položku** dialogové okno.|  
-|`LocalDirectory`|Místní umístění pracovní soubory projektu.|  
-|`ItemName`|Název položky, která se má přidat. Tento název je výchozí název souboru nebo název souboru, který uživatel zadá z **přidat položky** dialogové okno. Příznaky, které jsou nastaveny v souboru .vsdir je podle názvu. Název může obsahovat hodnotu null.|  
-|`InstallationDirectory`|Cestu k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
-|`Silent`|Logická hodnota, která označuje, zda by průvodce měl běžet tiše jakoby **Dokončit** bylo kliknuto (`TRUE`).|  
+|`ProjectItems`|Ukazatel na `ProjectItems` kolekci, na které Průvodce pracuje. Tento ukazatel se předává průvodci na základě výběru hierarchie projektu. Uživatel obvykle vybere složku, do které chcete položku vložit, a potom zavolá dialogové okno **Přidat položku** projektu.|  
+|`LocalDirectory`|Místní umístění pracovních souborů projektu.|  
+|`ItemName`|Název položky, která se má přidat Tento název je buď výchozím názvem souboru, nebo názvem souboru, který uživatel používá v dialogovém okně **Přidat položky** . Název je založen na příznacích, které jsou nastaveny v souboru. vsdir. Název může být hodnota null.|  
+|`InstallationDirectory`|Cesta k adresáři [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je instalace.|  
+|`Silent`|Logická hodnota, která označuje, zda má být průvodce spuštěn tiše jako při kliknutí na tlačítko **Dokončit** `TRUE` .|  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>   
  [Vlastní parametry](../../extensibility/internals/custom-parameters.md)   
- [Průvodce](../../extensibility/internals/wizards.md)   
- [Průvodce (. Soubor vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)   
+ [Průvodc](../../extensibility/internals/wizards.md)   
+ [Průvodce (. VSZ – soubor](../../extensibility/internals/wizard-dot-vsz-file.md)   
  [Kontextové parametry pro spouštění průvodců](https://msdn.microsoft.com/library/051a10f4-9e45-4604-b344-123044f33a24)

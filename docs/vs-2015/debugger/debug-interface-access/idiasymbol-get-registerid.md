@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_registerId | Microsoft Docs
+title: 'IDiaSymbol:: get_registerId | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 580637cf1058c8bfbd10ac7812e59c802830d95e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64817418"
 ---
-# <a name="idiasymbolgetregisterid"></a>IDiaSymbol::get_registerId
+# <a name="idiasymbolget_registerid"></a>IDiaSymbol::get_registerId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte register označení umístění při [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je nastavena na `LocIsEnregistered`.  
+Načte specifikátor registrace umístění, pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) nastaven na hodnotu `LocIsEnregistered` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +35,16 @@ HRESULT get_registerId ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu registru označení umístění.  
+ mimo Vrátí specifikátor registrace umístění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud symbol je relativní vzhledem k registru, to znamená, pokud symbolu [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je nastavena na `LocIsRegRel`, použijte `get_registerId` metoda za nímž následuje volání [idiasymbol::get_offset –](../../debugger/debug-interface-access/idiasymbol-get-offset.md) metodu k získání posun z registru, kde se nachází symbolu.  
+ Pokud je symbol relativní vzhledem k registru, to znamená, že pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) symbolu nastaven na `LocIsRegRel` , použijte `get_registerId` metodu následovanou voláním metody [IDiaSymbol:: get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) pro získání posunu od registru, kde je symbol umístěn.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

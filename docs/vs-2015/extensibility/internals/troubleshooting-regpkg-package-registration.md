@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s registrací balíčku RegPkg | Dokumentace Microsoftu
+title: Řešení potíží s registrací balíčku RegPkg | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,22 +11,22 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 241975e475252a18d5e5a91c6e8c4fb40c067a95
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441190"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64807455"
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>Řešení potíží s registrací balíčku RegPkg
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!NOTE]
-> Preferovaný způsob, jak zaregistrovat balíčky v sadě Visual Studio je pomocí souborů .pkgdef. To umožňuje nasazení rozšíření bez nutnosti přístupu k registru systému. Pkgdef soubory jsou vytvořeny pomocí [nástroj CreatePkgDef](../../extensibility/internals/createpkgdef-utility.md).  
+> Upřednostňovaným způsobem, jak registrovat balíčky v aplikaci Visual Studio, je použití souborů. pkgdef. To umožňuje nasazení rozšíření bez nutnosti přístupu k systémovému registru. Soubory pkgdef se vytvářejí pomocí [nástroje CreatePkgDef](../../extensibility/internals/createpkgdef-utility.md).  
   
- K registraci balíčku RegPkg v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], musíte použít verzi RegPkg, která je vhodná pro váš balíček.  
+ Pokud chcete balíček zaregistrovat pomocí RegPkg v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , musíte použít verzi RegPkg, která je pro váš balíček vhodná.  
   
-## <a name="regpkg-versions-related-to-package-versions"></a>Související s verzí balíčku verze RegPkg  
- Existují dvě verze RegPkg. Je součástí jedné verze [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pomocí této verze zaregistrovat balíčky, které jsou sestavené pomocí jedné z následujících sestavení:  
+## <a name="regpkg-versions-related-to-package-versions"></a>Verze RegPkg související s verzemi balíčků  
+ Existují dvě verze RegPkg. V systému je obsažena jedna verze [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Tuto verzi použijte k registraci balíčků, které byly vytvořeny pomocí jednoho z následujících sestavení:  
   
 1. Microsoft.VisualStudioShell.9.0.dll  
   
@@ -34,9 +34,9 @@ ms.locfileid: "63441190"
   
 3. Microsoft.VisualStudioShell.11.0.dll  
   
-   Balíčky, které jsou sestavené pomocí předchozích sestavení Microsoft.VisualStudio.Shell.dll se nemůže zaregistrovat.  
+   Nemůže registrovat balíčky, které byly sestaveny pomocí dřívějšího sestavení Microsoft.VisualStudio.Shell.dll.  
   
-   V předchozích verzích RegPkg můžete zaregistrovat balíčky, které jsou sestavené s využitím Microsoft.VisualStudio.Shell.dll sestavení. Ale se nemůže zaregistrovat balíčky sestavené s použitím novější verze tohoto sestavení.  
+   Starší verze RegPkg mohou registrovat balíčky, které byly vytvořeny pomocí sestavení Microsoft.VisualStudio.Shell.dll. Nicméně nemůže registrovat balíčky sestavené pomocí novějších verzí tohoto sestavení.  
   
 ## <a name="see-also"></a>Viz také  
- [Vydání produktu](../../misc/releasing-a-visual-studio-integration-product.md)
+ [Uvolnění produktu](../../misc/releasing-a-visual-studio-integration-product.md)

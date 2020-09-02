@@ -1,5 +1,5 @@
 ---
-title: iPropertyProxyeeside::GetmanagedViewerCreationData | Dokumenty společnosti Microsoft
+title: 'IPropertyProxyEESide:: GetManagedViewerCreationData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2e72922b348c8744f10037e199e93f735ff4be8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714961"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-Načte informace o prohlížeči pro tento typ vlastnosti, aby mohl vytvořit konkretizovat tento prohlížeč.
+Načte informace o prohlížeči pro tento typ vlastnosti, aby bylo možné vytvořit instanci tohoto prohlížeče.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,28 +51,28 @@ int GetManagedViewerCreationData(
 
 ## <a name="parameters"></a>Parametry
 `assemName`\
-[out] Vrátí název sestavení, které drží tento objekt.
+mimo Vrátí název sestavení, který uchovává tento objekt.
 
 `assemBytes`\
-[out] Vrátí objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující bajty sestavení tohoto objektu (toto je hodnota null, pokud nejsou k dispozici žádné bajty).
+mimo Vrátí objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující bajty sestavení tohoto objektu (Jedná se o hodnotu null, pokud nejsou k dispozici žádné bajty).
 
 `assemPdb`\
-[out] Vrátí `IEEDataStorage` objekt obsahující informace o úložišti symbolů pro tento objekt (toto je hodnota null, pokud není k dispozici žádné úložiště symbolů).
+mimo Vrátí `IEEDataStorage` objekt, který obsahuje informace o úložišti symbolů pro tento objekt (hodnota null, pokud není k dispozici žádné úložiště symbolů).
 
 `className`\
-[out] Vrátí název třídy obsahující tento objekt.
+mimo Vrátí název třídy obsahující tento objekt.
 
 `alr`\
-[out] Vrátí hodnotu z výčtu [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) označující umístění sestavení.
+mimo Vrátí hodnotu z výčtu [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) , která označuje umístění sestavení.
 
 `replacementOk`\
-[out] Vrátí nenulovou hodnotu (`TRUE`), pokud lze hodnotu tohoto objektu změnit; zero`FALSE`( ), pokud je objekt jen pro čtení.
+mimo Vrátí nenulovou `TRUE` hodnotu (), pokud hodnota tohoto objektu může být změněna; nula ( `FALSE` ), pokud je objekt určen jen pro čtení.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda se používá typ vizualizéry k vytvoření instance spravovaného prohlížeče.
+ Tuto metodu používá typ vizualizace k vytvoření instance spravovaného prohlížeče.
 
 ## <a name="see-also"></a>Viz také
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

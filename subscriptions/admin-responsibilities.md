@@ -8,10 +8,10 @@ ms.date: 07/20/2019
 ms.topic: conceptual
 description: Přečtěte si o zodpovědnostech správců předplatných.
 ms.openlocfilehash: ff849bbaa1a301979228c558565dc3f2ed0125ad
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238826"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědností správce

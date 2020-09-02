@@ -1,5 +1,5 @@
 ---
-title: Výběr instalačního adresáře pro balíček VSPackage | Dokumentace Microsoftu
+title: Volba instalačního adresáře pro VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,57 +11,57 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c4100c045181f32e51abcc59116a69cad6cc33b5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697250"
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>Výběr instalačního adresáře pro balíček VSPackage
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V systému souborů uživatele musí být VSPackage a jeho podpůrné soubory. Umístění závisí na, jestli sady VSPackage je spravovaná nebo nespravovaná, schéma vytváření verzí vedle sebe a výběru uživatelů.  
+VSPackage a jeho podpůrné soubory musí být v systému souborů uživatele. Umístění závisí na tom, jestli je VSPackage spravované nebo nespravované, vaše souběžné schéma správy verzí a volba uživatele.  
   
-## <a name="unmanaged-vspackages"></a>Nespravované rozšíření VSPackages  
- Nespravované VSPackage je server COM, který můžete nainstalovat do libovolného umístění. Registrační informace musí přesně odráží jeho umístění. Instalační program uživatelského rozhraní (UI) by měly poskytnout výchozí umístění jako podadresář vlastnosti Instalační služby systému Windows ProgramFilesFolder. Příklad:  
+## <a name="unmanaged-vspackages"></a>Nespravované VSPackage  
+ Nespravovaný VSPackage je server COM, který se dá nainstalovat do libovolného umístění. Informace o jeho registraci musí přesně odpovídat jeho umístění. Uživatelské rozhraní instalačního programu (UI) by mělo poskytovat výchozí umístění jako podadresář vlastnosti Složkaprogramfiles Instalační služba systému Windows. Příklad:  
   
- [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\  
+ Složkaprogramfiles MyCompany\MyVSPackageProduct\V1.0\  
   
- Uživatel by měl být může změnit výchozí adresář, aby uživatelé, kteří ponechat malý spouštěcí oddíl a instalaci aplikace a nástroje na jiný svazek.  
+ Uživatel by měl mít povoleno změnit výchozí adresář tak, aby vyhovoval uživatelům, kteří mají malý spouštěcí oddíl a chtějí instalovat aplikace a nástroje na jiný svazek.  
   
- Pokud schéma vedle sebe používá VSPackage označené verzí, můžete ukládat různé verze podadresářů. Příklad:  
+ Pokud vaše souběžné schéma používá VSPackage se správou verzí, můžete k ukládání různých verzí použít podadresáře. Příklad:  
   
- [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2002\  
+ Složkaprogramfiles MyCompany\MyVSPackageProduct\V1.0\2002\  
   
- [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2003\  
+ Složkaprogramfiles MyCompany\MyVSPackageProduct\V1.0\2003\  
   
- [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2005\  
+ Složkaprogramfiles MyCompany\MyVSPackageProduct\V1.0\2005\  
   
-## <a name="managed-vspackages"></a>Spravovaná rozšíření VSPackages  
- Spravovaná rozšíření VSPackages můžete také nainstalovat do libovolného umístění. Nicméně měli byste zvážit, vždy je nainstalovat do globální mezipaměti sestavení (GAC), abyste zkrátili dobu načítání sestavení. Protože spravovaných rozšíření VSPackages jsou vždy sestavení se silným názvem, je instalovat do mezipaměti GAC znamená, že jejich ověření podpisu se silným názvem trvá pouze v době instalace. Sestavení se silným názvem nainstalované jinde v systému souborů musí mít jejich podpisy ověřit pokaždé, když jsou načteny. Pokud provádíte instalaci spravované rozšíření VSPackages v mezipaměti GAC, použijte nástroj regpkg **/Assembly** přepínač tak, aby zapisovat položky registru odkazuje na sestavení silným názvem.  
+## <a name="managed-vspackages"></a>Spravované VSPackage  
+ Spravované VSPackage se dají nainstalovat taky v libovolném umístění. Měli byste však zvážit, že byste je vždy nainstalovali do globální mezipaměti sestavení (GAC), aby se snížila doba načítání sestavení. Vzhledem k tomu, že spravované sady VSPackage jsou vždy silně pojmenované sestavení, jejich instalace v mezipaměti GAC znamená, že jejich ověření podpisu silného názvu trvá pouze v době instalace. Sestavení se silným názvem nainstalovaná jinde v systému souborů musí mít při každém načtení signatury ověřené. Při instalaci spravovaných VSPackage do GAC použijte přepínač **/Assembly je** nástroje RegPkg, který zapíše položky registru ukazující na silný název sestavení.  
   
- Pokud nainstalujete spravovaných rozšíření VSPackages na místě než GAC, postupujte podle starší Rady pro nespravované rozšíření VSPackages zadané pro výběr directory hierarchie. Použijte nástroj regpkg **/ codebase** přepínač tak, aby zapisovat položky registru odkazuje na cestu k sestavení balíčku VSPackage.  
+ Pokud nainstalujete spravované sady VSPackage do jiného umístění než GAC, postupujte podle předchozích rad pro nespravované sady VSPackage pro výběr hierarchií adresářů. Použijte přepínač **/codebase** nástroje RegPkg a zapište položky registru, které odkazují na cestu sestavení VSPackage.  
   
- Další informace najdete v tématu [registrace a zrušení registrace rozšíření VSPackages](../../extensibility/registering-and-unregistering-vspackages.md).  
+ Další informace najdete v tématu [registrace a zrušení registrace VSPackage](../../extensibility/registering-and-unregistering-vspackages.md).  
   
 ## <a name="satellite-dlls"></a>Satelitní knihovny DLL  
- Podle konvence VSPackage satelitní knihovny DLL, které obsahují prostředky pro konkrétní národní prostředí – se nacházejí v podadresářích adresáře balíčku VSPackage. Podadresáře odpovídají hodnotám ID (LCID) národního prostředí.  
+ Podle konvence, satelitní knihovny pro VSPackage, které obsahují prostředky pro konkrétní národní prostředí, jsou umístěny v podadresářích adresáře VSPackage. Podadresáře odpovídají hodnotám ID národního prostředí (LCID).  
   
- [Správa rozšíření VSPackages](../../extensibility/managing-vspackages.md) označuje, že položky registru řídí umístění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] skutečně hledá na VSPackage satelitní knihovny DLL. Nicméně [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se pokouší načíst satelitní knihovny DLL v podadresáři s názvem hodnoty LCID, v uvedeném pořadí:  
+ [Správa sady VSPackage](../../extensibility/managing-vspackages.md) označuje, že ovládací prvek položky registru, kde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ve skutečnosti hledá satelitní knihovnu DLL VSPackage. Nicméně se [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pokusí načíst satelitní knihovnu DLL v podadresáři s názvem pro hodnotu LCID v následujícím pořadí:  
   
-1. Výchozí LCID (VS LCID \1033 například pro angličtinu)  
+1. Výchozí LCID (např. LCID, například \ 1033 pro angličtinu)  
   
-2. Výchozí LCID dílčího výchozí.  
+2. Výchozí LCID s výchozím podjazykem.  
   
-3. Výchozí systémové nastavení LCID.  
+3. Systémové výchozí LCID.  
   
-4. Výchozí systémové nastavení LCID s dílčího výchozí.  
+4. Systémové výchozí LCID s výchozím podjazykem.  
   
-5. USA Angličtina (. \1033 nebo. \0x409).  
+5. Angličtina USA (. \ 1033 nebo .\0x409).  
   
-   Pokud vaše knihovna DLL balíčku VSPackage zahrnuje prostředky a SatelliteDll\DllName registru vstupních bodů, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , pokusí se načíst ve výše uvedeném pořadí.  
+   Pokud knihovna VSPackage DLL obsahuje prostředky a vstupní body registru SatelliteDll\DllName, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pokusí se je načíst v uvedeném pořadí.  
   
 ## <a name="see-also"></a>Viz také  
- [Volba mezi sdíleným a Verzovaným rozšířením VSPackages](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
- [Správa rozšíření VSPackages](../../extensibility/managing-vspackages.md)   
+ [Volba mezi sdílenými a sesprávou verzí VSPackage](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
+ [Správa VSPackage](../../extensibility/managing-vspackages.md)   
  [Registrace spravovaného balíčku](https://msdn.microsoft.com/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

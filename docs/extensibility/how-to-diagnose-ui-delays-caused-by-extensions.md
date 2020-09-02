@@ -7,13 +7,13 @@ ms.author: pozandev
 manager: jillfra
 ms.workload: multiple
 ms.openlocfilehash: e8b35a566eb0f2457d6eb8ae3a33235df2a64cd3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849152"
 ---
-# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Postupy: Diagnostika zpoždění uživatelského rozhraní způsobená rozšířeními
+# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Postupy: Diagnostikování zpoždění uživatelského rozhraní způsobených rozšířeními
 
 Když uživatelské rozhraní přestane reagovat, Visual Studio prohledá volání zásobníku vlákna uživatelského rozhraní počínaje listem a pracuje směrem k základnímu. Pokud sada Visual Studio zjistí, že rámec zásobníku volání patří do modulu, který je součástí nainstalovaného a povoleného rozšíření, zobrazí se oznámení.
 
@@ -43,7 +43,7 @@ Chcete-li diagnostikovat zpoždění uživatelského rozhraní, musíte nejprve 
 
 ## <a name="restart-vs-with-activity-logging-on"></a>Restartování VS s přihlášením aktivity
 
-Visual Studio může generovat "protokol aktivit", který poskytuje informace užitečné při ladění problému. Chcete-li zapnout protokolování aktivit v aplikaci Visual Studio, otevřete aplikaci Visual Studio s možností příkazového řádku `/log`. Po spuštění sady Visual Studio se protokol aktivit uloží do následujícího umístění:
+Visual Studio může generovat "protokol aktivit", který poskytuje informace užitečné při ladění problému. Chcete-li zapnout protokolování aktivit v aplikaci Visual Studio, otevřete aplikaci Visual Studio s `/log` možností příkazového řádku. Po spuštění sady Visual Studio se protokol aktivit uloží do následujícího umístění:
 
 ```DOS
 %APPDATA%\Microsoft\VisualStudio\<vs_instance_id>\ActivityLog.xml
@@ -71,7 +71,7 @@ Chcete-li zastavit shromažďování trasování, jednoduše použijte tlačítk
 
 ## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Projděte si protokol aktivit a Získejte ID zpoždění.
 
-Jak bylo zmíněno dříve, můžete najít protokol aktivit na adrese *%APPDATA%\Microsoft\VisualStudio\<vs_instance_id > \ActivityLog.XML*. Pokaždé, když Visual Studio rozpozná zpoždění uživatelského rozhraní rozšíření, zapíše uzel do protokolu aktivit s `UIDelayNotifications` jako zdroj. Tento uzel obsahuje čtyři části informací o zpoždění uživatelského rozhraní:
+Jak bylo zmíněno dříve, můžete najít protokol aktivit na *%APPDATA%\Microsoft\VisualStudio \<vs_instance_id>\ActivityLog.xml*. Pokaždé, když Visual Studio rozpozná zpoždění uživatelského rozhraní rozšíření, zapíše uzel do protokolu aktivit `UIDelayNotifications` jako zdroj. Tento uzel obsahuje čtyři části informací o zpoždění uživatelského rozhraní:
 
 - ID zpoždění uživatelského rozhraní, pořadové číslo, které jedinečně identifikuje zpoždění uživatelského rozhraní v relaci VS
 - ID relace, které jedinečně identifikuje vaši relaci Visual studia od začátku do ukončení
@@ -102,7 +102,7 @@ Pak otevřete trasovací soubor. Můžete to provést buď pomocí stejné insta
 Pak vyberte trasovací soubor v levém podokně a otevřete ho kliknutím pravým tlačítkem nebo místní nabídky na **otevřít** .
 
 > [!NOTE]
-> Ve výchozím nastavení PerfView vytvoří výstup archivu zip. Když otevřete *Trace. zip*, automaticky dekomprimuje archiv a otevře trasování. Tuto možnost můžete přeskočit zrušením kontroly pole **zip** během shromažďování trasování. Pokud ale plánujete přenos a používání trasování v různých počítačích, důrazně doporučujeme před zrušením kontroly pole **zip** . Bez této možnosti se požadovaná soubory PDB pro sestavení Ngen nebudou doprovázet s trasováním, takže symboly ze sestavení Ngen nebudou na cílovém počítači přeloženy. (Další informace o soubory PDB pro Ngen sestavení najdete v [tomto blogovém příspěvku](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) .)
+> Ve výchozím nastavení PerfView vytvoří výstup archivu zip. Když otevřete *trace.zip*, automaticky dekomprimuje archiv a otevře trasování. Tuto možnost můžete přeskočit zrušením kontroly pole **zip** během shromažďování trasování. Pokud ale plánujete přenos a používání trasování v různých počítačích, důrazně doporučujeme před zrušením kontroly pole **zip** . Bez této možnosti se požadovaná soubory PDB pro sestavení Ngen nebudou doprovázet s trasováním, takže symboly ze sestavení Ngen nebudou na cílovém počítači přeloženy. (Další informace o soubory PDB pro Ngen sestavení najdete v [tomto blogovém příspěvku](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) .)
 
 Zpracování PerfView a otevření trasování může trvat několik minut. Jakmile je trasování otevřené, zobrazí se v něm seznam různých zobrazení.
 
@@ -110,15 +110,15 @@ Zpracování PerfView a otevření trasování může trvat několik minut. Jakm
 
 Nejprve použijeme zobrazení **události** k získání časového rozsahu zpoždění uživatelského rozhraní:
 
-1. Otevřete zobrazení **události** tak, že v trasování vyberete uzel `Events` a vyberete **otevřít** z místní nabídky nebo kliknutím pravým tlačítkem myši.
-2. V levém podokně vyberte "`Microsoft-VisualStudio/ExtensionUIUnresponsiveness`".
+1. Otevřete zobrazení **události** tak, že `Events` v části trasování vyberete uzel a kliknete na **otevřít** v místní nabídce nebo v místní nabídce.
+2. `Microsoft-VisualStudio/ExtensionUIUnresponsiveness`V levém podokně vyberte "".
 3. Stiskněte klávesu ENTER
 
-Výběr se použije a v pravém podokně se zobrazí všechny události `ExtensionUIUnresponsiveness`.
+Výběr se použije a všechny `ExtensionUIUnresponsiveness` události se zobrazí v pravém podokně.
 
 ![Výběr událostí v zobrazení událostí](media/perfview-event-selection.png)
 
-Každý řádek v pravém podokně odpovídá zpoždění uživatelského rozhraní. Událost obsahuje hodnotu "Delay ID", která by se měla shodovat s ID zpoždění v protokolu aktivit z kroku 6. Vzhledem k tomu, že `ExtensionUIUnresponsiveness` je vyvolána na konci zpoždění uživatelského rozhraní, časové razítko události (zhruba) označí čas ukončení zpoždění uživatelského rozhraní. Událost také obsahuje dobu trvání prodlevy. Po spuštění zpoždění uživatelského rozhraní můžeme odčítat dobu trvání od koncového časového razítka a získat tak časové razítko.
+Každý řádek v pravém podokně odpovídá zpoždění uživatelského rozhraní. Událost obsahuje hodnotu "Delay ID", která by se měla shodovat s ID zpoždění v protokolu aktivit z kroku 6. Vzhledem k `ExtensionUIUnresponsiveness` tomu, že je vyvolána na konci zpoždění uživatelského rozhraní, časové razítko události (zhruba) označí čas ukončení zpoždění uživatelského rozhraní. Událost také obsahuje dobu trvání prodlevy. Po spuštění zpoždění uživatelského rozhraní můžeme odčítat dobu trvání od koncového časového razítka a získat tak časové razítko.
 
 ![Výpočet časového rozsahu prodlevy uživatelského rozhraní](media/ui-delay-time-range.png)
 
@@ -137,7 +137,7 @@ Během otevírání zobrazení **zásobníků času vlákna** vyberte proces **d
 V zobrazení **zásobníky času vlákna** v levém horním rohu stránky můžete nastavit časový rozsah na hodnoty, které jsme vypočítali v předchozím kroku, a stisknout **ENTER** , aby se zásobníky upravily na tento časový rozsah.
 
 > [!NOTE]
-> Určení vlákna, které je podprocesem uživatelského rozhraní (spuštění), může být neintuitivní při spuštění shromažďování trasování po otevření sady Visual Studio. Nicméně první prvky v zásobníku uživatelského rozhraní (spuštění) jsou nejvíce pravděpodobně knihovny DLL operačního systému (*Ntdll. dll* a *Kernel32. dll*) následované `devenv!?` a potom `msenv!?`. Tato sekvence může přispět k identifikaci vlákna uživatelského rozhraní.
+> Určení vlákna, které je podprocesem uživatelského rozhraní (spuštění), může být neintuitivní při spuštění shromažďování trasování po otevření sady Visual Studio. Nicméně první prvky v zásobníku uživatelského rozhraní (spouštěcí) vlákna jsou nejpravděpodobnější, že knihovny DLL operačního systému (*ntdll.dll* a *kernel32.dll*) `devenv!?` a potom `msenv!?` . Tato sekvence může přispět k identifikaci vlákna uživatelského rozhraní.
 
  ![Identifikace spouštěcího vlákna](media/ui-delay-startup-thread.png)
 
@@ -156,4 +156,4 @@ PerfView má podrobné pokyny v nabídce **help** , kterou můžete použít k i
 Nové nástroje Visual Studio static Analyzer for Extensions (balíček NuGet [tady](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)) poskytují pokyny k osvědčeným postupům pro psaní efektivních rozšíření. Podívejte se na seznam [analyzátorů vs SDK](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) a [analyzátorů vláken](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md).
 
 > [!NOTE]
-> Pokud se vám nedaří vyřešit nereagující z důvodu závislostí, které neovládáte (například pokud vaše rozšíření musí volat synchronní služby VS Services ve vlákně uživatelského rozhraní), chceme o něm získat informace. Pokud jste členem našeho programu Visual Studio partner program, můžete nás kontaktovat odesláním žádosti o podporu pro vývojáře. V opačném případě použijte k odeslání vašeho názoru nástroj nahlásit problém a přidejte `"Extension UI Delay Notifications"` do nadpisu. Uveďte také podrobný popis analýzy.
+> Pokud se vám nedaří vyřešit nereagující z důvodu závislostí, které neovládáte (například pokud vaše rozšíření musí volat synchronní služby VS Services ve vlákně uživatelského rozhraní), chceme o něm získat informace. Pokud jste členem našeho programu Visual Studio partner program, můžete nás kontaktovat odesláním žádosti o podporu pro vývojáře. V opačném případě použijte k odeslání zpětné vazby a zahrnutí do názvu nástroj nahlásit problém `"Extension UI Delay Notifications"` . Uveďte také podrobný popis analýzy.

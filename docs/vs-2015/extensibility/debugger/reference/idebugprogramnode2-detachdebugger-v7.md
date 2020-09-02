@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::DetachDebugger_V7 | Dokumentace Microsoftu
+title: IDebugProgramNode2::D etachDebugger_V7 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 25c60bc42895a0527f1638dada5a28a1631314e0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63417883"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64806614"
 ---
-# <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
+# <a name="idebugprogramnode2detachdebugger_v7"></a>IDebugProgramNode2::DetachDebugger_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-ZASTARALÉ. NEPOUŽÍVEJTE.  
+Zastaralé. NEPOUŽÍVEJTE.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT DetachDebugger_V7 (   
@@ -38,14 +38,14 @@ int DetachDebugger_V7 ();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Implementace by měla vždy vrátit `E_NOTIMPL`.  
+ Implementace by měla vždycky vracet `E_NOTIMPL` .  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!WARNING]
-> Od verze [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], tato metoda se už nepoužívá a by měl vždy vrátit `E_NOTIMPL`.  
+> Počínaje verzí se [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] Tato metoda už nepoužívá a měla by vždycky vracet `E_NOTIMPL` .  
   
- Tato metoda je volána, když ladicí program se neočekávaně ukončí. Když tato metoda je volána, DE měla pokračovat program, jakoby z něj odpojit uživatele. Poslat žádné další události ladění. Program by měl být ve stavu, ve kterém je připojitelná z jiné instance ladicího programu.  
+ Tato metoda se volá, když se ladicí program neočekávaně ukončí. Při volání této metody by měl DE obnovit program, jako by byl uživatel odpojen. Nejsou odesílány žádné další události ladění. Program by měl být ve stavu, ve kterém je připojen z jiné instance ladicího programu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,5 +1,5 @@
 ---
-title: Optimalizace nabídky a příkazy nástrojů | Dokumentace Microsoftu
+title: Optimalizace příkazů nabídky a panelu nástrojů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,24 +15,24 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 25a721c77269837ad8d158db186274586ad638df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150812"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>Optimalizace příkazů nabídky a panelu nástrojů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Přidání rozšíření VSPackages a jejich odpovídajících příkazů [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] může způsobit, že přeplněném uživatelského rozhraní. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje metody přehlednosti příkaz uživatelského rozhraní.  
+Přidání VSPackage a jejich odpovídajících příkazů, které mohou způsobit přeplněné [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelské rozhraní. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] poskytuje způsoby, jak pomůžou minimalizovat nejasnost příkazů uživatelského rozhraní.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Zpřístupnění příkazů](../../extensibility/internals/making-commands-available.md)  
- Obsahuje obecné pokyny pro minimalizaci nakupením [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelského rozhraní při přidání rozšíření VSPackages.  
+ Poskytuje obecné pokyny pro minimalizaci přeplnění [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uživatelského rozhraní při přidávání VSPackage.  
   
  [Pokyny pro umístění](../../extensibility/internals/command-placement-guidelines.md)  
- Poskytuje konkrétní pokyny pro implementaci VSPackage podle velikosti sadu příkazů.  
+ Poskytuje konkrétní pokyny pro implementaci VSPackage podle velikosti sady příkazů.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md)  
- Vysvětluje, jak vytvářet uživatelské rozhraní, která zahrnuje nabídky, panely nástrojů a příkaz pole se seznamem.
+ Vysvětluje, jak vytvořit uživatelské rozhraní, které obsahuje nabídky, panely nástrojů a pole se seznamem příkazů.

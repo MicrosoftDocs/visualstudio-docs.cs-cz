@@ -1,5 +1,5 @@
 ---
-title: Identifikátory GUID a ID nabídky | Dokumentace Microsoftu
+title: Identifikátory GUID a ID nabídek | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -16,128 +16,128 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d10549867c355018e301afa14cf2ba3a8f113e4d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436297"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64807158"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Identifikátory GUID a ID nabídek sady Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto téma uvádí hodnoty GUID a ID nabídek a skupin v řádku nabídek sady Visual Studio. Tyto hodnoty jsou definovány v souborech .vsct, které se instalují jako součást sady Visual Studio SDK. Další informace najdete v tématu [IDE-Defined příkazy, nabídky a skupiny](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
+V tomto tématu je uveden výčet hodnot GUID a ID nabídek a skupin na řádku nabídek sady Visual Studio. Tyto hodnoty jsou definovány v souborech. vsct, které jsou nainstalovány jako součást sady Visual Studio SDK. Další informace naleznete v tématu [příkazy, nabídky a skupiny definované rozhraním IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
 
- Další informace o tom, jak pracovat s objekty integrované vývojové prostředí (IDE), které jsou definovány v souborech .vsct najdete v tématu [rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
+ Další informace o tom, jak pracovat s objekty integrovaného vývojového prostředí (IDE), které jsou definovány v souborech. vsct, naleznete v tématu [rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
 
- Nabídky a skupiny na řádku nabídek sady Visual Studio použijte identifikátor GUID `guidSHLMainMenu`. Nabídek samotné má ID `IDM_VS_TOOL_MAINMENU`.
+ Nabídky a skupiny v řádku nabídek sady Visual Studio používají identifikátor GUID `guidSHLMainMenu` . Řádek nabídek má ID `IDM_VS_TOOL_MAINMENU` .
 
-## <a name="groups-on-the-visual-studio-menu-bar"></a>Skupiny v řádku nabídek sady Visual Studio
- Přidání nabídky na řádku nabídek, nastavte jednu z těchto skupin jako jeho nadřazený objekt.
+## <a name="groups-on-the-visual-studio-menu-bar"></a>Skupiny na řádku nabídek sady Visual Studio
+ Chcete-li přidat nabídku do řádku nabídek, nastavte jednu z těchto skupin jako nadřazenou.
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Soubor / / zobrazení pro úpravy|IDG_VS_MM_FILEEDITVIEW|
+|Soubor/upravit/zobrazit|IDG_VS_MM_FILEEDITVIEW|
 |Refaktoring|IDG_VS_MM_REFACTORING:|
-|Projekt|IDG_VS_MM_PROJECT|
+|Project|IDG_VS_MM_PROJECT|
 |Sestavení|IDG_VS_MM_BUILDDEBUGRUN|
-|Formát/Tools|IDG_VS_MM_TOOLSADDINS|
-|Okno/Help/Community|IDG_VS_MM_WINDOWHELP|
-|Doplňky|IDG_VS_MM_MACROS|
+|Formát/nástroje|IDG_VS_MM_TOOLSADDINS|
+|Okno/Help/komunita|IDG_VS_MM_WINDOWHELP|
+|Addins|IDG_VS_MM_MACROS|
 |FullScreenBar|IDG_VS_MM_FULLSCREENBAR|
 
 ## <a name="menus-on-the-visual-studio-menu-bar"></a>Nabídky na řádku nabídek sady Visual Studio
- Přidání skupiny do existující nabídky sady Visual Studio, nastavte jednu z následujících nabídek jako jeho nadřazený objekt. Podnabídek nejsou zahrnuté v tomto seznamu.
+ Chcete-li přidat skupinu do existující nabídky sady Visual Studio, nastavte jednu z následujících nabídek jako její nadřazenou položku. Podnabídky nejsou zahrnuté v tomto seznamu.
 
 |Nabídka|ID|
 |----------|--------|
 |Soubor|IDM_VS_MENU_FILE|
 |Upravit|IDM_VS_MENU_EDIT|
-|Zobrazit|IDM_VS_MENU_VIEW|
-|Refaktorovat|IDM_VS_MENU_REFACTORING|
-|Projekt|IDM_VS_MENU_PROJECT|
+|Zobrazení|IDM_VS_MENU_VIEW|
+|Refaktoring|IDM_VS_MENU_REFACTORING|
+|Project|IDM_VS_MENU_PROJECT|
 |Sestavení|IDM_VS_MENU_BUILD|
 |Formát|IDM_VS_MENU_FORMAT|
 |Nástroje|IDM_VS_MENU_TOOLS|
 |Okno|IDM_VS_MENU_WINDOW|
-|Doplňky|IDM_VS_MENU_ADDINS|
+|Addins|IDM_VS_MENU_ADDINS|
 |Komunita|IDM_VS_MENU_COMMUNITY|
 |Nápověda|IDM_VS_MENU_HELP|
 
-## <a name="groups-on-visual-studio-menus"></a>Skupiny v nabídkách aplikace Visual Studio
- Následující seznamy shrnují skupiny, ke kterým sestup přímo z nabídky na řádku nabídek sady Visual Studio. Nejrychlejší způsob, jak přidat příkaz nabídky sady Visual Studio je nastavte jednu z těchto skupin jako nadřazený. Skupiny, které sestup od podnabídek v této části nezobrazí.
+## <a name="groups-on-visual-studio-menus"></a>Skupiny v nabídkách sady Visual Studio
+ V následujících seznamech jsou uvedeny skupiny, které se doplňují přímo z nabídek na řádku nabídek sady Visual Studio. Nejrychlejší způsob, jak přidat příkaz do nabídky aplikace Visual Studio, je nastavit jednu z těchto skupin jako nadřazenou. Skupiny, které se doplní podnabídkami, se v této části nezobrazí.
 
-### <a name="file-menu-groups"></a>Soubor skupiny nabídek
+### <a name="file-menu-groups"></a>Skupiny nabídek souborů
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Nový/otevřít|IDG_VS_FILE_FILE|
-|Přidejte|IDG_VS_FILE_ADD|
+|Nové/otevřené|IDG_VS_FILE_FILE|
+|Přidat|IDG_VS_FILE_ADD|
 |Řešení|IDG_VS_FILE_SOLUTION|
 |Různé|IDG_VS_FILE_MISC|
 |Uložit|IDG_VS_FILE_SAVE|
 |přejmenování|IDG_VS_FILE_RENAME|
 |Prohlížeč|IDG_VS_FILE_BROWSER|
-|Tisk|IDG_VS_FILE_PRINT|
+|Tiskový|IDG_VS_FILE_PRINT|
 |Naposledy použité|IDG_VS_FILE_MRU|
-|Přesunutí|IDG_VS_FILE_MOVE|
+|Přesunout|IDG_VS_FILE_MOVE|
 |Ukončit|IDG_VS_FILE_EXIT|
 
 ### <a name="edit-menu-groups"></a>Upravit skupiny nabídek
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Zpět/znovu|IDG_VS_EDIT_UNDOREDO|
-|Vyjmutí/zkopírování/vložení|IDG_VS_EDIT_CUTCOPY|
+|Vrátit zpět/znovu|IDG_VS_EDIT_UNDOREDO|
+|Vyjmout/kopírovat/vložit|IDG_VS_EDIT_CUTCOPY|
 |Vyberte|IDG_VS_EDIT_SELECT|
-|Příkaz GoTo|IDG_VS_EDIT_GOTO|
-|Najít|IDG_VS_EDIT_FIND|
+|GoTo|IDG_VS_EDIT_GOTO|
+|Vyhledávání|IDG_VS_EDIT_FIND|
 |Objekty|IDG_VS_EDIT_OBJECTS|
 |Příkazy OLE|IDG_VS_EDIT_OLEVERBS|
-|Příkaz dobře|IDG_VS_EDIT_COMMANDWELL|
+|Well – příkaz|IDG_VS_EDIT_COMMANDWELL|
 
 ### <a name="refactor-menu-groups"></a>Refaktorovat skupiny nabídek
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Běžné|IDG_REFACTORING_COMMON|
-|Upřesnit|IDG_REFACTORING_ADVANCED|
+|Společné|IDG_REFACTORING_COMMON|
+|Pokročilý|IDG_REFACTORING_ADVANCED|
 
-### <a name="view-menu-groups"></a>Zobrazení skupiny nabídek
+### <a name="view-menu-groups"></a>Zobrazit skupiny nabídek
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
 |Kód formuláře|IDG_VS_VIEW_FORMCODE|
 |Prohlížeč|IDG_VS_VIEW_BROWSER|
-|Definujte zobrazení|IDG_VS_VIEW_DEFINEVIEWS|
+|Definovat zobrazení|IDG_VS_VIEW_DEFINEVIEWS|
 |Windows|IDG_VS_VIEW_WINDOWS|
-|Návrhář Windows|IDG_VS_VIEW_ARCH_WINDOWS|
-|Organizace Windows|IDG_VS_VIEW_ORG_WINDOWS|
+|Okna architektů|IDG_VS_VIEW_ARCH_WINDOWS|
+|Okna organizace|IDG_VS_VIEW_ORG_WINDOWS|
 |Prohlížeč kódu|IDG_VS_VIEW_CODEBROWSENAV_WINDOWS|
-|Windows dev|IDG_VS_VIEW_DEV_WINDOWS|
+|Vývojové okna|IDG_VS_VIEW_DEV_WINDOWS|
 |Panely nástrojů|IDG_VS_VIEW_TOOLBARS|
 |Symboly|IDG_VS_VIEW_SYMBOLNAVIGATE|
 |Navigace|IDG_VS_VIEW_NAVIGATE|
-|Malý přejděte.|IDG_VS_VIEW_SMALLNAVIGATE|
+|Malý navig|IDG_VS_VIEW_SMALLNAVIGATE|
 |prohlížeč objektů|IDG_VS_VIEW_OBJBRWSR|
-|Příkaz dobře|IDG_VS_VIEW_COMMANDWELL|
+|Well – příkaz|IDG_VS_VIEW_COMMANDWELL|
 |Stránky vlastností|IDG_VS_VIEW_PROPPAGES|
-|Aktualizace|IDG_VS_VIEW_REFRESH|
+|Aktualizovat|IDG_VS_VIEW_REFRESH|
 
-### <a name="project-menu-groups"></a>Projekt skupiny nabídek
+### <a name="project-menu-groups"></a>Skupiny nabídek projektu
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Různé přidat|IDG_VS_PROJ_MISCADD|
-|Přidejte|IDG_VS_PROJ_ADD|
-|Folder|IDG_VS_PROJ_FOLDER|
-|Uvolnění a opětovné načtení|IDG_VS_PROJ_UNLOADRELOAD|
+|Různé přidání|IDG_VS_PROJ_MISCADD|
+|Přidat|IDG_VS_PROJ_ADD|
+|Složka|IDG_VS_PROJ_FOLDER|
+|Uvolnit nebo znovu načíst|IDG_VS_PROJ_UNLOADRELOAD|
 |Odkaz|IDG_VS_PROJ_REFERENCE|
 |Možnosti|IDG_VS_PROJ_OPTIONS|
 |Nastavení|IDG_VS_PROJ_SETTINGS|
 
-### <a name="build-menu-groups"></a>Vytvoření skupiny nabídek
+### <a name="build-menu-groups"></a>Skupiny nabídek sestavení
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
 |Řešení|IDG_VS_BUILD_SOLUTION|
 |Výběr|IDG_VS_BUILD_SELECTION|
@@ -145,44 +145,44 @@ Toto téma uvádí hodnoty GUID a ID nabídek a skupin v řádku nabídek sady V
 |Různé|IDG_VS_BUILD_MISC|
 |Zrušit|IDG_VS_BUILD_CANCEL|
 
-### <a name="tools-menu-groups"></a>Skupina nabídky Nástroje
+### <a name="tools-menu-groups"></a>Skupiny nabídek nástrojů
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
 |Příkazový řádek|IDG_VS_TOOLS_CMDLINE|
 |Fragmenty kódu|IDG_VS_TOOLS_SNIPPETS|
-|Dílčí objekt|IDG_VS_TOOLS_OBJSUBSET|
+|Podmnožina objektu|IDG_VS_TOOLS_OBJSUBSET|
 |Možnosti|IDG_VS_TOOLS_OPTIONS|
-|Další 2|IDG_VS_TOOLS_OTHER2|
+|Ostatní 2|IDG_VS_TOOLS_OTHER2|
 |Externí nástroje|IDG_VS_TOOLS_EXT_TOOLS|
 |Externí přizpůsobení|IDG_VS_TOOLS_EXT_CUST|
 
-### <a name="window-menu-groups"></a>Okno skupiny nabídek
+### <a name="window-menu-groups"></a>Skupiny nabídek oken
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Nový|IDG_VS_WINDOW_NEW|
-|Ukotvit nebo zavřít.|IDG_VS_DOCKCLOSE|
-|Ukotvit nebo skrýt|IDG_VS_DOCKHIDE|
+|Nová|IDG_VS_WINDOW_NEW|
+|Ukotvit/zavřít|IDG_VS_DOCKCLOSE|
+|Ukotvit/skrýt|IDG_VS_DOCKHIDE|
 |Uspořádat|IDG_VS_WINDOW_ARRANGE|
 |Navigace|IDG_VS_WINDOW_NAVIGATION|
 |Seznam|IDG_VS_WINDOW_LIST|
 
-### <a name="help-menu-groups"></a>Skupiny nabídek nápovědy
+### <a name="help-menu-groups"></a>Skupiny nabídek Help
 
-|Skupina|ID|
+|Seskupení|ID|
 |-----------|--------|
-|Ukázky kódu|IDG_VS_HELP_SAMPLES|
+|ukázky|IDG_VS_HELP_SAMPLES|
 |Podpora|IDG_VS_HELP_SUPPORT|
-|O produktu|IDG_VS_HELP_ABOUT|
+|Informace|IDG_VS_HELP_ABOUT|
 
-## <a name="submenus-of-visual-studio-menus"></a>Podnabídek nabídek sady Visual Studio
- U následující hierarchie zobrazuje dílčích nabídek, které jsou spojeny s nabídkami v řádku nabídek sady Visual Studio. Protože nabídce jako jeho nadřazený objekt může mít pouze skupiny, každý podnabídky musí sestup ze skupiny v nabídce, namísto přímo z nabídky. Další informace o vztahu mezi nabídek, skupiny a podnabídek najdete v tématu [přidání podnabídky do nabídky](../../extensibility/adding-a-submenu-to-a-menu.md).
+## <a name="submenus-of-visual-studio-menus"></a>Podnabídky nabídek sady Visual Studio
+ Následující hierarchie znázorňuje podnabídky, které jsou spojeny s nabídkami na řádku nabídek sady Visual Studio. Vzhledem k tomu, že jako nadřazenou položku může mít nabídka pouze skupina, musí být každá podnabídka ze skupiny v nabídce ze skupiny, nikoli přímo z nabídky. Další informace o vztahu mezi nabídkami, skupinami a podnabídkami najdete v tématu [Přidání podnabídky do nabídky](../../extensibility/adding-a-submenu-to-a-menu.md).
 
 > [!NOTE]
-> Názvy nabídek na řádku nabídek sady Visual Studio se nezobrazují samostatně v této hierarchii, vzhledem k tomu, že lze odvodit z zásady vytváření názvů skupin v integrovaném vývojovém prostředí, následujícím způsobem: IDG_VS_*název nabídky*_*název skupiny*.
+> Názvy nabídek v řádku nabídek sady Visual Studio nejsou samostatně zobrazeny v této hierarchii, protože je možné je odvodit ze zásad vytváření názvů pro skupiny v integrovaném vývojovém prostředí (IDE), a to následujícím způsobem: IDG_VS_*nabídky název*_*název skupiny*.
 
-|Nadřazená skupina|Podnabídka|Podřízené skupiny|
+|Nadřazená skupina|Nabídk|Podřízené skupiny|
 |------------------|-------------|------------------|
 |IDG_VS_FILE_FILE|IDM_VS_CSCD_NEW|IDG_VS_FILE_NEW_CASCADE|
 ||IDM_VS_CSCD_OPEN|IDG_VS_FILE_OPENP_CASCADE|
@@ -215,4 +215,4 @@ Toto téma uvádí hodnoty GUID a ID nabídek a skupin v řádku nabídek sady V
 |||IDG_VS_PGO_BUILD_CASCADE_RUN|
 
 ## <a name="see-also"></a>Viz také
- [Identifikátory GUID a ID panelů nástrojů sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md) [identifikátory GUID a ID příkazů sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md) [tabulky příkazů sady Visual Studio (. Soubory Vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ Identifikátory GUID a [ID](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md) [identifikátorů GUID a ID identifikátorů GUID nástrojů sady Visual Studio a ID příkazů sady Visual](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md) Studio [(. Soubory vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

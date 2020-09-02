@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::frameForVA | Dokumentace Microsoftu
+title: 'IDiaStackWalkHelper:: frameForVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4a36c31058912d1acc3d92e907954e48255c23a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150133"
 ---
 # <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Obnoví rámec zásobníku, který obsahuje zadanou virtuální adresu.  
+Načte rámec zásobníku, který obsahuje zadanou virtuální adresu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ HRESULT frameForVA( 
   
 #### <a name="parameters"></a>Parametry  
  `va`  
- [in] Virtuální adresu datového rámce.  
+ pro Virtuální adresa pro data rámce.  
   
  `ppFrame`  
- [out] [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekt představující rámec zásobníku na zadané adrese.  
+ mimo Objekt [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) , který představuje rámec zásobníku na zadané adrese.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 76d357c1f6ebc770d0e625e60bae237e37e0a6aa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846218"
 ---
 # <a name="sequential-workflow-views-legacy"></a>Zobrazení sekvenčního pracovního postupu (starší verze)
-[!INCLUDE[vs2010](../includes/vs2010-md.md)] poskytuje starší [!INCLUDE[wfd1](../includes/wfd1-md.md)], které lze použít k cílení na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+[!INCLUDE[vs2010](../includes/vs2010-md.md)] poskytuje starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , které lze použít k cílení [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- [!INCLUDE[wfd2](../includes/wfd2-md.md)] poskytuje způsob, jak vytvořit [!INCLUDE[wf](../includes/wf-md.md)] aplikace pomocí známých [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývaných aktivity. Chcete-li vytvořit pracovní postup, sestavte aktivity na návrhové ploše přetažením jejich příslušných návrhářů aktivit ze **sady nástrojů** na návrhovou plochu.
+ [!INCLUDE[wfd2](../includes/wfd2-md.md)]Poskytuje způsob, jak vytvářet [!INCLUDE[wf](../includes/wf-md.md)] aplikace pomocí známého [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní. [!INCLUDE[wf](../includes/wf-md.md)] aplikace se skládají z kroků procesu pracovního postupu nazývaných aktivity. Chcete-li vytvořit pracovní postup, sestavte aktivity na návrhové ploše přetažením jejich příslušných návrhářů aktivit ze **sady nástrojů** na návrhovou plochu.
 
  Když vytvoříte sekvenční pracovní postup, což je [SequentialWorkflowActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequentialworkflowactivity.aspx), jsou k dispozici tři zobrazení pracovního postupu. Tato zobrazení jsou přístupná z nabídky **pracovní postup** a z kontextové nabídky na návrhové ploše.
 

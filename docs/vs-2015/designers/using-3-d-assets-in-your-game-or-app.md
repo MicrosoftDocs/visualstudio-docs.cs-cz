@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f290c68933a71f40899ce454eb6ba788ef31a56f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846505"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>Používání 3D prostředků ve hře nebo aplikaci
@@ -28,14 +28,14 @@ ms.locfileid: "75846505"
 
 Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ke zpracování 3D prostředků a jejich zahrnutí do sestavení.
 
- Po použití nástrojů v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k vytvoření 3D prostředků je dalším krokem jejich použití ve vaší aplikaci. Předtím, než je budete moct používat, je potřeba prostředky transformovat do formátu, který rozhraní DirectX dokáže pochopit. Pro snadnější transformaci prostředků [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje přizpůsobení sestavení pro každý druh assetu, který může vytvořit. Chcete-li zahrnout prostředky do sestavení, stačí provést konfiguraci projektu, aby používal vlastní nastavení sestavení, přidat prostředky do projektu a nakonfigurovat prostředky pro použití správného přizpůsobení sestavení. Potom můžete načíst prostředky do své aplikace a použít je vytvořením a vyplněním prostředků DirectX stejným způsobem jako v jakékoli jiné aplikaci DirectX.
+ Po použití nástrojů v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k vytvoření 3D prostředků je dalším krokem jejich použití ve vaší aplikaci. Předtím, než je budete moct používat, je potřeba prostředky transformovat do formátu, který rozhraní DirectX dokáže pochopit. Pro snadnější transformaci prostředků [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] poskytuje přizpůsobení sestavení pro každý druh assetu, který může vytvořit. Chcete-li zahrnout prostředky do sestavení, stačí provést konfiguraci projektu, aby používal vlastní nastavení sestavení, přidat prostředky do projektu a nakonfigurovat prostředky pro použití správného přizpůsobení sestavení. Potom můžete načíst prostředky do své aplikace a použít je vytvořením a vyplněním prostředků DirectX stejným způsobem jako v jakékoli jiné aplikaci DirectX.
 
 ## <a name="configuring-your-project"></a>Konfigurace projektu
- Předtím, než budete moci nasadit své 3D prostředky jako součást sestavení, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] musí znát typy prostředků, které chcete nasadit. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] již zná mnoho běžných typů souborů, ale protože pouze některé druhy aplikací používají 3 D prostředků, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nepředpokládá, že projekt sestaví tyto typy souborů. Můžete určit, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], že aplikace používá tyto druhy prostředků pomocí *přizpůsobení sestavení*– soubory, které oznamují [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zpracování různých typů souborů vhodným způsobem – které jsou k dispozici pro každý typ assetu. Vzhledem k tomu, že tyto vlastní nastavení jsou aplikovány na jednotlivé projekty, stačí, když do projektu přidáte odpovídající vlastní nastavení.
+ Předtím, než budete moci nasadit své 3D prostředky jako součást sestavení, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] musí znát typy prostředků, které chcete nasadit. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] už zná mnoho běžných typů souborů, ale vzhledem k tomu, že jenom některé druhy aplikací používají 3 D prostředků, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nepředpokládá, že projekt sestaví tyto typy souborů. Můžete říct [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , že aplikace používá tyto druhy prostředků pomocí *přizpůsobení sestavení*– soubory, které oznamují, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jak zpracovávat různé typy souborů užitečným způsobem – které jsou k dispozici pro každý typ assetu. Vzhledem k tomu, že tyto vlastní nastavení jsou aplikovány na jednotlivé projekty, stačí, když do projektu přidáte odpovídající vlastní nastavení.
 
 #### <a name="to-add-the-build-customizations-to-your-project"></a>Přidání vlastního nastavení sestavení do projektu
 
-1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **závislosti sestavení**, **vlastní nastavení sestavení**. Zobrazí se dialogové okno **soubory přizpůsobení Visual C++ buildu** .
+1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte **závislosti sestavení**, **vlastní nastavení sestavení**. Zobrazí se dialogové okno **Visual C++ soubory přizpůsobení sestavení** .
 
 2. V části **Dostupné soubory vlastního nastavení sestavení**zaškrtněte políčka, která odpovídají typům assetů, které chcete použít v projektu, jak je popsáno v této tabulce:
 
@@ -45,7 +45,7 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
     |3D modely|**MeshContentTask (. targets;. props)**|
     |Shadery|**ShaderGraphContentTask (. targets;. props)**|
 
-3. Zvolte **OK** tlačítko.
+3. Klikněte na tlačítko **OK** .
 
 ## <a name="including-assets-in-your-build"></a>Zahrnutí prostředků do sestavení
  Teď, když váš projekt ví o různých druzích 3D prostředků, které chcete použít, je dalším krokem sdělit, které soubory jsou 3D prostředky a jaké druhy prostředků jsou.
@@ -59,9 +59,9 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
 3. V části **Vlastnosti konfigurace**zvolte **Obecné**a potom v mřížce vlastností v části **Obecné**nastavte vlastnost **typ položky** na příslušný typ položky kanálu obsahu. Například pro obrázek nebo soubor textury vyberte možnost **kanál obsahu obrázku**.
 
    > [!IMPORTANT]
-   > Ve výchozím nastavení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] předpokládá, že mnoho druhů obrázkových souborů by měly být zařazeny do kategorií pomocí typu položky **Obrázek** , který je integrovaný do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Proto je třeba změnit vlastnost **typ položky** každého obrázku, který chcete zpracovat pomocí kanálu obsahu obrázku. Další typy zdrojových souborů kanálu obsahu pro 3D modely a grafiku vizuálního shaderu jsou ve výchozím nastavení správného **typu položky**.
+   > Ve výchozím nastavení [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] předpokládá, že mnoho druhů obrázkových souborů by měly být zařazeny do kategorie pomocí typu položky **Obrázek** , který je integrován do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Proto je třeba změnit vlastnost **typ položky** každého obrázku, který chcete zpracovat pomocí kanálu obsahu obrázku. Další typy zdrojových souborů kanálu obsahu pro 3D modely a grafiku vizuálního shaderu jsou ve výchozím nastavení správného **typu položky**.
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
    Tady jsou tři typy položek kanálu obsahu a jejich přidružené zdrojové a výstupní typy souborů.
 
@@ -82,14 +82,14 @@ Tento článek popisuje, jak lze použít [!INCLUDE[vsprvs](../includes/vsprvs-m
 
 3. V části **Vlastnosti konfigurace**vyberte uzel Content Pipeline, například **kanál obsahu obrázku** pro prostředky textury a image – a potom v mřížce vlastností nastavte vlastnosti na příslušné hodnoty. Pokud například chcete generovat mipmapy pro prostředek textury v čase sestavení, nastavte vlastnost **Generovat MIPS** na **Ano**.
 
-4. Zvolte **OK** tlačítko.
+4. Klikněte na tlačítko **OK** .
 
 ### <a name="image-content-pipeline-configuration"></a>Konfigurace kanálu obsahu obrázku
  Použijete-li nástroj pro vytváření textur obsahu k sestavení prostředků textury, lze texturu zkomprimovat různými způsoby, označit, zda mají být v době sestavení generovány úrovně MIP, a změnit název výstupního souboru.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> Dostupné jsou následující možnosti:<br /><br /> -   **bez komprese**<br />**komprese BC1_UNORM** -   <br />**komprese BC1_UNORM_SRGB** -   <br />**komprese BC2_UNORM** -   <br />**komprese BC2_UNORM_SRGB** -   <br />**komprese BC3_UNORM** -   <br />**komprese BC3_UNORM_SRGB** -   <br />**komprese BC4_UNORM** -   <br />**komprese BC4_SNORM** -   <br />**komprese BC5_UNORM** -   <br />**komprese BC5_SNORM** -   <br />**komprese BC6H_UF16** -   <br />**komprese BC6H_SF16** -   <br />**komprese BC7_UNORM** -   <br />**komprese BC7_UNORM_SRGB** -   <br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](https://msdn.microsoft.com/library/windows/desktop/bb219822(v=vs.85).aspx).|
+|**Komprimují**|Určuje typ komprese, který se používá pro výstupní soubor.<br /><br /> Dostupné jsou tyto možnosti:<br /><br /> -   **Bez komprese**<br />-   **BC1_UNORM komprese**<br />-   **BC1_UNORM_SRGB komprese**<br />-   **BC2_UNORM komprese**<br />-   **BC2_UNORM_SRGB komprese**<br />-   **BC3_UNORM komprese**<br />-   **BC3_UNORM_SRGB komprese**<br />-   **BC4_UNORM komprese**<br />-   **BC4_SNORM komprese**<br />-   **BC5_UNORM komprese**<br />-   **BC5_SNORM komprese**<br />-   **BC6H_UF16 komprese**<br />-   **BC6H_SF16 komprese**<br />-   **BC7_UNORM komprese**<br />-   **BC7_UNORM_SRGB komprese**<br /><br /> Informace o tom, které formáty komprese jsou podporovány v různých verzích rozhraní DirectX, najdete v tématu [Průvodce programováním pro DXGI](https://msdn.microsoft.com/library/windows/desktop/bb219822(v=vs.85).aspx).|
 |Převést na předem vynásobený formát alfa|**Ano** , pokud chcete převést obrázek na předem vynásobený formát alfa ve výstupním souboru; v opačném případě **ne**. Dojde ke změně pouze výstupního souboru, zdrojový obrázek zůstane beze změny.|
 |**Generovat MIPS**|**Ano** , pokud chcete vygenerovat úplný řetěz mip v čase sestavení a zahrnout ho do výstupního souboru; v opačném případě **ne**. Pokud **ne**a zdrojový soubor již obsahuje mipmap řetězec, bude mít výstupní soubor řetězec MIP; v opačném případě výstupní soubor nebude mít žádný řetězec MIP.|
 |**Výstup obsahu**|Určuje název výstupního souboru. **Důležité informace:**  Změna přípony názvu souboru výstupního souboru nemá žádný vliv na formát souboru.|
@@ -198,12 +198,12 @@ cbuffer MiscVars : register(b3)
 };
 ```
 
-## <a name="related-topics"></a>Příbuzná témata
+## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Postupy: Export textury obsahující mipmapy](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Popisuje, jak pomocí kanálu obsahu obrázku exportovat texturu obsahující předpočítané mipmapy.|
-|[Postupy: Export textury s přednásobeným alfa](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Popisuje způsob použití kanálu obsahu obrázku k exportu textury, která obsahuje předem vynásobené hodnoty alfa.|
-|[Postupy: Export textury pro použití s rozhraním Direct2D nebo aplikacemi JavaScript](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Popisuje, jak pomocí kanálu obsahu obrázku exportovat texturu, kterou lze použít v aplikaci Direct2D nebo JavaScript.|
+|[Postupy: Export textury s předem vynásobeným alfa](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Popisuje způsob použití kanálu obsahu obrázku k exportu textury, která obsahuje předem vynásobené hodnoty alfa.|
+|[Postupy: Export textury pro použití s aplikacemi Direct2D nebo rozhraním Direct2D aplikacemi](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Popisuje, jak pomocí kanálu obsahu obrázku exportovat texturu, kterou lze použít v aplikaci Direct2D nebo JavaScript.|
 |[Práce s 3D prostředky pro hry a aplikace](../designers/working-with-3-d-assets-for-games-and-apps.md)|Popisuje nástroje pro úpravy, které Visual Studio poskytuje k vytváření a manipulaci s 3D prostředky, které zahrnují textury a obrázky, 3D modely a shadery.|
-|[Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)|Popisuje, jak exportovat shader z Návrháře shaderu.|
+|[Postupy: Export shaderu](../designers/how-to-export-a-shader.md)|Popisuje, jak exportovat shader z Návrháře shaderu.|

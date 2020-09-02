@@ -7,10 +7,10 @@ ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.openlocfilehash: 004427ced7d18d9a5af5c863172416fd8637aa69
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536861"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Jak Visual Studio vytváří kontejnerizované aplikace

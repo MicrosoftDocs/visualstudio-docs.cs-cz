@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vazby dat s ovládacími prvky v podokně akcí aplikace Word'
+title: 'Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,224 +18,224 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ddeba1539cf68d53f4b9f931d2bcd18a159028fd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438696"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802659"
 ---
-# <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>Návod: Vytvoření vazby dat s ovládacími prvky v podokně akcí aplikace Word
-  Tento návod ukazuje vytváření datových vazeb k ovládacím prvkům v podokně akcí ve Wordu. Ovládací prvky ukazují záznamů master/detail relace mezi tabulkami v databázi serveru SQL Server.
+# <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word
+  Tento návod ukazuje datovou vazbu k ovládacím prvkům v podokně akce ve Wordu. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
  Tento návod znázorňuje následující úlohy:
 
-- Vytvoření podokna akcí pomocí ovládacích prvků Windows Forms, které jsou vázány na data.
+- Vytvoření podokna akcí s model Windows Forms ovládacími prvky, které jsou vázány na data.
 
-- Pomocí záznamů master/detail relaci pro zobrazení dat v ovládacích prvcích.
+- Použití vztahu Master/Detail k zobrazení dat v ovládacích prvcích.
 
-- Zobrazit podokno akcí, když se aplikace otevře.
+- Po otevření aplikace zobrazit podokno akcí
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
+- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]:
 
 - Přístup k serveru s ukázkovou databází Northwind SQL Server.
 
-- Oprávnění ke čtení a zápis do databáze serveru SQL Server.
+- Oprávnění ke čtení a zápisu do databáze SQL Server.
 
 ## <a name="create-the-project"></a>Vytvoření projektu
- Prvním krokem je vytvoření projektu dokumentu aplikace Word.
+ Prvním krokem je vytvoření projektu wordového dokumentu.
 
-### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt
+### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvoření projektu Wordového dokumentu s názvem **Moje podokně akcí aplikace Word**. V průvodci vyberte **vytvoříte nový textový dokument**.
+1. Vytvořte projekt wordového dokumentu pomocí **podokna akce název moje aplikace Word**. V průvodci vyberte možnost **vytvořit nový dokument**.
 
-     Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio otevře nový Wordový dokument v návrháři a přidá **Moje podokně akcí aplikace Word** projektu **Průzkumníka řešení**.
+     Visual Studio otevře nový wordový dokument v návrháři a přidá projekt **podokna akce mých slov** do **Průzkumník řešení**.
 
-## <a name="add-controls-to-the-actions-pane"></a>Přidání ovládacích prvků do podokna akcí
- V tomto návodu budete potřebovat prvek podokna akce, která obsahuje ovládací prvky Windows Forms vázané na data. Přidat zdroj dat do projektu a potom přetáhněte ovládací prvky z **zdroje dat** okna ovládacího prvku podokna akcí.
+## <a name="add-controls-to-the-actions-pane"></a>Přidání ovládacích prvků do podokna akce
+ Pro tento návod budete potřebovat ovládací prvek podokna akce, který obsahuje ovládací prvky pro model Windows Forms vázané na data. Přidejte do projektu zdroj dat a přetáhněte ovládací prvky z okna **zdroje dat** do ovládacího prvku podokno akcí.
 
-### <a name="to-add-an-actions-pane-control"></a>Chcete-li přidat ovládací prvek podokna akce
+### <a name="to-add-an-actions-pane-control"></a>Přidání ovládacího prvku podokna akce
 
-1. Vyberte **Moje podokně akcí aplikace Word** projekt **Průzkumníka řešení**.
+1. Vyberte projekt **podokna akce v aplikaci Word** v **Průzkumník řešení**.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.
+2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V **přidat novou položku** dialogu **ovládacího prvku podokna akcí**, pojmenujte ho **ActionsControl**a potom klikněte na tlačítko **přidat**.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl**a pak klikněte na tlačítko **Přidat**.
 
-### <a name="to-add-a-data-source-to-the-project"></a>Chcete-li přidat zdroj dat do projektu
+### <a name="to-add-a-data-source-to-the-project"></a>Přidání zdroje dat do projektu
 
-1. Pokud **zdroje dat** okno se nezobrazuje, zobrazit ho tím, na panelu nabídek, výběrem **zobrazení** > **ostatní Windows**  >   **Zdroje dat**.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
    > [!NOTE]
-   > Pokud **zobrazit zdroje dat** není k dispozici, klikněte na dokumentu aplikace Word a zkontrolovat znovu.
+   > Pokud možnost **Zobrazit zdroje dat** není k dispozici, klikněte na dokument aplikace Word a pak znovu zkontrolujte.
 
-2. Klikněte na tlačítko **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+2. Kliknutím na tlačítko **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Vyberte **databáze** a potom klikněte na tlačítko **Další**.
+3. Vyberte **databáze** a pak klikněte na **Další**.
 
-4. Vyberte datové připojení k ukázkové databázi Northwind systému SQL Server, nebo přidejte nové připojení s použitím **nové připojení** tlačítko.
+4. Vyberte datové připojení k ukázce databáze Northwind SQL Server databázi nebo přidejte nové připojení pomocí tlačítka **nové připojení** .
 
-5. Klikněte na **Další**.
+5. Klikněte na **Next** (Další).
 
-6. Uložit připojení, pokud je zaškrtnuto a pak klikněte na tlačítko Vymazat **Další**.
+6. Zrušte zaškrtnutí políčka Uložit připojení, pokud je vybráno, a poté klikněte na tlačítko **Další**.
 
-7. Rozbalte **tabulky** uzlu **databázové objekty** okna.
+7. Rozbalte uzel **tabulky** v okně **objekty databáze** .
 
-8. Zaškrtněte políčko vedle položky **Dodavatelé** a **produkty** tabulky.
+8. Zaškrtněte políčko vedle tabulky **Dodavatelé** a **produkty** .
 
-9. Klikněte na tlačítko **Dokončit**.
+9. Klikněte na **Finish** (Dokončit).
 
-   Průvodce přidá **dodavatelů** tabulky a **produkty** tabulky **zdroje dat** okno. Také přidá typové datové sady do projektu, který se zobrazuje **Průzkumníka řešení**.
+   Průvodce přidá tabulku **Dodavatelé** a **produkty** do okna **zdroje dat** . Také přidá do projektu typovou datovou sadu, která je viditelná v **Průzkumník řešení**.
 
-### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Chcete-li přidat ovládací prvky Windows Forms vázané na data na ovládací prvek podokna akce
+### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Přidání ovládacích prvků model Windows Forms vázaných na data do ovládacího prvku podokna akcí
 
-1. V **zdroje dat** okna, rozbalte **Dodavatelé** tabulky.
+1. V okně **zdroje dat** rozbalte tabulku **Dodavatelé** .
 
-2. Klikněte na šipku rozevíracího seznamu **název společnosti** uzel a vyberte možnost **– pole se seznamem**.
+2. Klikněte na šipku rozevíracího seznamu v uzlu **název společnosti** a vyberte položku **ComboBox**.
 
-3. Přetáhněte **CompanyName** z **zdroje dat** okna ovládacího prvku podokna akcí.
+3. Přetáhněte **CompanyName** z okna **zdroje dat** do ovládacího prvku podokno akcí.
 
-     A <xref:System.Windows.Forms.ComboBox> ovládací prvek je vytvořen na ovládací prvek podokna akce. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `SuppliersBindingSource`, tabulka adaptéru a <xref:System.Data.DataSet> jsou přidány do projektu v panelu komponent.
+     <xref:System.Windows.Forms.ComboBox>Ovládací prvek je vytvořen v ovládacím prvku podokno akce. Ve stejnou dobu se <xref:System.Windows.Forms.BindingSource> `SuppliersBindingSource` <xref:System.Data.DataSet> do projektu v zásobníku komponent přidají pouze pojmenované, adaptér s tabulkou a.
 
-4. Vyberte `SuppliersBindingNavigator` v **komponenty** na hlavním panelu a stiskněte klávesu **odstranit**. Nebudete používat `SuppliersBindingNavigator` v tomto názorném postupu.
+4. `SuppliersBindingNavigator`V části přihrádka **součásti** vyberte a stiskněte klávesu **Delete**. V tomto návodu nebudete používat `SuppliersBindingNavigator` .
 
     > [!NOTE]
-    > Odstraňuje `SuppliersBindingNavigator` veškerý kód, který byl vygenerován pro něj nebude odstraněn. Můžete odebrat tento kód.
+    > Odstraněním se `SuppliersBindingNavigator` neodebere veškerý kód, který se pro něj vygeneroval. Tento kód můžete odebrat.
 
-5. Přesuňte pole se seznamem tak, aby se v popisku a změnit **velikost** vlastnost **171, 21**.
+5. Přesuňte pole se seznamem tak, aby bylo pod popiskem, a změňte vlastnost **Size** na **171, 21**.
 
-6. V **zdroje dat** okna, rozbalte **produkty** tabulka, která je podřízenou **Dodavatelé** tabulky.
+6. V okně **zdroje dat** rozbalte tabulku Products ( **produkty** ), která je podřízenou položkou tabulky **Dodavatelé** .
 
-7. Klikněte na šipku rozevíracího seznamu **ProductName** uzel a vyberte možnost **ListBox**.
+7. V uzlu **NázevVýrobku** klikněte na šipku rozevíracího seznamu a vyberte položku **seznam**.
 
-8. Přetáhněte **ProductName** do ovládacího prvku podokna akcí.
+8. Přetáhněte **NázevVýrobku** do ovládacího prvku podokno akcí.
 
-     A <xref:System.Windows.Forms.ListBox> ovládací prvek je vytvořen na ovládací prvek podokna akce. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `ProductBindingSource` a adaptér tabulky jsou přidány do projektu v panelu komponent.
+     <xref:System.Windows.Forms.ListBox>Ovládací prvek je vytvořen v ovládacím prvku podokno akce. Současně se <xref:System.Windows.Forms.BindingSource> `ProductBindingSource` do projektu v zásobníku komponent přidají pouze pojmenované a tabulkové adaptéry.
 
-9. Přesunout do seznamu pole tak, aby se v popisku a změnit **velikost** vlastnost **171,95**.
+9. Přesuňte seznam tak, aby byl pod popiskem, a změňte vlastnost **Size** na hodnotu **171, 95**.
 
-10. Přetáhněte <xref:System.Windows.Forms.Button> z **nástrojů** do podokna akce řízení a umístěte ho pod pole se seznamem.
+10. Přetáhněte <xref:System.Windows.Forms.Button> z **panelu nástrojů** do ovládacího prvku podokno akcí a umístěte jej pod seznam.
 
-11. Klikněte pravým tlačítkem myši <xref:System.Windows.Forms.Button>, klikněte na tlačítko **vlastnosti** v místní nabídce a změnit následující vlastnosti.
+11. Klikněte pravým tlačítkem myši na <xref:System.Windows.Forms.Button> , v místní nabídce klikněte na **vlastnosti** a změňte následující vlastnosti.
 
     |Vlastnost|Hodnota|
     |--------------|-----------|
-    |**Název**|**Vložit**|
-    |**Text**|**Vložit**|
+    |**Název**|**Insert**|
+    |**Text**|**Insert**|
 
-12. Změna velikosti uživatelského ovládacího prvku podle ovládací prvky.
+12. Změňte velikost uživatelského ovládacího prvku tak, aby odpovídala ovládacím prvkům.
 
-## <a name="set-up-the-data-source"></a>Nastavit zdroj dat
- Chcete-li nastavit zdroj dat, přidejte kód pro <xref:System.Windows.Forms.UserControl.Load> události ovládacího prvku podokna akcí tak, aby vyplnil ovládacího prvku s daty z <xref:System.Data.DataTable>a nastavte <xref:System.Windows.Forms.Binding.DataSource%2A> a <xref:System.Windows.Forms.BindingSource.DataMember%2A> vlastnosti pro každý ovládací prvek.
+## <a name="set-up-the-data-source"></a>Nastavení zdroje dat
+ Chcete-li nastavit zdroj dat, přidejte kód do <xref:System.Windows.Forms.UserControl.Load> události ovládacího prvku podokna akce pro vyplnění ovládacího prvku daty z rozhraní <xref:System.Data.DataTable> a nastavte <xref:System.Windows.Forms.Binding.DataSource%2A> <xref:System.Windows.Forms.BindingSource.DataMember%2A> vlastnosti a pro každý ovládací prvek.
 
-### <a name="to-load-the-control-with-data"></a>Načíst ovládací prvek s daty
+### <a name="to-load-the-control-with-data"></a>Načtení ovládacího prvku s daty
 
-1. V <xref:System.Windows.Forms.UserControl.Load> obslužná rutina události `ActionsControl` třídy, přidejte následující kód.
+1. V <xref:System.Windows.Forms.UserControl.Load> obslužné rutině události `ActionsControl` třídy přidejte následující kód.
 
      [!code-vb[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#1)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#1)]
 
-2. V jazyce C#, je nutné připojit obslužná rutina události <xref:System.Windows.Forms.UserControl.Load> událostí. Tento kód v můžete umístit `ActionsControl` konstruktor po volání `InitializeComponent`. Další informace o tom, jak vytváření obslužných rutin událostí, naleznete v tématu [jak: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
+2. V jazyce C# je nutné k události připojit obslužnou rutinu události <xref:System.Windows.Forms.UserControl.Load> . Tento kód lze umístit do `ActionsControl` konstruktoru po volání `InitializeComponent` . Další informace o tom, jak vytvořit obslužné rutiny událostí, naleznete v tématu [How to: Create event handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#33](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#33)]
 
-### <a name="to-set-data-binding-properties-of-the-controls"></a>Chcete-li nastavit vlastnosti datové vazby ovládacích prvků
+### <a name="to-set-data-binding-properties-of-the-controls"></a>Nastavení vlastností datových vazeb ovládacích prvků
 
-1. Vyberte `CompanyNameComboBox` ovládacího prvku.
+1. Vyberte `CompanyNameComboBox` ovládací prvek.
 
-2. V **vlastnosti** okna, klikněte na tlačítko napravo od **DataSource** vlastnosti a vyberte **suppliersBindingSource**.
+2. V okně **vlastnosti** klikněte na tlačítko napravo od vlastnosti **DataSource** a vyberte **suppliersBindingSource**.
 
-3. Klikněte na tlačítko na pravé straně **DisplayMember** vlastnosti a vyberte **CompanyName**.
+3. Klikněte na tlačítko napravo od vlastnosti **DisplayMember** a vyberte **CompanyName**.
 
-4. Rozbalte **DataBindings** vlastnosti, klikněte na tlačítko napravo od **Text** vlastnosti a vyberte **žádný**.
+4. Rozbalte vlastnost **DataBindings** , klikněte na tlačítko napravo od vlastnosti **text** a vyberte možnost **žádná**.
 
-5. Vyberte `ProductNameListBox` ovládacího prvku.
+5. Vyberte `ProductNameListBox` ovládací prvek.
 
-6. V **vlastnosti** okna, klikněte na tlačítko napravo od **DataSource** vlastnosti a vyberte **productsBindingSource**.
+6. V okně **vlastnosti** klikněte na tlačítko napravo od vlastnosti **DataSource** a vyberte **ProductsBindingSource**.
 
-7. Klikněte na tlačítko na pravé straně **DisplayMember** vlastnosti a vyberte **ProductName**.
+7. Klikněte na tlačítko napravo od vlastnosti **DisplayMember** a vyberte **NázevVýrobku**.
 
-8. Rozbalte **DataBindings** vlastnosti, klikněte na tlačítko napravo od **SelectedValue** vlastnosti a vyberte **žádný**.
+8. Rozbalte vlastnost **DataBindings** , klikněte na tlačítko napravo od vlastnosti **SelectedValue** a vyberte **None (žádné**).
 
-## <a name="add-a-method-to-insert-data-into-a-table"></a>Přidejte metodu k vložení dat do tabulky
- Další úlohou je číst data z vázané ovládací prvky a vyplnění tabulky v dokumentu aplikace Word. Nejprve vytvořte proceduru pro formátování čísel v tabulce a pak přidejte `AddData` metodu pro vytvoření a formátování tabulek aplikace Word.
+## <a name="add-a-method-to-insert-data-into-a-table"></a>Přidání metody pro vložení dat do tabulky
+ Dalším úkolem je přečíst data z vázaných ovládacích prvků a naplnit tabulku v dokumentu aplikace Word. Nejprve vytvořte proceduru pro formátování nadpisů v tabulce a potom přidejte `AddData` metodu pro vytvoření a formátování tabulky aplikace Word.
 
-### <a name="to-format-the-table-headings"></a>K formátování záhlaví tabulky
+### <a name="to-format-the-table-headings"></a>Formátování záhlaví tabulky
 
-1. V `ActionsControl` třídy, vytvořte metodu k formátování záhlaví tabulky.
+1. Ve `ActionsControl` třídě vytvořte metodu pro formátování záhlaví tabulky.
 
      [!code-vb[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#2)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#2)]
 
-### <a name="to-create-the-table"></a>Pro vytvoření tabulky
+### <a name="to-create-the-table"></a>Vytvoření tabulky
 
-1. V `ActionsControl` třídy, napíše metoda, která vytvoří tabulku, pokud jeden není již neexistuje a přidat data z podokna akcí do tabulky.
+1. Ve `ActionsControl` třídě napište metodu, která vytvoří tabulku, pokud ještě neexistuje, a přidejte data z podokna akce do tabulky.
 
      [!code-vb[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#3)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#3)]
 
-### <a name="to-insert-text-into-a-word-table"></a>Vložit text do tabulek aplikace Word
+### <a name="to-insert-text-into-a-word-table"></a>Vložení textu do tabulky aplikace Word
 
-1. Přidejte následující kód, který <xref:System.Windows.Forms.Control.Click> obslužná rutina události **vložit** tlačítko.
+1. Přidejte následující kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události tlačítka **Vložit** .
 
      [!code-vb[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#4)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#4)]
 
-2. V jazyce C#, je nutné vytvořit obslužná rutina události <xref:System.Windows.Forms.Control.Click> událost tlačítka.  Můžete umístit tento kód v <xref:System.Windows.Forms.UserControl.Load> obslužná rutina události `ActionsControl` třídy.
+2. V jazyce C# je nutné vytvořit obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> Událost tlačítka.  Tento kód lze umístit do <xref:System.Windows.Forms.UserControl.Load> obslužné rutiny události `ActionsControl` třídy.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#5)]
 
 ## <a name="show-the-actions-pane"></a>Zobrazit podokno akcí
- V podokně Akce se zobrazí po ovládací prvky jsou přidány do něj.
+ Podokno akce se zobrazí po přidání ovládacích prvků do něj.
 
-### <a name="to-show-the-actions-pane"></a>Chcete-li zobrazit podokno akcí
+### <a name="to-show-the-actions-pane"></a>Zobrazení podokna akce
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **ThisDocument.vb** nebo **ThisDocument.cs**a potom klikněte na tlačítko **zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **ThisDocument. vb** nebo **ThisDocument.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
 
-2. Vytvořit novou instanci ovládacího prvku v horní části `ThisDocument` třídy tak, aby vypadal jako v následujícím příkladu.
+2. Vytvořte novou instanci ovládacího prvku v horní části `ThisDocument` třídy tak, aby vypadala jako v následujícím příkladu.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#6)]
      [!code-vb[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#6)]
 
-3. Přidejte kód, který <xref:Microsoft.Office.Tools.Word.Document.Startup> obslužná rutina události `ThisDocument` tak, aby vypadal jako v následujícím příkladu.
+3. Přidejte kód do <xref:Microsoft.Office.Tools.Word.Document.Startup> obslužné rutiny události pro, aby vypadal `ThisDocument` jako v následujícím příkladu.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
      [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]
 
 ## <a name="test-the-application"></a>Testování aplikace
- Nyní můžete otestovat váš dokument k ověření, že v podokně Akce se zobrazí, když je dokument otevřít. Testování pro vztah záznamů master/detail v ovládacích prvcích v podokně Akce a ujistěte se, že je slovo vložené data tabulky, když **vložit** po kliknutí na tlačítko.
+ Nyní můžete testovat dokument a ověřit tak, že se podokno akce zobrazí při otevření dokumentu. Otestujte vztah hlavní/podrobnosti v ovládacích prvcích podokna akce a ujistěte se, že jsou data v tabulce aplikace Word při kliknutí na tlačítko **Vložit** vyplněna.
 
-### <a name="to-test-your-document"></a>K otestování vašeho dokumentu
+### <a name="to-test-your-document"></a>Testování dokumentu
 
-1. Stisknutím klávesy **F5** ke spuštění projektu.
+1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. Potvrďte, že v podokně Akce je viditelný.
+2. Potvrďte, že je podokno akce viditelné.
 
-3. V poli se seznamem vyberte požadovanou společnost a ověřte, že položky v **produkty** seznamu pole změnit.
+3. V poli se seznamem vyberte společnost a ověřte, že se položky v seznamu **produkty** změnily.
 
-4. Vyberte produkt, klikněte na tlačítko **vložit** v podokně akcí a ověřte, že jsou přidány informace o produktech do tabulky v aplikaci Word.
+4. Vyberte produkt, v podokně Akce klikněte na možnost **Vložit** a ověřte, zda jsou do tabulky v aplikaci Word přidány podrobnosti o produktu.
 
-5. Vložte další produkty od různých společností.
+5. Vložte další produkty z různých společností.
 
 ## <a name="next-steps"></a>Další kroky
- Tento návod ukazuje základy vazba dat k ovládacím prvkům v podokně akcí ve Wordu. Tady jsou některé úlohy, které by mohl pocházet Další:
+ Tento názorný postup ukazuje základy vázání dat k ovládacím prvkům v podokně akcí ve Wordu. Tady jsou některé úkoly, které mohou být další:
 
-- Vazba dat k ovládacím prvkům v aplikaci Excel. Další informace najdete v tématu [názorný postup: Vytvoření vazby dat k ovládacím prvkům v podokně akcí aplikace Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).
+- Svázání dat s ovládacími prvky v aplikaci Excel. Další informace najdete v tématu [Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).
 
-- Nasazení projektu. Další informace najdete v tématu [nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+- Nasazení projektu. Další informace najdete v tématu [nasazení řešení pro systém Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)
 - [Postupy: Přidání podokna akcí do dokumentů aplikace Word nebo sešitů aplikace Excel](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

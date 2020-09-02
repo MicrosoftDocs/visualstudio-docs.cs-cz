@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd521a853d9ec8c1a3fee8e50e87217621a73a89
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75848165"
 ---
 # <a name="performance-session-properties"></a>Vlastnosti výkonnostní relace
@@ -38,15 +38,15 @@ ms.locfileid: "75848165"
 ## <a name="general"></a>Obecné  
  Tato nastavení umožňují vybrat metodu profilace, přidat kolekci objektů rozhraní .NET a data o životnosti a zadat výchozí umístění sestavy a zásady vytváření názvů.  
   
- Další informace najdete v části .  
+ Další informace naleznete v tématu:  
   
  [Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)  
   
  [Shromažďování dat o přidělení paměti a době platnosti objektů .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)  
   
- [Postupy: Nastavení možností názvu souboru s údaji o výkonu](../profiling/how-to-set-performance-data-file-name-options.md)  
+ [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)  
   
-## <a name="launch"></a>Spustit  
+## <a name="launch"></a>Spuštění  
  Tato nastavení umožňují vybrat ze seznamu binárních souborů a zadat pořadí spouštění binárních souborů.  
   
  Další informace najdete v tématu [Postupy: Určení binárního souboru, který se má spustit.](../profiling/how-to-specify-the-binary-to-start.md)  
@@ -66,8 +66,8 @@ ms.locfileid: "75848165"
   
   Další informace najdete v tématu [Postupy: výběr událostí vzorkování.](../profiling/how-to-choose-sampling-events.md)  
   
-## <a name="binary"></a>binární  
- Tato nastavení umožňují určit, zda chcete přemístit instrumentované binární soubory do jiného umístění. Pokud například vytváříte profilaci my. DLL a rozhodnete se, že nechcete přemístit instrumentované binární soubory, vytvoří se záložní kopie souboru my. DLL s názvem My. orig. DLL. Následně se my. DLL upraví vložením sond pro shromažďování dat. Pokud se rozhodnete přemístit instrumentované binární soubory, původní binární soubor se nepřejmenuje a instrumentované binární soubory se zkopírují do zadaného umístění pro použití během instrumentace.  
+## <a name="binary"></a>Binární  
+ Tato nastavení umožňují určit, zda chcete přemístit instrumentované binární soubory do jiného umístění. Pokud například vytváříte profilování My.DLL a rozhodnete, že nechcete přemístit instrumentované binární soubory, vytvoří se záložní kopie My.DLL s názvem My.Orig.DLL. Následně se My.DLL změní vložením sond pro shromažďování dat. Pokud se rozhodnete přemístit instrumentované binární soubory, původní binární soubor se nepřejmenuje a instrumentované binární soubory se zkopírují do zadaného umístění pro použití během instrumentace.  
   
  Další informace najdete v tématu [Postupy: Určení binárního souboru, který se má spustit.](../profiling/how-to-specify-the-binary-to-start.md)  
   
@@ -75,9 +75,9 @@ ms.locfileid: "75848165"
  Další informace najdete v tématu [shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md) .  
   
 ## <a name="instrumentation"></a>Instrumentace  
- Tato nastavení umožňují shromažďovat údaje o výkonu pro kód JScript na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webové stránky a určovat události **před instrumentací** a **po** instrumentaci, které chcete provést před nebo po procesu instrumentace.  
+ Tato nastavení umožňují shromažďovat údaje o výkonu pro kód JScript na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webových stránkách a určovat všechny události **před instrumentací** a **po instrumentaci** , které chcete provést před nebo po procesu instrumentace.  
   
- Další informace najdete v části .  
+ Další informace naleznete v tématu:  
   
  [Postupy: Profilace kódu JavaScript ve webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)  
   
@@ -89,9 +89,9 @@ ms.locfileid: "75848165"
  Další informace najdete v tématu [Postup: shromažďování dat ČÍTAČŮ procesoru.](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Události systému Windows  
- Během profilace můžete shromažďovat data z poskytovatelů trasování událostí. Data můžete zobrazit pomocí `/calltrace` možnost nástroje příkazového řádku VSPerfReport. exe. Další informace o trasování událostí pro Windows (ETW) najdete v tématu věnovaném [trasování událostí](https://msdn2.microsoft.com/library/aa363668.aspx).  
+ Během profilace můžete shromažďovat data z poskytovatelů trasování událostí. Data můžete zobrazit pomocí možnosti nástroje příkazového řádku VSPerfReport.exe `/calltrace` . Další informace o trasování událostí pro Windows (ETW) najdete v tématu věnovaném [trasování událostí](https://msdn2.microsoft.com/library/aa363668.aspx).  
   
- Další informace najdete v části .  
+ Další informace naleznete v tématu:  
   
  [Postupy: Shromažďování dat Trasování událostí pro Windows](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
@@ -102,16 +102,16 @@ ms.locfileid: "75848165"
   
  Další informace najdete v tématu [Postup: shromažďování dat čítače Windows](../profiling/how-to-collect-windows-counter-data.md).  
   
-## <a name="advanced"></a>Upřesnit  
+## <a name="advanced"></a>Pokročilý  
  Tato nastavení umožňují přidat možnosti do procesu instrumentace zadáním jedné nebo více možností nástroje pro profilaci [VSInstr](../profiling/vsinstr.md) příkazového řádku. Můžete také zadat verzi společného modulu runtime k profilaci, když aplikace používá více než jednu verzi.  
   
- Další informace najdete v části .  
+ Další informace naleznete v tématu:  
   
- [Postupy: Určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
+ [Postupy: určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   
- [Postupy: Určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)  
+ [Postupy: určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)  
   
 ## <a name="see-also"></a>Viz také  
-   [přehledy](../profiling/overviews-performance-tools.md)  
+ [Přehledy](../profiling/overviews-performance-tools.md)   
  [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md)   
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)

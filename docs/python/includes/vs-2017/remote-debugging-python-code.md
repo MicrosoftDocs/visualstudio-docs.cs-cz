@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: a1f8c145d7c9c072adcc902cae9f2b6ae36937cd
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88246154"
 ---
 Visual Studio může spouštět a ladit aplikace v Pythonu místně a vzdáleně na počítači s Windows (viz [vzdálené ladění](../../../debugger/remote-debugging.md)). Můžete ho také vzdáleně ladit na jiném operačním systému, zařízení nebo implementaci Pythonu než CPython pomocí [knihovny ptvsd](https://pypi.python.org/pypi/ptvsd).

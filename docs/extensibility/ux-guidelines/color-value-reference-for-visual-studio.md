@@ -10,10 +10,10 @@ ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
 ms.reviewer: Jamie.Young
 manager: jillfra
 ms.openlocfilehash: a651aaa74465f053aa0ae7eee0f3caba3f288192
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238904"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Odkaz na hodnotu barvy pro Visual Studio
@@ -170,7 +170,7 @@ Při použití tohoto referenčního průvodce si pamatujte:
 > [!NOTE]
 > **Pro porovnání jsou zobrazeny políčka Vysoký kontrast.** Použijte název systémové barvy pro Vysoký kontrast uživatelské rozhraní a nepoužívejte pro ně výběr kapátka nebo barvy. Vysoký kontrast vzorníků v tomto tématu odráží Vysoký kontrast #1 motiv ve Windows. Barvy budou vypadat jinak v jiných Vysoký kontrast motivech.
 
-### <a name="content"></a>Obsah
+### <a name="content"></a>Content
 
 | | Světlý motiv | Tmavý motiv | Modrý motiv | Vysoký kontrast |
 | --- | :---: | :---: | :---: | :---: |

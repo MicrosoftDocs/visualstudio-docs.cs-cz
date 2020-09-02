@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a852b0e5ac6c6a677caab97279a0b0cb0299d27f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670637"
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Postupy: sledování kódu přizpůsobením posuvníku
+# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Postupy: Sledování kódu přizpůsobením posuvníku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Když pracujete s dlouhými soubory kódu, může být obtížné udržet si vše. Můžete přizpůsobit posuvník okna kódu, abyste vám poskytli pohled na oči, co se děje ve vašem kódu.
@@ -25,7 +25,7 @@ Když pracujete s dlouhými soubory kódu, může být obtížné udržet si vš
 
 1. Můžete nastavit posuvník pro zobrazení změn kódu, zarážek, chyb a záložek.
 
-     Otevřete stránku možností **posuvníku** (**nástroje, editor textu možnosti. Všechny jazyky** nebo konkrétní jazyk nebo zadejte **posuvník** v okně snadné spuštění).
+     Otevřete stránku možností **posuvníku** (**nástroje, editor textu možnosti. Všechny jazyky** nebo konkrétní jazyk nebo zadejte  **posuvník** v okně snadné spuštění).
 
 2. Vyberte možnost **Zobrazit poznámky přes svislý posuvník**a pak vyberte poznámky, které chcete zobrazit. (Možnost **značky** obsahuje zarážky a záložky.)
 

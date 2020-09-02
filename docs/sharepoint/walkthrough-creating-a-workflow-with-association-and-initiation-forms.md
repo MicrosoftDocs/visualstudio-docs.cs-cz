@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017131"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>Návod: vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
@@ -53,12 +54,12 @@ ms.locfileid: "86017131"
 >
 > Kromě toho může počítač v následujících pokynech zobrazit jiné názvy nebo umístění pro některé [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] prvky uživatelského rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Tyto prvky jsou určeny edicí a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
 
-- Visual Studio.
+- Visual Studio
 
 ## <a name="create-a-sharepoint-sequential-workflow-project"></a>Vytvoření projektu pro sekvenční pracovní postup SharePointu
  Nejprve vytvořte projekt sekvenčního pracovního postupu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Sekvenční pracovní postup je série kroků, které se spouští v pořadí až do dokončení poslední aktivity. V tomto postupu vytvoříte sekvenční pracovní postup, který se bude vztahovat na seznam sdílených dokumentů v SharePointu. Průvodce pracovním postupem umožňuje přidružení pracovního postupu k webu nebo k definici seznamu a umožňuje určit, kdy se pracovní postup spustí.
@@ -167,7 +168,7 @@ ms.locfileid: "86017131"
 
 2. Na panelu nabídek vyberte možnost **projekt**  >  **Přidat novou položku** . zobrazí se dialogové okno **Přidat novou položku** .
 
-3. V zobrazení stromu dialogového okna rozbalte možnost **Visual C#** nebo **Visual Basic** (v závislosti na jazyku projektu), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
+3. V zobrazení stromu dialogového okna rozbalte možnost **Visual C#** nebo **Visual Basic**  (v závislosti na jazyku projektu), rozbalte uzel **SharePoint** a pak zvolte uzel **2010** .
 
 4. V seznamu šablon vyberte šablonu **formuláře pro zahájení pracovního postupu** .
 
@@ -444,6 +445,6 @@ ms.locfileid: "86017131"
 
 - Další informace o pracovních postupech služby SharePoint naleznete v tématu [pracovní postupy ve službě Windows SharePoint Services](/previous-versions/office/developer/sharepoint-2010/ms416312(v=office.14)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md)
 - [Návod: Přidání stránky aplikace do pracovního postupu](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)

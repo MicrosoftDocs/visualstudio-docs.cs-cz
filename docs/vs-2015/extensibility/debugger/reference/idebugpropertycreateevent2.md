@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyCreateEvent2 | Dokumentace Microsoftu
+title: IDebugPropertyCreateEvent2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,43 +13,43 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d1558aa8ca9cad93b00cf90f02f3af6d346b036b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698665"
 ---
 # <a name="idebugpropertycreateevent2"></a>IDebugPropertyCreateEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní je odesílat pomocí ladicího stroje (DE) Správce ladění relace (SDM) při vytváření vlastnost, která souvisí s určitým dokumentem.  
+Toto rozhraní se odesílá ladicím modulem (DE) do Správce ladění relace (SDM), když vytvoří vlastnost, která je přidružena k určitému dokumentu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPropertyCreateEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní oznamuje, zda byl vytvořen vlastností. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) na stejný objekt jako toto rozhraní musí implementovat rozhraní. Používá SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup `IDebugEvent2` rozhraní. Toto rozhraní je implementováno, pokud je DE vytvořil vlastnost přidružený ke skriptu, který byl načten nebo vytvořen a tento skript je potřeba se zobrazí v integrovaném vývojovém prostředí.  
+ DE implementuje toto rozhraní, aby nahlásilo, že byla vytvořena vlastnost. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE vytvořila vlastnost přidruženou ke skriptu, který byl načten nebo vytvořen a v případě, že se tento skript musí objevit v integrovaném vývojovém prostředí.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- DE vytvoří a odešle tento objekt událostí do sestavy, kterou vytvořil vlastnost. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funkce zpětného volání, který je poskytnut pomocí SDM, když je připojen k laděnému programu.  
+ Vlastnost DE vytvoří a pošle tento objekt události k vytvoření sestavy vlastnosti. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojená k laděnému programu.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody `IDebugPropertyCreateEvent2` rozhraní.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Následující tabulka ukazuje metodu `IDebugPropertyCreateEvent2` rozhraní.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md)|Získá novou vlastnost.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je vlastnost konkrétním dokumentu nebo skriptu, které s ním spojená, DE můžete odeslat tuto událost SDM za účelem aktualizace **dokumenty skriptu** okno s názvem dokumentu. Zavolá SDM [GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md) s argumentem `guidDocument` k načtení `VARIANT` obsahující [IUnknown](https://msdn.microsoft.com/library/e6b85472-e54b-4b8c-b19f-4454d6c05a8f) ukazatele. Zavolá SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na tento ukazatel k načtení [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) rozhraní, které slouží k aktualizaci **dokumenty skriptu** okna.  
+ Pokud má vlastnost k ní přidružený konkrétní dokument nebo skript, může DE odeslat tuto událost do SDM, aby aktualizovala okno **dokumenty skriptu** s názvem dokumentu. Model SDM bude volat [GetExtendedInfo](../../../extensibility/debugger/reference/idebugproperty2-getextendedinfo.md) s argumentem `guidDocument` pro načtení `VARIANT` obsahujícího ukazatele [IUnknown](https://msdn.microsoft.com/library/e6b85472-e54b-4b8c-b19f-4454d6c05a8f) . Model SDM zavolá [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na tento ukazatel, aby získal rozhraní [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) , které se používá k aktualizaci okna **dokumenty skriptu** .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

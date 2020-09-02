@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 501b7f040cb841d19c06ccc8fe7615a5b4a5e70d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657349"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Postupy: Generování šablon ze šablon pomocí řídicích sekvencí
@@ -25,7 +25,7 @@ Můžete vytvořit textovou šablonu, která vytvoří další textovou šablonu
 
 ### <a name="to-generate-a-text-template-from-within-a-text-template"></a>Vygenerování textové šablony v rámci textové šablony
 
-- Pomocí zpětného lomítka (\\) jako řídicího znaku vytvořte potřebné značky značek v rámci textové šablony pro direktivy, příkazy, výrazy a funkce třídy v samostatném souboru textové šablony.
+- Pomocí zpětného lomítka ( \\ ) jako řídicího znaku vytvořte potřebné značky značek v rámci textové šablony pro direktivy, příkazy, výrazy a funkce třídy v samostatném souboru textové šablony.
 
     ```
     \<#@ directive \#>
@@ -35,7 +35,7 @@ Můžete vytvořit textovou šablonu, která vytvoří další textovou šablonu
     ```
 
 ## <a name="example"></a>Příklad
- Následující příklad používá řídicí znaky k vytvoření textové šablony z textové šablony. Direktiva `output` nastaví typ cílového souboru na typ souboru textové šablony (. TT).
+ Následující příklad používá řídicí znaky k vytvoření textové šablony z textové šablony. `output`Direktiva nastaví typ cílového souboru na typ souboru textové šablony (. TT).
 
 ```csharp
 \<#@ output extension=".tt" \#>

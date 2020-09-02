@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findchildren – | Dokumentace Microsoftu
+title: 'IDiaSession:: findChildren – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cf274bb0f572da11a9aa43248da7eaa72a2e73c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150422"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte všechny podřízené objekty zadaný nadřazený identifikátor odpovídající název a značka typu.  
+Načte všechny podřízené položky zadaného nadřazeného identifikátoru, který se shoduje s názvem a typem symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ HRESULT findChildren ( 
   
 #### <a name="parameters"></a>Parametry  
  `parent`  
- [in] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) představující nadřazeného objektu. Pokud je tento symbol nadřazené funkce, modul nebo blok a pak jeho lexikální podřízené položky jsou vráceny v `ppResult`. Pokud je symbol nadřazeného typu, budou vráceny podřízené třídy. Pokud je tento parametr `NULL`, pak `symtag` musí být nastaveno na `SymTagExe` nebo `SymTagNull`, která vrací globální obor (soubor .exe).  
+ pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující nadřazený prvek. Pokud je tento nadřazený symbol funkce, modul nebo blok, pak jsou jeho Lexikální podřízené prvky vráceny v `ppResult` . Pokud je nadřazený symbol typu, pak jsou vráceny podřízené třídy. Pokud je tento parametr `NULL` , `symtag` musí být nastaven na `SymTagExe` nebo `SymTagNull` , což vrátí globální obor (soubor. exe).  
   
  `symtag`  
- [in] Určuje symbol značky podřízené položky, který se má načíst. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu. Nastavte na `SymTagNull` načíst všechny podřízené objekty.  
+ pro Určuje značku symbolu podřízených objektů, které mají být načteny. Hodnoty jsou pořízeny výčtem [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) . Nastavte na `SymTagNull` načtení všech podřízených objektů.  
   
  `name`  
- [in] Určuje název podřízenou položku, která se má načíst. Nastavte na `NULL` pro všechny podřízené objekty, které se mají načíst.  
+ pro Určuje název podřízených objektů, které mají být načteny. Nastavte na hodnotu `NULL` pro všechny podřízené položky, které mají být načteny.  
   
  `compareFlags`  
- [in] Určení možností porovnání využije na odpovídající název. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.  
+ pro Určuje možnosti porovnání použité pro porovnávání názvů. Hodnoty výčtového výčtu [namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md) lze použít samostatně nebo v kombinaci.  
   
  `ppResult`  
- [out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) načíst objekt, který obsahuje seznam podřízenými symboly.  
+ mimo Vrátí objekt [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) , který obsahuje seznam načtených podřízených symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak najít místní proměnné, funkce `pFunc` nejmenuje shoda `szVarName`.  
+ Následující příklad ukazuje, jak najít místní proměnné funkce `pFunc` , které odpovídají názvu `szVarName` .  
   
 ```cpp#  
 IDiaEnumSymbols* pEnum;  
@@ -66,8 +66,8 @@ pSession->findChildren( pFunc, SymTagData, szVarName, nsCaseSensitive, &pEnum );
   
 ## <a name="see-also"></a>Viz také  
  [Přehled](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
- [Idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md)   
- [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
- [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [Namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md)   
+ [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [Výčet Namesearchoptions –](../../debugger/debug-interface-access/namesearchoptions.md)   
  [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)
