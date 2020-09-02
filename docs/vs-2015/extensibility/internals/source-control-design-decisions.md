@@ -1,5 +1,5 @@
 ---
-title: Zdroj rozhodnutí o návrhu správy | Dokumentace Microsoftu
+title: Rozhodnutí o návrhu správy zdrojových kódů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 89d125dc52340e8528ee9692d5de00784632e6f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187890"
 ---
 # <a name="source-control-design-decisions"></a>Rozhodnutí o návrhu správy zdrojového kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Následující rozhodnutí o návrhu pro projekty třeba zvážit při implementaci správy zdrojového kódu.  
+Při implementaci správy zdrojových kódů by se měla vzít v úvahu následující rozhodnutí o návrhu pro projekty.  
   
-## <a name="will-information-be-shared-or-private"></a>Bude informace sdílené nebo soukromé?  
- Nejdůležitější rozhodnutí o návrhu, můžete je informací je sdílet a co je privátní. Například seznam souborů projektu, které se sdílí, ale v tomto seznamu souborů, někteří uživatelé měli mít soukromé soubory. Nastavení kompilátoru sdílejí, ale je obecně privátní počáteční projekt. Nastavení jsou čistě sdílené, sdílené s přepsání nebo čistě privátní. Návrh soukromé položky, jako je možnosti uživatele řešení (.suo) soubory nejsou zapsány do [!INCLUDE[vsvss](../../includes/vsvss-md.md)]. Nezapomeňte si uložit žádné soukromé informace v soukromé soubory, jako je například soubor .suo, nebo konkrétní soukromých soubor vytvoříte, například. csproj.user souboru pro jazyk Visual C# nebo. vbproj.user soubor v jazyce Visual Basic.  
+## <a name="will-information-be-shared-or-private"></a>Budou informace sdílené nebo soukromé?  
+ Nejdůležitějším rozhodnutím pro návrh můžete udělat, jaké informace lze sdílet a co je soukromé. Například seznam souborů pro projekt je sdílený, ale v tomto seznamu souborů mohou někteří uživatelé chtít mít soukromé soubory. Nastavení kompilátoru je sdílené, ale spouštěcí projekt je obecně soukromý. Nastavení jsou buď čistě sdílená, sdílená s přepsáním, nebo čistě soukromá. V rámci návrhu nejsou vráceny žádné položky, jako jsou například soubory možností uživatele řešení (. suo) [!INCLUDE[vsvss](../../includes/vsvss-md.md)] . Nezapomeňte uložit všechny soukromé informace v soukromých souborech, jako je například soubor. suo, nebo konkrétní soukromý soubor, který vytvoříte, například soubor. csproj. User pro soubor Visual C# nebo. vbproj. User pro Visual Basic.  
   
- Toto rozhodnutí není kompletní a provádět na základě jednotlivých položkách.  
+ Toto rozhodnutí není vše včetně a může být provedeno na základě položky.  
   
-## <a name="will-the-project-include-special-files"></a>Projekt bude obsahovat speciální soubory?  
- Další rozhodnutí o návrhu důležité je, zda strukturu projektu používá speciální soubory. Speciální soubory jsou skryté soubory, které tvoří základ soubory, které jsou viditelné v Průzkumníku řešení a vrácení se změnami a rezervace dialogová okna. Pokud používáte speciální souborů, postupujte podle následujících pokynů:  
+## <a name="will-the-project-include-special-files"></a>Bude projekt zahrnovat speciální soubory?  
+ Dalším důležitým rozhodnutím návrhu je, zda struktura projektu používá speciální soubory. Speciální soubory jsou skryté soubory, které jsou základem souborů, které jsou viditelné v Průzkumník řešení a v dialogových oknech pro vrácení se změnami a odhlášení. Pokud používáte speciální soubory, postupujte podle těchto pokynů:  
   
-1. Nepřidružujte speciální soubory k kořenový uzel projektu – to znamená s projektem samotném souboru. Váš soubor projektu musí být jeden soubor.  
+1. Nepřidružte speciální soubory k kořenovému uzlu projektu – to znamená s samotným souborem projektu. Soubor projektu musí být jeden soubor.  
   
-2. Když jsou speciální soubory přidat, odebrat nebo přejmenovat v projektu odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2> události musí být aktivována s příznakem, který označuje soubory jsou speciální soubory. Tyto události jsou nazývány prostředím v reakci na projektu volání odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> metody.  
+2. Při přidání, odebrání nebo přejmenování speciálních souborů v projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2> musí být aktivovány příslušné události se sadou příznaků, která označuje, že soubory jsou speciální soubory. Tyto události jsou volány prostředím v reakci na projekt volající příslušné <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> metody.  
   
-3. Když projekt nebo editor volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> pro soubor, speciální soubory přidružené k tento soubor nejsou rezervovány automaticky. Speciální soubory v předejte ho spolu s nadřazený soubor. Zjistí vztah mezi všechny soubory, které jsou předány v prostředí a odpovídajícím způsobem Skrýt speciální soubory v Uživatelském rozhraní vrácení se změnami.  
+3. Když váš projekt nebo editor volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> soubor, speciální soubory přidružené k tomuto souboru nejsou automaticky rezervovány. Předání speciálních souborů společně s nadřazeným souborem. Prostředí zjistí vztah mezi všemi soubory, které jsou předány, a patřičně skryje speciální soubory v uživatelském rozhraní rezervace.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>   

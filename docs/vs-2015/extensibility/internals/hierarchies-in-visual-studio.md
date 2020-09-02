@@ -12,27 +12,27 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 22943d3049ff0e24d00c7c29750e7dcd0efaf846
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158356"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Hierarchie v sadě Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Integrované vývojové prostředí (IDE) se zobrazí jako projekt *hierarchie*. V integrovaném vývojovém prostředí hierarchie je strom z uzlů, kde má každý uzel sadu přidružené vlastnosti. A *projektu hierarchie* je kontejner, který obsahuje položky tohoto projektu, položek relací a přidružené vlastnosti položky a příkazy.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Integrované vývojové prostředí (IDE) zobrazuje projekt jako *hierarchii*. V integrovaném vývojovém prostředí je hierarchie stromem uzlů, kde každý uzel má sadu přidružených vlastností. *Hierarchie projektu* je kontejner, který obsahuje položky projektu, relace položky a přidružené vlastnosti a příkazy položek.
 
- V [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], Správa hierarchií projektu s použitím rozhraní hierarchie <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> Rozhraní přesměruje příkazů vyvoláte z položek projektu do okna příslušné hierarchii místo standardní příkaz obslužné rutiny.
+ V [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nástroji můžete spravovat hierarchie projektu pomocí rozhraní hierarchie, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Rozhraní přesměrovává příkazy, které jste vyvolali z položek projektu, do příslušného okna hierarchie namísto standardní obslužné rutiny příkazu.
 
 ## <a name="project-hierarchies"></a>Hierarchie projektu
- Každá hierarchie projektu obsahuje položky, které můžete zobrazit a upravit. Tyto položky se liší v závislosti na typu projektu. Například databázový projekt může obsahovat uložené procedury, zobrazení databáze a databázových tabulek. Programovací jazyk projektu, na druhé straně, bude pravděpodobně obsahovat zdrojové soubory a soubory prostředků pro rastrové obrázky a v dialogových oknech. Mohou být vnořené hierarchie, která poskytuje některé vyšší flexibilitu při vytváření hierarchie projektu.
+ Každá hierarchie projektu obsahuje položky, které lze zobrazit a upravit. Tyto položky se liší v závislosti na typu projektu. Databázový projekt může například obsahovat uložené procedury, zobrazení databáze a databázové tabulky. Projekt programovacího jazyka na druhé straně bude nejspíš zahrnovat zdrojové soubory a soubory prostředků pro rastrové obrázky a dialogová okna. Hierarchie můžou být vnořené, což vám dává větší flexibilitu při vytváření hierarchie projektu.
 
- Když vytvoříte nový typ projektu, určuje typ projektu kompletní sadu položek, které lze upravovat v ní. Projekty však může obsahovat položky, pro které nemají podporu editaci. Například projekty Visual C++ může obsahovat soubory HTML, i když Visual C++ neposkytuje žádné vlastní editor pro tento typ souboru HTML.
+ Při vytváření nového typu projektu řídí typ projektu úplnou sadu položek, které lze v ní upravovat. Projekty však mohou obsahovat položky, pro které nemají podporu úprav. Například Visual C++ projekty mohou obsahovat soubory HTML, i když Visual C++ neposkytuje žádný přizpůsobený editor pro typ souboru HTML.
 
- Hierarchie spravovat trvalost položky, které obsahují. Implementace v hierarchii musí řídit všechny speciální vlastnostmi, které ovlivňují trvalost položky v rámci hierarchie. Například pokud položky představují objektů v úložišti místo souborů, provádění hierarchie řídit trvalou dostupnost těchto objektů. Hierarchie, které chcete uložit položky uživatelský vstup v souladu s přesměruje samotném integrovaném vývojovém prostředí, ale rozhraní IDE neřídí všechny akce nezbytné k uložení těchto položek. Místo toho je projekt v ovládacím prvku.
+ Hierarchie spravují persistenci položek, které obsahují. Implementace hierarchie musí řídit jakékoli speciální vlastnosti, které mají vliv na trvalost položek v rámci hierarchie. Například pokud položky reprezentují objekty v úložišti namísto souborů, implementace hierarchie musí řídit trvalost těchto objektů. Rozhraní IDE sám směruje hierarchii tak, aby uložila položky v souladu s uživatelským vstupem, ale rozhraní IDE neřídí žádné akce potřebné k uložení těchto položek. Místo toho je projekt v řízení.
 
- Když uživatel otevře položku v editoru, hierarchie, která určuje, že položka je vybraná a stane aktivní hierarchii. U vybrané hierarchie určuje sadu příkazů, které jsou dostupné tak, aby fungoval na položce. Sledování fokus uživatele tímto způsobem umožňuje hierarchie, aby odrážela aktuální kontextu uživatele.
+ Když uživatel otevře položku v editoru, hierarchie, která řídí tuto položku, je vybrána a stávají se aktivní hierarchií. Vybraná hierarchie Určuje sadu příkazů, které jsou k dispozici pro tuto položku. Sledování fokusu uživatele tímto způsobem umožňuje, aby hierarchie odrážela aktuální kontext uživatele.
 
 ## <a name="see-also"></a>Viz také
- [Typy projektů](../../extensibility/internals/project-types.md) [výběr a Měna v prostředí IDE](../../extensibility/internals/selection-and-currency-in-the-ide.md) [VSSDK ukázky](../../misc/vssdk-samples.md)
+ Výběr [typů projektu](../../extensibility/internals/project-types.md) [a měna v](../../extensibility/internals/selection-and-currency-in-the-ide.md) [ukázkách IDE VSSDK Samples](../../misc/vssdk-samples.md)

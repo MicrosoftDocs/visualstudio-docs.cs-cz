@@ -1,150 +1,146 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule | Dokumentace Microsoftu
-ms.date: 11/04/2016
+title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsFromStreamWithCorModule | Microsoft Docs'
+ms.date: 11/15/2016
+ms.prod: visual-studio-dev14
+ms.technology: vs-ide-sdk
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 - LoadSymbolsFromStreamWithCorModule
 ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
-author: gregvanl
+caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
-ms.workload:
-- vssdk
 ms.openlocfilehash: c47c8e2df88e25f7b0eaf2d8d82c343ccbd360c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186471"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-Načtení symbolů ladění z datového proudu zadaný **ICorDebugModule** objektu.
+[!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-## <a name="syntax"></a>Syntaxe
-
-```cpp
-HRESULT LoadSymbolsFromStreamWithCorModule(
-    ULONG32   ulAppDomainID,
-    GUID      guidModule,
-    ULONGLONG baseAddress,
-    IUnknown* pUnkMetadataImport,
-    IUnknown* pUnkCorDebugModule,
-    IStream*  pStream
-);
-```
-
-```csharp
-int LoadSymbolsFromStreamWithCorModule(
-    uint    ulAppDomainID,
-    Guid    guidModule,
-    ulong   baseAddress,
-    object  pUnkMetadataImport,
-    object  pUnkCorDebugModule,
-    IStream pStream
-);
-```
-
-#### <a name="parameters"></a>Parametry
-`ulAppDomainID`
-
- [in] Identifikátor domény aplikace.
-
-`guidModule`
-
- [in] Jedinečný identifikátor modulu.
-
-`baseAddress`
-
- [in] Adresa základní paměti.
-
-`pUnkMetadataImport`
-
- [in] Objekt, který obsahuje metadata pro symbol.
-
-`pUnkCorDebugModule`
-
- [in] Objekt, který implementuje [icordebugmodule – rozhraní](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).
-
-`pStream`
-
- [in] Datový proud, který obsahuje symboly ladění, které chcete načíst.
-
-## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.
-
-## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.
-
-```cpp
-HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(
-    ULONG32 ulAppDomainID,
-    GUID guidModule,
-    ULONGLONG baseOffset,
-    IUnknown* pUnkMetadataImport,
-    IUnknown* pUnkCorDebugModule,
-    IStream* pStream
-)
-{
-    CAutoLock Lock(this);
-
-    HRESULT hr = S_OK;
-    CComPtr<IMetaDataImport> pMetadata;
-    CComPtr<ICorDebugModule> pCorModule;
-
-    CModule* pmodule = NULL;
-    CModule* pmoduleNew = NULL;
-    bool fAlreadyLoaded = false;
-    Module_ID idModule(ulAppDomainID, guidModule);
-    DWORD dwCurrentState = 0;
-
-    ASSERT(IsValidObjectPtr(this, CDebugSymbolProvider));
-    ASSERT(IsValidInterfacePtr(pUnkMetadataImport, IUnknown));
-
-    METHOD_ENTRY( CDebugSymbolProvider::LoadSymbolsFromStream );
-
-    IfFalseGo( pUnkMetadataImport, E_INVALIDARG );
-    IfFalseGo( pUnkCorDebugModule, E_INVALIDARG );
-
-    IfFailGo( pUnkMetadataImport->QueryInterface( IID_IMetaDataImport,
-              (void**)&pMetadata) );
-
-    IfFailGo( pUnkCorDebugModule->QueryInterface( IID_ICorDebugModule,
-              (void**)&pCorModule) );
-
-    ASSERT(guidModule != GUID_NULL);
-
-    fAlreadyLoaded = GetModule( idModule, &pmodule ) == S_OK;
-
-    IfNullGo( pmoduleNew = new CModule, E_OUTOFMEMORY );
-
-    dwCurrentState = m_pSymProvGroup ? m_pSymProvGroup->GetCurrentState() : 0;
-
-    IfFailGo( pmoduleNew->Create( idModule,
-                                  dwCurrentState,
-                                  pMetadata,
-                                  pCorModule,
-                                  pStream,
-                                  baseOffset ) );
-
-    if (fAlreadyLoaded)
-    {
-        IfFailGo(pmoduleNew->AddEquivalentModulesFrom(pmodule));
-        RemoveModule(pmodule);
-    }
-
-    IfFailGo( AddModule( pmoduleNew ) );
-
-Error:
-
-    RELEASE (pmodule);
-    RELEASE (pmoduleNew);
-
-    METHOD_EXIT( CDebugSymbolProvider::LoadSymbolsFromStream, hr );
-
-    return hr;
-}
-```
-
-## <a name="see-also"></a>Viz také
-- [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)
+Načíst symboly ladění z datového proudu pro daný objekt **ICorDebugModule** .  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```cpp#  
+HRESULT LoadSymbolsFromStreamWithCorModule(  
+   ULONG32   ulAppDomainID,  
+   GUID      guidModule,  
+   ULONGLONG baseAddress,  
+   IUnknown* pUnkMetadataImport,  
+   IUnknown* pUnkCorDebugModule,  
+   IStream*  pStream  
+);  
+```  
+  
+```csharp  
+int LoadSymbolsFromStreamWithCorModule(  
+   uint    ulAppDomainID,  
+   Guid    guidModule,  
+   ulong   baseAddress,  
+   object  pUnkMetadataImport,  
+   object  pUnkCorDebugModule,  
+   IStream pStream  
+);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `ulAppDomainID`  
+ pro Identifikátor domény aplikace  
+  
+ `guidModule`  
+ pro Jedinečný identifikátor modulu  
+  
+ `baseAddress`  
+ pro Základní adresa paměti.  
+  
+ `pUnkMetadataImport`  
+ pro Objekt, který obsahuje metadata symbolu.  
+  
+ `pUnkCorDebugModule`  
+ pro Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
+  
+ `pStream`  
+ pro Datový proud, který obsahuje symboly ladění, které se mají načíst.  
+  
+## <a name="return-value"></a>Návratová hodnota  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
+  
+## <a name="example"></a>Příklad  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) .  
+  
+```cpp#  
+HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(  
+    ULONG32 ulAppDomainID,  
+    GUID guidModule,  
+    ULONGLONG baseOffset,  
+    IUnknown* pUnkMetadataImport,  
+    IUnknown* pUnkCorDebugModule,  
+    IStream* pStream  
+)  
+{  
+    CAutoLock Lock(this);  
+  
+    HRESULT hr = S_OK;  
+    CComPtr<IMetaDataImport> pMetadata;  
+    CComPtr<ICorDebugModule> pCorModule;  
+  
+    CModule* pmodule = NULL;  
+    CModule* pmoduleNew = NULL;  
+    bool fAlreadyLoaded = false;  
+    Module_ID idModule(ulAppDomainID, guidModule);  
+    DWORD dwCurrentState = 0;  
+  
+    ASSERT(IsValidObjectPtr(this, CDebugSymbolProvider));  
+    ASSERT(IsValidInterfacePtr(pUnkMetadataImport, IUnknown));  
+  
+    METHOD_ENTRY( CDebugSymbolProvider::LoadSymbolsFromStream );  
+  
+    IfFalseGo( pUnkMetadataImport, E_INVALIDARG );  
+    IfFalseGo( pUnkCorDebugModule, E_INVALIDARG );  
+  
+    IfFailGo( pUnkMetadataImport->QueryInterface( IID_IMetaDataImport,  
+              (void**)&pMetadata) );  
+  
+    IfFailGo( pUnkCorDebugModule->QueryInterface( IID_ICorDebugModule,  
+              (void**)&pCorModule) );  
+  
+    ASSERT(guidModule != GUID_NULL);  
+  
+    fAlreadyLoaded = GetModule( idModule, &pmodule ) == S_OK;  
+  
+    IfNullGo( pmoduleNew = new CModule, E_OUTOFMEMORY );  
+  
+    dwCurrentState = m_pSymProvGroup ? m_pSymProvGroup->GetCurrentState() : 0;  
+  
+    IfFailGo( pmoduleNew->Create( idModule,  
+                                  dwCurrentState,  
+                                  pMetadata,  
+                                  pCorModule,  
+                                  pStream,  
+                                  baseOffset ) );  
+  
+    if (fAlreadyLoaded)  
+    {  
+        IfFailGo(pmoduleNew->AddEquivalentModulesFrom(pmodule));  
+        RemoveModule(pmodule);  
+    }  
+  
+    IfFailGo( AddModule( pmoduleNew ) );  
+  
+Error:  
+  
+    RELEASE (pmodule);  
+    RELEASE (pmoduleNew);  
+  
+    METHOD_EXIT( CDebugSymbolProvider::LoadSymbolsFromStream, hr );  
+  
+    return hr;  
+}  
+```  
+  
+## <a name="see-also"></a>Viz také  
+ [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

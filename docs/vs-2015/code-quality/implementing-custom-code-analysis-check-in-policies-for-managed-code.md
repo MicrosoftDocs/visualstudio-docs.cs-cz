@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1cf759e01e5f152f2220124c90f145bfbbe3c01d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651586"
 ---
 # <a name="implementing-custom-code-analysis-check-in-policies-for-managed-code"></a>Implementace vlastních zásad vrácení se změnami Analýzy kódu pro spravovaný kód
@@ -82,7 +82,7 @@ Zásada pro vrácení se změnami analýzy kódu určuje sadu pravidel, které m
 
 3. V seznamu **zásad vracení se změnami** dvakrát klikněte na **Analýza kódu**a ujistěte se, že je zaškrtnuté políčko **vykonat analýzu kódu pro spravovaný kód** .
 
-4. V seznamu **Spustit tuto sadu pravidel** klikněte na možnost **\<Select sada pravidel ze správy zdrojového kódu >** .
+4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Select Rule Set from Source Control>** .
 
 5. Zadejte cestu k souboru sady pravidel zásad vracení se změnami v řízení verze.
 
@@ -116,6 +116,6 @@ Zásada pro vrácení se změnami analýzy kódu určuje sadu pravidel, které m
 
 6. Chcete-li ignorovat kód v součástech z jiných společností, zaškrtněte políčko **Potlačit výsledky z generovaného kódu** .
 
-7. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse... >** .
+7. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse...>** .
 
 8. Zadejte místní verzi souboru sady pravidel zásad vracení se změnami.

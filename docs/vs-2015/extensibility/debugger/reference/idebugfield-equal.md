@@ -1,5 +1,5 @@
 ---
-title: IDebugField::Equal | Dokumentace Microsoftu
+title: 'IDebugField:: Equals | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: aa630a6f2084f7ff79a9c89b685658cf694fcab9
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547309"
 ---
 # <a name="idebugfieldequal"></a>IDebugField::Equal
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda porovnává tohoto pole se zadaným polem pro rovnost.  
+Tato metoda porovnává toto pole se zadaným polem pro rovnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int Equal(
   
 #### <a name="parameters"></a>Parametry  
  `pField`  
- [in] Pole má být porovnán s tohoto objektu.  
+ pro Pole, které se má porovnat s tímto polem  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud pole jsou stejné, vrátí `S_OK`. Pokud pole liší, vrátí `S_FALSE.` v opačném případě vrátí kód chyby.  
+ Pokud jsou pole stejná, vrátí `S_OK` . Pokud jsou pole odlišná, vrátí hodnotu `S_FALSE.` v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

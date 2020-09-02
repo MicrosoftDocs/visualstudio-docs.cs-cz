@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::framebyrva – | Dokumentace Microsoftu
+title: 'IDiaEnumFrameData:: frameByRVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 825f72eec5b56fef70019b64d6e599b7c4712ee2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146508"
 ---
 # <a name="idiaenumframedataframebyrva"></a>IDiaEnumFrameData::frameByRVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vrátí relativní virtuální adresu (RVA) objektu frame.  
+Vrátí rámec podle relativní virtuální adresy (RVA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ HRESULT frameByRVA( 
   
 #### <a name="parameters"></a>Parametry  
  relativeVirtualAddress  
- [in] Adresa RVA rámce, které vás zajímají.  
+ pro Adresa RVA rámce zájmu  
   
  rámec  
- [out] Vrátí [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekt představující rámec, který obsahuje adresu k dispozici.  
+ mimo Vrátí objekt [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) představující rámec, který obsahuje poskytnutou adresu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` pokud neodpovídají žádná data rámec zadané adrese. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , zda žádná data rámce neodpovídají zadané adrese. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   

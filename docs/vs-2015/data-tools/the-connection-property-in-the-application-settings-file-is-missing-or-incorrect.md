@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b51ff1b20f197de5b6773413558b7e71764780b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655407"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>V souboru nastavení aplikace chybí vlastnost připojení nebo je nesprávná.
@@ -25,7 +25,7 @@ Vlastnost Connection v souboru nastavení aplikace chybí nebo je nesprávná. N
 
 ### <a name="to-respond-to-this-message"></a>Reakce na tuto zprávu
 
-- Klikněte na tlačítko **OK**. Informace o připojení, které jsou obsaženy v souboru. dbml, jsou přidány do nastavení aplikace.
+- Klikněte na **OK**. Informace o připojení, které jsou obsaženy v souboru. dbml, jsou přidány do nastavení aplikace.
 
 ## <a name="see-also"></a>Viz také
  [LINQ to SQL Tools v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [– Návod: vytváření tříd LINQ to SQL (O-R Designer)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233) [NIB: postupy: přidání nebo odebrání nastavení aplikace](https://msdn.microsoft.com/a233965c-126d-46ab-add4-efb758f576f4) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

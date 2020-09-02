@@ -1,5 +1,5 @@
 ---
-title: Příkazy nabídky okna | Dokumentace Microsoftu
+title: Příkazy nabídky okna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,34 +12,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 04d02d600741b6220aeeafc29ed1c88c37d712a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160153"
 ---
 # <a name="window-menu-commands"></a>Příkazy nabídky okna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Okno** nabídka obsahuje příkazy pro správu nástroje Spy ++ windows.  
+Nabídka **okno** poskytuje příkazy pro správu Windows Spy + +.  
   
- **Kaskádové**  
- Znovu uspořádá všechna okna ve vzorku cascade.  
+ **Nášejí**  
+ Změní uspořádání všech oken v Kaskádovém modelu.  
   
- **Vodorovně nad sebe**  
- Změna uspořádání všechna okna ve vzorku vodorovné dlaždice.  
+ **Vedle sebe vodorovně**  
+ Změní uspořádání všech oken ve vzorku vodorovné dlaždice.  
   
  **Svisle vedle sebe**  
- Znovu uspořádá všechna okna ve vzorku svislé dlaždice.  
+ Změní uspořádání všech oken ve svislém vzorku dlaždic.  
   
  **Uspořádat ikony**  
- Znovu uspořádá ikony zobrazení, pokud mají minimalizován systému windows.  
+ Změní uspořádání ikon zobrazení, pokud došlo k minimalizaci systému Windows.  
   
- **Zavřít / Zavřít vše**  
- Zavře jednoho nebo všech windows v nástroji Spy ++.  
+ **Zavřít/Zavřít vše**  
+ Zavře jednu nebo všechna okna v nástroji Spy + +.  
   
- **Aktualizace**  
+ **Aktualizovat**  
  Aktualizuje aktuálně vybrané zobrazení.  
   
- **Window**  
- Umožňuje vybrat konkrétní okno.
+ **Okno**  
+ Umožňuje výběr konkrétního okna.

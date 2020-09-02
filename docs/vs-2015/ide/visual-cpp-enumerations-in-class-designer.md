@@ -1,5 +1,5 @@
 ---
-title: Vizuální C++ výčty v Návrhář tříd | Microsoft Docs
+title: Výčty Visual C++ v Návrhář tříd | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f967420e37d6337ce6d86cc56524f2751218f56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651669"
 ---
 # <a name="visual-c-enumerations-in-class-designer"></a>Výčty jazyka Visual C++ v návrháři tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Návrhář tříd podporuje C++ `enum` a vymezené `enum class` typy. Následuje příklad:
+Návrhář tříd podporuje C++ `enum` a oborové `enum class` typy. Tady je příklad:
 
 ```
 enum CardSuit {
@@ -41,9 +41,9 @@ enum class CardSuit {
 
 ```
 
- Tvar C++ výčtu v diagramu třídy vypadá a funguje jako obrazec struktury, s tím rozdílem, že popisek čte **výčet** nebo **třídu enum**, je růžový namísto modré a má barevné ohraničení na levém a horním okraji. Obrazce výčtu i obrazce struktury mají čtvercové rohy.
+ Tvar výčtu C++ v diagramu tříd vypadá a funguje jako obrazec struktury, s tím rozdílem, že popisek čte **výčet** nebo **třídu enum**, je růžový namísto modrý a má barevné ohraničení na levém a horním okraji. Obrazce výčtu i obrazce struktury mají čtvercové rohy.
 
- Další informace o použití typu `enum` naleznete v tématu [výčty](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3).
+ Další informace o použití tohoto `enum` typu naleznete v tématu [výčty](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3).
 
 ## <a name="see-also"></a>Viz také
- Práce s [výčty](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3) [Visual C++ Code (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md)
+ Práce s [výčty](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3) [Visual C++ho kódu (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md)

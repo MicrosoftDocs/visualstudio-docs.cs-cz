@@ -1,5 +1,5 @@
 ---
-title: Čas I/o (zobrazení vláken) | Dokumentace Microsoftu
+title: Čas I/O (zobrazení vláken) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 86c14292edcf8f132a14b67e931c5121105a9dc8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187448"
 ---
 # <a name="io-time-threads-view"></a>Čas I/O (Zobrazení vláken)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako vstupně-výstupních operací. To znamená, že vlákno čeká na dokončení operace vstupně-výstupních operací. Vlákno může mít zablokovaný v rozhraní API, nebo I O souvisejícím s/jádra čekání, který Vizualizátor souběžnosti se počítá jako vstupně-výstupních operací. Rozhraní API, jako `CreateFile()`, `ReadFile()`, a `WSARecv()` spadají do této skupiny.  
+Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorií v/v. To znamená, že vlákno čeká na dokončení vstupně-výstupních operací. Vlákno mohlo být zablokované v rozhraní API nebo jádro související s/O čeká na to, že Vizualizátor souběžnosti se počítá jako vstup a výstup. `CreateFile()` `ReadFile()` Do této skupiny patří rozhraní API, jako je, a `WSARecv()` .  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

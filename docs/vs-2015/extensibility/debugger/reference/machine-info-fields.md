@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Dokumentace Microsoftu
+title: MACHINE_INFO_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8cce5300a795922162f2e0b979e553f4235ceacc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147445"
 ---
-# <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
+# <a name="machine_info_fields"></a>MACHINE_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jaké informace se mají načíst pro konkrétní počítač.  
+Určuje, jaký typ informací se má načíst pro konkrétní počítač.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MACHINE_INFO_FIELDS {   
@@ -45,25 +45,25 @@ public enum enum_MACHINE_INFO_FIELDS { 
   
 ## <a name="members"></a>Členové  
  MCIF_NAME  
- Inicializace/použít `bstrName` pole ve struktuře.  
+ Inicializujte nebo použijte `bstrName` pole ve struktuře.  
   
  MCIF_FLAGS  
- Inicializace/použít `Flags` pole ve struktuře.  
+ Inicializujte nebo použijte `Flags` pole ve struktuře.  
   
  MIF_ALL  
- Inicializace/použít všechna pole ve struktuře.  
+ Inicializujte nebo použijte všechna pole ve struktuře.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předány [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) metoda označíte, kteří členové [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury mají být inicializovány.  
+ Tyto hodnoty jsou předány metodě [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) , aby označovaly, které členy [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury mají být inicializovány.  
   
- Používá se také v `Fields` člen `MACHINE_INFO` struktury k označení pole, která se používá a je platný.  
+ Používá se také v `Fields` členu `MACHINE_INFO` struktury k označení, která pole se používají a jsou platná.  
   
- Tyto příznaky lze kombinovat pomocí logické bitové `OR`.  
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

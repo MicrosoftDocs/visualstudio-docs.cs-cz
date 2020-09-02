@@ -1,5 +1,5 @@
 ---
-title: Zobrazení volající / volaný – Data instrumentace | Dokumentace Microsoftu
+title: Zobrazení volaný volající – data instrumentace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,88 +12,88 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3c8db1d559682ccb0f202d100fac6a586d3477cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147916"
 ---
-# <a name="callercallee-view---instrumentation-data"></a>Zobrazení volající/volaný – Data instrumentace
+# <a name="callercallee-view---instrumentation-data"></a>Zobrazení Volající/Volaný – data instrumentace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení volající/volaný zobrazí profilování informace o vybrané funkce a její nadřazené a podřízené funkce ve stromu volání. Zobrazení volající/volaný obsahuje tři mřížky.  
+Zobrazení volající/volaný zobrazí informace o profilování vybrané funkce a jejích nadřazených a podřízených funkcí ve stromu volání. Zobrazení volající/volaný obsahuje tři mřížky.  
   
- **Aktuální funkce** se zobrazí v mřížce střední který ukazuje profilování informace o vybrané funkce. Hodnoty zahrnují všechna volání funkce.  
+ V prostřední mřížce se zobrazí **aktuální funkce** a zobrazí informace o profilování vybrané funkce. Hodnoty zahrnují všechna volání funkce.  
   
- **Funkce, které volaly aktuální funkcí** se zobrazí v hlavní mřížky který ukazuje profilování informace o funkcích volající (nadřazené) z vybrané funkce. Hodnoty označuje množství hodnotu aktuální funkci, která byla vygenerována volání z této funkce volajícího.  
+ **Funkce, které se nazývají aktuální funkce** , se zobrazí v horní mřížce a zobrazují informace o profilování volajících (nadřazených) funkcí vybrané funkce. Hodnoty označují množství hodnoty aktuální funkce, která byla vygenerována voláním z této volající funkce.  
   
- **Funkce, které byly volány aktuální funkcí** se zobrazí v mřížce dolů který ukazuje profilování informace o instancích sady volaný (podřízený) funkce vybrané funkce. Hodnoty označit jenom při spuštění, který byl vynaložen ve funkci podřízený, když byla volána aktuální funkce.  
+ **Funkce, které byly volány aktuální funkcí** , jsou zobrazeny v dolní mřížce a zobrazují informace o profilech instancí volaných (podřízených) funkcí vybrané funkce. Hodnoty udávají pouze čas strávený v podřízené funkci při volání aktuální funkce.  
   
 ## <a name="general"></a>Obecné  
- Obecné sloupce rozpoznat funkci zobrazení řádku.  
+ Obecné sloupce identifikují funkci v řádku zobrazení.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název funkce**|Název funkce.|  
-|**Adresa funkce**|Adresa funkce.|  
+|**Název funkce**|Název funkce|  
+|**Adresa funkce**|Adresa funkce|  
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
-|**Počet volání**|Celkový počet volání této funkce.|  
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
+|**Number of Calls**|Celkový počet volání této funkce.|  
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|  
 |**Název modulu**|Název modulu, který obsahuje funkci.|  
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|  
-|**ID procesu**|ID procesu (PID) běhu profilování.|  
-|**Název procesu**|Název procesu.|  
-|**Výhradní čas režie**|Časová náročnost této funkce, která způsobila instrumentace. Režie byla odečtena od vylučuje všechny časy.|  
-|**Celkový čas režie**|Časová náročnost této funkce a její podřízené funkce, která způsobila instrumentace. Test zatížení byla odečtena od fiskálního (včetně).|  
-|**Typ**|Kontext funkce:<br /><br /> **0** -aktuální funkce<br /><br /> **1** – funkce, která volá aktuální funkci<br /><br /> **2** – funkce, která volá aktuální funkci<br /><br /> Pouze v [VSPerfReport](../profiling/vsperfreport.md) příkazového řádku sestavy.|  
-|**Název kořenové funkce**|Název aktuální funkce. Pouze v [VSPerfReport](../profiling/vsperfreport.md) příkazového řádku sestavy.|  
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|  
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|  
+|**Název procesu**|Název procesu|  
+|**Výhradní čas režie testu**|Časová režie této funkce, která byla způsobena instrumentací. Režie testu byla odečtena od všech výhradních časů.|  
+|**Čas celkové režie testu**|Časová režie této funkce a jejích podřízených funkcí, které byly způsobeny instrumentací. Režie testu byla odečtena od všech celkových časů.|  
+|**Typ**|Kontext funkce:<br /><br /> **0** – aktuální funkce<br /><br /> **1** – funkce, která volá aktuální funkci<br /><br /> **2** – funkce, která je volána aktuální funkcí<br /><br /> Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|  
+|**Název kořenové funkce**|Název aktuální funkce Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|  
   
-## <a name="elapsed-inclusive-values"></a>Uplynulý včetně hodnoty  
- Uplynulý včetně hodnoty označuje datum a čas, který funkce byla v zásobníku volání. Čas zahrnuje, čas, který byl stráven v podřízené funkce a čas, který byl stráven voláními do operačního systému, například vstupně výstupní operace a přepnutí kontextu.  
+## <a name="elapsed-inclusive-values"></a>Uplynulé celkové hodnoty  
+ Uplynulé celkové hodnoty udávají čas, kdy byla funkce v zásobníku volání. Čas zahrnuje čas strávený v podřízených funkcích a čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Uplynulý celkový čas**|-Pro aktuální funkci čas, který byl vynaložen ve funkci. Hodnota zahrnuje čas, který byl stráven v podřízené funkce a volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.<br />-Pro volající funkce množství uplynulý celkový čas aktuální funkci, která byla vygenerována volání z této funkce volajícího.<br />-Pro volaných funkce čas, který byl stráven v instancích této funkce, které byly vytvořeny voláním z aktuální funkce. Hodnota zahrnuje čas, který byl stráven v podřízené funkce volaný a ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu.|  
-|**% Uplynulého celkového času**|Procento celkového uplynulý celkový čas, který byl stráven v uplynulý celkový čas této funkce v tomto kontextu spuštění profilování.|  
-|**Průměrný uplynulý celkový čas**|Průměr uplynulý celkový čas volání této funkce v tomto kontextu.|  
-|**Maximální uplynulý celkový čas**|Maximální uplynulý celkový čas volání této funkce v tomto kontextu.|  
+|**Uplynulý celkový čas**|– Pro aktuální funkci čas strávený ve funkci. Hodnota zahrnuje čas strávený v podřízených funkcích a v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro funkci volajícího je to množství uplynulého celkového času aktuální funkce, která byla vygenerována voláními z této volající funkce.<br />– Pro funkci volaný byl čas strávený v instancích této funkce vygenerovaný voláními z aktuální funkce. Hodnota zahrnuje čas strávený v podřízených funkcích volaného a v voláních operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.|  
+|**% Uplynulého celkového času**|Procento celkového uplynulého celkového času běhu profilace, které bylo v tomto kontextu stráveno v uplynulém čase této funkce.|  
+|**Průměrný uplynulý celkový čas**|Průměrný uplynulý celkový čas volání této funkce v tomto kontextu.|  
+|**Maximální uplynulý celkový čas**|Maximální uplynulý celková doba volání této funkce v tomto kontextu.|  
 |**Minimální uplynulý celkový čas**|Minimální uplynulý celkový čas volání této funkce v tomto kontextu.|  
   
-## <a name="elapsed-exclusive-values"></a>Uplynulý výhradní hodnoty  
- Uplynulý výhradní hodnoty označuje datum a čas, který funkce byla spuštěna přímo v horní části zásobníku volání. Čas zahrnuje čas, který byl stráven ve volání do operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace, ale nezahrnuje čas, který byl stráven v podřízené funkce.  
+## <a name="elapsed-exclusive-values"></a>Uplynulé výhradní hodnoty  
+ Uplynulé exkluzivní hodnoty označují čas, kdy byla funkce přímo spuštěna v horní části zásobníku volání. Čas zahrnuje čas strávený v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace, ale nezahrnuje čas strávený v podřízených funkcích.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Uplynulý výhradní čas**|-Pro aktuální funkci čas, který se využilo na přímé provádění funkce. Hodnota zahrnuje čas, který byl stráven v podřízené funkce a volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.<br />-Pro volající funkce množství uplynulý výhradní čas aktuální funkci, která byla vygenerována volání z této funkce volajícího.<br />-Pro volaných funkce čas, který byl stráven v instancích této funkce, které byly vytvořeny voláním z aktuální funkce. Hodnota nezahrnuje čas, který byl stráven v podřízené funkcí volaných funkcí, ale obsahuje volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.|  
-|**% Uplynulého výhradního času**|Procento celkového uplynulý výhradní čas, který běhu profilování se využilo na celkový uplynulý výhradní čas této funkce v tomto kontextu.|  
-|**Průměrný uplynulý výhradní čas**|Průměr uplynulý výhradní čas volání této funkce v tomto kontextu.|  
+|**Uplynulý výhradní čas**|– Pro aktuální funkci čas strávený v přímém provádění funkce. Hodnota zahrnuje čas strávený v podřízených funkcích a v voláních k operačnímu systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro funkci volajícího je to množství uplynulého výhradního času aktuální funkce, která byla vygenerována voláními z této volající funkce.<br />– Pro funkci volaný byl čas strávený v instancích této funkce vygenerovaný voláními z aktuální funkce. Hodnota vylučuje čas, který byl vyčerpán v podřízených funkcích funkce volaný, ale obsahuje volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.|  
+|**% Uplynulého výhradního času**|Procento celkového uplynulého výhradního času spuštění profilování, které bylo v tomto kontextu stráveno celkovým neúplným časem této funkce.|  
+|**Průměrný uplynulý výhradní čas**|Průměrný uplynulý výhradní čas volání této funkce v tomto kontextu.|  
 |**Maximální uplynulý výhradní čas**|Maximální uplynulý výhradní čas volání této funkce v tomto kontextu.|  
 |**Minimální uplynulý výhradní čas**|Minimální uplynulý výhradní čas volání této funkce v tomto kontextu.|  
   
-## <a name="application-inclusive-values"></a>Aplikace (včetně) hodnot  
- Aplikace (včetně) hodnot označuje datum a čas, který funkce byla v zásobníku volání. Čas nezahrnuje čas, který byl stráven ve volání do operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace, ale neobsahuje čas, který byl stráven v podřízené funkce.  
+## <a name="application-inclusive-values"></a>Hodnoty zahrnující aplikace  
+ Hodnoty pro všechny aplikace označují čas, kdy byla funkce v zásobníku volání. Čas neobsahuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace, ale obsahuje čas strávený v podřízených funkcích.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Celkový čas aplikace**|-Pro aktuální funkci čas, který se využilo na funkci a její podřízené funkce. Hodnota nezahrnuje čas, který byl stráven voláními do operačního systému, například vstupně výstupní operace a přepnutí kontextu.<br />-Pro volající funkce množství celkový čas aplikace aktuální funkce, která byla vygenerována volání z této funkce volajícího.<br />-Pro volaných funkce čas, který byl stráven v instancích této funkce, které byly vytvořeny voláním z aktuální funkce. Tato hodnota zahrnuje čas, který byl stráven v podřízené funkcí volaných funkcí, ale nezahrnuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu.|  
-|**% Celkového času aplikace**|Procento celkového uplynulý celkový čas, který běhu profilování se využilo na celkový čas celkový aplikace této funkce v tomto kontextu.|  
-|**Průměrný celkový čas aplikace**|Celkový čas průměrná aplikace volání této funkce v tomto kontextu.|  
-|**Maximální celkový čas aplikace**|Celkový čas aplikace maximální volání této funkce v tomto kontextu.|  
-|**Minimální celkový čas aplikace**|Celkový čas aplikace minimální volání této funkce v tomto kontextu.|  
+|**Celková doba aplikace**|– Pro aktuální funkci čas strávený ve funkci a jejích podřízených funkcích. Hodnota vylučuje čas, který byl stráven v voláních do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro funkci volajícího je množství aplikace zahrnující čas aktuální funkce, která byla vygenerována voláním z této volající funkce.<br />– Pro funkci volaný byl čas strávený v instancích této funkce vygenerovaný voláními z aktuální funkce. Hodnota zahrnuje čas strávený v podřízených funkcích volané funkce, ale nezahrnuje čas strávený voláním operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.|  
+|**% Celkového času aplikace**|Procento celkového uplynulého celkového času běhu profilace, které bylo v tomto kontextu stráveno v celkovém čase aplikace této funkce.|  
+|**Průměrná doba aplikace (celková)**|Průměrná doba použití volání této funkce v tomto kontextu.|  
+|**Maximální celková doba aplikace**|Maximální doba volání této funkce v tomto kontextu (včetně celkového počtu aplikací).|  
+|**Minimální celková doba aplikace**|Minimální doba trvání volání této funkce v tomto kontextu (včetně celkového počtu aplikací).|  
   
-## <a name="application-exclusive-values"></a>Výhradní hodnoty aplikace  
- Výhradní hodnoty, které aplikaci určit čas, který byl vynaložen ve funkci. To nezahrnuje čas, který se využilo na podřízené funkce a také nezahrnuje volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.  
+## <a name="application-exclusive-values"></a>Exkluzivní hodnoty aplikací  
+ Hodnoty exkluzivní pro aplikace označují čas strávený ve funkci. To vylučuje čas strávený v podřízených funkcích a také vyloučí volání operačního systému, jako jsou přepínače kontextu a vstupně-výstupní operace.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Výhradní čas aplikace**|-Pro aktuální funkci čas, který se využilo na přímé provádění funkce. Hodnota nezahrnuje čas, který byl stráven v podřízené funkce ani obsahuje volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.<br />-Pro volající funkce množství výhradní čas aplikace aktuální funkce, která byla vygenerována volání z této funkce volajícího.<br />-Pro volaných funkce čas, který byl stráven v instancích této funkce, které byly vytvořeny voláním z aktuální funkce. Hodnota nezahrnuje čas, který byl stráven v podřízené funkcí volaných funkcí ani obsahuje volání do operačního systému, jako je například vstupně výstupní operace a přepnutí kontextu.|  
-|**% Výhradního času aplikace**|Procento celkového uplynulý výhradní čas, který běhu profilování se využilo na výhradní čas aplikace celkový této funkce v tomto kontextu.|  
-|**Průměrný výhradní čas aplikace**|Výhradní čas aplikace průměrné volání této funkce v tomto kontextu.|  
-|**Maximální výhradní čas aplikace**|Výhradní čas aplikace maximální volání této funkce v tomto kontextu.|  
-|**Minimální výhradní čas aplikace**|Výhradní čas aplikace minimální volání této funkce v tomto kontextu.|  
+|**Výhradní čas aplikace**|– Pro aktuální funkci čas strávený v přímém provádění funkce. Hodnota neobsahuje čas strávený v podřízených funkcích, ani nezahrnuje volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.<br />– Pro funkci volajícího se jedná o velikost výhradního času aplikace, která byla vygenerována voláním z této volající funkce.<br />– Pro funkci volaný byl čas strávený v instancích této funkce vygenerovaný voláními z aktuální funkce. Hodnota neobsahuje čas, který byl vyčerpán v podřízených funkcích funkce volaný, ani nezahrnuje volání do operačního systému, jako jsou například přepínače kontextu a vstupně-výstupní operace.|  
+|**% Výhradního času aplikace**|Procento celkového uplynulého výhradního času spuštění profilování, které bylo v tomto kontextu stráveno v celkovém čase aplikace této funkce.|  
+|**Průměrný výhradní čas aplikace**|Průměrná doba použití pro volání této funkce v tomto kontextu.|  
+|**Maximální výhradní čas aplikace**|Maximální výhradní čas aplikace pro volání této funkce v tomto kontextu.|  
+|**Minimální výhradní čas aplikace**|Minimální výhradní čas aplikace pro volání této funkce v tomto kontextu.|  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
- [Volající / volaný zobrazení – vzorkování dat](../profiling/caller-callee-view-sampling-data.md)   
- [Zobrazení volající/volaný – Data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Zobrazení volající/volaný – Data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+ [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
+ [Zobrazení Volající/Volaný – data vzorkování](../profiling/caller-callee-view-sampling-data.md)   
+ [Zobrazení Volající/Volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení Volající/Volaný – data instrumentace paměti NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)

@@ -1,5 +1,5 @@
 ---
-title: Pracovní prostor sestavení v sadě Visual Studio | Dokumentace Microsoftu
+title: Sestavení pracovního prostoru v aplikaci Visual Studio | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,57 +8,57 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 82660ee772280563b91830aaf1a18da0bc742b28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553325"
 ---
-# <a name="workspace-build"></a>Pracovní prostor sestavení
+# <a name="workspace-build"></a>Sestavení pracovního prostoru
 
-Podpora sestavení [otevřít složku](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) scénáře vyžaduje zařízení extender k poskytování [indexované](workspace-indexing.md) a [kontextu souboru](workspace-file-contexts.md) data [pracovní prostor](workspaces.md), jako jako akci sestavení ke spuštění.
+Podpora sestavení ve scénářích [Otevřít složku](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) vyžaduje, aby zařízení rozšířilo data [indexovaných](workspace-indexing.md) a [souborových kontextů](workspace-file-contexts.md) pro [pracovní prostor](workspaces.md)a také akci sestavení ke spuštění.
 
-Tady je přehled, co bude potřebovat vaše rozšíření.
+Níže je uveden přehled toho, co vaše rozšíření bude potřebovat.
 
-## <a name="build-file-context"></a>Vytvoření kontextu souboru
+## <a name="build-file-context"></a>Kontext souboru sestavení
 
-- Objekt pro vytváření zprostředkovatele
-  - `ExportFileContextProviderAttribute` atribut s `supportedContextTypeGuids` ve všech příslušných `string` konstanty `BuildContextTypes`
-  - Implementuje `IWorkspaceProviderFactory<IFileContextProvider>`
+- Továrna poskytovatele
+  - `ExportFileContextProviderAttribute` atribut s `supportedContextTypeGuids` jako všechny použitelné `string` konstanty z `BuildContextTypes`
+  - Implementace `IWorkspaceProviderFactory<IFileContextProvider>`
   - Poskytovatel kontextu souboru
-    - Vrátit `FileContext` pro každé sestavení operace a podporované konfigurace
-      - `contextType` z <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes>
-      - `context` implementuje <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> s `Configuration` vlastnosti, jako je konfigurace sestavení (třeba `"Debug|x86"`, `"ret"`, nebo `null` Pokud není k dispozici). Můžete také použít instanci <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext>. Hodnota konfigurace **musí** odpovídat konfiguraci z hodnoty data z indexované souboru.
+    - Vrátí `FileContext` pro každou operaci sestavení a podporu konfigurace.
+      - `contextType` Výsledkem <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes>
+      - `context` implementuje <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> s `Configuration` vlastností jako konfigurací sestavení (například `"Debug|x86"` `"ret"` , nebo `null` Pokud není k dispozici). Alternativně můžete použít instanci <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext> . Hodnota konfigurace se **musí** shodovat s konfigurací z hodnoty indexovaných dat souboru.
 
-## <a name="indexed-build-file-data-value"></a>Hodnota dat souboru indexované sestavení
+## <a name="indexed-build-file-data-value"></a>Hodnota dat souboru indexovaného sestavení
 
-- Objekt pro vytváření zprostředkovatele
-  - `ExportFileScannerAttribute` atribut s `IReadOnlyCollection<FileDataValue>` jako podporovaný typ.
-  - Implementuje `IWorkspaceProviderFactory<IFileScanner>`
-- Skener souboru na `ScanContentAsync<T>`
-  - Vrací data při `FileScannerTypeConstants.FileDataValuesType` je argument typu
-  - Vrací hodnotu data souboru pro každou konfiguraci zkonstruován pomocí:
-    - `type` as `BuildConfigurationContext.ContextTypeGuid`
-    - `context` jako konfigurace sestavení (třeba `"Debug|x86"`, `"ret"`, nebo `null` Pokud není k dispozici). Tato hodnota **musí** odpovídat konfiguraci z kontextu souboru.
+- Továrna poskytovatele
+  - `ExportFileScannerAttribute` atribut s `IReadOnlyCollection<FileDataValue>` jako podporovaný typ
+  - Implementace `IWorkspaceProviderFactory<IFileScanner>`
+- Skener souborů zapnut `ScanContentAsync<T>`
+  - Vrátí data `FileScannerTypeConstants.FileDataValuesType` , pokud je argumentem typu.
+  - Vrátí hodnotu dat souboru pro každou konfiguraci vytvořenou pomocí:
+    - `type` formátu `BuildConfigurationContext.ContextTypeGuid`
+    - `context` jako konfigurace sestavení (například `"Debug|x86"` `"ret"` , nebo `null` Pokud není k dispozici). Tato hodnota **musí** odpovídat konfiguraci z kontextu souboru.
 
-## <a name="build-file-context-action"></a>Akce kontextu souboru sestavení
+## <a name="build-file-context-action"></a>Akce kontextu sestavení souboru
 
-- Objekt pro vytváření zprostředkovatele
-  - `ExportFileContextActionProvider` atribut s `supportedContextTypeGuids` ve všech příslušných `string` konstanty `BuildContextTypes`
-  - Implementuje `IWorkspaceProviderFactory<IFileContextActionProvider>`
-- Zprostředkovatel akce na `IFileContextActionProvider.GetActionsAsync`
-  - Vrátí `IFileContextAction` , který odpovídá daný `FileContext.ContextType` hodnota
+- Továrna poskytovatele
+  - `ExportFileContextActionProvider` atribut s `supportedContextTypeGuids` jako všechny použitelné `string` konstanty z `BuildContextTypes`
+  - Implementace `IWorkspaceProviderFactory<IFileContextActionProvider>`
+- Poskytovatel akcí na `IFileContextActionProvider.GetActionsAsync`
+  - Vrátí `IFileContextAction` hodnotu, která odpovídá dané `FileContext.ContextType` hodnotě.
 - Akce kontextu souboru
   - Implementuje `IFileContextAction` a <xref:Microsoft.VisualStudio.Workspace.Extensions.VS.IVsCommandItem>
-  - `CommandGroup` Vrátí vlastnost `16537f6e-cb14-44da-b087-d1387ce3bf57`
-  - `CommandId` je `0x1000` pro sestavení, `0x1010` pro opakované sestavení, nebo `0x1020` pro vyčištění
+  - `CommandGroup` vlastnost vrací `16537f6e-cb14-44da-b087-d1387ce3bf57`
+  - `CommandId` je určen `0x1000` pro sestavení, `0x1010` pro opětovné sestavení nebo `0x1020` pro vyčištění
 
 >[!NOTE]
->Vzhledem k tomu, `FileDataValue` indexovat, je potřeba bude nějakou dobu mezi otevřete pracovní prostor a bod, ve kterém je soubor vyhledávat funkce úplného buildu. Zpoždění se projeví při prvním otevření složku, protože neexistuje žádný index uložené v mezipaměti.
+>Vzhledem k tomu, že je `FileDataValue` nutné indexovat, dojde k určité době mezi otevřením pracovního prostoru a bodem, ve kterém je soubor prohledáván pro úplnou funkčnost sestavení. Zpoždění se zobrazí při prvním otevření složky, protože není k dispozici žádný index dříve v mezipaměti.
 
-## <a name="reporting-messages-from-a-build"></a>Vytváření sestav zprávy ze sestavení
+## <a name="reporting-messages-from-a-build"></a>Hlášení zpráv ze sestavení
 
-Sestavení může přinášet informace, upozornění a chybové zprávy pro uživatele jedním ze dvou způsobů. Jednoduchým způsobem je použít <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> a zadejte <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>, takto:
+Sestavení může pro uživatele surfovat informace, upozornění a chybové zprávy jedním ze dvou způsobů. Jednoduchý způsob je použít <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> a poskytnout <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> , například:
 
 ```csharp
 using Microsoft.VisualStudio.Workspace;
@@ -88,22 +88,22 @@ private static void OutputBuildMessage(IWorkspace workspace)
 }
 ```
 
-`BuildMessage.Type` a `BuildMessage.LogMessage` řídit chování ve kterém se zobrazí informace o uživateli. Žádné `BuildMessage.TaskType` hodnoty jiné než `None` dojde **seznam chyb** dané podrobnosti. `LogMessage` bude vždy výstupních v **sestavení** podokně **výstup** panelu nástrojů.
+`BuildMessage.Type` a `BuildMessage.LogMessage` řídí chování, kde se uživatelům zobrazí informace. Jakákoli `BuildMessage.TaskType` jiná hodnota než `None` vytvoří položku **Seznam chyb** s danými podrobnostmi. `LogMessage` bude vždy výstup v podokně **sestavení** v okně **výstup** .
 
-Můžete také rozšíření můžete přímo pracovat **seznam chyb** nebo **sestavení** podokně. Chybu existuje ve verzích před Visual Studio 2017 verze 15.7 kde `pszProjectUniqueName` argument <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> se ignoruje.
+Alternativně mohou rozšíření pracovat přímo s **Seznam chyb** nebo pomocí podokna **sestavení** . Ve verzích starších než Visual Studio 2017 verze 15,7 existuje chyba, kde `pszProjectUniqueName` argument <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> je ignorován.
 
 >[!WARNING]
->Volající `IFileContextAction.ExecuteAsync` můžete zadat libovolnou základní implementace pro `IProgress<IFileContextActionProgressUpdate>` argument. Nikdy vyvolat `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` přímo. Aktuálně neexistují žádné obecné pokyny pro používání tohoto argumentu, ale tato pravidla se můžou změnit.
+>Volající `IFileContextAction.ExecuteAsync` mohou poskytnout libovolné základní implementace `IProgress<IFileContextActionProgressUpdate>` argumentu. Nikdy nevyvolat `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` přímo. Pro použití tohoto argumentu aktuálně nejsou k dispozici žádné obecné pokyny, ale tyto pokyny se mohou změnit.
 
-## <a name="build-related-apis"></a>Rozhraní API související s sestavení
+## <a name="build-related-apis"></a>Související rozhraní API pro sestavení
 
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> poskytuje podrobnosti o konfiguraci sestavení.
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> ukazuje <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>s uživatelům.
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> poskytuje podrobnosti konfigurace sestavení.
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> zobrazí <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> uživatele.
 
-## <a name="tasksvsjson-and-launchvsjson"></a>Tasks.vs.JSON a souboru launch.vs.json
+## <a name="tasksvsjson-and-launchvsjson"></a>tasks.vs.jszapnuto a launch.vs.jsna
 
-Informace o vytváření souboru tasks.vs.json nebo souboru launch.vs.json najdete v tématu [přizpůsobení sestavení a ladění úloh](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
+Informace o vytváření tasks.vs.jsnebo launch.vs.jsv souboru naleznete v tématu [přizpůsobení úloh sestavení a ladění](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-* [Protokol jazyka serveru](language-server-protocol.md) – zjistěte, jak integrovat jazyk servery do sady Visual Studio.
+* [Protokol jazykového serveru](language-server-protocol.md) – Naučte se integrovat jazykové servery do sady Visual Studio.

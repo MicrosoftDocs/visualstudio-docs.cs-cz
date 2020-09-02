@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetAllAliases | Dokumentace Microsoftu
+title: 'IDebugBinder3:: GetAllAliases | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc2075ccc37d280640f7559b1454990ee6684f25
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62555745"
 ---
 # <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
@@ -44,16 +44,16 @@ int GetAllAliases(
   
 #### <a name="parameters"></a>Parametry  
  `uRequest`  
- [in] Maximální počet aliasů vrátit (určuje délku pole předán `ppAliases`).  
+ pro Maximální počet aliasů, které se mají vrátit (určuje délku pole předaného `ppAliases` ).  
   
  `ppAliases`  
- [out v] Pole pro vyplnění pomocí aliasů (Pokud je hodnota null a `uRequest` je 0, vrátí se počet aliasy, které mohou být vráceny podle `puFetched`).  
+ [in, out] Pole, které se má vyplnit aliasy (Pokud se jedná o hodnotu null a `uRequest` je 0, vrátí se počet aliasů, které mohou být vráceny `puFetched` ).  
   
  `puFetched`  
- [out] Vrátí počet aliasů získali.  
+ mimo Vrátí počet získaných aliasů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

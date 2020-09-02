@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f8bba5a4322ba02dfe6686774f3d16647fa87eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655996"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Postupy: Zachycení kliknutí na obrazec či dekorátor
@@ -24,7 +24,7 @@ ms.locfileid: "72655996"
 Následující postupy ukazují, jak zachytit kliknutí na tvar nebo ikonu dekoratér. Můžete zachytit kliknutím, dvojitým kliknutím, přetažením a dalším gestům a nastavit prvek jako odpověď.
 
 ## <a name="to-intercept-clicks-on-shapes"></a>Zachycení kliknutí na obrazce
- V projektu DSL v souboru kódu, který je oddělen od generovaných souborů kódu, zapište částečnou definici třídy pro třídu Shape. Přepište `OnDoubleClick()` nebo jednu z dalších metod, která má název začínající na `On...`. Příklad:
+ V projektu DSL v souboru kódu, který je oddělen od generovaných souborů kódu, zapište částečnou definici třídy pro třídu Shape. Přepište `OnDoubleClick()` nebo jednu z dalších metod, které mají název začínající na `On...` . Příklad:
 
 ```
 public partial class MyShape // change
@@ -38,10 +38,10 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> Nastavte `e.Handled` na `true`, pokud nechcete, aby se událost předala k nadřazenému obrazci nebo diagramu.
+> Nastavte `e.Handled` na `true` , pokud nechcete, aby byla událost předána nadřazenému obrazci nebo diagramu.
 
 ## <a name="to-intercept-clicks-on-decorators"></a>Zachycení kliknutí na dekoratéry
- Image dekoratéry se přenesou na instanci třídy ImageField, která má metodu-DoubleClick. Můžete zachytit kliknutím, pokud píšete podtřídu ImageField. Pole jsou nastavena v metodě InitializeShapeFields. Proto je nutné změnit tuto metodu pro vytvoření instance podtřídy namísto normálního ImageField. Metoda InitializeShapeFields je ve vygenerovaném kódu třídy Shape. Třídu Shape lze přepsat, pokud nastavíte vlastnost `Generates Double Derived`, jak je popsáno v následujícím postupu.
+ Image dekoratéry se přenesou na instanci třídy ImageField, která má metodu-DoubleClick. Můžete zachytit kliknutím, pokud píšete podtřídu ImageField. Pole jsou nastavena v metodě InitializeShapeFields. Proto je nutné změnit tuto metodu pro vytvoření instance podtřídy namísto normálního ImageField. Metoda InitializeShapeFields je ve vygenerovaném kódu třídy Shape. Můžete přepsat třídu Shape, pokud nastavíte její `Generates Double Derived` vlastnost, jak je popsáno v následujícím postupu.
 
  I když InitializeShapeFields je metoda instance, je volána pouze jednou pro každou třídu. Proto pro každé pole v každé třídě existuje pouze jedna instance ClickableImageField, nikoli jedna instance pro každý prvek v diagramu. Když uživatel dvakrát klikne na instanci, je nutné určit, která instance byla vybrána, jak kód v příkladu ukazuje.
 
@@ -51,7 +51,7 @@ public partial class MyShape // change
 
 2. Vyberte nebo vytvořte obrazec s ikonou dekoratér a namapujte ho na doménovou třídu.
 
-3. V souboru kódu, který je oddělen od souborů ve složce `GeneratedCode` vytvořte novou podtřídu třídy ImageField:
+3. V souboru kódu, který je oddělen od souborů ve `GeneratedCode` složce, vytvořte novou podtřídu třídy ImageField:
 
     ```
     using Microsoft.VisualStudio.Modeling;
@@ -133,11 +133,11 @@ public partial class MyShape // change
 
 4. Upravte názvy tříd domény a tvarů v tomto kódu tak, aby odpovídaly vaší vlastní DSL.
 
-   V souhrnu kód funguje následujícím způsobem. V tomto příkladu je `ClassShape` názvem obrazce oddílu.
+   V souhrnu kód funguje následujícím způsobem. V tomto příkladu `ClassShape` je název obrazce oddílu.
 
 - Sada obslužných rutin událostí myši je při vytvoření přiřazena ke každé instanci oddílu.
 
-- Událost `ClassShape.MouseDown` uchovává aktuální položku.
+- `ClassShape.MouseDown`Událost uchovává aktuální položku.
 
 - Když se ukazatel myši přesune mimo aktuální položku, vytvoří se instance MouseAction, která nastaví kurzor a zachytí ukazatel myši, dokud se neuvolní.
 

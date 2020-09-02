@@ -1,5 +1,5 @@
 ---
-title: Zobrazení interakce vrstvy | Dokumentace Microsoftu
+title: Zobrazení interakcí vrstev | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,48 +14,48 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd60c855bacaf62beec47c9f977d0ab220ce7ca6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145526"
 ---
 # <a name="tier-interactions-view"></a>Zobrazení interakcí vrstev
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profilování interakce vrstev poskytuje další informace o časy spuštění funkcí s více vrstvami aplikace, které komunikují s databázemi prostřednictvím [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Data se shromažďují pouze pro synchronní volání.  
+Profilace interakce vrstev poskytuje další informace o časech spuštění ve funkcích vícevrstvých aplikací, které komunikují s databázemi prostřednictvím [!INCLUDE[vstecado](../includes/vstecado-md.md)] . Data jsou shromažďována pouze pro volání synchronních funkcí.  
   
  **Požadavky**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
   
-  Zobrazení interakcí zobrazí dat interakce vrstev do dvou podoken:  
+  Zobrazení interakcí zobrazuje data interakce vrstev ve dvou podoknech:  
   
-- V hlavním podokně se hierarchického stromu. Na nejvyšší úrovni řádek obsahuje agregovaná data pro připojení databáze [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stránky nebo proces. Podřízené uzly obsahují agregovaná data pro připojení databáze nadřazeného prvku.  
+- Podokno předlohy je hierarchický strom. Řádek nejvyšší úrovně obsahuje agregovaná data pro databázová připojení [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] stránky nebo procesu. Podřízené uzly obsahují agregovaná data pro databázová připojení nadřazeného objektu.  
   
-- Po kliknutí na uzel volání databáze v hlavním podokně se zobrazí data pro instanci volání databáze v podokně podrobností.  
+- Po kliknutí na uzel volání databáze v podokně předloha se v podokně podrobností zobrazí data instance volání databáze.  
   
-  Čas se zobrazí jako počet milisekund, nebo počet taktů procesoru. Chcete-li změnit časová jednotka zobrazí, klikněte na tlačítko **nástroje** nabídky, klikněte na tlačítko **možnosti**a pak vyberte jednu z **podle hodnoty času zobrazit** možnosti.  
+  Čas se zobrazuje jako počet milisekund nebo počet taktů procesoru. Chcete-li změnit zobrazenou časovou jednotku, klikněte na nabídku **nástroje** , klikněte na položku **Možnosti**a potom zvolte jednu z **hodnot zobrazit čas jako** možnosti.  
   
-## <a name="master-pane"></a>Hlavní podokno  
-  
-|Sloupec|Popis|  
-|------------|-----------------|  
-|**Název**|-Pro řádek nejvyšší úrovně, název profilovaný proces nebo webové stránky.<br />-Pro řádek připojení databáze, název serveru, který je hostitelem databáze.|  
-|**Database**|Název databáze (pouze řádky připojení databáze).|  
-|**Počet**|Celkový počet požadavků, které jsou generovány podle procesu, webové stránky nebo připojení k databázi.|  
-|**Celkový uplynulý čas**|Celkový čas strávený spouštěním jakékoli jeden požadavek z procesu, webové stránky nebo připojení k databázi.|  
-|**Maximální uplynulý čas**|Maximální doba trvání provádění jedné žádosti z procesu, webové stránky nebo připojení k databázi.|  
-|**Minimální uplynulý čas**|Minimální čas, který byl stráven spouštěním jakékoli jeden požadavek z procesu, webové stránky nebo připojení k databázi.|  
-|**Průměrný uplynulý čas**|Průměrný čas strávený spouštěním žádost z procesu, webové stránky nebo připojení k databázi.|  
-  
-## <a name="database-connection-details-pane"></a>V podokně podrobností připojení databáze  
+## <a name="master-pane"></a>Podokno předlohy  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Text příkazu**|Dotaz SQL požadavku.|  
-|**Počet dotazů**|Počet, kolikrát byl dotaz spuštěn.|  
-|**Celkový uplynulý čas**|Celkový čas strávený spouštěním instance dotazu.|  
-|**Maximální uplynulý čas**|Maximální čas, který byl stráven spouštěním jakoukoli jednu instanci dotazu.|  
-|**Minimální uplynulý čas**|Minimální čas, který byl stráven spouštěním jakoukoli jednu instanci dotazu.|  
-|**Průměrný uplynulý čas**|Průměrný čas strávený spouštěním instanci dotazu.|
+|**Name**|– Pro řádek nejvyšší úrovně, název profilované procesu nebo webové stránky.<br />– Pro řádek připojení databáze název serveru, který je hostitelem databáze.|  
+|**Databáze**|Název databáze (pouze řádky připojení databáze).|  
+|**Výpočtu**|Celkový počet požadavků, které jsou generovány procesem, webovou stránkou nebo připojením k databázi.|  
+|**Celkový uplynulý čas**|Celkový čas strávený prováděním jedné žádosti z procesu, webové stránky nebo připojení k databázi.|  
+|**Maximální uplynulý čas**|Maximální doba strávená prováděním jedné žádosti z procesu, webové stránky nebo připojení k databázi.|  
+|**Minimální uplynulý čas**|Minimální čas strávený prováděním jedné žádosti z procesu, webové stránky nebo připojení k databázi.|  
+|**Průměrný uplynulý čas**|Průměrná doba, kterou strávily vykonání požadavku z procesu, webové stránky nebo připojení k databázi.|  
+  
+## <a name="database-connection-details-pane"></a>Podokno podrobností připojení databáze  
+  
+|Sloupec|Popis|  
+|------------|-----------------|  
+|**Text příkazu**|Dotaz SQL žádosti|  
+|**Počet dotazů**|Počet, kolikrát se dotaz spustil.|  
+|**Celkový uplynulý čas**|Celkový čas strávený prováděním instancí dotazu.|  
+|**Maximální uplynulý čas**|Maximální čas strávený prováděním libovolné instance dotazu.|  
+|**Minimální uplynulý čas**|Minimální čas strávený prováděním jedné instance dotazu.|  
+|**Průměrný uplynulý čas**|Průměrná doba strávená prováděním instance dotazu.|

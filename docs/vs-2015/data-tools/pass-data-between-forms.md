@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e14165ba2111f40898c00b3d01950425c042070
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652915"
 ---
 # <a name="pass-data-between-forms"></a>Předávání dat mezi formuláři
@@ -62,7 +62,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 1. V nabídce **soubor** vytvořte nový projekt.
 
-2. Pojmenujte projekt `PassingDataBetweenForms`.
+2. Pojmenujte projekt `PassingDataBetweenForms` .
 
 3. Vyberte **model Windows Forms aplikace**a klikněte na **OK**. Další informace najdete v tématu [klientské aplikace](https://msdn.microsoft.com/library/2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68).
 
@@ -97,13 +97,13 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
      **NorthwindDataSet** je přidán do projektu a tabulky **zákazníci** a **objednávky** se zobrazí v okně **zdroje dat** .
 
 ## <a name="create-the-first-form-form1"></a>Vytvoření prvního formuláře (Form1)
- Můžete vytvořit datovou mřížku (<xref:System.Windows.Forms.DataGridView> ovládací prvek) tak, že přetáhnete uzel **zákazníci** z okna **zdroje dat** do formuláře.
+ Datovou mřížku ( <xref:System.Windows.Forms.DataGridView> ovládací prvek) můžete vytvořit přetažením uzlu **zákazníci** z okna **zdroje dat** do formuláře.
 
 #### <a name="to-create-a-data-bound-grid-on-the-form"></a>Vytvoření mřížky vázané na data na formuláři
 
 - Přetáhněte hlavní uzel **Customers** z okna **zdroje dat** do formuláře **Form1**.
 
-     @No__t_0 a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů se zobrazí na **Form1**. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     <xref:System.Windows.Forms.DataGridView>A a pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí na **Form1**. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 ## <a name="create-the-second-form-form2"></a>Vytvoření druhého formuláře (Form2)
 
@@ -115,7 +115,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 3. Přetáhněte uzel hlavní **objednávky** z okna **zdroje dat** do **Form2**.
 
-     V **Form2**se zobrazí <xref:System.Windows.Forms.DataGridView> a pruh nástrojů (<xref:System.Windows.Forms.BindingNavigator>) pro procházení záznamů. V zásobníku komponent se zobrazí [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator>.
+     <xref:System.Windows.Forms.DataGridView>A a pruh nástrojů ( <xref:System.Windows.Forms.BindingNavigator> ) pro procházení záznamů se zobrazí v **Form2**. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> a <xref:System.Windows.Forms.BindingNavigator> se zobrazí v zásobníku komponent.
 
 4. Odstraňte **OrdersBindingNavigator** z panelu komponent.
 
@@ -133,7 +133,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 4. Ponechte výchozí možnost **vybrat, která vrátí řádky**, a pak klikněte na **Další**.
 
-5. Přidejte do dotazu klauzuli WHERE, která vrátí `Orders` na základě `CustomerID`. Dotaz by měl vypadat přibližně takto:
+5. Přidejte do dotazu klauzuli WHERE, která se má vrátit na `Orders` základě `CustomerID` . Dotaz by měl vypadat přibližně takto:
 
     ```
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
@@ -142,15 +142,15 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
     ```
 
     > [!NOTE]
-    > Ověřte správnou syntaxi parametru pro vaši databázi. Například v aplikaci Microsoft Access by klauzule WHERE vypadala takto: `WHERE CustomerID = ?`.
+    > Ověřte správnou syntaxi parametru pro vaši databázi. Například v aplikaci Microsoft Access by klauzule WHERE vypadala takto: `WHERE CustomerID = ?` .
 
-6. Klikněte na tlačítko **Další**.
+6. Klikněte na **Next** (Další).
 
-7. Pro **naplnění názvu DataTableMethod**zadejte `FillByCustomerID`.
+7. Pro **naplnění názvu DataTableMethod**zadejte `FillByCustomerID` .
 
 8. Zrušte zaškrtnutí možnosti **vrátit DataTable** a potom klikněte na tlačítko **Další**.
 
-9. Klikněte na tlačítko **Dokončit**.
+9. Klikněte na **Finish** (Dokončit).
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>Vytvoření metody v Form2 k předání dat
 
@@ -158,7 +158,7 @@ Tento návod poskytuje podrobné pokyny pro předávání dat z jednoho formulá
 
 1. Klikněte pravým tlačítkem na **Form2**a výběrem **Zobrazit kód** otevřete **Form2** v **editoru kódu**.
 
-2. Do **Form2** přidejte následující kód za metodu `Form2_Load`:
+2. Do **Form2** přidejte následující kód za `Form2_Load` metodu:
 
      [!code-csharp[VbRaddataDisplaying#1](../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/Form2.cs#1)]
      [!code-vb[VbRaddataDisplaying#1](../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/Form2.vb#1)]

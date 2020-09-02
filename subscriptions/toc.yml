@@ -1,0 +1,196 @@
+- name: Předplatná sady Visual Studio
+  href: index.yml
+- name: Co je nového
+  href: whats-new-in-subscriptions.md
+- name: Předplatná
+  items:
+    - name: Zakoupení předplatných
+      items:
+        - name: Retail
+          href: buy-activate-retail.md
+        - name: Cloud
+          items:
+            - name: Přehled
+              href: vscloud-overview.md
+            - name: Časté otázky k fakturaci
+              href: vscloud-billing-faq.md
+            - name: Nákup pro poskytovatele CSP
+              href: vscloud-csp.md
+        - name: Visual Studio s GitHub Enterprise
+          href: access-github.md
+        - name: Microsoft Partner Network
+          items:
+            - name: Předplatná pro partnery
+              href: program-mpn.md
+            - name: Správa předplatných pro MPN
+              href: manage-mpn-subscriptions.md
+        - name: Microsoft for Startups
+          href: program-startups.md
+    - name: Přihlásit se
+      items:
+        - name: Přihlášení účtem Microsoft
+          href: sign-in-msa.md
+        - name: Přihlášení pracovním/školním účtem
+          href: sign-in-work.md
+        - name: Přihlášení pomocí GitHubu
+          href: sign-in-github.md
+        - name: Připojené identity
+          href: use-connected-identities.md
+        - name: Alternativní identity
+          href: vs-alternate-identity.md
+        - name: Problémy s přihlášením
+          href: sign-in-issues.md
+        - name: Anonymizace údajů o předplatitelích
+          href: anonymization.md
+    - name: Přehled portálu předplatných
+      href: using-the-subscriber-portal.md
+    - name: Správa odběrů
+      href: manage-vs-subscriptions.md
+    - name: Kontaktování správce předplatných
+      href: contact-my-admin.md
+    - name: Výhody
+      items:
+        - name: Nástroje
+          items:
+            - name: Individuální kredit v Azure DevTest
+              href: vs-azure.md
+            - name: Azure DevOps
+              href: vs-azure-devops.md
+            - name: Průběžné platby za Azure DevTest
+              href: vs-azure-payg.md
+            - name: Azure EA DevTest
+              href: azure-ea-devtest.md
+            - name: CAST Highlight
+              href: vs-cast.md
+            - name: CloudPilot
+              href: vs-cloudpilot.md
+            - name: Microsoft 365 Apps pro velké organizace
+              href: microsoft-365-apps-for-enterprise.md
+            - name: Office 365 pro vývojáře
+              href: vs-m365.md
+            - name: Parasoft
+              href: vs-parasoft.md
+            - name: Power BI Pro
+              href: vs-pbi.md
+            - name: Visual Studio App Center
+              href: vs-visual-studio-app-center.md
+            - name: Visual Studio – sada IDE
+              href: vs-ide-benefit.md
+            - name: WhiteSource Bolt
+              href: vs-whitesource.md
+            - name: Vývojářský účet pro Windows
+              href: vs-windows-dev.md
+            - name: Windows Virtual Desktop
+              href: vs-windows-virtual-desktop.md
+        - name: Profesní rozvoj
+          items:
+            - name: CODE Magazine
+              href: vs-code-magazine.md
+            - name: DataCamp
+              href: vs-datacamp.md
+            - name: LinkedIn Learning
+              href: vs-linkedin-learning.md
+            - name: Pluralsight
+              href: vs-pluralsight.md
+        - name: Podpora
+          items:
+            - name: Komunita Azure
+              href: vs-azure-community.md
+            - name: Podpora od specialisty
+              href: vs-concierge-chat.md
+            - name: Technická podpora
+              href: vs-tech-support.md
+- name: Software a klíče
+  items:
+    - name: Software ke stažení
+      items:
+        - name: Dostupnost produktů
+          href: product-availability.md
+        - name: Stažení softwaru
+          href: download-software.md
+    - name: Seznam dostupného softwaru ke stažení
+      href: software-download-list.md
+    - name: Kódy Product Key
+      items:
+        - name: Přehled kódů Product Key
+          href: product-keys.md
+        - name: Vyhledání a vyžádání kódů
+          href: find-keys.md
+        - name: Internetové ukázky
+          href: internet-demos.md
+- name: Správci
+  items:
+    - name: Odpovědnosti správce
+      items:
+        - name: Odpovědnosti správce
+          href: admin-responsibilities.md
+        - name: Předprodukční inventář
+          href: admin-inventory.md
+        - name: Správa velkých týmů a externích dodavatelů
+          href: manage-teams.md
+        - name: Sledování přiřazení uživatelů a zpracování objednávek
+          href: assignments-orders.md
+    - name: Přístup k portálu pro správu
+      items:
+        - name: Multilicence
+          href: volume-license.md
+        - name: MPSA
+          href: mpsa.md
+        - name: Cloudová předplatná
+          href: cloud-admin.md
+        - name: Správa partnerů pro zákazníky
+          href: open-migration.md
+        - name: 'Videokurz: Přístup na portál pro správu'
+          href: 'https://youtu.be/plSu6fpi7UI'
+    - name: Používání portálu pro správu
+      items:
+        - name: Supersprávci a správci
+          href: admin-roles.md
+        - name: Nastavení předvoleb smluv
+          href: admin-prefs.md
+        - name: Přehled
+          href: using-admin-portal.md
+        - name: Přidání měsíčních předplatných
+          href: add-monthly-subs.md
+        - name: Přiřazení předplatných
+          items:
+            - name: Přidání jednotlivých uživatelů
+              href: assign-license.md
+            - name: Přidání více uživatelů
+              href: assign-license-bulk.md
+            - name: Přiřazení konkrétních předplatných
+              href: assign-guid.md
+        - name: Úprava předplatných
+          href: edit-license.md
+        - name: Odstranění předplatných
+          href: delete-license.md
+        - name: Hledání předplatného
+          href: search-license.md
+        - name: Export předplatných
+          href: exporting-subscriptions.md
+        - name: Nadměrná přidělení
+          href: handle-overclaimed-license.md
+        - name: Maximální využití
+          href: maximum-usage.md
+        - name: Předplatná po konci platnosti
+          href: handle-expired-license.md
+        - name: 'Scénáře přihlášení předplatitele '
+          href: aliasing.md
+        - name: Předplatitelé s přihlášením pomocí osobního e-mailu
+          href: personal-email-sign-ins.md
+        - name: Správa sady Visual Studio s GitHub Enterprise
+          href: assign-github.md
+- name: Prostředky
+  items:
+    - name: Dokument white paper k licencování sady Visual Studio
+      href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'
+    - name: Porovnání možností a cen předplatného
+      href: 'https://visualstudio.microsoft.com/vs/pricing'
+    - name: Porovnání funkcí integrovaných vývojových prostředí (IDE) sady Visual Studio
+      href: 'https://visualstudio.microsoft.com/vs/compare'
+    - name: Podpora správy a předplatných sady Visual Studio
+      href: 'https://visualstudio.microsoft.com/support/support-overview-vs'
+    - name: Podmínky multilicenčních programů
+      href: 'https://www.microsoft.com/licensing/product-licensing/products.aspx'
+    - name: Smlouva o produktech a službách společnosti Microsoft
+      href: 'https://www.microsoft.com/licensing/mpsa/default.aspx'

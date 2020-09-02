@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Spuštění pracovního procesu v rámci uživatelského účtu | Dokumentace Microsoftu'
+title: 'Postupy: spuštění pracovního procesu v rámci uživatelského účtu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,69 +21,69 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ebb8ec1fe10f6fbc5c367cb0ed127e048351b0e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157874"
 ---
-# <a name="how-to-run-the-worker-process-under-a-user-account"></a>Postupy: Spuštění pracovního procesu pod uživatelským účtem
+# <a name="how-to-run-the-worker-process-under-a-user-account"></a>Postupy: Spuštění pracovního procesu v rámci uživatelského účtu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nastavení počítače tak, aby mohly běžet [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovního procesu (aspnet_wp.exe nebo w3wp.exe) v rámci uživatelského účtu, postupujte podle těchto kroků.  
+Chcete-li nastavit počítač tak, aby bylo možné spustit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pracovní proces (aspnet_wp.exe nebo w3wp.exe) v rámci uživatelského účtu, postupujte podle následujících kroků.  
   
 ## <a name="procedure"></a>Postup  
   
-#### <a name="to-run-aspnetwpexe-under-a-user-account"></a>Ke spuštění aspnet_wp.exe uživatelského účtu  
+#### <a name="to-run-aspnet_wpexe-under-a-user-account"></a>Spuštění aspnet_wp.exe pod uživatelským účtem  
   
-1. Otevřete soubor machine.config, umístěný ve vašem počítači ve složce Konfigurace na cestě, kam jste nainstalovali modul runtime.  
+1. Otevřete soubor machine.config, který se nachází v počítači ve složce CONFIG v cestě, kam jste nainstalovali modul runtime.  
   
-2. Najít &lt;processModel&gt; a u atributů uživatele a heslo pro jméno a heslo uživatelského účtu, který chcete, aby aspnet_wp.exe ke spuštění v rámci.  
+2. Vyhledejte &lt; část processModel &gt; a změňte atributy uživatele a hesla na jméno a heslo uživatelského účtu, na kterém chcete spustit aspnet_wp.exe.  
   
 3. Uložte soubor machine.config.  
   
-4. Na [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], ve výchozím nastavení je nainstalována služba IIS 6.0. Odpovídající pracovní proces je w3wp.exe.To v režimu aspnet_wp.exe jako pracovní proces služby IIS 6.0, postupujte takto:  
+4. V systému [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)] je služba IIS 6,0 standardně nainstalována. Odpovídající pracovní proces je w3wp.exe. Chcete-li spustit v režimu IIS 6,0 s aspnet_wp.exe jako pracovní proces, je nutné provést následující kroky:  
   
-    1. Klikněte na tlačítko **Start**, klikněte na tlačítko **nástroje pro správu** a klikněte na tlačítko **Internetová informační služba**.  
+    1. Klikněte na tlačítko **Start**, klikněte na položku **Nástroje pro správu** a potom zvolte možnost **Internetová informační služba**.  
   
-    2. V **Internetová informační služba** dialogové okno, klikněte pravým tlačítkem na **weby** složky a vyberte **vlastnosti**.  
+    2. V dialogovém okně **Internetová informační služba** klikněte pravým tlačítkem myši na složku **webové stránky** a vyberte možnost **vlastnosti**.  
   
-    3. V **webové servery – vlastnosti** dialogového okna zvolte **služby**.  
+    3. V dialogovém okně **vlastnosti webů** vyberte **Služba**.  
   
-    4. Vyberte **spustit webovou službu v izolovaném režimu IIS6.0**.  
+    4. **V režimu izolace služby IIS 6.0 vyberte spustit webovou službu**.  
   
-    5. Zavřít **vlastnosti** dialogové okno a **Správce služeb Internetu**.  
+    5. Zavřete dialogové okno **vlastnosti** a **Správce služeb Internetu**.  
   
-5. Otevřete příkazový řádek Windows a obnovení serveru spuštěním:  
+5. Otevřete příkazový řádek systému Windows a obnovte server spuštěním příkazu:  
   
     ```  
     iisreset  
     ```  
 
-    – nebo –  
+    ani  
   
     ```  
     net stop iisadmin /y  
     net start w3svc  
     ```  
   
-6. Najít dočasný [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] soubory složky, která by měla být ve stejné cestě jako složku konfigurace. Klikněte pravým tlačítkem na dočasný [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] soubory složky a vyberte **vlastnosti** v místní nabídce.  
+6. Vyhledejte složku dočasných [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] souborů, která by měla být ve stejné cestě jako konfigurační složka. Klikněte pravým tlačítkem na [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] složku Dočasné soubory a v místní nabídce vyberte **vlastnosti** .  
   
-7. V **dočasné soubory vlastnosti ASP.NET** dialogové okno, klikněte na tlačítko **zabezpečení** kartu.  
+7. V dialogovém okně **dočasné vlastnosti souborů ASP.NET** klikněte na kartu **zabezpečení** .  
   
-8. Klikněte na tlačítko **Advanced**.  
+8. Klikněte na tlačítko **Upřesnit**.  
   
-9. V **Upřesnit nastavení zabezpečení pro dočasné soubory ASP.Net** dialogové okno, klikněte na tlačítko **přidat**.  
+9. V dialogovém okně **Upřesnit nastavení zabezpečení pro dočasné soubory ASP.NET** klikněte na **Přidat**.  
   
-    **Dialogové okno Vybrat uživatele, počítač nebo skupinu** se zobrazí.  
+    Zobrazí se **dialogové okno Vybrat uživatele, počítač nebo skupinu** .  
   
-10. Zadejte uživatelské jméno v **zadejte název objektu k výběru** pole a potom klikněte na tlačítko **OK**. Uživatelské jméno musí mít tento formát: DomainName\UserName.  
+10. Do pole **Zadejte název objektu k výběru** zadejte uživatelské jméno a pak klikněte na **OK**. Uživatelské jméno musí být v následujícím formátu: DomainName\UserName.  
   
-11. V **položka oprávnění pro dočasné soubory ASP.NET** dialogové okno pole a sdělte mu **úplné řízení**a potom klikněte na tlačítko **OK** zavřete **položku pro dočasné ASP Soubory služby .NET** dialogové okno.  
+11. V dialogovém okně **Položka oprávnění pro dočasné soubory ASP.NET** Udělte uživateli **úplný ovládací prvek**a kliknutím na tlačítko **OK** zavřete dialogové okno **záznam dočasných souborů ASP.NET** .  
   
-12. A **zabezpečení** dialogové okno se zobrazí a požádá, pokud Opravdu chcete změnit oprávnění pro složku systému. Klikněte na tlačítko **Ano**.  
+12. Zobrazí se dialogové okno **zabezpečení** a zobrazí se dotaz, jestli opravdu chcete změnit oprávnění pro systémovou složku. Klikněte na **Ano**.  
   
-13. Klikněte na tlačítko **OK** zavřete **dočasné soubory vlastnosti ASP.NET** dialogové okno.  
+13. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti dočasných souborů ASP.NET** .  
   
 ## <a name="see-also"></a>Viz také  
-[Ladění ASP.NET: Požadavky na systém](../debugger/aspnet-debugging-system-requirements.md)  
+[Ladění ASP.NET: požadavky na systém](../debugger/aspnet-debugging-system-requirements.md)  

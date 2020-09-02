@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual | Dokumentace Microsoftu
+title: 'IDebugObject:: Equals | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 85252cdaf9fb076ebd4f8000115bcea576531bb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159110"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
@@ -42,16 +42,16 @@ int IsEqual(
   
 #### <a name="parameters"></a>Parametry  
  `pObject`  
- [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt představující objekt k porovnání s.  
+ pro Objekt [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující objekt, na který se má porovnat.  
   
  `pfIsEqual`  
- [out] Vrátí nenulovou (`TRUE`) Pokud jsou hodnoty objekty stejné; jinak, vrátí hodnotu 0 (`FALSE`).  
+ mimo Vrátí nenulovou hodnotu ( `TRUE` ), pokud jsou hodnoty objektů stejné. v opačném případě vrátí hodnotu nula ( `FALSE` ).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle tuto metodu můžete porovnat adresy hodnoty reprezentované `pObject` parametr a to [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt; Pokud adresy jsou si rovny, pak objekty lze považovat za stejné.  
+ Tato metoda obvykle může porovnat adresy hodnot reprezentovaných `pObject` parametrem a tímto objektem [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) ; Pokud jsou adresy stejné, lze objekty považovat za stejné.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Dokumentace Microsoftu
+title: CONNECTION_PROTOCOL | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 72ed9b8a747814d9537739c8dc27e5f113547756
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62561850"
 ---
-# <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
+# <a name="connection_protocol"></a>CONNECTION_PROTOCOL
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje protokol, který používá ke komunikaci mezi serverem pro ladění a ladit balíček (DE).  
+Určuje protokol, který se používá ke komunikaci mezi ladicím serverem a ladicím balíčkem (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,16 +52,16 @@ public enum CONNECTION_PROTOCOL {
   
 #### <a name="parameters"></a>Parametry  
  CONNECTION_NONE  
- Žádné připojení k serveru.  
+ Na serveru se neudělalo žádné připojení.  
   
  CONNECTION_UNKNOWN  
- Vytvoří připojení, ale je neznámého typu.  
+ Připojení bylo vytvořeno, ale je neznámého typu.  
   
  CONNECTION_LOCAL  
- Připojení je na místním serveru.  
+ Připojení je místní server.  
   
  CONNECTION_PIPE  
- Připojení je přes pojmenovaný kanál.  
+ Připojení je prostřednictvím pojmenovaného kanálu.  
   
  CONNECTION_TCPIP  
  Připojení používá protokol TCP/IP.  
@@ -70,15 +70,15 @@ public enum CONNECTION_PROTOCOL {
  Připojení používá protokol HTTP (prostřednictvím webového serveru).  
   
  CONNECTION_OTHER  
- Vytvořilo se jiný typ připojení (Tato hodnota není aktuálně používá.).  
+ Byl vytvořen nějaký jiný typ připojení (Tato hodnota se aktuálně nepoužívá).  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou vráceny z [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) metody.  
+ Tyto hodnoty jsou vráceny metodou [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

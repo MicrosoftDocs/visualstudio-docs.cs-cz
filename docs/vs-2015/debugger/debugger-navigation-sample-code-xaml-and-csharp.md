@@ -1,5 +1,5 @@
 ---
-title: Ladicí program vzorový kód pro navigaci (Xaml a C#) | Dokumentace Microsoftu
+title: Ukázkový kód pro navigaci v ladicím programu (XAML a C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,18 +15,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88193fc4ec7061771ebba53139cdc0ecce67dbfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62552075"
 ---
-# <a name="debugger-navigation-sample-code-xaml-and-c"></a>Ladicí program vzorový kód pro navigaci (Xaml a C#)
+# <a name="debugger-navigation-sample-code-xaml-and-c"></a>Vzorový kód pro navigaci v ladicím programu (XAML a C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kód v tomto tématu se ukázkový soubor pro [přechod na relaci ladění (Xaml a C#)](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md) tématu.  
+Kód v tomto tématu je ukázkový soubor pro téma navigace v [relaci ladění (XAML a C#)](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md) .  
   
-## <a name="sample-code"></a>Vzorový kód  
+## <a name="sample-code"></a>Příklad kódu  
   
 ```csharp  
 public MainPage()  

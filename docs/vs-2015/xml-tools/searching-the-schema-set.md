@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0e3a8563d5e2cd29c9c521761498d7ef87b7cbab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656161"
 ---
 # <a name="searching-the-schema-set"></a>Hledání v sadě schémat
@@ -32,11 +32,11 @@ Průzkumník schémat XML umožňuje vyhledat sadu schémat následujícími zp�
 
  Průzkumník schémat XML prohledává sadu schémat pro následující:
 
-- Všechny atributy `name` nebo `ref`, které odpovídají zadanému klíčovému slovu. To umožňuje najít prvky, atributy, typy a tak dále podle názvu.
+- Všechny `name` `ref` atributy nebo, které odpovídají zadanému klíčovému slovu. To umožňuje najít prvky, atributy, typy a tak dále podle názvu.
 
-- Atributy `schemaLocation` příkazů include.
+- `schemaLocation`Atributy příkazů include
 
-- Atributy `namespace` příkazů importu.
+- `namespace`Atributy příkazů import.
 
 ## <a name="schema-specific-search"></a>Hledání specifické pro schéma
  Průzkumník schémat XML také obsahuje Vestavěná hledání, ke kterým můžete přistupovat pomocí místní nabídky Průzkumníka schémat XML. Další informace o dostupných kontextových nabídkách naleznete v tématu [kontextové nabídky](../xml-tools/context-menus-xml-schema-explorer.md). Můžete také provést hledání specifické pro schéma v zobrazení Start; Další informace najdete v části Podrobnosti o sadě schémat v tématu [spuštění zobrazení](../xml-tools/start-view.md) .

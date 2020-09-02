@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 3c6e7550940f9d2efa5ca228123310f1b861ee76
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651603"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>Postupy: Synchronizace sady pravidel projektu kódu se zásadou vracení se změnami týmového projektu
@@ -47,7 +47,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 3. Klikněte na **Analýza kódu**.
 
-4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse... >** .
+4. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse...>** .
 
 5. V dialogovém okně **otevřít** zadejte soubor sady pravidel zásad vracení se změnami.
 
@@ -55,7 +55,7 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 1. Použijte jeden z postupů uvedených výše v tomto tématu a vyberte zásadu vrácení se změnami týmového projektu na stránce Analýza kódu v dialogovém okně nastavení projektu.
 
-2. Klikněte na **otevřít**.
+2. Klikněte na **Otevřít**.
 
 3. Přidejte nebo odeberte pravidla pomocí editoru sad pravidel.
 
@@ -65,6 +65,6 @@ Synchronizujete nastavení analýzy kódu pro projekty kódu se zásadou vrácen
 
 5. Otevřete dialogové okno Vlastnosti pro projekt kódu a zobrazte stránku **Analýza kódu** .
 
-6. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse... >** .
+6. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse...>** .
 
 7. V dialogovém okně **otevřít** zadejte soubor sady pravidel.

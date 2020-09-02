@@ -1,5 +1,5 @@
 ---
-title: Kopírovat výběr | Dokumenty společnosti Microsoft
+title: Kopírovat výběr | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea96fe521afe713b1eafd59390047bfdb427f6fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553224"
 ---
 # <a name="copy-selection"></a>Kopírovat výběr
-Pokud chcete zkopírovat celý zásobník hovorů z karty sestavy, klikněte na **Kopírovat**. Potom můžete vložit zásobník volání v libovolném programu, který podporuje tuto akci.
+Chcete-li zkopírovat celý zásobník volání z karty sestava, klikněte na tlačítko **Kopírovat**. Pak můžete vložit zásobník volání do libovolného programu, který tuto akci podporuje.
 
 ## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

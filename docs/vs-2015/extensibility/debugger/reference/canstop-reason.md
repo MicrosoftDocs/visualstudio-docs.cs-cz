@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 277164ea3dfcdabbe24622bb5148ebd75d54f8c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62561845"
 ---
-# <a name="canstopreason"></a>CANSTOP_REASON
+# <a name="canstop_reason"></a>CANSTOP_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Umožňuje určit, pokud program můžete zastavit provádění po dosažení určitého bodu v provádění.  
+Slouží k určení, zda může program zastavit provádění po dosažení určitého bodu v provádění.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_CANSTOP_REASON {   
@@ -43,18 +43,18 @@ public enum enum_CANSTOP_REASON { 
   
 ## <a name="members"></a>Členové  
  CANSTOP_ENTRYPOINT  
- Určuje vstupní bod určený program.  
+ Určuje vstupní bod daného programu.  
   
  CANSTOP_STEPIN  
- Určuje vstup do funkce.  
+ Určuje krokování do funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako argument [getreason –](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) metody pro potvrzení se relace ladění správce (SDM), pokud je v pořádku po dosažení vstupní bod programu nebo po přechodu na funkci nebo metodu.  
+ Předána jako argument metodě [getdůvod](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) pro potvrzení se správcem ladění relace (SDM), pokud je v pořádku, aby se zastavil po dosažení vstupního bodu programu nebo po rozkrokování do funkce nebo metody.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

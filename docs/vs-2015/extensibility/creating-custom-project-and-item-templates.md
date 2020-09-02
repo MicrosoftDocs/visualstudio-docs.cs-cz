@@ -10,75 +10,75 @@ author: gregvanl
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c6875e13baa83d349020f50a3fe448a87ec5fd30
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197395"
 ---
 # <a name="creating-custom-project-and-item-templates"></a>Vytváření vlastních šablon projektů a položek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio SDK zahrnuje šablony projektu, které vytvořit vlastní šablonu projektu a šablonu vlastní položky. Tyto šablony zahrnují některých běžných náhrad parametrů a sestavení jako soubory zip. Nejsou nasazeni automaticky a nejsou k dispozici v experimentální instanci aplikace. Kopírování souboru zip soubor do umístění
+Sada Visual Studio SDK obsahuje šablony projektu, které vytvoří vlastní šablonu projektu a šablonu vlastní položky. Tyto šablony obsahují některé běžné náhrady parametrů a sestavování jako soubory zip. Nejsou nasazeny automaticky a nejsou k dispozici v experimentální instanci. Zkopírujte soubor zip do umístění, které jste
 
-Vytvoření šablony šablony umožňují zahrnout šablony do větších rozšíření. Včetně šablon v rozšíření umožňuje implementaci správy verzí na zdrojové soubory a vytvořit skupinu šablony projektů do jednoho balíčku VSIX.
+Šablony pro vytváření šablon umožňují zahrnout šablony do větších rozšíření. Zahrnutí šablon v rozšířeních umožňuje implementovat řízení verze ve zdrojových souborech a vytvořit skupinu projektů šablon do jednoho balíčku VSIX.
 
-Pro scénáře vytvoření základní šablony, byste měli použít **exportovat šablonu** průvodce, který uloží do komprimovaného souboru. Další informace o vytvoření základní šablony najdete v tématu [vytváření projektů a šablon položek](../ide/creating-project-and-item-templates.md).
+V případě scénářů pro základní vytváření šablon byste měli použít průvodce **exportem šablony** , který vrací výstup do komprimovaného souboru. Další informace o vytváření základních šablon naleznete v tématu [vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md).
 
-Spouští se v sadě Visual Studio 2017, vyhledávání vlastních projektů a šablon položek už probíhá. Rozšíření místo toho musíte zadat soubory manifestu šablon, které popisují umístění instalace služby tyto šablony. Instalace Preview 2 můžete použít k aktualizaci rozšíření VSIX. Pokud provádíte nasazení vašeho rozšíření pomocí MSI, musíte soubory manifestu šablony vygenerovat ručně. Další informace najdete v tématu [Upgrade vlastních šablon projektů a položek pro Visual Studio 2017](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015). Schéma manifestu šablony je popsána v [Visual Studio Manifest odkaz na schéma šablon](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference).
+Od sady Visual Studio 2017 se již neprovádí vyhledávání vlastních šablon projektů a položek. Místo toho musí rozšíření poskytnout soubory manifestu šablony, které popisují umístění instalace těchto šablon. K aktualizaci rozšíření VSIX můžete použít instalaci Preview 2. Pokud nasadíte rozšíření pomocí MSI, je nutné vygenerovat soubory manifestu šablony ručně. Další informace najdete v tématu [upgrade Custom šablony projektů a položek pro Visual Studio 2017](/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017?view=vs-2015). Schéma manifestu šablony je dokumentováno v [referenčních informacích o schématu manifestu šablony sady Visual Studio](/visualstudio/extensibility/visual-studio-template-manifest-schema-reference).
 
 ## <a name="create-a-project-template"></a>Vytvoření šablony projektu
 
-1. Vytvořte projekt šablony projektu. Můžete najít šablonu projektu v **nový projekt** dialogového okna, v jazyce Visual Basic nebo Visual C# **rozšiřitelnost** složky.
+1. Vytvořte projekt šablony projektu. Šablonu projektu můžete najít v dialogovém okně **Nový projekt** , ve složce Visual Basic nebo **rozšiřitelné** složky Visual C#.
 
-     Tato šablona vygeneruje soubor třídy, ikony, soubor .vstemplate, soubor upravovat projektu s názvem ProjectTemplate.vbproj nebo ProjectTemplate.csproj a některé soubory, které jsou obvykle generovány jinými typy projektů, takový resources.resx soubor, AssemblyInfo soubor a soubor .settings. Každý soubor kódu obsahuje běžné náhrad parametrů, kde je to vhodné.
+     Šablona vygeneruje soubor třídy, ikonu, soubor. vstemplate, upravitelný soubor projektu s názvem ProjectTemplate. vbproj nebo ProjectTemplate. csproj a některé soubory, které jsou obvykle generovány jinými typy projektů, jako například soubor prostředků. resx, soubor AssemblyInfo a soubor. Settings. Každý soubor kódu obsahuje v případě potřeby společné náhrady parametrů.
 
-2. Přidání a odebrání položek z projektu, jak je vyžadováno pro váš projekt. Neodebírejte soubor upravovat projektu, souboru AssemblyInfo nebo souboru .vstemplate.
+2. Přidejte a odeberte položky z projektu, jak je požadováno pro váš projekt. Neodstraňujte upravitelný soubor projektu, soubor AssemblyInfo nebo soubor. vstemplate.
 
-3. Aktualizujte soubor .vstemplate tak, aby odrážela všechny přidání a odstranění. [Projektu](../extensibility/project-element-visual-studio-templates.md) musí obsahovat element [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) – element pro každý soubor mají být zahrnuty v šabloně.
+3. Aktualizujte soubor. vstemplate tak, aby odrážel všechna přidání a odstranění. Prvek [projektu](../extensibility/project-element-visual-studio-templates.md) musí obsahovat element [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) pro každý soubor, který se má zahrnout do šablony.
 
-4. Upravit soubory kódu a další obsah přístupných a přidejte odpovídající parametr nahrazení.
+4. Upravte soubory kódu a další obsah s přístupem uživatele a přidejte odpovídající náhrady parametrů.
+
+5. Podle potřeby upravte generovaný obsah.
+
+6. Sestavte projekt.
+
+     Visual Studio vytvoří soubor. zip, který obsahuje vaši šablonu. Není nasazený a není k dispozici v experimentální instanci.
+
+## <a name="create-an-item-template"></a>Vytvoření šablony položky
+
+1. Vytvořte projekt šablony položky.
+
+     Šablona vygeneruje soubor třídy, ikonu, soubor. vstemplate a soubor AssemblyInfo. Soubor třídy obsahuje některé běžné náhrady parametrů.
+
+2. Přidejte a odeberte položky z projektu, jak je požadováno pro váš projekt.
+
+3. Aktualizujte soubor. vstemplate tak, aby odrážel všechna přidání a odstranění. Prvek [projektu](../extensibility/project-element-visual-studio-templates.md) musí obsahovat element [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) pro každý soubor, který se má zahrnout do šablony.
+
+4. Upravte soubory kódu a další obsah s přístupem uživatele a přidejte odpovídající náhrady parametrů.
 
 5. Upravte vygenerovaný obsah podle potřeby.
 
 6. Sestavte projekt.
 
-     Visual Studio vytvoří soubor .zip, který obsahuje šablonu. Není nasazená, a není k dispozici v experimentální instanci aplikace.
-
-## <a name="create-an-item-template"></a>Vytvořit šablonu položky
-
-1. Vytvoření šablony položky projektu.
-
-     Tato šablona vygeneruje soubor třídy, ikony, soubor .vstemplate a souboru AssemblyInfo. Soubor třídy obsahuje některé běžné náhrad parametrů.
-
-2. Přidání a odebrání položek z projektu, jak je vyžadováno pro váš projekt.
-
-3. Aktualizujte soubor .vstemplate tak, aby odrážela všechny přidání a odstranění. [Projektu](../extensibility/project-element-visual-studio-templates.md) musí obsahovat element [ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md) – element pro každý soubor mají být zahrnuty v šabloně.
-
-4. Upravit soubory kódu a další obsah přístupných a přidejte odpovídající parametr nahrazení.
-
-5. Upravte vygenerovaný obsah podle potřeby.
-
-6. Sestavte projekt.
-
-     Visual Studio vytvoří komprimovaný soubor, který obsahuje šablonu. Není nasazená, a není k dispozici v experimentální instanci aplikace.
+     Visual Studio vytvoří komprimovaný soubor, který obsahuje vaši šablonu. Není nasazený a není k dispozici v experimentální instanci.
 
 ## <a name="deploy-the-project-or-item-template"></a>Nasazení šablony projektu nebo položky
 
-1. Vytvořte projekt VSIX. Další informace najdete v tématu [šablonou projektu VSIX](../extensibility/vsix-project-template.md).
+1. Vytvořte projekt VSIX. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).
 
-2. Nastavte projekt VSIX jako projekt po spuštění. V **Průzkumníka řešení**, vyberte uzel projektu VSIX, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěný projekt**.
+2. Nastavte projekt VSIX jako spouštěný projekt. V **Průzkumník řešení**vyberte uzel projekt VSIX, klikněte pravým tlačítkem myši a vyberte **nastavit jako spouštěný projekt**.
 
-3. Nastavte projekt šablony projektu jako prostředek projektu VSIX. Otevřete soubor .vsixmanifest. Přejděte **prostředky** kartě a klikněte na tlačítko **nový**.
+3. Nastavte projekt šablony projektu jako Asset projektu VSIX. Otevřete soubor. vsixmanifest. Přejděte na kartu **assets (prostředky** ) a klikněte na **Nový**.
 
-    1. Nastavte **typ** pole **Microsoft.VisualStudio.ProjectTemplate** nebo **Microsoft.VisualStudio.ItemTemplate**.
+    1. Nastavte pole **typ** na **Microsoft. VisualStudio. ProjectTemplate** nebo **Microsoft. VisualStudio. ItemTemplate**.
 
-    2. Pro zdroj, vyberte **projekt v aktuálním řešení** možnost a potom vyberte projekt, který obsahuje šablonu.
+    2. V části zdroj vyberte možnost **projekt v aktuální řešení** a pak vyberte projekt, který obsahuje šablonu.
 
-4. Sestavte řešení a stiskněte klávesu F5. Zobrazí se experimentální instance.
+4. Sestavte řešení a stiskněte klávesu F5. Objeví se experimentální instance.
 
-5. Pro projekt šablony projektu, byste měli vidět vaše šablona projektu uvedené v **nový projekt** dialogového okna (**soubor / nový / Project**), Visual C# nebo Visual Basic uzlu. Pro projekt šablony položky, měli byste vidět položku šablony uvedené v dialogovém okně Přidat novou položku (v **Průzkumníka řešení**, vyberte uzel projektu a klikněte na tlačítko **Add / nová položka**).
+5. V projektu šablony projektu by se měla zobrazit šablona projektu uvedená v dialogovém okně **Nový projekt** (**soubor/nový/projekt**) v uzlu Visual C# nebo Visual Basic. Pro projekt šablony položky by se měla zobrazit Šablona položky uvedená v dialogovém okně Přidat novou položku (v **Průzkumník řešení**vyberte uzel projektu a klikněte na **přidat/nová položka**).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace šablony sady Visual Studio](../ide/visual-studio-template-reference.md)

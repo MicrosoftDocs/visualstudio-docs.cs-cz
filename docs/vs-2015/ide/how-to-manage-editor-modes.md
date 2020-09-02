@@ -26,10 +26,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a188e90d3feeb903eb8b4efceb91eb53cac3bdce
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651851"
 ---
 # <a name="how-to-manage-editor-modes"></a>Postupy: Správa režimů editoru
@@ -47,7 +47,7 @@ Editor Visual Studio Code můžete zobrazit v různých režimech zobrazení.
 
 - Stisknutím kombinace kláves ALT + SHIFT + ENTER zadáte nebo ukončete režim **zobrazení na celé obrazovce** .
 
-     --nebo--
+     -- nebo --
 
 - Vydejte příkaz `View.Fullscreen` v **příkazovém** okně.
 

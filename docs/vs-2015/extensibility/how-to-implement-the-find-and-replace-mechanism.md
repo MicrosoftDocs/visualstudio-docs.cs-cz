@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Implementace najít a nahradit mechanismus | Dokumentace Microsoftu'
+title: 'Postupy: implementace mechanismu Find and Replace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,28 +11,28 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d4362d0b0c3f013ce6f38d13265dcc181c77012c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62548691"
 ---
-# <a name="how-to-implement-the-find-and-replace-mechanism"></a>Postupy: Implementace najít a nahradit mechanismus
+# <a name="how-to-implement-the-find-and-replace-mechanism"></a>Postupy: Implementace mechanismu Najít a nahradit
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio nabízí dva způsoby implementace najít a nahradit. Jedním ze způsobů je předat bitovou kopii text do prostředí a ten zpracování vyhledávání, zvýrazňování a nahrazení textu. To umožňuje uživatelům zadat více rozpětí textu. Alternativně vašeho balíčku VSPackage můžete řídit tento samotné funkce. V obou případech musíte upozornit prostředí o aktuální cíl a cíle pro všechny otevřené dokumenty.  
+Visual Studio poskytuje dva způsoby implementace Find/Replace. Jedním ze způsobů je předat textový obrázek do prostředí a nechat ho zpracovávat hledání, zvýrazňování a nahrazování textu. To umožňuje uživatelům zadat více rozsahů textu. Další možností je, že VSPackage může tuto funkci řídit sám. V obou případech je nutné upozornit prostředí na aktuální cíl a cíle pro všechny otevřené dokumenty.  
   
-### <a name="to-implement-findreplace"></a>K implementaci najít a nahradit  
+### <a name="to-implement-findreplace"></a>Implementace Find/nahrazování  
   
-1. Implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> rozhraní na jednom z objektů vrácených podle vlastnosti rámce <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> nebo <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>. Pokud vytváříte vlastní editor, měli byste implementovat toto rozhraní jako součást třídy vlastní editor.  
+1. Implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> rozhraní na jeden z objektů vrácených vlastnostmi rámce <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> nebo <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> . Pokud vytváříte vlastní editor, měli byste implementovat toto rozhraní jako součást třídy vlastního editoru.  
   
-2. Použití <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A> metoda postup určení možností, které podporuje vaše editoru a označuje, zda implementuje hledání text obrázku.  
+2. Použijte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A> metodu k určení možností, které editor podporuje, a k určení, zda implementuje vyhledávání obrázků.  
   
-     Pokud váš editor podporuje text hledání obrázků, implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A>.  
+     Pokud editor podporuje vyhledávání textových obrázků, implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A> .  
   
-     V opačném případě implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>.  
+     V opačném případě implementujte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> .  
   
-3. Pokud se rozhodnete implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> metody, můžete zjednodušit hledání úloh pomocí volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper> rozhraní.  
+3. Pokud implementujete <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> metody a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> , můžete zjednodušit úlohy vyhledávání voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper> rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>   

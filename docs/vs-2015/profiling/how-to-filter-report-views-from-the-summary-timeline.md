@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Filtrování zobrazení sestav ze souhrnné časové osy | Dokumentace Microsoftu'
+title: 'Postupy: filtrování zobrazení sestav ze souhrnné časové osy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,21 +10,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ce9b74012be35433c26f8446f36246dbe93f6442
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146091"
 ---
 # <a name="how-to-filter-report-views-from-the-summary-timeline"></a>Postupy: Filtrování zobrazení sestav ze souhrnné časové osy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete filtrovat data, která se zobrazí v sestavách výkonu tak, že zadáte čas segment v časové osy grafu souhrnné zobrazení. Při filtrování sestavy se mají zahrnout jenom časového úseku, který jste zadali reanalyzed soubor dat profilování.  
+Data zobrazená v sestavách výkonu můžete filtrovat zadáním časového segmentu v grafu časové osy zobrazení souhrnu. Při filtrování sestav se soubor dat profilování znovu analyzuje tak, aby obsahoval pouze zadaný časový segment.  
   
-### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Chcete-li filtrovat sestavy pro profilaci ze souhrnné časové osy grafu  
+### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Filtrování sestavy profilace z grafu časové osy souhrnu  
   
-1. V zobrazení se souhrnnými časová osa grafu klikněte na tlačítko bod na časové ose a pak přetáhněte myší na jiný bod na časové ose.  
+1. V grafu časové osy zobrazení souhrnu klikněte na bod na časové ose a přetáhněte myší na jiný bod na časové ose.  
   
-     Oblasti, která jste zadali, je označeno šedou barvou.  
+     Oblast, kterou jste zadali, je šedá.  
   
-2. Klikněte na tlačítko **filtrovat podle výběru**.
+2. Klikněte na **filtrovat podle výběru**.

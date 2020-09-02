@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_RETVAL | Dokumentace Microsoftu
+title: METADATA_ADDRESS_RETVAL | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6f685bcfad5cf576215aa50aa26540ba207de2e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62546860"
 ---
-# <a name="metadataaddressretval"></a>METADATA_ADDRESS_RETVAL
+# <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura reprezentuje návratovou hodnotu z metody nebo funkce.  
+Tato struktura představuje návratovou hodnotu z metody nebo funkce.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_RETVAL {  
@@ -44,26 +44,26 @@ public struct METADATA_ADDRESS_RETVAL {
 }  
 ```  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  tokMethod  
- ID metody tento vrácená hodnota je pro.  
+ ID metody, pro kterou se tato návratová hodnota používá  
   
  dwCorType  
- Základní typ vrácené hodnoty. Jedná se o hodnotu z `CorElementType` definované ve výčtu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] souboru comimage_flags sady SDK.  
+ Základní typ návratové hodnoty. Toto je hodnota z `CorElementType` výčtu definovaného v [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] souboru corhdr. h sady SDK.  
   
  dwSigSize  
- Velikost podpisu návratovou hodnotu (jak je uložen v `rgSig`).  
+ Velikost signatury návratové hodnoty (jak je uložená v `rgSig` ).  
   
  rgSig  
- Pole bajtů, které tvoří podpis metody návratovou hodnotu.  
+ Pole bajtů tvořících podpis návratové hodnoty.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_RETVAL` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení ve struktuře [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , když `dwKind` `DEBUG_ADDRESS_UNION` je pole struktury nastaveno na `ADDRESS_KIND_RETVAL` (hodnota z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) ).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

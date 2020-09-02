@@ -1,5 +1,5 @@
 ---
-title: Model služby starší verze jazyka | Dokumentace Microsoftu
+title: Model služby starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,44 +11,44 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 27d51df6dd11509b86e6648d59978b87d9cd8a02
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157660"
 ---
 # <a name="model-of-a-legacy-language-service"></a>Model služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Služba jazyka definuje prvky a funkce pro konkrétní jazyk a slouží k poskytování editoru pomocí informací specifických pro daný jazyk. Editor například potřebuje vědět elementy a klíčová slova jazyka za účelem podpory barevné zvýrazňování syntaxe.  
+Jazyková služba definuje prvky a funkce pro určitý jazyk a slouží k tomu, aby Editor poskytoval informace, které jsou specifické pro daný jazyk. Editor například potřebuje znát prvky a klíčová slova jazyka, aby bylo možné podporovat barevné zvýrazňování syntaxe.  
   
- Služba jazyka úzce spolupracuje s textovou vyrovnávací paměť spravuje se v editoru a zobrazení, která obsahuje editor. Microsoft IntelliSense **rychlé informace** možnost je příkladem funkcí poskytovaný službou jazyka.  
+ Služba jazyka úzce spolupracuje s textovou vyrovnávací pamětí spravovanou editorem a zobrazením, které obsahuje editor. **Rychlá informace** Microsoft IntelliSense je příkladem funkce poskytované jazykovou službou.  
   
-## <a name="a-minimal-language-service"></a>Minimální jazykový služby  
- Nejzákladnější language service obsahuje následující dva objekty:  
+## <a name="a-minimal-language-service"></a>Minimální jazyková služba  
+ Nejzákladnější jazyková služba obsahuje následující dva objekty:  
   
-- *Jazyková služba* implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní. Jazyk služba má informace o jazyce, včetně názvu, přípony názvů souborů, Správce oken kódu a colorizer.  
+- *Jazyková služba* implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> rozhraní. Jazyková služba obsahuje informace o jazyce, včetně jeho názvu, přípon názvů souborů, správce oken kódu a colorizer.  
   
-- *Colorizer* implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> rozhraní.  
+- Rozhraní *Colorizer* implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> rozhraní.  
   
-  Následující koncepční nákres znázorňuje model služby základního jazyka.  
+  Následující koncepční vykreslení znázorňuje model základní jazykové služby.  
   
-  ![Obrázek modelu služby jazyka](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
-  Základní jazyk modelu služby  
+  ![Obrázek modelu jazykové služby](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+  Model základní jazykové služby  
   
-  Hostitelé okna dokumentu *dokumentu zobrazení* editoru, v tomto případě [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] základní editor. Zobrazení dokumentu a textové vyrovnávací paměti jsou vlastněny editoru. Tyto objekty pracovat [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] prostřednictvím okna specializované dokumentu volána *okno kódu*. Okno kódu je součástí <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objekt, který je vytvořen a řídí integrovaného vývojového prostředí.  
+  Okno dokumentu hostuje *zobrazení dokumentu* editoru, v tomto případě [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] základní editor. Zobrazení dokumentu a vyrovnávací paměť textu jsou vlastněny editorem. Tyto objekty pracují s [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] použitím specializovaného okna dokumentu nazývaného *okno kódu*. Okno Code je obsaženo v <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objektu, který je vytvořen a ovládán rozhraním IDE.  
   
-  Při načítání souboru s příponou dané editoru vyhledá služba jazyka, které jsou přidružené k rozšíření a předá do něj okna kódu voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> metody. Tato služba vrátí hodnotu jazyka *Správce oken kód*, která implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní.  
+  Když je načten soubor s daným rozšířením, Editor vyhledá jazykovou službu přidruženou k danému rozšíření a předá ho do okna Code voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> metody. Služba jazyka vrátí *správce okna kódu*, který implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> rozhraní.  
   
-  Následující tabulka obsahuje přehled objekty v modelu.  
+  Následující tabulka poskytuje přehled objektů v modelu.  
   
 |Součást|Objekt|Funkce|  
 |---------------|------------|--------------|  
-|Vyrovnávací paměť textu|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>|Kódování Unicode pro čtení a zápis textového datového proudu. Je možné, text, který používají jiné kódování.|  
-|Okno kódu|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|Okno dokumentu, který obsahuje jedno nebo více zobrazení textu. Když [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je v režimu rozhraní více dokumentů (MDI), okno kódu je podřízeným MDI.|  
-|Zobrazení textu|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>|Okno, které umožní uživateli procházení a zobrazení textu pomocí klávesnice a myši. Zobrazení textu se uživateli zobrazí jako editor. Můžete použít zobrazení textu v běžném editoru windows, v okně Výstup a podokna. Kromě toho můžete nakonfigurovat jeden nebo více zobrazení textu v okně kódu.|  
-|Textový správce|Spravuje <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> služby, ze kterého můžete získat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> ukazatele|Komponenta, která udržuje běžných informací o sdílené všemi komponentami, které je popsáno výše.|  
-|Služba jazyka|Implementace závislé; implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|Objekt, který poskytuje informace specifické pro jazyk zvýraznění syntaxe, dokončování příkazů a párování složených závorek v editoru.|  
+|Vyrovnávací paměť textu|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>|Textový Stream pro čtení a zápis v kódování Unicode. Je možné, že text bude používat jiné kódování.|  
+|Okno kódu|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|Okno dokumentu, které obsahuje jedno nebo více textových zobrazení. Když [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je v režimu MDI (Multiple Document Interface), je okno Code podřízenou položkou MDI.|  
+|Textové zobrazení|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>|Okno, které uživateli umožňuje procházet a zobrazovat text pomocí klávesnice a myši. Zobrazení textu se zobrazí uživateli jako editor. Můžete použít zobrazení textu v běžných oknech editoru, v okně výstup a v příkazovém podokně. Kromě toho můžete v okně kódu nakonfigurovat jedno nebo více textových zobrazení.|  
+|Správce textu|Spravováno <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> službou, ze které získáváte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> ukazatel|Komponenta, která uchovává společné informace sdílené všemi dříve popsanými komponentami.|  
+|Služba jazyka|Závislá implementace; implementace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|Objekt, který poskytuje editor s informacemi, které jsou specifické pro jazyk, jako je například zvýrazňování syntaxe, dokončování příkazů a shoda složených závorek.|  
   
 ## <a name="see-also"></a>Viz také  
  [Data dokumentu a zobrazení dokumentu ve vlastních editorech](../../extensibility/document-data-and-document-view-in-custom-editors.md)

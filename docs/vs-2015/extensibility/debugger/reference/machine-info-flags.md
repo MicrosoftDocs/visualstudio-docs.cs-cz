@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FLAGS | Dokumentace Microsoftu
+title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3b5819368c91590bbc1973e4c6097f29bb2ba9db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62546834"
 ---
-# <a name="machineinfoflags"></a>MACHINE_INFO_FLAGS
+# <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Použít k popisu na počítači.  
+Slouží k popisu počítače.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MACHINE_INFO_FLAGS {   
@@ -41,15 +41,15 @@ public enum enum_MACHINE_INFO_FLAGS { 
   
 ## <a name="members"></a>Členové  
  MCIFLAG_TERMINAL_SERVICES_AVAILABLE  
- Určuje, že Terminálové služby jsou k dispozici.  
+ Označuje, že je služba Terminal Services k dispozici.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `Flags` člena [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury.  
+ Slouží jako `Flags` člen struktury [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;závislost&gt; – Element (nasazení ClickOnce) | Dokumentace Microsoftu'
+title: '&lt;Dependency – &gt; element (nasazení ClickOnce) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -27,18 +27,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f191b11dfce5b3877d0a31e260e092000a556a5a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187774"
 ---
-# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;závislost&gt; – Element (nasazení ClickOnce)
+# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency – &gt; element (nasazení ClickOnce)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje verzi aplikace k instalaci a umístění manifestu aplikace.  
+Určuje verzi aplikace, která se má nainstalovat, a umístění manifestu aplikace.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -74,63 +74,63 @@ Určuje verzi aplikace k instalaci a umístění manifestu aplikace.
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `dependency` Je vyžadován element. Nemá žádné atributy. Manifest nasazení může mít více `dependency` elementy.  
+ `dependency`Element je povinný. Nemá žádné atributy. Manifest nasazení může mít více `dependency` elementů.  
   
- `dependency` Element obvykle vyjadřuje v sestaveních obsažených v rámci závislosti pro hlavní aplikaci [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace. Pokud vaše aplikace Main.exe spotřebuje sestavení nazvané DotNetAssembly.dll, toto sestavení musí být uvedené v oddílu závislosti. Závislost, ale můžete také vyjádřit jiné typy závislostí, například závislosti na konkrétní verzi modulu common language runtime sestavení v globální mezipaměti sestavení (GAC) nebo objekt modelu COM. Protože je technologie nasazení bezdotykový [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nelze zahájit stahování a instalace z těchto typů závislosti, ale nemá zabránit spuštění aplikace Pokud jeden nebo více zadanými závislostmi neexistují.  
+ `dependency`Element obvykle vyjadřuje závislosti pro hlavní aplikaci na sestaveních obsažených v [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci. Pokud vaše aplikace Main.exe spotřebovává sestavení s názvem DotNetAssembly.dll, pak toto sestavení musí být uvedené v části závislosti. Závislost může však také zamezit jiné typy závislostí, například závislosti na konkrétní verzi modulu CLR (Common Language Runtime), sestavení v globální mezipaměti sestavení (GAC) nebo objektu COM. Vzhledem k tomu, že se jedná o technologii nasazení bez dotykového nasazení, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nelze zahájit stahování a instalaci těchto typů závislostí, ale zabrání spuštění aplikace, pokud jedna nebo více zadaných závislostí neexistuje.  
   
 ## <a name="dependentassembly"></a>dependentAssembly  
- Povinný parametr. Tento prvek obsahuje `assemblyIdentity` elementu. V následující tabulce jsou uvedeny atributy `dependentAssembly` podporuje.  
+ Povinná hodnota. Tento element obsahuje `assemblyIdentity` element. V následující tabulce jsou uvedeny atributy, které `dependentAssembly` podporuje.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`preRequisite`|Volitelné. Určuje, že toto sestavení by již měla existovat v mezipaměti GAC. Platné hodnoty jsou `true` a `false`. Pokud `true`a zadané sestavení v GAC neexistuje, aplikace se nepovedlo spustit.|  
-|`visible`|Volitelné. Určuje identitu aplikace nejvyšší úrovně, včetně jejích závislostí. Interně používán [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ke správě úložiště aplikací a aktivace.|  
-|`dependencyType`|Povinný parametr. Vztah mezi touto závislostí a aplikace. Platné hodnoty jsou:<br /><br /> -   `install`. Součást představuje samostatnou instalaci z aktuální aplikace.<br />-   `preRequisite`. Komponenta vyžaduje aktuální aplikace.|  
-|`codebase`|Volitelné. Úplná cesta k manifestu aplikace.|  
-|`size`|Volitelné. Velikost manifest aplikace v bajtech.|  
+|`preRequisite`|Nepovinný parametr. Určuje, že toto sestavení by již mělo existovat v globální mezipaměti sestavení (GAC). Platné hodnoty jsou `true` a `false` . Pokud `true` a zadané sestavení v globální mezipaměti sestavení (GAC) neexistuje, spuštění aplikace se nezdařilo.|  
+|`visible`|Nepovinný parametr. Identifikuje identitu aplikace nejvyšší úrovně, včetně jejích závislostí. Interně [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se používá ke správě úložiště a Aktivace aplikací.|  
+|`dependencyType`|Povinná hodnota. Vztah mezi touto závislostí a aplikací. Platné hodnoty jsou:<br /><br /> -   `install`. Součást představuje samostatnou instalaci z aktuální aplikace.<br />-   `preRequisite`. Aktuální aplikace vyžaduje komponentu.|  
+|`codebase`|Nepovinný parametr. Úplná cesta k manifestu aplikace.|  
+|`size`|Nepovinný parametr. Velikost manifestu aplikace v bajtech.|  
   
-## <a name="assemblyidentity"></a>Vlastnost assemblyIdentity  
- Povinný parametr. Tento element je podřízeným prvkem `dependentAssembly` elementu. Obsah `assemblyIdentity` musí být stejné jako nastavení popsané v [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifest aplikace. V následující tabulce jsou uvedeny atributy `assemblyIdentity` elementu.  
+## <a name="assemblyidentity"></a>assemblyIdentity  
+ Povinná hodnota. Tento prvek je podřízeným `dependentAssembly` prvkem elementu. Obsah `assemblyIdentity` musí být stejný, jak je popsáno v [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu aplikace. V následující tabulce jsou uvedeny atributy `assemblyIdentity` prvku.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Povinný parametr. Určuje název aplikace.|  
-|`Version`|Povinný parametr. Určuje číslo verze aplikace, v následujícím formátu: `major.minor.build.revision`|  
-|`publicKeyToken`|Povinný parametr. Určuje šestnáctkový řetězec 16 znacích představující posledních 8 bajtů hash SHA-1 veřejný klíč, pod kterým je podepsaná aplikace nebo sestavení. Veřejný klíč použitý k podpisu musí být 2 048 bitů nebo vyšší.|  
-|`processorArchitecture`|Povinný parametr. Určuje procesor. Platné hodnoty jsou `x86` pro 32bitová verze Windows a `IA64` pro 64bitová verze Windows.|  
-|`Language`|Volitelné. Určuje jazyk kódy dvě části sestavení. Například EN-US, což je zkratka pro angličtinu (US). Výchozí hodnota je `neutral`. Tento element má `asmv2` oboru názvů.|  
-|`type`|Volitelné. Pro zpětnou kompatibilitu s Windows – souběžně nainstalovat technologii. Jediná povolená hodnota je `win32`.|  
+|`Name`|Povinná hodnota. Určuje název aplikace.|  
+|`Version`|Povinná hodnota. Určuje číslo verze aplikace v následujícím formátu: `major.minor.build.revision`|  
+|`publicKeyToken`|Povinná hodnota. Určuje 16bajtový šestnáctkový řetězec, který představuje posledních 8 bajtů hodnoty hash SHA-1 veřejného klíče, pod nímž je aplikace nebo sestavení podepsáno. Veřejný klíč, který se používá k podepsání, musí být 2048 bitů nebo větší.|  
+|`processorArchitecture`|Povinná hodnota. Určuje mikroprocesor. Platné hodnoty jsou `x86` pro 32 – 32bitová okna a `IA64` pro 64-bitové okna.|  
+|`Language`|Nepovinný parametr. Určuje dvě části kódů jazyka sestavení. Například EN-US, který představuje angličtinu (USA). Výchozí formát je `neutral`. Tento prvek je v `asmv2` oboru názvů.|  
+|`type`|Nepovinný parametr. Pro zpětnou kompatibilitu s technologií souběžné instalace systému Windows. Jediná povolená hodnota je `win32` .|  
   
 ## <a name="hash"></a>hash  
- `hash` Je volitelný podřízený element `file` elementu. `hash` Prvek nemá žádné atributy.  
+ `hash`Element je volitelný podřízený `file` prvek elementu. `hash`Element nemá žádné atributy.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] používá vylepšením hodnota hash všech souborů v aplikaci jako kontrola zabezpečení zajistit, že žádné soubory byly změněny po nasazení. Pokud `hash` element není zahrnut, tato kontrola neproběhne. Proto vynechání `hash` element se nedoporučuje.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] používá algoritmus hash algoritmu všech souborů v aplikaci jako kontrolu zabezpečení, aby se zajistilo, že žádný ze souborů nebyl po nasazení změněn. Není `hash` -li prvek zahrnut, tato kontrolu nebude provedena. Proto vynechání `hash` elementu není doporučeno.  
   
-## <a name="dsigtransforms"></a>dsig:TRANSFORMS  
- `dsig:Transforms` Je požadovaný podřízený element `hash` elementu. `dsig:Transforms` Prvek nemá žádné atributy.  
+## <a name="dsigtransforms"></a>dsig: transformes  
+ `dsig:Transforms`Element je požadovaný podřízený `hash` prvek elementu. `dsig:Transforms`Element nemá žádné atributy.  
   
-## <a name="dsigtransform"></a>dsig:Transform  
- `dsig:Transform` Je požadovaný podřízený element `dsig:Transforms` elementu. V následující tabulce jsou uvedeny atributy `dsig:Transform` elementu.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|`Algorithm`|Algoritmus používaný k výpočtu algoritmu digest pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je `urn:schemas-microsoft-com:HashTransforms.Identity`.|  
-  
-## <a name="dsigdigestmethod"></a>dsig: DigestMethod  
- `dsig:DigestMethod` Je požadovaný podřízený element `hash` elementu. V následující tabulce jsou uvedeny atributy `dsig:DigestMethod` elementu.  
+## <a name="dsigtransform"></a>dsig: transformace  
+ `dsig:Transform`Element je požadovaný podřízený `dsig:Transforms` prvek elementu. V následující tabulce jsou uvedeny atributy `dsig:Transform` prvku.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Algorithm`|Algoritmus používaný k výpočtu algoritmu digest pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je `http://www.w3.org/2000/09/xmldsig#sha1`.|  
+|`Algorithm`|Algoritmus použitý k výpočtu hodnoty Digest pro tento soubor. Aktuálně jediná hodnota, kterou používá, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je `urn:schemas-microsoft-com:HashTransforms.Identity` .|  
   
-## <a name="dsigdigestvalue"></a>dsig:DigestValue  
- `dsig:DigestValue` Je požadovaný podřízený element `hash` elementu. `dsig:DigestValue` Prvek nemá žádné atributy. Jeho textová hodnota je vypočítaný algoritmus hash pro zadaný soubor.  
+## <a name="dsigdigestmethod"></a>dsig:DigestMethod  
+ `dsig:DigestMethod`Element je požadovaný podřízený `hash` prvek elementu. V následující tabulce jsou uvedeny atributy `dsig:DigestMethod` prvku.  
+  
+|Atribut|Popis|  
+|---------------|-----------------|  
+|`Algorithm`|Algoritmus použitý k výpočtu hodnoty Digest pro tento soubor. Aktuálně jediná hodnota, kterou používá, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] je `http://www.w3.org/2000/09/xmldsig#sha1` .|  
+  
+## <a name="dsigdigestvalue"></a>dsig: DigestValue  
+ `dsig:DigestValue`Element je požadovaný podřízený `hash` prvek elementu. `dsig:DigestValue`Element nemá žádné atributy. Jeho textová hodnota je vypočtená hodnota hash pro zadaný soubor.  
   
 ## <a name="remarks"></a>Poznámky  
- Manifesty nasazení obvykle mívají jeden `assemblyIdentity` element, který určuje název a verze manifestu aplikace.  
+ Manifesty nasazení obvykle mají jediný `assemblyIdentity` element, který identifikuje název a verzi manifestu aplikace.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `dependency` prvek [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu nasazení.  
+ Následující příklad kódu ukazuje `dependency` prvek v [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] manifestu nasazení.  
   
 ```  
 <!-- Identify the assembly dependencies -->  
@@ -149,7 +149,7 @@ Určuje verzi aplikace k instalaci a umístění manifestu aplikace.
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu určuje závislost na sestavení nainstalovaná v GAC.  
+ Následující příklad kódu určuje závislost na sestavení, které je již nainstalováno v globální mezipaměti sestavení (GAC).  
   
 ```  
 <dependency>  
@@ -160,7 +160,7 @@ Určuje verzi aplikace k instalaci a umístění manifestu aplikace.
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu určuje závislost na konkrétní verzi modulu common language runtime.  
+ Následující příklad kódu určuje závislost na konkrétní verzi modulu CLR (Common Language Runtime).  
   
 ```  
 <dependency>  
@@ -184,5 +184,5 @@ Určuje verzi aplikace k instalaci a umístění manifestu aplikace.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [ClickOnce – Manifest nasazení](../deployment/clickonce-deployment-manifest.md)   
- [Element \<dependency>](../deployment/dependency-element-clickonce-application.md)
+ [ClickOnce – manifest nasazení](../deployment/clickonce-deployment-manifest.md)   
+ [\<dependency> Objekt](../deployment/dependency-element-clickonce-application.md)
