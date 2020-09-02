@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78b2e80611983e69f11465269dcf15dad7d6351e
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329692"
 ---
 # <a name="marker_seriesmarker_series-constructor"></a>marker_series:: marker_series – konstruktor
@@ -39,9 +39,9 @@ marker_series(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_SeriesName`Název řady, která se má vytvořit.
+ `_SeriesName` Název řady, která se má vytvořit.
 
- `_ProviderGuid`Identifikátor GUID zprostředkovatele řad.
+ `_ProviderGuid` Identifikátor GUID zprostředkovatele řad.
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj. h*

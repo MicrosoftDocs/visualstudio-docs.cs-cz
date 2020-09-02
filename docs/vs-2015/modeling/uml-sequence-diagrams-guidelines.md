@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cdd853307bdea28c48762a6a3f0416e698b577ff
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850126"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>Sekvenční diagramy UML: Pokyny
@@ -39,7 +39,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
  Chcete-li zjistit, které verze aplikace Visual Studio tuto funkci podporují, přečtěte si téma [podpora verzí pro nástroje pro architekturu a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="in-this-topic"></a>V tomto tématu
+## <a name="in-this-topic"></a>V tomto tématu
  [Použití sekvenčních diagramů UML](#Using)
 
  [Základní kroky pro vykreslování sekvenčních diagramů](#BasicSteps)
@@ -54,7 +54,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
  [Popis řídicích struktur s fragmenty](#Fragments)
 
-## <a name="Using"></a>Použití sekvenčních diagramů UML
+## <a name="using-uml-sequence-diagrams"></a><a name="Using"></a> Použití sekvenčních diagramů UML
  Sekvenční diagramy můžete použít k nejrůznějším účelům na různých úrovních v podrobnostech o programu. Typickými případy při vykreslování sekvenčního diagramu jsou tyto:
 
 - Pokud máte diagram případu použití, který shrnuje uživatele vašeho systému a jejich cíle, můžete nakreslit sekvenční diagramy, které popisují, jak hlavní součásti systému spolupracují na splnění cíle každého případu použití. Další informace najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
@@ -79,7 +79,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 #### <a name="use-case-details"></a>Podrobnosti případu použití
  Případ použití představuje cíl uživatele spolu s posloupností kroků pro dosažení cíle. Pořadí kroků lze popsat několika způsoby. Jednou z možností je nakreslit sekvenční diagram, který znázorňuje interakce mezi uživateli a hlavními součástmi systému. Další informace najdete v tématu [Diagramy případů použití UML: pokyny](../modeling/uml-use-case-diagrams-guidelines.md).
 
-## <a name="BasicSteps"></a>Základní kroky pro vykreslování sekvenčních diagramů
+## <a name="basic-steps-for-drawing-sequence-diagrams"></a><a name="BasicSteps"></a> Základní kroky pro vykreslování sekvenčních diagramů
  Úplný seznam prvků v sekvenčních diagramech najdete v tématu [sekvenční diagramy UML: referenční informace](../modeling/uml-sequence-diagrams-reference.md).
 
 > [!NOTE]
@@ -115,7 +115,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 3. Chcete-li zobrazit zprávu, která pochází z neznámého zdroje události (9) nebo všesměrová vysílání pro neznámé příjemce (10), vykreslete asynchronní zprávu z nebo do prázdného místa v diagramu. Tyto zprávy se nazývají *nalezené zprávy* (9) a *ztracené zprávy* (10).
 
     > [!NOTE]
-    > Chcete-li přesunout skupinu životností, která ztratila nebo našla zprávy, použijte následující postup, chcete-li vybrat životnosti před jejich přesunutím: nakreslete obdélník kolem těchto životností nebo stiskněte a podržte klávesu **CTRL** a klikněte na jednotlivé životnosti. Pokud použijete **možnost Vybrat vše** nebo **CTRL** **+a** k výběru všech životností a jejich přesunutí, ztratí se všechny ztracené nebo nalezené zprávy připojené k těmto životnostem. Pokud k této situaci dojde, můžete tyto zprávy přesunout samostatně.
+    > Chcete-li přesunout skupinu životností, která ztratila nebo našla zprávy, použijte následující postup, chcete-li vybrat životnosti před jejich přesunutím: nakreslete obdélník kolem těchto životností nebo stiskněte a podržte klávesu **CTRL** a klikněte na jednotlivé životnosti. Pokud použijete **možnost Vybrat vše** nebo **CTRL** + **a** k výběru všech životností a pak je přesunete, všechny ztracené nebo nalezené zprávy připojené k těmto životnostem se nepřesunou. Pokud k této situaci dojde, můžete tyto zprávy přesunout samostatně.
 
 4. Nakreslete sekvenční diagramy pro každou hlavní zprávu do stejné součásti nebo systému.
 
@@ -123,7 +123,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Přetáhněte zprávu v její životnosti nahoru nebo dolů. Můžete ho přetáhnout přes jiné zprávy nebo do bloku spuštění nebo z něj.
 
-     \- nebo –
+     \- ani
 
 - Klikněte na zprávu a pomocí kláves ŠIPKA **nahoru** a šipka **dolů** upravte polohu zprávy. Pro změnu pořadí zpráv použijte **SHIFT + šipka nahoru** a **SHIFT + šipka dolů** .
 
@@ -165,11 +165,11 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 2. Přetáhněte interakci do balíčku.
 
-     \- nebo –
+     \- ani
 
      Klikněte pravým tlačítkem myši na interakci a pak klikněte na **Vyjmout**. Klikněte pravým tlačítkem na balíček a pak klikněte na **Vložit**.
 
-## <a name="Simple"></a>Vytváření a používání jednoduchých sekvenčních diagramů
+## <a name="creating-and-using-simple-sequence-diagrams"></a><a name="Simple"></a> Vytváření a používání jednoduchých sekvenčních diagramů
  Nejjednodušší a nejčastěji používaná forma sekvenčního diagramu obsahuje jenom životnosti a zprávy. Diagram tohoto druhu vám umožňuje zobrazit jasně typickou posloupnost interakcí mezi objekty v návrhu nebo mezi vaším systémem a jeho uživateli. To je často dostatečné, abychom vám pomohli diskutovat a sdělit návrh.
 
  Tady je několik věcí, které je potřeba vzít v úvahu při vykreslování jednoduchého sekvenčního diagramu.
@@ -179,7 +179,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Použijte **synchronní** nástroj k popisu interakce, ve které odesilatel čeká na vrácení odpovědi příjemce (3).
 
-     Na konci spuštění se zobrazí **<\<vrátí > >** šipka. Indikuje vrácení ovládacího prvku odesílateli.
+     Na **<\<return>>** konci spuštění se zobrazí šipka. Indikuje vrácení ovládacího prvku odesílateli.
 
 - Pomocí **asynchronního** nástroje můžete popsat interakce, ve kterých může odesílatel pokračovat bez čekání na příjemce (4).
 
@@ -256,12 +256,12 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Některé životnosti se zdají zvládnout více než jeden druh úlohy. Měl by se snadno najít jedna Stručná věta, která popisuje zodpovědnost každé životnosti, a shrnout práci, kterou reaguje, na každou obdrženou zprávu.
 
-## <a name="ClassesAndLifelines"></a>Třídy a životnosti
+## <a name="classes-and-lifelines"></a><a name="ClassesAndLifelines"></a> Třídy a životnosti
  Životnosti v sekvenčních diagramech ukazují instance tříd nebo rozhraní komponent. Životnost můžete pojmenovat dvěma způsoby:
 
 |**Pro tento účel**|**Použít tento formát**|
 |--------------------------|-------------------------|
-|Anonymní instance typu<br /><br /> Tuto část použijte v případě, že máte pouze jednu životnost každého typu.|*typeName*|
+|Anonymní instance typu<br /><br /> Tuto část použijte v případě, že máte pouze jednu životnost každého typu.|*Popisuje*|
 |Pojmenovaná instance typu<br /><br /> Tuto hodnotu použijte, pokud chcete zobrazit sekvenci, která zahrnuje víc než jednu instanci stejného typu.|*ObjectName*:*TypeName*|
 
 ### <a name="creating-lifelines-from-types"></a>Vytváření životností z typů
@@ -274,7 +274,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Přetáhněte třídu, komponentu nebo rozhraní z Průzkumníka modelů UML do sekvenčního diagramu.
 
-   \- nebo –
+   \- ani
 
   1. V příslušném diagramu klikněte pravým tlačítkem na třídu, komponentu nebo rozhraní a pak klikněte na **vytvořit životnost**.
 
@@ -323,7 +323,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
          Třída nebo rozhraní se zobrazí v diagramu tříd.
 
-         \- nebo –
+         \- ani
 
     3. Přetáhněte nové rozhraní z **Průzkumníka modelů UML** na součást nebo port v diagramu komponent.
 
@@ -332,7 +332,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 ### <a name="creating-classes-for-parameters"></a>Vytváření tříd pro parametry
  Můžete zahrnout parametry do zpráv v sekvenčním diagramu. K popisu typů parametrů lze použít diagram tříd UML.
 
-## <a name="Multiple"></a>Vytváření opakovaně použitelných sekvencí interakce
+## <a name="creating-reusable-interaction-sequences"></a><a name="Multiple"></a> Vytváření opakovaně použitelných sekvencí interakce
  Pomocí samostatného diagramu můžete popsat sekvenci, která obsahuje podrobnosti, které chcete oddělit nebo které jsou běžné mezi několika diagramy.
 
  Můžete vytvořit interakci použít obdélník (12) v jednom diagramu, který odkazuje na podrobnosti v jiném diagramu.
@@ -349,7 +349,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 3. Dvakrát klikněte na název při použití interakce a přejmenujte jej, abyste popsali účinek opakovaně použitelné sekvence v tomto diagramu.
 
-     \- nebo –
+     \- ani
 
      Napište název jako volání funkce s parametry.
 
@@ -357,7 +357,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
      Kliknutím na **vytvořit novou sekvenci** vytvoříte nový sekvenční diagram.
 
-     \- nebo –
+     \- ani
 
      Kliknutím na **propojit se sekvencí** můžete propojit s existujícím diagramem.
 
@@ -384,14 +384,14 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 
 - Dvakrát klikněte na možnost použít interakci.
 
-     \- nebo –
+     \- ani
 
      Klikněte pravým tlačítkem myši na použití interakce a potom klikněte na tlačítko **Přejít ke sekvenci**.
 
 ### <a name="creating-a-placeholder-with-an-interaction-use"></a>Vytvoření zástupného textu s využitím interakce
  Můžete vytvořit interakci bez propojení s jiným diagramem. Můžete ji použít jako zástupný symbol pro část sekvence, jejichž podrobnosti jsou ještě odpracované. Použijte název použití interakce k označení výsledku, který chcete.
 
-## <a name="Collapse"></a>Sbalení skupin životností
+## <a name="collapsing-groups-of-lifelines"></a><a name="Collapse"></a> Sbalení skupin životností
  Můžete sbalit sadu životností dohromady, aby se skupina zobrazovala jako jedna životnost. To vám pomůže vizualizovat skupinu objektů jako jednu komponentu. Zprávy a použití interakce mezi životnostmi ve sbalených skupinách jsou skryté. Zobrazují se zprávy a sekvence interakce, které zahrnují jiné životnosti.
 
 #### <a name="to-collapse-a-group-of-lifelines-together"></a>Sbalení skupiny životností dohromady
@@ -416,7 +416,7 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
     > [!NOTE]
     > Název skupiny bude ztracen spolu s jakýmikoli odkazy ze skupiny na komentáře nebo pracovní položky.
 
-## <a name="Fragments"></a>Popis řídicích struktur s fragmenty
+## <a name="describing-control-structures-with-fragments"></a><a name="Fragments"></a> Popis řídicích struktur s fragmenty
  Můžete použít kombinované fragmenty (13) k definování smyček, větví a souběžného zpracování v sekvenčním diagramu. Případně zvažte místo toho použití diagramu činnosti. Diagram aktivity není tak užitečný, když zobrazuje zprávy mezi objekty Actors, ale v některých případech je lepší při zobrazování smyček, větví a souběžnosti.
 
  Úplný seznam typů fragmentů naleznete v tématu [Popis toku řízení pomocí fragmentů v sekvenčních diagramech UML](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).
@@ -443,4 +443,4 @@ V aplikaci Visual Studio můžete nakreslit *sekvenční diagram* pro zobrazení
 5. Chcete-li přidat nové zprávy do fragmentu, použijte nástroje pro zprávy nebo je zkopírujte a vložte.
 
 ## <a name="see-also"></a>Viz také
- [Sekvenční diagramy UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace [Upravit modely UML a diagramy](../modeling/edit-uml-models-and-diagrams.md) [případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [diagramy tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy UML: referenční diagramy komponent UML: referenční [](../modeling/uml-component-diagrams-reference.md) [](../modeling/uml-component-diagrams-reference.md) [video: náčrtace interakcí pomocí sekvenčních diagramů](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases)
+ [Sekvenční diagramy UML: referenční](../modeling/uml-sequence-diagrams-reference.md) dokumentace [Upravit modely UML a diagramy](../modeling/edit-uml-models-and-diagrams.md) [případů použití UML: referenční](../modeling/uml-use-case-diagrams-reference.md) [diagramy tříd](../modeling/uml-class-diagrams-reference.md) UML: referenční diagramy UML: referenční diagramy komponent UML: referenční [UML Component Diagrams: Reference](../modeling/uml-component-diagrams-reference.md) [UML Component Diagrams: Reference](../modeling/uml-component-diagrams-reference.md) [video: náčrtace interakcí pomocí sekvenčních diagramů](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-2-Organizing-Features-Into-Use-Cases)

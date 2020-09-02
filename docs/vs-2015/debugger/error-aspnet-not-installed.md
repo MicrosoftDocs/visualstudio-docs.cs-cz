@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Prostředí ASP.NET není nainstalováno | Dokumentace Microsoftu'
+title: 'Chyba: ASP.NET není nainstalován | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,29 +22,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2198ed401f714353be2dd18846dd527cc433e695
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447320"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64823732"
 ---
-# <a name="error-aspnet-not-installed"></a>Chyba: Prostředí ASP.NET není nainstalováno
+# <a name="error-aspnet-not-installed"></a>Chyba: Prostředí ASP.NET není nainstalováno.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K této chybě dochází při [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] není správně nainstalován v počítači, který se pokoušíte ladit. To může znamenat, že [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] nebyl nikdy nainstalován nebo které [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] byla nainstalovaná jako první a služby IIS byl nainstalován později.  
+K této chybě dochází, pokud [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] není správně nainstalován na počítači, který se pokoušíte ladit. To může znamenat, že [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] nebyla nikdy nainstalována nebo [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] byla nainstalována dříve a služba IIS byla nainstalována později.  
   
-### <a name="to-reinstall-aspnet"></a>K opětovné instalaci technologie ASP.NET  
+### <a name="to-reinstall-aspnet"></a>Postup přeinstalace ASP.NET  
   
-1. Z okna příkazového řádku spusťte následující příkaz:  
+1. V okně příkazového řádku spusťte následující příkaz:  
   
     ```  
     \WINDOWS\Microsoft.NET\Framework\version\aspnet_regiis -i  
     ```  
   
-     kde *verze* představuje číslo verze rozhraní .NET Framework nainstalované v počítači, jako je například v1.0.370. Můžete určit verzi rozhraní framework hledání `\WINDOWS\Microsoft.NET\Framework` adresáře.  
+     kde *verze* představuje číslo verze .NET Framework nainstalovaného v počítači, například v 1.0.370. Verzi rozhraní můžete určit tak, že v adresáři prohlížíte `\WINDOWS\Microsoft.NET\Framework` .  
   
     > [!NOTE]
-    > Se systémem Windows Server 2003, můžete nainstalovat [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pomocí **přidat nebo odebrat programy** v Ovládacích panelech.  
+    > S Windows serverem 2003 můžete nainstalovat [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] pomocí ovládacího panelu **Přidat nebo odebrat programy** .  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+ [Ladění webových aplikací: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

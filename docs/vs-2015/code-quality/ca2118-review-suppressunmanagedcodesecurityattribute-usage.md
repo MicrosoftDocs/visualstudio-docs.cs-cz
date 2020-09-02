@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: bc0e88265245d795697d32a9e6a95909c0415259
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538655"
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: Zkontrolujte použití SuppressUnmanagedCodeSecurityAttribute
@@ -36,7 +36,7 @@ ms.locfileid: "85538655"
  Veřejný nebo chráněný typ nebo člen má <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>mění výchozí chování zabezpečení systému pro členy, kteří spouštějí nespravovaný kód pomocí zprostředkovatele komunikace s objekty COM nebo vyvolání platformy. Obecně platí, že systém vytváří [data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) pro oprávnění nespravovaného kódu. K této poptávce dochází v době běhu pro každé vyvolání člena a kontroluje každého volajícího v zásobníku volání pro oprávnění. Když je přítomen atribut, systém vytvoří [odkaz](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) pro příslušné oprávnění: oprávnění bezprostředního volajícího je kontrolováno, pokud je volající kompilátor JIT zkompilován.
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> mění výchozí chování zabezpečení systému pro členy, kteří spouštějí nespravovaný kód pomocí zprostředkovatele komunikace s objekty COM nebo vyvolání platformy. Obecně platí, že systém vytváří [data a modelování](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) pro oprávnění nespravovaného kódu. K této poptávce dochází v době běhu pro každé vyvolání člena a kontroluje každého volajícího v zásobníku volání pro oprávnění. Když je přítomen atribut, systém vytvoří [odkaz](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) pro příslušné oprávnění: oprávnění bezprostředního volajícího je kontrolováno, pokud je volající kompilátor JIT zkompilován.
 
  Tento atribut slouží především ke zvýšení výkonu, ačkoliv nárůst výkonu může být spojen s významnými riziky zabezpečení. Pokud umístíte atribut na veřejné členy, kteří volají nativní metody, volající v zásobníku volání (Kromě bezprostředního volajícího) nepotřebují oprávnění nespravovaného kódu pro spuštění nespravovaného kódu. V závislosti na akcích veřejného člena a zpracování vstupu může být nedůvěryhodným volajícím umožněn přístup k funkcím, které jsou normálně omezené na důvěryhodný kód.
 

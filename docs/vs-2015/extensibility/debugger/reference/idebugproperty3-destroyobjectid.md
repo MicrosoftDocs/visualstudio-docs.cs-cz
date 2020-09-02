@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::DestroyObjectID | Dokumentace Microsoftu
+title: IDebugProperty3::D estroyObjectID | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3a610cd5c947d77048e86b31c92298f6cc18607d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193418"
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Zničí jedinečné ID přidružené k této vlastnosti označující, že volající už zdroje k identifikaci této vlastnosti jednoznačně z dalších vlastností.  
+Odstraní jedinečné ID přidružené k této vlastnosti, což znamená, že volající již nebude stojí k tomu, aby tuto vlastnost identifikoval jednoznačně ze všech ostatních vlastností.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT DestroyObjectID(  
@@ -37,12 +37,12 @@ int DestroyObjectID();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud ladicí stroj nemusí podporovat jedinečné ID pro vlastnost (protože je již sleduje je jednoznačně interně), pak můžete jednoduše vrátit `E_NOTIMPL` pro tuto metodu.  
+ Pokud ladicí stroj nemusí podporovat jedinečná ID pro vlastnost (protože je již nesleduje jednoznačně interně), může jednoduše vrátit `E_NOTIMPL` tuto metodu.  
   
- Jedinečné ID se vytváří pomocí volání [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) v případě, že volající vyžaduje, abyste měli jistotu, že tato vlastnost je jednoznačně identifikují mimo jiné vlastnosti.  
+ Pokud volající chce ověřit, že je tato vlastnost jednoznačně identifikovaná mezi všemi ostatními vlastnostmi, vytvoří se jedinečné identifikátory s voláním metody [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   

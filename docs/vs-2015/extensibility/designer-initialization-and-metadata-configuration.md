@@ -1,5 +1,5 @@
 ---
-title: Inicializace návrháře a konfigurace metadat | Dokumentace Microsoftu
+title: Inicializace návrháře a konfigurace metadat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,88 +12,88 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2dec3937616c712c56b7012949e044702e6b11f2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703072"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>Inicializace návrháře a konfigurace metadat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Manipulace s metadata a filtrování atributů přiřazených pomocí návrháře nebo součástí návrháře poskytuje mechanismus pro aplikace definovat, jaké nástroje jsou používány konkrétní návrháře pro zpracování různých <xref:System.Type> objektů (například datové struktury třídy, nebo grafické entity), když je k dispozici návrháře a konfigurace integrovaném vývojovém prostředí sady Visual Studio pro podporu návrháře (pro instanci, která **nástrojů** kategorie nebo karta je k dispozici).  
+Manipulace s atributy metadat a Filter přidružených k komponentě návrháře nebo návrháře poskytuje mechanismus pro aplikace pro definování, které nástroje jsou používány konkrétním návrhářem pro zpracování různých <xref:System.Type> objektů (například datových struktur, tříd nebo grafických entit), když je Návrhář dostupný a jak je rozhraní IDE sady Visual Studio nakonfigurováno pro podporu návrháře (například kategorie **panelu nástrojů** nebo karta je k dispozici).  
   
- [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Poskytuje několik mechanismů, aby se usnadnilo řízení Inicializace návrháře nebo součástí návrháře a manipulaci s jeho metadata službou VSPackage.  
+ [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]Poskytuje několik mechanismů pro usnadnění kontroly inicializace komponenty návrháře nebo návrháře a manipulaci s metadaty pomocí VSPackage.  
   
-## <a name="initializing-metadata-and-configuration-information"></a>Inicializace metadat a informace o konfiguraci  
- Protože jsou načteny na vyžádání, rozšíření VSPackages nemusí byly načteny [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí před instance návrháře. Proto nelze použít standardní mechanismus konfigurace Návrhář nebo návrháře komponenty pro vytváření, což je pro zpracování rozšíření VSPackages <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> událostí. Místo toho VSPackage implementuje instance <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> rozhraní a registruje sama sebe poskytnout vlastní úpravy, označované jako rozšíření povrchu návrhu.  
+## <a name="initializing-metadata-and-configuration-information"></a>Inicializace metadat a informací o konfiguraci  
+ Vzhledem k tomu, že jsou načteny na vyžádání, nemohou být sady VSPackage načteny [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředím před vytvořením instance návrháře. Sady VSPackage proto nemohou používat standardní mechanizmus pro konfiguraci návrháře nebo součásti návrháře při vytváření, což znamená zpracování <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> události. Místo toho VSPackage implementuje instanci <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> rozhraní a registruje se tak, aby poskytoval vlastní nastavení, označované jako rozšíření návrhová plocha.  
   
 ### <a name="customizing-initialization"></a>Přizpůsobení inicializace  
- Přizpůsobení návrháře, komponenty nebo plochu návrháře zahrnuje:  
+ Přizpůsobení návrháře, komponenty nebo návrhové plochy zahrnuje:  
   
-1. Úprava metadata návrháře a efektivně mění způsob, jakým určitým <xref:System.Type> je nedostupná nebo převést.  
+1. Úprava metadat návrháře a efektivní změna způsobu, jakým <xref:System.Type> je určitý nebo převedený.  
   
-     To se obvykle provádí prostřednictvím <xref:System.Drawing.Design.UITypeEditor> nebo <xref:System.ComponentModel.TypeConverter> mechanismy.  
+     To se obvykle provádí pomocí <xref:System.Drawing.Design.UITypeEditor> <xref:System.ComponentModel.TypeConverter> mechanismů nebo.  
   
-     Například, když <xref:System.Windows.Forms>– založené na návrháři jsou inicializovány [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] upravuje prostředí <xref:System.Drawing.Design.UITypeEditor> pro <xref:System.Web.UI.WebControls.Image> objekty používané pomocí návrháře pro použití resource Manageru k získání rastrové obrázky, spíše než v systému souborů.  
+     Například při <xref:System.Windows.Forms> inicializaci návrháře založeného na [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí upraví prostředí <xref:System.Drawing.Design.UITypeEditor> pro <xref:System.Web.UI.WebControls.Image> objekty používané v Návrháři k použití Správce prostředků k získání rastrových obrázků namísto systému souborů.  
   
-2. Integrace s prostředím, například přihlášení k odběru událostí nebo získávání informací o konfiguraci projektu. Můžete získat informace o konfiguraci projektu a přihlášení k odběru událostí prostřednictvím provedeného <xref:System.ComponentModel.Design.ITypeResolutionService> rozhraní.  
+2. Integrace s prostředím například po přihlášení k odběru událostí nebo získání informací o konfiguraci projektu. Můžete získat informace o konfiguraci projektu a přihlásit se k odběru událostí získáním <xref:System.ComponentModel.Design.ITypeResolutionService> rozhraní.  
   
-3. Změny uživatelského prostředí aktivací odpovídající **nástrojů** kategorií nebo omezení použitelnosti návrháře použitím instance <xref:System.ComponentModel.ToolboxItemFilterAttribute> třídy do návrháře.  
+3. Úprava uživatelského prostředí aktivací příslušných kategorií **nástrojů** nebo omezením použitelnosti návrháře použitím instance <xref:System.ComponentModel.ToolboxItemFilterAttribute> třídy pro návrháře.  
   
 ### <a name="designer-initialization-by-a-vspackage"></a>Inicializace návrháře pomocí VSPackage  
- VSPackage partnerova návrháře inicializace:  
+ VSPackage by měl zvládnout inicializaci návrháře:  
   
-1. Vytváří se implementaci objektu <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> třídy.  
+1. Vytvoření objektu, který implementuje <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> třídu.  
   
    > [!NOTE]
-   > <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> Třída by měla být implementována nikdy na stejný objekt jako <xref:Microsoft.VisualStudio.Shell.Package> třídy.  
+   > <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>Třída by nikdy neměla být implementovaná u stejného objektu jako <xref:Microsoft.VisualStudio.Shell.Package> Třída.  
   
-2. Registrace třídy implementující <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> jako poskytují podporu pro rozšíření návrháře sady VSPackage použitím instance <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>, <xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute> a <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> ke třídě poskytuje implementaci sady VSPackage <xref:Microsoft.VisualStudio.Shell.Package> .  
+2. Zaregistrujte třídu implementující <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> jako podporu rozšíření návrháře VSPackage pomocí instancí  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute> a <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> na třídu, která poskytuje implementaci rozhraní VSPackage <xref:Microsoft.VisualStudio.Shell.Package> .  
   
-   Pokaždé, když všechny návrháře nebo součástí návrháře se, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí:  
+   Při každém vytvoření návrháře nebo komponenty návrháře [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí:  
   
-3. Přistupuje k každý poskytovatel surface rozšíření vzoru.  
+3. Přistupuje ke každému zaregistrovanému poskytovateli rozšíření návrhová plocha.  
   
-4. Vytvoří a inicializuje instanci poskytovatele každý návrhové plochy rozšíření <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> objektu  
+4. Vytvoří instanci a inicializuje instanci každého objektu poskytovatele rozšíření pro návrhovou plochu. <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>  
   
-5. Každý poskytovatel rozšíření povrchu návrhu volá <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A> metoda nebo <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A> – metoda (podle potřeby).  
+5. Volá metodu nebo metodu poskytovatele rozšíření pro návrhovou plochu <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A> <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A> (podle potřeby).  
   
-   Při implementaci <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> objektu jako člena sady VSPackage, je důležité si uvědomit, že:  
+   Při implementaci <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> objektu jako člena sady VSPackage je důležité pochopit, že:  
   
-6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Prostředí neposkytuje žádné kontrolu nad metadat jaký nebo jiná nastavení konfigurace a konkrétní `DesignSurfaceExtension` upraví poskytovatele. Je možné pro dva nebo více `DesignSurfaceExtension` poskytovatelé úpravy stejné funkce Návrhář konfliktní způsoby s finální úpravy se konečná. Že je neurčité, které změna naposledy provedena.  
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Prostředí neposkytuje žádnou kontrolu nad tím, jaká metadata nebo jiná nastavení konfigurace konkrétní `DesignSurfaceExtension` poskytovatel mění. Je možné, že dva nebo více `DesignSurfaceExtension` zprostředkovatelů mění stejnou funkci návrháře v konfliktních způsobech s konečnou úpravou. Nejedná se o neurčitou úpravu, kterou poslední změnu používá.  
   
-7. Je možné explicitně omezit implementace <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> objekt konkrétní návrháře, s použitím instance <xref:System.ComponentModel.ToolboxItemFilterAttribute> pro tuto implementaci. Další informace o **nástrojů** položky filtrování, najdete v článku <xref:System.ComponentModel.ToolboxItemFilterAttribute> a <xref:System.ComponentModel.ToolboxItemFilterType>.  
+7. Je možné explicitně omezit implementaci <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> objektu na konkrétní návrháře tím, že použijete instance <xref:System.ComponentModel.ToolboxItemFilterAttribute> pro tuto implementaci. Další informace o filtrování položek **panelu nástrojů** naleznete v tématu <xref:System.ComponentModel.ToolboxItemFilterAttribute> a <xref:System.ComponentModel.ToolboxItemFilterType> .  
   
-## <a name="additional-metadata-provisioning"></a>Zřízení dalších metadat  
- VSPackage můžete změnit konfiguraci Návrhář nebo součástí návrháře jinak než v době návrhu.  
+## <a name="additional-metadata-provisioning"></a>Další zřizování metadat  
+ VSPackage může změnit konfiguraci součásti návrháře nebo návrháře jinou než v době návrhu.  
   
- <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> Třídy je možné programově, nebo použít pro poskytnutí návrháře VSPackage.  
+ <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>Třídu lze použít programově nebo ji použít pro VSPackage, který poskytuje návrháře.  
   
- Instance <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> třída se používá k úpravě metadat komponenty vytvořené na návrhové ploše. Jeden například nahradit výchozí prohlížeč vlastnost používá <xref:System.Windows.Forms.CommonDialog> objekty s prohlížečem, který vlastní vlastnosti.  
+ Instance <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> třídy se používá pro úpravu metadat komponent vytvořených na návrhové ploše. Například jedna by mohla nahradit výchozí prohlížeč vlastností používané <xref:System.Windows.Forms.CommonDialog> objekty, a to s využitím prohlížeče vlastních vlastností.  
   
- Úpravy poskytované instance <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> použitý pro provádění na VSPackage <xref:Microsoft.VisualStudio.Shell.Package> může mít jednu ze dvou oborů:  
+ Změny, které poskytuje instance <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> použité pro implementaci sady VSPackage, <xref:Microsoft.VisualStudio.Shell.Package> můžou mít jeden ze dvou oborů:  
   
-- Global – pro všechny nové instance dané komponenty.  
+- Global – pro všechny nové instance dané komponenty  
   
-- Místní--týkající se pouze instance komponenty vytvořen na návrhové ploše poskytuje aktuální VSPackage.  
+- Místní – týká se jenom instance komponenty vytvořené na návrhové ploše, kterou poskytuje aktuální VSPackage.  
   
-  `IsGlobal` Vlastnost <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> instance použít pro provádění na VSPackage <xref:Microsoft.VisualStudio.Shell.Package> určuje tento obor.  
+  `IsGlobal`Vlastnost <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> instance použitá pro implementaci sady VSPackage <xref:Microsoft.VisualStudio.Shell.Package> tohoto oboru.  
   
-  Použití atributu k implementaci <xref:Microsoft.VisualStudio.Shell.Package> s <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A> vlastnost <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> objekt nastaven `true`, níže, se změní prohlížeč pro celý [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí:  
+  Použití atributu na implementaci <xref:Microsoft.VisualStudio.Shell.Package> s <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A> vlastností <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> objektu nastavenou na hodnotu, jak je uvedeno `true` níže, změní prohlížeč pro celé [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí:  
   
   `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=true`  `)]`  
   
   `internal class MyPackage : Package {}`  
   
-  Pokud globální příznak byla nastavena na `false`, pak je lokální vzhledem k aktuální návrhář nepodporuje aktuální VSPackage změnu metadat:  
+  Pokud byl globální příznak nastaven na `false` , je změna metadat místní pro aktuální Návrhář podporovaný aktuálním rozhraním VSPackage:  
   
   `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=false`  `)]`  
   
   `internal class MyPackage : Package {}`  
   
 > [!NOTE]
-> V současné době návrhové plochy podporuje pouze vytváření součástí a proto lze pouze součásti mají místních metadat. V předchozím příkladu jsme se pokouší změnit vlastnost, jako `Color` vlastnosti objektu. Pokud `false` byla předána pro globální příznak `CustomBrowser` by nikdy zobrazeny, protože návrhář vytvoří nikdy ve skutečnosti instance `Color`. Nastavení globální příznak `false` je užitečné pro součásti, například ovládací prvky, časovačů a dialogových oknech.  
+> V současné době návrhová plocha podporuje pouze vytváření komponent, a proto může mít místní metadata pouze součásti. V předchozím příkladu jsme se pokoušeli změnit vlastnost, jako je například `Color` vlastnost objektu. Pokud `false` byla předána pro globální příznak, `CustomBrowser` by se nikdy nezobrazila, protože Návrhář nikdy nevytvořil instanci `Color` . Nastavení globálního příznaku na `false` hodnotu je užitečné pro součásti, jako jsou ovládací prvky, časovače a dialogová okna.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>   

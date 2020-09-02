@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 128327b956734f7d28e7ff88f3eb6c297544587c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849808"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Dialogové okno Upřesnit nastavení (Vizualizér souběžnosti)
@@ -32,9 +32,9 @@ Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti
  Cesty k souborům. exe a. dll jsou uloženy v trasovacím souboru, když je trasování shromažďováno.  Změna tohoto nastavení neovlivní žádné dříve shromážděné trasování.  
   
 ## <a name="buffering"></a>Do vyrovnávací paměti  
- Vizualizátor souběžnosti používá trasování událostí pro Windows (ETW) při shromažďování trasování.  ETW používá k ukládání událostí různé vyrovnávací paměti.  Výchozí nastavení vyrovnávací paměti ETW nemusí být optimální ve všech případech a v některých případech může způsobit problémy, jako například ztracené události.  Pomocí karty vyrovnávací paměti můžete nakonfigurovat nastavení vyrovnávací paměti ETW. Další informace najdete v tématu [trasování událostí](https://msdn.microsoft.com/library/bb968803(VS.85).aspx) a [EVENT_TRACE_PROPERTIES struktura](https://msdn.microsoft.com/library/aa363784(VS.85).aspx).  
+ Vizualizátor souběžnosti používá trasování událostí pro Windows (ETW) při shromažďování trasování.  ETW používá k ukládání událostí různé vyrovnávací paměti.  Výchozí nastavení vyrovnávací paměti ETW nemusí být optimální ve všech případech a v některých případech může způsobit problémy, jako například ztracené události.  Pomocí karty vyrovnávací paměti můžete nakonfigurovat nastavení vyrovnávací paměti ETW. Další informace najdete v tématu [trasování událostí](https://msdn.microsoft.com/library/bb968803(VS.85).aspx) a  [EVENT_TRACE_PROPERTIES struktura](https://msdn.microsoft.com/library/aa363784(VS.85).aspx).  
   
-## <a name="filter"></a>Filtrovat  
+## <a name="filter"></a>Filtr  
  Na kartě Filtr můžete vybrat sadu událostí, které shromažďuje Vizualizátor souběžnosti. Výběr podmnožiny událostí omezuje typy dat zobrazených v sestavách, snižuje velikost každého trasování a zkracuje čas potřebný ke zpracování trasování.  
   
 ### <a name="clr-events"></a>Události CLR  
@@ -59,11 +59,11 @@ Pomocí dialogového okna **Upřesnit nastavení** v Vizualizátor souběžnosti
  Na kartě značky můžete nakonfigurovat sadu zprostředkovatelů ETW, které se zobrazí jako značky v Vizualizátor souběžnosti.  Můžete také filtrovat kolekci značek na základě úrovně důležitosti a kategorie ETW.  Pokud používáte [sadu SDK Vizualizátor souběžnosti](../profiling/concurrency-visualizer-sdk.md) a používáte vlastního poskytovatele značek, můžete jej zaregistrovat zde, aby se zobrazil v zobrazení vláken.  
   
 ### <a name="adding-a-new-provider"></a>Přidává se nový poskytovatel.  
- Pokud váš kód používá [sadu SDK Vizualizátor souběžnosti](../profiling/concurrency-visualizer-sdk.md) nebo GENERUJE události ETW, které následují <xref:System.Diagnostics.Tracing.EventSource> konvence, můžete tyto události zobrazit v Vizualizátor souběžnosti tím, že je zaregistrujete do tohoto dialogového okna.  
+ Pokud váš kód používá [sadu SDK Vizualizátor souběžnosti](../profiling/concurrency-visualizer-sdk.md) nebo GENERUJE události ETW, které následují po <xref:System.Diagnostics.Tracing.EventSource> konvenci, můžete tyto události zobrazit v Vizualizátor souběžnosti tím, že je zaregistrujete do tohoto dialogového okna.  
   
  Do pole název zadejte název, který popisuje typy událostí, které jsou generovány zprostředkovatelem.  Do pole identifikátor GUID zadejte identifikátor GUID, který je přidružen k tomuto zprostředkovateli. (Identifikátor GUID je spojený s každým poskytovatelem ETW.)  
   
- Volitelně můžete určit, jestli se mají odfiltrovat události od tohoto poskytovatele na základě kategorie nebo úrovně důležitosti.  Pomocí pole kategorie můžete filtrovat podle kategorií Vizualizátor souběžnosti sady SDK.  Provedete to tak, že zadáte řetězec kategorií nebo rozsahy kategorií oddělených čárkami.  Určuje kategorie událostí v aktuálním zprostředkovateli, které se mají zobrazit.  Pokud přidáváte poskytovatele <xref:System.Diagnostics.Tracing.EventSource>, můžete použít pole kategorie k filtrování podle klíčového slova ETW.  Protože klíčové slovo je maskování, můžete použít řetězec celých čísel oddělených čárkami k určení, které bity v masce jsou nastaveny. Například "1, 2" nastaví první a druhý bit a tato možnost se převede na 6 v desítkové soustavě.  
+ Volitelně můžete určit, jestli se mají odfiltrovat události od tohoto poskytovatele na základě kategorie nebo úrovně důležitosti.  Pomocí pole kategorie můžete filtrovat podle kategorií Vizualizátor souběžnosti sady SDK.  Provedete to tak, že zadáte řetězec kategorií nebo rozsahy kategorií oddělených čárkami.  Určuje kategorie událostí v aktuálním zprostředkovateli, které se mají zobrazit.  Pokud přidáváte <xref:System.Diagnostics.Tracing.EventSource> poskytovatele, můžete použít pole kategorie k filtrování podle klíčového slova ETW.  Protože klíčové slovo je maskování, můžete použít řetězec celých čísel oddělených čárkami k určení, které bity v masce jsou nastaveny. Například "1, 2" nastaví první a druhý bit a tato možnost se převede na 6 v desítkové soustavě.  
   
  Seznam na úrovni důležitosti můžete použít k vyfiltrování událostí, které mají důležitost nebo úroveň trasování událostí pro Windows, která je menší než zadaná hodnota.  
   

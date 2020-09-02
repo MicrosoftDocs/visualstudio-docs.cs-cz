@@ -1,5 +1,5 @@
 ---
-title: PROFILE_CURRENTID | Dokumenty společnosti Microsoft
+title: PROFILE_CURRENTID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,24 +12,24 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778359"
 ---
 # <a name="profile_currentid"></a>PROFILE_CURRENTID
-PROFILE_CURRENTID vrátí pseudotoken pro ID vlákna nebo ID procesu, ve volání NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile funkce. Použijte ji k tomu, aby funkce fungovala na aktuálním vlákně nebo procesu, nikoli na konkrétně určeném.
+PROFILE_CURRENTID vrátí pseudo token pro ID vlákna nebo ID procesu ve volání funkce NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile. Použijte jej k tomu, aby funkce pracovala na aktuálním vlákně nebo procesu, nikoli konkrétně.
 
 ## <a name="example"></a>Příklad
- PROFILE_CURRENTID je definována v *VSPerf.h* jako:
+ PROFILE_CURRENTID je definována v *VSPerf. h* jako:
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje PROFILE_CURRENTID. Příklad používá PROFILE_CURRENTID jako parametr identifikující aktuální vlákno ve volání funkce [StartProfile.](../profiling/startprofile.md)
+ Následující příklad ukazuje PROFILE_CURRENTID. Příklad používá PROFILE_CURRENTID jako parametr identifikující aktuální vlákno ve volání funkce [StartProfile](../profiling/startprofile.md) .
 
 ```cpp
 void ExerciseProfileCurrentID()
@@ -59,7 +59,7 @@ void ExerciseProfileCurrentID()
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Odkaz na rozhraní API profileru sady Visual Studio (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Referenční dokumentace rozhraní API pro Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
 - [NameProfile](../profiling/nameprofile.md)
 - [ResumeProfile](../profiling/resumeprofile.md)
 - [StartProfile](../profiling/startprofile.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 02f078d9293fa8b02267c5003a92d1d60134e1a4
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249513"
 ---
 # <a name="how-to-edit-xml-files"></a>Postupy: úprava souborů XML
@@ -72,7 +72,7 @@ Chcete-li upravit soubor XML, otevřete soubor, který chcete upravit.
 
 2. Do vyhledávacího pole šablony zadejte **prázdný projekt** , vyberte šablonu **prázdného projektu (.NET Framework)** a pak vyberte **Další**.
 
-3. Vyberte **Vytvořit**.
+3. Vyberte **Create** (Vytvořit).
 
 ::: moniker-end
 

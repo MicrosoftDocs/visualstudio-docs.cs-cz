@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetReferenceType | Dokumentace Microsoftu
+title: 'IDebugReference2:: SetReferenceType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31be7be2b9d17ca5b7af65e4d38668f88d484d9d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178173"
 ---
 # <a name="idebugreference2setreferencetype"></a>IDebugReference2::SetReferenceType
@@ -40,10 +40,10 @@ int SetReferenceType ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwRefType`  
- [in] Hodnota z [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) výčet, který určuje typ odkazu.  
+ pro Hodnota z výčtu [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) , která určuje typ odkazu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí `E_NOTIMPL`.  
+ Vždy vrátí hodnotu `E_NOTIMPL`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Aktualizace stavového řádku | Dokumentace Microsoftu'
+title: 'Postupy: aktualizace stavového řádku | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,42 +11,42 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1d48b07dd5e4fc1fe745e3669041884c1b8eacd9
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703149"
 ---
 # <a name="how-to-update-the-status-bar"></a>Postupy: Aktualizace stavového řádku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Stavový řádek** se ovládací panel nachází v dolní části mnoho aplikace pro windows, který obsahuje jeden nebo více řádků textu stavu nebo ukazatele.  
+**Stavový řádek** je ovládací panel umístěný v dolní části řady oken aplikace, která obsahuje jeden nebo více stavových řádků nebo indikátorů.  
   
 ### <a name="to-update-the-status-bar"></a>Aktualizace stavového řádku  
   
-1. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> na každém objektu jednotlivých zobrazení (DocView), která poskytuje editoru, jako je například zobrazení formuláře a zobrazení kódu.  
+1. Implementujte <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> na každý jednotlivý objekt zobrazení (objekt DocView), který poskytuje editor, jako je například zobrazení formuláře a zobrazení kódu.  
   
-2. Když se volá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A>, aktualizovat informace v **stavový řádek** voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>.  
+2. Při volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> aktualizujte informace ve **stavovém řádku** voláním metod <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> .  
   
     > [!NOTE]
-    > Volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> pouze když vaše okno dokumentu prvotní aktivaci. Pro zbývající čas, který je aktivní okno dokumentu, je nutné aktualizovat **stavový řádek** informací jako stav editoru změny.  
+    > Rozhraní IDE volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> pouze při počáteční aktivaci okna dokumentu. Po zbytek času, kdy je okno dokumentu aktivní, je nutné aktualizovat informace o **stavovém řádku** jako stav změn editoru.  
   
 ## <a name="robust-programming"></a>Robustní programování  
- A **stavový řádek** obsahuje čtyři samostatné pole:  
+ **Stavový řádek** obsahuje čtyři samostatná pole:  
   
 - Stavový text  
   
 - Indikátor průběhu  
   
-- Animovaný ikonu  
+- Animovaná ikona  
   
-- Editor informací  
+- Informace editoru  
   
   Další informace najdete v tématu [stavové řádky](https://msdn.microsoft.com/library/fcbc5029-1aab-4e14-adf7-419038a4935e).  
   
-  Rozhraní IDE automaticky volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu vaše <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> implementace při aktivaci okno dokumentu.  
+  Rozhraní IDE automaticky volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> implementace při aktivaci okna dokumentu.  
   
-  Implementátor VSPackage je zodpovědný za automatickou aktualizaci stavový text ve stavovém řádku. Rozhraní IDE obnoví tento řetězec na hodnotu "PŘIPRAVENO" Pokud textové pole Stav je nastaven na prázdný text ("") v době nečinnosti.  
+  Implementátor balíčku VSPackage zodpovídá za aktualizaci textu stavu ve stavovém řádku. Rozhraní IDE obnoví tento řetězec na "PŘIPRAVENo", pokud je textové pole stav nastaveno na prázdný text ("") v době nečinnosti.  
   
 ## <a name="see-also"></a>Viz také  
  [Stavové řádky](https://msdn.microsoft.com/library/fcbc5029-1aab-4e14-adf7-419038a4935e)

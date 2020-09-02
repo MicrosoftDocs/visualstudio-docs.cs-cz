@@ -1,5 +1,5 @@
 ---
-title: Ladění skriptů na straně klienta | Dokumentace Microsoftu
+title: Ladění skriptů na straně klienta | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,53 +18,53 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6405a35068b7be7ac93eb91f4d9100e6a840b0bb
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702383"
 ---
 # <a name="client-side-script-debugging"></a>Ladění skriptů na straně klienta
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladicí program sady Visual Studio poskytuje všestranné prostředí pro nalezení a opravu chyb v klientských skriptech na stránkách ASP.NET.  
+Ladicí program sady Visual Studio poskytuje ucelené prostředí pro ladění pro hledání a opravy chyb na klientských skriptech na stránkách ASP.NET.  
   
-## <a name="opening-script-documents"></a>Otevření dokumentů skriptu  
- Můžete zobrazit seznamy dokumentů skriptů na straně serveru a na straně klienta v **Průzkumníka řešení** zobrazíte. Můžete otevřít libovolný dokument skriptu z **Průzkumníka řešení**. Další informace najdete v tématu [jak: Zobrazení dokumentů skriptu](../debugger/how-to-view-script-documents.md).  
+## <a name="opening-script-documents"></a>Otevírání dokumentů skriptů  
+ V **Průzkumník řešení** můžete zobrazit seznamy dokumentů skriptů na straně serveru a klienta. Můžete otevřít libovolný dokument skriptu z **Průzkumník řešení**. Další informace najdete v tématu [Postup: zobrazení dokumentů skriptu](../debugger/how-to-view-script-documents.md).  
   
 ## <a name="breakpoint-mapping"></a>Mapování zarážek  
- V sadě Visual Studio nelze přímo ladit kód na straně serveru, ale můžete nastavit zarážku v souboru na straně serveru. Visual Studio automaticky mapuje zarážku do odpovídajícího umístění v souboru straně klienta a vytvoří mapovanou zarážku v kódu na straně klienta.  
+ V sadě Visual Studio nemůžete přímo ladit kód na straně serveru, ale můžete nastavit zarážku v souboru na straně serveru. Visual Studio automaticky mapuje zarážku na odpovídající umístění v souboru na straně klienta a vytvoří namapovanou zarážku v kódu na straně klienta.  
   
 ## <a name="manually-or-automatically-attaching-to-script"></a>Ruční nebo automatické připojení ke skriptu  
- Chcete-li začít ladit skript v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ladicí program musí připojení ke skriptu, který chcete ladit. Může to ručně nebo automaticky.  
+ Chcete-li začít ladit skript v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ladicí program se musí připojit ke skriptu, který chcete ladit. K tomu může dojít ručně nebo automaticky.  
   
- Můžete provést ruční přiřazení pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní ladicího programu k výběru spuštěného procesu skriptu, který chcete připojit k. Další informace najdete v tématu [jak: Připojení ke skriptu](../debugger/how-to-attach-to-script.md).  
+ K [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] výběru spouštěného procesu skriptu, ke kterému se chcete připojit, můžete ručně připojit pomocí rozhraní ladicího programu. Další informace najdete v tématu [Postup: připojení ke skriptu](../debugger/how-to-attach-to-script.md).  
   
- Ladicí program se automaticky připojí ke skriptu při jedné z následujících akcí:  
+ Ladicí program se ke skriptu automaticky připojí, když dojde k jedné z následujících akcí:  
   
-- Dostanete se ve skriptu nastavte zarážku.  
+- Ve skriptu budete mít nastavenou zarážku.  
   
-- Dosažení VBScript `Stop` příkazu nebo JScript `debugger` příkaz v kódu skriptu.  
+- Ve vašem kódu skriptu jste narazili na příkaz jazyka VBScript `Stop` nebo příkaz jazyka JScript `debugger` .  
   
-- Prohlížeč a server zaznamená syntaxi nebo chybu při skriptu spuštění. Pokud k tomu dojde, dialogové okno se zobrazí a můžete začít ladění.  
+- V prohlížeči nebo serveru dojde k chybě syntaxe nebo chyby běhu ve skriptu. Pokud k tomu dojde, zobrazí se dialogové okno s možností spustit ladění.  
   
-  Pokud provedete ruční připojení ke skriptu, proces skriptování pokračuje, dokud není nějakým způsobem zastaven. Můžete ho zastavit výběrem **přerušit** na **ladění** nabídky.  
+  Když se ručně připojíte ke skriptu, proces skriptu pokračuje v běhu, dokud není nějakým způsobem zastaven. Můžete ji zastavit výběrem možnosti **přerušit** v nabídce **ladění** .  
   
-  Pokud ladicí program automaticky připojí, spuštění skriptu je zastaveno na řádku kde zarážka, `Stop` příkazu nebo `debugger` nebo chybu došlo k chybě, nebo v okamžiku, kdy jste se rozhodli spustit ladění v aplikaci Internet Explorer.  
+  Pokud se ladicí program automaticky připojí, spuštění skriptu je zastaveno na řádku, kde došlo k zarážce, `Stop` příkazu nebo `debugger` příkazu, nebo v místě, kde jste se rozhodli spustit ladění v aplikaci Internet Explorer.  
   
-  V tomto okamžiku můžete použít normální funkce ladicího programu a zahájit ladění. Například můžete použít **krok** příkazy pro další spouštění kódu řádek po řádku. Můžete použít **zásobník volání** okno k zobrazení a ovládání skript toku. Můžete použít okna proměnných nebo **okamžité** okno k zobrazení nebo změnu proměnných a vlastností.  
+  V tomto okamžiku můžete k zahájení ladění použít normální zařízení ladicího programu. Například můžete použít příkazy **Step** pro pokračování v provádění kódu řádek po řádku. Okno **zásobník volání** můžete použít k zobrazení a řízení toku skriptu. K zobrazení nebo změně proměnných a vlastností lze použít okna proměnných nebo okno **Immediate** .  
   
 ## <a name="enhanced-error-messages-for-script-debugging"></a>Rozšířené chybové zprávy pro ladění skriptů  
- Visual Studio poskytuje rozšířené chybové zprávy pro běžné potíže ladění skriptu. Tyto zprávy se nezobrazí, pokud se nepřipojíte k aplikaci Internet Explorer ručně. Pokud dojde k chybě při se automaticky otevře aplikace Internet Explorer, zkuste připojení ručně tak, aby se zobrazí chybové zprávy.  
+ Visual Studio poskytuje rozšířené chybové zprávy pro běžné problémy ladění skriptu. Tyto zprávy se nezobrazí, pokud se k aplikaci Internet Explorer nepřipojíte ručně. Pokud dojde k chybě při automatickém otevření aplikace Internet Explorer, pokuste se připojit ručně, abyste mohli zobrazit chybové zprávy.  
   
-## <a name="debugging-ajax-script-applications"></a>Ladění aplikací se skriptem AJAX  
- Webové aplikace s povoleným AJAX hojně používají kód skriptu a představují zvláštní problémy ladění. Informace o metodách ladění AJAX naleznete v tématu  
+## <a name="debugging-ajax-script-applications"></a>Ladění aplikací skriptu AJAX  
+ Webové aplikace s podporou jazyka AJAX využívají těžké skriptovací kód a představují speciální výzvy k ladění. Informace o technikách ladění AJAX naleznete v tématu.  
   
- [Ladění a trasování – přehled aplikace Ajax](https://msdn.microsoft.com/library/92684ea0-7bb4-4a34-9203-3aa6394ce375).  
+ [Přehled ladění a trasování aplikací AJAX](https://msdn.microsoft.com/library/92684ea0-7bb4-4a34-9203-3aa6394ce375).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)   
  [Omezení ladění skriptů](../debugger/limitations-on-script-debugging.md)   
- [Proměnné Windows](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)   
- [Příkazové podokno](../ide/reference/immediate-window.md)   
- [Ladění a trasování – přehled jazyka Ajax aplikací](https://msdn.microsoft.com/library/92684ea0-7bb4-4a34-9203-3aa6394ce375)
+ [Okna proměnných](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)   
+ [Příkazové okno](../ide/reference/immediate-window.md)   
+ [Přehled ladění a trasování aplikací AJAX](https://msdn.microsoft.com/library/92684ea0-7bb4-4a34-9203-3aa6394ce375)

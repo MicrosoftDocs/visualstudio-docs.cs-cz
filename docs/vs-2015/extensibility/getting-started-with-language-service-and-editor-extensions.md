@@ -1,5 +1,5 @@
 ---
-title: Začínáme se službou Language Service a rozšíření editoru | Dokumentace Microsoftu
+title: Začínáme s rozšířeními služby jazyka a editoru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,78 +11,78 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4c4278679cabb72e9d06f79c1668e7546f24194d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703762"
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>Začínáme s rozšířeními pro služby jazyka a editor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozšíření editoru slouží k přidání služby jazykové vlastnosti zahrnující například sbalování, párování složených závorek, technologie IntelliSense a návrhy, programovacího jazyka nebo jakýkoli typ obsahu. Můžete také přizpůsobit vzhled a chování editoru sady Visual Studio, například text barevné zvýrazňování, okrajů, vylepšení a další vizuální prvky. Můžete také definovat vlastní typ obsahu a definujte vzhled a chování textové zobrazení, ve kterých se zobrazí váš obsah.  
+Rozšíření editoru můžete použít k přidání funkcí jazykové služby, jako je například sbalení, spárování složených závorek, IntelliSense a žárovky, do vlastního programovacího jazyka nebo jakéhokoli typu obsahu. Můžete také přizpůsobit vzhled a chování editoru sady Visual Studio, například barevné zvýraznění, okraje, doplňky a další vizuální prvky. Můžete také definovat vlastní typ obsahu a určit vzhled a chování textových zobrazení, ve kterých se zobrazuje obsah.  
   
- Chcete-li začít psát rozšíření editoru, použijte editor šablony projektů, které se instalují jako součást sady Visual Studio SDK. Visual Studio SDK je ke stažení sady nástrojů, které usnadňují vývoj rozšíření sady Visual Studio pomocí rozšíření VSPackages nebo pomocí Managed Extensibility Framework (MEF).  
+ Chcete-li začít s psaním rozšíření editoru, použijte šablony projektů editoru, které jsou nainstalovány jako součást sady Visual Studio SDK. Sada Visual Studio SDK je ke stažení sady nástrojů, které usnadňují vývoj rozšíření sady Visual Studio, a to buď pomocí VSPackage, nebo pomocí Managed Extensibility Framework (MEF).  
   
 > [!NOTE]
 > Další informace o sadě Visual Studio SDK naleznete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
- Doporučujeme, abyste před Tvorba vlastních rozšíření editoru informace o následujících konceptům a technologiím.  
+ Doporučujeme, abyste se dozvěděli o následujících konceptech a technologiích před zápisem vlastních rozšíření editoru.  
   
-## <a name="the-windows-presentation-foundation-wpf-and-editor-extensions"></a>Windows Presentation Foundation (WPF) a rozšíření editoru  
- Visual Studio editor uživatelské rozhraní (UI) je implementovaný s využitím Windows Presentation Foundation (WPF). WPF poskytuje bohaté možnosti vzhled a konzistentní programovací model, který odděluje visual aspektů kód z obchodní logiky. Při vytváření rozšíření editoru, můžete použít mnoho prvků WPF a funkce. Další informace najdete v tématu [Windows Presentation Foundation](https://msdn.microsoft.com/library/f667bd15-2134-41e9-b4af-5ced6fafab5d).  
+## <a name="the-windows-presentation-foundation-wpf-and-editor-extensions"></a>Rozšíření Windows Presentation Foundation (WPF) a editoru  
+ Uživatelské rozhraní (UI) editoru sady Visual Studio je implementováno pomocí Windows Presentation Foundation (WPF). WPF poskytuje bohatou vizuální prostředí a jednotný programovací model, který odděluje vizuální aspekty kódu z obchodní logiky. Když vytváříte rozšíření editoru, můžete použít spoustu prvků a funkcí WPF. Další informace najdete v tématu [Windows Presentation Foundation](https://msdn.microsoft.com/library/f667bd15-2134-41e9-b4af-5ced6fafab5d).  
   
-## <a name="the-managed-extensibility-framework-mef-and-editor-extensions"></a>Rozhraní Managed Extensibility Framework (MEF) a rozšíření editoru  
- Editor sady Visual Studio Managed Extensibility Framework (MEF) používá ke správě jeho součástmi a rozšíření. Rozhraní MEF také umožňuje další vývojářům snadno vytvářet rozšíření pro hostitelskou aplikaci, jako je Visual Studio. V tomto rámci definování rozšíření podle smlouvy MEF a exportujte ho jako součást MEF. Hostitelská aplikace spravuje dílů tím, že je, je registrace a ujistěte se, že se použijí pro správný kontext.  
+## <a name="the-managed-extensibility-framework-mef-and-editor-extensions"></a>Rozšíření Managed Extensibility Framework (MEF) a editoru  
+ Editor sady Visual Studio používá ke správě svých komponent a rozšíření Managed Extensibility Framework (MEF). Rozhraní MEF také umožňuje vývojářům snadněji vytvářet rozšíření pro hostitelskou aplikaci, jako je Visual Studio. V tomto rozhraní definujete rozšíření podle kontraktu MEF a vyexportujete jako součást MEF. Hostitelská aplikace spravuje části součásti jejich vyhledáním, jejich registrací a zajištěním, že jsou aplikovány na správný kontext.  
   
 > [!NOTE]
-> Další informace o rozhraní MEF v editoru, najdete v části [Managed Extensibility Framework v Editor](../extensibility/managed-extensibility-framework-in-the-editor.md).  
+> Další informace o MEF v editoru naleznete v tématu [Managed Extensibility Framework v editoru](../extensibility/managed-extensibility-framework-in-the-editor.md).  
   
-## <a name="visual-studio-editor-extension-points-and-extensions"></a>Rozšiřovací body Editor sady Visual Studio a rozšíření  
- Editor Rozšiřovací body jsou součásti MEF, které můžete přizpůsobit a rozšířit. V některých případech můžete rozšířit rozšiřovací bod implementace rozhraní a export spolu s správných metadat. V ostatních případech stačí deklarovat rozšíření a exportujte ho jako konkrétního typu.  
+## <a name="visual-studio-editor-extension-points-and-extensions"></a>Rozšiřující body a rozšíření editoru sady Visual Studio  
+ Body rozšíření editoru jsou části komponenty MEF, které lze přizpůsobit a rozšířit. V některých případech rozšířit rozšiřující bod implementací rozhraní a jeho export společně se správnými metadaty. V ostatních případech jste právě deklarovali rozšíření a exportovali ho jako konkrétní typ.  
   
- Tady jsou některé základní typy rozšíření editoru:  
+ Následuje několik základních druhů rozšíření editoru:  
   
 - Okraje a posuvníky  
   
 - Značky  
   
-- Vylepšení  
+- Grafických doplňků  
   
 - Možnosti  
   
 - IntelliSense  
   
-  Další informace o bodech rozšíření editoru, najdete v části [služba jazyka a editoru Rozšiřovací body](../extensibility/language-service-and-editor-extension-points.md).  
+  Další informace o bodech rozšíření editoru naleznete v tématu [jazykové služby a rozšiřovací body editoru](../extensibility/language-service-and-editor-extension-points.md).  
   
 ## <a name="deploying-editor-extensions"></a>Nasazení rozšíření editoru  
- V sadě Visual Studio nasadit rozšíření editoru přidáte soubor metadat s názvem source.extension.vsixmanifest k řešení, sestavit řešení, a následným přidáním kopii binárních souborů a manifest ve složce, která se označuje do sady Visual Studio. Soubor manifestu definuje základních faktů o rozšíření (například názvu, autora, verze a typu obsahu). Další informace o souboru manifestu VSIX a tom, jak nasadit rozšíření najdete v tématu [přesouvání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).  
+ V aplikaci Visual Studio nasadíte rozšíření editoru přidáním souboru metadat s názvem source. extension. vsixmanifest do řešení, sestavením řešení a následným přidáním kopie binárních souborů a manifestu do složky, která je známá v aplikaci Visual Studio. Soubor manifestu definuje základní fakta o rozšíření (například název, autor, verze a typ obsahu). Další informace o souboru manifestu VSIX a o tom, jak nasadit rozšíření, najdete v tématu dodávání [rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md).  
   
- Při instalaci rozšíření na počítači zahrnout binární soubory a manifest v podsložce složky, který znáte Visual Studio.  
+ Když nainstalujete rozšíření na počítač, zahrňte binární soubory a manifest do podsložky složky, která je známá pro Visual Studio.  
   
 > [!WARNING]
-> Není nutné se starat o podrobnosti manifestů a umístění nasazení, pokud používáte některou ze šablon rozšíření editoru, které jsou zahrnuty v sadě Visual Studio. Šablony obsahují vše potřebné k registraci a nasadit rozšíření.  
+> Pokud použijete některou ze šablon rozšiřitelnosti editoru, které jsou součástí sady Visual Studio, nemusíte si dělat starosti s podrobnostmi manifestů a umístění nasazení. Šablony obsahují všechno, co je potřeba k registraci a nasazení rozšíření.  
   
-## <a name="running-extensions-in-the-experimental-instance"></a>Spuštění rozšíření v experimentální instanci  
- Vaše pracovní verze sady Visual Studio můžete izolovat, zatímco vyvíjíte rozšíření nasazením v následující složce experimentální (ve Windows Vista a Windows 7):  
+## <a name="running-extensions-in-the-experimental-instance"></a>Spouštění rozšíření v experimentální instanci  
+ Svou pracovní verzi sady Visual Studio můžete zaizolovaně vymezit, když vyvíjíte rozšíření nasazením v následující experimentální složce (v systému Windows Vista a Windows 7):  
   
- *%LOCALAPPDATA%* \VisualStudio\10.0Exp\Extensions\\*Company*\\*ExtensionID*  
+ *% Localappdata%* \VisualStudio\10.0Exp\Extensions \\ *společnosti* \\ *ExtensionID*  
   
- kde *% LOCALAPPDATA %* je jméno přihlášeného uživatele, *společnosti* je název společnosti, který vlastní rozšíření, a *ExtensionID* je ID rozšíření.  
+ kde *% localappdata%* je jméno přihlášeného uživatele, *Společnost* je název společnosti, která rozšíření vlastní, a *ExtensionID* je ID rozšíření.  
   
- Když nasadíte do umístění, experimentální rozšíření, je spuštěna v režimu ladění. Druhou instanci aplikace Visual Studio se spustí a názvem **Microsoft Visual Studio – experimentální instanci**.  
+ Když nasadíte rozšíření do experimentálního umístění, spustí se v režimu ladění. Spustí se druhá instance sady Visual Studio a je pojmenována **Microsoft Visual Studio-experimentální instance**.  
   
 ## <a name="managing-extensions"></a>Správa rozšíření  
- Rozšíření pro Visual Studio jsou uvedeny v **rozšíření a aktualizace** (na **nástroje** nabídky). Pokud testujete rozšíření v experimentální instanci, je uvedena v **rozšíření a aktualizace** v experimentální instanci, ale není uvedený v instanci vývoje.  
+ Rozšíření pro Visual Studio jsou uvedená v části **rozšíření a aktualizace** (v nabídce **nástroje** ). Pokud testujete rozšíření v experimentální instanci, je uveden v části **rozšíření a aktualizace** v experimentální instanci, ale není uvedena v instanci vývoje.  
   
- Další informace najdete v tématu [hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).  
+ Další informace najdete v tématu [vyhledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).  
   
-## <a name="using-templates-to-create-editor-extensions"></a>Použití šablon pro vytvoření rozšíření editoru  
- Editor šablon můžete použít k vytvoření rozšíření MEF, které přizpůsobení třídění, vylepšení a okraje. Existují šablony pro projekty jazyka C# i Visual Basic. Další informace najdete v tématu [vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+## <a name="using-templates-to-create-editor-extensions"></a>Použití šablon k vytvoření rozšíření editoru  
+ Šablony editoru lze použít k vytvoření rozšíření MEF, která přizpůsobují třídění, doplňky a okraje. Existují šablony pro projekty C# i Visual Basic. Další informace naleznete v tématu [Vytvoření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
- Šablona projektu VSIX můžete použít také k vytvoření rozšíření. Tato šablona obsahuje pouze elementy, které jsou nutné k nasazení jakýkoli druh rozšíření a zahrnout soubor source.extension.vsixmanifest, odkazy na požadovaná sestavení a soubor projektu, který zahrnuje funkci úloh sestavení, které můžete nasadit rozšíření. Další informace najdete v tématu [šablonou projektu VSIX](../extensibility/vsix-project-template.md).  
+ K vytvoření rozšíření můžete použít také šablonu projektu VSIX. Tato šablona poskytuje pouze prvky, které jsou požadovány k nasazení jakéhokoli typu rozšíření, včetně souboru source. extension. vsixmanifest, požadovaných odkazů na sestavení a souboru projektu, který obsahuje úlohy sestavení, které umožňují nasazení rozšíření. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).  
   
- Můžete také vytvořit editor komponent MEF z rozšíření sady Visual Studio balíček. Najdete v následujících návodech podrobnosti:  
+ Můžete také vytvořit Editor komponent MEF z rozšíření balíčku sady Visual Studio. Podrobnosti najdete v následujících návodech:  
   
 - [Návod: Použití příkazů prostředí s rozšířením editoru](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)  
   

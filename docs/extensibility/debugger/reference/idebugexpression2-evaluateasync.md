@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateAsync | Dokumenty společnosti Microsoft
+title: 'IDebugExpression2:: EvaluateAsync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729761"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
@@ -43,23 +43,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>Parametry
 `dwFlags`\
-[v] Kombinace příznaků z výčtu [EVALFLAGS,](../../../extensibility/debugger/reference/evalflags.md) které řídí vyhodnocení výrazu.
+pro Kombinace příznaků z výčtu [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) , který ovládá vyhodnocení výrazu.
 
 `pExprCallback`\
-[v] Tento parametr je vždy nulovou hodnotou.
+pro Tento parametr je vždycky hodnota null.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Typický kód chyby je:
+V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Typický kód chyby:
 
 |Chyba|Popis|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|V současné době je vyhodnocován jiný výraz a současné vyhodnocení výrazu není podporováno.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|V tuto chvíli se vyhodnocuje jiný výraz a hodnocení souběžného výrazu se nepodporuje.|
 
 ## <a name="remarks"></a>Poznámky
-Tato metoda by měla vrátit ihned po spuštění vyhodnocení výrazu. Pokud je výraz úspěšně vyhodnocen, musí být [iDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) odeslán do zpětného volání události [IDebugEventCallback2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) které je zasunuto prostřednictvím [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md).
+Tato metoda by se měla vrátit hned po spuštění vyhodnocení výrazu. Po úspěšném vyhodnocení výrazu [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) musí být do zpětného volání události [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) odesílána jako dodaná prostřednictvím [připojení](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [připojení](../../../extensibility/debugger/reference/idebugengine2-attach.md).
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CExpression` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugExpression2.](../../../extensibility/debugger/reference/idebugexpression2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CExpression` objekt, který implementuje rozhraní [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) .
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,

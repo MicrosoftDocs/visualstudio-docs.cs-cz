@@ -1,5 +1,5 @@
 ---
-title: Příznak značek | Dokumentace Microsoftu
+title: Značky příznaků | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,43 +12,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e531d2d2a41cc9ceaa3b6ba39c6d77a166cfae83
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193668"
 ---
 # <a name="flag-markers"></a>Značky příznaků
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Příznak značka představuje něco, ke které došlo v okamžiku v čase v aplikaci. Příznak, který může představovat různé druhy událostí aplikace. Příznak, který může například zobrazit naplánovaného konkrétní pracovní položce nebo když došlo k výjimce. Moduly runtime, jako je například Task Parallel Library můžete vygenerovat také příznaky.  
+Značka praporku představuje něco, co v aplikaci nastalo v čase. Příznak může představovat mnoho typů událostí aplikace. Příznak může například zobrazit, kdy byla určitá pracovní položka naplánována nebo byla vyvolána výjimka. Moduly runtime, jako je například Task Parallel Library, mohou také generovat příznaky.  
   
-## <a name="flag-importance"></a>Důležitosti příznaku  
- Příznaky jsou zobrazeny v různě v závislosti na jejich význam. Stejně jako všechny značky může být význam nízká, Normální, vysoká nebo kritické.  Tento obrázek ukazuje vzhled značek podle úrovně závažnosti:  
+## <a name="flag-importance"></a>Důležitost označení  
+ Příznaky se zobrazují v různých velikostech v závislosti na jejich důležitosti. Podobně jako u libovolné značky může být důležitost nízká, normální, vysoká nebo kritická.  Tento obrázek znázorňuje vzhled značek podle úrovně důležitosti:  
   
- ![Nízká, Normální, vysokou a kritický význam značky](../profiling/media/cvmarkerimportance.png "CVMarkerImportance")  
-Značky zobrazující důležitosti příznaku  
+ ![Značky nízké, normální, vysoké a kritické důležitosti](../profiling/media/cvmarkerimportance.png "CVMarkerImportance")  
+Značky ukazující důležitost příznaku  
   
-## <a name="flag-category"></a>Příznak kategorie  
- Příznak, který se zobrazí v jednom z pěti různých barev v závislosti na jeho kategorie. Barvy jsou znovu použít, pokud existuje více než pět kategorií. Nemůžete zvolit barvu. Stejně jako všechny značky kategorie může být libovolné celé číslo. Následující obrázek znázorňuje barvy pro prvních pět kategorií.  
+## <a name="flag-category"></a>Kategorie příznaků  
+ Příznak se zobrazí v jedné z pěti různých barev v závislosti na jeho kategorii. Barvy se znovu použijí, pokud existuje více než pět kategorií. Barvu nelze vybrat. Stejně jako u libovolné značky může být kategorie libovolné celé číslo. Následující obrázek znázorňuje barvy pro prvních pět kategorií.  
   
- ![Pět barvy značky kategorie](../profiling/media/cvmarkercategory.png "CVMarkerCategory")  
-Zobrazení kategorií značky  
+ ![Pět barev značek kategorií](../profiling/media/cvmarkercategory.png "CVMarkerCategory")  
+Značky zobrazující kategorie  
   
-## <a name="alerts"></a>Upozornění  
- Výstraha je red barevné příznak, který představuje událost kritické aplikace, jako je například výjimku.  Tady je výstrahy:  
+## <a name="alerts"></a>Výstrahy  
+ Výstraha je červený barevný příznak, který představuje kritickou událost aplikace, jako je například výjimka.  Tady je upozornění:  
   
- ![Upozornění značek pro Concurrency Visualizer](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
-Upozornění značky  
+ ![Značka výstrahy Vizualizátor souběžnosti](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
+Značka výstrahy  
   
-## <a name="aggregation-flags"></a>Příznaky agregace  
- Někdy příznaky probíhá tak blízko sebe Vizualizátor souběžnosti, že se nedá vykreslit jednotlivě. Pokud k tomu dojde, šedé *agregace příznak* , že se zobrazí představuje základní příznaky. Když ukazatel myši na jednu z těchto ikon, zobrazí popisek počet základní příznaky, které jsou reprezentovány. Chcete-li zobrazit příznaků, Přiblížit. Pokud přiblížíte úplně a zachovat si agregaci příznak, můžete zobrazit základní příznaky v [sestava značek](../profiling/markers-report.md).  
+## <a name="aggregation-flags"></a>Agregované příznaky  
+ Někdy se příznaky vyskytují, takže se v Vizualizátor souběžnosti nedají kreslit samostatně. V takovém případě se zobrazí šedý *příznak agregace* , který představuje základní příznaky. Když umístíte ukazatel myši na jednu z těchto ikon, zobrazí se popis, který znázorňuje počet základních příznaků, které jsou zastoupeny. Chcete-li zobrazit příznaky, přiblížit. Pokud přiblížíte všechny způsoby a stále získáte příznak agregace, můžete zobrazit základní příznaky v [sestavě značek](../profiling/markers-report.md).  
   
- Příznaky agregace jsou vykreslovány v různých velikostech. Velikost závisí na úroveň důležitosti příznaku nejdůležitější v agregaci. Následující obrázek znázorňuje příznaky agregace ve vzestupném pořadí podle důležitosti.  
+ Příznaky agregace jsou vykreslovány v různých velikostech. Velikost závisí na úrovni důležitosti nejdůležitějšího příznaku v agregaci. Následující ilustrace znázorňuje agregované příznaky ve vzestupném pořadí podle důležitosti.  
   
- ![Agregace příznaky znázorňující čtyři úrovně důležitosti](../profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
-Příznaky agregace podle úrovně závažnosti  
+ ![Agregované příznaky zobrazující čtyři úrovně důležitosti](../profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
+Agregované příznaky podle úrovně důležitosti  
   
 ## <a name="see-also"></a>Viz také  
- [Značky Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)   
+ [Značky Vizualizátor souběžnosti](../profiling/concurrency-visualizer-markers.md)   
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

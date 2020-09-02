@@ -1,5 +1,5 @@
 ---
-title: Uvolňování paměti (VSPerfCmd) | Dokumentace Microsoftu
+title: GC (VSPerfCmd) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,20 +10,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2bdb28f74dd305dc497521e95d38e00192c21c54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193606"
 ---
 # <a name="gc-vsperfcmd"></a>Uvolňování paměti (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**GC** možnost povoluje shromažďování dat rozhraní .NET Framework paměť přidělení a objekt životnost. **Uvolňování paměti** možnost jde použít jenom s metoda profilování vzorkování a jenom **spuštění** možnost.  
+Možnost **GC** umožňuje shromažďování .NET Framework přidělování paměti a dat o životnosti objektů. Možnost **GC** se dá použít jenom s metodou profilace vzorkování a jenom s možností **spuštění** .  
   
- Při použití **GC** možnost, VSPerfClrEnv **/sampleon** příkazu se nevyžaduje.  
+ Pokud používáte možnost **GC** , není příkaz VSPerfCLREnv **/sampleon** povinný.  
   
- Pokud nejsou zadány žádné parametry, nebo pokud **přidělení** parametr zadán, jsou shromažďovány pouze rozhraní .NET Framework data o přidělování paměti. Pokud **životnost** parametr zadán, přidělení paměti rozhraní .NET Framework a .NET Framework objekt se shromažďují data o životním cyklu.  
+ Nejsou-li zadány žádné parametry nebo je-li zadán parametr **přidělení** , jsou shromažďována pouze .NET Framework data o přidělení paměti. Je-li zadán parametr **životnosti** , jsou shromažďována jak .NET Framework přidělování paměti, tak data o životnosti objektů .NET Framework.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,20 +32,20 @@ VSPerfCmd.exe /Launch:AppName /GC[:{Allocation|Lifetime}] [Options]
 ```  
   
 #### <a name="parameters"></a>Parametry  
- **přidělení**  
- Default (Výchozí). Shromažďuje data o přidělování paměti rozhraní .NET Framework.  
+ **Vyhrazen**  
+ Default (Výchozí). Shromažďuje .NET Framework data o přidělování paměti.  
   
  **Doba platnosti**  
- Shromažďuje data o přidělování paměti rozhraní .NET Framework a .NET Framework data o životním cyklu objektu.  
+ Shromažďuje data přidělování .NET Framework paměti a data o životnosti objektů .NET Framework.  
   
 ## <a name="required-options"></a>Požadované možnosti  
- **GC** možnost se dá použít jenom s **spuštění** možnost.  
+ Možnost **GC** se dá použít jenom s možností **spuštění** .  
   
- **Spuštění:** `AppName`  
- Zadaná aplikace spustí a začne profilace pomocí metody odběru vzorků.  
+ **Spustit:**`AppName`  
+ Spustí zadanou aplikaci a zahájí profilaci pomocí metody vzorkování.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad spustí aplikaci a shromažďuje data o přidělování paměti rozhraní .NET Framework.  
+ V následujícím příkladu se spustí aplikace a shromáždí .NET Framework data o přidělování paměti.  
   
 ```  
 VSPerfCmd.exe /Launch:TestApp.exe /gc  
@@ -54,5 +54,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /gc
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

@@ -12,27 +12,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d989f5a0c57e381041e8fe9c200aae1a76316ad8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656949"
 ---
 # <a name="content-definition-dialog-box"></a>Dialogové okno Definice obsahu
-Dialogové okno **definice obsahu** se používá v [!INCLUDE[wfd1](../includes/wfd1-md.md)] ke konfiguraci vlastností **obsahu** aktivit <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> a <xref:System.ServiceModel.Activities.ReceiveReply>. [!INCLUDE[crabout](../includes/crabout-md.md)] návrháři aktivit, kteří používají toto pole, najdete v tématech [posílání](../workflow-designer/send-activity-designer.md), [příjem](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)a [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) .
+Dialogové okno **definice obsahu** se používá v nástroji [!INCLUDE[wfd1](../includes/wfd1-md.md)] ke konfiguraci vlastností **obsahu** pro <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive> aktivity,, <xref:System.ServiceModel.Activities.SendReply> a <xref:System.ServiceModel.Activities.ReceiveReply> . [!INCLUDE[crabout](../includes/crabout-md.md)] Návrháři aktivit, kteří používají toto pole, se nacházejí v tématech [Send](../workflow-designer/send-activity-designer.md), [Receive](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)a [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) .
 
  Následující tabulka popisuje prvky uživatelského rozhraní (UI) v dialogovém okně **inicializace korelace** .
 
 |Prvek uživatelského rozhraní (UI)|Popis|
 |----------------|-----------------|
-|**Zpráva**|Určuje obsah zprávy obsahující textové pole výrazu **data zprávy** a typ pomocí rozevíracího seznamu **typ zprávy** . Ve výchozím nastavení **definice obsahu** používá <xref:System.ServiceModel.Activities.ReceiveMessageContent>, což očekává <xref:System.ServiceModel.Channels.Message> nebo typ kontraktu zprávy v rámci definice služby pracovního postupu.|
-|**Parametry**|Kliknutím na přepínač **parametry** můžete použít <xref:System.ServiceModel.Activities.ReceiveParametersContent>, což očekává kontrakt dat. Datovou mřížku použijte k nastavení Obecné kolekce <xref:System.Activities.OutArgument> párů klíč/hodnota, jejichž hodnoty jsou přiřazeny parametrům proměnné v aktuálním pracovním postupu.|
+|**Zpráva**|Určuje obsah zprávy obsahující textové pole výrazu **data zprávy** a typ pomocí rozevíracího seznamu **typ zprávy** . Ve výchozím nastavení **definice obsahu** používá <xref:System.ServiceModel.Activities.ReceiveMessageContent> , který v <xref:System.ServiceModel.Channels.Message> definici služby pracovního postupu očekává nebo typ kontraktu zprávy.|
+|**Parametry**|Klikněte na přepínač **parametry** <xref:System.ServiceModel.Activities.ReceiveParametersContent> , který chcete použít, což očekává kontrakt dat. Datovou mřížku použijte k nastavení Obecné kolekce <xref:System.Activities.OutArgument> párů klíč/hodnota, jejichž hodnoty jsou přiřazeny parametrům proměnné v aktuálním pracovním postupu.|
 
  Dialogové okno **definice obsahu** se používá v návrhářích **Odeslat**, **přijmout**, **ReceiveAndSendReply**a **SendAndReceiveReply** . Přístup k nim je podobný v každém případě a k ilustraci tohoto postupu slouží případ přijetí.
 
- Návrhář aktivity **Receive** lze přetáhnout ze **sady nástrojů** a vyřadit na [!INCLUDE[wfd2](../includes/wfd2-md.md)] plochu všude, kde jsou obvykle umístěny aktivity. Tím se vytvoří aktivita <xref:System.ServiceModel.Activities.Receive> s výchozím <xref:System.Activities.Activity.DisplayName%2A> příjmu. Vyberte návrháře aktivity **Receive** a klikněte na tlačítko se třemi tečkami vedle textu (obsah) vlastnosti **Content** v mřížce vlastností dialogového okna **definice obsahu** , které se zobrazí.
+ Návrhář aktivity **Receive** je možné přetáhnout ze **sady nástrojů** a vyřadit na plochu, [!INCLUDE[wfd2](../includes/wfd2-md.md)] kde jsou obvykle umístěni aktivity. Tím se vytvoří <xref:System.ServiceModel.Activities.Receive> aktivita s výchozím nastavením <xref:System.Activities.Activity.DisplayName%2A> Receive. Vyberte návrháře aktivity **Receive** a klikněte na tlačítko se třemi tečkami vedle textu (obsah) vlastnosti **Content** v mřížce vlastností dialogového okna **definice obsahu** , které se zobrazí.
 
- Obsah lze zadat v části **zprávy** pro aktivitu <xref:System.ServiceModel.Activities.ReceiveMessageContent> nebo v části **parametru** pro aktivitu <xref:System.ServiceModel.Activities.ReceiveParametersContent>.
+ Obsah lze zadat v části **zprávy** pro <xref:System.ServiceModel.Activities.ReceiveMessageContent> aktivitu nebo v části **parametru** pro <xref:System.ServiceModel.Activities.ReceiveParametersContent> aktivitu.
 
 ## <a name="see-also"></a>Viz také
  [Nápověda k uživatelskému rozhraní návrháře postupu provádění](../workflow-designer/workflow-designer-ui-help.md)
