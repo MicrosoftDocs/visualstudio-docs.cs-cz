@@ -1,5 +1,5 @@
 ---
-title: Cv_hreg_e – | Dokumentace Microsoftu
+title: CV_HREG_e | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,21 +14,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ace9f28c0726a762e0ffe2abcf0538c5a629b06c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443501"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825345"
 ---
-# <a name="cvhrege"></a>CV_HREG_e
+# <a name="cv_hreg_e"></a>CV_HREG_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určuje cílový registru.  
+Určuje cílový registr.  
   
 > [!NOTE]
-> Vzhledem k tomu, `CV_HREG_e` výčet je příliš velký, aby duplicitní v celém rozsahu tady, zkrácenou verzi se poskytuje jako odkaz. Chybějící položky jsou zapisované kurzívou. V souboru hlaviček cvconst.h je k dispozici úplný výčet.  
+> Vzhledem `CV_HREG_e` k tomu, že výčet je příliš velký pro duplikaci v celém místě, je k dispozici zkrácená verze jako odkaz. Chybějící položky jsou vyznačeny kurzívou. Úplný výčet je k dispozici v souboru hlaviček cvconst. h.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum CV_HREG_e {   
@@ -412,43 +412,43 @@ enum CV_HREG_e { 
 ```  
   
 ## <a name="elements"></a>Elementy  
- CV_REG_*  
- Registry používají Intel 80 x 86 a ix86 procesory a p-code.  
+ CV_REG_ *  
+ Registry používané procesory Intel 80x86 a ix86 a p-Code.  
   
- CV_R68_*  
- Registry používané 68K procesoru.  
+ CV_R68_ *  
+ Registry používané procesorem 68K  
   
- CV_M4_*  
- Registry používá řadu procesorem MIPS 4000.  
+ CV_M4_ *  
+ Registry používané procesorem MIPS 4000 Series.  
   
- CV_ALPHA_*  
- Použít procesorem řady Digital Equipment Corporation alfa AXP registrů.  
+ CV_ALPHA_ *  
+ Registrů, které používá procesor digitálního vybavení Corporation Alpha AXP Series.  
   
- CV_PPC_*  
- Registry používané procesoru Motorola/IBM PowerPC.  
+ CV_PPC_ *  
+ Registry používané procesorem společnosti Motorola/IBM PowerPC.  
   
  CV_SH3_ * a CV_SH_\*  
- Použít procesorem řady Hitachi SH3 a Hitachi SH registrů.  
+ Registry používané procesorem Hitachi SH3 a Hitachi SH Series.  
   
- CV_ARM_*  
- Registry používané procesory Advanced RISC Machine (ARM).  
+ CV_ARM_ *  
+ Registry používané procesory ARM (Advanced RISC Machine).  
   
- CV_IA64_*  
- Registry používá řadu procesorů Intel IA64.  
+ CV_IA64_ *  
+ Registry používané procesory Intel IA64 Series.  
   
- CV_TRI_*  
- Registry používané technologie TriCore Infineon procesoru.  
+ CV_TRI_ *  
+ Registry používané procesorem Infineon Technologies TriCore.  
   
- CV_AM33_*  
- Registry používat jednotky/Panasonic AM33 a související s procesory.  
+ CV_AM33_ *  
+ Registry používané Matsushita/Panasonic AM33 a souvisejícími procesory.  
   
- CV_M32R_*  
- Registry používané Mitsubishi M32R procesoru.  
+ CV_M32R_ *  
+ Registry používané procesorem Mitsubishi M32R.  
   
 ## <a name="remarks"></a>Poznámky  
- Každý typ procesoru používá svou vlastní jedinečnou sadu registrů.  
+ Každý typ procesoru používá vlastní jedinečnou sadu registrů.  
   
- Hodnoty v tento výčet se předají do následujících metod:  
+ Hodnoty v tomto výčtu jsou předány do následujících metod:  
   
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)  
   
@@ -461,12 +461,12 @@ enum CV_HREG_e { 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)  
   
 ## <a name="requirements"></a>Požadavky:  
- Záhlaví: cvconst.h  
+ Záhlaví: cvconst. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
- [IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
- [IDiaStackWalkHelper::get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
- [IDiaStackWalkHelper::put_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
+ [IDiaStackWalkFrame:: get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
+ [IDiaStackWalkFrame::p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
+ [IDiaStackWalkHelper:: get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
+ [IDiaStackWalkHelper::p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
  [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)

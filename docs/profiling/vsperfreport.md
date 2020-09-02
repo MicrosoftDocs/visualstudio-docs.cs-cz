@@ -17,14 +17,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 54d5de2395c0ce95bc0c20c3ae7810b2762122fa
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329962"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
-Nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci datových souborů profilování. Výchozí formát sestavy je. soubor *CSV* .
+Nástroj příkazového řádku VSPerfReport slouží k vytváření sestav pomocí  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Nástroje pro profilaci datových souborů profilování. Výchozí formát sestavy je. soubor *CSV* .
 
  VSPerfReport používá následující syntaxi:
 
@@ -40,7 +40,7 @@ VSPerfReport [/U] vspfilename [/options]
 VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ```
 
- `vspfilename1 and vspfilename2`musí být platný. *VSP* nebo. soubory *vsps* .
+ `vspfilename1 and vspfilename2` musí být platný. *VSP* nebo. soubory *vsps* .
 
 ## <a name="symbol-files"></a>Soubory symbolů
  Chcete-li zobrazit informace o symbolech, jako jsou názvy funkcí a čísla řádků, VSPerfReport vyžaduje přístup k symbolu (. PDB) soubory profilované součásti a soubory symbolů systému Windows. Další informace naleznete v tématu [How to: určení umístění souborů symbolů z příkazového řádku](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).
@@ -51,7 +51,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |Možnosti|Popis|
 |-------------|-----------------|
 |**U**|Výstup sestavy a přesměrované výstupy konzoly jsou zapsané jako Unicode. Musí se jednat o první zadanou možnost.|
-|**Shrnutí:**[*typy*]|Vytvoří jeden nebo více typů sestav.<br /><br /> -   `All`-jsou generovány všechny typy sestav.<br />-   `CallerCallee`– Vztahy nadřazenosti a podřízenosti mezi funkcemi.<br />-   `Function`-funkce, které jsou volány.<br />-   `CallTree`-hierarchie volání funkcí.<br />-   `Counter`– všechny značky společně s hodnotami čítače výkonu systému Windows.<br />-   `Ip`– pokyny profilování.<br />-   `Life`– doba života přidělených objektů (k dispozici, když se shromažďují data přidělení)<br />-   `Line`data profilu čáry zdrojového kódu.<br />-   `Header`-Sestava obsahuje informace o záhlaví souboru.<br />-   `Mark`všechny značky.<br />-   `Module`-moduly profilované.<br />-   `Process`-procesy profilace.<br />-   `Thread`– vlákna profilace.<br />-   `Type`-přidělené typy.<br />-   `Contention`– spory prostředků.<br />-   `RuleWarnings`– problémy s pravidlem výkonu<br />-   `ETW`– všechny události trasování událostí pro Windows (ETW) shromážděné při spuštění profilace. Datový soubor. ETL musí být v původním umístění nebo v adresáři, který obsahuje soubor. vsp nebo. vsps.|
+|**Shrnutí:**[*typy*]|Vytvoří jeden nebo více typů sestav.<br /><br /> -   `All` -jsou generovány všechny typy sestav.<br />-   `CallerCallee` – Vztahy nadřazenosti a podřízenosti mezi funkcemi.<br />-   `Function` -funkce, které jsou volány.<br />-   `CallTree` -hierarchie volání funkcí.<br />-   `Counter` – všechny značky společně s hodnotami čítače výkonu systému Windows.<br />-   `Ip` – pokyny profilování.<br />-   `Life` – doba života přidělených objektů (k dispozici, když se shromažďují data přidělení)<br />-   `Line` data profilu čáry zdrojového kódu.<br />-   `Header` -Sestava obsahuje informace o záhlaví souboru.<br />-   `Mark` všechny značky.<br />-   `Module` -moduly profilované.<br />-   `Process` -procesy profilace.<br />-   `Thread` – vlákna profilace.<br />-   `Type` -přidělené typy.<br />-   `Contention` – spory prostředků.<br />-   `RuleWarnings` – problémy s pravidlem výkonu<br />-   `ETW` – všechny události trasování událostí pro Windows (ETW) shromážděné při spuštění profilace. Datový soubor. ETL musí být v původním umístění nebo v adresáři, který obsahuje soubor. vsp nebo. vsps.|
 |**XML**|Výstupní sestava ve formátu XML.|
 |**CallTrace**|Vytvoří seznam vstupů a výstupů funkcí, událostí ETW a značek.|
 |**ClearPackedSymbols**|Odebere dříve vložené symboly z datového souboru profileru. Spusťte tento příkaz před dalším spuštěním PackSymbols.|
@@ -70,7 +70,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 
 |Možnosti|Popis|
 |-------------|-----------------|
-|**JustMyCode**[**:**[ `caller` ] [] `callee` ]|Zobrazit pouze volání funkcí aplikace uživatele; Skryjte systémová volání.<br /><br /> -Žádné parametry – skryje všechny systémové funkce.<br />-   `caller`-Zobrazí jednu úroveň systémových funkcí, které volají funkce aplikace.<br />-   `callee`-Zobrazit jednu úroveň systémových funkcí, které jsou volány funkcemi uživatelské aplikace.|
+|**JustMyCode**[**:**[ `caller` ] [] `callee` ]|Zobrazit pouze volání funkcí aplikace uživatele; Skryjte systémová volání.<br /><br /> -Žádné parametry – skryje všechny systémové funkce.<br />-   `caller` -Zobrazí jednu úroveň systémových funkcí, které volají funkce aplikace.<br />-   `callee` -Zobrazit jednu úroveň systémových funkcí, které jsou volány funkcemi uživatelské aplikace.|
 |**Čas_spuštění:**[*hodnota*]|Zobrazit pouze data shromážděná po hodnotě (v milisekundách)|
 |**Čas_ukončení:**[*hodnota*]|Zobrazit pouze data shromážděná před hodnotou (v milisekundách)|
 |**FilterFile:**`VSPFFile`|Určuje umístění souboru filtru, který byl vygenerován z okna Sestava výkonu sady Visual Studio.|

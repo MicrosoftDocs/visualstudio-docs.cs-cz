@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547638"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>Rozšíření vašeho DSL pomocí MEF
@@ -26,7 +26,7 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
 
 1. V projektu **DslPackage** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
-     Název souboru:`CommandExtensionVSCT.tt`
+     Název souboru: `CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
     > Nastavte identifikátor GUID v tomto souboru tak, aby byl stejný jako CommandSetId identifikátor GUID, který je definovaný v DslPackage\GeneratedCode\Constants.tt.
@@ -42,21 +42,21 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
     ```
 
-    Název souboru:`CommandExtensionRegistrar.tt`
+    Název souboru: `CommandExtensionRegistrar.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
     ```
 
-    Název souboru:`ValidationExtensionEnablement.tt`
+    Název souboru: `ValidationExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
     ```
 
-    Název souboru:`ValidationExtensionRegistrar.tt`
+    Název souboru: `ValidationExtensionRegistrar.tt`
 
     Pokud tento soubor přidáte, musíte v rámci DSL povolit ověřování pomocí aspoň jednoho přepínače v **EditorValidation** v Průzkumníku DSL.
 
@@ -65,7 +65,7 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
     ```
 
-    Název souboru:`PackageExtensionEnablement.tt`
+    Název souboru: `PackageExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -74,21 +74,21 @@ Další informace o MEF naleznete v tématu [Managed Extensibility Framework (ME
 
 2. V projektu **DSL** vytvořte novou složku s názvem **MefExtension** . Přidejte do něj následující soubory:
 
-     Název souboru:`DesignerExtensionMetaDataAttribute.tt`
+     Název souboru: `DesignerExtensionMetaDataAttribute.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
     ```
 
-    Název souboru:`GestureExtensionEnablement.tt`
+    Název souboru: `GestureExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
     ```
 
-    Název souboru:`GestureExtensionController.tt`
+    Název souboru: `GestureExtensionController.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -177,7 +177,7 @@ Můžete zapisovat rozšíření v projektu kódu sestavení samostatného řeš
 
 Pro zápis příkazu nabídky Definujte třídu, která implementuje <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> a prefixuje třídu s atributem definovaným v DSL s názvem *YourDsl* `CommandExtension` . Můžete napsat více než jednu třídu příkazu nabídky.
 
-`QueryStatus()`je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled` , aby označoval, kdy je možné příkaz použít.
+`QueryStatus()` je volána vždy, když uživatel klikne pravým tlačítkem myši na diagram. Měl by zkontrolovat aktuální výběr a nastavit `command.Enabled` , aby označoval, kdy je možné příkaz použít.
 
 ```csharp
 using System.ComponentModel.Composition;

@@ -1,5 +1,5 @@
 ---
-title: Metadata položek v dávkování cíle | Dokumentace Microsoftu
+title: Metadata položek v cílové dávce | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,21 +14,21 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9dd6c297e00a305fbd1b13cf0fe0bd4a4f151f6b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192874"
 ---
 # <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] má schopnost provádět analýzu závislostí na vstupy a výstupy cíle sestavení. Pokud je zjištěno, že vstupy nebo výstupy cíle jsou aktuální, přeskočí se cíl a sestavení bude pokračovat. `Target` použití elementů `Inputs` a `Outputs` atributů zadejte položky, které chcete zkontrolovat během analýzu závislostí.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] má schopnost provádět analýzu závislostí na vstupech a výstupech cíle sestavení. Je-li zjištěno, že vstupy nebo výstupy cíle jsou aktuální, bude cíl vynechán a sestavení bude PROCEDE. `Target` prvky pomocí `Inputs` atributů a `Outputs` určují položky, které se mají zkontrolovat během analýzy závislostí.  
   
- Pokud cíl obsahuje úlohu, která využívá jako vstupy nebo výstupy, dávková položka `Target` element cíle by měl použití dávkování v jeho `Inputs` nebo `Outputs` atributy se mají povolit [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] přeskočit dávky položek, které jsou již aktuální.  
+ Pokud cíl obsahuje úkol, který používá dávkové položky jako vstupy nebo výstupy, `Target` element Target by měl použít dávkování ve svých `Inputs` atributech nebo, `Outputs` aby bylo možné [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Přeskočit dávky položek, které jsou již aktuální.  
   
-## <a name="batching-targets"></a>Dávkování cíle  
- Následující příklad obsahuje seznam položek s názvem `Res` , který je rozdělen do dvou dávek na základě `Culture` metadata položky. Každá z těchto dávky je předán `AL` úkol, který vytvoří výstup sestavení u každé dávky. S použitím dávkování na `Outputs` atribut `Target` elementu [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] můžete zjistit, jestli každý jednotlivých dávek aktuální před spuštěním cílové. Bez použití dávkování cíle, obě dávky položek by spustit úlohy pokaždé, když byl cíl spuštěn.  
+## <a name="batching-targets"></a>Cíle dávkování  
+ Následující příklad obsahuje seznam položek s názvem `Res` , který je rozdělen na dvě dávky na základě `Culture` metadat položky. Každá z těchto dávek je předána do `AL` úlohy, která vytvoří výstupní sestavení pro každou dávku. Pomocí dávkového zpracování u `Outputs` atributu `Target` elementu [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] může určit, zda je každá z jednotlivých dávek aktuální před spuštěním cíle. Bez použití cílového dávkování by úloha při každém spuštění cíle spouštěla obě dávky položek.  
   
 ```  
 <Project  
@@ -69,7 +69,7 @@ ms.locfileid: "68192874"
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Přírůstkové sestavování](../msbuild/how-to-build-incrementally.md)   
- [Dávkové zpracování](../msbuild/msbuild-batching.md)   
- [Target – Element (MSBuild)](../msbuild/target-element-msbuild.md)   
- [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)
+ [Postupy: přírůstkové sestavení](../msbuild/how-to-build-incrementally.md)   
+ [Dávkování](../msbuild/msbuild-batching.md)   
+ [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)   
+ [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)

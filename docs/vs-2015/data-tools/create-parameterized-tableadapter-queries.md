@@ -17,21 +17,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 560587e70365a485c3391a0623b959f88d417698
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671058"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Vytvoření parametrizovaných dotazů TableAdapter
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Parametrizovaný dotaz vrátí data, která splňují podmínky klauzule WHERE v dotazu. Například můžete parametrizovat seznam zákazníků, aby zobrazoval pouze zákazníky v určitém městu přidáním `WHERE City = @City` na konec příkazu SQL, který vrátí seznam zákazníků.
+Parametrizovaný dotaz vrátí data, která splňují podmínky klauzule WHERE v dotazu. Například můžete parametrizovat seznam zákazníků, aby zobrazoval pouze zákazníky v určitém městě přidáním `WHERE City = @City` na konec příkazu SQL, který vrátí seznam zákazníků.
 
 V Návrhář datových sad vytvoříte parametrizované dotazy TableAdapter. Můžete je také vytvořit v aplikaci systému Windows pomocí příkazu **parametrizovat zdroj dat** v nabídce **data** . Příkaz **parametrizovat data source** vytvoří ovládací prvky ve formuláři, kde můžete zadat hodnoty parametrů a spustit dotaz.
 
 > [!NOTE]
-> Při sestavování parametrizovaného dotazu použijte zápis parametru, který je specifický pro databázi, se kterou píšete. Například přístup a zdroje dat OleDb používají otazník "?" k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?`.
+> Při sestavování parametrizovaného dotazu použijte zápis parametru, který je specifický pro databázi, se kterou píšete. Například přístup a zdroje dat OleDb používají otazník "?" k označení parametrů, takže klauzule WHERE by vypadala takto: `WHERE City = ?` .
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici, kterou používáte. Chcete-li změnit nastavení, přejděte do nabídky **nástroje** a vyberte **Nastavení importu a exportu**. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
@@ -59,7 +59,7 @@ V Návrhář datových sad vytvoříte parametrizované dotazy TableAdapter. Mů
 2. V nabídce **data** vyberte **Přidat dotaz** nebo **inteligentní značky dat**.
 
    > [!NOTE]
-   > Pokud v nabídce **data** není k dispozici možnost **Přidat dotaz** , vyberte ovládací prvek ve formuláři, který zobrazuje zdroj dat, do kterého chcete přidat Parametrizace. Pokud například formulář zobrazuje data v ovládacím prvku <xref:System.Windows.Forms.DataGridView>, vyberte ho. Pokud formulář zobrazuje data v jednotlivých ovládacích prvcích, vyberte jakýkoli ovládací prvek vázaný na data.
+   > Pokud v nabídce **data** není k dispozici možnost **Přidat dotaz** , vyberte ovládací prvek ve formuláři, který zobrazuje zdroj dat, do kterého chcete přidat Parametrizace. Pokud například formulář zobrazuje data v <xref:System.Windows.Forms.DataGridView> ovládacím prvku, vyberte ho. Pokud formulář zobrazuje data v jednotlivých ovládacích prvcích, vyberte jakýkoli ovládací prvek vázaný na data.
 
 3. V oblasti **Tabulka Vybrat zdroj dat** vyberte tablethat, do kterého chcete přidat Parametrizace.
 
@@ -73,9 +73,9 @@ V Návrhář datových sad vytvoříte parametrizované dotazy TableAdapter. Mů
 
 6. Vyberte **OK**.
 
-    Ovládací prvek pro vstup do tohoto parametru a tlačítko **Load** se přidá do formuláře v ovládacím prvku <xref:System.Windows.Forms.ToolStrip>.
+    Ovládací prvek pro zadání parametru a tlačítko **Load** se přidá do formuláře v <xref:System.Windows.Forms.ToolStrip> ovládacím prvku.
 
-   Pokud chcete zadat dotaz na záznamy, které nemají aktuální hodnotu, mohou být k parametrům TableAdapter přiřazeny hodnoty null. Zvažte například následující dotaz, který má parametr `ShippedDate` v klauzuli `WHERE`:
+   Pokud chcete zadat dotaz na záznamy, které nemají aktuální hodnotu, mohou být k parametrům TableAdapter přiřazeny hodnoty null. Zvažte například následující dotaz, který má `ShippedDate` parametr v `WHERE` klauzuli WHERE:
 
    ```sql
    SELECT CustomerID, OrderDate, ShippedDate
@@ -93,10 +93,10 @@ Pokud se jednalo o dotaz na TableAdapter, mohli byste zadat dotaz na všechny ob
 
 1. V **Návrhář datových sad**vyberte dotaz TableAdapter, který musí přijmout hodnoty parametrů s hodnotou null.
 
-2. V okně **vlastnosti** vyberte **parametry**. Potom stisknutím tlačítka se třemi tečkami ( **...** ) otevřete **Editor kolekce Parameters**.
+2. V okně **vlastnosti** vyberte **parametry**. Potom stisknutím tlačítka se třemi tečkami (**...**) otevřete **Editor kolekce Parameters**.
 
-3. Vyberte parametr, který povoluje hodnoty null, a nastavte vlastnost **AllowDBNull** na hodnotu `true`.
+3. Vyberte parametr, který povoluje hodnoty null, a nastavte vlastnost **AllowDBNull** na hodnotu `true` .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vyplnění datových sad pomocí objektů TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)

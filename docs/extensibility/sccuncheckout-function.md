@@ -1,5 +1,5 @@
 ---
-title: Funkce SccUncheckout | Dokumenty společnosti Microsoft
+title: Funkce SccUncheckout | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4317133b2f215e0f9af447e5c042785561231f63
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700249"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout – funkce
-Tato funkce vrátit zpět předchozí operaci pokladny, čímž se obnoví obsah vybraného souboru nebo souborů do stavu před pokladnou. Všechny změny provedené v souboru od pokladny jsou ztraceny.
+Tato funkce vrátí předchozí operaci rezervace a obnoví tak obsah vybraného souboru nebo souborů do stavu před rezervací. Všechny změny provedené v souboru od rezervace jsou ztraceny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,44 +38,44 @@ SCCRTN SccUncheckout (
 #### <a name="parameters"></a>Parametry
  pvContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- Hwnd
+ hWnd
 
-[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- nSoubory
+ nFiles
 
-[v] Počet souborů zadaných `lpFileNames` v poli.
+pro Počet souborů, které jsou zadány v `lpFileNames` poli.
 
- lpNázev souboru
+ lpFileNames
 
-[v] Pole plně kvalifikovaných názvů místních cest souborů, pro které chcete vrátit pokladnu.
+pro Pole plně kvalifikovaných názvů místních cest souborů, pro které se má vrátit rezervace
 
- fMožnosti
+ fOptions
 
-[v] Příkazové příznaky (nepoužívané).
+pro Příznaky příkazu (nepoužívá se)
 
- pvMožnosti
+ pvOptions
 
-[v] Možnosti specifické pro modul plug-in správy zdrojového kódu.
+pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Vrácení pokladny vrátit od souboru bylo úspěšné.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod sohledem zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty. Doporučuje se opakování.|
-|SCC_E_NONSPECIFICERROR|Nespecifické selhání. Vrácení pokladny vrátit od souboru bylo úspěšné.|
+|SCC_OK|Zrušení rezervace bylo úspěšné.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není v rámci správy zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Zrušení rezervace nebylo úspěšné.|
 |SCC_E_NOTCHECKEDOUT|Uživatel nemá soubor rezervován.|
-|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn provádět tuto operaci.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
 |SCC_E_PROJNOTOPEN|Projekt nebyl otevřen ze správy zdrojového kódu.|
-|SCC_I_OPERATIONCANCELED|Operace byla před dokončením zrušena.|
+|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
 
 ## <a name="remarks"></a>Poznámky
- Po této operaci `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` a příznaky budou oba vymazány pro soubory, na kterých byl proveden zpět pokladny.
+ Po provedení této operace `SCC_STATUS_CHECKEDOUT` `SCC_STATUS_MODIFIED` budou pro soubory, na kterých bylo provedeno zrušení rezervace, vymazány příznaky a.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyDestroyEvent2 | Dokumentace Microsoftu
+title: IDebugPropertyDestroyEvent2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,43 +13,43 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 034040ecd8df3368f53cb7a3bf99197e962e2b56
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702295"
 ---
 # <a name="idebugpropertydestroyevent2"></a>IDebugPropertyDestroyEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní je odeslána pomocí ladicího stroje (DE) Správce ladění relace (SDM) vlastnost, která souvisí s určitým dokumentem blížící se zničit.  
+Toto rozhraní se odesílá ladicím modulem (DE) do Správce ladění relace (SDM), když se chystá zničení vlastnosti, která je přidružena k určitému dokumentu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPropertyDestroyEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní oznamuje, že vlastnost došlo ke zničení. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) na stejný objekt jako toto rozhraní musí implementovat rozhraní. Používá SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup `IDebugEvent2` rozhraní. Toto rozhraní je implementováno, pokud je DE dříve vytvořil vlastnost přidružený ke skriptu; zničení vlastnost odebere přidruženého skriptovacího z integrovaného vývojového prostředí.  
+ DE implementuje toto rozhraní, aby nahlásilo, že byla vlastnost zničena. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup k rozhraní QueryInterface `IDebugEvent2` . Toto rozhraní je implementováno, pokud DE dříve vytvořil vlastnost přidruženou ke skriptu; zničením vlastnosti dojde k odebrání přidruženého skriptu z integrovaného vývojového prostředí (IDE).  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- DE vytvoří a odešle tento objekt událostí do sestavy, které byly zničeny vlastnost. Událost je odeslána pomocí [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funkce zpětného volání, který je poskytnut pomocí SDM, když je připojen k laděnému programu.  
+ DE vytvoří a pošle tento objekt události, aby nahlásila vlastnost jako zničenou. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojená k laděnému programu.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody `IDebugPropertyDestroyEvent2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Následující tabulka ukazuje metodu `IDebugPropertyDestroyEvent2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|Získá vlastnost, který se má zničit.|  
+|[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|Získá vlastnost, která má být zničena.|  
   
 ## <a name="remarks"></a>Poznámky  
- Viz poznámky pro [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) podrobnosti o důvod, proč se tyto události se používají.  
+ Podrobnosti o tom, proč se tyto události používají, najdete v tématu poznámky k [IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

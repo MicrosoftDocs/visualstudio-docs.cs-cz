@@ -19,10 +19,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: c2f8169716bda09e3c4d89ce06dc907c726adee2
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330953"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Postupy: shromažďování údajů o výkonu webu
@@ -58,7 +58,7 @@ K shromažďování údajů o výkonu webové aplikace můžete použít **Prův
 
     - Chcete-li shromažďovat data z JavaScriptu běžícího na webových stránkách, zaškrtněte políčko **profil JavaScript** .
 
-6. Klikněte na **Další**.
+6. Klikněte na **Next** (Další).
 
 7. Na čtvrté stránce průvodce klikněte na tlačítko **Dokončit**.
 
@@ -92,7 +92,7 @@ K shromažďování údajů o výkonu webové aplikace můžete použít **Prův
 
     - Chcete-li shromažďovat data z JavaScriptu běžícího na webových stránkách, zaškrtněte políčko **profil JavaScript** .
 
-7. Klikněte na **Další**.
+7. Klikněte na **Next** (Další).
 
 8. Na čtvrté stránce průvodce klikněte na tlačítko **Dokončit**.
 

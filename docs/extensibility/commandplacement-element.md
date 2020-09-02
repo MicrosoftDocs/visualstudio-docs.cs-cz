@@ -1,5 +1,5 @@
 ---
-title: Element commandplacementu | Dokumenty společnosti Microsoft
+title: Element CommandPlacement | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dcf9f23b5e860b895baa4c2a7a783f2ee15fcc77
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739741"
 ---
 # <a name="commandplacement-element"></a>Element CommandPlacement
-Element CommandPlacement umožňuje, aby tlačítka, skupiny a nabídky byly zahrnuty do více než jedné skupiny nebo nabídky. Pomocí CommandPlacement element, není nutné zcela předefinovat tyto položky, aby se změnit vzhled uživatelského rozhraní.
+Element CommandPlacement umožňuje zahrnutí tlačítek, skupin a nabídek do více než jedné skupiny nebo nabídky. Pomocí elementu CommandPlacement není nutné zcela předefinovat tyto položky, aby bylo možné změnit vzhled uživatelského rozhraní.
 
- Další informace naleznete v [tématu Vytvoření opakovaně použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md).
+ Další informace najdete v tématu [vytvoření opakovaně použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <CommandPlacement guid="guidMyCommandSet" id="MyCommand" priority="0x001" >
@@ -31,29 +31,29 @@ Element CommandPlacement umožňuje, aby tlačítka, skupiny a nabídky byly zah
 </CommandPlacement>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Identifikátor guid|Povinná hodnota. Identifikátor GUID sady příkazů, jak je definován v [symboliku Symboly .](../extensibility/symbols-element.md)|
-|id|Povinná hodnota. Id nabídky, skupiny nebo příkazu, který má `Symbols Element`být umístěn, jak je definováno v .|
-|Prioritou|Povinná hodnota. Určuje vizuální polohu položky v nadřazeném prvku.|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Povinná hodnota. Identifikátor GUID sady příkazů, jak je definováno v [elementu Symbols](../extensibility/symbols-element.md).|
+|id|Povinná hodnota. ID nabídky, skupiny nebo příkazu, který se má umístit, jak je definováno v `Symbols Element` .|
+|upřednostněn|Povinná hodnota. Určuje vizuální pozici položky v jejím nadřazeném prvku.|
+|Stav|Nepovinný parametr. Viz [podmíněný Aattributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|Nadřazený|Povinná hodnota. Nabídka nebo skupina, která je hostitelem položky, která má být umístěna.|
+|Nadřazený|Povinná hodnota. Nabídka nebo skupina, která hostuje položku, která se má umístit|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element CommandPlacements](../extensibility/commandplacements-element.md)|Určuje skupiny elementů CommandPlacements a CommandPlacement.|
+|[Element CommandPlacements](../extensibility/commandplacements-element.md)|Určuje skupiny prvků CommandPlacements a CommandPlacement.|
 
 ## <a name="example"></a>Příklad
 
@@ -68,4 +68,4 @@ Element CommandPlacement umožňuje, aby tlačítka, skupiny a nabídky byly zah
 
 ## <a name="see-also"></a>Viz také
 - [Element CommandPlacements](../extensibility/commandplacements-element.md)
-- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

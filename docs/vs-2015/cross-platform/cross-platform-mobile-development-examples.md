@@ -1,5 +1,5 @@
 ---
-title: Příklady vývoj mobilních řešení napříč platformami | Dokumentace Microsoftu
+title: Příklady vývoje mobilních aplikací pro různé platformy | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-mobile
@@ -12,45 +12,45 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: c129634dd2421809d5ac15eb930f07c94d8b39f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151007"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>Příklady vývoje multiplatformních mobilních řešení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Několik šablon nainstaloval Visual C++ pro vývoj mobilních řešení napříč platformami generovat kompletní příklady, které vám pomůže se zdrojem cenných informací. Kromě toho na webu Windows Dev Center má několik ukázkových aplikací, které si můžete stáhnout a vyzkoušet si v sadě Visual Studio.  
+Některé z šablon nainstalovaných nástrojem Visual C++ for Cross-Platform Mobile Development generují kompletní příklady, ze kterých můžete získat informace. Centrum vývojářů pro Windows navíc obsahuje několik ukázkových aplikací, které si můžete stáhnout a vyzkoušet v aplikaci Visual Studio.  
   
-- [Ukázka aplikace pro Android Hello jni](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)  
+- [Ukázka aplikace Hello-JNI pro Android](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)  
   
-   Tato ukázka je port aplikace hello jni sady Android NDK. Vzorek ukazuje začátku do konce Java Native Interface aplikace "Hello World". Načte řetězec z nativní metoda implementována ve sdílené knihovně a pak jej zobrazí v aplikaci.  
+   Tato ukázka je portem aplikace NDK Hello-JNI pro Android. Ukázka demonstruje ucelenou aplikaci Java Native Interface "Hello World". Načte řetězec z nativní metody implementované ve sdílené knihovně a pak ho zobrazí v aplikaci.  
   
-- [Ukázka aplikace pro Android Hello gl2](https://code.msdn.microsoft.com/hello-gl2-Android-3b61896c)  
+- [Ukázka aplikace Hello-gl2 pro Android](https://code.msdn.microsoft.com/hello-gl2-Android-3b61896c)  
   
-   Tato ukázka je port aplikace hello gl2 sady Android NDK. Ukázce aplikace Android OpenGL nativního rozhraní Java začátku do konce. Vykreslí trojúhelník pomocí shaderu OpenGL ES 2.0 rozhraní API.  
+   Tato ukázka je portem aplikace NDK Hello-gl2 pro Android. Ukázka demonstruje komplexní aplikaci OpenGL pro nativní rozhraní Java Native Interface. Vykreslí trojúhelník pomocí rozhraní API OpenGL ES 2,0 shader.  
   
-- [Ukázka aplikace pro Android plazmy rastrového obrázku](https://code.msdn.microsoft.com/Bitmap-Plasma-Android-77ae296a)  
+- [Ukázka rastrového obrázku plazmy pro Android](https://code.msdn.microsoft.com/Bitmap-Plasma-Android-77ae296a)  
   
-   Tato ukázka je port aplikace plazmy rastrový obrázek Android NDK. Ukázce aplikace Java Native Interface Android OpenGL ES 2.0 začátku do konce. Ukazuje přímou manipulaci s vyrovnávacích pamětí pixel Android rastrového obrázku ke generování plazmy vliv.  
+   Tato ukázka je portem aplikace plazmy pro NDK rastrového obrázku pro Android. Ukázka demonstruje komplexní aplikaci Java Native Interface Android ES 2,0. Ukazuje přímou manipulaci s vyrovnávacími pamětmi rastrového obrázku Androidu pro generování plazmového efektu.  
   
-- [Ukázka knihovny TwoLibs Android](https://code.msdn.microsoft.com/TwoLibs-Android-Library-6396e5c4)  
+- [Ukázka knihovny TwoLibs pro Android](https://code.msdn.microsoft.com/TwoLibs-Android-Library-6396e5c4)  
   
-   Tato ukázka je port Android NDK TwoLibs vzorku. Používá dynamicky načíst sdílené knihovny a statické nativní knihovny C++ pro Android, která implementuje metodu volat z aplikace Java Native Interface. Tato ukázka je dobrým výchozím bodem pro vývojáře pochopit, jak používat statickým/dynamickým sdílené knihovny k sestavení aplikace pro JNI Android začátku do konce pomocí sady Visual Studio 2015.  
+   Tato ukázka je portem ukázky Android NDK TwoLibs. Používá dynamicky načtenou sdílenou knihovnu a statickou nativní knihovnu C++ pro Android, která implementuje metodu volanou z aplikace Java Native Interface. Tato ukázka je dobrým výchozím bodem pro vývojáře, který vám pomůže pochopit, jak používat statické a dynamické sdílené knihovny k sestavení komplexní aplikace JNI pro Android pomocí sady Visual Studio 2015.  
   
-- [Ukázková aplikace pro Android Pot čaje](https://code.msdn.microsoft.com/Tea-Pot-Android-Application-e7c05d73)  
+- [Ukázka aplikace pro Android pot](https://code.msdn.microsoft.com/Tea-Pot-Android-Application-e7c05d73)  
   
-   Tato ukázka je port aplikace Android NDK čajové konvice. Ukázce aplikace Java Native Interface Android OpenGL ES 2.0 začátku do konce.  
+   Tato ukázka je portem aplikace pro Android NDK konvice. Ukázka demonstruje komplexní aplikaci Java Native Interface Android ES 2,0.  
   
-- [Ukázkové aplikace MoreTeaPots Android](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549)  
+- [Ukázka aplikace MoreTeaPots pro Android](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549)  
   
-   Tato ukázka je port aplikace Android NDK MoreTeaPots. Ukázce aplikace Android OpenGL nativního rozhraní Java začátku do konce.  
+   Tato ukázka je portem aplikace pro Android NDK MoreTeaPots. Ukázka demonstruje komplexní aplikaci OpenGL pro nativní rozhraní Java Native Interface.  
   
-- [Ukázka knihovny pro Android libstdcpp testu](https://code.msdn.microsoft.com/test-libstdcpp-Android-00b548f5)  
+- [Ukázka knihovny Android test-libstdcpp](https://code.msdn.microsoft.com/test-libstdcpp-Android-00b548f5)  
   
-   Tato ukázka je port testu sady Android NDK-libstdc ++ ukázce speciálně pro použití se službou Visual Studio 2015. Tato ukázka je dobrým výchozím bodem pro vývojáře pochopit, jak používat standardní knihovnu.  
+   Tato ukázka je portem ukázky Android NDK test-libstdc + +, konkrétně pro použití se sadou Visual Studio 2015. Tato ukázka je dobrým výchozím bodem pro vývojáře, který vám pomůže pochopit, jak používat standardní knihovnu.  
   
-  Chcete-li spustit některý z příkladů v sadě Visual Studio, stáhněte soubor zip a otevřete **vlastnosti** stránky staženého souboru v Průzkumníku. Zvolte **Odblokovat** tlačítko a pak zvolte **OK**. Extrahujte obsah komprimovaného souboru do vhodného umístění, poté otevřete složku jazyka C++ v ukázce extrahované a otevřete soubor řešení.  
+  Chcete-li otevřít jeden z příkladů v aplikaci Visual Studio, Stáhněte soubor zip a otevřete stránku **vlastnosti** staženého souboru v Průzkumníkovi. Zvolte tlačítko **odblokování** a pak zvolte **OK**. Extrahujte obsah souboru zip do vhodného umístění, pak otevřete složku C++ v extrahované ukázce a otevřete soubor řešení.  
   
-  Chcete-li ukázku sestavit, stisknutím klávesy F7 nebo na panelu nabídek zvolte **sestavení**, **sestavit řešení**.
+  Chcete-li vytvořit ukázku, stiskněte klávesu F7 nebo na panelu nabídek zvolte možnost **sestavit**, **Sestavit řešení**.

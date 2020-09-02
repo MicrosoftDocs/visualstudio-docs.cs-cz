@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ee2423f552c6931b0c8b62181dc44186053c9460
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329970"
 ---
 # <a name="vsperfmon"></a>VSPerfMon
@@ -44,7 +44,7 @@ VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTP
 |**Uživatel:** `[` *doména* `\]` *uživatelské jméno*|Umožňuje klientovi přístup ke sledování výkonu ze zadaného účtu.|
 |**CROSSSESSION**|Povoluje profilování mezi jednotlivými relacemi.|
 |**Čítač**`:cfg`|Když se použije metoda profilace instrumentace (TRACE), určuje čítač PROCESORů, které se mají shromáždit v každém bodu instrumentace. Můžete shromáždit více dat čítače zadáním více možností čítače.<br /><br /> K určení dat čítače (*cfg*) použijte následující syntax:<br /><br /> **CounterName** [**, reload**[,**FriendlyName**]]<br /><br /> -   **CounterName** je název čítače vráceného příkazem VSPerfCmd/QueryCounters.<br />-   **Opětovné načtení** je interval vzorkování události čítače. Nepoužívejte metodu *Loading* s metodou instrumentace.<br />-Je-li zadán parametr **FriendlyName** , nahradí **CounterName** v nástroje pro profilaci názvy sloupců sestav.|
-|**WINCOUNTER**`:path`|Určuje čítač výkonu systému Windows, který má být zahrnut do dat značek. `path`je řetězec čítače výkonu systému Windows ve formátu cesty čítače PDH. Příklad:<br /><br /> \Processor (0) \\ % času procesoru<br /><br /> Přepínače \System\Context/s|
+|**WINCOUNTER**`:path`|Určuje čítač výkonu systému Windows, který má být zahrnut do dat značek. `path` je řetězec čítače výkonu systému Windows ve formátu cesty čítače PDH. Příklad:<br /><br /> \Processor (0) \\ % času procesoru<br /><br /> Přepínače \System\Context/s|
 |Automatického **označení**`:n`|Určuje časový interval (v milisekundách) mezi automatickými značkami při použití přepínače/WINCOUNTER. ZAOKROUHLOVÁNO. Zaokrouhlí se na nejbližší 500 ms.<br /><br /> Chcete-li zakázat automatické značky, použijte hodnotu 0. (výchozí = 500 ms je-li Neurčeno)|
 
 ## <a name="see-also"></a>Viz také

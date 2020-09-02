@@ -1,5 +1,5 @@
 ---
-title: Vyhledání sady Visual Studio | Dokumentace Microsoftu
+title: Hledání aplikace Visual Studio | Microsoft Docs
 ms.date: 08/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,36 +10,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a7187fbcc3e3aca990846176676a47f5d17aaf00
-ms.sourcegitcommit: 62f42113ae4dae1ddfff1c4e02445acc09913445
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64878146"
 ---
-# <a name="locate-visual-studio"></a>Vyhledejte Visual Studio
+# <a name="locate-visual-studio"></a>Vyhledání sady Visual Studio
 
-Od verze Visual Studio 2017, můžete nainstalovat více instancí stejné verze nebo dokonce edition. To je užitečné, pokud chcete zobrazit náhled nové funkce ve primárního vývojového počítače a zajistit přitom ochranu předchozí instalace. Z důvodů těchto změn neexistuje jedno prostředí proměnné nebo registru hodnota, která vám pomůže najít instanci. Místo toho můžete použít [rozhraní API modelu COM dotazu](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) najít instancí na základě kritérií, které jsou relevantní pro rozšíření.
+Počínaje sadou Visual Studio 2017 můžete nainstalovat více instancí stejné verze nebo dokonce edice. To je užitečné, když chcete zobrazit náhled nových funkcí na primárním vývojovém počítači a přitom zachovat předchozí instalaci. Z důvodu těchto změn neexistuje žádná proměnná prostředí nebo hodnota registru, kterou můžete použít k vyhledání instance. Místo toho můžete použít [rozhraní API pro dotazování objektů COM](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) k nalezení instancí na základě kritérií relevantních pro vaše rozšíření.
 
-Toto je rychlý a jen pro čtení rozhraní API s balíčky NuGet, které jsou k dispozici pro nativní a spravovaný kód.
+Toto je rychlé rozhraní API jen pro čtení s balíčky NuGet dostupnými pro nativní a spravovaný kód.
 
 | Kód | Balíček |
 | ---- | --- |
 | Nativní | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Native |
-| Spravovaní | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop |
+| Spravované | https://nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop |
 
-Můžete najít jednu instanci cestu nebo aktuální proces, nebo vytvořit výčet všech instancí. Zobrazit [našich ukázek](https://github.com/Microsoft/vs-setup-samples) kompletní příklady toho, jak najít sady Visual Studio.
+Můžete vyhledat jednu instanci, která má danou cestu nebo aktuální proces, nebo zobrazit výčet všech instancí. Kompletní příklady, jak najít sadu Visual Studio, najdete v [našich ukázkách](https://github.com/Microsoft/vs-setup-samples) .
 
 ## <a name="tools"></a>Nástroje
 
-Visual Studio a dalších nástrojů najdete v prostředí sestavení, skriptů prostředí PowerShell, instalační programy a další scénáře, existuje mnoho open source nástrojů můžete přímo použít nebo si znovu distribuovat spolu s vlastní skripty.
+Pokud chcete najít sadu Visual Studio a další nástroje v prostředích pro vytváření sestavení, skripty PowerShellu, instalační programy a další scénáře, můžete použít přímo nebo distribuovatelné nástroje společně s vlastními skripty.
 
-| Project | Popis |
+| Projekt | Popis |
 | ------- | ----------- |
-| [vswhere](https://github.com/Microsoft/vswhere) | Jedním souborem nativní spustitelný soubor k vyhledání instance splňující kritéria, například vydání nebo předběžné verze, jaké produkt je nainstalovaný a úlohy, které jsou nainstalovány. Podporuje také vyhledání sady Visual Studio 2010 a novější, ale méně informací je vrácena, který pro Visual Studio 2017 a novější. Zobrazit [wiki](https://github.com/Microsoft/vswhere/wiki) příklady. |
-| [Rutiny VSSetup](https://github.com/Microsoft/vssetup.powershell) | Podporované rutin prostředí PowerShell 2.0 a novějších verzí, které vracejí široké škály informací jako objekty můžete použít k vyhledání instance na základě kritérií stejné jako _vswhere_ a zjišťování ještě více vlastností o instancích. Zobrazit [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) příklady. |
-| [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Automaticky vyhledá _VSIXInstaller_ a předává prostřednictvím příkazového řádku pro instalaci **VSIX* souboru. Tato funkce může být užitečné pro instalační programy, které nemají přímou podporu pro dotaz rozhraní API. Zobrazit [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) příklady. |
+| [vswhere](https://github.com/Microsoft/vswhere) | Nativní spustitelný soubor s jedním souborem pro vyhledání instancí, jako je vydání nebo předběžná verze, jaký produkt je nainstalovaný a které úlohy se nainstalují. Také podporuje hledání v aplikaci Visual Studio 2010 a novější, i když je vráceno méně informací, které jsou k dispozici pro Visual Studio 2017 a novější. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vswhere/wiki) . |
+| [Rutiny VSSetup](https://github.com/Microsoft/vssetup.powershell) | Rutiny prostředí PowerShell podporované 2,0 a novějším, které vracejí formátované informace jako objekty, které můžete použít k vyhledání instancí na základě stejných kritérií jako _vswhere_ a zjišťování ještě více vlastností instancí. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vssetup.powershell/wiki) . |
+| [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | Automaticky vyhledá _VSIXInstaller_ a předá příkazový řádek a nainstaluje soubor **. vsix* . Tato funkce může být užitečná v instalačních nástrojích, které nemají přímou podporu pro rozhraní API pro dotazy. Příklady najdete na [wikiwebu](https://github.com/Microsoft/vsixbootstrapper/wiki) . |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-* [Změny v instalaci sady Visual Studio 2017](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
-* [Spusťte sadu Visual Studio pomocí DTE](launch-visual-studio-dte.md)
+* [Změny v instalačním programu sady Visual Studio 2017](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
+* [Spuštění sady Visual Studio pomocí DTE](launch-visual-studio-dte.md)

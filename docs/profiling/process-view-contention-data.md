@@ -1,5 +1,5 @@
 ---
-title: Zobrazení procesů – data konfliktů | Dokumenty společnosti Microsoft
+title: Zobrazení procesu – data kolizí | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,33 +12,33 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 30c938088538bcecc71e3a7e37d5ae403dd476e1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778398"
 ---
-# <a name="process-view---contention-data"></a>Zobrazení procesu – data tvrzení
-Zobrazení proces zobrazuje data kolizí pro procesy a vlákna, které byly provedeny během spuštění profilování.
+# <a name="process-view---contention-data"></a>Zobrazení procesu – data kolizí
+Zobrazení procesu zobrazuje data kolizí pro procesy a vlákna, které byly provedeny během procesu profilace.
 
- Pokud jsou k dispozici symboly, procesy jsou uvedeny podle názvu. Pokud symboly nejsou k dispozici, procesy jsou uvedeny podle jejich adresu paměti v šestnáctkovém formátu. Vlákna jsou uvedeny jako podřízené části procesu, který je vytvořil.
+ Když jsou symboly k dispozici, jsou procesy uvedeny podle názvu. Pokud symboly nejsou k dispozici, jsou procesy uvedeny podle adresy paměti v šestnáctkovém formátu. Vlákna jsou uvedena jako podřízené položky procesu, který je vytvořil.
 
- Následující tabulka vysvětluje hodnoty sloupců v tabulce zobrazení Proces.
+ V následující tabulce jsou vysvětleny hodnoty sloupců v tabulce zobrazení procesu.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**Počáteční čas**|Počet milisekund nebo cyklů procesoru od začátku profilování do začátku procesu nebo vlákna.|
-|**Blokovaný čas**|Celkový čas, během kterého byly funkce procesu nebo vlákna blokovány provádění.|
-|**Blokovaný čas %**|Procento životnosti procesu nebo vlákna, ve kterém byly funkce procesu nebo vlákna zablokovány.|
-|**Tvrzení**|Počet, kolikrát byly funkce procesu nebo vlákna blokovány v provádění.|
-|**Tvrzení %**|Procento všech tvrzení v profilování spustit, které byly tvrzení procesu nebo vlákna.|
-|**Čas ukončení**|Počet milisekund nebo cyklů procesoru od začátku profilování do konce procesu nebo vlákna.|
-|**Id**|Systémově generovaný identifikátor procesu nebo vlákna.|
-|**Životnost**|Počet milisekund nebo cyklů procesoru od začátku procesu nebo vlákna na konec procesu nebo podprocesu nebo konec profilování.|
-|**Typ**|Typ řádku, proces nebo vlákno.<br /><br /> Pouze v sestavách příkazového řádku **VSReport.** Další informace naleznete [v tématu VSPerfReport](../profiling/vsperfreport.md).|
-|**Název**|Název procesu nebo vlákna.|
+|**Čas zahájení**|Počet milisekund nebo procesorů od začátku profilace po začátek procesu nebo vlákna.|
+|**Čas zablokování**|Celková doba, během které bylo zablokováno provádění funkcí procesu nebo vlákna.|
+|**% Času zablokování**|Procento doby životnosti procesu nebo vlákna, ve kterém bylo zablokováno provádění funkcí procesu nebo vlákna.|
+|**Sporů**|Počet, kolikrát byly zablokovány funkce procesu nebo vlákna.|
+|**Sporů**|Procentuální podíl všech sporů v rámci profilace, které byly spory procesu nebo vlákna.|
+|**Čas ukončení**|Počet milisekund nebo procesorů od začátku profilace po konec procesu nebo vlákna.|
+|**ID**|Systémem generovaný identifikátor procesu nebo vlákna.|
+|**Doba života**|Počet milisekund nebo procesorů od začátku procesu nebo vlákna na konec procesu nebo vlákna nebo konec profilace.|
+|**Typ**|Typ řádku, buď proces, nebo vlákno.<br /><br /> Pouze v sestavách příkazového řádku **VSReport** . Další informace najdete v tématu [VSPerfReport](../profiling/vsperfreport.md).|
+|**Name**|Název procesu nebo vlákna.|
 |**Jedinečné ID**|Identifikátor generovaný profilerem, který je jedinečný pro proces nebo vlákno.|
 
 ## <a name="see-also"></a>Viz také
-- [Postup: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
+- [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)
 - [Zobrazení procesů](../profiling/process-view.md)

@@ -1,5 +1,5 @@
 ---
-title: Určení umístění souboru balíčku VSPackage pro prostředí sady VS | Dokumentace Microsoftu
+title: Určení umístění souboru VSPackage do prostředí VS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,23 +12,23 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c0662bfe22b4c78bb754bbac2fbfdd281a4a7bce
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408520"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64832953"
 ---
 # <a name="specifying-vspackage-file-location-to-the-vs-shell"></a>Specifikace umístění souboru balíčku VSPackage pro prostředí sady VS
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] musí být schopna najít sestavení knihovny DLL pro načtení sady VSPackage. Můžete jej umístit různými způsoby, jak je popsáno v následující tabulce.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] musí být schopné najít knihovnu DLL sestavení pro načtení VSPackage. Můžete ji vyhledat různými způsoby, jak je popsáno v následující tabulce.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|Použijte klíč registru CodeBase.|Klíč základu kódu je možné směrovat [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načtení balíčku VSPackage sestavení z plně kvalifikované cesty. Hodnotu klíče by měl být cesta k souboru na knihovnu DLL. Toto je nejlepší způsob, jak mají [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načíst sestavení vašeho balíčku. Tato technika se někdy označuje jako "základu kódu a soukromého instalační adresář techniku." Během registrace byla předána hodnota základu kódu do třídy atributů registrace prostřednictvím instance <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.RegistrationContext> typu.|  
-|Umístit knihovnu DLL do **PrivateAssemblies** adresáře.|Umístění sestavení v **PrivateAssemblies** podadresáře [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] adresáře. Sestavení součástí **PrivateAssemblies** , zjišťují se automaticky, ale nejsou viditelné v **Add References** dialogové okno. Rozdíl mezi **PrivateAssemblies** a **PublicAssemblies** je, že sestavení v **PublicAssemblies** jsou uvedené na **přidat odkazy**  dialogové okno. Pokud jste se rozhodli používat techniku "základu kódu a soukromého instalační adresář", pak byste měli nainstalovat do **PrivateAssemblies** adresáře.|  
-|Použijte sestavení se silným názvem a klíčem registru sestavení.|Klíč sestavení je možné explicitně směrovat [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] silné zatížení s názvem sestavení VSPackage. Hodnota klíče musí být silný název sestavení.|  
-|Umístit knihovnu DLL do **PublicAssemblies** adresáře.|Nakonec sestavení můžou také umístit **PublicAssemblies** podadresáře. Sestavení se nachází v **PublicAssemblies** se automaticky zjistí a zobrazí se také v **Add References** dialogové okno v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].<br /><br /> VSPackage sestavení by měla být umístěna pouze v **PublicAssemblies** adresáře, pokud obsahují spravované součásti, které mají za cíl opakovaně využít pro jiné vývojáře VSPackage. Většina sestavení toto kritérium nesplňují.|  
+|Použijte klíč registru CodeBase.|Klíč CodeBase lze použít k přímému [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načtení sestavení VSPackage z jakékoli plně kvalifikované cesty k souboru. Hodnota klíče by měla být cesta k souboru DLL. Toto je nejlepší způsob, jak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načíst sestavení balíčku. Tato technika se někdy označuje jako "metoda instalačního adresáře pro základ kódu/privátní." Během registrace se hodnota základu kódu předává do tříd registračních atributů prostřednictvím instance <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.RegistrationContext> typu.|  
+|Uložte knihovnu DLL do adresáře **PrivateAssemblies** .|Sestavení umístěte do podadresáře **PrivateAssemblies** [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] adresáře. Sestavení umístěná v **PrivateAssemblies** se automaticky zjišťují, ale nejsou viditelná v dialogovém okně **Přidat odkazy** . Rozdíl mezi **PrivateAssemblies** a **PublicAssemblies** je, že sestavení v **PublicAssemblies** jsou v dialogovém okně **Přidat odkazy** výčtu. Pokud se rozhodnete, že nepoužijete techniku "CodeBase/Private instalační adresář", měli byste nainstalovat do adresáře **PrivateAssemblies** .|  
+|Použijte sestavení se silným názvem a klíč registru sestavení.|Klíč sestavení lze použít k explicitnímu přímému [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načtení silného pojmenovaného sestavení VSPackage. Hodnota klíče by měla být silného názvu sestavení.|  
+|Uložte knihovnu DLL do adresáře **PublicAssemblies** .|Nakonec může být sestavení také umístěno do podadresáře **PublicAssemblies** . Sestavení umístěná v **PublicAssemblies** se automaticky zjišťují a zobrazí se také v dialogovém okně **Přidat odkazy** v [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .<br /><br /> Sestavení VSPackage by mělo být umístěno pouze v adresáři **PublicAssemblies** , pokud obsahují spravované součásti, které mají být použity jiným vývojářům VSPackage. Většina sestavení nesplňuje toto kritérium.|  
   
 > [!NOTE]
-> Sestavení silným názvem, podepsaný držitelem se používají pro všechna závislá sestavení. Tato sestavení musí být nainstalovaná také do vlastního adresáře nebo globální mezipaměti sestavení (GAC). Je to ochrana proti je v konfliktu s sestavení, které mají stejný základní název souboru, označované jako weak vazbu.
+> Používejte podepsaná sestavení se silným názvem pro všechna vaše závislá sestavení. Tato sestavení by také měla být nainstalována ve vašem vlastním adresáři nebo globální mezipaměti sestavení (GAC). To je chráněno proti konfliktům se sestaveními, která mají stejný základní název souboru, označovaného jako vytvoření vazby se slabým názvem.

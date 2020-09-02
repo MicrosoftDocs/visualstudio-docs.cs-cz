@@ -1,5 +1,5 @@
 ---
-title: Folder – Element (šablony projektů Visual Studio) | Dokumentace Microsoftu
+title: Folder – element (šablony projektů sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,23 +13,23 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 35448f4324213739cb2dc14a95598ac9a3d4432f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204357"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Element složky (šablony projektů sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje složku, která se přidá do projektu.  
+Určuje složku, která bude přidána do projektu.  
   
- \<Vstemplate – >  
+ \<VSTemplate>  
  \<TemplateContent>  
  \<Project>  
- \<Složky >  
+ \<Folder>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Folder Name="Project Folder">  
@@ -45,28 +45,28 @@ Určuje složku, která se přidá do projektu.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Požadovaný atribut.<br /><br /> Název složky projektu.|  
-|`TargetFolderName`|Nepovinný atribut.<br /><br /> Určuje název složky při vytvoření projektu ze šablony. Tento atribut je užitečné pro použití k vytvoření názvu složky nahrazení parametru nebo pojmenování složky mezinárodní řetězcem, který nelze použít přímo v souboru ZIP.|  
+|`Name`|Požadovaný atribut.<br /><br /> Název složky projektu|  
+|`TargetFolderName`|Nepovinný atribut.<br /><br /> Určuje název, který má být při vytvoření projektu ze šablony vytvořen. Tento atribut je vhodný pro použití náhrady parametrů k vytvoření názvu složky nebo pojmenování složky s mezinárodním řetězcem, který nelze použít přímo v souboru. zip.|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|`Folder`|Určuje složku, kterou chcete přidat do projektu. `Folder` prvky mohou obsahovat podřízené `Folder` elementy.|  
-|[ProjectItem –](../extensibility/projectitem-element-visual-studio-item-templates.md)|Určuje soubor a přidejte do projektu.|  
+|`Folder`|Určuje složku, která se má přidat do projektu. `Folder` prvky mohou obsahovat podřízené `Folder` prvky.|  
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Určuje soubor, který se má přidat do projektu.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[Projekt](../extensibility/project-element-visual-studio-templates.md)|Volitelný podřízený prvek [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md).|  
   
 ## <a name="remarks"></a>Poznámky  
- `Folder` je volitelný podřízený `Project`.  
+ `Folder` je volitelnou podřízenou položkou `Project` .  
   
- Uspořádat do složek v šabloně položky projektu můžete použít některý z následujících metod:  
+ K uspořádání položek projektu do složek v šabloně můžete použít kteroukoli z následujících metod:  
   
-- Zahrnout složky do souboru ZIP šablony a přidat je do projektu v souboru .vstemplate tak, že zadáte cestu k souboru v `ProjectItem` elementy bez `Folder` elementy. Toto je doporučená metoda. Příklad:  
+- Zahrňte složky do souboru template. zip a přidejte je do projektu v souboru. vstemplate zadáním cesty k souboru v `ProjectItem` prvcích bez `Folder` elementů. Toto je doporučená metoda. Příklad:  
   
      `...`  
   
@@ -76,7 +76,7 @@ Určuje složku, která se přidá do projektu.
   
      `...`  
   
-- Zahrnout složky soubor ZIP šablony a přidat je do projektu v souboru .vstemplate `Folder` elementy. Příklad:  
+- Zahrňte složky do souboru template. zip a přidejte je do projektu v souboru. vstemplate s `Folder` prvky. Příklad:  
   
      `...`  
   
@@ -90,7 +90,7 @@ Určuje složku, která se přidá do projektu.
   
      `...`  
   
-- Nezahrnují složek v souboru ZIP šablony, ale přidat pomocí složky `TargetFileName` atribut `ProjectItem` elementu. Příklad:  
+- Nezahrnujte složky do souboru template. zip, ale přidejte složky pomocí `TargetFileName` atributu `ProjectItem` elementu. Příklad:  
   
      `...`  
   
@@ -101,7 +101,7 @@ Určuje složku, která se přidá do projektu.
      `...`  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ukazuje metadata pro šablonu projektu pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -130,6 +130,6 @@ Určuje složku, která se přidá do projektu.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [ProjectItem – element (šablony sady Visual Studio)](../extensibility/projectitem-element-visual-studio-item-templates.md)

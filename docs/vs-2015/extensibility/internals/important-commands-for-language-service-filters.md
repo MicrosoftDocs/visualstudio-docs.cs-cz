@@ -1,5 +1,5 @@
 ---
-title: Důležité příkazy pro jazyk služby filtry | Dokumentace Microsoftu
+title: Důležité příkazy pro filtry služby jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,33 +12,33 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 03bb20abf32f7c320ed56f4a649a9f43453e7694
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447259"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64819851"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Důležité příkazy pro filtry služby jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Pokud chcete vytvořit filtr služby plnohodnotný jazyk, vezměte v úvahu následující příkazy pro zpracování. Úplný seznam identifikátorů příkaz je definován v <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu pro spravovaný kód a záhlaví Stdidcmd.h soubor pro nespravované [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] kódu. Můžete najít soubor Stdidcmd.h v *cestu instalace sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc.  
+Pokud chcete vytvořit plně vybavený filtr jazykové služby, zvažte zpracování následujících příkazů. Úplný seznam identifikátorů příkazů je definován ve <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu pro spravovaný kód a hlavičkový soubor Stdidcmd. h pro nespravovaný [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] kód. Soubor Stdidcmd. h můžete najít v *instalační cestě sady Visual Studio SDK*\VisualStudioIntegration\Common\Inc.  
   
-## <a name="commands-to-handle"></a>Příkazy ke zpracování  
+## <a name="commands-to-handle"></a>Příkazy, které se mají zpracovat  
   
 > [!NOTE]
-> Není to povinné pro filtrování pro každý příkaz v následující tabulce.  
+> Pro každý příkaz v následující tabulce není nutné filtrovat.  
   
 |Příkaz|Popis|  
 |-------------|-----------------|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel klepne pravým tlačítkem myši. Tento příkaz označuje, že je čas na místní nabídky. Pokud tento příkaz nelze zpracovat, textový editor poskytuje výchozí místní nabídka bez žádné příkazy specifické pro jazyk. Zahrnout vlastní příkazy v této nabídce, zpracování příkazu a zobrazení místní nabídky.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Obvykle posílají, když uživatel zadá CTRL + J. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> k zobrazení okna dokončování příkazu.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá znak. Sledujte tento příkaz můžete určit, kdy zadání znaku aktivační události a k poskytování příkaz dokončení, metoda tipy a text značky, třeba barevné zvýrazňování syntaxe, párování složených závorek a označování chyb. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> pro dokončování příkazů a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> metodu na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> metoda tipy. Chcete-li podporovat text značky, sledujte tento příkaz k určení, zda je zadaný znak je nutné aktualizovat vaše značky.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá klávesu Enter. Monitorovat tento příkaz určuje, kdy chcete zavřít okno tipů metoda voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>. Ve výchozím zobrazení textu zpracovává tento příkaz.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá klávesu Backspace. Monitorování k určení toho, kdy chcete zavřít okno tipů metoda voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>. Ve výchozím zobrazení textu zpracovává tento příkaz.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odeslané z nabídky nebo klávesovou zkratku. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> okno tipů aktualizovat informace o parametru.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel najede myší proměnné nebo se umístí kurzor na proměnnou a vybere **rychlé informace** z **IntelliSense** v **upravit** nabídky. Návratový typ proměnné v popisu voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>. Pokud ladění je aktivní, by měl tip také zobrazí hodnotu proměnné.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Obvykle posílají, když uživatel zadá kombinaci kláves CTRL + MEZERNÍK. Tento příkaz zjistí, služba jazyka pro volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Poslané z nabídky, obvykle **Zakomentovat výběr** nebo **Odkomentovat výběr** z **Upřesnit** v **upravit** nabídky. <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> Označuje, že uživatel chce okomentujte vybraného textu. <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> označuje, že uživatel chce zrušte komentář u vybraného textu. Pouze služba jazyka je možné implementovat tyto příkazy.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel klikne pravým tlačítkem myši. Tento příkaz označuje, že je čas zadat místní nabídku. Pokud tento příkaz nezpracujete, textový editor nabídne výchozí místní nabídku bez příkazů specifických pro jazyk. Chcete-li do této nabídky zahrnout vlastní příkazy, zpracujte příkaz a zobrazte místní nabídku sami.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Obvykle se posílá, když uživatel zadá CTRL + J. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu pro <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> zobrazení pole dokončení příkazu.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá znak. Pomocí tohoto příkazu můžete určit, kdy se má zadat spouštěcí znak a poskytnout dokončování příkazů, popisy metod a textové značky, jako je například vybarvení syntaxe, spárování složených závorek a značky chyb. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu pro <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> doplňování příkazů for a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> metodu v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> tipech pro metody. Chcete-li zajistit podporu textových značek, sledujte tento příkaz, abyste zjistili, zda zadaný znak vyžaduje aktualizaci značek.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá klávesu ENTER. Pomocí tohoto příkazu můžete určit, kdy se má zavřít okno s popisem metody voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metody na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> . Ve výchozím nastavení se tento příkaz zpracuje v zobrazení text.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel zadá klávesu BACKSPACE. Monitorování k určení, kdy zavřít okno s popisem metody voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> metody na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> . Ve výchozím nastavení se tento příkaz zpracuje v zobrazení text.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se z nabídky nebo klávesových zkratek. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metodu na, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> aby se aktualizovalo okno tip s použitím informací o parametrech.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se, když uživatel najede myší na proměnnou nebo umístí kurzor na proměnnou a vybere v nabídce **Upravit** **rychlé informace** z **IntelliSense** . Vrátí typ proměnné v tipu voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> metody na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . Pokud je ladění aktivní, Tip by měl také zobrazit hodnotu proměnné.|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Obvykle se posílá, když uživatel zadá CTRL + MEZERNÍK. Tento příkaz oznamuje službě jazyka, aby volala <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> .|  
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|Odesílá se z nabídky, obvykle se jedná o **Výběr komentáře** nebo **Odkomentovat výběr** v nabídce **Upřesnit** v nabídce **Upravit** . <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> indikuje, že uživatel chce komentovat vybraný text. <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> indikuje, že uživatel chce zrušit komentář k vybranému textu. Tyto příkazy mohou být implementovány pouze pomocí jazykové služby.|  
   
 ## <a name="see-also"></a>Viz také  
  [Vývoj služby starší verze jazyka](../../extensibility/internals/developing-a-legacy-language-service.md)

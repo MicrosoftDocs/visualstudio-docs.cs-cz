@@ -14,20 +14,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0c23fed64d7f3a7681fce96663262f6d633299a9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849339"
 ---
-# <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Postupy: vytvoření podmínky deklarativního pravidla (starší verze)
-Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-create-a-declarative-rule-condition-legacy"></a>Postupy: Vytvoření podmínky deklarativního pravidla (starší verze)
+Toto téma popisuje, jak deklarovat podmínku pravidla pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Příkaz podmínky se vyhodnotí jako **true** nebo **false**. Podmínka deklarativního pravidla je příkaz podmínky, který se vytvoří pomocí [dialogového okna Editor podmínek pravidla (starší verze)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) a uložený jako XML s pracovním postupem. Může obsahovat predikáty, které porovnávají stav pracovního postupu a logickou algebraický, které kombinuje více predikátů.
 
  Podmínky deklarativního pravidla se používají v následujících programovací model Windows Workflow Foundationch aktivitách, které se doplňují po box:
 
-- [ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
+- [Aktivitou skupiny ConditionedActivityGroup](https://msdn2.microsoft.com/library/system.workflow.activities.conditionedactivitygroup.aspx)
 
 - [IfElseBranchActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ifelsebranchactivity.aspx)
 

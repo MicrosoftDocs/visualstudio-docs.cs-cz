@@ -1,5 +1,5 @@
 ---
-title: Souhrnné zobrazení – Data paměti .NET | Dokumentace Microsoftu
+title: Souhrnné zobrazení – data paměti .NET | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,43 +12,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 61fe6d3982828d1e2a8ae4aeaba3d89b1b75f4f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193321"
 ---
-# <a name="summary-view---net-memory-data"></a>Souhrnné zobrazení – Data paměti .NET
+# <a name="summary-view---net-memory-data"></a>Souhrnné zobrazení – data paměti .NET
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Souhrnné zobrazení zobrazuje informace o funkcích rozhraní .NET a typy, které nejvíce paměti přidělené a typy, které byly vytvořeny většinu doby v profilování. Další informace, včetně popisu odkazy oznámení a sestavy seznamy, naleznete v tématu [souhrnné zobrazení](../profiling/summary-view.md).  
+V souhrnném zobrazení se zobrazí informace o funkcích a typech .NET, které přidělují nejvíc paměti, a typy, které byly vytvořeny ve většině případů při spuštění profilace. Další informace, včetně popisu odkazů na oznámení a seznamů sestav, najdete v tématu [souhrnné zobrazení](../profiling/summary-view.md).  
   
-## <a name="timeline-graph"></a>Časová osa grafu  
- Časová osa grafu v souhrnném zobrazení ukazuje využití procesoru (CPU) profilovaná aplikace v čase, které profilaci došlo k chybě. Časová osa grafu můžete použít k filtrování zobrazení tak, aby ve vybraném časovém rozsahu. Další informace najdete v tématu [jak: Filtrování zobrazení sestav ze souhrnné časové osy](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
+## <a name="timeline-graph"></a>Graf časové osy  
+ Graf časové osy v zobrazení Souhrn ukazuje využití procesoru profilované aplikací v době, kdy k profilaci došlo. Graf časové osy můžete použít k filtrování zobrazení do vybraného časového rozsahu. Další informace najdete v tématu [Postup: filtrování zobrazení sestav na časové ose souhrnu](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
   
-## <a name="functions-allocating-most-memory"></a>Funkce přidělující nejvíce paměti  
- Seznam funkcí, které přiděleny nejvyšší počet bajtů paměti během spuštění profilování.  
+## <a name="functions-allocating-most-memory"></a>Funkce, které přiděluje většinu paměti  
+ Zobrazuje seznam funkcí, které přidělily největší počet bajtů paměti při spuštění profilace.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název**|Název funkce.|  
-|**% Bajtů**|Procento všech přidělených bajtů při spuštění profilace, které byly přiděleny pomocí této funkce nebo podřízené funkce, která byla volaných touto funkcí.|  
+|**Name**|Název funkce|  
+|**Psaný**|Procento všech přidělených bajtů v běhu profilace, které byly přiděleny touto funkcí nebo podřízenou funkcí volanou touto funkcí.|  
   
 ## <a name="types-with-most-memory-allocated"></a>Typy s největším množstvím přidělené paměti  
- Obsahuje seznam typů, pro které byly přiděleny nejvyšší počet bajtů paměti při spuštění profilace.  
+ Zobrazí seznam typů, pro které byl při spuštění profilování přidělen největší počet bajtů paměti.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název**|Název typu.|  
-|**% Bajtů**|Procento všech přidělených bajtů při spuštění profilace, které byly přiděleny u tohoto typu.|  
+|**Name**|Název typu|  
+|**Psaný**|Procento všech přidělených bajtů v běhu profilace, které byly přiděleny pro tento typ.|  
   
-## <a name="types-with-most-instances"></a>Typy s největším množstvím instancí  
- Seznam typů, které byly vytvořeny nejvíce času během spuštění profilování. kdyby  
+## <a name="types-with-most-instances"></a>Typy s největší instancí  
+ Zobrazí seznam typů, které byly vytvořeny ve většině případů během spuštění profilace. hlíží  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název**|Název typu.|  
-|**% Instancí**|Procentuální podíl celkového počtu of.NET objektů, které byly vytvořeny v profilování, která byla instance tohoto typu.|  
+|**Name**|Název typu|  
+|**Instance**|Procentuální podíl celkového počtu objektů of.NET vytvořených při spuštění profilace, které byly instancemi tohoto typu.|  
   
 ## <a name="see-also"></a>Viz také  
  [Souhrnné zobrazení](../profiling/summary-view-sampling-data.md)   

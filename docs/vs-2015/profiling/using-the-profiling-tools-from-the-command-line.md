@@ -1,5 +1,5 @@
 ---
-title: Pomocí profilace z příkazového řádku nástroje | Dokumentace Microsoftu
+title: Použití Nástroje pro profilaci z příkazového řádku | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,31 +16,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ebd0fbabb73d4c77d1d888b207882e7403f46aab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431623"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64822686"
 ---
 # <a name="using-the-profiling-tools-from-the-command-line"></a>Použití nástrojů pro profilaci z příkazového řádku
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít nástroje příkazového řádku [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje pro profilaci sady do profilu aplikace příkazového řádku a k automatizaci profilace pomocí dávkových souborech a skriptování. Můžete také vygenerovat soubory sestav z příkazového řádku. Zjednodušené samostatného profileru můžete použít ke shromažďování dat na počítačích, které nemají [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalované.  
+Pomocí nástrojů příkazového řádku [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Nástroje pro profilaci můžete Profilovat aplikace na příkazovém řádku a automatizovat profilaci pomocí dávkových souborů a skriptování. Soubory sestav můžete také vygenerovat na příkazovém řádku. Pomocí zjednodušeného samostatného profileru můžete shromažďovat data na počítačích, které nejsou [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalované.  
   
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. Aplikace Windows Store také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro Windows Store vyžadují také nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
 ## <a name="common-tasks"></a>Obecné úlohy  
   
-|Úloha|Související obsah|  
+|Úkol|Související obsah|  
 |----------|---------------------|  
-|**Nastavte umístění symbolů:** Pokud chcete zobrazit názvy parametrů a funkce, musí profiler mají přístup k souborům symbolů (PDB) profilovaných binárních souborů. Tyto soubory by měly obsahovat soubory symbolů pro Microsoft operační systém a aplikace, které chcete zobrazit v analýze. Abyste měli jistotu, že máte soubory s příponou .pdb správné pro binární soubory Microsoft můžete použít veřejné Microsoft symbol server.|-   [Jak: Určení umístění souboru se symboly z příkazového řádku](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)|  
-|**Profilace aplikace:** Nástroje příkazového řádku a možnosti, které použijete k profilu cílové aplikace závisí na typu aplikace, metodu profilace a určuje, zda je cíl spravované nebo nativní aplikaci.|-   [Použití metod profilace z příkazového řádku](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md)<br />-   [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)<br />-   [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)<br />-   [Profilace služeb](../profiling/command-line-profiling-of-services.md)|  
-|**Vytvořte sestavy .xml a CSV:** Datové soubory, které lze zobrazit v rozhraní pro profilaci příkazového řádku vytvoří [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. XML nebo souborů hodnot oddělených čárkami (CSV) dat můžete vygenerovat také pomocí příkazového řádku nástroje VSPerfReport.|-   [Vytváření sestav Profiler z příkazového řádku](../profiling/creating-profiler-reports-from-the-command-line.md)<br />-   [VSPerfReport](../profiling/vsperfreport.md)|  
-|**Profil kód v počítačích bez sady Visual Studio:** Samostatný profiler nástrojů pro profilaci sady můžete použít ke shromažďování dat pro aplikace na počítače, které nemají [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalované.|-   [Jak: Instalace samostatného profileru](../profiling/how-to-install-the-stand-alone-profiler.md)|  
+|**Nastavte umístění symbolů:** Pro zobrazení názvů funkcí a parametrů musí mít Profiler přístup k souborům symbolů (. pdb) profilované binární soubory. Tyto soubory by měly obsahovat soubory symbolů pro operační systém a aplikace společnosti Microsoft, které chcete zobrazit ve vaší analýze. Pomocí veřejného serveru Microsoft symbol server se ujistěte, že máte správné soubory. PDB pro binární soubory společnosti Microsoft.|-   [Postupy: určení umístění souborů symbolů z příkazového řádku](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)|  
+|**Profilování aplikace:** Nástroje příkazového řádku a možnosti, které slouží k profilování cílové aplikace, závisí na typu aplikace, metodě profilování a na tom, zda je cílem spravovaná nebo nativní aplikace.|-   [Použití metod profilace z příkazového řádku](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md)<br />-   [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)<br />-   [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)<br />-   [Služby profilace](../profiling/command-line-profiling-of-services.md)|  
+|**Vytváření sestav. XML a. CSV:** Profilování v příkazovém řádku vytvoří datové soubory, které lze zobrazit v rozhraní pro [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Pomocí nástroje příkazového řádku VSPerfReport můžete také vygenerovat soubory. XML nebo textový soubor s oddělovači (. csv).|-   [Vytváření sestav profileru z příkazového řádku](../profiling/creating-profiler-reports-from-the-command-line.md)<br />-   [VSPerfReport](../profiling/vsperfreport.md)|  
+|**Profilování kódu na počítačích bez sady Visual Studio:** K shromažďování dat pro aplikace na počítačích, které nejsou nainstalované, můžete použít Nástroje pro profilaci samostatného profileru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|-   [Postupy: Instalace samostatného profileru](../profiling/how-to-install-the-stand-alone-profiler.md)|  
   
 ## <a name="reference"></a>Odkaz  
- [Referenční dokumentace nástrojů příkazového řádku pro profilaci](../profiling/command-line-profiling-tools-reference.md)  
+ [Odkaz na Nástroje pro profilaci příkazového řádku](../profiling/command-line-profiling-tools-reference.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)

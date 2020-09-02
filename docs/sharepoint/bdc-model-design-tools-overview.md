@@ -1,5 +1,5 @@
 ---
-title: Přehled nástroje pro návrh modelu služby BDC | Dokumentace Microsoftu
+title: Přehled nástrojů pro návrh modelu služby BDC | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,61 +24,61 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7a2531f1cc6352a03acf0b3d6af82c35e47c2743
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387719"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64827956"
 ---
-# <a name="bdc-model-design-tools-overview"></a>Přehled nástroje pro navrhování modelů služby BDC
-  Obchodní Data připojení (BDC) model můžete navrhnout pomocí návrháře služby BDC **podrobnosti metody služby BDC** okně a **služby BDC Explorer**.
+# <a name="bdc-model-design-tools-overview"></a>Přehled nástrojů pro návrh modelu služby BDC
+  Model služby připojení obchodních dat (BDC) můžete navrhovat pomocí návrháře služby BDC, okna **Podrobnosti metody služby BDC** a **Průzkumníka služby BDC**.
 
- **Služby BDC Explorer** umožňuje procházet model, vyhledávání modelu a definování popisovače typu.
+ **Průzkumník služby BDC** umožňuje procházet model, Hledat v něm model a definovat deskriptory typů.
 
-## <a name="bdc-designer"></a>Návrháři služby BDC
- Návrháři služby BDC umožňuje definovat entity v modelu a vizuálně uspořádat jejich vztahy mezi sebou. Návrháři služby BDC umožňuje provádění následujících úloh:
+## <a name="bdc-designer"></a>Návrhář služby BDC
+ Návrhář služby BDC umožňuje definovat entity v modelu a vizuálně uspořádat jejich vztahy mezi sebou. Pomocí návrháře služby BDC můžete provádět následující úlohy:
 
-- Přidání entity do modelu.
+- Přidejte do modelu entity.
 
 - Odeberte entity z modelu.
 
-- Definování vztahů mezi entitami.
+- Definujte vztahy mezi entitami.
 
-  Otevřít návrháři služby BDC, poklikejte na soubor modelu ve vašem projektu, nebo otevřete místní nabídku pro soubor modelu a klikněte na tlačítko **otevřete**. Přidání entity do modelu přetažením nebo zkopírováním **Entity** z **nástrojů** do návrháře. Chcete-li vytvořit přidružení mezi dvěma entitami, zvolte **přidružení** v ovládacím prvku **nástrojů**, zvolte první entitu a pak zvolte druhou entitu.
+  Chcete-li otevřít návrháře služby BDC, dvakrát klikněte na soubor modelu v projektu nebo otevřete místní nabídku pro soubor modelu a pak zvolte možnost **otevřít**. Přidejte entitu do modelu přetažením nebo zkopírováním **entity** z **panelu nástrojů** do návrháře. Chcete-li vytvořit přidružení mezi dvěma entitami, zvolte ovládací prvek **přidružení** v **sadě nástrojů**, zvolte první entitu a pak zvolte druhou entitu.
 
 ## <a name="bdc-method-details-window"></a>Okno Podrobnosti metody služby BDC
- Použití **podrobnosti metody služby BDC** okno Definovat parametry, instance, a popisovače metody filtrů.
+ K definování parametrů, instancí a filtru popisovačů metody použijte okno **Podrobnosti metody služby BDC** .
 
- Můžete rychle vytvořit metody Finder, Specific Finder, Creator, Updater a Deleter v **podrobnosti metody služby BDC** okna. Při generování těchto metod, Visual Studio přidá metadata, například parametry, instance a popisovače typu metody. Můžete upravit tato metadata splňovat vaše konkrétní scénář.
+ V okně **Podrobnosti metody služby BDC** můžete rychle vygenerovat metody Finder, konkrétního vyhledávače, autora, aktualizačního programu a odstranění. Když vygenerujete tyto metody, Visual Studio přidá do metody metadata, jako jsou parametry, instance a popisovače typů. Tato metadata můžete upravit tak, aby vyhovovala vašemu konkrétnímu scénáři.
 
- Chcete-li otevřít **podrobnosti metody služby BDC** okna na řádku nabídek zvolte **zobrazení** > **ostatní Windows** > **podrobnosti metody služby BDC** .
+ Chcete-li otevřít okno **Podrobnosti metody služby BDC** , vyberte v řádku nabídek možnost **Zobrazit**  >  **Další**  >  **Podrobnosti o metodě služby Windows BDC**.
 
- Chcete-li zobrazit metody v **podrobnosti metody služby BDC** okna, vyberte entitu v Návrháři služby BDC. Metody vybrané entity se zobrazí v **podrobnosti metody služby BDC** okna. Pokud jste nezvolili entitu v Návrháři služby BDC **podrobnosti metody služby BDC** okně zobrazí žádné informace.
+ Pokud chcete zobrazit metody v okně **Podrobnosti metody služby BDC** , vyberte entitu v Návrháři služby BDC. Metody vybrané entity se zobrazí v okně **Podrobnosti metody služby BDC** . Pokud nevyberete entitu v Návrháři BDC, nezobrazí se v okně **Podrobnosti metody služby BDC** žádné informace.
 
- Rozbalit nebo sbalit uzly v **podrobnosti metody služby BDC** okno Definovat parametry, instance, a popisovače filtrů. Použití **služby BDC Explorer** k definování popisovače typu.
+ Rozbalení nebo sbalení uzlů v okně **Podrobnosti metody služby BDC** k definování parametrů, instancí a popisovačů filtru. K definování popisovačů typů použijte **Průzkumníka služby BDC** .
 
 ## <a name="bdc-explorer"></a>Průzkumník modelu BDC
- **Služby BDC Explorer** zobrazuje prvky, které tvoří modelu. Otevřete **služby BDC Explorer**, na panelu nabídek zvolte **zobrazení** > **ostatní Windows** > **služby BDC Explorer**. Procházet model, rozbalte uzly v **služby BDC Explorer**. Každý uzel reprezentuje element v XML souboru modelu.
+ **Průzkumník služby BDC** zobrazuje prvky, které tvoří model. **Průzkumníka služby BDC**otevřete tak, že na řádku nabídek kliknete na **Zobrazit**  >  **ostatní Windows**v  >  **Průzkumníkovi služby**Windows. Pokud chcete model Procházet, rozbalte uzly v **Průzkumníkovi služby BDC**. Každý uzel představuje prvek v XML souboru modelu.
 
- Při výběru uzly v **služby BDC Explorer**, vlastnosti každý uzel, který zvolíte se zobrazí v **vlastnosti** okna. Mnohé z těchto vlastností odpovídají atributy v souboru modelu. Model můžete vyhledat pomocí vyhledávacího pole v horní části **služby BDC Explorer**.
-
-> [!NOTE]
-> **Služby BDC Explorer** nezobrazuje identifikátory, vlastní vlastnosti, lokalizované řetězce, přidružení skupin, akce, deskriptory filtrů, seznamy řízení akce a výchozí hodnoty parametrů.
-
-### <a name="define-type-descriptors"></a>Definování popisovače typu
- Použití **služby BDC Explorer** k definování popisovače typu. Průzkumník modelu BDC umožňuje definovat popisovač typu jednou a pak znovu použít tento typ popisovače jinde v modelu. K tomu, popisovač typu zkopírujte a vložte ji na všechny ostatní parametry nebo zadejte popisovač.
+ Při výběru uzlů v **Průzkumníkovi služby BDC**se v okně **vlastnosti** zobrazí vlastnosti každého uzlu, který vyberete. Mnohé z těchto vlastností odpovídají atributům v souboru modelu. Model můžete vyhledat pomocí vyhledávacího pole v horní části **Průzkumníka služby BDC**.
 
 > [!NOTE]
-> Změny v původní popisovač typu neovlivňují kopie tento typ popisovače.
+> **Průzkumník služby BDC** nezobrazuje identifikátory, vlastní vlastnosti, lokalizované řetězce, skupiny přidružení, akce, popisovače filtrů, seznamy řízení akcí a výchozí hodnoty parametrů.
 
- Další informace najdete v tématu [jak: Definování deskriptoru typu pro parametr](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
+### <a name="define-type-descriptors"></a>Definovat popisovače typů
+ K definování popisovačů typů použijte **Průzkumníka služby BDC** . Průzkumník služby BDC umožňuje definovat jeden popisovač typu jednou a potom ho znovu použít jinde v modelu. Chcete-li to provést, zkopírujte popisovač typu a vložte jej na jiný parametr nebo popisovač typu.
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md)
+> [!NOTE]
+> Změny v původním deskriptoru typu neovlivňují kopie tohoto deskriptoru typu.
+
+ Další informace naleznete v tématu [How to: define a Type deskriptor parametru](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
+
+## <a name="see-also"></a>Viz také
+- [Postupy: vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md)
 - [Postupy: Přidání entity do modelu](../sharepoint/how-to-add-an-entity-to-a-model.md)
 - [Postupy: Přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)
 - [Postupy: Přidání konkrétní vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Postupy: Přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)
+- [Postupy: Přidání metody autora](../sharepoint/how-to-add-a-creator-method.md)
 - [Postupy: Přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)
 - [Vytvoření přidružení mezi entitami](../sharepoint/creating-an-association-between-entities.md)

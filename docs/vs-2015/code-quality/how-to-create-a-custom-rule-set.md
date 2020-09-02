@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6e4aef02a2bb320112d7d268da28cf66b1ec6751
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657452"
 ---
 # <a name="how-to-create-a-custom-rule-set"></a>Postupy: Vytvoření vlastní sady pravidel
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsPro](../includes/vspro-md.md)] můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Chcete-li vytvořit vlastní sadu pravidel, otevřete v editoru sad pravidel jednu nebo více standardních sad pravidel. Pak můžete přidat nebo odebrat konkrétní pravidla a můžete změnit akci, ke které dojde, když analýza kódu zjistí, že pravidlo bylo porušeno.
+V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] , [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsPro](../includes/vspro-md.md)] můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Chcete-li vytvořit vlastní sadu pravidel, otevřete v editoru sad pravidel jednu nebo více standardních sad pravidel. Pak můžete přidat nebo odebrat konkrétní pravidla a můžete změnit akci, ke které dojde, když analýza kódu zjistí, že pravidlo bylo porušeno.
 
  Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového názvu souboru. Vlastní sada pravidel je automaticky přiřazena k projektu.
 
@@ -31,7 +31,7 @@ V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], [!INCLUDE[vsPreShort](..
 
 #### <a name="to-open-an-empty-rule-set-file-in-the-rule-set-editor"></a>Otevření prázdného souboru sady pravidel v editoru sad pravidel
 
-1. V [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] nabídce **soubor** přejděte na příkaz **Nový** a pak klikněte na **soubor**.
+1. V nabídce **soubor** aplikace [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] přejděte na položku **Nový** a klikněte na možnost **soubor**.
 
 2. V dialogovém okně **nový soubor** klikněte v seznamu **Nainstalované šablony** na **Obecné** a vyberte **sada pravidel analýza kódu**.
 
@@ -47,9 +47,9 @@ V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], [!INCLUDE[vsPreShort](..
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \- nebo-
+     \- ani
 
-   - Vybrat **\<Browse... >** k určení existující sady pravidel, která není v seznamu.
+   - Tuto možnost vyberte **\<Browse...>** , pokud chcete zadat existující sadu pravidel, která není v seznamu.
 
 4. Kliknutím na **otevřít** zobrazte pravidla v editoru sad pravidel.
 
@@ -59,7 +59,7 @@ V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], [!INCLUDE[vsPreShort](..
 
 2. Na kartě **vlastnosti** klikněte na **Analýza kódu**.
 
-3. Vyberte **\<Choose více sad pravidel... >** **Spustit tuto sadu pravidel**.
+3. Vyberte **\<Choose multiple rule sets...>** možnost **Spustit tuto sadu pravidel**.
 
 4. V dialogovém okně **Přidat nebo odebrat sady pravidel** vyberte sady pravidel, na kterých chcete vytvořit novou sadu pravidel, a pak klikněte na **OK**.
 
@@ -97,7 +97,7 @@ V [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)], [!INCLUDE[vsPreShort](..
 
 - Pokud chcete pravidla sbalit ve všech skupinách, klikněte na **Sbalit vše**.
 
-- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Chcete-li zobrazit Neseskupená pravidla, vyberte možnost **\<None >** .
+- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Chcete-li zobrazit Neseskupená pravidla, vyberte **\<None>** .
 
 - Pokud chcete přidat nebo odebrat pole ve sloupcích pravidla, klikněte na **Možnosti sloupců**.
 

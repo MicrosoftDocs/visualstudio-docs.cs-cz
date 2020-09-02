@@ -1,5 +1,5 @@
 ---
-title: Vytvoření stránky Možnosti | Dokumentace Microsoftu
+title: Vytváření stránky možností | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,34 +11,34 @@ caps.latest.revision: 63
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7b5897f6c4463cc5a3c7928a722ed5a0a09e42b3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430579"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64818145"
 ---
 # <a name="creating-an-options-page"></a>Vytvoření stránky Možnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které používá mřížky vlastností sloužící ke zkoumání a nastavte vlastnosti.  
+Tento návod vytvoří jednoduchou stránku nástrojů/možností, která používá mřížku vlastností k prohlédnutí a nastavení vlastností.  
   
- K uložení těchto vlastností a obnovení je ze souboru nastavení, postupujte podle těchto kroků a potom se podívejte [vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md).  
+ Pokud chcete tyto vlastnosti Uložit do souboru nastavení a obnovit je, postupujte podle těchto kroků a pak se podívejte na téma [Vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md).  
   
- MPF poskytuje dvě třídy, které vám pomohou vytvořit stránky Možnosti nástrojů <xref:Microsoft.VisualStudio.Shell.Package> třídy a <xref:Microsoft.VisualStudio.Shell.DialogPage> třídy. Vytvoření balíčku VSPackage k poskytnutí kontejner pro tyto stránky tak vytvoření podtřídy třídy balíčku. Při dědění ze třídy DialogPage třídy vytváření každou stránku možností nástrojů.  
+ Parametr MPF poskytuje dvě třídy, které vám pomůžou vytvořit stránky možností nástrojů, <xref:Microsoft.VisualStudio.Shell.Package> třídu a <xref:Microsoft.VisualStudio.Shell.DialogPage> třídu. Vytvoříte VSPackage pro poskytnutí kontejneru pro tyto stránky podtřídou třídy Package. Každou stránku možností nástrojů vytvoříte Odvozením ze třídy třídy DialogPage.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="creating-a-tools-options-grid-page"></a>Vytvoření stránky mřížky možnosti nástrojů  
- V této části vytvoříte jednoduchou mřížky vlastností Možnosti nástrojů. Tato mřížka slouží k zobrazení a změňte hodnotu vlastnosti.  
+ V této části vytvoříte jednoduchou mřížku vlastností možností nástroje. Tuto mřížku použijete k zobrazení a změně hodnoty vlastnosti.  
   
-#### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>Vytvořte projekt VSIX a přidat VSPackage  
+#### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>Chcete-li vytvořit projekt VSIX a přidat VSPackage  
   
-1. Každé rozšíření sady Visual Studio spustí nasazení projektu VSIX, který bude obsahovat rozšíření prostředků. Vytvoření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSIX projekt s názvem `MyToolsOptionsExtension`. Můžete najít šablonu projektu VSIX v **nový projekt** dialogového okna v části **Visual C# / rozšíření**.  
+1. Každé rozšíření sady Visual Studio začíná projektem nasazení VSIX, který bude obsahovat prostředky rozšíření. Vytvořte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projekt VSIX s názvem `MyToolsOptionsExtension` . Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** v části **Visual C#/rozšiřitelnost**.  
   
-2. Přidat VSPackage přidáním šablonu položky balíčku Visual Studio s názvem `MyToolsOptionsPackage`. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. V **dialogového okna Přidat novou položku**, přejděte na stránku **položky Visual C# / rozšíření** a vyberte **balíček Visual Studio**. V **název** pole v dolní části dialogového okna, změňte název souboru, aby `MyToolsOptionsPackage.cs`. Další informace o tom, jak vytvořit VSPackage najdete v tématu [vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md).  
+2. Přidejte VSPackage přidáním šablony položky balíčku sady Visual Studio s názvem `MyToolsOptionsPackage` . V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. V **dialogovém okně Přidat novou položku**přejdete na položku **Visual C# položky/rozšiřitelnost** a vyberte možnost **balíček sady Visual Studio**. V poli **název** v dolní části dialogového okna změňte název souboru na `MyToolsOptionsPackage.cs` . Další informace o tom, jak vytvořit VSPackage, najdete v tématu [Vytvoření rozšíření pomocí sady VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md).  
   
-#### <a name="to-create-the-tools-options-property-grid"></a>Chcete-li vytvořit mřížku vlastností Možnosti nástrojů  
+#### <a name="to-create-the-tools-options-property-grid"></a>Vytvoření tabulky vlastností možnosti nástrojů  
   
 1. Otevřete soubor MyToolsOptionsPackage v editoru kódu.  
   
@@ -48,14 +48,14 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     using System.ComponentModel;  
     ```  
   
-3. Deklarovat třídu OptionPageGrid a odvozovat z <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
+3. Deklarovat třídu OptionPageGrid a odvodit ji z <xref:Microsoft.VisualStudio.Shell.DialogPage> .  
   
     ```csharp  
     public class OptionPageGrid : DialogPage  
     {  }  
     ```  
   
-4. Použít <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> do třídy balíčku VSPackage pro přiřazení ke třídě s možností kategorie a název stránky možnosti pro OptionPageGrid. Výsledek by měl vypadat nějak takto:  
+4. Použijte <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> pro třídu VSPackage pro přiřazení ke třídě a kategorii možností a název stránky možností pro OptionPageGrid. Výsledek by měl vypadat takto:  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -67,13 +67,13 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     public sealed class MyToolsOptionsPackage : Package  
     ```  
   
-5. Přidat `OptionInteger` vlastnost `OptionPageGrid` třídy.  
+5. Přidejte `OptionInteger` vlastnost do `OptionPageGrid` třídy.  
   
-    - Použít <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> přiřazení k vlastnosti kategorie mřížky vlastností.  
+    - Použijte <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> pro přiřazení k vlastnosti kategorie mřížky vlastností.  
   
-    - Použít <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> přiřadit pro vlastnost název.  
+    - Použijte <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> pro přiřazení k vlastnosti název.  
   
-    - Použít <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> přiřazení k vlastnosti popis.  
+    - Použijte <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> pro přiřazení k vlastnosti Popis.  
   
     ```csharp  
     public class OptionPageGrid : DialogPage  
@@ -92,18 +92,18 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     ```  
   
     > [!NOTE]
-    > Výchozí implementace <xref:Microsoft.VisualStudio.Shell.DialogPage> podporuje vlastnosti, které mají odpovídající převaděče nebo které jsou struktury nebo polí, která se dá rozšířit do vlastnosti, které mají odpovídající převaděče. Seznam převaděčů najdete v tématu <xref:System.ComponentModel> oboru názvů.  
+    > Výchozí implementace <xref:Microsoft.VisualStudio.Shell.DialogPage> podporuje vlastnosti, které mají odpovídající převaděče nebo jsou struktury nebo pole, která lze rozšířit na vlastnosti, které mají odpovídající převaděče. Seznam převaděčů naleznete v tématu <xref:System.ComponentModel> obor názvů.  
   
 6. Sestavte projekt a spusťte ladění.  
   
-7. V experimentální instanci sady Visual Studio na **nástroje** klikněte na nabídku **možnosti**.  
+7. V experimentální instanci aplikace Visual Studio klikněte v nabídce **nástroje** na **Možnosti**.  
   
-     V levém podokně byste měli vidět **kategorie Mé**. (Možnosti kategorie jsou uvedeny v abecedním pořadí, měl by se zobrazit o uprostřed v seznamu dolů.) Otevřít **kategorie Mé** a potom klikněte na tlačítko **stránku mřížky**. Možnosti mřížky se zobrazí v pravém podokně. Vlastnosti kategorie je **Moje možnosti**, a název vlastnosti není **možnost Moje celé číslo**. Popis vlastnosti **možnost Moje celé číslo**, zobrazí se v dolní části podokna. Změňte hodnotu z její počáteční hodnotu 256 na něco jiného. Klikněte na tlačítko **OK**a poté ji znovu otevřete **stránku mřížky**. Uvidíte, že je nová hodnota přetrvává.  
+     V levém podokně byste měli vidět **Moje kategorie**. (Kategorie možností jsou uvedeny v abecedním pořadí, takže by se měla objevit přibližně uprostřed seznamu.) Otevřete **kategorii Moje kategorie** a potom klikněte na možnost **Stránka mřížka**. V pravém podokně se zobrazí mřížka možnosti. Kategorie vlastností je **Moje možnosti**a název vlastnosti je **Moje celočíselná možnost**. Popis vlastnosti, **možnost mé celé číslo**, se zobrazí v dolní části podokna. Změňte hodnotu z počáteční hodnoty 256 na něco jiného. Klikněte na tlačítko **OK**a potom znovu otevřete **stránku mřížka**. Uvidíte, že nová hodnota přetrvává.  
   
-     Možnosti stránky je dostupné také prostřednictvím snadného spuštění sady Visual Studio. Zadejte v okně Snadné spuštění v pravém horním rohu integrovaného vývojového prostředí **kategorie Mé** a zobrazí se **kategorie Mé –> stránku mřížky** uvedeny v rozevírací nabídce.  
+     Stránka možnosti je také k dispozici prostřednictvím snadného spuštění sady Visual Studio. V okně snadné spuštění v pravém horním rohu integrovaného vývojového prostředí (IDE) zadejte **Moje kategorie** a v rozevíracím seznamu se zobrazí **stránka kategorie – > mřížka** .  
   
-## <a name="creating-a-tools-options-custom-page"></a>Vytváří se vlastní možnosti nástrojů stránky  
- V této části vytvoříte stránky Možnosti nástrojů pomocí vlastního uživatelského rozhraní. Na této stránce můžete zobrazit a změnit hodnotu vlastnosti.  
+## <a name="creating-a-tools-options-custom-page"></a>Vytvoření vlastní stránky možností nástrojů  
+ V této části vytvoříte stránku možností nástroje s vlastním uživatelským rozhraním. Tato stránka slouží k zobrazení a změně hodnoty vlastnosti.  
   
 1. Otevřete soubor MyToolsOptionsPackage v editoru kódu.  
   
@@ -113,7 +113,7 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     using System.Windows.Forms;  
     ```  
   
-3. Přidat `OptionPageCustom` třídy těsně před `OptionPageGrid` třídy. Odvodit novou třídu z `DialogPage`.  
+3. Přidejte `OptionPageCustom` třídu těsně před `OptionPageGrid` třídu. Odvodit novou třídu z `DialogPage` .  
   
     ```csharp  
     public class OptionPageCustom : DialogPage  
@@ -128,7 +128,7 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     }  
     ```  
   
-4. Přidáte atribut GUID. Přidáte vlastnost řetězec možností:  
+4. Přidejte atribut GUID. Přidat vlastnost OptionString:  
   
     ```csharp  
     [Guid("00000000-0000-0000-0000-000000000000")]  
@@ -144,7 +144,7 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     }  
     ```  
   
-5. Použít sekundy <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> do třídy balíčku VSPackage. Tento atribut přiřadí třídy s možností kategorie a název stránky možnosti.  
+5. Použijte sekundu <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> pro třídu VSPackage. Tento atribut přiřadí třídu a možnosti kategorie a možnosti název stránky.  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -158,13 +158,13 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     public sealed class MyToolsOptionsPackage : Package  
     ```  
   
-6. Přidat nový **uživatelský ovládací prvek** s názvem MyUserControl do projektu.  
+6. Přidejte do projektu nový **uživatelský ovládací prvek** s názvem MyUserControl.  
   
-7. Přidat **TextBox** ovládacího prvku do uživatelského ovládacího prvku.  
+7. Přidejte ovládací prvek **TextBox** do uživatelského ovládacího prvku.  
   
-     V **vlastnosti** klikněte na tlačítko na panelu nástrojů okno **události** tlačítko a pak dvakrát klikněte **ponechte** událostí. Novou obslužnou rutinu události se zobrazí v kódu MyUserControl.cs.  
+     V okně **vlastnosti** klikněte na panelu nástrojů na tlačítko **události** a potom poklikejte na událost **opuštění** . Nová obslužná rutina události se zobrazí v kódu MyUserControl.cs.  
   
-8. Přidejte veřejnou `OptionsPage` pole, `Initialize` metodu do třídy ovládacího prvku a aktualizujte obslužnou rutinu události možnost nastavit hodnota, která se obsah textového pole:  
+8. Přidejte veřejné `OptionsPage` pole, `Initialize` metodu do třídy ovládacího prvku a aktualizujte obslužnou rutinu události tak, aby se hodnota možnosti nastavila na obsah textového pole:  
   
     ```csharp  
     public partial class MyUserControl : UserControl  
@@ -188,9 +188,9 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
     }  
     ```  
   
-     `optionsPage` Pole obsahuje odkaz na nadřazený `OptionPageCustom` instance. `Initialize` Metoda zobrazí `OptionString` v **TextBox**. Obslužná rutina události zapíše aktuální hodnotu **textového pole** k `OptionString` při zaměření listy **textového pole**.  
+     `optionsPage`Pole obsahuje odkaz na nadřazenou `OptionPageCustom` instanci. `Initialize`Metoda se zobrazí `OptionString` v **textovém**poli. Obslužná rutina události zapíše aktuální hodnotu **textového pole** do pole `OptionString` když fokus opustí **textové pole**.  
   
-9. Ve zdrojovém souboru balíčku, přidejte přepsání pro `OptionPageCustom.Window` vlastností do třídy OptionPageCustom pro vytváření, inicializace a vrátit instanci `MyUserControl`. Třída by teď měl vypadat takto:  
+9. V souboru s kódem balíčku přidejte přepsání pro `OptionPageCustom.Window` vlastnost do třídy OptionPageCustom pro vytvoření, inicializaci a vrácení instance `MyUserControl` . Třída by teď měla vypadat takto:  
   
     ```csharp  
     [Guid("00000000-0000-0000-0000-000000000000")]  
@@ -219,16 +219,16 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
   
 10. Sestavte a spusťte projekt.  
   
-11. V experimentální instanci aplikace, klikněte na tlačítko **Nástroje / možnosti**.  
+11. V experimentální instanci klikněte na tlačítko **Nástroje/možnosti**.  
   
-12. Najít **Moje kategorie** a potom **Moje vlastní stránku**.  
+12. Najde **moji kategorii** a pak **moji vlastní stránku**.  
   
-13. Změňte hodnotu vlastnosti **řetězec možností**. Klikněte na tlačítko **OK**a poté ji znovu otevřete **vlastní stránku**. Uvidíte, že obsahuje trvalé novou hodnotu.  
+13. Změňte hodnotu **OptionString**. Klikněte na **OK**a pak znovu otevřete **moji vlastní stránku**. Můžete vidět, že nová hodnota je trvalá.  
   
-## <a name="accessing-options"></a>Přístup k možnosti  
- V této části se získat hodnotu možnosti ze sady VSPackage, který je hostitelem přidružené stránky Možnosti nástrojů. Stejný postup můžete použít k získání hodnoty všechny veřejné vlastnosti.  
+## <a name="accessing-options"></a>Možnosti přístupu  
+ V této části získáte hodnotu možnosti ze sady VSPackage, která je hostitelem stránky možnosti přidružených nástrojů. Stejnou techniku lze použít k získání hodnoty libovolné veřejné vlastnosti.  
   
-1. Ve zdrojovém souboru balíčku, přidejte veřejnou vlastnost s názvem **OptionInteger** k **MyToolsOptionsPackage** třídy.  
+1. V souboru s kódem balíčku přidejte veřejnou vlastnost s názvem **OptionInteger** do třídy **MyToolsOptionsPackage** .  
   
     ```  
     public int OptionInteger  
@@ -242,11 +242,11 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
   
     ```  
   
-     Tento kód volá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> vytvořit nebo načíst `OptionPageGrid` instance. `OptionPageGrid` volání <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> načíst jeho možnosti, které jsou veřejné vlastnosti.  
+     Tento kód volá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> Vytvoření nebo načtení `OptionPageGrid` instance. `OptionPageGrid` volá <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> načtení jeho možností, což jsou veřejné vlastnosti.  
   
-2. Nyní přidejte vlastní příkaz šablonu položky s názvem **MyToolsOptionsCommand** k zobrazení hodnoty. V **přidat novou položku** dialogové okno, přejděte na **Visual C# / rozšíření** a vyberte **vlastního příkazu**. V **název** pole v dolní části okna, změňte název souboru příkazu **MyToolsOptionsCommand.cs**.  
+2. Nyní k zobrazení hodnoty přidejte šablonu vlastní položky příkazu s názvem **MyToolsOptionsCommand** . V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na **MyToolsOptionsCommand.cs**.  
   
-3. V souboru MyToolsOptionsCommand nahradit tělo příkazu `ShowMessageBox` metoda následujícím kódem:  
+3. V souboru MyToolsOptionsCommand nahraďte tělo `ShowMessageBox` metody příkazu následujícím způsobem:  
   
     ```csharp  
     private void ShowMessageBox(object sender, EventArgs e)  
@@ -259,9 +259,9 @@ Tento návod vytvoří jednoduchou stránku Nástroje/možnosti, které použív
   
 4. Sestavte projekt a spusťte ladění.  
   
-5. V experimentální instanci na **nástroje** nabídky, klikněte na tlačítko **vyvolat MyToolsOptionsCommand**.  
+5. V experimentální instanci v nabídce **nástroje** klikněte na **vyvolat MyToolsOptionsCommand**.  
   
-     Okno se zprávou zobrazí aktuální hodnotu `OptionInteger`.  
+     V okně se zprávou se zobrazuje aktuální hodnota `OptionInteger` .  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti a stránky Možnosti](../extensibility/internals/options-and-options-pages.md)

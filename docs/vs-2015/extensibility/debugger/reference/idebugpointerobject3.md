@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject3 | Dokumentace Microsoftu
+title: IDebugPointerObject3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ae6ec2f0ffc48e8c23f65ab56ec7b66d69d11a2e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440601"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64836063"
 ---
 # <a name="idebugpointerobject3"></a>IDebugPointerObject3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Představuje ukazatel v strom analýzy a rozšiřuje **IDebugPointerObject** rozhraní.  
+ Představuje ukazatel ve stromové struktuře analýzy a rozšiřuje rozhraní **IDebugPointerObject** .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPointerObject3 : IDebugPointerObject  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Vyhodnocovače výrazů (EE) implementuje toto rozhraní.  
+ Toto rozhraní implementuje vyhodnocení výrazu (EE).  
   
 ## <a name="methods"></a>Metody  
- Kromě metod na [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) rozhraní, toto rozhraní implementuje následujících metod:  
+ Kromě metod v rozhraní [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) toto rozhraní implementuje následující metody:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetPointerAddress](../../../extensibility/debugger/reference/idebugpointerobject3-getpointeraddress.md)|Načte adresu ukazatele.|  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: EE.h  
+ Záhlaví: ee. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

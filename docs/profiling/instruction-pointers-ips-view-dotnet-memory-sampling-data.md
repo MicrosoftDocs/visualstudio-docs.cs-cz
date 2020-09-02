@@ -1,5 +1,5 @@
 ---
-title: Zobrazení ukazatelů instrukcí (IP) – vzorkování paměti .NET | Dokumenty společnosti Microsoft
+title: Zobrazení ukazatelů na instrukce (IP) – data vzorkování paměti .NET | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,36 +12,36 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: aa90262081a693227b4594a4e5b7fe22c8fb1627
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778658"
 ---
-# <a name="instruction-pointers-ips-view---net-memory-sampling-data"></a>Zobrazení ukazatelů instrukcí (IP) – vzorkovací data paměti .NET
-Zobrazení IP adresy pro profilování paměti .NET data, která byla shromážděna pomocí metody vzorkování, uvádí pokyny sestavení, které přidělily paměť během spuštění profilování. Sloupce zobrazení také uvádějí velikost a počet přidělení.
+# <a name="instruction-pointers-ips-view---net-memory-sampling-data"></a>Zobrazení ukazatelů na instrukce (IP) – data vzorkování paměti .NET
+Zobrazení IP adres pro data profilování alokace paměti .NET, která byla shromážděna pomocí metody vzorkování, vypíše pokyny pro sestavení, které přidělené paměti při spuštění profilace. Sloupce zobrazení také uvádějí velikost a počet přidělení.
 
- Jsou uvedeny pouze výhradní hodnoty.
+ Jsou uvedeny pouze exkluzivní hodnoty.
 
 |Sloupec|Popis|
 |------------|-----------------|
-|**ID procesu**|ID procesu (PID) profilování spustit.|
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|
 |**Název procesu**|Název procesu|
-|**Název modulu**|Název modulu, který obsahuje instrukce.|
-|**Cesta modulu**|Cesta modulu, který obsahuje instrukce.|
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje instrukce.|
-|**Název funkce**|Název funkce.|
+|**Název modulu**|Název modulu, který obsahuje instrukci.|
+|**Cesta k modulu**|Cesta modulu, který obsahuje instrukci.|
+|**Zdrojový soubor**|Zdrojový soubor, který obsahuje instrukci.|
+|**Název funkce**|Název funkce|
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|
-|**Adresa funkce**|Počáteční adresa funkce.|
-|**Začátek zdrojového řádku**|Číslo startovní ho řádku ve zdrojovém souboru, ve kterém došlo k přidělení.|
-|**Konec řádku zdroje**|Koncové číslo řádku ve zdrojovém souboru, ve kterém došlo k přidělení.|
-|**Začátek znaku zdroje**|Posun počátečního znaku ve řádku zdrojového souboru, na kterém došlo k přidělení.|
-|**Konec zdrojového znaku**|Posun koncového znaku ve řádku zdrojového souboru, na kterém došlo k přidělení.|
-|**Adresa instrukce**|Adresa instrukce.|
-|**Výhradní přidělení**|Celkový počet objektů, které byly vytvořeny instrukce.|
-|**Výhradní přidělení %**|Procento všech objektů, které byly vytvořeny v profilování spustit, které byly přiděleny instrukce.|
-|**Exkluzivní bajty**|Počet bajtů paměti, které byly přiděleny v profilování spustit, které byly přiděleny instrukce.|
-|**Výhradní bajty %**|Procento všech bajtů paměti, které byly přiděleny v profilování spustit, které byly přiděleny instrukce.|
+|**Adresa funkce**|Počáteční adresa funkce|
+|**Začátek řádku zdroje**|Číslo počátečního řádku ve zdrojovém souboru, u kterého došlo k přidělení.|
+|**Konec řádku zdroje**|Číslo koncového řádku ve zdrojovém souboru, u kterého došlo k přidělení.|
+|**Začátek zdrojového znaku**|Posun počátečního znaku v řádku zdrojového souboru, kdy došlo k přidělení.|
+|**Konec zdrojového znaku**|Posun koncového znaku v řádku zdrojového souboru, kdy došlo k přidělení.|
+|**Adresa instrukce**|Adresa instrukce|
+|**Exkluzivní přidělení**|Celkový počet objektů, které byly vytvořeny instrukcí.|
+|**% Exkluzivní alokace**|Procento všech objektů, které byly vytvořeny v průběhu profilace, které byly přiděleny instrukcí.|
+|**Exkluzivní počet bajtů**|Počet bajtů paměti, které byly přiděleny při spuštění profilace, které byly přiděleny instrukcí.|
+|**% Exkluzivních bajtů**|Procento všech bajtů paměti, které byly přiděleny při spuštění profilace, které byly přiděleny instrukcí.|
 
 ## <a name="see-also"></a>Viz také
-- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view-sampling-data.md)
+- [Zobrazení Ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view-sampling-data.md)

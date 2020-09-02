@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_types – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_types | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 813dcd692669d823548e52ce6bb7eccc9546de61
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64832248"
 ---
-# <a name="idiasymbolgettypes"></a>IDiaSymbol::get_types
+# <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte pole typů kompilátoru specifické pro tento symbol.  
+Načte pole typů určených pro kompilátor pro tento symbol.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT get_types ( 
   
 #### <a name="parameters"></a>Parametry  
  `cTypes`  
- [in] Velikost vyrovnávací paměti pro data.  
+ pro Velikost vyrovnávací paměti pro uchovávání dat.  
   
  `pcTypes`  
- [out] Vrátí počet typů napsaných, nebo pokud `types` parametr je `NULL`, pak celkový počet typů, které jsou k dispozici.  
+ mimo Vrátí počet zapsaných typů, nebo, pokud `types` je parametr `NULL` , a celkový počet dostupných typů.  
   
  `types[]`  
- [out] Pole, které je v tankujeme [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují všechny typy pro tento symbol.  
+ mimo Pole, které se má vyplnit objekty [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , které reprezentují všechny typy pro tento symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

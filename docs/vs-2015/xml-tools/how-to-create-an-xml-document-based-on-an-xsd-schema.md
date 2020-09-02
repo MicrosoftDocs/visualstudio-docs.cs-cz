@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9e48c48d6711a1eb21157122d13790e22688855
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670951"
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: vytvoření dokumentu XML na základě schématu XSD
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Postupy: Vytvoření dokumentu XML na základě schématu XSD
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Funkce **Generovat ukázková data XML** generuje ukázkový soubor XML na základě vašeho souboru schématu XML (XSD).
@@ -31,15 +31,15 @@ Funkce **Generovat ukázková data XML** generuje ukázkový soubor XML na zákl
 
   Tato funkce obvykle generuje platné dokumenty XML. Pokud však schéma obsahuje jednu nebo více z následujících možností, příklad nemusí být platný:
 
-- Omezení identity `xs:key`, `xs:keyref` a `xs:unique`.
+- `xs:key` `xs:keyref` Omezení identity, a `xs:unique` .
 
 - `xs:pattern` omezující vlastnosti.
 
-- Výčty typu `xs:QName`.
+- Výčty `xs:QName` typu.
 
-- typy `xs:ENTITY`, `xs:ENTITIES` a `xs:NOTATION`.
+- `xs:ENTITY``xs:ENTITIES`typy, a `xs:NOTATION` .
 
-  Všimněte si také, že `xs:base64Binary` obsah bude vygenerován pouze v případě, že ve schématu pro daný typ dojde k výčtům.
+  Také si všimněte, že `xs:base64Binary` obsah bude vygenerován pouze v případě, že ve schématu pro daný typ dojde k výčtům.
 
 ### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>Vygenerování dokumentu instance XML na základě souboru XSD
 
@@ -47,7 +47,7 @@ Funkce **Generovat ukázková data XML** generuje ukázkový soubor XML na zákl
 
 2. V [Průzkumníku schémat XML](../xml-tools/xml-schema-explorer.md)klikněte pravým tlačítkem na `PurchaseOrder` globální prvek. Vyberte **vytvořit ukázkový kód XML**.
 
-     Když vyberete tuto možnost, vytvoří se soubor PurchaseOrder. XML s následujícím ukázkovým obsahem XML a otevře se v editoru XML:
+     Když vyberete tuto možnost, vygeneruje se soubor PurchaseOrder.xml s následujícím ukázkovým obsahem XML a otevře se v editoru XML:
 
     ```
     <?xml version="1.0" encoding="utf-8"?>

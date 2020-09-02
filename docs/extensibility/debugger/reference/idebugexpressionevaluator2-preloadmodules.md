@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Dokumenty společnosti Microsoft
+title: IDebugExpressionEvaluator2::P reloadModules | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: db345fb2936ef7278675407549798ae669487f06
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729330"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Předem načte moduly určené zadaným poskytovatelem symbolů.
+Předvede moduly určené zadaným poskytovatelem symbolů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ int PreloadModules (
 
 ## <a name="parameters"></a>Parametry
 `pSym`\
-[v] Zprostředkovatel symbolů, pro kterého budou moduly předinstalovány.
+pro Zprostředkovatel symbolů, pro který budou moduly předem načteny.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Tato volitelná metoda se používá při připojení hostitelského procesu. To dává EE šanci 'zahřát' jako součást připojit.
+Tato volitelná metoda se používá při připojení k hostitelskému procesu. Udává možnost zahřívání v rámci připojení v EE.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **ExpressionEvaluatorPackage** objekt, který zpřístupňuje rozhraní [IDebugExpressionEvaluator2.](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **ExpressionEvaluatorPackage** , který zpřístupňuje rozhraní [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) .
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules

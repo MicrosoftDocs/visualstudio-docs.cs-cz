@@ -9,337 +9,337 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8f17b875f0637883222a633cb1082ad24788d4c2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431344"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825644"
 ---
-# <a name="notifications-and-progress-for-visual-studio"></a>Oznámení a postup pro Visual Studio
+# <a name="notifications-and-progress-for-visual-studio"></a>Oznámení a průběh pro Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="BKMK_NotificationSystems"></a> Systémy oznámení
+## <a name="notification-systems"></a><a name="BKMK_NotificationSystems"></a> Systémy oznámení
 
 ### <a name="overview"></a>Přehled
- Existuje několik způsobů, jak uživatele informovat, co se děje v sadě Visual Studio týkající se jejich úloh vývoje softwaru.
+ Existuje několik způsobů, jak uživatele informovat o tom, co se děje v aplikaci Visual Studio v souvislosti se svými úlohami vývoje softwaru.
 
- Při implementaci jakýkoli druh oznámení:
+ Při implementaci libovolného typu oznámení:
 
-- **Snažte se oznámení na minimum** platné číslo. Upozornění by se měly používat pro většinu uživatelů sady Visual Studio nebo na uživatele na konkrétní funkce nebo funkci oblast. Nadměrné používání oznámení může sidetrack uživatele nebo oslabí vnímaná snadnost použití systému.
+- **Ponechte počet oznámení na minimální** platné číslo. Oznamovací zprávy by se měly vztahovat na většinu uživatelů sady Visual Studio nebo na uživatele konkrétní funkce nebo oblasti funkcí. Nadměrné používání oznámení může sidetrack uživatele nebo snížit přehlednost tohoto systému.
 
-- **Ujistěte se nabízí ten samý přehledy, vymazat zprávy** , že uživatel může použít k vyvolání odpovídající kontext složitější rozhodování a provádění dalších akcí.
+- **Ujistěte se, že prezentujete jasné, napadnutelné zprávy** , které může uživatel použít k vyvolání příslušného kontextu pro složitější volby a provedení dalších akcí.
 
-- **K dispozici synchronní a asynchronní zprávy odpovídajícím způsobem.** Synchronní oznámení, označení, že něco vyžaduje okamžitou pozornost, třeba když dojde k chybě webové služby nebo kód je vyvolána výjimka. Uživatel by měla vycházet z těchto situací hned způsobem, který vyžaduje svůj vstup, jako například v modální dialogové okno. Asynchronní oznámení jsou ty, které uživatel byste měli znát, ale nebudou požadované k provedení akce s okamžitou, jako je po dokončení operace sestavení nebo nasazení webu dokončí. Tyto zprávy by měl být více okolí a přerušit tok úkolů uživatele.
+- **Správné zobrazení synchronních a asynchronních zpráv.** Synchronní oznámení označují, že něco potřebuje okamžitou pozornost, například když dojde k chybě webové služby nebo když je vyvolána výjimka kódu. Uživatel by měl být informován o těchto situacích hned způsobem, který vyžaduje jejich vstup, například v modálním dialogovém okně. Asynchronní oznámení jsou ta, o kterých by měl uživatel znát, ale nemusí být nutný k okamžitému jednání, například při dokončení operace sestavení nebo dokončení nasazení webu. Tyto zprávy by měly být více okolní a nesmí přerušit tok úkolů uživatele.
 
-- **Použít pouze v případě, že je nutné zabránit uživateli v spustíte další akci modální dialogová okna** před potvrdil zprávy nebo rozhodování zobrazí v dialogovém okně.
+- **Modální dialogová okna používejte jenom v případě, že je to nutné, aby uživatel** před potvrzením zprávy nebo rozhodnutím prezentovaný v dialogovém okně přebíral další akce.
 
-- **Odeberte okolí upozornění, když již nejsou platné.** Uživatel, který chcete oznámení zavřít, pokud se už udělali akce k vyřešení problému, který bylo odesláno oznámení o nevyžadují.
+- **Odebrat okolní oznámení, pokud už nejsou platná.** Nevyžadují, aby uživatel zavedl oznámení, pokud již učinil akci k vyřešení problému, ke kterému byly upozorněny.
 
-- **Mějte na paměti, že oznámení může vést k false korelace.** Uživatelé můžou přesvědčeni, že jeden nebo více z jejich akcí spustil oznámení při ve skutečnosti se žádný příčinnou vztah. Možné vymazat ve zprávě oznámení o kontextu, aktivační události a zdroj oznámení.
+- **Mějte na paměti, že oznámení mohou vést k nepravdivým korelačním relacím.** Uživatelé se mohou domnívat, že jedna nebo více akcí spustilo oznámení, když se ve skutečnosti neobjevila žádná z příčinných vztahů. V oznamovací zprávě o kontextu, triggeru a zdroji oznámení zrušte zaškrtnutí.
 
-### <a name="choosing-the-right-method"></a>Výběr správné – metoda
- Pomocí této tabulce vám pomohou při výběru správnou metodu pro upozornění pro uživatele zprávu.
+### <a name="choosing-the-right-method"></a>Výběr správné metody
+ Tato tabulka vám pomůže vybrat správnou metodu upozornění uživatele na vaši zprávu.
 
-|Metoda|Použití|Nepoužívejte|
+|Metoda|Použití|Nepoužívat|
 |------------|---------|----------------|
-|[Dialogová okna modální chybová zpráva](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ModalErrorMessageDialogs)|Použití vyžaduje odpověď uživatele. než budete pokračovat.|Nepoužívejte při není nutné a zablokovat ho přerušit jejich toku. Vyhněte se použití modální dialogová okna, pokud je to možné zobrazit zprávu jiného, teď míň obtěžující způsobem.|
-|[Stavový řádek IDE](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_IDEStatusBar)|Použijte v případě, že existuje okolí textové informace týkající se stavu procesu.|Nepoužívejte samostatně. Nejlepší používá ve spojení s jiný mechanismus zpětné vazby.|
-|[Vložený informačním panelu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_EmbeddedInfobar)|V panelu nástrojů nebo okna dokumentu pomocí oznámení o průběhu, stav chyby, výsledky a/nebo užitečné informace.|Nepoužívejte Pokud informace nejsou relevantní pro umístění, ve kterém je umístí informační panel.<br /><br /> Nepoužívejte mimo okno dokumentu nebo nástroje.|
-|[Změní se kurzor myši](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_MouseCursorChanges)|Může použít k upozornění, že se proces děje. Také použít k upozornění, že dojde ke změně stavu v myši, například v průběhu, který při přetažení myší do je v určitém režimu, jako je například režim kreslení.|Nepoužívejte krátká probíhající změny, nebo pokud fluttering z kurzor je pravděpodobně (například když vázána k různým částem delší spuštěný proces místo pro celý proces).|
-|[Indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotSysProgressIndicators)|Použijte, pokud potřebujete informace o průběhu (determinate nebo neurčitý). Existuje řada různých typů indikátor průběhu a pro každou konkrétní použití. Zobrazit [indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators).||
-|[Okno Visual Studio oznámení](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_VSNotificationsToolWindow)|Okno oznámení není veřejně rozšiřitelný. Však se používá ke komunikaci se širokou škálou zprávy o sadě Visual Studio, včetně kritických problémů s licencí a informační upozornění na aktualizace sady Visual Studio nebo k balíčkům.|Nepoužívejte pro další typy oznámení.|
-|[Seznam chyb](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ErrorList)|Pokud se problém týká přímo uživatele se vyskytl problém (Chyba/upozornění a informace) aktuálně otevřené řešení, může být nutné provést určitou akci u kódu.<br /><br /> To zahrnuje, například:<br /><br /> -Kompilátoru zpráv (Chyba/upozornění a informace)<br /><br /> -Code Analyzer, diagnostické zprávy o kódu<br /><br /> -Vytvoření zprávy<br /><br /> Může být vhodné pro problémy týkající se soubory projektu nebo řešení, ale nejprve zvažte uvedení Průzkumníku řešení.|Nepoužívejte pro položky, které nemají žádné relace uživatele kódu otevřeného řešení.|
-|Oznámení editoru: Žárovka|Použijte, když máte k dispozici k nápravě problému, který existuje v otevřeném souboru opravu.<br /><br /> Mějte na paměti, že žárovky by měl také použít k hostování rychlé akce, které jsou provedeny v kódu uživatele na vyžádání, jako je refaktoring, ale v takovém případě se už nebude "oznámení style."|Nepoužívejte pro položky, které nemají žádné relace na otevřený soubor.|
-|Oznámení editoru: Podtržení vlnovkou|Použijte k upozornění uživatele na problém s konkrétní rozsah jejich otevřete kód (například červenou vlnovkou u chyb).|Nepoužívejte pro položky, které nesouvisí se konkrétní rozsah jejich otevřete kód.|
-|[Vložený stavové řádky](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_EmbeddedStatusBars)|Slouží k zadání stavu týkající se obsahu nebo procesu v rámci kontextu okna konkrétní nástroje, okno dokumentu nebo dialogového okna.|Nepoužívejte pro obecnou oznámení, procesy nebo položky, které nemají žádnou relaci k obsahu v rámci konkrétní okno.|
-|[Oznámení na hlavním panelu Windows](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_WindowsTray)|Slouží k poskytování oznámení pro procesy v režimu out-of-proc nebo doprovodné aplikace.|Nepoužívejte pro oznámení, která jsou relevantní pro rozhraní IDE.|
-|[Bubliny oznámení](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotificationBubbles)|Upozorňovat na vzdálený proces nebo změnit **mimo** rozhraní IDE.|Nepoužívejte jako prostředek pro upozornění uživatele procesy **v rámci** integrovaného vývojového prostředí.|
+|[Dialogová okna modálních chybových zpráv](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ModalErrorMessageDialogs)|Použijte v případě, že před pokračováním potřebujete odpověď uživatele.|Nepoužívejte, pokud není potřeba zablokovat uživatele a přerušit jeho tok. Nepoužívejte modální dialogová okna, pokud je možné zprávu zobrazit v jiném, méně rušivým způsobem.|
+|[Stavový řádek IDE](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_IDEStatusBar)|Použijte v případě, že se jedná o okolní textové informace týkající se stavu procesu.|Nepoužívejte samostatně. Nejlépe se používá ve spojení s jiným mechanismem zpětné vazby.|
+|[Vložený informační panel](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_EmbeddedInfobar)|V okně nástroje nebo okně dokumentu použijte nástroj k upozorňování na průběh, chybový stav, výsledky nebo informace, které lze provést.|Nepoužívejte, pokud informace nejsou relevantní pro umístění, kde se nachází informační panel.<br /><br /> Nepoužívejte mimo okno dokumentu/nástroje.|
+|[Změny kurzoru myši](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_MouseCursorChanges)|Dá se použít k upozorňování na to, že proces prochází. Slouží také k oznamování, že došlo ke změně stavu myši, například když probíhá přetažení nebo když se ukazatel myši nachází v určitém režimu, jako je například režim kreslení.|Nepoužívejte pro krátké změny průběhu nebo pokud je fluttering ukazatele pravděpodobná (například při vázání na části delšího spuštěného procesu namísto celého procesu).|
+|[Indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotSysProgressIndicators)|Použijte v případě, že potřebujete nahlásit průběh (buď zrušení ukončení, nebo neurčitý). Existují různé typy ukazatelů průběhu a konkrétní použití pro každý z nich. Zobrazit [indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators)||
+|[Okno oznámení sady Visual Studio](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_VSNotificationsToolWindow)|Okno oznámení není veřejně rozšiřitelné. Používá se však ke sdělování řady zpráv o aplikaci Visual Studio, včetně kritických problémů s licencí a informativními oznámeními aktualizací sady Visual Studio nebo balíčků.|Nepoužívejte pro jiné typy oznámení.|
+|[Seznam chyb](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ErrorList)|Pokud se problém týká přímo k aktuálně otevřenému řešení, které má problém (chyba/upozornění/informace), může být nutné provést akci s kódem.<br /><br /> Patří mezi ně například:<br /><br /> – Zprávy kompilátoru (chyba/upozornění/informace)<br /><br /> – Analyzátor kódu/diagnostické zprávy týkající se kódu<br /><br /> – Zprávy sestavení<br /><br /> Může být vhodné pro problémy související se soubory projektu nebo řešení, ale nejprve zvažte indikaci Průzkumník řešení.|Nepoužívejte pro položky, které nemají žádný vztah k otevřenému kódu řešení uživatele.|
+|Oznámení editoru: žárovka|Použijte v případě, že máte k dispozici opravu k nápravě problému, který existuje v otevřeném souboru.<br /><br /> Všimněte si, že žárovka by měla být také používána pro hostování rychlých akcí, které se na vyžádání týkají kódu uživatele, například refaktoringu, ale v takovém případě se nezobrazí "styl oznámení".|Nepoužívejte pro položky, které nemají žádný vztah k otevřenému souboru.|
+|Oznámení editoru: vlnovky|Slouží k upozornění uživatele na problém s určitým rozsahem svého otevřeného kódu (například červená vlnovka pro chyby).|Nepoužívejte pro položky, které se nevztahují na konkrétní rozpětí svého otevřeného kódu.|
+|[Vložené Stavové řádky](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_EmbeddedStatusBars)|Slouží k poskytnutí stavu souvisejícího s obsahem nebo procesem v kontextu konkrétního panelu nástrojů, okna dokumentu nebo dialogového okna.|Nepoužívejte pro obecná oznámení produktů, procesy nebo položky, které nemají žádný vztah k obsahu v rámci konkrétního okna.|
+|[Oznámení na panelu Windows](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_WindowsTray)|Použijte k obmnožství oznámení pro procesy mimo proc nebo doprovodné aplikace.|Nepoužívejte pro oznámení, která jsou relevantní pro rozhraní IDE.|
+|[Bubliny oznámení](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_NotificationBubbles)|Slouží ke upozorňování na vzdálený proces nebo změnu **mimo** rozhraní IDE.|Nepoužívejte jako způsob upozorňování uživatele na procesy **v rámci** integrovaného vývojového prostředí (IDE).|
 
 ### <a name="notification-methods"></a>Metody oznámení
 
-#### <a name="BKMK_ModalErrorMessageDialogs"></a> Dialogová okna modální chybová zpráva
- Dialogové okno modální chybová zpráva se používá k zobrazení chybové zprávy, která vyžaduje potvrzení nebo akce uživatele.
+#### <a name="modal-error-message-dialogs"></a><a name="BKMK_ModalErrorMessageDialogs"></a> Dialogová okna modálních chybových zpráv
+ Dialogové okno modální chybové zprávy slouží k zobrazení chybové zprávy, která vyžaduje potvrzení nebo akci uživatele.
 
- ![Modální zpráva](../../extensibility/ux-guidelines/media/0901-01-modalerrormessage.png "0901 01_ModalErrorMessage")
+ ![Modální chybová zpráva](../../extensibility/ux-guidelines/media/0901-01-modalerrormessage.png "0901 – 01_ModalErrorMessage")
 
- **Dialogové okno modální chyba zprávy upozornění uživatele Neplatný připojovací řetězec k databázi**
+ **Dialogové okno modální chybové zprávy upozorňující uživatele na Neplatný připojovací řetězec k databázi**
 
-#### <a name="BKMK_IDEStatusBar"></a> Stavový řádek IDE
- Pravděpodobnost, že uživatelé Všimněte si, že text stavového řádku souvisí s jejich všeobecnými počítačem a konkrétním prostředí s platformou Windows. Visual Studio zákaznická základna spíše zkušení v obou oblastech, ale ještě nebyl dobře informovaný Windows uživatelé přijít o změny ve stavovém řádku. Proto stavový řádek je nejvhodnější pro informační účely nebo jako redundantní upozornění pro informace zobrazí někde jinde. V dialogovém okně nebo v panelu nástrojů oznámení musí být zadána jakýkoli druh důležité informace, které uživatel musí vyřešit okamžitě.
+#### <a name="ide-status-bar"></a><a name="BKMK_IDEStatusBar"></a> Stavový řádek IDE
+ Pravděpodobnost, že text stavového řádku je v souvislosti s platformou systému Windows v souvislosti s okolním prostředím počítače a konkrétním prostředím. Základ zákazníka sady Visual Studio je v obou oblastech, a to i v případě, že si uživatelé systému Windows můžou přijít o změny ve stavovém řádku. Proto se stavový řádek nejlépe používá pro informativní účely nebo jako redundantní hromádka pro informace, které jsou uvedeny jinde. Jakýkoli druh důležitých informací, které uživatel musí okamžitě vyřešit, by měl být uveden v dialogovém okně nebo v okně nástroje oznámení.
 
- Stavový řádek sady Visual Studio je navržena k umožnění pro několik typů informací, který se má zobrazit. Je rozdělený do oblasti pro zpětnou vazbu, návrháři, indikátor průběhu, animace a klienta.
+ Stavový řádek sady Visual Studio je navržen tak, aby umožňoval zobrazení několika typů informací. Je rozdělena do oblastí pro zpětnou vazbu, návrháře, indikátor průběhu, animaci a klienta.
 
- Oblast zpětnou vazbu a návrháře oblasti jsou vždycky viditelná. Indikátor průběhu a animace oblasti jsou vždy dynamických webů a závislosti na kontextu uživatele. Oblasti návrháře má statické šířku, určuje délku řetězce, které pocházejí z doprovodných prostředku pro textové zprávy. To umožňuje lokalizace pro změnu velikosti šířku bez nutnosti provádění změn kódu. Pro angličtinu šířka tento řetězec je přibližně 220 pixelů. Oblasti návrháře se bude chovat normálně a zpětnou vazbu oblasti absorbují zbývající místo.
+ Oblast pro zpětnou vazbu a oblast návrháře jsou vždy viditelné. Indikátory průběhu a oblasti animace jsou vždy dynamické a na základě kontextu uživatele. Oblast návrháře má statickou šířku určenou délkou řetězce, který je načten z doprovodného prostředku pro textovou zprávu. To umožňuje lokalizaci změnit velikost šířky bez nutnosti změny kódu. V případě angličtiny má šířka tohoto řetězce přibližně 220 pixelů. Oblast návrháře se bude chovat normálně a v oblasti zpětné vazby dojde ke absorbanci zbývajícího místa.
 
- Stavový řádek je také obarveny přidat vizuální přitažlivost a funkční hodnotu tím, že komunikaci různé změny stavu integrovaného vývojového prostředí jako je například, pokud je prostředí IDE v režimu ladění.
+ Na stavovém řádku je také zabarvení pro přidání vizuálního zájmu a funkční hodnoty tím, že komunikují různé změny stavu IDE, například když je IDE v režimu ladění.
 
- ![Integrované vývojové prostředí stavového řádku změny barev](../../extensibility/ux-guidelines/media/0901-02-idestatusbar.png "0901 02_IDEStatusBar")
+ ![Změny barev na stavovém řádku IDE](../../extensibility/ux-guidelines/media/0901-02-idestatusbar.png "0901 – 02_IDEStatusBar")
 
- **Integrované vývojové prostředí stav panelu barev**
+ **Barvy stavového řádku IDE**
 
-#### <a name="BKMK_EmbeddedInfobar"></a> Vložený informačním panelu
- Informačního panelu je možné v horní části okna dokumentu nebo panel nástrojů informovat uživatele o stavu nebo podmínku. Můžete také nabízí příkazy tak, aby uživatel může mít způsob, jak snadno provést akci. Informační panel je ovládací prvek standardní prostředí. Vyhněte se vytváření vlastní, které se chovají a zobrazují se nekonzistentní s jinými uživateli v integrovaném vývojovém prostředí. Zobrazit [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars) implementace podrobnosti a informace o používání.
+#### <a name="embedded-infobar"></a><a name="BKMK_EmbeddedInfobar"></a> Vložený informační panel
+ Informační panel se dá použít v horní části okna dokumentu nebo nástroje k informování uživatele o stavu nebo stavu. Může také nabízet příkazy, aby uživatel mohl snadno provést akci. Informační panel je standardním ovládacím prvkem prostředí. Vyhněte se vytváření vlastního, který bude fungovat a bude se zobrazovat jako nekonzistentní s ostatními v integrovaném vývojovém prostředí. Podrobnosti o implementaci a pokyny k používání najdete v tématu [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars) .
 
- ![Vložené informační panel](../../extensibility/ux-guidelines/media/0901-03-embeddedinfobar.png "0901 03_EmbeddedInfobar")
+ ![Vložený informační panel](../../extensibility/ux-guidelines/media/0901-03-embeddedinfobar.png "0901 – 03_EmbeddedInfobar")
 
- **Informačního panelu vložený v okně dokumentu upozornění uživatele, který rozhraní IDE je v režimu historické ladění a editor nebude odpovídat stejným způsobem jako ve standardním režimu ladění.**
+ **Informační panel vložený v okně dokumentu upozorňující uživatele, že rozhraní IDE je v historickém režimu ladění a Editor nebude reagovat stejným způsobem jako v režimu standardního ladění.**
 
-#### <a name="BKMK_MouseCursorChanges"></a> Změní se kurzor myši
- Při přechodu myší do pomocí barev, které jsou vázané na službu VSColor a jsou již přidruženy kurzor. Změní se kurzor lze použít pro probíhající operaci, jakož i přístupů zóny, kde je uživatel najede myší cíl, který můžete přetáhnout, přetaženy nebo použít k výběru objektu.
+#### <a name="mouse-cursor-changes"></a><a name="BKMK_MouseCursorChanges"></a> Změny kurzoru myši
+ Při změně kurzoru myši použijte barvy, které jsou svázané se službou VSColor a jsou již přidruženy k tomuto ukazateli. Změny kurzoru se dají použít k označení probíhající operace a také zón přístupů, kde se uživatel najede myší na cíl, který se dá přetáhnout, přesunout na nebo použít k výběru objektu.
 
- Použijte myš zaneprázdněný/wait pouze v případě, že všechny dostupné čas procesoru musí být vyhrazen pro operaci brání vyjádření jakýkoli další vstup uživatele. Ve většině případů s kvalitně napsané pomocí multithreadingu aplikacemi musí být výjimečných časy, kdy uživatelům bránit v provádění dalších operací.
+ Použijte ukazatel myši na zaneprázdněné/čekací dobu jenom v případě, že je k dispozici veškerý dostupný čas procesoru pro operaci a zabránit tak uživateli v vyjádření dalšího vstupu. Ve většině případů s dobře zapsanými aplikacemi, které používají multithreading, časy, kdy se uživatelům zabrání v provádění jiných operací, by nemělo být vzácné.
 
- Uvědomte si, že změní se kurzor jsou užitečné, protože redundantní startovací informace zobrazí někde jinde. Nespoléhejte na změnu kurzor jako komunikovat s uživateli, zejména v případě, že chcete sdělit něco jediný způsob, jakým je velmi důležité, že uživatel musí vyřešit.
+ Pamatujte, že změny kurzoru jsou užitečné pro informace, které jsou k dispozici jinde, jako redundantní hromádka. Nespoléhá se na změnu kurzoru jako jediným způsobem komunikace s uživatelem, zejména když se snažíte sdělit něco, co je důležité, aby uživatel musel adresovat.
 
-#### <a name="BKMK_NotSysProgressIndicators"></a> Indikátory průběhu
- Indikátory průběhu jsou důležité pro poskytování zpětné vazby uživatelů během procesů, které trvat déle než několik sekund na dokončení. Mohou být zobrazeny indikátory průběhu na místě (téměř výchozím bodem probíhající akce), vložené stavového řádku, modální dialogové okno nebo stavový řádek sady Visual Studio. Postupujte podle pokynů v [indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators) týkající se jejich použití a implementaci.
+#### <a name="progress-indicators"></a><a name="BKMK_NotSysProgressIndicators"></a> Indikátory průběhu
+ Indikátory průběhu jsou důležité pro poskytování zpětné vazby uživatelů během procesů, které dokončí více než několik sekund. Indikátory průběhu se můžou zobrazit na místě (v blízkosti bodu spuštění zpracovávané akce), ve vloženém stavovém řádku, v modálním dialogovém okně nebo ve stavovém řádku sady Visual Studio. Postupujte podle pokynů v části [indikátory průběhu](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators) týkající se jejich použití a implementace.
 
-#### <a name="BKMK_VSNotificationsToolWindow"></a> Okno Visual Studio oznámení
- V okně Visual Studio oznámení upozorní vývojáře týkající se licencování, prostředí (Visual Studio), rozšíření a aktualizace. Uživatelé můžou zavřít jednotlivá oznámení nebo můžete rozhodnout ignorovat určité typy oznámení. Seznam ignorovaná oznámení se spravuje **nástroje > Možnosti** stránky.
+#### <a name="visual-studio-notifications-window"></a><a name="BKMK_VSNotificationsToolWindow"></a> Okno oznámení sady Visual Studio
+ Okno oznámení sady Visual Studio upozorňuje vývojáře na licencování, prostředí (Visual Studio), rozšíření a aktualizace. Uživatelé můžou zavřít jednotlivá oznámení nebo se můžou rozhodnout ignorovat určité typy oznámení. Seznam ignorovaných oznámení se spravuje na stránce **možnosti > nástrojů** .
 
- Okno oznámení není aktuálně rozšiřitelný.
+ Okno oznámení není aktuálně rozšiřitelné.
 
- ![Okno Visual Studio oznámení](../../extensibility/ux-guidelines/media/0901-06-vsnotificationswindow.png "0901 06_VSNotificationsWindow")
+ ![Okno oznámení sady Visual Studio](../../extensibility/ux-guidelines/media/0901-06-vsnotificationswindow.png "0901 – 06_VSNotificationsWindow")
 
- **Panel nástrojů Visual Studio oznámení**
+ **Okno nástroje oznámení sady Visual Studio**
 
-#### <a name="BKMK_ErrorList"></a> Seznam chyb
- Oznámení v seznamu chyb označení chyb a upozornění, která došlo k chybě při kompilaci a proces sestavení a umožňuje uživatelům pro navigaci v kódu pro tento konkrétní kód chyby.
+#### <a name="error-list"></a><a name="BKMK_ErrorList"></a> Seznam chyb
+ Oznámení v seznamu chyb indikuje chyby a varování, ke kterým došlo během kompilace nebo procesu sestavení, a umožňuje uživateli přejít v kódu k této chybě konkrétního kódu.
 
- ![Seznam chyb](../../extensibility/ux-guidelines/media/0901-08-errorlist.png "0901 08_ErrorList")
+ ![Seznam chyb](../../extensibility/ux-guidelines/media/0901-08-errorlist.png "0901 – 08_ErrorList")
 
- **Seznam chyb v sadě Visual Studio**
+ **Seznam chyb v aplikaci Visual Studio**
 
-#### <a name="BKMK_EmbeddedStatusBars"></a> Vložený stavové řádky
- Protože stavový řádek IDE je dynamická, s jeho kontextu oblast klienta nastavena na aktivního okna dokumentu a informace o aktualizaci v kontextu uživatele a/nebo odpovědí systému, je obtížné udržovat průběžné zobrazení informací nebo přiřadit stav na dlouhodobé asynchronní procesy. Například stavový řádek IDE není vhodná pro oznámení o výsledku testovacího běhu pro více běhů nebo okamžitě jich položku Možnosti. Je důležité zachovat tyto informace o stavu v kontextu okna dokumentu nebo nástroj, kde uživatel provede výběr nebo spustí proces.
+#### <a name="embedded-status-bars"></a><a name="BKMK_EmbeddedStatusBars"></a> Vložené Stavové řádky
+ Vzhledem k tomu, že stavový řádek IDE je dynamický, má kontext oblasti klienta nastavené na aktivní okno dokumentu a aktualizuje informace v kontextu uživatele a/nebo systémových odpovědích, je obtížné udržovat průběžné zobrazování informací nebo poskytovat stav dlouhodobých asynchronních procesů. Například stavový řádek IDE není vhodný pro oznámení výsledků testovacího běhu pro vícenásobné spuštění a/nebo okamžitě vhodné výběry položek. Je důležité uchovávat tyto informace o stavu v kontextu dokumentu nebo nástroje, kde uživatel provede výběr nebo spustí proces.
 
- ![Vložený stavový řádek](../../extensibility/ux-guidelines/media/0901-09-embeddedstatusbar.png "0901 09_EmbeddedStatusBar")
+ ![Vložený stavový řádek](../../extensibility/ux-guidelines/media/0901-09-embeddedstatusbar.png "0901 – 09_EmbeddedStatusBar")
 
- **Vložený stavového řádku v sadě Visual Studio**
+ **Vložený stavový řádek v aplikaci Visual Studio**
 
-#### <a name="BKMK_WindowsTray"></a> Oznámení na hlavním panelu Windows
- Hodiny, Windows, se vedle systému oznamovací oblasti na hlavním panelu Windows. Mnoho nástrojů a softwarové součásti poskytují ikony v této oblasti tak, aby uživatel lze získat kontextové nabídky pro celý systém úkoly, jako je změna rozlišení obrazovky nebo získávání aktualizací softwaru.
+#### <a name="windows-tray-notifications"></a><a name="BKMK_WindowsTray"></a> Oznámení na panelu Windows
+ Oznamovací oblast systému Windows je vedle systémových hodin na hlavním panelu systému Windows. Řada nástrojů a softwarových součástí poskytuje ikony v této oblasti, takže uživatel může získat kontextovou nabídku pro úlohy v rámci systému, jako je například změna rozlišení obrazovky nebo získání aktualizací softwaru.
 
- Oznámení na úrovni prostředí by měl být prezentované v centru oznámení Visual Studio, není oznamovací oblasti Windows.
+ Oznámení na úrovni prostředí by se měla nacházet v centru oznámení sady Visual Studio, nikoli v oznamovací oblasti systému Windows.
 
-#### <a name="BKMK_NotificationBubbles"></a> Bubliny oznámení
- Oznámení bubliny se mohou objevit jako informační v editoru nebo návrháře nebo jako součást Windows oznamovací oblasti. Uživatel vnímá těchto bublin jako problémy, které můžete vyřešit později, což je výhoda pro Nekritická oznámení. Bubliny jsou nevhodné pro důležité informace, které uživatel musí vyřešit okamžitě. Pokud používáte bubliny oznámení v sadě Visual Studio, postupujte [Windows Desktop pokyny pro oznámení bubliny](https://msdn.microsoft.com/library/windows/desktop/dn742472\(v=vs.85\).aspx).
+#### <a name="notification-bubbles"></a><a name="BKMK_NotificationBubbles"></a> Bubliny oznámení
+ Bubliny oznámení se mohou zobrazovat jako informativní v editoru nebo Návrháři nebo jako součást oznamovací oblasti systému Windows. Uživatel tyto bubliny sestaví jako problémy, které mohou později vyřešit, což je výhodou pro Nekritická oznámení. Bubliny jsou nevhodné pro kritické informace, které uživatel musí hned vyřešit. Pokud používáte bubliny oznámení v aplikaci Visual Studio, postupujte podle [pokynů pro stolní počítače Windows pro oznamovací bubliny](https://msdn.microsoft.com/library/windows/desktop/dn742472\(v=vs.85\).aspx).
 
- ![Bublinu oznámení](../../extensibility/ux-guidelines/media/0901-07-notificationbubbles.png "0901 07_NotificationBubbles")
+ ![Bublina oznámení](../../extensibility/ux-guidelines/media/0901-07-notificationbubbles.png "0901 – 07_NotificationBubbles")
 
- **Bublinu oznámení v oblasti oznámení Windows pro Visual Studio**
+ **Bublina oznámení v oznamovací oblasti systému Windows používané pro Visual Studio**
 
-## <a name="BKMK_ProgressIndicators"></a> Indikátory průběhu
+## <a name="progress-indicators"></a><a name="BKMK_ProgressIndicators"></a> Indikátory průběhu
 
 ### <a name="overview"></a>Přehled
- Indikátory průběhu jsou důležitou součástí systému oznámení pro poskytování zpětné vazby uživatelů. Jejich říct uživatelům, když se dokončí operace a procesy. Indikátor známé typy zahrnují indikátory průběhu, pokryjte kurzory a animovaný ikony. Typ a umístění indikátor průběhu, závisí na kontextu, včetně nahlašována co a jak dlouho proces nebo operace bude trvat dokončení.
+ Indikátory průběhu jsou důležitou součástí systému oznámení pro poskytování zpětné vazby uživatele. Upozorní uživatele, když budou dokončeny procesy a operace. Mezi známé typy ukazatelů patří indikátory průběhu, otáčející se kurzory a animované ikony. Typ a umístění indikátoru průběhu závisí na kontextu, včetně informací o tom, co je hlášeno a jak dlouho bude trvat dokončení procesu nebo operace.
 
-#### <a name="factors"></a>Faktory
- Aby bylo možné zjistit, jaký typ ukazatele je vhodné, je nutné určit následující faktory.
+#### <a name="factors"></a>Skutečnosti
+ Aby bylo možné určit, který typ ukazatele je vhodný, je nutné určit následující faktory.
 
-1. **Časování:** doba operace bude trvat.
+1. **Časování:** doba trvání operace
 
-2. **Modalitě:** Určuje, zda je operace modální prostředí (uzamčení uživatelského rozhraní až do dokončení procesu)
+2. **Modální způsob:** zda je operace pro prostředí modální (uzamkne uživatelské rozhraní, dokud se proces nedokončí)
 
-3. **Trvalé nebo přechodné:** konečný výsledek průběh, jestli musí být ohlášené a/nebo zobrazit později
+3. **Trvalé/přechodné:** , zda konečný výsledek průběhu musí být uveden a/nebo zobrazitelný později
 
-4. **Determinate/Neurčitost:** Určuje, zda je možné vypočítat čas ukončení operace a průběh
+4. Zrušení **ukončení/neurčité:** určuje, jestli se dá vypočítat čas ukončení operace a průběh.
 
-5. **Umístění obrázku/Textual:** Určuje, zda průběh nebo procesu je zachycená vložené v textu zprávy, nebo konkrétní ovládací prvek, jako je například ovládací prvek stromu
+5. **Graphic/textové umístění:** určuje, zda je průběh nebo proces zachycen vloženě, v těle zprávy nebo konkrétní ovládací prvek, jako je například ovládací prvek stromu.
 
-6. **Vzdálenost:** Určuje, zda by měl být průběh v těsné blízkosti uživatelského rozhraní, která souvisí s. (Například může být ve stavovém řádku, což může být daleko, nebo má být vedle tlačítka, které spustí proces?)
+6. **Blízkost:** určuje, jestli se má průběh uzavřít do blízkosti uživatelského rozhraní, ke kterému se vztahuje. (Například může být ve stavovém řádku, který může být daleko pryč nebo musí být poblíž tlačítka, které proces spustil?)
 
-#### <a name="determinate-progress"></a>Determinate průběh
-
-|Typ průběhu|Kdy a jak používat|Poznámky|
-|-------------------|-------------------------|-----------|
-|Indikátor průběhu (determinate)|Očekávané trvání > 5 sekund.<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.|**Není** vložení textu do animace.|
-|Informační panel|Zasílání zpráv přidružené kontextové uživatelského rozhraní. Zobrazit [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.|**Není** použít více infobars, když budete potřebovat k označení více procesů. Místo toho použijte pruhy skládané průběh.|
-|Okno Výstup|Přechodné oznámení: procesu na úrovni aplikace chcete tomuto uživateli **zkontrolujte** podrobnosti po dokončení.|**Není** použijte, pokud uživatel bude muset později odkazovat na data.|
-|Soubor protokolu|Spárovaná s intransient oznámení v případech, když je potřeba **Uložit** podrobnosti po dokončení.||
-|Stavový řádek|Přechodné oznámení: procesu na úrovni aplikace tohoto uživatele bude **není nutné** podrobnosti po dokončení.<br /><br /> Obsahuje vložené indikátor průběhu.<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.||
-
-#### <a name="indeterminate-progress"></a>Neurčitého průběhu
+#### <a name="determinate-progress"></a>Průběh zrušení ukončení
 
 |Typ průběhu|Kdy a jak používat|Poznámky|
 |-------------------|-------------------------|-----------|
-|Indikátor průběhu (neurčitý)|Očekávané trvání > 5 sekund.<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.|**Není** vložení textu do animace.|
-|Rámeček (animovaný vodorovné tečky)|Latence na server.<br /><br /> Umístit near bodu kontextu horním okraji nadřazeného kontejneru.|**Není** použijte, pokud není nadřazena celého kontejneru.|
-|Číselník (průběh kanál)|Proces přidružené kontextové v uživatelském rozhraní nebo kde místa je potřeba.<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.||
-|Informační panel|Zasílání zpráv přidružené kontextové uživatelského rozhraní. Zobrazit [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).|**Není** použít více infobars, když budete potřebovat k označení více procesů. Místo toho použijte pruhy skládané průběh.|
-|Okno Výstup|Přechodné oznámení: procesu na úrovni aplikace daného uživatele budete chtít **zkontrolujte** podrobnosti po dokončení.|**Není** informace, které je potřeba uchovávat napříč relacemi.|
-|Soubor protokolu|Spárovaná s intransient oznámení v případech, když je potřeba **Uložit** podrobnosti po dokončení.||
-|Stavový řádek|Přechodné oznámení: procesu na úrovni aplikace tohoto uživatele bude **není nutné** podrobnosti po dokončení.<br /><br /> Obsahuje vložené indikátor průběhu.<br /><br /> Může zahrnovat textový popis podrobnosti o procesu.||
+|Indikátor průběhu (zrušení ukončení)|Očekávaná doba trvání >5 sekund.<br /><br /> Může obsahovat textový popis podrobností o procesu.|**Nevkládat text** do animace|
+|Řádku|Zasílání zpráv přidružených k kontextovému uživatelskému rozhraní Viz [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).<br /><br /> Může obsahovat textový popis podrobností o procesu.|Pokud potřebujete označit více procesů, **nepoužívejte více** infobars. Místo toho použijte skládané indikátory průběhu.|
+|Okno Výstup|Přechodné oznámení: proces na úrovni aplikace, který uživatel potřebuje ke **kontrole** podrobností po dokončení.|**Nepoužívejte,** Pokud bude uživatel později potřebovat odkaz na data.|
+|Soubor protokolu|Spárováno s nepřechodným oznámením v případech, kdy je důležité **Uložit** podrobnosti po dokončení.||
+|Stavový řádek|Přechodné oznámení: proces na úrovni aplikace, který uživatel nebude po dokončení **potřebovat** podrobnosti.<br /><br /> Zahrnuje vložený indikátor průběhu.<br /><br /> Může obsahovat textový popis podrobností o procesu.||
 
-### <a name="progress-indicator-types"></a>Typy indikátor průběhu
+#### <a name="indeterminate-progress"></a>Neurčitý průběh
+
+|Typ průběhu|Kdy a jak používat|Poznámky|
+|-------------------|-------------------------|-----------|
+|Indikátor průběhu (neurčitelné)|Očekávaná doba trvání >5 sekund.<br /><br /> Může obsahovat textový popis podrobností o procesu.|**Nevkládat text** do animace|
+|ANTS (animované vodorovné tečky)|Vykolete cestu k serveru.<br /><br /> Umístěn poblíž bodu kontextu mezi horním prvkem nadřazeného kontejneru.|**Nepoužívejte,** Pokud není nadřazený celým kontejnerem.|
+|Číselník (kruh průběhu)|Proces přidružený k kontextovému uživatelskému rozhraní nebo místa, kde je důležité zvážit.<br /><br /> Může obsahovat textový popis podrobností o procesu.||
+|Řádku|Zasílání zpráv přidružených k kontextovému uživatelskému rozhraní Viz [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).|Pokud potřebujete označit více procesů, **nepoužívejte více** infobars. Místo toho použijte skládané indikátory průběhu.|
+|Okno Výstup|Přechodné oznámení: proces na úrovni aplikace, který uživatel bude chtít **zkontrolovat** podrobnosti po dokončení.|**Nepoužívejte pro** informace, které je potřeba uchovat napříč relacemi.|
+|Soubor protokolu|Spárováno s nepřechodným oznámením v případech, kdy je důležité **Uložit** podrobnosti po dokončení.||
+|Stavový řádek|Přechodné oznámení: proces na úrovni aplikace, který uživatel nebude po dokončení **potřebovat** podrobnosti.<br /><br /> Zahrnuje vložený indikátor průběhu.<br /><br /> Může obsahovat textový popis podrobností o procesu.||
+
+### <a name="progress-indicator-types"></a>Typy ukazatelů průběhu
 
 #### <a name="progress-bars"></a>Indikátory průběhu
 
-##### <a name="indeterminate"></a>Neurčitá
- ![Indikátor neurčitého průběhu](../../extensibility/ux-guidelines/media/0901-04-indeterminate.png "0901 04_Indeterminate")
+##### <a name="indeterminate"></a>Definované
+ ![Neurčitý indikátor průběhu](../../extensibility/ux-guidelines/media/0901-04-indeterminate.png "0901 – 04_Indeterminate")
 
- **Indikátor neurčitého průběhu**
+ **Neurčitý indikátor průběhu**
 
- "Neurčitý" znamená, že celkový průběh operace nebo proces nelze určit. Pomocí panelů neurčitého průběhu pro operace, které vyžadují neomezené množství času nebo které přistupují k neznámé počet objektů. Používejte textový popis vyvíjený, co se děje. Pomocí vypršení časových limitů přidělit hranice založené na čase operace. Indikátory neurčitého průběhu pomocí animací můžete zobrazit, že je k pokroku, ale neposkytují žádné informace. Neklikejte indikátor neurčitého průběhu založen pouze na případné nedostatky přesnost samostatně.
+ Neurčitý znamená celkový průběh operace nebo procesu nelze určit. Použijte neurčité indikátory průběhu pro operace, které vyžadují neohraničený čas nebo které přistupují k neznámému počtu objektů. Použijte textový popis, abyste mohli doprovázet, co se děje. Pomocí časových limitů můžete přidělit meze operacím založeným na čase. Neurčité ukazatele průběhu používají animace k zobrazení tohoto průběhu, ale neposkytují žádné další informace. Nevybírejte indikátor průběhu pouze na základě možného nedostatku samotného typu.
 
-##### <a name="determinate"></a>Determinate
- ![Indikátor průběhu determinate](../../extensibility/ux-guidelines/media/0901-05-determinate.png "0901 05_Determinate")
+##### <a name="determinate"></a>Zrušit ukončení
+ ![Indikátor průběhu zrušení ukončení](../../extensibility/ux-guidelines/media/0901-05-determinate.png "0901 – 05_Determinate")
 
- **Indikátor průběhu determinate**
+ **Indikátor průběhu zrušení ukončení**
 
- "Determinate" znamená, že operace nebo proces vyžaduje ohraničené množství času, i v případě, že množství času nemůže být předpovězen přesně. Jasně označuje dokončení. Nenechte indikátor průběhu, přejděte na 100 % jeho obsahu, pokud bude dokončena operace. Panel Animace determinate průběhu přesune zleva doprava od 0 do 100 %.
+ Možnost "Zrušit ukončení" znamená, že operace nebo proces vyžaduje určenou dobu, a to i v případě, že tuto dobu nelze přesně předpovědět. Jasně uveďte dokončení. Nenechte ukazatel průběhu přejít na 100%, pokud se operace nedokončí. Animace indikátoru indikátoru ukončení se pohybuje zleva doprava z 0 do 100%.
 
- Indikátor průběhu během operace zpět se nikdy nepřesouvají. Na panelu byste posunout vpřed neustále při zahájení operace a Oslovte 100 % při jeho ukončení. Bod indikátor průběhu je poskytnout uživateli představu, jak dlouho trvá celá operace, bez ohledu na to, kolik kroky souvisejí.
+ Nikdy během operace Nepřesouvat ukazatel průběhu zpět. Čára by se měla při zahájení operace a dosažení 100% po skončení přesunout do budoucna. Hlavním bodem průběhu je poskytnout uživateli představu o tom, jak dlouho celá operace trvá, bez ohledu na to, kolik kroků se týká.
 
-##### <a name="concurrent-reporting-stacked-progress-bars"></a>Souběžné vytváření sestav (skládaný indikátory)
- Pokud operace bude trvat dlouhou dobu – například může sloužit několika minut – a indikátory průběhu dvou, jednu, která zobrazuje celkový průběh operace a druhý pro průběh stávající krok. Například pokud instalační program je kopírování mnoho souborů, pak jeden indikátor průběhu slouží k označení, jak dlouho trvá celý proces, zatímco druhý můžete určit, jaké je procento aktuálního souboru nebo adresáře kopírování. Neoznamují se více než pěti souběžných operací nebo procesy pomocí pruhy skládané průběh. Pokud máte víc než pěti souběžných operací nebo procesů do sestavy, pomocí modálního dialogového okna tlačítko Storno a sestava podrobnosti o průběhu do okna výstup.
+##### <a name="concurrent-reporting-stacked-progress-bars"></a>Souběžné generování sestav (skládané indikátory průběhu)
+ Bude-li operace trvat dlouhou dobu, například několik minut, lze použít dva indikátory průběhu, jeden, který ukazuje celkový průběh operace a druhý pro průběh aktuálního kroku. Například pokud instalační program kopíruje mnoho souborů, pak se jeden indikátor průběhu dá použít k určení, jak dlouho celý proces trvá, zatímco druhý může indikovat, jaké procento aktuálního souboru nebo adresáře se právě kopíruje. Nesestavujte více než pět souběžných operací nebo procesů pomocí skládaných pruhů průběhu. Pokud máte více než pět souběžných operací nebo procesů k sestavování, použijte modální dialogové okno s tlačítkem Storno a sestavte podrobnosti o průběhu na okno Výstup.
 
-##### <a name="textual-descriptions"></a>Textový popis
- Použijte textový popis vyvíjený, co se děje a odhadovaný čas dokončení. Pokud je možné určit, jak dlouho bude trvat operace, je vhodnější pro poskytování zpětné vazby může být animovaný ikonu spíše než indikátor průběhu.
+##### <a name="textual-descriptions"></a>Textové popisy
+ Použijte textový popis k naplnění toho, co se děje, a odhadovaný čas dokončení. Pokud není možné určit, jak dlouho bude operace trvat, může být lepší volbou pro poskytnutí zpětné vazby animovaná ikona místo indikátoru průběhu.
 
- Visual Studio poskytuje standardní průběh panel ve stavovém řádku, který může používat libovolný produkt integrované do sady Visual Studio. Textový popis co se děje, když je animovaný indikátor průběhu je možné aktualizovat text stavového řádku.
+ Visual Studio poskytuje standardní indikátor průběhu ve stavovém řádku, který může být použit jakýmkoli produktem integrovaným do sady Visual Studio. V případě textových popisů toho, co se děje, když je indikátor průběhu animovaný, se text stavového řádku dá aktualizovat.
 
 #### <a name="other-progress-indicators"></a>Další indikátory průběhu
 
-##### <a name="ants-animated-horizontal-dots"></a>Rámeček (animovaný vodorovné tečky)
- ![Průběh rámeček](../../extensibility/ux-guidelines/media/0903-01-ants.png "0903 01_Ants")
+##### <a name="ants-animated-horizontal-dots"></a>ANTS (animované vodorovné tečky)
+ ![ANTS průběhu](../../extensibility/ux-guidelines/media/0903-01-ants.png "0903 – 01_Ants")
 
- "Rámeček," animovaný vodorovné tečky, poskytují vizuální informace pro proces neurčitý odezvy serveru.
+ "ANTS", animované horizontální tečky, poskytují vizuální odkaz na neurčitý proces serveru Round-Trip.
 
-##### <a name="spinner-progress-ring"></a>Číselník (průběh kanál)
- ![Průběh rotujícího indikátoru průběhu](../../extensibility/ux-guidelines/media/0903-02-spinner.png "0903 02_Spinner")
+##### <a name="spinner-progress-ring"></a>Číselník (kruh průběhu)
+ ![Číselník průběhu](../../extensibility/ux-guidelines/media/0903-02-spinner.png "0903 – 02_Spinner")
 
- Číselník (označované také jako "okruhu průběh") je indikátorem neurčitého průběhu primárně používá ve vztahu k kontextové uživatelského rozhraní. V těsné blízkosti jeho související obsah, jako je například textové kategorie záhlaví, zasílání zpráv nebo ovládací prvek zobrazí číselník a požadavek.
+ Číselník (označuje se také jako "okruh průběhu") je neurčitý indikátor průběhu, který se primárně používá ve vztahu k kontextovému uživatelskému rozhraní. Zobrazí číselník v blízkosti blízkosti jeho souvisejícího obsahu, jako je například textové záhlaví kategorie, zasílání zpráv nebo řízení.
 
-##### <a name="cursor-feedback"></a>Zpětná vazba kurzoru
- Pro operace, které trvat přibližně 2 – 7 sekund poskytnout zpětnou vazbu kurzoru. Obvykle to znamená použití kurzor pro čekání v operačním systému k dispozici. Pokyny najdete v článku na webu MSDN [Cursors.Wait vlastnost](https://msdn.microsoft.com/library/system.windows.input.cursors.wait\(v=vs.110\).aspx).
+##### <a name="cursor-feedback"></a>Váš názor na kurzor
+ Pro operace, které trvá mezi 2-7 sekundami, zadejte zpětnou vazbu kurzoru. Obvykle to znamená, že se používá čekací ukazatel poskytovaný operačním systémem. Pokyny najdete v článku [vlastnosti čekání](https://msdn.microsoft.com/library/system.windows.input.cursors.wait\(v=vs.110\).aspx)na webu MSDN.
 
-#### <a name="progress-indicator-locations"></a>Umístění indikátoru průběhu
+#### <a name="progress-indicator-locations"></a>Umístění ukazatelů průběhu
 
 ##### <a name="status-bar"></a>Stavový řádek
- Stavový řádek poskytuje místo, kde můžete zobrazit zprávy a užitečné informace pro uživatele bez přerušení práce pro uživatele vaší aplikace. Obvykle se zobrazí v dolní části okna, stav průběh bude podokno tip nástroj, který obsahuje zprávu o měřítkem pokroku v kombinaci s panel indikátor průběhu.
+ Stavový řádek poskytuje aplikaci místo pro zobrazení zpráv a užitečných informací uživateli, aniž by přerušil práci uživatele. Stav pro průběh se obvykle zobrazuje v dolní části okna s popisem nástroje, který obsahuje zprávu o míře průběhu v kombinaci s indikátorem indikátoru průběhu.
 
- ![Stavový řádek s indikátor průběhu](../../extensibility/ux-guidelines/media/0903-03-statusbarprogressbar.png "0903 03_StatusBarProgressBar")
+ ![Stavový řádek s indikátorem průběhu](../../extensibility/ux-guidelines/media/0903-03-statusbarprogressbar.png "0903 – 03_StatusBarProgressBar")
 
- **Stavový řádek s indikátor průběhu**
+ **Stavový řádek s indikátorem průběhu**
 
- ![Stavový řádek se zasíláním zpráv](../../extensibility/ux-guidelines/media/0903-04-statusbarmessage.png "0903 04_StatusBarMessage")
+ ![Stavový řádek s zasíláním zpráv](../../extensibility/ux-guidelines/media/0903-04-statusbarmessage.png "0903 – 04_StatusBarMessage")
 
- **Stavový řádek s textový popis**
+ **Stavový řádek s textovým popisem**
 
-##### <a name="infobar"></a>Informační panel
- Podobně jako na stavovém řádku informačního panelu poskytuje kontextové oznámení a zasílání zpráv, které může také být párována s typem ukazatele neurčitého průběhu, jako je například indikátor průběhu nebo rotujícího indikátoru průběhu. Informačního panelu by neměl poskytují podrobné úrovni průběh nebo označení determinate průběh. Zobrazit [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).
+##### <a name="infobar"></a>Řádku
+ Podobně jako stavový řádek, informační panel poskytuje kontextové oznámení a zasílání zpráv, které lze také spárovat s neurčitými indikátory průběhu, jako je indikátor průběhu nebo číselník. Informační panel by neměl poskytovat podrobný průběh detailní úrovně nebo ukončení indikace průběhu. Viz [Infobars](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).
 
- ![Informační panel s zasílání zpráv a indikátor průběhu](../../extensibility/ux-guidelines/media/0903-05-infobar.png "0903 05_InfoBar")
+ ![Informační panel s indikátorem průběhu a zasíláním zpráv](../../extensibility/ux-guidelines/media/0903-05-infobar.png "0903 – 05_InfoBar")
 
- **Informační panel s indikátor průběhu a textový popis**
+ **Informační panel s ukazatelem průběhu a textovým popisem**
 
- ![Informační panel uvnitř okna](../../extensibility/ux-guidelines/media/0903-06-infobarinwindow.png "0903 06_InfoBarInWindow")
+ ![Informační panel uvnitř okna](../../extensibility/ux-guidelines/media/0903-06-infobarinwindow.png "0903 – 06_InfoBarInWindow")
 
- **Informační panel, v okně analýzy kódu**
+ **Informační panel v okně Analýza kódu**
 
-##### <a name="inline"></a>vložené
- Označení inline průběhu může být reprezentována jakýkoli z typů zavaděč průběh. Obvykle je indikátor průběhu spojená se zasíláním zpráv, ale to není povinné.
+##### <a name="inline"></a>Přiřazený
+ Vložené indikace průběhu může představovat libovolný typ zavaděče průběhu. Indikátor průběhu se obvykle spáruje s zasíláním zpráv, ale to není požadavek.
 
- ![Vložené průběh rotujícího indikátoru průběhu](../../extensibility/ux-guidelines/media/0903-07-inlinespinner.png "0903 07_InlineSpinner")
+ ![Vnitřní číselník průběhu](../../extensibility/ux-guidelines/media/0903-07-inlinespinner.png "0903 – 07_InlineSpinner")
 
- **V kombinaci s textový popis číselník**
+ **Číselník v kombinaci s textovým popisem**
 
- ![Vložené skládaný indikátory průběhu](../../extensibility/ux-guidelines/media/0903-08-inlinestackedprogress.png "0903 08_InlineStackedProgress")
+ ![Vložené skládané indikátory průběhu](../../extensibility/ux-guidelines/media/0903-08-inlinestackedprogress.png "0903 – 08_InlineStackedProgress")
 
- **Indikátory průběhu determinate skládaný**
+ **Zrušit ukončení skládaných pruhů průběhu**
 
- ![Zasílání zpráv průběhu vložené](../../extensibility/ux-guidelines/media/0903-09-inlinetext.png "0903 09_InlineText")
+ ![Vkládání zpráv o průběhu](../../extensibility/ux-guidelines/media/0903-09-inlinetext.png "0903 – 09_InlineText")
 
- **Server Explorer vložený text: Probíhá aktualizace...**
+ **Průzkumník serveru vložený text: Probíhá aktualizace...**
 
-##### <a name="tool-windows"></a>Nástroje systému windows
- Globální průběh údaj představuje indikátor neurčitého průběhu umístěna přímo pod panelu nástrojů.
+##### <a name="tool-windows"></a>Okna nástrojů
+ Globální indikace průběhu je reprezentován neurčitým indikátorem průběhu umístěným přímo pod panelem nástrojů.
 
- ![Globální neurčitého průběhu](../../extensibility/ux-guidelines/media/0903-23-globalindeterminate.png "0903 23_GlobalIndeterminate")
+ ![Globální neurčitý indikátor průběhu](../../extensibility/ux-guidelines/media/0903-23-globalindeterminate.png "0903 – 23_GlobalIndeterminate")
 
- **Team Explorer globální neurčitého průběhu panelu**
+ **Team Explorer globální neurčitý indikátor průběhu**
 
 ##### <a name="dialogs"></a>Dialogy
- Dialogová okna může obsahovat jakýkoli z typů zavaděč průběh. Indikátory průběhu můžou být párována s zasílání zpráv i v kombinaci s více úrovněmi indikaci průběhu představují detailní a dílčí procesy.
+ Dialogová okna mohou obsahovat libovolný typ zavaděče průběhu. Indikátory průběhu se můžou párovat se zasíláním zpráv a také kombinovat s několika úrovněmi průběhu indikace, aby představovaly podrobné a dílčí procesy.
 
- ![Dialogové okno s více typy indikátor průběhu](../../extensibility/ux-guidelines/media/0903-11-dialog.png "0903 11_Dialog")
+ ![Dialog s více typy indikátor průběhu](../../extensibility/ux-guidelines/media/0903-11-dialog.png "0903 – 11_Dialog")
 
- **Visual Studio dialogové okno s souběžných procesů a více typů indikátor průběhu**
+ **Dialog sady Visual Studio se souběžnými procesy a různými typy ukazatelů průběhu**
 
- ![Dialogové okno s zasílání zpráv a průběh zavaděč](../../extensibility/ux-guidelines/media/0903-12-dialog2.png "0903 12_Dialog2")
+ ![Dialogové okno s zavaděčem průběhu a zasíláním zpráv](../../extensibility/ux-guidelines/media/0903-12-dialog2.png "0903 – 12_Dialog2")
 
- **Visual Studio dialogové okno s zavaděč průběh a vložených příkazů pro zasílání zpráv**
+ **Dialog sady Visual Studio se zavaděčem průběhu a vloženými příkazy zasílání zpráv**
 
-##### <a name="document-well"></a>Dobře dokumentu
- Dokument také můžete zobrazit více typů zavaděč průběh v kombinaci s ovládacími prvky.
+##### <a name="document-well"></a>Dobře zdokumentovat
+ Dokumentace dokumentu může v kombinaci s ovládacími prvky Zobrazit více typů zavaděče průběhu.
 
- ![Zasílání zpráv v dokumentu a průběh](../../extensibility/ux-guidelines/media/0903-13-documentwell.png "0903 13_DocumentWell")
+ ![Zpráva o průběhu v dokumentu](../../extensibility/ux-guidelines/media/0903-13-documentwell.png "0903 – 13_DocumentWell")
 
- **Indikátor neurčitého průběhu pod nástrojů**
+ **Neurčitý indikátor průběhu pod panelem nástrojů**
 
 ##### <a name="output-window"></a>Okno Výstup
- V okně výstupu je vhodný pro zpracování procesu průběh a stav průběžného postupu prostřednictvím vloženého textové zprávy. Měli byste použít stavový řádek spolu s jakékoli vykazování průběhu výstupní okno.
+ Okno výstup je vhodné pro zpracování průběhu procesu a průběžného stavu postupu prostřednictvím vloženého textového zasílání zpráv. Měli byste použít stavový řádek spolu s jakýmkoli vytvářením sestav o průběhu výstupního okna.
 
- ![Průběh zasílání zpráv v okně výstupu](../../extensibility/ux-guidelines/media/0903-14-outputwindow.png "0903 14_OutputWindow")
+ ![Doručování zpráv o průběhu okno Výstup](../../extensibility/ux-guidelines/media/0903-14-outputwindow.png "0903 – 14_OutputWindow")
 
- **Výstupní okno se stavem probíhající proces a počkejte zasílání zpráv**
+ **okno Výstup s probíhajícím stavem procesu a čekáním na zprávy**
 
-## <a name="BKMK_Infobars"></a> Infobars
+## <a name="infobars"></a><a name="BKMK_Infobars"></a> Infobars
 
 ### <a name="overview"></a>Přehled
- Infobars dát uživateli indikátor blízko bodem jejich pozornost a pomocí ovládacího prvku sdílené informační panel zajišťuje konzistenci v vizuálního vzhledu a interakce.
+ Infobars uživateli poskytnout ukazatel blízko ke svému bodu pozornosti a použití sdíleného informačního panelu zajišťuje konzistenci vizuálního vzhledu a interakce.
 
- ![Infobar](../../extensibility/ux-guidelines/media/0904-01-infobar.png "0904-01_Infobar")
+ ![Řádku](../../extensibility/ux-guidelines/media/0904-01-infobar.png "0904 – 01_Infobar")
 
- **Infobars v sadě Visual Studio**
+ **Infobars v aplikaci Visual Studio**
 
-#### <a name="appropriate-uses-for-an-infobar"></a>Vhodné pro použití pro informačního panelu
+#### <a name="appropriate-uses-for-an-infobar"></a>Vhodná použití pro informační panel
 
-- Aby uživatel, avšak důležitou neblokující zpráva relevantní pro aktuální kontext
+- Pokud chcete uživateli poskytnout neblokující, ale důležitou zprávu, která je relevantní pro aktuální kontext.
 
-- Označuje, že uživatelské rozhraní v určitých stavu nebo podmínku, která provede některé interakce důsledky, jako je například historické ladění
+- Pro indikaci, že uživatelské rozhraní je v určitém stavu nebo stavu, který přináší některé důsledky interakce, jako je například historické ladění
 
-- Upozornit uživatele, že systém zjistil problémy, například když rozšíření způsobuje problémy s výkonem
+- Upozorní uživatele, že systém zjistil problémy, například když rozšíření způsobuje problémy s výkonem.
 
-- Poskytuje způsob, jak snadno provedení akce, třeba když se zjistí, že soubor se smíšenými karty a mezery editoru uživateli
+- Aby mohl uživatel poskytnout způsob, jak snadno provést akci, například když Editor zjistí, že soubor obsahuje smíšené karty a mezery
 
-##### <a name="do"></a>Proveďte:
+##### <a name="do"></a>Postup
 
-- Text zprávy informačního panelu zachovat krátké a výstižně.
+- Ponechte text zprávy na informačním panelu krátký a k bodu.
 
-- Zachovejte text na odkazy a tlačítka stručné.
+- Ponechte text na odkazech a tlačítkách stručně.
 
-- Ujistěte se, že jsou minimální, zobrazující pouze požadované akce, které poskytnete uživatelům možnosti "action".
+- Ujistěte se, že možnosti "akce", které uživatelům poskytnete, jsou minimální a zobrazují se jenom požadované akce.
 
 ##### <a name="dont"></a>Ne:
 
-- Použijte informačního panelu nabízí standardní příkazy, které mají být umístěny do panelu nástrojů.
+- Pomocí informačního panelu můžete nabízet standardní příkazy, které by měly být umístěny na panelu nástrojů.
 
-- Použijte informačního panelu místo modální dialogové okno.
+- Místo modálního dialogu použijte informační panel.
 
-- Vytvořte zprávu s plovoucí desetinnou čárkou mimo časové období.
+- Vytvoří plovoucí zprávu mimo okno.
 
-- Použití více infobars v několika umístěních v rámci stejné období.
+- V jednom okně použijte více infobars v několika umístěních.
 
-#### <a name="can-multiple-infobars-show-at-the-same-time"></a>Můžete zobrazit více infobars ve stejnou dobu?
- Ano, můžete zobrazit více infobars ve stejnou dobu. Zobrazí se v první přijde, dřív pořadí s první informační panel zobrazuje v horní a další infobars zobrazující níže.
+#### <a name="can-multiple-infobars-show-at-the-same-time"></a>Může se ve stejnou dobu zobrazovat více infobars?
+ Ano, více infobars se může zobrazit ve stejnou dobu. Budou se zobrazovat v prvním řádku s prvními dodanými informacemi a prvním zobrazeným informačním panelem, který ukazuje nahoře a další infobars.
 
- Uživateli se zobrazí maximálně tři infobars najednou, po který, pokud další infobars jsou k dispozici, oblast informační panel se stanou posuvný.
+ Uživatel uvidí maximálně tři infobars v čase, a pokud bude k dispozici více infobars, bude se oblast informačního panelu zobrazovat jako posouvatelné.
 
 ### <a name="creating-an-infobar"></a>Vytvoření informačního panelu
- Informační panel obsahuje čtyři oddíly, zleva doprava:
+ Informační panel obsahuje čtyři části zleva doprava:
 
-- **Ikona:** To je, kde můžete přidávat libovolnou ikonu se má zobrazit pro informační panel, jako je například ikona upozornění.
+- **Ikona:** Do tohoto místa přidáte libovolné ikony, které byste chtěli zobrazit pro informační panel, jako je například ikona upozornění.
 
-- **Text:** Můžete přidat text popisující uživatelské scénáře nebo situace, se společně s odkazy v rámci textu, podle potřeby. Nezapomeňte si zachovat stručné text.
+- **Text:** Můžete přidat text popisující scénář/situaci, kdy se uživatel nachází v, spolu s odkazy v textu, pokud je to potřeba. Nezapomeňte text stručně zachovat.
 
-- **Akce:** Tento oddíl by měl obsahovat odkazy a tlačítka pro akce, které uživateli umožňuje pořizovat vaše informačním panelu.
+- **Akce:** Tato část by měla obsahovat odkazy a tlačítka pro akce, které může uživatel provést na svém informačním panelu.
 
-- **Tlačítko Zavřít:** Poslední část vpravo může mít tlačítko pro uzavření.
+- **Tlačítko Zavřít:** Poslední část vpravo může obsahovat tlačítko Zavřít.
 
-#### <a name="creating-a-standard-infobar-in-managed-code"></a>Vytváření standardních informační panel ve spravovaném kódu
- Třída InfoBarModel slouží k vytvoření zdroje dat pro informačního panelu. Použijte jednu z těchto čtyř konstruktory:
+#### <a name="creating-a-standard-infobar-in-managed-code"></a>Vytvoření standardního informačního panelu ve spravovaném kódu
+ Třídu InfoBarModel lze použít k vytvoření zdroje dat pro informační panel. Použijte jeden z těchto čtyř konstruktorů:
 
 ```
 public InfoBarModel(IEnumerable<IVsInfoBarTextSpan> textSpans, ImageMoniker image = default(ImageMoniker), bool isCloseButtonVisible = true);
@@ -360,9 +360,9 @@ public InfoBarModel(IEnumerable<IVsInfoBarTextSpan> textSpans, IEnumerable<IVsIn
 public InfoBarModel(string text, IEnumerable<IVsInfoBarActionItem> actionItems, ImageMoniker image = default(ImageMoniker), bool isCloseButtonVisible = true);
 ```
 
- Tady je příklad, který vytváří InfoBarModel s nějakým text hypertextového odkazu, tlačítko akce a ikonu.
+ Tady je příklad, který vytvoří InfoBarModel s nějakým textem s hypertextovým odkazem, tlačítkem akce a ikonou.
 
- ![Informační panel s hypertextovým odkazem](../../extensibility/ux-guidelines/media/0904-02-infobarhyperlink.png "0904 02_InfobarHyperlink")
+ ![Informační panel s hypertextovým odkazem](../../extensibility/ux-guidelines/media/0904-02-infobarhyperlink.png "0904 – 02_InfobarHyperlink")
 
 ```
 var infoBar = new InfoBarModel(
@@ -381,8 +381,8 @@ var infoBar = new InfoBarModel(
 
 ```
 
-#### <a name="creating-a-standard-infobar-in-native-code"></a>Vytvoření standardní informační panel v nativním kódu
- Implementovat rozhraní The IVsInfoBar negace informačního panelu z nativního kódu.
+#### <a name="creating-a-standard-infobar-in-native-code"></a>Vytvoření standardního informačního panelu v nativním kódu
+ Implementujte rozhraní IVsInfoBar, aby poskytoval informační panel z nativního kódu.
 
 ```
 public interface IVsInfoBar
@@ -395,8 +395,8 @@ public interface IVsInfoBar
 
 ```
 
-#### <a name="getting-an-infobar-uielement-from-an-infobar"></a>Získávání informačního panelu UIElement z informačního panelu
- Implementace InfoBarModel nebo IVsInfoBar jsou datové modely, které musí být nastavená na prvku UIElement, aby bylo možné zobrazit v uživatelském rozhraní. Objekt SVsInfoBarUIFactory/IVsInfoBarUIFactory službou se dá načíst prvku UIElement.
+#### <a name="getting-an-infobar-uielement-from-an-infobar"></a>Získání prvku UIElement z informačního panelu
+ Implementace InfoBarModel nebo IVsInfoBar jsou datové modely, které musí být přeměněny do prvku UIElement, aby je bylo možné zobrazit v uživatelském rozhraní. UIElement lze načíst pomocí služby objekt svsinfobaruifactory/IVsInfoBarUIFactory.
 
 ```
 private bool TryCreateInfoBarUI(IVsInfoBar infoBar, out IVsInfoBarUIElement uiElement)
@@ -413,21 +413,21 @@ private bool TryCreateInfoBarUI(IVsInfoBar infoBar, out IVsInfoBarUIElement uiEl
 }
 ```
 
-### <a name="placement"></a>umístění
- Infobars lze zobrazit v jedné nebo více z následujících umístění:
+### <a name="placement"></a>Umístění
+ Infobars může být zobrazeno v jednom nebo několika následujících umístěních:
 
-- Nástroje systému windows
+- Okna nástrojů
 
-- V rámci kartu dokumentu
+- Na kartě dokumentu
 
 > [!IMPORTANT]
-> Je možné umístit informačního panelu podávat zprávy o globální kontext. Tím se zobrazí mezi panely nástrojů a dobře dokumentu. To se nedoporučuje, protože to způsobuje problémy s "jump a jerk" rozhraní IDE a mělo by se vyhnout, není-li naprosto nezbytné a vhodné.
+> Je možné umístit informační panel a poskytnout zprávu o globálním kontextu. To by se mohlo zobrazit mezi panely nástrojů a dokumentem dokumentu. To se nedoporučuje, protože způsobuje problémy se "skokem a Jerk" prostředí IDE a mělo by se jim vyhýbat, pokud není nezbytně nutné a vhodné.
 
-#### <a name="placing-an-infobar-in-a-toolwindowpane"></a>Umístění ToolWindowPane informačního panelu
- Metoda ToolWindowPane.AddInfoBar(IVsInfoBar) slouží k přidání informačního panelu do panelu nástrojů. Toto rozhraní API můžete přidat buď IVsInfoBar (které InfoBarModel je výchozí implementace), nebo IVsUIElement.
+#### <a name="placing-an-infobar-in-a-toolwindowpane"></a>Vložení informačního panelu do třídy ToolWindowPane
+ Metoda třídy ToolWindowPane. AddInfoBar (IVsInfoBar) se dá použít k přidání informačního panelu do okna nástroje. Toto rozhraní API může přidat IVsInfoBar (z kterého InfoBarModel je výchozí implementace) nebo IVsUIElement.
 
-#### <a name="placing-an-infobar-in-a-document-or-non-toolwindowpane"></a>Uvedení v dokumentu nebo jiné třídy ToolWindowPane informačního panelu
- Informačního panelu se umístí do jakékoli IVsWindowFrame, pomocí vlastnost VSFPROPID_InfoBarHost zobrazíte IVsInfoBarHost rámce a poté přidejte informační panel UIElement.
+#### <a name="placing-an-infobar-in-a-document-or-non-toolwindowpane"></a>Vložení informačního panelu do dokumentu nebo jiného typu než třídy ToolWindowPane
+ Chcete-li umístit informační panel do libovolného metoda IVsWindowFrame, použijte vlastnost VSFPROPID_InfoBarHost pro získání IVsInfoBarHost pro rámec a pak přidejte prvek UIElement informačního panelu.
 
 ```
 private void AddInfoBar(IVsWindowFrame frame, IVsUIElement uiElement)
@@ -453,17 +453,17 @@ private bool TryGetInfoBarHost(IVsWindowFrame frame, out IVsInfoBarHost infoBarH
 
 ```
 
-#### <a name="placing-an-infobar-in-the-main-window"></a>V hlavním okně uvedení informačního panelu
- Umístit informačního panelu v hlavním okně, použít k získání hlavního okna IVsInfoBarHost VSSPROPID_MainWindowInfoBarHost IVsShell služby a potom k němu přidejte informační panel UIElement.
+#### <a name="placing-an-infobar-in-the-main-window"></a>Umístění informačního panelu do hlavního okna
+ Pokud chcete umístit informační panel do hlavního okna, pomocí VSSPROPID_MainWindowInfoBarHost služby IVsShell Získejte IVsInfoBarHost hlavního okna a potom do něj přidejte prvek UIElement informačního panelu.
 
-### <a name="will-i-know-when-the-user-takes-action-in-my-infobar"></a>Poznám, že uživatel provede akci Moje informačním?
- Ano, vrátíme každá akce, události autorovi informační panel. Pak je až Autor informační panel k akci v integrovaném vývojovém prostředí na základě výběru uživatelem na informačním panelu. Infobars se automaticky odebere z hostitele došlo ke kliknutí na tlačítko, jejichž zavřít, ale další práce je nutná, pokud jiné infobars potřeba odebrat po zavření. Telemetrická data také muset být nezávisle na sobě zapsané podle jednotlivých informační panel.
+### <a name="will-i-know-when-the-user-takes-action-in-my-infobar"></a>Dozvíi se, že uživatel provede akci na svém informačním panelu?
+ Ano, vrátíme všechny akce události pro autora informačního panelu. Na základě výběru uživatele na informačním panelu se pak až do autora informačního panelu provede akce v integrovaném vývojovém prostředí. Infobars se automaticky odebere z hostitele, u kterého se kliknulo na tlačítko Zavřít, ale pokud je potřeba po zavření další Infobars odebrat, vyžaduje se další práce. Telemetrii je také potřeba protokolovat nezávisle na každém informačním panelu.
 
-#### <a name="receiving-infobar-events-in-a-toolwindowpane"></a>Příjem událostí informační panel ve třídy ToolWindowPane
- Třídy ToolWindowPane má dvě události pro infobars. Událost InfoBarClosed je vyvolána při zavření informačního panelu v třídy ToolWindowPane. InfoBarActionItemClicked událost je aktivována, když se klikne na hypertextový odkaz nebo tlačítko uvnitř informační panel.
+#### <a name="receiving-infobar-events-in-a-toolwindowpane"></a>Příjem událostí informačního panelu v třídy ToolWindowPane
+ Třídy ToolWindowPane má dvě události pro infobars. Událost InfoBarClosed se vyvolá, když se zavře informační panel v třídy ToolWindowPane. Událost InfoBarActionItemClicked se vyvolá při kliknutí na hypertextový odkaz nebo tlačítko uvnitř informačního panelu.
 
-#### <a name="receiving-infobar-events-directly-from-the-uielement"></a>Přijímání událostí informačním panelu přímo z UIElement
- IVsInfoBarUIElement.Advise lze použít k přihlášení k odběru událostí přímo z prvku UIElement informačním panelu. Implementace IVsInfoBarUIEvents vám umožní Autor přijímat zavřít a klikněte na události.
+#### <a name="receiving-infobar-events-directly-from-the-uielement"></a>Příjem událostí informačního panelu přímo z prvku UIElement
+ IVsInfoBarUIElement. Advise se dá použít k přihlášení k odběru událostí přímo z prvku UIElement informačního panelu. Implementace IVsInfoBarUIEvents umožní autorovi přijímat události zavření a kliknutí.
 
 ```
 public interface IVsInfoBarUIEvents
@@ -474,52 +474,52 @@ public interface IVsInfoBarUIEvents
 
 ```
 
-## <a name="BKMK_ErrorValidation"></a> Chyba ověření
- Když uživatel zadá informace, které není přijatelné, například když se přeskočila povinné pole nebo data je zadána v nesprávném formátu, je lepší pro ověření pomocí ovládacího prvku nebo zpětnou vazbu v ovládacím prvku místo blokování chybové dialogové okno automaticky otevíraného okna.
+## <a name="error-validation"></a><a name="BKMK_ErrorValidation"></a> Chyba ověřování
+ Pokud uživatel zadá informace, které nejsou přijatelné, například když je povinné pole vynecháno nebo když jsou data zadána v nesprávném formátu, je vhodnější použít ověřování ovládacího prvku nebo zpětné vazby v ovládacím prvku namísto použití blokujícího chybového dialogového okna.
 
 ### <a name="field-validation"></a>Ověřování polí
- Ověření pole na formulář se skládá ze tří součástí: ovládací prvek, ikonu a popis. Během několika typy ovládacích prvků může být využit, textové pole se použije jako příklad.
+ Ověřování formuláře a pole se skládá ze tří součástí: ovládacího prvku, ikony a popisu tlačítka. I když lze použít několik typů ovládacích prvků, textové pole bude použito jako příklad.
 
- ![Kontrola polí &#40;prázdné&#41;](../../extensibility/ux-guidelines/media/0905-01-fieldvalidation.png "0905 01_FieldValidation")
+ ![Ověřování polí &#40;prázdné&#41;](../../extensibility/ux-guidelines/media/0905-01-fieldvalidation.png "0905 – 01_FieldValidation")
 
- Když toto pole je povinné, měl by existovat vodoznak s informacemi o tom text  **\<požadované >** a pozadí pole by měla být světla žlutý (VSColor: `Environment.ControlEditRequiredBackground`) a popředí by měl být šedé (VSColor: `Environment.ControlEditRequiredHintText`):
+ Pokud je pole povinné, měl by být uveden text vodoznaku **\<Required>** a pozadí pole by mělo být světle žluté (VSColor: `Environment.ControlEditRequiredBackground` ) a popředí by mělo být šedé (VSColor: `Environment.ControlEditRequiredHintText` ):
 
- ![Pole s popiskem "Povinné" ověření](../../extensibility/ux-guidelines/media/0905-02-fieldvalidationrequired.png "0905 02_FieldValidationRequired")
+ ![Ověřování pole s popiskem "požadováno"](../../extensibility/ux-guidelines/media/0905-02-fieldvalidationrequired.png "0905 – 02_FieldValidationRequired")
 
- Program můžete určit, že je ve stavu *neplatný obsah, zadaný* když fokus se přesune na jiný ovládací prvek nebo když uživatel klikne na tlačítko potvrzení změn [OK] nebo když uživatel uloží dokument nebo formuláře.
+ Program může určit, že se ovládací prvek nachází ve stavu *neplatného obsahu* , a to buď při přesunutí fokusu na jiný ovládací prvek, nebo když uživatel klikne na tlačítko pro potvrzení [OK] nebo když uživatel dokument nebo formulář uloží.
 
- Pokud je určen neplatný stav obsahu, se zobrazí ikona uvnitř ovládacího prvku nebo vedle ní. Popis popisující chybu, kterou by se zobrazit při najetí myší na ikonu nebo ovládací prvek. Kromě toho 1 pixelu ohraničení by se zobrazit kolem ovládacího prvku, který vytváří v neplatném stavu.
+ Pokud je určena neplatný stav obsahu, zobrazí se ikona v ovládacím prvku nebo pouze vedle ní. Popis, který popisuje chybu, by se měl zobrazit při najetí myší buď na ikonu, nebo na ovládací prvek. Kromě toho by se mělo kolem ovládacího prvku, který vytváří neplatný stav, zobrazit ohraničení o velikosti 1 pixelu.
 
- ![Pole Specifikace rozložení ověření](../../extensibility/ux-guidelines/media/0905-03-layoutspecs.png "0905 03_LayoutSpecs")
+ ![Specifikace rozvržení pro ověřování polí](../../extensibility/ux-guidelines/media/0905-03-layoutspecs.png "0905 – 03_LayoutSpecs")
 
  **Specifikace rozložení pro ověřování polí**
 
-#### <a name="acceptable-variations-for-icon-location"></a>Přijatelné variace pro umístění ikony
- Existuje nespočet výjimečných případů, ve kterých uživatelé musí být informována o chyby ověření. Vzhledem k tomu – typ ovládacího prvku a konfiguraci, uživatelského rozhraní zvolte umístění ikony, která je vhodná pro vaši situaci.
+#### <a name="acceptable-variations-for-icon-location"></a>Přijatelné odchylky pro umístění ikony
+ Existují dlouhé jedinečné případy, kdy si uživatelé musí být informováni o chybách ověřování. V úvahách o typu ovládacího prvku a konfiguraci uživatelského rozhraní vyberte umístění ikon odpovídající vaší situaci.
 
- ![Přijatelné umístění pro umístění ikony](../../extensibility/ux-guidelines/media/0905-04-iconlocation.png "0905 04_IconLocation")
+ ![Přijatelná umístění pro umístění ikony](../../extensibility/ux-guidelines/media/0905-04-iconlocation.png "0905 – 04_IconLocation")
 
- **Přijatelné variace pro umístění ikony ověření pole**
+ **Přijatelné odchylky pro umístění ikon ověřování polí**
 
-#### <a name="validation-requiring-a-round-trip-to-a-server-or-network-connection"></a>Ověření vyžadující výměnu zpráv pro připojení k serveru nebo sítě
- V některých případech odezvy serveru je potřeba Ověřte obsah a bylo by potřeba zobrazit průběh uživatelského, ověření a chybové stavy licencí. Následující obrázek znázorňuje příklad tento případ a doporučené uživatelského rozhraní.
+#### <a name="validation-requiring-a-round-trip-to-a-server-or-network-connection"></a>Ověření požadavku na připojení k serveru nebo síťovému připojení
+ V některých případech se k ověření obsahu vyžaduje zpáteční cesta k serveru a je důležité zobrazit stav uživatele, ověřit a chybové stavy. Následující obrázek ukazuje příklad tohoto případu a doporučené uživatelské rozhraní.
 
- ![Ověření zahrnující odezvy serveru](../../extensibility/ux-guidelines/media/0905-05-roundtrip.png "0905 05_RoundTrip")
+ ![Ověření, které zahrnuje zpáteční cestu k serveru](../../extensibility/ux-guidelines/media/0905-05-roundtrip.png "0905 – 05_RoundTrip")
 
- **Ověření zahrnující odezvy serveru**
+ **Ověření, které zahrnuje zpáteční cestu k serveru**
 
- Všimněte si, že musí být zadaná dostatek místa k dispozici napravo od ovládacího prvku, aby mohla pojmout "Ověřování..." a text "Opakování".
+ Všimněte si, že musí být k dispozici dostatečný prostor napravo od ovládacího prvku, aby bylo možné přizpůsobit "ověřování...". a "opakovat" text.
 
-#### <a name="in-place-warning-text"></a>Text upozornění na místě
- Když je k dispozici pro umístění chybová zpráva blízko ovládacího prvku ve stavu chyby volného místa, je to vhodnější než použít samotný popisek.
+#### <a name="in-place-warning-text"></a>Místní výstražný text
+ Pokud je k dispozici místo pro vložení chybové zprávy blízko ovládacího prvku ve stavu chyby, je vhodnější použít pouze popisek.
 
- ![V&#45;umístit upozornění](../../extensibility/ux-guidelines/media/0905-06-inplacewarning.png "0905 06_InPlaceWarning")
+ ![&#45;upozornění na místo](../../extensibility/ux-guidelines/media/0905-06-inplacewarning.png "0905 – 06_InPlaceWarning")
 
- **Text upozornění na místě**
+ **Místní výstražný text**
 
 #### <a name="watermarks"></a>Vodoznaky
- Někdy celý ovládací prvek nebo okna je v chybovém stavu. V takovém případě použijte k označení chyby vodoznak.
+ Někdy je celý ovládací prvek nebo okno v chybovém stavu. V takovém případě k indikaci chyby použijte vodoznak.
 
- ![Watermark](../../extensibility/ux-guidelines/media/0905-07-watermark.png "0905-07_Watermark")
+ ![Meze](../../extensibility/ux-guidelines/media/0905-07-watermark.png "0905 – 07_Watermark")
 
- **Ověřování polí vodoznak**
+ **Ověření pole meze**

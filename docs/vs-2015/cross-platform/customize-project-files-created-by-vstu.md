@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení souborů projektu vytvořených nástrojem VSTU | Dokumentace Microsoftu
+title: Přizpůsobení souborů projektu vytvořených pomocí VSTU | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -10,19 +10,19 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: 744e7d89827e169579953474c9e7b37f2dcc653f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151002"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených nástrojem VSTU
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Tools for Unity poskytuje stylu Unity zpětné volání při generování souboru projektu. Zaregistrujte se `VisualStudioIntegration.ProjectFileGeneration` událost pro úpravu souboru projektu pokaždé, když se znovu vygeneroval.  
+Visual Studio Tools for Unity poskytuje zpětné volání ve stylu Unity během generování souboru projektu. Zaregistrujte se s `VisualStudioIntegration.ProjectFileGeneration` událostí pro úpravu souboru projektu pokaždé, když se znovu vygeneruje.  
   
 ## <a name="demonstrates"></a>Demonstruje  
- Postup přizpůsobení souborů projektu sady Visual Studio vygenerovaná aplikace Visual Studio Tools for Unity.  
+ Jak přizpůsobit soubory projektu sady Visual Studio vygenerované Visual Studio Tools for Unity.  
   
 ## <a name="example"></a>Příklad  
   

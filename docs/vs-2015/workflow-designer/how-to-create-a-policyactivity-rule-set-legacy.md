@@ -16,14 +16,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0f8599348d204d149f3e28d17d681941ddf476b8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849320"
 ---
-# <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>Postupy: vytvoření sady pravidel sady (starší verze)
-Toto téma popisuje, jak vytvořit sadu pravidel aktivity zásad pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)], která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>Postupy: Vytvoření sady pravidel aktivit zásad (starší verze)
+Toto téma popisuje, jak vytvořit sadu pravidel aktivity zásad pomocí starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] , která cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Po přetažení položky aktivity **zásad** ze **sady nástrojů** na návrhovou plochu pracovního postupu budete chtít vybrat stávající pravidlo nebo vytvořit novou sadu pravidel pro aktivitu [sady](https://msdn2.microsoft.com/library/system.workflow.activities.policyactivity.aspx) . Existující sadu pravidel vyberete pomocí [dialogového okna vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md) a vytvoříte sady pravidel pomocí [dialogového okna editor sad pravidel (starší verze)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).
 
@@ -36,13 +36,13 @@ Toto téma popisuje, jak vytvořit sadu pravidel aktivity zásad pomocí starš�
 
 2. Klikněte na vlastnost **RuleSetReference** .
 
-3. Proveďte jednu z těchto akcí:
+3. Proveďte jednu z následujících akcí:
 
     - Klikněte na **RuleSetReference** tři tečky **[...]** a potom vyberte existující sadu pravidel v [dialogovém okně vybrat sadu pravidel (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md). Přejděte ke kroku 10.
 
          -nebo-
 
-    - Zadejte název sady pravidel. Klikněte na **RuleSetReference** tři tečky **[...]** a pak v [dialogovém okně vybrat sadu pravidel vyberte Upravit (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md).
+    - Zadejte název sady pravidel. Klikněte na **RuleSetReference** tři tečky **[...]** a pak v **Edit** [dialogovém okně vybrat sadu pravidel vyberte Upravit (starší verze)](../workflow-designer/select-rule-set-dialog-box-legacy.md).
 
          -nebo-
 

@@ -1,5 +1,5 @@
 ---
-title: Vytváření výčtu lokální | Dokumentace Microsoftu
+title: Vytváření výčtu místních hodnot | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,33 +12,33 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d158a0c8f52e6ca8fe496885a0a3d5b862a543
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440738"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64835585"
 ---
 # <a name="enumerating-locals"></a>Vytváření výčtů pro místní hodnoty
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Když je připraven k naplnění sady Visual Studio **lokální** okně, které volá [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt vrácený z [ GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (viz [implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` Vrátí [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objektu.  
+ Když je Visual Studio připraveno k naplnění okna **místních** hodnot, volá [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na objekt [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) vrácený z [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (viz [implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` Vrátí objekt [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) .  
   
  Tato implementace `IDebugProperty2::EnumChildren` provádí následující úlohy:  
   
-1. Zajišťuje, že to je představující metodu.  
+1. Zajišťuje, že představuje metodu.  
   
-2. Používá `guidFilter` argument určit, která metoda se má volat [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) objektu. Pokud `guidFilter` rovná:  
+2. Používá `guidFilter` argument k určení, která metoda má být volána pro objekt [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) . Pokud `guidFilter` se rovná:  
   
-    1. `guidFilterLocals`, volání [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) získat [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) objektu.  
+    1. `guidFilterLocals`, zavolejte [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) k získání objektu [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) .  
   
-    2. `guidFilterArgs`, volání [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) získat `IEnumDebugFields` objektu.  
+    2. `guidFilterArgs`, zavolejte [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) pro získání `IEnumDebugFields` objektu.  
   
-    3. `guidFilterLocalsPlusArgs`, syntetizace výčet, který kombinuje výsledky z `IDebugMethodField::EnumLocals` a `IDebugMethodField::EnumArguments`. Tato syntézu je reprezentován třídou `CEnumMethodField`.  
+    3. `guidFilterLocalsPlusArgs`, syntetizujte výčet, který kombinuje výsledky z `IDebugMethodField::EnumLocals` a `IDebugMethodField::EnumArguments` . Tato syntéza je reprezentována třídou `CEnumMethodField` .  
   
-3. Vytvoří instanci třídy (volá `CEnumPropertyInfo` v tomto příkladu), který implementuje `IEnumDebugPropertyInfo2` rozhraní a obsahuje `IEnumDebugFields` objektu.  
+3. Vytvoří instanci třídy (volána `CEnumPropertyInfo` v tomto příkladu), která implementuje `IEnumDebugPropertyInfo2` rozhraní a obsahuje `IEnumDebugFields` objekt.  
   
 4. Vrátí `IEnumDebugProperty2Info2` rozhraní z `CEnumPropertyInfo` objektu.  
   

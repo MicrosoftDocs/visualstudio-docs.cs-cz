@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přepnutí na jiné vlákno během ladění | Dokumentace Microsoftu'
+title: 'Postupy: přepnutí na jiné vlákno během ladění | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,32 +17,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8f481a0b1cb2142dc7dbfe11e17ac627753cebf0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176511"
 ---
 # <a name="how-to-switch-to-another-thread-while-debugging"></a>Postupy: Přepnutí na jiné vlákno během ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při ladění aplikace s více vlákny, můžete použít některou z několika metod museli přepínat kontext z vlákna, které jste pracovali jste se do jiného vlákna.  
+Při ladění vícevláknové aplikace můžete použít některou z několika metod k přepnutí kontextu z vlákna, se kterým jste pracovali, s jiným vláknem.  
   
-### <a name="to-switch-to-any-thread-that-appears-in-the-threads-window"></a>Chcete-li přepnout do libovolného vlákna, která se zobrazí v okně vlákna  
+### <a name="to-switch-to-any-thread-that-appears-in-the-threads-window"></a>Přepnutí na jakékoli vlákno, které se zobrazí v okně vlákna  
   
-- Klikněte dvakrát na vlákno.  
+- Dvakrát klikněte na vlákno.  
   
-### <a name="to-switch-to-a-thread-in-a-source-window"></a>Chcete-li přepnout na vlákno v okně zdroje  
+### <a name="to-switch-to-a-thread-in-a-source-window"></a>Přepnutí na vlákno v okně zdrojového kódu  
   
-- V levém hřbetu, klikněte pravým tlačítkem na indikátor vlákna, přejděte na **přepnout na**a pak klikněte na název tohoto vlákna, do kterého chcete přejít. V místní nabídce zobrazí vlákna v tomto konkrétním umístění.  
+- V levém hřbetu klikněte pravým tlačítkem myši na indikátor vlákna, přejděte na příkaz **Přepnout na**a potom klikněte na název vlákna, na které chcete přepnout. Místní nabídka zobrazuje pouze vlákna na daném konkrétním místě.  
   
-     Pokud se nezobrazí žádné ukazatele, klikněte pravým tlačítkem **vlákna** okně a ověřte, že **zobrazit vlákna ve zdroji** je vybrána.  
+     Pokud se nezobrazí žádné indikátory, klikněte pravým tlačítkem myši v okně **vlákna** a ověřte, zda je vybrána možnost **Zobrazit vlákna ve zdroji** .  
   
-### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Chcete-li přepnout na vlákno na panelu nástrojů umístění ladění  
+### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Přepnutí na vlákno na panelu nástrojů umístění ladění  
   
-1. Na **umístění ladění** nástrojů, klikněte na tlačítko **vlákna** pole.  
+1. Na panelu nástrojů **umístění ladění** klikněte na pole **vlákno** .  
   
-2. V seznamu klikněte na tlačítko vlákna, do kterého chcete přejít.  
+2. V seznamu klikněte na vlákno, na které chcete přepnout.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Getwinfxpath – úloha | Dokumentace Microsoftu
+title: Úloha GetWinFXPath – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,30 +20,30 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da32f0bfce9edf652e19df6b68bc51ed92624d80
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65699014"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> Vrácený obsah úkolů adresář aktuálního [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] modulu runtime.  
+<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath>Úloha vrátí adresář aktuálního [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] modulu runtime.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`WinFXPath`|Volitelné **řetězec** výstupní parametr.<br /><br /> Určuje skutečné cesty k [!INCLUDE[TLA2#tla_winfx](../includes/tla2sharptla-winfx-md.md)] modulu runtime.|  
-|`WinFXNativePath`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje cestu k nativní [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] modulu runtime.|  
-|`WinFXWowPath`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje cestu k [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] sestavení v 32bitovém základě **Windows na Windows** modulu v 64bitových systémech.|  
+|`WinFXPath`|Volitelný výstupní parametr **řetězce** .<br /><br /> Určuje skutečnou cestu k [!INCLUDE[TLA2#tla_winfx](../includes/tla2sharptla-winfx-md.md)] modulu runtime.|  
+|`WinFXNativePath`|Povinný parametr **řetězce**<br /><br /> Určuje cestu k nativnímu [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] modulu runtime.|  
+|`WinFXWowPath`|Povinný parametr **řetězce**<br /><br /> Určuje cestu k [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] sestavením v 32 **Windows** v modulu Windows na 64 bitových systémech.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 64bitový procesor, je spuštěn úkol **WinFXPath** parametr je nastaven na cestu, která je uložena v **WinFXWowPath** parametr; v opačném případě **WinFXPath**  parametr je nastaven na cestu, která je uložena v **WinFXNativePath** parametru.  
+ Pokud <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> úloha běží na 64 procesoru, parametr **WinFXPath** se nastaví na cestu, která je uložená v parametru **WinFXWowPath** . v opačném případě je parametr **WinFXPath** nastavený na cestu, která je uložená v parametru **WinFXNativePath** .  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití **getwinfxpath –** úloh ke zjištění nativní cestou k [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] modulu runtime.  
+ Následující příklad ukazuje, jak použít úlohu **GetWinFXPath –** k detekci nativní cesty k [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] modulu runtime.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -61,7 +61,7 @@ ms.locfileid: "65699014"
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Sestavení aplikace WPF (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)

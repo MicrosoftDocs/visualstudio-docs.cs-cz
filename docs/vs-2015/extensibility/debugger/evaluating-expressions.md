@@ -1,5 +1,5 @@
 ---
-title: Vyhodnocení výrazů | Dokumentace Microsoftu
+title: Vyhodnocení výrazů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,25 +13,25 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: caff42c2e203151c6bab7d50b41744c2469ab3c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151618"
 ---
 # <a name="evaluating-expressions"></a>Vyhodnocování výrazů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Výrazy jsou vytvořeny z řetězce předáván z automatické hodnoty, kukátko, QuickWatch nebo příkazovém podokně. Při vyhodnocování výrazu generuje tisknutelný řetězec, který obsahuje název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v okně odpovídající integrovaného vývojového prostředí.  
+Výrazy jsou vytvořeny z řetězců předaných z automatických, sledovacích, QuickWatch nebo okamžitých oken. Při vyhodnocování výrazu vygeneruje tisknutelné řetězec, který obsahuje název a typ proměnné nebo argumentu a jeho hodnotu. Tento řetězec se zobrazí v odpovídajícím okně IDE.  
   
 ## <a name="implementation"></a>Implementace  
- Pokud program byl zastaven na zarážce, jsou výrazy vyhodnocovány. Samotný výraz je reprezentován [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) rozhraní, které představuje analyzovaný výraz, který je připravený pro vazby a hodnocení v rámci kontextu vyhodnocení daného výrazu. Rámec zásobníku určuje kontext vyhodnocení výrazu, který ladicí stroj (DE) poskytuje implementací [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní.  
+ Výrazy jsou vyhodnocovány při zastavení programu na zarážce. Samotný výraz je reprezentován rozhraním [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) , které představuje analyzovaný výraz připravený na vazbu a vyhodnocení v rámci daného kontextu vyhodnocení výrazu. Rámec zásobníku určuje kontext vyhodnocení výrazu, který modul ladění (DE) implementuje implementací rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) .  
   
- Zadaný řetězec uživatele a [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní, můžete získat ladicí stroj (DE) [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) rozhraní tím, že předáte řetězec uživatel, který má [ IDebugExpressionContext2::ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) metody. Vrácené rozhraní IDebugExpression2 obsahuje analyzovaný výraz připravené pro hodnocení.  
+ V případě uživatelského řetězce a rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) může ladicí stroj (de) získat rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) předáním uživatelského řetězce do metody [IDebugExpressionContext2::P arsetext](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) . Rozhraní IDebugExpression2, které se vrátilo, obsahuje analyzovaný výraz připravený pro vyhodnocení.  
   
- S `IDebugExpression2` rozhraní, DE můžete získat hodnotu výrazu prostřednictvím vyhodnocení výrazu synchronní nebo asynchronní, pomocí [IDebugExpression2::EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md). Tuto hodnotu, spolu s názvem a typem proměnné nebo argumentu, je odeslána do integrovaného vývojového prostředí pro zobrazení. Hodnota, název a typ jsou reprezentovány [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) rozhraní.  
+ Pomocí `IDebugExpression2` rozhraní může de získat hodnotu výrazu prostřednictvím synchronního nebo asynchronního vyhodnocení výrazu pomocí [IDebugExpression2:: EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [IDebugExpression2:: EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md). Tato hodnota, společně s názvem a typem proměnné nebo argumentu, se pošle na IDE pro zobrazení. Hodnota, název a typ jsou reprezentovány rozhraním [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) .  
   
- Chcete-li povolit vyhodnocení výrazu, musí implementovat Zavedenými [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) a [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. Synchronní a asynchronní vyhodnocování vyžadují provádění [IDebugProperty2::GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metody.  
+ Pro povolení vyhodnocení výrazu DE musí implementovat rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) a [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) . Synchronní i asynchronní vyhodnocení vyžaduje implementaci metody [IDebugProperty2:: GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [Rámce zásobníku](../../extensibility/debugger/stack-frames.md)   

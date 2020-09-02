@@ -1,5 +1,5 @@
 ---
-title: Vytvoření vlastního ladicího stroje | Dokumentace Microsoftu
+title: Vytvoření vlastního ladicího stroje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,29 +13,29 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b2a73dfae7772d8edec076238704aa1b52c9b028
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63383445"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64829303"
 ---
 # <a name="creating-a-custom-debug-engine"></a>Vytvoření vlastního ladicího stroje
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ladicí stroj (DE) je komponenta, která umožňuje ladění konkrétní za běhu architektury. Obvykle existuje pouze jedna implementace DE pro každé prostředí za běhu.  
+Ladicí stroj (DE) je komponenta, která umožňuje ladění konkrétní architektury run-time. Obvykle je k dispozici pouze jedna DE Implementation pro každé prostředí za běhu.  
   
 > [!NOTE]
-> I když existují samostatné implementace DE pro příkazů jazyka Transact-SQL a JScript, sdílet jeden DE VBScript a JScript.  
+> I když existují samostatné DE implementací pro Transact-SQL a JScript, VBScript a JScript sdílí jeden DE.  
   
- Zavedenými spolupracuje s překladač nebo operace systému k poskytování těchto služeb ladění jako ovládací prvek, zarážky a výraz zkušební spuštění. Tyto služby jsou implementované pomocí rozhraní DE a může způsobit, že ladicí program pro přechod mezi různé provozní režimy. Další informace najdete v tématu [provozní režimy](../../extensibility/debugger/operational-modes.md).  
+ DE funguje s překladačem nebo operačním systémem pro poskytování takových služeb ladění jako řízení spouštění, zarážky a vyhodnocení výrazu. Tyto služby jsou implementovány prostřednictvím rozhraní DE a mohou způsobit přechod ladicího programu mezi různými provozními režimy. Další informace najdete v tématu [provozní režimy](../../extensibility/debugger/operational-modes.md).  
   
- Vytváří se Zavedenými se skládá z následujících kroků:  
+ Vytváření DE se skládá z následujících kroků:  
   
-1. Registrace Zavedenými pomocí sady Visual Studio  
+1. Registrace DE se sadou Visual Studio  
   
 2. Povolení ladění programu  
   
-3. Ovládací prvek a stav zkušební spuštění  
+3. Řízení provádění a vyhodnocení stavu  
   
 4. Odesílání událostí  
   
@@ -43,22 +43,22 @@ Ladicí stroj (DE) je komponenta, která umožňuje ladění konkrétní za běh
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Registrace vlastního ladicího stroje](../../extensibility/debugger/registering-a-custom-debug-engine.md)  
- Popisuje kroky potřebné k registraci ladicího stroje pomocí sady Visual Studio, takže je možné.  
+ Vysvětluje kroky potřebné k registraci ladicího stroje se sadou Visual Studio, aby jej bylo možné použít.  
   
  [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)  
- Vysvětluje, že před vaše DE můžete ladit program, musíte nejprve spusťte DE nebo připojit k existující program.  
+ Vysvětluje, že před tím, než může příkaz DE ladit program, je třeba nejprve spustit příkaz DE nebo ho připojit k existujícímu programu.  
   
  [Řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md)  
- Tento článek popisuje, proč ladění aplikace vyžaduje implementaci funkce řízení provádění.  
+ Popisuje, proč ladění aplikace vyžaduje implementaci funkcí řízení spouštění.  
   
  [Odesílání událostí](../../extensibility/debugger/sending-events.md)  
- Popisuje komunikaci ladicího programu a DE jako model událostí založené na modelu DCOM.  
+ Popisuje komunikaci mezi ladicím programem a DE jako modelem události na základě modelu DCOM.  
   
  [Ukončení a odpojení](../../extensibility/debugger/termination-and-detaching.md)  
- Vysvětluje, jak dosáhnout normální ukončení, což znamená, že neexistují žádné zarážky, výjimky, chyby za běhu nebo nekonečné smyčky v aplikaci k ladění.  
+ Vysvětluje, jak dosáhnout normálního ukončení, což znamená, že neexistují žádné zarážky, výjimky, chyby za běhu nebo nekonečné smyčky v aplikaci, která se má ladit.  
   
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)  
- Dokumenty volání pořadí událostí, ke kterým dochází v relaci ladění.  
+ Dokumentuje pořadí volání událostí, ke kterým došlo v relaci ladění.  
   
  [Postupy: Ladění vlastního ladicího stroje](../../extensibility/debugger/how-to-debug-a-custom-debug-engine.md)  
  Vysvětluje, jak ladit vlastní DE.  

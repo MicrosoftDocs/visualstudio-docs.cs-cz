@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nové aplikace Android Native Activity | Dokumentace Microsoftu
+title: Vytvoření aplikace pro nativní činnost v Androidu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -12,74 +12,74 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: e554c7b97c2feac031510cfdd0894d29b4ba85eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151034"
 ---
 # <a name="create-an-android-native-activity-app"></a>Vytvoření aplikace s NativeActivity pro Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při instalaci Visual C++ pro vývoj mobilních řešení napříč platformami možnost Visual Studio 2015 je možné vytvořit plně funkční aplikace Android Native Activity. Android Kit pro nativní vývoj (NDK) je sada nástrojů, která umožňuje provádět většinu aplikace pro Android pomocí čistého kódu C/C++. Nějaký kód Java JNI funguje jako spojovacího kódu C/C++ pracovat s Androidem umožňuje. Sada Android NDK zavedena možnost vytvářet aplikace Native Activity s Android API úrovně 9. Nativní kód aktivity se používá pro vytvoření hry a grafické náročné aplikace, které používají OpenGL nebo Unreal Engine. Toto téma vás provede vytvořením jednoduché aplikace s Nativeactivity, který využívá OpenGL. Další témata projdete developer životní cyklus úpravy, sestavování, ladění a nasazování Nativeactivity kódu.  
+Když nainstalujete možnost Visual C++ for Cross-Platform Mobile Development, Visual Studio 2015 se dá použít k vytvoření plně funkčních aplikací pro nativní aktivity Androidu. Android Native Development Kit (NDK) je sada nástrojů, která umožňuje implementovat většinu aplikací pro Android pomocí čistě kódu C/C++. Některý kód Java JNI funguje jako Glue, aby mohl váš kód C/C++ pracovat s Androidem. Android NDK představil možnost vytvářet nativní aplikace aktivity s rozhraním Android API úrovně 9. Nativní kód aktivity je oblíbený pro vytváření her a aplikací s grafickými náročnou, které používají modul Unreal nebo OpenGL. Toto téma vás provede vytvořením jednoduché aplikace nativní aktivity, která používá OpenGL. Další témata najdete v rámci životního cyklu vývojářů při úpravách, sestavování, ladění a nasazování nativního kódu aktivity.  
   
- [Požadavky](#req)   
- [Vytvoření nového projektu s Nativeactivity](#Create)   
- [Sestavte a spusťte výchozí aplikace Android Native Activity](#BuildHello)  
+ [Požadavků](#req)   
+ [Vytvořit nový projekt nativní aktivity](#Create)   
+ [Sestavování a spouštění výchozí aplikace aktivity nativní pro Android](#BuildHello)  
   
-## <a name="req"></a> Požadavky  
- Před vytvořením aplikace Android Native Activity, ujistěte se, jste splněny všechny požadavky na systém a instalaci možnost vývoj mobilní zařízení v jazyce Visual C++ v sadě Visual Studio 2015. Další informace najdete v tématu [instalaci Visual C++ pro vývoj mobilních řešení napříč platformami](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md). Ujistěte se, potřebné nástroje třetích stran a sady SDK jsou zahrnuty v instalaci a zda je nainstalována aplikace Microsoft Visual Studio Emulator for Android.  
+## <a name="requirements"></a><a name="req"></a> Požadavků  
+ Než budete moct vytvořit aplikaci pro nativní aktivity Androidu, musíte se ujistit, že jste splnili všechny požadavky na systém a nainstalujete Visual C++ možností vývoje mobilních aplikací v aplikaci Visual Studio 2015. Další informace najdete v tématu [instalace Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md). Zajistěte, aby se v instalaci zahrnovaly potřebné nástroje a sady SDK třetích stran, a že je instalace Microsoft Visual Studio Emulator for Android.  
   
-## <a name="Create"></a> Vytvoření nového projektu s Nativeactivity  
- V tomto kurzu budete nejdřív vytvořte nový projekt Android Native Activity a začnete vytvářet a spusťte výchozí aplikaci v emulátoru Visual Studia pro Android.  
+## <a name="create-a-new-native-activity-project"></a><a name="Create"></a> Vytvořit nový projekt nativní aktivity  
+ V tomto kurzu nejprve vytvoříte nový projekt nativní aktivity pro Android a potom sestavíte a spustíte výchozí aplikaci v emulátoru sady Visual Studio pro Android.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+#### <a name="to-create-a-new-project"></a>Vytvoření nového projektu  
   
-1. Otevřít Visual Studio. V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
+1. Otevřete sadu Visual Studio. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.  
   
-2. V **nový projekt** dialogovém okně **šablony**, zvolte **Visual C++** , **různé platformy**a klikněte na tlačítko  **Aplikace s Nativeactivity (Android)** šablony.  
+2. V dialogovém okně **Nový projekt** , v části **šablony**zvolte možnost **Visual C++**, pro **různé platformy**a pak zvolte šablonu **aplikace nativního Inactivity (Android)** .  
   
-3. Dejte aplikaci s názvem jako `MyAndroidApp`a klikněte na tlačítko **OK**.  
+3. Přiřaďte aplikaci název jako `MyAndroidApp` a pak zvolte **OK**.  
   
-    ![Vytvoření projektu Nativeactivity](../cross-platform/media/cppmdd-newproject.PNG "CppMDD_NewProject")  
+    ![Vytvoření projektu nativní aktivity](../cross-platform/media/cppmdd-newproject.PNG "CppMDD_NewProject")  
   
-    Visual Studio vytvoří nové řešení a otevře se Průzkumník řešení.  
+    Visual Studio vytvoří nové řešení a otevře Průzkumník řešení.  
   
-    ![Aktivity projektu v Průzkumníku řešení](../cross-platform/media/cppmdd-rc-na-solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
+    ![Nativní projekt aktivity v Průzkumník řešení](../cross-platform/media/cppmdd-rc-na-solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
   
-   Nové řešení aplikace Android Native Activity obsahuje dva projekty:  
+   Nové řešení aplikace pro nativní činnost v Androidu zahrnuje dva projekty:  
   
-- **MyAndroidApp.NativeActivity** obsahuje odkazy na a spojovacího kódu pro svoji aplikaci spouštět jako nativní aktivita v Androidu. Implementace vstupních bodů ze spojovacího kódu jsou v main.cpp. Soubor pch.h jsou předkompilované hlavičky. Tento projekt aplikace Nativeactivity je zkompilován do sdílené knihovny soubor .so, který převezme balícího projektu.  
+- **MyAndroidApp. NativeActivity** obsahuje odkazy a připevnění kódu vaší aplikace, aby běžel jako nativní aktivita v Androidu. Implementace vstupních bodů ze spojovacího kódu je v Main. cpp. Předkompilované hlavičky jsou v souboru PCH. h. Tento projekt nativní aplikace aktivity je zkompilován do sdílené knihovny. soubor, který je vyzvednut projektem balení.  
   
-- **MyAndroidApp.Packaging** vytvoří soubor .apk pro nasazení na emulátoru nebo zařízení s Androidem. Tato položka obsahuje prostředky a souboru AndroidManifest.xml, kde nastavíte vlastnosti manifestu. Obsahuje také Build.XML – soubor, který řídí proces sestavení Ant. Ho jako spouštěný projekt ve výchozím nastavení, takže je možné nasadit a spustit přímo ze sady Visual Studio.  
+- **MyAndroidApp. balení** vytvoří soubor. APK pro nasazení v zařízení nebo emulátoru Androidu. Obsahuje prostředky a AndroidManifest.xml soubor, ve kterém jste nastavili vlastnosti manifestu. Obsahuje také soubor build.xml, který řídí proces sestavení ANT. Ve výchozím nastavení je nastaven jako spouštěný projekt, aby jej bylo možné nasadit a spustit přímo ze sady Visual Studio.  
   
-## <a name="BuildHello"></a> Sestavte a spusťte výchozí aplikace Android Native Activity  
- Sestavíte a spustíte aplikaci vygenerovaná šablona k ověření instalace a nastavení. Pro tento počáteční test spusťte aplikaci na jeden z profilů zařízení nainstaloval Visual Studio Emulator for Android. Pokud chcete testovat svou aplikaci na jiný cíl, můžete načíst cíl emulátor nebo připojte zařízení k počítači.  
+## <a name="build-and-run-the-default-android-native-activity-app"></a><a name="BuildHello"></a> Sestavování a spouštění výchozí aplikace aktivity nativní pro Android  
+ Sestavte a spusťte aplikaci generovanou šablonou a ověřte instalaci a instalaci. Pro tento úvodní test spusťte aplikaci na jednom z profilů zařízení nainstalovaných emulátorem sady Visual Studio pro Android. Pokud dáváte přednost testování aplikace na jiném cíli, můžete načíst cílový emulátor nebo připojit zařízení k počítači.  
   
-#### <a name="to-build-and-run-the-default-native-activity-app"></a>Chcete sestavovat a spouštět aplikace s Nativeactivity výchozí  
+#### <a name="to-build-and-run-the-default-native-activity-app"></a>Sestavení a spuštění výchozí nativní aplikace aktivity  
   
-1. Pokud ještě není vybraná, zvolte **x86** z **platformy řešení** rozevíracího seznamu.  
+1. Pokud ještě není vybraná, vyberte v rozevíracím seznamu **platformy řešení** možnost **x86** .  
   
-     ![Výběru v rozevíracího seznamu x86 platformy řešení](../cross-platform/media/cppmdd-rc-na-solution-x86.png "CPPMDD_RC_NA_Solution_x86")  
+     ![Výběr platformy řešení – rozevírací seznam x86](../cross-platform/media/cppmdd-rc-na-solution-x86.png "CPPMDD_RC_NA_Solution_x86")  
   
-     Pokud **platformy řešení** seznamu nezobrazuje, vyberte **platformy řešení** z **přidat nebo odebrat tlačítka** seznamu a pak zvolte vaši platformu.  
+     Pokud se seznam **platformy řešení** nezobrazuje, zvolte možnost **platformy řešení** v seznamu **Přidat nebo odebrat tlačítka** a pak zvolte svou platformu.  
   
-2. V panelu nabídky zvolte **sestavení**, **sestavit řešení**.  
+2. Na panelu nabídek vyberte **sestavení**, **řešení sestavení**.  
   
-     V okně výstupu zobrazí výstup z procesu sestavení pro tyto dva projekty v řešení.  
+     V okně výstup se zobrazí výstup procesu sestavení pro dva projekty v řešení.  
   
-3. Vyberte jednu z emulátoru VS telefon s Androidem (x86) profily jako cíl nasazení.  
+3. Jako cíl nasazení vyberte jeden z profilů Androidu pro emulátor (x86).  
   
-     Pokud jste nainstalovali jiné emulátory nebo připojené zařízení s Androidem, můžete je v rozevíracím seznamu cíl nasazení.  
+     Pokud máte nainstalované další emulátory nebo zařízení s Androidem, můžete je vybrat v rozevíracím seznamu cíl nasazení.  
   
-4. Stisknutím klávesy F5 spusťte ladění nebo Shift + F5 spustit bez ladění.  
+4. Stisknutím klávesy F5 spusťte ladění, nebo stisknutím klávesy Shift + F5 spusťte bez ladění.  
   
-     Tady je výchozí aplikace vypadá v sadě Visual Studio emulator for Android.  
+     V emulátoru sady Visual Studio pro Android bude vypadat výchozí aplikace.  
   
-     ![V emulátoru vaše aplikace běžela](../cross-platform/media/cppmdd-emulator-running-app.PNG "CppMDD_Emulator_Running_App")  
+     ![Emulátor, ve kterém běží vaše aplikace](../cross-platform/media/cppmdd-emulator-running-app.PNG "CppMDD_Emulator_Running_App")  
   
-     Visual Studio spustí se emulátor, který trvá několik sekund na zatížení a nasaďte svůj kód. Po zahájení vaší aplikace můžete nastavit zarážky a ladicího programu můžete krokovat kód, prozkoumat místní hodnoty a podívejte se na hodnoty.  
+     Visual Studio spustí emulátor, což trvá několik sekund, než se načte a nasadí váš kód. Po spuštění aplikace můžete nastavit zarážky a použít ladicí program ke krokování kódu, kontrole místních hodnot a sledování hodnot.  
   
-5. Stiskněte Shift + F5, můžete zastavit ladění.  
+5. Pro zastavení ladění stiskněte Shift + F5.  
   
-     Emulátor je samostatný proces, který zůstane spuštěný. Můžete upravit, zkompilujte a nasaďte svůj kód do stejné emulátor více než jednou.
+     Emulátor je samostatný proces, který pokračuje v běhu. Kód můžete upravovat, kompilovat a nasazovat několikrát do stejného emulátoru.

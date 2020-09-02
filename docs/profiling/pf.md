@@ -1,5 +1,5 @@
 ---
-title: PF | Dokumenty společnosti Microsoft
+title: PF | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: cdc0a094-a986-4629-bd1c-dd5fdca323dc
@@ -10,23 +10,23 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 07ec6d636ec087386fdc9462ae09db55400957a9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778411"
 ---
 # <a name="pf"></a>PF
-*Možnost VSPerfCmd.exe* **PF** nastaví událost profilování, která je vzorkována na chyby stránky, a volitelně změní počet chyb stránky v intervalu vzorkování z výchozí hodnoty 10.
+Možnost *VSPerfCmd.exe* **PF** nastaví událost profilování, která je Navzorkovaná na chyby stránkování, a volitelně změní počet chyb stránek v intervalu vzorkování, od výchozí hodnoty 10.
 
 > [!NOTE]
-> **PF** nelze použít v 64bitových systémech.
+> V systémech 64 se nedá použít **PF** .
 
-**Pf** lze použít pouze v příkazovém řádku, který obsahuje také **možnost Spustit** nebo **Připojit.**
+**PF** se dá použít jenom v příkazovém řádku, který obsahuje taky možnost **Spustit** nebo **připojit** .
 
- Ve výchozím nastavení je událost vzorkování nastavena na nezastavené cykly hodin procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **Časovač**, **PF**, **Sys**a **Čítač** umožňují nastavit vzorkovací událost a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. Na příkazovém řádku lze zadat pouze jednu z těchto možností.
+ Ve výchozím nastavení je událost vzorkování nastavená na nezastavené časové cykly procesoru a interval vzorkování je nastaven na 10 000 000. Možnosti **časovač**, **PF**, **sys**a **čítač** umožňují nastavit ukázkovou událost a interval vzorkování. Možnost **GC** shromažďuje data paměti .NET při každé události přidělení a uvolňování paměti. V příkazovém řádku lze zadat pouze jednu z těchto možností.
 
- Vzorkovací událost a interval vzorkování lze nastavit pouze v prvním příkazovém řádku, který obsahuje možnost **Spustit** nebo **Připojit.**
+ Událost vzorkování a interval vzorkování lze nastavit pouze v prvním příkazovém řádku, který obsahuje možnost **Spustit** nebo **připojit** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,28 +35,28 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /PF[:Events] [Options]
 ```
 
 #### <a name="parameters"></a>Parametry
- `Events`Celá hodnota, která určuje počet událostí poruchy stránky v intervalu vzorkování. Pokud `Events` není zadán, interval je nastaven na 10.
+ `Events` Celočíselná hodnota, která určuje počet událostí selhání stránky v intervalu vzorkování. Pokud `Events` parametr není zadán, je interval nastaven na hodnotu 10.
 
 ## <a name="required-options"></a>Požadované možnosti
- **Pf** lze zadat pouze na příkazovém řádku, který obsahuje jednu z následujících možností.
+ Parametr **PF** lze zadat pouze v příkazovém řádku, který obsahuje jednu z následujících možností.
 
- **Spuštění:** `AppName` Spustí profiler a aplikaci určenou AppName.
+ **Spustit:** `AppName` Spustí Profiler a aplikaci určenou v AppName.
 
- **Připojit:** `PID` Připojí profiler k procesu určenému AppName.
+ **Připojit:** `PID` Připojí profiler k procesu určenému parametrem AppName.
 
 ## <a name="invalid-options"></a>Neplatné možnosti
  Následující možnosti nelze zadat na stejném příkazovém řádku jako **PF**.
 
- **Časovač**[**:**`Cycles`] Nastaví událost vzorkování na cykly `Cycles`hodin procesoru a volitelně nastaví interval vzorkování na . Výchozí interval časovače je 10 000 000.
+ **Timer**[**:** `Cycles` ] nastaví událost vzorkování na časové cykly procesoru a volitelně nastaví interval vzorkování na `Cycles` . Výchozí interval časovače je 10 000 000.
 
- **Sys**[**:**`Events`] Nastaví událost vzorkování na volání z profilované aplikace do jádra operačního `Events`systému (syscalls) a volitelně nastaví interval vzorkování na . Výchozí interval Sys je 10.
+ **Sys**[**:** `Events` ] nastaví událost vzorkování pro volání z profilované aplikace do jádra operačního systému (voláním) a volitelně nastaví interval vzorkování na `Events` . Výchozí interval sys je 10.
 
- **Čítač:** `Name`[`,Reload`[`,FriendlyName`]] Nastaví událost `Name` vzorkování na `Reload`čítač výkonu procesoru určený a nastaví interval vzorkování na .
+ **Čítač:** `Name` [ `,Reload` [ `,FriendlyName` ]] Nastaví událost vzorkování na čítač výkonu procesoru určený pomocí `Name` a nastaví interval vzorkování na `Reload` .
 
- **GC**[**:****{ Allocation**&#124;**Lifetime**}] Shromažďuje data paměti .NET. Ve výchozím nastavení (**Přidělení**) jsou data shromažďována při každé události přidělení paměti. Když je zadán parametr **Životnost,** data jsou také shromažďována při každé události uvolňování paměti.
+ **GC**[**:**{**Allocation**&#124;**životnost**}] shromažďuje data paměti .NET. Ve výchozím nastavení (**přidělení**) se data shromažďují při každé události přidělení paměti. Při zadání parametru **životnosti** se data shromažďují také při každé události uvolňování paměti.
 
 ## <a name="example"></a>Příklad
- Tento příklad ukazuje, jak nastavit ukázkovou událost profilování na chyby stránky a nastavit interval vzorkování na 20 chyb stránky.
+ Tento příklad ukazuje, jak nastavit událost vzorku profilování na chyby stránky a nastavit interval vzorkování na 20 chyb stránky.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -66,5 +66,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /PF:20
 ## <a name="see-also"></a>Viz také
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Profilovat samostatné aplikace](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Profil ASP.NET webových aplikací](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [Profilové služby](../profiling/command-line-profiling-of-services.md)
+- [ASP.NET webové aplikace Profile](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Profilovací služby](../profiling/command-line-profiling-of-services.md)

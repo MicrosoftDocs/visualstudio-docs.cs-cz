@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386248"
 ---
 # <a name="debug-64-bit-applications"></a>Ladění 64bitových aplikací
@@ -41,7 +41,7 @@ Můžete ladit 64 aplikaci, která běží na místním počítači nebo na vzd�
 
 3. V tomto okamžiku se spustí 64 verze vzdáleného ladicího programu (msvsmon.exe). Spustí se, pokud je otevřené řešení s 64 konfigurací.
 
-4. Spustit ladění. Měli byste mít stejné prostředí jako s 32 konfigurací. Pokud se zobrazí chyby, přečtěte si část řešení potíží níže.
+4. Spuštění ladění Měli byste mít stejné prostředí jako s 32 konfigurací. Pokud se zobrazí chyby, přečtěte si část řešení potíží níže.
 
 ## <a name="troubleshooting-64-bit-debugging"></a>Řešení potíží s 64 bitového ladění
  Může se zobrazit chyba: "64-bitová operace ladění trvá déle, než se čekalo." V tomto případě aplikace Visual Studio odeslala požadavek na 64 verzi msvsmon.exe a v důsledku toho se výsledek této žádosti může vrátit zpět.

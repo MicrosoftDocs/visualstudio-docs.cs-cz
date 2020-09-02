@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d001d29433573fedde3b4310f989667538b4b69c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444956"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64822458"
 ---
-# <a name="debugaddress"></a>DEBUG_ADDRESS
+# <a name="debug_address"></a>DEBUG_ADDRESS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Tato struktura představuje adresu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagDEBUG_ADDRESS {  
@@ -44,7 +44,7 @@ public struct DEBUG_ADDRESS {
 }  
 ```  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  ulAppDomainID  
  ID procesu.  
   
@@ -52,20 +52,20 @@ public struct DEBUG_ADDRESS {
  Identifikátor GUID modulu, který obsahuje tuto adresu.  
   
  tokClass  
- Token třídy nebo typu tuto adresu.  
+ Token identifikující třídu nebo typ této adresy.  
   
 > [!NOTE]
-> Tato hodnota je specifické pro zprostředkovatele symbolů a proto nemá žádný význam obecné jiných než jako identifikátor pro typ třídy.  
+> Tato hodnota je specifická pro poskytovatele symbolů, proto nemá žádný obecný význam, než jako identifikátor typu třídy.  
   
- addr  
- A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktura, která obsahuje sjednocení, struktur, které popisují typy jednotlivých adres. Hodnota `addr`.`dwKind` pochází z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet, který vysvětluje, jak interpretovat sjednocení.  
+ Adresa  
+ Struktura [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , která obsahuje sjednocení struktur popisujících jednotlivé typy adres. Hodnota `addr` .`dwKind` pochází z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) , který vysvětluje, jak se má sjednocení interpretovat.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) metoda být vyplněna.  
+ Tato struktura je předána metodě [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) , která má být vyplněna.  
   
- **Upozornění [C++ pouze]**  
+ **Upozornění [pouze C++]**  
   
- Pokud `addr.dwKind` je `ADDRESS_KIND_METADATA_LOCAL` a pokud `addr.addr.addrLocal.pLocal` není hodnotou null, pak je nutné volat `Release` token ukazatele:  
+ Pokud `addr.dwKind` je `ADDRESS_KIND_METADATA_LOCAL` a pokud není `addr.addr.addrLocal.pLocal` hodnota null, musíte zavolat `Release` na ukazatel tokenu:  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -75,14 +75,14 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
+ [GetAddress –](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

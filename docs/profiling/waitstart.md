@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b42936d9d87ad80b48b7fdc71cdf0fd3fa965af2
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329894"
 ---
 # <a name="waitstart"></a>WaitStart
@@ -28,7 +28,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName[Options] /WaitStart[:Seconds]
 ```
 
 #### <a name="parameters"></a>Parametry
- `Seconds`Počet sekund, po které se má čekat, než se vrátí z dílčího příkazu Start
+ `Seconds` Počet sekund, po které se má čekat, než se vrátí z dílčího příkazu Start
 
 ## <a name="required-options"></a>Požadované možnosti
  Možnost WaitStart lze použít pouze s dílčím příkazem Start.
