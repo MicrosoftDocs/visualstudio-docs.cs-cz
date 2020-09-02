@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a5b2f2e2dc00eda388b2a2d075924fa72f9eff1a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670303"
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Tipy pro vyšší produktivitu v sadě Visual Studio
@@ -21,7 +21,7 @@ ms.locfileid: "72670303"
 
 Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit kód v aplikaci Visual Studio. Další informace o běžných klávesových zkratkách najdete v tématu [tipy a triky](../ide/tips-and-tricks-for-visual-studio.md). Úplnější seznam najdete v tématu [určení a přizpůsobení klávesových zkratek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) a [výchozích klávesových zkratek](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
- Toto téma obsahuje následující oddíly:
+ Toto téma zahrnuje následující části:
 
  [Přístup k Visual Studio Tools](../ide/productivity-tips-for-visual-studio.md#BKMK_Access)
 
@@ -35,10 +35,10 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
  [Správa souborů, panelů nástrojů a oken](../ide/productivity-tips-for-visual-studio.md#BKMK_Managing)
 
-## <a name="BKMK_Access"></a>Přístup k Visual Studio Tools
+## <a name="accessing-visual-studio-tools"></a><a name="BKMK_Access"></a> Přístup k Visual Studio Tools
  Pokud připnete připnutí na obrazovku Start nebo na hlavní panel, můžete pro Developer Command Prompt nebo jiný nástroj snadněji získat přístup.
 
-1. Na úvodní obrazovce zadejte `Visual Studio Tools` a pak zvolte klávesu ENTER.
+1. Na obrazovce Start zadejte `Visual Studio Tools` a pak stiskněte klávesu ENTER.
 
 2. V **Průzkumníku souborů**otevřete místní nabídku pro položku, kterou chcete:
 
@@ -60,7 +60,7 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
 3. Vyberte **připnout pro spuštění** nebo **připnutí na hlavní panel**.
 
-## <a name="BKMK_Writing"></a>Psaní kódu
+## <a name="writing-code"></a><a name="BKMK_Writing"></a> Psaní kódu
  Vytvářejte kód rychleji pomocí následujících funkcí.
 
 - **Použijte ukázkové aplikace**. Vývoj aplikací můžete urychlit stažením a instalací ukázkových aplikací z Galerie kódu na webu MSDN. Můžete si také přečíst konkrétní technologii nebo programovací koncept stažením a prozkoumáním ukázkové sady pro tuto oblast.
@@ -93,7 +93,7 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
      Chcete-li otevřít definici v překryvném okně, zvýrazněte prvek a zvolte klávesy Alt + F12 nebo otevřete místní nabídku pro prvek a pak zvolte možnost **Náhled definice**. Chcete-li otevřít definici v samostatném okně kódu, otevřete místní nabídku pro prvek a zvolte možnost **Přejít k definici**.
 
-## <a name="BKMK_Navigating"></a>Navigace v kódu
+## <a name="navigating-within-your-code"></a><a name="BKMK_Navigating"></a> Navigace v kódu
  Můžete použít různé techniky k rychlejšímu vyhledání a přesunu do konkrétních umístění v kódu.
 
 - **Záložek řádků kódu** Pomocí záložek můžete rychle přejít na konkrétní řádky kódu v souboru.
@@ -106,14 +106,14 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
 - **Projděte si celkovou strukturu kódu**. V **Průzkumník řešení**můžete vyhledávat a procházet třídy a jejich typy a členy v projektech. Můžete také vyhledat symboly, zobrazit hierarchii volání metody, najít odkazy na symboly a provádět další úkoly. Pokud zvolíte prvek kódu v **Průzkumník řešení**, otevře se přidružený soubor na kartě **Preview** a kurzor se přesune do prvku v souboru. Další informace naleznete v tématu [zobrazení struktury kódu](../ide/viewing-the-structure-of-code.md).
 
-## <a name="BKMK_Finding"></a>Rychlejší hledání položek
+## <a name="finding-items-faster"></a><a name="BKMK_Finding"></a> Rychlejší hledání položek
  Můžete hledat v integrovaném vývojovém prostředí (IDE) pro příkazy, soubory a možnosti, kromě filtrování obsahu oken nástrojů, aby se zobrazily pouze relevantní informace pro aktuální úkol.
 
 - **Filtrování obsahu oken nástrojů** Můžete hledat v obsahu mnoha oken nástrojů, jako je například **Sada nástrojů**, okno **vlastnosti** a **Průzkumník řešení**, ale zobrazit pouze položky, jejichž názvy obsahují znaky, které zadáte.
 
 - **Zobrazí jenom chyby, které chcete adresovat**. Pokud zvolíte tlačítko **Filtr** na panelu nástrojů **Seznam chyb** , můžete snížit počet chyb, které se zobrazí v okně **Seznam chyb** . Můžete zobrazit pouze chyby v souborech, které jsou otevřeny v editoru, pouze chyby v aktuálním souboru nebo pouze chyby v aktuálním projektu. Můžete také vyhledat konkrétní chyby v okně Seznam chyb.
 
-- **Najde dialogová okna, příkazy nabídky a možnosti**. V poli [Snadné spuštění, prostředí, dialogové okno Možnosti](../ide/reference/quick-launch-environment-options-dialog-box.md) zadejte klíčová slova nebo fráze pro položky, které se pokoušíte najít. Například následující možnosti se zobrazí, pokud zadáte `new project`:
+- **Najde dialogová okna, příkazy nabídky a možnosti**. V poli [Snadné spuštění, prostředí, dialogové okno Možnosti](../ide/reference/quick-launch-environment-options-dialog-box.md) zadejte klíčová slova nebo fráze pro položky, které se pokoušíte najít. Například následující možnosti se zobrazí, pokud zadáte `new project` :
 
      Obrázek 3: seznam výsledků snadného spuštění pro `new project`
 
@@ -121,7 +121,7 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
      **Rychlé spuštění** zobrazuje odkazy na dialogové okno **Nový projekt** , dialogové okno **Přidat novou položku** a stránku projekty a řešení v dialogovém okně **Možnosti** , mimo jiné. Výsledky snadného spuštění můžou také zahrnovat soubory projektu a okna nástrojů.
 
-## <a name="BKMK_Debugging"></a>Ladění kódu
+## <a name="debugging-code"></a><a name="BKMK_Debugging"></a> Ladění kódu
  Ladění může spotřebovat spoustu času, ale následující tipy vám pomůžou tento proces urychlit.
 
 - **Otestujte stejnou stránku, aplikaci nebo web v různých prohlížečích**. Při ladění kódu můžete snadno přepínat mezi nainstalovanými webovými prohlížeči, včetně nástroje [Page Inspector (Visual Studio)](https://msdn.microsoft.com/library/65880969-1ad2-47be-85b9-bb12c81bf209), aniž byste museli otevřít dialogové okno **Procházet s** . Můžete použít seznam **cílů ladění** , který je na **standardním** panelu nástrojů vedle tlačítka **Spustit ladění** , a rychle ověřit, který prohlížeč používáte při ladění nebo prohlížení stránek.
@@ -144,7 +144,7 @@ Pomocí těchto tipů můžete rychleji a efektivně psát, Procházet a ladit k
 
      Další informace o dalších příkazech naleznete v tématu [Aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).
 
-## <a name="BKMK_Managing"></a>Správa souborů, panelů nástrojů a oken
+## <a name="managing-files-toolbars-and-windows"></a><a name="BKMK_Managing"></a> Správa souborů, panelů nástrojů a oken
  V jednom okamžiku můžete pracovat v několika souborech kódu a při vývoji aplikace se pohybovat mezi několika okny nástrojů. Pomocí následujících tipů můžete dál organizovat.
 
 - **Soubory, které často používáte, se budou zobrazovat v editoru**. Soubory můžete připnout na levou stranu na kartě, aby zůstaly viditelné bez ohledu na to, kolik souborů je v editoru otevřené.

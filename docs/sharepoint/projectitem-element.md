@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 44fc1b918960f0268d916ccfa560f118cea47144
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536874"
 ---
 # <a name="projectitem-element"></a>ProjectItem – element
   Představuje položku SharePointového projektu. Tento prvek vyžaduje kořenový prvek souboru *. spdata* .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectItem DefaultFile = "File that opens in the editor when you open the project item"
@@ -55,11 +55,11 @@ ms.locfileid: "85536874"
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-|Prvek|Popis|
+|Element|Popis|
 |-------------|-----------------|
 |[ExtensionData –](../sharepoint/extensiondata-element.md)|Volitelný element.<br /><br /> Představuje kolekci vlastních datových položek, které jsou přidruženy k položce projektu služby SharePoint.<br /><br /> Můžete zahrnout pouze jeden prvek **ExtensionData –** .|
 |[FeatureProperties –](../sharepoint/featureproperties-element.md)|Volitelný element.<br /><br /> Představuje kolekci hodnot vlastností, které jsou součástí funkce při nasazení do služby SharePoint.<br /><br /> Můžete zahrnout pouze jeden prvek **FeatureProperties –** .|
-|[Spis](../sharepoint/files-element.md)|Volitelný element **FileCollectionType** .<br /><br /> Určuje soubory, které mají být nasazeny s položkou projektu služby SharePoint, jako jsou například soubory prvků funkce a výstup závislých projektů mimo službu SharePoint.<br /><br /> Zahrňte buď **soubory** , nebo element **ProjectItemFolder –** , ale ne obojí.|
+|[Soubory](../sharepoint/files-element.md)|Volitelný element **FileCollectionType** .<br /><br /> Určuje soubory, které mají být nasazeny s položkou projektu služby SharePoint, jako jsou například soubory prvků funkce a výstup závislých projektů mimo službu SharePoint.<br /><br /> Zahrňte buď **soubory** , nebo element **ProjectItemFolder –** , ale ne obojí.|
 |[ProjectItemFolder –](../sharepoint/projectitemfolder-element.md)|Volitelný element **ProjectItemFolderType** .<br /><br /> Představuje mapovanou složku.<br /><br /> Zahrňte buď **soubory** , nebo element **ProjectItemFolder –** , ale ne obojí.|
 |[SafeControls –](../sharepoint/safecontrols-element.md)|Volitelný element.<br /><br /> Představuje kolekci ovládacích prvků ASPX a Webové části, které jsou označeny jako bezpečné pro každého uživatele, aby měli přístup k libovolné stránce ASPX na webu služby SharePoint.<br /><br /> Můžete zahrnout pouze jeden prvek **SafeControls –** .|
 
@@ -75,5 +75,5 @@ ms.locfileid: "85536874"
 |**Soubor ověření**|ProjectItemModelSchema. xsd|
 |**Může být prázdné**|Ne|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 [Rseference schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)

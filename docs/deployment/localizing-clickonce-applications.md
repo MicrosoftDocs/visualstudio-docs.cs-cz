@@ -1,5 +1,5 @@
 ---
-title: Lokalizace aplikací ClickOnce | Dokumentace Microsoftu
+title: Lokalizace aplikací ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,63 +22,63 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81ee263b3bb908daace4bf27f86cff710ae90684
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406789"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64800367"
 ---
 # <a name="localize-clickonce-applications"></a>Lokalizace aplikací ClickOnce
-Lokalizace je proces zpřístupnění aplikace vhodné pro konkrétní jazykovou verzi. Tento proces zahrnuje text uživatelského rozhraní (UI) pro jazyk specifický pro oblast, pomocí správné datum a formátování měny, nastavení velikosti ovládacích prvků ve formuláři, překlad a zrcadlení ovládací prvky zprava doleva v případě potřeby.
+Lokalizace je proces zajištění vhodné aplikace pro konkrétní jazykovou verzi. Tento proces zahrnuje převod textu uživatelského rozhraní (UI) do jazyka specifického pro oblast, pomocí správného formátování data a měny, přizpůsobení velikosti ovládacích prvků ve formuláři a v případě potřeby zrcadlení ovládacích prvků v pravém rohu.
 
- Lokalizace aplikace výsledky při vytváření satelitních sestavení pro jeden nebo více. Každé sestavení obsahuje řetězce, obrázky a další prostředky, které jsou specifické pro danou jazykovou verzi uživatelského rozhraní. (Hlavní spustitelný soubor aplikace obsahuje řetězce pro výchozí jazykovou verzi pro vaši aplikaci.)
+ Lokalizace vaší aplikace má za následek vytvoření jednoho nebo více satelitních sestavení. Každé sestavení obsahuje řetězce uživatelského rozhraní, obrázky a další prostředky, které jsou specifické pro danou jazykovou verzi. (Hlavní spustitelný soubor vaší aplikace obsahuje řetězce pro výchozí jazykovou verzi vaší aplikace.)
 
- Toto téma popisuje tři způsoby, jak nasadit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací pro jiné jazykové verze:
+ V tomto tématu jsou popsány tři způsoby nasazení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace pro jiné jazykové verze:
 
-- Zahrňte všechny satelitní sestavení v jednom nasazení.
+- Zahrňte všechna satelitní sestavení v jednom nasazení.
 
-- Generovat jedno nasazení pro jednotlivé jazykové verze, s jediným satelitním sestavením v každém.
+- Vygenerujte jedno nasazení pro každou jazykovou verzi s jedním satelitním sestavením zahrnutým do každého.
 
-- Stáhněte si satelitních sestavení na vyžádání.
+- Stáhněte si satelitní sestavení na vyžádání.
 
-## <a name="including-all-satellite-assemblies-in-a-deployment"></a>V nasazení včetně všech satelitních sestavení
- Místo publikování více [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, můžete publikovat jediné [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, které obsahuje všechny satelitní sestavení.
+## <a name="including-all-satellite-assemblies-in-a-deployment"></a>Zahrnutí všech satelitních sestavení v nasazení
+ Namísto publikování více [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení můžete publikovat jedno [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení, které obsahuje všechna satelitní sestavení.
 
- Tato metoda je výchozím nastavení v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], nemusíte dělat nic dalšího.
+ Tato metoda je výchozím nastavením v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , není nutné provádět žádnou další práci.
 
- Při použití této metody s *MageUI.exe*, musíte nastavit jazykovou verzi pro vaši aplikaci do **neutrální** v *MageUI.exe*. Dále musíte ručně zahrnout všechny satelitní sestavení ve vašem nasazení. V *MageUI.exe*, satelitních sestavení můžete přidat pomocí **naplnit** tlačítko **soubory** karta manifestu aplikace.
+ Chcete-li použít tuto metodu s *MageUI.exe*, je nutné nastavit jazykovou verzi vaší aplikace jako **neutrální** v *MageUI.exe*. Dále musíte do svého nasazení ručně zahrnout všechna satelitní sestavení. V *MageUI.exe*můžete přidat satelitní sestavení pomocí tlačítka **naplnit** na kartě **soubory** manifestu aplikace.
 
- Výhodou tohoto přístupu je, že vytváří jedno nasazení a zjednodušuje váš příběh lokalizované nasazení. V době běhu příslušného satelitního sestavení se použije, v závislosti na výchozí jazykovou verzi operačního systému uživatele Windows. Nevýhod tohoto přístupu je, že stáhne všechny satelitní sestavení pokaždé, když se aplikace instalaci nebo aktualizaci na klientském počítači. Pokud vaše aplikace má velký počet řetězců nebo vaši zákazníci mají pomalé síťové připojení, tento proces může ovlivnit výkon při aktualizaci aplikace.
+ Výhodou tohoto přístupu je, že vytvoří jediné nasazení a zjednodušuje lokalizovaný scénář nasazení. V době běhu se použije příslušné satelitní sestavení v závislosti na výchozí jazykové verzi operačního systému Windows daného uživatele. Nevýhodou tohoto přístupu je, že stáhne všechna satelitní sestavení pokaždé, když je aplikace nainstalována nebo aktualizována v klientském počítači. Pokud má vaše aplikace velký počet řetězců nebo pokud vaši zákazníci mají pomalé připojení k síti, může tento proces ovlivnit výkon při aktualizaci aplikace.
 
 > [!NOTE]
-> Tento přístup předpokládá, že aplikace nastaví výšku, šířku a umístění ovládacích prvků automaticky tak, aby vyhovovaly velikosti řetězce jiným textovým v různé jazykové verze. Windows Forms obsahuje celou řadu ovládacích prvků a technologie, které vám umožní navrhnout vaše formuláře tak, aby ji snadno lokalizovatelný, včetně <xref:System.Windows.Forms.FlowLayoutPanel> a <xref:System.Windows.Forms.TableLayoutPanel> ovládací prvky také <xref:System.Windows.Forms.Control.AutoSize%2A> vlastnost.  Viz také [jak: Podpora lokalizace ve formulářích Windows pomocí AutoSize a TableLayoutPanel – ovládací prvek](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100)).
+> Tento přístup předpokládá, že vaše aplikace upravuje výšku, šířku a polohu ovládacích prvků automaticky pro přizpůsobení různých velikostí textových řetězců v různých jazykových verzích. Model Windows Forms obsahuje celou řadu ovládacích prvků a technologií, které vám umožní navrhnout formulář, aby bylo možné snadno lokalizovat, včetně <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> ovládacích prvků a a také <xref:System.Windows.Forms.Control.AutoSize%2A> vlastností.  Viz také [Postupy: podpora lokalizace ve Windows Forms pomocí AutoSize a ovládacího prvku TableLayoutPanel](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100)).
 
 ## <a name="generate-one-deployment-for-each-culture"></a>Generovat jedno nasazení pro každou jazykovou verzi
- V této strategii nasazení můžete generovat více nasazení. Každé nasazení zahrnout pouze do satelitního sestavení potřebné pro konkrétní jazykovou verzi a označit nasazení jako specifické pro danou jazykovou verzi.
+ V této strategii nasazení vygenerujete více nasazení. V každém nasazení zahrnete pouze satelitní sestavení potřebné pro konkrétní jazykovou verzi a označíte nasazení jako specifické pro danou jazykovou verzi.
 
- Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], nastavte **jazyk publikování** vlastnost **publikovat** kartu na požadovanou oblast. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky zahrne požadované pro tuto oblast a vyloučí všechny ostatní satelitní sestavení nasazení satelitního sestavení.
+ Chcete-li použít tuto metodu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , nastavte vlastnost **jazyk publikování** na kartě **publikovat** na požadovanou oblast. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bude automaticky zahrnovat satelitní sestavení požadované pro vybranou oblast a vyloučí všechna ostatní satelitní sestavení z nasazení.
 
- Totéž lze provádět pomocí *MageUI.exe* nástroj Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]. Použití **naplnit** tlačítko **soubory** karta manifestu aplikace vyloučit všechny ostatní satelitní sestavení z adresáře aplikace, a pak **jazykovou verzi**pole na **název** kartu v manifestu nasazení *MageUI.exe*. Tyto kroky zahrnují nejen správné satelitní sestavení, ale také nastavit `language` atribut na `assemblyIdentity` elementu v manifestu nasazení na odpovídající jazykovou verzi.
+ Stejnou věc můžete dosáhnout pomocí nástroje *MageUI.exe* v Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Použijte tlačítko **naplnit** na kartě **soubory** manifestu aplikace pro vyloučení všech ostatních satelitních sestavení z adresáře aplikace a pak nastavte pole **culture** na kartě **název** pro manifest nasazení v *MageUI.exe*. Tyto kroky nezahrnují pouze správné satelitní sestavení, ale také nastavují `language` atribut u `assemblyIdentity` prvku v manifestu nasazení na odpovídající jazykovou verzi.
 
- Po publikování aplikace, musí tento krok opakujte pro každý další jazykové verze vaše aplikace podporuje. Ujistěte se, že publikujete do jiného adresáře webového serveru nebo adresář sdílené složky souboru pokaždé, protože každý manifest aplikace bude odkazovat na různé satelitní sestavení, a každý manifest nasazení bude mít jinou hodnotu pro `language`atribut.
+ Po publikování aplikace je nutné tento krok opakovat pro každou další jazykovou verzi, kterou vaše aplikace podporuje. Je nutné zajistit, aby každý manifest aplikace byl pokaždé publikován do jiného adresáře webového serveru nebo sdílené složky souborů, protože každý manifest aplikace bude odkazovat na jiné satelitní sestavení a každý manifest nasazení bude mít pro atribut jinou hodnotu `language` .
 
 ## <a name="download-satellite-assemblies-on-demand"></a>Stahování satelitních sestavení na vyžádání
- Pokud se rozhodnete zahrnout všechny satelitní sestavení v jednom nasazení, můžete zlepšit výkon pomocí stažení na vyžádání, což vám umožní označit sestavení jako volitelné. Označená sestavení nebude stažen při instalaci nebo aktualizaci aplikace. Můžete nainstalovat sestavení, když je budete potřebovat voláním <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> metodu <xref:System.Deployment.Application.ApplicationDeployment> třídy.
+ Pokud se rozhodnete zahrnout všechna satelitní sestavení v jednom nasazení, můžete zvýšit výkon pomocí stahování na vyžádání, což vám umožní označit sestavení jako volitelné. Označená sestavení nebudou stažena při instalaci nebo aktualizaci aplikace. Sestavení můžete nainstalovat, když je potřebujete, voláním <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> metody <xref:System.Deployment.Application.ApplicationDeployment> třídy.
 
- Stahování satelitních sestavení na vyžádání se mírně liší ve stahování dalších typů sestavení na vyžádání. Pro další informace a praktické příklady o tom, jak povolit tento scénář používání [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] nástroje pro sadu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], naleznete v tématu [názorný postup: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).
+ Stahování satelitních sestavení na vyžádání se mírně liší od stahování jiných typů sestavení na vyžádání. Další informace a příklady kódu pro povolení tohoto scénáře pomocí [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] nástrojů pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] naleznete v tématu [Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).
 
- Můžete také povolit tento scénář v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Viz také [názorný postup: Stahování satelitních sestavení na vyžádání pomocí nasazení ClickOnce pomocí návrháře rozhraní API](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) nebo [názorný postup: Stahování satelitních sestavení na vyžádání pomocí nasazení ClickOnce pomocí návrháře rozhraní API](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).
+ Tento scénář můžete také povolit v nástroji [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  Viz také [Návod: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) nebo [návodu: Stahování satelitních sestavení na vyžádání pomocí rozhraní API nasazení ClickOnce pomocí návrháře](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).
 
-## <a name="testing-localized-clickonce-applications-before-deployment"></a>Testování před nasazením lokalizovaných aplikací ClickOnce
- Satelitní sestavení se použije pro Windows Forms pouze pokud aplikaci <xref:System.Threading.Thread.CurrentUICulture%2A> pro hlavního vlákna aplikace je nastavena na jazykovou verzi satelitního sestavení. Zákazníci místního trzích, kde bude pravděpodobně už běží lokalizovanou verzi sady Windows s jejich jazyková verze nastavena na vhodné výchozí nastavení.
+## <a name="testing-localized-clickonce-applications-before-deployment"></a>Testování lokalizovaných aplikací ClickOnce před nasazením
+ Satelitní sestavení bude použito pro model Windows Forms aplikaci pouze v případě, že <xref:System.Threading.Thread.CurrentUICulture%2A> vlastnost pro hlavní vlákno aplikace je nastavena na jazykovou verzi satelitního sestavení. Zákazníci na místních trzích budou pravděpodobně mít již spuštěnou lokalizovanou verzi systému Windows s jejich jazykovou verzí nastavenou na odpovídající výchozí hodnotu.
 
- Existují tři možnosti pro testování předtím, než je vaše aplikace je možné zákazníkům zpřístupnit lokalizovaných nasazení:
+ Máte tři možnosti pro testování lokalizovaných nasazení před zpřístupněním vaší aplikace zákazníkům:
 
-- Můžete spustit váš [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace na příslušný lokalizovaných verzích Windows.
+- Aplikaci můžete spustit [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] v příslušných lokalizovaných verzích systému Windows.
 
-- Můžete nastavit <xref:System.Threading.Thread.CurrentUICulture%2A> vlastnost prostřednictvím kódu programu ve vaší aplikaci. (Tato vlastnost musí být nastavena dříve než zavoláte <xref:System.Windows.Forms.Application.Run%2A> metoda.)
+- Vlastnost můžete nastavit <xref:System.Threading.Thread.CurrentUICulture%2A> programově v aplikaci. (Tuto vlastnost je nutné nastavit před voláním <xref:System.Windows.Forms.Application.Run%2A> metody.)
 
-## <a name="see-also"></a>Viz také:
-- [\<Vlastnost assemblyIdentity > – element](../deployment/assemblyidentity-element-clickonce-deployment.md)
-- [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)
-- [Globalizace Windows forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)
+## <a name="see-also"></a>Viz také
+- [\<assemblyIdentity> objekt](../deployment/assemblyidentity-element-clickonce-deployment.md)
+- [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)
+- [Globalizace modelu Windows Forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)

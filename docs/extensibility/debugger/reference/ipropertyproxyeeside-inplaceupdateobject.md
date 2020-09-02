@@ -1,5 +1,5 @@
 ---
-title: iPropertyProxyeeSide::InplaceUpdateObject | Dokumenty společnosti Microsoft
+title: 'IPropertyProxyEESide:: InPlaceUpdateObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 79167b0f7e8094fabf80bb9b2d83c94ac874aa31
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714896"
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
-Aktualizuje data objektu pomocí daného datového objektu a vrátí nový datový objekt představující nová data objektu.
+Aktualizuje data objektu daným datovým objektem a vrátí nový datový objekt reprezentující nová data objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,20 +43,20 @@ int InPlaceUpdateObject(
 
 ## <a name="parameters"></a>Parametry
 `dataIn`\
-[v] Objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující nová data.
+pro Objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující nová data.
 
 `dataOut`\
-[out] Vrátí nový `IEEDataStorage` objekt obsahující nahrazená data.
+mimo Vrátí nový `IEEDataStorage` objekt obsahující nahrazená data.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda ve skutečnosti aktualizuje data objektu. Data v vráceném objektu [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nemusí být stejná jako `IEEDataStorage` data v příchozím objektu, ale vrácený objekt musí odrážet aktuální hodnotu vlastnosti.
+ Tato metoda ve skutečnosti aktualizuje data objektu. Data v vráceném objektu [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nemusí být shodná s daty ve vstupním `IEEDataStorage` objektu, ale vrácený objekt musí odrážet aktuální hodnotu vlastnosti.
 
- Objekt příchozích dat obvykle není implementován EE. Objekt vrácený touto metodou je však vždy implementován EE, `IEEDataStorage` který umožňuje EE implementovat rozhraní na jakékoli třídy je žádoucí.
+ Datový objekt příchozích dat není obvykle implementován pomocí et. Objekt vrácený touto metodou je však vždy implementován pomocí et, což umožňuje, aby rozhraní EE implementovalo `IEEDataStorage` rozhraní pro jakoukoliv třídu.
 
- Metoda [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) vytvoří datový objekt na základě příchozího datového objektu, ale neovlivní původní data vlastnosti.
+ Metoda [funkce CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) vytvoří datový objekt na základě příchozího datového objektu, ale nemá vliv na původní data vlastnosti.
 
 ## <a name="see-also"></a>Viz také
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

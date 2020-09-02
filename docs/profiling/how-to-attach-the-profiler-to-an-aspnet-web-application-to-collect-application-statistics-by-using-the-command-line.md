@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 2944a6b84a7262c44b92584a41b25e8c7a751e17
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329408"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>Postupy: Připojení profileru k webové aplikaci ASP.NET ke shromažďování statistik aplikace pomocí příkazového řádku
@@ -53,7 +53,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
    - Možnost **/Start: Sample** inicializuje Profiler.
 
-   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile`Určuje název a umístění souboru dat profilování (. vsp).
+   - Parametr **/output:** `OutputFile` je vyžadován s parametrem **/Start**. `OutputFile` Určuje název a umístění souboru dat profilování (. vsp).
 
      Pomocí možnosti **/Start: Sample** můžete použít jednu z následujících možností.
 
@@ -72,7 +72,7 @@ Tento článek popisuje, jak pomocí [!INCLUDE[vsprvs](../code-quality/includes/
 
 6. Připojte profiler k pracovnímu procesu ASP.NET. Typ:**VSPerfCmd** [/Attach](../profiling/attach.md)**:**{ `PID`&#124;`ProcName` } [ `Sample Event` ] [[/targetclr](../profiling/targetclr.md)**:** `Version` ]
 
-   - `PID`Určuje ID procesu pracovního procesu ASP.NET; `ProcName`Určuje název pracovního procesu. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
+   - `PID` Určuje ID procesu pracovního procesu ASP.NET; `ProcName` Určuje název pracovního procesu. ID procesů a názvy všech spuštěných procesů můžete zobrazit ve Správci úloh systému Windows.
 
    - Ve výchozím nastavení jsou data o výkonu Navzorkovaná každých 10 000 000 hodinových cyklů procesoru. To je přibližně 100 časů za sekundu na frekvencí 1 GHz procesoru. Můžete zadat jednu z následujících možností **VSPerfCmd** pro změnu intervalu hodinových cyklů nebo zadání jiné události vzorkování.
 

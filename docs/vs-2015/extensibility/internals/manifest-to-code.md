@@ -7,10 +7,10 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cb9b02e10a2d263a39e7ae6a150e452ff8321d9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537056"
 ---
 # <a name="manifest-to-code"></a>Manifest do kódu
@@ -19,7 +19,7 @@ ms.locfileid: "85537056"
 Nástroj Manifest to Code je Konzolová aplikace, která přebírá soubor. imagemanifest pro službu image sady Visual Studio a generuje soubor obálky nebo soubory pro odkazování na hodnoty manifestu obrázků v souborech C++, C#, VB nebo. vsct pro rozšíření sady Visual Studio. Tento nástroj generuje obálky soubory, které lze použít pro vyžádání imagí z aplikace Visual Studio Image Service přímo, nebo pro předání hodnot manifestu prostřednictvím rozhraní API, pokud kód nezpracovává žádné vlastní uživatelské rozhraní a vykreslování.  
   
 ## <a name="how-to-use-the-tool"></a>Jak používat nástroj  
- **Syntaxe**  
+ **Syntax**  
   
  ManifestToCode/manifest: \<Image Manifest file> /Language: \<Code Language>\<Optional Args>  
   

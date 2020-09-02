@@ -1,5 +1,5 @@
 ---
-title: Element UsedCommands | Dokumenty společnosti Microsoft
+title: Element UsedCommands | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 76732b2a9700f1737af495098c8c23aa4b618819
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698755"
 ---
 # <a name="usedcommands-element"></a>UsedCommands – element
 Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCommands.
 
- Prvek UsedCommands je volitelný. Pokud nevoláte příkazy definované mimo balíček, není třeba tuto část zahrnout do souboru .vsct.
+ Element UsedCommands je nepovinný. Pokud nevoláte příkazy definované mimo váš balíček, nemusíte tento oddíl zahrnout do souboru. vsct.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <UsedCommands condition="Defined(DEBUG)">
@@ -40,7 +40,7 @@ Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCom
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené elementy
 
@@ -52,7 +52,7 @@ Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCom
 
 |Element|Popis|
 |-------------|-----------------|
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které vspackage poskytuje integrovanému vývojovému prostředí (IDE).|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které rozhraní VSPackage poskytuje integrovanému vývojovému prostředí (IDE).|
 
 ## <a name="example"></a>Příklad
 

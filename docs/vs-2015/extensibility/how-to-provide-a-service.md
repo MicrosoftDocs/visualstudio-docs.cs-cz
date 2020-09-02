@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Poskytování služeb | Dokumentace Microsoftu'
+title: 'Postupy: poskytování služby | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 565a8a91797c826b6419dc5a8488d7d3baf9cddc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435914"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802742"
 ---
 # <a name="how-to-provide-a-service"></a>Postupy: Poskytování služby
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPackage může poskytovat služby, které můžete použít jiné balíčky VSPackages. Poskytování služeb, musíte VSPackage registraci služby pomocí sady Visual Studio a přidejte službu.  
+VSPackage může poskytovat služby, které mohou používat jiné sady VSPackage. Aby bylo možné poskytnout službu, VSPackage musí službu zaregistrovat v aplikaci Visual Studio a přidat službu.  
   
- <xref:Microsoft.VisualStudio.Shell.Package> Třída implementuje oba <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> a <xref:System.ComponentModel.Design.IServiceContainer>. <xref:System.ComponentModel.Design.IServiceContainer> obsahuje metody zpětného volání, které poskytují služby na vyžádání.  
+ <xref:Microsoft.VisualStudio.Shell.Package>Třída implementuje i <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer> obsahuje metody zpětného volání, které poskytují služby na vyžádání.  
   
- Další informace o službách najdete v tématu [základy služeb](../extensibility/internals/service-essentials.md) .  
+ Další informace o službách najdete v tématu [základy služby](../extensibility/internals/service-essentials.md) .  
   
 > [!NOTE]
-> VSPackage blížící se nenačte, Visual Studio čeká na všechny žádosti o služby, které poskytuje VSPackage byl dodán. Neumožňuje nové požadavky pro tyto služby. Neměli volat explicitně <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> metoda odvolání přístupu služby při uvolnění.  
+> Když se chystá uvolnění VSPackage, Visual Studio počká, dokud nebudou doručeny všechny žádosti o služby, které VSPackage nabízí. Nepovoluje nové požadavky na tyto služby. Nevolejte explicitně <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> metodu pro odvolání služby při uvolňování.  
   
 #### <a name="implementing-a-service"></a>Implementace služby  
   
-1. Vytvořte projekt VSIX (**soubor / nový / Project / Visual C# / Extensiblity / projekt VSIX**).  
+1. Vytvořte projekt VSIX (**soubor/nový/projekt/Visual C#/Extensiblity/VSIX projekt**).  
   
-2. Přidejte do projektu VSPackage. Vyberte uzel projektu v **Průzkumníka řešení** a klikněte na tlačítko **přidat / nová položku / položky Visual C# / rozšiřitelnost / balíček Visual Studio**.  
+2. Přidejte do projektu VSPackage. Vyberte uzel projektu v **Průzkumník řešení** a klikněte na **přidat/nová položka/Visual C# položky/rozšiřitelnost/balíček sady Visual Studio**.  
   
-3. K implementaci služby, je potřeba vytvořit tři typy:  
+3. Chcete-li implementovat službu, je nutné vytvořit tři typy:  
   
-   - Rozhraní, který popisuje službu. Mnohé z těchto rozhraní jsou prázdné, to znamená, že mají žádné metody.  
+   - Rozhraní, které popisuje službu. Mnohé z těchto rozhraní jsou prázdné, to znamená, že nemají žádné metody.  
   
-   - Rozhraní, které popisují rozhraní služby. Toto rozhraní obsahuje metody k implementaci.  
+   - Rozhraní, které popisuje rozhraní služby. Toto rozhraní zahrnuje metody, které mají být implementovány.  
   
-   - Třída, která implementuje služba a služba rozhraní.  
+   - Třída, která implementuje službu i rozhraní služby.  
   
-     Následující příklad ukazuje velmi základní implementaci ze tří typů. Konstruktor třídy služeb, musíte nastavit poskytovatele služeb.  
+     Následující příklad ukazuje velmi základní implementaci tří typů. Konstruktor třídy služby musí nastavit poskytovatele služby.  
   
    ```csharp  
    public class MyService : SMyService, IMyService  
@@ -78,7 +78,7 @@ VSPackage může poskytovat služby, které můžete použít jiné balíčky VS
   
 ### <a name="registering-a-service"></a>Registrace služby  
   
-1. Chcete-li zaregistrovat služby, přidejte <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> VSPackage, která poskytuje služby. Tady je příklad:  
+1. Chcete-li zaregistrovat službu, přidejte do balíčku <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> VSPackage, který poskytuje službu. Tady je příklad:  
   
     ```csharp  
     [ProvideService(typeof(SMyService))]  
@@ -88,14 +88,14 @@ VSPackage může poskytovat služby, které můžete použít jiné balíčky VS
     {. . . }  
     ```  
   
-     Tento atribut zaregistruje `SMyService` pomocí sady Visual Studio.  
+     Tento atribut se registruje `SMyService` v aplikaci Visual Studio.  
   
     > [!NOTE]
-    > Pokud chcete zaregistrovat službu, která nahrazuje jinou se stejným názvem, použijte <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>. Poznámka: Tento pouze jedno přepsání služby je povolen.  
+    > Chcete-li zaregistrovat službu, která nahrazuje jinou službu se stejným názvem, použijte <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute> . Všimněte si, že je povoleno pouze jedno přepsání služby.  
   
-### <a name="adding-a-service"></a>Přidání služeb  
+### <a name="adding-a-service"></a>Přidání služby  
   
-1. 1.  V inicializátoru VSPackage přidat služby a přidejte metodu zpětného volání pro vytvoření služeb. Tady je změnit tak, aby <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody:  
+1. 1.  Do inicializátoru VSPackage přidejte službu a přidejte metodu zpětného volání, která vytvoří služby. Tady je změna, která se má provést v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metodě:  
   
     ```csharp  
     protected override void Initialize()  
@@ -107,7 +107,7 @@ VSPackage může poskytovat služby, které můžete použít jiné balíčky VS
     }  
     ```  
   
-2. Implementace metody zpětného volání, které by měl vytvořit a vrátit služby nebo hodnota null, pokud nelze vytvořit.  
+2. Implementujte metodu zpětného volání, která by měla vytvořit a vrátit službu, nebo hodnotu null, pokud ji nelze vytvořit.  
   
     ```  
     private object CreateService(IServiceContainer container, Type serviceType)  
@@ -119,9 +119,9 @@ VSPackage může poskytovat služby, které můžete použít jiné balíčky VS
     ```  
   
     > [!NOTE]
-    > Visual Studio může odmítnout žádost o poskytování služeb. Dělá to, pokud jiné VSPackage již poskytuje službu.  
+    > Visual Studio může odmítnout žádost o poskytování služby. To znamená, že pokud již služba podporuje jiný VSPackage.  
   
-3. Nyní můžete získat službu a použijte její metody. Ukážeme to v inicializátoru, ale můžete získat službu kamkoli chcete používat službu.  
+3. Nyní můžete získat službu a použít její metody. Tato možnost se zobrazí v inicializátoru, ale můžete ji získat kdekoli, kde chcete službu používat.  
   
     ```csharp  
     protected override void Initialize()  
@@ -138,9 +138,9 @@ VSPackage může poskytovat služby, které můžete použít jiné balíčky VS
     }  
     ```  
   
-     Hodnota `helloString` by měl být "Hello".  
+     Hodnota `helloString` by měla být "Hello".  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Získání služby](../extensibility/how-to-get-a-service.md)   
+ [Postupy: získání služby](../extensibility/how-to-get-a-service.md)   
  [Používání a poskytování služeb](../extensibility/using-and-providing-services.md)   
  [Základy služeb](../extensibility/internals/service-essentials.md)

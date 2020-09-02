@@ -1,5 +1,5 @@
 ---
-title: Zobrazení naslouchacích procesů událostí DOM | Dokumentace Microsoftu
+title: Zobrazit naslouchací procesy událostí modelu DOM | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,10 +18,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64d4892080aaf0cf04e4b208b1a0bdb7a7a4480d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65693573"
 ---
 # <a name="view-dom-event-listeners"></a>Zobrazení naslouchacích procesů událostí DOM
@@ -29,62 +29,62 @@ ms.locfileid: "65693573"
 
 Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")
 
- **Události** karty Průzkumníku modelu DOM zobrazí události, které jsou spojeny s prvek modelu DOM. Každá hlavní uzel v **události** karta představuje událost, která má aktivní předplatitele. Hlavní uzel obsahuje podřízené uzly, které představují naslouchacích procesů registrované události pro konkrétní události. Kromě zobrazení naslouchacích procesů událostí, můžete použít na této kartě přejděte do umístění naslouchací proces událostí v kódu jazyka JavaScript. Informace v tomto tématu se vztahují na aplikace pro Store pomocí HTML a JavaScript.
+ Karta **události** v Průzkumníkovi modelu DOM zobrazuje události, které jsou přidruženy k elementu modelu DOM. Každý nejvyšší uzel na kartě **události** představuje událost, která má aktivní předplatitele. Nejvyšší uzel obsahuje poduzly, které reprezentují naslouchací procesy registrovaných událostí pro konkrétní událost. Kromě zobrazení posluchačů událostí můžete pomocí této karty přejít do umístění naslouchacího procesu události v kódu JavaScriptu. Informace v tomto tématu se vztahují na aplikace pro Store s použitím HTML a JavaScriptu.
 
- V seznamu na **události** karta je dynamická. Pokud chcete přidat naslouchací proces událostí, když aplikace spuštěna, tam objeví nový naslouchací proces událostí. Informace o přidávání a odebírání naslouchacích procesů událostí, naleznete v tématu [tipy pro řešení problémů s naslouchacích procesů událostí](#Tips) v tomto tématu.
+ Seznam na kartě **události** je dynamický. Pokud přidáte naslouchací proces události, když je aplikace spuštěná, zobrazí se zde nový naslouchací proces událostí. Informace o přidávání a odebírání posluchačů událostí najdete v tématu [tipy pro řešení problémů s naslouchacími procesy událostí](#Tips) v tomto tématu.
 
 > [!NOTE]
-> Naslouchacích procesů událostí pro prvky kódu, které nejsou prvky modelu DOM, jako například `xhr`, se nezobrazují na **události** kartu.
+> Naslouchací procesy událostí pro prvky kódu, které nejsou prvky modelu DOM, například `xhr` , se nezobrazují na kartě **události** .
 
-## <a name="view-event-listeners-for-dom-elements"></a>Zobrazení naslouchacích procesů událostí prvků modelu DOM
- Tento příklad ukazuje aplikace Windows Phone Store. Funkce Průzkumníku modelu DOM, který je zde popsáno, jsou také podporovány pro aplikace Windows Store.
+## <a name="view-event-listeners-for-dom-elements"></a>Zobrazení naslouchacího procesu událostí pro elementy DOM
+ Tento příklad ukazuje aplikaci Windows Phone Store. Funkce Průzkumníka modelu DOM popsané tady jsou podporované i pro aplikace pro Windows Store.
 
-#### <a name="to-view-event-listeners"></a>Chcete-li zobrazit naslouchacích procesů událostí
+#### <a name="to-view-event-listeners"></a>Zobrazení posluchačů událostí
 
-1. V sadě Visual Studio vytvořte aplikaci JavaScript, který používá šablonu projektu aplikace Windows Phone kontingenční tabulky.
+1. V aplikaci Visual Studio vytvořte aplikaci JavaScriptu, která používá šablonu projektu Windows Phone aplikace Pivot.
 
-2. Šablonu otevřít v sadě Visual Studio, vyberte **emulátoru WVGA 8.1 4 v 512MB** v rozevíracím seznamu na panelu nástrojů ladění v ladicím programu:
+2. Když je šablona otevřená v sadě Visual Studio, vyberte v rozevíracím seznamu na panelu nástrojů ladění v ladicím programu možnost **emulátor 8,1 WVGA 4IN 512 MB** :
 
      ![Výběr cíle ladění](../debugger/media/js-dom-debug-target-emu.png "JS_DOM_Debug_Target_Emu")
 
 3. Stisknutím klávesy F5 spusťte aplikaci v režimu ladění.
 
-4. Ve spuštěné aplikaci, přejděte **3 části** položka pivotu.
+4. Ve spuštěné aplikaci přejít na **oddíl 3** položka pivotu.
 
-5. Přepnout do sady Visual Studio (Alt + Tab nebo F12).
+5. Přepněte do sady Visual Studio (ALT + TAB nebo F12).
 
-6. V Průzkumníku modelu DOM, zvolte `Find` v pravém horním rohu.
+6. V Průzkumníku modelu DOM vyberte `Find` v pravém horním rohu.
 
-7. Typ `ListView`, a potom stiskněte klávesu Enter.
+7. Zadejte `ListView` a potom stiskněte klávesu ENTER.
 
-8. V případě potřeby vyberte **Další** tlačítko Najít `DIV` elementu, který představuje `ListView` ovládacího prvku (má tento prvek `data-win-control` hodnotu `WinJS.UI.ListView`).
+8. V případě potřeby klikněte na tlačítko **Další** a vyhledejte `DIV` prvek, který představuje `ListView` ovládací prvek (Tento prvek má `data-win-control` hodnotu `WinJS.UI.ListView` ).
 
-     `DIV` Element by měl nyní vybrat v Průzkumníku modelu DOM.
+     `DIV`Element by měl být nyní vybrán v Průzkumníku modelu DOM.
 
-9. Zvolte **události** kartu v podokně na pravé straně Průzkumníka modelu DOM.
+9. V podokně na pravé straně Průzkumníka modelu DOM vyberte kartu **události** .
 
-     Nyní můžete zobrazit události, které mají aktivní předplatitele `DIV` elementu, jak je znázorněno zde.
+     Nyní můžete zobrazit události, které mají aktivní předplatitele `DIV` prvku, jak je znázorněno zde.
 
-     ![Události karty Průzkumníku modelu DOM](../debugger/media/js-dom-events.png "JS_DOM_Events")
+     ![Karta události v Průzkumníkovi modelu DOM](../debugger/media/js-dom-events.png "JS_DOM_Events")
 
-10. K vyhledání naslouchacích procesů událostí pro tyto události, zvolte přidružené odkazy na soubory jazyka JavaScript.
+10. Chcete-li vyhledat naslouchací procesy událostí pro tyto události, vyberte přidružené odkazy na soubory JavaScriptu.
 
-11. Rychle identifikovat naslouchacích procesů událostí pro nadřazené prvky v hierarchii modelu DOM, zvolte v seznamu hierarchie v dolní části Průzkumníku modelu DOM nadřazeného elementu.
+11. Chcete-li rychle identifikovat naslouchací procesy událostí pro nadřazené elementy v hierarchii modelu DOM, vyberte nadřazený prvek v seznamu hierarchie v dolní části Průzkumníka modelu DOM.
 
-     ![Výběr nadřazené prvky v modelu DOM hierarchie](../debugger/media/js-dom-breadcrumbs.png "JS_DOM_Breadcrumbs")
+     ![Výběr nadřazených elementů v hierarchii modelu DOM](../debugger/media/js-dom-breadcrumbs.png "JS_DOM_Breadcrumbs")
 
-     **Události** karta zobrazuje naslouchacích procesů událostí pro libovolný element, který jste vybrali v seznamu hierarchie.
+     Karta **události** zobrazuje naslouchací procesy událostí pro libovolný prvek, který vyberete v seznamu hierarchie.
 
-### <a name="Tips"></a> Tipy pro řešení problémů s naslouchacích procesů událostí
- V některých scénářích aplikace naslouchacích procesů událostí musí být explicitně odebrány [removeEventListener](https://msdn.microsoft.com/library/ie/ff975250\(v=vs.85\).aspx). Použití **události** kartu v Průzkumníku modelu DOM, který chcete otestovat, jestli naslouchacích procesů událostí byly odebrány z modelu DOM prvků za běhu programu. Zde jsou některé tipy pro řešení těchto typů problémů:
+### <a name="tips-for-resolving-issues-with-event-listeners"></a><a name="Tips"></a> Tipy pro řešení problémů s naslouchacími procesy událostí
+ V některých scénářích aplikací musí být naslouchací procesy událostí explicitně odebrány pomocí [removeEventListener](https://msdn.microsoft.com/library/ie/ff975250\(v=vs.85\).aspx). Použijte kartu **události** v Průzkumníku modelu DOM k otestování, zda byly při spuštění kódu z prvků modelu DOM odebrány události naslouchací proces událostí. Zde jsou některé tipy, které vám pomohou vyřešit tyto typy problémů:
 
-- Pro aplikace, které používají model navigace jednostránkové implementované v sadě Visual Studio [šablony projektů](https://msdn.microsoft.com/library/windows/apps/hh758331.aspx), není obvykle nutné odebrat naslouchacích procesů událostí zaregistrované u objektů, jako jsou například prvky modelu DOM, které jsou součástí na stránce. V tomto scénáři prvek modelu DOM a jeho přidružené události naslouchací procesy mají stejnou životnost a mohou být uvolněna.
+- Pro aplikace, které používají navigační model s jednou stránkou implementované v [šablonách projektů](https://msdn.microsoft.com/library/windows/apps/hh758331.aspx)sady Visual Studio, není obvykle nutné odebrat naslouchací procesy pro události registrované pro objekty, jako jsou například prvky modelu DOM, které jsou součástí stránky. V tomto scénáři má element DOM a přidružené naslouchací procesy událostí stejnou životnost a může být uvolněna z paměti.
 
-- Pokud se liší od naslouchací proces související události životního cyklu od prvku modelu DOM nebo objektu, budete muset volat `removeEventListener` metody. Například, pokud použijete `window.onresize` událost, možná budete muset odebrat naslouchací proces událostí, jestliže opustíte na stránce, kde zpracování události.
+- Pokud je doba života elementu nebo objektu modelu DOM odlišná od přidruženého naslouchacího procesu události, může být nutné zavolat `removeEventListener` metodu. Například pokud použijete `window.onresize` událost, může být nutné odebrat naslouchací proces události, Pokud opustíte stránku, na kterou událost zpracováváte.
 
-- Pokud `removeEventListener` nepodaří odeberte zadaný naslouchací proces by může být získání volána na jinou instanci objektu. Můžete použít [bind – metoda (Function)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) metoda k vyřešení tohoto problému, když přidáte naslouchací proces.
+- Pokud `removeEventListener` se nepovede odebrat zadaný naslouchací proces, může se volat na jinou instanci objektu. Můžete použít metodu [Bind metody (Function)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) k vyřešení tohoto problému při přidávání naslouchacího procesu.
 
-- Chcete-li odebrat naslouchací proces událostí, která byla přidána pomocí [bind – metoda (Function)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) nebo pomocí anonymní funkce uložit instance funkci tehdy, když přidejte naslouchací proces. Tady je jeden způsob, jak bezpečně tento model použijte:
+- Chcete-li odebrat naslouchací proces událostí, který byl přidán buď pomocí [metody bind (Function)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) , nebo pomocí anonymní funkce, uložte instanci funkce při přidání naslouchacího procesu. Tady je jeden ze způsobů, jak tento model bezpečně použít:
 
     ```javascript
     // You could use the following code within the constructor function of an object, or
@@ -97,16 +97,16 @@ Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "wi
 
     ```
 
-     Pokud pomocí následujícího kódu místo uložení odkazu na vázanou funkci, nebude možné explicitně odstranit naslouchací proces událostí:
+     Použijete-li následující kód místo uložení odkazu na vázanou funkci, nebudete moci naslouchací proces události odebrat explicitně:
 
     ```javascript
     // Avoid this pattern. No reference to the bound function is available.
     elem.addEventListener('mouseup', this._handlerFunc.bind(this));
     ```
 
-- Naslouchací proces událostí nelze odebrat pomocí `removeEventListener` Pokud jste přidali pomocí `obj.on<eventname>` atribut, například `window.onresize = handlerFunc`.
+- Naslouchací proces událostí nejde odebrat pomocí `removeEventListener` , pokud jste ho přidali pomocí atributu, jako je například `obj.on<eventname>` `window.onresize = handlerFunc` .
 
-- Použijte analýzu paměti jazyka JavaScript do [paměti jazyka JavaScript](../profiling/javascript-memory.md) ve vaší aplikaci. Naslouchacích procesů událostí, které musí být explicitně odebrat může zobrazit jako nenavrácení paměti.
+- Použijte nástroj JavaScript Memory Analyzer pro [javascriptovou paměť](../profiling/javascript-memory.md) ve vaší aplikaci. Naslouchací procesy událostí, které je nutné explicitně odebrat, se mohou zobrazit jako nevracení paměti.
 
 ## <a name="see-also"></a>Viz také
 

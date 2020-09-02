@@ -17,16 +17,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85e0be0172f27732f8efeb882cbcde5b9c6aef3d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670391"
 ---
 # <a name="neutral-resources-languages-for-localization"></a>Neutrální jazyky zdrojů pro lokalizaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Třída <xref:System.Resources.NeutralResourcesLanguageAttribute> určuje jazykovou verzi prostředků obsažených v hlavním sestavení. Tento atribut se používá jako zvýšení výkonu, aby objekt <xref:System.Resources.ResourceManager> nehledal prostředky, které jsou zahrnuty v hlavním sestavení.
+<xref:System.Resources.NeutralResourcesLanguageAttribute>Třída určuje jazykovou verzi prostředků obsažených v hlavním sestavení. Tento atribut se používá jako zvýšení výkonu, takže <xref:System.Resources.ResourceManager> objekt nehledá prostředky, které jsou zahrnuty v hlavním sestavení.
 
  Následující kód ukazuje, jak nastavit neutrální jazyk prostředků. Kód lze umístit buď do skriptu sestavení, nebo do souboru AssemblyInfo. vb nebo AssemblyInfo.cs.
 
@@ -42,4 +42,4 @@ Třída <xref:System.Resources.NeutralResourcesLanguageAttribute> určuje jazyko
 ```
 
 ## <a name="see-also"></a>Viz také
- <xref:System.Resources.ResourceManager> [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) [hierarchické organizace prostředků pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md) [aplikací](../ide/localizing-applications.md) [, které využívají globalizaci a lokalizaci aplikací](../ide/globalizing-and-localizing-applications.md)
+ <xref:System.Resources.ResourceManager>[Seznámení s mezinárodními aplikacemi v závislosti na .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) [hierarchické organizaci prostředků pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md) [aplikací](../ide/localizing-applications.md) [, které využívají globalizaci a lokalizaci aplikací](../ide/globalizing-and-localizing-applications.md)

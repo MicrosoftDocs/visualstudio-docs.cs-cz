@@ -1,5 +1,5 @@
 ---
-title: Načítání rozšíření VSPackages | Dokumentace Microsoftu
+title: Načítání VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,25 +12,25 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e20caff476e116ad59430692719bdbbe22c4914c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439768"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802260"
 ---
 # <a name="loading-vspackages"></a>Načítání rozšíření VSPackages
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozšíření VSPackages se načtou do sady Visual Studio pouze v případě jejich funkce je povinný. Například VSPackage se načte, když Visual Studio používá objekt pro vytváření projektu nebo služba, která implementuje sady VSPackage. Tato funkce je volána opožděné načtení, který se používá vždy, když je možné zvýšit výkon.  
+Sady VSPackage jsou načteny do sady Visual Studio pouze v případě, že jsou jejich funkce požadovány. Například VSPackage je načten, když aplikace Visual Studio používá objekt pro vytváření projektu nebo službu, kterou VSPackage implementuje. Tato funkce se nazývá opožděné načítání, které se používá, kdykoli je to možné, ke zvýšení výkonu.  
   
 > [!NOTE]
-> Visual Studio můžete určit určité VSPackage informace, jako jsou příkazy, které nabízí VSPackage bez načtení sady VSPackage.  
+> Visual Studio může určit určité informace VSPackage, například příkazy, které VSPackage nabízí, bez načítání VSPackage.  
   
- Rozšíření VSPackages lze nastavit na automaticky načíst v kontextu konkrétní uživatelské rozhraní (UI), například při otevření řešení. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> Atribut nastaví tento kontext.  
+ Sady VSPackage lze nastavit na automatické načítání v konkrétním kontextu uživatelského rozhraní, například při otevření řešení. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>Atribut nastaví tento kontext.  
   
-### <a name="autoloading-a-vspackage-in-a-specific-context"></a>Autoloading VSPackage v určitém kontextu  
+### <a name="autoloading-a-vspackage-in-a-specific-context"></a>Automatické načítání VSPackage v konkrétním kontextu  
   
-- Přidat `ProvideAutoLoad` atribut VSPackage atributy:  
+- Přidejte `ProvideAutoLoad` atribut do atributů VSPackage:  
   
     ```csharp  
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]  
@@ -41,22 +41,22 @@ Rozšíření VSPackages se načtou do sady Visual Studio pouze v případě jej
     {. . .}  
     ```  
   
-     Zobrazit výčet pole <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> seznam kontexty uživatelského rozhraní a jejich hodnoty identifikátor GUID.  
+     <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>Seznam kontextů uživatelského rozhraní a jejich hodnot GUID naleznete v výčtových polích pro.  
   
-- Nastavit zarážku <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody.  
+- Nastavte zarážku v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metodě.  
   
-- Sestavení sady VSPackage a spusťte ladění.  
+- Sestavte rozhraní VSPackage a spusťte ladění.  
   
-- Načítání řešení nebo vytvořit novou.  
+- Načtěte řešení nebo ho vytvořte.  
   
-     Sady VSPackage načte a zastaví na zarážce.  
+     Rozhraní VSPackage načte a zastaví na zarážce.  
   
-## <a name="forcing-a-vspackage-to-load"></a>Vynucení VSPackage načtení  
- Za určitých okolností může mít VSPackage vynutit jiný VSPackage, který se má načíst. Zjednodušené VSPackage může například načíst větší VSPackage v kontextu, který není k dispozici jako CMDUIContext.  
+## <a name="forcing-a-vspackage-to-load"></a>Vynucení načtení VSPackage  
+ Za určitých okolností může být nutné, aby VSPackage vynutil načtení jiného VSPackage. Například odlehčené VSPackage mohou načíst větší VSPackage v kontextu, který není k dispozici jako CMDUIContext.  
   
- Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> metoda přinutit VSPackage načíst.  
+ Metodu můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> k vynucení načtení VSPackage.  
   
-- Vložte tento kód do <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda sady VSPackage, která vynutí jiného VSPackage načíst:  
+- Vložte tento kód do <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody VSPackage, která vynutí načtení další VSPackage:  
   
     ```csharp  
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;  
@@ -69,15 +69,15 @@ Rozšíření VSPackages se načtou do sady Visual Studio pouze v případě jej
   
     ```  
   
-     Při inicializaci sady VSPackage, vynutí `PackageToBeLoaded` načíst.  
+     Po inicializaci rozhraní VSPackage se vynutí `PackageToBeLoaded` načtení.  
   
-     Platnost načítání by neměl použít pro komunikaci VSPackage. Použití [Using a poskytování služeb](../extensibility/using-and-providing-services.md) místo.  
+     Pro komunikaci VSPackage by se nemělo používat vynucené načítání. Použijte místo toho [použití a poskytování služeb](../extensibility/using-and-providing-services.md) .  
   
-## <a name="using-a-custom-attribute-to-register-a-vspackage"></a>Pomocí vlastního atributu k registraci VSPackage  
- V některých případech budete muset vytvořit nový atribut registrace pro vaše rozšíření. Přidat nové klíče registru nebo přidat nové hodnoty pro existující klíče, můžete použít atributy registrace. Nový atribut musí být odvozen od <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, a musí přepsat <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> a <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> metody.  
+## <a name="using-a-custom-attribute-to-register-a-vspackage"></a>Použití vlastního atributu k registraci VSPackage  
+ V některých případech může být nutné vytvořit nový registrační atribut pro vaše rozšíření. Registrační atributy můžete použít k přidání nových klíčů registru nebo k přidání nových hodnot do existujících klíčů. Nový atribut musí být odvozen z <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> a musí přepsat <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> metody a.  
   
-## <a name="creating-a-registry-key"></a>Vytváří se klíč registru  
- Následující kód vytvoří vlastní atribut **vlastní** podklíče pod klíčem pro sady VSPackage, která je registrována.  
+## <a name="creating-a-registry-key"></a>Vytvoření klíče registru  
+ V následujícím kódu vlastní atribut vytvoří **vlastní** podklíč pod klíčem pro VSPackage, který je zaregistrován.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -102,8 +102,8 @@ public override void Unregister(RegistrationContext context)
   
 ```  
   
-## <a name="creating-a-new-value-under-an-existing-registry-key"></a>Vytváří se nová hodnota v rámci existující klíč registru  
- Vlastní hodnoty můžete přidat do existujícího klíče. Následující kód ukazuje, jak přidat novou hodnotu balíčku VSPackage registrační klíč.  
+## <a name="creating-a-new-value-under-an-existing-registry-key"></a>Vytvoření nové hodnoty v existujícím klíči registru  
+ Můžete přidat vlastní hodnoty do existujícího klíče. Následující kód ukazuje, jak přidat novou hodnotu do registračního klíče VSPackage.  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  

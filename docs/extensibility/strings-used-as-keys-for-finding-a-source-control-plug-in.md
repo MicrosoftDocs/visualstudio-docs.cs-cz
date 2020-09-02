@@ -1,5 +1,5 @@
 ---
-title: Řetězce používané jako klíče pro vyhledání modulu plug-in správy zdrojového kódu | Dokumenty společnosti Microsoft
+title: Řetězce používané jako klávesy pro vyhledání modulu plug-in správy zdrojových kódů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,39 +11,39 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7f9333ff1b6742ca14dc5541bd15e92b2eb39085
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699706"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Řetězce, které slouží jako klíče pro vyhledání modulu plug-in pro správu zdrojového kódu
-Následující řetězce jsou klíče pro přístup k registru najít informace o modulu plug-in správy zdrojového kódu.
+Následující řetězce jsou klíče pro přístup k registru, aby bylo možné najít informace o modulu plug-in správy zdrojových kódů.
 
- `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY` `STR_SCCPROVIDERPATH`, `STR_SCCPROVIDERNAME` a jsou klíče registru nebo hodnoty používané k registraci dll jako modul plug-in správy zdrojového kódu pro visual studio.
+ `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY` , `STR_SCCPROVIDERPATH` a `STR_SCCPROVIDERNAME` jsou klíče registru nebo hodnoty používané k registraci DLL jako modul plug-in správy zdrojového kódu pro Visual Studio.
 
- `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` `SCC_KEY, SCC_FILE_SIGNATURE`, `SCC_STATUS_FILE` a používají se k popisu formátu MSSCCPRJ. SCC.
+ `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` , `SCC_KEY, SCC_FILE_SIGNATURE` , a `SCC_STATUS_FILE` se používají k popisu formátu MSSCCPRJ. Soubor SCC
 
-## <a name="string-keys-and-values"></a>Řetězcové klíče a hodnoty
+## <a name="string-keys-and-values"></a>Klíče a hodnoty řetězců
 
 |Klíč|Hodnota|
 |---------|-----------|
-|`STR_SCC_PROVIDER_REG_LOCATION`|Software\Zprostředkovatel ovládacího prvku SourceCodeControlProvider|
-|`STR_PROVIDERREGKEY`|Klíč ProviderReg|
-|`STR_SCCPROVIDERPATH`|Cesta SCCServerPath|
+|`STR_SCC_PROVIDER_REG_LOCATION`|Software\SourceCodeControlProvider|
+|`STR_PROVIDERREGKEY`|ProviderRegKey|
+|`STR_SCCPROVIDERPATH`|SCCServerPath|
 |`STR_SCCPROVIDERNAME`|SCCServerName|
-|`STR_SCC_INI_SECTION`|Řízení zdrojového kódu|
+|`STR_SCC_INI_SECTION`|Správa zdrojového kódu|
 |`STR_SCC_INI_KEY`|SourceCodeControlProvider|
 |`SCC_PROJECTNAME_KEY`|SCC_Project_Name|
 |`SCC_PROJECTAUX_KEY`|SCC_Aux_Path|
-|`SCC_STATUS_FILE`|MSSCCPRJ. Scc|
-|`SCC_KEY`|Scc|
-|`SCC_FILE_SIGNATURE`|Soubor správy zdrojového kódu|
+|`SCC_STATUS_FILE`|MSSCCPRJ. SCC|
+|`SCC_KEY`|SCC|
+|`SCC_FILE_SIGNATURE`|Soubor řízení zdrojového kódu|
 |`SCC_NSE`|Rozšíření oboru názvů|
-|`SCC_NSE_PREFIX`|Protokální předpona|
-|`SCC_NSE_DisableOpenSCC`|Zakázat ovládací prvek OpenFromSourceControl|
-|`STR_SCCHELPCOLLECTION`|Kolekce nápovědy|
-|`STR_UI_LANGUAGE`|Jazyk ui|
+|`SCC_NSE_PREFIX`|Protokolem předpona|
+|`SCC_NSE_DisableOpenSCC`|DisableOpenFromSourceControl|
+|`STR_SCCHELPCOLLECTION`|Helpcollection|
+|`STR_UI_LANGUAGE`|UILanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
 ## <a name="see-also"></a>Viz také

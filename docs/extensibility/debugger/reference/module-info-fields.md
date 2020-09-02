@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FIELDS | Dokumenty společnosti Microsoft
+title: MODULE_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fa64147738a916d44b6924f193860f74bd10a855
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714318"
 ---
 # <a name="module_info_fields"></a>MODULE_INFO_FIELDS
 Určuje příznaky pro informace o ladicím modulu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MODULE_INFO_FIELDS { 
@@ -64,57 +64,57 @@ public enum enum_MODULE_INFO_FIELDS { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MIF_NONE`\
- Inicializovat/použít žádné pole ve struktuře.
+ Inicializujte nebo použijte žádné z polí ve struktuře.
 
  `MIF_NAME`\
- Inicializovat/použít `m_bstrName` pole ve [struktuře MODULE_INFO.](../../../extensibility/debugger/reference/module-info.md)
+ Inicializujte nebo použijte `m_bstrName` pole ve struktuře [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) .
 
  `MIF_URL`\
- Inicializovat/použít `m_bstrUrl` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_bstrUrl` pole ve `MODULE_INFO` struktuře.
 
  `MIF_VERSION`\
- Inicializovat/použít `m_bstrVersion` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_bstrVersion` pole ve `MODULE_INFO` struktuře.
 
  `MIF_DEBUGMESSAGE`\
- Inicializovat/použít `m_bstrDebugMessage` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_bstrDebugMessage` pole ve `MODULE_INFO` struktuře.
 
  `MIF_LOADADDRESS`\
- Inicializovat/použít `m_addrLoadAddress` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_addrLoadAddress` pole ve `MODULE_INFO` struktuře.
 
  `MIF_PREFFEREDADDRESS`\
- Inicializovat/použít `m_addrPreferredLoadAddress` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_addrPreferredLoadAddress` pole ve `MODULE_INFO` struktuře.
 
  `MIF_SIZE`\
- Inicializovat/použít `m_dwSize` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_dwSize` pole ve `MODULE_INFO` struktuře.
 
  `MIF_LOADORDER`\
- Inicializovat/použít `m_dwLoadOrder` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_dwLoadOrder` pole ve `MODULE_INFO` struktuře.
 
  `MIF_TIMESTAMP`\
- Inicializovat/použít `m_TimeStamp` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_TimeStamp` pole ve `MODULE_INFO` struktuře.
 
  `MIF_URLSYMBOLLOCATION`\
- Inicializovat/použít `m_bstrUrlSymbolLocation` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_bstrUrlSymbolLocation` pole ve `MODULE_INFO` struktuře.
 
  `MIF_FLAGS`\
- Inicializovat/použít `m_dwModuleFlags` pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte `m_dwModuleFlags` pole ve `MODULE_INFO` struktuře.
 
  `MIF_ALLFIELDS`\
- Inicializovat/použít všechna pole `MODULE_INFO` ve struktuře.
+ Inicializujte nebo použijte všechna pole ve `MODULE_INFO` struktuře.
 
 ## <a name="remarks"></a>Poznámky
- Tyto hodnoty jsou předány jako argument [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metoda k označení, která pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury mají být inicializovány.
+ Tyto hodnoty jsou předány jako argument metody [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) , aby označovaly, která pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury mají být inicializována.
 
- Tyto hodnoty se také `MODULE_INFO` používají ve struktuře k označení, která pole se používají a jsou platná.
+ Tyto hodnoty se používají také ve `MODULE_INFO` struktuře k označení, která pole se používají a jsou platná.
 
- Tyto příznaky mohou být kombinovány `OR`s bitovým .
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b06190568454977bfcb54d65db9011fc979f7591
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329562"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider – – funkce
@@ -32,9 +32,9 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pGuid`Identifikátor GUID zprostředkovatele Nemůže mít hodnotu NULL.
+ `pGuid` Identifikátor GUID zprostředkovatele Nemůže mít hodnotu NULL.
 
- `ppProvider`Adresa výstupní proměnné, která bude ukládat kontext poskytovatele. Nemůže mít hodnotu NULL.
+ `ppProvider` Adresa výstupní proměnné, která bude ukládat kontext poskytovatele. Nemůže mít hodnotu NULL.
 
 ## <a name="return-value"></a>Vrácená hodnota
  S_OK při úspěšné inicializaci poskytovatele nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

@@ -1,5 +1,5 @@
 ---
-title: Třída Task – vnitřní členy | Dokumentace Microsoftu
+title: Třída Task – interní členové | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,25 +11,25 @@ ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 200b35e60d3d468a934565959629298e6c6f04bf
-ms.sourcegitcommit: 8b538eea125241e9d6d8b7297b72a66faa9a4a47
+ms.openlocfilehash: ef0cd907c25a90ee90e3ed23a773d0ae8ba0ce1f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54804870"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64790291"
 ---
 # <a name="task-class---internal-members"></a>Třída Task – vnitřní členy
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Toto téma popisuje interní členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třída, která vám pomůže implementovat vlastní ladicího programu. Obecné informace o této třídy, najdete v článku <xref:System.Threading.Tasks.Task> téma referenčních informací.  
+Toto téma popisuje interní členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy, které vám pomůžou implementovat vlastní ladicí program. Obecné informace o této třídě naleznete v <xref:System.Threading.Tasks.Task> referenčním tématu.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
+ **Sestavení:** mscorlib (v mscorlib.dll)  
   
- Protože tyto vnitřní členy nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
+ Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .class public auto ansi System.Threading.Tasks.Task  
@@ -46,40 +46,40 @@ Toto téma popisuje interní členy <xref:System.Threading.Tasks.Task?displayPro
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SetNotificationForWaitCompletion – metoda](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Nastaví nebo vymaže stav bit TASK_STATE_WAIT_COMPLETION_NOTIFICATION.|  
-|[NotifyDebuggerOfWaitCompletion – metoda](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Zástupný symbol metoda použitá jako cíl zarážku ladicím programem.|  
+|[SetNotificationForWaitCompletion – metoda](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Nastaví nebo vymaže bit stavu TASK_STATE_WAIT_COMPLETION_NOTIFICATION.|  
+|[NotifyDebuggerOfWaitCompletion – metoda](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Zástupná metoda použitá jako cíl zarážky v ladicím programu.|  
   
 ### <a name="fields"></a>Pole  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[m_action](../../extensibility/debugger/m-action-field.md)|Delegát, který představuje kód pro spuštění v <xref:System.Threading.Tasks.Task> objektu.|  
+|[m_action](../../extensibility/debugger/m-action-field.md)|Delegát, který představuje kód, který má být spuštěn v <xref:System.Threading.Tasks.Task> objektu.|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|Ukládá další vlastnosti <xref:System.Threading.Tasks.Task> objektu.|  
-|[m_parent](../../extensibility/debugger/m-parent-field.md)|Pomocné pole <xref:System.Threading.Tasks.Task?displayProperty=fullName> nadřazená vlastnost.|  
+|[m_parent](../../extensibility/debugger/m-parent-field.md)|Pole zálohování pro <xref:System.Threading.Tasks.Task?displayProperty=fullName> nadřazenou vlastnost|  
 |[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)|Ukládá informace o aktuálním stavu <xref:System.Threading.Tasks.Task> objektu.|  
-|[m_stateObject](../../extensibility/debugger/m-stateobject-field.md)|Objekt představující data, která se použije akci.|  
-|[m_taskId](../../extensibility/debugger/m-taskid-field.md)|Pomocné pole <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> vlastnost.|  
-|[s_taskIdCounter](../../extensibility/debugger/s-taskidcounter-field.md)|Další dostupné identifikátorem <xref:System.Threading.Tasks.Task> objektu.|  
-|[TASK_STATE_CANCELED](../../extensibility/debugger/task-state-canceled-field.md)|Označuje, že daná úloha se zrušila, než se dosáhlo do stavu spuštěno, nebo že úloha potvrzení jeho zrušení a dokončit bez výjimky.|  
-|[TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)|Určuje, zda je spuštěn úkol.|  
-|[TASK_STATE_FAULTED](../../extensibility/debugger/task-state-faulted-field.md)|Označuje, že úloha byla dokončena kvůli neošetřené výjimce.|  
-|[TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)|Označuje, že úloha úspěšně dokončil provádění.|  
-|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Označuje, že úkol neskončí jeho delegáta a implicitně čeká na dokončení připojených podřízených úloh.|  
+|[m_stateObject](../../extensibility/debugger/m-stateobject-field.md)|Objekt, který představuje data, která bude použita akcí.|  
+|[m_taskId](../../extensibility/debugger/m-taskid-field.md)|Pole pro zálohování pro <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> vlastnost.|  
+|[s_taskIdCounter](../../extensibility/debugger/s-taskidcounter-field.md)|Další dostupný identifikátor <xref:System.Threading.Tasks.Task> objektu.|  
+|[TASK_STATE_CANCELED](../../extensibility/debugger/task-state-canceled-field.md)|Označuje, že úloha byla zrušena dříve, než byla dokončena do běžícího stavu, nebo že úloha potvrdila zrušení a dokončení bez výjimky.|  
+|[TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)|Indikuje, že je úloha spuštěná.|  
+|[TASK_STATE_FAULTED](../../extensibility/debugger/task-state-faulted-field.md)|Označuje, že úloha byla dokončena z důvodu neošetřené výjimky.|  
+|[TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)|Indikuje, že se úspěšně dokončilo provádění úlohy.|  
+|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Označuje, že úloha dokončila provádění delegáta a implicitně čeká na dokončení připojených podřízených úloh.|  
   
 ## <a name="remarks"></a>Poznámky  
- Následující vnitřní metody jsou užitečné pro modul ladicího programu, protože jejich vstupu do označit <xref:System.Threading.Tasks.Task> spuštění kódu:  
+ Následující interní metody jsou užitečné pro modul ladicího programu, protože označují počátek <xref:System.Threading.Tasks.Task> provádění kódu:  
   
--   `Execute`  
+- `Execute`  
   
--   `ExecuteEntry`  
+- `ExecuteEntry`  
   
--   `ExecuteWithThreadLocal`  
+- `ExecuteWithThreadLocal`  
   
--   `Finish`  
+- `Finish`  
   
--   `InnerInvoke`  
+- `InnerInvoke`  
   
--   `InternalWait`  
+- `InternalWait`  
   
 ## <a name="see-also"></a>Viz také  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   

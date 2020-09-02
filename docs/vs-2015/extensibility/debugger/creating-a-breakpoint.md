@@ -1,5 +1,5 @@
 ---
-title: Vytvořením zarážky | Dokumentace Microsoftu
+title: Vytváření zarážky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7cde6d660506e05195ef9f5c0825845cee10ae5c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63383479"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805492"
 ---
 # <a name="creating-a-breakpoint"></a>Vytvoření zarážky
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Následující část popisuje proces vytváření zarážku.  
+Následující popis popisuje proces vytvoření zarážky.  
   
-## <a name="methods-in-breakpoint-creation"></a>Metody k vytvoření zarážky  
- Při načtení modulu, který je potřeba vytvořit vazbu zarážky správce ladění relace (SDM) volání těchto metod:  
+## <a name="methods-in-breakpoint-creation"></a>Metody při vytváření zarážek  
+ Když je načten modul, který je potřeba k navázání zarážky, zavolá Správce ladění relace (SDM) následující metody:  
   
 1. [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)  
   
@@ -33,7 +33,7 @@ Následující část popisuje proces vytváření zarážku.
 3. [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)  
   
     > [!NOTE]
-    > **CanBind** se volá, pouze když uživatel provede zarážky v okně zarážek.  
+    > **CanBind** se volá pouze v případě, že uživatel vytvoří zarážku z okna zarážky.  
   
 4. [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)  
   

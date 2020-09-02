@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias | Dokumentace Microsoftu
+title: IDebugAlias | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,49 +13,49 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6c05b6987804681176abdde0e8c94a7463a9163c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442309"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64798446"
 ---
 # <a name="idebugalias"></a>IDebugAlias
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Představuje číselná aliasu pro proměnnou. Alias je jednoduše jiný název proměnné.  
+ Představuje numerický alias pro proměnnou. Alias je jednoduše jiný název proměnné.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugAlias : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Chyba při vyhodnocování výrazu (EE) implementuje toto rozhraní pro podporu číselné aliasy pro proměnné.  
+ Vyhodnocení výrazu (EE) implementuje toto rozhraní pro podporu číselných aliasů pro proměnné.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) vytvoří alias pro daný objekt. Chcete-li vyhledat aliasy, použijte [FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md) nebo [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md).  
+ [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) vytvoří alias pro určitý objekt. Chcete-li hledat aliasy, použijte [FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md) nebo [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md).  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Tyto metody jsou definované v `IDebugAlias` rozhraní.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Následující metody jsou definovány v `IDebugAlias` rozhraní.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|Získá objekt, na který odkazuje tento alias.|  
+|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|Získá objekt, na který tento alias odkazuje.|  
 |[GetName](../../../extensibility/debugger/reference/idebugalias-getname.md)|Získá název aliasu.|  
-|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|Načte `ICorDebugValue` rozhraní, které poskytuje přístup ke spravované kódu informace o tomto objektu (pouze pro spravovaný kód).|  
-|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|Označuje to, alias jako již nejsou déle používány.|  
+|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|Načte `ICorDebugValue` rozhraní, které poskytuje přístup k informacím spravovaného kódu o tomto objektu (jenom spravovaný kód).|  
+|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|Označí tento alias jako již nepoužitý.|  
   
 ## <a name="remarks"></a>Poznámky  
- Desetinné číslo ve formátu řetězce následované znakem #, například 1001# je alias.  
+ Alias je desetinné číslo ve formě řetězce následovaný znakem #, například 1001 #.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: ee.h  
+ Záhlaví: ee. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

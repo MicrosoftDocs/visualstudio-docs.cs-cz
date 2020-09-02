@@ -14,17 +14,17 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d89c0dcad23a91ec6057311b9afde7d6d4702772
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656756"
 ---
 # <a name="error-messages-in-workflow-designer"></a>Chybové zprávy v návrháři postupu provádění
-Toto téma popisuje typy chybových zpráv, které mohou být zjištěny při práci s [!INCLUDE[wfd1](../includes/wfd1-md.md)].
+Toto téma popisuje typy chybových zpráv, které mohou být zjištěny při práci s nástrojem [!INCLUDE[wfd1](../includes/wfd1-md.md)] .
 
 ## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>Situace, ve kterých dochází k chybám Návrhář postupu provádění
- K chybám v [!INCLUDE[wfd2](../includes/wfd2-md.md)] dochází v následujících situacích:
+ K chybám [!INCLUDE[wfd2](../includes/wfd2-md.md)] dochází v následujících situacích:
 
 1. Ve výrazu je chyba.
 
@@ -34,12 +34,12 @@ Toto téma popisuje typy chybových zpráv, které mohou být zjištěny při pr
 
 4. V souboru XAML jsou chyby, které způsobují, že se pracovní postup nepodařilo načíst.
 
-   Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu je úspěšné, ale za běhu je vyvolána <xref:System.Activities.InvalidWorkflowException>. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
+   Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu je úspěšné, ale <xref:System.Activities.InvalidWorkflowException> je vyvolána za běhu. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
 
-   Uvnitř [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se při načtení pracovního postupu zobrazí jeho chyby v **Seznam chyb**. Chcete-li přejít k aktivitě, která je zdrojem chyby, dvakrát klikněte na chybu v **Seznam chyb**.
+   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]V případě, že je pracovní postup načten, zobrazí se jeho chyby v **Seznam chyb**. Chcete-li přejít k aktivitě, která je zdrojem chyby, dvakrát klikněte na chybu v **Seznam chyb**.
 
 ### <a name="expression-errors"></a>Chyby výrazu
- Neplatný výraz je označen červeným kroužkem s bílým vykřičníkem vedle výrazu. Po najetí myší na tuto ikonu se zobrazí popis, který popisuje zdroj chyby. V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na výraz, abyste zobrazili řádek, který je podtržený zdrojem chyby. Při najetí myší na řádek textu se zobrazí popis, který popisuje zdroj chyby.
+ Neplatný výraz je označen červeným kroužkem s bílým vykřičníkem vedle výrazu. Po najetí myší na tuto ikonu se zobrazí popis, který popisuje zdroj chyby. V rámci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] klikněte na výraz, abyste zobrazili řádek, který je podtržený zdrojem chyby. Při najetí myší na řádek textu se zobrazí popis, který popisuje zdroj chyby.
 
 ### <a name="activity-validation-errors"></a>Chyby ověřování aktivity
  Pokud nebyla splněna omezení ověření aktivity, v pravém horním rohu aktivity se zobrazí červené kolečko s bílým vykřičníkem. Po najetí myší na tuto ikonu se zobrazí popis, který popisuje zdroj chyby.

@@ -1,5 +1,5 @@
 ---
-title: Identifikátory GUID a konstanty v sadě Visual Studio SDK | Dokumentace Microsoftu
+title: Identifikátory GUID a konstanty v sadě Visual Studio SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,27 +12,27 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 83d218ba3c3d2156b673d3fadc8677d8edf9ea09
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204232"
 ---
 # <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Identifikátory GUID a konstanty v sadě Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.VisualStudio.VSConstants> Třídě poskytuje přístup k výběru prostředí identifikátory GUID a konstanty.  
+<xref:Microsoft.VisualStudio.VSConstants>Třída poskytuje přístup k výběru identifikátorů GUID prostředí a konstant.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Identifikátory GUID integrovaného vývojového prostředí](../extensibility/ide-guids.md)  
- Uvádí identifikátory GUID poskytované <xref:Microsoft.VisualStudio.VSConstants>.  
+ Vypíše identifikátory GUID, které poskytuje <xref:Microsoft.VisualStudio.VSConstants> .  
   
  [Konstanty integrovaného vývojového prostředí](../extensibility/ide-constants.md)  
- Obsahuje seznam konstant SDK poskytuje <xref:Microsoft.VisualStudio.VSConstants>.  
+ Uvádí konstanty sady SDK <xref:Microsoft.VisualStudio.VSConstants> , které poskytuje.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Konstanty modelu COM ve spravovaném kódu](../extensibility/com-constants-in-managed-code.md)  
- Uvádí standardní konstanty modelu COM, která je k dispozici do spravovaného kódu z rozhraní spravovaného balíčku (MPF).  
+ Zobrazuje standardní konstanty modelu COM, které jsou k dispozici pro spravovaný kód ze spravovaného balíčku Frameworku (MPF).  
   
  [Příkazy definované prostředím IDE pro rozšíření systémů projektů](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)  
- Obsahuje seznam různých typů položek příkaz používá pro rozšíření systémů projektů.
+ Uvádí různé typy položek příkazů, které se používají pro rozšiřování systémů projektů.

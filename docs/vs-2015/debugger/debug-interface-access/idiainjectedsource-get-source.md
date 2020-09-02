@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_source – | Dokumentace Microsoftu
+title: 'IDiaInjectedSource:: get_source | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 856d0111e65b51b798dfe44a324c58c4db5457fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192426"
 ---
-# <a name="idiainjectedsourcegetsource"></a>IDiaInjectedSource::get_source
+# <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá počet bajtů zdrojového kódu.  
+Načte bajty zdrojového kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,16 +37,16 @@ HRESULT get_source ( 
   
 #### <a name="parameters"></a>Parametry  
  `cbData`  
- [in] Počet bajtů, který představuje velikost vyrovnávací paměti pro data.  
+ pro Počet bajtů, které představují velikost datové vyrovnávací paměti.  
   
  `pcbData`  
- [out] Vrátí počet bajtů, který představuje počet bajtů vrácených. Pokud `data` je `NULL`, pak `pcbData` celkový počet bajtů dat je k dispozici.  
+ mimo Vrátí počet bajtů, které představují vrácené bajty. Pokud `data` je `NULL` , pak `pcbData` je celkový počet bajtů dat, který je k dispozici.  
   
  `data[]`  
- [out] Vyrovnávací paměť, která se vyplní bajtů zdroje.  
+ mimo Vyrovnávací paměť, která se má vyplnit zdrojovými bajty  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

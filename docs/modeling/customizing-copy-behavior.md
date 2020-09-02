@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b189d3dbd5c1872094b0c1be2a64eb2c02bf1e2e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547339"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
@@ -51,7 +51,7 @@ Nastavte vlastnost **rozšíření kopírování** role tak, aby se **rozšíři
  **Rychlé duplikace prvků kopírováním a vložením.** V normálním případě je položka, kterou jste právě zkopírovali, stále vybrána a nelze do ní vložit stejný typ prvku.
 Přidejte do třídy domény direktivu sloučení elementů a nastavte ji tak, aby předalo sloučení do nadřazené třídy. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \-ani
+ \- ani
 
  Vyberte diagram před vložením prvků přepsáním `ClipboardCommandSet.ProcessOnPasteCommand()` . Přidejte tento kód do vlastního souboru v projektu DslPackage:
 
@@ -75,7 +75,7 @@ partial class MyDslClipboardCommandSet
  **Vytvořte další odkazy, když uživatel vloží do vybraného cíle.** Například když je pole komentáře vloženo do prvku, je mezi nimi vytvořen odkaz.
 Přidejte direktivu sloučení elementů do cílové doménové třídy a nastavte ji pro zpracování sloučení přidáním odkazů. To bude mít stejný účinek na operace přetažení. Další informace naleznete v tématu [přizpůsobení vytváření a přesunu prvku](../modeling/customizing-element-creation-and-movement.md).
 
- \-ani
+ \- ani
 
  Přepsáním `ClipboardCommandSet.ProcessOnPasteCommand()` vytvoříte další odkazy po volání základní metody.
 
@@ -211,7 +211,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **Umožní uživateli přetáhnout prvky.**
 Viz [Postupy: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-drop-handler.md)přetažení myší.
 
-## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a>Přizpůsobení chování při kopírování propojení
+## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a> Přizpůsobení chování při kopírování propojení
  Když uživatel zkopíruje prvek, standardní chování je také zkopírování všech vložených prvků. Můžete upravit standardní chování při kopírování. V definici DSL vyberte roli na jedné straně relace a v okno Vlastnosti nastavte hodnotu **šířit kopírování** .
 
  ![Šíří vlastnost copy role domény.](../modeling/media/dslpropagatescopy.png)
@@ -244,7 +244,7 @@ Viz [Postupy: Přidání obslužné rutiny](../modeling/how-to-add-a-drag-and-dr
 
 2. Přidejte definici částečné třídy pro třídu diagramu. Název této třídy najdete v **Dsl\GeneratedCode\Diagrams.cs**.
 
-    V rámci třídy diagramu přepište <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> a vraťte instanci podtřídy ElementOperations. Při každém volání byste měli vracet stejnou instanci.
+    V rámci třídy diagramu přepište  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> a vraťte instanci podtřídy ElementOperations. Při každém volání byste měli vracet stejnou instanci.
 
    Přidejte tento kód do vlastního souboru kódu v projektu DslPackage:
 
@@ -284,12 +284,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  Ve třídě ElementOperations definujte dvě metody:
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`Určuje, zda lze zdrojový prvek přetáhnout na cílový obrazec, spojnici nebo diagram.
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` Určuje, zda lze zdrojový prvek přetáhnout na cílový obrazec, spojnici nebo diagram.
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`který kombinuje zdrojový prvek do cíle.
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` který kombinuje zdrojový prvek do cíle.
 
 ### <a name="canmerge"></a>CanMerge()
- `CanMerge()`je volána k určení zpětné vazby, která by měla být dána uživateli, když se ukazatel myši pohybuje v diagramu. Parametry metody jsou prvek, nad nímž je ukazatel myši umístěn, a data o zdroji, ze kterého byla operace přetažení provedena. Uživatel může přetáhnout z libovolného místa na obrazovce. Proto může být zdrojový objekt v mnoha různých typech a může být serializován v různých formátech. Pokud je zdrojem DSL nebo model UML, je datovým parametrem serializace <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Operace přetažení, kopírování a sady nástrojů používají ElementGroupPrototypes k vyjádření fragmentů modelů.
+ `CanMerge()` je volána k určení zpětné vazby, která by měla být dána uživateli, když se ukazatel myši pohybuje v diagramu. Parametry metody jsou prvek, nad nímž je ukazatel myši umístěn, a data o zdroji, ze kterého byla operace přetažení provedena. Uživatel může přetáhnout z libovolného místa na obrazovce. Proto může být zdrojový objekt v mnoha různých typech a může být serializován v různých formátech. Pokud je zdrojem DSL nebo model UML, je datovým parametrem serializace <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Operace přetažení, kopírování a sady nástrojů používají ElementGroupPrototypes k vyjádření fragmentů modelů.
 
  Prototyp skupiny elementů může obsahovat libovolný počet prvků a odkazů. Typy prvků mohou být identifikovány pomocí identifikátorů GUID. Identifikátor GUID je tvar, který byl přetažen, nikoli podkladový prvek modelu. V následujícím příkladu `CanMerge()` vrátí hodnotu true, pokud je obrazec třídy z diagramu UML přetažen do tohoto diagramu.
 

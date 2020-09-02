@@ -1,5 +1,5 @@
 ---
-title: Tlačítka okna Vlastnosti | Dokumentace Microsoftu
+title: Tlačítka okna vlastností | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,32 +11,32 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b66015ef2e2ab0c8105b6f84486fa890adbf8b1f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438400"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805312"
 ---
 # <a name="properties-window-buttons"></a>Tlačítka okna Vlastnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V závislosti na vývojový jazyk a typ produktu, jsou některá tlačítka zobrazí ve výchozím nastavení na panelu nástrojů **vlastnosti** okna. Ve všech případech **Categorized**, **Alphabetized**, **vlastnosti**, a **stránky vlastností** tlačítek se zobrazí. V jazyce Visual C# a Visual Basic **události** je zobrazeno tlačítko. V některých projektů Visual C++ **VC ++ zprávy** a **VC přepíše** tlačítek se zobrazí. Pro ostatní typy projektů, může se zobrazit další tlačítka. Další informace o tlačítka v **vlastnosti** okna, naleznete v tématu [okno vlastností](../../ide/reference/properties-window.md).  
+V závislosti na jazyku vývoje a typu produktu se na panelu nástrojů v okně **vlastnosti** zobrazí určitá tlačítka. Ve všech případech se zobrazí tlačítka **kategorizované**, **Abecední**, **vlastnosti**a **stránky vlastností** . V jazyce Visual C# a Visual Basic se zobrazí také tlačítko **události** . V některých Visual C++ projektech se zobrazí **zprávy VC + +** a VC – tlačítka pro **přepsání** . Další tlačítka mohou být zobrazena pro jiné typy projektů. Další informace o tlačítkách v okně **vlastnosti** naleznete v [okně Vlastnosti](../../ide/reference/properties-window.md).  
   
-## <a name="implementation-of-properties-window-buttons"></a>Provádění tlačítka okna Vlastnosti  
- Když kliknete **Categorized** tlačítko, volání sady Visual Studio <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> rozhraní na objekt, který má právě fokus do jeho vlastnosti seřadit podle kategorie. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> se implementuje na `IDispatch` objekt, který se zobrazí **vlastnosti** okna.  
+## <a name="implementation-of-properties-window-buttons"></a>Implementace tlačítek okna vlastností  
+ Když kliknete na tlačítko **kategorizovat** , Visual Studio zavolá <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> rozhraní objektu, který má fokus na řazení vlastností podle kategorie. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> je implementován na `IDispatch` objektu, který je zobrazen v okně **vlastnosti** .  
   
- Existují 11 předdefinovanou vlastnost kategorie, které mají záporné hodnoty. Můžete definovat vlastní kategorie, ale doporučujeme vám, že budete přiřazovat kladné hodnoty, abychom je odlišili od předdefinovaným kategoriím.  
+ K dispozici jsou 11 předdefinované kategorie vlastností, které mají záporné hodnoty. Můžete definovat vlastní kategorie, ale doporučujeme jim přiřadit kladné hodnoty, abyste je rozlišili od předdefinovaných kategorií.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A> Vrátí metoda hodnotu odpovídající vlastnosti kategorie pro zadanou vlastnost. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A> Metoda vrátí řetězec obsahující název kategorie. Stačí poskytují podporu pro vlastní hodnoty, protože Visual Studio ví hodnoty kategorie standardních vlastností.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A>Metoda vrátí hodnotu odpovídající kategorie vlastnosti pro zadanou vlastnost. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A>Metoda vrátí řetězec, který obsahuje název kategorie. Musíte poskytnout podporu jenom pro vlastní hodnoty kategorií, protože Visual Studio zná standardní hodnoty kategorií vlastností.  
   
- Když kliknete **Alphabetized** tlačítko Vlastnosti jsou zobrazeny v abecedním pořadí podle názvu. Názvy jsou načítána `IDispatch` podle algoritmu lokalizované řazení.  
+ Když kliknete na tlačítko **abecedy** , zobrazí se vlastnosti v abecedním pořadí podle názvu. Názvy jsou načteny `IDispatch` podle lokalizovaného algoritmu řazení.  
   
- Při **vlastnosti** otevřeném okně **vlastnosti** se automaticky zobrazí tlačítko jako vybraný. V dalších částech tohoto prostředí se zobrazí na stejné tlačítko a kliknutím na Zobrazit **vlastnosti** okna.  
+ Když je okno **vlastnosti** otevřené, tlačítko **vlastnosti** se automaticky zobrazí jako vybrané. V ostatních částech prostředí se zobrazí stejné tlačítko a kliknutím na něj můžete zobrazit okno **vlastnosti** .  
   
- **Stránky vlastností** tlačítko je k dispozici Pokud `ISpecifyPropertyPages` není implementována pro vybraný objekt. Zobrazení vlastností závislé na konfiguraci, které jsou obvykle spojené s řešeními a projekty stránky vlastností projektu, ale mohou být také být spojeny s položkami projektu (například v aplikaci Visual C++).  
+ Tlačítko **stránky vlastností** není k dispozici, pokud `ISpecifyPropertyPages` není pro vybraný objekt implementováno. Stránky vlastností zobrazují vlastnosti závislé na konfiguraci, které jsou obvykle spojeny s řešeními a projekty, ale mohou být také přidruženy k položkám projektu (například v Visual C++).  
   
 > [!NOTE]
-> Nelze přidat tlačítka panelu nástrojů **vlastnosti** okna pomocí nespravovaného kódu. Chcete-li přidat tlačítko panelu nástrojů, musíte vytvořit spravovaný objekt, který je odvozen z <xref:System.Windows.Forms.Design.PropertyTab>.  
+> Do okna **vlastnosti** nelze přidat tlačítka panelu nástrojů pomocí nespravovaného kódu. Chcete-li přidat tlačítko panelu nástrojů, je nutné vytvořit spravovaný objekt, který je odvozen z <xref:System.Windows.Forms.Design.PropertyTab> .  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::readmemory – | Dokumentace Microsoftu
+title: 'IDiaStackWalkFrame:: readMemory – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 97a868973d2a514150b8d728e685523e918f88f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150165"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Přečte paměti z image.  
+Načte paměť z image.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,22 +39,22 @@ HRESULT readMemory ( 
   
 #### <a name="parameters"></a>Parametry  
  `type`  
- [in] Jeden z [memorytypeenum – výčet](../../debugger/debug-interface-access/memorytypeenum.md) hodnot výčtu, která určuje typ pro přístup k paměti.  
+ pro Jedna z hodnot výčtu [výčtu memorytypeenum –](../../debugger/debug-interface-access/memorytypeenum.md) , která určuje typ paměti pro přístup.  
   
  `va`  
- [in] Virtuální adresa umístění obrázku má začínat čtení.  
+ pro Zahajte čtení umístění virtuální adresy v obrázku.  
   
  `cbData`  
- [in] Velikost vyrovnávací paměti dat v bajtech.  
+ pro Velikost vyrovnávací paměti dat (v bajtech).  
   
  `pcbData`  
- [out] Vrátí počet bajtů vrácených. Pokud `data` je `NULL`, pak `pcbData` obsahuje celkový počet bajtů dat, které jsou k dispozici.  
+ mimo Vrátí počet vrácených bajtů. Pokud `data` je `NULL` , pak `pcbData` obsahuje celkový počet bajtů dat, která jsou k dispozici.  
   
  `data`  
- [out] Vyrovnávací paměť, která se vyplní data ze zadaného umístění.  
+ mimo Vyrovnávací paměť, která se má vyplnit daty ze zadaného umístění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

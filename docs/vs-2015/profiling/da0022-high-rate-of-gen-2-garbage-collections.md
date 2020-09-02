@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0dcfa4d3522d88b58e971c0a4ff3f27649c2d21b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844633"
 ---
-# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Vysoká míra 2. generace uvolňování pamětí
+# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Vysoká míra 2. generace uvolňování paměti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 ID pravidla | DA0022 |  
@@ -31,7 +31,7 @@ ID pravidla | DA0022 |
   
  Když použijete profilování pomocí vzorkování, paměti .NET nebo způsobů kolizí prostředků, musíte pro aktivaci tohoto pravidla shromáždit aspoň 10 vzorků.  
   
-## <a name="cause"></a>příčina  
+## <a name="cause"></a>Příčina  
  Údaje o výkonu systému, které byly shromážděny během profilace, naznačují, že významný podíl objektů paměťového for.NET Framework byl v generaci paměti 2 kolekce v porovnání s generace paměti 0 a 1. generace uvolňován.  
   
 ## <a name="rule-description"></a>Popis pravidla  
@@ -42,7 +42,7 @@ ID pravidla | DA0022 |
  Toto pravidlo je vyvoláno, když dojde k proporcování příliš velkého počtu uvolnění paměti generace 2. Dobře se chovají .NET Framework aplikace budou mít více než 5 časů jako mnoho uvolňování paměti 1. generace jako kolekce 2. generace. (Faktor 10x je pravděpodobně ideální.)  
   
 ## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
- Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET clr\\# z kolekcí gen 0** a **paměti .NET CLR\\počet sloupců kolekcí 1. generace** . Určete, zda jsou k dispozici určité fáze provádění programu, kde dochází k uvolňování paměti často. Porovnejte tyto hodnoty se sloupcem **% času ve uvolňování** paměti, abyste viděli, jestli se při přidělení spravované paměti nejedná o nadměrné nároky na správu paměti.  
+ Dvakrát klikněte na zprávu v okně Seznam chyb, abyste přešli na [zobrazení značek](../profiling/marks-view.md) dat profilování. Vyhledá **paměť .NET CLR paměti \\ # z kolekcí gen 0** a **.NET CLR paměti počet sloupců \\ kolekcí 1. generace** . Určete, zda jsou k dispozici určité fáze provádění programu, kde dochází k uvolňování paměti často. Porovnejte tyto hodnoty se sloupcem **% času ve uvolňování** paměti, abyste viděli, jestli se při přidělení spravované paměti nejedná o nadměrné nároky na správu paměti.  
   
  Vysoká část uvolňování paměti generace 2 není vždy problém. Může to být záměrné. Aplikace, která přiděluje velké datové struktury, které musí zůstat aktivní po dlouhou dobu během provádění, může toto pravidlo aktivovat. Když je taková aplikace v paměti, může být vynucená provádět časté uvolňování paměti. Pokud se méně nákladným uvolňováním paměti generace 0 a 1. generace může uvolnit jenom malý objem spravovaných paměti, naplánují se častěji paměťové kolekce s častou generací 2.  
   

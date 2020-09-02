@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetTypeInfo | Dokumenty společnosti Microsoft
+title: 'IDebugField:: GetTypeInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: faa3464f0396999f36604aa88c429235d4849688
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728778"
 ---
 # <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
-Tato metoda získá informace nezávislé na typu o symbol nebo typ.
+Tato metoda získá informace nezávislé na typu symbolu nebo typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetTypeInfo(
 
 ## <a name="parameters"></a>Parametry
 `pTypeInfo`\
-[out] Vrátí informace o typu v zadané [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktuře.
+mimo Vrátí informace o typu v zadané struktuře [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Informace nezávislé na typu by zahrnovaly například AppDomain, modul a třídu, která symbol obsahuje.
+ Informace nezávislé na typu by zahrnovaly například doménu AppDomain, modul a třídu obsahující symbol.
 
 ## <a name="see-also"></a>Viz také
 - [GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)

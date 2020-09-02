@@ -1,5 +1,5 @@
 ---
-title: Animace pro visual studio | Dokumenty společnosti Microsoft
+title: Animace pro Visual Studio | Microsoft Docs
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
@@ -9,128 +9,128 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc11eb7bab69728be5ceaa55143f56e93cd1fca4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698607"
 ---
 # <a name="animations-for-visual-studio"></a>Animace pro Visual Studio
-## <a name="animation-fundamentals"></a>Základy animace
+## <a name="animation-fundamentals"></a>Základní informace o animacích
 
-### <a name="animation-best-practices-in-visual-studio"></a>Doporučené postupy animace v sadě Visual Studio
-Postupujte podle těchto pravidel, abyste zajistili konzistentní a uživatelsky přívětivé styly animací v rozhraní IDE sady Visual Studio.
+### <a name="animation-best-practices-in-visual-studio"></a>Osvědčené postupy animace v aplikaci Visual Studio
+Použijte tato pravidla, abyste zajistili konzistentní a uživatelsky přívětivé styly animace v rámci integrovaného vývojového prostředí sady Visual Studio.
 
-- **Buďte selektivní.** Omezte animace na ty, které slouží konkrétním účelům.
+- **Být selektivní.** Omezí animace na ty, které slouží k určitým účelům.
 
-- **Načasování a rychlost jsou důležité** pro zajištění toho, aby přechody byly rychlé a přirozené:
+- **Načasování a rychlost jsou důležité** k zajištění toho, aby přechody byly rychlé a přirozené:
 
-  - Dokončení animovaných přechodů během jedné půlsekundy (500 milisekund).
+  - Dokončete animované přechody během jedné poloviny sekundy (500 milisekund).
 
-  - Animace, které by se vyskytují často musí být dostatečně rychlé, aby nepřerušily pracovní postup uživatele. Sledujte animaci ve smyčce a upravte časování, dokud se nebude cítit správně.
+  - Animace, ke kterým by došlo často, musí být dostatečně rychlé, aby nedošlo k přerušení pracovního postupu uživatele. Podívejte se na animaci ve smyčce a upravte časování, dokud nebude napravo.
 
-  - Animace by neměly být tak rychlé nebo prudké, že je obtížné pochopit, ale ne tak pomalé, že to dělá jeden netrpělivý pro přechod až do konce.
+  - Animace by neměly být tak rychlé nebo jarring, že je obtížné porozumět, ale ne tak zpomalit, aby byl přechod dokončen.
 
-  - Použití proměnné časování zdůraznit důležitost. Například při procházení posloupnost položek v diagramu třídy, rychlost přes přechody mezi položkami pak zpomalit zaměřit se na důležité položky.
+  - K zdůraznění důležitosti použijte proměnné časování. Například při procházení posloupnosti položek v diagramu tříd, rychlost přepínání mezi položkami a pak zpomalit fokus na důležité položky.
 
-- **Používejte postupné nelineární uvolňování** z jednoho stavu do druhého, což dává pocit klidu a přirozeného pohybu.
+- **Použijte postupný nelineární náběh** a vývoj z jednoho stavu do druhého, což dává smysl Calm a přirozený pohyb.
 
-- Pokud je to možné, **použijte jemnou animaci při najetí myší** k označení interaktivních prvků pod myší.
+- Pokud je to možné, použijte k označení interaktivních prvků pod myší **nepoužitou animaci při najetí myší** .
 
-- Pokud ve svých funkcích silně spoléháte na animace, **poskytněte prostředky k jejich místnímu vypnutí** (pro všechny funkce) jako možnost v dialogovém okně **Nástroje > možnosti.**
+- Pokud jste se sami spoléhali na animace ve vašich funkcích, **Poskytněte jim způsob, jak je** vypnout místně (pro všechny vaše funkce) jako možnost v dialogovém okně **nástroje > možnosti** .
 
-- **Pouze jedna animace by měla nastat najednou** a sdělit pouze jednu část informace. Více než jeden objekt pohybující se nebo pokus udělit více věcí může být matoucí.
+- **V jednu chvíli by se měla objevit jenom jedna animace** a vyjádřit jenom jednu informaci. Více než jeden objekt přesouvá nebo se pokouší vyjádřit více věcí, může být matoucí.
 
-- **Jemnost je důležitá.** Ve většině případů animace nemusí vyžadovat pozornost uživatele sloužit svému účelu. Jemné změny v časování, sekvencování a chování může výrazně ovlivnit vnímání a může být rozdíl mezi efektivní a neefektivní animace.
+- **Subtlety je důležité.** Ve většině případů animace nemusí vyžadovat pozornost uživatele, aby mohla poskytovat svůj účel. Malé změny časování, sekvencování a chování mohou výrazně ovlivnit vnímání a mohou způsobit rozdíl mezi efektivní a neúčinnou animací.
 
-- Pokud používáte animaci, abyste na něco **upozornili, ujistěte se, že stojí za to přerušit**myšlenkový pochod uživatele.
+- Při použití animace k navýšení pozornosti na něco se **ujistěte, že stojí za to, že je možné přerušit**vlaky uživatele v myšlenkách.
 
 - **Při zobrazování průběhu nebo stavu** prostřednictvím animace:
 
-  - Ukončení zobrazování pohybu průběhu, když základní proces nepostupuje.
+  - Ukončí zobrazování pohybu průběhu, když se základní proces nemění.
 
-  - Rozlišujte neurčité procesy od určitých procesů.
+  - Rozlišuje neurčité procesy od procesů zrušení ukončení.
 
-  - Ujistěte se, že animace má identifikovatelné dokončení a selhání stavy.
+  - Ujistěte se, že animace má identifikovatelné stavy dokončování a selhání.
 
-  - Minimalizujte využití animací efektů, které zobrazují stav, a ujistěte se, že mají skutečnou hodnotu, a to poskytnutím dalších informací o skutečném použití. Příklady zahrnují přechodné změny stavu a nouzové situace
+  - Minimalizujte používání animací efektu, které zobrazují stav, a ujistěte se, že mají skutečnou hodnotu tím, že poskytují dodatečné informace o skutečném využití. Příklady zahrnují přechodné změny stavu a mimořádné události.
 
-#### <a name="animation-donts"></a>Animace nedělají:
+#### <a name="animation-donts"></a>Don'ts animace:
 
-- Nepoužívejte malé pohyby (pohyb v malém půdorysu). Upřednostňujte zeslabení a změny před pohybujícími se objekty.
+- Nepoužívejte malé přesuny (pohyb v malých objemech). Preferovat zmizení a změny nad přesunutím objektů.
 
-- Nepoužívejte animace, které se konají na velké ploše obrazovky nemovitostí. Bez ohledu na velikost je tento styl animace pro uživatele rušivý.
+- Nepoužívejte animace, které probíhají přes velkou oblast obrazovky. Bez ohledu na velikost je tento styl animace uživateli odvolán.
 
-- Nepoužívejte animace, které nesouvisejí s objektem, na který je uživatel aktuálně zaměřen nebo se kterým je interakce.
+- Nepoužívejte animace nesouvisející s objektem, na který se uživatel aktuálně zaměřuje nebo který s ním pracuje.
 
-- Nepoužívejte animace, které vyžadují interakci uživatele k obnovení stavu, jako je vynucení uživatele reagovat na blikající oznámení, aby přestalo blikat. Interakce s nimi v žádném případě by měla být dostatečná k jejich propuštění.
+- Nepoužívejte animace, které vyžadují interakci s uživatelem, a obnovte stav, jako je vynucení reakce uživatele na blikání oznámení, aby bylo možné zastavit jeho bliknutí. Interakce s nimi by měla být dostačující k jejich zavření.
 
-Další informace o aplikacích pro tyto osvědčené postupy naleznete [v tématu Vzory animace](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns).
+Další informace o aplikacích pro tyto osvědčené postupy najdete v tématu [vzory animace](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns).
 
 ### <a name="animation-metrics"></a>Metriky animace
 
-- Systém by měl viditelně reagovat na gesta uživatele za méně než 10 milisekund.
+- Systém by měl viditelně reagovat na gesta uživatele během méně než 10 milisekund.
 
-- Animované přechody by neměly trvat déle než 500 milisekund.
+- Dokončení animovaných přechodů by nemělo trvat déle než 500 milisekund.
 
-- Jedním ze způsobů, jak kompenzovat přechody, které vyžadují delší dobu, je rozdělit je na dvě části. První částí animace může být například prázdný kontejner obsahu (až 500 milisekund), následovaný obsahem, který do kontejneru vybledne (až 500 milisekund).
+- Jedním ze způsobů, jak kompenzovat přechody, které vyžadují delší dobu, je oddělení IT do dvou částí. První část animace může být například prázdný kontejner obsahu (až 500 milisekund) následovaný obsahem do kontejneru (až 500 milisekund).
 
-- Pro časy zatížení, které lze vypočítat, je upřednostňován indikátor určujícího průběhu (procentuální indikátor průběhu).
+- Pro dobu načítání, která může být vypočítána, je upřednostňován indikátor průběhu determinantu (ukazatel průběhu v procentech).
 
-- Pro časy načítání, které nelze vypočítat, je vhodný indikátor zaneprázdnění, jako je kurzor nebo vložená animace otáčení (indikátor načítání nebo práce).
+- Pro dobu načítání, která se nedá vypočítat, je vhodné indikátor zaneprázdněnosti, jako je kurzor nebo vložená animace (načítání nebo pracovní indikátor), být vhodný.
 
-### <a name="animation-as-communicator"></a>Animace jako komunikátor
-V uživatelském rozhraní sady Visual Studio animace funguje pouze jako komunikační nástroj.  Používá se ke komunikaci různých informací, jako jsou strukturální změny v ui (například při otevření nebo zavření nabídky). Animace může pomoci vizualizovat časově závislé chování složitých systémů, jako je vizualizace průběhu instalace. Animace lze také přitáhnout pozornost pomocí výstrah a oznámení.
+### <a name="animation-as-communicator"></a>Animace jako Communicator
+V uživatelském rozhraní sady Visual Studio funguje animace pouze jako komunikační nástroj.  Slouží ke sdělování různých informací, jako jsou strukturální změny v uživatelském rozhraní (například při otevření nebo zavření nabídky). Animace může přispět k vizualizaci chování složitých systémů závislých na čase, jako je vizualizace průběhu instalace. Animace můžete použít také k upoutání pozornosti s výstrahami a oznámeními.
 
- Animace uživatelského rozhraní obvykle fungují čtyřmi způsoby: vizualizovat, přitahovat pozornost, simulovat a časy odezvy /indikátory průběhu.
+ Animace uživatelského rozhraní obvykle fungují čtyřmi způsoby: vizualizace, přilákat pozornost, simulovat a doby odezvy nebo indikátory průběhu.
 
 #### <a name="visualize"></a>Vizualizace
-Animace může zdůraznit trojrozměrný charakter objektů a usnadnit uživatelům vizualizaci jejich prostorové struktury. K dosažení tohoto cíle může být nutné, aby animace otáčela objekt v plném kruhu, pomalu jej otáčela tam a zpět nebo objekt přibližovala a mírně zvětšovala jeho velikost, aby se zvýraznila změna nebo fokus.
+Animace může zdůraznit trojrozměrného charakteru objektů a usnadnit uživatelům vizualizaci jejich prostorové struktury. K dosažení této situace může animace potřebovat otočit objekt v plné kružnici, pomalu ho znovu zapnout a vypnout nebo objekt přiblížit a mírně zvýšit jeho velikost, aby se zdůraznila výměna nebo fokus.
 
-Přestože trojrozměrné objekty mohou být přesunuty s uživatelským ovládacím prvkem, návrhář by měl předem určit (programově nebo ručně), jak nejlépe animovat pohyb, který poskytuje optimální pochopení objektu. Tato naprogramovaná animace pak může být aktivována uživatelem umístěním kurzoru nad objekt, zatímco uživatelem řízené pohyby vyžadují, aby uživatel pochopil, jak s objektem manipulovat. Omezte pohyb na jednu osu nebo orientaci najednou; měnit velikost, otáčet nebo překládat, ale neprovázejte více než jeden současně.
+Přestože trojrozměrné objekty lze přesunout pomocí uživatelského ovládacího prvku, Návrhář by měl předem určit (programově nebo ručně), jak nejlépe animovat pohyb, který poskytuje optimální porozumění objektu. Tuto programovou animaci pak může aktivovat uživatel umístěním ukazatele myši na objekt, zatímco uživatelem kontrolované pohyby vyžadují, aby uživatel pochopil, jak objekt manipulovat. Omezte pohyb na jednu osu nebo orientaci v čase. Můžete buď škálovat, otáčet, nebo překládat, ale neprovádět více než jednu současně.
 
-Kategorie Vizualizujte zahrnuje aspekty dat, vztahů, stavu, struktury, sekvence a času.
+Kategorie vizualizovat zahrnuje aspekty dat, vztahů, stavu, struktury, sekvence a času.
 
 ##### <a name="data"></a>Data
-Ilustrují komplexní a variabilní informace:
+Ilustraci komplexních a proměnných informací:
 
-- Procházení vizualizací informací, jako jsou grafy a grafy
+- Pohyb prostřednictvím vizualizací informací, jako jsou grafy a grafy
 
-- Krokování po sekvenci, prohlídka s průvodcem a stránkování
+- Krokování sekvencí, průvodcem a stránkováním
 
-- Vyzvučování podrobností, ukazování a zvýraznění konkrétních informací
+- Podrobnosti o volání, ukazující a zvýraznění konkrétních informací
 
-- Překrytí podrobností a dalších informací nad cíleným prvkem
+- Překrytí podrobností a dalších informací nad prvkem s fokusem
 
-- Morfing z jedné strukturální nebo organizační reprezentace do jiného
+- Polymorfismuing z jedné strukturální nebo organizační reprezentace do jiné
 
-- Reprezentace změn v průběhu času pomocí posuvníků času, kol jog-and-shuttle a dopravních ovládacích prvků (přehrávání, zastavení a pozastavení)
+- Reprezentace změn v průběhu času pomocí posuvníků času, běhu kol a přenosových mechanismů (přehrávání, zastavení a pozastavení)
 
 ##### <a name="relationships"></a>Relace
 
-- Ilustrujte, jak se položky vzájemně vztahují nebo které položky se vztahují k dané položce.
+- Ilustruje, jak se položky vztahují na jednu jinou nebo které položky se vztahují k dané položce.
 
-- Zobrazit hierarchie a vztahy nadřazený podřízený nebo na stejné úrovni
+- Zobrazit hierarchie a vztahy nadřazenosti a podřízenosti nebo na stejné úrovni
 
-- Jeden prvek spouští další
+- Jeden element vytvářený další
 
-- Jeden prvek minimalizuje na jiný prvek
+- Jeden prvek se minimalizuje na jiný element.
 
-- Jeden prvek přivázaný k jinému
+- Jeden prvek, který je připojený k jinému
 
 ##### <a name="state"></a>Stav
 
 - Aktualizace obsahu
 
-- Zaměření a výběr uživatele
+- Fokus a výběr uživatele
 
 - Průběh
 
-- chyby
+- Chyby
 
 ##### <a name="structure"></a>Struktura
 
-- Otočení struktury na jednom uzlu
+- Překlopení struktury na jednom uzlu
 
 - Přeorientování
 
@@ -140,269 +140,269 @@ Ilustrují komplexní a variabilní informace:
 
 - Sekvence prezentace
 
-- Listování obrázky
+- Překlápění obrázků
 
-##### <a name="time"></a>Time
+##### <a name="time"></a>Čas
 
-- Zobrazení změn v čase, časového intervalu a vysílání obrazovky
+- Zobrazit změnu v čase, časové prodlevě a záznam dění na pozadí
 
-- Přesunutí do koše, zrušení a opakování
+- Přesunout na odpadkový koš, zpět a znovu
 
 - Obnovit historický stav
 
-#### <a name="attract-attention"></a>Upoutejte pozornost
-Pokud je cílem upozornit uživatele na jeden prvek z několika nebo upozornit uživatele na aktualizované informace, může být vhodné animace. Úvodní stránka aplikace může například použít tlačítko Začínáme, které se po načtení stránky posune na místo.
+#### <a name="attract-attention"></a>Pozornost přilákat
+Pokud je cílem nakreslit pozornost uživatele na jeden prvek z několika nebo upozornit uživatele na aktualizované informace, může být vhodná animace. Například úvodní stránka aplikace může použít tlačítko Začínáme, které se snímky na místo načte po načtení stránky.
 
-Poslední pohyblivý prvek na obrazovce zpravidla přitahuje pozornost uživatele.  V sérii animovaných prvků bude pozornost uživatele sledovat poslední pohybující se objekt.
+Jako pravidlo se poslední přesunutí elementu na obrazovce připraví pozornost uživatele.  V řadě animovaných prvků bude pozornost uživatele následovat za posledním přesunutým objektem.
 
 ##### <a name="alert"></a>Výstrahy
 
-- Upozornit uživatele, upoutat pozornost, ukázat pokrok
+- Upozornit uživatele, získat pozornost, zobrazit průběh
 
-- Ukažte, že se něco děje správně nebo nesprávně, nebo zobrazte průběh nebo změny průběhu
+- Ukáže, že se něco dělá správně nebo není správně nebo se zobrazuje průběh nebo průběh.
 
-- Vyzvat uživatele během úkolu, například najít další informace online nebo se dozvědět o aktuálním úkolu
+- Vyzvat uživatele během úkolu, třeba najít další informace online nebo získat informace o aktuálním úkolu
 
 ##### <a name="notifications"></a>Oznámení
 
-- Upozornit uživatele na chybový stav
+- Upozorní uživatele na chybovou podmínku.
 
-- Přerušte uživatele, abyste zjistili, zda se chtějí věnovat něčemu jinému
+- Přerušit uživatele, aby viděli, jestli se chce zúčastnit nějakého jiného
 
-- Jemně informujte uživatele, že proces byl dokončen nebo změněn, například po dokončení stahování.
+- Jemně Informujte uživatele, že se proces dokončil nebo změnil, například po dokončení stahování.
 
 #### <a name="simulate"></a>Simulovat
-Tato kategorie zahrnuje tělesnost a dimenzionalitu.
+Tato kategorie se týká fyzického a dimenzionálního.
 
-- Ilustrujte, odkud objekty pocházejí nebo kam se
+- Ilustrovat místo, odkud pocházejí objekty z nebo kam přejít
 
-- Rozbalení a sbalení nebo otevření a zavření
+- Rozbalit a sbalit nebo otevřít a zavřít
 
-- Posouvání, posouvání a otočení stránky
+- Posunování, posouvání a zobrazování stránek
 
-- Stohování a objednávání z
+- Skládání a řazení z
 
-- Kolotoč a akordeon
+- Karusel a přiznávání
 
-- Převrácení a otočení ui
+- Překlopení a otočení uživatelského rozhraní
 
-#### <a name="response-and-progress-indicators"></a>Ukazatele reakce a pokroku
-Ukazatele pokroku mají několik významných výhod:
+#### <a name="response-and-progress-indicators"></a>Indikátory odezvy a postupu
+Indikátory průběhu mají několik významných výhod:
 
-- Indikátory určitého i neurčitého průběhu ujišťují uživatele, že systém nehavaroval a pracuje na problému.
+- Jak ukončit a neurčitý indikátor průběhu znovu zaručí uživateli, že došlo k chybě systému a na problému pracuje.
 
-- Určité indikátory dávají uživateli pocit, jak daleko podél akce postupuje, stejně jako pocit, jak se blíží k cíli.
+- Indikátory zrušení ukončení poskytují uživateli představu o tom, jak daleko v rámci akce probíhá, a nemůžete se dostat blíž k dokončení.
 
-## <a name="animation-patterns"></a><a name="BKMK_AnimationPatterns"></a>Vzory animace
+## <a name="animation-patterns"></a><a name="BKMK_AnimationPatterns"></a> Vzorce animace
 
 ### <a name="overview"></a>Přehled
-Animace v sadě Visual Studio jsou určeny k poskytování určité funkce bez bránění produktivitě uživatelů. Obecně by animace v sadě Visual Studio měly být:
+Animace v aplikaci Visual Studio mají sloužit k poskytování konkrétní funkce bez překážky produktivity uživatelů. Obvykle by animace v aplikaci Visual Studio měly být:
 
-- Malé a nenápadné
+- Malý a nenápad
 
-- Přírodní a realistické
+- Přirozené a realistické
 
-- Jemné a tlumené
+- Jemný a subdued
 
 - Rychlé a efektivní
 
-- Uvolněná, ne uspěchaná
+- Uvolněno, není hurried
 
-Tento obrázek znázorňuje styly animace, které doporučujeme pro Visual Studio. Nejčastěji se nepoužívají žádné animace ani jemné animace, jako je zeslabení/zeslabování. Existuje omezená aplikace pohybových animací, jako je rozbalení a smršťování, změna polohy X a Y a rotace.
+Tento obrázek znázorňuje styly animace, které doporučujeme pro Visual Studio. Nejčastěji používané nejsou žádné animace ani jemné animace, jako je zmizení nebo zeslabení. Existují omezené aplikace pohybu, jako je například rozbalení a kontrakt, změna pozice X a Y a rotace.
 
-![Doporučené styly animace pro Visual Studio](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202-a_VSAnimStyles")<br />Doporučené styly animace pro Visual Studio
+![Doporučené styly animace pro Visual Studio](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202 – a_VSAnimStyles")<br />Doporučené styly animace pro Visual Studio
 
-#### <a name="appear-and-disappear"></a>Zobrazit a zmizet
-S tímto vzorem prvek přepne z viditelné na out-of-view a zpět bez animace přechodu.
+#### <a name="appear-and-disappear"></a>Zobrazí se a zmizí
+V tomto modelu se element přepne z viditelnosti na mimo zobrazení a zpátky bez animace přechodu.
 
-![Zobrazit a zmizet animace](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202-b_AppearAndDisappear")<br />Zobrazit a zmizet animace
+![Zobrazení a zmizení animace](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202 – b_AppearAndDisappear")<br />Zobrazení a zmizení animace
 
 ##### <a name="correct-usage"></a>Správné použití
-Čerstvé prvky uživatelského rozhraní, které je třeba okamžitě zobrazit nebo zmizet, aby uživatel nebyl rozptylován ani blokován. Kromě toho mohou být pomalé animace vnímány jako odpor, ke kterému nedojde ve stylu zobrazení a zmizení.
+Nové prvky uživatelského rozhraní, které se musí okamžitě zobrazit nebo zmizet, aby uživatel nebyl ani nerušivý ani nepřesný. Kromě toho se může pomalým přesunutím animací objevit jako ukazatel výkonu, který se neobjeví se stylem zobrazení a zmizení.
 
 ##### <a name="incorrect-usage"></a>Nesprávné použití
-Případy, ve kterých uživatelské rozhraní se zobrazí tak náhle uživatel nemá ponětí, co se stalo a přidání animace by pomohlo s kontextové porozumění.
+Případy, kdy se uživatelské rozhraní objeví tak náhlé, že uživatel nenápadí, co se stalo, a Přidání animace by vám pomohly kontextové porozumění.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
-Časové zpoždění je obecně nula sekund.
+Časová prodleva je všeobecně nula sekund.
 
 ##### <a name="examples"></a>Příklady
-- Automatické skrytí oken nástrojů
+- Automaticky skrývat okna nástrojů
 
-- UI editoru aktivovaného klávesnicí, jako je IntelliSense a nápověda k parametrům
+- Editor aktivovaných klávesnicí – uživatelské rozhraní, například IntelliSense a parametr help
 
-- Rozbalit a sbalit oblasti kódu
+- Rozbalení oblastí kódu a jejich sbalení
 
-#### <a name="fade-in-and-fade-out"></a>Zeslabení a zeslabení
-S tímto vzorem prvek ui přechody z není viditelné (0 % krytí) na viditelné (100 % krytí) nebo naopak.
+#### <a name="fade-in-and-fade-out"></a>Zmizení a rozmizet
+V tomto modelu se prvky uživatelského rozhraní přechází z neviditelného (0% opacity) na viditelné (100% opacity) nebo naopak.
 
-![Animace zeslabení a zeslabení](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202-c_FadeInFadeOut")<br />Animace zeslabení a zeslabení
+![Animace zmizení a zmizení](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202 – c_FadeInFadeOut")<br />Animace zmizení a zmizení
 
 ##### <a name="correct-usage"></a>Správné použití
-Toto je nejčastěji doporučená animace uživatelského rozhraní. Je to jemný efekt, který zvyšuje zájem bez přerušení toku. V některých případech si uživatel nemusí ani uvědomit, že existuje animace, která vnímá hladký a plynulý systém uživatelského rozhraní.
+Toto je nejčastěji doporučená animace uživatelského rozhraní. Je to jemný efekt, který přináší úroky bez přerušení toku. V některých případech se uživatel nemusí ani si uvědomit, že se jedná o animaci a vnímaný systém uživatelského rozhraní s hladkým a tokem.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
 
-- Počáteční krytí: 0 % pro vyblednutí, 100 % pro vyblednutí
+- Počáteční krytí: 0% pro zmizení, 100% pro rozběhu
 
-- Ukončení krytí: 100 % pro zeslabení, 0 % pro vyblednutí
+- Ukončení neprůhlednosti: 100% pro zmizení, 0% pro rozběhu
 
-- Doba trvání: 200 milisekund samostatně, 100 milisekund při použití jako součást kombinované sekvence animace
+- Doba trvání: 200 milisekund samostatné, 100 milisekund při použití jako součást kombinace animační sekvence
 
-- Styl náběhu/doběhu: Sine InOut
+- Náběh Style: sinus InOut
 
 ##### <a name="examples"></a>Příklady
 
-- Automatické skrytí oken nástrojů
+- Automaticky skrývat okna nástrojů
 
-- Nabídka otevřená a zavření
+- Nabídka otevřít a zavřít
 
-- Přechody na kartě Pozadí a popředí
+- Přechody na pozadí a na kartě popředí
 
-#### <a name="color-blend-from-a-to-b"></a>Prolnutí barev od A do B
-S tímto vzorkem se prvek ui změní z barvy A na barvu B.
+#### <a name="color-blend-from-a-to-b"></a>Barevný Blend z A do B
+V tomto modelu se prvek uživatelského rozhraní změní z barvy A na Color B.
 
-![Animace prolnutí barev](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202-d_ColorBlend")<br />Animace prolnutí barev
+![Animace míchání barev](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202 – d_ColorBlend")<br />Animace míchání barev
 
 ##### <a name="correct-usage"></a>Správné použití
-Jako animovaný přechod, když prvek rozhraní změní barvu z jednoho kontextu nebo stavu do jiného.
+Jako animovaný přechod, pokud prvek uživatelského rozhraní změní barvu z jednoho kontextu nebo stavu na jiný.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
 
-- Počáteční barva: Specifické pro uI
+- Počáteční barva: specifické pro uživatelské rozhraní
 
-- Koncová barva: Specifické pro uI
+- Koncová barva: specifické pro uživatelské rozhraní
 
-- Doba trvání: 200 milisekund samostatně, 100 milisekund při použití jako součást kombinované sekvence animace
+- Doba trvání: 200 milisekund samostatné, 100 milisekund při použití jako součást kombinace animační sekvence
 
-- Styl náběhu/doběhu: Sine InOut
+- Náběh Style: sinus InOut
 
 ##### <a name="examples"></a>Příklady
 
 - Přechody stavu okna dokumentu (aktivní, poslední aktivní a neaktivní)
 
-- Přechody stavu okna nástroje (zaostřené a nezaostřené)
+- Přechody stavu okna nástroje (cílené a nevybrané)
 
-#### <a name="expand-and-contract"></a>Rozšířit a uzavřít smlouvu
-S tímto vzorem se prvek uživatelského rozhraní rozbalí v X, Y nebo v obou směrech.
+#### <a name="expand-and-contract"></a>Rozbalit a kontrakt
+V tomto modelu se prvky uživatelského rozhraní rozšiřují v obou směrech X, Y nebo obou.
 
-![Rozbalit a zakázat animaci](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202-e_ExpandContract")<br />Rozbalit a zakázat animaci
+![Rozbalit a sbalit animaci](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202 – e_ExpandContract")<br />Rozbalit a sbalit animaci
 
 ##### <a name="correct-usage"></a>Správné použití
-Jako animovaný přechod, když prvek rozhraní změní velikost z jednoho kontextu do druhého.
+Jako animovaný přechod, pokud prvek uživatelského rozhraní změní velikost z jednoho kontextu do jiného.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
 
-- Měřítko X: % nebo specifický rozměr (v obrazových bodech)
+- Měřítko X:% nebo konkrétní dimenze (v pixelech)
 
-- Měřítko Y: % nebo určitý rozměr (v obrazových bodech)
+- Měřítko Y:% nebo konkrétní dimenze (v pixelech)
 
-- Kotevní pozice: obvykle vlevo nahoře (pro jazyky zleva doprava) nebo vpravo nahoře (pro jazyky se zprava doleva)
+- Pozice kotvy: všeobecně vlevo nahoře (pro jazyky zleva doprava) nebo vpravo nahoře (pro jazyky se zápisem zprava doleva)
 
-- Doba trvání: 200 milisekund samostatně, 100 milisekund při použití jako součást kombinované sekvence animace
+- Doba trvání: 200 milisekund samostatné, 100 milisekund při použití jako součást kombinace animační sekvence
 
 ##### <a name="examples"></a>Příklady
 
-- Panel Průzkumník architektury se rozbalí a sbalí
+- Rozbalení a sbalení panelu Průzkumníka architektury
 
-- Rozbalit a sbalit položku úvodní stránky Visual Studia 2017
+- Visual Studio 2017 začátek položky stránky pro rozbalení a sbalení
 
-#### <a name="x-y-position-change"></a>Změna polohy X-Y
-Pomocí tohoto vzoru změní prvek uživatelského rozhraní svou polohu X nebo Y nebo obojí.
+#### <a name="x-y-position-change"></a>Změna pozice X-Y
+V tomto vzoru prvek uživatelského rozhraní změní svou polohu X nebo Y nebo obojí.
 
-![Animace změny polohy X-Y](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />Animace změny polohy X-Y
+![Animace změny pozice X-Y](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202 – f_XYPositionChange")<br />Animace změny pozice X-Y
 
 ##### <a name="correct-usage"></a>Správné použití
-Jako animovaný přechod, když prvek rozhraní změní pozici z jednoho kontextu do druhého.
+Jako animovaný přechod, pokud prvek uživatelského rozhraní změní polohu z jednoho kontextu do jiného.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
 
-- Počáteční pozice X a Y: specifické pro uživatelské ui
+- Počáteční pozice X a Y: specifické pro uživatelské rozhraní
 
-- Koncová pozice X a Y: Specifické pro uživatelské ui
+- Koncová pozice X a Y: specifické pro uživatelské rozhraní
 
-- Cesta pohybu: žádná
+- Cesta pohybu: žádné
 
-- Doba trvání: 200 milisekund samostatně, 100 milisekund při použití jako součást kombinované sekvence animace
+- Doba trvání: 200 milisekund samostatné, 100 milisekund při použití jako součást kombinace animační sekvence
 
-- Styl náběhu/doběhu: Sine InOut
+- Náběh Style: sinus InOut
 
 ##### <a name="example"></a>Příklad
-Změna pořadí tabulátoru
+Změna pořadí karet
 
 #### <a name="rotate"></a>Otočit
-S tímto vzorem se prvek ui otáčí.
+V tomto modelu se prvek uživatelského rozhraní otočí.
 
-![Animace otáčení prvku uživatelského rozhraní](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />Animace otáčení prvku uživatelského rozhraní
+![Animace otočení elementu uživatelského rozhraní](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202 – g_Rotate")<br />Animace otočení elementu uživatelského rozhraní
 
 ##### <a name="correct-usage"></a>Správné použití
-Pouze pro indikátor neurčitého průběhu otáčení.
+Pouze pro indikátor neurčitého průběhu.
 
 ##### <a name="animation-properties"></a>Vlastnosti animace
 
 - Stupeň rotace: 360
 
-- Střed otáčení: uprostřed objektu
+- Rotační centrum: střed objektu
 
-- Doba trvání: souvislá
+- Trvání: průběžné
 
 ##### <a name="example"></a>Příklad
-Indikátor neurčitého průběhu (odstřeďování)
+Neurčitý indikátor průběhu (otáčející se)
 
 ### <a name="common-shell-ui-actions-and-recommended-animations"></a>Běžné akce uživatelského rozhraní prostředí a doporučené animace
 
-#### <a name="tab-open"></a>Otevřít tabulátor
-![Animace otevření tabulátorem](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202-h_TabOpen")<br />Animace otevření tabulátorem
+#### <a name="tab-open"></a>Otevřená karta
+![Otevřená animace karty](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202 – h_TabOpen")<br />Otevřená animace karty
 
-- Styl: objeví se
+- Style: zobrazí se
 
 - Doba trvání: nula sekund
 
-#### <a name="tab-close"></a>Zavření tabulátoru
-![Animace zavření tabulátoru](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202-i_TabClose")<br />Animace zavření tabulátoru
+#### <a name="tab-close"></a>Zavřít kartu
+![Animace zavření tabulátoru](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202 – i_TabClose")<br />Animace zavření tabulátoru
 
-- Styl: X změna polohy
+- Styl: Změna pozice X
 
 - Doba trvání: 200 milisekund
 
-#### <a name="tab-reorder"></a>Pořadí při objednání tabulátoru
-![Animace při objednání tabulátorů v sadě Visual Studio](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202-j_TabReorder")<br />Animace při objednání tabulátoru
+#### <a name="tab-reorder"></a>Změna pořadí karet
+![Změna pořadí animací v aplikaci Visual Studio](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202 – j_TabReorder")<br />Animace Změna pořadí karet
 
-- Styl: X změna polohy
+- Styl: Změna pozice X
 
 - Doba trvání: 200 milisekund
 
 #### <a name="close-floating-document"></a>Zavřít plovoucí dokument
-![Zavřít animaci plovoucího dokumentu](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202-k_CloseFloatingDocument")<br />Zavřít animaci plovoucího dokumentu
+![Zavřít plovoucí animaci dokumentu](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202 – k_CloseFloatingDocument")<br />Zavřít plovoucí animaci dokumentu
 
-- Styl: objeví se
+- Style: zobrazí se
 
 - Doba trvání: 200 milisekund
 
 #### <a name="window-state-transition"></a>Přechod stavu okna
-![Animace přechodu stavu okna](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202-l_WindowStateTransition")<br />Animace přechodu stavu okna
+![Animace přechodu na stav okna](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202 – l_WindowStateTransition")<br />Animace přechodu na stav okna
 
-- Styl: Chcete-li být konzistentní s ostatními okny, nechte aktuální operační systém definovat animaci zavření dokumentu.
-
-- Doba trvání: 200 milisekund
-
-#### <a name="menu-open"></a>Nabídka otevřena
-![Nabídka otevřít animaci](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202-m_MenuOpen")<br />Nabídka otevřít animaci
-
-- Styl: zeslabuje
+- Styl: Chcete-li být konzistentní s jinými okny, nechte aktuální operační systém definovat animaci zavřít dokument.
 
 - Doba trvání: 200 milisekund
 
-#### <a name="menu-close"></a>Zavření nabídky
-![Animace zavření nabídky](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202-n_MenuClose")<br />Animace zavření nabídky
+#### <a name="menu-open"></a>Nabídka otevřená
+![Nabídka otevřít animaci](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202 – m_MenuOpen")<br />Nabídka otevřít animaci
 
-- Styl: zeslabuje
+- Style: zeslabit
 
 - Doba trvání: 200 milisekund
 
-#### <a name="auto-hide-tool-window-reveal"></a>Automatické skrytí okna nástroje
-![Automatické skrytí okna nástroje odhaluje animaci](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202-o_AutoHideToolWindowReveal")<br />Automatické skrytí okna nástroje odhaluje animaci
+#### <a name="menu-close"></a>Zavřít nabídku
+![Animace zavření nabídky](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202 – n_MenuClose")<br />Animace zavření nabídky
 
-- Styl: objeví se
+- Styl: rozmizet
+
+- Doba trvání: 200 milisekund
+
+#### <a name="auto-hide-tool-window-reveal"></a>Automaticky skrývat zobrazení oken nástrojů
+![Automaticky skrývat okno nástrojů zobrazit animaci](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202 – o_AutoHideToolWindowReveal")<br />Automaticky skrývat okno nástrojů zobrazit animaci
+
+- Style: zobrazí se
 
 - Doba trvání: nula sekund

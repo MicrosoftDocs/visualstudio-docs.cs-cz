@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Volání kódu z jazyka VBA v Vizuálu C# projektu'
+title: 'Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,210 +20,210 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 46f88b47e135331e5f1dc010aa4a73abed520f51
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438661"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64804143"
 ---
-# <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>Návod: Volání kódu z jazyka VBA v Vizuálu C# projektu
-  Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Excel z jazyka Visual Basic pro kód Applications (VBA) v sešitu. Postup zahrnuje tři základní kroky: Přidejte metodu k `Sheet1` hostování třída položek, zveřejňují metodu pro kód VBA v sešitu a poté zavolejte metodu z jazyka VBA kód v sešitu.
+# <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>Návod: volání kódu z jazyka VBA v projektu jazyka Visual C#
+  Tento návod ukazuje, jak volat metodu v přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel z kódu jazyk Visual Basic for Application (VBA) v sešitu. Postup zahrnuje tři základní kroky: Přidejte metodu do `Sheet1` třídy položky hostitele, vystavte metodu pro kód VBA v sešitu a pak zavolejte metodu z kódu VBA v sešitu.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- I když tento návod používá konkrétně aplikace Excel, koncepty jsme vám ukázali podle návodu lze také použít na projekty na úrovni dokumentu aplikace Word.
+ I když tento návod používá Excel konkrétně, koncepce znázorněné v tomto návodu se vztahují také na projekty na úrovni dokumentu ve Wordu.
 
  Tento návod znázorňuje následující úlohy:
 
 - Vytvoření sešitu, který obsahuje kód VBA.
 
-- Důvěřující umístění sešitu s použitím v Centru zabezpečení v aplikaci Excel.
+- Důvěřuje umístění sešitu pomocí centra zabezpečení v Excelu.
 
-- Přidání metody do `Sheet1` hostovat třída položek.
+- Přidání metody do `Sheet1` třídy položky hostitele.
 
-- Extrahování rozhraní pro `Sheet1` hostovat třída položek.
+- Extrahování rozhraní pro `Sheet1` třídu položky hostitele.
 
-- Vystavení metodu pro kód VBA.
+- Vystavení metody pro kód VBA.
 
-- Volání metody z jazyka VBA kód.
+- Volání metody z kódu VBA.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - Microsoft Excel
 
-## <a name="create-a-workbook-that-contains-vba-code"></a>Vytvořte sešit, který obsahuje kód VBA
- Prvním krokem je vytvoření sešit s podporou maker, který obsahuje jednoduché – makro VBA. Předtím, než můžete zpřístupnit ve vlastní nastavení pro jazyk VBA kód, musí sešit obsahovat již kód VBA. V opačném případě sady Visual Studio nelze změnit projekt VBA umožňující kód VBA, chcete-li volat vlastního nastavení sestavení.
+## <a name="create-a-workbook-that-contains-vba-code"></a>Vytvoření sešitu, který obsahuje kód VBA
+ Prvním krokem je vytvoření sešitu podporujícího makra, který obsahuje jednoduché makro VBA. Předtím, než bude možné vystavit kód v přizpůsobení v jazyce VBA, musí sešit již obsahovat kód VBA. V opačném případě Visual Studio nemůže upravit projekt VBA, aby kód VBA mohl volat do sestavení vlastního nastavení.
 
  Pokud už máte sešit, který obsahuje kód VBA, který chcete použít, můžete tento krok přeskočit.
 
-### <a name="to-create-a-workbook-that-contains-vba-code"></a>Chcete-li vytvořit sešit, který obsahuje kód VBA
+### <a name="to-create-a-workbook-that-contains-vba-code"></a>Vytvoření sešitu, který obsahuje kód VBA
 
-1. Spuštění aplikace Excel.
+1. Spusťte aplikaci Excel.
 
-2. Uložit aktivní dokument jako **Excel Macro-Enabled sešitu (\*.xlsm)** s názvem **WorkbookWithVBA**. Uložte ji do vhodného umístění, například na plochu.
+2. Uloží aktivní dokument jako **excelový sešit s podporou maker ( \* . xlsm)** s názvem **WorkbookWithVBA**. Uložte ho do vhodného umístění, jako je například plocha.
 
-3. Na pásu karet klikněte na tlačítko **Developer** kartu.
+3. Na pásu karet klikněte na kartu **vývojář** .
 
     > [!NOTE]
-    > Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [jak: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > Pokud karta **vývojář** není zobrazená, musíte ji nejdřív zobrazit. Další informace najdete v tématu [Postup: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-4. V **kód** klikněte na možnost **jazyka Visual Basic**.
+4. Ve skupině **kódu** klikněte na **Visual Basic**.
 
-     Otevře se Editor jazyka Visual Basic.
+     Otevře se Visual Basic Editor.
 
-5. V **projektu** okna, dvakrát klikněte na panel **ThisWorkbook**.
+5. V okně **projektu** poklikejte na **ThisWorkbook**.
 
-     V souboru kódu `ThisWorkbook` objektu se otevře.
+     Otevře se soubor s kódem pro daný `ThisWorkbook` objekt.
 
-6. Přidejte následující kód VBA do souboru kódu. Tento kód definuje jednoduchou funkci, která nemá žádný účinek. Jediným účelem této funkce je zajistit, že existuje projekt VBA v sešitu. Toto je nezbytné pro pozdější kroky v tomto názorném postupu.
+6. Do souboru kódu přidejte následující kód VBA. Tento kód definuje jednoduchou funkci, která neprovede žádnou akci. Jediným účelem této funkce je zajistit, aby v sešitu existoval projekt VBA. To je nutné pro pozdější kroky v tomto návodu.
 
     ```vb
     Sub EmptySub()
     End Sub
     ```
 
-7. Dokument uložte a ukončete aplikaci Excel.
+7. Uložte dokument a ukončete aplikaci Excel.
 
 ## <a name="create-the-project"></a>Vytvoření projektu
- Nyní můžete vytvořit projekt úrovni dokumentu pro Excel, která se používá s podporou maker sešit, který jste vytvořili dříve.
+ Nyní můžete vytvořit projekt na úrovni dokumentu pro aplikaci Excel, který používá sešit s podporou maker, který jste vytvořili dříve.
 
-### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt
+### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
+2. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-3. V podokně šablony rozbalte **Visual C#** a potom rozbalte **Office/SharePoint**.
+3. V podokně šablony rozbalte položku **Visual C#** a poté rozbalte položku **Office/SharePoint**.
 
-4. Vyberte **Office Add-ins** uzlu.
+4. Vyberte uzel **Doplňky pro Office** .
 
-5. V seznamu šablon projektu vyberte **sešit aplikace Excel 2010** nebo **sešit aplikace Excel 2013** projektu.
+5. V seznamu šablon projektu vyberte **sešit excel 2010** nebo projekt **Excelu 2013** .
 
-6. V **název** zadejte **CallingCodeFromVBA**.
+6. Do pole **název** zadejte **CallingCodeFromVBA**.
 
 7. Klikněte na **OK**.
 
-     **Visual Studio Tools for Office Project Wizard** otevře.
+     Otevře se **Průvodce projektem Visual Studio Tools for Office** .
 
-8. Vyberte **zkopírovat existující dokument**a v **úplnou cestu k existujícímu dokumentu** zadejte umístění **WorkbookWithVBA** sešit, který jste vytvořili dříve . Pokud používáte s podporou maker sešit, zadejte umístění tohoto sešitu.
+8. Vyberte možnost **zkopírovat existující dokument**a v poli **Úplná cesta k existujícímu dokumentu** zadejte umístění sešitu **WorkbookWithVBA** , který jste vytvořili dříve. Pokud používáte vlastní sešit s podporou maker, místo toho určete umístění tohoto sešitu.
 
-9. Klikněte na tlačítko **Dokončit**.
+9. Klikněte na **Finish** (Dokončit).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře **WorkbookWithVBA** sešit v návrháři a přidá **CallingCodeFromVBA** projektu **Průzkumníka řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] otevře sešit **WorkbookWithVBA** v návrháři a přidá projekt **CallingCodeFromVBA** do **Průzkumník řešení**.
 
-## <a name="trust-the-location-of-the-workbook"></a>Důvěřujete umístění sešitu
- Před vystavení kódu v řešení pro kód VBA v sešitu, musí důvěřovat VBA v sešit, který chcete spustit. Chcete-li to provést několika způsoby. V tomto názorném postupu se provést tuto úlohu důvěryhodnou umístění v sešitu **centrum** v aplikaci Excel.
+## <a name="trust-the-location-of-the-workbook"></a>Důvěřovat umístění sešitu
+ Předtím, než můžete v sešitu vystavit kód v rámci vašeho řešení, je třeba důvěřovat modulu VBA v sešitu, aby bylo možné jej spustit. Existuje několik způsobů, jak to udělat. V tomto návodu tuto úlohu vyplníte tak, že důvěřujete umístění sešitu v **Centru zabezpečení** v Excelu.
 
-### <a name="to-trust-the-location-of-the-workbook"></a>Důvěřovat umístění sešitu
+### <a name="to-trust-the-location-of-the-workbook"></a>Chcete-li důvěřovat umístění sešitu
 
-1. Spuštění aplikace Excel.
+1. Spusťte aplikaci Excel.
 
-2. Klikněte na tlačítko **souboru** kartu.
+2. Klikněte na kartu **soubor** .
 
-3. Klikněte na tlačítko **možnosti aplikace Excel** tlačítko.
+3. Klikněte na tlačítko **Možnosti aplikace Excel** .
 
-4. V podokně kategorie, klikněte na tlačítko **centrum**.
+4. V podokně kategorie klikněte na **Centrum zabezpečení**.
 
-5. V podokně podrobností klikněte na tlačítko **nastavení Centra zabezpečení**.
+5. V podokně podrobností klikněte na **Nastavení centra zabezpečení**.
 
-6. V podokně kategorie, klikněte na tlačítko **důvěryhodná umístění**.
+6. V podokně kategorie klikněte na možnost **důvěryhodná umístění**.
 
-7. V podokně podrobností klikněte na tlačítko **přidat nové umístění**.
+7. V podokně podrobností klikněte na **Přidat nové umístění**.
 
-8. V **Microsoft Office důvěryhodné umístění** dialogové okno, přejděte do složky, která obsahuje **CallingCodeFromVBA** projektu.
+8. V dialogovém okně **systém Microsoft Office důvěryhodné umístění** přejděte do složky, která obsahuje projekt **CallingCodeFromVBA** .
 
-9. Vyberte **podsložky tohoto umístění jsou také důvěryhodné**.
+9. Vybrat **podsložky tohoto umístění jsou také důvěryhodné**.
 
-10. V **Microsoft Office důvěryhodné umístění** dialogové okno, klikněte na tlačítko **OK**.
+10. V dialogovém okně **systém Microsoft Office důvěryhodné umístění** klikněte na tlačítko **OK**.
 
-11. V **centrum** dialogové okno, klikněte na tlačítko **OK**.
+11. V dialogovém okně **Centrum zabezpečení** klikněte na tlačítko **OK**.
 
-12. V **možnosti aplikace Excel** dialogové okno, klikněte na tlačítko **OK**.
+12. V dialogovém okně **Možnosti aplikace Excel** klikněte na tlačítko **OK**.
 
-13. Ukončení **Excel**.
+13. Ukončete **aplikaci Excel**.
 
-## <a name="add-a-method-to-the-sheet1-class"></a>Přidejte metodu Sheet1 – třída
- Teď, když je nastavení projektu VBA, přidejte veřejnou metodu pro `Sheet1` hostovat třída položek, které můžete volat z jazyka VBA kód.
+## <a name="add-a-method-to-the-sheet1-class"></a>Přidání metody do třídy List1
+ Teď, když je projekt VBA nastavený, přidejte veřejnou metodu do `Sheet1` třídy hostitelské položky, kterou můžete volat z kódu VBA.
 
-### <a name="to-add-a-method-to-the-sheet1-class"></a>Přidání metody Sheet1 – třída
+### <a name="to-add-a-method-to-the-sheet1-class"></a>Přidání metody do třídy List1
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **Sheet1.cs**a potom klikněte na tlačítko **zobrazit kód**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **Sheet1.cs**a pak klikněte na **Zobrazit kód**.
 
-     **Sheet1.cs** soubor se otevře v editoru kódu.
+     V editoru kódu se otevře soubor **Sheet1.cs** .
 
-2. Přidejte následující kód, který `Sheet1` třídy. `CreateVstoNamedRange` Metoda vytvoří nový <xref:Microsoft.Office.Tools.Excel.NamedRange> objekt v zadaném rozsahu. Tato metoda také vytvoří obslužnou rutinu události pro <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> událost <xref:Microsoft.Office.Tools.Excel.NamedRange>. Později v tomto návodu budete volat `CreateVstoNamedRange` metodu z kód VBA v dokumentu.
+2. Do třídy přidejte následující kód `Sheet1` . `CreateVstoNamedRange`Metoda vytvoří nový <xref:Microsoft.Office.Tools.Excel.NamedRange> objekt v zadaném rozsahu. Tato metoda také vytvoří obslužnou rutinu události pro <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> událost <xref:Microsoft.Office.Tools.Excel.NamedRange> . Později v tomto návodu budete volat `CreateVstoNamedRange` metodu z kódu VBA v dokumentu.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
 
-3. Přidejte následující metodu do `Sheet1` třídy. Přepíše tuto metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> metoda vrátí aktuální instancí třídy `Sheet1` třídy.
+3. Do třídy přidejte následující metodu `Sheet1` . Tato metoda přepíše <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> metodu, která vrátí aktuální instanci `Sheet1` třídy.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
 
-4. Použijte následující atributy před první řádek `Sheet1` deklarace třídy. Tyto atributy zviditelnit třídy modelu COM, ale bez generování třídy rozhraní.
+4. Použijte následující atributy před první řádek `Sheet1` deklarace třídy. Tyto atributy nastaví třídu jako viditelnou pro model COM, ale bez generování rozhraní třídy.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#1)]
 
-## <a name="extract-an-interface-for-the-sheet1-class"></a>Extrahovat rozhraní pro Sheet1 – třída
- Předtím, než můžete zveřejnit `CreateVstoNamedRange` metodu pro kód VBA, musíte vytvořit veřejného rozhraní, která definuje tuto metodu, a musí zveřejnit toto rozhraní modelu COM.
+## <a name="extract-an-interface-for-the-sheet1-class"></a>Extrakce rozhraní pro třídu List1
+ Předtím, než můžete vystavit `CreateVstoNamedRange` metodu pro kód VBA, je nutné vytvořit veřejné rozhraní, které definuje tuto metodu, a je nutné vystavit toto rozhraní modelu COM.
 
-### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Extrahovat rozhraní pro Sheet1 – třída
+### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Extrakce rozhraní pro třídu List1
 
-1. V **Sheet1.cs** soubor kódu, klikněte kamkoli do `Sheet1` třídy.
+1. V souboru kódu **Sheet1.cs** Klikněte kamkoli do `Sheet1` třídy.
 
-2. Na **Refaktorovat** nabídky, klikněte na tlačítko **extrahování rozhraní**.
+2. V nabídce **Refaktorovat** klikněte na **Extrahovat rozhraní**.
 
-3. V **extrahování rozhraní** v dialogu **vyberte veřejné členy rozhraní** pole, klikněte na položku `CreateVstoNamedRange` metoda.
+3. V dialogovém okně **Extrahovat rozhraní** v poli **Vybrat veřejné členy do formuláře rozhraní** klikněte na položku pro `CreateVstoNamedRange` metodu.
 
 4. Klikněte na **OK**.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] generuje nové rozhraní s názvem `ISheet1`, a mění definici `Sheet1` třídy tak, aby se implementuje `ISheet1` rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] také se otevře **ISheet1.cs** souboru v editoru kódu.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vygeneruje nové rozhraní s názvem `ISheet1` a upraví definici `Sheet1` třídy tak, aby implementovala `ISheet1` rozhraní. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] také otevře soubor **ISheet1.cs** v editoru kódu.
 
-5. V **ISheet1.cs** souboru, nahradí `ISheet1` rozhraní deklarace s následujícím kódem. Tento kód provede `ISheet1` veřejné rozhraní a se vztahuje <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut využívajícího rozhraní modelu COM.
+5. V souboru **ISheet1.cs** nahraďte `ISheet1` deklaraci rozhraní následujícím kódem. Tento kód nastaví `ISheet1` rozhraní jako veřejné a použije <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut, aby bylo rozhraní viditelné pro model COM.
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#4](../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs#4)]
 
 6. Sestavte projekt.
 
-## <a name="expose-the-method-to-vba-code"></a>Vystavit metodu pro kód VBA
- Vystavit `CreateVstoNamedRange` metodu pro kód VBA v sešitu, nastavte **ReferenceAssemblyFromVbaProject** vlastnost `Sheet1` položka hostitele na **True**.
+## <a name="expose-the-method-to-vba-code"></a>Vystavení metody pro kód VBA
+ K vystavení `CreateVstoNamedRange` metody pro kód VBA v sešitu nastavte vlastnost **ReferenceAssemblyFromVbaProject** pro `Sheet1` položku hostitele na **hodnotu true**.
 
-### <a name="to-expose-the-method-to-vba-code"></a>Vystavit metodu pro kód VBA
+### <a name="to-expose-the-method-to-vba-code"></a>Vystavení metody pro kód VBA
 
-1. V **Průzkumníka řešení**, dvakrát klikněte na panel **Sheet1.cs**.
+1. V **Průzkumník řešení**dvakrát klikněte na **Sheet1.cs**.
 
-     **WorkbookWithVBA** soubor se otevře v návrháři se List1 viditelné.
+     Soubor **WorkbookWithVBA** se otevře v návrháři a zobrazí se List1.
 
-2. V **vlastnosti** okna, vyberte **ReferenceAssemblyFromVbaProject** vlastnost a změňte hodnotu na **True**.
+2. V okně **vlastnosti** vyberte vlastnost **ReferenceAssemblyFromVbaProject** a změňte hodnotu na **true**.
 
-3. Klikněte na tlačítko **OK** ve zprávě, která se zobrazí.
+3. Ve zprávě, která se zobrazí, klikněte na **OK** .
 
 4. Sestavte projekt.
 
-## <a name="call-the-method-from-vba-code"></a>Volání metody z jazyka VBA kód
- Nyní můžete volat `CreateVstoNamedRange` metodu z jazyka VBA kód v sešitu.
+## <a name="call-the-method-from-vba-code"></a>Volání metody z kódu VBA
+ Nyní můžete volat `CreateVstoNamedRange` metodu z kódu VBA v sešitu.
 
 > [!NOTE]
-> V tomto názorném postupu přidáte kód VBA v sešitu při ladění projektu. Kód VBA, který přidáte do tohoto dokumentu se přepíše při příštím sestavení projektu, protože Visual Studio nahradí kopii dokumentu ze složky projektu hlavní dokument ve výstupní složce sestavení. Pokud chcete uložit kód VBA, zkopírujte jej do dokumentu ve složce projektu. Další informace najdete v tématu [kombinovat VBA a přizpůsobení na úrovni dokumentu](../vsto/combining-vba-and-document-level-customizations.md).
+> V tomto návodu přidáte do sešitu kód VBA během ladění projektu. Kód VBA, který přidáte do tohoto dokumentu, bude při příštím sestavení projektu přepsán, protože Visual Studio nahradí dokument ve výstupní složce sestavení kopií dokumentu z hlavní složky projektu. Pokud chcete kód VBA uložit, můžete ho zkopírovat do dokumentu ve složce projektu. Další informace najdete v tématu [Kombinování přizpůsobení na úrovni VBA a dokumentu](../vsto/combining-vba-and-document-level-customizations.md).
 
-### <a name="to-call-the-method-from-vba-code"></a>Volat metodu z jazyka VBA kód
+### <a name="to-call-the-method-from-vba-code"></a>Volání metody z kódu jazyka VBA
 
-1. Stisknutím klávesy **F5** ke spuštění projektu.
+1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. Na **Developer** kartě **kód** klikněte na možnost **jazyka Visual Basic**.
+2. Na kartě **vývojář** ve skupině **kód** klikněte na **Visual Basic**.
 
-     Otevře se Editor jazyka Visual Basic.
+     Otevře se Visual Basic Editor.
 
-3. Na **vložit** nabídky, klikněte na tlačítko **modulu**.
+3. V nabídce **Vložit** klikněte na **modul**.
 
-4. Přidejte následující kód do nového modulu.
+4. Do nového modulu přidejte následující kód.
 
-     Tento kód volá `CreateTable` metoda v vlastního nastavení sestavení. Makro má přístup k této metody pomocí globální `GetManagedClass` metody přístup `Sheet1` hostovat položky třídu, která je vystavená pro kód VBA. `GetManagedClass` Metoda automaticky vygenerované při nastavení **ReferenceAssemblyFromVbaProject** vlastnost dříve v tomto návodu.
+     Tento kód volá `CreateTable` metodu v sestavení přizpůsobení. Makro přistupuje k této metodě pomocí globální `GetManagedClass` metody pro přístup k `Sheet1` třídě položky hostitele, kterou jste vystavili v kódu VBA. `GetManagedClass`Metoda se automaticky vygenerovala při nastavení vlastnosti **ReferenceAssemblyFromVbaProject** dříve v tomto návodu.
 
     ```vb
     Sub CallVSTOMethod()
@@ -233,22 +233,22 @@ ms.locfileid: "63438661"
     End Sub
     ```
 
-5. Stisknutím klávesy **F5**.
+5. Stiskněte klávesu **F5**.
 
-6. Do otevřeného sešitu, klikněte na buňku **A1** na **List1**. Ověřte, že se objeví okno zpráv.
+6. V otevřeném sešitu klikněte na buňku **a1** na **List1**. Ověřte, že se zobrazí okno se zprávou.
 
 7. Ukončete aplikaci Excel bez uložení změn.
 
 ## <a name="next-steps"></a>Další kroky
- Další informace o volání kódu v řešeních pro systém Office z jazyka VBA v těchto tématech:
+ Další informace o volání kódu v řešeních pro systém Office z jazyka VBA najdete v těchto tématech:
 
-- Volání kódu v položce hostitel ve vlastním nastavení jazyka Visual Basic z jazyka VBA. Tento proces se liší od procesu Visual C#. Další informace najdete v tématu [názorný postup: Volání kódu z jazyka VBA v projektu jazyka Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md).
+- Volání kódu v položce hostitele v Visual Basic přizpůsobení z jazyka VBA. Tento proces se liší od procesu Visual C#. Další informace naleznete v tématu [Návod: volání kódu z jazyka VBA v projektu Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md).
 
-- Volání kódu v doplňku VSTO z jazyka VBA. Další informace najdete v tématu [názorný postup: Volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
+- Volání kódu v doplňku VSTO z jazyka VBA. Další informace naleznete v tématu [Návod: volání kódu v doplňku VSTO z jazyka VBA](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
-## <a name="see-also"></a>Viz také:
-- [Kombinování přizpůsobení na úrovni dokumentu a VBA](../vsto/combining-vba-and-document-level-customizations.md)
-- [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)
-- [Postupy: Vystavení kódu do VBA v projektu jazyka Visual Basic](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
-- [Postupy: Vystavení kódu v aplikaci Visual C pro jazyk VBA&#35; projektu](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
-- [Návod: Volání kódu z jazyka VBA v projektu jazyka Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)
+## <a name="see-also"></a>Viz také
+- [Kombinování přizpůsobení na úrovni VBA a dokumentů](../vsto/combining-vba-and-document-level-customizations.md)
+- [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
+- [Postupy: vystavení kódu v projektu Visual Basic v jazyce VBA](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
+- [Postupy: vystavení kódu pro jazyk VBA ve Visual C&#35; projektu](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
+- [Návod: volání kódu z jazyka VBA v projektu Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)

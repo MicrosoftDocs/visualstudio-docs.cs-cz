@@ -1,5 +1,5 @@
 ---
-title: Experimentální instance | Dokumenty společnosti Microsoft
+title: Experimentální instance | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8e2284767a0aa6be58c0f7e38c912783728914cb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699030"
 ---
 # <a name="the-experimental-instance"></a>Experimentální instance
-Chcete-li chránit vývojové prostředí sady Visual Studio před netestovanými aplikacemi, které by jej mohly změnit, poskytuje sada VSSDK experimentální prostor, který můžete použít k experimentování. Vyvíjíte nové aplikace pomocí sady Visual Studio jako obvykle, ale spustit je pomocí této instance experimentální.
+Chcete-li chránit vývojové prostředí sady Visual Studio před netestovanými aplikacemi, které by ho mohly změnit, VSSDK poskytuje experimentální prostor, který můžete použít k experimentování. Nové aplikace vyvíjíte pomocí sady Visual Studio obvyklým způsobem, ale spouštíte je pomocí této experimentální instance.
 
- Každá aplikace, která má balíček VSIX spustí visual studio experimentální instance v režimu ladění.
+ Každá aplikace, která má VSIX balíček, spustí experimentální instanci sady Visual Studio v režimu ladění.
 
- Pokud chcete spustit experimentální instanci sady Visual Studio mimo konkrétní řešení, spusťte v příkazovém okně následující příkaz:
+ Pokud chcete spustit experimentální instanci sady Visual Studio mimo konkrétní řešení, spusťte následující příkaz v příkazovém okně:
 
- "*\<Cesta k instalaci sady Visual studio>* \Common7\IDE\devenv.exe" /RootSuffix Exp
+ " *\<Visual studio installation path>* \Common7\IDE\devenv.exe"/rootsuffix exp
 
 > [!NOTE]
-> Experimentální instance je zapsána do `<version number>Exp` `<version number>Exp_Config` registru pod uzly a. Například oblast experimentálního registru sady Visual Studio 2015 je
+> Experimentální instance je zapsána do registru v `<version number>Exp` `<version number>Exp_Config` uzlech a. Například oblast experimentálního registru sady Visual Studio 2015 je
 >
 > `HKCU\Software\Microsoft\VisualStudio\14.0Exp` a `HKCU\Software\Microsoft\VisualStudio\14.0Exp_Config`
 
- Doporučujeme spustit rozšíření v experimentální instanci při jeho vývoji. Při nasazení rozšíření se spustí v instanci vývoje. Další informace o registraci aplikací naleznete v [tématu Registrace balíčků VSPackages](../extensibility/internals/registering-vspackages.md).
+ Doporučujeme, abyste při vývoji tohoto rozšíření spustili v experimentální instanci. Když rozšíření nasadíte, spustí se v instanci vývoje. Další informace o registraci aplikací najdete v tématu [Registrace VSPackage](../extensibility/internals/registering-vspackages.md).

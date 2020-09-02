@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FLAGS | Dokumenty společnosti Microsoft
+title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b74955d65ff34c4787de03c3b03383fe7eb702cc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714527"
 ---
 # <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
-Používá se k popisu stroje.
+Slouží k popisu počítače.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MACHINE_INFO_FLAGS { 
@@ -40,17 +40,17 @@ public enum enum_MACHINE_INFO_FLAGS { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MCIFLAG_TERMINAL_SERVICES_AVAILABLE`\
- Označuje, že terminálové služby jsou k dispozici.
+ Označuje, že je služba Terminal Services k dispozici.
 
 ## <a name="remarks"></a>Poznámky
- Používá se `Flags` jako člen [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury.
+ Slouží jako `Flags` člen struktury [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

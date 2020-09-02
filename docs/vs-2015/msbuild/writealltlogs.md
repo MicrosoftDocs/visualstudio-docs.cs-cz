@@ -1,5 +1,5 @@
 ---
-title: WriteAllTLogs | Dokumentace Microsoftu
+title: WriteAllTLogs | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,16 +18,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 371357249bb9674a636859c995ad076eb41c2a08
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192593"
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zapisuje protokoly sledování pro všechna vlákna a kontext.  
+Zapisuje protokoly sledování pro všechna vlákna a kontexty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,17 +36,17 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `intermediateDirectory`  
- Adresáře, ve kterém k uložení protokolu sledování.  
+ pro `intermediateDirectory`  
+ Adresář, do kterého má být uložen protokol sledování.  
   
- [in] `tlogRootName`  
- Název kořenového názvu souboru protokolu.  
+ pro `tlogRootName`  
+ Název kořenového souboru protokolu  
   
 ## <a name="return-value"></a>Návratová hodnota  
- [HRESULT] ()<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s ([úspěch]<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) sadu bitů, pokud byl vytvořen kontext sledování.  
+ A [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s [úspěch] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) bitová sada, pokud byl kontext sledování vytvořen.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h  
+ **Hlavička:** Stopa. h  
   
 ## <a name="see-also"></a>Viz také  
  [WriteContextTLogs](../msbuild/writecontexttlogs.md)

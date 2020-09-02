@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ff17a56be7d7908ced0e37d1b13e8296ffc2c3d
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89219683"
 ---
 # <a name="globalization-warnings"></a>Upozornění globalizace
@@ -36,8 +36,8 @@ Upozornění globalizace podporují knihovny a aplikace připravené pro použit
 |[CA1304: Určete CultureInfo](../code-quality/ca1304.md)|Metoda nebo konstruktor volá člen, který má přetížení přijímající parametr System.Globalization.CultureInfo, a tato metoda nebo konstruktor nevolá přetížení přebírající parametr CultureInfo. Pokud objekt CultureInfo nebo System.IFormatProvider není zadán, nemusí mít výchozí hodnota zadaná pomocí přetíženého členu ve všech národních prostředích požadovaný efekt.|
 |[CA1305: Určete IFormatProvider](../code-quality/ca1305.md)|Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení přijímající parametr System.IFormatProvider, a tato metoda nebo konstruktor nevolá přetížení, která přebírá parametr IFormatProvider. Pokud objekt System.Globalization.CultureInfo nebo IFormatProvider není zadán, nemusí mít výchozí hodnota zadaná pomocí přetíženého členu ve všech národních prostředích požadovaný efekt.|
 |[CA1306: Nastavte národního prostředí pro datové typy](../code-quality/ca1306.md)|Národní prostředí určuje prvky prezentace specifické kultury pro data, například formátování použité pro číselné hodnoty, symboly měny a pořadí řazení. Při vytváření objektu DataSet nebo DataTable byste měli explicitně nastavit národní prostředí.|
-|[CA1307: určení StringComparison pro přehlednost](../code-quality/ca1307.md)|Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison.|
+|[CA1307: Zadejte StringComparison, aby nebyly pochyby](../code-quality/ca1307.md)|Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison.|
 |[CA1308: Normalizujte řetězce na velká písmena](../code-quality/ca1308.md)|Řetězce by měly být normalizovány na velká písmena. Malá skupina znaků nedokáže po převodu na malá písmena provést zpáteční cestu.|
 |[CA1309: Použijte řadový StringComparison](../code-quality/ca1309.md)|Nelingvistická operace porovnání řetězců nemá nastaven parametr StringComparison na hodnotu Ordinal ani na hodnotu OrdinalIgnoreCase. Explicitním nastavením parametru na hodnotu StringComparison.Ordinal nebo StringComparison.OrdinalIgnoreCase dojde ke zrychlení kódu a zvýšení přesnosti a spolehlivosti.|
-|[CA1310: zadejte StringComparison pro správnost](../code-quality/ca1310.md)|Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison a ve výchozím nastavení používá porovnávání řetězců specifické pro jazykovou verzi.|
+|[CA1310: Zadejte StringComparison pro správnost](../code-quality/ca1310.md)|Operace porovnání řetězců používá přetížení metody, které nenastavuje parametr StringComparison a ve výchozím nastavení používá porovnávání řetězců specifické pro jazykovou verzi.|
 |[CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného voláním](../code-quality/ca2101.md)|Člen vyvolání platformy umožňuje částečně důvěryhodných volajících, má řetězcový parametr a explicitně nezařazuje řetězec. To může způsobit potenciální ohrožení zabezpečení.|
