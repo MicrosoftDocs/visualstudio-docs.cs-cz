@@ -1,5 +1,5 @@
 ---
-title: Microsoft Language Interface sady LIP () | Dokumentace Microsoftu
+title: Jazykové sady Microsoft Language Interface Pack (LIP) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -19,88 +19,88 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 503f97d1530f8d22184f42a2452046782a997c18
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433001"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64814327"
 ---
 # <a name="microsoft-language-interface-packs-lips-and-visual-studio"></a>Sady LIP (Microsoft Language Interface Pack) a Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-S použitím Windows Language Interface Pack (LIP), můžete nainstalovat jazykovou verzi Windows a pak nainstalovat různé uživatelského rozhraní jazykových sad. Uživatelské rozhraní jazykové sady poskytují lokalizovaná uživatelská rozhraní (UI) pro operační systém. Můžete například instalaci japonské jazykové sady rozhraní nad anglickou verzi systému Windows a pak přepnout jazyk uživatelského rozhraní Windows mezi anglické a japonština. Pomocí sady LIP může mít více jazykových verzí sady Windows na jednom počítači.
+Pomocí sady Language Interface Pack (LIP) systému Windows můžete nainstalovat jazykovou verzi systému Windows a poté nainstalovat různé jazykové sady uživatelského rozhraní. Jazykové sady uživatelského rozhraní poskytují lokalizované uživatelské rozhraní (UI) pro operační systém. Například můžete nainstalovat sadu japonských jazykových rozhraní do anglické verze systému Windows a potom přepnout jazyk uživatelského rozhraní systému Windows mezi japonštinou a anglickou verzí. Pomocí sad LIP můžete mít v jednom počítači více jazykových verzí systému Windows.
 
- Na počítačích, které mají sady LIP a více jazykových verzí sady Visual Studio nainstalovaný změna Windows nastavení jazyk zobrazení nastaví Windows a Visual Studio jsou nainstalovány odpovídající jazykové sady.
+ V počítačích, ve kterých jsou nainstalovány sady LIP a více jazykových verzí sady Visual Studio, změna nastavení jazyka zobrazení systému Windows nastaví systém Windows i sadu Visual Studio, pokud jsou nainstalovány odpovídající jazykové sady.
 
-## <a name="limitations-of-multi-language-installations"></a>Omezení instalací Vícejazyčná verze
- Při instalaci odlišných jazykových verzí sady Visual Studio na stejném počítači, lze přepnout jen jazyky mezi odpovídající edice. Například pokud používáte anglickou verzi Express nainstalován, němčina Express Edition nainstalované a nainstalovaná edice Professional, jazyky lze přepnout jen pro edice Express, není pro edici Professional.
+## <a name="limitations-of-multi-language-installations"></a>Omezení instalací s více jazyky
+ Když instalujete různé jazykové verze sady Visual Studio do stejného počítače, můžete přepínat jazyky jenom mezi vyhovujícími edicemi. Například pokud máte nainstalovanou anglickou verzi English Express, nainstalovanou Německo Express Edition a nainstalovanou edici Professional, můžete přepínat jenom jazyky pro edice Express, ne pro edici Professional.
 
- Používá jednotný jazykové sady Visual Studio. K instalaci více než jedna jazyková verze sady těchto produktů, musíte nejprve nainstalovat produkt úplným jazykovým a potom nainstalovat jeden nebo více jazykových sad.
+ Sada Visual Studio používá sjednocenou jazykovou sadu. Chcete-li nainstalovat více než jednu jazykovou verzi těchto produktů, je třeba nejprve nainstalovat úplný jazykový produkt a pak nainstalovat jednu nebo více jazykových sad.
 
 > [!NOTE]
-> Visual Studio nepodporuje instalaci více jazykových verzí produktu úplným jazykovým ve stejném počítači. Po instalaci jeden produkt s úplným jazykovým s použitím jazykové sady musíte přidat jazykové verze. Můžete nainstalovat více produktů úplným jazykovým edice Express ve stejném počítači.
+> Visual Studio nepodporuje instalaci více jazykových verzí plného jazykového produktu do stejného počítače. Po instalaci jednoho kompletního jazykového produktu je nutné přidat jazykové verze pomocí jazykových sad. Na stejný počítač můžete i nadále instalovat více úplných jazykových produktů edice Express.
 
-### <a name="support-for-code-pages"></a>Podpora znakové stránky
- Některé nástroje Visual Studio nezobrazují text správně, když text obsahuje znaky, které nejsou v aktuální znakové stránce. Místo toho zobrazí otazníky nebo text je poškozený. Jsou ovlivněny následující nástroje nebo oblastech:
+### <a name="support-for-code-pages"></a>Podpora pro znakové stránky
+ Některé nástroje sady Visual Studio nezobrazuje text správně, pokud text obsahuje znaky, které nejsou na aktuální znakové stránce. Místo toho se zobrazí otazníky nebo je text poškozený. Ovlivněny jsou následující nástroje nebo oblasti:
 
-- Servery nasazené s použitím FTP.
+- Weby nasazené pomocí FTP
 
-- Názvy počítačů ne-ASCII v některé ovládací prvky.
+- Názvy počítačů bez ASCII v některých ovládacích prvcích.
 
-- Nástroje příkazového řádku, která spustí mimo sadu Visual Studio.
+- Nástroje příkazového řádku, které se spouštějí mimo sadu Visual Studio.
 
-- Průvodce migrací jazyka Visual Basic.
+- Průvodce migrací Visual Basic.
 
-- Kontejner testů ovládacích prvků ActiveX.
+- Kontejner testu ovládacího prvku ActiveX
 
 - Prohlížeč objektů OLE/COM.
 
-- Nástroj pro ladění webové rozhraní ISAPI.
+- Nástroj pro ladění webu ISAPI.
 
-- Projekty aplikace knihovny MFC, které mají obsah nápovědy HTML.
+- Projekty aplikace MFC, které obsahují obsah HTML Help.
 
-- Aplikace Visual SourceSafe / uživatelského rozhraní SCCI spadne zpět na angličtinu po kompatibilní znakovou stránku.
+- Uživatelské rozhraní Visual SourceSafe/SCCI se vrátí do angličtiny, pokud je k dispozici nekompatibilní znaková stránka.
 
-- Aplikace Visual SourceSafe nepodporuje názvy souborů Unicode.
+- Visual SourceSafe nepodporuje názvy souborů Unicode.
 
-- Koncový uživatel definované znaků (soukromé použití zóny) nelze použít jako tokeny/identifikátory.
+- Znaky definované koncovým uživatelem (zóna privátního použití) nelze použít jako tokeny nebo identifikátory.
 
-- Znaky latinky Extended-B nelze zobrazit v některé aplikaci Visual Studio oknům, když Windows znaková stránka nastavena na východoasijské jazyky.
+- V některých oknech nástrojů sady Visual Studio se znaky rozšířené verze latinky a B nedají zobrazit, pokud je znaková stránka Windows nastavená na východoasijský jazyk.
 
-- Toky textu, které se skládají ze znaků několik skriptů jazyka se může zobrazit glyfu některé znaky.
+- Text, který se skládá ze znaků z více jazykových skriptů, může u některých znaků zobrazit výchozí glyf.
 
-- Kopírování a vkládání složitým řetězců do běžných ovládacích prvků může způsobit znak tvarování ztratí. Místo toho použijte odpovídající klávesnice jazyka se vstupním textem.
+- Kopírování a vkládání složitých řetězců skriptu do běžných ovládacích prvků může způsobit ztrátu tvaru znaků. Místo toho použijte k zadání textu odpovídající jazykovou klávesnici.
 
-##### <a name="to-correctly-display-characters-that-are-not-included-in-the-current-code-page"></a>Pro správné zobrazení znaky, které nejsou zahrnuté v aktuální znakové stránce
+##### <a name="to-correctly-display-characters-that-are-not-included-in-the-current-code-page"></a>Pro správné zobrazení znaků, které nejsou součástí aktuální znakové stránky
 
-1. Klikněte na tlačítko **Start**, klikněte na tlačítko **ovládací panely**a pak otevřete **místní a jazykové nastavení** (nebo **oblasti** v [!INCLUDE[win8](../includes/win8-md.md)]).
+1. Klikněte na tlačítko **Start**, klikněte na položku **Ovládací panely**a pak otevřete **panel místní a jazykové nastavení** (nebo **oblast v oblasti** [!INCLUDE[win8](../includes/win8-md.md)] ).
 
     > [!NOTE]
-    > Musíte být správcem počítače, postupujte podle těchto kroků.
+    > Chcete-li provést tento postup, musíte být správcem počítače.
 
-2. Klikněte na tlačítko **Upřesnit** kartu.
+2. Klikněte na kartu **Upřesnit** .
 
-3. V **vyberte jazyk odpovídající jazykovou verzi kódování Unicode programy, které chcete použít** seznamu, vyberte jazyk, které právě používáte.
+3. V seznamu **Vyberte jazyk, který se bude shodovat s jazykovou verzí programů, které chcete použít** , vyberte jazyk, který aktuálně používáte.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
-## <a name="changing-the-language-used-for-the-ui-text-in-visual-studio"></a>Změna jazyk používaný pro Text uživatelského rozhraní v sadě Visual Studio
- Když nainstalujete více jazykových verzí sady [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve stejném počítači, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uživatelského rozhraní výchozí hodnota je **totéž jako Windows Microsoft**. Toto nastavení znamená, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se zobrazí text uživatelského rozhraní v jazyce, který je zadán jako jazyk operačního systému.
+## <a name="changing-the-language-used-for-the-ui-text-in-visual-studio"></a>Změna jazyka používaného pro text uživatelského rozhraní v aplikaci Visual Studio
+ Když nainstalujete více jazykových verzí nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] na stejný počítač, použije se [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] výchozí uživatelské rozhraní **stejné jako v systému Microsoft Windows**. Toto nastavení označuje, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se zobrazí text uživatelského rozhraní v jazyce, který je určen jako jazyk zobrazení pro operační systém.
 
 > [!NOTE]
-> Pokud aplikace Visual Studio je nastaveno pro použití **totéž jako Windows Microsoft**a není nainstalovaná odpovídající jazyková sada Visual Studio, Visual Studio bude používat jazyk první instalaci sady Visual Studio.
+> Pokud je sada Visual Studio nastavena na použití **stejné jako v systému Microsoft Windows**a není nainstalována shodná jazyková sada sady Visual Studio, sada Visual Studio použije jazyk první instalace sady Visual Studio.
 
-#### <a name="to-set-the-language-that-is-used-for-the-ui-text-in-visual-studio"></a>Chcete-li nastavit jazyk, ve kterém se používá pro text uživatelského rozhraní v sadě Visual Studio
+#### <a name="to-set-the-language-that-is-used-for-the-ui-text-in-visual-studio"></a>Nastavení jazyka, který se používá pro text uživatelského rozhraní v sadě Visual Studio
 
-1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).
 
-2. V **možnosti** dialogového okna rozbalte **prostředí** a potom klikněte na tlačítko **mezinárodní nastavení**.
+2. V dialogovém okně **Možnosti** rozbalte položku **prostředí** a klikněte na možnost **mezinárodní nastavení**.
 
-3. V **jazyk** seznamu, zvolte jazyk, ve kterém by se měla zobrazit text uživatelského rozhraní ve vývojovém prostředí.
+3. V seznamu **jazyk** vyberte jazyk, ve kterém se má text uživatelského rozhraní zobrazit ve vývojovém prostředí.
 
-    Chcete-li mít text uživatelského rozhraní IDE shoda zobrazovaný jazyk operačního systému, nastavení, vyberte **totéž jako Windows Microsoft**.
+    Chcete-li, aby text uživatelského rozhraní v integrovaném vývojovém prostředí odpovídal nastavení jazyka zobrazení operačního systému, vyberte **stejné jako v systému Microsoft Windows**.
 
-   Příkazu devenv můžete také nastavit jazyk, který se používá pro uživatelské rozhraní. Další informace najdete v tématu [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md).
+   Pomocí příkazu devenv můžete také nastavit jazyk, který se používá pro uživatelské rozhraní. Další informace najdete v tématu [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md).
 
 ## <a name="see-also"></a>Viz také
  [Mezinárodní nastavení, Prostředí, dialogové okno Možnosti](../ide/reference/international-settings-environment-options-dialog-box.md)

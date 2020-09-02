@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno písem (Nápověda nástroje Spy ++ Microsoft) | Dokumentace Microsoftu
+title: Dialogové okno písmo (Microsoft Spy + + Help) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,37 +12,37 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 41028caa5ef792941f82251cac1d6e5203464240
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159584"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>Dialogové okno písem (nápověda nástroje Microsoft Spy++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí tohoto dialogového znak písmo použité v konfiguraci [zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) okna. Chcete-li zobrazit toto dialogové okno, rozbalte **zobrazení** nabídku a zvolte **písmo**.  
+Pomocí tohoto dialogového okna můžete nakonfigurovat písmo znaků používané v okně [zobrazení nástroje Spy + +](../debugger/spy-increment-views.md) . Chcete-li zobrazit toto dialogové okno, rozbalte nabídku **zobrazení** a vyberte možnost **písmo**.  
   
  K dispozici jsou následující nastavení:  
   
- **Písma**  
- Písmo okna zobrazení nástroje Spy ++, který má právě fokus.  
+ **Písmo**  
+ Písmo znaku pro okno zobrazení nástroje Spy + +, které má fokus.  
   
  **Styl písma**  
- Styl písma pro zobrazení nástroje Spy ++ okně, které má fokus.  
+ Styl písma okna zobrazení nástroje Spy + +, který má fokus.  
   
  **Velikost**  
- Velikost písma pro zobrazení nástroje Spy ++ okně, které má fokus.  
+ Velikost písma okna zobrazení nástroje Spy + +, která má fokus.  
   
- **Uložit jako výchozí písmo**  
- Při otevírání zobrazení nástroje Spy ++, uloží aktuální nastavení písma jako vaše předvolby.  
+ **Uložit písmo jako výchozí**  
+ Při otevírání zobrazení nástroje Spy + + uloží aktuální nastavení písma jako předvolby.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.

@@ -7,10 +7,10 @@ ms.author: tglee
 manager: jillfra
 ms.topic: conceptual
 ms.openlocfilehash: 749a267d4fc33153cfc609f331ecd1d269706e12
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249969"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Zakázat povědomí o DPI v aplikaci Visual Studio

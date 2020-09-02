@@ -16,14 +16,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5126b3dc45d33471080ae154e06f4a327e21fef7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663441"
 ---
-# <a name="how-to-change-the-debug-stepping-option-legacy"></a>Postupy: Změna možnosti krokování ladění (starší verze)
-Toto téma popisuje, jak změnit možnost krokování ladění pro [!INCLUDE[wf](../includes/wf-md.md)] aplikace v [!INCLUDE[wfd1](../includes/wfd1-md.md)] starších verzích, které mají souběžné akce. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+# <a name="how-to-change-the-debug-stepping-option-legacy"></a>Postupy: Změna možností krokování při ladění (starší verze)
+Toto téma popisuje, jak změnit možnost krokování ladění pro [!INCLUDE[wf](../includes/wf-md.md)] aplikace ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] , které mají souběžné akce. Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Když ladíte starší aktivity, které mají souběžné provádění, jako je například **Aktivita typu ParallelActivity** nebo **aktivitou skupiny ConditionedActivityGroup**, můžete použít jednu ze dvou možností pro krokování kódu.
 
@@ -35,9 +35,9 @@ Toto téma popisuje, jak změnit možnost krokování ladění pro [!INCLUDE[wf]
 
 1. Spusťte Visual Studio.
 
-2. Otevřete existující starší projekt pracovního postupu nebo vytvořte nový projekt, který bude využívat souběžné aktivity a cílí na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+2. Otevřete existující starší projekt pracovního postupu nebo vytvořte nový projekt, který bude využívat souběžné aktivity a který cílí buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
-3. V nabídce **pracovního postupu** ve starším [!INCLUDE[wfd2](../includes/wfd2-md.md)] přejděte na **ladit**a pak přejděte na **Možnosti krokování**.
+3. V nabídce **pracovního postupu** ve starší verzi [!INCLUDE[wfd2](../includes/wfd2-md.md)] přejděte na **ladění**a pak přejděte na **Možnosti krokování**.
 
 4. Vyberte možnost **instance** nebo **větev**.
 

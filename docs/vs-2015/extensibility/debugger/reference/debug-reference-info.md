@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REFERENCE_INFO | Dokumentace Microsoftu
+title: DEBUG_REFERENCE_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 675373ae1728bbca2cc7a89fdaa8014e6286d8b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159329"
 ---
-# <a name="debugreferenceinfo"></a>DEBUG_REFERENCE_INFO
+# <a name="debug_reference_info"></a>DEBUG_REFERENCE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Popisuje odkaz.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagDEBUG_REFERENCE_INFO {   
@@ -52,33 +52,33 @@ public struct DEBUG_REFERENCE_INFO { 
   
 ## <a name="members"></a>Členové  
  dwFields  
- Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčet, který určuje, která pole jsou vyplněna.  
+ Kombinace příznaků z výčtu [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) , která určuje, která pole jsou vyplněna.  
   
- bstrName  
- Uživatelem zadaný název [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objektu.  
+ BSTR  
+ Název objektu [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) zadaný uživatelem  
   
  bstrType  
- Typ odkazu jako formátovaný řetězec.  
+ Odkazový typ jako formátovaný řetězec.  
   
  bstrValue  
- Hodnota odkazu jako formátovaný řetězec  
+ Hodnota reference jako formátovaný řetězec  
   
  dwAttrib  
- Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet, který určuje příznaky pro atributy vlastnosti ladění.  
+ Kombinace příznaků z výčtu [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) , která určuje příznaky pro atributy vlastností ladění.  
   
  dwRefType  
- Hodnota z [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) výčet, který určuje, zda je typ odkazu velký nebo malý.  
+ Hodnota z výčtu [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) , která určuje, zda je typ odkazu silný nebo slabý.  
   
  m_pReference  
- [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, který určuje referenční informace.  
+ Objekt [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) , který určuje referenční informace.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána volání [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metoda být vyplněna. Tato struktura je také vrácen jako část seznamu z [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) rozhraní, které je pak vrácen z volání [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) metody.  
+ Tato struktura je předána voláním metody [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) , která má být vyplněna. Tato struktura je také vrácena jako součást seznamu z rozhraní [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) , který je zase vrácen z volání metody [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

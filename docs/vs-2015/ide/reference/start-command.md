@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a216e053a08662da5da04206c780fb4455e9ec09
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663497"
 ---
 # <a name="start-command"></a>Spustit – příkaz
@@ -32,8 +32,8 @@ Začíná ladit spouštěný projekt.
 Debug.Start [address]
 ```
 
-## <a name="arguments"></a>Arguments
- `address` volitelné. Adresa, na které program pozastaví provádění, podobně jako zarážka ve zdrojovém kódu. Tento argument je platný pouze v režimu ladění.
+## <a name="arguments"></a>Argumenty
+ `address` Volitelné. Adresa, na které program pozastaví provádění, podobně jako zarážka ve zdrojovém kódu. Tento argument je platný pouze v režimu ladění.
 
 ## <a name="remarks"></a>Poznámky
  **Spouštěcí** příkaz po provedení provede operaci RunToCursor na zadané adrese.

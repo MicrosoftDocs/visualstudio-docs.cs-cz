@@ -1,5 +1,5 @@
 ---
-title: Přeformátování kódu ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Přeformátování kódu ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,32 +12,32 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: eb0dac5e1282d544df9c04bf4c12303fb391739d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436643"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64814809"
 ---
 # <a name="reformatting-code-in-a-legacy-language-service"></a>Přeformátování kódu ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zdrojový kód můžete naformátována pomocí normalizace použití odsazení a mezery. To může zahrnovat vkládání nebo odebrání mezerami či tabulátory na začátku každého řádku, přidat nové řádky mezi řádky nebo nahrazení mezery tabulátory nebo tabulátory mezerami.  
+Ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] zdrojovém kódu lze přeformátovat normalizací použití odrážek a prázdných znaků. To může zahrnovat vložení nebo odebrání mezer nebo karet na začátku každého řádku, přidání nových řádků mezi řádky nebo nahrazení mezer tabulátory nebo tabulátory mezerami.  
   
 > [!NOTE]
-> **Poznámka:** vložení nebo odstranění znaky nového řádku může ovlivnit značky, jako je například zarážky a záložky, ale přidáním nebo odebráním mezerami či tabulátory nemá vliv na značky.  
+> **Poznámka:** Vložení nebo odstranění znaků nového řádku může ovlivnit značky, jako jsou zarážky a záložky, ale přidávání nebo odebírání mezer nebo karet nemá vliv na značky.  
   
- Uživatelé mohou spustit operaci reformatting tak, že vyberete **výběr formátu** nebo **formátovat dokument** z **Upřesnit** nabídce **upravit**nabídky. Reformatting operace se dá taky spustit při vložení fragmentu kódu nebo konkrétní znak. Například při psaní pravou složenou závorku v jazyce C# všechno mezi odpovídající levou složenou závorku a Zavřít složenou závorkou je automaticky odsazený správnou úroveň.  
+ Uživatelé mohou operaci přeformátování spustit výběrem možnosti **Formátovat výběr** nebo **formátovat dokument** z nabídky **Upřesnit** v nabídce **Upravit** . Operaci přeformátování lze také aktivovat při vložení fragmentu kódu nebo konkrétního znaku. Například když zadáte pravou závorku v jazyce C#, vše mezi odpovídající levou složenou závorkou a pravou složenou závorkou se automaticky odsadí na správnou úroveň.  
   
- Při [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] odešle **výběr formátu** nebo **formátovat dokument** příkaz ke službě jazykového <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy volání <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metodu <xref:Microsoft.VisualStudio.Package.Source> třídy. Pro podporu formátování, je nutné přepsat <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metodu a zadejte vlastní formátování kódu.  
+ Při [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] odeslání příkazu **formátu výběru** nebo **formátu dokumentu** jazykové službě <xref:Microsoft.VisualStudio.Package.ViewFilter> volá třída <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metodu ve <xref:Microsoft.VisualStudio.Package.Source> třídě. Pro podporu formátování musíte přepsat <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metodu a dodat vlastní kód formátování.  
   
-## <a name="enabling-support-for-reformatting"></a>Povolení podpory přeformátovat  
- Pro podporu formátování, `EnableFormatSelection` parametr <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> musí být nastaveno na `true` při registraci vašeho balíčku VSPackage. Tím se nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableFormatSelection%2A> vlastnost `true`. <xref:Microsoft.VisualStudio.Package.ViewFilter.CanReformat%2A> Vrátí metoda hodnotu této vlastnosti. Pokud vrátí hodnotu PRAVDA, <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy volání <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A>.  
+## <a name="enabling-support-for-reformatting"></a>Povolení podpory pro přeformátování  
+ Aby bylo možné podporovat formátování, `EnableFormatSelection` parametr <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> musí být nastaven na hodnotu `true` při registraci VSPackage. Tím se <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableFormatSelection%2A> vlastnost nastaví na `true` . <xref:Microsoft.VisualStudio.Package.ViewFilter.CanReformat%2A>Metoda vrátí hodnotu této vlastnosti. Pokud vrátí hodnotu true, <xref:Microsoft.VisualStudio.Package.ViewFilter> třída volá <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> .  
   
 ## <a name="implementing-reformatting"></a>Implementace přeformátování  
- K implementaci přeformátování, musíte odvodit třídu z <xref:Microsoft.VisualStudio.Package.Source> třídy a přepsat <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metody. <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> Objektu popisuje rozpětí pro formátování a <xref:Microsoft.VisualStudio.Package.EditArray> obsahuje úpravy provedené v rozpětí. Všimněte si, že tomuto rozpětí může být celý dokument. Ale protože je pravděpodobně více změn provedených v rozsahu, všechny změny by měl být reverzibilního v rámci jedné akce. K tomuto účelu zabalení všechny změny v <xref:Microsoft.VisualStudio.Package.CompoundAction> objektu (viz oddíl "Horizontálních oddílů pomocí třídy CompoundAction" v tomto tématu).  
+ Chcete-li implementovat přeformátování, je nutné odvodit třídu z <xref:Microsoft.VisualStudio.Package.Source> třídy a přepsat <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metodu. <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan>Objekt popisuje rozsah pro formátování a <xref:Microsoft.VisualStudio.Package.EditArray> objekt obsahuje úpravy provedené na rozsahu. Všimněte si, že tento rozsah může být celý dokument. Vzhledem k tomu, že v rozpětí jsou pravděpodobně provedeny různé změny, všechny změny by měly být v jedné akci vratné. Chcete-li to provést, zabalte všechny změny v <xref:Microsoft.VisualStudio.Package.CompoundAction> objektu (viz část "použití třídy CompoundAction" v tomto tématu).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad zajistí, že jedna mezera za každou čárku ve výběru, pokud není čárka je následována na kartě nebo na konci řádku. Po odstranění se poslední čárka v řádku koncové mezery. V části "Použití CompoundAction třídy" v tomto tématu, jak tato metoda je volána z <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> metody.  
+ Následující příklad zajišťuje jedno místo za každou čárkou ve výběru, pokud čárka není následována tabulátorem nebo na konci řádku. Koncové mezery za poslední čárkou na řádku se odstraní. Informace o tom, jak je tato metoda volána z metody, naleznete v části "použití třídy CompoundAction" v tomto tématu <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> .  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -151,11 +151,11 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## <a name="using-the-compoundaction-class"></a>Používání třídy CompoundAction  
- Všechny přeformátování hotové práce na části kódu by měla být v rámci jedné akce vrátit zpět. Můžete to udělat pomocí <xref:Microsoft.VisualStudio.Package.CompoundAction> třídy. Tato třída zabalí sadu operací úpravy na textovou vyrovnávací paměť do úprav jednu operaci.  
+## <a name="using-the-compoundaction-class"></a>Použití třídy CompoundAction  
+ Všechna přeformátování provedené u oddílu kódu by měla být v rámci jedné akce vratná. To lze provést pomocí <xref:Microsoft.VisualStudio.Package.CompoundAction> třídy. Tato třída zalomí sadu operací úprav pro textovou vyrovnávací paměť do jediné operace Edit.  
   
 ### <a name="example"></a>Příklad  
- Tady je příklad, jak používat <xref:Microsoft.VisualStudio.Package.CompoundAction> třídy. Podívejte se na příklad v části "Implementace podpory pro formátování" v tomto tématu příklad `DoFormatting` metody.  
+ Zde je příklad použití <xref:Microsoft.VisualStudio.Package.CompoundAction> třídy. Příklad metody najdete v části "implementace podpory pro formátování" v tomto tématu `DoFormatting` .  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  

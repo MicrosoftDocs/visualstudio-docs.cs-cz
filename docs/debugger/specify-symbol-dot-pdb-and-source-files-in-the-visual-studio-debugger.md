@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19eed30074215b64301d7227e93ba6bf5b438d78
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183771"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Určení symbolu (. pdb) a zdrojových souborů v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
@@ -81,7 +81,7 @@ Ladicí program také vyhledává soubory symbolů v následujících umístěn�
 
    - Libovolná místní složka mezipaměti symbolů.
 
-   - Zadané síťové servery, servery sítě Internet nebo místní symboly a umístění, například servery symbolů společnosti Microsoft, pokud jsou vybrány. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]může stáhnout soubory se symboly ladění ze serverů symbolů, které implementují `symsrv` protokol. [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) a [ladicí nástroje pro Windows](/windows-hardware/drivers/debugger/index) jsou dva nástroje, které mohou používat servery symbolů.
+   - Zadané síťové servery, servery sítě Internet nebo místní symboly a umístění, například servery symbolů společnosti Microsoft, pokud jsou vybrány. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] může stáhnout soubory se symboly ladění ze serverů symbolů, které implementují `symsrv` protokol. [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) a [ladicí nástroje pro Windows](/windows-hardware/drivers/debugger/index) jsou dva nástroje, které mohou používat servery symbolů.
 
      Mezi servery se symboly, které můžete použít, patří:
 
@@ -159,14 +159,14 @@ Můžete vybrat další možnosti symbolu v **nabídce nástroje**  >  **Možnos
   <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a>
 - **Povolit podporu zdrojového serveru**
 
-  Používá zdrojový server k ladění aplikace v případě, že na místním počítači není žádný zdrojový kód nebo soubor *. pdb* neodpovídá zdrojovému kódu. Zdrojový server přijímá požadavky na soubory a vrací skutečné soubory ze správy zdrojového kódu. Zdrojový server běží pomocí knihovny DLL s názvem *srcsrv. dll* pro čtení souboru *PDB* aplikace. Soubor *. pdb* obsahuje odkazy na úložiště zdrojového kódu a příkazy používané pro načtení zdrojového kódu z úložiště.
+  Používá zdrojový server k ladění aplikace v případě, že na místním počítači není žádný zdrojový kód nebo soubor *. pdb* neodpovídá zdrojovému kódu. Zdrojový server přijímá požadavky na soubory a vrací skutečné soubory ze správy zdrojového kódu. Zdrojový server běží pomocí knihovny DLL s názvem *srcsrv.dll* ke čtení souboru *PDB* aplikace. Soubor *. pdb* obsahuje odkazy na úložiště zdrojového kódu a příkazy používané pro načtení zdrojového kódu z úložiště.
 
-  Můžete omezit příkazy, které *srcsrv. dll* může spouštět ze souboru *. pdb* aplikace, seznamem povolených příkazů v souboru s názvem *srcsrv. ini*. Soubor *srcsrv. ini* umístěte do stejné složky jako *srcsrv. dll* a *devenv. exe*.
+  Můžete omezit příkazy, které *srcsrv.dll* lze provést ze souboru *. pdb* aplikace výpisem povolených příkazů v souboru s názvem *srcsrv.ini*. Soubor *srcsrv.ini* umístěte do stejné složky jako *srcsrv.dll* a *devenv.exe*.
 
   >[!IMPORTANT]
-  >Libovolné příkazy lze vložit do souboru *PDB* aplikace, proto nezapomeňte vložit pouze příkazy, které chcete spustit, do souboru *srcsrv. ini* . Při každém pokusu o spuštění příkazu, který není v souboru *srcsvr. ini* , dojde k zobrazení potvrzovacího dialogového okna. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md).
+  >Libovolné příkazy mohou být vloženy do souboru *PDB* aplikace, takže nezapomeňte vložit pouze příkazy, které chcete spustit, do souboru *srcsrv.ini* . Při každém pokusu o spuštění příkazu, který není v souboru *srcsvr.ini* , se zobrazí potvrzovací dialogové okno. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md).
   >
-  >Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Pokud například v *souboru srcsrv. ini*najdete soubor *cmd. exe* , uživatel se zlými úmysly může zadat parametry v programu *cmd. exe* , které by to mohlo být nebezpečné.
+  >Parametry příkazu nejsou ověřovány, proto buďte s důvěryhodnými příkazy opatrní. Pokud jste například v *srcsrv.ini*zadali *cmd.exe* , uživatel se zlými úmysly může zadat parametry *cmd.exe* , které by to mohlo být nebezpečné.
 
   Vyberte tuto položku a podřízené položky, které chcete. **Povolí zdrojový server pro částečně důvěryhodná sestavení (pouze spravovaná)** a **vždy spouštět nedůvěryhodné příkazy zdrojového serveru bez zobrazení výzvy** . může zvýšit bezpečnostní riziko.
 
@@ -182,21 +182,21 @@ Sestavte pomocí **/Debug** a vytvořte soubor *. pdb* . Můžete vytvářet apl
 
 ### <a name="cc-options"></a>Možnosti jazyka C/C++
 
-- *VC \< x>. pdb* a * \< Project> soubory. pdb*
+- Soubory *VC \<x> . pdb* a * \<project> . pdb*
 
-  Soubor *. pdb* pro C/C++ se vytvoří při sestavení pomocí [/Zi nebo/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format). V [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , možnost [/FD](/cpp/build/reference/fd-program-database-file-name) pojmenuje soubor *. pdb* , který kompilátor vytvoří. Při vytváření projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí rozhraní IDE je možnost **/FD** nastavena na vytvoření souboru *. pdb* s názvem * \< Project>. pdb*.
+  Soubor *. pdb* pro C/C++ se vytvoří při sestavení pomocí [/Zi nebo/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format). V [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , možnost [/FD](/cpp/build/reference/fd-program-database-file-name) pojmenuje soubor *. pdb* , který kompilátor vytvoří. Při vytváření projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí rozhraní IDE je možnost **/FD** nastavena na vytvoření souboru *. pdb* s názvem * \<project> . pdb*.
 
   Pokud sestavíte aplikaci C/C++ pomocí souboru pravidel a zadáte **/Zi** nebo **/Zi** bez použití **/FD**, kompilátor vytvoří dva soubory *PDB* :
 
-  - *VC \< x>. pdb*, kde * \< x>* představuje verzi kompilátoru Microsoft C++, například *VC11. pdb*
+  - *VC \<x> . pdb*, kde *\<x>* představuje verzi kompilátoru jazyka Microsoft C++, například *VC11. pdb*
 
-    Soubor *VC \< x>. pdb* ukládá všechny informace o ladění pro jednotlivé soubory objektů a nachází se ve stejném adresáři jako soubor pravidel projektu. Pokaždé, když vytvoří soubor objektu, kompilátor C/C++ sloučí informace o ladění do *VC \< x>. pdb*. Takže i v případě, že každý zdrojový soubor obsahuje společné hlavičkové soubory, jako * \<>Windows. h *, je definice typedef z těchto hlaviček uložen pouze jednou, nikoli v každém souboru objektu. Vložené informace obsahují informace o typu, ale neobsahují informace o symbolech, jako jsou definice funkce.
+    Soubor *VC \<x> . pdb* ukládá všechny informace o ladění pro jednotlivé soubory objektů a je umístěn ve stejném adresáři jako soubor pravidel projektu. Pokaždé, když vytvoří soubor objektu, kompilátor C/C++ sloučí informace o ladění do *VC \<x> . pdb*. Takže i když každý zdrojový soubor obsahuje společné hlavičkové soubory *\<windows.h>* , jako je, definice typedef z těchto hlaviček se ukládají pouze jednou, nikoli v každém souboru objektu. Vložené informace obsahují informace o typu, ale neobsahují informace o symbolech, jako jsou definice funkce.
 
-  - *\<projekt>. pdb*
+  - *\<project>soubor. pdb*
 
-    * \< Projekt> soubor. pdb* ukládá všechny informace o ladění pro soubor *. exe* projektu a je umístěn v podadresáři *\debug.* . * \< Projekt> soubor. pdb* obsahuje úplné informace o ladění, včetně prototypů funkcí, nikoli jenom informace o typu nalezené v *VC \< x>. pdb*.
+    Soubor * \<project> . pdb* uchovává všechny informace o ladění pro soubor *. exe* projektu a je umístěn v podadresáři *\debug.* . Soubor * \<project> . pdb* obsahuje úplné informace o ladění, včetně prototypů funkcí, nikoli jenom informace o typu nalezené v souboru *VC \<x> . pdb*.
 
-  Soubory *VC \< x>. pdb* i * \< projekt>. pdb* umožňují přírůstkové aktualizace. Linker také vloží cestu k souborům *PDB* v souboru *. exe* nebo *. dll* , který vytvoří.
+  Soubory *VC \<x> . pdb* i * \<project> . pdb* umožňují přírůstkové aktualizace. Linker také vloží cestu k souborům *PDB* v souboru *. exe* nebo *. dll* , který vytvoří.
 
 - <a name="use-dumpbin-exports"></a>Exportní tabulky knihovny DLL
 
@@ -206,7 +206,7 @@ Sestavte pomocí **/Debug** a vytvořte soubor *. pdb* . Můžete vytvářet apl
 
 ### <a name="web-applications"></a>Webové aplikace
 
-Nastavte soubor *Web. config* aplikace ASP.NET na režim ladění. Režim ladění způsobí, že technologie ASP.NET generuje dynamicky generované soubory a umožňuje ladicímu program připojit k aplikaci technologie ASP.NET. Sada Visual Studio nastaví tuto automaticky při spuštění ladění, pokud jste vytvořili projekt ze šablony webových projektů.
+Nastavte soubor *web.config* vaší aplikace ASP.NET na režim ladění. Režim ladění způsobí, že technologie ASP.NET generuje dynamicky generované soubory a umožňuje ladicímu program připojit k aplikaci technologie ASP.NET. Sada Visual Studio nastaví tuto automaticky při spuštění ladění, pokud jste vytvořili projekt ze šablony webových projektů.
 
 ## <a name="manage-symbols-while-debugging"></a>Správa symbolů během ladění
 
@@ -245,7 +245,7 @@ Pokud k tomu dojde, ladicí program zobrazí **Nenačtené symboly** nebo **Nena
 **Chcete-li použít stránku dokumentu Nenačtené symboly, které vám pomůžou najít a načíst chybějící symboly:**
 
 - Chcete-li změnit cestu pro hledání, vyberte nevybranou cestu nebo vyberte možnost **Nová cesta** nebo **Nová cesta VSTS** a zadejte nebo vyberte novou cestu. Vyberte **načíst** pro opětovné hledání cest a načtení souboru symbolů, pokud je nalezen.
-- Pokud chcete přepsat všechny možnosti symbolu a opakovat cesty hledání, vyberte **Procházet a najít \<>název souboru **. Soubor symbolů se načte, pokud se najde, nebo se otevře **Průzkumník souborů** , abyste mohli ručně vybrat soubor symbolů.
+- Pokud chcete přepsat všechny možnosti symbolu a opakovat cesty hledání, vyberte **Procházet a najít \<executable-name> **. Soubor symbolů se načte, pokud se najde, nebo se otevře **Průzkumník souborů** , abyste mohli ručně vybrat soubor symbolů.
 - Chcete-li **Options**otevřít  >  **Debugging**  >  stránku**symboly** ladění možností, vyberte možnost **změnit nastavení symbolu**.
 - Chcete-li znovu zobrazit zpětný překlad v novém okně, vyberte možnost **Zobrazit zpětný překlad**, nebo vyberte možnost **dialog možností** pro nastavení možnosti, aby bylo možné vždy zobrazit zpětný překlad, pokud nejsou nalezeny zdrojové soubory nebo soubory symbolů.
 - Chcete-li zobrazit prohledávané umístění a výsledek, rozbalte položku **informace o načtení symbolů**.

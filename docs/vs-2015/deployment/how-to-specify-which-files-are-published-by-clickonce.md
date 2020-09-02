@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení souborů k publikování aplikací ClickOnce | Dokumentace Microsoftu'
+title: 'Postupy: určení souborů, které jsou publikovány pomocí technologie ClickOnce | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -19,102 +19,102 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e0ef4264629e40380f12fb07623bb9274547713c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441576"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64812947"
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>Postupy: Určení souborů k publikování aplikací ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] spolu s aplikace jsou nasazené aplikace, všechny kód soubory v projektu. V některých případech se nemusí nebo potřebujete publikovat určité soubory nebo můžete chtít nainstalovat určité soubory na základě podmínek. Visual Studio umožňuje vyloučit soubory, soubory označit jako datové soubory nebo požadavky a vytvářet skupiny podmíněné instalačním souborům.  
+Při publikování [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace jsou do aplikace nasazeny i všechny soubory neobsahující kód v projektu. V některých případech možná nebudete chtít ani potřebovat publikovat určité soubory nebo můžete chtít nainstalovat určité soubory na základě podmínek. Visual Studio poskytuje možnosti pro vyloučení souborů, označování souborů jako datových souborů nebo požadavků a vytváření skupin souborů pro podmíněnou instalaci.  
   
- Soubory pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace se spravují v **soubory aplikace** dialogové okno, přístupné **publikovat** stránku **Návrháře projektu**.  
+ Soubory pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci jsou spravovány v dialogovém okně **soubory aplikace** , které jsou přístupné ze stránky **publikovat** v **Návrháři projektu**.  
   
- Standardně je skupina jeden soubor s názvem **(povinné)** . Můžete vytvořit další skupiny souborů a k nim přiřadíte soubory. Nelze změnit **skupina pro stažení** pro soubory, které jsou požadovány pro spuštění aplikace. Například .exe nebo soubory aplikace s označením datových souborů musí patřit do **(povinné)** skupiny.  
+ Zpočátku je k dispozici jedna skupina souborů s názvem **(požadováno)**. Můžete vytvořit další skupiny souborů a přiřadit k nim soubory. Nemůžete změnit **skupinu pro stahování** souborů, které jsou nutné ke spuštění aplikace. Například soubory. exe nebo soubory aplikace označené jako datové soubory musí patřit do skupiny **(povinné)** .  
   
- Výchozí stav publikování je označené hodnotou souboru **(automaticky)** . Například .exe aplikace je ve stavu publikovat **Include (Auto)** ve výchozím nastavení.  
+ Výchozí hodnota stavu publikování souboru je označena jako **(auto)**. Například soubor. exe aplikace má ve výchozím nastavení stav publikování **include (auto)** .  
   
- Soubory s **akce sestavení** vlastnost nastavena na hodnotu **obsahu** jsou označeny jako soubory aplikace a budou označeny jako zahrnuté ve výchozím nastavení. Můžete být zahrnuty, vyloučit nebo označeny jako datové soubory. Výjimky jsou následující:  
+ Soubory s vlastností **Akce sestavení** nastavenou na **obsah** jsou označeny jako soubory aplikace a budou označeny jako zahrnuté ve výchozím nastavení. Můžou být zahrnuté, vyloučené nebo označené jako datové soubory. Výjimky jsou následující:  
   
-- Datové soubory, jako je SQL databáze (MDF a MDB) a soubory XML se označí jako data souborů ve výchozím nastavení.  
+- Datové soubory, například SQL Database (. mdf a. mdb) a soubory XML, budou ve výchozím nastavení označeny jako datové soubory.  
   
-- Když přidáte odkaz na, jsou odkazy na sestavení (soubory .dll) určené následujícím způsobem: Pokud **Kopírovat místně** je **False**, je označena ve výchozím nastavení jako požadované sestavení (**předpoklad (automaticky)** ), který musí být k dispozici v mezipaměti GAC, předtím, než se aplikace nainstaluje. Pokud **Kopírovat místně** je **True**, je sestavení označeno ve výchozím nastavení jako sestavení aplikace (**Include (Auto)** ) a budou zkopírovány do složky aplikace během instalace. Odkaz modelu COM se zobrazí v **soubory aplikace** dialogové okno pole (jako soubor .ocx) pouze v případě jeho **izolované** je nastavena na **True**. Ve výchozím nastavení bude součástí.  
+- Odkazy na sestavení (soubory. dll) jsou označeny následujícím způsobem při přidání odkazu: je-li **místní kopírování** **NEPRAVDA**, je označení standardně označeno jako požadované sestavení (**předpoklad (auto)**), které musí být přítomno v globální mezipaměti sestavení (GAC) před instalací aplikace. Pokud je **kopie Local** nastavená na **true**, sestavení je označeno jako sestavení aplikace (**include (auto)**) a zkopíruje se do složky aplikace při instalaci. Odkaz COM se zobrazí v dialogovém okně **soubory aplikace** (jako soubor. ocx) pouze v případě, že je jeho vlastnost **Isolated** nastavena na **hodnotu true**. Ve výchozím nastavení bude součástí.  
   
-### <a name="to-add-files-to-the-application-files-dialog-box"></a>Chcete-li přidat soubory do dialogového okna aplikace soubory  
+### <a name="to-add-files-to-the-application-files-dialog-box"></a>Přidání souborů do dialogového okna soubory aplikace  
   
-1. Vyberte soubor dat v **Průzkumníka řešení**.  
+1. Vyberte datový soubor v **Průzkumník řešení**.  
   
-2. V okně Vlastnosti změňte **akce sestavení** vlastnost **obsahu** hodnotu.  
+2. V okno Vlastnosti změňte vlastnost **Akce sestavení** na hodnotu **obsahu** .  
   
 ### <a name="to-exclude-files-from-clickonce-publishing"></a>Vyloučení souborů z publikování ClickOnce  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **soubory aplikace** tlačítko Otevřít **soubory aplikace** dialogové okno.  
+3. Kliknutím na tlačítko **soubory aplikace** otevřete dialogové okno **soubory aplikace** .  
   
-4. V **soubory aplikace** dialogovém okně vyberte soubor, který chcete vyloučit.  
+4. V dialogovém okně **soubory aplikace** vyberte soubor, který chcete vyloučit.  
   
-5. V **stav publikování** pole, vyberte **vyloučit** z rozevíracího seznamu.  
+5. V poli **stav publikování** v rozevíracím seznamu vyberte **vyloučit** .  
   
-### <a name="to-mark-files-as-data-files"></a>K označení souborů jako datových souborů  
+### <a name="to-mark-files-as-data-files"></a>Označení souborů jako datových souborů  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **soubory aplikace** tlačítko Otevřít **soubory aplikace** dialogové okno.  
+3. Kliknutím na tlačítko **soubory aplikace** otevřete dialogové okno **soubory aplikace** .  
   
-4. V **soubory aplikace** dialogovém okně vyberte soubor, který chcete označit jako data.  
+4. V dialogovém okně **soubory aplikace** vyberte soubor, který chcete označit jako data.  
   
-5. V **stav publikování** pole, vyberte **datový soubor** z rozevíracího seznamu.  
+5. V poli **stav publikování** vyberte v rozevíracím seznamu **datový soubor** .  
   
-### <a name="to-mark-files-as-prerequisites"></a>K označení souborů jako požadavky  
+### <a name="to-mark-files-as-prerequisites"></a>Označení souborů jako požadovaných součástí  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **soubory aplikace** tlačítko Otevřít **soubory aplikace** dialogové okno.  
+3. Kliknutím na tlačítko **soubory aplikace** otevřete dialogové okno **soubory aplikace** .  
   
-4. V **soubory aplikace** dialogového okna, vyberte sestavení aplikace (soubor .dll), kterou chcete označit jako předpoklad. Všimněte si, že vaše aplikace musí mít odkaz na sestavení aplikace v pořadí, aby se zobrazí v seznamu.  
+4. V dialogovém okně **soubory aplikace** vyberte sestavení aplikace (soubor. dll), které chcete označit jako požadavek. Všimněte si, že aplikace musí mít odkaz na sestavení aplikace, aby se zobrazila v seznamu.  
   
-5. V **stav publikování** pole, vyberte **požadavků** z rozevíracího seznamu.  
+5. V poli **stav publikování** v rozevíracím seznamu vyberte **požadované součásti** .  
   
-### <a name="to-add-a-new-file-group"></a>Chcete-li přidat novou skupinu souborů  
+### <a name="to-add-a-new-file-group"></a>Přidání nové skupiny souborů  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **soubory aplikace** tlačítko Otevřít **soubory aplikace** dialogové okno.  
+3. Kliknutím na tlačítko **soubory aplikace** otevřete dialogové okno **soubory aplikace** .  
   
-4. V **soubory aplikace** dialogové okno, vyberte **skupiny** pole pro soubor, který chcete zahrnout do nové skupiny.  
+4. V dialogovém okně **soubory aplikace** vyberte pole **Skupina** pro soubor, který chcete zahrnout do nové skupiny.  
   
     > [!NOTE]
-    > Soubory musí mít **akce sestavení** vlastnost nastavena na hodnotu **obsahu** před názvy souborů se zobrazí v **soubory aplikace** dialogové okno.  
+    > Soubory musí mít vlastnost **Akce sestavení** nastavenou na **obsah** před tím, než se názvy souborů zobrazí v dialogovém okně **soubory aplikace** .  
   
-5. V **skupina pro stažení** pole, vyberte  **\<nový … >** z rozevíracího seznamu.  
+5. V poli **skupina pro stahování** vyberte v **\<New...>** rozevíracím seznamu.  
   
-6. V **nová skupina** dialogové okno, zadejte název pro skupinu a potom klikněte na tlačítko **OK**.  
+6. V dialogovém okně **Nová skupina** zadejte název skupiny a klikněte na **OK**.  
   
 ### <a name="to-add-a-file-to-a-group"></a>Přidání souboru do skupiny  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **soubory aplikace** tlačítko Otevřít **soubory aplikace** dialogové okno.  
+3. Kliknutím na tlačítko **soubory aplikace** otevřete dialogové okno **soubory aplikace** .  
   
-4. V **soubory aplikace** dialogové okno, vyberte **skupiny** pole pro soubor, který chcete zahrnout do nové skupiny.  
+4. V dialogovém okně **soubory aplikace** vyberte pole **Skupina** pro soubor, který chcete zahrnout do nové skupiny.  
   
-5. V **skupina pro stažení** vyberte skupinu z rozevíracího seznamu.  
+5. V poli **skupina pro stahování** vyberte skupinu z rozevíracího seznamu.  
   
     > [!NOTE]
-    > Nelze změnit **skupina pro stažení** pro soubory, které jsou požadovány pro spuštění aplikace.  
+    > Nemůžete změnit **skupinu pro stahování** souborů, které jsou nutné ke spuštění aplikace.  
   
 ## <a name="see-also"></a>Viz také  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   

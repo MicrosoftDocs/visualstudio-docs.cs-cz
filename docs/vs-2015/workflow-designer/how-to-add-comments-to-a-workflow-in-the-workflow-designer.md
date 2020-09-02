@@ -13,14 +13,14 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d775c79cc7abdf6a66b1174ae625ca468f0764fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663453"
 ---
-# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Postupy: Přidání komentářů k pracovnímu postupu v Návrhář postupu provádění
-Aby bylo možné vytvořit větší a složitější pracovní postupy, [!INCLUDE[net_v45](../includes/net-v45-md.md)] umožňuje vývojářům přidávat poznámky k následujícím typům položek v Návrháři:
+# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Postupy: Přidání komentářů do pracovního postupu v návrháři postupu provádění
+Aby bylo možné vytvořit větší a složitější pracovní postupy, [!INCLUDE[net_v45](../includes/net-v45-md.md)] vývojářům umožňuje přidávat poznámky k následujícím typům položek v Návrháři:
 
 - <xref:System.Activities.Activity>
 
@@ -28,7 +28,7 @@ Aby bylo možné vytvořit větší a složitější pracovní postupy, [!INCLUD
 
 - <xref:System.Activities.Statements.Transition>
 
-- Třídy odvozené od <xref:System.Activities.Statements.FlowNode>
+- Třídy odvozené z <xref:System.Activities.Statements.FlowNode>
 
 - <xref:System.Activities.Variable>
 

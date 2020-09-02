@@ -1,5 +1,5 @@
 ---
-title: 'Testovací oblast 1: Přidání nebo otevření ze správy zdrojových kódů | Dokumentace Microsoftu'
+title: 'Testovací oblast 1: přidat k otevření ze správy zdrojového kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,78 +12,78 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e7b65eae0dcd71c2ad1bb3d72bf08ea90e69036a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441251"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64814590"
 ---
-# <a name="test-area-1-add-toopen-from-source-control"></a>Testovací oblast 1: Přidat / otevřít ze správy zdrojového kódu
+# <a name="test-area-1-add-toopen-from-source-control"></a>Testovací oblast 1: přidat do nebo otevřít ze správy zdrojového kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tento zdroj – ovládací prvek modulu plug-in testu pozadí oblasti uvedení řešení nebo projektů pod správou zdrojových kódů a načítání ze správy zdrojového kódu.  
+Tato testovací oblast modulu plug-in zdrojového ovládacího prvku pokrývá umístění řešení nebo projektů pod správou zdrojových kódů a jejich načítání ze správy zdrojového kódu.  
   
-## <a name="command-menu-access"></a>Přístup do příkazu nabídky  
- Následující [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrované vývojové prostředí nabídky cesty se používají v testovacích případů:  
+## <a name="command-menu-access"></a>Přístup k nabídce příkazů  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]V testovacích případech se používají následující cesty nabídky integrovaného vývojového prostředí:  
   
-- Pro [!INCLUDE[vsvss](../../includes/vsvss-md.md)], otevřít ze správy zdrojového kódu: **Soubor**, **otevřít**, **projektu**/**řešení**; hledejte v [!INCLUDE[vsvss](../../includes/vsvss-md.md)] umístění.  
+- Pro [!INCLUDE[vsvss](../../includes/vsvss-md.md)] otevřete ze správy zdrojového kódu: **soubor**, **otevřít**, **Project** / **řešení**projektu; Podívejte se do [!INCLUDE[vsvss](../../includes/vsvss-md.md)] umístění.  
   
-- Pro další ovládací prvek moduly plug-in zdrojového kódu otevřete ze správy zdrojového kódu: **Soubor**, **správy zdrojového kódu**, **otevřít ze správy zdrojových kódů**.  
+- Pro jiné moduly plug-in správy zdrojového kódu otevřete ze správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Otevřít ze správy zdrojového kódu**.  
   
-- Přidáte do správy zdrojového kódu: **Soubor**, **správy zdrojového kódu**, **přidat řešení do soubor správy zdrojového kódu**, **správy zdrojového kódu**, **přidat do správy zdrojových kódůvybranýchprojektů**.  
+- Přidat do správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Přidat řešení do souboru správy zdrojového**kódu, **Správa zdrojového kódu**, **Přidat vybrané projekty do správy zdrojových kódů**.  
   
-- Místní nabídky (projekt nebo řešení), **přidat řešení do správy zdrojových kódů**.  
+- Místní nabídka (projekt/řešení), **Přidat řešení do správy zdrojového kódu**.  
   
-- Přidáte ze správy zdrojového kódu: **Soubor**, **správy zdrojového kódu**, **přidat projekt ze správy zdrojových kódů**.  
+- Přidat ze správy zdrojového kódu: **soubor**, Správa **zdrojového kódu**, **Přidat projekt ze správy zdrojových kódů**.  
   
-- Pro [!INCLUDE[vsvss](../../includes/vsvss-md.md)], přidejte ze zdrojového ovládacího prvku je k dispozici také z **souboru**, **přidat**, **existující projekt**; hledejte v [!INCLUDE[vsvss](../../includes/vsvss-md.md)] umístění.  
+- Pro [!INCLUDE[vsvss](../../includes/vsvss-md.md)] je k dispozici také příkaz Přidat ze správy zdrojového kódu ze **souboru**, **Přidat**, **existující projekt**; Podívejte se do [!INCLUDE[vsvss](../../includes/vsvss-md.md)] umístění.  
   
     > [!NOTE]
-    > Cestu k místnímu souboru nebo místní služby IIS (web server) je možné v tomto testu.  
+    > V tomto testu lze použít cestu k místnímu souboru nebo místní službě IIS (webový server).  
   
 ## <a name="expected-behavior"></a>Očekávané chování  
   
-- Pro každý typ podporovaný projektu by měl uživatel možné "Přidat" a "Otevřít v" správy zdrojového kódu.  
+- U každého podporovaného typu projektu by měl být uživatel schopný "přidat do" a "otevřít z" správy zdrojového kódu.  
   
-- Při přidání projektu do správy zdrojových kódů, odpovídající \< *ProjectName*> se vytvoří soubor .vspscc (informačního souboru projektu). Obsahuje informace o připojení a seznam souborech vyloučení. Neodstraňujte tento soubor, protože obsahuje informace specifické pro projekt.  
+- Když je projekt přidán do správy zdrojových kódů, \<*ProjectName*> je vytvořen odpovídající soubor. vspscc (soubor s nápovědou projektu). Obsahuje seznam souborů vyloučení a informace o připojení. Tento soubor neodstraňujte, protože obsahuje informace specifické pro projekt.  
   
-- Při přidání řešení do správy zdrojových kódů, odpovídající \< *SolutionName*> se vytvoří soubor .vssscc (triple S). Textový soubor obsahuje informace o připojení a soubor seznamu vyloučení, podobně jako do informačního souboru projektu. Tento soubor je dočasný a existuje pouze v databázi správy zdrojových kódů.  
+- Při přidání řešení do správy zdrojového kódu \<*SolutionName*> se vytvoří odpovídající soubor. vssscc (troje). Textový soubor obsahuje informace o připojení a seznam souborů vyloučení, podobně jako soubor nápovědy k projektu. Tento soubor je dočasný a existuje pouze v databázi správy zdrojů.  
   
-- Při otevření řešení ze správy zdrojového kódu \< *SolutionName*> soubor .vsscc (double S), která existuje pouze v databázi správy zdrojových kódů, je vytvořeno místně do dočasného souboru. Tento soubor obsahuje cestu ze složky řešení připojení do souboru řešení. Tento soubor je dočasný a místní kopie se odstraní po dokončení operace "Otevřít ze správy zdrojového kódu".  
+- Když je řešení otevřeno ze správy zdrojového kódu, \<*SolutionName*> soubor. vsscc (Double S), který existuje pouze v databázi správy zdrojů, je místně vytvořen v dočasném souboru. Tento soubor obsahuje cestu ze složky pro připojení řešení k souboru řešení. Tento soubor je dočasný a po dokončení operace "otevřít ze správy zdrojového kódu" je místní kopie odstraněna.  
   
-- Po přidání projektu do správy zdrojového kódu můžete provádět všechny akce správy zdrojů na něm (prohlédněte si Get a tak dále).  
+- Po přidání projektu do správy zdrojového kódu můžete provádět libovolné akce správy zdrojového kódu (rezervovat, získat a tak dále).  
   
 ## <a name="test-cases"></a>Testovací případy  
- Tady jsou konkrétní testovací případy pro přidání / otevřít ze správy zdrojových kódů testovací oblast.  
+ Níže jsou uvedené konkrétní testovací případy pro přidání do a otevření z testovací oblasti správy zdrojového kódu.  
   
-### <a name="case-1a-add-solution-to-source-control"></a>Případu 1a: Přidat řešení do správy zdrojového kódu  
+### <a name="case-1a-add-solution-to-source-control"></a>Případ 1a: Přidání řešení do správy zdrojového kódu  
  Tento testovací případ se zaměřuje na přidání řešení do správy zdrojového kódu.  
   
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|  
+|Akce|Testovací kroky|Očekávané výsledky k ověření|  
 |------------|----------------|--------------------------------|  
-|Přidat řešení obsahující klientský projekt do správy zdrojového kódu|1.  Vytvoření projektu klienta.<br />2.  Přidat řešení do správy zdrojového kódu (**souboru**, **správy zdrojových kódů**, **přidat řešení do správy zdrojových kódů**).|Řešení nebo projektu byl přidán do správy zdrojového kódu.|  
-|Přidat řešení obsahující systému souborů nebo místní služby IIS webového projektu do správy zdrojového kódu|1.  Vytvořte místní projekt webové služby IIS nebo systému souborů (pomocí tlačítka Procházet tak, aby odkazoval na umístění projektu; cesta Určuje, jaký typ webového projektu je vytvořen).<br />2.  Přidat řešení do správy zdrojového kódu (**souboru**, **správy zdrojových kódů**, **přidat řešení do správy zdrojových kódů**).|Řešení nebo projektu byl přidán do správy zdrojového kódu.|  
-|Přidat řešení obsahující vzdálené lokality webového projektu do správy zdrojového kódu|1.  Vytvořte projekt vzdáleného webového serveru.<br />2.  Přidat řešení do správy zdrojového kódu (**souboru**, **správy zdrojových kódů**, **přidat řešení do správy zdrojových kódů**).<br />3.  Klikněte na tlačítko **OK** v dialogovém okně upozornění přístup FrontPage.|Řešení byl přidán do správy zdrojového kódu.<br /><br /> Projekt vzdálené lokality není pod správou zdrojových kódů. (Projekty vzdálené lokality musí být řízený z vlastní server služby IIS.)|  
-|Přidání řešení jednoho projektu do zdrojového ovládacího prvku pomocí **přidat vybrané projekty do správy zdrojových kódů**.|1.  Vytvoření řešení jednoho projektu.<br />2.  Přidat jenom řešení do správy zdrojového kódu jako výběr (**souboru**, **správy zdrojových kódů**, **přidat vybrané projekty do správy zdrojových kódů**). Pokud tento krok úspěšný, pokračujte dalším krokem.<br />3.  Přidat projekt do správy zdrojového kódu jako výběr (**souboru**, **správy zdrojových kódů**, **přidat vybrané projekty do správy zdrojových kódů**).<br />4.  Klikněte na tlačítko **Ano** přidat projekt do stejného umístění.<br />5.  Klikněte na tlačítko **rezervovat** v **zkontrolujte navýšení kapacity pro úpravy** dialogové okno.|`Result from Step 2:`<br /><br /> Projekt a všechny soubory v projektu mají rezervovaný si zdrojový ovládací prvek indikátor a zobrazí "není pod správou zdrojových kódů".<br /><br /> `Result from Step 5:`<br /><br /> Soubor projektu a řešení jsou ve stejné složce ve správě zdrojového kódu.|  
-|Zrušit přidávání řešení do správy zdrojového kódu|1.  Vytvoření řešení jednoho projektu.<br />2.  Pokus o přidání projektu a řešení do správy zdrojového kódu. Pokud tento krok úspěšný, pokračujte dalším krokem.<br />3.  Zrušte, jakmile se v systému správy zdrojového kódu.|`Result from Step 2:`<br /><br /> Dialogové okno sady zdroj umístění projektu ovládacího prvku se vyskytuje jenom jednou.<br /><br /> `Result from Step 3:`<br /><br /> Projektu přidat zrušené, projekt nebo řešení není pod správou zdrojových kódů a všechny přidat do zdrojového ovládacího prvku nabídky stále k dispozici.|  
+|Přidat řešení obsahující klientský projekt do správy zdrojového kódu|1. Vytvořte projekt klienta.<br />2. Přidejte řešení do správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **přidejte řešení do správy zdrojových kódů**).|Řešení/projekt bylo přidáno do správy zdrojového kódu.|  
+|Přidání řešení obsahujícího systém souborů nebo místní webový projekt služby IIS do správy zdrojového kódu|1. Vytvořte systém souborů nebo místní webový projekt služby IIS (pomocí tlačítka Procházet přejděte na umístění projektu; cesta Určuje, který typ webového projektu je vytvořen).<br />2. Přidejte řešení do správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **přidejte řešení do správy zdrojových kódů**).|Řešení/projekt bylo přidáno do správy zdrojového kódu.|  
+|Přidat řešení obsahující webový projekt vzdálené lokality do správy zdrojového kódu|1. Vytvořte webový projekt vzdálené lokality.<br />2. Přidejte řešení do správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **přidejte řešení do správy zdrojových kódů**).<br />3. klikněte na tlačítko **OK** v dialogovém okně upozornění přístupu aplikace FrontPage.|Řešení bylo přidáno do správy zdrojového kódu.<br /><br /> Vzdálený webový projekt není pod správou zdrojových kódů. (Vzdálené projekty webu musí být řízené z vlastního serveru služby IIS.)|  
+|Přidejte jedno řešení projektu do správy zdrojových kódů pomocí **Přidat vybrané projekty do správy zdrojového kódu**.|1. Vytvořte jedno projektové řešení.<br />2. přidejte pouze řešení do správy zdrojového kódu jako výběr (**soubor**, Správa **zdrojového kódu**, **Přidat vybrané projekty do správy zdrojových kódů**). V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />3. Přidejte projekt do správy zdrojových kódů jako výběr (**soubor**, Správa **zdrojového kódu**, **přidejte vybrané projekty do správy zdrojových kódů**).<br />4. Chcete-li přidat projekt do stejného umístění, klikněte na tlačítko **Ano** .<br />5. klikněte na možnost **Rezervovat** v dialogovém okně **rezervovat pro úpravy** .|`Result from Step 2:`<br /><br /> Projekt a všechny soubory v rámci projektu mají kontroler zdrojového kódu, který obsahuje popis "není pod správou zdrojových kódů".<br /><br /> `Result from Step 5:`<br /><br /> Soubor projektu a řešení jsou ve stejné složce ve správě zdrojového kódu.|  
+|Zrušení přidání řešení do správy zdrojového kódu|1. Vytvořte jedno projektové řešení.<br />2. pokus o přidání projektu a řešení do správy zdrojového kódu. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />3. po dokončení v systému správy zdrojů klikněte na zrušit.|`Result from Step 2:`<br /><br /> Dialogové okno nastavení správy zdrojového umístění projektu se zobrazí pouze jednou.<br /><br /> `Result from Step 3:`<br /><br /> Projekt přidat zrušeno, projekt/řešení není pod správou zdrojových kódů a všechny nabídky přidat do správy zdrojového kódu jsou stále k dispozici.|  
   
-### <a name="case-1b-open-solution-from-source-control"></a>1b případu. Otevřít řešení ze správy zdrojového kódu  
+### <a name="case-1b-open-solution-from-source-control"></a>Případ 1b. Otevřít řešení ze správy zdrojového kódu  
  Tento testovací případ se zaměřuje na otevírání řešení ze správy zdrojového kódu.  
   
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|  
+|Akce|Testovací kroky|Očekávané výsledky k ověření|  
 |------------|----------------|--------------------------------|  
-|Otevřete řešení obsahující klientský projekt ze správy zdrojového kódu|1.  Vytvoření projektu klienta.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Zavřete řešení.<br />4.  Otevřete řešení ze správy zdrojového kódu do nového umístění.|Řešení/projekt otevřít ze správy zdrojového kódu.|  
-|Otevřete řešení obsahující místní nebo IIS webového projektu ze správy zdrojového kódu|1.  Vytvoření místní nebo projektu webové služby IIS.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Zavřete řešení.<br />4.  Otevřete řešení ze správy zdrojového kódu do nového umístění.|Řešení/projekt otevřít ze správy zdrojového kódu.|  
-|Otevřete řešení obsahující vzdálené lokality webového projektu ze správy zdrojového kódu|1.  Vytvořte projekt vzdáleného webového serveru.<br />2.  Přidáte řešení do správy zdrojového kódu. Pokud tento krok úspěšný, pokračujte dalším krokem.<br />3.  Zavřete řešení.<br />4.  Otevřete řešení ze správy zdrojového kódu do nového umístění.|`Result from Step 2:`<br /><br /> Vzdálený webový server není pod správou zdrojových kódů.<br /><br /> `Result from Step 4:`<br /><br /> Otevřít řešení ze správy zdrojového kódu.<br /><br /> Načtení projektu vzdálené lokality, ale není pod správou zdrojových kódů.|  
+|Otevření řešení obsahujícího klientský projekt ze správy zdrojového kódu|1. Vytvořte projekt klienta.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Zavřete řešení.<br />4. Otevřete řešení ze správy zdrojového kódu do nového umístění.|Řešení/projekt bylo otevřeno ze správy zdrojového kódu.|  
+|Otevření řešení obsahujícího místní webový projekt nebo webového projektu služby IIS ze správy zdrojového kódu|1. Vytvořte místní webový projekt nebo web služby IIS.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Zavřete řešení.<br />4. Otevřete řešení ze správy zdrojového kódu do nového umístění.|Řešení/projekt bylo otevřeno ze správy zdrojového kódu.|  
+|Otevření řešení, které obsahuje webový projekt vzdálené lokality ze správy zdrojového kódu|1. Vytvořte webový projekt vzdálené lokality.<br />2. Přidejte řešení do správy zdrojového kódu. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />3. Zavřete řešení.<br />4. Otevřete řešení ze správy zdrojového kódu do nového umístění.|`Result from Step 2:`<br /><br /> Web vzdáleného webu není pod správou zdrojových kódů.<br /><br /> `Result from Step 4:`<br /><br /> Řešení se otevřelo ze správy zdrojového kódu.<br /><br /> Je načten projekt vzdálené lokality, ale není pod správou zdrojových kódů.|  
   
-### <a name="case-1c-add-solution-from-source-control"></a>Případ 1c: Přidat řešení ze správy zdrojového kódu  
- Tento testovací případ se zaměřuje na přidání řešení ze správy zdrojového kódu.  
+### <a name="case-1c-add-solution-from-source-control"></a>Případ 1C: Přidání řešení ze správy zdrojového kódu  
+ Tento testovací případ se zaměřuje na přidávání řešení ze správy zdrojového kódu.  
   
-|Akce|Testovací kroky|Chcete-li ověřit očekávané výsledky|  
+|Akce|Testovací kroky|Očekávané výsledky k ověření|  
 |------------|----------------|--------------------------------|  
-|Přidejte do prázdného řešení – jednoho projektu řešení|1.  Vytvoření řešení jednoho projektu.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Zavřete řešení.<br />4.  Vytvoření druhého prázdné řešení.<br />5.  Přidat dříve řízené řešení ze správy zdrojových kódů (**souboru**, **správy zdrojových kódů**, **přidat projekt ze správy zdrojových kódů**).|Přidání projektu se zobrazí v **Průzkumníka řešení** a se změnami.|  
-|Přidat do řešení pomocí jednoho projektu – jeden projekt|1.  Vytvořte řešení pomocí jednoho projektu.<br />2.  Přidáte řešení do správy zdrojového kódu.<br />3.  Zavřete řešení.<br />4.  Vytvoření druhého prázdné řešení.<br />5.  Přidat dříve řízené řešení ze správy zdrojových kódů (**souboru**, **správy zdrojových kódů**, **přidat projekt ze správy zdrojových kódů**).|Přidání projektu se zobrazí v **Průzkumníka řešení** a se změnami.|  
-|Přidat do řešení – řešení do správy zdrojového kódu podle výběru|1.  Vytvoření řešení s projektem.<br />2.  Přidáte jenom řešení do správy zdrojového kódu jako výběr. Pokud tento krok úspěšný, pokračujte dalším krokem.<br />3.  Zavřete řešení.<br />4.  Vytvoření nového řešení.<br />5.  Přidat dříve řízené řešení ze správy zdrojových kódů (**souboru**, **správy zdrojových kódů**, **přidat projekt ze správy zdrojových kódů**).|`Result from Step 2:`<br /><br /> Projekt není pod správou zdrojových kódů.<br /><br /> `Result from Step 5:`<br /><br /> Pokud první řešení mělo položky řešení, není možné je přidat ze správy zdrojového kódu, takže se nezobrazí.<br /><br /> Projekt z první řešení se zobrazí jako nedostupné.|  
+|Přidat do prázdného řešení – jediné řešení projektu|1. Vytvořte jedno projektové řešení.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Zavřete řešení.<br />4. Vytvořte druhé prázdné řešení.<br />5. Přidejte dříve kontrolované řešení ze správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **Přidat projekt ze správy zdrojových kódů**).|Přidaný projekt se zobrazí v **Průzkumník řešení** a je vrácen se změnami.|  
+|Přidat do řešení pomocí jednoho projektu – jeden projekt|1. Vytvořte řešení pomocí jednoho projektu.<br />2. Přidejte řešení do správy zdrojového kódu.<br />3. Zavřete řešení.<br />4. Vytvořte druhé prázdné řešení.<br />5. Přidejte dříve kontrolované řešení ze správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **Přidat projekt ze správy zdrojových kódů**).|Přidaný projekt se zobrazí v **Průzkumník řešení** a je vrácen se změnami.|  
+|Přidat do řešení – řešení přidané do správy zdrojového kódu podle výběru|1. Vytvořte řešení pomocí projektu.<br />2. jako výběr přidejte pouze řešení do správy zdrojového kódu. V případě úspěšného provedení tohoto kroku pokračujte dalším krokem.<br />3. Zavřete řešení.<br />4. Vytvořte nové řešení.<br />5. Přidejte dříve kontrolované řešení ze správy zdrojového kódu (**soubor**, Správa **zdrojového kódu**, **Přidat projekt ze správy zdrojových kódů**).|`Result from Step 2:`<br /><br /> Projekt není pod správou zdrojových kódů.<br /><br /> `Result from Step 5:`<br /><br /> Pokud má první řešení položky řešení, nelze je přidat ze správy zdrojových kódů, takže se nezobrazí.<br /><br /> Projekt z prvního řešení se jeví jako nedostupný.|  
   
 ## <a name="see-also"></a>Viz také  
  [Testovací příručka pro moduly plug-in správy zdrojového kódu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)
