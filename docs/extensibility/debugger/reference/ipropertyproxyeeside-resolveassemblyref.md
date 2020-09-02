@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyeeSide::ResolveAssemblyRef | Dokumenty společnosti Microsoft
+title: 'IPropertyProxyEESide:: ResolveAssemblyRef | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c54945b0c89fb9608fab6aa70dcc63a7c6ae42df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714879"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
@@ -49,25 +49,25 @@ int ResolveAssemblyRef(
 
 ## <a name="parameters"></a>Parametry
 `assemName`\
-[v] Název sestavení, které chcete vyřešit.
+pro Název sestavení, které chcete přeložit.
 
 `assemBytes`\
-[out] Vrátí objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující bajty sestavení přidružené k odkazu.
+mimo Vrátí objekt [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) obsahující bajty sestavení přidružené k odkazu.
 
 `assemPdb`\
-[out] Vrátí `IEEDataStorage` objekt obsahující data úložiště symbolů spojená s tímto odkazem.
+mimo Vrátí `IEEDataStorage` objekt obsahující data úložiště symbolů přidružená k tomuto odkazu.
 
 `assemLocation`\
-[out] Vrátí umístění cesty tohoto odkazu.
+mimo Vrátí umístění cesty tohoto odkazu.
 
 `alr`\
-[out] Vrátí hodnotu z výčtu [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) označující umístění sestavení tohoto odkazu.
+mimo Vrátí hodnotu z výčtu [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) , která označuje umístění sestavení tohoto odkazu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda není obvykle implementována vlastní výraz vyhodnocení.
+ Tato metoda není obvykle implementována pomocí vlastního vyhodnocovacího filtru výrazů.
 
 ## <a name="see-also"></a>Viz také
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

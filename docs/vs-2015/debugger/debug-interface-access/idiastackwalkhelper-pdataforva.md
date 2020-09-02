@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::pdataForVA | Dokumentace Microsoftu
+title: IDiaStackWalkHelper::p dataForVA | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5af921caa989d7279bb9f52751c452d91045cf3e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150092"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vrátí přidružený virtuální adresu PDATA datového bloku.  
+Vrátí blok dat PDATA přidružený k virtuální adrese.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ HRESULT pdataForVA( 
   
 #### <a name="parameters"></a>Parametry  
  `va`  
- [in] Určuje virtuální adresu dat, která poskytuje.  
+ pro Určuje virtuální adresu dat, která se mají získat.  
   
  `cbData`  
- [in] Velikost dat v bajtech získat.  
+ pro Velikost dat v bajtech, která se má získat  
   
  `pcbData`  
- [out] Vrátí skutečný objem dat v bajtech, ke které byl získán.  
+ mimo Vrátí skutečnou velikost dat v bajtech, které byly získány.  
   
  `pbData`  
- [out v] Vyrovnávací paměť je vyplní požadovaná data. Nemůže být `NULL`.  
+ [in, out] Vyrovnávací paměť, která je vyplněna požadovanými daty. Nemůže být `NULL` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistuje žádný PDATA pro zadanou adresu. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud pro zadanou adresu není k dispozici žádný PDATA. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- PDATA (oddíl s názvem ".pdata") kompilace obsahuje informace o zpracování výjimek pro funkce.  
+ PDATA (oddíl s názvem ". pdata") kompilantu obsahuje informace o zpracování výjimek pro funkce.  
   
- Volající ví, kolik dat má být vrácen tak má volající není potřeba zeptejte, kolik dat je k dispozici. Proto je přijatelné pro implementace této metody vrátit chybu, pokud `pbData` parametr `NULL`.  
+ Volající ví, kolik dat se má vrátit, aby volající nemusel klást informace o tom, kolik dat je k dispozici. Proto je přijatelné k tomu, aby implementace této metody vrátila chybu, pokud `pbData` je parametr `NULL` .  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

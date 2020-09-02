@@ -1,5 +1,5 @@
 ---
-title: Volající – zobrazení volaný – Data kolizí | Dokumentace Microsoftu
+title: Zobrazení Volající/Volaný – data kolizí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,48 +12,48 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2f60e8eedeeb7106a7a95a33a4a5cc794194861c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164558"
 ---
-# <a name="caller--callee-view----contention-data"></a>Volající / volaný zobrazení – Data kolizí
+# <a name="caller--callee-view----contention-data"></a>Zobrazení Volající/Volaný – data kolizí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení volající/volaný – zobrazí informace kolizí pro vybrané funkce a jeho funkce pro nadřazené a podřízené. Zobrazení volající/volaný obsahuje tři mřížky.  
+Zobrazení volající/volaný zobrazuje informace o sporu pro vybranou funkci a její nadřazené a podřízené funkce. Zobrazení volající/volaný obsahuje tři mřížky.  
   
- **Aktuální funkce** se zobrazí v mřížce střední a zobrazuje informace o kolizí pro vybrané funkce. Hodnoty zahrnují všechny blokující tento počet sporů: pro funkci.  
+ **Aktuální funkce** se zobrazí v prostřední mřížce a zobrazí informace o sporu pro vybranou funkci. Mezi tyto hodnoty patří všechny blokující spory pro funkci.  
   
- **Funkce, které volaly aktuální funkcí** se zobrazí v hlavní mřížky a funkce na hodnoty vybrané – funkce (aktuální) ukazuje jednotlivé příspěvky volající (nadřazené).  
+ **Funkce, které se nazývají aktuální funkce** , se zobrazí v horní mřížce a zobrazují jednotlivé příspěvky volajícího (nadřazeného) funkce na hodnoty vybrané (aktuální) funkce.  
   
- **Funkce, které byly volány aktuální funkcí** se zobrazí v mřížce dolů a zobrazuje informace kolizí pro volaných (podřízený) funkce vybrané funkce při podřízené funkce byla volána aktuální funkce.  
+ **Funkce, které byly volány aktuální funkcí** , jsou zobrazeny v dolní mřížce a zobrazují informace o sporu pro volané (podřízené) funkce vybrané funkce, pokud byla podřízená funkce volána aktuální funkcí.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Typ**|Kontext funkce:<br /><br /> -   **0** -aktuální funkce<br />-   **1** – funkce, která volá aktuální funkci<br />-   **2** – funkce, která volá aktuální funkci<br /><br /> Pouze v [VSPerfReport](../profiling/vsperfreport.md) příkazového řádku sestavy.|  
-|**Výhradní čas zablokování**|-Pro aktuální funkci čas, který tuto funkci bylo zablokováno provádění kódu v těle funkce. Čas zablokování ve funkcích volaných touto funkcí není zahrnut.<br />-Pro volající funkce část výhradní čas zablokování aktuální funkce, ke které došlo při volání této funkce aktuální funkce.<br />-Pro volaných funkce čas, který tuto funkci bylo zablokováno spouští vlastní kód, když tato funkce byla volána aktuální funkce. Čas zablokování podřízené funkcí volaných funkcí volaných není zahrnut.|  
-|**% Výhradního času zablokování**|Procento všechny čas zablokování při spuštění profilace, která byla pro tuto funkci v tomto kontextu výhradní čas zablokování.|  
-|**Výhradní spory**|-Pro aktuální funkci počet případů, kdy se tato funkce byla blokovat spouštění kódu v těle funkce. Tento počet sporů:, ke kterým došlo ve funkcích, které byly volány funkce nejsou zahrnuty.<br />-Pro volající funkci, počet výhradních sporů aktuální funkce, ke které došlo při volání této funkce aktuální funkce.<br />-Pro volaných funkce počet případů, kdy se tato funkce se zablokoval ve spouštění kódu v těle funkce, když se tato funkce byla volána aktuální funkce. Tento počet sporů:, ke kterým došlo ve funkcích volaných funkcí volaných nejsou zahrnuty.|  
-|**% Výhradních sporů**|Procento všech sporů v profilování, které byly výhradních sporů pro tuto funkci v tomto kontextu.|  
+|**Typ**|Kontext funkce:<br /><br /> -   **0** – aktuální funkce<br />-   **1** – funkce, která volá aktuální funkci<br />-   **2** – funkce, která je volána aktuální funkcí<br /><br /> Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|  
+|**Výhradní čas zablokování**|– Pro aktuální funkci bylo zablokováno spuštění kódu v těle funkce v době, kdy byla tato funkce zablokována. Čas zablokování ve funkcích volaných funkcí není zahrnutý.<br />– Pro funkci volajícího je část výhradního času zablokování aktuální funkce, ke které došlo, když tato funkce volala funkci Current.<br />– Pro funkci volaná byla tato funkce zablokovaná při provádění vlastního kódu, když byla tato funkce volána aktuální funkcí. Čas zablokování v podřízených funkcích volaných funkcí volaný není zahrnutý.|  
+|**% Výhradního času zablokování**|Procento veškerého času zablokování v běhu profilace, které bylo pro tuto funkci v tomto kontextu výhradní čas zablokování.|  
+|**Exkluzivní spory**|– Pro aktuální funkci počet, kolikrát byla tato funkce zablokována při provádění kódu v těle funkce. Spory, které nastaly ve funkcích, které byly volány funkcí, nejsou zahrnuty.<br />– Pro funkci volajícího se jedná o počet exkluzivních sporů aktuální funkce, k nimž došlo v případě, že tato funkce volala aktuální funkci.<br />– Pro funkci volaný počet, kolikrát byla tato funkce zablokována při provádění kódu v těle funkce, pokud byla tato funkce volána aktuální funkcí. Spory, které se vyskytly ve funkcích volaných funkcí volaný, nejsou zahrnuté.|  
+|**% Výhradních sporů**|Procento všech sporů v rámci profilace spuštění, které pro tuto funkci v tomto kontextu byly exkluzivním obsahem.|  
 |**Adresa funkce**|Adresa funkce nebo token.|  
 |**Název funkce**|Plně kvalifikovaný název funkce.|  
-|**Celkový čas zablokování**|-Pro aktuální funkci čas, který tuto funkci nebo jedna z funkcí, které byly volány touto funkcí bylo zablokováno provádění. Čas zablokování ve funkcích, které byly volány aktuální funkcí je v ceně.<br />-Pro volající funkci je čas aktuální funkce, ke které došlo při volání této funkce aktuální funkci zablokování část také zahrnuto.<br />-Pro volaných funkci čas, který tuto funkci nebo jedna z funkcí, které byla volána funkce bylo zablokováno spuštěný, když se tato funkce byla volána aktuální funkce. Čas zablokování ve funkcích, které byly volány volaných funkcí je v ceně.|  
-|**% Celkového času zablokování**|Procento všechny čas zablokování při spuštění profilace, která byla pro tuto funkci v tomto kontextu celkový čas zablokování.|  
-|**Celkově sporů**|-Pro aktuální funkci počet případů, kdy se tato funkce nebo jedna z funkcí, které volal funkci bylo zablokováno provádění. Tento počet sporů:, ke kterým došlo ve funkcích, které byly volány funkce jsou zahrnuty.<br />-Pro volající funkci, počet celkových sporů aktuální funkce, ke které došlo při volání této funkce aktuální funkce.<br />-Pro volaných funkce počet případů, kdy se tato funkce nebo jedna z funkcí, které volal funkci bylo zablokováno spuštěný, když se tato funkce byla volána aktuální funkce. Tento počet sporů:, ke kterým došlo ve funkcích volaných funkcí volaných jsou zahrnuty.|  
-|**% Celkových sporů**|Procento všech sporů v profilování, které byly výhradních sporů pro tuto funkci v tomto kontextu.|  
+|**Celková doba zablokování**|– Pro aktuální funkci se zablokovalo spuštění této funkce nebo jedné z funkcí, které byly volány touto funkcí. Je zahrnut čas zablokování ve funkcích, které byly volány aktuální funkcí.<br />– Pro funkci volání, část celkového času zablokování aktuální funkce, k níž došlo v případě, že tato funkce volala funkci Current.<br />– Pro funkci volaná bylo zablokováno spuštění této funkce nebo jedné z funkcí, které byly volány funkcí, pokud byla tato funkce volána aktuální funkcí. Je zahrnut čas zablokování ve funkcích, které byly volány funkcí volaný.|  
+|**% Celkového času zablokování**|Procento veškerého času zablokování v běhu profilace, které pro tuto funkci v tomto kontextu bylo zablokováno čas.|  
+|**Celkové spory**|– Pro aktuální funkci bylo zablokováno spuštění této funkce nebo jedné z funkcí, které byly volány funkcí. Jsou zahrnuty spory, které nastaly ve funkcích, které byly volány funkcí.<br />– Pro funkci volání, Počet zahrnutých sporů aktuální funkce, k nimž došlo v případě, že tato funkce volala aktuální funkci.<br />– Pro funkci volaný bylo zablokováno spuštění této funkce nebo jedné z funkcí, které byly volány funkcí, pokud byla tato funkce volána aktuální funkcí. Jsou zahrnuty spory, které nastaly ve funkcích volaných funkcí volaný.|  
+|**% Celkových sporů**|Procento všech sporů v rámci profilace spuštění, které pro tuto funkci v tomto kontextu byly exkluzivním obsahem.|  
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
 |**Název modulu**|Název modulu, který obsahuje funkci.|  
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje funkci.|  
-|**ID procesu**|ID procesu (PID) proces, ve kterém tento počet sporů: došlo.|  
-|**Název procesu**|Název procesu.|  
-|**Název kořenové funkce**|Název aktuální funkce. Pouze v [VSPerfReport](../profiling/vsperfreport.md) příkazového řádku sestavy.|  
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
+|**Cesta k modulu**|Cesta modulu, který obsahuje funkci.|  
+|**ID procesu**|ID procesu (PID) procesu, ve kterém došlo k sporům.|  
+|**Název procesu**|Název procesu|  
+|**Název kořenové funkce**|Název aktuální funkce Pouze v sestavách příkazového řádku [VSPerfReport](../profiling/vsperfreport.md) .|  
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
+ [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení volající/volaný](../profiling/caller-callee-view.md)   
- [Volající / volaný zobrazení – vzorkování dat](../profiling/caller-callee-view-sampling-data.md)   
- [Zobrazení volající/volaný – Data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
- [Zobrazení volající/volaný – Data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Zobrazení volající/volaný – Data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)
+ [Zobrazení Volající/Volaný – data vzorkování](../profiling/caller-callee-view-sampling-data.md)   
+ [Zobrazení Volající/Volaný – data instrumentace paměti NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
+ [Zobrazení Volající/Volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení Volající/Volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)

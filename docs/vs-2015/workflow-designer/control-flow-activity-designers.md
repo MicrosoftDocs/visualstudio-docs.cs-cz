@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40f17913864f80e04c3e8b8e703f057094c9bdea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656926"
 ---
 # <a name="control-flow-activity-designers"></a>Návrháři aktivit toku řízení
@@ -22,25 +22,25 @@ ms.locfileid: "72656926"
 ## <a name="in-this-section"></a>V tomto oddílu
  [DoWhile](../workflow-designer/dowhile-activity-designer.md) Spustí aktivitu obsaženou v těle alespoň jednou, dokud není zadaná podmínka vyhodnocena jako **true**.
 
- [ForEach \<T >](foreach-t-activity-designer.md) Spustí aktivitu obsaženou v těle pro každou položku v zadané kolekci.
+ [Foreach \<T> ](foreach-t-activity-designer.md) Spustí aktivitu obsaženou v těle pro každou položku v zadané kolekci.
 
  [Pokud](../workflow-designer/if-activity-designer.md) Vyhodnotí podmínku a spustí aktivitu v závislosti na výsledcích tohoto vyhodnocení.
 
  [Paralelní](../workflow-designer/parallel-activity-designer.md) Provede souběžnou kolekci podřízených aktivit.
 
- [ParallelForEach \<T >](../workflow-designer/parallelforeach-t-activity-designer.md) Vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně.
+ [ParallelForEach \<T> ](../workflow-designer/parallelforeach-t-activity-designer.md) Vytvoří výčet prvků kolekce a provede vložený příkaz pro každý prvek kolekce paralelně.
 
  [Vybrat](../workflow-designer/pick-activity-designer.md) Spustí jednu z několika větví v reakci na určitou událost, která poskytuje řízení toku založené na událostech.
 
- [Operace PickBranch](../workflow-designer/pickbranch-activity-designer.md) Poskytuje možnou cestu k provedení v rámci <xref:System.Activities.Statements.Pick> aktivity.
+ [Operace PickBranch](../workflow-designer/pickbranch-activity-designer.md) Poskytuje potenciální cestu provádění v rámci <xref:System.Activities.Statements.Pick> aktivity.
 
  [Sekvence](../workflow-designer/sequence-activity-designer.md) Obsahuje uspořádanou kolekci podřízených aktivit, které se spustí v daném pořadí.
 
- [Přepnout \<T >](switch-t-activity-designer.md) Vyhodnotí zadaný výraz a spustí aktivitu z kolekce aktivit, jejichž přidružený klíč odpovídá hodnotě získané z vyhodnocení.
+ [Přepínač \<T> ](switch-t-activity-designer.md) Vyhodnotí zadaný výraz a spustí aktivitu z kolekce aktivit, jejichž přidružený klíč odpovídá hodnotě získané z vyhodnocení.
 
  [Zatímco](../workflow-designer/while-activity-designer.md) Spustí aktivitu obsaženou v těle, zatímco zadaná podmínka je vyhodnocena jako **true**.
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Referenční informace
  <xref:System.Activities.Activity>
 
  <xref:System.Activities.Statements.DoWhile>
@@ -70,11 +70,11 @@ ms.locfileid: "72656926"
 
  [Vývojový diagram](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
  [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+ [Primitiva](../workflow-designer/primitives-activity-designers.md)
 
  [Transakce](../workflow-designer/transaction-activity-designers.md)
 

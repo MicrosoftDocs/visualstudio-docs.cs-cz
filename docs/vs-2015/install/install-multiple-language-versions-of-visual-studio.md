@@ -1,5 +1,5 @@
 ---
-title: Nainstalovat více jazykových verzí | Dokumentace Microsoftu
+title: Nainstalovat více jazykových verzí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -13,26 +13,26 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 8eede58ab2e17d417f50cbdfe517bcfba99a6b6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68165446"
 ---
 # <a name="install-multiple-language-versions-of-visual-studio"></a>Instalace více jazykových verzí sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nejnovější dokumentaci k sadě Visual Studio, naleznete v tématu [nainstalovat jazykové sady](/visualstudio/install/install-visual-studio?view=vs-2019#step-6---install-language-packs-optional).
+Nejnovější dokumentaci k sadě Visual Studio najdete v tématu [Instalace jazykových sad](/visualstudio/install/install-visual-studio?view=vs-2019#step-6---install-language-packs-optional).
 
-Po instalaci jedné nebo více jazykových sad, můžete spustit sadu Visual Studio 2015 v jiných jazycích ve stejném počítači. Je třeba získat samostatné jazykový balíček pro každý jazyk, který chcete nainstalovat.
+Instalací jednoho nebo více jazykových balíčků můžete spustit Visual Studio 2015 v jiných jazycích na stejném počítači. Musíte získat samostatný jazykový balíček pro každý jazyk, který chcete nainstalovat.
 
 ## <a name="important-considerations"></a>Důležité informace
 
-- Při instalaci balíčků jazyka, jsou automaticky nainstalovány soubory prostředků pro nainstalované součásti pro každou jazykovou verzi.
+- Při instalaci balíčku jazyka se automaticky nainstalují soubory prostředků pro nainstalované funkce pro každou jazykovou verzi.
 
-- Balíčky služeb Visual Studio platí pro všechny verze nainstalované jazykové sady Visual Studio. Už nepotřebujete k instalaci balíčku služby pro všechny jazykové verze sady Visual Studio, který jste nainstalovali.
+- Balíčky služby sady Visual Studio se vztahují na všechny nainstalované jazykové verze sady Visual Studio. Už nemusíte instalovat balíček služby pro každou jazykovou verzi sady Visual Studio, kterou jste nainstalovali.
 
-- Balíčky jazyka můžete odinstalovat pomocí režimu údržby instalačního programu sady Visual Studio. Otevřete **ovládací panely**, otevřete **programy a funkce**zvolit pro vaši verzi sady Visual Studio a klikněte na tlačítko **odinstalovat nebo změnit**.
+- Jazykové balíčky můžete odinstalovat pomocí režimu údržby instalačního programu sady Visual Studio. Otevřete **Ovládací panely**, otevřete **programy a funkce**, zvolte požadovanou verzi sady Visual Studio a pak zvolte možnost **Odinstalovat nebo změnit**.
 
 ## <a name="see-also"></a>Viz také
 

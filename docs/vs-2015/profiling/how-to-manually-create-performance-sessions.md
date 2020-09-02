@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ruční vytváření výkonnostních relací | Dokumentace Microsoftu'
+title: 'Postupy: Ruční vytvoření relací výkonu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,28 +16,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 622d349fd063cf0a22e3c286003490e088cd4440
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192835"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Postupy: Ruční vytváření výkonnostních relací
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete ručně vytvořit relaci výkonu. Není nutné k otevření projektu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] provedete to tak. Další informace najdete v tématu [konfigurace relací výkonu](../profiling/configuring-performance-sessions.md).  
+Můžete ručně vytvořit výkonnostní relaci. Nemusíte otevřít projekt v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Další informace najdete v tématu [Konfigurace relací výkonu](../profiling/configuring-performance-sessions.md).  
   
-### <a name="to-manually-create-a-performance-session"></a>Ručně vytvořte relaci výkonu  
+### <a name="to-manually-create-a-performance-session"></a>Postup ručního vytvoření výkonnostní relace  
   
-1. Na **analyzovat** nabídky, přejděte k **Profiler**a potom klikněte na tlačítko **novou relaci výkonu**.  
+1. V nabídce **analyzovat** přejděte na **Profiler**a pak klikněte na **Nová výkonnostní relace**.  
   
-     Prázdný výkonnostní relaci se přidá do **prohlížeč výkonu**.  
+     Do **prohlížeč výkonu**je přidána prázdná relace výkonu.  
   
-2. Klikněte pravým tlačítkem na **cíle**a potom klikněte na tlačítko **přidat cílový binární**.  
+2. Klikněte pravým tlačítkem na **cíle**a pak klikněte na **Přidat cílový binární soubor**.  
   
-3. V **přidat cílový binární** dialogové okno, vyberte název souboru a pak klikněte na tlačítko **otevřít**.  
+3. V dialogovém okně **Přidat cílový binární** soubor vyberte název souboru a potom klikněte na tlačítko **otevřít**.  
   
-     Přidání nové binární soubor.  
+     Byl přidán nový binární soubor.  
   
 ## <a name="see-also"></a>Viz také  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)   

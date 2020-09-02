@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyProvider | Dokumenty společnosti Microsoft
+title: IPropertyProxyProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f71d993c7f99cade5b866e67298132a325986e3a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714798"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
 Toto rozhraní poskytuje proxy rozhraní pro zobrazení a změnu dat objektu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IPropertyProxyProvider : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Vyhodnocení výrazu (EE) implementuje toto rozhraní na stejný objekt, který implementuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) jako součást ee podporu typu vizualizérů.
+ Vyhodnocení výrazu (EE) implementuje toto rozhraní u stejného objektu, který implementuje rozhraní [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) , jako součást podpory typu vizualizuje v EE.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Volání [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty3` na rozhraní získat toto rozhraní.
+ [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty3` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Rozhraní `IPropertyProxyProvider` implementuje následující metodu:
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ `IPropertyProxyProvider`Rozhraní implementuje následující metodu:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Načte rozhraní proxy vlastnosti pro zobrazení dat na objektu.|
+|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Načte proxy rozhraní vlastnosti pro zobrazení dat v objektu.|
 
 ## <a name="remarks"></a>Poznámky
- Přestože EE implementuje toto rozhraní, implementace [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) je obvykle zpracována [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md). Podrobnosti o získání rozhraní IEEVisualizerService naleznete v tématu [Vizualizace a zobrazení dat.](../../../extensibility/debugger/visualizing-and-viewing-data.md)
+ I když EE implementuje toto rozhraní, implementace [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) je obvykle zpracována [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md). Podrobnosti o získání rozhraní IEEVisualizerService naleznete v tématu [vizualizace a zobrazení dat](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -1,5 +1,5 @@
 ---
-title: Implementace starší verze jazyka2 | Dokumentace Microsoftu
+title: Implementace starší verze jazyka Jazyka2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,36 +11,36 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1a5f419b3b4c55538e8aa46d5aefb3f7e21369be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192713"
 ---
 # <a name="implementing-a-legacy-language-service"></a>Implementace služby starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Pro implementaci jazyka služby pomocí rozhraní spravovaného balíčku (MPF), musí být odvozen ze třídy <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a implementovat následující abstraktní metody a vlastnosti:  
+Chcete-li implementovat jazykovou službu pomocí spravovaného balíčku Package Framework (MPF), musíte odvodit třídu od <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a implementovat následující abstraktní metody a vlastnosti:  
   
-- <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> – Metoda  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>Metoda  
   
-- <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> – Metoda  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>Metoda  
   
-- <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> – Metoda  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Metoda  
   
-- <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> Vlastnost  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A>Vlastnost  
   
-  Najdete v příslušné části níže podrobnosti o implementaci těchto metod a vlastností.  
+  Podrobnosti o implementaci těchto metod a vlastností naleznete v příslušných částech níže.  
   
-  Aby podporoval další funkce, vaše služba jazyka pravděpodobně nutné odvodit třídu z jedné ze tříd služby jazyka MPF; například musí podporovat další příkazy, odvoďte třídu z <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy a přepsat několik metod zpracování příkazu (viz <xref:Microsoft.VisualStudio.Package.ViewFilter> podrobnosti). <xref:Microsoft.VisualStudio.Package.LanguageService> Třída poskytuje několik metod, které jsou volány k vytvoření nové instance různé třídy a přepsat metodu odpovídající vytvoření k dispozici instance třídy. Například je nutné přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> metoda ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídy vrátit instanci vlastní <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy. Další podrobnosti v části "Vytvoření instance třídy vlastní".  
+  Aby bylo možné podporovat další funkce, může být nutné, aby služba jazyka mohla odvodit třídu z jedné z tříd služby jazyka MPF. například pro podporu dalších příkazů nabídky musíte odvodit třídu z <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy a přepsat několik metod manipulace s příkazy (podrobnosti najdete v tématu <xref:Microsoft.VisualStudio.Package.ViewFilter> ). <xref:Microsoft.VisualStudio.Package.LanguageService>Třída poskytuje řadu metod, které jsou volány pro vytvoření nových instancí různých tříd a přepsání vhodné metody vytvoření pro poskytnutí instance vaší třídy. Například je třeba přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> metodu ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě, aby vracela instanci vaší vlastní <xref:Microsoft.VisualStudio.Package.ViewFilter> třídy. Další podrobnosti najdete v části vytváření instancí vlastních tříd.  
   
-  Vaše služba jazyka lze také zadat vlastní ikony, které se používají na mnoha místech. Když se zobrazí seznamu doplňování technologie IntelliSense, každou položku v seznamu může mít ikonu přidruženo, označí položku jako metody, třídy, oboru názvů, vlastností, nebo cokoli, co je nezbytné pro váš jazyk. Tyto ikony se používají ve všech seznamech technologie IntelliSense, **navigační panel**a v **seznam chyb** okno úkolu. V části "Služba jazyka bitové kopie" níže podrobnosti.  
+  Vaše jazyková služba může také poskytovat vlastní ikony, které se používají na mnoha místech. Například když se zobrazí seznam dokončení IntelliSense, může mít každá položka v seznamu přiřazenou ikonu a označit položku jako metodu, třídu, obor názvů, vlastnost nebo cokoli, co je potřeba pro váš jazyk. Tyto ikony se používají ve všech seznamech IntelliSense, v **navigačním panelu**a v okně **Seznam chyb** úlohy. Podrobnosti najdete níže v části image služby jazyka.  
   
-## <a name="getlanguagepreferences-method"></a>GetLanguagePreferences – metoda  
- <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> Metoda vždy vrátí stejnou instanci <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Můžete použít základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy, pokud není nutné žádné další předvolby pro vaši službu jazyka. Třídy služeb jazyka MPF předpokládá existenci alespoň základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
+## <a name="getlanguagepreferences-method"></a>Metoda GetLanguagePreferences  
+ <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>Metoda vždy vrací stejnou instanci <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy. Základní třídu můžete použít, <xref:Microsoft.VisualStudio.Package.LanguagePreferences> Pokud nepotřebujete žádné další předvolby pro jazykovou službu. Třídy služby jazyka MPF předpokládají přítomnost alespoň základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje obvyklá implementace metody <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> metody. Tento příklad používá základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
+ Tento příklad ukazuje typickou implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> metody. Tento příklad používá základní <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídu.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -68,10 +68,10 @@ namespace TestLanguagePackage
 ```  
   
 ## <a name="getscanner-method"></a>GetScanner – metoda  
- Tato metoda vrátí instanci <xref:Microsoft.VisualStudio.Package.IScanner> objekt, který implementuje řádkový analyzátoru nebo skeneru použitého pro získávání tokenů a jejich typy a aktivačních událostí. Je používán tento skener <xref:Microsoft.VisualStudio.Package.Colorizer> třídy pro barevné zvýraznění, i když skenerem lze také pro získání typy tokenů a aktivačních událostí jako prelude pro složitější operace analýzy. Je nutné zadat třídu, která implementuje <xref:Microsoft.VisualStudio.Package.IScanner> a interface musí implementovat všechny metody na <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní.  
+ Tato metoda vrátí instanci <xref:Microsoft.VisualStudio.Package.IScanner> objektu, která implementuje analyzátor orientovaný na řádek nebo skener, který se používá pro získání tokenů a jejich typů a triggerů. Tento skener se používá ve <xref:Microsoft.VisualStudio.Package.Colorizer> třídě pro vybarvení, i když se dá skener použít také k získání typů tokenů a triggerů jako předehru pro složitější operace analýzy. Je nutné dodat třídu, která implementuje <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní a je nutné implementovat všechny metody v <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje obvyklá implementace metody <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metody. `TestScanner` Implementuje třída <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní (nezobrazení).  
+ Tento příklad ukazuje typickou implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metody. `TestScanner`Třída implementuje <xref:Microsoft.VisualStudio.Package.IScanner> rozhraní (není zobrazeno).  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -118,11 +118,11 @@ namespace TestLanguagePackage
   
 ```  
   
-## <a name="parsesource-method"></a>ParseSource – metoda  
- Analyzuje zdrojový soubor založený na několika různých důvodů, proč. Tato metoda je uvedena <xref:Microsoft.VisualStudio.Package.ParseRequest> objekt, který popisuje, co se očekává z konkrétní operace analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Metoda vyvolá složitější analyzátor, který určuje token funkce a oboru. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> Metoda se používá v podpoře pro operace IntelliSense, jakož i párování složených závorek. I v případě, že tyto pokročilé operace nepodporují, můžete stále musí vrátit platný <xref:Microsoft.VisualStudio.Package.AuthoringScope> objekt a že je potřeba vytvořit třídu, která implementuje <xref:Microsoft.VisualStudio.Package.AuthoringScope> rozhraní a implementovat všechny metody tohoto rozhraní. Můžete vracet hodnoty null ze všech metod ale <xref:Microsoft.VisualStudio.Package.AuthoringScope> samotného objektu nesmí mít hodnotu null.  
+## <a name="parsesource-method"></a>Metoda ParseSource  
+ Analyzuje zdrojový soubor na základě mnoha různých důvodů. Tato metoda je předána <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu, který popisuje, co se očekává od konkrétní operace analýzy. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Metoda vyvolá složitější analyzátor, který určuje funkce a rozsah tokenu. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Metoda se používá v podpoře pro operace IntelliSense a také pro spárování složených závorek. I v případě, že tyto rozšířené operace nepodporujete, je stále nutné vrátit platný <xref:Microsoft.VisualStudio.Package.AuthoringScope> objekt a, který vyžaduje vytvoření třídy, která implementuje <xref:Microsoft.VisualStudio.Package.AuthoringScope> rozhraní a implementuje všechny metody v tomto rozhraní. Hodnoty null můžete vracet ze všech metod, ale <xref:Microsoft.VisualStudio.Package.AuthoringScope> samotný objekt nesmí být hodnota null.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje minimální provádění <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda a <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídu dostatečná povolení služba jazyka ke kompilaci a funkce bez skutečně podporuje některé pokročilejší funkce.  
+ Tento příklad ukazuje minimální implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody a <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy, stačí, když chcete, aby služba jazyka mohla kompilovat a fungovat, aniž by ve skutečnosti podporovala pokročilejší funkce.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -168,11 +168,11 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="name-property"></a>Název vlastnosti  
- Tato vlastnost vrátí název služby jazyka. Musí se jednat o stejný název zadaný při služba jazyka byl zaregistrován. Tento název se používá v řadě míst, z nichž nejvýraznější je <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy, kde název se používá pro přístup k registru. Tato vlastnost vrátí název nesmí být lokalizována, protože se používá v registru pro položku registru a názvy klíčů.  
+## <a name="name-property"></a>Vlastnost názvu  
+ Tato vlastnost vrátí název jazykové služby. Tento název musí být zadaný při registraci jazykové služby. Tento název se používá v několika místech, přičemž nejdůležitější z nich je třída, ve které se <xref:Microsoft.VisualStudio.Package.LanguagePreferences> název používá pro přístup k registru. Název vrácený touto vlastností nesmí být lokalizovaný, protože se používá v registru pro položky registru a názvy klíčů.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje jednu možnou implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> vlastnost. Všimněte si, že zadaný název je pevně zakódované: skutečný název by měl získat ze souboru prostředků, takže ho můžete použít při registraci služba jazyka (viz [registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)).  
+ Tento příklad ukazuje jednu možnou implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.Name%2A> Vlastnosti. Všimněte si, že název je pevně kódovaný: skutečný název by měl být získán ze souboru prostředků, aby jej bylo možné použít při registraci jazykové služby (viz [Registrace služby starší verze jazyka](../../extensibility/internals/registering-a-legacy-language-service1.md)).  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -190,54 +190,54 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="instantiating-custom-classes"></a>Vytvoření vlastní třídy  
- Následující metody u zadané třídy může být potlačena za účelem poskytují instance vlastní verze každé třídy.  
+## <a name="instantiating-custom-classes"></a>Vytváření instancí vlastních tříd  
+ Následující metody v zadaných třídách mohou být přepsány, aby poskytovaly instance vašich vlastních verzí každé třídy.  
   
 ### <a name="in-the-languageservice-class"></a>Ve třídě LanguageService  
   
-|Metoda|Třída vrácena|Popis|  
+|Metoda|Vrácená třída|Popis|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|Podpora vlastních dodatky k zobrazení textu.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|Podpora vlastní vlastnosti dokumentu.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|Pro podporu **navigační panel**.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionFunction>|Pro podporu funkcí v šablony fragmentu kódu.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionProvider>|Podpora fragmentů kódu (tuto metodu není obvykle přepsat).|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A>|<xref:Microsoft.VisualStudio.Package.ParseRequest>|Pro podporu přizpůsobení <xref:Microsoft.VisualStudio.Package.ParseRequest> struktury (tuto metodu není obvykle přepsat).|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateSource%2A>|<xref:Microsoft.VisualStudio.Package.Source>|Pro podporu formátování zdrojový kód, zadáním znaky komentáře a přizpůsobení podpisy metod.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>|<xref:Microsoft.VisualStudio.Package.ViewFilter>|Pro podporu dalších příkazů.|  
-|<xref:Microsoft.VisualStudio.Package.Source.GetColorizer%2A>|<xref:Microsoft.VisualStudio.Package.Colorizer>|Pro podporu, zvýrazňování syntaxe (tuto metodu není obvykle přepsat).|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>|<xref:Microsoft.VisualStudio.Package.LanguagePreferences>|Pro podporu přístupu k jazykové předvolby. Tato metoda musí být implementované ale možné vrátit instanci třídy base.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>|<xref:Microsoft.VisualStudio.Package.IScanner>|K zajištění analyzátor používá k identifikaci typy tokenů na řádek. Tato metoda musí být implementována a <xref:Microsoft.VisualStudio.Package.IScanner> musí být odvozen od.|  
-|<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringScope>|K zajištění analyzátor používá k identifikaci funkce a oboru v celém celému zdrojovému souboru. Tato metoda je potřeba implementovat a musí vracet instanci vaší verzi <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy. Pokud všechny, které chcete podporovat je zvýraznění syntaxe (což vyžaduje <xref:Microsoft.VisualStudio.Package.IScanner> analyzátor vrátil z <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metoda), můžete neprovedete žádnou akci v této metodě než vrácení verze <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy, jejíž všechny metody vracet hodnoty null.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|Pro podporu vlastních přidání do textového zobrazení.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|Pro podporu vlastních vlastností dokumentu.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|Pro podporu **navigačního panelu**.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionFunction>|Pro podporu funkcí v šablonách fragmentů kódu.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionProvider>|Pro podporu fragmentů kódu (Tato metoda obvykle není přepsána).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A>|<xref:Microsoft.VisualStudio.Package.ParseRequest>|Pro podporu přizpůsobení <xref:Microsoft.VisualStudio.Package.ParseRequest> struktury (Tato metoda obvykle není přepsána).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateSource%2A>|<xref:Microsoft.VisualStudio.Package.Source>|Pro podporu formátování zdrojového kódu, zadání znaků komentáře a přizpůsobení podpisů metody.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A>|<xref:Microsoft.VisualStudio.Package.ViewFilter>|Pro podporu dalších příkazů nabídky.|  
+|<xref:Microsoft.VisualStudio.Package.Source.GetColorizer%2A>|<xref:Microsoft.VisualStudio.Package.Colorizer>|Pro podporu zvýrazňování syntaxe (Tato metoda obvykle není přepsána).|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>|<xref:Microsoft.VisualStudio.Package.LanguagePreferences>|Pro podporu přístupu k jazykovým preferencím. Tato metoda musí být implementována, ale může vracet instanci základní třídy.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>|<xref:Microsoft.VisualStudio.Package.IScanner>|K poskytnutí analyzátoru používaného k identifikaci typů tokenů na řádku. Tato metoda musí být implementována a <xref:Microsoft.VisualStudio.Package.IScanner> musí být odvozena z.|  
+|<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringScope>|K poskytnutí analyzátoru používaného k identifikaci funkcí a rozsahu celého zdrojového souboru. Tato metoda musí být implementována a musí vracet instanci vaší verze <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy. Pokud je vše, co chcete podporovat, zvýrazňování syntaxe (které vyžaduje <xref:Microsoft.VisualStudio.Package.IScanner> analyzátor vrácený z <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metody), můžete v této metodě Neprovádět žádnou akci, která je jiná než vrácení verze <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy, jejíž metody vrací hodnoty null.|  
   
-### <a name="in-the-source-class"></a>Ve třídě zdroje  
+### <a name="in-the-source-class"></a>Ve zdrojové třídě  
   
-|Metoda|Třída vrácena|Popis|  
+|Metoda|Vrácená třída|Popis|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|Pro přizpůsobení zobrazení seznamů doplňování technologie IntelliSense (tuto metodu není obvykle přepsat).|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|Podpora značek v seznamu úkolů seznam chyb Konkrétně podpora pro funkce nad rámec otevření souboru a přechod na řádek, který způsobil chybu.|  
-|<xref:Microsoft.VisualStudio.Package.Source.CreateMethodData%2A>|<xref:Microsoft.VisualStudio.Package.MethodData>|Přizpůsobení zobrazení popisy parametrů informace technologie IntelliSense.|  
-|<xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A>|<xref:Microsoft.VisualStudio.Package.CommentInfo>|Pro podporu kód komentářů.|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|Pro přizpůsobení zobrazení seznamů dokončení technologie IntelliSense (Tato metoda obvykle není přepsána).|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|Pro podpůrné značky v seznamu úkolů Seznam chyb; konkrétně Podpora funkcí mimo otevření souboru a přechod na řádek, který způsobil chybu.|  
+|<xref:Microsoft.VisualStudio.Package.Source.CreateMethodData%2A>|<xref:Microsoft.VisualStudio.Package.MethodData>|Pro přizpůsobení zobrazení popisů informací o parametrech IntelliSense.|  
+|<xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A>|<xref:Microsoft.VisualStudio.Package.CommentInfo>|Pro podporu kódu komentářů.|  
 |<xref:Microsoft.VisualStudio.Package.Source.CreateAuthoringSink%2A>|<xref:Microsoft.VisualStudio.Package.AuthoringSink>|Pro shromažďování informací během operace analýzy.|  
   
 ### <a name="in-the-authoringscope-class"></a>Ve třídě AuthoringScope  
   
-|Metoda|Třída vrácena|Popis|  
+|Metoda|Vrácená třída|Popis|  
 |------------|--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|Obsahuje seznam deklarace, jako například členy a typy. Tato metoda musí být implementována, ale může vrátit hodnotu null. Pokud tato metoda vrátí platný objekt, objekt musí být instance vaší verzi <xref:Microsoft.VisualStudio.Package.Declarations> třídy.|  
-|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|Obsahuje seznam podpisy metod pro daný kontext. Tato metoda musí být implementována, ale může vrátit hodnotu null. Pokud tato metoda vrátí platný objekt, objekt musí být instance vaší verzi <xref:Microsoft.VisualStudio.Package.Methods> třídy.|  
+|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|Poskytuje seznam deklarací, jako jsou členy nebo typy. Tato metoda musí být implementována, ale může vracet hodnotu null. Pokud tato metoda vrátí platný objekt, musí být objekt instancí vaší verze <xref:Microsoft.VisualStudio.Package.Declarations> třídy.|  
+|<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|Poskytuje seznam signatur metod pro daný kontext. Tato metoda musí být implementována, ale může vracet hodnotu null. Pokud tato metoda vrátí platný objekt, musí být objekt instancí vaší verze <xref:Microsoft.VisualStudio.Package.Methods> třídy.|  
   
-## <a name="language-service-images"></a>Jazykové služby Image  
- Zajištění seznamu ikon, který se má použít v celé službě jazyka přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metoda ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a vrátit <xref:System.Windows.Forms.ImageList> obsahující ikony. Základní <xref:Microsoft.VisualStudio.Package.LanguageService> třídy načte výchozí sadu ikon. Vzhledem k tomu, že zadáte index přesné bitové kopie na těchto místech, které je třeba ikony, uspořádání seznamu obrázků je zcela na vás.  
+## <a name="language-service-images"></a>Image služby jazyka  
+ Chcete-li poskytnout seznam ikon, které mají být použity v celé jazykové službě, přepište <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metodu ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě a vraťte <xref:System.Windows.Forms.ImageList> obsahující ikony. Základní <xref:Microsoft.VisualStudio.Package.LanguageService> třída načte výchozí sadu ikon. Vzhledem k tomu, že jste zadali přesný index obrázku v těch místech, které potřebují ikony, způsob uspořádání vlastního seznamu obrázků je zcela na vás.  
   
-### <a name="images-used-in-intellisense-completion-lists"></a>Obrázky používané v seznamech doplňování technologie IntelliSense  
- Pro seznamy doplňování technologie IntelliSense, je pro každou položku v zadané index bitové kopie <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> metodu <xref:Microsoft.VisualStudio.Package.Declarations> třídu, která je nutné přepsat, pokud chcete zadat index bitové kopie. Hodnota vrácená z <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> metoda je index do seznamu obrázků předány <xref:Microsoft.VisualStudio.Package.CompletionSet> konstruktoru třídy, který je stejný seznam obrázků vrácená z <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metoda ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídy (můžete změnit které seznamu obrázků použijte pro <xref:Microsoft.VisualStudio.Package.CompletionSet> Pokud přepíšete <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> metoda ve <xref:Microsoft.VisualStudio.Package.Source> třídy zadat jinou image seznamu).  
+### <a name="images-used-in-intellisense-completion-lists"></a>Obrázky používané v seznamech dokončování IntelliSense  
+ U seznamů dokončení technologie IntelliSense je index bitové kopie určen pro každou položku v <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> metodě <xref:Microsoft.VisualStudio.Package.Declarations> třídy, kterou je nutné přepsat, pokud chcete zadat index obrázku. Hodnota vrácená z <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> metody je index do seznamu obrázků dodaného <xref:Microsoft.VisualStudio.Package.CompletionSet> konstruktoru třídy a to je stejný seznam obrázků vrácených z <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metody ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě ( <xref:Microsoft.VisualStudio.Package.CompletionSet> Pokud přepíšete <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> metodu ve <xref:Microsoft.VisualStudio.Package.Source> třídě na zadání jiného seznamu obrázků, můžete změnit, který seznam obrázků použít pro.  
   
-### <a name="images-used-in-the-navigation-bar"></a>Image použité v navigačním panelu  
- **Navigační panel** zobrazí seznam typů a členů a slouží pro rychlou navigaci můžete zobrazit ikony. Tyto ikony jsou získávány z <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třídy a nedají se přepsat speciálně pro **navigační panel**. Indexy použité pro každou položku v polích se seznamem se určí při jsou vyplněna seznamy představující polích se seznamem <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metoda ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídy (naleznete v tématu [podpora navigačního panelu ve službě starší verze jazyka](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)). Tyto image indexy jsou nějakým způsobem získaných analyzátor, obvykle prostřednictvím vaší verzi <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Jak získat indexy je zcela na vás.  
+### <a name="images-used-in-the-navigation-bar"></a>Obrázky použité v navigačním panelu  
+ **Navigační panel** zobrazuje seznam typů a členů a slouží k rychlé navigaci, které mohou zobrazovat ikony. Tyto ikony jsou získány z <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metody ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě a nelze je přepsat specificky pro **navigační panel**. Indexy použité pro každou položku v polích se seznamem jsou zadány, když jsou v seznamech reprezentujících pole se seznamem vyplněny <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> metody ve <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> třídě (viz [Podpora pro navigační panel ve službě starší verze jazyka](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)). Tyto indexy obrázků jsou získány z analyzátoru, obvykle prostřednictvím vaší verze <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Způsob získávání indexů je zcela na vás.  
   
-### <a name="images-used-in-the-error-list-task-window"></a>Obrázky používané v okně chyb seznamu úkolů  
- Pokaždé, když <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> analyzátor – metoda (naleznete v tématu [starší verze jazyka analyzátor a skener služby](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) dojde k chybě a předá tuto chybu do <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> metoda ve <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy, chybě v  **Seznam chyb** okno úkolu. Ikona můžou být spojené s každou položku, která se zobrazí v okně úlohy a této ikony pochází ze stejného seznamu obrázků vrácených <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metoda ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídy. Výchozí chování třídy MPF je nezobrazovat image s chybovou zprávou. Toto chování však můžete přepsat odvozením třídy od <xref:Microsoft.VisualStudio.Package.Source> třídy a přepsáním <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> metody. V této metodě, vytvořte nový <xref:Microsoft.VisualStudio.Package.DocumentTask> objektu. Před vrácením tohoto objektu, můžete použít <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> vlastnost <xref:Microsoft.VisualStudio.Package.DocumentTask> objektu, který chcete nastavit index bitové kopie. To by vypadat přibližně jako v následujícím příkladu. Všimněte si, že `TestIconImageIndex` je výčet, který obsahuje seznam všech ikon a je specifická pro tento příklad. Může mít jiný způsob identifikace ikony ve vaší službě jazyka.  
+### <a name="images-used-in-the-error-list-task-window"></a>Obrázky používané v okně Seznam chyb úlohy  
+ Pokaždé, když se <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> analyzátor metody (viz [analyzátor a skener služby starší verze jazyka](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) vyskytne chybu a předá tuto chybu <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> metodě ve <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídě, je chyba nahlášena v okně **Seznam chyb** úlohy. K každé položce, která se zobrazí v okně úlohy, může být přiřazena ikona a tato ikona pochází ze stejného seznamu obrázků vráceného z <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> metody ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě. Výchozím chováním tříd MPF není zobrazit obrázek s chybovou zprávou. Toto chování však můžete přepsat odvozením třídy z <xref:Microsoft.VisualStudio.Package.Source> třídy a přepsáním <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> metody. V této metodě vytvoříte nový <xref:Microsoft.VisualStudio.Package.DocumentTask> objekt. Před vrácením tohoto objektu můžete použít <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> vlastnost <xref:Microsoft.VisualStudio.Package.DocumentTask> objektu pro nastavení indexu obrázku. To by vypadalo podobně jako v následujícím příkladu. Všimněte si, že `TestIconImageIndex` se jedná o výčet, který obsahuje všechny ikony a je specifický pro tento příklad. Můžete mít jiný způsob identifikace ikon ve službě jazyka.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -275,10 +275,10 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="the-default-image-list-for-a-language-service"></a>Výchozí seznam obrázků pro služby jazyka  
- Výchozí image seznam součástí základní třídy služeb jazyka MPF obsahuje počet ikon přidružených více společné prvky jazyka. Hromadné tyto ikony jsou uspořádány do šesti variace odpovídající konceptech správy přístupů veřejné, interní, friend, protected, private, a místní sady. Například můžete mít jiné ikony pro metodu v závislosti na tom, jestli je veřejné, chráněné nebo soukromé.  
+## <a name="the-default-image-list-for-a-language-service"></a>Výchozí seznam obrázků pro službu jazyka  
+ Výchozí seznam obrázků dodávaný se základními třídami služby jazyka MPF obsahuje několik ikon spojených s více společnými jazykovými prvky. Hromadné tyto ikony jsou uspořádány do množiny šesti variant, které odpovídají konceptům přístupu veřejného, interního, Friend, Protected, Private a Shortcut. Například můžete mít různé ikony pro metodu v závislosti na tom, zda je veřejný, chráněný nebo soukromý.  
   
- Následující výčet určuje typické názvy pro každou sadu ikonu a Určuje přidružený index. Například založené na výčtu, můžete zadat index obrázku pro chráněnou metodu jako `(int)IconImageIndex.Method + (int)IconImageIndex.AccessProtected`. Můžete změnit názvy v tento výčet podle potřeby.  
+ Následující výčet Určuje typické názvy pro každou sadu ikon a Určuje přidružený index. Například na základě výčtu můžete zadat index obrázku pro chráněnou metodu jako `(int)IconImageIndex.Method + (int)IconImageIndex.AccessProtected` . Názvy v tomto výčtu můžete změnit podle potřeby.  
   
 ```csharp  
 public enum IconImageIndex  

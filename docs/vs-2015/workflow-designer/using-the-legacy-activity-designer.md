@@ -17,14 +17,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cd8d18d95fabd858354c625d2c9b32459efc7193
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846144"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Používání starší verze návrháře aktivit
-Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Použijte starší verzi návrháře, pokud cílíte na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat návrháře aktivit ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verzi návrháře, pokud cílíte na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Návrhář aktivity umožňuje vytvářet vlastní aktivity.
 
@@ -48,7 +48,7 @@ Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[
 
 |Vlastnost|Komentáře|
 |--------------|--------------|
-|**Jméno**|Název aktivity.|
+|**Name**|Název aktivity.|
 |**Základní třída**|Základní třída, ze které je odvozena aktivita. Výchozí základní třída je [SequenceActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequenceactivity.aspx). V okně **vlastnosti** klikněte na tři tečky **základní třídy** **[...]** pro výběr jiné základní třídy v [dialogovém okně Procházet a vyberte možnost typ .NET (starší verze)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md).|
 |**Popis**|Uživatelsky definovaný Popis aktivity.|
 |**Povoleno**|Ve výchozím nastavení nastavte na **hodnotu true** , aby se povolilo provádění a ověřování aktivity. Nastavte na **hodnotu false** , chcete-li zakázat provádění a ověřování aktivity. Informace o provádění a ověřování aktivit najdete v tématu [vývoj aktivit pracovních postupů](https://msdn2.microsoft.com/library/ms734413.aspx).|
@@ -57,4 +57,4 @@ Toto téma popisuje, jak používat návrháře aktivit ve starších [!INCLUDE[
  Podřízené aktivity lze přetáhnout ze sady nástrojů na aktivitu, kterou navrhujete. Potom můžete nakonfigurovat každou podřízenou aktivitu pomocí prohlížeče vlastností.
 
 ## <a name="see-also"></a>Viz také
- [Vývoj aktivit pracovních postupů](https://msdn2.microsoft.com/library/ms734413.aspx) , které [vytvářejí vlastní aktivity](https://msdn2.microsoft.com/library/bb675228.aspx) [starší aktivity pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [](https://msdn2.microsoft.com/library/bb472471.aspx) [, popisují postupy: Vytvoření knihovny aktivity pracovního postupu (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [pomocí starší verze Návrhář postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)
+ [Vývoj aktivit pracovních postupů](https://msdn2.microsoft.com/library/ms734413.aspx) , které [vytvářejí vlastní aktivity](https://msdn2.microsoft.com/library/bb675228.aspx) [starší aktivity pracovních postupů](../workflow-designer/legacy-workflow-activities.md) [Custom Activities Samples](https://msdn2.microsoft.com/library/bb472471.aspx) [, popisují postupy: Vytvoření knihovny aktivity pracovního postupu (starší verze)](../workflow-designer/how-to-create-a-workflow-activity-library-legacy.md) [pomocí starší verze Návrhář postupu provádění](../workflow-designer/using-the-legacy-workflow-designer.md)

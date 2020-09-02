@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 24afbfcfe31de52ac51329bb67df41cc59dd6f1e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547274"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Přizpůsobení map kódu úpravou souborů DGML
@@ -36,14 +36,14 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 > [!NOTE]
 > Chcete-li vytvořit mapy kódu, musíte mít edici Visual Studio Enterprise. Když upravíte mapu kódu v aplikaci Visual Studio, vyčistí všechny nepoužívané prvky DGML a atributy jejich odstraněním při uložení souboru. dgml. Také automaticky vytvoří prvky kódu při ručním přidání nových odkazů. Při ukládání souboru .dgml mohou být všechny atributy, které byly přidány do prvku, uspořádány podle abecedy.
 
-## <a name="group-code-elements"></a><a name="OrganizeNodes"></a>Seskupit prvky kódu
+## <a name="group-code-elements"></a><a name="OrganizeNodes"></a> Seskupit prvky kódu
  Můžete přidat nové skupiny nebo převést existující uzly na skupinu.
 
 1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
 
 2. Chcete-li převést prvek kódu na skupinu, vyhledejte `<Node/>` prvek pro daný prvek kódu.
 
-    \-ani
+    \- ani
 
     Chcete-li přidat novou skupinu, vyhledejte `<Nodes>` část. Přidejte nový `<Node/>` element.
 
@@ -77,7 +77,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
     Další informace o `Category` atributu naleznete v tématu [přiřazení kategorií k prvkům kódu a propojením](#AssignCategories).
 
-## <a name="change-the-style-of-the-map"></a><a name="ChangeGraphStyle"></a>Změnit styl mapy
+## <a name="change-the-style-of-the-map"></a><a name="ChangeGraphStyle"></a> Změnit styl mapy
  Můžete změnit barvu pozadí a barvu ohraničení mapy úpravou souboru. dgml mapy. Chcete-li změnit styl prvků kódu a odkazů, přečtěte si téma [Změna stylu prvků kódu a odkazů](#Highlight).
 
 1. Otevřete soubor. dgml v textovém editoru nebo editoru XML.
@@ -105,7 +105,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
     </DirectedGraph>
     ```
 
-## <a name="change-the-style-of-code-elements-and-links"></a><a name="Highlight"></a>Změna stylu prvků kódu a odkazů
+## <a name="change-the-style-of-code-elements-and-links"></a><a name="Highlight"></a> Změna stylu prvků kódu a odkazů
 
 ### <a name="CreateCustomStyles"></a>
  Vlastní styly lze použít pro následující prvky kódu:
@@ -193,7 +193,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
     Style="Plain"
     ```
 
-     Tvar
+     Obrazec
 
      Chcete-li tvar nahradit ikonou, nastavte `Shape` vlastnost na hodnotu `None` a nastavte `Icon` vlastnost na cestu k souboru ikony.
 
@@ -252,7 +252,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
 3. V `<Styles></Styles>` elementu pod `<Style/>` prvkem a určete následující atributy:
 
-   - `TargetType="Node`&#124;`Link | Graph"`
+   - `TargetType="Node` &#124; `Link | Graph"`
 
    - `GroupLabel="`*NameInLegendBox*`"`
 
@@ -286,29 +286,29 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
     Tento výraz používá následující syntaxi BNF (Backus-Naur Form):
 
-    \<Expression>:: = \<BinaryExpression> &#124; \<UnaryExpression> &#124; "(" \<Expression> ) "&#124; \<MemberBindings> &#124; \<Literal> &#124;\<Number>
+    \<Expression> :: = \<BinaryExpression> &#124; \<UnaryExpression> &#124; "(" \<Expression> ) "&#124; \<MemberBindings> &#124; \<Literal> &#124; \<Number>
 
     \<BinaryExpression>::= \<Expression> \<Operator>\<Expression>
 
-    \<UnaryExpression>::= "!" \<Expression> &#124; "+" \<Expression> &#124; "-"\<Expression>
+    \<UnaryExpression> ::= "!" \<Expression> &#124; "+" \<Expression> &#124; "-" \<Expression>
 
-    \<Operator>:: = "<" &#124; " \<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "nebo" &#124; "a" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
+    \<Operator> :: = "<" &#124; " \<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "nebo" &#124; "a" &#124; "+" &#124; "*" &#124; "/" &#124; "-"
 
-    \<MemberBindings>:: = \<MemberBindings> &#124; \<MemberBinding> "."\<MemberBinding>
+    \<MemberBindings> :: = \<MemberBindings> &#124; \<MemberBinding> "." \<MemberBinding>
 
-    \<MemberBinding>:: = \<MethodCall> &#124;\<PropertyGet>
+    \<MemberBinding> :: = \<MethodCall> &#124; \<PropertyGet>
 
-    \<MethodCall>::= \<Identifier> "(" \<MethodArgs> ")"
+    \<MethodCall> ::= \<Identifier> "(" \<MethodArgs> ")"
 
-    \<PropertyGet>:: = Identifikátor
+    \<PropertyGet> :: = Identifikátor
 
-    \<MethodArgs>:: = \<Expression> &#124; \<Expression> "," \<MethodArgs> &#124;\<empty>
+    \<MethodArgs> :: = \<Expression> &#124; \<Expression> "," \<MethodArgs> &#124; \<empty>
 
-    \<Identifier>::= [^. ]*
+    \<Identifier> ::= [^. ]*
 
-    \<Literal>:: = řetězcový literál s jedním nebo dvojitým uvozovkami
+    \<Literal> :: = řetězcový literál s jedním nebo dvojitým uvozovkami
 
-    \<Number>:: = řetězec číslic s volitelnou desetinnou čárkou
+    \<Number> :: = řetězec číslic s volitelnou desetinnou čárkou
 
     Můžete zadat více `<Condition/>` prvků, které musí všechny mít hodnotu true pro použití stylu.
 
@@ -371,7 +371,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
  Nastaví barvu pozadí prvku kódu na základě `Coverage` Vlastnosti. Styly jsou vyhodnocovány v pořadí, ve kterém jsou zobrazeny, podobně jako `if-else` příkazy.
 
- V tomto příkladu:
+ V tomto příkladu:
 
 1. Pokud `Coverage` je > 80, nastavte `Background` vlastnost na zelenou.
 
@@ -435,7 +435,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 </DirectedGraph>
 ```
 
-## <a name="assign-properties-to-code-elements-and-links"></a><a name="AssignProperties"></a>Přiřadit vlastnosti k prvkům kódu a odkazům
+## <a name="assign-properties-to-code-elements-and-links"></a><a name="AssignProperties"></a> Přiřadit vlastnosti k prvkům kódu a odkazům
  Můžete uspořádat prvky kódu a odkazy tím, že jim přiřadíte vlastnosti. Můžete například vybrat prvky kódu, které mají specifické vlastnosti, abyste je mohli seskupit, změnit jejich styl nebo je skrýt.
 
 #### <a name="to-assign-a-property-to-a-code-element"></a>Přiřazení vlastnosti prvku kódu
@@ -480,7 +480,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
     </Properties>
     ```
 
-## <a name="assign-categories-to-code-elements-and-links"></a><a name="AssignCategories"></a>Přiřazení kategorií prvkům kódu a odkazům
+## <a name="assign-categories-to-code-elements-and-links"></a><a name="AssignCategories"></a> Přiřazení kategorií prvkům kódu a odkazům
  Následující části ukazují, jak lze uspořádat prvky kódu přiřazením kategorií k těmto prvkům a jak lze vytvořit hierarchické kategorie, které vám pomohou organizovat prvky kódu a přidávat atributy do podřízených kategorií pomocí dědičnosti.
 
 #### <a name="to-assign-a-category-to-a-code-element"></a>Přiřazení kategorie k elementu kódu
@@ -551,7 +551,7 @@ Upravte soubor. dgml mapy kódu v textovém editoru nebo editoru XML. Pokud je m
 
      V tomto příkladu je pozadí zelené, `MyFirstNode` protože jeho `Category` atribut dědí `Background` atribut `MyParentCategory` .
 
-## <a name="link-documents-or-urls-to-code-elements-and-links"></a><a name="AddReferences"></a>Propojení dokumentů a adres URL s prvky kódu a odkazy
+## <a name="link-documents-or-urls-to-code-elements-and-links"></a><a name="AddReferences"></a> Propojení dokumentů a adres URL s prvky kódu a odkazy
  Dokumenty nebo adresy URL můžete propojit s prvky kódu nebo odkazy úpravou souboru. dgml mapy a přidáním `Reference` atributu do `<Node/>` prvku prvku kódu nebo `<Link/>` elementu pro odkaz. Pak můžete tento obsah otevřít a zobrazit z prvku kódu nebo odkazu. `Reference`Atribut určuje cestu k tomuto obsahu. To může být cesta relativní k umístění souboru .dgml nebo absolutní cesta.
 
 > [!CAUTION]
