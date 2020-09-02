@@ -8,15 +8,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a28bedd01e3a4f6a7a87b025ac9a9a6184da9b2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591863"
 ---
 # <a name="t4-import-directive"></a>T4 – direktiva Import
 
-V blocích kódu textové šablony T4 sady Visual Studio umožňuje direktiva `import` odkazovat na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu. Je ekvivalentem `using` v C# nebo `imports` v [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)].
+V blocích kódu textové šablony T4 sady Visual Studio `import` umožňuje direktivám odkazovat na prvky v jiném oboru názvů bez zadání plně kvalifikovaného názvu. Je ekvivalentem `using` v jazyce C# nebo `imports` v [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] .
 
 Obecný přehled psaní textových šablon T4 naleznete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
@@ -49,6 +49,6 @@ The file contains: <#=  fileContent #>
 
 - Obor názvů vaší DSL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [T4 – direktiva Assembly](../modeling/t4-assembly-directive.md)

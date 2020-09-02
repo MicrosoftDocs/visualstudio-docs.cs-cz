@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425391"
 ---
 # <a name="common-msbuild-project-items"></a>Společné položky projektu nástroje MSBuild
@@ -30,7 +30,7 @@ V nástroji MSBuild je položka pojmenovaný odkaz na jeden nebo více souborů.
 
 Níže je seznam všech běžných položek projektu.
 
-### <a name="reference"></a>Referenční informace
+### <a name="reference"></a>Odkaz
 
 Představuje odkaz sestavení (spravovaného) v projektu.
 
@@ -76,7 +76,7 @@ Představuje nativní soubor manifestu nebo odkaz na takový soubor.
 
 ### <a name="projectreference"></a>ProjectReference
 
-Představuje odkaz na jiný projekt. `ProjectReference`položky jsou transformované na [referenční](#reference) položky podle `ResolveProjectReferences` cíle, takže jakákoli platná metadata na odkazu můžou být platná `ProjectReference` , pokud ho proces transformace nepřepíše.
+Představuje odkaz na jiný projekt. `ProjectReference` položky jsou transformované na [referenční](#reference) položky podle `ResolveProjectReferences` cíle, takže jakákoli platná metadata na odkazu můžou být platná `ProjectReference` , pokud ho proces transformace nepřepíše.
 
 |Název metadat položky|Popis|
 |---------------|-----------------|
@@ -112,7 +112,7 @@ Představuje prostředky, které mají být vloženy do generovaného sestavení
 | CopyToOutputDirectory | Volitelný řetězec. Určuje, zda se má soubor zkopírovat do výstupního adresáře. Hodnoty jsou:<br /><br /> 1. nikdy<br />2. vždycky<br />3. PreserveNewest |
 | Logický operátor | Povinný řetězec. Logický název vloženého prostředku. |
 
-### <a name="content"></a>Obsah
+### <a name="content"></a>Content
 
 Představuje soubory, které nejsou zkompilovány do projektu, ale mohou být vloženy nebo publikovány společně s ní.
 
@@ -166,7 +166,7 @@ Představuje projekt FxCop, který se má importovat.
 
 Představuje sestavení, jejichž obory názvů by měly být importovány Visual Basic kompilátorem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Vlastnosti nástroje MSBuild pro projekty .NET Core SDK](/dotnet/core/project-sdk/msbuild-props)

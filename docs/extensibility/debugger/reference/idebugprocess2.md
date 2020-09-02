@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2 | Dokumenty společnosti Microsoft
+title: IDebugProcess2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,58 +13,58 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c72659491ec6718397a4fbb494175eea0896c7f7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723795"
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
-Toto rozhraní představuje proces spuštěný na portu. Pokud je port místní port, pak `IDebugProcess2` obvykle představuje fyzický proces v místním počítači.
+Toto rozhraní představuje proces spuštěný na portu. Pokud je port místním portem, `IDebugProcess2` obvykle představuje fyzický proces na místním počítači.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugProcess2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno dodavatelem vlastního portu pro správu programů jako skupiny. Toto rozhraní musí být implementováno dodavatelem portu.
+ Toto rozhraní je implementováno vlastním dodavatelem portu pro správu programů jako skupiny. Toto rozhraní musí být implementováno dodavatelem portu.
 
- Ladicí modul také implementuje toto rozhraní, pokud podporuje spuštění programu prostřednictvím [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).
+ Ladicí stroj implementuje toto rozhraní také v případě, že podporuje spouštění programu prostřednictvím [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je voláno především správcem ladění relace (SDM) za účelem interakce se skupinou programů identifikovaných v tomto procesu.
+ Toto rozhraní se nazývá Správce ladění relace (SDM), aby bylo možné komunikovat se skupinou programů identifikovaných v tomto procesu.
 
- Volání [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) nebo [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md) získat toto rozhraní. Toto rozhraní je `IDebugEngineLaunch2::LaunchSuspended`také vrácena voláním .
+ Pro získání tohoto rozhraní volejte [Getprocess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) nebo [getprocess](../../../extensibility/debugger/reference/idebugport2-getprocess.md) . Toto rozhraní je také vráceno voláním metody `IDebugEngineLaunch2::LaunchSuspended` .
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugProcess2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugProcess2` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|Získá popis procesu.|
-|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|Vyjmenovává programy, které jsou obsaženy v tomto procesu.|
+|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|Vytvoří výčet programů, které jsou obsaženy v tomto procesu.|
 |[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|Získá název, popisný název nebo název souboru procesu.|
-|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|Získá instanci serveru počítače, na který je tento proces spuštěn.|
-|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|Ukončí proces.|
+|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|Načte instanci počítačového serveru, na kterém tento proces běží.|
+|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) (Ukončení)|Ukončí proces.|
 |[Připojit](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|Připojí se k procesu.|
-|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|Určuje, zda sdm může odpojit proces.|
+|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|Určuje, zda SDM může odpojit proces.|
 |[Odpojit](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|Odpojí ladicí program od procesu.|
 |[GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)|Získá identifikátor systémového procesu.|
-|[GetProcessId](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|Získá globálně jedinečný identifikátor pro tento proces.|
-|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> [ZASTARALÉ]|Získá název relace, která je ladění procesu.<br /><br /> [ZASTARALÉ. BY SE `E_NOTIMPL`MĚL VŽDY VRÁTIT .]|
-|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|Vyjmenovává vlákna spuštěná v procesu.|
-|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|Požaduje, aby se zastavil další program spuštěný v tomto procesu.|
-|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|Získá port, který je spuštěn v tomto procesu.|
+|[GetProcessId –](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|Získá globálně jedinečný identifikátor pro tento proces.|
+|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> ZASTARALÉ|Získá název relace, která provádí ladění procesu.<br /><br /> Zastaralé. VŽDY vracet `E_NOTIMPL` .]|
+|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|Vytvoří výčet vláken spuštěných v procesu.|
+|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|Požaduje, aby byl ukončen další program, který spouští kód v tomto procesu.|
+|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|Získá port, na kterém tento proces běží.|
 
 ## <a name="remarks"></a>Poznámky
- Obsahuje `IDebugProcess2` jedno nebo více rozhraní [IDebugProgram2.](../../../extensibility/debugger/reference/idebugprogram2.md)
+ `IDebugProcess2`Obsahuje jedno nebo více [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) rozhraní.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

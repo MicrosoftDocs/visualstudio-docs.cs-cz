@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 03cacd8de574de92002b44b237cd84c22e761eaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645578"
 ---
 # <a name="help-viewer-administrator-guide"></a>Příručka správce Help Vieweru
@@ -27,20 +27,20 @@ Aplikace Help Viewer umožňuje spravovat místní instalace nápovědy pro sí�
 
  Základní syntaxe je následující:
 
- \<*cesta k*> \HlpCtntmgr.exe/Operation \<*argument*>/CatalogName \<*název*> povinný/locale. \<*locale*>/sourceuri \< *. msha cesta nebo adresa URL* 0
+ \<*path to*>\HlpCtntmgr.exe/Operation \<*argument*> /CatalogName \<*name*> povinný/locale. \<*locale*> /SourceUri \<*.msha path or URL*>
 
- Další informace o syntaxi příkazového řádku HlpCtntMgr. exe najdete v tématu [argumenty příkazového řádku pro nástroj Help Content Manager](../ide/command-line-arguments-for-the-help-content-manager.md).
+ Další informace o HlpCtntMgr.exe syntaxi příkazového řádku najdete v tématu [argumenty příkazového řádku pro nástroj Help Content Manager](../ide/command-line-arguments-for-the-help-content-manager.md).
 
  Další informace o vytváření obsahu, vytváření koncového bodu služby v intranetu a podobných typech aktivit najdete v tématu sada Help Viewer SDK.
 
 ## <a name="deploying-local-help-content-from-the-internet"></a>Nasazování obsahu místní aplikace z Internetu
  Pomocí služby balíčku obsahu MSDN můžete nasadit místní obsah aplikace z Internetu do klientských počítačů. Použijte následující syntaxi:
 
- \\ <*cesta k*> \v2.2\HlpCtntmgr.exe/Operation \<*název*>/CatalogName \<*katalogu*> povinný/locale. \<*locale* >
+ \\<*cesta k* # C0\v2.2\HlpCtntmgr.exe/Operation \<*name*> /CatalogName \<*catalog name*> povinný/locale. \<*locale*>
 
- Další informace o syntaxi příkazového řádku HlpCtntMgr. exe najdete v tématu [argumenty příkazového řádku pro nástroj Help Content Manager](../ide/command-line-arguments-for-the-help-content-manager.md).
+ Další informace o HlpCtntMgr.exe syntaxi příkazového řádku najdete v tématu [argumenty příkazového řádku pro nástroj Help Content Manager](../ide/command-line-arguments-for-the-help-content-manager.md).
 
- Požadavků
+ Požadavky:
 
 - Klientské počítače musí mít přístup k Internetu.
 
@@ -51,9 +51,9 @@ Aplikace Help Viewer umožňuje spravovat místní instalace nápovědy pro sí�
 - Výchozí zdroj pro nápovědu bude stále online.
 
   > [!TIP]
-  > Výchozí zdroj pro nápovědu můžete změnit úpravou klíče registru HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp. Další informace najdete v tématu [potlačení aplikace Help Content Manager](../ide/help-content-manager-overrides.md).
+  > Výchozí zdroj pro nápovědu můžete změnit úpravou klíče registru HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\14.0\help\UseOnlineHelp. Další informace najdete v tématu [potlačení aplikace Help Content Manager](../ide/help-content-manager-overrides.md).
 
-- Klienti budou stále vyzváni k instalaci základního obsahu v nápovědě při prvním spuštění sady Visual Studio. Tuto výzvu můžete zakázat úpravou klíče registru HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Help\DisableFirstRunHelpSelection.
+- Klienti budou stále vyzváni k instalaci základního obsahu v nápovědě při prvním spuštění sady Visual Studio. Tuto výzvu můžete zakázat úpravou klíče registru HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\Help\DisableFirstRunHelpSelection.
 
 ### <a name="example"></a>Příklad
  Následující příklad nainstaluje obsah v angličtině pro Visual Studio do klientského počítače.
@@ -62,16 +62,16 @@ Aplikace Help Viewer umožňuje spravovat místní instalace nápovědy pro sí�
 
 1. Zvolte **Start** a pak zvolte **Spustit**.
 
-2. Zadejte následující:
+2. Zadejte:
 
-     C:\Program Files (x86) \Microsoft Help Viewer\v2.2\HlpCtntmgr.exe/Operation Install/CatalogName VisualStudio14 povinný/locale. en-US
+     C:\Program Files (x86) \Microsoft Help Viewer\v2.2\hlpctntmgr.exe/Operation Install/CatalogName VisualStudio14 povinný/locale. en-US
 
-3. Stiskněte klávesu ENTER.
+3. Stiskněte ENTER.
 
 ## <a name="deploying-pre-installed-local-help-content-on-client-computers"></a>Nasazení předem nainstalovaného obsahu místní verze Help na klientských počítačích
  Můžete nainstalovat sadu obsahu z online do jednoho počítače a potom zkopírovat nainstalovanou sadu obsahu do jiných počítačů.
 
- Požadavků
+ Požadavky:
 
 - Počítač, do kterého instalujete sadu obsahu, musí mít přístup k Internetu.
 
@@ -101,7 +101,7 @@ Aplikace Help Viewer umožňuje spravovat místní instalace nápovědy pro sí�
 
 4. Zvolit možnost **Spustit** pro odinstalaci
 
-5. Přejděte na *n*: \ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 a ověřte, zda složka obsahuje pouze soubor catalogType. XML.
+5. Přejděte na *n*: \ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 a ověřte, zda složka obsahuje pouze soubor catalogType.xml.
 
    Po odebrání veškerého dříve nainstalovaného obsahu místní aplikace sady Visual Studio budete připraveni stáhnout základní sadu obsahu.
 
@@ -121,13 +121,13 @@ Aplikace Help Viewer umožňuje spravovat místní instalace nápovědy pro sí�
 
      Příklad: c:\VS12Help.
 
-2. Otevřete cmd. exe s oprávněními správce.
+2. Otevřete cmd.exe s oprávněními správce.
 
 3. Přejděte do složky, kterou jste vytvořili v kroku 1.
 
-4. Zadejte následující:
+4. Zadejte:
 
-     Xcopy%SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \<*název_složky*> \/y/e/k/o
+     Xcopy%SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \<*foldername*> \/y/e/k/o
 
      Příklad: `Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 c:\VS12Help\ /y /e /k /o`
 

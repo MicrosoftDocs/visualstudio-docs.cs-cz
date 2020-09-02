@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2 | Dokumentace Microsoftu
+title: IDebugProgramEx2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,44 +13,44 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2d3abc956d736f5c9273134b41c0fc9c2dc7db62
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688932"
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní umožňuje relace ladění správci připojit k programu a získat uzel program přidružený k programu.  
+Toto rozhraní umožňuje, aby se správce ladění relace (SDM) připojil k programu a získal uzel programu přidružený k programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugProgramEx2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Dodavatel port. Tento vlastní port implementuje toto rozhraní na stejný objekt jako [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) rozhraní, aby bylo možné nechat SDM, zatímco ve stejnou dobu umožní dodavatele portu můžete sledovat všechny relace připojen k připojení k programu program. Pokud zvolí dodavatele port. Tento vlastní port toto rozhraní implementovat.  
+ Vlastní dodavatel portu implementuje toto rozhraní na stejném objektu jako rozhraní [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , aby se model SDM mohl připojit k programu, a současně umožňuje poskytovateli portu sledovat všechny relace připojené k programu. Vlastní dodavatel portu může implementovat toto rozhraní, pokud se rozhodne.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na `IDebugProgram2` rozhraní k získání tohoto rozhraní ke sledování relací, které jste připojili k programy.  
+ SDM zavolá [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na `IDebugProgram2` rozhraní, aby získalo toto rozhraní ke sledování relací, které jsou připojené k programům.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDebugProgramEx2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDebugProgramEx2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)|Program připojí k relaci.|  
-|[GetProgramNode](../../../extensibility/debugger/reference/idebugprogramex2-getprogramnode.md)|Získá uzel program přidružený k programu.|  
+|[Připojit](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)|Připojí program k relaci.|  
+|[GetProgramNode](../../../extensibility/debugger/reference/idebugprogramex2-getprogramnode.md)|Získá uzel programu přidružený k programu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní je privátní mezi SDM a program.  
+ Toto rozhraní je v rámci modelu SDM a programu privátní.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Portpriv.h  
+ Záhlaví: Portpriv. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

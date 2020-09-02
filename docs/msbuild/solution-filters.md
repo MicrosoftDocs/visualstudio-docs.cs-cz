@@ -11,10 +11,10 @@ ms.author: ghogen
 manager: jillfra
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 998103828d20827e8a1d99e0cc34d7f9beb6bd7c
-ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87401028"
 ---
 # <a name="solution-filters-in-msbuild"></a>Filtry řešení v nástroji MSBuild
@@ -77,7 +77,7 @@ Zde je soubor filtru řešení, který aplikace Visual Studio vygeneruje:
 
 V tomto příkladu, když sestavíte s povoleným filtrováním (pomocí příkazu `MSBuild [options] MyFilter.slnf` ), MSBuild sestaví MyApplication a Projecta, protože jsou výslovně uvedeny v souboru filtru řešení. V rámci sestavování projektu MSBuild sestavení MSBuild sestaví ClassLibrary1, protože na něm závisí Projecta.  ProjectB není sestaven. (Tato diskuze předpokládá čistý Build. Pokud byly projekty sestaveny dříve, použijí se obvyklá pravidla pro přeskočení projektů, které jsou již aktuální.)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Filtrovaná řešení](../ide/filtered-solutions.md)
 - [Reference k příkazovému řádku nástroje MSBuild](msbuild-command-line-reference.md)

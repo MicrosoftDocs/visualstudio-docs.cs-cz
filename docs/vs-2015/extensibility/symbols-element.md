@@ -1,5 +1,5 @@
 ---
-title: Symboly Element | Dokumentace Microsoftu
+title: Symbol – element | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c8d28d225bd3a8d5c105bf54b9c63574002aed15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160463"
 ---
 # <a name="symbols-element"></a>Symbols – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje identifikátory GUID a ID, které se používá jinými elementy VSCT. Pro nespravovaný kód, tyto informace obvykle pocházejí z soubory hlaviček, které jsou určeny [Extern – Element](../extensibility/extern-element.md). Spravovaný kód používá podřízených elementů elementu symboly, který chcete definovat tyto informace.  
+Definuje identifikátory GUID a ID, které používají jiné elementy VSCT. Pro nespravovaný kód tyto informace obvykle pocházejí ze hlavičkových souborů, které jsou určeny [extern element](../extensibility/extern-element.md). Spravovaný kód používá podřízené prvky elementu Symbols k definování těchto informací.  
   
- Pokud vytvoříte souboru .vsct z existujícího souboru .cto, symboly budou generovány jako podřízené objekty daného elementu symboly. Další informace najdete v tématu [jak: Vytvoření. Vsct soubor z existující. Technologický ředitel souboru](../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md).  
+ Vytvoříte-li soubor. vsct z existujícího souboru. technický ředitel, symboly budou vygenerovány jako podřízené prvky elementu Symbols. Další informace naleznete v tématu [How to: Create a. Soubor vsct ze stávajícího souboru. Soubor technický ředitel](../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md)  
   
- Element symboly neměly by být zaměňovány s [definovat Element](../extensibility/define-element.md), která definuje dvojice název hodnota pro použití preprocesorem.  
+ Element Symbols by neměl být zaměněn pomocí [elementu define](../extensibility/define-element.md), který definuje páry název-hodnota pro použití preprocesorem.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Symbols>  
@@ -43,20 +43,20 @@ Definuje identifikátory GUID a ID, které se používá jinými elementy VSCT. 
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Žádný||  
+|Žádné||  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Guidsymbol –|Definuje symbol identifikátor GUID. Guidsymbol – má dvě povinné atributy: název a hodnotu. Název je název symbolu a hodnota je hodnota GUID jako řetězec.<br /><br /> Příklad:\<guidsymbol – název = hodnota "guidVsPackage1Pkg" = "{c5f54698-101a-4846-84d3-dc748f9cd848}" / >|  
-|Idsymbol –|Definuje symbol. Idsymbol – má dvě povinné atributy: název a hodnotu. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Příklad:\<idsymbol – název = hodnota "MyMenuGroup" = "0x1020" / >|  
+|GuidSymbol|Definuje symbol identifikátoru GUID. GuidSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota identifikátoru GUID jako řetězec.<br /><br /> Příklad:\<GuidSymbol name="guidVsPackage1Pkg"   value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|  
+|IDSymbol|Definuje symbol. IDSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Příklad:\<IDSymbol name="MyMenuGroup" value="0x1020" />|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový element souboru .vsct|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový element souboru. vsct.|  
   
 ## <a name="example"></a>Příklad  
   

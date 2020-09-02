@@ -1,5 +1,5 @@
 ---
-title: Určení cesty k profilování nástroje příkazového řádku nástroje | Dokumentace Microsoftu
+title: Určení cesty pro Nástroje pro profilaci nástrojů příkazového řádku | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,27 +10,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7fadcff84c4b927a7718d7d4ad1311918ae0f18a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199781"
 ---
 # <a name="specifying-the-path-to-profiling-tools-command-line-tools"></a>Určení cesty k nástrojům příkazového řádku pro profilaci
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Cesta k [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] příkazového řádku nástrojů pro profilaci není přidán do proměnné prostředí PATH. Na 32bitových počítačích nástroje jsou v jednom adresáři. Existují 32bitové a 64bitové verze nástrojů pro profilaci na 64bitových počítačích.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Do proměnné prostředí PATH se nepřidala cesta k nástrojům příkazového řádku nástroje pro profilaci. Na 32 počítačů se nástroje nacházejí v jednom adresáři. K dispozici jsou 32 a 64 bitové verze nástrojů pro profilaci v počítačích s 64.  
   
-## <a name="32-bit-computers"></a>32bitových počítačích  
- Na 32bitových počítačích, je výchozí adresář nástrojů profilování *jednotka*\Program Files\Microsoft 11.0\Team nástroje nástroje Visual Studio.  
+## <a name="32-bit-computers"></a>32 – bitové počítače  
+ V 32 počítačích je výchozím adresářem nástrojů profileru *jednotka*\Program Files\Microsoft Visual Studio 11.0 \ Team Tools\Performance Tools.  
   
 ## <a name="64-bit-computers"></a>64bitové počítače  
- Na 64bitových počítačích zadejte cestu podle cílové platformy profilované aplikace.  
+ Na 64 počítačů zadejte cestu podle cílové platformy profilované aplikace.  
   
-- Pro 32bitové aplikace je výchozí adresář nástrojů profilování:  
+- Pro 32 aplikací je výchozím adresářem nástrojů profileru:  
   
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 11.0\Team nástroje nástroje  
+     *Jednotka*\Program Files (x86) \Microsoft Visual Studio 11.0 \ Team Tools\Performance Tools  
   
-- Pro 64bitové aplikace je výchozí adresář nástrojů profilování:  
+- Pro 64 aplikací je výchozím adresářem nástrojů profileru:  
   
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 11.0\Team nástroje Tools\x64
+     *Jednotka*\Program Files (x86) \Microsoft Visual Studio 11.0 \ Team Tools\Performance Tools\x64

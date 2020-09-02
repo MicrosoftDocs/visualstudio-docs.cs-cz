@@ -1,5 +1,5 @@
 ---
-title: Klávesové zkratky (HTML a JavaScriptu) | Dokumentace Microsoftu
+title: Klávesové zkratky (HTML a JavaScript) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dedfc8e5be9b3410c978722518f50162bcd2b40b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199686"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klávesové zkratky (HTML a JavaScript)
@@ -26,39 +26,39 @@ ms.locfileid: "68199686"
 
 Platí pro Windows a Windows Phone] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- Klávesové zkratky v sadě Visual Studio pro ladění aplikací pro Store pomocí HTML a JavaScriptu.  
+ Klávesové zkratky v aplikaci Visual Studio pro ladění aplikací pro Store pomocí HTML a JavaScriptu.  
   
-## <a name="general-shortcuts"></a>Obecné klávesové zkratky  
- Tyto zkratky fungují všechny nástroje pro aplikace pro Store pomocí HTML a JavaScript.  
+## <a name="general-shortcuts"></a>Obecné zkratky  
+ Tyto klávesové zkratky fungují napříč všemi nástroji pro aplikace pro Store pomocí HTML a JavaScriptu.  
   
 |Akce|Zástupce|  
 |------------|--------------|  
-|Aktualizovat aplikaci Windows|Ctrl+Shift+R|  
-|Restartujte aplikaci Windows|Ctrl+Shift+F5|  
+|Aktualizovat aplikaci pro Windows|Ctrl+Shift+R|  
+|Restartovat aplikaci pro Windows|Ctrl+Shift+F5|  
 |Zastavit ladění|Shift+F5|  
-|Otevřete rozbočovači výkon a Diagnostika|Alt+F2|  
+|Otevřít Centrum pro výkon a diagnostiku|Alt+F2|  
   
-## <a name="javascript-console-shortcuts"></a>Zástupce konzoly jazyka JavaScript  
- Použijte tyto klávesové zkratky v okně konzoly jazyka JavaScript.  
+## <a name="javascript-console-shortcuts"></a>Zkratky konzoly JavaScriptu  
+ Tyto klávesové zkratky použijte v okně konzoly JavaScriptu.  
   
 |Akce|Zástupce|  
 |------------|--------------|  
 |Spuštění příkazu konzoly|Enter|  
 |Vymazat konzolu|Esc|  
-|Přepínání mezi režimem jedním řádkem a více řádky|Ctrl + Alt + M|  
+|Přepínání mezi jedním řádkem a víceřádkovým režimem|CTRL + ALT + M|  
   
-## <a name="dom-explorer-shortcuts"></a>Klávesové zkratky Průzkumníka modelu DOM  
- V Průzkumníku modelu DOM použijte tyto klávesové zkratky.  
+## <a name="dom-explorer-shortcuts"></a>Zástupci Průzkumníka modelu DOM  
+ Tyto klávesové zkratky použijte v Průzkumníku modelu DOM.  
   
 |Akce|Zástupce|  
 |------------|--------------|  
 |Vybrat element|Ctrl+B|  
-|Přepnout mezi zobrazení a skrytí pole zvýraznění webových stránek, při použití **vybrat Element**|Ctrl+Shift+I|  
-|Potvrďte změny pomocí **upravit jako HTML**|Ctrl+Enter|  
-|Zahodit změny pomocí **upravit jako HTML**|Esc|  
-|Zvýšit o 1 vybraná hodnota šablon stylů CSS|Šipka nahoru|  
-|Zmenšit o 1 vybraná hodnota šablon stylů CSS|Šipka dolů|  
+|Přepínání mezi zobrazením a skrytím zvýrazněných polí webových stránek při použití **elementu Select**|Ctrl+Shift+I|  
+|Potvrdit změny pomocí **úpravy jako HTML**|Ctrl+Enter|  
+|Zahodit změny pomocí **úpravy jako HTML**|Esc|  
+|Zvýšit vybranou hodnotu CSS o 1|Šipka nahoru|  
+|Snížit vybranou hodnotu CSS o 1|Šipka dolů|  
   
 ## <a name="see-also"></a>Viz také  
- [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md)   
+ [Rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md)   
  [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md)

@@ -25,10 +25,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 6db2202971facb0419db68c04835c8d5c848f528
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77271579"
 ---
 # <a name="annotating-structs-and-classes"></a>Zadávání poznámek ke strukturám a třídám
@@ -40,25 +40,25 @@ ms.locfileid: "77271579"
   
 - `_Field_range_(low, high)`  
   
-     Pole je v rozsahu (včetně) od `low` do `high`.  Ekvivalentem `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` použitým u objektu s poznámkou pomocí příslušných podmínek před nebo po odeslání.  
+     Pole je v rozsahu (včetně) z `low` na `high` .  Odpovídá `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` použitému objektu s poznámkou s použitím odpovídajících podmínek před nebo po.  
   
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`  
   
-     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`.  
+     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je uvedeno v `size` .  
   
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)``_Field_size_bytes_part_opt_(size, count)`  
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
   
-     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`a `count` těch prvků (bajtů), které jsou čitelné.  
+     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je uvedeno v rámci `size` , a `count` z těchto prvků (bajtů), které lze číst.  
   
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`  
   
-     Pole, které má čitelné i zapisovatelné velikosti v elementech (nebo bajtech), jak je určeno `size`.  
+     Pole, které má čitelné i zapisovatelné velikosti v prvcích (nebo bajtech), jak je uvedeno v `size` .  
   
 - `_Struct_size_bytes_(size)`  
   
-     Pole, které má čitelné i zapisovatelné velikosti v elementech (nebo bajtech), jak je určeno `size`.  
+     Pole, které má čitelné i zapisovatelné velikosti v prvcích (nebo bajtech), jak je uvedeno v `size` .  
   
-     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených `size`.  Například:  
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených parametrem `size` .  Příklad:  
   
     ```cpp  
   
@@ -70,18 +70,18 @@ ms.locfileid: "77271579"
   
     ```  
   
-     Velikost vyrovnávací paměti v bajtech parametru `pM` typu `MyStruct *` je pak považována za:  
+     Velikost vyrovnávací paměti v bajtech parametru `pM` typu je pak považována za `MyStruct *` :  
   
     ```cpp  
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
 ## <a name="see-also"></a>Viz také  
- [Použití poznámek SAL ke snížení vad CC++ /kódu](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [Princip  Sal](../code-quality/understanding-sal.md)  
- Zadávání [poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)   
- [Přidání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)   
- Zadávání [poznámek o chování při zamykání](../code-quality/annotating-locking-behavior.md)   
+ [Použití poznámek SAL k omezení vad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [Porozumění SAL](../code-quality/understanding-sal.md)   
+ [Zadávání poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [Zadávání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)   
+ [Zadávání poznámek k chování při zamykání](../code-quality/annotating-locking-behavior.md)   
  [Určení, kdy a kde se má Poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
-   [vnitřních funkcí](../code-quality/intrinsic-functions.md)  
+ [Vnitřní funkce](../code-quality/intrinsic-functions.md)   
  [Doporučené postupy a příklady](../code-quality/best-practices-and-examples-sal.md)

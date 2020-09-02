@@ -1,5 +1,5 @@
 ---
-title: Provádění příkazů | Dokumenty společnosti Microsoft
+title: Implementace příkazu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c7a536120c81c154cf894717a2af6a4e048d56e2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709582"
 ---
 # <a name="command-implementation"></a>Implementace příkazu
-Chcete-li implementovat příkaz v balíčku VSPackage, je nutné provést následující úkoly:
+Chcete-li implementovat příkaz v VSPackage, je nutné provést následující úlohy:
 
-1. V souboru *.vsct* nastavte skupinu příkazů a přidejte do ní příkaz. Další informace naleznete v tématu [Visual Studio příkaz tabulka (.vsct) soubory](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+1. V souboru *. vsct* nastavte skupinu příkazů a přidejte do ní příkaz. Další informace naleznete v tématu [soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
-2. Zaregistrujte příkaz v sadě Visual Studio.
+2. Zaregistrujte příkaz v aplikaci Visual Studio.
 
 3. Implementujte příkaz.
 
-V následujících částech je vysvětleno, jak zaregistrovat a implementovat příkazy.
+Následující části vysvětlují, jak registrovat a implementovat příkazy.
 
-## <a name="register-commands-with-visual-studio"></a>Registrace příkazů v sadě Visual Studio
- Pokud se váš příkaz má zobrazit v <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> nabídce, je nutné přidat do vspackage a použít jako hodnotu buď název nabídky nebo jeho ID prostředku.
+## <a name="register-commands-with-visual-studio"></a>Registrace příkazů pomocí sady Visual Studio
+ Pokud je váš příkaz zobrazen v nabídce, je nutné přidat <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> do VSPackage a použít jako hodnotu buď jako název nabídky, nebo její ID prostředku.
 
 ```
 [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -39,7 +39,7 @@ V následujících částech je vysvětleno, jak zaregistrovat a implementovat p
 
 ```
 
- Kromě toho je nutné zaregistrovat <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>příkaz s . Tuto službu můžete získat <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> pomocí metody, pokud je <xref:Microsoft.VisualStudio.Shell.Package>váš VSPackage odvozen z .
+ Kromě toho je nutné příkaz zaregistrovat pomocí <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> . Tuto službu můžete získat pomocí <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> metody, pokud je váš VSPackage odvozen od <xref:Microsoft.VisualStudio.Shell.Package> .
 
 ```
 OleMenuCommandService mcs = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
@@ -53,43 +53,43 @@ if ( null != mcs )
 
 ```
 
-## <a name="implement-commands"></a>Implementace příkazů
- Existuje několik způsobů, jak implementovat příkazy. Pokud chcete statický příkaz nabídky, což je příkaz, který se vždy zobrazí stejným způsobem <xref:System.ComponentModel.Design.MenuCommand> a ve stejné nabídce, vytvořte příkaz pomocí, jak je znázorněno v příkladech v předchozí části. Chcete-li vytvořit statický příkaz, musíte zadat obslužnou rutinu události, která je zodpovědná za provedení příkazu. Vzhledem k tomu, že příkaz je vždy povolena a viditelná, není třeba zadat jeho stav sady Visual Studio. Pokud chcete změnit stav příkazu v závislosti na určitých podmínkách, můžete <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> vytvořit příkaz jako instanci třídy a v jeho `QueryStatus` konstruktoru poskytnout obslužnou rutinu události ke spuštění příkazu a obslužnou rutinu, která upozorní visual studio při změně stavu příkazu. Můžete také <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> implementovat jako součást třídy příkazu nebo můžete implementovat, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> pokud poskytujete příkaz jako součást projektu. Dvě rozhraní a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> třída všechny mají metody, které upozorňují Visual Studio na změnu stavu příkazu a další metody, které poskytují provádění příkazu.
+## <a name="implement-commands"></a>Implementovat příkazy
+ Existuje několik způsobů, jak implementovat příkazy. Pokud chcete použít statický příkaz nabídky, který je vždy stejný jako příkaz a v téže nabídce, vytvořte příkaz pomocí příkazu, <xref:System.ComponentModel.Design.MenuCommand> jak je znázorněno v příkladech v předchozí části. Chcete-li vytvořit statický příkaz, je nutné poskytnout obslužnou rutinu události, která je zodpovědná za provedení příkazu. Vzhledem k tomu, že je příkaz vždy povolen a viditelný, není nutné zadávat jeho stav do sady Visual Studio. Chcete-li změnit stav příkazu v závislosti na určitých podmínkách, můžete vytvořit příkaz jako instanci <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> třídy a v jeho konstruktoru poskytnout obslužnou rutinu události pro spuštění příkazu a `QueryStatus` obslužné rutiny, které upozorní sadu Visual Studio, když se změní stav příkazu. Můžete také implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> jako součást třídy příkazu nebo můžete implementovat, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> Pokud poskytujete příkaz jako součást projektu. Tato dvě rozhraní a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Třída mají všechny metody, které upozorňují na změnu stavu příkazu, a další metody, které poskytují spuštění příkazu.
 
- Když je příkaz přidán do služby příkazu, stane se jedním z řetězu příkazů. Při implementaci stav oznámení a spuštění metody pro příkaz, dbejte na to, poskytnout pouze pro tento konkrétní příkaz a předat všechny ostatní případy na ostatní příkazy v řetězci. Pokud se vám nepodaří předat příkaz <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED>na (obvykle vrácením ), Visual Studio může přestat pracovat správně.
+ Když se do příkazového řádku přidá příkaz, dojde k jeho jednomu z řetězců příkazů. Při implementaci oznamování stavu a metod provádění pro příkaz se ujistěte, že zadáte pouze pro tento konkrétní příkaz a předáte všechny ostatní případy jiným příkazům v řetězu. Pokud se nedaří předat příkaz na (obvykle vrácením <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> ), Visual Studio může přestat pracovat správně.
 
-## <a name="querystatus-methods"></a>QueryStatus metody
- Pokud implementujete <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> nebo metodu, zkontrolujte identifikátor GUID sady příkazů, do které příkaz patří, a ID příkazu. Postupujte podle následujících pokynů:
+## <a name="querystatus-methods"></a>Metody QueryStatus
+ Pokud implementujete buď <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> , nebo metodu, vyhledejte identifikátor GUID sady příkazů, do které příkaz patří, a ID příkazu. Postupujte podle těchto pokynů:
 
-- Pokud identifikátor GUID není rozpoznán, implementace <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP>obou metod musí vrátit .
+- Pokud identifikátor GUID není rozpoznán, vaše implementace obou metod musí vracet <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP> .
 
-- Pokud implementace obou metod rozpozná identifikátor GUID, ale neimplementoval a <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED>neimplementoval příkaz, měla by metoda vrátit .
+- Pokud vaše implementace obou metod rozpoznává identifikátor GUID, ale neimplementovala příkaz, metoda by měla vrátit <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
 
-- Pokud implementace obou metod rozpozná identifikátor GUID i příkaz, měla by metoda nastavit pole command-flags každého příkazu (v parametru) `prgCmds` pomocí následujících <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> příznaků:
+- Pokud vaše implementace obou metod rozpoznává identifikátor GUID i příkaz, pak by metoda měla nastavit pole příznak příkazu každého příkazu (v `prgCmds` parametru) pomocí následujících <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> příznaků:
 
   - `OLECMDF_SUPPORTED`: Příkaz je podporován.
 
   - `OLECMDF_INVISIBLE`: Příkaz by neměl být viditelný.
 
-  - `OLECMDF_LATCHED`: Příkaz je zapnutý a zdá se, že byl zkontrolován.
+  - `OLECMDF_LATCHED`: Příkaz je přepnut na a zdá se, že byl zkontrolován.
 
   - `OLECMDF_ENABLED`: Příkaz je povolen.
 
   - `OLECMDF_DEFHIDEONCTXTMENU`: Příkaz by měl být skrytý, pokud se zobrazí v místní nabídce.
 
-  - `OLECMDF_NINCHED`: Příkaz je řadič nabídky a není povolen, ale jeho rozevírací seznam nabídky není prázdný a je stále k dispozici. (Tento příznak se používá zřídka.)
+  - `OLECMDF_NINCHED`: Příkaz je kontroler nabídek a není povolen, ale seznam jeho rozevíracích nabídek není prázdný a je stále k dispozici. (Tento příznak se používá zřídka.)
 
-- Pokud byl příkaz definován v souboru *.vsct* s příznakem, `TextChanges` nastavte následující parametry:
+- Pokud byl příkaz definován v souboru *. vsct* s `TextChanges` příznakem, nastavte následující parametry:
 
-  - Nastavte `rgwz` prvek parametru `pCmdText` na nový text příkazu.
+  - Nastavte `rgwz` element `pCmdText` parametru na nový text příkazu.
 
-  - Nastavte `cwActual` prvek parametru `pCmdText` na velikost příkazového řetězce.
+  - Nastavte `cwActual` element `pCmdText` parametru na velikost řetězce příkazu.
 
-Také se ujistěte, že aktuální kontext není funkce automatizace, pokud váš příkaz je speciálně určen pro zpracování funkcí automatizace.
+Také se ujistěte, že aktuální kontext není funkce automatizace, pokud váš příkaz není určen konkrétně pro zpracování funkcí automatizace.
 
-Chcete-li označit, že podporujete určitý příkaz, vraťte <xref:Microsoft.VisualStudio.VSConstants.S_OK>. Pro všechny ostatní příkazy vraťte <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED>.
+Chcete-li určit, že budete podporovat konkrétní příkaz, vraťte <xref:Microsoft.VisualStudio.VSConstants.S_OK> . Pro všechny ostatní příkazy vraťte <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
 
-V následujícím příkladu `QueryStatus` metoda nejprve zajistí, že kontext není automatizační funkcí, a pak najde správný identifikátor GUID sady příkazů a ID příkazu. Samotný příkaz je nastaven tak, aby byl povolen a podporován. Nejsou podporovány žádné další příkazy.
+V následujícím příkladu `QueryStatus` Metoda nejprve zajistí, že kontext není funkce automatizace a pak najde správný identifikátor GUID sady příkazů a ID příkazu. Samotný příkaz je nastaven na povoleno a podporováno. Žádné jiné příkazy nejsou podporovány.
 
 ```csharp
 public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
@@ -110,10 +110,10 @@ public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, Int
 }
 ```
 
-## <a name="execution-methods"></a>Metody provádění
- Implementace `Exec` metody se podobá implementaci `QueryStatus` metody. Nejprve se ujistěte, že kontext není funkce automatizace. Potom otestujte identifikátor GUID i ID příkazu. Pokud identifikátor GUID nebo ID příkazu není rozpoznán, vraťte <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED>.
+## <a name="execution-methods"></a>Metody spuštění
+ Implementace metody se `Exec` podobá implementaci `QueryStatus` metody. Nejprve se ujistěte, že kontext není funkce automatizace. Pak otestujte identifikátor GUID i identifikátor příkazu. Pokud identifikátor GUID nebo ID příkazu není rozpoznán, vrátí <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
 
- Chcete-li příkaz zpracovat, <xref:Microsoft.VisualStudio.VSConstants.S_OK> spusťte jej a vraťte se, pokud je spuštění úspěšné. Váš příkaz je zodpovědný za detekci chyb a oznámení; proto vrátí kód chyby, pokud se spuštění nezdaří. Následující příklad ukazuje, jak by měla být implementována metoda spuštění.
+ Chcete-li zpracovat příkaz, spusťte jej a vraťte se, <xref:Microsoft.VisualStudio.VSConstants.S_OK> Pokud je spuštění úspěšné. Váš příkaz zodpovídá za detekci a oznamování chyb; Proto pokud se spuštění nepovede, vrátí kód chyby. Následující příklad ukazuje, jak by měla být implementována metoda provedení.
 
 ```csharp
 public int Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
@@ -135,4 +135,4 @@ public int Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pv
 
 ## <a name="see-also"></a>Viz také
 
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

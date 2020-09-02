@@ -1,5 +1,5 @@
 ---
-title: Doba spánku | Dokumenty společnosti Microsoft
+title: Čas přechodu do režimu spánku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: be2d566228367e2cdb07aecc2d73eaf82a6d961f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62980210"
 ---
-# <a name="sleep-time"></a>Doba spánku
-Tyto segmenty v časové ose jsou spojeny s blokování čas, který je kategorizován jako režim spánku. Kategorie spánku znamená, že vlákno se dobrovolně vzdalo svého logického jádra a nedělá žádnou práci. Během této doby vlákno bylo zablokováno v rozhraní API, které concurrency Visualizer počítá jako sleep. API, jako `Sleep()` `SwitchToThread()` je například a spadají do této skupiny.
+# <a name="sleep-time"></a>Doba přechodu do režimu spánku
+Tyto segmenty na časové ose jsou přidruženy k době blokování, který je zařazen do kategorie v režimu spánku. Kategorie spánku znamená, že vlákno má dobrovolně k dispozici svůj logický jádro a neprovádí žádnou práci. Během této doby bylo vlákno v rozhraní API zablokované, protože Vizualizér souběžnosti se počítá jako režim spánku. `Sleep()`Do této skupiny patří rozhraní API, například a `SwitchToThread()` .
 
 ## <a name="see-also"></a>Viz také
-- [zobrazení vláken](../profiling/threads-view-parallel-performance.md)
+- [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

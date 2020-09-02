@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d02d4cfede6ed3499d09ff58e4454c1ef9cbe0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651007"
 ---
 # <a name="symbol-path-command"></a>Cesta k symbolu – příkaz
@@ -33,11 +33,11 @@ Nastaví seznam adresářů ladicího programu pro hledání symbolů.
 Debug.SymbolPath pathname1;pathname2;... pathnameN
 ```
 
-## <a name="arguments"></a>Arguments
- `pathname` volitelné. Středníkem oddělený seznam cest pro ladicí program pro hledání symbolů.
+## <a name="arguments"></a>Argumenty
+ `pathname` Volitelné. Středníkem oddělený seznam cest pro ladicí program pro hledání symbolů.
 
 ## <a name="remarks"></a>Poznámky
- Pokud není zadán žádný `pathname`, příkaz vypíše aktuální cesty k symbolům.
+ Pokud `pathname` není zadán, zobrazí příkaz seznam aktuálních cest k symbolům.
 
 ## <a name="example"></a>Příklad
  Tento příklad přidá dvě cesty do seznamu adresářů symbolů.

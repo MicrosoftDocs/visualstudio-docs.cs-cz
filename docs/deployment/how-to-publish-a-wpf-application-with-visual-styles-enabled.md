@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 21c94cc7ab97070b138cbae108c617094faf09b5
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382208"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: publikování aplikace WPF s povolenými vizuálními styly
@@ -119,7 +119,7 @@ Vizuální styly umožňují změnu vzhledu běžných ovládacích prvků na z�
    > - Řešení je umístěno v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\` .
    >
    > - Řešení je Publikováno v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` .
-   > - Nejnovější verze publikovaných souborů aplikace se nachází v následujícím adresáři:`%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`
+   > - Nejnovější verze publikovaných souborů aplikace se nachází v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`
    >
    > Nemusíte používat název nebo umístění adresářů popsané výše. Název a umístění popsané výše se používají pouze k ilustraci kroků požadovaných k publikování vašeho řešení.
 

@@ -1,5 +1,5 @@
 ---
-title: Správa komponent | Dokumenty společnosti Microsoft
+title: Správa součástí | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,41 +12,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709327"
 ---
-# <a name="component-management"></a>Správa komponent
-Jednotky úloh v Instalační službě systému Windows jsou označovány jako součásti Instalační služby systému Windows (někdy nazývané WiC nebo pouze součásti). Identifikátor GUID identifikuje každý wic, což je základní jednotka instalace a počítání odkazů pro nastavení, která používají Instalační službu systému Windows.
+# <a name="component-management"></a>Správa součástí
+Jednotky úloh v Instalační služba systému Windows jsou označovány jako Instalační služba systému Windows komponenty (někdy označované jako WICs nebo pouze komponenty). Identifikátor GUID identifikuje každou součást WIC, což je základní jednotka instalace a počítání odkazů pro nastavení, která používají Instalační služba systému Windows.
 
- Přestože k vytvoření instalačního programu VSPackage můžete použít několik produktů, tato diskuse předpokládá použití souborů Instalační služby systému Windows (*MSI*). Při vytváření instalačního programu je nutné správně spravovat nasazení souborů, aby vždy nastat správné počítání odkazů. V důsledku toho různé verze produktu nebudou vzájemně zasahovat ani se vzájemně rozbít v kombinaci scénářů instalace a odinstalace.
+ I když můžete použít několik produktů k vytvoření instalačního programu sady VSPackage, Tato diskuze předpokládá použití souborů Instalační služba systému Windows (*. msi*). Při vytváření instalačního programu je nutné správně spravovat nasazení souboru, aby se vždy nastalo správný počet odkazů. V důsledku toho nebudou různé verze produktu v kombinaci scénářů instalace a odinstalace navzájem narušovat ani přerušovat.
 
- V Instalační službě systému Windows dochází k počítání odkazů na úrovni komponenty. Je nutné pečlivě uspořádat prostředky – soubory, položky registru a tak dále – do součástí. Existují i jiné úrovně organizace , které mohou pomoci v různých scénářích. Další informace naleznete v [tématu Základy Instalační služby systému Windows](../../extensibility/internals/windows-installer-basics.md).
+ V Instalační služba systému Windows probíhá počítání odkazů na úrovni komponenty. Své prostředky, soubory, položky registru a tak dále je nutné pečlivě uspořádat do komponent. Existují i další úrovně organizace, jako jsou moduly, funkce a produkty, které můžou pomáhat v různých scénářích. Další informace najdete v tématu [základy Instalační služba systému Windows](../../extensibility/internals/windows-installer-basics.md).
 
-## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny pro vytváření nastavení pro souběžnou instalaci
+## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Pokyny k vytváření nastavení pro souběžnou instalaci
 
-- Autor soubory a klíče registru, které jsou sdíleny mezi verzemi do svých vlastních součástí.
+- Vytváření souborů a klíčů registru, které jsou sdíleny mezi verzemi, do jejich vlastních komponent.
 
-     To vám umožní snadno je konzumovat v další verzi. Například knihovny typů, které jsou registrovány globálně, přípony souborů, další položky registrované v **HKEY_CLASSES_ROOT**a tak dále.
+     Díky tomu je můžete snadno využívat v další verzi. Například zadejte knihovny, které jsou registrovány globálně, přípony souborů, další položky zaregistrované v **HKEY_CLASSES_ROOT**atd.
 
 - Seskupte sdílené součásti do samostatných slučovacích modulů.
 
-     Tato strategie vám pomůže správně vytvářet pro souběžné instalace vpřed.
+     Tato strategie vám pomůže vytvořit správně pro souběžnou instalaci.
 
-- Nainstalujte sdílené soubory a klíče registru pomocí stejných součástí Instalační služby systému Windows v různých verzích.
+- Nainstalujte sdílené soubory a klíče registru pomocí stejné Instalační služba systému Windows komponenty napříč verzemi.
 
-     Pokud používáte jinou komponentu, soubory a položky registru jsou odinstalovány, když je odinstalován jeden vsed verze VSPackage, ale jiný VSPackage je stále nainstalován.
+     Použijete-li jinou součást, soubory a položky registru se odinstalují, když se odinstaluje jedna verze VSPackage, ale je stále nainstalován jiný VSPackage.
 
-- Nemíchejte verze a sdílené položky ve stejné součásti.
+- Nepoužívejte kombinaci verzí a sdílených položek ve stejné součásti.
 
-     Tím znemožňujete instalaci sdílených položek do globálního umístění a položek s verzí do izolovaných umístění.
+     Díky tomu není možné instalovat sdílené položky do globálního umístění a z položek se správou verzí do izolovaných umístění.
 
-- Nemáte sdílené klíče registru, které odkazují na soubory s verzí.
+- Nemusíte mít sdílené klíče registru, které odkazují na soubory se správou verzí.
 
-     Pokud tak učiníte, sdílené klíče budou přepsány při instalaci jiné verze VSPackage. Po odebrání druhé verze je soubor, na který klíč ukazuje, pryč.
+     Pokud to uděláte, budou se sdílené klíče přepsat při instalaci další verze VSPackage. Po odebrání druhé verze se zobrazí soubor, na který se klíč odkazuje.
 
 ## <a name="see-also"></a>Viz také
-- [Výběr mezi sdílenými a verzemi vs balíčků](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
-- [Scénáře instalace balíčku VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)
+- [Volba mezi Shared a VSPackage se správou verzí](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
+- [Scénáře instalace VSPackage](../../extensibility/internals/vspackage-setup-scenarios.md)

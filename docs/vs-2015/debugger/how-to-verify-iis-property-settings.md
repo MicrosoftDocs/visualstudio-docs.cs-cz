@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ověření nastavení vlastnosti služby IIS | Dokumentace Microsoftu'
+title: 'Postupy: ověření nastavení vlastnosti služby IIS | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,63 +21,63 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ac2ce4f823d82d8a0d8569e15c4ba8920d91d36c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686836"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>Postupy: Ověření nastavení vlastnosti služby IIS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete nastavit vlastnosti pro webovou aplikaci pomocí nástroje pro správu služby IIS. Tyto vlastnosti musí být správně nastavena pro spuštění, aplikace tak, že ověřování těchto nastavení je často nezbytným krokem při řešení potíží.  
+Můžete nastavit vlastnosti webové aplikace pomocí nástroje pro správu služby IIS. Tyto vlastnosti musí být správně nastaveny, aby bylo možné aplikaci spustit, takže ověřování těchto nastavení je často nezbytným krokem při řešení potíží.  
   
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-check-iis-settings-for-the-web-application"></a>Zkontrolujte nastavení služby IIS pro webovou aplikaci  
+### <a name="to-check-iis-settings-for-the-web-application"></a>Postup kontroly nastavení služby IIS pro webovou aplikaci  
   
-1. Otevřít **nástroje pro správu** okno: Na **Start** nabídky, přejděte k **programy**a potom klikněte na tlačítko **nástroje pro správu**. Pokud **nástroje pro správu** se nezobrazují v **programy** nabídky a pak vyhledejte ho **ovládací panely**.  
+1. Otevřete okno **Nástroje pro správu** : v nabídce **Start** přejděte na **programy**a potom klikněte na **Nástroje pro správu**. Pokud se **Nástroje pro správu** nezobrazí v nabídce **programy** , pak je vyhledejte v **Ovládacích panelech**.  
   
-    - Ve Windows 2000, vyberte **Správce služeb Internetu**.  
+    - V systému Windows 2000 vyberte možnost **Správce služeb Internetu**.  
   
-    - Na Windows XP, vyberte **Internetová informační služba**.  
+    - V systému Windows XP vyberte možnost **Internetová informační služba**.  
   
-    - V systému Windows Server 2003, dvakrát klikněte na panel **Správa serveru**.  
+    - V systému Windows Server 2003 poklikejte na **Správa serveru**.  
   
-         **Správa serveru** otevře se okno. V části **aplikační Server**, klikněte na tlačítko **spravovat tento aplikační server**.  
+         Otevře se okno **Správa serveru** . V části **aplikační server**klikněte na **Spravovat tento aplikační server**.  
   
-         **Aplikační Server** otevře se okno. Otevřít **Správce Internetové informační služby (IIS)** uzlu v levém podokně.  
+         Otevře se okno **aplikační server** . V levém podokně otevřete uzel **správce Internetová informační služba (IIS)** .  
   
-2. V dialogovém okně klikněte na uzel stromu ovládacích prvků pro váš počítač. Klikněte na tlačítko **weby** uzel a vyberte uzel webové aplikace. Buď bude uzel webu a proto na stejné úrovni **výchozí webový server** uzlu nebo virtuální adresář uzel pod existující uzel webu.  
+2. V dialogovém okně klikněte na uzel ovládacího prvku strom pro váš počítač. Klikněte na uzel **webové servery** a vyberte uzel webové aplikace. Bude se jednat buď o uzel webu, a tedy na stejné úrovni **jako výchozí** uzel webu nebo na uzlu virtuálního adresáře pod existujícím uzlem webu.  
   
-3. Klikněte pravým tlačítkem na webovou aplikaci a v místní nabídce klikněte na tlačítko **vlastnosti**.  
+3. Klikněte pravým tlačítkem myši na webovou aplikaci a v místní nabídce klikněte na **vlastnosti**.  
   
-4. Ověřte nastavení zabezpečení pro webové aplikace:  
+4. Ověřte nastavení zabezpečení webové aplikace:  
   
-    1. Ve webové aplikaci **vlastnosti** okna, klikněte na tlačítko **zabezpečení adresáře** kartu a klikněte na tlačítko **upravit**.  
+    1. V okně **vlastnosti** webové aplikace klikněte na kartu **zabezpečení adresáře** a pak klikněte na **Upravit**.  
   
-    2. V **metody ověřování** dialogu **povolit anonymní přístup** a **ověření integrované Windows** Pokud ještě nejsou vybraná.  
+    2. V dialogovém okně **metody ověřování** vyberte možnost **Povolit anonymní přístup** a **integrované ověřování systému Windows** , pokud již nejsou vybrány.  
   
-    3. Klikněte na tlačítko **OK** zavřete **metody ověřování** dialogové okno.  
+    3. Kliknutím na tlačítko **OK** zavřete dialogové okno **metody ověřování** .  
   
-5. Pro aplikaci knihovny ATL Server ověřte, zda je příkaz DEBUG. přidružený rozšíření ISAPI. Další informace najdete v tématu [jak: Příkaz DEBUG. přidružit rozšíření](https://msdn.microsoft.com/50d261d3-4bd4-41c0-b44e-3591086f121e).  
+5. V případě serverové aplikace ATL ověřte, zda je příkaz LADIT přidružen k vašemu rozšíření ISAPI. Další informace naleznete v tématu [How to: přidružte příkaz ladění s příponou](https://msdn.microsoft.com/50d261d3-4bd4-41c0-b44e-3591086f121e).  
   
-6. Pro [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace, ujistěte se, že virtuální složka pro aplikace má název aplikace v **Správce Internetové informační služby (IIS)**, **Správce služeb Internetu** nebo  **Internetová informační služba**.  
+6. V případě [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace se ujistěte, že virtuální složka aplikace má název aplikace nastavený ve **Správci Internetová informační služba (IIS)** **Správce služeb Internetu** nebo **Internetová informační služba**.  
   
-    1. Ve webové aplikaci **vlastnosti** okna, vyberte **Directory** kartu, pokud je aplikace ve virtuálním adresáři, nebo **domovský adresář** kartu, pokud je aplikace Adresa webové stránky.  
+    1. V okně **vlastnosti** webové aplikace vyberte kartu **adresář** , pokud je aplikace ve virtuálním adresáři nebo na kartě **domovského adresáře** , pokud je aplikace na webu.  
   
-    2. Ověřte, že název v **místní cesta** odpovídá názvu adresáře, ve skutečnosti nasazená aplikace.  
+    2. Ověřte, že název v **místní cestě** odpovídá názvu adresáře, ve kterém byla aplikace skutečně nasazena.  
   
-    3. V části **nastavení aplikace**, zadejte název kořenového adresáře, který obsahuje aplikace.  
+    3. V části **nastavení aplikace**zadejte název kořenového adresáře, který obsahuje aplikaci.  
   
-    4. Klikněte na tlačítko **OK** zavřete **vlastnosti** dialogové okno.  
+    4. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .  
   
-7. Pro [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace, klikněte na tlačítko **ASP.NET** kartě a ověřte, že správnou verzi [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] je zadán.  
+7. V případě [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] aplikace klikněte na kartu **ASP.NET** a ověřte, zda je zadána správná verze systému [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
-8. Klikněte na tlačítko **OK** zavřete **vlastnosti** dialogové okno.  
+8. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** .  
   
-9. Klikněte na tlačítko **OK** zavřete **Správce Internetové informační služby (IIS)**, **Správce služeb Internetu**, nebo **Internetová informační služba**dialogové okno.  
+9. Kliknutím na tlačítko **OK** zavřete dialogové okno **Internetová informační služba (Správce služby IIS)**, **Správce služeb Internetu**nebo **Internetová informační služba** .  
   
 ## <a name="see-also"></a>Viz také  
- [Odstraňování potíží](../debugger/debugging-web-applications-troubleshooting.md)
+ [Řešení potíží](../debugger/debugging-web-applications-troubleshooting.md)

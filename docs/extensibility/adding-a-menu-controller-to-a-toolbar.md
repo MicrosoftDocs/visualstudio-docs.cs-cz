@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 32cbbbc7784c112b33b5f720b306b8c93269bb82
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903523"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání řadiče nabídky na panel nástrojů
@@ -26,7 +26,7 @@ Kontroler nabídek je rozdělený ovládací prvek. Levá strana řadiče nabíd
 
 Řadiče nabídek se mohou zobrazovat v nabídkách, ale nejčastěji se používají na panelech nástrojů.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-menu-controller"></a>Vytvoření kontroleru nabídek

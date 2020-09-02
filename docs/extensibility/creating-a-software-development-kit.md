@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904112"
 ---
 # <a name="create-a-software-development-kit"></a>Vytvoření sady SDK (Software Development Kit)
@@ -195,7 +195,7 @@ Následující seznam obsahuje prvky souboru:
 
 16. Odkaz na soubor: zadaný pouze pro odkazy, které obsahují ovládací prvky nebo jsou nativní soubory WinMD. Informace o tom, jak určit, zda odkaz obsahuje ovládací prvky, naleznete v tématu [určení umístění položek sady nástrojů](#ToolboxItems) níže.
 
-## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a>Zadejte umístění položek sady nástrojů.
+## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> Zadejte umístění položek sady nástrojů.
 
 Element **ToolBoxItems** schématu *SDKManifest.xml* určuje kategorii a umístění položek sady nástrojů v sadách SDK platforem a rozšíření. Následující příklady ukazují, jak zadat různá umístění. Tato možnost platí pro odkazy WinMD nebo DLL.
 

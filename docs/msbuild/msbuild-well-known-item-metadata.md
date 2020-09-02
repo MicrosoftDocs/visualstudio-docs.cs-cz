@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c810e166ef6f04befdbf7a5d18fe20bb65b8a299
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425378"
 ---
 # <a name="msbuild-well-known-item-metadata"></a>Metadata známé položky nástroje MSBuild
@@ -49,7 +49,7 @@ První tabulka v tomto článku popisuje metadata přiřazená každé položce 
 |%(CreatedTime)|Obsahuje časové razítko od okamžiku, kdy byla položka vytvořena. Příklad:<br /><br /> `2004-06-25 09:26:45.8237425`|
 |%(AccessedTime)|Obsahuje časové razítko od posledního otevření položky.<br /><br /> `2004-08-14 16:52:36.3168743`|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Společná metadata položky MSBuild](common-msbuild-item-metadata.md)
 - [Položky](../msbuild/msbuild-items.md)

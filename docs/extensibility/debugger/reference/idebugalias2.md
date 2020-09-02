@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias2 | Dokumenty společnosti Microsoft
+title: IDebugAlias2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,40 +11,40 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 00e13da257c5477b3834ebb85bf6d481fe699362
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736366"
 ---
 # <a name="idebugalias2"></a>IDebugAlias2
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Představuje číselný alias pro proměnnou a umožňuje vyhodnocení výrazu (EE) získat doménu aplikace pro alias.
+ Představuje numerický alias pro proměnnou a umožňuje vyhodnocovacímu filtru výrazů (EE) získat doménu aplikace pro daný alias.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugAlias2 : IDebugAlias
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno modulem spravovanéladění (DE).
+ Toto rozhraní je implementováno pomocí spravovaného ladicího stroje (DE).
 
 ## <a name="methods"></a>Metody
- Kromě metod v rozhraní [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) toto rozhraní implementuje následující metodu:
+ Kromě metod v rozhraní [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) implementuje toto rozhraní následující metodu:
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetAppDomainId](../../../extensibility/debugger/reference/idebugalias2-getappdomainid.md)|Načte identifikátor pro doménu aplikace.|
 
 ## <a name="remarks"></a>Poznámky
- Alias je desetinné číslo ve formě řetězce následované znakem #, například 1001#.
+ Alias je desetinné číslo ve formě řetězce následovaný znakem #, například 1001 #.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Ee.h
+ Záhlaví: ee. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

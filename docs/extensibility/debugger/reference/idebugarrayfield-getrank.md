@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField::GetRank | Dokumenty společnosti Microsoft
+title: 'IDebugArrayField:: GetRank | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 692f2f13d861d9688ba349fbc80cb1ca426582c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736306"
 ---
 # <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
-Získá pořadí nebo počet dimenzí pole.
+Získá rozměr nebo počet rozměrů pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int GetRank(
 
 ## <a name="parameters"></a>Parametry
 `pdwRank`\
-[out] Vrátí pořadí.
+mimo Vrátí pořadí.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pořadí pole odpovídá počtu dimenzí. V jazycích C++ a C# jsou vícerozměrná pole ve skutečnosti pole polí a proto `GetRank` mohou být považována pouze za jednorozměrné pole (a metoda vždy vrátí 1). V [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]aplikaci jsou naopak vícerozměrná pole zpracována odlišně a pořadí takového pole odráží počet `GetRank` rozměrů (a metoda vždy vrací počet dimenzí).
+ Rozměr pole odpovídá počtu rozměrů. Multidimenzionální pole v jazyce C++ a C# jsou ve skutečnosti pole polí a lze je proto považovat za pouze jednorozměrné pole (a `GetRank` Metoda vždy vrátí hodnotu 1). V na [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] druhé straně multidimenzionální pole jsou zpracovávány jinak a pořadí takového pole odráží počet dimenzí (a `GetRank` Metoda vždy vrací počet dimenzí).
 
 ## <a name="see-also"></a>Viz také
 - [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

@@ -1,5 +1,5 @@
 ---
-title: Použití služby projektu SharePoint | Dokumentace Microsoftu
+title: Použití služby projektu SharePoint | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,37 +14,37 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4dfb7592fb2cec05da1bd72bd69a76e9a3b270db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63007936"
 ---
 # <a name="use-the-sharepoint-project-service"></a>Použití služby projektu SharePoint
-  Systém projektu služby SharePoint obsahuje projekt služby, který vám pomůže provádět úlohy související s systém projektu. Služba projektu není <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objektu.
+  Systém projektu služby SharePoint zahrnuje službu projektu, kterou lze použít k provádění úloh souvisejících se systémem projektu. Služba projektu je <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> objekt.
 
- Můžete přistupovat k projektu služby SharePoint v rozšíření nástrojů služby SharePoint. Můžete také přistupovat ji v jiných typech rozšíření sady Visual Studio, jako jsou doplňky a rozšíření VSPackages. Další informace najdete v tématu [jak: Načtení služby projektu služby SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
+ Ke službě projektu služby SharePoint můžete přistupovat v jakémkoli rozšíření nástrojů služby SharePoint. Můžete k němu také přistupovat v jiných typech rozšíření aplikace Visual Studio, jako jsou doplňky a sady VSPackage. Další informace najdete v tématu [Postup: načtení služby projektu služby SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
 
-## <a name="project-service-features"></a>Funkce služba projektu
- V následující tabulce jsou uvedeny úlohy, které můžete provést pomocí projektu služby SharePoint a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> metodu nebo vlastnost použít k provádění jednotlivých úkolů.
+## <a name="project-service-features"></a>Funkce služby projektu
+ V následující tabulce jsou uvedeny úlohy, které lze provést pomocí služby projektu služby SharePoint a <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> metody nebo vlastnosti, které mají být použity k provedení jednotlivých úkolů.
 
-|Úloha|Člen použití|
+|Úkol|Člen, který se má použít|
 |----------|-------------------|
-|Přístup k jakéhokoli projektu SharePoint, který je otevřený v sadě Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects%2A> Vlastnost.|
-|Přístup ke všem typů položek projektu služby SharePoint, které jsou k dispozici (včetně typů položek projektu předdefinované a vlastní).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes%2A> Vlastnost.|
-|Přístup ke všem jednotlivé kroky nasazení, které jsou k dispozici do projektů služby SharePoint (včetně postupu nasazení předdefinované a vlastní).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.DeploymentSteps%2A> Vlastnost.|
-|Přístup k události, které jsou vyvolány při vývojář refactors kód v projektu služby SharePoint.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CodeRefactoringEvents%2A> Vlastnost.|
-|Spuštění vlastní *příkaz serveru SharePoint* , která volá do objektového modelu serveru SharePoint. Další informace o příkazech SharePoint, naleznete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> Vlastnost.|
-|Převod typu v systému projektu služby SharePoint na typ v modelu objektu automatizace sady Visual Studio nebo integrace objektový model a naopak. Další informace najdete v tématu [převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> Metoda.|
-|Zápis zpráv do **výstup** okno nebo **seznam chyb** okna v sadě Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Logger%2A> Vlastnost.|
-|Přístup k dalším službám, které jsou k dispozici v sadě Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ServiceProvider%2A> Vlastnost.|
-|Načtěte cestu ke složce instalace místního webu služby SharePoint, který se používá pro řešení ladění.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointInstallPath%2A> Vlastnost.|
-|Určení, zda [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] nebo [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] je nainstalován v počítači.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.IsSharePointInstalled%2A> Vlastnost.|
-|Ověření funkcí nebo balíčku v řešení služby SharePoint.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.PackageValidationProvider%2A> Vlastnost.|
+|Přístup k libovolnému projektu služby SharePoint, který je otevřen v aplikaci Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Projects%2A> majetek.|
+|Přístup ke všem typům položek projektu služby SharePoint, které jsou k dispozici (včetně předdefinovaných a vlastních typů položek projektu).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ProjectItemTypes%2A> majetek.|
+|Přístup ke všem krokům nasazení, které jsou k dispozici pro projekty služby SharePoint (včetně předdefinovaných a vlastních kroků nasazení).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.DeploymentSteps%2A> majetek.|
+|Přístup k událostem, které jsou vyvolány, když se v projektu služby SharePoint refaktoruje kód vývojáře.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.CodeRefactoringEvents%2A> majetek.|
+|Spusťte vlastní *příkaz SharePointu* , který volá do objektového modelu serveru SharePoint. Další informace o příkazech služby SharePoint naleznete v tématu [volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> majetek.|
+|Převod typu v systému projektu služby SharePoint na typ v modelu automatizačních objektů sady Visual Studio nebo modelu objektu integrace a naopak. Další informace naleznete v tématu [Převod mezi systémovými typy projektů SharePoint a jinými typy projektů aplikace Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md).|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> Metoda.|
+|Umožňuje psát zprávy do okna **výstupu** nebo okna **Seznam chyb** v aplikaci Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Logger%2A> majetek.|
+|Přístup k dalším službám, které jsou k dispozici v aplikaci Visual Studio.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.ServiceProvider%2A> majetek.|
+|Načtěte cestu k instalační složce místního webu služby SharePoint, která se používá pro ladění řešení.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointInstallPath%2A> majetek.|
+|Určete, [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] zda [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] je v počítači nainstalována nebo.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.IsSharePointInstalled%2A> majetek.|
+|Ověření funkce nebo balíčku v řešení služby SharePoint.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.PackageValidationProvider%2A> majetek.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)
-- [Postupy: Načtení služby projektu SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)
-- [Rozšíření nástrojů SharePoint v sadě Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
-- [Přehled programovacího modelu SharePoint rozšíření nástrojů](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
-- [Postupy: Načtení služby z objektu DTE](https://msdn.microsoft.com/library/bb166401.aspx)
+- [Postupy: načtení služby projektu SharePoint](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)
+- [Rozšiřování nástrojů služby SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [Přehled programovacího modelu rozšíření nástrojů služby SharePoint](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
+- [Postupy: získání služby z objektu DTE](https://msdn.microsoft.com/library/bb166401.aspx)

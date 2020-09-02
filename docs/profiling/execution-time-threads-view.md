@@ -1,5 +1,5 @@
 ---
-title: Doba spuštění (zobrazení vláken) | Dokumenty společnosti Microsoft
+title: Doba spuštění (zobrazení vláken) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac0cf2a60fd194176b7cd9091f4e7dc7a758006f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62969911"
 ---
 # <a name="execution-time-threads-view"></a>Doba spuštění (zobrazení vláken)
-Tyto segmenty v časové ose zobrazení vláken představují čas spuštění, kdy vlákno aktivně pracuje na logickém jádru v systému.
+Tyto segmenty v časové ose zobrazení vlákna reprezentují dobu provádění, když vlákno aktivně pracuje na logickém jádru v systému.
 
- Změny stavu vlákna jsou zjištěny prostřednictvím událostí přepnutí kontextu jádra. Trasování událostí pro Windows (ETW) zachycuje ukázkové zásobníky každou milisekundu. Ve velmi krátkém zeleném segmentu je možné, že se neodebere žádný vzorek. Proto některé segmenty krátké spuštění může zobrazit žádné zásobníku volání.
+ Změny stavu vlákna se zjišťují prostřednictvím událostí přepínače kontextu jádra. Trasování událostí pro Windows (ETW) zachycuje ukázkové zásobníky každých milisekund. Ve velmi krátkém zeleném segmentu je možné, že není provedena žádná ukázka. Proto některé z krátkých segmentů spuštění nesmějí zobrazovat žádný zásobník volání.
 
- Po klepnutí na segment spuštění, Vizualizér souběžnosti zobrazí ukázkový zásobník nejblíže k umístění kliknutí. Umístění tohoto ukázkového zásobníku je zobrazeno černou šipkou nebo stříškou nad časovou osou a ukázkový zásobník se zobrazí na kartě **Aktuální.**
+ Když kliknete na segment spuštění, Vizualizér souběžnosti zobrazí vzorový zásobník, který je nejblíže umístění tohoto kliknutí. Umístění tohoto ukázkového zásobníku se zobrazuje černou šipkou nebo blikajícím kurzorem nad časovou osou a ukázka zásobníku se zobrazí na **aktuální** kartě.
 
- Chcete-li zobrazit tradiční profil vzorkování pro všechny segmenty spuštění v aktuálním zobrazení, klikněte na **tlačítko Spuštění** v profilu viditelné časové osy.
+ Chcete-li zobrazit tradiční profil vzorkování pro všechny segmenty spuštění v aktuálním zobrazení, klikněte na možnost **spuštění** v profilu viditelné časové osy.
 
 ## <a name="see-also"></a>Viz také
 - [Sestava profilu spuštění](../profiling/execution-profile-report.md)

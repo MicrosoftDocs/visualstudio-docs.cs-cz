@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::Povolit | Dokumenty společnosti Microsoft
+title: 'IDebugBoundBreakpoint2:: Enable | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ed933b1abf67fbe357462e86d54b23e3b19fa548
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735563"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
-Povolí nebo zakáže zarážku.
+Povoluje nebo zakazuje zarážku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ int Enable( 
 
 ## <a name="parameters"></a>Parametry
 `fEnable`\
-[v] Nastavte na nenulovou (`TRUE`) chcete-li povolit nebo nulu (`FALSE`) zakázat zarážku.
+pro Nastavte na nenulovou hodnotu ( `TRUE` ), pokud chcete povolit nebo nula ( `FALSE` ) pro vypnutí zarážky.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `E_BP_DELETED` pokud je nastaven stav vázaného `BPS_DELETED` objektu zarážky (část [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet).
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí, `E_BP_DELETED` zda je stav objektu vázaného bodu přerušení nastaven na hodnotu `BPS_DELETED` (součást výčtu [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) ).
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CBoundBreakpoint` tuto metodu pro jednoduchý objekt, který zveřejňuje rozhraní [IDebugBoundBreakpoint2.](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CBoundBreakpoint` objekt, který zpřístupňuje rozhraní [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) .
 
 ```
 HRESULT CBoundBreakpoint::Enable(BOOL fEnable)

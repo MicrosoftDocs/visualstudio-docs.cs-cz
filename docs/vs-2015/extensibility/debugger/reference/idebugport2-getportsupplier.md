@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortSupplier | Dokumentace Microsoftu
+title: 'IDebugPort2:: GetPortSupplier | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e897259dbbd8c5045a72853bccd0b9c8b7423318
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188582"
 ---
 # <a name="idebugport2getportsupplier"></a>IDebugPort2::GetPortSupplier
@@ -40,10 +40,10 @@ int GetPortSupplier( 
   
 #### <a name="parameters"></a>Parametry  
  `ppSupplier`  
- [out] Vrátí [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) objekt představuje dodavatele portu portu.  
+ mimo Vrátí objekt [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) představuje dodavatele portu pro port.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

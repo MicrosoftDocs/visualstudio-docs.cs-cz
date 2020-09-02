@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 03d50ca998efa034b1d4392c1fb7cecb8de8ed06
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904023"
 ---
 # <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
@@ -25,7 +25,7 @@ Kategorii nastavení můžete vytvořit odvozením z <xref:Microsoft.VisualStudi
 
 Chcete-li spustit tento návod, je nutné nejprve dokončit první část [stránky vytvořit možnosti](../extensibility/creating-an-options-page.md). Výsledná Mřížka vlastností možností umožňuje prozkoumávat a měnit vlastnosti v kategorii. Po uložení kategorie vlastností do souboru nastavení prověřte soubor, abyste viděli, jak jsou hodnoty vlastností uložené.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Vytvoření kategorie nastavení
@@ -37,7 +37,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
 2. Otevřete soubor *VSPackage. resx* a přidejte tyto tři řetězcové prostředky:
 
-    |Name|Hodnota|
+    |Název|Hodnota|
     |----------|-----------|
     |106|Moje kategorie|
     |107|Moje nastavení|
@@ -147,7 +147,7 @@ Chcete-li spustit tento návod, je nutné nejprve dokončit první část [strá
 
      Zobrazí se stránka **zvolit kolekci nastavení k importu** .
 
-15. V uzlu **Moje nastavení** stromového zobrazení vyberte soubor *MySettings. vssettings* . Pokud se soubor ve stromovém zobrazení nezobrazí, klikněte na tlačítko **Procházet** a vyhledejte ho. Klikněte na **Další**.
+15. V uzlu **Moje nastavení** stromového zobrazení vyberte soubor *MySettings. vssettings* . Pokud se soubor ve stromovém zobrazení nezobrazí, klikněte na tlačítko **Procházet** a vyhledejte ho. Klikněte na **Next** (Další).
 
      Zobrazí se dialogové okno **zvolit nastavení pro import** .
 

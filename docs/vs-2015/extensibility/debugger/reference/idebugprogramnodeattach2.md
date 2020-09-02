@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNodeAttach2 | Dokumentace Microsoftu
+title: IDebugProgramNodeAttach2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,52 +13,52 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 580d4d2432a957bae8c590b3590a11b1a0b5e84e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148532"
 ---
 # <a name="idebugprogramnodeattach2"></a>IDebugProgramNodeAttach2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Umožňuje programu uzel upozornit pokus o připojení k programu přidružené.  
+Umožňuje, aby byl uzel programu upozorněn na pokus o připojení k přidruženému programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugProgramNodeAttach2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní je implementováno ve stejné třídě, který implementuje [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní, aby bylo možné přijímat oznámení pro operace připojení a poskytnout možnost zrušit operaci připojení.  
+ Toto rozhraní je implementováno na stejné třídě, která implementuje rozhraní [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) , aby bylo možné získat oznámení o operaci připojení a poskytnout příležitost k zrušení operace připojení.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Získat po zavolání tohoto rozhraní `QueryInterface` metodu [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objektu. [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) metoda musí být volána před provedením [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda poskytnout uzel programu příležitost k zastavení procesu připojování.  
+ Získejte toto rozhraní voláním `QueryInterface` metody v objektu [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) . Metoda [Attach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) musí být volána před metodou [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) , aby mohl uzel programu vyvolat zastavení procesu připojení.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
  Toto rozhraní implementuje následující metodu:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)|Připojí se k programu přidružené nebo odloží procesu připojování k [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody.|  
+|[OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)|Připojí se k přidruženému programu nebo odloží proces připojení k metodě [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) .|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní je upřednostňovaná alternativa k zastaralá [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md) metody. Všechny ladicí stroj jsou vždy načteno s `CoCreateInstance` funkce, to znamená, že vytvořena instance mimo Adresní prostor laděného programu.  
+ Toto rozhraní je upřednostňovanou alternativou nepoužívané metody [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md) . Všechny moduly ladění jsou vždy načteny pomocí `CoCreateInstance` funkce, to znamená, že jsou vytvořeny mimo adresní prostor programu, který je laděn.  
   
- Pokud předchozí provádění `IDebugProgramNode2::Attach_V7` metody se jednoduše nastavení `GUID` z laděného programu, pak pouze [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) metoda musí být implementována.  
+ Pokud předchozí implementace `IDebugProgramNode2::Attach_V7` metody jednoduše nastavuje `GUID` ladit program, musí být implementována pouze metoda [Attach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) .  
   
- Pokud předchozí provádění `IDebugProgramNode2::Attach_V7` metoda používá rozhraní zpětného volání, která byla k dispozici a potřeba přesunout do implementace, které tuto funkci [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda a `IDebugProgramNodeAttach2` rozhraní nepodporuje musí být implementována.  
+ Pokud předchozí implementace `IDebugProgramNode2::Attach_V7` metody použila rozhraní zpětného volání, které bylo poskytnuto, pak musí být tato funkce přesunuta do implementace metody [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) a `IDebugProgramNodeAttach2` rozhraní není nutné implementovat.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
- [Připojení](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
+ [Pojovat](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
  [Attach_V7](../../../extensibility/debugger/reference/idebugprogramnode2-attach-v7.md)

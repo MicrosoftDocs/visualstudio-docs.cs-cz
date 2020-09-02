@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Seznamte se s předplatným školení Pluralsight, která jsou součástí vybraných předplatných sady Visual Studio.
 ms.openlocfilehash: f06b2bb8d2151255cb606fd3dcb8344b1fb37411
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87375895"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Výhody školení Pluralsight v předplatných sady Visual Studio
@@ -92,8 +92,8 @@ Odpověď: na konci bezplatného předplatného Pluralsight se můžete rozhodno
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 
-## <a name="see-also"></a>Viz také:
-- [Dokumentace sady Visual Studio](https://docs.microsoft.com/visualstudio/)
+## <a name="see-also"></a>Viz také
+- [Dokumentace k sadě Visual Studio](https://docs.microsoft.com/visualstudio/)
 - [Dokumentace ke službě Azure DevOps](https://docs.microsoft.com/azure/devops/)
 - [Dokumentace k Azure](https://docs.microsoft.com/azure/)
 - [Dokumentace k Microsoft 365](https://docs.microsoft.com/microsoft-365/)

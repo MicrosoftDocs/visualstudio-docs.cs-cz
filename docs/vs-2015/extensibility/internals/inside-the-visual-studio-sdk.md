@@ -1,5 +1,5 @@
 ---
-title: V sadě Visual Studio SDK | Dokumentace Microsoftu
+title: V sadě Visual Studio SDK | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,118 +13,118 @@ caps.latest.revision: 31
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3bdc65a145b64071087d72fce9967c67cc2f8426
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687538"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Práce se sadou Visual Studio SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tato část obsahuje podrobné informace o rozšíření sady Visual Studio, včetně architektury sady Visual Studio, komponenty, služby, schémata, nástroje a podobně.  
+V této části najdete podrobné informace o rozšířeních sady Visual Studio, včetně architektury sady Visual Studio, součástí, služeb, schémat, nástrojů a podobně jako.  
   
-## <a name="extensibility-architecture"></a>Architektura rozšíření  
- Následující obrázek znázorňuje architekturu rozšiřitelnost sady Visual Studio. Rozšíření VSPackages poskytují funkčnost aplikace, který je sdílen napříč IDE rozhraním jako služby. Standardní prostředí IDE, jako také nabízí celou řadu služeb, <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, které poskytují přístup k oddílová funkce integrovaného vývojového prostředí.  
+## <a name="extensibility-architecture"></a>Architektura rozšiřitelnosti  
+ Následující ilustrace znázorňuje architekturu rozšiřitelnosti sady Visual Studio. Sady VSPackage poskytují funkce aplikace, které jsou sdíleny napříč IDE jako služby. Standardní rozhraní IDE také nabízí širokou škálu služeb, například <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> , které poskytují přístup k funkcím okna IDE.  
   
- ![Obrázek architektury prostředí](../../extensibility/internals/media/environment.gif "prostředí")  
-Zobecněný zobrazení architektury v sadě Visual Studio  
+ ![Architektura prostředí – grafika](../../extensibility/internals/media/environment.gif "environment")  
+Zobecněné zobrazení architektury sady Visual Studio  
   
 ## <a name="vspackages"></a>Balíčky VSPackage  
- Rozšíření VSPackages jsou softwarové moduly, které společně tvoří a rozšíření sady Visual Studio s prvky uživatelského rozhraní, služby, projekty, editory a návrháře. Rozšíření VSPackages jsou centrální architektury částí sady Visual Studio. Další informace najdete v tématu [rozšíření VSPackages](../../extensibility/internals/vspackages.md).  
+ VSPackage jsou softwarové moduly, které tvoří a rozšířily Visual Studio s prvky uživatelského rozhraní, službami, projekty, editory a návrháři. Sady VSPackage jsou střední jednotkou architektury sady Visual Studio. Další informace najdete v tématu [VSPackage](../../extensibility/internals/vspackages.md).  
   
 ## <a name="visual-studio-shell"></a>Visual Studio Shell  
- Prostředí sady Visual Studio poskytuje základní funkce a podporují různé komunikaci mezi jeho součást rozšíření VSPackages a rozhraní MEF. Další informace najdete v tématu [prostředí sady Visual Studio](../../extensibility/internals/visual-studio-shell.md).  
+ Prostředí sady Visual Studio poskytuje základní funkce a podporuje křížovou komunikaci mezi komponentami VSPackage a rozšířeními MEF. Další informace naleznete v tématu [prostředí sady Visual Studio](../../extensibility/internals/visual-studio-shell.md).  
   
 ## <a name="user-experience-guidelines"></a>Pravidla pro práci s uživatelským prostředím  
- Pokud máte v úmyslu návrh nových funkcí pro Visual Studio, byste měli provést, podívejte se na tyto pokyny pro návrh a použitelnost tipy: [Pokyny pro práci uživatelů sady Visual Studio](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ Pokud plánujete navrhovat nové funkce pro Visual Studio, měli byste se podívat na tyto pokyny v tipech pro návrh a použitelnost: [pokyny pro uživatelské prostředí sady Visual Studio](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
   
 ## <a name="commands"></a>Příkazy  
- Příkazy jsou funkce, které provádět úlohy, jako je například tisk dokumentu, aktualizuje zobrazení nebo vytvoření nového souboru.  
+ Příkazy jsou funkce, které provádějí úlohy, jako je například tisk dokumentu, aktualizace zobrazení nebo vytvoření nového souboru.  
   
- Když rozšíříte sady Visual Studio, můžete vytvořit příkazy a zaregistrovat je v rámci prostředí sady Visual Studio. Můžete určit, jak tyto příkazy se zobrazí v integrovaném vývojovém prostředí, například na nabídku nebo panel nástrojů. Obvykle se zobrazí na vlastní příkaz **nástroje** nabídky a příkaz pro zobrazování okna nástroje by se zobrazí na **ostatní Windows** podnabídce **zobrazení** nabídky.  
+ Když rozšíříte Visual Studio, můžete vytvořit příkazy a zaregistrovat je pomocí prostředí sady Visual Studio. Můžete určit, jak se tyto příkazy zobrazí v integrovaném vývojovém prostředí (IDE), například v nabídce nebo na panelu nástrojů. V nabídce **nástroje** se obvykle zobrazí vlastní příkaz a v nabídce **zobrazení** **se zobrazí** příkaz pro zobrazení okna nástroje.  
   
- Při vytváření příkazu musíte také vytvořit obslužnou rutinu události pro něj. Obslužná rutina události Určuje, kdy příkaz viditelné nebo povoleno, umožňuje měnit jeho textu a zaručuje, že příkaz náležitě reaguje při aktivaci. Ve většině případů, rozhraní IDE zpracovává příkazy pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Příkazy v sadě Visual Studio jsou zpracovány počínaje kontext nejvnitřnější příkazů, na základě výběru v místní a pokračuje na vnější kontext na základě výběru v globální. Příkazy, které jsou přidány do hlavní nabídky jsou okamžitě k dispozici pro skriptování.  
+ Při vytváření příkazu je nutné pro něj také vytvořit obslužnou rutinu události. Obslužná rutina události Určuje, zda je příkaz viditelný nebo povolený, umožňuje upravit jeho text a zaručuje, že příkaz reaguje správně při jeho aktivaci. Ve většině instancí rozhraní IDE zpracovává příkazy pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Příkazy v aplikaci Visual Studio jsou zpracovávány počínaje nejvnitřnějším kontextem příkazu na základě místního výběru a pokračováním do nejvzdálenějšího kontextu v závislosti na globálním výběru. Příkazy přidané do hlavní nabídky jsou okamžitě k dispozici pro skriptování.  
   
- Další informace najdete v tématu [příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md).  
+ Další informace najdete v tématech [příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md).  
   
 ## <a name="menus-and-toolbars"></a>Nabídky a panely nástrojů  
- Nabídky a panely nástrojů poskytují způsob, jak uživatelům umožnit vyvolání příkazů. Nabídky jsou řádky nebo sloupce příkazů, které se obvykle zobrazují jako jednotlivé textové položky v horní části panelu nástrojů. Podnabídek jsou sekundární nabídky, které se zobrazí po kliknutí příkazy, které zahrnují malou šipku. Kontextové nabídky se zobrazí, když uživatel klepne pravým tlačítkem myši některé prvky uživatelského rozhraní. Jsou některé běžné názvy nabídek **souboru**, **upravit**, **zobrazení**, a **okno**. Další informace najdete v tématu [rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
+ Nabídky a panely nástrojů poskytují uživatelům způsob, jak vyvolat příkazy. Nabídky jsou řádky nebo sloupce příkazů, které se obvykle zobrazují jako jednotlivé textové položky v horní části okna nástroje. Podnabídky jsou sekundárními nabídkami, které se zobrazí, když uživatel klikne na příkazy, které obsahují malou šipku. Kontextové nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši na určité prvky uživatelského rozhraní. Mezi běžné názvy nabídek patří **soubor**, **Úpravy**, **zobrazení**a **okno**. Další informace najdete v tématu [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
   
- Panely nástrojů jsou řádky nebo sloupce tlačítka a další ovládací prvky, jako je například pole se seznamem, pole se seznamem a textová pole. Tlačítka panelu nástrojů obvykle obsahují obrázky ikon, jako je například ikonu složky pro **otevřít soubor** příkaz nebo tiskárny pro **tisk** příkazu. Všechny prvky panel nástrojů jsou spojeny s příkazy. Po kliknutí na tlačítko panelu nástrojů, spustí jeho přidružený příkaz. V případě ovládací prvek rozevírací seznam je přidružen k jinému příkazu každou položku v rozevíracím seznamu. Některé ovládací prvky panelu nástrojů, jako je například ovládací prvek splitter, jsou hybridních. Druhé straně je šipku dolů, která zobrazí několik příkazů, když dojde ke kliknutí na jedné straně ovládacího prvku je tlačítka panelu nástrojů.  
+ Panely nástrojů jsou řádky nebo sloupce tlačítek a další ovládací prvky, například pole se seznamem, seznamy a textová pole. Tlačítka panelu nástrojů mají obvykle obrázky ikon, například ikonu složky pro příkaz **otevřít soubor** nebo tiskárnu pro příkaz **Tisk** . Všechny prvky panelu nástrojů jsou přidruženy k příkazům. Po kliknutí na tlačítko na panelu nástrojů se jeho přidružený příkaz spustí. V případě ovládacího prvku rozevíracího seznamu je každá položka v rozevíracím seznamu přidružena k jinému příkazu. Některé ovládací prvky panelu nástrojů, jako je například ovládací prvek rozdělovače, jsou hybrids. Jedna strana ovládacího prvku je tlačítko panelu nástrojů a druhá strana má šipku dolů, která při kliknutí zobrazuje několik příkazů.  
   
-## <a name="tool-windows"></a>Nástroj Windows  
- Nástroje systému windows jsou v integrovaném vývojovém prostředí slouží k zobrazení informací. **Panel nástrojů**, **Průzkumníka řešení**, **vlastnosti** okně a **webový prohlížeč** jsou příklady oken nástrojů.  
+## <a name="tool-windows"></a>Okna nástrojů  
+ Okna nástrojů se používají v integrovaném vývojovém prostředí k zobrazení informací. Příklady oken nástrojů jsou **sady nástrojů**, **Průzkumník řešení**, okno **vlastností** a **webový prohlížeč** .  
   
- Okna nástrojů obvykle nabízejí různé ovládací prvky, se kterými se uživatelé můžou komunikovat. Například **vlastnosti** okno umožňuje uživateli nastavit vlastnosti objektů, které pro konkrétní účel. **Vlastnosti** okna je v tomto smyslu specializovaná, ale také obecné, protože je možné v mnoha různých situacích. Podobně **výstup** okna je specializovat, protože poskytuje textový výstup, ale Obecné, protože mnoho subsystémy v sadě Visual Studio můžete použít k poskytnutí výstup pro uživatele sady Visual Studio.  
+ Okna nástrojů obvykle nabízejí různé ovládací prvky, se kterými může uživatel pracovat. Například okno **vlastnosti** umožňuje uživateli nastavit vlastnosti objektů, které slouží k určitému účelu. Okno **vlastnosti** je specializované v tomto smyslu, ale také obecné, protože může být použito v mnoha různých situacích. Podobně je okno **výstup** specializované, protože poskytuje textový výstup, ale obecně vzhledem k tomu, že řada subsystémů v aplikaci Visual Studio může použít k poskytnutí výstupu uživateli aplikace Visual Studio.  
   
- Vezměte v úvahu následující obrázek sady Visual Studio, který obsahuje několika okny nástrojů.  
+ Vezměte v úvahu následující obrázek sady Visual Studio, která obsahuje několik oken nástrojů.  
   
  ![Snímek obrazovky](../../extensibility/internals/media/t1gui.png "T1gui")  
   
- Některá okna nástrojů jsou ukotveny na jedno podokno, které zobrazí panel nástrojů Průzkumník řešení a skryje jiné nástroje systému windows, ale zpřístupňuje je kliknutím na karty. Na obrázku ukazuje dvě ostatním oknům nástrojů **seznam chyb** a **výstup** okno ukotvených dohromady na jedno podokno.  
+ Některá okna nástrojů jsou ukotvena společně v jednom podokně, které zobrazuje okno Průzkumník řešení nástrojů a skrývá ostatní okna nástrojů, ale zpřístupňuje je kliknutím na karty. Obrázek ukazuje další okna nástrojů, okno **Seznam chyb** a **výstup** , které je ukotveno společně v jednom podokně.  
   
- Navíc zobrazí se podokno hlavní dokument, který ukazuje několik oken editoru. I když obvykle mají pouze jednu instanci okna nástrojů (například lze otevřít pouze jeden **Průzkumníka řešení**), editor windows může mít více instancí, z nichž každý se používá k úpravě samostatné dokumentu, ale všechny z nich jsou ukotveny v podokno. Obrázek ukazuje panel dokumentu, který má dvě okna editoru, jedno okno návrháře formulářů a okno prohlížeče zobrazující úvodní stránky. Kliknutím na karty jsou k dispozici všechna okna v podokně dokumentu, ale je okno editoru obsahující soubor EditorPane.cs viditelné a aktivní.  
+ Zobrazuje se také hlavní podokno dokumentu, které zobrazuje několik oken editoru. Přestože má systém Windows obvykle pouze jednu instanci (například můžete otevřít pouze jeden **Průzkumník řešení**), okna Editor mohou mít několik instancí, z nichž každý je použit k úpravě samostatného dokumentu, ale všechny jsou ukotveny ve stejném podokně. Obrázek zobrazuje podokno dokumentu, které obsahuje dva okna editoru, jedno okno návrháře formuláře a okno prohlížeče, které zobrazuje úvodní stránku. Všechna okna v podokně dokumentu jsou k dispozici kliknutím na karty, ale okno editoru, které obsahuje soubor EditorPane.cs, je viditelné a aktivní.  
   
- Při rozšíření sady Visual Studio můžete vytvořit nástroj pro windows, které umožní uživatelům aplikace Visual Studio pracovat s rozšíření. Můžete také vytvořit vlastní editorů, které umožní uživatelům aplikace Visual Studio, úpravy dokumentů. Protože oken nástrojů a editory, bude se integrovat do sady Visual Studio, nemají programovat ukotvit nebo se zobrazí na kartě správně. Pokud jsou správně registrovány v sadě Visual Studio, mají se automaticky typické funkce nástrojů a oken dokumentu v sadě Visual Studio. Další informace najdete v tématu [rozšíření a přizpůsobení nástrojů Windows](../../extensibility/extending-and-customizing-tool-windows.md).  
+ Když rozšíříte aplikaci Visual Studio, můžete vytvořit okna nástrojů, která uživatelům sady Visual Studio umožní pracovat s vaším rozšířením. Můžete také vytvořit vlastní editory, které umožní uživatelům aplikace Visual Studio upravovat dokumenty. Vzhledem k tomu, že se vaše okna nástrojů a editory budou integrovat do sady Visual Studio, nemusíte je naprogramovat, aby je bylo možné správně ukotvit nebo zobrazit na kartě. Pokud jsou správně registrovány v aplikaci Visual Studio, budou automaticky mít typické funkce oken nástrojů a oken dokumentů v aplikaci Visual Studio. Další informace najdete v tématu [rozšíření a přizpůsobení oken nástrojů](../../extensibility/extending-and-customizing-tool-windows.md).  
   
 ## <a name="document-windows"></a>Okna dokumentů  
- Okno dokumentu je orámované podřízeného okna okna rozhraní více dokumentů (MDI). Okna dokumentu se obvykle používají k hostování textových editorů, editory formuláře (označované také jako návrháři) nebo ovládací prvky pro úpravy, ale mohli hostovat i jiné typy funkční. **Nový soubor** dialogové okno obsahuje příklady okna dokumentu, která poskytuje sada Visual Studio.  
+ Okno dokumentu je rámcové podřízené okno okna rozhraní MDI (Multiple Document Interface). Okna dokumentu se obvykle používají k hostování textových editorů, editorů formulářů (označovaných také jako návrháři) nebo ovládacích prvků pro úpravy, ale mohou také hostovat jiné funkční typy. Dialogové okno **nový soubor** obsahuje příklady oken dokumentu, které poskytuje Visual Studio.  
   
- Většina editory jsou specifické pro programovací jazyk nebo typ souboru, například stránky HTML, sad rámců, C++ soubory nebo soubory hlaviček. Výběrem šablony v **nový soubor** dialogovém okně, uživatel dynamicky vytvoří okno dokumentu v editoru pro typ souboru, která je přidružená k šabloně. Okno dokumentu se také vytvoří, když uživatel otevře existující soubor.  
+ Většina editorů je specifická pro programovací jazyk nebo pro typ souboru, jako jsou stránky HTML, sady rámců, soubory C++ nebo soubory hlaviček. Když v dialogovém okně **nový soubor** vyberete šablonu, uživatel dynamicky vytvoří okno dokumentu pro editor pro typ souboru, který je přidružený k šabloně. Okno dokumentu se také vytvoří, když uživatel otevře existující soubor.  
   
- Okna dokumentů jsou omezené na oblasti klienta MDI. Každé okno dokumentu je na kartě v horní části, a pořadí ovládacích prvků je propojený s ostatní okna, které je možná otevřená v oblasti MDI. Pravým tlačítkem myši na kartě okna dokumentu zobrazí místní nabídku, která obsahuje možnosti, které oblasti MDI rozdělit do několika skupin vodorovné nebo svislé kartě. Rozdělení oblasti MDI umožňuje více souborů, které lze zobrazit ve stejnou dobu. Další informace najdete v tématu [dokumentu Windows](../../extensibility/internals/document-windows.md).  
+ Okna dokumentu jsou omezená na oblast klienta MDI. Každé okno dokumentu má na začátku kartu a pořadí karet je propojeno s dalšími okny, které mohou být otevřeny v oblasti MDI. Kliknutím pravým tlačítkem myši na kartu okna dokumentu se zobrazí místní nabídka, která obsahuje možnosti pro rozdělení oblasti MDI na více vodorovných nebo svislých skupin karet. Rozdělení oblasti MDI umožňuje zobrazit více souborů současně. Další informace najdete v tématu [okna dokumentů](../../extensibility/internals/document-windows.md).  
   
 ## <a name="editors"></a>Editory  
- Editor sady Visual Studio můžete přizpůsobit a používat ho pro vlastní typ obsahu prostřednictvím Managed Extensibility Framework (MEF). V mnoha případech nemusíte vytvářet VSPackage pro rozšíření editoru, ale pokud chcete zahrnout funkce v prostředí (například příkaz nabídky nebo klávesové zkratky), můžete kombinovat MEF rozšíření pomocí VSPackage.  
+ Editor sady Visual Studio umožňuje přizpůsobit ho a používat pro vlastní typy obsahu prostřednictvím Managed Extensibility Framework (MEF). V mnoha případech nebudete muset vytvořit VSPackage pro rozšíření editoru, i když chcete zahrnout funkce z prostředí (například příkaz nabídky nebo klávesovou zkratku), můžete zkombinovat rozšíření MEF pomocí VSPackage.  
   
- Můžete také vytvořit vlastní editor, například pokud chcete číst a zapisovat do databáze, nebo pokud budete chtít použít návrháře. Můžete také použít externí editor jako je například Poznámkový blok nebo Microsoft WordPad. Další informace najdete v tématu [Editor a rozšíření služeb jazyka](../../extensibility/editor-and-language-service-extensions.md).  
+ Můžete také vytvořit vlastní editor, například pokud chcete číst a zapisovat do databáze nebo pokud chcete použít návrháře. Můžete také použít externí editor, například Poznámkový blok nebo Microsoft WordPad. Další informace najdete v tématu [rozšíření pro Editor a jazykové služby](../../extensibility/editor-and-language-service-extensions.md).  
   
 ## <a name="language-services"></a>Jazykové služby  
- Pokud chcete editoru sady Visual Studio pro podporu nových programovací klíčových slov nebo dokonce i nový programovací jazyk, vytvoříte službu jazyka. Každá služba jazyka může implementovat určité funkce editoru plně, částečně nebo vůbec ne. V závislosti na tom, jak je nakonfigurovaný může poskytnout službě jazyka zvýrazňování syntaxe, párování složených závorek, podporu technologie IntelliSense a dalších funkcích v editoru.  
+ Pokud chcete, aby Editor sady Visual Studio podporoval nová klíčová slova pro programování nebo dokonce nový programovací jazyk, vytvoříte službu jazyka. Každá služba jazyka může implementovat určité funkce editoru úplně, částečně nebo vůbec. V závislosti na tom, jak je nakonfigurováno, může služba jazyka poskytovat zvýrazňování syntaxe, spárování složených závorek, podporu technologie IntelliSense a další funkce v editoru.  
   
- V srdci služba jazyka je analyzátor a skener. Skener (nebo lexeru) rozdělí do zdrojového souboru na prvky, které jsou označovány jako tokeny a analyzátor vytvoří vztahy mezi těchto tokenů. Při vytváření služby jazyka, musíte implementovat analyzátor a skener tak, aby Visual Studio by rozuměla tokeny a gramatiku jazyka. Můžete vytvořit spravované nebo nespravované jazykové služby. Další informace najdete v tématu [rozšíření služeb starší verze jazyka](../../extensibility/internals/legacy-language-service-extensibility.md).  
+ Jádrem jazykové služby je analyzátor a skener. Skener (nebo lexer) rozděluje zdrojový soubor na elementy, které jsou známé jako tokeny, a analyzátor vytváří vztahy mezi těmito tokeny. Při vytváření jazykové služby je nutné implementovat analyzátor a skener, aby aplikace Visual Studio mohla pochopit tokeny a gramatiku jazyka. Můžete vytvořit spravované nebo nespravované jazykové služby. Další informace najdete v tématu [rozšiřitelnost služby starší verze jazyka](../../extensibility/internals/legacy-language-service-extensibility.md).  
   
 ## <a name="projects"></a>Projekty  
- Projekty v sadě Visual Studio, jsou kontejnery, které vývojáři použít k uspořádání a vytvoření zdrojového kódu a další prostředky. Projekty umožňují organizovat, vytváření, ladění a nasazení zdrojového kódu, odkazy na webové služby a databáze a další prostředky. Rozšíření VSPackages můžete rozšířit systém projektu sady Visual Studio poskytnutím typy projektů, podtypů projektů a vlastních nástrojů.  
+ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používají k uspořádání a sestavení zdrojového kódu a dalších prostředků. Projekty umožňují organizovat, sestavovat, ladit a nasazovat zdrojový kód, odkazy na webové služby a databáze a další prostředky. Sady VSPackage mohou rozšíření systému projektu sady Visual Studio, protože poskytují typy projektů, podtypy projektů a vlastní nástroje.  
   
- Projekty mohou také shromáždit do jediného řešení, což je seskupení jednoho nebo více projektů, které vzájemně spolupracují na vytvoření aplikace. Projekt a stavové informace, které se vztahují k řešení je uložené v dva soubory řešení, soubor založený na textu řešení (.sln) a soubor binární řešení uživatelské možnosti (.suo). Tyto soubory jsou podobné soubory skupiny (.vbg), které byly použity v dřívějších verzích [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], a pracovní prostor (.dsw) a uživatelské možnosti (.opt) soubory, které byly použity v dřívějších verzích [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)].  
+ Projekty mohou být také shromažďovány do řešení, které je seskupením jednoho nebo více projektů, které spolupracují při vytváření aplikace. Informace o projektu a stavu, které se týkají řešení, jsou uloženy ve dvou souborech řešení, v textovém souboru řešení (. sln) a v souboru možnosti uživatele binárního řešení (. suo). Tyto soubory jsou podobné souborům skupiny (. VBG), které byly použity v dřívějších verzích nástroje [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , a v pracovních prostorech (. DSW) a uživatelských možnostech (. opt), které byly použity v dřívějších verzích nástroje [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] .  
   
  Další informace najdete v tématu [projekty](../../extensibility/internals/projects.md) a [řešení](../../extensibility/internals/solutions-overview.md).  
   
 ## <a name="project-and-item-templates"></a>Šablony projektů a položek  
- Visual Studio obsahuje šablony projektů předdefinované a šablony položek projektu. Můžete také vytvořit vlastní šablony nebo získání šablony z komunity a integrovat je do sady Visual Studio. [Galerie kódů MSDN](https://code.msdn.microsoft.com/site/search?query=visual%20studio) je místo, kde lze získat šablony a rozšíření.  
+ Visual Studio obsahuje předdefinované šablony projektů a šablony položek projektu. Můžete také vytvořit vlastní šablony nebo získat šablony z komunity a pak je integrovat do sady Visual Studio. [Galerie kódu MSDN](https://code.msdn.microsoft.com/site/search?query=visual%20studio) je místem, kde můžete přejít k šablonám a rozšířením.  
   
- Šablony obsahují projekt strukturu a základní soubory, které jsou nutné k vytvoření určitého druhu aplikace, ovládací prvek, knihovny nebo třídy. Pokud chcete k vývoji softwaru, který se podobá některou ze šablon, vytvořit projekt, který je založen na šabloně a potom upravte soubory v daném projektu.  
+ Šablony obsahují strukturu projektu a základní soubory, které jsou požadovány pro sestavení konkrétního druhu aplikace, ovládacího prvku, knihovny nebo třídy. Pokud chcete vyvíjet software, který se podobá jedné z šablon, vytvořte projekt, který je založen na šabloně, a pak upravte soubory v tomto projektu.  
   
 > [!NOTE]
-> Tato architektura šablony není podporován pro [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projekty. Informace o tom, jak vytvořit [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] šablony projektů, naleznete v tématu [návrhu průvodce](https://msdn.microsoft.com/library/a7c0be7e-9297-4fed-83e3-5645c896d56b).  
+> Tato architektura šablony není pro projekty podporována [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] . Informace o tom, jak vytvořit [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] šablony projektu, najdete v tématu [navrhování Průvodce](https://msdn.microsoft.com/library/a7c0be7e-9297-4fed-83e3-5645c896d56b).  
   
- Další informace najdete v tématu [přidání projektů a šablon položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md).  
+ Další informace naleznete v tématu [Přidání projektů a šablon položek projektu](../../extensibility/internals/adding-project-and-project-item-templates.md).  
   
 ## <a name="properties-and-options"></a>Vlastnosti a možnosti  
- **Vlastnosti** okně zobrazí vlastnosti jednoho nebo více vybraných položek: [Rozšíření vlastností](../../extensibility/internals/extending-properties.md) možnosti stránky obsahují sadu možností, které se týkají konkrétní součástí, například programovacím jazyce nebo VSPackage: [Možnosti a stránky možnosti](../../extensibility/internals/options-and-options-pages.md). Nastavení jsou obecně související s Uživatelským rozhraním funkce, které můžete importovat a exportovat: [Podpora pro uživatelská nastavení](../../extensibility/internals/support-for-user-settings.md).  
+ V okně **vlastnosti** se zobrazí vlastnosti jedné nebo více vybraných položek: [rozšíření vlastností](../../extensibility/internals/extending-properties.md) stránky obsahuje sady možností, které se vztahují k určité komponentě, jako například programovací jazyk nebo stránky VSPackage: [Možnosti a možnosti](../../extensibility/internals/options-and-options-pages.md). Nastavení jsou všeobecně funkcemi související s uživatelským rozhraním, které je možné importovat a exportovat: [Podpora uživatelských nastavení](../../extensibility/internals/support-for-user-settings.md).  
   
-## <a name="visual-studio-services"></a>Visual Studio Services  
- Služba obsahuje konkrétní sadu rozhraní pro součásti využívají. Visual Studio poskytuje sada služeb, které mohou využívat všechny komponenty, včetně rozšíření. Například služby Visual Studio umožňují okna nástrojů zobrazený nebo skrytý dynamicky, povolení přístupu k nápovědě, stavový řádek nebo události uživatelského rozhraní. Editor sady Visual Studio také poskytuje služby, které lze importovat rozšířeními editoru. Další informace najdete v tématu [Using a poskytování služeb](../../extensibility/using-and-providing-services.md).  
+## <a name="visual-studio-services"></a>Služby sady Visual Studio  
+ Služba poskytuje konkrétní sadu rozhraní pro využívání komponent. Sada Visual Studio poskytuje sadu služeb, které mohou být použity všemi komponentami včetně rozšíření. Například služby sady Visual Studio umožňují dynamické zobrazení nebo skrytí oken nástrojů, povolení přístupu k nápovědě, stavovým stavům nebo událostem uživatelského rozhraní. Editor sady Visual Studio také poskytuje služby, které lze importovat pomocí rozšíření editoru. Další informace najdete v tématu [používání a poskytování služeb](../../extensibility/using-and-providing-services.md).  
   
 ## <a name="debugger"></a>Ladicí program  
- Ladicí program je uživatelské rozhraní pro komponenty ladění specifické pro jazyk. Pokud nová jazyková služba, kterou jste vytvořili, musíte vytvořit konkrétní ladicí modul k připojení k ladicímu programu v. Další informace najdete v tématu [rozšiřitelnosti ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).  
+ Ladicí program je uživatelské rozhraní pro součásti ladění specifické pro jazyk. Pokud jste vytvořili novou jazykovou službu, budete muset vytvořit konkrétní ladicí stroj, který se připojí k ladicímu programu. Další informace najdete v tématu [rozšiřitelnost ladicího programu sady Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md).  
   
 ## <a name="source-control"></a>Správa zdrojového kódu  
- Informace o implementaci modulu plug-in správy zdrojového kódu nebo balíčku VSPackage najdete v tématu [správy zdrojových kódů](../../extensibility/internals/source-control.md).  
+ Informace o implementaci modulu plug-in nebo VSPackage správy zdrojového kódu naleznete v tématu [Správa zdrojového kódu](../../extensibility/internals/source-control.md).  
   
 ## <a name="wizards"></a>Průvodci  
- Průvodce lze vytvořit ve spojení s novým typem projektu, tak, aby průvodce může pomoci uživatelům dělat správná rozhodnutí při vytváření nového projektu daného typu. Další informace najdete v tématu [průvodců](../../extensibility/internals/wizards.md).  
+ Můžete vytvořit průvodce ve spojení s novým typem projektu, aby průvodce mohl pomáhat vašim uživatelům při vytváření nového projektu daného typu. Další informace najdete v tématu [Průvodce](../../extensibility/internals/wizards.md).  
   
 ## <a name="custom-tools"></a>Vlastní nástroje  
- Vlastní nástroje vám umožní přidružit nástroj položky v projektu a spusťte tento nástroj pokaždé, když je soubor uložen. Další informace najdete v tématu [vlastní nástroje](../../extensibility/internals/custom-tools.md).  
+ Vlastní nástroje umožňují přidružit nástroj k položce v projektu a spustit tento nástroj pokaždé, když je soubor uložený. Další informace najdete v tématu [vlastní nástroje](../../extensibility/internals/custom-tools.md).  
   
 ## <a name="vssdk-utilities"></a>Nástroje VSSDK  
- VSSDK zahrnuje sadu nástrojů, které je nutné, abyste mohli pracovat s různými aspekty rozšíření VSPackages. Další informace najdete v tématu [nástroje VSSDK](../../extensibility/internals/vssdk-utilities.md).  
+ VSSDK obsahuje sadu nástrojů, které možná budete potřebovat, aby bylo možné pracovat s různými aspekty VSPackage. Další informace najdete v tématu [VSSDK Utilities](../../extensibility/internals/vssdk-utilities.md).  
   
-## <a name="using-windows-installer"></a>Pomocí Instalační služby systému Windows  
- V některých případech budete muset použít instalační služby systému Windows než instalátor VSIX: například může potřebovat k zápisu do registru. Informace o použití Instalační služby systému Windows se rozšíření najdete v tématu [instalace rozšíření VSPackages s Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
+## <a name="using-windows-installer"></a>Použití Instalační služba systému Windows  
+ V některých případech může být nutné použít Instalační služba systému Windows místo instalačního programu VSIX: například může být nutné zapisovat do registru. Informace o použití Instalační služba systému Windows s rozšířeními najdete v tématu [Instalace VSPackage pomocí Instalační služba systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
   
-## <a name="help-viewer"></a>Aplikaci Help Viewer  
- Vlastní Nápověda a F1 stránky můžete integrovat do aplikace Help Viewer. Další informace najdete v tématu [Microsoft Help Viewer SDK](../../extensibility/internals/microsoft-help-viewer-sdk.md).
+## <a name="help-viewer"></a>Prohlížeč nápovědy  
+ V aplikaci Help Viewer můžete integrovat vlastní nápovědu a stránky F1. Další informace najdete v tématu [Microsoft Help Viewer SDK](../../extensibility/internals/microsoft-help-viewer-sdk.md).

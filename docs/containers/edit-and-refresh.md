@@ -10,10 +10,10 @@ ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
 ms.openlocfilehash: 26562268167abdfc5ee643618ec1610da231f9f0
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283161"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
@@ -24,7 +24,7 @@ Tento článek ukazuje, jak pomocí sady Visual Studio spustit aplikaci v místn
 
 Pokud již máte projekt podporovaného typu, Visual Studio může vytvořit souboru Dockerfile a nakonfigurovat projekt tak, aby běžel v kontejneru. Viz [nástroje kontejneru v aplikaci Visual Studio](overview.md).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Chcete-li ladit aplikace v místním kontejneru Docker, musí být nainstalovány následující nástroje:
 

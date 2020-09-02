@@ -1,5 +1,5 @@
 ---
-title: Chyby zarážky | Dokumentace Microsoftu
+title: Chyby zarážky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,26 +13,26 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e98dc5e4645ac67ecdf5ebb06ecf0f31510202e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147978"
 ---
 # <a name="breakpoint-errors"></a>Chyby zarážky
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Následující popisuje proces, když se pokusí vytvořit vazbu na kód zarážku ale selže:  
+Následující popisuje proces, když se zarážka pokusí vytvořit vazby na kód, ale neúspěch:  
   
-## <a name="troubleshooting-a-breakpoint-error"></a>Řešení potíží s chybou zarážku  
+## <a name="troubleshooting-a-breakpoint-error"></a>Řešení potíží s chybou zarážky  
   
-1. Ladicí stroj (DE) odešle [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) do Správce ladění relace (SDM).  
+1. Ladicí stroj (DE) odesílá [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) do Správce ladění relace (SDM).  
   
-2. Volání SDM [IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 ** `ppErrorBP`) zobrazíte Chyba zarážky.  
+2. Volání SDM [IDebugBreakpointErrorEvent2:: GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP` ) k získání chyby zarážky.  
   
-3. Volání SDM [IDebugErrorBreakpoint2::GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) zobrazíte čekající zarážka, ze kterého pochází chyba zarážky.  
+3. Volání SDM [IDebugErrorBreakpoint2:: GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) získá nevyřízenou zarážku, ze které pochází zarážka chyby.  
   
-4. Volání SDM [IDebugErrorBreakpoint2::GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) zobrazíte důvod, proč se nepodařilo vytvořit vazbu zarážky chyb.  
+4. Volání SDM [IDebugErrorBreakpoint2:: GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) získat důvod, proč se zarážka chyby nepodařilo vytvořit.  
   
 ## <a name="see-also"></a>Viz také  
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

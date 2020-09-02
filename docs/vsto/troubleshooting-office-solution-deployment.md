@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: fc8f336c3d43fb1f896d9e5e6b4d4d12c13d4064
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234975"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Řešení potíží s nasazením řešení pro systém Office
@@ -125,7 +125,7 @@ ms.locfileid: "87234975"
 
  Nastavte rozšíření na **. VSTO** a typ MIME na **Application/x-MS-VSTO**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řešení potíží s nasazeními ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)
 - [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)

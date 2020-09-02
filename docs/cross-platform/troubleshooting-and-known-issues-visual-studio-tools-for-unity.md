@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: 41ef89bbb7b3595c24de5a482eed805e75eb2cdb
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235079"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Řešení potíží a známé problémy (Visual Studio Tools for Unity)
@@ -25,7 +25,7 @@ V této části najdete řešení běžných potíží s Visual Studio Tools for
 
 ### <a name="confirm-editor-attaching-is-enabled"></a>Potvrďte, že připojení editoru je povolené.
 
-V nabídce Unity vyberte **upravit > předvolby** a pak vyberte kartu **externí nástroje** . Zkontrolujte, jestli je zaškrtnuté políčko **připojit Editor** . Další informace najdete v dokumentaci k [preferenceem Unity](https://docs.unity3d.com/Manual/Preferences.html).
+V nabídce Unity vyberte **upravit > předvolby** a pak vyberte kartu **externí nástroje** . Ověřte, že je zaškrtnuté políčko **připojení editoru** . Další informace najdete v dokumentaci k [preferenceem Unity](https://docs.unity3d.com/Manual/Preferences.html).
 
 ### <a name="unable-to-attach"></a>Nelze se připojit
 
@@ -170,6 +170,6 @@ Zkuste upgradovat Visual Studio 2015 a aktualizovat 3.
 
 Nakonec pošlete výpis vlákna do [vstusp@microsoft.com](mailto:vstusp@microsoft.com) , spolu s popisem toho, co jste prováděli při zmrazení sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

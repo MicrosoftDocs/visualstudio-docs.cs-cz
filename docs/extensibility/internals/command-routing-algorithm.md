@@ -1,5 +1,5 @@
 ---
-title: Algoritmus směrování příkazů | Dokumenty společnosti Microsoft
+title: Algoritmus směrování příkazů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709539"
 ---
 # <a name="command-routing-algorithm"></a>Algoritmus směrování příkazů
-V sadě Visual Studio příkazy jsou zpracovány řadou různých součástí. Příkazy jsou směrovány z nejvnitřnějšího kontextu, který je založen na aktuálním výběru, do nejvzdálenějšího (označovaného také jako globální) kontextu. Další informace naleznete v [tématu Dostupnost příkazu](../../extensibility/internals/command-availability.md).
+Příkazy v aplikaci Visual Studio jsou zpracovávány řadou různých komponent. Příkazy jsou směrovány z nejvnitřnějšího kontextu, který je založen na aktuálním výběru, na nejvzdálenější kontext (označovaný také jako globální). Další informace najdete v tématu [dostupnost příkazu](../../extensibility/internals/command-availability.md).
 
-## <a name="order-of-command-resolution"></a>Pořadí rozlišení příkazu
+## <a name="order-of-command-resolution"></a>Pořadí řešení příkazů
  Příkazy jsou předávány prostřednictvím následujících úrovní kontextu příkazu:
 
-1. Doplňky: Prostředí nejprve nabízí příkaz pro všechny doplňky, které jsou k dispozici.
+1. Doplňky: prostředí nejprve nabídne příkaz všem doplňkům, které jsou k dispozici.
 
-2. Příkazy priority: Tyto příkazy <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget>jsou registrovány pomocí . Jsou volány pro každý příkaz v sadě Visual Studio a jsou volány v pořadí, ve kterém byly zaregistrovány.
+2. Příkazy priority: tyto příkazy jsou zaregistrované pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget> . Jsou volány pro každý příkaz v aplikaci Visual Studio a jsou volány v pořadí, ve kterém byly registrovány.
 
-3. Příkazy kontextové nabídky: Příkaz umístěný v místní nabídce je nejprve nabídnut cíli příkazu, který je k dispozici v místní nabídce, a poté k typickému směrování.
+3. Příkazy kontextové nabídky: příkaz umístěný v místní nabídce se nejprve nabídne cílovému příkazu, který je k dispozici v místní nabídce, a poté pro obvyklé směrování.
 
-4. Panel nástrojů nastavit cíle příkazů: Tyto cíle <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A>příkazu jsou registrovány při volání . Parametr `pCmdTarget` může `null`být . Pokud tomu `null`tak není , pak se tento cíl příkazu používá k aktualizaci všech příkazů umístěných na panelu nástrojů, který nastavujete. Pokud prostředí nastavuje panel nástrojů, předává rámeček `pCmdTarget` okna tak, aby všechny aktualizace příkazů na panelu nástrojů procházely rámečkem okna, i když není zaostřený.
+4. Cíle příkazů sady nástrojů na příkazy: tyto cíle příkazů jsou registrovány při volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A> . `pCmdTarget`Parametr může být `null` . Pokud tomu tak není `null` , bude tento cíl příkazu použit k aktualizaci příkazů umístěných na panelu nástrojů, který nastavujete. Pokud prostředí nastavilo panel nástrojů, pak předá rámec okna jako, aby byly `pCmdTarget` všechny aktualizace příkazů na panelu nástrojů v toku okna, i když není zaostření.
 
-5. Okno nástroje: Okna nástrojů, která <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> obvykle implementují <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, by měla také implementovat rozhraní tak, aby visual studio může získat cíl příkazu, když je aktivní okno nástroje. Pokud je však okno nástroje, které má fokus, okno <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> **Projektu,** je příkaz směrován do rozhraní, které je společným nadřazeným objektem vybraných položek. Pokud tento výběr zahrnuje více projektů, příkaz je <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> směrován do hierarchie. Rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> obsahuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> a, které jsou obdobné odpovídající <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> příkazy na rozhraní.
+5. Panel nástrojů: okna nástrojů, která obvykle implementují <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní, by měla také implementovat <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, aby Visual Studio mohl získat cíl příkazu, když je okno nástroje aktivní okno. Pokud je však okno nástroje, které má fokus, okno **projektu** , pak je příkaz směrován do <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní, které je společné nadřazené položky vybraných položek. Pokud tento výběr zahrnuje více projektů, je příkaz směrován do <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> hierarchie. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Rozhraní obsahuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> metody a, které jsou analogické k odpovídajícím příkazům v <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní.
 
-6. Okno dokumentu: Pokud má `RouteToDocs` příkaz ve svém souboru *.vsct* nastavený příznak, aplikace Visual Studio hledá cíl <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> příkazu v objektu zobrazení dokumentu, což je instance rozhraní nebo instance objektu dokumentu (obvykle <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> rozhraní nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> rozhraní). Pokud objekt zobrazení dokumentu nepodporuje příkaz, Visual Studio směruje příkaz do <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, které je vráceno. (Toto je volitelné rozhraní pro objekty dat dokumentu.)
+6. Okno dokumentu: Pokud příkaz má `RouteToDocs` příznak nastavený v souboru *. vsct* , sada Visual Studio hledá cíl příkazu v objektu zobrazení dokumentu, což je buď instance <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní, nebo instance objektu dokumentu (obvykle <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> rozhraní nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> rozhraní). Pokud objekt zobrazení dokumentu nepodporuje příkaz, aplikace Visual Studio směruje příkaz na <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, které je vráceno. (Toto je volitelné rozhraní pro datové objekty dokumentu.)
 
-7. Aktuální hierarchie: Aktuální hierarchie může být projekt, který vlastní okno aktivního dokumentu nebo hierarchii vybranou v **Průzkumníku řešení**. Visual Studio hledá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, které je implementováno v aktuální nebo aktivní hierarchii. Hierarchie by měla podporovat příkazy, které jsou platné vždy, když je hierarchie aktivní, i když okno dokumentu položky projektu má fokus. Příkazy, které platí pouze v případě, **že průzkumník řešení** má fokus musí být podporovány pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní a jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> metody.
+7. Aktuální hierarchie: Aktuální hierarchie může být projekt, který je vlastníkem okna aktivního dokumentu, nebo hierarchie, která je vybrána v **Průzkumník řešení**. Visual Studio hledá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní, které je implementováno v aktuální nebo aktivní hierarchii. Hierarchie by měla podporovat příkazy, které jsou platné vždy, když je hierarchie aktivní, a to i v případě, že okno dokumentu položky projektu má fokus. Nicméně příkazy, které platí pouze v případě, že **Průzkumník řešení** má fokus, musí být podporovány pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> rozhraní a jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> metod a.
 
-     **Příkazy Vyjmout**, **Kopírovat**, **Vložit,** **Odstranit,** **Přejmenovat**, **Zadat**a **DoubleClick** vyžadují zvláštní zpracování. Informace o tom, jak **zpracovat** příkazy Odstranit <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> a **odebrat** v hierarchiích, naleznete v rozhraní.
+     Příkazy **Vyjmout**, **Kopírovat**, **Vložit**, **Odstranit**, **Přejmenovat**, **ENTER**a **DoubleClick** vyžadují speciální zpracování. Informace o tom, jak zpracovávat příkazy **Delete** a **Remove** v hierarchiích, najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> rozhraní.
 
-8. Globální: Pokud příkaz nebyl zpracován výše uvedené kontexty, Visual Studio pokusí směrovat do VSPackage, který vlastní <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> příkaz, který implementuje rozhraní. Pokud VSPackage nebyla načtena již, není načten při <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> Visual Studio volá metodu. VSPackage je načten pouze <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> v případě, že je volána metoda.
+8. Global: Pokud příkaz nebyl zpracován dříve uvedenými kontexty, Visual Studio se pokusí ho směrovat do VSPackage, který vlastní příkaz, který implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Pokud rozhraní VSPackage již nebylo načteno, není načteno, když aplikace Visual Studio zavolá <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> metodu. VSPackage je načten pouze v případě, že <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> je volána metoda.
 
 ## <a name="see-also"></a>Viz také
 - [Návrh příkazu](../../extensibility/internals/command-design.md)

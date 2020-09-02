@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetMemoryObject | Dokumenty společnosti Microsoft
+title: 'IDebugBinder3:: GetMemoryObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 154873006091a213e69653d3742b3caa8c25b7e0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735716"
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
-Tato metoda načte objekt paměti, který představuje paměť, která je vázána na tento objekt.
+Tato metoda načte objekt paměti, který představuje paměť, ke které je tento objekt svázán.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,16 +45,16 @@ int GetMemoryObject(
 
 ## <a name="parameters"></a>Parametry
 `pField`\
-[v] Určuje, pro které pole má být objekt paměti určen.
+pro Určuje, které pole má získat objekt paměti pro.
 
 `uConstant`\
-[v] Představuje adresu paměti nebo hodnotu pro konstantní hodnotu.
+pro Představuje adresu paměti nebo hodnotu pro konstantní hodnotu.
 
 `ppObject`\
-[out] [Objekt IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující paměť, ke které je tento objekt vázán.
+mimo [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující paměť, ke které je tento objekt svázán.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

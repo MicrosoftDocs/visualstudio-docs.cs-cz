@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3 | Dokumentace Microsoftu
+title: IDebugCoreServer3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cd1781b133b4c3ee95b4207a0dd237e2dd7298a1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685653"
 ---
 # <a name="idebugcoreserver3"></a>IDebugCoreServer3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní poskytuje přístup k informacím o serveru, který je proces spuštěn v.  
+Toto rozhraní poskytuje přístup k informacím o serveru, na kterém je spuštěný proces.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCoreServer3 : IDebugCoreServer2  
@@ -34,29 +34,29 @@ IDebugCoreServer3 : IDebugCoreServer2
  Visual Studio implementuje toto rozhraní.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Použití [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) získat z tohoto rozhraní [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní. Volání [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) také může vrátit toto rozhraní. Toto rozhraní se nejčastěji používá dodavatelem port. Tento vlastní port spustit programy na serveru (místní nebo vzdálené).  
+ K získání tohoto rozhraní z rozhraní [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) použijte [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) . Volání metody [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) může také vrátit toto rozhraní. Toto rozhraní se nejčastěji používá vlastním dodavatelem portu ke spouštění programů na serveru (místní nebo vzdálené).  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Kromě metod na [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní, toto rozhraní implementuje následujících metod:  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Kromě metod v rozhraní [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) toto rozhraní implementuje následující metody:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)|Načte název serveru.|  
-|[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)|Načte verzi popisný název serveru|  
-|[EnableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-enableautoattach.md)|Určuje konkrétní ladicími stroji automaticky připojit k procesům při spuštění těchto procesů.|  
-|[DiagnoseWebDebuggingError](../../../extensibility/debugger/reference/idebugcoreserver3-diagnosewebdebuggingerror.md)|Získá konkrétní kód chyby, když automatické připojení selže.|  
+|[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)|Načte popisnou verzi názvu serveru.|  
+|[EnableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-enableautoattach.md)|Oznamuje konkrétním ladicím modulům, aby se při spuštění těchto procesů automaticky připojil k procesům.|  
+|[DiagnoseWebDebuggingError](../../../extensibility/debugger/reference/idebugcoreserver3-diagnosewebdebuggingerror.md)|Načte konkrétní kód chyby, pokud se automatické připojení nezdařilo.|  
 |[CreateInstanceInServer](../../../extensibility/debugger/reference/idebugcoreserver3-createinstanceinserver.md)|Vytvoří instanci ladicího stroje na serveru.|  
-|[QueryIsLocal](../../../extensibility/debugger/reference/idebugcoreserver3-queryislocal.md)|Získá příznak označující, zda je server na stejném počítači jako volající.|  
-|[GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)|Načte hodnotu, která se používá ke komunikaci se serverem protokolu.|  
-|[DisableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-disableautoattach.md)|Zakáže všechny automatické připojení nastavení pro všechny ladicí stroj, který tento server ví o.|  
+|[QueryIsLocal](../../../extensibility/debugger/reference/idebugcoreserver3-queryislocal.md)|Načte příznak označující, zda je server ve stejném počítači jako volající.|  
+|[GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)|Načte hodnotu, která označuje protokol, který se používá ke komunikaci se serverem.|  
+|[DisableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-disableautoattach.md)|Zakáže všechna nastavení automatického připojení pro všechny moduly ladění, které tento server ví.|  
   
 ## <a name="remarks"></a>Poznámky  
- Poskytovatel port. Tento vlastní port obdrží [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní volání [události](../../../extensibility/debugger/reference/idebugportevents2-event.md). `IDebugCoreServer3` Rozhraní můžete získat z tohoto rozhraní.  
+ Vlastní dodavatel portu obdrží rozhraní [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) pro volání [události](../../../extensibility/debugger/reference/idebugportevents2-event.md). `IDebugCoreServer3`Rozhraní lze získat z tohoto rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

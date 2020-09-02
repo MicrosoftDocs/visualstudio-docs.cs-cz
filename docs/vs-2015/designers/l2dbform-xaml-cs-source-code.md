@@ -10,23 +10,23 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f783161865092f714955b65e6f2fa4791741cbe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664291"
 ---
 # <a name="l2dbformxamlcs-source-code"></a>Zdrojový kód L2DBForm.xaml.cs
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma obsahuje obsah a popis C# zdrojového kódu v souboru L2DBForm.XAML.cs. Částečná třída L2XDBForm obsažená v tomto souboru může být rozdělena do tří logických částí: datové členy a `OnRemove` a `OnAddBook` kliknutí na tlačítko obslužné rutiny událostí.
+Toto téma obsahuje obsah a popis zdrojového kódu jazyka C# v souboru L2DBForm.xaml.cs. Částečná třída L2XDBForm obsažená v tomto souboru může být rozdělena do tří logických částí: datové členy a `OnRemove` `OnAddBook` tlačítka a obslužné rutiny události Click.
 
 ## <a name="data-members"></a>Datové členy
  K přidružení této třídy k prostředkům okna použitým v souboru zdrojový kód L2DBForm. XAML se používají dva soukromé datové členy.
 
-- Proměnná oboru názvů `myBooks` se inicializuje na `"http://www.mybooks.com"`.
+- Proměnná oboru názvů `myBooks` je inicializovaná na `"http://www.mybooks.com"` .
 
-- Členský `bookList` je inicializován v konstruktoru do řetězce CDATA v souboru zdrojový kód L2DBForm. XAML s následujícím řádkem:
+- Člen `bookList` je inicializován v konstruktoru do řetězce CDATA v souboru zdrojový kód L2DBForm. XAML s následujícím řádkem:
 
     ```
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;
@@ -42,7 +42,7 @@ Toto téma obsahuje obsah a popis C# zdrojového kódu v souboru L2DBForm.XAML.c
 - Poslední příkaz přidá tento nový prvek Book k poskytovateli dat v souboru zdrojový kód L2DBForm. XAML. V důsledku toho bude dynamická vazba dat automaticky aktualizovat uživatelské rozhraní touto novou položkou; není vyžadován žádný další kód zadaný uživatelem.
 
 ## <a name="onremove-event-handler"></a>Rutina události při odebrání
- Obslužná rutina `OnRemove` je složitější než `OnAddBook` obslužná rutina ze dvou důvodů. Nejprve, protože nezpracovaný kód XML obsahuje zachované prázdné znaky, musí být také z položky knihy odebrány newlines odpovídajícího kódu. S tím, jak pohodlí, výběr, který byl na odstraněnou položku, se v seznamu obnoví na předchozí.
+ `OnRemove`Obslužná rutina je složitější než `OnAddBook` obslužná rutina ze dvou důvodů. Nejprve, protože nezpracovaný kód XML obsahuje zachované prázdné znaky, musí být také z položky knihy odebrány newlines odpovídajícího kódu. S tím, jak pohodlí, výběr, který byl na odstraněnou položku, se v seznamu obnoví na předchozí.
 
  Základní práce odebrání vybrané položky knihy se ale provádí jenom dvěma příkazy:
 

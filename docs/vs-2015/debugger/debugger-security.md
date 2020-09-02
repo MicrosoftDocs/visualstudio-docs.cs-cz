@@ -1,5 +1,5 @@
 ---
-title: Zabezpečení ladicího programu | Dokumentace Microsoftu
+title: Zabezpečení ladicího programu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,69 +19,69 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c1c56b3081f9e74ff9ab864639772c18bd758df6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686774"
 ---
 # <a name="debugger-security"></a>Zabezpečení ladicího programu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Možnost ladit jiným procesem poskytuje velmi široký mocniny, ke kterým by jinak máte, zejména v případě vzdáleného ladění. Škodlivý ladicí program může způsobit poškození rozšířených na počítači, který se právě ladí.  
+Možnost ladit jiný proces vám poskytne velmi široké pravomoci, které byste jinak neměli mít, zejména při vzdáleném ladění. Škodlivý ladicí program může způsobit rozšířenou škodu v laděném počítači.  
   
- Nicméně mnoho vývojářů není dobré si uvědomit, že ohrožení zabezpečení můžete také tok v opačném směru. Je možné, škodlivý kód v laděném procesu ohrozit zabezpečení počítače ladění: počet musí mít ochranu proti zneužití zabezpečení.  
+ Mnoho vývojářů ale neuvědomuje, že ohrožení zabezpečení může také přesměrovat v opačném směru. Škodlivý kód v procesu laděného procesu může ohrozit zabezpečení ladicího počítače: existuje několik zneužití zabezpečení, která musí být chráněná proti.  
   
 ## <a name="security-best-practices"></a>Doporučené postupy zabezpečení  
- Existuje implicitní důvěryhodnost poměr mezi kódem, který ladíte a ladicí program. Pokud jste ochotní něco ladit, byste měli také natolik, abyste ho spustit. Dolní řádek je, že je budete moci důvěřovat, co ladění. Případě, že důvěřujete jeho, pak by neměl ladit nebo by ho ladit z počítače, který si můžete dovolit ohrozit a v izolovaném prostředí.  
+ Mezi kódem, který ladíte, existuje implicitní vztah důvěryhodnosti a ladicí program. Pokud jste ochotni něco ladit, měli byste ho také ochotni spustit. Dolním řádkem je, že musíte být schopni důvěřovat, co ladíte. Pokud ji nemůžete důvěřovat, neměli byste ji ladit nebo byste ji měli ladit z počítače, který si můžete dovolit ohrozit, a v izolovaném prostředí.  
   
- Pokud chcete snížit potenciální prostor pro napadení, musí se zakázat ladění na počítačích v produkčním prostředí. Ze stejného důvodu by nikdy být povoleno ladění po neomezenou dobu.  
+ Aby se snížila potenciální plocha pro útok, mělo by být ladění na produkčních počítačích zakázané. Z tohoto důvodu by nebylo možné ladění nikdy povolit po neomezenou dobu.  
   
-### <a name="managed-debugging-security"></a>Spravované ladění zabezpečení  
- Tady jsou některé obecná doporučení, které se vztahují na všechny spravované ladění.  
+### <a name="managed-debugging-security"></a>Zabezpečení spravovaného ladění  
+ Tady jsou některá obecná doporučení, která platí pro všechna spravovaná ladění.  
   
-- Buďte opatrní při připojování k procesu je nedůvěryhodný uživatel: Pokud tak učiníte, můžete předpokládat, že je důvěryhodný. Při pokusu o připojení k procesu je nedůvěryhodný uživatel, se zobrazí potvrzovací dialogové okno s upozorněním zabezpečení s dotazem, jestli se má připojit k procesu. "Důvěryhodných uživatelů" zahrnout, a sadu standardních uživatelů obvykle definovány na počítače, které mají nainstalováno, například rozhraní .NET Framework **aspnet**, **localsystem**, **networkservice**, a **localservice**. Další informace najdete v tématu [upozornění zabezpečení: Připojení k procesu, který patří nedůvěryhodnému uživateli, může být nebezpečné. Pokud následující informace vypadají podezřele nebo si nejste jisti, nepřipojujte k tomuto procesu](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).  
+- Buďte opatrní při připojování k procesu nedůvěryhodného uživatele: Pokud tak učiníte, předpokládá se, že je důvěryhodný. Když se pokusíte připojit k procesu nedůvěryhodného uživatele, zobrazí se dialogové okno upozornění zabezpečení s dotazem, zda se chcete připojit k procesu. "Důvěryhodní uživatelé" zahrnují vás a sadu standardních uživatelů, kteří jsou obvykle definováni v počítačích s nainstalovaným .NET Framework, jako jsou **ASPNET**, **LocalSystem**, **NetworkService**a **LocalService**. Další informace najdete v tématu [Upozornění zabezpečení: připojení k procesu, který vlastní nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).  
   
-- Buďte opatrní při stahování projekt Internetu a načítají do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. To je velmi riskantní provést i bez ladění. Když toto provedete, jsou za předpokladu, že projekt a kód, který obsahuje jsou důvěryhodné.  
+- Buďte opatrní při stahování projektu z Internetu a jeho načtení do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . To je velice riskantní, aby se dokonce i bez ladění. Když to uděláte, předpokládá se, že projekt a kód, který obsahuje, jsou důvěryhodné.  
   
-  Další informace najdete v tématu [ladění spravovaného kódu](../debugger/debugging-managed-code.md).  
+  Další informace naleznete v tématu [ladění spravovaného kódu](../debugger/debugging-managed-code.md).  
   
-### <a name="remote-debugging-security"></a>Zabezpečení vzdálené ladění  
- Místní ladění je obecně bezpečnější než vzdálené ladění. Vzdálené ladění zvyšuje celkový počet, který můžete zkoumat.  
+### <a name="remote-debugging-security"></a>Zabezpečení vzdáleného ladění  
+ Místní ladění je obecně bezpečnější než vzdálené ladění. Vzdálené ladění zvyšuje celkovou plochu, která může být sonda.  
   
- Visual Studio Remote Debugging Monitor (msvsmon.exe) se používá ve vzdálené ladění a existuje několik doporučení zabezpečení pro jeho konfiguraci. Preferovaný způsob, jak konfigurovat režim ověřování je ověřování Windows, protože není bezpečné a režim bez ověřování.  
+ Aplikace Visual Studio Sledování vzdáleného ladění (msvsmon.exe) se používá ve vzdáleném ladění a existuje několik doporučení pro zabezpečení při jejich konfiguraci. Upřednostňovaným způsobem, jak nakonfigurovat režim ověřování, je ověřování systému Windows, protože žádný režim ověřování není nezabezpečený.  
   
- ![Dialogové okno s chybou](../debugger/media/dbg-err-remotepermissionschanged.png "DBG_ERR_RemotePermissionsChanged")  
+ ![Chybový dialog](../debugger/media/dbg-err-remotepermissionschanged.png "DBG_ERR_RemotePermissionsChanged")  
   
- Při použití režimu ověřování Windows mějte na paměti, že udělení oprávnění nedůvěryhodné uživatele pro připojení k msvsmon je nebezpečné, protože uživateli je udělen všechna oprávnění v počítači...  
+ Při použití režimu ověřování systému Windows mějte na paměti, že udělení oprávnění nedůvěryhodného uživatele pro připojení k msvsmon je nebezpečné, protože uživateli jsou udělena všechna vaše oprávnění v počítači.  
   
- Není Neznámý procesu ve vzdáleném počítači ladění: neexistují potenciální zneužití, který může mít vliv na počítači spuštěná ladicí program, nebo které by mohlo ohrozit msvsmon.exe Visual Studio Remote Debugging Monitor. Pokud musíte ladit naprosto neznámý proces, zkuste místním ladění a zachovat všechny potenciální hrozby lokalizovány pomocí brány firewall.  
+ Neprovádějte ladění neznámého procesu ve vzdáleném počítači: existují potenciální zneužití, která by mohla ovlivnit počítač, na kterém je spuštěný ladicí program, nebo který může ohrozit msvsmon.exe, Sledování vzdáleného ladění sady Visual Studio. Pokud nezbytně potřebujete ladit neznámý proces, zkuste ladění provést místně a pomocí brány firewall Udržujte potenciálně lokalizovanou hrozby.  
   
  Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).  
   
-### <a name="web-services-debugging-security"></a>Ladění zabezpečení webových služeb  
- Je bezpečnější, chcete-li ladit místně, ale od té doby budete pravděpodobně nemají [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalovaný na webovém serveru, místní ladění nemusí být praktické. Obecně platí ladění webových služeb se prováděla vzdáleně, s výjimkou během vývoje, tak doporučení pro zabezpečení vzdálené ladění také použít k ladění webových služeb. Tady jsou některé další osvědčené postupy. Další informace najdete v tématu [ladění webových služeb XML](https://msdn.microsoft.com/c900b137-9fbd-4f59-91b5-9c2c6ce06f00).  
+### <a name="web-services-debugging-security"></a>Zabezpečení ladění webových služeb  
+ Je bezpečnější je ladit místně, ale vzhledem k tomu, že jste to pravděpodobně [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nenainstalovali na webový server, nemusí být místní ladění praktické. Obecně se ladění webových služeb provádí vzdáleně, s výjimkou vývoje, takže doporučení pro vzdálené ladění se vztahují také na ladění webových služeb. Tady jsou některé další osvědčené postupy. Další informace najdete v tématu [ladění webových služeb XML](https://msdn.microsoft.com/c900b137-9fbd-4f59-91b5-9c2c6ce06f00).  
   
-- Nepovolujte ladění na webovém serveru, který byl napaden.  
+- Nepovolujte ladění na webovém serveru, u kterého došlo k ohrožení zabezpečení.  
   
-- Ujistěte se, že víte, že je před její ladění zabezpečený webový server. Pokud si nejste jisti, že je zabezpečené, není ho ladit.  
+- Před laděním je nutné, abyste věděli, že je webový server zabezpečený. Pokud si nejste jisti, že je zabezpečená, neprovádějte ladění.  
   
-- Buďte opatrní hlavně Pokud ladíte webové služby, který je přístupný na Internetu.  
+- Buďte obzvláště opatrní při ladění webové služby, která je vystavená na internetu.  
   
 ### <a name="external-components"></a>Externí komponenty  
- Mějte na paměti ze stavu důvěryhodnosti externí komponenty, které aplikace komunikuje se službou, zejména v případě, že nezapsal kód. Také být vědomi komponenty, která [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo použít ladicí program.  
+ Mějte na paměti stav důvěryhodnosti externích komponent, se kterými komunikuje váš program, zejména v případě, že jste kód nezapsali. Také je třeba znát komponenty, které [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] může použít ladicí program.  
   
-### <a name="symbols-and-source-code"></a>Symbolů a zdrojového kódu  
- Dvě [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje, které vyžadují přemýšlení o zabezpečení jsou následující:  
+### <a name="symbols-and-source-code"></a>Symboly a zdrojový kód  
+ Toto [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jsou dva nástroje, které vyžadují přemýšlení o zabezpečení:  
   
-- Zdrojový Server, který vám poskytne verze zdrojového kódu z úložiště zdrojového kódu. Je vhodné, pokud nemá aktuální verzi zdrojový kód aplikace. [Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md).  
+- Zdrojový server, který poskytuje verze zdrojového kódu z úložiště zdrojového kódu. To je užitečné v případě, že není k dispozici aktuální verze zdrojového kódu programu. [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md).  
   
-- Server symbolů, který slouží k poskytování symboly potřebné k ladění selhání během volání systému.  
+- Symbol server, který slouží k poskytnutí symbolů potřebných k ladění selhání během volání systému.  
   
-  Zobrazit [zadání symbolu (.pdb) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+  Viz [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) .  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)   
  [Základy ladicího programu](../debugger/debugger-basics.md)   
- [Upozornění zabezpečení: Připojení k procesu, který patří nedůvěryhodnému uživateli, může být nebezpečné. Pokud následující informace vypadají podezřele nebo si nejste jisti, nepřipojujte k tomuto procesu](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)   
- [Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz.](../debugger/security-warning-debugger-must-execute-untrusted-command.md)
+ [Upozornění zabezpečení: připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud tyto informace vypadají podezřele nebo si nejste jistí, nepřipojujte se k tomuto procesu.](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)   
+ [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz.](../debugger/security-warning-debugger-must-execute-untrusted-command.md)

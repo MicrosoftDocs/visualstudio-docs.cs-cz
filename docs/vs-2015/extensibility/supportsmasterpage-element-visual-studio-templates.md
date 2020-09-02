@@ -1,5 +1,5 @@
 ---
-title: Supportsmasterpage – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: SupportsMasterPage – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 051bde61132d286c3941a12c2e970aa2019fc0b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160476"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, zda nebo není **vybrat hlavní stránku** zaškrtávací políčko je zapnutá **přidat novou položku** dialogové okno.  
+Určuje, zda je v dialogovém okně **Přidat novou položku** zaškrtnuto políčko **Vybrat hlavní stránku** .  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<Supportsmasterpage – >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<SupportsMasterPage>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <SupportsMasterPage> true/false </SupportsMasterPage>  
@@ -46,22 +46,22 @@ Určuje, zda nebo není **vybrat hlavní stránku** zaškrtávací políčko je 
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje data, která rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **nová položka** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje data, která kategorizují šablonu, a definují, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Nová položka** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která udává, zda je či není **vybrat hlavní stránku** zaškrtávací políčko je zapnutá **přidat novou položku** dialogové okno.  
+ Text musí být buď `true` nebo `false` , což značí, zda je zaškrtnuto políčko **Vybrat hlavní stránku** v dialogovém okně **Přidat novou položku** .  
   
 ## <a name="remarks"></a>Poznámky  
  `SupportsMasterPage` je volitelný prvek. Výchozí hodnota je `false`.  
   
- `SupportsMasterPage` Element je dostupná jenom pro webové šablony položek.  
+ `SupportsMasterPage`Element je k dispozici pouze pro šablony webových položek.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata pro webový projekt, který zahrnuje podporu pro stránku předlohy.  
+ Následující příklad ukazuje metadata pro webový projekt, který obsahuje podporu pro stránku předlohy.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  
@@ -86,5 +86,5 @@ Určuje, zda nebo není **vybrat hlavní stránku** zaškrtávací políčko je 
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

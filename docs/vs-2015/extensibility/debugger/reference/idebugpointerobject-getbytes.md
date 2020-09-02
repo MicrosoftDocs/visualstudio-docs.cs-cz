@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::GetBytes | Dokumentace Microsoftu
+title: 'IDebugPointerObject:: GetBytes | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2ef0c01d86259b6ec8c23f2874244b018a74febc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188594"
 ---
 # <a name="idebugpointerobjectgetbytes"></a>IDebugPointerObject::GetBytes
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá hodnotu, na který je odkazováno jako řadu bajtů po sobě jdoucích.  
+Získá hodnotu, na kterou se odkazuje jako řada po sobě jdoucích bajtů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +46,22 @@ int GetBytes(
   
 #### <a name="parameters"></a>Parametry  
  `dwStart`  
- [in] Posun v bajtech od začátku objekt odkazoval.  
+ pro Posun v bajtech od začátku objektu, na který ukazuje.  
   
  `dwCount`  
- [in] Počet bajtů k načtení.  
+ pro Počet bajtů, které mají být načteny.  
   
  `pBytes`  
- [out v] Pole, které se vyplní hodnotou jako řadu bajtů po sobě jdoucích, spuštění na dané pozici z objektu odkazoval.  
+ [in, out] Pole, které je vyplněno hodnotou jako série po sobě jdoucích bajtů, počínaje daným posunutím od objektu, na který ukazuje.  
   
  `pdwBytes`  
- [out] Vrátí počet bajtů ve skutečnosti načíst.  
+ mimo Vrátí počet bajtů, které byly skutečně načteny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá, pokud ukazatel reprezentovaný tímto objektem [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) odkazuje na primitivní typ nebo jednoduchý pole primitivní typy (to znamená, pole, které může být reprezentován jednoduché pořadí bajtů).  
+ Tato metoda se používá, pokud ukazatel reprezentovaný tímto [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) odkazuje na primitivní typ nebo na jednoduché pole primitivních typů (tj. pole, které lze reprezentovat jednoduchou sekvencí bajtů).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)   

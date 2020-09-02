@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e5351fe6a713c217f8fca20d6740b542dc75f053
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904129"
 ---
 # <a name="add-a-toolbar-to-a-tool-window"></a>Přidání panelu nástrojů do okna nástrojů
@@ -27,7 +27,7 @@ Tento návod ukazuje, jak přidat panel nástrojů do okna nástroje.
 
  Další informace o tom, jak přidat panel nástrojů, najdete v tématu [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-toolbar-for-a-tool-window"></a>Vytvoření panelu nástrojů pro okno nástroje

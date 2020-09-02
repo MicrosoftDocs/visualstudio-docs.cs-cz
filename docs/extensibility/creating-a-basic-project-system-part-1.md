@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e95f760712f46632120540091b9f8f408aad9da4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903424"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Vytvoření základního projektového systému, část 1
@@ -55,7 +55,7 @@ V aplikaci Visual Studio jsou projekty kontejnery, které vývojáři používaj
 
 - Implementujte základní substituci parametrů šablony.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
  Také je nutné stáhnout zdrojový kód pro [spravované balíčky architektury pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Extrahujte soubor do umístění, které je přístupné pro řešení, které budete vytvářet.
@@ -520,7 +520,7 @@ Templates
 
 - *SimpleProject.Resources.SimpleProjectNode.bmp*
 
-  Během konstrukce instance `ProjectNode` načte základní třída *Resources.imagelis.bmp*, ve kterém se běžně používají 16 × 16 rastrových obrázků od *Resources\imagelis.bmp*. Tento rastrový seznam je zpřístupněn `SimpleProjectNode` jako `ImageHandler.ImageList` . `SimpleProjectNode`připojí rastrový obrázek uzlu projektu k seznamu. Posun rastrového obrázku uzlu projektu v seznamu obrázků je uložen do mezipaměti pro pozdější použití jako hodnota veřejné `ImageIndex` Vlastnosti. Visual Studio používá tuto vlastnost k určení, který rastrový obrázek se má zobrazit jako ikona uzlu projektu.
+  Během konstrukce instance `ProjectNode` načte základní třída *Resources.imagelis.bmp*, ve kterém se běžně používají 16 × 16 rastrových obrázků od *Resources\imagelis.bmp*. Tento rastrový seznam je zpřístupněn `SimpleProjectNode` jako `ImageHandler.ImageList` . `SimpleProjectNode` připojí rastrový obrázek uzlu projektu k seznamu. Posun rastrového obrázku uzlu projektu v seznamu obrázků je uložen do mezipaměti pro pozdější použití jako hodnota veřejné `ImageIndex` Vlastnosti. Visual Studio používá tuto vlastnost k určení, který rastrový obrázek se má zobrazit jako ikona uzlu projektu.
 
 ## <a name="test-the-custom-project-node-icon"></a>Test ikony vlastního uzlu projektu
  Otestujte objekt pro vytváření projektu, abyste viděli, zda vytváří hierarchii projektu, která má vlastní ikonu uzlu projektu.
@@ -601,9 +601,9 @@ Templates
 
 3. Prověřte hodnoty `nameSpace` `className` parametrů a.
 
-   - `nameSpace`je předána hodnota \<RootNamespace> prvku v souboru šablony projektu *\Templates\Projects\SimpleProject\SimpleProject.myproj* . V tomto případě je hodnota `MyRootNamespace` .
+   - `nameSpace` je předána hodnota \<RootNamespace> prvku v souboru šablony projektu *\Templates\Projects\SimpleProject\SimpleProject.myproj* . V tomto případě je hodnota `MyRootNamespace` .
 
-   - `className`je předána hodnota názvu zdrojového souboru třídy bez přípony názvu souboru. V takovém případě je první soubor, který se má zkopírovat do cílové složky, *AssemblyInfo.cs*; Proto je hodnota className `AssemblyInfo` .
+   - `className` je předána hodnota názvu zdrojového souboru třídy bez přípony názvu souboru. V takovém případě je první soubor, který se má zkopírovat do cílové složky, *AssemblyInfo.cs*; Proto je hodnota className `AssemblyInfo` .
 
 4. Odeberte zarážku a stisknutím klávesy **F5** pokračujte v provádění.
 
@@ -636,4 +636,4 @@ Templates
 
     ![Jednoduchý projekt – příkaz](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")
 
-   Gratulujeme! Implementovali jste základní spravovaný projektový systém.
+   Blahopřejeme! Implementovali jste základní spravovaný projektový systém.

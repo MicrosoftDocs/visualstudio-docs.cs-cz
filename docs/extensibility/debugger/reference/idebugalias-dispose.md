@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::Dispose | Dokumenty společnosti Microsoft
+title: IDebugAlias::Da | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: df3a2ecc50063df8f90645b9ccaa72754c3728c1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736553"
 ---
 # <a name="idebugaliasdispose"></a>IDebugAlias::Dispose
-Označí tento alias pro odebrání.
+Označí tento alias k odebrání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,13 +36,13 @@ int Dispose();
 ```
 
 ## <a name="parameters"></a>Parametry
- Žádné.
+ Žádné
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Jakmile je tato metoda volána, alias již není k dispozici.
+ Po zavolání této metody alias již není k dispozici.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

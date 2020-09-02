@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3 | Dokumentace Microsoftu
+title: IDebugStackFrame3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,53 +13,53 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d63d4dcd6e3b7a3b81504b485ee710779cef3c13
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688539"
 ---
 # <a name="idebugstackframe3"></a>IDebugStackFrame3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní rozšiřuje [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) zpracovat zachycené výjimky.  
+Toto rozhraní rozšiřuje [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) a zpracovává zachycené výjimky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugStackFrame3 : IDebugStackFrame2  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Ladicí stroj (DE) implementuje na stejný objekt, který implementuje toto rozhraní [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) rozhraní pro podporu zachycené výjimky.  
+ Ladicí stroj (DE) implementuje toto rozhraní u stejného objektu, který implementuje rozhraní [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) pro podporu zachycených výjimek.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) na `IDebugStackFrame2` rozhraní k získání tohoto rozhraní.  
+ [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) `IDebugStackFrame2` Chcete-li získat toto rozhraní, zavolejte na rozhraní QueryInterface.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Kromě metod zděděných z [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md), `IDebugStackFrame3` poskytuje následující metody.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Kromě metod zděděných z [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) `IDebugStackFrame3` zpřístupňuje následující metody.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Zpracovává výjimku pro aktuální rámec zásobníku před zpracování jakékoli pravidelné výjimek.|  
-|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Vrátí kontext kódu, pokud dojde k odvíjení zásobníku.|  
+|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Zpracovává výjimku pro aktuální rámec zásobníku před jakýmkoli pravidelným zpracováním výjimek.|  
+|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Vrátí kontext kódu, pokud by došlo k odvíjení zásobníku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Zachycené výjimky znamená, že ladicí program může zpracovat výjimku před voláním jakékoli normální obslužné rutiny jsou podle času spuštění. Zachycení výjimky v podstatě znamená, že čas spuštění předstírají, že má obslužné rutiny výjimek i v případě, že není k dispozici.  
+ Zachycená výjimka znamená, že ladicí program může zpracovat výjimku před všemi běžnými rutinami zpracování výjimky, které jsou volány za běhu. Zachycení výjimky v podstatě znamená, že doba běhu předstírat, že je přítomna obslužná rutina výjimky, i když není.  
   
- [Interceptcurrentexception –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) je volána v průběhu všech událostí zpětného volání normální výjimkou (jedinou výjimkou je, pokud ladění ve smíšeném režimu kódu (spravovaného a nespravovaného kódu), v takovém případě nemůže být zachycena výjimka během zpětné volání poslední odpovídající). Pokud je DE neimplementuje `IDebugStackFrame3`, nebo Německo vrátí chybu z IDebugStackFrame3::`InterceptCurrentException` (například `E_NOTIMPL`), pak ladicí program bude obvykle zpracování výjimky.  
+ [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) je volána během všech běžných událostí zpětného volání výjimky (jedinou výjimkou je, když ladíte kód smíšeného režimu (spravovaný a nespravovaný kód), v takovém případě nelze výjimku zachytit během zpětného volání s poslední pravděpodobností. Pokud DE neimplementuje `IDebugStackFrame3` nebo de vrátí chybu z IDebugStackFrame3:: `InterceptCurrentException` (například `E_NOTIMPL` ), pak ladicí program zpracuje výjimku normálně.  
   
- Tím, že zachytává výjimku, ladicí program umožňuje uživatelům provádět změny stavu laděného programu a potom pokračovat v provádění v místě, kde byla výjimka vydána.  
+ Pomocí zachycení výjimky může ladicí program umožnit uživateli provádět změny ve stavu laděného programu a poté pokračovat v provádění v místě, kde byla výjimka vyvolána.  
   
 > [!NOTE]
-> Zachycené výjimky jsou povoleny pouze ve spravovaném kódu, tedy v programu, který běží v části Common Language Runtime (CLR).  
+> Zachycené výjimky jsou povoleny pouze ve spravovaném kódu, to znamená v programu, který je spuštěn pod modulem CLR (Common Language Runtime).  
   
- Ladicí stroj označuje, že ji podporuje prověřuje zachycovací výjimky tak, že nastavíte "metricExceptions" na hodnotu 1 za běhu pomocí `SetMetric` funkce. Další informace najdete v tématu [Pomocníci sad SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md).  
+ Ladicí stroj indikuje, že podporuje zachycení výjimek nastavením "metricExceptions" na hodnotu 1 v době běhu pomocí `SetMetric` funkce. Další informace najdete v tématech [pomocníka sady SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
