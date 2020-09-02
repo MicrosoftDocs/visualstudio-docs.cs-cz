@@ -8,10 +8,10 @@ ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
 ms.topic: how-to
 ms.openlocfilehash: 2e921ac1e9c85216bebf1626e1454b9fb764f129
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938935"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
@@ -107,7 +107,7 @@ public class Startup
 Tato spouštěcí třída musí vždy splňovat následující pravidla:
 
 - Musí být vždycky veřejné.
-- Musí obsahovat dvě veřejné metody: `ConfigureServices` a`Configure`
+- Musí obsahovat dvě veřejné metody: `ConfigureServices` a `Configure`
 
 `ConfigureServices`Metoda definuje služby, které bude aplikace používat.
 
@@ -231,7 +231,7 @@ Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,11 (El Capitan) a
 
 Ujistěte se, že jste úspěšně dokončili všechny čtyři kroky, abyste se ujistili, že je instalace .NET Core úspěšná.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Tento průvodce vám poskytl Úvod do ASP.NET Core. Popisuje, co je, kdy se používá, a poskytuje informace o jeho použití v Visual Studio pro Mac.
 Další informace o dalších krocích odsud najdete v následujících příručkách:

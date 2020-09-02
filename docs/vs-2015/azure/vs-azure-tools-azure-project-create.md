@@ -1,6 +1,6 @@
 ---
-title: Vytvoření projektu Azure cloud service
-description: Naučte se vytvořit projekt Azure cloud service pomocí sady Visual Studio
+title: Vytvoření projektu cloudové služby Azure
+description: Naučte se vytvořit projekt cloudové služby Azure se sadou Visual Studio
 author: ghogen
 manager: jillfra
 assetId: ec580df7-3dcc-45a9-a1d9-8c110678dfb5
@@ -12,46 +12,46 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: c4daf3d92aa08e6dbbb81eac79112772900d08d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62964023"
 ---
-# <a name="creating-an-azure-cloud-service-project-with-visual-studio"></a>Vytvoření projektu Azure cloud service pomocí sady Visual Studio
-Nástroje Azure pro sadu Visual Studio poskytuje šablony projektu, který vám umožní vytvářet [cloudové služby Azure](/azure/cloud-services/cloud-services-choose-me), což je jednoduchá služby Azure pro obecné účely. Po vytvoření projektu sady Visual Studio umožňuje nakonfigurovat, ladit a nasadit cloudovou službu Azure.
+# <a name="creating-an-azure-cloud-service-project-with-visual-studio"></a>Vytvoření projektu cloudové služby Azure pomocí sady Visual Studio
+Nástroje Azure pro Visual Studio poskytují šablonu projektu, která vám umožňuje vytvořit [cloudovou službu Azure](/azure/cloud-services/cloud-services-choose-me), což je jednoduchá služba Azure pro obecné účely. Po vytvoření projektu Visual Studio umožňuje konfigurovat, ladit a nasazovat cloudovou službu do Azure.
 
-## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Kroky pro vytvoření projektu Azure cloud service v sadě Visual Studio
-Tato část vás provede vytvořením projektu cloudové služby Azure v sadě Visual Studio s jeden nebo více webových rolí.
+## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Postup vytvoření projektu cloudové služby Azure v aplikaci Visual Studio
+V této části se seznámíte s vytvořením projektu cloudové služby Azure v aplikaci Visual Studio s jednou nebo více webovými rolemi.
 
-1. Spusťte Visual Studio jako správce.
+1. Spusťte sadu Visual Studio jako správce.
 
-1. V hlavní nabídce vyberte **souboru** > **nový** > **projektu**.
+1. V hlavní nabídce vyberte **soubor**  >  **Nový**  >  **projekt**.
 
-1. Vyberte **cloudu** z jazyka Visual C# nebo Visual Basic projektu šablony uzlů a vyberte **Azure Cloud Service** ze seznamu šablon.
+1. Vyberte **Cloud** z uzlů šablony projektu Visual C# nebo Visual Basic a v seznamu šablon vyberte **cloudovou službu Azure** .
 
-    ![Nová Cloudová služba Azure](./media/vs-azure-tools-azure-project-create/new-project-wizard-for-cloud-service.png)
+    ![Nová cloudová služba Azure](./media/vs-azure-tools-azure-project-create/new-project-wizard-for-cloud-service.png)
 
-1. Určete, která verze rozhraní .NET Framework, kterou chcete použít k vývoji projektu.
+1. Určete verzi .NET Framework, kterou chcete použít k vývoji projektu.
 
-1. Zadejte název a umístění pro váš projekt a název řešení.
+1. Zadejte název a umístění projektu a název řešení.
 
 1. Vyberte **OK**.
 
-1. V **nová Cloudová služba Microsoft Azure** dialogového okna, vyberte role, které chcete přidat a zvolte tlačítko se šipkou doprava a přidejte je do vašeho řešení.
+1. V dialogovém okně **nová Microsoft Azure cloudová služba** vyberte role, které chcete přidat, a zvolte tlačítko se šipkou vpravo a přidejte je do svého řešení.
 
-    ![Vyberte nové role Azure cloud service](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
+    ![Vyberte nové role Azure Cloud Service.](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. Chcete-li přejmenovat roli, která jste přidali, najeďte myší na roli v **nová Cloudová služba Microsoft Azure** dialogového okna a v místní nabídce vyberte **přejmenovat**. Můžete také přejmenovat roli v rámci vašeho řešení (v **Průzkumníka řešení**) po byla přidána.
+1. Pokud chcete přejmenovat přidanou roli, najeďte na ni v dialogovém okně **nový Microsoft Azure cloudová služba** a v místní nabídce vyberte **Přejmenovat**. Můžete také přejmenovat roli v rámci řešení (v **Průzkumník řešení**) po jejím přidání.
 
-    ![Přejmenujte roli Azure cloud service](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
+    ![Přejmenování role cloudové služby Azure](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 
-Projekt sady Visual Studio v Azure má přiřazení k roli projekty v řešení. Projekt obsahuje také *definiční soubor služby* a *konfigurační soubor služby*:
+Projekt aplikace Visual Studio Azure obsahuje přidružení k projektům rolí v řešení. Projekt obsahuje také *soubor definice služby* a *konfigurační soubor služby*:
 
-- **Definiční soubor služby** -určuje nastavení běhového prostředí pro aplikace, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
-- **Konfigurační soubor služby** – nakonfiguruje, kolik instancí role jsou spouštění a hodnoty k nastavení určenému pro roli.
+- **Definiční soubor služby** – definuje nastavení modulu runtime pro vaši aplikaci, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
+- **Konfigurační soubor služby** – konfiguruje, kolik instancí role se spouští, a hodnoty nastavení definované pro roli.
 
-Další informace o těchto souborech najdete v tématu [nakonfigurovat role cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).
+Další informace o těchto souborech najdete v tématu [Konfigurace rolí pro cloudovou službu Azure se sadou Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).
 
 ## <a name="next-steps"></a>Další kroky
-- [Správa rolí v Azure cloud service projektů pomocí sady Visual Studio](./vs-azure-tools-cloud-service-project-managing-roles.md)
+- [Správa rolí v projektech Azure Cloud Service pomocí sady Visual Studio](./vs-azure-tools-cloud-service-project-managing-roles.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c01c034fb08315737c57ef8674230b837a9fa6de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670331"
 ---
 # <a name="personalizing-the-visual-studio-ide"></a>Přizpůsobení integrovaného vývojového prostředí sady Visual Studio
@@ -27,7 +27,7 @@ Tato část popisuje, jak přizpůsobit aplikaci Visual Studio různými způsob
  Chcete-li uspořádat pozice a chování oken a uložit vlastní rozložení, přečtěte si téma [přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md).
 
 ### <a name="general-environment-options"></a>Obecné možnosti prostředí
- Pokud chcete přizpůsobit mnoho nastavení prostředí, zadejte `environment` v **Rychlé spuštění**. Po zobrazení stránky vlastností můžete stisknutím klávesy **F1** zobrazit další nápovědu k různým nastavením na této stránce. Viz také [dialogové okno Možnosti prostředí](../ide/reference/environment-options-dialog-box.md).
+ Pokud chcete přizpůsobit mnoho nastavení prostředí, `environment` Zadejte **Rychlé spuštění**. Po zobrazení stránky vlastností můžete stisknutím klávesy  **F1** zobrazit další nápovědu k různým nastavením na této stránce. Viz také [dialogové okno Možnosti prostředí](../ide/reference/environment-options-dialog-box.md).
 
 ### <a name="external-tools"></a>Externí nástroje
  Informace o tom, které externí nástroje se zobrazí v nabídkách a panelech nástrojů, najdete v tématu [Správa externích nástrojů](../ide/managing-external-tools.md).
@@ -36,13 +36,13 @@ Tato část popisuje, jak přizpůsobit aplikaci Visual Studio různými způsob
  Pokud chcete vytvořit vlastní úvodní stránku pro vás a váš tým, přečtěte si téma [přizpůsobení úvodní stránky](../ide/customizing-the-start-page-for-visual-studio.md) .
 
 ### <a name="environment-color-themes"></a>Motivy barev prostředí
- Pokud chcete změnit barevný motiv mezi světlým, tmavým a modrým typem prostředí v **Rychlé spuštění** a vyberte **prostředí &#124; obecné**. Chcete-li změnit možnosti zabarvení v editoru, zadejte `environment` v **Rychlé spuštění** a vyberte možnost **písma a barvy prostředí &#124;** . Viz také [Postupy: Změna písma a barev](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
+ Pokud chcete změnit barevný motiv mezi světlým, tmavým a modrým, zadejte prostředí v **Rychlé spuštění** a vyberte **prostředí &#124; obecné**. Chcete-li změnit možnosti zabarvení v editoru, zadejte `environment` **Rychlé spuštění** a vyberte **prostředí &#124; písma a barvy**. Viz také [Postupy: Změna písma a barev](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
 
 ### <a name="menus-and-toolbars"></a>Nabídky a panely nástrojů
  Chcete-li přidat nebo odebrat položky nabídky nebo panelu nástrojů, přečtěte si téma [Postupy: přizpůsobení nabídek a panelů nástrojů](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
 
 ### <a name="main-menu-casing"></a>Velká písmena hlavní nabídky
- V důsledku oblíbených požadavků můžete změnit velikost písmen v hlavní nabídce mezi **písmenem nadpisu** a **všemi velkými** písmeny zadáním `environment` v **Rychlé spuštění** a volbou **Obecné prostředí &#124;** .
+ Vzhledem k oblíbeným poptávkám můžete změnit velká a malá písmena v hlavní nabídce mezi **písmenem nadpisu** a **všemi velkými** písmeny tak, že zadáte `environment` **Rychlé spuštění** a zvolíte **prostředí &#124; obecné**.
 
 ## <a name="see-also"></a>Viz také
  [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)

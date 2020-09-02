@@ -1,5 +1,5 @@
 ---
-title: Použití místních souborů databáze v přehled řešení pro systém Office
+title: Přehled použití místních souborů databáze v řešeních pro systém Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,31 +15,31 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ea260a6286c8a923d56ab7a5088b55de57004489
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62982239"
 ---
-# <a name="use-local-database-files-in-office-solutions-overview"></a>Použití místních souborů databáze v přehled řešení pro systém Office
-  Můžete zahrnout soubor databáze, jako je například SQL Server Express (*.mdf*) souboru nebo Microsoft Office Access (*.mdb*) soubor, ve vašem řešení Office. To umožňuje koncovým uživatelům udržovat místní databázi v situacích, kde není povinné, například v řešení místní inventář, který se používá v jednom počítači zachování do centralizované databáze.
+# <a name="use-local-database-files-in-office-solutions-overview"></a>Přehled použití místních souborů databáze v řešeních pro systém Office
+  Do svého řešení Office můžete zahrnout soubor databáze, jako je například soubor SQL Server Express (*. mdf*) nebo soubor systém Microsoft Office Access (*. mdb*). To umožňuje koncovým uživatelům udržovat místní databázi v situacích, kdy není nutné spravovat centralizovanou databázi, například v řešení místního inventáře, které se používá pouze v jednom počítači.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="import-the-database-file-into-a-project"></a>Importovat soubor databáze do projektu
- Chcete-li importovat soubor databáze do projektu, použijte **Průvodce konfigurací zdroje dat** vytvořit zdroj dat na základě souboru databáze. Průvodce přidá do projektu soubor databáze a typové datové sady.
+## <a name="import-the-database-file-into-a-project"></a>Import databázového souboru do projektu
+ Chcete-li importovat databázový soubor do projektu, použijte **Průvodce konfigurací zdroje dat** k vytvoření zdroje dat založeného na souboru databáze. Průvodce přidá do projektu soubor databáze a typovou datovou sadu.
 
-## <a name="deploy-the-database-file"></a>Nasazení souboru databáze
- **Průvodce konfigurací zdroje dat** používá relativní cestu k vytvoření připojení k souboru místní databáze. To umožňuje kopírovat řešení z jednoho počítače do jiného, pokud je udržovat relativní umístění souborů.
+## <a name="deploy-the-database-file"></a>Nasazení databázového souboru
+ **Průvodce konfigurací zdroje dat** používá relativní cestu k vytvoření připojení k místnímu databázovému souboru. To vám umožní zkopírovat řešení z jednoho počítače do druhého, pokud udržujete relativní umístění souborů.
 
- Pokud vaše řešení nasadit na server a pak distribuovat dokument pro každý koncový uživatel musí také ručně distribuovat databázový soubor a nainstalujte ji na stejné pozici vzhledem k dokumentu. To znamená, koncovému uživateli nelze přesunout dokument do nového umístění svého počítače, pokud také přesune soubor databáze.
+ Pokud vaše řešení nasadíte na server a pak ho rozšíříte na každého koncového uživatele, musíte ručně distribuovat databázový soubor a nainstalovat ho do stejné pozice relativně k dokumentu. To znamená, že koncový uživatel nemůže přesunout dokument do nového umístění na svém počítači, pokud mu také nepřesunul soubor databáze.
 
-## <a name="local-database-files-and-caching-the-dataset"></a>Místních souborů databáze a ukládání do mezipaměti datovou sadu
- V řešeních na úrovni dokumentu pro aplikaci Microsoft Office Excel a Microsoft Office Word, můžete ukládat do mezipaměti datových sad v dokumentu instance datové sady s atributem označením <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>. Když přidáte databázový soubor do projektu s použitím **Průvodce konfigurací zdroje dat**, typové datové sady je automaticky přidán do projektu. Je zřídka nezbytné použít <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> pro tuto datovou sadu, protože data jsou již místní na počítači uživatele. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).
+## <a name="local-database-files-and-caching-the-dataset"></a>Místní soubory databáze a datová sada pro ukládání do mezipaměti
+ V řešeních na úrovni dokumentu pro systém Microsoft Office Excel a systém Microsoft Office Word můžete ukládat datové sady v dokumentu do mezipaměti tím, že označíte instanci datové sady atributem <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> . Když do projektu přidáte soubor databáze pomocí **Průvodce konfigurací zdroje dat**, je do projektu automaticky přidána typová datová sada. Pro <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> tuto datovou sadu je zřídka nutné použít, protože data jsou v počítači uživatele již místní. Další informace najdete v tématu [cache data](../vsto/caching-data.md).
 
-## <a name="see-also"></a>Viz také:
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+## <a name="see-also"></a>Viz také
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Postupy: Naplnění dokumentů daty z databáze](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Postupy: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
-- [Data v mezipaměti](../vsto/caching-data.md)
+- [Postupy: aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
+- [Data mezipaměti](../vsto/caching-data.md)

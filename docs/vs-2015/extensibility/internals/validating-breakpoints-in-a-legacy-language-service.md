@@ -1,5 +1,5 @@
 ---
-title: Ověřování zarážek ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Ověřování zarážek ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,33 +12,33 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f54dc683aa4287145a27e22d49397241b395f69f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163682"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>Ověřování zarážek ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zarážky označuje, že spuštění programu by se měla zastavit v určitém místě, když je spuštěn v ladicí program. Uživatele můžete umístit zarážky na kterýkoli řádek v ve zdrojovém souboru, protože nemá žádné informace o tom, co platné umístění zarážky editoru. Když ladicí program se spustí, všechny označené zarážky (označované jako čekajících zarážek) jsou vázány na příslušné umístění v běžící aplikaci. Ve stejnou dobu, kterou zarážek se ověří a zkontrolujte, že se označení umístění platný kód. Například zarážky na komentář není platný, protože není na tomto místě ve zdrojovém kódu žádný kód. Ladicí program se zakáže neplatný zarážky.  
+Zarážka označuje, že by mělo být spuštění programu zastaveno v určitém bodě, v němž je spuštěno v ladicím programu. Uživatel může umístit zarážku na libovolný řádek ve zdrojovém souboru, protože editor nemá žádné znalosti o tom, co představuje platné umístění pro zarážku. Po spuštění ladicího programu jsou všechny označené zarážky (nazývané nedokončené zarážky) vázány na příslušné umístění v běžícím programu. V současné době jsou zarážky ověřeny, aby se zajistilo, že označí platná umístění kódu. Například zarážka na komentáři není platná, protože ve zdrojovém kódu není v tomto umístění žádný kód. Ladicí program zakáže neplatné zarážky.  
   
- Protože služba jazyka ví o zdrojovém kódu se zobrazí, předtím, než se spustí ladicí program může ověřit zarážky. Je možné přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> metoda vrátí rozpětí určující platné umístění zarážky. Umístění zarážky stále ověření při spuštění ladicího programu, ale uživatel je informován o neplatný zarážky bez čekání na ladicí program načíst.  
+ Vzhledem k tomu, že služba jazyka ví o zobrazení zdrojového kódu, může ověřit zarážky před spuštěním ladicího programu. Metodu můžete přepsat <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> tak, aby vracela rozpětí určující platné umístění pro zarážku. Umístění zarážky je stále ověřováno při spuštění ladicího programu, ale uživatel je informován o neplatných zarážekch bez čekání na načtení ladicího programu.  
   
-## <a name="implementing-support-for-validating-breakpoints"></a>Implementace podporu pro ověřování zarážek  
+## <a name="implementing-support-for-validating-breakpoints"></a>Implementace podpory pro ověřování zarážek  
   
-- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> Metoda je uvedena umístění zarážky. Implementace musíte rozhodnout, zda je platná umístění a označující, že to tak, že vrací rozpětí textu, který identifikuje kód přidružený k řádku pozici zarážku.  
+- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>Metodě je dána pozice zarážky. Vaše implementace musí rozhodnout, zda je umístění platné, a indikovat to tak, že vrátí textový rozsah, který identifikuje kód přidružený k řádku pozice zarážky.  
   
-- Vrátí <xref:Microsoft.VisualStudio.VSConstants.S_OK> Pokud je toto umístění platné, nebo <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> Pokud není platná.  
+- Vrátí <xref:Microsoft.VisualStudio.VSConstants.S_OK> , zda je umístění platné, nebo <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> zda není platné.  
   
-- Pokud zarážka je platný rozsah textu je zvýrazněn spolu s zarážku.  
+- Pokud je zarážka platná, je zvýrazněný textový rozsah spolu se zarážkou.  
   
-- Pokud zarážka není platná, zobrazí se chybová zpráva ve stavovém řádku.  
+- Pokud je zarážka neplatná, zobrazí se ve stavovém řádku chybová zpráva.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> metodu, která volá analyzátor, který má získat délka kódu (pokud existuje) v zadaném umístění.  
+ Tento příklad ukazuje implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> metody, která volá analyzátor, aby získala rozsah kódu (pokud existuje) v zadaném umístění.  
   
- Tento příklad předpokládá, že jste přidali `GetCodeSpan` metodu <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídu, která ověřuje text rozpětí a vrátí `true` Pokud se jedná o platný zarážku umístění.  
+ Tento příklad předpokládá, že jste přidali `GetCodeSpan` metodu do <xref:Microsoft.VisualStudio.Package.AuthoringSink> třídy, která ověřuje rozsah textu a vrátí, `true` Pokud se jedná o platné umístění zarážky.  
   
 ```csharp  
 using Microsoft VisualStudio;  

@@ -1,5 +1,5 @@
 ---
-title: Stav balíčku VSPackage | Dokumentace Microsoftu
+title: Stav balíčku VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,70 +12,70 @@ ms.assetid: 6056a9ea-e7a8-481c-9fc8-340229fa12d9
 caps.latest.revision: 25
 manager: jillfra
 ms.openlocfilehash: f3140b527673f87b1d7c552e99584232494aed7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62979992"
 ---
-# <a name="vspackage-state"></a>Stav balíčku VSPackage
-Řada faktorů určit sadu trvalé hodnoty nebo stav, nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aplikace.  
+# <a name="vspackage-state"></a>Stav VSPackage
+Řada faktorů určuje sadu trvalých hodnot nebo stav [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aplikace.  
   
 - Projekty mají vlastnosti projektu a konfigurace.  
   
 - Řešení mají vlastnosti.  
   
-- Uživatelská nastavení určuje velikost a pozice okna dokumentů, oken nástrojů, dokovací stavu a klávesové zkratky.  
+- Uživatelská nastavení určují velikost a umístění oken dokumentů, oken nástrojů, stavu ukotvení a klávesových zkratek.  
   
-- Aplikace může mít možnosti, které nastaví uživatel.  
+- Aplikace mohou mít možnosti, které nastaví uživatel.  
   
-- Objekty, které aplikace může mít vlastní vlastnosti.  
+- Objekty, které vytváří aplikace, mohou mít vlastní vlastnosti.  
   
-  Tady jsou některé ze způsobů, který [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] stav aplikace je možné spravovat:  
+  Tady je několik způsobů, jak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lze spravovat stav aplikace:  
   
 - Na stránkách vlastností projektu a řešení.  
   
-- Až **Průvodce importem a exportem nastavení**, který umožňuje uživateli přesunout nastavení z jednoho počítače do jiného.  
+- Pomocí **Průvodce importem a exportem nastavení**, který umožňuje uživateli přesunout nastavení z jednoho počítače do druhého.  
   
-- Až **možnosti** dialogové okno, která zahrnuje možnosti týkající se aplikací.  
+- Pomocí dialogového okna **Možnosti** , které obsahuje možnosti související s aplikacemi.  
   
-- Až **vlastnosti** okno, které zpřístupní vlastnosti objektů.  
+- Prostřednictvím okna **vlastnosti** , které zpřístupňuje vlastnosti objektů.  
   
-- Díky automatizaci. Aplikace můžete přístup k balíčku VSPackage a objekt vlastnosti, které byly vystaveny automatizace.  
+- Prostřednictvím automatizace. Aplikace má přístup k vlastnostem VSPackage a objektům, které byly vystaveny pro automatizaci.  
   
-  Základní stavu aplikace jsou různé mechanismy trvalost, které umožňují uložit a obnovit stav aplikace.  
+  Základní stav aplikace jsou různé mechanismy trvalosti, které umožňují ukládání a obnovování stavu aplikace.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Podpora pro trvalost stavu](../misc/support-for-state-persistence.md)  
- Zobrazí seznam běžných strategií pro ukládání, obnovení a obnovení stavu VSPackage.  
+ Obsahuje seznam běžných strategií pro uložení, obnovení a resetování stavu VSPackage.  
   
  [Možnosti a stránky Možnosti](../extensibility/internals/options-and-options-pages.md)  
- Představuje obecné a vlastní stránky možnosti a vysvětluje, jak je implementovat.  
+ Obsahuje obecné a vlastní stránky možností a vysvětluje, jak je implementovat.  
   
  [Vytvoření stránky Možnosti](../extensibility/creating-an-options-page.md)  
- Vysvětluje, jak vytvořit dvě možnosti stránky, jednoduché stránky a vlastní stránky.  
+ Vysvětluje, jak vytvořit dvě stránky možností, jednoduchou stránku a vlastní stránku.  
   
  [Podpora pro kategorie nastavení](../misc/support-for-settings-categories.md)  
- Tento článek popisuje nastavení uživatele a jak jsou vytvořeny a trvalé.  
+ Popisuje uživatelská nastavení a jejich vytvoření a uchování.  
   
  [Vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md)  
- Vysvětluje, jak vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kategorie nastavení a použít ho k uložení hodnot a obnovení hodnoty ze souboru nastavení.  
+ Vysvětluje, jak vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kategorii nastavení a použít ji k ukládání hodnot do a obnovení hodnot ze souboru nastavení.  
   
  [Rozšíření vlastností a okno Vlastnosti](../extensibility/extending-properties-and-the-property-window.md)  
- Vysvětluje, jak zobrazit a změnit hodnoty objektu v **vlastnosti** okna.  
+ Vysvětluje, jak zobrazit a změnit hodnotu objektu v okně **vlastnosti** .  
   
  [Vystavení vlastností v okně Vlastnosti](../extensibility/exposing-properties-to-the-properties-window.md)  
- Vysvětluje, jak vystavit veřejné vlastnosti objektu **vlastnosti** okna.  
+ Vysvětluje, jak zveřejnit veřejné vlastnosti objektu v okně **vlastnosti** .  
   
  [Podpora vlastností projektu a konfigurace](../extensibility/internals/support-for-project-and-configuration-properties.md)  
  Vysvětluje, jak zobrazit a změnit vlastnosti projektu a konfigurace.  
   
  [Načtení vlastností projektu](../extensibility/getting-project-properties.md)  
- Vás provede kroky k vytvoření spravovaného VSPackage, která se zobrazí v okně nástroje Vlastnosti projektu.  
+ Provede vás kroky při vytváření spravovaného VSPackage, který zobrazí vlastnosti projektu v okně nástroje.  
   
  [Použití úložiště nastavení](../extensibility/using-the-settings-store.md)  
- Vysvětluje mechanismus trvalého nastavení Store a jak ji používat.  
+ Vysvětluje nastavení mechanismu trvalosti úložiště a jeho použití.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)  
- Poskytuje obecné orientace na témata, která popisují, jak vytvořit a používat balíčky VSPackages.
+ Poskytuje obecnou orientaci pro témata, která vysvětlují, jak vytvářet a používat sady VSPackage.

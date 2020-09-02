@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: eddd72d648e7349f51096a21131f38c2e370a277
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656788"
 ---
 # <a name="disabling-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Zakázání ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)
-Toto téma popisuje, jak zakázat ladicí program [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pomocí konfiguračního souboru při sestavování [!INCLUDE[wf](../includes/wf-md.md)] aplikací v [!INCLUDE[wfd1](../includes/wfd1-md.md)] starší verze. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak zakázat [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicí program pomocí konfiguračního souboru při sestavování [!INCLUDE[wf](../includes/wf-md.md)] aplikací ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- Ve výchozím nastavení je [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] ladicí program pro [!INCLUDE[wf](../includes/wf-md.md)] povolen pro hostitelský proces. Chcete-li zakázat ladění pracovního postupu, je nutné je explicitně vypnout přidáním položky "DisableWorkflowDebugging" **\<switches >** elementu v části **\<system. Diagnostics >** konfiguračního souboru hostitele.
+ Ve výchozím nastavení [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] je ladicí program pro [!INCLUDE[wf](../includes/wf-md.md)] povolen pro hostitelský proces. Chcete-li zakázat ladění pracovního postupu, je nutné je explicitně vypnout přidáním prvku "DisableWorkflowDebugging" **\<switches>** v **\<system.diagnostics>** části konfiguračního souboru hostitele.
 
  Následující příklad ukazuje, jak upravit konfigurační soubor hostitele pro zákaz ladění pracovního postupu.
 

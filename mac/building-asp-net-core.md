@@ -7,10 +7,10 @@ ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
 ms.topic: how-to
 ms.openlocfilehash: 47ddfa11b4c05896037c1fb18e285d46fc79520b
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88214611"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Vytváření aplikací ASP.NET Core v sadě Visual Studio pro Mac
@@ -40,7 +40,7 @@ Toto testovací prostředí je určené pro vývojáře, kteří znají jazyk C#
 
 2. Vyberte **soubor > nové řešení**.
 
-3. Vyberte kategorii **aplikace > .NET Core** a šablonu **ASP.NET Core webové aplikace (C#)** . Klikněte na **Další**.
+3. Vyberte kategorii **aplikace > .NET Core** a šablonu **ASP.NET Core webové aplikace (C#)** . Klikněte na **Next** (Další).
 
     ![Snímek obrazovky ukazující, jak vybrat šablonu webové aplikace pro nový projekt.](media/netcore-image1.png)
 

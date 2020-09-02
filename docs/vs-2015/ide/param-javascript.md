@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ca6207d22d82e607fa589f944230b36b46e633c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670363"
 ---
 # <a name="ltparamgt-javascript"></a>&lt;param &gt; (JavaScript)
@@ -38,46 +38,46 @@ Určuje informace o dokumentaci pro parametr v rámci funkce nebo metody.
 ```
 
 #### <a name="parameters"></a>Parametry
- `name` nutné. Název parametru
+ `name` Požadovanou. Název parametru
 
- `type` volitelné. Datový typ parametru Typ může být jeden z následujících:
+ `type` Volitelné. Datový typ parametru Typ může být jeden z následujících:
 
-- Typ jazyka ECMAScript ve specifikaci ECMAScript 5, například `Number` a `Object`.
+- Typ jazyka ECMAScript ve specifikaci ECMAScript 5, například `Number` a `Object` .
 
-- Objekt modelu DOM, například `HTMLElement`, `Window` a `Document`.
+- Objekt modelu DOM, například, `HTMLElement` `Window` , a `Document` .
 
 - Funkce konstruktoru jazyka JavaScript.
 
-  `integer` volitelné. Pokud je `type` `Number`, určuje, zda je parametr celé číslo. Nastavte na `true` pro indikaci, že parametr je celé číslo. v opačném případě nastavte na `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
+  `integer` Volitelné. Pokud `type` je `Number` , určuje, zda je parametr celé číslo. Nastavte na hodnotu `true` , chcete-li označit, že parametr je celé číslo. v opačném případě nastavte na `false` . Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
 
-  `domElement` volitelné. Tento atribut je zastaralý. atribut `type` má přednost před tímto atributem. Tento atribut určuje, zda je dokumentovaný parametr prvkem modelu DOM. Nastavte na `true`, chcete-li určit, že parametr je prvek modelu DOM; v opačném případě nastavte na `false`. Pokud atribut `type` není nastaven a `domElement` je nastaven na `true`, IntelliSense při provádění příkazu zpracuje dokumentovaný parametr jako `HTMLElement`.
+  `domElement` Volitelné. Tento atribut je zastaralý. `type` atribut má přednost před tímto atributem. Tento atribut určuje, zda je dokumentovaný parametr prvkem modelu DOM. Nastavte na hodnotu `true` , chcete-li určit, že parametr je prvek modelu DOM. v opačném případě nastavte na `false` . Pokud `type` atribut není nastaven a `domElement` je nastaven na hodnotu `true` , technologie IntelliSense zpracuje dokumentovaný parametr jako `HTMLElement` při dokončování příkazu.
 
-  `mayBeNull` volitelné. Určuje, zda může být dokumentovaný parametr nastaven na hodnotu null. Nastavte na `true` pro indikaci, že parametr lze nastavit na hodnotu null. v opačném případě nastavte na `false`. Výchozí hodnota je `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
+  `mayBeNull` Volitelné. Určuje, zda může být dokumentovaný parametr nastaven na hodnotu null. Nastavte na `true` hodnotu, chcete-li určit, že parametr lze nastavit na hodnotu null. v opačném případě nastavte na `false` . Výchozí hodnota je `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
 
-  `elementType` volitelné. Pokud je `type` `Array`, tento atribut určuje typ prvků v poli.
+  `elementType` Volitelné. Pokud `type` je `Array` , tento atribut určuje typ prvků v poli.
 
-  `elementInteger` volitelné. Pokud je `type` `Array` a `elementType` je `Number`, tento atribut určuje, zda jsou prvky v poli celá čísla. Nastavte na `true` pro indikaci, že prvky v poli jsou celá čísla. v opačném případě nastavte na `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
+  `elementInteger` Volitelné. Pokud `type` je `Array` a `elementType` je `Number` , tento atribut určuje, zda jsou prvky v poli celá čísla. Nastavte na hodnotu `true` , chcete-li označit, že prvky v poli jsou celá čísla. v opačném případě nastavte na `false` . Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
 
-  `elementDomElement` volitelné. Tento atribut je zastaralý. atribut `elementType` má přednost před tímto atributem. Je-li `type` `Array`, tento atribut určuje, zda prvky v poli jsou prvky modelu DOM. Nastavte na `true`, chcete-li určit, že prvky jsou prvky modelu DOM; v opačném případě nastavte na `false`. Pokud atribut `elementType` není nastaven a `elementDomElement` je nastaven na `true`, IntelliSense při provádění příkazu zpracuje každý prvek v poli jako `HTMLElement`.
+  `elementDomElement` Volitelné. Tento atribut je zastaralý. `elementType` atribut má přednost před tímto atributem. Pokud `type` je `Array` , tento atribut určuje, zda prvky v poli jsou prvky modelu DOM. Nastavte na hodnotu `true` , chcete-li určit, že prvky jsou prvky modelu DOM. v opačném případě nastavte na `false` . Pokud `elementType` atribut není nastaven a `elementDomElement` je nastaven na hodnotu `true` , technologie IntelliSense zpracuje každý prvek v poli jako `HTMLElement` při provádění příkazu.
 
-  `elementMayBeNull` volitelné. Pokud je `type` `Array`, určuje, zda elementy v poli mohou být nastaveny na hodnotu null. Nastavte na `true` pro indikaci, že elementy v poli mohou být nastaveny na hodnotu null; v opačném případě nastavte na `false`. Výchozí hodnota je `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
+  `elementMayBeNull` Volitelné. Pokud `type` je `Array` , určuje, zda elementy v poli mohou být nastaveny na hodnotu null. Nastavte na `true` k označení toho, že elementy v poli mohou být nastaveny na hodnotu null. v opačném případě nastavte na `false` . Výchozí hodnota je `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
 
-  `locid` volitelné. Identifikátor pro informace o lokalizaci parametru. Identifikátor je buď ID člena, nebo odpovídá hodnotě atributu `name` v sadě zpráv definované pomocí metadat OpenAjax. Typ identifikátoru závisí na formátu zadaném v prvku [\<loc >](../ide/loc-javascript.md) .
+  `locid` Volitelné. Identifikátor pro informace o lokalizaci parametru. Identifikátor je buď ID člena, nebo odpovídá `name` hodnotě atributu v sadě zpráv definované pomocí metadat OpenAjax. Typ identifikátoru závisí na formátu zadaném v [\<loc>](../ide/loc-javascript.md) elementu.
 
-  `parameterArray` volitelné. Určuje, zda může být dokumentovaný parametr ve volání funkce opakován, podobně jako parametry opakování podporované funkcí `String.format`. Nastavte na `true` pro indikaci, že se dá parametr opakovat. v opačném případě nastavte na `false`. Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
+  `parameterArray` Volitelné. Určuje, zda může být dokumentovaný parametr ve volání funkce opakován, podobně jako opakující se parametry podporované ve `String.format` funkci. Nastavte na hodnotu `true` , chcete-li určit, že se může parametr opakovat. jinak nastavte na `false` . Tento atribut se v aplikaci Visual Studio nepoužívá k poskytnutí informací IntelliSense.
 
-  `optional` volitelné. Určuje, zda je dokumentovaný parametr v volání funkce volitelný. Nastavte na `true` pro indikaci, že parametr je nepovinný. v opačném případě nastavte na `false`.
+  `optional` Volitelné. Určuje, zda je dokumentovaný parametr v volání funkce volitelný. Nastavte na hodnotu `true` , chcete-li označit, že parametr je volitelný. v opačném případě nastavte na `false` .
 
-  `value` volitelné. Určuje kód, který má být vyhodnocen pro použití technologií IntelliSense namísto samotného kódu funkce. Tento atribut lze použít k poskytnutí informací o typu, pokud není definován typ parametru. Můžete například použít `value=’1’` pro zachází s typem parametru jako číslo.
+  `value` Volitelné. Určuje kód, který má být vyhodnocen pro použití technologií IntelliSense namísto samotného kódu funkce. Tento atribut lze použít k poskytnutí informací o typu, pokud není definován typ parametru. Například můžete použít pro zakládání `value=’1’` s typem parametru jako číslo.
 
-  `description` volitelné. Popis parametru
+  `description` Volitelné. Popis parametru
 
 ## <a name="remarks"></a>Poznámky
- Jediný požadovaný atribut je `name`. Všechny ostatní atributy jsou volitelné.
+ Jediný požadovaný atribut je `name` . Všechny ostatní atributy jsou volitelné.
 
- Prvky, které slouží k přidávání poznámek k funkcím, jako jsou [\<summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)a [\<returns >](../ide/returns-javascript.md), musí být umístěny v těle funkce před všemi příkazy.
+ Prvky, které slouží k přidávání poznámek k funkcím, jako jsou [\<summary>](../ide/summary-javascript.md) , [\<param>](../ide/param-javascript.md) a, [\<returns>](../ide/returns-javascript.md) musí být umístěny v těle funkce před všemi příkazy.
 
- Pokud existuje více `<param>` prvků, které mají stejný název, je použit jeden z `<param>` prvků a redundantní prvky budou ignorovány. Chování, které určuje, který prvek je použit, není definováno. Pokud `name` odkazuje na neexistující parametr, je prvek ignorován.
+ Pokud existuje více `<param>` prvků, které mají stejný název, je použit jeden z `<param>` elementů a redundantní prvky budou ignorovány. Chování, které určuje, který prvek je použit, není definováno. Pokud `name` odkazuje na neexistující parametr, je prvek ignorován.
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje, jak použít `<param>` element.

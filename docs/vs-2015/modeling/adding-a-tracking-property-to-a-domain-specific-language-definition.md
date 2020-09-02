@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 382d5dc5ee416d901e1b73b7b2fb346e83abbef6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545571"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Přidání vlastnosti sledování do definice jazyka specifického pro doménu
@@ -45,7 +45,7 @@ Tento návod ukazuje, jak přidat vlastnost sledování do doménového modelu.
 
 - V okně **vlastnosti** , když je vlastnost sledování v aktualizovaném stavu uživatele, je tato hodnota zobrazena tučným písmem.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  Než budete moct spustit tento návod, musíte nejdřív nainstalovat tyto komponenty:
 
 |Produkt|Odkaz ke stažení|

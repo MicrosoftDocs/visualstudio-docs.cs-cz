@@ -8,10 +8,10 @@ ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
 ms.topic: tutorial
 ms.openlocfilehash: 144580b0ebe0eb3615c5cf55c1bee03ff2a614fa
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938974"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>Kurz: Začínáme s Azure Functions
@@ -36,7 +36,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
 2. Vyberte **soubor > nové řešení**.
 
-3. V kategorii **Cloud > obecné** vyberte šablonu **Azure Functions** . Použijete jazyk C# k vytvoření knihovny tříd .NET, která je hostitelem Azure Functions. Klikněte na **Další**.
+3. V kategorii **Cloud > obecné** vyberte šablonu **Azure Functions** . Použijete jazyk C# k vytvoření knihovny tříd .NET, která je hostitelem Azure Functions. Klikněte na **Next** (Další).
 
     ![Výběr šablony Azure Functions](media/azure-functions-lab-image1.png)
 
@@ -69,7 +69,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
 
     ![Podrobnosti o novém účtu úložiště](media/azure-functions-lab-image6.png)
 
-1. Klikněte na **Vytvořit**. Vytvoření účtu úložiště může trvat několik minut. Po úspěšném vytvoření oznámení obdržíte oznámení.
+1. Klikněte na možnost **Vytvořit**. Vytvoření účtu úložiště může trvat několik minut. Po úspěšném vytvoření oznámení obdržíte oznámení.
 
     ![oznámení o úspěšném nasazení](media/azure-functions-lab-image7.png)
 
@@ -183,7 +183,7 @@ V tomto testovacím prostředí se naučíte, jak začít sestavovat Azure Funct
     return x + y;
     ```
 
-1. Spusťte aplikaci.
+1. Aplikaci spusťte.
 
 1. Vraťte se do okna prohlížeče a přidejte řetězec `/?x=2&y=3` k adrese URL. Celá adresa URL by teď měla být `http://localhost:7071/api/Add?x=2&y=3` . Přejděte na novou adresu URL.
 
@@ -413,6 +413,6 @@ Služba, kterou sestavíte, může být často mnohem složitější než ta, kt
     ![](https://user-images.githubusercontent.com/3944468/29033725-be9d5a5e-7b4a-11e7-8b55-df0a200b6320.png)
 -->
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 V tomto testovacím prostředí jste se naučili, jak začít sestavovat Azure Functions s využitím Visual Studio pro Mac.

@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsFunctionStale | Dokumenty společnosti Microsoft
+title: 'IDebugComPlusSymbolProvider:: IsFunctionStale | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4e5b42e8bb89a84b5274669173c93db3e287755a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733695"
 ---
 # <a name="idebugcomplussymbolproviderisfunctionstale"></a>IDebugComPlusSymbolProvider::IsFunctionStale
-Určuje, zda je funkce na zadané adrese ladění považována za zastaralou.
+Určuje, zda je funkce na zadané adrese pro ladění považována za zastaralou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ int IsFunctionStale(
 
 ## <a name="parameters"></a>Parametry
 `pAddress`\
-[v] Ladicí adresa, která je reprezentována rozhraním [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md) Tato adresa musí být METHOD_ADDRESS.
+pro Adresa pro ladění reprezentovaná [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraním. Tato adresa musí být METHOD_ADDRESS.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je funkce považována za `S_OK`zastaralou, vrátí . Pokud funkce není zastaralá, vrátí `S_FALSE`.
+Pokud je funkce považována za zastaralou, vrátí `S_OK` . Pokud funkce není zastaralá, vrátí `S_FALSE` .
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugSymbolProvider** objekt, který zveřejňuje rozhraní [IDebugComPlusSymbolProvider.](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) .
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsFunctionStale(

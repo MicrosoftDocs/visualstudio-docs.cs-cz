@@ -1,5 +1,5 @@
 ---
-title: Seznámení s Azure Functions
+title: Úvod do Azure Functions
 description: Použití služby Azure Functions v Visual Studio pro Mac.
 author: heiligerdankgesang
 ms.author: dominicn
@@ -8,13 +8,13 @@ ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
 ms.openlocfilehash: f2621ab30099baae5521c8b2226f288ec1a2531b
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938851"
 ---
-# <a name="introduction-to-azure-functions"></a>Seznámení s Azure Functions
+# <a name="introduction-to-azure-functions"></a>Úvod do Azure Functions
 
 Azure Functions je způsob, jak vytvořit a spustit fragmenty kódu řízené událostmi – – funkce – – v cloudu, aniž byste museli explicitně zřizovat nebo spravovat infrastrukturu. Další informace o Azure Functions najdete v dokumentaci k [Azure Functions](/azure/azure-functions/).
 
@@ -89,12 +89,12 @@ Díky podpoře Azure Functions v Visual Studio pro Mac můžete testovat a ladit
 
 Výše uvedený postup můžete použít k přidání dalších funkcí do projektu Function App. Každá funkce v projektu může mít jinou aktivační událost, ale funkce musí mít právě jednu aktivační událost. Další informace najdete v tématu [Azure Functions triggery a koncepty vazeb](/azure/azure-functions/functions-triggers-bindings).
 
-## <a name="publish-to-azure"></a>Publikování aplikací do Azure
+## <a name="publish-to-azure"></a>Publikování do Azure
 
-1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**: ![ možnost publikovat do Azure.](media/azure-functions-image5.png)
+1. Klikněte pravým tlačítkem na název projektu a vyberte **publikovat > publikovat do Azure**:  ![ možnost publikovat do Azure.](media/azure-functions-image5.png)
 2. Pokud jste už účet Azure připojili k Visual Studio pro Mac zobrazí se seznam dostupných služeb App Services. Pokud jste se přihlásili, budete vyzváni k tomu.
 3. V dialogovém okně **publikovat do Azure App Service** můžete buď vybrat existující službu App Service, nebo vytvořit novou, kliknutím na **Nový**.
-4. V dialogovém okně **vytvořit novou App Service** zadejte nastavení: ![ možnost publikovat do Azure menu.](media/azure-functions-image7.png)
+4. V dialogovém okně **vytvořit novou App Service** zadejte nastavení:  ![ možnost publikovat do Azure menu.](media/azure-functions-image7.png)
 
     |Nastavení  |Popis  |
     |---------|---------|

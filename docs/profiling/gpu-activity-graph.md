@@ -1,5 +1,5 @@
 ---
-title: Graf aktivity GPU | Dokumenty společnosti Microsoft
+title: Graf aktivity GPU | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,21 +11,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5734b9eb1b4307f7c32dcb8a170f7c6c571f46ca
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62969563"
 ---
 # <a name="gpu-activity-graph"></a>Graf aktivity GPU
-Graf aktivity GPU v vizualizéru souběžnosti zobrazuje úroveň aktivity DirectX v systému měřenou počtem motorů DirectX, které se v průběhu času používají.  Graf neukazuje, které konkrétní motory byly použity.  Motor se považuje za používán, pokud zpracovává jakékoli gpu práce.
+Graf aktivity GPU v Vizualizér souběžnosti zobrazuje úroveň aktivity rozhraní DirectX v systému podle počtu používaných modulů rozhraní DirectX v čase.  Graf nezobrazuje, které konkrétní stroje byly použity.  Modul se považuje za používaný, pokud zpracovává veškerou práci GPU.
 
 ## <a name="gpu-activity-graph-colors"></a>Barvy grafu aktivity GPU
- Zelená barva označuje spotřebu motorů DirectX aktuálním procesem.
+ Zelená označuje, že se v rámci aktuálního procesu spotřebují moduly DirectX.
 
- Světle šedá označuje spotřebu modulů DirectX u jiných procesů v systému. Chcete-li snížit spotřebu motorů DirectX jinými procesy, snižte počet dalších procesů spuštěných v systému.
+ Světlá šedá znamená, že se v systému využije modul DirectX pro jiné procesy. Chcete-li snížit spotřebu rozhraní DirectX pomocí jiných procesů, snižte počet dalších procesů spuštěných v systému.
 
- Bílá označuje dostupnost nepoužívaných motorů DirectX v systému. Tyto motory jsou k dispozici pro váš proces, pokud můžete najít více příležitostí k jejich využití. Některé motory lze použít pouze pro určité druhy úkolů.
+ Bílá označuje dostupnost nepoužívaných modulů DirectX v systému. Tyto moduly jsou k dispozici pro váš proces, pokud můžete najít více příležitostí k jejich zneužití. Některé moduly lze použít pouze pro konkrétní druhy úkolů.
 
 ## <a name="see-also"></a>Viz také
 - [Zobrazení využití](../profiling/utilization-view.md)

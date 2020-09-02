@@ -1,5 +1,5 @@
 ---
-title: Když – Element (MSBuild) | Dokumentace Microsoftu
+title: When – element (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,27 +20,27 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e23b89ab9aa48a87505eb9b53a8646da06df4931
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162309"
 ---
 # <a name="when-element-msbuild"></a>When – prvek (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje možné blok kódu `Choose` vybrat element.  
+Určuje možný blok kódu pro `Choose` prvek, který chcete vybrat.  
   
  \<Project>  
- \<Zvolte >  
- \<Když >  
- \<Zvolte >  
+ \<Choose>  
+ \<When>  
+ \<Choose>  
  ...  
- \<V opačném případě >  
- \<Zvolte >  
+ \<Otherwise>  
+ \<Choose>  
  ...  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <When Condition="'StringA'=='StringB'">  
@@ -57,29 +57,29 @@ Určuje možné blok kódu `Choose` vybrat element.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Požadovaný atribut.<br /><br /> Podmínky pro hodnocení. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
+|Stav|Požadovaný atribut.<br /><br /> Podmínka, která se má vyhodnotit Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Zvolte](../msbuild/choose-element-msbuild.md)|Volitelný element.<br /><br /> Vyhodnotí jako podřízené prvky a vyberte jednu část kódu ke spuštění. Může být nula nebo více `Choose` prvky `When` elementu.|  
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Volitelný element.<br /><br /> Obsahuje sadu uživatelem definované [položky](../msbuild/item-element-msbuild.md) elementy. Může být nula nebo více `ItemGroup` prvky `When` elementu.|  
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Volitelný element.<br /><br /> Obsahuje sadu uživatelem definované [vlastnost](../msbuild/property-element-msbuild.md) elementy. Může být nula nebo více `PropertyGroup` prvky `When` elementu.|  
+|[Pomocí volby](../msbuild/choose-element-msbuild.md)|Volitelný element.<br /><br /> Vyhodnotí podřízené prvky a vybere jeden oddíl kódu, který se má provést. Element může obsahovat nula nebo více `Choose` prvků `When` .|  
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Volitelný element.<br /><br /> Obsahuje sadu uživatelsky definovaných prvků [položky](../msbuild/item-element-msbuild.md) . Element může obsahovat nula nebo více `ItemGroup` prvků `When` .|  
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Volitelný element.<br /><br /> Obsahuje sadu uživatelsky definovaných prvků [vlastností](../msbuild/property-element-msbuild.md) . Element může obsahovat nula nebo více `PropertyGroup` prvků `When` .|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)|Vyhodnotí jako podřízené prvky a vyberte jednu část kódu ke spuštění.|  
+|[Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)|Vyhodnotí podřízené prvky a vybere jeden oddíl kódu, který se má provést.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `Condition` atributů vyhodnotí jako true, podřízené `ItemGroup` a `PropertyGroup` prvky `When` element jsou spuštěné a všechny následné `When` prvky se přeskočí.  
+ Pokud je `Condition` atribut vyhodnocen jako true, jsou podřízené `ItemGroup` `PropertyGroup` prvky a prvky `When` elementu provedeny a všechny následné `When` prvky jsou vynechány.  
   
- `Choose`, `When`, A `Otherwise` elementy se používají společně poskytují způsob, jak vybrat jednu část kódu k provedení počet možných alternativy. Další informace najdete v tématu [podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md).  
+ `Choose`Prvky, `When` a `Otherwise` jsou společně k dispozici k tomu, aby bylo možné vybrat jeden oddíl kódu, který se má vykonat z několika možných alternativ. Další informace naleznete v tématu [podmíněné konstrukce](../msbuild/msbuild-conditional-constructs.md).  
   
 ## <a name="example"></a>Příklad  
- Následující projekt používá `Choose` které sadu hodnot vlastností v vybrat element `When` prvky pro nastavení. Pokud `Condition` atributy obou `When` prvky vyhodnotit `false`, vlastnost hodnoty v `Otherwise` element jsou nastavené.  
+ Následující projekt používá `Choose` prvek k výběru sady hodnot vlastností v prvcích, které `When` mají být nastaveny. Pokud `Condition` jsou atributy obou `When` prvků vyhodnocovány na `false` , jsou nastaveny hodnoty vlastností v `Otherwise` prvku.  
   
 ```  
 <Project  

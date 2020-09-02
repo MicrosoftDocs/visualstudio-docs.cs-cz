@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::CanPassToDebuggee | Dokumentace Microsoftu
+title: 'IDebugExceptionEvent2:: CanPassToDebuggee | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 383287a027a75adfb4c58020675e08a46198eacf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163808"
 ---
 # <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, zda ladicí stroj (DE) podporuje možnost k laděnému při provádění pokračuje programu předat tuto výjimku.  
+Určuje, zda ladicí stroj (DE) podporuje možnost předávání této výjimky do programu laděného v okamžiku, kdy provádění pokračuje.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CanPassToDebuggee(  
@@ -37,11 +37,11 @@ int CanPassToDebuggee();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí buď `S_OK` (výjimky může být předán program) nebo `S_FALSE` (výjimky nelze předat).  
+ Vrátí buď `S_OK` (výjimku lze předat programu) nebo `S_FALSE` (výjimku nelze předat).  
   
 ## <a name="remarks"></a>Poznámky  
- DE musí mít výchozí akci k předání do laděného procesu. Rozhraní IDE se může zobrazit [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) událostí a volání [pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md) metody bez volání `CanPassToDebuggee` metody. Proto je DE by měl mít výchozí případ pro předávání výjimku, nebo ne.  
+ DE musí mít výchozí akci pro předání do laděného procesu. Rozhraní IDE může přijmout událost [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) a volat metodu [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) bez volání `CanPassToDebuggee` metody. Proto by měl mít příkaz DE výchozí případ pro předání výjimky.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+ [Pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)

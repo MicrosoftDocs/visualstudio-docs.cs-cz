@@ -31,10 +31,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f76a2e74315980764a2cdffe67af4403552de7fe
-ms.sourcegitcommit: d293c0e3e9cc71bd4117b6dfd22990d52964addc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88041048"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Globální přístup k objektům v projektech pro systém Office
@@ -43,7 +43,7 @@ ms.locfileid: "88041048"
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
 ## <a name="how-to-use-the-globals-class"></a>Jak použít třídu Globals
- `Globals`je statická třída, která udržuje odkazy na určité položky v projektu. Pomocí `Globals` třídy můžete získat přístup k následujícím položkám z libovolného kódu v projektu v době běhu:
+ `Globals` je statická třída, která udržuje odkazy na určité položky v projektu. Pomocí `Globals` třídy můžete získat přístup k následujícím položkám z libovolného kódu v projektu v době běhu:
 
 - `ThisWorkbook`Třídy a `Sheet` *n* v excelovém sešitu nebo šabloně projektu. K těmto objektům můžete přistupovat pomocí `Globals.ThisWorkbook` vlastností a `Sheet` *n* .
 
@@ -75,7 +75,7 @@ ms.locfileid: "88041048"
 > [!NOTE]
 > `Globals`Třída není nikdy inicializována v době návrhu, ale instance ovládacích prvků jsou vytvořeny návrhářem. To znamená, že pokud vytvoříte uživatelský ovládací prvek, který používá vlastnost `Globals` třídy v rámci třídy uživatelského ovládacího prvku, je nutné před pokusem o použití vráceného objektu ověřit, zda vlastnost vrací **hodnotu null** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)

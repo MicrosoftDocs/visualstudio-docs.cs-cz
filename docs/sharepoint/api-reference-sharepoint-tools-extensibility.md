@@ -1,5 +1,5 @@
 ---
-title: Reference k rozhraní API (rozšíření nástrojů SharePoint) | Dokumentace Microsoftu
+title: Reference k rozhraní API (rozšíření nástrojů SharePoint) | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,35 +13,35 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 37639068b74b5d99864871355a8b9ef36906f6cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62987988"
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a>Reference k rozhraní API (rozšíření nástrojů služby SharePoint)
   Tato část obsahuje referenční dokumentaci rozhraní API pro rozšíření nástrojů SharePoint v sadě Visual Studio.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  <xref:Microsoft.VisualStudio.SharePoint>
 
- Obsahuje typy, které umožňují rozšířit systém projektu služby SharePoint. Například můžete rozšířit vestavěné projekty SharePoint a položky projektu, nebo můžete vytvořit vlastní položky projektu.
+ Obsahuje typy, které slouží k rozšiřování systému projektu služby SharePoint. Můžete například zvětšit předdefinované projekty služby SharePoint a položky projektu, nebo můžete vytvořit vlastní položky projektu.
 
  <xref:Microsoft.VisualStudio.SharePoint.Commands>
 
- Obsahuje typy, které můžete použít k vytvoření vlastních *příkazů služby SharePoint*. Příkaz serveru SharePoint je metoda, která volá do objektového modelu serveru SharePoint z rozšíření nástrojů služby SharePoint.
+ Obsahuje typy, které lze použít k vytvoření vlastních *příkazů služby SharePoint*. Příkaz služby SharePoint je metoda, která volá do objektového modelu serveru SharePoint z rozšíření nástrojů služby SharePoint.
 
  <xref:Microsoft.VisualStudio.SharePoint.Deployment>
 
- Obsahuje typy, které můžete použít k rozšíření procesu nasazení pro projekty služby SharePoint.
+ Obsahuje typy, které slouží k rozšiřování procesu nasazení pro projekty služby SharePoint.
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer>
 
- Obsahuje typy, které používáte pro rozšíření uzlů SharePoint v **Průzkumníka serveru** nebo k definování vlastních typů uzlů.
+ Obsahuje typy, které slouží k rozšiřování uzlů služby SharePoint v **Průzkumník serveru** nebo k definování vlastních typů uzlů.
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>
 
- Obsahuje typy, které vám umožní získat informace o předdefinovaných **Průzkumníka serveru** uzly, které představují jednotlivé součásti na Sharepointovém webu, jako je například uzel, který představuje seznam, pole nebo typ obsahu.
+ Obsahuje typy, které můžete použít k získání informací o předdefinovaných **Průzkumník serveru** uzlech, které představují jednotlivé komponenty na webu služby SharePoint, jako je například uzel, který představuje seznam, pole nebo typ obsahu.
 
  <xref:Microsoft.VisualStudio.SharePoint.Features>
 
@@ -53,24 +53,24 @@ ms.locfileid: "62987988"
 
  <xref:Microsoft.VisualStudio.SharePoint.Remote.Authentication>
 
- Obsahuje typy, které použijete k ověření a komunikaci s aplikací pro službu SharePoint, které jsou nasazeny na vzdálené weby služby SharePoint.
+ Obsahuje typy, které slouží k ověřování a komunikaci s aplikacemi pro službu SharePoint, které jsou nasazeny na vzdálené weby služby SharePoint.
 
  <xref:Microsoft.VisualStudio.SharePoint.Remote.Commands>
 
- Obsahuje typy, které použijete k vytvoření vzdálených příkazů služby SharePoint, které se používají s aplikacemi pro SharePoint nasazenými na vzdálené weby služby SharePoint.
+ Obsahuje typy, které slouží k vytváření vzdálených příkazů služby SharePoint, které jsou používány s aplikacemi pro službu SharePoint nasazenými na vzdálené weby služby SharePoint.
 
  <xref:Microsoft.VisualStudio.SharePoint.Tasks>
 
- Obsahuje typy, které sada Visual Studio používá jako úlohy sestavení pro balení a ladění projektů SharePoint, aplikace pro Office a aplikace pro SharePoint. Toto rozhraní API podporuje infrastrukturu sady Office a SharePoint a není určena pro použití přímo v kódu.
+ Obsahuje typy, které sada Visual Studio používá jako úlohy sestavení pro balení a ladění projektů služby SharePoint, aplikací pro Office a aplikací pro službu SharePoint. Toto rozhraní API podporuje infrastrukturu Office a SharePoint a není určené pro použití přímo v kódu.
 
  <xref:Microsoft.VisualStudio.SharePoint.Validation>
 
- Obsahuje typy, které můžete použít k přizpůsobení funkce a chování ověřování balíčku projektu služby SharePoint.
+ Obsahuje typy, které slouží k přizpůsobení funkce a chování ověření balíčku pro projekt služby SharePoint.
 
-## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace &#40;rozšíření nástrojů SharePoint&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
-- [Přehled programovacího modelu SharePoint rozšíření nástrojů](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
-- [Rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Rozšíření balení a nasazení SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+## <a name="see-also"></a>Viz také
+- [Referenční informace &#40;rozšíření nástrojů služby SharePoint&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
+- [Přehled programovacího modelu rozšíření nástrojů služby SharePoint](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
+- [Rozšíří systém projektu služby SharePoint.](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Rozšíří uzel připojení služby SharePoint v Průzkumník serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Rozšiřování balení a nasazení služby SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)

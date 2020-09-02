@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ffc1c620136c55c42f3468129ed164075d762bff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670498"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Postupy: Zobrazování, ukládání a konfigurace souborů protokolu sestavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Po sestavení projektu v integrovaném vývojovém prostředí sady Visual Studio můžete zobrazit informace o tomto sestavení v okně **výstup** . Pomocí těchto informací můžete například řešit potíže při selhání sestavení. Pro C++ projekty lze také zobrazit stejné informace v souboru. txt, který je vytvořen a uložen automaticky. Pro projekty spravovaného kódu můžete zkopírovat a vložit informace z okna **výstup** do souboru. txt a uložit je sami. Rozhraní IDE lze také použít k určení, jaké druhy informací chcete zobrazit o jednotlivých sestaveních.
+Po sestavení projektu v integrovaném vývojovém prostředí sady Visual Studio můžete zobrazit informace o tomto sestavení v okně **výstup** . Pomocí těchto informací můžete například řešit potíže při selhání sestavení. V případě projektů v jazyce C++ lze také zobrazit stejné informace v souboru. txt, který je vytvořen a uložen automaticky. Pro projekty spravovaného kódu můžete zkopírovat a vložit informace z okna **výstup** do souboru. txt a uložit je sami. Rozhraní IDE lze také použít k určení, jaké druhy informací chcete zobrazit o jednotlivých sestaveních.
 
  Pokud sestavíte jakýkoli typ projektu pomocí nástroje MSBuild, můžete vytvořit soubor. txt k uložení informací o sestavení. Další informace najdete v tématu [získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-### <a name="to-view-the-build-log-file-for-a-c-project"></a>Zobrazení souboru protokolu sestavení pro C++ projekt
+### <a name="to-view-the-build-log-file-for-a-c-project"></a>Zobrazení souboru protokolu sestavení pro projekt C++
 
-1. V **Průzkumníku Windows** nebo **Průzkumníkovi souborů**otevřete následující soubor: \\. ..\Visual Studio *verze*\Projects \\*ProjectName* \\*ProjectName*\debug. \\*ProjectName*. txt.
+1. V **Průzkumníku Windows** nebo **Průzkumníkovi souborů**otevřete následující soubor: \\ . ..\Visual Studio *verze*\Projects \\ *ProjectName* \\ *ProjectName*\debug. \\ *ProjectName*. txt
 
 ### <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Vytvoření souboru protokolu sestavení pro projekt spravovaného kódu
 
@@ -46,15 +46,15 @@ Po sestavení projektu v integrovaném vývojovém prostředí sady Visual Studi
     |Úroveň podrobností|Popis|
     |---------------------|-----------------|
     |Quiet|Zobrazí souhrn pouze pro sestavení.|
-    |Poskytuje|Zobrazí souhrn sestavení a chyb, upozornění a zpráv, které jsou zařazeny do kategorie s vysokou důležitostí.|
-    |Běžnou|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; a hlavní kroky sestavení. Tuto úroveň podrobností budete používat častěji.|
-    |Podrobnosti|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; všechny kroky sestavení; zprávy, které jsou zařazeny do kategorií normálním významem.|
-    |Diagnostický|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k usnadnění ladění problémů s vlastními skripty sestavení a dalšími problémy s sestavením.|
+    |Minimální|Zobrazí souhrn sestavení a chyb, upozornění a zpráv, které jsou zařazeny do kategorie s vysokou důležitostí.|
+    |Normální|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; a hlavní kroky sestavení. Tuto úroveň podrobností budete používat častěji.|
+    |Detailed|Zobrazí souhrn sestavení; chyby, varování a zprávy, které jsou zařazeny do kategorie jako vysoce důležité; všechny kroky sestavení; zprávy, které jsou zařazeny do kategorií normálním významem.|
+    |diagnostika|Zobrazí všechna data, která jsou k dispozici pro sestavení. Tuto úroveň podrobností můžete použít k usnadnění ladění problémů s vlastními skripty sestavení a dalšími problémy s sestavením.|
 
-     Další informace najdete v [dialogovém okně Možnosti, projekty a řešení, sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity>.
+     Další informace najdete v [dialogovém okně Možnosti, projekty a řešení, sestavení a spuštění](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) a <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Je nutné znovu sestavit projekt, aby se změny projevily v okně **výstup** (všechny projekty) a souboru *ProjectName*. txt (C++ pouze projekty).
+    > Je nutné znovu sestavit projekt, aby se změny projevily v okně **výstup** (všechny projekty) a souboru *ProjectName*. txt (pouze projekty C++).
 
 ## <a name="see-also"></a>Viz také
  [Získání protokolů sestavení](../msbuild/obtaining-build-logs-with-msbuild.md) [vytváření a čištění projektů a řešení v prostředí Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) [kompilace a sestavování](../ide/compiling-and-building-in-visual-studio.md)

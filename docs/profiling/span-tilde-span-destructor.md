@@ -1,5 +1,5 @@
 ---
-title: rozpětí::~span destructor | Dokumenty společnosti Microsoft
+title: 'span:: ~ span – destruktor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9b7174418267a77cc668ab0a79092fc7daefbf58
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62979663"
 ---
-# <a name="spanspan-destructor"></a>rozsah::~destruktor span
+# <a name="spanspan-destructor"></a>span:: ~ span – destruktor
 
-Zničí `span` objekt a uvolní jeho prostředky.
+Odstraní `span` objekt a uvolní jeho prostředky.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 ~span();
@@ -31,10 +31,10 @@ Zničí `span` objekt a uvolní jeho prostředky.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** *cvmarkersobj.h*
+**Záhlaví:** *cvmarkersobj. h*
 
-**Obor názvů:** Souběžnost::diagnostik
+**Obor názvů:** Concurrency::d odeslání diagnostických
 
 ## <a name="see-also"></a>Viz také
 
-- [třída rozpětí](../profiling/span-class.md)
+- [span – třída](../profiling/span-class.md)

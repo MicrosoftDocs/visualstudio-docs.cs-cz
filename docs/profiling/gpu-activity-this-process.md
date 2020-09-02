@@ -1,5 +1,5 @@
 ---
-title: Aktivita GPU (tento proces) | Dokumenty společnosti Microsoft
+title: Aktivita GPU (Tento proces) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +12,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 68e85fc44977a3d9756965de12e25d13d62dbb89
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62969535"
 ---
 # <a name="gpu-activity-this-process"></a>Aktivita GPU (tento proces)
-Segmenty **aktivity GPU (Tento proces)** v zobrazení vláken v vizualizéru souběžnosti představují časy, kdy GPU zpracovával požadavky jménem aktuálního procesu. Tyto požadavky jsou odesílány do GPU jako pakety přímého přístupu do paměti (DMA). Délka segmentu představuje čas, kdy GPU zpracovával paket DMA jménem aktuálního procesu.
+Segmenty **aktivity GPU (Tento proces)** v zobrazení vlákna ve Vizualizér souběžnosti reprezentují čas, kdy procesor zpracovával požadavky jménem aktuálního procesu. Tyto požadavky jsou odesílány do GPU jako paketů přímého přístupu do paměti (DMA). Délka segmentu představuje čas, po který procesor GPU zpracovává paket DMA jménem aktuálního procesu.
 
- Když vyberete segment aktivity GPU, sestava na kartě **Aktuální** zobrazí informace o zpracovávaném paketu DMA. Tyto informace zahrnují dobu, po kterou paket čekal ve frontě hardwaru, která je přidružena k modulu DirectX, proces, který paket odeslal, a čas potřebný ke zpracování paketu. Jiný proces než aktuální proces mohl fyzicky odeslat paket DMA do grafického procesoru. Vizualizér souběžnosti můžete zjistit, kdy jiný proces odeslané práce gpu jménem aktuálního procesu.
+ Když vyberete segment aktivity GPU, sestava na **aktuální** kartě zobrazuje informace o zpracovávaném paketu DMA. Tyto informace zahrnují dobu, po kterou paket čekal ve frontě hardwaru přidružené k modulu DirectX, procesu, který paket odeslal, a čas potřebný ke zpracování paketu. Jiný proces než aktuální proces mohl fyzicky odeslat paket DMA do GPU. Vizualizátor souběžnosti může zjistit, kdy jiný proces odeslal svou práci na GPU jménem aktuálního procesu.

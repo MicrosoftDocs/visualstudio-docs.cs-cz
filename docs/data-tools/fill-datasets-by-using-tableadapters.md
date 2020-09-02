@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 888e2ac47348d7e61d115f51e3ea52d15ea9f447
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282433"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Vyplnění datových sad pomocí objektů TableAdapter
@@ -52,7 +52,7 @@ Objekty TableAdapter jsou komponenty generované návrhářem, které se připoj
 
 ![Tok dat v klientské aplikaci](../data-tools/media/clientdatadiagram.gif)
 
-I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad**, třídy TableAdapter nejsou generovány jako vnořené třídy <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
+I když jsou objekty TableAdapter navrhovány pomocí **Návrhář datových sad**, třídy TableAdapter nejsou generovány jako vnořené třídy  <xref:System.Data.DataSet> . Jsou umístěny v samostatných oborech názvů, které jsou specifické pro každou datovou sadu. Například pokud máte datovou sadu s názvem `NorthwindDataSet` , objekty TableAdapter, která jsou asociována s  <xref:System.Data.DataTable> s s, `NorthwindDataSet` by měla být v `NorthwindDataSetTableAdapters` oboru názvů. Pro programový přístup k určitému typu TableAdapter musíte deklarovat novou instanci typu TableAdapter. Příklad:
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
@@ -129,9 +129,9 @@ Následující jsou často používané metody a vlastnosti `TableAdapterManager
 |Člen|Popis|
 |------------|-----------------|
 |Metoda `UpdateAll`|Uloží všechna data ze všech tabulek dat.|
-|`BackUpDataSetBeforeUpdate`majetek|Určuje, zda má být před provedením metody vytvořena záložní kopie datové sady `TableAdapterManager.UpdateAll` . Datového.|
+|`BackUpDataSetBeforeUpdate` majetek|Určuje, zda má být před provedením metody vytvořena záložní kopie datové sady `TableAdapterManager.UpdateAll` . Datového.|
 |*TableName* `TableAdapter` majetek|Představuje objekt TableAdapter. Vygenerovaná TableAdapterManager obsahuje vlastnost pro každou `TableAdapter` IT správu. Například datová sada s tabulkou Customers and Orders generuje TableAdapterManager, který obsahuje `CustomersTableAdapter` a `OrdersTableAdapter` Vlastnosti.|
-|`UpdateOrder`majetek|Určuje pořadí jednotlivých příkazů INSERT, Update a DELETE. Nastavte tuto hodnotu na jednu z hodnot ve `TableAdapterManager.UpdateOrderOption` výčtu.<br /><br /> Ve výchozím nastavení `UpdateOrder` je nastavená na **InsertUpdateDelete**. To znamená, že vložení, následné aktualizace a následné odstranění jsou prováděny pro všechny tabulky v datové sadě.|
+|`UpdateOrder` majetek|Určuje pořadí jednotlivých příkazů INSERT, Update a DELETE. Nastavte tuto hodnotu na jednu z hodnot ve `TableAdapterManager.UpdateOrderOption` výčtu.<br /><br /> Ve výchozím nastavení `UpdateOrder` je nastavená na **InsertUpdateDelete**. To znamená, že vložení, následné aktualizace a následné odstranění jsou prováděny pro všechny tabulky v datové sadě.|
 
 ## <a name="security"></a>Zabezpečení
 

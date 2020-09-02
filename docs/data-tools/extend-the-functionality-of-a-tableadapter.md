@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 245ea6791fde96c1ff08d43d138c522f43749c6b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282420"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Rozšíření funkcí objektů TableAdapter
@@ -42,7 +42,7 @@ Následující příklad předpokládá, že TableAdapter s názvem `CustomersTa
 
 2. Pojmenujte třídu `CustomersTableAdapterExtended` .
 
-3. Vyberte možnost **Přidat**.
+3. Vyberte **Add** (Přidat).
 
 4. Nahraďte kód správným oborem názvů a názvem částečné třídy pro váš projekt následujícím způsobem:
 

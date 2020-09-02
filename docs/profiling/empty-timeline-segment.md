@@ -1,5 +1,5 @@
 ---
-title: Prázdný segment časové osy | Dokumenty společnosti Microsoft
+title: Prázdný segment časové osy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a96cdc7ae4edc7ea7193d5b95dfc73fa1747c1fb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62970106"
 ---
 # <a name="empty-timeline-segment"></a>Prázdný segment časové osy
-Ve vizualizéru souběžnosti důvod, proč část časové osy je prázdný (má bílé pozadí) závisí na druhu kanálu.
+V Vizualizátor souběžnosti je důvodem, že část časové osy je prázdná (má bílé pozadí), závisí na typu kanálu.
 
-- Pro kanál vlákna procesoru to znamená, že vlákno během této části časové osy neexistovalo. Pokud máte zájem o vlákno, můžete najít jeho prováděcí oddíl pomocí ovládacího prvku lupy nebo posouváním vodorovně.
+- V případě kanálu vlákna procesoru to znamená, že vlákno v této části časové osy neexistovalo. Pokud vás zajímá vlákno, můžete najít jeho vykonáváný oddíl pomocí ovládacího prvku zvětšení nebo posouvání vodorovně.
 
-- Pro vstupně-v., znamená to, že žádný přístup k disku došlo jménem cílového procesu v tomto okamžiku.
+- U vstupně-výstupních kanálů to znamená, že v daném časovém okamžiku nedošlo k žádnému přístupu k disku jménem cílového procesu.
 
-- Pro kanál DirectX to znamená, že během této části časové osy nebyla provedena žádná práce gpu jménem cílového procesu.
+- Pro kanál DirectX to znamená, že v rámci této části časové osy nebyla žádná práce GPU provedena jménem cílového procesu.
 
-- Pro kanál značky to znamená, že nebyly generovány žádné značky.
+- U kanálu značek to znamená, že nebyly vygenerovány žádné značky.
 
 ## <a name="see-also"></a>Viz také
 - [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)
-- [Ovládání lupy (zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+- [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)

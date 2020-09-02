@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Jednoduché datové vazby v projektech na úrovni dokumentu'
+title: 'Návod: jednoduché datové vazby v projektech na úrovni dokumentu'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,181 +17,181 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f3b573842aee5f00f161213cf3e01dfcc4c8ba93
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62981059"
 ---
-# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Návod: Jednoduché datové vazby v projektech na úrovni dokumentu
-  Tento návod ukazuje základní informace o datové vazby v projektech úrovni dokumentu. Jedno datové pole v databázi serveru SQL Server je vázán na pojmenované oblasti v aplikaci Microsoft Office Excel. Návod také ukazuje, jak přidat ovládací prvky, které vám umožní procházet všechny záznamy v tabulce.
+# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Návod: jednoduché datové vazby v projektech na úrovni dokumentu
+  Tento návod ukazuje základy datové vazby v projektu na úrovni dokumentu. Jedno datové pole v databázi SQL Server je svázáno s pojmenovaným rozsahem v systém Microsoft Office Excel. Návod také ukazuje, jak přidat ovládací prvky, které umožňují procházet všechny záznamy v tabulce.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Tento návod znázorňuje následující úlohy:
 
-- Vytváření zdroje dat pro projektu aplikace Excel.
+- Vytvoření zdroje dat pro projekt aplikace Excel.
 
-- Přidání ovládacích prvků na list.
+- Přidávání ovládacích prvků do listu.
 
-- Posouvání záznamů databáze.
+- Procházení záznamů databáze.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
+- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]:
 
 - Přístup k serveru s ukázkovou databází Northwind SQL Server.
 
-- Oprávnění ke čtení a zápis do databáze serveru SQL Server.
+- Oprávnění ke čtení a zápisu do databáze SQL Server.
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
- V tomto kroku vytvoříte projektu sešitu aplikace Excel.
+ V tomto kroku vytvoříte projekt sešitu aplikace Excel.
 
-### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt
+### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje jednoduché datové vazby**, buď ve Visual Basicu nebo C#. Ujistěte se, že **vytvoříte nový textový dokument** zaškrtnuto. Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte projekt sešitu aplikace Excel s názvem **moje jednoduchá datová vazba**, a to pomocí Visual Basic nebo C#. Ujistěte se, že je vybraná možnost **vytvořit nový dokument** . Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-   Visual Studio otevře nový sešit aplikace Excel v návrháři a přidá **Moje jednoduché datové vazby** projektu **Průzkumníka řešení**.
+   Visual Studio otevře nový excelový sešit v návrháři a přidá projekt **Moje jednoduché datové vazby** do **Průzkumník řešení**.
 
 ## <a name="create-the-data-source"></a>Vytvoření zdroje dat
- Použití **zdroje dat** okno pro přidání typové datové sady do projektu.
+ Pomocí okna **zdroje dat** přidejte do projektu typovou datovou sadu.
 
 ### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
 
-1. Pokud **zdroje dat** okno se nezobrazuje, zobrazit ho tím, na panelu nabídek, výběrem **zobrazení** > **ostatní Windows**  >   **Zdroje dat**.
+1. Pokud není okno **zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit**  >  **ostatní**  >  **zdroje dat**Windows.
 
-2. Zvolte **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Vyberte **databáze** a potom klikněte na tlačítko **Další**.
+3. Vyberte **databáze** a pak klikněte na **Další**.
 
-4. Vyberte datové připojení k ukázkové databázi Northwind systému SQL Server, nebo přidejte nové připojení pomocí **nové připojení** tlačítko.
+4. Vyberte datové připojení k ukázce databáze Northwind SQL Server databázi nebo přidejte nové připojení pomocí tlačítka **nové připojení** .
 
-5. Po připojení se vyberete nebo vytvoříte, klikněte na tlačítko **Další**.
+5. Po vybrání nebo vytvoření připojení klikněte na **Další**.
 
-6. Uložit připojení, pokud je zaškrtnuto a pak klikněte na tlačítko Vymazat **Další**.
+6. Zrušte zaškrtnutí políčka Uložit připojení, pokud je vybráno, a poté klikněte na tlačítko **Další**.
 
-7. Rozbalte **tabulky** uzlu **databázové objekty** okna.
+7. Rozbalte uzel **tabulky** v okně **objekty databáze** .
 
-8. Zaškrtněte políčko vedle položky **zákazníkům** tabulky.
+8. Zaškrtněte políčko vedle tabulky **Customers (zákazníci** ).
 
-9. Klikněte na tlačítko **Dokončit**.
+9. Klikněte na **Finish** (Dokončit).
 
-   Průvodce přidá **zákazníkům** tabulky **zdroje dat** okna. Také přidá typové datové sady do projektu, který se zobrazuje **Průzkumníka řešení**.
+   Průvodce přidá tabulku **Customers** do okna **zdroje dat** . Také přidá do projektu typovou datovou sadu, která je viditelná v **Průzkumník řešení**.
 
-## <a name="add-controls-to-the-worksheet"></a>Přidání ovládacích prvků na list
- V tomto návodu budete potřebovat dva pojmenované oblasti a čtyři tlačítka na první sešit. Nejprve přidejte dva pojmenované oblasti od **zdroje dat** okna tak, aby se automaticky vázán na zdroj dat. V dalším kroku přidejte tlačítka z **nástrojů**.
+## <a name="add-controls-to-the-worksheet"></a>Přidat ovládací prvky do listu
+ V tomto návodu budete potřebovat dva pojmenované rozsahy a čtyři tlačítka na prvním listu. Nejprve přidejte tyto dva pojmenované rozsahy z okna **zdroje dat** tak, aby byly automaticky svázány se zdrojem dat. Dále přidejte tlačítka ze **sady nástrojů**.
 
-### <a name="to-add-two-named-ranges"></a>Chcete-li přidat dva pojmenované oblasti
+### <a name="to-add-two-named-ranges"></a>Přidání dvou pojmenovaných rozsahů
 
-1. Ověřte, že *Moje jednoduché Binding.xlsx Data* sešitu je otevřen v návrháři aplikace Visual Studio s **List1** zobrazí.
+1. Ověřte, že je v návrháři sady Visual Studio otevřený sešit *moje jednoduchá Data Binding.xlsx* , a zobrazí se **List1** .
 
-2. Otevřít **zdroje dat** okno a rozbalte **zákazníkům** uzlu.
+2. Otevřete okno **zdroje dat** a rozbalte uzel **Customers (zákazníci** ).
 
-3. Vyberte **CompanyName** sloupce a potom klikněte na šipku rozevíracího seznamu, který se zobrazí.
+3. Vyberte sloupec **CompanyName** a potom klikněte na šipku rozevíracího seznamu, která se zobrazí.
 
-4. Vyberte **NamedRange** v rozevíracím seznamu a pak přetáhněte **CompanyName** sloupce do buňky **A1**.
+4. V rozevíracím seznamu vyberte **NamedRange** a potom přetáhněte sloupec **CompanyName** do buňky **a1**.
 
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `companyNameNamedRange` se vytvoří v buňce **A1**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `customersBindingSource`, tabulka adaptéru a <xref:System.Data.DataSet> instance jsou přidány do projektu. Ovládací prvek vázaný <xref:System.Windows.Forms.BindingSource>, která je dále vázán na <xref:System.Data.DataSet> instance.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange>Ovládací prvek s názvem `companyNameNamedRange` je vytvořen v buňce **a1**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> `customersBindingSource` <xref:System.Data.DataSet> se do projektu přidají pouze pojmenované, adaptér s tabulkou a instance. Ovládací prvek je vázán na <xref:System.Windows.Forms.BindingSource> , který je zase svázán s <xref:System.Data.DataSet> instancí.
 
-5. Vyberte **CustomerID** sloupec **zdroje dat** okna a potom klikněte na šipku rozevíracího seznamu, který se zobrazí.
+5. V okně **zdroje dat** vyberte sloupec **CustomerID** a potom klikněte na šipku rozevíracího seznamu, která se zobrazí.
 
-6. Klikněte na tlačítko **NamedRange** v rozevíracím seznamu a pak přetáhněte **CustomerID** sloupce do buňky **B1**.
+6. V rozevíracím seznamu klikněte na **NamedRange** a potom přetáhněte sloupec **KódZákazníka** na buňku **B1**.
 
-7. Jiné <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `customerIDNamedRange` se vytvoří v buňce **B1**a vázaný k <xref:System.Windows.Forms.BindingSource>.
+7. <xref:Microsoft.Office.Tools.Excel.NamedRange> `customerIDNamedRange` V buňce **B1**je vytvořen jiný ovládací prvek s názvem a svázán s <xref:System.Windows.Forms.BindingSource> .
 
-### <a name="to-add-four-buttons"></a>Chcete-li přidat čtyři tlačítka
+### <a name="to-add-four-buttons"></a>Přidání čtyř tlačítek
 
-1. Z **běžné ovládací prvky** karty **nástrojů**, přidat <xref:System.Windows.Forms.Button> ovládacího prvku do buňky **A3** listu.
+1. Na kartě **běžné ovládací prvky** **panelu nástrojů**přidejte <xref:System.Windows.Forms.Button> ovládací prvek do buňky **a3** listu.
 
-    Toto tlačítko nazývalo `Button1`.
+    Toto tlačítko má název `Button1` .
 
-2. Tak, aby byly názvy, jak je znázorněno, přidejte další tři tlačítka na následující buňky v tomto pořadí:
+2. Přidejte tři další tlačítka do následujících buněk v tomto pořadí, aby se názvy zobrazovaly takto:
 
-   |Buňky|(Název)|
+   |Mobilní telefon|(Název)|
    |----------|--------------|
-   |B3|BUTTON2|
+   |B3|Button2|
    |C3|Button3|
    |D3|Button4|
 
-   Dalším krokem je přidání textu, tlačítek a v C# přidat obslužné rutiny událostí.
+   Dalším krokem je přidání textu do tlačítek a v jazyce C# přidat obslužné rutiny událostí.
 
 ## <a name="initialize-the-controls"></a>Inicializovat ovládací prvky
- Nastavení textu tlačítka a přidejte obslužné rutiny událostí během <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> událostí.
+ Nastavte text tlačítka a přidejte obslužné rutiny události během <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> události.
 
-### <a name="to-initialize-the-controls"></a>Inicializovat ovládací prvky
+### <a name="to-initialize-the-controls"></a>Inicializace ovládacích prvků
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **Sheet1.vb** nebo **Sheet1.cs**a potom klikněte na tlačítko **zobrazit kód** v místní nabídce.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na **List1. vb** nebo **Sheet1.cs**a pak klikněte na **Zobrazit kód** v místní nabídce.
 
-2. Přidejte následující kód, který `Sheet1_Startup` metody nastavte text pro každé tlačítko.
+2. Přidejte následující kód do `Sheet1_Startup` metody pro nastavení textu pro každé tlačítko.
 
     [!code-csharp[Trin_VstcoreDataExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#2)]
     [!code-vb[Trin_VstcoreDataExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#2)]
 
-3. Jenom v C#, přidejte obslužné rutiny události pro tlačítko klikněte na události `Sheet1_Startup` metody.
+3. Pouze pro C# přidejte obslužné rutiny události pro události kliknutí na tlačítko do `Sheet1_Startup` metody.
 
     [!code-csharp[Trin_VstcoreDataExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#3)]
 
-   Teď přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> události tlačítka tak, aby uživatel může procházet záznamy.
+   Nyní přidejte kód pro zpracování <xref:System.Windows.Forms.Control.Click> událostí tlačítek, aby uživatel mohl procházet záznamy.
 
-## <a name="add-code-to-enable-scrolling-through-the-records"></a>Přidejte kód umožňující posouvání záznamů
- Přidejte kód, který <xref:System.Windows.Forms.Control.Click> obslužná rutina události z každé tlačítko pro procházení záznamů.
+## <a name="add-code-to-enable-scrolling-through-the-records"></a>Přidejte kód, který umožní procházení záznamů.
+ Přidejte kód do <xref:System.Windows.Forms.Control.Click> obslužné rutiny události pro každé tlačítko pro přesun záznamů.
 
-### <a name="to-move-to-the-first-record"></a>Chcete-li přesunout na první záznam
+### <a name="to-move-to-the-first-record"></a>Přechod na první záznam
 
-1. Přidat obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button1` tlačítko a přidejte následující kód přesunout na první záznam:
+1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button1` tlačítka a přidejte následující kód, který se přesune k prvnímu záznamu:
 
      [!code-csharp[Trin_VstcoreDataExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#4)]
      [!code-vb[Trin_VstcoreDataExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#4)]
 
-### <a name="to-move-to-the-previous-record"></a>Chcete-li přesunout na předchozí záznam
+### <a name="to-move-to-the-previous-record"></a>Přechod na předchozí záznam
 
-1. Přidat obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button2` tlačítko a přidejte následující kód k přesunutí pozici zpět o jednu:
+1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button2` tlačítka a přidejte následující kód pro přesunutí pozice zpět o jednu:
 
      [!code-csharp[Trin_VstcoreDataExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#5)]
      [!code-vb[Trin_VstcoreDataExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#5)]
 
-### <a name="to-move-to-the-next-record"></a>Chcete-li přesunout na další záznam
+### <a name="to-move-to-the-next-record"></a>Přechod na další záznam
 
-1. Přidat obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button3` tlačítko a přidejte následující kód k přechodu na pozici jednou:
+1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button3` tlačítka a přidejte následující kód pro posunutí pozice o jednu:
 
      [!code-csharp[Trin_VstcoreDataExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#6)]
      [!code-vb[Trin_VstcoreDataExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#6)]
 
-### <a name="to-move-to-the-last-record"></a>Chcete-li přesunout na poslední záznam
+### <a name="to-move-to-the-last-record"></a>Přechod na poslední záznam
 
-1. Přidat obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button4` tlačítko a přidejte následující kód přesunout na poslední záznam:
+1. Přidejte obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost `Button4` tlačítka a přidejte následující kód, který bude přesunut na poslední záznam:
 
      [!code-csharp[Trin_VstcoreDataExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#7)]
      [!code-vb[Trin_VstcoreDataExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#7)]
 
 ## <a name="test-the-application"></a>Testování aplikace
- Nyní můžete otestovat sešitu, abyste měli jistotu, že při procházení záznamů v databázi.
+ Nyní můžete otestovat sešit, abyste se ujistili, že můžete procházet záznamy v databázi.
 
-### <a name="to-test-your-workbook"></a>K otestování vašeho sešitu
+### <a name="to-test-your-workbook"></a>Test sešitu
 
-1. Stisknutím klávesy **F5** ke spuštění projektu.
+1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. Potvrďte, že první záznam se zobrazí v buňkách **A1** a **B1**.
+2. Potvrďte, že se první záznam zobrazuje v buňkách **a1** a **B1**.
 
-3. Klikněte na tlačítko **>** (`Button3`) tlačítko a potvrďte, že další záznam se zobrazí v buňce **A1** a **B1**.
+3. Klikněte na **>** `Button3` tlačítko () a potvrďte, že se další záznam zobrazí v buňce **a1** a **B1**.
 
-4. Pomocí tlačítek jiné posuňte potvrďte, že záznam změní podle očekávání.
+4. Kliknutím na další tlačítka posunu potvrďte, že se záznam mění podle očekávání.
 
 ## <a name="next-steps"></a>Další kroky
- Tento návod ukazuje základní informace o vytvoření vazby pojmenované oblasti na pole v databázi. Tady jsou některé úlohy, které by mohl pocházet Další:
+ Tento názorný postup ukazuje základy vazby pojmenovaného rozsahu na pole v databázi. Tady jsou některé úkoly, které mohou být další:
 
-- Data do mezipaměti tak, aby ho můžete použít v režimu offline. Další informace najdete v tématu [jak: Mezipaměť dat pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
+- Ukládat data do mezipaměti, aby je bylo možné použít offline. Další informace najdete v tématu [Postupy: ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
 
-- Vytvoření vazby buňky do více sloupců v tabulce, místo na jedno pole. Další informace najdete v tématu [názorný postup: Rozšířené datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md).
+- Umožňuje navazovat buňky na více sloupců v tabulce místo do jednoho pole. Další informace najdete v tématu [Návod: složitá datová vazba v projektu na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md).
 
-- Použití <xref:System.Windows.Forms.BindingNavigator> ovládací prvek pro procházení záznamů. Další informace najdete v tématu [jak: Navigace daty pomocí ovládacího prvku Windows Forms BindingNavigator](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
+- Procházejte <xref:System.Windows.Forms.BindingNavigator> záznamy pomocí ovládacího prvku. Další informace najdete v tématu [Postup: navigace v datech pomocí ovládacího prvku BindingNavigator model Windows Forms](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
 
-## <a name="see-also"></a>Viz také:
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+## <a name="see-also"></a>Viz také
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Data v řešeních pro systém Office](../vsto/data-in-office-solutions.md)
-- [Návod: Rozšířené datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)
+- [Návod: komplexní datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)

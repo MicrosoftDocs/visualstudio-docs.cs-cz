@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.author: jomatthi
 author: jmatthiesen
 ms.openlocfilehash: acf34677e8d9b477512763be3c43bb9df0c53c46
-ms.sourcegitcommit: 935e1388281df0f04147802606b5cb7f513d45ed
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88200976"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Testovací nástroje v Visual Studio pro Mac

@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 05ffd1cf32f8c7ea93e63232f7026c6c926f9308
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382169"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Postupy: nastavení vlastního umístění souboru protokolu pro chyby nasazení ClickOnce
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]udržuje soubory protokolu aktivace pro všechna nasazení. Tyto protokoly dokumentují všechny chyby, které se týkají instalace a inicializace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří jeden soubor protokolu pro každou aktivaci nasazení. Tyto soubory protokolu se uloží do složky dočasných internetových souborů. Soubor protokolu pro nasazení se uživateli zobrazí, když dojde k selhání aktivace a uživatel klikne na **Podrobnosti** v dialogovém okně výsledné chyby.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] udržuje soubory protokolu aktivace pro všechna nasazení. Tyto protokoly dokumentují všechny chyby, které se týkají instalace a inicializace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří jeden soubor protokolu pro každou aktivaci nasazení. Tyto soubory protokolu se uloží do složky dočasných internetových souborů. Soubor protokolu pro nasazení se uživateli zobrazí, když dojde k selhání aktivace a uživatel klikne na **Podrobnosti** v dialogovém okně výsledné chyby.
 
  Toto chování můžete změnit pro konkrétního klienta pomocí Editoru registru (**regedit.exe**) a nastavit tak vlastní cestu k souboru protokolu. V takovém případě [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokoluje úspěšné a neúspěšné aktivace pro všechna nasazení v jednom souboru.
 

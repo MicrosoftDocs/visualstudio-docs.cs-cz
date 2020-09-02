@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určení ClickOnce v režimu Offline nebo Online režimu instalace | Dokumentace Microsoftu'
+title: 'Postupy: určení offline nebo online režimu instalace ClickOnce Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,40 +20,40 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d4111ca5aee4a405a4a797dbfee14a3d4b50435f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149751"
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>Postupy: Určení offline nebo online režimu instalace ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Install Mode` Pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace určuje, zda aplikace bude k dispozici online nebo offline. Pokud zvolíte **aplikace je dostupná pouze online**, uživatel musí mít přístup k [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] umístění (webové stránky nebo sdílené složky) Chcete-li spustit aplikaci pro publikování. Při výběru **aplikace je k dispozici také v režimu offline**, aplikace přidá položky do **Start** nabídky a **přidat nebo odebrat programy** dialogové okno; uživatel je možné aplikaci spustit, když nejsou připojeni.  
+Aplikace `Install Mode` pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci určuje, zda bude aplikace k dispozici offline nebo online. Pokud zvolíte, **že je aplikace dostupná jenom online**, musí mít uživatel přístup k [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] umístění publikování (buď webové stránce, nebo sdílené složce), aby bylo možné aplikaci spustit. Když vyberete aplikaci, která **je k dispozici v režimu offline**, aplikace přidá položky do nabídky **Start** a do dialogového okna **Přidat nebo odebrat programy** . uživatel může aplikaci spustit, když nejsou připojeni.  
   
- `Install Mode` Lze nastavit na **publikovat** stránku **Návrháře projektu**.  
+ `Install Mode`Lze nastavit na stránce **publikovat** v **Návrháři projektu**.  
   
- **Poznámka:** `Install Mode` můžete také nastavit pomocí Průvodce publikováním. Další informace najdete v tématu [jak: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+ **Poznámka:** `Install Mode` Lze také nastavit pomocí Průvodce publikováním. Další informace naleznete v tématu [How to: Publish a aplikace ClickOnce using the Publish Wizard](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
-### <a name="to-make-a-clickonce-application-available-online-only"></a>Chcete-li aplikaci ClickOnce zpřístupnit online pouze  
+### <a name="to-make-a-clickonce-application-available-online-only"></a>Zpřístupnění aplikace ClickOnce pouze online  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. V **režim instalace a nastavení** oblast, klikněte na tlačítko **aplikace je dostupná pouze online** přepínač.  
+3. V oblasti **režim instalace a nastavení** klikněte na tlačítko možnost **aplikace je k dispozici pouze online** .  
   
-### <a name="to-make-a-clickonce-application-available-online-or-offline"></a>Chcete-li aplikaci ClickOnce zpřístupnit online nebo offline  
+### <a name="to-make-a-clickonce-application-available-online-or-offline"></a>Zpřístupnění aplikace ClickOnce online nebo offline  
   
-1. S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **publikovat** kartu.  
+2. Klikněte na kartu **publikovat** .  
   
-3. V **režim instalace a nastavení** oblast, klikněte na tlačítko **aplikace je k dispozici také v režimu offline** přepínač.  
+3. V oblasti **režim instalace a nastavení** klikněte na tlačítko **aplikace je k dispozici v režimu offline** a možnost.  
   
-     Při instalaci aplikace přidá položky do **Start** nabídky a **přidat nebo odebrat programy** v Ovládacích panelech.  
+     Při instalaci aplikace přidá položky do nabídky **Start** a **přidá nebo odebere programy** v Ovládacích panelech.  
   
 ## <a name="see-also"></a>Viz také  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Postupy: Publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)

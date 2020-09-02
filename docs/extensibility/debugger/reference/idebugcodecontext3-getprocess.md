@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext3::GetProcess | Dokumenty společnosti Microsoft
+title: 'IDebugCodeContext3:: getprocess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,10 +14,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8d169f86548e97d4bb745e1ba91f39782de97cbc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734173"
 ---
 # <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
@@ -39,13 +39,13 @@ public int GetProcess(
 
 ## <a name="parameters"></a>Parametry
 `ppProcess`\
-[out] Odkaz na rozhraní procesu ladění.
+mimo Odkaz na rozhraní procesu ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugCodeContext** objekt, který zveřejňuje rozhraní [IDebugBeforeSymbolSearchEvent2.](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugCodeContext** , který zpřístupňuje rozhraní [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) .
 
 ```cpp
 HRESULT CDebugCodeContext::GetProcess(IDebugProcess2** ppProcess)

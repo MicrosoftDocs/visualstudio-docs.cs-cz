@@ -15,10 +15,10 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0396d3290ef870fb2c2c7b7b49c774b66397077c
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852219"
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>Vytváření vazeb mezi klávesovými zkratkami a položkami nabídky
@@ -52,16 +52,16 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
   
 1. Otevřete soubor. vsct pro váš balíček.  
   
-2. Po `<Commands>`, pokud ještě neexistuje, vytvořte prázdný oddíl `<KeyBindings>`.  
+2. Až se v případě, že ještě neexistuje, vytvořte prázdný `<KeyBindings>` oddíl `<Commands>` .  
   
    > [!WARNING]
    > Další informace o vazbách klíčů naleznete v tématu [Binding](../extensibility/keybinding-element.md).  
   
-    V části `<KeyBindings>` vytvořte položku `<KeyBinding>`.  
+    V `<KeyBindings>` části vytvořte `<KeyBinding>` položku.  
   
-    Nastavte atributy `guid` a `id` na hodnoty příkazu, který chcete vyvolat.  
+    Nastavte `guid`  atributy a  `id` pro příkazy, které chcete vyvolat.  
   
-    Nastavte atribut `mod1` pro **řízení**, **ALT**nebo **SHIFT**.  
+    Nastavte `mod1` atribut na **Control**, **ALT**nebo **SHIFT**.  
   
     Oddíl vazeb klíčů by měl vypadat přibližně takto:  
   
@@ -73,18 +73,18 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
   
    ```  
   
-   Pokud vaše klávesová zkratka vyžaduje více než dva klíče, nastavte atributy `mod2` a `key2`.  
+   Pokud vaše klávesová zkratka vyžaduje více než dva klíče, nastavte `mod2` `key2` atributy a.  
   
    Ve většině případů by se **SHIFT** neměl používat bez druhého modifikátoru, protože jeho stisknutí má za následek, že většina alfanumerických klíčů zapíše velké písmeno nebo symbol.  
   
    Kódy virtuálních klíčů umožňují přístup ke speciálním klíčům, ke kterým není přiřazen znak, například klávesy funkcí a klávesa **BACKSPACE** . Další informace najdete v tématu [kódy virtuálních klíčů](https://msdn2.microsoft.com/library/ms645540.aspx).  
   
-   Chcete-li příkaz zpřístupnit v editoru sady Visual Studio, nastavte atribut `editor` na hodnotu `guidVSStd97`.  
+   Chcete-li příkaz zpřístupnit v editoru sady Visual Studio, nastavte `editor` atribut na hodnotu `guidVSStd97` .  
   
-   Chcete-li, aby byl příkaz dostupný pouze ve vlastním editoru, nastavte atribut `editor` na název vlastního editoru vygenerovaného šablonou [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] při vytváření balíčku VSPackage, který obsahuje vlastní editor. Chcete-li zjistit hodnotu názvu, vyhledejte v sekci `<Symbols>` `<GuidSymbol>` uzel, jehož atribut `name` končí na "`editorfactory`". Toto je název vlastního editoru.  
+   Chcete-li, aby byl příkaz dostupný pouze ve vlastním editoru, nastavte `editor` atribut na název vlastního editoru vygenerovaného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] šablonou balíčku při vytvoření VSPackage, který obsahuje vlastní editor. Chcete-li zjistit hodnotu názvu, podívejte se do `<Symbols>` části `<GuidSymbol>` uzlu, jehož `name` atribut končí znakem " `editorfactory` .". Toto je název vlastního editoru.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad váže klávesovou zkratku CTRL + ALT + C k příkazu s názvem `cmdidMyCommand` v balíčku s názvem `MyPackage`.  
+ Tento příklad váže klávesovou zkratku CTRL + ALT + C k příkazu s názvem `cmdidMyCommand` v balíčku s názvem `MyPackage` .  
   
 ```  
 <CommandTable>  
@@ -101,7 +101,7 @@ Chcete-li vytvořit novou klávesovou zkratku pro vlastní příkaz nabídky, st
 ```  
   
 ## <a name="example"></a>Příklad  
- Tento příklad váže seznam CTL + B klávesových zkratek k příkazu s názvem `cmdidBold` v projektu s názvem `TestEditor`. Příkaz je k dispozici pouze ve vlastním editoru, nikoli v jiných editorech.  
+ Tento příklad váže seznam CTL klávesových zkratek + B k příkazu pojmenovanému `cmdidBold` v projektu s názvem `TestEditor` . Příkaz je k dispozici pouze ve vlastním editoru, nikoli v jiných editorech.  
   
 ```xml  
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />  

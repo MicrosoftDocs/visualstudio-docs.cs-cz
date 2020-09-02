@@ -1,5 +1,5 @@
 ---
-title: Sestava založená na viditelném časovém rozsahu | Dokumenty společnosti Microsoft
+title: Sestava na základě viditelného časového rozsahu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +13,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd4758f5484089e58f50462300f48f76f1538381
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63002343"
 ---
-# <a name="report-based-on-visible-time-range"></a>Sestava založená na viditelném časovém rozsahu
-Zobrazení Profil zobrazuje sestavy, které jsou založeny na aktuálně viditelném časovém rozsahu a kanálech. Chcete-li zobrazit podrobnosti o různých podmnožinech dat, klepněte na položky v legendě.
+# <a name="report-based-on-visible-time-range"></a>Sestava na základě viditelného časového rozsahu
+Zobrazení Profile zobrazuje sestavy, které jsou založené na aktuálně viditelném časovém rozsahu a kanálech. Chcete-li zobrazit podrobnosti o různých podmnožinách dat, klikněte na položky v legendě.
 
- Více informací o datech naleznete v tabulkách zde.
+ Další informace o datech v tabulkách najdete tady.
 
 ## <a name="see-also"></a>Viz také
 - [Žádná aktivita vláken k zobrazení](../profiling/no-thread-activity-to-show-threads-view.md)
 - [Sestava profilu spuštění](../profiling/execution-profile-report.md)
 - [Čas synchronizace](../profiling/synchronization-time.md)
-- [Čas I/O (Zobrazení vláken)](../profiling/i-o-time-threads-view.md)
+- [Čas I/O (zobrazení vláken)](../profiling/i-o-time-threads-view.md)
 - [Doba spánku](../profiling/sleep-time.md)
 - [Čas správy paměti](../profiling/memory-management-time.md)
 - [Čas přerušení](../profiling/preemption-time.md)
