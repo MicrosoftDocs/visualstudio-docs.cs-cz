@@ -1,5 +1,5 @@
 ---
-title: Bitmapový prvek | Dokumenty společnosti Microsoft
+title: Prvek rastrového obrázku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,42 +12,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2d663351aad7d381dd5bfe4cbaa0a263cc70b821
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739997"
 ---
-# <a name="bitmap-element"></a>Bitmapový prvek
-Definuje bitmapu. Bitmapa je načtena buď z prostředku, nebo ze souboru.
+# <a name="bitmap-element"></a>Rastrový element
+Definuje rastrový obrázek. Rastrový obrázek je načten buď z prostředku, nebo ze souboru.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Bitmap guid="guidImages" href="images\MyImage.bmp" usedList="bmp1, bmp2, bmp3" />
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Identifikátor guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID.<br /><br /> Atribut guid pro bitmapu není přidružen k žádné skupině příkazů VSPackage nebo jiné skupině příkazů.  Měla by být jedinečná pro definici bitmapy a neměla by být používána k žádnému jinému účelu.|
-|Resid|ID identifikátoru příkazu GUID/ID. Je vyžadován atribut resID nebo href.<br /><br /> Atribut resID je celé ID prostředku, které určuje bitmapový proužek, který má být načten během slučování tabulky příkazů.  Při načítání příkazové tabulky budou bitmapy určené ID prostředku načteny ze zdroje stejného modulu.|
-|usedList|Povinné, pokud je přítomen atribut resID. Vybere dostupné obrazy v bitmapovém proužku.|
-|Href|Cesta k bitmapě. Je vyžadován atribut resID nebo href.<br /><br /> Cesta zahrnutí je vyhledána pro uvedený soubor obrázku, který je vložen do výsledného binárního souboru.  Během sloučení tabulky příkazů se obraz zkopíruje a není vyžadováno žádné další vyhledávání prostředků nebo zatížení.  Pokud není k dispozici atribut usedList, jsou k dispozici všechny obrázky v pruhu. **Poznámka:**  Obrázky mohou být dodávány v jednom z několika formátů, které obsahují *.bmp*, *.png*a *.gif*.  Dřívější verze kompilátoru nepodporovaly 32bitové bitmapové obrazy, které obsahovaly alfa informace pro částečnou průhlednost. Řešení pro tyto verze je použít formát *PNG.*|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID<br /><br /> Atribut GUID rastrového obrázku není přidružen k žádnému VSPackage ani jiné skupině příkazů.  Měl by být jedinečný pro definici rastrového obrázku a neměl by se používat k žádným jiným účelům.|
+|resID|ID identifikátoru příkazu GUID/ID Je požadován buď atribut resID, nebo atribut href.<br /><br /> Atribut resID je ID prostředku typu Integer, které určuje rastrový obrázek, který má být načten během slučování příkazových tabulek.  Při načítání tabulky příkazů se bitmapy zadané ID prostředku načtou z prostředku stejného modulu.|
+|usedList|Vyžaduje se, pokud je přítomen atribut resID. Vybere dostupné obrázky v rastrovém pruhu.|
+|odkaz|Cesta k rastrovému obrázku Je požadován buď atribut resID, nebo atribut href.<br /><br /> Je prohledána cesta include pro zadaný soubor obrázku, který je vložen ve výsledném binárním souboru.  Při sloučení tabulky příkazu se obrázek zkopíruje a nevyžaduje se žádné další vyhledávání nebo načítání prostředků.  Pokud není přítomen atribut usedList, jsou k dispozici všechny obrázky v pruhu. **Poznámka:**  Obrázky mohou být dodávány v jednom z několika formátů, které obsahují soubory *. bmp*, *. png*a *. gif*.  Starší verze kompilátoru nepodporovaly 32 bitové rastrové obrázky, které měly alfa informace pro částečnou průhlednost. Alternativním řešením pro tyto verze je použití formátu *. png* .|
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Bitmapový prvek](../extensibility/bitmaps-element.md)|Seskupí bitmapové prvky.|
+|[Rastrové obrázky – element](../extensibility/bitmaps-element.md)|Seskupuje rastrové prvky.|
 
 ## <a name="example"></a>Příklad
 
@@ -58,4 +58,4 @@ Definuje bitmapu. Bitmapa je načtena buď z prostředku, nebo ze souboru.
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Soubory příkazů sady Visual Studio (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ffaf1d932ea904807b3affcdc39c0fe0ccb7d842
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657802"
 ---
 # <a name="working-with-a-conceptual-model-wcf-data-services"></a>Práce s koncepčním modelem (WCF Data Services)
@@ -34,7 +34,7 @@ Když použijete koncepční model k popisu dat v databázi, můžete zadávat d
 
 |Téma|Popis|
 |-----------|-----------------|
-|[Postupy: Provádění dotazů v datové službě](https://msdn.microsoft.com/library/62997821-e0c6-4c4d-9fb7-1273fb5e5d18)|Ukazuje, jak zadávat dotazy na datovou službu z aplikace [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].|
+|[Postupy: Provádění dotazů v datové službě](https://msdn.microsoft.com/library/62997821-e0c6-4c4d-9fb7-1273fb5e5d18)|Ukazuje, jak zadávat dotazy na datovou službu z [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] aplikace.|
 |[Postupy: Výsledky dotazů na projekt](https://msdn.microsoft.com/library/474ac625-8770-43ba-8320-d3315ea9530f)|Ukazuje, jak omezit množství dat vrácených prostřednictvím dotazu datové služby.|
 
  Když použijete koncepční model, můžete definovat, jaký druh dat je platný v jazyce, který odpovídá vaší doméně. V modelu můžete definovat platná data nebo můžete přidat ověřování do operací, které provádíte v entitě nebo datové službě.

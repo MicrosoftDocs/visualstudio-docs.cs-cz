@@ -1,5 +1,5 @@
 ---
-title: Funkce SccProperties | Dokumenty společnosti Microsoft
+title: Funkce SccProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bf2dd87efbb50346093144db6e069eea30138e37
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700507"
 ---
 # <a name="sccproperties-function"></a>SccProperties – funkce
@@ -35,32 +35,32 @@ SCCRTN SccProperties (
 #### <a name="parameters"></a>Parametry
  pvContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- Hwnd
+ hWnd
 
-[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- název lpFileName
+ lpFileName
 
-[v] Plně kvalifikovaný název cesty souboru nebo projektu.
+pro Plně kvalifikovaný název cesty souboru nebo projektu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Vlastnosti byly úspěšně zobrazeny.|
-|SCC_I_RELOADFILE|Systém správy verzí změnil vlastnosti souboru, takže ide by měl znovu načíst tento soubor.|
-|SCC_E_PROJNOTOPEN|Zadaný projekt nebyl otevřen v směřovaném zdrojovou kódu.|
-|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn zobrazit vlastnosti tohoto souboru nebo projektu.|
-|SCC_E_FILENOTCONTROLLED|Zadaný soubor nebo projekt není pod smělou směřovačnou složky.|
+|SCC_OK|Vlastnosti se úspěšně zobrazily.|
+|SCC_I_RELOADFILE|Systém správy verzí změnil vlastnosti souboru, takže IDE by měl tento soubor znovu načíst.|
+|SCC_E_PROJNOTOPEN|Zadaný projekt nebyl otevřen ve správě zdrojového kódu.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k zobrazení vlastností tohoto souboru nebo projektu.|
+|SCC_E_FILENOTCONTROLLED|Zadaný soubor nebo projekt není pod správou zdrojových kódů.|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Došlo k neznámé nebo obecné chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Modul plug-in správy zdrojového kódu zobrazuje vlastnosti ve vlastním dialogovém okně.
+ Modul plug-in správy zdrojových kódů zobrazuje vlastnosti ve vlastním dialogovém okně.
 
- Vlastnosti jsou definovány modulem plug-in správy zdrojového kódu a mohou se lišit od modulu plug-in k modulu plug-in. Pokud modul plug-in umožňuje uživateli změnit vlastnosti správy zdrojového kódu souboru, měl by se vrátit `SCC_I_RELOAD` k signalizaci ide, že tento soubor nebo projekt je třeba znovu načíst.
+ Vlastnosti jsou definovány modulem plug-in správy zdrojových kódů a mohou se lišit od modulu plug-in s modulem plug-in. Pokud modul plug-in umožní uživateli změnit vlastnosti správy zdrojového kódu souboru, měl by se vrátit `SCC_I_RELOAD` k signalizaci rozhraní IDE, že je nutné znovu načíst soubor nebo projekt.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

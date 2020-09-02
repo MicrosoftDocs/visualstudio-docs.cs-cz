@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluationCompleteEvent2 | Dokumenty společnosti Microsoft
+title: IDebugExpressionEvaluationCompleteEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,29 +13,29 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 35e57e361b59e76e187617b5e528b219e8e47897
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729557"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2"></a>IDebugExpressionEvaluationCompleteEvent2
-Toto rozhraní je odesláno ladicí můřnicí (DE) do správce ladění relace (SDM) po dokončení vyhodnocení asynchronního výrazu.
+Toto rozhraní je odesláno ladicím modulem (DE) do Správce ladění relace (SDM) po dokončení vyhodnocení asynchronního výrazu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugExpressionEvaluationCompleteEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- De implementuje toto rozhraní sestavy dokončení vyhodnocení výrazu zahájené volání [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md). Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá [QueryInterface](/cpp/atl/queryinterface) pro `IDebugEvent2` přístup k rozhraní.
+ DE implementuje toto rozhraní, aby nahlásilo dokončení vyhodnocení výrazu zahájené voláním [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md). Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro [QueryInterface](/cpp/atl/queryinterface) přístup k rozhraní QueryInterface `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt události zprávu o dokončení vyhodnocení výrazu. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) která je poskytována sdm při připojení k programu, který je odladěn.
+ DE vytvoří a pošle tento objekt události, aby nahlásil dokončení vyhodnocení výrazu. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugExpressionEvaluationCompleteEvent2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugExpressionEvaluationCompleteEvent2` .
 
 |Metoda|Popis|
 |------------|-----------------|
@@ -43,14 +43,14 @@ IDebugExpressionEvaluationCompleteEvent2 : IUnknown
 |[GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)|Získá výsledek vyhodnocení výrazu.|
 
 ## <a name="remarks"></a>Poznámky
- DE musí odeslat tuto událost, zda hodnocení bylo úspěšné nebo ne.
+ DE musí odeslat tuto událost, zda bylo vyhodnocení úspěšné nebo ne.
 
- Pokud hodnocení nebylo úspěšné, `DEBUG_PROPINFO_VALUE` `DEBUG_PROPINFO_ATTRIB` a příznaky nebudou nastaveny v [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury, která je vrácena [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) [(IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objekt je vytvořen DE a vrácena v `IDebugExpressionEvaluationCompleteEvent2` případě, že hodnocení se nezdařilo).
+ Pokud vyhodnocení nebylo úspěšné, `DEBUG_PROPINFO_VALUE` příznaky a nebudou `DEBUG_PROPINFO_ATTRIB` nastaveny ve struktuře [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) , kterou vrací [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) (objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) je vytvořen pomocí příkazu de a vráceného v `IDebugExpressionEvaluationCompleteEvent2` události, pokud selhalo vyhodnocení).
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

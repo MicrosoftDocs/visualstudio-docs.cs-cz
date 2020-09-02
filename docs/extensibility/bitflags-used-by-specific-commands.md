@@ -1,5 +1,5 @@
 ---
-title: Bitové příznaky používané určitými příkazy | Dokumenty společnosti Microsoft
+title: Bitflags používané konkrétními příkazy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,99 +11,99 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ffa1fd8bf025d665977e87dc8b88da724ade5a8b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740008"
 ---
-# <a name="bitflags-used-by-specific-commands"></a>Bitové příznaky používané určitými příkazy
-Chování několika funkcí v rozhraní plug-in správy zdrojového kódu lze upravit nastavením jednoho nebo více bitů v jedné hodnotě. Tyto hodnoty jsou označovány jako bitové příznaky. Různé bitové příznaky používané rozhraním API modulu plug-in správy zdrojového kódu jsou podrobně popsány podle funkce, která je používá.
+# <a name="bitflags-used-by-specific-commands"></a>Bitflags používané konkrétními příkazy
+Chování řady funkcí v rozhraní API modulu plug-in správy zdrojového kódu lze upravit nastavením jedné nebo více bitů v rámci jedné hodnoty. Tyto hodnoty se označují jako bitflags. Různé bitflags, které používá rozhraní API modulu plug-in správy zdrojových kódů, jsou zde popsány seskupeny podle funkce, která je používá.
 
-## <a name="checked-out-flag"></a>Rezervováno příznak
- Tento příznak lze nastavit buď [pro SccAdd](../extensibility/sccadd-function.md) nebo [SccCheckin](../extensibility/scccheckin-function.md).
-
-|Příznak|Hodnota|Popis|
-|----------|-----------|-----------------|
-|`SCC_KEEP_CHECKEDOUT`|0x1000|Udržujte soubor rezervován.|
-
-## <a name="add-flags"></a>Přidání příznaků
- Tyto příznaky jsou používány [SccAdd](../extensibility/sccadd-function.md).
+## <a name="checked-out-flag"></a>Příznak rezervace
+ Tento příznak lze nastavit buď pro [SccAdd](../extensibility/sccadd-function.md) , nebo pro [SccCheckin](../extensibility/scccheckin-function.md).
 
 |Příznak|Hodnota|Popis|
 |----------|-----------|-----------------|
-|`SCC_FILETYPE_AUTO`|0x00|Očekává se, že modul plug-in správy zdrojového kódu automaticky zjistí, zda je soubor textový nebo binární.|
+|`SCC_KEEP_CHECKEDOUT`|0x1000|Ponechte soubor zarezervován.|
+
+## <a name="add-flags"></a>Přidat příznaky
+ Tyto příznaky používá [SccAdd](../extensibility/sccadd-function.md).
+
+|Příznak|Hodnota|Popis|
+|----------|-----------|-----------------|
+|`SCC_FILETYPE_AUTO`|0x00|Je očekáván modul plug-in správy zdrojových kódů, který automaticky zjišťuje, zda je soubor textový nebo binární.|
 |`SCC_FILETYPE_TEXT`|0x01|Typ souboru je text.|
-|`SCC_FILETYPE_BINARY`|0x04|Typ souboru je binární. **Poznámka:** `SCC_FILETYPE_TEXT` `SCC_FILETYPE_BINARY` a vlajky se vzájemně vylučují.   Nastavte přesně jeden nebo jeden.|
-|`SCC_ADD_STORELATEST`|0x02|Uložit pouze nejnovější verzi (žádné rozdíly).|
+|`SCC_FILETYPE_BINARY`|0x04|Typ souboru je binární. **Poznámka:** `SCC_FILETYPE_TEXT` `SCC_FILETYPE_BINARY`příznaky a se vzájemně vylučují.   Nastavte přesně jednu nebo žádnou.|
+|`SCC_ADD_STORELATEST`|0x02|Uloží pouze nejnovější verzi (žádné rozdíly).|
 
-## <a name="diff-flags"></a>Příznaky rozdílů
- [SccDiff](../extensibility/sccdiff-function.md) používá tyto příznaky k definování rozsahu operace diff. Vlajky se `SCC_DIFF_QD_xxx` vzájemně vylučují. Pokud je některý z nich zadán, pak není poskytnuta žádná vizuální zpětná vazba. V "rychlé diff" (QD) modul plug-in neurčuje, jak se soubor liší, pouze v případě, že se liší. Pokud není zadán žádný z těchto příznaků, "vizuální rozdíl" se provádí; jsou vypočítány a zobrazeny podrobné rozdíly v souborech. Pokud požadovaný qd není podporován, modul plug-in se přesune na další nejlepší. Například pokud ide požaduje kontrolní součet a modul plug-in nepodporuje, modul plug-in provádí kontrolu celého obsahu (stále mnohem rychlejší než vizuální zobrazení).
-
-|Příznak|Hodnota|Popis|
-|----------|-----------|-----------------|
-|`SCC_DIFF_IGNORECASE`|0x0002|Ignorovat rozdíly v případech.|
-|`SCC_DIFF_IGNORESPACE`|0x0004|Ignorovat mezery mezery prázdného místa. **Poznámka:**  A `SCC_DIFF_IGNORECASE` `SCC_DIFF_IGNORESPACE` příznaky jsou volitelné bitflags.|
-|`SCC_DIFF_QD_CONTENTS`|0x0010|QD porovnáním celého obsahu souboru.|
-|`SCC_DIFF_QD_CHECKSUM`|0x0020|QD kontrolním součtem.|
-|`SCC_DIFF_QD_TIME`|0x0040|QD podle data a časového razítka souboru.|
-|`SCC_DIFF_QUICK_DIFF`|0x0070|Toto je maska slouží ke kontrole všech QD bitflags. Neměl by být předán do funkce; tři QD bitflagy se vzájemně vylučují. QD vždy znamená žádné zobrazení uI.|
-
-## <a name="populatelist-flag"></a>Příznak Naplnit list
- Tento příznak je používán [SccPopulateList](../extensibility/sccpopulatelist-function.md) v parametru. `fOptions`
+## <a name="diff-flags"></a>Rozdílové příznaky
+ [SccDiff](../extensibility/sccdiff-function.md) používá tyto příznaky k definování rozsahu rozdílové operace. `SCC_DIFF_QD_xxx`Příznaky se vzájemně vylučují. Pokud je některý z nich zadaný, nemusíte mít žádnou vizuální zpětnou vazbu. V "rychlém rozdílu" (hloubka fronty) modul plug-in neurčuje, jak se soubor liší, pouze pokud se liší. Pokud není zadán žádný z těchto příznaků, je provedeno "rozdíly v vizuálů"; Podrobné rozdíly v souborech se vypočítávají a zobrazují. Pokud požadovaný hloubka fronty není podporovaný, modul plug-in se přesune na další nejlepší. Například pokud rozhraní IDE požaduje kontrolní součet a modul plug-in ho nepodporuje, modul plug-in provede kontrolu celého obsahu (stále mnohem rychlejší než vizuální zobrazení).
 
 |Příznak|Hodnota|Popis|
 |----------|-----------|-----------------|
-|`SCC_PL_DIR`|0x00000001L|IDE je předávání adresářů, nikoli soubory.|
+|`SCC_DIFF_IGNORECASE`|0x0002|Ignorovat rozdíly v malých a velkých písmenech|
+|`SCC_DIFF_IGNORESPACE`|0x0004|Ignorujte rozdíly na prázdných prostorech. **Poznámka:**  `SCC_DIFF_IGNORECASE` Příznaky a `SCC_DIFF_IGNORESPACE` jsou volitelné bitflags.|
+|`SCC_DIFF_QD_CONTENTS`|0x0010|Hloubka fronty porovnáním celého obsahu souboru.|
+|`SCC_DIFF_QD_CHECKSUM`|0x0020|Hloubka fronty podle kontrolního součtu.|
+|`SCC_DIFF_QD_TIME`|0x0040|Hloubka fronty podle razítka data a času souboru.|
+|`SCC_DIFF_QUICK_DIFF`|0x0070|Toto je maska, která slouží ke kontrole všech hloubka fronty bitflags. Neměl by být předán do funkce. tři hloubka fronty bitflags se vzájemně vylučují. Hloubka fronty vždy znamená bez zobrazení uživatelského rozhraní.|
+
+## <a name="populatelist-flag"></a>Příznak PopulateList
+ Tento příznak používá [SccPopulateList](../extensibility/sccpopulatelist-function.md) v `fOptions` parametru.
+
+|Příznak|Hodnota|Popis|
+|----------|-----------|-----------------|
+|`SCC_PL_DIR`|0x00000001L|Rozhraní IDE odesílá adresáře, nikoli soubory.|
 
 ## <a name="populatedirlist-flags"></a>Příznaky PopulateDirList
- Tyto příznaky jsou používány [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) v parametru. `fOptions`
+ Tyto příznaky jsou používány [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) v `fOptions` parametru.
 
 |Hodnota možnosti|Hodnota|Popis|
 |------------------|-----------|-----------------|
-|SCC_PDL_ONELEVEL|0x0000|Zkontrolujte pouze jednu úroveň adresářů pro adresáře (toto je výchozí).|
-|SCC_PDL_RECURSIVE|0x0001|Rekurzivně zkontrolujte všechny adresáře v rámci každého daného adresáře.|
-|SCC_PDL_INCLUDEFILES|0x0002|Zahrnout názvy souborů do procesu kontroly.|
+|SCC_PDL_ONELEVEL|0x0000|Prověřte pouze jednu úroveň adresářů adresářů (Jedná se o výchozí nastavení).|
+|SCC_PDL_RECURSIVE|0x0001|Rekurzivně prověřte všechny adresáře pod každým daným adresářem.|
+|SCC_PDL_INCLUDEFILES|0x0002|Do procesu kontroly zahrňte názvy souborů.|
 
 ## <a name="openproject-flags"></a>Příznaky OpenProject
- Tyto příznaky jsou používány [SccOpenProject](../extensibility/sccopenproject-function.md) v parametru. `dwFlags`
+ Tyto příznaky jsou používány [SccOpenProject](../extensibility/sccopenproject-function.md) v `dwFlags` parametru.
 
 |Hodnota možnosti|Hodnota|Popis|
 |------------------|-----------|-----------------|
-|SCC_OP_CREATEIFNEW|0x00000001L|Pokud projekt neexistuje ve správě zdrojového kódu, vytvořte jej. Pokud tento příznak není nastaven, vyzve uživatele `SCC_OP_SILENTOPEN` k vytvoření projektu (pokud není zadán příznak).|
-|SCC_OP_SILENTOPEN|0x00000002L|Nezobrazovat výzvu uživateli k vytvoření projektu. stačí `SCC_E_UNKNOWNPROJECT`vrátit .|
+|SCC_OP_CREATEIFNEW|0x00000001L|Pokud projekt ve správě zdrojového kódu neexistuje, vytvořte ho. Pokud tento příznak není nastavený, vyzvat uživatele k vytvoření pro projekt (Pokud `SCC_OP_SILENTOPEN` není zadaný příznak).|
+|SCC_OP_SILENTOPEN|0x00000002L|Nedotazovat uživatele na vytvoření projektu; stačí vrátit `SCC_E_UNKNOWNPROJECT` .|
 
-## <a name="get-flags"></a>Získání příznaků
+## <a name="get-flags"></a>Získat příznaky
  Tyto příznaky jsou používány [SccGet](../extensibility/sccget-function.md) a [SccCheckout](../extensibility/scccheckout-function.md).
 
 |Příznak|Hodnota|Popis|
 |----------|-----------|-----------------|
-|`SCC_GET_ALL`|0x00000001L|IDE je předávání adresářů, nikoli soubory: Získat všechny soubory v těchto adresářích.|
-|`SCC_GET_RECURSIVE`|0x00000002L|IDE prochází adresáře: Získejte tyto adresáře a všechny jejich podadresáře.|
+|`SCC_GET_ALL`|0x00000001L|Rozhraní IDE předává adresáře, nikoli soubory: načte všechny soubory v těchto adresářích.|
+|`SCC_GET_RECURSIVE`|0x00000002L|Rozhraní IDE předává adresáře: získat tyto adresáře a všechny jejich podadresáře.|
 
-## <a name="noption-values"></a>nHodnoty Option
- Tyto příznaky jsou používány [SccSetOption](../extensibility/sccsetoption-function.md) v parametru. `nOption`
+## <a name="noption-values"></a>hodnoty nOption
+ Tyto příznaky jsou používány [SccSetOption](../extensibility/sccsetoption-function.md) v `nOption` parametru.
 
 |Příznak|Hodnota|Popis|
 |----------|-----------|-----------------|
 |`SCC_OPT_EVENTQUEUE`|0x00000001L|Nastavte stav fronty událostí.|
-|`SCC_OPT_USERDATA`|0x00000002L|Zadejte uživatelská data pro . `SCC_OPT_NAMECHANGEPFN`|
-|`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE může zpracovat zrušit.|
-|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Nastavte zpětné volání pro změny názvů.|
-|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Zakažte pokladnu modulu plug-in správy zdrojového kódu a nenastavujte pracovní adresář.|
-|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Přidejte ze systému správy zdrojového kódu a určete pracovní adresář. Pokuste se sdílet do přidruženého projektu, pokud je přímým potomkem.|
+|`SCC_OPT_USERDATA`|0x00000002L|Zadejte uživatelská data pro `SCC_OPT_NAMECHANGEPFN` .|
+|`SCC_OPT_HASCANCELMODE`|0x00000003L|Rozhraní IDE může zpracovat zrušení.|
+|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Nastavte zpětné volání pro změny názvu.|
+|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Zakáže registraci uživatelského rozhraní modulu plug-in správy zdrojových kódů a nenastaví pracovní adresář.|
+|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Přidejte ze systému správy zdrojového kódu, abyste určili pracovní adresář. Zkuste sdílet do přidruženého projektu, pokud se jedná o přímého následníka.|
 
-## <a name="dwval-bitflags"></a>dwVal bitové vlajky
- Tyto příznaky jsou používány [SccSetOption](../extensibility/sccsetoption-function.md) v parametru. `dwVal`
+## <a name="dwval-bitflags"></a>dwVal bitflags
+ Tyto příznaky jsou používány [SccSetOption](../extensibility/sccsetoption-function.md) v `dwVal` parametru.
 
-|Příznak|Hodnota|Popis|Používá `nOption` se podle hodnoty|
+|Příznak|Hodnota|Popis|Použito `nOption` hodnotou|
 |----------|-----------|-----------------|-----------------------------|
-|`SCC_OPT_EQ_DISABLE`|0x00L|Pozastaví aktivitu fronty událostí.|`SCC_OPT_EVENTQUEUE`|
+|`SCC_OPT_EQ_DISABLE`|0x00|Pozastaví činnost fronty událostí.|`SCC_OPT_EVENTQUEUE`|
 |`SCC_OPT_EQ_ENABLE`|0x01L|Povolí protokolování fronty událostí.|`SCC_OPT_EVENTQUEUE`|
-|`SCC_OPT_HCM_NO`|0L|(Výchozí) Nemá žádný režim zrušení; v případě potřeby musí být dodávek.|`SCC_OPT_HASCANCELMODE`|
-|`SCC_OPT_HCM_YES`|1L|Popisovače ide zrušit.|`SCC_OPT_HASCANCELMODE`|
-|`SCC_OPT_SCO_NO`|0L|(Výchozí) OK se podívat z plug-in uI; je nastaven pracovní adresář.|`SCC_OPT_SCCCHECKOUTONLY`|
-|`SCC_OPT_SCO_YES`|1L|Žádná pokladna plug-in ui, žádný pracovní adresář.|`SCC_OPT_SCCCHECKOUTONLY`|
+|`SCC_OPT_HCM_NO`|0L|Výchozí Nemá žádný režim zrušení; modul plug-in musí být dodán v případě potřeby.|`SCC_OPT_HASCANCELMODE`|
+|`SCC_OPT_HCM_YES`|1L|Rozhraní IDE zpracovává zrušení.|`SCC_OPT_HASCANCELMODE`|
+|`SCC_OPT_SCO_NO`|0L|Výchozí V případě, že se chcete podívat na uživatelské rozhraní modulu plug-in; pracovní adresář je nastaven.|`SCC_OPT_SCCCHECKOUTONLY`|
+|`SCC_OPT_SCO_YES`|1L|Žádná rezervace uživatelského rozhraní modulu plug-in, neexistuje pracovní adresář.|`SCC_OPT_SCCCHECKOUTONLY`|
 
 ## <a name="see-also"></a>Viz také
-- [Moduly plug-in pro směřuje zdroj](../extensibility/source-control-plug-ins.md)
+- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)

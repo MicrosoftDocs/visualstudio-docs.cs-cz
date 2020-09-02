@@ -1,5 +1,5 @@
 ---
-title: TEXT_POSITION | Dokumentace Microsoftu
+title: TEXT_POSITION | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 210435231f98c19c16715817e2403f95da3d1f43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204826"
 ---
-# <a name="textposition"></a>TEXT_POSITION
+# <a name="text_position"></a>TEXT_POSITION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje umístění řádku a sloupci v zadaném textu.  
+Popisuje umístění řádku a sloupce v daném textu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagTEXT_POSITION {   
@@ -42,15 +42,15 @@ public struct TEXT_POSITION { 
   
 ## <a name="members"></a>Členové  
  dwLine  
- Index řádku ve zdrojovém souboru.  
+ Index řádku ve zdrojovém souboru  
   
  dwColumn  
- Znak posunu v souladu.  
+ Posun znaku na řádek  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je používán [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) a [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury.  
+ Tato struktura se používá ve strukturách [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) a [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) .  
   
- Tato struktura je vyplněna voláním těchto metod:  
+ Tato struktura je vyplněna voláním následujících metod:  
   
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
   
@@ -60,7 +60,7 @@ public struct TEXT_POSITION { 
   
 - [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
   
-  Tato struktura je předán jako parametr těchto metod:  
+  Tato struktura je předána jako parametr následujícím metodám:  
   
 - [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
   
@@ -73,18 +73,18 @@ public struct TEXT_POSITION { 
 - [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)   
- [Getsourcerange –](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)   
- [Getrange –](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)   
- [Getoffset –](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)   
+ [GetSourceRange –](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)   
+ [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)   
+ [GetOffset –](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)   
  [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)   
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
  [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)   

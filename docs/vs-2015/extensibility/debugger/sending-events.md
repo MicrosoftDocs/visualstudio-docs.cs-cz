@@ -1,5 +1,5 @@
 ---
-title: Odesílání událostí | Dokumentace Microsoftu
+title: Odesílání událostí | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,37 +11,37 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 98247b894d2db628d508713875ba0ea7d0642729
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204742"
 ---
 # <a name="sending-events"></a>Odesílání událostí
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Mechanismus pro komunikaci mezi ladicí program a ladicí stroj (DE) je model událostí založené na modelu DCOM. Události jsou odeslány jako objekty modelu COM a každou událost obsahuje parametry, které zadejte následující informace:  
+Mechanismus pro komunikaci mezi ladicím programem a modulem ladění (DE) je model událostí založený na modelu DCOM. Události jsou odesílány jako objekty modelu COM a každá událost má parametry, které určují následující:  
   
-- DE, která volá událost.  
+- DE, která volala událost.  
   
-- Popis co se stalo.  
+- Popis toho, co se stalo.  
   
-- Proces, program a informace o podprocesu, který identifikuje kontextu, kde k události došlo. Události odeslané z Zavedenými neodešle procesu.  
+- Informace o procesu, programu a vlákně, které určují kontext, kde došlo k události. Proces se neposílá pro události odeslané z DE.  
   
 - Typ události, která určuje, zda je událost synchronní nebo asynchronní.  
   
-  Všechny výjimky ladění jsou odeslány pomocí metody [IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
+  Všechny události ladění jsou odesílány pomocí metody [IDebugEventCallback2:: Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Zdroje událostí](../../extensibility/debugger/event-sources-visual-studio-sdk.md)  
- Popisuje dva zdroje událostí: ladicí stroj (DE) a relace ladění správci.  
+ Vysvětluje dva zdroje událostí: modul ladění (DE) a správce ladění relace (SDM).  
   
  [Podporované typy událostí](../../extensibility/debugger/supported-event-types.md)  
- Tento článek popisuje typy událostí aktuálně se podporují: asynchronní a synchronní.  
+ Popisuje aktuálně podporované typy událostí: asynchronní a synchronní.  
   
  [Popisy událostí](../../extensibility/debugger/event-descriptions.md)  
- Definuje události a důvody pro jejich použití.  
+ Definuje události a důvody jejich použití.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)  
- Popisuje, jak se Zavedenými pracuje s překladač nebo operačního systému k poskytování služeb ladění.
+ Popisuje, jak DE funguje s překladačem nebo operačním systémem pro poskytování služeb ladění.

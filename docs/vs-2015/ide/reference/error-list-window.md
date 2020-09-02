@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 35be5ddeedf0b081fa94e399f294151e73a157ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657728"
 ---
 # <a name="error-list-window"></a>Okno Seznam chyb
@@ -70,14 +70,14 @@ ZNAČTE
 
    Seznam na pravé straně panelu nástrojů určuje, zda se mají zobrazovat chyby ze sestavení (chyby vyplývající z operace sestavení) nebo z technologie IntelliSense (chyby zjištěné před spuštěním sestavení) nebo z obou.
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
  Pomocí textového pole **hledat seznam chyb** na pravé straně panelu nástrojů **Seznam chyb** můžete najít konkrétní chyby v seznamu chyb. Můžete vyhledat libovolný viditelný sloupec v seznamu chyb a výsledky hledání jsou vždy seřazené podle sloupce, který má prioritu řazení místo na dotazu nebo použitém filtru. Pokud zvolíte klávesu **ESC** , zatímco je fokus v **Seznam chyb**, můžete vymazat hledaný termín a filtrované výsledky hledání. Můžete také kliknout na **X** na pravé straně textového pole a vymazat ho.
 
 ## <a name="save"></a>Uložit
  Seznam chyb můžete zkopírovat a Uložit do souboru. Vyberte chyby, které chcete zkopírovat, klikněte na výběr pravým tlačítkem myši a potom v místní nabídce vyberte **Kopírovat**. Pak můžete chyby vložit do souboru. Pokud vložíte chyby do excelové tabulky, pole se zobrazí jako jiné sloupce.
 
 ## <a name="ui-element-list"></a>Seznam prvků uživatelského rozhraní
- Závažnost zobrazuje různé typy **Seznam chyb** položky (**Chyba**, **zpráva**, **Upozornění**, **upozornění (aktivní)** , **upozornění (neaktivní)** .
+ Závažnost zobrazuje různé typy **Seznam chyb** položky (**Chyba**, **zpráva**, **Upozornění**, **upozornění (aktivní)**, **upozornění (neaktivní)**.
 
  Kód zobrazí kód chyby.
 

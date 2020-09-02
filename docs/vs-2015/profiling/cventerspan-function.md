@@ -1,5 +1,5 @@
 ---
-title: Cventerspan – funkce | Dokumentace Microsoftu
+title: Funkce Cventerspan – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,16 +26,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 40031567b5339803ccfa7f4a5b3db4f006c6c134
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193228"
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Označuje začátek toho nové rozpětí.  
+Označuje začátek nového rozsahu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -106,32 +106,32 @@ HRESULT CvEnterSpanExVA(
   
 #### <a name="parameters"></a>Parametry  
  `argList`  
- Seznam argumentů.  
+ Seznam argumentů  
   
  `category`  
- Kategorie značky span  
+ Kategorie rozsahu  
   
  `level`  
  Úroveň důležitosti rozpětí.  
   
  `pMarkerSeries`  
- Platné značky řady kontextu. Nemůže mít hodnotu NULL.  
+ Platný kontext řady značek Nemůže mít hodnotu NULL.  
   
  `pMessage`  
- Řetězec formátu zprávy. Nemůže mít hodnotu NULL.  
+ Řetězec formátu zprávy Nemůže mít hodnotu NULL.  
   
  `ppSpan`  
- Adresa proměnné, která bude obsahovat výsledný objekt značky span. Adresa nesmí být NULL, proměnná může mít libovolnou hodnotu.  
+ Adresa proměnné, která bude obsahovat výsledný objekt span. Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** cvmarkers. h  
   
- **Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW  
+ **Kódování Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW  
   
- **ANSI:** Cventerspana – cventerspanexvw – cventerspanva – cventerspanexa –,  
+ **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+ [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b30b13610cc59b8a0225e52abf47f9a4f2cc97d1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657581"
 ---
 # <a name="manage-models-and-diagrams-under-version-control"></a>Správa modelů a diagramů pomocí správy verzí
@@ -28,7 +28,7 @@ Spravujte různé verze projektů a diagramů modelování, včetně map kódu (
 > [!IMPORTANT]
 > Pokud pracuje několik uživatelů na stejném projektu modelování, buďte opatrní. Zjistěte, jak můžete [organizovat modely ve středních nebo rozsáhlých projektech](../modeling/structure-your-modeling-solution.md).
 
-## <a name="ModelingProjects"></a>Soubory v projektu modelování
+## <a name="files-in-a-modeling-project"></a><a name="ModelingProjects"></a> Soubory v projektu modelování
  Více než jeden uživatel může pracovat na projektu modelování současně, pokud pracuje na různých souborech.
 
  Chcete-li předejít nebo vyřešit konflikty mezi změnami provedenými různými uživateli, je důležité pochopit, jak je model uložen v souborech.
@@ -42,9 +42,9 @@ Spravujte různé verze projektů a diagramů modelování, včetně map kódu (
   - **Schéma. classdiagram. Layout** – Pokud je tento soubor odstraněn, budou se obrazce stále zobrazovat v diagramu, ale ztratí jejich velikosti a pozice. Každý soubor rozložení je dceřiným souborem diagramu. Pokud se chcete podívat, klikněte na [+] vedle souboru diagramu v Průzkumník řešení.
 
 > [!NOTE]
-> Je důležité zachovat konzistenci mezi soubory. Například pokud použijete správu zdrojového kódu k vrácení změn v souboru. UML, měli byste vrátit zpět odpovídající změny v souborech. * diagram a. Layout současně. Prvky reprezentované v. \*diagram soubor bude ztracen, pokud nejsou také zastoupeny v souboru. Uml.
+> Je důležité zachovat konzistenci mezi soubory. Například pokud použijete správu zdrojového kódu k vrácení změn v souboru. UML, měli byste vrátit zpět odpovídající změny v souborech. * diagram a. Layout současně. Prvky reprezentované v. \* soubor diagramu bude ztracen, pokud nejsou také zastoupeny v souboru. Uml.
 
-## <a name="Shared"></a>Práce na sdílených projektech modelování
+## <a name="working-on-shared-modeling-projects"></a><a name="Shared"></a> Práce na sdílených projektech modelování
  Minimalizace konfliktů mezi souběžnou prací na různých částech projektu:
 
 - Rozdělte svůj projekt modelování do balíčků představujících různé oblasti práce. Přesuňte celý model do balíčků namísto jeho pochodu do kořenového modelu. Další informace najdete v tématu [Definování balíčků a oborů názvů](../modeling/define-packages-and-namespaces.md).
@@ -61,7 +61,7 @@ Spravujte různé verze projektů a diagramů modelování, včetně map kódu (
 
 - Abychom vám pomohli sledovat balíčky, přejmenujte soubory balíčku tak, aby odrážely skutečné názvy balíčků.
 
-- V [!INCLUDE[esprscc](../includes/esprscc-md.md)] vždy provádět operace **vrácení se změnami** a **získávat nejnovější verze** v dokončeném projektu modelování, nikdy u jednotlivých souborů.
+- V nástroji [!INCLUDE[esprscc](../includes/esprscc-md.md)] vždy provádějte operace **vrátit se změnami** a **získat nejnovější verze** v dokončeném projektu modelování, nikdy u jednotlivých souborů.
 
 - Vždy proveďte operaci **získat** hned předtím, než se vrátíte do projektu modelování.
 
@@ -70,7 +70,7 @@ Spravujte různé verze projektů a diagramů modelování, včetně map kódu (
     > [!NOTE]
     > Pokud je soubor otevřený při provedení operace **Get**a výsledkem operace jsou místní změny, zobrazí se výzva k opětovnému načtení souboru. V takovém případě klikněte na tlačítko **ne**a pak znovu načtěte celý projekt. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projekt modelování, klikněte na položku **Uvolnit projekt**a poté klikněte na možnost **znovu načíst projekt**.
 
-### <a name="Exclusive"></a>Změny vyžadující výhradní přístup k modelu
+### <a name="changes-requiring-exclusive-access-to-the-model"></a><a name="Exclusive"></a> Změny vyžadující výhradní přístup k modelu
  Než provedete následující typy změn, ujistěte se, že máte zámek rezervace u celého projektu.
 
 - Přejmenování nebo odstranění prvků, které jsou odkazovány z jiných balíčků.
@@ -96,8 +96,8 @@ Spravujte různé verze projektů a diagramů modelování, včetně map kódu (
     > [!NOTE]
     > Soubor nelze přesunout do jiného projektu.
 
-## <a name="Merging"></a>Sloučení změn v souborech modelů a diagramech
- Když na modelu současně pracoval více než jeden uživatel, [!INCLUDE[esprscc](../includes/esprscc-md.md)] vás vyzve ke sloučení změn v souborech modelu. Při práci na samostatných projektech, jak je popsáno v předchozích částech, se vyhnete většině sloučení. Zbývající konflikty je obvykle možné bezpečně sloučit automaticky. Následující typy změn by neměly způsobovat žádné potíže:
+## <a name="merging-changes-in-model-files-and-diagrams"></a><a name="Merging"></a> Sloučení změn v souborech modelů a diagramech
+ Když na modelu současně pracoval více než jeden uživatel, [!INCLUDE[esprscc](../includes/esprscc-md.md)] zobrazí se výzva ke sloučení změn v souborech modelu. Při práci na samostatných projektech, jak je popsáno v předchozích částech, se vyhnete většině sloučení. Zbývající konflikty je obvykle možné bezpečně sloučit automaticky. Následující typy změn by neměly způsobovat žádné potíže:
 
 - Typy životností. Když přidáte životnost do interakce (sekvenční diagram), jeho typ je uložen v kořenovém modelu, pokud jste nevytvořili životnost z existujícího typu.
 

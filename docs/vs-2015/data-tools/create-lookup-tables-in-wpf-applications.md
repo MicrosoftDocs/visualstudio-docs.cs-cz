@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6816b7465b8a3271ec6ebc0db5046d76e60ec5b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657428"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>Vytváření vyhledávacích tabulek v aplikacích WPF
@@ -34,7 +34,7 @@ ms.locfileid: "72657428"
 
 *Vyhledávací tabulka* termínů (někdy označované jako *vyhledávací vazba*) popisuje ovládací prvek, který zobrazuje informace z jedné tabulky dat na základě hodnoty pole cizího klíče v jiné tabulce. Vyhledávací tabulku lze vytvořit přetažením hlavního uzlu nadřazené tabulky nebo objektu v okně **zdroje dat** do ovládacího prvku, který je již svázán se sloupcem nebo vlastností v související podřízené tabulce.
 
- Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje `CustomerID`, které označují zákazníka, který objednávku zadal. @No__t_0 je cizí klíč, který odkazuje na záznam zákazníka v tabulce `Customers`. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít místo `CustomerID` zobrazit skutečný název zákazníka. Vzhledem k tomu, že se název zákazníka nachází v tabulce `Customers`, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá hodnotu `CustomerID` v záznamu `Orders` k navigaci mezi relacemi a vrácení názvu zákazníka.
+ Předpokládejme například tabulku `Orders` v prodejní databázi. Každý záznam v `Orders` tabulce obsahuje položku `CustomerID` , která označuje zákazníka, který objednávku zadal. `CustomerID`Je cizí klíč, který odkazuje na záznam zákazníka v `Customers` tabulce. Když zobrazíte seznam objednávek z `Orders` tabulky, možná budete chtít zobrazit skutečný název zákazníka namísto `CustomerID` . Vzhledem k tomu, že je název zákazníka v `Customers` tabulce, je nutné vytvořit vyhledávací tabulku pro zobrazení názvu zákazníka. Vyhledávací tabulka používá `CustomerID` `Orders` k navigaci vztahu hodnotu v záznamu a vrací jméno zákazníka.
 
 ## <a name="to-create-a-lookup-table"></a>Vytvoření vyhledávací tabulky
 
@@ -75,7 +75,7 @@ ms.locfileid: "72657428"
         > [!NOTE]
         > Pokud se ovládací prvek **ListBox** nebo **ListView** v seznamu nezobrazí, můžete tyto ovládací prvky přidat do seznamu. Informace naleznete v tématu [nastavení ovládacího prvku, který má být vytvořen při přetahování z okna zdroje dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-    - Libovolný vlastní ovládací prvek, který je odvozen z <xref:System.Windows.Controls.Primitives.Selector>.
+    - Libovolný vlastní ovládací prvek, který je odvozen z <xref:System.Windows.Controls.Primitives.Selector> .
 
         > [!NOTE]
         > Informace o tom, jak přidat vlastní ovládací prvky do seznamu ovládacích prvků, které můžete vybrat pro položky v okně **zdroje dat** , naleznete v tématu [Přidání vlastních ovládacích prvků do okna zdroje dat](../data-tools/add-custom-controls-to-the-data-sources-window.md).
@@ -90,7 +90,7 @@ ms.locfileid: "72657428"
 
     |Vlastnost|Vysvětlivky k nastavení|
     |--------------|----------------------------|
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Tato vlastnost určuje kolekci nebo vazbu, která se používá k získání dat zobrazených v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na <xref:System.Windows.Data.CollectionViewSource> pro nadřazená data, která jste přetáhli do ovládacího prvku.|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Tato vlastnost určuje kolekci nebo vazbu, která se používá k získání dat zobrazených v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na <xref:System.Windows.Data.CollectionViewSource> Nadřazená data, která jste přetáhli do ovládacího prvku.|
     |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Tato vlastnost určuje cestu položky dat, která se zobrazí v ovládacím prvku. Sada Visual Studio nastaví tuto vlastnost na první sloupec nebo vlastnost v nadřazených datech za primární klíč, který má datový typ String.<br /><br /> Pokud chcete zobrazit v nadřazených datech jiný sloupec nebo vlastnost, změňte tuto vlastnost na cestu jiné vlastnosti.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio váže tuto vlastnost k sloupci nebo vlastnosti podřízených dat, která jste přetáhli do návrháře. Toto je cizí klíč pro nadřazená data.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Sada Visual Studio nastaví tuto vlastnost na cestu sloupce nebo vlastnosti podřízených dat, která je cizím klíčem pro nadřazená data.|

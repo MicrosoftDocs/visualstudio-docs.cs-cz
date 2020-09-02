@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e2db8596c1c16f5c9fb54a8c7c867b06e997b7b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657712"
 ---
 # <a name="evaluate-statement-command"></a>Ohodnotit příkaz – příkaz
@@ -32,19 +32,19 @@ Vyhodnotí a zobrazí daný příkaz.
 Debug.EvaluateStatement text
 ```
 
-## <a name="arguments"></a>Arguments
- `text` nutné. Příkaz, který se má vyhodnotit
+## <a name="arguments"></a>Argumenty
+ `text` Požadovanou. Příkaz, který se má vyhodnotit
 
 ## <a name="remarks"></a>Poznámky
  Okno, které slouží k zadání příkazu **EvaluateStatement** , určuje, zda je znak rovná se (=) interpretován jako operátor porovnání nebo jako operátor přiřazení.
 
- V **příkazovém** okně je znak rovná se (=) interpretován jako operátor porovnání. Takže pokud se například hodnoty proměnných `a` a `b` liší, pak příkaz
+ V **příkazovém** okně je znak rovná se (=) interpretován jako operátor porovnání. Takže pokud se například hodnoty proměnných `a` `b` liší, pak příkaz
 
 ```
 >Debug.EvaluateStatement(a=b)
 ```
 
- Vrátí hodnotu `false`.
+ Vrátí hodnotu `false` .
 
  V **příkazovém podokně** je naopak znak rovná se (=) interpretován jako operátor přiřazení. Například příkaz
 
@@ -52,7 +52,7 @@ Debug.EvaluateStatement text
 >Debug.EvaluateStatement(a=b)
 ```
 
- se přiřadí proměnné `a` hodnotě proměnné `b`.
+ se přiřadí k proměnné `a` s hodnotou proměnné `b` .
 
 ## <a name="example"></a>Příklad
 

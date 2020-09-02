@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTY_FIELDS | Dokumentace Microsoftu
+title: THREADPROPERTY_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc0e0f7cae4aed887809c22bda0cd6a9ed50307f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204810"
 ---
-# <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
+# <a name="threadproperty_fields"></a>THREADPROPERTY_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jaké informace o vlákno má být načtena.  
+Určuje, jaké informace o vlákně se mají načíst.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_THREADPROPERTY_FIELDS {   
@@ -53,37 +53,37 @@ public enum enum_THREADPROPERTY_FIELDS { 
   
 ## <a name="members"></a>Členové  
  TPF_ID  
- Inicializace/použít `dwThreadId` pole [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury.  
+ Inicializujte nebo použijte `dwThreadId` pole struktury [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) .  
   
  TPF_SUSPENDCOUNT  
- Inicializace/použít `dwSuspendCount` pole `THREADPROPERTIE`struktura.  
+ Inicializujte nebo použijte `dwSuspendCount` pole `THREADPROPERTIE` struktury S.  
   
  TPF_STATE  
- Inicializace/použít `dwThreadState` pole `THREADPROPERTIE`struktura.  
+ Inicializujte nebo použijte `dwThreadState` pole `THREADPROPERTIE` struktury S.  
   
  TPF_PRIORITY  
- Inicializace/použít `bstrPriority` pole `THREADPROPERTIE`struktura.  
+ Inicializujte nebo použijte `bstrPriority` pole `THREADPROPERTIE` struktury S.  
   
  TPF_NAME  
- Inicializace/použít `bstrName` pole `THREADPROPERTIE`struktura.  
+ Inicializujte nebo použijte `bstrName` pole `THREADPROPERTIE` struktury S.  
   
  TPF_LOCATION  
- Inicializace/použít `bstrLocation` pole `THREADPROPERTIE`struktura.  
+ Inicializujte nebo použijte `bstrLocation` pole `THREADPROPERTIE` struktury S.  
   
  TPF_ALLFIELDS  
  Určuje všechna pole.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předány jako argument [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) indikace které pole [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury mají být inicializovány.  
+ Tyto hodnoty jsou předány jako argument metodě [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) k určení, která pole struktury [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) mají být inicializována.  
   
- Tyto hodnoty jsou také používány v `dwFields` člena `THREADPROPERTIES` struktury k označení pole, která se používá a je platný.  
+ Tyto hodnoty se používají také v `dwFields` členu `THREADPROPERTIES` struktury k označení, která pole se používají a jsou platná.  
   
- Tyto příznaky lze kombinovat pomocí logické bitové `OR`.  
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -1,5 +1,5 @@
 ---
-title: Enableeditoflocationfield – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: Enableeditoflocationfield – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,22 +11,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6823b462f884e06e1729c9bb4777cc166b34ea7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204622"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField – element (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, pokud uživatel může upravovat pole umístění.  
+Určuje, zda uživatel může upravit pole umístění.  
   
- \<Vstemplate – >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<EnableEditOfLocationField>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>  
@@ -39,26 +39,26 @@ Určuje, pokud uživatel může upravovat pole umístění.
  Žádné  
   
 ### <a name="child-elements"></a>Podřízené elementy  
- Žádný  
+ Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která udává určuje, jestli uživatel může upravovat **umístění** textového pole na **nový projekt** dialogové okno.  
+ Text musí být buď `true` nebo `false` , což značí, zda může uživatel upravit umístění v textovém poli **umístění** v dialogovém okně **Nový projekt** .  
   
 ## <a name="remarks"></a>Poznámky  
- `EnableEditOfLocationField` je volitelný prvek. Výchozí hodnota je `true`, který umožňuje uživateli upravit hodnotu v **umístění** textové pole **nový projekt** dialogové okno.  
+ `EnableEditOfLocationField` je volitelný prvek. Výchozí hodnota je `true` , která umožňuje uživateli upravit hodnotu v textovém poli **umístění** v dialogovém okně **Nový projekt** .  
   
- V **nový projekt** dialogové okno, **umístění** textového pole určuje adresář, ve kterém je uložený nový projekt.  
+ V dialogovém okně **Nový projekt** Určuje textové pole **umístění** adresář, do kterého se uloží nový projekt.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikace Windows.  
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] aplikaci systému Windows.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -87,5 +87,5 @@ Určuje, pokud uživatel může upravovat pole umístění.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

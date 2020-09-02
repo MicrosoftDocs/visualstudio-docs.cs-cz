@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlines – | Dokumentace Microsoftu
+title: 'IDiaSession:: findLines | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4cf6ff2f1484255fc6c535ce764a5c6335161b44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151679"
 ---
 # <a name="idiasessionfindlines"></a>IDiaSession::findLines
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte čísla řádků v rámci zadaného kompilace a identifikátory zdrojového souboru.  
+Načte čísla řádků v rámci zadaných identifikátorů kompilantu a zdrojových souborů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ HRESULT findLines ( 
   
 #### <a name="parameters"></a>Parametry  
  `compiland`  
- [in] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující souboru pro kompilaci. Pomocí tohoto rozhraní jako kontext, ve kterém chcete hledat čísla řádků.  
+ pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) představující kompilantu. Toto rozhraní použijte jako kontext, ve kterém chcete vyhledat čísla řádků.  
   
  `file`  
- [in] [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt představující zdrojový soubor, ve kterém chcete hledat čísla řádků.  
+ pro Objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) představující zdrojový soubor, ve kterém chcete vyhledat čísla řádků.  
   
  `ppResult`  
- [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) načíst objekt, který obsahuje seznam čísel řádků.  
+ mimo Vrátí objekt [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) , který obsahuje seznam čísel řádků, které se načetly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
- [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
- [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md)   
+ [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

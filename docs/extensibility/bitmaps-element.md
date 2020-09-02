@@ -1,5 +1,5 @@
 ---
-title: Prvek rastrů | Dokumenty společnosti Microsoft
+title: Rastrové obrázky – element | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 85310923134a6db59f1b6a3a15ac4b96a127e239
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739985"
 ---
-# <a name="bitmaps-element"></a>Bitmapový prvek
-Seskupí prvky [bitmapového prvku.](../extensibility/bitmap-element.md)
+# <a name="bitmaps-element"></a>Rastrové obrázky – element
+Seskupuje prvky [rastrového elementu](../extensibility/bitmap-element.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Bitmaps>
@@ -30,27 +30,27 @@ Seskupí prvky [bitmapového prvku.](../extensibility/bitmap-element.md)
 </Bitmaps>
 ```
 
-## <a name="attributes-and-elements"></a>Atributy a prvky
+## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Podmínka|Nepovinný parametr. Viz [Podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Bitmapový prvek](../extensibility/bitmaps-element.md)|Seskupí bitmapové prvky.|
-|[Bitmapový prvek](../extensibility/bitmap-element.md)|Definuje bitmapu.|
+|[Rastrové obrázky – element](../extensibility/bitmaps-element.md)|Seskupuje rastrové prvky.|
+|[Rastrový element](../extensibility/bitmap-element.md)|Definuje rastrový obrázek.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 |Element|Popis|
 |-------------|-----------------|
-|[Element příkazy](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
+|[Command – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|
 
 ## <a name="example"></a>Příklad
 
@@ -63,5 +63,5 @@ Seskupí prvky [bitmapového prvku.](../extensibility/bitmap-element.md)
 ```
 
 ## <a name="see-also"></a>Viz také
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

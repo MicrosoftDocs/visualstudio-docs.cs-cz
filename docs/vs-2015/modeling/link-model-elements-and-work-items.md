@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ee4fea9e3fb1d5b4d27b1d520ac2ab036747f73d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657634"
 ---
 # <a name="link-model-elements-and-work-items"></a>Propojení prvků modelu a pracovních položek
@@ -75,9 +75,9 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
 
 - [Odstranit propojení mezi prvky modelu a pracovními položkami](#RemoveLinks)
 
-- [Odstraňování potíží](#Troubleshooting)
+- [Řešení potíží](#Troubleshooting)
 
-## <a name="ConnectTFS"></a>Připojení k týmovému projektu
+## <a name="connect-to-a-team-project"></a><a name="ConnectTFS"></a> Připojení k týmovému projektu
  Aby bylo možné vytvořit, zobrazit nebo odebrat odkazy, musíte se nejdřív připojit k vašemu týmovému projektu.
 
 1. V nabídce **tým** vyberte **Spravovat připojení** , aby se zobrazilo okno Team Explorer.
@@ -86,7 +86,7 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
 
 3. V **Team Explorer**vyberte projekt, ve kterém chcete vytvořit, propojit nebo zobrazit pracovní položky.
 
-## <a name="LinkNew"></a>Propojení prvku modelu s novou pracovní položkou
+## <a name="link-a-model-element-to-a-new-work-item"></a><a name="LinkNew"></a> Propojení prvku modelu s novou pracovní položkou
 
 1. Ujistěte se, že jste připojeni k instanci serveru TFS, kterou chcete použít.
 
@@ -101,7 +101,7 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
 > [!WARNING]
 > Aby bylo možné vytvořit nebo propojit pracovní položku, musíte být již připojeni ke správě zdrojového kódu TFS (SCC). Pokud se pokusíte otevřít připojení k jinému SCC TFS, Visual Studio automaticky zavře aktuální řešení. Před pokusem o vytvoření nebo propojení pracovní položky se ujistěte, že jste již připojeni k odpovídajícímu SCC. V novějších verzích sady Visual Studio nejsou příkazy nabídky k dispozici, pokud nejste připojeni k SCC.
 
-## <a name="LinkExisting"></a>Propojení prvku modelu s existující pracovní položkou
+## <a name="link-a-model-element-to-an-existing-work-item"></a><a name="LinkExisting"></a> Propojení prvku modelu s existující pracovní položkou
  Při propojování prvků modelu s pracovními položkami začněte z prvku modelu, nikoli z pracovní položky.
 
 1. Ujistěte se, že jste připojeni k instanci serveru TFS, kterou chcete použít.
@@ -125,7 +125,7 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
 > [!WARNING]
 > Aby bylo možné vytvořit nebo propojit pracovní položku, musíte být již připojeni ke správě zdrojového kódu TFS (SCC). Pokud se pokusíte otevřít připojení k jinému SCC TFS, Visual Studio automaticky zavře aktuální řešení. Před pokusem o vytvoření nebo propojení pracovní položky se ujistěte, že jste již připojeni k odpovídajícímu SCC. V novějších verzích sady Visual Studio nejsou příkazy nabídky k dispozici, pokud nejste připojeni k SCC.
 
-## <a name="OpenWorkItem"></a>Zobrazení pracovních položek propojených s prvkem modelu
+## <a name="view-work-items-linked-to-a-model-element"></a><a name="OpenWorkItem"></a> Zobrazení pracovních položek propojených s prvkem modelu
 
 1. V **Team Explorer**se ujistěte, že jste připojeni k týmovému projektu, kde jsou pracovní položky propojeny s prvkem modelu.
 
@@ -134,7 +134,7 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
     > [!NOTE]
     > Zobrazí se pouze pracovní položky z aktuálně připojeného serveru. Pokud nevidíte žádné pracovní položky, ujistěte se, že jste připojení ke správnému serveru v **Team Explorer**.
 
-## <a name="ViewLinkedModels"></a>Zobrazení elementů modelu propojených s pracovní položkou
+## <a name="view-model-elements-linked-to-a-work-item"></a><a name="ViewLinkedModels"></a> Zobrazení elementů modelu propojených s pracovní položkou
  Můžete zobrazit diagramy modelování a prvky, které jsou propojeny s pracovní položkou v Visual Studio Team Services a v Team Foundation Server 2012 nebo novějším. Pracovní položky mohou být například spojený s modely tříd, jež zobrazují návrh nových tříd, které budou implementovány.
 
 1. V **Team Explorer**se ujistěte, že jste připojeni k týmovému projektu, kde jsou prvky modelu propojeny s pracovní položkou.
@@ -146,31 +146,31 @@ Můžete sledovat úkoly, testovací případy, chyby, požadavky, problémy a d
 
      ![Otevřít propojený prvek modelu z pracovní položky](../modeling/media/workitem-openlinkedmodelelement.png "WorkItem_OpenLinkedModelElement")
 
-## <a name="RemoveLinks"></a>Odstranit propojení mezi prvky modelu a pracovními položkami
+## <a name="delete-links-between-model-elements-and-work-items"></a><a name="RemoveLinks"></a> Odstranit propojení mezi prvky modelu a pracovními položkami
  Odeberte propojené pracovní položky, přičemž začněte od prvku modelu. Tato operace z pracovní položky odebere vzájemné propojení s daným prvkem modelu. Pokud byste začali s pracovní položkou, k odstranění vzájemných propojení mezi prvkem modelu a pracovní položkou nedojde.
 
 1. V diagramu modelování nebo v **Průzkumníku modelů UML**otevřete místní nabídku pro prvek modelu.
 
 2. Vyberte možnost **odebrat pracovní položky**.
 
-     \- nebo-
+     \- ani
 
     1. Zvolte **vlastnosti**a pak **pracovní položky** , kde se zobrazí počet propojených pracovních položek.
 
-    2. Ve vlastnosti **work items** klikněte na tlačítko se třemi tečkami **[...]** .
+    2. Ve vlastnosti **work items** klikněte na tlačítko se třemi tečkami **[...]**.
 
         > [!NOTE]
         > Zobrazí se pouze pracovní položky na aktuálním serveru. Pokud je seznam prázdný, ale počet pracovních položek není nula, ujistěte se, že jste připojeni ke správnému serveru v **Team Explorer**.
 
-3. V části **Odebrat odkazy na pracovní položky**vymažte vybrané položky, které chcete odpojit. Klikněte na **tlačítko OK**.
+3. V části **Odebrat odkazy na pracovní položky**vymažte vybrané položky, které chcete odpojit. Vyberte **OK**.
 
-## <a name="Troubleshooting"></a>Při
+## <a name="troubleshooting"></a><a name="Troubleshooting"></a> Při
 
-|**Chybu**|**Možná příčina**|**Rozhodnutí**|
+|**Problém**|**Možná příčina**|**Řešení**|
 |---------------|------------------------|--------------------|
-|Nelze najít prvek modelu, který chcete propojit.|Element může být v diagramu v projektu modelování, který je v [!INCLUDE[esprscc](../includes/esprscc-md.md)]. Pravděpodobně nemáte pracovní prostor, který se mapuje na diagram.|Namapujte pracovní prostor na projekt modelování a diagram. Pokud nemáte pracovní prostor, pak je třeba jej vytvořit.<br /><br /> Chybová zpráva, která se pro tuto chybu objeví, obsahuje cestu, kterou lze namapovat na pracovní prostor.<br /><br /> Viz téma [Vytvoření a práce s pracovními prostory](https://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a).|
+|Nelze najít prvek modelu, který chcete propojit.|Element může být v diagramu v projektu modelování, který je v [!INCLUDE[esprscc](../includes/esprscc-md.md)] . Pravděpodobně nemáte pracovní prostor, který se mapuje na diagram.|Namapujte pracovní prostor na projekt modelování a diagram. Pokud nemáte pracovní prostor, pak je třeba jej vytvořit.<br /><br /> Chybová zpráva, která se pro tuto chybu objeví, obsahuje cestu, kterou lze namapovat na pracovní prostor.<br /><br /> Viz téma [Vytvoření a práce s pracovními prostory](https://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a).|
 |Nelze nalézt propojený prvek modelu.|Propojený prvek může být na diagramu, který byl přesunut, přejmenován nebo odstraněn.|1. v pracovní položce odstraňte odkaz na prvek modelu.<br />2. Vytvořte nový odkaz z pracovní položky na prvek modelu.|
-|Pracovní položka nemá očekávané propojené prvky modelu.|Pracovní položka ukazuje propojený prvek vrstvy, pouze pokud bylo propojení vytvořeno z pracovní položky. Pokud váš tým nepoužívá [!INCLUDE[esprscc](../includes/esprscc-md.md)], použije se k vytvoření propojení místní cesta k diagramům. Pokud je projekt modelování a jeho diagramy v [!INCLUDE[esprscc](../includes/esprscc-md.md)], všichni členové týmu, kteří mají přístup k projektu, mohou zobrazit propojené prvky v pracovních položkách.|Zkuste aktualizovat pracovní položku.|
+|Pracovní položka nemá očekávané propojené prvky modelu.|Pracovní položka ukazuje propojený prvek vrstvy, pouze pokud bylo propojení vytvořeno z pracovní položky. Pokud váš tým nepoužívá, použije se [!INCLUDE[esprscc](../includes/esprscc-md.md)] k vytvoření propojení místní cesta k diagramům. Pokud se projekt modelování a jeho diagramy nacházejí v [!INCLUDE[esprscc](../includes/esprscc-md.md)] , všichni členové týmu, kteří mají přístup k projektu, mohou zobrazit propojené prvky v pracovních položkách.|Zkuste aktualizovat pracovní položku.|
 |Odstraněním propojení k prvku modelu z pracovní položky neodstraníte propojení prvku modelu s pracovní položkou.||Odstraňte odkaz na pracovní položku, přičemž začněte od prvku modelu.|
 
 ## <a name="see-also"></a>Viz také

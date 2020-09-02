@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::Parse | Dokumenty společnosti Microsoft
+title: IDebugExpressionEvaluator::P Arse | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d1af9d3f253a9849f54bb5a50d432b98eb4ad7b8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729489"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
@@ -51,28 +51,28 @@ int Parse(
 
 ## <a name="parameters"></a>Parametry
 `upstrExpression`\
-[v] Řetězec výrazu, který má být analyzován.
+pro Řetězec výrazu, který se má analyzovat.
 
 `dwFlags`\
-[v] Kolekce [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) konstanty, které určují, jak má být výraz analyzován.
+pro Kolekce konstant [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) , které určují, jak má být výraz analyzován.
 
 `nRadix`\
-[v] Radix slouží k interpretaci jakýchkoli číselných informací.
+pro Číselná soustava, která se má použít k interpretaci jakýchkoli číselných informací.
 
 `pbstrError`\
-[out] Vrátí chybu jako text čitelný pro člověka.
+mimo Vrátí chybu jako text čitelný lidmi.
 
 `pichError`\
-[out] Vrátí pozici znaku začátku chyby v řetězci výrazu.
+mimo Vrátí pozici znaku začátku chyby v řetězci výrazu.
 
 `ppParsedExpression`\
-[out] Vrátí analyzovaný výraz v objektu [IDebugParsedExpression.](../../../extensibility/debugger/reference/idebugparsedexpression.md)
+mimo Vrátí analyzovaný výraz v objektu [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda vytváří analyzovaný výraz, nikoli skutečnou hodnotu. Analyzovaný výraz je připraven k vyhodnocení, to znamená, že převedenna hodnotu.
+ Tato metoda vytvoří analyzovaný výraz, nikoli skutečnou hodnotu. Analyzovaný výraz je připravený k vyhodnocení, tj., který je převeden na hodnotu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

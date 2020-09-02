@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: nastavení vlastností analýzy kódu proC++ projekty v jazyce C | Microsoft Docs'
+title: 'Postupy: nastavení vlastností analýzy kódu pro projekty C-C + + | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -20,10 +20,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: b2fb3cb81b49fd4b8cc83e0548110d2025c7488d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277983"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>Postupy: Nastavení vlastností analýzy kódu pro projekty C/C++
@@ -38,7 +38,7 @@ Můžete nakonfigurovat, která pravidla Nástroj pro analýzu kódu používá 
  Seznam **konfigurací** a seznam **platforem** umožňuje použít různá nastavení analýzy kódu pro různé konfigurace projektu a kombinace platforem. Například můžete směrovat analýzu kódu a použít jednu sadu pravidel pro projekt pro sestavení pro ladění a jinou sadu pro sestavení vydaných verzí.  
   
 ## <a name="enabling-code-analysis"></a>Povolení analýzy kódu  
- Můžete se rozhodnout, jestli chcete pro svůj projekt povolit analýzu kódu, a to tak, že vyberete **možnost povolit analýzu kódu pro sestavení C/C++ on**. V kombinaci se seznamem **konfigurací** můžete například rozhodnout zakázat analýzu kódu pro sestavení ladění a povolit ji pro sestavení vydaných verzí.  
+ Můžete se rozhodnout, jestli chcete pro svůj projekt povolit analýzu kódu, a to výběrem možnosti **Povolit analýzu kódu pro C/C++ při sestavení**. V kombinaci se seznamem **konfigurací** můžete například rozhodnout zakázat analýzu kódu pro sestavení ladění a povolit ji pro sestavení vydaných verzí.  
   
  Pokud projekt obsahuje spravovaný kód, můžete rozhodnout, zda chcete povolit nebo zakázat analýzu kódu výběrem možnosti **Povolit analýzu kódu při sestavení**.  
   
@@ -53,5 +53,5 @@ Můžete nakonfigurovat, která pravidla Nástroj pro analýzu kódu používá 
  Pokud projekt obsahuje spravovaný kód, můžete vybrat pravidla, která se mají použít při analýze kódu výběrem sady pravidel ze seznamu **Spustit sadu pravidel** .  
   
 ## <a name="see-also"></a>Viz také  
- [Analýza spravovaného kódu  kvality](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)  
+ [Analýza kvality spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [Upozornění Analýzy kódu pro C/C++](../code-quality/code-analysis-for-c-cpp-warnings.md)

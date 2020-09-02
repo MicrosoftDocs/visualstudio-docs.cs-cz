@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: obnovení C# fragmentů refaktoringu | Microsoft Docs'
+title: 'Postupy: obnovení fragmentů refaktoringu jazyka C# | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,26 +13,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6ae3f1d74a482192d3782aaa87baa816694abcf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670789"
 ---
 # <a name="how-to-restore-c-refactoring-snippets"></a>Postupy: Obnovení fragmentů kódu refaktoringu jazyka C#
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-C#operace refaktoringu spoléhají na fragmenty kódu, které se nacházejí v následujícím adresáři:
+Operace refaktoringu v jazyce C# spoléhají na fragmenty kódu, které se nacházejí v následujícím adresáři:
 
- *Instalační adresář*\Microsoft Visual Studio 14,0 \VC#\Snippets \\*Language ID*\Refactoring
+ *Instalační adresář*\Microsoft Visual Studio 14.0 \ VC # \SNIPPETS \\ *Language ID*\Refactoring
 
- Pokud se tento adresář refaktoringu nebo nějaké soubory v tomto adresáři odstraní nebo jsou poškozené, C# operace refaktoringu nemusí v integrovaném vývojovém prostředí fungovat. Následující postupy vám mohou pomáhat s obnovením C# fragmentů kódu refaktoringu.
+ Pokud je tento adresář refaktoringu nebo všechny soubory v tomto adresáři smazány nebo poškozeny, nemusí operace refaktoringu v jazyce C# fungovat v integrovaném vývojovém prostředí. Následující postupy vám pomohou obnovit fragmenty kódu pro refaktoring jazyka C#.
 
-### <a name="to-verify-c-refactoring-snippets-are-available-through-the-code-snippet-manager"></a>Pro ověření C# , že fragmenty refaktoringu jsou k dispozici prostřednictvím Správce fragmentů kódu
+### <a name="to-verify-c-refactoring-snippets-are-available-through-the-code-snippet-manager"></a>K ověření fragmentů refaktoringu jazyka C# jsou k dispozici prostřednictvím Správce fragmentů kódu
 
 1. V nabídce **nástroje** vyberte **Správce fragmentů kódu**.
 
-2. V dialogovém okně **Správce fragmentů kódů** vyberte v rozevíracím seznamu **jazyk** možnost **Visual C#**  .
+2. V dialogovém okně **Správce fragmentů kódů** vyberte v rozevíracím seznamu **jazyk** možnost **Visual C#** .
 
      Složka **refaktoringu** by se měla zobrazit v seznamu složek stromového zobrazení.
 
@@ -42,19 +42,19 @@ C#operace refaktoringu spoléhají na fragmenty kódu, které se nacházejí v n
 
 2. V nabídce **nástroje** vyberte **Správce fragmentů kódu**.
 
-3. V dialogovém okně **Správce fragmentů kódů** vyberte v rozevíracím seznamu **jazyk** možnost **Visual C#**  .
+3. V dialogovém okně **Správce fragmentů kódů** vyberte v rozevíracím seznamu **jazyk** možnost **Visual C#** .
 
-4. Klikněte na tlačítko **Přidat**. Zobrazí se dialogové okno **adresáře fragmentů kódu** , které vám pomůže najít a zadat adresář, který se má přidat zpátky do Správce fragmentů kódu.
+4. Klikněte na **Přidat**. Zobrazí se dialogové okno **adresáře fragmentů kódu** , které vám pomůže najít a zadat adresář, který se má přidat zpátky do Správce fragmentů kódu.
 
 5. Vyhledejte složku **refaktoringu** , jejíž cesta k adresáři je:
 
-     *Instalační adresář*\Microsoft Visual Studio 14,0 \VC#\Snippets \\*Language ID*\Refactoring
+     *Instalační adresář*\Microsoft Visual Studio 14.0 \ VC # \SNIPPETS \\ *Language ID*\Refactoring
 
      Skutečná cesta je pro výchozí instalaci podobná následující:
 
-     C:\Program Files\Microsoft Visual Studio 14,0 \VC#\Snippets\1033\Refactoring.
+     C:\Program Files\Microsoft Visual Studio 14.0 \ VC # \Snippets\1033\Refactoring.
 
 6. V dialogovém okně **fragmenty** kódu klikněte na **otevřít** a potom ve Správci fragmentů kódů klikněte na **OK** .
 
 ## <a name="see-also"></a>Viz také
- [C# ](../ide/visual-csharp-code-snippets.md) [Fragmenty kódu](../ide/code-snippets.md) pro [C#refaktoring](../csharp-ide/refactoring-csharp.md) fragmentů kódu vizuálu ()
+ Fragmenty [kódu](../ide/code-snippets.md) v jazyce [Visual C#](../ide/visual-csharp-code-snippets.md) [refaktoringu (C#)](../csharp-ide/refactoring-csharp.md)
