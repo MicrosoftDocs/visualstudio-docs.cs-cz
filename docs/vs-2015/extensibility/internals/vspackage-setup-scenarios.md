@@ -1,5 +1,5 @@
 ---
-title: Scénáře instalace balíčku VSPackage | Dokumentace Microsoftu
+title: Scénáře instalace VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,71 +11,71 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a09b794a6cd81966df45a1b30182040d7ab9335e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696747"
 ---
 # <a name="vspackage-setup-scenarios"></a>Scénáře instalace balíčku VSPackage
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Je důležité při návrhu balíčku VSPackage instalační program pro flexibilitu. Například možná budete muset v budoucnu vydání opravy zabezpečení, nebo můžete změnit strategii, která vyžaduje podpora důkladné verzí vedle sebe.  
+Je důležité navrhnout instalační program VSPackage pro flexibilitu. Například může být potřeba opravit opravu zabezpečení v budoucnu nebo můžete změnit obchodní strategii, která vyžaduje důkladnou podporu souběžného používání verzí.  
   
- V [podporuje více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md), si můžete přečíst o, jaké výhody a problémy podpory – souběžnými instalacemi sady [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] s sdílené nebo vedle sebe instalací vašeho balíčku VSPackage. Stručně řečeno, rozšíření VSPackages vedle sebe získáte největší flexibilitu pro podporu nových funkcí služby [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ V [podpoře více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md)si můžete přečíst informace o výhodách a potížích s podporou souběžných instalací [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] s buď sdílených nebo souběžnými instalacemi sady VSPackage. V krátkých a souběžných rozhraních VSPackage získáte největší flexibilitu při podpoře nových funkcí nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- Scénáře popsané v tomto tématu nejsou vaší jedinou možností, ale jsou uvedeny jako doporučené osvědčené postupy.  
+ Scénáře popsané v tomto tématu nejsou vaší jedinou možností, ale zobrazují se jako doporučené osvědčené postupy.  
   
-## <a name="components-privacy-and-sharing"></a>Komponenty, ochrany osobních údajů a sdílení  
+## <a name="components-privacy-and-sharing"></a>Komponenty, ochrana osobních údajů a sdílení  
   
-##### <a name="make-your-components-independent"></a>Aby vaše komponenty nezávislý  
- Po identifikaci a naplnit součásti, přiřadit `GUID`a nasadíte komponentu, nebudete moct změnit jeho složení. Pokud změníte složení komponenty výsledné komponenty musí být nové komponenty s novou `GUID`. Zadaný tyto skutečnosti, je tím, že každá komponenta nezávislá, běžných jednotka poskytnuté nejvyšší flexibilitu správy verzí. Další informace o pravidlech, kterými se řídí součásti najdete v tématu [Změna kódu komponent](https://msdn.microsoft.com/library/aa367849\(VS.85\).aspx) a [co se stane, když je součástí pravidla jsou rozdělená?](https://msdn.microsoft.com/library/aa372795\(VS.85\).aspx).  
+##### <a name="make-your-components-independent"></a>Nezávislé na komponentách  
+ Jakmile identifikujete a naplníte komponentu, přiřadíte a `GUID` nasadíte komponentu, nemůžete změnit její složení. Pokud změníte kompozici komponenty, výsledná součást musí být novou součástí s novým `GUID` . Vzhledem k těmto skutečnostem je flexibilita nejvyšší verze zajištěna tím, že se každá komponenta nezávislá, samostatná jednotka. Další informace o pravidlech, kterými se řídí komponenty, naleznete v tématu [Změna kódu komponenty](https://msdn.microsoft.com/library/aa367849\(VS.85\).aspx) a [co se stane, pokud jsou pravidla komponent poškozena?](https://msdn.microsoft.com/library/aa372795\(VS.85\).aspx).  
   
-##### <a name="do-not-mix-shared-and-private-resources-in-a-component"></a>Nekombinujte sdílené a privátní zdroje v součásti  
- Počítání odkazů probíhá na úrovni součásti. V důsledku toho kombinování sdílené a privátní zdroje v jedné součásti znemožňuje aktualizovat soukromým prostředkům, jako je spustitelný soubor, aniž byste museli také přepsat sdílené prostředky. V tomto scénáři vytváří problémům se zpětnou kompatibilitou a brání vytváření funkce vedle sebe.  
+##### <a name="do-not-mix-shared-and-private-resources-in-a-component"></a>Nemíchat sdílené a soukromé prostředky v součásti  
+ Počítání odkazů probíhá na úrovni součásti. V důsledku toho, že kombinace sdílených a privátních prostředků v jedné součásti znemožňuje aktualizaci privátních prostředků, jako je spustitelný soubor, bez nutnosti přepsat sdílené prostředky. Tento scénář vytvoří problémy s nekompatibilitou a omezí vám vytváření souběžných funkcí.  
   
- Například hodnoty registru použije k registraci vašeho balíčku VSPackage pomocí [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] by měl být udržovány v komponentě odděleně od použitý k registraci vašeho balíčku VSPackage pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Sdílené soubory nebo hodnoty registru přejděte v ještě jiné součásti.  
+ Například hodnoty registru, které slouží k registraci VSPackage pomocí, [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] by měly být uchovávány v komponentě oddělené od verze používané k registraci VSPackage pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Sdílené soubory nebo hodnoty registru jdou ještě jinou součástí.  
   
-## <a name="scenario-1-shared-vspackage"></a>Scénář 1: Sdílené VSPackage  
- V tomto scénáři sdílené VSPackage (jeden binární soubor, který podporuje více verzí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]) je součástí balíčku Instalační služby systému Windows. Registrace s jednotlivými verzemi sady [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] řídí uživatelsky volitelných funkcí. To také znamená, že při zařazena do oddělené funkce, jednotlivé komponenty můžete vybrat jednotlivě pro instalaci nebo odinstalaci, umožňuje uživateli kontrolu nad integrace sady VSPackage v různých verzích [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. (Viz [funkce Instalační služby systému Windows](https://msdn.microsoft.com/library/aa372840\(VS.85\).aspx) Další informace o použití funkcí v balíčky Instalační služby systému Windows.)  
+## <a name="scenario-1-shared-vspackage"></a>Scénář 1: sdílený VSPackage  
+ V tomto scénáři je sdílený VSPackage (jeden binární soubor, který podporuje více verzí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ) dodán v balíčku Instalační služba systému Windows. Registrace s každou verzí nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je řízena funkcemi, které si vyberete uživatelem. Také to znamená, že při přiřazení k samostatným funkcím je možné každou komponentu vybrat jednotlivě pro instalaci nebo odinstalaci, přičemž uživatel bude řídit integraci rozhraní VSPackage do různých verzí nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . (Další informace o používání funkcí v balíčcích Instalační služba systému Windows najdete v tématu [funkce instalační služba systému Windows](https://msdn.microsoft.com/library/aa372840\(VS.85\).aspx) .)  
   
- ![Obrázek VSPackage sdílené VS](../../extensibility/internals/media/vs-sharedpackage.gif "VS_SharedPackage")  
-Sdílené instalačního programu balíčku VSPackage  
+ ![Obrázek VS Shared VSPackage](../../extensibility/internals/media/vs-sharedpackage.gif "VS_SharedPackage")  
+Shared VSPackage – instalační program  
   
- Jak je znázorněno na obrázku, sdílené komponenty jsou součástí Feat_Common funkci, která je vždy nainstalován. Tím, že funkce Feat_VS2002 a Feat_VS2003 viditelné, uživatelé si můžou vybrat během instalace do verzí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] chtějí balíčku VSPackage pro integraci. Uživatele můžete také používat režim údržby Instalační služby systému Windows k přidání nebo odebrání funkcí, které v tomto případě přidává a odebírá VSPackage registrační informace z různých verzí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Jak je znázorněno na obrázku, sdílené součásti jsou součástí funkce Feat_Common, která je vždy nainstalována. Díky tomu, že se funkce Feat_VS2002 a Feat_VS2003 zobrazí, mohou uživatelé zvolit v době instalace, do které verze chtějí sadu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackage integrovat. Uživatelé můžou k přidávání nebo odebírání funkcí použít taky režim údržby Instalační služba systému Windows, který v tomto případě přidává nebo odebírá registrační informace VSPackage z různých verzí nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 > [!NOTE]
-> Sloupec zobrazení funkce nastavení na hodnotu 0 skrývá ho. Hodnota sloupec nízké úrovně, jako je například 1, zajistí, že bude vždy nainstalován. Další informace najdete v tématu [INSTALLLEVEL vlastnost](https://msdn.microsoft.com/library/aa369536\(VS.85\).aspx) a [tabulka funkcí](https://msdn.microsoft.com/library/aa368585.aspx).  
+> Nastavení zobrazení sloupce funkce na hodnotu 0 skryje. Hodnota sloupce nízké úrovně, například 1, zajistí, že bude vždy nainstalována. Další informace najdete v tématu [vlastnost INSTALLLEVEL](https://msdn.microsoft.com/library/aa369536\(VS.85\).aspx) a [Tabulka funkcí](https://msdn.microsoft.com/library/aa368585.aspx).  
   
-## <a name="scenario-2-shared-vspackage-update"></a>Scénář 2: Aktualizace sdílené VSPackage  
- V tomto scénáři je dodáván aktualizovanou verzi instalačního programu balíčku VSPackage ve scénáři 1. Pro účely diskuse, tato aktualizace přidává podporu pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], ale mohou být také jednodušší zabezpečení opravy nebo oprava chyby aktualizace service pack. Pravidla Instalační služby Windows pro instalaci součásti novější vyžadují, nejsou znovu zkopírovány beze změny součástí už v systému. V takovém případě systém s verze 1.0 již přepsat aktualizované součásti Comp_MyVSPackage.dll a umožněte uživatelům si vybrat, chcete-li přidat novou funkci Feat_VS2005 s jeho součásti Comp_VS2005_Reg.  
+## <a name="scenario-2-shared-vspackage-update"></a>Scénář 2: sdílená aktualizace VSPackage  
+ V tomto scénáři je dodávána aktualizovaná verze instalačního programu VSPackage ve scénáři 1. Pro účely diskuze aktualizace přidává podporu pro [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , ale může to být také zjednodušená Oprava zabezpečení nebo aktualizace Service Pack s chybou. Pravidla Instalační služba systému Windows pro instalaci novějších komponent vyžadují, aby nezměněné součásti již v systému nebyly překopírovány. V takovém případě systém s verzí 1,0 již existuje, přepíše aktualizovanou součást Comp_MyVSPackage.dll a umožní uživatelům přidat novou funkci Feat_VS2005 pomocí Comp_VS2005_Reg komponenty.  
   
 > [!CAUTION]
-> Vždy, když je VSPackage sdílen mezi více verzí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], je nezbytné, že novějšími verzemi sady VSPackage zachování zpětné kompatibility se staršími verzemi sady [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pokud nejde udržovat zpětnou kompatibilitu, je nutné použít vedle sebe, privátní balíčky VSPackages. Další informace najdete v tématu [podporuje více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md).  
+> Pokaždé, když se VSPackage sdílí mezi více verzemi nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , je nezbytné, aby následující verze balíčku VSPackage udržovaly zpětnou kompatibilitu s předchozími verzemi nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Pokud nemůžete zachovat zpětnou kompatibilitu, je nutné použít souběžné soukromé VSPackage. Další informace najdete v tématu [Podpora více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md).  
   
- ![Obrázek balíčku aktualizace VS sdílené VS](../../extensibility/internals/media/vs-sharedpackageupdate.gif "VS_SharedPackageUpdate")  
-Sdílené instalačního programu aktualizace balíčku VSPackage  
+ ![Obrázek aktualizace balíčku vs Shared VS](../../extensibility/internals/media/vs-sharedpackageupdate.gif "VS_SharedPackageUpdate")  
+Instalační program pro Shared VSPackage Update  
   
- Tento scénář představuje nový instalační program balíčku VSPackage využití výhod podpory Windows instalačního programu pro dílčí upgrady. Uživatelé jednoduše nainstalovat verze 1.1 a upgradu verze 1.0. Není však nutné mít verzi 1.0 v systému. Stejný instalační program nainstaluje verze 1.1 v systému bez verze 1.0. Výhodou zadejte menší upgrady tímto způsobem je, že není nutné kvůli tomu provádět práci vývoj upgrade instalačního programu a instalační program, který plně produktu. Jeden instalační program nemá obě úlohy. Opravy zabezpečení nebo service pack může místo toho využijte výhod oprav Instalační služby systému Windows. Další informace najdete v tématu [opravy a upgrady](https://msdn.microsoft.com/library/aa370579\(VS.85\).aspx).  
+ Tento scénář prezentuje nový instalační program VSPackage s využitím podpory Instalační služba systému Windows pro menší upgrady. Uživatelé jednoduše nainstalují verzi 1,1 a upgradují verzi 1,0. Není však nutné mít v systému verzi 1,0. Stejný instalační program nainstaluje verzi 1,1 na systém bez verze 1,0. Výhodou pro zajištění menších upgradů je to, že nemusíte přecházet na práci s vývojem instalačního programu pro upgrade a úplného instalačního programu produktu. Jeden instalační program provede obě úlohy. Oprava zabezpečení nebo aktualizace Service Pack může místo toho využít výhod Instalační služba systému Windowsch oprav. Další informace najdete v tématu [opravy a upgrady](https://msdn.microsoft.com/library/aa370579\(VS.85\).aspx).  
   
-## <a name="scenario-3-side-by-side-vspackage"></a>Scénář 3: Vedle sebe VSPackage  
- Tento scénář nabízí dva instalační programy VSPackage – jeden pro každou verzi sady Visual Studio .NET 2003 a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Každý instalační program nainstaluje vedle sebe nebo privátní, balíčku VSPackage (ten, který je speciálně vytvořené a nainstalovaných pro konkrétní verzi [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]). Každý balíček VSPackage správy kódu je ve vlastní komponenty. V důsledku toho každá lze jednotlivě udržovat s opravami nebo údržby uvolní. Vzhledem k tomu, že knihovna DLL balíčku VSPackage je nyní specifické pro verzi, je bezpečné registrační informace patří pod stejnou komponentou jako knihovnu DLL.  
+## <a name="scenario-3-side-by-side-vspackage"></a>Scénář 3: souběžný VSPackage  
+ Tento scénář prezentuje dva instalační programy VSPackage – jeden pro každou verzi sady Visual Studio .NET 2003 a [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Každý instalační program nainstaluje souběžnou nebo soukromou sadu VSPackage (ta, která je speciálně sestavená a nainstalovaná pro konkrétní verzi nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ). Každý VSPackage je ve své vlastní součásti. V důsledku toho je každý z nich možné jednotlivě obsluhovat pomocí oprav nebo verzí údržby. Vzhledem k tomu, že knihovna VSPackage je nyní specifická pro verzi, je bezpečné zahrnout informace o registraci do stejné součásti jako knihovnu DLL.  
   
- ![Na straně VS&#45;podle&#45;grafiky VS balíčku na straně](../../extensibility/internals/media/vs-sbys-package.gif "VS_SbyS_Package")  
-Instalační program balíčku VSPackage vedle sebe  
+ ![&#45;na straně&#45;na straně obrázku VS. grafika balíčku](../../extensibility/internals/media/vs-sbys-package.gif "VS_SbyS_Package")  
+Souběžná instalace balíčku VSPackage  
   
- Každý instalační služba také zahrnuje kód, který je sdílen mezi dva instalační programy. Pokud instalaci sdílený kód do společného umístění instalace oba soubory .msi nainstaluje sdílený kód pouze jednou. Druhý instalační program právě zvýší počet odkazů na komponentu. Počet odkazů se zajistí, že pokud jeden z rozšíření VSPackages se odinstaluje, sdílený kód zůstane pro sady VSPackage. Po odinstalaci je také druhá VSPackage, sdílený kód se odeberou.  
+ Každý instalační program obsahuje také kód, který je sdílen mezi oběma instalačními programy. Pokud je sdílený kód nainstalován do společného umístění, instalace obou souborů. msi nainstaluje pouze jeden sdílený kód. Druhý instalační program pouze zvyšuje počet odkazů na součást. Počet odkazů zajišťuje, že pokud dojde k odinstalování jednoho ze VSPackage, sdílený kód zůstane pro druhý VSPackage. Pokud je druhý VSPackage odinstalován také, bude sdílený kód odebrán.  
   
-## <a name="scenario-4-side-by-side-vspackage-update"></a>Scénář 4: Aktualizace balíčku VSPackage vedle sebe  
- V tomto scénáři vaše VSPackage pro [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] utrpělo z zabezpečení ohrožení zabezpečení a potřebujete vydat aktualizaci. Jako ve scénáři 2 můžete vytvořit nový soubor MSI, který aktualizuje existující instalace zahrnovat opravy zabezpečení, jakož i nasadit nové instalace s opravou zabezpečení již v místě.  
+## <a name="scenario-4-side-by-side-vspackage-update"></a>Scénář 4: souběžná aktualizace VSPackage na straně  
+ V tomto scénáři jste si VSPackage [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] z důvodu ohrožení zabezpečení a potřebujete vydat aktualizaci. Stejně jako ve scénáři 2 můžete vytvořit nový soubor. msi, který aktualizuje existující instalaci, aby zahrnoval opravu zabezpečení, a taky nasadit nové instalace s opravou zabezpečení, které už jsou v platnosti.  
   
- V tomto případě je sady VSPackage spravované VSPackage nainstalované v globální mezipaměti sestavení (GAC). Když znovu vytvoříte tak, aby obsahovala opravy zabezpečení, je nutné změnit revize číselnou část čísla verze sestavení. Informace o registraci nové číslo verze sestavení přepíše předchozí verze, což způsobí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načíst oprava sestavení.  
+ V tomto případě je VSPackage spravovaným rozhraním VSPackage nainstalovaným v globální mezipaměti sestavení (GAC). Při opětovném sestavení, aby zahrnoval opravu zabezpečení, je nutné změnit číslo verze revize čísla verze sestavení. Informace o registraci pro nové číslo verze sestavení přepíší předchozí verzi, což by způsobilo [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] načtení pevného sestavení.  
   
- ![Na straně VS&#45;podle&#45;aktualizace balíčku VS straně obrázek](../../extensibility/internals/media/vs-sbys-packageupdate.gif "VS_SbyS_PackageUpdate")  
-Instalační program aktualizace balíčku VSPackage vedle sebe  
+ ![&#45;na straně a na&#45;straně VS – obrázek aktualizace balíčku VS](../../extensibility/internals/media/vs-sbys-packageupdate.gif "VS_SbyS_PackageUpdate")  
+Instalační program pro souběžnou aktualizaci VSPackage  
   
- **Poznámka:** Další informace o nasazení sestavení vedle sebe, naleznete v tématu [zjednodušuje nasazení a řešení knihovny DLL a tím zlepšují s rozhraním .NET Framework](https://msdn.microsoft.com/library/ms973843.aspx).  
+ **Poznámka:** Další informace o nasazení souběžných sestavení naleznete v tématu [zjednodušení nasazení a řešení Hell DLL pomocí .NET Framework](https://msdn.microsoft.com/library/ms973843.aspx).  
   
 ## <a name="see-also"></a>Viz také  
- [Windows Installer](https://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)   
+ [Instalační služba systému Windows](https://msdn.microsoft.com/library/cc185688\(VS.85\).aspx)   
  [Podpora více verzí sady Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

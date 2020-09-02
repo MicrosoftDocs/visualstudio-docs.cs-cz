@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 820f4ac8b154579664e01b12aa8146e4668cc17b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670668"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>Postupy: Určení událostí sestavení (Visual Basic)
@@ -45,13 +45,13 @@ Události sestavení v Visual Basic lze použít ke spouštění skriptů, maker
 4. Zadejte argumenty příkazového řádku pro akci před sestavením nebo po sestavení a pak klikněte na **OK**.
 
     > [!NOTE]
-    > Přidejte příkaz `call` před všechny příkazy po sestavení, které spouštějí soubory. bat. Například `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
+    > Přidejte `call` příkaz před všechny příkazy po sestavení, které spouštějí soubory. bat. Příkladem je `call C:\MyFile.bat` nebo `call C:\MyFile.bat call C:\MyFile2.bat`.
 
     > [!NOTE]
     > Pokud událost před sestavením nebo po sestavení není úspěšně dokončena, můžete ukončit sestavení tím, že se akce události ukončí s kódem jiným než nula (0), což označuje úspěšnou akci.
 
 ## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>Příklad: jak změnit informace o manifestu pomocí události po sestavení
- Následující postup ukazuje, jak nastavit minimální verzi operačního systému v manifestu aplikace pomocí příkazu. exe s názvem z události po sestavení (soubor. exe. manifest v adresáři projektu). Minimální verze operačního systému je číslo se čtyřmi částmi, například 4.10.0.0. K tomu příkaz změní část `<dependentOS>` manifestu:
+ Následující postup ukazuje, jak nastavit minimální verzi operačního systému v manifestu aplikace pomocí příkazu. exe s názvem z události po sestavení (soubor. exe. manifest v adresáři projektu). Minimální verze operačního systému je číslo se čtyřmi částmi, například 4.10.0.0. K tomu příkaz změní `<dependentOS>` část manifestu:
 
 ```
 <dependentOS>
@@ -63,17 +63,17 @@ Události sestavení v Visual Basic lze použít ke spouštění skriptů, maker
 
 #### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>Vytvoření příkazu. exe pro změnu manifestu aplikace
 
-1. Vytvořte konzolovou aplikaci pro příkaz. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.
+1. Vytvořte konzolovou aplikaci pro příkaz. V nabídce **Soubor** klikněte na položku **Nový** a potom klikněte na položku **Projekt**.
 
-2. V dialogovém okně **Nový projekt** , v uzlu **Visual Basic** vyberte možnost **Windows** a potom šablonu **Konzolová aplikace** . Pojmenujte projekt `ChangeOSVersionVB`.
+2. V dialogovém okně **Nový projekt** , v uzlu **Visual Basic** vyberte možnost **Windows** a potom šablonu **Konzolová aplikace** . Pojmenujte projekt `ChangeOSVersionVB` .
 
-3. V Module1. vb přidejte následující řádek k ostatním příkazům `Imports` v horní části souboru:
+3. V Module1. vb přidejte k ostatním `Imports` příkazům v horní části souboru následující řádek:
 
    ```
    Imports System.Xml
    ```
 
-4. Do `Sub Main` přidejte následující kód:
+4. Do tohoto pole přidejte následující kód `Sub Main` :
 
    ```
    Sub Main()
@@ -118,27 +118,27 @@ Události sestavení v Visual Basic lze použít ke spouštění skriptů, maker
 
     Příkaz přijímá dva argumenty. První argument je cesta k manifestu aplikace (to je složka, ve které proces sestavení vytvoří manifest, obvykle ProjectName. Publish). Druhým argumentem je nová verze operačního systému.
 
-5. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+5. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
-6. Zkopírujte soubor. exe do adresáře, jako je například `C:\TEMP\ChangeOSVersionVB.exe`.
+6. Zkopírujte soubor. exe do adresáře, jako je například `C:\TEMP\ChangeOSVersionVB.exe` .
 
    Dále vyvolejte tento příkaz v události po sestavení pro změnu manifestu aplikace.
 
 #### <a name="to-invoke-a-post-build-event-to-change-the-application-manifest"></a>Chcete-li vyvolat událost po sestavení pro změnu manifestu aplikace
 
-1. Vytvořte aplikaci pro Windows pro projekt, který chcete publikovat. V nabídce **soubor** klikněte na příkaz **Nový**a potom klikněte na **projekt**.
+1. Vytvořte aplikaci pro Windows pro projekt, který chcete publikovat. V nabídce **Soubor** klikněte na položku **Nový** a potom klikněte na položku **Projekt**.
 
-2. V dialogovém okně **Nový projekt** v uzlu **Visual Basic** vyberte možnost **Windows** a potom šablonu **aplikace systému Windows** . Pojmenujte projekt `VBWinApp`.
+2. V dialogovém okně **Nový projekt** v uzlu **Visual Basic** vyberte možnost **Windows** a potom šablonu **aplikace systému Windows** . Pojmenujte projekt `VBWinApp` .
 
 3. S projektem vybraným v **Průzkumník řešení**v nabídce **projekt** klikněte na **vlastnosti**.
 
-4. V Návrháři projektu přejít na stránku **publikovat** a nastavte **umístění pro publikování** na `C:\TEMP\`.
+4. V Návrháři projektu přejít na stránku **publikovat** a nastavte **umístění publikování** na `C:\TEMP\` .
 
 5. Publikujte projekt kliknutím na **Publikovat nyní**.
 
-     Soubor manifestu bude sestaven a umístěn do `C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest`. Chcete-li zobrazit manifest, klikněte na něj pravým tlačítkem myši a klikněte na příkaz **otevřít**v programu, potom klikněte na **možnost vybrat program v seznamu**a potom klikněte na tlačítko **Poznámkový blok**.
+     Soubor manifestu bude sestaven a vložen do `C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest` . Chcete-li zobrazit manifest, klikněte na něj pravým tlačítkem myši a klikněte na příkaz **otevřít**v programu, potom klikněte na **možnost vybrat program v seznamu**a potom klikněte na tlačítko **Poznámkový blok**.
 
-     V souboru vyhledejte `<osVersionInfo>` element. Například verze může být:
+     Vyhledejte v souboru `<osVersionInfo>` element. Například verze může být:
 
     ```
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
@@ -152,7 +152,7 @@ Události sestavení v Visual Basic lze použít ke spouštění skriptů, maker
 
      Při sestavování projektu tento příkaz změní minimální verzi operačního systému v manifestu aplikace na 5.1.2600.0.
 
-     Makro `$(TargetPath)` vyjadřuje úplnou cestu pro vytvářený spustitelný soubor. Proto $ (TargetPath). manifest určí manifest aplikace vytvořený v adresáři bin. Publikováním se tento manifest zkopíruje do umístění pro publikování, které jste nastavili dříve.
+     `$(TargetPath)`Makro vyjadřuje úplnou cestu pro spustitelný soubor, který se vytváří. Proto $ (TargetPath). manifest určí manifest aplikace vytvořený v adresáři bin. Publikováním se tento manifest zkopíruje do umístění pro publikování, které jste nastavili dříve.
 
 8. Publikujte projekt znovu. Přejděte na stránku **publikovat** a klikněte na **publikovat**.
 
@@ -165,4 +165,4 @@ Události sestavení v Visual Basic lze použít ke spouštění skriptů, maker
     ```
 
 ## <a name="see-also"></a>Viz také
- [Správa vlastností kompilace](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) [Stránka kompilace, stránka pro publikování návrháře projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md) [, návrh projektu](../ide/reference/publish-page-project-designer.md) [události před sestavením/příkazový řádek události po](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) sestavení [Postupy: určení událostí sestavení (C#) ](../ide/how-to-specify-build-events-csharp.md)
+ [Správa vlastností kompilace](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) [Stránka kompilace, stránka pro publikování návrháře projektu (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md) [, projektový Návrhář projektu](../ide/reference/publish-page-project-designer.md) [události před sestavením/po sestavení události po sestavení](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) [: zadat události sestavení (C#)](../ide/how-to-specify-build-events-csharp.md)

@@ -1,5 +1,5 @@
 ---
-title: Položka Functions | Dokumentace Microsoftu
+title: Funkce položky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -12,23 +12,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c94624aaea629c087b552ee46266a44f534888d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192893"
 ---
 # <a name="item-functions"></a>Funkce položek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Od verze MSBuild 4.0, kód v úlohy a cíle může volat funkce položek, chcete-li získat informace o položkách v projektu. Tyto funkce zjednodušují získávání Distinct() položek a jsou rychlejší než položky ve smyčce.  
+Počínaje nástrojem MSBuild 4,0 může kód v úlohách a cílech volat funkce položek a získat informace o položkách v projektu. Tyto funkce zjednodušují získání jedinečných položek () a jsou rychlejší než přechází mezi položkami.  
   
-## <a name="string-item-functions"></a>Řetězec funkce položek  
- Provozovat na libovolnou hodnotu položky, můžete použít metody řetězců a vlastností v rozhraní .NET Framework. Pro <xref:System.String> metody, zadejte název metody. Pro <xref:System.String> vlastnosti, zadejte název vlastnosti za "get_".  
+## <a name="string-item-functions"></a>Funkce položky řetězce  
+ Můžete použít metody a vlastnosti řetězce v .NET Framework k provozování libovolné hodnoty položky. Pro <xref:System.String> metody zadejte název metody. Pro <xref:System.String> Vlastnosti zadejte název vlastnosti po "get_".  
   
- U položek, které mají více řetězců řetězec metody nebo vlastnosti běží na jednotlivých řetězců.  
+ Pro položky, které mají více řetězců, je řetězcová metoda nebo vlastnost spuštěna na každém řetězci.  
   
- Následující příklad ukazuje, jak používat tyto položky funkce řetězec.  
+ Následující příklad ukazuje, jak použít tyto funkce řetězcové položky.  
   
 ```  
 <ItemGroup>  
@@ -51,23 +51,23 @@ Od verze MSBuild 4.0, kód v úlohy a cíle může volat funkce položek, chcete
   -->  
 ```  
   
-## <a name="intrinsic-item-functions"></a>Funkce vnitřní položek  
- Následující tabulka uvádí vnitřní funkce, které jsou k dispozici pro položky.  
+## <a name="intrinsic-item-functions"></a>Funkce vnitřních položek  
+ Následující tabulka uvádí vnitřní funkce dostupné pro položky.  
   
 |Funkce|Příklad|Popis|  
 |--------------|-------------|-----------------|  
 |`Count`|`@(MyItem->Count())`|Vrátí počet položek.|  
 |`DirectoryName`|`@(MyItem->DirectoryName())`|Vrátí ekvivalent `Path.DirectoryName` pro každou položku.|  
-|`Distinct`|`@(MyItem->Distinct())`|Vrátí položky, které mají odlišné `Include` hodnoty. Metadata se ignoruje. Porovnání velká a malá písmena.|  
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Vrátí položky, které mají odlišné `itemspec` hodnoty. Metadata se ignoruje. Porovnání se rozlišují malá a velká písmena.|  
-|`Reverse`|`@(MyItem->Reverse())`|Vrátí položky v obráceném pořadí.|  
-|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Vrátí `boolean` označující, zda má jakoukoli položku daná metadata název a hodnotu. Porovnání velká a malá písmena.|  
-|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Vrátí položky s jejich metadat vymazána. Pouze `itemspec` je zachován.|  
-|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName")`|Vrátí položky, které mají název daná metadata. Porovnání velká a malá písmena.|  
+|`Distinct`|`@(MyItem->Distinct())`|Vrátí položky, které mají odlišné `Include` hodnoty. Metadata se ignorují. V porovnání se nerozlišují malá a velká písmena.|  
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Vrátí položky, které mají odlišné `itemspec` hodnoty. Metadata se ignorují. Porovnávání rozlišuje velká a malá písmena.|  
+|`Reverse`|`@(MyItem->Reverse())`|Vrátí položky v opačném pořadí.|  
+|`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Vrátí hodnotu `boolean` určující, zda má nějaká položka název a hodnotu metadat. V porovnání se nerozlišují malá a velká písmena.|  
+|`ClearMetadata`|`@(MyItem->ClearMetadata())`|Vrátí položky s metadaty, které jsou vymazány. `itemspec`Zachová se jenom.|  
+|`HasMetadata`|`@(MyItem->HasMetadataValue("MetadataName")`|Vrátí položky, které mají daný název metadat. V porovnání se nerozlišují malá a velká písmena.|  
 |`Metadata`|`@(MyItem->Metadata("MetadataName"))`|Vrátí hodnoty metadat, které mají název metadat.|  
-|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue")`|Vrátí položky, které mají daná metadata název a hodnotu. Porovnání velká a malá písmena.|  
+|`WithMetadataValue`|`@(MyItem->WithMetadataValue("MetadataName", "MetadataValue")`|Vrátí položky, které mají zadaný název a hodnotu metadat. V porovnání se nerozlišují malá a velká písmena.|  
   
- Následující příklad ukazuje, jak používat funkce vnitřní položek.  
+ Následující příklad ukazuje, jak používat funkce vnitřních položek.  
   
 ```  
 <ItemGroup>  

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5e79bab25885c8759ea5726b037771a4943c563
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329637"
 ---
 # <a name="marker_serieswrite_alert-method"></a>marker_series:: write_alert – metoda
@@ -32,7 +32,7 @@ void write_alert(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_Format`Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
+ `_Format` Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj. h*

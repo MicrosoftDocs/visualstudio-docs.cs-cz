@@ -1,5 +1,5 @@
 ---
-title: Požadavky na nasazení aplikací | Dokumentace Microsoftu
+title: Požadavky na nasazení aplikací | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -21,68 +21,68 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4945efddb91142ce04f5b117129428ec4a054fc3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427261"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64824316"
 ---
 # <a name="application-deployment-prerequisites"></a>Nezbytné součásti nasazení aplikace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K zajištění, že vaše aplikace se nainstaluje a úspěšně spuštěn, je nutné nejdříve zkontrolovat, že jsou na cílovém počítači již nainstalovány všechny součásti, na kterých vaše aplikace je závislá. Například většina aplikace vytvořené s použitím [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jsou závislé [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]; správnou verzi modulu common language runtime musí existovat v cílovém počítači před instalací aplikace.  
+Aby se zajistilo, že se vaše aplikace nainstaluje a spustí úspěšně, musíte nejdřív zkontrolovat, jestli jsou na cílovém počítači nainstalované všechny komponenty, na kterých je vaše aplikace závislá. Například většina aplikací, které byly vytvořeny pomocí, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] mají závislost na rozhraní [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ; před instalací aplikace musí být na cílovém počítači přítomna správná verze modulu CLR (Common Language Runtime).  
   
- Můžete vybrat tyto požadavky **dialogové okno požadavky** a nainstalovat rozhraní .NET Framework a další distribuovatelné součásti jako součást instalace. Tento postup se označuje jako *spuštění*. Dále [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vygeneruje spustitelný program Windows s názvem Setup.exe, označované také jako *zaváděcí nástroj*. Zaváděcí nástroj je odpovědný za instalaci těchto nezbytných podmínkách před spuštěním vaší aplikace. Další informace o výběru těchto nezbytných podmínkách naleznete v tématu [dialogové okno požadavky](../ide/reference/prerequisites-dialog-box.md).  
+ Tyto požadavky můžete vybrat v **dialogovém okně předpoklady** a nainstalovat .NET Framework a další distribuovatelné součásti jako součást instalace. Tento postup se označuje jako *spouštěcí*. Dále [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vygeneruje spustitelný program systému Windows s názvem Setup.exe, označovaný také jako *zaváděcí nástroj*. Zaváděcí nástroj zodpovídá za instalaci těchto požadavků ještě před spuštěním vaší aplikace. Další informace o výběru těchto požadavků najdete v [dialogovém okně předpoklady](../ide/reference/prerequisites-dialog-box.md).  
   
- Každý požadavek je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měly být nainstalovány kontrolu požadovaných součástí. Pokud vaše aplikace požadavky nejsou uvedené v **požadovaných součástí dialogovému oknu**, můžete vytvořit vlastní balíčky zaváděcího nástroje a přidat je do sady Visual Studio. Potom můžete vybrat požadované součásti v **dialogové okno požadavky**. Další informace najdete v tématu [vytváření balíčků Bootstrapperu](../deployment/creating-bootstrapper-packages.md).  
+ Každá požadovaná součást je balíček zaváděcího nástroje. Balíček zaváděcího nástroje je skupina adresářů a souborů, které obsahují soubory manifestu, které popisují, jak by měla být požadovaná součást nainstalována. Pokud požadavky vaší aplikace nejsou uvedeny v **dialogovém okně požadovaná součást**, můžete vytvořit vlastní balíčky zaváděcího nástroje a přidat je do sady Visual Studio. Pak můžete vybrat požadované součásti v **dialogovém okně předpoklady**. Další informace najdete v tématu [vytváření balíčků zaváděcího nástroje](../deployment/creating-bootstrapper-packages.md).  
   
- Ve výchozím nastavení spuštění je povolen pro nasazení ClickOnce. Zaváděcí nástroj vygeneruje pro nasazení ClickOnce je podepsán. Probíhá spuštění pro komponentu můžete zakázat, ale měli byste tak činit pouze v případě, že jste si jisti, že je již nainstalována správná verze komponenty na všech cílových počítačích.  
+ Ve výchozím nastavení je pro nasazení ClickOnce povolený zaváděcí nástroj. Zaváděcí nástroj generovaný pro nasazení ClickOnce je podepsaný. Můžete zakázat spouštění pro komponentu, ale měli byste to udělat jenom v případě, že jste si jisti, že je na všech cílových počítačích už nainstalovaná správná verze součásti.  
   
-## <a name="bootstrapping-and-clickonce-deployment"></a>Spuštění a nasazení ClickOnce  
- Před instalací aplikace na klientském počítači [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se zaměřuje klienta a ujistěte se, že mají určité požadavky uvedenými v manifestu aplikace. Patří mezi ně například:  
+## <a name="bootstrapping-and-clickonce-deployment"></a>Zavedení a nasazení ClickOnce  
+ Před instalací aplikace v klientském počítači zkontroluje [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] klienta nástroje, aby zajistil, že obsahuje určité požadavky, které jsou zadány v manifestu aplikace. Patří mezi ně následující:  
   
-- Minimální požadovaná verze common language runtime, který je zadán jako závislost sestavení v manifestu aplikace.  
+- Minimální požadovaná verze modulu CLR (Common Language Runtime), která je zadána jako závislost sestavení v manifestu aplikace.  
   
-- Minimální požadovaná verze operačního systému Windows požadované aplikací, jak je uvedeno v aplikaci manifestu pomocí `<osVersionInfo>` elementu. (Viz [ \<závislost > Element](../deployment/dependency-element-clickonce-application.md))  
+- Minimální požadovaná verze operačního systému Windows, kterou vyžaduje aplikace, jak je uvedeno v manifestu aplikace pomocí `<osVersionInfo>` elementu. (Viz [ \<dependency> element](../deployment/dependency-element-clickonce-application.md))  
   
-- Minimální verze všech sestavení, které musí být předinstalován v globální mezipaměti sestavení (GAC), jak jsou určené deklarace závislost sestavení v manifestu sestavení.  
+- Minimální verze všech a všech sestavení, která musí být předinstalována v globální mezipaměti sestavení (GAC), jak je uvedeno v deklaracích závislostí sestavení v manifestu sestavení.  
   
-  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] rozpozná chybějící požadované součásti a požadavky můžete nainstalovat pomocí zaváděcí nástroj. Další informace najdete v tématu [jak: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).  
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dokáže detekovat chybějící požadované součásti a pomocí zaváděcího nástroje můžete nainstalovat požadované součásti. Další informace naleznete v tématu [How to: Install – požadavky s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md).  
   
 > [!NOTE]
-> Chcete-li změnit hodnoty v manifestech vygenerovat pomocí nástrojů, jako [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a MageUI.exe, budete muset upravit manifest aplikace v textovém editoru a nové podepsání manifestů aplikace a nasazení. Další informace najdete v tématu [jak: Opětovné podepisování manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).  
+> Chcete-li změnit hodnoty v manifestech generovaných nástroji, jako jsou [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a MageUI.exe, je nutné upravit manifest aplikace v textovém editoru a poté znovu podepsat manifesty aplikace a nasazení. Další informace najdete v tématu [Postup: Opětovné podepsání manifestů aplikace a nasazení](../deployment/how-to-re-sign-application-and-deployment-manifests.md).  
   
- Pokud používáte Visual Studio a ClickOnce k nasazení vaší aplikace, balíčky zaváděcího nástroje, které jsou vybrány ve výchozím nastavení závisí na verzi rozhraní .NET Framework v řešení. Nicméně pokud změníte cílovou verzi rozhraní .NET Framework, je nutné aktualizovat možnosti v **dialogové okno požadavky** ručně.  
+ Použijete-li aplikaci Visual Studio a ClickOnce k nasazení aplikace, jsou balíčky zaváděcího nástroje, které jsou vybrány ve výchozím nastavení, závislé na verzi .NET Framework v řešení. Pokud však změníte cílovou verzi .NET Framework, musíte ručně aktualizovat možnosti v **dialogovém okně předpoklady** .  
   
-|Cílová verze .NET Frameworku|Balíčky zaváděcího nástroje vybrané|  
+|Cílová .NET Framework|Vybrané balíčky zaváděcího nástroje|  
 |---------------------------|------------------------------------|  
-|.NET Framework 4 Client Profile|.NET Framework 4 Client Profile<br /><br /> Instalační služba systému Windows 3.1|  
-|.NET Framework 4|.NET Framework 4<br /><br /> Instalační služba systému Windows 3.1|  
+|.NET Framework 4 Client Profile|.NET Framework 4 Client Profile<br /><br /> Instalační služba systému Windows verze 3.1|  
+|.NET Framework 4|.NET Framework 4<br /><br /> Instalační služba systému Windows verze 3.1|  
   
- S [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení, stránku Publish.htm generovaných [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Průvodce publikováním odkazuje buď na odkaz, který nainstaluje pouze aplikace, nebo ke spojení, které instaluje aplikace a komponenty se spustil.  
+ Při [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] nasazení se stránka Publish.htm generovaná [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] průvodcem publikování odkazuje buď na odkaz, který nainstaluje jenom aplikaci, nebo na odkaz, který nainstaluje aplikaci i nasazené komponenty.  
   
- Pokud generujete zaváděcí nástroj s použitím Průvodce publikování ClickOnce nebo publikovat stránku v sadě Visual Studio, je automaticky přihlášen Setup.exe. Nicméně pokud chcete použít certifikát vašeho zákazníka k podepisování zaváděcí nástroj, se můžete přihlásit soubor později.  
+ Pokud vygenerujete zaváděcí nástroj pomocí Průvodce publikováním ClickOnce nebo stránku publikovat v aplikaci Visual Studio, Setup.exe je automaticky podepsán. Pokud ale chcete použít certifikát zákazníka k podepsání zaváděcího nástroje, můžete ho později podepsat.  
   
-## <a name="bootstrapping-and-msbuild"></a>Spuštění a nástroje MSBuild  
- Pokud nepoužijete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ale kompilace aplikace v příkazovém řádku, můžete vytvořit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] spuštění aplikace pomocí úlohy Microsoft Build Engine (MSBuild). Další informace najdete v tématu [GenerateBootstrapper – úloha](../msbuild/generatebootstrapper-task.md).  
+## <a name="bootstrapping-and-msbuild"></a>Zavádění a MSBuild  
+ Pokud nepoužíváte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , ale zkompilujete své aplikace na příkazovém řádku, můžete vytvořit [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] spouštěcí aplikaci pomocí úlohy Microsoft Build Engine (MSBuild). Další informace najdete v tématu [GenerateBootstrapper – Task](../msbuild/generatebootstrapper-task.md).  
   
- Jako alternativu k spuštění můžete předem nasadit komponenty použití distribuce systému elektronického software, jako je například Systems Management Server (SMS).  
+ Jako alternativu ke spuštění nástroje můžete předem nasadit komponenty pomocí elektronického systému distribuce softwaru, jako je například Microsoft Systems Management Server (SMS).  
   
-## <a name="bootstrapper-setupexe-command-line-arguments"></a>Argumenty příkazového řádku zaváděcího nástroje (Setup.exe)  
- Setup.exe generovaný [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a úlohy nástroje MSBuild podporuje následující malý počet argumentů příkazového řádku. Všechny argumenty předány zaváděcí aplikace nad rámec těchto se předávají do aplikace Instalační služby.  
+## <a name="bootstrapper-setupexe-command-line-arguments"></a>Argumenty příkazového řádku pro zaváděcí nástroj (Setup.exe)  
+ Setup.exe generovaný nástrojem [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a úkoly nástroje MSBuild podporují následující malou sadu argumentů příkazového řádku. Všechny argumenty dodané do zaváděcí aplikace nad rámec těchto jsou předány instalačnímu programu aplikace.  
   
- Pokud změníte všechny možnosti zaváděcího nástroje, musíte změnit bez znaménka zaváděcí nástroj a pak se přihlaste na soubor zaváděcího nástroje později.  
+ Pokud změníte jakékoli možnosti zaváděcího nástroje, musíte změnit nepodepsaný zaváděcí nástroj a pak soubor zaváděcího nástroje podepsat později.  
   
 |Argument příkazového řádku|Popis|  
 |---------------------------|-----------------|  
-|**-?, -h, -help**|Zobrazí dialogové okno nápovědy.|  
-|**-url, -componentsurl**|Zobrazí uloženou adresu URL a adresu url komponent pro toto nastavení.|  
-|**-url=** `location`|Nastaví adresu URL, kde bude hledat Setup.exe [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace.|  
-|**-componentsurl=** `location`|Nastaví adresu URL, kde Setup.exe bude hledat závislosti, jako [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].|  
-|**-homesite=** `true` **&#124;** `false`|Když `true`, stahuje závislosti z preferované umístění na webu dodavatele. Přepíše se tím požadavek **- componentsurl** nastavení. Když `false`, soubory ke stažení závislostí v adrese URL zadané hodnotou **- componentsurl**.|  
+|**-?,-h,-help**|Zobrazí dialogové okno s nápovědě.|  
+|**-URL,-componentsurl**|Zobrazuje uloženou adresu URL a adresu URL komponent pro toto nastavení.|  
+|**-URL =**`location`|Nastaví adresu URL, kam bude Setup.exe hledat [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikaci.|  
+|**-componentsurl =**`location`|Nastaví adresu URL, kam bude Setup.exe Hledat závislosti, jako je například [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .|  
+|**-HomeSite =** `true` **&#124;**`false`|Když `true` aplikace stáhne závislosti z upřednostňovaného umístění na webu dodavatele. Tím se přepíše nastavení **-componentsurl** . Při `false` stahování stáhne závislosti z adresy URL určené parametrem **-componentsurl**.|  
   
 ## <a name="operating-system-support"></a>Podpora operačního systému  
- Zaváděcí nástroj Visual Studio není podporována v systému Windows Server 2008 Server Core nebo Windows Server 2008 R2 Server Core, který bude poskytovat prostředí nízká údržba serveru s omezenou funkčností. Možnost instalace jádra serveru podporuje například pouze profilu rozhraní .NET Framework 3.5 Server Core, takže funkcemi sady Visual Studio, které jsou závislé na úplné rozhraní .NET Framework nelze spustit.  
+ Zaváděcí nástroj sady Visual Studio není podporován v jádru serveru Windows Server 2008 Server Core nebo Windows Server 2008 R2 Server Core, který poskytuje serverové prostředí s nízkou údržbou s omezenými funkcemi. Například možnost instalace jádra serveru podporuje jenom profil jádra serveru .NET Framework 3,5, takže funkce sady Visual Studio, které závisí na plném .NET Framework, nemůžou běžet.  
   
 ## <a name="see-also"></a>Viz také  
  [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)   

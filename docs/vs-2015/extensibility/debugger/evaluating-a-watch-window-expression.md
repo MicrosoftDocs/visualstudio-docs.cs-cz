@@ -1,5 +1,5 @@
 ---
-title: Vyhodnocení výrazu okna kukátka | Dokumentace Microsoftu
+title: Vyhodnocení výrazu okna kukátka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,52 +13,52 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f13573cfecbd81f36e3b77e9b23beeaa558c08dc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444797"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64820422"
 ---
 # <a name="evaluating-a-watch-window-expression"></a>Vyhodnocení výrazu okna kukátka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Při pozastavení provádění volání sady Visual Studio ladicího stroje (DE) Chcete-li zjistit aktuální hodnotu každý výraz v svůj seznam ke zhlédnutí. DE vyhodnocuje každý výraz pomocí vyhodnocovače výrazů (EE) a Visual Studio zobrazí její hodnotu v **Watch** okna.  
+ Po pozastavení provádění aplikace Visual Studio zavolá ladicí modul (DE), aby určil aktuální hodnotu každého výrazu v seznamu sledování. DE vyhodnotí každý výraz pomocí vyhodnocení výrazu (EE) a Visual Studio zobrazí jeho hodnotu v okně **kukátko** .  
   
- Tady je přehled způsob vyhodnocení výrazu kukátka seznamu:  
+ Tady je přehled toho, jak se vyhodnocuje výraz seznamu sledování:  
   
-1. Volání sady Visual Studio je DE [GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) získat výraz kontext, který lze použít k vyhodnocení výrazů.  
+1. Visual Studio volá [GetExpressionContexta](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) de pro získání kontextu výrazu, který lze použít k vyhodnocení výrazů.  
   
-2. Pro každý výraz v seznamu sledování volání sady Visual Studio [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) převést na výraz analyzovaného textu výrazu.  
+2. Pro každý výraz v seznamu sledování volá Visual Studio [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) k převedení textu výrazu na analyzovaný výraz.  
   
-3. `IDebugExpressionContext2::ParseText` volání [analyzovat](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) k vykonávají samotnou práci při analýze textu a produktů [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) objektu.  
+3. `IDebugExpressionContext2::ParseText` volá [analýzu](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) , aby provede skutečnou práci s analýzou textu a vytvořil objekt [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) .  
   
-4. `IDebugExpressionContext2::ParseText` vytvoří [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) objektu a vloží `IDebugParsedExpression` objektu do něj. Tato můžu`DebugExpression2` objekt je pak vrácen do sady Visual Studio.  
+4. `IDebugExpressionContext2::ParseText` Vytvoří objekt [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) a vloží `IDebugParsedExpression` do něj objekt. Tento `DebugExpression2` objekt se pak vrátí do sady Visual Studio.  
   
-5. Visual Studio volání [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) analyzovaný vyhodnotit.  
+5. Visual Studio volá [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) pro vyhodnocení analyzovaného výrazu.  
   
-6. `IDebugExpression2::EvaluateSync` předává volání [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) skutečné hodnocení a vytvářet [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt, který je vrácen do sady Visual Studio.  
+6. `IDebugExpression2::EvaluateSync` předá volání [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) k provedení skutečného vyhodnocení a vyprodukování objektu [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) , který je vrácen do sady Visual Studio.  
   
-7. Visual Studio volání [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) k získání hodnoty výraz, který se následně zobrazí v seznamu sledování.  
+7. Visual Studio volá [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) , aby získal hodnotu výrazu, který je pak zobrazen v seznamu sledování.  
   
-## <a name="parse-then-evaluate"></a>Analyzovat a vyhodnocení  
- Protože parsování složitý výraz může trvat déle než vyhodnocení, proces vyhodnocení výrazu je rozdělený do dvou kroků: ((1) analýzy výraz a 2) analyzovaný výraz vyhodnotit. Tímto způsobem vyhodnocení může dojít v mnoha případech ale výraz musí být pouze jednou analyzována. Zprostředkující analyzovaný výraz vrátí EE v [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) objekt, který je pak zapouzdřen a byla vrácena z DE jako [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) objektu. `IDebugExpression` Objekt odloží všechny vyhodnocení `IDebugParsedExpression` objektu.  
+## <a name="parse-then-evaluate"></a>Analyzovat a pak vyhodnotit  
+ Vzhledem k tomu, že analýza složitého výrazu může trvat mnohem déle než vyhodnotit, proces vyhodnocení výrazu je rozdělen do dvou kroků: 1) analýza výrazu a 2) vyhodnocení analyzovaného výrazu. Tímto způsobem může vyhodnocení probíhat mnohokrát, ale výraz musí být analyzován pouze jednou. Mezilehlé analyzovaný výraz je vrácen z bodu EE v objektu [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) , který je zase zapouzdřený a vrácen z objektu de jako objekt [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) . `IDebugExpression`Objekt odloží veškeré vyhodnocení `IDebugParsedExpression` objektu.  
   
 > [!NOTE]
-> Není nutné pro EE dodržovat tento dvoukrokový proces i v případě, že to; předpokládá Visual Studio EE můžete analyzovat a vyhodnotit do jednoho kroku při [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) nazývá (Toto je ukázka MyCEE fungování, třeba). Pokud váš jazyk mohl vytvořit složité výrazy, můžete chtít oddělit krok analýzy z kroku hodnocení. To může zvýšit výkon v ladicím programu sady Visual Studio, když mnoho sledovat výrazy se zobrazují.  
+> Není nutné, aby se v EE dodržoval tento proces se dvěma kroky, i když Visual Studio předpokládá toto. funkce EE může analyzovat a vyhodnocovat ve stejném kroku při volání [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (to znamená, jak funguje ukázka mycee, například). Pokud váš jazyk může tvořit složité výrazy, může být vhodné oddělit krok analýzy od kroku vyhodnocení. To může zvýšit výkon v ladicím programu sady Visual Studio, když je zobrazeno mnoho výrazů kukátka.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Ukázková implementace vyhodnocení výrazu](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)  
- Používá ukázkový MyCEE pro jednotlivé kroky v procesu vyhodnocení výrazu.  
+ Používá ukázku MyCEE ke krokování procesu vyhodnocení výrazu.  
   
  [Vyhodnocení výrazu kukátka](../../extensibility/debugger/evaluating-a-watch-expression.md)  
- Vysvětluje, co se stane po úspěšné výraz analýzy.  
+ Vysvětluje, co se stane po úspěšné analýze výrazu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)  
- Poskytuje argumenty předávané při volání ladicího stroje (DE) vyhodnocovací filtr výrazů (EE).  
+ Poskytuje argumenty, které jsou předány, když ladicí stroj (DE) volá vyhodnocovací filtr výrazů (EE).  
   
 ## <a name="see-also"></a>Viz také  
  [Zápis pro vyhodnocovač výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

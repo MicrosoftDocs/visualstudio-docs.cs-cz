@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::GetService | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluator2:: GetService | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c5428606ad54c7938037c3ffecf04f1cfe41787c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729350"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
-Načte objekt služby s jeho jedinečným identifikátorem.
+Načte objekt služby s daným jedinečným identifikátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,16 +42,16 @@ int GetService (
 
 ## <a name="parameters"></a>Parametry
 `uid`\
-[v] Jedinečný identifikátor služby, kterou chcete načíst.
+pro Jedinečný identifikátor služby, která se má načíst
 
 `ppService`\
-[out] Vrátí objekt, který představuje službu.
+mimo Vrátí objekt, který představuje službu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- To může být spotřebována vyhodnocení výrazu třetí strany získat služby od jiného vyhodnocení výrazu. Tato metoda může být například použita k získání rozhraní pro službu vizualizéru od výchozího vyhodnocení výrazu. Vyhodnocení výrazů třetích stran je nepravděpodobné, že bude nutné implementovat toto rozhraní.
+ To může využívat vyhodnocovací filtr výrazů třetí strany k získání služeb z jiného vyhodnocovacího filtru výrazů. Tuto metodu lze například použít k získání rozhraní pro službu Vizualizátor z výchozího vyhodnocovacího filtru výrazů. Vyhodnocení výrazů třetích stran pravděpodobně není nutné implementovat toto rozhraní.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

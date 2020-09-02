@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 39272790b6ef366c64d45e0aea238606d0b62bf4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538633"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Přepište Equals při přetížení operátoru rovnosti
@@ -50,7 +50,7 @@ ms.locfileid: "85538633"
 ## <a name="examples-of-inconsistent-equality-definitions"></a>Příklady nekonzistentních definic rovnosti
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje typ s nekonzistentními definicemi rovnosti. `BadPoint`změní význam rovnosti tím, že poskytuje vlastní implementaci operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se choval stejně.
+ Následující příklad ukazuje typ s nekonzistentními definicemi rovnosti. `BadPoint` změní význam rovnosti tím, že poskytuje vlastní implementaci operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se choval stejně.
 
 ### <a name="code"></a>Kód
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorEqualsRequiresEquals/cs/FxCop.Usage.OperatorEqualsRequiresEquals.cs#1)]

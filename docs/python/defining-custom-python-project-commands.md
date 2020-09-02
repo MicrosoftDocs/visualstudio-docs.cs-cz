@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386982"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Definovat vlastní příkazy pro projekty v Pythonu
@@ -133,9 +133,9 @@ Chcete-li odkazovat na vlastnosti projektu nebo proměnné prostředí v hodnot�
 
 | Atribut | Povinné | Popis |
 | --- | --- | --- |
-| Název | Yes | Identifikátor příkazu v rámci projektu sady Visual Studio. Tento název musí být přidán do `<PythonCommands>` skupiny vlastností pro příkaz, který se zobrazí v podnabídce Python. |
-| Popisek | Yes | Zobrazované jméno uživatelského rozhraní, které se zobrazí v podnabídce Pythonu |
-| Návraty | Yes | Musí obsahovat `@(Commands)` , který identifikuje cíl jako příkaz. |
+| Název | Ano | Identifikátor příkazu v rámci projektu sady Visual Studio. Tento název musí být přidán do `<PythonCommands>` skupiny vlastností pro příkaz, který se zobrazí v podnabídce Python. |
+| Popisek | Ano | Zobrazované jméno uživatelského rozhraní, které se zobrazí v podnabídce Pythonu |
+| Návraty | Ano | Musí obsahovat `@(Commands)` , který identifikuje cíl jako příkaz. |
 
 ### <a name="createpythoncommanditem-attributes"></a>Atributy CreatePythonCommandItem
 
@@ -143,10 +143,10 @@ U všech hodnot atributů se nerozlišují velká a malá písmena.
 
 | Atribut | Povinné | Popis |
 | --- | --- | --- |
-| TargetType | Yes | Určuje, jaký cílový atribut obsahuje a jak se používá společně s atributem arguments:<ul><li>**spustitelný soubor**: Spusťte spustitelný soubor s názvem v cíli a připojením hodnoty v argumentech jako při zadání přímo na příkazovém řádku. Hodnota musí obsahovat pouze název programu bez argumentů.</li><li>**skript**: Spusťte *python.exe* s názvem souboru v cíli a potom s hodnotou v argumentech.</li><li>**modul**: spustit `python -m` následovaný názvem modulu v cíli a následovaný hodnotou v argumentech.</li><li>**kód**: Spusťte vložený kód obsažený v cíli. Hodnota argumentů je ignorována.</li><li>**PIP**: Spusťte `pip` příkaz s příkazem v cíli, následovaný argumenty. ExecuteIn je nastavená na "Output", ale příkaz PIP předpokládá `install` příkaz a jako název balíčku používá cíl.</li></ul> |
-| Cíl | Yes | Název souboru, název modulu, kód nebo PIP, který se má použít, v závislosti na TargetType. |
+| TargetType | Ano | Určuje, jaký cílový atribut obsahuje a jak se používá společně s atributem arguments:<ul><li>**spustitelný soubor**: Spusťte spustitelný soubor s názvem v cíli a připojením hodnoty v argumentech jako při zadání přímo na příkazovém řádku. Hodnota musí obsahovat pouze název programu bez argumentů.</li><li>**skript**: Spusťte *python.exe* s názvem souboru v cíli a potom s hodnotou v argumentech.</li><li>**modul**: spustit `python -m` následovaný názvem modulu v cíli a následovaný hodnotou v argumentech.</li><li>**kód**: Spusťte vložený kód obsažený v cíli. Hodnota argumentů je ignorována.</li><li>**PIP**: Spusťte `pip` příkaz s příkazem v cíli, následovaný argumenty. ExecuteIn je nastavená na "Output", ale příkaz PIP předpokládá `install` příkaz a jako název balíčku používá cíl.</li></ul> |
+| Cíl | Ano | Název souboru, název modulu, kód nebo PIP, který se má použít, v závislosti na TargetType. |
 | Arguments | Volitelné | Určuje řetězec argumentů (pokud existuje), který se má poskytnout cíli. Všimněte si, že pokud je TargetType `script` , argumenty jsou předány programu Python, nikoli *python.exe*. Ignorováno pro `code` TargetType. |
-| ExecuteIn | Yes | Určuje prostředí, ve kterém se má příkaz spustit:<ul><li>**Konzola**: (výchozí) spustí cíl a argumenty, jako by byly zadány přímo na příkazovém řádku. Příkazové okno se zobrazí, když je cíl spuštěný, a pak se automaticky zavře.</li><li>**consolepause**: totéž jako konzola, ale před zavřením okna počká na stisknutí klávesy.</li><li>**výstup**: spustí cíl a zobrazí jeho výsledky v okně **výstup** v aplikaci Visual Studio. Pokud TargetType je "PIP", sada Visual Studio používá jako název balíčku cíl a připojuje argumenty.</li><li>**REPL**: cíl spuštění v [interaktivním okně Pythonu](python-interactive-repl-in-visual-studio.md) ; volitelné zobrazované jméno se používá pro název okna.</li><li>**žádné**: chová se stejně jako konzola.</li></ul>|
+| ExecuteIn | Ano | Určuje prostředí, ve kterém se má příkaz spustit:<ul><li>**Konzola**: (výchozí) spustí cíl a argumenty, jako by byly zadány přímo na příkazovém řádku. Příkazové okno se zobrazí, když je cíl spuštěný, a pak se automaticky zavře.</li><li>**consolepause**: totéž jako konzola, ale před zavřením okna počká na stisknutí klávesy.</li><li>**výstup**: spustí cíl a zobrazí jeho výsledky v okně **výstup** v aplikaci Visual Studio. Pokud TargetType je "PIP", sada Visual Studio používá jako název balíčku cíl a připojuje argumenty.</li><li>**REPL**: cíl spuštění v [interaktivním okně Pythonu](python-interactive-repl-in-visual-studio.md) ; volitelné zobrazované jméno se používá pro název okna.</li><li>**žádné**: chová se stejně jako konzola.</li></ul>|
 | WorkingDirectory | Volitelné | Složka, ve které se má příkaz Spustit |
 | ErrorRegex<br>WarningRegEx | Volitelné | Používá se pouze v případě, že je ExecuteIn `output` . Obě hodnoty určují regulární výraz, se kterým Visual Studio analyzuje výstup příkazu, aby se zobrazily chyby a upozornění v okně **Seznam chyb** . Pokud není zadán, příkaz nemá vliv na okno **Seznam chyb** . Další informace o tom, co Visual Studio očekává, najdete v tématu [pojmenované skupiny zachycení](#named-capture-groups-for-regular-expressions). |
 | RequiredPackages | Volitelné | Seznam požadavků balíčku pro příkaz ve stejném formátu jako [*requirements.txt*](https://pip.pypa.io/en/stable/user_guide/#requirements-files) (PIP.readthedocs.IO). Příkaz **Run Pylint** , například určuje `pylint>=1.0.0` . Před spuštěním příkazu kontroluje aplikace Visual Studio, zda jsou nainstalovány všechny balíčky v seznamu. Visual Studio pomocí PIP nainstaluje všechny chybějící balíčky. |
@@ -379,7 +379,7 @@ Indikuje, že obsah `<Target>` `<CreatePythonCommandItem>` elementů nebo není 
 - Požadovaný `Target` atribut je prázdný.
 - Požadovaný `TargetType` atribut je prázdný nebo obsahuje nerozpoznanou hodnotu.
 - Požadovaný `ExecuteIn` atribut je prázdný nebo obsahuje nerozpoznanou hodnotu.
-- `ErrorRegex`nebo `WarningRegex` je zadáno bez nastavení `ExecuteIn="output"` .
+- `ErrorRegex` nebo `WarningRegex` je zadáno bez nastavení `ExecuteIn="output"` .
 - V elementu existují nerozpoznané atributy. Můžete například použít `Argumnets` (špatně napsaný) místo `Arguments` .
 
 Pokud odkazujete na vlastnost, která není definována, hodnoty atributu můžou být prázdné. Například pokud použijete token `$(StartupFile)` , ale v projektu není definován spouštěcí soubor, token se přeloží na prázdný řetězec. V takových případech možná budete chtít definovat výchozí hodnotu. Například příkazy **spustit server** a **Spustit ladicí Server** , které jsou definovány v láhvích, baňce a šablonách projektů Django, se nastaví jako výchozí *Manage.py* , pokud jste jinak neurčili spouštěcí soubor serveru ve vlastnostech projektu.

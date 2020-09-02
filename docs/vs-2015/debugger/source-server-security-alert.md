@@ -1,5 +1,5 @@
 ---
-title: Výstraha zabezpečení serveru zdroje | Dokumentace Microsoftu
+title: Výstraha zabezpečení zdrojového serveru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,23 +17,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f8b122deab5dbdc30b129bce221a804f8c53aa3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65699328"
 ---
 # <a name="source-server-security-alert"></a>Výstraha zabezpečení zdrojového serveru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při použití zdrojového serveru, používejte pouze soubory symbolů, které jsou ze známých a důvěryhodných umístění.  
+Při použití zdrojového serveru používejte pouze soubory symbolů, které jsou ze známého a důvěryhodného umístění.  
   
- Toto upozornění se zobrazí, když povolíte podporu zdrojového serveru. Příkazy ze zdrojového serveru jsou vloženy do souborů symbolů ladění (soubory PDB). Ujistěte se, že budete vědět, odkud pochází vaše soubory PDB.  
+ Toto upozornění se zobrazí, když povolíte podporu zdrojového serveru. Příkazy zdrojového serveru jsou vložené do souborů symbolů ladění (soubory PDB). Ujistěte se, že víte, odkud pocházejí vaše soubory PDB.  
   
 > [!IMPORTANT]
-> Následující potenciální ohrožení zabezpečení se musí vzít v úvahu při použití zdrojového serveru: Libovolné příkazy lze vložit do souboru PDB aplikace, proto se ujistěte, že vložíte pouze ty, které chcete spustit v souboru srcsrv.ini. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). Žádné ověření se provádí na parametry příkazu, proto buďte s důvěryhodnými příkazy opatrní. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.  
+> Při použití zdrojového serveru je třeba vzít v úvahu následující potenciální bezpečnostní hrozby: libovolné příkazy lze vložit do souboru PDB aplikace, takže zajistěte, aby byly do souboru srcsrv.ini vloženy pouze ty, které chcete spustit. Pokus o provedení příkazu mimo soubor srcsvr.ini způsobí zobrazení dialogového okna s potvrzením. Další informace najdete v tématu [Upozornění zabezpečení: ladicí program musí spustit nedůvěryhodný příkaz](../debugger/security-warning-debugger-must-execute-untrusted-command.md). U parametrů příkazu se neprovádí žádné ověření, proto buďte opatrní při důvěryhodných příkazech. Například pokud důvěřujete souboru cmd.exe, uživateli se zlými úmysly může zadat parametry, které by z příkazu mohly udělat hrozbu.  
   
 ## <a name="see-also"></a>Viz také  
- [Zadání symbolu (.pdb) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
  [Zdrojový Server](https://msdn.microsoft.com/library/windows/desktop/ms680641.aspx)

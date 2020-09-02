@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití okna paralelního sledování | Dokumentace Microsoftu'
+title: 'Postupy: použití okna paralelního sledování | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,75 +19,75 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 734a55cb06ee46afc6fc3518d6dffe349690d3d7
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697495"
 ---
 # <a name="how-to-use-the-parallel-watch-window"></a>Postupy: Použití okna paralelního sledování
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V okně paralelního sledování můžete najednou zobrazit hodnoty, které obsahuje jeden výraz ve více vláknech. Každý řádek představuje vlákno, na kterém běží v aplikaci však vlákno může být reprezentován více řádků. Přesněji řečeno každý řádek představuje volání funkce, jejíž podpis funkce odpovídá funkci na aktuální rámec zásobníku. Můžete řadit, změnit pořadí, odebrat a seskupit položky, které jsou ve sloupcích. Můžete označit příznakem, odznačit, ukotvit (Pozastavit) a uvolnit vlákna (pokračovat). Tyto sloupce se zobrazí v **paralelní sledování** okno:  
+V paralelním okno Kukátko lze současně zobrazit hodnoty, které jeden výraz obsahuje ve více vláknech. Každý řádek představuje vlákno, které běží v aplikaci, ale vlákno může být reprezentované ve více řádcích. Přesněji řečeno, každý řádek představuje volání funkce, jejíž signatura funkce odpovídá funkci v aktuálním bloku zásobníku. Položky, které jsou ve sloupcích, můžete řadit, přeřadit, odebírat a seskupovat. Vlákna můžete označit, zrušit jeho příznak, zablokovat (pozastavit) a uvolnit (pokračovat). V okně **paralelní sledování** se zobrazí následující sloupce:  
   
-- Sloupec příznaku, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.  
+- Sloupec příznak, ve kterém můžete označit vlákno, kterému chcete věnovat zvláštní pozornost.  
   
-- Sloupec rámce, ve kterém šipka označuje vybraný rámec.  
+- Sloupec rámce, ve kterém šipka indikuje vybraný snímek.  
   
-- Konfigurovatelný sloupec, který může zobrazit počítač, proces, dlaždici, úloh a vlákna.  
+- Konfigurovatelný sloupec, který může zobrazit počítač, proces, dlaždici, úlohu a vlákno.  
   
   > [!TIP]
-  > Je nutné otevřít **paralelních úkolů** okno, aby obsahovalo informace o úkolu v **paralelní sledování** okna.  
+  > Chcete-li zobrazit informace o úkolu v okně **paralelní kukátko** , je nutné otevřít okno **Paralelní úlohy** .  
   
-- **\<Přidat kukátko>** sloupec, ve kterém můžete zadat výrazy, které chcete sledovat.  
+- **\<Add Watch>** Sloupec, ve kterém můžete zadat výrazy ke sledování.  
   
   [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
-### <a name="to-display-the-parallel-watch-window"></a>Chcete-li zobrazit okno paralelního sledování  
+### <a name="to-display-the-parallel-watch-window"></a>Zobrazení paralelního okno Kukátko  
   
 1. Nastavte zarážku v kódu.  
   
-2. V panelu nabídky zvolte **ladění**, **spustit ladění**. Vyčkat, než aplikace k dosažení zarážky.  
+2. Na řádku nabídek klikněte na položku **ladit**, **Spustit ladění**. Počkejte, než aplikace dorazí na zarážku.  
   
-3. V panelu nabídky zvolte **ladění**, **Windows**, **paralelní sledování**a klikněte na tlačítko okna kukátka. Můžete otevřít až čtyři windows.  
+3. V panelu nabídek zvolte položku **ladit**, **okna**, **paralelní kukátko**a pak zvolte okno kukátka. Můžete otevřít až čtyři okna.  
   
 ### <a name="to-add-a-watch-expression"></a>Přidání výrazu kukátka  
   
-- Vyberte  **\<Přidat kukátko >** a pak zadejte výrazu.  
+- Vyberte **\<Add Watch>** a zadejte výraz kukátka.  
   
-### <a name="to-flag-or-unflag-a-thread"></a>Chcete-li označit nebo zrušit označení vlákna  
+### <a name="to-flag-or-unflag-a-thread"></a>Označení nebo odoznačení vlákna vláknem  
   
-- Vyberte sloupec příznaku pro řádek, nebo otevřete místní nabídku pro vlákno a zvolte **příznak** nebo **Unflag**.  
+- Vyberte sloupec příznak pro řádek nebo otevřete místní nabídku pro vlákno a zvolte **příznak** nebo zrušit **označení**.  
   
 ### <a name="to-display-only-flagged-threads"></a>Chcete-li zobrazit pouze vlákna označená příznakem  
   
-- V levém horním rohu klikněte na tlačítko Zobrazit pouze s příznakem **paralelní sledování** okna.  
+- V levém horním rohu okna **paralelního sledování** vyberte tlačítko Zobrazit pouze s příznakem.  
   
-### <a name="to-switch-frames"></a>Chcete-li přepnout snímků  
+### <a name="to-switch-frames"></a>Přepnutí snímků  
   
-- Poklepejte na sloupec rámce. (Klávesnice: Vyberte řádek a stiskněte klávesu Enter.)  
+- Dvakrát klikněte na sloupec rámce. (Klávesnice: vyberte řádek a stiskněte klávesu ENTER.)  
   
-### <a name="to-sort-a-column"></a>Chcete-li seřadit sloupec  
+### <a name="to-sort-a-column"></a>Postup řazení sloupce  
   
 - Vyberte záhlaví sloupce.  
   
-### <a name="to-group-threads"></a>Do skupiny vláken  
+### <a name="to-group-threads"></a>Seskupení vláken  
   
-- Otevřete místní nabídku pro okno paralelního sledování, zvolte **Group**a pak zvolte položku odpovídající podnabídky.  
+- Otevřete místní nabídku pro paralelní okno Kukátko, zvolte možnost **Seskupit podle**a pak zvolte příslušnou položku v podnabídce.  
   
-### <a name="to-freeze-or-thaw-threads"></a>Chcete-li zmrazit nebo odblokovat vlákna  
+### <a name="to-freeze-or-thaw-threads"></a>Zablokování nebo odmrazení vláken  
   
-- Otevřete místní nabídku pro řádek a zvolte **ukotvit** nebo **uvolnit**.  
+- Otevřete místní nabídku řádku a vyberte možnost **ukotvit** nebo **rozmrazit**.  
   
-### <a name="to-export-the-data-in-the-parallel-watch-window"></a>Export dat v okně paralelního sledování  
+### <a name="to-export-the-data-in-the-parallel-watch-window"></a>Export dat v paralelním okno Kukátko  
   
-- Zvolte **otevřít v aplikaci Excel** tlačítko a pak zvolte **otevřít v aplikaci Excel** nebo **Export do souboru CSV**.  
+- Klikněte na tlačítko **otevřít v aplikaci Excel** a pak zvolte možnost **otevřít v aplikaci Excel** nebo **exportovat do sdíleného svazku clusteru**.  
   
-### <a name="to-filter-by-a-boolean-expression"></a>Chcete-li filtrovat podle logického výrazu  
+### <a name="to-filter-by-a-boolean-expression"></a>Filtrování podle logického výrazu  
   
-- Zadejte logický výraz v **filtrovat podle logického výrazu** pole. Ladicí program vyhodnotí výraz pro každý kontext vlákna. Pouze řádky, kde je hodnota `true` jsou zobrazeny.  
+- Zadejte logický výraz do pole **filtrovat podle logického výrazu** . Ladicí program vyhodnotí výraz pro každý kontext vlákna. Zobrazí se pouze řádky, ve kterých je hodnota `true` zobrazena.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění vícevláknových aplikací](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [Postupy: Použití okna vláken GPU](../debugger/how-to-use-the-gpu-threads-window.md)   
- [Návod: Ladění aplikace C++ AMP](https://msdn.microsoft.com/library/40e92ecc-f6ba-411c-960c-b3047b854fb5)
+ [Postupy: použití okna vláken GPU](../debugger/how-to-use-the-gpu-threads-window.md)   
+ [Návod: ladění aplikace C++ AMP](https://msdn.microsoft.com/library/40e92ecc-f6ba-411c-960c-b3047b854fb5)

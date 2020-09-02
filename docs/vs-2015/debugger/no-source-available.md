@@ -1,5 +1,5 @@
 ---
-title: Žádný zdroj není k dispozici | Dokumentace Microsoftu
+title: Není k dispozici žádný zdroj | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,29 +19,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 69ea9c3a41f83b9c06dc18d6da1f859017f12ca5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697798"
 ---
 # <a name="no-source-available"></a>Žádný zdroj není k dispozici.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Váš projekt obsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvyklou příčinou je dvojitým kliknutím modul, který nemá ve zdrojovém kódu **okně zásobník volání** nebo **okno vláken**. Můžete pokračovat v ladění, ale můžete nastavovat zarážky a provádět jiné akce na tomto místě nelze použít v okně zdroje. Pokud je potřeba nastavit zarážku, použijte **okno zpětného překladu** místo.  
+Projekt neobsahuje zdrojový kód pro kód, který se pokoušíte zobrazit. Obvyklou příčinou je dvojité kliknutí na modul, který nemá zdrojový kód v okně **zásobník volání** nebo v **okně vlákna**. Můžete pokračovat v ladění, ale nemůžete použít zdrojové okno k nastavování zarážek a provádění dalších akcí v tomto umístění. Pokud potřebujete nastavit zarážku, použijte místo toho okno zpětného **překladu** .  
   
- Na stránkách vlastností řešení můžete změnit adresáře, ve kterém se ladicí program vyhledá zdrojové soubory a zjistit, aby ladicí program ignorovat vybrané zdrojové soubory. Zobrazit [ladit zdroj souborů, společná nastavení řešení vlastnost dialogového okna stránky](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).  
+ Na stránkách vlastností řešení můžete změnit adresáře, ve kterých ladicí program vyhledává zdrojové soubory, a sdělit ladicímu programu, že má ignorovat vybrané zdrojové soubory. Viz [dialogové okno ladit zdrojové soubory, společné vlastnosti, stránky vlastností řešení](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).  
   
- **Procházet a najít zdrojový kód**  
- Kliknutím na tento odkaz otevřete dialogové okno, kde můžou procházet zdrojový kód.  
+ **Vyhledat zdrojový kód**  
+ Kliknutím na tento odkaz otevřete dialogové okno, ve kterém můžete vyhledat zdrojový kód.  
   
  **Zobrazit zpětný překlad**  
- Spustí **okno zpětného překladu**.  
+ Spustí **zpětný překlad okna**.  
   
  **Vždy zobrazit zpětný překlad pro chybějící zdrojové soubory**  
- Výběr této možnosti se zobrazí **okno zpětného překladu** automaticky v při, žádný zdroj není k dispozici. Toto nastavení lze také změnit v **možnosti** dialogovém okně **ladění** kategorie, **Obecné** stránky zaškrtnutím nebo zrušením zaškrtnutí **zobrazit zpětný překlad, pokud zdroj není k dispozici**.  
+ Tuto možnost vyberte, pokud chcete automaticky zobrazit **okno zpětný překlad** , když není k dispozici žádný zdroj. Toto nastavení lze také změnit v dialogovém okně **Možnosti** , kategorie **ladění** , **Obecné** , výběrem nebo zrušením zaškrtnutí **Zobrazit zpětný překlad, pokud není k dispozici zdroj**.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění zdroje souborů, společná nastavení řešení vlastnost dialogového okna stránky](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)   
- [Zadání symbolu (.pdb) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Ladit zdrojové soubory, společné vlastnosti, stránky vlastností řešení – dialogové okno](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)   
+ [Zadat symbol (PDB) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [SOS.dll (rozšíření ladění SOS)](https://msdn.microsoft.com/library/9ac1b522-77ab-4cdc-852a-20fcdc9ae498)

@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti pole a rozhraní okna | Dokumentace Microsoftu
+title: Pole a rozhraní okna vlastností | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b58314d64536ecf33cc5589609ee5524a9352629
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65700825"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Pole a rozhraní okna Vlastnosti
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Model pro výběr k určení, které informace se zobrazují v **vlastnosti** okna je založen na okně, které má fokus v integrovaném vývojovém prostředí. Každé okno a objekt v rámci vybrané okno může mít objekt kontextu jeho výběr do kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru s hodnotami z okna rámce, když je toto okno fokus. Při změně fokusu zločinců se stejně kontext výběru.  
+Model pro výběr, který určuje, jaké informace se zobrazí v okně **vlastnosti** , je založen na okně, které se zaměřuje na integrované vývojové prostředí (IDE). Každé okno a objekt v rámci vybraného okna může mít svůj kontextový objekt výběru vložen do kontextu globálního výběru. Prostředí aktualizuje kontext globálního výběru hodnotami z rámce okna, když má toto okno fokus. V případě změny fokusu provede kontext výběru.  
   
-## <a name="tracking-selection-in-the-ide"></a>Výběr sledování v integrovaném vývojovém prostředí  
- Rámeček okna nebo webu, vlastní rozhraní IDE má služby zvané <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>. Následující kroky ukazují, jak se změna ve výběru, způsobené uživateli změnit fokus na další otevřete okno nebo výběrem jiné položce v **Průzkumníka řešení**, je implementováno s cílem změnit obsah zobrazený v  **Vlastnosti** okna.  
+## <a name="tracking-selection-in-the-ide"></a>Sledování výběru v integrovaném vývojovém prostředí  
+ V rámci rámce okna nebo webu, který vlastní rozhraní IDE, je volána služba <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> . Následující kroky ukazují, jak se změna výběru vyvolala v případě, že uživatel změní fokus na jiné otevřené okno nebo když v **Průzkumník řešení**vyberete jinou položku projektu, je implementováno pro změnu obsahu zobrazeného v okně **vlastnosti** .  
   
-1. Objekt vytvořený pomocí vašeho balíčku VSPackage, která je umístěna ve voláních vybrané okno <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> mít <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> vyvolat <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>.  
+1. Objekt vytvořený rozhraním VSPackage, který je umístěn ve vybraném okně, volá volání metody <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> Invoke <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .  
   
-2. Zásobník pro výběr poskytované vybrané okno vytvoří vlastní <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objektu. Když změny výběru sady VSPackage volá <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> upozornit všechny moduly pro naslouchání v prostředí, včetně **vlastnosti** okna změny. Poskytuje také přístup k informacím o hierarchii a položky související s nový výběr.  
+2. Kontejner výběru poskytnutý vybraným oknem vytvoří svůj vlastní <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objekt. Když se změní výběr, volání VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> upozorní na všechny posluchače v prostředí, včetně okna **vlastností** změny. Poskytuje také přístup k informacím o hierarchii a položkách, které souvisejí s novým výběrem.  
   
-3. Volání <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> a předají se jí položky vybrané hierarchie `VSHPROPID_BrowseObject` naplní parametr <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objektu.  
+3. Volání <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> a předání vybraným položkám hierarchie v `VSHPROPID_BrowseObject` parametru naplní <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> objekt.  
   
-4. Objekt odvozený od [rozhraní IDispatch](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5) se vrátí <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> pro požadované položky a prostředí zabalí jej do <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> (viz následující krok). Pokud selže volání prostředí volá druhé `IVsHierarchy::GetProperty`, předají se jí zásobník pro výběr <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> , zadejte hierarchie položky nebo položek.  
+4. Objekt odvozený z [rozhraní IDispatch](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5) je vrácen pro <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> požadovanou položku a prostředí je zabalí do objektu <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> (viz následující krok). Pokud se volání nepovede, prostředí vytvoří druhé volání do `IVsHierarchy::GetProperty` a předá ho kontejneru výběru <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> , který položka hierarchie nebo položky dodá.  
   
-    Váš projekt se nevytvoří VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> vzhledem k tomu, že v okně prostředí poskytované VSPackage, která ho implementuje (například **Průzkumníka řešení**) vytvoří <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> svým jménem.  
+    Váš projekt VSPackage se nevytvoří <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , protože rozhraní VSPackage v prostředí, které ho implementuje (například **Průzkumník řešení**), sestaví <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> jeho jménem.  
   
-5. Prostředí volá metody pro <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> získat objekty na základě `IDispatch` rozhraní vyplnit **vlastnosti** okna.  
+5. Prostředí vyvolá metody <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> pro získání objektů na základě `IDispatch` rozhraní k vyplnění v okně **vlastnosti** .  
   
-   Když je hodnota v **vlastnosti** okno se změní, implementujte rozšíření VSPackages `IVsTrackSelectionEx::OnElementValueChangeEx` a `IVsTrackSelectionEx::OnSelectionChangeEx` informuje změna hodnoty prvku. Potom se vyvolá prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> nebo <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> zachovat informace zobrazené v **vlastnosti** okno Synchronizovat s hodnotami vlastností. Další informace najdete v tématu [aktualizuje hodnoty vlastností v okně Vlastnosti](../../misc/updating-property-values-in-the-properties-window.md).  
+   Když je změněna hodnota v okně **vlastnosti** , sady VSPackage implementují `IVsTrackSelectionEx::OnElementValueChangeEx` a, `IVsTrackSelectionEx::OnSelectionChangeEx` aby nahlásila změnu hodnoty elementu. Prostředí pak vyvolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> nebo <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> zachová informace zobrazené v okně **vlastnosti** synchronizované s hodnotami vlastností. Další informace naleznete v tématu [aktualizace hodnot vlastností v okně Vlastnosti](../../misc/updating-property-values-in-the-properties-window.md).  
   
-   Kromě výběru jiné položky projektu v **Průzkumníka řešení** k zobrazení vlastností souvisejících s danou položku, můžete také zvolit jiný objekt z v rámci okna formuláře nebo dokumentu pomocí rozevíracího seznamu k dispozici na **Vlastnosti** okna. Další informace najdete v tématu [seznam objektů okna vlastnosti](../../extensibility/internals/properties-window-object-list.md).  
+   Kromě výběru jiné položky projektu v **Průzkumník řešení** pro zobrazení vlastností souvisejících s touto položkou můžete také zvolit jiný objekt v rámci formuláře nebo okna dokumentu pomocí rozevíracího seznamu, který je k dispozici v okně **vlastnosti** . Další informace naleznete v části [seznam objektů okna vlastnosti](../../extensibility/internals/properties-window-object-list.md).  
   
-   Můžete změnit způsob zobrazením informací **vlastnosti** mřížky okna okno z abecedního do kategorií, a pokud je k dispozici, můžete otevřít stránku vlastnosti pro vybraný objekt také kliknutím na odpovídající tlačítko na  **Vlastnosti** okna. Další informace najdete v tématu [tlačítka okna vlastnosti](../../extensibility/internals/properties-window-buttons.md) a [stránky vlastností](../../extensibility/internals/property-pages.md).  
+   Můžete změnit způsob zobrazení informací v mřížce okna **vlastnosti** z abecedy na kategorií a pokud je k dispozici, můžete také otevřít stránku vlastností pro vybraný objekt kliknutím na příslušná tlačítka v okně **vlastnosti** . Další informace najdete v tématu [tlačítka okna vlastnosti](../../extensibility/internals/properties-window-buttons.md) a [stránky vlastností](../../extensibility/internals/property-pages.md).  
   
-   Nakonec dolní části **vlastnosti** okno obsahuje také popis vybraném v poli **vlastnosti** mřížky okna okno. Další informace najdete v tématu [získávání popisy pole v okně Vlastnosti](../../misc/getting-field-descriptions-from-the-properties-window.md).  
+   Nakonec dolní část okna **vlastností** obsahuje také popis pole vybraného v mřížce okna **vlastnosti** . Další informace najdete v tématu [získání popisů polí z okna vlastnosti](../../misc/getting-field-descriptions-from-the-properties-window.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)

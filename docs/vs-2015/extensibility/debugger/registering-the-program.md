@@ -1,5 +1,5 @@
 ---
-title: Registrace programu | Dokumentace Microsoftu
+title: Registrace programu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d03f12a31953cbc0e20d06820dd49b5f9827e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441971"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64824551"
 ---
 # <a name="registering-the-program"></a>Registrace programu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Po ladicí stroj získal port, reprezentovaný [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) rozhraní, je dalším krokem při povolení ladění programu registrace s portem. Po registraci do programu je k dispozici pro ladění pomocí jedné z následujících způsobů:  
+Poté, co ladicí stroj získá port, který je reprezentován rozhraním [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) , je dalším krokem k tomu, abyste mohli ladit program, zaregistrovat ho v portu. Po registraci je program k dispozici pro ladění jedním z následujících způsobů:  
   
-- Proces připojení, která umožňuje ladicího programu k získání úplné kontroly ladění běžící aplikace.  
+- Proces připojení, který umožňuje ladicímu programu získat kompletní řízení ladění spuštěné aplikace.  
   
-- Just-in-time (JIT) ladění, která umožňuje za fakt ladění programu, který se spustí bez ohledu na jejich ladicí program. Za běhu architektury zachytí chyba, ladicí program se upozornění před operačního systému nebo běhové prostředí uvolní paměť a prostředky neškodné programu.  
+- Ladění JIT (just-in-time), které umožňuje ladění programu po určité skutečnosti, který běží nezávisle na ladicím programu. Když architektura za běhu zachytí chybu, ladicí program je upozorněn před tím, než operační systém nebo běhové prostředí uvolní paměť a prostředky pro chybový program.  
   
 ## <a name="registering-procedure"></a>Postup registrace  
   
-#### <a name="to-register-your-program"></a>Registrace aplikace  
+#### <a name="to-register-your-program"></a>Registrace programu  
   
-1. Volání [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) metoda implementovaná port.  
+1. Zavolejte metodu [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) implementovanou portem.  
   
-     `IDebugPortNotify2::AddProgramNode` vyžaduje ukazatel [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.  
+     `IDebugPortNotify2::AddProgramNode` vyžaduje ukazatel na rozhraní [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) .  
   
-     Obvykle když operační systém nebo prostředí za běhu načte program, vytvoří uzel program. Pokud ladicí stroj (DE) se zobrazí výzva k načtení programu DE vytvoří a zaregistruje uzel programu.  
+     Když operační systém nebo běhové prostředí načte program, vytvoří uzel programu. Pokud je k načtení programu požádán ladicí stroj (DE), nástroj DE vytvoří a zaregistruje uzel programu.  
   
-     Následující příklad ukazuje ladicí stroj spuštění programu a její registrací pomocí portu.  
+     Následující příklad ukazuje modul ladění, který spouští program a registruje ho pomocí portu.  
   
     > [!NOTE]
-    > To není jediný způsob, jak spustit a pokračovat v procesu. To je především Příklad registrace programu s portem.  
+    > Nejedná se o jediný způsob, jak spustit a obnovit proces; Toto je hlavně příklad registrace programu s portem.  
   
     ```cpp#  
     // This is an IDebugEngineLaunch2 method.  

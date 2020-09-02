@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluator2:: SetCallback | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 907fdaa928b3f84f6ff37490d5c54a9d48515053
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729344"
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
-Umožňuje vyhodnocení výrazu (EE) určit rozhraní zpětného volání, které ladicí modul (DE) použije ke čtení nastavení metriky.
+Povoluje vyhodnocení výrazu (EE) pro určení rozhraní zpětného volání, které bude modul ladicího programu (DE) používat ke čtení nastavení metriky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ int SetCallback (
 
 ## <a name="parameters"></a>Parametry
 `pCallback`\
-[v] Rozhraní pro zpětné volání nastavení.
+pro Rozhraní, které se má použít pro zpětné volání nastavení
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
-Tato metoda poskytuje rozhraní pro správce ladění relace, který může vyhodnocení výrazu použít ke čtení nastavení metriky. Je užitečné při vzdálenéladění číst metriky v [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] počítači.
+Tato metoda poskytuje rozhraní pro správce ladění relace, které může vyhodnocovací filtr výrazů použít ke čtení nastavení metriky. Je užitečné při vzdáleném ladění, aby bylo možné číst metriky v [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] počítači.
 
 ## <a name="example"></a>Příklad
-Následující příklady ukazují, jak implementovat tuto metodu pro objekt **CEE,** který zveřejňuje rozhraní [IDebugSettingsCallback2.](../../../extensibility/debugger/reference/idebugsettingscallback2.md)
+Následující příklady ukazují, jak implementovat tuto metodu pro objekt **CEE** , který zpřístupňuje rozhraní [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) .
 
 ```cpp
 HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)

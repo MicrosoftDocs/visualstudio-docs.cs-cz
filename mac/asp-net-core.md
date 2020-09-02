@@ -11,10 +11,10 @@ no-loc:
 - Blazor WebAssembly
 ms.topic: how-to
 ms.openlocfilehash: ed92205388202c457f4d6c8e3fbba567a0d5944e
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86211662"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
@@ -114,7 +114,7 @@ Otevřete a zkontrolujte soubor **Startup.cs** v projektu:
 Tato spouštěcí třída musí vždy splňovat následující pravidla:
 
 - Musí být vždycky veřejné.
-- Musí obsahovat dvě veřejné metody: `ConfigureServices` a`Configure`
+- Musí obsahovat dvě veřejné metody: `ConfigureServices` a `Configure`
 
 `ConfigureServices`Metoda definuje služby, které bude aplikace používat.
 
@@ -238,7 +238,7 @@ Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,12 (Sierra) a vy�
 
 Ujistěte se, že jste úspěšně dokončili všechny kroky, abyste zajistili, že se .NET Core nainstaluje úspěšně.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Tento průvodce vám poskytl Úvod do ASP.NET Core. Popisuje, co je, kdy se používá, a poskytuje informace o jeho použití v Visual Studio pro Mac.
 Další informace o dalších krocích odsud najdete v následujících příručkách:

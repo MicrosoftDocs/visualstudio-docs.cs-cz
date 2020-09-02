@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fe49c928ca3de318410eba56afeae6f4329efed3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670665"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>Postupy: Nahrazení parametrů v šabloně
@@ -38,9 +38,9 @@ Můžete nahradit parametry šablony, jako jsou názvy tříd a obory názvů, k
     > [!NOTE]
     > Parametry šablony jsou zapsané ve formátu $*Parameter*$.
 
-2. V souboru. vstemplate pro šablonu vyhledejte prvek `ProjectItem`, který obsahuje tento soubor.
+2. V souboru. vstemplate pro šablonu vyhledejte `ProjectItem` prvek, který obsahuje tento soubor.
 
-3. Nastavte atribut `ReplaceParameters` pro `true` elementu `ProjectItem`. Příklad:
+3. Nastavte `ReplaceParameters` atribut pro `true` `ProjectItem` element. Příklad:
 
     ```
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>

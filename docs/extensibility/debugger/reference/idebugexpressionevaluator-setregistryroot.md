@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetRegistryKořen | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluator:: SetRegistryRoot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 11e7cd69ed3f1e1b23cc0f2f03f3fd2cf912d308
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729417"
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
-Tato metoda nastaví kořen registru. Používá se pro ladění vedle sebe.
+Tato metoda nastaví kořen registru. Používá se pro souběžné ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int SetRegistryRoot(
 
 ## <a name="parameters"></a>Parametry
 `ustrRegistryRoot`\
-[v] Nový kořen registru.
+pro Nový kořen registru.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Zadaný kořen registru je obvykle nastaven při první instanci vyhodnocení výrazu a odkazuje na klíč registru pro konkrétní verzi\\sady Visual Studio (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio*X.Y*, kde *X.Y* je číslo verze).
+ Zadaný kořen registru se obvykle nastavuje při první instanci vyhodnocovacího filtru výrazů a odkazuje na klíč registru pro konkrétní verzi sady Visual Studio (HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. Y*, kde *X. y* je číslo verze).
 
 ## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

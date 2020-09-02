@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537381"
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Update – &gt; element (vývoj pro Office v sadě Visual Studio)
   `update`Prvek určuje interval, ve kterém bude řešení vyhledávat aktualizace.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <update
@@ -81,7 +81,7 @@ ms.locfileid: "85537381"
 </vstav3:update>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nasazení řešení Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)

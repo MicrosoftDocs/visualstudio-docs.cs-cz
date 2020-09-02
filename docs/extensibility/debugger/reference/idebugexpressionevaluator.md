@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator | Dokumenty společnosti Microsoft
+title: IDebugExpressionEvaluator | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,19 +13,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7e8dd910e4edc110abb40dde14b4cb85ff54a70a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729382"
 ---
 # <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 tento způsob implementace vyhodnocení výrazů je zastaralé. Informace o implementaci vyhodnocení exprese CLR naleznete v tématu [Vyhodnocení exprese CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka vyhodnocení spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Toto rozhraní představuje vyhodnocení výrazu.
+Toto rozhraní představuje vyhodnocovací filtr výrazů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugExpressionEvaluator : IUnknown
@@ -35,33 +35,33 @@ IDebugExpressionEvaluator : IUnknown
 Vyhodnocení výrazu musí implementovat toto rozhraní.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
-Chcete-li získat toto rozhraní, vytvořte `CoCreateInstance` instanci vyhodnocení výrazu prostřednictvím metody pomocí ID třídy (CLSID) vyhodnocení. Viz příklad.
+Chcete-li získat toto rozhraní, vytvořte instanci vyhodnocení výrazu prostřednictvím `CoCreateInstance` metody pomocí ID třídy (CLSID) vyhodnocení. Podívejte se na příklad.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
-V následující tabulce jsou `IDebugExpressionEvaluator`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+V následující tabulce jsou uvedeny metody `IDebugExpressionEvaluator` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|Převede řetězec výrazu na analyzovaný výraz.|
+|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) (Parsování)|Převede řetězec výrazu na analyzovaný výraz.|
 |[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|Získá místní proměnné, argumenty a další vlastnosti metody.|
 |[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|Převede umístění metody a posun na adresu paměti.|
-|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|Určuje, který jazyk se má použít k vytvoření tiskových výsledků.|
-|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Nastaví kořenový adresář registru. Používá se pro ladění vedle sebe.|
+|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|Určuje jazyk, který se použije k vytváření tisknutelných výsledků.|
+|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Nastaví kořen registru. Používá se pro souběžné ladění.|
 
 ## <a name="remarks"></a>Poznámky
-V typické situaci ladicí modul (DE) konkretizuje vyhodnocení výrazu (EE) v důsledku volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Vzhledem k tomu, že DE zná jazyk a dodavatele EE, který chce použít, de získá CLSID EE z registru `GetEEMetric` [(pomocné sedy sdk pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) funkce, , pomáhá s tímto načítání).
+V typické situaci modul ladění (DE) vytvoří instanci vyhodnocovacího filtru výrazů (EE) jako výsledek volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Vzhledem k tomu, že DE zná jazyk a dodavatele v et, který chce použít, DE Získá identifikátor CLSID EE z registru ( [pomocníka sady SDK pro funkci ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) , `GetEEMetric` , pomáhá s tímto načítáním).
 
-Po EE je vytvořena instance, DE volá [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) analyzovat výraz a uložit jej do [Objektu IDebugParsedExpression.](../../../extensibility/debugger/reference/idebugparsedexpression.md) Později volání [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) vyhodnotí výraz.
+Po vytvoření instance [EE volání de vyvolá analýzu výrazu](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) a uloží jej do objektu [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) . Později volání [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) vyhodnotí výraz.
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: ee.h
+Záhlaví: ee. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Příklad
-Tento příklad ukazuje, jak vytvořit instanci vyhodnocení výrazu dané zprostředkovatele symbola a adresu ve zdrojovém kódu. Tento příklad používá `GetEEMetric`funkci , z [pomocníků sady SDK pro knihovnu ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) dbgmetric.lib.
+Tento příklad ukazuje, jak vytvořit instanci vyhodnocovacího filtru pro daný poskytovatele symbolů a adresu ve zdrojovém kódu. Tento příklad používá funkci, `GetEEMetric` z [pomocníků sady SDK pro ladění](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) knihovny dbgmetric. lib.
 
 ```cpp
 IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolProvider,

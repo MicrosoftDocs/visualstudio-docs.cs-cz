@@ -1,5 +1,5 @@
 ---
-title: Funkce SccSetOption | Dokumenty společnosti Microsoft
+title: Funkce SccSetOption | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1adcbb47e9fce7037fe8942326e8836ade51e3eb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700312"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption – funkce
-Tato funkce nastaví možnosti, které řídí chování modulu plug-in správy zdrojového kódu.
+Tato funkce nastavuje možnosti, které řídí chování modulu plug-in správy zdrojových kódů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,53 +35,53 @@ SCCRTN SccSetOption(
 #### <a name="parameters"></a>Parametry
  pvContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- nMožnost
+ nOption
 
-[v] Možnost, která je nastavena.
+pro Možnost, která je nastavena.
 
- dwVal řekl:
+ dwVal
 
-[v] Nastavení pro tuto možnost.
+pro Nastavení pro možnost.
 
 ## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Tato možnost byla úspěšně nastavena.|
-|SCC_I_SHARESUBPROJOK|Vráceno, pokud `nOption` byl `SCC_OPT_SHARESUBPROJ` a modul plug-in správy zdrojového kódu umožňuje ide nastavit cílovou složku.|
-|SCC_E_OPNOTSUPPORTED|Tato možnost nebyla stanovena a neměla by se na ni spoléhat.|
+|SCC_OK|Možnost byla úspěšně nastavena.|
+|SCC_I_SHARESUBPROJOK|Bylo vráceno `nOption` , pokud bylo `SCC_OPT_SHARESUBPROJ` a modul plug-in správy zdrojových kódů umožňuje integrovanému vývojovému prostředí (IDE) nastavit cílovou složku.|
+|SCC_E_OPNOTSUPPORTED|Možnost nebyla nastavena a nemělo by se spoléhat na.|
 
 ## <a name="remarks"></a>Poznámky
- IDE volá tuto funkci k řízení chování modulu plug-in správy zdrojového kódu. První parametr `nOption`, označuje hodnotu, která je nastavena, zatímco druhý , označuje, `dwVal`co dělat s totou hodnotou. Modul plug-in ukládá tyto `pvContext``,` informace spojené s tak IDE musí volat tuto funkci po volání [SccInitialize](../extensibility/sccinitialize-function.md) (ale ne nutně po každém volání [SccOpenProject](../extensibility/sccopenproject-function.md)).
+ Rozhraní IDE volá tuto funkci pro řízení chování modulu plug-in správy zdrojových kódů. První parametr, `nOption` , označuje hodnotu, která je nastavena, zatímco druhá, `dwVal` Určuje, co s touto hodnotou udělat. Modul plug-in ukládá tyto informace spojené s objektem, `pvContext``,` takže rozhraní IDE musí volat tuto funkci po volání metody [SccInitialize](../extensibility/sccinitialize-function.md) (ale ne nutně po každém volání metody [SccOpenProject](../extensibility/sccopenproject-function.md)).
 
- Shrnutí možností a jejich hodnot:
+ Souhrn možností a jejich hodnot:
 
 |`nOption`|`dwValue`|Popis|
 |---------------|---------------|-----------------|
 |`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|Povolí nebo zakáže řízení front událostí na pozadí.|
-|`SCC_OPT_USERDATA`|Libovolná hodnota|Určuje uživatelskou hodnotu, která má být předána funkci zpětného volání [OPTNAMECHANGEPFN.](../extensibility/optnamechangepfn.md)|
-|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|Označuje, zda ide aktuálně podporuje zrušení operace.|
-|`SCC_OPT_NAMECHANGEPFN`|Ukazatel na funkci zpětného volání [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)|Nastaví ukazatel na funkci zpětného volání pro změnu názvu.|
-|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|Označuje, zda rozhraní IDE umožňuje ruční výsluní svých souborů (prostřednictvím uživatelského rozhraní správy zdrojového kódu) nebo zda je nutné je rezervovat pouze prostřednictvím modulu plug-in správy zdrojového kódu.|
-|`SCC_OPT_SHARESUBPROJ`|Není dostupné.|Pokud modul plug-in správy zdrojového kódu umožňuje prostředí IDE určit `SCC_I_SHARESUBPROJOK`místní složku projektu, vrátí modul plug-in .|
+|`SCC_OPT_USERDATA`|Libovolná hodnota|Určuje hodnotu uživatele, která má být předána funkci zpětného volání [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) .|
+|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|Označuje, zda IDE aktuálně podporuje zrušení operace.|
+|`SCC_OPT_NAMECHANGEPFN`|Ukazatel na funkci zpětného volání [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)|Nastaví ukazatel na funkci zpětného volání změny názvu.|
+|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|Určuje, zda rozhraní IDE umožňuje rezervovat soubory ručně (prostřednictvím uživatelského rozhraní správy zdrojových kódů) nebo zda musí být rezervovány pouze prostřednictvím modulu plug-in správy zdrojových kódů.|
+|`SCC_OPT_SHARESUBPROJ`|–|Pokud modul plug-in správy zdrojových kódů umožňuje integrovanému vývojovém prostředí (IDE) určit místní složku projektu, modul plug-in se vrátí `SCC_I_SHARESUBPROJOK` .|
 
 ## <a name="scc_opt_eventqueue"></a>SCC_OPT_EVENTQUEUE
- Pokud `nOption` `SCC_OPT_EVENTQUEUE`je , ide je zakázání (nebo re-povolení) zpracování na pozadí. Například během kompilace ide může pokyn modul plug-in správy zdrojového kódu zastavit zpracování na nečinnosti jakéhokoli druhu. Po kompilaci by znovu povolit zpracování na pozadí udržovat frontu událostí modulu plug-in aktuální. Odpovídající `SCC_OPT_EVENTQUEUE` hodnotě `nOption`, existují dvě možné `dwVal`hodnoty pro `SCC_OPT_EQ_ENABLE` `SCC_OPT_EQ_DISABLE`, a .
+ Pokud `nOption` je `SCC_OPT_EVENTQUEUE` , rozhraní IDE zakáže (nebo znovu povolí) zpracování na pozadí. Například během kompilace může rozhraní IDE instruovat modul plug-in správy zdrojových kódů, aby zastavil nečinné zpracování jakéhokoli druhu. Po kompilaci by bylo opětovné povolit zpracování na pozadí, aby se fronta událostí modulu plug-in udržovala v aktuálním stavu. Odpovídající `SCC_OPT_EVENTQUEUE` hodnotě `nOption` , existují dvě možné hodnoty pro `dwVal` , konkrétně `SCC_OPT_EQ_ENABLE` a `SCC_OPT_EQ_DISABLE` .
 
 ## <a name="scc_opt_hascancelmode"></a>SCC_OPT_HASCANCELMODE
- Pokud je `SCC_OPT_HASCANCELMODE` `nOption` hodnota pro , IDE umožňuje uživatelům zrušit dlouhé operace. Nastavení `dwVal` `SCC_OPT_HCM_NO` na (výchozí) označuje, že ide nemá žádný režim zrušení. Modul plug-in správy zdrojového kódu musí nabízet vlastní tlačítko Storno, pokud chce, aby uživatel mohl zrušit. `SCC_OPT_HCM_YES`označuje, že ide poskytuje možnost zrušit operaci, takže modul plug-in SCC není nutné zobrazit vlastní tlačítko Storno. Pokud ide `dwVal` `SCC_OPT_HCM_YES`nastaví na , je `SCC_MSG_STATUS` `DOCANCEL` připraven reagovat `lpTextOutProc` a zprávy odeslané do funkce zpětného volání (viz [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)). Pokud ide nenastaví tuto proměnnou, modul plug-in by neměl odesílat tyto dvě zprávy.
+ Pokud hodnota pro `nOption` je `SCC_OPT_HASCANCELMODE` , IDE umožňuje uživatelům zrušit dlouhé operace. Nastavení `dwVal` na `SCC_OPT_HCM_NO` (výchozí) znamená, že rozhraní IDE nemá režim zrušení. Modul plug-in správy zdrojových kódů musí nabídnout vlastní tlačítko zrušit, pokud chce, aby uživatel mohl operaci zrušit. `SCC_OPT_HCM_YES` označuje, že rozhraní IDE poskytuje možnost zrušit operaci, takže modul plug-in SCC nemusí zobrazit vlastní tlačítko Storno. Pokud rozhraní IDE nastaví `dwVal` na `SCC_OPT_HCM_YES` , je připraveno reagovat na `SCC_MSG_STATUS` a `DOCANCEL` zprávy odeslané do `lpTextOutProc` funkce zpětného volání (viz [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)). Pokud rozhraní IDE tuto proměnnou nenastaví, modul plug-in by tyto dvě zprávy neměl odeslat.
 
 ## <a name="scc_opt_namechangepfn"></a>SCC_OPT_NAMECHANGEPFN
- Pokud nOption je `SCC_OPT_NAMECHANGEPFN`nastavena na , a modul plug-in správy zdrojového kódu a IDE povolit, modul plug-in můžete skutečně přejmenovat nebo přesunout soubor během operace správy zdrojového kódu. Bude `dwVal` nastavena na ukazatel funkce typu [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md). Během operace správy zdrojového kódu může modul plug-in tuto funkci volat a předat tři parametry. Jedná se o starý název (s plně kvalifikovanou cestou) souboru, nový název (s plně kvalifikovanou cestou) tohoto souboru a ukazatel na informace, které mají význam pro ide. IDE odešle v tomto `SccSetOption` posledním `nOption` ukazatel `SCC_OPT_USERDATA`voláním s nastavena na , s `dwVal` odkazem na data. Podpora této funkce je volitelná. VSSCI plug-, který používá tuto schopnost musí inicializovat `NULL`jeho funkce ukazatel a proměnné dat uživatele , a nesmí volat přejmenování funkce, pokud byla dána jeden. Měla by být také připravena držet hodnotu, kterou mu byla `SccSetOption`dána, nebo ji změnit v reakci na nové volání . K tomu nedojde uprostřed operace příkazu správy zdrojového kódu, ale může k tomu dojít mezi příkazy.
+ Pokud je nOption nastaveno na `SCC_OPT_NAMECHANGEPFN` , a jak modul plug-in správy zdrojového kódu, tak i rozhraní IDE, modul plug-in může během operace správy zdrojových kódů skutečně přejmenovat nebo přesunout soubor. `dwVal`Bude nastaven na ukazatel na funkci typu [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md). Během operace správy zdrojových kódů modul plug-in může zavolat tuto funkci a předat tři parametry. Jedná se o starý název (s plně kvalifikovanou cestou) souboru, nový název (s úplnou cestou) tohoto souboru a ukazatel na informace, které mají pro IDE význam. Rozhraní IDE odešle tento poslední ukazatel voláním metody `SccSetOption` `nOption` set to `SCC_OPT_USERDATA` a s `dwVal` ukázáním na data. Podpora této funkce je volitelná. Modul plug-in VSSCI, který používá tuto schopnost, musí inicializovat jeho ukazatel na funkce a proměnné dat uživatele na `NULL` a nesmí volat funkci přejmenování, pokud mu nebyla udělena jedna. Měla by být také připravovaná tak, aby obsahovala hodnotu, kterou jste předali, nebo ji změnit v reakci na nové volání `SccSetOption` . K tomu nedojde uprostřed operace příkazu správy zdrojového kódu, ale může k tomu dojít mezi příkazy.
 
 ## <a name="scc_opt_scccheckoutonly"></a>SCC_OPT_SCCCHECKOUTONLY
- Pokud nOption je `SCC_OPT_SCCCHECKOUTONLY`nastavena na , rozhraní IDE označuje, že soubory v aktuálně otevřené projektu by nikdy být rezervovánručně prostřednictvím uživatelského rozhraní systému správy zdrojového kódu. Místo toho by měly být soubory rezervovány pouze prostřednictvím modulu plug-in správy zdrojového kódu pod ovládacím prvkem IDE. Pokud `dwValue` je `SCC_OPT_SCO_NO`nastavena na , to znamená, že soubory by měly být zpracovány normálně modul u plug-in a mohou být rezervovány prostřednictvím správy zdrojového kódu. Pokud `dwValue` je `SCC_OPT_SCO_YES`nastavena na , pak pouze modul plug-in je povoleno rezervovat soubory a řízení zdrojového kódu uI by neměla být vyvolána. To je pro situace, kde ide může mít "pseudo-soubory", které mají smysl rezervovat pouze prostřednictvím ide.
+ Pokud je nOption nastaveno na `SCC_OPT_SCCCHECKOUTONLY` , rozhraní IDE značí, že soubory v aktuálně otevřeném projektu by nikdy neměly být rezervovány ručně prostřednictvím uživatelského rozhraní systému správy zdrojového kódu. Místo toho by měly být soubory rezervovány pouze pomocí modulu plug-in správy zdrojových kódů v ovládacím prvku IDE. Pokud `dwValue` je nastaveno na `SCC_OPT_SCO_NO` , znamená to, že soubory by měly být zpracovány normálně modulem plug-in a lze je zaregistrovat prostřednictvím uživatelského rozhraní správy zdrojových kódů. Pokud `dwValue` je nastaveno na `SCC_OPT_SCO_YES` , pak pouze modul plug-in může rezervovat soubory a uživatelské rozhraní systému správy zdrojových kódů by nemělo být vyvoláno. To je v situacích, kdy IDE může mít "pseudo-Files", které by měly smysl rezervovat pouze přes rozhraní IDE.
 
 ## <a name="scc_opt_sharesubproj"></a>SCC_OPT_SHARESUBPROJ
- Pokud`nOption` je `SCC_OPT_SHARESUBPROJ`nastavena možnost , ide testuje, zda modul plug-in správy zdrojového kódu můžete použít zadanou místní složku při přidávání souborů ze správy zdrojového kódu. Na hodnotě `dwVal` parametru v tomto případě nezáleží. Pokud modul plug-in umožňuje ide určit místní cílovou složku, do které budou soubory přidány ze správy zdrojového kódu `SCC_I_SHARESUBPROJOK` při `SccSetOption` volání [SccAddFromScc,](../extensibility/sccaddfromscc-function.md) pak se modul plug-in musí vrátit při volání funkce. Rozhraní IDE pak `lplpFileNames` používá `SccAddFromScc` parametr funkce předat v cílové složce. Modul plug-in používá tuto cílovou složku k umístění souborů přidaných ze správy zdrojového kódu. Pokud se modul plug-in `SCC_I_SHARESUBPROJOK` `SCC_OPT_SHARESUBPROJ` nevrátí, když je možnost nastavena, ide předpokládá, že modul plug-in je schopen přidávat soubory pouze v aktuální místní složce.
+ Pokud `nOption` je parametr nastaven na hodnotu `SCC_OPT_SHARESUBPROJ` , rozhraní IDE testuje, zda modul plug-in správy zdrojových kódů může při přidávání souborů ze správy zdrojových kódů použít zadanou místní složku. Hodnota `dwVal` parametru v tomto případě nezáleží. Pokud modul plug-in umožňuje rozhraní IDE určit místní cílovou složku, do které budou soubory přidány ze správy zdrojového kódu při volání funkce [SccAddFromScc](../extensibility/sccaddfromscc-function.md) , modul plug-in musí vracet `SCC_I_SHARESUBPROJOK` při `SccSetOption` volání funkce. Rozhraní IDE pak použije `lplpFileNames` parametr `SccAddFromScc` funkce k předání do cílové složky. Modul plug-in používá tuto cílovou složku k umístění souborů přidaných ze správy zdrojového kódu. Pokud modul plug-in nevrátí `SCC_I_SHARESUBPROJOK` `SCC_OPT_SHARESUBPROJ` , když je nastavena možnost, rozhraní IDE předpokládá, že modul plug-in může přidat soubory pouze do aktuální místní složky.
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

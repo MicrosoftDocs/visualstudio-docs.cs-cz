@@ -1,5 +1,5 @@
 ---
-title: Adresování DPI Problémy2 | Dokumentace Microsoftu
+title: Adresování DPI Issues2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 359184aa-f5b6-4b6c-99fe-104655b3a494
@@ -7,51 +7,51 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9b8bc5963ba9263d72800cc473cfa56324884ace
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65699272"
 ---
 # <a name="addressing-dpi-issues"></a>Řešení problémů s nastavením DPI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rostoucí počet zařízení, který se dodává s "ve vysokém rozlišení" obrazovky. Tyto obrazovky mají obvykle více než 200 pixely na palec (ICP). K práci s aplikací na těchto počítačích potřebovat obsah vertikálně navyšovat kapacitu pro potřeby zobrazení obsahu na dálku normálního zobrazení zařízení. Primární cíl s vysokou hustotou zobrazí je v době 2014, mobilní, výpočetních zařízeních (tablety, přenosné počítače design a telefony).  
+Rostoucí počet zařízení se dodává s obrazovkami s vysokým rozlišením. Tyto obrazovky obvykle mají více než 200 pixelů na palec (ppi). Práce s aplikací na těchto počítačích bude vyžadovat, aby se obsah navzájem škálovat tak, aby splňoval požadavky na zobrazení obsahu v normální vzdálenosti pro zařízení. Od 2014 je primární cíl pro zobrazení s vysokou hustotou mobilní výpočetní zařízení (tablety, clamshell přenosné počítače a telefony).  
   
- Windows 8.1 a novější obsahuje několik funkcí, které umožňují tyto počítače pracovat se zobrazí a prostředí, kde počítač je připojený k oběma s vysokou hustotou běžný hustota zobrazí ve stejnou dobu.  
+ Windows 8.1 a vyšší obsahuje několik funkcí, které těmto počítačům umožňují pracovat s monitory a prostředími, kde je počítač připojen k obou hodnotám s vysokou hustotou a standardní hustotou.  
   
-- Windows vám umožní do změní měřítko obsahu pro zařízení s využitím "Zkontrolujte text a další položky větší nebo menší" nastavení (dostupné od verze Windows XP).  
+- Systém Windows vám umožní škálovat obsah na zařízení pomocí nastavení "nastavit text a další položky větší nebo menší" (k dispozici od Windows XP).  
   
-- Windows 8.1 a vyšší budou automaticky změnit měřítko obsahu pro většinu aplikací, aby byla konzistentní při přesunu mezi zobrazí různé hustota pixelů. Když (200 % škálování) s vysokou hustotou je primárního a sekundárního display je standardní hustota (100 %), Windows bude automaticky snižovat obsah okna aplikace na sekundárního display (1 pixelu zobrazí pro každé 4 pixelů vykreslený aplikace).  
+- Windows 8.1 a vyšší automaticky škálují obsah pro většinu aplikací tak, aby byly konzistentní při přesunu mezi zobrazeními různých hustot pixelů. Když je primární displej vysoký hustota (200% škálování) a sekundární displej má standardní hustotu (100%), Windows automaticky škáluje obsah okna aplikace v sekundárním zobrazení (1 pixel se zobrazuje pro každé 4 pixely vykreslené aplikací).  
   
-- Windows se ve výchozím nastavení právo škálování hustota pixelů a zobrazení vzdálenosti použitá pro zobrazení (Windows 7 a vyšší, OEM konfigurovatelné).  
+- Systém Windows bude mít ve výchozím nastavení správné měřítko pro hustotu pixelů a zobrazení vzdálenosti pro displej (Windows 7 a vyšší, OEM-konfigurovatelný).  
   
-- Windows může automaticky škálovat obsahu až 250 % na nová zařízení, které překračují 280 pixelů na palec (od verze Windows 8.1 s.14).  
+- Systém Windows dokáže automaticky škálovat obsah až na 250% na nových zařízeních, která přesahují 280 PPI (od Windows 8.1 S14).  
   
-  Windows má způsob řešení problémů s vertikálním navýšení kapacity uživatelského rozhraní, jak využít výhod vyšší pixel počty. Aplikace vyjádřit výslovný souhlas pro tento systém sám deklarací "systém rozpoznání nastavení DPI." Aplikace, které to nedělali se škálovat v systému. Výsledkem může být "přibližné" uživatelské prostředí, kde bude celá aplikace je jednotně pixel roztažená. Příklad:  
+  Systém Windows nabízí možnost nabývat se škálováním uživatelského rozhraní pro využití většího počtu pixelů. Aplikace výslovný do tohoto systému tím, že deklaruje samou "systémovou podporu DPI". Aplikace, které to nedělají, se škálují podle systému. Výsledkem může být přibližné uživatelské prostředí, kde je celá aplikace rovnoměrně roztažena na pixel. Příklad:  
   
-  ![DPI problémy s fuzzy logikou](../extensibility/media/dpi-issues-fuzzy.png "DPI problémy s fuzzy logikou")  
+  ![Přibližné problémy s DPI](../extensibility/media/dpi-issues-fuzzy.png "Přibližné problémy s DPI")  
   
-  Vyjádřit výslovný souhlas pro právě DPI škálování s ohledem na Visual Studio a proto není "virtualizovaný."  
+  Aplikace Visual Studio výslovný v pro škálování DPI, a proto není virtualizovaná.  
   
-  Windows (a sady Visual Studio) využívejte několik technologií uživatelského rozhraní, které mají různé způsoby řešení problémů s škálování faktorů nastaví ho systém. Příklad:  
+  Windows (a Visual Studio) využívají několik technologií uživatelského rozhraní, které mají různý způsob, jak řešit faktory škálování nastavené systémem. Příklad:  
   
-- Ovládací prvky WPF měří způsobem nezávislým na zařízení (jednotky, ne pixelů). Rozhraní WPF se automaticky škáluje pro aktuální DPI.  
+- WPF měří ovládací prvky v cestě nezávislé na zařízení (jednotky, ne pixely). Uživatelské rozhraní WPF automaticky škáluje na aktuální DPI.  
   
-- Všechny velikosti textu bez ohledu na architekturu uživatelského rozhraní jsou vyjádřeny v bodech a tak nakládá systému jako nezávislé na DPI. Text v systému Win32, WinForms a WPF již vertikálně navýšit kapacitu správně při vykreslení zobrazení zařízení.  
+- Všechny velikosti textu bez ohledu na rámec uživatelského rozhraní jsou vyjádřeny v bodech a jsou proto zpracovány systémem jako nezávislé na rozlišení DPI. Text v Win32, WinForms a WPF se už při vykreslování na zobrazovací zařízení správně škáluje.  
   
-- Win32/WinForms dialogová okna a windows mají způsoby povolení rozložení, které mění svou velikost textu – například prostřednictvím mřížky, flow a panely rozložení tabulky. Tyto povolit, jak se vyhnout pevně zakódované pixel umístění, které udávají, pokud se zvýší velikost písma.  
+- Dialogová okna Win32/WinForms a Windows mají za úkol povolit rozložení, která mění velikost textu – například prostřednictvím mřížky, toku a panelů rozložení tabulky. Tato možnost umožňuje zabránit pevně zakódovaným umístěním v pixelech, které se při zvýšení velikosti písma nezmění.  
   
-- Poskytuje systém ikony nebo prostředky na základě metrik systému (například SM_CXICON a SM_CXSMICON) jsou již škálovat.  
+- Ikony poskytované systémem nebo prostředky na základě systémových metrik (například SM_CXICON a SM_CXSMICON) jsou již škálované.  
   
-## <a name="older-win32-gdi-gdi-and-winforms-based-ui"></a>Starší Win32 (GDI, rozhraní GDI +) a uživatelského rozhraní založeného na WinForms  
- WPF je již vysoké-rozlišení DPI, velkou část našeho kódu založené na Win32/GDI nebyl zapsán původně povědomí o DPI v úvahu. Windows poskytuje rozhraní API pro Škálování DPI. Opravy Win32 by měl použít konzistentně napříč produktu. Visual Studio poskytuje pomocné rutiny knihovny tříd, aby se zabránilo duplikování funkcí a zajištění konzistence napříč produktu.  
+## <a name="older-win32-gdi-gdi-and-winforms-based-ui"></a>Starší rozhraní Win32 (GDI, GDI+) a uživatelské rozhraní založené na WinForms  
+ I když je WPF již vysokým rozlišením DPI, mnoho z našich kódu založených na Win32/GDI nebylo původně napsáno s ohledem na rozlišení DPI. Systém Windows zadal rozhraní API pro škálování přes DPI. Opravy problémů Win32 by se měly konzistentně používat v rámci produktu. Visual Studio poskytuje pomocnou knihovnu tříd, aby se předešlo duplicitě funkcí a zajistila se konzistence napříč produktem.  
   
 ## <a name="high-resolution-images"></a>Obrázky s vysokým rozlišením  
- Tato část se především pro vývojáře v rozšíření sady Visual Studio 2013. Pro Visual Studio 2015 použijte službu bitových kopií, který je integrovaný do sady Visual Studio. Můžete také zjistit, že budete potřebovat pro podporu nebo cíle mnoho verzí sady Visual Studio a proto službu bitové kopie v 2015 není možné protože neexistuje v předchozích verzích. Tato část bude také za vás.  
+ Tato část je primárně určená pro vývojáře, kteří rozšiřují Visual Studio 2013. Pro Visual Studio 2015 použijte službu Image Service, která je integrovaná do sady Visual Studio. Můžete také zjistit, že potřebujete podporovat nebo cílit na mnoho verzí sady Visual Studio, a proto použití služby image v 2015 není možností, protože neexistuje v předchozích verzích. Tato část je také k disdobu.  
   
-## <a name="scaling-up-images-that-are-too-small"></a>Vertikální navýšení bitové kopie, které jsou příliš malé  
- Bitové kopie, které jsou příliš malé můžete "vertikálně navýšit" a vykresleného v rozhraní GDI a WPF pomocí některé běžné metody. Spravované DPI pomocné třídy jsou k dispozici pro Visual Studio integrátorům interní a externí adresu škálování ikony, bitmapy, imagestrips a imagelists. Založené na Win32 nativní C / C++ nabízí pomocníky dostupné pro škálování HICON, HBITMAP, HIMAGELIST a VsUI::GdiplusImage. Škálování rastrového obrázku obvykle vyžaduje pouze jeden řádek změnu po zahrnutí odkazu na pomocné knihovny. Příklad:  
+## <a name="scaling-up-images-that-are-too-small"></a>Horizontální navýšení nebo zmenšení velikosti imagí  
+ Obrázky, které jsou příliš malé, mohou být "škálovatelné" a vykreslené na GDI a WPF pomocí některých běžných metod. Spravované pomocné třídy DPI jsou k dispozici pro interní a externí integrátory sady Visual Studio k adresování ikon škálování, rastrových obrázků, imagestrips a ImageList. K dispozici jsou nativní pomocníky C/C + + založené na Win32 pro škálování HICON, HBITMAP, HIMAGELIST a Vsui nebyla rozpoznána:: GdiplusImage. Škálování rastrového obrázku obvykle vyžaduje pouze změnu jednoho řádku po zahrnutí odkazu do pomocné knihovny. Příklad:  
   
 ```cpp  
 (Unmanaged)  VsUI::DpiHelper::LogicalToDeviceUnits(&hBitmap);  
@@ -61,51 +61,51 @@ Rostoucí počet zařízení, který se dodává s "ve vysokém rozlišení" obr
 (WinForms) DpiHelper.LogicalToDeviceUnits(ref image);  
 ```  
   
- Škálování třídu imagelist, závisí na, jestli ovládací prvek imagelist dokončení v okamžiku načtení, nebo je připojeno v době běhu. Pokud dokončení v okamžiku načtení volání LogicalToDeviceUnits() s ovládací prvek imagelist, stejně jako rastrový obrázek. Pokud kód potřebuje k načtení jednotlivých rastrový obrázek před sestavování seznamu imagelist, ujistěte se, že škálování velikost seznamu ImageList obrázku:  
+ Změna velikosti seznamu ImageList závisí na tom, zda je ovládací prvek ImageList dokončen v době načítání nebo je připojen v době běhu. Pokud je dokončeno v době načítání, zavolejte LogicalToDeviceUnits () s ovládacím prvek ImageList jako rastrový obrázek. Když kód potřebuje načíst jednotlivou bitmapu před vytvořením seznamu ImageList, nezapomeňte škálovat velikost obrázku ovládacího prvku ImageList:  
   
 ```csharp  
 imagelist.ImageSize = DpiHelper.LogicalToDeviceUnits(imagelist.ImageSize);  
 ```  
   
- Dimenze v nativním kódu, je možné škálovat při vytváření seznamu imagelist následujícím způsobem:  
+ V nativním kódu lze dimenze škálovat při vytváření seznamu ImageList následujícím způsobem:  
   
 ```cpp  
 ImageList_Create(VsUI::DpiHelper::LogicalToDeviceUnitsX(16),VsUI::DpiHelper::LogicalToDeviceUnitsY(16), ILC_COLOR32|ILC_MASK, nCount, 1);  
 ```  
   
- Funkce v knihovně umožňují určit algoritmu změny velikosti. Při škálování Image budou umístěny v imagelists, ujistěte se, že chcete zadat barvu pozadí, který se používá pro průhlednost nebo použití NearestNeighbor škálování (což způsobí narušení 125 % a 150 %).  
+ Funkce v knihovně umožňují zadat algoritmus změny velikosti. Při škálování obrázků, které se mají umístit do ImageList, nezapomeňte zadat barvu pozadí, která se má použít k průhlednosti, nebo použít škálování NearestNeighbor (což způsobí deformaci na 125% a 150%).  
   
- Poraďte <xref:Microsoft.VisualStudio.PlatformUI.DpiHelper> dokumentaci na webu MSDN.  
+ Projděte si <xref:Microsoft.VisualStudio.PlatformUI.DpiHelper> dokumentaci na webu MSDN.  
   
- Následující tabulka uvádí příklady, jak by měl imagí škálovat na odpovídající DPI škálování faktorů. Obrázky v zelené označují naše osvědčený postup od Visual Studio 2013 (100 – 200 % DPI škálování):  
+ V následující tabulce jsou uvedeny příklady, jak mají být obrázky škálované v odpovídajících faktorech škálování DPI. Obrázky se zeleně označují osvědčené postupy Visual Studio 2013 (škálování 100% až 200% DPI):  
   
- ![Škálování problémů s nastavením DPI](../extensibility/media/dpi-issues-scaling.png "DPI problémů škálování")  
+ ![Škála DPI pro problémy](../extensibility/media/dpi-issues-scaling.png "Škála DPI pro problémy")  
   
 ## <a name="layout-issues"></a>Problémy s rozložením  
- Běžné problémy s rozložením se lze vyvarovat primárně udržováním body v uživatelském rozhraní, škálování a vzhledem k mezi sebou, nikoli pomocí absolutní umístění (konkrétně v jednotkách pixelů). Příklad:  
+ Běžným problémům s rozložením se můžete vyhnout především tím, že se body v uživatelském rozhraní navzájem škálují a jsou relativní od sebe, a ne pomocí absolutních umístění (konkrétně v jednotkách pixelů). Příklad:  
   
-- Pozice rozložení/textu třeba upravit počítat s vertikálním navýšením kapacity imagí.  
+- Pro obrázky škálované na více místech je nutné upravit rozložení/umístění textu na účet.  
   
-- Sloupce v tabulkách musí mít šířky přizpůsobené pro text vertikálním navýšením kapacity.  
+- Sloupce v Gridech musí mít upravenou šířku pro text s možností horizontálního navýšení kapacity.  
   
-- Pevně zakódované velikosti nebo mezeru mezi prvky také potřebovat vertikálně navyšovat kapacitu. Velikosti, které jsou založeny pouze na text dimenze jsou obvykle může být, protože písma automaticky škálovat.  
+- Také je potřeba škálovat pevně zakódované velikosti nebo prostor mezi prvky. Velikosti, které jsou založené jenom na rozměrech textu, jsou obvykle přesné, protože se automaticky škálují velikost písem.  
   
-  Pomocné funkce jsou k dispozici v <xref:Microsoft.VisualStudio.PlatformUI.DpiHelper> třídu, která umožňuje škálování na ose X a Y:  
+  Pomocné funkce jsou ve třídě k dispozici <xref:Microsoft.VisualStudio.PlatformUI.DpiHelper> pro povolení škálování na ose X a Y:  
   
-- LogicalToDeviceUnitsX/LogicalToDeviceUnitsY (funkce povolit škálování na X a osy Y)  
+- LogicalToDeviceUnitsX/LogicalToDeviceUnitsY (funkce povolující škálování na ose X/Y)  
   
-- místo int = DpiHelper.LogicalToDeviceUnitsX (10);  
+- int Space = DpiHelper. LogicalToDeviceUnitsX (10);  
   
-- Výška int = VsUI::DpiHelper::LogicalToDeviceUnitsY(5);  
+- int Height = Vsui nebyla rozpoznána::D piHelper:: LogicalToDeviceUnitsY (5);  
   
-  Existují přetížení LogicalToDeviceUnits chcete povolit škálování na objekty, jako jsou OBD, bod a velikosti.  
+  K dispozici jsou LogicalToDeviceUnits přetížení, aby bylo možné objekty škálování, jako je například Rect, Point a Size.  
   
-## <a name="using-the-dpihelper-libraryclass-to-scale-images-and-layout"></a>Používání knihovny/třídy DPIHelper měřítka obrázků a rozložení  
- Visual Studio DPI pomocné knihovny je k dispozici ve formulářích nativní a spravované a mimo prostředí sady Visual Studio můžete použít v jiných aplikacích.  
+## <a name="using-the-dpihelper-libraryclass-to-scale-images-and-layout"></a>Použití knihovny/třídy DPIHelper ke škálování obrázků a rozložení  
+ Pomocná knihovna DPI sady Visual Studio je k dispozici v nativních a spravovaných formulářích a lze ji použít mimo prostředí sady Visual Studio jinými aplikacemi.  
   
- Použití knihovny, přejděte [ukázky VSSDK rozšiřitelnost sady Visual Studio](https://github.com/Microsoft/VSSDK-Extensibility-Samples) a naklonujte ukázkové vysoce DPI_Images_Icons  
+ Pokud chcete použít knihovnu, navštivte [Ukázky rozšiřitelnosti sady Visual Studio VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples) a naklonujte ukázku s vysokou DPI_Images_Iconsí.  
   
- Ve zdrojových souborech zahrnují VsUIDpiHelper.h a volat statické funkce VsUI::DpiHelper třídy:  
+ Ve zdrojových souborech vložte VsUIDpiHelper. h a zavolejte statické funkce třídy Vsui nebyla rozpoznána::D piHelper:  
   
 ```cpp  
 #include "VsUIDpiHelper.h"  
@@ -116,19 +116,19 @@ VsUI::DpiHelper::LogicalToDeviceUnits(&hBitmap);
 ```  
   
 > [!NOTE]
-> Nepoužívejte pomocné funkce v úrovni modulu nebo třídy statické proměnné. Statické knihovny používá také pro synchronizaci vláken a můžete narazit na problémy s inicializací pořadí. Tyto statické převést na nestatické členské proměnné nebo zabalit je do funkce (tak že získat postavená na první přístup).  
+> Nepoužívejte pomocné funkce ve statických proměnných na úrovni modulu nebo třídy. Knihovna také používá statické objekty pro synchronizaci vláken a můžete spustit v případě problémů s inicializací. Buď převod těchto statických na nestatické proměnné členů, nebo jejich zabalení do funkce (takže se vytvoří při prvním přístupu).  
   
- Pro přístup k DPI pomocných funkcí ze spravovaného kódu, který se spustí do prostředí sady Visual Studio:  
+ Pro přístup k podpůrným funkcím DPI ze spravovaného kódu, který se spustí v prostředí sady Visual Studio:  
   
-- Využívání projekt musí odkazovat na nejnovější verzi prostředí MPF. Příklad:  
+- Nenáročný projekt musí odkazovat na nejnovější verzi prostředí MPF. Příklad:  
   
     ```csharp  
     <Reference Include="Microsoft.VisualStudio.Shell.14.0.dll" />  
     ```  
   
-- Ujistěte se projekt odkazuje **System.Windows.Forms**, **PresentationCore**, a **PresentationUI**.  
+- Ujistěte se, že projekt obsahuje odkazy na **System. Windows. Forms**, **PresentationCore**a **PresentationUI**.  
   
-- V kódu, použijte **Microsoft.VisualStudio.PlatformUI** obor názvů a volání statické funkce DpiHelper třídy. U podporovaných typů (body, velikosti, obdélníky a tak dále) jsou za předpokladu škálování funkcí rozšíření, které vrací nové objekty. Příklad:  
+- V kódu použijte obor názvů **Microsoft. VisualStudio. PlatformUI** a volejte statické funkce třídy DpiHelper. Pro podporované typy (body, velikosti, obdélníky atd.) jsou k dispozici funkce rozšíření, které vracejí nové objekty s měřítkem. Příklad:  
   
     ```csharp  
     using Microsoft.VisualStudio.PlatformUI;  
@@ -138,20 +138,20 @@ VsUI::DpiHelper::LogicalToDeviceUnits(&hBitmap);
   
     ```  
   
-## <a name="dealing-with-wpf-image-fuzziness-in-zoomable-ui"></a>Práce s WPF tomu bitové kopie v roztahováním uživatelského rozhraní  
- V WPF rastrové obrázky se mění velikost automaticky podle WPF pro aktuální úroveň přiblížení DPI pomocí algoritmu vysoce kvalitní bikubické (výchozí), která funguje dobře pro obrázky nebo velké snímky obrazovky, ale není vhodný pro ikony položky nabídky, protože zavádí vnímaná tomu .  
+## <a name="dealing-with-wpf-image-fuzziness-in-zoomable-ui"></a>Práce s imagemi WPF tomu v uživatelském rozhraní s přiblížením  
+ V technologii WPF se automaticky mění velikost rastrových obrázků WPF pro aktuální úroveň přiblížení v DPI pomocí vysoce kvalitního bikubické algoritmu (výchozí), který funguje dobře pro obrázky nebo velké snímky obrazovky, ale je nevhodný pro ikony položek nabídek, protože zavádí vnímaný tomu.  
   
- Doporučení:  
+ Doporučit  
   
-- Pro image a Bannery logo obrázky, výchozí <xref:System.Windows.Media.BitmapScalingMode> by bylo možné použít režim změny velikosti.  
+- V případě obrázku loga a kresby bannerů se <xref:System.Windows.Media.BitmapScalingMode> dá použít výchozí režim změny velikosti.  
   
-- Pro Image používá a položky nabídky <xref:System.Windows.Media.BitmapScalingMode> má být použit při nezpůsobí jiné artefakty narušení, chcete-li odstranit tomu (na 200 a 300 %).  
+- V případě položek nabídky a Iconography obrázků <xref:System.Windows.Media.BitmapScalingMode> by se měla použít, když nezpůsobí jiné artefakty deformace k vyloučení tomu (na 200% a 300%).  
   
-- • Pro velké přiblížení úrovně není násobcích 100 % (například 250 % nebo 350 %), změna měřítka obrázků používá s výsledky bikubické v přibližných shod, zesvětlení uživatelského rozhraní. Výsledkem lepší se získá první škálování image NearestNeighbor největší násobek 100 % (například 200 % nebo 300 %) a škálování s bikubické z něj. Najdete v článku zvláštní případ: prescaling WPF imagí pro velké DPI limity pro další informace.  
+- • Pro velké úrovně přiblížení nepatří mezi násobky 100% (například 250% nebo 350%), škálování Iconography imagí pomocí bikubické má za následek přibližné a neočekávané uživatelské rozhraní. Lepší výsledek se získá tak, že se napřed velikost bitové kopie NearestNeighbor na největší násobek 100% (například 200% nebo 300%). a škálujte pomocí bikubické. Další informace najdete v tématu zvláštní případ: předškálování obrázků WPF pro velké úrovně DPI.  
   
-  Člen poskytuje DpiHelper třídy v oboru názvů Microsoft.VisualStudio.PlatformUI <xref:System.Windows.Media.BitmapScalingMode> , který je možné pro vazbu. To vám umožní prostředí sady Visual Studio k řízení rastrového obrázku nastaven režim měřítka napříč produktu rovnoměrně, v závislosti na Měřítko DPI.  
+  Třída DpiHelper v oboru názvů Microsoft. VisualStudio. PlatformUI poskytuje člen <xref:System.Windows.Media.BitmapScalingMode> , který lze použít pro vazbu. Umožní prostředí sady Visual Studio řídit režim škálování rastrového obrázku napříč produktem jednotně v závislosti na faktoru škálování DPI.  
   
-  Jeho použití v XAML, přidejte:  
+  Pokud ho chcete použít v jazyce XAML, přidejte:  
   
 ```xaml  
 xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"  
@@ -160,22 +160,22 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.V
   
 ```  
   
- Prostředí sady Visual Studio nastaví tuto vlastnost již na nejvyšší úrovni okna a dialogová okna. WPF uživatelského rozhraní založeného na spouštění v sadě Visual Studio zdědí už ho. Pokud toto nastavení není rozšířit na vaše konkrétní části uživatelského rozhraní, lze nastavit v kořenovém elementu uživatelského rozhraní XAML nebo WPF. Automaticky otevíraná okna u elementů s jejich rodiči Win32, zahrnují místa, kde se to stane a návrháře windows, na kterých běží mimo zpracování, jako je například prolnutí.  
+ Prostředí sady Visual Studio už tuto vlastnost nastavuje v oknech a oknech nejvyšší úrovně. Uživatelské rozhraní založené na WPF, které běží v aplikaci Visual Studio, ho už zdědí. Pokud se nastavení nerozšíří na vaše konkrétní části uživatelského rozhraní, může být nastaveno na kořenovém prvku uživatelského rozhraní XAML/WPF. Místo, kde k tomu dojde, patří automaticky otevíraná okna, u elementů s nadřazenými prvky Win32 a v oknech návrháře, jejichž zpracování je mimo proces, jako je například Blend.  
   
- Některé uživatelského rozhraní můžete škálovat nezávisle na úroveň přiblížení DPI sada systému, jako je například textový editor sady Visual Studio a Návrháře WPF (WPF Desktop a Windows Store). V takových případech není vhodné používat DpiHelper.BitmapScalingMode. Chcete-li vyřešit tento problém v editoru, integrovaném vývojovém prostředí týmu vytvořili vlastní vlastnost s názvem RenderOptions.BitmapScalingMode. Nastavte tuto hodnotu vlastnosti na HighQuality nebo NearestNeighbor v závislosti na úroveň zvětšení kombinované systému a uživatelské rozhraní.  
+ Některé uživatelské rozhraní se může škálovat nezávisle na úrovni přiblížení DPI nastavené systémem, jako je textový editor sady Visual Studio a Návrháři založené na WPF (Desktop WPF a Windows Store). V těchto případech by se neměl používat DpiHelper. BitmapScalingMode. Chcete-li tento problém vyřešit v editoru, vytvořil tým IDE vlastní vlastnost s názvem RenderOptions. BitmapScalingMode. Nastavte tuto hodnotu vlastnosti na HighQuality nebo NearestNeighbor v závislosti na kombinované úrovni přiblížení systému a uživatelského rozhraní.  
   
-## <a name="special-case-prescaling-wpf-images-for-large-dpi-levels"></a>Zvláštní případ: prescaling WPF imagí pro velké úrovně DPI  
- Pro velmi velké přiblížení úrovně, které nejsou násobkem 100 % (například 250 %, 350 % a tak dále) škálování používá Image s výsledkem bikubické přibližných shod, zesvětlení uživatelského rozhraní. Dojem těchto imagí společně s zřetelný text je téměř stejně jako u iluzí optické. Image se zdají být blíže okem a mimo fokus ve vztahu k textu. Škálování výsledek v tomto zvětšení velikosti lze vylepšit první škálování image NearestNeighbor největší násobek 100 % (například 200 % nebo 300 %) a škálování s bikubické zbývající (s další 50 %).  
+## <a name="special-case-prescaling-wpf-images-for-large-dpi-levels"></a>Zvláštní případ: zmenšení měřítka obrázků WPF pro velké úrovně DPI  
+ U velmi velkých úrovní přiblížení, které nepatří mezi násobky 100% (například 250%, 350% atd.), škálování Iconography imagí s bikubické výsledky v přibližném a neočekávaném uživatelském rozhraní. Dojem těchto obrázků spolu s ostrým textem je skoro podobný optické iluzi. Obrázky se zdají být blíž k očí a ve vztahu k textu jsou mimo fokus. Výsledek škálování v této zvětšené velikosti se dá zlepšit tak, že se napřed velikost obrázku NearestNeighbor na největší násobek 100% (například 200% nebo 300%). a škálování s bikubickéem na zbytek (další 50%).  
   
- Následující je příkladem rozdíly ve výsledcích, kde je první obrázek škálovat s vylepšené škálování double algoritmus-100 % > 200 % -> 250 % a druhý právě díky bikubické 100 % -> 250 %.  
+ Následuje příklad rozdílů ve výsledcích, kdy se na první obrázek škáluje pomocí vylepšeného algoritmu dvojitého škálování 100%->200%->250% a druhý postup s bikubické 100%->250%.  
   
- ![DPI vydá Double škálování příklad](../extensibility/media/dpi-issues-double-scaling-example.png "DPI vydá Double škálování příklad")  
+ ![Příklad dvojitého škálování problémů v DPI](../extensibility/media/dpi-issues-double-scaling-example.png "Příklad dvojitého škálování problémů v DPI")  
   
- Chcete-li povolit možnost použít tento škálování double, značky XAML pro zobrazování jednotlivých prvků Image uživatelského rozhraní bude potřeba upravit. Následující příklady ukazují, jak používat double škálování v subsystému WPF v sadě Visual Studio pomocí knihovny DpiHelper a Shell.12/14.  
+ Aby bylo možné povolit uživatelské rozhraní pro použití tohoto dvojitého škálování, kód XAML pro zobrazení každého elementu obrázku bude nutné upravit. Následující příklady ukazují, jak používat dvojité škálování v WPF v aplikaci Visual Studio pomocí knihovny DpiHelper a prostředí. 12/14.  
   
- Krok 1: Obrázek, který se 200 %, 300 % a tak dále používat NearestNeighbor prescale.  
+ Krok 1: zmenšení bitové kopie na 200%, 300% a tak dále pomocí NearestNeighbor.  
   
- Prescale image pomocí obou převaděč, použitý u vazby nebo pomocí rozšíření značek XAML. Příklad:  
+ Zmenšete měřítko obrázku pomocí převaděče aplikovaného na vazbu nebo pomocí rozšíření značek XAML. Příklad:  
   
 ```xaml  
 <vsui:DpiPrescaleImageSourceConverter x:Key="DpiPrescaleImageSourceConverter" />  
@@ -186,7 +186,7 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.V
   
 ```  
   
- Pokud image musí být také s motivem (nejvíce, pokud tomu tak není, by měl), značky můžete použít různé převaděč, který nejprve provede motivů image a pak předem škálování. Značky můžete použít buď <xref:Microsoft.VisualStudio.PlatformUI.DpiPrescaleThemedImageConverter> nebo <xref:Microsoft.VisualStudio.PlatformUI.DpiPrescaleThemedImageSourceConverter>, v závislosti na požadované převodu výstupu.  
+ Pokud je nutné, aby bitová kopie měla také motiv (nejvíce, pokud to není vše), značky mohou používat jiný převaděč, který nejprve provede tento obrázek a pak předem škálovat. Značky mohou použít buď <xref:Microsoft.VisualStudio.PlatformUI.DpiPrescaleThemedImageConverter> nebo <xref:Microsoft.VisualStudio.PlatformUI.DpiPrescaleThemedImageSourceConverter> , v závislosti na požadovaném výstupu převodu.  
   
 ```xaml  
 <vsui:DpiPrescaleThemedImageSourceConverter x:Key="DpiPrescaleThemedImageSourceConverter" />  
@@ -203,17 +203,17 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.V
 </Image>  
 ```  
   
- Krok 2: Ujistěte se, že je správný pro aktuální DPI konečné velikosti.  
+ Krok 2: Zajistěte, aby byla konečná velikost pro aktuální DPI správná.  
   
- Protože WPF škálovaly uživatelského rozhraní pro aktuální DPI BitmapScalingMode vlastnost nastavit UIElement, by měl ovládací prvek obrázku pomocí bitové kopie prescaled jako svůj zdroj bude vypadat dvakrát nebo třikrát větší než. Následuje několik způsobů, jak tento efekt čítače:  
+ Vzhledem k tomu, že WPF bude škálovat uživatelské rozhraní pro aktuální rozlišení DPI pomocí vlastnosti BitmapScalingMode nastavené u prvku UIElement, ovládací prvek obrázek s použitím obrázku s přednastaveným měřítkem bude vypadat dvakrát nebo třikrát větší, než by měl. Toto je několik způsobů, jak tento efekt načítačit:  
   
-- Pokud znáte dimenze původní bitové kopie na 100 %, můžete zadat přesný velikost ovládacího prvku obrázek. Tyto velikosti, bude odrážet že použít velikost uživatelského rozhraní před Škálováním.  
+- Pokud znáte rozměr původní image v 100%, můžete zadat přesnou velikost ovládacího prvku obrázek. Tyto velikosti budou odrážet velikost uživatelského rozhraní před použitím škálování.  
   
     ```xaml  
     <Image Source="{Binding Path=SelectedImage, Converter={StaticResource DpiPrescaleImageSourceConverter}}" Width="16" Height="16" />  
     ```  
   
-- Pokud velikost původní bitové kopie není znám, LayoutTransform umožňuje škálovat směrem dolů, do konečného objektu Image. Příklad:  
+- Pokud není známa velikost původního obrázku, lze LayoutTransform použít ke snížení kapacity konečného objektu obrázku. Příklad:  
   
     ```xaml  
     <Image Source="{Binding Path=SelectedImage, Converter={StaticResource DpiPrescaleImageSourceConverter}}" >  
@@ -225,10 +225,10 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.V
     </Image>  
     ```  
   
-## <a name="enabling-hdpi-support-to-the-weboc"></a>Povolení podpory HDPI k WebOC  
- Ve výchozím nastavení WebOC ovládací prvky (například ovládací prvek WebBrowser v WPF nebo rozhraní rozhraní IWebBrowser2) nepovolí HDPI zjišťování a podporu. Výsledkem bude vloženému ovládacímu prvku s zobrazit obsah, který je příliš malá v zobrazení s vysokým rozlišením. Následující popisuje, jak povolit podporu vysokých hodnot DPI v instanci WebOC konkrétní web.  
+## <a name="enabling-hdpi-support-to-the-weboc"></a>Povolení podpory HDPI pro WebOC  
+ Ve výchozím nastavení ovládací prvky WebOC (například ovládací prvek WebBrowser v WPF nebo rozhraní IWebBrowser2) nepovolují detekci HDPI a podporu. Výsledkem bude vložený ovládací prvek se zobrazeným obsahem, který je příliš malý pro zobrazení s vysokým rozlišením. V následující části se dozvíte, jak povolit podporu vysokého počtu DPI v konkrétní instanci webu WebOC.  
   
- Implementovat rozhraní IDocHostUIHandler (na najdete v článku na webu MSDN [IDocHostUIHandler](https://msdn.microsoft.com/library/aa753260.aspx) rozhraní):  
+ Implementace rozhraní IDocHostUIHandler (viz článek na webu MSDN na rozhraní [IDocHostUIHandler](https://msdn.microsoft.com/library/aa753260.aspx) ):  
   
 ```idl  
 [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown),  
@@ -307,7 +307,7 @@ public interface IDocHostUIHandler
     }   
 ```  
   
- Implementujte rozhraní ICustomDoc (na najdete v článku na webu MSDN [ICustomDoc](https://msdn.microsoft.com/library/aa753272.aspx) rozhraní):  
+ Volitelně implementujte rozhraní ICustomDoc (viz článek na webu MSDN na rozhraní [ICustomDoc](https://msdn.microsoft.com/library/aa753272.aspx) ):  
   
 ```idl  
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown),  
@@ -318,7 +318,7 @@ public interface ICustomDoc
 }   
 ```  
   
- Třídy, která implementuje IDocHostUIHandler s dokumentem WebOC přidružte. Pokud jste implementovali rozhraní ICustomDoc výše, pak jako vlastnost dokumentu WebOC je platný, jej přetypovat ICustomDoc a volat metodu SetUIHandler předává třídu, která implementuje IDocHostUIHandler.  
+ Přidružte třídu, která implementuje IDocHostUIHandler, k dokumentu WebOC. Pokud jste implementovali rozhraní ICustomDoc výše, potom jakmile je vlastnost dokumentu WebOC platná, přetypujte ji na ICustomDoc a zavolejte metodu SetUIHandler, která předává třídu, která implementuje IDocHostUIHandler.  
   
 ```csharp  
 // "this" references that class that owns the WebOC control and in this case also implements the IDocHostUIHandler interface  
@@ -327,7 +327,7 @@ customDoc.SetUIHandler(this);
   
 ```  
   
- Pokud rozhraní ICustomDoc neimplementoval, poté co nejdříve vlastnost dokumentu WebOC je platná, musíte jej přetypovat IOleObject a volat metodu SetClientSite předávání ve třídě, která implementuje IDocHostUIHandler. Nastavte příznak DOCHOSTUIFLAG_DPI_AWARE DOCHOSTUIINFO předává do volání metody GetHostInfo:  
+ Pokud jste rozhraní ICustomDoc neimplementovali, pak Jakmile je vlastnost dokumentu WebOC platná, je nutné ji přetypovat na IOleObject a volat metodu SetClientSite, která předává třídu, která implementuje IDocHostUIHandler. Nastavte příznak DOCHOSTUIFLAG_DPI_AWARE pro DOCHOSTUIINFO předaný volání metody GetHostInfo:  
   
 ```csharp  
 public int GetHostInfo(DOCHOSTUIINFO info)  
@@ -340,13 +340,13 @@ public int GetHostInfo(DOCHOSTUIINFO info)
 }  
 ```  
   
- To by měl být vše, co je potřeba získat WebOC ovládacího prvku pro podporu HPDI.  
+ To by mělo být všechno, co potřebujete k tomu, abyste mohli WebOC ovládací prvek pro podporu HPDI.  
   
 ## <a name="tips"></a>Tipy  
   
-1. Pokud se změní vlastnost dokumentu v ovládacím prvku WebOC, můžete potřebovat přidružení IDocHostUIHandler třídy dokumentu.  
+1. Pokud se změní vlastnost dokumentu na ovládacím prvku WebOC, může být nutné znovu přidružit dokument ke třídě IDocHostUIHandler.  
   
-2. Pokud výše uvedené nebude fungovat, je známý problém s WebOC není ujímají změnu příznaku DPI. Nejspolehlivější způsob, jak to opravy je přepnete optické přiblížení WebOC význam dvě volání s dvě různé hodnoty pro procento zvětšení. Kromě toho pokud toto řešení je potřeba, může být potřeba provádět při každém volání navigace.  
+2. Pokud výše uvedený postup nefunguje, existuje známý problém s WebOCem, který nevybírá změnu příznaku DPI. Nejspolehlivějším způsobem, jak to opravit, je přepnout Optické přiblížení WebOC, což znamená, že dvě volání se dvěma různými hodnotami pro procento zvětšení. Kromě toho, pokud je toto řešení vyžadováno, může být nutné jej provést při každém volání navigace.  
   
     ```csharp  
     // browser2 is a SHDocVw.IWebBrowser2 in this case  
