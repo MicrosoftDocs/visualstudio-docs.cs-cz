@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Sdílení souborů Windows bylo konfigurováno... | Dokumentace Microsoftu'
+title: 'Chyba: sdílení souborů systému Windows bylo konfigurováno... | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,35 +17,35 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 96d65ae615522bcee43ddf5e8181e96eecc0d958
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157502"
 ---
-# <a name="error-windows-file-sharing-has-been-configured"></a>Chyba: Sdílení souborů systému Windows bylo nakonfigurováno...
+# <a name="error-windows-file-sharing-has-been-configured"></a>Chyba: Sdílení souborů systému Windows bylo konfigurováno...
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sdílení souborů Windows nakonfigurovaný tak, aby se připojit ke vzdálenému počítači pomocí jiné uživatelské jméno. Toto je kompatibilní se vzdáleným laděním  
+Sdílení souborů systému Windows bylo nakonfigurováno, takže se ke vzdálenému počítači připojíte pomocí jiného uživatelského jména. Toto není kompatibilní se vzdáleným laděním  
   
- Aktuální konfigurace sdílení souborů je nastavený pro připojení ke vzdálenému počítači pomocí jiné uživatelské jméno. Vzdálené ladění není možné v tomto scénáři.  
+ Aktuální konfigurace sdílení souborů je nastavená tak, aby se připojovala ke vzdálenému počítači s použitím jiného uživatelského jména. V tomto scénáři není možné vzdálené ladění.  
   
- Chcete-li opravit tuto chybu, přihlášení k počítači pomocí jiných názvu účtu, nebo změňte sdílení souborů použít název účtu, který ladíte, v části.  
+ Chcete-li tuto chybu opravit, přihlaste se k počítači pomocí jiného názvu účtu nebo změňte sdílení souborů tak, aby používalo název účtu, který ladíte.  
   
- Pokud se chcete připojit ke vzdálenému počítači pomocí tohoto uživatelského jména, je nutné nejprve odpojit od vzdáleného počítače.  
+ Pokud se chcete ke vzdálenému počítači připojit pomocí tohoto uživatelského jména, musíte se nejdřív odpojit od vzdáleného počítače.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-1. Přihlaste se na místním počítači, počítač, který ladíte, které pomocí jiných názvu účtu.  
+1. Přihlaste se k místnímu počítači, počítač, ze kterého ladíte, pomocí názvu druhého účtu.  
   
      —nebo—  
   
-     . Odpojit od vzdáleného počítače a překonfigurujte sdílení souborů pro připojení k počítači, pomocí názvu účtu:  
+     . Odpojte se od vzdáleného počítače a potom překonfigurujte sdílení souborů, aby se připojil k druhému počítači pomocí názvu účtu:  
   
-    1. Na **Start** nabídky, přejděte k **Příslušenství**a potom klikněte na tlačítko **příkazový řádek**.  
+    1. V nabídce **Start** přejděte na položku **příslušenství**a poté klikněte na položku **příkazový řádek**.  
   
-    2. Na příkazovém řádku Windows zadejte:  
+    2. Do příkazového řádku Windows zadejte:  
   
          `net use /delete computer_name`  
   
-    3. Změňte nastavení sdílení souborů pomocí libovolné metody popsané v nápovědě k Windows.
+    3. Nastavení sdílení souborů změňte pomocí kterékoli z metod popsaných v nápovědě k systému Windows.

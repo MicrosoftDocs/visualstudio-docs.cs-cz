@@ -1,5 +1,5 @@
 ---
-title: Programování Visual Studio Tools for Unity | Dokumentace Microsoftu
+title: Visual Studio Tools for Unity programování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-unity-tools
@@ -10,22 +10,22 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: 469478f05546a32bb890f759d3d00cb447b54d2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145885"
 ---
 # <a name="programming-visual-studio-tools-for-unity"></a>Programování Visual Studio Tools for Unity
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V této části najdete příklady pro použití nástroje Visual Studio Tools pro Unity rozhraní API.  
+V této části najdete příklady použití rozhraní Visual Studio Tools for Unity API.  
   
 ## <a name="examples"></a>Příklady  
- Tady je několik příkladů, které ukazují, jak můžete Visual Studio Tools pro Unity rozhraní API.  
+ Tady je několik příkladů, které ukazují, jak můžete používat rozhraní Visual Studio Tools for Unity API.  
   
-### <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených nástrojem VSTU  
- Visual Studio Tools for Unity poskytuje stylu Unity zpětné volání při generování souboru projektu. Informace o tom, jak můžete upravit soubor projektu pokaždé, když se znovu vygeneroval, naleznete v tématu [příkladu: Generování souboru projektu](../cross-platform/customize-project-files-created-by-vstu.md).  
+### <a name="customize-project-files-created-by-vstu"></a>Přizpůsobení souborů projektu vytvořených pomocí VSTU  
+ Visual Studio Tools for Unity poskytuje zpětné volání ve stylu Unity během generování souboru projektu. Informace o tom, jak můžete upravit soubor projektu vždy, když je znovu vygenerován, naleznete v tématu [Příklad: generování souboru projektu](../cross-platform/customize-project-files-created-by-vstu.md).  
   
 ### <a name="share-the-unity-log-callback-with-vstu"></a>Sdílení zpětného volání protokolu Unity s VSTU  
- Visual Studio Tools for Unity zaregistruje zpětné volání protokolu Unity Streamovat konzoly do sady Visual Studio. Pokud editor skriptů také zaregistrovat zpětné volání protokolu Unity, může s ním konfliktu VSTU zpětného volání. Informace o tom, jak můžete sdílet zpětného volání protokolu Unity s VSTU, naleznete v tématu [příkladu: Zpětné volání protokolu](../cross-platform/share-the-unity-log-callback-with-vstu.md).
+ Visual Studio Tools for Unity zaregistruje zpětné volání protokolu s Unity, aby bylo možné streamovat svou konzolu do sady Visual Studio. Pokud vaše skripty v editoru také zaregistrují zpětné volání protokolu v Unity, může s ním narušit zpětné volání VSTU. Další informace o tom, jak můžete sdílet zpětné volání protokolu Unity pomocí VSTU, najdete v tématu [Příklad: zpětné volání protokolu](../cross-platform/share-the-unity-log-callback-with-vstu.md).

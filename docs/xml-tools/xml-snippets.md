@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2f2bcdd0c28d7b4b99c92d3346b32ed34aa92a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592318"
 ---
 # <a name="xml-snippets"></a>Fragmenty kódu XML
@@ -21,7 +21,7 @@ Editor XML nabízí funkci s názvem *fragmenty XML*, které umožňují rychlej
 
 ## <a name="reusable-xml-snippets"></a>Opakovaně použitelné fragmenty XML
 
-Editor XML obsahuje mnoho fragmentů kódu, které pokrývají některé běžné úkoly. To vám umožní snadněji vytvářet soubory XML. Například pokud jste provedli vytváření schématu XML pomocí fragmentů "element sekvence komplexního typu" a "jednoduchý typ prvku" vloží do souboru následující text XML. Pak změňte hodnotu `name` tak, aby vyhovovala vašim potřebám.
+Editor XML obsahuje mnoho fragmentů kódu, které pokrývají některé běžné úkoly. To vám umožní snadněji vytvářet soubory XML. Například pokud jste provedli vytváření schématu XML pomocí fragmentů "element sekvence komplexního typu" a "jednoduchý typ prvku" vloží do souboru následující text XML. Pak změňte `name` hodnotu tak, aby vyhovovala vašim potřebám.
 
 ```xml
 <xs:element name="name">
@@ -49,7 +49,7 @@ Editor XML má také možnost generovat fragment kódu XML ze schématu XML. Tat
 
 Kromě fragmentů, které jsou součástí sady Visual Studio ve výchozím nastavení, můžete také vytvářet a používat vlastní fragmenty kódu XML. Další informace najdete v tématu [Postupy: vytváření fragmentů kódu XML](../xml-tools/how-to-create-xml-snippets.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fragmenty kódu v aplikaci Visual Studio](../ide/code-snippets.md)
 - [Editor XML](../xml-tools/xml-editor.md)

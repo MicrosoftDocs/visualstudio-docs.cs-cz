@@ -9,10 +9,10 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: 77d1318dbdb23516902523e9c7865dad781cb06b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593034"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>Nepodporované scénáře ladění v návrháři postupu provádění
@@ -29,7 +29,7 @@ Návrhář postupu provádění nepodporuje následující scénáře ladění:
 
 - Pracovní postupy vytvořené v dřívějších verzích programovací model Windows Workflow Foundation (WF) se nedají ladit v .NET Framework 4 nebo novějším.
 
-- U propojení mezi aktivitami nebo uzly <xref:System.Activities.Statements.Flowchart> nelze definovat zarážky.
+- U propojení mezi aktivitami nebo uzly nelze definovat zarážky <xref:System.Activities.Statements.Flowchart> .
 
 - Schránka není během ladění k dispozici.
 
@@ -41,15 +41,15 @@ Návrhář postupu provádění nepodporuje následující scénáře ladění:
 
 - Okno zarážky nebo místní nabídka nepodporuje následující sloupce nebo možnosti ladění pracovního postupu:
 
-  - Podmínka
+  - Stav
 
-  - Počet přístupů
+  - Počet volání
 
   - Při volání
 
   - Funkce
 
-  - Datové
+  - Data
 
   - Proces
 

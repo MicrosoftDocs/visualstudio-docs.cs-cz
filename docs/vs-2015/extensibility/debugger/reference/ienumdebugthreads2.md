@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugThreads2 | Dokumentace Microsoftu
+title: IEnumDebugThreads2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,54 +13,54 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 97bc8383f990f6c0c35a402f2ab36b2595d82a9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147689"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato interfac zobrazí vlákna spuštěná během aktuální relace ladění.  
+Tento Interfac vytvoří výčet vláken spuštěných v aktuální relaci ladění.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IEnumDebugThreads2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Ladicí stroj (DE) implementuje toto rozhraní představující seznam vláken v programu.  
+ Ladicí modul (DE) implementuje toto rozhraní tak, aby představovalo seznam vláken v programu.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání [enumthreads –](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md) získat toto rozhraní představující seznam všechna vlákna ve všech aplikacích spuštěných v procesu. Volání [enumthreads –](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) získat toto rozhraní představující seznam vlákna spuštěná v programu.  
+ Zavolejte [EnumThreads –](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md) pro získání tohoto rozhraní, které představuje seznam všech vláken ve všech programech spuštěných v procesu. Voláním [EnumThreads –](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) získáte toto rozhraní, které představuje seznam vláken spuštěných v programu.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IEnumDebugThreads2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IEnumDebugThreads2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Next](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Načte zadaný počet vláken v pořadí výčtu.|  
-|[Skip](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Vynechá zadaný počet vláken v sekvenci výčtu.|  
-|[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Návrat na začátek sekvence výčtu.|  
-|[Clone](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Vytvoří čítač, který obsahuje stejné stav výčtu, jako je aktuální.|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|Získá počet vláken v enumerátor.|  
+|[Další](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Načte zadaný počet vláken v sekvenci výčtu.|  
+|[Přeskočit](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Přeskočí zadaný počet vláken v sekvenci výčtu.|  
+|[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Obnoví posloupnost výčtu na začátek.|  
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální.|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|Získá počet vláken v enumerátoru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Visual Studio obvykle obdrží toto rozhraní se aktualizovat **vlákna** okno stejně jako získat první vlákno seznamu, aby bylo možné volat [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md), [pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md), a [Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md).  
+ Visual Studio obvykle získá toto rozhraní pro aktualizaci okna **vlákna** a také k získání prvního vlákna seznamu, aby bylo možné volat metodu [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md), [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)a [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Základní rozhraní](../../../extensibility/debugger/reference/core-interfaces.md)   
- [Enumthreads –](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)   
- [Enumthreads –](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)   
+ [EnumThreads –](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)   
+ [EnumThreads –](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)   
  [Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)   
- [pokračovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)   
- [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)
+ [Pokraeovat](../../../extensibility/debugger/reference/idebugprocess3-continue.md)   
+ [Spuštění](../../../extensibility/debugger/reference/idebugprocess3-execute.md)

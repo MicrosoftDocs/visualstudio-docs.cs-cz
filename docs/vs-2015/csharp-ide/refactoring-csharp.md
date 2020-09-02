@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0415222645dce2f65e91b5b1c55a5a118cc26697
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667504"
 ---
 # <a name="refactoring-c"></a>Refaktoring (C#)
@@ -30,7 +30,7 @@ ms.locfileid: "72667504"
 
 Refaktoring je proces vylepšení kódu po jeho zapsání změnou vnitřní struktury kódu beze změny externího chování kódu.
 
- Vizuál C# poskytuje následující příkazy refaktoringu v nabídce **refaktoringu** :
+ Visual C# poskytuje následující příkazy refaktoringu v nabídce **refaktoringu** :
 
 - [Refaktoring pro extrahování metody (C#)](../csharp-ide/extract-method-refactoring-csharp.md)
 
@@ -42,10 +42,10 @@ Refaktoring je proces vylepšení kódu po jeho zapsání změnou vnitřní stru
 
 - [Refaktoring pro odebrání parametrů (C#)](../csharp-ide/remove-parameters-refactoring-csharp.md)
 
-- [Refaktoring pro přeskupení parametrů (C#)](../csharp-ide/reorder-parameters-refactoring-csharp.md)
+- [Refaktoring přeskupení parametrů (C#)](../csharp-ide/reorder-parameters-refactoring-csharp.md)
 
 ## <a name="multi-project-refactoring"></a>Refaktoring více projektů
- Visual Studio podporuje refaktoring více projektů pro projekty, které jsou ve stejném řešení. Všechny operace refaktoringu, které správně odkazují na soubory, opravují odkazy napříč všemi projekty stejného jazyka. To funguje pro všechny odkazy mezi projekty. Například pokud máte konzolovou aplikaci, která odkazuje na knihovnu tříd, při přejmenování typu knihovny tříd (pomocí operace refaktoringu `Rename`) jsou aktualizovány také odkazy na typ knihovny tříd v konzolové aplikaci.
+ Visual Studio podporuje refaktoring více projektů pro projekty, které jsou ve stejném řešení. Všechny operace refaktoringu, které správně odkazují na soubory, opravují odkazy napříč všemi projekty stejného jazyka. To funguje pro všechny odkazy mezi projekty. Například pokud máte konzolovou aplikaci, která odkazuje na knihovnu tříd, při přejmenování typu knihovny tříd (pomocí `Rename` operace refaktoringu) se aktualizují také odkazy na typ knihovny tříd v konzolové aplikaci.
 
 ## <a name="changes-preview"></a>Změny ve verzi Preview
  Mnohé operace refaktoringu poskytují příležitost pro kontrolu všech změn odkazů, které by u vašeho kódu prováděla operace refaktoringu, a to před potvrzením změn. V případě těchto operací refaktoringu se v dialogovém okně refaktoringu zobrazí možnost **Náhled změn odkazu** . Po výběru této možnosti a přijetí operace refaktoringu se zobrazí **dialogové okno Náhled změn** . Všimněte si, že dialogové okno **Náhled změn** má dvě zobrazení. V dolním zobrazení se v důsledku operace refaktoringu zobrazí váš kód se všemi referenčními aktualizacemi. Kliknutím na **tlačítko Storno** v dialogovém okně **Náhled změn** dojde k zastavení operace refaktoringu a v kódu nebudou provedeny žádné změny.
@@ -58,7 +58,7 @@ Refaktoring je proces vylepšení kódu po jeho zapsání změnou vnitřní stru
 
  Ve výchozím nastavení platí, že pokud provádíte operaci refaktoringu bez náhledu změn odkazů a v programu je zjištěna chyba kompilace, pak vývojové prostředí zobrazí toto dialogové okno s upozorněním.
 
- Pokud provedete operaci refaktoringu, která má zapnuté **změny odkazu Preview** a v programu se zjistí chyba kompilace, ve vývojovém prostředí se v dolní části náhledu zobrazí následující zpráva s upozorněním.místo zobrazení dialogového okna pro **Upozornění refaktoringu** , a to v dialogovém okně:
+ Pokud spustíte operaci refaktoringu, která má zapnuté **změny odkazů ve verzi Preview** a v programu zjistí chybu kompilace, vývojové prostředí zobrazí následující zprávu s upozorněním v dolní části dialogového okna **Preview změny** , a to místo zobrazení dialogového okna pro **Upozornění refaktoringu** :
 
  **Váš projekt nebo jedna z jeho závislostí není aktuálně sestavena. Odkazy nelze aktualizovat.**
 
@@ -67,9 +67,9 @@ Refaktoring je proces vylepšení kódu po jeho zapsání změnou vnitřní stru
 ## <a name="error-tolerant-refactoring-and-verification-results"></a>Refaktoring a výsledky ověřování odolné vůči chybám
  Refaktoring je odolný vůči chybám. Jinými slovy, můžete provést Refaktoring v projektu, který nelze sestavit. V těchto případech však proces refaktoringu nemusí správně aktualizovat nejednoznačné odkazy.
 
- V dialogovém okně **výsledky ověření** se může zobrazit výzva, pokud modul refaktoringu detekuje chyby kompilace nebo zjistí, že operace refaktoringu neúmyslně způsobí, že se odkaz na kód sváže s jiným objektem, který byl původně svázán ( problém s opětovnou vazbou).
+ V dialogovém okně **výsledky ověření** se může zobrazit výzva, pokud modul refaktoringu detekuje chyby kompilace nebo zjistí, že operace refaktoringu neúmyslně způsobí, že se odkaz na kód sváže s jiným objektem, než je původně svázán (problém s novou vazbou).
 
- Chcete-li zapnout funkci výsledky ověřování, v nabídce **nástroje** klikněte na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **textový editor**a poté rozbalte položku. **C#** Klikněte na tlačítko **Upřesnit** a zaškrtněte políčko **ověřit výsledky refaktoringu** .
+ Chcete-li zapnout funkci výsledky ověřování, v nabídce **nástroje** klikněte na příkaz **Možnosti**. V dialogovém okně **Možnosti** rozbalte položku **textový editor**a poté rozbalte položku **C#**. Klikněte na tlačítko **Upřesnit** a zaškrtněte políčko **ověřit výsledky refaktoringu** .
 
  Dialogové okno **výsledky ověření** rozlišuje rozdíl mezi dvěma druhy revázání problémů.
 
@@ -87,7 +87,7 @@ class Example
 }
 ```
 
- Použijete-li refaktoring k přejmenování `a` na `b`, zobrazí se toto dialogové okno. Odkaz na přejmenovanou proměnnou `a` nyní váže k parametru, který je předán konstruktoru namísto vazby k poli.
+ Použijete-li refaktoring k přejmenování `a` na `b` , zobrazí se toto dialogové okno. Odkaz na přejmenovanou proměnnou se `a` nyní váže k parametru, který je předán konstruktoru namísto vazby k poli.
 
 ### <a name="references-whose-definition-will-now-become-the-renamed-symbol"></a>Odkazy, jejichž definice se nyní změní na přejmenovaný symbol
  Tento druh potíží s opětovnou vazbou nastane, pokud odkaz, který dříve neodkazoval na přejmenovaný symbol, teď odkazuje na přejmenovaný symbol. Zvažte například následující kód:
@@ -104,7 +104,7 @@ class Example
 }
 ```
 
- Použijete-li refaktoring k přejmenování `OtherMethod` na `Method`, zobrazí se toto dialogové okno. Odkaz v `Main` nyní odkazuje na přetíženou metodu, která přijímá parametr `int` namísto přetížené metody, která přijímá parametr `object`.
+ Použijete-li refaktoring k přejmenování `OtherMethod` na `Method` , zobrazí se toto dialogové okno. Odkaz v `Main` současnosti odkazuje na přetíženou metodu, která přijímá `int` parametr namísto přetížené metody, která přijímá `object` parametr.
 
 ## <a name="see-also"></a>Viz také
- [Použití vývojového prostředí sady Visual Studio C# pro](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md) [Postupy: obnovení C# fragmentů refaktoringu](../ide/how-to-restore-csharp-refactoring-snippets.md)
+ Postup při [použití vývojového prostředí sady Visual Studio pro jazyk c#](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md) [: obnovení fragmentů refaktoringu jazyka c#](../ide/how-to-restore-csharp-refactoring-snippets.md)

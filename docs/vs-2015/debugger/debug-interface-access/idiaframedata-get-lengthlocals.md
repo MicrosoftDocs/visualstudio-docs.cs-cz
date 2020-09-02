@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthlocals – | Dokumentace Microsoftu
+title: 'IDiaFrameData:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da9c50b6c63176fdb3156b2daa15d6c0e1bbefbb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62552559"
 ---
-# <a name="idiaframedatagetlengthlocals"></a>IDiaFrameData::get_lengthLocals
+# <a name="idiaframedataget_lengthlocals"></a>IDiaFrameData::get_lengthLocals
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá počet bajtů lokálních proměnných posunuto v zásobníku.  
+Načte počet bajtů místních proměnných vložených v zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_lengthLocals ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí počet bajtů místních proměnných.  
+ mimo Vrátí počet bajtů místních proměnných.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota vrácená touto metodou se obvykle používá při interpretaci řetězec programu (najdete v článku [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) metodu pro definici řetězce program).  
+ Hodnota vrácená touto metodou se obvykle používá ve výkladu řetězce programu (viz metoda [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) pro definici řetězce programu).  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   

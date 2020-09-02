@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac683ff6e7079478d5b4e642918df4e281a53f0b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645656"
 ---
 # <a name="full-text-search-tips"></a>Tipy pro fulltextové vyhledávání
@@ -32,7 +32,7 @@ Jednou z užitečnějších metod vyhledávání informací v nápovědě je pro
 ### <a name="general-guidelines"></a>Obecné pokyny
  Následující tabulka obsahuje některá základní pravidla a pokyny pro vývoj vyhledávacích dotazů v nápovědě.
 
-|Syntaxe|Popis|
+|Syntax|Popis|
 |------------|-----------------|
 |Rozlišovat velká a malá písmena|Při hledání se nerozlišují malá a velká písmena. Vytvořte kritéria hledání pomocí velkých nebo malých písmen. Například OLE a OLE vrátí stejné výsledky.|
 |Kombinace znaků|Nelze hledat pouze pro jednotlivá písmena (a – z) nebo čísla (0 – 9). Pokud se pokusíte vyhledat určitá vyhrazená slova, například "a", "z" a "with", budou ignorována. Další informace najdete v části "slova ignorovaná při hledání (stop slova)" dále v tomto tématu.|

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 79d865a426af2c089bfcc6bd1e733b4ecc185077
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592279"
 ---
 # <a name="the-xslt-profiler"></a>Profiler XSLT
@@ -30,7 +30,7 @@ Profiler XSLT je součástí sady Visual Studio a je k dispozici v nabídce **XM
 
 1. Otevřete dokument XSLT v aplikaci Visual Studio.
 
-2. Na panelu nabídek vyberte **XML** > **profil XSLT**.
+2. Na panelu nabídek vyberte **XML**  >  **profil XSLT**.
 
 3. Zadejte vstupní dokument XML. Pokud dokument XML již není otevřen, budete vyzváni k zadání souboru.
 
@@ -64,7 +64,7 @@ Profiler XSLT je součástí sady Visual Studio a je k dispozici v nabídce **XM
 
     - **Výhradní čas aplikace**
 
-    - **Počet volání**
+    - **Number of Calls**
 
    Všechny sloupce s časem jsou zobrazeny v absolutních hodnotách i v procentech. Termín **Exclusive** odkazuje na celkovou dobu, kterou funkce strávila vykonání, bez času stráveného jinými funkcemi, které jsou volány během provádění této funkce.
 
@@ -80,7 +80,7 @@ V rozevíracím seznamu **aktuální zobrazení** vyberte zobrazení **volajíc�
 
 - **Funkce, které byly volány**: všechny funkce, které byly volány určitou funkcí, jsou uvedeny v dolní části zobrazení.
 
-Pokud se funkce s názvem `SyncToNavigator` zobrazí v prostřední části zobrazení, zobrazí se v horní části zobrazení všechny funkce označované jako funkce `SyncToNavigator` a všechny funkce, které byly volány `SyncToNavigator`, se zobrazí v dolní části zobrazení.
+Pokud je funkce s názvem `SyncToNavigator` zobrazena v prostřední části zobrazení, všechny funkce, které se nazývají funkce, `SyncToNavigator` se zobrazí v horní části zobrazení a všechny funkce, které byly volány, `SyncToNavigator` se zobrazí v dolní části zobrazení.
 
 - Funkci v prostřední části zobrazení můžete změnit dvojitým kliknutím na kteroukoli z funkcí uvedených v dalších dvou částech zobrazení. Zobrazení se pak aktualizuje, aby se změny projevily automaticky.
 
@@ -106,6 +106,6 @@ Pokud se funkce s názvem `SyncToNavigator` zobrazí v prostřední části zobr
 
    V zobrazení procesu se zobrazí tabulka, která obsahuje **ID procesu**, **název procesu**, **čas zahájení**a **čas ukončení**. Data je možné seřadit kliknutím na názvy sloupců.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Návod: použití hierarchie XSLT](../xml-tools/walkthrough-using-xslt-hierarchy.md)

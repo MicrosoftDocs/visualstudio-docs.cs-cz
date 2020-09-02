@@ -14,11 +14,11 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 2e5782c49f26925d9eda81f04653b1a20666c6b1
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149180"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312094"
 ---
 1. Ve vzdáleném počítači Najděte a spusťte **vzdálený ladicí program** z nabídky **Start** . 
    
@@ -28,7 +28,7 @@ ms.locfileid: "68149180"
    
 1. Při prvním spuštění vzdáleného ladicího programu (nebo před jeho nakonfigurováním) se zobrazí dialogové okno **Konfigurace vzdáleného ladění** .  
   
-    Konfigurace vzdáleného ladicího ![programu konfigurace](../media/remotedebuggerconfwizardpage.png "vzdáleného ladicího programu")  
+    ![Konfigurace vzdáleného ladicího programu](../media/remotedebuggerconfwizardpage.png "Konfigurace vzdáleného ladicího programu")  
   
 1. Pokud není nainstalované rozhraní API webových služeb systému Windows, které se stane pouze v systému Windows Server 2008 R2, vyberte tlačítko **instalovat** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68149180"
   
 1. Po dokončení konfigurace se zobrazí okno **vzdáleného ladicího programu** .
   
-    ![Remote Debugger window](../media/remotedebuggerwindow.png "Okno") vzdáleného ladicího programu pro vzdálené ladění
+    ![Okno vzdáleného ladicího programu](../media/remotedebuggerwindow.png "Okno vzdáleného ladicího programu")
   
     Vzdálený ladicí program nyní čeká na připojení. Použijte název serveru a číslo portu, které se zobrazí, chcete-li nastavit konfiguraci vzdáleného připojení v sadě Visual Studio.  
   

@@ -1,5 +1,5 @@
 ---
-title: diagnostické Namespace | Dokumentace Microsoftu
+title: Obor názvů diagnostiky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d412cfa5a9b5e7e90aeac3ac6bbb530b0ef48ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157576"
 ---
 # <a name="diagnostic-namespace"></a>diagnostic – obor názvů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`diagnostics` Obor názvů poskytuje funkce pro generování značek Vizualizéru souběžnosti.  
+`diagnostics`Obor názvů poskytuje funkce pro generování značek Vizualizátor souběžnosti.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace diagnostic;  
@@ -35,21 +35,21 @@ namespace diagnostic;
   
 ### <a name="classes"></a>Třídy  
   
-|Name|Popis|  
+|Název|Popis|  
 |----------|-----------------|  
-|[marker_series – třída](../profiling/marker-series-class.md)|Představuje kanál sériového portu události generované modulem jednoho zprostředkovatele.|  
-|[span – třída](../profiling/span-class.md)|Definuje fáze aplikace.|  
+|[marker_series – třída](../profiling/marker-series-class.md)|Představuje sériový kanál událostí generovaných jedním zprostředkovatelem.|  
+|[span – třída](../profiling/span-class.md)|Definuje fázi aplikace.|  
   
 ### <a name="enumerations"></a>Výčty  
   
-|Name|Popis|  
+|Název|Popis|  
 |----------|-----------------|  
-|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značek Vizualizátor souběžnosti.|  
+|[marker_importance – výčet](../profiling/marker-importance-enumeration.md)|Představuje úroveň důležitosti značky Vizualizátor souběžnosti.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** cvmarkersobj. h  
   
- **Namespace:** Souběžnost  
+ **Obor názvů:** Concurrency  
   
 ## <a name="see-also"></a>Viz také  
  [Obor názvů souběžnosti (Vizualizér souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)

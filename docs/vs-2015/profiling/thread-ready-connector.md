@@ -1,5 +1,5 @@
 ---
-title: Konektor podporující vlákna | Dokumentace Microsoftu
+title: Konektor připravené pro vlákno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2d883ddc3c14bc319897896290a61211de92282b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145584"
 ---
 # <a name="thread-ready-connector"></a>Konektor podporující vlákna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Když kliknete na blokující segment, chcete-li zobrazit zásobník volání a jeho odblokování zásobníku, může zobrazit i konektor podporující vlákna. Pokud v jiném vlákně v aktuálním procesu došlo k odblokování události, konektor podporující vlákna vizuálně identifikuje vlákna a provádění segment, který povoleno pokračovat v provádění blokovaná vlákna.
+Když kliknete na blokující segment a zobrazíte zásobník volání a jeho Zásobník odblokování, může se také zobrazit konektor připravený pro vlákno. Pokud došlo k odblokování události v jiném vlákně aktuálního procesu, konektor připravený pro vlákno vizuálně identifikuje vlákno a spouštěcí segment, který umožňuje blokovanému vláknu pokračovat v provádění.

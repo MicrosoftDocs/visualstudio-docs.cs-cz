@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 85441e90bfecc89688ce0ba6ec0ae10082562f0e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667596"
 ---
 # <a name="fxcopcmd-tool-errors"></a>Chyby nástroje FxCopCmd
@@ -53,6 +53,6 @@ Pro závažné chyby se vrátí **Chyba analýzy** . Indikuje, že se analýza n
 > [!NOTE]
 > Sestavení návratového kódu FxCopCmd **odkazuje na chybu** 0x200 samotným upozorněním, nikoli chybou. Tento návratový kód označuje, že chybí nepřímý odkaz, ale který FxCopCmd byl schopný je zpracovat. Upozornění znamená, že existuje možnost, že některé výsledky analýzy mohou být ohroženy. Považovat **chybu odkazů na sestavení** za chybu, pokud je kombinována s jakýmkoli jiným návratovým kódem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Chyby aplikace Analýzy kódu](../code-quality/code-analysis-application-errors.md)

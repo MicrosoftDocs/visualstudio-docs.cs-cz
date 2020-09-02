@@ -1,5 +1,5 @@
 ---
-title: Refaktoring pro extrahováníC#metod () | Microsoft Docs
+title: Refaktoring pro extrahování metod (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e6d5e7913a7433fd4b30da490f33dd614c3e2b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667542"
 ---
 # <a name="extract-method-refactoring-c"></a>Refaktoring pro extrahování metody (C#)
@@ -44,7 +44,7 @@ ms.locfileid: "72667542"
 
 ### <a name="to-use-extract-method"></a>Použití metody Extract
 
-1. Vytvořte konzolovou aplikaci s názvem `ExtractMethod` a poté nahraďte `Program` následujícím příkladem kódu.
+1. Vytvořte konzolovou aplikaci s názvem `ExtractMethod` a nahraďte `Program` následující ukázkový kód.
 
     ```csharp
     class A
@@ -82,11 +82,11 @@ ms.locfileid: "72667542"
 
      Můžete také kliknout pravým tlačítkem na vybraný kód, Ukázat na **Refaktorovat**a potom kliknout na **Extrahovat metodu** a zobrazit tak dialogové okno **Extrahovat metodu** .
 
-4. Do pole **název nové metody** zadejte název nové metody, například `CircleArea`.
+4. Zadejte název nové metody, například `CircleArea` , do pole **název nové metody** .
 
      Náhled nové signatury metody se zobrazí v části **signatura metody verze Preview**.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 ## <a name="remarks"></a>Poznámky
  Při použití příkazu **Extrahovat metodu** je nová metoda vložena po zdrojovém členovi ve stejné třídě.
@@ -95,7 +95,7 @@ ms.locfileid: "72667542"
  Pokud je třída částečný typ, pak **Metoda Extract** vygeneruje novou metodu hned po zdrojovém členu. **Metoda Extract** Určuje podpis nové metody, vytvoří statickou metodu, pokud není na data instance odkazováno pomocí kódu v nové metodě.
 
 ## <a name="generic-type-parameters"></a>Parametry obecného typu
- Když extrahujete metodu, která má neomezený parametr obecného typu, vygenerovaný kód nebude přidat modifikátor `ref` k tomuto parametru, pokud není přiřazena hodnota. Pokud extrahovaná metoda bude podporovat typy odkazů jako argument obecného typu, pak byste měli ručně přidat modifikátor `ref` do parametru v signatuře metody.
+ Když extrahujete metodu, která má neomezený parametr obecného typu, vygenerovaný kód nepřidá `ref` Modifikátor k tomuto parametru, pokud není přiřazena hodnota. Pokud extrahovaná metoda bude podporovat typy odkazů jako argument obecného typu, pak byste měli přidat `ref` modifikátor do parametru v signatuře metody ručně.
 
 ## <a name="anonymous-methods"></a>Anonymní metody
  Pokud se pokusíte extrahovat část anonymní metody, která obsahuje odkaz na místní proměnnou, která je buď deklarována, nebo odkazována mimo anonymní metodu, pak Visual Studio vás upozorní na potenciální sémantické změny.

@@ -1,5 +1,5 @@
 ---
-title: Aktualizace uživatelského rozhraní | Dokumentace Microsoftu
+title: Aktualizace uživatelského rozhraní | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,26 +12,26 @@ caps.latest.revision: 42
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: db5be965119d1564f2a4bf8a15892af7142663e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186360"
 ---
 # <a name="updating-the-user-interface"></a>Aktualizace uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Po implementaci příkazu můžete přidat kód pro aktualizaci uživatelského rozhraní se stavem nové příkazy.  
+Po implementaci příkazu můžete přidat kód pro aktualizaci uživatelského rozhraní se stavem vašich nových příkazů.  
   
- V typické aplikaci Win32 nepřetržitě testují sadu příkazů a stav jednotlivých příkazech je možné upravit, jak je uživatel zobrazit. Ale vzhledem k tomu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí můžete hostovat neomezený počet rozšíření VSPackages, rozsáhlé dotazování může snížit rychlost odezvy, zejména dotazování napříč sestavení vzájemné spolupráce mezi spravovaným kódem a modelu COM.  
+ V typických aplikacích Win32 může být sada příkazů průběžně dotazována a stav jednotlivých příkazů lze upravit tak, jak je uživatel zobrazí. Vzhledem k tomu, že [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prostředí může hostovat neomezený počet VSPackage, může rozsáhlé cyklické dotazování snížit rychlost odezvy, zejména dotazování napříč definičními sestaveními mezi spravovaným kódem a com.  
   
 ### <a name="to-update-the-ui"></a>Aktualizace uživatelského rozhraní  
   
 1. Proveďte jeden z následujících kroků:  
   
-    - Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> metody.  
+    - Zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> metodu.  
   
-         <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> Rozhraní můžete získat <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> služby následujícím způsobem.  
+         <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>Rozhraní lze ze <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> služby získat následujícím způsobem.  
   
         ```csharp  
         void UpdateUI(Microsoft.VisualStudio.Shell.ServiceProvider sp)  
@@ -46,12 +46,12 @@ Po implementaci příkazu můžete přidat kód pro aktualizaci uživatelského 
   
         ```  
   
-         Pokud parametr <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> zbývá nenulový (`TRUE`), pak aktualizace je provedena synchronně a okamžitě. Doporučujeme vám, že předáte nula (`FALSE`) pro tento parametr, který pomáhá zajistit dobrý výkon. Pokud chcete zabránit ukládání do mezipaměti, použijte `DontCache` příznak při vytváření příkazu v souboru .vsct. Nicméně, použijte příznak s rozvahou nebo se může snížit výkon. Další informace o příznaků příkazů najdete v článku [Command Flag – Element](../extensibility/command-flag-element.md) dokumentaci.  
+         Pokud parametr <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> je nenulový ( `TRUE` ), provede se aktualizace synchronně a okamžitě. Pro zajištění dobrého výkonu doporučujeme předávat 0 ( `FALSE` ) pro tento parametr. Pokud chcete zabránit ukládání do mezipaměti, použijte `DontCache` příznak při vytváření příkazu v souboru. vsct. Nicméně používejte příznak s příznakem obezřetně nebo výkon se může snížit. Další informace o příznacích příkazu naleznete v dokumentaci [elementu příznak příkazu](../extensibility/command-flag-element.md) .  
   
-    - V balíčcích VSPackage, která hostování ovládacího prvku ActiveX s použitím modelu aktivace na místě v okně, může být vhodnější použít <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> metody. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A> Metoda ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> rozhraní a <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> metodu <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> rozhraní jsou funkčně ekvivalentní. Oba způsobují prostředí tak, aby znovu odeslán dotaz na stav všech příkazů. Obvykle aktualizace nebude provedena okamžitě. Místo toho je aktualizace odložena až do doby nečinnosti. Prostředí ukládá do mezipaměti stav příkazu, který pomáhá zajistit dobrý výkon. Pokud chcete zabránit ukládání do mezipaměti, použijte `DontCache` příznak při vytváření příkazu v souboru .vsct. Však použijte příznak opatrně, protože může dojít ke snížení výkonu.  
+    - V rozhraních VSPackage, které hostují ovládací prvek ActiveX pomocí modelu místní aktivace v okně, může být pohodlnější použít <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> metodu. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.UpdateCommandUI%2A>Metoda v rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> a <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager.UpdateUI%2A> metoda v <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> rozhraní jsou funkčně ekvivalentní. Jak by prostředí znovu provedlo dotaz na stav všech příkazů. Obvykle se aktualizace neprovádí okamžitě. Místo toho je aktualizace odložena až do doby nečinnosti. Prostředí ukládá do mezipaměti stav příkazu pro zajištění dobrého výkonu. Pokud chcete zabránit ukládání do mezipaměti, použijte `DontCache` příznak při vytváření příkazu v souboru. vsct. Nicméně příznak používejte opatrně, protože může dojít ke snížení výkonu.  
   
-         Všimněte si, že můžete získat <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> rozhraní voláním `QueryInterface` metodu <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager> objektu nebo za získání rozhraní z <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> služby.  
+         Všimněte si, že můžete získat <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponentUIManager> rozhraní voláním `QueryInterface` metody <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager> objektu nebo získáním rozhraní ze <xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> služby.  
   
 ## <a name="see-also"></a>Viz také  
- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Implementace](../extensibility/internals/command-implementation.md)

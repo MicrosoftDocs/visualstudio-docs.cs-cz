@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04c6415fed131abc5a102f6ec15c69e33f21fd68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592344"
 ---
 # <a name="xml-schema-explorer"></a>Průzkumník schémat XML
 
-**Průzkumník schémat XML** je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v **Průzkumníku schémat XML**. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí příkazu `include` nebo `import`, se zobrazí také v **Průzkumníku schémat XML**.
+**Průzkumník schémat XML** je integrovaný do Microsoft Visual Studio a editoru XML, který vám umožní pracovat s schématy XML Schema Definition Language (XSD). Když otevřete soubor schématu XML, uzel **sada schémat** se zobrazí v **Průzkumníku schémat XML**. Všechna zahrnutá, importovaná nebo Předefinovaná schémata pro cílový soubor a všechny soubory, které jsou odkazovány pomocí `include` `import` příkazu nebo, se zobrazí také v **Průzkumníku schémat XML**.
 
 **Průzkumník schémat XML** umožňuje provést následující akce:
 
@@ -54,7 +54,7 @@ ms.locfileid: "75592344"
 
 - Třetí úroveň obsahuje soubory.
 
-- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include`, `import`a `redefine` příkazy.
+- Čtvrtá úroveň obsahuje globální uzly. To může zahrnovat prvky, skupiny, komplexní typy, jednoduché typy, atributy, skupiny atributů a `include` příkazy, a `import` `redefine` .
 
 Následuje příklad stromové struktury:
 
@@ -67,7 +67,7 @@ Chcete-li aktivovat uzel, poklikejte na něj nebo stiskněte klávesu **ENTER** 
 
 - Aktivace uzlu otevře soubor, ve kterém je tento uzel definován (Pokud soubor již není otevřen) a vybere uzel v souboru.
 
-- Při aktivaci uzlu souboru se otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní se uzel `<schema>`.
+- Aktivace uzlu souboru Otevře vybraný soubor (Pokud ještě není otevřený) a zvýrazní `<schema>` uzel.
 
 - Aktivace SchemaSet nebo uzlu oboru názvů neprovede žádnou akci.
 
@@ -78,6 +78,6 @@ Odstraněním souborů v zobrazení přidáte všechny globální uzly v souboru
 
  Nemůžete přetahovat místní uzly nebo importy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Postupy: Přidání uzlů do pracovního prostoru z Průzkumníka schémat XML](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)

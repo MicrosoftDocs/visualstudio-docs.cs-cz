@@ -1,5 +1,5 @@
 ---
-title: Metody související se zarážkou | Dokumentace Microsoftu
+title: Metody související se zarážkami | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,77 +12,77 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 47ba1529521fdce042512a38d32ad2ca2eb3cb82
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146437"
 ---
 # <a name="breakpoint-related-methods"></a>Metody související se zarážkou
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ladicí stroj (DE) musí podporovat nastavení zarážky. Ladění aplikace Visual Studio podporuje následující typy zarážky:  
+Ladicí stroj (DE) musí podporovat nastavení zarážek. Ladění sady Visual Studio podporuje následující typy zarážek:  
   
-- vázaný  
+- Bound  
   
-     Požadovaný přes uživatelské rozhraní a úspěšně svázaná s umístěním zadaný kód  
+     Požadováno prostřednictvím uživatelského rozhraní a úspěšné vázání na zadané umístění kódu  
   
-- Čekající na vyřízení  
+- Čekající  
   
-     Požadovaný prostřednictvím uživatelského rozhraní, ale není dosud vázaná na skutečné pokyny  
+     Požadováno prostřednictvím uživatelského rozhraní, ale ještě není vázané na skutečné pokyny  
   
 ## <a name="discussion"></a>Diskuse  
- Například čekající zarážkou nastane, pokud ještě nejsou načtené pokynů. Při načítání kódu, čekajících zarážek zkuste vytvořit vazbu na kód určeného umístění, to znamená, chcete-li vložit pokyny přerušení v kódu. Události se posílají správce ladění relace (SDM) k označení úspěšného vazby nebo upozornit, že došlo k chybám vazby.  
+ Například nevyřízená zarážka nastane, když pokyny ještě nejsou načteny. Při načtení kódu se nevyřízené zarážky pokusí vytvořit vazby na kód v předepsaném umístění, tedy pro vložení instrukcí break do kódu. Události se odesílají do Správce ladění relace (SDM), aby označovaly úspěšné vazby nebo oznámily, že došlo k chybám vazeb.  
   
- Čekající zarážkou také spravuje svou vlastní interní seznam odpovídající vazby zarážky. Jedno čekající zarážka může způsobit vložení mnoha zarážek v kódu. Ladění uživatelského rozhraní sady Visual Studio zobrazuje stromovou strukturu čekajících zarážek a jejich odpovídající vázaný zarážky.  
+ Nevyřízená zarážka také spravuje svůj vlastní interní seznam odpovídajících svázaných zarážek. Jedna nevyřízená zarážka může způsobit vložení mnoha zarážek v kódu. Uživatelské rozhraní ladění sady Visual Studio zobrazuje stromové zobrazení nevyřízených zarážek a jejich odpovídajících vázaných zarážek.  
   
- Vytváření a používání čekajících zarážek vyžadují provádění [IDebugEngine2::CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) metody, stejně jako tyto metody [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
-  
-|Metoda|Popis|  
-|------------|-----------------|  
-|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Určuje, zda zadané čekajících zarážek lze svázat místa v kódu.|  
-|[Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Váže zadanou čekajících zarážek na jeden nebo více umístění kódu.|  
-|[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Získá stav čekající zarážkou.|  
-|[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Získá požadavek zarážku použitý k vytvoření čekající zarážkou.|  
-|[Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepíná povoleného stavu čekající zarážkou.|  
-|[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Zobrazí všechny zarážky, od čekající zarážka vázána.|  
-|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Zobrazí všechny zarážky chyb, které jsou výsledkem čekající zarážkou.|  
-|[Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Odstraní čekající zarážkou a všechny zarážky, které jsou vázány z něj.|  
-  
- Výčet vazby zarážky a Chyba zarážky, musí implementovat všechny metody [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) a [IEnumDebugErrorBreakpoints2](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md).  
-  
- Čekajících zarážek, kteří jsou navázáni na kód umístění vyžadují provádění následujících [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) metody.  
+ Vytváření a používání nevyřízených zarážek vyžaduje implementaci metody [IDebugEngine2:: CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) a také následující metody rozhraní [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Získá čekající zarážka, který obsahuje zarážku.|  
-|[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Získá stav vázaná zarážka.|  
-|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Získá řešení zarážek, které popisují zarážku.|  
-|[Enable](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Povolí nebo zakáže zarážku.|  
-|[Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Odstraní vázaná zarážka.|  
+|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Určuje, zda zadaná nedokončená zarážka může vytvořit vazby na umístění kódu.|  
+|[Zapisovat](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Váže určenou nevyřízenou zarážku na jedno nebo více umístění kódu.|  
+|[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Získá stav čeká na zarážce.|  
+|[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Získá požadavek na zarážku, který se používá k vytvoření nedokončené zarážky.|  
+|[Povolení](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Přepne povolený stav čeká na zarážku.|  
+|[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Vytvoří výčet všech zarážek vázaných z nedokončené zarážky.|  
+|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Vytvoří výčet všech zarážek s chybami, které jsou výsledkem nedokončené zarážky.|  
+|[Odstranit](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Odstraní nevyřízenou zarážku a všechny zarážky, které jsou z něho svázané.|  
   
- Překlad IP adres a žádost o informace vyžadují provádění následujících [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) metody.  
+ Chcete-li vytvořit výčet vázaných zarážek a chyb zarážek, je nutné implementovat všechny metody [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) a [IEnumDebugErrorBreakpoints2](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md).  
   
-|Metoda|Popis|  
-|------------|-----------------|  
-|[GetBreakpointType](../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|Získá typ zarážky reprezentována řešení.|  
-|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Získá informace o řešení zarážek, popisující zarážku.|  
-  
- Řešení chyb, které mohou nastat během vazby vyžaduje implementace následujících [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) metody.  
+ Nedokončené zarážky, které se vážou na umístění kódu, vyžadují implementaci následujících metod [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)|Získá čekající zarážka, která obsahuje zarážku k chybě.|  
-|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Získá chyba řešení zarážek, popisující zarážku k chybě.|  
+|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Získá nevyřízenou zarážku, která obsahuje zarážku.|  
+|[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Získá stav vázané zarážky.|  
+|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Získá rozlišení zarážky, které popisuje zarážku.|  
+|[Povolení](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Povoluje nebo zakazuje zarážku.|  
+|[Odstranit](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Odstraní vázanou zarážku.|  
   
- Řešení chyb, které mohou nastat během vazby také vyžaduje následující metody [IDebugErrorBreakpointResolution2](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md).  
+ Informace o řešení a požadavku vyžadují implementaci následujících metod [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) .  
+  
+|Metoda|Popis|  
+|------------|-----------------|  
+|[GetBreakpointType](../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|Získá typ zarážky reprezentované rozlišením.|  
+|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Získá informace o rozlišení zarážky, které popisují zarážku.|  
+  
+ Řešení chyb, ke kterým může dojít během vytváření vazby, vyžaduje implementaci následujících metod [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) .  
+  
+|Metoda|Popis|  
+|------------|-----------------|  
+|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)|Získá nevyřízenou zarážku obsahující chybovou zarážku.|  
+|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Získá rozlišení chyby zarážky, které popisuje chybovou zarážku.|  
+  
+ Řešení chyb, ke kterým může dojít během vytváření vazby, vyžaduje také následující metody [IDebugErrorBreakpointResolution2](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md).  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetBreakpointType](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)|Získá typ zarážky.|  
-|[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Získá informace o řešení zarážku.|  
+|[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Získá informace o řešení zarážky.|  
   
- Zobrazení zdrojového kódu na zarážce je potřeba implementovat metody [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) a/nebo metody [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md).  
+ Zobrazení zdrojového kódu na zarážce vyžaduje, abyste implementovali metody [IDebugStackFrame2:: GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) a/nebo metody [IDebugStackFrame2:: GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Řízení provádění a vyhodnocení stavu](../../extensibility/debugger/execution-control-and-state-evaluation.md)

@@ -14,20 +14,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b6ad913e418f2f13bd196925b3c085b9d5c7efca
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667451"
 ---
 # <a name="visual-studio-commands"></a>Příkazy sady Visual Studio
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Příkazy sady Visual Studio umožňují vyvolat příkaz z okna **příkaz** , **okamžité** okno nebo **Najít/příkaz** . V každém případě se používá znak větší než (`>`) k označení toho, že příkaz místo operace hledání nebo ladění bude následovat.
+Příkazy sady Visual Studio umožňují vyvolat příkaz z okna **příkaz** , **okamžité** okno nebo **Najít/příkaz** . V každém případě se používá znak větší než ( `>` ) k označení toho, že příkaz místo operace hledání nebo ladění bude následovat.
 
  Úplný seznam příkazů a jejich syntaxi najdete v dialogovém okně **klávesnice, možnosti prostředí** .
 
- Řídicí znak pro příkazy sady Visual Studio je znak stříšky (^), což znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Například
+ Řídicí znak pro příkazy sady Visual Studio je znak stříšky (^), což znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Příklad:
 
 ```
 >Edit.Find ^^t /regex
@@ -35,7 +35,7 @@ Příkazy sady Visual Studio umožňují vyvolat příkaz z okna **příkaz** , 
 
  Blikající kurzor funguje stejně, bez ohledu na to, zda se nachází uvnitř nebo vně uvozovek. Pokud je poslední znak na řádku blikající kurzor, ignoruje se.
 
- V lokalizovaných verzích rozhraní IDE lze názvy příkazů zadat v nativním jazyce integrovaného vývojového prostředí (IDE) nebo v angličtině. Můžete například zadat buď `File.NewFile` nebo `Fichier.NouveauFichier` ve francouzštině integrovaném vývojovém prostředí, aby se spustil stejný příkaz.
+ V lokalizovaných verzích rozhraní IDE lze názvy příkazů zadat v nativním jazyce integrovaného vývojového prostředí (IDE) nebo v angličtině. Můžete například zadat buď `File.NewFile` nebo `Fichier.NouveauFichier` ve francouzštině integrovaného vývojového prostředí, a spustit tak stejný příkaz.
 
  Mnoho příkazů má aliasy. Seznam aliasů příkazů naleznete v tématu [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md).
 
@@ -63,19 +63,19 @@ Příkazy sady Visual Studio umožňují vyvolat příkaz z okna **příkaz** , 
 |[Otevřít soubor](../../ide/reference/open-file-command.md)|Otevře existující soubor a umožňuje určit editor.|
 |[Otevřít projekt](../../ide/reference/open-project-command.md)|Otevře existující projekt a umožňuje přidat projekt do aktuálního řešení.|
 |[Otevřít řešení](../../ide/reference/open-solution-command.md)|Otevře existující řešení.|
-|[Tisk](../../ide/reference/print-command.md)|Vyhodnotí výraz a zobrazí výsledky nebo zadaný text.|
-|[Příkaz Rychlé kukátko](../../ide/reference/quick-watch-command.md)|Zobrazí vybraný nebo zadaný text v poli **výraz** dialogového okna **Rychlé kukátko** .|
+|[Tiskový](../../ide/reference/print-command.md)|Vyhodnotí výraz a zobrazí výsledky nebo zadaný text.|
+|[Rychlé kukátko – příkaz](../../ide/reference/quick-watch-command.md)|Zobrazí vybraný nebo zadaný text v poli **výraz** dialogového okna **Rychlé kukátko** .|
 |[Náhrady](../../ide/reference/replace-command.md)|Nahradí text v souborech pomocí podmnožiny možností dostupných v ovládacím prvku **Najít a nahradit** .|
 |[Nahradit v souborech](../../ide/reference/replace-in-files-command.md)|Nahradí text v souborech pomocí podmnožiny možností, které jsou k dispozici v [souborech nahradit v](../../ide/replace-in-files.md).|
 |[Nastavit aktuální rámec zásobníku](../../ide/reference/set-current-stack-frame-command.md)|Umožňuje zobrazit konkrétní rámec zásobníku.|
 |[Nastavit aktuální vlákno](../../ide/reference/set-current-thread-command.md)|Umožňuje zobrazit konkrétní vlákno.|
 |[Nastavit základ](../../ide/reference/set-radix-command.md)|Určuje počet bajtů, které se mají zobrazit.|
-|[Prostředí](../../ide/reference/shell-command.md)|Spustí programy v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], jako by byl příkaz proveden z příkazového řádku.|
-|[Příkaz ShowWebBrowser (Zobrazit webový prohlížeč)](../../ide/reference/showwebbrowser-command.md)|Zobrazuje adresu URL, kterou zadáte v okně webového prohlížeče, a to buď v rámci integrovaného vývojového prostředí (IDE), nebo mimo rozhraní IDE.|
-|[Start](../../ide/reference/start-command.md)|Zahájí proces ladění a umožňuje určit, jak se mají chyby zpracovávat.|
-|[Dílčí](../../ide/reference/symbol-path-command.md)|Nastaví seznam adresářů ladicího programu pro hledání symbolů.|
+|[Prostředí](../../ide/reference/shell-command.md)|Spustí programy v rámci [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , a to i v případě, že byl příkaz proveden z příkazového řádku.|
+|[ShowWebBrowser – – příkaz](../../ide/reference/showwebbrowser-command.md)|Zobrazuje adresu URL, kterou zadáte v okně webového prohlížeče, a to buď v rámci integrovaného vývojového prostředí (IDE), nebo mimo rozhraní IDE.|
+|[Zahájení](../../ide/reference/start-command.md)|Zahájí proces ladění a umožňuje určit, jak se mají chyby zpracovávat.|
+|[Cesta](../../ide/reference/symbol-path-command.md)|Nastaví seznam adresářů ladicího programu pro hledání symbolů.|
 |[Přepnout zarážku](../../ide/reference/toggle-breakpoint-command.md)|Zapne nebo vypne zarážku v závislosti na jejím aktuálním stavu, a to v aktuálním umístění v souboru.|
-|[Příkaz Kukátko](../../ide/reference/watch-command.md)|Vytvoří a otevře zadanou instanci okna **kukátka** .|
+|[Kukátko – příkaz](../../ide/reference/watch-command.md)|Vytvoří a otevře zadanou instanci okna **kukátka** .|
 
 ## <a name="see-also"></a>Viz také
  [Příkazy](../../ide/reference/command-window.md) příkazového řádku [find/Command](../../ide/find-command-box.md) v [aplikaci Visual Studio – aliasy příkazů](../../ide/reference/visual-studio-command-aliases.md)

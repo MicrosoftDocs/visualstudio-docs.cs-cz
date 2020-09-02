@@ -8,20 +8,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d441d74d1ddea5a7b5dd063d302ec93e75fc1c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591889"
 ---
 # <a name="t4-assembly-directive"></a>T4 – direktiva Assembly
 
-V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sestavení tak, aby kód šablony mohl použít jeho typy. Efekt je podobný přidání odkazu na sestavení v projektu sady Visual Studio.
+V textové šabloně návrhu sady Visual Studio `assembly` načte direktiva sestavení tak, aby kód šablony mohl použít jeho typy. Efekt je podobný přidání odkazu na sestavení v projektu sady Visual Studio.
 
  Obecný přehled o psaní textových šablon najdete v tématu [Vytvoření textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
 > [!NOTE]
-> V textové šabloně běhu (předzpracovaná) nepotřebujete direktivu `assembly`. Místo toho přidejte potřebná sestavení do **odkazů** projektu aplikace Visual Studio.
+> Tuto direktivu nepotřebujete `assembly` v textové šabloně běhu (předzpracované). Místo toho přidejte potřebná sestavení do **odkazů** projektu aplikace Visual Studio.
 
 ## <a name="using-the-assembly-directive"></a>Použití direktivy assembly
  Syntaxe této direktivy je následující:
@@ -32,11 +32,11 @@ V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sest
 
  Název sestavení by měl být jeden z následujících názvů:
 
-- Silný název sestavení v globální mezipaměti sestavení (GAC), například `System.Xml.dll`. Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`. Další informace najdete v tématu <xref:System.Reflection.AssemblyName>.
+- Silný název sestavení v globální mezipaměti sestavení (GAC), například `System.Xml.dll` . Můžete také použít dlouhý tvar, například `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` . Další informace naleznete v tématu <xref:System.Reflection.AssemblyName>.
 
 - Absolutní cesta k sestavení
 
-  Můžete použít syntaxi `$(variableName)` pro odkazování na proměnné sady Visual Studio, jako je například `$(SolutionDir)`a `%VariableName%` pro odkazování na proměnné prostředí. Příklad:
+  Syntaxi můžete použít `$(variableName)` k odkazování na proměnné sady Visual Studio, jako jsou `$(SolutionDir)` , a `%VariableName%` pro referenční proměnné prostředí. Příklad:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
@@ -63,10 +63,10 @@ V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sest
 
 - Sestavení obsahující váš kód DSL
 
-## <a name="msbuild"></a>Používání vlastností projektu v nástroji MSBuild i v aplikaci Visual Studio
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> Používání vlastností projektu v nástroji MSBuild i v aplikaci Visual Studio
  Makra sady Visual Studio, jako je $ (SolutionDir), nefungují v nástroji MSBuild. Chcete-li transformovat šablony v sestavovacím počítači, je nutné místo toho použít vlastnosti projektu.
 
- Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder`:
+ Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder` :
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -88,6 +88,6 @@ V textové šabloně návrhu sady Visual Studio načte direktiva `assembly` sest
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [T4 – direktiva Include](../modeling/t4-include-directive.md)

@@ -1,5 +1,5 @@
 ---
-title: Doba zpracování uživatelského rozhraní | Dokumentace Microsoftu
+title: Doba zpracování uživatelského rozhraní | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,20 +14,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4bbed9d8c4725b6bd497377d4a9dee22f2f8573d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145488"
 ---
 # <a name="ui-processing-time"></a>Doba zpracování uživatelského rozhraní
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako zpracování uživatelského rozhraní. Z toho vyplývá, že vlákno – čerpání zpráv Windows nebo provádění jiné práce uživatelské rozhraní (UI). Během této doby je zablokovaný vlákno v rozhraní API, které Vizualizátor souběžnosti se počítá jako zpracování uživatelského rozhraní. Rozhraní API, jako `GetMessage()` a `MsgWaitForMultipleObjects()` spadají do této skupiny.  
+Tyto segmenty na časové ose jsou přidruženy k době blokování, které jsou zařazeny do kategorie jako zpracování uživatelského rozhraní. To znamená, že vlákno provádí pumpu zpráv systému Windows nebo jiné fungování uživatelského rozhraní (UI). Během této doby bylo vlákno zablokováno v rozhraní API, které se v nástroji Vizualizátor souběžnosti počítá jako zpracování uživatelského rozhraní. `GetMessage()`Do této skupiny patří rozhraní API, například a `MsgWaitForMultipleObjects()` .  
   
- Pokud se zjistí, žádné předdefinované blokování rozhraní API, projděte si zásobníky volání a profilu, sestavy určit základní příčiny zpoždění.  
+ Pokud není identifikované žádné předem definované blokující rozhraní API, zkontrolujte zásobníky volání a sestavy profilu a určete základní příčiny zpoždění.  
   
- Kategorie zpracování uživatelského rozhraní je důležité pochopit, rychlost odezvy aplikací grafického uživatelského rozhraní a je žádoucí v aplikacích, které závisí na rychlosti odezvy uživatelského rozhraní. Například pokud vlákno uživatelského rozhraní v aplikaci dosáhne 100 % času v zpracování uživatelského rozhraní, je pravděpodobně velmi rychlou odezvou. Pokud vlákno uživatelského rozhraní stráví značnou dobu v jiných kategoriích, ale hledat hlavní příčiny a zvažte možnosti snížení kategorie bez uživatelského rozhraní v daném vláknu.  
+ Kategorie zpracování uživatelského rozhraní je důležitá pro porozumění rychlosti používání aplikací GUI a je žádoucí v aplikacích, které závisí na rychlosti odezvy uživatelského rozhraní. Například pokud vlákno uživatelského rozhraní v aplikaci dosáhne 100% času při zpracování uživatelského rozhraní, je pravděpodobné, že bude velmi reagovat. Nicméně pokud vlákno uživatelského rozhraní stráví značnou dobu v jiných kategoriích, hledejte hlavní příčiny a zvažte možnosti pro omezení kategorií bez uživatelského rozhraní v tomto vlákně.  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetPhysicalStackRange | Dokumentace Microsoftu
+title: 'IDebugStackFrame2:: GetPhysicalStackRange | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 99fc1e635691fa290d0a8e4506ef55d677e9ff78
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547647"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá vyjádření závislé na počítači rozsahu fyzické adresy přidružený blok zásobníku.  
+Načte reprezentace rozsahu fyzických adres spojených s rámcem zásobníku, která je závislá na počítači.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +42,18 @@ int GetPhysicalStackRange ( 
   
 #### <a name="parameters"></a>Parametry  
  `paddrMin`  
- [out] Vrátí nejnižší fyzické adresy přidružené k tento rámec zásobníku.  
+ mimo Vrátí nejnižší fyzickou adresu přidruženou k tomuto snímku zásobníku.  
   
  `paddrMax`  
- [out] Vrátí nejvyšší fyzické adresy přidružené k tento rámec zásobníku.  
+ mimo Vrátí nejvyšší fyzickou adresu přidruženou k tomuto snímku zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Informace o vrácený touto metodou používá správce ladění relace (SDM) řazení zásobníku.  
+ Informace vrácené touto metodou jsou používány správcem ladění relace (SDM) k řazení rámců zásobníku.  
   
- Předpokládá se, že zásobník volání roste dolů, to znamená, že jsou přidány nové bloky zásobníku stále nižší adresy paměti. Za běhu architektury musíte zadat rozsahy adres fyzického zásobníku, které odpovídají tento předpoklad.  
+ Předpokládá se, že zásobník volání roste, to znamená, že nové rámce zásobníku jsou přidány ve stále nižších adresách paměti. Architektura run-time musí poskytovat fyzické rozsahy zásobníku, které odpovídají tomuto předpokladu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

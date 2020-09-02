@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592950"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Úprava stylu objektů v Blend pro Visual Studio
@@ -47,9 +47,9 @@ Vytvořte vizuální štětce z ovládacího prvku, jako je tlačítko. Následu
 
 Vzhled a chování ovládacího prvku můžete navrhovat jednou a použít tento návrh i na jiné ovládací prvky, abyste je nemuseli udržovat individuálně.
 
-**Měli byste použít styl?** : Pokud chcete nastavit pouze výchozí vlastnosti (například barvu tlačítka), použijte *styl*. Ovládací prvek můžete upravit i po použití stylu.
+**Měli byste použít styl?**: Pokud chcete nastavit pouze výchozí vlastnosti (například barvu tlačítka), použijte *styl*. Ovládací prvek můžete upravit i po použití stylu.
 
-**Měli byste použít šablonu?** : Pokud chcete změnit strukturu ovládacího prvku, použijte *šablonu*. Představte si převod grafiky nebo loga na tlačítko. Nemůžete změnit ovládací prvek poté, co jste na něj použili šablonu.
+**Měli byste použít šablonu?**: Pokud chcete změnit strukturu ovládacího prvku, použijte *šablonu*. Představte si převod grafiky nebo loga na tlačítko. Nemůžete změnit ovládací prvek poté, co jste na něj použili šablonu.
 
 ### <a name="create-a-template-or-style"></a>Vytvoření šablony nebo stylu
 
@@ -75,7 +75,7 @@ V dialogovém okně **vytvořit prostředek stylu** můžete buď pojmenovat sty
 
 > [!NOTE]
 > Pro každý typ ovládacího prvku nelze vytvářet styly ani šablony. Pokud je ovládací prvek nepodporuje, tlačítko s popisem cesty se nezobrazí nad návrhovou plochou.
-> Pokud se chcete vrátit do oboru úprav hlavního dokumentu, klikněte na **vrátit rozsah a** ![návratového rozsahu do](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)ikony.
+> Pokud se chcete vrátit do oboru úprav hlavního dokumentu, klikněte na **vrátit obor a** ![ vraťte rozsah do ikony ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) .
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Použití stylu nebo šablony pro ovládací prvek
 
@@ -85,7 +85,7 @@ V okně [objekty a časová osa](../xaml-tools/creating-a-ui-by-using-blend-for-
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>Obnovení výchozího stylu nebo šablony ovládacího prvku
 
-Vyberte ovládací prvek a v okně **Vlastnosti** ** vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti**a potom v místní nabídce klikněte na **obnovit** .
+Vyberte ovládací prvek a v okně * * Vlastnosti * * * * vyhledejte vlastnost **style** nebo **template** . Zvolte **Upřesnit možnosti**a potom v místní nabídce klikněte na **obnovit** .
 
 ## <a name="visual-states"></a>Vizuální stavy
 
@@ -93,7 +93,7 @@ Vizuální stavy umožňují změnit vzhled ovládacího prvku na základě jeho
 
 ![Myš nad stavem](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-**Podívejte se na krátké video:** ![tlačítko Přehrát](../designers/media/bldadminconsoleinitialconfigicon.PNG) [spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
+**Podívejte se na krátké video:** ![ Tlačítko Přehrát – ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [umožňuje spravovat stav ovládacích prvků WPF](https://www.youtube.com/watch?v=m0PlkF5i6uw).
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Prostředky: vytvořit barvy, styly a šablony a později je znovu použít
 
@@ -101,6 +101,6 @@ V projektu můžete převést prakticky cokoli na prostředek. Prostředek je po
 
 ![Tlačítko převést barvu na prostředek](../designers/media/89203705-cf66-46e0-b153-52a23cd744f7.png) ![Dialogové okno vytvořit prostředek barvy](../designers/media/6bff8b19-3cd5-41a0-bbf9-ff65532d5aae.png)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio](../xaml-tools/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Refaktoring pro odebrání parametrůC#() | Microsoft Docs
+title: Refaktoring pro odebrání parametrů (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40c373c3575f007952143e29c8dfc2cfac3d080f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667495"
 ---
 # <a name="remove-parameters-refactoring-c"></a>Refaktoring pro odebrání parametrů (C#)
@@ -29,14 +29,14 @@ ms.locfileid: "72667495"
 
 `Remove Parameters` je operace refaktoringu, která poskytuje snadný způsob, jak odebrat parametry z metod, indexerů nebo delegátů. Odebrat parametry změna deklarace; v jakémkoli umístění, kde je člen volán, je parametr odebrán, aby odrážel novou deklaraci.
 
- Operaci odebrat parametry provedete tak, že nejprve umístíte kurzor na metodu, indexer nebo delegáta. Když je kurzor na pozici, chcete-li vyvolat operaci odebrání `Parameters`, klikněte na nabídku **refaktoring** , stiskněte klávesovou zkratku nebo vyberte příkaz z místní nabídky.
+ Operaci odebrat parametry provedete tak, že nejprve umístíte kurzor na metodu, indexer nebo delegáta. Když je kurzor na pozici, chcete-li vyvolat `Parameters` operaci odebrání, klikněte na nabídku **refaktoring** , stiskněte klávesovou zkratku nebo vyberte příkaz z místní nabídky.
 
 > [!NOTE]
 > První parametr v metodě rozšíření nelze odebrat.
 
 ### <a name="to-remove-parameters"></a>Odebrání parametrů
 
-1. Vytvořte konzolovou aplikaci s názvem `RemoveParameters` a pak `Program` nahraďte následujícím kódem.
+1. Vytvořte konzolovou aplikaci s názvem `RemoveParameters` a nahraďte `Program` následující kód následujícím kódem.
 
     ```csharp
     class A
@@ -55,7 +55,7 @@ ms.locfileid: "72667495"
     }
     ```
 
-2. Umístěte kurzor na metodu `A`, a to buď v deklaraci metody, nebo v volání metody.
+2. Umístěte kurzor na metodu `A` , buď v deklaraci metody, nebo v volání metody.
 
 3. V nabídce **refaktoring** vyberte možnost **Odebrat parametry** a zobrazí se dialogové okno **Odebrat parametry** .
 
@@ -63,9 +63,9 @@ ms.locfileid: "72667495"
 
      Můžete také kliknout pravým tlačítkem myši na kurzor, Ukázat na **Refaktorovat**a kliknout na příkaz **Odebrat** parametry. zobrazí se dialogové okno **Odebrat parametry** .
 
-4. Pomocí pole **Parameters** umístěte kurzor na `int i` a pak klikněte na **Odebrat**.
+4. Pomocí pole **parametry** umístěte kurzor na `int i` a pak klikněte na **Odebrat**.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 6. V **náhledu změn – dialogové okno odebrat parametry** klikněte na **použít**.
 
@@ -81,13 +81,13 @@ ms.locfileid: "72667495"
 MyMethod(param1++, param2);
 ```
 
- až
+ na
 
 ```csharp
 MyMethod(param2);
 ```
 
- operace refaktoringu `param1` nebude zvýšena.
+ operace refaktoringu se `param1` nezvýší.
 
 ## <a name="see-also"></a>Viz také
  [Refaktoring (C#)](../csharp-ide/refactoring-csharp.md)

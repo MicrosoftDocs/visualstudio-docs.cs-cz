@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0f7ecd6508df780f570d10b3d615094fae15209d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591681"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>Zpracování textových šablon pomocí vlastního hostitele
@@ -33,7 +33,7 @@ Pokud vaše aplikace používá sadu šablon, které jsou v době kompilace fix
 
 ## <a name="execute-a-text-template-in-your-application"></a>Spuštění textové šablony v aplikaci
 
-Chcete-li spustit textovou šablonu, zavolejte metodu ProcessTemplate <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>:
+Chcete-li spustit textovou šablonu, zavolejte metodu ProcessTemplate pro <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> :
 
 ```csharp
 using Microsoft.VisualStudio.TextTemplating;
@@ -44,16 +44,16 @@ string output = engine.ProcessTemplate(templateString, host);
 
  Vaše aplikace musí najít a poskytnout šablonu a zpracovat výstup.
 
- V parametru `host` musíte zadat třídu, která implementuje [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). Tuto třídu zpětně volá stroj.
+ V `host` parametru je nutné zadat třídu, která implementuje [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)). Tuto třídu zpětně volá stroj.
 
  Hostitel musí být schopen protokolovat chyby, překládat odkazy na sestavení a vkládané soubory, poskytovat doménu aplikace, ve které se šablona spouští, a volat odpovídající procesor pro jednotlivé direktivy.
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> je definováno v souboru **Microsoft. VisualStudio. TextTemplating.\*0. dll**a [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) je definováno v souboru **Microsoft. VisualStudio. TextTemplating. Interfaces.\*. 0. dll**.
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> je definován v **Microsoft. VisualStudio. TextTemplating. \*.0.dll**a [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) je definován v **Microsoft. visualstudio. TextTemplating. Interfaces. \*.0.dll**.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Návod: Vytvoření vlastní hostitelské šablony textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md) ukazuje, jak vytvořit vlastního hostitele textových šablon, který zpřístupňuje funkčnost textové šablony mimo aplikaci Visual Studio.
+ [Návod: Vytvoření vlastního hostitele textových šablon](../modeling/walkthrough-creating-a-custom-text-template-host.md) Ukazuje, jak vytvořit vlastního hostitele textových šablon, který zpřístupňuje funkce textových šablon mimo aplikaci Visual Studio.
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Referenční informace
  [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))
 
 ## <a name="related-sections"></a>Související oddíly

@@ -1,5 +1,5 @@
 ---
-title: Blokování času Sestava profilu | Dokumentace Microsoftu
+title: Sestava profilu času blokování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,52 +14,52 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0efeb7fb0eb481d0b8d62ff4a9ebf9daad98c39f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147245"
 ---
 # <a name="blocking-time-profile-report"></a>Sestava profilu času blokace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil sestavy poskytují data agregace času blokování pro zásobníky volání, které jsou specifické pro každou blokování kategorii (například "Vstupně-výstupní operace" nebo "Synchronizace"). Přerušení sestava obsahuje seznam procesů, které ke zrušení přidělením aktuální proces a počtem instancí přerušení. Pokud chcete sestavit blokování Sestava profilu, nástroj shromáždí blokování volání rozhraní API a shromáždí do stromu zásobníky volání. Data zobrazená v těchto sestavách se liší podle aktuální časový rozsah, skryté vláken a následující dva filtry, které mohou být použity:  
+Sestavy profilu poskytují agregovaná data o době blokování pro zásobníky volání, která jsou specifická pro jednotlivé kategorie blokování (například I/O nebo synchronizace). Sestava přerušení obsahuje seznam procesů, které přecházely aktuální proces spolu s počtem instancí přerušení. Chcete-li vytvořit sestavu blokující profil, nástroj shromáždí blokování volání rozhraní API a shromáždí je do stromu zásobníků volání. Data zobrazená v těchto sestavách se liší podle aktuálního časového rozsahu, skrytého vlákna a pomocí následujících dvou filtrů, které mohou být aplikovány:  
   
-- Pokud je vybrána pouze můj kód, jsou uvedeny pouze bloky zásobníku, které mají kód uživatele a jednu úroveň níže uvedeného kódu uživatele.  
+- Pokud je vybráno Pouze můj kód, zobrazí se pouze rámce zásobníku s uživatelským kódem a jedna úroveň pod uživatelským kódem.  
   
-- Pokud je nastavena hodnota snížení šumu, porovnávány zásobníky, kterých je nižší než zadané frekvence se přeskočí.  
+- Pokud je nastavená hodnota snížení šumu, přeskočí se zásobníky, které mají míň, než je zadaná frekvence.  
   
-  Rozbalte všechny položky strom volání najít řádek kódu, ve kterém byl stráven času blokování. Vyhledejte řádek zdroje pro položku, na místní nabídku, vyberte **zobrazit zdroj**. Chcete-li vyhledejte řádek kódu, který volal to předchozí, v místní nabídce zvolte **lokalit volání zobrazení**. Pokud pouze jedna lokalita volání je k dispozici, příkaz se připojí k zvýrazněný řádek kódu pro web volání. Pokud jsou k dispozici více lokalit volání, příkaz se otevře dialogové okno, ve kterém můžete vybrat položku a klikněte na tlačítko **přejít ke zdroji** vyhledejte zvýrazněné volání webu. Často je nejužitečnější, chcete-li zobrazit zdrojový kód pro lokalitu volání, která má nejvíce instance nebo nejvíce času.  
+  Rozbalením položky stromu volání vyhledejte řádek kódu, ve kterém je čas blokace stráven. Chcete-li vyhledat řádek zdroje pro položku, v místní nabídce vyberte možnost **Zobrazit zdroj**. Chcete-li najít řádek kódu, který se nazývá tento kód, v místní nabídce vyberte možnost **Zobrazit weby volání**. Pokud je k dispozici pouze jedna lokalita volání, příkaz se připojí k zvýrazněnému řádku kódu pro volání webu. Je-li k dispozici více webů volání, příkaz otevře dialogové okno, ve kterém můžete vybrat položku a pak kliknutím na tlačítko **Přejít do zdroje** vyhledat zvýrazněný web volání. Je často vhodné zobrazit zdrojový kód pro web volání, který má nejvíce instancí, nejvíce času nebo obojího.  
   
-## <a name="blocking-time-report-columns"></a>Blokování času sloupce sestavy  
- V následující tabulce jsou uvedeny sloupce pro každou sestavu blokování času.  
+## <a name="blocking-time-report-columns"></a>Sloupce sestavy doby blokování  
+ V následující tabulce jsou uvedeny sloupce pro každou sestavu doby blokování.  
   
 |Název sloupce|Popis|  
 |-----------------|-----------------|  
-|Name|Název funkce pro každou úroveň zásobníku volání.|  
-|Instance|Počet instancí blokovacího hovoru viditelném časovém období.|  
-|Celkový čas blokace|Celkový počet blokování času stráveného pro všechny balíčky, které jsou zahrnuty do této úrovně stromu zásobníku volání. Celkový počet je součtem výhradní čas zablokování pro tuto funkci a výhradní čas zablokování pro všechny jeho podřízené uzly.|  
-|Výhradní čas blokace|Celková doba blokování, který byl stráven během které bude tato funkce je nejnižší úroveň zásobníku volání. Položka zásobníku volání jedinečné, který má vysokou výhradní čas zablokování může být funkce, které vás zajímají.|  
-|Kategorie API/Wait|Platné pouze pro funkce na nejnižší úrovni zásobníku volání. Pokud je rozpoznána podpis blokovacího hovoru, je zadaný název blokování rozhraní API. Pokud podpis nebyl rozpoznán, je k dispozici informace, která je ohlášena jádra.|  
-|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, až bude k dispozici.|  
+|Název|Název funkce pro každou úroveň zásobníku volání.|  
+|Instance|Počet instancí blokujícího volání pro zobrazené časové období.|  
+|Celková doba blokování|Celkový čas blokování strávený pro všechny zásobníky, které jsou zahrnuty na tuto úroveň stromu zásobníku volání. Celkové číslo (včetně) je součet exkluzivní doby blokování pro tuto funkci a výhradním časem blokování pro všechny jeho podřízené uzly.|  
+|Výhradní čas blokace|Celkový čas blokace, který strávil, že tato funkce je nejnižší úroveň zásobníku volání. Jedinečná položka zásobníku volání, která má vysokou výhradní dobu blokování, může být funkce, kterou je třeba zajímat.|  
+|Kategorie API/Wait|Zobrazuje se pouze pro funkce na nejnižší úrovni zásobníku volání. Kde je rozpoznán podpis blokujícího volání, je k dispozici název blokujícího rozhraní API. Pokud signatura není rozpoznaná, poskytnou se informace hlášené jádrem.|  
+|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, je-li k dispozici.|  
   
 ### <a name="synchronization"></a>Synchronizace  
- Synchronizace sestava ukazuje volání, které jsou zodpovědné za segmenty, které blokují na synchronizaci a agregace blokování časy každý zásobník volání. Další informace najdete v tématu [čas synchronizace](../profiling/synchronization-time.md)  
+ Sestava synchronizace zobrazuje volání, která jsou zodpovědná za segmenty blokující synchronizaci, a agregované doby blokování jednotlivých zásobníků volání. Další informace najdete v tématu [čas synchronizace](../profiling/synchronization-time.md) .  
   
-### <a name="sleep"></a>Přejít do režimu spánku  
- Sestava režimu spánku zobrazí volání, které jsou zodpovědné za čas, který byl přiřadit čas, který byl stráven v režimu spánku, agregační blokování časy každý zásobník volání a blokuje. Další informace najdete v tématu [přejít do režimu spánku čas](../profiling/sleep-time.md).  
+### <a name="sleep"></a>Režim spánku  
+ Sestava spánku zobrazuje volání, která jsou zodpovědná za blokování času, který byl vytvořen jako čas strávený v režimu spánku, a agregované doby blokování jednotlivých zásobníků volání. Další informace najdete v tématu [Doba spánku](../profiling/sleep-time.md).  
   
 ### <a name="io"></a>I/O  
- Vstupně-výstupních operací sestava ukazuje volání, které jsou zodpovědné za segmenty, které blokují na vstupně-výstupní operace a agregace blokování časy každý zásobník volání. Další informace najdete v tématu [čas I/O (zobrazení vláken)](../profiling/i-o-time-threads-view.md).  
+ Sestava v/v zobrazuje volání, která jsou zodpovědná za segmenty blokující při vstupně-výstupních operacích, a agregované doby blokování jednotlivých zásobníků volání. Další informace naleznete v části [vstupně-výstupní čas (zobrazení vláken)](../profiling/i-o-time-threads-view.md).  
   
 ### <a name="memory-management"></a>Správa paměti  
- Správa paměti sestava ukazuje volání, které jsou zodpovědné za segmenty, které blokují na agregaci blokování časy jednotlivých volání zásobníků a operace správy paměti. Další informace najdete v tématu [čas správy paměti](../profiling/memory-management-time.md).  
+ Sestava správy paměti zobrazuje volání, která jsou zodpovědná za segmenty blokující operacemi správy paměti, a agregované doby blokování jednotlivých zásobníků volání. Další informace najdete v tématu [čas správy paměti](../profiling/memory-management-time.md).  
   
 ### <a name="preemption"></a>Přerušení  
- Sestava přerušení vypíše procesy, které ke zrušení přidělením aktuální proces a počtem instancí.  Můžete rozbalit každý proces chcete zobrazit konkrétní vláken, která nahradí vlákna v aktuálním procesu a chcete-li zobrazit rozpis instancí přerušení na vlákno. Tato blokující zpráva je méně užitečné než ostatní, protože přerušení je obvykle uložené v procesu operačního systému, nikoli k problému v kódu. Další informace najdete v tématu [čas přerušení](../profiling/preemption-time.md).  
+ Sestava přerušení obsahuje seznam procesů, které procházely aktuálnímu procesu spolu s počtem instancí.  Jednotlivé procesy můžete rozbalit, chcete-li zobrazit konkrétní vlákna, která nahradila vlákna v aktuálním procesu a zobrazit rozpis instancí přerušení na vlákno. Tato blokující sestava je méně napadnutelná než u ostatních, protože je obvykle ukládána do procesu operačním systémem, nikoli při potížích ve vašem kódu. Další informace najdete v tématu [čas přerušení](../profiling/preemption-time.md).  
   
 ### <a name="ui-processing"></a>Zpracování uživatelského rozhraní  
- Sestava zpracování uživatelského rozhraní obsahuje volání, které jsou zodpovědné za blokování segmenty, které blokují na bloky zpracování uživatelského rozhraní a agregace blokování časy každý zásobník volání. Další informace najdete v tématu [doba zpracování uživatelského rozhraní](../profiling/ui-processing-time.md).  
+ Sestava zpracování uživatelského rozhraní zobrazuje volání, která jsou zodpovědná za blokování segmentů, které jsou blokovány při zpracování bloků uživatelského rozhraní, a agregovaná doba blokace každého zásobníku volání. Další informace najdete v tématu [Doba zpracování uživatelského rozhraní](../profiling/ui-processing-time.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

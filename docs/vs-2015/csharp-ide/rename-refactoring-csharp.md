@@ -1,5 +1,5 @@
 ---
-title: RefaktoringC#pro přejmenování | Microsoft Docs
+title: Refaktoring přejmenování (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0db7696268e5e3d24d005fbf35a08b330f2dc849
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667482"
 ---
 # <a name="rename-refactoring-c"></a>Refaktoring pro přejmenování (C#)
@@ -33,7 +33,7 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
 
  Refaktoring pro přejmenování je k dispozici z následujících funkcí sady Visual Studio:
 
-|Funkce|Chování refaktoringu v integrovaném vývojovém prostředí|
+|Příznak|Chování refaktoringu v integrovaném vývojovém prostředí|
 |-------------|----------------------------------------|
 |Editor kódu|V editoru kódu je Refaktoring pro přejmenování k dispozici, když umístíte kurzor na určité typy symbolů kódu. Pokud je kurzor na této pozici, můžete vyvolat příkaz **Přejmenovat** zadáním klávesové zkratky (Ctrl + r, Ctrl + r) nebo výběrem příkazu **Přejmenovat** z inteligentní nebo místní nabídky nebo z nabídky **Refaktorovat** .|
 |zobrazení tříd|Když vyberete identifikátor v Zobrazení tříd, je refaktoring k dispozici v místní nabídce a v nabídce **Refaktorovat** .|
@@ -49,13 +49,13 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
 |Pole|Změní deklaraci a použití pole na nový název.|
 |Lokální proměnná|Změní deklaraci a použití proměnné na nový název.|
 |Metoda|Změní název metody a všechny odkazy na tuto metodu na nový název. **Poznámka:**  Při přejmenování metody rozšíření se operace přejmenování rozšíří na všechny instance metody, které jsou v oboru, bez ohledu na to, zda je metoda rozšíření používána jako statická metoda nebo metoda instance. Další informace naleznete v tématu [metody rozšíření](https://msdn.microsoft.com/library/175ce3ff-9bbf-4e64-8421-faeb81a0bb51).|
-|Obor názvů|Změní název oboru názvů na nový název v deklaraci, všechny příkazy `using` a plně kvalifikované názvy. **Poznámka:**  Při přejmenování oboru názvů [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] také aktualizuje výchozí vlastnost **oboru názvů** na stránce **aplikace** v **Návrháři projektu**. Tuto vlastnost nelze obnovit výběrem možnosti **zpět** v nabídce **Upravit** . Chcete-li obnovit výchozí hodnotu vlastnosti **oboru názvů** , je nutné upravit vlastnost v **Návrháři projektu**. Další informace najdete na [stránce aplikace](../ide/reference/application-page-project-designer-csharp.md).|
+|Obor názvů|Změní název oboru názvů na nový název v deklaraci, všechny `using` příkazy a plně kvalifikované názvy. **Poznámka:**  Při přejmenování oboru názvů [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] také aktualizuje výchozí vlastnost **oboru názvů** na stránce **aplikace** v **Návrháři projektu**. Tuto vlastnost nelze obnovit výběrem možnosti **zpět** v nabídce **Upravit** . Chcete-li obnovit výchozí hodnotu vlastnosti **oboru názvů** , je nutné upravit vlastnost v **Návrháři projektu**. Další informace najdete na [stránce aplikace](../ide/reference/application-page-project-designer-csharp.md).|
 |Vlastnost|Změní deklaraci a použití vlastnosti na nový název.|
 |Typ|Změní všechny deklarace a všechna použití typu na nový název, včetně konstruktorů a destruktorů. U částečných typů se operace přejmenování rozšíří na všechny části.|
 
 #### <a name="to-rename-an-identifier"></a>Přejmenování identifikátoru
 
-1. Vytvořte konzolovou aplikaci s názvem `RenameIdentifier` a poté nahraďte `Program` následujícím příkladem kódu.
+1. Vytvořte konzolovou aplikaci s názvem `RenameIdentifier` a nahraďte `Program` následující ukázkový kód.
 
     ```csharp
     class ProtoClassA
@@ -76,23 +76,23 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
     }
     ```
 
-2. Umístěte kurzor na `MethodB`, a to buď v deklaraci metody, nebo v volání metody.
+2. Umístěte kurzor na `MethodB` , a to buď v deklaraci metody, nebo v volání metody.
 
 3. V nabídce **refaktoring** vyberte **Přejmenovat**. Zobrazí se dialogové okno **Přejmenovat** .
 
      Můžete také kliknout pravým tlačítkem myši na kurzor, Ukázat na **Refaktorovat** v místní nabídce a potom kliknutím na tlačítko **Přejmenovat** zobrazit dialogové okno **Přejmenovat** .
 
-4. Do pole **nový název** zadejte `MethodC`.
+4. Do pole **nové jméno** zadejte `MethodC` .
 
 5. Zaškrtněte políčko **Hledat v komentářích** .
 
-6. Klikněte na tlačítko **OK**.
+6. Klikněte na **OK**.
 
 7. V dialogovém okně **Náhled změn** klikněte na **použít**.
 
 #### <a name="to-rename-an-identifier-using-smart-tags"></a>Přejmenování identifikátoru pomocí inteligentních značek
 
-1. Vytvořte konzolovou aplikaci s názvem `RenameIdentifier` a poté nahraďte `Program` následujícím příkladem kódu.
+1. Vytvořte konzolovou aplikaci s názvem `RenameIdentifier` a nahraďte `Program` následující ukázkový kód.
 
     ```csharp
     class ProtoClassA
@@ -113,7 +113,7 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
     }
     ```
 
-2. V deklaraci pro `MethodB` zadejte nebo BACKSPACE přes identifikátor metody. Pod tímto identifikátorem se zobrazí výzva k zadání inteligentních značek.
+2. V deklaraci pro `MethodB` Zadejte typ nebo BACKSPACE přes identifikátor metody. Pod tímto identifikátorem se zobrazí výzva k zadání inteligentních značek.
 
     > [!NOTE]
     > Refaktorování přejmenování lze vyvolat pouze pomocí inteligentních značek v deklaraci identifikátoru.
@@ -124,7 +124,7 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
 
      Chcete-li zobrazit inteligentní značku, přesuňte ukazatel myši na výzvu inteligentních značek. Pak přesuňte ukazatel myši na inteligentní značku a kliknutím na šipku dolů zobrazte nabídku inteligentní značky.
 
-4. Vyberte položku nabídky **přejmenovat \<identifer1 > ' na ' \<identifier2 > '** pro vyvolání refaktoringu přejmenování bez náhledu změn kódu. Všechny odkazy na **\<identifer1 >** se automaticky aktualizují na **\<identifier2 >** .
+4. Vyberte položku nabídky **Přejmenovat \<identifer1> do \<identifier2> a** vyvolejte Refaktoring přejmenování bez náhledu změn kódu. Všechny odkazy na se **\<identifer1>** automaticky aktualizují na **\<identifier2>** .
 
      -nebo-
 
@@ -133,15 +133,15 @@ Refaktoring **je funkce** refaktoringu v integrovaném vývojovém prostředí (
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="renaming-implemented-or-overridden-members"></a>Přejmenování implementovaných nebo přepsaných členů
- Při **přejmenování** člena, který implementuje nebo Přepisuje nebo je implementován/přepsáno členy v jiných typech, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zobrazí dialogové okno, které říká, že operace přejmenování způsobí kaskádové aktualizace. Pokud kliknete na tlačítko **pokračovat**, modul refaktoringu rekurzivně vyhledá a přejmenuje všechny členy v základních a odvozených typech, které mají implementovány nebo potlačuje vztahy s přejmenovaným členem.
+ Při **přejmenování** člena, který implementuje nebo Přepisuje nebo je implementován/přepsáno členy v jiných typech, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zobrazí dialogové okno s informacemi o tom, že operace přejmenování způsobí kaskádové aktualizace. Pokud kliknete na tlačítko **pokračovat**, modul refaktoringu rekurzivně vyhledá a přejmenuje všechny členy v základních a odvozených typech, které mají implementovány nebo potlačuje vztahy s přejmenovaným členem.
 
  Následující příklad kódu obsahuje členy s implementací nebo potlačením vztahů.
 
  [!code-csharp[CsUsingCsIDERefactor#1](../snippets/csharp/VS_Snippets_VBCSharp/CsUsingCsIDERefactor/CS/Class1.cs#1)]
 
- V předchozím příkladu přejmenování `C.Method()` také přejmenuje `Ibase.Method()`, protože `C.Method()` implementuje `Ibase.Method()`. V dalším kroku se refaktoruje rekurzivně, že `Ibase.Method()` implementuje `Derived.Method()` a přejmenuje `Derived.Method()`. Refaktoring Engine nejmenuje `Base.Method()`, protože `Derived.Method()` nepřepisuje `Base.Method()`. Modul refaktoringu se tady zastaví, pokud jste v dialogovém okně **Přejmenovat** nezaškrtli možnost přejmenovat **přetížení** .
+ V předchozím příkladu přejmenování `C.Method()` přejmenuje také, `Ibase.Method()` protože `C.Method()` implementuje `Ibase.Method()` . Dále refaktoring Engine rekurzivně uvidí, že `Ibase.Method()` je implementován pomocí `Derived.Method()` a přejmenuje `Derived.Method()` . Refaktoring Engine neprovádí přejmenování `Base.Method()` , protože `Derived.Method()` nepřepisuje `Base.Method()` . Modul refaktoringu se tady zastaví, pokud jste v dialogovém okně **Přejmenovat** nezaškrtli možnost přejmenovat **přetížení** .
 
- Pokud je zaškrtnuto políčko **Přejmenovat přetížení** , přejmenuje modul refaktoru `Derived.Method(int i)`, protože přetěžuje `Derived.Method()` `Base.Method(int i)`, protože je přepsán `Derived.Method(int i)` a `Base.Method()`, protože se jedná o přetížení `Base.Method(int i)`.
+ Pokud je zaškrtnuto políčko **Přejmenovat přetížení** , refaktoring Engine přejmenuje `Derived.Method(int i)` , protože přetěžuje, `Derived.Method()` `Base.Method(int i)` protože je přepsáno `Derived.Method(int i)` a `Base.Method()` protože je přetížení `Base.Method(int i)` .
 
 > [!NOTE]
 > Při přejmenování člena, který byl definován v odkazovaném sestavení, dialogové okno vysvětluje, že při přejmenování dojde k chybám sestavení.
@@ -154,7 +154,7 @@ var a = new { ID = 1};
 var b = new { ID = 2};
 ```
 
- V předchozím kódu přejmenování `ID` změní `ID` v obou příkazech, protože mají stejný základní anonymní typ.
+ V předchozím kódu `ID` se přejmenování změní `ID` v obou příkazech, protože mají stejný základní anonymní typ.
 
 ```csharp
 var companyIDs =
@@ -166,7 +166,7 @@ var orderIDs =
     select new { ID = o.ID, Item = o.Name};
 ```
 
- V předchozím kódu přejmenování `ID` bude přejmenován pouze jedna instance `ID`, protože `companyIDs` a `orderIDs` nemají stejné vlastnosti.
+ V předchozím kódu přejmenování `ID` bude přejmenován pouze jedna instance, `ID` protože `companyIDs` a nemají `orderIDs` stejné vlastnosti.
 
 ## <a name="see-also"></a>Viz také
  [Refaktoring (C#)](../csharp-ide/refactoring-csharp.md) [anonymní typy](https://msdn.microsoft.com/library/59c9d7a4-3b0e-475e-b620-0ab86c088e9b)

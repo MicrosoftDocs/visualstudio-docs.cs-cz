@@ -1,5 +1,5 @@
 ---
-title: Vlastní nativní události haldy ETW | Dokumenty společnosti Microsoft
+title: Vlastní nativní události haldy ETW | Microsoft Docs
 ms.date: 02/24/2017
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -11,19 +11,19 @@ dev_langs:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1bb6f906cbfb715d67f6e10ddcecf094bc25821f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62552937"
 ---
 # <a name="custom-native-etw-heap-events"></a>Vlastní nativní události haldy Trasování událostí pro Windows
 
-Visual Studio obsahuje celou řadu [profilování a diagnostické nástroje](../profiling/profiling-feature-tour.md), včetně nativní paměti profiler.  Tento profiler zavěsí [události ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) od zprostředkovatele haldy a poskytuje analýzu, jak je paměť přidělována a používána.  Ve výchozím nastavení může tento nástroj analyzovat pouze přidělení provedená ze standardní haldy systému Windows a žádná přidělení mimo tuto nativní haldu nebudou zobrazena.
+Visual Studio obsahuje řadu nástrojů pro [profilaci a diagnostiku](../profiling/profiling-feature-tour.md), včetně nativního profileru paměti.  Tento Profiler zavěsí [události ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) od zprostředkovatele haldy a poskytuje analýzu způsobu přidělování a používání paměti.  Ve výchozím nastavení může tento nástroj analyzovat pouze přidělení ze standardní haldy systému Windows a jakékoli přidělení mimo tuto nativní haldu nebude zobrazeno.
 
-Existuje mnoho případů, ve kterých můžete chtít použít vlastní haldy a vyhnout se režie přidělení ze standardní haldy.  Například můžete použít [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) přidělit velké množství paměti na začátku aplikace nebo hry a pak spravovat své vlastní bloky v rámci tohoto seznamu.  V tomto scénáři nástroj profiler paměti by vidět pouze, že počáteční přidělení a nikoli vlastní správu provedenou uvnitř bloku paměti.  Však pomocí vlastní nativní haldy ETW zprostředkovatele, můžete nechat nástroj vědět o všech přidělení, které provádíte mimo standardní haldy.
+Existuje mnoho případů, ve kterých můžete chtít použít vlastní haldu a vyhnout se tak režijním nákladům na standardní haldě.  Například můžete pomocí [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) přidělit velké množství paměti na začátku aplikace nebo hry a potom spravovat vlastní bloky v rámci tohoto seznamu.  V tomto scénáři nástroj profiler paměti uvidí jenom toto počáteční přidělení, a ne vaši vlastní správu provedenou v bloku paměti.  Pomocí vlastního zprostředkovatele ETW pro vlastní nativní haldu však můžete nástroj informovat o všech přiděleních, která provedete mimo standardní haldu.
 
-Například v projektu, jako `MemoryPool` je následující, kde je vlastní haldy, uvidíte pouze jedno přidělení na haldě systému Windows:
+Například v projektu, jako je například následující, kde `MemoryPool` je vlastní halda, se zobrazí pouze jedno přidělení v haldě systému Windows:
 
 ```cpp
 class Foo
@@ -45,61 +45,61 @@ Foo* pFoo2 = (Foo*)mPool.allocate();
 Foo* pFoo3 = (Foo*)mPool.allocate();
 ```
 
-Snímek z nástroje [využití paměti](../profiling/memory-usage.md) bez vlastního sledování haldy by se zobrazoval pouze jeden 8192 bajt přidělení a žádné vlastní přidělení provádí fondu:
+Snímek z nástroje [využití paměti](../profiling/memory-usage.md) bez vlastního sledování haldy by zobrazoval jenom jedno přidělení 8192 bajtů a žádné vlastní přidělení neprovádí fond:
 
-![Přidělení haldy systému Windows](media/heap-example-windows-heap.png)
+![Přidělení haldy Windows](media/heap-example-windows-heap.png)
 
-Provedením následujících kroků, můžeme použít stejný nástroj ke sledování paměti usgae v naší vlastní haldy.
+Provedením následujících kroků můžeme použít stejný nástroj ke sledování usgae paměti v naší vlastní haldě.
 
 ## <a name="how-to-use"></a>Způsob použití
 
-Tuto knihovnu lze snadno použít v jazycích C a C++.
+Tuto knihovnu lze snadno použít v jazyce C a C++.
 
-1. Zahrňte záhlaví pro vlastního zprostředkovatele haldy ETW:
+1. Zahrnout hlavičku vlastního zprostředkovatele ETW pro vlastní haldu:
 
    ```cpp
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. Přidejte `__declspec(allocator)` decorator do libovolné funkce ve vašem správce vlastní haldy, který vrátí ukazatel na nově přidělené paměti haldy.  Tento dekorátor umožňuje nástroj správně identifikovat typ vrácené paměti.  Například:
+1. Přidejte `__declspec(allocator)` dekoratér do libovolné funkce ve Správci vlastního haldy, která vrací ukazatel na nově přidělenou paměť haldy.  Tento dekoratér umožňuje nástroji správně identifikovat typ vracené paměti.  Příklad:
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);
    ```
 
    > [!NOTE]
-   > Tento dekorátor řekne kompilátoru, že tato funkce je volání přidělování.  Každé volání funkce bude výstup adresy callsite, velikost instrukce volání a typeId nového objektu `S_HEAPALLOCSITE` na nový symbol.  Při přidělení zásobníku volání systémwindows vyzařuje událost ETW s těmito informacemi.  Nástroj profiler paměti prochází zásobníku volání hledá `S_HEAPALLOCSITE` zpáteční adresu odpovídající symbolu a typeId informace v symbolu se používá k zobrazení typu runtime přidělení.
+   > Tento dekoratér sděluje kompilátoru, že tato funkce je voláním přidělování.  Každé volání funkce vrátí adresu CallSite., velikost instrukcí volání a identifikátor typeId nového objektu na nový `S_HEAPALLOCSITE` symbol.  Po přidělení zásobník volání bude Windows generovat událost ETW s těmito informacemi.  Nástroj Profiler paměti provede zásobník volání hledání zpáteční adresy, která odpovídá `S_HEAPALLOCSITE` symbolu, a informace o typeId v symbolech slouží k zobrazení typu modulu runtime přidělení.
    >
-   > Stručně řečeno, to znamená, `(B*)(A*)MyMalloc(sizeof(B))` že volání, které vypadá, `B`se `void` v `A`nástroji zobrazí jako typ , ne nebo .
+   > V krátkém případě to znamená volání, které `(B*)(A*)MyMalloc(sizeof(B))` se bude zobrazovat v nástroji jako typ `B` , ne `void` nebo `A` .
 
-1. Pro C++ vytvořte `VSHeapTracker::CHeapTracker` objekt a zajistěte název haldy, která se zobrazí v nástroji profilování:
+1. V jazyce C++ vytvořte `VSHeapTracker::CHeapTracker` objekt, který poskytuje název haldy, která se zobrazí v nástroji pro profilaci:
 
    ```cpp
    auto pHeapTracker = std::make_unique<VSHeapTracker::CHeapTracker>("MyCustomHeap");
    ```
 
-   Pokud používáte C, `OpenHeapTracker` použijte funkci místo.  Tato funkce vrátí popisovač, který budete používat při volání jiných funkcí sledování:
+   Pokud používáte jazyk C, `OpenHeapTracker` místo toho použijte funkci.  Tato funkce vrátí popisovač, který budete používat při volání jiných sledovacích funkcí:
 
    ```C
    VSHeapTrackerHandle hHeapTracker = OpenHeapTracker("MyHeap");
    ```
 
-1. Při přidělování paměti pomocí vlastní funkce volejte `AllocateEvent` metodu (C++) nebo `VSHeapTrackerAllocateEvent` (C) a předejte ukazatel paměti a její velikost, abyste sledovali přidělení:
+1. Při přidělování paměti pomocí vlastní funkce volejte `AllocateEvent` metodu (C++) nebo `VSHeapTrackerAllocateEvent` (C) a předejte ukazatel na paměť a její velikost, aby bylo možné sledovat přidělení:
 
    ```cpp
    pHeapTracker->AllocateEvent(memPtr, size);
    ```
 
-   – nebo –
+   nebo
 
    ```C
    VSHeapTrackerAllocateEvent(hHeapTracker, memPtr, size);
    ```
 
    > [!IMPORTANT]
-   > Nezapomeňte označit vlastní alokátor funkce s `__declspec(allocator)` decorator popsané dříve.
+   > Nezapomeňte označit vlastní funkci přidělování pomocí `__declspec(allocator)` dekoratér popsaného výše.
 
-1. Při deallocating paměti pomocí vlastní `DeallocateEvent` funkce, volání (C++) nebo `VSHeapTracerDeallocateEvent` (C) funkce, předávání ukazatele do paměti, sledovat deallocation:
+1. Při navracení paměti pomocí vlastní funkce volejte `DeallocateEvent` funkci (C++) nebo `VSHeapTracerDeallocateEvent` (C) a předejte ukazatel na paměť pro sledování zrušení přidělení:
 
    ```cpp
    pHeapTracker->DeallocateEvent(memPtr);
@@ -111,7 +111,7 @@ Tuto knihovnu lze snadno použít v jazycích C a C++.
    VSHeapTrackerDeallocateEvent(hHeapTracker, memPtr);
    ```
 
-1. Při přerozdělování paměti pomocí vlastní funkce `ReallocateEvent` volejte metodu `VSHeapReallocateEvent` (C++) nebo (C) a předejte ukazatel na novou paměť, velikost přidělení a ukazatel na starou paměť:
+1. Při přerozdělení paměti pomocí vlastní funkce volejte `ReallocateEvent` metodu (C++) nebo `VSHeapReallocateEvent` (C), předejte ukazatel na novou paměť, velikost přidělení a ukazatel na starou paměť:
 
    ```cpp
    pHeapTracker->ReallocateEvent(memPtrNew, size, memPtrOld);
@@ -123,7 +123,7 @@ Tuto knihovnu lze snadno použít v jazycích C a C++.
    VSHeapTrackerReallocateEvent(hHeapTracker, memPtrNew, size, memPtrOld);
    ```
 
-1. Nakonec zavřete a vyčistěte vlastní nástroj pro sledování haldy v jazyce C++, použijte `CHeapTracker` destruktor, a to buď ručně, nebo pomocí standardních pravidel oboru, nebo `CloseHeapTracker` funkci v jazyce C:
+1. Nakonec, pokud chcete zavřít a vyčistit vlastní sledování haldy v jazyce C++, použijte `CHeapTracker` destruktor, buď ručně, nebo prostřednictvím standardních pravidel oboru, nebo `CloseHeapTracker` funkci v C:
 
    ```cpp
    delete pHeapTracker;
@@ -136,25 +136,25 @@ Tuto knihovnu lze snadno použít v jazycích C a C++.
    ```
 
 ## <a name="track-memory-usage"></a>Sledování využití paměti
-S těmito voláními na místě, vaše vlastní haldy využití lze nyní sledovat pomocí standardního nástroje **využití paměti** v sadě Visual Studio.  Další informace o použití tohoto nástroje naleznete v dokumentaci [k využití paměti.](../profiling/memory-usage.md) Ujistěte se, že jste povolili profilování haldy se snímky, jinak se nezobrazí vaše vlastní využití haldy.
+Pomocí tohoto volání se vlastní využití haldy teď dá sledovat pomocí nástroje standardní **využití paměti** v aplikaci Visual Studio.  Další informace o použití tohoto nástroje najdete v dokumentaci k [využití paměti](../profiling/memory-usage.md) . Ujistěte se, že jste povolili profilaci haldy se snímky, jinak se nezobrazí vaše vlastní využití haldy.
 
-![Povolit profilování haldy](media/heap-enable-heap.png)
+![Povolit profilaci haldy](media/heap-enable-heap.png)
 
-Chcete-li zobrazit vlastní haldy sledování, použijte **rozbalovací haldy** se nachází v pravém horním rohu okna **snímek** změnit zobrazení z *NT haldy* na vlastní haldy, jak je uvedeno dříve.
+Chcete-li zobrazit vlastní sledování haldy, použijte rozevírací seznam **halda** umístěný v pravém horním rohu okna **snímku** a změňte zobrazení z *haldy NT* na vlastní haldu, jak je uvedeno dříve.
 
 ![Výběr haldy](media/heap-example-custom-heap.png)
 
-Pomocí výše uvedeného `MemoryPool` příkladu `VSHeapTracker::CHeapTracker` kódu, s `allocate` vytvořením `AllocateEvent` objektu a naší vlastní metody nyní volá metodu, nyní můžete zobrazit výsledek tohoto `Foo`vlastního přidělení, zobrazující tři instance v celkové výši 24 bajtů, všechny typu .
+Pomocí výše uvedeného příkladu kódu s `MemoryPool` vytvořením `VSHeapTracker::CHeapTracker` objektu a naší vlastní `allocate` metody nyní voláte metodu. `AllocateEvent` nyní se můžete podívat na výsledek tohoto vlastního přidělení, který ukazuje tři instance celkem 24 bajtů, a to vše typu `Foo` .
 
-Výchozí *haldy haldy NT* vypadá stejně jako `CHeapTracker` dříve, s přidáním našeho objektu.
+Výchozí halda *haldy NT* vypadá stejně jako dříve s přidáním našeho `CHeapTracker` objektu.
 
-![NT Halda s trackerem](media/heap-example-windows-heap.png)
+![Halda NT s modulem Sledování](media/heap-example-windows-heap.png)
 
-Stejně jako u standardní haldy systému Windows můžete také použít tento nástroj k porovnání snímků a vyhledejte nevracení a poškození vlastní haldy, která je popsána v hlavní dokumentaci [využití paměti.](../profiling/memory-usage.md)
+Stejně jako u standardní haldy systému Windows můžete také pomocí tohoto nástroje porovnat snímky a vyhledat nevracení a poškození ve vlastní haldě, které je popsáno v dokumentaci o využití hlavní [paměti](../profiling/memory-usage.md) .
 
 > [!TIP]
-> Visual Studio také obsahuje nástroj **využití paměti** v sadě nástrojů **Sledování profilování výkonu,** která je povolena z možnosti ladění**profilu** **výkonu** > nebo kombinace kláves **Alt**+**F2.**  Tato funkce nezahrnuje sledování haldy a nebude zobrazovat vlastní haldy, jak je popsáno zde.  Tuto funkci obsahuje pouze okno **Diagnostické nástroje,** které lze povolit pomocí nabídky **Ladicí** > **nástroje pro zobrazení systému** **Windows** > nebo kombinace klávesnice **Ctrl**+**Alt**+**F2.**
+> Sada Visual Studio obsahuje také nástroj **využití paměti** v sadě nástrojů pro **profilaci výkonu** , která je povolena v **Debug**  >  Možnosti nabídky**Profiler ladění výkonu** nebo kombinace kláves **ALT** + **F2** .  Tato funkce nezahrnuje sledování haldy a nezobrazí vlastní haldu, jak je popsáno zde.  Tato funkce obsahuje jenom okno **diagnostické nástroje** , které se dá povolit v nabídce **ladit**  >  **Windows**  >  **Zobrazit diagnostické nástroje** nebo kombinaci kláves **CTRL** + **+** + **F2** .
 
 ## <a name="see-also"></a>Viz také
-[První pohled na profilovací nástroje](../profiling/profiling-feature-tour.md)
-[Využití paměti](../profiling/memory-usage.md)
+[První pohled na nástroje](../profiling/profiling-feature-tour.md) 
+ pro profilaci [Využití paměti](../profiling/memory-usage.md)

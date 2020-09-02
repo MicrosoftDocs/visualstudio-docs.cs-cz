@@ -1,5 +1,5 @@
 ---
-title: Extrahování refaktoringu rozhraníC#() | Microsoft Docs
+title: Refaktoring pro extrakci rozhraní (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fdcf281e1ace40d1d7cdac0be302810ea173581b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667550"
 ---
 # <a name="extract-interface-refactoring-c"></a>Refaktoring pro extrahování rozhraní (C#)
@@ -34,7 +34,7 @@ Extrahovat rozhraní je operace refaktoringu, která poskytuje snadný způsob, 
 
 ### <a name="to-use-extract-interface"></a>Použití Extrahování rozhraní
 
-1. Vytvořte konzolovou aplikaci s názvem `ExtractInterface` a pak `Program` nahraďte následujícím kódem.
+1. Vytvořte konzolovou aplikaci s názvem `ExtractInterface` a pak ji nahraďte `Program` následujícím kódem.
 
     ```csharp
     // Invoke Extract Interface on ProtoA.
@@ -45,7 +45,7 @@ Extrahovat rozhraní je operace refaktoringu, která poskytuje snadný způsob, 
     }
     ```
 
-2. Umístěte kurzor na `MethodB` a klikněte na **Extrahovat rozhraní** v nabídce **Refaktorovat** .
+2. Umístěte kurzor na umístění `MethodB` a klikněte na **Extrahovat rozhraní** v nabídce **Refaktorovat** .
 
      Zobrazí se dialogové okno **Extrahovat rozhraní** .
 
@@ -55,7 +55,7 @@ Extrahovat rozhraní je operace refaktoringu, která poskytuje snadný způsob, 
 
 3. Klikněte na **Vybrat vše**.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
      Zobrazí se nový soubor IProtoA.cs a následující kód:
 

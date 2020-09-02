@@ -1,5 +1,5 @@
 ---
-title: 'Začínáme s PTVS: Interaktivní Python | Dokumentace Microsoftu'
+title: 'Začínáme s PTVS: Interactive Python | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,29 +10,29 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 4fba8bf658a50a7a7e28abace1eb622ab14f5f26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62550984"
 ---
 # <a name="getting-started-with-ptvs-interactive-python"></a>Začínáme s PTVS: Interaktivní Python
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Interaktivní výzvy nebo čtení eval-print smyčky (REPLs) jsou klíče nástroje pro produktivitu programovacích jazyků.  Umožňují spouštět fragmenty kódu pro zjišťování a další rozhraní API a experimentovat s použitím rozhraní API a interaktivně vyvíjet pracovní kód přikazující zahrnutí v projektech nebo programy.  
+Interaktivní výzvy nebo čtení a vyhodnocení – tisk smyček (REPLs) jsou klíčovým nástrojem pro produktivní programovací jazyky.  Umožňují spouštět fragmenty kódu pro zjišťování a učení rozhraní API, experimentovat s používáním rozhraní API a interaktivně vyvíjet pracovní kód pro zahrnutí do projektů nebo programů.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
- V okně prostředí Pythonu najdete v seznamu všechna prostředí Pythonu.  Můžete vybrat některou z nich otevřít interaktivní okno nebo REPL.  Pokud jste někdy spustili Python.exe v příkazovém řádku, pak jste viděli python REPL před.  REPL výzvu a zadáte kód, stiskněte klávesu enter a ihned sledujte výsledky vašeho kódu.  Toto je živé spuštění kontext, který zahrnuje všechny stavy všech spuštění, přiřazení proměnných, atd.  Mohou odkazovat na proměnné obsahující výsledky v pozdější příspěvkům poskytnutým prostřednictvím REPL příkazový řádek.  Můžete napsat více řádků kódu a spouštějte je všechny najednou (třeba deklarace metody nebo více příkazů).  
+ V okně prostředí Pythonu se zobrazí seznam všech prostředí Pythonu.  Pro otevření interaktivního okna nebo REPL můžete vybrat kterýkoli z nich.  Pokud jste někdy spouštěli Python.exe na příkazovém řádku, dříve jste si REPL Pythonu.  REPL vás vyzve k zadání kódu, stisknutí klávesy ENTER a okamžitému zobrazení výsledků kódu.  Toto je živý kontext spuštění, který zahrnuje všechny stavy všech provedení, přiřazení proměnných atd.  Můžete odkazovat na proměnné s výsledky v pozdějších odesláních na výzvu REPL.  Můžete napsat více řádků kódu a spustit je všechny najednou (například deklarace metody nebo vícenásobné příkazy).  
   
- Když začnete používat novou knihovnu, REPL je skvělý způsob, jak vyzkoušet knihovny.  Můžete importovat knihovny, zkontrolovat balíčky sub, třídy a funkce.  Python se dozvíte vše z těchto informací prostřednictvím jeho `help()` funkce.  Navíc nástroje Python Tools pro Visual Studio (PTVS) poskytuje návrhy a podle jeho modelování kód použitý v editoru, což se provádí, aniž by bylo nutné provést knihovny dokumentace.  Když je kód spuštěn, použije PTVS informace z modulu runtime Pythonu ke zlepšení PTVS návrhy.  
+ Když začnete používat novou knihovnu, REPL je skvělým způsobem, jak si tuto knihovnu vyzkoušet.  Knihovnu můžete importovat, zkontrolovat dílčí balíčky, třídy a funkce.  Python vám může sdělit všechny tyto informace prostřednictvím své `help()` funkce.  Kromě toho Python Tools for Visual Studio (PTVS) poskytuje návrhy a dokumentaci na základě modelování kódu používaného v editoru, který je bez nutnosti spustit knihovnu.  Při spouštění kódu PTVS používá informace z modulu runtime Pythonu pro zlepšení návrhů PTVS.  
   
- Interaktivní okno je také užitečné pro vývoj iterativní nebo evoluční kódu, včetně testování kódu při vývoji.  Můžete vybrat funkci v okně editoru, stiskněte tlačítko vpravo ukazatele a zvolte možnost odeslat do Interactive.  Tento příkaz zkopíruje výběr do interaktivního okna jako další vstup a spustí ho.  Okamžitě uvidíte výsledky.  Pokud potřebujete provést změny na předchozí vstup, můžete ke spouštění kódu vytvořeného stiskněte šipkou nahoru můžete vrátit kód, upravit ji a stiskněte kombinaci kláves Ctrl + Enter.  Stisknutím klávesy Enter na konci vstupu spustí, ale stisknutím klávesy Enter uprostřed vstup vloží nový řádek.  
+ Interaktivní okno je také užitečné pro iterativní nebo Evolutionary vývoj kódu, včetně testování kódu při jeho vývoji.  V okně editoru můžete vybrat funkci, stisknout pravé tlačítko ukazatel a vybrat odeslat do interaktivního.  Tento příkaz zkopíruje výběr do interaktivního okna jako další vstup a provede ho.  Výsledky se okamžitě zobrazí.  Pokud potřebujete provést změny v předchozím vstupu, můžete stisknutím klávesy šipka nahoru získat zpět kód, upravit ho a stisknutím kombinace kláves CTRL + ENTER kód spustit.  Stisknutí klávesy ENTER na konci vstupu ho spustí, ale stisknutím klávesy ENTER uprostřed vstupu vložíte nový řádek.  
   
- Můžete otevřít interaktivní okno pro každou instalaci Pythonu, tolik, jak potřebujete.  Existují tlačítka v horní části okna zobrazení vymazat, resetovat kontextu spuštění, atd.  Historie se nijak nezmění.  
+ Můžete otevřít interaktivní okno pro každou instalaci Pythonu, kolik chcete.  V horní části okna jsou tlačítka pro vymazání zobrazení, resetování kontextu spuštění atd.  Historie zůstane beze změny.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
 ## <a name="see-also"></a>Viz také  
- [Dokumentace ke službě Wiki](https://github.com/Microsoft/PTVS/wiki/Interactive-REPL)   
- [Videa můžete začít a Deep Dive PTVS](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [Dokumentace k wikiwebu](https://github.com/Microsoft/PTVS/wiki/Interactive-REPL)   
+ [PTVS Začínáme a rozsáhlá podrobně videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

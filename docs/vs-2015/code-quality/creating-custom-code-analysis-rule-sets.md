@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 19b7079f2a24e6a904a2d1266e7605f0e56e5dae
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667680"
 ---
 # <a name="creating-custom-code-analysis-rule-sets"></a>Vytváření vlastních sad pravidel Analýzy kódu
@@ -29,4 +29,4 @@ Pravidla analýzy kódu můžete použít pro projekt spravovaného kódu zadán
  [Práce v editoru sad pravidel](../code-quality/working-in-the-code-analysis-rule-set-editor.md) Popisuje způsob použití editoru sad pravidel k seskupování, řazení, filtrování a úpravám pravidel analýzy kódu v sadě vlastních pravidel.
 
 ## <a name="see-also"></a>Viz také
- [Referenční dokumentace sady pravidel analýzy kódu](../code-quality/code-analysis-rule-set-reference.md) [Analýza spravovaného kódu](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) [Analýza kvalityC++ kódu C/kódu pomocí analýzy kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)
+ [Referenční dokumentace sady pravidel analýzy kódu](../code-quality/code-analysis-rule-set-reference.md) [Analýza spravovaného kódu Analýza kvality](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) [kódu C/C++ pomocí analýzy kódu](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)

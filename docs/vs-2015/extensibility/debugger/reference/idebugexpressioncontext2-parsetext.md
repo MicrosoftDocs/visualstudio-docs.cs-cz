@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::ParseText | Dokumentace Microsoftu
+title: IDebugExpressionContext2::P arseText | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1fbd9252663f766035f628946e6aa93b1c00322a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158382"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Analyzuje výrazu v textové podobě pro pozdější vyhodnocení.  
+Analyzuje výraz v textovém formuláři pro pozdější vyhodnocení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,33 +50,33 @@ int ParseText( 
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [in] Výraz, který má být analyzován.  
+ pro Výraz, který má být analyzován.  
   
  `dwFlags`  
- [in] Kombinace příznaků z [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) výčet, který řídí, analýza kódu.  
+ pro Kombinace příznaků z výčtu [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) , který ovládá analýzu.  
   
  `nRadix`  
- [in] Základ číselné soustavy, který se má použít při analýze všechny informace numerické `pszCode`.  
+ pro Číselná soustava, která se má použít při analýze všech číselných informací v `pszCode` .  
   
  `ppExpr`  
- [out] Vrátí [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objekt, který reprezentuje analyzovaný výraz, který je připravený pro vazby a hodnocení.  
+ mimo Vrátí objekt [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) , který představuje analyzovaný výraz, který je připraven pro vytvoření vazby a vyhodnocení.  
   
  `pbstrError`  
- [out] Vrátí chybovou zprávu, pokud výraz obsahuje chybu.  
+ mimo Vrátí chybovou zprávu, pokud výraz obsahuje chybu.  
   
  `pichError`  
- [out] Vrátí znakový index chyby v `pszCode` Pokud výraz obsahuje chybu.  
+ mimo Vrátí index znaku chyby v případě, že `pszCode` výraz obsahuje chybu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když tato metoda je volána, by měl ladicí stroj (DE) parsovat výraz a ověřit správnost. `pbstrError` a `pichError` parametrů může být vyplněno Pokud výraz není platný.  
+ Při volání této metody by měl ladicí stroj (DE) analyzovat výraz a ověřit jeho správnost. `pbstrError`Parametry a `pichError` můžou být vyplněné, pokud je výraz neplatný.  
   
- Všimněte si, že tento výraz není vyhodnocen, pouze analyzovat. Pozdější volání [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metody vyhodnotí výraz v analyzované.  
+ Všimněte si, že výraz není vyhodnocen, pouze analyzován. Pozdější volání metod [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) vyhodnocuje analyzovaný výraz.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CEnvBlock` objekt, který zveřejňuje [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. V tomto příkladu bere v úvahu výraz, který má být analyzován jako název proměnné prostředí a načte hodnotu z této proměnné.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CEnvBlock` objekt, který zpřístupňuje rozhraní [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) . Tento příklad bere v úvahu výraz, který má být analyzován jako název proměnné prostředí a načítá hodnotu z této proměnné.  
   
 ```cpp#  
 HRESULT CEnvBlock::ParseText(  

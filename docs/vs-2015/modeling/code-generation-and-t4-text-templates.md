@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1f34422dfd47efdce9bf837f923da0e139a13398
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667924"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Vytvoření kódu a textové šablony T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je *Textová šablona T4* kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor. Logika ovládacího prvku je zapsána jako fragmenty kódu programu v [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. V systému Visual Studio 2015 Update 2 a novějších můžete použít C# funkce verze 6,0 v direktivách šablon T4. Vygenerovaný soubor může být text libovolného typu, jako je například webová stránka nebo soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
+V systému [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] je *Textová šablona T4* kombinací textových bloků a řídicí logiky, která může vygenerovat textový soubor. Logika ovládacího prvku je zapsána jako fragmenty kódu programu v systému [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . V systému Visual Studio 2015 Update 2 a novějších můžete použít funkce C# verze 6,0 v direktivách šablon T4. Vygenerovaný soubor může být text libovolného typu, jako je například webová stránka nebo soubor prostředků nebo zdrojový kód programu v libovolném jazyce.
 
  Existují dva druhy textových šablon T4:
 
@@ -51,14 +51,14 @@ string webResponseText = new MyTemplate().TransformText();
 
 ```
 
- Vaše aplikace může běžet na počítači, na kterém není nainstalovaná [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Vaše aplikace může běžet na počítači, který není [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nainstalovaný.
 
  Chcete-li vytvořit šablonu run-time, přidejte do projektu soubor **předzpracované textové šablony** . Alternativně můžete přidat textový soubor a nastavit jeho vlastnost **vlastní nástroj** na **TextTemplatingFilePreprocessor**.
 
  Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md). Další informace o syntaxi šablon najdete v tématu [zápis textové šablony T4](../modeling/writing-a-t4-text-template.md).
 
- **Textové šablony T4 v době návrhu** jsou spouštěny v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] k definování části zdrojového kódu a dalších prostředků vaší aplikace.
-Obvykle byste použili několik šablon, které čtou data v jednom vstupním souboru nebo databázi, a vygenerujete některé z `.cs`, `.vb` nebo jiné zdrojové soubory. Každá šablona generuje jeden soubor. Jsou spouštěny v rámci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].
+ **Textové šablony T4 v době návrhu** jsou spouštěny v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a definují část zdrojového kódu a další prostředky aplikace.
+Obvykle byste použili několik šablon, které čtou data v jednom vstupním souboru nebo databázi, a vygenerujete některé z vašich `.cs` , `.vb` nebo jiných zdrojových souborů. Každá šablona generuje jeden soubor. Jsou spouštěny v rámci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nebo [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .
 
  Vstupní data by například mohla být soubor XML s konfiguračními daty. Při každém úpravách souboru XML během vývoje by textové šablony znovu vygenerovaly část kódu aplikace. Jedna ze šablon by mohla vypadat podobně jako v následujícím příkladu:
 
@@ -102,7 +102,7 @@ namespace Fabrikam.FirstJob
 
  [Vytváření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Generování kódu a dalších prostředků z modelu umožňuje aktualizovat aplikaci aktualizací modelu.
 
- [Generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md) Pokud jste nainstalovali sadu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vizualizace a modelování sady SDK, můžete zajistit, že vygenerovaný software zůstane v aktuálním stavu se změnami modelu.
+ [Generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md) Pokud jste nainstalovali [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sadu vizualizací a modelování SDK, můžete zajistit, že vygenerovaný software zůstane v aktuálním stavu se změnami v modelu.
 
  [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md) Syntaxe souboru textové šablony
 

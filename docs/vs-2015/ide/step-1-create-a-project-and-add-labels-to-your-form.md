@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2a13d96d8932a3a9e4628f2d0e67a28869252c95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667365"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: Vytvořte projekt a přidejte do svého formuláře popisky
@@ -28,7 +28,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 1. Na panelu nabídek vyberte položku **soubor**, **Nový**, **projekt**.
 
-2. V seznamu **Nainstalované šablony** vyberte možnost **C#** nebo **Visual Basic**.
+2. V seznamu **Nainstalované šablony** vyberte buď **C#** , nebo **Visual Basic**.
 
 3. V seznamu šablon vyberte šablonu **aplikace model Windows Forms** , pojmenujte ji **Math kvíz**a pak klikněte na tlačítko **OK** .
 
@@ -48,7 +48,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 ### <a name="to-create-the-time-remaining-box"></a>Vytvoření pole pro zbývající čas
 
-1. Přidejte ovládací prvek **popisek** z panelu nástrojů a potom nastavte hodnotu vlastnosti **(název)** na `timeLabel`.
+1. Přidejte ovládací prvek **popisek** z panelu nástrojů a potom nastavte hodnotu vlastnosti **(Name)** na `timeLabel` .
 
      Tento popisek se stane polem v pravém horním rohu, které zobrazuje počet sekund, které zůstanou v kvízu.
 

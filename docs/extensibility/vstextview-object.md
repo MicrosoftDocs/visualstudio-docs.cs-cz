@@ -1,5 +1,5 @@
 ---
-title: Objekt VSTextView | Dokumenty společnosti Microsoft
+title: Objekt VSTextView | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,28 +14,28 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 81d5e02d6ec18f8561a83b414532a4b78def5c09
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697716"
 ---
 # <a name="vstextview-object"></a>Objekt VSTextView
 
-Zobrazení textu je okno, které umožňuje uživatelům zobrazit a upravit text Unicode textové vyrovnávací paměti. Zobrazení je v podstatě to, co většina uživatelů označuje jako editor. Vzhledem k tomu, že zobrazení je odděleno od vyrovnávací paměti různými textovými vrstvami (zalamování řádků, osnova textu a tak dále), není zaručeno, že zobrazení bude přesnou reprezentací textu ve vyrovnávací paměti. Další informace o zobrazení textu naleznete [v tématu Přístup k zobrazení Text pomocí starší rozhraní API](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
+Textové zobrazení je okno, které umožňuje uživatelům zobrazit a upravit textovou vyrovnávací paměť textu v kódu Unicode. V podstatě se jedná o to, co většina uživatelů na Editor odkazuje. Vzhledem k tomu, že je zobrazení odděleno od vyrovnávací paměti různými textovými vrstvami (zalamování řádků, text sbalení a tak dále), není zaručeno, že zobrazení je přesná reprezentace textu ve vyrovnávací paměti. Další informace o zobrazení textu najdete v tématu [přístup k zobrazení TheText pomocí starší verze rozhraní API](/visualstudio/extensibility/accessing-thetext-view-by-using-the-legacy-api?view=vs-2015).
 
-V následující tabulce jsou uvedena <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> rozhraní v objektu.
+V následující tabulce jsou uvedena rozhraní v <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objektu.
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|[Zdroj IDrop](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standardní rozhraní OLE.|
+|[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>|Standardní rozhraní OLE.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Standardní rozhraní OLE.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Umožňuje vytváření složených akcí (to znamená akcí seskupených do jedné jednotky vrátit nebo znovu).|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|Poskytuje základní metody pro správu a přístup k zobrazení. `IVsTextView`není bezpečně vytesána se závitem.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|Umožňuje vytváření složených akcí (tj. akcí, které jsou seskupeny v jedné jednotce zpět/znovu).|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|Poskytuje základní metody pro správu a přístup k zobrazení. `IVsTextView` není bezpečný pro přístup z více vláken.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Vytvoří a spravuje podokno okna.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Spolupracuje s textovými vrstvami.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|Komunikuje s vrstvami textu.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|Provádí operace v zobrazení z jiného vlákna.|
 
 ## <a name="see-also"></a>Viz také

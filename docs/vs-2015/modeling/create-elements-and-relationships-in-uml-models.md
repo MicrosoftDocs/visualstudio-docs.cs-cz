@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5ea066aa31cbc1f6408ee55c92a5ca761608f534
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667815"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>Vytváření elementů a vztahů v modelech UML
@@ -26,14 +26,14 @@ V kódu programu pro rozšíření sady Visual Studio můžete vytvářet a odst
 ## <a name="create-a-model-element"></a>Vytvoření elementu modelu
 
 ### <a name="namespace-imports"></a>Importy oboru názvů
- Musíte zahrnout následující příkazy `using`.
+ Je nutné zahrnout následující `using` příkazy.
 
  Metody vytváření jsou definovány jako metody rozšíření v tomto oboru názvů:
 
  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
 
 ### <a name="obtain-the-owner-of-the-element-you-want-to-create"></a>Získejte vlastníka elementu, který chcete vytvořit.
- Model tvoří jeden strom, takže každá položka má jednoho vlastníka, s výjimkou kořene modelu. Kořen modelu je typu `IModel`, což je typ `IPackage`.
+ Model tvoří jeden strom, takže každá položka má jednoho vlastníka, s výjimkou kořene modelu. Kořen modelu je typu `IModel` , což je typ `IPackage` .
 
  Při vytváření prvku, který se zobrazí v konkrétním diagramu, například v aktuálním diagramu uživatele, byste ho měli obvykle vytvořit v balíčku připojeném k tomuto diagramu. Příklad:
 
@@ -43,7 +43,7 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 
  Tato tabulka shrnuje vlastnictví společných prvků modelu:
 
-|Element, který se má vytvořit|Owner|
+|Element, který se má vytvořit|Vlastník|
 |---------------------------|-----------|
 |`IActor, IUseCase, IComponent, IClass, IInterface, IEnumeration`<br /><br /> `IActivity, IInteraction`|`IPackage, IModel`|
 |`IAttribute, IOperation`|`IClass, IInterface`|
@@ -52,7 +52,7 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 |`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|
 
 ### <a name="invoke-the-create-method-on-the-owner"></a>Vyvolat metodu create pro vlastníka
- Název metody je ve formátu: `Create`*OwnedType* `()`. Příklad:
+ Název metody má formát: `Create` *OwnedType* `()` . Příklad:
 
 ```
 IUseCase usecase1 = linkedPackage.CreateUseCase();
@@ -60,7 +60,7 @@ IUseCase usecase1 = linkedPackage.CreateUseCase();
 
  Některé typy mají složitější metody vytváření, zejména v sekvenčních diagramech. Viz [Úpravy sekvenčních diagramů UML pomocí rozhraní API UML](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md).
 
- U některých typů element můžete změnit vlastníka elementu během své životnosti pomocí `SetOwner(newOwner)`.
+ U některých typů element můžete změnit vlastníka elementu během své životnosti pomocí `SetOwner(newOwner)` .
 
 ### <a name="set-the-name-and-other-properties"></a>Nastavení názvu a dalších vlastností
 
@@ -100,7 +100,7 @@ using Microsoft.VisualStudio.Uml.Extensions;
     association .Name = "Observes";
     ```
 
-4. Nastavte vlastnosti všech konců relace. K dispozici jsou vždy dvě `MemberEnds`. Příklad:
+4. Nastavte vlastnosti všech konců relace. K dispozici jsou vždy dvě `MemberEnds` . Příklad:
 
     ```
     association .MemberEnds[0].Name = "subject";   // role name

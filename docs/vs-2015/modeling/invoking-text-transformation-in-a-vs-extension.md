@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a87f84a945d9d79f6d481f7bcc9e656f7ec7bcbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646152"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>Volání transformací textu v rozšíření VS
@@ -39,11 +39,11 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
 ```
 
 ## <a name="passing-parameters-to-the-template"></a>Předání parametrů do šablony
- Do šablony můžete předávat parametry. V šabloně můžete získat hodnoty parametrů pomocí direktivy `<#@parameter#>`.
+ Do šablony můžete předávat parametry. V šabloně můžete získat hodnoty parametrů pomocí `<#@parameter#>` direktivy.
 
- Jako typ parametru je nutné použít typ, který lze serializovat nebo zařadit. To znamená, že typ musí být deklarován s <xref:System.SerializableAttribute>, nebo musí být odvozen od <xref:System.MarshalByRefObject>. Toto omezení je nezbytné, protože textová šablona se vykonává v samostatné doméně AppDomain. Všechny předdefinované typy, jako je **System. String** a **System. Int32** , jsou serializovatelné.
+ Jako typ parametru je nutné použít typ, který lze serializovat nebo zařadit. To znamená, že typ musí být deklarován s <xref:System.SerializableAttribute> , nebo musí být odvozen od <xref:System.MarshalByRefObject> . Toto omezení je nezbytné, protože textová šablona se vykonává v samostatné doméně AppDomain. Všechny předdefinované typy, jako je **System. String** a **System. Int32** , jsou serializovatelné.
 
- Pro předání hodnot parametrů může volající kód umístit hodnoty buď do slovníku `Session`, nebo do <xref:System.Runtime.Remoting.Messaging.CallContext>.
+ Pro předání hodnot parametrů může volající kód umístit hodnoty buď do `Session` slovníku, nebo do <xref:System.Runtime.Remoting.Messaging.CallContext> .
 
  Následující příklad používá obě metody k transformaci krátké testovací šablony:
 
@@ -80,9 +80,9 @@ string result = t4.ProcessTemplate("",
 ```
 
 ## <a name="error-reporting-and-the-output-directive"></a>Hlášení chyb a direktiva output
- Všechny chyby, které vznikají při zpracování, se zobrazí v okně chyby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Kromě toho můžete být upozorněni na chyby zadáním zpětného volání, které implementuje [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110)).
+ Všechny chyby, které vznikají při zpracování, se zobrazí v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] okně chyb. Kromě toho můžete být upozorněni na chyby zadáním zpětného volání, které implementuje [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110)).
 
- Pokud chcete výsledný řetězec zapsat do souboru, možná budete chtít zjistit, jaké přípony souborů a kódování byly zadány v direktivě `<#@output#>` v šabloně. Tyto informace budou do zpětného volání rovněž předány. Další informace najdete v tématu [direktiva výstupu T4](../modeling/t4-output-directive.md).
+ Pokud chcete výsledný řetězec zapsat do souboru, možná budete chtít zjistit, jaké přípony souborů a kódování byly zadány v `<#@output#>` direktivě v šabloně. Tyto informace budou do zpětného volání rovněž předány. Další informace najdete v tématu [direktiva výstupu T4](../modeling/t4-output-directive.md).
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -134,14 +134,14 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
- V okně chyby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] se zobrazí upozornění kompilátoru a vygeneruje se také volání `ErrorCallback`.
+ V okně chyb se zobrazí upozornění kompilátoru [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] a také se vygeneruje volání `ErrorCallback` .
 
 ## <a name="reference-parameters"></a>Parametry odkazu
- Můžete předat hodnoty z textové šablony pomocí třídy parametru, která je odvozena z <xref:System.MarshalByRefObject>.
+ Můžete předat hodnoty z textové šablony pomocí třídy parametru, která je odvozena z <xref:System.MarshalByRefObject> .
 
 ## <a name="related-topics"></a>Související témata
- Pro vygenerování textu z předzpracované textové šablony: volejte metodu `TransformText()` generované třídy. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Pro vygenerování textu z předzpracované textové šablony: volejte `TransformText()` metodu generované třídy. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
- Chcete-li vygenerovat text mimo rozšíření [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]: Definujte vlastního hostitele. Další informace najdete v tématu [zpracování textových šablon pomocí vlastního hostitele](../modeling/processing-text-templates-by-using-a-custom-host.md).
+ Vygenerování textu mimo [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšíření: Definujte vlastního hostitele. Další informace najdete v tématu [zpracování textových šablon pomocí vlastního hostitele](../modeling/processing-text-templates-by-using-a-custom-host.md).
 
  Pro generování zdrojového kódu, který lze později zkompilovat a spustit: zavolejte metodu [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) [ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110)).

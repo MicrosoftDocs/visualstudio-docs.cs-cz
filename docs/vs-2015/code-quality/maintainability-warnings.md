@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e448a72e2ff92b3e3028829d4b1e7658c304ee3c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667893"
 ---
 # <a name="maintainability-warnings"></a>Upozornění udržovatelnosti
@@ -34,7 +34,7 @@ Upozornění udržovatelnosti podporují údržbu knihovny a aplikace.
 |[CA1500: Názvy proměnných by neměly odpovídat názvům polí](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|Metoda instance deklaruje parametr nebo místní proměnnou, jejíž název odpovídá poli instance deklarovaného typu, který vede k chybám.|
 |[CA1501: Vyhněte se nadměrné dědičnosti](../code-quality/ca1501-avoid-excessive-inheritance.md)|Typ je více než čtyři úrovně hluboko v hierarchii dědičnosti. Hluboce vnořené hierarchie typů může být obtížné sledovat, pochopit a udržovat.|
 |[CA1502: Vyhněte se nadměrné složitosti](../code-quality/ca1502-avoid-excessive-complexity.md)|Toto pravidlo měří počet lineárně nezávislých cest skrze metodu, což je určeno počtem a složitostí podmínkových větví.|
-|[CA1504: Revize zavádějících názvů polí](../code-quality/ca1504-review-misleading-field-names.md)|Název pole instance začíná řetězcem "s_", nebo název statického (sdíleného v [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) pole začíná řetězcem "m_".|
+|[CA1504: Zkontrolujte zavádějící názvy polí](../code-quality/ca1504-review-misleading-field-names.md)|Název pole instance začíná řetězcem "s_", nebo název statického (sdíleného [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) pole začíná řetězcem "m_".|
 |[CA1505: Vyhněte se neudržovatelnému kódu](../code-quality/ca1505-avoid-unmaintainable-code.md)|Typ nebo metoda má nízkou hodnotu indexu udržovatelnosti. Nízký index udržovatelnosti označuje, že typ nebo metodu je pravděpodobně obtížné udržovat a je vhodné ji znovu navrhnout.|
 |[CA1506: Vyhněte se nadměrnému párování tříd](../code-quality/ca1506-avoid-excessive-class-coupling.md)|Toto pravidlo měří párování tříd podle počtu jedinečných odkazů na typ, které typ nebo metoda obsahuje.|
 

@@ -1,5 +1,5 @@
 ---
-title: Spustitelný pro ladění, dialogové okno relace | Dokumentace Microsoftu
+title: Spustitelný soubor pro relaci ladění – dialogové okno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,24 +22,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c2ee71c5e23b0c5784cd2fe9b57b46fe28d41d30
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157459"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Dialogové okno Spustitelný soubor pro relaci ladění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto dialogové okno se zobrazí při pokusu o ladění knihovny DLL pro kterou žádná spustitelný soubor je určen. Visual Studio nelze spustit knihovnu DLL přímo. Místo toho spustí zadaný spustitelný soubor. Když je volána metodou spustitelný soubor můžete ladit knihovnu DLL.  
+Toto dialogové okno se zobrazí, když se pokusíte ladit knihovnu DLL, pro kterou není zadán spustitelný soubor. Visual Studio nemůže spustit knihovnu DLL přímo. Místo toho spustí zadaný spustitelný soubor. Můžete ladit knihovnu DLL, pokud je volána spustitelným souborem.  
   
  **Název spustitelného souboru**  
- Zadejte název cesty do spustitelného souboru, který volá knihovnu DLL, který ladíte.  
+ Zadejte název cesty ke spustitelnému souboru, který volá knihovnu DLL, kterou ladíte.  
   
- **Adresa URL, kde projektu lze získat přístup (pouze Server ATL)**  
- Pokud ladíte knihovnu ATL DLL serveru, zadejte adresu URL, kde lze nalézt projektu.  
+ **Adresa URL, na které je možné přistupovat k projektu (pouze server ATL)**  
+ Pokud ladíte knihovnu DLL serveru ATL, zadejte adresu URL, na které lze projekt najít.  
   
- Po zadání, tato nastavení jsou uložena v projektu stránky vlastností, takže nebude nutné zadávat znovu při další relace ladění. Pokud potřebujete změnit nastavení, můžete otevřít stránky vlastností a změňte hodnoty. Další informace o zadání spustitelný soubor pro relaci ladění, naleznete v tématu [ladění knihoven DLL](../debugger/how-to-debug-native-dlls.md).  
+ Po zadání těchto nastavení jsou uložena na stránkách vlastností projektu, takže je nebudete muset znovu zadávat pro následné relace ladění. Pokud potřebujete změnit nastavení, můžete otevřít stránky vlastností a změnit hodnoty. Další informace o určení spustitelného souboru pro relaci ladění naleznete v tématu [ladění knihoven DLL](../debugger/how-to-debug-native-dlls.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)

@@ -9,10 +9,10 @@ caps.latest.revision: 17
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cc3560c1cbcebea9f61465240cd4e2c7a0f811f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667470"
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Izolace testování částí aplikací pro SharePoint 2010 s použitím emulátorů
@@ -22,7 +22,7 @@ Balíček Microsoft. SharePoint. emulátory poskytuje sadu knihoven, které vám
 
  Existující testovací metody a třídy lze snadno převést na běh v kontextu emulátoru. Tato funkce umožňuje vytvořit testy dvojího použití. Test dvojího použití může přepínat mezi testy integrace s reálným rozhraním API služby SharePoint a izolovanými testy jednotek, které používají emulátory.
 
-## <a name="BKMK_In_this_topic"></a>V tomto tématu
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu
  [Požadavky](#BKMK_Requirements)
 
  [Příklad AppointmentsWebPart](#BKMK_The_AppointmentsWebPart_example)
@@ -45,7 +45,7 @@ Balíček Microsoft. SharePoint. emulátory poskytuje sadu knihoven, které vám
 
   [Emulované typy služby SharePoint](#BKMK_Emulated_SharePoint_types)
 
-## <a name="BKMK_Requirements"></a>Požadavků
+## <a name="requirements"></a><a name="BKMK_Requirements"></a> Požadavků
 
 - Microsoft SharePoint 2010 (SharePoint 2010 Server nebo SharePoint 2010 Foundation)
 
@@ -55,23 +55,23 @@ Balíček Microsoft. SharePoint. emulátory poskytuje sadu knihoven, které vám
 
   Měli byste se také seznámit se [základy testování částí v aplikaci Visual Studio](../test/unit-test-basics.md) a některými znalostmi [napodobenin společnosti Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md).
 
-## <a name="BKMK_The_AppointmentsWebPart_example"></a>Příklad AppointmentsWebPart
+## <a name="the-appointmentswebpart-example"></a><a name="BKMK_The_AppointmentsWebPart_example"></a> Příklad AppointmentsWebPart
  AppointmentsWebPart umožňuje zobrazit a spravovat SharePointový seznam vašich schůzek.
 
  ![Webová část události](../test/media/ut-emulators-appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")
 
  V tomto příkladu budeme testovat dvě metody webové části:
 
-- Metoda `ScheduleAppointment` ověří hodnoty položky seznamu předané metodě a vytvoří novou položku v seznamu na zadaném webu služby SharePoint.
+- `ScheduleAppointment`Metoda ověří hodnoty položky seznamu předané metodě a vytvoří novou položku v seznamu na zadaném webu služby SharePoint.
 
-- Metoda `GetAppointmentsForToday` vrací podrobnosti o dnešních událostech.
+- `GetAppointmentsForToday`Metoda vrátí podrobnosti o dnešních událostech.
 
   [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Converting_an_existing_test"></a>Převod existujícího testu
+## <a name="converting-an-existing-test"></a><a name="BKMK_Converting_an_existing_test"></a> Převod existujícího testu
  V typickém testu metody v součásti služby SharePoint vytvoří testovací metoda dočasný web ve službě SharePoint Foundation a přidá komponenty služby SharePoint do webu, který testovaný kód vyžaduje. Testovací metoda potom vytvoří a vykonává instanci komponenty. Na konci testu dojde k přerušení webového serveru.
 
- Metoda `ScheduleAppointment` testovaného kódu je pravděpodobně jednou z prvních metod napsaných pro komponentu:
+ `ScheduleAppointment`Metoda testovaného kódu je pravděpodobně jednou z prvních metod napsaných pro komponentu:
 
 ```
 // method under test
@@ -105,7 +105,7 @@ public bool ScheduleAppointment(SPWeb web, string listName, string name,
 
 ```
 
- První test funkce v `ScheduleAppointment` metoda může vypadat takto:
+ První test funkce v `ScheduleAppointment` metodě může vypadat takto:
 
 ```csharp
 
@@ -132,29 +132,29 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 }
 ```
 
- I když tato testovací metoda ověřuje, že metoda `ScheduleAppointment` správně přidá novou položku do seznamu, je více integrační test webové části, než test konkrétního chování kódu. Externí závislosti na SharePoint a rozhraní API služby SharePoint můžou způsobit selhání testu z jiných důvodů než uživatelského kódu v metodě `ScheduleAppointment`. Režie při vytváření a zničení webu služby SharePoint může také způsobit, že test je příliš pomalý pro spuštění jako běžná součást procesu kódování. Při provádění nastavení a zničení lokality pro každou zkušební metodu je pouze problém vytváření efektivních testů jednotek pro vývojáře.
+ I když tato testovací metoda ověřuje, že `ScheduleAppointment` metoda správně přidá novou položku do seznamu, je více integrační test webové části, než test konkrétního chování kódu. Externí závislosti na SharePointu a rozhraní API SharePoint můžou způsobit selhání testu z jiných důvodů než uživatelského kódu v `ScheduleAppointment` metodě. Režie při vytváření a zničení webu služby SharePoint může také způsobit, že test je příliš pomalý pro spuštění jako běžná součást procesu kódování. Při provádění nastavení a zničení lokality pro každou zkušební metodu je pouze problém vytváření efektivních testů jednotek pro vývojáře.
 
  Emulátory služby Microsoft SharePoint poskytují sadu objektů a metod "Double", které napodobují chování nejběžnějších rozhraní API služby SharePoint. Emulované metody jsou jednoduché implementace rozhraní API služby SharePoint, které nevyžadují spuštění služby SharePoint. Pomocí společnosti Microsoft napodobeniny k prohlídce volání rozhraní API služby SharePoint do metody, které jsou na obou emulátorech služby SharePoint, izolujete testy a ujistěte se, že testujete požadovaný kód. Při volání metod služby SharePoint, které nejsou emulované, můžete použít napodobeniny přímo k vytvoření požadovaného chování.
 
  [V tomto tématu](#BKMK_In_this_topic)
 
-### <a name="BKMK_Adding_the_Emulators_package_to_a_test_project"></a>Přidání balíčku emulátory do testovacího projektu
+### <a name="adding-the-emulators-package-to-a-test-project"></a><a name="BKMK_Adding_the_Emulators_package_to_a_test_project"></a> Přidání balíčku emulátory do testovacího projektu
  Chcete-li přidat emulátory služby SharePoint do testovacího projektu:
 
 1. Vyberte projekt testů v Průzkumník řešení.
 
 2. V místní nabídce vyberte **Spravovat balíčky NuGet...**
 
-3. Vyhledejte v **online** kategorii `Microsoft.SharePoint.Emulators` a zvolte možnost **nainstalovat**.
+3. V kategorii **online** vyhledejte `Microsoft.SharePoint.Emulators` a zvolte možnost **nainstalovat**.
 
    ![Balíček NuGet emulátorů SharePointu](../test/media/ut-emulators-nuget.png "UT_EMULATORS_Nuget")
 
    [V tomto tématu](#BKMK_In_this_topic)
 
-### <a name="BKMK__Running_a_test_method_in_the_emulation_context"></a>Spuštění testovací metody s emulací
- Instalace balíčku přidá do vašich projektů odkazy na požadované knihovny. Aby bylo možné snadno používat emulátory v existující testovací třídě, přidejte obory názvů `Microsoft.SharePoint.Emulators` a `Microsoft.QualityTools.Testing.Emulators`.
+### <a name="running-a-test-method-with-emulation"></a><a name="BKMK__Running_a_test_method_in_the_emulation_context"></a> Spuštění testovací metody s emulací
+ Instalace balíčku přidá do vašich projektů odkazy na požadované knihovny. Chcete-li snadno používat emulátory v existující třídě testu, přidejte obory názvů `Microsoft.SharePoint.Emulators` a `Microsoft.QualityTools.Testing.Emulators` .
 
- Chcete-li povolit emulaci v testovacích metodách, zabalte tělo metody v příkazu `using`, který vytvoří objekt `SharePointEmulationScope`. Příklad:
+ Chcete-li povolit emulaci v testovacích metodách, zabalte tělo metody v `using` příkazu, který vytvoří `SharePointEmulationScope` objekt. Příklad:
 
 ```csharp
 
@@ -184,14 +184,14 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
 ```
 
- Při spuštění testovací metody volá modul runtime emulátoru společnosti Microsoft napodobeniny k dynamickému vkládání kódu do metod služby SharePoint, aby bylo možné přesměrovat volání těchto metod na delegáty deklarované v souboru Microsoft. SharePoint. napodobeniny. dll. Microsoft. SharePoint. Emulátors. dll implementuje delegáty pro emulované metody, a to pečlivě mimicking skutečné chování služby SharePoint. V případě, že metoda testu nebo zkoušená součást volá metodu služby SharePoint, chování, které je výsledkem emulace.
+ Při spuštění testovací metody volá modul runtime emulátoru společnost Microsoft napodobeninu k dynamickému vkládání kódu do metod služby SharePoint pro přesměrování volání těchto metod na delegáty, které jsou deklarovány v Microsoft.SharePoint.Fakes.dll. Microsoft.SharePoint.Emulators.dll implementuje delegáty pro emulované metody, pečlivě mimicking skutečné chování služby SharePoint. V případě, že metoda testu nebo zkoušená součást volá metodu služby SharePoint, chování, které je výsledkem emulace.
 
  ![Tok provádění emulátoru](../test/media/ut-emulators-flowchart.png "UT_EMULATORS_FlowChart")
 
  [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Creating_dual_use_classes_and_methods"></a>Vytváření tříd a metod dvojího použití
- Chcete-li vytvořit metody, které lze použít pro integrační testy proti skutečnému rozhraní API služby SharePoint a izolované testy jednotek, které používají emulátory, použijte přetížený konstruktor `SharePointEmulationScope(EmulationMode)` k zabalení kódu testovací metody. Dvě hodnoty výčtu `EmulationMode` určují, zda obor používá emulátory (`EmulationMode.Enabled`) nebo zda obor používá rozhraní API služby SharePoint (`EmulationMode.Passthrough`).
+## <a name="creating-dual-use-classes-and-methods"></a><a name="BKMK_Creating_dual_use_classes_and_methods"></a> Vytváření tříd a metod dvojího použití
+ Chcete-li vytvořit metody, které lze použít pro integrační testy proti skutečnému rozhraní API služby SharePoint a izolované testy jednotek, které používají emulátory, použijte přetížený konstruktor `SharePointEmulationScope(EmulationMode)` k zabalení kódu testovací metody. Dvě hodnoty `EmulationMode` výčtu určují, jestli obor používá emulátory ( `EmulationMode.Enabled` ), nebo jestli obor používá rozhraní API SharePointu ( `EmulationMode.Passthrough` ).
 
  Tady je příklad, jak můžete změnit předchozí test na duální použití:
 
@@ -227,18 +227,18 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
  [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class"></a>Použití atributů TestInitialize a TestCleanup k vytvoření testovací třídy se dvěma možnostmi použití
- Pokud spustíte všechny nebo většinu testů ve třídě pomocí `SharePointEmulationScope`, můžete využít techniky na úrovni třídy pro nastavení režimu emulace.
+## <a name="using-testinitialize-and-testcleanup-attributes-to-create-a-dual-use-test-class"></a><a name="BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class"></a> Použití atributů TestInitialize a TestCleanup k vytvoření testovací třídy se dvěma možnostmi použití
+ Pokud spustíte všechny nebo většinu testů ve třídě pomocí `SharePointEmulationScope` , můžete využít techniky na úrovni třídy pro nastavení režimu emulace.
 
-- Metody testovací třídy, které se s <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> můžou vytvořit a zničit obor.
+- Testovací metody třídy, které se s ním přidružit <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> a které <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> mohou vytvořit a zničit obor.
 
-- Nastavení `EmulationMode` na úrovni třídy vám umožní automatizovat změnu režimu mezi `EmulationMode.Enabled` a `EmulationMode.Passthrough`.
+- Nastavení na `EmulationMode` úrovni třídy vám umožní automatizovat změnu režimu mezi `EmulationMode.Enabled` a `EmulationMode.Passthrough` .
 
-  Metoda třídy s atributem `[TestInitialize]` je spuštěna na začátku každé testovací metody a metoda, která je označena `[TestCleanup]` spouštěna na konci každé testovací metody. Můžete deklarovat soukromé pole pro objekt `SharePointEmulationScope` na úrovni třídy, inicializovat jej v metodě `TestInitialize` s atributy a následně vyřadit objekt v metodě `TestCleanup` s atributy.
+  Metoda třídy s atributem `[TestInitialize]` je spuštěna na začátku každé testovací metody a metoda, která je označena jako `[TestCleanup]` spuštěná na konci každé testovací metody. Můžete deklarovat soukromé pole pro `SharePointEmulationScope` objekt na úrovni třídy, inicializovat ho v `TestInitialize` metodě s atributy a pak vyřadit objekt v `TestCleanup` metodě s atributy.
 
-  Můžete použít libovolnou metodu, kterou zvolíte pro automatizaci výběru `EmulationMode`. Jedním ze způsobů, jak kontrolovat existenci symbolu pomocí direktiv preprocesoru. Chcete-li například spustit testovací metody ve třídě pomocí emulátorů, můžete definovat symbol, jako je například `USE_EMULATION` v souboru testovacího projektu nebo na příkazovém řádku sestavení. Pokud je symbol definován, je deklarace třídy `EmulationMode` konstanta deklarována a nastavena na hodnotu `Enabled`. V opačném případě je konstanta nastavena na `Passthrough`.
+  Můžete použít libovolnou metodu, kterou zvolíte pro automatizaci výběru `EmulationMode` . Jedním ze způsobů, jak kontrolovat existenci symbolu pomocí direktiv preprocesoru. Chcete-li například spustit testovací metody ve třídě pomocí emulátorů, můžete definovat symbol, například `USE_EMULATION` v souboru projektu testu nebo na příkazovém řádku sestavení. Pokud je symbol definován, `EmulationMode` je deklarována konstanta na úrovni třídy a nastavena na `Enabled` . V opačném případě je konstanta nastavena na `Passthrough` .
 
-  Zde je příklad třídy testu, která ukazuje, jak použít direktivy preprocesoru a metody `TestInitialize` a `TestCleanup` atributů pro nastavení režimu emulace.
+  Zde je příklad třídy testu, která ukazuje, jak použít direktivy preprocesoru a `TestInitialize` metody s atributy a `TestCleanup` pro nastavení režimu emulace.
 
 ```csharp
 //namespace declarations
@@ -294,8 +294,8 @@ namspace MySPAppTests
 
  [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Handling_non_emulated_SharePoint_methods"></a>Zpracování neemulovaných metod služby SharePoint
- Ne všechny typy služby SharePoint jsou emulované a ne všechny metody v některých emulovaných typech jsou emulované. Pokud testovaný kód volá metodu služby SharePoint, která není emulovana, metoda vyvolá výjimku `NotSupportedException`. Pokud dojde k výjimce, přidáte do metody služby SharePoint Shim pro vložení falešného kódu.
+## <a name="handling-non-emulated-sharepoint-methods"></a><a name="BKMK_Handling_non_emulated_SharePoint_methods"></a> Zpracování neemulovaných metod služby SharePoint
+ Ne všechny typy služby SharePoint jsou emulované a ne všechny metody v některých emulovaných typech jsou emulované. Pokud testovaný kód volá metodu služby SharePoint, která není emulovana, metoda vyvolá `NotSupportedException` výjimku. Pokud dojde k výjimce, přidáte do metody služby SharePoint Shim pro vložení falešného kódu.
 
  **Nastavení napodobenin na SharePointu**
 
@@ -309,13 +309,13 @@ namspace MySPAppTests
 
     ![FakesAssembly složka](../test/media/ut-emulators-fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")
 
-3. Přidejte odkaz na sestavení **Microsoft. SharePoint. 14.0.0.0. napodobenins. dll** , které je umístěno ve složce **FakesAssembly** .
+3. Přidejte odkaz na sestavení **Microsoft.SharePoint.14.0.0.0.Fakes.dll** , které je umístěno ve složce **FakesAssembly** .
 
-4. Volitelné Přidejte direktivu Namespace pro do třídy testu pro `Microsoft.QualityTools.Testing.Fakes`, `Microsoft.SharePoint.Fakes` a libovolného vnořeného oboru názvů `Microsoft.SharePoint.Fakes`that, který chcete použít.
+4. Volitelné Přidejte direktivu Namespace pro do testovací třídy pro `Microsoft.QualityTools.Testing.Fakes` `Microsoft.SharePoint.Fakes` a všechny vnořené obory názvů `Microsoft.SharePoint.Fakes` , které chcete použít.
 
    **Implementace delegáta překrytí pro metodu služby SharePoint**
 
-   V našem ukázkovém projektu metoda `GetAppointmentsForToday` volá metodu rozhraní API služby SharePoint [SPList. GetItems (SPQuery)](https://msdn.microsoft.com/library/ms457534.aspx) .
+   V našem ukázkovém projektu `GetAppointmentsForToday` metoda volá metodu rozhraní API služby [SPList. GetItems (SPQuery)](https://msdn.microsoft.com/library/ms457534.aspx) .
 
 ```csharp
 // method under test
@@ -335,12 +335,12 @@ public string GetAppointmentsForToday(string listName, SPWeb web)
 
 ```
 
- Verze `SPList.GetItems(SPQuery)` přetížené `GetItems` metody není emulovaná. Proto pouze zabalení stávajícího testu pro `GetAppointmentsForToday` v `SharePoint.Emulation.Scope` selže. Chcete-li vytvořit pracovní test, je nutné napsat implementaci falešného delegáta `ShimSPList.GetItemsSPQuery`, který vrátí výsledky, proti kterým chcete testovat.
+ `SPList.GetItems(SPQuery)`Verze přetížené `GetItems` metody není emulovaná. Proto pouze zabalení stávajícího testu pro `GetAppointmentsForToday` by se `SharePoint.Emulation.Scope` nezdařilo. Chcete-li vytvořit pracovní test, je nutné napsat implementaci delegáta falešného objektu `ShimSPList.GetItemsSPQuery` , který vrátí výsledky, proti kterým chcete testovat.
 
- Zde je úprava stávající testovací metody, `GetAppointmentsForTodayReturnsOnlyTodaysAppointments`, která implementuje delegáta napodobeniny. Požadované změny jsou vyvolány v komentářích:
+ Zde je úprava stávající testovací metody, `GetAppointmentsForTodayReturnsOnlyTodaysAppointments` která implementuje delegáta napodobeniny. Požadované změny jsou vyvolány v komentářích:
 
 > [!IMPORTANT]
-> Testovací metody, které explicitně vytvářejí napodobeniny, vyvolávají výjimku `ShimNotSupported` při spuštění testu v kontextu `EmulationMode.Passthrough`. Chcete-li se tomuto problému vyhnout, použijte proměnnou pro nastavení hodnoty `EmulationMode` a zabalte jakýkoliv falešný kód v příkazu `if`, který testuje hodnotu.
+> Testovací metody, které explicitně vytvářejí napodobeniny, vyvolávají `ShimNotSupported` výjimku při spuštění testu v `EmulationMode.Passthrough` kontextu. Chcete-li se tomuto problému vyhnout, použijte proměnnou pro nastavení `EmulationMode` hodnoty a zabalte jakýkoliv falešný kód v `if` příkazu, který testuje hodnotu.
 
 ```csharp
 // class level field to set emulation mode
@@ -381,28 +381,28 @@ public void GetAppointmentsForTodayReturnsOnlyTodaysAppointments()
 
 ```
 
- V této metodě nejdřív otestujeme, že emulace je povolená. Pokud je to, vytvoříme pro náš `SPList`ový seznam napodobeninu a potom pro jeho `GetItemsSPQuery` delegáta vytvoříte a přiřadíme metodu. Delegát používá metodu `Bind` napodobeniny k přidání správné položky seznamu do `ShimSPListItemCollection`, který je vrácen volajícímu.
+ V této metodě nejdřív otestujeme, že emulace je povolená. Pokud je, vytvoříme pro náš seznam falešný objekt Shim `SPList` a potom vytvoříme a přiřadíme metodě `GetItemsSPQuery` delegáta. Delegát používá `Bind` metodu napodobenin k přidání správné položky seznamu do `ShimSPListItemCollection` objektu, který je vrácen volajícímu.
 
  [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Writing_emulation_tests_from_scratch__and_a_summary"></a>Zápis testů emulace od začátku a souhrnu
+## <a name="writing-emulation-tests-from-scratch-and-a-summary"></a><a name="BKMK_Writing_emulation_tests_from_scratch__and_a_summary"></a> Zápis testů emulace od začátku a souhrnu
  I když postupy pro vytvoření emulace a testů dvojího použití, které jsou popsány v předchozích částech, předpokládají, že převádíte stávající testy, můžete také použít techniky k psaní testů od začátku. Následující seznam shrnuje tyto techniky:
 
 - Chcete-li použít emulátory v testovacím projektu, přidejte do projektu balíček NuGet Microsoft. SharePoint. emulátory.
 
-- Chcete-li použít emulátory v testovací metodě, vytvořte objekt `SharePointEmulationScope` na začátku metody. Všechna podporovaná rozhraní API služby SharePoint budou emulovana, dokud nebude rozsah vyřazen.
+- Chcete-li použít emulátory v testovací metodě, vytvořte `SharePointEmulationScope` objekt na začátku metody. Všechna podporovaná rozhraní API služby SharePoint budou emulovana, dokud nebude rozsah vyřazen.
 
 - Napište svůj testovací kód, jako kdybyste ho napsali do reálného rozhraní API služby SharePoint. Kontext emulace automaticky rozjezde volání metod služby SharePoint na jejich emulátory.
 
-- Ne všechny objekty služby SharePoint jsou emulované, a ne všechny metody pro některé emulované objekty jsou emulované. Výjimka `NotSupportedException` je vyvolána při použití neemulovaného objektu nebo metody. Pokud k tomu dojde, explicitně vytvořte delegáta překrytí falešného kódu pro metodu, která vrátí požadované chování.
+- Ne všechny objekty služby SharePoint jsou emulované, a ne všechny metody pro některé emulované objekty jsou emulované. `NotSupportedException`Výjimka je vyvolána při použití neemulovaného objektu nebo metody. Pokud k tomu dojde, explicitně vytvořte delegáta překrytí falešného kódu pro metodu, která vrátí požadované chování.
 
-- Chcete-li vytvořit testy dvojího použití, použijte konstruktor `SharePointEmulationScope(EmulationMode)` k vytvoření objektu oboru emulace. Hodnota `EmulationMode` určuje, zda jsou volání služby SharePoint emulovana nebo provedena na skutečném webu služby SharePoint.
+- Chcete-li vytvořit testy dvojího použití, použijte `SharePointEmulationScope(EmulationMode)` konstruktor k vytvoření objektu rozsahu emulace. `EmulationMode`Hodnota určuje, zda jsou volání služby SharePoint emulovana nebo provedena na skutečném webu služby SharePoint.
 
-- Pokud se všechny nebo většina testovacích metod v testovací třídě spustí v kontextu emulace, můžete použít metodu `TestInitialize` atributů na úrovni třídy pro vytvoření objektu `SharePointEmulationScope` a pole na úrovni třídy pro nastavení režimu emulace. To vám pomůže automatizovat změnu režimu emulace. Pak použijte `TestCleanup` metodu s atributem k Dispose objektu Scope.
+- Pokud se všechny nebo většina testovacích metod v testovací třídě spustí v kontextu emulace, můžete použít `TestInitialize` metodu s atributem na úrovni třídy pro vytvoření `SharePointEmulationScope` objektu a pole na úrovni třídy pro nastavení režimu emulace. To vám pomůže automatizovat změnu režimu emulace. Pak použijte `TestCleanup` metodu s atributy k Dispose objektu Scope.
 
   [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Example"></a>Případě
+## <a name="example"></a><a name="BKMK_Example"></a> Případě
  Zde je konečný příklad, který zahrnuje techniky emulátoru služby SharePoint, které jsou popsány výše:
 
 ```csharp
@@ -522,7 +522,7 @@ namspace MySPAppTests
 
 ```
 
-## <a name="BKMK_Emulated_SharePoint_types"></a>Emulované typy služby SharePoint
+## <a name="emulated-sharepoint-types"></a><a name="BKMK_Emulated_SharePoint_types"></a> Emulované typy služby SharePoint
  [Microsoft. SharePoint. SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField)
 
  [Microsoft. SharePoint. SPFieldIndex](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldIndex)

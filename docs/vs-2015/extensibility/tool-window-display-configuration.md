@@ -1,5 +1,5 @@
 ---
-title: Nástroj pro konfiguraci zobrazení okna | Dokumentace Microsoftu
+title: Konfigurace zobrazení oken nástrojů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1af78bd58c42cf1312e36621011802e908c9e919
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186399"
 ---
 # <a name="tool-window-display-configuration"></a>Konfigurace zobrazení oken nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud VSPackage zaregistruje panelu nástrojů, výchozí umístění, velikost, styl ukotvení a další informace o viditelnosti se zadává v volitelné hodnoty. Další informace o registraci okna nástroje, najdete v části [nástroj Windows v registru](../extensibility/tool-windows-in-the-registry.md)  
+Když VSPackage zaregistruje okno nástroje, výchozí pozice, velikost, ukotvení stylu a další informace o viditelnosti se zadává v volitelných hodnotách. Další informace o registraci okna nástrojů naleznete v tématu [okna nástrojů v registru](../extensibility/tool-windows-in-the-registry.md) .  
   
 ## <a name="window-display-information"></a>Informace o zobrazení okna  
- Panel nástrojů zobrazení základní konfigurace je uložená v až šest volitelné hodnoty:  
+ Základní konfigurace zobrazení v okně nástroje je uložena až do šesti volitelných hodnot:  
   
 ```  
 HKEY_LOCAL_MACHINE\  
@@ -37,17 +37,17 @@ HKEY_LOCAL_MACHINE\
               (Default)       = reg_sz: <Package GUID>Name            = reg_sz: <name of tool window>Float           = reg_sz: <position>Style           = reg_sz: <dock style>Window          = reg_sz: <window GUID>Orientation     = reg_sz: <orientation>DontForceCreate = reg_dword: 0x00000000  
 ```  
   
-|Name|Typ|Data|Popis|  
+|Název|Typ|Data|Popis|  
 |----------|----------|----------|-----------------|  
-|Name|REG_SZ|"Krátký název místo"|Krátký název, který popisuje panel nástrojů. Použít pouze pro referenci v registru.|  
-|Float|REG_SZ|"X1, Y1, X2, Y2"|Čtyři hodnoty oddělené čárkami. X1, Y1 je souřadnice levého horního rohu panelu nástrojů. X2, Y2 je souřadnice pravého dolního rohu. Všechny hodnoty jsou souřadnice obrazovky.|  
-|Styl|REG_SZ|"MDI"<br /><br /> "Float"<br /><br /> "Propojené"<br /><br /> "S kartami"<br /><br /> "AlwaysFloat"|Klíčové slovo určující počáteční zobrazit stav panelu nástrojů.<br /><br /> "MDI" = ukotven pomocí okna MDI.<br /><br /> "Float" = s plovoucí desetinnou čárkou.<br /><br /> "Propojené" = propojené se jiné okno (zadané v položce okno).<br /><br /> "S kartami" = v kombinaci s další okno nástroje.<br /><br /> "AlwaysFloat" = nelze ukotvit.<br /><br /> Další informace najdete v oddílu pro komentáře.|  
-|Okno|REG_SZ|*\<GUID>*|Identifikátor GUID okna, ke kterému můžete propojené okno nástroje nebo s kartami. Identifikátor GUID může patřit do jedné vlastní windows nebo některý z windows v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí.|  
-|Orientace|REG_SZ|"Left"<br /><br /> "Právo"<br /><br /> "Top"<br /><br /> "Dolů"|Najdete v oddílu pro komentáře.|  
-|DontForceCreate|REG_DWORD|0 nebo 1|Pokud je tato položka a její hodnota není nula, v okně je načten, ale nikoliv okamžitě zobrazí.|  
+|Název|REG_SZ|"Stručný název bude doplněn"|Krátký název, který popisuje okno nástroje. Používá se pouze pro referenci v registru.|  
+|Float|REG_SZ|X1, Y1, X2, Y2|Čtyři čárkami oddělené hodnoty. X1, Y1 je souřadnice levého horního rohu okna nástroje. X2, Y2 je souřadnice pravého dolního rohu. Všechny hodnoty jsou v souřadnicích obrazovky.|  
+|Styl|REG_SZ|MDI<br /><br /> Plovák<br /><br /> Spojeného<br /><br /> S kartami<br /><br /> "AlwaysFloat"|Klíčové slovo určující počáteční stav zobrazení okna nástroje.<br /><br /> "MDI" = docked s oknem MDI.<br /><br /> "Float" = float.<br /><br /> "Propojený" = propojený s jiným oknem (zadané v položce okna).<br /><br /> "S kartami" v kombinaci s jiným oknem nástrojů.<br /><br /> "AlwaysFloat" = nelze ukotvit.<br /><br /> Další informace najdete v části komentáře níže.|  
+|Okno|REG_SZ|*\<GUID>*|Identifikátor GUID okna, na které může být panel nástrojů propojen nebo s kartami. Identifikátor GUID může patřit do jedné z vašich vlastních oken nebo jednoho z oken v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí.|  
+|Orientace|REG_SZ|Zbývá<br /><br /> Kliknutím<br /><br /> Vrchol<br /><br /> Dolů|Viz část komentáře.|  
+|DontForceCreate|REG_DWORD|0 nebo 1|Pokud je tato položka přítomná a její hodnota není nula, okno se načte, ale nezobrazí se hned.|  
   
 ### <a name="comments"></a>Komentáře  
- Orientace položka udává pozici, kde se panel nástrojů ukotvené při poklepání na záhlaví. Pozice je vzhledem k oknu zadané v položce okna. Pokud styl položka má nastavenou hodnotu "Propojené", orientace položka může být "Vlevo", "Vpravo", "Top" nebo "Dolů". Pokud položka Style je "Tabbed", orientace položka může být "vlevo" nebo "Vpravo" a určuje, kde se přidá na kartu. Pokud je položka styl "Float", panel nástrojů čísel s plovoucí čárkou nejprve. Při poklepání na záhlaví okna použít položky orientaci a okna a okna používá "Tabbed" style. Pokud je položka styl "AlwaysFloat", nelze ukotvit okno nástroje. Pokud je položka styl "MDI", panel nástrojů je propojený s oblasti MDI a okno Položka je ignorována.  
+ Položka orientace definuje pozici, kde je ukotveno okno nástroje, když je dvakrát kliknuto na jeho záhlaví. Pozice je relativní vzhledem k oknu určenému v položce okna. Pokud je položka Style nastavena na hodnotu "propojený", položka orientace může být "Left", "Right", "Top" nebo "Bottom". Pokud je položka stylu "s kartami", položka orientace může být "Left" nebo "Right" a určuje, kam je karta přidána. Pokud je položka stylu "float", okno nástroje je nejprve plovoucí. Po dvojitém kliknutí na záhlaví a použití položek v okně se použije styl "s kartami". Pokud je položka stylu "AlwaysFloat", okno nástroje nelze ukotvit. Pokud je položka stylu "MDI", okno nástroje je propojeno s oblastí MDI a položka okna je ignorována.  
   
 ### <a name="example"></a>Příklad  
   
@@ -68,8 +68,8 @@ HKEY_LOCAL_MACHINE\
               Window          = reg_sz: {34E76E81-EE4A-11D0-00A0C90FFFC3}  
 ```  
   
-## <a name="tool-window-visibility"></a>Viditelnost okna nástroje  
- Hodnoty v podklíči volitelné viditelnost určují nastavení viditelnost panelu nástrojů. Názvy hodnoty se používají k ukládání GUID příkazy, které vyžadují viditelnost okna. Pokud je proveden příkaz, rozhraní IDE zaručuje, že panel nástrojů je vytvořena a nastavena jako viditelná.  
+## <a name="tool-window-visibility"></a>Viditelnost okna nástrojů  
+ Hodnoty v volitelném podklíči viditelnosti určují nastavení viditelnosti okna nástroje. Názvy hodnot se používají k ukládání identifikátorů GUID příkazů, které vyžadují viditelnost okna. Je-li příkaz spuštěn, rozhraní IDE garantuje, že okno nástroje je vytvořeno a zobrazeno.  
   
 ```  
 HKEY_LOCAL_MACHINE\  
@@ -86,10 +86,10 @@ HKEY_LOCAL_MACHINE\
                 <GUID>    = reg_sz:  
 ```  
   
-|Name|Typ|Data|Popis|  
+|Název|Typ|Data|Popis|  
 |----------|----------|----------|-----------------|  
-|(Výchozí)|REG_SZ|Žádné|Nechte prázdné.|  
-|*\<GUID>*|REG_DWORD nebo REG_SZ|0 nebo popisný řetězec.|Volitelné. Název položky musí být identifikátor GUID příkaz vyžadující viditelnost. Hodnota obsahuje jenom informativní řetězec. Hodnota je obvykle `reg_dword` nastavena na hodnotu 0.|  
+|(Výchozí)|REG_SZ|Žádné|Nechejte prázdné.|  
+|*\<GUID>*|REG_DWORD nebo REG_SZ|0 nebo popisný řetězec.|Nepovinný parametr. Název položky musí být identifikátor GUID příkazu, který vyžaduje viditelnost. Hodnota pouze obsahuje informativní řetězec. Obvykle je hodnota `reg_dword` nastavena na 0.|  
   
 ### <a name="example"></a>Příklad  
   
@@ -109,4 +109,4 @@ HKEY_LOCAL_MACHINE\
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [VSPackage Essentials](../misc/vspackage-essentials.md)
+ [Základy VSPackage](../misc/vspackage-essentials.md)

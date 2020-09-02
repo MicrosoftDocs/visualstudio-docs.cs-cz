@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přizpůsobení sloupců zobrazení sestavy | Dokumentace Microsoftu'
+title: 'Postupy: přizpůsobení sloupců zobrazení sestavy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,16 +15,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f1f6cf340d7c0ef87f34fc908e075f36eed2962c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146127"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Postupy: Přizpůsobení sloupců zobrazení sestav
+# <a name="how-to-customize-report-view-columns"></a>Postupy: Přizpůsobení sloupců zobrazení sestavy
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroje pro sledování výkonu v aplikaci Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE) pro zajištění integrované uživatelské prostředí. V následujícím seznamu je zástupce zobrazení, které je možné přizpůsobit pomocí přidání, odebrání a změna uspořádání sloupců:  
+Nástroje pro sledování výkonu v nástroji Visual Studio Team System Development Edition jsou plně integrované do integrovaného vývojového prostředí (IDE), aby poskytovaly bezproblémové uživatelské prostředí. Následující seznam představuje zástupce zobrazení, která lze přizpůsobit přidáním, odebráním a změnou uspořádání sloupců:  
   
 - [Zobrazení modulů](../profiling/modules-view.md)  
   
@@ -32,9 +32,9 @@ Nástroje pro sledování výkonu v aplikaci Visual Studio Team System Developme
   
 - [Zobrazení řádků](../profiling/lines-view.md)  
   
-- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view.md)  
+- [Zobrazení Ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view.md)  
   
-- [Zobrazení Volající/Volaný](../profiling/caller-callee-view.md)  
+- [Zobrazení volající/volaný](../profiling/caller-callee-view.md)  
   
 - [Zobrazení stromu volání](../profiling/call-tree-view.md)  
   
@@ -46,16 +46,16 @@ Nástroje pro sledování výkonu v aplikaci Visual Studio Team System Developme
   
 - [Zobrazení procesů](../profiling/process-view.md)  
   
-### <a name="to-customize-a-report-view"></a>Přizpůsobení zobrazení sestav  
+### <a name="to-customize-a-report-view"></a>Přizpůsobení zobrazení sestavy  
   
 1. Otevřete zobrazení sestavy.  
   
-2. Klikněte pravým tlačítkem na povrch zobrazení sestavy a pak klikněte na tlačítko **Přidat/odebrat sloupce**.  
+2. Klikněte pravým tlačítkem myši na plochu zobrazení sestavy a potom klikněte na tlačítko **Přidat nebo odebrat sloupce**.  
   
-     **Přidat/odebrat sloupce** zobrazí se dialogové okno.  
+     Zobrazí se dialogové okno **Přidat nebo odebrat sloupce** .  
   
 3. Vyberte sloupce, které chcete přidat.  
   
-4. Klikněte na tlačítko se šipkou můžete změnit pořadí sloupců.  
+4. Chcete-li změnit pořadí sloupců, klikněte na tlačítko se šipkou.  
   
 5. Klikněte na **OK**.

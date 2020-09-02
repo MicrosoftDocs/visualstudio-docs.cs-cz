@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b7c5f9c19573a04b1d9a8d7b8c6e9450aef9bc44
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645735"
 ---
 # <a name="findcommand-box"></a>Pole Najít/příkaz
@@ -25,7 +25,7 @@ ms.locfileid: "72645735"
 
 Můžete vyhledat text a spustit příkazy sady Visual Studio z pole **Najít/příkaz** . Pole **Najít/příkaz** je stále k dispozici jako ovládací prvek panelu nástrojů, ale ve výchozím nastavení se už nezobrazuje. Pole **Najít/příkaz** můžete zobrazit tak, že na panelu nástrojů **Standard** kliknete na **tlačítko Přidat nebo odebrat tlačítka** a pak zvolíte **Najít**.
 
- Chcete-li spustit příkaz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], zaregistrujte ho pomocí znaku většího než (>).
+ Pokud chcete spustit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] příkaz, před ním použijte symbol větší než (>).
 
  Pole **Najít/příkaz** zachová poslední 20 zadaných položek a zobrazí je v rozevíracím seznamu. Seznam můžete procházet výběrem kláves se šipkami.
 
@@ -35,7 +35,7 @@ Můžete vyhledat text a spustit příkazy sady Visual Studio z pole **Najít/p�
  Ve výchozím nastavení, když zadáte text do pole **Najít/příkaz** a pak zvolíte klávesu ENTER, Visual Studio prohledá aktuální dokument nebo nástroj pomocí možností, které jsou zadány v dialogovém okně **najít v souborech** . Další informace najdete v tématu [hledání a nahrazování textu](../ide/finding-and-replacing-text.md).
 
 ## <a name="entering-commands"></a>Zadávání příkazů
- Chcete-li použít pole **Najít/příkaz** k vystavení jednoho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ho příkazu nebo aliasu místo hledání textu, zadejte příkaz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], který je uvozen symbolem větším než (>). Příklad:
+ Chcete-li použít pole **Najít/příkaz** k vystavení jednoho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] příkazu nebo aliasu místo hledání textu, zadejte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] příkaz, který je uvozen znakem větším než (>). Příklad:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
@@ -44,7 +44,7 @@ Můžete vyhledat text a spustit příkazy sady Visual Studio z pole **Najít/p�
  Alternativně můžete také použít okno Příkaz k zadání a spuštění jednoho nebo více příkazů. Některé příkazy nebo aliasy lze zadat a provádět sami; ostatní mají ve své syntaxi požadované argumenty. Seznam příkazů, které mají argumenty, naleznete v tématu [Visual Studio Commands](../ide/reference/visual-studio-commands.md).
 
 ## <a name="escape-characters"></a>Řídicí znaky
- Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Například
+ Znak stříšky (^) na příkazovém řádku znamená, že znak bezprostředně za ním je interpretován doslova, nikoli jako řídicí znak. To lze použít k vložení přímých uvozovek ("), mezer, počátečních lomítek, znakových přepínačů nebo jiných literálových znaků v parametru nebo hodnotě přepínače s výjimkou názvů přepínačů. Příklad:
 
 ```
 >Edit.Find ^^t /regex

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d7bb7e0f3dfee3dd1bf3e9b42afd5837a29f6ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646810"
 ---
 # <a name="template-parameters"></a>Parametry šablony
@@ -39,7 +39,7 @@ Pomocí parametrů v šablonách lze při vytváření instance šablony nahradi
 
 1. V souboru .vstemplate šablony vyhledejte prvek `ProjectItem`, který odpovídá položce, pro kterou chcete povolit náhradu parametrů.
 
-2. Nastavte atribut `ReplaceParameters` `ProjectItem` elementu na `true`.
+2. Nastavte `ReplaceParameters` atribut `ProjectItem` elementu na `true` .
 
 3. V souboru kódu pro položku projektu zadejte parametry tam, kde je to vhodné. Například následující parametr určuje, že název bezpečného projektu je použit pro obor názvů v souboru:
 
@@ -56,7 +56,7 @@ Pomocí parametrů v šablonách lze při vytváření instance šablony nahradi
 |Parametr|Popis|
 |---------------|-----------------|
 |`clrversion`|Aktuální verze modulu CLR (Common Language Runtime).|
-|`GUID [1-10]`|Identifikátor GUID, který slouží k nahrazení identifikátoru GUID projektu v souboru projektu. Můžete zadat až 10 jedinečných identifikátorů GUID (například `guid1)`.|
+|`GUID [1-10]`|Identifikátor GUID, který slouží k nahrazení identifikátoru GUID projektu v souboru projektu. Můžete zadat až 10 jedinečných identifikátorů GUID (například `guid1)` .|
 |`itemname`|Název zadaný uživatelem v dialogovém okně **Přidat novou položku** .|
 |`machinename`|Aktuální název počítače (například Computer01).|
 |`projectname`|Název zadaný uživatelem v dialogovém okně **Nový projekt** .|
@@ -75,7 +75,7 @@ Pomocí parametrů v šablonách lze při vytváření instance šablony nahradi
  Kromě výchozích parametrů vyhrazené šablony, které se používají při nahrazování parametrů, můžete zadat vlastní parametry a hodnoty šablon. Další informace naleznete v tématu [CustomParameters – element (šablony sady Visual Studio)](../extensibility/customparameters-element-visual-studio-templates.md)
 
 ## <a name="example-replacing-files-names"></a>Příklad: Nahrazení názvů souborů
- Můžete zadat názvy souborů proměnných pro položky projektu pomocí parametru s atributem `TargetFileName`. Například můžete určit, že soubor. exe použije název projektu určený `$projectname$` jako název souboru.
+ Můžete zadat názvy souborů proměnných pro položky projektu pomocí parametru s `TargetFileName` atributem. Například můžete určit, že soubor. exe použije název projektu, který je určen `$projectname$` jako název souboru.
 
 ```
 <TemplateContent>
@@ -89,7 +89,7 @@ Pomocí parametrů v šablonách lze při vytváření instance šablony nahradi
 ```
 
 ## <a name="example-using-the-project-name-for-the-namespace-name"></a>Příklad: Použití názvu projektu jako název oboru názvů
- Chcete-li použít název projektu pro obor názvů v souboru C# vizuální třídy, Class1.cs, použijte následující syntaxi:
+ Chcete-li použít název projektu pro obor názvů v souboru třídy jazyka Visual C# Class1.cs, použijte následující syntaxi:
 
 ```
 #region Using directives

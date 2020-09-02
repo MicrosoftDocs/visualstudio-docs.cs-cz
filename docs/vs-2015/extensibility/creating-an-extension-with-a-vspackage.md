@@ -1,5 +1,5 @@
 ---
-title: Vytváření rozšíření pomocí VSPackage | Dokumentace Microsoftu
+title: Vytvoření rozšíření pomocí sady VSPackage | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,36 +9,36 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ddad7149db75aa662f9427a301c04eaf925146f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197419"
 ---
 # <a name="creating-an-extension-with-a-vspackage"></a>Vytváření rozšíření pomocí VSPackage
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento návod ukazuje, jak vytvořit projekt VSIX a přidejte položku projektu VSPackage. Použijeme sady VSPackage se získat službu uživatelského prostředí. Chcete-li zobrazit okno se zprávou.  
+Tento návod ukazuje, jak vytvořit projekt VSIX a přidat položku projektu VSPackage. Pomocí VSPackage získáme službu prostředí uživatelského rozhraní, aby se zobrazilo okno se zprávou.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-vspackage"></a>Vytváření VSPackage  
+## <a name="creating-a-vspackage"></a>Vytvoření balíčku VSPackage  
   
-1. Vytvořte projekt VSIX s názvem **FirstPackage**. Můžete najít šablonu projektu VSIX v **nový projekt** dialogového okna v části **Visual C# / rozšíření**.  
+1. Vytvořte projekt VSIX s názvem **FirstPackage**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** v části **Visual C#/rozšiřitelnost**.  
   
-2. Po otevření projektu přidat šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. V **přidat novou položku** dialogové okno, přejděte na **Visual C# / rozšíření** a vyberte **balíček Visual Studio**. V **název** pole v dolní části okna, změňte název souboru příkazu **FirstPackage.cs**.  
+2. Po otevření projektu přidejte šablonu položky balíčku sady Visual Studio s názvem **FirstPackage**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. V dialogovém okně **Přidat novou položku** přejít na **Visual C#/rozšiřitelnost** a vyberte **balíček Visual Studio**. V poli **název** v dolní části okna změňte název souboru příkazů na **FirstPackage.cs**.  
   
 3. Sestavte projekt a spusťte ladění.  
   
-     Experimentální instanci sady Visual Studio se zobrazí. Další informace o experimentální instanci najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
+     Zobrazí se experimentální instance aplikace Visual Studio. Další informace o experimentální instanci naleznete v [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
-4. V experimentální instanci aplikace, otevřete **nástrojů / rozšíření a aktualizace** okna. Měli byste vidět **FirstPackage** rozšíření tady. (Pokud otevřete **rozšíření a aktualizace** v instanci pracovního sadě Visual Studio, neuvidíte **FirstPackage**).  
+4. V experimentální instanci otevřete okno **Nástroje/rozšíření a aktualizace** . Tady byste měli vidět rozšíření **FirstPackage** . (Pokud v pracovní instanci sady Visual Studio otevřete **rozšíření a aktualizace** , neuvidíte **FirstPackage**).  
   
-## <a name="loading-the-vspackage"></a>Načítání sady VSPackage  
- V tuto chvíli rozšíření nepodaří načíst, protože není nic, která způsobí, že ho pro načtení. Rozšíření můžete načíst obecně při interakci s jeho uživatelské rozhraní (kliknutím na příkaz nabídky, otevřete okno nástroje), nebo tak, že určíte, že by se měly načíst sady VSPackage v určitém kontextu uživatelského rozhraní. Další informace o načítání rozšíření VSPackages a uživatelské rozhraní kontextech najdete v tématu [načítání rozšíření VSPackages](../extensibility/loading-vspackages.md). V tomto postupu vám ukážeme, jak načíst VSPackage při otevření řešení.  
+## <a name="loading-the-vspackage"></a>Načítání VSPackage  
+ V tomto okamžiku se rozšíření nenačte, protože není nic, co způsobuje načtení. Při interakci s uživatelským rozhraním (kliknutím na příkaz nabídky, otevřením okna nástroje) nebo určením, že VSPackage by mělo být načteno do konkrétního kontextu uživatelského rozhraní, lze obecně načíst rozšíření. Další informace o načítání VSPackage a kontextů uživatelského rozhraní najdete v tématu [načítání VSPackage](../extensibility/loading-vspackages.md). Pro tento postup vám ukážeme, jak po otevření řešení načíst VSPackage.  
   
-1. Otevřete soubor FirstPackage.cs. Deklarace třídy FirstPackage hledejte. Nahraďte existující atributy následující:  
+1. Otevřete soubor FirstPackage.cs. Vyhledejte deklaraci třídy FirstPackage. Nahraďte stávající atributy následujícím způsobem:  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -48,7 +48,7 @@ Tento návod ukazuje, jak vytvořit projekt VSIX a přidejte položku projektu V
     public sealed class FirstPackage : Package  
     ```  
   
-2. Přidejme zpráva, že získáme tak jistotu, že byl načten sady VSPackage. Metodu Initialize() sady VSPackage používáme k tomu, protože služby Visual Studio můžete získat až poté, co byly umístěny balíčku VSPackage. (Další informace o tom, jak služby najdete v tématu [jak: Získání služby](../extensibility/how-to-get-a-service.md).) Nahraďte metodu Initialize() FirstPackage kód, který získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> služby, získá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> rozhraní a volání jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> metoda.  
+2. Pojďme přidat zprávu, která nám umožní zjistit, že se VSPackage načetl. K tomuto účelu používáme metodu Initialize () VSPackage, protože můžete získat služby sady Visual Studio až po umístění balíčku VSPackage. (Další informace o tom, jak získat služby, najdete v tématu [Postupy: získání služby](../extensibility/how-to-get-a-service.md).) Nahraďte metodu Initialize () pro FirstPackage kódem, který získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> službu, získá <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> rozhraní a zavolá jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> metodu.  
   
     ```csharp  
     protected override void Initialize()  
@@ -73,6 +73,6 @@ Tento návod ukazuje, jak vytvořit projekt VSIX a přidejte položku projektu V
     }  
     ```  
   
-3. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance.  
+3. Sestavte projekt a spusťte ladění. Objeví se experimentální instance.  
   
-4. Otevřete řešení v experimentální instanci aplikace. Měli byste vidět okno se zprávou, že **první balíček uvnitř Initialize()** .
+4. Otevřete řešení v experimentální instanci. Mělo by se zobrazit okno se zprávou, které říká **první balíček uvnitř inicializace ()**.

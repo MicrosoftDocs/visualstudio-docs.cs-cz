@@ -1,0 +1,150 @@
+- name: Visual Studio for Mac
+  href: /visualstudio/mac/
+- name: Prohlídka integrovaného vývojového prostředí (IDE)
+  href: ide-tour.md
+- name: Instalace
+  href: installation.md
+  items:
+    - name: Instalace a používání za bránou firewall nebo proxy serverem
+      href: /visualstudio/mac/install-behind-a-firewall-or-proxy-server
+    - name: Instalace verze Preview
+      href: /visualstudio/mac/install-preview
+    - name: Aktualizace
+      href: /visualstudio/mac/update
+    - name: Aktualizace sady Visual Studio 2019 pro Mac
+      href: /visualstudio/mac/update-vsmac-8.0
+    - name: Odinstalovat
+      href: /visualstudio/mac/uninstall
+- name: Uživatelské účty
+  href: /visualstudio/mac/user-accounts
+  items:
+    - name: Přihlášení
+      href: /visualstudio/mac/signing-in
+    - name: Povolení předplatného
+      href: /visualstudio/mac/enable-subscription
+- name: Přizpůsobení integrovaného vývojového prostředí (IDE)
+  href: /visualstudio/mac/customizing-the-ide
+  items:
+    - name: Rozšíření sady Visual Studio pro Mac
+      href: /visualstudio/mac/extending-visual-studio-mac
+- name: "Projekty a\_řešení"
+  href: /visualstudio/mac/projects-and-solutions
+  items:
+    - name: Vytváření nových projektů
+      href: /visualstudio/mac/create-new-projects
+    - name: Přidávání a odebírání projektových položek
+      href: /visualstudio/mac/add-and-remove-project-items
+    - name: Správa vlastností řešení a projektu
+      href: /visualstudio/mac/managing-solutions-and-project-properties
+    - name: Správa odkazů v projektu
+      href: /visualstudio/mac/managing-references-in-a-project
+      items:
+        - name: 'Návod: Zahrnutí balíčku NuGet do projektu'
+          href: /visualstudio/mac/nuget-walkthrough
+    - name: Správa prostředků aplikace
+      href: /visualstudio/mac/managing-app-resources
+    - name: 'Postupy: Otevření více řešení nebo instancí'
+      href: /visualstudio/mac/open-multiple-solutions
+- name: Editor zdroje
+  href: /visualstudio/mac/source-editor
+  items:
+    - name: Refaktoring
+      href: /visualstudio/mac/refactoring
+    - name: Komentáře
+      href: /visualstudio/mac/comments
+    - name: Chování editoru
+      href: /visualstudio/mac/editor-behavior
+    - name: Komentáře k úkolům
+      href: /visualstudio/mac/task-comments
+    - name: Fragmenty kódu
+      href: /visualstudio/mac/snippets
+    - name: Výběr bloku
+      href: /visualstudio/mac/block-selection
+    - name: Motivy editoru
+      href: /visualstudio/mac/editor-themes
+    - name: EditorConfig
+      href: /visualstudio/mac/editorconfig
+    - name: Běžné klávesové zkratky
+      href: /visualstudio/mac/keyboard-shortcuts
+- name: Ladění
+  href: /visualstudio/mac/debugging
+  items:
+    - name: Vizualizace dat
+      href: /visualstudio/mac/data-visualizations
+- name: Kompilace a sestavení
+  href: /visualstudio/mac/compiling-and-building
+  items:
+    - name: "Sestavování a\_čištění projektů a\_řešení"
+      href: /visualstudio/mac/building-and-cleaning-projects-and-solutions
+    - name: Akce sestavení
+      href: /visualstudio/mac/build-actions
+    - name: Přizpůsobení sestavovacího systému
+      href: /visualstudio/mac/customizing-build-system
+    - name: Konfigurace
+      href: /visualstudio/mac/configurations
+      items:
+        - name: Vytvoření a úprava konfigurací
+          href: /visualstudio/mac/create-and-edit-configurations
+- name: Správa verzí
+  href: /visualstudio/mac/version-control
+  items:
+    - name: Správa verzí TF
+      href: /visualstudio/mac/tf-version-control
+    - name: Nastavení úložiště Git
+      href: /visualstudio/mac/set-up-git-repository
+    - name: Práce s úložištěm Git
+      href: /visualstudio/mac/working-with-git
+    - name: Nastavení úložiště Subversion
+      href: /visualstudio/mac/set-up-subversion-repository
+    - name: Práce s úložištěm Subversion
+      href: /visualstudio/mac/working-with-subversion
+- name: Nasazení webové aplikace
+  href: /visualstudio/mac/web-app-deployment
+  items:
+    - name: Publikování do Azure App Service
+      href: /visualstudio/mac/publish-app-svc
+    - name: Publikování do složky
+      href: /visualstudio/mac/publish-folder
+- name: Úkoly
+  href: /visualstudio/mac/workloads
+  items:
+    - name: ASP.NET Core
+      href: /visualstudio/mac/asp-net-core
+      items:
+        - name: Razor
+          href: /visualstudio/mac/razor
+        - name: JavaScript
+          href: /visualstudio/mac/javascript
+    - name: Azure
+      href: /visualstudio/mac/azure-workload
+      items:
+        - name: Úvod do Azure Functions
+          href: /visualstudio/mac/azure-functions
+        - name: 'Kurz: Azure Functions'
+          href: /visualstudio/mac/azure-functions-lab
+        - name: Připojené služby
+          href: /visualstudio/mac/connected-services
+    - name: Vývoj her pro Unity
+      href: /visualstudio/mac/unity-tools
+      items:
+        - name: Instalace
+          href: /visualstudio/mac/setup-vsmac-tools-unity
+        - name: Používání nástrojů Unity
+          href: /visualstudio/mac/using-vsmac-tools-unity
+        - name: Používání .NET 4.x v Unity
+          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+        - name: Protokol změn
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+    - name: Mobilní aplikace s Xamarinem
+      href: /visualstudio/mac/xamarin
+- name: Usnadnění
+  href: /visualstudio/mac/accessibility
+- name: Odstraňování potíží
+  href: /visualstudio/mac/troubleshooting
+  items:
+    - name: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
+      href: /visualstudio/mac/visual-studio-experience-improvement-program
+    - name: Nahlášení problému
+      href: /visualstudio/mac/report-a-problem
+    - name: 'Řešení potíží: Aktualizátor obsahuje chyby načítání informací'
+      href: updater-troubleshooting.md

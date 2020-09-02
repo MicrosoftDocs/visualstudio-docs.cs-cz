@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c2460b4e8b9e0b9043178989fcf8825815471be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645709"
 ---
 # <a name="working-with-code-metrics-data"></a>Práce s daty metrik kódu
@@ -41,22 +41,22 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 - [Vytvoření pracovní položky na základě výsledků metrik kódu](../code-quality/working-with-code-metrics-data.md#BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results)
 
-## <a name="BKMK_CodeMetricsResultsWindow"></a>Okno výsledků metrik kódu
+## <a name="code-metrics-results-window"></a><a name="BKMK_CodeMetricsResultsWindow"></a> Okno výsledků metrik kódu
  Okno **výsledků metriky kódu** má panel nástrojů v horní části a sloupce pro zobrazení počítaných výsledků.
 
-|Kolo|Popis|
+|Sloupec|Popis|
 |------------|-----------------|
 |**Hierarchie**|Sloupec **Hierarchy** obsahuje stromové zobrazení hierarchie kódu, které můžete rozbalit nebo sbalit a zobrazit požadovanou úroveň podrobností. Zbývající sloupce znázorňují počítané výsledky. Sloupce výsledků můžete podle potřeby skrýt nebo uspořádat.|
 |**Udržovatelnost**|Sloupec **udržovatelnosti** obsahuje kromě číselného výsledku i ikonu. Zelená ikona indikuje poměrně vysokou míru udržovatelnosti. Žlutá ikona indikuje střední stupeň udržovatelnosti. Červená ikona označuje nízkou udržovatelnost a potenciální problémové místo. Tyto barevné indikátory odpovídají kategoriím závažnosti, které používá pravidlo FxCop AvoidUnmaintainableCode. Toto pravidlo vyvolá chybu, pokud je index udržovatelnosti menší než 10, upozornění, pokud je index mezi 10 a 20, a ani chyba, ani upozornění, pokud je index vyšší než 20. Index udržovatelnosti je souhrn tří metrik: Cyklomatická složitost, řádky kódu a výpočetní složitost. Hodnoty nejsou vyjádřeny v jednotkách.|
 
-## <a name="BKMK_DisplayingCodeMetricsResults"></a>Zobrazení výsledků metrik kódu
+## <a name="displaying-code-metrics-results"></a><a name="BKMK_DisplayingCodeMetricsResults"></a> Zobrazení výsledků metrik kódu
  Okno Výsledky metrik kódu se zobrazí automaticky při generování výsledků metrik kódu. Okno můžete také kdykoli zobrazit.
 
 #### <a name="to-display-the-code-metrics-results-window"></a>Zobrazení okna výsledků metrik kódu
 
 - V nabídce **analyzovat** klikněte na **Windows** a pak klikněte na **Výsledky metrik kódu**.
 
-     \- nebo-
+     \- ani
 
 - V nabídce **zobrazení** přejděte na položku **ostatní okna** a klikněte na příkaz **Výsledky metrik kódu**.
 
@@ -66,7 +66,7 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 - Pokud byly vygenerovány Výsledky metrik kódu, rozbalte strom ve sloupci **hierarchie** .
 
-## <a name="BKMK_FilteringCodeMetricsResults"></a>Filtrování výsledků metrik kódu
+## <a name="filtering-code-metrics-results"></a><a name="BKMK_FilteringCodeMetricsResults"></a> Filtrování výsledků metrik kódu
  Výsledky, které se zobrazí v okně **výsledků metrik kódu** , můžete filtrovat pomocí panelu nástrojů v horní části. Například můžete chtít zobrazit pouze výsledky, které mají index udržovatelnosti pod 65.
 
  Rozevírací seznam **filtru** obsahuje názvy sloupců výsledků. Když je definovaný filtr, přidá se do dolní části seznamu spolu s odsazením. Seznam může obsahovat posledních deset filtrů, které byly definovány.
@@ -83,14 +83,14 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 5. Chcete-li zobrazit podrobnosti výsledku, rozbalte strom hierarchie.
 
-## <a name="BKMK_AddingRemovingandRearrangingDataColumns"></a>Přidání, odebrání a změna uspořádání datových sloupců
+## <a name="adding-removing-and-rearranging-data-columns"></a><a name="BKMK_AddingRemovingandRearrangingDataColumns"></a> Přidání, odebrání a změna uspořádání datových sloupců
  Můžete přidat nebo odebrat sloupce výsledků z okna **výsledků metrik kódu** . Kromě toho můžete změnit uspořádání sloupců výsledků tak, aby se zobrazily v pořadí, které chcete.
 
 #### <a name="to-remove-a-column"></a>Odebrání sloupce
 
 1. Klikněte na tlačítko **Přidat nebo odebrat sloupce** .
 
-     \- nebo-
+     \- ani
 
      Klikněte pravým tlačítkem na záhlaví sloupce a pak klikněte na **Přidat nebo odebrat sloupce**.
 
@@ -100,7 +100,7 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 1. Klikněte na tlačítko **Přidat nebo odebrat sloupce** .
 
-     \- nebo-
+     \- ani
 
      Klikněte pravým tlačítkem na záhlaví sloupce a pak klikněte na **Přidat nebo odebrat sloupce**.
 
@@ -110,7 +110,7 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 1. Klikněte na tlačítko **Přidat nebo odebrat sloupce** .
 
-     \- nebo-
+     \- ani
 
      Klikněte pravým tlačítkem na záhlaví sloupce a pak klikněte na **Přidat nebo odebrat sloupce**.
 
@@ -118,13 +118,13 @@ Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kód
 
 3. Když je sloupec umístěn tam, kde chcete, klikněte na tlačítko **OK**.
 
-## <a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a>Kopírování dat do schránky nebo Excelu
+## <a name="copying-data-to-the-clipboard-or-excel"></a><a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a> Kopírování dat do schránky nebo Excelu
  Vybraný řádek dat metriky kódu můžete vybrat a zkopírovat do schránky jako textový řetězec, který obsahuje jeden řádek pro název a hodnotu každého sloupce dat. Můžete také kliknout na **otevřít seznam v aplikaci Microsoft Excel** a exportovat výsledky metriky kódu do excelové tabulky.
 
-## <a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a>Vytvoření pracovní položky na základě výsledků metrik kódu
+## <a name="creating-a-work-item-based-on-code-metric-results"></a><a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a> Vytvoření pracovní položky na základě výsledků metrik kódu
  Můžete vytvořit [!INCLUDE[esprfound](../includes/esprfound-md.md)] pracovní položku, která je založena na výsledcích v okně **výsledků metrik kódu** . Při vytvoření pracovní položky [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] automaticky zadá název do pole **název** a data metriky kódu na kartě **Historie** .
 
- Další informace o tom, jak vytvořit pracovní položky, naleznete v tématu [Vytvoření přesměrované &#91;&#93;pracovní položky](https://msdn.microsoft.com/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).
+ Další informace o tom, jak vytvořit pracovní položky, naleznete v tématu [Vytvoření pracovní položky &#91;přesměrované&#93;](https://msdn.microsoft.com/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).
 
 #### <a name="to-create-a-work-item-based-on-a-result"></a>Vytvoření pracovní položky na základě výsledku
 
