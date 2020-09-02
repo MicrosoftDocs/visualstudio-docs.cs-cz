@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1c715c16782733a08bb617a464c1aa9510d35b54
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425953"
 ---
 # <a name="common-msbuild-item-metadata"></a>Společná metadata položky MSBuild
@@ -31,7 +31,7 @@ V následující tabulce jsou popsána volitelná metadata položek, která maj�
 |% (Odkaz)| Vše |Systém projektu sady Visual Studio používá `Link` metadata (Pokud je k dispozici) pro změnu, co se zobrazí ve stromové struktuře projektu. soubor lze umístit do jiné struktury logické složky v **Průzkumník řešení**.<br />Kromě toho `AssignTargetPath` úkol vyhledá v `Link` poli Výstupní adresář, do kterého se má zkopírovat soubor, pokud se jedná o jednu z položek, které se zkopírovaly.|
 |% (Propojení)| Sada .NET Core SDK | Slouží k nastavení složky, která se má použít pro `Link` metadata pro skupiny položek. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Obecné vlastnosti projektu nástroje MSBuild](../msbuild/common-msbuild-project-properties.md)
 - [Společné položky projektu nástroje MSBuild](../msbuild/common-msbuild-project-items.md)

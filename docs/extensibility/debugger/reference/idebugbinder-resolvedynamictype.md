@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveDynamicType | Dokumenty společnosti Microsoft
+title: 'IDebugBinder:: ResolveDynamicType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a3e490d06444d555625136d6b7ba2a8e99169f59
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735987"
 ---
 # <a name="idebugbinderresolvedynamictype"></a>IDebugBinder::ResolveDynamicType
-Tato metoda vrátí přesný typ proměnné.
+Tato metoda vrací přesný typ proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int ResolveDynamicType(
 
 ## <a name="parameters"></a>Parametry
 `pDynamic`\
-[v] [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) představující typ proměnné.
+pro [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md) představující typ proměnné.
 
 `ppResolved`\
-[out] Vrátí [iDebugField](../../../extensibility/debugger/reference/idebugfield.md) poskytující konkrétní informace o typu proměnné.
+mimo Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který poskytuje konkrétní informace o typu proměnné.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)

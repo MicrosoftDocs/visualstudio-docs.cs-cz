@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEvents2::Event | Dokumentace Microsoftu
+title: 'IDebugPortEvents2:: Event | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 28738b94ecc711833a4e16204b20f64d88687fe5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188557"
 ---
 # <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda odesílá události, které místo vytváření a ničení procesy a programů na portu.  
+Tato metoda odesílá události, které signalizují vytvoření a zničení procesů a programů na portu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,19 +50,19 @@ int Event(
   
 #### <a name="parameters"></a>Parametry  
  `pMachine`  
- [in] [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) objekt, který představuje server pro ladění (je jedna pro každou instanci [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]) ve kterém došlo k události.  
+ pro Objekt [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) , který představuje ladicí Server (pro každou instanci [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ), ve kterém došlo k události, je jeden.  
   
  `pPort`  
- [in] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt, který reprezentuje port, ve kterém došlo k události.  
+ pro Objekt [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) , který představuje port, ve kterém došlo k události.  
   
  `pProcess`  
- [in] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt, který představuje proces, ve kterém došlo k události.  
+ pro Objekt [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) , který představuje proces, ve kterém došlo k události.  
   
  `pProgram`  
- [in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje program, ve kterém došlo k události.  
+ pro Objekt [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) , který představuje program, ve kterém došlo k události.  
   
  `pEvent`  
- [in] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objekt, který identifikuje událost. Možné události jsou následující:  
+ pro Objekt [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) , který identifikuje událost. Možné události jsou následující:  
   
 - [IDebugProcessCreateEvent2](../../../extensibility/debugger/reference/idebugprocesscreateevent2.md)  
   
@@ -73,10 +73,10 @@ int Event(
 - [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)  
   
   `riidEvent`  
-  [in] Identifikátor GUID události. Protože události je přetypován na [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) před voláním této metody, tento identifikátor je snazší zjistit, která událost je odesíláno.  
+  pro Identifikátor GUID události Vzhledem k tomu, že je událost přetypování na [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) před voláním této metody, tento identifikátor usnadňuje určení, která událost se posílá.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)   

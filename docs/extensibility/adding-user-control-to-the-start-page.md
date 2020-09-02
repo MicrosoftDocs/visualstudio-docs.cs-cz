@@ -14,10 +14,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 8000c6cc067f61a64c71b8c8ac4f5c0176504cd4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903386"
 ---
 # <a name="add-user-control-to-the-start-page"></a>Přidání uživatelského ovládacího prvku na úvodní stránku

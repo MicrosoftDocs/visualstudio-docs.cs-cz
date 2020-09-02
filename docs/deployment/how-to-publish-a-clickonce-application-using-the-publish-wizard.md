@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 518252ac24dc45036587de114f68cd0a77b8c5b8
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382299"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním
@@ -47,7 +47,7 @@ Před spuštěním Průvodce publikováním byste měli správně nastavit vlast
 
 4. Na stránce **jak budou uživatelé aplikaci instalovat?** vyberte umístění, kam budou uživatelé instalovat aplikaci:
 
-   - Pokud budou uživatelé instalovat z webu, klikněte na **z** webu a zadejte adresu URL, která odpovídá cestě k souboru zadané v předchozím kroku. Klikněte na **Další**. (Tato možnost se obvykle používá, když jako umístění pro publikování zadáte adresu FTP. Přímé stahování z FTP serveru se nepodporuje. Proto je třeba zadat adresu URL zde.)
+   - Pokud budou uživatelé instalovat z webu, klikněte na **z** webu a zadejte adresu URL, která odpovídá cestě k souboru zadané v předchozím kroku. Klikněte na **Next** (Další). (Tato možnost se obvykle používá, když jako umístění pro publikování zadáte adresu FTP. Přímé stahování z FTP serveru se nepodporuje. Proto je třeba zadat adresu URL zde.)
 
    - Pokud budou uživatelé instalovat aplikaci přímo ze sdílené složky, klikněte na možnost **z cesty UNC nebo sdílené složky**a potom klikněte na tlačítko **Další**. (Jedná se o umístění pro publikování formuláře *c:\deploy\myapp* nebo * \\ \server\myapp*.)
 
@@ -59,7 +59,7 @@ Před spuštěním Průvodce publikováním byste měli správně nastavit vlast
 
    - Chcete-li spustit aplikaci přímo z umístění publikování, klikněte na tlačítko **Ne, tato aplikace je k dispozici pouze online**. Zástupce v nabídce **Start** nebude vytvořen.
 
-     Pokračujte výběrem tlačítka **Další**.
+     Pokračujte kliknutím na **Next** (Další).
 
 6. Kliknutím na tlačítko **Dokončit** publikujte aplikaci.
 
@@ -88,7 +88,7 @@ Před spuštěním Průvodce publikováním byste měli správně nastavit vlast
 
    - Pokud aplikace nebude vyhledávat aktualizace, klikněte na aplikace nebude **kontrolovat aktualizace**.
 
-     Pokračujte výběrem tlačítka **Další**.
+     Pokračujte kliknutím na **Next** (Další).
 
 6. Kliknutím na tlačítko **Dokončit** publikujte aplikaci.
 

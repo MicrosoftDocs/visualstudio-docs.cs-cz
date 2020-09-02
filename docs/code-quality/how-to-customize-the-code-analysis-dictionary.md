@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87453638"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Postupy: Přizpůsobení slovníku Analýzy kódu
@@ -74,7 +74,7 @@ Chování slovníku analýzy kódu můžete upravit přidáním podmínek jako v
 
 - [Slovníky/akronymy/CasingExceptions/akronym](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
-### <a name="dictionarywordsrecognizedword"></a><a name="BKMK_DictionaryWordsRecognizedWord"></a>Slovník/slova/rozpoznané/Word
+### <a name="dictionarywordsrecognizedword"></a><a name="BKMK_DictionaryWordsRecognizedWord"></a> Slovník/slova/rozpoznané/Word
 
 Chcete-li zahrnout termín v seznamu podmínek, které analýza kódu identifikuje jako správně napsaný, přidejte termín jako vnitřní text slovníku/slov/rozpoznaný/wordový prvek. Výrazy ve slovníku/slovech/rozpoznaných/slovních prvcích nerozlišují velká a malá písmena.
 
@@ -109,7 +109,7 @@ Podmínky v Slovníkech, slovech a rozpoznaných uzlech jsou aplikovány na nás
 
 - [CA2204: Literály by měly být zadány správně](../code-quality/ca2204.md)
 
-### <a name="dictionarywordsunrecognizedword"></a><a name="BKMK_DictionaryWordsUnrecognizedWord"></a>Slovník/slova/Nerozpoznáno/Word
+### <a name="dictionarywordsunrecognizedword"></a><a name="BKMK_DictionaryWordsUnrecognizedWord"></a> Slovník/slova/Nerozpoznáno/Word
 
 Chcete-li vyloučit období ze seznamu podmínek, které analýza kódu identifikuje jako správně napsaný, přidejte termín, který má být vyloučen jako vnitřní text slovníku/slov/nerozpoznaný/textový prvek. Výrazy ve slovníku/slovech/nerozpoznané/wordové elementy nerozlišují velká a malá písmena.
 
@@ -144,7 +144,7 @@ Termíny v poli Dictionary/Word/nerozpoznaný uzel jsou aplikovány na následuj
 
 - [CA2204: Literály by měly být zadány správně](../code-quality/ca2204.md)
 
-### <a name="dictionarywordsdeprecatedtermpreferredalternate"></a><a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>Slovníky/slova/zastaralé/termín [ @PreferredAlternate ]
+### <a name="dictionarywordsdeprecatedtermpreferredalternate"></a><a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> Slovníky/slova/zastaralé/termín [ @PreferredAlternate ]
 
 Chcete-li zahrnout výraz do seznamu podmínek, které analýza kódu identifikuje jako zastaralou, přidejte termín jako vnitřní text slovníku/slov/zastaralé nebo termín elementu. Vyřazeným termínem je slovo, které je napsané správně, ale nemělo by se používat.
 
@@ -181,7 +181,7 @@ Podmínky v rámci slovníku/slov/zastaralých uzlů jsou aplikovány na násled
 
 - [CA1726: Použijte upřednostňované výrazy](../code-quality/ca1726.md)
 
-### <a name="dictionarywordscompoundtermcompoundalternate"></a><a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>Slovníky/slova/složené/Term [ @CompoundAlternate ]
+### <a name="dictionarywordscompoundtermcompoundalternate"></a><a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a> Slovníky/slova/složené/Term [ @CompoundAlternate ]
 
 Vestavěný slovník identifikuje některé podmínky jako jednoduché, diskrétní podmínky a nikoli složený výraz. Chcete-li zahrnout výraz do seznamu podmínek, které analýza kódu identifikuje jako složené slovo, a určit správná velká a malá písmena, přidejte termín jako vnitřní text slovníku/slov/složeného/Term elementu. V atributu CompoundAlternate elementu Term určete jednotlivá slova, která tvoří složený výraz, a to tak, že se první písmeno jednotlivých slov (malý případ) odvede na velká písmena. Všimněte si, že termín zadaný ve vnitřním textu je automaticky přidán do seznamu slovníky/slova/DiscreteExceptions.
 
@@ -214,7 +214,7 @@ Termíny v poli Dictionary/Word/složený uzel jsou aplikovány na následujíc�
 
 - [CA1704: Identifikátory by měly být zadány správně](../code-quality/ca1704.md)
 
-### <a name="dictionarywordsdiscreteexceptionsterm"></a><a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>Slovník/slova/DiscreteExceptions/Term
+### <a name="dictionarywordsdiscreteexceptionsterm"></a><a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a> Slovník/slova/DiscreteExceptions/Term
 
 Chcete-li vyloučit termín v seznamu podmínek, které analýza kódu identifikuje jako samostatné slovo, když je výraz kontrolován pravidly pro všechna velká písmena pro složená slova, přidejte termín jako vnitřní text slovníku/slov/DiscreteExceptions/Term elementu. Termín v prvku Dictionary/Word/DiscreteExceptions/Term nerozlišuje velká a malá písmena.
 
@@ -239,7 +239,7 @@ Podmínky v uzlu Dictionary/Word/DiscreteExceptions jsou aplikovány na následu
 
 - [CA1702: Malá a velká písmena složených slov by měla být použita správně](../code-quality/ca1702.md)
 
-### <a name="dictionaryacronymscasingexceptionsacronym"></a><a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>Slovníky/akronymy/CasingExceptions/akronym
+### <a name="dictionaryacronymscasingexceptionsacronym"></a><a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a> Slovníky/akronymy/CasingExceptions/akronym
 
 Chcete-li zahrnout akronym do seznamu podmínek, které analýza kódu identifikuje jako správně napsaný a který označuje, jak akronym, pokud je výraz kontrolován pravidly pro všechna velká písmena pro složená slova, přidejte termín jako vnitřní text prvku Dictionary/Akronyms/CasingExceptions/akronym. Akronym v prvku Dictionary/Akronyms/CasingExceptions/akronym rozlišuje velká a malá písmena.
 
@@ -262,7 +262,7 @@ Podmínky v uzlu Dictionary/Akronyms/CasingExceptions jsou aplikovány na násle
 
 - [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709.md)
 
-## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a>Použití vlastního slovníku na projekt
+## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> Použití vlastního slovníku na projekt
 
 1. V **Průzkumník řešení**použijte jeden z následujících postupů:
 

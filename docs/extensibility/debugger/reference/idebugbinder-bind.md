@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::Bind | Dokumenty společnosti Microsoft
+title: 'IDebugBinder:: bind | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7a783025c96053a89956a1c77d46b5e417938a2b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736027"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
@@ -45,16 +45,16 @@ int Bind(
 
 ## <a name="parameters"></a>Parametry
 `pContainer`\
-[v] [IDebugObject,](../../../extensibility/debugger/reference/idebugobject.md) který obsahuje podřízené `pField`odkazuje .
+pro [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) obsahující podřízenou položku, na kterou odkazuje `pField` .
 
 `pField`\
-[v] [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) který představuje symbol.
+pro [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje symbol.
 
 `ppObject`\
-[out] `IDebugObject` Vrátí, který představuje instanci symbolu.
+mimo Vrátí `IDebugObject` , který představuje instanci symbolu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)

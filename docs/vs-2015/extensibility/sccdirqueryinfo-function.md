@@ -1,5 +1,5 @@
 ---
-title: Sccdirqueryinfo – funkce | Dokumentace Microsoftu
+title: Funkce SccDirQueryInfo | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7334ddd1ce6c7f9feac63253246e55b65121e18b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432441"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64780278"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce zkontroluje seznam plně kvalifikovaných adresářů pro jejich aktuální stav.  
+Tato funkce prověřuje seznam plně kvalifikovaných adresářů pro jejich aktuální stav.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,35 +37,35 @@ LPLONG  lpStatus
   
 #### <a name="parameters"></a>Parametry  
  pContext  
- [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
+ pro Struktura kontextu modulu plug-in správy zdrojových kódů.  
   
  nDirs  
- [in] Počet adresářů vybraných bude Dotazováno.  
+ pro Počet adresářů vybraných k dotazování.  
   
  lpDirNames  
- [in] Pole plně kvalifikovanou cestou adresářů, aby se dalo dotazovat.  
+ pro Pole plně kvalifikovaných cest k adresářům, které mají být dotazovány.  
   
  lpStatus  
- [out v] Struktury pole vrátit příznaky stavu modulu plug-in správy zdrojového kódu (viz [Directory stavový kód](../extensibility/directory-status-code-enumerator.md) podrobnosti).  
+ [in, out] Struktura pole pro modul plug-in správy zdrojových kódů, která vrátí stavové příznaky (podrobnosti viz [kód stavu adresáře](../extensibility/directory-status-code-enumerator.md) ).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Dotaz byl úspěšný.|  
-|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu nepodporuje tuto operaci.|  
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|K nespecifikované chybě.|  
+|SCC_E_OPNOTSUPPORTED|Systém správy zdrojového kódu tuto operaci nepodporuje.|  
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecifická chyba.|  
   
 ## <a name="remarks"></a>Poznámky  
- Funkce naplní návratový pole s bitovou maskou bitů z `SCC_DIRSTATUS` řady (naleznete v tématu [Directory stavový kód](../extensibility/directory-status-code-enumerator.md)), jeden záznam pro každý adresář zadaný. Pole Stav je přidělenou volajícím.  
+ Funkce vyplní vrácené pole maskou bitů z `SCC_DIRSTATUS` rodiny (viz [stavový kód adresáře](../extensibility/directory-status-code-enumerator.md)), jednu položku pro každý zadaný adresář. Pole stav je přiděleno volajícím.  
   
- Integrované vývojové prostředí používá tuto funkci před přejmenování adresáře ke kontrole, jestli adresář je pod správou zdrojových kódů dotazem, zda má odpovídajícího projektu. Pokud adresář není pod správou zdrojových kódů, rozhraní IDE zadat správné upozornění pro uživatele.  
+ Rozhraní IDE používá tuto funkci před přejmenováním adresáře, aby zkontrolovala, zda je adresář pod správou zdrojových kódů pomocí dotazu, zda má odpovídající projekt. Pokud adresář není pod správou zdrojových kódů, rozhraní IDE může poskytnout správné upozornění uživateli.  
   
 > [!NOTE]
-> Pokud není implementovat jednu nebo více hodnot stavu vybere možnost plug-in správy zdrojových kódů, neimplementovaná bity je třeba nastavit na hodnotu nula.  
+> Pokud se modul plug-in správy zdrojových kódů rozhodne neimplementovat jednu nebo více hodnot stavu, musí být neimplementovaná bity nastavena na hodnotu nula.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)   
  [Kód stavu adresáře](../extensibility/directory-status-code-enumerator.md)

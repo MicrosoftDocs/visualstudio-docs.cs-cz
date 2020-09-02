@@ -16,10 +16,10 @@ ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
 ms.openlocfilehash: 24df9f7c44ea2dbb9e9899abf68823683422da71
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235066"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>Řešení potíží a vytváření protokolů pro problémy nástroje MSBuild
@@ -106,7 +106,7 @@ Pokud sestavíte v integrovaném vývojovém prostředí (IDE) sady Visual Studi
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    – nebo –
+    nebo
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -124,7 +124,7 @@ Soubor MSBuild. binlog bude vytvořen v adresáři, ze kterého jste spustili n�
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    – nebo –
+    nebo
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj
@@ -132,6 +132,6 @@ Soubor MSBuild. binlog bude vytvořen v adresáři, ze kterého jste spustili n�
 
     Soubor MSBuild. log bude vytvořen v adresáři, ze kterého jste spustili nástroj MSBuild.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

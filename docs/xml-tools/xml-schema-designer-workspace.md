@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4cf86dd39e010424b25916deec8cdebd23ee1c1b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592370"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>Zobrazení pracovního prostoru návrháře schématu XML
@@ -47,4 +47,4 @@ Chcete-li přepnout zobrazení, použijte jednu z následujících možností:
 
 - Meze na stránce zobrazení Start nebo na meze v zobrazení modelu prázdného obsahu nebo zobrazení grafu.
 
-- Klávesové zkratky: **ctrl**+**1** pro zobrazení Start, **CTRL**+**2** pro zobrazení grafu a **CTRL**+**3** pro zobrazení modelu obsahu.
+- Klávesové zkratky: **CTRL** + **1** pro zobrazení Start, **CTRL** + **2** pro zobrazení grafu a **CTRL** + **3** pro zobrazení modelu obsahu.

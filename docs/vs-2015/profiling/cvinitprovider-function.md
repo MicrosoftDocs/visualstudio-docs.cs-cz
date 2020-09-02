@@ -1,5 +1,5 @@
 ---
-title: Cvinitprovider – funkce | Dokumentace Microsoftu
+title: Funkce CvInitProvider – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a5a8a9e70c85563e95037c754c59b6077ed21f28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188801"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Inicializuje poskytovatele značek. Musí být volána před všechny ostatní funkce sada Vizualizátor souběžnosti SDK.  
+Inicializuje poskytovatele značek. Musí být volána před jakoukoliv funkcí Vizualizátor souběžnosti sady SDK.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,16 +36,16 @@ HRESULT CvInitProvider(
   
 #### <a name="parameters"></a>Parametry  
  `pGuid`  
- Identifikátor guid zprostředkovatele. Nemůže mít hodnotu NULL.  
+ Identifikátor GUID zprostředkovatele Nemůže mít hodnotu NULL.  
   
  `ppProvider`  
- Adresa proměnné výstup, který bude uložený kontext zprostředkovatele. Nemůže mít hodnotu NULL.  
+ Adresa výstupní proměnné, která bude ukládat kontext poskytovatele. Nemůže mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK při zprostředkovatel úspěšně inicializován nebo kód chyby v případě, že existuje byly všechny chyby. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
+ S_OK při úspěšné inicializaci poskytovatele nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** cvmarkers. h  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+ [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

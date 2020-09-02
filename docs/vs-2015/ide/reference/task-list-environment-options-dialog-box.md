@@ -25,10 +25,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 72e5f82fa3ca4b7ca909ee07e5b77a31b3e20879
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650964"
 ---
 # <a name="task-list-environment-options-dialog-box"></a>Seznam úkolů, prostředí, dialogové okno Možnosti
@@ -37,7 +37,7 @@ ms.locfileid: "72650964"
 Tato stránka možností umožňuje přidávat, odstraňovat a měnit tokeny komentářů, které generují **seznam úkolů** připomenutí. Chcete-li zobrazit tato nastavení, vyberte **Možnosti** v nabídce **nástroje** , rozbalte složku **prostředí** a zvolte možnost **seznam úkolů**.
 
 ## <a name="task-list-options"></a>Možnosti Seznam úkolů
- Potvrďte odstranění úkolů, pokud je vybraná možnost, zobrazí se okno se zprávou pokaždé, když se z **seznam úkolů**odstraní úkol uživatele, což vám umožní potvrzení odstranění. Tato možnost je vybrána ve výchozím nastavení.
+ Potvrďte odstranění úkolů, pokud je vybraná možnost, zobrazí se okno se zprávou pokaždé, když se z **seznam úkolů**odstraní úkol uživatele, což vám umožní potvrzení odstranění. Tato možnost je ve výchozím nastavení zaškrtnutá.
 
 > [!NOTE]
 > Chcete-li odstranit komentář úkolu, použijte odkaz k vyhledání komentáře a jeho odebrání z kódu.
@@ -47,7 +47,7 @@ Tato stránka možností umožňuje přidávat, odstraňovat a měnit tokeny kom
 ## <a name="tokens"></a>Tokeny
  Když vložíte komentář do kódu, jehož text začíná tokenem ze **seznamu tokenu**, **seznam úkolů** zobrazí váš komentář jako novou položku vždy, když se soubor otevře pro úpravy. Kliknutím na tuto položku **seznam úkolů** můžete přejít přímo k řádku komentáře ve vašem kódu. Další informace najdete v tématu [použití seznam úkolů](../../ide/using-the-task-list.md).
 
- Seznam tokenů zobrazuje seznam tokenů a umožňuje přidat nebo odebrat vlastní tokeny. Tokeny komentáře rozlišují velká a malá C# písmena v C++vizuálech a vizuálů, ale ne v Visual Basic.
+ Seznam tokenů zobrazuje seznam tokenů a umožňuje přidat nebo odebrat vlastní tokeny. Tokeny komentáře rozlišují velká a malá písmena v jazyce Visual C# a Visual C++, ale nejsou v Visual Basic.
 
 > [!NOTE]
 > Pokud nechcete požadovaný token zadat přesně tak, jak se zobrazuje v **seznamu tokenů**, nebude se v **seznam úkolů**zobrazovat úloha s komentářem.

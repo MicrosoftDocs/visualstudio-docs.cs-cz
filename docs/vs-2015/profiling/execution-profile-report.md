@@ -1,5 +1,5 @@
 ---
-title: Sestava profilu spuštění | Dokumentace Microsoftu
+title: Sestava profilu spuštění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,33 +14,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a0d95d4593939b878194d2aeef79bdd0a8ad946a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160648"
 ---
 # <a name="execution-profile-report"></a>Sestava profilu spuštění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sestava profilu spuštění je profil pro tradiční vzorkování. Vzorky jsou přibližně každých milisekund během období, kdy vlákno běží na logické jádro a Vizualizátor souběžnosti sestavení typické volání stromu po nahromaděné sadu zásobníky ukázka kolační. Data v této tabulce mohou mít vliv aktuální časový rozsah a skryté vlákna a tyto filtry, které mohou být použity:  
+Sestava profilu spuštění je tradiční profil vzorkování. Během období, kdy je vlákno spuštěno v logickém jádru, jsou vzorky vytvářeny přibližně každých milisekund a Vizualizér souběžnosti sestaví typický strom volání pomocí kompletování nahromaděné sady vzorových zásobníků. Data v této tabulce mohou být ovlivněna aktuálním časovým rozsahem a skrytými vlákny a těmito filtry, které mohou být aplikovány:  
   
-- Pokud je vybrána pouze můj kód, jsou uvedeny pouze bloky zásobníku, které mají kód uživatele a jednu úroveň pod uživatelského kódu.  
+- Pokud je vybrána možnost Pouze můj kód, jsou zobrazeny pouze rámce zásobníku, které mají kód uživatele a jednu úroveň pod uživatelským kódem.  
   
-- Pokud je nastavena hodnota snížení šumu, porovnávány zásobníky, kterých je nižší než zadané frekvence jsou filtrovány ze sestavy  
+- Pokud je nastavená hodnota snížení šumu, odfiltrují se zásobníky, které mají míň, než je zadaná frekvence, ze sestavy.  
   
-  V následující tabulce jsou uvedeny sloupců v sestavě.  
+  V následující tabulce jsou uvedeny sloupce v sestavě.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|Name|Název funkce pro každou úroveň zásobníku volání.|  
-|Celkových vzorků|Celkový počet vzorků, které byly shromážděny pro všechny balíčky, které jsou zahrnuty do této úrovně stromu zásobníku volání. Celkový počet je součtem výhradních vzorků pro tuto funkci a včetně čítačů pro všechny jeho podřízené uzly.|  
-|Výhradní vzorky|Celkový počet shromážděných vzorků, pro které tato funkce je nejnižší úroveň zásobníku volání.|  
-|% Celkový čas|Procento celkového počtu vzorků, které se zobrazí ve sloupci celkových vzorků. Procenta jsou zaokrouhleny na dvě desetinná místa.|  
-|% Výhradních|Procento celkového počtu vzorků, které se zobrazí ve sloupci výhradních vzorků. Procenta jsou zaokrouhleny na dvě desetinná místa.|  
-|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, až bude k dispozici.|  
+|Název|Název funkce pro každou úroveň zásobníku volání.|  
+|Vzorky včetně|Celkový počet vzorků, které jsou shromažďovány pro všechny zásobníky, které jsou zahrnuty do této úrovně stromu zásobníku volání. Celkové číslo (včetně) je součet exkluzivních vzorků pro tuto funkci a všechny čítače pro všechny podřízené uzly.|  
+|Exkluzivní vzorky|Celkový počet shromážděných vzorků, pro které je tato funkce nejnižší úrovní zásobníku volání.|  
+|% Včetně|Procentuální podíl z celkového počtu vzorků, který je zobrazen ve sloupci celkových vzorků. Procenta jsou zaokrouhlena na dvě desetinná místa.|  
+|% Exkluzivní|Procentuální podíl z celkového počtu vzorků, který je zobrazen ve sloupci výhradní vzorky. Procenta jsou zaokrouhlena na dvě desetinná místa.|  
+|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, je-li k dispozici.|  
   
- Tato tabulka sestavy si můžete prohlédnout ve [doba spuštění (zobrazení vláken)](../profiling/execution-time-threads-view.md) zobrazení.  
+ Tato tabulka sestavy je zobrazená v zobrazení [čas spuštění (zobrazení vlákna)](../profiling/execution-time-threads-view.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

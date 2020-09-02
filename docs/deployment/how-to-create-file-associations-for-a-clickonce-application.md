@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76ecc41a852d80319f8a171ed590eb73680d92cc
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382494"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>Postupy: vytváření přidružení souborů pro aplikaci ClickOnce
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]aplikace je možné přidružit k jedné nebo více příponám názvů souborů, aby se aplikace spustila automaticky, když uživatel otevře soubor těchto typů. Přidání podpory přípon názvů souborů do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je jednoduché.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je možné přidružit k jedné nebo více příponám názvů souborů, aby se aplikace spustila automaticky, když uživatel otevře soubor těchto typů. Přidání podpory přípon názvů souborů do [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je jednoduché.
 
 ### <a name="to-create-file-associations-for-a-clickonce-application"></a>Vytvoření přidružení souborů pro aplikaci ClickOnce
 
@@ -54,6 +54,6 @@ ms.locfileid: "85382494"
     Další informace najdete v tématu [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).
 
 ## <a name="see-also"></a>Viz také
-- [\<fileAssociation>objekt](../deployment/fileassociation-element-clickonce-application.md)
+- [\<fileAssociation> objekt](../deployment/fileassociation-element-clickonce-application.md)
 - [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)
 - [Mage.exe (Manifest Generation and Editing Tool)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

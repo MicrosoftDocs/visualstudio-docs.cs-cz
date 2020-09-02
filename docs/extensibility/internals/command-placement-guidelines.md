@@ -1,5 +1,5 @@
 ---
-title: Pokyny pro umístění příkazů | Dokumenty společnosti Microsoft
+title: Pokyny pro umístění příkazů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,48 +13,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 021a5fd9f9931e3041a431d211c8ab49978bbbab
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709571"
 ---
 # <a name="command-placement-guidelines"></a>Pokyny pro umístění příkazů
-Doporučené postupy pro umístění příkazů v integrovaném vývojovém prostředí sady Visual Studio (IDE) se liší v závislosti na velikosti sady příkazů. Příkazy jsou definovány a umístěny podle informací v *souborech .vsct.*
+Osvědčené postupy pro umístění příkazů v integrovaném vývojovém prostředí (IDE) sady Visual Studio se liší v závislosti na velikosti sady příkazů. Příkazy jsou definovány a umístěny podle informací v souborech *. vsct* .
 
-## <a name="best-practices-for-all-command-sets"></a>Doporučené postupy pro všechny sady příkazů
- Pro každou sadu příkazů postupujte podle následujících pokynů:
+## <a name="best-practices-for-all-command-sets"></a>Osvědčené postupy pro všechny sady příkazů
+ Pro každou sadu příkazů postupujte podle těchto pokynů:
 
-- Připravte graf struktury příkazů předem. Identifikujte příkazy, pole se seznamem, skupiny příkazů a místní nabídky, které budou použity na více než jednom místě.
+- Připravte graf struktury příkazu předem. Identifikujte příkazy, pole se seznamem, skupiny příkazů a místní nabídky, které budou použity ve více než jednom umístění.
 
-- Příkazy, které se zobrazí ve stejné skupině, by měly souviset.
+- Příkazy, které se zobrazují ve stejné skupině, by měly souviset.
 
-- Skupiny, které obsahují pouze jeden příkaz jsou přijatelné.
+- Přijatelné jsou skupiny, které obsahují jenom jeden příkaz.
 
-- Balíčky by neměly přidávat velké množství příkazů do existujících nabídek sady Visual Studio. Místo toho by měly vytvořit nabídky nebo podnabídky pro hostování nových příkazů.
+- Balíčky by neměly přidávat spoustu příkazů do stávajících nabídek sady Visual Studio. Místo toho by se měly vytvořit nabídky nebo podnabídky pro hostování nových příkazů.
 
-- Když vložíte příkaz do existující nabídky, pojmenujte jej tak, aby jeho účel byl jasný a nebyl zaměňován s existujícími příkazy.
+- Když zadáte příkaz do existující nabídky, pojmenujte příkaz tak, aby jeho účel byl jasný a nebude zaměněn s existujícími příkazy.
 
-## <a name="best-practices-for-small-command-sets"></a>Doporučené postupy pro malé sady příkazů
- Pokud vyvíjíte VSPackage, který má jen několik příkazů, postupujte také podle těchto pokynů:
+## <a name="best-practices-for-small-command-sets"></a>Osvědčené postupy pro malé sady příkazů
+ Pokud vyvíjíte VSPackage, který obsahuje pouze několik příkazů, postupujte také podle následujících pokynů:
 
-- Pokud je to možné, použijte [prvek Nadřazený](../../extensibility/parent-element.md) příkaz, pole se seznamem, skupinu nebo podřízenou nabídku, abyste jej umístili do příslušné skupiny.
+- Pokud je to možné, použijte [nadřazený](../../extensibility/parent-element.md) element příkazu, pole se seznamem, skupinu nebo podřízenou nabídku k umístění do příslušné skupiny.
 
-- Přiřaďte tyto skupiny k nabídkám zobrazeným balíčkem VSPackage.
+- Přiřaďte tyto skupiny k nabídkám, které zobrazuje VSPackage.
 
-- Nadřazená podřízená nabídka nebo příkaz musí být prvek [Skupiny.](../../extensibility/group-element.md) Přiřaďte skupinám příkazy a podřízené nabídky a potom je přiřaďte k nadřazeným nabídkám.
+- Nadřazený objekt podřízené nabídky nebo příkazu musí být prvek [skupiny](../../extensibility/group-element.md) . Přiřaďte příkazy a podřízené nabídky do skupin a potom přiřaďte skupiny k nadřazeným nabídkám.
 
-- Příkaz můžete umístit do dalších skupin přidáním oddílu elementu [CommandPlacements](../../extensibility/commandplacements-element.md) za `CommandPlacements` definici příkazu a následným přidáním prvku [elementu CommandPlacement](../../extensibility/commandplacement-element.md) pro každou další skupinu.
+- Příkaz můžete umístit do dalších skupin přidáním oddílu prvku [CommandPlacements](../../extensibility/commandplacements-element.md) po definování příkazu a následným přidáním do `CommandPlacements` prvku element [CommandPlacement](../../extensibility/commandplacement-element.md) pro každou další skupinu.
 
-## <a name="best-practices-for-large-command-sets"></a>Doporučené postupy pro velké sady příkazů
- Pokud váš VSPackage bude mít mnoho příkazů, které se zobrazí ve více kontextech, postupujte také podle těchto pokynů:
+## <a name="best-practices-for-large-command-sets"></a>Osvědčené postupy pro velké sady příkazů
+ Pokud VSPackage bude mít mnoho příkazů, které se zobrazí v několika kontextech, postupujte také podle těchto pokynů:
 
-- Vytvořte nabídky, skupiny a příkazy self-parenting. To znamená nepřiřazovat `Parent` prvek v definici položky.
+- Vytváření nabídek, skupin a příkazů pro samoobslužné vytváření nadřazených objektů. To znamená, že nepřiřazujte `Parent` element v definici položky.
 
-- Pomocí `CommandPlacement` položek prvků `CommandPlacements` v části prvku můžete nabídky, skupiny a příkazy umístit do nadřazených nabídek a skupin.
+- Použijte `CommandPlacement` položky prvků v `CommandPlacements` oddílu element pro vložení nabídek, skupin a příkazů do svých nadřazených nabídek a skupin.
 
-- V `CommandPlacements` části prvku by měly být položky, které naplní danou nabídku nebo skupinu, vedle sebe. To pomáhá čitelnost `Priority` a usnadňuje určování pořadí.
+- V `CommandPlacements` oddílu element by měly být položky, které naplňují danou nabídku nebo skupinu, sousedící s sebou. Tato pomůcka pomáhá číst a usnadňuje `Priority` určování pořadí.
 
 ## <a name="see-also"></a>Viz také
-- [Jak VSPackages přidat prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Soubory příkazů sady Visual Studio (.vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [Soubory tabulek příkazů sady Visual Studio (. vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

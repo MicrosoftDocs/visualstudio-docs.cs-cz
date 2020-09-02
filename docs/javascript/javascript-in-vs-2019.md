@@ -12,10 +12,10 @@ ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: a4cdb685a11df8e013025fd91dd8869fe5851d93
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87453666"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>JavaScript a TypeScript v aplikaci Visual Studio 2019

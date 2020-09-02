@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetAttachedSessionName | Dokumenty společnosti Microsoft
+title: 'IDebugProcess2:: GetAttachedSessionName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b70fd48adacdbbf936c6997fc373ad4a8d7e696b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724080"
 ---
 # <a name="idebugprocess2getattachedsessionname"></a>IDebugProcess2::GetAttachedSessionName
-Získá název relace, která ladí tento proces. IDE můžete zobrazit tyto informace uživateli, který je ladění určitého procesu v určitém počítači.
+Získá název relace, která provádí ladění tohoto procesu. Integrované vývojové prostředí (IDE) může tyto informace zobrazit uživateli, který ladí konkrétní proces na konkrétním počítači.
 
 > [!NOTE]
-> Tato metoda je zastaralé a jeho implementace `E_NOTIMPL`by měla vždy vrátit .
+> Tato metoda je zastaralá a její implementace by měla vždycky vracet `E_NOTIMPL` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +40,7 @@ HRESULT GetAttachedSessionName(
 `pbstrSessionName`\
 
 ## <a name="return-value"></a>Návratová hodnota
- Tato metoda by `E_NOTIMPL`měla vždy vrátit .
+ Tato metoda by měla vždycky vracet `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

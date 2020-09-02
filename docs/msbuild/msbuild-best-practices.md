@@ -1,5 +1,5 @@
 ---
-title: Osvědčené postupy msbuild | Dokumenty společnosti Microsoft
+title: Osvědčené postupy nástroje MSBuild | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91b2e157ee64f5e4d91bc75a5d6f8d65d4312862
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78263146"
 ---
-# <a name="msbuild-best-practices"></a>Doporučené postupy msbuild
+# <a name="msbuild-best-practices"></a>Doporučené postupy nástroje MSBuild
 
-Doporučujeme následující doporučené postupy pro psaní skriptů MSBuild:
+Pro psaní skriptů MSBuild doporučujeme následující osvědčené postupy:
 
-- Výchozí hodnoty vlastností jsou `Condition` nejlépe zpracovány pomocí atributu a nikoli deklarováním vlastnosti, jejíž výchozí hodnota může být přepsána na příkazovém řádku. Použijte například
+- Výchozí hodnoty vlastností jsou nejlépe zpracovávány pomocí `Condition` atributu a nikoli deklarováním vlastnosti, jejíž výchozí hodnota může být přepsána v příkazovém řádku. Například použijte
 
 ```xml
 <MyProperty Condition="'$(MyProperty)' == ''">
@@ -30,7 +30,7 @@ Doporučujeme následující doporučené postupy pro psaní skriptů MSBuild:
 </MyProperty>
 ```
 
-- Obecně se vyhněte použití zástupných znaků při výběru položek. Místo toho zadejte soubory explicitně. Důvodem je, že ve většině typů projektů MSBuild rozbalí zástupné znaky v různých časech, například při přidávání nebo odebírání položek, což může vést k neočekávanému chování. Výjimkou je v projektech ve stylu .NET Core SDK, které správně zpracovávají zástupné znaky.
+- Obecně platí, že při výběru položek nepoužívejte zástupné znaky. Místo toho zadejte soubory explicitně. Důvodem je, že ve většině typů projektů MSBuild rozbalí zástupné znaky v různých časech, například při přidávání nebo odebírání položek, což může vést k neočekávanému chování. Výjimkou je v projektech ve stylu .NET Core SDK, které správně zpracovávají zástupné znaky.
 
 ## <a name="see-also"></a>Viz také
 
