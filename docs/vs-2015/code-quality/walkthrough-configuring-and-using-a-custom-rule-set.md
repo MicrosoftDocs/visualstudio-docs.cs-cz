@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8239afd1cf4e8c0a5e702f2b0e4ed64408cada09
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645744"
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>Návod: Konfigurace a používání vlastní sady pravidel
@@ -49,9 +49,9 @@ Tento návod ukazuje, jak používat nástroje pro analýzu kódu, které byly n
 
 1. V nabídce **soubor** klikněte na příkaz **Nový** a potom klikněte na **projekt**.
 
-2. V dialogovém okně **Nový projekt** , v části **typy projektů**klikněte na **možnost C#Visual** .
+2. V dialogovém okně **Nový projekt** , v části **typy projektů**klikněte na možnost **Visual C#**.
 
-3. V **části C#vizuál** vyberte **Knihovna tříd**.
+3. V části **Visual C#** vyberte **Knihovna tříd**.
 
 4. Do textového pole **název** zadejte **RuleSetSample** a pak klikněte na **OK**.
 
@@ -70,7 +70,7 @@ Tento návod ukazuje, jak používat nástroje pro analýzu kódu, které byly n
     V nabídce soubor klikněte na **Uložit vybrané položky** a aktualizujte soubor projektu o informace o sadě pravidel, kterou jste vybrali a jejím nastavení.
 
    > [!TIP]
-   > V reálném čase je vhodné použít k určení priorit, na které problémy chcete cílit pomocí analýzy kódu, začít s minimální sadou pravidel **Doporučené pravidla** a opravit požadované problémy a potom přírůstkově přidat další pravidla nebo sady pravidel do Vyhledejte a opravte další problémy.
+   > V reálném čase je vhodné použít k určení priorit, na které problémy chcete cílit při analýze kódu, začít s minimální sadou pravidel **Doporučené pravidla** a opravit požadované problémy a potom přírůstkově přidat další pravidla nebo sady pravidel, které vám pomůžou najít a opravit další problémy.
 
    V dalším kroku přidáte do knihovny tříd nějaký kód, který bude použit k demonstraci porušení identifikátorů CA1704 "identifikátory by měly být zadány správně" pravidla analýzy kódu. Další informace najdete v tématu [CA1704: identifikátory by měly být zadány správně](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md).
 
@@ -128,7 +128,7 @@ Tento návod ukazuje, jak používat nástroje pro analýzu kódu, které byly n
 
     Nyní by byl dobrý čas na experimentování s různými tlačítky na panelu nástrojů a možnostmi filtrování, abyste se mohli seznámit s nimi. Můžete například použít rozevírací seznam **Seskupit podle** , který vám umožní vyhledat konkrétní pravidlo nebo kategorii pravidel. Dalším příkladem je, že můžete použít tlačítko **Skrýt zakázaná pravidla** na panelu nástrojů stránky sady pravidel pro skrytí nebo zobrazení všech pravidel se sloupcem **Akce** nastaveným na **žádná**. To může být užitečné, pokud chcete vyhledat jakákoli pravidla, která jste vypnuli, abyste ověřili, že je stále chcete zakázat.
 
-5. V nabídce zobrazení klikněte na položku Vlastnosti okno. Do pole název v okně nástroje vlastnosti zadejte **vlastní množinu pravidel** . Tím se změní zobrazovaný název nové sady pravidel v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] IDE.
+5. V nabídce zobrazení klikněte na položku Vlastnosti okno. Do pole název v okně nástroje vlastnosti zadejte **vlastní množinu pravidel** . Tím se změní zobrazovaný název nové sady pravidel v [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] integrovaném vývojovém prostředí (IDE).
 
 6. V nabídce **soubor** klikněte na **Uložit Microsoft All Rules. ruleset** a uložte si vlastní sadu pravidel. Přejděte do kořenové složky projektu. Do textového pole **název souboru** zadejte **MyCustomRuleSet**. Vlastní sadu pravidel teď můžete vybrat pro použití s vaším projektem.
 
@@ -140,7 +140,7 @@ Tento návod ukazuje, jak používat nástroje pro analýzu kódu, které byly n
 
 2. Na kartě **vlastnosti** klikněte na **Analýza kódu**.
 
-    V rozevíracím seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse.. >** . Přejděte do kořenové složky vašeho projektu kódu a pak vyberte **MyCustomRuleSet. ruleset**. Toto je nová sada pravidel, kterou jste vytvořili v předchozím postupu.
+    V rozevíracím seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse..>** . Přejděte do kořenové složky vašeho projektu kódu a pak vyberte **MyCustomRuleSet. ruleset**. Toto je nová sada pravidel, kterou jste vytvořili v předchozím postupu.
 
 3. V nabídce **soubor** klikněte na **Uložit** a uložte konfiguraci projektu. Vlastní sadu pravidel teď můžete použít s vaším projektem.
 

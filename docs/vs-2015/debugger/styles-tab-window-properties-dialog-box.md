@@ -1,5 +1,5 @@
 ---
-title: Karta styly, dialogové okno Vlastnosti okna | Dokumentace Microsoftu
+title: Karta styly, dialogové okno Vlastnosti okna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,20 +12,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6ddde5bdb6064b7012157c04d156ed225b5763a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197485"
 ---
 # <a name="styles-tab-window-properties-dialog-box"></a>Karta Styly, dialogové okno vlastnosti okna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použití **styly** zobrazte styly použitý pro vybrané okno. Zobrazíte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus [zobrazení Windows](../debugger/windows-view.md) okna. Vyberte jakékoli okno uzel ve stromu a pak zvolte **vlastnosti** z **zobrazení** nabídky.  
+Pomocí karty **styly** můžete zobrazit styly použité pro vybrané okno. Chcete-li zobrazit [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md), přesuňte fokus do okna [zobrazení systému Windows](../debugger/windows-view.md) . Ve stromové struktuře vyberte libovolný uzel okna a pak v nabídce **zobrazení** zvolte možnost **vlastnosti** .  
   
- Následující nastavení jsou k dispozici na **styly** kartu:  
+ Na kartě **styly** jsou k dispozici následující nastavení:  
   
 |Entry|Popis|  
 |-----------|-----------------|  
-|**Styly oken**|Kombinace okno stylu kódy a řídit styly, pokud je k dispozici.|  
-|**Rozšířené styly**|Kombinace stylu kódů delší okno.|
+|**Styly oken**|V případě potřeby kombinaci kódů a řídicích stylů okna.|  
+|**Rozšířené styly**|Kombinace kódů stylů rozšířeného okna.|

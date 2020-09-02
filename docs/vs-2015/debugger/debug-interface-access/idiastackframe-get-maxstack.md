@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_maxstack – | Dokumentace Microsoftu
+title: 'IDiaStackFrame:: get_maxStack | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7e860830b5169a71d7757e1ee39b223559456de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62575993"
 ---
-# <a name="idiastackframegetmaxstack"></a>IDiaStackFrame::get_maxStack
+# <a name="idiastackframeget_maxstack"></a>IDiaStackFrame::get_maxStack
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá maximální počet bajtů posunuto v zásobníku v rámci.  
+Načte maximální počet bajtů nabízených v zásobníku v rámci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,10 @@ HRESULT get_maxStack ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí maximální počet bajtů posunuto v zásobníku.  
+ mimo Vrátí maximální počet bajtů nabízených v zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí hodnotu, `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

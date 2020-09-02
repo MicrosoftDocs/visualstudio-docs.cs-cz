@@ -16,77 +16,77 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b80427999ad841c493e61cd704b64435f81c3914
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565601"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Stránka Odkazy, návrhář projektu (Visual Basic)
 
-Stránka **Reference** **návrháře projektu** slouží ke správě odkazů, webových odkazů a importovaných oborů názvů v projektu. Projekty mohou obsahovat odkazy na komponenty modelu COM, webové služby XML, knihovny nebo sestavení .NET nebo jiné knihovny tříd. Další informace o použití odkazů naleznete [v tématu Správa odkazů v projektu](../../ide/managing-references-in-a-project.md).
+Použijte stránku **odkazy** **Návrháře projektu** ke správě odkazů, webových odkazů a importovaných oborů názvů v projektu. Projekty mohou obsahovat odkazy na komponenty modelu COM, webové služby XML, knihovny .NET nebo sestavení nebo jiné knihovny tříd. Další informace o použití odkazů naleznete v tématu [Správa odkazů v projektu](../../ide/managing-references-in-a-project.md).
 
-Chcete-li získat přístup ke stránce **References,** zvolte uzel projektu (nikoli uzel **řešení)** v **Průzkumníku řešení**. Pak na řádku nabídek zvolte **Projekt**, **Vlastnosti.** Po zobrazení Návrháře projektů klikněte na kartu **Reference.**
+Pro přístup na stránku **odkazy** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak zvolte **projekt**, **vlastnosti** na řádku nabídek. Když se zobrazí Návrhář projektu, klikněte na kartu **odkazy** .
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 Následující možnosti umožňují vybrat nebo odebrat odkazy a importované obory názvů v projektu.
 
-**Referenční cesty**
+**Cesty odkazů**
 
-Klepnutím na toto tlačítko získáte přístup k dialogovému oknu **Referenční cesty.**
+Kliknutím na toto tlačítko otevřete dialogové okno **cesty odkazů** .
 
 > [!NOTE]
-> Když systém projektu najde odkaz na sestavení, systém tento odkaz vyřeší vyhledáním v následujících umístěních v následujícím pořadí:
+> Když systém projektu najde odkaz na sestavení, systém tento odkaz vyřeší tak, že v následujícím pořadí prohlíží následující umístění:
 >
-> 1. Složka projektu. Soubory složek projektu se zobrazí v **Průzkumníku řešení,** když není aktivní **zobrazit všechny soubory.**
-> 2. Složky zadané v dialogovém okně **Referenční cesty.**
-> 3. Složky, které zobrazují soubory v dialogovém okně **Přidat odkaz.**
-> 4. Složka obj projektu. (Přidáte-li odkaz COM do projektu, může být do složky obj projektu přidáno jedno nebo více sestavení.)
+> 1. Složka projektu. Soubory složek projektu se zobrazí v **Průzkumník řešení** , když **Zobrazit všechny soubory** nejsou platné.
+> 2. Složky, které jsou uvedeny v dialogovém okně **cesty odkazů** .
+> 3. Složky, které zobrazují soubory v dialogovém okně **Přidat odkaz** .
+> 4. Složka obj projektu. (Pokud do projektu přidáte odkaz modelu COM, jedno nebo více sestavení může být přidáno do složky obj projektu.)
 
  **Odkazy**
 
-Tento seznam zobrazuje všechny odkazy v projektu, použité nebo nepoužité.
+Tento seznam obsahuje všechny odkazy v projektu, použité nebo nepoužívané.
 
  **Přidat**
 
-Klepnutím na toto tlačítko přidáte odkaz nebo webový odkaz do seznamu **Reference.**
+Kliknutím na toto tlačítko přidáte odkaz nebo webový odkaz do seznamu **odkazů** .
 
-Zvolte **Odkaz,** chcete-li přidat odkaz na projekt pomocí dialogového okna Přidat odkaz.
+Vyberte **odkaz** pro přidání odkazu na projekt pomocí dialogového okna Přidat odkaz.
 
-Zvolte **Webový odkaz,** chcete-li přidat webový odkaz do projektu pomocí dialogového okna **Přidat odkaz na web.**
+Vyberte **webový odkaz** a přidejte webový odkaz do projektu pomocí dialogového okna **Přidat webový odkaz** .
 
  **Odebrat**
 
-Vyberte jeden nebo více odkazů v seznamu **Reference** a klepnutím na toto tlačítko je odstraňte.
+V seznamu **odkazy** vyberte jeden nebo více odkazů a kliknutím na toto tlačítko jej odstraňte.
 
  **Aktualizovat webový odkaz**
 
-Vyberte webový odkaz v seznamu **Reference** a klepnutím na toto tlačítko jej aktualizujte.
+Vyberte webový odkaz v seznamu **odkazy** a kliknutím na toto tlačítko ho aktualizujte.
 
  **Importované obory názvů**
 
-Do tohoto pole můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** jej přidáte do seznamu oborů názvů.
+V tomto poli můžete zadat vlastní obor názvů a kliknutím na **Přidat import uživatele** ho přidat do seznamu oborů názvů.
 
-Můžete vytvořit aliasy pro obory názvů importované uživateli. Chcete-li to provést, zadejte alias a obor názvů v*oboru názvů* *aliasu*=formátu . To je užitečné, pokud používáte dlouhé `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`obory názvů, například: .
+Můžete vytvořit aliasy pro uživatelem importované obory názvů. Provedete to tak, že zadáte alias a obor názvů *alias*do = *oboru názvů*aliasu formátu. To je užitečné, pokud používáte dlouhé obory názvů, například: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
  **Přidat import uživatele**
 
-Klepnutím na toto tlačítko přidáte obor názvů zadaný v poli **Importované obory názvů** do seznamu importovaných oborů názvů. Tlačítko je aktivní pouze v případě, že zadaný obor názvů ještě není v seznamu.
+Kliknutím na toto tlačítko přidáte obor názvů zadaný v poli **importované obory názvů** do seznamu importovaných oborů názvů. Tlačítko je aktivní pouze v případě, že zadaný obor názvů již není v seznamu.
 
  **Seznam oborů názvů**
 
-V tomto seznamu jsou uvedeny všechny dostupné obory názvů. Jsou vybrána zaškrtávací políčka oborů názvů zahrnutých v projektu.
+V tomto seznamu jsou uvedeny všechny dostupné obory názvů. Jsou vybrána zaškrtávací políčka pro obory názvů zahrnuté ve vašem projektu.
 
  **Aktualizovat import uživatele**
 
-V seznamu oborů názvů vyberte obor názvů zadaný uživatelem, zadejte název, který chcete nahradit, do pole **Importované obory názvů** a klepnutím na toto tlačítko změňte nový obor názvů. Tlačítko je aktivní pouze v případě, že vybraný obor názvů je ten, který jste přidali do seznamu pomocí tlačítka **Přidat import uživatele.** Můžete přidat:
+V seznamu obory názvů vyberte obor názvů zadaný uživatelem, zadejte název, který chcete nahradit, v poli **importované obory názvů** a potom kliknutím na toto tlačítko přejděte na nový obor názvů. Tlačítko je aktivní pouze v případě, že vybraný obor názvů je ten, který jste přidali do seznamu pomocí tlačítka **Přidat import uživatele** . Můžete přidat:
 
-- Třídy nebo obory <xref:System.Math?displayProperty=fullName>názvů, například .
+- Třídy nebo obory názvů, například <xref:System.Math?displayProperty=fullName> .
 
-- Aliased importy, `VB=Microsoft.VisualBasic`například .
+- Import s aliasy, například `VB=Microsoft.VisualBasic` .
 
-- Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`.
+- Obory názvů XML, například `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` .
 
 ## <a name="see-also"></a>Viz také
 

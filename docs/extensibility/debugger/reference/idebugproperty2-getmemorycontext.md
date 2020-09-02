@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryContext | Dokumenty společnosti Microsoft
+title: 'IDebugProperty2:: GetMemoryContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8fa610af3ae00d30462c1a3a0c825e5a85722cdc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721457"
 ---
 # <a name="idebugproperty2getmemorycontext"></a>IDebugProperty2::GetMemoryContext
@@ -41,10 +41,10 @@ int GetMemoryContext(
 
 ## <a name="parameters"></a>Parametry
 `ppMemory`\
-[out] Vrátí objekt [IDebugMemoryContext2,](../../../extensibility/debugger/reference/idebugmemorycontext2.md) který představuje paměť přidruženou k této vlastnosti.
+mimo Vrátí objekt [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) , který představuje paměť přidruženou k této vlastnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Vrátí, `S_GETMEMORYCONTEXT_NO_MEMORY_CONTEXT` pokud neexistuje žádný kontext paměti načíst.
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. Vrátí `S_GETMEMORYCONTEXT_NO_MEMORY_CONTEXT` , pokud není k dispozici žádný kontext paměti pro načtení.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

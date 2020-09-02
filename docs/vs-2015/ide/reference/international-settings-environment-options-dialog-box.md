@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 26ed1ef8941db17c9cc087a80afcad2b4ce982de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650824"
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>Mezinárodní nastavení, prostředí, dialogové okno Možnosti
@@ -37,7 +37,7 @@ Stránka mezinárodní nastavení umožňuje změnit výchozí jazyk, pokud mát
  **Jazyk** Obsahuje seznam dostupných jazyků pro nainstalované jazykové verze produktu. Tato možnost není k dispozici, pokud v počítači nemáte nainstalovanou více než jednu jazykovou verzi. Pokud se prostředí sdílí s více jazyky produktů nebo instalací smíšeného jazyka produktů, je výběr jazyka změněn na **stejný jako v systému Microsoft Windows**.
 
 > [!CAUTION]
-> V systému, v němž je nainstalováno více jazyků C++ , nejsou tímto nastavením ovlivněny nástroje pro Visual Build (CL. exe, Link. exe, NMAKE. exe, BSCMAKE. exe a související soubory). Tyto nástroje používají verzi pro poslední nainstalovaný jazyk a nástroje pro dříve instalovaný jazyk jsou přepsány, protože nástroje pro Visual C++ Build nepoužívají model satelitní knihovny DLL.
+> V systému, v němž je nainstalováno více jazyků, nejsou tímto nastavením ovlivněny Visual C++ nástroje pro sestavení (cl.exe, link.exe, nmake.exe, bscmake.exe a související soubory). Tyto nástroje používají verzi pro poslední nainstalovaný jazyk a nástroje pro dříve instalovaný jazyk jsou přepsány, protože nástroje Visual C++ Build nepoužívají model satelitní knihovny DLL.
 
 ## <a name="see-also"></a>Viz také
- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+ [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

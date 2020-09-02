@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3374c07cac01104354b2ce41abddbeabbec0a373
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75566134"
 ---
 # <a name="properties-of-decorators"></a>Vlastnosti dekorátorů
@@ -26,8 +26,8 @@ Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevi
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
 |DisplayName|Název dekoratér, který se zobrazí ve vygenerovaném návrháři.|Rozbalit sbalení dekoratér|
-|Name|Název dekoratér.|ExpandCollapseDecorator|
-|Poznámky|Neformální poznámky, které jsou spojeny s tímto dekoratér.|\<žádné >|
+|Název|Název dekoratér.|ExpandCollapseDecorator|
+|Poznámky|Neformální poznámky, které jsou spojeny s tímto dekoratér.|\<none>|
 |HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
@@ -38,10 +38,10 @@ Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevi
 
 |Vlastnost|Popis|Výchozí|
 |-|-|-|
-|DefaultIcon|Cesta k souboru ikony nebo obrázku, který se má zobrazit|\<žádné >|
+|DefaultIcon|Cesta k souboru ikony nebo obrázku, který se má zobrazit|\<none>|
 |DisplayName|Název dekoratér, který se má zobrazit ve vygenerovaném návrháři.|Dekoratér ikony|
-|Name|Název dekoratér.|IconDecorator|
-|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<žádné >|
+|Název|Název dekoratér.|IconDecorator|
+|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<none>|
 |HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
@@ -54,16 +54,16 @@ Dekoratéry jsou ikony, text nebo rozbalit/sbalit šipky, které se mohou objevi
 |-|-|-|
 |DefaultText|Výchozí text, který se má zobrazit|Popisek|
 |DisplayName|Název dekoratér, který se má zobrazit ve vygenerovaném návrháři.|Popisek|
-|fontSize|Velikost písma textu zobrazeného v dekoratéru|8|
+|FontSize|Velikost písma textu zobrazeného v dekoratéru|8|
 |FontStyle|Styl písma textu, který se zobrazí v dekoratér.|Pravidelný|
-|Name|Název dekoratér.|Popisek|
-|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<žádné >|
+|Název|Název dekoratér.|Popisek|
+|Poznámky|Neformální poznámky, které jsou přidruženy k dekoratér.|\<none>|
 |HorizontalOffset|Vodorovný posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |VerticalOffset|Svislý posun vzhledem k výchozí pozici dekoratéru v palcích. (Pouze v obrazcích.)|0|
 |OffsetFromLine|Posun dekoratéru od řádku vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |OffsetFromShape|Posun dekoratér od tvaru vzhledem k jeho výchozí pozici v palcích (Pouze v konektorech.)|0|
 |Pozice|Výchozí pozice dekoratéru|TargetBottom|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

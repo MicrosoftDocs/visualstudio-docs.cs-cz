@@ -1,5 +1,5 @@
 ---
-title: Podpora okna Automatické hodnoty ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Podpora okna Automatické hodnoty ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,28 +12,28 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 01d2046d7693b23865555abb06962dead4a435ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157597"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Podpora okna Automatické hodnoty ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Automatické hodnoty** okno zobrazuje výrazy, jako jsou proměnné a parametry, které jsou v oboru, když se laděný program pozastaví (buď z důvodu zarážky nebo výjimky). Výraz může obsahovat proměnné, místní nebo globální a parametry, které byly změněny v místním oboru. **Automatické hodnoty** okno může také obsahovat instance třídy, struktury nebo jiný typ. Cokoli, co můžete vyhodnotit vyhodnocovače výrazů může potenciálně zobrazený v **automatické hodnoty** okna.  
+Okno **Automatické** hodnoty zobrazuje výrazy, jako jsou proměnné a parametry, které jsou v oboru, pokud je program laděný (buď kvůli zarážce, nebo výjimku). Výrazy mohou zahrnovat proměnné, místní nebo globální a parametry, které byly změněny v místním oboru. Okno **Automatické** hodnoty může také zahrnovat vytváření instancí třídy, struktury nebo jiného typu. Cokoli, co může vyhodnocovací filtr výrazů vyhodnotit, může být potenciálně možné zobrazit v okně **Automatické** hodnoty.  
   
- Rozhraní spravovaného balíčku (MPF) neposkytuje přímou podporu **automatické hodnoty** okna. Nicméně pokud přepíšete <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metoda může vrátit seznam výrazů, které se budou zobrazovat v **automatické hodnoty** okna.  
+ Sada Managed Package Framework (MPF) neposkytuje přímou podporu pro okno **Automatické** hodnoty. Nicméně pokud přepíšete <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metodu, můžete vrátit seznam výrazů, které mají být zobrazeny v okně **Automatické** hodnoty.  
   
-## <a name="implementing-support-for-the-autos-window"></a>Implementace podpora okna Automatické hodnoty  
- Všechno, co potřebujete udělat pro podporu **automatické hodnoty** okna je implementace <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metodu <xref:Microsoft.VisualStudio.Package.LanguageService> třídy. Implementace, musíte se rozhodnout daném umístění ve zdrojovém souboru, který výrazů by se měla objevit v **automatické hodnoty** okna. Metoda vrátí seznam řetězců, ve kterých každý řetězec představuje jeden výraz. Vrácená hodnota <xref:Microsoft.VisualStudio.VSConstants.S_OK> označuje, zda seznam obsahuje výrazy, zatímco <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> znamená, že neexistují žádné výrazy k zobrazení.  
+## <a name="implementing-support-for-the-autos-window"></a>Implementace podpory pro okno Automatické hodnoty  
+ Vše, co potřebujete k podpoře okna **Automatické** hodnoty, je implementace <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metody ve <xref:Microsoft.VisualStudio.Package.LanguageService> třídě. Vaše implementace se musí rozhodnout pro umístění ve zdrojovém souboru, které výrazy by se měly zobrazit v okně **Automatické** hodnoty. Metoda vrátí seznam řetězců, ve kterých každý řetězec představuje jeden výraz. Návratová hodnota <xref:Microsoft.VisualStudio.VSConstants.S_OK> označuje, že seznam obsahuje výrazy, zatímco se zobrazí <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> žádné výrazy k zobrazení.  
   
- Skutečné výrazů vrátila jsou názvy proměnných nebo parametrech, které se zobrazí na tomto místě v kódu. Tyto názvy jsou předány Chyba při vyhodnocování výrazu k získání hodnot a typy, které se zobrazí v **automatické hodnoty** okna.  
+ Skutečné vrácené výrazy jsou názvy proměnných nebo parametrů, které se zobrazí v daném umístění v kódu. Tyto názvy jsou předány do vyhodnocovacího filtru výrazů, aby získaly hodnoty a typy, které jsou následně zobrazeny v okně **Automatické** hodnoty.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metodu, která načte seznam výrazů od <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu pomocí analýzy důvod <xref:Microsoft.VisualStudio.Package.ParseReason>. Každá z těchto výrazů je zabalena jako `TestVsEnumBSTR` , který implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> rozhraní.  
+ Následující příklad ukazuje implementaci <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> metody, která získá seznam výrazů z <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody pomocí důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> . Každý výraz je zabalen jako `TestVsEnumBSTR` , který implementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> rozhraní.  
   
- Všimněte si, že `GetAutoExpressionsCount` a `GetAutoExpression` metody jsou vlastních metod na `TestAuthoringSink` objektu a byly přidány pro podporu v tomto příkladu. Představují jeden ze způsobů ve výrazech, které přidá do `TestAuthoringSink` objekt analyzátorem (voláním <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> metoda) je přístupná mimo analyzátor.  
+ Všimněte si, `GetAutoExpressionsCount` že `GetAutoExpression` metody a jsou vlastní metody `TestAuthoringSink` objektu a byly přidány pro podporu v tomto příkladu. Představují jeden způsob, jakým jsou výrazy přidané do `TestAuthoringSink` objektu analyzátorem (voláním <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> metody) k dispozici mimo analyzátor.  
   
 ```csharp  
 using Microsoft.VisualStudio;  

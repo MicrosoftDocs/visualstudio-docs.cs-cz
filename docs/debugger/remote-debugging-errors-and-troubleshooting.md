@@ -1,5 +1,5 @@
 ---
-title: Vzdálené ladění chyb y a řešení potíží | Dokumenty společnosti Microsoft
+title: Chyby vzdáleného ladění a řešení potíží | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -21,57 +21,57 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b413ce193e6761d515de5bc5ef30fae8e18a3a3
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302089"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312714"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>Chyby a řešení potíží se vzdáleným laděním
 
-Při pokusu o vzdálené ladění se můžete sejít s následujícími chybami.
+Při pokusu o ladění vzdáleně může docházet k následujícím chybám.
 
 - [Chyba: Automatické krokování s vnořením do serveru se nezdařilo.](../debugger/error-unable-to-automatically-step-into-the-server.md)
 
 - [Chyba: Zdá se, že sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE) na vzdáleném počítači neběží.](error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md)
 
-- [Nelze se připojit k monitoru vzdáleného ladění sady Microsoft Visual Studio](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
+- [Nepodařilo se připojit ke sledování Microsoft Visual Studio Remote Debugging Monitor.](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
 
 - [Chyba: Vzdálený počítač se nezobrazuje v dialogovém okně Vzdálená připojení](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)
 
 ## <a name="run-the-remote-debugger-as-an-administrator"></a>Spuštění vzdáleného ladicího programu jako správce
 
-Pokud nespustíte vzdálený ladicí program jako správce, můžete narazit na problémy. Může se například zobrazit následující chyba: "Vzdálený ladicí program Visual Studio (MSVSMON. EXE) nemá dostatečná oprávnění k ladění tohoto procesu." Pokud používáte vzdálený ladicí program jako aplikaci (nikoli službu), může se zobrazit [chyba jiného uživatelského účtu.](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md)
+Pokud nespustíte vzdálený ladicí program jako správce, může dojít k problémům. Například se může zobrazit následující chyba: "Visual Studio Remote Debugger (MSVSMON.EXE) má nedostatečná oprávnění pro ladění tohoto procesu." Pokud používáte vzdálený ladicí program jako aplikaci (nikoli službu), může se zobrazit chyba [různých uživatelských účtů](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md) .
 
-### <a name="when-running-the-remote-debugger-as-a-service"></a>Při spuštění vzdáleného ladicího programu jako služby
+### <a name="when-running-the-remote-debugger-as-a-service"></a>Při spuštění vzdáleného ladícího programu jako služby
 
-Při spuštění vzdáleného ladicího programu jako služby s, doporučujeme spustit jako správce z několika důvodů:
+Když spouštíte vzdálený ladicí program jako službu s, doporučujeme spustit ho jako správce z několika důvodů:
 
-- Služba vzdáleného ladicího programu umožňuje pouze připojení od správců, takže neexistují **žádná** nová bezpečnostní rizika zavedená spuštěním jako správce.
+- Služba vzdáleného ladicího programu umožňuje pouze připojení správců, takže neexistují **žádná** nová bezpečnostní rizika, která by mohla spustit jako správce.
 
-- Může zabránit chybám, které narůstají, když má uživatel sady Visual Studio více práv k ladění procesu než samotný vzdálený ladicí program.
+- Může zabránit chybám, které mají za následek, když má uživatel aplikace Visual Studio více práv na ladění procesu, než samotný vzdálený ladicí program.
 
 - Pro zjednodušení nastavení a konfigurace vzdáleného ladicího programu.
 
-I když je možné ladit bez spuštění vzdáleného ladicího programu jako správce, existuje několik požadavků, aby tato práce fungovala správně a často vyžadují pokročilejší kroky konfigurace služby.
+I když je možné ladit bez spuštění vzdáleného ladícího programu jako správce, existuje několik požadavků na to, aby tato práce fungovala správně a často vyžadovaly pokročilejší kroky konfigurace služby.
 
-- Účet, který používáte ve vzdáleném počítači, musí mít **oprávnění k přihlášení jako oprávnění služby.** Podívejte se na kroky v části "Chcete-li přidat přihlášení jako službu" v článku nelze [připojit zpět](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md) chyby.
+- Účet, který používáte ve vzdáleném počítači, musí mít oprávnění **Přihlásit se jako služba** . Projděte si postup v části "přidání přihlášení jako služby" v článku [nelze se připojit](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md) k chybě.
 
-- Účet musí mít práva k ladění cílového procesu. Chcete-li získat tato práva, musíte spustit vzdálený ladicí program pod stejným účtem jako proces, který má být laděn. (Jednodušší alternativou je spuštění služby jako správce.) 
+- Účet musí mít oprávnění k ladění cílového procesu. Chcete-li získat tato práva, je nutné spustit vzdálený ladicí program pod stejným účtem jako proces, který se má ladit. (Jednodušší alternativou je spuštění služby jako správce.) 
 
-- Účet musí být schopen se připojit zpět (to znamená, ověřit s) počítač sady Visual Studio v síti. V doméně je snadnější se připojit zpět, pokud je vzdálený ladicí program spuštěn pod integrovanými účty místního systému nebo síťové služby nebo v účtu domény. Předdefinované účty mají zvýšená oprávnění zabezpečení, která mohou představovat bezpečnostní riziko.
+- Účet musí být schopný připojit se k počítači sady Visual Studio přes síť (tj. ověřování pomocí). V doméně se můžete snadno připojit zpátky, pokud je vzdálený ladicí program spuštěný pod integrovaným účtem místního systému nebo síťové služby nebo účtem domény. Předdefinované účty mají zvýšená oprávnění zabezpečení, která mohou představovat bezpečnostní riziko.
 
-### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>Při spuštění vzdáleného ladicího programu jako aplikace (normální režim)
+### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>Při spuštění vzdáleného ladícího programu jako aplikace (normální režim)
 
-Pokud se pokoušíte připojit k vlastnímu procesu bez vyšších oprávnění (například normální aplikaci), nezáleží na tom, zda používáte vzdálený ladicí program jako správce.
+Pokud se pokoušíte připojit k vlastnímu procesu bez zvýšené úrovně oprávnění (například k normální aplikaci), nezáleží na tom, jestli spouštíte vzdálený ladicí program jako správce.
 
 Chcete spustit vzdálený ladicí program jako správce v několika scénářích:
 
-- Chcete se připojit k procesům spuštěných jako jiný uživatel (například při ladění iIS) nebo
+- Chcete se připojit k procesům spuštěným jako jiný uživatel (například při ladění služby IIS) nebo
 
 - Pokoušíte se spustit jiný proces a proces, který chcete spustit, je správce.
 
-Pokud chcete spustit procesy, **nechcete** spustit jako správce a proces, který chcete spustit, by **neměl** být správcem.
+Nechcete spustit jako správce, pokud chcete spouštět procesy a proces, který chcete spustit, **by neměl být** správcem. **not**
 
 ## <a name="see-also"></a>Viz také
 - [Vzdálené ladění](../debugger/remote-debugging.md)

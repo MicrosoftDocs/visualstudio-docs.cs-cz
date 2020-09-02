@@ -38,10 +38,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 025ba2eb95514efc740d1f8f7b3bf674d6bf237a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645638"
 ---
 # <a name="finding-and-replacing-text"></a>Hledání a nahrazení textu
@@ -61,7 +61,7 @@ Můžete vyhledat a nahradit text v editoru kódu sady Visual Studio a určitýc
 
  K možnostem nahrazení se dostanete tak, že vyberete tlačítko vedle textového pole **Najít** . Chcete-li provést nahrazení v jednom okamžiku, klikněte na tlačítko **nahradit další** vedle textového pole **nahradit** . Chcete-li nahradit všechny shody, klikněte na tlačítko **Nahradit vše** .
 
- Chcete-li změnit barvu zvýraznění shody, zvolte nabídku **nástroje** , vyberte možnost **Možnosti**a pak zvolte možnost **prostředí**a vyberte možnost **písma a barvy**. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor**a potom v seznamu **Zobrazit položky** vyberte možnost **Najít zvýraznění (rozšíření)** .
+ Chcete-li změnit barvu zvýraznění shody, zvolte nabídku **nástroje** , vyberte možnost **Možnosti**a pak zvolte možnost **prostředí**a vyberte možnost **písma a barvy**. V seznamu **Zobrazit nastavení pro** vyberte možnost **textový editor**a potom v seznamu **Zobrazit položky** vyberte možnost **Najít zvýraznění (rozšíření)**.
 
 ### <a name="searching-tool-windows"></a>Hledání v oknech nástrojů
  Můžete použít ovládací prvek **Najít** v okně Code nebo text, jako je například **výstupní** okna a **výsledky hledání** v oknech výsledků, a to tak, že v nabídce **Upravit** vyberete **Najít a nahradit** nebo (CTRL + F).
@@ -74,7 +74,7 @@ Můžete vyhledat a nahradit text v editoru kódu sady Visual Studio a určitýc
  Když zvolíte **Najít vše**, otevře se okno **výsledky hledání** a zobrazí se seznam shod pro vaše hledání. Výběr výsledku v seznamu zobrazí přidružený soubor a zvýrazní shodu. Pokud soubor ještě není otevřen pro úpravy, je otevřen na kartě náhledu na pravé straně karty. Pomocí ovládacího prvku **hledání** můžete vyhledat seznam **výsledků hledání** .
 
 ### <a name="creating-custom-search-folder-sets"></a>Vytváření vlastních sad složek výsledků hledání
- Rozsah vyhledávání můžete definovat tak, že kliknete na tlačítko **Zvolit složky výsledků hledání** (vypadá to jako **...** ) vedle pole **Hledat v** . V dialogovém okně **Zvolit složky výsledků hledání** můžete zadat sadu složek, ve kterých se má hledat, a uložit specifikaci, aby ji bylo možné znovu použít později. Složky na vzdáleném počítači můžete zadat pouze v případě, že je namapovaná jednotka na místní počítač.
+ Rozsah vyhledávání můžete definovat tak, že kliknete na tlačítko **Zvolit složky výsledků hledání** (vypadá to jako **...**) vedle pole **Hledat v** . V dialogovém okně **Zvolit složky výsledků hledání** můžete zadat sadu složek, ve kterých se má hledat, a uložit specifikaci, aby ji bylo možné znovu použít později. Složky na vzdáleném počítači můžete zadat pouze v případě, že je namapovaná jednotka na místní počítač.
 
 ### <a name="creating-custom-component-sets"></a>Vytváření vlastních sad součástí
  Sady součástí můžete definovat jako rozsah hledání tak, že vyberete tlačítko **Upravit sadu vlastních komponent** vedle pole **Hledat v** . Můžete určit nainstalované komponenty .NET nebo COM, projekty sady Visual Studio, které jsou součástí vašeho řešení, nebo jakékoli sestavení nebo knihovnu typů (. dll,. tlb,. olb,. exe nebo. ocx). Chcete-li hledat odkazy, vyberte pole **Hledat v odkazech** .

@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565900"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Porozumění modelům, třídám a vztahům
@@ -22,7 +22,7 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
  Toto téma vysvětluje hlavní funkce definice DSL.
 
 ## <a name="the-dsl-definition"></a>Definice DSL
- Když otevřete `Dsl\DslDefinition.dsl`, okno aplikace Visual Studio bude vypadat jako na následujícím obrázku.
+ Po otevření `Dsl\DslDefinition.dsl` se okno aplikace Visual Studio podobá následujícímu obrázku.
 
  ![Návrhář DSL](../modeling/media/dsl_designer.png)
 
@@ -128,9 +128,9 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
  Když vytvoříte relaci v definici DSL, názvy vlastností a vztahů jsou zadané výchozí hodnoty. Můžete je ale změnit.
 
 ## <a name="multiplicities"></a>Mnohočetnostmi
- Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu nastavení násobnosti nula (0..\*) v roli **Catalog** určuje, že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
+ Násobnosti určují, kolik prvků může mít stejnou roli v relaci domény. V příkladu má nastavení násobnosti nula (0.. \* ) v roli **Catalog** , že jakákoli instance třídy domény **vydavatele** může mít tolik odkazů na **PublisherCatalog** vztahů, jak je chcete dát.
 
- Nastavte násobnost role buď zadáním v diagramu, nebo úpravou vlastnosti `Multiplicity` v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
+ Nastavte násobnost role buď zadáním v diagramu, nebo úpravou `Multiplicity` vlastnosti v okně **vlastnosti** . Následující tabulka popisuje nastavení pro tuto vlastnost.
 
 |Typ násobnosti|Popis|
 |-|-|
@@ -148,6 +148,6 @@ Jazyk specifický pro doménu (DSL) je definován souborem definice DSL společn
 
  Odvozený vztah se specializuje na základní vztah. Třídy domény, na které odkazuje, by měly být odvozeny od nebo stejné jako třídy propojené základní relací. Je-li v modelu vytvořen odkaz odvozeného vztahu, jedná se o instanci odvozeného i základního vztahu. V programovém kódu můžete přejít na opačný konec odkazu pomocí vlastností generovaných buď základní třídou, nebo odvozenou třídou.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář Nástroje DSL](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Vizuální C++ definice typedef v Návrhář tříd | Microsoft Docs
+title: Visual C++ definice typedef v Návrhář tříd | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 980c49aafba55e29714d786e492f7bb37a8ca621
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646753"
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>Definice Typedefs jazyka Visual C++ v návrháři tříd
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Příkazy typedef vytvoří jednu nebo více vrstev dereference mezi názvem a jeho nadřízeným typem. Návrhář tříd podporuje C++ typy typedef, které jsou deklarovány pomocí klíčového slova `typedef`, například:
+Příkazy typedef vytvoří jednu nebo více vrstev dereference mezi názvem a jeho nadřízeným typem. Návrhář tříd podporuje typy typedef jazyka C++, které jsou deklarovány pomocí klíčového slova `typedef` , například:
 
 ```
 typedef class coord
@@ -50,9 +50,9 @@ typedef class coord
 };
 ```
 
- Další informace o použití typu `typedef` naleznete v tématu [(NOTINBUILD) typedef specifikátor](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1).
+ Další informace o použití typu naleznete `typedef` v tématu [(NOTINBUILD) typedef specifikátor](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1).
 
- Obrazec C++ typedef má tvar typu určeného v definici TypeDef. Například pokud zdroj deklaruje `typedef class`, má obrazec zaoblené rohy a **třídu**Label. U `typedef struct` tvar má čtvercové rohy a **strukturu**popisku.
+ Prvek jazyka C++ typedef má tvar typu určeného v typedef. Například pokud zdroj deklaruje `typedef class` , má obrazec zaoblené rohy a **třídu**Label. Pro má `typedef struct` obrazec čtvercové rohy a **strukturu**popisku.
 
  Třídy a struktury mohou mít v nich deklarovány vnořené definice typedef. Proto tvary třídy a struktury mohou zobrazit vnořené deklarace typedef jako vnořené tvary.
 
@@ -64,7 +64,7 @@ typedef class coord
 
  *název* : *typ*
 
- – definice typedef
+  – definice typedef
 
  Pokud je to možné, nakreslí čáru přidružení připojující se k *názvu*typu.
 
@@ -72,7 +72,7 @@ typedef class coord
 
  `func: void (*)(int)`
 
- – definice typedef
+  – definice typedef
 
  Definice TypeDef pro ukazatele na funkci. Není vykreslen žádný řádek přidružení.
 
@@ -87,7 +87,7 @@ class A {
 
  `MyInt: int`
 
- – definice typedef
+  – definice typedef
 
  `A`
 
@@ -105,7 +105,7 @@ class A {
 
  `MyB : B`
 
- – definice typedef
+  – definice typedef
 
  Kliknutím pravým tlačítkem myši na obrazec typu typedef a kliknutím na tlačítko **Zobrazit jako přidružení** zobrazíte definici nebo třídu a **alias** čáry spojující dva tvary (podobně jako u asociační čáry).
 
@@ -115,7 +115,7 @@ class A {
 
  `MyBar : Bar`
 
- – definice typedef
+  – definice typedef
 
  Stejné jako výše.
 
@@ -134,13 +134,13 @@ class A {
 
  `MyB : B`
 
- – definice typedef
+  – definice typedef
 
  `A`
 
  Třída
 
- `MyB` je vnořený obrazec typedef.
+ `MyB` je vnořený obrazec typu typedef.
 
  `#include <vector>`
 
@@ -152,11 +152,11 @@ class A {
 
  `typedef vector<int> MyIntVect;`
 
- `vector<T>`Class
+ `vector<T>`Třída
 
  `MyIntVect : vector<int>`
 
- – definice typedef
+  – definice typedef
 
  `class B {};`
 
@@ -166,7 +166,7 @@ class A {
 
  `MyB : B`
 
- – definice typedef
+  – definice typedef
 
  – > B
 
@@ -192,7 +192,7 @@ class A {
 
  `MyIntVect : std::vector<int>`
 
- – definice typedef
+  – definice typedef
 
  `MyVect`
 
@@ -201,4 +201,4 @@ class A {
  -> MyIntVect
 
 ## <a name="see-also"></a>Viz také
- [Práce se specifikátorem typedef vizuálního C++ kódu (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) [(NOTINBUILD)](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
+ [Práce se specifikátorem typedef Visual C++ Code (návrhář tříd)](../ide/working-with-visual-cpp-code-class-designer.md) [(NOTINBUILD)](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::WatchForProviderEvents | Dokumenty společnosti Microsoft
+title: 'IDebugProgramProvider2:: WatchForProviderEvents | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4a48e082556cf96a35ed83afd5008d3240e600b1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721759"
 ---
 # <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
-Umožňuje proces upozorňovat na události portu.
+Umožňuje procesu upozorňování na události portů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,38 +51,38 @@ int WatchForProviderEvents(
 
 ## <a name="parameters"></a>Parametry
 `Flags`\
-[v] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Pro toto volání jsou typické následující příznaky:
+pro Kombinace příznaků z výčtu [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) . Pro toto volání jsou typické následující příznaky:
 
 |Příznak|Popis|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|Volající je spuštěn na vzdáleném počítači.|
-|`PFLAG_DEBUGGEE`|Volající je aktuálně laděn (další informace o zařazování je vrácena pro každý uzel).|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k ladicímu programu, ale nebyl spuštěn.|
-|`PFLAG_REASON_WATCH`|Volající chce sledovat události. Pokud tento příznak není nastaven. pak je odebrána událost zpětného volání a volající již neobdrží oznámení.|
+|`PFLAG_REMOTE_PORT`|Volající je spuštěný na vzdáleném počítači.|
+|`PFLAG_DEBUGGEE`|Volající se právě ladí (pro každý uzel se vrátí další informace o zařazování).|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k, ale nespustí ho ladicí program.|
+|`PFLAG_REASON_WATCH`|Volající chce sledovat události. Pokud tento příznak není nastaven. pak dojde k odebrání události zpětného volání a volající již neobdrží oznámení.|
 
 `pPort`\
-[v] Port, na který je spuštěn volající proces.
+pro Port, na kterém je spuštěn volající proces.
 
 `processId`\
-[v] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury, která obsahuje ID procesu, který obsahuje daný program.
+pro Struktura [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) drží ID procesu, který obsahuje daný program.
 
 `EngineFilter`\
-[v] Pole identifikátorů GUID ladicích modulů přidružených k procesu.
+pro Pole identifikátorů GUID ladicích modulů přidružených k procesu.
 
 `guidLaunchingEngine`\
-[v] GUID ladicího modulu, který spustil tento proces (pokud existuje).
+pro Identifikátor GUID ladicího modulu, který spustil tento proces (pokud existuje)
 
 `pEventCallback`\
-[v] [Objekt IDebugPortNotify2,](../../../extensibility/debugger/reference/idebugportnotify2.md) který přijímá oznámení o události.
+pro Objekt [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) , který obdrží oznámení o událostech.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Pokud volající chce odebrat obslužnou rutinu události, která byla vytvořena s předchozím voláním této metody, volající předá stejné parametry jako poprvé, ale opustí `PFLAG_REASON_WATCH` příznak.
+ Když volající chce odebrat obslužnou rutinu události, která byla navázána s předchozím voláním této metody, volající předává stejné parametry jako první, ale ponechá `PFLAG_REASON_WATCH` příznak.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak implementovat tuto metodu pro **cDebugEngine** objekt, který zveřejňuje rozhraní [IDebugProgramProvider2.](../../../extensibility/debugger/reference/idebugprogramprovider2.md)
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugEngine** , který zpřístupňuje rozhraní [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) .
 
 ```cpp
 STDMETHODIMP CDebugEngine::WatchForProviderEvents(

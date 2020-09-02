@@ -1,5 +1,5 @@
 ---
-title: 'Začínáme s PTVS: Úprava kódu | Dokumentace Microsoftu'
+title: 'Začínáme s PTVS: Úprava kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,31 +10,31 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 2e883970b4b265b1864d53ef6e1f347160e5aeb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62550909"
 ---
 # <a name="getting-started-with-ptvs-editing-code"></a>Začínáme s PTVS: Úpravy kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-PTVS poskytuje produktivní prostředí editoru sady Visual Studio pro jazyk Python.  
+PTVS poskytuje produktivní prostředí editoru Visual studia pro Python.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
- Začněte s základní prázdná šablona projektu aplikace v Pythonu.  
+ Začněte se základní šablonou projektu aplikace Python.  
   
- Začněte psát `from … import` řádek v editoru.  Zobrazí se že seznam rozbalovací dokončení obsahuje úplný seznam modulů, které jsou k dispozici pro import.  Tento seznam se liší v závislosti na vaší verzi Pythonu, co jste nainstalovali knihovny.  Knihovny math slouží jako příklad.  Můžete si všimnout, že při psaní seznam filtrů dokončování těchto položek, včetně znaků jste zadali.  Dokončení příkazu importováním `sin` identifikátor.  
+ Začněte psát `from … import` řádek v editoru.  Zobrazí se seznam dokončených oken s úplným seznamem modulů, které jsou k dispozici pro import.  Tento seznam se liší podle vaší verze Pythonu a těch knihoven, které jste nainstalovali.  Použijte jako příklad knihovnu Math.  Všimněte si, že když zadáte seznam doplňování pro tyto položky, včetně znaků, které jste zadali.  Dokončete příkaz importováním `sin` identifikátoru.  
   
 ```python  
 from math import sin  
   
 ```  
   
- Při psaní kódu, pokud použijete identifikátor, který není vázaný, ale, který najdete ve vašich knihovnách, PTVS nabízí místní rychlé opravy pro přidání odpovídající příkaz import, které potřebujete.  Například, pokud jste zadali `cos`, pak byste viděli **importovat z matematické** nabízí.  
+ Při kódování, pokud použijete identifikátor, který je nevázaný, ale který lze najít ve vašich knihovnách, PTVS nabízí místní rychlou opravu pro přidání příslušného příkazu pro import, který potřebujete.  Pokud jste například zadali `cos` , pak byste viděli **Import ze matematického** nabízení.  
   
- Fragment kódu můžete použít ke generování kódu.  V části nabídky Úpravy zvolte technologie IntelliSense a potom vložit fragment kódu.  Teď zvolte Pythonu a potom def.  Volání funkce `make_dot_string` a přidejte jeden parametr `x`.  Do souboru pro vývoj řízených testů můžete přidat kontrolní výrazy a uvidíte, že už PTVS může nabídnout nové funkce do seznamů dokončení.  
+ K vygenerování kódu můžete použít fragment kódu.  V nabídce Upravit zvolte IntelliSense a pak vložit fragment.  Nyní zvolte Python a pak na def.  Zavolejte funkci `make_dot_string` a přidejte jeden parametr `x` .  Nyní můžete přidat kontrolní výrazy do souboru pro vývoj řízený testováním a vidíte, že PTVS již může nabízet novou funkci v seznamech pro doplňování.  
   
 ```python  
 assert make_dot_string(90) == '          o'  
@@ -42,18 +42,18 @@ assert make_dot_string(180) == 'o'
   
 ```  
   
- Nyní přejděte zpět na tuto novou funkci a začít zápis následující text:  
+ Nyní se vraťte k nové funkci a začněte psát následující text:  
   
 ```python  
 return " " * int(10 * cos(radians(x)) + 10) + "o"  
   
 ```  
   
- Uvidíte, že PTVS předpokládá, že parametr je celé číslo, protože PTVS je analyzován lokalit volání této funkce.   Budete také muset použít rychlé opravy pro import `radians`.  
+ Vidíte, že PTVS předpokládá, že parametr je celé číslo, protože PTVS analyzoval weby volání do této funkce.   K importu budete taky muset použít rychlou opravu `radians` .  
   
- Pomocí jiného fragmentu kódu vytvořte hlavní blok zadáním `main` na nejvyšší úrovně, vyvolání inteligentní značky uživatelského rozhraní pomocí tabulátoru zvolit "def hlavní..."  Napsat smyčku základní volání `make_dot_string`.  Uvidíte, že PTVS ví, že funkce vrátí řetězec podle Pokud stisknete období a najdete v článku nabízené dokončování.  Informace o tomto typu se budou přenášet v rámci celého programu, tak bez ohledu na svoje hodnoty ukládaly, můžeme poskytnout popisy tlačítek a dokončování, které vám pomůže lépe pochopit a psát kód.  
+ Pomocí jiného fragmentu kódu vytvořte hlavní blok zadáním `main` na nejvyšší úrovni, vyvoláním uživatelského rozhraní inteligentních značek a pomocí karty vyberte možnost "def Main...".  Napište smyčku Basic pro volání `make_dot_string` .  Vidíte, že PTVS ví, že funkce vrátí řetězec, když stisknete tečku a zobrazí se nabídka dokončení.  Tyto informace o typu budou v celém programu předávány, takže všude, kde končí vaše hodnoty, můžeme poskytnout popisy a doplňování, které vám pomohou lépe pochopit a napsat kód.  
   
- Přidejte volání pro tisk a měli byste mít hlavní podobný následujícímu:  
+ Přidejte volání pro tisk a měli byste mít hlavní podobnou následující:  
   
 ```python  
 def main ():  
@@ -62,10 +62,10 @@ def main ():
         print(s)  
 ```  
   
- Pokud stisknete klávesu F5, spustí kód v okně cmd.exe a zobrazí tečku oscilační vpřed a zpět.  
+ Když stisknete klávesu F5, kód se spustí v cmd.exe okně a zobrazí se kolísání tečky zpátky.  
   
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
   
 ## <a name="see-also"></a>Viz také  
- [Dokumentace ke službě Wiki](https://github.com/Microsoft/PTVS/wiki/Editor-Features)   
- [Videa můžete začít a Deep Dive PTVS](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [Dokumentace k wikiwebu](https://github.com/Microsoft/PTVS/wiki/Editor-Features)   
+ [PTVS Začínáme a rozsáhlá podrobně videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

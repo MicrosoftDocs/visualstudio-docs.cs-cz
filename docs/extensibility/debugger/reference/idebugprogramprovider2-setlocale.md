@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::SetLocale | Dokumenty společnosti Microsoft
+title: 'IDebugProgramProvider2:: SetLocale | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: dd88eebedc8c6dc5b059cbcd94844ce4191fccc9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721773"
 ---
 # <a name="idebugprogramprovider2setlocale"></a>IDebugProgramProvider2::SetLocale
-Vytvoří národní prostředí, které se má použít pro všechny prostředky specifické pro národní prostředí.
+Vytvoří národní prostředí, které se bude používat pro všechny prostředky specifické pro národní prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,10 +41,10 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametry
 `wLangID`\
-[v] ID jazyka, které chcete vytvořit. Například 1033 pro angličtinu.
+pro ID jazyka, který se má vytvořit Například 1033 pro angličtinu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

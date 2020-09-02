@@ -1,5 +1,5 @@
 ---
-title: Zobrazení využití | Dokumentace Microsoftu
+title: Zobrazení využití | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,42 +14,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 238d821795aaa4e9ef0ac06e117316450b46fda4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145374"
 ---
 # <a name="utilization-view"></a>Zobrazení využití
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Zobrazení využití** zobrazí informace o procesoru, GPU a jiné systémové prostředky, které jsou používány aktuální proces. Zobrazuje průměrnou core využití procesu analyzované, nečinného procesu, proces systému a další procesy, které jsou spuštěny v systému v čase. Nezobrazí, které konkrétní core je aktivní v daném okamžiku. Například pokud dvě jádra každý systém plně využívá kapacitu 50 procent za dané časové období, pak toto zobrazení uvádí využívané jednoho logického jádra. Generuje rozdělení doby profilování do segmentů krátkého formátu času zobrazení. Pro každý segment grafu zobrazí průměrný počet vlákna procesu, které jsou spuštěny na logických jader během tohoto intervalu.  
+**Zobrazení využití** zobrazuje informace o procesoru, GPU a dalších systémových prostředcích, které jsou používány aktuálním procesem. Zobrazuje průměrné využití jádra analyzovaným procesem, nečinného procesu, systémového procesu a dalších procesů, které v systému běží v průběhu času. Nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Například pokud jsou dvě jádra spuštěny na úrovni 50% kapacity za dané časové období, pak toto zobrazení ukazuje, že je využíváno jedno logické jádro. Zobrazení je vygenerováno vydělením času profilace na krátké časové segmenty. Pro každý segment graf znázorňuje průměrný počet vláken procesů, které jsou během daného intervalu spuštěny na logických jádrech.  
   
  ![Zobrazení využití procesoru](../profiling/media/vsts-ppacpuutil.png "VSTS_PPAcpuUtil")  
   
- Graf zobrazuje čas (na ose x) a průměrnou logických jader, které využívají cílového procesu, proces nečinnosti a systémový proces. (Nečinného procesu se zobrazí nečinných jader. Systémový proces je proces ve Windows, které provádí práci jménem jiných procesů). Zbývající procesy, které jsou spuštěny na systémový účet pro využití jakékoli zbývající jader.  
+ Graf znázorňuje čas (na ose x) a průměrné logické jádra, které jsou využívány cílovým procesem, nečinným procesem a procesem systému. (Nečinný proces zobrazuje jádra nečinných. Systémový proces je proces ve Windows, který může provádět práci jménem jiných procesů.) Zbývající procesy, které jsou spuštěny na účtu systému pro využití všech zbývajících jader.  
   
- Počet logických jader je zobrazen na ose y. Windows považuje za současné podpoře multithreadingu v hardwaru logických jader (například technologie Hyper-Threading). Proto systém, který má čtyřjádrový procesor, které podporují dva hardwarových vláken na jádro se zobrazí jako systém osm logické jádro. To platí i pro zobrazení jader. Další informace najdete v tématu [zobrazení jader](../profiling/cores-view.md).  
+ Počet logických jader se zobrazuje na ose y. Systém Windows zpracovává souběžnou podporu multithreadingu v hardwaru jako logické jádra (například technologie Hyper-Threading). Proto systém, který má čtyřjádrový procesor, který podporuje dvě hardwarové vlákna na jádro, se zobrazí jako systém se osm logickými jádry. To platí i pro zobrazení jader. Další informace najdete v tématu [zobrazení jader](../profiling/cores-view.md).  
   
- Graf aktivity GPU zobrazuje počet modulů, DirectX používanou v čase.  Modul je používán, pokud zpracovává paketu DMA.  V grafu nezobrazí konkrétní modul DirectX (například 3D modulu, modul Video a ostatní).  
+ Graf aktivity GPU zobrazuje počet používaných modulů DirectX v průběhu času.  Modul se používá, pokud zpracovává paket DMA.  V grafu se nezobrazuje konkrétní modul DirectX (například 3D modul, video stroj a ostatní).  
   
 ## <a name="purpose"></a>Účel  
- Zobrazení využití jako výchozí bod pro vyšetřování výkonu doporučujeme při použití Vizualizátor souběžnosti. Protože v čase poskytuje přehled o stupeň souběžnosti v aplikaci, můžete použít a rychle identifikovat oblasti, které vyžadují optimalizace výkonu nebo paralelního zpracování.  
+ Když použijete Vizualizátor souběžnosti, doporučujeme zobrazení využití jako výchozí bod pro vyšetřování výkonu. Vzhledem k tomu, že poskytuje přehled o stupních souběžnosti v aplikaci v čase, můžete ho použít k rychlé identifikaci oblastí, které vyžadují vyladění výkonu nebo paralelní zpracování.  
   
- Pokud vás zajímá optimalizace výkonu, budete asi zkouší identifikovat chování, která nesplňuje vaše očekávání. Můžete také hledat existence a příčinu oblastí, které mají nízké využití logických jader procesoru. Může také být hledáte vzory využití mezi CPU a GPU.  
+ Pokud vás zajímá ladění výkonu, možná se snažíte identifikovat chování, které nesplňuje vaše očekávání. Můžete také vyhledat existenci a příčinu oblastí, které mají nízké využití logických jader procesoru. Můžete také vyhledat vzory využití mezi CPU a GPU.  
   
- Pokud vás zajímá paralelní provádění aplikace, které pravděpodobně hledáte buď oblasti vázané na procesor provádění nebo oblasti, ve kterém se využitím procesoru.  
+ Pokud vás zajímá virtuálního aplikaci, pravděpodobně si vyhledáte oblasti spuštění vázané na procesor nebo oblasti, kde nevyužíváte procesor.  
   
- Oblasti vázané na procesor, jsou zelená. Graf zobrazuje jedno jádro využívané, pokud je aplikace sériového portu.  
+ Oblasti vázané na procesor jsou zelené. Graf ukazuje, že pokud je aplikace sériová, je využívána jedním jádrem.  
   
- Oblasti, ve kterém se využitím procesoru jsou šedé. To může představovat body, na kterých je aplikace nečinnosti nebo provádí blokování vstupně-výstupních operací, které poskytují možnosti pro paralelismus podle překrývající se v další práci vázané na procesor.  
+ Oblasti, ve kterých nevyužíváte CPU, jsou šedé. Ty můžou představovat body, ve kterých je aplikace nečinná, nebo zablokované vstupně-výstupní operace, které poskytují příležitosti pro paralelismus překrývajícími se s ostatními práce vázané na procesor.  
   
- Zjistíte chování, které vás zajímají, si můžete přiblížit v dané oblasti tak, že ho vyberete. Po přiblížíte, můžete přepnout na zobrazení vláken nebo zobrazení jader pro podrobnější analýzu.  
+ Když zjistíte chování, můžete ho v této oblasti přiblížit tak, že ho vyberete. Po přiblížení můžete přepnout do zobrazení vlákna nebo zobrazení jádra pro podrobnější analýzu.  
   
- Pokud používáte GPU s použitím jazyka C++ AMP nebo DirectX, může zajímat identifikační číslo modulů GPU v použití nebo oblastech, kde je neočekávaně nečinnosti GPU.  
+ Pokud používáte GPU pomocí C++ AMP nebo DirectX, může vás zajímat, jak zjistit počet používaných motorů GPU nebo v oblastech, ve kterých je GPU neočekávaně nečinný.  
   
-## <a name="zooming"></a>Změna měřítka zobrazení  
- Přiblížit na graf využití procesoru nebo graf aktivity GPU, vyberte oddíl nebo použijte nástroj posuvník přiblížení nad grafem. Nastavení přiblížení či oddálení přetrvává při přepínání s dalšími zobrazeními. Znovu zmenšíte pomocí nástroje jezdce přiblížení. Můžete také přiblížit, oddálit stisknutím klávesy Ctrl a posouvání.  
+## <a name="zooming"></a>Přibližování  
+ Pokud se chcete přiblížit do grafu využití procesoru nebo grafu aktivity GPU, vyberte oddíl nebo použijte nástroj Lupa nad grafem. Nastavení přiblížení zůstává při přepínání na další zobrazení. K opětovnému přiblížení použijte nástroj Lupa posuvníku. Můžete také zvětšit pomocí kombinace kláves CTRL + SCROLL.  
   
 ## <a name="see-also"></a>Viz také  
  [Vizualizátor souběžnosti](../profiling/concurrency-visualizer.md)   

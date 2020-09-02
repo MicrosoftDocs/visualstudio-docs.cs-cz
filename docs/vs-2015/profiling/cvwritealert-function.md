@@ -1,5 +1,5 @@
 ---
-title: Cvwritealert – funkce | Dokumentace Microsoftu
+title: Funkce Cvwritealert – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,16 +20,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f5c428b471c576c1ca15b73a1c8b2ccfa2cc7b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551218"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zapíše upozornění do souboru trasování vizualizátoru souběžnosti.  
+Zapíše výstrahu do trasovacího souboru Vizualizátor souběžnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,23 +59,23 @@ HRESULT CvWriteAlertVA(
   
 #### <a name="parameters"></a>Parametry  
  `argList`  
- Seznam argumentů.  
+ Seznam argumentů  
   
  `pMarkerSeries`  
- Platné značky řady kontextu. Nemůže mít hodnotu NULL.  
+ Platný kontext řady značek Nemůže mít hodnotu NULL.  
   
  `pMessage`  
- Řetězec formátu zprávy. Nemůže mít hodnotu NULL.  
+ Řetězec formátu zprávy Nemůže mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
+ S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** cvmarkers. h  
   
- **Unicode:** CvWriteAlertW, CvWriteAlertVW  
+ **Kódování Unicode:** CvWriteAlertW, CvWriteAlertVW  
   
- **ANSI:** Cvwritealerta – cvwritealertva –  
+ **ANSI:** CvWriteAlertA, CvWriteAlertVA  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)
+ [Referenční dokumentace knihovny C++](../profiling/cpp-library-reference.md)

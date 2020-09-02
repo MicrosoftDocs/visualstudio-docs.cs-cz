@@ -1,5 +1,5 @@
 ---
-title: 'marker_series:: ~ marker_series – destruktor | Dokumentace Microsoftu'
+title: 'marker_series:: ~ marker_series destruktor | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,27 +14,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4d363b554babfbac994d9ec71eddbefd68f38d50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62562813"
 ---
-# <a name="markerseriesmarkerseries-destructor"></a>marker_series::~marker_series – destruktor
+# <a name="marker_seriesmarker_series-destructor"></a>marker_series::~marker_series – destruktor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Odstraní objekt marker_series – a uvolní všechny přidělené prostředky.  
+Zničí marker_series objekt a uvolní všechny přidělené prostředky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~marker_series();  
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** cvmarkersobj. h  
   
- **Namespace:** Concurrency::diagnostic  
+ **Obor názvů:** Concurrency::d odeslání diagnostických  
   
 ## <a name="see-also"></a>Viz také  
  [marker_series – třída](../profiling/marker-series-class.md)

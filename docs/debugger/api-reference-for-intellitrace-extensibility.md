@@ -1,5 +1,5 @@
 ---
-title: Reference k rozhraní API pro rozšiřitelnost technologie IntelliTrace | Dokumentace Microsoftu
+title: Reference k rozhraní API pro rozšiřitelnost IntelliTrace | Microsoft Docs
 ms.date: 11/07/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +11,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fb5044059fa005c1d67b3b7055a294bb22e124e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62564291"
 ---
-# <a name="api-reference-for-intellitrace-extensibility"></a>Reference k rozhraní API pro rozšiřitelnost technologie IntelliTrace
+# <a name="api-reference-for-intellitrace-extensibility"></a>Reference k rozhraní API pro rozšiřitelnost IntelliTrace
 
-Rozšiřitelnost technologie IntelliTrace rozhraní API podle informací uvedených v této části slouží ke čtení a dekódovat soubory .itrace ve vaší aplikaci.
+Pomocí informací v této části můžete použít rozhraní API pro rozšiřitelnost IntelliTrace ke čtení a dekódování souborů. iTrace ve vaší aplikaci.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 
-Tento obor názvů obsahuje rozhraní API pro rozšiřitelnost technologie IntelliTrace:
+Tento obor názvů obsahuje rozhraní API pro rozšiřitelnost IntelliTrace:
 
 - <xref:Microsoft.VisualStudio.IntelliTrace>
 
 ## <a name="related-sections"></a>Související oddíly
 
-[IntelliTrace](../debugger/intellitrace.md) poskytuje informace o tom, jak ladit pomocí nástroje IntelliTrace.
+[IntelliTrace](../debugger/intellitrace.md) Poskytuje informace o tom, jak ladit pomocí IntelliTrace.
 
-[Ukázky kódu vývojáře](https://code.msdn.microsoft.com/) hostuje ukázkovou aplikaci ukazující způsob použití rozšiřitelnost technologie IntelliTrace.
+[Ukázky kódu pro vývojáře](https://code.msdn.microsoft.com/) Hostuje ukázkovou aplikaci, která ukazuje, jak používat rozšíření IntelliTrace.

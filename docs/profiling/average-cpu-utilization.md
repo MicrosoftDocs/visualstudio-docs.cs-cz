@@ -1,5 +1,5 @@
 ---
-title: Průměrné využití procesoru | Dokumenty společnosti Microsoft
+title: Průměrné využití procesoru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 01557fb378f03ffd033495ca42024c1143e67187
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62776995"
 ---
 # <a name="average-cpu-utilization"></a>Průměrné využití procesoru
-Zobrazuje průměrné využití logického jádra systému po dobu trvání procesu. Graf neukazuje, které konkrétní jádro je v daném okamžiku aktivní. Pokud jsou například dvě jádra spuštěna s kapacitou 50 % pro dané časové období, zobrazí se v tomto zobrazení jedno využité logické jádro.
+Zobrazuje průměrné využití logických jader systému v rámci daného procesu po dobu trvání procesu. Graf nezobrazuje, které konkrétní jádro je v určitou dobu aktivní. Pokud je například každý z nich spuštěný v 50% kapacitě za dané časové období, zobrazí se v tomto zobrazení jeden logický základ, který je využíván.
 
 ## <a name="see-also"></a>Viz také
 - [Zobrazení jader](../profiling/cores-view.md)

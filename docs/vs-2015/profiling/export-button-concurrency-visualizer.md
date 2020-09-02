@@ -1,5 +1,5 @@
 ---
-title: Tlačítko Exportovat (vizualizér souběžnosti) | Dokumentace Microsoftu
+title: Tlačítko Exportovat (Vizualizér souběžnosti) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1717c17a3a881d138b566f37e07456ded16f22c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197720"
 ---
 # <a name="export-button-concurrency-visualizer"></a>Tlačítko Exportovat (Vizualizér souběžnosti)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Exportovat** tlačítko umožňuje exportovat jako soubor CSV pro vlastní potřebu nebo pomocí jiného nástroje, jako je například aplikace Microsoft Excel v zásobníku volání.  
+Tlačítko **exportovat** umožňuje exportovat zásobník volání jako soubor. CSV pro vaše vlastní záznamy nebo pro použití s jiným nástrojem, jako je Microsoft Excel.  
   
 ## <a name="see-also"></a>Viz také  
  [Vizualizátor souběžnosti](../profiling/concurrency-visualizer.md)   

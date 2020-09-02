@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::GetCustomAttributeByName | Microsoft Docs
+title: 'IDebugCustomAttributeQuery2:: GetCustomAttributeByName – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e1af059cf4319c18b8f8bb63e7b50ec3d2822e93
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568431"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá počet bajtů vlastní atributy název vlastního atributu.  
+Získá vlastní bajty atributů podle názvu vlastního atributu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,23 +44,23 @@ int GetCustomAttributeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszCustomAttributeName`  
- [in] Řetězec obsahující název vlastního atributu má hledat.  
+ pro Řetězec obsahující název vlastního atributu, který má být hledán.  
   
  `ppBlob`  
- [out v] Pole, které se vyplní bajtů vlastního atributu.  
+ [in, out] Pole, které je vyplněno s vlastními bajty atributů.  
   
  `pdwLen`  
- [out v] Určuje maximální počet bajtů, které mají vracet v `ppBlob` pole a vrátí počet bajtů zapsaný ve skutečnosti na pole.  
+ [in, out] Určuje maximální počet bajtů, které mají být v `ppBlob` poli vráceny, a vrátí počet bajtů, které jsou ve skutečnosti zapsány do pole.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě vlastního atributu neexistuje. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud vlastní atribut neexistuje. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Nastavte `ppBlob` atributy parametr na hodnotu null, vrátí počet bajtů, které jsou k dispozici. Potom přidělit pole a předejte toto pole v pro `ppBlob` parametru.  
+ Nastavte `ppBlob` parametr na hodnotu null, která vrátí počet dostupných bajtů atributů. Pak přidělte pole a předejte ho do pole pro `ppBlob` parametr.  
   
- Atribut bajtů představují nezpracovaná data vlastního atributu.  
+ Bajty atributů reprezentují nezpracovaná data vlastního atributu.  
   
- Pokud `ppBlob` a `pdwLen` parametry jsou nastaveny na hodnotu null, tato metoda slouží k určení, zda je vlastní atribut pouze existuje. Jednodušší alternativu, je však volat [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) metody.  
+ Pokud `ppBlob` `pdwLen` jsou parametry a nastaveny na hodnotu null, lze tuto metodu použít k určení, zda vlastní atribut existuje pouze. Jednodušší alternativa je však volat metodu [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   

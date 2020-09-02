@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNodeAttach2::OnAttach | Dokumenty společnosti Microsoft
+title: 'IDebugProgramNodeAttach2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: dfb8a39af3c030dadddcb148a79a96b57f20e183
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721874"
 ---
 # <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
-Připojí se k přidruženému programu nebo odloží proces připojení k metodě [Attach.](../../../extensibility/debugger/reference/idebugengine2-attach.md)
+Připojí se k přidruženému programu nebo odloží proces připojení k metodě [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ int OnAttach(
 
 ## <a name="parameters"></a>Parametry
 `guidProgramId`\
-[v] `GUID` přiřadit přidruženému programu.
+[in] `GUID` k přiřazení k přidruženému programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je `S_OK`úspěšná, vrátí . Vrátí, `S_FALSE` pokud [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda by neměla být volána. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí `S_OK` . Vrátí, `S_FALSE` zda by metoda [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) neměla být volána. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána během procesu připojení, před [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda je volána. Metoda `OnAttach` může provést samotný proces připojení (v takovém `S_FALSE`případě tato metoda vrátí `IDebugEngine2::Attach` ) `OnAttach` nebo `S_OK`odložit proces připojení k metodě (metoda vrátí). V obou případech `OnAttach` může metoda `GUID` nastavit program, který je `GUID`laděn na daný .
+ Tato metoda je volána během procesu připojení před voláním metody [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) . `OnAttach`Metoda může provádět samotný proces připojení (v takovém případě se tato metoda vrátí `S_FALSE` ) nebo odložit proces připojení k `IDebugEngine2::Attach` metodě ( `OnAttach` Metoda vrátí hodnotu `S_OK` ). V obou událostech `OnAttach` může metoda nastavit program, který je `GUID` laděn na dané `GUID` .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)

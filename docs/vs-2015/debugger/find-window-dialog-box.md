@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Najít | Dokumentace Microsoftu
+title: Dialogové okno Najít okno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,61 +13,61 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 34d6a847f96f548cdf68ed912d23f6a7ee112d54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158485"
 ---
 # <a name="find-window-dialog-box"></a>Dialogové okno vyhledávacího okna
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Použijte toto dialogové okno Vybrat a zobrazit její vlastnosti nebo zprávy. Chcete-li zobrazit toto dialogové okno, zvolte **najít okno** z **Spy** nabídky.  
+Pomocí tohoto dialogového okna můžete vybrat okno a zobrazit jeho vlastnosti nebo zprávy. Chcete-li zobrazit toto dialogové okno, vyberte z nabídky **Spy** možnost **Najít okno** .  
   
  K dispozici jsou následující nastavení:  
   
- **Tažením nástroje hledání**  
- Přetažení nástroj použitý k vyberte časové období.  
+ **Nástroj hledání**  
+ Nástroj přetažení používaný k výběru okna.  
   
- **Skrýt Spy ++**  
- Odebere hlavního okna nástroje Spy ++ a zůstane **najít okno** dialogové okno viditelné nad vaší aplikace.  
+ **Skrýt Spy + +**  
+ Odebere hlavní okno nástroje Spy + + a ponechá dialogové okno **Najít okno** , které se zobrazí v horní části ostatních aplikací.  
   
  **Popisovač**  
- Jedinečné ID v okně Najít.  
+ Jedinečné ID okna, které se má najít  
   
  **Titulek**  
- Text titulek okna.  
+ Text titulku okna  
   
  **Třída**  
- Třídy okna.  
+ Třída okna  
   
- **Styl**  
- Styl okna.  
+ **Řez**  
+ Styl okna  
   
  **Rect**  
- Ohraničující obdélník okna.  
+ Ohraničující obdélník okna  
   
- **Zobrazit vlastnosti nebo zprávy.**  
- Určuje, zda kliknutím na tlačítko OK se zobrazí [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md) nebo otevřete [zobrazení zpráv](../debugger/messages-view.md).  
+ **Zobrazit vlastnosti nebo zprávy**  
+ Určuje, zda se po stisknutí tlačítka OK zobrazí [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md) nebo otevření [zobrazení zpráv](../debugger/messages-view.md).  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Pomocí vyhledávacího nástroje](../debugger/how-to-use-the-finder-tool.md)  
- Ukazuje, jak tento nástroj kontroluje windows pro vlastnosti nebo zprávy.  
+ [Použití nástroje Finder](../debugger/how-to-use-the-finder-tool.md)  
+ Ukazuje, jak tento nástroj skenuje okna pro vlastnosti nebo zprávy.  
   
  [Zobrazení oken](../debugger/windows-view.md)  
- Zobrazí strom dostupné oken a ovládacích prvků.  
+ Zobrazí stromové zobrazení dostupných oken a ovládacích prvků.  
   
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.  
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Dialogové okno hledání oken](../debugger/window-search-dialog-box.md)  
- Umožňuje najít uzel pro konkrétní okno v zobrazení pro Windows.  
+ Slouží k vyhledání uzlu pro konkrétní okno v zobrazení systému Windows.  
   
  [Dialogové okno vlastností oken](../debugger/window-properties-dialog-box.md)  
- Slouží k zobrazení vlastností okna vybrána v zobrazení Windows.  
+ Slouží k zobrazení vlastností okna vybraného v zobrazení Windows.  
   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.
