@@ -8,10 +8,10 @@ ms.workload:
 - uwp
 author: corob-msft
 ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285606"
 ---
 # <a name="how-to-test-a-c-dll"></a>Postup testování knihovny DLL jazyka C++
@@ -22,7 +22,7 @@ V tomto tématu se dozvíte, jak používat testování částí jako první kro
 
 Toto téma také vytvoří jedno řešení sady Visual Studio a samostatné projekty pro testování částí a knihovnu DLL, kterou chcete testovat. Můžete také zahrnout testy jednotek přímo do projektu knihovny DLL, nebo můžete vytvořit samostatná řešení pro testy jednotek a. DLL. Tipy, které struktury se mají použít, najdete v tématu [Přidání testů jednotek do stávajících aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
 
-## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a>Vytvořit řešení a projekt testování částí
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Vytvořit řešení a projekt testování částí
 
 ::: moniker range="vs-2019"
 
@@ -58,7 +58,7 @@ Začněte vytvořením nového testovacího projektu. V nabídce **soubor** klik
 
          Při spuštění testů je vytvořena instance každé testovací třídy. Testovací metody jsou volány v nespecifikovaném pořadí. Můžete definovat speciální metody, které jsou vyvolány před a za každým modulem, třídou nebo metodou. Další informace naleznete v tématu [using Microsoft. VisualStudio. TestTools. CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md).
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a>Ověřte, zda jsou testy spuštěny v Průzkumníku testů
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Ověřte, zda jsou testy spuštěny v Průzkumníku testů
 
 1. Vložte nějaký kód testu:
 
@@ -77,7 +77,7 @@ Začněte vytvořením nového testovacího projektu. V nabídce **soubor** klik
 
      ![Průzkumník testů](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a>Přidat projekt knihovny DLL do řešení
+## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> Přidat projekt knihovny DLL do řešení
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
     ```
 
-## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a>Zviditelnit funkce knihovny DLL pro testovací kód
+## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a> Zviditelnit funkce knihovny DLL pro testovací kód
 
 1. Přidejte RooterLib do projektu RooterLibTests.
 
@@ -196,7 +196,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
    Nastavili jste test a projekty kódu a ověřili jste, že můžete spouštět testy, které spouštějí funkce v projektu kódu. Nyní můžete začít psát skutečné testy a kód.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a>Iterativní rozšíření testů a jejich předání
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Iterativní rozšíření testů a jejich předání
 
 1. Přidat nový test:
 
@@ -256,7 +256,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 > [!TIP]
 > Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
 
-## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a>Ladění neúspěšného testu
+## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> Ladění neúspěšného testu
 
 1. Přidejte další test do *UnitTest1. cpp*:
 
@@ -325,7 +325,7 @@ V **Průzkumník řešení**vyberte název řešení. V místní nabídce zvolte
 
    ![Všechny testy Pass](../test/media/ute_ult_alltestspass.png)
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a>Refaktoring kódu bez změny testů
+## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> Refaktoring kódu bez změny testů
 
 1. Zjednodušení centrálního výpočtu ve `SquareRoot` funkci:
 

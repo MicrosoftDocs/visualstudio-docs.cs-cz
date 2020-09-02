@@ -1,5 +1,5 @@
 ---
-title: Podmíněné konstrukty nástroje MSBuild | Dokumentace Microsoftu
+title: Podmíněné konstrukce MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -24,24 +24,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b7b22f63d5d3d6e0b1f7789561029bbfbfb4cdf4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143769"
 ---
 # <a name="msbuild-conditional-constructs"></a>Podmíněné konstrukty nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje mechanismus pro buď / nebo zpracování s [zvolit](../msbuild/choose-element-msbuild.md), [při](../msbuild/when-element-msbuild.md), a [jinak](../msbuild/otherwise-element-msbuild.md) elementy.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje mechanismus pro nebo pro zpracování pomocí prvků [Choose](../msbuild/choose-element-msbuild.md), [when](../msbuild/when-element-msbuild.md)a [jinak](../msbuild/otherwise-element-msbuild.md) .  
   
-## <a name="using-the-choose-element"></a>Použití Choose – Element  
- `Choose` Element obsahuje posloupnost `When` prvky s `Condition` atributy, které jsou testovány v pořadí od shora dolů, dokud nebude vyhodnocen jako jeden `true`. Pokud více než jeden `When` vyhodnotí jako element `true`, je použita pouze první z nich. `Otherwise` Element, pokud jsou k dispozici, budou vyhodnoceny, pokud žádná podmínka na `When` vyhodnotí jako element `true`.  
+## <a name="using-the-choose-element"></a>Použití elementu Choose  
+ `Choose`Element obsahuje řadu `When` prvků s `Condition` atributy, které jsou testovány v pořadí shora dolů, dokud se jedna nevyhodnotí `true` . Pokud je více než jeden `When` prvek vyhodnocen `true` , je použita pouze první z nich. `Otherwise`Element, pokud je přítomen, bude vyhodnocen, pokud není podmínka na `When` element vyhodnocena jako `true` .  
   
- `Choose` prvky lze použít jako podřízené prvky `Project`, `When` a `Otherwise` elementy. `When` a `Otherwise` prvky mohou mít `ItemGroup`, `PropertyGroup`, nebo `Choose` podřízené prvky.  
+ `Choose` prvky lze použít jako podřízené prvky prvku `Project` `When` a `Otherwise` prvky. `When``Otherwise`prvky a mohou mít `ItemGroup` , `PropertyGroup` nebo `Choose` podřízené prvky.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu `Choose` a `When` prvky pro buď / nebo zpracování. Nastavení vlastnosti a položky projektu závisí na hodnotě `Configuration` vlastnost.  
+ V následujícím příkladu jsou použity `Choose` `When` prvky a pro zpracování nebo nebo. Vlastnosti a položky projektu jsou nastaveny v závislosti na hodnotě `Configuration` Vlastnosti.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
@@ -80,7 +80,7 @@ ms.locfileid: "68143769"
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Choose – Element (MSBuild)](../msbuild/choose-element-msbuild.md)   
- [Když – Element (MSBuild)](../msbuild/when-element-msbuild.md)   
- [Otherwise – Element (MSBuild)](../msbuild/otherwise-element-msbuild.md)   
+ [Choose – element (MSBuild)](../msbuild/choose-element-msbuild.md)   
+ [When – element (MSBuild)](../msbuild/when-element-msbuild.md)   
+ [Jinak – element (MSBuild)](../msbuild/otherwise-element-msbuild.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

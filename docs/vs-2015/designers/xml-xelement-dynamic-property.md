@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c794d79d62fc580001efc5cf16993d4ac5fef48b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663849"
 ---
 # <a name="xml-xelement-dynamic-property"></a>XML (dynamická vlastnost XElement)
@@ -23,17 +23,17 @@ ms.locfileid: "72663849"
 
 Získá neformátovaný obsah XML elementu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 elem.Xml
 ```
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
- @No__t_0, která představuje neformátovaný obsah XML elementu.
+ <xref:System.String>Který představuje neformátovaný obsah XML elementu.
 
 ## <a name="remarks"></a>Poznámky
- Tato vlastnost je ekvivalentní metodě <xref:System.Xml.Linq.XNode.ToString%28System.Xml.Linq.SaveOptions%29> <xref:System.Xml.Linq.XNode?displayProperty=fullName> třídy s parametrem `SaveOptions` nastaveným na <xref:System.Xml.Linq.SaveOptions>.
+ Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XNode.ToString%28System.Xml.Linq.SaveOptions%29> metodě <xref:System.Xml.Linq.XNode?displayProperty=fullName> třídy s `SaveOptions` parametrem nastaveným na <xref:System.Xml.Linq.SaveOptions> .
 
 ## <a name="see-also"></a>Viz také
  [Hodnota](../designers/value-xelement-dynamic-property.md) [dynamických vlastností třídy XElement](../designers/xelement-class-dynamic-properties.md)

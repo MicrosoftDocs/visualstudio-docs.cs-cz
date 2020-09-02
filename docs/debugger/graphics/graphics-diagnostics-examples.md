@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4df2fafb523d04a8ec222b10e1ac9ed3aa95454d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187929"
 ---
 # <a name="graphics-diagnostics-examples"></a>Příklady diagnostiky grafiky
@@ -38,16 +38,16 @@ Tyto příklady ukazují, jak ladit problémy vykreslování v aplikacích zalo�
 
 - [Návod: Chybějící objekty z důvodu stavu zařízení](walkthrough-missing-objects-due-to-device-state.md)
 
-- [Návod: Chybějící objekty z důvodu použití funkce vertex shading](walkthrough-missing-objects-due-to-vertex-shading.md)
+- [Návod: Chybějící objekty z důvodu použití vertex shaderu](walkthrough-missing-objects-due-to-vertex-shading.md)
 
-- [Návod: Chybějící objekty z důvodu nesprávné konfigurace zřetězení](walkthrough-missing-objects-due-to-misconfigured-pipeline.md)
+- [Návod: Chybějící objekty z důvodu nesprávné konfigurace kanálu](walkthrough-missing-objects-due-to-misconfigured-pipeline.md)
 
 ## <a name="debugging-rendering-errors"></a>Ladění chyb vykreslování
  Objekt (nebo objekty), který nemá správný vzhled, je dalším běžným problémem, který vývojáři grafiky můžou vyzkoušet. Tento druh problému může být obtížné diagnostikovat, protože špatný vzhled a jeho příčina může být v rozsahu od velmi zjevné – svázat špatnou texturu – je to velmi jemné – chyba v kódu shaderu nebo neočekávaná interakce mezi shadery. Některé problémy mohou být způsobeny kombinací chyb.
 
  Tady je scénář, který předvádí, jak můžete pomocí Diagnostika grafiky sledovat problém s nedrobným vykreslováním, který je způsobený menší chybou shaderu:
 
-- [Návod: Ladění chyb při vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
+- [Návod: Ladění chyb vykreslování způsobených stínováním](walkthrough-debugging-rendering-errors-due-to-shading.md)
 
 ## <a name="debugging-compute-shaders"></a>Ladění výpočetních shaderů
  Diagnostika grafiky můžete použít k ladění jader DirectCompute výpočetního shaderu, které generují nesprávné výsledky. Pomocí DirectCompute můžete použít výpočetní výkon GPU k paralelnímu provádění výpočtů velkého množství datových prvků. U určitých druhů problémů může použití GPU mnohem rychleji probíhat, než i dobře optimalizovaný kód procesoru. Tradiční ladicí program ale nedokáže detekovat kód, který běží na GPU. Ladění tohoto druhu kódu vyžaduje specializované nástroje, které jsou často specifické pro dodavatele a nemusí být dobře integrovány se sadou Visual Studio. Aby se ladění výpočetního shaderu v celé řadě GPU shodovalo, Diagnostika grafiky zachytává události odeslání DirectCompute – kromě událostí vykreslování Direct3D, takže můžete používat známé nástroje k ladění problémů v kódu COMPUTE-shader.

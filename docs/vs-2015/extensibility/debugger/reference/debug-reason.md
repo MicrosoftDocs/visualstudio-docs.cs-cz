@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Dokumentace Microsoftu
+title: DEBUG_REASON | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 95a537c703d4afd68bb291205e0c7da8d9b8fc59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143010"
 ---
-# <a name="debugreason"></a>DEBUG_REASON
+# <a name="debug_reason"></a>DEBUG_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, proč byl spuštěn proces pro ladění.  
+Určuje, proč byl proces spuštěn pro ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,27 +49,27 @@ public enum enum_DEBUG_REASON {
   
 #### <a name="parameters"></a>Parametry  
  DEBUG_REASON_ERROR  
- Došlo k chybě nespecifickou (používá se jako výchozí podmínku Pokud žádná z nich důvodů, proč přizpůsobit).  
+ Objevila se nespecifická chyba (ta se používá jako výchozí podmínka, když žádný z ostatních důvodů nevyhovuje).  
   
  DEBUG_REASON_USER_LAUNCHED  
- Proces byl spuštěn na žádost uživatele.  
+ Proces se spustil na žádost uživatele.  
   
  DEBUG_REASON_USER_ATTACHED  
- Již spuštěnému procesu byl připojen k uživatelem.  
+ Již běžící proces byl připojen k uživateli.  
   
  DEBUG_REASON_AUTO_ATTACHED  
- Proces byl automaticky připojen k při jejím spuštění.  
+ Proces byl automaticky připojen k době, kdy byl spuštěn.  
   
  DEBUG_REASON_CAUSALITY  
- Proces byl spuštěn z důvodu *Just-In-Time* ladění události (JIT).  
+ Proces byl spuštěn z důvodu události ladění JIT (Just *-in-time* ).  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátilo [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) metody.  
+ Vráceno z metody [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

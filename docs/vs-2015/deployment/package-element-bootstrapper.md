@@ -1,5 +1,5 @@
 ---
-title: '&lt;Balíček&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;Package – &gt; element (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,18 +17,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 62c19953d1c4d82c0040e728fc2c2645c68589c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157692"
 ---
-# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Balíček&gt; – Element (zaváděcí nástroj)
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package – &gt; element (zaváděcí nástroj)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Package` Prvek je element XML nejvyšší úrovně v rámci souboru balíčku.  
+`Package`Prvek je prvek XML nejvyšší úrovně uvnitř souboru balíčku.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Package  
@@ -144,16 +144,16 @@ ms.locfileid: "68157692"
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Package` Je vyžadován element. Má následující atributy.  
+ `Package`Element je povinný. Má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Culture`|Povinný parametr. Určuje jazykovou verzi pro tento balíček, který určuje jazyk, který chcete použít. Tento atribut je klíč do `Strings` element, který obsahuje seznam řetězců specifické pro jazykovou verzi pro názvy produktů a chybové zprávy během instalace.|  
-|`Name`|Povinný parametr. Název balíčku zobrazeného vývojářům v rámci nástroje, jako [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Tento atribut je klíč do `Strings` element, který by měl obsahovat `String` element s `Name` a `Culture` vlastnosti nastavené tak, aby odpovídaly `Name` a `Culture` vlastnosti `Package`.|  
-|`LicenseAgreement`|Volitelné. Určuje název souboru v distribuci balíčku, který obsahuje licenční smlouvy s koncovým uživatelem (EULA).  Tento soubor může být prostý text (TXT) nebo formátu RTF. (RTF)|  
+|`Culture`|Povinná hodnota. Definuje jazykovou verzi tohoto balíčku, která určuje jazyk, který se má použít. Tento atribut je klíč k `Strings` elementu, který uvádí řetězce pro názvy produktů a chybové zprávy, které jsou specifické pro jazykovou verzi, během instalace.|  
+|`Name`|Povinná hodnota. Název balíčku zobrazený pro vývojáře v rámci nástroje, jako je například [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Tento atribut je klíč do `Strings` prvku, který by měl obsahovat `String` element s `Name` `Culture` vlastnostmi a nastavenými tak, aby odpovídaly `Name` `Culture` vlastnostem a `Package` .|  
+|`LicenseAgreement`|Nepovinný parametr. Určuje název souboru v distribučním balíčku, který obsahuje licenční smlouvu s koncovým uživatelem (EULA).  Tento soubor může být ve formátu prostého textu (. txt) nebo formátovaného textu. (. RTF)|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje kompletní soubor balíčku pro redistribuci [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)].  
+ Následující příklad kódu ukazuje kompletní soubor balíčku pro redistribuci [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

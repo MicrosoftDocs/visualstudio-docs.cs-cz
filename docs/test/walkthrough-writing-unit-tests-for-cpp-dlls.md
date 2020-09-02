@@ -8,10 +8,10 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816004"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro knihovny DLL C++
@@ -34,7 +34,7 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL jazyka C++ pomocí met
 
 8. [Izolujte jednotky od externích prostředků](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md). Obvykle je knihovna DLL závislá na dalších součástech systému, které vyvíjíte, například jiných knihoven DLL, databází nebo vzdálených subsystémů. Je vhodné testovat každou jednotku v izolaci z jejích závislostí. Externí komponenty můžou testy běžet pomalu. Během vývoje nemusí být ostatní součásti dokončeny.
 
-## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a>Vytvořit nativní projekt testu jednotek
+## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> Vytvořit nativní projekt testu jednotek
 
 1. V nabídce **soubor** klikněte na příkaz **Nový**  >  **projekt**.
 
@@ -82,7 +82,7 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL jazyka C++ pomocí met
 
          ![Průzkumník testů jednotek s jedním úspěšným testem](../test/media/utecpp04.png)
 
-## <a name="create-a-dll-project"></a><a name="create_dll_project"></a>Vytvoření projektu knihovny DLL
+## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> Vytvoření projektu knihovny DLL
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
 ::: moniker-end
 
-## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a>Spojit projekt testů s projektem knihovny DLL
+## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a> Spojit projekt testů s projektem knihovny DLL
 
 1. Přidejte projekt knihovny DLL do odkazů projektu testovacího projektu:
 
@@ -194,7 +194,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
    Nastavili jste test a projekty kódu a ověřili jste, že můžete spouštět testy, které spouštějí funkce v projektu kódu. Nyní můžete začít psát skutečné testy a kód.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a>Iterativní rozšíření testů a jejich předání
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Iterativní rozšíření testů a jejich předání
 
 1. Přidat nový test:
 
@@ -252,7 +252,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
     > [!TIP]
     > Vývoj kódu přidáním testů po jednom. Ujistěte se, že všechny testy proběhnou po každé iteraci.
 
-## <a name="debug-a-failing-test"></a><a name="debug"></a>Ladění neúspěšného testu
+## <a name="debug-a-failing-test"></a><a name="debug"></a> Ladění neúspěšného testu
 
 1. Přidat další test:
 
@@ -337,7 +337,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
 ::: moniker-end
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a>Refaktoring kódu bez změny testů
+## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Refaktoring kódu bez změny testů
 
 1. Zjednodušení centrálního výpočtu ve funkci SquareRoot:
 
@@ -366,7 +366,7 @@ Následující kroky ukazují, jak vytvořit projekt knihovny DLL v aplikaci Vis
 
    Můžete také pověřit minimální úroveň pokrytí kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přidat testy částí do stávajících aplikací C++](../test/how-to-use-microsoft-test-framework-for-cpp.md)
 - [Používání atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)

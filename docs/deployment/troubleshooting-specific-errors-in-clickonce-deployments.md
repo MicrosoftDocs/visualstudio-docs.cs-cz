@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fac7f18244aaa32667514766ad6d393408997e51
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235157"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>Řešení konkrétních chyb v nasazeních ClickOnce
@@ -47,7 +47,7 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
 
 - Určete, jestli k této chybě došlo, protože `deploymentProvider` Adresa URL v manifestu nasazení odkazuje na jiné místo, než je adresa URL, která se používá pro aktivaci.
 
-- Zajistěte, aby byly na serveru přítomny všechny soubory. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]protokol by měl sdělit, který soubor nebyl nalezen.
+- Zajistěte, aby byly na serveru přítomny všechny soubory. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] protokol by měl sdělit, který soubor nebyl nalezen.
 
 - Podívejte se, jestli nedochází k problémům se síťovým připojením. Tato zpráva se zobrazí, pokud klientský počítač přešel do režimu offline během stahování.
 
@@ -68,13 +68,13 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
 
 - Ověřte interval aktualizace v manifestu nasazení. Pokud je tento interval nastavený na pravidelný interval, například jednou za každých šest hodin, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] neprojde aktualizace, dokud tento interval neuplyne. Můžete změnit manifest pro vyhledávání aktualizace při každém spuštění aplikace. Změna intervalu aktualizace je pohodlnější možnost během doby vývoje, která umožňuje ověřit instalaci aktualizací, ale zpomaluje aktivaci aplikace.
 
-- Zkuste znovu spustit aplikaci v nabídce Start. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]mohla být zjištěna aktualizace na pozadí, ale zobrazí výzvu k instalaci bitů při další aktivaci.
+- Zkuste znovu spustit aplikaci v nabídce Start. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] mohla být zjištěna aktualizace na pozadí, ale zobrazí výzvu k instalaci bitů při další aktivaci.
 
 #### <a name="during-update-you-receive-an-error-that-has-the-following-log-entry-the-reference-in-the-deployment-does-not-match-the-identity-defined-in-the-application-manifest"></a>Během aktualizace se zobrazí chyba, která obsahuje následující položku protokolu: "odkaz v nasazení neodpovídá identitě definované v manifestu aplikace".
  K této chybě může dojít, protože jste ručně upravili manifesty nasazení a aplikace a způsobili, že popis identity sestavení v jednom manifestu není synchronizován s druhým. Identita sestavení se skládá z jeho názvu, verze, jazykové verze a tokenu veřejného klíče. Prověřte popisy identit v manifestech a opravte případné rozdíly.
 
 #### <a name="first-time-activation-from-local-disk-or-cd-rom-succeeds-but-subsequent-activation-from-start-menu-does-not-succeed"></a>První aktivace z místního disku nebo disku CD-ROM je úspěšná, ale následná aktivace z nabídky Start neproběhne úspěšně.
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]pro příjem aktualizací aplikace používá adresu URL poskytovatele nasazení. Ověřte, zda je umístění, na které adresa URL odkazuje, správné.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] pro příjem aktualizací aplikace používá adresu URL poskytovatele nasazení. Ověřte, zda je umístění, na které adresa URL odkazuje, správné.
 
 #### <a name="error-cannot-start-the-application"></a>Chyba: "nelze spustit aplikaci"
  Tato chybová zpráva obvykle znamená, že při instalaci této aplikace do úložiště došlo k potížím [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Buď má aplikace chybu, nebo je úložiště poškozené. Soubor protokolu vám může sdělit, kde došlo k chybě.
@@ -128,15 +128,15 @@ V tomto článku jsou uvedené běžné chyby, ke kterým může dojít při nas
 | Nelze pokračovat. Aplikace je nesprávně naformátovaná. Kontaktujte vydavatele aplikace a požádejte ho o pomoc.<br /><br /> Ověření aplikace nebylo úspěšné. Nelze pokračovat.<br /><br /> Soubory aplikace nelze načíst. Soubory poškozené v nasazení. | Jeden ze souborů manifestu v nasazení není syntakticky platný nebo obsahuje hodnotu hash, která nemůže být odsouhlasena s odpovídajícím souborem. Tato chyba může také znamenat, že manifest vložený do sestavení je poškozen. Znovu vytvořte nasazení a znovu zkompilujte aplikaci nebo Najděte a opravte chyby ručně v manifestech. |
 | Aplikaci nelze načíst. Chyba ověřování.<br /><br /> Instalace aplikace se nezdařila. Nelze najít soubory aplikace na serveru. Požádejte o pomoc vydavatele aplikace nebo svého správce. | Jeden nebo více souborů v nasazení nelze stáhnout, protože nemáte oprávnění pro přístup k nim. To může být způsobeno chybou 403 zakázáno webovým serverem, ke kterému může dojít v případě, že jeden ze souborů v nasazení skončí s příponou, která webový server považuje za chráněný soubor. Adresář, který obsahuje jeden nebo více souborů aplikace, může také vyžadovat uživatelské jméno a heslo, aby bylo možné získat přístup. |
 | Aplikaci nelze stáhnout. V aplikaci chybí požadované soubory. Požádejte o pomoc dodavatele aplikace nebo správce systému. | Jeden nebo více souborů uvedených v manifestu aplikace nelze na serveru nalézt. Ověřte, že jste nahráli všechny závislé soubory nasazení, a zkuste to znovu. |
-| Stažení aplikace nebylo úspěšné. Ověřte připojení k síti nebo se obraťte na správce systému nebo poskytovatele síťové služby. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Nelze navázat síťové připojení k serveru. Prověřte dostupnost serveru a stav vaší sítě. |
+| Stažení aplikace nebylo úspěšné. Ověřte připojení k síti nebo se obraťte na správce systému nebo poskytovatele síťové služby. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Nelze navázat síťové připojení k serveru. Prověřte dostupnost serveru a stav vaší sítě. |
 | URLDownloadToCacheFile se nezdařilo s HRESULT ' \<number> '. Při pokusu o stažení došlo k chybě \<file> . | Pokud má uživatel nastavenou možnost Upřesnit zabezpečení aplikace Internet Explorer "Zobrazit upozornění v případě změny mezi zabezpečeným a nezabezpečeným režimem" v cílovém počítači nasazení a v případě, že se adresa URL instalace aplikace ClickOnce přesměruje z nezabezpečeného na zabezpečenou lokalitu (nebo naopak), instalace selže, protože upozornění na Internet Explorer je přerušeno.<br /><br /> Tuto chybu můžete vyřešit provedením jedné z následujících úloh:<br /><br /> – Vymaže možnost zabezpečení.<br />-Ujistěte se, že není adresa URL instalace přesměrována takovým způsobem, který mění režimy zabezpečení.<br />– Odeberte přesměrování úplně a nasměrujte na vlastní adresu URL nastavení. |
 | Při zápisu na pevný disk došlo k chybě. Na disku není k dispozici dostatek místa. Požádejte o pomoc dodavatele aplikace nebo správce systému. | To může znamenat nedostatek místa na disku pro uložení aplikace, ale může také znamenat obecnější vstupně-výstupní chybu při pokusu o uložení souborů aplikace na jednotku. |
 | Aplikaci nelze spustit. Na disku není dostatek volného místa. | Pevný disk je plný. Uvolněte místo a zkuste aplikaci spustit znovu. |
-| Probíhá pokus o načtení příliš velkého počtu nasazených aktivací najednou. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]omezuje počet různých aplikací, které mohou být spuštěny ve stejnou dobu. To je hlavně z důvodu ochrany proti škodlivým pokusům o provedla útok DOS na místní [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] službu. uživatelé, kteří se pokusí spustit stejnou aplikaci opakovaně, v rychlém úspěchu, budou mít jenom jednu instanci aplikace. |
+| Probíhá pokus o načtení příliš velkého počtu nasazených aktivací najednou. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] omezuje počet různých aplikací, které mohou být spuštěny ve stejnou dobu. To je hlavně z důvodu ochrany proti škodlivým pokusům o provedla útok DOS na místní [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] službu. uživatelé, kteří se pokusí spustit stejnou aplikaci opakovaně, v rychlém úspěchu, budou mít jenom jednu instanci aplikace. |
 | V síti nelze aktivovat zástupce. | Zástupce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace lze spustit pouze na místním pevném disku. Nelze je spustit otevřením adresy URL, která odkazuje na soubor zástupce na vzdáleném serveru. |
 | Aplikace je příliš velká pro spuštění online v částečném vztahu důvěryhodnosti. Požádejte o pomoc dodavatele aplikace nebo správce systému. | Aplikace, která běží v částečném vztahu důvěryhodnosti, nemůže být větší než polovina velikosti online kvóty aplikací, která je standardně 250 MB. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md)
 - [Řešení potíží s nasazeními ClickOnce](../deployment/troubleshooting-clickonce-deployments.md)
 - [Řešení potíží s Visual Studiem](/troubleshoot/visualstudio/welcome-visual-studio/)

@@ -1,5 +1,5 @@
 ---
-title: Windows čítače procesoru a | Dokumentace Microsoftu
+title: Čítače procesoru a systému Windows | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,122 +15,122 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eceadf1b1bf82876a20027a9d29c8336e381d18d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434305"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64808656"
 ---
 # <a name="cpu-and-windows-counters"></a>Čítače procesoru a systému Windows
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Profiler umožňuje shromažďovat data o výkonu, který byl vygenerován v operačním systému (Windows čítače) a data výkonu, která byla vygenerována procesor (čítače CPU).  
+Profiler sady Visual Studio umožňuje shromažďovat údaje o výkonu vygenerované operačním systémem (čítače systému Windows) a údaje o výkonu vygenerované jednotkou procesoru (čítače CPU).  
   
  **Požadavky**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. Aplikace Windows Store také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro Windows Store vyžadují také nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-## <a name="windows-counters"></a>Čítače Windows  
- Čítače Windows jsou součástí infrastruktury diagnostiky Windows, který poskytuje informace o výkonu operačního systému nebo aplikace, služby nebo ovladače. Čítače Windows závisí na konfiguraci počítače aktuální a nemusí být k dispozici na jiných počítačích. Čítače výkonu Windows jsou shromážděny v Profilování datové soubory jako profilovací značky, které lze použít k filtrování zobrazení a sestavy.  
+## <a name="windows-counters"></a>Čítače systému Windows  
+ Čítače systému Windows jsou součástí diagnostické infrastruktury systému Windows, která poskytuje informace o výkonu operačního systému nebo aplikace, služby nebo ovladače. Čítače systému Windows závisí na konfiguraci aktuálního počítače a nemusí být k dispozici na jiných počítačích. Čítače výkonu systému Windows se shromažďují v datových souborech profilování jako značky profilace, které pak můžete použít k filtrování zobrazení a sestav.  
   
-## <a name="cpu-counters"></a>Čítače CPU  
- Čítače CPU jsou funkce procesoru počítače, ve kterém uložený počet událostí související s hardwarem.  Při shromažďování dat čítačů procesoru pomocí metoda profilace instrumentace, data se připojí k datům pro funkce a moduly. Můžete shromažďovat více čítačů procesoru pomocí metody instrumentace. Při použití metody vzorkování je vybrat jeden čítač používat jako událost se odeberou.  
+## <a name="cpu-counters"></a>Čítače procesoru  
+ Čítače CPU jsou funkcí procesoru počítače, který ukládá počet událostí souvisejících s hardwarem.  Když shromáždíte data čítače procesoru pomocí metody profilace instrumentace, data se připojí k datům pro funkce a moduly. Pomocí metody instrumentace můžete shromažďovat více čítačů CPU. Při použití metody vzorkování vyberete jeden čítač, který se použije jako událost, která se má vzorkovat.  
   
- Čítače výkonu jsou specifické pro procesor. Různé modely a verzích Procesorem může mít výrazně odlišné konfigurace nastavení pro povolení stejnému čítači výkonu. [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] Události přenositelnosti Profiler oddělit pár běžných čítačů výkonu z konkrétní procesory a vám umožní shromažďovat nebo ukázkový události obecného výkonu.  
+ Čítače výkonu jsou specifické pro procesor. Různé modely a verze procesoru můžou mít výrazně různá nastavení konfigurace, aby se povolil stejný čítač výkonu. [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] Profiler přenosné události odděluje některé běžné čítače výkonu od konkrétních procesorů a umožňuje shromažďovat nebo vzorkovat Obecné události výkonu.  
   
- Pokud budete chtít zjistit konkrétní události při použití profileru, například výpadky mezipaměti L2, můžete vytvořit relaci výkonu kolem tohoto odesílatele události. To lze provést v libovolném procesoru pomocí mezipaměti L2. Relace výkonu je možné přesunout z platformách bez úprav.  
+ Pokud chcete spočítat konkrétní událost při použití profileru, například neúspěšných přístupů do mezipaměti L2, můžete vytvořit relaci výkonu kolem tohoto odesílatele události. To můžete provést na jakémkoli procesoru s mezipamětí L2. Výkonnostní relaci lze přesunout z platformy na platformu bez úprav.  
   
- Profiler sady Visual Studio i nadále podporuje určité události pro konkrétní platformu. Například pro vývojáře na platformě Pentium 4, může být vhodné k počítání událostí, které jsou specifické pro architekturu NetBurst. Tato událost není přenosné, ale stále k dispozici pro vývojáře pro relaci výkonu specifické pro konkrétní platformy.  
+ Profiler sady Visual Studio nadále podporuje konkrétní události pro konkrétní platformu. Například vývojář na platformě Pentium 4 může chtít počítat události, které jsou specifické pro architekturu NetBurst. Tato událost není přenosná, ale je stále dostupná pro vývojáře pro konkrétní výkonnostní relaci na konkrétní platformě.  
   
-## <a name="portable-and-platform-events"></a>Přenosné a události platformy  
- Události přenositelnosti jsou skupiny čítače CPU, které nejsou specifické pro konkrétní procesor. Další čítače CPU se nazývají událostí platformy a nemusí být podporován na různých platformách.  
+## <a name="portable-and-platform-events"></a>Přenosné a nespravované události  
+ Přenosné události představují skupinu čítačů CPU, které nejsou specifické pro konkrétní procesor. Všechny ostatní čítače CPU se nazývají události platformy a nemusí se podporovat na různých platformách.  
   
- Čítače pro platformy i přenosné události jsou definovány v. Soubory XML, kde jsou k dispozici konkrétní hodnoty, které se vztahují na čítače. Existuje více souborů pro různé procesory, protože data pro Intel a procesory AMD, například se liší. [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] Profiler používá tyto informace k dispozici odpovídající čítače, přenosné a platformě, uživatelům pro měření výkonu.  
+ Čítače pro přenosné i události platformy jsou definovány v. Soubory XML, kde jsou k dispozici konkrétní hodnoty, které souvisejí s čítači. Existuje více souborů pro různé procesory, protože data pro procesory Intel a AMD jsou například odlišná. [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)]Profiler tyto informace využívá k tomu, aby k měření výkonu prezentuje odpovídající čítače, přenosnou i platformu.  
   
-### <a name="portable-events"></a>Události přenositelnosti  
- Události přenositelnosti obsahovat následující události:  
+### <a name="portable-events"></a>Přenosné události  
+ Přenosné události obsahují následující události:  
   
  **Obecné události**  
   
 |Název události|Popis události|  
 |----------------|-----------------------|  
-|Instrukce|Označuje počet pokyny, které udělat, dokud dokončení události.|  
-|Nezastavené cykly|Označuje pouze cykly, ve kterých procesoru není zastavená, například čekání na vstupně-výstupních operací.|  
+|Pokyny byly vyřazeny|Určuje počet instrukcí, které se provedly, dokud se událost nedokončí.|  
+|Nezastavené cykly|Označuje jenom cykly, ve kterých se procesor nezastavil, například čekání na vstupně-výstupní operace.|  
   
- **Přední události**  
-  
-|Název události|Popis události|  
-|----------------|-----------------------|  
-|Výpadky ITLB|Označuje počet vyhledávání instrukce překlad doplňování vzhled vyrovnávací paměti, jejichž výsledkem by chyběla.|  
-  
- **Události větvě**  
+ **Události front-endu**  
   
 |Název události|Popis události|  
 |----------------|-----------------------|  
-|Provedené větve|Označuje počet větvicí instrukce udělat, dokud dokončení události.|  
-|Nepředpovězené větve|Označuje nepředpovězené větve, ke kterým dochází, protože procesor předpovědět nesprávné cesty. Nepředpovězené větve ovlivnit výkon, protože procesor musí zrušit veškerou práci prováděnou a znovu ji spusťte na správnou cestu.|  
+|Neúspěšné ITLB|Označuje počet neúspěšných hledání ve vyrovnávací paměti pro překlad instrukcí, které vedlo k neúspěšnému zjištění.|  
+  
+ **Události větve**  
+  
+|Název události|Popis události|  
+|----------------|-----------------------|  
+|Vyřazené větve|Označuje počet instrukcí větve, které se provedly, dokud se událost nedokončí.|  
+|Nepředvídatelné větve|Označuje nepředvídatelné větve, ke kterým dochází, protože procesor předpovídá nesprávnou cestu. Nepředvídatelné větve mají vliv na výkon, protože procesor musí zrušit veškerou práci a znovu ji spustit na správné cestě.|  
   
  **Události paměti:**  
   
 |Název události|Popis události|  
 |----------------|-----------------------|  
-|L2 Výpadky čtení mezipaměti|Označuje, že počet druhý mezipaměť na úrovni čtení výpadky.|  
-|L2 Odkazy čtení mezipaměti|Označuje, že počet druhý mezipaměť na úrovni čtení odkazy. Zahrnuje výpadky načtení a čtení pro Neúspěšné přístupy do vlastnictví (předpisy RRO) a počet přístupů.|  
+|Neúspěšné čtení z mezipaměti L2|Označuje počet neúspěšných přístupů ke čtení mezipaměti druhé úrovně.|  
+|Odkazy čtení mezipaměti L2|Označuje počet odkazů na čtení mezipaměti druhé úrovně. Zahrnuje Neúspěšné přístupy do zatížení a čtení z důvodů přístupů a přístupů do vlastnictví (RFO).|  
   
-## <a name="viewing-available-counters"></a>Zobrazení dostupné čítače  
- V okně příkazového řádku, můžete vytvořit seznam na dostupné čítače CPU v integrovaném vývojovém prostředí sady Visual Studio.  
+## <a name="viewing-available-counters"></a>Zobrazení dostupných čítačů  
+ Dostupné čítače procesoru v integrovaném vývojovém prostředí sady Visual Studio můžete zobrazit v okně příkazového řádku.  
   
-### <a name="visual-studio-ui"></a>Visual Studio UI  
- Seznam dostupných čítačů na počítač v integrovaném vývojovém prostředí sady Visual Studio, musí mít relaci profileru výkonu, otevřete v prohlížeči výkonu.  
+### <a name="visual-studio-ui"></a>Uživatelské rozhraní sady Visual Studio  
+ Chcete-li zobrazit seznam dostupných čítačů v počítači v integrovaném vývojovém prostředí sady Visual Studio, je nutné mít v Prohlížeč výkonu otevřenu relaci výkonu profileru.  
   
-##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>Chcete-li zobrazit seznam seznam všech čítačů využití procesoru, které jsou podporovány na aktuální platformě  
+##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>Zobrazení seznamu všech čítačů CPU podporovaných aktuální platformou  
   
-1. V prohlížeči výkonu, klikněte pravým tlačítkem na relaci výkonu a pak klikněte na tlačítko **vlastnosti**.  
+1. V Prohlížeč výkonu klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.  
   
-2. Proveďte jednu z těchto akcí:  
+2. Proveďte jednu z následujících akcí:  
   
-   - Klikněte na tlačítko **vzorkování**a pak vyberte **čítač výkonu** z **ukázka** seznamu událostí. Čítače CPU jsou uvedeny v **dostupných čítačů výkonu**.  
+   - Klikněte na **vzorkování**a potom v seznamu **vzorových** událostí vyberte **čítač výkonu** . Čítače CPU jsou uvedeny v části **Dostupné čítače výkonu**.  
   
-      **Poznámka:** klikněte na tlačítko **zrušit** vrátit k předchozí konfiguraci odběru vzorků.  
+      **Poznámka:** Kliknutím na tlačítko **Storno** se vrátíte k předchozí konfiguraci vzorkování.  
   
      -nebo-  
   
-   - Vyberte **čítače CPU**a pak vyberte **shromáždit čítače CPU**. Čítače CPU jsou uvedeny v **dostupné čítače**.  
+   - Vyberte **čítače procesoru**a pak vyberte **shromáždit čítače procesoru**. Čítače CPU jsou uvedeny v části **Dostupné čítače**.  
   
-      **Poznámka:** klikněte na tlačítko **zrušit** vrátit k předchozí konfiguraci kolekce čítačů.  
+      **Poznámka:** Kliknutím na tlačítko **Storno** se vrátíte k předchozí konfiguraci shromažďování čítačů.  
   
-##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>Chcete-li zobrazit seznam seznam čítačů okno, které jsou podporovány na aktuální platformě  
+##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>Zobrazení seznamu čítačů oken, které jsou podporovány na aktuální platformě  
   
-1. V prohlížeči výkonu, klikněte pravým tlačítkem na relaci výkonu a pak klikněte na tlačítko **vlastnosti**.  
+1. V Prohlížeč výkonu klikněte pravým tlačítkem na relaci výkonu a pak klikněte na **vlastnosti**.  
   
-2. Klikněte na tlačítko **čítače Windows**.  
+2. Klikněte na **čítače systému Windows**.  
   
-3. Vyberte **shromáždit čítače Windows**.  
+3. Vyberte možnost **shromáždit čítače systému Windows**.  
   
-4. Z **kategorie čítače** vyberte čítačů skupiny. Čítače Windows pro skupiny se zobrazí v seznamu.  
+4. V seznamu **kategorie čítače** vyberte skupinu čítačů. V seznamu se zobrazí čítač Windows pro skupinu.  
   
-     **Poznámka:** Klikněte na tlačítko **zrušit** vrátit k předchozí konfiguraci kolekce čítačů.  
+     **Poznámka:** Kliknutím na tlačítko **Storno** se vrátíte k předchozí konfiguraci shromažďování čítačů.  
   
 ### <a name="command-line"></a>Příkazový řádek  
- Použití [VSPerfCmd](../profiling/vsperfcmd.md) nástroj příkazového řádku, můžete vytvořit seznam čítačů využití procesoru, které jsou dostupné v počítači z příkazového řádku.  
+ Pomocí nástroje příkazového řádku [VSPerfCmd](../profiling/vsperfcmd.md) můžete zobrazit seznam čítačů CPU, které jsou k dispozici v počítači z příkazového řádku.  
   
-##### <a name="to-list-of-cpu-counters-that-are-supported-on-the-current-platform"></a>Do seznamu čítače CPU, které jsou podporované na aktuální platformě  
+##### <a name="to-list-of-cpu-counters-that-are-supported-on-the-current-platform"></a>Seznam čítačů PROCESORů, které jsou podporovány na aktuální platformě  
   
 1. Otevřete okno příkazového řádku.  
   
-2. Type  
+2. Typ  
   
-     **\<Visual Studio výkonu nástroje adresář >/querycounters \VSPerfCmd**  
+     **\<Visual Studio Performance Tools Directory>\VSPerfCmd/QueryCounters**  
   
-     kde  **\<adresář nástrojů výkonu služby Visual Studio >** obvykle představuje cestu k adresáři nástroje pro měření výkonu instalaci sady Visual Studio  
+     kde **\<Visual Studio Performance Tools Directory>** je cesta k adresáři nástrojů pro sledování výkonu instalace sady Visual Studio, obvykle  
   
-     C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools  
+     C:\Program Files\Microsoft Visual Studio 10.0 \ Team Tools\Performance Tools  
   
 ## <a name="see-also"></a>Viz také  
  [Přehledy](../profiling/overviews-performance-tools.md)   
- [Postupy: Výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)   
- [Postupy: Shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)   
- [Postupy: Shromažďování dat z čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)
+ [Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)   
+ [Postupy: shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)   
+ [Postupy: Shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)

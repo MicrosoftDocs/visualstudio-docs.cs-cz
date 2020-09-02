@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187912"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Přehled diagnostiky grafiky sady Visual Studio
@@ -21,7 +21,7 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>Použití Diagnostiky grafiky k ladění problémů s vykreslováním
  Ladění problémů s vykreslováním v aplikaci s bohatou grafikou není tak přímočaré jako spuštění ladicího programu a krokování kódu. V každém snímku jsou produkovány stovky tisíc jedinečných pixelů podle komplexní sady stavu, dat, parametrů a kódu. Z těchto pixelů může problém, který chcete diagnostikovat, vykazovat pouze několik málo pixelů. A aby věci byly ještě složitější, kód, který generuje každý pixel, je spouštěn na specializovaném hardwaru, který paralelně zpracovává stovky pixelů. Tradiční nástroje a techniky ladění, které je obtížné využít i v kódu s malým počtem vláken, jsou v případě velkého množství dat neúčinné.
 
- Nástroje Diagnostika grafiky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou navržené tak, aby vám pomohly najít problémy s vykreslováním, počínaje vizuálními artefakty, které ukazují problém a pak se vrátí zpět ke zdroji problému, a zaměřením pouze na relevantní kód shaderu, fáze zřetězení , nakreslete volání, prostředky a stav zařízení – ve zdrojovém kódu aplikace.
+ Nástroje Diagnostika grafiky v nástroji [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] jsou navržené tak, aby vám pomohly najít problémy s vykreslováním, počínaje vizuálními artefakty, které indikují problém, a pak se k zdroji problému zaměří jenom na relevantní kód shaderu, fáze zřetězení, volání remíz, prostředky a stav zařízení – ve vlastním zdrojovém kódu aplikace.
 
 ## <a name="directx-version-compatibility"></a>Kompatibilita verzí DirectX
  Diagnostika grafiky podporuje aplikace, které používají Direct3D 10 nebo vyšší, a poskytuje omezená podpora pro aplikace, které používají Direct2D. Nepodporuje aplikace, které používají starší verze rozhraní Direct3D, DirectDraw nebo jiné grafické rozhraní API.
@@ -45,7 +45,7 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 ### <a name="diagnostics-capture-interface"></a>Rozhraní pro zachycení diagnostiky
  Když aplikaci spouštíte v rámci Diagnostika grafiky, Visual Studio zobrazí rozhraní diagnostiky relace, které můžete použít k zachycení rámců a také zobrazení aktuálního procesoru a zatížení GPU. Zobrazí se zatížení CPU a GPU, které vám usnadní identifikaci snímků, které je vhodné zachytit v důsledku jejich vlastností výkonu, nikoli při vykreslování chyb.
 
- Nejedná se o jediný způsob, jak zachytit snímky, i když. Můžete také zachytit rámce pomocí programového digitalizačního rozhraní nebo pomocí programu pro zachycení příkazového řádku DXCap. exe.
+ Nejedná se o jediný způsob, jak zachytit snímky, i když. Můžete také zachytit rámce pomocí programového digitalizačního rozhraní nebo pomocí programu pro zachycení příkazového řádku dxcap.exe.
 
  Další informace najdete v tématu [informace o zachytávání grafiky](capturing-graphics-information.md) .
 
@@ -108,7 +108,7 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 ### <a name="object-table"></a>Tabulka objektů
  Každý snímek vykreslící aplikaci je pravděpodobně zajištěn stovkami nebo dokonce tisíci objektů prostředků. Tyto můžou zahrnovat vyrovnávací paměti a cíle vykreslování, textury, vyrovnávací paměti vrcholů, vyrovnávací paměti pro index, obecné vyrovnávací paměti – téměř všechny členy rozhraní Direct3D jsou objekty.
 
- V [tabulce objekt](graphics-object-table.md) se zobrazí všechny objekty, které existují v době události Graphics vybrané v seznamu událostí. Vzhledem k tomu, že většina objektů v typických aplikacích je textur, je seznam událostí optimalizovaný tak, aby zobrazoval podrobnosti týkající se obrázků na první pohled. Sloupec typ obsahuje informace o tom, jaký typ objektu je v každém řádku, a sloupec Format dále zobrazuje dílčí typ nebo verzi objektu. Zobrazí se také další podrobnosti. Některé objekty mají také hypertextové odkazy, které můžete použít, chcete-li zobrazit objekt s užitečnějším prohlížečem, jako jsou textury (můžete zobrazit texturu jako obrázek), nebo vyrovnávací paměti (můžete zvolit způsob, jakým prohlížeč vyrovnávací paměti analyzuje a zobrazuje nezpracované bajty vyrovnávací paměti definováním vyrovnávací paměti. formát).
+ V [tabulce objekt](graphics-object-table.md) se zobrazí všechny objekty, které existují v době události Graphics vybrané v seznamu událostí. Vzhledem k tomu, že většina objektů v typických aplikacích je textur, je seznam událostí optimalizovaný tak, aby zobrazoval podrobnosti týkající se obrázků na první pohled. Sloupec typ obsahuje informace o tom, jaký typ objektu je v každém řádku, a sloupec Format dále zobrazuje dílčí typ nebo verzi objektu. Zobrazí se také další podrobnosti. Některé objekty mají také hypertextové odkazy, které můžete použít, chcete-li zobrazit objekt se specializovaným prohlížečem, jako jsou textury (můžete zobrazit texturu jako obrázek), nebo vyrovnávací paměti (můžete si vybrat, jak prohlížeč vyrovnávací paměti analyzuje a zobrazuje nezpracované bajty vyrovnávací paměti definováním formátu vyrovnávací paměti).
 
 ### <a name="frame-analysis"></a>Analýza snímků
  Grafiku vaší aplikace nemusíte jenom opravovat – musí být také rychlá. Dokonce i na méně výkonném zařízení, jako jsou přenosné počítače s integrovanými grafikami nebo mobilními telefony. A pořád musí vypadat dobře.
@@ -117,6 +117,6 @@ Visual Studio *Diagnostika grafiky* je sada nástrojů pro zaznamenávání a an
 
  Ale analýza snímků nestačí k rychlému přechodu – je to, že získává nejvyšší výkon, který vám umožní dostat se k nejmenšímu množství vizuální kvality. V některých případech se může stát, že při zobrazení na malé obrazovce telefonu nedosahuje stejný dopad na velký displej, kde by jednodušší efekt vypadal stejně jako dobrý, aniž by se vyčerpala baterie. Automatické změny a srovnávací testy, které poskytuje funkce Analýza grafiky, vám pomůžou najít rovnováhu, která je pro vaši aplikaci pro celou řadu zařízení nejvhodnější.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nástroj příkazového řádku pro zachytávání](command-line-capture-tool.md)
 - [Ladicí program HLSL](hlsl-shader-debugger.md)

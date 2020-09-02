@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumConstructors | Dokumenty společnosti Microsoft
+title: 'IDebugClassField:: EnumConstructors | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 607f4f4af3021389628fcc1be446ebbe95628b7c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734467"
 ---
 # <a name="idebugclassfieldenumconstructors"></a>IDebugClassField::EnumConstructors
-Vytvoří čítač výčtu pro konstruktory pro tuto třídu.
+Vytvoří enumerátor pro konstruktory pro tuto třídu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ int EnumConstructors(
 
 ## <a name="parameters"></a>Parametry
 `cMatch`\
-[v] Hodnota z [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) výčtu, který určuje typ konstruktory výčtu.
+pro Hodnota z výčtu [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) , která určuje typ konstruktorů, které se mají vyčíslit.
 
 `ppEnum`\
-[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam konstruktorů. Vrátí hodnotu null, pokud neexistují žádné konstruktory.
+mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam konstruktorů. Vrací hodnotu null, pokud nejsou žádné konstruktory.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné konstruktory. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou k dispozici žádné konstruktory. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
  Každý prvek výčtu je objekt [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) popisující metodu konstruktoru.

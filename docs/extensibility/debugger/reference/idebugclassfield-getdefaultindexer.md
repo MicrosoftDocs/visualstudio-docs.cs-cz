@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Dokumenty společnosti Microsoft
+title: 'IDebugClassField:: GetDefaultIndexer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 57e00107374485043af370967794bdade1c213d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734418"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Získá název výchozí indexeru.
+Získá název výchozího indexeru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>Parametry
-`pbstrIndexer`[out] Vrátí řetězec obsahující název výchozího indexeru.
+`pbstrIndexer` mimo Vrátí řetězec obsahující název výchozího indexeru.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistuje žádný výchozí indexer. V opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud není k dispozici žádný výchozí indexer. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Výchozí indexer třídy je vlastnost, která `Default` je označena jako vlastnost pro přístupy pole. To je [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]specifické pro . Zde je příklad výchozí indexer [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] deklarované v a jak se používá.
+ Výchozím indexerem třídy je vlastnost, která je označena jako `Default` vlastnost pro přístup k poli. To je specifické pro [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] . Zde je příklad výchozího indexeru deklarovaného v [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] a způsobu jeho použití.
 
 ```vb
 Imports System.Collections;

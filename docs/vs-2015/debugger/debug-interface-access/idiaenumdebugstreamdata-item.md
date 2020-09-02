@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::Item – | Dokumentace Microsoftu
+title: 'IDiaEnumDebugStreamData:: Item | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4b80f71b2ca5d718f2de834389b4caab728e1f1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197893"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
@@ -38,23 +38,23 @@ HRESULT Item ( 
   
 #### <a name="parameters"></a>Parametry  
  index  
- [in] Index záznamu, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumdebugstreamdata::get_count –](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md).  
+ pro Index záznamu, který se má načíst Index je v rozsahu 0 až `count` -1, kde `count` je vrácen funkcí [IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md).  
   
  cbData  
- [in] Velikost vyrovnávací paměti dat v bajtech.  
+ pro Velikost vyrovnávací paměti dat (v bajtech).  
   
  pcbData  
- [out] Vrátí počet bajtů vrácených. Pokud `data` je `NULL`, pak `pcbData` obsahuje celkový počet bajtů dat, které jsou k dispozici v zadaný záznam.  
+ mimo Vrátí počet vrácených bajtů. Pokud `data` je `NULL` , pak `pcbData` obsahuje celkový počet bajtů dat dostupných v zadaném záznamu.  
   
- data]  
- [out] Vyrovnávací paměť je vyplní data záznamu datový proud ladění.  
+ data []  
+ mimo Vyrovnávací paměť, která je vyplněna daty záznamu streamu ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` pro neplatné parametry a, pokud `index` parametr je mimo rozsah.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby. Vrátí `E_INVALIDARG` neplatným parametrům a pokud `index` je parametr mimo rozsah.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
- [IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
- [Idiaenumdebugstreams::Item –](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
- [IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)   
+ [IDiaEnumDebugStreamData:: Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)   
+ [IDiaEnumDebugStreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)   
+ [IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)   
  [IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)

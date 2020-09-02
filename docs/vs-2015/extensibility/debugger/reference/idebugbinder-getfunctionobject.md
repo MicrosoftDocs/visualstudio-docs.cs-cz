@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::GetFunctionObject | Dokumentace Microsoftu
+title: 'IDebugBinder:: GetFunctionObject | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4a2a55285684c5aa93cc5876fb06c69c809d8b01
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157306"
 ---
 # <a name="idebugbindergetfunctionobject"></a>IDebugBinder::GetFunctionObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objekt použitý k vytvoření parametry funkce.  
+Tato metoda načte objekt [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) , který slouží k vytvoření parametrů funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int GetFunctionObject(
   
 #### <a name="parameters"></a>Parametry  
  `ppFunction`  
- [out] Vrátí [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní, které se používá k vytvoření parametry funkce.  
+ mimo Vrátí rozhraní [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) , které se používá k vytvoření parametrů funkce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

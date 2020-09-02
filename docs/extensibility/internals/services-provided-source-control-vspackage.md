@@ -1,5 +1,5 @@
 ---
-title: Poskytované služby (správa zdrojového kódu VSPackage) | Dokumenty společnosti Microsoft
+title: Poskytnuté služby (zdrojový ovládací prvek VSPackage) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f08ebe49756b442ef474ac2a032a72894f6bec15
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705412"
 ---
 # <a name="services-provided-source-control-vspackage"></a>Poskytované služby (balíček VSPackage správy zdrojového kódu)
-Služby jsou primární mechanismus, jehož prostřednictvím je funkce sdílena mezi VSPackages a mezi integrovaným vývojového prostředí Sady Visual Studio (IDE) a jeho nainstalovaným balíčkem VSPackages. Podrobný popis služeb a jejich důležitost v ide sady Visual Studio naleznete v[tématu Using and Providing Services](../../extensibility/using-and-providing-services.md).
+Služby jsou primárním mechanismem, pomocí kterého jsou sdílené funkce mezi VSPackage a mezi integrovaným vývojovým prostředím (IDE) sady Visual Studio a jeho nainstalovanými VSPackage. Podrobný popis služeb a jejich důležitost v integrovaném vývojovém prostředí sady Visual Studio najdete v tématu[používání a poskytování služeb](../../extensibility/using-and-providing-services.md).
 
 ## <a name="the-source-control-service"></a>Služba správy zdrojového kódu
- Visual Studio poskytuje dvě vrstvy služeb, služby na úrovni IDE a služby na úrovni balíčků. IDE sady Visual Studio nativně poskytuje služby na úrovni ide. Balíček správy zdrojového kódu spotřebovává některé z těchto služeb. Balíček správy zdrojového kódu jako VSPackage sdílí jeho funkce správy zdrojového kódu tím, že poskytuje vlastní soukromou službu správy zdrojového kódu. Balíček správy zdrojového kódu zapouzdřuje sadu rozhraní souvisejících se slučovacím řízením, které implementuje ve formě smlouvy, kterou lze použít rozhraní MDE sady Visual Studio.
+ Sada Visual Studio poskytuje dvě vrstvy služeb, služby na úrovni IDE a služby na úrovni balíčku. Integrované vývojové prostředí sady Visual Studio nativně poskytuje služby na úrovni IDE. Balíček správy zdrojového kódu využívá některé z těchto služeb. Balíček správy zdrojového kódu jako VSPackage sdílí svou funkcionalitu správy zdrojového kódu tím, že poskytuje vlastní službu správy zdrojového kódu. Balíček správy zdrojového kódu zapouzdřuje sadu rozhraní souvisejících se správou zdrojového kódu, které implementuje v podobě kontraktu, který může být použit v integrovaném vývojovém prostředí sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Prvky návrhu](../../extensibility/internals/source-control-vspackage-design-elements.md)

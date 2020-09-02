@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Nastavení názvu vlákna ve spravovaném kódu | Dokumentace Microsoftu'
+title: 'Postupy: nastavení názvu vlákna ve spravovaném kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,18 +20,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b800fbd2f39d75f110a059c70b87a203eb72e7d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157671"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>Postupy: Nastavení názvu vlákna ve spravovaném kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pojmenování vlákna je možné v jakékoli edici sady Visual Studio. Pojmenování vláken je užitečné pro udržování přehledu o vlákna **vlákna** okna. Vzhledem k tomu, **vlákna** okno není k dispozici v edicích Visual Studio Express, pojmenování vlákno má malý nástroj ve verzích Express.  
+Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro udržení přehledu o vláknech v okně **vláken** . Vzhledem k tomu, že okno **vlákna** není k dispozici v edicích Visual Studio Express, má pojmenování vláken málo nástrojů v edicích Express.  
   
- Chcete-li nastavení názvu vlákna ve spravovaném kódu, použijte <xref:System.Threading.Thread.Name%2A> vlastnost.  
+ Chcete-li nastavit název vlákna ve spravovaném kódu, použijte <xref:System.Threading.Thread.Name%2A> vlastnost.  
   
 ## <a name="example"></a>Příklad  
   

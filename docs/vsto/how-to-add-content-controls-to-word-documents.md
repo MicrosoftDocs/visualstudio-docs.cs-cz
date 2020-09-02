@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2f15adeb801e33a134c681c206e3a5b38ccce70f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538382"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word
@@ -48,7 +48,7 @@ ms.locfileid: "85538382"
 
   Informace o ovládacích prvcích obsahu naleznete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
 
-## <a name="add-content-controls-at-design-time"></a><a name="designtime"></a>Přidat ovládací prvky obsahu v době návrhu
+## <a name="add-content-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky obsahu v době návrhu
  Existuje několik způsobů, jak přidat ovládací prvky obsahu do dokumentu v projektu na úrovni dokumentu v době návrhu:
 
 - Přidejte ovládací prvek obsahu z karty **ovládací prvky aplikace Word** v **sadě nástrojů**.
@@ -69,11 +69,11 @@ ms.locfileid: "85538382"
 
     - Dvakrát klikněte na ovládací prvek obsahu v **sadě nástrojů**.
 
-         – nebo –
+         nebo
 
     - Klikněte na ovládací prvek obsahu v **sadě nástrojů** a potom stiskněte klávesu **ENTER** .
 
-         – nebo –
+         nebo
 
     - Přetáhněte ovládací prvek obsahu ze **sady nástrojů** do dokumentu. Řízení obsahu je přidáno v aktuálním výběru v dokumentu, nikoli v umístění ukazatele myši.
 
@@ -94,7 +94,7 @@ ms.locfileid: "85538382"
 
 3. Ve skupině **ovládací prvky** klikněte na ikonu ovládacího prvku obsahu, který chcete přidat.
 
-## <a name="add-content-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Přidání ovládacích prvků obsahu v době běhu v projektu na úrovni dokumentu
+## <a name="add-content-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Přidání ovládacích prvků obsahu v době běhu v projektu na úrovni dokumentu
  Pomocí metod <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti třídy v projektu můžete do dokumentu v době běhu přidat ovládací prvky obsahu programově `ThisDocument` . Každá metoda má tři přetížení, která lze použít k přidání ovládacího prvku obsahu následujícími způsoby:
 
 - Přidat ovládací prvek na aktuální výběr.
@@ -135,7 +135,7 @@ ms.locfileid: "85538382"
      [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
      [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]
 
-## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Přidání ovládacích prvků obsahu v době běhu v projektu doplňku VSTO
+## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Přidání ovládacích prvků obsahu v době běhu v projektu doplňku VSTO
  Pomocí doplňku VSTO můžete přidat ovládací prvky obsahu programově do libovolného otevřeného dokumentu v době běhu. Chcete-li to provést, vygenerujte <xref:Microsoft.Office.Tools.Word.Document> hostitelskou položku, která je založena na otevřeném dokumentu, a pak použijte metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti této položky hostitele. Každá metoda má tři přetížení, která lze použít k přidání ovládacího prvku obsahu následujícími způsoby:
 
 - Přidat ovládací prvek na aktuální výběr.
@@ -182,7 +182,7 @@ ms.locfileid: "85538382"
 
      [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
 - [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 - [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)

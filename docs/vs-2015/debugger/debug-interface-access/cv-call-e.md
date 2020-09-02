@@ -1,5 +1,5 @@
 ---
-title: Cv_call_e – | Dokumentace Microsoftu
+title: CV_call_e | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,21 +14,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd1ee4c024894e5752277a5000d37745c88c4ac6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442116"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64810340"
 ---
-# <a name="cvcalle"></a>CV_call_e
+# <a name="cv_call_e"></a>CV_call_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Určuje konvenci volání funkce.  
   
 > [!NOTE]
-> Většina běžných hodnot výčtu jsou zdokumentované tady. V souboru hlaviček cvconst.h je k dispozici úplný výčet.  
+> Zde jsou popsány pouze nejběžnější hodnoty výčtu. Úplný výčet je k dispozici v souboru hlaviček cvconst. h.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum CV_call_e {   
@@ -43,28 +43,28 @@ typedef enum CV_call_e { 
   
 ## <a name="elements"></a>Elementy  
  CV_CALL_NEAR_C  
- Určuje konvence volání funkce, pomocí operace push blízké zprava doleva. Volání funkce vymaže zásobníku.  
+ Určuje konvenci volání funkce pomocí téměř zprava doleva. Volající funkce vymaže zásobník.  
   
  CV_CALL_NEAR_FAST  
- Určuje konvence volání funkce, pomocí registrů téměř nabízených zleva doprava. Volaná funkce používá součtem bajtů parametrů k vymazání zásobníku.  
+ Určuje konvenci volání funkce pomocí blízké nabídky vlevo zleva doprava s Registry. Volaná funkce používá součet bajtů parametrů pro vymazání zásobníku.  
   
  CV_CALL_NEAR_STD  
- Určuje konvence volání funkce, pomocí téměř standardní volání (nabízených zprava doleva).  
+ Určuje konvenci volání funkce s použitím volání blížící se ke standardnímu volání (nabízená zprava doleva).  
   
  CV_CALL_NEAR_SYS  
- Určuje konvence volání funkce použitím téměř volání systému.  
+ Určuje konvenci volání funkce za použití volání téměř systému.  
   
  CV_CALL_THISCALL  
- Určuje konvenci volání funkce použitím `this` volání (`this` předán ukazatel v registru).  
+ Určuje konvenci volání funkce pomocí `this` volání ( `this` ukazatel předaný v registru).  
   
  CV_CALL_CLRCALL  
- Určuje volání funkce konvence podle CLR Common Language Runtime () (označované také jako spravovaný kód konvence volání).  
+ Určuje konvenci volání funkce, kterou používá modul CLR (Common Language Runtime) (označuje se také jako konvence volání spravovaného kódu).  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiasymbol::get_callingconvention –](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md) metody.  
+ Hodnoty v tomto výčtu jsou vráceny voláním metody [IDiaSymbol:: get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: cvconst.h  
+ Záhlaví: cvconst. h  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   

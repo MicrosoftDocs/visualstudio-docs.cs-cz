@@ -1,5 +1,5 @@
 ---
-title: Varianta velikosti oblasti zobrazení 1 x 1 | Dokumentace Microsoftu
+title: Varianta velikosti zobrazení 1x1 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,27 +10,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 74e3bc706cb2df12aacddf9fbb77dec598bfc17a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157557"
 ---
 # <a name="1x1-viewport-size-variant"></a>Varianta velikosti oblasti zobrazení 1x1
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Snižuje rozměry zobrazení na všechny cíle vykreslení na 1 × 1 pixelů.  
+Zmenší rozměry zobrazení na všech cílech vykreslování na 1x1 pixelů.  
   
-## <a name="interpretation"></a>interpretace  
- Menší zobrazení snižuje počet pixelů, které musí být označeno šedou barvou, ale nedojde k omezení počtu vrcholy, které je potřeba zpracovat. Nastavení rozměry zobrazení 1 x 1 pixelů efektivně eliminuje pixel stínování z vaší aplikace.  
+## <a name="interpretation"></a>Interpretace  
+ Menší zobrazení zmenší počet pixelů, které musí být vystínované, ale nesníží počet vrcholů, které se musí zpracovat. Nastavení rozměrů zobrazení na 1x1 pixelů efektivně eliminují stínování v pixelech z vaší aplikace.  
   
- Pokud se tato varianta zobrazí zisk náročné na výkon, může to znamenat, že vaše aplikace spotřebovává příliš mnoho fillrate. To může znamenat, že na řešení, které jste zvolili, je příliš vysoká. pro cílovou platformu nebo že vaše aplikace stráví spoustu času stínování pixelů, které jsou přepsány později (overdraw). Tento výsledek naznačuje, že snižují velikost vašeho framebuffer nebo snižuje množství overdraw zlepší výkon vaší aplikace.  
+ Pokud tato varianta znázorňuje velký nárůst výkonu, může to znamenat, že vaše aplikace spotřebovává příliš mnoho fillrate. To může znamenat, že zvolené rozlišení je pro cílovou platformu příliš vysoké nebo že vaše aplikace stráví významnou časovou přesností v pixelech, které jsou později přepsány (překreslit). Výsledkem tohoto výsledku je, aby se snížila velikost framebuffer nebo zmenšení množství překreslování, což vylepšuje výkon vaší aplikace.  
   
 ## <a name="remarks"></a>Poznámky  
- Rozměry zobrazení se resetují na pixelech 1 × 1 po každém volání do `ID3D11DeviceContext::OMSetRenderTargets` nebo `ID3D11DeviceContext::RSSetViewports`.  
+ Rozměry zobrazení jsou obnoveny na 1x1 pixelů po každém volání `ID3D11DeviceContext::OMSetRenderTargets` nebo `ID3D11DeviceContext::RSSetViewports` .  
   
 ## <a name="example"></a>Příklad  
- Tato varianta možné reprodukovat pomocí kódu takto:  
+ Tuto variantu lze reprodukovat pomocí kódu, který by vypadal takto:  
   
 ```  
 D3D11_VIEWPORT viewport;  

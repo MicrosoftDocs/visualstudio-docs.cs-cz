@@ -20,18 +20,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 35808b27964b3ca8fa0488f1be2ce6dc5530b3dd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596391"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
-Spustí visual studio a načte určité proměnné prostředí pro kompilaci.
+Spustí Visual Studio a načte určité proměnné prostředí pro kompilaci.
 
 > [!NOTE]
-> Tento přepínač je nainstalován s vývojem plochy s úlohou **C++.**
+> Tento přepínač se instaluje s úlohou **vývoj desktopových aplikací v C++** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,22 +45,22 @@ devenv /UseEnv {SolutionName|ProjectName}
 
   Úplná cesta a název souboru řešení.
 
-- *Projectname*
+- *Názevprojektu*
 
   Úplná cesta a název souboru projektu.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento přepínač ovlivňuje ide sady Visual Studio ve vlastnostech projektu pro **adresáře VC++**. Pokud zadáte `/UseEnv` přepínač, uzel **Adresáře VC++** zobrazí hodnoty pro proměnné prostředí PATH, INCLUDE, LIBPATH a LIB. (Zobrazuje také hodnoty pro **zdrojové adresáře** a **vyloučit adresáře**.) V opačném případě uzel nahradí proměnné prostředí pěti hodnotami adresářů: **spustitelné adresáře**, **zahrnout adresáře**, **referenční adresáře**, **adresáře knihovny**a **adresáře WinRT knihovny**.
+Tento přepínač ovlivňuje rozhraní IDE sady Visual Studio ve vlastnostech projektu pro **adresáře VC + +**. Pokud zadáte `/UseEnv` přepínač, uzel **adresáře VC + +** zobrazí hodnoty proměnných prostředí PATH, include, LIBPATH a lib. (Zobrazí se taky hodnoty pro **zdrojové adresáře** a **vyloučené adresáře**.) V opačném případě uzel nahrazuje proměnné prostředí pomocí pěti hodnot adresářů: **spustitelné adresáře**, **adresáře zahrnutí**, adresáře **odkazů**, **adresáře knihoven**a **adresáře knihovny WinRT**.
 
 > [!TIP]
-> Přístup k vlastnostem projektu získáte klepnutím pravým tlačítkem myši na projekt jazyka C++ a výběrem **příkazu Vlastnosti**. V dialogovém okně **Stránky vlastností** vyberte **Vlastnosti konfigurace** a potom **adresáře VC++**.
+> Přístup k vlastnostem projektu získáte tak, že kliknete pravým tlačítkem na projekt C++ a vyberete **vlastnosti**. V dialogovém okně **stránky vlastností** vyberte možnost **Vlastnosti konfigurace** a potom **adresáře VC + +**.
 
-Pokud je pomocí tohoto přepínače zadán název projektu, nástroj zobrazí proměnné prostředí pro všechny projekty v rámci nadřazeného řešení projektu.
+Pokud je pro tento přepínač zadán název projektu, nástroj zobrazí proměnné prostředí pro všechny projekty v rámci nadřazeného řešení projektu.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad spustí visual studio a načte proměnné `MySolution` prostředí do stránek vlastností řešení.
+Následující příklad spustí sadu Visual Studio a načte proměnné prostředí na stránky vlastností `MySolution` řešení.
 
 ```shell
 devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -69,4 +69,4 @@ devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Viz také
 
 - [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
-- [Stránka vlastností adresářů VC++ (Windows)](/cpp/build/reference/vcpp-directories-property-page)
+- [Stránka vlastností adresářů VC + + (Windows)](/cpp/build/reference/vcpp-directories-property-page)

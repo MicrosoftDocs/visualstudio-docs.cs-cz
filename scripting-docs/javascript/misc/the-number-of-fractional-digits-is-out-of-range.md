@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 1b0eb1d7a53614f48daaf6459aaadee594b6fa11
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816173"
 ---
 # <a name="the-number-of-fractional-digits-is-out-of-range"></a>Počet míst za desetinnou čárkou je mimo rozsah
@@ -28,5 +28,5 @@ Pokusili jste se předat neplatný argument **číslo funkce. prototyp. toExpone
   
 - Zajistěte, aby byl argument **toExponential – ()** příliš velký nebo příliš malý.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [toExponential – metoda (Number)](../../javascript/reference/toexponential-method-number-javascript.md)

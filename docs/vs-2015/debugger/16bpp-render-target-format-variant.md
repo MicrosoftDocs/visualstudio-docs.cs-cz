@@ -1,5 +1,5 @@
 ---
-title: 16bpp vykreslování cílového formátu Variant | Dokumentace Microsoftu
+title: Varianta cílového formátu 16bpp vykreslování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,44 +10,44 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7b315c7ab9bb10d039e81ba26b1beb9c4447a205
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157575"
 ---
 # <a name="16bpp-render-target-format-variant"></a>Varianta 16bpp vykreslování cílového formátu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nastaví formát pixelu DXGI_FORMAT_B5G6R5_UNORM pro všechny cíle vykreslování a zpět vyrovnávací paměti.  
+Nastaví formát pixelu na DXGI_FORMAT_B5G6R5_UNORM pro všechny cíle vykreslování a zpětnou vyrovnávací paměť.  
   
-## <a name="interpretation"></a>interpretace  
- Cíl vykreslování nebo přípravné vyrovnávací paměti používá obvykle 32 bitů na pixel (32 bitů na pixel) formát jako je například B8G8R8A8_UNORM. formáty 32 bitů na pixel může spotřebovat velké množství paměti šířky pásma. Formát B5G6R5_UNORM je 16bpp formátu, který je poloviční velikost 32 bitů na pixel formáty, můžete ho pomocí obdobná tlak na šířce pásma paměti, ale za cenu věrnost sníženou barvu.  
+## <a name="interpretation"></a>Interpretace  
+ Cílová nebo zadní vyrovnávací paměť vykreslování obvykle používá formát pixel (32 bitů na pixel), jako je například B8G8R8A8_UNORM. formáty pixel můžou spotřebovat velkou šířku pásma paměti. Vzhledem k tomu, že formát B5G6R5_UNORM je poloviční velikost formátů 16bpp, může použití IT snížit tlak na šířku pásma, ale s náklady na zmenšenou přesnost barev.  
   
- Pokud tato varianta zobrazuje velké výkonnější, pravděpodobně znamená, že vaše aplikace využívá příliš velkou šířku pásma, paměti. Zvýšení výkonu můžete zejména vyslovováno při PROFILOVANÉHO rámce vykazuje značné množství overdraw nebo obsahuje velké množství prolnutí alfa.  
+ Pokud tato varianta znázorňuje velký nárůst výkonu, nejspíš to znamená, že vaše aplikace spotřebovává příliš velkou šířku pásma paměti. Zvýšení výkonu může být obzvláště vyslovované, když se profilový rámeček od značné míry překreslí nebo obsahuje spoustu alfa prolnutí.  
   
- Pokud druhy scény, které jsou generovány s vaší aplikace nevyžadují reprodukce a věrného barev, nevyžadují cíl vykreslování mít alfa kanál a často neobsahují hladké přechody, které jsou náchylné k řazení do pásem artefaktů v rámci sníženou barva věrnost, zvažte použití 16bpp vykreslování cílového formátu ke snížení využití šířky pásma paměti.  
+ Pokud typy scén, které vaše aplikace vykresluje, nevyžadují barevnou reprodukci s vysokou věrností, nevyžaduje cíl vykreslování, aby měl alfa kanál, a často neobsahují hladké přechody, které jsou náchylné k rozřazení artefaktů pod zmenšenou přesností barev, zvažte použití cílového formátu 16bpp vykreslování, aby se snížilo využití šířky pásma paměti.  
   
- Pokud na pozadí, které jsou generovány ve vaší aplikaci vyžadovat barvu a věrného reprodukce nebo alfa kanál nebo technologie smooth přechody jsou společné, zvažte další strategie zaměřené na ke snížení využití šířky pásma paměti – například snižuje množství overdraw nebo alfa blending snížení velikosti framebuffer nebo upravit prostředky textury využívat menší šířku pásma paměti povolení komprese nebo snížením příslušnými rozměry. Obvyklým způsobem je nutné zvážit kvality kompromisy, které jsou součástí některý z těchto optimalizacích bitovou kopii.  
+ Pokud scény, které jsou vykreslené ve vaší aplikaci, vyžadují barevné vybarvení s vysokou věrností nebo alfa kanál, nebo jsou běžné přechody běžné, zvažte jiné strategie pro omezení využití šířky pásma paměti – například zmenšení množství překreslování nebo alfa míchání, zmenšení rozměrů framebuffer nebo úpravou prostředků textury tak, že se povolí komprese nebo sníží jejich rozměry. V obvyklých případech je nutné zvážit kompromisy v kvalitě obrazu, které jsou součástí kterékoli z těchto optimalizací.  
   
- Pokud vaše aplikace je výhodná přepínání 16bpp přípravné vyrovnávací paměti, ale je součástí vašeho řetězce přepnutí, budete muset provést další kroky, protože DXGI_FORMAT_B5G6R5_UNORM není formát podporovaný přípravné vyrovnávací paměti řetězce přepnutí vytvořené pomocí `D3D11CreateDeviceAndSwapChain` nebo `IDXGIFactory::CreateSwapChain`. Místo toho je nutné vytvořit cíl B5G6R5_UNORM formát vykreslování pomocí `CreateTexture2D` a vykreslovat, místo toho. Poté předtím, než je na vaší řetězec přepnutí nevolají Present, zkopírujte cíl vykreslování do přípravné vyrovnávací paměti řetězce přepnutí kreslením quad celé obrazovky se cíl vykreslení jako zdrojovou texturu. I když jde přidat další krok, který bude využívat některé paměti šířky pásma, většina operací vykreslování spotřebuje menší šířku pásma, protože ovlivňují 16bpp vykreslování cílového; Pokud to uloží větší šířku pásma, než je využívána kopírování cíle vykreslování přípravné vyrovnávací paměti řetězce přepnutí, je lepší výkon při vykreslování.  
+ Pokud by vaše aplikace mohla přepínat do vyrovnávací paměti 16bpp, ale je součástí vašeho řetězce přepnutí, je nutné provést další kroky, protože DXGI_FORMAT_B5G6R5_UNORM není podporovaným formátem vyrovnávací paměti pro výměnu řetězců vytvořených pomocí `D3D11CreateDeviceAndSwapChain` nebo `IDXGIFactory::CreateSwapChain` . Místo toho je třeba vytvořit B5G6R5_UNORM cíl vykreslování formátu pomocí `CreateTexture2D` a vykreslit k tomuto cíli. Pak před voláním v řetězci přepnutí zkopírujte cíl vykreslení do vyrovnávací paměti swap-řetězu tak, že nakreslíte celou obrazovku s cílem vykreslování jako zdrojovou texturou. I když se jedná o dodatečný krok, který spotřebuje určitou šířku pásma paměti, většina operací vykreslování spotřebuje menší šířku pásma, protože má vliv na cíl vykreslování 16bpp; Pokud se tím ušetří větší šířka pásma, než se spotřebuje, zkopírováním cíle vykreslování do přístupné paměti swap-Chain se zlepší výkon vykreslování.  
   
- Architektury GPU, používající techniky vedle sebe vykreslování můžete zobrazit výhody výkonu pomocí formátu framebuffer 16bpp protože větší část framebuffer lze zobrazit v každé dlaždici framebuffer místní mezipaměti. Vedle sebe vykreslování architektury jsou někdy součástí grafickými procesory v mobilních telefonů a tabletů počítače; zřídka nacházet mimo tento volné místo.  
+ Architektury GPU, které používají dlaždici vykreslování, můžou zobrazit významné výhody výkonu pomocí formátu 16bpp framebuffer, protože větší část framebuffer se může vejít do místní mezipaměti framebuffer v každé dlaždici. V procesorech GPU v mobilních sluchátkech a tabletových počítačích se někdy nacházejí vedle architektury vykreslování. zřídka se vyskytují mimo tento mezery.  
   
 ## <a name="remarks"></a>Poznámky  
- Cílový formát vykreslení se resetují na DXGI_FORMAT_B5G6R5_UNORM na všechna volání `ID3D11Device::CreateTexture2D` , který vytvoří cíl vykreslování. Konkrétně je formát přepsána při D3D11_TEXTURE2D_DESC objekt předaný v pDesc popisuje cíl vykreslování; To je:  
+ Formát cíle vykreslování je resetován na DXGI_FORMAT_B5G6R5_UNORM při každém volání `ID3D11Device::CreateTexture2D` , které vytvoří cíl vykreslování. Konkrétně je formát přepsán, pokud D3D11_TEXTURE2D_DESC objekt předaný v pDesc popisuje cíl vykreslování; To je:  
   
-- Člen BindFlags má příznak D3D11_BIND_REDNER_TARGET nastavený.  
+- Člen BindFlags má nastaven příznak D3D11_BIND_REDNER_TARGET.  
   
-- Člen BindFlags má příznak D3D11_BIND_DEPTH_STENCIL vymazána.  
+- Člen BindFlags má nezaškrtnutý příznak D3D11_BIND_DEPTH_STENCIL.  
   
-- Využití člen je nastavený na D3D11_USAGE_DEFAULT.  
+- Člen použití je nastaven na D3D11_USAGE_DEFAULT.  
   
 ## <a name="restrictions-and-limitations"></a>Omezení a omezení  
- Protože formátu B5G6R5 nemá kanál alfa, nezachová se tato varianta alfa obsah. Pokud vaše aplikace vykreslování vyžaduje alfa kanál v vaše cíle vykreslování, nebudete moci přepnout jen na B5G6R5 formátu.  
+ Vzhledem k tomu, že formát B5G6R5 nemá alfa kanál, neuchová se v této variantě obsah alfa. Pokud vykreslování vaší aplikace vyžaduje alfa kanál v cíli vykreslování, nemůžete jednoduše přepnout na formát B5G6R5.  
   
 ## <a name="example"></a>Příklad  
- **16bpp vykreslování cílového formátu** možné reprodukovat typu variant pro vykreslení cíle vytvořené využitím `CreateTexture2D` pomocí kódu takto:  
+ Variantu **formátu cíle vykreslování 16bpp** lze reprodukovat pro cíle vykreslování vytvořené pomocí `CreateTexture2D` kódu takto:  
   
 ```  
 D3D11_TEXTURE2D_DESC target_description;  

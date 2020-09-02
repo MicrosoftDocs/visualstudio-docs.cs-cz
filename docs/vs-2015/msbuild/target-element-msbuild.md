@@ -1,5 +1,5 @@
 ---
-title: Cíl – Element (MSBuild) | Dokumentace Microsoftu
+title: Target – element (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,21 +20,21 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f14815502a33fb7d49a10c2724c57a4a0d86e9f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144321"
 ---
 # <a name="target-element-msbuild"></a>Target – element (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje sadu úkolů pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] provádět sekvenčně.  
+Obsahuje sadu úloh, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] které mají být spouštěny postupně.  
   
  \<Project>  
- \<Cíl >  
+ \<Target>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Target Name="Target Name"  
@@ -62,48 +62,48 @@ Obsahuje sadu úkolů pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`Name`|Požadovaný atribut.<br /><br /> Název cíle|  
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Pokud je podmínka vyhodnocena jako `false`, cíl neprovede tělo cíl nebo veškerých cílů, které jsou nastaveny v `DependsOnTargets` atribut. Další informace o podmínkách najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
-|`Inputs`|Nepovinný atribut.<br /><br /> Soubory, které tvoří vstupy do tohoto cíle. Více souborů jsou odděleny středníky. Časová razítka souborů bude porovnána s časovými razítky souborů v `Outputs` k určení, zda `Target` je aktuální. Další informace najdete v tématu [přírůstková sestavení](../msbuild/incremental-builds.md), [jak: Přírůstkové sestavování](../msbuild/how-to-build-incrementally.md), a [transformuje](../msbuild/msbuild-transforms.md).|  
-|`Outputs`|Nepovinný atribut.<br /><br /> Soubory, které výstupy do tohoto cíle. Více souborů jsou odděleny středníky. Časová razítka souborů bude porovnána s časovými razítky souborů v `Inputs` k určení, zda `Target` je aktuální. Další informace najdete v tématu [přírůstková sestavení](../msbuild/incremental-builds.md), [jak: Přírůstkové sestavování](../msbuild/how-to-build-incrementally.md), a [transformuje](../msbuild/msbuild-transforms.md).|  
-|`Returns`|Nepovinný atribut.<br /><br /> Sadu položek, které bude k dispozici pro úlohy, které vyvolávají tento cíl, například úlohy nástroje MSBuild. Několik cílů jsou odděleny středníky. Pokud nemají cíle v souboru `Returns` atributy, výstupy atributy se používají místo pro tento účel.|  
-|`KeepDuplicateOutputs`|Volitelný logický atribut.<br /><br /> Pokud `true`, se zaznamenávají více odkazů na stejné položky v návratových hodnotách elementu target.  Ve výchozím nastavení, tento atribut je `false`.|  
-|`BeforeTargets`|Nepovinný atribut.<br /><br /> Středníkem oddělený seznam cílových názvů.  Při zadán, znamená to, že před zadaného cíle nebo cílů by měl být spuštěn tento cíl. Díky tomu Autor projektu rozšíření existující sady cílů beze jejich změny přímo. Další informace najdete v tématu [pořadí sestavení cílů](../msbuild/target-build-order.md).|  
-|`AfterTargets`|Nepovinný atribut.<br /><br /> Středníkem oddělený seznam cílových názvů. Při zadán, znamená to, že po zadaný cíl nebo cíle by měl být spuštěn tento cíl. Díky tomu Autor projektu rozšíření existující sady cílů beze jejich změny přímo. Další informace najdete v tématu [pořadí sestavení cílů](../msbuild/target-build-order.md).|  
-|`DependsOnTargets`|Nepovinný atribut.<br /><br /> Může dojít, cíle, které je třeba spustit předtím, než můžete spustit tento cíl nebo analýza závislosti nejvyšší úrovně. Několik cílů jsou odděleny středníky.|  
-|`Label`|Nepovinný atribut.<br /><br /> Identifikátor, který může identifikaci nebo třídění systémových a uživatelských elementů.|  
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Pokud je podmínka vyhodnocena jako `false` , cíl nespustí tělo cíle nebo žádné cíle, které jsou nastaveny v `DependsOnTargets` atributu. Další informace o podmínkách najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
+|`Inputs`|Nepovinný atribut.<br /><br /> Soubory, které tvoří vstupy do tohoto cíle. Několik souborů je oddělených středníky. Časová razítka souborů budou porovnána s časovými razítky souborů v `Outputs` , aby bylo možné zjistit, zda `Target` je v aktuálním stavu. Další informace naleznete v tématu [přírůstkové sestavení](../msbuild/incremental-builds.md), [Postupy: sestavení přírůstkově](../msbuild/how-to-build-incrementally.md)a [transformace](../msbuild/msbuild-transforms.md).|  
+|`Outputs`|Nepovinný atribut.<br /><br /> Soubory, které tvoří výstup do tohoto cíle. Několik souborů je oddělených středníky. Časová razítka souborů budou porovnána s časovými razítky souborů v `Inputs` , aby bylo možné zjistit, zda `Target` je v aktuálním stavu. Další informace naleznete v tématu [přírůstkové sestavení](../msbuild/incremental-builds.md), [Postupy: sestavení přírůstkově](../msbuild/how-to-build-incrementally.md)a [transformace](../msbuild/msbuild-transforms.md).|  
+|`Returns`|Nepovinný atribut.<br /><br /> Sada položek, které budou zpřístupněny pro úlohy, které vyvolávají tento cíl, například úlohy MSBuild. Více cílů je odděleno středníky. Pokud cíle v souboru nemají žádné `Returns` atributy, místo toho se pro tento účel použijí atributy výstupy.|  
+|`KeepDuplicateOutputs`|Volitelný atribut typu Boolean.<br /><br /> Pokud je `true` zaznamenáno více odkazů na stejnou položku v cílovém objektu vrátí se.  Ve výchozím nastavení je tento atribut `false` .|  
+|`BeforeTargets`|Nepovinný atribut.<br /><br /> Seznam cílových názvů oddělený středníkem  Je-li tento parametr zadán, označuje, že tento cíl bude spuštěn před zadaným cílem nebo cílem. Tím umožníte, aby autor projektu rozšířil existující sadu cílů beze změny přímo. Další informace najdete v tématu [cílové pořadí sestavení](../msbuild/target-build-order.md).|  
+|`AfterTargets`|Nepovinný atribut.<br /><br /> Seznam cílových názvů oddělený středníkem Když se tato parametr zadá, označuje, že se má tento cíl spustit po zadaném cíli nebo cíli. Tím umožníte, aby autor projektu rozšířil existující sadu cílů beze změny přímo. Další informace najdete v tématu [cílové pořadí sestavení](../msbuild/target-build-order.md).|  
+|`DependsOnTargets`|Nepovinný atribut.<br /><br /> Cíle, které je třeba provést před provedením tohoto cíle, nebo může dojít k analýze závislostí na nejvyšší úrovni. Více cílů je odděleno středníky.|  
+|`Label`|Nepovinný atribut.<br /><br /> Identifikátor, který může identifikovat nebo seřadit systémové a uživatelské prvky.|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Úloha](../msbuild/task-element-msbuild.md)|Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úloh. V cíli může být nula nebo více úloh.|  
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Obsahuje sadu uživatelem definované `Property` elementy. Od verze rozhraní .NET Framework 3.5 `Target` element může obsahovat `PropertyGroup` elementy.|  
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Obsahuje sadu uživatelem definované `Item` elementy. Od verze rozhraní .NET Framework 3.5 `Target` element může obsahovat `ItemGroup` elementy. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).|  
-|[Onerror –](../msbuild/onerror-element-msbuild.md)|Způsobí, že jeden nebo více cílů ke spuštění, pokud `ContinueOnError` atribut je ErrorAndStop (nebo `false`) pro neúspěšné úlohy. Může být nula nebo více `OnError` prvky v cíli. Pokud `OnError` prvky jsou k dispozici, musí být poslední prvky v `Target` elementu.<br /><br /> Informace o tom, `ContinueOnError` atributu naleznete v tématu [Task – Element (MSBuild)](../msbuild/task-element-msbuild.md).|  
+|[Úkol](../msbuild/task-element-msbuild.md)|Vytvoří a spustí instanci [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úkolu. V cíli může být nula nebo více úkolů.|  
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Obsahuje sadu uživatelsky definovaných `Property` prvků. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `PropertyGroup` elementy.|  
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Obsahuje sadu uživatelsky definovaných `Item` prvků. Počínaje .NET Framework 3,5 `Target` prvek může obsahovat `ItemGroup` elementy. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).|  
+|[OnError](../msbuild/onerror-element-msbuild.md)|Způsobí, že jeden nebo více cílů bude spuštěno, pokud `ContinueOnError` je atribut ErrorAndStop (nebo `false` ) pro neúspěšnou úlohu. V cíli může být nula nebo více `OnError` prvků. Pokud `OnError` jsou prvky přítomny, musí se jednat o poslední prvky v `Target` elementu.<br /><br /> Informace o atributu naleznete `ContinueOnError` v tématu [element Task (MSBuild)](../msbuild/task-element-msbuild.md).|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
+|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový prvek [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- V době běhu je zadán první cíl ke spuštění. Cíle může mít závislosti na jiných cílů. Například cíl nasazení závisí na cíli pro kompilaci. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Modul provádí v pořadí, v jakém jsou uvedeny v závislosti `DependsOnTargets` atribut zleva doprava. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md).  
+ První cíl, který má být spuštěn, je určen v době běhu. Cíle můžou mít závislosti na jiných cílech. Například cíl pro nasazení závisí na cíli pro kompilaci. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Modul spouští závislosti v pořadí, ve kterém jsou uvedeny v `DependsOnTargets` atributu zleva doprava. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md).  
   
- Cíl pouze provádí jednou během sestavení, i v případě, že více než jeden cíl závislý na něj.  
+ Cíl se spustí pouze jednou během sestavení, i když na něm závisí více než jeden cíl.  
   
- Pokud je cíl vynechán, protože jeho `Condition` atributů vyhodnotí jako `false`, se můžete stále provést Pokud je vyvolána později v sestavení a jeho `Condition` atributů vyhodnotí jako `true` v daném čase.  
+ Pokud je cíl vynechán, protože se jeho `Condition` atribut vyhodnocuje `false` , může být stále proveden, pokud je vyvolán později v sestavení a jeho atribut je `Condition` `true` v daném čase vyhodnocen jako.  
   
- Před MSBuild 4 `Target` vrátí všechny položky, které byly zadány v `Outputs` atribut.  K tomuto účelu nástroj MSBuild museli zaznamenávat položky v případě, že je požadovali úloh později v sestavení. Protože neexistoval způsob, jak k označení cíle, které má výstupy, které by vyžadovaly volajícím, MSBuild sbírají všechny položky ze všech `Outputs` ve všech vyvolána `Target`s. Tato realizace škálování problémy pro sestavení, která má velký počet položek výstup.  
+ Před MSBuild 4 `Target` vrátily všechny položky, které byly zadány v `Outputs` atributu.  Nástroj MSBuild musel tyto položky zaznamenat v případě, že je požaduje, později v sestavení. Vzhledem k tomu, že neexistuje žádný způsob, jak určit, které cíle obsahovaly výstupy, které by volající vyžadovaly, nástroj MSBuild shromáždil všechny položky ze všech `Outputs` vyvolaných `Target` s. To vede k škálování problémů pro sestavení, která měla velký počet výstupních položek.  
   
- Pokud uživatel zadá `Returns` na žádném `Target` prvku v projektu, pak pouze ty `Target`, které mají `Returns` atribut zaznamenávat tyto položky.  
+ Pokud uživatel určí `Returns` u libovolného `Target` elementu v projektu, pak pouze ty `Target` , které mají `Returns` atribut, tyto položky se zaznamenají.  
   
- A `Target` může obsahovat i `Outputs` atribut a `Returns` atribut.  `Outputs` se používá s `Inputs` k určení, zda je aktuální cíl. `Returns`, pokud existuje, přepíše hodnotu `Outputs` určit položky, které jsou vráceny volajícímu.  Pokud `Returns` není k dispozici, pak `Outputs` bude k dispozici volajících s výjimkou v případě popsané výše.  
+ `Target`Může obsahovat `Outputs` atribut i `Returns` atribut.  `Outputs` se používá s `Inputs` k určení, zda je cíl v aktuálním stavu. `Returns`, pokud je k dispozici, Přepisuje hodnotu `Outputs` k určení, které položky jsou vraceny volajícím.  Pokud není k `Returns` `Outputs` dispozici, bude zpřístupněna volajícím s výjimkou výše popsaného případu.  
   
- Před 4 nástroje MSBuild, který kdykoli `Target` zahrnuté více odkazů na stejné položky v jeho `Outputs`, by zaznamenávají tyto duplicitní položky. Ve velmi velké sestavení, který měl velký počet výstupů a mnoho vzájemné závislosti projektu, došlo by k vzájemnému velké množství paměti, aby byly ztraceny, protože duplicitní položky nebyly žádné použití. Když `KeepDuplicateOutputs` atribut je nastaven na `true`, zaznamenávají tyto duplikáty.  
+ Před tím, než nástroj MSBuild 4 pokaždé, když jsou `Target` zahrnuté více odkazů na stejnou položku `Outputs` , budou tyto duplicitní položky zaznamenávány. Ve velmi rozsáhlých sestaveních, která měla velký počet výstupů a mnoho vzájemně závislých projektů, by to znamenalo neplýtvání velkého množství paměti, protože duplicitní položky nebyly žádného použití. Pokud `KeepDuplicateOutputs` je atribut nastaven na `true` , jsou tyto duplicity zaznamenávány.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `Target` element, který se spustí `Csc` úloh.  
+ Následující příklad kódu ukazuje `Target` prvek, který `Csc` úlohu spouští.  
   
 ```  
 <Target Name="Compile" DependsOnTargets="Resources" Returns="$(TargetPath)">  

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_container – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_container | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b759c8fc65130c37f24e8ec03bbcebf3a52241d0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64810668"
 ---
-# <a name="idiasymbolgetcontainer"></a>IDiaSymbol::get_container
+# <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tato funkce načte ukazatel na symbol představující/nadřazeným tento symbol.  
+Tato funkce načte ukazatel na symbol představující nadřazený nebo kontejner tohoto symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ HRESULT get_container(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrací ukazatel na `IDiaSymbol` obsahující informace o kontejneru tento symbol.  
+ mimo Vrátí ukazatel na `IDiaSymbol` obsahující informace o kontejneru tohoto symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí S_FALSE nebo kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí S_FALSE nebo kód chyby.  
   
 > [!NOTE]
-> Návratovou hodnotu S_FALSE znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota S_FALSE znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Záhlaví:|dia2.h|  
-|Verze:|Ve verzi 8.0 DIA SDK|  
+|Hlaviček|Dia2. h|  
+|Verze:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

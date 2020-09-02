@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893265"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
@@ -51,7 +51,7 @@ Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel
 4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
 > [!NOTE]
-> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišná, protože není k dispozici žádná karta vlastnosti **analýzy kódu** . postupujte podle kroků a [zkopírujte předdefinovanou sadu pravidel do projektu a nastavte ji jako aktivní sadu pravidel](analyzer-rule-sets.md). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
+> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože není k dispozici žádná karta vlastnost **Analýza kódu** . Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](analyzer-rule-sets.md). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
 
 ## <a name="create-a-new-rule-set"></a>Vytvořit novou sadu pravidel
 

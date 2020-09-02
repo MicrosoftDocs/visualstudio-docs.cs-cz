@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: da272529768f3227ce6e0ee3e0ebbf086140dd15
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816121"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>Podmíněná kompilace je vypnutá
@@ -36,9 +36,9 @@ Pokusili jste se použít proměnnou podmíněné kompilace bez prvotního zapnu
     /*@cc_on @*/  
     ```  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Podmíněná kompilace](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Proměnné podmíněné kompilace](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_onVydá](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@ifVydá](../../javascript/reference/at-if-statement-javascript.md)   
- [@setVydá](../../javascript/reference/at-set-statement-javascript.md)
+ [@cc_on Vydá](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@if Vydá](../../javascript/reference/at-if-statement-javascript.md)   
+ [@set Vydá](../../javascript/reference/at-set-statement-javascript.md)

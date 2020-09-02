@@ -1,5 +1,5 @@
 ---
-title: Příkaz aliasy
+title: Aliasy příkazů
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,116 +17,116 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b420644672309371ab61f1499e22d4745c69c569
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596408"
 ---
 # <a name="visual-studio-command-aliases"></a>Aliasy příkazů sady Visual Studio
 
-Aliasy příkazů umožňují při spuštění příkazu psát méně znaků. Aliasy zadáte do pole **Najít/Příkaz** nebo Do okna **Příkaz.** Například místo zadání `>File.OpenFile` pro zobrazení dialogového okna **Otevřít soubor** můžete `>of`použít předdefinovaný alias .
+Aliasy příkazů umožňují zadat méně znaků, pokud chcete spustit příkaz. Aliasy zadáte do pole **Najít/příkaz** nebo **příkazového** řádku. Například namísto zadání `>File.OpenFile` pro zobrazení dialogového okna **otevřít soubor** můžete použít předem definovaný alias `>of` .
 
-`alias` Zadáním **Command** příkazového okna zobrazíte seznam aktuálních aliasů a jejich definic. Chcete-li vymazat obsah okna `>cls` **Příkaz,** zadejte text. Pokud chcete zobrazit alias pro určitý příkaz, zadejte `alias <command name>`.
+`alias`Do **příkazového** řádku zadejte, aby se zobrazil seznam aktuálních aliasů a jejich definice. Zadejte `>cls` , chcete-li vymazat obsah okna **příkazového** řádku. Pokud chcete zobrazit alias pro určitý příkaz, zadejte `alias <command name>` .
 
-Můžete snadno vytvořit vlastní alias pro jeden z příkazů sady Visual Studio (s argumenty nebo bez nich). Syntaxe pro aliasování `File.NewFile MyFile.txt` je `alias MyAlias File.NewFile MyFile.txt`například . Jeden ze svých aliasů můžete odstranit pomocí`alias <alias name> /delete`
+Můžete snadno vytvořit vlastní alias pro jeden z příkazů sady Visual Studio (s argumenty nebo bez). Například syntaxe pro aliasing `File.NewFile MyFile.txt` je `alias MyAlias File.NewFile MyFile.txt` . Jeden z vašich aliasů můžete odstranit pomocí `alias <alias name> /delete`
 
-Níže uvedená tabulka obsahuje seznam předdefinovaných aliasů příkazů sady Visual Studio. Některé názvy příkazů mají více než jeden předdefinovaný alias. Klepnutím na odkazy pro níže uvedené názvy příkazů zobrazíte podrobná témata, která vysvětlují správnou syntaxi, argumenty a přepínače pro tyto příkazy.
+Následující tabulka obsahuje seznam předem definovaných aliasů příkazů sady Visual Studio. Některé názvy příkazů mají více než jeden předem definovaný alias. Kliknutím na odkazy níže uvedených názvů příkazů zobrazíte podrobná témata, která vysvětlují správnou syntaxi, argumenty a přepínače pro tyto příkazy.
 
 |Název příkazu|Alias|Úplný název|
 |------------------|-----------|-------------------|
-|[Tisk – příkaz](../../ide/reference/print-command.md)|?|Ladění.Tisk|
-|[Rychlé kukátko – příkaz](../../ide/reference/quick-watch-command.md)|??|Ladění.Quickwatch|
-|Přidat nový projekt|PřidatProj|Soubor.AddNewProject|
-|[Příkaz Alias](../../ide/reference/alias-command.md)|Alias|Nástroje.Alias|
-|Automatické hodnoty – okno|Auta|Debug.Autos|
-|Zarážky – okno|Bl|Debug.Breakpoints|
-|Přepnout zarážku|Bp|Debug.ToggleBreakPoint|
+|[Tisk – příkaz](../../ide/reference/print-command.md)|?|Ladit. tisk|
+|[Rychlé kukátko – příkaz](../../ide/reference/quick-watch-command.md)|??|Debug. QuickWatch|
+|Přidat nový projekt|AddProj|Soubor. AddNewProject|
+|[Alias – příkaz](../../ide/reference/alias-command.md)|Alias|Tools. alias|
+|Automatické hodnoty – okno|Automatické hodnoty|Debug.Autos|
+|Zarážky – okno|BL|Debug.Breakpoints|
+|Přepnout zarážku|kontrol|Debug. Togglebreakpoint –|
 |okno Zásobník volání|Zásobník volání|Debug.CallStack|
 |Vymazat záložky|ClearBook|Edit.ClearBookmarks|
-|Zavřít|Zavřít|Soubor.Zavřít|
-|Zavřít všechny dokumenty|Zavřít vše|Window.CloseAllDocuments|
-|Vymazat vše|Cls|Upravit.ClearAll|
-|Příkazový režim|Cmd|View.CommandWindow|
+|Zavřít|Zavřít|Soubor. Zavřít|
+|Zavřít všechny dokumenty|CloseAll|Window. CloseAllDocuments|
+|Vymazat vše|specifikaci|Upravit. ClearAll|
+|Režim příkazu|přepsat|View.CommandWindow|
 |Zobrazit kód|kód|View.ViewCode|
-|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md)|d|Ladění.ListMemory|
-|[Příkaz Paměti seznamu](../../ide/reference/list-memory-command.md) jako ANSI|Da|Ladění.ListMemory /Ansi|
-|[Příkaz Paměť seznamu](../../ide/reference/list-memory-command.md) Jednobajtový formát|Db|Ladění.ListMemory /Formát:OneByte|
-|[Příkaz Paměti seznamu](../../ide/reference/list-memory-command.md) jako ANSI s čtyřbajtovým formátem|Dc|Ladění.ListMemory /Formát:FourBytes /Ansi|
-|[Příkaz Paměť seznamu](../../ide/reference/list-memory-command.md) Čtyřbajtový formát|dd|Debug.ListMemory /Format:FourBytes|
-|Odstranit do BOL|DelBOL|Edit.DeleteToBOL|
-|Odstranit do EOL|DelEOL|Edit.DeleteToEOL|
-|Odstranit vodorovné prázdné znaky|DelHSp|Upravit.OdstranitHorizontálníPrázdné plochy|
+|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md)|d|Debug. ListMemory –|
+|[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako ANSI|&|Ladit. ListMemory –/ANSI|
+|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát s jedním bytem|inženýr|Debug. ListMemory –/Format: OneByte|
+|[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako ANSI se formátem na 4 bajty|DC|Debug. ListMemory –/Format: FourBytes/ANSI|
+|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát se čtyřmi bajty|dd|Debug. ListMemory –/Format: FourBytes|
+|Odstranit do knihách online|DelBOL|Upravit. DeleteToBOL|
+|Odstranit do konce řádku|DelEOL|Upravit. DeleteToEOL|
+|Odstranit horizontální prázdné znaky|DelHSp|Upravit. DeleteHorizontalWhitespace|
 |Návrhář zobrazení|návrhář|View.ViewDesigner|
-|[Příkaz Paměť seznamu](../../ide/reference/list-memory-command.md) Plovoucí formát|Df|Ladění.ListMemory/Formát:Float|
-|okno Zpětný překlad|disismus|Debug.Disassembly|
-|[Příkaz Paměť seznamu](../../ide/reference/list-memory-command.md) Osmibajtový formát|Dq|Debug.ListMemory /Format:Osm bajtů|
-|[Příkaz Paměti seznamu](../../ide/reference/list-memory-command.md) jako Unicode|Du|Ladění.ListMemory /Unicode|
-|[Příkaz Vyhodnotit příkaz](../../ide/reference/evaluate-statement-command.md)|Eval|Příkaz Debug.EvaluateStatement|
+|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát float|příznak|Debug. ListMemory –/Format: float|
+|okno Zpětný překlad|DISASM|Debug.Disassembly|
+|[Listovat paměť – příkaz](../../ide/reference/list-memory-command.md) Formát 8 bajtů|DQ|Debug. ListMemory –/Format: EightBytes|
+|[Výpis paměti – příkaz](../../ide/reference/list-memory-command.md) jako Unicode|du|Ladit. ListMemory –/Unicode|
+|[Evaluate – příkaz příkazu](../../ide/reference/evaluate-statement-command.md)|platnost|Debug. EvaluateStatement|
 |Ukončit|Ukončit|File.Exit|
 |Příkaz Formátovat výběr|formát|Edit.FormatSelection|
-|Celá obrazovka|Fullscreen|View.FullScreen|
-|[Spustit – příkaz](../../ide/reference/start-command.md)|g|Debug.Start|
-|[Přejít na – příkaz](../../ide/reference/go-to-command.md)|Přejít na|Edit.GoTo|
-|Přejít na Ortézu|GotoBrace|Edit.GotoBrace|
-|F1Nápověda|Nápověda|Help.F1Help|
-|Okamžitý režim|immed|Tools.ImmediateMode|
-|Vložit soubor jako text|Vložit soubor|Upravit.InsertfileAsText|
-|[Listovat zásobník volání – příkaz](../../ide/reference/list-call-stack-command.md)|Kb|Ladění.ListCallStack|
-|Vytvořit malá písmena|Lcase|Edit.MakeLowercase|
-|Čára řezu|LineCut|Edit.LineCut|
+|Celá obrazovka|Celoobrazovkového|View.FullScreen|
+|[Spustit příkaz](../../ide/reference/start-command.md)|g|Debug.Start|
+|[Přejít na příkaz](../../ide/reference/go-to-command.md)|GotoLn|Edit.GoTo|
+|Přejít na složenou závorku|GotoBrace|Edit.GotoBrace|
+|F1Help|Nápověda|Help.F1Help|
+|Přímý režim|immed|Tools. ImmediateMode|
+|Vložit soubor jako text|InsertFile|Upravit. InsertFileAsText|
+|[Listovat zásobník volání – příkaz](../../ide/reference/list-call-stack-command.md)|Knowledge|Debug. ListCallStack|
+|Převést na malá písmena|LCase|Edit.MakeLowercase|
+|Vyjmout řádek|LineCut|Edit.LineCut|
 |Odstranit řádek|LineDel|Edit.LineDelete|
-|Vypsat členy|Seznam členů|Edit.ListMembers|
-|Místní hodnoty – okno|Místní obyvatelé|Debug.Locals|
-|[Protokolovat výstup příkazového okna – příkaz](../../ide/reference/log-command-window-output-command.md)|Protokol|Tools.LogCommandWindowOutput|
-|Režim označení příkazového okna|Označit|Tools.CommandWindowMarkMode|
-|Paměť – okno|Paměť ová1|Debug.Memory1|
-|Okno paměti 2|Paměť2|Debug.Memory2|
-|Okno paměti 3|Paměť3|Debug.Memory3|
-|Okno paměti 4|Paměť4|Debug.Memory4|
-|[Nastavit základ – příkaz](../../ide/reference/set-radix-command.md)|n|Ladění.SetRadix|
-|[ShowWebBrowser – příkaz](../../ide/reference/showwebbrowser-command.md)|navigace na navigovat|View.ShowWebBrowser|
+|Vypsat členy|ListMembers|Edit.ListMembers|
+|Místní hodnoty – okno|Místní hodnoty|Debug.Locals|
+|[Příkaz pro výstup příkazového okna v protokolu](../../ide/reference/log-command-window-output-command.md)|Protokol|Tools. LogCommandWindowOutput|
+|Režim značek příkazového okna|lomítk|Tools. CommandWindowMarkMode|
+|Paměť – okno|Memory1 paměti|Debug.Memory1|
+|Okno paměti 2|Memory2|Debug.Memory2|
+|Okno paměti 3|Memory3|Debug.Memory3|
+|Okno paměti 4|Memory4|Debug.Memory4|
+|[Nastavit základ – příkaz](../../ide/reference/set-radix-command.md)|n|Debug. SetRadix|
+|[ShowWebBrowser – – příkaz](../../ide/reference/showwebbrowser-command.md)|navigace navigace|Zobrazit. ShowWebBrowser –|
 |Další záložka|NextBook|Edit.NextBookmark|
-|[Nový soubor – příkaz](../../ide/reference/new-file-command.md)|Nf|File.NewFile|
-|Nový projekt|np NewProj|File.NewProject|
-|[Otevřít soubor – příkaz](../../ide/reference/open-file-command.md)|z otevřeného|File.OpenFile|
-|[Otevřít projekt – příkaz](../../ide/reference/open-project-command.md)|Op|File.OpenProject|
-|Sbalit na definice/Zastavit osnovu|Zastavování osnovy|Edit.CollapseToDefinitions|
-|Krok přes|p|Debug.StepOver|
+|[Nový soubor – příkaz](../../ide/reference/new-file-command.md)|NF|File.NewFile|
+|Nový projekt|NP NewProj|File.NewProject|
+|[Otevřít soubor – příkaz](../../ide/reference/open-file-command.md)|Otevřené|File.OpenFile|
+|[Otevřít projekt – příkaz](../../ide/reference/open-project-command.md)|evřít|File.OpenProject|
+|Sbalit do definic/zastavit sbalení|OutlineDefs StopOutlining|Upravit. CollapseToDefinitions|
+|Krokovat|p|Debug.StepOver|
 |Informace o parametrech|ParamInfo|Edit.ParameterInfo|
-|Krok ven|Pr|Debug.StepOut|
+|Krok ven|Pronájem|Debug.StepOut|
 |Předchozí záložka|PrevBook|Edit.PreviousBookmark|
 |Tisk souboru|Tisk|File.Print|
-|Okno vlastností|Rekvizity|View.PropertiesWindow|
+|Okno vlastností|props|View.PropertiesWindow|
 |Zastavit|q|Debug.StopDebugging|
-|Opakovat|Znovu|Edit.Redo|
+|Opakovat|proveďte|Edit.Redo|
 |Registr – okno|registr|Debug.Registers|
-|Spustit na kurzor|Rtc|Debug.RunToCursor|
+|Spustit ke kurzoru|RTC|Debug.RunToCursor|
 |Uložit vybrané položky|save|File.SaveSelectedItems|
-|Uložit vše|Uložit vše|File.SaveAll|
-|Uložit jako|Saveas|Soubor.Uložitvybrané položky|
-|[Prostředí – příkaz](../../ide/reference/shell-command.md)|prostředí|Nástroje.Prostředí|
-|Zastavit hledání v souborech|StopNajít|Edit.FindInFiles /stop|
-|Zaměnit kotvu|Swapanchor|Edit.SwapAnchor|
-|Krok do|t|Debug.StepInto|
-|Výběr tabifikuje|převedení na tabulátory|Upravit.TabifyVýběr|
-|Okno Seznam úkolů|Tasklist|View.TaskList|
+|Uložit vše|SaveAll|File.SaveAll|
+|Uložit jako|Nám|Soubor. SaveSelectedItemsAs|
+|[Příkaz Shell](../../ide/reference/shell-command.md)|prostředí|Nástroje. Shell|
+|Zastavit hledání v souborech|StopFind|Edit. FindInFiles/stop|
+|Prohodit kotvu|SwapAnchor|Edit.SwapAnchor|
+|Krokovat s vnořením|t|Debug.StepInto|
+|Převést na tabulátory výběr|převedení na tabulátory|Upravit. TabifySelection|
+|Okno tasklist|TaskList|View.TaskList|
 |Vlákna – okno|Vlákna|Debug.Threads|
-|Dlaždice vodorovně|Dlaždice|Window.TileVodorovně|
-|Dlaždice svisle|DlaždiceV|Window.TileSvisle|
-|Přepnout záložku|Přepnout knihu|Edit.ToggleBookmark|
+|Vedle sebe vodorovně|TileH|Window. TileHorizontally|
+|Svisle vedle sebe|TileV|Window. TileVertically|
+|Přepnout záložku|ToggleBook|Edit.ToggleBookmark|
 |Okno panelu nástrojů|sada nástrojů|View.Toolbox|
-|[Zobrazit zpětný překlad – příkaz](../../ide/reference/list-disassembly-command.md)|u|Debug.ListDisisassembly|
-|Vytvořit velká písmena|Ucase|Edit.MakeUppercase|
-|Zpět|Zpět|Edit.Undo|
-|Zrušit výběr|Zrušit katabifikace|Upravit.UntabifyVýběr|
-|Kukátko – okno|Watch|Ladění.WatchN|
+|[Výpis zpětného překladu příkazu](../../ide/reference/list-disassembly-command.md)|u|Debug. ListDisassembly|
+|Převést na velká písmena|UCase|Edit.MakeUppercase|
+|Zpět|vrátit zpět|Edit.Undo|
+|Zrušit tabulátory výběr|Zrušit tabulátory|Upravit. UntabifySelection|
+|Kukátko – okno|Watch|Debug. WatchN|
 |Přepnout zalamování řádků|WordWrap|Edit.ToggleWordWrap|
-|Seznam procesů|&#124;|Ladění.ListProcesy|
-|[Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)|~ ~*k\*~ kb|Ladění.ListThreads Debug.ListTheads /AllThreads|
+|Výpis procesů|&#124;|Debug. ListProcesses|
+|[Listovat vlákna – příkaz](../../ide/reference/list-threads-command.md)|~ ~ * k ~ \* KB|Debug. Listthreads – Debug. ListTheads/AllThreads|
 
 ## <a name="see-also"></a>Viz také
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Najít/Příkazové pole](../../ide/find-command-box.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)

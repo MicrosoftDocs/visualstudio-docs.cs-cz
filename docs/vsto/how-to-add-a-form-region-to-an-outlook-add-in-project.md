@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a03ba05226720913d48dc1828dcb849bee72d17e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538395"
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>Postupy: Přidání oblasti formuláře do projektu doplňku aplikace Outlook
@@ -60,7 +60,7 @@ ms.locfileid: "85538395"
 
      Všechny typy oblastí formuláře se mohou objevit v okně kontroly v režimu psaní (pro vytváření položek) a v režimu čtení (pro zobrazení položek). Sousedící, nahrazování a nahrazování – všechny typy oblastí formuláře se mohou zobrazit také v podokně pro čtení.
 
-10. Klikněte na **Další**.
+10. Klikněte na **Next** (Další).
 
 11. V části **Určete třídy zpráv, které budou zobrazovat tuto stránku oblasti formuláře** , vyberte standardní třídy zpráv aplikace Outlook nebo zadejte názvy jedné nebo více vlastních tříd zpráv a potom klikněte na tlačítko **Dokončit**. Další informace naleznete v tématu [přidružení oblasti formuláře k třídě zpráv aplikace Outlook](../vsto/associating-a-form-region-with-an-outlook-message-class.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Args | Dokumentace Microsoftu
+title: Argumenty | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 65759da4363891c713f906e6cb10f00443bcbceb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197914"
 ---
 # <a name="args"></a>Args
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **Args** určuje seznam argumentů, které se předají k cílové aplikaci z **spuštění** podpříkaz.  
+Možnost VSPerfCmd.exe **args** určuje seznam argumentů, které jsou předány cílové aplikaci **spouštěného** dílčího příkazu.  
   
- **Args** jde použít jenom při **spuštění** je také zadán v příkazovém řádku. **Args** je volitelný při **spuštění** určena.  
+ **Argumenty** lze použít pouze v případě, že je v příkazovém řádku uveden také příkaz **Spustit** . **Argumenty** jsou volitelné, pokud je zadán parametr **Launch** .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,14 +31,14 @@ VSPerfCmd.exe /Launch:AppName /Args:Arguments [Options]
   
 #### <a name="parameters"></a>Parametry  
  `Arguments`  
- Seznam argumentů k cílové aplikaci z **spuštění** příkazu.  
+ Seznam argumentů cílové aplikace příkazu pro **spuštění** .  
   
 ## <a name="required-options"></a>Požadované možnosti  
- **Spuštění:** `AppName`  
- Zadaná aplikace spustí a začne profilace pomocí metody odběru vzorků.  
+ **Spustit:**`AppName`  
+ Spustí zadanou aplikaci a zahájí profilaci pomocí metody vzorkování.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu **Args** možnost předat argumenty do TestApp.exe.  
+ Následující příklad používá možnost **args** k předání argumentů TestApp.exe.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
@@ -48,5 +48,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /Args:"123, 'Hello World'"
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

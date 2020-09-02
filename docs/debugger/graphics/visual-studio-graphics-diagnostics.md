@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187745"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
 Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a analýzu problémů s výkonem a výkonem v aplikacích Direct3D. Diagnostika grafiky můžete použít pro aplikace, které běží místně na počítači s Windows, v emulátoru zařízení s Windows nebo na vzdáleném počítači nebo zařízení.
 
- Pracovní postup Diagnostika grafiky začíná zachycením záznamu o tom, jak vaše aplikace využívá Direct3D – Live, když je spuštěná, aby se jeho chování mohlo analyzovat hned, sdílet nebo Uložit pro pozdější použití. Relace zachycení lze spustit a řídit ručně ze sady Visual Studio nebo pomocí nástroje pro zachycení příkazového řádku **DXCap. exe**. Relace zachycení se taky dají iniciovat a řídit programově pomocí rozhraní API pro zachycení Diagnostika grafiky.
+ Pracovní postup Diagnostika grafiky začíná zachycením záznamu o tom, jak vaše aplikace využívá Direct3D – Live, když je spuštěná, aby se jeho chování mohlo analyzovat hned, sdílet nebo Uložit pro pozdější použití. Relace zachycení lze spustit a řídit ručně ze sady Visual Studio nebo pomocí nástroje pro zachycení příkazového řádku **dxcap.exe**. Relace zachycení se taky dají iniciovat a řídit programově pomocí rozhraní API pro zachycení Diagnostika grafiky.
 
  Po nahrání jeho obsahu je možné ho pomocí *analyzátoru grafiky* sady Visual Studio kdykoli přehrát a znovu vytvořit zachycené snímky pomocí stejných prostředků a příkazů pro vykreslování, které aplikace používala. Pak můžete pomocí nástrojů, které jsou k dispozici v okně analyzátor grafiky, analyzovat všechny zachycené snímky podrobněji. Tyto nástroje je možné použít k prohlédnutí všech volání rozhraní Direct3D API, prostředku, objektu stavu kanálu, fáze zřetězení nebo dokonce kompletní historie libovolného pixelu v zachyceném snímku. Pomocí těchto nástrojů ve vzájemném seznámení se dá problém vykreslování zobrazit intuitivním způsobem, počínaje tím, jak se zobrazuje v zachyceném snímku a přechodem na jeho hlavní příčinu ve zdrojovém kódu aplikace, shaderech nebo grafických prostředcích.
 
@@ -52,7 +52,7 @@ Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a ana
 
  [Zásobník volání událostí](graphics-event-call-stack.md) **Zásobník volání událostí grafiky** slouží k prohlédnutí zásobníku volání aktuálně vybrané události, abyste mohli přejít ke kódu aplikace, který se vztahuje k problému vykreslování.
 
- [Historie pixelů](graphics-pixel-history.md) Pomocí okna **Historie pixelů grafiky** můžete analyzovat, jak je aktuálně vybraný pixel ovlivněn událostmi, které ho ovlivnily, a můžete určit událost nebo kombinaci událostí, které způsobují určitý druh problémů s vykreslováním. Historie pixelů je užitečná hlavně v případě, že se objekt nesprávně vykresluje, protože výstup pixel shaderu je buď nesprávný, nebo byl nesprávně spojen s vyrovnávací pamětí snímku, nebo když se objekt dokonce nezobrazuje, protože jeho pixely byly zahozeny. předtím, než dosáhnou vyrovnávací paměti rámce.
+ [Historie pixelů](graphics-pixel-history.md) Pomocí okna **Historie pixelů grafiky** můžete analyzovat, jak je aktuálně vybraný pixel ovlivněn událostmi, které ho ovlivnily, a můžete určit událost nebo kombinaci událostí, které způsobují určitý druh problémů s vykreslováním. Historie pixelů je užitečná hlavně v případě, že se objekt nesprávně vykresluje, protože výstup pixel shaderu je buď nesprávný, nebo byl nesprávně spojen s vyrovnávací pamětí snímku, nebo když se objekt dokonce nezobrazuje, protože jeho pixely byly zahozeny předtím, než dosáhnou vyrovnávací paměti rámce.
 
  [Tabulka objektů](graphics-object-table.md) **Tabulka grafických objektů** slouží k prohlédnutí vlastností a obsahu konkrétních objektů a prostředků Direct3D, které jsou platné pro aktuálně vybranou událost. Tabulka objektů vám může přispět k určení kontextu grafického zařízení, který je aktivní během události, a prozkoumávat obsah grafických prostředků, jako jsou konstanty vyrovnávací paměti, vyrovnávací paměti vrcholů a textury.
 
@@ -64,7 +64,7 @@ Visual Studio*Diagnostika grafiky* je sada nástrojů pro zaznamenávání a ana
 
 ## <a name="related-sections"></a>Související oddíly
 
-| Název | Popis |
+| Nadpis | Popis |
 | - | - |
-| [Prohlídka funkcí ladicího programu](../debugger-feature-tour.md) | Zavádí funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| [Prohlídka funkcí ladicího programu](../debugger-feature-tour.md) | Zavádí funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | [Grafika rozhraní DirectX a hry](/windows/win32/directx) | Poskytuje články, které popisují technologii DirectX Graphics Technologies. |

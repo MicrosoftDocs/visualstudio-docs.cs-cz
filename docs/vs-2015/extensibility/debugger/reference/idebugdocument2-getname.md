@@ -1,5 +1,5 @@
 ---
-title: IDebugDocument2::GetName | Dokumentace Microsoftu
+title: 'IDebugDocument2:: GetName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09456b20faf4d5f5ea09baa55e0a7fd78a19a95c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186655"
 ---
 # <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá název dokumentu v jednom z několika způsoby.  
+Získá název dokumentu v jednom z několika forem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int GetName( 
   
 #### <a name="parameters"></a>Parametry  
  `gnType`  
- [in] Hodnota z [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) výčet, který určuje typ název, který vrátí.  
+ pro Hodnota z výčtu [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) , která určuje typ názvu, který se má vrátit.  
   
  `pbstrFileName`  
- [out] Vrátí řetězec obsahující název dokumentu.  
+ mimo Vrátí řetězec obsahující název dokumentu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda může například vrátit název dokumentu, jako název nebo název souboru nebo dokonce i část názvu souboru.  
+ Tato metoda může například vracet název dokumentu jako název nebo jako název souboru nebo dokonce část názvu souboru.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   

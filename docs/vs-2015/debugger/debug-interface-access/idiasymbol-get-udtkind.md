@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_udtkind – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_udtKind | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6fb58bec19460a78839ded86c9b7d194e838cb09
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64809624"
 ---
-# <a name="idiasymbolgetudtkind"></a>IDiaSymbol::get_udtKind
+# <a name="idiasymbolget_udtkind"></a>IDiaSymbol::get_udtKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte různé uživatelem definovaný typ (UDT).  
+Načte celou řadu uživatelsky definovaného typu (UDT).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_udtKind ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu z [udtkind – výčet](../../debugger/debug-interface-access/udtkind.md) výčet, který určuje typ UDT: struktury, třídy nebo sjednocení.  
+ mimo Vrací hodnotu z výčtu [výčtu udtkind –](../../debugger/debug-interface-access/udtkind.md) , který určuje druh typu UDT: struktura, třída nebo sjednocení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

@@ -10,22 +10,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 93813aa734c615e7f045c98c776e600be4ee3fab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663940"
 ---
 # <a name="working-with-textures-and-images"></a>Práce s texturami a obrázky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K vytváření a úpravám textur a imagí můžete použít Editor obrázků v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Editor obrázků podporuje bohatou texturu a formáty obrázků, jako jsou ty, které se používají při vývoji aplikací DirectX.
+Pomocí editoru obrázků v nástroji můžete [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vytvářet a upravovat textury a obrázky. Editor obrázků podporuje bohatou texturu a formáty obrázků, jako jsou ty, které se používají při vývoji aplikací DirectX.
 
 > [!NOTE]
 > Editor obrázků nepodporuje obrázky s nízkými barvami, jako jsou ikony nebo kurzory. Chcete-li vytvořit nebo upravit tyto typy obrázků, použijte [Editor obrázků pro ikony](https://msdn.microsoft.com/library/586d2b8b-0348-4883-a85d-1ff0ddbf14dd).
 
 ## <a name="textures-and-images"></a>Textury a obrázky
- Textury a obrázky jsou na základní úrovni pouze tabulky dat, které se používají k poskytnutí vizuálních podrobností v grafických aplikacích. Druh podrobností, které textura nebo obrázek nabízí, závisí na způsobu použití, ale ukázky barev, hodnoty alfa (transparentnost), normály povrchu a hodnoty výšky jsou běžné příklady. Základní rozdíl mezi texturou a obrázkem spočívá v tom, že textura je určena k použití společně s znázorněním tvaru – typicky 3D model – pro vyjádření kompletního objektu nebo scény, ale obrázek je obvykle samostatná reprezentace objektu nebo scény. .
+ Textury a obrázky jsou na základní úrovni pouze tabulky dat, které se používají k poskytnutí vizuálních podrobností v grafických aplikacích. Druh podrobností, které textura nebo obrázek nabízí, závisí na způsobu použití, ale ukázky barev, hodnoty alfa (transparentnost), normály povrchu a hodnoty výšky jsou běžné příklady. Hlavním rozdílem mezi texturou a obrázkem je, že textura je určena k použití společně s znázorněním tvaru – typicky 3D model – pro vyjádření kompletního objektu nebo scény, ale obrázek je obvykle samostatná reprezentace objektu nebo scény.
 
  Mezi běžné druhy textur patří:
 
@@ -35,7 +35,7 @@ K vytváření a úpravám textur a imagí můžete použít Editor obrázků v 
 
  Mapy výšky mapy na výšku obsahují data pro pole výšky. Slouží k poskytnutí formy geometrických podrobností o ovlivněném objektu – pomocí kódu shaderu pro výpočet požadovaného účinku, nebo k poskytnutí datových bodů pro použití jako generování terénu. Hodnoty výšky jsou obvykle kódovány pomocí jednoho kanálu v textuře.
 
- Mapy krychle mapy krychle mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na plochách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí*, nebo poskytnutí textury pro kulové objekty s menším narušením než na úrovni Basic, dvourozměrných textur může sdělit.
+ Mapy krychle mapy krychle mohou obsahovat různé typy dat, například barvy nebo normální, ale jsou uspořádány jako šest textur na plochách datové krychle. Z tohoto důvodu nejsou mapy krychle odebírány zadáním souřadnic textury, ale poskytnutím vektoru, jehož zdrojem je střed datové krychle. vzorek je pořízen v místě, kde vektor protíná datovou krychli. Mapy datových krychlí slouží k zajištění aproximace prostředí, které lze použít k výpočtu odrazů – Toto je známé jako *mapování prostředí*, nebo poskytnutí textury pro kulové objekty s menším narušením než základní, dvourozměrné textury mohou poskytnout.
 
  Jakákoli textura se dá kódovat a komprimovat různými způsoby, které jsou kolmé k typu dat, která textura obsahuje, nebo k dimenzionálnímu nebo "obrazci" textury. Různé metody kódování a komprese však poskytují lepší výsledky pro různé druhy dat.
 
@@ -43,7 +43,7 @@ K vytváření a úpravám textur a imagí můžete použít Editor obrázků v 
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Editor obrázků](../designers/image-editor.md)|Popisuje, jak používat editor obrázků pro práci s texturami a obrázky.|
 |[Příklady editoru obrázků](../designers/image-editor-examples.md)|Obsahuje odkazy na témata, která ukazují, jak používat editor obrázků k provádění běžných úloh zpracování obrazu.|

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ee85d89dcb990cebd595dadbd7b28add4a7b371a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538304"
 ---
 # <a name="how-to-create-event-handlers-in-office-projects"></a>Postupy: vytváření obslužných rutin událostí v projektech pro systém Office
@@ -50,7 +50,7 @@ ms.locfileid: "85538304"
 
      Visual Studio automaticky dokončí řádek kódu, vytvoří obslužnou rutinu události a přesune bod vložení do nově vytvořené obslužné rutiny události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)
 - [Návod: program na události ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
 - [Sestavování řešení pro systém Office](../vsto/building-office-solutions.md)

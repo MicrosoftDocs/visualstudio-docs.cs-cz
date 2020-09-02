@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 192f9a5ca9928e4c325d67c340276ef12de14686
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816186"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>Chyba syntaxe v regulárním výrazu (JavaScript)
@@ -28,7 +28,7 @@ Struktura hledaného řetězce je v rozporu s jedním nebo více gramatickými p
   
 - Zajistěte, aby struktura vyhledávacího řetězce regulárního výrazu odpovídala [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] syntaxi regulárního výrazu.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
  [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
  [compile – metoda (Regulární výraz)](../../javascript/reference/compile-method-regular-expression-javascript.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_offset – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_offset | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2f99a9cef4266be9a3373d20f09fca8c64e5a33b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64809661"
 ---
-# <a name="idiasymbolgetoffset"></a>IDiaSymbol::get_offset
+# <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte posun umístění symbolu. Použít, když [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je `LocIsRegRel` nebo `LocIsBitField`.  
+Načte posun umístění symbolu. Použijte, pokud je [výčet LocationType –](../../debugger/debug-interface-access/locationtype.md) `LocIsRegRel` nebo `LocIsBitField` .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,23 +35,23 @@ HRESULT get_offset ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrací posun v bajtech umístění symbolu.  
+ mimo Vrátí posun v bajtech umístění symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Posun je z některé známé bodu dříve určené. Například posun `LocIsBitField` typ umístění je obvykle od samého začátku třídu obsahující.  
+ Posun je z dříve stanoveného známého bodu. Například posun pro `LocIsBitField` typ umístění je obvykle od začátku obsahující třídy.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Záhlaví:|dia2.h|  
-|Verze:|V7.0 DIA SDK|  
+|Hlaviček|Dia2. h|  
+|Verze:|DIA SDK v 7.0|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

@@ -1,5 +1,5 @@
 ---
-title: Usedcommands – Element | Dokumentace Microsoftu
+title: Element UsedCommands | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,20 +14,20 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ba37458e0f8abca27047574170ab8aa3cc7a44ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186297"
 ---
 # <a name="usedcommands-element"></a>UsedCommands – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Usedcommands – element seskupí usedcommand – elementy a ostatní usedcommands – seskupení.  
+Element UsedCommands seskupuje elementy UsedCommand a další seskupení UsedCommands.  
   
- Usedcommands – element je volitelné. Pokud není volána příkazy definované mimo váš balíček, nemají souboru .vsct zahrnout v této části.  
+ Element UsedCommands je nepovinný. Pokud nevoláte příkazy definované mimo váš balíček, nemusíte tento oddíl zahrnout do souboru. vsct.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <UsedCommands condition="Defined(DEBUG)">  
@@ -42,19 +42,19 @@ Usedcommands – element seskupí usedcommand – elementy a ostatní usedcomman
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[UsedCommand – element](../extensibility/usedcommand-element.md)|Příkaz, který je implementované jiným kódem.|  
+|[UsedCommand – element](../extensibility/usedcommand-element.md)|Příkaz, který je implementován jiným kódem.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položek nabídky, nabídky, panely nástrojů a pole se seznamem), které poskytuje VSPackage integrovaného vývojového prostředí (IDE).|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy (například položky nabídky, nabídky, panely nástrojů a pole se seznamem), které rozhraní VSPackage poskytuje integrovanému vývojovému prostředí (IDE).|  
   
 ## <a name="example"></a>Příklad  
   
@@ -67,5 +67,5 @@ Usedcommands – element seskupí usedcommand – elementy a ostatní usedcomman
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Usedcommand – Element](../extensibility/usedcommand-element.md)   
+ [Element UsedCommand](../extensibility/usedcommand-element.md)   
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

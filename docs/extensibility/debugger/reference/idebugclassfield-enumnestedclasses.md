@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedClasses | Dokumenty společnosti Microsoft
+title: 'IDebugClassField:: EnumNestedClasses | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3e6ef918b55d8b311380264d688085b0d2803601
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734430"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
-Vytvoří čítač výčtu pro třídy vnořené v této třídě.
+Vytvoří enumerátor pro třídy vnořené v této třídě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ int EnumNestedClasses(
 
 ## <a name="parameters"></a>Parametry
 `ppEnum`\
-[out] Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam vnořených tříd. Vrátí hodnotu null, pokud neexistují žádné vnořené třídy.
+mimo Vrátí objekt [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) představující seznam vnořených tříd. Vrací hodnotu null, pokud nejsou žádné vnořené třídy.
 
 ## <a name="return-value"></a>Návratová hodnota
-Pokud je úspěšná, vrátí S_OK nebo vrátí S_FALSE pokud neexistují žádné vnořené třídy. V opačném případě vrátí kód chyby.
+V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou žádné vnořené třídy. V opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
 Každý prvek výčtu je objekt [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) popisující vnořenou třídu.
 
-Vnořená třída je třída definovaná uvnitř jiné třídy. Například:
+Vnořená třída je třída definovaná uvnitř jiné třídy. Příklad:
 
 ```
 class RootClass {
@@ -57,7 +57,7 @@ class RootClass {
 };
 ```
 
-[Výčet IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) by obsahovat jeden `NestedClass` objekt představující třídu.
+Výčet [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) by obsahoval jeden objekt reprezentující `NestedClass` třídu.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

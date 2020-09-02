@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4c53d820170c359e568b0a7b0ab5711a632d9eba
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538317"
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>Postupy: Přidání ovládacích prvků ListObject do listů
@@ -37,7 +37,7 @@ ms.locfileid: "85538317"
 
   Další informace o <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvcích naleznete v tématu [ListObject Control](../vsto/listobject-control.md).
 
-## <a name="add-listobject-controls-at-design-time"></a><a name="designtime"></a>Přidat ovládací prvky ListObject v době návrhu
+## <a name="add-listobject-controls-at-design-time"></a><a name="designtime"></a> Přidat ovládací prvky ListObject v době návrhu
  Existuje několik způsobů, jak přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvky do listu v projektu na úrovni dokumentu v době návrhu: v aplikaci Excel, v sadě **nástrojů sady**Visual Studio a v okně **zdroje dat** .
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85538317"
 
      <xref:Microsoft.Office.Tools.Excel.ListObject>Do listu je přidán ovládací prvek vázaný na data. Další informace najdete v tématu [datové vazby a model Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).
 
-## <a name="add-listobject-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Přidání ovládacích prvků ListObject v době běhu v projektu na úrovni dokumentu
+## <a name="add-listobject-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Přidání ovládacích prvků ListObject v době běhu v projektu na úrovni dokumentu
  Ovládací prvek lze přidat <xref:Microsoft.Office.Tools.Excel.ListObject> dynamicky v době běhu. To umožňuje vytvořit hostitelské ovládací prvky v reakci na události. Dynamicky vytvořené objekty seznamu se v listu neukládají jako hostitelské ovládací prvky při zavření listu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>Postup přidání ovládacího prvku ListObject do listu prostřednictvím kódu programu
@@ -76,7 +76,7 @@ ms.locfileid: "85538317"
      [!code-csharp[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#2)]
      [!code-vb[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#2)]
 
-## <a name="add-listobject-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>Přidání ovládacích prvků ListObject v době běhu v projektu doplňku VSTO
+## <a name="add-listobject-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> Přidání ovládacích prvků ListObject v době běhu v projektu doplňku VSTO
  Ovládací prvek můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> programově do libovolného otevřeného listu v projektu doplňku VSTO. Dynamicky vytvořené objekty seznamu se v listu neukládají jako hostitelské ovládací prvky, když je sešit uložený a pak uzavřený. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>Postup přidání ovládacího prvku ListObject do listu prostřednictvím kódu programu

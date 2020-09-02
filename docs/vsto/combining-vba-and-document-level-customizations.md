@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b3bab9c132439c6efa53842f1e13c6c5be31db00
-ms.sourcegitcommit: 6c55c40da74ed8969dcba56acbd30458fdb69c5a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70977603"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>Kombinování přizpůsobení na úrovni VBA a dokumentů
@@ -54,7 +54,7 @@ ms.locfileid: "70977603"
 
 - V aplikaci Excel může být prvním parametrem řetězec, který určuje název makra, <xref:Microsoft.Office.Interop.Excel.Range> který označuje, kde je funkce, nebo ID registru pro funkci registrované knihovny DLL (XLL). Pokud předáte řetězec, vyhodnotí se řetězec v kontextu aktivního listu.
 
-  Následující příklad kódu ukazuje, jak volat makro s názvem `MyMacro` z projektu na úrovni dokumentu pro aplikaci Excel. Tento příklad předpokládá, `MyMacro` že je definován `Sheet1`v.
+  Následující příklad kódu ukazuje, jak volat makro s názvem `MyMacro` z projektu na úrovni dokumentu pro aplikaci Excel. Tento příklad předpokládá, že `MyMacro` je definován v `Sheet1` .
 
 ```vb
 Globals.Sheet1.Application.Run("MyMacro")
@@ -69,7 +69,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 ```
 
 > [!NOTE]
-> Informace o použití globální `missing` proměnné místo volitelných parametrů v vizuálu C#naleznete v tématu [Write code in Office Solutions](../vsto/writing-code-in-office-solutions.md).
+> Informace o použití globální `missing` proměnné místo volitelných parametrů v jazyce Visual C# naleznete v tématu [Write code in Office Solutions](../vsto/writing-code-in-office-solutions.md).
 
 ## <a name="call-code-in-document-level-customizations-from-vba"></a>Volání kódu v přizpůsobeních na úrovni dokumentu z jazyka VBA
  Můžete nakonfigurovat projekt na úrovni dokumentu pro aplikaci Word nebo Excel tak, aby kód jazyk Visual Basic for Application (VBA) v dokumentu mohl volat kód v sestavení přizpůsobení. To je užitečné v následujících scénářích:
@@ -105,7 +105,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 
 - Můžete vystavit členy třídy položky hostitele v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] projektu do jazyka VBA. Chcete-li to provést, nastavte vlastnost **EnableVbaCallers** položky hostitel na **hodnotu true** v okně **vlastnosti** , zatímco položka hostitele (tj. dokument, list nebo sešit) je otevřena v návrháři. Visual Studio automaticky provádí veškerou práci nutnou k tomu, aby kód VBA mohl volat členy třídy.
 
-- Můžete vystavit členy v libovolné veřejné třídě ve vizuálním C# projektu nebo členy v třídě nehostitelské položky v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] projektu, na VBA. Tato možnost poskytuje větší volnost pro výběr tříd, které vystavíte pro jazyk VBA, ale také vyžaduje více ručních kroků.
+- Můžete zveřejnit členy v libovolné veřejné třídě v projektu jazyka Visual C# nebo členy v třídě nehostitelské položky v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] projektu, do jazyka VBA. Tato možnost poskytuje větší volnost pro výběr tříd, které vystavíte pro jazyk VBA, ale také vyžaduje více ručních kroků.
 
    K tomu je třeba provést následující hlavní kroky:
 
@@ -115,9 +115,9 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 
   3. Nastavte vlastnost **ReferenceAssemblyFromVbaProject** všech tříd hostitelských položek v projektu na **hodnotu true**. Tím se do sestavení vloží knihovna typů sestavení pro přizpůsobení a přidá odkaz na knihovnu typů do projektu VBA v dokumentu.
 
-  Podrobné pokyny najdete v tématu [postup: Vystavte kód pro jazyk VBA v](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md) projektu [Visual Basic a postupy: Vystavení kódu pro jazyk VBA v&#35; projektu](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)Visual C.
+  Podrobné pokyny naleznete v tématu [How to: vystavení kódu v jazyce Visual Basic v projektu Visual Basic](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md) a [Postupy: vystavení kódu pro jazyk VBA v projektu Visual C&#35;](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md).
 
-  Vlastnosti **EnableVbaCallers** a **ReferenceAssemblyFromVbaProject** jsou k dispozici pouze v okně **vlastnosti** v době návrhu. nelze je použít v době běhu. Chcete-li zobrazit vlastnosti, otevřete návrháře pro položku hostitele v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]nástroji. Další informace o konkrétních úkolech, které Visual Studio provádí při nastavení těchto vlastností, najdete v tématu úlohy, které [provádí vlastnosti položky hostitele](#PropertyTasks).
+  Vlastnosti **EnableVbaCallers** a **ReferenceAssemblyFromVbaProject** jsou k dispozici pouze v okně **vlastnosti** v době návrhu. nelze je použít v době běhu. Chcete-li zobrazit vlastnosti, otevřete návrháře pro položku hostitele v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Další informace o konkrétních úkolech, které Visual Studio provádí při nastavení těchto vlastností, najdete v tématu úlohy, které [provádí vlastnosti položky hostitele](#PropertyTasks).
 
 > [!NOTE]
 > Pokud sešit nebo dokument ještě neobsahuje kód VBA nebo pokud kód VBA v dokumentu není důvěryhodný ke spuštění, zobrazí se při nastavování vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** na **hodnotu true**chybová zpráva. Je to proto, že Visual Studio nemůže v této situaci upravovat projekt VBA v dokumentu.
@@ -125,17 +125,17 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 ## <a name="use-members-in-vba-code-to-call-into-the-customization-assembly"></a>Použití členů v kódu VBA pro volání do sestavení vlastního nastavení
  Poté, co nakonfigurujete projekt tak, aby povoloval kód VBA pro volání do sestavení vlastního nastavení, Visual Studio přidá následující členy do projektu VBA v dokumentu:
 
-- Pro všechny projekty Visual Studio přidá globální metodu s názvem `GetManagedClass`.
+- Pro všechny projekty Visual Studio přidá globální metodu s názvem `GetManagedClass` .
 
-- Pro [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] projekty, ve kterých zveřejňujete členy třídy položky hostitele pomocí vlastnosti **EnableVbaCallers** , Visual `CallVSTOAssembly` Studio také přidá `Sheet2` `ThisDocument`vlastnost s názvem do, `ThisWorkbook`, `Sheet1`,, nebo `Sheet3` modul v projektu VBA.
+- Pro [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] projekty, ve kterých zveřejňujete členy třídy položky hostitele pomocí vlastnosti **EnableVbaCallers** , Visual Studio také přidá vlastnost s názvem `CallVSTOAssembly` do `ThisDocument` `ThisWorkbook` modulu,,, `Sheet1` `Sheet2` nebo `Sheet3` v projektu VBA.
 
-  `CallVSTOAssembly` Vlastnost nebo`GetManagedClass` metodu lze použít pro přístup k veřejným členům třídy, které jsou vystaveny pro kód VBA v projektu.
+  `CallVSTOAssembly`Vlastnost nebo metodu lze použít `GetManagedClass` pro přístup k veřejným členům třídy, které jsou vystaveny pro kód VBA v projektu.
 
 > [!NOTE]
 > Během vývoje a nasazení řešení je k dispozici několik různých kopií dokumentu, kde můžete přidat kód VBA. Další informace najdete v tématu [pokyny pro přidání kódu v jazyce VBA do dokumentu](#Guidelines).
 
 ### <a name="use-the-callvstoassembly-property-in-a-visual-basic-project"></a>Použití vlastnosti CallVSTOAssembly v projektu Visual Basic
- `CallVSTOAssembly` Použijte vlastnost pro přístup k veřejným členům, které jste přidali do třídy položky hostitele. Například následující makro VBA volá metodu s názvem `MyVSTOMethod` , která je definována `Sheet1` ve třídě v projektu excelový sešit.
+ Použijte `CallVSTOAssembly` vlastnost pro přístup k veřejným členům, které jste přidali do třídy položky hostitele. Například následující makro VBA volá metodu s názvem `MyVSTOMethod` , která je definována ve `Sheet1` třídě v projektu excelový sešit.
 
 ```vb
 Sub MyMacro()
@@ -143,9 +143,9 @@ Sub MyMacro()
 End Sub
 ```
 
- Tato vlastnost je pohodlnější způsob, jak volat sestavení vlastního nastavení, než přímé použití `GetManagedClass` metody. `CallVSTOAssembly`Vrátí objekt, který představuje třídu hostitelské položky, kterou jste vystavili v jazyce VBA. V IntelliSense se zobrazí členy a parametry metody vráceného objektu.
+ Tato vlastnost je pohodlnější způsob, jak volat sestavení vlastního nastavení, než přímé použití `GetManagedClass` metody. `CallVSTOAssembly` Vrátí objekt, který představuje třídu hostitelské položky, kterou jste vystavili v jazyce VBA. V IntelliSense se zobrazí členy a parametry metody vráceného objektu.
 
- `CallVSTOAssembly` Vlastnost má deklaraci, která je podobná následujícímu kódu. Tento kód předpokládá, že jste vystavili `Sheet1` třídu hostitele v projektu excelového sešitu s názvem `ExcelWorkbook1` na VBA.
+ `CallVSTOAssembly`Vlastnost má deklaraci, která je podobná následujícímu kódu. Tento kód předpokládá, že jste vystavili `Sheet1` třídu hostitele v projektu excelového sešitu s názvem `ExcelWorkbook1` na VBA.
 
 ```vb
 Property Get CallVSTOAssembly() As ExcelWorkbook1.Sheet1
@@ -154,9 +154,9 @@ End Property
 ```
 
 ### <a name="use-the-getmanagedclass-method"></a>Použití metody GetManagedClass
- Chcete-li použít `GetManagedClass` globální metodu, předejte objekt VBA, který odpovídá třídě položky hostitele, která obsahuje vaše přepsání metody **GetAutomationObject** . Pak použijte vrácený objekt pro přístup ke třídě, kterou jste vystavili v jazyce VBA.
+ Chcete-li použít globální `GetManagedClass` metodu, předejte objekt VBA, který odpovídá třídě položky hostitele, která obsahuje vaše přepsání metody **GetAutomationObject** . Pak použijte vrácený objekt pro přístup ke třídě, kterou jste vystavili v jazyce VBA.
 
- Například následující makro VBA volá metodu s názvem `MyVSTOMethod` , která je definována `Sheet1` v třídě položky hostitele v projektu excelového sešitu s názvem `ExcelWorkbook1`.
+ Například následující makro VBA volá metodu s názvem `MyVSTOMethod` , která je definována v `Sheet1` třídě položky hostitele v projektu excelového sešitu s názvem `ExcelWorkbook1` .
 
 ```vb
 Sub CallVSTOMethod
@@ -166,7 +166,7 @@ Sub CallVSTOMethod
 End Sub
 ```
 
- `GetManagedClass` Metoda má následující deklaraci.
+ `GetManagedClass`Metoda má následující deklaraci.
 
 ```vb
 GetManagedClass(pdispInteropObject Object) As Object
@@ -174,7 +174,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 
  Tato metoda vrátí objekt, který představuje třídu, kterou jste vystavili v jazyce VBA. V IntelliSense se zobrazí členy a parametry metody vráceného objektu.
 
-## <a name="Guidelines"></a>Pokyny pro přidání kódu v jazyce VBA do dokumentu
+## <a name="guidelines-for-adding-vba-code-to-the-document"></a><a name="Guidelines"></a> Pokyny pro přidání kódu v jazyce VBA do dokumentu
  Existuje několik různých kopií dokumentu, kde můžete přidat kód VBA, který volá do přizpůsobení na úrovni dokumentu.
 
  Při vývoji a testování řešení můžete napsat kód VBA v dokumentu, který se otevře během ladění nebo spuštění projektu v aplikaci Visual Studio (to znamená, že dokument ve výstupní složce sestavení). Veškerý kód VBA, který přidáte do tohoto dokumentu, však bude při příštím sestavení projektu přepsán, protože aplikace Visual Studio nahradí dokument ve výstupní složce sestavení kopií dokumentu z hlavní složky projektu.
@@ -199,15 +199,15 @@ GetManagedClass(pdispInteropObject Object) As Object
  Pokud uživatelé nainstalují řešení z instalační složky, která se liší od složky pro publikování, můžete Nepřidávat kód VBA v dokumentu pokaždé, když řešení publikujete. Až bude aktualizace publikování připravena k přesunutí ze složky pro publikování do instalační složky, zkopírujte všechny soubory do instalační složky kromě dokumentu.
 
 ### <a name="on-the-end-user-computer"></a>Na počítači koncového uživatele
- Pokud jsou koncoví uživatelé vývojáři jazyka VBA, kteří volají služby, které zadáte v přizpůsobení na úrovni dokumentu, můžete jim sdělit, jak volat kód pomocí `CallVSTOAssembly` vlastnosti `GetManagedClass` nebo metody ve svých kopiích dokumentu. Když publikujete aktualizace řešení, kód VBA v dokumentu na počítači koncového uživatele nebude přepsán, protože aktualizace nejsou upraveny publikováním.
+ Pokud jsou koncoví uživatelé vývojáři jazyka VBA, kteří volají služby, které zadáte v přizpůsobení na úrovni dokumentu, můžete jim sdělit, jak volat kód pomocí `CallVSTOAssembly` vlastnosti nebo `GetManagedClass` metody ve svých kopiích dokumentu. Když publikujete aktualizace řešení, kód VBA v dokumentu na počítači koncového uživatele nebude přepsán, protože aktualizace nejsou upraveny publikováním.
 
-## <a name="PropertyTasks"></a>Úlohy prováděné vlastnostmi položky hostitele
+## <a name="tasks-performed-by-the-host-item-properties"></a><a name="PropertyTasks"></a> Úlohy prováděné vlastnostmi položky hostitele
  Když použijete vlastnosti **EnableVbaCallers** a **ReferenceAssemblyFromVbaProject** , Visual Studio provede různé sady úkolů.
 
 ### <a name="enablevbacallers"></a>EnableVbaCallers
  Při nastavení vlastnosti **EnableVbaCallers** položky hostitele na **hodnotu True** v projektu Visual Basic provede aplikace Visual Studio následující úlohy:
 
-1. Přidá <xref:Microsoft.VisualBasic.ComClassAttribute> atributy a <xref:System.Runtime.InteropServices.ComVisibleAttribute> do třídy položky hostitele.
+1. Přidá <xref:Microsoft.VisualBasic.ComClassAttribute> <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributy a do třídy položky hostitele.
 
 2. Přepisuje metodu **GetAutomationObject** třídy položky hostitele.
 
@@ -215,7 +215,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 
    Pokud nastavíte vlastnost **EnableVbaCallers** zpět na **hodnotu false**, sada Visual Studio provede následující úlohy:
 
-4. Odebere <xref:Microsoft.VisualBasic.ComClassAttribute> atributy a <xref:System.Runtime.InteropServices.ComVisibleAttribute> z `ThisDocument` třídy.
+4. Odebere <xref:Microsoft.VisualBasic.ComClassAttribute> <xref:System.Runtime.InteropServices.ComVisibleAttribute> atributy a z `ThisDocument` třídy.
 
 5. Odebere metodu **GetAutomationObject** z třídy položky hostitele.
 
@@ -223,7 +223,7 @@ GetManagedClass(pdispInteropObject Object) As Object
    > Sada Visual Studio automaticky nenastaví vlastnost **ReferenceAssemblyFromVbaProject** zpět na **hodnotu false (NEPRAVDA**). Tuto vlastnost lze nastavit na **hodnotu false** ručně pomocí okna **vlastnosti** .
 
 ### <a name="referenceassemblyfromvbaproject"></a>ReferenceAssemblyFromVbaProject
- Pokud je vlastnost **ReferenceAssemblyFromVbaProject** libovolné položky hostitele v Visual Basic nebo ve Visual C# projektu nastavena na **hodnotu true**, sada Visual Studio provede následující úlohy:
+ Je-li vlastnost **ReferenceAssemblyFromVbaProject** jakékoli položky hostitele v Visual Basic nebo v projektu jazyka Visual C# nastavena na **hodnotu true**, aplikace Visual Studio provede následující úlohy:
 
 1. Vygeneruje knihovnu typů pro sestavení vlastního nastavení a vloží knihovnu typů do sestavení.
 
@@ -231,7 +231,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 
    - Knihovna typů pro sestavení vlastního nastavení.
 
-   - Knihovna typů Microsoft Visual Studio nástrojů pro modul spouštění sady Office 9,0. Tato knihovna typů je obsažena v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
+   - Knihovna typů Microsoft Visual Studio nástrojů pro modul spouštění sady Office 9,0. Tato knihovna typů je obsažena v [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
    Pokud je vlastnost **ReferenceAssemblyFromVbaProject** nastavena na **hodnotu false**, sada Visual Studio provede následující úlohy:
 
@@ -242,18 +242,18 @@ GetManagedClass(pdispInteropObject Object) As Object
 ## <a name="troubleshoot"></a>Řešení potíží
  V následující tabulce jsou uvedeny některé běžné chyby a návrhy pro opravu chyb.
 
-|Chyba|Doporučení|
+|Chyba|Návrh|
 |-----------|----------------|
 |Po nastavení vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** se zobrazí chybová zpráva oznamující, že dokument neobsahuje projekt VBA, nebo nemáte oprávnění pro přístup k projektu VBA v dokumentu.|Ujistěte se, že dokument v projektu obsahuje alespoň jedno makro VBA, projekt VBA má dostatečnou důvěryhodnost ke spuštění a projekt VBA není chráněn heslem.|
-|Po nastavení vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** se zobrazí chybová zpráva oznamující, že <xref:System.Runtime.InteropServices.GuidAttribute> deklarace chybí nebo je poškozená.|Zajistěte <xref:System.Runtime.InteropServices.GuidAttribute> , aby byla deklarace v projektu v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* a zda je tento atribut nastaven na platný identifikátor GUID.|
-|Když nastavíte vlastnost **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** , zobrazí se chybová zpráva, že číslo verze <xref:System.Reflection.AssemblyVersionAttribute> určené parametrem není platné.|Zajistěte <xref:System.Reflection.AssemblyVersionAttribute> , aby se deklarace v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* v projektu nastavila na platné číslo verze sestavení. Informace o platných číslech verzí sestavení naleznete v tématu <xref:System.Reflection.AssemblyVersionAttribute> třída.|
+|Po nastavení vlastnosti **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** se zobrazí chybová zpráva oznamující, že <xref:System.Runtime.InteropServices.GuidAttribute> deklarace chybí nebo je poškozená.|Zajistěte, aby byla <xref:System.Runtime.InteropServices.GuidAttribute> deklarace v projektu v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* a zda je tento atribut nastaven na platný identifikátor GUID.|
+|Když nastavíte vlastnost **EnableVbaCallers** nebo **ReferenceAssemblyFromVbaProject** , zobrazí se chybová zpráva, že číslo verze určené parametrem není <xref:System.Reflection.AssemblyVersionAttribute> platné.|Zajistěte, aby se <xref:System.Reflection.AssemblyVersionAttribute> deklarace v souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* v projektu nastavila na platné číslo verze sestavení. Informace o platných číslech verzí sestavení naleznete v tématu <xref:System.Reflection.AssemblyVersionAttribute> Třída.|
 |Po přejmenování sestavení přizpůsobení přestane fungovat kód VBA, který volá do sestavení vlastního nastavení.|Pokud změníte název sestavení přizpůsobení po jeho zveřejnění kódu v jazyce VBA, propojení mezi projektem VBA v dokumentu a sestavením vlastního nastavení je přerušeno. Chcete-li tento problém vyřešit, změňte vlastnost **ReferenceFromVbaAssembly** v projektu na **hodnotu false** a potom zpět na **hodnotu true**a potom nahraďte všechny odkazy na starý název sestavení v kódu VBA novým názvem sestavení.|
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Vystavení kódu v projektu Visual Basic v jazyce VBA](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
-- [Postupy: Vystavení kódu pro jazyk VBA v&#35; projektu Visual C](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
-- [Návod: Volání kódu z jazyka VBA v projektu Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)
-- [Návod: Volání kódu z jazyka VBA v projektu Visual&#35; C](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: vystavení kódu v projektu Visual Basic v jazyce VBA](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
+- [Postupy: vystavení kódu pro jazyk VBA ve Visual C&#35; projektu](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
+- [Návod: volání kódu z jazyka VBA v projektu Visual Basic](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)
+- [Návod: volání kódu z jazyka VBA ve Visual C&#35; projektu](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 - [Srovnání řešení VBA a Office v sadě Visual Studio](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)
 - [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
