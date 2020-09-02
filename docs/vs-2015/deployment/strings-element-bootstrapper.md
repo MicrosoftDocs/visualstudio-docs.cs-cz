@@ -1,5 +1,5 @@
 ---
-title: '&lt;Řetězce&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;Strings – &gt; element (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,18 +20,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd799020e50121e2f3e9a6ba7ad90fd79a1241cb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421522"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Řetězce&gt; – Element (zaváděcí nástroj)
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Strings – &gt; element (zaváděcí nástroj)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chybové zprávy instalace.  
+Definuje lokalizované řetězce pro názvy produktů, názvy balíčků a chybové zprávy instalace.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Strings>  
@@ -43,19 +43,19 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Strings` Element je podřízeným prvkem `Package` elementu. Nemá žádné atributy.  
+ `Strings`Prvek je podřízeným prvkem `Package` elementu. Nemá žádné atributy.  
   
-## <a name="string"></a>String  
- `String` Element je podřízeným prvkem `Strings` elementu. A `Strings` element může obsahovat jeden nebo více `String` elementy.  
+## <a name="string"></a>Řetězec  
+ `String`Prvek je podřízeným prvkem `Strings` elementu. `Strings`Element může obsahovat jeden nebo více `String` prvků.  
   
  `String` má následující atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Name`|Povinný parametr. Název řetězce.|  
+|`Name`|Povinná hodnota. Název řetězce.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu určuje všechny anglické řetězce pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Instalační služby.  
+ Následující příklad kódu určuje všechny anglické řetězce pro [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] instalační program.  
   
 ```  
 <Strings>  
@@ -77,4 +77,4 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Element \<Package>](../deployment/package-element-bootstrapper.md)
+ [\<Package> Objekt](../deployment/package-element-bootstrapper.md)

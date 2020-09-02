@@ -1,5 +1,5 @@
 ---
-title: Vytváření a správa modálních dialogových oken | Dokumentace Microsoftu
+title: Vytváření a Správa modálních dialogových oken | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,26 +11,26 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 29b0066f201fbb791d471d5cfb433d9a335aa775
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431573"
 ---
 # <a name="creating-and-managing-modal-dialog-boxes"></a>Vytváření a správa modálních dialogových oken
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zajistit, že nadřazené okno dialogového okna je zakázán, když se zobrazí dialogové okno a potom znovu povolit nadřazené okno po zavření dialogových oken. Pokud to neprovedete, zobrazí se chybová zpráva: "Microsoft Visual Studio nelze vypnout, protože je aktivní modální dialogové okno. Zavřete aktivní dialogové okno a zkuste to znovu."  
+Při vytváření modálního dialogového okna v aplikaci Visual Studio je nutné zajistit, aby nadřazené okno dialogového okna bylo při zobrazení dialogového okna zakázáno, a po zavření dialogového okna znovu povolit nadřazené okno. Pokud to neuděláte, může se zobrazit chyba "Microsoft Visual Studio nejde vypnout, protože je aktivní modální dialogové okno. Zavřete aktivní dialogové okno a zkuste to znovu. "  
   
- To provést dvěma způsoby. Doporučeným způsobem, pokud máte dialogovému oknu WPF, je odvozena z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>a pak vyvolejte <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> k zobrazení dialogového okna. Pokud to uděláte, není potřeba spravovat modální stav nadřazeného okna.  
+ Existují dva způsoby, jak to provést. Doporučený způsob, pokud máte dialogové okno WPF, je odvozovat z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> a pak zavolat <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> k zobrazení dialogového okna. Pokud to uděláte, nemusíte spravovat modální stav nadřazeného okna.  
   
- Pokud vaše dialogové okno není WPF nebo pro některého jiného důvodu, že nemůžete odvodit vestavěnou vašem dialogovém okně třídy z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>, pak nadřazené dialogových oken, musíte získat voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> a správa modálních stavu sami, voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> metodou Parametr 0 (false) před zobrazením dialogového okna a volání metody znovu s parametrem 1 (pravda). po zavření dialogového okna.  
+ Pokud dialogové okno není WPF nebo z jiného důvodu nemůžete odvodit třídu dialogového okna z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> , pak musíte získat nadřízený prvek dialogového okna voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> a správou modálního stavu sami, voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> metody s parametrem 0 (NEPRAVDA) před zobrazením dialogového okna a voláním metody s parametrem 1 (true) po zavření dialogového okna.  
   
-## <a name="creating-a-dialog-box-derived-from-dialogwindow"></a>Vytvoření dialogového okna odvozený od DialogWindow  
+## <a name="creating-a-dialog-box-derived-from-dialogwindow"></a>Vytvoření dialogového okna odvozeného z DialogWindow  
   
-1. Vytvořte projekt VSIX s názvem **OpenDialogTest** a přidání příkazu nabídky s názvem **OpenDialog**. Další informace o tom, jak to provést, najdete v části [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1. Vytvořte projekt VSIX s názvem **OpenDialogTest** a přidejte příkaz nabídky s názvem **OpenDialog**. Další informace o tom, jak to provést, najdete v tématu [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2. Použít <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> třídy, je nutné přidat odkazy na následující sestavení (na kartě Framework **přidat odkaz** dialogové okno):  
+2. Chcete-li použít <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> třídu, je nutné přidat odkazy na následující sestavení (na kartě rozhraní dialogového okna **Přidat odkaz** ):  
   
     - PresentationCore  
   
@@ -38,15 +38,15 @@ Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zaj
   
     - WindowsBase  
   
-    - System.Xaml  
+    - System. XAML  
   
-3. V souboru OpenDialog.cs, přidejte následující `using` – příkaz:  
+3. Do OpenDialog.cs přidejte následující `using` příkaz:  
   
     ```csharp  
     using Microsoft.VisualStudio.PlatformUI;  
     ```  
   
-4. Deklarovat třídu s názvem **TestDialogWindow** , která je odvozena z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>:  
+4. Deklarovat třídu s názvem **TestDialogWindow** , která je odvozena z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> :  
   
     ```csharp  
     class TestDialogWindow : DialogWindow  
@@ -63,18 +63,18 @@ Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zaj
     }  
     ```  
   
-6. V **OpenDialog.ShowMessageBox** metoda, nahraďte existující kód následujícím kódem:  
+6. V metodě **OpenDialog. ShowMessageBox** nahraďte existující kód následujícím kódem:  
   
     ```csharp  
     TestDialogWindow testDialog = new TestDialogWindow();  
     testDialog.ShowModal();  
     ```  
   
-7. Sestavte a spusťte aplikaci. Experimentální instanci sady Visual Studio by se zobrazit. Na **nástroje** nabídky experimentální instanci byste měli vidět příkaz s názvem **vyvolat OpenDialog**. Po kliknutí na tento příkaz, měli byste vidět dialogového okna. Byste měli minimalizovat a maximalizujte okno.  
+7. Sestavte a spusťte aplikaci. Měla by se zobrazit experimentální instance sady Visual Studio. V nabídce **nástroje** experimentální instance byste měli vidět příkaz s názvem **Invoke OpenDialog**. Po kliknutí na tento příkaz by se mělo zobrazit dialogové okno. Měli byste být schopni minimalizovat a maximalizovat okno.  
   
-## <a name="creating-and-managing-a-dialog-box-not-derived-from-dialogwindow"></a>Vytváření a správa dialogové okno není odvozeno od DialogWindow  
+## <a name="creating-and-managing-a-dialog-box-not-derived-from-dialogwindow"></a>Vytvoření a Správa dialogového okna, které není odvozeno z DialogWindow  
   
-1. Pro tento postup můžete použít **OpenDialogTest** řešení, které jste vytvořili v předchozím postupu, s odkazy na stejné sestavení.  
+1. Pro tento postup můžete použít řešení **OpenDialogTest** , které jste vytvořili v předchozím postupu, se stejnými odkazy na sestavení.  
   
 2. Přidejte následující `using` deklarace:  
   
@@ -83,20 +83,20 @@ Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zaj
     using Microsoft.Internal.VisualStudio.PlatformUI;  
     ```  
   
-3. Vytvořte třídu s názvem **TestDialogWindow2** , která je odvozena z <xref:System.Windows.Window>:  
+3. Vytvořte třídu s názvem **TestDialogWindow2** , která je odvozena z <xref:System.Windows.Window> :  
   
     ```csharp  
     class TestDialogWindow2 : Window  
     {. . .}  
     ```  
   
-4. Přidejte odkaz na privátní <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
+4. Přidat privátní odkaz na <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> :  
   
     ```  
     private IVsUIShell shell;  
     ```  
   
-5. Přidat konstruktor, který nastaví odkaz na <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
+5. Přidejte konstruktor, na který nastaví odkaz <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> :  
   
     ```csharp  
     public TestDialogWindow2(IVsUIShell uiShell)  
@@ -105,7 +105,7 @@ Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zaj
     }  
     ```  
   
-6. V **OpenDialog.ShowMessageBox** metoda, nahraďte existující kód následujícím kódem:  
+6. V metodě **OpenDialog. ShowMessageBox** nahraďte existující kód následujícím kódem:  
   
     ```csharp  
     IVsUIShell uiShell = (IVsUIShell)ServiceProvider.GetService(typeof(SVsUIShell));  
@@ -127,4 +127,4 @@ Když vytvoříte modální dialogové okno v sadě Visual Studio, je nutné zaj
     }  
     ```  
   
-7. Sestavte a spusťte aplikaci. Na **nástroje** nabídky by se měla zobrazit příkaz s názvem **vyvolat OpenDialog**. Po kliknutí na tento příkaz, měli byste vidět dialogového okna.
+7. Sestavte a spusťte aplikaci. V nabídce **nástroje** byste měli vidět příkaz s názvem **Invoke OpenDialog**. Po kliknutí na tento příkaz by se mělo zobrazit dialogové okno.

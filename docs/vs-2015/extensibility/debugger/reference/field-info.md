@@ -1,5 +1,5 @@
 ---
-title: FIELD_INFO | Dokumentace Microsoftu
+title: FIELD_INFO | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e18e906cbc65ea811e765553a8d2711b3e4eb0f6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423735"
 ---
-# <a name="fieldinfo"></a>FIELD_INFO
+# <a name="field_info"></a>FIELD_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura popisuje místní proměnná, parametr nebo jiné pole.  
+Tato struktura popisuje místní proměnnou, parametr nebo jiné pole.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagFieldInfo {   
@@ -48,27 +48,27 @@ public struct FIELD_INFO {
   
 ## <a name="members"></a>Členové  
  dwFields  
- Kombinace příznaků z [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) výčet, který určuje členy, které jsou vyplněna.  
+ Kombinace příznaků z výčtu [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) , které určují členy, kteří jsou vyplněni.  
   
  bstrFullName  
- Celý název pole.  
+ Celé jméno pole  
   
- bstrName  
+ BSTR  
  Krátký název pole.  
   
  bstrType  
  Typ pole.  
   
  dwModifiers  
- Kombinace příznaků z [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) výčet, který popisuje pole.  
+ Kombinace příznaků z výčtu [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) , který popisuje pole.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) metody, kde je vyplněna.  
+ Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) , kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

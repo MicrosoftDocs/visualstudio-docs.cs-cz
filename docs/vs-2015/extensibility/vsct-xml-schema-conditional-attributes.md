@@ -1,5 +1,5 @@
 ---
-title: Podmíněné atributy schématu VSCT XML | Dokumentace Microsoftu
+title: Podmíněné atributy schématu XML VSCT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,33 +12,33 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6294ee8027b61840149096561efc91b8a4a3c3ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62422146"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>Podmíněné atributy XML schématu VSCT
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Podmíněné atributy se můžou vztahovat na všechny seznamy a položky. Logické operátory a výrazy rozšíření symbol vyhodnocen na hodnotu true nebo false. Pokud je hodnota true, jsou přidružený seznam nebo položka je součástí výsledný výstup.  
+Podmíněné atributy mohou být aplikovány na všechny seznamy a položky. Logické operátory a rozšiřovací výrazy se vyhodnotí jako true nebo false. Pokud je nastaveno na true, je přidružený seznam nebo položka součástí výsledného výstupu.  
   
- Rozšíření token lze testovat pro jiné token rozšíření nebo konstanty. Funkce Defined() slouží k otestování, jestli se definovala konkrétní název, i když nemá žádnou hodnotu.  
+ Rozšíření tokenů se dají testovat u jiných rozšíření tokenů nebo konstant. Funkce definovaná () slouží k otestování, zda byl zadán konkrétní název, i když nemá žádnou hodnotu.  
   
- Při použití atributu podmínky do seznamu podmínka platí pro každý podřízený prvek v seznamu. Obsahuje-li podřízeného elementu samotného atributu podmínky, potom stavu je v kombinaci se nadřazený výraz a operací.  
+ Při použití atributu Condition na seznam se podmínka použije na všechny podřízené prvky v seznamu. Pokud podřízený element sám obsahuje atribut podmínky, pak je jeho podmínka kombinována s nadřazeným výrazem operací a.  
   
- Hodnoty 1, '1' a 'true' jsou vyhodnoceny jako PRAVDA a 0, "0" a "false" se vyhodnotí jako false.  
+ Hodnoty 1, 1 a true se vyhodnotí jako true a 0, 0 a false se vyhodnotí jako false.  
   
 ## <a name="operators"></a>Operátory  
- Následující operátory může použít k vyhodnocení podmíněné výrazy.  
+ K vyhodnocení podmíněných výrazů lze použít následující operátory.  
   
 |Operátor|Definice|  
 |--------------|----------------|  
 |(,)|Seskupování|  
 |!|Logický operátor not|  
 |\<, >, \<=, >=, ==, !=|Relační a rovnost|  
-|and|Boolean|  
-|or|Boolean|  
+|a|Logická hodnota|  
+|nebo|Logická hodnota|  
   
 ## <a name="examples"></a>Příklady  
   

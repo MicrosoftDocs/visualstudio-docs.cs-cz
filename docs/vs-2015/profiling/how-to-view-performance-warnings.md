@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zobrazování upozornění výkonu | Dokumentace Microsoftu'
+title: 'Postupy: zobrazení upozornění na výkon | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,15 +10,15 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 382d8660adc482a2ab6c7417cf795f84b6fa9e25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62420118"
 ---
-# <a name="how-to-view-performance-warnings"></a>Postupy: Zobrazení upozornění výkonu
+# <a name="how-to-view-performance-warnings"></a>Postupy: Zobrazování upozornění výkonu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Upozornění výkonu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] nástroje pro profilaci nástrojů pro profilaci sady signalizují potíže v profilované aplikaci, která může zpomalit spuštění programu. Upozornění můžete také určit, že můžete chtít změnit metody kolekce shromažďovat užitečnější data. Upozornění výkonu jsou automaticky generovány v relaci profilace a zobrazí v **seznam chyb** okno při otevření souboru dat profilování v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí.  
+Upozornění na výkon [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Nástroje pro profilaci nástroje pro profilaci indikují problémy v profilované aplikaci, která může zpomalit spuštění programu. Upozornění mohou také indikovat, že chcete změnit metody kolekce a shromažďovat tak užitečnější data. Upozornění na výkon jsou generována automaticky v relaci profilace a zobrazí se v okně **Seznam chyb** při otevření datového souboru profilování v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí (IDE).  
   
- Pokud **seznam chyb** okno nezobrazí při otevření souboru dat profilování, klikněte na tlačítko **zobrazení** nabídky a pak klikněte na tlačítko **seznam chyb**.
+ Pokud se okno **Seznam chyb** nezobrazí, když otevřete datový soubor profilace, klikněte na nabídku **zobrazení** a pak klikněte na **Seznam chyb**.

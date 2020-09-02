@@ -1,5 +1,5 @@
 ---
-title: Třída ContingentProperties – vnitřní členy | Dokumentace Microsoftu
+title: ContingentProperties třída – interní členové | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3f6778aef90361a7751ccd744fcf93822f8f97db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62414643"
 ---
 # <a name="contingentproperties-class---internal-members"></a>Třída ContingentProperties – vnitřní členy
@@ -23,13 +23,13 @@ ms.locfileid: "62414643"
 
 Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
+ **Sestavení:** mscorlib (v mscorlib.dll)  
   
- Protože tyto vnitřní členy nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
+ Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .class auto ansi nested assembly beforefieldinit ContingentProperties  
@@ -42,10 +42,10 @@ Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
   
 |Název|Popis|  
 |----------|-----------------|  
-|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úloh, které jsou registrované s touto úlohou.|  
+|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úloh, které jsou registrovány s touto úlohou.|  
   
 ## <a name="remarks"></a>Poznámky  
- Rozhraní .NET Framework inicializuje pole této třídy, jenom když jsou potřeba.  
+ .NET Framework inicializuje pole této třídy pouze v případě potřeby.  
   
 ## <a name="see-also"></a>Viz také  
  [Interní informace o paralelním rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

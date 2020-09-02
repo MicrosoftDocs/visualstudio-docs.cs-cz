@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointEvent2::EnumBreakpoints | Dokumentace Microsoftu
+title: 'IDebugBreakpointEvent2:: EnumBreakpoints | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0e418b762ee181bf1ed4c382504794b22fe1147e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431547"
 ---
 # <a name="idebugbreakpointevent2enumbreakpoints"></a>IDebugBreakpointEvent2::EnumBreakpoints
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Vytvoří čítač pro všechny zarážky, které aktivuje na aktuální umístění v kódu.  
+Vytvoří enumerátor pro všechny zarážky, které jsou aktivovány v aktuálním umístění kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int EnumBreakpoints(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) objekt, který uvádí všechny zarážky, které jsou přidružené k aktuální umístění v kódu.  
+ mimo Vrátí objekt [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) , který vytvoří výčet všech zarážek přidružených k aktuálnímu umístění kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Ne všechny zarážky v konkrétních místech může vyvolat v určitou dobu (například zarážky s podmínkou se neaktivují až do splnění této podmínky).  
+ Ne všechny zarážky v určitém umístění mohou v určitou dobu vyvolat (například zarážka s podmínkou nebude možné spustit, dokud není splněna podmínka).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)   

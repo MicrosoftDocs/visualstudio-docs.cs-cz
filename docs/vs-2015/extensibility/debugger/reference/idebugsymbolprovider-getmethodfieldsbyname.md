@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetMethodFieldsByName | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetMethodFieldsByName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: eb26d7382c9c501a1c3235153c2364b2a3e677fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421172"
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte pole představující metodu plně kvalifikovaný název.  
+Tato metoda získá pole reprezentující plně kvalifikovaný název metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +44,19 @@ int GetMethodFieldsByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszFullName`  
- [in] Název metody.  
+ pro Název metody.  
   
  `nameMatch`  
- [in] Vybere typ shody, například velká a malá písmena.  
+ pro Vybere typ shody, například rozlišování velkých a malých písmen.  
   
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerátor pro pole související s touto metodou.  
+ mimo Vrátí enumerátor [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) pro pole přidružená k této metodě.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Metodu lze přidružit více polí, pokud ji je přetížena, např.  
+ Metoda může být přidružena k více polím, pokud je přetížena, například.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

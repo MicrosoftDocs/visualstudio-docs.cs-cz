@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplierLocale2::SetLocale | Dokumentace Microsoftu
+title: 'IDebugPortSupplierLocale2:: SetLocale | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,10 +11,10 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a61ce04c21c123268125c10a0a1110cb1cbbb5c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537924"
 ---
 # <a name="idebugportsupplierlocale2setlocale"></a>IDebugPortSupplierLocale2::SetLocale
@@ -38,10 +38,10 @@ int SetLocale(
   
 #### <a name="parameters"></a>Parametry  
  `wLangID`  
- Identifikátor národního prostředí pro nastavení.  
+ Identifikátor národního prostředí, které se má nastavit  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplierLocale2](../../../extensibility/debugger/reference/idebugportsupplierlocale2.md)

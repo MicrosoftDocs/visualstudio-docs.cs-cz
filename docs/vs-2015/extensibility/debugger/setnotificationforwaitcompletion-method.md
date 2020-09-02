@@ -1,5 +1,5 @@
 ---
-title: Setnotificationforwaitcompletion – metoda | Dokumentace Microsoftu
+title: Metoda SetNotificationForWaitCompletion | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,20 +11,20 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 874e31c331f16e760e030f337dda715473b77af8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423397"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion – metoda
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nastaví nebo vymaže stav bit TASK_STATE_WAIT_COMPLETION_NOTIFICATION.  
+Nastaví nebo vymaže bit stavu TASK_STATE_WAIT_COMPLETION_NOTIFICATION.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
+ **Sestavení:** mscorlib (v mscorlib.dll)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 #### <a name="parameters"></a>Parametry  
  `enabled`  
   
- `true` Chcete-li nastavit bit; `false` na Zrušit nastavení bitu.  
+ `true` nastavení bitu; `false` Chcete-li zrušit nastavení bitu.  
   
 ## <a name="exceptions"></a>Výjimky  
   
 ## <a name="remarks"></a>Poznámky  
- Ladicí program nastaví tento bit ke kroku mimo tělo metody na asynchronní. Pokud `enabled` je `true`, tato metoda musí být volána pouze na úkol, který dosud nebyl dokončen. Pokud `enabled` je `false`, tato metoda může být volána na dokončení úlohy. V obou případech to by měla sloužit pouze pro příslib – vizuální styl úlohy.  
+ Ladicí program nastaví tento bit tak, aby pomohly krokovat tělo asynchronní metody. Pokud `enabled` má hodnotu `true` , tato metoda musí být volána pouze pro úkol, který ještě nebyl dokončen. `enabled` `false` V takovém případě může být tato metoda volána u dokončených úloh. V obou případech by se měla použít jenom pro úlohy ve stylu Promise.  
   
 ## <a name="requirements"></a>Požadavky  
   

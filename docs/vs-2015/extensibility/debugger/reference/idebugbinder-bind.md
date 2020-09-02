@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::Bind | Dokumentace Microsoftu
+title: 'IDebugBinder:: bind | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 547f94cb4534bcb281cce0fdc2ff7db5fefe3593
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423540"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte místní paměti nebo objekt, který obsahuje aktuální hodnotu tohoto symbolu.  
+Tato metoda získá kontext paměti nebo objekt, který obsahuje aktuální hodnotu symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ int Bind(
   
 #### <a name="parameters"></a>Parametry  
  `pContainer`  
- [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , která obsahuje podřízené odkazuje `pField`.  
+ pro [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) obsahující podřízenou položku, na kterou odkazuje `pField` .  
   
  `pField`  
- [in] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) představující symbol.  
+ pro [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který představuje symbol.  
   
  `ppObject`  
- [out] Vrátí `IDebugObject` , která představuje výskyt symbolu.  
+ mimo Vrátí `IDebugObject` , který představuje instanci symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

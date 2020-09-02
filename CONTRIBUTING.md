@@ -1,39 +1,39 @@
 ---
 ms.openlocfilehash: 1a53d6fed4b2900aa730f4a5c2e04d528b42d1b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62419840"
 ---
-# <a name="contribute-to-visual-studio-documentation"></a>Přispívat do dokumentace sady Visual Studio
+# <a name="contribute-to-visual-studio-documentation"></a>Přispět k dokumentaci k sadě Visual Studio
 
-Děkujeme, že jste si udělali čas a přispěli do dokumentů sady Visual Studio.
+Děkujeme, že jste si udělali čas na přispívání do dokumentace k Visual Studiu.
 
-Tato příručka popisuje některá obecná témata týkající se přispívání a odkazuje na docs.microsoft.com [přispěvatelů průvodce](https://docs.microsoft.com/contribute) pro podrobnější vysvětlení.
+Tato příručka se zabývá dalšími obecnými tématy týkajícími se přispívání a odvolává se na [Průvodce přispěvateli](https://docs.microsoft.com/contribute) docs.Microsoft.com, kde najdete podrobnější vysvětlení.
 
 ## <a name="code-of-conduct"></a>Pravidla chování
 
-Tento projekt přijal [pravidla chování pro Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/). Další informace naleznete v [nejčastějších dotazech ke kodexu chování](https://opensource.microsoft.com/codeofconduct/faq/)nebo se obraťte [opencode@microsoft.com](mailto:opencode@microsoft.com) na jakékoli další dotazy nebo připomínky.
+Tento projekt přijal [pravidla chování pro Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/). Další informace najdete v tématu [Nejčastější dotazy týkající se kódu chování](https://opensource.microsoft.com/codeofconduct/faq/), nebo kontaktování [opencode@microsoft.com](mailto:opencode@microsoft.com) s dalšími dotazy nebo komentáři.
 
-## <a name="how-can-i-contribute"></a>Jak mohu přispět?
+## <a name="how-can-i-contribute"></a>Jak můžu přispívat?
 
-Existuje celá řada způsobů, jak přispět k dokumentaci. Projděte si níže uvedené části a zjistěte, který z nich je pro vás ten pravý.
+Existuje celá řada způsobů, jak přispět k dokumentaci. Přečtěte si následující části, abyste zjistili, který z nich je pro vás nejvhodnější.
 
-### <a name="report-bugs-or-suggest-enhancements"></a>Nahlášení chyb nebo navržení vylepšení
+### <a name="report-bugs-or-suggest-enhancements"></a>Nahlásit chyby nebo navrhnout vylepšení
 
-Prosím, použijte nástroj pro zpětnou vazbu v dolní části každého článku, aby předložily chyby a návrhy.
+K odeslání chyb a návrhů použijte prosím Nástroj pro zpětnou vazbu v dolní části libovolného článku.
 
 ![Nástroj pro zpětnou vazbu](media/feedback-tool.png)
 
-### <a name="quick-edit-in-github"></a>Rychlé úpravy na GitHubu
+### <a name="quick-edit-in-github"></a>Rychlé úpravy v GitHubu
 
-Postupujte podle pokynů pro [rychlé úpravy existujících dokumentů](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) v průvodci přispěvateli.
+Postupujte podle pokynů pro [rychlé úpravy existujících dokumentů](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) v průvodci pro přispěvatele.
 
 ### <a name="larger-edits"></a>Větší úpravy
 
-Přečtěte si pokyny pro [žádosti o přijetí vyhovek](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) v příručce přispěvatelů.
+Projděte si pokyny k [žádostem](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) o přijetí změn v průvodci přispěvateli.
 
-**Poznámka**
+**POZNÁMKA**
 
-Nepracujeme aktivně na souborech `docs/vs-2015` ve složce, protože jsou pro Visual Studio 2015, starší verzi našeho produktu. Nepřijímáme žádosti o přijetí pro triviální změny těchto souborů.
+Na soubory ve složce aktivně nepracujeme `docs/vs-2015` , protože se jedná o sadu Visual Studio 2015, starší verzi našeho produktu. Nepřijímáme žádosti o přijetí změn pro triviální změny těchto souborů.

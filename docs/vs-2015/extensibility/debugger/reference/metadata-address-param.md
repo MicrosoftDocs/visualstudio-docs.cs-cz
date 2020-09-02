@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_PARAM | Dokumentace Microsoftu
+title: METADATA_ADDRESS_PARAM | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 204a1fa452389381dd393adf29b561135849caf0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547114"
 ---
-# <a name="metadataaddressparam"></a>METADATA_ADDRESS_PARAM
+# <a name="metadata_address_param"></a>METADATA_ADDRESS_PARAM
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato struktura reprezentuje parametr metody nebo funkce.  
+Tato struktura představuje parametr metody nebo funkce.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_PARAM {  
@@ -42,23 +42,23 @@ public struct METADATA_ADDRESS_PARAM {
 }  
 ```  
   
-## <a name="terms"></a>Podmínky  
+## <a name="terms"></a>Terminologie  
  tokMethod  
- ID metody parametru je součástí.  
+ ID metody, jejíž parametr je součástí.  
   
  tokParam  
- ID parametru.  
+ ID parametru  
   
  dwIndex  
  Index parametru v seznamu parametrů.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_PARAM` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení ve struktuře [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , když `dwKind` `DEBUG_ADDRESS_UNION` je pole struktury nastaveno na `ADDRESS_KIND_PARAM` (hodnota z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) ).  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

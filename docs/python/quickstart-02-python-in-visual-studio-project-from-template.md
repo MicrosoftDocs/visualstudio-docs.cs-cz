@@ -1,6 +1,6 @@
 ---
-title: Úvodní příručka – Vytvoření projektu Pythonu pomocí šablony
-description: V tomto rychlém startu vytvoříte projekt Sady Visual Studio pro Python pomocí předdefinované šablony pro základní aplikaci Flask.
+title: Rychlý Start – vytvoření projektu v Pythonu pomocí šablony
+description: V tomto rychlém startu vytvoříte projekt sady Visual Studio pro Python pomocí předdefinované šablony pro aplikaci základní baňky.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
@@ -11,47 +11,47 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 089be3e6f28a939979f6bd97097ea7558824b493
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62429750"
 ---
-# <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Úvodní příručka: Vytvoření projektu Pythonu ze šablony v Sadě Visual Studio
+# <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Rychlý Start: vytvoření projektu v Pythonu ze šablony v aplikaci Visual Studio
 
-Po instalaci [podpory Pythonu v sadě Visual Studio](installing-python-support-in-visual-studio.md)je snadné vytvořit nový projekt Pythonu pomocí různých šablon. V tomto rychlém startu vytvoříte jednoduchou aplikaci Flask pomocí šablony. Výsledný projekt je podobný projektu, který vytvoříte ručně pomocí [rychlého startu - Vytvoření webové aplikace s Flask](../ide/quickstart-python.md).
+Po [instalaci podpory Pythonu v aplikaci Visual Studio](installing-python-support-in-visual-studio.md)je snadné vytvořit nový projekt v jazyce Python pomocí nejrůznějších šablon. V tomto rychlém startu vytvoříte jednoduchou aplikaci v baňce pomocí šablony. Výsledný projekt je podobný projektu, který vytvoříte ručně pomocí rychlého startu [– Vytvoření webové aplikace s použitím baňky](../ide/quickstart-python.md).
 
 1. Spusťte Visual Studio.
 
-1. V horním řádku nabídek zvolte **Soubor** > **nový** > **projekt**, pak v dialogovém okně Nový **projekt** vyhledejte "prázdnou baňku", vyberte šablonu **webového projektu Prázdná flask** ve středním seznamu, pojmenujte projekt a vyberte **OK**:
+1. V horním panelu nabídek zvolte **soubor**  >  **Nový**  >  **projekt**a potom v dialogovém okně **Nový projekt** vyhledejte "prázdná baňka", vyberte šablonu **webového projektu prázdné baňky** v prostředním seznamu, zadejte název projektu a vyberte **OK**:
 
-    ![Vytvoření nového projektu pomocí šablony webového projektu Blank Flask](media/quickstart-python-06-blank-flask-template.png)
+    ![Vytvoření nového projektu pomocí šablony webového projektu prázdné baňky](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio zobrazí výzvu pomocí dialogového okna, které říká, že **tento projekt vyžaduje externí balíčky.** Toto dialogové okno se zobrazí, protože šablona obsahuje soubor *requirements.txt,* který určuje závislost na Flask. Visual Studio můžete nainstalovat balíčky automaticky a poskytuje možnost nainstalovat do *virtuálního prostředí*. Použití virtuálního prostředí se doporučuje přes instalaci do globálního prostředí, takže vyberte **Nainstalovat do virtuálního prostředí** pokračovat.
+1. Visual Studio vás vyzve k zadání dialogu, který říká, že **Tento projekt vyžaduje externí balíčky.** Toto dialogové okno se zobrazí, protože šablona obsahuje soubor *requirements.txt* určující závislost na baňce. Visual Studio může instalovat balíčky automaticky a poskytuje možnost jejich instalace do *virtuálního prostředí*. Při instalaci do globálního prostředí se doporučuje použít virtuální prostředí, takže pokračujte výběrem **nainstalovat do virtuálního prostředí** .
 
     ![Instalace baňky do virtuálního prostředí](media/quickstart-python-07-install-into-virtual-environment.png)
 
-1. Visual Studio zobrazí dialogové okno **Přidat virtuální prostředí.** Přijměte výchozí nastavení a vyberte **Vytvořit**a pak souhlaste s požadavky na zvýšení oprávnění.
+1. Visual Studio zobrazí dialogové okno **Přidat virtuální prostředí** . Přijměte výchozí nastavení a vyberte **vytvořit**a pak vyjádřete souhlas s případnými žádostmi o zvýšení oprávnění.
 
     > [!Tip]
-    > Když začnete projekt, důrazně doporučujeme vytvořit virtuální prostředí hned, jako většina šablon Sady Visual Studio vás pozvat k tomu. Virtuální prostředí udržovat přesné požadavky projektu v průběhu času při přidávání a odebírá knihovny. Potom můžete snadno vygenerovat soubor *requirements.txt,* který použijete k přeinstalaci těchto závislostí v jiných vývojových počítačích (jako při použití správy zdrojového kódu) a při nasazování projektu na produkční server. Další informace o virtuálních prostředích a jejich výhodách naleznete v [tématu Použití virtuálních prostředí](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) a [Správa požadovaných balíčků pomocí souboru requirements.txt](../python/managing-required-packages-with-requirements-txt.md).
+    > Když zahájíte projekt, důrazně doporučujeme vytvořit virtuální prostředí hned, protože se vám dá dělat většina šablon sady Visual Studio. Virtuální prostředí udržují přesné požadavky vašeho projektu v průběhu času při přidávání a odebírání knihoven. Pak můžete snadno vygenerovat *requirements.txt* soubor, který použijete k přeinstalaci těchto závislostí na jiné vývojové počítače (jako při použití správy zdrojového kódu) a při nasazení projektu na provozní server. Další informace o virtuálních prostředích a jejich výhodách najdete v tématu [použití virtuálních prostředí](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) a [Správa požadovaných balíčků pomocí requirements.txt](../python/managing-required-packages-with-requirements-txt.md).
 
-1. Poté, co Visual Studio vytvoří toto prostředí, podívejte se do **Průzkumníka řešení** a zjistěte, zda máte *app.py* soubor spolu s *souborem requirements.txt*. Otevřete *app.py* a uvidíte, že šablona poskytla takový kód v [rychlém startu - Vytvořte webovou aplikaci s Flask](../ide/quickstart-python.md), s několika přidanými sekcemi. Celý níže uvedený kód je vytvořen šablonou, takže nemusíte vkládat do *app.py* sami.
+1. Jakmile aplikace Visual Studio vytvoří toto prostředí, vyhledejte **Průzkumník řešení** a podívejte se, že máte soubor *app.py* spolu s *requirements.txt*. Otevřete *App.py* , abyste viděli, že šablona poskytovala kód jako v [rychlém startu – vytvořte webovou aplikaci s použitím baňky](../ide/quickstart-python.md)s několika přidanými oddíly. Všechny níže uvedené kódy jsou vytvořeny šablonou, takže je nemusíte vkládat do *App.py* sami.
 
-    Kód začíná potřebnými importy:
+    Kód začíná nezbytnými importy:
 
     ```python
     from flask import Flask
     app = Flask(__name__)
     ```
 
-    Dále je následující řádek, který může být užitečný při nasazování aplikace do webového hostitele:
+    Dalším je následující řádek, který může být užitečný při nasazování aplikace na webového hostitele:
 
     ```python
     wsgi_app = app.wsgi_app
     ```
 
-    Pak přichází trasa decorator na jednoduchou funkci, která definuje zobrazení:
+    Pak je dekoratér směrování na jednoduchou funkci, která definuje zobrazení:
 
     ```python
     @app.route('/')
@@ -60,7 +60,7 @@ Po instalaci [podpory Pythonu v sadě Visual Studio](installing-python-support-i
         return "Hello World!"
     ```
 
-    Nakonec níže uvedený spouštěcí kód umožňuje nastavit hostitele a port prostřednictvím proměnných prostředí, nikoli je pevně kódovat. Takový kód umožňuje snadno ovládat konfiguraci na vývoji i ve výrobních strojích bez změny kódu:
+    Nakonec vám spouštěcí kód umožňuje nastavit hostitele a port přes proměnné prostředí, a ne je pevně zakódovat. Takový kód vám umožňuje snadno řídit konfiguraci na vývojových i produkčních počítačích beze změny kódu:
 
     ```python
     if __name__ == '__main__':
@@ -73,27 +73,27 @@ Po instalaci [podpory Pythonu v sadě Visual Studio](installing-python-support-i
         app.run(HOST, PORT)
     ```
 
-1. Chcete-li **aplikaci** > spustit a otevřít prohlížeč do `localhost:5555`aplikace , vyberte možnost Začít bez**ladění.**
+1. Vyberte **ladit**  >  **Spustit bez ladění** , aby se spustila aplikace, a otevřete v prohlížeči prohlížeč `localhost:5555` .
 
-**Otázka: Jaké další šablony Pythonu Visual Studio nabízí?**
+**Otázka: Jaké další šablony Pythonu nabízí Visual Studio?**
 
-**Odpověď**: S nainstalovanou úlohou Pythonu poskytuje Visual Studio celou řadu šablon projektů, včetně šablon pro [webové rámce Flask, Bottle a Django](../python/python-web-application-project-templates.md), cloudové služby Azure, různé scénáře strojového učení a dokonce i šablonu pro vytvoření projektu z existující struktury složek obsahující aplikaci Python. K nim se dostanete prostřednictvím dialogového okna Nový**New** > **projekt** **souboru** > výběrem jazykového uzlu **Pythonu** a jeho podřízených uzlů.
+**Odpověď**: s nainstalovanou úlohou Pythonu nabízí Visual Studio celou řadu šablon projektů, včetně těch, které se týkají [láhve, Django webových architektur](../python/python-web-application-project-templates.md), Azure Cloud Services, různých scénářů strojového učení a dokonce i šablony pro vytvoření projektu z existující struktury složek obsahující aplikaci v Pythonu. Přístup k nim provedete pomocí dialogového okna **soubor**  >  **Nový**  >  **projekt** výběrem uzlu jazyk **Pythonu** a jeho podřízených uzlů.
 
-Visual Studio také poskytuje různé šablony souborů nebo položek pro rychlé vytvoření *třídy* Pythonu, balíčku Pythonu, testu částí Pythonu, souborů *web.config* a dalších. Když máte otevřený projekt Pythonu, získáte přístup k šablonám položek prostřednictvím příkazu nabídky Přidat**novou položku** **projektu.** >  Viz odkaz na [šablony položek.](python-item-templates.md)
+Sada Visual Studio také poskytuje celou řadu šablon souborů nebo *položek* k rychlému vytvoření třídy Pythonu, balíčku Pythonu, testu jednotek Pythonu, *web.config* souborů a dalších. Pokud máte otevřený projekt v jazyce Python, získáte přístup k šablonám položek **Project**pomocí  >  příkazu nabídky**Přidat novou položku** v projektu. Viz Referenční dokumentace k [šablonám položek](python-item-templates.md) .
 
-Použití šablon vám může ušetřit značný čas při spuštění projektu nebo vytvoření souboru a jsou také skvělým způsobem, jak se dozvědět o různých typech aplikací a strukturách kódu. Je užitečné trvat několik minut k vytvoření projektů a položek z různých šablon, abyste se seznámili s tím, co nabízejí.
+Použití šablon vám může ušetřit značný čas při spuštění projektu nebo při vytváření souboru a je to skvělý způsob, jak se dozvědět o různých typech aplikací a struktur kódu. Vytváření projektů a položek z různých šablon je užitečné, pokud si chcete seznámit s tím, co nabízejí.
 
-**Otázka: Mohu také použít Cookiecutter šablony?**
+**Otázka: můžu také použít šablony Cookiecutter?**
 
-**Odpověď**: Ano! Ve skutečnosti Visual Studio poskytuje přímou integraci s Cookiecutter, které se můžete dozvědět o prostřednictvím [rychlého startu: Vytvoření projektu ze šablony Cookiecutter](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md).
+**Odpověď**: Ano! Ve skutečnosti nabízí Visual Studio přímou integraci s Cookiecutter, na kterou si můžete přečíst v kurzu [rychlý Start: vytvoření projektu ze šablony Cookiecutter](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md).
 
 ## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [Kurz: Práce s Pythonem v Sadě Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Kurz: práce s Pythonem v aplikaci Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Viz také
 
-- [Ruční identifikace existujícího interpretu Pythonu](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Instalace podpory Pythonu ve Visual Studiu 2015 a starších](installing-python-support-in-visual-studio.md)
-- [Instalace umístění](installing-python-support-in-visual-studio.md#install-locations)
+- [Ručně identifikovat existující interpret Pythonu](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Instalace podpory Pythonu do sady Visual Studio 2015 a starší](installing-python-support-in-visual-studio.md)
+- [Umístění instalace](installing-python-support-in-visual-studio.md#install-locations)

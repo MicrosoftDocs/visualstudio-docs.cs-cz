@@ -1,5 +1,5 @@
 ---
-title: Krokování v režimu pozastavení | Dokumentace Microsoftu
+title: Krokování v režimu pozastavení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,22 +13,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 482d7131692c1e22483c80f4b4bb22e07a6caf1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423358"
 ---
 # <a name="stepping-in-break-mode"></a>Krokování v režimu přerušení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Následující část popisuje proces, který nastane, pokud je v režimu přerušení ladicího programu a musí krokovat kód:  
+Následující článek popisuje proces, který nastane, když je ladicí program v režimu pozastavení a musí procházet kód:  
   
-## <a name="stepping-process"></a>Krokování procesu  
+## <a name="stepping-process"></a>Proces krokování  
   
-1. Volání [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md) s [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) argumenty k provedení kroku.  
+1. Pro provedení kroku zavolejte [IDebugProgram2:: Step](../../extensibility/debugger/reference/idebugprogram2-step.md) s argumenty [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) .  
   
-2. Po dokončení kroku odeslat [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) jako událostí ukončení.  
+2. Po dokončení kroku odešlete [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) jako událost zastavení.  
   
 ## <a name="see-also"></a>Viz také  
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

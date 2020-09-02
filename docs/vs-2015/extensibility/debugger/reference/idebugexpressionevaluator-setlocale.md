@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetLocale | Dokumentace Microsoftu
+title: 'IDebugExpressionEvaluator:: SetLocale | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 730a105b12016ea031bdb4753da009223a5d39f5
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540521"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda nastaví jazyk, který chcete použít k vytvoření tisknutelný výsledky.  
+Tato metoda nastaví jazyk, který má být použit pro vytváření tisknutelných výsledků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ int SetLocale(
   
 #### <a name="parameters"></a>Parametry  
  `wLangID`  
- [in] Identifikátor jazyka.  
+ pro Identifikátor jazyka.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda může být volána v mnoha případech vyhodnocovací filtr výrazů (EE) je načten, proto musí být EE přepínat jazyky v reálném čase. EE používá k vrácení chybové zprávy a řetězce v jazyce vhodném toto národní prostředí.  
+ Tato metoda může být volána mnohokrát, zatímco je načten vyhodnocovací filtr výrazů (EE), takže et EE musí být schopna přepínat jazyky za běhu. Rozhraní EE používá toto národní prostředí k vrácení chybových zpráv a řetězců v příslušném jazyce.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

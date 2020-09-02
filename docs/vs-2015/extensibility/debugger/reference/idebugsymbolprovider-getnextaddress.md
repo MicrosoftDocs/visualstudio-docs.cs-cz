@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNextAddress | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetNextAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e1bf0798e0f49d9e7b2871c5601f966bc282b186
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421447"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá adresu ladění, který následuje adresa pro danou ladění v metodě.  
+Získá adresu pro ladění, která následuje po dané adrese ladění v metodě.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ int GetNextAddress( 
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Adresa pro danou ladění.  
+ pro Daná adresa pro ladění.  
   
  `fStatementOnly`  
- [in] Pokud je hodnota TRUE, omezí ladění adresy, které mají jeden příkaz.  
+ pro Při hodnotě TRUE omezí adresy ladění na jediný příkaz.  
   
  `ppAddress`  
- [out] Vrátí adresu další ladění.  
+ mimo Vrátí další adresu pro ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Bude vracet platnou `HRESULT`, obvykle S_OK.  
+ Vrací platný `HRESULT` , obvykle S_OK.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

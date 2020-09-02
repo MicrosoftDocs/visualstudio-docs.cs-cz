@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetOwner | Dokumentace Microsoftu
+title: 'IDebugGenericParamField:: GetOwner | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6e78ee30b1fb351e2c2c5682d372a9aa9704caf3
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421132"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte typ nebo metoda vlastníka tento obecný parametr.  
+Načte typ nebo vlastníka metody tohoto obecného parametru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,13 +38,13 @@ int GetOwner(
   
 #### <a name="parameters"></a>Parametry  
  `ppOwner`  
- [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který vlastní tento obecný parametr.  
+ mimo Vrátí objekt [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , který je vlastníkem tohoto obecného parametru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugGenericParamFieldType** objekt, který zveřejňuje [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugGenericParamFieldType** , který zpřístupňuje rozhraní [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) .  
   
 ```cpp#  
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)  

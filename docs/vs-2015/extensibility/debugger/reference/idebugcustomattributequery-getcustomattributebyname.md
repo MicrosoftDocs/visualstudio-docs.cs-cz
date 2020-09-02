@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Dokumentace Microsoftu
+title: 'IDebugCustomAttributeQuery:: GetCustomAttributeByName – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ff58df26391c3c3fe312f9268f905b4f4f15b858
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538200"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte vlastní atribut jeho název.  
+Načte vlastní atribut s daným názvem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +43,19 @@ int GetCustomAttributeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszCustomAttributeName`  
- [in] Název vlastního atributu.  
+ pro Název vlastního atributu  
   
  `ppBlob`  
- [out v] Pole bajtů, které obsahují data vlastního atributu.  
+ [in, out] Pole bajtů obsahující data vlastního atributu  
   
  `pdwLen`  
- [out] Délka v bajtech `ppBlob` parametru.  
+ mimo Délka parametru v bajtech `ppBlob`  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Pokud vlastní atribut neexistuje, vrátí `S_FALSE`. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Pokud vlastní atribut neexistuje, vrátí `S_FALSE` . V opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugClassFieldSymbol** objekt, který zveřejňuje [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugClassFieldSymbol** , který zpřístupňuje rozhraní [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) .  
   
 ```cpp#  
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(  

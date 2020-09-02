@@ -1,5 +1,5 @@
 ---
-title: Správa piktogramů (řízení zdrojového balíčku VSPackage) | Dokumentace Microsoftu
+title: Ovládací prvek glyf (VSPackage správy zdrojového kódu) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,29 +12,29 @@ caps.latest.revision: 21
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b0960209b67c8d2f111296840119807d95bb2e2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538418"
 ---
 # <a name="glyph-control-source-control-vspackage"></a>Správa piktogramů (balíček VSPackage správy zdrojového kódu)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Součástí Tato těsná integrace do balíčků VSPackage správy zdrojového kódu k dispozici je možnost zobrazit své vlastní Glyph označuje stav položky pod správou zdrojových kódů.  
+Součástí hluboké integrace dostupného pro sadu VSPackage správy zdrojového kódu je schopnost zobrazit vlastní glyfy, které označují stav položek pod správou zdrojového kódu.  
   
-## <a name="levels-of-glyph-control"></a>Úroveň kontroly nad glyfů  
- Glyf stavu je ikona, která označuje aktuální stav položky při zobrazení, například v **Průzkumníka řešení** nebo v **zobrazení tříd**. Balíčku VSPackage správy zdrojového kódu můžete využít dvě úrovně ovládacího prvku glyfů. Volba glyfů pro předdefinovanou sadu glyfy poskytované může být omezena [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] integrovaného vývojového prostředí, nebo můžete definovat vlastní sadu glyfy, který se má zobrazit.  
+## <a name="levels-of-glyph-control"></a>Úrovně ovládacího prvku glyf  
+ Piktogram stavu je ikona, která označuje aktuální stav položky při zobrazení, například v **Průzkumník řešení** nebo v **zobrazení tříd**. VSPackage správy zdrojového kódu může vyvolávat dvě úrovně ovládacího prvku glyf. Může omezit volbu glyfů na předdefinovanou sadu glyfů poskytovaných [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE nebo může definovat vlastní sadu glyfů, které se mají zobrazit.  
   
-### <a name="default-set-of-glyphs"></a>Výchozí sadu piktogramy  
- K určení, které jsou spojeny s položkou v glyfy stavu **Průzkumníka řešení**, projekt požadavků piktogram stav zdroje pomocí ovládacího prvku <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A>. VSPackage správy zdrojového kódu rozhodnout zachovat volba glyfy omezena na předdefinované glyfy poskytované rozhraní IDE. V takovém případě sady VSPackage předá zpět celou řadu hodnot, které reprezentují piktogram výčty, které jsou definovány v vsshell.idl. Další informace najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon> . Toto je předdefinovanou sadu glyfy nastavit integrovaným vývojovým prostředím, jako je například visací zámek pro piktogram "Změnami" a zaškrtávací políčko jako piktogram "Rezervováno".  
+### <a name="default-set-of-glyphs"></a>Výchozí sada glyfů  
+ Chcete-li určit glyfy stavu, které jsou spojeny s položkou v **Průzkumník řešení**, projekt požaduje glyf stavu ze správy zdrojového kódu pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> . VSPackage správy zdrojového kódu se může rozhodnout zachovat volbu glyfů omezených na předdefinované glyfy poskytované IDE. V tomto případě VSPackage předává zpět pole hodnot reprezentujících výčty glyfů, které jsou definovány v vsshell. idl. Další informace najdete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon> . Toto je předdefinovaná sada glyfů nastavená rozhraním IDE, jako je například visacího zámku nezobrazuje pro glyf "vrácených do", a zaškrtnutí jako glyf "rezervováno".  
   
-### <a name="custom-set-of-glyphs"></a>Vlastní sada piktogramy  
- Balíčku VSPackage správy zdrojového kódu můžete použít svou vlastní glyfy jedinečný "a vzhled" po instalaci. Při aktivním nový ovládací prvek zdroje balíčku VSPackage by mělo být možné začít používat i v případě, že předchozí zdrojových kódů VSPackage je načtena stále svou vlastní glyfy ale neaktivní. V tomto režimu správy zdrojového kódu VSPackage stále můžete použít existující ikony pro zachování konzistentní s podívat [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Pokud zvolí.  
+### <a name="custom-set-of-glyphs"></a>Vlastní sada glyfů  
+ VSPackage správy zdrojového kódu může při instalaci používat vlastní glyfy pro jedinečné "vzhled". Když je aktivní nový prvek VSPackage správy zdrojového kódu, měl by být schopný začít používat jeho vlastní glyfy i v případě, že je ještě načten předchozí ovládací prvek VSPackage zdrojového kódu, ale neaktivní. V tomto režimu může model VSPackage správy zdrojového kódu stále používat stávající ikony, aby bylo možné zachovat vzhled konzistentní s tím, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] že se rozhodne.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager> Služba podporuje rozhraní, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs>, který může volitelně implementovat sady VSPackage a které budou vyzváni k zadání integrovaným vývojovým prostředím. Pokud rozhraní IDE odešle požadavek, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se pak pokusí získat toto rozhraní z aktuálně zaregistrovaných zdrojového balíčku VSPackage. Pokud rozhraní existuje v registrovaných VSPackage, rozhraní IDE pro vlastní glyfy neproběhne; v opačném případě [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE používá jeho výchozí sadu glyphs.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>Služba podporuje rozhraní, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> které VSPackage může volitelně implementovat a které bude požádáno o rozhraní IDE. Když IDE vytvoří požadavek, pak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] se znovu pokusí získat toto rozhraní z aktuálně registrovaného balíčku VSPackage pro správu zdrojového kódu. Pokud rozhraní existuje v registrované VSPackage, požadavek rozhraní IDE pro vlastní glyfy bude úspěšný. v opačném případě [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] rozhraní IDE použije svou výchozí sadu glyfů.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs.GetCustomGlyphList%2A> Používá metoda [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] získat seznam imagí, které zobrazuje různé správy zdrojových kódů stavy. Ovládací prvek zdroje balíčku VSPackage vrátí popisovač pro seznam obrázků pro své vlastní glyfy integrovaného vývojového prostředí. Rozhraní IDE vytvoří kopii tohoto seznamu obrázků v tomto okamžiku a použije ho později zvolit glyfů pro zobrazení. Pokud není podporovaná nové rozhraní nebo `IVsSccGlyphs::GetCustomGlyphList` metoda vrátí E_NOTIMPL, pak integrované vývojové prostředí získá jeho glyfy ze seznamu výchozích glyfů poskytnutých [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs.GetCustomGlyphList%2A>Metoda je používána nástrojem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] k získání seznamu obrázků zobrazujících různé stavy správy zdrojů. Správa zdrojového kódu se vrátí do integrovaného vývojového prostředí (IDE) a popisovač do seznamu obrázků pro vlastní glyfy. Rozhraní IDE vytvoří v tomto okamžiku kopii seznamu obrázků a použije ji později k výběru glyfů, které se mají zobrazit. Pokud nové rozhraní není podporováno nebo `IVsSccGlyphs::GetCustomGlyphList` Metoda vrátí E_NOTIMPL, rozhraní IDE získá své glyfy z výchozího seznamu glyfů dodaných pomocí [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs>   

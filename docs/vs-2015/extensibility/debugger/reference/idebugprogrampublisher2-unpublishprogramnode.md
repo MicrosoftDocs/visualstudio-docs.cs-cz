@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::UnpublishProgramNode | Dokumentace Microsoftu
+title: 'IDebugProgramPublisher2:: UnpublishProgramNode | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4fed7f35b87ec3e4a761b7adc33876affe778d9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423131"
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Odebere zadaný program uzel z dostupnost pro ladění modulů (DEs) a správce ladění relace (SDM).  
+Odebere zadaný uzel programu z dostupnosti na moduly pro ladění (DEs) a správce ladění relace (SDM).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ int UnpublishProgramNode(
   
 #### <a name="parameters"></a>Parametry  
  `pProgramNode`  
- [in] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt představující uzel program odebírá.  
+ pro Objekt [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) , který představuje odebraný uzel programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Po odebrání uzlu program již není k dispozici bude Dotazováno pro informace o programu.  
+ Po odebrání již není uzel program k dispozici pro dotaz na informace o programu.  
   
- Uzel programu zpřístupnění, zavolejte [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) metody.  
+ Chcete-li zpřístupnit uzel programu, zavolejte metodu [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

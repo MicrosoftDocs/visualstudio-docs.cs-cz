@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypesByName | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider2:: GetTypesByName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 40eb29bab07e657d22cd9559fa53fa3ced2139ff
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540564"
 ---
 # <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte typ jeho název.  
+Načte typ daného názvu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,22 +43,22 @@ int GetTypesByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszClassName`  
- [in] Název typu.  
+ pro Název typu.  
   
  `nameMatch`  
- [in] Vybere typ shody, například velká a malá písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
+ pro Vybere typ shody, například rozlišování velkých a malých písmen. Hodnota z výčtu [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) .  
   
  `ppEnum`  
- [out] Enumerátor, který obsahuje tento typ nebo typy s daným názvem.  
+ mimo Enumerátor obsahující typ nebo typy s daným názvem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pro obecné typy, název, který má si vyhledejte "seznamu\<int >" nebo "seznamu\<int, int >" by "Seznam". Pokud se zobrazí v několika modulů, typů se stejným názvem `ppEnum` parametr bude obsahovat všechny kopie. Je nutné použít [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) a odlišují podle `guidModule` parametru.  
+ Pro obecné typy je název, který bude hledán pro seznam ' List \<int> ' nebo ' list ', \<int,int> ' list '. Pokud se typy stejného názvu zobrazí ve více modulech, `ppEnum` bude parametr obsahovat všechny kopie. Je nutné použít [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) a rozlišovat na základě `guidModule` parametru.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetTypesByName(  

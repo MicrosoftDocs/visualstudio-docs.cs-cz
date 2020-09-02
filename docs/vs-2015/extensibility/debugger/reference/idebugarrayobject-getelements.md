@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetElements | Dokumentace Microsoftu
+title: 'IDebugArrayObject:: GetElements | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cad81d76e2fcec01fa50a37fa6ab6cb49cfc79be
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423696"
 ---
 # <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
@@ -40,13 +40,13 @@ int GetElements(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) objekt, který umožňuje vytváření výčtu přes všechny prvky.  
+ mimo Vrátí objekt [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) , který umožňuje výčet všech prvků.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Jako alternativu použijte [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) a [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metody k iteraci v rámci prvků.  
+ Jako alternativu použijte metody [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) a [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) k iterování skrze prvky.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

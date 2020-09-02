@@ -1,5 +1,5 @@
 ---
-title: GlobalOn a GlobalOff | Dokumentace Microsoftu
+title: GlobalOn a GlobalOff | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,30 +10,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eae720bdd904c7b904c906022cea700512167617
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62434225"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn a GlobalOff
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **GlobalOff** a **GlobalOn** možnosti pozastavení a pokračování v relaci profilace příkazového řádku pro profilaci pro všechny procesy a vlákna.  
+Možnosti VSPerfCmd.exe **globaloff** a **GlobalOn** pozastaví a obnoví profilování pro všechny procesy a vlákna v relaci profilace z příkazového řádku.  
   
- Můžete zadat **GlobalOn** a **GlobalOff** pouze možnosti VSPerfCmd.exe příkazového řádku, nebo může obsahovat na příkazových řádcích, které také obsahují **Start**, **Spuštění**, nebo **připojit** možnosti.  
+ Můžete zadat **GlobalOn** a **globaloff** jako jedinou možnost v příkazovém řádku VSPerfCmd.exe, nebo je můžete zahrnout do příkazových řádků, které také obsahují možnosti **Spustit**, **Spustit**nebo **připojit** .  
   
- **GlobalOn** a **GlobalOff** se dají kombinovat taky s **ProcessOn**, **ProcessOff**, **ThreadOn**a  **ThreadOff** možnosti.  
+ **GlobalOn** a **globaloff** lze také kombinovat s možnostmi **ProcessOn**, **ProcessOff**, **ThreadOn**a **ThreadOff** .  
   
- **GlobalOn** a **GlobalOff** možnosti pracovat **ProcessOn** a **ProcessOff** možnosti, které řídí shromažďování dat pro Zadaný proces a **ThreadOn** a **ThreadOff** možnosti, které řídí shromažďování dat pro zadaný podproces.  
+ Možnosti **GlobalOn** a **globaloff** pracují s možnostmi **ProcessOn** a **ProcessOff** , které řídí shromažďování dat pro zadaný proces, a s možnostmi **ThreadOn** a **ThreadOff** , které řídí shromažďování dat pro zadané vlákno.  
   
- **GlobalOff** a **GlobalOn** možnosti také ovlivnit počet globální spuštění/zastavení, který je zpracováván funkcí rozhraní API profileru.  
+ Možnosti **globaloff** a **GlobalOn** mají vliv také na globální počet spuštění/zastavení, který je zpracován funkcemi rozhraní API profileru.  
   
-- **GlobalOff** okamžitě Nastaví globální počet operací spustit/zastavit na hodnotu 0 a proto pozastaví profilace.  
+- **Globaloff** hned nastaví globální počet spuštění/zastavení na hodnotu 0, a proto pozastaví profilaci.  
   
-- **GlobalOn** okamžitě Nastaví globální počet operací spustit/zastavit na hodnotu 1 a proto obnoví profilace.  
+- **GlobalOn** hned nastaví globální počet spuštění/zastavení na 1, takže obnoví profilování.  
   
-  Další informace najdete v tématu [profilování rozhraní API nástroje](../profiling/profiling-tools-apis.md).  
+  Další informace najdete v tématu [rozhraní API pro nástroje pro profilaci](../profiling/profiling-tools-apis.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,25 +49,25 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
  Žádné  
   
 ## <a name="valid-options"></a>Platné možnosti  
- **GlobalOn** a **GlobalOff** se dá nastavit na příkazové řádky, které také obsahují následující možnosti.  
+ **GlobalOn** a **globaloff** lze zadat na příkazovém řádku, který obsahuje také následující možnosti.  
   
- **Spusťte:** `Method`  
- Inicializuje relaci příkazového řádku profileru a nastaví zadané metodě profilování.  
+ **Začátek:**`Method`  
+ Inicializuje relaci profileru příkazového řádku a nastaví určenou metodu profilace.  
   
- **Spuštění:** `AppName`  
- Zadaná aplikace spustí a začne profilace pomocí metody odběru vzorků.  
+ **Spustit:**`AppName`  
+ Spustí zadanou aplikaci a zahájí profilaci pomocí metody vzorkování.  
   
- **Připojení:** `PID`  
- Zahájení profilace určeného procesu.  
+ **Připojit:**`PID`  
+ Spustí profilování zadaného procesu.  
   
- {**ProcessOff**&#124;**ProcessOn**} **:** `PID`  
- Zastavení nebo spuštění profilace pro zadaný proces.  
+ {**ProcessOff**&#124;**ProcessOn**} **:**`PID`  
+ Zastaví nebo spustí profilování pro zadaný proces.  
   
- {**ThreadOff**&#124;**ThreadOn**} **:** `TID`  
- Zastavení nebo spuštění profilace pro zadaný proces (pouze metody instrumentace).  
+ {**ThreadOff**&#124;**ThreadOn**} **:**`TID`  
+ Zastaví nebo spustí profilování pro zadaný proces (pouze metoda instrumentace).  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu **GlobalOff** a **GlobalOn** možnosti slouží k zamezení shromažďování profilovacích dat pro spuštění aplikace a vypnutí.  
+ V tomto příkladu se používají možnosti **globaloff** a **GlobalOn** k tomu, abyste se vyhnuli shromažďování dat profilace pro spuštění a vypnutí aplikace.  
   
 ```  
 ; Initialize the profiler with profiling stopped.  
@@ -87,5 +87,5 @@ VSPerfCmd /Shutdown
 ## <a name="see-also"></a>Viz také  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profilování webových aplikací v ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profilace služeb](../profiling/command-line-profiling-of-services.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: RPC vyžaduje ověření. | Dokumentace Microsoftu'
+title: 'Chyba: RPC vyžaduje ověření | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,23 +17,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dbf0c2d13668dbf380f326ee3a49e0389815a8fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62535733"
 ---
 # <a name="error-rpc-requires-authentication"></a>Chyba: RPC vyžaduje ověření.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio debugger se nemůže připojit ke vzdálenému počítači. Zásady protokolu RPC je povoleno v místním počítači, což znemožňuje vzdálené ladění.  
+Ladicí program sady Visual Studio se nemůže připojit ke vzdálenému počítači. Zásada RPC je povolena v místním počítači, což znemožňuje vzdálené ladění.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
 1. Spustit `\` *windir*`\system32\regedt32.exe`  
   
-2. Vyhledejte a odstraňte `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\RPC\RestrictRemoteClients`.  
+2. Vyhledejte a odstraňte `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\RPC\RestrictRemoteClients` .  
   
-3. Změna v registru se projeví až po restartování počítače.  
+3. Restartujte počítač, aby se změna v registru projevila.  
   
-4. Pokud se problém nevyřeší, obraťte se na správce domény o **konfigurace počítače -> šablony pro správu - > Systém -> vzdálené volání procedury -> omezení pro klienty neověřené RPC** skupiny nastavení zásad.
+4. Pokud se problém opakuje, obraťte se na správce domény o **konfiguraci počítače->šablony pro správu->>vzdáleného volání procedur – >omezení pro neověřené zásady skupiny klientů RPC** .

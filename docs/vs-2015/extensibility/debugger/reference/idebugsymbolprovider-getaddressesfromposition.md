@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromPosition | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetAddressesFromPosition | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 27349cfdc438da133c4cea05077649ebb4df376c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547153"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda mapuje umístění dokumentu do pole adresy ladění.  
+Tato metoda mapuje umístění dokumentu na pole adres ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +46,24 @@ int GetAddressesFromPosition( 
   
 #### <a name="parameters"></a>Parametry  
  `pDocPos`  
- [in] Pozice dokumentu.  
+ pro Pozice dokumentu.  
   
  `fStatmentOnly`  
- [in] Pokud je hodnota TRUE, omezí ladění adresy, které mají jeden příkaz.  
+ pro Při hodnotě TRUE omezí adresy ladění na jediný příkaz.  
   
  `ppEnumBegAddresses`  
- [out] Vrátí enumerátor pro počáteční ladění adresy přidružené k tomuto prohlášení nebo řádku.  
+ mimo Vrátí enumerátor pro počáteční adresy ladění přidružené k tomuto příkazu nebo řádku.  
   
  `ppEnumEndAddresses`  
- [out] Vrátí [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerátor pro koncové adresy ladění přidružené k tomuto prohlášení nebo řádku.  
+ mimo Vrátí enumerátor [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) pro koncové adresy ladění přidružené k tomuto příkazu nebo řádku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pozice dokumentu obvykle udává určitý rozsah řádků zdroje. Tato metoda poskytuje počáteční a koncovou adresu ladění přidružené tyto řádky. Některé jazyky povolit příkazy, které zahrnují více řádků nebo řádky, které obsahuje více než jeden výraz. Tato metoda poskytuje příznak, který chcete omezit adresy ladění, které mají jeden příkaz.  
+ Pozice dokumentu obvykle označuje rozsah zdrojových řádků. Tato metoda poskytuje počáteční a koncové adresy ladění přidružené k těmto řádkům. Některé jazyky umožňují příkazy, které jsou rozloženy na více řádků nebo řádky, které obsahují více než jeden příkaz. Tato metoda poskytuje příznak pro omezení adres ladění na jediný příkaz.  
   
- Je možné mít víc adres ladění, jako v případě šablon jeden příkaz.  
+ Jeden příkaz může mít několik ladicích adres, jako v případě šablon.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

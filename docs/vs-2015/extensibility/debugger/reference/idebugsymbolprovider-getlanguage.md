@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetLanguage | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8124e0c6328695da9773edbfd949ec2634dbfdb1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421769"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda načte jazyk, ve kterém byla použita pro kompilaci kódu na adrese ladění.  
+Tato metoda získá jazyk, který byl použit ke kompilaci kódu na adrese ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +44,19 @@ int GetLanguage(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Adresa objektu reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ pro Objekt adresy reprezentovaný rozhraním [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .  
   
  `pguidLanguage`  
- [out] Vrátí `GUID` , který určuje jazyk.  
+ mimo Vrátí objekt `GUID` , který určuje jazyk.  
   
  `pguidLanguageVendor`  
- [out] Vrátí `GUID` , který určuje jazyk dodavatele.  
+ mimo Vrátí objekt `GUID` , který určuje dodavatele jazyka.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Ladicí stroj volá tuto metodu za účelem získání informací, že je potřeba vybrat vyhodnocovací filtr výrazů správné.  
+ Ladicí stroj volá tuto metodu, aby získala informace, které potřebuje k výběru správného vyhodnocení výrazu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

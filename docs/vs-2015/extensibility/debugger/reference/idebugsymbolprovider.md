@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider | Dokumentace Microsoftu
+title: IDebugSymbolProvider | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,61 +13,61 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b760b106992b200576258ab6becb1ae3849b8f3a
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62420924"
 ---
 # <a name="idebugsymbolprovider"></a>IDebugSymbolProvider
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní představuje poskytovatele symbol, který obsahuje symboly a typy, vrací jako pole.  
+Toto rozhraní představuje poskytovatele symbolů, který poskytuje symboly a typy a vrací je jako pole.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugSymbolProvider : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Poskytovatel symbolů musí implementovat toto rozhraní k poskytnutí symbolů a zadejte informace, které vyhodnocovače výrazů.  
+ Zprostředkovatel symbolů musí implementovat toto rozhraní k zadání symbolu a informací o typu do vyhodnocovacího filtru výrazů.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní je získat pomocí modelu COM `CoCreateInstance` – funkce (pro poskytovatele nespravované symbol) nebo načtením odpovídající spravovaný kód sestavení a vytvoření instance zprostředkovatele symbol na základě informací v tomto sestavení. Ladicí stroj vytvoří poskytovatel symbolů pro práci v koordinaci se chyba při vyhodnocování výrazu. Podívejte se na příklad pro jeden ze způsobů vytvoření instance tohoto rozhraní.  
+ Toto rozhraní se získává pomocí funkce modelu COM `CoCreateInstance` (u nespravovaných zprostředkovatelů symbolů) nebo načtením příslušného spravovaného sestavení kódu a vytvořením instance poskytovatele symbolů na základě informací nalezených v tomto sestavení. Modul ladění vytvoří instanci zprostředkovatele symbolů pro fungování v koordinaci s vyhodnocovacím filtrem výrazů. Podívejte se na příklad jednoho přístupu k vytvoření instance tohoto rozhraní.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDebugSymbolProvider`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDebugSymbolProvider` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|`Initialize`|Zastaralé Nepoužívejte.|  
-|`Uninitialize`|Zastaralé Nepoužívejte.|  
-|[GetContainerField](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)|Získá pole s údajem o adresa pro ladění.|  
-|`GetField`|Zastaralé Nepoužívejte.|  
-|[GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)|Mapuje umístění dokumentu do pole adresy ladění.|  
-|[GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)|Mapuje kontext dokumentu do pole adresy ladění.|  
-|[GetContextFromAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontextfromaddress.md)|Mapuje adresu ladění do kontextu dokumentu.|  
+|`Initialize`|Zastaralé Nepoužívat.|  
+|`Uninitialize`|Zastaralé Nepoužívat.|  
+|[GetContainerField](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)|Získá pole, které obsahuje adresu pro ladění.|  
+|`GetField`|Zastaralé Nepoužívat.|  
+|[GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)|Mapuje umístění dokumentu na pole adres ladění.|  
+|[GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)|Mapuje kontext dokumentu na pole adres ladění.|  
+|[GetContextFromAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontextfromaddress.md)|Mapuje adresu pro ladění do kontextu dokumentu.|  
 |[GetLanguage](../../../extensibility/debugger/reference/idebugsymbolprovider-getlanguage.md)|Získá jazyk používaný ke kompilaci kódu na adrese ladění.|  
-|`GetGlobalContainer`|Zastaralé Nepoužívejte.|  
-|[GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)|Získá pole představující metodu plně kvalifikovaný název.|  
-|[GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)|Získá typ pole třídy představující plně kvalifikovaný název třídy.|  
-|[GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)|Vytvoří čítač pro obory názvů, které jsou přidružené k adresám ladění.|  
-|[GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)|Název symbolu se mapuje na typ symbolu.|  
-|[GetNextAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnextaddress.md)|Získá adresu ladění, který následuje adresa pro danou ladění v metodě.|  
+|`GetGlobalContainer`|Zastaralé Nepoužívat.|  
+|[GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)|Získá pole reprezentující plně kvalifikovaný název metody.|  
+|[GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)|Načte typ pole třídy představující plně kvalifikovaný název třídy.|  
+|[GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)|Vytvoří enumerátor pro obory názvů přidružené k adrese pro ladění.|  
+|[GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)|Mapuje název symbolu na typ symbolu.|  
+|[GetNextAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnextaddress.md)|Získá adresu pro ladění, která následuje po dané adrese ladění v metodě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní mapuje umístění dokumentu do adresy ladění a naopak.  
+ Toto rozhraní mapuje pozice dokumentu na adresy ladění a naopak.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak vytvořit instanci zprostředkovatele symbol uveden její identifikátor GUID (ladicí stroj musí vědět, tato hodnota).  
+ Tento příklad ukazuje, jak vytvořit instanci poskytovatele symbolů s ohledem na jeho identifikátor GUID (ladicí stroj musí tuto hodnotu znát).  
   
 ```cpp#  
 // A debug engine uses its own symbol provider and would know the GUID  

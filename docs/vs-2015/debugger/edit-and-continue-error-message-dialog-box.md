@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat – dialogové okno chybové zprávy | Dokumentace Microsoftu
+title: Dialogové okno chybové zprávy pro úpravy a pokračování | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,44 +20,44 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5437ef982309ef8595f08283f2685e93d346e764
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428276"
 ---
 # <a name="edit-and-continue-error-message-dialog-box"></a>Dialogové okno chybových zpráv operace Upravit a pokračovat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto dialogové okno se zobrazí při ladění v jazyce, který podporuje funkce upravit a pokračovat, ale **upravit a pokračovat** není k dispozici pro typ provedené změny kódu. Chybová zpráva uvnitř pole poskytuje podrobnější vysvětlení. Možné příčiny zobrazení dialogovému oknu patří:  
+Toto dialogové okno se zobrazí při ladění v jazyce, který podporuje úpravu a pokračování, ale příkaz **Upravit a pokračovat** není k dispozici pro typ změny kódu, které jste provedli. Chybová zpráva v poli poskytuje podrobnější vysvětlení. Mezi možné důvody pro zobrazení tohoto dialogového okna patří:  
   
-- Pokusili jste se při ladění nespravovaného kódu bylo povoleno upravit spravovaný kód. Upravit a pokračovat nefunguje s ladění ve smíšeném režimu.  
+- Byl proveden pokus o úpravu spravovaného kódu, pokud bylo povoleno nespravované ladění. Příkaz Upravit a pokračovat nefunguje s laděním ve smíšeném režimu.  
   
-- Pokusili jste se upravovat kód systému SQL Server.  
+- Pokusili jste se upravit kód SQL Server.  
   
-- Pokusili jste se úpravy kódu během ladění zotavení po havárii. Watson s výpisem paměti.  
+- Při ladění výpisu Dr. Watson jste zkusili kód upravit.  
   
-- Jste se pokusili upravit kód následující po došlo k neošetřené výjimce a možnost "**vrátit zásobník volání v případě neošetřených výjimek**" nebyla vybrána.  
+- Pokusili jste se upravit kód po výskytu neošetřené výjimky a nevybrali jste možnost**unwind zásobník volání u neošetřených výjimek**.  
   
-- Pokusili jste se úpravy kódu během ladění aplikace vložený modul runtime.  
+- Došlo k pokusu o úpravu kódu při ladění vložené aplikace modulu runtime.  
   
-- Pokusili jste se upravovat kód v programu v jazyce, který jste připojili nespouštět z **ladění** nabídky.  
+- Pokusili jste se upravit kód v programu, který jste připojili místo spuštění z nabídky **ladění** .  
   
-- Pokusili jste se upravit optimalizovaný kód.  
+- Byl proveden pokus o úpravu optimalizovaného kódu.  
   
-- Pokusili jste se upravit spravovaný kód, pokud jsou cílem 64bitových aplikací. Pokud chcete k použití operace upravit a pokračovat, je nutné nastavit cíl na x86. (*Projektu* **vlastnosti**, **kompilaci** kartě **Advanced kompilátoru** nastavení.).  
+- Byl proveden pokus o úpravu spravovaného kódu, pokud je cílem 64 aplikace. Pokud chcete použít příkaz Upravit a pokračovat, musíte nastavit cíl na x86. (*Project* **Vlastnosti**projektu, karta **kompilovat** , **Pokročilé nastavení kompilátoru** .)  
   
-- Pokusili jste se úpravy kódu v sestavení, která byla změněna během ladění a má znovu načten.  
+- Pokusili jste se upravit kód v sestavení, které bylo upraveno během ladění a bylo znovu načteno.  
   
-- Pokusili jste se úpravy kódu v sestavení, který není načtený.  
+- Pokusili jste se upravit kód v sestavení, které nebylo načteno.  
   
-- Spuštění ladění starší verzi aplikace (protože nová verze má chyby sestavení).  
+- Začali jste ladit starou verzi aplikace (vzhledem k tomu, že nová verze obsahuje chyby sestavení).  
   
-- Pokusili jste se úpravy kódu byla spuštěna.  
+- Pokusili jste se upravit kód při jeho spuštění.  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **OK**  
- Zavřete dialogové okno a zrušit bezprostředně předcházející pokus upravit.  
+ Zavřete dialogové okno a zrušte hned předchozí pokus o úpravu.  
   
 ## <a name="see-also"></a>Viz také  
  [Podporované změny kódu (C++)](../debugger/supported-code-changes-cpp.md)

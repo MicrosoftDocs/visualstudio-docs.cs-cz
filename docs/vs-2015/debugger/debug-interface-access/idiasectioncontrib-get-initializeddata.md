@@ -1,5 +1,5 @@
 ---
-title: IDiaSectionContrib::get_initializedData | Microsoft Docs
+title: 'IDiaSectionContrib:: get_initializedData | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cf787d17b4b7150879d0062b415363308a066960
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62535269"
 ---
-# <a name="idiasectioncontribgetinitializeddata"></a>IDiaSectionContrib::get_initializedData
+# <a name="idiasectioncontribget_initializeddata"></a>IDiaSectionContrib::get_initializedData
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak označující, zda oddíl obsahuje inicializovaná data.  
+Načte příznak označující, zda oddíl obsahuje inicializovaná data.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,10 @@ HRESULT get_initializedData ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud oddíl obsahuje inicializovaná data; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda oddíl obsahuje inicializovaná data. v opačném případě vrátí `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

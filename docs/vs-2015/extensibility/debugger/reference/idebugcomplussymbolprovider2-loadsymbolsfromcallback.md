@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Dokumentace Microsoftu
+title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsFromCallback | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 108d50788992eb8316811bb5d9c7d327c3d62eda
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540566"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načtení ladění symbolů pomocí zadaná metoda zpětného volání.  
+Načte symboly ladění pomocí zadané metody zpětného volání.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,31 +51,31 @@ int LoadSymbolsFromCallback(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [in] Identifikátor domény aplikace.  
+ pro Identifikátor domény aplikace  
   
  `guidModule`  
- [in] Jedinečný identifikátor modulu.  
+ pro Jedinečný identifikátor modulu  
   
  `pUnkMetadataImport`  
- [in] Objekt, který obsahuje metadata pro symbol.  
+ pro Objekt, který obsahuje metadata symbolu.  
   
  `pUnkCorDebugModule`  
- [in] Objekt, který implementuje [icordebugmodule – rozhraní](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
+ pro Objekt, který implementuje [rozhraní ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
   
  `bstrModuleName`  
- [in] Název modulu.  
+ pro Název modulu  
   
  `bstrSymSearchPath`  
- [in] Cesta pro hledání souborů symbolů.  
+ pro Cesta pro vyhledání souboru symbolů  
   
  `pCallback`  
- [in] Objekt, který představuje metodu zpětného volání.  
+ pro Objekt, který představuje metodu zpětného volání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **CDebugSymbolProvider** , který zpřístupňuje rozhraní [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) .  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(  

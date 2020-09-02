@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadLONG | Dokumentace Microsoftu
+title: 'IDiaPropertyStorage:: ReadLONG | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 08661272bea779ff0789619d58bf6f2837a21917
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538312"
 ---
 # <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Přečte `LONG` hodnoty v sadu vlastností.  
+Přečte `LONG` hodnoty v sadě vlastností.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,16 +36,16 @@ HRESULT ReadDLONG ( 
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- [in] Identifikátor vlastnosti pro čtení (`PROPID` je definována v WTypes.h jako `ULONG`).  
+ pro Identifikátor vlastnosti, která má být načtena ( `PROPID` je definována v WTypes. h jako `ULONG` ).  
   
  `pValue`  
- [out] Vrátí hodnotu vlastnosti.  
+ mimo Vrátí hodnotu vlastnosti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` Pokud vlastnost není typu `LONG`.  
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Vrátí, `E_INVALIDARG` zda vlastnost není typu `LONG` .  
   
 ## <a name="remarks"></a>Poznámky  
- A `LONG` je definován Windows jako 32bitové celé číslo se znaménkem.  
+ Objekt `LONG` je definován systémem Windows jako 32 celé číslo se znaménkem.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

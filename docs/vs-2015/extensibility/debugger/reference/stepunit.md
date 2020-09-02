@@ -1,5 +1,5 @@
 ---
-title: STEPUNIT | Dokumentace Microsoftu
+title: STEPUNIT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d97f4f065d48b2b9c56bf029fb944eb3e4e7cb11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62414594"
 ---
 # <a name="stepunit"></a>STEPUNIT
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje jednotku kroku pro procházení.  
+Určuje jednotku kroku pro krokování.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_STEPUNIT {   
@@ -45,24 +45,24 @@ enum enum_STEPUNIT { 
   
 ## <a name="members"></a>Členové  
  STEP_STATEMENT  
- Kroky příkazem.  
+ Postup podle příkazu  
   
  STEP_LINE  
- Kroky po řádku.  
+ Kroky po řádku  
   
  STEP_INSTRUCTION  
- Kroky podle instrukce.  
+ Postup podle instrukcí.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako argument [krok](../../../extensibility/debugger/reference/idebugprocess3-step.md) metody.  
+ Byl předán jako argument metody [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+ [Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)

@@ -1,5 +1,5 @@
 ---
-title: Začínáme s plug-in zdroje ovládacího prvku | Dokumentace Microsoftu
+title: Začínáme se moduly plug-in správy zdrojových kódů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,32 +12,32 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 85aa5727f252ad75c45064d7b885e3d282da36a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538158"
 ---
 # <a name="getting-started-with-source-control-plug-ins"></a>Začínáme s moduly plug-in správy zdrojového kódu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Chcete-li vytvořit modul plug-in správy zdrojového kódu, musíte vytvořit knihovnu DLL, která implementuje funkce definované v rozhraní API modulu Plug-in zdroje ovládacího prvku a následně registrace knihovny DLL s [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aby byl k dispozici pro použití v správy verze zdrojového kódu.  
+Chcete-li vytvořit modul plug-in správy zdrojových kódů, je nutné vytvořit knihovnu DLL, která implementuje funkce definované v rozhraní API modulu plug-in správy zdrojového kódu, a poté pro registraci knihovny DLL pomocí nástroje, aby [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ji bylo možné použít ve správě verzí zdrojového kódu.  
   
- Tři verze rozhraní API modulu Plug-in zdroje ovládacího prvku (verze 1.1, 1.2 a 1.3) jsou k dispozici pro ovládací prvek moduly plug-in zdrojového kódu. Rozhraní API modulu Plug-in zdroje ovládacího prvku zdokumentované tady je verze 1.3. Jejím účelem je plně kompatibilní s ovládací prvek moduly plug-in zdrojového kódu podporující verze 1.1 a 1.2. [Co je nového ve verzi 1.3 zdroj ovládacího prvku modulu Plug-in API](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-3.md) část podrobně popisuje nové funkce podporované v nejnovější verzi rozhraní API modulu Plug-in zdroje ovládacího prvku.  
+ Pro moduly plug-in správy zdrojových kódů jsou k dispozici tři verze rozhraní API modulu plug-in správy zdrojových kódů (verze 1,1, 1,2 a 1,3). Rozhraní API pro modul plug-in správy zdrojových kódů popsané tady je verze 1,3. Byla navržena tak, aby byla plně kompatibilní s moduly plug-in správy zdrojového kódu podporujícími verze 1,1 a 1,2. V části [novinky v modulu plug-in správy zdrojových kódů rozhraní API verze 1,3](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-3.md) najdete nové funkce podporované v nejnovější verzi rozhraní API modulu plug-in správy zdrojového kódu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: Instalace modulu Plug-in správy zdrojového kódu](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)  
- Popisuje, jak vytvořit položky registru, které jsou nutné k modulu plug-in správy zdrojového kódu knihovny DLL.  
+ [Postupy: Instalace modulu plug-in správy zdrojového kódu](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)  
+ Popisuje, jak provést položky registru, které jsou vyžadovány pro připojení knihovny DLL správy zdrojového kódu.  
   
  [Co je nového v rozhraní API modulu plug-in správy zdrojového kódu ve verzi 1.3](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-3.md)  
- Poskytuje stručný přehled o změny, které byly provedeny API modulu Plug-in zdroje ovládacího prvku ve verzi 1.3.  
+ Poskytuje stručný přehled změn, které byly provedeny v rozhraní API modulu plug-in správy zdrojového kódu ve verzi 1,3.  
   
  [Co je nového v rozhraní API modulu plug-in správy zdrojového kódu ve verzi 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)  
- Poskytuje stručný přehled o změny, které byly provedeny u rozhraní API pro modul Plug-in zdroje ovládacího prvku ve verzi 1.2.  
+ Poskytuje stručný přehled změn, které byly provedeny v rozhraní API modulu plug-in správy zdrojového kódu ve verzi 1,2.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Moduly plug-in správy zdrojového kódu](../../extensibility/source-control-plug-ins.md)  
- Obsahuje úplný seznam všech prvků v rozhraní API modulu Plug-in zdroje ovládacího prvku.  
+ Poskytuje úplný seznam všech prvků v rozhraní API modulu plug-in správy zdrojového kódu.  
   
  [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)  
- Definuje ovládací prvek modulu Plug-in Source sad SDK a popisuje zahrnuté prostředky.
+ Definuje sadu SDK modulu plug-in správy zdrojových kódů a popisuje zahrnuté prostředky.

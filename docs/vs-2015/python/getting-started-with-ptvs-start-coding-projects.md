@@ -1,5 +1,5 @@
 ---
-title: 'Začínáme s PTVS: Začínáme kódovat (projekty) | Dokumentace Microsoftu'
+title: 'Začínáme s PTVS: začátek kódování (projekty) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,34 +10,34 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 28622f290d82f86bf3d18cc4f40cfcfc8e953dad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537140"
 ---
 # <a name="getting-started-with-ptvs-start-coding-projects"></a>Začínáme s PTVS: Začínáme kódovat (projekty)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroje Python Tools pro Visual Studio (PTVS) pomáhá spravovat váš kód. 
+Python Tools for Visual Studio (PTVS) vám pomůže se správou kódu. 
  
- Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
+ Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
  
- Pokud jste používali před Pythonu, víte, že váš projekt je definován způsob rozložení soubory na disku. Tento postup funguje skvěle pro prostý projektů v Pythonu, ale když máte víc souborů (webové stránky JavaScript, testy částí a skripty sestavení), systémy souborů může začít se trochu omezující. Projekty Visual Studio používá k dosažení tři věci. 
+ Pokud jste předtím používali Python, víte, že je projekt definován pomocí způsobu rozložení souborů na disk. To funguje skvěle pro jednoduché projekty v Pythonu, ale pokud máte více souborů (webové stránky s JavaScriptem, jednotkové testy a skripty sestavení), můžou systémy souborů začínat omezením bitu. Visual Studio používá projekty k dosažení tří věcí. 
  
-- Identifikujte kritické soubory. Důležité soubory jsou ty, které jste vrácení se změnami do systému správy verzí (zdrojové soubory, zdroje atd.), ale ne soubory, které jsou generovány jako výstup sestavení. Důležité soubory jsou také ty, které budou zkopírovány do jiného počítače tak, aby někdo jiný může pracovat ve vaší aplikaci. 
+- Identifikujte důležité soubory. Důležité soubory jsou ty, které zaškrtnete v systému správy verzí (zdrojové soubory, prostředky atd.), ale ne soubory, které jsou generovány jako výstup sestavení. Důležité soubory jsou také ty, které byste zkopírovali do jiného počítače, aby mohli v aplikaci pracovat někdo jiný. 
  
-- Zadejte, jak se má použít soubory. Můžete mít soubory, které je potřeba zpracovat při každé změně souborů nástroj. Projekty aplikace Visual Studio můžete zaznamenat tyto informace 
+- Určete, jak se mají soubory používat. Je možné, že máte soubory, které nástroj potřebuje ke zpracování při každé změně souborů. Projekty sady Visual Studio mohou zachytit tyto informace 
  
-- Definujte hranice součástí. Pokud máte více komponent ve vaší aplikaci, můžete umístit každý z nich testovacího projektu. Tyto nakonec jde nasadit na různé servery, vytvořené pomocí jiné sestavení nebo nastavení ladění nebo může dokonce zapsány pomocí jiného jazyka, které podporuje Visual Studio, například C++ nebo Node.js 
+- Definujte hranice svých komponent. Pokud máte v aplikaci více komponent, můžete každý z nich umístit do samostatného projektu. Ty mohou být nakonec nasazeny na různé servery, sestavené s různými nastaveními sestavení nebo ladění, nebo mohou být dokonce vytvořeny pomocí jiného jazyka podporovaného sadou Visual Studio, jako je například C++ nebo Node.js 
  
-  Existuje několik šablon projektů, které vám pomůžou začít. Pokud již máte kódu v Pythonu, kteří by chtěli pracovat na, z existujícího kódu Průvodce vám pomůže vytvořit projekt, který obsahuje všechny soubory. Více webových projektů existují pro několik oblíbených architektur. Další šablony jsou k dispozici v balíčku ukázek PTVS. Existují možnosti, jak zajistit Zadaná webová šablony pracovat s další architektury. Šablonu aplikace Pythonu je vyčistit, prázdný projekt. Existuje jeden modul, které vám pomůžou začít. 
+  K dispozici je několik šablon projektů, které vám pomůžou začít. Pokud již máte kód Pythonu, na kterém byste chtěli pracovat, průvodce z existujícího kódu vám pomůže vytvořit projekt, který obsahuje všechny vaše soubory. Pro některá oblíbená rozhraní existuje více webových projektů. Další šablony jsou k dispozici v sadě PTVS Samples Pack. K dispozici jsou možnosti, jak zajistit, aby poskytované webové šablony fungovaly s ostatními rozhraními. Šablona aplikace Python je čistý prázdný projekt. Je k dispozici jeden modul, který vám umožní začít. 
  
-  Sada Visual Studio zobrazí vaše projekty otevřít v okně Průzkumník řešení, včetně všech souborů, cesty pro hledání a prostředí Pythonu. K přidání nových položek, vyberte složku vašeho projektu a zvolte Přidat a pak novou položku v kontextové nabídce (stiskněte tlačítko vpravo ukazatele). Vyberte libovolnou položku v dialogovém okně, přizpůsobit název položky a přidejte položku do projektu. 
+  Visual Studio zobrazí otevřené projekty v okně Průzkumník řešení, včetně všech souborů, vyhledávacích cest a prostředí Pythonu. Chcete-li přidat nové položky, vyberte složku projektu a z kontextové nabídky (stiskněte pravé tlačítko ukazatele myši), zvolte možnost Přidat a poté nová položka. Můžete vybrat libovolnou položku v dialogovém okně, přizpůsobit název položky a přidat položku do projektu. 
  
-  Vám může přetažením do Průzkumníka řešení. Pokud jste již zkopírovat soubory do adresářové struktuře projektu, můžete zobrazit všechny soubory v horní části Průzkumníku řešení. Pak můžete vybrat položky, které chcete přidat a v místní nabídce zvolte možnost zahrnout v projektu. 
+  Můžete přetáhnout do Průzkumník řešení. Pokud jste již zkopírovali soubory do adresářové struktury projektu, můžete zvolit možnost Zobrazit všechny soubory v horní části Průzkumník řešení. Pak můžete vybrat položky, které chcete přidat, a z kontextové nabídky zvolit zahrnout do projektu. 
  
-  Můžete sledovat tyto pokyny ve velmi krátké [videa youtube](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
+  Tyto pokyny můžete sledovat ve velmi krátkém [videu YouTube](https://www.youtube.com/watch?v=KHPoVpL7zHg&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=2). 
  
 ## <a name="see-also"></a>Viz také 
- [Dokumentace ke službě Wiki](https://github.com/Microsoft/PTVS/wiki/Projects) [PTVS Začínáme a Deep Dive videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [Dokumentace wiki](https://github.com/Microsoft/PTVS/wiki/Projects) [PTVS Začínáme a rozsáhlá podrobně videa](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

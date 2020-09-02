@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNamespacesUsedAtAddress | Dokumentace Microsoftu
+title: 'IDebugSymbolProvider:: GetNamespacesUsedAtAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c25ea68130f546ea90216c831d321e6498af12a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421288"
 ---
 # <a name="idebugsymbolprovidergetnamespacesusedataddress"></a>IDebugSymbolProvider::GetNamespacesUsedAtAddress
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vytvoří čítač pro obory názvů, které jsou přidružené k adresám ladění.  
+Tato metoda vytvoří enumerátor pro obory názvů přidružené k adrese pro ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int GetNamespacesUsedAtAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Adresa pro ladění.  
+ pro Adresa pro ladění.  
   
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerátor pro obory názvů.  
+ mimo Vrátí enumerátor [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) pro obory názvů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Může existovat několik oborů názvů, které jsou přidružené k dané ladění adresu, například vnořené obory názvů nebo více `using` příkazy.  
+ K dané adrese ladění může být přidruženo několik oborů názvů, například vnořené obory názvů nebo vícenásobné `using` příkazy.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

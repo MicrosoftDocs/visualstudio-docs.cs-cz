@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetParent | Dokumentace Microsoftu
+title: 'IDebugProperty2:: GetParent | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 85c8ac00550c4a8e63cd06bdabf9e794f636129d
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538711"
 ---
 # <a name="idebugproperty2getparent"></a>IDebugProperty2::GetParent
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá vlastnost nadřazené vlastnosti.  
+Získá nadřazenou vlastnost vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ int GetParent ( 
   
 #### <a name="parameters"></a>Parametry  
  `ppParent`  
- [out] Vrátí [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objekt, který reprezentuje nadřazenou vlastnost.  
+ mimo Vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , který představuje nadřazenou vlastnost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETPARENT_NO_PARENT` Pokud není žádný nadřazený objekt.  
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby. Vrátí `S_GETPARENT_NO_PARENT` , pokud není k dispozici žádný nadřazený objekt.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

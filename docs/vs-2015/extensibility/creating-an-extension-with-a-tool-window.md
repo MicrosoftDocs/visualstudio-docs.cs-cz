@@ -1,5 +1,5 @@
 ---
-title: Vytváření rozšíření pomocí panelu nástrojů | Dokumentace Microsoftu
+title: Vytvoření rozšíření pomocí okna nástroje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,32 +9,32 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 94c8335b8d723ef20c04cfffe6b3788d71ecaa4f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431846"
 ---
 # <a name="creating-an-extension-with-a-tool-window"></a>Vytváření rozšíření pomocí panelu nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V tomto postupu se dozvíte, jak použít šablonu projektu VSIX a **vlastního panelu nástrojů** šablony položky k vytvoření rozšíření pomocí panelu nástrojů.  
+V tomto postupu se naučíte používat šablonu projektu VSIX a šablonu položky **okna vlastních nástrojů** k vytvoření rozšíření s oknem nástrojů.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-### <a name="creating-a-tool-window"></a>Vytvoření okna nástroje  
+### <a name="creating-a-tool-window"></a>Vytvoření okna nástrojů  
   
-1. Vytvořte projekt VSIX s názvem **FirstWindow**. Můžete najít šablonu projektu VSIX v **nový projekt** dialogového okna v části **Visual C# / rozšíření**.  
+1. Vytvořte projekt VSIX s názvem **FirstWindow**. Šablonu projektu VSIX můžete najít v dialogovém okně **Nový projekt** v části **Visual C#/rozšiřitelnost**.  
   
-2. Po otevření projektu přidat šablonu položky okna nástroje s názvem **FirstWindow**. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. V **přidat novou položku** dialogové okno, přejděte na **Visual C# / rozšíření** a vyberte **vlastního panelu nástrojů**. V **název** pole v dolní části okna, změňte název souboru okna nástroje, aby **FirstWindow.cs**.  
+2. Po otevření projektu přidejte šablonu položky okna nástroje s názvem **FirstWindow**. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. V dialogovém okně **Přidat novou položku** přejdete na **Visual C#/rozšiřitelnost** a vyberte **vlastní panel nástrojů**. V poli **název** v dolní části okna změňte název souboru okna nástroje na **FirstWindow.cs**.  
   
 3. Sestavte projekt a spusťte ladění.  
   
-     Experimentální instanci sady Visual Studio se zobrazí. Další informace o experimentální instanci najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
+     Zobrazí se experimentální instance aplikace Visual Studio. Další informace o experimentální instanci naleznete v [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
-4. V experimentální instanci aplikace, přejděte na **zobrazení / ostatní Windows**.  
+4. V experimentální instanci přejdete do **zobrazení/dalších oken**.  
   
-     Měli byste vidět položku nabídky pro **FirstWindow**. Klikněte na něj.  
+     Měla by se zobrazit položka nabídky pro **FirstWindow**. Klikněte na něj.  
   
-     Měli byste vidět okno nástroje s názvem **FirstWindow** a slavným výrokem tlačítko **klikněte na mě!.**
+     Měl by se zobrazit okno nástrojů s názvem **FirstWindow** a tlačítkem **na mě.**

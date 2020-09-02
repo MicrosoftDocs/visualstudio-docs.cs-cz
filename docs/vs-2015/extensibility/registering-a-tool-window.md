@@ -1,5 +1,5 @@
 ---
-title: Registrace panelu nástrojů | Dokumentace Microsoftu
+title: Registrace okna nástroje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8178938715278bf69fe8f4cc1b336bbd19cec04e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62535635"
 ---
 # <a name="registering-a-tool-window"></a>Registrace panelu nástrojů
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete zaregistrovat pomocí nástroje windows <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> a  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>  
+Můžete zaregistrovat okna nástrojů pomocí <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> a  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>  
   
 ## <a name="example"></a>Příklad  
   
@@ -35,4 +35,4 @@ public class PackageToolWindow : Package
 {  
 ```  
   
- Ve výše uvedeném kódu <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> zaregistruje PersistedWindowPane a DynamicWindowPane okna nástrojů pomocí sady Visual Studio. Panel nástrojů trvalý je ukotvena a s kartami s **Průzkumníka řešení**, a dynamické okno bude mít výchozí počáteční pozice a velikost. Dynamické okno se provádí přechodné, což znamená, že není vytvořeno při spuštění. To zapíše hodnotu DontForceCreate ToolWindows klíče v registru systému. Další informace najdete v tématu [konfigurace zobrazení okna nástroje](../extensibility/tool-window-display-configuration.md).
+ Ve výše uvedeném kódu <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> registruje okna nástrojů PersistedWindowPane a DynamicWindowPane se sadou Visual Studio. Trvalé okno nástroje je ukotvené a s kartami **Průzkumník řešení**a dynamické okno má výchozí počáteční pozici a velikost. Dynamické okno je přechodný, což znamená, že při spuštění není vytvořen. Tím se zapíše hodnota DontForceCreate v klíči ToolWindows v registru systému. Další informace najdete v tématu [Konfigurace zobrazení v okně nástroje](../extensibility/tool-window-display-configuration.md).
