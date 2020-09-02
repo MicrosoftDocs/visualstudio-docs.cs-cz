@@ -16,10 +16,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 452af60c37e4a56996438cc2957e9b69ccee98ef
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816823"
 ---
 # <a name="invalid-replacer-argument"></a>Neplatný argument nahrazení
@@ -44,7 +44,7 @@ var memberfilter = new Object();
 var jsontext = JSON.stringify(contact, memberfilter, "\t");  
 ```  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Objekt JSON](../../javascript/reference/json-object-javascript.md)   
  [Funkce JSON. Parse](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript – chyby za běhu](../../javascript/reference/javascript-run-time-errors.md)

@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348103"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Ladění JavaScriptu pomocí konzoly v aplikaci Visual Studio
@@ -46,7 +46,7 @@ Okno konzoly JavaScriptu vám umožní:
 
 Pomocí okna konzoly JavaScriptu můžete pracovat s aplikací bez zastavení a restartování ladicího programu. Další informace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md). Informace o dalších funkcích ladění JavaScriptu, jako je použití Průzkumníka modelu DOM a nastavení zarážek, najdete v tématu [rychlý Start: ladění HTML a CSS](../debugger/quickstart-debug-html-and-css.md) a [ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md).
 
-## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a>Ladění pomocí okna konzoly JavaScriptu
+## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a> Ladění pomocí okna konzoly JavaScriptu
 Následující postup vytvoří `FlipView` aplikaci a ukáže, jak interaktivně ladit chybu kódování JavaScriptu.
 
 > [!NOTE]
@@ -192,7 +192,7 @@ Následující postup vytvoří `FlipView` aplikaci a ukáže, jak interaktivně
 
     Kompletní default.htmovou stránku obsahující opravený vzorový kód naleznete v tématu [ladění kódu HTML, CSS a JavaScript Code Sample](../debugger/debug-html-css-and-javascript-sample-code.md).
 
-## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a>Interaktivní ladění a režim přerušení
+## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a> Interaktivní ladění a režim přerušení
 Zarážky a krok do kódu lze použít při použití ladicích nástrojů JavaScriptu jako okna konzoly jazyka JavaScript. Když program, který je spuštěn v ladicím programu, narazí na zarážku, ladicí program dočasně pozastaví provádění programu. Po pozastavení běhu se program přepne z režimu spuštění do režimu přerušení. Můžete kdykoli pokračovat v provádění.
 
 Když je program v režimu pozastavení, můžete použít okno konzoly JavaScriptu ke spouštění skriptů a příkazů, které jsou platné v aktuálním kontextu spuštění skriptu. V tomto postupu použijete pevnou verzi `FlipView` aplikace, kterou jste vytvořili dříve, abyste ukázali použití režimu přerušení.
@@ -233,14 +233,14 @@ Když je program v režimu pozastavení, můžete použít okno konzoly JavaScri
 
     Chcete-li přejít zpět k aplikaci Visual Studio, stiskněte klávesu F12 nebo ALT + TAB.
 
-## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a>Jednořádkový a víceřádkový režim v okně konzoly JavaScriptu
+## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a> Jednořádkový a víceřádkový režim v okně konzoly JavaScriptu
 Vstupní výzva pro okno konzoly JavaScriptu podporuje jednořádkový režim a víceřádkový režim. Postup interaktivního ladění v tomto tématu poskytuje příklad použití obou režimů. Stisknutím kombinace kláves CTRL + ALT + M můžete přepínat mezi jednotlivými režimy.
 
 Jednořádkový režim poskytuje historii vstupu. Můžete procházet historii vstupu pomocí kláves Šipka nahoru a šipka dolů. Jednořádkový režim vymaže vstupní výzvu při spuštění skriptů. Pokud chcete skript spustit v režimu single-line, stiskněte klávesu ENTER.
 
 Víceřádkový režim nevymaže vstupní výzvu při spuštění skriptů. Když přepnete do jednořádkového režimu z víceřádkového režimu, můžete odstranit vstupní řádek stisknutím klávesy **clear Input** (červený symbol "X"). Chcete-li spustit skript v víceřádkovém režimu, stiskněte klávesy CTRL + ENTER nebo zvolte symbol šipky v pravém dolním rohu okna.
 
-## <a name="switching-the-script-execution-context"></a><a name="Switching"></a>Přepínání kontextu spuštění skriptu
+## <a name="switching-the-script-execution-context"></a><a name="Switching"></a> Přepínání kontextu spuštění skriptu
 Okno konzoly JavaScriptu umožňuje interakci s jediným kontextem spuštění, který představuje jednu instanci hostitele webové platformy (WWAHost.exe) současně. V některých scénářích může vaše aplikace spustit jinou instanci hostitele, například při použití `iframe` , sdílení kontraktu, webového pracovního procesu nebo `WebView` ovládacího prvku. Pokud je spuštěná jiná instance hostitele, můžete při spuštění aplikace vybrat jiný kontext spuštění, a to tak, že v seznamu **cíl** vyberete kontext spuštění.
 
 Následující ilustrace znázorňuje cílový seznam v okně konzoly JavaScriptu.

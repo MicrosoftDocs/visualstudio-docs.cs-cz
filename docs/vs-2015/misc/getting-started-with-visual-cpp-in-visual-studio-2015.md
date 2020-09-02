@@ -1,5 +1,5 @@
 ---
-title: Začínáme s jazykem Visual C++ | Dokumentace Microsoftu
+title: Začínáme s Visual C++ | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -15,11 +15,11 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.openlocfilehash: 4d600a174bbd456ac1eaf7e940a17026519261a4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681677"
 ---
-# <a name="getting-started-with-visual-c-in-visual-studio-2015"></a>Začínáme s jazykem Visual C++ v sadě Visual Studio 2015
-Tento obsah byl odebrán. Úvod do jazyka Visual C++ v sadě Visual Studio, naleznete v tématu [Visual C++ Guided Tour](https://msdn.microsoft.com/499cb66f-7df1-45d6-8b6b-33d94fd1f17c).
+# <a name="getting-started-with-visual-c-in-visual-studio-2015"></a>Začínáme s Visual C++ v aplikaci Visual Studio 2015
+Tento obsah byl odebrán. Úvodní informace o Visual C++ v aplikaci Visual Studio najdete v tématu [průvodce Visual C++em](https://msdn.microsoft.com/499cb66f-7df1-45d6-8b6b-33d94fd1f17c).

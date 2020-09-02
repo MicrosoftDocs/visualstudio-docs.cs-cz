@@ -1,5 +1,5 @@
 ---
-title: Enumerátor kódu příkazu | Dokumentace Microsoftu
+title: Enumerátor kódu příkazu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 06f1a3f7146125e59d02efc72a4d4fc9ab33be39
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184391"
 ---
 # <a name="command-code-enumerator"></a>Enumerátor kódu příkazu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento výčet je používán možnosti [sccgetcommandoptions –](../extensibility/sccgetcommandoptions-function.md) a [sccpopulatelist –](../extensibility/sccpopulatelist-function.md)označíte, příkazu, pro který jsou zadány možnosti.  
+Tento enumerátor se používá v možnostech pro [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) a [SccPopulateList](../extensibility/sccpopulatelist-function.md)k označení příkazu, pro který jsou zadány možnosti.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum SCCCOMMAND {  
@@ -43,39 +43,39 @@ enum SCCCOMMAND {
   
 ## <a name="members"></a>Členové  
  SCC_COMMAND_GET  
- Odpovídá [sccget –](../extensibility/sccget-function.md).  
+ Odpovídá [SccGet](../extensibility/sccget-function.md).  
   
  SCC_COMMAND_CHECKOUT  
- Odpovídá [scccheckout –](../extensibility/scccheckout-function.md).  
+ Odpovídá [SccCheckout](../extensibility/scccheckout-function.md).  
   
  SCC_COMMAND_CHECKIN  
- Odpovídá [scccheckin –](../extensibility/scccheckin-function.md).  
+ Odpovídá [SccCheckin](../extensibility/scccheckin-function.md).  
   
  SCC_COMMAND_UNCHECKOUT  
- Odpovídá [sccuncheckout –](../extensibility/sccuncheckout-function.md).  
+ Odpovídá [SccUncheckout](../extensibility/sccuncheckout-function.md).  
   
  SCC_COMMAND_ADD  
- Odpovídá [sccadd –](../extensibility/sccadd-function.md).  
+ Odpovídá [SccAdd](../extensibility/sccadd-function.md).  
   
  SCC_COMMAND_REMOVE  
- Odpovídá [sccremove –](../extensibility/sccremove-function.md).  
+ Odpovídá [SccRemove](../extensibility/sccremove-function.md).  
   
  SCC_COMMAND_DIFF  
- Odpovídá [sccdiff –](../extensibility/sccdiff-function.md).  
+ Odpovídá [SccDiff](../extensibility/sccdiff-function.md).  
   
  SCC_COMMAND_HISTORY  
- Odpovídá [scchistory –](../extensibility/scchistory-function.md).  
+ Odpovídá [SccHistory](../extensibility/scchistory-function.md).  
   
  SCC_COMMAND_RENAME  
- Odpovídá [sccrename –](../extensibility/sccrename-function.md).  
+ Odpovídá [SccRename](../extensibility/sccrename-function.md).  
   
  SCC_COMMAND_PROPERTIES  
- Odpovídá [sccproperties –](../extensibility/sccproperties-function.md).  
+ Odpovídá [SccProperties](../extensibility/sccproperties-function.md).  
   
  SCC_COMMAND_OPTIONS  
- Odpovídá [sccsetoption –](../extensibility/sccsetoption-function.md).  
+ Odpovídá [SccSetOption](../extensibility/sccsetoption-function.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)   
+ [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)   
  [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)

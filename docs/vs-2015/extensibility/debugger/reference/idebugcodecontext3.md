@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext3 | Dokumentace Microsoftu
+title: IDebugCodeContext3 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,40 +11,40 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 62b84bd77038c7a17b65f764bd303d6a6372a52c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154160"
 ---
 # <a name="idebugcodecontext3"></a>IDebugCodeContext3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Rozšiřuje [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) rozhraní povolit načtení modulu a proces rozhraní.  
+Rozšiřuje rozhraní [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , aby bylo možné načíst rozhraní modulu a procesu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCodeContext3 : IDebugCodeContext2  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Pomocí ladicími stroji implementovat a používat [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ladit balíček.  
+ Implementováno ladicími moduly a spotřebované [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ladicím balíčkem.  
   
 ## <a name="methods"></a>Metody  
- Kromě metod na `IDebugCodeContext2` rozhraní, toto rozhraní implementuje následujících metod:  
+ Kromě metod v `IDebugCodeContext2` rozhraní implementuje toto rozhraní následující metody:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetModule](../../../extensibility/debugger/reference/idebugcodecontext3-getmodule.md)|Získá odkaz na rozhraní modulu ladění.|  
-|[GetProcess](../../../extensibility/debugger/reference/idebugcodecontext3-getprocess.md)|Získá referenci k rozhraní ladění procesu.|  
+|[GetModule](../../../extensibility/debugger/reference/idebugcodecontext3-getmodule.md)|Načte odkaz na rozhraní modulu ladění.|  
+|[GetProcess](../../../extensibility/debugger/reference/idebugcodecontext3-getprocess.md)|Načte odkaz na rozhraní procesu ladění.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je volitelné rozhraní, která obvykle není nutné implementovat.  
+ Toto je volitelné rozhraní, které obecně nemusí být implementováno.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

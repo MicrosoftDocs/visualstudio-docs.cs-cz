@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6629212fcc981ba3decb3b02d63975bc9826dc1f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541658"
 ---
 # <a name="ltfriendlynamegt-element-office-development-in-visual-studio"></a>&lt;friendlyName – &gt; element (vývoj pro Office v sadě Visual Studio)

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c2dc3e733afdb4f3d25595e819163ff56e397c6e
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816940"
 ---
 # <a name="invalid-character-javascript"></a>Neplatný znak (JavaScript)
@@ -34,7 +34,7 @@ Zavedli jste identifikátor pomocí znaku (nebo znaků), který kompilátor nero
   
 - Vyhněte se použití znaků, které nejsou součástí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] definice jazyka.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Proměnné](../../javascript/variables-javascript.md)   
  [Speciální znaky](../../javascript/advanced/special-characters-javascript.md)   
- [Typy dat](../../javascript/data-types-javascript.md)
+ [Datové typy](../../javascript/data-types-javascript.md)

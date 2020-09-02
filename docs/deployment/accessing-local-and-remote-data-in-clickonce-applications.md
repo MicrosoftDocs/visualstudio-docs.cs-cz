@@ -1,5 +1,5 @@
 ---
-title: Přístup k lokálním a vzdáleným datům v aplikacích ClickOnce | Dokumentace Microsoftu
+title: Přístup k místním a vzdáleným datům v aplikacích ClickOnce | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,17 +16,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c2a4f2e9fe66ab049113111f13338cdced4e39e
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66746073"
 ---
-# <a name="access-local-and-remote-data-in-clickonce-applications"></a>Přístup k lokálním a vzdáleným datům v aplikacích ClickOnce
-Většina aplikací spotřebovávají nebo vytvářejí data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] poskytuje širokou škálu možností pro čtení a zápis dat, místně i vzdáleně.
+# <a name="access-local-and-remote-data-in-clickonce-applications"></a>Přístup k místním a vzdáleným datům v aplikacích ClickOnce
+Většina aplikací spotřebovává nebo vytváří data. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nabízí celou řadu možností pro čtení a zápis dat, a to jak místně, tak i vzdáleně.
 
-## <a name="local-data"></a>Místní Data
- S [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], můžete načíst a ukládat data místně pomocí jedné z následujících metod:
+## <a name="local-data"></a>Místní data
+ Pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nástroje můžete data načíst a uložit místně pomocí kterékoli z následujících metod:
 
 - [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Datový adresář
 
@@ -34,79 +34,79 @@ Většina aplikací spotřebovávají nebo vytvářejí data. [!INCLUDE[ndpteccl
 
 - Další místní soubory
 
-### <a name="clickonce-data-directory"></a>Adresář dat ClickOnce
- Každý [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace je nainstalovaná na místním počítači má datový adresář, který je uložený ve složce Dokumenty a nastavení uživatele. Všechny soubory součástí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a označena jako "data" soubor zkopírován do tohoto adresáře, když je nainstalovaná určitá aplikace. Datové soubory mohou být libovolného typu souboru, nejčastěji používané text, XML a soubory databáze, jako jsou například aplikace Microsoft Access .mdb soubory.
+### <a name="clickonce-data-directory"></a>Datový adresář ClickOnce
+ Každá [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nainstalovaná v místním počítači má datový adresář uložený ve složce Documents and Settings uživatele. Všechny soubory zahrnuté v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci a označené jako "datový" se zkopírují do tohoto adresáře, když je aplikace nainstalovaná. Datové soubory můžou být libovolného typu souboru, nejčastěji používaný text, XML a databázové soubory, jako jsou soubory Microsoft Access. mdb.
 
- Do adresáře dat je určená pro data spravované aplikace, které jsou data, která aplikace explicitně uchovává a udržuje. Všechny statické, nezávislé soubory nejsou označeny jako "data" v manifestu aplikace se místo toho jsou umístěny v adresáři aplikace. Tento adresář je, kde aplikace spustitelného souboru ( *.exe*) jsou umístěny soubory a sestavení.
-
-> [!NOTE]
-> Když [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se odinstaluje, odebere se také jeho Data adresáře. Nikdy nepoužívejte datový adresář k uložení dat řízených na koncového uživatele, jako jsou například dokumenty.
-
-#### <a name="mark-data-files-in-a-clickonce-distribution"></a>Označit datové soubory v distribuci ClickOnce
- Umístit existující soubor do adresáře dat, je třeba označit existující soubor jako datový soubor v vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] souboru manifestu aplikace vaší aplikace. Další informace najdete v tématu [jak: Zahrnutí datového souboru do aplikace ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
-
-#### <a name="read-from-and-write-to-the-data-directory"></a>Čtení a zápisu do adresáře dat
- Čtení z adresáře dat vyžaduje, aby vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] žádosti o oprávnění ke čtení; podobně zápisu do adresáře, vyžaduje oprávnění k zápisu. Vaše aplikace nebude mít toto oprávnění automaticky, pokud je nakonfigurován na spuštění s úplnou důvěryhodností. Další informace o zvyšování oprávnění pro vaši aplikaci pomocí rozhraní zvýšení úrovně oprávnění nebo Trusted Application Deployment najdete v tématu [zabezpečení ClickOnce applications](../deployment/securing-clickonce-applications.md).
+ Datový adresář je určený pro data spravovaná aplikací, což jsou data, která aplikace explicitně ukládá a udržuje. Všechny statické, nezávislé soubory, které nejsou označeny jako "data" v manifestu aplikace, se místo toho nacházejí v adresáři aplikace. Do tohoto adresáře se nacházejí spustitelné soubory aplikace (*. exe*) a sestavení.
 
 > [!NOTE]
-> Pokud vaše organizace nepoužívá Trusted Application Deployment a zvýšení oprávnění se vypnulo, uplatnění oprávnění se nezdaří.
+> Při [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] odinstalaci aplikace je také odebrána její datový adresář. Nikdy nepoužívejte datový adresář k ukládání dat spravovaných koncovými uživateli, například dokumentů.
 
- Poté, co vaše aplikace má tato oprávnění, má přístup do adresáře dat pomocí volání metody třídy v rámci <xref:System.IO>. Můžete získat cestu do adresáře dat v rámci prvku Windows Forms [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace s použitím <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> vlastnosti definované v <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> vlastnost <xref:System.Deployment.Application.ApplicationDeployment>. Toto je nejpohodlnější a doporučený způsob pro přístup k datům. Následující příklad kódu ukazuje, jak to udělat pro textový soubor s názvem *CSV.txt* , kterou jste zadali ve vašem nasazení jako datový soubor.
+#### <a name="mark-data-files-in-a-clickonce-distribution"></a>Označení datových souborů v distribuci ClickOnce
+ Chcete-li vložit existující soubor do datového adresáře, je nutné označit existující soubor jako datový soubor v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] souboru manifestu aplikace aplikace. Další informace naleznete v tématu [How to: include a data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
+
+#### <a name="read-from-and-write-to-the-data-directory"></a>Čtení z datového adresáře a zápis do něj
+ Čtení z datového adresáře vyžaduje, aby vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace vyžadovala oprávnění ke čtení. Podobně zápis do adresáře vyžaduje oprávnění k zápisu. Vaše aplikace bude mít toto oprávnění automaticky, pokud je nakonfigurována pro spuštění s úplným vztahem důvěryhodnosti. Další informace o oprávněních ke zvýšení oprávnění pro vaši aplikaci pomocí zvýšení oprávnění nebo nasazení důvěryhodné aplikace najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).
+
+> [!NOTE]
+> Pokud vaše organizace nepoužívá nasazení důvěryhodné aplikace a vypnula zvýšení oprávnění, neproběhne vyhodnocení oprávnění.
+
+ Po tom, co vaše aplikace má tato oprávnění, může získat přístup k datovému adresáři pomocí volání metody třídy v rámci <xref:System.IO> . Cestu k datovému adresáři v aplikaci model Windows Forms můžete získat [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] pomocí <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> vlastnosti definované u <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> vlastnosti <xref:System.Deployment.Application.ApplicationDeployment> . Toto je nejpohodlnější a doporučený způsob, jak získat přístup k datům. Následující příklad kódu ukazuje, jak to provést pro textový soubor s názvem *CSV.txt* , který jste zahrnuli do nasazení jako datový soubor.
 
  [!code-csharp[ClickOnce.OpenDataFile#1](../deployment/codesnippet/CSharp/accessing-local-and-remote-data-in-clickonce-applications_1.cs)]
  [!code-vb[ClickOnce.OpenDataFile#1](../deployment/codesnippet/VisualBasic/accessing-local-and-remote-data-in-clickonce-applications_1.vb)]
 
- Další informace o označení souborů ve vašem nasazení jako datové soubory, naleznete v tématu [jak: Zahrnutí datového souboru do aplikace ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
+ Další informace o označování souborů v nasazení jako datových souborů naleznete v tématu [How to: include a data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).
 
- Můžete také získat cestu k adresáři data pomocí příslušných proměnných na <xref:System.Windows.Forms.Application> třídy, jako například <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A>.
+ Můžete také získat cestu k datovému adresáři pomocí příslušných proměnných třídy, jako je například <xref:System.Windows.Forms.Application> <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A> .
 
- Manipulace s další typy souborů můžou vyžadovat další oprávnění. Například, pokud chcete použít databázi aplikace Access ( *.mdb*) soubor, aplikace musí uplatnit úplný vztah důvěryhodnosti pro použití příslušných \<xref:System.Data > tříd.
+ Manipulace s dalšími typy souborů může vyžadovat další oprávnění. Například pokud chcete použít soubor databáze aplikace Access (*. mdb*), aplikace musí uplatnit úplný vztah důvěryhodnosti, aby bylo možné použít příslušné \<xref:System.Data> třídy.
 
-#### <a name="data-directory-and-application-versions"></a>Datový adresář a verze aplikace
- Každá verze aplikace má vlastní datový adresář, který je izolovaný od ostatních verzí. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vytvoří tento adresář bez ohledu na to, zda jsou všechny datové soubory zahrnuté v nasazení tak, aby aplikace měla umístění pro vytvoření nové datové soubory v době běhu. Při instalaci nové verze aplikace [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zkopíruje všechny existující soubory dat z předchozí verze datový adresář do adresáře dat novou verzi – Určuje, zda byly zahrnuty do původního nasazení nebo vytvořené aplikace.
+#### <a name="data-directory-and-application-versions"></a>Datové adresáře a verze aplikací
+ Každá verze aplikace má svůj vlastní adresář dat, který je izolovaný od ostatních verzí. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Vytvoří tento adresář bez ohledu na to, jestli jsou nějaké datové soubory zahrnuté do nasazení, aby aplikace měla místo pro vytváření nových datových souborů za běhu. Pokud je nainstalována nová verze aplikace, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Nástroj zkopíruje všechny existující datové soubory z datového adresáře předchozí verze do datového adresáře nové verze – bez ohledu na to, zda byly zahrnuty do původního nasazení nebo vytvořeného aplikací.
 
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nahradí starší verzi souboru v novější verzi serveru datový soubor má jiný algoritmus hash hodnoty v původní verze aplikace jako novou verzi. Navíc pokud starší verzi aplikace vytvořila nový soubor, který má stejný název jako soubor součástí nasazení nové verze [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] stará verze souboru přepíše novým souborem. V obou případech se zahrne starých souborů v podadresáři do adresáře dat s názvem `.pre`, aby aplikace stále přístup k stará data pro účely migrace.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nahradí starší verzi souboru novější verzí serveru, pokud má datový soubor jinou hodnotu hash ve staré verzi aplikace jako v nové verzi. V případě, že starší verze aplikace vytvořila nový soubor, který má stejný název jako soubor zahrnutý v nasazení nové verze, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] přepíše soubor staré verze novým souborem. V obou případech budou staré soubory zahrnuté v podadresáři v adresáři dat s názvem `.pre` , takže aplikace bude mít stále přístup k původním datům pro účely migrace.
 
- Pokud potřebujete citlivější migraci dat, můžete použít [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] rozhraní API nasazení provést vlastní migraci ze staré adresář dat do nového adresáře Data. Budete muset pomocí otestovat k dispozici ke stažení <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>, stáhnout aktualizace pomocí <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> nebo <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>, a provést vlastní migraci dat fungovat vlastní po instalaci aktualizace je dokončena.
+ Pokud potřebujete jemnější migraci dat, můžete použít [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] rozhraní API nasazení k provedení vlastní migrace ze starého datového adresáře do nového adresáře dat. Budete muset otestovat dostupné stažení pomocí nástroje <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A> , stáhnout aktualizaci pomocí nástroje <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> nebo <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A> a po dokončení aktualizace provést jakoukoli vlastní migraci dat na vlastní práci.
 
 ### <a name="isolated-storage"></a>Izolované úložiště
- Izolované úložiště poskytuje rozhraní API pro vytváření a přístup k souborům s použitím jednoduchého rozhraní API. Skutečné umístění uložené soubory se skryje vývojáře a uživatele.
+ Izolované úložiště poskytuje rozhraní API pro vytváření souborů a přístup k nim pomocí jednoduchého rozhraní API. Skutečné umístění uložených souborů je pro vývojáře i uživatele skryté.
 
- Izolované úložiště funguje ve všech verzích rozhraní .NET Framework. Izolované úložiště funguje taky v částečně důvěryhodné aplikace bez nutnosti udělení dalších oprávnění. Izolované úložiště byste měli použít, pokud vaše aplikace musí spustit v částečném vztahu důvěryhodnosti, ale musí spravovat data specifická pro aplikaci.
+ Izolované úložiště funguje ve všech verzích .NET Framework. Izolované úložiště také funguje v částečně důvěryhodných aplikacích bez nutnosti dalších udělení oprávnění. Izolované úložiště byste měli použít, pokud vaše aplikace musí běžet v částečném vztahu důvěryhodnosti, ale musí uchovávat data specifická pro aplikaci.
 
- Další informace najdete v tématu [izolovaného úložiště](/dotnet/standard/io/isolated-storage).
+ Další informace najdete v tématu [izolované úložiště](/dotnet/standard/io/isolated-storage).
 
 ### <a name="other-local-files"></a>Další místní soubory
- Pokud vaše aplikace musí fungovat s nebo uložit data koncových uživatelů, jako jsou sestavy, obrázky, Hudba a tak dále, aplikace bude vyžadovat <xref:System.Security.Permissions.FileIOPermission> ke čtení a zápis dat do místního systému souborů.
+ Pokud vaše aplikace musí pracovat s daty koncových uživatelů, jako jsou například sestavy, obrázky, hudba a tak dále, aplikace bude vyžadovat <xref:System.Security.Permissions.FileIOPermission> čtení a zápis dat do místního systému souborů.
 
 ## <a name="remote-data"></a>Vzdálená data
- V určitém okamžiku vaše aplikace bude mít pravděpodobně k načtení informací ze vzdáleného webu, jako je například informace o zákaznících dat nebo na trhu. Tato část popisuje nejběžnější techniky pro načítání vzdálených dat.
+ V určitém okamžiku bude vaše aplikace pravděpodobně muset načítat informace ze vzdáleného webu, jako jsou zákaznická data nebo informace o trhu. Tato část popisuje nejběžnější techniky načítání vzdálených dat.
 
-### <a name="access-files-with-http"></a>Přístup k souborům s protokolem HTTP
- Můžete přístup k datům z webového serveru pomocí <xref:System.Net.WebClient> nebo <xref:System.Net.HttpWebRequest> třídy v <xref:System.Net> oboru názvů. Data mohou být buď statické soubory nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace, které vracejí nezpracovaný text nebo XML data. Pokud jsou vaše data ve formátu XML, je nejrychlejší způsob, jak načíst data pomocí <xref:System.Xml.XmlDocument> třídy, jejichž <xref:System.Xml.XmlDocument.Load%2A> metoda přebírá adresu URL jako argument. Příklad najdete v tématu [čtení dokumentu XML do modelu DOM](/dotnet/standard/data/xml/reading-an-xml-document-into-the-dom).
+### <a name="access-files-with-http"></a>Přístup k souborům pomocí protokolu HTTP
+ K datům z webového serveru můžete přistupovat buď pomocí <xref:System.Net.WebClient> třídy, nebo <xref:System.Net.HttpWebRequest> třídy v <xref:System.Net> oboru názvů. Data mohou být buď statické soubory, nebo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace, které vracejí nezpracovaný text nebo data XML. Pokud jsou vaše data ve formátu XML, nejrychlejší způsob, jak načíst data, je použití <xref:System.Xml.XmlDocument> třídy, jejíž <xref:System.Xml.XmlDocument.Load%2A> Metoda přijímá jako argument adresu URL. Příklad naleznete v tématu [čtení dokumentu XML do modelu DOM](/dotnet/standard/data/xml/reading-an-xml-document-into-the-dom).
 
- Je nutné zvážit zabezpečení, když vaše aplikace přistupuje vzdálených dat prostřednictvím protokolu HTTP. Ve výchozím nastavení vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace přístup k síťovým prostředkům může být omezená, v závislosti na tom, jak se vaše aplikace nasazena. Tato omezení se použijí na škodlivé programy zabránit v získání přístupu k privilegovaným vzdálených dat nebo z počítače uživatele pomocí k útoku na jiné počítače v síti.
+ Pokud vaše aplikace přistupuje ke vzdáleným datům přes HTTP, musíte zvážit zabezpečení. Ve výchozím nastavení [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] může být přístup k síťovým prostředkům aplikace omezený v závislosti na tom, jak byla aplikace nasazena. Tato omezení platí pro zabránění škodlivým programům v získání přístupu k privilegovaným vzdáleným datům nebo k útoku na jiné počítače v síti pomocí počítače uživatele.
 
- Následující tabulka uvádí strategie nasazení, které můžete použít a jejich oprávnění výchozí Web.
+ Následující tabulka uvádí strategie nasazení, které můžete použít, a jejich výchozí webová oprávnění.
 
-|Typ nasazení|Výchozí oprávnění sítě|
+|Typ nasazení|Výchozí síťová oprávnění|
 |---------------------|---------------------------------|
-|Webová instalace|Můžete pouze přístup k webovému serveru, ze kterého byla aplikace nainstalována|
-|Instalace ze sdílené složky|Nelze získat přístup k webové servery|
-|Instalace CD-ROM|Můžete přistupovat na webové servery|
+|Instalace na webu|Může přistupovat jenom k webovému serveru, ze kterého se aplikace nainstalovala.|
+|Instalace sdílené složky|Nelze získat přístup k žádnému webovému serveru|
+|Instalace CD-ROM|Má přístup k libovolným webovým serverům|
 
- Pokud vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nemůže přistupovat k webového serveru z důvodu omezení zabezpečení, musí aplikace uplatnit <xref:System.Net.WebPermission> pro tento web. Další informace o zvýšení oprávnění zabezpečení pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, najdete v článku [zabezpečení ClickOnce applications](../deployment/securing-clickonce-applications.md).
+ Pokud vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nemůže získat přístup k webovému serveru z důvodu omezení zabezpečení, aplikace musí pro tento web vyhodnotit <xref:System.Net.WebPermission> . Další informace o zvýšení oprávnění zabezpečení pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci najdete v tématu [zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md).
 
 ### <a name="access-data-through-an-xml-web-service"></a>Přístup k datům prostřednictvím webové služby XML
- Pokud je zveřejnit vaše data jako webové služby XML, můžete přístup k datům pomocí proxy XML webové služby. Proxy server je třída rozhraní .NET Framework, můžete vytvořit buď pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Operace webové služby XML, třeba načítání zákazníků, uvedení objednávky a tak dále – jsou vystaveny jako metody na proxy serveru. To umožňuje mnohem jednodušší než nezpracovaný text nebo soubory XML webové služby.
+ Pokud vystavíte vaše data jako webovou službu XML, můžete k datům přistupovat pomocí proxy webové služby XML. Proxy je .NET Framework třída, kterou vytvoříte pomocí obou [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Operace webové služby XML, jako je například načítání zákazníků, umisťování objednávek atd., jsou zveřejněny jako metody na proxy serveru. Díky tomu je používání webových služeb mnohem snazší než nezpracovaný text nebo soubory XML.
 
- Pokud vaše webová služba XML pracuje přes protokol HTTP, služba bude vázána stejná omezení zabezpečení, jako <xref:System.Net.WebClient> a <xref:System.Net.HttpWebRequest> třídy.
+ Pokud vaše webová služba XML funguje přes protokol HTTP, bude služba vázána stejnými omezeními zabezpečení jako <xref:System.Net.WebClient> třídy a <xref:System.Net.HttpWebRequest> .
 
-### <a name="access-a-database-directly"></a>Přístup k databázi
- Můžete použít třídy v rámci <xref:System.Data> obor názvů a navázat přímé spojení s databázovým serverem, jako je SQL Server v síti, ale musí odpovídat problémy se zabezpečením. Na rozdíl od požadavků protokolu HTTP žádosti o připojení databáze jsou vždy je zakázané ve výchozím nastavení v částečném vztahu důvěryhodnosti; je jenom taková oprávnění budete mít ve výchozím nastavení při instalaci vašeho [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci z disku CD-ROM. Díky tomu vaše aplikace úplné důvěryhodnosti. Pokud chcete povolit přístup ke konkrétní databázi systému SQL Server, vaše aplikace musí požádat o <xref:System.Data.SqlClient.SqlClientPermission> k němu; zajistit přístup k jiné databáze než SQL Server, musíte požádat o <xref:System.Data.OleDb.OleDbPermission>.
+### <a name="access-a-database-directly"></a>Přístup k databázi přímo
+ Třídy v rámci oboru názvů můžete použít <xref:System.Data> k navázání přímých připojení s databázovým serverem, jako je například SQL Server ve vaší síti, ale je nutné, abyste měli účet pro problémy se zabezpečením. Na rozdíl od požadavků HTTP jsou požadavky na připojení k databázi ve výchozím nastavení vždycky zakázané, protože je částečně důvěryhodná; Toto oprávnění budete mít ve výchozím nastavení pouze v případě, že instalujete [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci z disku CD-ROM. Tím se vaše aplikace nastaví jako plně důvěryhodná. Aby bylo možné povolit přístup ke konkrétní databázi SQL Server, musí si ji aplikace požádat <xref:System.Data.SqlClient.SqlClientPermission> . Pokud chcete povolit přístup k jiné databázi než SQL Server, musí požádat o <xref:System.Data.OleDb.OleDbPermission> .
 
- Ve většině případů, nebudete mít přístup k databázi přímo, ale bude získávat přístup místo toho prostřednictvím serveru webové aplikace napsané v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nebo webové služby XML. Přístup k databázi tímto způsobem je často nejlepší metody Pokud vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace z webového serveru. Přístup k serveru v částečném vztahu důvěryhodnosti bez zvýšené oprávnění vaší aplikace.
+ Ve většině případů nebudete muset přistupovat k databázi přímo, ale místo toho se k ní přistupuje prostřednictvím aplikace webového serveru napsané v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nebo v rámci webové služby XML. Přístup k databázi tímto způsobem je často nejlepší metodou, pokud je vaše [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace nasazena z webového serveru. K serveru můžete přistupovat v částečném vztahu důvěryhodnosti bez zvýšení oprávnění aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-- [Postupy: Zahrnutí datového souboru do aplikace ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)
+- [Postupy: zahrnutí datového souboru do aplikace ClickOnce](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

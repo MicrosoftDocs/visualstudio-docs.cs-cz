@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 ms.openlocfilehash: 331cb056132a2d90a932ff250c9bdbb7e22e38af
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348259"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění HTML a CSS v aplikacích pro UWP v aplikaci Visual Studio
@@ -32,7 +32,7 @@ Pomocí modelu interaktivního ladění, který poskytuje nástroje pro kontrolu
 
 Informace o dalších funkcích ladění JavaScriptu, jako je použití okna konzoly JavaScriptu a nastavení zarážek, najdete v tématu [rychlý Start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md) a [ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md).
 
-## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a>Kontrola živého modelu DOM
+## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a> Kontrola živého modelu DOM
 Průzkumník modelu DOM zobrazuje vykreslenou stránku a k změně hodnot a okamžitému zobrazení výsledků můžete použít Průzkumníka modelu DOM. To umožňuje testovat změny bez zastavení a restartování ladicího programu. Zdrojový kód v projektu se při interakci se stránkou nemění pomocí této metody, takže pokud najdete požadované opravy kódu, provedete změny ve zdrojovém kódu.
 
 > [!TIP]
@@ -230,7 +230,7 @@ V následujícím postupu projdeme proces interaktivního ladění aplikace pomo
 
     Další informace o funkci aktualizovat najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md).
 
-## <a name="selecting-elements"></a><a name="SelectingElements"></a>Výběr elementů
+## <a name="selecting-elements"></a><a name="SelectingElements"></a> Výběr elementů
 Při ladění aplikace můžete vybrat prvky DOM třemi způsoby:
 
 - Kliknutím na prvky přímo v okně Průzkumníka modelu DOM (nebo pomocí kláves se šipkami).

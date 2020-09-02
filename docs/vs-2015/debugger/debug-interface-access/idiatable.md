@@ -1,5 +1,5 @@
 ---
-title: Idiatable – | Dokumentace Microsoftu
+title: IDiaTable | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5b9c9f85ffbf4eed2fdc305a64bd3f32822dacd6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682793"
 ---
 # <a name="idiatable"></a>IDiaTable
@@ -25,31 +25,31 @@ ms.locfileid: "65682793"
 
 Vytvoří výčet tabulky zdroje dat DIA.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaTable : IEnumUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDiaTable`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDiaTable` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|Načte [rozhraní IEnumVARIANT](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) verzi výčet.|  
+|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|Načte verzi [rozhraní IEnumVARIANT](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) tohoto enumerátoru.|  
 |[IDiaTable::get_name](../../debugger/debug-interface-access/idiatable-get-name.md)|Načte název tabulky.|  
-|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|Získá počet položek v tabulce.|  
-|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|Získá odkaz na příslušnou položku indexu.|  
+|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|Načte počet položek v tabulce.|  
+|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|Načte odkaz na konkrétní index záznamu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Implementuje toto rozhraní `IEnumUnknown` výčet metody v oboru názvů sestavení Microsoft.VisualStudio.OLE.Interop. `IEnumUnknown` Výčet rozhraní je mnohem efektivnější pro iterování celého obsahu, než [idiatable::get_count –](../../debugger/debug-interface-access/idiatable-get-count.md) a [idiatable::Item –](../../debugger/debug-interface-access/idiatable-item.md) metody.  
+ Toto rozhraní implementuje `IEnumUnknown` metody výčtu v oboru názvů Microsoft. VisualStudio. OLE. Interop. `IEnumUnknown`Rozhraní výčtu je mnohem efektivnější pro iteraci nad obsahem tabulky, než metody [IDiaTable:: Get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) a [IDiaTable:: Item](../../debugger/debug-interface-access/idiatable-item.md) .  
   
- Výklad `IUnknown` rozhraní vrátí buď z `IDiaTable::Item` metoda nebo `Next` – metoda (v oboru názvů sestavení Microsoft.VisualStudio.OLE.Interop) závisí na typu tabulky. Například pokud `IDiaTable` rozhraní představuje seznam vloženého zdroje `IUnknown` rozhraní mají být získána pro [idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md) rozhraní.  
+ Interpretace `IUnknown` rozhraní vráceného buď `IDiaTable::Item` metodou nebo `Next` metodou (v oboru názvů Microsoft. VisualStudio. OLE. Interop) závisí na typu tabulky. Například pokud `IDiaTable` rozhraní představuje seznam vložených zdrojů, `IUnknown` pro rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) by se mělo zadat dotaz na rozhraní.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Získat voláním toto rozhraní [idiaenumtables::Item –](../../debugger/debug-interface-access/idiaenumtables-item.md) nebo [idiaenumtables::Next –](../../debugger/debug-interface-access/idiaenumtables-next.md) metody.  
+ Získejte toto rozhraní voláním metody [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md) nebo [IDiaEnumTables:: Next](../../debugger/debug-interface-access/idiaenumtables-next.md) .  
   
- Následující rozhraní jsou implementovány pomocí `IDiaTable` rozhraní (to znamená, můžete zadat dotaz `IDiaTable` rozhraní pro jednu z následujících rozhraní):  
+ Následující rozhraní jsou implementována s `IDiaTable` rozhraním (to znamená, že můžete zadat dotaz na `IDiaTable` rozhraní pro jedno z následujících rozhraní):  
   
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)  
   
@@ -66,10 +66,10 @@ IDiaTable : IEnumUnknown
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)  
   
 ## <a name="example"></a>Příklad  
- První funkce `ShowTableNames`, zobrazuje názvy všechny tabulky v relaci. Druhá funkce `GetTable`, prohledá všechny tabulky pro tabulku, která implementuje rozhraní zadané. Třetí funkce `UseTable`, ukazuje způsob použití `GetTable` funkce.  
+ První funkce `ShowTableNames` zobrazí názvy všech tabulek v relaci. Druhá funkce, `GetTable` , vyhledá všechny tabulky pro tabulku, která implementuje zadané rozhraní. Třetí funkce, `UseTable` , ukazuje, jak používat `GetTable` funkci.  
   
 > [!NOTE]
-> `CDiaBSTR` je třída, která zabalí `BSTR` a automaticky zpracovává uvolnění řetězec při vytváření instance dostane mimo rozsah.  
+> `CDiaBSTR` je třída, která obaluje `BSTR` a automaticky zpracovává uvolnění řetězce, když se instance vychází z rozsahu.  
   
 ```cpp#  
 void ShowTableNames(IDiaSession *pSession)  
@@ -134,14 +134,14 @@ void UseTable(IDiaSession *pSession)
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia80.dll  
+ KNIHOVNA DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md)   
- [Idiaenumtables::Item –](../../debugger/debug-interface-access/idiaenumtables-item.md)   
+ [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
+ [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md)   
  [IDiaEnumTables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md)

@@ -1,5 +1,5 @@
 ---
-title: BP_PASSCOUNT | Dokumentace Microsoftu
+title: BP_PASSCOUNT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b99cbd777755a9a48869299b5cea523ecacbb4a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153382"
 ---
-# <a name="bppasscount"></a>BP_PASSCOUNT
+# <a name="bp_passcount"></a>BP_PASSCOUNT
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje počet a podmínky, při které se aktivuje podmíněné zarážky.  
+Popisuje počet a podmínky, na kterých je vyvolána podmíněná zarážka.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_PASSCOUNT {   
@@ -42,20 +42,20 @@ public struct BP_PASSCOUNT { 
   
 ## <a name="members"></a>Členové  
  `dwPassCount`  
- Počet pokusů, než se ohlásí ji procházel přes zarážku.  
+ Počet pokusů, které se mají předat zarážku, než se aktivuje.  
   
  `stylePassCount`  
- Hodnota z [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) počet průchodů výčet, který určuje typ zarážky.  
+ Hodnota z výčtu [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) , která určuje styl počtu průchodů zarážky.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) struktury.  
+ Tato struktura je členem [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) struktury.  
   
- Tato struktura je také předat jako parametr[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md) a[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md) metody.  
+ Tato struktura je také předána jako parametr metodám[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md) a[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

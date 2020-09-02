@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fc44e9e1a9a1d17d3f5b0f31515e2402e9512c55
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332210"
 ---
 # <a name="cvcreatemarkerseries-function"></a>Cvcreatemarkerseries – – funkce
@@ -39,11 +39,11 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `pProvider`Objekt poskytovatele byl dříve inicializován nástrojem CvInitProvider –. Nemůže mít hodnotu NULL.
+ `pProvider` Objekt poskytovatele byl dříve inicializován nástrojem CvInitProvider –. Nemůže mít hodnotu NULL.
 
- `pSeriesName`Název řady značek Nemůže mít hodnotu NULL, ale je povolen prázdný řetězec.
+ `pSeriesName` Název řady značek Nemůže mít hodnotu NULL, ale je povolen prázdný řetězec.
 
- `ppMarkerSeries`Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže mít hodnotu NULL.
+ `ppMarkerSeries` Adresa výstupní proměnné, která bude ukládat kontext řady značek. Nemůže mít hodnotu NULL.
 
 ## <a name="return-value"></a>Vrácená hodnota
  S_OK při úspěšném vytvoření řady značek nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

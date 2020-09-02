@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 51070e06f684c2e873ded76ec8797ed7587745ff
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348317"
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Použít paměťová okna v ladicím programu sady Visual Studio (C#, C++, Visual Basic, F #)
@@ -113,7 +113,7 @@ V nativních aplikacích kódu můžete jako živé výrazy použít názvy regi
 
 1. Do pole **adresa** v okně **paměti** zadejte výraz ukazatele, který se nachází v aktuálním oboru. V závislosti na jazyku bude pravděpodobně nutné na něj odkázat.
 
-2. Stiskněte **Enter**.
+2.  Stiskněte **Enter**.
 
    Použijete-li příkaz ladění, jako je například **Krok**, adresa paměti zobrazená v poli **adresa** a v horní části okna **paměti** se automaticky změní při změně ukazatele.
 

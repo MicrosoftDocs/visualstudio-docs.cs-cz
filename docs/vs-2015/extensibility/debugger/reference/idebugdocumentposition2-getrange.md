@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::GetRange | Dokumentace Microsoftu
+title: 'IDebugDocumentPosition2:: GetRange | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 189810280bd5db4573ba45c2335b8bb96a163abb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200259"
 ---
 # <a name="idebugdocumentposition2getrange"></a>IDebugDocumentPosition2::GetRange
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Získá rozsah pro tuto pozici dokumentu.  
+Získá rozsah této pozice dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +42,23 @@ int GetRange( 
   
 #### <a name="parameters"></a>Parametry  
  `pBegPosition`  
- [out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní počáteční pozice. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.  
+ [in, out] Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která se vyplní počáteční pozicí. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.  
   
  `pEndPosition`  
- [out v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která se vyplní koncovou pozici. Tento argument nastavena na hodnotu null, pokud tyto informace není potřeba.  
+ [in, out] Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která se vyplní koncovou pozicí. Pokud tyto informace nejsou potřeba, nastavte tento argument na hodnotu null.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Rozsah zadaný v dokumentu umístění pro zarážku umístění používá ladicí stroj (DE) pro hledání dopředu příkaz, který ve skutečnosti přispívá kódu. Zvažte například následující kód:  
+ Rozsah určený v umístění dokumentu pro zarážku umístění je používán ladicím modulem (DE) pro vyhledávání v příkazu, který ve skutečnosti přispívá ke kódu. Zvažte například následující kód:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- Řádek 5 přispívá k laděnému programu žádný kód. Pokud ladicí program, který nastaví zarážku na řádku 5 požaduje DE budou prohledány určité doby pro první řádek, jež přispívají kód, ladicí program zadáte rozsah, který obsahuje další Release candidate řádky, kde může být správně umístit zarážky. DE by pak hledá směrem dopředu pomocí tyto řádky až do nalezení řádek, který by mohl přijmout zarážku.  
+ Řádek 5 nepřispívá k laděnému programu bez kódu. Pokud ladicí program, který nastaví zarážku na řádku 5, chce, aby příkaz DE pro hledání v případě prvního řádku, který přispívá ke kódu, vyhledal určitou částku, ladicí program určí rozsah, který obsahuje další kandidátní řádky, kde je možné správně umístit zarážku. Příkaz DE by pak prochází tyto řádky, dokud nenalezne řádek, který by mohl přijmout zarážku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   

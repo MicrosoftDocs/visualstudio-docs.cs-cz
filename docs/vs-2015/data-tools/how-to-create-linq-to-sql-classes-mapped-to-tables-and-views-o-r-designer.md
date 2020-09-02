@@ -10,21 +10,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a63e81abcae508487afa40d0778c0f9e9b9caf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665929"
 ---
-# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: vytváření tříd LINQ to SQL mapovaných na tabulky a zobrazení (O/R Designer)
+# <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Postupy: Vytvoření tříd LINQ to SQL namapovaných na tabulky a zobrazení (Návrhář relací objektů)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-LINQ to SQL třídy, které jsou mapovány k tabulkám a zobrazením databáze, se nazývají *třídy entit*. Třída entity se mapuje na záznam, zatímco jednotlivé vlastnosti třídy entity jsou mapovány na jednotlivé sloupce, které tvoří záznam. Vytvořte třídy entit založené na databázových tabulkách nebo zobrazeních přetažením tabulek nebo zobrazení z **Průzkumník serveru** /**Průzkumníku databáze** do [nástrojů LINQ to SQL Tools v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). @No__t_0 generuje třídy a použije konkrétní [! LINQ to SQL atributů, které se mají povolit [! Funkce LINQ to SQL (funkce pro datovou komunikaci a úpravy <xref:System.Data.Linq.DataContext>). Podrobné informace o produktu [! LINQ to SQL třídy naleznete v [modelu LINQ to SQL objektů](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
+LINQ to SQL třídy, které jsou mapovány k tabulkám a zobrazením databáze, se nazývají *třídy entit*. Třída entity se mapuje na záznam, zatímco jednotlivé vlastnosti třídy entity jsou mapovány na jednotlivé sloupce, které tvoří záznam. Vytvořte třídy entit založené na databázových tabulkách nebo zobrazeních přetažením tabulek nebo zobrazení z **Průzkumník serveru** / **Průzkumník databáze** do [nástrojů LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md). [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]Vygeneruje třídy a použije konkrétní [! LINQ to SQL atributů, které se mají povolit [! Funkce LINQ to SQL (funkce pro komunikaci a úpravy dat <xref:System.Data.Linq.DataContext> ). Podrobné informace o produktu [! LINQ to SQL třídy naleznete v [modelu LINQ to SQL objektů](https://msdn.microsoft.com/library/81dd0c37-e2a4-4694-83b0-f2e49e693810).
 
 > [!NOTE]
-> @No__t_0 je jednoduché relační mapování objektů, protože podporuje pouze 1:1 vztahů s mapováním. Jinými slovy, Třída entity může mít pouze vztah 1:1 mapování s databázovou tabulkou nebo zobrazením. Komplexní mapování, jako je například mapování třídy entity na více tabulek, není podporováno. Třídu entity však lze namapovat na zobrazení, které spojuje více souvisejících tabulek.
+> [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]Je jednoduché relační mapování objektů, protože podporuje pouze 1:1 vztahů. Jinými slovy, Třída entity může mít pouze vztah 1:1 mapování s databázovou tabulkou nebo zobrazením. Komplexní mapování, jako je například mapování třídy entity na více tabulek, není podporováno. Třídu entity však lze namapovat na zobrazení, které spojuje více souvisejících tabulek.
 
 ## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvořit LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
- Přetahování tabulek nebo zobrazení z **Průzkumník serveru** /**průzkumníku databáze** na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] vytvoří třídy entit společně s <xref:System.Data.Linq.DataContext> metodami, které se používají k provádění aktualizací.
+ **Server Explorer** / **Database Explorer** [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] Kromě <xref:System.Data.Linq.DataContext> metod, které se používají k provádění aktualizací, můžete přetahovat tabulky a zobrazení z Průzkumník serveru Průzkumníku databáze na třídy vytváření entit.
 
  Ve výchozím nastavení [! LINQ to SQL runtime vytvoří logiku pro uložení změn z aktualizovatelné třídy entity zpátky do databáze. Tato logika je založena na schématu tabulky (definice sloupce a informace o primárním klíči). Pokud toto chování nechcete, můžete pro třídu entity nakonfigurovat použití uložených procedur k provádění vložení, aktualizací a odstranění namísto použití výchozího nastavení [! LINQ to SQL chování modulu runtime. Další informace naleznete v tématu [Postupy: přiřazení uložených procedur pro provádění aktualizací, vkládání a odstraňování (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
@@ -32,9 +32,9 @@ LINQ to SQL třídy, které jsou mapovány k tabulkám a zobrazením databáze, 
 
 #### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Vytvoření LINQ to SQL třídy, které jsou mapovány na tabulky nebo zobrazení databáze
 
-1. V Průzkumníku **serveru** /**Database**rozbalte **tabulky** nebo **zobrazení** a vyhledejte databázovou tabulku nebo zobrazení, které chcete použít ve své aplikaci.
+1. V **Server** / **Průzkumníku Server Database**rozbalte **tabulky** nebo **zobrazení** a vyhledejte databázovou tabulku nebo zobrazení, které chcete použít v aplikaci.
 
-2. Přetáhněte tabulku nebo zobrazení na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)].
+2. Přetáhněte tabulku nebo zobrazení na [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)] .
 
      Vytvoří se Třída entity, která se zobrazí na návrhové ploše. Třída entity obsahuje vlastnosti, které jsou mapovány na sloupce ve vybrané tabulce nebo zobrazení.
 
@@ -60,7 +60,7 @@ LINQ to SQL třídy, které jsou mapovány k tabulkám a zobrazením databáze, 
 
 7. Přetáhněte položky z okna **zdroje dat** do formuláře.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Návod: vytváření tříd LINQ to SQL (Návrhář O-R)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233)

@@ -1,5 +1,5 @@
 ---
-title: Formát specifikátorů v jazyce C# | Dokumentace Microsoftu
+title: Specifikátory formátu v jazyce C# | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,19 +28,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6085ba95d3880417e517530069734052741113e2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682487"
 ---
 # <a name="format-specifiers-in-c"></a>Specifikátory formátu v jazyce C\#
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete změnit formát, ve kterém se zobrazí hodnota v **Watch** okna pomocí specifikátorů formátu. Můžete také použít specifikátory formátu v **okamžité** okně **příkaz** okna a dokonce i ve zdrojových oknech. Pokud pozastavíte výraz v těchto oknech, výsledek se zobrazí v datovém tipu. Datové tipy budou odrážet formát specifikátoru v zobrazení datového tipu.
+Můžete změnit formát, ve kterém se hodnota zobrazuje v okně **kukátka** , pomocí specifikátorů formátu. Můžete také použít specifikátory formátu v **příkazovém** okně, v **příkazovém** okně a dokonce i ve zdrojových oknech. Pokud v těchto oknech pozastavíte výraz, výsledek se zobrazí v DataTip. Datové tipy budou odrážet specifikátor formátu v zobrazení DataTip.
 
-Použití specifikátoru formátu, zadejte výraz, za nímž následuje čárka. Za čárkou přidejte odpovídající specifikátor.
+Chcete-li použít specifikátor formátu, zadejte výraz následovaný čárkou. Za čárku přidejte příslušný specifikátor.
 
 ## <a name="using-format-specifiers"></a>Použití specifikátorů formátu
 
@@ -54,26 +54,26 @@ Pokud máte následující kód:
 }
 ```
 
-Přidat `my_var1` proměnné okno kukátka (při ladění, **ladění / Windows / sledovat / sledovat 1**) a nastavte zobrazení do šestnáctkové soustavy (v **Watch** okna, klikněte pravým tlačítkem na proměnnou a vyberte **Hexadecimální zobrazení**). Nyní **Watch** okno zobrazuje, že obsahuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako desítkové celé číslo místo šestnáctkové celé číslo, ve sloupci Název za název proměnné, přidejte specifikátor formátu desítkové soustavy: **, d**. Sloupec hodnota nyní zobrazuje desítkovou hodnotu 101
+Přidejte `my_var1` proměnnou do okno kukátko (při ladění, **ladění/Windows/sledování/kukátko 1**) a nastavte zobrazení na hexadecimální (v okně **kukátko** klikněte pravým tlačítkem myši na proměnnou a vyberte **hexadecimální zobrazení**). Nyní okno **kukátka** ukazuje, že obsahuje hodnotu 0x0065. Chcete-li zobrazit tuto hodnotu vyjádřenou jako desítkové celé číslo namísto hexadecimálního celého čísla, do sloupce název za název proměnné přidejte specifikátor desítkového formátu: **, d**. Sloupec Value nyní zobrazuje desítkovou hodnotu 101
 
 ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")
 
 ## <a name="format-specifiers"></a>Specifikátory formátu
 
-V následující tabulce jsou uvedeny C# specifikátory formátu rozpoznán v ladicím programu.
+V následující tabulce jsou uvedeny specifikátory formátu C# rozpoznávané ladicím programem.
 
-|Specifikátor|Formát|Původní hodnota Watch|Zobrazí|
+|Specifikátor|Formát|Původní hodnota kukátka|Uvádí|
 |---------------|------------|--------------------------|--------------|
-|ac|Vynucení vyhodnocení výrazu. To může být užitečné, když je vypnutý implicitní vyhodnocování vlastností a implicitních volání funkcí. Zobrazit [vedlejší efekty a výrazy](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).|Zpráva "implicitní vyhodnocení funkce vypnul uživatel"|\<Hodnota >|
-|d|Desítkové celé číslo|0x0065|101|
-|dynamické odkazy|Zobrazí zadaný objekt pomocí dynamického zobrazení|Zobrazí všechny členy objektu, včetně dynamického zobrazení|Zobrazí pouze dynamické zobrazení|
-|h|Šestnáctkové celé číslo|61541|0x0000F065|
-|nq|řetězec s žádné uvozovky|"String"|Moje řetězec|
-|hidden|Zobrazí všechny veřejné a neveřejné členy|Zobrazí veřejné členy|Zobrazí všechny členy|
-|nezpracované|Zobrazí položky, jak se zobrazí v uzlu nezpracovaná položka. Platí pouze pro objekty proxy.|Slovník\<T >|Nezpracované zobrazení, slovníku\<T >|
-|výsledky|Použít s proměnnou typu, který implementuje rozhraní IEnumerable nebo IEnumerable\<T >, obvykle výsledek výrazu dotazu. Zobrazí pouze členy, které obsahují výsledku dotazu.|Zobrazí všechny členy.|Zobrazí členy, splňují podmínky dotazu.|
+|proud|Vynutí vyhodnocení výrazu. To může být užitečné, pokud je vypnuto implicitní vyhodnocení vlastností a volání implicitních funkcí. Podívejte [se na vedlejší účinky a výrazy](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).|Zpráva "implicitní vyhodnocení funkce je vypnuto uživatelem"|\<value>|
+|d|desítkové celé číslo|0x0065|101|
+|dynamic|Zobrazí zadaný objekt pomocí dynamického zobrazení.|Zobrazí všechny členy objektu, včetně dynamického zobrazení.|Zobrazí pouze dynamické zobrazení.|
+|h|šestnáctkové celé číslo|61541|0x0000F065|
+|nq|řetězec bez uvozovek|"Můj řetězec"|Můj řetězec|
+|hidden|Zobrazí všechny veřejné a neveřejné členy.|Zobrazí veřejné členy.|Zobrazí všechny členy.|
+|získání|Zobrazí položku tak, jak se zobrazuje v uzlu nezpracované položky. Platí pouze pro proxy objekty.|Slovník\<T>|Nezpracované zobrazení slovníku\<T>|
+|výsledky|Používá se s proměnnou typu, který implementuje rozhraní IEnumerable nebo IEnumerable \<T> , obvykle výsledek výrazu dotazu. Zobrazí pouze členy, které obsahují výsledek dotazu.|Zobrazí všechny členy.|Zobrazí členy, které splňují podmínky dotazu.|
 
 ## <a name="see-also"></a>Viz také
 
 - [Okna Kukátko a Rychlé kukátko](../debugger/watch-and-quickwatch-windows.md)
-- [Proměnné Windows](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)
+- [Okna proměnných](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)

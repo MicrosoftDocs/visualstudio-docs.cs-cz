@@ -1,5 +1,5 @@
 ---
-title: Funkce SccCheckin | Dokumenty společnosti Microsoft
+title: Funkce SccCheckin | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a5ba512642e1a63d9d39856f96194d717583d44f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701185"
 ---
-# <a name="scccheckin-function"></a>SccCheckin
-Tato funkce vrátí se změnami dříve zasazených souborů do systému správy zdrojového kódu, uvejte změny a vytvoříte novou verzi. Tato funkce je volána s počtem a pole názvy souborů, které mají být uvedeny se změnami.
+# <a name="scccheckin-function"></a>SccCheckin – funkce
+Tato funkce zkontroluje dříve rezervované soubory do systému správy zdrojového kódu, uloží změny a vytvoří novou verzi. Tato funkce je volána s počtem a polem názvů souborů, které mají být vráceny se změnami.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,54 +39,54 @@ SCCRTN SccCheckin (
 ### <a name="parameters"></a>Parametry
  pvContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- Hwnd
+ hWnd
 
-[v] Popisovač okna IDE, který může modul plug-in SCC použít jako nadřazený pro všechna dialogová okna, která poskytuje.
+pro Popisovač okna rozhraní IDE, které může modul plug-in SCC použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- nSoubory
+ nFiles
 
-[v] Počet souborů vybraných ke vrácení se změnami.
+pro Počet souborů vybraných k vrácení se změnami
 
- lpNázev souboru
+ lpFileNames
 
-[v] Pole plně kvalifikovaných názvů místních cest souborů, které mají být uvedeny se změnami.
+pro Pole plně kvalifikovaných názvů místních cest souborů, které se mají vrátit se změnami
 
- lpKomentář
+ lpComment
 
-[v] Komentář, který má být použit pro každý z vybraných souborů, které jsou soubory se změnami. Tento parametr `NULL` je, pokud modul plug-in správy zdrojového kódu by měl vyzvat k zadání komentáře.
+pro Komentář, který se má použít u všech vybraných souborů, které se vrátí se změnami Tento parametr je `NULL` , pokud se v modulu plug-in správy zdrojových kódů zobrazuje výzva k zadání komentáře.
 
- fMožnosti
+ fOptions
 
-[v] Příkazové příznaky, `SCC_KEEP_CHECKEDOUT`buď 0 nebo .
+pro Příznaky příkazu, buď 0, nebo `SCC_KEEP_CHECKEDOUT` .
 
- pvMožnosti
+ pvOptions
 
-[v] Možnosti specifické pro modul plug-in SCC.
+pro SCC možnosti specifické pro modul plug-in.
 
-## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+## <a name="return-value"></a>Vrácená hodnota
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Soubor byl úspěšně odbaven.|
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod sohledem zdrojového kódu.|
-|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty. Doporučuje se opakování.|
-|SCC_E_NONSPECIFICERROR|Nespecifické selhání. Soubor nebyl se změnami.|
-|SCC_E_NOTCHECKEDOUT|Uživatel soubor nezadal, takže jej nelze provést se změnami.|
-|SCC_E_CHECKINCONFLICT|Vrácení se změnami nelze provést, protože:<br /><br /> - Jiný uživatel se přihlásil `bAutoReconcile` dopředu a byl nepravdivý.<br /><br /> -nebo-<br /><br /> - Automatické sloučení nelze provést (například když jsou soubory binární).|
-|SCC_E_VERIFYMERGE|Soubor byl automaticky sloučen, ale nebyl vrácen se změnami v čekajícím ověření uživatele.|
+|SCC_OK|Soubor byl úspěšně vrácen se změnami.|
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není v rámci správy zdrojového kódu.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba. Soubor nebyl vrácen se změnami.|
+|SCC_E_NOTCHECKEDOUT|Uživatel soubor nerezervoval, takže jej nelze vrátit se změnami.|
+|SCC_E_CHECKINCONFLICT|Vrácení se změnami nelze provést z těchto důvodů:<br /><br /> – Jiný uživatel se vrátil se změnami předem a `bAutoReconcile` byl nepravdivý.<br /><br /> -nebo-<br /><br /> – Automatické sloučení nelze provést (například když jsou soubory binární).|
+|SCC_E_VERIFYMERGE|Soubor byl automaticky sloučen, ale nebyl vrácen se změnami, který čeká na ověření uživatele.|
 |SCC_E_FIXMERGE|Soubor byl automaticky sloučen, ale nebyl vrácen se změnami z důvodu konfliktu sloučení, který je nutné ručně vyřešit.|
-|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn provádět tuto operaci.|
-|SCC_I_OPERATIONCANCELED|Operace byla před dokončením zrušena.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
+|SCC_I_OPERATIONCANCELED|Operace byla zrušena před dokončením.|
 |SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|
-|SCC_E_FILENOTEXIST|Místní soubor nebyl nalezen.|
+|SCC_E_FILENOTEXIST|Místní soubor se nenašel.|
 
 ## <a name="remarks"></a>Poznámky
- Komentář se vztahuje na všechny soubory, které jsou kontrolovány. Argument komentáře může `null` být řetězec, v takovém případě může modul plug-in správy zdrojového kódu vyzvat uživatele k zadání řetězce komentáře pro každý soubor.
+ Komentář se vztahuje na všechny soubory vracené se změnami. Argument komentáře může být řetězec. `null` v takovém případě se může modul plug-in správy zdrojových kódů dotázat uživateli na řetězec komentáře pro každý soubor.
 
- Argument `fOptions` může být uveden a `SCC_KEEP_CHECKEDOUT` hodnota příznaku k označení záměru uživatele vrátit se změnami souboru a rezervovat znovu.
+ `fOptions`Argumentu se dá určit hodnota `SCC_KEEP_CHECKEDOUT` příznaku, která označuje záměr uživatele vrátit se k souboru a znovu ho zaregistrovat.
 
 ## <a name="see-also"></a>Viz také
-- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
+- [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

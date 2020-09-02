@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 985afe50d7c6edcfdb34e2ca046f59c5f7b664a0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541879"
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime – &gt; element (vývoj pro Office v sadě Visual Studio)
@@ -44,7 +44,7 @@ ms.locfileid: "85541879"
 |`version`|Povinná hodnota. Číslo verze modulu runtime Visual Studio Tools for Office.|
 |`supportUrl`|Nepovinný parametr. Odkaz na umístění instalace modulu runtime Visual Studio Tools for Office.|
 
- `vstoRuntime`neobsahuje žádné elementy.
+ `vstoRuntime` neobsahuje žádné elementy.
 
 ## <a name="example"></a>Příklad
  Následující příklad kódu ukazuje `vstoRuntime` prvek v manifestu aplikace pro řešení Office nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Tento příklad kódu je součástí většího příkladu, který je k dispozici v [manifestech aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).

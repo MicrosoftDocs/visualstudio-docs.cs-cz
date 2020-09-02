@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 104af55fdc11b6afae757eff95a964dad83418a6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541866"
 ---
 # <a name="ltpostactiondatagt-element-office-development-in-visual-studio"></a>&lt;postActionData – &gt; element (vývoj pro Office v sadě Visual Studio)
   `postActionData`Element `vstav3` oboru názvů Určuje data přidružená k jakékoli akci po nasazení, která se spustí po instalaci řešení Office.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postActionData>
@@ -36,7 +36,7 @@ ms.locfileid: "85541866"
 
  `postActions`Element nemá žádné atributy.
 
- `postActions`nemá žádné podřízené elementy.
+ `postActions` nemá žádné podřízené elementy.
 
 ## <a name="post-deployment-action-example"></a>Příklad akce po nasazení
 
@@ -51,7 +51,7 @@ ms.locfileid: "85541866"
 </vstav3:postActionData>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)
 - [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)

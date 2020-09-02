@@ -1,5 +1,5 @@
 ---
-title: Referenční schéma balíčku a produktu | Dokumentace Microsoftu
+title: Referenční dokumentace schématu produktu a balíčku | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -26,34 +26,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1570aa3d4ea72dc1d133ce3096e1726fa1ffb782
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66745617"
 ---
-# <a name="product-and-package-schema-reference"></a>Referenční dokumentace schématu produktů a balíčků
-A *souboru produktu* je souborů manifestu XML, který popisuje všechny externí závislosti vyžadované [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace. Příklady externích závislostí: rozhraní .NET Framework a Microsoft Data Access Components (MDAC). Soubor balíčku se podobá souboru produktu, ale se používá k instalaci součásti závislých na jazykové verzi závislosti, jako je například lokalizované sestavení, licenční smlouvy a dokumentace.
+# <a name="product-and-package-schema-reference"></a>Odkaz na schéma produktu a balíčku
+*Soubor produktu* je manifest XML, který popisuje všechny externí závislosti požadované [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikací. Mezi externí závislosti patří .NET Framework a součásti MDAC (Microsoft Data Access Components). Soubor balíčku je podobný souboru produktu, ale používá se k instalaci komponent závislých na jazykové verzi závislosti, jako jsou lokalizovaná sestavení, licenční smlouvy a dokumentace.
 
- Soubor produktů a balíčků se skládá buď na nejvyšší úrovni `Product` nebo `Package` prvku, z nichž každý obsahuje následující prvky.
+ Soubor produktu a balíčky se skládá buď z nejvyšší úrovně `Product` , nebo z `Package` prvku, z nichž každý obsahuje následující prvky.
 
-|Prvek|Popis|Atributy|
+|Element|Popis|Atributy|
 |-------------|-----------------|----------------|
-|[Element \<Product>](../deployment/product-element-bootstrapper.md)|Požadovaný element nejvyšší úrovně pro soubory produktu.|Žádné|
-|[Element \<Package>](../deployment/package-element-bootstrapper.md)|Požadovaný element nejvyšší úrovně pro soubory balíčku.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
-|[Element \<RelatedProducts>](../deployment/relatedproducts-element-bootstrapper.md)|Volitelný element pro soubory produktu. Tyto další produkty, které tento produkt instaluje nebo závisí.|Žádný|
-|[Element \<InstallChecks>](../deployment/installchecks-element-bootstrapper.md)|Požadovaný element. Seznamy kontroluje závislost provádět na místním počítači během instalace.|Žádné|
-|[Element \<Commands>](../deployment/commands-element-bootstrapper.md)|Požadovaný element.  Spustí jeden nebo více kontroly instalace, jak je popsáno v `InstallChecks`a označuje balíčky, které k instalaci by se neměla kontrola selže.|Žádné|
-|[Element \<PackageFiles>](../deployment/packagefiles-element-bootstrapper.md)|Požadovaný element. Zobrazí seznam balíčků, které by mohl být nainstalován tímto procesem instalace.|Žádné|
-|[Element \<Strings>](../deployment/strings-element-bootstrapper.md)|Požadovaný element. Ukládá lokalizované verze produktu název a chybové řetězce.|Žádné|
+|[\<Product> Objekt](../deployment/product-element-bootstrapper.md)|Pro soubory produktu je vyžadován element nejvyšší úrovně.|Žádné|
+|[\<Package> Objekt](../deployment/package-element-bootstrapper.md)|Pro soubory balíčku je vyžadován element nejvyšší úrovně.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
+|[\<RelatedProducts> Objekt](../deployment/relatedproducts-element-bootstrapper.md)|Volitelný prvek pro soubory produktu. Ostatní produkty, na které tento produkt buď nainstaluje nebo závisí.|Žádné|
+|[\<InstallChecks> Objekt](../deployment/installchecks-element-bootstrapper.md)|Požadovaný element. Uvádí kontroly závislostí, které se mají v místním počítači provádět během instalace.|Žádné|
+|[\<Commands> Objekt](../deployment/commands-element-bootstrapper.md)|Požadovaný element.  Provede jednu nebo více kontrol instalace, jak je popsáno v tématu `InstallChecks` , a označuje, který balíček se má nainstalovat, aby se kontrola nezdařila.|Žádné|
+|[\<PackageFiles> Objekt](../deployment/packagefiles-element-bootstrapper.md)|Požadovaný element. Obsahuje seznam balíčků, které mohou být nainstalovány tímto procesem instalace.|Žádné|
+|[\<Strings> Objekt](../deployment/strings-element-bootstrapper.md)|Požadovaný element. Ukládá lokalizované verze názvu produktu a chybové řetězce.|Žádné|
 
 ## <a name="remarks"></a>Poznámky
- Schéma balíčku je využívána *Setup.exe*, program se zakázaným inzerováním vygenerované pomocí MS Build spuštění úkolu, který obsahuje malý logiku svůj vlastní pevně zakódovaný. Schéma řídí všechny aspekty procesu instalace.
+ Schéma balíčku je spotřebováno *Setup.exe*, což je program, který vygenerovala úloha zaváděcího nástroje MS Build, která obsahuje málo pevně zakódované logiky. Schéma řídí všechny aspekty procesu instalace.
 
- `InstallChecks` testy existence daného balíčku by měl provádět tento setup.exe. `PackageFiles` obsahuje seznam všech balíčků, které proces instalace možná bude nutné nainstalovat, musí daný test nezdaří. Každý příkaz položku příkazy spustí jednu s testy popsal `InstallChecks`a určuje, které `PackageFile` ke spuštění by měl test selhal. Můžete použít `Strings` element lokalizovat názvy produktů a chybové zprávy, tak, aby jeden binární instalační můžete použít k instalaci aplikace pro libovolný počet jazyků.
+ `InstallChecks` testy, které by setup.exe měly provádět pro existenci daného balíčku. `PackageFiles` Zobrazí seznam všech balíčků, které může instalační proces instalace provést, pokud daný test selže. Každý příkaz v příkazu v příkazech provede jeden z testů popsaných v `InstallChecks` a určí, který `PackageFile` má být spuštěn, pokud test selže. Pomocí `Strings` elementu můžete lokalizovat názvy produktů a chybové zprávy, abyste mohli nainstalovat aplikaci pro libovolný počet jazyků pomocí jediného binárního souboru instalace.
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci rozhraní .NET Framework.
+ Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci .NET Framework.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -157,6 +157,6 @@ A *souboru produktu* je souborů manifestu XML, který popisuje všechny extern�
 </Product>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [ClickOnce – manifest nasazení](../deployment/clickonce-deployment-manifest.md)
-- [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)
+- [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)

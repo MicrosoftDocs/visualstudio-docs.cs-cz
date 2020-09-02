@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_TYPE | Dokumentace Microsoftu
+title: BP_ERROR_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2317fafe410cacfca1c77b669a54669ea6e2224a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153537"
 ---
-# <a name="bperrortype"></a>BP_ERROR_TYPE
+# <a name="bp_error_type"></a>BP_ERROR_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Určuje typ chyby zarážky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_ERROR_TYPE {   
@@ -61,47 +61,47 @@ public enum enum_BP_ERROR_TYPE { 
   
 ## <a name="members"></a>Členové  
  BPET_NONE  
- Určuje žádná chyba zarážky.  
+ Určuje nechybovou zarážku.  
   
  BPET_TYPE_WARNING  
- Určuje Chyba zarážky upozornění style.  
+ Určuje chybu zarážky ve stylu upozornění.  
   
  BPET_TYPE_ERROR  
- Určuje chybu stylu chyby zarážky.  
+ Určuje chybu zarážky stylu chyby.  
   
  BPET_SEV_HIGH  
- Určuje Chyba zarážky vysokou závažností.  
+ Určuje chybu zarážky s vysokou závažností.  
   
  BPET_SEV_GENERAL  
- Určuje střední závažností zarážky chyb.  
+ Určuje chybu zarážky se střední závažností.  
   
  BPET_SEV_LOW  
- Určuje chybu s nízkou závažností zarážku.  
+ Určuje chybu zarážky s nízkou závažností.  
   
  BPET_TYPE_MASK  
- Určuje chybu maska – vizuální styl zarážku.  
+ Určuje chybu zarážky stylu maskování.  
   
  BPET_SEV_MASK  
- Určuje závažnost. maska stylu zarážky chyb.  
+ Určuje závažnost – chyba zarážky stylu maskování.  
   
  BPET_GENERAL_WARNING  
- Určuje Obecné upozornění stylu zarážky chyb.  
+ Určuje chybu zarážky ve stylu Obecné-upozornění.  
   
  BPET_GENERAL_ERROR  
- Určuje obecné stylu chyby zarážky chyb.  
+ Určuje chybu zarážky Style General-Error.  
   
  BPET_ALL  
- Určuje všechny typy chyb zarážku.  
+ Určuje všechny typy chyb zarážek.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR` a používá se pro `dwType` člena [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předán jako parametr [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) metody.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` a použity pro `dwType` člena [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury. Předán jako parametr metodě [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) .  
   
- Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že je typ chyby zarážky nikdy pouze typ (například `BPET_TYPE_ERROR`,) nebo závažnosti (například `BPET_SEV_GENERAL`) samostatně. `BPET_GENERAL_WARNING` a `BPET_GENERAL_ERROR` poskytují předem definovaných hodnot pro obecné upozornění a chyby zarážky.  
+ Typ chyby zarážky se skládá z typu a závažnosti. To znamená, že typ chyby zarážky není nikdy pouze typ (například `BPET_TYPE_ERROR` ,) nebo závažnost (například `BPET_SEV_GENERAL` ) samotné. `BPET_GENERAL_WARNING` a `BPET_GENERAL_ERROR` poskytují předdefinované hodnoty pro obecné upozornění a zarážky chyb.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -15,16 +15,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 32eadcf5ae88dbe64c8ccdb3effbb85bc79f9b32
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816732"
 ---
 # <a name="return-statement-outside-of-function"></a>příkaz 'return' mimo funkci
 Použili jste `return` příkaz v globálním rozsahu kódu. `return`Příkaz by měl být použit pouze v těle funkce.  
   
- Volání funkce s `()` operátorem je výraz. Všechny výrazy mají hodnoty; `return`příkaz se používá k určení hodnoty vrácené funkcí. Formulář Obecné je:  
+ Volání funkce s `()` operátorem je výraz. Všechny výrazy mají hodnoty; `return` příkaz se používá k určení hodnoty vrácené funkcí. Formulář Obecné je:  
   
 ```js
   
@@ -41,7 +41,7 @@ return [ expression ];
   
 - Odeberte `return` příkaz z hlavního těla vašeho kódu (globální rozsah).  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Return – příkaz](../../javascript/reference/return-statement-javascript.md)   
  [Function – objekt](../../javascript/reference/function-object-javascript.md)   
  [caller – vlastnost (Function)](../../javascript/reference/caller-property-function-javascript.md)
