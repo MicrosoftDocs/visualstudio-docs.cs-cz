@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189747"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>Použití ovládacích prvků WPF v řešeních pro systém Office
@@ -59,9 +59,9 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
     - Pro vlastní podokna úloh přidejte do projektu položku **uživatelského ovládacího prvku** . Další informace najdete v tématu [Postup: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).
 
-6. Na kartě **uživatelské ovládací prvky WPF** v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře podokna akcí, oblasti formuláře nebo vlastního podokna úloh.
+6. Na kartě *ProjectName* **uživatelské ovládací prvky WPF** v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře podokna akcí, oblasti formuláře nebo vlastního podokna úloh.
 
-     Visual Studio automaticky vytvoří objekt <xref:System.Windows.Forms.Integration.ElementHost>, který hostuje uživatelský ovládací prvek WPF na prvku uživatelského rozhraní.
+     Visual Studio automaticky vytvoří <xref:System.Windows.Forms.Integration.ElementHost> objekt, který je hostitelem uživatelského ovládacího prvku WPF na prvku uživatelského rozhraní.
 
 7. Znovu sestavte projekt.
 
@@ -79,9 +79,9 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 6. Otevřete návrháře model Windows Forms uživatelského ovládacího prvku.
 
-7. Z karty **uživatelské ovládací prvky WPF** pro ProjectName v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře.
+7. Z karty *ProjectName* **uživatelské ovládací prvky WPF** pro ProjectName v **sadě nástrojů**přetáhněte uživatelský ovládací prvek WPF do návrháře.
 
-     Visual Studio automaticky vytvoří objekt <xref:System.Windows.Forms.Integration.ElementHost>, který hostuje uživatelský ovládací prvek WPF v uživatelském ovládacím prvku model Windows Forms.
+     Visual Studio automaticky vytvoří <xref:System.Windows.Forms.Integration.ElementHost> objekt, který je hostitelem uživatelského ovládacího prvku WPF v uživatelském ovládacím prvku model Windows Forms.
 
 8. Napsat kód, který programově přidá model Windows Forms uživatelský ovládací prvek do dokumentu nebo do sešitu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
@@ -94,7 +94,7 @@ Ovládací prvky WPF nemůžete přidat přímo do prvků uživatelského rozhra
 
 Sada Visual Studio poskytuje funkce, které vám pomůžou používat model Windows Forms ovládací prvky v řešeních pro systém Office, ale neposkytují podobné funkce pro ovládací prvky WPF. Například můžete přidat ovládací prvky model Windows Forms do dokumentů a listů v době návrhu přetažením ovládacích prvků z **panelu nástrojů**nebo v době běhu pomocí pomocných metod. Tyto nástroje však nejsou k dispozici pro ovládací prvky WPF.
 
-Ovládací prvky WPF používají třídu <xref:System.Windows.Forms.Integration.ElementHost> jako integrační vrstvu mezi ovládacím prvkem model Windows Forms nebo formulářem a ovládacími prvky WPF. Když do svého řešení přidáte ovládací prvky WPF v době návrhu, Visual Studio automaticky vygeneruje objekt <xref:System.Windows.Forms.Integration.ElementHost> za vás.
+Ovládací prvky WPF používají <xref:System.Windows.Forms.Integration.ElementHost> třídu jako integrační vrstvu mezi ovládacím prvkem model Windows Forms nebo formulářem a ovládacími prvky WPF. Když do svého řešení přidáte ovládací prvky WPF v době návrhu, Visual Studio automaticky vygeneruje <xref:System.Windows.Forms.Integration.ElementHost> objekt pro vás.
 
 ## <a name="wpf-resources"></a>Prostředky WPF
 
@@ -116,7 +116,7 @@ Další informace o přidání ovládacích prvků WPF do model Windows Forms ov
 
 - [Návod: styl obsahu WPF](/dotnet/framework/winforms/advanced/walkthrough-styling-wpf-content)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
 - [Přehled model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)

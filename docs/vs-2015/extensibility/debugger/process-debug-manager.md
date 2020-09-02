@@ -1,5 +1,5 @@
 ---
-title: Správce ladění procesu | Dokumentace Microsoftu
+title: Správce ladění procesů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 186b9601b0146b64edba07ec8470bd86fd0a0a56
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153684"
 ---
 # <a name="process-debug-manager"></a>Správce ladění procesu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Správce ladění procesu (PDM) je součástí sady Visual Studio, která spravuje aplikace a procesy, díky kterým jsou k dispozici pro relaci ladění správce a ladicí stroj.  
+Správce procesu ladění (PDM) je součástí sady Visual Studio, která spravuje programy a procesy a zpřístupňuje je správci ladění relací a ladicích modulů.  
   
- PDM spravuje všechny procesy, které lze ladit. Chcete-li být laděn, program, musí zaregistrovat PDM. To se provádí v době, kdy program se spustí, tak, že port nebo ladicí stroj.  
+ PDM spravuje všechny procesy, které lze ladit. Aby bylo možné ladit, musí být program zaregistrován pomocí PDM. To se provádí v době, kdy se program spustí, a to buď pomocí portu, nebo ladicího stroje.  
   
 ## <a name="see-also"></a>Viz také  
- [Procesy](../../extensibility/debugger/processes.md)   
+ [Procesem](../../extensibility/debugger/processes.md)   
  [Ladicí stroj](../../extensibility/debugger/debug-engine.md)   
- [Porty](../../extensibility/debugger/ports.md)   
- [Programy](../../extensibility/debugger/programs.md)   
+ [Přístavu](../../extensibility/debugger/ports.md)   
+ [Spuštěn](../../extensibility/debugger/programs.md)   
  [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)

@@ -11,10 +11,10 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 00fd0c03bf460cd8b72a10d15501994d7a2aa10a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541710"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UWP
@@ -53,7 +53,7 @@ Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťov�
 
  ![Panel podrobností nástroje sítě](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")
 
-|Name|Popis|
+|Název|Popis|
 |-|-|
 |**Hlavičky**|Informace o hlavičkách požadavku události.|
 |**Text**|Data datové části žádosti a odpovědi.|
@@ -72,7 +72,7 @@ Nástroj Diagnostika **sítě** sady Visual Studio shromažďuje data o síťov�
 
 3. Tlačítko pro tisk s odezvou na více verzí (na kartě tělo) vám může pomáhat s analýzou dat v datových vytíženích JSON, XML, HTML, CSS, JavaScript a TypeScript tím, že se zvětší čitelnost obsahu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
 - [Blog sady Visual Studio: Představení kontroly sítě sady Visual Studio](https://devblogs.microsoft.com/visualstudio/)

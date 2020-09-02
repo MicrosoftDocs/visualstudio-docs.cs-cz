@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetSymbolPath | Dokumenty společnosti Microsoft
+title: 'IDebugEngine3:: SetSymbolPath | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1fbe5128900fa10147c747cbcba4129e96d4c4ce
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730671"
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
-Nastaví cestu nebo cesty, které jsou vyhledávány pro ladění symboly.
+Nastaví cestu nebo cesty, ve kterých jsou vyhledávány symboly ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +46,21 @@ int SetSymbolPath(
 ## <a name="parameters"></a>Parametry
 
 `szSymbolSearchPath`\
-[v] Řetězec obsahující cestu nebo cesty pro vyhledávání symbolů. Podrobnosti viz "Poznámky". Nemůže mít hodnotu null.
+pro Řetězec obsahující cestu pro hledání symbolů nebo cesty. Podrobnosti najdete v části "poznámky". Nemůže mít hodnotu null.
 
 `szSymbolCachePath`\
-[v] Řetězec obsahující místní cestu, kde mohou být symboly ukládány do mezipaměti. Nemůže mít hodnotu null.
+pro Řetězec obsahující místní cestu, kam lze symboly ukládat do mezipaměti. Nemůže mít hodnotu null.
 
 `Flags`\
-[v] Nepoužívá se; vždy nastavena na 0.
+pro Nepoužívá se; Vždycky nastavte na 0.
 
 ## <a name="return-value"></a>Návratová hodnota
- Pokud je úspěšná, vrátí S_OK; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Řetězec `szSymbolSearchPath` je seznam jedné nebo více cest oddělených středníky k hledání symbolů. Tyto cesty mohou být místní cesta, cesta ve stylu UNC nebo adresa URL. Tyto cesty mohou být také kombinací různých typů. Pokud je cesta UNC (například \\\Symserver\Symbols), měl by ladicí modul určit, zda je cesta k serveru symbolů, a měl `szSymbolCachePath`by být schopen načíst symboly z tohoto serveru a ukládat je do mezipaměti v cestě určené programem .
+ Řetězec `szSymbolSearchPath` je seznam jedné nebo více cest, které jsou odděleny středníky, pro hledání symbolů. Tyto cesty mohou být místní cesta, cesta ve stylu UNC nebo adresa URL. Tyto cesty mohou být také kombinací různých typů. Pokud je cesta ve formátu UNC (například \\ \Symserver\Symbols), pak modul ladění by měl určit, zda je cesta k serveru symbolů a zda má být schopna načíst symboly z tohoto serveru, ukládat je do mezipaměti v cestě určené parametrem `szSymbolCachePath` .
 
- Cesta se symbolem může také obsahovat jedno nebo více umístění mezipaměti. Mezipaměti jsou uvedeny v pořadí podle priority, nejprve s mezipamětí s nejvyšší prioritou a jsou odděleny symboly * . Například:
+ Cesta k symbolu může také obsahovat jednu nebo více umístění mezipaměti. Mezipaměti jsou uvedené v pořadí podle priority, první mezipaměť s nejvyšší prioritou a oddělené symboly *. Příklad:
 
 ```
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*https://msdl.microsoft.com

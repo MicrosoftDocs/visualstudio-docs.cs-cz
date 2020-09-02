@@ -1,5 +1,5 @@
 ---
-title: Refaktorovat kód, který nahradí var explicitním typem
+title: Refaktorovat kód pro nahrazení var pomocí explicitního typu
 ms.date: 05/15/2018
 ms.topic: reference
 author: TerryGLee
@@ -10,42 +10,42 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4ec388564e1851402f085f6bbaefba08dbea212c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595771"
 ---
-# <a name="refactoring-to-replace-var-with-an-explicit-type"></a>Refaktoring nahrazení var u explicitního typu
+# <a name="refactoring-to-replace-var-with-an-explicit-type"></a>Refaktoring pro náhradu var pomocí explicitního typu
 
-Tento refaktoring slouží k nahrazení [var](/dotnet/csharp/language-reference/keywords/var) v deklaraci místní proměnné explicitním typem.
+Pomocí tohoto refaktoringu nahraďte [var](/dotnet/csharp/language-reference/keywords/var) v deklaraci lokální proměnné explicitním typem.
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
-## <a name="why-to-use-an-explicit-type"></a>Proč používat explicitní typ
+## <a name="why-to-use-an-explicit-type"></a>Důvody použití explicitního typu
 
-Níže jsou uvedeny některé důvody deklarovat proměnnou s explicitní typ:
+Níže jsou uvedeny některé důvody k deklaraci proměnné s explicitním typem:
 
-- Chcete-li zlepšit čitelnost kódu.
+- Pro zlepšení čitelnosti kódu.
 
 - Pokud nechcete inicializovat proměnnou v deklaraci.
 
-[Var](/dotnet/csharp/language-reference/keywords/var) však musí být použit při inicializování proměnné s anonymním typem a vlastnosti objektu jsou přístupné později. Další informace naleznete [v tématu Implicitně zadané místní proměnné (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables).
+[Var](/dotnet/csharp/language-reference/keywords/var) však musí být použita, je-li proměnná inicializována anonymním typem a k vlastnostem objektu jsou přistupované později. Další informace naleznete v tématu [implicitně typované lokální proměnné (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables).
 
 ## <a name="how-to-use-it"></a>Jak ji použít
 
-1. Umístěte stříšku `var` na klíčové slovo.
+1. Umístěte blikající kurzor na `var` klíčové slovo.
 
-1. Stiskněte **klávesu Ctrl**+**.** nebo klepněte ![na ikonu](../media/screwdriver-icon.png) ikony šroubováku šroubováku v okraji souboru kódu.
+1. Stiskněte klávesu **CTRL** + **.** nebo klikněte na ![ ikonu ikony Screwdriver Screwdriver na ](../media/screwdriver-icon.png) okraji souboru s kódem.
 
-   ![Použití nabídky explicitních textových rychlých akcí](media/use-explicit-type.png)
+   ![Použití nabídky explicitního typu pro rychlé akce](media/use-explicit-type.png)
 
-1. Vyberte **použít explicitní typ**. Nebo vyberte **Náhled změn,** chcete-li otevřít dialogové okno [Změny náhledu,](../../ide/preview-changes.md) a pak vyberte **Použít**.
+1. Vyberte možnost **použít explicitní typ**. Případně můžete výběrem **Zobrazit náhled změn** otevřít dialogové okno [Náhled změn](../../ide/preview-changes.md) a pak vybrat **použít**.
 
 ## <a name="see-also"></a>Viz také
 
-- [Implicitně zadané proměnné (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables)
+- [Implicitně typované proměnné (C#)](/dotnet/csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables)
 - [Refactoring](../refactoring-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

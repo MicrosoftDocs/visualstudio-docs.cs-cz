@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6da744b0db9e41cd1e5039a1bd0d5c93bc4c734a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651694"
 ---
 # <a name="alias-command"></a>Alias – příkaz
@@ -30,7 +30,7 @@ ms.locfileid: "72651694"
 Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty nebo jiný alias.
 
 > [!TIP]
-> Zadáním `>alias` bez argumentů se zobrazí aktuální seznam aliasů a jejich definice.
+> `>alias`Při psaní bez argumentů se zobrazí aktuální seznam aliasů a jejich definice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,10 +38,10 @@ Vytvoří nový alias pro úplný příkaz, úplný příkaz a argumenty nebo ji
 Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ```
 
-## <a name="arguments"></a>Arguments
- `aliasname` volitelné. Název nového aliasu Pokud není zadána žádná hodnota pro `aliasname`, zobrazí se seznam aktuálních aliasů a jejich definice.
+## <a name="arguments"></a>Argumenty
+ `aliasname` Volitelné. Název nového aliasu Pokud není zadána žádná hodnota pro `aliasname` , zobrazí se seznam aktuálních aliasů a jejich definice.
 
- `aliasstring` volitelné. Úplný název příkazu nebo existující alias a všechny parametry, které chcete vytvořit jako alias. Pokud není zadána žádná hodnota pro `aliasstring`, zobrazí se název aliasu a řetězec aliasu pro zadaný alias.
+ `aliasstring` Volitelné. Úplný název příkazu nebo existující alias a všechny parametry, které chcete vytvořit jako alias. Pokud není zadána žádná hodnota pro `aliasstring` , zobrazí se název aliasu a řetězec aliasu pro zadaný alias.
 
 ## <a name="switches"></a>Přepínače
  /Delete nebo/del nebo/d volitelné. Odstraní zadaný alias a odebere ho z automatického dokončování.
@@ -53,16 +53,16 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 
  Při vydávání tohoto příkazu byste měli zahrnout přepínače hned za příkaz, nikoli za aliasy, jinak bude samotný přepínač zahrnut jako součást řetězce aliasu.
 
- Přepínač `/reset` před obnovením aliasů vyžádá o potvrzení. Neexistuje žádná krátká forma `/reset`.
+ `/reset`Přepínač požádá o potvrzení před obnovením aliasů. Neexistuje žádná krátká forma `/reset` .
 
 ## <a name="examples"></a>Příklady
- Tento příklad vytvoří nový alias, `upper` pro příkaz Complete. MakeUpperCase.
+ Tento příklad vytvoří nový alias, `upper` pro kompletní příkaz Edit. MakeUpperCase.
 
 ```
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
- Tento příklad odstraní alias `upper`.
+ Tento příklad odstraní alias, `upper` .
 
 ```
 >Tools.alias /delete upper

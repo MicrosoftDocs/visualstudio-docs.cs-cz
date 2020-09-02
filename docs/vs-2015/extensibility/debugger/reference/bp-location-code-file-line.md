@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FILE_LINE | Dokumentace Microsoftu
+title: BP_LOCATION_CODE_FILE_LINE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 29fbb041a90118e7725ed3140e6583c7ac756a07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153470"
 ---
-# <a name="bplocationcodefileline"></a>BP_LOCATION_CODE_FILE_LINE
+# <a name="bp_location_code_file_line"></a>BP_LOCATION_CODE_FILE_LINE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Obsahuje data pro umístění zarážky na konkrétní řádek v souboru zdrojového kódu.  
+Obsahuje data pro umístění zarážky na specifickém řádku ve zdrojovém souboru kódu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_FILE_LINE {   
@@ -35,18 +35,18 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE { 
   
 ## <a name="members"></a>Členové  
  `bstrContext`  
- Kontext k zarážce, obvykle název metody nebo funkce jako zobrazené v zásobníku volání.  
+ Kontext zarážky, obvykle název metody nebo funkce, jak je vidět v zásobníku volání.  
   
  `pDocPos`  
- [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) objekt, který reprezentuje dokument umístění zarážky.  
+ Objekt [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) , který představuje pozici dokumentu zarážky.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.  
+ Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást sjednocení.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

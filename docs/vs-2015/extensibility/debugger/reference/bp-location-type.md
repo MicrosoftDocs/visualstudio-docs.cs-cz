@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_TYPE | Dokumentace Microsoftu
+title: BP_LOCATION_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fb8074317e52b43806a61d6486c53d7409333e2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153406"
 ---
-# <a name="bplocationtype"></a>BP_LOCATION_TYPE
+# <a name="bp_location_type"></a>BP_LOCATION_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje typ umístění zarážky pro žádost o zarážku.  
+Určuje typ umístění zarážky pro požadavek na zarážku.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_LOCATION_TYPE {   
@@ -69,13 +69,13 @@ public enum enum_BP_LOCATION_TYPE { 
   
 ## <a name="members"></a>Členové  
  BPLT_NONE  
- Určuje žádné umístění zarážky.  
+ Neurčuje umístění zarážky.  
   
  BPLT_FILE_LINE  
  Určuje typ umístění zarážky jako řádek souboru.  
   
  BPLT_FUNC_OFFSET  
- Určuje typ umístění zarážky jako klauzuli offset funkce.  
+ Určuje typ umístění zarážky jako posun funkce.  
   
  BPLT_CONTEXT  
  Určuje typ umístění zarážky jako kontext.  
@@ -87,47 +87,47 @@ public enum enum_BP_LOCATION_TYPE { 
  Určuje typ umístění zarážky jako adresu.  
   
  BPLT_RESOLUTION  
- Určuje typ umístění zarážky jako řešení.  
+ Určuje typ umístění zarážky jako rozlišení.  
   
  BPLT_CODE_FILE_LINE  
  Určuje typ umístění zarážky jako řádek zdrojového kódu.  
   
  BPLT_CODE_FUNC_OFFSET  
- Určuje typ umístění zarážky jako klauzuli offset kódu funkce.  
+ Určuje typ umístění zarážky jako posunu funkce kódu.  
   
  BPLT_CODE_CONTEXT  
  Určuje typ umístění zarážky jako kontext kódu.  
   
  BPLT_CODE_STRING  
- Určuje typ umístění zarážky jako řetězec v kódu.  
+ Určuje typ umístění zarážky jako řetězec kódu.  
   
  BPLT_CODE_ADDRESS  
- Určuje typ umístění zarážky jako adresu kódu.  
+ Určuje typ umístění zarážky jako kódových adres.  
   
  BPLT_DATA_STRING  
- Určuje typ umístění zarážky jako řetězec data.  
+ Určuje typ umístění zarážky jako Datový řetězec.  
   
  BPLT_TYPE_MASK  
- Určuje bitová maska, tak, aby mimo hodnota může být extrahována typ zarážky.  
+ Určuje bitovou masku, aby bylo možné extrahovat typ zarážky z hodnoty.  
   
  BPLT_LOCATION_TYPE_MASK  
- Určuje bitová maska, tak, aby typ umístění zarážky může být extrahována mimo hodnotu.  
+ Určuje bitovou masku, aby bylo možné extrahovat typ umístění zarážky mimo hodnotu.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako parametr [getlocationtype –](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) metody.  
+ Předán jako parametr metodě [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) .  
   
- Typ umístění zarážky se skládá z typ zarážky a typ umístění. To znamená, že je typ umístění zarážky nikdy pouze typ zarážky (například `BPT_CODE`) nebo typu umístění (například `BPLT_FILE_LINE`). Předdefinované konstanty pro všechny typy umístění zarážky v tuto chvíli nepodporuje jsou součástí tento výčet (`BPLT_CODE_FILE_LINE` prostřednictvím `BPLT_DATA_STRING`).  
+ Typ umístění zarážky se skládá z typu zarážky a typu umístění. To znamená, že typ umístění zarážky nikdy není pouze typ zarážky (například `BPT_CODE` ) nebo typ umístění (například `BPLT_FILE_LINE` ). Předdefinované konstanty pro všechny typy umístění zarážek, které jsou aktuálně podporovány, jsou zahrnuty do tohoto výčtu ( `BPLT_CODE_FILE_LINE` prostřednictvím `BPLT_DATA_STRING` ).  
   
  `BPT_CODE` a `BPT_DATA` jsou členy [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčtu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Getlocationtype –](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)   
+ [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)   
  [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

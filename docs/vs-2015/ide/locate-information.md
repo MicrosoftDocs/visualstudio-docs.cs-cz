@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b381d7fd342a2e56bcf0c90cb52bd4912444113
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651455"
 ---
 # <a name="locate-information"></a>Vyhledávání informací
@@ -21,12 +21,12 @@ ms.locfileid: "72651455"
 
 Aplikace Help Viewer nabízí několik různých způsobů, jak najít informace v nápovědě. V závislosti na tom, jaký druh informací hledáte, můžou být některé strategie efektivnější než jiné.
 
-|Pro informace o|Zkuste|
+|Pro informace o|Vyzkoušení|
 |----------------------------|---------|
 |Prvek uživatelského rozhraní|Klávesa F1|
 |Další témata, která jsou ve stejné oblasti obsahu jako aktuální téma|Tlačítko **Zobrazit téma v obsahu** na panelu nástrojů|
 |Funkce nebo technologie|Index|
-|Jazykové prvky, jako jsou metody a události|Hledat|
+|Jazykové prvky, jako jsou metody a události|Search|
 
 ## <a name="in-this-section"></a>V této části
  [Tipy pro fulltextové vyhledávání](../ide/full-text-search-tips.md)

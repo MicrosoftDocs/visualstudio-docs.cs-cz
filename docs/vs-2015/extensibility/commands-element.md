@@ -1,5 +1,5 @@
 ---
-title: Příkazy Element | Dokumentace Microsoftu
+title: Command – element | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,20 +14,20 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 194768a3b540511996e1d99e6450a7a9b24ebc74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184289"
 ---
 # <a name="commands-element"></a>Commands – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Představuje kolekci příkazů na panelu nástrojů VSPackage. Kolekce může mít až o pěti pododdíly následujícím způsobem: nabídek, skupiny, tlačítka, kláves a rastrových obrázků.  
+Představuje kolekci příkazů na panelu nástrojů VSPackage. Kolekce může obsahovat až pět dílčích částí, a to takto: nabídky, skupiny, tlačítka, Combos a bitmapy.  
   
- Každý dílčí část podřízený prvek, například \<nabídky >, je identifikován jedinečný příkaz ID, které je identifikátor GUID a číselný identifikátor pár. Identifikátor GUID identifikuje sadu příkazů"" a slouží k seskupení logicky spojených příkazy. Sady VSPackage by měl definovat vlastní sadu pro zabránění kolizím s ID příkazů, které jsou definovány ostatní rozšíření VSPackages příkazů.  
+ Každý podřízený element dílčího oddílu, například \<Menu> , je identifikován jedinečným identifikátorem příkazu, který je identifikátor GUID a dvojice čísel identifikátorů. Identifikátor GUID identifikuje "sadu příkazů" a používá se k seskupení příkazů souvisejících s logicky. VSPackage by měl definovat svou vlastní sadu příkazů, aby se předešlo kolizím s identifikátory příkazů, které jsou definovány jinými rozhraními VSPackage.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Commands package="GuidMyPackage" >  
@@ -46,26 +46,26 @@ Představuje kolekci příkazů na panelu nástrojů VSPackage. Kolekce může m
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Balíček|Identifikátor GUID, který identifikuje sady VSPackage, která poskytuje příkazy.<br /><br /> Třeba balíček = "guidVsPackage1Pkg".|  
+|balíček|Identifikátor GUID, který identifikuje VSPackage, který poskytuje příkazy.<br /><br /> Například Package = "guidVsPackage1Pkg".|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[Menus – element](../extensibility/menus-element.md)|Definuje všechny nabídky, které implementuje VSPackage.|  
-|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupinu příkazů v sadě VSPackage.|  
-|[Buttons – element](../extensibility/buttons-element.md)|Seskupí elementy tlačítko.|  
-|[Bitmaps – element](../extensibility/bitmaps-element.md)|Seskupí elementy rastrového obrázku.|  
-|[Combos – element](../extensibility/combos-element.md)|Prvky pole se seznamem skupin.|  
+|[Groups – element](../extensibility/groups-element.md)|Obsahuje položky, které definují skupiny příkazů ve VSPackage.|  
+|[Buttons – element](../extensibility/buttons-element.md)|Prvky tlačítka skupiny|  
+|[Bitmaps – element](../extensibility/bitmaps-element.md)|Seskupuje rastrové prvky.|  
+|[Combos – element](../extensibility/combos-element.md)|Seskupuje prvky se seznamem.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které poskytuje VSPackage pro prostředí IDE. Je to možné prvky jsou položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
+|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které VSPackage poskytuje rozhraní IDE. Možné elementy jsou položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití [Commands – Element](../extensibility/commands-element.md).  
+ Následující příklad ukazuje, jak použít [element Commands](../extensibility/commands-element.md).  
   
 ```  
 <Commands package="guidMyPackage">  
@@ -91,5 +91,5 @@ Představuje kolekci příkazů na panelu nástrojů VSPackage. Kolekce může m
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Jak prvky VSPackage přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

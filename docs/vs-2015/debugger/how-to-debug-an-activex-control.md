@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění ovládacího prvku ActiveX | Dokumentace Microsoftu'
+title: 'Postupy: ladění ovládacího prvku ActiveX | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,40 +26,40 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9524ab08ab955609f29f437e8a1576af02738aa1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704453"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Postupy: Ladění ovládacího prvku ActiveX
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-POZNÁMKA:]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte nastavení importu a exportu v nabídce Nástroje. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ZNAČTE
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
- Chcete-li ladit ovládací prvek ActiveX, je nutné zadat (spustitelného souboru) pro ovládací prvek pro spuštění v kontejneru.  
+ Chcete-li ladit ovládací prvek ActiveX, je nutné zadat kontejner (spustitelný soubor), v němž bude ovládací prvek spuštěn.  
   
-### <a name="to-specify-a-container-for-the-debug-session"></a>K určení kontejneru se pro relaci ladění  
+### <a name="to-specify-a-container-for-the-debug-session"></a>Určení kontejneru pro relaci ladění  
   
-1. V Průzkumníku řešení vyberte projekt.  
+1. V Průzkumník řešení vyberte projekt.  
   
-2. Z **zobrazení** nabídce zvolte **stránky vlastností**.  
+2. V nabídce **zobrazení** klikněte na položku **stránky vlastností**.  
   
-3. V **stránky vlastností projektu** dialogovém okně Otevřít **vlastnosti konfigurace** a pak zvolte položku **ladění**.  
+3. V dialogovém okně **stránky vlastností projektu** otevřete složku **Vlastnosti konfigurace** a vyberte možnost **ladění**.  
   
-4. V části **ladění** kategorie, vyhledejte **příkaz** vlastnost.  
+4. V kategorii **ladění** vyhledejte vlastnost **Command** .  
   
-5. Zadejte název cesty pro kontejner. Například C:\Program Files\Internet Explorer\IEXPLORE. SOUBOR EXE.  
+5. Zadejte název cesty pro kontejner. Například C:\Program Files\Internet Explorer\IEXPLORE.EXE.  
   
-6. Pokud zadáte jako kontejner aplikace Internet Explorer a používáte aktivní plochu, zadejte `/new` v **argumenty příkazu** pole.  
+6. Pokud jako kontejner určíte aplikaci Internet Explorer a používáte službu Active Desktop, zadejte `/new` do pole **argumenty příkazu** .  
   
 7. Klikněte na **OK**.  
   
-     Pokud nezadáte kontejner ve službě **stránky vlastností projektu** dialogovém okně můžete zadat kontejner při zahájení ladění. Po výběru příkazu ke spuštění pro spuštění ladění, [spustitelný soubor pro dialogové okno ladění relace](../debugger/executable-for-debugging-session-dialog-box.md) se zobrazí. V dialogovém okně zadejte název cesty kontejneru.  
+     Pokud nezadáte kontejner do dialogového okna **stránky vlastností projektu** , můžete zadat kontejner při zahájení ladění. Když vyberete příkaz pro spuštění pro spuštění ladění, zobrazí se [dialogové okno spustitelný soubor pro relaci ladění](../debugger/executable-for-debugging-session-dialog-box.md) . Zadejte název cesty kontejneru v dialogovém okně.  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky ActiveX](https://msdn.microsoft.com/library/52aaec4d-3889-402e-b57d-758078f8ac57)   
- [Testování vlastností a událostí pomocí testovacího kontejneru](https://msdn.microsoft.com/library/626867cf-fe53-4c30-8973-55bb93ef3917)   
- [COM a ActiveX ladění](../debugger/com-and-activex-debugging.md)   
+ [Testování vlastností a událostí pomocí kontejneru testů](https://msdn.microsoft.com/library/626867cf-fe53-4c30-8973-55bb93ef3917)   
+ [Ladění modelu COM a ActiveX](../debugger/com-and-activex-debugging.md)   
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Kontextové nabídky | Dokumentace Microsoftu
+title: Kontextové nabídky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,19 +11,19 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9baab8ef64fa1952eff138165f608e25960c8cfd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184275"
 ---
 # <a name="context-menus"></a>Místní nabídky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kontextové nabídky se zobrazí, když uživatel klepne pravým tlačítkem myši v aktivní oblasti od klientské oblasti a zrušte zaškrtnutí, když se uvolní pravé tlačítko myši.  
+Kontextové nabídky se zobrazí, když uživatel klikne pravým tlačítkem myši v aktivní oblasti klientské oblasti a při uvolnění pravého tlačítka myši zaškrtnuto.  
   
 ## <a name="editor-context-menus"></a>Kontextové nabídky editoru  
- Tím, že zachytává `ECMD_SHOWCONTEXTMENU`, vaše služba jazyka můžete řídit kontextové nabídky, které se zobrazí v editoru. Vlastní místní nabídce zobrazíte zpracování tohoto příkazu je předána do vaší <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>. Pokud tento příkaz nelze zpracovat, rozhraní IDE zobrazí standardní místní nabídka editoru k dispozici. Můžete také řídit obsah v místní nabídce základ jednotlivé značky. Další informace o tom, naleznete v tématu [pomocí značky Text pomocí rozhraní API pro starší verze](../extensibility/using-text-markers-with-the-legacy-api.md) a [zachycování příkazy služby starší verze jazyka](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
+ Zachytáváním `ECMD_SHOWCONTEXTMENU` může vaše jazyková služba řídit kontextové nabídky, které se zobrazí v editoru. Pokud chcete zobrazit vlastní kontextovou nabídku, zpracujte tento příkaz, když se předává do vašeho <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> . Pokud tento příkaz nezpracujete, rozhraní IDE zobrazí standardní kontextovou nabídku, která je k dispozici pro Editor. Můžete také řídit obsah místní nabídky podle značky. Další informace najdete v tématu [Použití textových značek se starší verzí rozhraní API](../extensibility/using-text-markers-with-the-legacy-api.md) a [zachycení příkazů služby starší verze jazyka](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Vývoj služby starší verze jazyka](../extensibility/internals/developing-a-legacy-language-service.md)   

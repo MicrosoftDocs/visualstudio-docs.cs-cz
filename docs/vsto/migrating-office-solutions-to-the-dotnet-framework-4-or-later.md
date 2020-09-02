@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b9531f0495bd0dc0a9f095ff71fdfd84fc8d1380
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189775"
 ---
 # <a name="migrate-office-solutions-to-the-net-framework-4-or-later"></a>Migrace řešení Office na .NET Framework 4 nebo novější
-  Pokud se cílová architektura projektu Office změní na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější ze starší verze .NET Framework, může být nutné provést některé další kroky, aby bylo možné pokračovat v spouštění řešení na počítačích pro vývoj a koncové uživatele. Další informace najdete v tématu [požadované změny pro spouštění projektů Office, které migrujete do .NET Framework 4 nebo .NET Framework 4,5](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md).
+  Pokud je cílová architektura projektu sady Office změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější z dřívější verze .NET Framework, může být nutné provést některé další kroky, aby bylo možné pokračovat v spouštění řešení na počítačích pro vývoj a koncové uživatele. Další informace najdete v tématu [požadované změny pro spouštění projektů Office, které migrujete do .NET Framework 4 nebo .NET Framework 4,5](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md).
 
- Kromě toho je možné, že projekt již nebude zkompilován. Některé funkce projektů Office mají různé programovací modely pro různé verze .NET Framework. Pokud je cílová architektura projektu sady Office změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější ze starší verze .NET Framework, je nutné provést následující změny kódu v projektu:
+ Kromě toho je možné, že projekt již nebude zkompilován. Některé funkce projektů Office mají různé programovací modely pro různé verze .NET Framework. Pokud je cílová architektura projektu sady Office změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější z dřívější verze .NET Framework, je nutné provést následující změny kódu projektu:
 
 - [Aktualizace projektů aplikace Excel a Word, které migrujete do .NET Framework 4 nebo .NET Framework 4,5](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
@@ -34,9 +34,9 @@ ms.locfileid: "73189775"
 
   Cílová architektura projektu Office se změní při upgradu projektu ze starší verze sady Visual Studio. Další informace najdete v tématu [upgrade a migrace řešení pro systém Office](../vsto/upgrading-and-migrating-office-solutions.md).
 
-  Další informace o tom, proč některé funkce v projektech Office mají jiný programovací model, když cílíte na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, najdete v tématu [změny v návrhu projektů Office cílených na .NET Framework 4 nebo .NET Framework 4,5](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md) a [Visual. Přehled nástrojů Studio Tools for Office runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+  Další informace o tom, proč některé funkce v projektech Office mají jiný programovací model, když cílíte na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, najdete v tématu [změny v návrhu projektů Office, které cílí na .NET Framework 4 nebo .NET Framework 4,5](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md) a [Visual Studio Tools for Office prostředí runtime](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
 - [Postupy: cílení na verzi .NET Framework](../ide/visual-studio-multi-targeting-overview.md)
 - [Řešení chyb v řešeních pro systém Office](../vsto/troubleshooting-errors-in-office-solutions.md)

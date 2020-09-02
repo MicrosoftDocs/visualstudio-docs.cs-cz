@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eeeb9ffb92b2bf97513923bdef901dacd1a9a67a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189726"
 ---
 # <a name="migration-activity-designers"></a>Návrháři aktivit migrace
@@ -31,11 +31,11 @@ Další typy návrháře aktivit najdete v následujících tématech:
 
 - [Používání návrhářů aktivit](control-flow-activity-designers.md)
 
-- [Messaging](../workflow-designer/messaging-activity-designers.md)
+- [Zasílání zpráv](../workflow-designer/messaging-activity-designers.md)
 
 - [Modul runtime](../workflow-designer/runtime-activity-designers.md)
 
-- [Primitivní elementy](../workflow-designer/primitives-activity-designers.md)
+- [Primitiva](../workflow-designer/primitives-activity-designers.md)
 
 - [Transakce](../workflow-designer/transaction-activity-designers.md)
 
