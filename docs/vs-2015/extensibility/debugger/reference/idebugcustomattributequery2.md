@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2 | Dokumentace Microsoftu
+title: IDebugCustomAttributeQuery2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,50 +14,50 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d4bc592ff0198d4cc93d500c39167e214e63f032
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702593"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje existenci vlastní atribut pro toto pole a pokud existuje, vrátí informace o atributu.  
+Určuje existenci vlastního atributu pro toto pole a v případě, že existuje, vrátí informace o atributu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Poskytovatel symbolů implementuje toto rozhraní na stejný objekt, který implementuje [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) za účelem podpory vlastních atributů.  
+ Zprostředkovatel symbolů implementuje toto rozhraní u stejného objektu, který implementuje [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , aby podporovaly vlastní atributy.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Použití [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) získat z tohoto rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní.  
+ K získání tohoto rozhraní z rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) použijte [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) .  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu **IDebugCustomAttributeQuery** rozhraní.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody rozhraní **IDebugCustomAttributeQuery** .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|Určuje, zda existuje vlastní atribut podle názvu.|  
-|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|Získá informace o atributu pro dané vlastní atribut.|  
+|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|Určuje, zda vlastní atribut existuje podle názvu.|  
+|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|Získá informace o atributu pro daný vlastní atribut.|  
   
- Kromě **IDebugCustomAttributeQuery** metody, `IDebugCustomAttributeQuery2` implementuje následující metodu:  
+ Kromě metod **IDebugCustomAttributeQuery** `IDebugCustomAttributeQuery2` implementuje následující metodu:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) metoda může vrátit enumerátor pro všechny vlastní atributy definované pro toto pole.  
+ Metoda [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) může vracet enumerátor pro všechny vlastní atributy definované pro toto pole.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

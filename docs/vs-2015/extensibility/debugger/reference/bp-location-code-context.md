@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_CONTEXT | Dokumentace Microsoftu
+title: BP_LOCATION_CODE_CONTEXT | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1d703a35c0b4e065bcf3515fe063c7620382666f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153481"
 ---
-# <a name="bplocationcodecontext"></a>BP_LOCATION_CODE_CONTEXT
+# <a name="bp_location_code_context"></a>BP_LOCATION_CODE_CONTEXT
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje umístění zarážky, který je vázán přímo na adresu v programu, který se právě ladí.  
+Popisuje umístění zarážky, která je svázána přímo s adresou v laděném programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_CONTEXT {   
@@ -34,15 +34,15 @@ typedef struct _BP_LOCATION_CODE_CONTEXT { 
   
 ## <a name="members"></a>Členové  
  pCodeContext  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje pozici zarážku v kódu.  
+ Objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který určuje pozici zarážky v kódu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.  
+ Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást sjednocení.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

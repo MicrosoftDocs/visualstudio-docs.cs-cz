@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluationCompleteEvent2::GetExpression | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluationCompleteEvent2:: GetExpression | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0c6ed79edadf9191604291a4c6f0f07b0aa1f0dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729587"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
@@ -41,13 +41,13 @@ int GetExpression( 
 
 ## <a name="parameters"></a>Parametry
 `ppExpr`\
-[out] Vrátí objekt [IDebugExpression2,](../../../extensibility/debugger/reference/idebugexpression2.md) který představuje výraz, který byl analyzován.
+mimo Vrátí objekt [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) , který představuje analyzovaný výraz.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda vrátí objekt, který byl vytvořen ve volání [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) metody.
+ Tato metoda vrátí objekt, který byl vytvořen voláním metody [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) .
 
 ## <a name="see-also"></a>Viz také
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)

@@ -1,5 +1,5 @@
 ---
-title: Uidmanager – úloha | Dokumentace Microsoftu
+title: Úloha UidManager | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -21,27 +21,27 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5fd8175911def7fb1b63dc63d967c404d649e9e4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703698"
 ---
 # <a name="uidmanager-task"></a>UidManager – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.Build.Tasks.Windows.UidManager> Úlohu kontroluje, aktualizuje nebo odebere jedinečné identifikátory (UID), aby bylo možné lokalizovat všechny [!INCLUDE[TLA#tla_xaml](../includes/tlasharptla-xaml-md.md)] prvky, které jsou zahrnuté ve zdroji [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory.  
+<xref:Microsoft.Build.Tasks.Windows.UidManager>Úkol zkontroluje, aktualizuje nebo odebere jedinečné identifikátory (UID), aby bylo možné lokalizovat všechny [!INCLUDE[TLA#tla_xaml](../includes/tlasharptla-xaml-md.md)] prvky, které jsou součástí zdrojových [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborů.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`IntermediateDirectory`|Volitelné **řetězec** parametru.<br /><br /> Určuje adresář, který slouží k zálohování zdroje [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které jsou určeny **MarkupFiles** parametru.|  
-|`MarkupFiles`|Vyžaduje **[] ITaskItem** parametru.<br /><br /> Určuje zdroj [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které chcete zahrnout do UID kontrola, aktualizace nebo odebrání.|  
-|`Task`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje úlohu správy UID, který chcete provést. Platné možnosti jsou **zkontrolujte**, **aktualizace**, nebo **odebrat**.|  
+|`IntermediateDirectory`|Volitelný **řetězcový** parametr.<br /><br /> Určuje adresář, který se použije k zálohování zdrojových [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] souborů, které jsou určené parametrem **MarkupFiles** .|  
+|`MarkupFiles`|Povinný parametr **ITaskItem []** .<br /><br /> Určuje zdrojové [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory, které se mají zahrnout pro kontrolu UID, aktualizaci nebo odebrání.|  
+|`Task`|Povinný parametr **řetězce**<br /><br /> Určuje úlohu správy UID, kterou chcete provést. Platné možnosti jsou **check**, **Update**nebo **Remove**.|  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu <xref:Microsoft.Build.Tasks.Windows.UidManager> úkol zkontroluje, jestli zadaný zdroj [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory obsahují [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] prvky, které mají odpovídající identifikátory UID.  
+ Následující příklad používá <xref:Microsoft.Build.Tasks.Windows.UidManager> úlohu ke kontrole, zda zadané zdrojové [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] soubory obsahují [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] prvky, které mají příslušné identifikátory UID.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -59,8 +59,8 @@ ms.locfileid: "65703698"
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/wpf-msbuild-task-reference.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Sestavení aplikace WPF (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
  [Postupy: Lokalizace aplikace](https://msdn.microsoft.com/library/5001227e-9326-48a4-9dcd-ba1b89ee6653)

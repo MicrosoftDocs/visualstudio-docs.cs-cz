@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Ladění webového formuláře | Dokumentace Microsoftu'
+title: 'Návod: ladění webového formuláře | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,55 +24,55 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e46169728c10d696f8dd99eb6459b9fcf081cb45
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704924"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>Návod: Ladění webového formuláře
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kroky v tomto názorném postupu ukazují, jak ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webovou aplikaci, označované také jako webového formuláře. To ukazuje, jak spustit a zastavit provádění, nastavit zarážky a zkontrolovat proměnné v **Watch** okna.  
+Kroky v tomto návodu ukazují, jak ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] webovou aplikaci, označovanou také jako webový formulář. Ukazuje, jak spustit a zastavit provádění, nastavit zarážky a kontrolovat proměnné v okně **kukátko** .  
   
 > [!NOTE]
-> K dokončení tohoto návodu, musí mít oprávnění správce na počítači serveru. Ve výchozím nastavení [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] procesu, aspnet_wp.exe nebo w3wp.exe, spouští jako [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] procesu. Chcete-li ladit [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], musí mít oprávnění správce na počítači kde [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ji spustí. Další informace najdete v tématu [požadavky na systém](../debugger/aspnet-debugging-system-requirements.md).  
+> K dokončení tohoto Názorného postupu musíte mít na serverovém počítači oprávnění správce. Ve výchozím nastavení se [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] proces, aspnet_wp.exe nebo w3wp.exe, spouští jako [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] proces. Pro ladění [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] musíte mít v počítači, na kterém [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] je spuštěný, oprávnění správce. Další informace najdete v části [Požadavky na systém](../debugger/aspnet-debugging-system-requirements.md).  
   
- Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-the-web-form"></a>Chcete-li vytvořit webový formulář  
+### <a name="to-create-the-web-form"></a>Vytvoření webového formuláře  
   
 1. Pokud už máte řešení otevřené, zavřete ho.  
   
-2. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **webu**.  
+2. V nabídce **soubor** klikněte na příkaz **Nový**a pak klikněte na **Web**.  
   
-     **Nový web** zobrazí se dialogové okno.  
+     Zobrazí se dialogové okno **Nový web** .  
   
-3. V **šablony** podokně klikněte na tlačítko **Web ASP.NET s**.  
+3. V podokně **šablony** klikněte na **Web ASP.NET**.  
   
-4. Na **umístění** řádek, klikněte na tlačítko **HTTP** ze seznamu a do textového pole zadejte **http://localhost/WebSite**.  
+4. Na řádku **umístění** klikněte v seznamu na **http** a do textového pole zadejte **http://localhost/WebSite** .  
   
-5. V **jazyk** klikněte na možnost **Visual C#** nebo **jazyka Visual Basic**.  
+5. V seznamu **jazyk** klikněte na možnost **Visual C#** nebo **Visual Basic**.  
   
-6. Klikněte na tlačítko **OK**.  
+6. Klikněte na **OK**.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Vytvoří nový projekt a zobrazí výchozí zdrojový kód HTML. Také vytvoří nový virtuální adresář s názvem **webu** pod **výchozí webový server** ve službě IIS.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Vytvoří nový projekt a zobrazí výchozí zdrojový kód HTML. Také vytvoří nový virtuální adresář s názvem **Web** ve **výchozím webu** ve službě IIS.  
   
-7. Klikněte na tlačítko **návrhu** karty na dolní okraj.  
+7. Na dolním okraji klikněte na kartu **Návrh** .  
   
-8. Klikněte na tlačítko **nástrojů** kartu na levý okraj, nebo ho vyberte na **zobrazení** nabídky.  
+8. Klikněte na kartu **panelu nástrojů** na levém okraji nebo ji vyberte v nabídce **zobrazení** .  
   
-     **Nástrojů** otevře.  
+     Otevře se **panel nástrojů** .  
   
-9. V **nástrojů**, klikněte na tlačítko **tlačítko** ovládací prvek a přidat ho do hlavní návrhová plocha Default.aspx.  
+9. V sadě **nástrojů**klikněte na ovládací prvek **tlačítko** a přidejte ho na hlavní návrhovou plochu default. aspx.  
   
-10. V **nástrojů**, klikněte na tlačítko **Textbox** řídit a přetáhněte jej na hlavní návrhová plocha Default.aspx.  
+10. V sadě **nástrojů**klikněte na ovládací prvek **TextBox** a přetáhněte ovládací prvek na hlavní návrhovou plochu default. aspx.  
   
-11. Poklepejte na ovládací prvek tlačítko, kterou jste přetáhli.  
+11. Dvakrát klikněte na ovládací prvek tlačítko, který jste zrušili.  
   
-     Tím přejdete na stránku kódu: Default.aspx.cs pro C# nebo Default.aspx.vb pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. Kurzor by měl být ve funkci `Button1_Click`.  
+     Tím přejdete na znakovou stránku: Default.aspx.cs pro C# nebo default. aspx. vb pro [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . Kurzor by měl být ve funkci `Button1_Click` .  
   
-12. V `Button1_Click` funkci, přidejte následující kód:  
+12. Do `Button1_Click` funkce přidejte následující kód:  
   
     ```  
     ' Visual Basic  
@@ -82,15 +82,15 @@ Kroky v tomto názorném postupu ukazují, jak ladit [!INCLUDE[vstecasp](../incl
     TextBox1.Text = "Button was clicked!";  
     ```  
   
-13. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
+13. V nabídce **Sestavení** klikněte na **Sestavit řešení**.  
   
-     Projekt má sestavit bez chyb.  
+     Projekt by se měl sestavit bez chyb.  
   
-     Nyní jste připraveni spustit ladění.  
+     Nyní jste připraveni začít s laděním.  
   
-### <a name="to-debug-the-web-form"></a>Chcete-li ladit webový formulář  
+### <a name="to-debug-the-web-form"></a>Ladění webového formuláře  
   
-1. V okně Default.aspx.cs nebo Default.aspx.vb klikněte na levý okraj na stejném řádku jako text, který jste přidali:  
+1. V okně Default.aspx.cs nebo default. aspx. vb klikněte na levý okraj na stejném řádku jako text, který jste přidali:  
   
     ```  
     ' Visual Basic  
@@ -100,53 +100,53 @@ Kroky v tomto názorném postupu ukazují, jak ladit [!INCLUDE[vstecasp](../incl
     textBox1.Text = "Button was clicked!";  
     ```  
   
-     Zobrazí se červená tečka a text řádku se zvýrazní červeně. Tato červená tečka představuje zarážku. Při spuštění aplikace pomocí ladicího programu v tomto místě ladicí program přeruší provádění, když je tento řádek kódu dosažen. Poté lze zobrazit stav aplikace a ladit ji. Další informace najdete v tématu [zarážky](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583).  
+     Zobrazí se červená tečka a text řádku se zvýrazní červeně. Tato červená tečka představuje zarážku. Při spuštění aplikace pomocí ladicího programu v tomto místě ladicí program přeruší provádění, když je tento řádek kódu dosažen. Poté lze zobrazit stav aplikace a ladit ji. Další informace naleznete v tématu [zarážky](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583).  
   
-2. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.  
+2. V nabídce **Ladit** klikněte na **Spustit ladění**.  
   
-3. **Ladění není povoleno** zobrazí se dialogové okno. Vyberte **upravit soubor Web.config pro povolení ladění** možnost a klikněte na tlačítko **OK**.  
+3. Zobrazí se dialogové okno **ladění není povoleno** . Vyberte možnost **Upravit soubor Web.config pro povolení ladění** a klikněte na tlačítko **OK**.  
   
-     Aplikace Internet Explorer spustí a zobrazí stránky, které je navrženo.  
+     Aplikace Internet Explorer se spustí a zobrazí stránku, kterou jste právě navrhli.  
   
-4. V aplikaci Internet Explorer klikněte na tlačítko.  
+4. V Internet Exploreru klikněte na tlačítko.  
   
-     V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], tím přejdete na řádku kde jste nastavili zarážku na znakovou stránku Default.aspx.cs nebo Default.aspx.vb. Tento řádek by měl být zvýrazněn žlutou barvou. Nyní lze zobrazit proměnné aplikace a řídit její spuštění. Vaše aplikace zastaví provádění a čeká příkaz od vás.  
+     V nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vás přesměruje na řádek, kde jste nastavili zarážku na znakové stránce Default.aspx.cs nebo default. aspx. vb. Tento řádek by měl být zvýrazněn žlutou barvou. Nyní lze zobrazit proměnné aplikace a řídit její spuštění. Vaše aplikace zastaví provádění a čeká na příkaz od vás.  
   
-5. Na **ladění** nabídky, klikněte na tlačítko **Windows**, klikněte na **Watch**a potom klikněte na tlačítko **Watch1**.  
+5. V nabídce **ladění** klikněte na **Windows**, pak na **sledování**a potom na **Watch1**.  
   
-6. V **Watch** okno, zadejte **TextBox1.Text**.  
+6. V okně **kukátko** zadejte **text TextBox1. text**.  
   
-     **Watch** okno zobrazuje hodnotu proměnné `TextBox1.Text`:  
+     Okno **kukátka** zobrazuje hodnotu proměnné `TextBox1.Text` :  
   
     ```  
     ""  
     ```  
   
-7. Na **ladění** nabídky, klikněte na tlačítko **Krokovat s přeskočením**.  
+7. V nabídce **ladění** klikněte na **Krok přes**.  
   
-     Hodnota `TextBox1.Text` se změnami **Watch** okno ke čtení:  
+     Hodnota `TextBox1.Text` změn v okně **kukátka** pro čtení:  
   
     ```  
     "Button was clicked!"  
     ```  
   
-8. Na **ladění** nabídky, klikněte na tlačítko **pokračovat**.  
+8. V nabídce **ladit** klikněte na tlačítko **pokračovat**.  
   
-9. V aplikaci Internet Explorer klikněte na tlačítko znovu.  
+9. V Internet Exploreru klikněte na tlačítko znovu.  
   
-     Provádění zastaví na zarážce znovu.  
+     Spuštění se znovu zastaví na zarážce.  
   
-10. V okně Default.aspx.cs nebo Default.aspx.vb klikněte na červenou tečku na levém okraji.  
+10. V okně Default.aspx.cs nebo default. aspx. vb klikněte na červenou tečku na levém okraji.  
   
-     Tato operace odebere zarážku.  
+     Tím se odstraní zarážka.  
   
-11. Na **ladění** nabídky, klikněte na tlačítko **Zastavit ladění**.  
+11. V nabídce **Ladit** klikněte na **Zastavit ladění**.  
   
-### <a name="to-attach-to-the-web-form-for-debugging"></a>Připojení k webového formuláře pro ladění  
+### <a name="to-attach-to-the-web-form-for-debugging"></a>Připojení k webovému formuláři pro ladění  
   
-1. V systému [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lze ladicí program připojit ke spuštěnému procesu. Pro největší efektivity dosáhnete, ladění, kompilace spustitelného souboru jako ladicí verze s soubory symbolů (PDB).  
+1. V systému [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lze ladicí program připojit ke spuštěnému procesu. Pro nejúčinnější ladění zkompilujte spustitelný soubor jako ladicí verzi se soubory symbolů (PDB).  
   
-2. V okně Default.aspx.cs nebo Default.aspx.vb klikněte na levý okraj řádku, který jste přidali znovu nastavit zarážku:  
+2. V okně Default.aspx.cs nebo default. aspx. vb klikněte na levý okraj, abyste znovu nastavili zarážku na řádku, který jste přidali:  
   
     ```  
     ' Visual Basic  
@@ -156,17 +156,17 @@ Kroky v tomto názorném postupu ukazují, jak ladit [!INCLUDE[vstecasp](../incl
     textBox1.Text = "Button was clicked!";  
     ```  
   
-3. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
+3. V nabídce **ladit** klikněte na **Spustit bez ladění**.  
   
-     Webový formulář spustí v Internet Exploreru, ale není připojen ladicí program.  
+     Webový formulář začne běžet v aplikaci Internet Explorer, ladicí program však není připojen.  
   
-4. Připojení k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] procesu. Další informace najdete v tématu [ladění nasazené webové aplikace](../debugger/debugging-deployed-web-applications.md).  
+4. Připojte se k [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] procesu. Další informace najdete v tématu [ladění nasazených webových aplikací](../debugger/debugging-deployed-web-applications.md).  
   
-5. V aplikaci Internet Explorer klikněte na tlačítko na formuláři.  
+5. V Internet Exploreru klikněte na tlačítko ve formuláři.  
   
-     V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], dostanete k zarážce v Default.aspx.cs, Default.aspx.vb nebo Default.aspx.  
+     V [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , byste měli mít zarážku ve default.aspx.cs, default. aspx. vb nebo default. aspx.  
   
-6. Po dokončení ladění na **ladění** nabídky, klikněte na tlačítko **Zastavit ladění**.  
+6. Po dokončení ladění klikněte v nabídce **ladění** na položku **Zastavit ladění**.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění aplikací ASP.NET a AJAX](../debugger/debugging-aspnet-and-ajax-applications.md)

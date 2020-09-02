@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat – dialogové okno | Dokumentace Microsoftu
+title: Dialogové okno Upravit a pokračovat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,19 +21,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 77fd48cd8e64be296231ff847b31d940d3d5831c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704148"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Dialogové okno Upravit a pokračovat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pouze nativní) Toto dialogové okno se zobrazí, když se po úpravě kódu během ladění a **upravit a pokračovat** rozpozná, že můžete použít změny kódu. Další informace najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).  
+Pouze nativní) Toto dialogové okno se zobrazí, když jste upravovali kód během ladění a možnost **Upravit a pokračovat** rozpozná, že může použít změny kódu. Další informace najdete v tématu [Úpravy a pokračování](../debugger/edit-and-continue.md).  
   
- **Nikdy nezobrazovat toto dialogové okno**  
- Pokud vyberete toto zaškrtávací políčko **upravit a pokračovat** provede určité změny kódu bez předchozího souhlasu v budoucnu. Můžete zapnout toto upozornění znovu tak, že přejdete **možnosti** dialogovém okně Otevřít **ladění** složky, kliknutím **upravit a pokračovat** stránku a výběr **Vyvoláno ladicími příkazy** a **zeptejte se mě, nejprve**.  
+ **Tento dialog už příště nezobrazovat**  
+ Pokud zaškrtnete toto políčko, příkaz **Upravit a pokračovat** bude používat změny kódu, aniž by v budoucnu požádala o oprávnění. Toto upozornění můžete znovu zapnout tak, že přejdete do dialogového okna **Možnosti** , otevřete složku pro **ladění** , kliknete na stránku pro **úpravu a pokračování** a vyberete **vyvolané příkazy ladění** a **nejdřív se zeptejte**.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

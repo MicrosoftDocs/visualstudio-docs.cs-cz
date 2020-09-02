@@ -1,5 +1,5 @@
 ---
-title: CODE_PATH | Dokumentace Microsoftu
+title: CODE_PATH | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0e75f5417ffabd26b87afb2a62812904446674c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153161"
 ---
-# <a name="codepath"></a>CODE_PATH
+# <a name="code_path"></a>CODE_PATH
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje volání metody nebo funkce.  
+Popisuje metodu nebo volání funkce.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagCODE_PATH {   
@@ -41,19 +41,19 @@ public struct CODE_PATH {
 ```  
   
 ## <a name="members"></a>Členové  
- bstrName  
+ BSTR  
  Název cesty kódu.  
   
- souboru pCode  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje v kódu na funkci.  
+ pCode  
+ Objekt [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) , který určuje, kam v kódu se má krokovat funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je použít k implementaci krokování do funkce. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) vrátí všechna volání z aktuálního umístění v programu, který se právě ladí. Tato struktura představuje jedno z těchto volání.  
+ Tato struktura slouží k implementaci krokování do funkce. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) vrátí všechna volání z aktuálního umístění v laděném programu. Tato struktura představuje jedno takové volání.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

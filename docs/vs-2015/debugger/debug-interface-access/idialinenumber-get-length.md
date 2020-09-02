@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_length – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_length | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a1fd9dda0e61da4353df7f3fc222df988d022c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152068"
 ---
-# <a name="idialinenumbergetlength"></a>IDiaLineNumber::get_length
+# <a name="idialinenumberget_length"></a>IDiaLineNumber::get_length
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá počet bajtů v bloku.  
+Načte počet bajtů v bloku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ HRESULT get_length ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí počet bajtů v bloku.  
+ mimo Vrátí počet bajtů v bloku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Blok je délka zdrojový kód na řádku reprezentovaná [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objektu.  
+ Blok je délka zdrojového kódu na řádku, který je reprezentován objektem [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

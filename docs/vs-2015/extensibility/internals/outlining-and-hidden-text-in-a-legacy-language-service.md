@@ -1,5 +1,5 @@
 ---
-title: Osnova a skrytý Text ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Sbalení a skrytý text ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,23 +11,23 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 65404f9fde6c8eeb653ab446595dbca83134703e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150809"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Osnova a skrytý text ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sbalování umožňuje sbalit posloupnost řádky textu do jednoho řádku. Například v jazyce C++ mohou být sbalena všechny metody do jednoho řádku zobrazující pouze podpis metody. Skrytý text je posloupnost řádky textu, které může být zobrazený nebo skrytý.  
+Osnova umožňuje sbalit sekvenci textových čar na jeden řádek. Například v jazyce C++ mohou být všechny metody sbaleny do jediného řádku, který zobrazuje pouze signaturu metody. Skrytý text je posloupnost textových řádků, které lze zobrazit nebo skrýt.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Postupy: Podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)  
  Vysvětluje, jak implementovat  
   
  [Postupy: Poskytování podpory skrytého textu ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)  
- Vysvětluje účel oblasti skrytého textu a poskytuje pokyny o tom, jak implementovat oblasti skrytého textu.  
+ Vysvětluje účel skryté oblasti textu a obsahuje pokyny k implementaci oblasti skrytého textu.  
   
- [Postupy: Poskytování rozšířené podpory osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  
- Vysvětluje dvě možnosti, které rozšiřují podpora osnovy pro váš jazyk nad rámec podpora *sbalit do definic* příkazu.
+ [Postupy: Rozšířená podpora osnovy ve službě starší verze jazyka](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  
+ Vysvětluje dvě možnosti, které rozšiřuje podporu osnovy pro váš jazyk nad rámec podpory příkazu *sbalit na definice* .

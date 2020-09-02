@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_hasseh – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_hasSEH | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 72e8d428df4796c34c5ac20447e7bf8121f259d2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703772"
 ---
-# <a name="idiasymbolgethasseh"></a>IDiaSymbol::get_hasSEH
+# <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak, který určuje, zda funkce obsahuje některý [strukturovaného zpracování výjimek (C /C++)](https://msdn.microsoft.com/library/dd3b647d-c269-43a8-aab9-ad1458712976) (například __try /\__except bloků).  
+Načte příznak, který určuje, zda funkce obsahuje jakékoli [strukturované zpracování výjimek (C/C++)](https://msdn.microsoft.com/library/dd3b647d-c269-43a8-aab9-ad1458712976) (například bloky __try/ \_ _except).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ HRESULT get_hasSEH(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud funkce má všechny bloky; zpracování strukturovaných výjimek v opačném případě vrátí `FALSE`.  
+ mimo Vrátí `TRUE` , zda má funkce jakékoli strukturované bloky zpracování výjimek; v opačném případě vrátí `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Záhlaví:|dia2.h|  
-|Verze:|Ve verzi 8.0 DIA SDK|  
+|Hlaviček|Dia2. h|  
+|Verze:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

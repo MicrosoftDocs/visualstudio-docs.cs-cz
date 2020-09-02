@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_STRING | Dokumentace Microsoftu
+title: BP_LOCATION_CODE_STRING | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 50c48098aee3b1077edec99210e7ab624d2a8d6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153455"
 ---
-# <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
+# <a name="bp_location_code_string"></a>BP_LOCATION_CODE_STRING
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Používá k nastavení kódu zarážky založené na řetězec, který může uživatel zadat z integrovaného vývojového prostředí (IDE).  
+Slouží k nastavení zarážek kódu na základě řetězce, který uživatel může zadat z integrovaného vývojového prostředí (IDE).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_STRING {   
@@ -35,18 +35,18 @@ typedef struct _BP_LOCATION_CODE_STRING { 
   
 ## <a name="members"></a>Členové  
  `bstrContext`  
- Kontext zarážky v kódu, obvykle název metody nebo funkce jako zobrazení zásobníku volání.  
+ Kontext zarážky v rámci kódu, obvykle název metody nebo funkce, jak je vidět v zásobníku volání.  
   
  `bstrCodeExpr`  
- Řetězec, který uživatel zadává pro popis kódu zarážku.  
+ Řetězec, ve kterém uživatel zapíše zarážku kódu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.  
+ Tato struktura je členem [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury jako součást sjednocení.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

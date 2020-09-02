@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e1669affa89c91ca3ae1958c22ff3ec4d56bb8c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670958"
 ---
 # <a name="editing-xslt-style-sheets"></a>Úpravy šablon stylů XSLT
@@ -24,7 +24,7 @@ Editor XML lze také použít pro úpravu šablon stylů XSLT. Můžete využít
 ## <a name="xslt-features"></a>Funkce XSLT
  Následující tabulka popisuje funkce specifické pro práci s šablonami stylů XSLT.
 
- **Barevné zvýrazňování syntaxe** Klíčová slova XSLT, například `template`, `match` a tak dále, se zobrazí v barvě klíčového slova XSLT určené nastavením **písma a barvy** .
+ **Barevné zvýrazňování syntaxe** Klíčová slova XSLT, jako jsou `template` , `match` a tak dále, se zobrazí v barvě klíčového slova XSLT určené nastavením **písma a barvy** .
 
  **Podtržení vlnovkou** Editor XML používá nainstalovaný soubor XSLT. xsd k ověření šablon stylů XSLT. Chyby ověřování se zobrazují modře podtržení vlnovkou. Editor XML také zkompiluje šablonu stylů na pozadí a sestavuje chyby nebo upozornění kompilátoru pomocí příslušných podtržení vlnovkou.
 

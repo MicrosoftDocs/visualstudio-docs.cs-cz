@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluator:: GetMethodLocationProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a6ba87d6c1a1f7370ce5e209440589f362b87035
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729517"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
@@ -49,27 +49,27 @@ int GetMethodLocationProperty(
 
 ## <a name="parameters"></a>Parametry
 `upstrFullyQualifiedMethodPlusOffset`\
-[v] Umístění metody a posun, vyjádřené jako řetězec.
+pro Umístění a posunutí metody vyjádřené jako řetězec.
 
 `pSymbolProvider`\
-[v] Zprostředkovatel symbolu vyjádřený jako objekt [IDebugSymbolProvider.](../../../extensibility/debugger/reference/idebugsymbolprovider.md)
+pro Zprostředkovatel symbolů vyjádřený jako objekt [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) .
 
 `pAddress`\
-[v] Adresa v rámci metody, vyjádřené jako objekt [IDebugAddress.](../../../extensibility/debugger/reference/idebugaddress.md)
+pro Adresa v rámci metody vyjádřená jako objekt [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) .
 
 `pBinder`\
-[v] Pořadač vyjádřený jako objekt [IDebugBinder.](../../../extensibility/debugger/reference/idebugbinder.md)
+pro Pořadač vyjádřený jako objekt [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)
 
 `ppProperty`\
-[out] Vrátí rozhraní [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) které představuje adresu paměti.
+mimo Vrátí rozhraní [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , které představuje adresu paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Vrácená adresa slouží například k nastavení zarážky.
+ Vrácenou adresu lze použít například k nastavení zarážky.
 
- Navzdory názvu `upstrFullyQualifiedMethodPlusOffset`může být tento parametr předán částečně kvalifikovaný název metody. V takovém případě je vybraná metoda, `pAddress`která obklopuje . Způsob interpretace tohoto parametru je na implementaci vyhodnocení výrazu a jazyk, který podporuje.
+ Bez ohledu na název `upstrFullyQualifiedMethodPlusOffset` je možné tento parametr předat částečně kvalifikovaný název metody. V takovém případě je vybraná metoda ten, který je ohraničen `pAddress` . Způsob interpretace tohoto parametru je až do implementace vyhodnocovacího filtru výrazů a jazyka, který podporuje.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

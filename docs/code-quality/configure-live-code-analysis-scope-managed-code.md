@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88249181"
 ---
 # <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Postupy: Konfigurace oboru dynamické analýzy kódu pro spravovaný kód
@@ -43,7 +43,7 @@ Ve výchozím nastavení se dynamická analýza kódu pro výpočet diagnostiky 
 
 ## <a name="custom-analysis-scope"></a>Rozsah vlastní analýzy
 
-Výchozí obor každé analýzy na pozadí byl vyladěn pro optimální prostředí uživatele, funkčnost a výkon většiny scénářů a řešení zákazníků. Existují však případy, kdy si zákazníci můžou chtít tento rozsah přizpůsobit a snížit nebo zvýšit analýzu na pozadí. Například:
+Výchozí obor každé analýzy na pozadí byl vyladěn pro optimální prostředí uživatele, funkčnost a výkon většiny scénářů a řešení zákazníků. Existují však případy, kdy si zákazníci můžou chtít tento rozsah přizpůsobit a snížit nebo zvýšit analýzu na pozadí. Příklad:
 
 - Režim úspory napájení: Pokud uživatelé běží na přenosném počítači, můžou chtít snížit spotřebu energie při delším výdrži baterie. V tomto scénáři by chtěli minimalizovat analýzu na pozadí.
 - Analýza kódu na vyžádání: Pokud uživatelé chtějí vypnout provádění živého analyzátoru a ručně spustit analýzu kódu na vyžádání, měli byste minimalizovat analýzu na pozadí. Viz [Postupy: ruční spuštění analýzy kódu na vyžádání](./how-to-run-code-analysis-manually-for-managed-code.md).

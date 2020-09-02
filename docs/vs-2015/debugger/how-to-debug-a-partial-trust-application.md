@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění aplikace s částečnou důvěryhodností | Dokumentace Microsoftu'
+title: 'Postupy: ladění aplikace s částečnou důvěryhodností | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,67 +19,67 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 030fef750cc1e0f0932de32fca1a0ffef56bc8f3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704487"
 ---
 # <a name="how-to-debug-a-partial-trust-application"></a>Postupy: Ladění aplikace s částečnou důvěryhodností
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Platí pro Windows a konzolových aplikací.  
+Platí pro Windows a konzolové aplikace.  
   
- [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md) umožňuje snadno nasadit aplikace s částečnou důvěryhodností, které budou využívat [zabezpečení přístupu kódu](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127) k omezení přístupu k prostředkům v počítači.  
+ [Zabezpečení a nasazení ClickOnce](../deployment/clickonce-security-and-deployment.md) usnadňuje nasazení částečně důvěryhodných aplikací, které využívají [zabezpečení přístupu kódu](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127) k omezení přístupu k prostředkům v počítači.  
   
- Ladění aplikace částečným vztahem důvěryhodnosti může být složité, protože aplikace s částečnou důvěryhodností máte oprávnění různé zabezpečení (a tedy chovat jinak) v závislosti na tom, kde jsou instalovány z. Pokud instalaci z Internetu bude mít aplikace s částečnou důvěryhodností několik oprávnění. Instalaci z místní intranet, bude mít další oprávnění a instalaci z místního počítače, bude mít úplná oprávnění. Také může mít vlastní zóny pomocí vlastních oprávnění. Budete muset ladění aplikace s částečnou důvěryhodností za některé nebo všechny z těchto podmínek. Naštěstí sady Visual Studio usnadňuje to i.  
+ Ladění aplikace s částečným vztahem důvěryhodnosti může být výzvou, protože aplikace s částečným vztahem důvěryhodnosti mají odlišná oprávnění zabezpečení (a proto se chovají jinak) v závislosti na tom, odkud jsou nainstalovány. Při instalaci z Internetu bude mít aplikace s částečnou důvěryhodností jenom několik oprávnění. Pokud je aplikace nainstalovaná z místního intranetu, bude mít další oprávnění a pokud je nainstalovaná z místního počítače, bude mít úplná oprávnění. Můžete mít také vlastní zóny s vlastními oprávněními. Je možné, že bude nutné ladit aplikace s částečným vztahem důvěryhodnosti v rámci kterékoli nebo všech těchto podmínek. Díky tomu je Visual Studio také snadné.  
   
- Než spustíte relaci ladění v sadě Visual Studio, můžete zónu, kterou chcete simulovat aplikace nainstalované z. Při spuštění ladění aplikace bude mít oprávnění pro aplikace s částečnou důvěryhodností nainstalovali z této zóny. To umožňuje zobrazit chování aplikace, jak se bude zobrazovat uživateli, který ji stáhnout z této zóny.  
+ Než začnete ladit relaci v aplikaci Visual Studio, můžete zvolit zónu, ze které chcete simulovat aplikaci nainstalovanou. Když začnete s laděním, aplikace bude mít oprávnění, která jsou vhodná pro aplikace s částečným vztahem důvěryhodnosti nainstalovanou z této zóny. To vám umožní zobrazit chování aplikace, jak by se zobrazilo uživateli, který si ho stáhl z této zóny.  
   
- Pokud se aplikace pokusí provést akce, který nemá oprávnění pro, dojde k výjimce. Od tohoto okamžiku Pomocníka pro výjimky nabízí možnost přidávat další oprávnění, což umožňuje restartovat ladicí relaci s dostatečnými oprávněními, abyste zabránili problémům.  
+ Pokud se aplikace pokusí provést akci, ke které nemá oprávnění, dojde k výjimce. V tomto okamžiku Pomocník pro výjimky vám dává možnost přidat další oprávnění, což vám umožní restartovat relaci ladění s dostatečnými oprávněními, abyste se vyhnuli problému.  
   
- Později můžete vrátit a zobrazit oprávnění, která jste přidali během ladění. Pokud jste měli k přidání oprávnění při ladění, pravděpodobně znamená, že budete muset přidat uživatel vyjádřit souhlas výzvy v tomto okamžiku ve vašem kódu.  
+ Později se můžete vrátit a podívat se, jaká oprávnění jste přidali během ladění. Pokud jste museli během ladění přidat oprávnění, pravděpodobně to znamená, že v tomto okamžiku v kódu musíte přidat výzvu k zadání souhlasu uživatele.  
   
 > [!NOTE]
-> Ladicí program vizualizéry vyžadují, aby větší oprávnění než je povoleno hodnotou aplikace s částečnou důvěryhodností. Vizualizéry nenačte, když se zastaví v kódu s částečným vztahem důvěryhodnosti. Chcete-li ladit pomocí vizualizéru, musíte spustit kód s úplným vztahem důvěryhodnosti.  
+> Nástroje pro vizualizace ladicího programu vyžadují větší oprávnění, než povoluje aplikace s částečnou důvěryhodností. Když zastavíte kód s částečnou důvěryhodností, vizualizace se nenačte. Chcete-li provést ladění pomocí vizualizér, je nutné spustit kód s úplným vztahem důvěryhodnosti.  
   
-### <a name="to-choose-a-zone-for-your-partial-trust-application"></a>Chcete-li zvolit zóny pro vaši aplikaci částečným vztahem důvěryhodnosti  
+### <a name="to-choose-a-zone-for-your-partial-trust-application"></a>Výběr zóny pro aplikaci s částečným vztahem důvěryhodnosti  
   
-1. Z **projektu** nabídce zvolte _Projectname_**vlastnosti**.  
+1. V nabídce **projekt** vyberte**vlastnosti** _ProjectName_.  
   
-2. V *Projectname* stránky vlastností, klikněte **zabezpečení** stránky.  
+2. Na stránkách vlastností *ProjectName* klikněte na stránku **zabezpečení** .  
   
-3. Vyberte **povolení nastavení zabezpečení ClickOnce**.  
+3. Vyberte **Povolit nastavení zabezpečení ClickOnce**.  
   
-4. V části **vaše aplikace bude provedena instalace ze zóny**, klikněte na rozevírací seznam a zvolte zónu, kterou chcete simulovat instaluje z aplikace.  
+4. V části **zóna, ze které se aplikace nainstaluje**, klikněte na rozevírací seznam a vyberte zónu, ze které chcete aplikaci nainstalovanou simulovat.  
   
-     **Oprávnění vyžadované aplikací** mřížky se zobrazí všechna dostupná oprávnění. Zaškrtávací políčko určuje oprávnění udělená aplikaci.  
+     **Oprávnění vyžadovaná** mřížkou aplikace zobrazují všechna dostupná oprávnění. Značka zaškrtnutí označuje oprávnění udělená vaší aplikaci.  
   
-5. Pokud se zónu **(vlastní)**, vyberte správné vlastní nastavení v **nastavení** sloupec **oprávnění** mřížky.  
+5. Pokud se zvolená zóna **(vlastní)**, vyberte ve sloupci **Nastavení** v mřížce **oprávnění** správné vlastní nastavení.  
   
-6. Klikněte na tlačítko **OK** stránku vlastností zavřete.  
+6. Kliknutím na tlačítko **OK** zavřete stránky vlastností.  
   
-### <a name="to-add-an-extra-permission-when-a-security-exception-occurs"></a>Chcete-li přidat další oprávnění, když dojde k výjimce zabezpečení  
+### <a name="to-add-an-extra-permission-when-a-security-exception-occurs"></a>Přidání dalšího oprávnění, když dojde k výjimce zabezpečení  
   
-1. **Pomocníka pro výjimky** dialogové okno se zprávou: **SecurityException – neošetřená.**  
+1. Zobrazí se dialogové okno **Pomocník pro výjimky** s touto zprávou: **SecurityException bylo neošetřené.**  
   
-2. V **pomocníka pro výjimky** dialogovém okně **akce**, klikněte na tlačítko **oprávnění přidat do projektu**.  
+2. V dialogovém okně **Pomocník pro výjimky** v části **Akce**klikněte na **Přidat oprávnění k projektu**.  
   
-3. **Restartujte ladění** zobrazí se dialogové okno.  
+3. Zobrazí se dialogové okno **restartovat ladění** .  
   
-    - Pokud chcete restartovat ladicí relaci se nová oprávnění, klikněte na tlačítko **Ano**.  
+    - Pokud chcete spustit relaci ladění s novým oprávněním, klikněte na **Ano**.  
   
-    - Pokud nechcete, aby se ještě restartovat, klikněte na tlačítko **ne**.  
+    - Pokud se ještě nechcete restartovat, klikněte na **ne**.  
   
-### <a name="to-view-extra-permissions-added-while-debugging"></a>Chcete-li zobrazit další oprávnění přidat při ladění  
+### <a name="to-view-extra-permissions-added-while-debugging"></a>Zobrazení dalších oprávnění přidaných během ladění  
   
-1. Z **projektu** nabídce zvolte _Projectname_**vlastnosti**.  
+1. V nabídce **projekt** vyberte**vlastnosti** _ProjectName_.  
   
-2. V *Projectname* stránky vlastností, klikněte **zabezpečení** stránky.  
+2. Na stránkách vlastností *ProjectName* klikněte na stránku **zabezpečení** .  
   
-3. Podívejte se na **oprávnění vyžadované aplikací** mřížky. Všechna další oprávnění, která jste přidali má dvě ikony v **zahrnuté** sloupec: normální značku zaškrtnutí, který všechny zahrnuté mít oprávnění a další ikony, který vypadá podobně jako bubliny obsahuje písmeno "i".  
+3. Podívejte se na **oprávnění požadovaná** v mřížce aplikace. Všechna dodatečná oprávnění, která jste **přidali, mají ve sloupci include** dvě ikony: normální značka zaškrtnutí, která všechna zahrnutá oprávnění mají, a další ikonu, která vypadá jako bublina obsahující písmeno "i".  
   
-4. Svislý posuvník použít k zobrazení celého **oprávnění vyžadované aplikací** mřížky.  
+4. Pomocí svislého posuvníku můžete zobrazit všechna **oprávnění požadovaná** mřížkou aplikace.  
   
 ## <a name="see-also"></a>Viz také  
  [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)   

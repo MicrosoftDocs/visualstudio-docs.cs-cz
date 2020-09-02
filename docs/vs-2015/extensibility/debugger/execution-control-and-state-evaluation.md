@@ -1,5 +1,5 @@
 ---
-title: Řízení provádění a vyhodnocení stavu | Dokumentace Microsoftu
+title: Řízení provádění a vyhodnocení stavu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,29 +12,29 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bc6476c925f37d70ab45bae129a8b8a379ee519c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152773"
 ---
 # <a name="execution-control-and-state-evaluation"></a>Řízení provádění a vyhodnocení stavu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Ladění aplikace vyžaduje implementaci funkce řízení provádění, jako krokování do funkce, zastavování na zarážkách a pokračování v provádění. Ladění základních tříd sady Visual Studio jeho řízení provádění na události se posílají mezi komponenty ladicího programu.  
+Ladění aplikace vyžaduje implementaci takových funkcí řízení spouštění jako krokování do funkcí, zastavení na zarážekch a pokračování v provádění. Ladění sady Visual Studio zakládá své řízení provádění na události odesílané mezi komponentami ladicího programu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Řízení programu](../../extensibility/debugger/program-control.md)  
- Obsahuje tyto rutiny, ke kterým dochází na úrovni programu: nastavení dalšího příkazu, provádění, krokování, budete pokračovat, pozastavení a obnovení.  
+ Uvádí následující rutiny, které se vyskytují na úrovni programu: nastavení dalšího příkazu, spuštění, krokování, pokračování, pozastavení a obnovení.  
   
  [Metody související se zarážkou](../../extensibility/debugger/breakpoint-related-methods.md)  
- Definuje je mez a čeká se na typy zarážek, které podporuje Visual Studio.  
+ Definuje vázané a nedokončené typy zarážek, které podporuje Visual Studio.  
   
  [Vyhodnocení zásobníku volání](../../extensibility/debugger/call-stack-evaluation.md)  
- Tento článek popisuje implementaci metody, které umožňují zobrazení rámců zásobníku volání během režimu pozastavení.  
+ Popisuje implementaci metod, které umožňují zobrazení rámců zásobníku volání v průběhu režimu přerušení.  
   
  [Vyhodnocení výrazu](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)  
- Vysvětluje, jak ladicího stroje (DE) Správce výraz vyhodnocení (EE) a relace ladění se podílejí analýze a hodnocení výrazu zadali do jedné ze systému windows z integrovaného vývojového prostředí.  
+ Vysvětluje, jakým způsobem se při analýze a vyhodnocení výrazu zadaného do jednoho z oken rozhraní IDE účastní funkce ladění (DE), vyhodnocení výrazu (EE) a správce ladění relací.  
   
  [Události ovládacích prvků](../../extensibility/debugger/control-events.md)  
- Tento článek popisuje rozhraní použité k odesílání událostí během řízené provádění programu.
+ Popisuje rozhraní používané k posílání událostí během kontrolovaného provádění programu.

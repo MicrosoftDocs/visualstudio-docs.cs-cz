@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNameChangedEvent2 | Dokumentace Microsoftu
+title: IDebugProgramNameChangedEvent2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,32 +11,32 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: abb117d9de09c11bbce1e1c935e108ec940e9c60
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703592"
 ---
 # <a name="idebugprogramnamechangedevent2"></a>IDebugProgramNameChangedEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Odesílat ladicího stroje (DE) Správce ladění relace (SDM) Pokud se změní název programu.  
+Odesílá se z ladicího modulu (DE) do Správce ladění relace (SDM), když se změní název programu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugProgramNameChangedEvent2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní do sestavy, které se změnily název programu. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) na stejný objekt jako toto rozhraní musí implementovat rozhraní. Používá SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) přístup **IDebugEvent2** rozhraní.  
+ DE implementuje toto rozhraní, aby nahlásilo, že se změnil název programu. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako toto rozhraní. SDM používá pro přístup k rozhraní **IDebugEvent2** [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) .  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- DE vytvoří a odešle tento objekt událostí k hlášení o změnu názvu programu. DE posílání této události [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funkce zpětného volání, který poskytl SDM při připojení k laděnému programu. Dodavatel port. Tento vlastní port odešle tato událost pomocí I rozhraní.  
+ DE vytvoří a pošle tento objekt události, aby nahlásil změnu názvu programu. DE pošle tuto událost pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu. Vlastní dodavatel portu odešle tuto událost pomocí rozhraní I.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll

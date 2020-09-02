@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateSync | Dokumenty společnosti Microsoft
+title: 'IDebugExpression2:: EvaluateSync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 306ed6af2a0a0b8fdb4525a112e680e289e6e6df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729671"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
@@ -47,30 +47,30 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>Parametry
 `dwFlags`\
-[v] Kombinace příznaků z výčtu [EVALFLAGS,](../../../extensibility/debugger/reference/evalflags.md) které řídí vyhodnocení výrazu.
+pro Kombinace příznaků z výčtu [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) , který ovládá vyhodnocení výrazu.
 
 `dwTimeout`\
-[v] Maximální doba v milisekundách čekání před návratem z této metody. Slouží `INFINITE` k čekání na neurčito.
+pro Maximální doba (v milisekundách), po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.
 
 `pExprCallback`\
-[v] Tento parametr je vždy nulovou hodnotou.
+pro Tento parametr je vždycky hodnota null.
 
 `ppResult`\
-[out] Vrátí objekt [IDebugProperty2,](../../../extensibility/debugger/reference/idebugproperty2.md) který obsahuje výsledek vyhodnocení výrazu.
+mimo Vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , který obsahuje výsledek vyhodnocení výrazu.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby. Některé typické chybové kódy jsou:
+V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Některé typické kódy chyb:
 
 |Chyba|Popis|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|V současné době je vyhodnocován jiný výraz a současné vyhodnocení výrazu není podporováno.|
-|E_EVALUATE_TIMEOUT|Časový čas vyhodnocení vypršel.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|V tuto chvíli se vyhodnocuje jiný výraz a hodnocení souběžného výrazu se nepodporuje.|
+|E_EVALUATE_TIMEOUT|Vypršel časový limit pro vyhodnocení.|
 
 ## <a name="remarks"></a>Poznámky
-Pro synchronní vyhodnocení není nutné odeslat událost zpět do sady Visual Studio po dokončení hodnocení.
+Pro synchronní vyhodnocení není po dokončení vyhodnocení nutné odeslat událost zpět do sady Visual Studio.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje, jak implementovat `CExpression` tuto metodu pro jednoduchý objekt, který implementuje rozhraní [IDebugExpression2.](../../../extensibility/debugger/reference/idebugexpression2.md)
+Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CExpression` objekt, který implementuje rozhraní [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) .
 
 ```cpp
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,

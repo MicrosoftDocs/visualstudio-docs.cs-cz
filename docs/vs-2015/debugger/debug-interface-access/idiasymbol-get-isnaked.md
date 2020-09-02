@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isnaked – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isNaked | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64989ca10416ab2ad9606c94b3f3bc977f60c5ee
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702350"
 ---
-# <a name="idiasymbolgetisnaked"></a>IDiaSymbol::get_isNaked
+# <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak, který určuje, zda má funkce [naked](https://msdn.microsoft.com/library/69723241-05e1-439b-868e-20a83a16ab6d) atribut (to znamená, funkce nemá žádný kód prologu nebo epilogu přidali kompilátorem).  
+Načte příznak, který určuje, zda má funkce atribut [holé](https://msdn.microsoft.com/library/69723241-05e1-439b-868e-20a83a16ab6d) (to znamená, že funkce neobsahuje žádný kód prologu nebo epilogu, který je přidán kompilátorem).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ HRESULT get_isNaked(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud má funkce `naked` atribut; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí, `TRUE` zda má funkce `naked` atribut. v opačném případě vrátí hodnotu `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Záhlaví:|dia2.h|  
-|Verze:|Ve verzi 8.0 DIA SDK|  
+|Hlaviček|Dia2. h|  
+|Verze:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

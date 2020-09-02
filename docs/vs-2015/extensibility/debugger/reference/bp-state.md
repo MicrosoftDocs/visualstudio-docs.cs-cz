@@ -1,5 +1,5 @@
 ---
-title: BP_STATE | Dokumentace Microsoftu
+title: BP_STATE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a4de23d462136ad417859d7064fef6b4ace7e59c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153255"
 ---
-# <a name="bpstate"></a>BP_STATE
+# <a name="bp_state"></a>BP_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje existenci vázaná zarážka a také určuje, jestli je povolené.  
+Určuje existenci vázané zarážky a také určuje, jestli je povolená.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_STATE {   
@@ -50,21 +50,21 @@ public enum enum_BP_STATE { 
  Určuje, že neexistuje žádná zarážka.  
   
  BPS_DELETED  
- Určuje, že zarážka byla odstraněna.  
+ Určuje, že se zarážka odstranila.  
   
  BPS_DISABLED  
- Určuje, že je zakázaná zarážka.  
+ Určuje, že zarážka je zakázána.  
   
  BPS_ENABLED  
  Určuje, zda je povolena zarážka.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátilo [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) metody.  
+ Vráceno z metody [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro ladění modelu COM | Dokumentace Microsoftu
+title: Nástroje pro ladění modelu COM | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,26 +23,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ca08eb272b51c256fb9f5f7b5b9d998982c6e5d0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702463"
 ---
 # <a name="com-debugging-tools"></a>Nástroje pro ladění modelu COM
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Toto téma obsahuje seznam nástrojů, které vám může pomoct otestovat a zkontrolovat COM programy.  
+Toto téma obsahuje seznam nástrojů, které vám pomůžou s testováním a kontrolou programů modelu COM.  
   
  Prohlížeč objektů OLE/COM  
- OLEVIEW zobrazí ovládací prvky ActiveX a OLE objekty, které jsou nainstalované v počítači a rozhraní, které podporují. Umožňuje také upravit registr a podívejte se na knihovny typů. Další informace najdete v tématu [pomocí Prohlížeč objektů OLE/COM](https://msdn.microsoft.com/library/a3359e31-2869-451d-9571-129b4e8b41f0).  
+ OLEVIEW zobrazuje objekty ActiveX a OLE nainstalované ve vašem počítači a rozhraní, která podporují. Umožňuje také upravit registr a prohlédnout si knihovny typů. Další informace najdete v tématu [použití prohlížeče objektů OLE/com](https://msdn.microsoft.com/library/a3359e31-2869-451d-9571-129b4e8b41f0).  
   
- Ukázky tříd Microsoft Foundation  
- Ukázky knihovny MFC ActiveX OCLIENT a SUPERPAD jsou také dostupných pro testování vašich aplikací proti. Úplný zdrojový kód pro tyto ukázky je v ceně.  
+ Ukázky Microsoft Foundation Class  
+ OCLIENT a SUPERPAD knihovny MFC jsou také k dispozici k otestování svých aplikací. K dispozici je úplný zdrojový kód pro tyto ukázky.  
   
 ## <a name="see-also"></a>Viz také  
- [COM a ActiveX ladění](../debugger/com-and-activex-debugging.md)   
+ [Ladění modelu COM a ActiveX](../debugger/com-and-activex-debugging.md)   
  [Nástroje pro ladění modelu COM](../debugger/com-debugging-tools.md)   
- [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)   
- [Ukázka OCLIENT: Ukazuje aplikaci kontejneru vizuálních úprav](https://msdn.microsoft.com/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)   
- [Ukázka SUPERPAD: Ukazuje Server, který upravuje Text pomocí třídy CEditView úprav s náhledem](https://msdn.microsoft.com/7b14e975-d986-4e6a-8289-226485cfcb72)
+ [Ladění v aplikaci Visual Studio](../debugger/debugging-in-visual-studio.md)   
+ [OCLIENT Sample: znázorňuje vizuální aplikaci pro úpravy kontejneru](https://msdn.microsoft.com/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)   
+ [SUPERPAD Sample: ukazuje server pro vizuální úpravy, který upravuje text pomocí CEditView.](https://msdn.microsoft.com/7b14e975-d986-4e6a-8289-226485cfcb72)
