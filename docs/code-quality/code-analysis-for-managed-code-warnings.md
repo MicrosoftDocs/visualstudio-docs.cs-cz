@@ -1,6 +1,6 @@
 ---
 title: Upozornění Analýzy kódu pro spravovaný kód
-ms.date: 11/04/2016
+ms.date: 08/31/2020
 ms.topic: reference
 f1_keywords:
 - vc.project.vcfxcoptool.enablefxcop
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - managed code analysis warnings
 - code analysis,managed code
 ms.assetid: 3c2741ff-0d3a-42e6-acd5-d42310bd03c4
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 383f488fcc9ebe614257b035732162100b9c7fd2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a72512eef8490f18f1179ae149b9a39c2ddaad4e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85521053"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89285707"
 ---
-# <a name="code-analysis-for-managed-code-warnings"></a>Upozornění Analýzy kódu pro spravovaný kód
+# <a name="net-code-analysis-rules"></a>Pravidla analýzy kódu .NET
 Nástroj Analýza spravovaného kódu poskytuje upozornění indikující porušení pravidel ve spravovaných knihovnách kódu. Upozornění se uspořádají do oblastí pravidla, jako je návrh, lokalizace, výkon a zabezpečení. Každé upozornění znamená porušení pravidla analýzy spravovaného kódu. Tato část poskytuje podrobné diskuze a příklady pro každé upozornění analýzy spravovaného kódu.
 
  V následující tabulce je uveden typ informací, které jsou k dispozici pro každé upozornění.
