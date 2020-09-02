@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 30fd29357ab8b42ea6a8baa6412f9ccf7eafed28
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350508"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>Začínáme s laděním vícevláknových aplikací (C#, Visual Basic, C++)
@@ -209,7 +209,7 @@ Nejdříve budete potřebovat aplikační projekt s více vlákny. Následuje p�
     End Class
     ```
 
-1. V nabídce **soubor** vyberte **Uložit vše**.
+1. V nabídce **File** (Soubor) vyberte **Save All** (Uložit vše).
 
 1. (Jenom Visual Basic) V Průzkumník řešení (pravé podokno) klikněte pravým tlačítkem myši na uzel projektu a vyberte **vlastnosti**. Na kartě **aplikace** změňte **spouštěcí objekt** na **jednoduché**.
 
@@ -313,7 +313,7 @@ Můžete označit vlákna pro udržení přehledu o důležitých vláknech a ig
 
 5. Chcete-li zrušit označení vláken, klikněte pravým tlačítkem myši na jedno nebo více vláken označených příznakem v okně **paralelní kukátko** a vyberte možnost zrušit **příznak**.
 
-### <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a>Zablokovat a uvolnit provádění vlákna
+### <a name="freeze-and-thaw-thread-execution"></a><a name="bkmk_freeze"></a> Zablokovat a uvolnit provádění vlákna
 
 > [!TIP]
 > Můžete ukotvit a odblokovat (pozastavit a obnovit) vlákna a řídit tak pořadí, ve kterém vlákna provádějí práci. To vám může pomáhat vyřešit problémy souběžnosti, jako jsou zablokování a konflikty časování.
@@ -332,7 +332,7 @@ Můžete označit vlákna pro udržení přehledu o důležitých vláknech a ig
 
     Aplikace může také vytvořit instanci některých nových vláken. Všechna nová vlákna nejsou označena příznakem a nejsou zmrazena.
 
-### <a name="follow-a-single-thread-with-conditional-breakpoints"></a><a name="bkmk_follow_a_thread"></a>Sledování jednoho vlákna s podmíněnými zarážkami
+### <a name="follow-a-single-thread-with-conditional-breakpoints"></a><a name="bkmk_follow_a_thread"></a> Sledování jednoho vlákna s podmíněnými zarážkami
 
 Může být užitečné postupovat při provádění jednoho vlákna v ladicím programu. Jedním ze způsobů, jak to udělat, je zmrazení vláken, která vás zajímají. V některých scénářích může být nutné postupovat podle jednoho vlákna bez zmrazení jiných vláken, například pro reprodukování konkrétní chyby. Chcete-li postupovat podle vlákna bez zmrazení jiných vláken, musíte se vyhnout přerušení kódu s výjimkou vlákna, které vás zajímá. To můžete provést nastavením [podmíněné zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 

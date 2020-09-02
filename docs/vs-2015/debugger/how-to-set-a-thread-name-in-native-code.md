@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Nastavení názvu vlákna v nativním kódu | Dokumentace Microsoftu'
+title: 'Postupy: nastavení názvu vlákna v nativním kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,16 +21,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 37554c8ba72257ee78b219774425c7e8acb305a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156668"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Chcete-li nastavení názvu vlákna ve svém programu, použijte `SetThreadName` fungovat, jak je znázorněno v následujícím příkladu kódu. Všimněte si, že název vlákna je zkopírován do vlákna tak, aby paměti pro `threadName` parametr mohlo být uvolněno.  
+Chcete-li v programu nastavit název vlákna, použijte `SetThreadName` funkci, jak je znázorněno v následujícím příkladu kódu. Všimněte si, že název vlákna je zkopírován do vlákna, aby bylo `threadName` možné uvolnit paměť pro parametr.  
   
 ## <a name="example"></a>Příklad  
   

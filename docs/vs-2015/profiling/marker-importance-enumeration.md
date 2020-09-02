@@ -1,5 +1,5 @@
 ---
-title: marker_importance – výčet | Dokumentace Microsoftu
+title: Výčet marker_importance | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a4451a7b222b66f0fe5bea2b0e5f2b8499c9033c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198392"
 ---
-# <a name="markerimportance-enumeration"></a>marker_importance – výčet
+# <a name="marker_importance-enumeration"></a>marker_importance – výčet
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Představuje úroveň důležitosti značek Vizualizátor souběžnosti.  
+Představuje úroveň důležitosti značky Vizualizátor souběžnosti.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum marker_importance;  
@@ -35,17 +35,17 @@ enum marker_importance;
   
 ### <a name="values"></a>Hodnoty  
   
-|Name|Popis|  
+|Název|Popis|  
 |----------|-----------------|  
-|`critical_importance`|Určuje, že má značku stěžejní význam.|  
-|`high_importance`|Určuje, že značky má vysokou důležitostí.|  
-|`low_importance`|Určuje, zda má značku s nízkou důležitostí.|  
-|`normal_importance`|Určuje, že značky má normální význam.|  
+|`critical_importance`|Určuje, že značka má kritickou důležitost.|  
+|`high_importance`|Určuje, že značka má velkou důležitost.|  
+|`low_importance`|Určuje, že značka má nízkou důležitost.|  
+|`normal_importance`|Určuje, že má značka normální důležitost.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** cvmarkersobj. h  
   
- **Namespace:** Concurrency::Diagnostic –  
+ **Obor názvů:** Concurrency::d odeslání diagnostických  
   
 ## <a name="see-also"></a>Viz také  
- [diagnostic – obor názvů](../profiling/diagnostic-namespace.md)
+ [Obor názvů diagnostiky](../profiling/diagnostic-namespace.md)

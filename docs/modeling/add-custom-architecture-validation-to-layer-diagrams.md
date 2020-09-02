@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546919"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání vlastního ověřování architektury do diagramů závislostí
@@ -107,7 +107,7 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
 6. Vraťte se do projektu ověření vrstvy a přidejte následující odkazy projektu:
 
-    |**Reference**|**Co vám to umožňuje**|
+    |**Odkaz**|**Co vám to umožňuje**|
     |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|Čtení grafu architektury|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Čtení modelu DOM kódu přidruženého k vrstvám|
@@ -125,7 +125,7 @@ Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy
 
 9. Chcete-li nainstalovat VSIX v hlavní instanci aplikace Visual Studio nebo v jiném počítači, vyhledejte soubor **. vsix** v adresáři **bin** projektu VSIX. Zkopírujte jej do počítače, kam chcete nainstalovat VSIX. Dvakrát klikněte na soubor VSIX v Průzkumníkovi Windows.
 
-## <a name="programming-validation"></a><a name="programming"></a>Ověřování programování
+## <a name="programming-validation"></a><a name="programming"></a> Ověřování programování
 
 Chcete-li definovat rozšíření pro ověření vrstvy, Definujte třídu, která má následující vlastnosti:
 
@@ -194,7 +194,7 @@ Každý uzel a každý odkaz má jednu nebo více kategorií, které určují ty
 
 Odkazy z vrstev na elementy v kódu mají kategorii "představuje".
 
-## <a name="debugging-validation"></a><a name="debugging"></a>Ověřování ladění
+## <a name="debugging-validation"></a><a name="debugging"></a> Ověřování ladění
 
 Chcete-li ladit rozšíření ověřování vrstvy, stiskněte klávesy CTRL + F5. Otevře se experimentální instance aplikace Visual Studio. V této instanci otevřete nebo vytvořte model vrstvy. Tento model musí být přidružen k kódu a musí mít alespoň jednu závislost.
 
@@ -226,7 +226,7 @@ Experimentální instanci vždy spusťte stisknutím kombinace kláves CTRL + F5
 
 Chcete-li nainstalovat rozšíření ověřování na počítači, ve kterém je nainstalována vhodná verze sady Visual Studio, otevřete soubor VSIX v cílovém počítači.
 
-## <a name="example-code"></a><a name="example"></a>Příklad kódu
+## <a name="example-code"></a><a name="example"></a> Příklad kódu
 
 ```csharp
 using System;

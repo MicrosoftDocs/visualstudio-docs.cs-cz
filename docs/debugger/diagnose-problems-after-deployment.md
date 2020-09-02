@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a4ae5e4f6f21208f02cbfd6513b3c5eb28124a8
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350586"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>Diagnostikujte problémy po nasazení pomocí IntelliTrace (C#, Visual Basic)
@@ -31,14 +31,14 @@ Chcete-li diagnostikovat problémy ve webové aplikaci ASP.NET po nasazení pomo
 
 - Visual Studio Enterprise (ale ne edice Professional nebo Community) ke kontrole diagnostických dat a ladění kódu pomocí IntelliTrace
 
-## <a name="step-1-include-build-information-with-your-release"></a><a name="SetUpBuild"></a>Krok 1: zahrnutí informací o sestavení do vaší vydané verze
+## <a name="step-1-include-build-information-with-your-release"></a><a name="SetUpBuild"></a> Krok 1: zahrnutí informací o sestavení do vaší vydané verze
  Nastavte proces sestavení tak, aby vytvořil manifest sestavení (*BuildInfo.config* soubor) pro váš webový projekt a zahrnul tento manifest do vaší vydané verze. Tento manifest obsahuje informace o projektu, správě zdrojového kódu a systému sestavení, které byly použity k vytvoření konkrétního sestavení. Tyto informace pomáhají aplikaci Visual Studio najít vyhovující zdroj a symboly po otevření protokolu IntelliTrace ke kontrole zaznamenaných událostí.
 
-### <a name="create-the-build-manifest-for-an-automated-build-using-team-foundation-server"></a><a name="AutomatedBuild"></a>Vytvoření manifestu sestavení pro automatizované sestavení pomocí Team Foundation Server
+### <a name="create-the-build-manifest-for-an-automated-build-using-team-foundation-server"></a><a name="AutomatedBuild"></a> Vytvoření manifestu sestavení pro automatizované sestavení pomocí Team Foundation Server
 
  Použijte tyto kroky, pokud používáte Správa verzí Team Foundation nebo Git.
 
-#### <a name="azure-devops-and-team-foundation-server-2017"></a><a name="TFS2017"></a>Azure DevOps a Team Foundation Server 2017
+#### <a name="azure-devops-and-team-foundation-server-2017"></a><a name="TFS2017"></a> Azure DevOps a Team Foundation Server 2017
 
 Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , který se už nepoužívá, a pak se odebral. Pokud chcete po nasazení ladit webové aplikace ASP.NET, použijte jednu z následujících metod:
 
@@ -46,7 +46,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
 * Pokud potřebujete používat IntelliTrace, otevřete projekt v aplikaci Visual Studio a načtěte soubory symbolů z odpovídajícího sestavení. Soubory symbolů můžete načíst z okna **moduly** nebo konfigurací symbolů v **nabídce nástroje**  >  **Možnosti**  >  **ladění**  >  **symboly**.
 
-#### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a>Team Foundation Server 2013
+#### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013
  Nastavte svůj kanál sestavení pro přidání umístění zdroje, sestavení a symbolů do manifestu sestavení (BuildInfo.config souboru). Sestavení Team Foundation Build automaticky vytvoří tento soubor a umístí ho do výstupní složky vašeho projektu.
 
 1. [Upravte svůj kanál sestavení nebo vytvořte nový kanál sestavení.](/azure/devops/pipelines/get-started-designer?view=vsts)
@@ -91,7 +91,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     Přejít na [Krok 2: vydání aplikace](#DeployRelease)
 
-#### <a name="team-foundation-server-2012-or-2010"></a><a name="TFS2012_2010"></a>Team Foundation Server 2012 nebo 2010
+#### <a name="team-foundation-server-2012-or-2010"></a><a name="TFS2012_2010"></a> Team Foundation Server 2012 nebo 2010
  Použijte následující postup, chcete-li automaticky vytvořit manifest sestavení (BuildInfo.config soubor) pro váš projekt a umístit soubor do výstupní složky vašeho projektu. Soubor se ve výstupní složce zobrazí jako "*ProjectName*.BuildInfo.config", ale po publikování aplikace se přejmenuje "BuildInfo.config" ve složce pro nasazení.
 
 1. Na server Team Foundation Build nainstalujte Visual Studio 2013 (libovolná edice).
@@ -116,7 +116,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     Přejít na [Krok 2: vydání aplikace](#DeployRelease)
 
-### <a name="create-the-build-manifest-for-a-manual-build-using-visual-studio"></a><a name="ManualBuild"></a>Vytvoření manifestu sestavení pro ruční sestavení pomocí sady Visual Studio
+### <a name="create-the-build-manifest-for-a-manual-build-using-visual-studio"></a><a name="ManualBuild"></a> Vytvoření manifestu sestavení pro ruční sestavení pomocí sady Visual Studio
  Použijte následující postup, chcete-li automaticky vytvořit manifest sestavení (BuildInfo.config soubor) pro váš projekt a umístit soubor do výstupní složky vašeho projektu. Soubor se ve výstupní složce zobrazí jako "*ProjectName*.BuildInfo.config", ale po publikování aplikace se přejmenuje "BuildInfo.config" ve složce pro nasazení.
 
 1. V **Průzkumník řešení**uvolněte webový projekt.
@@ -143,7 +143,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
     Přejít na [Krok 2: vydání aplikace](#DeployRelease)
 
-### <a name="create-the-build-manifest-for-a-manual-build-using-msbuildexe"></a><a name="MSBuild"></a>Vytvoření manifestu sestavení pro ruční sestavení pomocí MSBuild.exe
+### <a name="create-the-build-manifest-for-a-manual-build-using-msbuildexe"></a><a name="MSBuild"></a> Vytvoření manifestu sestavení pro ruční sestavení pomocí MSBuild.exe
  Přidejte tyto argumenty sestavení při spuštění sestavení:
 
  **/p: GenerateBuildInfoConfigFile = true**
@@ -152,7 +152,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
  **/p: BuildSymbolStorePath =**\<*path to symbols*>
 
-## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a>Krok 2: vydání vaší aplikace
+## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a> Krok 2: vydání vaší aplikace
  Použijete-li [balíček Web. deploy](https://msdn.microsoft.com/library/dd394698.aspx) , který byl vytvořen procesem sestavení pro nasazení aplikace, je manifest sestavení automaticky přejmenován z "*ProjectName*.BuildInfo.config" na "BuildInfo.config" a je umístěn do stejné složky se souborem Web.config vaší aplikace na vašem webovém serveru.
 
  Použijete-li k nasazení aplikace jiné metody, ujistěte se, že je manifest sestavení přejmenován z "*ProjectName*.BuildInfo.config" na "BuildInfo.config" a je umístěn ve stejné složce se souborem Web.config vaší aplikace na webovém serveru.
@@ -160,7 +160,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 ## <a name="step-3-monitor-your-app"></a>Krok 3: Sledování vaší aplikace
  Nastavte na webovém serveru sledování výkonu aplikací, abyste mohli monitorovat problémy, zaznamenávat diagnostické události a ukládat tyto události do souboru protokolu IntelliTrace. [Problémy s nasazením](../debugger/using-the-intellitrace-stand-alone-collector.md)najdete v tématu monitorování vydání.
 
-## <a name="step-4-find-the-problem"></a><a name="InvestigateEvents"></a>Krok 4: Vyhledání problému
+## <a name="step-4-find-the-problem"></a><a name="InvestigateEvents"></a> Krok 4: Vyhledání problému
  Chcete-li zkontrolovat zaznamenané události a ladit kód pomocí IntelliTrace, budete potřebovat Visual Studio Enterprise na svém vývojovém počítači nebo jiném počítači. Můžete také použít nástroje jako CodeLens, mapy ladicího programu a mapy kódu, které vám pomůžou problém diagnostikovat.
 
 ### <a name="open-the-intellitrace-log-and-matching-solution"></a>Otevření protokolu nástroje IntelliTrace a odpovídajícího řešení
@@ -233,7 +233,7 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
      [Jaké jsou všechny ostatní události a informace v protokolu IntelliTrace?](../debugger/using-saved-intellitrace-data.md)
 
-### <a name="what-else-can-i-do-from-here"></a><a name="WhatElse"></a>Co dalšího mohu udělat?
+### <a name="what-else-can-i-do-from-here"></a><a name="WhatElse"></a> Co dalšího mohu udělat?
 
 - [Získat další informace o tomto kódu](../ide/find-code-changes-and-other-history-with-codelens.md). Chcete-li najít odkazy na tento kód, jeho historii změn, související chyby, pracovní položky, revize kódu nebo testy jednotek – vše bez nutnosti opustit editor – použijte indikátory CodeLens v editoru.
 
@@ -245,14 +245,14 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
      ![Mapování zásobníku volání při ladění](../debugger/media/ffr_itsummarypageperformancedebuggermap.png "FFR_ITSummaryPagePerformanceDebuggerMap")
 
-### <a name="q--a"></a><a name="FAQ"></a>OTÁZKA & A
+### <a name="q--a"></a><a name="FAQ"></a> OTÁZKA & A
 
-#### <a name="q-why-include-information-about-my-project-source-control-build-and-symbols-with-my-release"></a><a name="WhyInclude"></a>Otázka: Proč zahrnout informace o projektu, správě zdrojového kódu, sestavení a symbolech pomocí moje verze?
+#### <a name="q-why-include-information-about-my-project-source-control-build-and-symbols-with-my-release"></a><a name="WhyInclude"></a> Otázka: Proč zahrnout informace o projektu, správě zdrojového kódu, sestavení a symbolech pomocí moje verze?
  Visual Studio používá tyto informace k nalezení odpovídajícího řešení a zdroje pro vydanou verzi, kterou se pokoušíte ladit. Po otevření protokolu IntelliTrace a výběru události pro spuštění ladění používá Visual Studio symboly k vyhledání a zobrazení kódu, kde k události došlo. Pak se můžete podívat na hodnoty, které se zaznamenaly, a přesunout vpřed nebo zpět prostřednictvím provádění kódu.
 
  Pokud používáte server TFS a tyto informace nejsou v manifestu sestavení (BuildInfo.config souboru), sada Visual Studio hledá na aktuálně připojeném serveru TFS shodný zdroj a symboly. Pokud sada Visual Studio nemůže najít správný server TFS nebo odpovídající zdroj, budete vyzváni k výběru jiného serveru TFS.
 
-#### <a name="q-the-intellitrace-log-is-missing-information-about-my-deployed-app-why-did-this-happen-what-do-i-do"></a><a name="InvalidConfigFile"></a>Otázka: v protokolu IntelliTrace chybí informace o naší nasazené aplikaci. Proč k tomu došlo? Co mám udělat?
+#### <a name="q-the-intellitrace-log-is-missing-information-about-my-deployed-app-why-did-this-happen-what-do-i-do"></a><a name="InvalidConfigFile"></a> Otázka: v protokolu IntelliTrace chybí informace o naší nasazené aplikaci. Proč k tomu došlo? Co mám udělat?
  K tomu může dojít při nasazení z vývojového počítače nebo když během nasazování nejste připojeni k serveru TFS.
 
 1. Přejít do složky pro nasazení vašeho projektu.
@@ -356,12 +356,12 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
     </Build>
     ```
 
-#### <a name="q-why-does-visual-studio-say-my-selected-workspace-is-ineligible"></a><a name="IneligibleWorkspace"></a>Otázka: Proč Visual Studio říká, že můj vybraný pracovní prostor je nezpůsobilý?
+#### <a name="q-why-does-visual-studio-say-my-selected-workspace-is-ineligible"></a><a name="IneligibleWorkspace"></a> Otázka: Proč Visual Studio říká, že můj vybraný pracovní prostor je nezpůsobilý?
  **A:** Vybraný pracovní prostor nemá žádná mapování mezi složkou správy zdrojového kódu a místní složkou. Chcete-li vytvořit mapování pro tento pracovní prostor, vyberte možnost **Spravovat**. V opačném případě zvolte již namapovaný pracovní prostor nebo vytvořte nový pracovní prostor.
 
  ![Otevřít ze správy zdrojového kódu bez namapovaného pracovního prostoru](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")
 
-#### <a name="q-why-cant-i-continue-until-i-choose-a-team-collection-or-a-different-collection"></a><a name="ChooseTeamProject"></a>Otázka: Proč nemůžu pokračovat, dokud nevyberu kolekci týmu nebo jinou kolekci?
+#### <a name="q-why-cant-i-continue-until-i-choose-a-team-collection-or-a-different-collection"></a><a name="ChooseTeamProject"></a> Otázka: Proč nemůžu pokračovat, dokud nevyberu kolekci týmu nebo jinou kolekci?
  **A:** K tomu může dojít z některého z těchto důvodů:
 
 - Sada Visual Studio není připojena k serveru TFS.
@@ -378,10 +378,10 @@ Visual Studio 2017 a novější verze neobsahují soubor *BuildInfo.config* , kt
 
      ![Otevřít ze správy zdrojového kódu &#45; migrováno](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")
 
-#### <a name="q-whats-a-workspace"></a><a name="WhatWorkspace"></a>Otázka: co je pracovní prostor?
+#### <a name="q-whats-a-workspace"></a><a name="WhatWorkspace"></a> Otázka: co je pracovní prostor?
  **A:** [Pracovní prostor ukládá kopii zdroje](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts) , takže ho můžete vyvinout a otestovat samostatně ještě před vrácením práce se změnami. Pokud ještě nemáte pracovní prostor, který je přímo namapován na nalezené řešení nebo projekt, pak vás sada Visual Studio vyzve k výběru dostupného pracovního prostoru nebo k vytvoření nového pracovního prostoru s názvem vašeho počítače jako výchozím názvem pracovního prostoru.
 
-#### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a>Otázka: Proč se zobrazí tato zpráva o nedůvěryhodných symbolech?
+#### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> Otázka: Proč se zobrazí tato zpráva o nedůvěryhodných symbolech?
  ![Ladit s cestou k nedůvěryhodným symbolům?](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
 
  **A:** Tato zpráva se zobrazí, když cesta symbolů v souboru manifestu sestavení ( \<*ProjectName*>.BuildInfo.config) není obsažena v seznamu důvěryhodných cest k symbolům. Cestu můžete přidat do seznamu cest symbolů v možnostech ladicího programu.

@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5deb42b2ab708bae572aebbcac15af2d077b14fa
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350482"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>Hledání nevrácené paměti pomocí knihovny CRT
@@ -186,11 +186,11 @@ K nastavení zarážky při přidělování paměti lze použít číslo přidě
 
 1. V okně **kukátko** zadejte `_crtBreakAlloc` sloupec **název** .
 
-   Pokud používáte vícevláknovou DLL verzi knihovny CRT (možnost/MD), přidejte operátor kontextu:`{,,ucrtbased.dll}_crtBreakAlloc`
+   Pokud používáte vícevláknovou DLL verzi knihovny CRT (možnost/MD), přidejte operátor kontextu: `{,,ucrtbased.dll}_crtBreakAlloc`
    
    Ujistěte se, že jsou načteny symboly ladění. V opačném případě `_crtBreakAlloc` bude hlášena jako *neidentifikovaný*.
 
-1. Stiskněte **Enter**.
+1.  Stiskněte **Enter**.
 
    Ladicí program vyhodnotí volání a umístí výsledek do sloupce **Value (hodnota** ). Tato hodnota bude **-1** , pokud jste nenastavili žádné zarážky při přidělování paměti.
 
@@ -229,7 +229,7 @@ Chcete-li vytvořit výstup obsahu `_CrtMemState` struktury, předejte strukturu
 _CrtMemDumpStatistics( &s1 );
 ```
 
-`_ CrtMemDumpStatistics`Vypíše výpis stavu paměti, který vypadá takto:
+`_ CrtMemDumpStatistics` Vypíše výpis stavu paměti, který vypadá takto:
 
 ```cmd
 0 bytes in 0 Free Blocks.
@@ -252,13 +252,13 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
    _CrtMemDumpStatistics( &s3 );
 ```
 
-`_CrtMemDifference`Porovná stavy paměti `s1` a `s2` a vrátí výsledek v ( `s3` ), který je rozdíl mezi `s1` a `s2` .
+`_CrtMemDifference` Porovná stavy paměti `s1` a `s2` a vrátí výsledek v ( `s3` ), který je rozdíl mezi `s1` a `s2` .
 
 Jedna z technik pro vyhledání nevrácené paměti začíná vložením `_CrtMemCheckpoint` volání na začátku a konci vaší aplikace a následným použitím `_CrtMemDifference` k porovnání výsledků. Pokud se `_CrtMemDifference` zobrazí nevrácená paměť, můžete přidat další `_CrtMemCheckpoint` volání k rozdělení programu pomocí binárního vyhledávání, dokud nebudete mít zdroj netěsnosti.
 
 ## <a name="false-positives"></a>Falešně pozitivní
 
- `_CrtDumpMemoryLeaks`může poskytnout falešně indikaci nevracení paměti, pokud se v knihovně místo bloků CRT nebo klientských bloků označí interní přidělení jako normální bloky. V takovém případě `_CrtDumpMemoryLeaks` není schopen určit rozdíl mezi přidělením uživatele a interním přidělením knihovny. Pokud jsou globální destruktory pro přidělení knihovny spouštěny po místě, kde je volána `_CrtDumpMemoryLeaks` , každé interní přidělení knihovny je hlášeno jako nevracení paměti. Verze standardní knihovny šablon starší než Visual Studio .NET mohou způsobit `_CrtDumpMemoryLeaks` hlášení takových falešně pozitivních hodnot.
+ `_CrtDumpMemoryLeaks` může poskytnout falešně indikaci nevracení paměti, pokud se v knihovně místo bloků CRT nebo klientských bloků označí interní přidělení jako normální bloky. V takovém případě `_CrtDumpMemoryLeaks` není schopen určit rozdíl mezi přidělením uživatele a interním přidělením knihovny. Pokud jsou globální destruktory pro přidělení knihovny spouštěny po místě, kde je volána `_CrtDumpMemoryLeaks` , každé interní přidělení knihovny je hlášeno jako nevracení paměti. Verze standardní knihovny šablon starší než Visual Studio .NET mohou způsobit `_CrtDumpMemoryLeaks` hlášení takových falešně pozitivních hodnot.
 
 ## <a name="see-also"></a>Viz také
 

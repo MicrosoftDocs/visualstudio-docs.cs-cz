@@ -1,5 +1,5 @@
 ---
-title: Taskbody – Element (MSBuild) | Dokumentace Microsoftu
+title: TaskBody – – element (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,22 +18,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7918844915d32893491f69b4e7f58a5867c3613c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144326"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody – element (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obsahuje data, která je předána `UsingTask``TaskFactory`. Další informace najdete v tématu [usingtask – Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+Obsahuje data předávaná do `UsingTask``TaskFactory` . Další informace naleznete v tématu [UsingTask element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
  \<Project>  
- \<Usingtask – >  
- \<Taskbody – >  
+ \<UsingTask>  
+ \<TaskBody>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <TaskBody Evaluate="true/false" />  
@@ -46,22 +46,22 @@ Obsahuje data, která je předána `UsingTask``TaskFactory`. Další informace n
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Evaluate`|Volitelný logický atribut.<br /><br /> Pokud `true`, nástroj MSBuild vyhodnotí jako vnitřní elementy a rozbalí položek a vlastností, před odesláním informací `TaskFactory` při vytváření instance úlohy.|  
+|`Evaluate`|Volitelný atribut typu Boolean.<br /><br /> Pokud `true` Nástroj MSBuild vyhodnocuje všechny vnitřní prvky a rozbalí položky a vlastnosti před tím, než předává informace do `TaskFactory` objektu při vytvoření instance úkolu.|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Data|Text mezi `TaskBody` značky se odesílají do verbatim `TaskFactory`.|  
+|Data|Text mezi `TaskBody` značkami se posílá do `TaskFactory` .|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Usingtask –](../msbuild/usingtask-element-msbuild.md)|Poskytuje způsob, jak zaregistrovat úlohy v [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]. Může být nula nebo více `UsingTask` prvky v projektu.|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Poskytuje způsob, jak zaregistrovat úkoly v nástroji [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . V projektu může být nula nebo více `UsingTask` prvků.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití `TaskBody` element s `Evaluate` atribut.  
+ Následující příklad ukazuje, jak použít `TaskBody` element s `Evaluate` atributem.  
   
 ```  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
@@ -77,6 +77,6 @@ Obsahuje data, která je předána `UsingTask``TaskFactory`. Další informace n
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

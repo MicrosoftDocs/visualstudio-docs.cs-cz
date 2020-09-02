@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vlastního bootstrapperu s výzvou o ochraně osobních údajů | Dokumentace Microsoftu'
+title: 'Návod: Vytvoření vlastního zaváděcího nástroje s výzvou k ochraně osobních údajů | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,149 +20,149 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 00c5266d57ae5633313465796c718d989f783ea6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406866"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64811434"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>Návod: Vytvoření vlastního bootstrapperu s dotazem souvisejícím se soukromím
-Můžete nakonfigurovat aplikace ClickOnce automaticky aktualizovat při sestavení pomocí novější verze souboru a verze sestavení k dispozici. Pokud chcete mít jistotu, že vaši zákazníci souhlas pro toto chování, můžete zobrazit soukromím k nim. Potom se můžete zvolit, jestli chcete udělit oprávnění k aplikaci automaticky aktualizovat. Pokud aplikace nemá povolný automaticky aktualizovat, ji není možné nainstalovat.
+Aplikace ClickOnce můžete nakonfigurovat tak, aby se automaticky aktualizovaly, když budou k dispozici sestavení s novějšími verzemi souborů a verzemi sestavení. K tomu, abyste se ujistili, že vaši zákazníci souhlasí s tímto chováním, můžete pro ně zobrazit výzvu k zadání ochrany osobních údajů. Pak mohou zvolit, zda má být aplikaci uděleno oprávnění k automatické aktualizaci. Pokud se aplikaci nepovoluje aktualizovat automaticky, nenainstaluje se.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Visual Studio 2010.
 
-## <a name="create-an-update-consent-dialog-box"></a>Vytvořit dialogové okno s souhlas aktualizace
- Chcete-li zobrazit soukromím, vytvořte aplikaci, která se čtenáře dotáže na souhlas s automatickými aktualizacemi pro aplikaci.
+## <a name="create-an-update-consent-dialog-box"></a>Vytvoření dialogového okna pro vyjádření souhlasu s aktualizací
+ Chcete-li zobrazit výzvu k zadání ochrany osobních údajů, vytvořte aplikaci, která žádá čtenáře o souhlas s automatickými aktualizacemi aplikace.
 
-#### <a name="to-create-a-consent-dialog-box"></a>Chcete-li vytvořit dialogové okno souhlasu
+#### <a name="to-create-a-consent-dialog-box"></a>Dialogové okno pro vytvoření souhlasu
 
-1. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
+1. V nabídce **soubor** přejděte na příkaz **Nový**a klikněte na **projekt**.
 
-2. V **nový projekt** dialogové okno, klikněte na tlačítko **Windows**a potom klikněte na tlačítko **WindowsFormsApplication**.
+2. V dialogovém okně **Nový projekt** klikněte na **Windows**a pak klikněte na **WindowsFormsApplication**.
 
-3. Pro **název**, typ **ConsentDialog**a potom klikněte na tlačítko **OK**.
+3. Jako **název**zadejte **ConsentDialog**a pak klikněte na **OK**.
 
-4. V Návrháři klikněte na formuláři.
+4. V návrháři klikněte na formulář.
 
-5. V **vlastnosti** okno Změnit **Text** vlastnost **dialogového okna souhlas s aktualizacemi**.
+5. V okně **vlastnosti** změňte vlastnost **text** na **dialog aktualizovat souhlas**.
 
-6. V **nástrojů**, rozbalte **všechny formuláře Windows**a přetáhněte ji **popisek** ovládacího prvku na formuláři.
+6. V **sadě nástrojů**rozbalte položku **Všechny model Windows Forms**a přetáhněte ovládací prvek **popisek** na formulář.
 
-7. V Návrháři klikněte na ovládací prvek popisku.
+7. V návrháři klikněte na ovládací prvek popisek.
 
-8. V **vlastnosti** okno Změnit **Text** vlastnosti v části **vzhled** takto:
+8. V okně **vlastnosti** změňte vlastnost **text** v oblasti **vzhled** na následující:
 
-    Aplikace, která se chystáte nainstalovat zkontroluje nejnovější aktualizace na webu. Kliknutím na "Souhlasím" autorizovat aplikaci pro kontrolu a automaticky nainstalovat aktualizace z Internetu.
+    Aplikace, kterou se chystáte nainstalovat, zkontroluje nejnovější aktualizace na webu. Kliknutím na Souhlasím schválíte aplikaci, aby kontrolovala a instalovala aktualizace automaticky z Internetu.
 
-9. V **nástrojů**, přetáhněte **zaškrtávací políčko** ovládacího prvku na střed formuláře.
+9. V **sadě nástrojů**přetáhněte ovládací prvek **CheckBox** na střed formuláře.
 
-10. V **vlastnosti** okno Změnit **Text** vlastnosti v části **rozložení** k **souhlasím**.
+10. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** na **Souhlasím**.
 
-11. V **nástrojů**, přetáhněte **tlačítko** ovládacího prvku na levém dolním rohu formuláře.
+11. V **panelu nástrojů**přetáhněte ovládací prvek **tlačítko** na spodní levou stranu formuláře.
 
-12. V **vlastnosti** okno Změnit **Text** vlastnosti v části **rozložení** k **pokračovat**.
+12. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** , aby **bylo možné pokračovat**.
 
-13. V **vlastnosti** okno Změnit **(název)** vlastnosti v části **návrhu** k **ProceedButton**.
+13. V okně **vlastnosti** změňte vlastnost **(název)** v části **Návrh** na **ProceedButton**.
 
-14. V **nástrojů**, přetáhněte **tlačítko** ovládacího prvku na pravém dolním rohu formuláře.
+14. V **panelu nástrojů**přetáhněte ovládací prvek **tlačítko** na spodní stranu formuláře.
 
-15. V **vlastnosti** okno Změnit **Text** vlastnosti v části **rozložení** k **zrušit**.
+15. V okně **vlastnosti** změňte vlastnost **text** v části **rozložení** na **Zrušit**.
 
-16. V **vlastnosti** okno Změnit **(název)** vlastnosti v části **návrhu** k **CancelButton**.
+16. V okně **vlastnosti** změňte vlastnost **(název)** v části **Návrh** na **CancelButton**.
 
-17. V Návrháři dvakrát klikněte **souhlasím** zaškrtávací políčko pro vygenerování obslužné rutiny CheckedChanged.
+17. V Návrháři poklikejte **na zaškrtávací políčko Souhlasím pro** vygenerování obslužné rutiny události CheckedChanged.
 
-18. V souboru kódu Form1 přidejte následující kód pro obslužnou rutinu události CheckedChanged.
+18. V souboru s kódem Form1 přidejte následující kód pro obslužnou rutinu události CheckedChanged.
 
      [!code-csharp[ConsentDialog#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.cs)]
      [!code-vb[ConsentDialog#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.vb)]
 
-19. Aktualizovat konstruktor třídy. Chcete-li zakázat **pokračovat** tlačítko ve výchozím nastavení.
+19. Aktualizujte konstruktor třídy, aby ve výchozím nastavení zakázal tlačítko **pokračovat** .
 
      [!code-csharp[ConsentDialog#6](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.cs)]
      [!code-vb[ConsentDialog#6](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.vb)]
 
-20. V souboru kódu Form1 přidejte následující kód pro proměnné typu Boolean ke sledování, zda je koncový uživatel vyjádřil souhlas se aktualizace online.
+20. Do souboru kódu Form1 přidejte následující kód pro logickou proměnnou, která bude sledovat, zda byl koncový uživatel poslán do online aktualizací.
 
      [!code-csharp[ConsentDialog#3](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.cs)]
      [!code-vb[ConsentDialog#3](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.vb)]
 
-21. V Návrháři dvakrát klikněte **pokračovat** pro vygenerování obslužné rutiny události kliknutí.
+21. V Návrháři dvakrát klikněte na tlačítko **pokračovat** , čímž se vygeneruje obslužná rutina události Click.
 
-22. V souboru kódu Form1, přidejte následující kód pro obslužnou rutinu události kliknutí **pokračovat** tlačítko.
+22. V souboru s kódem Form1 přidejte následující kód do obslužné rutiny události Click pro tlačítko **pokračovat** .
 
      [!code-csharp[ConsentDialog#2](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.cs)]
      [!code-vb[ConsentDialog#2](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.vb)]
 
-23. V Návrháři dvakrát klikněte **zrušit** pro vygenerování obslužné rutiny události kliknutí.
+23. V Návrháři poklikejte na tlačítko **Zrušit** pro vygenerování obslužné rutiny události kliknutí.
 
-24. V souboru kódu Form1, přidejte následující kód pro obslužnou rutinu události kliknutí pro **zrušit** tlačítko.
+24. V souboru kódu Form1 přidejte následující kód pro obslužnou rutinu události Click pro tlačítko **Storno** .
 
      [!code-csharp[ConsentDialog#4](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.cs)]
      [!code-vb[ConsentDialog#4](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.vb)]
 
-25. Aktualizujte aplikaci a vrátí chybu, pokud koncový uživatel neudělil souhlas. k online aktualizace.
+25. Aktualizujte aplikaci tak, aby vracela chybu, pokud koncový uživatel nesouhlasí s online aktualizacemi.
 
-     Visual Basic pouze pro vývojáře:
+     Jenom pro vývojáře Visual Basic:
 
-    1. V **Průzkumníka řešení**, klikněte na tlačítko **ConsentDialog**.
+    1. V **Průzkumník řešení**klikněte na **ConsentDialog**.
 
-    2. Na **projektu** nabídky, klikněte na tlačítko **přidat modul**a potom klikněte na tlačítko **přidat**.
+    2. V nabídce **projekt** klikněte na **Přidat modul**a pak klikněte na **Přidat**.
 
-    3. V *Module1.vb* soubor kódu, přidejte následující kód.
+    3. Do souboru kódu *Module1. vb* přidejte následující kód.
 
         [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]
 
-    4. Na **projektu** nabídky, klikněte na tlačítko **Vlastnosti ConsentDialog**a potom klikněte na tlačítko **aplikace** kartu.
+    4. V nabídce **projekt** klikněte na **vlastnosti ConsentDialog**a pak klikněte na kartu **aplikace** .
 
-    5. Zrušte zaškrtnutí políčka **Povolit aplikační framework**.
+    5. Zrušte kontrolu **Povolení aplikační architektury**.
 
-    6. V **spouštěcí objekt** rozevírací nabídky vyberte **Module1**.
+    6. V rozevírací nabídce **spouštěcí objekt** vyberte možnost **Module1**.
 
        > [!NOTE]
-       > Zakázání aplikační platformu zakáže funkce, jako jsou vizuální styly Windows XP, události aplikace, úvodní obrazovka, jedna instance aplikace a další. Další informace najdete v tématu [stránka aplikace, Návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
+       > Zakázání rozhraní Application Framework zakáže funkce, jako jsou například vizuální styly systému Windows XP, události aplikace, úvodní obrazovka, aplikace s jednou instancí a další. Další informace naleznete na [stránce aplikace, Návrhář projektu (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
 
-       Visual C# pouze pro vývojáře:
+       Pouze pro vývojáře v jazyce Visual C#:
 
-       Otevřít *Program.cs* soubor kódu a přidejte následující kód.
+       Otevřete soubor kódu *program.cs* a přidejte následující kód.
 
        [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]
 
-26. Na **sestavení** nabídky, klikněte na tlačítko **BuildSolution**.
+26. V nabídce **sestavení** klikněte na **BuildSolution**.
 
-## <a name="create-the-custom-bootstrapper-package"></a>Vytvoření balíčku vlastní bootstrapperu
- Koncovým uživatelům zobrazit osobní údaje, můžete vytvořit vlastní balíček zaváděcího nástroje pro dialogové okno souhlasu aktualizace aplikace a zahrnout ho jako předpoklad ve všech vašich aplikací ClickOnce.
+## <a name="create-the-custom-bootstrapper-package"></a>Vytvoření vlastního balíčku zaváděcího nástroje
+ Pro zobrazení výzvy k zadání ochrany osobních údajů koncovým uživatelům můžete vytvořit vlastní balíček zaváděcího nástroje pro aplikaci dialogu souhlasu s aktualizací a zahrnout ho jako požadavek ve všech aplikacích ClickOnce.
 
- Tento postup ukazuje, jak vytvořit vlastní balíček zaváděcího nástroje tak, že vytvoříte následující dokumenty:
+ Tento postup ukazuje, jak vytvořit vlastní balíček zaváděcího nástroje vytvořením následujících dokumentů:
 
-- A *product.xml* soubor manifestu pro popis obsahu zaváděcího nástroje.
+- Soubor manifestu *product.xml* pro popis obsahu zaváděcího nástroje.
 
-- A *package.xml* soubor manifestu do seznamu lokalizace specifických aspektů vašeho balíčku, jako jsou řetězce a licenční podmínky pro software.
+- *package.xml* soubor manifestu pro vypsání aspektů, které jsou specifické pro lokalizaci, například řetězců a licenčních podmínek pro software.
 
-- Dokument pro licenční podmínky pro software.
+- Dokument pro licenční smlouvy k softwaru
 
-#### <a name="step-1-to-create-the-bootstrapper-directory"></a>Krok 1: K vytvoření složky zaváděcího nástroje
+#### <a name="step-1-to-create-the-bootstrapper-directory"></a>Krok 1: Vytvoření adresáře zaváděcího nástroje
 
-1. Vytvořte adresář **UpdateConsentDialog** v *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*.
-
-    > [!NOTE]
-    > Budete potřebovat oprávnění správce k vytvoření této složky.
-
-2. V *UpdateConsentDialog* adresáře, vytvořte podadresář s názvem *en*.
+1. V *%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*vytvořte adresář s názvem **UpdateConsentDialog** .
 
     > [!NOTE]
-    > Vytvořte nový adresář pro každé národní prostředí. Například můžete přidat podadresáře pro národní prostředí cs a Německo. Tyto adresáře by obsahoval francouzštinu a češtinu řetězce a jazykových sad v případě potřeby.
+    > K vytvoření této složky možná budete potřebovat oprávnění správce.
 
-#### <a name="step-2-to-create-the-productxml-manifest-file"></a>Krok 2: Chcete-li vytvořit soubor manifestu product.xml
+2. V adresáři *UpdateConsentDialog* vytvořte podadresář s názvem *EN*.
+
+    > [!NOTE]
+    > Vytvořte nový adresář pro každé národní prostředí. Můžete například přidat podadresáře pro národní prostředí fr a de. Tyto adresáře by v případě potřeby obsahovaly francouzské a německé řetězce a jazykové sady.
+
+#### <a name="step-2-to-create-the-productxml-manifest-file"></a>Krok 2: vytvoření souboru manifestu product.xml
 
 1. Vytvořte textový soubor s názvem *product.xml*.
 
-2. V *product.xml* přidejte následující kód XML. Ujistěte se, že nedojde k přepsání existujícího kódu XML.
+2. V *product.xml* souboru přidejte následující kód XML. Ujistěte se, že nepřepisujete existující kód XML.
 
     ```xml
     <Product
@@ -188,13 +188,13 @@ Můžete nakonfigurovat aplikace ClickOnce automaticky aktualizovat při sestave
     </Product>
     ```
 
-3. Uložte soubor do adresáře UpdateConsentDialog zaváděcího nástroje.
+3. Uložte soubor do adresáře zaváděcího nástroje UpdateConsentDialog.
 
-#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>Krok 3: Chcete-li vytvořit soubor manifestu package.xml a licenční podmínky pro software
+#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>Krok 3: vytvoření souboru manifestu package.xml a licenčních podmínek pro software
 
 1. Vytvořte textový soubor s názvem *package.xml*.
 
-2. V *package.xml* přidejte následující kód XML k definování národní prostředí a zahrnují licenční podmínky pro software. Ujistěte se, že nedojde k přepsání existujícího kódu XML.
+2. V *package.xml* souboru přidejte následující kód XML pro definování národního prostředí a zahrnutí licenčních podmínek pro software. Ujistěte se, že nepřepisujete existující kód XML.
 
     ```xml
     <Package
@@ -216,91 +216,91 @@ Můžete nakonfigurovat aplikace ClickOnce automaticky aktualizovat při sestave
     </Package>
     ```
 
-3. Uložte soubor do podadresáře en v UpdateConsentDialog zaváděcí nástroj.
+3. Uložte soubor do podadresáře en v adresáři zaváděcího nástroje UpdateConsentDialog.
 
-4. Vytvořit dokument s názvem *eula.rtf* pro licenční podmínky pro software.
-
-    > [!NOTE]
-    > Licenční podmínky pro software by měl obsahovat informace o licencích, záruk, závazků a místními zákony. Tyto soubory by měl být specifické pro národní prostředí, proto se ujistěte, že je soubor uložen ve formátu, který podporuje znaky znakové sady MBCS a UNICODE. Vyhledejte právního oddělení o obsah licenčních podmínek softwaru.
-
-5. Uložte dokument do podadresáře en v *UpdateConsentDialog* adresáře zaváděcího nástroje.
-
-6. V případě potřeby vytvořte novou *package.xml* manifest souboru a nový *eula.rtf* dokumentu licenční podmínky pro software pro každé národní prostředí. Pokud jste vytvořili pro národní prostředí cs a de, vytvořte samostatné soubory manifestu package.xml a licenční podmínky pro software a uložit je do podadresáře fr a Německo.
-
-## <a name="set-the-update-consent-application-as-a-prerequisite"></a>Nastavení aktualizace aplikace souhlasu jako předpoklad
- V sadě Visual Studio můžete nastavit aplikaci souhlas aktualizace jako předpoklad.
-
-#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Nastavení aktualizace souhlasu aplikace jako předpoklad
-
-1. V **Průzkumníka řešení**, klikněte na název vaší aplikace, kterou chcete nasadit.
-
-2. Na **projektu** nabídky, klikněte na tlačítko *ProjectName* **vlastnosti**.
-
-3. Klikněte na tlačítko **publikovat** stránce a potom klikněte na tlačítko **požadavky**.
-
-4. Vyberte **dialogové okno aktualizace**.
+4. Pro licenční podmínky pro software vytvořte dokument nazvaný *EULA. RTF* .
 
     > [!NOTE]
-    > Budete muset zavřít a znovu otevřete Visual Studio zobrazíte dialogové okno aktualizace souhlas v dialogovém okně požadavky.
+    > Licenční podmínky pro software by měly obsahovat informace o licencování, zárukách, závazcích a místních zákonech. Tyto soubory by měly být specifické pro národní prostředí, proto se ujistěte, že je soubor uložený ve formátu, který podporuje znakové sady MBCS nebo UNICODE. Informace o obsahu licenčních podmínek pro software získáte v rámci svého právního oddělení.
+
+5. Uložte dokument do podadresáře en v adresáři zaváděcího nástroje *UpdateConsentDialog* .
+
+6. V případě potřeby vytvořte nový soubor manifestu *package.xml* a nový dokument *EULA. RTF* pro licenční podmínky pro každé národní prostředí. Pokud jste například vytvořili podadresáře pro národní prostředí fr a de, vytvoříte samostatné soubory manifestu package.xml a licenční smlouvy na software a uložíte je do podadresářů fr a de.
+
+## <a name="set-the-update-consent-application-as-a-prerequisite"></a>Nastavit aplikaci souhlasu s aktualizací jako předpoklad
+ V sadě Visual Studio můžete aplikaci pro vyjádření souhlasu s aktualizací nastavit jako nezbytnou.
+
+#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Nastavení aplikace pro vyjádření souhlasu s aktualizacemi jako předpokladu
+
+1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
+
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
+
+3. Klikněte na stránku **publikovat** a pak klikněte na **předpoklady**.
+
+4. Vyberte **dialogové okno pro vyjádření souhlasu s aktualizací**.
+
+    > [!NOTE]
+    > Je možné, že budete muset zavřít a znovu otevřít Visual Studio a zobrazit dialog souhlasu s aktualizací v dialogovém okně předpoklady.
 
 5. Klikněte na **OK**.
 
 ## <a name="create-and-test-the-setup-program"></a>Vytvoření a otestování instalačního programu
- Po nastavení aplikace souhlasu aktualizace jako předpoklad pro vaši aplikaci můžete vygenerovat instalační program a zaváděcího nástroje.
+ Po nastavení aplikace pro vyjádření souhlasu s aktualizací můžete pro svou aplikaci vygenerovat instalační program a zaváděcí nástroj.
 
-#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Vytvořte a otestujte instalační program není kliknutím souhlasím
+#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Vytvoření a otestování instalačního programu kliknutím na Souhlasím
 
-1. V **Průzkumníka řešení**, klikněte na název vaší aplikace, kterou chcete nasadit.
+1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
 
-2. Na **projektu** nabídky, klikněte na tlačítko *ProjectName* **vlastnosti**.
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
-3. Klikněte na tlačítko **publikovat** stránce a potom klikněte na tlačítko **publikovat**.
+3. Klikněte na stránku **publikovat** a pak klikněte na **publikovat**.
 
-4. Pokud výstup publikování se neotevře automaticky, přejděte na výstup publikování.
+4. Pokud se výstup publikování neotevře automaticky, přejděte na výstup publikování.
 
-5. Spustit *Setup.exe* programu.
+5. Spusťte *Setup.exe* program.
 
-     Instalační program zobrazí dialogové okno souhlasu aktualizace softwaru licenční smlouvy.
+     Instalační program zobrazí licenční smlouvu s dialogovým oknem souhlasu s aktualizací.
 
-6. Přečtěte si licenční smlouvu k softwaru a potom klikněte na **přijmout**.
+6. Přečtěte si licenční smlouvu na software a pak klikněte na **přijmout**.
 
-     Dialogové okno souhlasu aktualizace aplikace se zobrazí a zobrazí následující text: Aplikace, která se chystáte nainstalovat zkontroluje nejnovější aktualizace na webu. Kliknutím na souhlasím autorizujete aplikaci vyhledat aktualizace automaticky na Internetu.
+     Zobrazí se dialogová okna souhlasu s aktualizací a zobrazí následující text: aplikace, kterou se chystáte nainstalovat, kontroluje nejnovější aktualizace na webu. Kliknutím na Souhlasím schválíte aplikaci, aby kontrolovala aktualizace automaticky na internetu.
 
 7. Ukončete aplikaci nebo klikněte na tlačítko Storno.
 
-     Aplikace zobrazí chybu: Došlo k chybě při instalaci součástí systému pro *ApplicationName*. Instalace nemůže pokračovat, dokud nebudou všechny součásti systému úspěšně nainstalovány.
+     Aplikace zobrazuje chybu: při instalaci součástí systému pro aplikaci *ApplicationName*došlo k chybě. Instalační program nemůže pokračovat, dokud nebudou všechny součásti systému úspěšně nainstalovány.
 
-8. Klikněte na tlačítko Podrobnosti a zobrazit tato chybová zpráva: Dialogové okno souhlasu na komponenty aktualizace se nezdařila instalace se následující chybová zpráva: "Automatické aktualizace nejsou povoleny." Následující součásti se nepodařilo nainstalovat: – dialogové okno souhlasu aktualizace
+8. Kliknutím na Podrobnosti zobrazíte následující chybovou zprávu: dialogové okno souhlasu aktualizace součásti se nepodařilo nainstalovat pomocí následující chybové zprávy: "smlouva automatické aktualizace nebyla přijata." Instalace následujících součástí se nezdařila: – dialog aktualizace souhlasu
 
 9. Klikněte na **Zavřít**.
 
-#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Vytvořit a otestovat instalační program kliknutím na souhlasím
+#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Vytvoření a otestování instalačního programu kliknutím na Souhlasím
 
-1. V **Průzkumníka řešení**, klikněte na název vaší aplikace, kterou chcete nasadit.
+1. V **Průzkumník řešení**klikněte na název aplikace, kterou chcete nasadit.
 
-2. Na **projektu** nabídky, klikněte na tlačítko *ProjectName* **vlastnosti**.
+2. V nabídce **projekt** klikněte na vlastnosti *ProjectName* **Properties**.
 
-3. Klikněte na tlačítko **publikovat** stránce a potom klikněte na tlačítko **publikovat**.
+3. Klikněte na stránku **publikovat** a pak klikněte na **publikovat**.
 
-4. Pokud výstup publikování se neotevře automaticky, přejděte na výstup publikování.
+4. Pokud se výstup publikování neotevře automaticky, přejděte na výstup publikování.
 
-5. Spustit *Setup.exe* programu.
+5. Spusťte *Setup.exe* program.
 
-     Instalační program zobrazí dialogové okno souhlasu aktualizace softwaru licenční smlouvy.
+     Instalační program zobrazí licenční smlouvu s dialogovým oknem souhlasu s aktualizací.
 
-6. Přečtěte si licenční smlouvu k softwaru a potom klikněte na **přijmout**.
+6. Přečtěte si licenční smlouvu na software a pak klikněte na **přijmout**.
 
-     Dialogové okno souhlasu aktualizace aplikace se zobrazí a zobrazí následující text: Aplikace, která se chystáte nainstalovat zkontroluje nejnovější aktualizace na webu. Kliknutím na souhlasím autorizujete aplikaci vyhledat aktualizace automaticky na Internetu.
+     Zobrazí se dialogová okna souhlasu s aktualizací a zobrazí následující text: aplikace, kterou se chystáte nainstalovat, kontroluje nejnovější aktualizace na webu. Kliknutím na Souhlasím schválíte aplikaci, aby kontrolovala aktualizace automaticky na internetu.
 
-7. Klikněte na tlačítko **souhlasím**a potom klikněte na tlačítko **pokračovat**.
+7. Klikněte **na Souhlasím a**potom klikněte na **pokračovat**.
 
-     Chcete-li nainstalovat spuštěním aplikace.
+     Aplikace se začne instalovat.
 
-8. Pokud se zobrazí dialogové okno aplikace provést instalaci, klikněte na tlačítko **nainstalovat**.
+8. Pokud se zobrazí dialogové okno instalace aplikace, klikněte na **nainstalovat**.
 
-## <a name="see-also"></a>Viz také:
-- [Nezbytné součásti pro nasazení aplikace](../deployment/application-deployment-prerequisites.md)
+## <a name="see-also"></a>Viz také
+- [Nezbytné součásti nasazení aplikace](../deployment/application-deployment-prerequisites.md)
 - [Vytváření balíčků bootstrapperu](../deployment/creating-bootstrapper-packages.md)
 - [Postupy: Vytvoření manifestu produktu](../deployment/how-to-create-a-product-manifest.md)
 - [Postupy: Vytvoření manifestu balíčku](../deployment/how-to-create-a-package-manifest.md)
-- [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)
+- [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)

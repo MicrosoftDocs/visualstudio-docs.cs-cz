@@ -1,5 +1,5 @@
 ---
-title: Readlinesfromfile – úloha | Dokumentace Microsoftu
+title: Úloha ReadLinesFromFile – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,30 +20,30 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6783b3e20c004e4270876dd8ee6b8b574a810d66
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158248"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Načte seznam položek z textového souboru.  
+Přečte seznam položek z textového souboru.  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry `ReadLinesFromFile` úloh.  
+ Následující tabulka popisuje parametry `ReadLinesFromFile` úkolu.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`File`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje soubor, který se má načíst. Soubor musí mít jednu položku na každý řádek.|  
-|`Lines`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje řádky čtení ze souboru.|  
+|`File`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje soubor, který se má číst. Soubor musí mít jednu položku na každém řádku.|  
+|`Lines`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje řádky načtené ze souboru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu `ReadLinesFromFile` úkolu k vytvoření položky ze seznamu do textového souboru. Čtení ze souboru položky jsou uloženy v `ItemsFromFile` kolekci položek.  
+ Následující příklad používá `ReadLinesFromFile` úlohu k vytvoření položek ze seznamu v textovém souboru. Položky načtené ze souboru jsou uloženy v `ItemsFromFile` kolekci položek.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -65,6 +65,6 @@ Načte seznam položek z textového souboru.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Úlohy](../msbuild/msbuild-tasks.md)

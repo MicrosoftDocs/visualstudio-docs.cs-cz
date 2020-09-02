@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Dokumentace Microsoftu
+title: 'IDebugBreakpointChecksumRequest2:: getchecksum | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bff00b5cbe0d59d3c7515d0a384746cd9303097c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158828"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte dokument kontrolního součtu pro zarážku požadavek zadaný jedinečný identifikátor algoritmu kontrolního součtu použít.  
+Načte kontrolní součet dokumentu pro požadavek zarážky, který má přiřazen jedinečný identifikátor algoritmu kontrolního součtu, který se má použít.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ public int GetChecksum(
   
 #### <a name="parameters"></a>Parametry  
  `guidAlgorithm`  
- [in] Jedinečný identifikátor algoritmu kontrolního součtu.  
+ pro Jedinečný identifikátor algoritmu kontrolního součtu  
   
  `pChecksumData`  
- [out] Kontrolní součet dokumentu pro požadavek zarážku.  
+ mimo Kontrolní součet dokumentu pro požadavek na zarážku  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z uživatelského rozhraní.  

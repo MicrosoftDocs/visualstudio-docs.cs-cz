@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetDebugProperty | Dokumentace Microsoftu
+title: 'IDebugProgram2:: GetDebugProperty – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 29b86a1aa144e553b126445a865330a8edb786ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187901"
 ---
 # <a name="idebugprogram2getdebugproperty"></a>IDebugProgram2::GetDebugProperty
@@ -40,15 +40,15 @@ int GetDebugProperty( 
   
 #### <a name="parameters"></a>Parametry  
  `ppProperty`  
- [out] Vrátí [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objekt, který reprezentuje vlastnosti programu.  
+ mimo Vrátí objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) , který představuje vlastnosti programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnosti vrácený touto metodou jsou specifické pro program. Pokud program musí vracet víc než jednu vlastnost, pak bude [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objekt vrácený touto metodou je kontejner další vlastnosti a volání [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) metoda vrátí hodnotu seznam všech vlastností.  
+ Vlastnosti vrácené touto metodou jsou specifické pro program. Pokud program potřebuje vrátit více než jednu vlastnost, pak objekt [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) vrácený touto metodou je kontejnerem dalších vlastností a volání metody [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) vrátí seznam všech vlastností.  
   
- Program může vystavit libovolný počet a typ další vlastnosti, které mohou být vyjadřuje se pomocí `IDebugProperty2` rozhraní. Integrované vývojové prostředí se může zobrazit vlastnosti další program přes uživatelské rozhraní prohlížeče obecná vlastnost.  
+ Program může vystavit libovolný počet a typ dalších vlastností, které mohou být popsány prostřednictvím `IDebugProperty2` rozhraní. Integrované vývojové prostředí (IDE) může zobrazit další vlastnosti programu prostřednictvím uživatelského rozhraní prohlížeče obecných vlastností.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

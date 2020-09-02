@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Dokumentace Microsoftu
+title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b67ccf926267e3475a43d7f09bf3ccb361dc8484
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159293"
 ---
-# <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
+# <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, jaké informace se mají načíst o pole zpětný překlad.  
+Určuje informace, které mají být načteny do pole zpětného překladu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_DISASSEMBLY_STREAM_FIELDS {   
@@ -65,60 +65,60 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS { 
   
 ## <a name="members"></a>Členové  
  DSF_ADDRESS  
- Inicializace/použít `bstrAddress` pole.  
+ Inicializujte nebo použijte `bstrAddress` pole.  
   
  DSF_ADDRESSOFFSET  
- Inicializace/použít `bstrAddressOffset` pole.  
+ Inicializujte nebo použijte `bstrAddressOffset` pole.  
   
  DSF_CODEBYTES  
- Inicializace/použít `bstrCodeBytes` pole.  
+ Inicializujte nebo použijte `bstrCodeBytes` pole.  
   
  DSF_OPCODE  
- Inicializace/použít `bstrOpCode` pole.  
+ Inicializujte nebo použijte `bstrOpCode` pole.  
   
  DSF_OPERANDS  
- Inicializace/použít `bstrOperands` pole.  
+ Inicializujte nebo použijte `bstrOperands` pole.  
   
  DSF_SYMBOL  
- Inicializace/použít `bstrSymbol` pole.  
+ Inicializujte nebo použijte `bstrSymbol` pole.  
   
  DSF_CODELOCATIONID  
- Inicializace/použít `uCodeLocationId` pole.  
+ Inicializujte nebo použijte `uCodeLocationId` pole.  
   
  DSF_POSITION  
- Inicializace/použít `posBeg` a `posEnd` pole.  
+ Inicializujte nebo použijte `posBeg` `posEnd` pole a.  
   
  DSF_DOCUMENTURL  
- Inicializace/použít `bstrDocumentUrl` pole.  
+ Inicializujte nebo použijte `bstrDocumentUrl` pole.  
   
  DSF_BYTEOFFSET  
- Inicializace/použít `dwByteOffset` pole.  
+ Inicializujte nebo použijte `dwByteOffset` pole.  
   
  DSF_FLAGS  
- Inicializace/použít `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) pole.  
+ Inicializujte nebo použijte `dwFlags` pole ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)).  
   
  DSF_OPERANDS_SYMBOLS  
- Zahrnout názvy symbolů v `bstrOperands` pole.  
+ Do pole zahrňte názvy symbolů `bstrOperands` .  
   
  DSF_ALL  
- Určuje všechna pole pro datový proud zpětný překlad.  
+ Určuje všechna pole pro datový proud zpětného překladu.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako parametr [čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) indikace polí s [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury mají být inicializovány.  
+ Předán jako parametr metodě [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) k určení, která pole struktury [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) mají být inicializována.  
   
- Používá pro `dwFields` člena `DisassemblyData` struktury k označení pole, která se používá a je platný vrátila strukturu.  
+ Používá se pro `dwFields` člena `DisassemblyData` struktury k označení, která pole se používají a jsou platná při vrácení struktury.  
   
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [Pro čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
+ [Oprávnění](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
  [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

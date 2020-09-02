@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::FindAlias | Dokumentace Microsoftu
+title: 'IDebugBinder3:: FindAlias | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 47aaaec73d2c364e974b7430335404bf8caf406c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68142970"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tato metoda vyhledá alias, název. Všechny aliasy to bude hledat v programu.  
+Tato metoda vyhledá alias s daným názvem. Prohledají se všechny aliasy v programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ int FindAlias(
   
 #### <a name="parameters"></a>Parametry  
  `pcstrName`  
- [in] Název alias se najít.  
+ pro Název hledaného aliasu.  
   
  `ppAlias`  
- [out] Alias najít (pokud existuje) reprezentována [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) rozhraní.  
+ mimo Byl nalezen alias (pokud existuje) reprezentovaný rozhraním [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` (Pokud není nalezena alias) nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` (Pokud se alias nenalezne) nebo kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda inicializuje cílového objektu na hodnotu null, před voláním; potom testy pro hodnotu null, následně k určení, zda byl nalezen alias.  
+ Tato metoda inicializuje cílový objekt na hodnotu null před voláním; potom otestuje hodnotu null a následně určí, zda byl alias nalezen.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   

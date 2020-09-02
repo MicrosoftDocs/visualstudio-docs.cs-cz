@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a1e8118faa743398271fb282a2603aab5fcd76b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62950651"
 ---
 # <a name="nosplash-devenvexe"></a>/NoSplash (devenv.exe)
 
-Zabrání zobrazení úvodní obrazovky.
+Zabraňuje zobrazení úvodní obrazovky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,21 +33,21 @@ devenv /NoSplash [File1[ FileN]...]
 
 - *Soubor1*
 
-  Nepovinný parametr. Soubor otevřít v existující instanci sady Visual Studio. Pokud neexistuje žádná instance sady Visual Studio, vytvoří se nová instance se zjednodušeným rozložením okna a nástroj otevře *soubor 1* v nové instanci.
+  Nepovinný parametr. Soubor, který se má otevřít v existující instanci sady Visual Studio. Pokud žádná instance sady Visual Studio neexistuje, vytvoří se nová instance se zjednodušeným rozložením okna a nástroj otevře v nové instanci příkaz *Soubor1* .
 
-- *Soubor N*
+- *FileN*
 
-  Nepovinný parametr. Jeden nebo více dalších souborů, které chcete otevřít v existující instanci sady Visual Studio.
+  Nepovinný parametr. Jeden nebo více dalších souborů, které mají být otevřeny v existující instanci aplikace Visual Studio.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento přepínač skryje úvodní obrazovku. Ponechání tohoto přepínače způsobí, že se zobrazí úvodní obrazovka. Pokud chcete dále prozkoumat úvodní obrazovku (například zkontrolovat ikonu produktu VSPackage), použijte přepínač [/Splash.](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
+Tento přepínač skryje úvodní obrazovku. Když necháte tento přepínač zapnutý, zobrazí se úvodní obrazovka. Chcete-li si prohlédnout úvodní obrazovku (například pro kontrolu ikony produktu VSPackage), použijte přepínač [/Splash](../../extensibility/devenv-command-line-switches-for-vspackage-development.md) .
 
-Přepínač `/NoSplash` lze kombinovat s jinými přepínači, například [/Run](run-devenv-exe.md) nebo [/DebugExe](debugexe-devenv-exe.md).
+`/NoSplash`Přepínač lze kombinovat s jinými přepínači, například [/Run](run-devenv-exe.md) nebo [/debugexe otevře zvolený](debugexe-devenv-exe.md).
 
 ## <a name="example"></a>Příklad
 
-Všechny tři příklady otevřít ide bez zobrazení úvodní obrazovky. Druhý příklad také zkompiluje zadané řešení a spustí vytvořený spustitelný soubor. Třetí příklad otevře zadaný spustitelný soubor pro ladění v ide.
+Všechny tři z příkladů otevřou rozhraní IDE bez zobrazování úvodní obrazovky. Druhý příklad také zkompiluje zadané řešení a spustí sestavený spustitelný soubor. Třetí příklad otevře zadaný spustitelný soubor pro ladění v integrovaném vývojovém prostředí.
 
 ```shell
 devenv /nosplash
@@ -60,4 +60,4 @@ devenv /nosplash /debugexe MySolution.exe
 ## <a name="see-also"></a>Viz také
 
 - [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
-- [Přepínače příkazového řádku Devenv pro vývoj vbalíčku VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
+- [Přepínače příkazového řádku nástroje devenv pro vývoj pro VSPackage](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)

@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3307fc124f50e8c9f73749293c36f53be36c5e3c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71252452"
 ---
 # <a name="create-clickonce-applications-for-others-to-deploy"></a>Vytváření aplikací ClickOnce k nasazení dalšími osobami
@@ -50,13 +50,13 @@ Ne všichni vývojáři, kteří vytvářejí nasazení ClickOnce, naplánují n
  I v případě, že vývojář a zákazník souhlasí, že by měl podepsat manifest aplikace tím, že má za to, že má za to, že se bude vztahovat i na nasazení důvěryhodné aplikace, vyvolá další problémy, které obklopují identitu aplikace. (Další informace o této funkci najdete v tématu [Přehled nasazení důvěryhodných aplikací](../deployment/trusted-application-deployment-overview.md).) Řekněme, že Adventure Works chce nakonfigurovat své klientské počítače tak, aby každá aplikace, kterou jim poskytuje Microsoft Corporation, běžela s úplným vztahem důvěryhodnosti. Pokud Adventure Works podepíše manifest nasazení, pak ClickOnce použije bezpečnostní podpis společnosti Adventure Worker k určení úrovně důvěryhodnosti aplikace.
 
 ## <a name="create-customer-deployments-by-using-application-manifest-for-trust"></a>Vytváření zákaznických nasazení pomocí manifestu aplikace pro vztah důvěryhodnosti
- ClickOnce v .NET Framework 3,5 obsahuje novou funkci, která vývojářům a zákazníkům poskytuje nové řešení do scénáře, jak by měly být manifesty podepsány. Manifest aplikace ClickOnce podporuje nový element s názvem `<useManifestForTrust>` , který vývojářům umožňuje označit, že digitální podpis manifestu aplikace je vhodné použít k rozhodování o důvěryhodnosti. Vývojář používá nástroje pro vytváření balíčků ClickOnce, jako je *Mage. exe*, *MageUI. exe*a Visual Studio – pro zahrnutí tohoto prvku do manifestu aplikace a také pro vložení názvu vydavatele a názvu aplikace v manifestu.
+ ClickOnce v .NET Framework 3,5 obsahuje novou funkci, která vývojářům a zákazníkům poskytuje nové řešení do scénáře, jak by měly být manifesty podepsány. Manifest aplikace ClickOnce podporuje nový element s názvem `<useManifestForTrust>` , který vývojářům umožňuje označit, že digitální podpis manifestu aplikace je vhodné použít k rozhodování o důvěryhodnosti. Vývojář používá nástroje pro vytváření balíčků ClickOnce, jako je *Mage.exe*, *MageUI.exe*a Visual Studio – pro zahrnutí tohoto prvku do manifestu aplikace a také pro vložení názvu vydavatele a názvu aplikace do manifestu.
 
- Při použití `<useManifestForTrust>`nástroje nemusí být manifest nasazení podepsán certifikátem Authenticode vydaným certifikační autoritou. Místo toho je možné ho podepsat pomocí certifikátu podepsaného svým držitelem. Certifikát podepsaný svým držitelem je vygenerovaný zákazníkem nebo vývojářem pomocí standardních nástrojů .NET Framework SDK a pak se aplikuje na manifest nasazení pomocí standardních nástrojů pro nasazení ClickOnce. Další informace najdete v tématu [Makecert](/windows/desktop/SecCrypto/makecert).
+ Při použití nástroje `<useManifestForTrust>` nemusí být manifest nasazení podepsán certifikátem Authenticode vydaným certifikační autoritou. Místo toho je možné ho podepsat pomocí certifikátu podepsaného svým držitelem. Certifikát podepsaný svým držitelem je vygenerovaný zákazníkem nebo vývojářem pomocí standardních nástrojů .NET Framework SDK a pak se aplikuje na manifest nasazení pomocí standardních nástrojů pro nasazení ClickOnce. Další informace najdete v tématu [Makecert](/windows/desktop/SecCrypto/makecert).
 
  Použití certifikátu podepsaného svým držitelem pro manifest nasazení přináší několik výhod. Vyloučením nutnosti, aby zákazník získal nebo vytvořil vlastní certifikát Authenticode, `<useManifestForTrust>` zjednodušuje nasazení pro zákazníka, zatímco vývojářům umožňuje zachovat svoji vlastní identitu na základě vaší aplikace. Výsledkem je sada podepsaných nasazení, která jsou bezpečnější a mají jedinečné identity aplikací. Tím se eliminuje možný konflikt, ke kterému může dojít při nasazování stejné aplikace na více zákazníků.
 
- Podrobné informace o tom, jak vytvořit nasazení ClickOnce s `<useManifestForTrust>` povoleným, najdete v tématu [Názorný postup: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)značkách.
+ Podrobné informace o tom, jak vytvořit nasazení ClickOnce s `<useManifestForTrust>` povolenou, najdete v tématu [Návod: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o značkách](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).
 
 ### <a name="how-application-manifest-for-trust-works-at-run-time"></a>Jak funguje manifest aplikace pro vztah důvěryhodnosti v době běhu
  Chcete-li získat lepší informace o použití manifestu aplikace pro vztah důvěryhodnosti v době běhu, vezměte v úvahu následující příklad. Aplikace ClickOnce, která cílí na .NET Framework 3,5, je vytvořena společností Microsoft. Manifest aplikace používá `<useManifestForTrust>` prvek a je podepsán společností Microsoft. Adventure Works podepisuje manifest nasazení pomocí certifikátu podepsaného svým držitelem. Klienti Adventure Works jsou nakonfigurováni tak, aby důvěřovali všem aplikacím podepsaným společností Microsoft.
@@ -73,7 +73,7 @@ Ne všichni vývojáři, kteří vytvářejí nasazení ClickOnce, naplánují n
 
  Jednou z nevýhod této metody je čas a výdaje, které jsou potřeba k její implementaci. I když taková služba může být sestavena pomocí nástrojů, které jsou k dispozici v sadě .NET Framework SDK, přidá k životnímu cyklu produktu další dobu vývoje.
 
- Jak bylo popsáno dříve v tomto tématu, Další nevýhodou je, že každá verze aplikace zákazníka bude mít stejnou identitu aplikace, což by mohlo vést ke konfliktům. Pokud se to týká, může vývojář změnit pole název, které se používá při generování manifestu nasazení, aby každou aplikaci měl jedinečný název. Tím se vytvoří samostatná identita pro každou verzi aplikace a odstraní se případné konflikty identity. Toto pole odpovídá `-Name` argumentu Mage. exe a do pole **název** na kartě **název** v MageUI. exe.
+ Jak bylo popsáno dříve v tomto tématu, Další nevýhodou je, že každá verze aplikace zákazníka bude mít stejnou identitu aplikace, což by mohlo vést ke konfliktům. Pokud se to týká, může vývojář změnit pole název, které se používá při generování manifestu nasazení, aby každou aplikaci měl jedinečný název. Tím se vytvoří samostatná identita pro každou verzi aplikace a odstraní se případné konflikty identity. Toto pole odpovídá `-Name` argumentu pro Mage.exe a do pole **název** na kartě **název** v MageUI.exe.
 
  Řekněme například, že vývojář vytvořil aplikaci s názvem Application1. Namísto vytvoření jediného nasazení s polem s názvem nastaveným na Application1 může vývojář vytvořit několik nasazení s variantou specifickou pro konkrétního zákazníka, jako je například Application1-Customer, Application1-CustomerB atd.
 
@@ -97,7 +97,7 @@ Ne všichni vývojáři, kteří vytvářejí nasazení ClickOnce, naplánují n
 
  Nevýhodou této metody je, že vyžaduje, aby zákazník nainstaloval nástroje .NET Framework SDK a aby měl vývojáře nebo správce systému, který je kvalifikovaný při jejich používání. Někteří zákazníci si můžou vyžádat řešení, které vyžaduje malé nebo žádné technické úsilí na jejich straně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Nasazení aplikací ClickOnce pro testovací a produkční servery bez opětovného podepsání](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)
 - [Návod: Ruční nasazení aplikace ClickOnce](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [Návod: Ruční nasazení aplikace ClickOnce, která nevyžaduje Opětovné podepsání a které zachovává informace o značkách](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)

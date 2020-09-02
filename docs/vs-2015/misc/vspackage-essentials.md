@@ -1,5 +1,5 @@
 ---
-title: VSPackage Essentials | Microsoft Docs
+title: Sada VSPackage Essentials | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,18 +10,18 @@ ms.assetid: 6c72a73c-5d2a-4052-a62f-89b5847c937c
 caps.latest.revision: 12
 manager: jillfra
 ms.openlocfilehash: 7b9f8dc80f7985e7b9b7545dd0c8e78d748cd4d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62953761"
 ---
-# <a name="vspackage-essentials"></a>VSPackage Essentials
-Rozšíření VSPackages jsou softwarové moduly, které společně tvoří a rozšíření sady Visual Studio s prvky uživatelského rozhraní, služby, projekty, editory a návrháře. Rozšíření VSPackages jsou centrální architektury jednotky [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] samotné je zapsán většinou jako kolekce rozšíření VSPackages.  
+# <a name="vspackage-essentials"></a>Základy VSPackage
+VSPackage jsou softwarové moduly, které tvoří a rozšířily Visual Studio s prvky uživatelského rozhraní, službami, projekty, editory a návrháři. Sady VSPackage jsou ústřední jednotkou architektury [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sám sebe je zapsáno hlavně jako kolekce VSPackage.  
   
- Chcete-li vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšiřitelnosti aplikace, nejprve vytvoříte VSPackage. Poté můžete přidat příkazy nabídky, okna nástrojů, okna dokumentu nebo jiného kódu rozšířit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí.  
+ Chcete-li vytvořit [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozšiřující aplikaci, je třeba nejprve vytvořit VSPackage. Pak můžete přidat příkazy nabídky, okna nástrojů, okna dokumentů nebo jiný kód pro rozšiřování [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní IDE.  
   
- Použití rozšíření VSPackages, musíte nainstalovat Visual Studio SDK. Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+ Chcete-li použít VSPackage, je nutné nainstalovat sadu Visual Studio SDK. Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

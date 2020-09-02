@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a7ecabc00f37cb199f203bcd71a1b72bdbfbe1a4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594653"
 ---
 # <a name="how-to--with-text-templates"></a>Postupy pro textové šablony
@@ -29,18 +29,18 @@ Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak v
 - Generování některých souborů kódu z textových šablon. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md) a [Jaký je nejlepší způsob, jak začít psát šablonu?](#starting).
 
 ### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>Generovat soubory za běhu a předávání dat do šablony
- V době běhu moje aplikace generuje textové soubory, jako jsou sestavy, které obsahují kombinaci standardního textu a dat. Chci se vyhnout psaní stovek `write`ch příkazů.
+ V době běhu moje aplikace generuje textové soubory, jako jsou sestavy, které obsahují kombinaci standardního textu a dat. Chci se vyhnout psaní stovek `write` příkazů.
 
 - Přidejte do projektu textovou šablonu modulu runtime. Tato šablona vytvoří třídu ve vašem kódu, kterou lze vytvořit a použít k vygenerování textu. Do této třídy můžete předat data v parametrech konstruktoru. Další informace najdete v tématu [generování textu v době běhu s textovými šablonami T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-- Pokud chcete generovat ze šablon, které jsou k dispozici pouze v době běhu, můžete použít standardní textové šablony. Pokud píšete rozšíření sady Visual Studio, můžete vyvolat službu šablonování textu. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md). V jiných kontextech můžete použít modul text šablonování. Další informace najdete v tématu <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
+- Pokud chcete generovat ze šablon, které jsou k dispozici pouze v době běhu, můžete použít standardní textové šablony. Pokud píšete rozšíření sady Visual Studio, můžete vyvolat službu šablonování textu. Další informace najdete v tématu [vyvolání transformace textu v rozšíření vs](../modeling/invoking-text-transformation-in-a-vs-extension.md). V jiných kontextech můžete použít modul text šablonování. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
 
-     K předání parametrů těmto šablonám Použijte direktivu \<#@parameter# >. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
+     \<#@parameter#>K předání parametrů těmto šablonám Použijte direktivu. Další informace naleznete v tématu [direktiva parametru T4](../modeling/t4-parameter-directive.md).
 
 ### <a name="read-another-project-file-from-a-template"></a>Načíst jiný soubor projektu ze šablony
  Chcete-li číst soubor ze stejného projektu sady Visual Studio jako šablonu:
 
-- Do direktivy `<#@template#>` vložte `hostSpecific="true"`.
+- Vložte `hostSpecific="true"` do `<#@template#>` direktivy.
 
      V kódu použijte `this.Host.ResolvePath(filename)` k získání úplné cesty k souboru.
 
@@ -48,7 +48,7 @@ Textové šablony v aplikaci Visual Studio poskytují užitečný způsob, jak v
 
 Pokud metody již existují, například v třídách .NET:
 
-- Pomocí direktivy \<#@assembly# > načtěte sestavení a pomocí \<#@import# > nastavte kontext oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
+- Použijte \<#@assembly#> direktivu pro načtení sestavení a použijte \<#@import#> k nastavení kontextu oboru názvů. Další informace najdete v tématu [direktiva T4 pro import](../modeling/t4-import-directive.md).
 
    Pokud často používáte stejnou sadu direktiv sestavení a importu, zvažte vytvoření procesoru direktiv. V každé šabloně můžete vyvolat procesor direktiv, který může načíst sestavení a soubory modelu a nastavit kontext oboru názvů. Další informace najdete v tématu [vytváření vlastních procesorů pro direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
@@ -56,13 +56,13 @@ Pokud píšete metody sami:
 
 - Pokud píšete šablonu textu za běhu, napište definici částečné třídy, která má stejný název jako textová šablona za běhu. Do této třídy přidejte další metody.
 
-- Napsat řídicí blok funkce třídy `<#+ ... #>`, ve kterém lze deklarovat metody, vlastnosti a soukromé třídy. Je-li šablona textu kompilována, je transformována na třídu. Standardní řídicí bloky `<#...#>` a text jsou transformovány na jedinou metodu a bloky funkcí třídy jsou vloženy jako samostatné členy. Další informace naleznete v tématu [ovládací bloky textové šablony](../modeling/text-template-control-blocks.md).
+- Zapište řídicí blok funkcí třídy, `<#+ ... #>` ve kterém lze deklarovat metody, vlastnosti a soukromé třídy. Je-li šablona textu kompilována, je transformována na třídu. Standardní řídicí bloky `<#...#>` a text jsou transformovány na jedinou metodu a bloky funkcí třídy jsou vloženy jako samostatné členy. Další informace naleznete v tématu [ovládací bloky textové šablony](../modeling/text-template-control-blocks.md).
 
    Metody definované jako funkce třídy mohou také obsahovat vložené textové bloky.
 
-   Zvažte umístění funkcí třídy do samostatného souboru, který můžete `<#@include#>` do jednoho nebo více souborů šablon.
+   Zvažte umístění funkcí třídy do samostatného souboru, který lze použít `<#@include#>` do jednoho nebo více souborů šablon.
 
-- Zapište metody v samostatném sestavení (knihovny tříd) a zavolejte je ze šablony. Použijte direktivu `<#@assembly#>` pro načtení sestavení a `<#@import#>` k nastavení kontextu oboru názvů. Všimněte si, že pokud chcete sestavení znovu sestavit během ladění, může být nutné zastavit a restartovat aplikaci Visual Studio. Další informace naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).
+- Zapište metody v samostatném sestavení (knihovny tříd) a zavolejte je ze šablony. Pomocí `<#@assembly#>` direktivy načtěte sestavení a `<#@import#>` nastavte kontext oboru názvů. Všimněte si, že pokud chcete sestavení znovu sestavit během ladění, může být nutné zastavit a restartovat aplikaci Visual Studio. Další informace naleznete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).
 
 ### <a name="generate-many-files-from-one-model-schema"></a>Generování mnoha souborů z jednoho schématu modelu
  Pokud často generujete soubory z modelů, které mají stejné schéma XML nebo databáze:
@@ -78,7 +78,7 @@ Pokud píšete metody sami:
      Další informace najdete v tématu [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md) a [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="get-data-from-visual-studio"></a>Získat data ze sady Visual Studio
- Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte atribut `hostSpecific` a načtěte `EnvDTE` sestavení. Příklad:
+ Chcete-li použít služby poskytované v aplikaci Visual Studio, nastavte `hostSpecific` atribut a načtěte `EnvDTE` sestavení. Příklad:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -94,15 +94,15 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="execute-text-templates-in-the-build-process"></a>Spouštění textových šablon v procesu sestavení
 
-- Další informace najdete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
+- Další informace naleznete v tématu [generování kódu v procesu sestavení](../modeling/code-generation-in-a-build-process.md).
 
 ## <a name="more-general-questions"></a>Obecnější otázky
 
-### <a name="starting"></a>Jaký je nejlepší způsob, jak začít psát textovou šablonu?
+### <a name="what-is-the-best-way-to-start-writing-a-text-template"></a><a name="starting"></a> Jaký je nejlepší způsob, jak začít psát textovou šablonu?
 
 1. Zapište konkrétní příklad vygenerovaného souboru.
 
-2. Převeďte ji na textovou šablonu vložením direktivy `<#@template #>` a direktiv a kódu, které jsou požadovány pro načtení vstupního souboru nebo modelu.
+2. Převeďte ji na textovou šablonu vložením `<#@template #>` direktivy a direktiv a kódu, které jsou požadovány pro načtení vstupního souboru nebo modelu.
 
 3. Postupně nahradí části souboru pomocí výrazů a bloků kódu.
 

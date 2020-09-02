@@ -1,5 +1,5 @@
 ---
-title: Pracovní prostory v sadě Visual Studio | Dokumentace Microsoftu
+title: Pracovní prostory v aplikaci Visual Studio | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,58 +8,58 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 011781b434c4d005e473c5f97c60a9269dc5d034
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62952760"
 ---
 # <a name="workspaces"></a>Pracovní prostory
 
-Pracovní prostor je, jak Visual Studio představuje jakoukoli kolekci souborů v [otevřít složku](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md), a je reprezentována <xref:Microsoft.VisualStudio.Workspace.IWorkspace> typu. Samostatně pracovní prostor nerozumí obsah nebo funkcí týkajících se soubory ve složce. Místo toho poskytuje sadu rozhraní API pro funkce a rozšíření vytvářet a využívat data, která ostatní můžou fungovat po Obecné. Producenti jsou složené prostřednictvím [Managed Extensibility Framework](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (MEF) pomocí různých atributů exportu.
+Pracovní prostor je způsob, jakým Visual Studio představuje libovolnou kolekci souborů v [otevřené složce](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)a je reprezentovaná <xref:Microsoft.VisualStudio.Workspace.IWorkspace> typem. Pracovní prostor sám o sobě nerozumí obsahu ani funkcím, které se týkají souborů v rámci této složky. Místo toho poskytuje obecnou sadu rozhraní API pro funkce a rozšíření pro vytváření a zpracování dat, na která ostatní můžou pracovat. Výrobci se skládají prostřednictvím [Managed Extensibility Framework](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (MEF) pomocí různých atributů exportu.
 
-## <a name="workspace-providers-and-services"></a>Poskytovatelé pracovního prostoru a služby
+## <a name="workspace-providers-and-services"></a>Poskytovatelé a služby pracovního prostoru
 
-Poskytovatelé pracovního prostoru a služby poskytují data a funkce, které reagují na obsah pracovního prostoru. Se může poskytovat kontextové informací o typu souboru symbolů ve zdrojových souborech, nebo integraci funkcí.
+Poskytovatelé a služby pracovního prostoru poskytují data a funkce pro reakci na obsah pracovního prostoru. Můžou poskytovat informace o kontextovém souboru, symbolech ve zdrojových souborech nebo funkcích buildu.
 
-Použít obě koncepty [factory vzor](https://en.wikipedia.org/wiki/Factory_method_pattern) a importují prostřednictvím rozhraní MEF v pracovním prostoru. Implementovat všechny atributy export `IProviderMetadataBase` nebo `IWorkspaceServiceFactoryMetadata`, ale existují konkrétní typy, které by měly používat rozšíření pro exportované typy.
+Obě koncepty používají [model pro vytváření](https://en.wikipedia.org/wiki/Factory_method_pattern) a jsou importovány prostřednictvím rozhraní MEF v pracovním prostoru. Všechny atributy exportu implementují `IProviderMetadataBase` nebo `IWorkspaceServiceFactoryMetadata` , ale existují konkrétní typy, které rozšíření mají použít pro exportované typy.
 
-Jedním z rozdílů mezi poskytovatelů a službami je jejich vztah k pracovnímu prostoru. Pracovní prostor může mít mnoho poskytovatelů určitého typu, ale za jednotlivé pracovní prostory se vytvoří pouze pro jednu službu určitého typu. Například pracovní prostor obsahuje mnoho poskytovatelů skener souboru ale pracovní prostor má pouze jeden indexování za jednotlivé pracovní prostory.
+Jeden rozdíl mezi poskytovateli a službami je jejich vztahem k pracovnímu prostoru. Pracovní prostor může mít mnoho poskytovatelů určitého typu, ale v každém pracovním prostoru je vytvořená jenom jedna služba určitého typu. Pracovní prostor má například mnoho poskytovatelů skenerů souborů, ale pracovní prostor má v každém pracovním prostoru jenom jednu službu indexování.
 
-Jiné klíčovým rozdílem je spotřeba dat od poskytovatelů a služby. Pracovní prostor je vstupním bodem k získání dat od poskytovatelů z několika důvodů. Nejprve poskytovatelé obvykle mít některé úzký sadu dat, který vytvoří. Data mohou být symboly pro C# zdrojového souboru nebo sestavení kontexty souborů pro _CMakeLists.txt_ souboru. Pracovní prostor bude odpovídat požadavku uživatele na zprostředkovatele, jejichž metadat zarovnat s požadavkem. Za druhé, některých scénářích povolit pro mnoho poskytovatelů přispívat na žádost, zatímco jiné scénáře použití zprostředkovatele s nejvyšší prioritou.
+Další klíčovým rozdílem je spotřeba dat od poskytovatelů a služeb. Pracovní prostor je vstupním bodem pro získání dat od poskytovatelů z několika důvodů. Nejdříve poskytovatelé mají obvykle některé úzké sady dat, které vytvářejí. Data mohou být symboly pro zdrojový soubor v jazyce C# nebo soubory kontextů sestavení pro soubor _CMakeLists.txt_ . Pracovní prostor bude odpovídat žádosti zákazníka poskytovatelům, jejichž metadata jsou v souladu s požadavkem. V druhé době některé scénáře umožňují mnoha poskytovatelům přispívat k žádosti, zatímco jiné scénáře používají poskytovatele s nejvyšší prioritou.
 
-Rozšíření můžete naproti tomu získáte instance a pracovat přímo se službami pracovního prostoru. Rozšiřující metody na `IWorkspace` jsou k dispozici pro služby poskytovaný sadou Visual Studio, jako například <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetFileWatcherService%2A>. Rozšíření můžou nabízet pracovního prostoru služby pro komponenty v rámci rozšíření nebo pro ostatní rozšíření používat. Příjemci měli používat <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetServiceAsync%2A> nebo metody rozšíření můžete poskytnout `IWorkspace` typu.
+Naproti tomu rozšíření můžou získat instance a pracovat přímo se službami pracovního prostoru. Metody rozšíření `IWorkspace` jsou k dispozici pro služby poskytované aplikací Visual Studio, jako je například <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetFileWatcherService%2A> . Vaše rozšíření může nabízet službu pracovního prostoru pro součásti v rámci rozšíření nebo pro využívání dalších rozšíření. Příjemci by měli použít <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetServiceAsync%2A> nebo metodu rozšíření, kterou zadáte pro `IWorkspace` typ.
 
 >[!WARNING]
-> Nelze vytvářet služby, které jsou v konfliktu s Visual Studio. To může vést k neočekávaným problémům.
+> Nevytvářejte služby, které jsou v konfliktu se sadou Visual Studio. Může to vést k neočekávaným problémům.
 
-## <a name="disposal-on-workspace-closure"></a>Vyřazení na ukončení pracovního prostoru
+## <a name="disposal-on-workspace-closure"></a>Vyřazení při zavírání pracovního prostoru
 
-V uzávěru pracovního prostoru, může být nutné zařízení Extender dispose, ale volání asynchronní kód. <xref:Microsoft.VisualStudio.Threading.IAsyncDisposable> Rozhraní je dostupné pro psaní tohoto kódu.
+Při uzavírání pracovního prostoru může být nutné uvolnit, ale volat asynchronní kód. <xref:Microsoft.VisualStudio.Threading.IAsyncDisposable>Rozhraní je k dispozici, aby bylo možné tento kód snadno zapsat.
 
 ## <a name="related-types"></a>Související typy
 
-- <xref:Microsoft.VisualStudio.Workspace.IWorkspace> je centrální entity pro otevřené pracovní prostor jako otevřené složky.
-- <xref:Microsoft.VisualStudio.Workspace.IWorkspaceProviderFactory`1> Vytvoří poskytovatele za jednotlivé pracovní prostory vytvořena instance.
-- <xref:Microsoft.VisualStudio.Workspace.IWorkspaceServiceFactory> Vytvoří službu za jednotlivé pracovní prostory vytvořena instance.
-- <xref:Microsoft.VisualStudio.Threading.IAsyncDisposable> by měla být implementována na poskytovatele a služby, které potřebujete ke spuštění asynchronního kódu během vyřazení.
-- <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper> Poskytuje pomocné metody pro přístup k známé služby nebo libovolné služby.
+- <xref:Microsoft.VisualStudio.Workspace.IWorkspace> je centrální entitou otevřeného pracovního prostoru, jako je otevřená složka.
+- <xref:Microsoft.VisualStudio.Workspace.IWorkspaceProviderFactory`1> vytvoří zprostředkovatele pro vytvoření instance daného pracovního prostoru.
+- <xref:Microsoft.VisualStudio.Workspace.IWorkspaceServiceFactory> Vytvoří instanci služby na pracovní prostor.
+- <xref:Microsoft.VisualStudio.Threading.IAsyncDisposable> by měl být implementován na poskytovatelích a službách, které potřebují spouštět asynchronní kód při odstraňování.
+- <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper> poskytuje podpůrné metody pro přístup k dobře známým službám nebo libovolným službám.
 
 ## <a name="workspace-settings"></a>Nastavení pracovního prostoru
 
-Pracovní prostory obsahují <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager> služba s jednoduchou, ale výkonnou kontrolu nad pracovní prostor. Základní přehled nastavení, najdete v tématu [přizpůsobení sestavení a ladění úloh](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
+Pracovní prostory mají <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager> službu s jednoduchou, ale výkonnou kontrolu nad pracovním prostorem. Základní přehled nastavení naleznete v tématu [přizpůsobení úloh sestavení a ladění](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
 
-Nastavení pro většinu `SettingsType` typy jsou _.json_ soubory, jako například _VSWorkspaceSettings.json_ a _tasks.vs.json_.
+Nastavení pro většinu `SettingsType` typů jsou soubory _. JSON_ , například _VSWorkspaceSettings.jszapnuté_ a _tasks.vs.jsna_.
 
-Napájení nastavení pracovního prostoru se soustředí kolem "oborů", které jsou jednoduše cest v pracovním prostoru. Když se zavolá příjemce <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A>, všechny obory, které obsahují požadovaná cesta a typ nastavení naformátujete se agregují. Priorita agregace obor je následujícím způsobem:
+Výkon nastavení pracovního prostoru se pohybuje v oblasti "obory", které jsou v pracovním prostoru jednoduše cesty. V případě volání příjemce <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A> jsou agregovány všechny obory, které obsahují požadovanou cestu a typ nastavení. Priorita agregace oboru je následující:
 
-1. "Místní nastavení", což je obvykle kořenu pracovního prostoru `.vs` adresáře.
-1. Požadovaná cesta samotný.
-1. Nadřazený adresář složky požadovaná cesta.
-1. Dále všechny nadřazené adresáře do a včetně kořenu pracovního prostoru.
-1. "Globální nastavení", což je v adresáři uživatele.
+1. "Místní nastavení", což je obvykle adresář kořene v pracovním prostoru `.vs` .
+1. Požadovaná cesta sama.
+1. Nadřazený adresář požadované cesty
+1. Všechny další nadřazené adresáře až do kořene pracovního prostoru a včetně.
+1. Globální nastavení, která se nachází v adresáři uživatele.
 
-Výsledkem je instance <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings>. Tento objekt obsahuje nastavení pro konkrétní typ a je možné zadávat dotazy klíčů názvy nastavení uložená jako `string`. <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A> Metody a <xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions> rozšiřující metody předpokládají, že volající znát typ hodnoty nastavení žádá. Protože většina nastavení souborů jsou ukládány jako _.json_ soubory, použije se mnoho volání `string`, `bool`, `int`a pole těchto typů. Typy objektů jsou také podporovány. V takových případech můžete použít `IWorkspaceSettings` samostatně jako argument typu. Příklad:
+Výsledkem je instance <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings> . Tento objekt obsahuje nastavení pro konkrétní typ a lze k němu zadat dotaz pro nastavení názvů klíčů uložených jako `string` . <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>Metody a <xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions> metody rozšíření očekávají, že volající bude znát typ požadované hodnoty nastavení. Jelikož jsou soubory s _příponou. JSON_ trvale zachované, mnoho volání bude používat,, `string` `bool` `int` a pole těchto typů. Jsou podporovány také typy objektů. V těchto případech můžete použít `IWorkspaceSettings` sebe sama jako argument typu. Příklad:
 
 ```json
 {
@@ -76,7 +76,7 @@ Výsledkem je instance <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspac
 }
 ```
 
-Za předpokladu, že tato nastavení se v uživatele _VSWorkspaceSettings.json_, data mohou být přístupné jako:
+Za předpokladu, že tato nastavení byla v _VSWorkspaceSettings.jsuživatele zapnutá_, mohou být k datům přistupovaná:
 
 ```csharp
 using System.Collections.Generic;
@@ -111,13 +111,13 @@ private static void ReadSettings(IWorkspace workspace)
 ```
 
 >[!NOTE]
->Tato nastavení rozhraní API jsou nemá vztah k rozhraní API dostupná v `Microsoft.VisualStudio.Settings` oboru názvů. Nastavení pracovního prostoru jsou nezávislá hostitele a použijte nastavení pro konkrétní pracovní prostor soubory nebo poskytovatelů dynamické nastavení.
+>Tato rozhraní API nastavení se nevztahují k rozhraním API dostupným v `Microsoft.VisualStudio.Settings` oboru názvů. Nastavení pracovního prostoru jsou nezávisláy hostitele a používají soubory nastavení specifické pro pracovní prostor nebo zprostředkovatele dynamického nastavení.
 
-### <a name="providing-dynamic-settings"></a>Zadání nastavení dynamické
+### <a name="providing-dynamic-settings"></a>Poskytování dynamického nastavení
 
-Můžete zadat rozšíření <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsProvider>s. Tito poskytovatelé v paměti povolit rozšíření přidat nastavení nebo potlačit jiné.
+Rozšíření můžou poskytovat <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsProvider> : Tito poskytovatelé v paměti umožňují rozšíření přidat nastavení nebo přepsat ostatní.
 
-Export `IWorkspaceSettingsProvider` se liší od jiných poskytovatelů služeb pracovního prostoru. Objekt pro vytváření není `IWorkspaceProviderFactory` a neexistuje žádný typ speciální atribut. Místo toho implementovat <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsProviderFactory> a používat `[Export(typeof(IWorkspaceSettingsProviderFactory))]`.
+Export objektu `IWorkspaceSettingsProvider` se liší od jiných poskytovatelů pracovních prostorů. Továrna není `IWorkspaceProviderFactory` a neexistuje žádný zvláštní typ atributu. Místo toho je třeba implementovat <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsProviderFactory> a použít `[Export(typeof(IWorkspaceSettingsProviderFactory))]` .
 
 ```csharp
 // Common workspace provider factory pattern
@@ -139,19 +139,19 @@ internal class MySettingsProviderFactory : IWorkspaceSettingsProviderFactory
 ```
 
 >[!TIP]
->Při implementaci metody, které vracejí `IWorkspaceSettingsSource` (jako je `IWorkspaceSettingsProvider.GetSingleSettings`), vracet instanci `IWorkspaceSettings` spíše než `IWorkspaceSettingsSource`. `IWorkspaceSettings` poskytuje další informace, které mohou být užitečné při některých nastavení agregace.
+>Při implementaci metod, které vrací `IWorkspaceSettingsSource` (jako `IWorkspaceSettingsProvider.GetSingleSettings` ), vrátí instanci `IWorkspaceSettings` spíše než `IWorkspaceSettingsSource` . `IWorkspaceSettings` poskytuje další informace, které mohou být užitečné při agregacích některých nastavení.
 
-### <a name="settings-related-apis"></a>Nastavení rozhraní API související s
+### <a name="settings-related-apis"></a>Rozhraní API související s nastavením
 
 - <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager> přečte a agreguje nastavení pro pracovní prostor.
 - <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetSettingsManager%2A> Získá `IWorkspaceSettingsManager` pro pracovní prostor.
-- <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A> Získá nastavení pro daný obor agreguje všechny překrývající se rozsahy.
+- <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A> načte nastavení pro daný obor agregovaná napříč všemi překrývajícími se obory.
 - <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings> obsahuje nastavení pro konkrétní obor.
 
-## <a name="workspace-suggested-practices"></a>Pracovní prostor navrhované postupy
+## <a name="workspace-suggested-practices"></a>Doporučené postupy pro pracovní prostor
 
-- Vrací objekty z `IWorkspaceProviderFactory.CreateProvider` nebo podobné rozhraní API, která mějte na paměti jejich `Workspace` kontextu při vytvoření. Zprostředkovatelé rozhraní se zapisují, očekává se, že tento objekt se ukládají na vytváření.
-- Uložte nastavení v této cestě "Místní nastavení" pracovního prostoru nebo konkrétní pracovní prostor mezipaměti. Vytvořit cestu k souboru pomocí `Microsoft.VisualStudio.Workspace.WorkspaceHelper.MakeRootedUnderWorkingFolder` v sadě Visual Studio 2017 verze 15.6 nebo novější. Pro verze starší než verze 15.6 použijte následující fragment kódu:
+- Vrátí objekty z `IWorkspaceProviderFactory.CreateProvider` nebo podobných rozhraní API, která si zapamatují `Workspace` kontext při vytvoření. Poskytovatelé rozhraní se zapisují tak, že se tento objekt při vytváření udržuje.
+- Ukládat mezipaměti nebo nastavení pro konkrétní pracovní prostory v rámci cesty "místní nastavení" v pracovním prostoru. Vytvořte cestu k souboru pomocí `Microsoft.VisualStudio.Workspace.WorkspaceHelper.MakeRootedUnderWorkingFolder` sady Visual Studio 2017 verze 15,6 nebo novější. U verzí starších než verze 15,6 použijte následující fragment kódu:
 
 ```csharp
 using System.IO;
@@ -165,31 +165,31 @@ private static string MakeRootedUnderWorkingFolder(IWorkspace workspace, string 
 }
 ```
 
-## <a name="solution-events-and-package-auto-load"></a>Události řešení a automaticky načíst balíček
+## <a name="solution-events-and-package-auto-load"></a>Události řešení a automatické načtení balíčku
 
-Můžete implementovat načtených balíčcích `IVsSolutionEvents7` a vyvolání `IVsSolution.AdviseSolutionEvents`. Zahrnuje zpracování událostí na levé a pravé složku v sadě Visual Studio.
+Načtené balíčky mohou implementovat `IVsSolutionEvents7` a vyvolat `IVsSolution.AdviseSolutionEvents` . Zahrnuje události při otevírání a zavírání složky v aplikaci Visual Studio.
 
-Kontextu uživatelského rozhraní lze použít pro automatické načtení balíčku. Hodnota je `4646B819-1AE0-4E79-97F4-8A8176FDD664`.
+Kontext uživatelského rozhraní lze použít k automatickému načtení balíčku. Hodnota je `4646B819-1AE0-4E79-97F4-8A8176FDD664`.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Odstraňování potíží
 
-### <a name="the-sourceexplorerpackage-package-did-not-load-correctly"></a>Balíček SourceExplorerPackage nebyla správně načtena.
+### <a name="the-sourceexplorerpackage-package-did-not-load-correctly"></a>Balíček SourceExplorerPackage se nenačetl správně.
 
-Rozšiřitelnost pracovní prostor využívá výraznou MEF a způsobí, že chyby složení hostování otevřít složku k selhání načtení balíčku. Například, pokud rozšíření exportuje typ s `ExportFileContextProviderAttribute`, ale tento typ implementuje pouze `IWorkspaceProviderFactory<IFileContextActionProvider>`, dojde k chybě při pokusu o otevření složky v sadě Visual Studio.
+Rozšiřitelnost pracovního prostoru je silně založená na rozhraní MEF a chyby složení způsobí selhání načtení otevřené složky hostování balíčku. Například pokud rozšíření exportuje typ s `ExportFileContextProviderAttribute` , ale pouze implementuje typ `IWorkspaceProviderFactory<IFileContextActionProvider>` , dojde k chybě při pokusu o otevření složky v aplikaci Visual Studio.
 
 ::: moniker range="vs-2017"
 
-Podrobnosti o chybě najdete v _%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_. Vyřešte všechny chyby pro typy, které jsou implementované pomocí rozšíření.
+Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\15.0_id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Podrobnosti o chybě najdete v _%LOCALAPPDATA%\Microsoft\VisualStudio\16.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_. Vyřešte všechny chyby pro typy, které jsou implementované pomocí rozšíření.
+Podrobnosti o chybě najdete v _%localappdata%\microsoft\visualstudio\16.0_id \componentmodelcache\microsoft.VisualStudio.default.err_. Vyřešte všechny chyby pro typy implementované vaším rozšířením.
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
-* [Soubor kontexty](workspace-file-contexts.md) – zprostředkovatelé kontextu souborů přeneste kód intelligence pro otevřenou složku pracovní prostory.
-* [Indexování](workspace-indexing.md) – pracovní prostor indexování shromažďuje a opakuje informace o pracovním prostoru.
+* Kontexty [souborů](workspace-file-contexts.md) – poskytovatelé kontextu souborů přinášejí funkce Code Intelligence pro pracovní prostory otevřené složky.
+* [Indexování](workspace-indexing.md) – indexování pracovních prostorů shromažďuje a uchovává informace o pracovním prostoru.

@@ -1,5 +1,5 @@
 ---
-title: Podpora více verzí sady Visual Studio | Dokumenty společnosti Microsoft
+title: Podpora více verzí sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,36 +12,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1d571f1be4da45ff5ed6b2538cfb515930bde1de
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699478"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Podpora více verzí sady Visual Studio
-Termín *vedle sebe* znamená, že můžete nainstalovat a udržovat více verzí produktu ve stejném počítači. Pro VSPackages to znamená, že uživatel může mít několik verzí sady Visual Studio nainstalovaných ve stejném počítači. Však nelze mít vedle sebe verze vspackages načtendo jedné verze sady Visual Studio.
+Termín *vedle sebe* znamená, že můžete nainstalovat a udržovat více verzí produktu ve stejném počítači. Pro VSPackage, to znamená, že uživatel může mít na stejném počítači nainstalovanou několik verzí sady Visual Studio. Nicméně nemůžete mít nahrané souběžné verze vašich VSPackage do jediné verze sady Visual Studio.
 
- Před provedením VSPackage lze načíst do souběžné verze sady Visual Studio, zvažte následující:
+ Před tím, než bude možné sadu VSPackage načíst do souběžných verzí sady Visual Studio, vezměte v úvahu následující:
 
-- Je nutné určit, kterou strategii implementace vedle sebe chcete dodržovat.
+- Musíte určit, kterou souběžnou implementační strategii chcete sledovat.
 
-   Další informace naleznete [v tématu Výběr mezi sdílenými a s verzemi vspackages](../extensibility/choosing-between-shared-and-versioned-vspackages.md).
+   Další informace najdete v tématu [Výběr mezi sdílenými a verzemi VSPackage](../extensibility/choosing-between-shared-and-versioned-vspackages.md).
 
-- Formáty souborů řešení a projektu musí odpovídat vaší strategii implementace.
+- Vaše formáty souborů řešení a projektu musí vyhovovat vaší strategii implementace.
 
-   Další informace naleznete [v tématu Upgrade vlastních projektů](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects) a registrace [přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).
+   Další informace naleznete v tématu [Upgrade vlastních projektů](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects) a [registrace přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).
 
-- Instalační program musí zpracovat strategii implementace tak, aby verze komponenty a také součásti sdílené ve všech verzích, jsou správně nainstalovány a registrovány.
+- Váš instalační program musí zpracovat strategii implementace, aby se součásti se správou verzí a také součásti sdílené ve všech verzích byly správně nainstalovány a registrovány.
 
-   Další informace naleznete [v tématu Instalace balíčků VSPackages with Installer systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md) a také správa [součástí](../extensibility/internals/component-management.md).
+   Další informace najdete v tématu [Instalace VSPackage pomocí Instalační služba systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md) a také v rámci [správy součástí](../extensibility/internals/component-management.md).
 
   > [!NOTE]
-  > Instalace verze sady Visual Studio také nainstaluje odpovídající verzi rozhraní .NET Framework. Například instalace sady Visual Studio 2010 a Visual Studio 2012 do stejného počítače také nainstaluje verze 4.0 a 4.5 rozhraní .NET Framework.
+  > Instalace verze sady Visual Studio nainstaluje také odpovídající verzi .NET Framework. Například instalace sady Visual Studio 2010 a sady Visual Studio 2012 na stejném počítači nainstaluje také verze 4,0 a 4,5 .NET Framework v uvedeném pořadí.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Výběr mezi sdílenými a s verzemi vsbalíčků](../extensibility/choosing-between-shared-and-versioned-vspackages.md) Vysvětluje, jak vyřešit problémy vedle sebe v balíčku VSPackage.
+- [Volba mezi sdílenými a Sesprávou verzí VSPackage](../extensibility/choosing-between-shared-and-versioned-vspackages.md) Vysvětluje, jak vyřešit souběžné problémy v balíčku VSPackage.
 
-- [Registrace přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md) Popisuje, jak může váš VSPackage zaregistrovat přidružení souborů v případě souběžných souborů.
+- [Registrace přípon názvů souborů pro souběžná nasazení](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md) Popisuje, jak může VSPackage registrovat přidružení souborů v souběžném scénáři.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Instalace balíčků VSPackage pomocí Instalační služby systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md)

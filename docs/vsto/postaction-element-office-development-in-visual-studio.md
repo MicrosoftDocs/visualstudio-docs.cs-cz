@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 149aa0cf8543f5b5b1b5ada18a8b2f0e58f063d0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546936"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction – &gt; element (vývoj pro Office v sadě Visual Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "85546936"
 
  `postAction`Element nemá žádné atributy.
 
- `postAction`obsahuje následující prvky.
+ `postAction` obsahuje následující prvky.
 
 ### <a name="entrypoint"></a>Bod
  Nepovinný parametr. Role `entryPoint` elementu v `vstav3` oboru názvů je definována v [&#60;entrypoint&#62; elementu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).

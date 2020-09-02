@@ -1,5 +1,5 @@
 ---
-title: Element TargetPlatformName (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: TargetPlatform – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,16 +10,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: db5e9d4f44af242e76bd446a25d3bbc533b56854
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699270"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName – element (šablony sady Visual Studio)
-Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek se používá k určení, že [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] šablona projektu se používá k vytváření aplikací.
+Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek slouží k určení toho, že se šablona projektu používá k vytváření [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikací.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <VSTemplate>
@@ -31,19 +31,19 @@ Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek se pou
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Určuje verzi operačního systému, na kterou se šablona projektu zaměřuje.|
+|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Určuje verzi operačního systému, který cílí na šablonu projektu.|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Přidat novou **položku.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
@@ -52,7 +52,7 @@ Určuje platformu, na kterou se šablona projektu zaměřuje. Tento prvek se pou
  Text musí být **Windows**.
 
 ## <a name="example"></a>Příklad
- Tento příklad určuje, že [!INCLUDE[win8](../debugger/includes/win8_md.md)] šablona projektu cílí nebo novější.
+ Tento příklad určuje, zda jsou cíle šablony projektu [!INCLUDE[win8](../debugger/includes/win8_md.md)] nebo novější.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">

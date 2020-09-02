@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineCreateEvent2 | Dokumenty společnosti Microsoft
+title: IDebugEngineCreateEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,38 +13,38 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 41a964f1e08fc2e88ac9a1d211e4b3e36b32c5b8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730599"
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
-Ladicí modul (DE) odešle toto rozhraní správci ladění relace (SDM) při vytvoření instance DE.
+Ladicí stroj (DE) odesílá toto rozhraní do Správce ladění relace (SDM), když je vytvořena instance třídy DE.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugEngineCreateEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- DE implementuje toto rozhraní jako součást své běžné operace. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) musí být implementováno na stejném objektu jako `QueryInterface` toto `IDebugEvent2` rozhraní (SDM používá metodu pro přístup k rozhraní).
+ DE implementuje toto rozhraní jako součást běžných operací. Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) se musí implementovat na stejný objekt jako toto rozhraní (SDM používá `QueryInterface` metodu pro přístup k `IDebugEvent2` rozhraní).
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- DE vytvoří a odešle tento objekt události po DE byla vytvořena instance. Událost je odeslána pomocí funkce zpětného volání [IDebugCallBack2,](../../../extensibility/debugger/reference/idebugeventcallback2.md) která je poskytována sdm při připojení k programu, který je odladěn.
+ DE vytvoří a odešle tento objekt události při vytvoření instance DE. Událost se odesílá pomocí funkce zpětného volání [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , která je dodána serverem SDM, když je připojen k laděnému programu.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- V následující tabulce jsou `IDebugEngineCreateEvent2`uvedeny metody .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ V následující tabulce jsou uvedeny metody `IDebugEngineCreateEvent2` .
 
 |Metoda|Popis|
 |------------|-----------------|
-|[GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)|Načte objekt, který představuje nově vytvořený ladicí modul (DE).|
+|[GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)|Načte objekt, který představuje nově vytvořený ladicí stroj (DE).|
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

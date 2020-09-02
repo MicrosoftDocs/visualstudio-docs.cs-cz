@@ -1,5 +1,5 @@
 ---
-title: Symboly Element | Dokumenty společnosti Microsoft
+title: Symbol – element | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5c24c3f84df23a07b6b16272b66b29e32ad7b911
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699352"
 ---
 # <a name="symbols-element"></a>Symbols – element
-Definuje identifikátory GUID a ID, které jsou používány jinými prvky VSCT. U nespravovaného kódu tyto informace obvykle pocházejí ze souborů hlaviček, které jsou určeny [extern elementem](../extensibility/extern-element.md). Spravovaný kód používá k definování těchto informací podřízené prvky prvku Symbols.
+Definuje identifikátory GUID a ID, které používají jiné elementy VSCT. Pro nespravovaný kód tyto informace obvykle pocházejí ze hlavičkových souborů, které jsou určeny [extern element](../extensibility/extern-element.md). Spravovaný kód používá podřízené prvky elementu Symbols k definování těchto informací.
 
- Pokud vytvoříte soubor .vsct z existujícího souboru .cto, symboly budou generovány jako podřízené prvky Symbols. Další informace naleznete v [tématu How to: Create a . Vsct soubor z existující . Cto soubor](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
+ Vytvoříte-li soubor. vsct z existujícího souboru. technický ředitel, symboly budou vygenerovány jako podřízené prvky elementu Symbols. Další informace naleznete v tématu [How to: Create a. Soubor vsct ze stávajícího souboru. Soubor technický ředitel](../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file)
 
- Symbols Element by neměl být zaměňován s [Define Element](../extensibility/define-element.md), který definuje dvojice název-hodnota pro použití preprocesorem.
+ Element Symbols by neměl být zaměněn pomocí [elementu define](../extensibility/define-element.md), který definuje páry název-hodnota pro použití preprocesorem.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <Symbols>
@@ -41,20 +41,20 @@ Definuje identifikátory GUID a ID, které jsou používány jinými prvky VSCT.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|Žádný||
+|Žádné||
 
 ### <a name="child-elements"></a>Podřízené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|Symbol guid|Definuje symbol GUID. GuidSymbol má dva požadované atributy: název a hodnotu. Název je název symbolu a hodnota je hodnota IDENTIFIKÁTORU GUID jako řetězce.<br /><br /> Například:\<GuidSymbol name="guidVsPackage1Pkg" value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
-|Symbol ID|Definuje symbol. IDSymbol má dva požadované atributy: název a hodnotu. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Příklad:\<IDSymbol name="MyMenuGroup" value="0x1020" />|
+|GuidSymbol|Definuje symbol identifikátoru GUID. GuidSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota identifikátoru GUID jako řetězec.<br /><br /> Příklad:\<GuidSymbol name="guidVsPackage1Pkg"   value="{c5f54698-101a-4846-84d3-dc748f9cd848}" />|
+|IDSymbol|Definuje symbol. IDSymbol má dva povinné atributy: název a hodnota. Název je název symbolu a hodnota je hodnota symbolu jako řetězec.<br /><br /> Příklad:\<IDSymbol name="MyMenuGroup" value="0x1020" />|
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový prvek souboru .vsct.|
+|[CommandTable – element](../extensibility/commandtable-element.md)|Kořenový element souboru. vsct.|
 
 ## <a name="example"></a>Příklad
 

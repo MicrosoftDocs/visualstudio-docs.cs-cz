@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalker::getEnumFrames | Dokumentace Microsoftu
+title: 'IDiaStackWalker:: getEnumFrames | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8cbad02474af48ac4da72784659dd27007211e64
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144712"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte čítač rámce zásobníku pro x86 platformy.  
+Načte enumerátor rámce zásobníku pro platformy x86.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +36,19 @@ HRESULT getEnumFrames( 
   
 #### <a name="parameters"></a>Parametry  
  `pHelper`  
- [in] Pomocná rutina [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) objektu.  
+ pro Pomocný objekt [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) .  
   
  `ppEnum`  
- [out] Vrátí [idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md) objekt, který obsahuje seznam [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
+ mimo Vrátí objekt [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) , který obsahuje seznam objektů [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li získat seznam rámce zásobníku na libovolné platformě, zavolejte [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) metody.  
+ Chcete-li získat seznam rámců zásobníku na jakékoli jiné platformě, zavolejte metodu [IDiaStackWalker:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) .  
   
 ## <a name="see-also"></a>Viz také  
- [Idiastackwalker –](../../debugger/debug-interface-access/idiastackwalker.md)   
+ [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)   
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
- [Idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md)   
+ [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   
  [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)

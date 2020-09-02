@@ -1,5 +1,5 @@
 ---
-title: Úkol CustomBuild | Dokumenty společnosti Microsoft
+title: Úloha CustomBuild | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 f1_keywords:
@@ -18,26 +18,26 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d95b6e7d4197487adc13050572ac31310701c759
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595342"
 ---
-# <a name="custombuild-task"></a>Úkol CustomBuild
+# <a name="custombuild-task"></a>CustomBuild – úloha
 
-Zabalí kompilátor ový nástroj Microsoft C++, cmd.exe. Tato třída je odvozena od [TrackedVCToolTask](../msbuild/trackedvctooltask-base-class.md), ale nepoužívá sledování souborů ke zjišťování závislostí souborů. Všechny závislosti by měly být explicitně zadány jako AdditionalDependencies pro přírůstkové sestavení pracovat správně.
+Zabalí nástroj kompilátoru Microsoft C++, cmd.exe. Tato třída je odvozena z [TrackedVCToolTask](../msbuild/trackedvctooltask-base-class.md), ale nepoužívá sledování souborů k zjišťování závislostí souborů. Všechny závislosti by měly být explicitně zadány jako AdditionalDependencies pro správné fungování přírůstkového sestavení.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry úlohy **CustomBuild.**
+Následující tabulka popisuje parametry úlohy **CustomBuild** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**BuildSuffix**|Volitelný parametr **řetězce.**|
-|**Zdrojů**|Povinný parametr **ITaskItem[].**|
-|**TrackerLogDirectory**|Volitelný parametr **řetězce.**|
+|**BuildSuffix**|Volitelný **řetězcový** parametr.|
+|**zdroje**|Povinný parametr **ITaskItem []** .|
+|**TrackerLogDirectory**|Volitelný **řetězcový** parametr.|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

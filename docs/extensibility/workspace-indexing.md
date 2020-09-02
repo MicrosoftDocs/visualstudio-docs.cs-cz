@@ -1,5 +1,5 @@
 ---
-title: Pracovní prostor indexování v sadě Visual Studio | Dokumentace Microsoftu
+title: Indexování pracovních prostorů v aplikaci Visual Studio | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,29 +8,29 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9bf7df777d27003fa5763debc772a8804ec28ef5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62952697"
 ---
 # <a name="workspace-indexing"></a>Indexování pracovního prostoru
 
-V řešení, projekt systémy odpovídají za poskytování funkcí pro sestavení, ladění, **GoTo** hledání symbolů a další. Systémy projektu může provést tuto práci, protože porozumí relace a možnosti souborů v rámci projektu. [Otevřít složku](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) pracovní prostor se musí stejné insight a zajistit tak také bohaté funkce integrovaného vývojového prostředí. Shromažďování a trvalé ukládání těchto dat je proces s názvem indexování pracovního prostoru. Tato indexovaná data může být dotázán pomocí sady asynchronního rozhraní API. Zařízení Extender mohl podílet na procesu indexování poskytnutím <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScanner>, které už víte, jak zpracovat některé typy souborů.
+V řešení jsou projektové systémy zodpovědné za poskytování funkčnosti pro sestavování, ladění, **goto** hledání symbolů a další. Projektové systémy mohou tuto práci provést, protože rozumí relaci a možnosti souborů v rámci projektu. Pracovní prostor [Otevřít složku](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) potřebuje stejný přehled, aby poskytoval i rozšířené funkce IDE. Kolekce a trvalé úložiště těchto dat je proces nazývaný indexování pracovního prostoru. Tato indexovaná data se dají dotazovat prostřednictvím sady asynchronních rozhraní API. Zařízení se mohou zúčastnit procesu indexování tím <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScanner> , že poskytují informace o tom, jak zpracovat určité typy souborů.
 
-## <a name="types-of-indexed-data"></a>Typy indexovaná data
+## <a name="types-of-indexed-data"></a>Typy indexovaných dat
 
-Existují tři typy dat, která se indexují. Všimněte si, že byl očekáván ze souboru skenerů typ se liší od typu deserializovat z indexu.
+Existují tři druhy dat, která jsou indexována. Všimněte si, že typ očekávaný ze skenerů souborů se liší od typu deserializace z indexu.
 
-|Data|Skener typ souboru|Typ výsledku dotazu indexu|Související typy|
+|Data|Typ skeneru souborů|Typ výsledku dotazu na index|Související typy|
 |--|--|--|--|
 |Odkazy|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfo>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileReferenceInfoType>|
-|Symboly|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> by měl být použít namísto `IIndexWorkspaceService` pro dotazy|
+|Symboly|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinition>|<xref:Microsoft.VisualStudio.Workspace.Indexing.SymbolDefinitionSearchResult>|<xref:Microsoft.VisualStudio.Workspace.Indexing.ISymbolService> by měl být použit místo `IIndexWorkspaceService` pro dotazy|
 |Hodnoty dat|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataValue>|<xref:Microsoft.VisualStudio.Workspace.Indexing.FileDataResult`1>||
 
 ## <a name="querying-for-indexed-data"></a>Dotazování na indexovaná data
 
-Existují dva asynchronní typy, které jsou k dispozici pro přístup k trvalá data. První je prostřednictvím <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceData>. Poskytuje základní přístup do jednoho souboru `FileReferenceResult` a `FileDataResult` dat a ukládá do mezipaměti výsledky. Druhým je <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceService> která nepoužívá ukládání do mezipaměti, ale umožňuje více možností dotazování.
+Pro přístup k trvalým datům jsou k dispozici dva asynchronní typy. První je až <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceData> . Poskytuje základní přístup k jednomu souboru `FileReferenceResult` a `FileDataResult` datům a ukládá výsledky do mezipaměti. Druhá je <xref:Microsoft.VisualStudio.Workspace.Indexing.IIndexWorkspaceService> ta, která nepoužívá ukládání do mezipaměti, ale umožňuje další možnosti dotazování.
 
 ```csharp
 using Microsoft.VisualStudio.Workspace;
@@ -50,23 +50,23 @@ private static IIndexWorkspaceService GetDirectIndexedData(IWorkspace workspace)
 }
 ```
 
-## <a name="participating-in-indexing"></a>Účastní indexování
+## <a name="participating-in-indexing"></a>Účast při indexování
 
-Pracovní prostor indexování zhruba následující následující posloupnost:
+Indexování pracovních prostorů zhruba následuje po následujícím pořadí:
 
-1. Zjišťování a trvalého souboru systémových entit v pracovním prostoru (pouze na počáteční počáteční kontroly).
-1. Na soubor, odpovídající zprostředkovatel s nejvyšší prioritou se zobrazí výzva k vyhledání `FileReferenceInfo`s.
-1. Na soubor, odpovídající zprostředkovatel s nejvyšší prioritou se zobrazí výzva k vyhledání `SymbolDefinition`s.
-1. Na soubor, všichni poskytovatelé vyzváni k zadání `FileDataValue`s.
+1. Zjišťování a trvalost entit systému souborů v pracovním prostoru (pouze při prvotním spuštění kontroly).
+1. Pro každý soubor je pro vyhledávání v pro k požádáno odpovídajícího poskytovatele s nejvyšší prioritou `FileReferenceInfo` .
+1. Pro každý soubor je pro vyhledávání v pro k požádáno odpovídajícího poskytovatele s nejvyšší prioritou `SymbolDefinition` .
+1. Pro každý soubor se zobrazí výzva pro všechny poskytovatele `FileDataValue` .
 
-Rozšíření můžete exportovat skener implementací `IWorkspaceProviderFactory<IFileScanner>` a export typu s <xref:Microsoft.VisualStudio.Workspace.Indexing.ExportFileScannerAttribute>. `SupportedTypes` Argument atributu by měla být jedna nebo více hodnot z <xref:Microsoft.VisualStudio.Workspace.Indexing.FileScannerTypeConstants>. Skenerem příklad naleznete v tématu VS SDK [ukázka](https://github.com/Microsoft/VSSDK-Extensibility-Samples/blob/master/Open_Folder_Extensibility/C%23/SymbolScannerSample/TxtFileSymbolScanner.cs).
+Rozšíření mohou exportovat skener implementací `IWorkspaceProviderFactory<IFileScanner>` a exportem typu pomocí <xref:Microsoft.VisualStudio.Workspace.Indexing.ExportFileScannerAttribute> . `SupportedTypes`Argument atributu musí být jedna nebo více hodnot z <xref:Microsoft.VisualStudio.Workspace.Indexing.FileScannerTypeConstants> . Ukázkový skener najdete v [ukázce](https://github.com/Microsoft/VSSDK-Extensibility-Samples/blob/master/Open_Folder_Extensibility/C%23/SymbolScannerSample/TxtFileSymbolScanner.cs)sady vs SDK.
 
 > [!WARNING]
-> Neexportovat skener soubor, který se podporuje `FileScannerTypeConstants.FileScannerContentType` typu. Používá se Microsoft pouze k interním účelům.
+> Neexportujte skener souborů, který podporuje daný `FileScannerTypeConstants.FileScannerContentType` typ. Používá se jenom pro interní účely Microsoftu.
 
-V situacích, pokročilé může podporovat rozšíření dynamicky libovolnou sadu typů souborů. Místo export MEF `IWorkspaceProviderFactory<IFileScanner>`, můžete exportovat rozšíření `IWorkspaceProviderFactory<IFileScannerProvider>`. Po zahájení indexování tento typ objektu pro vytváření importované, vytvořena instance, který se mají jeho <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScannerProvider.GetSymbolScannersAsync%2A> metoda vyvolána. `IFileScanner` instance podporuje libovolnou hodnotu od `FileScannerTpeConstants` bude respektovat, ne jenom symboly.
+V pokročilých situacích může rozšíření dynamicky podporovat libovolnou sadu typů souborů. Namísto exportu MEF `IWorkspaceProviderFactory<IFileScanner>` může rozšíření exportovat `IWorkspaceProviderFactory<IFileScannerProvider>` . Když indexování začne, tento typ objektu pro vytváření se naimportuje, vytvoří se jeho instance a <xref:Microsoft.VisualStudio.Workspace.Indexing.IFileScannerProvider.GetSymbolScannersAsync%2A> vyvolá se jeho metoda. `IFileScanner` instance podporující jakoukoli hodnotu od `FileScannerTpeConstants` se budou respektovat, nikoli jenom symboly.
 
 ## <a name="next-steps"></a>Další kroky
 
-* [Pracovní prostory a jazykových služeb](workspace-language-services.md) – zjistěte, jak integrovat jazykových služeb do pracovního prostoru služby otevřít složku.
-* [Pracovní prostor sestavení](workspace-build.md) -podporuje funkce Otevřít složku sestavení systémy, jako je MSBuild a soubory pravidel.
+* [Pracovní prostory a jazykové služby](workspace-language-services.md) – Naučte se integrovat jazykové služby do pracovního prostoru otevřené složky.
+* [Sestavení pracovního prostoru](workspace-build.md) – otevřená složka podporuje systémy sestavení, jako jsou MSBuild a soubory pravidel.

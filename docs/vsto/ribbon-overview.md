@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985614"
 ---
 # <a name="ribbon-overview"></a>Přehled pásu karet
@@ -84,9 +84,9 @@ ms.locfileid: "72985614"
  Další informace o exportu pásu karet do XML najdete v tématu [How to: Export pásu karet z Návrháře pásu karet do XML pásu karet](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Aktualizace kódu
- Do **Průzkumník řešení**se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. Pro zpracování akcí uživatele, jako je například kliknutí na tlačítko, je nutné vytvořit metody zpětného volání v oblasti `Ribbon Callbacks` této třídy. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
+ Do **Průzkumník řešení**se přidá nový soubor kódu pásu karet. Tento soubor obsahuje třídu XML pásu karet. `Ribbon Callbacks`Pro zpracování akcí uživatele, jako je například kliknutí na tlačítko, je nutné v oblasti této třídy vytvořit metody zpětného volání. Přesuňte kód z obslužných rutin událostí do těchto metod zpětného volání a upravte kód tak, aby fungoval s programovacím modelem rozšíření pásu karet (Ribbon Extensibility). Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
- Je také nutné přidat kód do třídy `ThisAddIn`, `ThisWorkbook`nebo `ThisDocument`, která přepíše metodu `CreateRibbonExtensibilityObject` a vrátí třídu XML pásu karet do aplikace sady Office.
+ Musíte také přidat kód do `ThisAddIn` `ThisWorkbook` třídy, nebo, `ThisDocument` která přepisuje `CreateRibbonExtensibilityObject` metodu a vrátí třídu XML pásu karet do aplikace sady Office.
 
  Další informace najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
@@ -103,7 +103,7 @@ ms.locfileid: "72985614"
 ### <a name="select-which-ribbons-to-display-at-run-time"></a>Vybrat, které pásy se mají zobrazit v době běhu
  Vzhledem k tomu, že projekt může obsahovat více než jeden pás karet, můžete vybrat, který pás karet se má zobrazit v době běhu.
 
- Chcete-li vybrat pás karet, který má být zobrazen v době běhu, přepište metodu `CreateRibbonExtensibilityObject` v `ThisAddin`, `ThisWorkbook`nebo `ThisDocument` třídy projektu a vraťte pás karet, který chcete zobrazit. Následující příklad zkontroluje hodnotu pole s názvem `myCondition` a vrátí příslušný pás karet.
+ Chcete-li vybrat pás karet, který má být zobrazen v době běhu, přepište `CreateRibbonExtensibilityObject` metodu ve `ThisAddin` `ThisWorkbook` třídě, nebo v `ThisDocument` projektu a vraťte pás karet, který chcete zobrazit. Následující příklad zkontroluje hodnotu pole s názvem `myCondition` a vrátí příslušný pás karet.
 
 > [!NOTE]
 > Syntaxe použitá v tomto příkladu vrací pás karet, který byl vytvořen pomocí položky **pásu karet (vizuální Návrhář)** . Syntaxe pro vrácení pásu karet, která je vytvořena pomocí položky **pásu karet (XML)** , je mírně odlišná. Další informace o vracení položky **pásu karet (XML)** najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
@@ -115,7 +115,7 @@ ms.locfileid: "72985614"
 
 ### <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)|Ukazuje, jak přizpůsobit pás karet aplikace systém Microsoft Office, přidat **pás karet (vizuální Návrhář)** nebo položku **pásu karet (XML)** do projektu sady Office.|
 |[Návrhář pásu karet](../vsto/ribbon-designer.md)|Popisuje, jak můžete pomocí Návrháře pásu karet přidat vlastní karty, skupiny a ovládací prvky na pás karet aplikace systém Microsoft Office.|

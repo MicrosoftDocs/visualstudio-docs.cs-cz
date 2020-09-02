@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6fcc4ae2a07eb7b1f155d6c65020e2c1a9ddc9f2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546845"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002: Nezveřejňujte obecné seznamy
@@ -36,7 +36,7 @@ ms.locfileid: "85546845"
  Typ obsahuje externě viditelný člen, který je <xref:System.Collections.Generic.List%601?displayProperty=fullName> typu, vrátí <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ, nebo jehož signatura obsahuje <xref:System.Collections.Generic.List%601?displayProperty=fullName> parametr.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Collections.Generic.List%601?displayProperty=fullName>je obecná kolekce, která je navržena pro výkon a nikoli pro dědění. <xref:System.Collections.Generic.List%601?displayProperty=fullName>neobsahuje virtuální členy, které usnadňují změnu chování zděděné třídy. Následující obecné kolekce jsou navržené pro dědění a měly by být vystaveny namísto <xref:System.Collections.Generic.List%601?displayProperty=fullName> .
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName> je obecná kolekce, která je navržena pro výkon a nikoli pro dědění. <xref:System.Collections.Generic.List%601?displayProperty=fullName> neobsahuje virtuální členy, které usnadňují změnu chování zděděné třídy. Následující obecné kolekce jsou navržené pro dědění a měly by být vystaveny namísto <xref:System.Collections.Generic.List%601?displayProperty=fullName> .
 
 - <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
 

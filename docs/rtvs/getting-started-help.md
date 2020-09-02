@@ -1,6 +1,6 @@
 ---
-title: Okno nápovědy pro R
-description: Nápověda pro R je integrována přímo do interaktivního okna v sadě Visual Studio prostřednictvím aplikace ? Příkaz.
+title: Okno s nápovědu pro R
+description: Nápovědu pro jazyk R je integrována přímo do interaktivního okna v aplikaci Visual Studio prostřednictvím? systému.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,55 +9,55 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: af6c6156b1d88c1d015f7700fc7bed061bbe9a76
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62950604"
 ---
-# <a name="help-in-r-tools-for-visual-studio"></a>Nápověda k nástrojům R pro visual studio
+# <a name="help-in-r-tools-for-visual-studio"></a>Nástroje R pro Visual Studio nápovědě
 
-Nápověda pro R je integrována přímo do interaktivního okna v sadě Visual Studio. Vždy, když `?` použijete `?mtcars`příkaz, například , se v okně sady Visual Studio zobrazí nápověda z dokumentace jazyka R:
+Nápovědu pro jazyk R je integrována přímo do interaktivního okna v aplikaci Visual Studio. Pokaždé, když použijete `?` příkaz, například `?mtcars` , se zobrazí zpráva z dokumentace R v okně sady Visual Studio:
 
-![Okno nápovědy v sadě Visual Studio](media/help-window.png)
+![Okno Help v aplikaci Visual Studio](media/help-window.png)
 
 > [!Tip]
-> Okno nápovědy, stejně jako všechny ostatní v sadě Visual Studio, lze uspořádat a ukotvit, jak se vám líbí. Viz [Přizpůsobení rozložení oken v sadě Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).
+> Okno Help, podobně jako všechny ostatní v aplikaci Visual Studio, lze uspořádat a ukotvit, například. Viz [přizpůsobení rozložení oken v aplikaci Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md).
 >
-> Chcete-li otevřít výsledky nápovědy v prohlížeči, vyberte nabídku `External`**Možnosti** **nástrojů** > R a nastavte vlastnost **Prohlížeč nápovědy R** na . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
+> Chcete-li otevřít výsledky aplikace Help v prohlížeči, vyberte nabídku možnosti **nástrojů jazyka R**  >  **Options** a nastavte vlastnost **Nápověda pro R prohlížeče** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
 
-Chcete-li vyhledat `??` nápovědu, použijte příkaz následovaný hledaným výrazem. Pokud hledaný výraz obsahuje mezery, použijte uvozovky:
+Pokud chcete hledat v nápovědě, použijte `??` příkaz následovaný hledaným termínem. Pokud hledaný termín obsahuje mezery, použijte uvozovky:
 
 ```R
 ??"Motor Trend"
 ```
 
-![Nápověda k výsledkům hledání](media/help-search1.png)
+![Výsledky hledání v nápovědě](media/help-search1.png)
 
-Okno nápovědy má také vyhledávací vstupní pole, jehož prostřednictvím můžete provádět další vyhledávání přímo v dokumentaci R:
+Okno help obsahuje také vstupní pole hledání, pomocí kterého můžete provádět další hledání přímo v dokumentaci jazyka R:
 
-![Pomoc s hledáním výsledků pomocí vstupního pole](media/help-search2.png)
+![Help výsledky hledání pomocí vstupního pole](media/help-search2.png)
 
-## <a name="integrated-help-lookup"></a>Integrované vyhledávání nápovědy
+## <a name="integrated-help-lookup"></a>Integrované vyhledávání v nápovědě
 
-Vývojáři často vyhledávají nápovědu v dokumentaci jazyka R k názvům funkcí, datovým mase a dalším prvkům. Nástroje R pro visual studio (RTVS) zjednodušují proces integrací vyhledávání nápovědy přímo do editoru a interaktivních oken.
+Vývojáři často prohledají dokumentaci R, kde najdete nápovědu pro názvy funkcí, datové sady a další prvky. Nástroje R pro Visual Studio (RTVS) zjednodušuje proces integrací vyhledávání v nápovědě přímo do editoru a interaktivních oken.
 
-- Stisknutím **klávesy F1** během operace automatického dokončování se vytvoří seznam výsledků nápovědy, které odpovídají podřetězci.
-- Kliknutím pravým tlačítkem myši na hledaný výraz (například funkcí) a výběrem **příkazu Nápověda se** otevře nápověda pro tuto funkci. Můžete také vyvolat **nápovědu pro** libovolný výběr.
+- Stisknutí **klávesy F1** během operace automatického dokončení vytvoří seznam výsledků pro nápovědu, které odpovídají podřetězci.
+- Kliknutím pravým tlačítkem myši na hledaný termín (například funkce) a výběrem příkazu **help on** (otevřít nápovědu) se zobrazí nápovědu k této funkci. Můžete také vyvolat **nápovědu** pro libovolný výběr.
 
-    ![Vyvolání nápovědy prostřednictvím kontextové nabídky pravým tlačítkem myši](media/help-right-click.png)
+    ![Vyvolání pomocníka při kliknutí pravým tlačítkem na místní nabídku](media/help-right-click.png)
 
 > [!Tip]
-> Chcete-li otevřít integrovanou nápovědu v prohlížeči, vyberte**možnosti** **nástrojů** > R a nastavte webový **prohlížeč F1** na `External`. Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
+> Chcete-li otevřít integrovanou nápovědu v prohlížeči, vyberte možnost možnosti **nástrojů R**  >  **Options** a nastavte možnost **F1 webový prohlížeč** na `External` . Viz [Možnosti](options-for-r-tools-in-visual-studio.md).
 
-## <a name="integrated-stackoverflow-search"></a>Integrované vyhledávání StackOverflow
+## <a name="integrated-stackoverflow-search"></a>Integrované hledání StackOverflow
 
-Kromě vyhledávání v dokumentaci R vývojáři často prohledávají StackOverflow při psaní kódu. RTVS tento proces také zjednodušuje. Klepněte pravým tlačítkem myši na termín nebo výběr, vyberte příkaz **Hledat na webu** (**Ctrl**+**F1**) a Visual Studio otevře okno s výsledky hledání s rozsahem StackOverflow:
+Kromě vyhledávání v dokumentaci jazyka R, vývojáři často hledají StackOverflow při psaní kódu. RTVS tento proces i zjednodušuje. Klikněte pravým tlačítkem na termín nebo výběr, vyberte **vyhledat web pro** příkaz (**CTRL** + **F1**) a Visual Studio otevře okno s výsledky hledání podle rozsahu StackOverflow:
 
-![Výsledky hledání na webu v sadě Visual Studio](media/help-web-search-results.png)
+![Výsledky hledání na webu v aplikaci Visual Studio](media/help-web-search-results.png)
 
-Připojený řetězec oborů můžete změnit `R site:stackoverflow`pomocí možnosti řetězce vyhledávání **na webu nástroje** > **Options** > R**Options F1:**
+Přidaný řetězec oboru můžete změnit `R site:stackoverflow` pomocí možností **nástroje R**  >  **Možnosti**  >  **řetězce hledání na webu F1** :
 
-![Změna možnosti vyhledávacího řetězce webu F1](media/options-dialog.png)
+![Změna možnosti řetězce hledání na webu F1](media/options-dialog.png)
 
-Pokud dáváte přednost zobrazení výsledků v prohlížeči, změňte možnost **webového prohlížeče F1,** jak je popsáno v části [Možnosti](options-for-r-tools-in-visual-studio.md).
+Pokud dáváte přednost zobrazení výsledků v prohlížeči, změňte možnost **webový prohlížeč F1** , jak je popsáno v tématu [Možnosti](options-for-r-tools-in-visual-studio.md).

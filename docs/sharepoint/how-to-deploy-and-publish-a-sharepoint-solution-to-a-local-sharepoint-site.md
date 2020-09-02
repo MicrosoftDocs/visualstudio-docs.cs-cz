@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 59d4fe41565d0aaf0c52cae9434d4a576dc26baa
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016819"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Postupy: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint
@@ -40,7 +41,7 @@ ms.locfileid: "86016819"
 
      Průběh publikování se zobrazí v okně **výstupu** sady Visual Studio. Po dokončení procesu se soubor řešení (*. wsp*) nainstaluje na místní sharepointový Server. Musí se ale ještě aktivovat pro použití v SharePointu. Pokud soubor řešení již existuje, dojde k chybě a zobrazí se dotaz, zda chcete přepsat existující soubor. Informace o upgradu balíčku najdete v části věnované upgradu vzdálených balíčků v tématu [Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: nasazení, publikování a upgrade řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)
 - [Vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md)
 - [Postupy: Přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)

@@ -1,5 +1,5 @@
 ---
-title: Data v návody pro řešení Office
+title: Návody pro data v řešeních pro systém Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,45 +14,45 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 52b2efa5e5def8214736d648e2b90906fe720dbe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62956027"
 ---
-# <a name="data-in-office-solutions-walkthroughs"></a>Data v návody pro řešení Office
-  Následující postupy ukazují, jak pracovat s daty v přizpůsobeních na úrovni dokumentu a doplňky VSTO pro Microsoft Office Word a Microsoft Office Excel.
+# <a name="data-in-office-solutions-walkthroughs"></a>Návody pro data v řešeních pro systém Office
+  Následující návody ukazují, jak pracovat s daty v přizpůsobení na úrovni dokumentu a doplňku VSTO pro systém Microsoft Office Wordu a systém Microsoft Office Excelu.
 
-## <a name="bind-controls-to-data"></a>Vytvoření vazby ovládacích prvků k datům
-- [Návod: Jednoduché datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) ukazuje, jak se k ní navázat pole v databázi SQL serveru do jednoho datového <xref:Microsoft.Office.Tools.Excel.NamedRange> v přizpůsobení úrovni dokumentu pro Excel.
+## <a name="bind-controls-to-data"></a>Svázání ovládacích prvků s daty
+- [Návod: jednoduché datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) Ukazuje, jak vytvořit propojení s jedním datovým polem v SQL Server databázi k a <xref:Microsoft.Office.Tools.Excel.NamedRange> v přizpůsobení na úrovni dokumentu pro aplikaci Excel.
 
-- [Návod: Rozšířené datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) ukazuje, jak vytvořit vazbu tabulky v databázi serveru SQL Server a <xref:Microsoft.Office.Tools.Excel.ListObject> v přizpůsobení úrovni dokumentu pro Excel.
+- [Návod: komplexní datové vazby v projektech na úrovni dokumentu](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) Ukazuje, jak vytvořit vazby tabulky v SQL Server databázi k <xref:Microsoft.Office.Tools.Excel.ListObject> v přizpůsobení na úrovni dokumentu pro aplikaci Excel.
 
-- [Návod: Jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) ukazuje, jak se k ní navázat pole v databázi SQL serveru do jednoho datového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> v doplňku VSTO pro Word.
+- [Návod: jednoduché datové vazby v projektu doplňku VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) Ukazuje, jak vytvořit spojení s jedním datovým polem v SQL Server databázi s objektem <xref:Microsoft.Office.Tools.Word.RichTextContentControl> v doplňku VSTO pro Word.
 
-- [Návod: Rozšířené datové vazby v projektu doplňku VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) ukazuje, jak vytvořit vazbu tabulky v databázi serveru SQL Server a <xref:Microsoft.Office.Tools.Excel.ListObject> v doplňku VSTO pro Excel.
+- [Návod: komplexní datová vazba v projektu doplňku VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) Ukazuje, jak vytvořit vazby tabulky v SQL Server databázi k <xref:Microsoft.Office.Tools.Excel.ListObject> v doplňku VSTO pro Excel.
 
-- [Návod: Vytvoření vazby dat k ovládacím prvkům v podokně akcí aplikace Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md) ukazuje, jak přidat ovládací prvky, které jsou vázány na zdroj dat do podokna akcí v aplikaci Excel.
+- [Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md) Ukazuje, jak přidat ovládací prvky, které jsou svázané se zdrojem dat, do podokna akcí v aplikaci Excel.
 
-- [Návod: Vytvoření vazby dat s ovládacími prvky v podokně akcí aplikace Word](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) ukazuje, jak svázat ovládací prvky v podokně Akce s daty. Ovládací prvky ukazují záznamů master/detail relace mezi tabulkami v databázi serveru SQL Server.
+- [Návod: svázání dat s ovládacími prvky v podokně akcí aplikace Word](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) Ukazuje, jak navazovat ovládací prvky v podokně akcí na data. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
 
-- [Návod: Vytvoření vazby ovládacích prvků obsahu do vlastní části XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md) ukazuje, jak svázat ovládací prvky obsahu ve Wordovém dokumentu XML data, která je uložena v dokumentu.
+- [Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md) Ukazuje, jak navazovat ovládací prvky obsahu v dokumentu aplikace Word na data XML, která jsou uložena v dokumentu.
 
-## <a name="cache-data-in-document-level-solutions"></a>Data v mezipaměti v řešeních na úrovni dokumentu
-- [Návod: Vytvořte relaci hlavní podrobností pomocí datové sady v mezipaměti](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md) ukazuje, jak vytvořit relaci záznamů master/detail v listu a ukládají data v mezipaměti, aby řešení je možné do offline režimu.
+## <a name="cache-data-in-document-level-solutions"></a>Ukládání dat do mezipaměti v řešeních na úrovni dokumentu
+- [Návod: Vytvoření vztahu hlavní podrobnosti pomocí datové sady uložené v mezipaměti](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md) Ukazuje, jak vytvořit relaci hlavního/podrobností na listu a uložit data do mezipaměti, aby bylo možné řešení použít offline.
 
-- [Návod: Vložení dat do sešitu na serveru](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md) ukazuje, jak vložit data do datové sady, které se uloží do mezipaměti v sešitu aplikace Microsoft Office Excel bez spuštění Excelu.
+- [Návod: vložení dat do sešitu na serveru](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md) Ukazuje, jak vložit data do datové sady, která je ukládána do mezipaměti v systém Microsoft Office excelovém sešitu bez spuštění aplikace Excel.
 
-- [Návod: Načtení dat uložených v mezipaměti ze sešitu na serveru](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md) ukazuje, jak načíst data z datové sady, které se uloží do mezipaměti v sešitu aplikace Microsoft Office Excel bez spuštění Excelu.
+- [Návod: načtení dat uložených v mezipaměti ze sešitu na serveru](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md) Ukazuje, jak načíst data z datové sady, která je uložena v mezipaměti v systém Microsoft Office excelovém sešitu bez spuštění aplikace Excel.
 
-- [Návod: Změna dat uložených v mezipaměti ze sešitu na serveru](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md) ukazuje, jak změnit datové sady, které se uloží do mezipaměti v sešitu aplikace Microsoft Office Excel bez spuštění Excelu.
+- [Návod: Změna dat uložených v mezipaměti v sešitu na serveru](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md) Ukazuje, jak upravit datovou sadu, která je uložena v mezipaměti v systém Microsoft Office excelovém sešitu bez spuštění aplikace Excel.
 
-## <a name="see-also"></a>Viz také:
-- [Návody pro aplikaci Word](../vsto/walkthroughs-using-word.md)
-- [Návody pro aplikaci Excel](../vsto/walkthroughs-using-excel.md)
-- [Návody pro přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization-walkthroughs.md)
-- [Návody pro zabezpečení a nasazení](../vsto/security-and-deployment-walkthroughs.md)
+## <a name="see-also"></a>Viz také
+- [Návody pomocí aplikace Word](../vsto/walkthroughs-using-word.md)
+- [Návody pomocí Excelu](../vsto/walkthroughs-using-excel.md)
+- [Návody pro přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization-walkthroughs.md)
+- [Návody k zabezpečení a nasazení](../vsto/security-and-deployment-walkthroughs.md)
 - [Ukázky vývoje pro Office](../vsto/office-development-samples.md)
-- [Začínáme &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Začněte &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)

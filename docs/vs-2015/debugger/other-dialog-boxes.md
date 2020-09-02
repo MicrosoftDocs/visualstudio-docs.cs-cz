@@ -1,5 +1,5 @@
 ---
-title: Jiná dialogová okna | Dokumentace Microsoftu
+title: Další dialogová okna | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,30 +13,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0178b9f79daa8ddec51d468cb22f3104c26b7f41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198160"
 ---
 # <a name="other-dialog-boxes"></a>Jiná dialogová okna.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tyto dialogy zobrazení informací o programu nástroje Spy ++.  
+Tato dialogová okna obsahují informace o programu Spy + +.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [O nástroji Microsoft Spy++](../debugger/about-microsoft-spy-increment.md)  
- Informace o vlastnictví programu nástroje Spy ++.  
+ Informace o vlastnictví programu Spy + +.  
   
- [Prohlášení o autorských právech pro nápovědu nástroje Spy++](../debugger/copyright-notice-for-spy-increment-help.md)  
- Právní doložka o autorských právech.  
+ [Poznámka o autorských právech pro nápovědu nástroje Spy++](../debugger/copyright-notice-for-spy-increment-help.md)  
+ Právní oznámení o autorských právech.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)  
- Obsahuje části s popisem každé nástroje Spy ++ nabídky a dialogové okno pole.  
+ Obsahuje oddíly popisující jednotlivé nabídky a dialogová okna nástroje Spy + +.  
   
  [Použití nástroje Spy++](../debugger/using-spy-increment.md)  
- Seznámíte se nástroje Spy ++, jak je možné.  
+ Zavádí nástroj Spy + + a vysvětluje, jak ho lze použít.  
   
  [Zobrazení nástroje Spy++](../debugger/spy-increment-views.md)  
- Vysvětluje, zobrazení stromu nástroje Spy ++ windows, zpráv, procesy a vlákna.
+ Vysvětluje zobrazení stromové struktury nástroje Spy + + pro Windows, zprávy, procesy a vlákna.

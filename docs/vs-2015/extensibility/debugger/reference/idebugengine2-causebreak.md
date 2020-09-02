@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CauseBreak | Dokumentace Microsoftu
+title: 'IDebugEngine2:: CauseBreak | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2b6e52e4885a61c3fe04fff5bdcca08fd00cf460
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198490"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Požadavky, že všechny programy právě laděny ve tento ladicí stroj (DE) pro zastavení provádění příště, jeden z jejich vláken pokusí o spuštění.  
+Požaduje, aby všechny programy laděné tímto modulem ladění (DE) zastavily provádění při příštím pokusu o spuštění některého z jeho vláken.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CauseBreak(   
@@ -37,10 +37,10 @@ int CauseBreak();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je asynchronní: [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) události se odešle, když program další pokusy o spuštění po volání této metody.  
+ Tato metoda je asynchronní: událost [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) se pošle, když se program příště pokusí spustit po volání této metody.  
   
 ## <a name="see-also"></a>Viz také  
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)   

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields | Dokumenty společnosti Microsoft
+title: IEnumDebugFields | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,44 +13,44 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d577ff2f5848f2cb348bcaccf57875507018634b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80716782"
 ---
 # <a name="ienumdebugfields"></a>IEnumDebugFields
-Toto rozhraní představuje kolekci objektů implementujících rozhraní [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
+Toto rozhraní představuje kolekci objektů, které implementují rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IEnumDebugFields : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno zprostředkovatelem symbolů k poskytování sad objektů, které implementují rozhraní [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md) Všimněte si, že se nejedná o standardní výčet COM z důvodu přítomnosti [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md) metody.
+ Toto rozhraní je implementováno zprostředkovatelem symbolů pro poskytování sad objektů, které implementují rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) . Všimněte si, že se nejedná o standardní výčet modelu COM z důvodu přítomnosti metody [GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md) .
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní je vráceno [getmethodfieldsByname](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md) a [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md).
+ Toto rozhraní je vráceno pomocí [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md) a [GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md).
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
  Toto rozhraní implementuje následující metody.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Další](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|Načte další sadu [iDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekty z výčtu.|
+|[Další](../../../extensibility/debugger/reference/ienumdebugfields-next.md)|Načte další sadu objektů [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) z výčtu.|
 |[Přeskočit](../../../extensibility/debugger/reference/ienumdebugfields-skip.md)|Přeskočí zadaný počet položek.|
-|[Resetovat](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|Obnoví výčet na první položku.|
-|[Klonování](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Načte kopii aktuálnívýčtu.|
+|[Reset](../../../extensibility/debugger/reference/ienumdebugfields-reset.md)|Obnoví výčet na první položku.|
+|[Klonování](../../../extensibility/debugger/reference/ienumdebugfields-clone.md)|Načte kopii aktuálního výčtu.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugfields-getcount.md)|Načte počet položek ve výčtu.|
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -1,5 +1,5 @@
 ---
-title: Třída TrackedVCToolTask | Dokumenty společnosti Microsoft
+title: Třída TrackedVCToolTask | Microsoft Docs
 ms.date: 03/10/2019
 ms.topic: reference
 dev_langs:
@@ -12,43 +12,43 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a4272f7800e0532c0674fe7117e839cb16557d5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594926"
 ---
-# <a name="trackedvctooltask-base-class"></a>Základní třída TrackedVCToolTask
+# <a name="trackedvctooltask-base-class"></a>TrackedVCToolTask – základní třída
 
-Mnoho úkolů nakonec dědí z třídy <xref:Microsoft.Build.Utilities.Task> a [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) třídy. Tato třída přidá několik parametrů k úkolům, které jsou odvozeny z [VCToolTask](../msbuild/vctooltask-base-class.md). Tyto parametry jsou uvedeny v tomto dokumentu.
+Mnohé úlohy jsou nakonec děděny ze třídy <xref:Microsoft.Build.Utilities.Task> a třídy [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) . Tato třída přidá několik parametrů k úkolům odvozeným od [VCToolTask](../msbuild/vctooltask-base-class.md). Tyto parametry jsou uvedeny v tomto dokumentu.
 
 ## <a name="parameters"></a>Parametry
 
-Následující tabulka popisuje parametry základní třídy **TrackedVCToolTask.**
+Následující tabulka popisuje parametry základní třídy **TrackedVCToolTask** .
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**DeleteOutputOnExecute**|Volitelný **parametr bool.**|
-|**EnableExecuteTool**|Volitelný **parametr bool.**|
-|**ExcludedInputPaths**|Volitelný parametr **ITaskItem[].**|
-|**MinimalRebuildFromTracking**|Volitelný **parametr bool.**|
-|**PathOverride**|Volitelný parametr **řetězce.**|
-|**PostBuildTrackingCleanup**|Volitelný **parametr bool.**|
-|**Kořenový zdroj**|Volitelný parametr **řetězce.**|
-|**Přeskočené provedení**|Volitelný výstupní parametr **bool.**|
-|**Zkompilované zdroje**|Volitelný výstupní parametr **ITaskItem[].**|
-|**Soubor TLogCommandFile**|Volitelný parametr **ITaskItem.**|
-|**Tlogready**|Volitelný parametr **ITaskItem[].**|
-|**Tlogwritefiles**|Volitelný parametr **ITaskItem[].**|
-|**Architektura nástrojů**|Volitelný parametr **řetězce.**|
-|**TrackCommandLines**|Volitelný **parametr bool.**|
-|**Přístup trackfileaccess**|Volitelný **parametr bool.**|
-|**TrackedInputFilesToignore**|Volitelný parametr **ITaskItem[].**|
-|**SledováníVýstupFilesToIgnore**|Volitelný parametr **ITaskItem[].**|
-|**Cesta trackeru FrameworkPath**|Volitelný parametr **řetězce.**|
-|**Cesta trackersdk**|Volitelný parametr **řetězce.**|
+|**DeleteOutputOnExecute**|Volitelný parametr **bool** .|
+|**EnableExecuteTool**|Volitelný parametr **bool** .|
+|**ExcludedInputPaths**|Volitelný parametr **ITaskItem []** .|
+|**MinimalRebuildFromTracking**|Volitelný parametr **bool** .|
+|**PathOverride**|Volitelný **řetězcový** parametr.|
+|**PostBuildTrackingCleanup**|Volitelný parametr **bool** .|
+|**RootSource**|Volitelný **řetězcový** parametr.|
+|**SkippedExecution**|Volitelný výstupní parametr **bool**|
+|**SourcesCompiled**|Volitelný výstupní parametr **ITaskItem []** .|
+|**TLogCommandFile**|Volitelný parametr **ITaskItem**|
+|**TLogReadFiles**|Volitelný parametr **ITaskItem []** .|
+|**TLogWriteFiles**|Volitelný parametr **ITaskItem []** .|
+|**ToolArchitecture**|Volitelný **řetězcový** parametr.|
+|**TrackCommandLines**|Volitelný parametr **bool** .|
+|**TrackFileAccess**|Volitelný parametr **bool** .|
+|**TrackedInputFilesToIgnore**|Volitelný parametr **ITaskItem []** .|
+|**TrackedOutputFilesToIgnore**|Volitelný parametr **ITaskItem []** .|
+|**TrackerFrameworkPath**|Volitelný **řetězcový** parametr.|
+|**TrackerSdkPath**|Volitelný **řetězcový** parametr.|
 
 ## <a name="see-also"></a>Viz také
 
-[Odkaz na úkol](../msbuild/msbuild-task-reference.md)<br/>
+[Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)<br/>
 [Úlohy](../msbuild/msbuild-tasks.md)

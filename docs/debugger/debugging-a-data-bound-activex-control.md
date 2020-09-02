@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 460277670d76ddcc1001ba2d6060107ea405601e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350521"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Ladění ovládacího prvku ActiveX vázaného na data
@@ -36,4 +36,4 @@ Pokud vyvíjíte ovládací prvek ActiveX, který bude svázán s ovládacím pr
 
 ## <a name="see-also"></a>Viz také
 - [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
-- [ActiveX – ovládací prvky](/cpp/mfc/activex-controls)
+- [Ovládací prvky ActiveX](/cpp/mfc/activex-controls)

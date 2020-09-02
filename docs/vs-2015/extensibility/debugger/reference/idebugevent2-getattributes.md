@@ -1,5 +1,5 @@
 ---
-title: IDebugEvent2::GetAttributes | Dokumentace Microsoftu
+title: 'IDebugEvent2:: GetAttributes | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8396d633e682eb9c78aef5b1241e7f9fc635a325
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144379"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
@@ -40,13 +40,13 @@ int GetAttribute( 
   
 #### <a name="parameters"></a>Parametry  
  `pdwAttrib`  
- [out] Kombinace příznaků z [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) výčtu.  
+ mimo Kombinace příznaků z výčtu [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) rozhraní je společné pro všechny události. Tato metoda popisuje typ události. například je událost synchronní nebo asynchronní a je to událostí ukončení.  
+ Rozhraní [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) je společné pro všechny události. Tato metoda popisuje typ události; Například je událost synchronní nebo asynchronní a jedná se o událost zastavení.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

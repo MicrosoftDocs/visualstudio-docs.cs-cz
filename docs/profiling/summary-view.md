@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a12989004b5bed8601bdda1ec0719eda789ff822
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546884"
 ---
 # <a name="summary-view"></a>Souhrnné zobrazení
@@ -55,7 +55,7 @@ V souhrnném zobrazení se zobrazí informace o nejdražších funkcích nebo ob
 | **Filtrovat data sestavy** | Zobrazí podokno filtru sestavy profilace, kde můžete zadat kritéria pro omezení dat v zobrazení sestavy. Další informace najdete v tématu [Filtr zobrazení sestav výkonu.](../profiling/performance-report-view-filter.md) |
 | **Přepnout na celou obrazovku** | Přepne režim celé obrazovky pro zobrazení sestavy. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Souhrnné zobrazení – vzorkování dat](../profiling/summary-view-sampling-data.md)
 - [Souhrnné zobrazení – data instrumentace](../profiling/summary-view-instrumentation-data.md)
 - [Souhrnné zobrazení – data paměti .NET](../profiling/summary-view-dotnet-memory-data.md)

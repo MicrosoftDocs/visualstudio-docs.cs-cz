@@ -1,5 +1,5 @@
 ---
-title: Ladění F# | Dokumentace Microsoftu
+title: 'Ladění F # | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,23 +18,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 51a8e43268718421a90d051f0d4d9b6afa96980e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156685"
 ---
 # <a name="debugging-f"></a>Ladění F\#
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladění F# je podobné ladění jakékoli spravovaného jazyka, s několika výjimkami:
+Ladění F # je podobné ladění libovolného spravovaného jazyka, s několika výjimkami:
 
-- **Automatické hodnoty** okno nezobrazí F# proměnné.
+- Okno **Automatické** hodnoty nezobrazí proměnné F #.
 
-- Upravit a pokračovat není podporována pro F#. Úpravy F# kódu během relace ladění je možné, ale mělo by se vyhnout. Protože během relace ladění se nepoužijí změny kódu, úpravy F# kódu během ladění způsobí neshodu mezi zdrojový kód a kód, který se právě ladí.
+- V jazyce F # není podporována úprava a pokračování. Úprava kódu F # během relace ladění je možná, ale měla by se jim vyhýbat. Vzhledem k tomu, že změny kódu nejsou během relace ladění aplikovány, úprava kódu F # během ladění způsobí neshodu mezi zdrojovým kódem a laděným kódem.
 
-- Ladicí program nemůže rozpoznat F# výrazy. Zadání výrazu v okně ladicího programu nebo dialogového okna průběhu F# ladění, musí přeložit výraz, který C# syntaxe. Při překladu F# výraz, který C#, ujistěte se, že si zapamatovat, že C# používá == jako operátor porovnání rovnosti a který F# používá jeden =.
+- Ladicí program nerozpozná výrazy F #. Chcete-li zadat výraz v okně ladicího programu nebo dialogové okno během ladění F #, je nutné výraz přeložit do syntaxe jazyka C#. Při překladu výrazu F # do jazyka C# nezapomeňte zapamatovat, že jazyk C# používá = = jako operátor porovnání pro rovnost a že F # používá jeden =.
 
 ## <a name="see-also"></a>Viz také
 

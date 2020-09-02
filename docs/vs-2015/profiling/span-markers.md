@@ -1,5 +1,5 @@
 ---
-title: Značky rozpětí | Dokumentace Microsoftu
+title: Značky span | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,32 +12,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8f733ccec12e422a11532b8012836422d14d93b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198341"
 ---
 # <a name="span-markers"></a>Značky rozpětí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Značka span představuje smysluplné fáze aplikace. Například můžete použít rozpětí k reprezentaci interval doby, během kterého se zpracovává konkrétní pracovní položce. Jeho délka představuje dobu trvání odpovídající fáze aplikace. Tento obrázek ukazuje rozpětí ve Vizualizátor souběžnosti:  
+Značka rozsahu představuje smysluplnou fázi aplikace. Například můžete použít rozsah, který představuje časový interval, během kterého se zpracovává konkrétní pracovní položka. Jeho délka představuje dobu trvání odpovídající fáze aplikace. Tento obrázek ukazuje rozpětí v Vizualizátor souběžnosti:  
   
- ![Značku span v Concurrency Visualizer](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
-Značka span ve vizualizátoru souběžnosti  
+ ![Značka span v Vizualizér souběžnosti](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
+Značka span v Vizualizér souběžnosti  
   
-## <a name="span-category"></a>Kategorie značky span  
- V jednom z pěti různých barev, v závislosti na jeho kategorie se zobrazí značku span. Barvy se opakují, pokud existuje více než pět kategorií. Kategorie může být libovolné celé číslo. Tento obrázek ukazuje pět možných barev:  
+## <a name="span-category"></a>Span – kategorie  
+ Značka rozpětí se zobrazí v jedné z pěti různých barev v závislosti na její kategorii. Pokud existuje více než pět kategorií, budou barvy opakovány. Kategorie může být libovolné celé číslo. Na tomto obrázku vidíte pět možných barev:  
   
- ![Pět rozsahy v různých kategoriích](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
-Barvy prvních pět kategorií rozpětí  
+ ![Pět rozsahů v různých kategoriích](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
+Barvy prvních pěti kategorií span  
   
-## <a name="span-aggregation-markers"></a>Agregace značky rozpětí  
- Někdy span značky tak dojít blízko sebe ve vizualizátoru souběžnosti, že se nedá vykreslit jednotlivě. Pokud k tomu dojde, šedé *značky span agregace* , že se zobrazí představuje základní rozpětí. Když ukazatel myši na jednu z těchto ikon, zobrazí popisek počet základní rozsahy, které jsou reprezentovány. Chcete-li zobrazit rozsahy, Přiblížit. Pokud přiblížíte úplně a zachovat si značka span agregace, můžete zobrazit základní značky span v [sestava značek](../profiling/markers-report.md). Tento obrázek ukazuje značku span agregace:  
+## <a name="span-aggregation-markers"></a>Span – značky agregace  
+ Někdy se značky přestanou provádět tak, aby se v Vizualizátor souběžnosti vzájemně nemohly kreslit samostatně. V takovém případě je zobrazena šedá *značka agregace rozsahu* , která představuje základní rozsahy. Když umístíte ukazatel myši na jednu z těchto ikon, zobrazí se popis, který znázorňuje počet základních rozsahů, které jsou reprezentovány. Chcete-li zobrazit rozsahy, přiblížte se. Pokud se přiblížíte ke všemu způsobem a stále získáte značku agregace rozsahu, můžete zobrazit základní značky span v [sestavě značek](../profiling/markers-report.md). Tento obrázek ukazuje značku agregace rozsahu:  
   
- ![Agregace span značky v Concurrency Visualizer](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
-Značka span agregace  
+ ![Agregovaná Značka rozsahu v Vizualizér souběžnosti](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
+Značka agregace rozsahu  
   
 ## <a name="see-also"></a>Viz také  
- [Značky Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)   
+ [Značky Vizualizátor souběžnosti](../profiling/concurrency-visualizer-markers.md)   
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

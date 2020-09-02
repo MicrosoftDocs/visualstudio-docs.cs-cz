@@ -1,5 +1,5 @@
 ---
-title: span Class | Dokumentace Microsoftu
+title: span class | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd9775bf03754913aea84f41e9878e755ff15d95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198362"
 ---
 # <a name="span-class"></a>span – třída
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje fáze aplikace.  
+Definuje fázi aplikace.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class span;  
@@ -35,18 +35,18 @@ class span;
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
-|Name|Popis|  
+|Název|Popis|  
 |----------|-----------------|  
-|[span::span – konstruktor](../profiling/span-span-constructor.md)|Inicializuje novou instanci třídy `span` třídy.|  
-|[span::~span – destruktor](../profiling/span-tilde-span-destructor.md)|Odstraní `span` objektu a jeho prostředky.|  
+|[span::span – konstruktor](../profiling/span-span-constructor.md)|Inicializuje novou instanci `span` třídy.|  
+|[span::~span – destruktor](../profiling/span-tilde-span-destructor.md)|Odstraní `span` objekt a uvolní jeho prostředky.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `span`  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** cvmarkersobj. h  
   
- **Namespace:** Concurrency::Diagnostic –  
+ **Obor názvů:** Concurrency::d odeslání diagnostických  
   
 ## <a name="see-also"></a>Viz také  
- [diagnostic – obor názvů](../profiling/diagnostic-namespace.md)
+ [Obor názvů diagnostiky](../profiling/diagnostic-namespace.md)

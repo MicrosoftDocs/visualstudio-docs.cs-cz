@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 85d3c146775ac06b3118186738ee74932a4c452a
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350469"
 ---
 # <a name="send-messages-to-the-output-window"></a>Odesílání zpráv do okna výstupu
@@ -37,7 +37,7 @@ Můžete zapisovat zprávy za běhu do okna **výstup** pomocí <xref:System.Dia
 
 - Různé `Write` metody, které výstupní informace bez přerušení provádění. Tyto metody nahrazují `Debug.Print` metodu použitou v předchozích verzích Visual Basic.
 
-- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>a <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> metody, které přeruší spuštění a výstupní informace v případě, že se zadaná podmínka nezdařila. Ve výchozím nastavení `Assert` Metoda zobrazí informace v dialogovém okně. Další informace naleznete v tématu [kontrolní výrazy ve spravovaném kódu](../debugger/assertions-in-managed-code.md).
+- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> metody, které přeruší spuštění a výstupní informace v případě, že se zadaná podmínka nezdařila. Ve výchozím nastavení `Assert` Metoda zobrazí informace v dialogovém okně. Další informace naleznete v tématu [kontrolní výrazy ve spravovaném kódu](../debugger/assertions-in-managed-code.md).
 
 - <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName>Metody a <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> , které vždy přeruší spuštění a výstupní informace. Ve výchozím nastavení `Fail` metody zobrazují informace v dialogovém okně.
 

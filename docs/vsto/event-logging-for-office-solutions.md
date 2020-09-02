@@ -1,5 +1,5 @@
 ---
-title: Protokolování události u řešení pro systém Office
+title: Protokolování událostí pro řešení pro systém Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,86 +16,86 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 480a355ee2af321341c54b90edcc582d49102186
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62951931"
 ---
-# <a name="event-logging-for-office-solutions"></a>Protokolování události u řešení pro systém Office
-  Můžete v prohlížeči událostí ve Windows najdete v článku zprávy o výjimkách, které jsou zachyceny [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] při instalaci nebo odinstalaci řešení Office. Tyto zprávy z protokolování událostí můžete použít k vyřešení instalace a problémů s nasazením.
+# <a name="event-logging-for-office-solutions"></a>Protokolování událostí pro řešení pro systém Office
+  Prohlížeč událostí ve Windows můžete použít k zobrazení zpráv výjimek, které jsou zachyceny [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] při instalaci nebo odinstalaci řešení Office. Pomocí těchto zpráv z protokolovacího nástroje můžete vyřešit problémy s instalací a nasazením.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="read-the-event-log"></a>Přečíst protokol událostí
- Otevřít **Prohlížeč událostí** a filtrování pro události, které chcete zobrazit.
+## <a name="read-the-event-log"></a>Přečtěte si protokol událostí.
+ Otevřete **Prohlížeč událostí** a vyfiltrujte události, které chcete zobrazit.
 
-### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Přečíst protokol událostí systému Windows Server 2003 a Windows XP
+### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Postup čtení protokolu událostí v systému Windows Server 2003 a Windows XP
 
-1. V Ovládacích panelech otevřete **nástroje pro správu**.
+1. V Ovládacích panelech otevřete **Nástroje pro správu**.
 
-2. Spustit **Prohlížeč událostí**.
+2. Spusťte **Prohlížeč událostí**.
 
-3. Vyberte v seznamu protokolů událostí **aplikace**.
+3. V seznamu protokolů událostí vyberte **Application (aplikace**).
 
-4. Na **zobrazení** nabídky, klikněte na tlačítko **filtr**.
+4. V nabídce **zobrazení** klikněte na možnost **Filtr**.
 
-5. V **zdroj události** seznamu vyberte **VSTO 4.0**.
+5. V seznamu **zdroj události** vyberte **VSTO 4,0**.
 
-6. Pro instalaci události v **ID události** zadejte **4096**.
+6. V případě událostí instalace zadejte do pole **ID události** **4096**.
 
-7. Klikněte na tlačítko **OK** zobrazíte filtrované zobrazení.
+7. Kliknutím na tlačítko **OK** zobrazíte filtrované zobrazení.
 
-### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Přečíst protokol událostí ve Windows 7, Windows Vista a Windows Server 2008
+### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Postup čtení protokolu událostí v systému Windows 7, Windows Vista a Windows Server 2008
 
-1. V Ovládacích panelech otevřete **nástroje pro správu**.
+1. V Ovládacích panelech otevřete **Nástroje pro správu**.
 
-2. Spustit **Prohlížeč událostí**.
+2. Spusťte **Prohlížeč událostí**.
 
-3. Rozbalte **protokoly Windows**.
+3. Rozbalte položku **protokoly systému Windows**.
 
-4. Vyberte v seznamu protokolů událostí **aplikace**.
+4. V seznamu protokolů událostí vyberte **Application (aplikace**).
 
-5. Na **akce** nabídky, klikněte na tlačítko **filtrovat aktuální protokol**.
+5. V nabídce **Akce** klikněte na možnost **Filtrovat aktuální protokol**.
 
-6. V **zdroj události** seznamu vyberte **VSTO 4.0**.
+6. V seznamu **zdroj události** vyberte **VSTO 4,0**.
 
-7. Pro instalaci události v **ID události** zadejte **4096**.
+7. V případě událostí instalace zadejte do pole **ID události** **4096**.
 
-8. Klikněte na tlačítko **OK** zobrazíte filtrované zobrazení.
+8. Kliknutím na tlačítko **OK** zobrazíte filtrované zobrazení.
 
-   V prohlížeči událostí obsahuje tyto informace:
+   Prohlížeč událostí obsahuje následující informace:
 
 - Umístění manifestu nasazení pro řešení.
 
 - Zpráva, která popisuje příčinu chyby nebo výjimky.
 
-  Tyto zprávy o výjimkách, můžete zjistit, proč pro problém s instalací, například na nedůvěryhodný certifikát, umístění služby nedůvěryhodné dokumentu nebo manifest nasazení je neplatná.
+  Tyto zprávy o výjimce vám mohou přispět k určení příčiny problému s instalací, jako je nedůvěryhodný certifikát, nedůvěryhodné umístění dokumentu nebo neplatný manifest nasazení.
 
-  Po odinstalaci je řešení pro Office, zůstanou zprávy o výjimce v protokolu událostí.
+  Po odinstalaci řešení pro systém Office zůstanou zprávy o výjimkách v protokolu událostí.
 
-  Zobrazit nebo protokolování výjimek zpráv při spuštění řešení pro Office naleznete v tématu [projekty Office ladění](../vsto/debugging-office-projects.md) a [projekty Office ladění](../vsto/debugging-office-projects.md).
+  Chcete-li zobrazit nebo zaznamenat zprávy o výjimce při spuštění řešení Office, přečtěte si téma [ladění projektů Office](../vsto/debugging-office-projects.md) a [ladění projektů Office](../vsto/debugging-office-projects.md).
 
 ### <a name="localization"></a>Lokalizace
- Visual Studio Tools for Office runtime language Určuje jazyk zpráva o výjimce. Například pokud má počítač koncového uživatele japonská jazyková sada nainstalovaná, zpráva výjimky je zapsané do protokolu událostí v japonštině.
+ Jazyk zprávy o výjimce je určen jazykem Visual Studio Tools for Office runtime. Pokud má například počítač koncového uživatele nainstalované japonské jazykové sady, zpráva o výjimce se zapíše do protokolu událostí v japonštině.
 
-## <a name="disable-the-event-logger"></a>Zakázat protokolování událostí
- Ve výchozím nastavení je protokolování událostí při instalaci nebo odinstalaci řešení pro systém Office povolené. Protokolování událostí můžete zakázat nastavením proměnné prostředí VSTO_EVENTLOGDISABLED "1" (jeden).
+## <a name="disable-the-event-logger"></a>Zakázání protokolovacího nástroje událostí
+ Ve výchozím nastavení je protokolovací nástroj povolený při instalaci nebo odinstalaci řešení Office. Nástroj pro protokolování událostí můžete zakázat nastavením proměnné prostředí VSTO_EVENTLOGDISABLED na hodnotu 1 (jedna).
 
-### <a name="to-disable-the-event-log"></a>Chcete-li zakázat protokol událostí
+### <a name="to-disable-the-event-log"></a>Zakázání protokolu událostí
 
-1. V Ovládacích panelech otevřete **systému**.
+1. V Ovládacích panelech otevřete **systém**.
 
-2. Na **Upřesnit** klikněte na tlačítko **proměnné prostředí**.
+2. Na kartě **Upřesnit** klikněte na **proměnné prostředí**.
 
-3. V **systémové proměnné** podokně klikněte na tlačítko **nový**.
+3. V podokně **systémové proměnné** klikněte na **Nový**.
 
-4. V **nová systémová proměnná** dialogovém okně **VSTO_EVENTLOGDISABLED** v **název proměnné** pole.
+4. V dialogovém okně **Nová systémová proměnná** zadejte do pole **název proměnné** **VSTO_EVENTLOGDISABLED** .
 
-5. V **hodnotu proměnné** zadejte **1**.
+5. Do pole **Proměnná hodnota** zadejte **1**.
 
 6. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
-- [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)
+## <a name="see-also"></a>Viz také
+- [Nasazení řešení pro systém Office](../vsto/deploying-an-office-solution.md)
 - [Řešení potíží s nasazením řešení pro systém Office](../vsto/troubleshooting-office-solution-deployment.md)

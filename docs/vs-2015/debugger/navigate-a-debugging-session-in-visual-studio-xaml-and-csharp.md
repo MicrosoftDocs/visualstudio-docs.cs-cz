@@ -1,5 +1,5 @@
 ---
-title: Přechod na relaci ladění (Xaml a C#) | Dokumentace Microsoftu
+title: Navigace v relaci ladění (XAML a C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,202 +15,202 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5b8d24f01f7882e8c760918119a03a1c489c727
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156857"
 ---
 # <a name="navigate-a-debugging-session-in-visual-studio-xaml-and-c"></a>Přechod na relaci ladění ve Visual Studiu (Xaml a C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tento rychlý start ukazuje, jak se zorientovat relacemi ladění sady Visual Studio a jak zobrazit a změnit stav programu v relaci.
+Tento rychlý Start ukazuje, jak navigovat relace ladění sady Visual Studio a jak zobrazit a změnit stav programu v relaci.
 
- Tento rychlý start je pro vývojáře, kteří jsou nové pro ladění v sadě Visual Studio a pro vývojáře, kteří chtějí získat další informace o navigaci v sadě Visual Studio relace ladění. To se nezabývá techniky ladění samotný. Metody ve vzorovém kódu slouží pouze k předvedení ladění postupů popsaných v tomto tématu. Metody nepoužívají osvědčených postupů návrhu aplikace nebo funkce. Ve skutečnosti rychle zjistíte, že metody a vlastní aplikaci a není vhodné použít co nejvíce všeho vůbec.
+ Tento rychlý Start je určen vývojářům, kteří jsou novinkou k ladění pomocí sady Visual Studio a pro vývojáře, kteří se chtějí dozvědět více o navigaci v ladicí relaci sady Visual Studio. Neučí grafiku samotného ladění. Metody v ukázkovém kódu jsou určeny pouze k předvedení postupů ladění popsaných v tomto tématu. Metody nevyužívají osvědčené postupy návrhu aplikací nebo funkcí. Ve skutečnosti rychle zjistíte, že metody a samotná aplikace nedělají vůbec žádné z jakýchkoli věcí.
 
- Části tohoto rychlého startu byly navržené jako jako nezávislé, jako je to možné, takže můžete přeskočit všechny části, která obsahuje informace, které jste už obeznámení s. Také se nejsou potřebné k vytvoření ukázkové aplikace; ale doporučujeme ho a provedli proces co nejjednodušší.
+ Části tohoto rychlého startu byly navržené tak, aby byly co nezávisle, takže můžete přeskočit všechny části, které obsahují informace, se kterými už jste obeznámeni. Nemusíte také vytvářet ukázkovou aplikaci. doporučujeme ho ale doporučit a co nejjednodušší je udělat.
 
- **Ladicí program klávesové zkratky.** Navigace ladicího programu Visual Studio je optimalizovaná pro myš a klávesnici. Celá řada kroků v tomto tématu patří klávesové zkratky nebo klávesovou zkratku v kulatých závorek příspěvku. Například (klávesnice: F5) označuje zadáním klávesu F5, spustí nebo pokračuje v provádění ladicího programu.
+ **Klávesové zkratky pro ladicí program.** Navigace v ladicím programu sady Visual Studio je optimalizovaná pro myš i klávesnici. Mnohé z kroků v tomto tématu zahrnují klávesovou zkratku nebo klávesovou zkratku v případě přeznačení kulatého kulatého závorky. Například (klávesnice: F5) označuje, že psaní klávesy F5 se spustí nebo pokračuje v provádění ladicího programu.
 
 ## <a name="in-this-topic"></a>V tomto tématu
- Můžete získat informace tom, jak:
+ Můžete se dozvědět, jak:
 
 - [Vytvoření ukázkové aplikace](#BKMK_CreateTheApplication)
 
-- [Nastavit a spusťte zarážku, krokování s vnořením do metody a prozkoumejte data programu](#BKMK_StepInto)
+- [Nastavit a spustit na zarážku, Krokovat s vnořením do metody a prozkoumávat data programu](#BKMK_StepInto)
 
-- [Krokovat do, nad a z metody](#BKMK_StepIntoOverOut)
+- [Krokovat s vnořením metod](#BKMK_StepIntoOverOut)
 
-- [Nastavení podmíněné zarážky, přechod ke kurzoru a vizualizovat proměnné](#BKMK_ConditionCursorVisualize)
+- [Nastavte podmíněnou zarážku, spusťte ji na kurzor a vizualizujte proměnnou.](#BKMK_ConditionCursorVisualize)
 
-- [Upravit a pokračovat, obnovení z výjimky](#BKMK_EditContinueRecoverExceptions)
+- [Upravit a pokračovat, obnovit z výjimky](#BKMK_EditContinueRecoverExceptions)
 
-## <a name="BKMK_CreateTheApplication"></a> Vytvoření ukázkové aplikace
- Ladění je kód, takže ukázková aplikace používá rozhraní framework aplikace Windows Store pouze k vytvoření zdrojového souboru, ve kterém uvidíte navigace ladicí relaci jak funguje a jak zkontrolovat a změnit stav programu. Veškerý kód, který bude volat funkce je volána z konstruktoru hlavní stránky. žádné ovládací prvky jsou přidány a jsou zpracovány žádné události.
+## <a name="create-the-sample-app"></a><a name="BKMK_CreateTheApplication"></a> Vytvoření ukázkové aplikace
+ Ladění je o kódu, takže ukázková aplikace používá architekturu aplikace pro Windows Store pouze k vytvoření zdrojového souboru, ve kterém vidíte, jak navigace ladicí relace funguje a jak kontrolovat a měnit stav programu. Veškerý kód, který budete volat, je volán z konstruktoru hlavní stránky; nepřidaly se žádné ovládací prvky a nezpracovávají se žádné události.
 
- **Vytvořte výchozí aplikaci C# Windows Store.** Otevřít Visual Studio. Na domovské stránce, zvolte **nový projekt** odkaz. V dialogovém okně Nový projekt, zvolte **Visual C#** v **nainstalováno** seznamu a klikněte na tlačítko **Windows Store**. V seznamu šablon projektu vyberte **aplikace**. Visual Studio vytvoří nová řešení a projektu a zobrazí MainPage.xaml návrháře a editoru kódu XAML.
+ **Vytvoří výchozí aplikaci pro Windows Store v C#.** Otevřete sadu Visual Studio. Na domovské stránce klikněte na odkaz **Nový projekt** . V dialogovém okně Nový projekt zvolte v seznamu **nainstalované** položku **Visual C#** a pak zvolte možnost **Windows Store**. V seznamu šablon projektu vyberte možnost **aplikace**. Visual Studio vytvoří nové řešení a projekt a zobrazí MainPage. XAML Designer a Editor kódu XAML.
 
- **Otevřete zdrojový soubor MainPage.xaml.cs.** Klikněte pravým tlačítkem na libovolné místo v editoru XAML a zvolte **zobrazit kód**. Použití modelu code-behind souboru MainPage.xaml.cs se zobrazí. Všimněte si, že pouze jednu metodu `MainPage()` konstruktoru, je uveden v souboru.
+ **Otevřete zdrojový soubor MainPage.xaml.cs.** Klikněte pravým tlačítkem myši kdekoli v editoru XAML a vyberte **Zobrazit kód**. Zobrazí se soubor kódu na pozadí MainPage.xaml.cs. Všimněte si, že `MainPage()` v souboru je uvedena pouze jedna metoda, konstruktor.
 
- **Nahraďte konstruktoru MainPage ukázkový kód.** Delete – metoda MainPage(). Na tomto odkazu: [Vzorový kód pro navigaci ladicího programu (Xaml a C#)](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md)a potom zkopírujte kód uvedený v C# části do schránky. (Zvolte **zpět** v prohlížeči nebo prohlížeč nápovědy se vraťte na tuto stránku rychlý start.) V editoru sady Visual Studio, vložte kód `partial class MainPage` bloku. Zvolte kombinaci kláves CTRL + s uložte soubor.
+ **Nahraďte konstruktor MainPage ukázkovým kódem.** Odstraňte metodu MainPage (). Použijte tento odkaz: [ladicí program pro navigaci v ladicím programu (XAML a C#)](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md)a potom zkopírujte kód uvedený v části C# do schránky. (Kliknutím na tlačítko **zpět** v prohlížeči nebo v prohlížeči nápovědy se vraťte na tuto stránku rychlý Start.) V editoru sady Visual Studio vložte kód do `partial class MainPage` bloku. Klikněte na tlačítko CTRL + s a soubor uložte.
 
- Teď můžete sledovat, spolu s příklady v tomto tématu.
+ Teď můžete postupovat podle příkladů v tomto tématu.
 
-## <a name="BKMK_StepInto"></a> Nastavit a spusťte zarážku, krokování s vnořením do metody a prozkoumejte data programu
- Nejběžnější způsob spuštění ladicí relace je zvolit **spustit ladění** z **ladění** nabídce (klávesnice: F5). Provádění začne a pokračuje, dokud není dosaženo zarážky, můžete ručně pozastavení provádění, dojde k výjimce nebo ukončení aplikace.
+## <a name="set-and-run-to-a-breakpoint-step-into-a-method-and-examine-program-data"></a><a name="BKMK_StepInto"></a> Nastavit a spustit na zarážku, Krokovat s vnořením do metody a prozkoumávat data programu
+ Nejběžnější způsob, jak spustit relaci ladění, je zvolit možnost **Spustit ladění** z nabídky **ladění** (klávesnice: F5). Spuštění začíná a pokračuje, dokud není dosaženo zarážky, dojde k ručnímu pozastavení provádění, výskytu výjimky nebo ukončení aplikace.
 
- Když je spuštění pozastaveno v ladicím programu, můžete zobrazit hodnotu active proměnné v popisu dat podržením ukazatele myši nad proměnnou. Můžete také otevřít místní hodnoty a automatické hodnoty windows zobrazíte seznam aktivních proměnné a jejich aktuální hodnoty. Přidání jednoho nebo více proměnných do okna umožňuje sledovat, se můžete soustředit na hodnotu proměnné, protože aplikace pokračuje v provádění kódu.
+ Když je spuštění pozastaveno v ladicím programu, můžete zobrazit hodnotu aktivní proměnné v datovém tipu přesunutím ukazatele myši na proměnnou. Můžete také otevřít okna místní hodnoty a automatické hodnoty a zobrazit tak seznamy aktivních proměnných a jejich aktuální hodnoty. Přidání jedné nebo více proměnných do okna kukátka vám umožní soustředit se na hodnotu proměnných, když aplikace pokračuje v provádění.
 
- Po pozastavení provádění aplikace (označuje se také rozdělení do ladicího programu), řídit způsob, jakým je provést zbytek kódu programu. Můžete dál řádek po řádku, přechod z volání metody, metody nebo volané metody lze provést v jediném kroku. Tyto postupy jsou volány krokování aplikace. Můžete také obnovit standardní provádění, spuštěnou aplikaci až k další zarážce, kterou jste nastavili, nebo na řádku tam, kam jste umístili kurzor. Můžete zastavit ladicí relaci v každém okamžiku. Ladicí program je určena k provedení nezbytných operací čištění a ukončí provádění.
+ Po pozastavení provádění aplikace (která se také označuje jako rozdělení do ladicího programu) můžete řídit způsob, jakým se spustí zbytek kódu programu. Můžete pokračovat řádek po řádku, přesun z volání metody do samotné metody nebo můžete spustit volanou metodu v jednom kroku. Tyto postupy se nazývají krokování aplikace. Můžete také obnovit standardní spuštění aplikace, spuštění na další zarážku, kterou jste nastavili, nebo na řádek, na který jste umístili kurzor. Ladicí relaci můžete kdykoli zastavit. Ladicí program je navržen tak, aby prováděl nezbytné operace vyčištění a ukončila provádění.
 
 ### <a name="example-1"></a>Příklad 1
- V tomto příkladu můžete nastavit zarážku v konstruktoru MainPage v souboru MainPage.xaml.cs, Krokovat s vnořením první metoda, zobrazení hodnot proměnných a poté zastavte ladění.
+ V tomto příkladu nastavíte zarážku v konstruktoru MainPage souboru MainPage.xaml.cs, krok do první metody, prohlédněte hodnoty proměnných a pak zastavíte ladění.
 
- **Nastavte zarážku.** Nastavit zarážku na příkaz `methodTrack = "Main Page";` v konstruktoru MainPage. Zvolte řádek na vystínovanou ovládací prvek editoru zdrojového kódu (klávesnice: Umístěte kurzor na řádku a stiskněte klávesu F9).
+ **Nastavte zarážku.** Nastavte zarážku na příkaz `methodTrack = "Main Page";` v konstruktoru MainPage. Vyberte čáru ve stínovém rámečku editoru zdrojového kódu (klávesnice: Umístěte kurzor na řádek a vyberte klávesu F9).
 
  ![Krokovat s vnořením](../debugger/media/dbg-basics-stepinto.png "DBG_Basics_StepInto")
 
- Ikona zarážky se zobrazí ve hřbetu.
+ Ikona zarážky se zobrazí na hřbetu.
 
- **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5).
+ **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5).
 
- Aplikace začne spouštět a pozastaví provádění bezprostředně před příkaz, ve kterém můžete nastavit zarážku. Aktuální ikona řádku na ovládací prvek určuje umístění a aktuální příkaz je zvýrazněn.
+ Aplikace začne provádět a pozastaví provádění přímo před příkazem, na kterém jste nastavili zarážku. Ikona aktuálního řádku na hřbetu označuje vaše umístění a zvýrazní se aktuální příkaz.
 
- ![Nastavit zarážku](../debugger/media/dbg-basics-setbreakpoint.png "DBG_Basics_SetBreakpoint")
+ ![Nastavení zarážky](../debugger/media/dbg-basics-setbreakpoint.png "DBG_Basics_SetBreakpoint")
 
- Nyní jsou v řízení spouštění aplikace a můžete zkontrolovat stav programu krocích příkazy programu.
+ Nyní máte kontrolu nad prováděním aplikace a můžete zkontrolovat stav programu při procházení příkazů programu.
 
- **Krokovat s vnořením metody.** Na **ladění** nabídce zvolte **Krokovat s vnořením** (klávesnice: F11).
+ **Krok do metody.** V nabídce **ladění** vyberte možnost **Krokovat** s vnořením (klávesnice: F11).
 
  ![Aktuální řádek](../debugger/media/dbg-basics-currentline.png "DBG_Basics_CurrentLine")
 
- Všimněte si, že ladicí program se přesune na další řádek, který je volání metody test1. Zvolte Krokovat s vnořením znovu. Ladicí program se přesune na vstupní bod metodu test1. To znamená, že metoda byl načten v zásobníku volání a byla přidělena paměť pro místní proměnné.
+ Všimněte si, že ladicí program se přesune na další řádek, což je volání metody priklad1. Vyberte znovu krok. Ladicí program se přesune ke vstupnímu bodu metody priklad1. To znamená, že metoda byla načtena do zásobníku volání a byla přidělena paměť pro lokální proměnné.
 
- Když vejdete do jediného řádku kódu provede ladicí program jednu z následujících akcí:
+ Při kroku na řádek kódu provede ladicí program jednu z následujících akcí:
 
-- Pokud další příkaz není voláním funkce ve vašem řešení, ladicí program provede příkaz, přesune na další příkaz a následně pozastaví provádění kódu.
+- Pokud další příkaz není voláním funkce ve vašem řešení, ladicí program provede příkaz, přesune se k dalšímu příkazu a pak pozastaví provádění.
 
-- Pokud je příkaz voláním funkce ve vašem řešení, ladicí program se přesune na vstupní bod volané funkce a následně pozastaví provádění kódu.
+- Pokud je příkaz volání funkce ve vašem řešení, ladicí program se přesune do vstupního bodu volané funkce a pak pozastaví provádění.
 
-  Přejděte ke kroku na příkazy test1, dokud nedosáhnete výstupním bodě. Ladicí program zvýrazní uzavírací složenou závorku metody.
+  Pokračujte krokem do příkazů priklad1, dokud nedosáhnete bodu ukončení. Ladicí program zvýrazní pravou složenou závorku metody.
 
-  **Zkontrolujte hodnoty proměnných v datových tipech.** Když myší najedete myší název proměnné, zobrazí se název, hodnotu a typ proměnné v popisu dat.
+  **Prověřte hodnoty proměnných v tipech k datům.** Když najedete myší na název proměnné, zobrazí se název, hodnota a typ proměnné v popisku dat.
 
-  ![Ladicí program datového tipu](../debugger/media/dbg-basics-datatip.png "DBG_Basics_DataTip")
+  ![Tip pro data ladicího programu](../debugger/media/dbg-basics-datatip.png "DBG_Basics_DataTip")
 
-  Najeďte myší proměnnou `a`. Poznámka: Zadejte název, hodnotu a data. Najeďte myší proměnnou `methodTrack`. Zadejte název, hodnotu a data znovu, mějte na paměti.
+  Najeďte myší na proměnnou `a` . Poznamenejte si název, hodnotu a datový typ. Najeďte myší na proměnnou `methodTrack` . Znovu si poznamenejte název, hodnotu a datový typ.
 
-  **Zkontrolujte hodnoty proměnné v okně místních hodnot.** Na **ladění** nabídky, přejděte k **Windows**a klikněte na tlačítko **lokální**. (Klávesnice: ALT+ 4).
+  **Prověřte hodnoty proměnných v okně místních hodnot.** V nabídce **ladění** přejděte na příkaz **Windows**a vyberte možnost **místní**. (Klávesnice: ALT + 4).
 
-  ![Okno místních hodnot](../debugger/media/dbg-basics-localswindow.png "DBG_Basics_LocalsWindow")
+  ![Místní hodnoty – okno](../debugger/media/dbg-basics-localswindow.png "DBG_Basics_LocalsWindow")
 
-  Lokální windows je stromové zobrazení parametry a proměnné, funkce. Vlastnosti proměnné objektu jsou podřízené uzly samotného objektu. `this` Proměnná je skrytý parametr v každé metody objektu, který představuje samotného objektu. V tomto případě představuje třídu MainPage. Protože `methodTrack` je členem typu třídy, jeho hodnota a data MainPage jsou uvedeny v řádku pod `this`. Rozbalte `this` uzlu zobrazíte `methodTrack` informace.
+  Okna místních hodnot jsou stromovým zobrazením parametrů a proměnných funkce. Vlastnosti proměnné objektu jsou podřízené uzly samotného objektu. `this`Proměnná je skrytý parametr v každé metodě objektu, která představuje samotný objekt. V tomto případě představuje třídu MainPage. Vzhledem k tomu `methodTrack` , že je členem třídy MainPage, je její hodnota a datový typ uvedena na řádku pod `this` . Rozbalením `this` uzlu zobrazíte `methodTrack` informace.
 
-  **Přidáte kukátko methodTrack proměnné.** `methodWatch` v rámci tohoto rychlého startu k zobrazení metod volá se v příkladech se používá proměnná. Aby bylo snazší zobrazit hodnotu proměnné, přidejte ho do okna kukátka. Klikněte pravým tlačítkem na název proměnné v okně místních hodnot a klikněte na tlačítko **Přidat kukátko**.
+  **Přidejte kukátko pro proměnnou methodTrack.** `methodWatch`Proměnná se používá v rámci tohoto rychlého startu k zobrazení metod volaných v příkladech. Chcete-li usnadnit zobrazení hodnoty proměnné, přidejte ji do okna kukátka. Klikněte pravým tlačítkem myši na název proměnné v okně místní hodnoty a zvolte možnost **Přidat kukátko**.
 
-  ![Okno kukátka](../debugger/media/dbg-basics-watchwindow.png "DBG_Basics_WatchWindow")
+  ![Kukátko – okno](../debugger/media/dbg-basics-watchwindow.png "DBG_Basics_WatchWindow")
 
-  Podívejte se na více proměnných v okně kukátko. Hodnoty proměnných sledovaných, jako jsou hodnoty v oknech místní hodnoty a datový tip windows, se aktualizují pokaždé, když je spuštění pozastaveno. K oknu kukátka můžete také přidat proměnné z editoru kódu. Vyberte proměnnou ke sledování, klikněte pravým tlačítkem a pak zvolte **Přidat kukátko**.
+  V okně kukátka můžete sledovat více proměnných. Hodnoty sledovaných proměnných, jako jsou hodnoty v oknech lokální hodnoty a data, se aktualizují pokaždé, když je spuštění pozastaveno. Do okna kukátka můžete také přidat proměnné z editoru kódu. Vyberte proměnnou, která se má sledovat, klikněte pravým tlačítkem myši a pak zvolte **Přidat kukátko**.
 
-## <a name="BKMK_StepIntoOverOut"></a> Krokovat do, nad a z metody
- Na rozdíl od krokování s vnořením do metody volané nadřazené metody, krokování přes metody spustí metodu podřízené a následně pozastaví provádění kódu ve volání metody jako nadřazený obnoví. Pokud jste obeznámeni s způsob, jak metoda funguje a si jisti, že jeho spuštění nebude mít vliv na problém, který se objeví prošetřovaná může Krokovat přes metodu.
+## <a name="step-into-over-and-out-of-methods"></a><a name="BKMK_StepIntoOverOut"></a> Krokovat s vnořením metod
+ Na rozdíl od krokování do metody, která je volána nadřazenou metodou, krokování nad metodou provede podřízenou metodu a poté pozastaví provádění v volající metodě jako nadřazené operace obnovení. Můžete krokovat s metodou, pokud znáte způsob, jakým metoda funguje, a ujistěte se, že její spuštění nebude mít vliv na problém, který zkoumáte.
 
- Krokování přes jediného řádku kódu, které nebude obsahovat volání metody spustí řádku stejně jako krokování s vnořením do řádku.
+ Krokování nad řádkem kódu, který neobsahuje volání metody, provede řádek stejně jako krokování do řádku.
 
- Krokování mimo metodu podřízené pokračuje v provádění metody a následně pozastaví provádění po její volání metody vrací metoda. Až zjistíte, že zbytek funkce není důležité, může být vystoupení ze dlouhé funkce.
+ Krokování mimo podřízenou metodu pokračuje v provádění metody a pak pozastaví provádění poté, co se metoda vrátí ke své volající metodě. Pokud určíte, že zbytek funkce není významný, může dojít k zakrokování na dlouhou funkci.
 
- Krokování přes i krokování ve funkci spuštění funkce.
+ Při krokování a krokování ven z funkce se spustí funkce.
 
- ![Krok do, nad a z metody](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
+ ![Krokovat s vnořením metod](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
 
 ### <a name="example-2"></a>Příklad 2
- V tomto příkladu můžete krokovat do, nad a z metod.
+ V tomto příkladu můžete krokovat s metodou.
 
- **Volání metody priklad2 v konstruktoru MainPage.** Upravte konstruktor MainPage a nahraďte tento řádek `methodTrack = String.Empty;` s `Example2();`.
+ **V konstruktoru MainPage volejte metodu example2.** Upravte konstruktor MainPage a nahraďte řádek následujícím: `methodTrack = String.Empty;` `Example2();` .
 
- ![Volání metody priklad2 z metody ukázka](../debugger/media/dbg-basics-callexample2.png "DBG_Basics_CallExample2")
+ ![Volat metodu example2 z ukázkové metody](../debugger/media/dbg-basics-callexample2.png "DBG_Basics_CallExample2")
 
- **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5). Ladicí program pozastaví provádění kódu na zarážce.
+ **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5). Ladicí program pozastaví provádění na zarážce.
 
- **Krokovat přes řádek kódu.** Na **ladění** nabídce zvolte **Krokovat s přeskočením** (klávesnice: F10). Ladicí program provede `methodTrack = "MainPage";` příkaz stejným způsobem jako vstup do příkazu.
+ **Krok za řádkem kódu.** V nabídce **ladění** vyberte možnost **Krokovat přes** (klávesnice: F10). Ladicí program spustí `methodTrack = "MainPage";` příkaz stejným způsobem jako krokování příkazu.
 
- **Krokování s vnořením priklad2 a Example2_A.** Stisknutím klávesy F11 Krokovat s vnořením metodu příklad 2. Přejděte ke kroku na priklad2 příkazy, dokud se nedostanete na řádku `int x = Example2_A();`. Znovu krokování s vnořením do tohoto řádku přesunout na vstupní bod Example2_A. Krokovat s vnořením každý příkaz Example2_A postupně se vraťte do priklad2 i nadále.
+ **Krok do example2 a Example2_A.** Vyberte klávesu F11 a proveďte krok do příkladu 2 metody. Pokračujte krokem na příkazy example2, dokud se nedostanete na řádek `int x = Example2_A();` . Opakujte krok do tohoto řádku, aby se přesunul na vstupní bod Example2_A. Pokračujte krokem do každého příkazu Example2_A, dokud se nevrátíte do example2.
 
- ![Priklad2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")
+ ![Example2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")
 
- **Krokovat přes funkci.** Všimněte si, že se na další řádek v test2, `int y = Example2_A();` je v podstatě stejný jako předchozí řádek. Můžete bezpečně Krokovat přes tento řádek. Pro přesun z opětovné priklad2 do této druhé volání Example2_A stiskněte klávesu F10. Zvolte F10 Krokovat přes tuto metodu. Všimněte si, že `methodTrack` řetězec označuje metodu Example2_A spustil dvakrát. Můžete si všimnout, že ladicí program okamžitě přesune na další řádek. Nepozastaví zpracování na bod priklad2 obnoví.
+ **Krokovat s funkcí** Všimněte si, že další řádek v example2 `int y = Example2_A();` je v podstatě stejný jako předchozí řádek. Přes tento řádek můžete bezpečně krokovat. Vyberte klávesu F10 pro přechod od obnovení example2 k druhému volání Example2_A. Vyberte F10 pro krokování této metody. Všimněte si, že `methodTrack` řetězec označuje, že metoda example2_a byla provedena dvakrát. Všimněte si také, že ladicí program se okamžitě přesune na další řádek. Neblokuje provádění v bodu example2 pokračování.
 
- **Krok z funkce.** Stisknutím klávesy F11 Krokovat s vnořením Example2_B metody. Všimněte si, že není příliš neliší od Example2_A Example2_B. Chcete-li mimo metodu, zvolte **Krokovat s Vystoupením** na **ladění** nabídce (klávesnice: SHIFT + F11). Všimněte si, že `methodTrack` proměnné označuje, že byl proveden Example2_B a že ladicí program vrátil do bodu, kde priklad2 obnoví.
+ **Krok ven z funkce** Vyberte klávesu F11 pro krok do Example2_B metody. Všimněte si, že Example2_B se neliší od Example2_A. Chcete-li Krokovat s metodou, v nabídce **ladění** vyberte možnost **Krok ven** (klávesnice: Shift + F11). Všimněte si, že `methodTrack` Proměnná označuje, že byla provedena example2_b a že se ladicí program vrátil do bodu, kde example2 pokračuje.
 
- **Zastavte ladění.** V nabídce ladit, zvolte Ukončit ladění (klávesnice: SHIFT + F5). Ukončí relaci ladění.
+ **Zastavit ladění.** V nabídce ladění vyberte možnost zastavit ladění (klávesnice: Shift + F5). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_ConditionCursorVisualize"></a> Nastavení podmíněné zarážky, přechod ke kurzoru a vizualizovat proměnné
- Podmíněné zarážky Určuje podmínku, která způsobí, že ladicí program k pozastavení provádění. Podmínka je zadaný libovolný výraz kód, který může být vyhodnocen jako true nebo false. Můžete například použít podmíněné zarážky prozkoumat stav programu v často volaných metodu pouze v případě, že proměnné dosáhne určité hodnoty.
+## <a name="set-a-conditional-breakpoint-run-to-the-cursor-and-visualize-a-variable"></a><a name="BKMK_ConditionCursorVisualize"></a> Nastavte podmíněnou zarážku, spusťte ji na kurzor a vizualizujte proměnnou.
+ Podmíněná zarážka Určuje podmínku, která způsobí, že ladicí program zastaví provádění. Podmínka je určena jakýmkoli výrazem kódu, který lze vyhodnotit jako true nebo false. Můžete například použít podmíněnou zarážku k prohlédnutí stavu programu často volanou metodou pouze v případě, že proměnná dosáhne určité hodnoty.
 
- Provést do pozice kurzoru je třeba nastavit jednorázové zarážku. Když je spuštění pozastaveno, můžete vybrat řádek ve zdroji a obnovit spuštění, dokud nebude dosaženo vybraný řádek. Například můžete být krokování smyčky v metodě a určit, že kód ve smyčce pracuje správně. Místo procházení každé iteraci smyčky, můžete spustit na kurzor, který je umístěn po provedení smyčky je.
+ Běžící na kurzor je jako nastavení jednorázové zarážky. Když je spuštění pozastavené, můžete vybrat řádek ve zdroji a pokračovat v provádění, dokud se nedosáhne vybraného řádku. Například můžete prohloubit smyčku v metodě a určit, že kód ve smyčce provádí správné fungování. Namísto krokování v každé iteraci smyčky můžete spustit na ukazatel, který je umístěn po provedení smyčky.
 
- V některých případech je obtížné zobrazíte hodnotu proměnné v řádku popisu dat nebo okně proměnné. Ladicí program může zobrazit řetězce, HTML a Xml ve vizualizéru text, který představuje formátovaný zobrazení hodnoty v posuvného okna.
+ V některých případech je obtížné zobrazit hodnotu proměnné na řádku s tipem dat nebo v okně proměnných. Ladicí program může zobrazit řetězce, HTML a XML v Vizualizér textu, který prezentuje formátované zobrazení hodnoty v rolovacím okně.
 
 ### <a name="example-3"></a>Příklad 3
- V tomto příkladu je nastavit podmíněné zarážky zarážku konkrétní iteraci smyčky a pak spustit na kurzor, který je umístěn po smyčce. Můžete také zobrazit hodnotu proměnné v vizualizátor textu.
+ V tomto příkladu nastavíte podmíněnou zarážku na přerušení v konkrétní iteraci smyčky a pak ji spustíte na kurzor, který je umístěný po smyčce. Také se zobrazí hodnota proměnné v Vizualizér textu.
 
- **Volání metody Example3 v konstruktoru MainPage.** Upravte konstruktor MainPage a nahraďte tento řádek `methodTrack = String.Empty;` řádek `Example3();`.
+ **V konstruktoru MainPage volejte metodu example3.** Upravte konstruktor MainPage a nahraďte řádek následujícím `methodTrack = String.Empty;` řádkem `Example3();` .
 
- ![Volání z metody ukázka Example3](../debugger/media/dbg-basics-callexample3.png "DBG_Basics_CallExample3")
+ ![Volání example3 z ukázkové metody](../debugger/media/dbg-basics-callexample3.png "DBG_Basics_CallExample3")
 
- **Spusťte zarážku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5). Ladicí program pozastaví provádění na zarážku v metodě MainPage.
+ **Spustit na zarážku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5). Ladicí program pozastaví provádění na zarážce v metodě MainPage.
 
- **Krokování s vnořením do metody Example3.** Zvolte **Krokovat s vnořením** na **ladění** nabídce (klávesnice: F11) přesunout na vstupní bod metodu Example3. Krokování do metody, dokud se mají provést iteraci smyčky jednu nebo dvě z pokračovat `for` bloku. Všimněte si, že ho by vám neměl zabrat dlouhou dobu, chcete-li si všechny 1000 iterací.
+ **Proveďte krok do metody example3.** Zvolením možnosti **Krokovat** v nabídce **ladění** (klávesnice: F11) přejděte na vstupní bod metody example3. Pokračujte v krokování do metody, dokud neprovedete iteraci jednoho nebo dvou smyček `for` bloku. Všimněte si, že provedete dlouhou dobu ke krokování všech iterací 1000.
 
- **Nastavení podmíněné zarážky.** V levém hřbetu okna kódu, klikněte pravým tlačítkem na řádku `x += i;` a klikněte na tlačítko **podmínku**. Zvolte **podmínku** zaškrtněte políčko a potom zadejte `i == 500;` v textovém poli. Zvolte **platí** možnost a vyberte **OK**. Zarážky můžete ke kontrole hodnoty v 500th iterace `for` smyčky.
+ **Nastavte podmíněnou zarážku.** V levém horním rohu okna Code klikněte pravým tlačítkem myši na řádek `x += i;` a zvolte možnost **Podmínka**. Zaškrtněte políčko **Podmínka** a potom zadejte `i == 500;` do textového pole. Vyberte možnost **je true** a klikněte na **tlačítko OK**. Zarážka umožňuje kontrolovat hodnotu v iteraci 500th `for` smyčky.
 
- ![Dialogové okno podmínky zarážky](../debugger/media/dbg-basics-breakpointcondition.png "DBG_Basics_BreakpointCondition")
+ ![Podmínka zarážky – dialogové okno](../debugger/media/dbg-basics-breakpointcondition.png "DBG_Basics_BreakpointCondition")
 
- Ikona podmíněné zarážky může identifikovat podle jeho bílé mezi.
+ Můžete určit podkladovou ikonu zarážky pomocí bílé křížení.
 
- ![Podmíněné zarážky](../debugger/media/dbg-basics-conditionalbreakpoint.png "DBG_Basics_ConditionalBreakpoint")
+ ![Podmíněná zarážka](../debugger/media/dbg-basics-conditionalbreakpoint.png "DBG_Basics_ConditionalBreakpoint")
 
- **Spusťte zarážku.** V nabídce ladit, vyberte pokračovat (klávesnice: F5). V okně místních hodnot, ujistěte se, že aktuální hodnotu `i` je 500. Všimněte si, že proměnná `s` je vyjádřena jako jeden řádek a je mnohem delší než časový interval.
+ **Spustit na zarážku.** V nabídce ladění vyberte možnost pokračovat (klávesnice: F5). V okně místní hodnoty potvrďte, že aktuální hodnota `i` je 500. Všimněte si, že proměnná `s` je reprezentována jako jeden řádek a je mnohem delší než okno.
 
- **Vizuální proměnnou s řetězcem.** Klikněte na ikonu lupy v **hodnotu** sloupec `s`.
+ **Vizuální a řetězcovou proměnnou.** Klikněte na ikonu lupy ve sloupci **hodnota** v `s` .
 
- Zobrazí se okno Vizualizátor textu a hodnotou řetězce je zobrazen jako Víceřádkový řetězec.
+ Zobrazí se okno Vizualizér textu a hodnota řetězce je prezentována jako víceřádkový řetězec.
 
- **Přechod ke kurzoru.** Klikněte pravým tlačítkem na řádku `methodTrack += "->Example3";` a klikněte na tlačítko **spustit ke kurzoru** (klávesnice: Přesuňte kurzor na řádek; CTRL + F10). Ladicí program dokončí iterací smyčky a následně pozastaví provádění kódu na řádku.
+ **Spustit na kurzor.** Klikněte na čáru pravým tlačítkem myši `methodTrack += "->Example3";` a pak zvolte možnost **Spustit ke kurzoru** (klávesnice: přesunout kurzor na řádek; CTRL + F10). Ladicí program dokončí iterace smyčky a pak pozastaví provádění na řádku.
 
- **Zastavte ladění.** V nabídce ladit, zvolte Ukončit ladění (klávesnice: SHIFT + F5). Ukončí relaci ladění.
+ **Zastavit ladění.** V nabídce ladění vyberte možnost zastavit ladění (klávesnice: Shift + F5). Tím skončí vaše ladicí relace.
 
-## <a name="BKMK_EditContinueRecoverExceptions"></a> Upravit a pokračovat, obnovení z výjimky
- V některých případech až proniknout do kódu v ladicím programu sady Visual Studio budete mít příležitost změnit hodnoty proměnných a dokonce i logics příkazy. Tato funkce je volána upravit a pokračovat.
+## <a name="edit-and-continue-recover-from-an-exception"></a><a name="BKMK_EditContinueRecoverExceptions"></a> Upravit a pokračovat, obnovit z výjimky
+ V některých případech, při přerozdělování do kódu v ladicím programu sady Visual Studio máte příležitost změnit hodnotu proměnné a dokonce i logiky příkazů. Tato funkce se nazývá upravit a pokračovat.
 
- Upravit a pokračovat může být zvláště užitečné při rozdělit na výjimku. Namísto nutnosti zastavit a znovu spusťte ladění dlouhé a potřebný postup výjimce vyhnout, můžete "vrátit se zpět" výjimka, která má přesunout zpracování do bodu bezprostředně před došlo k výjimce a změňte problematický proměnné nebo příkazu a Pokračujte s aktuální relaci ladění ve stavu, který nevyvolá výjimku.
+ Možnost upravit a pokračovat může být obzvláště užitečná při přerušení výjimky. Místo nutnosti zastavit a znovu spustit ladění dlouhého a souvisejícího postupu, abyste se vyhnuli výjimce, můžete "unwind" výjimku pro přesun provádění do bodu bezprostředně před tím, než došlo k výjimce, a poté změnit problematickou proměnnou nebo příkaz a pokračovat v aktuální relaci ladění ve stavu, který nevyvolá výjimku.
 
- I když můžete použití operace upravit a pokračovat v nejrůznějších situacích, určité podmínky, které nechcete upravit a pokračovat je obtížné určit, protože podmínky, závisí na programovací jazyk, aktuální stav do zásobníku programu a možnosti ladicího programu ke změně stavu bez poškozující proces. Nejlepší způsob, jak zjistit, jestli se o změnu úpravy podporuje je jenom vyzkoušet; ladicí program umožňuje okamžitě vědět, pokud se tato změna není podporována.
+ I když můžete použít funkci upravit a pokračovat v nejrůznějších situacích, je obtížné určit konkrétní podmínky, které nepodporují funkci upravit a pokračovat, protože podmínky závisí na programovacím jazyku, aktuálním stavu zásobníku programu a schopnost ladicího programu změnit stav bez poškození procesu. Nejlepším způsobem, jak určit, zda je změna úpravy podporována, je pouze vyzkoušet si ji. ladicí program vám umožní okamžitě zjistit, jestli není změna podporovaná.
 
-### <a name="example-4"></a>Příklad 4:
- V tomto příkladu spustit ladicí program na výjimku, rewind výjimku, opravte logiku metody a potom změňte hodnotu proměnné tak, že můžete pokračovat v provádění metody.
+### <a name="example-4"></a>Příklad 4
+ V tomto příkladu spustíte ladicí program pro výjimku, znovu převedete výjimku, opravíte logiku metody a pak změníte hodnotu proměnné tak, aby bylo možné pokračovat v provádění metody.
 
- **Volání metody Example4 v konstruktoru MainPage.** Upravte konstruktor MainPage() a nahraďte tento řádek `methodTrack = String.Empty;` řádek `Example4();`.
+ **V konstruktoru MainPage volejte metodu Example4.** Upravte konstruktor MainPage () a nahraďte řádek následujícím `methodTrack = String.Empty;` řádkem `Example4();` .
 
- ![Volání z metody ukázka Example4](../debugger/media/dbg-basics-callexample4.png "DBG_Basics_CallExample4")
+ ![Volání example4 z ukázkové metody](../debugger/media/dbg-basics-callexample4.png "DBG_Basics_CallExample4")
 
- **Spusťte na výjimku.** Spuštění relace ladění zvolením **spustit ladění** na **ladění** nabídce (klávesnice: F5). Stisknutím klávesy F5 pokračovat v provádění. Ladicí program přeruší provádění při výjimce v metodě Example4 a zobrazí se dialogové okno výjimky.
+ **Spusťte výjimku.** Spusťte ladicí relaci výběrem možnosti **Spustit ladění** v nabídce **ladění** (klávesnice: F5). Stisknutím klávesy F5 znovu pokračujte v provádění. Ladicí program pozastaví provádění na výjimce v metodě example4 a zobrazí dialogové okno výjimky.
 
- ![Dialogové okno výjimky](../debugger/media/dbg-basics-exceptiondlg.png "DBG_Basics_ExceptionDlg")
+ ![Výjimka – dialogové okno](../debugger/media/dbg-basics-exceptiondlg.png "DBG_Basics_ExceptionDlg")
 
- **Změňte programovou logiku.** Je zřejmé, že se chybu v `if` podmínku: hodnota `x` by měla být změněna při `x` rovná 0, ne v případě `x` není rovna hodnotě nula. Zvolte **přerušit** opravit logiku metody. Při pokusu o úpravy řádku se zobrazí jiné dialogové okno.
+ **Změňte logiku programu.** Je zřejmé, že chyba je v `if` podmínce: hodnota `x` by měla být změněna, pokud `x` je rovna 0; ne, pokud `x` není rovna nule. Vyberte možnost **přerušit** pro opravu logiky metody. Při pokusu o úpravu řádku se zobrazí další dialogové okno.
 
- ![Upravit a pokračovat – dialogové okno](../debugger/media/dbg-basics-editandcontinuedlg.png "DBG_Basics_EditAndContinueDlg")
+ ![Dialogové okno Upravit a pokračovat](../debugger/media/dbg-basics-editandcontinuedlg.png "DBG_Basics_EditAndContinueDlg")
 
- Zvolte **upravit** a potom změňte řádek `if (x != 0)` k `if (x == 0)`. Ladicí program se uchovávají změny programovou logiku ke zdrojovému souboru.
+ Zvolte **Upravit** a pak změňte řádek `if (x != 0)` na `if (x == 0)` . Ladicí program uchovává změny v logice programu do zdrojového souboru.
 
- **Změňte hodnotu proměnné.** Zkoumat hodnoty `x` v popisu dat nebo v okně místních hodnot. Stále je 0 (nula). Pokud se pokusíte o provedení příkazu, která způsobila původní výjimku, ho pouze vyvolá znovu. Můžete změnit hodnotu `x`. V okně místních hodnot, dvakrát klikněte **hodnotu** sloupec **x** řádek. Změňte hodnotu od 0 do 1.
+ **Změňte hodnotu proměnné.** Prověřte hodnotu `x` v tipu dat nebo v okně místní hodnoty. Je stále 0 (nula). Pokud se pokusíte spustit příkaz, který způsobil původní výjimku, bude znovu vyvolána. Můžete změnit hodnotu `x` . V okně místní hodnoty dvakrát klikněte na sloupec **hodnota** řádku **x** . Změňte hodnotu z 0 na 1.
 
  ![Úprava hodnoty v okně místních hodnot](../debugger/media/dbg-basics-editandcontinuefix.png "DBG_Basics_EditAndContinueFix")
 
- Stisknutím klávesy F11 Krokovat s vnořením příkazu, který dříve došlo k výjimce. Všimněte si, že řádek se spustí bez chyby. Zvolte F11 znovu.
+ Vyberte klávesu F11 a proveďte krok do příkazu, který dříve vyvolal výjimku. Všimněte si, že se řádek spouští bez chyby. Znovu vyberte klávesu F11.
 
- **Zastavte ladění.** Na **ladění** nabídce zvolte **Zastavit ladění** (klávesnice: SHIFT + F5). Ukončí relaci ladění.
+ **Zastavit ladění.** V nabídce **ladění** vyberte možnost **Zastavit ladění** (klávesnice: Shift + F5). Tím skončí vaše ladicí relace.
 
 ## <a name="see-also"></a>Viz také
- [Spuštění ladicí relace (VB, C#, C++ a XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) [aktivační události pozastavení, obnovení a událostí na pozadí pro Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)
+ [Spuštění ladicí relace (VB, C#, C++ a XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) [aktivační události pro ladění, obnovení a události na pozadí pro Windows Store](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) : [ladění aplikací v aplikaci Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)

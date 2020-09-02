@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 609c764192673e4d3f9fbd99a1bc572e9d78db7f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183519"
 ---
 # <a name="msbuild-multitargeting-overview"></a>Přehled cílení na více verzí nástroje MSBuild
@@ -40,7 +40,7 @@ Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v libovo
 
 ## <a name="toolset-toolsversion"></a>Sada nástrojů (atribut ToolsVersion)
 
- Sada nástrojů shromažďuje dohromady nástroje, úlohy a cíle, které se používají k vytvoření aplikace. Sada nástrojů obsahuje kompilátory, jako je *CSc. exe* a *Vbc. exe*, soubor běžných cílů (*Microsoft. Common. targets*) a soubor běžných úloh (*Microsoft. Common. Tasks*). Sadu nástrojů 4,5 lze použít k cílení na .NET Framework verze 2,0, 3,0, 3,5, 4 a 4,5. Sada nástrojů 2,0 se ale dá použít jenom k cílení na verzi .NET Framework 2,0. Další informace najdete v tématu [Sada nástrojů (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).
+ Sada nástrojů shromažďuje dohromady nástroje, úlohy a cíle, které se používají k vytvoření aplikace. Sada nástrojů obsahuje kompilátory, jako jsou *csc.exe* a *vbc.exe*, soubor Common TARGETS (*Microsoft. Common. targets*) a soubor běžné úlohy (*Microsoft. Common. Tasks*). Sadu nástrojů 4,5 lze použít k cílení na .NET Framework verze 2,0, 3,0, 3,5, 4 a 4,5. Sada nástrojů 2,0 se ale dá použít jenom k cílení na verzi .NET Framework 2,0. Další informace najdete v tématu [Sada nástrojů (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).
 
 ## <a name="reference-assemblies"></a>Referenční sestavení
 
@@ -50,6 +50,6 @@ Pomocí nástroje MSBuild můžete zkompilovat aplikaci pro spuštění v libovo
 
  Cíle a úlohy nástroje MSBuild můžete nakonfigurovat tak, aby běžely mimo proces s nástrojem MSBuild, abyste mohli cílit na kontexty, které jsou výrazně jiné než ten, na kterém je spuštěný.  Můžete například cílit na 32, .NET Framework 2,0 aplikace, zatímco vývojový počítač běží na platformě 64 s .NET Framework 4,5. Další informace najdete v tématu [Konfigurace cílů a úloh](../msbuild/configuring-targets-and-tasks.md).
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
  Při pokusu o odkaz na sestavení, které není součástí cílového kontextu, může dojít k chybám. Další informace o těchto chybách a o tom, co s nimi dělat, najdete v tématu [řešení potíží s chybami cílení .NET Framework](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 18a50d6d4ef52a0c50be0b72b4cab5706da4e2db
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547040"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Postupy: hledání a nahrazování textu v dokumentech prostřednictvím kódu programu
@@ -110,11 +110,11 @@ ms.locfileid: "85547040"
 
 2. Použijte <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metodu <xref:Microsoft.Office.Interop.Word.Find> objektu k nahrazení každé nalezené položky. Chcete-li určit, které položky mají být nahrazeny, použijte parametr *Replace* . Tento parametr může být jedna z následujících <xref:Microsoft.Office.Interop.Word.WdReplace> hodnot:
 
-    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll>nahradí všechny nalezené položky.
+    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll> nahradí všechny nalezené položky.
 
-    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceNone>nahradí žádné nalezené položky.
+    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceNone> nahradí žádné nalezené položky.
 
-    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne>nahradí první nalezenou položku.
+    - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne> nahradí první nalezenou položku.
 
 ## <a name="see-also"></a>Viz také
 - [Postupy: nastavování možností hledání v aplikaci Word prostřednictvím kódu programu](../vsto/how-to-programmatically-set-search-options-in-word.md)

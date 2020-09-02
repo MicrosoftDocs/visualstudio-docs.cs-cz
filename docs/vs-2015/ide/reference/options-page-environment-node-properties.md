@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b45716db44dcc316ec60604aa0411e6498797ae0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595017"
 ---
 # <a name="options-page-environment-node-properties"></a>Stránka Možnosti, vlastnosti uzlu prostředí
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **prostředí** , `DTE.Properties("Environment", <Property Page>)`dialogového okna **Možnosti** . Název každého dílčího oddílu je volání, které se používá pro přístup k kolekci vlastností a tabulka v každém pododdílu obsahuje seznam vlastností v kolekci.
+Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny s kategorií **prostředí** , v `DTE.Properties("Environment", <Property Page>)` dialogovém okně **Možnosti** . Název každého dílčího oddílu je volání, které se používá pro přístup k kolekci vlastností a tabulka v každém pododdílu obsahuje seznam vlastností v kolekci.
 
 ## <a name="general"></a>Obecné
  `DTE.Properties("Environment", "General")`
@@ -35,7 +35,7 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |Animace|Get/Set (Boolean)|Určuje, zda integrované vývojové prostředí (IDE) používá animaci ve stavovém řádku.|
 |AnimationSpeed|Získat nebo nastavit (krátký)||
 |AutoAdjustExperience|Get/Set (Boolean)|Automaticky upraví vizuální prostředí v závislosti na výkonu klienta.|
-|RichClientExperienceOptions|Get/Set (Enum)|Umožňuje bohatě vizuální prostředí klienta s hodnotami v <xref:EnvDTE100.vsRichClientExperienceOptions>.|
+|RichClientExperienceOptions|Get/Set (Enum)|Umožňuje bohatou vizuální prostředí klienta s hodnotami v <xref:EnvDTE100.vsRichClientExperienceOptions> .|
 |CloseButtonActiveTabOnly|Get/Set (Boolean)|Určuje, zda je tlačítko **Zavřít** zobrazeno pouze na aktivní kartě.|
 |AutohidePinActiveTabOnly|Get/Set (Boolean)|Určuje, zda má tlačítko pro **automatické skrývání** vliv pouze na aktivní kartu.|
 
@@ -55,8 +55,8 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |------------------------|-----------|-----------------|
 |ReuseSavedActiveDocWindow|Get/Set (Boolean)|Určuje, zda otevírání nového souboru znovu použije aktuální okno dokumentu, pokud je aktuální dokument uložen. `false` znamená vždy otevřít nové okno dokumentu pro každý otevřený dokument.|
 |DetectFileChangesOutsideIDE|Get/Set (Boolean)|Určuje, zda prostředí automaticky znovu načte soubory otevřené v integrovaném vývojovém prostředí (IDE), když operační systém upozorní rozhraní IDE na to, že soubory byly na disku změněny.|
-|AutoloadExternalChanges|Get/Set (Boolean)|Určuje, zda se při změně otevřeného dokumentu automaticky znovu načte upravený soubor a otevře se soubor s otevřenými externími úpravami. Pokud je otevřený dokument upraven a tato vlastnost je `true`, pak rozhraní IDE vyzve, jako by byla tato vlastnost `false`.|
-|InitializeOpenFileFromCurrentDocument|Get/Set (Boolean)|Určuje, zda <xref:EnvDTE.DTEClass.OpenFile%2A> příkaz vyhodnotí název adresáře a souboru z posledního aktivního dokumentu nebo z posledního místa, v němž jste otevřeli soubor.|
+|AutoloadExternalChanges|Get/Set (Boolean)|Určuje, zda se při změně otevřeného dokumentu automaticky znovu načte upravený soubor a otevře se soubor s otevřenými externími úpravami. Pokud je otevřený dokument upraven a tato vlastnost je `true` , pak rozhraní IDE vyzve, jako kdyby tato vlastnost byla `false` .|
+|InitializeOpenFileFromCurrentDocument|Get/Set (Boolean)|Určuje, zda příkaz vyhodnotí <xref:EnvDTE.DTEClass.OpenFile%2A> název adresáře a souboru z posledního aktivního dokumentu nebo z posledního místa, kde jste otevřeli soubor.|
 |MiscFilesProjectSavesLastNItems|Získat nebo nastavit (krátký)|Určuje, kolik souborů soubory aplikace různé soubory zaznamená. V důsledku toho vidíte, co jste nedávno otevřeli jako různé soubory na disku při dalším použití rozhraní IDE.|
 |ShowMiscFilesProject|Get/Set (Boolean)|Určuje, zda je zobrazen projekt různé soubory.|
 |CheckForConsisentLineEndings|Get/Set (Boolean)|Kontroluje konzistenci konců řádků při zatížení souboru.|
@@ -130,17 +130,17 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |DefaultBehaviorForStartupProjects|Get/Set (String)||
 |MSBuildOutputVerbosity|Get/Set (String)|Určuje úroveň podrobností pro výstup sestavení.|
 
-## <a name="startup"></a>Třída pro spuštění
+## <a name="startup"></a>Spuštění
  `DTE.Properties("Environment", "Startup")`
 
 |Název položky vlastnosti|Hodnota|Popis|
 |------------------------|-----------|-----------------|
-|OnStartUp|Get/Set (Enum)|Akce, která se má provést při spuštění, od <xref:EnvDTE.vsStartUp>s hodnotami od 0 do 5:<br /><br /> -0: otevřít domovskou stránku<br />-1: načtení posledního načteného řešení<br />-2: zobrazení dialogového okna **Otevřít projekt**<br />-3: zobrazení dialogového okna **Nový projekt**<br />-4: zobrazení prázdného prostředí<br />-5: Zobrazit úvodní stránku|
+|Při spuštění|Get/Set (Enum)|Akce, která se má provést při spuštění, od <xref:EnvDTE.vsStartUp> s hodnotou 0 do 5:<br /><br /> -0: otevřít domovskou stránku<br />-1: načtení posledního načteného řešení<br />-2: zobrazení dialogového okna **Otevřít projekt**<br />-3: zobrazení dialogového okna **Nový projekt**<br />-4: zobrazení prázdného prostředí<br />-5: Zobrazit úvodní stránku|
 |StartPageRSSUrl|Get/Set (String)|Adresa URL informačního kanálu RSS, který se používá při spuštění.|
 |StartPageRefreshDownloadedContent|Get/Set (Boolean)|Aktualizuje úvodní stránku po každém průchodu intervalu zadaného v StartPageRefreshInterval.|
 |StartPageRefreshInterval|Získat nebo nastavit (krátký)|Interval obnovování úvodní stránky v minutách|
 
-## <a name="tasklist"></a>Seznamu úkolů
+## <a name="tasklist"></a>TaskList
  `DTE.Properties("Environment", "TaskList")`
 
 |Název položky vlastnosti|Hodnota|Popis|
@@ -148,7 +148,7 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |ConfirmTaskDeletion|Get/Set (Boolean)|Určuje, zda se při odstraňování úloh z **seznam úkolů**Zobrazuje potvrzovací pole.|
 |WarnOnAddingHiddenItem|Get/Set (Boolean)|Určuje, zda se zobrazí upozornění při přidávání úkolu uživatele, který nebude zobrazen.|
 |DontShowFilePaths|Get/Set (Boolean)|Určuje, zda se mají v Seznam úkolů zobrazovat úplné cesty k souborům.|
-|CommentTokens|SafeArray|Vrátí hodnotu SafeArray hodnot tokenu komentáře. Každé má pole, `Name` (String) a `Priority` (<xref:EnvDTE.vsTaskPriority>, vysoká, střední nebo nízká).|
+|CommentTokens|SafeArray|Vrátí hodnotu SafeArray hodnot tokenu komentáře. Každá má pole `Name` (String) a `Priority` ( <xref:EnvDTE.vsTaskPriority> , High, střední nebo nízká).|
 
 ## <a name="web-browser"></a>Webový prohlížeč
  `DTE.Properties("Environment", "WebBrowser")`
@@ -157,13 +157,13 @@ Tento dokument popisuje stránky (nebo kolekce vlastností), které jsou spojeny
 |------------------------|-----------|-----------------|
 |Domovské stránky|Get/Set (String)|Představuje adresu URL domovské stránky.|
 |SearchPage|Get/Set (String)|Představuje adresu URL vyhledávací stránky.|
-|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (zdroj, návrh, externí).|
+|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Zdroj, návrh, externí).|
 |ViewSourceExternalProgram|Get/Set (String)|Cesta k externímu prohlížeči zdrojového kódu.|
 
 ## <a name="see-also"></a>Viz také
 
 - [Řízení nastavení možností](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)
 - [Určení názvů položek vlastností na stránkách možností](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)
-- [Stránka Možnosti, vlastnosti uzlu Písma a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md)
-- [Stránka Možnosti, vlastnosti uzlu Textový editor](../../ide/reference/options-page-text-editor-node-properties.md)
-- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+- [Stránka Možnosti, vlastnosti uzlu Písmo a barvy](../../ide/reference/options-page-fonts-and-colors-node-properties.md)
+- [Stránka Možnosti, vlastnosti uzlu textového editoru](../../ide/reference/options-page-text-editor-node-properties.md)
+- [Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)

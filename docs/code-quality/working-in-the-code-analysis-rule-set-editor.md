@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893304"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Použití editoru sad pravidel pro analýzu kódu
@@ -69,9 +69,9 @@ V následující tabulce jsou popsána pole sady pravidel:
 
 |Pole|Popis|
 |-----------|-----------------|
-|**ÚČET**|Identifikátor pravidla|
+|**ID**|Identifikátor pravidla|
 |**Kategorie**|Kromě jejich členství v sadách pravidel se pravidla analýzy kódu také seskupují podle kategorií. Další informace najdete v tématu [upozornění analýzy kódu](../code-quality/code-analysis-for-managed-code-warnings.md).|
-|**Název**|Název pravidla|
+|**Name**|Název pravidla|
 |**Obor názvů**|Obor názvů pravidla|
 |**Cílový typ**|Označuje, zda je pravidlo pro nativní, spravovaný nebo databázový kód.|
 |**Akce**|Akce provedená v případě porušení pravidla při spuštění analýzy kódu. Můžete upravit pole **Akce** .|

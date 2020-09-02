@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicField | Dokumentace Microsoftu
+title: IDebugDynamicField | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 41cf0e397834f337863baa46abb4e6bbccee98ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198511"
 ---
 # <a name="idebugdynamicfield"></a>IDebugDynamicField
@@ -24,25 +24,25 @@ ms.locfileid: "68198511"
 
 Toto rozhraní představuje typ proměnné.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugDynamicField : IDebugField  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní je implementováno poskytovateli symbol jako základní třída pro libovolný typ, který může být stanovena v době běhu. Toto je pouze pro spravovaný kód.  
+ Toto rozhraní je implementováno poskytovateli symbolů jako základní třídou pro libovolný typ, který lze určit za běhu. Toto je pouze pro spravovaný kód.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní představuje základní třídu, ze kterého mohou být odvozeny více specializované rozhraní.  
+ Toto rozhraní představuje základní třídu, ze které lze odvodit specializovaná rozhraní.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Toto rozhraní neposkytuje všechny metody kromě těch zděděných z `IDebugField`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ Toto rozhraní neposkytuje žádné metody, které nejsou zděděné z `IDebugField` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

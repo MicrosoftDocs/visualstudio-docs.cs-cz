@@ -1,5 +1,5 @@
 ---
-title: SupportsCodeSeparation Element (Šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: SupportsCodeSeparation – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bd52ae47f47f3ca1fce23f7cf8d37260ec86fb0c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699502"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation – element (šablony sady Visual Studio)
-Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno políčko **Umístit v samostatném souboru.**
+Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
 
- \<VSTemplate \<> TemplateData> \<podporuje>
+ \<VSTemplate> \<TemplateData>
+ \<SupportsCodeSeparation>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SupportsCodeSeparation> true/false </SupportsCodeSeparation>
@@ -36,31 +37,31 @@ Určuje, zda je v dialogovém okně **Přidat novou položku** povoleno políčk
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařazuje šablonu do kategorií a definuje, jak se zobrazí v dialogovém **okně Nový projekt** nebo Nová **položka.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Nová položka** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být `true` `false`buď nebo , označující, zda je v dialogovém okně **Přidat novou položku** povoleno **políčko Umístit v samostatném souboru.**
+ Text musí být buď `true` nebo `false` , což značí, zda je v dialogovém okně **Přidat novou položku** povoleno zaškrtávací políčko **umístit kód do samostatného souboru** .
 
 ## <a name="remarks"></a>Poznámky
- `SupportsCodeSeparation`je volitelný prvek. Výchozí hodnota je `false`.
+ `SupportsCodeSeparation` je volitelný prvek. Výchozí hodnota je `false`.
 
- Prvek `SupportsCodeSeparation` je k dispozici pouze pro šablony webových položek.
+ `SupportsCodeSeparation`Element je k dispozici pouze pro šablony webových položek.
 
- Oddělení kódu nebo model stránky s kódem na pozadí umožňuje zachovat značky v jednom souboru a programovací kód v jiném souboru. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]a další jazyky .NET používají tento model.
+ Oddělení kódu nebo model stránky s kódem na pozadí umožňuje uchovávat značky v jednom souboru a programový kód v jiném souboru. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] a jiné jazyky .NET používají tento model.
 
 ## <a name="example"></a>Příklad
- Následující příklad určuje zobrazení **kódu Umístit v samostatném souboru.**
+ Následující příklad určuje, že se má **v samostatném souboru zobrazit možnost umístit kód** .
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"

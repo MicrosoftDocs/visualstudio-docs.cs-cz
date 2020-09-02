@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9b76c239606a4bf0d6da203bd4eea45a11162706
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546949"
 ---
 # <a name="how-to-programmatically-update-bookmark-text"></a>Postupy: aktualizace textu záložek prostřednictvím kódu programu
@@ -30,11 +30,11 @@ ms.locfileid: "85546949"
 
 - <xref:Microsoft.Office.Tools.Word.Bookmark>Hostitelský ovládací prvek.
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark>ovládací prvky rozšiřuje nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekty tím, že povolují datové vazby a zpřístupňují události. Další informace o hostitelských ovládacích prvcích naleznete v tématu Přehled hostitelských [položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+   <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky rozšiřuje nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekty tím, že povolují datové vazby a zpřístupňují události. Další informace o hostitelských ovládacích prvcích naleznete v tématu Přehled hostitelských [položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
 - Nativní <xref:Microsoft.Office.Interop.Word.Bookmark> objekt.
 
-   <xref:Microsoft.Office.Interop.Word.Bookmark>objekty nemají události nebo funkce datové vazby.
+   <xref:Microsoft.Office.Interop.Word.Bookmark> objekty nemají události nebo funkce datové vazby.
 
   Když přiřadíte text k záložce, chování se liší mezi <xref:Microsoft.Office.Interop.Word.Bookmark> a a <xref:Microsoft.Office.Tools.Word.Bookmark> . Další informace naleznete v tématu [ovládací prvek Bookmark](../vsto/bookmark-control.md).
 

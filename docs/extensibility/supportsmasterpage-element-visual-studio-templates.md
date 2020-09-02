@@ -1,5 +1,5 @@
 ---
-title: Podporuje Prvek MasterPage (šablony sady Visual Studio) | Dokumenty společnosti Microsoft
+title: SupportsMasterPage – – element (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 384672303d00b72431820b98fa02d09e440a1de5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699455"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage – element (šablony sady Visual Studio)
-Určuje, zda je v dialogovém okně Přidat **novou položku** povoleno políčko **Vybrat stránku předlohy.**
+Určuje, zda je v dialogovém okně **Přidat novou položku** zaškrtnuto políčko **Vybrat hlavní stránku** .
 
- \<VSTemplate \<> TemplateDatové> \<podporuje> MasterPage
+ \<VSTemplate> \<TemplateData>
+ \<SupportsMasterPage>
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 <SupportsMasterPage> true/false </SupportsMasterPage>
@@ -36,29 +37,29 @@ Určuje, zda je v dialogovém okně Přidat **novou položku** povoleno políčk
  Následující oddíly popisují atributy a podřízené a nadřazené elementy.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené elementy
- Žádné.
+ Žádné
 
 ### <a name="parent-elements"></a>Nadřazené elementy
 
 |Element|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje data, která šablonu kategorizuje, a definuje způsob její zobrazení v dialogovém okně **Nový projekt** nebo **Nová položka.**|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje data, která kategorizují šablonu, a definují, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Nová položka** .|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být `true` `false`buď nebo , označující, zda je v dialogovém okně **Přidat novou položku** povoleno **políčko Vybrat stránku předlohy.**
+ Text musí být buď `true` nebo `false` , což značí, zda je zaškrtnuto políčko **Vybrat hlavní stránku** v dialogovém okně **Přidat novou položku** .
 
 ## <a name="remarks"></a>Poznámky
- `SupportsMasterPage`je volitelný prvek. Výchozí hodnota je `false`.
+ `SupportsMasterPage` je volitelný prvek. Výchozí hodnota je `false`.
 
- Prvek `SupportsMasterPage` je k dispozici pouze pro šablony webových položek.
+ `SupportsMasterPage`Element je k dispozici pouze pro šablony webových položek.
 
 ## <a name="example"></a>Příklad
- Následující příklad ilustruje metadata pro webový projekt, který obsahuje podporu pro stránku předlohy.
+ Následující příklad ukazuje metadata pro webový projekt, který obsahuje podporu pro stránku předlohy.
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"

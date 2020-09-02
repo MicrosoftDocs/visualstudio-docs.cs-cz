@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 723549865a39b390d411ffe83ee1fefad7ecb82d
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71211275"
 ---
 # <a name="com-debugging-tools"></a>Nástroje pro ladění modelu COM
@@ -40,11 +40,11 @@ Ukázky Microsoft Foundation Class
 
 OCLIENT a SUPERPAD knihovny MFC jsou také k dispozici k otestování svých aplikací. K dispozici je úplný zdrojový kód pro tyto ukázky.
 
-### <a name="see-also"></a>Viz také:
+### <a name="see-also"></a>Viz také
 
 - [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
 - [Nástroje pro ladění modelu COM](../debugger/com-debugging-tools.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
-- [Ukázka OCLIENT: Znázorňuje vizuální úpravu kontejneru aplikace.](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
-- [Ukázka SUPERPAD: Ukazuje server pro vizuální úpravy, který upravuje text pomocí CEditView.](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)
+- [OCLIENT Sample: znázorňuje vizuální aplikaci pro úpravy kontejneru](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
+- [SUPERPAD Sample: ukazuje server pro vizuální úpravy, který upravuje text pomocí CEditView.](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)
