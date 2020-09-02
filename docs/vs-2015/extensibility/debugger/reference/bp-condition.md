@@ -1,5 +1,5 @@
 ---
-title: BP_CONDITION | Dokumentace Microsoftu
+title: BP_CONDITION | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8d49c912ae14154fc552c76fc011596f4f22166f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153560"
 ---
-# <a name="bpcondition"></a>BP_CONDITION
+# <a name="bp_condition"></a>BP_CONDITION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Popisuje podmínky, za kterých mají být zarážky aktivní.  
+Popisuje podmínky, za kterých je zarážka aktivována.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_CONDITION {   
@@ -48,29 +48,29 @@ public struct BP_CONDITION { 
   
 ## <a name="members"></a>Členové  
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt představující aktivní vlákno aplikace, který obsahuje zarážku.  
+ Objekt [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) , který představuje aktivní vlákno pro aplikaci, která obsahuje zarážku.  
   
  `styleCondition`  
- Hodnota z [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) výčet popisující, styl tuto podmínku zarážky.  
+ Hodnota z výčtu [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) popisující styl této podmínky zarážky.  
   
  `bstrContext`  
  Umístění zarážky.  
   
  `bstrCondition`  
- Stav jeho spuštění k zarážce.  
+ Podmínka při vyvolávání zarážky.  
   
  `nRadix`  
- Základ, který se má použít při hodnocení jakékoli číselné informace.  
+ Číselná soustava, která se má použít při hodnocení všech číselných informací.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.  
+ Tato struktura je členem [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktur.  
   
- Tato struktura je také předat jako parametr [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) a [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) metody.  
+ Tato struktura je také předána jako parametr metodám [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) a [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

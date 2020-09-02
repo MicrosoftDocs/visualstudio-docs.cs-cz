@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION | Dokumentace Microsoftu
+title: ASSEMBLYLOCRESOLUTION | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c088b27e686d42d800a6470fbbced8192c100bfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153598"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, kde je umístěné sestavení.  
+Určuje, kde se nachází sestavení.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_ASSEMBLYLOCRESOLUTION {  
@@ -50,23 +50,23 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
  Sestavení se nachází v aktuálním oboru názvů.  
   
  ALR_USERDIR  
- Sestavení je umístěn v adresáři uživatele.  
+ Sestavení se nachází v adresáři uživatele.  
   
  ALR_SHAREDDIR  
- Sestavení je umístěn ve sdíleném adresáři.  
+ Sestavení se nachází ve sdíleném adresáři.  
   
  ALR_REMOTEDIR  
- Sestavení je umístěno do vzdáleného adresáře.  
+ Sestavení se nachází ve vzdáleném adresáři.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou vráceny prostřednictvím [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metody.  
+ Tyto hodnoty jsou vraceny metodami [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) .  
   
- Tyto hodnoty je možné kombinovat s `OR` operace.  
+ Tyto hodnoty lze v rámci operace kombinovat `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

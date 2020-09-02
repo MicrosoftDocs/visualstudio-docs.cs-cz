@@ -18,22 +18,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1526e1c49636f4883392caa63966714625d066d6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595511"
 ---
-# <a name="options-dialog-box-environment--international-settings"></a>Dialogové okno Možnosti: Mezinárodní nastavení prostředí \>
+# <a name="options-dialog-box-environment--international-settings"></a>Dialogové okno Možnosti: \> mezinárodní nastavení prostředí
 
-Stránka Mezinárodní nastavení umožňuje změnit výchozí jazyk, pokud máte v počítači nainstalovanou více než jednu jazykovou verzi integrovaného vývojového prostředí (IDE). K tomuto dialogovému oknu se dostanete tak, že vyberete **možnosti** z nabídky **Nástroje** a pak zvolte **Mezinárodní nastavení** ze složky **Prostředí.**
+V případě, že máte na počítači nainstalovanou více než jednu jazykovou verzi integrovaného vývojového prostředí (IDE), na stránce mezinárodní nastavení můžete změnit výchozí jazyk. K tomuto dialogovému oknu se dostanete tak, že v nabídce **nástroje** vyberete **Možnosti** a pak zvolíte **mezinárodní nastavení** ze složky **prostředí** .
 
 **Jazyk**
 
-Zobrazí seznam dostupných jazyků pro nainstalované jazykové verze produktu. Pokud prostředí sdílí více jazyků produktů nebo instalace produktů ve smíšeném jazyce, změní se výběr jazyka na **Stejný jako systém Microsoft Windows**.
+Obsahuje seznam dostupných jazyků pro nainstalované jazykové verze produktu. Pokud se prostředí sdílí s více jazyky produktů nebo instalací smíšeného jazyka produktů, je výběr jazyka změněn na **stejný jako v systému Microsoft Windows**.
 
 > [!CAUTION]
-> V systému s nainstalovaným více jazyky nejsou nástroje pro sestavení jazyka Visual C++ (cl.exe, link.exe, nmake.exe, bscmake.exe a související soubory) tímto nastavením ovlivněny. Tyto nástroje používají verzi pro poslední nainstalovaný jazyk. Nástroje sestavení pro dříve nainstalovaný jazyk jsou přepsány, protože nástroje pro sestavení visual c++ nepoužívají model satelitní dll.
+> V systému, v němž je nainstalováno více jazyků, nejsou tímto nastavením ovlivněny Visual C++ nástroje pro sestavení (cl.exe, link.exe, nmake.exe, bscmake.exe a související soubory). Tyto nástroje používají verzi pro poslední nainstalovaný jazyk. Nástroje sestavení pro dříve instalovaný jazyk jsou přepsány, protože nástroje Visual C++ Build nepoužívají model satelitní knihovny DLL.
 
 ### <a name="see-also"></a>Viz také
 

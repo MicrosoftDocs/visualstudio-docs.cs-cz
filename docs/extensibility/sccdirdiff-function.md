@@ -1,5 +1,5 @@
 ---
-title: Funkce SccDirDiff | Dokumenty společnosti Microsoft
+title: Funkce SccDirDiff | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1bb592a1174a91480ed76ef818733c288c5273c0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701018"
 ---
-# <a name="sccdirdiff-function"></a>SccDirDiff
-Tato funkce zobrazuje rozdíly mezi aktuálním místním adresářem na klientském disku a odpovídajícím projektem pod směřování zdrojového kódu.
+# <a name="sccdirdiff-function"></a>SccDirDiff – funkce
+Tato funkce zobrazuje rozdíly mezi aktuálním místním adresářem na klientském disku a odpovídajícím projektem v rámci správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,55 +35,55 @@ SCCRTN SccDirDiff(
 ```
 
 ### <a name="parameters"></a>Parametry
- pKontext
+ pContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- Hwnd
+ hWnd
 
-[v] Popisovač okna IDE, který může modul plug-in správy zdrojového kódu použít jako nadřazený modul pro všechna dialogová okna, která poskytuje.
+pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.
 
- název lpDir
+ lpDirName
 
-[v] Plně kvalifikovaná cesta k místnímu adresáři, pro který chcete zobrazit vizuální rozdíl.
+pro Plně kvalifikovaná cesta k místnímu adresáři, pro který se má zobrazit vizuální rozdíl
 
  dwFlags
 
-[v] Příznaky příkazu (viz oddíl Poznámky).
+pro Příznaky příkazu (viz oddíl poznámky).
 
- pvMožnosti
+ pvOptions
 
-[v] Možnosti specifické pro modul plug-in správy zdrojového kódu.
+pro Možnosti specifické pro modul plug-in správy zdrojového kódu.
 
-## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+## <a name="return-value"></a>Vrácená hodnota
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Adresář na disku je stejný jako projekt v ovládacím prvku zdrojového kódu.|
-|SCC_I_FILESDIFFER|Adresář na disku se liší od projektu v ovládacím prvku zdrojového kódu.|
+|SCC_OK|Adresář na disku je stejný jako projekt ve správě zdrojového kódu.|
+|SCC_I_FILESDIFFER|Adresář na disku je jiný než projekt ve správě zdrojového kódu.|
 |SCC_I_RELOADFILE|Soubor nebo projekt je třeba znovu načíst.|
-|SCC_E_FILENOTCONTROLLED|Adresář není pod sohledem zdrojového kódu.|
-|SCC_E_NOTAUTHORIZED|Uživatel není oprávněn provádět tuto operaci.|
-|SCC_E_ACCESSFAILURE|Při přístupu k systému správy zdrojového kódu došlo k potížím se sítí nebo konflikty. Doporučuje se opakování.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecifické selhání.|
-|SCC_E_FILENOTEXIST|Místní adresář nebyl nalezen.|
+|SCC_E_FILENOTCONTROLLED|Adresář není v rámci správy zdrojového kódu.|
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nespecifická chyba.|
+|SCC_E_FILENOTEXIST|Místní adresář se nepovedlo najít.|
 
 ## <a name="remarks"></a>Poznámky
- Tato funkce slouží k instruování modulu plug-in správy zdrojového kódu k zobrazení seznamu změn v zadaném adresáři. Modul plug-in otevře vlastní okno ve formátu podle vlastního výběru, aby se zobrazily rozdíly mezi adresářem uživatele na disku a odpovídajícím projektem pod správou verzí.
+ Tato funkce slouží k tomu, aby modul plug-in správy zdrojových kódů zobrazoval uživateli seznam změn v zadaném adresáři. Modul plug-in otevře vlastní okno ve formátu svého výběru, aby zobrazoval rozdíly mezi adresářem uživatele na disku a odpovídajícím projektem v rámci správy verzí.
 
- Pokud modul plug-in podporuje porovnání adresářů vůbec, musí podporovat porovnání adresářů na základě názvu souboru i v případě, že možnosti "quick-diff" nejsou podporovány.
+ Pokud modul plug-in podporuje porovnání adresářů, musí podporovat porovnání adresářů na základě názvu souboru, i když možnosti "rychlé rozdíly" nejsou podporovány.
 
 |`dwFlags`|Interpretace|
 |---------------|--------------------|
-|SCC_DIFF_IGNORECASE|Porovnání bez rozlišování velkých a malých písmen (lze použít pro rychlý rozdíl nebo vizuální).|
-|SCC_DIFF_IGNORESPACE|Ignoruje prázdné místo (lze použít pro rychlé diff nebo vizuální).|
-|SCC_DIFF_QD_CONTENTS|Pokud je podporován modulem plug-in správy zdrojového kódu, tiše porovnává adresář, bajt po bajtu.|
-|SCC_DIFF_QD_CHECKSUM|Pokud je podporován modulem plug-in, tiše porovnává adresář prostřednictvím kontrolního součtu nebo, pokud není podporován, přejde zpět na SCC_DIFF_QD_CONTENTS.|
-|SCC_DIFF_QD_TIME|Pokud je podporován modulem plug-in, tiše porovnává adresář prostřednictvím časového razítka, nebo pokud není podporován, vrátí se na SCC_DIFF_QD_CHECKSUM nebo SCC_DIFF_QD_CONTENTS.|
+|SCC_DIFF_IGNORECASE|Porovnávání bez rozlišení velkých a malých písmen (lze použít pro rychlé rozdíly nebo pro vizuální účely).|
+|SCC_DIFF_IGNORESPACE|Ignoruje prázdné znaky (lze použít buď pro rychlé rozdíly, nebo pro vizuál).|
+|SCC_DIFF_QD_CONTENTS|V případě, že modul plug-in správy zdrojových kódů podporuje, tiše porovná adresář po bajtu.|
+|SCC_DIFF_QD_CHECKSUM|Pokud je tento modul podporován modulem plug-in, potichě porovná adresář pomocí kontrolního součtu, nebo pokud není podporován, přejde zpět na SCC_DIFF_QD_CONTENTS.|
+|SCC_DIFF_QD_TIME|Pokud je to podporováno modulem plug-in, potichě porovná adresář přes jeho časové razítko, nebo pokud není podporováno, přejde zpět na SCC_DIFF_QD_CHECKSUM nebo SCC_DIFF_QD_CONTENTS.|
 
 > [!NOTE]
-> Tato funkce používá stejné příkazové příznaky jako [SccDiff](../extensibility/sccdiff-function.md). Modul plug-in správy zdrojového kódu se však může rozhodnout nepodporovat operaci "quick-diff" pro adresáře.
+> Tato funkce používá stejný příznak příkazu jako [SccDiff](../extensibility/sccdiff-function.md). Nicméně modul plug-in správy zdrojových kódů se může rozhodnout, že pro adresáře nepodporuje operaci "rychlé rozdíly".
 
 ## <a name="see-also"></a>Viz také
-- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
+- [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)

@@ -13,23 +13,23 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 63d405b0e62735c0c1e3d7bb716ea2db29bc19fe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651578"
 ---
 # <a name="in-source-suppression-overview"></a>Přehled potlačování ve zdroji
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Potlačení ve zdroji je schopnost potlačit nebo ignorovat porušení analýzy kódu ve spravovaném kódu přidáním atributu **SuppressMessage** do segmentů kódu, které způsobují porušení. Atribut **SuppressMessage** je podmíněný atribut, který je obsažen v metadatech Il sestavení spravovaného kódu pouze v případě, že je v době kompilace definován symbol kompilace CODE_ANALYSIS.
+Potlačení ve zdroji je schopnost potlačit nebo ignorovat porušení analýzy kódu ve spravovaném kódu přidáním atributu **SuppressMessage** do segmentů kódu, které způsobují porušení. Atribut **SuppressMessage** je podmíněný atribut, který je obsažen v metadatech Il sestavení spravovaného kódu pouze v případě, že je symbol kompilace CODE_ANALYSIS definován v době kompilace.
 
- V C++/CLI použijte makra CA_SUPPRESS_MESSAGE nebo CA_GLOBAL_SUPPRESS_MESSAGE v hlavičkovém souboru, chcete-li přidat atribut.
+ V jazyce C++/CLI použijte makra CA_SUPPRESS_MESSAGE nebo CA_GLOBAL_SUPPRESS_MESSAGE v souboru hlaviček pro přidání atributu.
 
  V sestavách vydaných verzí byste neměli používat potlačení ve zdrojovém kódu, abyste zabránili nechtěnému přenosu metadat potlačení. Vzhledem k nákladům na zpracování ve zdrojovém potlačení můžete také snížit výkon aplikace tím, že zahrnete metadata potlačení ve zdroji.
 
 > [!NOTE]
-> Tyto atributy nemusíte sami nakódovat sami. Další informace naleznete v tématu [How to: potlačení upozornění pomocí položky nabídky](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). Položka nabídky není pro C++ kód k dispozici.
+> Tyto atributy nemusíte sami nakódovat sami. Další informace naleznete v tématu [How to: potlačení upozornění pomocí položky nabídky](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). Položka nabídky není pro kód jazyka C++ k dispozici.
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage – atribut
  Když kliknete pravým tlačítkem na upozornění analýzy kódu v **Seznam chyb** a potom kliknete na **Potlačit zprávy**, přidá se do kódu nebo do globálního souboru potlačení projektu atribut **SuppressMessage** .
@@ -52,7 +52,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 ```
 
- ,
+ Kde:
 
 - **Kategorie pravidla** – kategorie, ve které je definováno pravidlo. Další informace o kategoriích pravidla analýzy kódu najdete v tématu [upozornění analýzy kódu pro spravovaný kód](../code-quality/code-analysis-for-managed-code-warnings.md).
 
@@ -68,7 +68,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
   - Obor názvů
 
-  - Partner
+  - Prostředek
 
   - Typ
 
@@ -79,11 +79,11 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 ## <a name="suppressmessage-usage"></a>Využití SuppressMessage
  Upozornění analýzy kódu jsou potlačena na úrovni, na kterou je použita instance atributu **SuppressMessage** . Účelem tohoto je pevně spojit informace o potlačení s kódem, kde dojde k porušení.
 
- Obecná forma potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Například
+ Obecná forma potlačení zahrnuje kategorii pravidla a identifikátor pravidla, který obsahuje nepovinné uživatelsky čitelné reprezentace názvu pravidla. Příklad:
 
  `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
- Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, může být název samotného pravidla vynechán. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Například
+ Pokud existují přísné důvody pro výkon pro minimalizaci v metadatech potlačení zdroje, může být název samotného pravidla vynechán. Kategorie pravidla a ID pravidla společně tvoří dostatečně jedinečný identifikátor pravidla. Příklad:
 
  `[SuppressMessage("Microsoft.Design", "CA1039")]`
 

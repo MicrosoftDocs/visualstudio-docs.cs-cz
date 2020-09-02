@@ -17,73 +17,73 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596213"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Možnosti, textový editor, C#, IntelliSense
 
-Pomocí stránky možností **technologie IntelliSense** můžete upravit nastavení, která ovlivňují chování technologie IntelliSense pro c#. Chcete-li získat přístup k této stránce možností, zvolte**Možnosti** **nástrojů** > a pak zvolte **Text Editor** > **C#** > **IntelliSense**.
+Stránka možnosti **technologie IntelliSense** slouží k úpravě nastavení, která mají vliv na chování technologie IntelliSense v jazyce C#. Chcete-li získat přístup k této **Tools**stránce Možnosti, zvolte  >  **možnost**nástroje a pak zvolte **textový editor**  >  **C#**  >  **IntelliSense**.
 
-Stránka Možností **technologie IntelliSense** obsahuje následující možnosti:
+Stránka možnosti **technologie IntelliSense** obsahuje následující možnosti:
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
-- Zobrazit seznam dokončení po zadání znaku*
+- Zobrazit seznam dokončení po zadání znaku *
 
-   Je-li vybrána tato možnost, technologie IntelliSense automaticky zobrazí seznam dokončení, když začnete psát. Pokud tato možnost není vybrána, je dokončení technologie IntelliSense stále k dispozici v nabídce **IntelliSense** nebo stisknutím **klávesctrl**+**space**.
+   Když je vybraná tato možnost, IntelliSense po zahájení psaní automaticky zobrazí seznam dokončení. Pokud tato možnost není vybrána, je dokončení technologie IntelliSense stále k dispozici v nabídce **technologie IntelliSense** nebo stisknutí klávesy **CTRL** + **Space**.
 
-- Zobrazit seznam dokončení po odstranění znaku
+- Po odstranění znaku zobrazit seznam dokončení
 
-- Zvýraznění odpovídajících částí položek seznamu dokončení
+- Zvýraznit vyhovující části položek seznamu dokončení
 
 - Zobrazit filtry položek dokončení
 
-## <a name="snippets-behavior"></a>Chování výstřižků
+## <a name="snippets-behavior"></a>Chování fragmentů kódu
 
-- Nikdy nezahrnovat výstřižky
+- Nikdy Nezahrnovat fragmenty
 
    Je-li vybrána tato možnost, technologie IntelliSense nikdy nepřidá aliasy pro fragmenty kódu jazyka C# do seznamu dokončení.
 
-- Vždy obsahovat úryvky
+- Vždy zahrnout fragmenty kódu
 
-   Je-li vybrána tato možnost, intelliSense přidá aliasy pro fragmenty kódu Jazyka C# do seznamu dokončení. V případě, že alias fragmentu kódu je stejný jako klíčové slovo, například [třída](/dotnet/csharp/language-reference/keywords/class), klíčové slovo je nahrazeno zástupcem. Další informace naleznete v [tématu C# Fragmenty kódu](../../ide/visual-csharp-code-snippets.md).
+   Je-li vybrána tato možnost, technologie IntelliSense přidá do seznamu dokončení aliasy pro fragmenty kódu jazyka C#. V případě, že je alias fragmentu kódu stejný jako klíčové slovo, například [Třída](/dotnet/csharp/language-reference/keywords/class), klíčové slovo je nahrazeno zástupcem. Další informace naleznete v tématu [fragmenty kódu jazyka C#](../../ide/visual-csharp-code-snippets.md).
 
-- Zahrnout výstřižky při zadání karty ?-Tab za identifikátorem
+- Zahrnout fragmenty kódu při zadání?-Tab po identifikátoru
 
-   Je-li vybrána tato možnost, přidá technologie IntelliSense aliasy pro fragmenty kódu jazyka C# do seznamu dokončení, kdy **?** + **Karta** je stisknuta za identifikátorem
+   Pokud je vybrána tato možnost, technologie IntelliSense přidá aliasy pro fragmenty kódu jazyka C# do seznamu dokončení, pokud **?** + Stisknutí klávesy **TAB** po identifikátoru
 
-## <a name="enter-key-behavior"></a>Zadat chování klíče
+## <a name="enter-key-behavior"></a>Chování klávesy ENTER
 
-- Nikdy nepřidávat nový řádek při vstupu
+- Nikdy Nepřidávat nový řádek při zadání
 
-   Určuje, že nový řádek se nikdy nepřidá automaticky po výběru položky v seznamu dokončení a stisknutí klávesy **Enter**.
+   Určuje, že se nový řádek nikdy nepřidá automaticky po výběru položky v seznamu pro dokončení a stisknutím klávesy **ENTER**.
 
-- Pouze přidat nový řádek na enter po ukončení plně zadaný word
+- Přidat nový řádek při stisknutí ENTER po konci plně zadaného slova
 
-   Určuje, že pokud zadáte všechny znaky pro položku do seznamu dokončení a pak stisknete **Enter**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
+   Určuje, že pokud zadáte všechny znaky pro položku v seznamu pro doplňování a potom stisknete klávesu **ENTER**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
 
-   Pokud například zadáte `else` a pak stisknete **Enter**, v editoru se zobrazí následující:
+   Pokud například zadáte `else` a stisknete klávesu **ENTER**, zobrazí se v editoru následující:
 
    `else`
 
-   `|`(umístění kurzoru)
+   `|` (umístění kurzoru)
 
-   Pokud však zadáte `el` pouze a pak stisknete **Enter**, v editoru se zobrazí následující:
+   Pokud však zadáte pouze příkaz `el` a stisknete klávesu **ENTER**, zobrazí se v editoru následující:
 
-   `else|`(umístění kurzoru)
+   `else|` (umístění kurzoru)
 
-- Vždy přidat nový řádek při vstupu
+- Vždy přidat nový řádek při zadání
 
-   Určuje, že pokud do seznamu dokončení zadáte *některý* ze znaků položky a pak stisknete **Enter**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
+   Určuje, že pokud zadáte *některý* ze znaků pro položku v seznamu pro doplňování a stisknete klávesu **ENTER**, automaticky se přidá nový řádek a kurzor se přesune na nový řádek.
 
-## <a name="show-name-suggestions"></a>Zobrazit návrhy jmen
+## <a name="show-name-suggestions"></a>Zobrazit návrhy názvů
 
-Provádí automatické dokončování názvů objektů pro členy, které jste nedávno vybrali.
+Provede automatické dokončování názvů objektů pro členy, které jste naposledy vybrali.
 
 ## <a name="see-also"></a>Viz také
 
 - [Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
-- [Používání atributu IntelliSense](../../ide/using-intellisense.md)
+- [Pomocí technologie IntelliSense](../../ide/using-intellisense.md)

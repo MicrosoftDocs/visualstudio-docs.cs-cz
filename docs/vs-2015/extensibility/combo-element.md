@@ -1,5 +1,5 @@
 ---
-title: Prvek pole se seznamem | Dokumentace Microsoftu
+title: Element Combo | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: daa89266d653743a743f42e5f0b8e11c954adc1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184415"
 ---
 # <a name="combo-element"></a>Combo – element
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři typy polí se seznamem, následujícím způsobem: DropDownCombo DynamicCombo, IndexCombo a MRUCombo.  
+Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři druhy polí se seznamem, a to takto: DropDownCombo, DynamicCombo, IndexCombo a MRUCombo.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <combo guid="guidMyCommandSet" id="MyCommand" defaultWidth="20" idCommandList="MyCommandListID" priority="0x102" type="DropDownCombo">  
@@ -40,26 +40,26 @@ Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři typ
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|guid|Povinný parametr. Identifikátor GUID identifikátoru GUID a ID příkazu.|  
-|id|Povinný parametr. ID identifikátoru GUID a ID příkazu.|  
-|defaultWidth|Povinný parametr. Celé číslo, které určuje šířka v pixelech pro pole se seznamem.|  
-|idCommandList|Povinný parametr. ID, které se odešle cíli aktivní zařadí načíst seznam položek, který se má zobrazit v poli se seznamem. ID bude ve stejném oboru jako ovládací prvek identifikátor GUID.|  
-|priority|Volitelné. Číselná hodnota, která určuje prioritu.|  
-|– typ|Volitelné. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije tlačítko.<br /><br /> DropDownCombo<br /> Sady VSPackage zodpovídá za vyplnění obsah pro toto pole se seznamem. Uživatel nic nelze zadat do textového pole tomto rozevíracím seznamu.<br /><br /> DynamicCombo<br /> Sady VSPackage zodpovídá za vyplnění obsah tohoto pole se seznamem. Uživatel může upravit toto pole se seznamem a také v něm vyberte položky.<br /><br /> IndexCombo<br /> Stejné jako DynamicCombo s výjimkou, že vyvolá index položky spíše než jeho textu.<br /><br /> MRUCombo<br /> Vyplnění podle integrované vývojové prostředí (IDE) jménem sady VSPackage.  Uživatel může upravovat v tomto poli se seznamem. Prostředí IDE pamatuje až po poslední 16 položek za pole se seznamem.<br /><br /> Když uživatel vybere něco v poli se seznamem nebo zadá něco nového, rozhraní IDE upozorní odpovídající VSPackage.|  
-|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Povinná hodnota. Identifikátor GUID identifikátoru příkazu GUID/ID|  
+|id|Povinná hodnota. ID identifikátoru příkazu GUID/ID|  
+|defaultWidth|Povinná hodnota. Celé číslo, které určuje šířku v pixelech pro pole se seznamem.|  
+|idCommandList|Povinná hodnota. ID, které je odesláno do cíle aktivního zařadí k načtení seznamu položek, které mají být zobrazeny v poli se seznamem. ID bude ve stejném oboru identifikátorů GUID jako ovládací prvek.|  
+|upřednostněn|Nepovinný parametr. Číselná hodnota, která určuje prioritu.|  
+|typ|Nepovinný parametr. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije se tlačítko.<br /><br /> DropDownCombo<br /> VSPackage je zodpovědný za vyplnění obsahu pro toto pole se seznamem. Uživatel nemůže v textovém poli tohoto rozevíracího seznamu zadávat cokoli.<br /><br /> DynamicCombo<br /> VSPackage je zodpovědný za vyplnění obsahu tohoto pole se seznamem. Uživatel může tuto položku rozevírací seznam upravit a také vybrat položky v ní.<br /><br /> IndexCombo<br /> Stejné jako DynamicCombo s tím rozdílem, že vyvolává index položky namísto jejího textu.<br /><br /> MRUCombo<br /> Vyplněný integrovaným vývojovým prostředím (IDE) jménem VSPackage.  Uživatel může v tomto poli se seznamem upravit. Rozhraní IDE se zapamatuje až do posledních 16 položek na pole se seznamem.<br /><br /> Když uživatel vybere něco v poli se seznamem nebo vloží něco nového, IDE ho upozorní na příslušný VSPackage.|  
+|Stav|Nepovinný parametr. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|Nadřazené|Volitelné. Nadřazený prvek tlačítko.|  
-|CommandFlag|Povinný parametr. Zobrazit [Command Flag – Element](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag pro tlačítka jsou následujícím způsobem.<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Kláves<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
-|Řetězce|Povinný parametr. Zobrazit [řetězce Element](../extensibility/strings-element.md). ButtonText – element podřízený, musí být definovaný.|  
+|Nadřazený|Nepovinný parametr. Nadřazený element tlačítka|  
+|CommandFlag|Povinná hodnota. Viz [element příznak příkazu](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag pro tlačítko jsou následující.<br /><br /> – CaseSensitive<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DynamicVisibility<br /><br /> – Filtrování kláves<br /><br /> - IconAndText<br /><br /> -Automatické dokončování<br /><br /> - NoButtonCustomize<br /><br /> -Upravit<br /><br /> - NoKeyCustomize<br /><br /> - StretchHorizontally|  
+|Řetězce|Povinná hodnota. Viz [řetězec element](../extensibility/strings-element.md). Musí být definován podřízený element ButtonText.|  
 |Poznámka|Volitelný komentář.|  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
 |[Commands – element](../extensibility/commands-element.md)|Představuje kolekci příkazů na panelu nástrojů VSPackage.|  
   

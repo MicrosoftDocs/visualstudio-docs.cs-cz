@@ -1,5 +1,5 @@
 ---
-title: Ladění výpočetního shaderu, použití diagnostiky grafiky
+title: Ladění výpočetního shaderu pomocí diagnostiky grafiky
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
@@ -9,101 +9,101 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19ae8472aaafbad1a04485ff2e3a2637f345bc00
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66262868"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>Návod: Použití diagnostiky grafiky k ladění výpočetního shaderu
-Tento návod ukazuje, jak použít nástrojů Diagnostika grafiky sady Visual Studio k vyšetření výpočetního shaderu, který generuje nesprávné výsledky.
+Tento návod ukazuje, jak použít nástroje sady Visual Studio Diagnostika grafiky k prozkoumání výpočetního shaderu, který generuje nesprávné výsledky.
 
- Tento návod ilustruje tyto úkoly:
+ Tento návod ilustruje tyto úlohy:
 
-- Použití **seznam událostí grafiky** k vyhledání potenciálních zdrojů problému.
+- K vyhledání potenciálních zdrojů problému použijte **seznam událostí grafiky** .
 
-- Použití **zásobník volání událostí grafiky** k zjištění, který výpočetní shader je proveden DirectCompute `Dispatch` událostí.
+- Použití **zásobníku volání událostí grafiky** k určení, který výpočetní shader je proveden `Dispatch` událostí DirectCompute.
 
-- Použití **fáze zřetězení grafiky** okno a ladicího programu HLSL Zkoumejte výpočetní shader, který je zdrojem potíží.
+- Pomocí okna **fáze zřetězení grafiky** a ladicího programu HLSL prověřte výpočetní shader, který je zdrojem problému.
 
 ## <a name="scenario"></a>Scénář
- V tomto scénáři jste napsali simulaci dynamiky kapalin, která používá rozhraní DirectCompute k provádění výpočetně nejnáročnějších částí aktualizace simulace. Při spuštění aplikace vykreslování datové sady a uživatelského rozhraní vypadá správně, ale simulace se nechová podle očekávání. Pomocí diagnostiky grafiky můžete zaznamenat problém do protokolu grafiky, tak, že ladíte aplikaci. Problém je v aplikace vypadá například takto:
+ V tomto scénáři jste napsali simulaci kapalinového dynamiky, která využívá DirectCompute k provádění většiny částí aktualizace simulace náročné na výpočetní výkon. Když je aplikace spuštěna, vykreslování datové sady a uživatelského rozhraní vypadá správně, ale simulace se nechová podle očekávání. Pomocí Diagnostika grafiky můžete zachytit problém do protokolu grafiky, abyste mohli aplikaci ladit. Problém v této aplikaci vypadá následovně:
 
- ![Simulované fluid chová nesprávně. ](media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx_diag_demo_compute_shader_fluid_problem")
+ ![Simulovaná kapalina se chová nesprávně.](media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx_diag_demo_compute_shader_fluid_problem")
 
- Informace o tom, jak zachytit problémy s grafikou v protokolu grafiky, naleznete v tématu [Capturing Graphics Information](capturing-graphics-information.md).
+ Informace o tom, jak zachytit problémy s grafikou v protokolu grafiky, najdete v tématu [zachycení grafických informací](capturing-graphics-information.md).
 
 ## <a name="investigation"></a>Šetření
- Nástrojů diagnostiky grafiky můžete načíst soubor protokolu grafiky, takže si můžete prohlédnout zachycené snímky.
+ Pomocí nástrojů Diagnostika grafiky můžete načíst soubor protokolu grafiky, abyste mohli zkontrolovat zachycené snímky.
 
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Přezkoumání snímku v protokolu grafiky
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Prohlédnutí snímku v protokolu grafiky
 
-1. V sadě Visual Studio načtěte protokol grafiky, který obsahuje rámec vykazující nesprávné výsledky simulace. Nová karta Diagnostika grafiky se zobrazí v sadě Visual Studio. V horní části této karty je výstup cíle vykreslení vybraného snímku. V dolní části je **seznam snímků**, který zobrazuje náhled každého zachyceného snímku.
+1. V aplikaci Visual Studio načtěte protokol grafiky, který obsahuje rámec, který vykazuje nesprávné výsledky simulace. V aplikaci Visual Studio se zobrazí nová karta Diagnostika grafiky. V horní části této karty je výstup cíle vykreslování vybraného snímku. V dolní části je **seznam rámců**, který zobrazuje miniaturu každého zachyceného snímku.
 
-2. V **seznam snímků**, vyberte snímek, který ukazuje chování nesprávné simulace. I když se zobrazí chyba v kódu simulace a v kódu vykreslování nikoli, je stále nutné zvolit snímek, protože události DirectCompute jsou zachyceny na základě jednotlivých snímcích spolu s událostmi Direct3D. V tomto scénáři vypadá karta protokolu grafiky:
+2. V **seznamu snímků**vyberte rámec, který ukazuje nesprávné chování simulace. I když se zdá, že chyba je v kódu simulace, a ne kód vykreslování, je stále nutné zvolit rámec, protože DirectCompute události jsou zachyceny na základě rámců a společně s událostmi Direct3D. V tomto scénáři vypadá karta protokol grafiky takto:
 
-    ![Dokumentu protokolu grafiky v aplikaci Visual Studio. ](media/gfx_diag_demo_compute_shader_fluid_step_1.png "gfx_diag_demo_compute_shader_fluid_step_1")
+    ![Dokument protokolu grafiky v aplikaci Visual Studio.](media/gfx_diag_demo_compute_shader_fluid_step_1.png "gfx_diag_demo_compute_shader_fluid_step_1")
 
-   Po vybrání rámce, který znázorňuje problém, můžete použít **seznam událostí grafiky** k její diagnostice. **Seznam událostí grafiky** obsahuje události pro každé volání DirectCompute a volání API rozhraní Direct3D, které bylo provedeno během aktivního rámce – například volání rozhraní API pro spuštění výpočtu na GPU nebo vykreslení datové sady nebo uživatelského rozhraní. V tomto případě nás zajímají `Dispatch` události, které představují části simulace, které běží na GPU.
+   Po výběru rámce, který demonstruje problém, můžete k jeho diagnostice použít **seznam událostí grafiky** . **Seznam událostí grafiky** obsahuje událost pro každé volání DirectCompute a volání rozhraní Direct3D API, které bylo provedeno během aktivního rámce – například volání rozhraní API pro spuštění výpočtu na GPU nebo pro vykreslení datové sady nebo uživatelského rozhraní. V tomto případě zajímáme `Dispatch` události, které představují části simulace, které jsou spuštěny na GPU.
 
-#### <a name="to-find-the-dispatch-event-for-the-simulation-update"></a>K nalezení události odeslání pro aktualizaci simulace
+#### <a name="to-find-the-dispatch-event-for-the-simulation-update"></a>Vyhledání odesílací události pro aktualizaci simulace
 
-1. Na **diagnostiky grafiky** nástrojů, zvolte **seznam událostí** otevřít **seznam událostí grafiky** okna.
+1. Na panelu nástrojů **Diagnostika grafiky** vyberte **seznam událostí** a otevřete tak okno **seznam událostí grafiky** .
 
-2. Zkontrolujte **seznam událostí grafiky** pro událost draw, která vykresluje datovou sadu. Abychom to usnadnili, zadejte `Draw` v **hledání** pole v pravém horním rohu **seznam událostí grafiky** okna. Vyfiltruje seznam tak, aby obsahoval pouze události, které mají "Draw" v názvech. V tomto scénáři zjistíte, že těmto událostem draw došlo k chybě:
+2. Zkontrolujte **seznam událostí grafiky** pro událost Draw, která vykresluje datovou sadu. Pokud to chcete usnadnit, zadejte `Draw` do **vyhledávacího** pole v pravém horním rohu okna **seznam událostí grafiky** . Tím se seznam vyfiltruje tak, aby obsahoval jenom události, které mají v názvech "Draw". V tomto scénáři zjistíte, že došlo k těmto událostem Draw:
 
-    ![Seznam událostí &#40;EL&#41; ukazuje událostem draw. ](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
+    ![Seznam událostí &#40;EL&#41; zobrazuje události Draw.](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
 
-3. Procházet všemi událostmi draw při sledování cíle vykreslení v kartě dokumentu protokol grafiky.
+3. Procházejte všemi událostmi vykreslování a sledujte cíl vykreslování na kartě dokumentu protokolu grafiky.
 
-4. Zastavení při vykreslování cíle nejprve zobrazí vygenerovanou datovou sadu. V tomto scénáři je vykreslena datová sada v první události draw. Se zobrazí chyba simulace:
+4. Zastavit, pokud cíl vykreslování nejprve zobrazí vykreslenou datovou sadu. V tomto scénáři je datová sada vykreslena v první události Draw. Zobrazí se chyba v simulaci:
 
-    ![Událost vykreslení to nakreslete simulace datové sady. ](media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx_diag_demo_compute_shader_fluid_step_3")
+    ![Tato událost vykreslování vykresluje datovou sadu simulace.](media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx_diag_demo_compute_shader_fluid_step_3")
 
-5. Nyní vyhledejte **seznam událostí grafiky** pro `Dispatch` událost, která aktualizuje simulaci. Protože je pravděpodobné, že simulace je aktualizován před vykreslením, můžete se nejprve soustředit na `Dispatch` události, které nastanou před událostí draw, která vykresluje výsledky. Abychom to usnadnili, upravte **hledání** pole ke čtení `Draw;Dispatch;CSSetShader(`. Vyfiltruje seznam tak, aby obsahoval také `Dispatch` a `CSSetShader` události vedle událostí draw. V tomto scénáři zjistíte, že několik `Dispatch` události došlo před událostí draw:
+5. Nyní zkontrolujte **seznam událostí grafiky** pro `Dispatch` událost, která aktualizuje simulaci. Vzhledem k tomu, že je pravděpodobně před vykreslením simulace aktualizována, můžete nejprve soustředit na `Dispatch` události, ke kterým dojde před událostí Draw, která vykresluje výsledky. Chcete-li to usnadnit, upravte **vyhledávací** pole pro čtení `Draw;Dispatch;CSSetShader(` . Tím se seznam vyfiltruje tak, aby také obsahoval `Dispatch` události a, a `CSSetShader` navíc události Draw. V tomto scénáři zjistíte, že `Dispatch` před událostí Draw došlo k několika událostem:
 
-    ![Ukazuje EL kreslení, odesílání a CSSetShader události](media/gfx_diag_demo_compute_shader_fluid_step_4.png "gfx_diag_demo_compute_shader_fluid_step_4")
+    ![EL zobrazuje události vykreslování, odeslání a CSSetShader](media/gfx_diag_demo_compute_shader_fluid_step_4.png "gfx_diag_demo_compute_shader_fluid_step_4")
 
-   Teď, když víte, které málo z potenciálně mnoha `Dispatch` události mohou souviset s problémem, můžete je prozkoumat podrobněji.
+   Když teď víte, které z potenciálně mnoha `Dispatch` událostí by mohly odpovídat problému, můžete je podrobněji prostudovat.
 
-#### <a name="to-determine-which-compute-shader-a-dispatch-call-executes"></a>Chcete-li zjistit, který výpočetní shader odeslání výpočtu provede
+#### <a name="to-determine-which-compute-shader-a-dispatch-call-executes"></a>Určení, které výpočetní shader a které vykoná volání expedice
 
-1. Na **diagnostiky grafiky** nástrojů, zvolte **zásobník volání událostí** otevřít **zásobník volání událostí grafiky** okna.
+1. Na panelu nástrojů **Diagnostika grafiky** vyberte možnost **zásobník volání událostí** a otevřete tak okno **zásobníku volání událostí grafiky** .
 
-2. Počínaje událostí draw, která vykresluje výsledky simulace, přechod zpět každý pomocí jednotlivých předchozí `CSSetShader` událostí. Potom v **zásobník volání událostí grafiky** okně zvolte funkci zcela nahoře přejděte na lokalitu volání. Při volání webu můžete použít první parametr [CSSetShader](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cssetshader) k určení, které výpočetní shadery jsou provedeny následující `Dispatch` událostí.
+2. Počínaje událostí Draw, která vykresluje výsledky simulace, se přesunou zpět přes každou předchozí `CSSetShader` událost. Pak v okně **zásobník volání událostí grafiky** zvolte funkci nejvyšší úrovně, která umožňuje přejít na web volání. Na webu volání můžete použít první parametr volání funkce [CSSetShader](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cssetshader) k určení, který výpočetní shader je proveden další `Dispatch` událostí.
 
-   V tomto scénáři existují tři páry `CSSetShader` a `Dispatch` události v každém rámci. Při zpětné práci přestavuje, třetí pár představuje krok integrace (kam částice jsou skutečně přesunuty), druhá pár představuje krok vynucení výpočtu (kde se počítají síly ovlivňující jednotlivé částice) a první pár představuje Krok výpočtu hustoty.
+   V tomto scénáři jsou `CSSetShader` v každém snímku tři páry a `Dispatch` události. V opačném případě třetí pár představuje krok integrace (kde jsou skutečně přesunuty tekuté částice), druhý pár představuje krok vynucení výpočtu (kde jsou vypočítány síly ovlivňující jednotlivé částice) a první pár představuje krok výpočtu hustoty.
 
-#### <a name="to-debug-the-compute-shader"></a>Chcete-li ladit výpočetní shader
+#### <a name="to-debug-the-compute-shader"></a>Ladění výpočetního shaderu
 
-1. Na **diagnostiky grafiky** nástrojů, zvolte **fáze zřetězení** otevřít **fáze zřetězení grafiky** okna.
+1. Na panelu nástrojů **Diagnostika grafiky** výběrem možnosti **fáze zřetězení** otevřete okno **fáze zřetězení grafiky** .
 
-2. Vyberte třetí `Dispatch` událostí (tu, která bezprostředně předchází události draw) a pak na **fáze zřetězení grafiky** okně v části **výpočetní Shader** fáze, zvolte  **Spuštění ladění**.
+2. Vyberte třetí `Dispatch` událost (ta, která bezprostředně předchází události Draw) a pak v okně **fáze zřetězení grafiky** pod fází **výpočetní shader** vyberte **Spustit ladění**.
 
-    ![Vyberte třetí událost odeslání v EL.](media/gfx_diag_demo_compute_shader_fluid_step_6.png "gfx_diag_demo_compute_shader_fluid_step_6")
+    ![Výběr třetí odesílací události v EL.](media/gfx_diag_demo_compute_shader_fluid_step_6.png "gfx_diag_demo_compute_shader_fluid_step_6")
 
-    Ladicí program HLSL je spuštěn na shader, který provádí krok integrace.
+    Ladicí program HLSL je spuštěn na shaderu, který provádí krok integrace.
 
-3. Zkontrolujte zdrojový kód výpočetního shaderu pro krok integrace pro hledání zdroje chyby. Při použití diagnostiky grafiky k ladění kódu HLSL výpočetního shaderu, můžete krokovat kód a použít další známé ladicí nástroje, jako jsou okna kukátka. V tomto scénáři zjistíte, že existuje zřejmě není chyba ve výpočetním shaderu, který provádí krok integrace.
+3. Projděte si zdrojový kód COMPUTE-shader pro krok integrace a vyhledejte zdroj chyby. Když použijete Diagnostika grafiky k ladění kódu HLSL COMPUTE-shader, můžete krokovat kód a použít jiné známé ladicí nástroje, jako jsou například okna kukátka. V tomto scénáři zjistíte, že se v výpočetním shaderu, který provádí krok integrace, nezobrazí chyba.
 
-    ![Ladění výpočetního shaderu IntegrateCS. ](media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx_diag_demo_compute_shader_fluid_step_7")
+    ![Ladění výpočetního shaderu IntegrateCS.](media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx_diag_demo_compute_shader_fluid_step_7")
 
-4. Chcete zastavit ladění výpočetního shaderu na **ladění** nástrojů, zvolte **Zastavit ladění** (klávesnice: SHIFT + F5).
+4. Chcete-li zastavit ladění výpočetního shaderu, na panelu nástrojů **ladění** vyberte možnost **Zastavit ladění** (klávesnice: Shift + F5).
 
-5. Dále vyberte druhou `Dispatch` události a spusťte ladění výpočetního shaderu, stejně jako v předchozím kroku.
+5. Dále vyberte druhou `Dispatch` událost a spusťte ladění výpočetního shaderu stejným způsobem jako v předchozím kroku.
 
-    ![Výběr druhá událost odeslání v EL.](media/gfx_diag_demo_compute_shader_fluid_step_8.png "gfx_diag_demo_compute_shader_fluid_step_8")
+    ![Výběr druhé odesílací události v EL.](media/gfx_diag_demo_compute_shader_fluid_step_8.png "gfx_diag_demo_compute_shader_fluid_step_8")
 
-    Ladicí program HLSL je spuštěn na shader, který vypočítá síly, které působí na jednotlivé částice kapaliny.
+    Ladicí program HLSL je spuštěn na shaderu, který počítá síly, které působí na každé částice tekutiny.
 
-6. Zkontrolujte zdrojový kód shaderu výpočetní prostředky pro krok vynucení výpočtu. V tomto scénáři zjistíte, že zdroj chyby je zde.
+6. Projděte si zdrojový kód výpočetního shaderu pro krok vynucení výpočtu. V tomto scénáři zjistíte, že zdroj chyby je zde.
 
-    ![Ladění ForceCS&#95;jednoduchý výpočetní shader. ](media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")
+    ![Ladění ForceCS&#95;jednoduchého výpočetního shaderu.](media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")
 
-   Po zjištění umístění chyby můžete zastavit ladění a upravit zdrojový kód výpočetního shaderu správně vypočítat vzdálenost mezi částicemi. V tomto scénáři stačí změnit řádek `float2 diff = N_position + P_position;` k `float2 diff = N_position - P_position;`:
+   Po určení umístění chyby můžete zastavit ladění a upravit zdrojový kód výpočetního shaderu, aby se správně počítala vzdálenost mezi interakcemi částic. V tomto scénáři stačí řádek změnit `float2 diff = N_position + P_position;` na `float2 diff = N_position - P_position;` :
 
-   ![Opravené výpočetní&#45;kód shaderu. ](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
+   ![Opravený výpočetní&#45;kód shaderu.](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
 
-   V tomto scénáři protože jsou výpočetní shadery kompilovány za běhu, je možné pouze restartovat aplikaci po provedení změn, abyste viděli, jak ovlivňují simulaci. Nemusíte aplikaci znovu vytvořit. Při spuštění aplikace zjistíte, že simulace nyní pracuje správně.
+   V tomto scénáři vzhledem k tomu, že výpočetní shadery jsou kompilovány za běhu, můžete aplikaci restartovat pouze poté, co provedete změny ke sledování vlivu na simulaci. Nemusíte znovu sestavovat aplikaci. Když aplikaci spustíte, zjistíte, že se simulace teď chová správně.
 
-   ![Simulované fluid pracuje správně. ](media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx_diag_demo_compute_shader_fluid_resolution")
+   ![Simulovaná kapalina se chová správně.](media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx_diag_demo_compute_shader_fluid_resolution")

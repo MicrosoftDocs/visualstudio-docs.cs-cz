@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe8a99ee59a347fdcb7cff601b75139760630f7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595953"
 ---
 # <a name="new-file-command"></a>Nový soubor – příkaz
-Vytvoří nový soubor a otevře jej. Soubor se zobrazí ve složce Různé soubory.
+Vytvoří nový soubor a otevře ho. Soubor se zobrazí ve složce různé soubory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,28 +32,28 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 ## <a name="arguments"></a>Argumenty
 `filename`
 
-Nepovinný parametr. Název souboru. Pokud není zadán žádný název, je k dispozici výchozí název. Pokud není uveden žádný název šablony, vytvoří se textový soubor.
+Nepovinný parametr. Název souboru Pokud není zadán žádný název, je zadán výchozí název. Pokud není uveden žádný název šablony, je vytvořen textový soubor.
 
 ## <a name="switches"></a>Přepínače
-/t:`templatename`\
-Nepovinný parametr. Určuje typ souboru, který má být vytvořen.
+parametr`templatename`\
+Nepovinný parametr. Určuje typ souboru, který se má vytvořit.
 
-Hodnota /t:`templatename` syntaxe argumentu zrcadlí informace nalezené v dialogovém okně Nový soubor. Zadejte název kategorie následovaný zpětným`\`lomítkem ( ) a názvem šablony a uzavřete celý řetězec do uvozovek.
+Syntaxe/t: `templatename` argument odráží informace, které se nacházejí v dialogovém okně Nový soubor. Zadejte název kategorie následovaný zpětným lomítkem ( `\` ) a názvem šablony a uzavřete celý řetězec do uvozovek.
 
-Chcete-li například [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vytvořit nový zdrojový soubor, zadejte pro`templatename` argument /t: následující.
+Pokud například chcete vytvořit nový [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] zdrojový soubor, zadejte do argumentu/t: následující hodnotu `templatename` .
 
 ```cmd
 /t:"Visual C++\C++ File (.cpp)"
 ```
 
-Výše uvedený příklad ukazuje, že šablona souboru C++ je umístěna v kategorii Visual C++ v dialogovém okně **Nový soubor.**
+Výše uvedený příklad ukazuje, že šablona souboru C++ je umístěna v kategorii Visual C++ v dialogovém okně **nový soubor** .
 
-/e:`editorname`\
-Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Pokud je argument zadán, ale není zadán žádný název editoru, zobrazí se dialogové okno **Otevřít v** akci.
+/e`editorname`\
+Nepovinný parametr. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
-Syntaxe argumentu /e:`editorname` používá názvy editorů tak, jak se zobrazují v dialogovém okně Otevřít s, uzavřeném v uvozovkách.
+Syntaxe/e: `editorname` argument používá názvy editoru tak, jak se zobrazí v dialogovém okně Otevřít v aplikaci uzavřené v uvozovkách.
 
-Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte pro argument /e:`editorname` následující.
+Chcete-li například otevřít soubor v editoru zdrojového kódu, zadejte následující příkaz pro parametr/e: `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"
@@ -70,6 +70,6 @@ Tento příklad vytvoří novou webovou stránku "test1.htm" a otevře ji v edit
 
 - [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
 - [Příkazové okno](../../ide/reference/command-window.md)
-- [Příkazové podokno](../../ide/reference/immediate-window.md)
-- [Najít/Příkazové pole](../../ide/find-command-box.md)
+- [Příkazové okno](../../ide/reference/immediate-window.md)
+- [Pole Najít/příkaz](../../ide/find-command-box.md)
 - [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

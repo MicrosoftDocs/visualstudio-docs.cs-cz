@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e72c5ef5d5c33c46a9f09eb604d0a2e40cf9a6e7
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815913"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: používání fragmentů kódu XML
@@ -110,7 +110,7 @@ Stisknutí klávesy **ENTER** nebo **ESC** zruší úpravy polí a vrátí Edito
 
 Výchozí barvy pro upravitelná pole fragmentu kódu lze změnit úpravou nastavení **pole fragment kódu** v podokně **písma a barvy** v dialogovém okně **Možnosti** . Další informace najdete v tématu [Postupy: Změna písma a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Fragmenty kódu XML](../xml-tools/xml-snippets.md)
 - [Postupy: generování fragmentu XML ze schématu XML](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

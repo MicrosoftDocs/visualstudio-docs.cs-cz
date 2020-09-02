@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1f2f3c26d89616f083c218c6b11610fe5e329a9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651320"
 ---
 # <a name="managing-references-in-a-project"></a>Správa odkazů v projektu
@@ -54,32 +54,32 @@ Před psaním kódu proti externí komponentě nebo připojené službě musí p
 ## <a name="windows-store-app-references"></a>Odkazy na aplikace pro Windows Store
 
 ### <a name="project-references"></a>Odkazy na projekty
- Projekty Univerzální platforma Windows (UWP), které cílí na Windows 10, mohou vytvářet odkazy na jiné projekty UWP v řešení nebo na projekty Windows Store nebo binární soubory, které cílí na [!INCLUDE[win81](../includes/win81-md.md)], za předpokladu, že tyto projekty nepoužívají rozhraní API, které se už nepoužívá v Windows 10. Další informace najdete v tématu [Přesun z prostředí Windows Runtime 8 na UWP](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx).
+ Projekty Univerzální platforma Windows (UWP), které cílí na Windows 10, můžou vytvářet odkazy na jiné projekty UWP v řešení nebo na projekty nebo binární soubory, které cílí na Windows Store [!INCLUDE[win81](../includes/win81-md.md)] . za předpokladu, že tyto projekty nepoužívají rozhraní API, která se už nepoužívají ve Windows 10. Další informace najdete v tématu [Přesun z prostředí Windows Runtime 8 na UWP](https://msdn.microsoft.com/library/windows/apps/dn954974.aspx).
 
  Pokud se rozhodnete změnit cílení [!INCLUDE[win81](../includes/win81-md.md)] projektů na Windows 10, přečtěte si téma [přenos, migrace a upgrade projektů sady Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) .
 
 ### <a name="extension-sdk-references"></a>Odkazy na sadu SDK rozšíření
- Projekty Visual Basic C#, C++ a JavaScriptu pro Windows Store, které cílí na Univerzální platforma Windows (UWP), mohou odkazovat na rozšíření sady SDK, které cílí na [!INCLUDE[win81](../includes/win81-md.md)], pokud tato rozšíření sady SDK nepoužívají rozhraní API, které se už nepoužívá ve Windows 10. Zkontrolujte web dodavatele rozšíření SDK, abyste zjistili, jestli na něj můžou odkazovat projekty Windows Store, které cílí na UWP.
+ Projekty Visual Basic, C#, C++ a JavaScriptu pro Windows Store, které cílí na Univerzální platforma Windows (UWP), můžou odkazovat na rozšiřující sady SDK, které cílí [!INCLUDE[win81](../includes/win81-md.md)] , pokud tato rozšíření sady SDK nepoužívají rozhraní API, která se už nepoužívají ve Windows 10. Zkontrolujte web dodavatele rozšíření SDK, abyste zjistili, jestli na něj můžou odkazovat projekty Windows Store, které cílí na UWP.
 
  Pokud zjistíte, že sada SDK rozšíření, na kterou odkazuje vaše aplikace, není podporovaná, musíte provést následující kroky:
 
-1. Podívejte se na název projektu, který způsobuje chybu. Platforma, na kterou váš projekt cílí, je uvedena v závorkách vedle názvu projektu. Například **MyProjectName (Windows 8.1)** znamená, že váš projekt **MyProjectName** je cílen na verzi platformy [!INCLUDE[win81](../includes/win81-md.md)].
+1. Podívejte se na název projektu, který způsobuje chybu. Platforma, na kterou váš projekt cílí, je uvedena v závorkách vedle názvu projektu. Například **MyProjectName (Windows 8.1)** znamená, že váš projekt **MyProjectName** je cílen na verzi platformy [!INCLUDE[win81](../includes/win81-md.md)] .
 
 2. Přejít na web dodavatele, který vlastní nepodporovanou sadu SDK a nainstalujte verzi sady SDK rozšíření se závislostmi, které jsou kompatibilní s verzí platformy, na kterou váš projekt cílí.
 
     > [!NOTE]
-    > Jedním ze způsobů, jak zjistit, jestli sada rozšíření SDK má závislosti na jiných rozšiřujících sadách SDK, je restartovat sadu Visual C# Studio, vytvořit nový projekt Windows Store, kliknout pravým tlačítkem na projekt a zvolit **Přidat odkaz**, přejít na kartu **Windows** , přejít na Dílčí karta **rozšíření** , vyberte sadu SDK rozšíření a podívejte se do pravého podokna ve **Správci odkazů**. Pokud mají závislosti, budou uvedeny zde.
+    > Jedním ze způsobů, jak zjistit, jestli sada rozšíření SDK má závislosti na jiných rozšiřujících sadách SDK, je restartovat Visual Studio, vytvořit nový projekt C# Windows Store, kliknout pravým tlačítkem na projekt a zvolit **Přidat odkaz**, přejít na kartu **Windows** , přejít na dílčí kartu **rozšíření** , vybrat sadu SDK rozšíření a podívat se do pravého podokna ve **Správci odkazů**. Pokud mají závislosti, budou uvedeny zde.
 
     > [!IMPORTANT]
-    > Pokud váš projekt cílí na Windows 10 a sada rozšíření SDK nainstalovaná v předchozím kroku má závislost na balíčku Microsoft Visual C++ runtime, je verze balíčku Microsoft Visual C++ runtime, která je kompatibilní s Windows 10, v 14.0 a. je nainstalována se sadou Visual Studio 2015.
+    > Pokud projekt cílí na Windows 10 a sada rozšíření SDK nainstalovaná v předchozím kroku má závislost na balíčku Microsoft Visual C++ Runtime, verze Microsoft Visual C++ balíčku modulu runtime, která je kompatibilní s Windows 10 je v 14.0 a je nainstalovaná se sadou Visual Studio 2015.
 
-3. Pokud sada rozšíření SDK, kterou jste nainstalovali v předchozím kroku, má závislosti na jiných sadách rozšíření SDK, navštivte weby dodavatelů, kteří závislosti vlastní, a nainstalujte verze těchto závislostí, které jsou kompatibilní s verzí platformy. projekt cílí na.
+3. Pokud sada rozšíření SDK, kterou jste nainstalovali v předchozím kroku, má závislosti na dalších rozšířeních SDK, navštivte weby dodavatelů, kteří závislosti vlastní, a nainstalujte verze těchto závislostí, které jsou kompatibilní s verzí platformy, na kterou váš projekt cílí.
 
 4. Restartujte Visual Studio a otevřete svoji aplikaci.
 
 5. Klikněte pravým tlačítkem na uzel **odkazy** v projektu, který způsobil chybu, a vyberte **Přidat odkaz** .
 
-6. Klikněte na kartu **Windows** a potom na dílčí kartu **rozšíření** a potom zrušte zaškrtnutí políček pro staré sady SDK rozšíření a zaškrtněte políčka pro nové sady SDK rozšíření. Klikněte na tlačítko **OK**.
+6. Klikněte na kartu **Windows** a potom na dílčí kartu **rozšíření** a potom zrušte zaškrtnutí políček pro staré sady SDK rozšíření a zaškrtněte políčka pro nové sady SDK rozšíření. Klikněte na **OK**.
 
 ## <a name="adding-a-reference-at-design-time"></a>Přidání odkazu v době návrhu
  Když vytvoříte odkaz na sestavení v projektu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] vyhledá sestavení v následujících umístěních:
@@ -89,19 +89,19 @@ Před psaním kódu proti externí komponentě nebo připojené službě musí p
 - Další adresáře projektu ve stejném řešení. (Tato sestavení můžete najít na kartě **projekty** .)
 
 > [!NOTE]
-> Všechny projekty obsahují implicitní odkaz na mscorlib. Visual Basic projekty obsahují implicitní odkaz na `Microsoft.VisualBasic`.
+> Všechny projekty obsahují implicitní odkaz na mscorlib. Visual Basic projekty obsahují implicitní odkaz na `Microsoft.VisualBasic` .
 >
-> Všechny projekty v aplikaci Visual Studio obsahují implicitní odkaz na `System.Core`, a to i v případě, že `System.Core` je odebrán ze seznamu odkazů.
+> Všechny projekty v aplikaci Visual Studio obsahují implicitní odkaz na `System.Core` , i když `System.Core` je odebrán ze seznamu odkazů.
 
 ## <a name="references-to-shared-components-at-run-time"></a>Odkazy na sdílené součásti za běhu
- V době běhu musí být komponenty buď ve výstupní cestě projektu, nebo v [globální mezipaměti sestavení](https://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202) (GAC). Pokud projekt obsahuje odkaz na objekt, který není v jednom z těchto umístění, je nutné zkopírovat odkaz na výstupní cestu projektu při sestavování projektu. Vlastnost <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> určuje, zda má být tato kopie vytvořena. Pokud je hodnota **true**, odkaz je zkopírován do adresáře projektu při sestavování projektu. Pokud je hodnota **false**, odkaz není zkopírován.
+ V době běhu musí být komponenty buď ve výstupní cestě projektu, nebo v [globální mezipaměti sestavení](https://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202) (GAC). Pokud projekt obsahuje odkaz na objekt, který není v jednom z těchto umístění, je nutné zkopírovat odkaz na výstupní cestu projektu při sestavování projektu. <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A>Vlastnost označuje, zda má být tato kopie vytvořena. Pokud je hodnota **true**, odkaz je zkopírován do adresáře projektu při sestavování projektu. Pokud je hodnota **false**, odkaz není zkopírován.
 
- Pokud nasadíte aplikaci, která obsahuje odkaz na vlastní komponentu registrovanou v globální mezipaměti sestavení (GAC), komponenta nebude nasazena s aplikací bez ohledu na nastavení <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A>. V dřívějších verzích [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] můžete nastavit vlastnost <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> na odkaz, aby bylo zajištěno, že bylo sestavení nasazeno. Nyní je třeba ručně přidat sestavení do složky \Bin. Tím se veškerý vlastní kód uloží do kontroly a snižuje riziko publikování vlastního kódu, se kterým nejste obeznámeni.
+ Pokud nasadíte aplikaci, která obsahuje odkaz na vlastní komponentu registrovanou v globální mezipaměti sestavení (GAC), komponenta nebude nasazena s aplikací bez ohledu na <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> nastavení. V dřívějších verzích nástroje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] jste mohli nastavit <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> vlastnost na odkaz, aby bylo zajištěno, že bylo sestavení nasazeno. Nyní je třeba ručně přidat sestavení do složky \Bin. Tím se veškerý vlastní kód uloží do kontroly a snižuje riziko publikování vlastního kódu, se kterým nejste obeznámeni.
 
- Ve výchozím nastavení je vlastnost <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> nastavena na **hodnotu false** , pokud je sestavení nebo komponenta v globální mezipaměti sestavení (GAC) nebo je součástí rozhraní. V opačném případě je hodnota nastavena na **true**. Odkazy z projektu na projekt jsou vždy nastaveny na **hodnotu true**.
+ Ve výchozím nastavení <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> je vlastnost nastavena na **hodnotu false** , je-li sestavení nebo komponenta v globální mezipaměti sestavení (GAC) nebo je součástí rozhraní. V opačném případě je hodnota nastavena na **true**. Odkazy z projektu na projekt jsou vždy nastaveny na **hodnotu true**.
 
 ## <a name="referencing-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>Odkazování na projekt nebo sestavení, které cílí na jinou verzi .NET Framework
- Můžete vytvářet aplikace, které odkazují na projekty nebo sestavení, které cílí na jinou verzi .NET Framework. Můžete například vytvořit aplikaci, která cílí na [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)], která odkazuje na sestavení, které cílí na [!INCLUDE[dnprdnext](../includes/dnprdnext-md.md)]. Pokud vytvoříte projekt, který se zaměřuje na starší verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], nemůžete v tomto projektu nastavit odkaz na projekt nebo sestavení, které cílí na [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] nebo .NET Framework verzi 4.
+ Můžete vytvářet aplikace, které odkazují na projekty nebo sestavení, které cílí na jinou verzi .NET Framework. Můžete například vytvořit aplikaci, která cílí na sestavení, které [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] cílí na sestavení [!INCLUDE[dnprdnext](../includes/dnprdnext-md.md)] . Vytvoříte-li projekt, který se zaměřuje na starší verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , nemůžete v tomto projektu nastavit odkaz na projekt nebo sestavení, které cílí na [!INCLUDE[net_client_v40_long](../includes/net-client-v40-long-md.md)] verzi nebo .NET Framework verze 4.
 
  Další informace najdete v tématu [cílení na konkrétní verzi .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md).
 

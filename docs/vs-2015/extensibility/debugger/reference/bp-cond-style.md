@@ -1,5 +1,5 @@
 ---
-title: BP_COND_STYLE | Dokumentace Microsoftu
+title: BP_COND_STYLE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fbb2674381992bd86f0144af103615f0a3922fcf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153581"
 ---
-# <a name="bpcondstyle"></a>BP_COND_STYLE
+# <a name="bp_cond_style"></a>BP_COND_STYLE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje styl podmínku zarážky pro čekající a vázán zarážky.  
+Určuje styl podmínky zarážky pro nevyřízené a vázané zarážky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_COND_STYLE {   
@@ -45,21 +45,21 @@ public enum enum_BP_COND_STYLE { 
   
 ## <a name="members"></a>Členové  
  BP_COND_NONE  
- Při dosažení zarážky na pozici, je vyvoláno zarážku. Není zadaná žádná podmínka zarážky.  
+ Vyvolá zarážku, když je dosaženo pozice zarážky. Není zadaná žádná podmínka zarážky.  
   
  BP_COND_WHEN_TRUE  
- Aktivuje zarážku, jen když podmíněný výraz přidružený k zarážce vyhodnocen `true`.  
+ Aktivuje zarážku pouze v případě, že je podmíněný výraz přidružený ke zarážce vyhodnocen `true` .  
   
  BP_COND_WHEN_CHANGED  
- Je aktivována zarážka pouze v případě, že hodnota podmíněný výraz přidružený k zarážce byl změněn z jeho předchozí hodnocení.  
+ Vyvolá zarážku pouze v případě, že se hodnota podmíněného výrazu přidruženého ke zarážce změnila z předchozího vyhodnocení.  
   
 ## <a name="remarks"></a>Poznámky  
- Používá pro `styleCondition` člena [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktury.  
+ Používá se pro `styleCondition` člena [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktury.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

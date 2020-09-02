@@ -1,5 +1,5 @@
 ---
-title: Převodníky projektů
+title: Převaděče projektu
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5348bb82d54f2914a5b8ee26ada0f924f592aab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595732"
 ---
-# <a name="convert-dialog-box"></a>Převést – dialogové okno
+# <a name="convert-dialog-box"></a>Dialogové okno Převést
 
-Dialogové okno **Převést** bylo použito v předchozích verzích sady Visual Studio a nyní se nepoužívá.
+Dialogové okno **převést** bylo použito v předchozích verzích sady Visual Studio a je nyní zastaralé.
 
 ## <a name="see-also"></a>Viz také
 

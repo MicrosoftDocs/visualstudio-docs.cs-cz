@@ -1,5 +1,5 @@
 ---
-title: Paralelní interní informace o rozšíření pro rozhraní .NET Framework | Dokumentace Microsoftu
+title: Vnitřní rozšíření pro .NET Framework | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,35 +11,35 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 42c472190469e7d008fa8c525f50eabfaf37053f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65680930"
 ---
 # <a name="parallel-extension-internals-for-the-net-framework"></a>Interní informace o paralelním rozšíření pro rozhraní .NET Framework
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Tato část popisuje vnitřní typy, metody a pole třídy, které vám pomohou implementovat vlastní ladicího programu pro paralelní rozšíření pro rozhraní .NET Framework.  
+Tato část popisuje interní typy, metody a pole tříd, které vám pomůžou implementovat vlastní ladicí program pro paralelní rozšíření .NET Framework.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Task – třída](../../extensibility/debugger/task-class-internal-members.md)  
- Popisuje vnitřní datové členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy.  
+ Popisuje interní datové členy <xref:System.Threading.Tasks.Task?displayProperty=fullName> třídy.  
   
  [TaskScheduler – třída](../../extensibility/debugger/taskscheduler-class-internal-members.md)  
- Popisuje vnitřní datové členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy.  
+ Popisuje interní datové členy <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> třídy.  
   
  [ContingentProperties – třída](../../extensibility/debugger/contingentproperties-class-internal-members.md)  
- Popisuje vnitřní datové členy `System.Threading.Tasks.ContingentProperties` třídy.  
+ Popisuje interní datové členy `System.Threading.Tasks.ContingentProperties` třídy.  
   
  [AsyncTaskMethodBuilder – struktura](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md)  
- Popisuje vnitřní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> struktury.  
+ Popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> struktury.  
   
- [Struktura AsyncTaskMethodBuilder\<TResult>](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md)  
- Popisuje vnitřní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> struktury.  
+ [AsyncTaskMethodBuilder\<TResult> – struktura](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md)  
+ Popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> struktury.  
   
  [AsyncVoidMethodBuilder – struktura](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md)  
- Popisuje vnitřní členy <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> struktury.  
+ Popisuje interní členy <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> struktury.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   

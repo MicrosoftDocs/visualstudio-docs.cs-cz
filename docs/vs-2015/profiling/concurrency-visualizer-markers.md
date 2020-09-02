@@ -1,5 +1,5 @@
 ---
-title: Značky Vizualizéru souběžnosti | Dokumentace Microsoftu
+title: Značky Vizualizátor souběžnosti | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,59 +12,59 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 43b6115c45f9583b90711ef030834da662106f08
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704355"
 ---
 # <a name="concurrency-visualizer-markers"></a>Značky Vizualizéru souběžnosti
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ve Vizualizátor souběžnosti značky jsou ikony, které představují událostí v aplikaci.  Aplikace obvykle generuje těchto událostí k určení fází nebo výskyty v aplikaci.  Události se můžou generovat aplikace nebo knihovny a moduly runtime, který aplikace používá.  
+Ve Vizualizátor souběžnosti jsou značky označení ikony, které představují události v aplikaci.  Obvykle aplikace generuje tyto události pro určení fází nebo výskytů v aplikaci.  Události může generovat aplikace nebo knihovny a moduly runtime, které aplikace používá.  
   
-## <a name="kinds-of-markers"></a>Typy značek  
- Vizualizátor souběžnosti používá k reprezentaci události aplikace na tři typy značek: flags, zprávy a zahrnuje.  
+## <a name="kinds-of-markers"></a>Druhy značek  
+ Vizualizátor souběžnosti používá tři druhy značek k vyjádření událostí aplikace: příznaky, zprávy a rozsahy.  
   
-1. Použití *příznak* udávajících zajímavého bodu v čase ve vaší aplikaci.  Příznak, který může například použít k reprezentaci, že hodnota proměnné bylo dosaženo určitou prahovou hodnotu nebo že došlo k výjimce.  
+1. Použijte *příznak* k označení zajímavého bodu v čase vaší aplikace.  Příznak můžete například použít k reprezentaci, že hodnota proměnné dosáhla určité prahové hodnoty nebo že byla vyvolána výjimka.  
   
-2. A *zpráva* značky bodu v čase, ale můžete jej také použít pro trasování protokolů – vizuální styl.  Například co může mít byly zálohované do souboru protokolu, které můžete nyní zabalit do volání zpráv tak, aby můžete zpětně a zobrazit ho ve vizualizátoru souběžnosti. Vizualizátor souběžnosti můžete použít také tato data exportovat do souboru CSV.  
+2. *Zpráva* také označí bod v čase, ale můžete ho použít pro trasování ve stylu log.  Například to, co mohlo být v souboru protokolu dumpingové, teď můžete zalomit voláním zprávy, abyste ho mohli sledovat a zobrazit v Vizualizátor souběžnosti. K exportu těchto dat do souboru CSV můžete také použít Vizualizátor souběžnosti.  
   
-3. A *span* představuje ve vaší aplikaci, například jeden z jeho fází časový interval.  
+3. *Rozsah* představuje časový interval ve vaší aplikaci, například jedna z jeho fází.  
   
-## <a name="marker-linkage-to-threads"></a>Propojení značky vlákna  
- Každý podproces, který generuje značky má kanál časové osy.  ID vlákna, která je zodpovědná za generování značky události se zobrazí vedle popis kanálu značky.  ID, které se zobrazí na levé straně kanálu značky odpovídá ID jiného vlákna v aktuálním procesu.  
+## <a name="marker-linkage-to-threads"></a>Označení vazby na vlákna  
+ Každé vlákno, které generuje značky, má samostatný kanál časové osy.  ID podprocesu, který je zodpovědný za generování událostí značky, se zobrazí vedle popisu kanálu značky.  ID, které je zobrazeno na levé straně kanálu značky, odpovídá ID jiného vlákna v aktuálním procesu.  
   
 ## <a name="marker-importance"></a>Důležitost značky  
- Značky může mít jednu ze čtyř úrovní důležitosti: Nízká, Normální, vysokou a kritické.  Můžete filtrovat zdroje značek podle úrovně závažnosti.  Například pokud chcete zobrazit značky z určitého zdroje, který má normální nebo kritický význam, můžete nakonfigurovat filtr na [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) dialogové okno. Důležitost značky se zobrazí v jeho popisu tlačítka a [sestava značek](../profiling/markers-report.md).  
+ Značky můžou mít jednu ze čtyř úrovní důležitosti: nízká, Normal, vysoká a kritická.  Můžete filtrovat zdroje značek na základě úrovně důležitosti.  Pokud například chcete zobrazit pouze značky z konkrétního zdroje, který má normální nebo kritické důležitost, můžete nakonfigurovat filtr v dialogovém okně [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) . Důležitost značky se zobrazí v popisu tlačítka a v [sestavě značek](../profiling/markers-report.md).  
   
-## <a name="marker-category"></a>Kategorie značky  
- Kategorie značky označuje skupinu událostech, které pocházejí ze stejného zdroje.  Vizualizátor souběžnosti používá barvy k rozlišení různých kategorií příznaků a rozsahy. Vizualizátor souběžnosti filtrovat značky událostí ze zprostředkovatele určitá událost pomocí kategorií můžete nakonfigurovat.  Použití [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) dialogové okno filtru.  
+## <a name="marker-category"></a>Kategorie značek  
+ Kategorie značek označuje skupinu událostí značky, které pocházejí ze stejného zdroje.  Vizualizátor souběžnosti používá barvu k odlišení různých kategorií příznaků a rozsahů. Můžete nakonfigurovat, aby Vizualizér souběžnosti používal kategorie k filtrování událostí značek od určitého poskytovatele událostí.  Pomocí dialogového okna [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) můžete nakonfigurovat filtr.  
   
-## <a name="known-sources-of-markers"></a>Známých zdrojů značek  
- Jakýkoli poskytovatel trasování událostí pro Windows můžete generovat značky, tak dlouho, dokud poskytovateli dodržuje určitá omezení. Můžete nakonfigurovat tak, aby naslouchala na další událost zdroje pro značky Vizualizátor souběžnosti. Ve výchozím nastavení naslouchá na tyto zdroje událostí:  
+## <a name="known-sources-of-markers"></a>Známé zdroje značek  
+ Libovolný poskytovatel trasování událostí pro Windows může generovat značky, pokud poskytovatel dodržuje určitá omezení. Můžete nakonfigurovat Vizualizátor souběžnosti, aby naslouchal dalším zdrojům událostí pro značky. Ve výchozím nastavení naslouchá těmto zdrojům událostí:  
   
 - [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)  
   
 - [Task Parallel Library (TPL)](https://msdn.microsoft.com/library/b8f99f43-9104-45fd-9bff-385a20488a23)  
   
-- [Tok dat](https://msdn.microsoft.com/library/643575d0-d26d-4c35-8de7-a9c403e97dd6)  
+- [Toku dat](https://msdn.microsoft.com/library/643575d0-d26d-4c35-8de7-a9c403e97dd6)  
   
 - [Paralelní LINQ (PLINQ)](https://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)  
   
 - [Concurrency Runtime](https://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)  
   
-- [Podpora značek scénáře](https://msdn.microsoft.com/e3b55bc2-b451-4214-ae00-0c7f5a5baec8)  
+- [Podpora značek scénářů](https://msdn.microsoft.com/e3b55bc2-b451-4214-ae00-0c7f5a5baec8)  
   
 - [C++ AMP (C++ Accelerated Massive Parallelism)](https://msdn.microsoft.com/library/e27824cb-3167-409b-8c3f-a0e476d8f349)  
   
-  Na kartě značky můžete použít [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) dialogové okno k zobrazení nebo skrytí značek z různých zdrojů ve Vizualizátor souběžnosti a vy můžete filtrovat podle značky na základě důležitosti a kategorie.  
+  Kartu značky v dialogovém okně [Upřesnit nastavení](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) můžete použít k určení, zda se ve Vizualizátor souběžnosti zobrazují značky z různých zdrojů, a můžete filtrovat značky na základě důležitosti a kategorie.  
   
 ## <a name="markers-from-eventsource"></a>Značky z EventSource  
- Vizualizátor souběžnosti můžete také zobrazit událostí EventSource.  Další informace najdete v tématu [vizualizace událostí EventSource v podobě značek](../profiling/visualizing-eventsource-events-as-markers.md).  
+ Vizualizátor souběžnosti může také zobrazit události EventSource.  Další informace naleznete v tématu [Vizualizace událostí EventSource jako značek](../profiling/visualizing-eventsource-events-as-markers.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Flag Markers](../profiling/flag-markers.md)   
+ [Značky příznaků](../profiling/flag-markers.md)   
  [Značky zpráv](../profiling/message-markers.md)   
- [Span Markers](../profiling/span-markers.md)   
+ [Značky span](../profiling/span-markers.md)   
  [Vizualizace událostí EventSource v podobě značek](../profiling/visualizing-eventsource-events-as-markers.md)

@@ -10,19 +10,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d1e15a8c00a0614d020defd2df7b06665289a8b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666054"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>Pokyny pro tvorbu textových šablon T4
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tyto obecné pokyny mohou být užitečné, pokud generujete kód programu nebo jiné prostředky aplikace v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Nejedná se o pevná pravidla.
+Tyto obecné pokyny mohou být užitečné, pokud generujete kód programu nebo jiné prostředky aplikace v nástroji [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Nejedná se o pevná pravidla.
 
 ## <a name="guidelines-for-design-time-t4-templates"></a>Pokyny pro šablony T4 v době návrhu
- Šablony T4 v době návrhu jsou šablony, které generují kód v projektu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] v době návrhu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+ Šablony T4 v době návrhu jsou šablony, které v době návrhu generují kód v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projektu. Další informace najdete v tématu [generování kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
  Vygenerujte aspekty proměnných aplikace.
 Generování kódu je nejužitečnější pro tyto aspekty aplikace, které se mohou změnit během projektu, nebo se změní mezi různými verzemi aplikace. Jednotlivé aspekty proměnných oddělte z dalších nevariantních aspektů, abyste mohli snadněji určit, co má být vygenerováno. Například pokud vaše aplikace poskytuje web, oddělte standardní stránku obsluhující funkce z logiky, která definuje navigační cesty z jedné stránky na druhou.
@@ -43,22 +43,22 @@ Pomocí ručních nebo automatizovaných testů ověřte, zda výsledný kód fu
  V některých případech lze obecné testy provádět přímo v modelu. Můžete například napsat test, který zajistí, že na každou stránku na webu lze dosáhnout navigace z jiné.
 
  Povolení pro vlastní kód: generování částečných tříd.
-Umožněte, aby kód, který píšete rukou, byl kromě vygenerovaného kódu. Není neobvyklé, že pro schéma generování kódu bude možné přihlédnout ke všem možným variantám, které by mohly nastat. Proto byste měli očekávat, že chcete přidat nebo přepsat některý z generovaný kód. Pokud je vygenerovaný materiál v jazyce .NET, jako je například [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], jsou obzvláště užitečné dvě strategie:
+Umožněte, aby kód, který píšete rukou, byl kromě vygenerovaného kódu. Není neobvyklé, že pro schéma generování kódu bude možné přihlédnout ke všem možným variantám, které by mohly nastat. Proto byste měli očekávat, že chcete přidat nebo přepsat některý z generovaný kód. V případě, že je vygenerovaný materiál v jazyce .NET, například [!INCLUDE[csprcs](../includes/csprcs-md.md)] nebo [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , jsou obzvláště užitečné dvě strategie:
 
 - Generované třídy by měly být částečné. To umožňuje přidat obsah do vygenerovaného kódu.
 
 - Třídy by měly být vygenerovány ve dvojicích, jedna dědí z druhé. Základní třída by měla obsahovat všechny vygenerované metody a vlastnosti a odvozená třída by měla obsahovat pouze konstruktory. To umožňuje vašemu ručnímu kódu přepsat kteroukoli z vygenerovaných metod.
 
-  V jiných generovaných jazycích, jako je XML, použijte direktivu `<#@include#>` k provádění jednoduchých kombinací ručně napsaných a generovaných obsahu. Ve složitějších případech možná budete muset napsat krok následného zpracování, který kombinuje vygenerovaný soubor se všemi ručně zapsanými soubory.
+  V jiných generovaných jazycích, jako je XML, použijte `<#@include#>` direktivu k provádění jednoduchých kombinací ručně napsaných a generovaných obsahu. Ve složitějších případech možná budete muset napsat krok následného zpracování, který kombinuje vygenerovaný soubor se všemi ručně zapsanými soubory.
 
-  Přesuňte společný materiál do zahrnutých souborů nebo šablon run-time, aby nedocházelo k opakujícím se podobným blokům textu a kódu ve více šablonách, použijte direktivu `<#@ include #>`. Další informace najdete v tématu [direktiva T4 include](../modeling/t4-include-directive.md).
+  Přesuňte společný materiál do zahrnutých souborů nebo šablon run-time, aby nedocházelo k opakujícím se podobným blokům textu a kódu ve více šablonách, použijte `<#@ include #>` direktivu. Další informace najdete v tématu [direktiva T4 include](../modeling/t4-include-directive.md).
 
-  V samostatném projektu můžete také vytvořit textové šablony Run-Time a pak je volat pomocí šablony pro dobu návrhu. K tomu použijte direktivu `<#@ assembly #>` pro přístup k samostatnému projektu.
+  V samostatném projektu můžete také vytvořit textové šablony Run-Time a pak je volat pomocí šablony pro dobu návrhu. K tomu použijte `<#@ assembly #>` direktivu pro přístup k samostatnému projektu.
 
   Zvažte přesunutí velkých bloků kódu do samostatného sestavení.
-  Pokud máte velké bloky kódu a bloky funkcí třídy, může být užitečné přesunout část tohoto kódu do metod, které kompilujete v samostatném projektu. Pro přístup k kódu v šabloně můžete použít direktivu `<#@ assembly #>`. Další informace naleznete v tématu [direktiva T4 pro sestavení](../modeling/t4-assembly-directive.md).
+  Pokud máte velké bloky kódu a bloky funkcí třídy, může být užitečné přesunout část tohoto kódu do metod, které kompilujete v samostatném projektu. Můžete použít `<#@ assembly #>` direktivu pro přístup k kódu v šabloně. Další informace naleznete v tématu [direktiva T4 pro sestavení](../modeling/t4-assembly-directive.md).
 
-  Metody lze umístit do abstraktní třídy, kterou může šablona dědit. Abstraktní třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Další informace najdete v tématu [direktiva šablony T4](../modeling/t4-template-directive.md).
+  Metody lze umístit do abstraktní třídy, kterou může šablona dědit. Abstraktní třída musí dědit z <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> . Další informace najdete v tématu [direktiva šablony T4](../modeling/t4-template-directive.md).
 
   Generování kódu, nikoli konfiguračních souborů jedna metoda zápisu proměnné aplikace je napsat obecný kód programu, který přijímá konfigurační soubor. Aplikace napsaná tímto způsobem je velmi flexibilní a je možné ji překonfigurovat, když se změní obchodní požadavky, aniž by bylo nutné aplikaci znovu sestavit. Nevýhodou tohoto přístupu je však, že aplikace bude provádět méně dobře než konkrétní aplikace. I jeho programový kód bude obtížnější číst a udržovat, částečně z toho důvodu, že se vždy zabývat nejobecnější typy.
 
@@ -100,7 +100,7 @@ Každá šablona za běhu generuje definici částečné třídy, která má ste
 
  `private string ComputeTotal() { ... }`
 
- Povolení pro vlastní kód: poskytnutí rozšiřujících bodů zvažte generování virtuálních metod v \< # + třídy funkcí Blocks # >. Tato možnost umožňuje použít jedinou šablonu v mnoha kontextech bez úprav. Místo změny šablony můžete vytvořit odvozenou třídu, která poskytuje minimální další logiku. Odvozená třída může být buď pravidelný kód, nebo může být šablonou run-time.
+ Povolení pro vlastní kód: poskytnutí rozšiřujících bodů zvažte generování virtuálních metod v \<#+ class feature blocks #> . Tato možnost umožňuje použít jedinou šablonu v mnoha kontextech bez úprav. Místo změny šablony můžete vytvořit odvozenou třídu, která poskytuje minimální další logiku. Odvozená třída může být buď pravidelný kód, nebo může být šablonou run-time.
 
  Například v MyStandardRunTimeTemplate.tt:
 
@@ -122,9 +122,9 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 ```
 
 ## <a name="guidelines-for-all-t4-templates"></a>Pokyny pro všechny šablony T4
- Oddělení shromažďování dat od generování textu se snažte vyhnout kombinování výpočetních a textových bloků. V každé textové šabloně použijte první \< # Code Block # > k nastavení proměnných a provádění složitých výpočtů. Od prvního bloku textu až po konec šablony nebo první \< # + třídy bloku funkce # >, vyhněte se dlouhým výrazům a vyhněte se cyklům a podmíněným výjimkám, pokud neobsahují textové bloky. Tento postup usnadňuje čtení a údržbu šablony.
+ Oddělení shromažďování dat od generování textu se snažte vyhnout kombinování výpočetních a textových bloků. V každé textové šabloně použijte první \<# code block #> k nastavení proměnných a provádění složitých výpočtů. Od prvního bloku na konec šablony nebo prvního \<#+ class feature block #> , nepoužívejte dlouhé výrazy a vyhněte se cyklům a podmíněným, pokud neobsahují textové bloky. Tento postup usnadňuje čtení a údržbu šablony.
 
- Nepoužívejte `.tt` pro vložené soubory použijte jinou příponu názvu souboru, například `.ttinclude` pro zahrnuté soubory. Použijte `.tt` jenom pro soubory, které chcete zpracovat buď jako textové šablony Run-Time nebo v době návrhu. V některých případech [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozpozná `.tt` soubory a automaticky nastaví jejich vlastnosti ke zpracování.
+ Nepoužívejte `.tt` pro vložené soubory jinou příponu názvu souboru, například `.ttinclude` pro vložené soubory. Používejte `.tt` pouze pro soubory, které chcete zpracovat buď jako textové šablony za běhu nebo v době návrhu. V některých případech [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozpoznává `.tt` soubory a automaticky nastaví jejich vlastnosti ke zpracování.
 
  Spusťte každou šablonu jako pevný prototyp.
 Napište příklad kódu nebo textu, který chcete vygenerovat, a ujistěte se, že je správný. Pak změňte jeho příponu na. TT a přírůstkově vložte kód, který upraví obsah, a to tak, že načtou model.

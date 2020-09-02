@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: aef597099964333771fd488e0541b4ea4daf4553
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541502"
 ---
 # <a name="how-to-programmatically-insert-text-into-word-documents"></a>Postupy: vkládání textu do dokumentů aplikace Word prostřednictvím kódu programu
@@ -89,7 +89,7 @@ ms.locfileid: "85541502"
      [!code-csharp[Trin_VstcoreWordAutomation#55](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#55)]
 
 ## <a name="insert-text-using-typetext"></a>Vložení textu pomocí TypeText
- <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>Metoda vloží text na výběr. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>se chová odlišně v závislosti na možnostech nastavených v počítači uživatele. Kód v následujícím postupu deklaruje <xref:Microsoft.Office.Interop.Word.Selection> proměnnou objektu a vypne možnost **přepisování** , pokud je zapnutá. Pokud je aktivována možnost **přepisování** , je text vedle kurzoru přepsán.
+ <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>Metoda vloží text na výběr. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> se chová odlišně v závislosti na možnostech nastavených v počítači uživatele. Kód v následujícím postupu deklaruje <xref:Microsoft.Office.Interop.Word.Selection> proměnnou objektu a vypne možnost **přepisování** , pokud je zapnutá. Pokud je aktivována možnost **přepisování** , je text vedle kurzoru přepsán.
 
 ### <a name="to-insert-text-using-the-typetext-method"></a>Vložení textu pomocí metody TypeText
 
@@ -127,7 +127,7 @@ ms.locfileid: "85541502"
    [!code-vb[Trin_VstcoreWordAutomation#56](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#56)]
    [!code-csharp[Trin_VstcoreWordAutomation#56](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#56)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: formátování textu v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-format-text-in-documents.md)
 - [Postupy: definování a výběr oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 - [Postupy: rozšiřování oblastí v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-extend-ranges-in-documents.md)

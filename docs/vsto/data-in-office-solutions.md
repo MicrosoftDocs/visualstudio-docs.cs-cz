@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a5f0b85acfd45996dd00208aae820b24265be9f5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189693"
 ---
 # <a name="data-in-office-solutions"></a>Data v řešeních pro systém Office
   Mnoho řešení pro systém Office umožňuje uživatelům načíst nebo upravit data. Při vytváření řešení pro systém Office pomocí sady Visual Studio existuje několik různých způsobů, jak pracovat s daty.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
 - [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 
  Popisuje, jak vytvořit vazby dat k ovládacím prvkům v řešeních pro systém Office.
@@ -50,7 +50,7 @@ ms.locfileid: "73189693"
 
  Obsahuje seznam témat, která ukazují, jak pracovat s daty v aplikaci Visual Studio.
 
-- [Uložit data](../data-tools/save-data-back-to-the-database.md)
+- [Ukládání dat](../data-tools/save-data-back-to-the-database.md)
 
  Obsahuje odkazy na témata týkající se práce s datovými sadami, včetně úpravy dat v datové sadě a napsání změn zpět do zdroje dat.
 

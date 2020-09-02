@@ -1,5 +1,5 @@
 ---
-title: Funkce SccGetUserOption | Dokumenty společnosti Microsoft
+title: Funkce SccGetUserOption | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc7b68df3331c1240ad833048940e656da034ccf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700691"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption – funkce
-Tato funkce načte různé možnosti specifické pro uživatele.
+Tato funkce načte celou řadu možností specifických pro uživatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,33 +33,33 @@ SCCRTN SccGetUserOption(
 ```
 
 #### <a name="parameters"></a>Parametry
- pKontext
+ pContext
 
-[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
- nMožnost
+ nOption
 
-[v] Možnost načíst (možné možnosti naleznete v části Poznámky).
+pro Možnost, která se má načíst (možné možnosti viz poznámky)
 
- lpVal (Šp.)
+ lpVal
 
-[out] Hodnota přidružená k možnosti.
+mimo Hodnota přidružená k možnosti
 
 ## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Možnost byla úspěšně načtena.|
 |SCC_E_OPNOTSUPPORTED|Možnost není podporována.|
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|
+|SCC_E_NONSPECIFICERROR|Došlo k neurčené chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Tímto příkazem jsou podporovány následující možnosti:
+ Tento příkaz podporuje následující možnosti:
 
 |Možnost uživatele|Popis|
 |-----------------|-----------------|
-|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, zda chce uživatel rezervovat místní verzi souborů. `lpVal``SCC_USEROPT_COLV_YES` (uživatel chce rezervovat místní soubory) `SCC_USEROPT_COLV_NO`nebo .|
+|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, jestli chce uživatel rezervovat místní verzi souborů. `lpVal` je přiřazen `SCC_USEROPT_COLV_YES` (uživatel chce rezervovat místní soubory) nebo `SCC_USEROPT_COLV_NO` .|
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

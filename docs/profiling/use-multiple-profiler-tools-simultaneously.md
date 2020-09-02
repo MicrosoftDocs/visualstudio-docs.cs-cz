@@ -10,13 +10,13 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: f72757d46496c3990c0a0d4205753d185078eac7
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332032"
 ---
-# <a name="using-multiple-profiler-tools-simultaneously"></a>Současné použití více nástrojů profileru
+# <a name="using-multiple-profiler-tools-simultaneously"></a>Souběžné používání více nástrojů profileru
 
 Profiler výkonu byl navržený tak, aby bylo možné použít ve stejné relaci více nástrojů, které pomáhají pochopit problémy s výkonem. Většina nástrojů v profileru výkonu podporuje současné spuštění, jako je [využití CPU](../profiling/cpu-usage.md), [asynchronní nástroj .NET](../profiling/analyze-async.md)a [databázový](../profiling/analyze-database.md) nástroj. Pokud chcete spouštět nástroje současně ve stejné diagnostické relaci, zaškrtněte políčko vedle sebe a spusťte diagnostickou relaci.
 

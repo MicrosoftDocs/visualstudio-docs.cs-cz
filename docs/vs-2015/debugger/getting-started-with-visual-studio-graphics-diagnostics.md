@@ -1,5 +1,5 @@
 ---
-title: Začínáme s diagnostikou grafiky | Dokumentace Microsoftu
+title: Začínáme s Diagnostika grafiky | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,99 +10,99 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e9056fdae9d0eff55c572d8e38503d88269dbde3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704709"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Začínáme s diagnostikou grafiky sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V této části budete připravit k použití diagnostiky grafiky poprvé, pak budete moct zachytit snímků z aplikace Direct3D a kontrole v analyzátoru grafiky.
+V této části se budete připravit na použití Diagnostika grafiky poprvé, budete zachytit snímky z aplikace Direct3D a prozkoumávat je v analyzátoru grafiky.
 
 ## <a name="requirements"></a>Požadavky
- K použití diagnostiky grafiky v sadě Visual Studio 2015, musí mít jeden z následujících edic:
+ Chcete-li použít Diagnostika grafiky v aplikaci Visual Studio 2015, je nutné mít jednu z následujících edicí:
 
 - Visual Studio 2015 Enterprise
 
 - Visual Studio 2015 Professional
 
-- Visual Studio 2015 Community
+- Komunita sady Visual Studio 2015
 
   [!INCLUDE[downloadvs](../includes/downloadvs-md.md)]
 
-### <a name="windows-10-prerequisites"></a>Požadavky na systém Windows 10
- Volitelná funkce Windows *nástroje grafiky* poskytuje infrastrukturu zachytávání a přehrávání, který vyžaduje diagnostiky grafiky ve Windows 10.
+### <a name="windows-10-prerequisites"></a>Požadavky Windows 10
+ Volitelné *nástroje grafiky* funkcí Windows poskytují infrastrukturu zachytávání a přehrávání, kterou vyžaduje Diagnostika grafiky ve Windows 10.
 
- Informace o instalaci nástrojů grafiky, naleznete v tématu [instalace nástrojů grafiky pro Windows 10](#InstallGraphicsTools).
+ Informace o instalaci nástrojů grafiky najdete v tématu [Instalace nástrojů grafiky pro Windows 10](#InstallGraphicsTools).
 
-### <a name="windows-81-prerequisites"></a>Požadavky na Windows 8.1
- Windows Software Development Kit (SDK) pro Windows 8.1 obsahuje záznam a přehrávání infrastrukturu, která vyžaduje diagnostiku grafiky ve Windows 8.1 a podporuje vývoj pro Windows 8.1 a Windows 8.
+### <a name="windows-81-prerequisites"></a>Windows 8.1 předpoklady
+ Sada Windows Software Development Kit (SDK) pro Windows 8.1 poskytuje infrastrukturu zachytávání a přehrávání, kterou vyžaduje Diagnostika grafiky na Windows 8.1, a podporuje vývoj pro Windows 8.1 a Windows 8.
 
  [Stažení sady Windows Software Development Kit (SDK) pro Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 
- Pokud chcete použít vzdálený počítač pro přehrávání, na kterém běží Windows 10 z vývojového počítače s Windows 8.1, je nutné nainstalovat sadu Windows 10 SDK na vývojovém počítači a volitelná součást nástroje grafiky na počítači pro přehrávání.
+ Chcete-li použít vzdálený počítač pro přehrávání s Windows 10 z vývojového počítače se systémem Windows 8.1, je nutné nainstalovat sadu Windows 10 SDK do vývojového počítače a funkci volitelných grafických nástrojů na počítači pro přehrávání.
 
-## <a name="InstallGraphicsTools"></a> Instalace nástrojů grafiky pro systém Windows 10
- Ve Windows 10, infrastruktury Diagnostika grafiky poskytuje volitelnou funkcí Windows volá *nástroje grafiky*. Tato funkce se vyžaduje pro zachytávání a přehrávání grafické informace ve Windows 10 bez ohledu na to, jestli aplikace zachytí cíle předchozí verze systému windows nebo používá verze rozhraní Direct3D. Můžete také nainstalovat součást nástroje grafiky předem; v opačném případě bude nainstalovaná na vyžádání první čas spuštění relace diagnostiky grafiky v sadě Visual Studio.
+## <a name="install-graphics-tools-for-windows-10"></a><a name="InstallGraphicsTools"></a> Instalace nástrojů grafiky pro Windows 10
+ Ve Windows 10 je infrastruktura Diagnostika grafiky poskytovaná volitelnou funkcí Windows s názvem *Graphics Tools*. Tato funkce je nutná k zaznamenání a přehrání grafické informace ve Windows 10 bez ohledu na to, jestli je aplikace zachycená v předchozí verzi Windows nebo kterou verzi rozhraní Direct3D používá. Můžete si vybrat, že chcete nainstalovat funkci nástrojů grafiky předem. v opačném případě se nainstaluje na vyžádání při prvním spuštění relace Diagnostika grafiky ze sady Visual Studio.
 
 #### <a name="to-install-graphics-tools-for-windows-10"></a>Instalace nástrojů grafiky pro Windows 10
 
-1. Na **Start** nabídce zvolte **nastavení**. **Nastavení** se zobrazí dialogové okno.
+1. V nabídce **Start** klikněte na položku **Nastavení**. Zobrazí se dialogové okno **Nastavení** .
 
-2. V **nastavení** dialogovém okně zvolte **systému**a pak vyberte **nainstalované aplikace** ze seznamu nastavení systému.
+2. V dialogovém okně **Nastavení** zvolte možnost **systém**a pak v seznamu nastavení systému vyberte **nainstalované aplikace** .
 
-3. Na pravé straně **nastavení** dialogovém okně zvolte **spravovat volitelné funkce** pod **nainstalované aplikace a funkce**. **Spravovat volitelné funkce** se zobrazí dialogové okno.
+3. Na pravé straně dialogového okna **Nastavení** vyberte **Spravovat volitelné funkce** v části **nainstalované aplikace a funkce**. Zobrazí se dialogové okno **Spravovat volitelné funkce** .
 
-4. V **spravovat volitelné funkce** dialogovém okně zvolte **přidat funkci**. Zobrazí se seznam volitelných funkcí, které můžete nainstalovat.
+4. V dialogovém okně **Spravovat volitelné funkce** vyberte možnost **Přidat funkci**. Zobrazí se seznam volitelných funkcí, které můžete nainstalovat.
 
-5. Vyberte **nástroje grafiky** ze seznamu funkcí, klikněte na tlačítko **nainstalovat**.
+5. V seznamu funkcí vyberte **nástroje grafiky** a pak zvolte **nainstalovat**.
 
-   Součást nástroje grafiky je také automaticky nainstalován při instalaci Windows 10 SDK.
+   Funkce Graphics Tools je také automaticky nainstalována při instalaci sady Windows 10 SDK.
 
 > [!TIP]
-> Volitelná součást nástroje grafiky Windows 10 obsahuje jednoduchý záznam a přehrávání funkce – například program příkazového řádku pro zachytávání **dxcap.exe**–, který je možné v podpory, testování a diagnostických scénáře počítače, kde nejsou nainstalovány nástroje pro vývojáře. Další informace najdete v tématu [nástroj příkazového řádku pro zachycení](../debugger/command-line-capture-tool.md) tématu.
+> Volitelná funkce Graphics Tools systému Windows 10 poskytuje funkce prostého zachytávání a přehrávání, jako je například program pro zachycení příkazového řádku **dxcap.exe**, který se dá použít v scénářích podpory, testování a diagnostiky na počítačích, kde nejsou nainstalované vývojářské nástroje. Další informace najdete v tématu [Nástroj pro zachycení z příkazového řádku](../debugger/command-line-capture-tool.md) .
 
-## <a name="using-graphics-diagnostics-for-the-first-time"></a>Při prvním použití diagnostiky grafiky
- Teď, když máte všechno, co potřebujete, jste připraveni začít používat diagnostiku grafiky. Postupujte podle těchto kroků.
+## <a name="using-graphics-diagnostics-for-the-first-time"></a>První použití Diagnostika grafiky
+ Teď, když máte všechno, co potřebujete, jste připraveni začít používat Diagnostika grafiky. Postupujte podle těchto kroků.
 
-### <a name="1---create-a-direct3d-app"></a>1 – Vytvoření aplikace Direct3D
- Pokud již máte vlastní aplikace Direct3D a prozkoumejte diagnostiky grafiky, skvěle! Jinak můžete jednou z ukázek rozhraní Direct3D, k dispozici v Galerii kódu.
+### <a name="1---create-a-direct3d-app"></a>1. Vytvoření aplikace Direct3D
+ Pokud už máte vlastní aplikaci Direct3D, abyste prozkoumali Diagnostika grafiky s, Skvělé! V opačném případě můžete použít jeden z ukázek rozhraní Direct3D dostupných v galerii kódu.
 
-- Diagnostika grafiky s Direct3D 12 ve Windows 10 pomocí sady Visual Studio 2015 vyzkoušet, zkuste [ukázkové rozhraní Direct3D 12 UAP](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f) pro Windows 10.
+- Pokud si chcete vyzkoušet Diagnostika grafiky s Direct3D 12 ve Windows 10 pomocí sady Visual Studio 2015, vyzkoušejte si [ukázku Direct3D 12 UAP](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f) pro Windows 10.
 
-- Vyzkoušet Diagnostika grafiky se ve Windows 10 nebo Windows 8.1 Direct3D 11, můžete použít **aplikace rozhraní DirectX (Windows Universal)** nebo **aplikace rozhraní DirectX (Windows 8.1)** šablony projektu. Nebo se na něco zajímavější, zkuste [Ukázka hry mramorového bludiště DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345) pro Windows 8.1.
+- K vyzkoušení Diagnostika grafiky s využitím Direct3D 11 ve Windows 10 nebo Windows 8.1 můžete použít šablony projektů **aplikace DirectX (Windows Universal)** nebo  **aplikace DirectX (Windows 8.1)** . Nebo pokud chcete něco zajímavější, vyzkoušejte si [ukázku hry rozhraní DirectX mramor bludiště](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345) pro Windows 8.1.
 
-  Zajistěte, aby že při vytváření aplikace než budete pokračovat.
+  Ujistěte se, že aplikaci můžete vytvořit před přechodem na.
 
-### <a name="2---start-a-graphics-diagnostics-session"></a>2 - spustit relaci diagnostiky grafiky
- Teď jste připravení začít s vaší první relace diagnostiky grafiky. V sadě Visual Studio, zvolte v hlavní nabídce **ladění, grafiky, spustit diagnostiku**, nebo stačí stisknout kombinaci kláves **Alt + F5**. To spustí vaši aplikaci v rámci diagnostiky grafiky a zobrazí okno relace diagnostiky v sadě Visual Studio.
+### <a name="2---start-a-graphics-diagnostics-session"></a>2. spuštění relace Diagnostika grafiky
+ Teď jste připraveni začít svoji první relaci diagnostiky grafiky. V aplikaci Visual Studio v hlavní nabídce zvolte možnost **ladění, grafika, spustit diagnostiku**nebo stačí stisknout klávesy **ALT + F5**. Tím se aplikace spustí v rámci Diagnostika grafiky a zobrazí okna diagnostické relace v aplikaci Visual Studio.
 
 > [!IMPORTANT]
-> Pokud spouštíte aplikaci ve Windows 10 a volitelná součást nástroje grafiky ještě nenainstalovali, budete vyzváni k tomu teď. Musíte jej nainstalovat abyste mohli používat diagnostiky grafiky ve Windows 10.
+> Pokud aplikaci spouštíte ve Windows 10 a ještě nemáte nainstalovanou funkci volitelné grafické nástroje, zobrazí se vám výzva k tomu, abyste to provedli nyní. Než budete moct použít Diagnostika grafiky ve Windows 10, musíte ho nainstalovat.
 
-### <a name="3---capture-frames"></a>3 - zachycování snímků
- Jste připraveni k zachycení snímků co nejdříve po spuštění vaší aplikace.
+### <a name="3---capture-frames"></a>3. zachytávání snímků
+ Jste připraveni zachytit snímky hned po spuštění aplikace.
 
-##### <a name="to-capture-single-frames"></a>K zachycení snímků jedné
+##### <a name="to-capture-single-frames"></a>Zachycení jednoho rámce
 
-- V sadě Visual Studio, zvolte **zachytit snímek** tlačítko z okna nástrojů nebo diagnostiky grafiky relace. Nebo, pokud vaše aplikace má fokus, stačí stisknout kombinaci kláves **Print Screen**.
+- V sadě Visual Studio vyberte tlačítko **zachytit snímek** z panelu nástrojů grafiky nebo okna relace diagnostiky. Nebo pokud vaše aplikace má fokus, stačí stisknout **tiskovou obrazovku**.
 
-##### <a name="to-capture-a-sequence-of-frames"></a>K zachycení sekvence rámce
+##### <a name="to-capture-a-sequence-of-frames"></a>Zachycení posloupnosti snímků
 
-- V sadě Visual Studio, v okně diagnostické relace nastavit **snímky k zachycení** počet snímků, které chcete zaznamenat v sekvenci, pak zachytíte pořadí pomocí některé z metod popsaných výše pro zachycení jeden snímek.
+- V sadě Visual Studio v okně diagnostická relace nastavte **snímky pro zachycení** na počet snímků, které chcete zachytit v sekvenci, a potom Zachyťte sekvenci pomocí kterékoli z metod, které jste si popsali výše, abyste mohli zachytit jednotlivé snímky.
 
-   Chcete-li zaznamenat jeden snímek znovu, nastavte **snímky k zachycení** k `1`.
+   Pokud chcete zachytit jeden snímek znovu, nastavte **snímky pro zachycení** `1` .
 
-  Až to budete mít zachytávání snímků právě ukončete aplikaci, nebo zvolte **Zastavit** tlačítko panelu nástrojů grafiky nebo okno diagnostické relace.
+  Až zachytíte snímky, ukončete aplikaci nebo klikněte na tlačítko **zastavit** z panelu nástrojů grafiky nebo okna relace diagnostiky.
 
-### <a name="4--examine-captured-frames-in-the-graphics-analyzer"></a>4 – prozkoumejte zachycených snímcích v analyzátoru grafiky
- Nyní jste připraveni prozkoumat snímky, které jste zachytili. Ke spuštění analýzy blok, zvolte číslo rámce rámce, které chcete prověřit z okna diagnostické relace. Tím se otevře v rámci **analyzátoru grafiky sady**, kde můžete prozkoumat, jak vaše aplikace používá rozhraní Direct3D ke sledování problémů s vykreslováním pomocí nástrojů diagnostiky grafiky, nebo použít **analýza snímků** nástroje jeho výkon.
+### <a name="4--examine-captured-frames-in-the-graphics-analyzer"></a>4 – Kontrola zachycených snímků v analyzátoru grafiky
+ Teď jste připraveni zkontrolovat snímky, které jste právě zachytili. Chcete-li zahájit analýzu snímku, vyberte číslo rámce rámce, který chcete prošetřit z okna diagnostické relace. Tím se otevře rámec v **analyzátoru grafiky**, kde můžete pomocí Diagnostika grafikych nástrojů zjistit, jak vaše aplikace využívá Direct3D ke sledování problémů s vykreslováním, nebo použít nástroj pro **analýzu snímků** k pochopení jeho výkonu.
 
- Pokud jste vybrali nesprávný rámec v okně diagnostické relace nebo které chcete prověřit jiný snímek můžete vybrat nový štítek z Graphics Analyzeru. Na **cíl vykreslování** kartu protokolu grafickém okně pod obrázkem cíl vykreslování, rozbalte **seznam snímků** a pak zvolte jiný snímek prozkoumat.
+ Pokud jste vybrali špatný rámec z okna diagnostické relace nebo chcete prošetřit jiný snímek, můžete z analyzátoru grafiky vybrat nový. Na kartě **cíl vykreslování** okna log Graphics v části Obrázek cíle vykreslování rozbalte **seznam rámců** a zvolte jiný rámec, který chcete prošetřit.
 
- Další informace o tom, jak použít nástroje pro analyzátor grafiky sady společně, najdete v článku [příklady](../debugger/graphics-diagnostics-examples.md).
+ Další informace o tom, jak používat nástroje analyzátoru grafiky společně, najdete v [příkladech](../debugger/graphics-diagnostics-examples.md).
 
 ## <a name="see-also"></a>Viz také
- [Direct3D 12 grafiky](https://msdn.microsoft.com/52094ae3-3b44-4689-9ee7-1ba1b3a779cb)
+ [Technologie Direct3D 12 Graphics](https://msdn.microsoft.com/52094ae3-3b44-4689-9ee7-1ba1b3a779cb)

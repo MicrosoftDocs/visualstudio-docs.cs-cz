@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 56af9515fb9c066e56dd45a0fb91a95530f09799
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332170"
 ---
 # <a name="cvwritealert-function"></a>Cvwritealert – – funkce
@@ -55,11 +55,11 @@ HRESULT CvWriteAlertVA(
 ```
 
 #### <a name="parameters"></a>Parametry
- `argList`Seznam argumentů
+ `argList` Seznam argumentů
 
- `pMarkerSeries`Platný kontext řady značek Nemůže mít hodnotu NULL.
+ `pMarkerSeries` Platný kontext řady značek Nemůže mít hodnotu NULL.
 
- `pMessage`Řetězec formátu zprávy Nemůže mít hodnotu NULL.
+ `pMessage` Řetězec formátu zprávy Nemůže mít hodnotu NULL.
 
 ## <a name="return-value"></a>Vrácená hodnota
  S_OK při úspěšném zápisu zprávy Kód chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

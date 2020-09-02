@@ -1,5 +1,5 @@
 ---
-title: StartTrackingContext | Dokumentace Microsoftu
+title: StartTrackingContext | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,16 +18,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da002fe757d623a665b39c16cc10e77e492e2660
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199937"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Začněte kontext sledování.  
+Spusťte sledovací kontext.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `intermediateDirectory`  
- Adresáře, ve kterém k uložení protokolu sledování.  
+ pro `intermediateDirectory`  
+ Adresář, do kterého má být uložen protokol sledování.  
   
- [in] `taskName`  
- Určuje kontext sledování. Tento název se používá k vytvoření názvu souboru protokolu.  
+ pro `taskName`  
+ Identifikuje sledovací kontext. Tento název se používá k vytvoření názvu souboru protokolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- [HRESULT] ()<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s ([úspěch]<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) sadu bitů, pokud byl vytvořen kontext sledování.  
+ A [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) s [úspěch] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) bitová sada, pokud byl kontext sledování vytvořen.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h
+ **Hlavička:** Stopa. h

@@ -19,10 +19,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 000c3c4e2996869e96fd0d6097b5bab8576936a7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651742"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>Dialogové okno Upřesnit nastavení zabezpečení
@@ -33,15 +33,15 @@ Toto dialogové okno umožňuje zadat nastavení zabezpečení související s l
  Chcete-li získat přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumník řešení**a potom v nabídce **projekt** klikněte na příkaz **vlastnosti**. Když se zobrazí **Návrhář projektu** , klikněte na kartu **zabezpečení** . Na stránce **zabezpečení** vyberte **Povolit nastavení zabezpečení ClickOnce**, klikněte na **Toto je aplikace s částečným vztahem důvěryhodnosti**a pak klikněte na **Upřesnit**.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
- **Ladit tuto aplikaci s vybranou sadou oprávnění** Pokud zaškrtnete toto políčko, sada oprávnění vybraná na stránce **zabezpečení** se použije při ladění. Ve výchozím nastavení je tato možnost vybraná.
+ **Ladit tuto aplikaci s vybranou sadou oprávnění** Pokud zaškrtnete toto políčko, sada oprávnění vybraná na stránce **zabezpečení** se použije při ladění. Tato možnost je vybrána ve výchozím nastavení.
 
  Aby ladění v zóně zabezpečení fungovalo, musí být tato možnost povolená. také je nutné povolit možnost **hostující proces hostování sady Visual Studio** (k dispozici na stránce **ladění** v **Návrháři projektu**).
 
  Pro projekty aplikace webového prohlížeče WPF je zaškrtnuto a zakázáno možnost **Ladit tuto aplikaci s vybranou sadou oprávnění** .
 
- **Udělit aplikaci přístup k jejímu původnímu umístění** Pokud zaškrtnete toto políčko, aplikace bude mít přístup k webovému serveru nebo ke sdílené složce na serveru, na které je publikovaná. Ve výchozím nastavení je tato možnost vybraná.
+ **Udělit aplikaci přístup k jejímu původnímu umístění** Pokud zaškrtnete toto políčko, aplikace bude mít přístup k webovému serveru nebo ke sdílené složce na serveru, na které je publikovaná. Tato možnost je vybrána ve výchozím nastavení.
 
  **Ladit tuto aplikaci, jako kdyby byla stažena z následující adresy URL** Pokud je nutné, aby aplikace získala přístup k webu nebo sdílené složce na serveru, která odpovídá **instalační adrese URL** zadané na stránce **publikování** , zadejte tuto adresu URL sem. Tato možnost je k dispozici pouze v případě, že je vybrána možnost **udělit aplikaci přístup k jejímu webu původu** .
 
 ## <a name="see-also"></a>Viz také
- [Stránka Zabezpečení, Návrhář projektu](../../ide/reference/security-page-project-designer.md)
+ [Stránka Zabezpečení, návrhář projektu](../../ide/reference/security-page-project-designer.md)

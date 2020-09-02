@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7fa9aa7a4a19ebd5ae45ee84364e71043a28f6be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651464"
 ---
 # <a name="localizing-applications"></a>Lokalizace aplikací
@@ -32,12 +32,12 @@ ms.locfileid: "72651464"
 
  [Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md) Popisuje podepisování satelitních sestavení pomocí párů klíčů veřejných privátních klíčů.
 
- [Čísla verzí pro hlavní a lokalizovaná satelitní sestavení](../ide/version-numbers-for-main-and-localized-satellite-assemblies.md) Zavádí třídu <xref:System.Resources.SatelliteContractVersionAttribute>, která určuje, která satelitní sestavení pracují s hlavním sestavením aplikace.
+ [Čísla verzí pro hlavní a lokalizovaná satelitní sestavení](../ide/version-numbers-for-main-and-localized-satellite-assemblies.md) Zavádí <xref:System.Resources.SatelliteContractVersionAttribute> třídu, která určuje, která satelitní sestavení pracují s hlavním sestavením aplikace.
 
- [Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md) Zavádí třídu <xref:System.Resources.NeutralResourcesLanguageAttribute>, která určuje jazykovou verzi prostředků obsažených v hlavním sestavení aplikace.
+ [Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md) Zavádí <xref:System.Resources.NeutralResourcesLanguageAttribute> třídu, která určuje jazykovou verzi prostředků obsažených v hlavním sestavení aplikace.
 
 ## <a name="related-sections"></a>Související oddíly
- [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Popisuje koncepty týkající se vývojového softwaru pro mezinárodní trh pomocí Visual Basic nebo vizuálu C#.
+ [Seznámení s mezinárodními aplikacemi na základě .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Popisuje koncepty týkající se vývojového softwaru pro mezinárodní trh pomocí Visual Basic nebo Visual C#.
 
  [Model Windows Forms globalizace](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5) Obsahuje odkazy na stránky o vytváření aplikací pro Windows, které podporují více jazykových verzí.
 

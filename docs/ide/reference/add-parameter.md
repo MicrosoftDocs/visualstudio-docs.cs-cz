@@ -1,5 +1,5 @@
 ---
-title: Přidat parametr k rychlé akci metody
+title: Přidání parametru do rychlé akce metody
 ms.date: 09/28/2018
 ms.topic: reference
 author: TerryGLee
@@ -8,38 +8,38 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595862"
 ---
-# <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>Přidání parametru k metodě pomocí rychlé akce
+# <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>Přidání parametru do metody pomocí rychlé akce
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje automaticky přidat parametr k metodě na základě použití.
+**Co:** Umožňuje automaticky přidat parametr do metody na základě využití.
 
-**Kdy:** Je třeba přidat parametr k metodě a chcete správně deklarovat automaticky.
+**Když:** Je nutné přidat parametr do metody a chcete jej správně deklarovat automaticky.
 
-**Proč:** Parametr můžete přidat do deklarace metody před jeho voláním, ale tato funkce jej přidá automaticky na základě volání metody.
+**Proč:** Před voláním je možné přidat parametr do deklarace metody, ale tato funkce je automaticky přidá na základě volání metody.
 
 ## <a name="how-to-use-it"></a>Jak ji použít
 
-1. Přidejte další argument do volání metody.
+1. Přidejte do volání metody další argument.
 
-   Pod názvem metody, ve které ji nazýváte, se zobrazí červená vlnovka.
+   Pod názvem metody, kde ji voláte, se zobrazí červená vlnovka.
 
-2. Umístěte ukazatel myši na červenou vlnovku, dokud se nezobrazí nabídka Rychlé akce. Vyberte **šipku dolů** v nabídce Rychlé akce a pak vyberte **Přidat parametr do [metody]**.
+2. Umístěte ukazatel myši na červenou vlnovku, dokud se nezobrazí nabídka rychlé akce. V nabídce rychlé akce vyberte **šipku dolů** a pak vyberte **Přidat parametr do [metoda]**.
 
-   ![Přidat parametr pro rychlou akci metody v sadě Visual Studio](media/add-parameter-to-method.png)
+   ![Přidání parametru do rychlé akce metody v aplikaci Visual Studio](media/add-parameter-to-method.png)
 
    > [!TIP]
-   > K nabídce Rychlé akce můžete také získat přístup tak, že umístíte kurzor na řádek volání metody a potom stisknete **klávesu Ctrl**+**.** (tečka) nebo výběrem ikony žárovky na okraji souboru.
+   > K nabídce rychlá akce se dostanete také tak, že umístíte kurzor na řádek volání metody a potom stisknete **klávesu CTRL** + **.** (tečka) nebo v okraji souboru vyberte ikonu žárovky.
 
    Visual Studio přidá nový parametr do deklarace metody.
 

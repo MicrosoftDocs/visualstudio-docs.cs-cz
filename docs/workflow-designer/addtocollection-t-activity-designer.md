@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ffa24dce2691f061c5947e15d7fc7923d632b38
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88706539"
 ---
 # <a name="addtocollectiont-activity-designer"></a>Návrhář aktivity AddToCollection\<T>
@@ -42,7 +42,7 @@ V následující tabulce jsou uvedeny <xref:System.Activities.Statements.AddToCo
 |<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|Ano|Kolekce, do které má být položka přidána. Tato kolekce je typu **ICollection<pro TypeArgument \> **. Chcete-li zadat kolekci, zadejte výraz Visual Basic v mřížce vlastností.|
 |*Pro TypeArgument*|Ano|Typ T položek obsažených v <xref:System.Collections.Generic.ICollection%601> . Ve výchozím nastavení je tento typ *pro TypeArgument* nastaven na hodnotu **Int32**. Chcete-li změnit typ, změňte hodnotu *pro TypeArgument* v poli se seznamem v mřížce vlastností.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kolekce](../workflow-designer/collection-activity-designers.md)
 - [\<T>Návrhář aktivity AddToCollection](../workflow-designer/addtocollection-t-activity-designer.md)

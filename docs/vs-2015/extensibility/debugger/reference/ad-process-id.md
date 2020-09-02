@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Dokumentace Microsoftu
+title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ea06d8e007e2df88cb46c2f0e6dd4a79ebe711b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153626"
 ---
-# <a name="adprocessid"></a>AD_PROCESS_ID
+# <a name="ad_process_id"></a>AD_PROCESS_ID
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje ID procesu, který může být ID systému nebo identifikátor GUID.  
+Určuje ID procesu, což může být buď ID systému, nebo identifikátor GUID.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _AD_PROCESS_ID {  
@@ -48,10 +48,10 @@ public struct AD_PROCESS_ID {
   
 ## <a name="members"></a>Členové  
  `ProcessIdType`  
- Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčet určující, jak interpretovat `ProcessId` sjednocení (nebo pro spravovaný kód, který člen struktury pro přístup k).  
+ Hodnota z výčtu [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) určující, jak se má `ProcessId` sjednotit sjednocení (nebo pro spravovaný kód, ke kterému je členem struktury přístup).  
   
  dwProcessId  
- ID procesu jako hodnotu ze systému.  
+ ID procesu jako hodnota ze systému.  
   
  guidProcessId  
  ID procesu jako identifikátor GUID.  
@@ -60,7 +60,7 @@ public struct AD_PROCESS_ID {
  Odsazení.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán do následujících metod:  
+ Tato struktura je předána do následujících metod:  
   
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
@@ -70,16 +70,16 @@ public struct AD_PROCESS_ID {
   
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
   
-  A je vrácena z následujících metod:  
+  A se vrátí z následujících metod:  
   
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

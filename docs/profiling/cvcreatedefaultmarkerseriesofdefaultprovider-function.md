@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 560ecc3d66dc2bc84d2ef301654b392aee6a42b4
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332225"
 ---
 # <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>Cvcreatedefaultmarkerseriesofdefaultprovider – – funkce
@@ -32,9 +32,9 @@ HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
 ```
 
 #### <a name="parameters"></a>Parametry
- `ppProvider`Adresa proměnné objektu zprostředkovatele Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
+ `ppProvider` Adresa proměnné objektu zprostředkovatele Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
 
- `ppMarkerSeries`Adresa proměnné objektu řady značek Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
+ `ppMarkerSeries` Adresa proměnné objektu řady značek Adresa nesmí mít hodnotu NULL, proměnná může mít libovolnou hodnotu.
 
 ## <a name="return-value"></a>Vrácená hodnota
  S_OK při úspěšném vytvoření poskytovatele i řady značek nebo kódu chyby v případě, že došlo k chybám. Ke kontrole chybového stavu použijte makra SUCCEEDED nebo FAILed.

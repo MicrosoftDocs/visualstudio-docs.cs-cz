@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ec48aac60a8f15527c92d19a38ca9f996dcfdd6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651352"
 ---
 # <a name="managing-project-and-solution-properties"></a>Správa vlastností projektů a řešení
@@ -33,19 +33,19 @@ Projekty mají vlastnosti, které řídí mnoho aspektů kompilace, ladění, te
 ## <a name="project-properties"></a>Vlastnosti projektu
  Vlastnosti projektu jsou uspořádány do skupin a každá skupina má svou vlastní stránku vlastností a stránky se mohou lišit pro různé jazyky a typy projektů.
 
-### <a name="c-and-visual-basic-projects"></a>C#a Visual Basic projekty
- V C# a Visual Basic projekty jsou vlastnosti zpřístupněny v **Návrháři projektu**. Na následujícím obrázku je znázorněna stránka vlastností sestavení pro projekt WPF v C#nástroji:
+### <a name="c-and-visual-basic-projects"></a>Projekty C# a Visual Basic
+ V projektech C# a Visual Basic jsou vlastnosti zobrazeny v **Návrháři projektu**. Následující ilustrace znázorňuje stránku vlastností sestavení pro projekt WPF v jazyce C#:
 
  ![Návrhář projektu sady Visual Studio](../ide/media/vs2015-proppage-build.png "VS2015_PropPage_Build")
 
  Informace o jednotlivých stránkách vlastností v Návrháři projektu naleznete v tématu [reference Project Properties reference](../ide/reference/project-properties-reference.md).
 
-### <a name="c-and-javascript-projects"></a>C++a projekty JavaScriptu
- C++projekty JavaScriptu mají jiné uživatelské rozhraní pro správu vlastností projektu. Tento obrázek ukazuje stránku C++ vlastností projektu (stránky JavaScriptu jsou podobné):
+### <a name="c-and-javascript-projects"></a>Projekty C++ a JavaScript
+ Projekty C++ a JavaScript mají jiné uživatelské rozhraní pro správu vlastností projektu. Tento obrázek ukazuje stránku vlastností projektu C++ (stránky JavaScriptu jsou podobné):
 
- ![Vlastnosti projektu&#43; &#43; Visual c++](../ide/media/vs2015-projprops-cpp.png "VS2015_ProjProps_cpp")
+ ![Visual C++&#43;&#43; – vlastnosti projektu](../ide/media/vs2015-projprops-cpp.png "VS2015_ProjProps_cpp")
 
- Informace o C++ vlastnostech projektu naleznete v tématu [práce s vlastnostmi projektu](https://msdn.microsoft.com/library/9b0d6f8b-7d4e-4e61-aa75-7d14944816cd). Další informace o vlastnostech JavaScriptu naleznete v tématu [stránky vlastností, JavaScript](../ide/reference/property-pages-javascript.md).
+ Informace o vlastnostech projektu jazyka C++ naleznete v tématu [Working with Project Properties](https://msdn.microsoft.com/library/9b0d6f8b-7d4e-4e61-aa75-7d14944816cd). Další informace o vlastnostech JavaScriptu naleznete v tématu [stránky vlastností, JavaScript](../ide/reference/property-pages-javascript.md).
 
 ## <a name="solution-properties"></a>Vlastnosti řešení
  Chcete-li získat přístup k vlastnostem v řešení, klikněte pravým tlačítkem myši na uzel řešení v **Průzkumník řešení** a vyberte příkaz **vlastnosti**. V dialogovém okně můžete nastavit konfigurace projektu pro sestavení pro ladění nebo vydaných verzí, zvolit, které projekty by měly být spouštěny při stisknutí klávesy F5 a nastaveny možnosti analýzy kódu.

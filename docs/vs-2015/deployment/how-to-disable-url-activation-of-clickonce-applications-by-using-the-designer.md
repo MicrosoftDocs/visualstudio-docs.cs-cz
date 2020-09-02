@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zákaz aktivace adresy URL aplikací ClickOnce pomocí návrháře | Dokumentace Microsoftu'
+title: 'Postupy: zákaz aktivace adresy URL aplikací ClickOnce pomocí návrháře | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,36 +18,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 27690ab275d0c7ef2a090fa8ef2e42887ae9daeb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153816"
 ---
-# <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>Postupy: Zakázání aktivace adresy URL aplikací ClickOnce pomocí Návrháře
+# <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>Postupy: Zákaz aktivace adresy URL aplikací ClickOnce pomocí Návrháře
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Obvykle [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace se automaticky spustí ihned po jeho instalaci z webového serveru. Z bezpečnostních důvodů se můžete rozhodnout pro toto chování zakázat a že se uživatelé můžou spouštět aplikace z **Start** nabídky místo. Následující postup popisuje, jak zákaz aktivace adresy URL.  
+Obvykle se [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace automaticky spustí hned po instalaci z webového serveru. Z bezpečnostních důvodů se můžete rozhodnout toto chování zakázat a uživatelům sdělit, aby aplikaci spustili z nabídky **Start** . Následující postup popisuje, jak zakázat aktivaci adresy URL.  
   
- Tento postup lze použít pouze pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace nainstalované v počítači uživatele z webového serveru. Nelze použít pro online jen pro aplikace, které lze spustit pouze pomocí jejich adresy URL. Další informace o rozdílech mezi pouze v režimu online a nainstalovaných aplikací, najdete v části [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
+ Tato technika se dá použít jenom pro [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplikace nainstalované v počítači uživatele z webového serveru. Nedá se použít jenom pro online aplikace, které se dají spustit jenom pomocí jejich adresy URL. Další informace o rozdílu mezi online a nainstalovanými aplikacemi najdete v tématu [volba strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md).  
   
- Tento postup používá [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Tuto úlohu lze provést také pomocí [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Další informace najdete v tématu [jak: Zákaz aktivace adresy URL aplikací ClickOnce](../deployment/how-to-disable-url-activation-of-clickonce-applications.md).  
+ Tato procedura používá [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Tuto úlohu můžete provést také pomocí [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] . Další informace najdete v tématu [Postup: zákaz aktivace adresy URL aplikací ClickOnce](../deployment/how-to-disable-url-activation-of-clickonce-applications.md).  
   
 ## <a name="procedure"></a>Postup  
   
-#### <a name="to-disable-url-activation-for-your-application"></a>Chcete-li zákaz aktivace adresy URL pro vaši aplikaci  
+#### <a name="to-disable-url-activation-for-your-application"></a>Zakázání aktivace adresy URL pro vaši aplikaci  
   
-1. Klikněte pravým tlačítkem na název vašeho projektu v **Průzkumníka řešení**a klikněte na tlačítko **vlastnosti**.  
+1. Klikněte pravým tlačítkem myši na název projektu v **Průzkumník řešení**a klikněte na **vlastnosti**.  
   
-2. Na **vlastnosti** stránky, klikněte na tlačítko **publikovat** kartu.  
+2. Na stránce **vlastnosti** klikněte na kartu **publikovat** .  
   
-3. Klikněte na tlačítko **možnosti**.  
+3. Klikněte na tlačítko **Možnosti**.  
   
-4. Klikněte na tlačítko **manifesty**.  
+4. Klikněte na **manifesty**.  
   
-5. Zaškrtněte políčko s popiskem **blokovat aplikaci při aktivaci prostřednictvím adresy URL**.  
+5. Zaškrtněte políčko označeno **blokem blokování aplikace, které se aktivuje prostřednictvím adresy URL**.  
   
-6. Při nasazování aplikace.  
+6. Nasaďte aplikaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)

@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 32cafb9e68fc2535ed3b570022a59d284f4c4cae
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666101"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>Vytváření kódu z jazyka specifického pro doménu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje účinný způsob, jak vygenerovat kód, dokumenty, konfigurační soubory a jiné artefakty z dat reprezentovaných v modelech. Pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] můžete vytvořit sadu tříd, které představují vaše data, a můžete napsat šablony textu do tříd, jejichž názvy a vlastnosti tyto údaje odrážejí.
+Společnost Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje účinný způsob, jak vygenerovat kód, dokumenty, konfigurační soubory a jiné artefakty z dat reprezentovaných v modelech. Pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] můžete vytvořit sadu tříd, které reprezentují vaše data, a můžete napsat šablony textu do tříd, jejichž názvy a vlastnosti tyto údaje odrážejí.
 
  Například společnost Fabrikam má soubor XML s názvy zákazníků a e-mailovými adresami. Jejich vývojáři vytvoří model, ve kterém je zákazník třídy, s vlastnostmi název a e-mail. Napíší několik textových šablon pro zpracování dat, včetně tohoto fragmentu, který vytvoří tabulku všech zákazníků jako součást stránky HTML:
 
@@ -31,11 +31,11 @@ Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje účinný způsob, ja
 <# } #>  </table>
 ```
 
- Když se zpracuje databáze zákazníka, soubor XML se přečte do úložiště modelu. *Procesor direktiv*vytvořený pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] zpřístupňuje třídu Customer pro kód v textové šabloně. Mnoho textových šablon lze spustit proti stejnému úložišti.
+ Když se zpracuje databáze zákazníka, soubor XML se přečte do úložiště modelu. *Procesor direktiv*, vytvořený pomocí [!INCLUDE[dsl](../includes/dsl-md.md)] , zpřístupňuje třídu Customer kódu v textové šabloně. Mnoho textových šablon lze spustit proti stejnému úložišti.
 
- Šablony textu jsou nezbytné pro [!INCLUDE[dsl](../includes/dsl-md.md)]. Slouží k vygenerování zdrojového kódu pro prvky doménového modelu a také pro sady VSPackage a ovládací prvky, které se používají k integraci nástrojů s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Šablony textu jsou nezbytné pro [!INCLUDE[dsl](../includes/dsl-md.md)] . Slouží k vygenerování zdrojového kódu pro prvky doménového modelu i pro VSPackage a ovládací prvky, které se používají k integraci nástrojů s [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Tato část popisuje některé způsoby, jak vytvářet, upravovat a ladit textové šablony používané v [!INCLUDE[dsl](../includes/dsl-md.md)].
+ Tato část popisuje některé způsoby, jak vytvářet, upravovat a ladit textové šablony používané v nástroji [!INCLUDE[dsl](../includes/dsl-md.md)] .
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md)
@@ -54,8 +54,8 @@ Microsoft [!INCLUDE[dsl](../includes/dsl-md.md)] poskytuje účinný způsob, ja
 
  Popisuje soubor příkazů, který spustí spustitelný soubor TextTransform v příkazovém řádku pro textové šablony, které odkazují na jazyky specifické pro doménu.
 
-## <a name="reference"></a>Odkaz
- [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)
+## <a name="reference"></a>Referenční informace
+ [Tvorba textové šablony T4](../modeling/writing-a-t4-text-template.md)
 
  Poskytuje syntaxi direktiv textových šablon a řídicích bloků.
 

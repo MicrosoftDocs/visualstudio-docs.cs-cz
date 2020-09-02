@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8bd74f4d61c74a4dc348f7a615e103b283a15fc0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189621"
 ---
 # <a name="accessibility-in-office-projects"></a>Usnadnění v projektech pro systém Office
@@ -48,7 +48,7 @@ Ve většině případů projekty Office v sadě Visual Studio splňují standar
 
      Zobrazí se zpráva, že je nutné restartovat aplikaci Visual Studio, aby se změna projevila.
 
-4. Klikněte na tlačítko **OK**.
+4. Klikněte na **OK**.
 
 5. Restartujte Visual Studio a znovu otevřete projekt.
 
@@ -84,7 +84,7 @@ Visual Studio má následující omezení související se režimy zobrazení:
 
 Tato omezení můžete překonat pomocí lupy. Lupa je zobrazovací nástroj ve Windows, který vytvoří samostatné okno, ve kterém se zobrazí zvětšená část obrazovky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)

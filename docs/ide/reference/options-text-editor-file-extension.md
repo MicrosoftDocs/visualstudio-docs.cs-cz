@@ -16,31 +16,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3711a87d84e25fd6f790cee62ecb71b2b046d0be
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596200"
 ---
 # <a name="options-text-editor-file-extension"></a>Možnosti, textový editor, přípona souboru
 
-Toto dialogové okno Možností umožňuje určit, jak budou všechny soubory s určitými příponami souborů zpracovány integrovaným vývojového prostředí sady Visual Studio (IDE). Pro každé **rozšíření,** které zadáte, můžete vybrat prostředí pro úpravy. To umožňuje zvolit editor ide nebo návrháře, ve kterém se otevřou dokumenty určitého typu. Chcete-li tyto možnosti zobrazit, zvolte **Možnosti** z nabídky **Nástroje,** rozbalte uzel **Textového editoru** a vyberte **Příponu souboru**.
+Tento dialog možností umožňuje určit, jak budou všechny soubory s určitými příponami v integrovaném vývojovém prostředí (IDE) sady Visual Studio zpracovány. Pro každé **rozšíření** , které zadáte, můžete vybrat prostředí pro úpravy. To umožňuje zvolit Editor nebo návrháře IDE, ve kterém se otevřou dokumenty určitého typu. Chcete-li zobrazit tyto možnosti, zvolte **Možnosti** v nabídce **nástroje** , rozbalte uzel **textový editor** a vyberte položku **Přípona souboru**.
 
-Když vyberete možnost "s kódováním", zobrazí se při každém otevření dokumentu tohoto typu dialogové okno, které umožňuje vybrat schéma kódování pro daný dokument. To může být užitečné, pokud připravujete verze projektových dokumentů pro použití na různých platformách nebo v různých cílových jazycích.
+Když vyberete možnost s kódováním, zobrazí se dialogové okno s pokaždé, když otevřete dokument tohoto typu, který umožňuje výběr schématu kódování pro daný dokument. To může být užitečné, pokud připravujete verze dokumentů projektu pro použití na různých platformách nebo v různých cílových jazycích.
 
-## <a name="uielement-list"></a>Seznam Prvků UI
+## <a name="uielement-list"></a>UIElement – seznam
 
-**Linka**
+**Rozšíření**
 
-Do prostředí IDE, které chcete definovat, zadejte příponu souboru, jejíž možnosti úprav chcete definovat.
+Zadejte příponu souboru s možností úprav v integrovaném vývojovém prostředí (IDE), které chcete definovat.
 
 **Editor**
 
-Vyberte editor nebo návrhář rozhraní IDE, ve kterém se otevřou dokumenty s touto příponou souboru. Když vyberete možnost "s ncoding", zobrazí se dialogové okno při každém otevření takového dokumentu, který vám umožní vybrat schéma kódování.
+Vyberte Editor IDE nebo návrháře, ve kterém se otevřou dokumenty s touto příponou souboru. Když vyberete možnost "s ncoding", zobrazí se dialogové okno při každém otevření takového dokumentu, který umožňuje výběr schématu kódování.
 
 **Přidat**
 
-Přidá položku, která obsahuje zadané **rozšíření** a **možnosti úprav,** do seznamu rozšíření.
+Přidá položku, která zahrnuje zadané **rozšíření** a **Možnosti úprav** v seznamu rozšíření.
 
 **Odebrat**
 
@@ -48,15 +48,15 @@ Odstraní vybranou položku ze seznamu rozšíření.
 
 **Seznam rozšíření**
 
-Zobrazí seznam všech rozšíření, pro která bylo zadáno prostředí pro úpravy.
+Zobrazí seznam všech rozšíření, pro které bylo zadáno prostředí pro úpravy.
 
-**Mapovat soubory bez rozšíření na**
+**Mapovat soubory s příponou na**
 
-Tuto možnost vyberte, pokud chcete určit, jak budou soubory bez přípony zpracovány prostředím IDE.
+Tuto možnost vyberte, pokud chcete určit, jak bude IDE zpracovávat soubory bez přípony.
 
-**Možnosti souboru bez rozšíření**
+**Možnosti souboru s příponou**
 
-Poskytuje stejný seznam jako **editor**. Vyberte editor nebo návrhář rozhraní IDE, ve kterém se otevřou dokumenty bez přípon souborů.
+Poskytuje stejný seznam jako **Editor**. Vyberte Editor IDE nebo návrháře, ve kterém se otevřou dokumenty bez přípon souborů.
 
 ## <a name="see-also"></a>Viz také
 
