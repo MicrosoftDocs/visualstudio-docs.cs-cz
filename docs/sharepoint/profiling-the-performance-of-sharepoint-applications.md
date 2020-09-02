@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 72739cd1063298a2dafc71976fd45360bc2d6ec2
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189200"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>Profilace výkonu aplikací služby SharePoint
@@ -59,14 +59,14 @@ Programové testy uživatelského rozhraní automaticky zařídí svou aplikaci 
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
 |[Návod: profilování aplikace SharePoint](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Ukazuje, jak provést analýzu profilu vzorkování v aplikaci SharePoint.|
 |[Test výkonu aplikace před vydáním](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|Popisuje, jak vytvořit zátěžové testy, které vám pomůžou zátěžové testování aplikací SharePoint.|
-|[Testování částí kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby ve vašem kódu pomocí testů jednotek.|
+|[Testy jednotek kódu](../test/unit-test-your-code.md)|Popisuje, jak najít logické chyby ve vašem kódu pomocí testů jednotek.|
 |[Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests?view=vs-2015)|Popisuje postup testování uživatelského rozhraní aplikací služby SharePoint.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [Zlepšení kvality kódu](../test/improve-code-quality.md)

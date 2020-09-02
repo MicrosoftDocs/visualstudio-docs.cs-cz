@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188679"
 ---
 # <a name="com-and-activex-debugging"></a>Ladění modelů COM a prvků ActiveX
@@ -39,11 +39,11 @@ V této části najdete tipy pro ladění aplikací modelu COM a ovládacích pr
  [Nástroje pro ladění modelu COM](../debugger/com-debugging-tools.md) Zobrazí seznam prohlížečů a ukázkových aplikací, které mohou být užitečné při ladění aplikace modelu COM.
 
 ## <a name="related-sections"></a>Související oddíly
- [První pohled na ladicí program](../debugger/debugger-feature-tour.md) Obsahuje odkazy na větší části dokumentace ladění. Informace zahrnují: co je nového v ladicím programu, nastavení a přípravu, zarážky, zpracování výjimek, úpravy a pokračování, ladění spravovaného kódu C++ , ladění projektů, ladění modelu COM a ActiveX, ladění knihoven DLL, ladění SQL a uživatel odkazy na rozhraní.
+ [První pohled na ladicí program](../debugger/debugger-feature-tour.md) Obsahuje odkazy na větší části dokumentace ladění. Informace zahrnují: co je nového v ladicím programu, nastavení a přípravu, zarážky, zpracování výjimek, úpravy a pokračování, ladění spravovaného kódu, ladění projektů C++, ladění modelu COM a ActiveX, ladění knihoven DLL, ladění SQL a odkazy na uživatelské rozhraní.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Úvod do modelu COM](/cpp/atl/introduction-to-com)
-- [ActiveX – ovládací prvky](/cpp/mfc/activex-controls)
+- [Ovládací prvky ActiveX](/cpp/mfc/activex-controls)
 - [Aplikace serveru SDI](com-server-and-container-debugging.md)

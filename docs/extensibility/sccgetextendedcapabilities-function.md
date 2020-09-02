@@ -1,5 +1,5 @@
 ---
-title: Funkce SccGetExtendedCapabilities | Dokumenty společnosti Microsoft
+title: Funkce SccGetExtendedCapabilities | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5247f2de7ffc63db7235f915c72b3274b8fee5f5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700727"
 ---
-# <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities
-Tato funkce vrací další funkce podporované modulem plug-in správy zdrojového kódu.
+# <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities – funkce
+Tato funkce vrací další funkce podporované modulem plug-in správy zdrojových kódů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,30 +33,30 @@ SCCRTN SccGetExtendedCapabilities(
 ```
 
 ### <a name="parameters"></a>Parametry
- pKontext
+ pContext
 
-[v] Ukazatel kontextu modulu plug-in správy zdrojového kódu.
+pro Ukazatel kontextu modulu plug-in správy zdrojových kódů.
 
- LSccExCaps
+ lSccExCaps
 
-[v] Příznak určující rozšířené schopnosti, pro které chcete testovat (viz tabulka Rozšířený kód schopností v [příznaky schopnosti](../extensibility/capability-flags.md) pro možné příznaky).
+pro Příznak určující rozšířenou schopnost, pro kterou se má testovat (viz tabulka kódů rozšířených schopností v [příznacích schopností](../extensibility/capability-flags.md) pro možné příznaky).
 
- pbPodporováno
+ pbSupported
 
-[out] Vrátí hodnotu`TRUE`nenulová ( ), pokud je zadaná schopnost podporována; v opačném případě`FALSE`vrátí hodnotu nula ( ).
+mimo Vrátí nenulovou hodnotu ( `TRUE` ), pokud je zadaná možnost podporována. v opačném případě vrátí hodnotu nula ( `FALSE` ).
 
-## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+## <a name="return-value"></a>Vrácená hodnota
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|SCC_OK|Operace získání schopností byla úspěšně dokončena.|
-|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Došlo k neznámé nebo nespecifikované chybě.|
+|SCC_OK|Operace Get schopností se úspěšně dokončila.|
+|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Došlo k neznámé nebo neurčené chybě.|
 
 ## <a name="remarks"></a>Poznámky
- Tato metoda je volána na vyžádání; to znamená, že pokud je třeba otestovat schopnost, je tato metoda volána k určení, zda je tato schopnost podporována. Je zadán pouze jeden příznak současně.
+ Tato metoda je volána na vyžádání; To znamená, že pokud je nutné testovat schopnost, je volána Tato metoda k určení, zda je tato funkce podporována. Je určen pouze jeden příznak v čase.
 
 ## <a name="see-also"></a>Viz také
-- [Funkce rozhraní API pro řízení zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
+- [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)
 - [Kódy chyb](../extensibility/error-codes.md)
 - [Příznaky schopností](../extensibility/capability-flags.md)

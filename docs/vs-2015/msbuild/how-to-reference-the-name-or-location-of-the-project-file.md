@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Odkazování na název nebo umístění souboru projektu | Dokumentace Microsoftu'
+title: 'Postupy: odkazování na název nebo umístění souboru projektu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,23 +18,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eae8a32d4587b71f238c023d08a1328ce83ba37d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431394"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64818200"
 ---
-# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Postupy: Odkazy na název nebo umístění souboru projektu
+# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Postupy: Odkazování na název nebo umístění souboru projektu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Název nebo umístění projektu můžete použít v souboru projektu bez nutnosti vytvářet vlastní vlastnosti. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje rezervované vlastnosti, které odkazují na název souboru projektu a další vlastnosti související s projektem. Další informace o rezervované vlastnosti najdete v tématu [MSBuild vyhrazené a známé vlastnosti](../msbuild/msbuild-reserved-and-well-known-properties.md).  
+Můžete použít název nebo umístění projektu v samotném souboru projektu, aniž by bylo nutné vytvořit vlastní vlastnost. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje vyhrazené vlastnosti, které odkazují na název souboru projektu a další vlastnosti, které se vztahují k projektu. Další informace o vyhrazených vlastnostech naleznete v tématu [vyhrazené a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md).  
   
-## <a name="using-the-msbuildprojectname-property"></a>MSBuildProjectName – vlastnost  
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje některé rezervované vlastnosti, které můžete použít bez jejich definováním pokaždé, když v souborech projektu. Například vlastnost vyhrazené `MSBuildProjectName` poskytuje odkaz na název souboru projektu.  
+## <a name="using-the-msbuildprojectname-property"></a>Použití vlastnosti MSBuildProjectName  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] poskytuje některé vyhrazené vlastnosti, které můžete použít v souborech projektu, aniž byste je museli definovat pokaždé. Například vyhrazená vlastnost `MSBuildProjectName` poskytuje odkaz na název souboru projektu.  
   
-#### <a name="to-use-the-msbuildprojectname-property"></a>Chcete-li použít MSBuildProjectName – vlastnost  
+#### <a name="to-use-the-msbuildprojectname-property"></a>Použití vlastnosti MSBuildProjectName  
   
-- Odkazovat na vlastnost v souboru projektu se zápis $ (), stejně jako s jakoukoli vlastnost. Příklad:  
+- Odkazujte na vlastnost v souboru projektu pomocí notace $ (), stejně jako u libovolné vlastnosti. Příklad:  
   
   ```  
   <CSC Sources = "@(CSFile)"   
@@ -42,13 +42,13 @@ Název nebo umístění projektu můžete použít v souboru projektu bez nutnos
   </CSC>  
   ```  
   
-  Výhodou použití rezervované vlastnosti je, že jsou automaticky součástí žádné změny k názvu souboru projektu. Při příštím sestavení projektu, výstupní soubor bude mít nový název se vyžadovat z vaší strany žádná další akce.  
+  Výhodou použití rezervované vlastnosti je, že všechny změny názvu souboru projektu jsou začleněny automaticky. Při příštím sestavení projektu bude mít výstupní soubor nový název, který nevyžaduje žádnou další akci.  
   
 > [!NOTE]
 > Rezervované vlastnosti nelze předefinovat v souboru projektu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad souboru projektu odkazuje na název projektu jako vyhrazené vlastnosti a určit název pro výstup.  
+ Následující příklad souboru projektu odkazuje na název projektu jako vyhrazená vlastnost k určení názvu výstupu.  
   
 ```  
 <Project xmlns="http://scheams.microsoft.com/developer/msbuild/2003"   
@@ -76,5 +76,5 @@ Název nebo umístění projektu můžete použít v souboru projektu bez nutnos
 ```  
   
 ## <a name="see-also"></a>Viz také  
-[MSBuild](msbuild.md)  
- [Vyhrazené a známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[Nástroji](msbuild.md)  
+ [Rezervované a dobře známé vlastnosti nástroje MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md)

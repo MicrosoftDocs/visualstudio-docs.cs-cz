@@ -27,21 +27,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c2d048387e4e81763a63b5bf010c36c87beeacf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665911"
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Třídy pro globální formuláře systému Windows a webové formuláře specifické pro jazykovou verzi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Každá jazyková verze má různé konvence pro zobrazování dat, času, čísel, měn a dalších informací. Obor názvů <xref:System.Globalization> obsahuje třídy, které lze použít k úpravě způsobu zobrazení hodnot specifických pro jazykovou verzi, například <xref:System.Globalization.DateTimeFormatInfo>, **kalendáře**a <xref:System.Globalization.NumberFormatInfo>.
+Každá jazyková verze má různé konvence pro zobrazování dat, času, čísel, měn a dalších informací. <xref:System.Globalization>Obor názvů obsahuje třídy, které lze použít pro úpravu způsobu zobrazení hodnot specifických pro jazykovou verzi, například <xref:System.Globalization.DateTimeFormatInfo> **Kalendář**a <xref:System.Globalization.NumberFormatInfo> .
 
 ## <a name="using-the-culture-setting"></a>Použití nastavení jazykové verze
- Ale většinou použijete nastavení jazykové verze, které se uloží buď v aplikaci, nebo v ovládacím panelu **místní možnosti** , a automaticky tak určíte konvence za běhu a naformátujete informace odpovídajícím způsobem. Další informace o nastavení jazykové verze naleznete v tématu [How to: set a Culture Culture and UI for model Windows Forms Globalization](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) nebo [Postupy: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro globalizaci webové stránky ASP.NET](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0). Třídy, které automaticky naformátují informace podle nastavení jazykové verze, se nazývají specifické pro jazykovou verzi. Některé metody specifické pro jazykovou verzi jsou <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName> a <xref:System.String.Format%2A?displayProperty=fullName>. Některé funkce specifické pro jazykovou verzi (v jazyce Visual Basic) jsou `MonthName` a `WeekDayName`.
+ Ale většinou použijete nastavení jazykové verze, které se uloží buď v aplikaci, nebo v ovládacím panelu **místní možnosti** , a automaticky tak určíte konvence za běhu a naformátujete informace odpovídajícím způsobem. Další informace o nastavení jazykové verze naleznete v tématu [How to: set a Culture Culture and UI for model Windows Forms Globalization](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) nebo [Postupy: nastavení jazykové verze a jazykové verze uživatelského rozhraní pro globalizaci webové stránky ASP.NET](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0). Třídy, které automaticky naformátují informace podle nastavení jazykové verze, se nazývají specifické pro jazykovou verzi. Některé metody specifické pro jazykovou verzi jsou <xref:System.IFormattable.ToString%2A?displayProperty=fullName> , <xref:System.Console.WriteLine%2A?displayProperty=fullName> a <xref:System.String.Format%2A?displayProperty=fullName> . Některé funkce specifické pro jazykovou verzi (v jazyce Visual Basic) jsou `MonthName` a `WeekDayName` .
 
- Například následující kód ukazuje, jak lze použít metodu <xref:System.IFormattable.ToString%2A> k formátování měny pro aktuální jazykovou verzi:
+ Například následující kód ukazuje, jak lze použít <xref:System.IFormattable.ToString%2A> metodu pro formátování měny pro aktuální jazykovou verzi:
 
 ```vb
 ' Put the Imports statements at the beginning of the code module
@@ -71,7 +71,7 @@ Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));
  `$100.00`
 
 ## <a name="see-also"></a>Viz také
- <xref:System.IFormattable.ToString%2A?displayProperty=fullName><xref:System.Globalization.DateTimeFormatInfo>
+ <xref:System.IFormattable.ToString%2A?displayProperty=fullName> <xref:System.Globalization.DateTimeFormatInfo>
  <xref:System.Globalization.NumberFormatInfo>
  <xref:System.Globalization.Calendar>
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>

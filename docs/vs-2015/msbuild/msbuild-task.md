@@ -1,5 +1,5 @@
 ---
-title: Úlohy nástroje MSBuild | Dokumentace Microsoftu
+title: Úloha MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,64 +20,64 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d2349c21d55c20bcb3bcd50ab96f383a9afcc00b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426115"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64826942"
 ---
 # <a name="msbuild-task"></a>MSBuild – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jiného [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projektu.  
+Vytvoří [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jiného [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projektu.  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry `MSBuild` úloh.  
+ Následující tabulka popisuje parametry `MSBuild` úkolu.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`BuildInParallel`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, v zadaných projektů `Projects` parametru jsou vytvořeny paralelně, pokud je to možné. Výchozí hodnota je `false`.|  
-|`Projects`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory projektu k sestavení.|  
-|`Properties`|Volitelné `String` parametru.<br /><br /> Seznam oddělený středníkem dvojice název/hodnota vlastnosti použít jako globální vlastnosti podřízený projekt. Pokud tento parametr zadán, je funkčně srovnatelný s nastavením vlastnosti, které mají **/property** přepnout při sestavení s [MSBuild.exe](../msbuild/msbuild-command-line-reference.md). Příklad:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Při předání vlastnosti projektu prostřednictvím `Properties` parametr [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] vytvoří novou instanci projektu i v případě, že už je načtený soubor projektu. Po vytvoření nové instance projektu [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] považuje za jiný projekt, který má jiné globální vlastnosti a, který může být sestaven paralelně s jinými instancemi projektu. Například může vytvořit konfiguraci vydané verze ve stejnou dobu jako konfigurace ladění.|  
-|`RebaseOutputs`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, relativní cesty cílové výstupní položky ze sestavených projektech mají jejich cesty, upraví se vzhledem k volání projektu. Výchozí hodnota je `false`.|  
-|`RemoveProperties`|Volitelné `String` parametru.<br /><br /> Určuje sadu globálních vlastností k odebrání.|  
-|`RunEachTargetSeparately`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úloha vyvolá každý cíl v seznamu předán [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] postupně, místo ve stejnou dobu. Nastavení tohoto parametru na `true` zaručuje, že další cíle jsou vyvolány i v případě, že dříve vyvolaný cíle se nezdařilo. V opačném případě chybu sestavení zastaví vyvolání všechny následné cíle. Výchozí hodnota je `false`.|  
-|`SkipNonexistentProjects`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, soubory projektu, které neexistuje na disku se přeskočí. V opačném případě takových projektů způsobí chybu.|  
-|`StopOnFirstFailure`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, při selhání jednoho z projektů k sestavení, budou vytvořeny žádné další projekty. Aktuálně to není podporováno při sestavování paralelně (s více procesory).|  
-|`TargetAndPropertyListSeparators`|Volitelné `String[]` parametru.<br /><br /> Určuje seznam cíle a vlastnosti jako `Project` metadata položky). Oddělovače budou uvozeny řídicími znaky před zpracováním. třeba % 3B (uvozený uvozovacím znakem ";") bude zacházeno, jako by šlo uvozeny řídicími znaky ";".|  
-|`TargetOutputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` jen pro čtení výstupního parametru.<br /><br /> Vrátí výstupy sestavených cílů ze všech vygenerovaných souborů projektu. Výstupy z cíle, které se zadaly nezobrazí, není žádné výstupy, které mohou existovat na cíle, které tyto cíle závisí na.<br /><br /> `TargetOutputs` Parametr obsahuje také následující metadata:<br /><br /> -   `MSBuildSourceProjectFile`: [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Soubor projektu, který obsahuje cíl, nastavte výstupy.<br />-   `MSBuildSourceTargetName`: Cíl, nastavte výstupy. **Poznámka:**  Pokud chcete identifikovat výstupy z každého souboru projektu nebo cílové samostatně, spusťte `MSBuild` úkol samostatně pro každý projekt soubor nebo cíl. Pokud spustíte `MSBuild` úkolů pouze jednou, pokud chcete sestavit všechny soubory projektu, výstupy všechny cíle se shromáždí do jednoho pole.|  
-|`Targets`|Volitelné `String` parametru.<br /><br /> Určuje cíl nebo cíle sestavení v souborech projektu. K oddělení seznam cílových názvů použijte středník. Pokud nejsou zadány žádné cíle v `MSBuild` úkolu, jsou integrované výchozí cíle zadané v souborech projektu. **Poznámka:**  Cíle, které musí být stejné ve všech souborech projektu. Pokud tomu tak není, dojde k chybě sestavení.|  
-|`ToolsVersion`|Volitelné `String` parametru.<br /><br /> Určuje, `ToolsVersion` pro použití při sestavování projektů předaný k tomuto úkolu.<br /><br /> Umožňuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úkolů k sestavení projektu, který se zaměřuje na jinou verzi [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] než verze zadaná v projektu. Platné hodnoty jsou `2.0`, `3.0` a `3.5`. Výchozí hodnota je `3.5`.|  
-|`UnloadProjectsOnCompletion`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, projekt bude zrušeno po dokončení operace.|  
-|`UseResultsCache`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, výsledky uložené v mezipaměti bude vrácen, pokud jsou k dispozici. Pokud je spuštěn úkol theMSBuild, výsledek bude v oboru (ProjectFileName, GlobalProperties) do mezipaměti [TargetNames]<br /><br /> jako seznam položek sestavení|  
+|`BuildInParallel`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je to možné, projekty zadané v `Projects` parametru jsou sestaveny paralelně. Výchozí je `false`.|  
+|`Projects`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje soubory projektu, které se mají sestavit.|  
+|`Properties`|Volitelný `String` parametr.<br /><br /> Čárkami oddělený seznam párů název/hodnota vlastnosti, které se použijí jako globální vlastnosti podřízeného projektu. Pokud zadáte tento parametr, je funkčně ekvivalentní nastavení vlastností, které mají přepínač **/Property** při sestavování pomocí [MSBuild.exe](../msbuild/msbuild-command-line-reference.md). Příklad:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Při předání vlastností projektu prostřednictvím `Properties` parametru [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] vytvoří novou instanci projektu i v případě, že soubor projektu již byl načten. Při vytvoření nové instance projektu se [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] považuje za jiný projekt, který má různé globální vlastnosti a který lze sestavit paralelně s jinými instancemi projektu. Například konfigurace vydané verze by mohla sestavovat ve stejnou dobu jako konfigurace ladění.|  
+|`RebaseOutputs`|Volitelný `Boolean` parametr.<br /><br /> Pokud jsou `true` relativní cesty cílových výstupních položek z sestavených projektů upraveny tak, aby byly relativní vzhledem k volajícímu projektu. Výchozí je `false`.|  
+|`RemoveProperties`|Volitelný `String` parametr.<br /><br /> Určuje sadu globálních vlastností, které mají být odebrány.|  
+|`RunEachTargetSeparately`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` , [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úloha vyvolá každý cíl v seznamu předaný do jednoho a [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] nikoli ve stejnou dobu. Nastavením tohoto parametru `true` zajistíte, aby se vyvolaly další cíle i v případě, že se dřív vyvolaný cíl nezdařil V opačném případě chyba sestavení by zastavila vyvolání všech dalších cílů. Výchozí je `false`.|  
+|`SkipNonexistentProjects`|Volitelný `Boolean` parametr.<br /><br /> Pokud se `true` soubory projektu, které na disku neexistují, přeskočí. Jinak takové projekty způsobí chybu.|  
+|`StopOnFirstFailure`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` je v případě, že se jeden z projektů nepovede sestavit, nebudou sestaveny žádné další projekty. V současné době není tato podpora podporována při paralelním sestavování (s více procesory).|  
+|`TargetAndPropertyListSeparators`|Volitelný `String[]` parametr.<br /><br /> Určuje seznam cílů a vlastností jako `Project` metadata položky. Oddělovače budou před zpracováním uvozeny řídicími znaky. například% 3B (řídicí znak '; ') bude považován za, jako by šlo o neřídicí znak '; '.|  
+|`TargetOutputs`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr jen pro čtení.<br /><br /> Vrátí výstupy sestavených cílů ze všech souborů projektu. Vrátí se jenom výstupy z určených cílů, ne všechny výstupy, které můžou existovat na cílících, na kterých jsou tyto cíle závislé.<br /><br /> `TargetOutputs`Parametr obsahuje také následující metadata:<br /><br /> -   `MSBuildSourceProjectFile`: [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Soubor projektu, který obsahuje cíl, který nastaví výstupy.<br />-   `MSBuildSourceTargetName`: Cíl, který nastavuje výstupy. **Poznámka:**  Chcete-li identifikovat výstupy z každého souboru projektu nebo cíle samostatně, spusťte `MSBuild` úlohu samostatně pro každý soubor projektu nebo cíl. Pokud úlohu spouštíte `MSBuild` pouze jednou pro sestavení všech souborů projektu, výstupy všech cílů jsou shromažďovány do jednoho pole.|  
+|`Targets`|Volitelný `String` parametr.<br /><br /> Určuje cíl nebo cíle, které se mají sestavit v souborech projektu. K oddělení seznamu cílových názvů použijte středník. Nejsou-li v úloze zadány žádné cíle `MSBuild` , jsou vytvořeny výchozí cíle zadané v souborech projektu. **Poznámka:**  Cíle musí být provedeny ve všech souborech projektu. Pokud ne, dojde k chybě sestavení.|  
+|`ToolsVersion`|Volitelný `String` parametr.<br /><br /> Určuje, `ToolsVersion` který má být použit při sestavování projektů předaných této úloze.<br /><br /> Umožňuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úloze sestavit projekt, který se zaměřuje na jinou verzi, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] než je zadaná v projektu. Platné hodnoty jsou `2.0` `3.0` a `3.5` . Výchozí hodnota je `3.5` .|  
+|`UnloadProjectsOnCompletion`|Volitelný `Boolean` parametr.<br /><br /> Pokud dojde k `true` uvolnění projektu po dokončení operace.|  
+|`UseResultsCache`|Volitelný `Boolean` parametr.<br /><br /> Pokud `true` se vrátí výsledek uložený v mezipaměti, je-li k dispozici. Je-li spuštěn úkol theMSBuild, jeho výsledek bude uložen do mezipaměti v oboru (ProjectFileName, GlobalProperties) [Cílový_názevs]<br /><br /> jako seznam položek sestavení|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).  
   
- Na rozdíl od použití [Exec – úloha](../msbuild/exec-task.md) spustit MSBuild.exe, tato úloha používá stejná [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] procesu k vytvoření podřízené projekty. Seznam již vytvořených cílů, které mohly být přeskočeny, jsou sdílena mezi nadřazenými a podřízenými sestavení. Tato úloha je také rychlejší, protože žádná nová [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proces je vytvořen.  
+ Na rozdíl od použití [úlohy exec](../msbuild/exec-task.md) ke spuštění MSBuild.exe, tato úloha používá stejný [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proces pro sestavení podřízených projektů. Seznam již sestavených cílů, které lze přeskočit, je sdílen mezi nadřazeným a podřízeným sestavením. Tato úloha je také rychlejší [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] , protože není vytvořen žádný nový proces.  
   
- Tato úloha může zpracovat pouze soubory projektu, ale také soubory řešení.  
+ Tato úloha může zpracovat nejen soubory projektu, ale také soubory řešení.  
   
- Všechny konfigurace, který vyžaduje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] umožňující projektů k sestavení ve stejnou dobu, i v případě, že konfigurace zahrnuje vzdálené infrastruktury (třeba portů, protokolů, vypršení časového limitu, opakování a tak dále), musí provést konfigurovatelné pomocí konfigurační soubor. Pokud je to možné, položky konfigurace budou moci být zadány jako parametry úkolu na `MSBuild` úloh.  
+ Jakákoli konfigurace, která je vyžadována nástrojem [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] k tomu, aby bylo možné projekty současně sestavit i v případě, že konfigurace zahrnuje vzdálenou infrastrukturu (například porty, protokoly, vypršení časového limitu, opakování a tak dále), je nutné provést konfiguraci pomocí konfiguračního souboru. Pokud je to možné, měly by být položky konfigurace možné zadat jako parametry úkolu v `MSBuild` úloze.  
   
- Počínaje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5, řešení, projekty teď surface TargetOutputs ze všech dílčích projektů sestavení.  
+ Počínaje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3,5, projekty řešení nyní TargetOutputs plochu ze všech dílčích projektů, které sestavení vytvoří.  
   
 ## <a name="passing-properties-to-projects"></a>Předávání vlastností do projektů  
- Ve verzích [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] před [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5, předávání různých nastaví vlastnosti uvedené v různých projektech [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] položka už byla náročná. Pokud jste použili atribut vlastnosti [úlohy nástroje MSBuild](../msbuild/msbuild-task.md), pak jeho nastavení bylo použito na všechny projekty jsou sestaveny, pokud jste v dávce [úlohy nástroje MSBuild](../msbuild/msbuild-task.md) a podmíněně k dispozici různé vlastnosti pro každý projekt v seznamu položek.  
+ Ve verzích [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] starších než [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3,5 předávání různých sad vlastností různým projektům uvedeným v [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] položce bylo náročné. Pokud jste použili atribut Properties (vlastnosti) [úlohy MSBuild](../msbuild/msbuild-task.md), pak se jeho nastavení použilo pro všechny projekty, které jsou sestaveny, pokud jste nedávkují [úlohu MSBuild](../msbuild/msbuild-task.md) a podmíněně neposkytly různé vlastnosti pro každý projekt v seznamu položek.  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5, ale nabízí dvě nové vyhrazené položky metadat, vlastnosti a AdditionalProperties, které poskytují flexibilní způsob, jak předat různé vlastnosti pro různé projekty jsou sestaveny [úlohy nástroje MSBuild](../msbuild/msbuild-task.md).  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3,5 však poskytuje dvě nové rezervované položky metadat, vlastnosti a AdditionalProperties, které poskytují flexibilní způsob, jak předat různé vlastnosti pro různé projekty sestavené pomocí [úlohy MSBuild](../msbuild/msbuild-task.md).  
   
 > [!NOTE]
-> Tyto nové položky metadat se vztahují pouze na položek předaných v atributu projektů [úlohy nástroje MSBuild](../msbuild/msbuild-task.md).  
+> Tyto nové položky metadat platí pouze pro položky předané v atributu Projects [úlohy MSBuild](../msbuild/msbuild-task.md).  
   
 ## <a name="multi-processor-build-benefits"></a>Výhody víceprocesorového sestavení  
- Jeden z největších výhod používání tato nová metadata nastane, pokud sestavujete svoje projekty paralelně na systému s více procesory. Metadata vám umožňuje konsolidovat všechny projekty do jednoho [úlohy nástroje MSBuild](../msbuild/msbuild-task.md) volání bez nutnosti provádět všechny dávkování nebo podmíněné [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úlohy. A při volání jedné [úlohy nástroje MSBuild](../msbuild/msbuild-task.md), všechny projekty, které jsou uvedené v atributu projekty budou vytvořeny paralelně. (Pouze, ale pokud `BuildInParallel=true` atribut nachází v [úlohy nástroje MSBuild](../msbuild/msbuild-task.md).) Další informace najdete v tématu [sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md).  
+ Jednou z hlavních výhod používání těchto nových metadat nastane při sestavování projektů paralelně v systému s více procesory. Metadata umožňují konsolidovat všechny projekty do jednoho volání [úlohy MSBuild](../msbuild/msbuild-task.md) bez nutnosti provádět úlohy dávkování nebo podmíněné [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] úkoly. A při volání pouze jedné [úlohy MSBuild](../msbuild/msbuild-task.md)budou všechny projekty, které jsou uvedeny v atributu Projects, sestaveny paralelně. (Nicméně pokud `BuildInParallel=true` je atribut přítomen v [úloze MSBuild](../msbuild/msbuild-task.md).) Další informace naleznete v tématu [Souběžné sestavování více projektů](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md).  
   
 ## <a name="properties-metadata"></a>Vlastnosti metadat  
- Běžný scénář, kdy je při vytváření více souborů řešení pomocí [úlohy nástroje MSBuild](../msbuild/msbuild-task.md), různé konfigurace sestavení používá se jenom. Možná budete chtít vytvořit a1 řešení pomocí a2 řešení a konfigurace ladění pomocí konfigurace vydané verze. V [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0, tento soubor projektu by vypadat nějak takto:  
+ Běžným scénářem je, když vytváříte více souborů řešení pomocí [úlohy MSBuild](../msbuild/msbuild-task.md), a to pouze pomocí různých konfigurací sestavení. Můžete chtít sestavit řešení a1 pomocí konfigurace ladění a řešení a2 pomocí konfigurace vydané verze. V [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2,0 by tento soubor projektu vypadal jako následující:  
   
 > [!NOTE]
-> V následujícím příkladu "..." představuje soubory další řešení.  
+> V následujícím příkladu "..." představuje další soubory řešení.  
   
 ### <a name="aproj"></a>a.proj  
   
@@ -90,7 +90,7 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 </Project>  
 ```  
   
- Pomocí vlastností metadat však můžete zjednodušit této možnosti pomocí jediného [úlohy nástroje MSBuild](../msbuild/msbuild-task.md), jak je znázorněno v následující:  
+ Pomocí vlastností metadat však můžete zjednodušit použití jedné [úlohy MSBuild](../msbuild/msbuild-task.md), jak je znázorněno v následujícím příkladu:  
   
 ### <a name="aproj"></a>a.proj  
   
@@ -110,7 +110,7 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 </Project>  
 ```  
   
- \- nebo –  
+ \- ani  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -128,7 +128,7 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 ```  
   
 ## <a name="additionalproperties-metadata"></a>Metadata AdditionalProperties  
- Vezměte v úvahu následující scénář, ve kterém vytváříte dva soubory řešení pomocí [úlohy nástroje MSBuild](../msbuild/msbuild-task.md), jak pomocí konfigurace vydané verze, ale jeden x86 pomocí architektury a druhou architekturou ia64. V [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0, je třeba vytvořit více instancí [úlohy nástroje MSBuild](../msbuild/msbuild-task.md): z nich se má sestavit projekt pomocí x86 konfiguraci vydané verze architektury, druhý konfiguraci vydané verze pomocí ia64 Architektura. Váš soubor projektu by vypadat nějak takto:  
+ Vezměte v úvahu následující scénář, kde vytváříte dva soubory řešení pomocí [úlohy MSBuild](../msbuild/msbuild-task.md), a to pomocí konfigurace vydané verze, ale jednoho pomocí architektury x86 a druhé pomocí architektury IA64. V [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2,0 byste museli vytvořit více instancí [úlohy MSBuild](../msbuild/msbuild-task.md): jeden pro sestavení projektu pomocí konfigurace vydané verze s architekturou x86, druhá používá konfiguraci vydané verze s architekturou ia64. Váš soubor projektu by vypadal jako následující:  
   
 ### <a name="aproj"></a>a.proj  
   
@@ -143,7 +143,7 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 </Project>  
 ```  
   
- Pomocí AdditionalProperties metadata může zjednodušit této možnosti pomocí jediného [úlohy nástroje MSBuild](../msbuild/msbuild-task.md) pomocí následujících:  
+ Pomocí metadat AdditionalProperties můžete zjednodušit použití jedné [úlohy MSBuild](../msbuild/msbuild-task.md) pomocí následujících kroků:  
   
 ### <a name="aproj"></a>a.proj  
   
@@ -167,7 +167,7 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 ```  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu `MSBuild` úkolů k sestavení projektů určeného `ProjectReferences` kolekci položek. Cíl výsledného výstupy jsou uloženy v `AssembliesBuiltByChildProjects` kolekci položek.  
+ Následující příklad používá `MSBuild` úlohu k sestavení projektů určených `ProjectReferences` kolekcí položek. Výsledné výstupní výstupy jsou uloženy v `AssembliesBuiltByChildProjects` kolekci položek.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -190,5 +190,5 @@ Sestaví [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projekty z jin
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

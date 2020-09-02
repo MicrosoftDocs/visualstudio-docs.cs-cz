@@ -1,5 +1,5 @@
 ---
-title: BPERESI_FIELDS | Dokumentace Microsoftu
+title: BPERESI_FIELDS | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b1b5cba13e439c69b3502b00c6ae159b6af28178
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153239"
 ---
-# <a name="bperesifields"></a>BPERESI_FIELDS
+# <a name="bperesi_fields"></a>BPERESI_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje informace, které se mají načíst informace o neúspěšných rozlišení zarážku.  
+Určuje informace, které mají být načteny o neúspěšném vyřešení zarážky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BPERESI_FIELDS {   
@@ -51,34 +51,34 @@ public enum enum_BPERESI_FIELDS { 
   
 ## <a name="members"></a>Členové  
  PERESI_BPRESLOCATION  
- Inicializace/použít `bpResLocation` oblasti (umístění zarážky řešení) [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury.  
+ Inicializujte nebo použijte `bpResLocation` pole (umístění rozlišení zarážky) struktury [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) .  
   
  BPERESI_PROGRAM  
- Inicializace/použít `pProgram` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
+ Inicializujte nebo použijte `pProgram` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_THREAD  
- Inicializace/použít `pThread` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
+ Inicializujte nebo použijte `pThread` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_MESSAGE  
- Inicializace/použít `bstrMessage` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
+ Inicializujte nebo použijte `bstrMessage` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_TYPE  
- Inicializace/použít `dwType` pole (typ zarážky) `BP_ERROR_RESOLUTION_INFO` struktury.  
+ Inicializujte nebo použijte `dwType` pole (typ zarážky) `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_ALLFIELDS  
- Inicializace/použít všechna pole `BP_ERROR_RESOLUTION_INFO` struktury.  
+ Inicializujte nebo použijte všechna pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako parametr [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) indikace polí s [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury mají být inicializovány.  
+ Předán jako parametr metodě [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) k určení, která pole [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury mají být inicializována.  
   
- Tyto hodnoty jsou také použity k označení, která pole v `BP_ERROR_RESOLUTION_INFO` struktury jsou používány a platné při vrácení této struktury.  
+ Tyto hodnoty slouží také k označení toho, která pole ve `BP_ERROR_RESOLUTION_INFO` struktuře jsou použita a platná při vrácení této struktury.  
   
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

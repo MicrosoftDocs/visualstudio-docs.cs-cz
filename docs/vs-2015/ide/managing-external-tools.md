@@ -58,10 +58,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a9ebda81f013f42aeac23c9c0a8cc5a0a41f5f0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651341"
 ---
 # <a name="managing-external-tools"></a>Správa externích nástrojů
@@ -70,7 +70,7 @@ ms.locfileid: "72651341"
 Externí nástroje je možné volat v rámci aplikace Visual Studio. V nabídce **nástroje** je dostupných několik výchozích nástrojů, ale můžete přidat i další vlastní spustitelné soubory.
 
 ## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Nástroje, které jsou k dispozici v nabídce Nástroje aplikace Visual Studio
- Následující nástroje můžete volat z nabídky **nástroje** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Můžete je také volat podle názvu z okna **Snadné spuštění** . Například pro volání nástroje GuidGen. exe zadejte příkaz **Create GUID**.
+ Můžete zavolat následující nástroje z nabídky **nástroje** v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Můžete je také volat podle názvu z okna **Snadné spuštění** . Chcete-li například volat GuidGen.exe, zadejte příkaz **Create GUID**.
 
 1. Create GUID: vytvoří identifikátor GUID.
 
@@ -102,7 +102,7 @@ Externí nástroje je možné volat v rámci aplikace Visual Studio. V nabídce 
 > [!NOTE]
 > Stavový řádek IDE zobrazuje pro označení místa bodu vložení v aktivním editoru kódu proměnné Current Line a Current Column. Proměnná Current Text vrací text nebo kód vybraný v rámci tohoto místa.
 
-|Name|Argument|Popis|
+|Název|Argument|Popis|
 |----------|--------------|-----------------|
 |Cesta položky|$(ItemPath)|Celý název souboru aktuálního souboru (jednotka + cesta + název souboru).|
 |Adresář položky|$(ItemDir)|Adresář aktuálního souboru (jednotka + cesta).|
@@ -115,7 +115,7 @@ Externí nástroje je možné volat v rámci aplikace Visual Studio. V nabídce 
 |Cílový adresář|$(TargetDir)|Adresář položky, která má být sestavena.|
 |Cílový název|$(TargetName)|Název souboru položky, která má být sestavena.|
 |Cílová Přípona|$(TargetExt)|Přípona názvu souboru položky, která má být sestavena.|
-|Binární složka|$(BinDir)|Konečné umístění binárního souboru, který má být sestaven (definované jako jednotka + cesta). Například: **\\. ..\My Documents\Visual Studio \<Version > \\ < ProjectName \> \bin\debug**|
+|Binární složka|$(BinDir)|Konečné umístění binárního souboru, který má být sestaven (definované jako jednotka + cesta). Například:** \\ . ..\My Documents\Visual Studio \<Version> \\<ProjectName \> \bin\debug**|
 |Adresář projektu|$(ProjDir)|Adresář aktuálního projektu (jednotka + cesta).|
 |Název souboru projektu|$(ProjFileName)|Název souboru aktuálního projektu (jednotka + cesta + název souboru).|
 |Adresář řešení|$(SolutionDir)|Adresář aktuálního řešení (jednotka + cesta).|

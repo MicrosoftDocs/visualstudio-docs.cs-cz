@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 06f9de6927d616d6cf08995c076246c8a45ec014
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815965"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Postupy: Výběr schémat XML k použití
@@ -52,7 +52,7 @@ Schémata, které zadáte, se uloží do souboru uživatelských možností (skr
 
 1. V okně Vlastnosti dokumentu klikněte na tlačítko v poli **schémata** .
 
-2. Klikněte na tlačítko **Add** (Přidat).
+2. Klikněte na **Přidat**.
 
    Otevře se dialogové okno **otevřít schéma XSD** .
 
@@ -73,7 +73,7 @@ Schémata, které zadáte, se uloží do souboru uživatelských možností (skr
    > [!NOTE]
    > Pokud stále máte odkaz na schéma prostřednictvím `schemaLocation` atributu nebo porovnání, nebude `targetNamespace` v této situaci v důsledku **Remove** automatického přidružení fungovat. V takovém případě se doporučuje označit schéma jako **Nepoužívat Vybraná schémata** ve sloupci **použít** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Mezipaměť schémat](../xml-tools/schema-cache.md)
 - [Schéma XML – dialogové okno](../xml-tools/xml-schemas-dialog-box.md)

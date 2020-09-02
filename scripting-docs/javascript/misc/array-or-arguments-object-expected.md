@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 266eed585f1d45e15c084e424d441220f6e671ee
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815770"
 ---
 # <a name="array-or-arguments-object-expected"></a>Je očekáván objekt Array nebo arguments
@@ -28,7 +28,7 @@ Nezadali jste pole jako argument. Tato chyba se vztahuje pouze na metodu **Funct
   
 - `Array`Jako druhý argument zadejte buď objekt **argumentů** , nebo.  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Použití polí](../../javascript/advanced/using-arrays-javascript.md)   
  [Apply – metoda (Function)](../../javascript/reference/apply-method-function-javascript.md)   
  [Functions](../../javascript/functions-javascript.md)

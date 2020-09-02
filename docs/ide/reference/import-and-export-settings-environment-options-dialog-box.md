@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 805ca35d5ff9907bd9ff8907f706ade346b3010e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595537"
 ---
-# <a name="options-dialog-box-environment--import-and-export-settings"></a>Dialogové okno Volby: Nastavení importu a exportu prostředí \>
+# <a name="options-dialog-box-environment--import-and-export-settings"></a>Dialogové okno Možnosti: \> Nastavení importu a exportu prostředí
 
-Na této stránce můžete určit, kam bude uložen soubor uživatelských nastavení. Další informace o nastavení naleznete [v tématu Přizpůsobení prostředí Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).
+Pomocí této stránky můžete zadat, kam se má uložit soubor uživatelských nastavení. Další informace o nastaveních naleznete v tématu [přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).

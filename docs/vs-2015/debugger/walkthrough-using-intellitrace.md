@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Pomocí IntelliTrace | Dokumentace Microsoftu'
+title: 'Návod: použití IntelliTrace | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,33 +10,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 96d18ae0684dab5b6dc5c4001b93804bb13aa75e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444259"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64844165"
 ---
-# <a name="walkthrough-using-intellitrace"></a>Návod: Používání IntelliTrace
+# <a name="walkthrough-using-intellitrace"></a>Postup: Použití IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Nástroj IntelliTrace můžete použít ke shromažďování informací o určité události a kategorie událostí, nebo o voláních jednotlivé funkce kromě události. Následující postupy ukazují, jak to udělat.  
+IntelliTrace můžete použít ke shromažďování informací o konkrétních událostech nebo kategoriích událostí nebo o jednotlivých voláních funkcí kromě událostí. Následující postupy ukazují, jak to provést.  
   
- Můžete použít nástroj IntelliTrace v sadě Visual Studio Enterprise edition (ale ne edice Professional nebo Community).  
+ IntelliTrace můžete použít v edici Visual Studio Enterprise (ale ne v edicích Professional nebo Community).  
   
-## <a name="GettingStarted"></a> Pomocí IntelliTrace pouze pomocí událostí  
- Můžete zkusit ladění pouze události IntelliTrace. Mezi události IntelliTrace patří události ladicího programu, výjimky, události rozhraní .NET Framework a další systémové události. By měl zapnout nebo vypnout určité události k řízení událostí, které nástroj IntelliTrace zaznamenává před zahájením ladění. Další informace najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
+## <a name="using-intellitrace-with-events-only"></a><a name="GettingStarted"></a> Použití IntelliTrace jenom s událostmi  
+ Můžete vyzkoušet ladění s pouhými IntelliTrace událostmi. Události IntelliTrace jsou události ladicího programu, výjimky, události .NET Framework a další systémové události. Můžete zapnout nebo vypnout konkrétní události pro řízení událostí, které IntelliTrace záznamy před spuštěním ladění. Další informace najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
   
- Následující kroky ukazují, jak ladit pouze pomocí událostí IntelliTrace:  
+ Následující kroky ukazují, jak ladit jenom události IntelliTrace:  
   
-1. Zapněte události IntelliTrace pro přístup k souborům. Přejděte na **nástroje / Možnosti / IntelliTrace nebo události IntelliTrace** stránce a rozbalte **souboru** kategorie. Zkontrolujte, **souboru** kategorie události. To způsobí, že všechny souboru události (přístup, zavřít, delete) která se má zkontrolovat.  
+1. Zapněte událost IntelliTrace pro přístup k souboru. Otevřete stránku **události nástroje/možnosti/IntelliTrace/IntelliTrace** a rozbalte kategorii **soubor** . Podívejte se do kategorie událost **souboru** . Dojde k tomu ke zkontrolování všech událostí souboru (přístup, zavření, odstranění).  
   
-2. Vytvořte konzolovou aplikaci C#. V souboru Program.cs přidejte následující `using` – příkaz:  
+2. Vytvořte konzolovou aplikaci C#. Do souboru Program.cs přidejte následující `using` příkaz:  
   
     ```csharp  
     using System.IO;  
     ```  
   
-3. Vytvoření <xref:System.IO.FileStream> v metodu Main, čtení z něj, zavřete ho a stejný soubor odstranit také. Přidáte další řádek, jen aby místo, kde můžete nastavit zarážku:  
+3. Vytvořte <xref:System.IO.FileStream> v metodě Main, přečtěte si z něho, zavřete ho a odstraňte soubor. Přidat další řádek, který má místo pro nastavení zarážky:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -50,54 +50,54 @@ Nástroj IntelliTrace můžete použít ke shromažďování informací o určit
     }  
     ```  
   
-4. Nastavení zarážky v `Console.WriteLine("done");`  
+4. Nastavit zarážku na `Console.WriteLine("done");`  
   
-5. Spusťte ladění obvyklým způsobem. (Stiskněte **F5** nebo klikněte na tlačítko **ladění / spuštění ladění**.  
+5. Spusťte ladění obvyklým způsobem. (Stiskněte klávesu **F5** nebo klikněte na **ladění/spustit ladění**.  
   
     > [!TIP]
-    > Zachovat **lokální** a **automatické hodnoty** windows otevřete během ladění zobrazovat a poznamenejte si hodnoty v těchto oknech.  
+    > Nechte okna **místní** hodnoty a **Automatické** hodnoty otevřené, zatímco provádíte ladění, abyste mohli zobrazit a zaznamenat hodnoty v těchto oknech.  
   
-6. Provádění zastaví na zarážce. Pokud se nezobrazí **diagnostické nástroje** okna, klikněte na tlačítko **ladění / Windows / události IntelliTrace**.  
+6. Spuštění se zastaví na zarážce. Pokud nevidíte okno **diagnostické nástroje** , klikněte na **ladění/Windows/IntelliTrace události**.  
   
-     V **diagnostické nástroje** okně Najít **události** kartu (3 karty, by se měla zobrazit **události**, **využití paměti**, a **procesoru Využití**). **Události** karta zobrazuje chronologický seznam událostí, s poslední událostí před přerušením provádění ladicí program. Měli byste vidět událost s názvem **přístup WordSearchInputs.txt**.  
+     V okně **diagnostické nástroje** Najděte kartu **události** (měli byste vidět 3 karty, **události**, **využití paměti**a **využití CPU**). Karta **události** zobrazuje chronologický seznam událostí končící poslední událostí před spuštěním ladicího programu podařilo přerušit. Měla by se zobrazit událost s názvem **Access WordSearchInputs.txt**.  
   
-     Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.  
+     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.  
   
-     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")  
+     ![IntelliTrace&#45;-datum1](../debugger/media/intellitrace-update1.png "IntelliTrace-v-datum1")  
   
-7. Vyberte událost rozbalíte její podrobnosti.  
+7. Výběrem události rozbalíte její podrobnosti.  
   
-     Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.  
+     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.  
   
      ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")  
   
-     Můžete zvolením odkazu cesty otevřete soubor. Pokud není k dispozici, úplná cesta **otevřít soubor** zobrazí se dialogové okno.  
+     Můžete zvolit odkaz cesta k otevření souboru. Pokud úplná cesta není k dispozici, zobrazí se dialogové okno **otevřít soubor** .  
   
-     Klikněte na tlačítko **aktivovat historické ladění**, který nastaví kontext ladicího programu na čas, kdy byla zvolená událost shromážděných, zobrazení historických dat **zásobník volání**, **místníchhodnot** a dalších zúčastněných ladicího programu systému windows. Pokud zdrojový kód je k dispozici, Visual Studio přesune ukazatel na odpovídající kód v okně zdroje tak, aby jej můžete prozkoumat.  
+     Klikněte na **aktivovat historické ladění**, které nastaví kontext ladicího programu na čas, kdy se vybraná událost shromáždila, zobrazí se historická data v **zásobníku volání**, **místní** a ostatní okna zapojeného ladicího programu. Pokud je zdrojový kód k dispozici, Visual Studio přesune ukazatel na odpovídající kód v okně zdrojového kódu, abyste ho mohli prohlédnout.  
   
-     Na následujícím snímku obrazovky je z Visual Studio 2015 Update 1.  
+     Následující snímek obrazovky je ze sady Visual Studio 2015 Update 1.  
   
-     ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")  
+     ![HistoricalDebugging&#45;-datum1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-v-datum1")  
   
-8. Pokud jste nenašli chyba, zkuste zkoumání další události vedoucí k chybě. Můžete také mít IntelliTrace zaznamenávat informace o voláních, takže můžete krokovat volání funkcí.  
+8. Pokud jste tuto chybu nenalezli, zkuste zkoumat další události, které se zavedou k chybě. IntelliTrace můžete také zaznamenat informace o volání, abyste mohli krokovat prostřednictvím volání funkcí.  
   
-## <a name="using-intellitrace-with-events-and-function-calls"></a>Pomocí IntelliTrace s událostmi a volání funkcí  
- Nástroj IntelliTrace umí zaznamenat volání funkce spolu s událostmi. To umožňuje zobrazit historii zásobníku volání, krokovat zpět a vpřed mezi voláními ve vašem kódu. Nástroj IntelliTrace zaznamenává data, jako jsou názvy funkcí, funkce vstupní a výstupní body a některé hodnoty parametrů a návratové hodnoty. Zobrazit [funkce IntelliTrace](../debugger/intellitrace-features.md).  
+## <a name="using-intellitrace-with-events-and-function-calls"></a>Použití IntelliTrace s událostmi a voláními funkcí  
+ IntelliTrace může nahrávat volání funkcí spolu s událostmi. To vám umožní zobrazit historii zásobníku volání a krokovat zpět a vpřed prostřednictvím volání ve vašem kódu. IntelliTrace zaznamenává data, jako jsou názvy funkcí, vstupní a výstupní body funkce a některé hodnoty parametrů a návratové hodnoty. Viz [funkce IntelliTrace](../debugger/intellitrace-features.md).  
   
-1. Zapněte shromažďování dat volání. (Na **nástroje / Možnosti / IntelliTrace / Obecné**vyberte **události IntelliTrace a informací o volání**. IntelliTrace se spustí shromažďování těchto informací při spuštění další relace ladění.  
+1. Zapněte shromažďování volání. (V nabídce **Nástroje/možnosti/IntelliTrace/obecné**vyberte **události IntelliTrace a informace o volání**. IntelliTrace začne shromažďovat tyto informace při spuštění další relace ladění.  
   
     > [!TIP]
-    > To může zpomalit vaši aplikaci a zvětšit velikost všech protokolů souborů IntelliTrace (.iTrace) ukládaných na disk. Chcete-li získat většinu dat volání, ale minimalizování negativních dopadů, zaznamenávejte data z pouze modulů, které vás zajímají. Chcete-li změnit maximální velikost souborů .iTrace, přejděte na **nástroje / Možnosti / IntelliTrace / pokročilé**a zadat maximální množství místa na disku. Výchozí hodnota je 250 MB.  
+    > To může zpomalit vaši aplikaci a zvětšit velikost všech souborů protokolu IntelliTrace (soubory. iTrace), které ukládáte na disk. Abyste získali nejvíc dat volání, ale minimalizovali účinky, zaznamenejte data pouze z těch modulů, které vás zajímají. Chcete-li změnit maximální velikost souborů. iTrace, přejděte na **Nástroje/možnosti/IntelliTrace/Upřesnit**a zadejte maximální množství místa na disku. Výchozí hodnota je 250 MB.  
   
-2. Spusťte ladění konzolovou aplikaci C# vytvořené v předchozí části. Provádění zastaví na zarážce. Pokud se nezobrazí **diagnostické nástroje** okna, klikněte na tlačítko **ladění / Windows / události IntelliTrace**.  
+2. Spusťte ladění konzolové aplikace v jazyce C# vytvořené v předchozí části. Spuštění se zastaví na zarážce. Pokud nevidíte okno **diagnostické nástroje** , klikněte na **ladění/Windows/IntelliTrace události**.  
   
-3. Přepněte **volání** kartu.  
+3. Přepněte na kartu **volání** .  
   
-     Teď vidíte volání funkce vaší aplikace, počínaje kořenovým voláním (v aktuálním řešení hlavní vstupní bod) a končící na umístění, které provádění přerušilo.  
+     Nyní vidíte volání funkcí vaší aplikace, počínaje kořenovým voláním (v aktuálním řešení, hlavním vstupním bodem) a končící umístěním, kde podařilo přerušit provádění.  
   
-     Vyberte jednu z volání funkce a dvojím kliknutím ho. Měli byste vidět funkce vstupní a výstupní body, jakož i volání, že aktuální volání dalších funkcí a IntelliTrace události vyvolané službou volání. Pokud nemáte historické ladění zapnuté, tato akce zapne ho. Další informace o historické ladění, naleznete v tématu [historické ladění](../debugger/historical-debugging.md).  
+     Vyberte jedno z volání funkce a dvakrát na ni klikněte. Měli byste vidět vstupní a výstupní body funkce a také volání, která aktuální volání provedla jiným funkcím a události IntelliTrace vyvolané voláním. Pokud nemáte zapnuté historické ladění, tato akce se zapne. Další informace o historických ladění naleznete v tématu [historická ladění](../debugger/historical-debugging.md).  
   
     > [!NOTE]
-    > Uvidíte, že některá volání jsou neaktivní. Je to proto, že nástroj IntelliTrace nezaznamenal data z odpovídajících modulů. Pro zobrazení těchto dat, nástroj IntelliTrace na shromažďování dat z těchto modulů. Informace o zadávání moduly, naleznete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
+    > Můžou se zobrazit informace o tom, že některá volání nejsou k dispozici. Důvodem je to, že IntelliTrace nezaznamenává data z odpovídajících modulů. Chcete-li zobrazit tato data, IntelliTrace shromažďovat data z těchto modulů. Informace o zadávání modulů najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
   
 ## <a name="next-steps"></a>Další kroky

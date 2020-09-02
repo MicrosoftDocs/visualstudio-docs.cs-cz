@@ -1,5 +1,5 @@
 ---
-title: BP_TYPE | Dokumentace Microsoftu
+title: BP_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1a0c479182f1ff9efd4b35f2fed2de35d3536202
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153267"
 ---
-# <a name="bptype"></a>BP_TYPE
+# <a name="bp_type"></a>BP_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje, zda zarážka je v místě, kód, je umístění dat nebo je jiný typ zarážky.  
+Určuje, zda je zarážka v umístění kódu, je umístěním dat nebo je jiný typ zarážky.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_TYPE {   
@@ -50,21 +50,21 @@ public enum enum_BP_TYPE { 
  Určuje žádný typ zarážky.  
   
  BPT_CODE  
- Určuje kód zarážku.  
+ Určuje zarážku kódu.  
   
  BPT_DATA  
- Určuje datové zarážky.  
+ Určuje datovou zarážku.  
   
  BPT_SPECIAL  
- Určuje, který není kód ani datový typ zarážky. Tento typ je zastaralý a neměl by se používat.  
+ Určuje zarážku, která není ani kód ani datový typ. Tento typ je zastaralý a neměl by se používat.  
   
 ## <a name="remarks"></a>Poznámky  
- Předán jako parametr [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) a [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) metody.  
+ Předán jako parametr metodám [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) a [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

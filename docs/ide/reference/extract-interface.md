@@ -1,5 +1,5 @@
 ---
-title: Extrahovat refaktoring rozhraní
+title: Extrakce refaktoringu rozhraní
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -13,33 +13,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5055f50d07cf9362c9be1bdc8135e31240a7cc66
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595667"
 ---
-# <a name="extract-an-interface-refactoring"></a>Extrahovat refaktoring rozhraní
+# <a name="extract-an-interface-refactoring"></a>Extrakce refaktoringu rozhraní
 
-Toto refaktoring se vztahuje na:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje vytvořit rozhraní pomocí existujících členů z třídy, struktury nebo rozhraní.
+**Co:** Umožňuje vytvořit rozhraní pomocí stávajících členů z třídy, struktury nebo rozhraní.
 
-**Kdy:** Máte členy ve třídě, struktuře nebo rozhraní, které by mohly být zděděny jinými třídami, strukturami nebo rozhraními.
+**Když:** Máte členy třídy, struktury nebo rozhraní, které by mohly být děděny jinými třídami, strukturami nebo rozhraními.
 
-**Proč:** Rozhraní jsou skvělé konstrukce pro objektově orientované návrhy. Představte si, že třídy pro různá zvířata (Pes, Kočka, Pták), které by mohly mít všechny společné metody, jako je jíst, pít, spát. Použití rozhraní, jako je IAnimal by umožnilo pes, kočka a pták mít společný "podpis" pro tyto metody.
+**Proč:** Rozhraní jsou skvělé konstrukce pro objektově orientované návrhy. Představte si, že máte třídy pro různé živočichy (pes, Cat, ptáky), které by měly mít všechny společné metody, jako je například Eat, nápoj, spánek. Použití rozhraní, jako je IAnimal, umožňuje psa, Cat a ptáku mít pro tyto metody společný podpis.
 
-## <a name="extract-an-interface-refactoring"></a>Extrahovat refaktoring rozhraní
+## <a name="extract-an-interface-refactoring"></a>Extrakce refaktoringu rozhraní
 
 1. Umístěte kurzor do názvu třídy.
 
    - C#:
 
-       ![Zvýrazněný kód - C #](media/extractinterface-highlight-cs.png)
+       ![Zvýrazněný kód-C #](media/extractinterface-highlight-cs.png)
 
    - Visual Basic:
 
@@ -48,39 +48,39 @@ Toto refaktoring se vztahuje na:
 2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **kombinaci kláves Ctrl+R**a potom **kombinaci kláves Ctrl+I**. (Klávesová zkratka se může lišit podle vybraného profilu.)
-      - Stiskněte **klávesu Ctrl**+**.** aktivujte nabídku **Rychlé akce a Refaktoringy** a z místního okna Náhled vyberte **Extrahovat rozhraní.**
+      - Stiskněte klávesy **CTRL + R**a potom **kombinaci kláves CTRL + I**. (Vaše klávesová zkratka se může lišit v závislosti na vybraném profilu.)
+      - Stiskněte klávesu **CTRL** + **.** Chcete-li aktivovat nabídku **rychlé akce a refaktoring** a v okně Náhled vyberte možnost **Extrahovat rozhraní** .
    - **Myš**
-      - Vyberte **možnost Upravit > refaktorovat rozhraní > extrahovat**.
-      - Klikněte pravým tlačítkem myši na název třídy, vyberte nabídku **Rychlé akce a Refaktoringy** a z vyskakovacího okna Náhled vyberte **Extrahovat rozhraní.**
+      - Vyberte **upravit > refaktorovat > Extrahování rozhraní**.
+      - Klikněte pravým tlačítkem myši na název třídy, vyberte nabídku **rychlé akce a refaktoring** a v okně Náhled **rozbalte položku extrahovat rozhraní** .
 
-3. V dialogovém okně **Extrahovat rozhraní,** které se objeví, zadejte požadované informace:
+3. V dialogovém okně **rozbalte rozhraní** , které se zobrazí, zadejte požadované informace:
 
    ![extrahování rozhraní](media/extractinterface-dialog-same-file.png)
 
    | Pole | Popis |
    | - | - |
-   | **Nový název rozhraní** | Název rozhraní, které má být vytvořeno. Název bude ve výchozím nastavení i Název*třídy*, kde *Název třídy* je název třídy, kterou jste vybrali výše. |
-   | **Nový název souboru** | Název generovaného souboru, který bude obsahovat rozhraní. Stejně jako u názvu rozhraní bude tento název ve výchozím nastavení nastaven na I*ClassName*, kde *Název třídy* je název třídy, kterou jste vybrali výše. Můžete také vybrat možnost **Přidat do aktuálního souboru**. |
-   | **Vyberte veřejné členy, aby vytvořili rozhraní** | Položky extrahovat do rozhraní. Můžete si vybrat tolik, kolik budete chtít. |
+   | **Nový název rozhraní** | Název rozhraní, které se má vytvořit. Název bude ve výchozím nastavení nastaven na hodnotu*ClassName*, kde *ClassName* je název třídy, kterou jste vybrali výše. |
+   | **Nový název souboru** | Název generovaného souboru, který bude obsahovat rozhraní. Stejně jako u názvu rozhraní bude tento název ve výchozím nastavení nastaven na hodnotu*ClassName*, kde *ClassName* je název třídy, kterou jste vybrali výše. Můžete také vybrat možnost, která se má **Přidat do aktuálního souboru**. |
+   | **Vybrat veřejné členy pro vytvoření rozhraní** | Položky, které mají být extrahovány do rozhraní. Můžete vybrat tolik, kolik chcete. |
 
 4. Vyberte **OK**.
 
-   Rozhraní je vytvořeno v souboru zadaného názvu. Kromě toho třída, kterou jste vybrali implementuje toto rozhraní.
+   Rozhraní se vytvoří v souboru zadaného názvu. Kromě toho třída, kterou jste vybrali, implementuje toto rozhraní.
 
    - C#:
 
-      ![Výsledná třída - C #](media/extractinterface-class-cs.png)
+      ![Výsledná třída – C #](media/extractinterface-class-cs.png)
 
-      ![Výsledné rozhraní - C #](media/extractinterface-interface-cs.png)
+      ![Výsledné rozhraní-C #](media/extractinterface-interface-cs.png)
 
    - Visual Basic:
 
-      ![Výsledná třída – visual basic](media/extractinterface-class-vb.png)
+      ![Výsledná Visual Basic třídy](media/extractinterface-class-vb.png)
 
-      ![Výsledné rozhraní – visual basic](media/extractinterface-interface-vb.png)
+      ![Výsledné rozhraní – Visual Basic](media/extractinterface-interface-vb.png)
 
 ## <a name="see-also"></a>Viz také
 
 - [Refactoring](../refactoring-in-visual-studio.md)
-- [Tipy pro vývojáře rozhraní .NET](../csharp-developer-productivity.md)
+- [Tipy pro vývojáře na platformě .NET](../csharp-developer-productivity.md)

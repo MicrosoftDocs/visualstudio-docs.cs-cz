@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188629"
 ---
 # <a name="debugger-project-settings"></a>Nastavení projektu ladicího programu
@@ -33,9 +33,9 @@ Určité nastavení projektu má vliv také na ladění. Tato nastavení určuj�
 
  [Postupy: nastavení konfigurace ladění a vydání](../debugger/how-to-set-debug-and-release-configurations.md) Popisuje nastavení **ladění** a **vydání** a přepínání mezi nimi.
 
- [Nastavení projektu pro seznamy C++ konfigurací ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md) , které jsou k dispozici v dialogovém okně **stránky vlastností** pro C++ projekty C nebo.
+ [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md) Zobrazí seznam vlastností, které jsou k dispozici v dialogovém okně **stránky vlastností** pro projekty C nebo C++.
 
- [Nastavení projektu pro C# konfigurace ladění](../debugger/project-settings-for-csharp-debug-configurations.md) seznam vlastností, které jsou k dispozici v dialogovém C# okně **stránky vlastností** pro projekty.
+ [Nastavení projektu pro konfiguraci ladění v jazyce C#](../debugger/project-settings-for-csharp-debug-configurations.md) Zobrazí seznam vlastností, které jsou k dispozici v dialogovém okně **stránky vlastností** pro projekty v jazyce C#.
 
  [Nastavení stránek vlastností pro webové projekty](../debugger/property-pages-settings-for-web-projects.md) Zobrazí seznam vlastností, které jsou k dispozici v dialogovém okně **stránky vlastností** pro webové projekty.
 
@@ -46,7 +46,7 @@ Určité nastavení projektu má vliv také na ladění. Tato nastavení určuj�
 
  [Ladění aplikací v aplikaci Visual Studio](debugging-windows-store-and-windows-universal-apps.md) Popisuje, jak ladit aplikace pro UWP. (Windows Dev Center)
 
- [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Popisuje nastavení vlastností související s ladicím programem a přípravu potřebné k ladění programu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Implementace správy Undo | Dokumentace Microsoftu'
+title: 'Postupy: Implementace správy akcí zpět | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,42 +11,42 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0f3d56ae02718f5dfdf373eeeb6aff774d11931e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435957"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831123"
 ---
-# <a name="how-to-implement-undo-management"></a>Postupy: Implementace správy zpět
+# <a name="how-to-implement-undo-management"></a>Postupy: Implementace správy příkazu Zpět
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Primární rozhraní používá ke správě vrácení zpět se ale <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>, která je implementována pomocí prostředí. Pro podporu správy vrácení zpět, implementovat samostatné zpět jednotky (tedy <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>, který může obsahovat více jednotlivé kroky.  
+Primární rozhraní používané pro vrácení zpět se správou je <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> , které je implementováno prostředím. Pro podporu správy funkce undo implementujte samostatné jednotky vrácení zpět (tj <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> ., které mohou obsahovat více jednotlivých kroků).  
   
- Implementace správy vrácení zpět se liší v závislosti na tom, zda editor podporuje několik zobrazení, nebo ne. Postupy pro každou implementaci jsou podrobně popsané v následujících částech.  
+ Způsob implementace zrušení správy se liší v závislosti na tom, zda editor podporuje více zobrazení, nebo ne. Postupy pro jednotlivé implementace jsou podrobně popsané v následujících částech.  
   
 ## <a name="cases-where-an-editor-supports-a-single-view"></a>Případy, kdy editor podporuje jedno zobrazení  
- V tomto scénáři editor nepodporuje více zobrazení. Existuje pouze jeden editor a jeden dokument a podporují vrácení zpět. Implementace správy zpět pomocí následujícího postupu.  
+ V tomto scénáři editor nepodporuje více zobrazení. Je k dispozici pouze jeden editor a jeden dokument a podpora funkce zpět. K implementaci správy zpět použijte následující postup.  
   
-#### <a name="to-support-undo-management-for-a-single-view-editor"></a>Pro podporu zpět správy jedním zobrazením editoru  
+#### <a name="to-support-undo-management-for-a-single-view-editor"></a>Podpora vrácení se správou zpět pro Editor s jedním zobrazením  
   
-1. Volání `QueryInterface` na `IServiceProvider` rozhraní okna rámce pro `IOleUndoManager`, z objektu zobrazení dokumentu k tomuto správci vrácení zpět (`IID_IOLEUndoManager`).  
+1. Zavolejte `QueryInterface` na `IServiceProvider` rozhraní v rámečku okna pro `IOleUndoManager` , z objektu zobrazení dokumentu pro přístup k funkci Undo Manager ( `IID_IOLEUndoManager` ).  
   
-2. Při zobrazení je umístěna do okna rámce, získá lokality ukazatel, který můžete použít k volání `QueryInterface` pro `IServiceProvider`.  
+2. Když je zobrazení umístěno do rámce okna, získá ukazatel na webu, který může použít k volání `QueryInterface` `IServiceProvider` .  
   
 ## <a name="cases-where-an-editor-supports-multiple-views"></a>Případy, kdy editor podporuje více zobrazení  
- Pokud už máte dokument a zobrazení oddělení, je obvykle jeden vhodný program přidružený k samotný dokument. Všechny jednotky akcí zpět se umístí na jeden vhodný program přidružený k objektu data dokumentu.  
+ Pokud máte dokument a zobrazení oddělení, je obvykle k samotnému dokumentu přidružen jeden správce vrácení zpět. Všechny jednotky akcí zpět jsou umístěny na jednom vedoucím vrácení zpět přidruženém k datovému objektu dokumentu.  
   
- Místo zobrazení, zadávání dotazů na vhodný, z nichž je jedna pro každé zobrazení, data dokumentu objektu volání <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> vytvořit instanci správce akcí zpět, určení identifikátoru třídy CLSID_OLEUndoManager. Identifikátor třídy je definována v souboru OCUNDOID.h.  
+ Namísto zobrazení dotazu pro správce vrácení, pro který existuje jeden pro každé zobrazení, objekt data dokumentu volá <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> k vytvoření instance Správce zrušení, zadáním identifikátoru třídy CLSID_OLEUndoManager. Identifikátor třídy je definován v souboru OCUNDOID. h.  
   
- Při použití <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> k vytvoření vlastní instance Správce akcí zpět, pomocí následujícího postupu připojí správce akcí zpět do prostředí.  
+ Když použijete <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> k vytvoření vlastní instance správce zpět, pomocí následujícího postupu zapojte správce funkce undo do prostředí.  
   
-#### <a name="to-hook-your-undo-manager-into-the-environment"></a>Připojí správce akcí zpět do prostředí  
+#### <a name="to-hook-your-undo-manager-into-the-environment"></a>Připojení správce pro vrácení zpět do prostředí  
   
-1. Volání `QueryInterface` objekt vrácený z <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> pro `IID_IOleUndoManager`. Ukazatel na Store <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>.  
+1. Volání `QueryInterface` objektu vráceného z <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> pro `IID_IOleUndoManager` . Uložte ukazatel na <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> .  
   
-2. Volání `QueryInterface` na `IOleUndoManager` pro `IID_IOleCommandTarget`. Ukazatel na Store <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+2. Zavolat `QueryInterface` na `IOleUndoManager` `IID_IOleCommandTarget` . Uložte ukazatel na <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .  
   
-3. Propojení vašich <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> a <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> volání do uložených `IOleCommandTarget` rozhraní pro následující příkazy StandardCommandSet97:  
+3. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> Přesměrujte vaše volání do uloženého `IOleCommandTarget` rozhraní pro následující příkazy StandardCommandSet97:  
   
    - cmdidUndo  
   
@@ -60,24 +60,24 @@ Primární rozhraní používá ke správě vrácení zpět se ale <xref:Microso
   
    - cmdidMultiLevelRedoList  
   
-4. Volání `QueryInterface` na `IOleUndoManager` pro `IID_IVsChangeTrackingUndoManager`. Ukazatel na Store <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager>.  
+4. Zavolat `QueryInterface` na `IOleUndoManager` `IID_IVsChangeTrackingUndoManager` . Uložte ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager> .  
   
-    Použít ukazatele <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager> volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.MarkCleanState%2A>, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.AdviseTrackingClient%2A>a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.UnadviseTrackingClient%2A> metody.  
+    Použijte ukazatel na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager> k volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.MarkCleanState%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.AdviseTrackingClient%2A> metody, a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager.UnadviseTrackingClient%2A> .  
   
-5. Volání `QueryInterface` na `IOleUndoManager` pro `IID_IVsLinkCapableUndoManager`.  
+5. Zavolat `QueryInterface` na `IOleUndoManager` `IID_IVsLinkCapableUndoManager` .  
   
-6. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkCapableUndoManager.AdviseLinkedUndoClient%2A> s dokumentem, který by měly také implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoClient> rozhraní. Při zavření dokumentu volání `IVsLinkCapableUndoManager::UnadviseLinkedUndoClient`.  
+6. Zavolejte na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkCapableUndoManager.AdviseLinkedUndoClient%2A> svůj dokument, který by měl také implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoClient> rozhraní. Když je dokument uzavřený, zavolejte `IVsLinkCapableUndoManager::UnadviseLinkedUndoClient` .  
   
-7. Při zavření dokumentu volání `QueryInterface` na vašeho správce akcí zpět pro `IID_IVsLifetimeControlledObject`.  
+7. Když je dokument uzavřený, zavolejte `QueryInterface` na správce vrácení zpět pro `IID_IVsLifetimeControlledObject` .  
   
-8. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLifetimeControlledObject.SeverReferencesToOwner%2A>.  
+8. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLifetimeControlledObject.SeverReferencesToOwner%2A> .  
   
-9. Při změně v dokumentu, volání <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A> na správce s `OleUndoUnit` třídy. <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A> Metoda uchovává odkaz na objekt, takže obecně, uvolníte ho hned po <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A>.  
+9. Pokud jsou v dokumentu provedeny změny, zavolejte <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A> na manažera s `OleUndoUnit` třídou. <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A>Metoda uchovává odkaz na objekt, takže ho obvykle vydáte hned po <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager.Add%2A> .  
   
-   `OleUndoManager` Třída reprezentuje instanci zásobníku jedno vrácení zpět. Proto je jeden objekt správce akcí zpět na datové entity, které jsou sledovány pro vrácení zpět nebo znovu.  
+   `OleUndoManager`Třída představuje jednu instanci zásobníku pro vrácení zpět. Proto je pro vrácení zpět nebo opakování sledován jeden objekt správce změn na každou entitu dat.  
   
 > [!NOTE]
-> Zatímco objekt správce akcí zpět hojně používají textový editor, je hlavní komponenty, která nemá žádné specifické podpoře pro textový editor. Pokud chcete zajistit podporu více úrovní zpět nebo znovu, můžete k tomu tento objekt.  
+> I když je objekt Undo Manager v textovém editoru široce používán, jedná se o obecnou součást, která nemá žádnou konkrétní podporu pro textový editor. Pokud chcete podporovat funkce zpět nebo opakovat na více úrovních, můžete k tomu použít tento objekt.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsChangeTrackingUndoManager>   

@@ -13,29 +13,29 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 94786ef10e427a0deb4f80471305509124f1638b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595628"
 ---
-# <a name="generate-a-class-or-type-in-visual-studio"></a>Generování třídy nebo typu v sadě Visual Studio
+# <a name="generate-a-class-or-type-in-visual-studio"></a>Generování třídy nebo typu v aplikaci Visual Studio
 
-Toto generování kódu se vztahuje na:
+Tato generace kódu platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** Umožňuje okamžitě vygenerovat kód pro třídu nebo typ.
+**Co:** Umožňuje ihned vygenerovat kód pro třídu nebo typ.
 
-**Kdy:** Zavedete novou třídu nebo typ a chcete správně deklarovat, automaticky.
+**Když:** Zavádíte novou třídu nebo typ a chcete ji správně deklarovat automaticky.
 
-**Proč:** Před použitím můžete deklarovat třídu nebo typ, ale tato funkce bude generovat třídu nebo typ automaticky.
+**Proč:** Můžete deklarovat třídu nebo typ před použitím, ale tato funkce vygeneruje třídu nebo typ automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na čáru, kde je červená vlnovka. Červená vlnovka označuje třídu, která ještě neexistuje.
+1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka indikuje třídu, která ještě neexistuje.
 
    - C#:
 
@@ -45,40 +45,40 @@ Toto generování kódu se vztahuje na:
 
        ![Zvýrazněný kód VB](media/class-highlight-vb.png)
 
-2. Dále proveďte jeden z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-      - Stiskněte **klávesu Ctrl**+**.** spouštět nabídku **Rychlé akce a Refaktorings.**
+      - Stiskněte klávesu **CTRL** + **.** pro aktivaci nabídky **rychlé akce a refaktoringy** .
    - **Myš**
-      - Klikněte pravým tlačítkem myši a vyberte nabídku **Rychlé akce a Refaktoringy.**
-      - Najeďte přes červenou vlnovku a klikněte na ![chybová žárovka](media/error-bulb.png) ikona, která se zobrazí.
-      - Klikněte na ![chybová žárovka](media/error-bulb.png) se zobrazí na levém okraji, pokud je textový kurzor již na řádku s červenou vlnovkou.
+      - Klikněte pravým tlačítkem a vyberte nabídku **rychlé akce a refaktoring** .
+      - Najeďte myší na červenou vlnovkou a klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí.
+      - Klikněte na ![žárovka chyby](media/error-bulb.png) ikona, která se zobrazí na levém okraji, pokud se na řádku již nachází textový kurzor s červenou vlnovkou
 
-      ![Generovat náhled třídy](media/class-preview-cs.png)
+      ![Vygenerovat náhled třídy](media/class-preview-cs.png)
 
-3. V rozevírací nabídce vyberte jednu z možností:
+3. Vyberte jednu z možností z rozevírací nabídky:
 
-   - Generovat třídu*TypeName*v&mdash;novém souboru Vytvoří třídu s názvem *TypeName* v souboru s názvem *TypeName*.cs/.vb
-   - Generovat třídu "&mdash;*TypeName*" Vytvoří v aktuálním souboru třídu s názvem *TypeName.*
-   - Generovat vnořenou třídu '*TypeName*'&mdash;Vytvoří třídu s názvem *TypeName* vnořenou uvnitř aktuální třídy.
-   - Generovat nový typ... &mdash;Vytvoří novou třídu nebo strukturu se všemi zadanými vlastnostmi.
+   - Při generování třídy '*TypeName*' v novém souboru se &mdash; vytvoří třída s názvem *TypeName* v souboru s názvem *TypeName*. cs/. vb
+   - Při generování třídy*TypeName*se &mdash; v aktuálním souboru vytvoří třída s názvem *TypeName* .
+   - Vygenerovat vnořenou*TypeName*třídu TypeName &mdash; vytvoří třídu s názvem *TypeName* vnořenou uvnitř aktuální třídy.
+   - Generovat nový typ... &mdash; Vytvoří novou třídu nebo strukturu se všemi zadanými vlastnostmi.
 
    > [!TIP]
-   > Pomocí odkazu **Náhled změn** v dolní části okna náhledu [zobrazíte všechny změny,](../../ide/preview-changes.md) které budou provedeny před provedením výběru.
+   > Pomocí odkazu **Náhled změn** v dolní části okna Preview [zobrazíte všechny změny](../../ide/preview-changes.md) , které budou provedeny před provedením výběru.
 
-4. Pokud jste vybrali položku **Generovat nový typ,** otevře se dialogové okno **Generovat typ.** Nakonfigurujte usnadnění, druh a umístění nového typu.
+4. Pokud jste vybrali možnost **Generovat novou položku typu** , otevře se dialogové okno **generovat typ** . Nakonfigurujte přístupnost, druh a umístění nového typu.
 
    ![Generovat typ](media/class-newtype-cs.png)
 
    Výběr | Popis
    --- | ---
-   Access | Nastavte typ, který má *výchozí*, *interní* nebo *veřejný* přístup.
+   Access | Nastavte typ na *výchozí*, *interní* nebo *veřejný* přístup.
    Druh | To lze nastavit jako *třídu* nebo *strukturu*.
-   Name (Název) | Nelze jej změnit a bude se jedná o název, který jste již zadali.
-   Project | Pokud existuje více projektů ve vašem řešení, můžete si vybrat, kde chcete třídy/struktury žít.
+   Název | Tato změna se nedá změnit a bude to název, který jste už zadali.
+   Project | Pokud je ve vašem řešení více projektů, můžete zvolit, kde má být třída/struktura živá.
    Název souboru | Můžete vytvořit nový soubor nebo můžete přidat typ do existujícího souboru.
 
-Třída nebo struktura je vytvořena. Pro C#je také vytvořen konstruktor.
+Třída nebo struktura je vytvořena. V jazyce C# je vytvořen i konstruktor.
 
 - C#
 

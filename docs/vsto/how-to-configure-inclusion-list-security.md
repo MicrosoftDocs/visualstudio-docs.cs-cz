@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541632"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Postupy: Konfigurace zabezpečení seznamu zahrnutí
@@ -55,10 +55,10 @@ ms.locfileid: "85541632"
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
     |**Internet**|**AuthenticodeRequired**|
-    |**UntrustedSites**|**Disabled** (Zakázáno)|
-    |**MyComputer**|**Enabled** (Povoleno)|
-    |**LocalIntranet**|**Enabled** (Povoleno)|
-    |**TrustedSites**|**Enabled** (Povoleno)|
+    |**UntrustedSites**|**Zakázáno**|
+    |**MyComputer**|**Povoleno**|
+    |**LocalIntranet**|**Povoleno**|
+    |**TrustedSites**|**Povoleno**|
 
      Ve výchozím nastavení má **Internet** hodnotu **AuthenticodeRequired** a **UntrustedSites** má hodnotu **disabled**.
 
@@ -113,7 +113,7 @@ ms.locfileid: "85541632"
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
-    |**UntrustedSites**|**Disabled** (Zakázáno)|
+    |**UntrustedSites**|**Zakázáno**|
     |**Internet**|**AuthenticodeRequired**|
     |**MyComputer**|**AuthenticodeRequired**|
     |**LocalIntranet**|**AuthenticodeRequired**|
@@ -170,11 +170,11 @@ ms.locfileid: "85541632"
 
     |Řetězcová hodnota – podklíč|Hodnota|
     |-------------------------|-----------|
-    |**UntrustedSites**|**Disabled** (Zakázáno)|
-    |**Internet**|**Disabled** (Zakázáno)|
-    |**MyComputer**|**Disabled** (Zakázáno)|
-    |**LocalIntranet**|**Disabled** (Zakázáno)|
-    |**TrustedSites**|**Disabled** (Zakázáno)|
+    |**UntrustedSites**|**Zakázáno**|
+    |**Internet**|**Zakázáno**|
+    |**MyComputer**|**Zakázáno**|
+    |**LocalIntranet**|**Zakázáno**|
+    |**TrustedSites**|**Zakázáno**|
 
 ### <a name="to-disable-the-inclusion-list-programmatically"></a>Postup při zakazování seznamu povolených zahrnutí
 
@@ -207,6 +207,6 @@ ms.locfileid: "85541632"
 
 3. Sestavte a spusťte aplikaci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Důvěryhodná řešení pro Office pomocí seznamů zahrnutí](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
 - [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)

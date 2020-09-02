@@ -1,5 +1,5 @@
 ---
-title: Pomocníci sad SDK pro ladění | Dokumentace Microsoftu
+title: Pomocníka sady SDK pro ladění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,27 +15,27 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3296613ffbe3148caa04989dfc9d609334b4c200
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435991"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838120"
 ---
 # <a name="sdk-helpers-for-debugging"></a>Pomocníci sad SDK pro ladění
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tyto funkce a deklarace jsou globální pomocných funkcí pro provádění ladicími stroji vyhodnocovače výrazů a poskytovatelé symbol v jazyce C++.  
+Tyto funkce a deklarace jsou globální pomocné funkce pro implementaci modulů ladění, vyhodnocení výrazů a poskytovatele symbolů v jazyce C++.  
   
 > [!NOTE]
-> V tuto chvíli neexistují žádné spravované verze těchto funkcí a deklarace.  
+> V tuto chvíli nejsou k dispozici žádné spravované verze těchto funkcí a deklarací.  
   
 ## <a name="overview"></a>Přehled  
- Aby ladicí stroj, vyhodnocovače výrazů a symbol zprostředkovatele pro Visual Studio musí být zaregistrovaný. To se provádí nastavením podklíče a položky, jinak známé jako "nastavení metriky." Následující globální funkce jsou navrženy k usnadnění procesu aktualizace tyto metriky. V části na umístění registru a zjistěte, rozložení podklíč registru, který se aktualizuje pomocí těchto funkcí.  
+ Aby moduly ladění, vyhodnocovací filtry výrazů a poskytovatelé symbolů používali aplikace Visual Studio, musí být zaregistrované. K tomu je potřeba nastavit podklíče a položky registru, jinak označované jako "nastavení metrik". Následující globální funkce jsou navrženy pro usnadnění procesu aktualizace těchto metrik. V části o umístěních registru najdete rozložení každého podklíče registru, který tyto funkce aktualizuje.  
   
 ## <a name="general-metric-functions"></a>Obecné funkce metriky  
- Toto jsou obecné funkce používané v ladicí stroj. Specializované funkce pro vyhodnocovače výrazů a symbol poskytovatelé jsou podrobně popsané.  
+ Jedná se o obecné funkce používané moduly ladění. Specializované funkce pro vyhodnocení výrazů a poskytovatele symbolů jsou popsány později.  
   
-### <a name="getmetric-method"></a>GetMetric – metoda  
+### <a name="getmetric-method"></a>Getmetric – metoda  
  Načte hodnotu metriky z registru.  
   
 ```cpp#  
@@ -51,15 +51,15 @@ HRESULT GetMetric(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|pszMachine|[in] Název může být vzdáleného počítače, jejichž registr, se zapíšou (`NULL` znamená, že místní počítač).|  
-|pszType|[in] Jeden z typů metriky.|  
-|guidSection|[in] Identifikátor GUID konkrétní modul, Chyba při vyhodnocování, výjimky, atd. Toto nastavení určuje podčásti typ metriky pro konkrétní elementu.|  
-|pszMetric|[in] Metrika získána. To odpovídá názvu konkrétní hodnotu.|  
-|pdwValue|[in] Umístění úložiště maximum možnosti metriku. Existuje několik typů GetMetric, která vrací DWORD (jako v následujícím příkladu), BSTR, identifikátor GUID nebo pole identifikátorů GUID.|  
-|pszAltRoot|[in] Použití s kořenovým alternativního registru. Nastavte na `NULL` chcete použít výchozí.|  
+|pszMachine|pro Název možného vzdáleného počítače, jehož zápis bude napsán ( `NULL` znamená místní počítač).|  
+|pszType|pro Jeden z typů metriky.|  
+|guidSection|pro Identifikátor GUID konkrétního modulu, vyhodnocení, výjimka atd. Tím se určuje pododdíl v rámci typu metriky pro konkrétní element.|  
+|pszMetric|pro Metrika, která se má získat. To odpovídá konkrétnímu názvu hodnoty.|  
+|pdwValue|pro Umístění úložiště hodnoty z metriky. Existuje několik typů getmetriky, které mohou vracet DWORD (jako v tomto příkladu), BSTR, GUID nebo pole identifikátorů GUID.|  
+|pszAltRoot|pro Alternativní kořenový adresář registru, který se má použít. Nastavte na hodnotu `NULL` použít výchozí.|  
   
-### <a name="setmetric-method"></a>SetMetric – metoda  
- Nastaví hodnotu zadané metriky v registru.  
+### <a name="setmetric-method"></a>Metoda SetMetric  
+ Nastaví zadanou hodnotu metriky v registru.  
   
 ```cpp#  
 HRESULT SetMetric(  
@@ -74,15 +74,15 @@ HRESULT SetMetric(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|pszType|[in] Jeden z typů metriky.|  
-|guidSection|[in] Identifikátor GUID konkrétní modul, Chyba při vyhodnocování, výjimky, atd. Toto nastavení určuje podčásti typ metriky pro konkrétní elementu.|  
-|pszMetric|[in] Metrika získána. To odpovídá názvu konkrétní hodnotu.|  
-|dwValue|[in] Umístění úložiště hodnotu v metrice. Existuje několik typů SetMetric, která může ukládat DWORD (v tomto příkladu), BSTR, identifikátor GUID nebo pole identifikátorů GUID.|  
-|fUserSpecific|[in] Hodnota TRUE, pokud metrika je specifické pro uživatele a pokud by měl být zadaný pro hive uživatele místo hive místního počítače.|  
-|pszAltRoot|[in] Použití s kořenovým alternativního registru. Nastavte na `NULL` chcete použít výchozí.|  
+|pszType|pro Jeden z typů metriky.|  
+|guidSection|pro Identifikátor GUID konkrétního modulu, vyhodnocení, výjimka atd. Tím se určuje pododdíl v rámci typu metriky pro konkrétní element.|  
+|pszMetric|pro Metrika, která se má získat. To odpovídá konkrétnímu názvu hodnoty.|  
+|dwValue|pro Umístění úložiště hodnoty v metrikě. Existuje několik typů SetMetric, které mohou ukládat DWORD (v tomto příkladu), BSTR, GUID nebo pole identifikátorů GUID.|  
+|fUserSpecific|pro TRUE, pokud je metrika specifická pro uživatele a v případě, že by měla být zapsána do podregistru uživatele místo podregistru místního počítače.|  
+|pszAltRoot|pro Alternativní kořenový adresář registru, který se má použít. Nastavte na hodnotu `NULL` použít výchozí.|  
   
-### <a name="removemetric-method"></a>RemoveMetric – metoda  
- Odebere zadané metriky z registru.  
+### <a name="removemetric-method"></a>Metoda RemoveMetric  
+ Odebere zadanou metriku z registru.  
   
 ```cpp#  
 HRESULT RemoveMetric(  
@@ -95,13 +95,13 @@ HRESULT RemoveMetric(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|pszType|[in] Jeden z typů metriky.|  
-|guidSection|[in] Identifikátor GUID konkrétní modul, Chyba při vyhodnocování, výjimky, atd. Toto nastavení určuje podčásti typ metriky pro konkrétní elementu.|  
-|pszMetric|[in] Metrika má být odebrán. To odpovídá názvu konkrétní hodnotu.|  
-|pszAltRoot|[in] Použití s kořenovým alternativního registru. Nastavte na `NULL` chcete použít výchozí.|  
+|pszType|pro Jeden z typů metriky.|  
+|guidSection|pro Identifikátor GUID konkrétního modulu, vyhodnocení, výjimka atd. Tím se určuje pododdíl v rámci typu metriky pro konkrétní element.|  
+|pszMetric|pro Metrika, která se má odebrat To odpovídá konkrétnímu názvu hodnoty.|  
+|pszAltRoot|pro Alternativní kořenový adresář registru, který se má použít. Nastavte na hodnotu `NULL` použít výchozí.|  
   
-### <a name="enummetricsections-method"></a>EnumMetricSections – metoda  
- Provede výčet různých metrik oddílů v registru.  
+### <a name="enummetricsections-method"></a>Metoda EnumMetricSections  
+ Vytvoří výčet různých sekcí metrik v registru.  
   
 ```cpp#  
 HRESULT EnumMetricSections(  
@@ -115,131 +115,131 @@ HRESULT EnumMetricSections(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|pszMachine|[in] Název může být vzdáleného počítače, jejichž registr, se zapíšou (`NULL` znamená, že místní počítač).|  
-|pszType|[in] Jeden z typů metriky.|  
-|rgguidSections|[out v] Předběžně přidělené pole identifikátorů GUID pro vyplnění.|  
-|pdwSize|[in] Maximální počet identifikátorů GUID, které mohou být uloženy v `rgguidSections` pole.|  
-|pszAltRoot|[in] Použití s kořenovým alternativního registru. Nastavte na `NULL` chcete použít výchozí.|  
+|pszMachine|pro Název možného vzdáleného počítače, jehož zápis bude napsán ( `NULL` znamená místní počítač).|  
+|pszType|pro Jeden z typů metriky.|  
+|rgguidSections|[in, out] Předběžně přidělené pole identifikátorů GUID, které se mají vyplnit.|  
+|pdwSize|pro Maximální počet identifikátorů GUID, které mohou být uloženy v `rgguidSections` poli.|  
+|pszAltRoot|pro Alternativní kořenový adresář registru, který se má použít. Nastavte na hodnotu `NULL` použít výchozí.|  
   
-## <a name="expression-evaluator-functions"></a>Chyba při vyhodnocování funkce výraz  
+## <a name="expression-evaluator-functions"></a>Funkce vyhodnocovacího filtru výrazů  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
 |GetEEMetric|Načte hodnotu metriky z registru.|  
-|SetEEMetric|Nastaví hodnotu zadané metriky v registru.|  
-|RemoveEEMetric|Odebere zadané metriky z registru.|  
-|GetEEMetricFile|Získá název souboru ze zadané metriky a načte, vrátí obsah souboru jako řetězec.|  
+|SetEEMetric|Nastaví zadanou hodnotu metriky v registru.|  
+|RemoveEEMetric|Odebere zadanou metriku z registru.|  
+|GetEEMetricFile|Získá název souboru ze zadané metriky a načte ho a vrátí obsah souboru jako řetězec.|  
   
-## <a name="exception-functions"></a>Výjimka funkce  
+## <a name="exception-functions"></a>Funkce výjimky  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
 |GetExceptionMetric|Načte hodnotu metriky z registru.|  
-|SetExceptionMetric|Nastaví hodnotu zadané metriky v registru.|  
-|RemoveExceptionMetric|Odebere zadané metriky z registru.|  
-|RemoveAllExceptionMetrics|Odebere všechny metriky výjimky z registru.|  
+|SetExceptionMetric|Nastaví zadanou hodnotu metriky v registru.|  
+|RemoveExceptionMetric|Odebere zadanou metriku z registru.|  
+|RemoveAllExceptionMetrics|Odebere všechny metriky výjimek z registru.|  
   
 ## <a name="symbol-provider-functions"></a>Funkce poskytovatele symbolů  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
 |GetSPMetric|Načte hodnotu metriky z registru.|  
-|SetSPMetric|Nastaví hodnotu zadané metriky v registru.|  
-|RemoveSPMetric|Odebere zadané metriky z registru.|  
+|SetSPMetric|Nastaví zadanou hodnotu metriky v registru.|  
+|RemoveSPMetric|Odebere zadanou metriku z registru.|  
   
 ## <a name="enumeration-functions"></a>Funkce výčtu  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
 |EnumMetricSections|Vytvoří výčet všech metrik pro zadaný typ metriky.|  
-|EnumDebugEngine|Vytvoří výčet registrované ladicí stroj.|  
-|EnumEEs|Vytvoří výčet vyhodnocovače výrazů registrovaný.|  
-|EnumExceptionMetrics|Vytvoří výčet všech výjimek metrik.|  
+|EnumDebugEngine|Vytvoří výčet registrovaných ladicích modulů.|  
+|EnumEEs|Vytvoří výčet vyhodnocení registrovaných výrazů.|  
+|EnumExceptionMetrics|Vytvoří výčet všech metrik výjimek.|  
   
 ## <a name="metric-definitions"></a>Definice metrik  
- Tyto definice můžete použít pro názvy předdefinovaných metrik. Názvy odpovídají různé klíče registru a názvy hodnot a jsou definované jako řetězce širokého znaku: například `extern LPCWSTR metrictypeEngine`.  
+ Tyto definice lze použít pro předdefinované názvy metrik. Názvy odpovídají různým klíčům registru a názvům hodnot a jsou definovány jako řetězce s velkým znakem: například `extern LPCWSTR metrictypeEngine` .  
   
-|Předdefinované typy metriky|Popis: Základní klíč pro...|  
+|Předdefinované typy metrik|Popis: základní klíč pro....|  
 |-----------------------------|---------------------------------------|  
-|metrictypeEngine|Všechny metriky modul ladění.|  
-|metrictypePortSupplier|Všechny metriky dodavatele portu.|  
-|metrictypeException|Všechny výjimky metriky.|  
-|metricttypeEEExtension|Všechna rozšíření Chyba při vyhodnocování výrazu.|  
+|metrictypeEngine|Všechny metriky ladicího stroje.|  
+|metrictypePortSupplier|Všechny metriky dodavatelů portů.|  
+|metrictypeException|Všechny metriky výjimek.|  
+|metricttypeEEExtension|Všechna rozšíření vyhodnocovacího filtru výrazů.|  
   
-|Vlastnosti modulu ladění|Popis|  
+|Vlastnosti ladicího stroje|Popis|  
 |-----------------------------|-----------------|  
-|metricAddressBP|Nastavte na nenulovou hodnotu označující podporu pro zarážky adres.|  
-|metricAlwaysLoadLocal|Nastavte na nenulovou hodnotu, aby bylo možné vždy načíst ladicí stroj místně.|  
-|metricLoadInDebuggeeSession|NEPOUŽITO|  
-|metricLoadedByDebuggee|Nastavte na nenulovou hodnotu označující, že ladicí stroj vždy se načtou s nebo program, který se právě ladí.|  
-|metricAttach|Nastavte na nenulovou hodnotu označující podporu pro připojení k existující programy.|  
-|metricCallStackBP|Nastavte na nenulovou hodnotu označující podporu pro zarážky zásobníku volání.|  
-|metricConditionalBP|Nastavte na nenulovou hodnotu označující podporu pro nastavení podmíněné zarážky.|  
-|metricDataBP|Nastavte na nenulovou hodnotu označující podporu pro nastavení zarážky na změny v datech.|  
-|metricDisassembly|Nastavte na nenulovou hodnotu označující podporu pro produkční prostředí výpisu zpětný překlad.|  
-|metricDumpWriting|Nastavte na nenulovou hodnotu označující podporu pro zápis (výpis paměti na výstupní zařízení) s výpisem paměti.|  
-|metricENC|Nastavte na nenulovou hodnotu označující podpora pro funkce upravit a pokračovat. **Poznámka:**  Vlastního ladicího stroje nikdy nesmíte nastavit to nebo by měla vždy nastavte na hodnotu 0.|  
-|metricExceptions|Nastavte na nenulovou hodnotu označující podporu pro výjimky.|  
-|metricFunctionBP|Nastavte na nenulovou hodnotu označující podpora pro pojmenované zarážky (zarážky, které přerušit, když se některé název funkce je volána).|  
-|metricHitCountBP|Nastavte na nenulovou hodnotu označující podporu pro nastavení zarážky "Zasáhněte bodu" (zarážky, které se aktivují až poté, co se dosažení určitého počtu pokusů o).|  
-|metricJITDebug|Nastavte na nenulovou hodnotu označující podporu ladění just-in-time (ladicí program se spustí, když dojde k výjimce v spuštěný proces).|  
-|metricMemory|NEPOUŽITO|  
-|metricPortSupplier|Tuto možnost nastavte na identifikátor CLSID dodavatele portu jeden je implementováno.|  
-|metricRegisters|NEPOUŽITO|  
-|metricSetNextStatement|Nastavte na nenulovou hodnotu označující podporu pro nastavení dalšího příkazu (který přeskočí provádění zprostředkující příkazů).|  
-|metricSuspendThread|Nastavte na nenulovou hodnotu označující podporu pro pozastavení provádění vlákna.|  
-|metricWarnIfNoSymbols|Nastavte na nenulovou hodnotu označující, že uživatel by měl být vás upozorní, když neexistují žádné symboly.|  
-|metricProgramProvider|Nastavte na identifikátor CLSID program zprostředkovatele.|  
-|metricAlwaysLoadProgramProviderLocal|Nastavte tuto vlastnost na nenulovou hodnotu označující, že poskytovatel program by měla být vždy načteno místně.|  
-|metricEngineCanWatchProcess|Nastavte na nenulovou hodnotu označující, že bude sledovat ladicí stroj pro zpracování událostí místo poskytovatele programu.|  
-|metricRemoteDebugging|Nastavte na nenulovou hodnotu označující podpory vzdáleného ladění.|  
-|metricEncUseNativeBuilder|Nastavte tuto vlastnost na nenulovou hodnotu označující, že upravit a pokračovat správce používejte encbuild.dll ladicí stroj pro sestavení pro úpravy a pokračování. **Poznámka:**  Vlastního ladicího stroje nikdy nesmíte nastavit to nebo by měla vždy nastavte na hodnotu 0.|  
-|metricLoadUnderWOW64|Nastavte na nenulovou hodnotu označující, že ladicí stroj by měly být načteny v laděném procesu pod WOW, při ladění procesu 64-bit; ladicí stroj v opačném případě bude načten v procesu sady Visual Studio (která je spuštěna v modulu WOW64).|  
-|metricLoadProgramProviderUnderWOW64|Nastavte na nenulovou hodnotu označující, že poskytovatel program by měl být načteny v laděném procesu, při ladění 64bitového procesu pod WOW; v opačném případě bude být načten v procesu sady Visual Studio.|  
-|metricStopOnExceptionCrossingManagedBoundary|Nastavte na nenulovou hodnotu označující, že pokud dojde k neošetřené výjimce přes hranice spravovaného a nespravovaného kódu by se měla zastavit proces.|  
-|metricAutoSelectPriority|Nastavte prioritu pro automatický výběr ladicího stroje (vyšší hodnoty rovná vyšší prioritou).|  
-|metricAutoSelectIncompatibleList|Klíč registru obsahující položky, které určují identifikátory GUID pro ladicí stroj neberou v automatický výběr. Tyto položky jsou čísla (0, 1, 2 a tak dále) s identifikátorem GUID vyjádřené jako řetězec.|  
-|metricIncompatibleList|Klíč registru, který obsahuje položky, které určují identifikátory GUID pro ladicí moduly, které jsou kompatibilní s Tento ladicí stroj.|  
-|metricDisableJITOptimization|Nastavte na nenulovou hodnotu označující, že během ladění by mělo být zakázáno optimalizace just-in-time (pro spravovaný kód).|  
+|metricAddressBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro zarážky adres.|  
+|metricAlwaysLoadLocal|Nastavte na nenulovou hodnotu, chcete-li vždy načíst modul ladění místně.|  
+|metricLoadInDebuggeeSession|NEPOUŽÍVÁ SE|  
+|metricLoadedByDebuggee|Nastavte na nenulovou hodnotu, chcete-li označit, že ladicí stroj bude vždy načten pomocí nebo program, který je laděn.|  
+|metricAttach|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro přílohy k existujícím programům.|  
+|metricCallStackBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu zarážek zásobníku volání.|  
+|metricConditionalBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro nastavení podmíněných zarážek.|  
+|metricDataBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu nastavení zarážek při změnách v datech.|  
+|metricDisassembly|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro produkci zpětných seznamů.|  
+|metricDumpWriting|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro zápis do výpisu paměti (výpis paměti do výstupního zařízení).|  
+|metricENC|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro úpravy a pokračování. **Poznámka:**  Vlastní modul ladění by nikdy neměl nastavit, nebo by měl být vždy nastaven na hodnotu 0.|  
+|metricExceptions|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro výjimky.|  
+|metricFunctionBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pojmenovaných zarážek (zarážky, které přeruší při volání určité funkce).|  
+|metricHitCountBP|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro nastavení "bod přístupů" (zarážky, které se aktivují až po určitém počtu opakování).|  
+|metricJITDebug|Nastavte na nenulovou hodnotu, pokud chcete označit podporu ladění za běhu (ladicí program se spustí, když dojde k výjimce ve spuštěném procesu).|  
+|metricMemory|NEPOUŽÍVÁ SE|  
+|metricPortSupplier|Tuto hodnotu nastavte na CLSID dodavatele portu, pokud je jeden implementovaný.|  
+|metricRegisters|NEPOUŽÍVÁ SE|  
+|metricSetNextStatement|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro nastavení dalšího příkazu (který přeskočí spuštění zprostředkujících příkazů).|  
+|metricSuspendThread|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro pozastavení provádění vlákna.|  
+|metricWarnIfNoSymbols|Nastavte na nenulovou hodnotu, pokud chcete, aby měl uživatel oznámení, pokud nejsou k dispozici žádné symboly.|  
+|metricProgramProvider|Nastavte na CLSID poskytovatele programu.|  
+|metricAlwaysLoadProgramProviderLocal|Nastavte na nenulovou hodnotu, chcete-li určit, že by měl být poskytovatel programu vždy načten místně.|  
+|metricEngineCanWatchProcess|Nastavte na nenulovou hodnotu, chcete-li označit, že ladicí stroj bude sledovat události procesu místo poskytovatele programu.|  
+|metricRemoteDebugging|Nastavte na nenulovou hodnotu, pokud chcete, aby označovala podporu pro vzdálené ladění.|  
+|metricEncUseNativeBuilder|Nastavte na nenulovou hodnotu, pokud chcete, aby měl správce úprav a pokračování k sestavení pro úpravu a pokračování použít encbuild.dll modulu ladění. **Poznámka:**  Vlastní modul ladění by nikdy neměl nastavit, nebo by měl být vždy nastaven na hodnotu 0.|  
+|metricLoadUnderWOW64|Nastavte na nenulovou hodnotu, chcete-li označit, že ladicí stroj by měl být načten v procesu laděného procesu v rámci WOW při ladění 64 procesu; v opačném případě se modul ladění načte do procesu sady Visual Studio (který běží pod WOW64).|  
+|metricLoadProgramProviderUnderWOW64|Nastavte na nenulovou hodnotu, pokud chcete, aby se zprostředkovatel programu načetl v procesu laděného procesu při ladění 64 procesu v WOW; v opačném případě bude načten do procesu sady Visual Studio.|  
+|metricStopOnExceptionCrossingManagedBoundary|Nastavte na nenulovou hodnotu, pokud chcete, aby se proces zastavil, pokud je vyvolána neošetřená výjimka přes hranice spravovaného a nespravovaného kódu.|  
+|metricAutoSelectPriority|Nastavte prioritu pro automatický výběr ladicího stroje (vyšší hodnoty se rovnají vyšší prioritě).|  
+|metricAutoSelectIncompatibleList|Klíč registru obsahující položky, které určují identifikátory GUID pro ladicí moduly, které se mají ignorovat při automatickém výběru. Tyto položky jsou číslo (0, 1, 2 atd.) s identifikátorem GUID vyjádřeným jako řetězec.|  
+|metricIncompatibleList|Klíč registru obsahující položky, které určují identifikátory GUID pro moduly ladění, které jsou nekompatibilní s tímto ladicím modulem.|  
+|metricDisableJITOptimization|Nastavte na nenulovou hodnotu, chcete-li určit, že při ladění by měly být zakázány optimalizace za běhu (pro spravovaný kód).|  
   
-|Chyba při vyhodnocování výrazu – vlastnosti|Popis|  
+|Vlastnosti vyhodnocovacího filtru výrazů|Popis|  
 |-------------------------------------|-----------------|  
-|metricEngine|To obsahuje počet ladicími stroji, které podporují Chyba při vyhodnocování zadaným výrazem.|  
-|metricPreloadModules|Nastavte na nenulovou hodnotu označující, že by měl být moduly zavedené při spuštění vyhodnocovače výrazů proti programu.|  
-|metricThisObjectName|Nastavte na "Tento" název objektu.|  
+|metricEngine|Tím se udržuje počet ladicích modulů, které podporují vyhodnocení určeného výrazu.|  
+|metricPreloadModules|Nastavte na nenulovou hodnotu, pokud chcete, aby se moduly při spuštění vyhodnocovacího filtru výrazů pro program vyčetly předem.|  
+|metricThisObjectName|Nastavte na název objektu this.|  
   
-|Chyba při vyhodnocování výrazu – vlastnosti rozšíření|Popis|  
+|Vlastnosti rozšíření vyhodnocovacího filtru výrazů|Popis|  
 |-----------------------------------------------|-----------------|  
 |metricExtensionDll|Název knihovny DLL, která podporuje toto rozšíření.|  
-|metricExtensionRegistersSupported|Seznam registrů nepodporuje.|  
-|metricExtensionRegistersEntryPoint|Vstupní bod pro přístup k registrů.|  
-|metricExtensionTypesSupported|Seznam typů, které jsou podporovány.|  
-|metricExtensionTypesEntryPoint|Vstupní bod pro přístup k typy.|  
+|metricExtensionRegistersSupported|Seznam podporovaných registrů.|  
+|metricExtensionRegistersEntryPoint|Vstupní bod pro přístup k registrům|  
+|metricExtensionTypesSupported|Seznam podporovaných typů.|  
+|metricExtensionTypesEntryPoint|Vstupní bod pro přístup k typům|  
   
 |Vlastnosti dodavatele portu|Popis|  
 |------------------------------|-----------------|  
-|metricPortPickerCLSID|Identifikátor CLSID výběr portu (a porty vyberte a přidejte porty pro ladění můžete použít dialogové okno uživatele).|  
-|metricDisallowUserEnteredPorts|Nenulové, pokud uživatel zadal porty nelze přidat do dodavatele portu (díky tomu dialogové okno Výběr portu v podstatě jen pro čtení).|  
-|metricPidBase|ID základní procesu používané dodavatele portu při přidělování ID procesů.|  
+|metricPortPickerCLSID|Identifikátor CLSID ovládacího prvku pro výběr portu (dialogové okno, které uživatel může použít k výběru portů a přidání portů pro ladění).|  
+|metricDisallowUserEnteredPorts|Nenulová, pokud uživatelem zadané porty nelze přidat k dodavateli portů (tím je dialogové okno pro výběr portu v podstatě jen pro čtení).|  
+|metricPidBase|Základní ID procesu používané dodavatelem portu při přidělování ID procesu.|  
   
-|Předdefinované typy Store SP|Popis|  
+|Předdefinované typy úložiště SP|Popis|  
 |-------------------------------|-----------------|  
-|storetypeFile|Symboly se ukládají v samostatném souboru.|  
-|storetypeMetadata|Symboly se ukládají jako metadata do sestavení.|  
+|storetypeFile|Symboly jsou uloženy v samostatném souboru.|  
+|storetypeMetadata|Symboly jsou uloženy jako metadata v sestavení.|  
   
 |Různé vlastnosti|Popis|  
 |------------------------------|-----------------|  
-|metricShowNonUserCode|Nastavte na nenulovou hodnotu, chcete-li zobrazit kód nonuser.|  
-|metricJustMyCodeStepping|Nastavte na nenulovou hodnotu označující, že krokování může dojít pouze v uživatelském kódu.|  
-|metricCLSID|Identifikátor CLSID pro objekt typu konkrétní metriky.|  
-|metricName|Popisný název pro objekt typu konkrétní metriky.|  
+|metricShowNonUserCode|Nastavte na nenulovou hodnotu, chcete-li zobrazit neuživatelský kód.|  
+|metricJustMyCodeStepping|Nastavte na nenulovou hodnotu, chcete-li indikovat, že krokování může probíhat pouze v uživatelském kódu.|  
+|metricCLSID|Identifikátor CLSID pro objekt určitého typu metriky.|  
+|metricName|Uživatelsky přívětivý název pro objekt konkrétního typu metriky.|  
 |metricLanguage|Název jazyka.|  
   
 ## <a name="registry-locations"></a>Umístění registru  
  Metriky se čtou a zapisují do registru, konkrétně v `VisualStudio` podklíči.  
   
 > [!NOTE]
-> Ve většině případů, metriky, se zapíšou do klíče HKEY_LOCAL_MACHINE. Někdy ale HKEY_CURRENT_USER být cílový klíč. Dbgmetric.lib zpracovává oba klíče. Při získávání metriku, vyhledá HKEY_CURRENT_USER první pak HKEY_LOCAL_MACHINE. Při nastavení metriky parametr určuje, které klíč nejvyšší úrovně se má použít.  
+> Ve většině případů budou metriky zapsány do HKEY_LOCAL_MACHINEho klíče. Někdy ale HKEY_CURRENT_USER bude cílový klíč. Dbgmetric. lib zpracovává oba klíče. Při získávání metriky se nejprve vyhledá HKEY_CURRENT_USER a pak HKEY_LOCAL_MACHINE. Když je nastavená metrika, parametr určuje, který klíč nejvyšší úrovně se má použít.  
   
  *[klíč registru]*\  
   
@@ -249,11 +249,11 @@ HRESULT EnumMetricSections(
   
  `VisualStudio`\  
   
- *[kořenové verze]*\  
+ *[kořen verze]*\  
   
- *[metriky kořenové]*\  
+ *[metrika-kořen]*\  
   
- *[typu metrika.]*\  
+ *[typ metriky]*\  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -263,24 +263,24 @@ HRESULT EnumMetricSections(
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[klíč registru]*|`HKEY_CURRENT_USER` nebo `HKEY_LOCAL_MACHINE`.|  
-|*[kořenové verze]*|Verze sady Visual Studio (například `7.0`, `7.1`, nebo `8.0`). Ale tohoto kořenového adresáře lze také změnit pomocí **/rootsuffix** přepnout na **devenv.exe**. Pro VSIP, je obvykle tento modifikátor **Exp**, takže kořenové verze bude, například 8.0Exp.|  
-|*[metriky kořenové]*|Je to `AD7Metrics` nebo `AD7Metrics(Debug)`, v závislosti na tom, jestli se používá ladicí verzi dbgmetric.lib. **Poznámka:**  Ať už využitá nebo ne dbgmetric.lib je, tyto zásady vytváření názvů by měl být nedodržuje Pokud máte rozdíly mezi debug a release verze, které se musí projevit v registru.|  
-|*[typu metrika.]*|Typ metriky k zapsání: `Engine`, `ExpressionEvaluator`, `SymbolProvider`atd. Všechny jsou definované jako dbgmetric.h jako `metricTypeXXXX`, kde `XXXX` je název specifického typu.|  
-|*[metrika]*|Název položky pro přiřazení hodnoty k nastavení metriky. Skutečné organizace metriky závisí na typu metrika.|  
-|*[hodnota metriky]*|Hodnota přiřazená k metriku. Typ by měl mít (string, number, atd.) závisí na metriku.|  
+|*[klíč registru]*|`HKEY_CURRENT_USER` nebo `HKEY_LOCAL_MACHINE`:|  
+|*[kořen verze]*|Verze sady Visual Studio (například, `7.0` `7.1` nebo `8.0` ). Tuto kořenovou složku ale můžete také změnit pomocí přepínače **/rootsuffix** na **devenv.exe**. V případě VSIP je tento modifikátor obvykle **exp**, takže kořen verze by byl například 8.0 EXP.|  
+|*[metrika-kořen]*|To je buď `AD7Metrics` nebo `AD7Metrics(Debug)` , v závislosti na tom, zda je použita ladicí verze dbgmetric. lib. **Poznámka:**  Bez ohledu na to, jestli se používá dbgmetric. lib, by se tato konvence vytváření názvů měla dodržovat, pokud máte rozdíly mezi verzemi ladění a vydání, které se musí v registru projevit.|  
+|*[typ metriky]*|Typ metriky, která se má zapsat: `Engine` , `ExpressionEvaluator` , `SymbolProvider` atd. Jsou všechny definovány jako v dbgmetric. h jako `metricTypeXXXX` , kde `XXXX` je specifický název typu.|  
+|*metriky*|Název položky, pro kterou má být přiřazena hodnota, aby bylo možné metriku nastavit. Skutečná organizace metrik závisí na typu metriky.|  
+|*[metrika hodnota]*|Hodnota přiřazená ke metrikě Typ, který má být hodnota (řetězec, číslo atd.), závisí na metrikě.|  
   
 > [!NOTE]
-> Všechny identifikátory GUID se ukládají ve formátu `{GUID}`. Například, `{123D150B-FA18-461C-B218-45B3E4589F9B}`.  
+> Všechny identifikátory GUID jsou uloženy ve formátu `{GUID}` . Například, `{123D150B-FA18-461C-B218-45B3E4589F9B}`.  
   
-### <a name="debug-engines"></a>Ladicí stroje  
- Následuje uspořádání metrik ladicí moduly v registru. `Engine` je název typu metrika. ladicí stroj a odpovídá *[typ metriky]* ve výše uvedené podstromu registru.  
+### <a name="debug-engines"></a>Moduly ladění  
+ Níže je organizace metriky modulů ladění v registru. `Engine` je název typu metriky pro ladicí stroj a odpovídá *[typ metriky]* ve výše uvedeném podstromu registru.  
   
  `Engine`\  
   
- *[identifikátor guid modulu]*\  
+ *[GUID modulu]*\  
   
- `CLSID` = *[identifikátor guid třídy]*  
+ `CLSID` = *[GUID třídy]*  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -290,24 +290,24 @@ HRESULT EnumMetricSections(
   
  `PortSupplier`\  
   
- `0` = *[guid dodavatele portu]*  
+ `0` = *[GUID dodavatele portu]*  
   
- `1` = *[guid dodavatele portu]*  
+ `1` = *[GUID dodavatele portu]*  
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[identifikátor guid modulu]*|Identifikátor GUID ladicího stroje.|  
-|*[identifikátor guid třídy]*|Identifikátor GUID třídy, která implementuje tento ladicí stroj.|  
-|*[guid dodavatele portu]*|Identifikátor GUID dodavatele portu, pokud existuje. Mnoho ladicími stroji použít výchozí dodavatele portu a proto není zadán vlastní dodavatele. V takovém případě podklíče `PortSupplier` budou chybět.|  
+|*[GUID modulu]*|Identifikátor GUID ladicího stroje.|  
+|*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tento ladicí stroj.|  
+|*[GUID dodavatele portu]*|Identifikátor GUID dodavatele portu, pokud existuje. Řada ladicích modulů používá výchozího dodavatele portu, proto nespecifikuje svého dodavatele. V takovém případě podklíč `PortSupplier` nebude přítomen.|  
   
 ### <a name="port-suppliers"></a>Dodavatelé portů  
- Následuje uspořádání metrik dodavatele portu v registru. `PortSupplier` je název typu Metrika pro dodavatele portu a odpovídá *[typ metriky]*.  
+ Níže je organizace metriky dodavatelů portů v registru. `PortSupplier` je název typu metriky pro dodavatele portu a odpovídá *[typ metriky]*.  
   
  `PortSupplier`\  
   
- *[guid dodavatele portu]*\  
+ *[GUID dodavatele portu]*\  
   
- `CLSID` = *[identifikátor guid třídy]*  
+ `CLSID` = *[GUID třídy]*  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -315,19 +315,19 @@ HRESULT EnumMetricSections(
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[guid dodavatele portu]*|Identifikátor GUID dodavatele portu|  
-|*[identifikátor guid třídy]*|Identifikátor GUID třídy, která implementuje tohoto dodavatele portu|  
+|*[GUID dodavatele portu]*|Identifikátor GUID dodavatele portu|  
+|*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tohoto dodavatele portu|  
   
-### <a name="symbol-providers"></a>Poskytovatelé symbol  
- Následuje uspořádání metrik dodavatele symbolu v registru. `SymbolProvider` je název typu metrika. poskytovatel symbolů a odpovídá *[typ metriky]*.  
+### <a name="symbol-providers"></a>Poskytovatelé symbolů  
+ Následuje organizace metrik dodavatelů symbolů v registru. `SymbolProvider` je název typu metriky pro poskytovatele symbolů a odpovídá *[typ metriky]*.  
   
  `SymbolProvider`\  
   
- *[symbol identifikátor guid]*\  
+ *[identifikátor GUID poskytovatele symbolů]*\  
   
  `file`\  
   
- `CLSID` = *[identifikátor guid třídy]*  
+ `CLSID` = *[GUID třídy]*  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -335,7 +335,7 @@ HRESULT EnumMetricSections(
   
  `metadata`\  
   
- `CLSID` = *[identifikátor guid třídy]*  
+ `CLSID` = *[GUID třídy]*  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -343,22 +343,22 @@ HRESULT EnumMetricSections(
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[symbol identifikátor guid]*|GUID poskytovatele symbolů|  
-|*[identifikátor guid třídy]*|Identifikátor GUID třídy, která implementuje tento poskytovatel symbolů|  
+|*[identifikátor GUID poskytovatele symbolů]*|Identifikátor GUID poskytovatele symbolů|  
+|*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tohoto poskytovatele symbolů|  
   
-### <a name="expression-evaluators"></a>Vyhodnocovače výrazů  
- Následuje uspořádání metrik Chyba při vyhodnocování výrazu v registru. `ExpressionEvaluator` je název typu Metrika pro vyhodnocovací filtr výrazů a odpovídá *[typ metriky]*.  
+### <a name="expression-evaluators"></a>Vyhodnocovací filtry výrazů  
+ Následuje uspořádání metrik vyhodnocení výrazu v registru. `ExpressionEvaluator` je název typu metriky pro vyhodnocovací filtr výrazů a odpovídá *[typ metriky]*.  
   
 > [!NOTE]
-> Typ metriky pro `ExpressionEvaluator` není definovaný v dbgmetric.h, protože se předpokládá, že všechny metriky změny pro vyhodnocení výrazu půjdou přes metriky funkce Chyba při vyhodnocování výrazu odpovídající (rozložení `ExpressionEvaluator` podklíč je trochu složité, takže podrobné informace jsou skryty uvnitř dbgmetric.lib).  
+> Typ metriky pro `ExpressionEvaluator` není definovaný v dbgmetric. h, protože se předpokládá, že všechny změny metrik pro vyhodnocovací filtry výrazů procházejí odpovídajícími funkcemi metriky vyhodnocení výrazu (rozložení `ExpressionEvaluator` podklíče je trochu složité, takže podrobnosti jsou skryté v dbgmetric. lib).  
   
  `ExpressionEvaluator`\  
   
- *[identifikátor guid jazyka]*\  
+ *[Language GUID]*\  
   
- *[identifikátor guid dodavatele]*\  
+ *[GUID dodavatele]*\  
   
- `CLSID` = *[identifikátor guid třídy]*  
+ `CLSID` = *[GUID třídy]*  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -366,23 +366,23 @@ HRESULT EnumMetricSections(
   
  `Engine`\  
   
- `0` = *[ladicí stroj guid]*  
+ `0` = *[GUID modulu ladění]*  
   
- `1` = *[ladicí stroj guid]*  
+ `1` = *[GUID modulu ladění]*  
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[identifikátor guid jazyka]*|Identifikátor GUID jazyka|  
-|*[identifikátor guid dodavatele]*|Identifikátor GUID dodavatele|  
-|*[identifikátor guid třídy]*|Identifikátor GUID třídy, které implementuje tato chyba při vyhodnocování výrazu|  
-|*[ladicí stroj guid]*|Identifikátor GUID ladicího stroje, který tato chyba při vyhodnocování výrazu spolupracuje s|  
+|*[Language GUID]*|Identifikátor GUID jazyka|  
+|*[GUID dodavatele]*|Identifikátor GUID dodavatele|  
+|*[GUID třídy]*|Identifikátor GUID třídy, která implementuje tento vyhodnocovací filtr výrazů|  
+|*[GUID modulu ladění]*|Identifikátor GUID ladicího stroje, se kterým tento filtr výrazů pracuje|  
   
-### <a name="expression-evaluator-extensions"></a>Rozšíření Chyba při vyhodnocování výrazu  
- Následuje uspořádání metrik rozšíření Chyba při vyhodnocování výrazu v registru. `EEExtensions` je název metriky typu výrazu chyba při vyhodnocování rozšíření a odpovídá *[typ metriky]*.  
+### <a name="expression-evaluator-extensions"></a>Rozšíření vyhodnocovacího filtru výrazů  
+ Níže je organizace metriky rozšíření vyhodnocení výrazu v registru. `EEExtensions` je název typu metriky pro rozšíření vyhodnocovacího filtru výrazů a odpovídá *[typ metriky]*.  
   
  `EEExtensions`\  
   
- *[identifikátor guid rozšíření]*\  
+ *[identifikátor GUID rozšíření]*\  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -390,24 +390,24 @@ HRESULT EnumMetricSections(
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[identifikátor guid rozšíření]*|Identifikátor GUID rozšíření Chyba při vyhodnocování výrazu|  
+|*[identifikátor GUID rozšíření]*|Identifikátor GUID rozšíření vyhodnocovacího filtru výrazů|  
   
 ### <a name="exceptions"></a>Výjimky  
- Následuje uspořádání metrik výjimky v registru. `Exception` je název typu Metrika pro výjimky a odpovídá *[typ metriky]*.  
+ Níže je organizace metrik výjimek v registru. `Exception` je název typu metriky pro výjimky a odpovídá *[typ metriky]*.  
   
  `Exception`\  
   
- *[ladicí stroj guid]*\  
+ *[GUID modulu ladění]*\  
   
  *[typy výjimek]*\  
   
- *[výjimka]*\  
+ *jímka*\  
   
  *[metrika] = [hodnota metriky]*  
   
  *[metrika] = [hodnota metriky]*  
   
- *[výjimka]*\  
+ *jímka*\  
   
  *[metrika] = [hodnota metriky]*  
   
@@ -415,16 +415,16 @@ HRESULT EnumMetricSections(
   
 |Zástupný symbol|Popis|  
 |-----------------|-----------------|  
-|*[ladicí stroj guid]*|Identifikátor GUID ladicího stroje, který podporuje výjimky.|  
-|*[typy výjimek]*|Obecný název podklíče identifikující třídu výjimky, které mohou být zpracovány. Typické názvy jsou **výjimky jazyka C++**, **výjimky Win32**, **výjimky modulu Common Language Runtime**, a **nativních kontrol za běhu**. Tyto názvy se také používají k identifikaci konkrétní třídu výjimky na uživatele.|  
-|*[výjimka]*|Název pro výjimku: například **_com_error** nebo **Ctrl + Break**. Tyto názvy se také používají k identifikaci konkrétní výjimky na uživatele.|  
+|*[GUID modulu ladění]*|Identifikátor GUID ladicího stroje, který podporuje výjimky.|  
+|*[typy výjimek]*|Obecný název podklíče identifikující třídu výjimek, které lze zpracovat. Typickými názvy jsou **výjimky jazyka C++**, **výjimky Win32**, **výjimky modulu CLR (Common Language Runtime)** a **Kontrola nativního běhu**. Tyto názvy slouží také k identifikaci konkrétní třídy výjimky pro uživatele.|  
+|*jímka*|Název pro výjimku: například **_com_error** nebo **Control-break**. Tyto názvy slouží také k identifikaci konkrétní výjimky pro uživatele.|  
   
 ## <a name="requirements"></a>Požadavky  
- Tyto soubory jsou umístěny v [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] adresáře instalace sady SDK (ve výchozím nastavení, *[jednotka]* \Program Files\Microsoft Visual Studio 2010 SDK\\).  
+ Tyto soubory jsou umístěny v [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] instalačním adresáři sady SDK (ve výchozím nastavení je to *[jednotka]* \Program Files\Microsoft Visual Studio 2010 SDK \\ ).  
   
  Záhlaví: includes\dbgmetric.h  
   
  Knihovna: libs\ad2de.lib, libs\dbgmetric.lib  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace ke knihovně API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
+ [Referenční informace k rozhraním API](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

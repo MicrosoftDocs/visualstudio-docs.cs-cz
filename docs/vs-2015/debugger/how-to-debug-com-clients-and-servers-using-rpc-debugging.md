@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění modelu COM klientů a serverů pomocí ladění RPC | Dokumentace Microsoftu'
+title: 'Postupy: ladění klientů a serverů modelu COM pomocí ladění RPC | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -27,33 +27,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fda2a10cd559f940ab87e5cc8c26f5b47dbec194
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63384039"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64837314"
 ---
-# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>Postupy: Ladění modelu COM klientů a serverů pomocí ladění RPC
+# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>Postupy: Ladění klientů a serverů modelu COM pomocí ladění RPC
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ladění vzdáleného volání (procedur RPC) můžete použít k ladění aplikace modelu COM klient/server. Je nutné povolit RPC Ladění ji používat. S povoleným laděním RPC, při krokování s vnořením volání serveru z klienta, ladicí program připojí k serveru a umožňuje ladit svůj kód. Když je připojen ladicí program, můžete použít všechny funkce ladicího programu s klientem a serverem procesy.  
+Můžete použít ladění vzdáleného volání procedur (RPC) pro ladění klientských a serverových aplikací modelu COM. Je nutné povolit ladění RPC pro použití. Když je povoleno ladění RPC, při krokování volání serveru z klienta se ladicí program připojí k serveru a umožní vám ladit jeho kód. Když je ladicí program připojen, můžete použít všechny funkce ladicího programu společně s procesy klienta i serveru.  
   
-### <a name="to-enable-rpc-debugging"></a>Pokud chcete povolit ladění RPC  
+### <a name="to-enable-rpc-debugging"></a>Povolení ladění RPC  
   
-1. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.  
+1. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).  
   
-2. V **možnosti** dialogové okno, klikněte na tlačítko **ladění** složky.  
+2. V dialogovém okně **Možnosti** klikněte na složku **ladění** .  
   
-3. Klikněte na tlačítko **nativní** stránky.  
+3. Klikněte na **nativní** stránku.  
   
-4. Vyberte **RPC Ladění** zaškrtávací políčko.  
-  
-    > [!NOTE]
-    > Chcete-li ladit volání RPC, musí mít oprávnění správce nebo Power Users.  
+4. Zaškrtněte políčko **ladění RPC** .  
   
     > [!NOTE]
-    > RPC krokování s vnořením do serveru pro vzdálený, na kterém běží systém Microsoft Windows Vista bude fungovat jenom v případě, že nativní ladicí program je připojen ke vzdálenému serveru. V opačném případě se nezdaří volání protokolu RPC bez chybovou zprávu. V opačném případě se dokončí volání protokolu RPC, ale Krok dovnitř nebudou fungovat volání protokolu RPC.  
+    > Chcete-li ladit volání RPC, je nutné mít oprávnění správce nebo Power Users.  
+  
+    > [!NOTE]
+    > Krok RPC do vzdáleného serveru se systémem Microsoft Windows Vista bude fungovat pouze v případě, že je k vzdálenému serveru připojen nativní ladicí program. V opačném případě selže volání RPC bez chybové zprávy. V opačném případě bude volání RPC dokončeno, ale krok do volání RPC nebude fungovat.  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění modelu COM serveru a kontejneru](../debugger/com-server-and-container-debugging.md)   
+ [Ladění serveru a kontejneru modelu COM](../debugger/com-server-and-container-debugging.md)   
  [Ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md)

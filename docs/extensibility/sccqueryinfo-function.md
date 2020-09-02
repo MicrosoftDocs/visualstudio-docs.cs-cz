@@ -1,5 +1,5 @@
 ---
-title: Funkce SccQueryInfo | Dokumenty společnosti Microsoft
+title: Funkce SccQueryInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1efae18f15588f4dacf3409ea95e30af05397c6e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700483"
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo – funkce
-Tato funkce získá informace o stavu pro sadu vybraných souborů pod smělou správě zdrojového kódu.
+Tato funkce získá informace o stavu pro sadu vybraných souborů v rámci správy zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,44 +36,44 @@ SCCRTN SccQueryInfo(
 #### <a name="parameters"></a>Parametry
  pvContext
 
-[v] Struktura kontextu modulu plug-in správy zdrojového kódu.
+pro Struktura kontextu modulu plug-in správy zdrojových kódů.
 
- nSoubory
+ nFiles
 
-[v] Počet souborů zadaných `lpFileNames` v poli a `lpStatus` délka pole.
+pro Počet souborů zadaných v `lpFileNames` poli a délka `lpStatus` pole.
 
- lpNázev souboru
+ lpFileNames
 
-[v] Pole názvů souborů, které mají být dotazovány.
+pro Pole názvů souborů k dotazování.
 
  lpStatus
 
-[dovnitř, ven] Pole, ve kterém modul plug-in správy zdrojového kódu vrátí příznaky stavu pro každý soubor. Další informace naleznete v [tématu Kód stavu souboru](../extensibility/file-status-code-enumerator.md).
+[in, out] Pole, ve kterém modul plug-in správy zdrojových kódů vrátí stavové příznaky pro každý soubor. Další informace najdete v tématu [stavový kód souboru](../extensibility/file-status-code-enumerator.md).
 
 ## <a name="return-value"></a>Návratová hodnota
- Očekává se, že implementace modulu plug-in správy zdrojového kódu této funkce vrátí jednu z následujících hodnot:
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |SCC_OK|Dotaz byl úspěšný.|
-|SCC_E_ACCESSFAILURE|Došlo k potížím s přístupem k systému správy zdrojového kódu, pravděpodobně způsobenému problémy se sítí nebo konflikty. Doporučuje se opakování.|
-|SCC_E_PROJNOTOPEN|Projekt není otevřen pod směřovanou zdrojovou kódu.|
-|SCC_E_NONSPECIFICERROR|Nespecifické selhání.|
+|SCC_E_ACCESSFAILURE|Došlo k potížím při přístupu do systému správy zdrojů, což je pravděpodobně způsobeno problémy se sítí nebo kolizí. Doporučuje se opakovat pokus.|
+|SCC_E_PROJNOTOPEN|Projekt není otevřen v rámci správy zdrojového kódu.|
+|SCC_E_NONSPECIFICERROR|Nespecifická chyba.|
 
 ## <a name="remarks"></a>Poznámky
- Pokud `lpFileName` je prázdný řetězec, je aktuálně žádné informace o stavu aktualizovat. V opačném případě se jedná o úplný název cesty souboru, pro který se mohly změnit informace o stavu.
+ Pokud `lpFileName` je prázdný řetězec, v tuto chvíli nejsou k dispozici žádné informace o stavu pro aktualizaci. V opačném případě je to úplný název cesty k souboru, pro který se informace o stavu mohly změnit.
 
- Návratové pole může být `SCC_STATUS_xxxx` bitová maska bitů. Další informace naleznete v [tématu Kód stavu souboru](../extensibility/file-status-code-enumerator.md). Systém správy zdrojového kódu nemusí podporovat všechny typy bitů. Například pokud `SCC_STATUS_OUTOFDATE` není nabízen, bit prostě není nastaven.
+ Návratové pole může být Bitová maska `SCC_STATUS_xxxx` bitů. Další informace najdete v tématu [stavový kód souboru](../extensibility/file-status-code-enumerator.md). Systém správy zdrojového kódu nemusí podporovat všechny typy bitů. Například pokud není `SCC_STATUS_OUTOFDATE` nabízen, bit je pouze nastaven.
 
- Při použití této funkce k rezervování `MSSCCI` souborů si všimněte následujících požadavků na stav:
+ Při použití této funkce k rezervaci souborů si všimněte následujících požadavků na `MSSCCI` stav:
 
-- `SCC_STATUS_OUTBYUSER`je nastavena, když aktuální uživatel soubor založí.
+- `SCC_STATUS_OUTBYUSER` je nastaveno, když aktuální uživatel rezervoval soubor.
 
-- `SCC_STATUS_CHECKEDOUT`nelze nastavit, `SCC_STATUS_OUTBYUSER` pokud není nastavena.
+- `SCC_STATUS_CHECKEDOUT` nedá se nastavit `SCC_STATUS_OUTBYUSER` , pokud není nastavená.
 
-- `SCC_STATUS_CHECKEDOUT`je nastavena pouze v případě, že je soubor rezervován do určeného pracovního adresáře.
+- `SCC_STATUS_CHECKEDOUT` nastaví se pouze v případě, že je soubor rezervován do určeného pracovního adresáře.
 
-- Pokud je soubor rezervován aktuálním uživatelem do jiného adresáře, než je pracovní adresář, je nastaven, `SCC_STATUS_OUTBYUSER` ale `SCC_STATUS_CHECKEDOUT` není.
+- Pokud je soubor rezervován aktuálním uživatelem do jiného adresáře než do pracovního adresáře, `SCC_STATUS_OUTBYUSER` je nastavena, ale není `SCC_STATUS_CHECKEDOUT` .
 
 ## <a name="see-also"></a>Viz také
 - [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

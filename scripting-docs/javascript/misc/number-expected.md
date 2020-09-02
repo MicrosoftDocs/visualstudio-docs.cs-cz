@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: b8148e18fba3fca24cc6615f4f345c4883306ca3
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816433"
 ---
 # <a name="number-expected"></a>Bylo očekáváno číslo
@@ -28,6 +28,6 @@ Pokusili jste se vyvolat metodu **Number. prototype. ToString** nebo **Number. p
   
 - Pro objekty typu **Number**volejte pouze metodu **Number. prototype. ToString** nebo **Number. prototype. valueOf –** .  
   
-## <a name="see-also"></a>Viz také:  
+## <a name="see-also"></a>Viz také  
  [Number – objekt](../../javascript/reference/number-object-javascript.md)   
  [number – vlastnost (Error)](../../javascript/reference/number-property-error-javascript.md)

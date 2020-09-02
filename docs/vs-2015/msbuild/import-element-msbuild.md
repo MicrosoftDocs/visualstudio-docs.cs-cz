@@ -1,5 +1,5 @@
 ---
-title: Import – Element (MSBuild) | Dokumentace Microsoftu
+title: Import – element (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,11 +20,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9f8edefc8e097f7ada67041b807231f594774548
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433546"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833522"
 ---
 # <a name="import-element-msbuild"></a>Import – element (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ Importuje obsah jednoho souboru projektu do jiného souboru projektu.
  \<Project>  
  \<Import>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Import Project="ProjectPath"  
@@ -48,48 +48,48 @@ Importuje obsah jednoho souboru projektu do jiného souboru projektu.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Project`|Požadovaný atribut.<br /><br /> Cesta souboru projektu k importu. Cesta může obsahovat zástupné znaky. Odpovídající soubory importují v seřazeném pořadí. Pomocí této funkce můžete přidat kód do projektu pouze přidáním kódu souboru do adresáře.|  
-|`Condition`|Nepovinný atribut.<br /><br /> Stav, který se má vyhodnotit. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
+|`Project`|Požadovaný atribut.<br /><br /> Cesta k souboru projektu, který se má importovat Cesta může obsahovat zástupné znaky. Vyhovující soubory jsou importovány v seřazeném pořadí. Pomocí této funkce můžete přidat kód do projektu pouhým přidáním souboru kódu do adresáře.|  
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
- Žádný  
+ Žádné  
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
-|[ImportGroup](../msbuild/importgroup-element.md)|Obsahuje kolekci `Import` prvky seskupené pod nadpisem nepovinnou podmínku.|  
+|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový prvek [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] souboru projektu.|  
+|[ImportGroup –](../msbuild/importgroup-element.md)|Obsahuje kolekci `Import` prvků seskupených pod volitelnou podmínkou.|  
   
 ## <a name="remarks"></a>Poznámky  
- S použitím `Import` element, můžete znovu použít kód, který je společná pro mnoho souborů projektu. Díky tomu je snazší údržbu kódu, protože všechny aktualizace, které provedete sdílený kód získat rozšíří do všech projektů, které naimportujete.  
+ Pomocí `Import` elementu lze znovu použít kód, který je společný pro mnoho souborů projektu. To usnadňuje udržování kódu, protože jakékoli aktualizace, které provedete v rámci sdíleného kódu, se rozšíří do všech projektů, které ho importují.  
   
- Podle konvence jsou uloženy soubory sdílený projekt importovaný jako – soubory .targets, ale jsou standardní [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubory projektu. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] není by vám bránily importu projektu, který má příponu názvu souboru jiné, ale doporučujeme použít rozšíření .targets pro zajištění konzistence.  
+ Podle konvence jsou sdílené importované soubory projektu uloženy jako soubory. targets, ale jedná se o standardní [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubory projektu. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] nebrání v importu projektu, který má jinou příponu názvu souboru, doporučujeme ale použít rozšíření. targets pro zajištění konzistence.  
   
- Relativní cesty importovaných projekty jsou interpretovány relativní k adresáři importu projektu. Proto pokud soubor projektu je importovat do několika souborů projektu v různých umístěních, relativní cesty v importovaném projektu souboru budou interpretovány odlišně pro každý importovaný projekt.  
+ Relativní cesty v importovaných projektech jsou interpretovány relativně k adresáři importovaného projektu. Proto pokud je soubor projektu importován do několika souborů projektu v různých umístěních, relativní cesty v importovaném souboru projektu budou interpretovány jinak pro každý importovaný projekt.  
   
- Všechny [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] rezervované vlastnosti, které se vztahují k souboru projektu, například `MSBuildProjectDirectory` a `MSBuildProjectFile`, který je odkazováno v importovaném projektu jsou přiřazeny hodnoty na základě importu souboru projektu.  
+ Všechny [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] vyhrazené vlastnosti, které se vztahují k souboru projektu, například `MSBuildProjectDirectory` a `MSBuildProjectFile` , které jsou odkazovány v importovaném projektu, jsou přiřazeny hodnoty na základě importu souboru projektu.  
   
- Pokud importovaném projektu nemá `DefaultTargets` atribut importovat projekty jsou kontrolovány v pořadí, ve kterém se importují, a hodnotu prvního zjištění `DefaultTargets` atribut se používá. Například, pokud ProjectA importuje ProjectB a ProjectC (v uvedeném pořadí) a ProjectB importuje ProjectD [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] nejprve hledá `DefaultTargets` zadat pro výzkum, pak ProjectB, pak ProjectD a nakonec ProjectC.  
+ Pokud importovaný projekt nemá `DefaultTargets` atribut, importované projekty jsou zkontrolovány v pořadí, v jakém jsou importovány, a je použita hodnota prvního zjištěného `DefaultTargets` atributu. Například pokud Projecta importuje ProjectB a ProjectC (v tomto pořadí) a importy ProjectBd, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] nejdříve se vyhledá `DefaultTargets` v Projecta, pak na ProjectB, pak na projekt a nakonec ProjectC.  
   
- Schéma importovaném projektu je stejný jako u standardní projekt. I když [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] může být možné sestavit importovaném projektu, nepravděpodobné, protože importovaném projektu obvykle neobsahuje informace o vlastnosti, které k sadě nebo pořadí, ve kterém se spustí cíle. Importovaném projektu závisí na projektu, do kterého je importován předejte tyto informace.  
+ Schéma importovaného projektu je stejné jako standardní projekt. I když [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] může být možné sestavit importovaný projekt, není pravděpodobné, protože importovaný projekt obvykle neobsahuje informace o tom, které vlastnosti se mají nastavit nebo pořadí, ve kterém se mají spustit cíle. Importovaný projekt závisí na projektu, do kterého je importován, aby poskytoval tyto informace.  
   
 > [!NOTE]
-> Do příkazového řádku MSBuilds práci import podmíněné příkazy, nefungují, pomocí nástroje MSBuild v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrované vývojové prostředí (IDE). Podmíněné importy vyhodnocují se pomocí hodnoty konfigurace a platformy, které jsou nastaveny při načtení projektu. Pokud následně změn, které vyžadují přehodnocení podmíněné příkazy v souboru projektu, například změna platformu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přehodnotí podmínky vlastností a položek, ale ne importy. Protože podmíněné import již není znovu, import se přeskočí.  
+> I když podmíněné příkazy import fungují v nástrojích příkazového řádku MSBuild, nefungují s nástrojem MSBuild v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaném vývojovém prostředí (IDE). Podmíněné importy jsou vyhodnocovány pomocí hodnot konfigurace a platformy, které jsou nastaveny při načtení projektu. Pokud jsou následně provedeny změny, které vyžadují nové vyhodnocení podmínk v souboru projektu, například změna platformy, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] přehodnotí podmínky pro vlastnosti a položky, ale ne pro import. Vzhledem k tomu, že není znovu vyhodnocený podmíněný import, import se přeskočí.  
 >   
-> Chcete-li tento problém obejít, umístěte podmíněné importy v souborech .targets nebo ukládejte kód podmíněný blok, jako [zvolte – Element (MSBuild)](../msbuild/choose-element-msbuild.md) bloku.  
+> Chcete-li se tomuto problému vyhnout, vložte podmíněné importy do souborů. Targets nebo vložte kód do podmíněného bloku, jako je například " [Choose element (MSBuild)](../msbuild/choose-element-msbuild.md) Block.  
   
 ## <a name="wildcards"></a>Zástupné znaky  
- V rozhraní .NET Framework 4 nástroj MSBuild umožňuje zástupné znaky v atributu projektu. Po zástupné znaky se nalezeny všechny shody jsou seřazené (pro reprodukovatelnost) a potom jejich importování v tomto pořadí jakoby pořadí měli explicitně nastavit.  
+ V .NET Framework 4 umožňuje MSBuild v atributu projektu zástupné znaky. Pokud existují zástupné znaky, všechny nalezené shody jsou seřazené (za účelem reprodukovatelnosti) a poté jsou importovány v tomto pořadí, jako kdyby byla objednávka explicitně nastavena.  
   
- To je užitečné, pokud chcete nabízet bod rozšiřitelnosti, aby někdo mohl importovat soubor bez nutnosti explicitně přidat název souboru do souboru importu. Pro tento účel Microsoft.Common.Targets obsahuje následující řádek na začátek souboru.  
+ To je užitečné, pokud chcete nabízet bod rozšiřitelnosti, aby mohl někdo jiný importovat soubor bez nutnosti explicitně přidat název souboru do importovaného souboru. Pro tento účel obsahuje Microsoft. Common. targets v horní části souboru následující řádek.  
   
 ```  
 <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore\*" Condition="'$(ImportByWildcardBeforeMicrosoftCommonTargets)' == 'true' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore')"/>  
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje projekt, který má několik položek a vlastností a importuje soubor obecné projektu.  
+ Následující příklad ukazuje projekt, který obsahuje několik položek a vlastností a importuje obecný soubor projektu.  
   
 ```  
 <Project DefaultTargets="Compile"  

@@ -1,5 +1,5 @@
 ---
-title: Dokončování členů ve službě starší verze jazyka | Dokumentace Microsoftu
+title: Dokončení členů ve službě starší verze jazyka | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,53 +13,53 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 93182d61b6ecf5bf22ea7117bf8ccfd17e2acd1a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437914"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64806705"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>Dokončování členů ve službě starší verze jazyka
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Člen doplňování technologie IntelliSense je popisku tlačítka, která zobrazuje seznam možných členů určitého oboru jako třída, struktura, výčet nebo oboru názvů. Například v jazyce C#, pokud uživatel zadá "this" následovaných tečkou, seznam všech členů třídy nebo struktury v aktuálním oboru se zobrazí v seznamu, ze kterého může uživatel vybrat.  
+Dokončování členů technologie IntelliSense je popis tlačítka, který zobrazuje seznam možných členů konkrétního oboru, jako je třída, struktura, výčet nebo obor názvů. Například v jazyce C#, pokud uživatel zadá "This" následovaný tečkou, seznam všech členů třídy nebo struktury v aktuálním oboru je prezentován v seznamu, ze kterého může uživatel vybrat.  
   
- Rozhraní spravovaného balíčku (MPF) poskytuje podporu pro popis tlačítka a správu seznamu v popisu tlačítka; vše, co je potřeba je spolupráce z analyzátor, který má poskytnout data, která se zobrazí v seznamu.  
+ Sada Managed Package Framework (MPF) poskytuje podporu pro popis tlačítka a správu seznamu v popisu nástroje. vše, co je potřeba, je spolupráce z analyzátoru a poskytuje data, která se zobrazí v seznamu.  
   
- Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace najdete v tématu [rozšíření pro Editor a jazykových služeb](../../extensibility/extending-the-editor-and-language-services.md).  
+ Starší jazykové služby jsou implementovány jako součást sady VSPackage, ale novější způsob, jak implementovat funkce jazykové služby, je použít rozšíření MEF. Další informace najdete v tématu [rozšíření editoru a jazykových služeb](../../extensibility/extending-the-editor-and-language-services.md).  
   
 > [!NOTE]
-> Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.  
+> Doporučujeme začít používat nové rozhraní API editoru co nejrychleji. Tím se vylepšit výkon vaší jazykové služby a umožní vám využít nové funkce editoru.  
   
 ## <a name="how-it-works"></a>Jak to funguje  
- Následují dva způsoby, ve kterých se zobrazí seznam členů třídy MPF pomocí:  
+ Níže jsou uvedeny dva způsoby, jak se seznam členů zobrazuje pomocí tříd MPF:  
   
-- Umístění blikající kurzor na identifikátor nebo za znakem ukončení člena a vyberete **seznam členů** z **IntelliSense** nabídky.  
+- Pozice blikajícího kurzoru na identifikátor nebo po znaku dokončení členů a výběr **členů seznamu** z nabídky **technologie IntelliSense** .  
   
-- <xref:Microsoft.VisualStudio.Package.IScanner> Skener zjistí znak člen dokončení a nastaví token aktivační událost s <xref:Microsoft.VisualStudio.Package.TokenTriggers> pro daný znak.  
+- <xref:Microsoft.VisualStudio.Package.IScanner>Skener detekuje znak dokončení členů a pro tento znak nastaví Trigger tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> .  
   
-  Člen dokončení znak označuje, že je členem třídy, struktury nebo výčtu dodržovat. Například v jazyce C# nebo Visual Basic je znak dokončení člena `.`, zatímco v jazyce C++ je znak, který buď `.` nebo `->`. Aktivační událost hodnota, při kontrole vyberte znak člena.  
+  Znak dokončení členů označuje, že je nutné sledovat člena třídy, struktury nebo výčtu. Například v jazyce C# nebo Visual Basic znak dokončení člena je `.` , zatímco v jazyce C++ je znak buď `.` nebo `->` . Hodnota triggeru je nastavena při prohledávání znaku výběru člena.  
   
-### <a name="the-intellisense-member-list-command"></a>Příkaz seznamu členů IntelliSense  
- <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> Příkaz zahájí volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodu <xref:Microsoft.VisualStudio.Package.Source> třídy a <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> zase volání metody <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda analyzátoru s důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+### <a name="the-intellisense-member-list-command"></a>Příkaz pro výpis členů IntelliSense  
+ <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>Příkaz iniciuje volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metody <xref:Microsoft.VisualStudio.Package.Source> třídy na třídu a <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> Metoda zase volá <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> analyzátor metody s důvodem analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> .  
   
- Určuje analyzátor kontextu aktuální pozici, jakož i token pod nebo bezprostředně před aktuální pozici. Na základě tohoto tokenu, se zobrazí seznam deklarací. Například v jazyce C#, pokud pozice blikajícího kurzoru na člen třídy a vyberte **seznam členů**, získání seznamu všech členů třídy. Pokud umístíte blikající kurzor po určitou dobu, která odpovídá proměnné objektu, získání seznamu všech členů třídy, které objekt představuje. Všimněte si, že pokud je kurzor na člen když se zobrazí seznam členů, výběr člena ze seznamu nahradí členu, který je blikající kurzor na s jednou v seznamu.  
+ Analyzátor určuje kontext aktuální pozice a také token pod nebo bezprostředně před aktuální pozicí. Na základě tohoto tokenu se zobrazí seznam deklarací. Například v jazyce C#, pokud umístíte blikající kurzor na člena třídy a vyberete **seznam členů**, získáte seznam všech členů třídy. Pokud umístíte blikající kurzor po tečkě, která následuje za proměnnou objektu, získáte seznam všech členů třídy, které objekt představuje. Všimněte si, že pokud je kurzor umístěn na členu, když je zobrazen seznam členů, výběr člena ze seznamu nahradí člena, na kterém je kurzor v seznamu.  
   
-### <a name="the-token-trigger"></a>Token aktivační událost  
- <xref:Microsoft.VisualStudio.Package.TokenTriggers> Aktivační událost zahájí volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodu na <xref:Microsoft.VisualStudio.Package.Source> třídy a <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metody volá analyzátor s důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> (pokud token aktivační události obsahuje taky <xref:Microsoft.VisualStudio.Package.TokenTriggers> příznak, z důvodu analýzy je <xref:Microsoft.VisualStudio.Package.ParseReason> zahrnující výběr členů a zvýraznění závorek).  
+### <a name="the-token-trigger"></a>Aktivační událost tokenu  
+ <xref:Microsoft.VisualStudio.Package.TokenTriggers>Aktivační událost inicializuje volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metody <xref:Microsoft.VisualStudio.Package.Source> třídy na třídu a <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> Metoda pak zavolá analyzátor s důvodem analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> (Pokud Trigger tokenu také obsahuje <xref:Microsoft.VisualStudio.Package.TokenTriggers> příznak, důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason> kombinuje výběr členů a zvýrazňování složených závorek).  
   
- Určuje analyzátor, kontext aktuálního umístění a také, co byla zadána před člen vyberte znak. Z těchto informací že analyzátor vytvoří seznam všech členů požadovaném oboru. Tento seznam deklarací je uložen v <xref:Microsoft.VisualStudio.Package.AuthoringScope> objekt, který je vrácen z <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody. Pokud jsou vráceny všechny deklarace, zobrazí se popis tlačítka člen dokončení. Popis tlačítka spravuje instance <xref:Microsoft.VisualStudio.Package.CompletionSet> třídy.  
+ Analyzátor určuje kontext aktuální pozice a také to, co byl zadán před vybraným znakem člena. Z těchto informací analyzátor vytvoří seznam všech členů požadovaného oboru. Tento seznam deklarací je uložen v <xref:Microsoft.VisualStudio.Package.AuthoringScope> objektu, který je vrácen z <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metody. Pokud jsou vráceny nějaké deklarace, zobrazí se popis nástroje pro dokončení členů. Popis nástroje je spravován instancí <xref:Microsoft.VisualStudio.Package.CompletionSet> třídy.  
   
 ## <a name="enabling-support-for-member-completion"></a>Povolení podpory pro dokončování členů  
- Musíte mít `CodeSense` položka registru nastavena na hodnotu 1 pro podporu všechny operace IntelliSense. Tato položka registru můžete nastavit pomocí pojmenovaný parametr předaný <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atribut uživatele přidružené k balíčku jazyka. Třídy služeb jazyka načetla se hodnota této položky registru z <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
+ Aby bylo možné podporovat jakoukoli operaci technologie IntelliSense, je nutné, abyste měli `CodeSense` položku registru nastavenou na hodnotu 1. Tuto položku registru lze nastavit pomocí pojmenovaného parametru předaného do <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atributu uživatele přidruženého k jazykovému balíčku. Třídy služby jazyka čtou hodnotu této položky registru z <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> vlastnosti <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
   
- Pokud skener vrátí token aktivační událost s <xref:Microsoft.VisualStudio.Package.TokenTriggers>a analyzátor jazyka vrátí seznam hodnot deklarace a pak se zobrazí seznam dokončení členů.  
+ Pokud váš skener vrátí Trigger tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> a váš analyzátor vrátí seznam deklarací, zobrazí se seznam dokončení členů.  
   
-## <a name="supporting-member-completion-in-the-scanner"></a>Podpora dokončování členů ve skener  
- Skener musí být schopen rozpoznat znak dokončení člen a nastavte token aktivační událost s <xref:Microsoft.VisualStudio.Package.TokenTriggers> při analyzovat tento znak.  
+## <a name="supporting-member-completion-in-the-scanner"></a>Podpora doplňování členů na skeneru  
+ Skener musí být schopný detekovat znak dokončení členů a nastavit Trigger tokenu <xref:Microsoft.VisualStudio.Package.TokenTriggers> , když je tento znak analyzován.  
   
 ### <a name="example"></a>Příklad  
- Tady je zjednodušený příklad detekovat znak dokončení člena a nastavení odpovídající <xref:Microsoft.VisualStudio.Package.TokenTriggers> příznak. V tomto příkladu je pouze pro ilustraci. Předpokládá, že skener obsahuje metodu `GetNextToken` , který identifikuje a vrátí tokeny z řádku textu. Pokaždé, když se zobrazí správný typ znaku, ukázkový kód jednoduše nastaví aktivační událost.  
+ Tady je zjednodušený příklad zjištění znaku dokončení členů a nastavení příslušného <xref:Microsoft.VisualStudio.Package.TokenTriggers> příznaku. Tento příklad je určen pouze pro ilustrativní účely. Předpokládá, že váš skener obsahuje metodu `GetNextToken` , která identifikuje a vrací tokeny z řádku textu. Vzorový kód jednoduše nastaví Trigger vždy, když se uvidí správný druh znaku.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -92,15 +92,15 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="supporting-member-completion-in-the-parser"></a>Podpora dokončování členů ve analyzátor  
- Pro dokončování členů <xref:Microsoft.VisualStudio.Package.Source> třídy volání <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> metody. V seznamu musí implementovat do třídy, která je odvozena od <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Zobrazit <xref:Microsoft.VisualStudio.Package.Declarations> podrobné informace o metodách musí implementovat třídu.  
+## <a name="supporting-member-completion-in-the-parser"></a>Podpora dokončování členů v analyzátoru  
+ Pro dokončení členů <xref:Microsoft.VisualStudio.Package.Source> třída volá <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> metodu. Je nutné implementovat seznam ve třídě, která je odvozena od <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Další informace <xref:Microsoft.VisualStudio.Package.Declarations> o metodách, které je nutné implementovat, naleznete v třídě.  
   
- Analyzátor je volána s <xref:Microsoft.VisualStudio.Package.ParseReason> nebo <xref:Microsoft.VisualStudio.Package.ParseReason> po zadání znaku vyberte člena. Umístění podle <xref:Microsoft.VisualStudio.Package.ParseRequest> je objekt okamžitě po člen vyberte znak. Analyzátor musí shromáždit názvy všech členů, které se mohou objevit v seznamu členů v daný okamžik ve zdrojovém kódu. Analyzátor musí pak parsovat aktuální řádek do určit obor, který chce uživatel přidružený vyberte znak člena.  
+ Analyzátor se volá s <xref:Microsoft.VisualStudio.Package.ParseReason> nebo <xref:Microsoft.VisualStudio.Package.ParseReason> při zadání znaku pro výběr člena. Umístění zadané v <xref:Microsoft.VisualStudio.Package.ParseRequest> objektu je ihned po znaku výběru člena. Analyzátor musí shromažďovat názvy všech členů, které se mohou objevit v seznamu členů daného konkrétního bodu ve zdrojovém kódu. Poté analyzátor musí analyzovat aktuální řádek a určit tak rozsah, který uživatel potřebuje k výběru znaku.  
   
- Tento obor je založená na typu identifikátor před člen vyberte znak. V jazyce C#, například členskou proměnnou `languageService` , která má typ `LanguageService`, zadáním **languageService.** Vytvoří seznam všech členů `LanguageService` třídy. Také v jazyce C# psát **to.** Vytvoří seznam všech členů třídy v aktuálním oboru.  
+ Tento rozsah je založen na typu identifikátoru před vybraným znakem člena. Například v jazyce C#, s ohledem na členskou proměnnou `languageService` , která má typ `LanguageService` , zadejte **languageService.** Vytvoří seznam všech členů `LanguageService` třídy. Také v jazyce C# zadáním **tohoto příkazu.** Vytvoří seznam všech členů třídy v aktuálním oboru.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje jeden způsob, jak naplnit <xref:Microsoft.VisualStudio.Package.Declarations> seznamu. Tento kód předpokládá, že analyzátor vytvoří deklaraci a přidá ji do seznamu voláním `AddDeclaration` metodu `TestAuthoringScope` třídy.  
+ Následující příklad ukazuje jeden ze způsobů, jak naplnit <xref:Microsoft.VisualStudio.Package.Declarations> seznam. Tento kód předpokládá, že analyzátor vytvoří deklaraci a přidá ji do seznamu voláním `AddDeclaration` metody `TestAuthoringScope` třídy.  
   
 ```csharp  
 using System.Collections;  

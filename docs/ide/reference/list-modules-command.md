@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1e083a0e1baeefc6807dccb2199cd0e5a9bd883d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595498"
 ---
 # <a name="list-modules-command"></a>Listovat moduly – příkaz
-Zobrazí seznam modulů pro aktuální proces.
+Vypíše moduly pro aktuální proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,41 +33,41 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametry
-/Adresa:`yes|no`
+Adresáře`yes|no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota `yes`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat adresy paměti modulů. Výchozí hodnota je `yes` .
 
-/Název:`yes|no`
+Název`yes|no`
 
-Nepovinný parametr. Určuje, zda mají být názvy modulů zobrazovány. Výchozí hodnota `yes`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat názvy modulů. Výchozí hodnota je `yes` .
 
-/Objednat:`yes|no`
+Za`yes|no`
 
-Nepovinný parametr. Určuje, zda se má zobrazit pořadí modulů. Výchozí hodnota `no`je .
+Nepovinný parametr. Určuje, zda se má zobrazovat pořadí modulů. Výchozí hodnota je `no` .
 
-/Cesta:`yes|no`
+Dílčí`yes|no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazit cesty modulů. Výchozí hodnota `yes`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat cesty modulů. Výchozí hodnota je `yes` .
 
-/Proces:`yes|no`
+Přihlášení`yes|no`
 
-Nepovinný parametr. Určuje, zda mají být procesy modulů zobrazovány. Výchozí hodnota `no`je .
+Nepovinný parametr. Určuje, zda se mají zobrazit procesy modulů. Výchozí hodnota je `no` .
 
-/SymbolFile:`yes|no`
+SymbolFile`yes|no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazit soubory symbolů modulů. Výchozí hodnota `no`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat soubory symbolů modulů. Výchozí hodnota je `no` .
 
-/SymbolStatus:`yes|no`
+SymbolStatus`yes|no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota `yes`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat stavy symbolů modulů. Výchozí hodnota je `yes` .
 
-/Časové razítko:`yes|no`
+Časové razítko`yes|no`
 
-Nepovinný parametr. Určuje, zda se mají zobrazit časová razítka modulů. Výchozí hodnota `no`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat časová razítka modulů. Výchozí hodnota je `no` .
 
-/Verze:`yes|no`
+Znění`yes|no`
 
-Nepovinný parametr. Určuje, zda mají být verze modulů zobrazovány. Výchozí hodnota `no`je .
+Nepovinný parametr. Určuje, zda se mají zobrazovat verze modulů. Výchozí hodnota je `no` .
 
 ## <a name="example"></a>Příklad
 V tomto příkladu jsou uvedeny názvy modulů, adresy a časová razítka pro aktuální proces.

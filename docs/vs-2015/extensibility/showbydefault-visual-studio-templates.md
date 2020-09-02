@@ -1,5 +1,5 @@
 ---
-title: ShowByDefault (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: ShowByDefault (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 98779743f1e7c68f579334d74d3651357c6ee0b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184132"
 ---
 # <a name="showbydefault-visual-studio-templates"></a>ShowByDefault (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud `false`, určuje, že se zobrazí pouze šablony podle zadaného [templategroupid –](../extensibility/templategroupid-element-visual-studio-templates.md).  
+Pokud `false` Určuje, že se šablona bude zobrazovat pouze pod zadaným [TemplateGroupID –](../extensibility/templategroupid-element-visual-studio-templates.md).  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<ShowByDefault >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<ShowByDefault>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ShowByDefault> true/false </ShowByDefault>  
@@ -46,20 +46,20 @@ Pokud `false`, určuje, že se zobrazí pouze šablony podle zadaného [template
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`. Pokud je hodnota true, určuje, že šablony se zobrazí pro všechny typy projektů. Pokud false, šablony je nadále obsažena pouze v rámci zadaného `TemplateGroupID`.  
+ Text musí být buď `true` nebo `false` . Pokud má hodnotu true, určuje, že se šablona zobrazí pro všechny typy projektů. Pokud má hodnotu false, šablona se zobrazí jenom pod zadaným polem `TemplateGroupID` .  
   
 ## <a name="remarks"></a>Poznámky  
  `ShowByDefault` je volitelný prvek. Výchozí hodnota je `true`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony.  
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablonu.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -88,5 +88,5 @@ Pokud `false`, určuje, že se zobrazí pouze šablony podle zadaného [template
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+ [Referenční dokumentace schématu šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
  [TemplateGroupID – element (šablony sady Visual Studio)](../extensibility/templategroupid-element-visual-studio-templates.md)

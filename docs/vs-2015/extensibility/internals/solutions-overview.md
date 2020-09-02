@@ -1,5 +1,5 @@
 ---
-title: Přehled řešení | Dokumentace Microsoftu
+title: Přehled řešení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,40 +11,40 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fb3bb85ab172404262c147cce285cebaf756afc9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432080"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831854"
 ---
 # <a name="solutions-overview"></a>Přehled řešení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Řešení je seskupení jednoho nebo více projektů, které vzájemně spolupracují na vytvoření aplikace. Projekt a stavové informace týkající se řešení jsou uloženy ve dvou souborech jiné řešení. Soubor řešení (.sln) je založený na textu a můžete umístit pod správou zdrojového kódu a sdílet mezi uživateli. Soubor řešení uživatelské možnosti (.suo) je binární. Soubor .suo v důsledku toho nemůže být umístěn pod správou zdrojového kódu a obsahuje informace specifické pro uživatele.  
+Řešení je seskupení jednoho nebo více projektů, které spolupracují při vytváření aplikace. Informace o projektu a stavu týkající se řešení jsou uloženy ve dvou různých souborech řešení. Soubor řešení (. sln) je založen na textu a lze jej umístit pod správu zdrojového kódu a sdílet mezi uživateli. Soubor možnosti uživatele řešení (. suo) je binární. V důsledku toho nemůže být soubor. suo umístěn pod správou zdrojového kódu a obsahuje informace specifické pro uživatele.  
   
- Žádné VSPackage lze zapisovat do obou typů souborů řešení. Vzhledem k povaze soubory existují dvě různá rozhraní implementována pro zápis do nich. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> Rozhraní textové informace zapisuje do souboru .sln a <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> rozhraní zapíše do souboru .suo binární datové proudy.  
-  
-> [!NOTE]
-> Projekt není nutné explicitně zápis záznamu pro samotné do souboru řešení. prostředí, která zpracovává pro projekt. Proto pokud chcete přidat další obsah konkrétně do souboru řešení, není potřeba registrovat vašeho balíčku VSPackage tímto způsobem.  
-  
- Každý VSPackage podpora trvalosti řešení používá tři rozhraní <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> rozhraní, které je implementované prostředí a volané sady VSPackage, a `IVsPersistSolutionProps` a `IVsPersistSolutionOpts`, které jsou obě implementované sady VSPackage. `IVsPersistSolutionOpts` Rozhraní pouze musí implementovat, pokud má být sady VSPackage zapsaného do souboru .suo soukromé informace.  
-  
- Po otevření řešení následující proces probíhá.  
-  
-1. Prostředí přečte řešení.  
-  
-2. Pokud najde prostředí `CLSID`, načte odpovídající VSPackage.  
-  
-3. Pokud je VSPackage načteny, volání prostředí `QueryInterface` pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> rozhraní pro rozhraní, které vyžaduje sady VSPackage.  
-  
-   1. Při čtení ze souboru .sln, prostředí volá `QueryInterface` pro `IVsPersistSolutionProps`.  
-  
-   2. Při čtení ze souboru .suo, prostředí volá `QueryInterface` pro `IVsPersistSolutionOpts`.  
-  
-   Konkrétní informace týkající se použití těchto souborů můžete najít v [řešení (. SLN) soubor](../../extensibility/internals/solution-dot-sln-file.md) a [uživatelské možnosti řešení (. Soubor suo)](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
+ Libovolný VSPackage může zapisovat do obou typů souborů řešení. Vzhledem k povaze souborů jsou k zápisu do nich k dispozici dvě různá rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>Rozhraní zapisuje textové informace do souboru. sln a <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> rozhraní zapisuje binární proudy do souboru. suo.  
   
 > [!NOTE]
-> Pokud chcete vytvořit novou konfiguraci řešení skládající se z konfigurace dva projekty a vyloučení třetí ze sestavení, budete muset použít uživatelské rozhraní vlastností stránky nebo služby automation. Správce konfigurace sestavení řešení a jejich vlastnosti nelze změnit přímo, ale můžete pracovat s použitím správci sestavení řešení `SolutionBuild` třídy z DTE v modelu automatizace. Další informace o konfiguraci řešení najdete v tématu [konfigurace řešení](../../extensibility/internals/solution-configuration.md).  
+> Projekt nemusí explicitně zapisovat položku pro sebe sama do souboru řešení; prostředí zpracovává projekt. Proto pokud nechcete přidat další obsah konkrétně do souboru řešení, nemusíte tímto způsobem registrovat VSPackage.  
+  
+ Každé rozhraní VSPackage podporující trvalé trvalosti používá tři rozhraní, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> rozhraní, které je implementováno prostředím a voláno pomocí VSPackage a `IVsPersistSolutionProps` a `IVsPersistSolutionOpts` , které jsou implementovány rozhraním VSPackage. `IVsPersistSolutionOpts`Rozhraní musí být implementováno pouze v případě, že je do souboru. suo zapisovány soukromé informace.  
+  
+ Po otevření řešení dojde k následujícímu procesu.  
+  
+1. Prostředí toto řešení přečte.  
+  
+2. Pokud prostředí najde a `CLSID` , načte odpovídající VSPackage.  
+  
+3. Pokud se načte VSPackage, prostředí vyvolá rozhraní pro `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> rozhraní, které VSPackage vyžaduje.  
+  
+   1. Při čtení ze souboru. sln volá prostředí `QueryInterface` pro `IVsPersistSolutionProps` .  
+  
+   2. Při čtení ze souboru. suo volá prostředí `QueryInterface` pro `IVsPersistSolutionOpts` .  
+  
+   Konkrétní informace týkající se použití těchto souborů najdete v [řešení (. SLN)](../../extensibility/internals/solution-dot-sln-file.md) – možnosti uživatele pro soubor a [řešení (. Suo) soubor](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
+  
+> [!NOTE]
+> Chcete-li vytvořit novou konfiguraci řešení skládající se ze dvou konfigurací projektů a s výjimkou třetího ze sestavení, je nutné použít uživatelské rozhraní stránky vlastností nebo automatizaci. Nemůžete změnit konfigurace správce sestavení řešení a jejich vlastnosti přímo, ale můžete manipulovat s řešením správce sestavení pomocí `SolutionBuild` třídy z DTE v modelu automatizace. Další informace o konfiguraci řešení najdete v tématu věnovaném [konfiguraci řešení](../../extensibility/internals/solution-configuration.md).  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění vloženého kódu | Dokumentace Microsoftu'
+title: 'Postupy: ladění vloženého kódu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -27,47 +27,47 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: df35a25534961c6ab94891d2da6fe54f05c37a3e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681080"
 ---
 # <a name="how-to-debug-injected-code"></a>Postupy: Ladění vloženého kódu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-POZNÁMKA:]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte nastavení importu a exportu v nabídce Nástroje. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ZNAČTE
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
- Pomocí atributů může výrazně zjednodušit programování C++. Další informace najdete v tématu [koncepty](https://msdn.microsoft.com/library/563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e). Některé atributy jsou interpretovány kompilátorem přímo. Ostatní atributy vloží kód do zdroje program, který kompilátor pak zkompiluje. Tato vloženého kódu díky programování usnadnit tím, že snižuje množství kódu, který musíte napsat. V některých případech však chyba může způsobit selhání při provádění vloženého kódu aplikace. Pokud k tomu dojde, budete pravděpodobně chtít podívat na vložený kód. Visual Studio poskytuje dva způsoby, jak vidíte vloženého kódu:  
+ Použití atributů může značně zjednodušit programování v jazyce C++. Další informace najdete v tématu [Koncepty](https://msdn.microsoft.com/library/563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e). Některé atributy jsou interpretovány přímo kompilátorem. Jiné atributy vloží kód do zdroje programu, který kompilátor potom zkompiluje. Tento vložený kód usnadňuje programování tím, že snižuje množství kódu, který musíte napsat. V některých případech ale může dojít k selhání vaší aplikace při provádění vloženého kódu. Pokud k tomu dojde, budete pravděpodobně chtít podívat se na vložený kód. Visual Studio nabízí dva způsoby, jak zobrazit vložený kód:  
   
-- Můžete zobrazit kódu injektovaného do **zpětný překlad** okna.  
+- Vložený kód můžete zobrazit v okně **zpětný překlad** .  
   
-- Pomocí [/Fx](https://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560), můžete vytvořit sloučené zdrojový soubor, který obsahuje původní a vloženého kódu.  
+- Pomocí [/FX](https://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560)můžete vytvořit sloučený zdrojový soubor, který obsahuje původní a vložený kód.  
   
-  **Zpětný překlad** okno zobrazuje instrukcí sestavení jazyka, které odpovídají zdrojový kód a kód vložený atributy. Kromě toho **zpětný překlad** okna můžete zobrazit poznámky zdrojového kódu.  
+  Okno zpětný **Překlad** zobrazuje instrukce pro jazyk sestavení, které odpovídají zdrojovému kódu, a kód vložený pomocí atributů. Kromě toho může okno zpětný **Překlad** zobrazit anotaci zdrojového kódu.  
   
-### <a name="to-turn-on-source-annotation"></a>Chcete-li ve zdrojové poznámky  
+### <a name="to-turn-on-source-annotation"></a>Zapnutí zdrojové poznámky  
   
-- Klikněte pravým tlačítkem myši **zpětný překlad** okna a zvolte **zobrazit zdrojový kód** z místní nabídky.  
+- Klikněte pravým tlačítkem myši na okno **zpětný překlad** a v místní nabídce vyberte možnost **Zobrazit zdrojový kód** .  
   
-     Pokud znáte umístění atributu v okně zdroje, můžete použít nabídku k vyhledání kódu injektovaného do **zpětný překlad** okna.  
+     Pokud znáte umístění atributu v okně zdroje, můžete použít místní nabídku k vyhledání vloženého kódu v okně **zpětný překlad** .  
   
-### <a name="to-view-injected-code"></a>Chcete-li zobrazit vloženého kódu  
-  
-1. Ladicí program musí být v režimu přerušení.  
-  
-2. V okně zdrojového kódu umístěte kurzor na slovo před atribut, jehož vloženého kódu, které chcete zobrazit.  
-  
-3. Klikněte pravým tlačítkem a vyberte **přejít na zpětný překlad** z místní nabídky.  
-  
-     Pokud je atribut umístění u aktuální bod provádění, můžete vybrat **zpětný překlad** okna **ladění** nabídky.  
-  
-### <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>Chcete-li zobrazit zpětný překlad kódu v aktuální bod provádění  
+### <a name="to-view-injected-code"></a>Zobrazení vloženého kódu  
   
 1. Ladicí program musí být v režimu přerušení.  
   
-2. Z **ladění** nabídce zvolte **Windows**a klikněte na tlačítko **zpětný překlad**.  
+2. V okně zdrojového kódu umístěte kurzor před atribut, jehož vložený kód chcete zobrazit.  
+  
+3. Klikněte pravým tlačítkem a z místní nabídky vyberte **Přejít na zpětný překlad** .  
+  
+     Pokud se umístění atributu blíží aktuálnímu bodu spuštění, můžete vybrat okno **zpětný překlad** z nabídky **ladění** .  
+  
+### <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>Zobrazení kódu zpětného překladu v aktuálním bodu spuštění  
+  
+1. Ladicí program musí být v režimu přerušení.  
+  
+2. V nabídce **ladění** vyberte možnost **Windows**a klikněte na **zpětný překlad**.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

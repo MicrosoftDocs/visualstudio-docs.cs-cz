@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití protokolu aktivit | Dokumentace Microsoftu'
+title: 'Postupy: používání protokolu aktivit | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,23 +12,23 @@ caps.latest.revision: 30
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d450e02d23159f186fd85bf1b687a2fb2c18e82a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432576"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64824257"
 ---
 # <a name="how-to-use-the-activity-log"></a>Postupy: Použití protokolu aktivit
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozšíření VSPackages můžete zapisovat zprávy do protokolu aktivit. Tato funkce je zvláště užitečné pro ladění rozšíření VSPackages v prostředí maloobchodu.  
+Sady VSPackage můžou zapisovat zprávy do protokolu aktivit. Tato funkce je užitečná hlavně při ladění VSPackage v maloobchodních prostředích.  
   
 > [!TIP]
-> Protokol aktivit je vždycky zapnuté. Postupné vyrovnávací paměti sto poslední položky, jakož i prvních deseti položky, které mají informace o obecné konfiguraci udržuje Visual Studio.  
+> Protokol aktivit je vždycky zapnutý. Visual Studio uchovává vyrovnávací paměť posledních 100 záznamů a také prvních deset položek, které mají obecné informace o konfiguraci.  
   
-### <a name="to-write-an-entry-to-the-activity-log"></a>Zapsat položku do protokolu aktivit  
+### <a name="to-write-an-entry-to-the-activity-log"></a>Zápis položky do protokolu aktivit  
   
-1. Vložte tento kód v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda nebo v jakékoliv jiné metody, s výjimkou VSPackage konstruktor:  
+1. Vložte tento kód do <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody nebo jakékoliv jiné metody s výjimkou konstruktoru VSPackage:  
   
     ```csharp  
     IVsActivityLog log = GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
@@ -40,27 +40,27 @@ Rozšíření VSPackages můžete zapisovat zprávy do protokolu aktivit. Tato f
         "Called for: {0}", this.ToString()));  
     ```  
   
-     Tento kód získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> služby a přetypování na <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> zapíše informační položku do protokolu aktivit v kontextu aktuální jazykové verze.  
+     Tento kód získá <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> službu a přetypování ji na <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> rozhraní. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> Zapíše informační záznam do protokolu aktivit pomocí aktuálního kulturního kontextu.  
   
-2. Při načítání sady VSPackage (obvykle při vyvolání příkazu nebo se otevře okno) textu se zapíše do protokolu aktivit.  
+2. Po načtení balíčku VSPackage (obvykle když je vyvolán příkaz nebo je otevřeno okno) se text zapíše do protokolu aktivit.  
   
-### <a name="to-examine-the-activity-log"></a>Prozkoumat v protokolu aktivit  
+### <a name="to-examine-the-activity-log"></a>Kontrola protokolu aktivit  
   
-1. Najít v protokolu aktivit v podsložce pro Visual Studio data: *% AppData %* \Microsoft\VisualStudio\14.0\ActivityLog.XML...  
+1. Vyhledejte protokol aktivit v podsložce pro data aplikace Visual Studio: *% data%* \Microsoft\VisualStudio\14.0\ActivityLog.XML..  
   
-2. Otevřete protokol aktivit pomocí libovolného textového editoru. Zde je typický položka:  
+2. Otevřete protokol aktivit v libovolném textovém editoru. Tady je typická položka:  
   
     ```  
     Called for: Company.MyApp.MyAppPackage ...  
     ```  
   
 ## <a name="robust-programming"></a>Robustní programování  
- Protože protokol aktivit je služba, není k dispozici v konstruktoru VSPackage protokolu aktivit.  
+ Vzhledem k tomu, že protokol aktivit je služba, protokol aktivit není v konstruktoru VSPackage k dispozici.  
   
- Protokol aktivit by si měly opatřit pouze před zápisem do něj. Ukládat do mezipaměti nebo uložení protokolu aktivit pro budoucí použití.  
+ Protokol aktivit byste měli získat těsně před zapsáním do něj. Neukládejte protokol aktivit do mezipaměti ani neukládejte ho pro budoucí použití.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE>   
- [Řešení potíží s rozšířením VSPackages](../extensibility/troubleshooting-vspackages.md)   
+ [Řešení potíží s VSPackage](../extensibility/troubleshooting-vspackages.md)   
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

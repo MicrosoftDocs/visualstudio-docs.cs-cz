@@ -1,5 +1,5 @@
 ---
-title: CreateInPlace (šablony sady Visual Studio) | Dokumentace Microsoftu
+title: CreateInPlace (šablony sady Visual Studio) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d722aebef0cbcf589185c36cb481a676280d59ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184249"
 ---
 # <a name="createinplace-visual-studio-templates"></a>CreateInPlace (šablony sady Visual Studio)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Určuje, jestli se má vytvořit projekt a provést nahrazení parametrů v zadaném umístění, nebo provést nahrazení parametrů v dočasném umístění a potom uložte projekt do zadaného umístění.  
+Určuje, zda se má vytvořit projekt a provést nahrazení parametru v zadaném umístění, nebo provést nahrazení parametru v dočasném umístění a pak projekt uložit do zadaného umístění.  
   
- \<Vstemplate – >  
- \<TemplateData >  
- \<CreateInPlace >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<CreateInPlace>  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CreateInPlace> true/false </CreateInPlace>  
@@ -46,20 +46,20 @@ Určuje, jestli se má vytvořit projekt a provést nahrazení parametrů v zada
   
 ### <a name="parent-elements"></a>Nadřazené elementy  
   
-|Prvek|Popis|  
+|Element|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Zařadí šablonu do kategorie a definuje, jak se zobrazí v dialogovém okně **Nový projekt** nebo **Přidat novou položku** .|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`. Pokud `true`, vytvoření projektu a nahrazení parametru se provádí v umístění zadaném v **nový projekt** dialogové okno. Pokud `false`, se provádí nahrazení parametru do dočasného umístění a projekt se pak zkopíruje do zadaného umístění.  
+ Text musí být buď `true` nebo `false` . Pokud je `true` projekt vytvořen a nahrazování parametrů je provedeno v umístění zadaném v dialogovém okně **Nový projekt** . Pokud `false` je nahrazení parametru provedeno v dočasném umístění a projekt je poté zkopírován do zadaného umístění.  
   
 ## <a name="remarks"></a>Poznámky  
  `CreateInPlace` je volitelný prvek. Výchozí hodnota je `true`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje metadata [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablony.  
+ Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../includes/csprcs-md.md)] šablonu.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

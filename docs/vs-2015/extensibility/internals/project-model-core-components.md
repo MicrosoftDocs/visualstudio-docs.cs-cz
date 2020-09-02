@@ -1,5 +1,5 @@
 ---
-title: Základní komponenty modelu projektu | Dokumentace Microsoftu
+title: Základní komponenty modelu projektu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,98 +12,98 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: de65155e08f4c2410d19db1b25105d247c9f0952
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704119"
 ---
 # <a name="project-model-core-components"></a>Základní komponenty modelu projektu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-V následujících tabulkách doplňovat modelu projektu. Tabulky k dispozici stručné popisy rozhraní a služby určené v modelu, rozhraní a služeb přidružený k konkrétní objekty. Kromě toho v tabulkách jsou podrobně popsané jiného rozhraní, které jsou nepovinné v projektu vytváření a údržbu v závislosti na požadavcích vaší konkrétního typu projektu.  
+Následující tabulky se rozšiřují v modelu projektu. Tabulky obsahují stručný popis rozhraní a služeb identifikovaných v modelu a rozhraní a služby přidružené ke konkrétním objektům. Kromě toho tabulky obsahují podrobnosti o dalších rozhraních, která jsou volitelná v vytváření a údržbě projektu v závislosti na požadavcích vašeho konkrétního typu projektu.  
   
- Další informace najdete v tématu [nástroje procházení symbolů podpora](../../extensibility/internals/supporting-symbol-browsing-tools.md).  
+ Další informace najdete v tématu [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md).  
   
 ### <a name="package-object"></a>Objekt balíčku  
   
 |Rozhraní|Komentáře|  
 |---------------|--------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>|Inicializuje VSPackage v integrovaném vývojovém prostředí a zpřístupňuje jeho služeb rozhraní IDE.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>|Inicializuje VSPackage v integrovaném vývojovém prostředí a zpřístupní jeho služby pro IDE.|  
   
-### <a name="project-factory-object"></a>Objekt Factory projektu  
+### <a name="project-factory-object"></a>Objekt factory projektu  
   
 |Rozhraní|Komentáře|  
 |---------------|--------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>|Vytváření nových projektů a otevření stávajících projektů slouží ke správě.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>|Spravuje vytváření nových projektů a otevírání existujících projektů.|  
   
 ### <a name="project-objects"></a>Objekty projektu  
   
 |Rozhraní|Komentáře|  
 |----------------|--------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>|Spravuje přidávání a odebírání položek projektu, se otevře editory a udržuje mapování mezi moniker každý dokument a `VSITEMID`. Dědí z `IVsProject` a `IVsProject2`.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>|Řídí navigaci a zobrazení vlastností a poskytuje události.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>|Umožňuje spuštění podobně jako u příkazu `IOleCommandTarget` pro příkazech, jako je vyjmutí a přejmenovat, které se vztahují pouze po výběru v Průzkumníku řešení.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Slouží jako cílové rozhraní příkazu primární pro hierarchii projektu. Jedná se o standardní rozhraní pro dotazování na objekty pro jejich stavu nebo stavu a spuštění příkazů. Tato možnost je k dispozici, pokud nejsou fokus v okně projektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Koordinuje trvalého stavu projektu. Obvykle stav projektu se ukládá jako soubor projektu, ale dokáže se přizpůsobit úložných systémů, které nejsou založené na souborech.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2>|Umožňuje projektu ke správě všech aspektů trvalosti pro projektové položky, buď jako souborům na disku nebo objekty v jiných systémech úložiště. `IVsPeristHierarchyItem2` Rozhraní se používá pro položky, které neimplementují <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> rozhraní.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|Koordinuje interakce s zdrojového kódu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfgProvider>|Umožňuje projekty můžete spravovat informace o konfiguraci.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>|Spravuje objekty konfigurace projektu, jako jsou konfigurace ladění nebo vydání. Vytvořit, nasadit a ladit operace jsou koordinované přes objekty konfigurace projektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler>|Implementované hierarchie řídit (destruktivní) odstranit nebo odebrat (nedestruktivního) možnosti hierarchie položek. Volání rozhraní příkazů jazyka `IVsHierarchyDeleteHandler` rozhraní z `IVsHierarchy` rozhraní.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsGetCfgProvider>|Poskytuje možnost implementace s objekt, který podporuje `IVsCfgProvider2` rozhraní v různých modelu COM identitu než objekt projektu, který implementuje `IVsHierarchy` rozhraní.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectStartupServices>|Volitelné rozhraní implementované jinými vývojáři extensible aby váš projekt. `IVsProjectStartupServices` Rozhraní umožňuje VSPackage třetích stran k registraci identifikátor GUID, který je uloží do souboru projektu tak, abyste pokaždé, když se načte projekt načtete identifikátor GUID služby třetích stran do vašeho souboru projektu a volání `QueryService` pro tento identifikátor GUID.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierWinClipboardHelperEvents>|Implementované ve zdrojových hierarchií `UIHierarchy` okno koordinovat operace schránky, jako je vyjmutí, kopírování a vložení. Použití `AdviseClipboardHelperEvents` rozhraní k registraci události schránky.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDropDataSource2>|Poskytuje informace o přetaženou položku vzhledem ke svým zdrojem dat během operace přetažení myší v okně hierarchie uživatelského rozhraní. Volá se z `IVsHierarchy` rozhraní.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDropDataTarget>|Poskytuje informace o přetaženou položku vzhledem k jeho cíl přetažení během operace přetažení myší v okně hierarchie uživatelského rozhraní. Volá se z `IVsHierarchy` rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>|Spravuje přidávání a odebírání položek projektu, otevírá editory a udržuje mapování mezi jednotlivými monikery dokumentu a `VSITEMID` . Dědí z `IVsProject` a `IVsProject2` .|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>|Spravuje navigační a zobrazované vlastnosti a poskytuje události.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>|Povolí spuštění příkazu podobně jako `IOleCommandTarget` u příkazů pro příkazy, jako je vyjmutí a přejmenování, které platí pouze v případě, že je fokus v Průzkumník řešení.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Slouží jako cílové rozhraní primárního příkazu pro hierarchii projektu. Je to standardní rozhraní pro dotazování objektů pro svůj stav příkazu nebo stav a spouštění příkazů. K dispozici, pokud se nezaměřujete na okno projektu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Koordinuje persistenci stavu projektu. Stav projektu je obvykle uložen jako soubor projektu, ale lze jej přizpůsobit systémům úložiště, které nejsou založené na souborech.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2>|Umožňuje projektu spravovat všechny aspekty Persistence pro své položky projektu, a to buď jako soubory na disku nebo v objektech v jiných systémech úložiště. `IVsPeristHierarchyItem2`Rozhraní se používá pro položky, které neimplementují <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>|Koordinuje interakce s ovládacím prvkem zdrojového kódu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFlavorCfgProvider>|Umožňuje projektům spravovat informace o konfiguraci.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>|Spravuje objekty konfigurace projektu, například konfigurace ladění a vydání. Operace sestavení, nasazení a ladění jsou koordinovány prostřednictvím objektů konfigurace projektu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler>|Implementované hierarchií pro řízení možností odstranění (destruktivní) nebo odebrání (nedestruktivní) pro položky hierarchie. Volání dotazovacího rozhraní na `IVsHierarchyDeleteHandler` rozhraní z `IVsHierarchy` rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsGetCfgProvider>|Poskytuje možnost implementace pro objekt, který podporuje `IVsCfgProvider2` rozhraní v jiné identitě modelu COM, než je objekt projektu, který implementuje `IVsHierarchy` rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectStartupServices>|Volitelné rozhraní bylo implementováno, aby byl projekt rozšiřitelný jinými vývojáři. `IVsProjectStartupServices`Rozhraní umožňuje VSPackage třetí strany zaregistrovat identifikátor GUID, který zachová do souboru projektu, takže pokaždé, když se projekt načte, načteme do souboru projektu identifikátor GUID služby třetí strany a zavoláte ho `QueryService` pro identifikátor GUID.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierWinClipboardHelperEvents>|Je implementována zdrojovými hierarchiemi v `UIHierarchy` okně pro koordinaci operací schránky, jako je vyjmutí, kopírování a vložení. Použijte `AdviseClipboardHelperEvents` rozhraní k registraci událostí schránky.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDropDataSource2>|Poskytuje informace o přetažené položce relativní ke zdroji dat během operace přetažení v okně hierarchie uživatelského rozhraní. Voláno z `IVsHierarchy` rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDropDataTarget>|Poskytuje informace o přetažené položce vzhledem k cíli přetažení během operace přetažení v okně hierarchie uživatelského rozhraní. Voláno z `IVsHierarchy` rozhraní.|  
   
 ### <a name="configuration-object"></a>Objekt konfigurace  
   
 |Rozhraní|Komentáře|  
 |----------------|--------------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg>|Poskytuje informace o konfiguraci.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>|Umožňuje projekty můžete spravovat informace o konfiguraci.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|Umožňuje spustit pod kontrolu ladicího programu projektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>|Projekty nasazení, které provádí operace nasazení pro jiné projekty implementované.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>|Umožňuje projektům spravovat informace o konfiguraci.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|Povolí spuštění projektu pod ovládacím prvkem ladicího programu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>|Implementováno projekty nasazení, které provádějí operace nasazení pro jiné projekty.|  
   
-### <a name="configuration-builder-object"></a>Objekt konfigurace Tvůrce  
+### <a name="configuration-builder-object"></a>Objekt tvůrce konfigurace  
   
 |Rozhraní|Komentáře|  
 |----------------|--------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>|Spravuje konfiguraci projektu operace sestavení.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>|Spravuje operaci sestavení konfigurace projektu.|  
   
 ### <a name="additional-project-objects"></a>Další objekty projektu  
   
 |Rozhraní|Komentáře|  
 |----------------|--------------|  
-|`IDispatch`<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages>|Zobrazí vlastnosti v položek **vlastnosti** okna.|  
+|`IDispatch`<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages>|Zobrazí vlastnosti položky v okně **vlastnosti** .|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs>|Zobrazí výstupy pro nasazení.|  
   
- Následující tabulka obsahuje stručný popis služby určené v modelu projektu.  
+ Následující tabulka uvádí stručný popis služeb identifikovaných v modelu projektu.  
   
 ### <a name="services"></a>Služby  
   
 |Služba|Komentáře|  
 |-------------|--------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterProjectTypes>|Používat rozšíření VSPackages, které implementují typy projektů k registraci, že existuje jejich objekt pro vytváření projektů pomocí integrovaného vývojového prostředí. Vaše VSPackage musí volat `QueryService` pro tuto službu a zaregistrujte tovární projektu při `IVsPackage::SetSite` metoda je volána. Pokud `SetSite` metoda není volána, váš projekt není vytvořena instance.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>|Poskytuje přístup k rozhraní IDE interní, integrované pojem aktuálního řešení, jako je například možnost udělat výčet projektů, vytvořit nové projekty, provést změny projektu a tak dále.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>|Volá se pro projekty, které chcete ve správě zdrojového kódu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>|Udržuje tabulku otevřené dokumenty k určení, zda jeden nebo více položek projektu jsou už otevřené.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument>|Obsahuje rozhraní a metody volá se, aby skutečně otevřete položku projektu pomocí standardní editor nebo konkrétní editoru.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>|Budete muset volat všechny projekty v případě přidat či odebrat nebo přejmenovat jejich položky.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx>|Spravuje změny do souboru nebo adresáře a oznamuje klientům, pokud vybrané soubory byly změněny na disku.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>|Budete muset volat všechny projekty a editory před nesprávné položky nebo je uložíte.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolutionBuildManager>|Slouží ke správě pořadí operací sestavení a nasazení pro konfigurace projektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellDebugger>|Poskytuje přístup ke službám nízké úrovně ladicí program používá pro většinu ladění ovládacích prvků.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>|Rozšíření VSPackages přístup k informacím o aktuální výběr a umožňuje komunikaci s **vlastnosti** okna.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|Poskytuje základní funkce související s Uživatelským rozhraním IDE, jako je například možnost vytvořit a zobrazit výčet okna nástrojů nebo okna dokumentu nebo oznámit chybu uživateli.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar>|Poskytuje přístup k rozhraní IDE stavový řádek.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|Používaný k implementaci modelu automatizace. Ve vašem projektu modelu a vrátí vlastnosti objektu, který vám umožní vytvoří instanci tohoto objektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|Používaný k implementaci události schránky u projektu objektu v hierarchii. `SVsUIHierWinClipboardHelper` umožňuje správně popisovač operace vyjmutí, kopírování a vložit.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterProjectTypes>|Používá VSPackage, které implementují typy projektů k registraci, že jejich továrna projektu existuje s rozhraním IDE. Aby bylo voláno volání metody, je nutné, aby VSPackage vyvolala `QueryService` tuto službu a zaregistrovala její objekt pro vytváření `IVsPackage::SetSite` . Pokud `SetSite` metoda není volána, projekt není vytvořen.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>|Poskytuje přístup k internímu integrovanému pojmu aktuálního řešení v integrovaném vývojovém prostředí (IDE), jako je například možnost výčtu projektů, vytváření nových projektů, zobrazení upozornění na změny projektu a tak dále.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>|Voláno projekty, které chtějí být součástí správy zdrojového kódu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>|Udržuje tabulku otevřených dokumentů, abyste zjistili, jestli je už jedna nebo víc položek projektu otevřené.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument>|Obsahuje rozhraní a metody volané ke skutečnému otevření položky projektu pomocí standardního editoru nebo konkrétního editoru.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments>|Musí být volány všemi projekty při přidání, odebrání nebo přejmenování svých položek.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx>|Spravuje změny v souboru nebo adresáři a upozorní klienty, když se na disku změnily vybrané soubory.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>|Musí být volány všemi projekty a editory předtím, než je nevyřízené položky nebo je uložíte.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolutionBuildManager>|Spravuje pořadí operací sestavení a nasazení pro konfigurace projektu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellDebugger>|Poskytuje přístup k ladicím službám nižší úrovně, které se používají pro většinu ovládacích prvků ladění.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>|Umožňuje VSPackage přistupovat k informacím o aktuálních výběrech a umožňuje komunikaci s oknem **vlastností** .|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|Poskytuje základní funkce rozhraní IDE související s uživatelským rozhraním, jako je třeba možnost vytvořit a vytvořit výčet oken nástrojů nebo oken dokumentů nebo ohlásit chybu uživateli.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar>|Poskytuje přístup ke stavovým pruhům IDE.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|Slouží k implementaci modelu automatizace. V modelu projektu vrátíte objekt Properties, který umožňuje vytvořit instanci tohoto objektu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|Slouží k implementaci událostí schránky pro objekt projektu v hierarchii. `SVsUIHierWinClipboardHelper` umožňuje správně zpracovat operace vyjmutí, kopírování a vložení.|  
   
 ## <a name="see-also"></a>Viz také  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
- [Kontrolní seznam: Vytvoření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [Není v sestavení: Použití HierUtil7 projektu třídy k implementaci typu projektu (C++)](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
- [Podpůrné nástroje procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
+ [Kontrolní seznam: vytváření nových typů projektů](../../extensibility/internals/checklist-creating-new-project-types.md)   
+ [Není v sestavení: použití tříd projektu HierUtil7 k implementaci typu projektu (C++)](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
+ [Podpora nástrojů pro procházení symbolů](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [Prvky modelu projektu](../../extensibility/internals/elements-of-a-project-model.md)

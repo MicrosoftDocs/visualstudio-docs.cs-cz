@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Dokumentace Microsoftu
+title: BP_UNBOUND_REASON | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ddff6130e2243d10c00cefec160d057516d60932
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153283"
 ---
-# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
+# <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Poskytuje z důvodů, proč nevázaná zarážku.  
+Poskytne důvod, proč byla zarážka nevázaná.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_UNBOUND_REASON {   
@@ -47,24 +47,24 @@ public enum enum_BP_UNBOUND_REASON { 
   
 ## <a name="members"></a>Členové  
  BPUR_UNKNOWN  
- Důvodem neznámý.  
+ Důvod není znám.  
   
  BPUR_CODE_UNLOADED  
- Kód, který obsahuje zarážku byl uvolněn.  
+ Kód, který obsahuje zarážku, byl uvolněn.  
   
  BPUR_BREAKPOINT_REBIND  
- Zarážku bylo znovu připojeno, do jiného umístění. To může dojít po úpravě a pokračovat v operacích přesun zarážku nebo zarážku je vázán na soubor s cestou, která již není platný.  
+ Zarážka byla znovu svázána s jiným umístěním. K tomu může dojít po přesunutí operace Upravit a pokračovat, nebo když je zarážka svázána se souborem s cestou, která již není platná.  
   
  BPUR_ BREAKPOINT_ERROR  
- Zarážka je určena jako chybu po je vázán. K tomu dochází na spravovaných zarážky, jejíž podmínky už nejsou platné.  
+ V případě, že je tato zarážka navázána, je určena chyba. K tomu dojde u spravovaných zarážek, jejichž podmínky již nejsou platné.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácené [getreason –](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) metody.  
+ Vrácený metodou [getdůvod](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

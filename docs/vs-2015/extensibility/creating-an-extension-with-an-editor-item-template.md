@@ -1,5 +1,5 @@
 ---
-title: Vytváření rozšíření pomocí šablony položky editoru | Dokumentace Microsoftu
+title: Vytvoření rozšíření pomocí šablony položky editoru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,92 +11,92 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 46ccdd87d44ee90c925992f4d7b997c9bbe09684
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435528"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64834048"
 ---
 # <a name="creating-an-extension-with-an-editor-item-template"></a>Vytváření rozšíření pomocí šablony položky editoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít šablony položek, které jsou zahrnuty v sadě Visual Studio SDK vytvořit rozšíření základního editoru, které aplikacím dodávají třídění, vylepšení a okraje editoru. Šablony položky editoru jsou k dispozici pro projekty Visual C# nebo Visual Basic VSIX.  
+Šablony položek, které jsou součástí sady Visual Studio SDK, můžete použít k vytvoření základních rozšíření editoru, která přidávají do editoru třídění, doplňky a okraje. Šablony položek editoru jsou k dispozici pro projekty v jazyce Visual C# nebo Visual Basic VSIX.  
   
-## <a name="prerequisites"></a>Požadavky  
- Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Předpoklady  
+ Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-classifier-extension"></a>Vytváření rozšíření pro třídění  
- Šablony položky editoru třídění vytvoří editor klasifikátor, který barvy odpovídající text (v tomto případě všechno, co) v jakékoli textový soubor.  
+## <a name="creating-a-classifier-extension"></a>Vytvoření rozšíření klasifikátoru  
+ Šablona položky klasifikátoru editoru vytvoří klasifikátor editoru, který barevně vybarví příslušný text (v tomto případě vše) v libovolném textovém souboru.  
   
-1. V **nový projekt** dialogového okna rozbalte **Visual C#** nebo **jazyka Visual Basic** a potom klikněte na tlačítko **rozšiřitelnost**. V **šablony** vyberte **projekt VSIX**. V **název** zadejte `TestClassifier`. Klikněte na **OK**.  
+1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `TestClassifier`. Klikněte na **OK**.  
   
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. Přejděte do aplikace Visual C# **rozšiřitelnost** uzel a vyberte možnost **Editor třídění**. Ponechte výchozí název souboru (EditorClassifier1.cs).  
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. Přejít na uzel **rozšiřitelnosti** Visual C# a vyberte **klasifikátor editoru**. Ponechte výchozí název souboru (EditorClassifier1.cs).  
   
-3. Existují tři soubory kódu, následujícím způsobem:  
+3. Existují tři soubory kódu, a to následujícím způsobem:  
   
-    - Obsahuje EditorClassifier1.cs `EditorClassifier1` třídy.  
+    - EditorClassifier1.cs obsahuje `EditorClassifier1` třídu.  
   
-    - Obsahuje EditorClassifier1ClassificationDefinition.cs `OEditorClassifier1ClassificationDefinition` třídy.  
+    - EditorClassifier1ClassificationDefinition.cs obsahuje `OEditorClassifier1ClassificationDefinition` třídu.  
   
-    - Obsahuje EditorClassifier1Format.cs `EditorClassifier1Format` třídy.  
+    - EditorClassifier1Format.cs obsahuje `EditorClassifier1Format`  třídu.  
   
-    - Obsahuje EditorClassifier1Provider.cs `EditorClassifier1Provider` třídy.  
+    - EditorClassifier1Provider.cs obsahuje `EditorClassifier1Provider` třídu.  
   
-4. Sestavte projekt a spusťte ladění. Experimentální instanci sady Visual Studio se zobrazí.  
+4. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance aplikace Visual Studio.  
   
-     Pokud otevřete textový soubor, je celý text podtržené fialového pozadí.  
+     Pokud otevřete textový soubor, veškerý text bude podtržený na fialovém pozadí.  
   
-## <a name="creating-a-text-relative-adornment-extension"></a>Vytvoření dalších úprav textu relativní rozšíření  
- Šablona dalších úprav editoru textu vytvoří dalších úprav textu relativní, který upraví všechny výskyty znaků textu "a" s použitím pole, které má červené ohraničení a modrým pozadím. Je text relativní vzhledem k tomu, pole vždy překrytí "a" znaky, i když se přesunout nebo přeformátovali.  
+## <a name="creating-a-text-relative-adornment-extension"></a>Vytvoření rozšíření pro vytváření relativních textů  
+ Šablona ovládacího prvku text v editoru vytvoří návrhově-relativní vzhled, který upraví všechny výskyty textového znaku ' a ' pomocí pole, které má červený obrys a modrého pozadí. Je relativní vzhledem k textu, protože pole vždycky překrývá znaky a, i když jsou přesunuté nebo přeformátované.  
   
-1. V **nový projekt** dialogového okna rozbalte **Visual C#** nebo **jazyka Visual Basic** a potom klikněte na tlačítko **rozšiřitelnost**. V **šablony** vyberte **projekt VSIX**. V **název** zadejte `TestAdornment`. Klikněte na **OK**.  
+1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `TestAdornment`. Klikněte na **OK**.  
   
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. Přejděte do aplikace Visual C# **rozšiřitelnost** uzel a vyberte možnost **dalších úprav editoru textu**. Ponechte výchozí název souboru (TextAdornment1.cs/vb).  
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. Přejít na uzel **rozšiřitelnosti** v jazyce Visual C# a vyberte možnost **Editor textu editoru**. Ponechte výchozí název souboru (TextAdornment1.cs/vb).  
   
-3. Existují dva soubory kódu, následujícím způsobem:  
+3. Existují dva soubory kódu, a to následujícím způsobem:  
   
-    - Obsahuje TextAdornment1.cs `TextAdornment1` třídy.  
+    - TextAdornment1.cs obsahuje `TextAdornment1` třídu.  
   
-    - obsahuje extAdornment1TextViewCreationListener.cs `TextAdornment1TextViewCreationListener` třídy.  
+    - extAdornment1TextViewCreationListener.cs obsahuje `TextAdornment1TextViewCreationListener` třídu.  
   
-4. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance. Pokud otevřete textový soubor, jsou uvedeny všechny "a" znaky v textu v červené, modré pozadí.  
+4. Sestavte projekt a spusťte ladění. Objeví se experimentální instance. Pokud otevřete textový soubor, jsou všechny znaky a v textu červeně zvýrazněny na modrém pozadí.  
   
-## <a name="creating-a-viewport-relative-adornment-extension"></a>Vytvoření grafického doplňku zobrazení relativní rozšíření  
- Šablona grafického doplňku zobrazení editoru vytvoří relativní k zobrazení dalších úprav, který přidá fialového pole, která má červené ohraničení na pravém horním rohu zobrazení.  
+## <a name="creating-a-viewport-relative-adornment-extension"></a>Vytvoření rozšíření přístupnosti relativního zobrazení  
+ Šablona doplňku pro zobrazení editoru vytvoří relativní vzhled, který přidá fialové pole, které má červený obrys v pravém horním rohu zobrazení.  
   
 > [!NOTE]
-> *Zobrazení* je oblast, která je právě otevřeno zobrazení textu.  
+> Zobrazení *je oblast* aktuálně zobrazeného textu.  
   
-#### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>Chcete-li vytvořit rozšíření grafického doplňku zobrazení s použitím šablony grafického doplňku zobrazení editoru  
+#### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>Vytvoření rozšíření pro rozšíření zobrazení pomocí šablony zobrazení editoru  
   
-1. V **nový projekt** dialogového okna rozbalte **Visual C#** nebo **jazyka Visual Basic** a potom klikněte na tlačítko **rozšiřitelnost**. V **šablony** vyberte **projekt VSIX**. V **název** zadejte `ViewportAdornment`. Klikněte na **OK**.  
+1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `ViewportAdornment`. Klikněte na **OK**.  
   
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. Přejděte do aplikace Visual C# **rozšiřitelnost** uzel a vyberte možnost **grafického doplňku zobrazení editoru**. Ponechte výchozí název souboru (ViewportAdornment1.cs/vb).  
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. Přejít na uzel **rozšiřitelnosti** Visual C# a výběr vizuálního **zobrazení editoru**. Ponechte výchozí název souboru (ViewportAdornment1.cs/vb).  
   
-3. Existují dva soubory kódu, následujícím způsobem:  
+3. Existují dva soubory kódu, a to následujícím způsobem:  
   
-    - Obsahuje ViewportAdornment1.cs `ViewportAdornment1` třídy.  
+    - ViewportAdornment1.cs obsahuje `ViewportAdornment1` třídu.  
   
-    - Obsahuje ViewportAdornment1TextViewCreationListener.cs `ViewportAdornment1TextViewCreationListener` třídy  
+    - ViewportAdornment1TextViewCreationListener.cs obsahuje `ViewportAdornment1TextViewCreationListener` třídu  
   
-4. Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance. Pokud vytvoříte nový textový soubor, zobrazí se v pravém horním rohu zobrazení fialového pole, která má červené ohraničení.  
+4. Sestavte projekt a spusťte ladění. Objeví se experimentální instance. Pokud vytvoříte nový textový soubor, v pravém horním rohu zobrazení se zobrazí fialové pole s červeným obrysem.  
   
-## <a name="creating-a-margin-extension"></a>Vytváření rozšíření pro rozpětí  
- Šablona okraj editoru vytvoří zelené okraj, který se zobrazí spolu s slova "Hello world!" pod vodorovný posuvník.  
+## <a name="creating-a-margin-extension"></a>Vytvoření rozšíření marže  
+ Šablona okraje editoru vytvoří zelený okraj, který se zobrazí spolu se slovy "Hello World!" pod vodorovným posuvníkem.  
   
-#### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>Chcete-li vytvořit okraj rozšíření pomocí šablony okraj editoru  
+#### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>Vytvoření rozšíření marže pomocí šablony okraje editoru  
   
-1. V **nový projekt** dialogového okna rozbalte **Visual C#** nebo **jazyka Visual Basic** a potom klikněte na tlačítko **rozšiřitelnost**. V **šablony** vyberte **projekt VSIX**. V **název** zadejte `MarginExtension`. Klikněte na **OK**.  
+1. V dialogovém okně **Nový projekt** rozbalte položku **Visual C#** nebo **Visual Basic** a potom klikněte na možnost **rozšiřitelnost**. V podokně **šablony** vyberte **projekt VSIX**. Do pole **Název** zadejte `MarginExtension`. Klikněte na **OK**.  
   
-2. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. Přejděte do aplikace Visual C# **rozšiřitelnost** uzel a vyberte možnost **grafického doplňku zobrazení editoru**. Ponechte výchozí název souboru (EditorMargin1.cs/vb).  
+2. V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidat/nová položka**. Přejít na uzel **rozšiřitelnosti** Visual C# a výběr vizuálního **zobrazení editoru**. Ponechte výchozí název souboru (EditorMargin1.cs/vb).  
   
-3. Existují dva soubory kódu, následujícím způsobem:  
+3. Existují dva soubory kódu, a to následujícím způsobem:  
   
-    - Obsahuje EditorMargin1.cs `EditorMargin1` třídy.  
+    - EditorMargin1.cs obsahuje `EditorMargin1` třídu.  
   
-    - Obsahuje EditorMargin1Factory.cs `EditorMargin1Factory` třídy.  
+    - EditorMargin1Factory.cs obsahuje `EditorMargin1Factory` třídu.  
   
-4. Tento projekt sestavit a spustit ladění. Zobrazí se experimentální instance. Pokud otevřete textový soubor, zobrazí se zelené okraj obsahující slova "Hello EditorMargin1" níže vodorovný posuvník.  
+4. Sestavte tento projekt a spusťte ladění. Objeví se experimentální instance. Pokud otevřete textový soubor, zobrazí se pod vodorovným posuvníkem zelený okraj, který obsahuje slova "Hello EditorMargin1".  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšiřovací body služeb jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)
