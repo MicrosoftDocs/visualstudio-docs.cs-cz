@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Dokumenty společnosti Microsoft
+title: MACHINE_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 89a2552bb6a8bea88f54a897b829ab89b30ff413
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714502"
 ---
 # <a name="machine_info_fields"></a>MACHINE_INFO_FIELDS
-Určuje, jaký druh informací se má pro konkrétní počítač načíst.
+Určuje, jaký typ informací se má načíst pro konkrétní počítač.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MACHINE_INFO_FIELDS { 
@@ -44,27 +44,27 @@ public enum enum_MACHINE_INFO_FIELDS { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MCIF_NAME`\
- Inicializovat/použít `bstrName` pole ve struktuře.
+ Inicializujte nebo použijte `bstrName` pole ve struktuře.
 
  `MCIF_FLAGS`\
- Inicializovat/použít `Flags` pole ve struktuře.
+ Inicializujte nebo použijte `Flags` pole ve struktuře.
 
  `MIF_ALL`\
- Inicializovat/použít všechna pole ve struktuře.
+ Inicializujte nebo použijte všechna pole ve struktuře.
 
 ## <a name="remarks"></a>Poznámky
- Tyto hodnoty jsou předány [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) metoda k označení, které členy [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury mají být inicializovány.
+ Tyto hodnoty jsou předány metodě [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) , aby označovaly, které členy [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury mají být inicializovány.
 
- Používá se `Fields` také v `MACHINE_INFO` člen struktury k označení, která pole se používají a jsou platná.
+ Používá se také v `Fields` členu `MACHINE_INFO` struktury k označení, která pole se používají a jsou platná.
 
- Tyto příznaky mohou být kombinovány `OR`s bitovým .
+ Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -28,16 +28,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 336a02927374e856a2d6f5a55eb03c5ae1ac7037
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845180"
 ---
 # <a name="midl-task"></a>MIDL – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MIDL. exe. Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
+Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), midl.exe. Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry úlohy **MIDL** . Většina parametrů úlohy a několik sad parametrů odpovídá možnosti příkazového řádku.  
@@ -54,7 +54,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **řetězcový** parametr.  
   
-     Seznam možností příkazového řádku Například **"** _/option1/option2/Option #_ ". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy MIDL.  
+     Seznam možností příkazového řádku Například **"**_/option1/option2/Option #_". Pomocí tohoto parametru můžete zadat možnosti příkazového řádku, které nejsou reprezentované žádným jiným parametrem úlohy MIDL.  
   
      Další informace naleznete v tématu "Reference k příkazovému řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
@@ -62,7 +62,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, umožňuje použít některá klíčová slova ACF v souboru IDL.  
+     Pokud `true` , umožňuje použít některá klíčová slova ACF v souboru IDL.  
   
      Další informace naleznete v tématu možnost **/app_config** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
@@ -78,7 +78,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **řetězcový** parametr.  
   
-     Určuje možnosti, které se mají předat CC++ /preprocesoru. Zadejte seznam možností preprocesoru oddělených mezerami.  
+     Určuje možnosti, které se mají předat preprocesoru C/C++. Zadejte seznam možností preprocesoru oddělených mezerami.  
   
      Další informace naleznete v tématu možnost **/cpp_opt** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
@@ -94,7 +94,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
     |-----------|--------------------------|  
     |**Podpisy**|**/char podepsané**|  
     |**Celé**|**/char bez znaménka**|  
-    |**Ascii**|**/char ascii7**|  
+    |**Abecední**|**/char ascii7**|  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/char** v části "Reference příkazového řádku MIDL".  
   
@@ -116,7 +116,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Error None**|  
+    |**Žádný**|**/Error None**|  
     |**EnableCustom**|**/Error**|  
     |**Vše**|**/Error All**|  
   
@@ -126,7 +126,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, vyhledejte chyby nedostatku paměti.  
+     Pokud `true` je, vyhledejte chyby nedostatku paměti.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error alokace** v tématu "Reference příkazového řádku MIDL".  
   
@@ -134,7 +134,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, zkontroluje velikost vyhovujících a proměnlivých polí podle specifikace délky přenosu.  
+     Pokud `true` aplikace kontroluje velikost vyhovujících a proměnlivých polí podle specifikace délky přenosu.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error Bounds_check** v tématu Referenční příručka příkazového řádku MIDL.  
   
@@ -142,15 +142,15 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, zkontroluje, jestli jsou hodnoty výčtu v povoleném rozsahu.  
+     Pokud `true` aplikace kontroluje, zda jsou hodnoty výčtu v povoleném rozsahu.  
   
-     Další informace naleznete v možnosti **/Error enum** v příkazovém řádku Help ( **/?** ) pro soubor MIDL. exe.  
+     Další informace najdete v tématu možnost **/Error enum** v příkazovém řádku Help (**/?**) pro midl.exe.  
   
 - **ErrorCheckRefPointers**  
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, ověřte, že neexistují žádné ukazatele odkazů s hodnotou null do zástupných procedur klienta.  
+     Pokud `true` je zaškrtnuto, nemusíte předávat žádné ukazatele na odkazy null do zástupných procedur klienta.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error ref** v tématu "MIDL příkazového řádku Reference".  
   
@@ -158,7 +158,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, vygeneruje zástupnou proceduru, která zachytává výjimky při zařazování na straně serveru a šíří je zpátky do klienta.  
+     Pokud `true` , vygeneruje zástupnou proceduru, která zachytává výjimky při zařazování na straně serveru a šíří je zpátky do klienta.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Error Stub_data** v tématu Referenční příručka příkazového řádku MIDL.  
   
@@ -172,7 +172,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Client žádné**|  
+    |**Žádný**|**/Client žádné**|  
     |**Metrik**|**/Client zástupná procedura**|  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Client** v části "Reference příkazového řádku MIDL".  
@@ -187,7 +187,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**Žádné**|**/Server žádné**|  
+    |**Žádný**|**/Server žádné**|  
     |**Metrik**|**/Server – zástupná procedura**|  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/Server** v tématu Reference příkazového řádku MIDL.  
@@ -196,7 +196,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, vygeneruje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.  
+     Pokud `true` , vygeneruje plně interpretované zástupné procedury spolu s proxy bez zástupných procedur pro rozhraní objektů.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/oicf** v části "Reference příkazového řádku MIDL".  
   
@@ -204,7 +204,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, soubor knihovny typů (. tlb) se nevygeneruje.  
+     Pokud se `true` negeneruje soubor knihovny typů (. tlb).  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/notlb** v části "Reference příkazového řádku MIDL".  
   
@@ -220,7 +220,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, úloha MIDL vyhledá pouze adresáře určené pomocí přepínače **AdditionalIncludeDirectories** a ignoruje aktuální adresář a adresáře určené PROMĚNNOU prostředí include.  
+     Pokud `true` , úloha MIDL vyhledává pouze adresáře určené pomocí přepínače **AdditionalIncludeDirectories** a ignoruje aktuální adresář a adresáře určené proměnnou prostředí include.  
   
      Další informace naleznete v tématu možnost **/no_def_idir** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
@@ -244,7 +244,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, vyžaduje, aby Formát vstupního souboru byl kompatibilní s MkTypLib. exe verze 2,03.  
+     Pokud `true` vyžaduje Formát vstupního souboru, aby byl kompatibilní s mktyplib.exe verze 2,03.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/mktyplib203** v části "Reference příkazového řádku MIDL". Viz také "syntaxe souboru jazyka ODL" na webu MSDN.  
   
@@ -260,7 +260,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Parametr volitelného **řetězce []** .  
   
-     Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla direktivou `#define`. Formát každé definice je, *název [= hodnota]* .  
+     Určuje jednu nebo více *definicí*; To znamená, že název a volitelná hodnota, která má být předána preprocesoru jazyka C, jako by byla `#define` direktivou. Formát každé definice je, *název [= hodnota]*.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/D** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **UndefinePreprocessorDefinitions** v této tabulce.  
   
@@ -290,7 +290,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
 - **Zdroj**  
   
-     Vyžaduje se `ITaskItem[]` parametr.  
+     Požadovaný parametr `ITaskItem[]`.  
   
      Určuje seznam zdrojových souborů oddělených mezerami.  
   
@@ -304,11 +304,11 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**NotSet**|*\<žádné >*|  
+    |**NotSet**|*\<none>*|  
     |**1**|**/Zp1**|  
     |**2**|**/Zp2**|  
     |**4**|**/Zp4**|  
-    |**8**|**/Zp8**|  
+    |**8**|**/ZP8**|  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/zp** v části "Reference příkazového řádku MIDL". Možnost **/zp** je ekvivalentní možnosti **/Pack** a starší možnosti **/align** .  
   
@@ -316,15 +316,15 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Volitelný **logický** parametr.  
   
-     Pokud `true`, potlačí zprávy upozornění z úlohy MIDL.  
+     `true`Potlačí zprávy upozornění z úlohy MIDL.  
   
      Další informace naleznete v tématu možnost **/no_warn** v části "Reference příkazového řádku MIDL" na webu [MSDN](https://msdn.microsoft.com/) .  
   
 - **SuppressStartupBanner**  
   
-     Volitelný parametr `Boolean`.  
+     Volitelný `Boolean` parametr.  
   
-     Pokud `true`, zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
+     Pokud `true` aplikace zabrání zobrazení zprávy o autorských právech a číslech verze při spuštění úlohy.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/nologo** v tématu Referenční příručka příkazového řádku MIDL.  
   
@@ -338,16 +338,16 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
     |Hodnota|Možnost příkazového řádku|  
     |-----------|--------------------------|  
-    |**NotSet**|*\<žádné >*|  
+    |**NotSet**|*\<none>*|  
     |**Win32**|**/ENV Win32**|  
-    |**Procesor**|**/ENV ia64**|  
-    |**X64**|**/env x64**|  
+    |**Itanium**|**/ENV ia64**|  
+    |**Platformě**|**/ENV x64**|  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/ENV** v části "Reference příkazového řádku MIDL".  
   
 - **TrackerLogDirectory**  
   
-     Volitelný parametr `String`.  
+     Volitelný `String` parametr.  
   
      Určuje zprostředkující adresář, ve kterém jsou uložené protokoly sledování pro tento úkol.  
   
@@ -366,7 +366,7 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Další informace naleznete v možnostech **/newtlb** a **/oldtlb** v tématu "MIDL příkazového řádku Reference" na webu [MSDN](https://msdn.microsoft.com/) .  
   
-- **TypeLibraryName**  
+- **Názevknihovnytypů**  
   
      Volitelný **řetězcový** parametr.  
   
@@ -378,23 +378,23 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
   
      Parametr volitelného **řetězce []** .  
   
-     Odebere všechny předchozí definice názvu předáním názvu do preprocesoru jazyka C, jako by bylo direktivou `#undefine`. Zadejte jeden nebo více dříve definovaných názvů.  
+     Odebere všechny předchozí definice názvu předáním názvu do preprocesoru jazyka C, jako by byl `#undefine` direktivou. Zadejte jeden nebo více dříve definovaných názvů.  
   
      Další informace naleznete na webu [MSDN](https://msdn.microsoft.com/) v možnosti **/U** v tématu Referenční příručka příkazového řádku MIDL. Viz také parametr **PreprocessorDefinitions** v této tabulce.  
   
 - **ValidateAllParameters**  
   
-     Volitelný parametr `Boolean`.  
+     Volitelný `Boolean` parametr.  
   
-     Pokud `true`, vygeneruje další informace o kontrole chyb, které se používají k provádění kontrol integrity v době běhu. Pokud `false`, informace o kontrole chyb nejsou vygenerovány.  
+     Pokud `true` , vygeneruje další informace o kontrole chyb, které se používají k provádění kontrol integrity v době běhu. `false`V případě není vygenerována informace o kontrole chyb.  
   
      Další informace naleznete v možnostech **/Robust** a **/no_robust** v části "referenční příručka příkazového řádku" MIDL "na webu [MSDN](https://msdn.microsoft.com/) .  
   
-- **WarnAsError**  
+- **Warnaserror –**  
   
-     Volitelný parametr `Boolean`.  
+     Volitelný `Boolean` parametr.  
   
-     Pokud `true`, zpracovává všechna upozornění jako chyby.  
+     Pokud `true` aplikace považuje všechna upozornění za chyby.  
   
      Pokud není zadán parametr úlohy **WarningLevel** MIDL, jsou upozornění na výchozí úrovni úrovně 1 považována za chyby.  
   
@@ -421,4 +421,4 @@ Zabalí nástroj kompilátoru MIDL (Microsoft Interface Definition Language), MI
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

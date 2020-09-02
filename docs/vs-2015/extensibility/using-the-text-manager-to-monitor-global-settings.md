@@ -1,5 +1,5 @@
 ---
-title: Pomocí Správce Text monitorování globální nastavení | Dokumentace Microsoftu
+title: Monitorování globálních nastavení pomocí Správce textu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,34 +12,34 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ece51450b8344ae4715a912399ec538171a26a5c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695459"
 ---
-# <a name="using-the-text-manager-to-monitor-global-settings"></a>Pomocí Správce Text monitorování globální nastavení
+# <a name="using-the-text-manager-to-monitor-global-settings"></a>Použití textového správce k monitorování globálního nastavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pokud se rozhodnete implementovat základní editor, je třeba sledovat změny, které jsou provedeny ke globálnímu nastavení, protože tyto změny mohou ovlivnit vaše instance editoru. Změny můžete sledovat prostřednictvím naslouchání události vyvolané službou textový správce. Například když zadáte globální předvoleb pro vzhled nebo chování součásti v základní editor, například jeho datový objekt dokumentu, textový správce ukládá tyto informace a komunikuje se všechny příslušné klienty.  
+Pokud implementujete základní editor, je nutné sledovat změny provedené v globálním nastavení, protože tyto změny mohou ovlivnit vaši instanci editoru. Změny můžete sledovat při naslouchání událostem, které vyvolala správce textu. Pokud například zadáte globální preference pro vzhled nebo chování komponenty v základním editoru, jako je například datový objekt dokumentu, nástroj text uloží tyto informace a oznámí všem postiženým klientům.  
   
-## <a name="text-manager-functions"></a>Funkce text Manageru  
- Textový správce vyvolává události pro celou řadu nastavení, včetně následujících:  
+## <a name="text-manager-functions"></a>Funkce Správce textu  
+ Správce textu vyvolá události pro určitý počet nastavení, včetně následujících:  
   
-- Určuje, zda vyrovnávací paměti je pod správou zdrojového kódu  
+- Zda je vyrovnávací paměť v rámci správy zdrojového kódu  
   
-- Postup registrace pro oznámení o změně souboru  
+- Postup registrace pro oznámení o změnách souborů  
   
-- Tom, jak udržovat přehled o zobrazení, které jsou spojeny s určitým vyrovnávací paměti  
+- Jak udržet přehled o tom, která zobrazení jsou přidružená k určitým vyrovnávacím pamětem  
   
-- Předvolby zabarvení textu  
+- Předvolby barevného zabarvení textu  
   
-- Karta oproti předvolby místa  
+- Předvolby tabulátoru a prostoru  
   
-  Předvolby, které jsou jedinečné pro daný jazyk nespravuje textový správce. Tato nastavení se musí spravovat přes každá služba jazyka.  
+  Předvolby, které jsou jedinečné pro daný jazyk, nejsou spravovány správcem textu. Tato nastavení musí spravovat jednotlivé jazykové služby.  
   
-  Oznámení události pro textový správce poskytuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents> rozhraní. Toto rozhraní implementují u svého klienta vyvolá objekt zpracování událostí textový správce. Tyto události můžete zaregistrovat pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> rozhraní na textový správce.  
+  Oznámení o události pro správce textu je zajištěno <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents> rozhraním. Implementací tohoto rozhraní do objektu klienta můžete zpracovávat události vyvolané správcem textu. Zaregistrujete se na tyto události pomocí <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> rozhraní ve Správci textu.  
   
 ## <a name="see-also"></a>Viz také  
- [Uvnitř základní Editor](../extensibility/inside-the-core-editor.md)   
+ [Uvnitř základního editoru](../extensibility/inside-the-core-editor.md)   
  [Funkce editoru](https://msdn.microsoft.com/bdac940d-1f14-4019-a01f-fd0bb3dc7198)

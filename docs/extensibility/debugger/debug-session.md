@@ -1,5 +1,5 @@
 ---
-title: Ladicí relace | Dokumenty společnosti Microsoft
+title: Relace ladění | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 664bcc4790d642ec5ea006cc42b3cf29885e9018
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739002"
 ---
 # <a name="debug-session"></a>Relace ladění
-Pokud jde o architekturu ladicího programu, *relace*:
+V rámci architektury ladicího programu se jedná o *relaci*:
 
-- Je sada všech procesů, související nebo nesouvisející, které byly spuštěny nebo připojeny z jedné instance ide.
+- Je sada všech procesů, souvisejících nebo nesouvisejících, které byly spuštěny nebo připojeny k z jedné instance rozhraní IDE.
 
-- Je implementována správcem ladění relace (SDM). Další informace naleznete v [tématu Session Debug Manager](../../extensibility/debugger/session-debug-manager.md).
+- Je implementováno pomocí Správce ladění relace (SDM). Další informace najdete v tématu [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md).
 
 ## <a name="see-also"></a>Viz také
 - [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)
-- [Koncepty ladicích programů](../../extensibility/debugger/debugger-concepts.md)
+- [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)

@@ -1,5 +1,5 @@
 ---
-title: Transformace nástroje MSBuild | Dokumentace Microsoftu
+title: Nástroj MSBuild transformuje | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,48 +13,48 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f9a6f7985e3ebb3e77dcc605157f75e00a0842b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426039"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64793896"
 ---
 # <a name="msbuild-transforms"></a>Transformace nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Transformace je 1: 1 převod jednu položku seznamu do jiného. Kromě povolení projekt převést seznamy položek, umožňuje transformace cíl k identifikaci přímé mapování mezi její vstupy a výstupy. Toto téma vysvětluje, transformace a jak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] používá k sestavení projektů efektivněji.  
+Transformace je převod 1:1 na jeden seznam položek na jiný. Kromě povolení projektu pro převod seznamů položek umožňuje transformace cíli identifikovat přímé mapování mezi vstupy a výstupy. Toto téma vysvětluje transformace a způsob [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] jejich použití k efektivnějšímu vytváření projektů.  
   
-## <a name="transform-modifiers"></a>Transformace modifikátory  
- Transformace nejsou libovolného, ale se uplatňuje limit vycházející speciální syntaxe, ve kterém všechny transformace modifikátory musí být ve formátu %(*ItemMetaDataName*). Veškerá metadata položky můžete použít jako modifikátor transformace. To zahrnuje známá metadata položky, která je přiřazená každé položce při jeho vytvoření. Seznam známá metadata položky, naleznete v tématu [Metadata známé položky](../msbuild/msbuild-well-known-item-metadata.md).  
+## <a name="transform-modifiers"></a>Modifikátory transformace  
+ Transformace nejsou žádné, ale jsou omezeny speciální syntaxí, ve které všechny modifikátory transformace musí být ve formátu%(*ItemMetaDataName*). Jakákoli metadata položky lze použít jako modifikátor Transform. To zahrnuje dobře známá metadata položky, která jsou přiřazena ke každé položce při jejím vytvoření. Seznam známých metadat položek najdete v tématu [známá metadata položky](../msbuild/msbuild-well-known-item-metadata.md).  
   
- V následujícím příkladu je seznam souborů .resx transformována do seznamu souborů .resources. Modifikátor transformace %(filename) určuje, že každý soubor .resources má stejný název jako odpovídající soubor .resx.  
+ V následujícím příkladu se seznam souborů. resx transformuje na seznam souborů. Resources. Modifikátor transformace% (filename) určuje, že každý soubor. Resources má stejný název souboru jako odpovídající soubor. resx.  
   
 ```  
 @(RESXFile->'%(filename).resources')  
 ```  
   
 > [!NOTE]
-> Vlastní oddělovač pro transformovaná položky seznamu můžete zadat stejným způsobem zadejte oddělovač pro standardní položky seznamu. Například samostatné transformovaný položky seznamu oddělte čárkou (,) namísto výchozí středníkem (;), použijte následující kód XML.  
+> Můžete zadat vlastní oddělovač pro seznam transformovaných položek stejným způsobem jako oddělovač pro seznam položek Standard. Chcete-li například oddělit seznam transformovaných položek pomocí čárky (,) namísto výchozího středníku (;), použijte následující kód XML.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)', ',')  
 ```  
   
- Například, pokud jsou položky v seznamu položek @(RESXFile) `Form1.resx`, `Form2.resx`, a `Form3.resx`, budou výstupy v seznamu transformovaný `Form1.resources`, `Form2.resources`, a `Form3.resources`.  
+ Například pokud jsou položky v seznamu položek @ (RESXFile) `Form1.resx` , `Form2.resx` , a `Form3.resx` , výstupy v seznamu transformovaný budou `Form1.resources` , `Form2.resources` a `Form3.resources` .  
   
-## <a name="using-multiple-modifiers"></a>Použití více modifikátory  
- Transformace výraz může obsahovat více modifikátory, ve kterých je možné kombinovat v libovolném pořadí a lze je opakovat. V následujícím příkladu se změní název adresáře, který obsahuje soubory, ale soubory zachovat původní přípona názvu název a soubor.  
+## <a name="using-multiple-modifiers"></a>Použití více modifikátorů  
+ Transformační výraz může obsahovat více modifikátorů, které mohou být kombinovány v libovolném pořadí a lze je opakovat. V následujícím příkladu se změní název adresáře, který obsahuje soubory, ale původní název a přípona názvu souboru zůstanou v souborech.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)')  
 ```  
   
- Například, pokud položek, které jsou součástí `RESXFile` položky seznamu jsou `Project1\Form1.resx`, `Project1\Form2.resx`, a `Project1\Form3.text`, budou výstupy v seznamu transformovaná `Toolset\Form1.resx`, `Toolset\Form2.resx`, a `Toolset\Form3.text`.  
+ Například pokud jsou položky, které jsou obsaženy v `RESXFile` seznamu položek `Project1\Form1.resx` ,, `Project1\Form2.resx` a `Project1\Form3.text` , výstupy v seznamu transformovaný budou `Toolset\Form1.resx` , `Toolset\Form2.resx` a `Toolset\Form3.text` .  
   
-## <a name="dependency-analysis"></a>Analýza závislosti  
- Transformace zaručit mapování 1: 1 mezi transformovaný položky seznamu a původní seznam položek. Proto, pokud cíl vytvoří výstupy, které jsou transformací vstupních hodnot, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] můžete analyzovat časová razítka vstupy a výstupy a rozhodnout, jestli se má přeskočit, sestavení nebo částečně znovu sestavit cíl.  
+## <a name="dependency-analysis"></a>Analýza závislostí  
+ Transformace garantuje mapování 1:1 mezi seznamem transformovaných položek a původní seznam položek. Proto pokud cíl vytvoří výstupy, které jsou transformují vstupy, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] může analyzovat časová razítka vstupů a výstupů a rozhodnout, zda chcete přeskočit, sestavit nebo částečně znovu sestavit cíl.  
   
- V [úlohu kopírování](../msbuild/copy-task.md) v následujícím příkladu každý soubor v `BuiltAssemblies` seznamu položek se mapuje na soubor v cílové složce úkolů, zadat pomocí transformace `Outputs` atribut. Pokud soubor v `BuiltAssemblies` položky seznamu změny `Copy` úkol se spustí pouze pro změněný soubor a všechny ostatní soubory se přeskočí. Další informace o analýzu závislostí a jak pomocí transformace, najdete v části [jak: Přírůstkové sestavování](../msbuild/how-to-build-incrementally.md).  
+ V [úloze kopírování](../msbuild/copy-task.md) v následujícím příkladu každý soubor v `BuiltAssemblies` seznamu položek je namapován na soubor v cílové složce úkolu, který je určen pomocí transformace v `Outputs` atributu. Pokud se soubor v `BuiltAssemblies` seznamu položek změní, úloha se `Copy` Spustí jenom pro změněný soubor a všechny ostatní soubory se přeskočí. Další informace o analýze závislostí a o tom, jak používat transformace, naleznete v tématu [How to: Build přírůstkově](../msbuild/how-to-build-incrementally.md).  
   
 ```  
 <Target Name="CopyOutputs"  
@@ -71,7 +71,7 @@ Transformace je 1: 1 převod jednu položku seznamu do jiného. Kromě povolení
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Následující příklad ukazuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubor projektu, který používá transformací. Tento příklad předpokládá, že je v adresáři c:\sub0\sub1\sub2\sub3 pouze jeden soubor XSD a, pracovní adresář je c:\sub0.  
+ Následující příklad ukazuje [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubor projektu, který používá transformace. V tomto příkladu se předpokládá, že v adresáři c:\sub0\sub1\sub2\sub3 je jenom jeden soubor. xsd a že pracovní adresář je c:\sub0..  
   
 ### <a name="code"></a>Kód  
   

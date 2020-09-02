@@ -1,5 +1,5 @@
 ---
-title: Koncepty ladicích programů | Dokumenty společnosti Microsoft
+title: Koncepty ladicího programu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,41 +11,41 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9ad8a450f9e79c1d44b8e098c8a00bb4b816e1af
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738979"
 ---
-# <a name="debugger-concepts"></a>Koncepty ladicích programů
-Chcete-li stavět na balíčku ladění sady Visual Studio, musíte být obeznámeni s koncepty architektury používané při navrhování balíčku.
+# <a name="debugger-concepts"></a>Koncepty ladicího programu
+Chcete-li vytvořit balíček ladění sady Visual Studio, je třeba znát koncepty architektury používané při navrhování balíčku.
 
-## <a name="in-this-section"></a>V tomto oddílu
+## <a name="in-this-section"></a>V této části
  [Relace ladění](../../extensibility/debugger/debug-session.md) Vysvětluje roli relace v architektuře ladění.
 
- [Servery](../../extensibility/debugger/servers-visual-studio-sdk.md) Definuje, co je server z hlediska ladění architektury, abstraktně i fyzicky.
+ [Servery](../../extensibility/debugger/servers-visual-studio-sdk.md) Definuje, co je server v architektuře ladění, v abstraktních i fyzických výrazech.
 
- [Dodavatelé přístavů](../../extensibility/debugger/port-suppliers.md) Definuje, co je dodavatel portu z hlediska ladění architektury.
+ [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md) Definuje, co dodavatel portu je z pohledu architektury ladění.
 
- [Porty](../../extensibility/debugger/ports.md) Definuje, co je port z hlediska ladění architektury.
+ [Porty](../../extensibility/debugger/ports.md) Definuje port, který je z pohledu architektury ladění.
 
- [Procesy](../../extensibility/debugger/processes.md) Definuje, co je proces z hlediska ladění architektury.
+ [Procesy](../../extensibility/debugger/processes.md) Definuje, co proces je z pohledu architektury ladění.
 
- [Uzly programů](../../extensibility/debugger/program-nodes.md) Definuje uzel programu z hlediska ladění architektury, včetně jak se může identifikovat a proces, ve který je spuštěn.
+ [Uzly programu](../../extensibility/debugger/program-nodes.md) Definuje uzel programu z pohledu architektury ladění, včetně toho, jak se může identifikovat a procesu, ve kterém je spuštěný.
 
- [Programy](../../extensibility/debugger/programs.md) Definuje program z hlediska ladění architektury.
+ [Programy](../../extensibility/debugger/programs.md) Definuje program z pohledu architektury ladění.
 
- [Vlákna](../../extensibility/debugger/threads.md) Definuje charakteristiky podprocesů z hlediska ladění architektury.
+ [Vlákna](../../extensibility/debugger/threads.md) Definuje charakteristiky vláken z hlediska architektury ladění.
 
- [Stohovat rámce](../../extensibility/debugger/stack-frames.md) Definuje rámec zásobníku z hlediska ladění architektury. Rámec zásobníku je abstrakci zásobníku, který poskytuje kontext spuštění podprocesu.
+ [Rámce zásobníku](../../extensibility/debugger/stack-frames.md) Definuje rámec zásobníku v souvislosti s architekturou ladění. Rámec zásobníku je abstrakcí zásobníku, který poskytuje kontext spuštění vlákna.
 
- [Moduly](../../extensibility/debugger/modules.md) Definuje modul, pokud jde o ladění architektury, jako fyzický kontejner kódu, jako je například spustitelný soubor nebo DLL.
+ [Moduly](../../extensibility/debugger/modules.md) Definuje modul v závislosti na architektuře ladění jako fyzický kontejner kódu, jako je například spustitelný soubor nebo knihovna DLL.
 
- [Zarážky](../../extensibility/debugger/breakpoints-visual-studio-sdk.md) Definuje tři typy zarážek – čekající na vyřízení, vázané a chyby – z hlediska ladění architektury.
+ [Zarážky](../../extensibility/debugger/breakpoints-visual-studio-sdk.md) Definuje tři typy zarážek – nevyřízené, vázané a chybové – v souvislosti s architekturou ladění.
 
 ## <a name="related-sections"></a>Související oddíly
- [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) Vysvětluje, jak ladicí modul (DE) pracuje současně v kontextu kódování kódu, dokumentace a výrazu. Popisuje pro každý ze tří kontextů umístění, umístění nebo hodnocení, které jsou pro něj relevantní.
+ [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md) Vysvětluje, jak ladicí stroj (DE) funguje současně v rámci kódu, dokumentace a kontextů hodnocení výrazů. Popisuje pro každý ze tří kontextů, umístění, umístění nebo hodnocení, které jsou pro něj relevantní.
 
- [Součásti ladicího programu](../../extensibility/debugger/debugger-components.md) Obsahuje přehled součástí ladění sady Visual Studio, které zahrnují ladicí modul (DE), vyhodnocení výrazu (EE) a obslužnou rutinu symbolu (SH).
+ [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md) Poskytuje přehled komponent pro ladění sady Visual Studio, které zahrnují modul ladění (DE), vyhodnocovací filtr výrazů (EE) a popisovač symbolů (SH).
 
- [Ladění úkolů](../../extensibility/debugger/debugging-tasks.md) Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocení výrazů.
+ [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md) Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocování výrazů.

@@ -1,5 +1,5 @@
 ---
-title: Fxcopcmd – chyby | Dokumentace Microsoftu
+title: FxCopCmd chyby | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,45 +11,45 @@ caps.latest.revision: 12
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3e0770654f564c57cf576666dcd9575f47d9ce1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432281"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64787284"
 ---
 # <a name="fxcopcmd-errors"></a>Chyby jazyka FxCopCmd
-Fxcopcmd – nebere v úvahu všechny chyby, chcete-li být závažné. Pokud fxcopcmd – má dostatek informací k provedení částečné analýzy, provede analýzu a sestavy chyb, ke kterým došlo. Kód chyby, která je 32bitové celé číslo, obsahuje bitová kombinace číselných hodnot, které odpovídají chyby.  
+FxCopCmd nepovažuje všechny chyby za závažné. Pokud má FxCopCmd dostatek informací pro provedení částečné analýzy, provede analýzu a nahlásí chyby, ke kterým došlo. Kód chyby, který je 32 celé číslo, obsahuje bitovou kombinaci číselných hodnot, které odpovídají chybám.  
   
- Následující tabulka popisuje kódů chyb vrácených nástrojem fxcopcmd –:  
+ Následující tabulka popisuje kódy chyb vrácené funkcí FxCopCmd:  
   
 |Chyba|Číselná hodnota|  
 |-----------|-------------------|  
 |Žádné chyby|0x0|  
 |Chyba analýzy|0x1|  
-|Pravidlo výjimky|0x2|  
-|Chyba při načítání projektu|0x4|  
-|Chyba při načítání sestavení|0x8|  
-|Chyba při načítání knihovny pravidlo|0x10|  
-|Chyba při načítání sestavy importu|0x20|  
-|Chyba výstupu|0x40|  
-|Chyba přepínač příkazového řádku|0x80|  
-|Chyba při inicializaci|0x100|  
-|Chyba odkazy na sestavení|0x200|  
+|Výjimky pravidla|0x2|  
+|Chyba načtení projektu|0x4|  
+|Chyba načtení sestavení|0x8|  
+|Chyba načtení knihovny pravidel|0x10|  
+|Chyba při importu načtení sestavy|0x20|  
+|Výstupní chyba|0x40|  
+|Chyba přepínače příkazového řádku|0x80|  
+|Chyba inicializace|0x100|  
+|Chyba odkazů na sestavení|0x200|  
 |BuildBreakingMessage|0x400|  
-|Došlo k neznámé chybě|0x1000000|  
+|Neznámá chyba|0x1000000|  
   
- Chyba analýzy, je vrácena pro závažné chyby. Znamená to, že analýzu nelze dokončit. Pokud se používá, kód chyby: také obsahuje základní příčiny závažná chyba. Následující podmínky generovat závažné chyby:  
+ Pro závažné chyby se vrátí Chyba analýzy. Indikuje, že se analýza nedala dokončit. V případě potřeby kód chyby také obsahuje původní příčinu závažné chyby. Následující podmínky generují závažné chyby:  
   
-- Analýzy nelze provést, způsobené dostatek vstup.  
+- Analýzu nelze provést kvůli nedostatečnému vstupu.  
   
-- Analýzy došlo k výjimce, která není zpracována fxcopcmd –.  
+- Analýza vyvolala výjimku, která není zpracována nástrojem FxCopCmd.  
   
-- Zadaný soubor projektu nebyl nalezen nebo je poškozený.  
+- Zadaný soubor projektu nebyl nalezen nebo je poškozen.  
   
-- Možnost výstupu se nezadalo nebo nebylo možné zapsat soubor.  
+- Možnost Output nebyla zadána nebo soubor nelze zapsat.  
   
     > [!NOTE]
-    > Fxcopcmd – návratový kód "Sestavení odkazuje na chybu" 0x200 sám o sobě je varování spíše než chybu. Tento návratový kód znamená, že nebyly nalezeny chybějící nepřímé odkazy, ale, že fxcopcmd – bylo možné jejich zpracování. Jde upozornění, že je možné, že některé výsledky analýzy mohl být ohrožený. Vezměte v úvahu "Sestavení odkazuje na chybu" návratový kód jako chyba kombinaci s jakýkoli návratový kód.  
+    > FxCopCmd návratový kód "Chyba odkazů na sestavení" 0x200 sám o sobě upozornění, nikoli chybu. Tento návratový kód označuje, že nebyly nalezeny chybějící nepřímé odkazy, ale že FxCopCmd je dokázal je zpracovat. Je to upozornění, že existuje možnost, že některé výsledky analýzy mohou být ohroženy. Pokud je v kombinaci s jakýmkoli jiným návratovým kódem, vezměte v úvahu chybu "odkazy na sestavení" jako chybu.  
   
 ## <a name="see-also"></a>Viz také  
  [Chyby aplikace Analýzy kódu](../code-quality/code-analysis-application-errors.md)

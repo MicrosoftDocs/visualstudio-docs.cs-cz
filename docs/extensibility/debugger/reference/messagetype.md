@@ -1,5 +1,5 @@
 ---
-title: TYP ZPRÁVY | Dokumenty společnosti Microsoft
+title: MESSAGETYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b4d0fd12495a59427500c16ef6f37d9f8b6e61f5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714489"
 ---
 # <a name="messagetype"></a>MESSAGETYPE
-Určuje typ zprávy a důvod.
+Určuje typ a důvod zprávy.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MESSAGETYPE { 
@@ -50,34 +50,34 @@ public enum enum_MESSAGETYPE { 
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
  `MT_OUTPUTSTRING`\
- Označuje, že zpráva by měla být odeslána do výstupního okna. To se vzájemně `MT_MESSAGEBOX`vylučuje z .
+ Indikuje, že se zpráva má odeslat do okna výstup. To se vzájemně vylučují `MT_MESSAGEBOX` .
 
  `MT_MESSAGEBOX`\
- Označuje, že zpráva by měla být zobrazena v poli se zprávou. To se vzájemně `MT_OUTPUTSTRING`vylučuje z .
+ Indikuje, že se zpráva má zobrazit v okně se zprávou. To se vzájemně vylučují `MT_OUTPUTSTRING` .
 
  `MT_TYPE_MASK`\
- Hodnota masky izolovat cíl zprávy.
+ Hodnota masky, která izoluje cíl zprávy.
 
  `MT_REASON_EXCEPTION`\
- Označuje, že okno se zprávou se zobrazí v důsledku výjimky. To se vzájemně `MT_REASON_TRACEPOINT`vylučuje z .
+ Indikuje, že se zobrazí okno se zprávou jako výsledek výjimky. To se vzájemně vylučují `MT_REASON_TRACEPOINT` .
 
  `MT_REASON_TRACEPOINT`\
- Označuje, že okno se zprávou se zobrazí v důsledku zasažení trasovací bod. To se vzájemně `MT_REASON_EXCEPTION`vylučuje .
+ Indikuje, že se zobrazí okno se zprávou v důsledku povýšení zarážka s trasováním. To se vzájemně vylučuje `MT_REASON_EXCEPTION` .
 
  `MT_REASON_MASK`\
- Hodnota masky izolovat důvod pro zobrazenou zprávu.
+ Hodnota masky, která izoluje důvod zobrazené zprávy.
 
 ## <a name="remarks"></a>Poznámky
- Tyto hodnoty jsou vráceny z [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) a [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) metody.
+ Tyto hodnoty jsou vráceny z metod [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) a [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) .
 
- Jednu z hodnot důvodu lze zkombinovat s jednou z `OR`výstupních cílových hodnot pomocí bitového .
+ Jedna z hodnot důvodů může být kombinována s jednou z výstupních hodnot cíle s použitím bitového operátoru `OR` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

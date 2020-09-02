@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Dokumenty společnosti Microsoft
+title: 'IDebugGenericFieldDefinition:: ConstructInstantiation | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 352018e50b955ed414af974bc21b62775fd55f53
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728262"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Vytvoří instanci pole s polem argumentů typu.
+Vytvoří instanci pole s daným polem argumentů typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>Parametry
 `cArgs`\
-[v] Počet argumentů v `ppArgs` poli.
+pro Počet argumentů v `ppArgs` poli.
 
 `ppArgs`\
-[v] Pole, které obsahuje argumenty typu. Argumenty typu musí být uzavřené typy (neobecné nebo plně instanciované obecné typy).
+pro Pole, které obsahuje argumenty typu. Argumenty typu musí být uzavřené typy (neobecné nebo plně instance Obecné).
 
 `ppConstructedField`\
-[out] Vrátí rozhraní [IDebugField,](../../../extensibility/debugger/reference/idebugfield.md) které představuje nové pole.
+mimo Vrátí rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , které představuje nové pole.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
- Omezení nejsou kontrolovány.
+ Nejsou zaškrtnuta omezení.
 
 ## <a name="see-also"></a>Viz také
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

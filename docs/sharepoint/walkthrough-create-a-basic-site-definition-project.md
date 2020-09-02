@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d1c06f4df5d1efe06ad2537bd2e65f2c239f3be2
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016769"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>Návod: Vytvoření základního projektu definice webu
@@ -34,12 +35,12 @@ ms.locfileid: "86016769"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu. Další informace najdete v tématu požadavky pro vývoj řešení služby SharePoint.
 
-- Visual Studio.
+- Visual Studio
 
 ## <a name="create-a-site-definition-solution"></a>Vytvoření řešení definice webu
  Nejprve vytvořte projekt definice webu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -180,6 +181,6 @@ ms.locfileid: "86016769"
 
      Text se zobrazí v popisku na pravé straně tlačítka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

@@ -16,14 +16,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 443cbac0ea9d74c61f24d6714162ec08e2906a62
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656879"
 ---
 # <a name="debug-stepping-options-legacy"></a>Možnosti krokování při ladění (starší verze)
-Toto téma popisuje, jak ladit aplikace [!INCLUDE[wf](../includes/wf-md.md)], které mají souběžné aktivity ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak ladit [!INCLUDE[wf](../includes/wf-md.md)] aplikace, které mají souběžné aktivity ve starších verzích [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Když ladíte starší aktivity, které mají souběžné spouštění, jako je například **Aktivita typu ParallelActivity** nebo **aktivitou skupiny ConditionedActivityGroup**, můžete použít jednu z následujících dvou možností pro krokování kódu.
 

@@ -1,5 +1,5 @@
 ---
-title: Text značky pomocí starší verze rozhraní API | Dokumentace Microsoftu
+title: Používání textových značek se starší verzí rozhraní API | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,63 +11,63 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3dff5e6ecf60d389730841e99b87db584465e020
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695481"
 ---
-# <a name="using-text-markers-with-the-legacy-api"></a>Text značky pomocí starší verze rozhraní API
+# <a name="using-text-markers-with-the-legacy-api"></a>Použití textových značek pomocí zastaralého rozhraní API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Text značky je plovoucí rozsah textu ve vyrovnávací paměti, může mít vliv na zobrazení a chování oblast textu. Značky zahrnují zarážky, záložek, podtržení vlnovkou a oblastí jen pro čtení. Text značky jsou v podstatě totéž barevné zvýrazňování syntaxe. Barevné zvýrazňování syntaxe je rychlý způsob, jak komunikovat syntaxi jazyka, který je spojen s oblast textu. Barevné zvýrazňování syntaxe obecně vyžádá, když Windows překreslí obrazovky, když rychlost je důležité. Barevné zvýrazňování syntaxe změní barvu textu. Text značky můžete změnit mnoho dalších vlastností textu. Text značky můžete "float" a použít zvláštní chování a obarvení.  
+Textová značka je plovoucí oblast textu ve vyrovnávací paměti, která může ovlivnit zobrazení a chování oblasti textu. Mezi značky patří zarážky, záložky, podtržení vlnovkou a oblasti jen pro čtení. Textové značky jsou v podstatě odlišné od barvy syntaxe. Barevné zvýrazňování syntaxe je rychlý způsob, jak komunikovat s jazykovou syntaxí, která je přidružena k oblasti textu. Barevné zvýrazňování syntaxe je obecně požadováno při překreslení obrazovky systémem Windows, pokud je rychlost důležitá. Barevné zvýrazňování syntaxe mění pouze barvu textu. Textové značky mohou měnit mnoho dalších textových vlastností. Textové značky mohou být "float" a aplikovat speciální chování a barevné barvy.  
   
- Kvůli výkonu režii spojenou s text značky nevytvářejte mnoho značek pro vaše vyrovnávací paměti textu. Každá značka se aktualizuje pokaždé, když se, že uživatel upraví obsah vyrovnávací paměti.  
+ Z důvodu režie výkonu přidruženého k textovým značkám nevytvářejte mnoho značek pro textové vyrovnávací paměti. Každá značka se aktualizuje pokaždé, když uživatel upraví obsah vyrovnávací paměti.  
   
 > [!NOTE]
-> Uživatelé mohou změnit barvu typ viditelný značky, ale ne jeho tvar a styl. Další informace najdete v tématu [písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md).  
+> Uživatelé mohou změnit barvu viditelného typu značky, ale ne jeho tvar a styl. Další informace najdete v tématu [písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md).  
   
 ## <a name="related-topics"></a>Související témata  
   
-|Název|Popis|  
+|Nadpis|Popis|  
 |-----------|-----------------|  
-|[Postupy: Přidání standardních textových značek](../extensibility/how-to-add-standard-text-markers.md)|Popisuje postup přidání standardní text značky typ poskytovaný modulem [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základní editor k zobrazení textu.|  
-|[Postupy: Implementace chybových značek](../extensibility/how-to-implement-error-markers.md)|Popisuje, jak implementovat instance [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] značky, který se používá k označení chyby pomocí červené podtržení vlnovkou.|  
-|[Postupy: Vytvoření vlastních textových značek](../extensibility/how-to-create-custom-text-markers.md)|Popisuje, jak vytvořit a přidat typ značky vlastní text k zobrazení textu.|  
-|[Postupy: Použití textových značek](../extensibility/how-to-use-text-markers.md)|Vysvětluje, jak přidat text značky.|  
-|[Práce v základní editoru](../extensibility/inside-the-core-editor.md)|Popisuje funkce základní editor a poskytuje podrobné informace o tom, jak přizpůsobit základní editor.|  
-|[Funkce editoru](https://msdn.microsoft.com/bdac940d-1f14-4019-a01f-fd0bb3dc7198)|Popisuje funkce dostupné v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základní editor.|  
+|[Postupy: Přidání standardních textových značek](../extensibility/how-to-add-standard-text-markers.md)|Popisuje, jak přidat standardní typ značky textu poskytnutý [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základním editorem do textového zobrazení.|  
+|[Postupy: Implementace chybových značek](../extensibility/how-to-implement-error-markers.md)|Popisuje, jak implementovat instanci [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] značky, která se používá k indikaci chyb pomocí červených podtržení vlnovkou.|  
+|[Postupy: Vytvoření vlastních textových značek](../extensibility/how-to-create-custom-text-markers.md)|Popisuje, jak vytvořit a přidat vlastní typ textové značky do textového zobrazení.|  
+|[Postupy: Použití textových značek](../extensibility/how-to-use-text-markers.md)|Vysvětluje, jak přidat textové značky.|  
+|[Práce v základní editoru](../extensibility/inside-the-core-editor.md)|Popisuje funkce základního editoru a poskytuje podrobnosti o tom, jak přizpůsobit základní editor.|  
+|[Funkce editoru](https://msdn.microsoft.com/bdac940d-1f14-4019-a01f-fd0bb3dc7198)|Popisuje funkce, které jsou k dispozici v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základním editoru.|  
   
-## <a name="reference"></a>Odkaz  
+## <a name="reference"></a>Referenční informace  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType>  
- Poskytuje jednotný mechanismus pro získání informací o typu značky určitý text, ať už předdefinovaná v nástroji editor nebo registrovaných VSPackage.  
+ Poskytuje jednotný mechanismus pro získání informací o konkrétním typu značky textu, bez ohledu na to, zda jsou předdefinované editorem nebo registrovány pomocí VSPackage.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLineMarker>  
- Poskytuje přístup k a nastaví pozici textu značky ve vyrovnávací paměti textu pomocí dvojrozměrné souřadnice.  
+ Poskytuje přístup k a upraví pozici textové značky v textové vyrovnávací paměti pomocí dvourozměrných souřadnic.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker>  
- Poskytuje metody pro správu text značky.  
+ Poskytuje metody pro správu textových značek.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>  
- Poskytuje zpětná volání, aby [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] integrovaného vývojového prostředí a další procesy, které se používají k úpravě text značky.  
+ Poskytuje zpětná volání do [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] rozhraní IDE a jiné procesy, které se používají k úpravě značky textu.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientAdvanced>  
- Rozšiřuje funkce, které jsou k dispozici prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní tím, že poskytuje další zpětná volání.  
+ Rozšiřuje funkčnost, která je k dispozici prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní, poskytnutím dalších zpětných volání.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientEx>  
- Rozšiřuje funkce, které jsou k dispozici prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní tím, že poskytuje další zpětná volání.  
+ Rozšiřuje funkčnost, která je k dispozici prostřednictvím <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní, poskytnutím dalších zpětných volání.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerColorSet>  
- Umožňuje typ značky k určení, zda jiné typy značek sdílejí stejnou sadu barev.  
+ Povoluje typ značky pro určení, zda jiné typy značek sdílejí stejnou sadu barev.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>  
- Poskytuje kontext pro text značky v základní editor. Pro každý typ značky text, který je v základní editor, rozhraní IDE vytvoří samostatné <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider> objektu.  
+ Poskytuje kontext pro textové značky v základním editoru. Pro každý typ textové značky, který je v základním editoru, rozhraní IDE vytvoří samostatný <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider> objekt.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerGlyphDropHandler>  
- Obslužná rutina, která je k dispozici pro značky, jehož glyfy podporovat úpravu přetahování myší. Piktogram je ikona, která indikuje pozici značku.  
+ Obslužná rutina, která je k dispozici pro značky, jejichž glyfy podporují úpravy přetahování myší. Glyf je ikona, která označuje pozici značky.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider>  
- Vrátí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType> rozhraní ze služby, které poskytuje text značky do jiné rozšíření VSPackages.  
+ Vrátí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType> rozhraní ze služby, která poskytuje textové značky pro jiné sady VSPackage.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStreamMarker>  
- Poskytuje přístup k a nastaví pozici textu značky ve vyrovnávací paměti textu pomocí jednorozměrné souřadnice. Pokud je to možné, nepoužívejte toto rozhraní.
+ Poskytuje přístup k a upraví pozici textové značky v textové vyrovnávací paměti pomocí jednorozměrnéch souřadnic. Pokud je to možné, nepoužívejte toto rozhraní.

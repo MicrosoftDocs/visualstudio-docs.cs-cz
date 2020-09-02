@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 36823637c530d65776c149ff576bf5e7e0ca545f
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016798"
 ---
 # <a name="develop-sharepoint-solutions"></a>Vývoj řešení služby SharePoint
@@ -100,7 +101,7 @@ ms.locfileid: "86016798"
 |Umístění nasazení|Plně kvalifikovaná cesta k souboru na serveru SharePoint. Tato cesta se skládá z kořene nasazení a cesty nasazení podvlastností.|
 |Cesta nasazení|Relativní cesta k souboru v souboru serveru SharePoint, například Workflow1 \\ . Plně kvalifikovaná cesta k souboru je vytvořena zřetězením hodnoty *cesty nasazení* na konec *kořenové hodnoty nasazení* .<br /><br /> Výběr hodnoty *RootFile* pro vlastnost *typ nasazení* změní *kořenovou vlastnost nasazení* na \<SharePointRoot> \\ . Výsledkem je plně kvalifikovaná cesta \<SharePointRoot> \Workflow1 \\ . Další informace naleznete v tématu [balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).|
 |Kořen nasazení|Řetězec. Kořenová složka, ve které je soubor nasazen na serveru SharePoint. Například \<SharePointRoot> \Template\Features \\ \<FeatureName> \\ .<br /><br /> Hodnota *kořenové vlastnosti nasazení* je určena nastavením *typ nasazení* .|
-|Typ nasazení|Typ nasazení souboru, který určuje jeho *kořenovou hodnotu nasazení* . Může to být jedna z následujících hodnot:<br /><br /> Nasazení:*\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\Features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \\ \<FeatureName> \Template\Features \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \TEMPLATE \\ *<br /><br /> RootFile:*\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource:*\<ClassResourcePath>\\*<br /><br /> Další informace naleznete v tématu <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
+|Typ nasazení|Typ nasazení souboru, který určuje jeho *kořenovou hodnotu nasazení* . Může to být jedna z následujících hodnot:<br /><br /> Nasazení: *\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\Features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \\ \<FeatureName> \Template\Features \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \TEMPLATE \\ *<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Další informace naleznete v tématu <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
 |Název souboru|Název souboru nebo složky pro soubor položky|
 |Úplná cesta|Umístění souboru pro položku (Jen pro čtení.)|
 
@@ -127,7 +128,7 @@ ms.locfileid: "86016798"
 |[Zabezpečení pro řešení služby SharePoint](../sharepoint/security-for-sharepoint-solutions.md)|Popisuje bezpečnostní opatření pro vývoj řešení služby SharePoint v nástroji [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Dialogové okno pro výběr adresy URL &#40;vývoj pro SharePoint v aplikaci Visual Studio&#41;](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|Popisuje dialogové okno, které lze použít k přidání odkazů na prostředky v projektu nebo na místním serveru SharePoint.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Začínáme &#40;vývoj pro SharePoint v aplikaci Visual Studio&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)
 - [Procházení připojení služby SharePoint pomocí Průzkumník serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
 - [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)

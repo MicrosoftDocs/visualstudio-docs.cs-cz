@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e2da182992999a582ea30f570734b366178a9521
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85464406"
 ---
 # <a name="idiasymbolget_acceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
@@ -40,7 +40,7 @@ mimo Počet značek akcelerátoru v zástupné funkci akcelerátoru C++ AMP.
 
  `pPointerTags`
 
-mimo `DWORD`Ukazatel na pole, který je vyplněn hodnotami značky akcelerátoru v zástupné funkci akcelerátoru C++ amp.
+mimo `DWORD` Ukazatel na pole, který je vyplněn hodnotami značky akcelerátoru v zástupné funkci akcelerátoru C++ amp.
 
 ## <a name="return-value"></a>Návratová hodnota
  V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.

@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40ae0a08e1623e1b90046d164d8bfe04eaf67229
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656868"
 ---
 # <a name="debugging-legacy-workflows"></a>Ladění starších verzí pracovních postupů
-Pokud používáte starší [!INCLUDE[wfd1](../includes/wfd1-md.md)] v [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] k sestavování [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které target.NET Framework 3,0 nebo 3,5, můžete ladit pracovní postupy stejným způsobem jako jakýkoli jiný program nastavením zarážek, připojením k procesům a prozkoumáním vláken a zásobníku volání. Máte také možnost ladění vzdáleně.
+Pokud používáte starší verze [!INCLUDE[wfd1](../includes/wfd1-md.md)] v [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] pro sestavování [!INCLUDE[wf](../includes/wf-md.md)] aplikací, které Target.NET Framework 3,0 nebo 3,5, můžete ladit pracovní postupy stejným způsobem jako jakýkoli jiný program nastavením zarážek, připojením k procesům a prozkoumáním vláken a zásobníku volání. Máte také možnost ladění vzdáleně.
 
 > [!NOTE]
 > Pokud je v počítači nainstalováno a odinstalováno více verzí sady Visual Studio, ladění WF3 může selhat s jednou z následujících dvou možností:
@@ -33,7 +33,7 @@ Pokud používáte starší [!INCLUDE[wfd1](../includes/wfd1-md.md)] v [!INCLUDE
 >
 >   Pokud při ladění pracovních postupů .NET Framework 3,0 nebo 3,5 dojde k některému z těchto scénářů, proveďte opravu instalace sady Visual Studio.
 
- [!INCLUDE[wf2](../includes/wf2-md.md)] se integruje s následujícími standardními okny [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladění:
+ [!INCLUDE[wf2](../includes/wf2-md.md)] integruje se s následujícími standardními [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ladicími okny:
 
 - **Zarážka**: funguje podle očekávání, ale zadáte aktivitu pro název funkce.
 
@@ -58,7 +58,7 @@ Pokud používáte starší [!INCLUDE[wfd1](../includes/wfd1-md.md)] v [!INCLUDE
 - Ladění ve smíšeném režimu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Spuštění ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)
+ [Vyvolání ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)](../workflow-designer/invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)
 
  [Zakázání ladicího programu sady Visual Studio pro programovací model Windows Workflow Foundation (starší verze)](../workflow-designer/disabling-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md)
 

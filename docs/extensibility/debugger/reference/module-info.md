@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Dokumenty společnosti Microsoft
+title: MODULE_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 59ab4d0bb2a7aaa4b08f616ea0a99be85b521bb0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714317"
 ---
 # <a name="module_info"></a>MODULE_INFO
-Popisuje konkrétní modul (DLL, EXE nebo sestavení).
+Popisuje konkrétní modul (DLL, EXE nebo Assembly).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct tagMODULE_INFO { 
@@ -63,50 +63,50 @@ public struct MODULE_INFO { 
 
 ## <a name="members"></a>Členové
  `dwValidFields`\
- Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, která určuje, která pole jsou vyplněna.
+ Kombinace příznaků z výčtu [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) , která určuje, která pole jsou vyplněna.
 
  `m_bstrName`\
  Název modulu.
 
  `m_bstrUrl`\
- Adresa URL modulu.
+ Adresa URL modulu
 
  `m_bstrVersion`\
- Verze modulu.
+ Verze modulu
 
  `m_bstrDebugMessage`\
- Volitelná zpráva o modulu, například "Symboly nelze načíst."
+ Volitelná zpráva o modulu, například "symboly nelze načíst".
 
  `m_addrLoadAddress`\
  Adresa načtení modulu.
 
  `m_addrPreferredLoadAddress`\
- Upřednostňovaná načítaná adresa modulu.
+ Upřednostňovaná adresa načtení modulu.
 
  `m_dwSize`\
  Velikost modulu.
 
  `m_dwLoadOrder`\
- Pořadí načítání modulu.
+ Pořadí načtení modulu.
 
  `m_TimeStamp`\
- Čas poslední změny souboru symbolů.
+ Čas poslední změny souboru symbolů
 
  `m_bstrUrlSymbolLocation`\
- Umístění souboru symbolů (například\\". ") zadané v modulu. Používá se jako počáteční umístění k vyhledání symbolů pro modul.
+ Umístění souboru symbolů (například ". \\ ") uvedeného v modulu. Slouží jako počáteční umístění pro hledání symbolů pro modul.
 
  `m_dwModuleFlags`\
- Kombinace příznaků z [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) výčtu, který popisuje modul.
+ Kombinace příznaků z výčtu [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) popisující modul.
 
 ## <a name="remarks"></a>Poznámky
- Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metoda, kde je vyplněna.
+ Tato struktura je předána metodě [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) , kde je vyplněna.
 
- Tato struktura odpovídá každému modulu uvedenému v okně **Moduly.**
+ Tato struktura odpovídá každému modulu uvedenému v okně **moduly** .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -22,10 +22,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845524"
 ---
 # <a name="creating-bootstrapper-packages"></a>Vytváření balíčků zaváděcího nástroje
@@ -40,9 +40,9 @@ Instalační program je obecný instalační program, který se dá nakonfigurov
   
  Chcete-li vytvořit balíček zaváděcího nástroje, je nutné dodat distribuovatelné ve formě souboru EXE nebo MSI file.to generátor manifestu zaváděcího nástroje. Generátor manifestu zaváděcího nástroje pak vytvoří následující soubory:  
   
-- Manifest produktu Product. XML, který obsahuje libovolná jazykově neutrální metadata balíčku. Obsahuje metadata společná pro všechny lokalizované verze distribuovatelné součásti.  
+- Manifest produktu, product.xml, který obsahuje všechna jazyková a neutrální metadata pro balíček. Obsahuje metadata společná pro všechny lokalizované verze distribuovatelné součásti.  
   
-- Manifest balíčku Package. XML, který obsahuje metadata specifická pro jazyk; obvykle obsahuje lokalizované chybové zprávy. Komponenta musí mít alespoň jeden manifest balíčku pro každou lokalizovanou verzi této součásti.  
+- Manifest balíčku, package.xml, který obsahuje metadata specifická pro jazyk; obvykle obsahuje lokalizované chybové zprávy. Komponenta musí mít alespoň jeden manifest balíčku pro každou lokalizovanou verzi této součásti.  
   
   Po vytvoření těchto souborů vložte soubor manifestu produktu do složky s názvem pro vlastní zaváděcí nástroj. Soubor manifestu balíčku přejde do složky s názvem pro národní prostředí. Například pokud je soubor manifestu balíčku pro anglickou distribuci, uložte soubor do složky s názvem en. Tento postup opakujte pro každé národní prostředí, například ja pro japonštinu a de pro němčinu. Konečný balíček vlastního zaváděcího nástroje může mít následující strukturu složek.  
   
@@ -106,7 +106,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 |ProcessorArchitecture|Procesor a bity na slova platformy, na kterou cílí spustitelný soubor. Mezi hodnoty patří následující:<br /><br /> – Intel<br />– IA64<br />– AMD64|  
 |[Version9x](https://msdn.microsoft.com/library/aa372490\(v=vs.140\).aspx)|Číslo verze pro operační systémy Microsoft Windows 95, Windows 98 nebo Windows MILLENNIUM. Syntaxe verze je hlavní_verze. podverze. ServicePack.|  
 |[VersionNT](/windows/desktop/Msi/versionnt)|Číslo verze pro operační systémy Windows NT, Windows 2000, Windows XP, Windows Vista, Windows Server 2008 nebo Windows 7. Syntaxe verze je hlavní_verze. podverze. ServicePack.|  
-|[VersionMSI](https://msdn.microsoft.com/library/aa372493\(v=vs.140\).aspx)|Verze sestavení Instalační služba systému Windows (MSI. dll) se spouští během instalace.|  
+|[VersionMSI](https://msdn.microsoft.com/library/aa372493\(v=vs.140\).aspx)|Verze Instalační služba systému Windowsho sestavení (msi.dll) se spouští během instalace.|  
 |[AdminUser](https://msdn.microsoft.com/library/aa367545\(v=vs.140\).aspx)|Tato vlastnost je nastavena, pokud má uživatel oprávnění správce. Hodnoty jsou true nebo false.|  
 |InstallMode|Režim instalace označuje, odkud je nutné součást nainstalovat. Mezi hodnoty patří následující:<br /><br /> -HomeSite – požadavky jsou nainstalovány z webu dodavatele.<br />-SpecificSite – požadavky jsou nainstalovány z umístění, které jste vybrali.<br />-SameSite – požadavky jsou nainstalovány ze stejného umístění jako aplikace.|  
   
@@ -115,7 +115,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  `%ProgramFiles%\Microsoft.NET\RedistList`  
   
- Distribuovatelný seznam je soubor XML, který byste měli pojmenovat v následujícím formátu: *název společnosti*. *Název součásti* RedistList. XML. Takže pokud se například komponenta nazývá DataWidgets vytvořená Acme, použijte Acme. DataWidgets. RedistList. XML. Příklad redistribuovatelného seznamu obsahu může vypadat takto:  
+ Distribuovatelný seznam je soubor XML, který byste měli pojmenovat v následujícím formátu: *název společnosti*. *Název součásti*.RedistList.xml. Takže pokud se například komponenta nazývá DataWidgets vytvořená Acme, použijte Acme.DataWidgets.RedistList.xml. Příklad redistribuovatelného seznamu obsahu může vypadat takto:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -126,6 +126,6 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: Instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
- [Dialogové okno předpoklady](../ide/reference/prerequisites-dialog-box.md)   
- [Referenční  schématu produktu a balíčku](../deployment/product-and-package-schema-reference.md)  
+ [Dialogové okno požadavky](../ide/reference/prerequisites-dialog-box.md)   
+ [Odkaz na schéma produktu a balíčku](../deployment/product-and-package-schema-reference.md)   
  [Použití zaváděcího nástroje sady Visual Studio 2005 k zahájení instalace](https://msdn.microsoft.com/magazine/cc163899.aspx)

@@ -1,5 +1,5 @@
 ---
-title: Omezení délky řetězců | Dokumentace Microsoftu
+title: Omezení délky řetězců | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc6ff1e77a9a973e184384d98ef8b880aaa2f005
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432538"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64794685"
 ---
 # <a name="restrictions-on-string-lengths"></a>Omezení délky řetězců
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Rozhraní API modulu Plug-in zdroje ovládacího prvku omezení délky řetězce použité v různých funkcí.  
+Rozhraní API modulu plug-in správy zdrojového kódu omezuje délky řetězců používané v různých funkcích.  
   
-## <a name="string-length-values"></a>Hodnoty pro délku řetězce  
+## <a name="string-length-values"></a>Hodnoty délky řetězce  
   
 |Konstanta|Hodnota|  
 |--------------|-----------|  
@@ -32,7 +32,7 @@ Rozhraní API modulu Plug-in zdroje ovládacího prvku omezení délky řetězce
 |`SCC_PRJPATH_LEN`|300|  
   
 > [!NOTE]
-> Délka nezahrnuje ukončení `null`. Další konstantám s příponou "_velikost" místo "_LEN" zahrnout místa pro ukončení `null`.  
+> Délka nezahrnuje ukončení `null` . Jiné konstanty s příponou "_SIZE" místo "_LEN" obsahují místo pro ukončení `null` .  
   
 |Konstanta|Hodnota|  
 |--------------|-----------|  

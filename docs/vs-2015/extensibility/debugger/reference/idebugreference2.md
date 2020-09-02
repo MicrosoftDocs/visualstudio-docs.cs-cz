@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2 | Dokumentace Microsoftu
+title: IDebugReference2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,64 +13,64 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ac7e825bd33c184d580ada96843366f6d1627f22
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438971"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64785189"
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Toto rozhraní představuje odkaz na vlastnost rámce zásobníku nebo některé jiné vlastnosti.  
+Toto rozhraní představuje odkaz na vlastnost rámce zásobníku nebo na jinou vlastnost.  
   
 > [!NOTE]
-> `IDebugReference2` je vyhrazený pro budoucí použití a všechny jeho metody by měly vrátit `E_NOTIMPL`.  
+> `IDebugReference2` je vyhrazený pro budoucí použití a všechny její metody by měly vracet `E_NOTIMPL` .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugReference2 : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- DE implementuje toto rozhraní představující odkaz na konkrétní typ hodnoty. Hodnota může být například číselnou hodnotu jako výsledek vyhodnocení výrazu, kontext paměti pro zobrazování paměti nebo seznam registrů a jejich hodnoty.  
+ DE implementuje toto rozhraní, aby představovalo odkaz na konkrétní druh hodnoty. Například hodnota může být číselná hodnota jako výsledek vyhodnocení výrazu, kontext paměti použitý pro zobrazení paměti nebo seznam registrů a jejich hodnot.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Volání [getreference –](../../../extensibility/debugger/reference/idebugproperty2-getreference.md) k získání tohoto rozhraní. [Getparent –](../../../extensibility/debugger/reference/idebugreference2-getparent.md) a [GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md) rovněž vracejí toto rozhraní.  
+ Pro získání tohoto rozhraní volejte [getReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md) . [GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md) a [GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md) také vrátí toto rozhraní.  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDebugReference2`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDebugReference2` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|Získá [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktura, která popisuje tento odkaz.|  
+|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|Získá strukturu [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) , která popisuje tento odkaz.|  
 |[SetValueAsString](../../../extensibility/debugger/reference/idebugreference2-setvalueasstring.md)|Nastaví hodnotu tohoto odkazu z řetězce.|  
 |[SetValueAsReference](../../../extensibility/debugger/reference/idebugreference2-setvalueasreference.md)|Nastaví hodnotu tohoto odkazu z jiného odkazu.|  
-|[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)|Vytvoří výčet podřízených prvků tohoto odkazu.|  
-|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|Získá nadřazený tento odkaz.|  
-|[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)|Získá nejvíce odvozenému odkaz na tento odkaz.|  
-|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|Získá počet bajtů paměti, na které odkazuje tento odkaz.|  
+|[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)|Vytvoří výčet podřízených objektů tohoto odkazu.|  
+|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|Získá nadřazený objekt tohoto odkazu.|  
+|[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)|Získá nejvíc odvozený odkaz na tento odkaz.|  
+|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|Získá bajty paměti, na které odkazuje tento odkaz.|  
 |[GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)|Získá kontext paměti pro tento odkaz.|  
-|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|Získá velikost v bajtech, tento odkaz.|  
+|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|Získá velikost tohoto odkazu (v bajtech).|  
 |[SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)|Nastaví tento typ odkazu.|  
-|[Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)|Porovná tento odkaz s jiným.|  
+|[Porovnání](../../../extensibility/debugger/reference/idebugreference2-compare.md)|Porovná tento odkaz s jiným.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
-> Toto použití "vlastnosti" neměly by být zaměňovány s znamená členské proměnné třídy, i když `IDebugReference2` může představovat taková entita.  
+> Toto použití "Property" by nemělo být zaměňováno s tímto významem členské proměnné třídy, i když `IDebugReference2` může představovat takovou entitu.  
   
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) představuje vlastnost, zatímco `IDebugReference2` představuje odkaz na vlastnost, obvykle odkaz na objekt v programu, který se právě ladí.  
+ [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) představuje vlastnost, zatímco `IDebugReference2` představuje odkaz na vlastnost, obvykle odkaz na objekt v laděném programu.  
   
- Hlavní rozdíl mezi vlastností a odkaz je, že vlastnost odkazuje na pojmenovanou instanci objektu, zatímco odkaz odkazuje na instanci nepojmenované. Například vlastnost může odkazovat na objekt v haldě tohoto programu pomocí `"a.b"`. Jiné vlastnosti mohou odkazovat na stejný objekt jako `"c.d"`. Změnit způsob odkazující na tuto vlastnost, která vyžaduje `"a.b"` nebo `"c.d"` v oboru. Odkaz na tento stejný objekt je nameless; objekt lze odkazovat jako paměť pro tento objekt je platný.  
+ Hlavním rozdílem mezi vlastností a odkazem je to, že vlastnost odkazuje na pojmenovanou instanci objektu, zatímco odkaz odkazuje na nepojmenované instance. Vlastnost například může odkazovat na objekt v haldě programu pomocí `"a.b"` . Jiná vlastnost může odkazovat na stejný objekt jako `"c.d"` . Způsob, jakým se odkazuje na tuto vlastnost, vyžaduje, aby `"a.b"` `"c.d"` byl v oboru. Odkaz na stejný objekt je Nameless; na objekt může být odkazováno, dokud je paměť pro tento objekt platná.  
   
- `IDebugProperty2` Rozhraní můžete představit jako hodnotu s názvem, typem a adresu. `IDebugReference2`, Na druhé straně, lze považovat za typ a adresu.  
+ `IDebugProperty2`Rozhraní lze představit jako hodnotu s názvem, typem a adresou. `IDebugReference2`Na druhé straně je možné si představit jako typ a adresu.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

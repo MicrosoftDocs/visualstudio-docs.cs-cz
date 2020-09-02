@@ -1,5 +1,5 @@
 ---
-title: NATIVE_ADDRESS | Dokumenty společnosti Microsoft
+title: NATIVE_ADDRESS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7c62bbea846f3d486ead8add4dfab2182df1e1bb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714332"
 ---
 # <a name="native_address"></a>NATIVE_ADDRESS
 
 Tato struktura představuje nativní adresu.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagNATIVE_ADDRESS {
@@ -43,17 +43,17 @@ public struct NATIVE_ADDRESS {
 ## <a name="members"></a>Členové
 
 `unknown`\
-Nativní adresa (význam tohoto závisí na běhu a operačního systému).
+Nativní adresa (význam závisí na modulu runtime a operačním systému).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato struktura je součástí unie ve struktuře [DEBUG_ADDRESS_UNION,](../../../extensibility/debugger/reference/debug-address-union.md) když `dwKind` je pole `DEBUG_ADDRESS_UNION` struktury nastaveno na `ADDRESS_KIND_NATIVE` (hodnota z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu).
+Tato struktura je součástí sjednocení ve struktuře [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) , když `dwKind` `DEBUG_ADDRESS_UNION` je pole struktury nastaveno na `ADDRESS_KIND_NATIVE` (hodnota z výčtu [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) ).
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: sh.h
+Záhlaví: SH. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

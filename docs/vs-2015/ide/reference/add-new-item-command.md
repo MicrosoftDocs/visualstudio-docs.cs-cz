@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e6237ace96799961683b0b0431f5dad3ab679e24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670198"
 ---
 # <a name="add-new-item-command"></a>Přidat novou položku – příkaz
@@ -32,15 +32,15 @@ Přidá novou položku řešení, jako je například. htm,. CSS,. txt nebo FRAM
 File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 ```
 
-## <a name="arguments"></a>Arguments
- `filename` volitelné. Cesta a název souboru položky, která se má přidat do řešení
+## <a name="arguments"></a>Argumenty
+ `filename` Volitelné. Cesta a název souboru položky, která se má přidat do řešení
 
 ## <a name="switches"></a>Přepínače
  /t: `templatename` volitelné. Určuje typ souboru, který se má vytvořit. Pokud není zadán žádný název šablony, je ve výchozím nastavení vytvořen textový soubor.
 
- Syntaxe argumentu/t: `templatename` zrcadlí informace, které se nacházejí v dialogovém okně **Přidat novou položku řešení** . Je nutné zadat celou kategorii, za kterou následuje typ souboru, oddělení názvu kategorie od typu souboru zpětným lomítkem (`\`) a uzavřením celého řetězce v uvozovkách.
+ Syntaxe/t: `templatename` argument odráží informace, které se nacházejí v dialogovém okně **Přidat novou položku řešení** . Je nutné zadat celou kategorii, za kterou následuje typ souboru, oddělení názvu kategorie od typu souboru zpětným lomítkem ( `\` ) a uzavřením celého řetězce v uvozovkách.
 
- Pokud například chcete vytvořit nový textový soubor, zadejte do argumentu/t: `templatename` následující text.
+ Pokud například chcete vytvořit nový textový soubor, zadejte do argumentu/t: následující text `templatename` .
 
 ```
 /t:"General\Style Sheet"
@@ -48,9 +48,9 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 
  /e: `editorname` volitelné. Název editoru, ve kterém bude soubor otevřen. Je-li zadán argument, ale není zadán žádný název editoru, zobrazí se dialogové okno **otevřít v** .
 
- Syntaxe parametru/e: `editorname` používá editory názvů, které se zobrazují v **dialogovém okně Otevřít v programu**, uzavřeném v uvozovkách.
+ Syntaxe/e: `editorname` argument používá názvy editoru tak, jak se zobrazí v **dialogovém okně Otevřít v aplikaci**uzavřené v uvozovkách.
 
- Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu, zadejte následující příkaz pro argument/e: `editorname`.
+ Chcete-li například otevřít šablonu stylů v editoru zdrojového kódu, zadejte následující příkaz pro parametr/e: `editorname` .
 
 ```
 /e:"Source Code (text) Editor"

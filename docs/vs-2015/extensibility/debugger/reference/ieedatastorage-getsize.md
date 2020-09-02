@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize | Dokumentace Microsoftu
+title: 'IEEDataStorage:: GetSize | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0c76ae583d089b23d21664c9e312d2486a14c2aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192126"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
@@ -40,13 +40,13 @@ int GetSize(
   
 #### <a name="parameters"></a>Parametry  
  `size`  
- [out] Počet bajtů obsažených v tomto objektu.  
+ mimo Počet bajtů obsažených v tomto objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) metodu pro načtení bajtů skutečná data.  
+ K načtení skutečných datových bajtů použijte metodu [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) .  
   
 ## <a name="see-also"></a>Viz také  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetSize | Dokumentace Microsoftu
+title: 'IDebugObject:: GetSize | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ffafe6b62047a577b2bfce74c8462d9051c4dcfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192270"
 ---
 # <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
@@ -40,13 +40,13 @@ int GetSize(
   
 #### <a name="parameters"></a>Parametry  
  `pnSize`  
- [out] Vrátí velikost v bajtech.  
+ mimo Vrátí velikost v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Použití [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) metody k načtení hodnoty jako sekvenci bajtů.  
+ Použijte metodu [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) k načtení hodnoty jako posloupnosti bajtů.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

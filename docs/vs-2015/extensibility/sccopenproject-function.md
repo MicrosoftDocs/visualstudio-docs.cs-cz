@@ -1,5 +1,5 @@
 ---
-title: Sccopenproject – funkce | Dokumentace Microsoftu
+title: Funkce SccOpenProject | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: af2b33d31d813533d833e4a5c15a3b562bc2e94e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446799"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64791900"
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject – funkce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tato funkce se otevře existující projekt ovládacího prvku zdroje nebo vytvoří nový.  
+Tato funkce otevře existující projekt správy zdrojového kódu nebo vytvoří nový.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,73 +42,73 @@ SCCRTN SccOpenProject (
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
+ pro Struktura kontextu modulu plug-in správy zdrojových kódů.  
   
  hWnd  
- [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
+ pro Popisovač okna rozhraní IDE, který modul plug-in správy zdrojového kódu může použít jako nadřazený pro všechna dialogová okna, která poskytuje.  
   
  lpUser  
- [out v] Název uživatele (nesmí přesáhnout SCC_USER_SIZE, včetně ukončovacího znaku NULL).  
+ [in, out] Jméno uživatele (nesmí přesáhnout SCC_USER_SIZE, včetně ukončovacího znaku NULL).  
   
  lpProjName  
- [in] Řetězec identifikující název projektu.  
+ pro Řetězec identifikující název projektu.  
   
  lpLocalProjPath  
- [in] Cesta pracovní složky projektu.  
+ pro Cesta k pracovní složce pro projekt  
   
  lpAuxProjPath  
- [out v] Volitelné pomocné řetězec identifikující projektu (nesmí přesáhnout SCC_AUXPATH_SIZE, včetně ukončovacího znaku NULL).  
+ [in, out] Volitelný pomocný řetězec identifikující projekt (nesmí přesahovat SCC_AUXPATH_SIZE, včetně ukončovacího znaku NULL).  
   
  lpComment  
- [in] Komentář na nový projekt, který se vytváří.  
+ pro Komentář k novému projektu, který se vytváří.  
   
  lpTextOutProc  
- [in] Funkce jazyka volitelné zpětného volání pro zobrazení textového výstupu z modulu plug-in správy zdrojového kódu.  
+ pro Volitelná funkce zpětného volání, která zobrazí textový výstup z modulu plug-in správy zdrojových kódů.  
   
  dwFlags  
- [in] Signály, zda nového projektu je potřeba vytvořit, pokud je projekt neznámé zdroje ovládací prvek modulu plug-in. Hodnota může být kombinací `SCC_OP_CREATEIFNEW` a `SCC_OP_SILENTOPEN.`  
+ pro Signalizuje, jestli je potřeba vytvořit nový projekt, pokud je projekt neznámý pro modul plug-in správy zdrojových kódů. Hodnotou může být kombinace a. `SCC_OP_CREATEIFNEW``SCC_OP_SILENTOPEN.`  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
+ Při implementaci modulu plug-in správy zdrojových kódů této funkce se očekává, že se vrátí jedna z následujících hodnot:  
   
-|Value|Popis|  
+|Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Úspěch v otevření projektu.|  
+|SCC_OK|Otevření projektu bylo úspěšné.|  
 |SCC_E_INITIALIZEFAILED|Projekt se nepovedlo inicializovat.|  
-|SCC_E_INVALIDUSER|Uživatel nemůže přihlásit do systému správy zdrojového kódu.|  
-|SCC_E_COULDNOTCREATEPROJECT|Projekt před voláním; neexistuje.  `SCC_OPT_CREATEIFNEW` byl nastaven příznak, ale projekt se nevytvořil.|  
-|SCC_E_PROJSYNTAXERR|Neplatný projekt syntaxe.|  
-|SCC_E_UNKNOWNPROJECT|Projekt Neznámý do modulu plug-in správy zdrojového kódu a `SCC_OPT_CREATEIFNEW` příznakem nenastavila.|  
-|SCC_E_INVALIDFILEPATH|Soubor je neplatný nebo nepoužitelné cesta.|  
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|  
-|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|  
-|SCC_E_NONSPECFICERROR|Obecná chyba; systém správy zdrojového kódu nebyla inicializována.|  
+|SCC_E_INVALIDUSER|Uživatel se nemohl přihlásit do systému správy zdrojového kódu.|  
+|SCC_E_COULDNOTCREATEPROJECT|Projekt neexistuje před voláním.  `SCC_OPT_CREATEIFNEW` příznak byl nastaven, ale projekt se nepovedlo vytvořit.|  
+|SCC_E_PROJSYNTAXERR|Neplatná syntaxe projektu.|  
+|SCC_E_UNKNOWNPROJECT|Projekt není známý pro modul plug-in správy zdrojových kódů a `SCC_OPT_CREATEIFNEW` Příznak nebyl nastaven.|  
+|SCC_E_INVALIDFILEPATH|Neplatná nebo nepoužitelná cesta k souboru.|  
+|SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k provedení této operace.|  
+|SCC_E_ACCESSFAILURE|Při přístupu do systému správy zdrojů došlo k potížím, pravděpodobně kvůli problémům se sítí nebo kolize. Doporučuje se opakovat pokus.|  
+|SCC_E_NONSPECFICERROR|Nespecifická chyba; systém správy zdrojového kódu nebyl inicializován.|  
   
 ## <a name="remarks"></a>Poznámky  
- Rozhraní IDE může předat uživatelské jméno (`lpUser`), nebo ho jednoduše předat ukazatel na prázdný řetězec. Pokud je uživatelské jméno, modul plug-in správy zdrojového kódu by měl používat jako výchozí. Nicméně pokud nebyl předán žádný název, nebo pokud se přihlášení nezdařilo se zadaným názvem, modul plug-in měl vyzvat uživatele k přihlášení a vrátí platný název v `lpUser` při přijetí platné přihlašovací údaje`.` vzhledem k tomu, že modul plug-in mohou změnit řetězce uživatelského jména , rozhraní IDE se vždy přidělí vyrovnávací paměť o velikosti (`SCC_USER_LEN`+ 1 nebo SCC_USER_SIZE, což zahrnuje prostor pro ukončovacího znaku null).  
+ Rozhraní IDE může předat uživatelské jméno ( `lpUser` ) nebo může jednoduše předat ukazatel na prázdný řetězec. Pokud je uživatelské jméno, modul plug-in správy zdrojových kódů by ho měl používat jako výchozí. Pokud se ale nepředali žádný název nebo pokud se přihlášení nezdařilo s daným názvem, modul plug-in by měl uživateli požádat o přihlášení a vrátí platný název v `lpUser` případě, kdy obdrží platné přihlašovací údaje `.` , protože modul plug-in může změnit řetězec uživatelského jména, rozhraní IDE vždy přidělí velikost vyrovnávací paměti ( `SCC_USER_LEN` + 1 nebo SCC_USER_SIZE, která obsahuje místo pro ukončovací znak null).  
   
 > [!NOTE]
-> První akci integrovaného vývojového prostředí může být nutné provést může být volání konstruktoru `SccOpenProject` funkce nebo [sccgetprojpath –](../extensibility/sccgetprojpath-function.md). Z tohoto důvodu obou z nich mít identická `lpUser` parametru.  
+> První akce, kterou může IDE vyžadovat k provedení, může být volání `SccOpenProject` funkce nebo [SccGetProjPath](../extensibility/sccgetprojpath-function.md). Z tohoto důvodu mají oba atributy stejný `lpUser` parametr.  
   
- `lpAuxProjPath` a`lpProjName` jsou čtení ze souboru řešení nebo jsou vráceny z volání `SccGetProjPath` funkce. Tyto parametry obsahují řetězce, které modul plug-in správy zdrojového kódu se přidruží k projektu a mají smysl jenom pro modul plug-in. Pokud žádný takový řetězce v souboru řešení a nebyl byl uživatel vyzván k procházení (která vrátí řetězec prostřednictvím `SccGetProjPath` funkce), integrovaného vývojového prostředí předá prázdné řetězce pro obě `lpAuxProjPath` a `lpProjName`a očekává, že tyto hodnoty aktualizovat pomocí modulu plug-in když tato funkce vrátí.  
+ `lpAuxProjPath` a `lpProjName` jsou čteny ze souboru řešení nebo jsou vráceny ze volání `SccGetProjPath` funkce. Tyto parametry obsahují řetězce, které modul plug-in správy zdrojových kódů přidruží k projektu a je smysluplný pouze pro modul plug-in. Pokud tyto řetězce nejsou v souboru řešení a uživatel nebyl vyzván k procházení (který by vrátil řetězec prostřednictvím `SccGetProjPath` funkce), rozhraní IDE předává prázdné řetězce pro `lpAuxProjPath` a a `lpProjName` očekává, že tyto hodnoty budou aktualizovány modulem plug-in, když tato funkce vrátí.  
   
- `lpTextOutProc` je ukazatel na funkci zpětného volání poskytovaných IDE pro účely zobrazení výstupu výsledku příkazu modulu plug-in správy zdrojového kódu. Tato funkce zpětného volání je podrobně popsán v [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
+ `lpTextOutProc` je ukazatel na funkci zpětného volání poskytovanou rozhraním IDE pro modul plug-in správy zdrojových kódů pro účely zobrazení výstupu výsledku příkazu. Tato funkce zpětného volání je podrobněji popsána v [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
   
 > [!NOTE]
-> Pokud modul plug-in správy zdrojového kódu se chce využít výhody tohoto, musí mít nastaven `SCC_CAP_TEXTOUT` příznak v [sccinitialize –](../extensibility/sccinitialize-function.md). Pokud tento příznak nebyla nastavena nebo prostředí IDE nepodporuje tuto funkci `lpTextOutProc` bude `NULL`.  
+> Pokud je tento modul plug-in správy zdrojových kódů zamýšlí využít, musí mít nastaven `SCC_CAP_TEXTOUT` příznak v [SccInitialize](../extensibility/sccinitialize-function.md). Pokud tento příznak nebyl nastaven nebo pokud rozhraní IDE tuto funkci nepodporuje, `lpTextOutProc` bude `NULL` .  
   
- `dwFlags` Parametr určuje výsledek v případě, že se otevření projektu neexistuje. Skládá se ze dvou příznaky bitflag `SCC_OP_CREATEIFNEW` a `SCC_OP_SILENTOPEN`. Pokud projekt otevírané již existuje, funkce jednoduše otevře projekt a vrátí `SCC_OK`. Pokud projekt neexistuje a pokud `SCC_OP_CREATEIFNEW` příznak zapnutý, modul plug-in správy zdrojového kódu vytvoření projektu v systému správy zdrojového kódu, otevřete ho a vracet `SCC_OK`. Pokud projekt neexistuje a pokud `SCC_OP_CREATEIFNEW` příznak je vypnuté, modul plug-in byste pak vyhledejte `SCC_OP_SILENTOPEN` příznak. Pokud na tento příznak není, může modul plug-in požádat uživatele o název projektu. Pokud tento příznak zapnutý, modul plug-in jednoduše vrátit `SCC_E_UNKNOWNPROJECT`.  
+ `dwFlags`Parametr řídí výsledek v události, že otevřený projekt aktuálně neexistuje. Skládá se ze dvou bitflags `SCC_OP_CREATEIFNEW` a `SCC_OP_SILENTOPEN` . Pokud otevřený projekt již existuje, funkce jednoduše otevře projekt a vrátí `SCC_OK` . Pokud projekt neexistuje a `SCC_OP_CREATEIFNEW` je-li příznak zapnut, modul plug-in správy zdrojového kódu může vytvořit projekt v systému správy zdrojového kódu, otevřít jej a vrátit se změnami `SCC_OK` . Pokud projekt neexistuje a `SCC_OP_CREATEIFNEW` příznak je vypnutý, modul plug-in by pak měl kontrolovat `SCC_OP_SILENTOPEN` příznak. Pokud tento příznak není zapnutý, modul plug-in může uživateli požádat o název projektu. Pokud je tento příznak zapnutý, modul plug-in by se měl jednoduše vrátit `SCC_E_UNKNOWNPROJECT` .  
   
 ## <a name="calling-order"></a>Pořadí volání  
- Při běžném průběhu událostí [sccinitialize –](../extensibility/sccinitialize-function.md) by byla volána nejprve otevřete relaci zdrojového ovládacího prvku. Relace se může skládat z volání `SccOpenProject`, za nímž následuje jiných volání funkcí rozhraní API modulu Plug-in zdroje ovládacího prvku a bude ukončen voláním [scccloseproject –](../extensibility/scccloseproject-function.md). Tato relace může opakovat několikrát před [sccuninitialize –](../extensibility/sccuninitialize-function.md) je volána.  
+ V běžném průběhu událostí by se [SccInitialize](../extensibility/sccinitialize-function.md) volal jako první pro otevření relace správy zdrojového kódu. Relace může obsahovat volání `SccOpenProject` , následované dalšími voláními funkcí rozhraní API modulu plug-in správy zdrojového kódu a ukončí volání [SccCloseProject](../extensibility/scccloseproject-function.md). Tyto relace se můžou několikrát opakovat předtím, než se zavolá [SccUninitialize](../extensibility/sccuninitialize-function.md) .  
   
- Pokud zdroj modulu plug-in sady `SCC_CAP_REENTRANT` bit v `SccInitialize`, pak výše uvedené pořadí relace může opakuje tolikrát, kolikrát paralelně. Různé `pvContext` struktury sledovat různé relace, ve nichž každý `pvContext` je spojen s jeden otevřít projekt současně. Na základě`pvContext` parametr, modul plug-in můžete určit, který projekt se odkazuje v žádném konkrétním volání. Pokud bit možnost `SCC_CAP_REENTRANT` není nastavena, nonreentrant plug-in správy zdrojového kódu moduly mají omezenou schopnost pracovat s více projekty.  
+ Pokud modul plug-in správy zdrojových kódů nastaví `SCC_CAP_REENTRANT` bit v `SccInitialize` , pak se výše uvedená sekvence relace může v paralelním opakování opakovat. Různé `pvContext` struktury sledují různé relace, ve kterých každé `pvContext` je přidruženo k jednomu otevřenému projektu v jednom okamžiku. Na základě `pvContext` parametru může modul plug-in určit, který projekt je odkazován v jakémkoli konkrétním volání. Pokud není bit schopností `SCC_CAP_REENTRANT` nastaven, moduly plug-in nonreentrant správy zdrojového kódu jsou omezené na jejich schopnost pracovat s více projekty.  
   
 > [!NOTE]
-> `SCC_CAP_REENTRANT` Bit byla zavedena ve verzi 1.1 rozhraní API modulu Plug-in zdroje ovládacího prvku. Není nastavena nebo je ignorován ve verzi 1.0, a všechny verze 1.0 ovládací prvek moduly plug-in zdrojového kódu budou považovat za nonreentrant.  
+> `SCC_CAP_REENTRANT`Bit byl představen ve verzi 1,1 rozhraní API modulu plug-in správy zdrojového kódu. Není nastaven nebo se ignoruje ve verzi 1,0 a předpokládá se, že moduly plug-in správy zdrojového kódu verze 1,0 jsou nonreentrant.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu plug-in správy zdrojového kódu](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCloseProject](../extensibility/scccloseproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   

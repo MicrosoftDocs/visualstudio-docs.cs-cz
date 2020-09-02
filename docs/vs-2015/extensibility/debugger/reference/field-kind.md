@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Dokumentace Microsoftu
+title: FIELD_KIND | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ab972df2cf1b382498d2e57a5ae2e978c7230a34
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65692880"
 ---
-# <a name="fieldkind"></a>FIELD_KIND
+# <a name="field_kind"></a>FIELD_KIND
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Určuje typ pole, které jsou součástí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu.  
+Určuje druh pole obsažený v objektu [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_KIND {   
@@ -125,16 +125,16 @@ public enum enum_FIELD_KIND {
   
 ## <a name="members"></a>Členové  
  FIELD_KIND_TYPE  
- Označuje, že pole je typu pouze.  
+ Označuje, že pole je pouze typ.  
   
  FIELD_KIND_SYMBOL  
- Označuje, že pole je symbol, typ, název a další informace.  
+ Označuje, že pole je symbol, s typem, názvem a dalšími informacemi.  
   
  FIELD_TYPE_PRIMITIVE  
- Označuje, že je pole primitivních datových typů.  
+ Označuje, že pole je primitivní datový typ.  
   
  FIELD_TYPE_STRUCT  
- Označuje, že pole je struktura.  
+ Označuje, že pole je strukturou.  
   
  FIELD_TYPE_CLASS  
  Označuje, že pole je třída.  
@@ -158,13 +158,13 @@ public enum enum_FIELD_KIND {
  Označuje, že pole je ukazatel.  
   
  FIELD_TYPE_ENUM  
- Označuje, že pole je výčtový datový typ.  
+ Označuje, že pole je Výčtový datový typ.  
   
  FIELD_TYPE_LABEL  
  Označuje, že pole je popisek.  
   
  FIELD_TYPE_TYPEDEF  
- Označuje, že pole je definice typu.  
+ Označuje, že pole je typu typedef.  
   
  FIELD_TYPE_BITFIELD  
  Označuje, že pole je bitového pole.  
@@ -176,16 +176,16 @@ public enum enum_FIELD_KIND {
  Označuje, že pole je modul.  
   
  FIELD_TYPE_DYNAMIC  
- Označuje, že pole je dynamická.  
+ Označuje, že pole je dynamické.  
   
  FIELD_TYPE_PROP  
  Označuje, že pole je vlastnost.  
   
  FIELD_TYPE_INNERCLASS  
- Označuje, že pole je vnitřní třídu.  
+ Označuje, že pole je vnitřní třída.  
   
  FIELD_TYPE_REFERENCE  
- Označuje, že pole je odkaz.  
+ Označuje, že pole je odkazem.  
   
  FIELD_TYPE_EXTENDED  
  Vyhrazeno pro budoucí použití.  
@@ -197,41 +197,41 @@ public enum enum_FIELD_KIND {
  Označuje, že pole je místní.  
   
  FIELD_SYM_PARAMETER  
- Označuje, že pole je parametr.  
+ Označuje, že pole je parametrem.  
   
  FIELD_SYM_THIS  
- Označuje, že pole je ukazatel "Tento".  
+ Označuje, že pole je ukazatel "This".  
   
  FIELD_SYM_GLOBAL  
  Označuje, že pole je globální.  
   
  FIELD_SYM_PROP_GETTER  
- Označuje, že pole načte vlastnosti.  
+ Indikuje, že pole načte vlastnosti.  
   
  FIELD_SYM_PROP_SETTER  
- Označuje, že pole nastaví vlastnosti.  
+ Označuje, že sada polí obsahuje vlastnosti.  
   
  FIELD_SYM_EXTENDED  
  Vyhrazeno pro budoucí použití.  
   
  FIELD_KIND_MASK  
- Označuje maska pro typy polí.  
+ Označuje masku pro typy polí.  
   
  FIELD_TYPE_MASK  
- Označuje maska pro typy polí.  
+ Označuje masku pro typy polí.  
   
  FIELD_SYM_MASK  
- Označuje maska informací o symbolu.  
+ Označuje masku pro informace o symbolech.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácená z volání [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metody.  
+ Vráceno voláním metody [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) .  
   
- V závislosti na typu pole [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) lze volat pro [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní pro konkrétnější formu rozhraní. Například pokud [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) vrátí `FIELD_TYPE_METHOD`, pak můžete volat `QueryInterface` na můžu`DebugField` získat [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) rozhraní.  
+ V závislosti na typu pole je možné volat [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) v rozhraní [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) pro konkrétnější formu rozhraní. Například pokud se vrátí [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) `FIELD_TYPE_METHOD` , můžete zavolat `QueryInterface` na I `DebugField` a získat rozhraní [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: sh.h  
+ Záhlaví: SH. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

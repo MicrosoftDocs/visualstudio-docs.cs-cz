@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder | Dokumentace Microsoftu
+title: IDebugBinder | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,50 +13,50 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc00c50e3c340ab0685ab1010c6e924e77a18a09
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431695"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64782823"
 ---
 # <a name="idebugbinder"></a>IDebugBinder
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Toto rozhraní váže pole symbolu, obvykle vrácený zprostředkovatelem symbol, k místní paměti nebo objekt, který obsahuje aktuální hodnotu tohoto symbolu.  
+ Toto rozhraní váže pole symbolu, které obvykle vrací poskytovatel symbolů, do paměťového kontextu nebo objektu, který obsahuje aktuální hodnotu symbolu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugBinder : IUnknown  
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní podporuje vyhodnocení výrazu a musí být implementované ladicího stroje (DE).  
+ Toto rozhraní podporuje vyhodnocení výrazu a musí být implementováno ladicím modulem (DE).  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní se použije při vyhodnocení výrazu a obvykle se používá při provádění [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) a [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md).  
+ Toto rozhraní se používá v procesu vyhodnocení výrazu a obvykle se používá v implementaci [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) a [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md).  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDebugBinder`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDebugBinder` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)|Získá kontext paměti nebo objekt, který obsahuje aktuální hodnotu tohoto symbolu.|  
-|[ResolveRuntimeType](../../../extensibility/debugger/reference/idebugbinder-resolveruntimetype.md)|Určuje typ run-time objekt.|  
-|[GetMemoryContext](../../../extensibility/debugger/reference/idebugbinder-getmemorycontext.md)|Převede adresu umístění nebo paměti objektu kontextu paměti.|  
-|[GetFunctionObject](../../../extensibility/debugger/reference/idebugbinder-getfunctionobject.md)|Získá [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) objekt použitý k vytvoření parametry funkce.|  
-|[ResolveDynamicType](../../../extensibility/debugger/reference/idebugbinder-resolvedynamictype.md)|Získá přesný typ proměnné.|  
+|[Zapisovat](../../../extensibility/debugger/reference/idebugbinder-bind.md)|Získá kontext paměti nebo objekt, který obsahuje aktuální hodnotu symbolu.|  
+|[ResolveRuntimeType](../../../extensibility/debugger/reference/idebugbinder-resolveruntimetype.md)|Určuje typ běhu objektu.|  
+|[GetMemoryContext](../../../extensibility/debugger/reference/idebugbinder-getmemorycontext.md)|Převede umístění objektu nebo adresu paměti na kontext paměti.|  
+|[GetFunctionObject](../../../extensibility/debugger/reference/idebugbinder-getfunctionobject.md)|Získá objekt [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) , který se používá k vytvoření parametrů funkce.|  
+|[ResolveDynamicType](../../../extensibility/debugger/reference/idebugbinder-resolvedynamictype.md)|Získá přesný typ pro proměnnou.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní vrátí objekty, které jsou používány vyhodnocovací filtr výrazů ve stromech pro analýzu. Chyba při vyhodnocování výrazu analyzuje výraz pomocí poskytovatel symbolů se převést symboly ve výrazu na instance [IDebugField](../../../extensibility/debugger/reference/idebugfield.md), které popisují každý symbol z hlediska její typ a umístění ve zdrojovém kódu. [Svázat](../../../extensibility/debugger/reference/idebugbinder-bind.md) metoda převede `IDebugField` objektů [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) typ objektů, které se připojit nebo vytvořit vazbu symbol na skutečnou hodnotu v paměti. Tyto `IDebugObject` objekty jsou pak uloženy v strom analýzy pro pozdější vyhodnocení.  
+ Toto rozhraní vrací objekty, které jsou používány vyhodnocovacím filtrem výrazů ve stromech analýzy. Vyhodnocení výrazu analyzuje výraz pomocí poskytovatele symbolů pro převod symbolů ve výrazu na instance [IDebugField](../../../extensibility/debugger/reference/idebugfield.md), které popisují každý symbol z podmínek jeho typu a umístění ve zdrojovém kódu. Metoda [BIND](../../../extensibility/debugger/reference/idebugbinder-bind.md) převede `IDebugField` objekty na objekty [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) , které spojují nebo vážou typ symbolu se skutečnou hodnotou v paměti. Tyto `IDebugObject` objekty jsou následně uloženy ve stromové struktuře analýzy pro pozdější vyhodnocení.  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: ee.h  
+ Záhlaví: ee. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

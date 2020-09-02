@@ -12,10 +12,10 @@ monikerRange: '>= vs-2017'
 ms.workload:
 - multiple
 ms.openlocfilehash: f0e24f3fc33ea456ad02bf9797b934a1a56d4492
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238579"
 ---
 # <a name="understand-profiler-performance-collection-methods"></a>Vysvětlení metod shromažďování výkonu profileru

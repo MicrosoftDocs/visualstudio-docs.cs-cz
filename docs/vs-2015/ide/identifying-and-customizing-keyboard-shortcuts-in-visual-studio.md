@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e63395838d7d91170d54edbb07c0b38db548ccdf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670494"
 ---
 # <a name="identifying-and-customizing-keyboard-shortcuts-in-visual-studio"></a>Identifikování a přizpůsobení klávesových zkratek v sadě Visual Studio
@@ -37,7 +37,7 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
 
 - Kontext použitý při výběru zástupce. Například zkratka F2 vyvolá příkaz Edit.EditCell, pokud používáte Návrháře nastavení, a příkaz File.Rename, pokud používáte Průzkumník týmových projektů.
 
-  Bez ohledu na nastavení, přizpůsobení a kontext můžete klávesovou zkratku vždycky najít a změnit v dialogovém okně **Možnosti** . Můžete také vyhledat výchozí klávesové zkratky pro několik desítek příkazů ve [výchozích klávesových zkratkách pro často používané příkazy](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)a můžete najít úplný seznam všech výchozích klávesových zkratek (na základě obecného nastavení vývoje) ve [výchozím nastavení. Klávesové zkratky](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+  Bez ohledu na nastavení, přizpůsobení a kontext můžete klávesovou zkratku vždycky najít a změnit v dialogovém okně **Možnosti** . Můžete také vyhledat výchozí klávesové zkratky pro několik desítek příkazů ve [výchozích klávesových zkratkách pro často používané příkazy](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)a můžete najít úplný seznam všech výchozích klávesových zkratek (na základě obecného nastavení vývoje) ve [výchozích klávesových zkratkách](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
   **V tomto tématu**
 
@@ -52,7 +52,7 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
 > [!NOTE]
 > Vaše nastavení a edice sady Visual Studio může změnit názvy a umístění příkazů nabídky a možnosti, které se zobrazí v dialogových oknech. Toto téma je založeno na **obecném nastavení pro vývoj**.
 
-## <a name="bkmk_identify"></a>Identifikace klávesových zkratek
+## <a name="identifying-a-keyboard-shortcut"></a><a name="bkmk_identify"></a> Identifikace klávesových zkratek
 
 1. Na řádku nabídek klikněte na **nástroje**, **Možnosti**.
 
@@ -72,7 +72,7 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
 
      ![Zobrazit zástupce pro zadaný příkaz](../ide/media/viewshortcut.png "ViewShortcut")
 
-## <a name="bkmk_assign"></a>Přizpůsobení klávesové zkratky
+## <a name="customizing-a-keyboard-shortcut"></a><a name="bkmk_assign"></a> Přizpůsobení klávesové zkratky
 
 1. Na řádku nabídek klikněte na **nástroje**, **Možnosti**.
 
@@ -107,7 +107,7 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
     > [!NOTE]
     > Pokud pro příkaz zadáte jiný zástupce, klikněte na tlačítko **přiřadit** a pak klikněte na tlačítko **Zrušit** , dialogové okno se zavře, ale změna se nevrátí.
 
-## <a name="bkmk_transfer"></a>Sdílení vlastních klávesových zkratek
+## <a name="sharing-custom-keyboard-shortcuts"></a><a name="bkmk_transfer"></a> Sdílení vlastních klávesových zkratek
  Vlastní klávesové zkratky je možné sdílet exportováním do souboru a předáním souboru ostatním, aby data mohli importovat.
 
 #### <a name="to-export-only-keyboard-shortcuts"></a>Export pouze klávesových zkratek
@@ -145,4 +145,4 @@ Můžete určit klávesové zkratky pro příkazy sady Visual Studio, tyto zkrat
      ![Import pouze přizpůsobených klávesových zkratek](../ide/media/importshortcuts.png "ImportShortcuts")
 
 ## <a name="see-also"></a>Viz také
- [Funkce sady Visual Studio pro usnadnění přístupu](../ide/reference/accessibility-features-of-visual-studio.md)
+ [Funkce pro usnadnění přístupu sady Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)

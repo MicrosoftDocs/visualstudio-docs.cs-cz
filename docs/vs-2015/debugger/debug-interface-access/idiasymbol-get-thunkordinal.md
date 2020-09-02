@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_thunkordinal – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_thunkOrdinal | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 540eb49b215d06127a47df1defc436a0a307aa6d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64784284"
 ---
-# <a name="idiasymbolgetthunkordinal"></a>IDiaSymbol::get_thunkOrdinal
+# <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Načte převodní rutina typ funkce.  
+Načte typ převráceného kódu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ HRESULT get_thunkOrdinal ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu z [thunk_ordinal – výčet](../../debugger/debug-interface-access/thunk-ordinal.md) výčet, který určuje typ převodní rutina funkce.  
+ mimo Vrací hodnotu z výčtu [výčtu THUNK_ORDINAL](../../debugger/debug-interface-access/thunk-ordinal.md) , který určuje typ převráceného kódu funkce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost je platná pouze tehdy, pokud symbol jako [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) hodnotu `SymTagThunk`.  
+ Tato vlastnost je platná pouze v případě, že symbol jako hodnota [výčtu SymTagEnum –](../../debugger/debug-interface-access/symtagenum.md) `SymTagThunk` .  
   
- "Převodní rutina" je část kódu, který převede mezi 32-bit paměti adresní prostor (označované také jako plochý adresní prostor) a 16bitových adresní prostor, (označované jako segmentovaným adresní prostor).  
+ "Převádějící" je část kódu, která se převádí mezi 32 adresního prostoru (označovaného také jako plochý adresní prostor) a 16bitového adresního prostoru (označovaného jako segmentované adresní místo).  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [Thunk_ordinal – výčet](../../debugger/debug-interface-access/thunk-ordinal.md)   
+ [Výčet THUNK_ORDINAL](../../debugger/debug-interface-access/thunk-ordinal.md)   
  [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)

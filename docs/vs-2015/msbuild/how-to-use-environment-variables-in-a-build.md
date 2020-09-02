@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití proměnných prostředí v sestavení | Dokumentace Microsoftu'
+title: 'Postupy: použití proměnných prostředí v sestavení | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,42 +14,42 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 72d810f998b111aa2ec08a5874498ed8ee23a3be
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437893"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64793708"
 ---
-# <a name="how-to-use-environment-variables-in-a-build"></a>Postupy: Použití proměnných prostředí v sestavení
+# <a name="how-to-use-environment-variables-in-a-build"></a>Postupy: Použití proměnných prostředí v sestavení
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Při sestavování projektů, je často nutné nastavit možnosti sestavení pomocí informací, které nejsou v souboru projektu nebo soubory, které tvoří vašeho projektu. Tyto informace jsou obvykle uložená v proměnné prostředí.  
+Při sestavování projektů je často nutné nastavit možnosti sestavení pomocí informací, které nejsou v souboru projektu, nebo soubory, které tvoří projekt. Tyto informace jsou obvykle uloženy v proměnných prostředí.  
   
-## <a name="referencing-environment-variables"></a>Odkazuje na proměnné prostředí  
- Všechny proměnné prostředí jsou k dispozici na [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] ([!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]) projektu soubor jako vlastnosti.  
+## <a name="referencing-environment-variables"></a>Odkazy na proměnné prostředí  
+ Všechny proměnné prostředí jsou k dispozici [!INCLUDE[vstecmsbuildengine](../includes/vstecmsbuildengine-md.md)] pro [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] soubor projektu () jako vlastnosti.  
   
 > [!NOTE]
-> Pokud soubor projektu obsahuje explicitní definice vlastnosti, která má stejný název jako proměnné prostředí, přepíše vlastnost v souboru projektu hodnotu proměnné prostředí.  
+> Pokud soubor projektu obsahuje explicitní definici vlastnosti, která má stejný název jako proměnná prostředí, vlastnost v souboru projektu přepíše hodnotu proměnné prostředí.  
   
-#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>Chcete-li použít proměnné prostředí v projektu nástroje MSBuild  
+#### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>Použití proměnné prostředí v projektu MSBuild  
   
-- Odkazujte na proměnné prostředí stejným způsobem, jako byste to udělali proměnné deklarované v souboru projektu. Například následující kód odkazuje na proměnnou prostředí BIN_PATH:  
+- Odkazovat na proměnnou prostředí stejným způsobem jako Proměnná deklarovaná v souboru projektu. Například následující kód odkazuje na proměnnou prostředí BIN_PATH:  
   
    `<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>`  
   
-  Můžete použít `Condition` atribut poskytnout výchozí hodnotu pro vlastnost, pokud nebyla nastavena proměnná prostředí.  
+  Můžete použít `Condition` atribut k poskytnutí výchozí hodnoty vlastnosti, pokud nebyla proměnná prostředí nastavena.  
   
-#### <a name="to-provide-a-default-value-for-a-property"></a>Chcete-li zadat výchozí hodnotu pro vlastnost  
+#### <a name="to-provide-a-default-value-for-a-property"></a>Zadání výchozí hodnoty pro vlastnost  
   
-- Použití `Condition` atribut u vlastnosti a nastavte vlastnost na hodnotu pouze tehdy, pokud nemá žádnou hodnotu. Například následující kód nastaví `ToolsPath` vlastnost c:\tools pouze tehdy, pokud `ToolsPath` není nastavena proměnná prostředí:  
+- Použijte `Condition` atribut u vlastnosti pro nastavení hodnoty pouze v případě, že vlastnost nemá žádnou hodnotu. Například následující kód nastaví `ToolsPath` vlastnost na c:\Tools pouze v případě, že `ToolsPath` Proměnná prostředí není nastavena:  
   
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`  
   
     > [!NOTE]
-    > Názvy vlastností nejsou malá a velká písmena tak obě `$(ToolsPath)` a `$(TOOLSPATH)` odkazovat na stejnou vlastnost nebo prostředí proměnnou.  
+    > V názvech vlastností nejsou rozlišována velká a malá písmena, takže obě `$(ToolsPath)` a `$(TOOLSPATH)` odkazují na stejnou vlastnost nebo proměnnou prostředí.  
   
 ## <a name="example"></a>Příklad  
- Následující soubor projektu používá proměnné prostředí a zadejte umístění adresáře.  
+ Následující soubor projektu používá k určení umístění adresářů proměnné prostředí.  
   
 ```  
 <Project DefaultTargets="FakeBuild">  
@@ -67,7 +67,7 @@ Při sestavování projektů, je často nutné nastavit možnosti sestavení pom
   
 ## <a name="see-also"></a>Viz také  
 
-[MSBuild](msbuild.md)
+[Nástroji](msbuild.md)
 
 [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties1.md)
 

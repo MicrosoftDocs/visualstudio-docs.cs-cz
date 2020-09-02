@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 80e7407472188ef25d6fd5127179c7ddbce54318
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536705"
 ---
 # <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Změnu návratového typu metody DataContext nelze vrátit zpět.
@@ -23,7 +23,7 @@ Návratový typ <xref:System.Data.Linq.DataContext> metody se liší v závislos
 
 ## <a name="to-change-the-return-type-of-a-datacontext"></a>Změna návratového typu DataContext
 
-- Klikněte na tlačítko **Ano**.
+- Klikněte na **Ano**.
 
 ## <a name="to-exit-the-message-box-and-leave-the-return-type-unchanged"></a>Zavření okna se zprávou a ponechání návratového typu beze změny
 

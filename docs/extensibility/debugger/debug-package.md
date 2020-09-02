@@ -1,5 +1,5 @@
 ---
-title: Ladicí balíček | Dokumenty společnosti Microsoft
+title: Ladit balíček | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: de6240ea5d938d02f8415009203962e124ff049e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739021"
 ---
-# <a name="debug-package"></a>Ladicí balíček
-Ladicí balíček běží v prostředí Visual Studio a zpracovává všechny ui. Spotřebovává rozhraní pro ladění sady Visual Studio a komunikuje se správcem ladění relace (SDM).
+# <a name="debug-package"></a>Ladit balíček
+Ladicí balíček běží v prostředí Visual Studio a zpracovává všechna rozhraní. Spotřebovává rozhraní pro ladění sady Visual Studio a komunikuje se správcem ladění relace (SDM).
 
- Break události odeslané prostřednictvím SDM přepnout ladicí program z režimu spuštění do režimu přerušení a změnit fokus na program, kde došlo k přerušení. Balíček ladění sleduje rámec zásobníku a podproces z informací odeslaných události.
+ Přerušit události odesílané přes model SDM přepněte ladicí program z režimu spuštění do režimu přerušení a změňte fokus na program, kde došlo k přerušení. Balíček pro ladění sleduje rámec zásobníku a vlákno z informací, které jsou do něj odesílány událostmi.
 
- Ladicí balíček nemá žádné závislosti prostředí jazyka nebo běhu. Není nutné implementovat nebo upravit ladicí balíček.
+ Ladicí balíček nemá žádné závislosti jazyka nebo prostředí run-time. Není nutné implementovat ani upravovat balíček ladění.
 
- Ladicí balíček je implementován *souborem vsdebug.dll*.
+ Balíček pro ladění je implementován pomocí *vsdebug.dll*.
 
 ## <a name="see-also"></a>Viz také
 - [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)
-- [Stohovat rámce](../../extensibility/debugger/stack-frames.md)
+- [Rámce zásobníku](../../extensibility/debugger/stack-frames.md)
 - [Vlákna](../../extensibility/debugger/threads.md)
-- [Součásti ladicího programu](../../extensibility/debugger/debugger-components.md)
+- [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)

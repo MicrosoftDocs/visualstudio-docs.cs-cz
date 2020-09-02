@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání standardní Text značky | Dokumentace Microsoftu'
+title: 'Postupy: Přidání standardních značek textu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 912d5d7a225520fc825d832bf73f5cfc733a9486
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436023"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64780698"
 ---
-# <a name="how-to-add-standard-text-markers"></a>Postupy: Přidání standardní Text značky
+# <a name="how-to-add-standard-text-markers"></a>Postupy: Přidání standardních textových značek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Pomocí následujícího postupu vytvořte jeden výchozí typ značky text, opatřeného [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základní editor.  
+Pomocí následujícího postupu můžete vytvořit jeden z výchozích typů textových značek, který je součástí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] základního editoru.  
   
-### <a name="to-create-a-text-marker"></a>Chcete-li vytvořit text značky  
+### <a name="to-create-a-text-marker"></a>Vytvoření značky textu  
   
-1. V závislosti na tom, zda používáte jeden nebo dva - multidimenzionálním souřadnicový systém, volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> metoda nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> metodu pro vytvoření nové značky text.  
+1. V závislosti na tom, zda používáte jeden nebo dvojrozměrné systém souřadnic, zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> metodu nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> metodu pro vytvoření nové značky textu.  
   
-     Při volání této metody určete typ značky, rozsah textu pro vytvoření značky nad a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní. Tato metoda pak vrací ukazatel na nově vytvořený text značky. Typy značek pocházejí ze <xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE> výčtu. Zadejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní, pokud chcete být informováni o událostech.  
+     V tomto volání metody zadejte typ značky, rozsah textu, který má být vytvořen a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní. Tato metoda potom vrátí ukazatel na nově vytvořenou značku textu. Typy značek jsou odebírány z <xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE> výčtu. Určete <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> rozhraní, pokud chcete být informováni o událostech značek.  
   
     > [!NOTE]
-    > Vytvoření textu značky na pouze hlavní vlákno uživatelského rozhraní. Základní editor spoléhá na obsah vyrovnávací paměť textu pro vytvoření textu značek a textovou vyrovnávací paměť není bezpečné pro vlákna.  
+    > Vytváření textových značek pouze v hlavním vlákně uživatelského rozhraní. Základní editor spoléhá na obsah vyrovnávací paměti textu pro vytváření textových značek a textová vyrovnávací paměť není bezpečná pro přístup z více vláken.  
   
-## <a name="adding-a-custom-command"></a>Přidání vlastní příkaz.  
- Implementace `IVsTextMarkerClient` rozhraní a poskytuje ukazatel na ni z značku zlepšuje chování značky několika způsoby. Nejprve díky tomu můžete zajistit tipy pro vaši značku a příkazy. To vám také umožní příjem oznámení o události pro jednotlivé značky a vytvářet vlastní místní nabídky přes značky. Pomocí následujícího postupu přidejte vlastní příkaz na místní nabídku značky.  
+## <a name="adding-a-custom-command"></a>Přidání vlastního příkazu  
+ Implementace `IVsTextMarkerClient` rozhraní a poskytnutí ukazatele na něj z značky vylepšuje chování značky několika způsoby. Nejprve vám umožní zadat tipy pro vaši značku a spustit příkazy. To vám také umožní přijímat oznámení o událostech pro jednotlivé značky a vytvořit vlastní kontextovou nabídku nad značkou. Pomocí následujícího postupu můžete přidat vlastní příkaz do místní nabídky značek.  
   
-#### <a name="to-add-a-custom-command-to-the-context-menu"></a>Chcete-li přidat vlastní příkaz do kontextové nabídky  
+#### <a name="to-add-a-custom-command-to-the-context-menu"></a>Přidání vlastního příkazu do místní nabídky  
   
-1. Před zobrazením v místní nabídce prostředí volá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A> – metoda a předá je ukazatel na text značky vliv a počet položky příkazu v místní nabídce.  
+1. Před zobrazením kontextové nabídky prostředí zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A> metodu a předá ukazatel na ovlivněnou textovou značku a číslo položky příkazu v místní nabídce.  
   
-     Například obsahovat příkazů specifických pro zarážku v místní nabídce **odebrat zarážku** prostřednictvím **Nová zarážka**, jako je zobrazena na následujícím snímku obrazovky.  
+     Například příkazy specifické pro zarážku v kontextové nabídce zahrnují **odebrat zarážku** prostřednictvím **nové zarážky**, jak je znázorněno na následujícím snímku obrazovky.  
   
-     ![Místní nabídka značky](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
+     ![Kontextová nabídka značky](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
-2. Předávání zpátky nějaký text rozlišujícího názvu vlastní příkaz. Například **odebrat zarážku** může být vlastní příkaz, pokud prostředí už neposkytl ho. Můžete také předat zpět Určuje, zda je příkazu podporované, zpřístupnění a povolení a přepínání zapnutí nebo vypnutí. Prostředí používá tyto informace k zobrazení vlastního příkazu v místní nabídce správným způsobem.  
+2. Předejte nějaký text, který identifikuje název vlastního příkazu. Například **odebrat zarážku** může být vlastní příkaz, pokud ho prostředí ještě neposkytlo. Předáte také, jestli je příkaz podporovaný, dostupný a povolený, nebo přepínač zapnutý. Prostředí používá tyto informace k tomu, aby zobrazoval vlastní příkaz v místní nabídce správným způsobem.  
   
-3. Ke spuštění příkazu prostředí volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> metoda předání ukazatele text značky a počet vybraný v místní nabídce příkaz.  
+3. Chcete-li spustit příkaz, prostředí volá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> metodu, předá ukazatel na značku textu a číslo příkazu vybraného z kontextové nabídky.  
   
-     Tyto informace z tohoto volání použijte k provedení libovolné akce text značky určuje vlastní příkaz.  
+     Tyto informace z tohoto volání slouží k provedení jakékoli akce značky textu, kterou vlastní příkaz nadiktuje.  
   
 ## <a name="see-also"></a>Viz také  
- [Text značky pomocí starší verze rozhraní API](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [Postupy: Implementace označování chyb](../extensibility/how-to-implement-error-markers.md)   
- [Postupy: Vytvoření vlastního textu značky](../extensibility/how-to-create-custom-text-markers.md)   
+ [Používání textových značek se starší verzí rozhraní API](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [Postupy: implementace značek chyb](../extensibility/how-to-implement-error-markers.md)   
+ [Postupy: vytváření vlastních textových značek](../extensibility/how-to-create-custom-text-markers.md)   
  [Postupy: Použití textových značek](../extensibility/how-to-use-text-markers.md)

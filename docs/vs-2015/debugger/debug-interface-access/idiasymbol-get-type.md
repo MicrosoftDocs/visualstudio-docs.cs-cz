@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_type | Microsoft Docs
+title: 'IDiaSymbol:: get_type | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9bec7cdbf0641bbd1bba1e70c2f21ec232a18e6a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64787549"
 ---
-# <a name="idiasymbolgettype"></a>IDiaSymbol::get_type
+# <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Načte symbol, který představuje typ pro tento symbol.  
@@ -35,16 +35,16 @@ HRESULT get_type ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který představuje typ tento symbol.  
+ mimo Vrátí objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje typ tohoto symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Určit typ má symbol, musí volat tuto metodu a zkontrolujte výsledné [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objektu. Všimněte si, že je možné pro symbol není typu mít. Například název struktury nemá žádný typ, ale může mít podřízené objekty symboly (použít [idiasymbol::findchildren –](../../debugger/debug-interface-access/idiasymbol-findchildren.md) metodu ke kontrole tyto podřízené objekty).  
+ Chcete-li určit typ symbolu, je nutné zavolat tuto metodu a prozkoumávat výsledný objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) . Všimněte si, že je možné, že symbol nemá typ. Například název struktury nemá žádný typ, ale může mít podřízené symboly (k prohlédnutí těchto podřízených metod použijte metodu [IDiaSymbol:: findChildren –](../../debugger/debug-interface-access/idiasymbol-findchildren.md) ).  
   
 ## <a name="example"></a>Příklad  
   
@@ -61,5 +61,5 @@ if (SUCCEEDED(pType->get_type( &pBaseType ))) {
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [IDiaSymbol:: get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

@@ -24,63 +24,63 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b94deacad38f40d76b4c8485186bfd563808d912
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445520"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64784425"
 ---
 # <a name="custom-xml-parts-overview"></a>Přehled vlastních částí XML
-  Vložit XML data do dokumentů pro některé aplikace Microsoft Office. Při vložení dat XML v dokumentu s názvem data *vlastní část XML*.
+  Data XML můžete vložit do dokumentů pro některé aplikace systém Microsoft Office. Při vložení dat XML do dokumentu se data nazývají *vlastní část XML*.
 
- Můžete vytvořit a upravit vlastní části XML v dokumentu s použitím doplňku VSTO nebo řešení v sadě Visual Studio na úrovni dokumentu. Není nutné ke spuštění aplikace Microsoft Office, vytvářet a upravovat vlastní části XML.
+ Vlastní části XML můžete vytvořit a upravit v dokumentu pomocí doplňku VSTO nebo řešení na úrovni dokumentu v aplikaci Visual Studio. Nemusíte spouštět aplikaci systém Microsoft Office, abyste mohli vytvářet a upravovat vlastní části XML.
 
- **Platí pro:** Informace v tomto tématu se vztahují na projekty na úrovni dokumentu a projekty doplňku VSTO pro Excel, PowerPoint a Word. Další informace najdete v tématu [dostupné funkce podle typu aplikace a projekt sady Office](../vsto/features-available-by-office-application-and-project-type.md).
-
-> [!NOTE]
-> Visual Studio také umožňuje datové objekty mezipaměti v přizpůsobeních na úrovni dokumentu. Tato funkce se liší od vlastní části XML, i když existují určité podobnosti. Další informace najdete v tématu [data v přizpůsobeních na úrovni dokumentu v mezipaměti](../vsto/cached-data-in-document-level-customizations.md).
-
-## <a name="understand-custom-xml-parts"></a>Vysvětlení vlastní části XML
- Vlastní části XML byly zavedeny v systému Microsoft Office 2007, spolu s otevřených formátů XML. Tyto formáty patří nové formáty souborů založený na formátu XML pro Excel, PowerPoint a Word (například *.xlsx*, *PPTX*, a *.docx*). Dokumenty v tyto formáty obsahují soubory XML (také s názvem *částí XML*), která jsou uspořádané do složek v archivu ZIP. Většina částí XML jsou integrované součásti, které vám pomohou definovat strukturu a její stav dokumentu. Dokumenty, ale může také obsahovat vlastní části XML, které můžete použít k ukládání libovolných dat XML v dokumentech.
-
- Formáty souborů XML přípravě aplikací k práci s dokumenty takovým způsobem, který neumožňuje ve starších formátech binárního souboru (například *.xls*, *PPT*, a *doc*). Všechny aplikace, který může číst archivy ZIP můžete prozkoumat a upravit obsah dokumentů, i když není nainstalována aplikace Microsoft Office.
-
- Další informace o struktuře Open XML a vlastní části XML najdete v následujících článcích:
-
-- [Úvod do formátů souborů Office (2007) Open XML](/previous-versions/office/developer/office-2007/aa338205(v=office.12))
-
-- [Postupy: Manipulace s dokumenty formáty Open XML](/previous-versions/office/developer/office-2007/aa982683(v=office.12))
-
-- [Návod: Formát XML aplikace Word 2007](/previous-versions/office/developer/office-2007/bb266220(v=office.12))
-
-- [Vytváření dokumentů aplikace Word 2007 pomocí formáty Open XML](/previous-versions/office/developer/office-2007/bb264572(v=office.12))
+ **Platí pro:** Informace v tomto tématu se vztahují na projekty na úrovni dokumentu a projekty doplňku VSTO v Excelu, PowerPointu a Wordu. Další informace najdete v tématu [dostupné funkce podle aplikace systému Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
 > [!NOTE]
-> Aplikace Excel, Word a PowerPoint také umožňují používat vlastní části XML v dokumentech, které jsou uloženy v binárním formátu. Pokud dokument je uložený v binárním formátu, nelze však přidat ani upravit vlastní části XML bez spuštění aplikace Microsoft Office.
+> Visual Studio také umožňuje ukládat datové objekty do mezipaměti v přizpůsobení na úrovni dokumentu. Tato funkce se liší od vlastních částí XML, i když existují nějaká podobnosti. Další informace najdete v tématu [data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md).
 
-## <a name="create-and-modify-custom-xml-parts"></a>Vytvářet a upravovat vlastní části XML
- Můžete vytvořit nebo upravit vlastní části XML, když je dokument otevřen v aplikaci Office nebo při zavření dokumentu – i když není nainstalována aplikace Microsoft Office.
+## <a name="understand-custom-xml-parts"></a>Principy vlastních částí XML
+ Vlastní části XML byly představeny v 2007 systém Microsoft Office systému spolu s otevřenými formáty XML. Tyto formáty zahrnují nové formáty souborů založené na jazyce XML pro aplikace Excel, PowerPoint a Word (například *. xlsx*, *. pptx*a *. docx*). Dokumenty v těchto formátech se skládají ze souborů XML (také názvů *částí XML*), které jsou uspořádány do složek v archivu zip. Většina částí XML je vestavěnými součástmi, které usnadňují definování struktury a stavu dokumentu. Dokumenty však mohou obsahovat také vlastní části XML, které lze použít k uložení libovolných dat XML do dokumentů.
 
-### <a name="modify-xml-parts-while-the-office-application-is-running"></a>Upravit části XML, když je spuštěná aplikace Office
- Vlastní části XML můžete pracovat s použitím přizpůsobení úrovni dokumentu nebo doplňku VSTO. Pokud používáte přizpůsobení úrovni dokumentu, budete obvykle pracovat s vlastní části XML, které jsou v upravený dokument. Pokud používáte doplňku VSTO, můžete vytvořit nebo upravit vlastní části XML v libovolném dokumentu, který je otevřen v aplikaci.
+ Formáty souborů XML umožňují aplikacím pracovat s dokumenty způsobem, který není možné ve starších binárních formátech souborů (například *. xls*, *. ppt*a *. doc*). Všechny aplikace, které můžou číst archivy ZIP, můžou kontrolovat a upravovat obsah dokumentů, i když systém Microsoft Office není nainstalovaná.
 
- Pokud chcete vytvořit vlastní část XML pomocí sady Visual Studio, přidejte novou <xref:Microsoft.Office.Core.CustomXMLPart> k <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v dokumentu. Další informace naleznete v následujících tématech:
+ Další informace o struktuře Open XML a vlastních částí XML naleznete v následujících článcích:
+
+- [Představení formátů souborů XML sady Office (2007)](/previous-versions/office/developer/office-2007/aa338205(v=office.12))
+
+- [Postupy: manipulace s dokumenty Open XML formats](/previous-versions/office/developer/office-2007/aa982683(v=office.12))
+
+- [Návod: formát XML pro Word 2007](/previous-versions/office/developer/office-2007/bb266220(v=office.12))
+
+- [Vytváření dokumentů aplikace Word 2007 pomocí formátů Open XML](/previous-versions/office/developer/office-2007/bb264572(v=office.12))
+
+> [!NOTE]
+> Aplikace Excel, Word a PowerPoint také umožňují používat vlastní části XML v dokumentech, které jsou uloženy v binárních formátech souborů. Pokud je však dokument uložen v binárním formátu, nebudete moci přidat ani upravit vlastní části XML bez spuštění aplikace systém Microsoft Office.
+
+## <a name="create-and-modify-custom-xml-parts"></a>Vytvoření a úprava vlastních částí XML
+ Vlastní části XML můžete vytvořit nebo upravit, pokud je dokument otevřený v aplikaci Office nebo když je dokument uzavřený, i když systém Microsoft Office není nainstalovaný.
+
+### <a name="modify-xml-parts-while-the-office-application-is-running"></a>Úprava částí XML v době, kdy běží aplikace Office
+ S vlastními částmi XML můžete pracovat pomocí přizpůsobení na úrovni dokumentu nebo doplňku VSTO. Pokud používáte přizpůsobení na úrovni dokumentu, obvykle budete pracovat s vlastními částmi XML, které jsou v přizpůsobeném dokumentu. Pokud používáte doplněk VSTO, můžete v jakémkoli dokumentu otevřeném v aplikaci vytvořit nebo upravit vlastní části XML.
+
+ Chcete-li vytvořit vlastní část XML pomocí sady Visual Studio, přidejte novou <xref:Microsoft.Office.Core.CustomXMLPart> do <xref:Microsoft.Office.Core.CustomXMLParts> kolekce v dokumentu. Další informace najdete v následujících tématech:
 
 - [Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)
 
-- [Postupy: Přidání vlastních částí XML do dokumentů s použitím doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)
+- [Postupy: Přidání vlastních částí XML do dokumentů pomocí doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)
 
-### <a name="modify-xml-parts-without-starting-the-office-application"></a>Úprava částí XML bez spuštění aplikace sady Office
- Můžete přidat nebo upravit vlastní část XML bez spuštění aplikace Excel, PowerPoint nebo Word. To je užitečné, pokud budete chtít pracovat s daty XML v dokumentu na počítači, na kterém není nainstalovaný, například server aplikace Microsoft Office.
+### <a name="modify-xml-parts-without-starting-the-office-application"></a>Úprava částí XML bez spuštění aplikace Office
+ Vlastní část XML můžete přidat nebo upravit bez spouštění Excelu, PowerPointu nebo Wordu. To je užitečné, pokud chcete pracovat s daty XML v dokumentu na počítači, který nemá nainstalované aplikace systém Microsoft Office, jako je například server.
 
- Chcete-li přidat vlastní část XML bez spuštění aplikace Microsoft Office, použijte třídy v sadě SDK Open XML. Tyto třídy jsou navržené pro poskytování přístupu k obsahu Open XML, který je specifický pro dokumenty Office. Například, chcete-li přidat vlastní část XML k Excelovému sešitu, použijete <xref:DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart%2A> metodu <xref:DocumentFormat.OpenXml.Packaging.WorkbookPart> objektu. Další informace najdete v tématu [Open XML SDK](/office/open-xml/open-xml-sdk).
+ Chcete-li přidat vlastní část XML bez spuštění systém Microsoft Office, použijte třídy v Open XML SDK. Tyto třídy jsou navržené tak, aby poskytovaly přístup k otevřenému obsahu XML, který je specifický pro dokumenty Office. Chcete-li například přidat vlastní část XML do sešitu aplikace Excel, použijte <xref:DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart%2A> metodu <xref:DocumentFormat.OpenXml.Packaging.WorkbookPart> objektu. Další informace najdete v tématu [Open XML SDK](/office/open-xml/open-xml-sdk).
 
-## <a name="bind-custom-xml-parts-to-word-content-controls"></a>Vlastní části XML svázat ovládací prvky obsahu aplikace Word
- K elementům ve vlastní část XML lze svázat ovládací prvky obsahu v řešení aplikace Word. Když je vytvořena vazba ovládacího prvku obsahu na vlastní část XML, data ve vlastní část XML se zobrazí v uživatelském rozhraní (UI) obsahu ovládacího prvku. Pokud uživatel upravuje text v ovládacím prvku, se automaticky aktualizuje odpovídající element XML. Podobně pokud se změní hodnot prvků objektu vlastní části XML, ovládací prvky obsahu, které jsou vázány na prvky XML zobrazit nová data. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
+## <a name="bind-custom-xml-parts-to-word-content-controls"></a>Svázání vlastních částí XML s ovládacími prvky obsahu Wordu
+ Ovládací prvky obsahu můžete navazovat v řešení aplikace Word na prvky ve vlastní části XML. Když je ovládací prvek obsahu vázaný na vlastní část XML, data v části vlastní XML se zobrazí v uživatelském rozhraní (UI) ovládacího prvku obsahu. Pokud uživatel upraví text v ovládacím prvku, odpovídající prvek XML je automaticky aktualizován. Podobně, pokud se změní hodnoty prvků ve vlastních částech XML, ovládací prvky obsahu, které jsou svázány s elementy XML, zobrazí nová data. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
 - [Postupy: Přidání vlastních částí XML do přizpůsobení na úrovni dokumentu](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md)
-- [Postupy: Přidání vlastních částí XML do dokumentů s použitím doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)
+- [Postupy: Přidání vlastních částí XML do dokumentů pomocí doplňků VSTO](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)
 - [Ovládací prvky obsahu](../vsto/content-controls.md)
-- [Návod: Vytvoření vazby ovládacích prvků obsahu do vlastní části XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)
+- [Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)

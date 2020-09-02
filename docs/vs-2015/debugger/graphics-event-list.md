@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9e56f2d8ef72121e8b34117436019251449fbb75
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845038"
 ---
 # <a name="graphics-event-list"></a>Seznam událostí grafiky
@@ -35,11 +35,11 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 ### <a name="color-coded-events-in-direct3d-12"></a>Barevně kódované události v Direct3D 12  
  Direct3D 12 zveřejňuje více front, které odpovídají různým hardwarovým funkcím. Aby bylo možné identifikovat frontu, která je přidružená k určité události grafiky v Direct3D 12, jsou události v seznamu událostí podle jejich fronty barevně kódované, když pracujete se zachycením aplikace Direct3D 12.  
   
-|Fronta Direct3D 12|Barva|  
+|Fronta Direct3D 12|Color|  
 |-----------------------|-----------|  
-|Fronta vykreslování|Zelená|  
-|Výpočetní fronta|Yellow|  
-|Kopírovat frontu|Oranžová|  
+|Fronta vykreslování|Green|  
+|Výpočetní fronta|Žlutý|  
+|Kopírovat frontu|Oranžový|  
   
  Direct3D 11 nevystavuje více front, takže při práci se zachytáváním aplikace Direct3D 11 nejsou události v seznamu událostí zakódované barevně.  
   
@@ -57,10 +57,10 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 - V okně **seznam událostí grafiky** , nad seznamem událostí, najděte rozevírací seznam **zobrazení** a zvolte buď zobrazení **Časová osa** , nebo zobrazení **volání vykreslování** .  
   
 ### <a name="filtering-events"></a>Filtrování událostí  
- Pomocí vyhledávacího pole, které je umístěné v pravém horním rohu okna **seznam událostí grafiky** , můžete filtrovat seznam událostí tak, aby zahrnoval jenom události, jejichž názvy obsahují konkrétní klíčová slova. Můžete zadat jednotlivá klíčová slova, jako je například `Vertex`, jak je znázorněno na předchozím obrázku, nebo více klíčových slov pomocí seznamu středníkem oddělených názvů, jako je například `Draw;Primitive`, který odpovídá událostem, které mají v názvech buď `Draw` nebo `Primitive`. Vyhledávání jsou citlivá na prázdné znaky, například `VSSet` a `VS Set` jsou různá hledání, takže se ujistěte, že se vyhledají pečlivě.  
+ Pomocí vyhledávacího pole, které je umístěné v pravém horním rohu okna **seznam událostí grafiky** , můžete filtrovat seznam událostí tak, aby zahrnoval jenom události, jejichž názvy obsahují konkrétní klíčová slova. Můžete zadat jednotlivá klíčová slova `Vertex` , například, jak je znázorněno na předchozím obrázku, nebo více klíčových slov pomocí seznamu středníkem oddělených `Draw;Primitive` , který odpovídá událostem, které mají buď `Draw` nebo `Primitive` v jejich názvech. Vyhledávání jsou citlivá na prázdné znaky, například, `VSSet` a `VS Set` jsou různá hledání, takže se ujistěte, že poběží hledání pečlivě.  
   
 ### <a name="moving-between-draw-calls"></a>Přesun mezi voláními vykreslování  
- Vzhledem k tomu, že zkoumání `Draw` volání je obzvláště důležité, můžete použít příkaz **Přejít na další volání remíz** a **Přejít na předchozí tlačítka pro volání kreslení** – v levém horním rohu okna **seznam událostí grafiky** – k rychlému vyhledání a přesunutí mezi voláními vykreslování.  
+ Vzhledem k tomu, že zkoumání `Draw` volání je obzvláště důležité, můžete použít příkaz **Přejít na další volání remíz** a **Přejít na předchozí tlačítka pro volání remíz** – v levém horním rohu okna **seznam událostí grafiky** – k rychlému vyhledání a přesunutí mezi voláními kreslení.  
   
 ### <a name="links-to-graphics-objects"></a>Odkazy na grafické objekty  
  Abyste pochopili určité události grafiky, možná budete potřebovat další informace o aktuálním stavu rozhraní Direct3D nebo o objektech Direct3D, na které se odkazuje v události. Mnoho událostí obsahuje odkazy na tyto informace, které můžete použít pro další podrobnosti.  
@@ -72,11 +72,11 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 |----------|-----------------------|  
 |(bez ikony)|Obecná událost<br /> Jakákoli událost, která není uživatelem definovaná událost, uživatelem definovaná skupina událostí nebo událost Draw.|  
 |![Ikona události Draw](../debugger/media/vsg-eventlist-icon-draw.png "vsg_eventlist_icon_draw")|Událost Draw<br /> Označuje událost Draw, ke které došlo během zachyceného snímku.|  
-|![Ikona uživatelsky&#45;definované značky události](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Uživatelem definovaná skupina událostí<br /> Seskupuje události související s aplikací.|  
-|![Ikona uživatelsky&#45;definované značky události](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Uživatelsky definovaná značka události<br /> Označí konkrétní umístění definované aplikací.|  
+|![Ikona značky události definované uživatelem&#45;](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Uživatelem definovaná skupina událostí<br /> Seskupuje události související s aplikací.|  
+|![Ikona značky události definované uživatelem&#45;](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Uživatelsky definovaná značka události<br /> Označí konkrétní umístění definované aplikací.|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>Označení uživatelem definovaných událostí v aplikaci  
- Uživatelsky definované události jsou specifické pro vaši aplikaci. Můžete je použít ke korelaci významných událostí, ke kterým dochází ve vaší aplikaci, s událostmi v seznamu událostí grafiky. Můžete například vytvořit uživatelsky definované skupiny událostí pro uspořádání souvisejících událostí, jako jsou například ty, které vykreslují vaše uživatelské rozhraní – do skupin nebo hierarchií, aby bylo možné procházet seznam událostí snadněji, nebo můžete vytvořit značky, pokud jsou určité typy objektů vykresleno, abyste mohli snadno najít své grafické události v seznamu událostí.  
+ Uživatelsky definované události jsou specifické pro vaši aplikaci. Můžete je použít ke korelaci významných událostí, ke kterým dochází ve vaší aplikaci, s událostmi v seznamu událostí grafiky. Můžete například vytvořit uživatelsky definované skupiny událostí pro uspořádání souvisejících událostí, jako jsou například ty, které vykreslují vaše uživatelské rozhraní – do skupin nebo hierarchií, aby bylo možné procházet seznam událostí snadněji, nebo můžete vytvořit značky, když se vykreslí konkrétní druhy objektů, abyste mohli snadno najít své grafické události v seznamu událostí.  
   
  Pokud chcete ve své aplikaci vytvořit skupiny a značky, použijte stejná rozhraní API, která technologie Direct3D poskytuje pro použití v jiných ladicích nástrojích Direct3D. Tato rozhraní API se někdy mění mezi verzemi rozhraní Direct3D, ale základní funkce jsou stejné.  
   
@@ -99,7 +99,7 @@ Pomocí seznamu událostí grafiky v Analyzátor grafiky sady Visual Studio mů�
 |Ukončení skupiny událostí|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  
 |Vytvoření značky události|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|  
   
- Můžete použít kterékoli z těchto rozhraní API, které podporuje vaše verze technologie Direct3D – například pokud cílíte na rozhraní Direct3D 11,1 API, můžete k vytvoření značky události použít buď `SetMarker`, nebo `D3DPerf_SetMarker`, ale ne `SetMarkerInt`, protože jsou dostupné jenom v Direct3D 11.2 – a můžete dokonce kombinovat ty, které podporují různé verze Direct3D společně ve stejné aplikaci.  
+ Můžete použít kterékoli z těchto rozhraní API, které podporuje vaše verze technologie Direct3D – například pokud cílíte na rozhraní Direct3D 11,1 API, můžete použít buď `SetMarker` nebo `D3DPerf_SetMarker` k vytvoření značky události, ale ne, protože je `SetMarkerInt` dostupná jenom v Direct3D 11.2ch, a můžete dokonce i kombinovat ty, které podporují různé verze Direct3D společně ve stejné aplikaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Chybějící objekty z důvodu stavu zařízení](../debugger/walkthrough-missing-objects-due-to-device-state.md)

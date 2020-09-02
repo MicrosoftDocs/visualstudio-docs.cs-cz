@@ -1,5 +1,5 @@
 ---
-title: Nástroj CreatePkgDef | Dokumentace Microsoftu
+title: Nástroj CreatePkgDef | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,19 +14,19 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 010ee75efd84f016b0eb68fa9f715102026a4678
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441494"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64782984"
 ---
 # <a name="createpkgdef-utility"></a>Nástroj CreatePkgDef
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vezme soubor .dll pro rozšíření sady Visual Studio jako parametr a vytvoří soubor .pkgdef vyvíjený soubor .dll. Soubor .pkgdef obsahuje všechny informace, které by jinak zapsat do systémového registru po instalaci rozšíření.  
+Převezme soubor. dll pro rozšíření aplikace Visual Studio jako parametr a vytvoří soubor. pkgdef, který bude doprovázet knihovnu DLL. Soubor. pkgdef obsahuje všechny informace, které by jinak byly zapsány do systémového registru při instalaci rozšíření.  
   
 > [!NOTE]
-> Většina šablon projektů, které jsou zahrnuty v sadě Visual Studio SDK automaticky vytvořit .pkgdef soubory jako součást procesu sestavení. Tento dokument je určený pro ty, kteří chtějí vytvořit balíčky ručně, nebo převést existující balíčky použití .pkgdef nasazení.  
+> Většina šablon projektů, které jsou součástí sady Visual Studio SDK, automaticky vytvoří soubory. pkgdef jako součást procesu sestavení. Tento dokument je určený pro uživatele, kteří chtějí balíčky vytvořit ručně, nebo převeďte stávající balíčky na použití nasazení. pkgdef.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,26 +34,26 @@ Vezme soubor .dll pro rozšíření sady Visual Studio jako parametr a vytvoří
 CreatePkgDef /out=FileName [/codebase] [/assembly] AssemblyPath  
 ```  
   
-## <a name="arguments"></a>Arguments  
- / out =`FileName`  
- Povinný parametr. Nastaví název výstupního souboru .pkgdef`FileName`.  
+## <a name="arguments"></a>Argumenty  
+ /out =`FileName`  
+ Povinná hodnota. Nastaví název výstupního souboru. pkgdef na `FileName` .  
   
  /codebase  
- Volitelné. Vynutí registraci pomocí nástroje základu kódu.  
+ Nepovinný parametr. Vynutí registraci pomocí nástroje CodeBase.  
   
- / Assembly  
- Vynutí registraci pomocí nástroje sestavení.  
+ /Assembly je  
+ Vynutí registraci pomocí nástroje Assembly.  
   
  `AssemblyPath`  
- Cesta souboru .dll, ze kterého chcete generovat .pkgdef.  
+ Cesta k souboru. dll, ze kterého chcete generovat soubor. pkgdef.  
   
 ## <a name="remarks"></a>Poznámky  
- Nasazení rozšíření pomocí .pkgdef souborů nahradí požadavky na registr starších verzí sady Visual Studio.  
+ Nasazení rozšíření pomocí souborů. pkgdef nahrazuje požadavky v registru dřívějších verzí sady Visual Studio.  
   
- Soubory .pkgdef musí být nainstalovány v jednom z následujících umístění: %localappdata%\Microsoft\Visual Studio\14.0\Extensions\ nebo %vsinstalldir%\Common7\IDE\Extensions\\. Pokud je instalační složky sady %localappdata%\Microsoft\Visual Studio\14.0\Extensions\\, rozšíření rozpozná pomocí sady Visual Studio, ale bude ve výchozím nastavení zakázán. Uživatel můžete povolit rozšíření pomocí **rozšíření a aktualizace**. Pokud je instalační složky sady %vsinstalldir%\Common7\IDE\Extensions\\, je rozšíření povoleno ve výchozím nastavení.  
+ Soubory. pkgdef musí být nainstalované v jednom z následujících umístění:%localappdata%\Microsoft\Visual Studio\14.0\Extensions\ nebo%vsinstalldir%\Common7\IDE\Extensions \\ . Pokud je instalační složka%localappdata%\Microsoft\Visual Studio\14.0\Extensions \\ , rozšíření rozpozná aplikace Visual Studio, ale ve výchozím nastavení bude zakázáno. Uživatel může rozšíření povolit pomocí **rozšíření a aktualizací**. Pokud je instalační složka%vsinstalldir%\Common7\IDE\Extensions \\ , je ve výchozím nastavení povolená přípona.  
   
 > [!NOTE]
-> **Rozšíření a aktualizace** nástroj nelze použít pro přístup k rozšíření, pokud je nainstalován jako součást balíčku VSIX.  
+> Nástroj **rozšíření a aktualizace** nelze použít pro přístup k rozšíření, pokud není nainstalován jako součást balíčku VSIX.  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroj CreateExpInstance](../../extensibility/internals/createexpinstance-utility.md)

@@ -1,5 +1,5 @@
 ---
-title: Upgrade projektů | Dokumentace Microsoftu
+title: Upgrade projektů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,49 +13,49 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8e838cb02aa1a620356f96d9e77f1752797ac409
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441244"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64787209"
 ---
 # <a name="upgrading-projects"></a>Upgrade projektů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-K modelu projektu se změní z jedné verze [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] na další může vyžadovat, že projekty a řešení upgradovat tak, aby mohli spouštět na novější verzi. [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] Poskytuje rozhraní, které lze použít k implementaci podporu upgradu v svoje vlastní projekty.  
+Změny modelu projektu z jedné verze nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] na další mohou vyžadovat upgrade projektů a řešení, aby mohli běžet v novější verzi. [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]Poskytuje rozhraní, které lze použít k implementaci podpory upgradu ve vašich vlastních projektech.  
   
 ## <a name="upgrade-strategies"></a>Strategie upgradu  
- Implementace systému projektu pro podporu upgradu, musíte definovat a implementovat upgradu strategie. Při určování strategie, můžete pro podporu side-by-side (SxS) zálohování nebo zálohování kopírováním.  
+ Pro podporu upgradu musí vaše implementace systému projektu definovat a implementovat strategii upgradu. Při určování vaší strategie můžete zvolit podporu souběžného zálohování (SxS), zálohování kopírování nebo obojího.  
   
-- Zálohování SxS znamená, že projekt zkopíruje pouze soubory, které potřebují upgrade na místě, přidání vhodný název příponu souboru, například "old".  
+- Záloha SxS znamená, že projekt kopíruje pouze soubory, které vyžadují upgrade, a přidává vhodné přípony názvu souboru, například ". old".  
   
-- Zálohování kopírováním znamená, že projekt zkopíruje všechny položky projektu do uživatelem zadaného umístění zálohy. Relevantní soubory do původního umístění projektu jsou potom upgradovat.  
+- Příkaz Kopírovat zálohu znamená, že projekt kopíruje všechny položky projektu do umístění zálohy zadaného uživatelem. Příslušné soubory v původním umístění projektu jsou poté upgradovány.  
   
-## <a name="how-upgrade-works"></a>Jak upgradovat funguje  
- Při řešení vytvořené v dřívější verzi [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] je otevřít v novější verzi, integrované vývojové prostředí kontroly souborů řešení Chcete-li zjistit, jestli je potřeba upgradovat. Je-li upgrade vyžadováno, **Průvodce upgradem** se automaticky spustí, aby vás uživatel provede procesem.  
+## <a name="how-upgrade-works"></a>Jak funguje upgrade  
+ Když je řešení vytvořené v dřívější verzi nástroje [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] otevřeno v novější verzi, rozhraní IDE zkontroluje soubor řešení a určí, jestli je potřeba upgradovat. Pokud je nutné upgradovat, **Průvodce upgradem** se automaticky spustí a provede uživatele procesem upgradu.  
   
- Při řešení potřebuje upgrade, vyžádá si každý projektu pro vytváření pro své strategie upgradu. Strategie určí, zda objekt pro vytváření projektů podporuje zálohování kopírováním nebo SxS zálohování. Informace odeslány **Průvodce upgradem**, který shromažďuje informace potřebné pro zálohování a zobrazí příslušné možnosti pro uživatele.  
+ Když řešení vyžaduje upgrade, dotazuje se na každý objekt pro vytváření projektů pro strategii upgradu. Strategie určuje, zda objekt pro vytváření projektů podporuje zálohování kopírováním nebo SxS. Informace se odesílají do **Průvodce upgradem**, který shromažďuje informace požadované pro zálohování a prezentuje příslušné možnosti uživateli.  
   
-### <a name="multi-project-solutions"></a>Řešení vícenásobného projektu  
- Pokud řešení obsahuje více projektů a upgradu strategie liší, jako když projektu jazyka C++, který podporuje pouze SxS zálohování, webový projekt, který podporuje jenom zálohování kopírováním objektů pro vytváření projektů musí si vyjednat strategie upgradu.  
+### <a name="multi-project-solutions"></a>Řešení s více projekty  
+ Pokud řešení obsahuje více projektů a strategie upgradu se liší, například pokud projekt C++, který podporuje pouze zálohu SxS a webový projekt, který podporuje pouze zálohu kopírování, musí projektové továrny vyjednávat strategii upgradu.  
   
- Každý projekt pro vytváření pro dotazy řešení <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>. Poté zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> zobrazíte potřebujete globální projektových souborů, upgrade a na zjištění podporované upgradu strategie. **Průvodce upgradem** následně vyvolány.  
+ Řešení se dotazuje na jednotlivé továrny projektu pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> . Pak zavolá, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> zda globální soubory projektu vyžadují upgrade, a určí podporované strategie upgradu. Pak se vyvolá **Průvodce upgradem** .  
   
- Po dokončení průvodce, uživatel <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> je volána na objektu pro vytváření každý projekt skutečné upgradu. Pro usnadnění zálohování, IVsProjectUpgradeViaFactory metody poskytují <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> služby protokolovat podrobnosti o procesu upgradu. Tato služba nejde udržovat v mezipaměti.  
+ Po dokončení průvodce <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> se zavolá na každý objekt pro vytváření projektu, který provede vlastní upgrade. K usnadnění zálohování metody IVsProjectUpgradeViaFactory poskytují <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> službě protokolovat podrobnosti procesu upgradu. Tuto službu nelze uložit do mezipaměti.  
   
- Po aktualizaci všechny relevantní soubory globální, každý objekt pro vytváření projektu můžete vytvořit instanci projektu. Implementace projektu musí podporovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> Metoda je volána poté upgradovat všechny položky příslušného projektu.  
+ Po aktualizaci všech relevantních globálních souborů může každý objekt pro vytváření projektu zvolit vytvoření instance projektu. Implementace projektu musí podporovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A>Metoda je pak volána pro upgrade všech relevantních položek projektu.  
   
 > [!NOTE]
-> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> Metoda neposkytuje SVsUpgradeLogger službu. Tato služba lze získat voláním <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>.  
+> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A>Metoda neposkytuje službu SVsUpgradeLogger. Tuto službu lze získat voláním <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> .  
   
-## <a name="best-practices"></a>Doporučené postupy  
- Použití <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> služby zkontrolujte, jestli můžete upravit soubor začnete upravovat a můžete ji uložit před uložením. To vám pomůže zálohování a upgradu implementace zpracovat soubory projektu pod správou zdrojových kódů, soubory s dostatečná oprávnění a tak dále.  
+## <a name="best-practices"></a>Osvědčené postupy  
+ Službu můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> ke kontrole, jestli soubor před úpravou nemůžete upravit, a můžete ho před uložením Uložit. To pomůže vašim implementacím zálohování a upgradu zpracovat soubory projektu v rámci správy zdrojového kódu, souborů s nedostatečnými oprávněními a tak dále.  
   
- Použití <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> služby během všech fází zálohování a upgradovat na poskytují informace o úspěchu nebo selhání procesu upgradu.  
+ Službu můžete používat <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> během všech fází zálohování a upgradu a poskytnout tak informace o úspěchu nebo neúspěchu procesu upgradu.  
   
- Další informace o zálohování a upgrade projektů naleznete v tématu komentáře IVsProjectUpgrade v vsshell2.idl.  
+ Další informace o zálohování a upgradu projektů naleznete v tématu poznámky k IVsProjectUpgrade v vsshell2. idl.  
   
 ## <a name="see-also"></a>Viz také  
  [Projekty](../../extensibility/internals/projects.md)   
  [Upgrade vlastních projektů](../../misc/upgrading-custom-projects.md)   
- [Upgrade položky projektu](../../misc/upgrading-project-items.md)
+ [Upgrade položek projektu](../../misc/upgrading-project-items.md)

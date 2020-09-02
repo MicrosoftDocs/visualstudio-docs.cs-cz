@@ -1,5 +1,5 @@
 ---
-title: LC – úloha | Dokumentace Microsoftu
+title: LC – úloha | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,34 +20,34 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0bbc6463247142ecde20fb2d054d9bd59304c4ec
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65694116"
 ---
 # <a name="lc-task"></a>LC – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zabalí LC.exe, který generuje soubor .license z soubor .licx. Další informace o LC.exe najdete v tématu [Lc.exe (kompilátor licencí)](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460).  
+Zalomí LC.exe, který generuje soubor. License ze souboru. licx. Další informace o LC.exe najdete v tématu [Lc.exe (kompilátor licencí)](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460).  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry `LC` úloh.  
+ Následující tabulka popisuje parametry pro `LC` úlohu.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`LicenseTarget`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje spustitelný soubor, pro které jsou generovány soubory .licenses.|  
-|`NoLogo`|Volitelné `Boolean` parametru.<br /><br /> Potlačí zobrazení úvodního nápisu společnosti Microsoft.|  
-|`OutputDirectory`|Volitelné `String` parametru.<br /><br /> Určuje adresář, do které chcete umístit soubor .licenses výstup.|  
-|`OutputLicense`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje název souboru .licenses. Pokud název nezadáte, název soubor .licx se používá a soubor .licenses je umístěn v adresáři, který se nachází soubor .licx.|  
-|`ReferencedAssemblies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje načtení při generování souboru .license odkazované součástí.|  
-|`SdkToolsPath`|Volitelné `String` parametru.<br /><br /> Určuje cestu k sadě SDK nástroje, jako je resgen.exe.|  
-|`Sources`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje položky, které obsahují licencovaných součástí, které chcete zahrnout do souboru .licenses. Další informace najdete v tématu v dokumentaci `/complist` přepínače v [Lc.exe (kompilátor licencí)](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460).|  
+|`LicenseTarget`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>.<br /><br /> Určuje spustitelný soubor, pro který jsou vygenerovány soubory. licenses.|  
+|`NoLogo`|Volitelný `Boolean` parametr.<br /><br /> Potlačí zobrazení úvodního nápisu společnosti Microsoft.|  
+|`OutputDirectory`|Volitelný `String` parametr.<br /><br /> Určuje adresář, do kterého se umístí výstup souborů. licenses.|  
+|`OutputLicense`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje název souboru. licenses. Pokud název nezadáte, použije se název souboru. licx a soubor. licenses se umístí do adresáře, který obsahuje soubor. licx.|  
+|`ReferencedAssemblies`|Volitelný <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje odkazované součásti, které se mají načíst při vytváření souboru. License.|  
+|`SdkToolsPath`|Volitelný `String` parametr.<br /><br /> Určuje cestu k nástrojům sady SDK, jako je například resgen.exe.|  
+|`Sources`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje položky, které obsahují licencované součásti, které mají být zahrnuty do souboru. licenses. Další informace najdete v dokumentaci k `/complist` přepínači v [Lc.exe (kompilátor licencí)](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460).|  
   
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.ToolTaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [tooltaskextension – základní třída](../msbuild/tooltaskextension-base-class.md).  
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.ToolTaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [ToolTaskExtension – Base Class](../msbuild/tooltaskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu `LC` úkolů ke kompilaci licence.  
+ Následující příklad používá `LC` úlohu k sestavení licencí.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -70,5 +70,5 @@ Zabalí LC.exe, který generuje soubor .license z soubor .licx. Další informac
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
