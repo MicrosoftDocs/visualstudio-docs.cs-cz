@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d34e60b0b932470dec8a69874e28b99ebe76316b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72737984"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>Rozhraní API rozšíření souhrnu souboru výpisu paměti
@@ -28,5 +28,5 @@ Pomocí rozhraní API pro rozšiřitelnost v této části můžete rozšířen�
 
  <xref:Microsoft.VisualStudio.Debugger.VsDebugPresentationExtension>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Použití souborů výpisu paměti](../debugger/using-dump-files.md)

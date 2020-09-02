@@ -1,5 +1,5 @@
 ---
-title: Getframeworksdkpath – úloha | Dokumentace Microsoftu
+title: Úloha GetFrameworkSdkPath – | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,32 +20,32 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e6d527b00e8cbfe6a6f4ad5d112a23e46d4edb8e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149560"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath – úloha
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Načte cestu k [!INCLUDE[winsdklong](../includes/winsdklong-md.md)].  
+Načte cestu k [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] .  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
- Následující tabulka popisuje parametry `GetFrameworkSdkPath` úloh.  
+ Následující tabulka popisuje parametry `GetFrameworkSdkPath` úkolu.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`FrameworkSdkVersion20Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 2.0, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`FrameworkSdkVersion35Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 3.5, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`FrameworkSdkVersion40Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 4.0, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sady .NET SDK, pokud je k dispozici žádné verze. V opačném případě vrátí `String.Empty`.|  
+|`FrameworkSdkVersion20Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 2,0, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|  
+|`FrameworkSdkVersion35Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 3,5, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|  
+|`FrameworkSdkVersion40Path`|Volitelný `String` výstupní parametr jen pro čtení.<br /><br /> Vrátí cestu k sadě .NET SDK verze 4,0, pokud je k dispozici. V opačném případě vrátí `String.Empty` .|  
+|`Path`|Volitelný `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sadě .NET SDK, pokud je k dispozici nějaká verze. V opačném případě vrátí `String.Empty` .|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů Tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třídy, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popis naleznete v tématu [TaskExtension – Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu `GetFrameworkSdkPath` úloh pro uložení této cesty do [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] v `SdkPath` vlastnost.  
+ Následující příklad používá `GetFrameworkSdkPath` úlohu k uložení cesty do [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] `SdkPath` Vlastnosti.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -61,5 +61,5 @@ Načte cestu k [!INCLUDE[winsdklong](../includes/winsdklong-md.md)].
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Úlohy](../msbuild/msbuild-tasks.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+ [Provádění](../msbuild/msbuild-tasks.md)   
+ [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

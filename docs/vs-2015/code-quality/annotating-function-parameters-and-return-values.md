@@ -127,10 +127,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 71854388f3fb1c5eaea7d40ed2757af9cecacf1a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543803"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Zadávání poznámek k parametrům funkcí a návratovým hodnotám
@@ -187,7 +187,7 @@ Tento článek popisuje typické použití poznámek pro jednoduché parametry f
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     V tomto příkladu volající poskytuje vyrovnávací paměť `size` prvků pro `p1` .  `MyStringCopy`provede některé z těchto elementů platnými. Důležitější je, že `_Null_terminated_` Poznámka na `PWSTR` to znamená, že `p1` ve stavu post je zakončení null.  Tímto způsobem je počet platných prvků stále správně definován, ale konkrétní počet prvků není vyžadován.  
+     V tomto příkladu volající poskytuje vyrovnávací paměť `size` prvků pro `p1` .  `MyStringCopy` provede některé z těchto elementů platnými. Důležitější je, že `_Null_terminated_` Poznámka na `PWSTR` to znamená, že `p1` ve stavu post je zakončení null.  Tímto způsobem je počet platných prvků stále správně definován, ale konkrétní počet prvků není vyžadován.  
   
      `_bytes_`Hodnota variant poskytuje velikost v bajtech namísto prvků. Tuto hodnotu použijte pouze v případě, že velikost nelze vyjádřit jako prvky.  Například `char` řetězce by používaly `_bytes_` variantu pouze v případě, že je podobná funkce, kterou používá `wchar_t` .  
   

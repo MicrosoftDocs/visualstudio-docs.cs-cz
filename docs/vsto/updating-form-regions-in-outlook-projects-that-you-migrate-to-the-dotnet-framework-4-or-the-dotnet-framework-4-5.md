@@ -1,5 +1,5 @@
 ---
-title: Aktualizace oblastí formulářů aplikace Outlook v projektech migrovat na rozhraní .NET Framework 4, 4.5
+title: Aktualizace oblastí formuláře Outlooku v projektech migrovaných do .NET Framework 4, 4,5
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,27 +13,27 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e7e300cd9f6f7d631a029310b01fbfdad7cb4686
-ms.sourcegitcommit: cc5fd59e5dc99181601b7db8b28d7f8a83a36bab
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66836049"
 ---
-# <a name="update-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Aktualizace oblastí formulářů v projektech Outlook při migraci na rozhraní .NET Framework 4 nebo .NET Framework 4.5
-  Pokud cílové rozhraní projektu doplňku VSTO v Outlooku se oblast formuláře se změní na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo později, musí provést některé změny do oblasti kódu generovaném formuláři a jakýkoli kód, který vytvoří instanci určité třídy oblasti formuláře za běhu.
+# <a name="update-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Aktualizace oblastí formulářů v projektech aplikace Outlook, které migrujete do .NET Framework 4 nebo .NET Framework 4,5
+  Pokud je cílová architektura projektu doplňku aplikace Outlook VSTO s oblastí formuláře změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo vyšší, je nutné provést některé změny v kódu vygenerované oblasti formuláře a v jakémkoli kódu, který vytváří instance určitých tříd oblastí formuláře za běhu.
 
-## <a name="update-the-generated-form-region-code"></a>Aktualizace kódu generovaném formuláři oblasti
- Pokud cílové rozhraní projektu se změní na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, musíte změnit kód oblasti generovaném formuláři. Provedené změny se liší pro oblasti formuláře navržené v aplikaci Visual Studio a formuláře, které jste naimportovali z Outlooku. Další informace o rozdílech mezi těmito typy oblasti formuláře, naleznete v tématu [oblastí formulářů aplikace Outlook vytvořit](../vsto/creating-outlook-form-regions.md).
+## <a name="update-the-generated-form-region-code"></a>Aktualizace kódu vygenerované oblasti formuláře
+ Pokud je cílová architektura projektu změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, je nutné změnit kód oblasti vygenerovaného formuláře. Změny, které provedete, se liší pro oblasti formulářů, které jste navrhli v aplikaci Visual Studio a oblasti formulářů, které jste importovali z Outlooku. Další informace o rozdílech mezi těmito typy oblastí formuláře najdete v tématu věnovaném [vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md).
 
-### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Chcete-li aktualizovat generovaný kód pro oblasti formuláře navržené v aplikaci Visual Studio
+### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Chcete-li aktualizovat generovaný kód pro oblast formuláře, kterou jste navrhli v aplikaci Visual Studio
 
-1. Otevřete soubor kódu na pozadí oblasti formuláře v editoru kódu. Tento soubor má název *YourFormRegion*. Designer.cs nebo *YourFormRegion*. Designer.vb. Tento soubor v projektech Visual Basicu zobrazíte kliknutím **zobrazit všechny soubory** tlačítko **Průzkumníka řešení**.
+1. V editoru kódu otevřete soubor kódu na pozadí oblasti formuláře. Tento soubor má název *YourFormRegion*. Designer.cs nebo *YourFormRegion*. Designer. vb. Pokud chcete tento soubor zobrazit v Visual Basic projekty, klikněte na tlačítko **Zobrazit všechny soubory** v **Průzkumník řešení**.
 
-2. Upravte deklaraci třídy oblasti formuláře, aby se odvozuje od <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> místo `Microsoft.Office.Tools.Outlook.FormRegionControl`.
+2. Upravte deklaraci třídy region formuláře tak, aby byla odvozena z <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> místo `Microsoft.Office.Tools.Outlook.FormRegionControl` .
 
-3. Upravte konstruktoru třídy oblasti formuláře, jak je znázorněno v následujícím příkladu kódu.
+3. Upravte konstruktor třídy region formuláře, jak je znázorněno v následujících příkladech kódu.
 
-     Následující příklad kódu ukazuje konstruktor třídy oblasti formuláře v projektu, který cílí rozhraní .NET Framework 3.5.
+     Následující příklad kódu ukazuje konstruktor třídy region formuláře v projektu, který cílí na .NET Framework 3,5.
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -50,7 +50,7 @@ ms.locfileid: "66836049"
     }
     ```
 
-     Následující příklad kódu ukazuje konstruktor třídy oblasti formuláře v projektu, který cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].
+     Následující příklad kódu ukazuje konstruktor třídy region formuláře v projektu, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -67,9 +67,9 @@ ms.locfileid: "66836049"
     }
     ```
 
-4. Upravte podpis metody `InitializeManifest` způsob, jak je znázorněno níže. Ujistěte se, že neprovádějte žádné změny kódu v metodě; Tento kód představuje nastavení oblasti formuláře, které jste provedli v návrháři. Ve Vizuálu C# projektů, je třeba rozbalit oblast s názvem `Form Region Designer generated code` zobrazíte takto.
+4. Upravte podpis `InitializeManifest` metody, jak je znázorněno níže. Ujistěte se, že kód v metodě neupravujete. Tento kód představuje nastavení oblasti formuláře, které jste použili v návrháři. V projektech v jazyce Visual C# je nutné rozšířit oblast, která je pojmenována `Form Region Designer generated code` k zobrazení této metody.
 
-     Následující příklad kódu ukazuje podpis `InitializeManifest` metoda v projektu, který cílí na rozhraní .NET Framework 3.5.
+     Následující příklad kódu ukazuje podpis `InitializeManifest` metody v projektu, který cílí na .NET Framework 3,5.
 
     ```vb
     Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest)
@@ -85,7 +85,7 @@ ms.locfileid: "66836049"
     }
     ```
 
-     Následující příklad kódu ukazuje podpis `InitializeManifest` metoda v projektu, který se zaměřuje [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].
+     Následující příklad kódu ukazuje `InitializeManifest` metodu podpisu v projektu, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 
     ```vb
     Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest,
@@ -103,23 +103,23 @@ ms.locfileid: "66836049"
     }
     ```
 
-5. Přidáte novou oblast formuláře Outlooku položku do projektu. Otevřete soubor kódu na pozadí pro novou oblast formuláře, vyhledejte *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy v souboru a zkopírujte tyto třídy do schránky.
+5. Přidejte do projektu novou položku oblasti formuláře Outlooku. Otevřete soubor kódu na pozadí pro novou oblast formuláře, vyhledejte *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy v souboru a zkopírujte tyto třídy do schránky.
 
-6. Odstraňte novou oblast formuláře, které jste přidali do svého projektu.
+6. Odstraňte novou oblast formuláře, kterou jste přidali do projektu.
 
-7. V souboru kódu na pozadí, kterou aktualizujete pro práci v projektu přesměrovanou oblasti formuláře, vyhledejte *YourOriginalFormRegion* `Factory` a `WindowFormRegionCollection` třídy a nahraďte kód, který jste zkopírovali ze novou oblast formuláře.
+7. V souboru kódu na pozadí oblasti formuláře, kterou aktualizujete, aby fungovala v přecíleném projektu, vyhledejte *YourOriginalFormRegion* `Factory` a `WindowFormRegionCollection` třídy a nahraďte je kódem, který jste zkopírovali z nové oblasti formuláře.
 
-8. V *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy, vyhledejte všechny odkazy *YourNewFormRegion* třídy a změňte každý odkaz na  *YourOriginalFormRegion* namísto třídy. Například je název oblasti formuláře při aktualizaci `SalesDataFormRegion` a novou oblast formuláře, kterou jste vytvořili v kroku 5 se jmenuje `FormRegion1`, změňte všechny odkazy na `FormRegion1` k `SalesDataFormRegion`.
+8. V *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídách vyhledejte všechny odkazy na třídu *YourNewFormRegion* a místo toho změňte každý odkaz na třídu *YourOriginalFormRegion* . Pokud je například oblast formuláře, kterou aktualizujete, pojmenována `SalesDataFormRegion` a nová oblast formuláře, kterou jste vytvořili v kroku 5, je pojmenována `FormRegion1` , změňte všechny odkazy `FormRegion1` na `SalesDataFormRegion` .
 
-#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Chcete-li aktualizovat generovaný kód pro oblasti formuláře, který jste naimportovali z Outlooku
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Aktualizace generovaného kódu pro oblast formuláře, kterou jste importovali z Outlooku
 
-1. Otevřete soubor kódu na pozadí oblasti formuláře v editoru kódu. Tento soubor má název *YourFormRegion*. Designer.cs nebo *YourFormRegion*. Designer.vb. Tento soubor v projektech Visual Basicu zobrazíte kliknutím **zobrazit všechny soubory** tlačítko **Průzkumníka řešení**.
+1. V editoru kódu otevřete soubor kódu na pozadí oblasti formuláře. Tento soubor má název *YourFormRegion*. Designer.cs nebo *YourFormRegion*. Designer. vb. Pokud chcete tento soubor zobrazit v Visual Basic projekty, klikněte na tlačítko **Zobrazit všechny soubory** v **Průzkumník řešení**.
 
-2. Upravte deklaraci třídy oblasti formuláře, aby se odvozuje od <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> místo `Microsoft.Office.Tools.Outlook.ImportedFormRegion`.
+2. Upravte deklaraci třídy region formuláře tak, aby byla odvozena z <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> místo `Microsoft.Office.Tools.Outlook.ImportedFormRegion` .
 
-3. Upravte konstruktoru třídy oblasti formuláře, jak je znázorněno v následujícím příkladu kódu.
+3. Upravte konstruktor třídy region formuláře, jak je znázorněno v následujících příkladech kódu.
 
-     Následující příklad kódu ukazuje konstruktor třídy oblasti formuláře v projektu, který cílí rozhraní .NET Framework 3.5.
+     Následující příklad kódu ukazuje konstruktor třídy region formuláře v projektu, který cílí na .NET Framework 3,5.
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -136,7 +136,7 @@ ms.locfileid: "66836049"
     }
     ```
 
-     Následující příklad kódu ukazuje podpis konstruktoru třídy oblasti formuláře v projektu, který cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].
+     Následující příklad kódu ukazuje signaturu konstruktoru třídy oblasti formuláře v projektu, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -153,9 +153,9 @@ ms.locfileid: "66836049"
     }
     ```
 
-4. Pro každý jednotlivý řádek kódu `InitializeControls` metodu, která inicializuje ovládací prvek ve třídě oblasti formuláře, upravte kód, jak je znázorněno níže.
+4. Pro každý řádek kódu v `InitializeControls` metodě, která inicializuje ovládací prvek ve třídě region formuláře, upravte kód, jak je znázorněno níže.
 
-     Následující příklad kódu ukazuje, jak inicializovat ovládací prvek v projektu, který cílí rozhraní .NET Framework 3.5. V tomto kódu `GetFormRegionControl` metoda má parametr typu, který určuje typ ovládacího prvku, který je vrácen.
+     Následující příklad kódu ukazuje, jak inicializovat ovládací prvek v projektu, který cílí na .NET Framework 3,5. V tomto kódu `GetFormRegionControl` má metoda parametr typu, který určuje typ vráceného ovládacího prvku.
 
     ```vb
     Me.olkTextBox1 = Me.GetFormRegionControl(Of Microsoft.Office.Interop.Outlook.OlkTextBox)("OlkTextBox1")
@@ -165,7 +165,7 @@ ms.locfileid: "66836049"
     this.olkTextBox1 = this.GetFormRegionControl<Microsoft.Office.Interop.Outlook.OlkTextBox>("OlkTextBox1");
     ```
 
-     Následující příklad kódu ukazuje, jak inicializovat ovládací prvek v projektu, který cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. V tomto kódu <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> metoda nemá parametr typu. Musí se přetypovávat návratovou hodnotu pro typ ovládacího prvku, který se inicializuje.
+     Následující příklad kódu ukazuje, jak inicializovat ovládací prvek v projektu, který cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . V tomto kódu metoda nemá <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> parametr typu. Vrácenou hodnotu je nutné přetypovat na typ ovládacího prvku, který inicializujete.
 
     ```vb
     Me.olkTextBox1 = CType(GetFormRegionControl("OlkTextBox1"), Microsoft.Office.Interop.Outlook.OlkTextBox)
@@ -175,27 +175,27 @@ ms.locfileid: "66836049"
     this.olkTextBox1 = (Microsoft.Office.Interop.Outlook.OlkTextBox)GetFormRegionControl("OlkTextBox1");
     ```
 
-5. Přidáte novou oblast formuláře Outlooku položku do projektu. Otevřete soubor kódu na pozadí pro novou oblast formuláře, vyhledejte *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy v souboru a zkopírujte tyto třídy do schránky.
+5. Přidejte do projektu novou položku oblasti formuláře Outlooku. Otevřete soubor kódu na pozadí pro novou oblast formuláře, vyhledejte *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy v souboru a zkopírujte tyto třídy do schránky.
 
-6. Odstraňte novou oblast formuláře, které jste přidali do svého projektu.
+6. Odstraňte novou oblast formuláře, kterou jste přidali do projektu.
 
-7. V souboru kódu na pozadí, kterou aktualizujete pro práci v projektu přesměrovanou oblasti formuláře, vyhledejte *YourOriginalFormRegion* `Factory` a `WindowFormRegionCollection` třídy a nahraďte kód, který jste zkopírovali ze novou oblast formuláře.
+7. V souboru kódu na pozadí oblasti formuláře, kterou aktualizujete, aby fungovala v přecíleném projektu, vyhledejte *YourOriginalFormRegion* `Factory` a `WindowFormRegionCollection` třídy a nahraďte je kódem, který jste zkopírovali z nové oblasti formuláře.
 
-8. V *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídy, vyhledejte všechny odkazy *YourNewFormRegion* třídy a změňte každý odkaz na  *YourOriginalFormRegion* namísto třídy. Například je název oblasti formuláře při aktualizaci `SalesDataFormRegion` a novou oblast formuláře, kterou jste vytvořili v kroku 5 se jmenuje `FormRegion1`, změňte všechny odkazy na `FormRegion1` k `SalesDataFormRegion`.
+8. V *YourNewFormRegion* `Factory` a `WindowFormRegionCollection` třídách vyhledejte všechny odkazy na třídu *YourNewFormRegion* a místo toho změňte každý odkaz na třídu *YourOriginalFormRegion* . Pokud je například oblast formuláře, kterou aktualizujete, pojmenována `SalesDataFormRegion` a nová oblast formuláře, kterou jste vytvořili v kroku 5, je pojmenována `FormRegion1` , změňte všechny odkazy `FormRegion1` na `SalesDataFormRegion` .
 
-## <a name="instantiate-form-region-classes"></a>Vytvoření instance třídy oblasti formuláře
- Je třeba upravit jakýkoli kód, který dynamicky vytvoří instanci určité třídy oblasti formuláře. V projektech cílených rozhraní .NET Framework 3.5, lze vytvořit instanci třídy oblasti formuláře jako `Microsoft.Office.Tools.Outlook.FormRegionManifest` přímo. V projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, jsou tyto třídy rozhraní, které nelze přímo vytvořit instanci.
+## <a name="instantiate-form-region-classes"></a>Instance tříd oblastí formuláře
+ Je nutné upravit kód, který dynamicky vytváří instance určitých tříd oblastí formuláře. V projektech, které cílí na .NET Framework 3,5, můžete vytvářet instance tříd oblastí formuláře, například `Microsoft.Office.Tools.Outlook.FormRegionManifest` přímo. V projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, jsou tyto třídy rozhraní, které nelze vytvořit přímo.
 
- Pokud cílové rozhraní projektu se změní na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, musíte vytvořit instanci rozhraní pomocí metod, které jsou poskytovány `Globals.Factory` vlastnost. Další informace o `Globals.Factory` vlastnost, naleznete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).
+ Pokud je cílová architektura projektu změněna na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější, je nutné vytvořit instanci rozhraní pomocí metod, které jsou poskytnuty `Globals.Factory` vlastností. Další informace o této `Globals.Factory` vlastnosti najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).
 
- Následující tabulka uvádí oblasti formuláře typu a metody pro použití k vytvoření instancí typů v projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější.
+ V následující tabulce jsou uvedeny typy oblastí formuláře a metoda, která má být použita k vytvoření instance typů v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější.
 
-|Type|Metoda Factory se má použít|
+|Typ|Metoda továrního použití|
 |----------|---------------------------|
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCustomAction%2A>|
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionInitializingEventArgs%2A>|
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionManifest%2A>|
 
-## <a name="see-also"></a>Viz také:
-- [Migrace řešení Office na rozhraní .NET Framework 4 nebo novější](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
-- [Vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md)
+## <a name="see-also"></a>Viz také
+- [Migrace řešení Office na .NET Framework 4 nebo novější](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
+- [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: be826b73e28a73216ea88ceba8e23eb1e9ea457b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903819"
 ---
 # <a name="create-an-options-page"></a>Vytvoření stránky možnosti
@@ -25,7 +25,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
  Parametr MPF poskytuje dvě třídy, které vám pomůžou vytvořit stránky možností nástrojů, <xref:Microsoft.VisualStudio.Shell.Package> třídu a <xref:Microsoft.VisualStudio.Shell.DialogPage> třídu. Vytvoříte VSPackage pro poskytnutí kontejneru pro tyto stránky podtřídou `Package` třídy. Můžete vytvořit každou stránku možností nástrojů odvozením z `DialogPage` třídy.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
  Od sady Visual Studio 2015 nenainstalujete sadu Visual Studio SDK z webu Stažení softwaru. V instalačním programu sady Visual Studio je zahrnutý jako volitelná funkce. Sadu VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -245,7 +245,7 @@ Tento návod vytvoří jednoduchou stránku nástrojů/možností, která použ�
 
     ```
 
-     Tento kód volá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> Vytvoření nebo načtení `OptionPageGrid` instance. `OptionPageGrid`volá <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> načtení jeho možností, což jsou veřejné vlastnosti.
+     Tento kód volá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> Vytvoření nebo načtení `OptionPageGrid` instance. `OptionPageGrid` volá <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> načtení jeho možností, což jsou veřejné vlastnosti.
 
 2. Nyní k zobrazení hodnoty přidejte šablonu vlastní položky příkazu s názvem **MyToolsOptionsCommand** . V dialogovém okně **Přidat novou položku** , přejít na rozšiřitelnost v **jazyce Visual C#**  >  **Extensibility** a vybrat **vlastní příkaz**. V poli **název** v dolní části okna změňte název souboru příkazů na *MyToolsOptionsCommand.cs*.
 

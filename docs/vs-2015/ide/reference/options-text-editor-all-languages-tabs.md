@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4cb670ab52e321f15c5b009c66ca40623409f10a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662387"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Možnosti, textový editor, všechny jazyky, karty
@@ -36,7 +36,7 @@ Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato 
 > [!CAUTION]
 > Tato stránka nastaví výchozí možnosti pro všechny vývojové jazyky. Mějte na paměti, že při resetování možnosti v tomto dialogu dojde k výběru možností karet ve všech jazycích, ať už jsou vybrané volby. Chcete-li změnit možnosti textového editoru pouze pro jeden jazyk, rozbalte podsložku pro daný jazyk a vyberte její stránky možností.
 
- Pokud jsou na stránkách možností karet pro konkrétní programovací jazyky vybraná jiná nastavení, zobrazí se u různých možností **odsazení** zpráva nastavení odsazení pro jednotlivé textové formáty. a zpráva "nastavení tabulátoru pro jednotlivé textové formáty jsou v konfliktu." se zobrazí pro různé možnosti **tabulátoru** . Toto připomenutí se zobrazí například v případě, že je vybraná možnost **inteligentního odsazení** pro Visual Basic, ale pro vizuál C++se vybere **odsazení bloku** .
+ Pokud jsou na stránkách možností karet pro konkrétní programovací jazyky vybraná jiná nastavení, zobrazí se u různých možností **odsazení** zpráva nastavení odsazení pro jednotlivé textové formáty. a zpráva "nastavení tabulátoru pro jednotlivé textové formáty jsou v konfliktu." se zobrazí pro různé možnosti **tabulátoru** . Toto připomenutí se zobrazí například v případě, že je vybrána možnost **inteligentního odsazení** pro Visual Basic, ale u Visual C++ je vybráno **blokování odrážek** .
 
 > [!NOTE]
 > Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace naleznete v tématu [přizpůsobení nastavení vývoje v aplikaci Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).

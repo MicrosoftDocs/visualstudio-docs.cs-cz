@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Dokumentace Microsoftu
+title: 'IDebugExpressionEvaluator2:: SetCallback | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8d6f715bb33afe051cdccffbf3219e062b606f57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179930"
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Umožňuje vyhodnocovací filtr výrazů (EE) k určení rozhraní zpětného volání, které modul ladicího programu (DE) bude používat ke čtení nastavení metriky.  
+Povoluje vyhodnocení výrazu (EE) pro určení rozhraní zpětného volání, které bude modul ladicího programu (DE) používat ke čtení nastavení metriky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +39,16 @@ int SetCallback (
   
 #### <a name="parameters"></a>Parametry  
  `pCallback`  
- [in] Rozhraní pro nastavení zpětného volání.  
+ pro Rozhraní, které se má použít pro zpětné volání nastavení  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda poskytuje rozhraní pro správce ladění relace, vyhodnocovače výrazů můžete použít ke čtení nastavení metriky. To je užitečné ve vzdálené ladění číst metriky na [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] počítače.  
+ Tato metoda poskytuje rozhraní pro správce ladění relace, které může vyhodnocovací filtr výrazů použít ke čtení nastavení metriky. Je užitečné při vzdáleném ladění, aby bylo možné číst metriky v [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] počítači.  
   
 ## <a name="example"></a>Příklad  
- Následující příklady ukazují postup implementace této metody pro **CEE** objekt, který zveřejňuje [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) rozhraní.  
+ Následující příklady ukazují, jak implementovat tuto metodu pro objekt **CEE** , který zpřístupňuje rozhraní [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) .  
   
 ```cpp#  
 HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)  

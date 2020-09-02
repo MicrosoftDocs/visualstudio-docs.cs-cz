@@ -1,5 +1,5 @@
 ---
-title: 'Excel: Začínáme s programováním přizpůsobení na úrovni dokumentu'
+title: 'Excel: Začněte programovat přizpůsobení na úrovni dokumentu.'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,60 +14,60 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2c1ff264eb1a4ca7afdc424cef7edf15bae06554
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66402161"
 ---
 # <a name="get-started-programming-document-level-customizations-for-excel"></a>Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel
-  Pokud jste začali vytvářet přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Excel s použitím sady Visual Studio, zde je, co potřebujete vědět.
+  Pokud jste právě začali vytvářet přizpůsobení na úrovni dokumentu pro systém Microsoft Office Excel pomocí sady Visual Studio, je zde potřeba znát.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
-## <a name="understand-how-document-level-customizations-for-excel-work"></a>Vysvětlení přizpůsobení na úrovni dokumentu pro Excel práce
- Přizpůsobení úrovni dokumentu pro Excel je podle jednoho sešitu. Pokud chcete začít používat vlastní nastavení, koncový uživatel otevře sešit nebo vytvoří sešitu z šablony aplikace Excel. Události v sešitu, třeba zadáním do buňky nebo kliknutím na tlačítka a položky nabídky, může volat metody zpracování událostí v sestavení. Při zavření sešitu funkcí poskytovaných službou přizpůsobení již nejsou k dispozici v aplikaci Excel, pouze v dokumentu, který je obsažen.
+## <a name="understand-how-document-level-customizations-for-excel-work"></a>Vysvětlení fungování přizpůsobení na úrovni dokumentu pro aplikaci Excel
+ Přizpůsobení na úrovni dokumentu v aplikaci Excel je založeno na jednom sešitu. Chcete-li začít s vlastním nastavením, koncový uživatel otevře sešit nebo vytvoří sešit ze šablony aplikace Excel. Události v sešitu, například psaní v buňkách nebo kliknutí na tlačítka a položky nabídky, mohou volat metody zpracování událostí v sestavení. Když je sešit uzavřen, funkce poskytované přizpůsobením již nejsou v aplikaci Excel k dispozici, pouze v dokumentu, který je obsahuje.
 
- Další informace najdete v tématu [architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).
+ Další informace najdete v tématu [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).
 
-## <a name="create-document-level-projects-for-excel"></a>Vytvořit projekty na úrovni dokumentu pro Excel
- K vytvoření přizpůsobení na úrovni dokumentu pro Excel, použijte šablonu projektu Excelového sešitu nebo šabloně aplikace Excel v **nový projekt** dialogové okno. Tyto šablony zahrnují odkazy na požadovaná sestavení a soubory projektu.
+## <a name="create-document-level-projects-for-excel"></a>Vytváření projektů na úrovni dokumentu v Excelu
+ Chcete-li vytvořit přizpůsobení na úrovni dokumentu pro aplikaci Excel, použijte excelový sešit nebo šablonu projektu šablony aplikace Excel v dialogovém okně **Nový projekt** . Tyto šablony obsahují požadované odkazy na sestavení a soubory projektu.
 
- Další informace o tom, jak vytvořit projekt úrovni dokumentu pro Excel najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md). Další informace o šablonách projektů, naleznete v tématu [Přehled šablon projektů Office project](../vsto/office-project-templates-overview.md).
+ Další informace o tom, jak vytvořit projekt na úrovni dokumentu pro aplikaci Excel, naleznete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md). Další informace o šablonách projektů naleznete v tématu [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md).
 
-## <a name="program-excel-workbooks-by-using-host-items-and-host-controls"></a>Program Excelové sešity pomocí hostitelských položek a hostitelských ovládacích prvků
- *Hostování položky* a *hostování ovládacích prvků* jsou třídy, které poskytují programovací model pro přizpůsobení na úrovni dokumentu vytvořené pomocí sady Visual Studio.
+## <a name="program-excel-workbooks-by-using-host-items-and-host-controls"></a>Program excelové sešity pomocí hostitelských položek a hostitelských ovládacích prvků
+ *Hostitelské položky* a *hostitelské ovládací prvky* jsou třídy, které poskytují programovací model pro přizpůsobení na úrovni dokumentu vytvořené pomocí sady Visual Studio.
 
- Hostitelské položky poskytují vstupní bod pro kód a mohou chovat i jako kontejnery pro hostitelské ovládací prvky a ovládací prvky Windows Forms. V projektech na úrovni dokumentu pro Excel, jsou reprezentovány tyto položky hostitele `ThisWorkbook`, `Sheet1`, `Sheet2`, a `Sheet3` třídy.
+ Položky hostitele poskytují vstupní bod pro váš kód a mohou sloužit také jako kontejnery pro ovládací prvky hostování a model Windows Forms ovládací prvky. V projektech na úrovni dokumentu v aplikaci Excel jsou tyto hostitelské položky zastoupeny `ThisWorkbook` `Sheet1` `Sheet2` třídami,, a `Sheet3` .
 
- Hostitelské ovládací prvky jsou založeny na nativních objektů aplikace Excel, jako je například seznam objektů a rozsahy adres. Hostitelské ovládací prvky poskytují podobné funkce jako nativní objektů aplikace Excel, ale mají také nové události, podpora návrháře a datové vazby funkce. Zobrazí se jako první třídy objektů ve vašem kódu projektu a v technologii IntelliSense, která usnadňuje odkazovat na konkrétní objekty přímo v kódu bez nutnosti procházení modelu objektů aplikace Excel.
+ Hostitelské ovládací prvky jsou založené na nativních objektech aplikace Excel, jako jsou například objekty a rozsahy seznamu. Ovládací prvky hostitele poskytují podobnou funkci nativním objektům aplikace Excel, ale mají také nové události, podporu návrháře a schopnost datových vazeb. Zobrazují se jako objekty první třídy v kódu projektu a v technologii IntelliSense, což usnadňuje odkazování na konkrétní objekty přímo v kódu, aniž by bylo nutné procházet model objektu aplikace Excel.
 
- Další informace naleznete v následujících tématech:
+ Další informace najdete v následujících tématech:
 
-- [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)
+- [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
 
-- [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
+- [Automatizace Excelu pomocí rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 
-## <a name="customize-the-user-interface-of-excel"></a>Přizpůsobení uživatelského rozhraní aplikace Excel
- Většina řešení Microsoft Office upravit uživatelské rozhraní (UI) aplikace Office kvůli nějakému uživatelům interakci s řešením. Existuje mnoho způsobů, jimiž lze upravit uživatelské rozhraní Excelu pomocí přizpůsobení úrovni dokumentu. Například můžete přidat ovládací prvky na pás karet, nebo můžete zobrazit podokna akcí. Další informace najdete v tématu [přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization.md).
+## <a name="customize-the-user-interface-of-excel"></a>Přizpůsobení uživatelského rozhraní Excelu
+ Většina řešení systém Microsoft Office upravuje uživatelské rozhraní (UI) aplikace Office, aby uživatelům poskytovala nějaký způsob, jak s řešením pracovat. Existuje mnoho způsobů, jak můžete upravit uživatelské rozhraní aplikace Excel pomocí přizpůsobení na úrovni dokumentu. Můžete například přidat ovládací prvky na pás karet nebo můžete zobrazit podokno akcí. Další informace najdete v tématu [přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md).
 
- Můžete také otevřít sešit, který je přidružený k projektu přímo v sadě Visual Studio. Pokud se sešit otevřít v sadě Visual Studio, můžete upravit sešit s použitím uživatelského rozhraní aplikace Excel. Sešit můžete použít také jako návrhové ploše, která umožňuje přetažením ovládacích prvků na listech. Další informace najdete v tématu [projektech pro systém Office v prostředí sady Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
+ Sešit, který je přidružený k projektu, můžete také otevřít přímo v aplikaci Visual Studio. Když je sešit otevřený v aplikaci Visual Studio, můžete ho upravit pomocí uživatelského rozhraní Excelu. Sešit můžete také použít jako návrhovou plochu, která umožňuje přetahovat ovládací prvky na listy. Další informace najdete v tématu [projekty Office v prostředí Visual Studio](../vsto/office-projects-in-the-visual-studio-environment.md).
 
-## <a name="use-data-binding"></a>Použití datových vazeb
- Hostitelské ovládací prvky jsou také v seznamu ovládacích prvků, které můžete přetáhnout z **zdroje dat** okna. Přidání hostitelské ovládací prvky v tomto způsobem automaticky váže je ke zdroji dat, které jste nastavili pomocí okna. Bez psaní kódu, můžete zobrazit data z databází, webových služeb a objektů firmy. Další informace najdete v tématu [vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
+## <a name="use-data-binding"></a>Použití datové vazby
+ Ovládací prvky hostitele jsou také v seznamu ovládacích prvků, které lze přetáhnout z okna **zdroje dat** . Přidání hostitelských ovládacích prvků tímto způsobem je automaticky sváže se zdrojem dat, který jste nastavili pomocí okna. Bez psaní kódu můžete zobrazit data z databází, webových služeb a obchodních objektů. Další informace najdete v tématu [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
 ## <a name="next-steps"></a>Další kroky
- Informace o vytváření přizpůsobení na úrovni dokumentu pro Excel, naleznete v tématu [názorný postup: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md). Tento návod vás seznámí s vývojářské nástroje balíku Office v sadě Visual Studio a programovací model pro přizpůsobení na úrovni dokumentu aplikace Excel.
+ Další informace o tom, jak vytvořit přizpůsobení na úrovni dokumentu pro aplikaci Excel, najdete v tématu [Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro aplikaci Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md). V tomto návodu se seznámíte s nástroji pro vývoj pro Office v sadě Visual Studio a programovacím modelem pro přizpůsobení na úrovni dokumentu v Excelu.
 
- Seznam témat, která vás provede některé běžné úlohy v projektech aplikace Excel najdete v tématu [běžné úlohy při programování pro Office](../vsto/common-tasks-in-office-programming.md).
+ Seznam témat, která vás provedou některými běžnými úkoly v projektech aplikace Excel, najdete v tématu [běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md).
 
-## <a name="see-also"></a>Viz také:
-- [Postupy: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)
-- [Řešení pro aplikaci Excel](../vsto/excel-solutions.md)
-- [Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)
-- [Návody pro aplikaci Excel](../vsto/walkthroughs-using-excel.md)
+## <a name="see-also"></a>Viz také
+- [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md)
+- [Řešení pro Excel](../vsto/excel-solutions.md)
+- [Návod: vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)
+- [Návody pomocí Excelu](../vsto/walkthroughs-using-excel.md)
 - [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md)
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)

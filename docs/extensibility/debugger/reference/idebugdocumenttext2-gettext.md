@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentText2:: GetText | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2429bdf3f09eff168210a7b835a9e506d74d63ea
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731571"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
-Načte text ze zadaného umístění v dokumentu.
+Načte text ze zadané pozice v dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,19 +47,19 @@ int GetText(
 
 ## <a name="parameters"></a>Parametry
 `pos`\
-[v] Struktura [TEXT_POSITION,](../../../extensibility/debugger/reference/text-position.md) která označuje umístění textu, který má být načten.
+pro Struktura [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) , která označuje umístění textu, který se má načíst.
 
 `cMaxChars`\
-[v] Maximální počet znaků textu, který má být načten.
+pro Maximální počet znaků textu, který má být načten.
 
 `pText`\
-[dovnitř, ven] Ukazatel na vyrovnávací paměť, která má být vyplněna požadovaným textem. Tato vyrovnávací paměť musí obsahovat alespoň `cMaxChars` počet širokých znaků.
+[in, out] Ukazatel na vyrovnávací paměť, který má být vyplněn požadovaným textem. Tato vyrovnávací paměť musí být schopna obsahovat alespoň `cMaxChars` Počet velkých znaků.
 
 `pcNumChars`\
-[out] Vrátí počet znaků skutečně načtených.
+mimo Vrátí počet skutečně načtených znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
-V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
 Tento příklad ukazuje, jak lze tuto metodu volat z jazyka C#.

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5d6b9bb2eb6169de2bbbf41b6d4e96a5960e40fe
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348246"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu pomocí ladicího programu sady Visual Studio
@@ -49,7 +49,7 @@ Většina oken ladicího programu, jako jsou **moduly** a **sledovací** okna, j
 
 Příkazy kroku ladicího programu vám pomůžou zkontrolovat stav aplikace nebo zjistit další informace o jeho toku provádění.
 
-### <a name="step-into-code-line-by-line"></a><a name="BKMK_Step_into__over__or_out_of_the_code"></a>Krokovat s kódem řádek po řádku
+### <a name="step-into-code-line-by-line"></a><a name="BKMK_Step_into__over__or_out_of_the_code"></a> Krokovat s kódem řádek po řádku
 
 Chcete-li zastavit u každého příkazu během ladění, použijte krok **ladění**  >  **do**nebo stiskněte klávesu **F11**.
 
@@ -74,16 +74,16 @@ U vnořeného volání funkce **Krok do** nejhlouběji vnořené funkce. Napří
 >[!TIP]
 >Při provádění jednotlivých řádků kódu můžete umístit ukazatele myši nad proměnné, abyste viděli jejich hodnoty, nebo použít [místní](autos-and-locals-windows.md) okna a [kukátka](watch-and-quickwatch-windows.md) ke sledování změn hodnot. Můžete také vizuálně sledovat [zásobník volání](how-to-use-the-call-stack-window.md) při krokování do funkcí. (Pouze pro Visual Studio Enterprise, viz [metody map v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)).
 
-### <a name="step-through-code-and-skip-some-functions"></a><a name="BKMK_Step_over_Step_out"></a>Krokovat kód a přeskočit některé funkce
+### <a name="step-through-code-and-skip-some-functions"></a><a name="BKMK_Step_over_Step_out"></a> Krokovat kód a přeskočit některé funkce
 
 Při ladění nemůžete zajímat funkci, nebo víte, že funguje, jako dobře testovaný kód knihovny. Pomocí následujících příkazů můžete přeskočit kód při krokování kódu. Funkce se pořád spustí, ale ladicí program je přeskočí.
 
-|Příkaz klávesnice|Příkaz nabídky Ladit|Description|
+|Příkaz klávesnice|Příkaz nabídky Ladit|Popis|
 |----------------------|------------------|-----------------|
 |**F10**|**Krokovat**|Pokud aktuální řádek obsahuje volání funkce, **Krok over** spustí kód a poté pozastaví provádění na prvním řádku kódu po návratu volané funkce.|
 |**Posun** + Klávesa **F11**|**Krok ven**|**Krok ven** pokračuje v běhu kódu a pozastaví provádění, když se vrátí aktuální funkce. Ladicí program přeskočí aktuální funkci.|
 
-## <a name="run-to-a-specific-location-or-function"></a><a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a>Spustit do konkrétního umístění nebo funkce
+## <a name="run-to-a-specific-location-or-function"></a><a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Spustit do konkrétního umístění nebo funkce
 
 Můžete chtít spustit přímo na konkrétní umístění nebo funkci, pokud přesně víte, jaký kód chcete zkontrolovat, nebo víte, kde chcete spustit ladění.
 
@@ -138,7 +138,7 @@ Při pozastavení v ladicím programu můžete umístit ukazatel myši na přík
 
 Chcete-li přerušit následující dostupný řádek kódu ve spuštěné aplikaci, vyberte možnost **ladění**  >  **Zrušit vše**nebo stiskněte klávesu **CTRL** + **ALT** + **Break**.
 
-## <a name="move-the-pointer-to-change-the-execution-flow"></a><a name="BKMK_Set_the_next_statement_to_execute"></a>Přesunutím ukazatele myši změníte tok provádění.
+## <a name="move-the-pointer-to-change-the-execution-flow"></a><a name="BKMK_Set_the_next_statement_to_execute"></a> Přesunutím ukazatele myši změníte tok provádění.
 
 I když je ladicí program pozastaven, žlutá šipka na okraji okna zdrojového kódu nebo **zpětný překlad** označuje umístění dalšího příkazu, který má být proveden. Další příkaz, který se má provést, můžete změnit přesunutím této šipky. Můžete přeskočit část kódu nebo se vrátit na předchozí řádek. Přesunutí ukazatele je užitečné v situacích, jako je například přeskočení oddílu kódu, který obsahuje známou chybu.
 
@@ -180,7 +180,7 @@ Chcete-li načíst symboly společnosti Microsoft, přečtěte si téma [Konfigu
 
 1. V okně **moduly** můžete určit, které moduly mají ve sloupci **stav symbolu** načtené symboly. Klikněte pravým tlačítkem na modul, pro který chcete načíst symboly, a vyberte **načíst symboly**.
 
-## <a name="step-into-properties-and-operators-in-managed-code"></a><a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a>Krok do vlastností a operátorů ve spravovaném kódu
+## <a name="step-into-properties-and-operators-in-managed-code"></a><a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Krok do vlastností a operátorů ve spravovaném kódu
  Ladicí program ve výchozím nastavení přesměruje vlastnosti a operátory ve spravovaném kódu. Ve většině případů to poskytuje lepší možnosti ladění. Chcete-li povolit krokování do vlastností nebo **Debug**operátorů, vyberte  >  **možnost**ladění. Na stránce **Debugging**  >  **Obecné** ladění zrušte zaškrtnutí políčka **Krokovat přes vlastnosti a operátory (pouze spravované)** .
 
 ## <a name="see-also"></a>Viz také

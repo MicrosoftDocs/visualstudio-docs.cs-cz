@@ -1,5 +1,5 @@
 ---
-title: Příprava na ladění C#, F#a projekty VB | Microsoft Docs
+title: 'Příprava na ladění projektů v jazyce C#, F # a VB | Microsoft Docs'
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,19 +22,19 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 90e108ddd64a9b520c8ae1d0c86e416dea64e5be
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738120"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Příprava ladění: typy projektů jazyka C#, F# a Visual Basic
-Témata v této části popisují C#, jak ladit typy projektů, F#a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vytvořené pomocí šablon projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+Témata v této části popisují, jak ladit typy projektů jazyka C#, F # a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektů, které byly vytvořeny pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] šablon projektů.
 
  Všimněte si, že tyto typy projektů, které vytváří knihovny DLL jako výstup, byly seskupeny do [projektů ladění dll](../debugger/debugging-dll-projects.md) z důvodu společných funkcí, které sdílí.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Doporučené nastavení vlastností](../debugger/managed-debugging-recommended-property-settings.md) Tato část popisuje doporučená nastavení vlastností související s laděním pro C#projekty F#, a Visual Basic.
+ [Doporučené nastavení vlastností](../debugger/managed-debugging-recommended-property-settings.md) Tato část popisuje doporučená nastavení vlastností související s laděním pro projekty v jazyce C#, F # a Visual Basic.
 
  [Model Windows Forms aplikací](../debugger/debugging-preparation-windows-forms-applications.md) Popisuje projekt aplikace systému Windows a poskytuje pokyny pro ladění, změnu výchozí konfigurace ladění a spuštění aplikace mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojení k ní.
 
@@ -43,9 +43,9 @@ Témata v této části popisují C#, jak ladit typy projektů, F#a [!INCLUDE[vb
  [Služby systému Windows](../debugger/debugging-preparation-windows-services.md) Popisuje službu systému Windows a poskytuje odkaz na ladění aplikací služby systému Windows.
 
 ## <a name="related-sections"></a>Související oddíly
- [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Zahrnuje nastavení a přípravu, které je nutné provést, chcete-li ladit program pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md) Zahrnuje nastavení a přípravu, které je nutné provést, chcete-li ladit program pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.
 
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md) Zahrnuje běžné problémy s laděním a techniky pro aplikace napsané ve spravovaném kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

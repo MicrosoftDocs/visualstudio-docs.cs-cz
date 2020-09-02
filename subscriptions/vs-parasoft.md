@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Naučte se aktivovat předplatné Parasoft Virtualization/SOA Test Professional, které je součástí vašeho předplatného sady Visual Studio.
 ms.openlocfilehash: 8472c27e0196ec5837fccb17535061ea9b1b4867
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904381"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Parasoft Virtualization/SOAtest Professional Desktop v předplatných sady Visual Studio
@@ -47,7 +47,7 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 9. Vyberte požadovaný jazyk a klikněte na tlačítko **OK**.
 
-10. Spustí se Průvodce instalací nástroje Parasoft SOAtest & Virtualization.  Klikněte na **Další**.
+10. Spustí se Průvodce instalací nástroje Parasoft SOAtest & Virtualization.  Klikněte na **Next** (Další).
     > [!div class="mx-imgBorder"]
     > ![Začátek instalace výhody Parasoft](_img/vs-parasoft/vs-parasoft-start-install.png)
 
@@ -75,11 +75,11 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano       |
 | Visual Studio Enterprise s GitHubem Enterprise | VL | 6 měsíců       |  Ano       |
-| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |NA         |
-| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |NA         |
-| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NA         |
-| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |NA         |
-| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |NA|
+| Visual Studio Professional (Standard) | VL, Azure, Retail                                       | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Professional s GitHubem Enterprise | VL                                      | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Test Professional (Standard)                         | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| MSDN Platforms (Standard)                                          | VL, maloobchodní prodej                                              | Není k dispozici                                                           |Není k dispozici         |
+| Visual Studio Enterprise Visual Studio Professional (měsíční Cloud) | Azure                                       | Není k dispozici                                                           |Není k dispozici|
 ||
 
 <sup>1</sup>  *zahrnuje: Microsoft Partner Network (Enterprise).  Nezahrnuje se: ne pro účely opětovného prodeje (NFR), Visual Studio Industry Partner (VSIP), ekvivalent, MCT software & Services Developer, BizSpark, představte, nejčastější profesionální specialista (MVP), regionální ředitel (RD).  MCT software & služby.*
@@ -89,8 +89,8 @@ Otestujte předchozí a častěji.  Simulace a testování chování nedostupné
 
 ## <a name="support-resources"></a>Prostředky podpory
 - Potřebujete pomáhat s produkty v Parasoft?  Podívejte se na tyto materiály:
-  - Technická podpora:https://www.parasoft.com/support/
-  - Centrum prostředků Parasoft:https://www.parasoft.com/resources/
+  - Technická podpora:  https://www.parasoft.com/support/
+  - Centrum prostředků Parasoft:  https://www.parasoft.com/resources/
 - Pokud potřebujete pomoc s prodejem, předplatnými, účty a fakturací za předplatná sady Visual Studio, kontaktujte [podporu předplatných](https://visualstudio.microsoft.com/subscriptions/support/)sady Visual Studio
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 

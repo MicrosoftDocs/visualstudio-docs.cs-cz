@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738283"
 ---
 # <a name="debugger-settings-and-preparation"></a>Nastavení a příprava ladicího programu
-Tato část popisuje nastavení vlastností souvisejících s ladicím programem a přípravu potřebnou k ladění programu pomocí ladicího programu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Pokud vytvoříte program v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí šablon projektu, tato nastavení jsou nastavena správně v konfiguraci ladění.
+Tato část popisuje nastavení vlastností souvisejících s ladicím programem a přípravu potřebnou k ladění programu pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu. Pokud vytvoříte program [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pomocí šablon projektu, tato nastavení jsou nastavena správně v konfiguraci ladění.
 
  Další informace najdete v tématu [Postupy: nastavení ladění a konfigurací vydání](../debugger/how-to-set-debug-and-release-configurations.md).
 
@@ -34,7 +34,7 @@ Tato část popisuje nastavení vlastností souvisejících s ladicím programem
 
  [Postupy: určení nastavení ladicího programu](../debugger/how-to-specify-debugger-settings.md) Popisuje nastavení ladicího programu v dialogovém okně **Možnosti** .
  
- [Nastavení projektu ladicího programu](../debugger/debugger-project-settings.md) Vysvětluje, jak určit nastavení ladicího programu, jak nastavit konfigurace ladění a vydání a jak spravovat symboly a zdrojový kód. Také popisuje vhodné nastavení projektu pro C++, C#, F#a Visual Basic konfigurace ladění a také webových projektů.
+ [Nastavení projektu ladicího programu](../debugger/debugger-project-settings.md) Vysvětluje, jak určit nastavení ladicího programu, jak nastavit konfigurace ladění a vydání a jak spravovat symboly a zdrojový kód. Také popisuje vhodná nastavení projektu pro jazyk C++, C#, F # a Visual Basic konfigurace ladění a také webové projekty.
 
  [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md) Popisuje doporučené nastavení projektu pro ladění projektů knihovny DLL, způsob ladění z projektu knihovny DLL, způsob ladění ve smíšeném režimu a postup ladění knihovny webového ovládacího prvku spravovaného kódu.
 
@@ -46,7 +46,7 @@ Tato část popisuje nastavení vlastností souvisejících s ladicím programem
 
  [Postupy: určení starší verze .NET Framework pro ladění](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Popisuje, jak nastavit klíč registru tak, aby označoval ladicí program, který má verze používat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
 - [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

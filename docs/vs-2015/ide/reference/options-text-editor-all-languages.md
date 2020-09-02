@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ebe2da1dec9917a792f3e4e02516a79cff605c80
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662405"
 ---
 # <a name="options-text-editor-all-languages"></a>Možnosti, textový editor, všechny jazyky
@@ -75,7 +75,7 @@ Toto dialogové okno umožňuje změnit výchozí chování editoru kódu. Tato 
 > [!TIP]
 > Chcete-li zobrazit indikátory pro mezery, tabulátory a konce řádků, a odlišit odsazené řádky od řádků, které jsou zcela prázdné, v nabídce **Upravit** vyberte možnost **Upřesnit** a zvolte možnost **Zobrazit prázdné znaky**.
 
-## <a name="display"></a>Displej
+## <a name="display"></a>Zobrazení
  Čísla řádků: Pokud je vybrána, číslo řádku se zobrazí vedle každého řádku kódu.
 
 > [!NOTE]

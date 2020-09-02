@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 34fd56b37113467b7cbb2dfb8ac6fdba01b79cc6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543751"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Jak nastavit prostředí Pythonu v Azure App Service (Windows)
@@ -151,8 +151,8 @@ FastCGI je rozhraní, které funguje na úrovni žádosti. Služba IIS přijím�
 `<appSettings>`Tady definované jsou k dispozici pro vaši aplikaci jako proměnné prostředí:
 
 - Hodnota pro `PYTHONPATH` může být volně rozšířená, ale musí obsahovat kořen vaší aplikace.
-- `WSGI_HANDLER`musí odkazovat na aplikaci rozhraním WSGI, kterou lze importovat z vaší aplikace.
-- `WSGI_LOG`je volitelná, ale doporučuje se pro ladění vaší aplikace.
+- `WSGI_HANDLER` musí odkazovat na aplikaci rozhraním WSGI, kterou lze importovat z vaší aplikace.
+- `WSGI_LOG` je volitelná, ale doporučuje se pro ladění vaší aplikace.
 
 Další podrobnosti o *web.config* obsahu pro láhev, baňce a webové aplikace v Django najdete v tématu [publikování do Azure](publishing-python-web-applications-to-azure-from-visual-studio.md) .
 
@@ -167,7 +167,7 @@ Chcete-li nainstalovat balíčky přímo v prostředí serveru, použijte jednu 
 | [Azure App Service konzolu Kudu](#azure-app-service-kudu-console) | Nainstaluje balíčky interaktivně. Balíčky musí být čistě Python nebo musí zveřejňovat kolaci. |
 | [Kudu REST API](#kudu-rest-api) | Dá se použít k automatizaci instalace balíčku.  Balíčky musí být čistě Python nebo musí zveřejňovat kolaci. |
 | Sada prostředků s aplikací | Nainstalujte balíčky přímo do projektu a pak je nasaďte do App Service, jako kdyby byly součástí vaší aplikace. V závislosti na tom, kolik závislostí máte a jak často je aktualizujete, může být tato metoda nejjednodušší způsob, jak získat funkční nasazení. Doporučujeme, aby knihovny odpovídaly verzi Pythonu na serveru. v opačném případě uvidíte po nasazení zakrýt chyby. Vzhledem k tomu, že verze Pythonu v rozšířeních App Service jsou přesně stejné jako verze vydané na python.org, můžete snadno získat kompatibilní verzi pro místní vývoj. |
-| Virtuální prostředí | Není podporováno. Místo toho použijte sdružování a nastavte `PYTHONPATH` proměnnou prostředí tak, aby odkazovala na umístění balíčků. |
+| Virtuální prostředí | Nepodporováno Místo toho použijte sdružování a nastavte `PYTHONPATH` proměnnou prostředí tak, aby odkazovala na umístění balíčků. |
 
 ### <a name="azure-app-service-kudu-console"></a>Azure App Service konzolu Kudu
 

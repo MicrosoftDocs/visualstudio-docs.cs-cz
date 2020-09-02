@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources – | Dokumentace Microsoftu
+title: IDiaEnumInjectedSources | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,43 +14,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e710e586f3ece4fdf0cdbf9bee2bcc70f4ab87b5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687205"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Zobrazení výčtu různých vloženého zdroje obsažené ve zdroji dat.  
+Vytvořte výčet různých vložených zdrojů obsažených ve zdroji dat.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaEnumInjectedSources : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- V následující tabulce jsou uvedeny metody objektu `IDiaEnumInjectedSources`.  
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable  
+ V následující tabulce jsou uvedeny metody `IDiaEnumInjectedSources` .  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|Načte [rozhraní IEnumVARIANT](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) verzi výčet.|  
-|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|Získá počet vloženého zdroje.|  
-|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|Načte vložený zdroj pomocí indexu.|  
-|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|Načte zadaný počet vloženého zdroje v pořadí výčtu.|  
-|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|Vynechá zadaný počet vloženého zdroje v sekvenci výčtu.|  
-|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|Návrat na začátek sekvence výčtu.|  
-|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|  
+|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|Načte verzi [rozhraní IEnumVARIANT](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) tohoto enumerátoru.|  
+|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|Načte počet vložených zdrojů.|  
+|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|Načte vložený zdroj prostřednictvím indexu.|  
+|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|Načte zadaný počet vložených zdrojů v sekvenci výčtu.|  
+|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|Přeskočí zadaný počet vložených zdrojů ve výčtové sekvenci.|  
+|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|Obnoví posloupnost výčtu na začátek.|  
+|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|Vytvoří enumerátor, který obsahuje stejný stav výčtu jako aktuální enumerátor.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Toto rozhraní je získán voláním [idiasession::findinjectedsource –](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) metodu s názvem konkrétní zdrojového souboru nebo pomocí volání [idiasession::getenumtables –](../../debugger/debug-interface-access/idiasession-getenumtables.md) metoda s identifikátorem GUID `IDiaEnumInjectedSources` rozhraní.  
+ Toto rozhraní je získáno voláním metody [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) s názvem konkrétního zdrojového souboru nebo voláním metody [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) s identifikátorem GUID `IDiaEnumInjectedSources` rozhraní.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak získat ( `GetEnumInjectedSources` funkce) a použití ( `DumpAllInjectedSources` funkce) `IDiaEnumInjectedSources` rozhraní. Najdete v článku [idiapropertystorage –](../../debugger/debug-interface-access/idiapropertystorage.md) rozhraní pro implementaci `PrintPropertyStorage` funkce. Alternativní výstup, najdete v článku [idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md) rozhraní.  
+ Tento příklad ukazuje, jak získat ( `GetEnumInjectedSources` funkce) a použít ( `DumpAllInjectedSources` funkce) `IDiaEnumInjectedSources` rozhraní. Implementaci funkce naleznete v rozhraní [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) `PrintPropertyStorage` . Alternativní výstup naleznete v rozhraní [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) .  
   
 ```cpp#  
   
@@ -109,15 +109,15 @@ void DumpAllInjectedSources( IDiaSession* pSession)
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: Dia2.h  
+ Záhlaví: Dia2. h  
   
- Knihovna: diaguids.lib  
+ Knihovna: diaguids. lib  
   
- DLL: msdia80.dll  
+ KNIHOVNA DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiasession::findinjectedsource –](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)   
- [Idiasession::getenumtables –](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
+ [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)   
+ [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)   
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)   
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

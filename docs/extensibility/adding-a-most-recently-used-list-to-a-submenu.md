@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904204"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Přidat seznam naposledy použitých do podnabídky
@@ -30,7 +30,7 @@ Tento návod vytvoří seznam naposledy použitých položek se čtyřmi položk
 
 Další informace o nabídkách a souborech *. vsct* naleznete v tématech [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
 ## <a name="create-an-extension"></a>Vytvořit rozšíření

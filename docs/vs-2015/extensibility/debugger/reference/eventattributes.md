@@ -1,5 +1,5 @@
 ---
-title: EVENTATTRIBUTES | Dokumentace Microsoftu
+title: EVENTATTRIBUTES | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3026845be9aa6623d6c5cd42406385e8c5c2a11e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149379"
 ---
 # <a name="eventattributes"></a>EVENTATTRIBUTES
@@ -24,7 +24,7 @@ ms.locfileid: "68149379"
 
 Určuje atributy události.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_EVENTATTRIBUTES {   
@@ -53,39 +53,39 @@ public enum enum_EVENTATTRIBUTES { 
   
 ## <a name="members"></a>Členové  
  EVENT_ASYNCHRONOUS  
- Označuje, že událost je asynchronní a je potřeba žádná odpověď na události.  
+ Indikuje, že událost je asynchronní a není nutná žádná odpověď na událost.  
   
  EVENT_SYNCHRONOUS  
- Označuje, že událost je synchronní; Odpovědět prostřednictvím [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
+ Indikuje, že událost je synchronní; odpovědět prostřednictvím [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
   
  EVENT_STOPPING  
- Označuje, že se jedná o událostí ukončení. Musí být kombinován se buď `EVENT_ASYNCHRONOUS` nebo `EVENT_SYNCHRONOUS`.  
+ Označuje, že se jedná o událost zastavení. Musí být kombinována s buď `EVENT_ASYNCHRONOUS` nebo `EVENT_SYNCHRONOUS` .  
   
  EVENT_ASYNC_STOP  
- Označuje asynchronní zastavení událost. Aktuálně neexistuje žádná taková událost. Tento příznak je jen zástupný symbol.  
+ Označuje asynchronní zastavení události. Žádná taková událost není momentálně k dispozici. Tento příznak je pouze zástupný symbol.  
   
  EVENT_SYNC_STOP  
- Označuje událostí synchronní ukončení (kombinace `EVENT_SYNCHRONOUS` a `EVENT_STOPPING`). Tato hodnota se používá modul ladění (DE) při odesílání událostí ukončení. Odpověď se provádí prostřednictvím volání [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md), nebo [pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
+ Označuje událost synchronního zastavení (kombinace `EVENT_SYNCHRONOUS` a `EVENT_STOPPING` ). Tuto hodnotu používá ladicí stroj (DE) při odesílání události zastavení. Odpověď se provádí prostřednictvím volání metody [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [Step](../../../extensibility/debugger/reference/idebugprogram2-step.md)nebo [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
   
  EVENT_IMMEDIATE  
- Určuje události, které je odesláno okamžitě a synchronně integrovaného vývojového prostředí. Tento příznak číslo zkombinuje s další příznaky jako `EVENT_ASYNCHRONOUS`, `EVENT_SYNCHRONOUS`, nebo `EVENT_SYNC_STOP` označující typ události a fakt, že se označuje mechanismus odpověď (pokud existuje).  
+ Označuje událost, která je odeslána okamžitě a synchronně na integrované vývojové prostředí (IDE). Tento příznak je kombinován s dalšími příznaky jako `EVENT_ASYNCHRONOUS` , `EVENT_SYNCHRONOUS` nebo `EVENT_SYNC_STOP` k označení typu události a faktu, že je znám mechanismus odpovědi (pokud existuje).  
   
  EVENT_EXPRESSION_EVALUATION  
  Událost je výsledkem vyhodnocení výrazu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předány v `dwAttrib` parametr [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) metody.  
+ Tyto hodnoty jsou předány v `dwAttrib` parametru metody [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) .  
   
- Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
+ Tyto hodnoty mohou být kombinovány s bitovým operátorem `OR` .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Událost](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

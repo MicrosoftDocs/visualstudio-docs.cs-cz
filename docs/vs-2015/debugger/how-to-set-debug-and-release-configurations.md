@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Konfigurace nastavení ladění a verzí | Dokumentace Microsoftu'
+title: 'Postupy: nastavení konfigurace ladění a vydání | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -36,39 +36,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4984355c12a92529a943fe6778740ac2d7f522f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703637"
 ---
-# <a name="how-to-set-debug-and-release-configurations"></a>Postupy: Konfigurace nastavení ladění a verzí
+# <a name="how-to-set-debug-and-release-configurations"></a>Postupy: Nastavení konfigurace ladění a verzí
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projekty aplikace Visual Studio mají samostatné verze a ladění konfigurace pro váš program. Jak naznačují názvy, sestavení verze ladění pro ladění a verze vydání pro konečnou distribuci vydání.  
+Projekty sady Visual Studio mají samostatné konfigurace vydaných verzí a ladění pro váš program. Jak názvy implikuje, sestavíte ladicí verzi pro ladění a verzi Release pro konečnou distribuci vydaných verzí.  
   
- Konfigurace ladění programu je kompilován sestaví neoptimalizovaná a obsahující symbolické ladicí informace. Optimalizace komplikuje ladění, protože vztah mezi zdrojovým kódem a vytvořenými pokyny je složitější.  
+ Konfigurace ladění programu je kompilována s úplnými symbolickými informacemi o ladění a bez optimalizace. Optimalizace komplikuje ladění, protože vztah mezi zdrojovým kódem a vygenerovanými pokyny je složitější.  
   
- Konfigurace programu pro vydání neobsahuje žádné symbolické ladicí informace a je plně optimalizována. Ladit informace mohou být generovány v souborech PDB v závislosti na využívaných možnostech kompilátoru. Vytváření souborů PDB může být velmi užitečné, pokud budete muset později ladit vydané verze.  
+ Konfigurace vydané verze vašeho programu neobsahuje žádné symbolické ladicí informace a je plně optimalizována. Informace o ladění mohou být generovány v souborech PDB v závislosti na použitých možnostech kompilátoru. Vytváření souborů PDB může být velmi užitečné, pokud budete později muset ladit prodejní verzi.  
   
  Další informace o konfiguracích sestavení naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).  
   
- Můžete změnit konfiguraci sestavení z **sestavení** nabídky, z panelu nástrojů nebo na stránkách vlastností projektu. Stránky vlastností projektu jsou specifické pro jazyk. Následující postup ukazuje, jak změnit konfiguraci sestavení z nabídky a panelu nástrojů. Další informace o tom, jak změnit konfiguraci sestavení v projektech v různých jazycích najdete v níže uvedené části na odkaz Příbuzná témata.  
+ Můžete změnit konfiguraci sestavení z nabídky **sestavit** , z panelu nástrojů nebo na stránkách vlastností projektu. Stránky vlastností projektu jsou specifické pro jazyk. Následující postup ukazuje, jak změnit konfiguraci sestavení z nabídky a panelu nástrojů. Další informace o tom, jak změnit konfiguraci sestavení v projektech v různých jazycích, najdete v níže uvedené části Příbuzná témata.  
   
-### <a name="to-change-the-build-configuration"></a>Chcete-li změnit konfiguraci sestavení  
+### <a name="to-change-the-build-configuration"></a>Změna konfigurace sestavení  
   
-1. V nabídce sestavení: klikněte na tlačítko **sestavení / nástroje Configuration Manager**a pak vyberte **ladění** nebo **vydání**.  
+1. V nabídce sestavení: klikněte na **sestavit/Configuration Manager**a pak vyberte **ladit** nebo **vydat**.  
   
-2. Na panelu nástrojů zvolte buď **ladění** nebo **vydání** z **konfigurace řešení** pole se seznamem.  
+2. Na panelu nástrojů vyberte buď možnost **ladění** , nebo **vydaná verze** v seznamu **Konfigurace řešení** .  
   
-     ![konfigurace sestavení nástrojů](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![konfigurace sestavení panelu nástrojů](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
-     Tento panel nástrojů není k dispozici ve verzích Express. Můžete použít **sestavit řešení F6** a **zahájit ladění F5** položky nabídky pro výběr konfigurace.  
+     Tento panel nástrojů není k dispozici v edicích Express. K výběru konfigurace můžete použít položky nabídky **Sestavit řešení F6** a **Spustit ladění F5** .  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)   
  [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Nastavení projektu pro jazyk C# konfiguraci ladění](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Konfigurace ladění projektu v jazyce Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Postupy: Vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md)   
- [Konfigurace ladění a verzí projektu](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)
+ [Nastavení projektu pro konfiguraci ladění v jazyce C#](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Nastavení projektu pro konfiguraci Visual Basicho ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Postupy: vytváření a úpravy konfigurací](../ide/how-to-create-and-edit-configurations.md)   
+ [Ladit a vydávat konfigurace projektů](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)

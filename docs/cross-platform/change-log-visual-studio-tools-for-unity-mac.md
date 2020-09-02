@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: e817318f7b16040ed598ac4dce8f1c6017bdf83e
-ms.sourcegitcommit: 43df639b2cd99200f725a8ebb941477481a6f0ff
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87471529"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Protokol změn (Visual Studio Tools for Unity, Mac)
@@ -59,7 +59,7 @@ Vydáno 23. června 2020
 
   - Přidání [`UNT0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0016.md) diagnostiky Použití `Invoke` , `InvokeRepeating` `StartCoroutine` nebo `StopCoroutine` s prvním argumentem pro řetězcový literál není typově bezpečné.
 
-  - Přidání [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md) diagnostiky `SetPixels`vyvolání je pomalé.
+  - Přidání [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md) diagnostiky `SetPixels` vyvolání je pomalé.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
@@ -71,7 +71,7 @@ Vydáno 23. června 2020
 
   - Při filtrování zpráv v průvodci zprávami Unity neobnovujte výběr.
   
-  - Pevné [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md) [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) a [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) potlačené následující pravidla: potlačit `IDE0044` (jen pro čtení), `IDE0051` (nepoužívané), `CS0649` (nikdy Nepřiřazeno) pro všechna pole dekorovaná atributem SerializeField. Potlačit `CS0649` (nikdy Nepřiřazeno) pro veřejná pole všech typů, které rozšiřuje `Unity.Object` .
+  - Pevné [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md) [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) a [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) potlačené následující pravidla: potlačit `IDE0044` (jen pro čtení), `IDE0051` (nepoužívané), `CS0649` (nikdy Nepřiřazeno) pro všechna pole dekorovaná atributem SerializeField. Potlačit `CS0649` (nikdy nepřiřazeno) pro veřejná pole všech typů, které rozšiřují `Unity.Object`.
 
   - Pevná Kontrola parametrů obecného typu pro [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) .
 
@@ -258,7 +258,7 @@ Vydáno 23. září 2019
 - **Spolupráci**
 
   - Přidání nového Suppressor pro IDE0060, aby se zabránilo tomu, aby se IDE zobrazovala Rychlá oprava pro odebrání nepoužitých parametrů.
-    - `USP0005`pro `IDE0060` : zprávy Unity jsou vyvolány modulem runtime Unity.
+    - `USP0005` pro `IDE0060` : zprávy Unity jsou vyvolány modulem runtime Unity.
 
 ## <a name="2320"></a>2.3.2.0
 
@@ -280,10 +280,10 @@ Vydáno 16. září 2019
     - `UNT0009`: Při použití atributu InitializeOnLoad pro třídu je nutné zadat statický konstruktor. Atribut InitializeOnLoad zajistí, že bude volán při spuštění editoru.
     - `UNT0010`: Třídy MonoBehaviour by mělo být vytvořeno pouze pomocí AddComponent (). Objekt MonoBehaviour je komponenta, která musí být připojená k objektu GameObject.
     - `UNT0011`: ScriptableObject by mělo být vytvořeno pouze pomocí metody CreateInstance (). Objekt ScriptableObject musí být vytvořený modulem Unity, aby zpracovával metody zpráv Unity.
-    - `USP0001`pro `IDE0029` : objekty Unity by neměly používat slučování s hodnotou null.
-    - `USP0002`pro `IDE0031` : objekty Unity by neměly používat šíření hodnoty null.
-    - `USP0003`pro `IDE0051` : zprávy Unity jsou vyvolány modulem runtime Unity.
-    - `USP0004`for `IDE0044` : pole s atributem SerializeField by neměla být určena jen pro čtení.
+    - `USP0001` pro `IDE0029` : objekty Unity by neměly používat slučování s hodnotou null.
+    - `USP0002` pro `IDE0031` : objekty Unity by neměly používat šíření hodnoty null.
+    - `USP0003` pro `IDE0051` : zprávy Unity jsou vyvolány modulem runtime Unity.
+    - `USP0004` for `IDE0044` : pole s atributem SerializeField by neměla být určena jen pro čtení.
 
 ## <a name="2310"></a>2.3.1.0
 

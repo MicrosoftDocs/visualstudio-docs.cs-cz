@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348025"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Sledujte proměnné pomocí oken kukátka a QuickWatch
@@ -116,7 +116,7 @@ Můžete také přepínat názvy vlastností a odfiltrovat připnuté vlastnosti
 
 ::: moniker-end
 
-### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a>Aktualizovat hodnoty sledování
+### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a> Aktualizovat hodnoty sledování
 
 Když se vyhodnotí výraz, může se v okně **kukátka** zobrazit ikona aktualizace (KRUHOVÁ ŠIPKA). Ikona aktualizovat označuje chybu nebo neaktuální hodnotu.
 
@@ -147,13 +147,13 @@ Ukázka použití ikony aktualizace:
    }
    ```
 
-1. Spustit ladění. Okno **kukátka** zobrazuje něco podobného jako následující zpráva:
+1. Spuštění ladění Okno **kukátka** zobrazuje něco podobného jako následující zpráva:
 
    ![Aktualizovat kukátko](../debugger/media/refreshwatch.png "Aktualizovat kukátko")
 
 1. Chcete-li aktualizovat hodnotu, vyberte ikonu aktualizace nebo stiskněte klávesu MEZERNÍK. Ladicí program znovu vyhodnotí výraz.
 
-### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a>Vedlejší efekty výrazu
+### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a> Vedlejší efekty výrazu
 
 Hodnocení některých výrazů může změnit hodnotu proměnné nebo jinak ovlivnit stav aplikace. Například vyhodnocení následujícího výrazu změní hodnotu `var1` :
 
@@ -169,7 +169,7 @@ Jedním ze způsobů, jak zabránit označení vedlejších účinků, je vypnou
 
 Pouze pro C#, pokud je vyhodnocování vlastností nebo implicitních volání funkcí vypnuto, můžete vynutit vyhodnocení přidáním modifikátoru formátu **AC** k **názvu** proměnné v okně **kukátko** . Viz [specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md).
 
-## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a>Použití ID objektů v okno Kukátko (C# a Visual Basic)
+## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a> Použití ID objektů v okno Kukátko (C# a Visual Basic)
 
 Někdy budete chtít pozorovat chování určitého objektu. Například můžete chtít sledovat objekt, na který odkazuje místní proměnná poté, co tato proměnná dokončí mimo rozsah. V jazyce C# a Visual Basic můžete vytvořit ID objektů pro konkrétní instance odkazů a použít je v okně **kukátka** a v podmínkách zarážek. ID objektu je vygenerováno službami ladění modulu CLR (Common Language Runtime) a přidruženy k objektu.
 
@@ -215,7 +215,7 @@ Chcete-li zjistit název `Person` v `DoSomething()` metodě, můžete přidat od
 
 1. Nastavte zarážku v kódu po `Person` vytvoření objektu.
 
-1. Spustit ladění.
+1. Spuštění ladění
 
 1. Po pozastavení provádění na zarážce otevřete okno **místní** hodnoty výběrem možnosti **ladit**  >  místní hodnoty**systému Windows**  >  **Locals**.
 
@@ -242,8 +242,8 @@ Chcete-li aktualizovat hodnoty **dynamického zobrazení** , vyberte [ikonu aktu
 
 Chcete-li zobrazit pouze **dynamické zobrazení** pro objekt, přidejte specifikátor **dynamického** formátu za název dynamického objektu v okně **kukátka** :
 
-- Pro jazyk C#:`ObjectName, dynamic`
-- Pro Visual Basic:`$dynamic, ObjectName`
+- Pro jazyk C#: `ObjectName, dynamic`
+- Pro Visual Basic: `$dynamic, ObjectName`
 
 >[!NOTE]
 >- Ladicí program jazyka C# při krokování na další řádek kódu automaticky nepřehodnotí hodnoty v **dynamickém zobrazení** .
@@ -282,7 +282,7 @@ Chcete-li sledovat `a` proměnnou,
 
 1. Nastavte zarážku na `a = a + b;` řádku.
 
-1. Spustit ladění. Spuštění pozastaví na zarážce.
+1. Spuštění ladění Spuštění pozastaví na zarážce.
 
 1. Vyberte proměnnou `a` v kódu.
 

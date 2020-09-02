@@ -1,5 +1,5 @@
 ---
-title: Průzkumné hranice | Testovací nástroj pro vývojáře IntelliTest společnosti Microsoft
+title: Meze průzkumu | Nástroj Microsoft IntelliTest Developer test Tool
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,67 +10,67 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 2a57d79fb64675f90edf50e6a0d7d50b8a3c6fd7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302635"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315210"
 ---
 # <a name="exploration-bounds"></a>Hranice průzkumu
 
-**PexSettingsAttributeBase** je abstraktní základní třída pro hranice nastavení jako atributy. Přehled nastavení v IntelliTestu najdete v tématu [Vodopád nastavení.](settings-waterfall.md)
+**PexSettingsAttributeBase** je abstraktní základní třída pro nastavení, která je vázaná jako atributy. Přehled nastavení v IntelliTest najdete v tématu [Nastavení vodopádu](settings-waterfall.md) .
 
-Nastavení můžete upravit pomocí pojmenovaných vlastností tohoto a jeho odvozených atributů:
+Můžete upravit nastavení pomocí pojmenovaných vlastností tohoto a odvozených atributů:
 
 ```csharp
 [PexClass(MaxRuns = 10)]
 public partial class FooTest {...}
 ```
 
-* **Hranice řešení omezení**
-  * [MaxConstraintSolverTime](#maxconstraintsolvertime) - Počet sekund, po které má [řešič omezení](input-generation.md#constraint-solver) ke zjištění vstupů, které způsobí, že bude následovat nová a jiná cesta spuštění.
-  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) - Velikost v megabajtech, kterou může [řešitel omezení](input-generation.md#constraint-solver) použít ke zjišťování vstupů.
-* **Hranice průzkumné stezky**
-  * [MaxBranches](#maxbranches) - maximální počet větví, které mohou být přijata podél jedné cesty spuštění.
-  * [MaxCalls](#maxcalls) - maximální počet volání, které mohou být provedeny během jedné cesty spuštění.
-  * [MaxStack](#maxstack) - Maximální velikost zásobníku kdykoli během jedné cesty spuštění, měřeno jako počet aktivních rámců volání.
-  * [MaxConditions](#maxconditions) - maximální počet podmínek nad vstupy, které mohou být kontrolovány během jedné cesty spuštění.
-* **Hranice průzkumu**
-  * [MaxRuns](#maxruns) - maximální počet spuštění, které se pokusí během průzkumu.
-  * [MaxRunsWithoutNewTests](#maxrunswithoutnewtests) - Maximální počet po sobě jdoucích spuštění bez vyzařování nového testu.
-  * [MaxRunsWithUniquePaths](#maxrunswithuniquepaths) - Maximální počet spuštění s jedinečnými cestami spuštění, které budou pokusy během průzkumu.
-  * [MaxExceptions](#maxexceptions) - maximální počet výjimek, které mohou být nalezeny pro kombinaci všech zjištěných cest spuštění.
-* **Nastavení generování kódu testovací sady**
-  * [TestExcludePathBoundsExceeded](#testexcludepathboundsexceeded) - Pokud true, spuštění cesty, které překračují některou z hranice cesty ([MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack), [MaxConditions](#maxconditions)) jsou ignorovány.
-  * [TestEmissionFilter](#testemissionfilter) - Označuje, za jakých okolností IntelliTest by měl vyzařovat testy.
-  * [TestEmissionBranchHits](#testemissionbranchhits) - Určuje, kolik testů IntelliTest vyzařuje.
+* **Rozsahy řešení omezení**
+  * [MaxConstraintSolverTime](#maxconstraintsolvertime) – počet sekund, po které má [Řešitel omezení](input-generation.md#constraint-solver) zjistit vstupy, které způsobí, že se budou dodržovat nové a jiné cesty spuštění.
+  * [MaxConstraintSolverMemory](#maxconstraintsolvermemory) – velikost v megabajtech, kterou může [Řešitel omezení](input-generation.md#constraint-solver) použít ke zjištění vstupů.
+* **Meze cesty průzkumu**
+  * [MaxBranches](#maxbranches) – maximální počet větví, které mohou být provedeny společně s jednou cestou spuštění.
+  * [MaxCalls](#maxcalls) – maximální počet volání, která lze provést během jedné cesty spuštění.
+  * [MaxStack](#maxstack) – maximální velikost zásobníku v jednom okamžiku v rámci jedné cesty spuštění, měřená jako počet aktivních rámců volání.
+  * [MaxConditions](#maxconditions) – maximální počet podmínek nad vstupy, které mohou být kontrolovány během jedné cesty spuštění.
+* **Meze průzkumu**
+  * [MaxRuns](#maxruns) – maximální počet spuštění, který se bude zkoušet během průzkumu.
+  * [MaxRunsWithoutNewTests](#maxrunswithoutnewtests) – maximální počet po sobě jdoucích běhů bez nového vygenerování testu.
+  * [MaxRunsWithUniquePaths](#maxrunswithuniquepaths) – maximální počet spuštění s jedinečnými cestami spuštění, které se budou zkoušet během průzkumu.
+  * [MaxExceptions](#maxexceptions) – maximální počet výjimek, které mohou být nalezeny pro kombinaci všech zjištěných cest spuštění.
+* **Nastavení generování kódu sady testů**
+  * [TestExcludePathBoundsExceeded](#testexcludepathboundsexceeded) – při hodnotě true se budou ignorovat cesty spuštění, které překračují jakékoli hranice cesty ([MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack), [MaxConditions](#maxconditions)).
+  * [TestEmissionFilter](#testemissionfilter) – určuje, za jakých okolností by IntelliTest měla generovat testy.
+  * [TestEmissionBranchHits](#testemissionbranchhits) – určuje, kolik testů IntelliTest emituje.
 
 <a name="maxconstraintsolvertime"></a>
 ## <a name="maxconstraintsolvertime"></a>MaxConstraintSolverTime
 
-Počet sekund, po které má [řešič omezení](input-generation.md#constraint-solver) k výpočtu vstupů, které způsobí, že bude přijata nová a jiná cesta spuštění. Toto je možnost **PexSettingsAttributeBase** a jeho odvozené typy.
+Doba v sekundách, po kterou má [Řešitel omezení](input-generation.md#constraint-solver) vypočítat vstupy, které způsobí, že bude provedena nová a jiná cesta spuštění. Jedná se o možnost **PexSettingsAttributeBase** a jeho odvozených typů.
 
-Čím hlouběji, že IntelliTest zkoumá cesty spuštění programu, složitější omezení systémy, které IntelliTest staví z řízení toku a tok dat programu stát. V závislosti na časové omezení, můžete nastavit tuto hodnotu povolit IntelliTest trvat více či méně času zjišťování nové cesty spuštění.
+Hlubší, co IntelliTest zkoumá cesty provádění programu, složitější systémy omezení, které IntelliTest sestavuje z toku řízení a toku dat programu. V závislosti na časovém limitu můžete nastavit tuto hodnotu tak, aby IntelliTest mohla trvat více nebo méně času a zjišťovat nové cesty provádění.
 
-Obvykle důvodem pro časový rozsah je, že IntelliTest se pokouší najít řešení pro omezení systému, který nemá řešení, ale není si vědom této skutečnosti. Vzhledem k tomu, že se jedná o nejběžnější případ pro časový čas, nemusí mít smysl zvýšit vazbu.
+Většinou je důvodem, že se IntelliTest pokouší najít řešení pro systém omezení, který nemá řešení, ale neví o této skutečnosti. Vzhledem k tomu, že se jedná o Nejběžnější případ časového limitu, nemusí mít smysl zvýšit vazbu.
 
 <a name="maxconstraintsolvermemory"></a>
 ## <a name="maxconstraintsolvermemory"></a>MaxConstraintSolverMemory
 
-Počet megabajtů, které má [řešič omezení](input-generation.md#constraint-solver) k výpočtu vstupů, které způsobí, že bude přijata nová a jiná cesta provádění. Toto je možnost *PexSettingsAttributeBase** a jeho odvozené typy.
+Počet megabajtů, které [Řešitel omezení](input-generation.md#constraint-solver) má vypočítat vstupy, které způsobí, že bude provedena nová a jiná cesta spuštění. Jedná se o možnost *PexSettingsAttributeBase** a jeho odvozených typů.
 
-Hlubší IntelliTest zkoumá cesty provádění programu, složitější omezení systémy, které IntelliTest staví z řízení toku a tok dat programu stát. V závislosti na dostupné paměti počítače můžete tuto hodnotu nastavit tak, aby intelliTest mohl řešit složitější systémy omezení.
+Hlubší IntelliTest prozkoumá cesty provádění programu, složitější systémy omezení, které IntelliTest sestavuje z toku řízení a toku dat programu. V závislosti na paměti, kterou máte v počítači k dispozici, můžete nastavit tuto hodnotu tak, aby IntelliTest mohla řešit složitější systémy omezení.
 
-Obvykle důvodem pro časový rozsah je, že IntelliTest se pokouší najít řešení pro omezení systému, který nemá řešení, ale není si vědom této skutečnosti. Vzhledem k tomu, že se jedná o nejčastější příčinu situace nedostatek paměti, nemusí mít smysl zvýšit vazbu.
+Většinou je důvodem, že se IntelliTest pokouší najít řešení pro systém omezení, který nemá řešení, ale neví o této skutečnosti. Vzhledem k tomu, že se jedná o nejběžnější příčinu nedostatku paměti, nemusí mít smysl zvýšit vazbu.
 
 <a name="maxbranches"></a>
 ## <a name="maxbranches"></a>MaxBranches
 
-Maximální počet větví, které mohou být přijata podél jedné cesty spuštění.
+Maximální počet větví, které mohou být provedeny společně s jednou cestou spuštění.
 
-Motivace za tento průzkum vázán je omezit délku jakékoli cesty spuštění, které IntelliTest zkoumá během [generování vstupu](input-generation.md). Zejména zabraňuje IntelliTest od stává neodpovídá, pokud program přejde do nekonečné smyčky.
+Motivace za tímto vázaným průzkumem slouží k omezení délky prováděcí cesty, kterou IntelliTest prozkoumat během [vytváření vstupu](input-generation.md). Konkrétně brání tomu, aby IntelliTest přestane reagovat, pokud se program dostane do nekonečné smyčky.
 
-Každá podmíněná a bezpodmínečná větev provedeného a monitorovaného kódu se započítává do tohoto limitu, včetně větví, které nezávisí na vstupech parametrizovaného testu.
+Každou podmíněnou a nepodmínkovou větev spouštěného a monitorovaného kódu se započítávají do tohoto limitu, včetně větví, které nezávisí na vstupech parametrizovaného testu.
 
 Například následující kód spotřebovává větve v pořadí 100:
 
@@ -81,27 +81,27 @@ for (int i=0; i<100; i++) { }
 <a name="maxcalls"></a>
 ## <a name="maxcalls"></a>MaxCalls
 
-Maximální počet volání, které mohou být provedeny během jedné cesty spuštění.
+Maximální počet volání, která lze provést během jedné cesty spuštění.
 
-Motivace za tento průzkum vázán je omezit délku jakékoli cesty spuštění, které IntelliTest zkoumá během [generování vstupu](input-generation.md). Zejména zabraňuje IntelliTest přestane reagovat, pokud program volá metodu rekurzivně nekonečný počet opakování, což by způsobilo přetečení zásobníku, které IntelliTest nelze obnovit.
+Motivace za tímto vázaným průzkumem slouží k omezení délky prováděcí cesty, kterou IntelliTest prozkoumat během [vytváření vstupu](input-generation.md). Konkrétně brání tomu, aby IntelliTest přestane reagovat, pokud program zavolá metodu rekurzivně nekonečným počtem výskytů, což by způsobilo přetečení zásobníku, ze kterého IntelliTest nemůže provést obnovení.
 
-Každé volání (přímé, nepřímé, virtuální, skok) provedeného a monitorovaného kódu se započítává do tohoto limitu.
+Každé volání (přímý, nepřímý, virtuální, skok) spouštěného a monitorovaného kódu se započítává do tohoto limitu.
 
 <a name="maxstack"></a>
 ## <a name="maxstack"></a>MaxStack
 
-Maximální velikost zásobníku kdykoli během jedné cesty spuštění, měřeno počtem aktivních rámců volání.
+Maximální velikost zásobníku kdykoli během jedné cesty spuštění, měřená počtem aktivních rámců volání.
 
-Motivace za tento průzkum vázán je omezit velikost zásobníku jakékoli cesty spuštění, které IntelliTest zkoumá během [generování vstupu](input-generation.md). Zejména zabraňuje IntelliTest z použití všech dostupných zásobníku prostor, což by způsobilo přetečení zásobníku, které IntelliTest nelze obnovit z.
+Motivace za tímto vázaným průzkumem slouží k omezení velikosti zásobníku všech cest spuštění, které IntelliTest prozkoumat během [vytváření vstupu](input-generation.md). Konkrétně zabrání IntelliTest v používání veškerého dostupného místa v zásobníku, což by způsobilo přetečení zásobníku, ze kterého IntelliTest nemůže provést obnovení.
 
 <a name="maxconditions"></a>
 ## <a name="maxconditions"></a>MaxConditions
 
-Emaximum počet podmínek nad vstupy, které mohou být kontrolovány během jedné cesty spuštění.
+Emaximum počet podmínek nad vstupy, které mohou být zkontrolovány během jedné cesty spuštění.
 
-Motivace za tento průzkum vázán je omezit složitost jakékoli cesty spuštění, které IntelliTest zkoumá během [generování vstupu](input-generation.md). Každá podmíněná větev, která závisí na vstupech parametrizovaného testu, se započítává do tohoto limitu.
+Motivace za tímto vázaným průzkumem slouží k omezení složitosti každé cesty spuštění, kterou IntelliTest prozkoumává při [vytváření vstupu](input-generation.md). Každou podmíněnou větev, která závisí na vstupech parametrizovaného testu, se počítá vůči tomuto limitu.
 
-Například každá cesta v následujícím kódu spotřebovává podmínky n+1:
+Například každá cesta v následujícím kódu spotřebovává n + 1 podmínky:
 
 ```csharp
 [PexMethod]
@@ -119,70 +119,70 @@ void ParameterizedTest(int n)
 <a name="maxruns"></a>
 ## <a name="maxruns"></a>MaxRuns
 
-Maximální počet spuštění, které intelliTest se pokusí během zkoumání testu.
+Emaximum počet spuštění, které se IntelliTest pokusí během průzkumu testu.
 
-Motivace za tento průzkum vázán je, že jakýkoli kód, který obsahuje smyčky nebo rekurze může mít nekonečný počet cest spuštění, a proto IntelliTest musí být omezena během [generování vstupu](input-generation.md).
+Motivace za tímto vázaným průzkumem je, že jakýkoli kód, který obsahuje smyčky nebo rekurzi, může mít neomezený počet cest spuštění, a proto musí být IntelliTest při [vytváření vstupu](input-generation.md)omezen.
 
-Dvě nastavení **MaxRuns** a **MaxRunsWithUniquePaths** související takto:
+Tato dvě nastavení **MaxRuns** a **MaxRunsWithUniquePaths** jsou spojená následujícím způsobem:
 
-* IntelliTest bude volat parametrizovanou testovací metodu až **maxruns** časy s různými testovacími vstupy.
-* Pokud je spuštěný kód deterministický, IntelliTest bude mít pokaždé jinou cestu spuštění. Však za určitých podmínek spustit kód může následovat cestu spuštění již přijata dříve, s různými vstupy.
-* IntelliTest spočítá, kolik jedinečných cest spuštění najde; Toto číslo je omezeno volbou **MaxRunsWithUniquePaths.**
+* IntelliTest bude volat parametrizovanou testovací metodu až do **MaxRuns** časů s různými testovacími vstupy.
+* Pokud je spuštěný Kód deterministický, IntelliTest pokaždé pokaždé, když bude pokaždé trvat jinou cestu spuštění. Za určitých podmínek však může spuštěný Kód následovat po spuštění, které již bylo dříve provedeno, s různými vstupy.
+* IntelliTest počítá, kolik jedinečných cest provádění najde; Toto číslo je omezené možností **MaxRunsWithUniquePaths** .
 
 <a name="maxrunswithoutnewtests"></a>
 ## <a name="maxrunswithoutnewtests"></a>MaxRunsWithoutNewTests
 
-Maximální počet po sobě jdoucích spuštění bez emitovaného nového testu.
+Maximální počet po sobě jdoucích spuštění bez vygenerování nového testu.
 
-Zatímco IntelliTest může často najít mnoho zajímavých testovacích vstupů v krátké době, po chvíli nenajde žádné další nové testovací vstupy a nebude vypouštět žádné další testy částí. Tato možnost konfigurace umístí vazbu na počet po sobě jdoucích pokusů IntelliTest může provést bez vyzařování nového testu. Když je dosaženo, zastaví průzkum.
+I když IntelliTest může často najít mnoho zajímavých testovacích vstupů v krátkém čase, po době, kdy se nenaleznou žádné další nové testovací vstupy a nevygeneruje žádné další testy jednotek. Tato možnost konfigurace umístí meze na počet po sobě jdoucích pokusů, které IntelliTest může provést bez vygenerování nového testu. Po dosažení se průzkum zastaví.
 
 <a name="maxrunswithuniquepaths"></a>
 ## <a name="maxrunswithuniquepaths"></a>MaxRunsWithUniquePaths
 
-Maximální počet jedinečných cest, které IntelliTest zváží během průzkumu.
+Maximální počet jedinečných cest, které IntelliTest bude během průzkumu brát v úvahu.
 
-Motivace za tento průzkum vázán je, že jakýkoli kód obsahující smyčky nebo rekurze může mít nekonečný počet cest spuštění, a tak IntelliTest musí být omezena během [generování vstupu](input-generation.md).
+Motivace za tímto vázaným průzkumem je, že jakýkoli kód obsahující smyčky nebo rekurzi může mít neomezený počet cest spuštění, a proto musí být IntelliTest během [generování vstupu](input-generation.md)omezen.
 
-Dvě nastavení **MaxRuns** a **MaxRunsWithUniquePaths** související takto:
+Tato dvě nastavení **MaxRuns** a **MaxRunsWithUniquePaths** jsou spojená následujícím způsobem:
 
-* IntelliTest bude volat parametrizovanou testovací metodu až **maxruns** časy s různými testovacími vstupy.
-* Pokud je spuštěný kód deterministický, IntelliTest bude mít pokaždé jinou cestu spuštění. Však za určitých podmínek spustit kód může následovat cestu spuštění již přijata dříve, s různými vstupy.
-* IntelliTest spočítá, kolik jedinečných cest spuštění najde; Toto číslo je omezeno volbou **MaxRunsWithUniquePaths.**
+* IntelliTest bude volat parametrizovanou testovací metodu až do **MaxRuns** časů s různými testovacími vstupy.
+* Pokud je spuštěný Kód deterministický, IntelliTest pokaždé pokaždé, když bude pokaždé trvat jinou cestu spuštění. Za určitých podmínek však může spuštěný Kód následovat po spuštění, které již bylo dříve provedeno, s různými vstupy.
+* IntelliTest počítá, kolik jedinečných cest provádění najde; Toto číslo je omezené možností **MaxRunsWithUniquePaths** .
 
 <a name="maxexceptions"></a>
 ## <a name="maxexceptions"></a>MaxExceptions
 
-Maximální počet výjimek, které lze narazit před průzkumje zastavena.
+Maximální počet výjimek, které mohou být zjištěny před zastavením průzkumu.
 
-Motivace za tento průzkum vázán je zastavit zkoumání kódu, který obsahuje mnoho chyb. Pokud IntelliTest najde příliš mnoho chyb v kódu, průzkum je zastaven.
+Motivace za touto vazbou průzkumu je zastavit zkoumání kódu, který obsahuje mnoho chyb. Pokud IntelliTest najde v kódu příliš mnoho chyb, průzkum se zastaví.
 
 <a name="testexcludepathboundsexceeded"></a>
 ## <a name="testexcludepathboundsexceeded"></a>TestExcludePathBoundsExceeded
 
-Cesty spuštění, které překračují nakonfigurované hranice cesty [MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack)a [MaxConditions](#maxconditions) jsou ignorovány.
+Cesty spuštění, které překračují nakonfigurovanou cestu [MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack)a [MaxConditions](#maxconditions) , se ignorují.
 
-Motivací tohoto průzkumu vázán a je vypořádat se (s největší pravděpodobností) non-ukončující testy. Když IntelliTest dosáhne průzkumu vázána jako [MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack), nebo [MaxConditions](#maxconditions), předpokládá, že test nebude proces neukončující a nezpůsobí přetečení zásobníku později. Tyto testovací případy mohou představovat problémy s jinými testovacími rámci a tento atribut poskytuje způsob, jak zabránit IntelliTest z emitování testovacích případů pro potenciálně neukončující procesy nebo testovacích případů, které způsobí přetečení zásobníku.
+Motivace za tímto vázaným průzkumem slouží k tomu, aby se jednalo o (nejpravděpodobnější) neukončující testy. Když IntelliTest dosáhne hranice průzkumu, jako je [MaxCalls](#maxcalls), [MaxBranches](#maxbranches), [MaxStack](#maxstack)nebo [MaxConditions](#maxconditions), předpokládá, že test nebude neukončující proces a nebude přetečení zásobníku později. Takové testovací případy mohou představovat problémy s jinými testovacími rozhraními a tento atribut poskytuje způsob, jak zabránit IntelliTest v generování testovacích případů pro potenciálně neukončující procesy nebo testovací případy, které způsobí přetečení zásobníku.
 
 <a name="testemissionfilter"></a>
 ## <a name="testemissionfilter"></a>TestEmissionFilter
 
-Označuje typy testů, které by měl intelliTest vyzařovat. Možné hodnoty jsou:
+Určuje typy testů, které by měl IntelliTest generovat. Možné hodnoty jsou:
 
-* **Vše** - Emit testy pro všechno, včetně porušení předpokladů.
-* **FailuresAndIncreasedBranchHits** (výchozí) - Emit testy pro všechny jedinečné poruchy a vždy, když testovací hočeká se zvýší pokrytí, jak je [řízentestEmissionBranchHits](#testemissionbranchhits).
-* **ChybyAndUniquePaths** - Emit testy pro všechny chyby IntelliTest najde a také pro každý vstup testu, který způsobuje jedinečnou cestu spuštění.
-* **Selhání** - Emit testy pouze pro selhání.
+* **Vše** – vygeneruje testy pro všechno, včetně porušení předpokladů.
+* **FailuresAndIncreasedBranchHits** (výchozí) – vygeneruje testy pro všechny jedinečné chyby a pokaždé, když testovací případ zvyšuje pokrytí, jak je řízeno [TestEmissionBranchHits](#testemissionbranchhits).
+* **FailuresAndUniquePaths** – vygeneruje testy pro všechny chyby, které IntelliTest najde, a také pro každý vstup testu, který způsobí jedinečnou cestu spuštění.
+* **Chyby** – vygenerují testy jenom pro selhání.
 
 <a name="testemissionbranchhits"></a>
 ## <a name="testemissionbranchhits"></a>TestEmissionBranchHits
 
-V závislosti na aktuální [testEmissionFilter](#testemissionfilter) nastavení IntelliTest vydává nové testovací případy, pokud pokrývají větev v programu, který nebyl zahrnut dříve.
+V závislosti na aktuálním nastavení [TestEmissionFilter](#testemissionfilter) IntelliTest emituje nové testovací případy, když pokrývají větev v programu, na který se nezabývá.
 
-**TestEmissionBranchHits** nastavení určuje, zda IntelliTest by měl jen zvážit, zda větev byla pokryta vůbec **(TestEmissionBranchHits = 1**), pokud test na něž se vztahuje buď jednou nebo dvakrát **(TestEmissionBranchHits = 2**), a tak dále.
+Nastavení **TestEmissionBranchHits** určuje, zda má IntelliTest přesně zvážit, zda byla větev pokryta vůbec (**TestEmissionBranchHits = 1**), pokud se test pokryje buď jednou, nebo dvakrát (**TestEmissionBranchHits = 2**), a tak dále.
 
-**TestEmissionBranchHits =1** vytvoří velmi malou testovací sadu, která pokryje všechny větve, kterých by intelliTest mohl dosáhnout. Zejména tato testovací sada bude také pokrývat všechny základní bloky a příkazy, kterých dosáhla.
+**TestEmissionBranchHits = 1** vytvoří velmi malou testovací sadu, která bude pokrývat všechny větve, které IntelliTest může dosáhnout. Konkrétně tato sada testů bude pokrývat také všechny základní bloky a příkazy, které byly dosaženy.
 
-Výchozí pro tuto možnost je **TestEmissionBranchHits=2**, který generuje výraznější testovací sadu, která je také vhodnější pro detekci budoucích regresních chyb.
+Výchozí hodnota pro tuto možnost je **TestEmissionBranchHits = 2**, která generuje pokročilejší testovací sadu, která je také lépe vhodná pro detekci budoucích chyb regrese.
 
 ## <a name="got-feedback"></a>Máte zpětnou vazbu?
 

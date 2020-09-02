@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Dokumenty společnosti Microsoft
+title: 'IDebugDocumentText2:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: edc4a209537ca4bd54d3f6d9343d1496ab7c0e90
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731588"
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Načte velikost textu na tomto místě v dokumentu.
+Načte velikost textu na této pozici v dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +43,17 @@ int GetSize( 
 
 ## <a name="parameters"></a>Parametry
 `pcNumLines`\
-[out] Vrátí počet řádků textu.
+mimo Vrátí počet řádků textu.
 
 `pcNumChars`\
-[out] Vrátí počet znaků textu.
+mimo Vrátí počet znaků textu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="remarks"></a>Poznámky
 
- [Pouze C++] Pokud určitá hodnota není žádoucí, předajte hodnotu NULL pro parametr.
+ [Pouze C++] Pokud určitou hodnotu nepožadujete, předejte pro parametr hodnotu NULL.
 
  [Pouze C#] Musí být zadány oba parametry.
 

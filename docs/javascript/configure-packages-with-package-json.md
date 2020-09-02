@@ -1,6 +1,6 @@
 ---
-title: Konfigurace balíčků npm pomocí souboru package.json
-description: Zadejte verze balíčků npm pomocí souboru package.json
+title: Konfigurace balíčků npm pomocí package.js
+description: Určení verzí balíčků npm pomocí package.js
 ms.date: 09/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -12,33 +12,33 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 652ff7b0380fc03a3f9c8155a2f8696d9dfee5b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67692373"
 ---
 # <a name="packagejson-configuration"></a>Konfigurace package.json
 
-Pokud vyvíjíte aplikaci Node.js s velkým množstvím balíčků npm, není neobvyklé spustit upozornění nebo chyby při vytváření projektu, pokud byl aktualizován jeden nebo více balíčků. Někdy výsledky konfliktu verze nebo verze balíčku byla zastaralá. Zde je několik rychlých tipů, které vám pomohou nakonfigurovat soubor [package.json](https://docs.npmjs.com/files/package.json) a pochopit, co se děje, když se zobrazí upozornění nebo chyby. Toto není kompletní průvodce *package.json* a je zaměřen pouze na npm balíček versioning.
+Pokud vyvíjíte Node.js aplikaci s velkým počtem npm balíčků, není běžné spouštět upozornění nebo chyby při sestavování projektu, pokud byl aktualizován jeden nebo více balíčků. V některých případech je výsledkem konfliktu verze nebo verze balíčku je zastaralá. Tady je několik rychlých tipů, které vám pomůžou nakonfigurovat [package.jsv](https://docs.npmjs.com/files/package.json) souboru a pochopit, co se chystá, když se zobrazí upozornění nebo chyby. Nejedná se o kompletní průvodce *package.js* a zaměřuje se jenom na správu verzí balíčků npm.
 
-Systém správy verzí balíčků npm má přísná pravidla. Formát verze následuje zde:
+Systém správy verzí balíčků npm má přísná pravidla. Formát verze je následující:
 
 ```
 [major].[minor].[patch]
 ```
 
-Řekněme, že máte balíček ve vaší aplikaci s verzí 5.2.1. Hlavní verze je 5, dílčí verze je 2 a oprava je 1.
+Řekněme, že máte v aplikaci balíček s verzí 5.2.1. Hlavní verze je 5, dílčí verze je 2 a oprava je 1.
 
-* V hlavní verzi aktualizace balíček obsahuje nové funkce, které jsou zpětně nekompatibilní, to znamená, že narušují změny.
-* V dílčí verzi aktualizace byly přidány nové funkce do balíčku, které jsou zpětně kompatibilní s předchozími verzemi balíčku.
-* V aktualizaci opravy jsou zahrnuty jedny nebo více oprav chyb. Opravy chyb jsou vždy zpětně kompatibilní.
+* V případě aktualizace hlavní verze obsahuje balíček nové funkce, které jsou zpětně nekompatibilní, což znamená zásadní změny.
+* V aktualizaci dílčí verze byly do balíčku přidány nové funkce, které jsou zpětně kompatibilní s dřívějšími verzemi balíčků.
+* V aktualizaci opravy jsou součástí některé opravy chyb. Opravy chyb jsou vždy zpětně kompatibilní.
 
-Stojí za zmínku, že některé npm balíček funkce mají závislosti. Chcete-li například použít novou funkci balíčku kompilátoru TypeScript (ts-loader) s webpackem, je možné, že budete muset také aktualizovat balíček webpack npm a balíček webpack-cli.
+Je potřeba poznamenat, že některé funkce balíčku npm mají závislosti. Například chcete-li použít novou funkci balíčku kompilátoru TypeScript (TS-Loader) se sadou Webpack, je možné, že budete muset aktualizovat balíček npm a balíček Webpack pro rozhraní příkazového řádku.
 
-Chcete-li pomoci spravovat správu verzí balíčků, npm podporuje několik zápisů, které můžete použít v *package.json*. Tyto zápisy můžete použít k řízení typu aktualizací balíčků, které chcete ve své aplikaci přijmout.
+Aby bylo možné spravovat správu verzí balíčků, npm podporuje několik zápisů, které můžete použít v *package.js*. Tyto zápisy můžete použít k řízení typu aktualizací balíčků, které chcete ve své aplikaci přijmout.
 
-Řekněme, že používáte React a je třeba zahrnout **reagovat** a **reagovat-dom** npm balíček. Můžete určit, že v souboru *package.json několika způsoby.* Můžete například určit použití přesné verze balíčku následujícím způsobem.
+Řekněme, že používáte reakci a potřebujete zahrnout balíček **reagující** a **reagovat-DOM** npm. V *package.js* souboru můžete zadat několik způsobů. Například můžete zadat použití přesné verze balíčku následujícím způsobem.
 
   ```json
   "dependencies": {
@@ -47,9 +47,9 @@ Chcete-li pomoci spravovat správu verzí balíčků, npm podporuje několik zá
   },
   ```
 
-Pomocí předchozího zápisu npm vždy získá přesnou zadanou verzi 16.4.2.
+Při použití předchozího zápisu bude npm vždycky mít přesně určenou verzi 16.4.2.
 
-Pomocí speciálního zápisu můžete omezit aktualizace aktualizací (opravy chyb). V tomto příkladu:
+Pomocí zvláštního zápisu můžete omezit aktualizace aktualizací oprav (opravy chyb). V tomto příkladu:
 
   ```json
   "dependencies": {
@@ -58,9 +58,9 @@ Pomocí speciálního zápisu můžete omezit aktualizace aktualizací (opravy c
   },
   ```
 
-pomocí znaku tildy (~) řeknete npm, aby balíček aktualizoval pouze v případě, že je opraven. Takže npm může aktualizovat reagovat 16.4.2 na 16.4.3 (nebo 16.4.4, atd.), ale nebude akceptovat aktualizaci hlavní nebo dílčí verze. Takže 16.4.2 nebude aktualizován na 16.5.0.
+použijete znak tilda (~) k tomu, aby nástroj npm při opravě balíčku aktualizoval pouze balíček. NPM může proto aktualizovat reakce 16.4.2 na 16.4.3 (nebo 16.4.4 atd.), ale nepřijme aktualizaci na hlavní nebo dílčí verzi. Proto se 16.4.2 nebude aktualizovat na 16.5.0.
 
-Můžete také použít symbol stříšky (^) k určení, že npm může aktualizovat číslo dílčí verze.
+Můžete také použít symbol stříšky (^), chcete-li určit, že npm může aktualizovat číslo dílčí verze.
 
   ```json
   "dependencies": {
@@ -69,8 +69,8 @@ Můžete také použít symbol stříšky (^) k určení, že npm může aktuali
   },
   ```
 
-Pomocí tohoto zápisu může npm aktualizovat reagovat 16.4.2 na 16.5.0 (nebo 16.5.1, 16.6.0, atd.), ale nebude akceptovat aktualizaci hlavní verze. Takže 16.4.2 nebude aktualizován na 17.0.0.
+Pomocí tohoto zápisu může npm aktualizovat reakce 16.4.2 na 16.5.0 (nebo 16.5.1, 16.6.0 atd.), ale nepřijme aktualizaci hlavní verze. Proto se 16.4.2 nebude aktualizovat na 17.0.0.
 
-Když npm aktualizuje balíčky, generuje soubor *package-lock.json,* který obsahuje aktuální verze balíčků npm používané ve vaší aplikaci, včetně všech vnořených balíčků. Zatímco *package.json* řídí přímé závislosti pro vaši aplikaci, neřídí vnořené závislosti (jiné balíčky npm vyžadované konkrétním balíčkem npm). Soubor *package-lock.json* můžete použít ve vývojovém cyklu, pokud potřebujete zajistit, aby ostatní vývojáři a testeři používali přesné balíčky, které používáte, včetně vnořených balíčků. Další informace naleznete v [tématu package-lock.json](https://docs.npmjs.com/files/package-lock.json) v dokumentaci npm.
+Když npm aktualizuje balíčky, vygeneruje * v souborupackage-lock.js* , ve kterém jsou uvedené skutečné verze balíčků npm používané ve vaší aplikaci, včetně všech vnořených balíčků. I když *package.jsk* řízení přímých závislostí vaší aplikace, neřídí vnořené závislosti (jiné balíčky npm vyžadované konkrétním balíčkem npm). Pokud potřebujete zajistit, aby jiní vývojáři a testeri používali přesné balíčky, které používáte, včetně vnořených balíčků, můžete použít *package-lock.jsv* souboru ve vývojovém cyklu. Další informace najdete v tématu [package-lock.js](https://docs.npmjs.com/files/package-lock.json) v dokumentaci k npm.
 
-Pro Visual Studio soubor *package-lock.json* není přidán do projektu, ale najdete jej ve složce projektu.
+V případě sady Visual Studio se *package-lock.js* souboru do projektu nepřidá, ale můžete ho najít ve složce projektu.

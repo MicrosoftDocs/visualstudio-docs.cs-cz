@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_isAcceleratorPointerTagLiveRange | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isAcceleratorPointerTagLiveRange | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5a53faf8c9395867b570909ac4d34cf329da12c6
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149448"
 ---
-# <a name="idiasymbolgetisacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
+# <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak označující, zda symbol odpovídá *definice rozsahu symbol* pro komponentu značky v kódu zkompilovaném pro akcelerátor AMP C++ proměnné ukazatele. Definice rozsahu symbol je umístění proměnnou rozsahu adres.  
+Načte příznak, který označuje, zda symbol odpovídá *symbolu rozsahu definice* pro komponentu značky v kódu kompilovaném pro C++ amp akcelerátor. Symbol rozsahu definice je umístění proměnné pro rozsah adres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,10 +32,10 @@ HRESULT get_isAcceleratorPointerTagLiveRange(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Ukazatel `BOOL` , která označuje, zda symbol odpovídá symbolu definice rozsahu.  
+ mimo Ukazatel na `BOOL` , který označuje, zda symbol odpovídá symbolu rozsahu definice.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

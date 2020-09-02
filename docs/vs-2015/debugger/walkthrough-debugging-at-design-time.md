@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Ladění v době návrhu | Dokumentace Microsoftu'
+title: 'Návod: ladění v době návrhu | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,22 +24,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 54466cc3561c194199bbad2b35cd00433da2b0f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149420"
 ---
-# <a name="walkthrough-debugging-at-design-time"></a>Návod: Ladění v průběhu návrhu
+# <a name="walkthrough-debugging-at-design-time"></a>Návod: Ladění v době návrhu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete použít Visual Studio **okamžité** okno ke spuštění funkce nebo podprogramu, zatímco aplikace není spuštěna. Pokud funkce nebo podprogram obsahuje zarážku, sada Visual Studio přeruší běh v odpovídajícím bodě. Potom můžete ladicí program windows prozkoumat stav vaší aplikace. Tato funkce je volána ladění v době návrhu.  
+K provedení funkce nebo podrutiny v době, kdy vaše aplikace neběží, můžete použít okno Visual Studio **Immediate** . Pokud funkce nebo podprogram obsahuje zarážku, Visual Studio pozastaví provádění v příslušném bodě. Pak můžete použít okna ladicího programu k prohlédnutí stavu programu. Tato funkce se nazývá ladění v době návrhu.  
   
- Následující postup ukazuje, jak můžete tuto funkci.  
+ Následující postup ukazuje, jak můžete tuto funkci používat.  
   
-### <a name="to-hit-breakpoints-from-the-immediate-window"></a>K dosažení zarážky v okně Immediate  
+### <a name="to-hit-breakpoints-from-the-immediate-window"></a>Volání zarážek z příkazového podokna  
   
-1. Vložte následující kód do konzolové aplikace jazyka Visual Basic:  
+1. Do Visual Basic konzolové aplikace vložte následující kód:  
   
     ```  
     Module Module1  
@@ -63,23 +63,23 @@ Můžete použít Visual Studio **okamžité** okno ke spuštění funkce nebo p
     End Module  
     ```  
   
-2. Nastavit zarážku na řádek s informacemi, `s="Add BreakPoint Here"`.  
+2. Nastavte zarážku na řádku, který čte, `s="Add BreakPoint Here"` .  
   
-3. Zadejte následující příkaz v **okamžité** okno: `?MyFunction<enter>`  
+3. Do příkazového **podokna zadejte** následující: `?MyFunction<enter>`  
   
-4. Ověřte, že byla zarážka dosažena a zásobník volání je přesné.  
+4. Ověřte, zda byla zarážka zavolána a zda je zásobník volání přesný.  
   
-5. Na **ladění** nabídky, klikněte na tlačítko **pokračovat**a ověřte, že jste stále v režimu návrhu.  
+5. V nabídce **ladit** klikněte na tlačítko **pokračovat**a ověřte, zda jste stále v režimu návrhu.  
   
-6. Zadejte následující příkaz v **okamžité** okno: `?MyFunction<enter>`  
+6. Do příkazového **podokna zadejte** následující: `?MyFunction<enter>`  
   
-7. Zadejte následující příkaz v **okamžité** okno: `?MySub<enter>`  
+7. Do příkazového **podokna zadejte** následující: `?MySub<enter>`  
   
-8. Ověřte, že zarážce a zkontrolujte hodnotu statická proměnná `i` v **lokální** okna. Měl by mít hodnotu 3.  
+8. Ověřte, zda jste narazili na zarážku, a zkontrolujte hodnotu statické proměnné `i` v okně **místní** hodnoty. Hodnota by měla mít hodnotu 3.  
   
-9. Ověřte, zda je přesné zásobníku volání.  
+9. Ověřte, zda je zásobník volání přesný.  
   
-10. Na **ladění** nabídky, klikněte na tlačítko **pokračovat**a ověřte, že jste stále v režimu návrhu.  
+10. V nabídce **ladit** klikněte na tlačítko **pokračovat**a ověřte, zda jste stále v režimu návrhu.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   

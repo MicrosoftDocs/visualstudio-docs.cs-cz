@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3d6e9ee79602f3a0db8f68d701120c450bfee721
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82153083"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Kurz: Naučte se ladit kód v jazyce C# pomocí sady Visual Studio
@@ -36,7 +36,7 @@ V tomto kurzu provedete následující:
 > * Kontrola proměnných v tipech k datům a v oknech ladicího programu
 > * Kontrola zásobníku volání
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ::: moniker range=">=vs-2019"
 
@@ -61,7 +61,7 @@ Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke staže
 
 ::: moniker-end
 
-Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje** > **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
+Pokud potřebujete nainstalovat úlohu, ale už máte Visual Studio, můžete přejít do části **nástroje**  >  **získat nástroje a funkce...**, které otevře instalační program pro Visual Studio. Spustí se instalační program pro Visual Studio. Zvolte úlohu **vývoje .NET Core pro různé platformy** a pak zvolte **změnit**.
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
@@ -153,7 +153,7 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
 
      V tomto kurzu se podíváme na tuto aplikaci s použitím ladicího programu a zjistíme, jak se podívat na funkce ladicího programu.
 
-2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**SHIFT** + **F5**).
+2. Ukončete ladicí program stisknutím tlačítka červené zastavení ![Zastavit ladění](../../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") (**SHIFT**  +  **F5**).
 
 3. V okně konzoly stisknutím klávesy zavřete okno konzoly.
 
@@ -181,7 +181,7 @@ Nejprve vytvoříte projekt konzolové aplikace .NET Core. Typ projektu se dodá
 
 Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak rychle rychle spustit aplikaci v ladicím programu (ekvivalentní příkazy, jako jsou příkazy nabídky, se zobrazují v závorkách).
 
-1. Při pozastavení `name += letters[i]` příkazu, najeďte myší na `letters` proměnnou a vidíte její výchozí hodnotu, hodnotu prvního prvku v poli. `char[10]`
+1. Při pozastavení `name += letters[i]` příkazu, najeďte myší na `letters` proměnnou a vidíte její výchozí hodnotu, hodnotu prvního prvku v poli `char[10]` .
 
      Funkce, které umožňují kontrolu proměnných, jsou jedním z nejužitečnějších funkcí ladicího programu a existují různé způsoby, jak to provést. Pokud se při pokusu o ladění problému často pokusíte zjistit, zda proměnné ukládají hodnoty, které mají být v určitou dobu k dispozici.
 
@@ -191,25 +191,25 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 1. Potom najeďte myší na `name` proměnnou a uvidíte její aktuální hodnotu, prázdný řetězec.
 
-1. Stiskněte **F10** (nebo zvolte možnost **ladění > krokovat**s), abyste mohli přejít `SendMessage` ke volání metody, a pak stiskněte **F10** ještě jednou.
+1. Stiskněte **F10** (nebo zvolte možnost **ladění > krokovat**s), abyste mohli přejít ke `SendMessage` volání metody, a pak stiskněte **F10** ještě jednou.
 
-     F10 posune ladicí program na další příkaz bez krokování do funkcí nebo metod v kódu aplikace (kód se pořád spustí). Stisknutím klávesy F10 ve volání `SendMessage` metody jsme přeskočili kód implementace pro `SendMessage` (což možná není zajímatme hned teď).
+     F10 posune ladicí program na další příkaz bez krokování do funkcí nebo metod v kódu aplikace (kód se pořád spustí). Stisknutím klávesy F10 ve `SendMessage` volání metody jsme přeskočili kód implementace pro `SendMessage` (což možná není zajímatme hned teď).
 
-1. Několikrát stisknutím klávesy **F10** (nebo **ladění** > **krok za běhu**) několikrát projdete `for` smyčkou, přechodem znovu na zarážku a pokaždé, když se podíváte na `name` proměnnou pokaždé, aby zkontrolovala její hodnotu.
+1. Několikrát stisknutím klávesy **F10** (nebo **ladění**  >  **krok za běhu**) několikrát projdete `for` smyčkou, přechodem znovu na zarážku a pokaždé, když se podíváte na `name` proměnnou pokaždé, aby zkontrolovala její hodnotu.
 
      ![Zobrazit Tip pro data](../csharp/media/get-started-data-tip.gif "Zobrazit Tip pro data")
 
-     Hodnota proměnné se mění v každé `for` iteraci smyčky, zobrazuje hodnoty `f`, potom `fr`, `fre`a tak dále. Chcete-li ladit ladicí program přes smyčku rychleji v tomto scénáři, můžete stisknout klávesu **F5** (nebo zvolit možnost**pokračovat**v **ladění** > ), která vás provede přechodem na zarážku namísto dalšího příkazu.
+     Hodnota proměnné se mění v každé iteraci `for` smyčky, zobrazuje hodnoty `f` , potom `fr` , `fre` a tak dále. Chcete-li ladit ladicí program přes smyčku rychleji v tomto scénáři, můžete stisknout klávesu **F5** (nebo zvolit možnost pokračovat v **ladění**  >  **Continue**), která vás provede přechodem na zarážku namísto dalšího příkazu.
 
      Při ladění budete často potřebovat rychlý způsob kontroly hodnot vlastností u proměnných, abyste viděli, zda ukládají hodnoty, které očekáváte pro uložení, a tipy k datům jsou vhodným způsobem.
 
-1. I když se stále pozastaví `for` smyčka `Main` v metodě, stiskněte klávesu **F11** (nebo zvolte možnost **ladit > krokovat**s), `SendMessage` dokud nezastavíte volání metody.
+1. I když se stále pozastaví `for` smyčka v `Main` metodě, stiskněte klávesu **F11** (nebo zvolte možnost **ladit > krokovat**s), dokud nezastavíte `SendMessage` volání metody.
 
      Měli byste být na tomto řádku kódu:
 
      `SendMessage(name, a[i]);`
 
-1. Stiskněte klávesu **F11** ještě jednou pro krokování `SendMessage` do metody.
+1. Stiskněte klávesu **F11** ještě jednou pro krokování do `SendMessage` metody.
 
      Žlutý ukazatel se přesune do `SendMessage` metody.
 
@@ -219,11 +219,11 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
      Řekněme, že jste dokončili zkoumání `SendMessage` metody a chcete získat z metody, ale zůstat v ladicím programu. To můžete provést pomocí příkazu **Krok ven** .
 
-1. Stiskněte **SHIFT** + **F11** (nebo **ladění > krokovat**).
+1. Stiskněte **SHIFT**  +  **F11** (nebo **ladění > krokovat**).
 
      Tento příkaz obnoví spuštění aplikace (a posune ladicí program), dokud se nevrátí aktuální metoda nebo funkce.
 
-     Měli byste se vrátit do `for` smyčky v `Main` metodě, pozastavena při volání `SendMessage` metody. Další informace o různých způsobech, jak přesouvat kód, naleznete v tématu [Navigace v kódu v ladicím programu](../../debugger/navigating-through-code-with-the-debugger.md).
+     Měli byste se vrátit do `for` smyčky v `Main` metodě, pozastavena při `SendMessage` volání metody. Další informace o různých způsobech, jak přesouvat kód, naleznete v tématu [Navigace v kódu v ladicím programu](../../debugger/navigating-through-code-with-the-debugger.md).
 
 ## <a name="navigate-code-using-run-to-click"></a>Procházení kódu pomocí rutiny Run to Click
 
@@ -234,7 +234,7 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
      ![Použití funkce spustit pro kliknutí](../csharp/media/get-started-run-to-click.png "Běžet do kliknutí")
 
    > [!NOTE]
-   > Tlačítko **Spustit pro kliknutí** je v [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]nástroji nového. (Pokud nevidíte zelenou šipku tlačítka, použijte klávesu **F11** v tomto příkladu, aby se ladicí program napředal na správné místo.)
+   > Tlačítko **Spustit pro kliknutí** je v nástroji nového [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)] . (Pokud nevidíte zelenou šipku tlačítka, použijte klávesu **F11** v tomto příkladu, aby se ladicí program napředal na správné místo.)
 
 2. Kliknutím na tlačítko **Spustit pro** klikněte na tlačítko ![Spustit](../../debugger/media/dbg-tour-run-to-click.png "RunToClick").
 
@@ -244,17 +244,17 @@ Většinou používáme klávesové zkratky, protože je dobrým způsobem, jak 
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
-Klikněte na tlačítko **restartovat** ![aplikaci](../../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL** + **SHIFT** + **F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../../debugger/media/dbg-tour-restart.png "RestartApp") na panelu nástrojů ladění (**CTRL**  +  **SHIFT**  +  **F5**).
 
 Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 
-Ladicí program se znovu zastaví na zarážce, kterou jste předtím `for` nastavili uvnitř smyčky.
+Ladicí program se znovu zastaví na zarážce, kterou jste předtím nastavili uvnitř `for` smyčky.
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Kontrola proměnných pomocí oken automatické hodnoty a místní hodnoty
 
 1. Podívejte se na okno **Automatické** hodnoty v dolní části editoru kódu.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit** > **okna** > **Automatické**hodnoty.
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu, a to volbou **ladit**  >  **okna**  >  **Automatické**hodnoty.
 
     V okně **Automatické** hodnoty vidíte proměnné a jejich aktuální hodnotu. Okno **Automatické** hodnoty zobrazuje všechny proměnné, které se používají na aktuálním řádku nebo na předchozím řádku (podívejte se na dokumentaci pro specifické chování jazyka).
 
@@ -272,15 +272,15 @@ Ladicí program se znovu zastaví na zarážce, kterou jste předtím `for` nast
 
     V dolní části editoru kódu se otevře okno **kukátko** . Okno **kukátka** můžete použít k určení proměnné (nebo výrazu), pro kterou chcete zachovat oči.
 
-    Teď máte pro `name` proměnnou nastavenou kukátko a při procházení ladicího programu můžete zobrazit jeho změnu hodnoty. Na rozdíl od ostatních oken proměnných se v okně **kukátka** vždy zobrazuje proměnné, které sledujete (v případě nedostatku rozsahu jsou šedé).
+    Teď máte pro proměnnou nastavenou kukátko `name` a při procházení ladicího programu můžete zobrazit jeho změnu hodnoty. Na rozdíl od ostatních oken proměnných se v okně **kukátka** vždy zobrazuje proměnné, které sledujete (v případě nedostatku rozsahu jsou šedé).
 
 ## <a name="examine-the-call-stack"></a>Kontrola zásobníku volání
 
 1. Při pozastavení ve `for` smyčce klikněte na okno **zásobník volání** , které je ve výchozím nastavení otevřené v pravém dolním podokně.
 
-    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit** > **zásobník volání****systému Windows** > .
+    Pokud je zavřená, otevřete ji během pozastaveného ladicího programu výběrem možnosti **ladit**  >  **Windows**  >  **zásobník volání**systému Windows.
 
-2. Klikněte několikrát na klávesu **F11** , dokud se nezobrazí pozastavení ladicího `SendMessage` programu v metodě. Podívejte se do okna **zásobník volání** .
+2. Klikněte několikrát na klávesu **F11** , dokud se nezobrazí pozastavení ladicího programu v `SendMessage` metodě. Podívejte se do okna **zásobník volání** .
 
     ![Kontrola zásobníku volání](../csharp/media/get-started-call-stack.png "ExamineCallStack")
 
@@ -299,7 +299,7 @@ Ladicí program se znovu zastaví na zarážce, kterou jste předtím `for` nast
 
 1. Stisknutím klávesy **F11** dvakrát spusťte `Console.WriteLine` metodu.
 
-1. Když je ladicí program pozastaven ve `SendMessage` volání metody, použijte myš k navýšení žluté šipky (ukazatel spuštění) vlevo a přesuňte žlutou šipku o jeden řádek nahoru, zpět na `Console.WriteLine`.
+1. Když je ladicí program pozastaven ve `SendMessage` volání metody, použijte myš k navýšení žluté šipky (ukazatel spuštění) vlevo a přesuňte žlutou šipku o jeden řádek nahoru, zpět na `Console.WriteLine` .
 
 1. Stiskněte klávesu **F11**.
 

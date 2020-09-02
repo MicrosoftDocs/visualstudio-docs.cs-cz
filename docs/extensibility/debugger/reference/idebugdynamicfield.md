@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicField | Dokumenty společnosti Microsoft
+title: IDebugDynamicField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,34 +13,34 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 15f0ddf70849377d37ec74839550de6057b3450c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731316"
 ---
 # <a name="idebugdynamicfield"></a>IDebugDynamicField
 Toto rozhraní představuje typ proměnné.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugDynamicField : IDebugField
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Toto rozhraní je implementováno zprostředkovateli symbolů jako základní třída pro libovolný typ, který lze určit za běhu. Toto je pouze pro spravovaný kód.
+ Toto rozhraní je implementováno poskytovateli symbolů jako základní třídou pro libovolný typ, který lze určit za běhu. Toto je pouze pro spravovaný kód.
 
 ## <a name="notes-for-callers"></a>Poznámky pro volající
- Toto rozhraní představuje základní třídu, ze které lze odvodit více specializovaných rozhraní.
+ Toto rozhraní představuje základní třídu, ze které lze odvodit specializovaná rozhraní.
 
-## <a name="methods-in-vtable-order"></a>Metody v pořadí Vtable
- Toto rozhraní neposkytuje žádné jiné metody `IDebugField`než ty, které jsou zděděny z aplikace .
+## <a name="methods-in-vtable-order"></a>Metody v pořadí vtable
+ Toto rozhraní neposkytuje žádné metody, které nejsou zděděné z `IDebugField` .
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: sh.h
+ Záhlaví: SH. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

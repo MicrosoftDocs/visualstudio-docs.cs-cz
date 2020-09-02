@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPositionOffset2 | Dokumenty společnosti Microsoft
+title: IDebugDocumentPositionOffset2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,38 +11,38 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d967ec9cf406f7dae691c3f05eda514e0907c7e3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731600"
 ---
 # <a name="idebugdocumentpositionoffset2"></a>IDebugDocumentPositionOffset2
-Představuje pozici ve zdrojovém souboru jako posun znaků.
+Představuje pozici ve zdrojovém souboru jako posun znaku.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugDocumentPositionOffset2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory
- Implementováno ide a spotřebované ladicí motory.
+ Implementováno rozhraním IDE a spotřebované moduly ladění.
 
 ## <a name="methods"></a>Metody
- V následující tabulce jsou `IDebugDocumentPositionOffset2`uvedeny metody .
+ V následující tabulce jsou uvedeny metody `IDebugDocumentPositionOffset2` .
 
 |Metoda|Popis|
 |------------|-----------------|
 |[GetRange](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2-getrange.md)|Načte rozsah pro aktuální pozici dokumentu.|
 
 ## <a name="remarks"></a>Poznámky
- To vrátí stejné informace jako `char` [GetRange,](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md) ale v posuny od začátku dokumentu. To představuje dokument, jako by existoval na disku, to znamená jednorozměrné pole znaků, namísto řádku a sloupce informace, které jsou obvykle vráceny.
+ Vrátí se stejné informace jako [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md) , ale v `char` posunech od začátku dokumentu. To představuje dokument podobný tomu, jako by existoval na disku, tj. jednorozměrné pole znaků namísto informace o řádku a sloupci, které se obvykle vracejí.
 
 ## <a name="requirements"></a>Požadavky
- Záhlaví: Msdbg.h
+ Záhlaví: msdbg. h
 
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

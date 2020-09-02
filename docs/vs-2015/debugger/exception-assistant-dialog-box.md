@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno výjimky Pomocník | Dokumentace Microsoftu
+title: Pomocník pro výjimky – dialogové okno | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,42 +24,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5019547d2e06684b51f1513445521eca0e5143e1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702879"
 ---
 # <a name="exception-assistant-dialog-box"></a>Dialogové okno Pomocník pro výjimky
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Pomocníka pro výjimky** dialogové okno se zobrazí, když je vyvolána výjimka za běhu. **Pomocníka pro výjimky** zobrazí typ výjimky, poskytuje další informace a odkazy na tipy pro řešení potíží, poskytuje způsob, jak vyhledat další pomoc online a umožňuje uživatelům provádět určité akce, například zobrazení podrobností o výjimce.  
+Když je vyvolána výjimka za běhu, zobrazí se dialogové okno **Pomocník pro výjimky** . **Pomocník pro výjimky** zobrazuje typ výjimky, poskytuje další informace a odkazy na tipy k odstraňování potíží, nabízí způsob, jak vyhledat další nápovědu online a umožňuje uživateli provádět určité akce, jako je například zobrazení podrobností o výjimce.  
   
 ## <a name="task-list"></a>Seznam úkolů  
- Pokud chcete zobrazit téma práci s řešením potíží typ výjimky, kterou jste se setkali, klikněte na některou tip zprávy zobrazeny v **tipy k řešení potíží s** podokně.  
+ Pokud se chcete podívat na téma týkající se řešení potíží s typem výjimky, kterou jste zjistili, klikněte na jednu z zpráv Tip zobrazených v podokně **tipy pro řešení potíží** .  
   
- K provedení akce související s výjimkou, klikněte na jednu z akcí, zobrazí v podokně Akce.  
+ Chcete-li provést akce spojené s výjimkou, klikněte na jednu z akcí zobrazených v podokně akce.  
   
- Informace o tom, jak povolit nebo zakázat Pomocníka výjimky najdete v tématu [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md).  
+ Informace o tom, jak povolit nebo zakázat pomocníka s výjimkami, naleznete v části [Obecné, ladění, možnosti dialogového okna](../debugger/general-debugging-options-dialog-box.md).  
   
 ## <a name="user-interface-element-list"></a>Seznam prvků uživatelského rozhraní  
  **Typ výjimky**  
- Zobrazí typ došlo k výjimce.  
+ Zobrazuje typ vyvolané výjimky.  
   
  **Další informace**  
  Zobrazí další informace o výjimce.  
   
- **Tipy pro odstraňování potíží**  
- Zobrazí odkazy na řešení potíží s tipy, které vám můžou pomoci zjistit zdroj výjimky.  
+ **Tipy pro řešení problémů**  
+ Zobrazuje odkazy na tipy pro řešení potíží, které vám mohou pomohou zjistit zdroj výjimky.  
   
  **Akce**  
- Zobrazí seznam akcí, které můžete provést, jako je například zobrazuje další informace o objektu výjimky.  
+ Zobrazí seznam akcí, které lze provést, například zobrazení více informací o objektu výjimky.  
   
- **Získat Online nápovědu**  
+ **Získat online nápovědu**  
  Umožňuje vyhledat další nápovědu online.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
  [Použití Pomocníka pro výjimky](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)   
- [Postupy: Opravte chyby za běhu pomocí Pomocníka pro výjimky](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
+ [Postupy: Oprava chyb za běhu pomocí Pomocníka pro výjimky](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
  [Typy chyb](https://msdn.microsoft.com/library/3048aabf-8c97-4e13-9150-853769cb5f6f)

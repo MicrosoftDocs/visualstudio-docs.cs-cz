@@ -34,10 +34,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ff28944a36d338230a17cd533a4832452e42885b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348454"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Správa výjimek pomocí ladicího programu v aplikaci Visual Studio

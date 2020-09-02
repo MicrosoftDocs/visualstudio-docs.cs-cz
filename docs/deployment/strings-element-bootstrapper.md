@@ -1,5 +1,5 @@
 ---
-title: '&lt;Řetězce&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
+title: '&lt;Strings – &gt; element (zaváděcí nástroj) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,16 +19,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8bc56bf980bba6326b3615b6892ec555b795ec8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747409"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Řetězce&gt; – element (zaváděcí nástroj)
-Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chybové zprávy instalace.
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Strings – &gt; element (zaváděcí nástroj)
+Definuje lokalizované řetězce pro názvy produktů, názvy balíčků a chybové zprávy instalace.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Strings>
@@ -40,19 +40,19 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 ```
 
 ## <a name="elements-and-attributes"></a>Elementy a atributy
- `Strings` Element je podřízeným prvkem `Package` elementu. Nemá žádné atributy.
+ `Strings`Prvek je podřízeným prvkem `Package` elementu. Nemá žádné atributy.
 
-## <a name="string"></a>String
- `String` Element je podřízeným prvkem `Strings` elementu. A `Strings` element může obsahovat jeden nebo více `String` elementy.
+## <a name="string"></a>Řetězec
+ `String`Prvek je podřízeným prvkem `Strings` elementu. `Strings`Element může obsahovat jeden nebo více `String` prvků.
 
  `String` má následující atribut.
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`Name`|Povinný parametr. Název řetězce.|
+|`Name`|Povinná hodnota. Název řetězce.|
 
 ## <a name="example"></a>Příklad
- Následující příklad kódu určuje všechny anglické řetězce pro instalační program rozhraní .NET Framework.
+ Následující příklad kódu určuje všechny anglické řetězce pro instalační službu .NET Framework.
 
 ```xml
 <Strings>
@@ -73,5 +73,5 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 </Strings>
 ```
 
-## <a name="see-also"></a>Viz také:
-- [\<Balíček > – element](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>Viz také
+- [\<Package> objekt](../deployment/package-element-bootstrapper.md)

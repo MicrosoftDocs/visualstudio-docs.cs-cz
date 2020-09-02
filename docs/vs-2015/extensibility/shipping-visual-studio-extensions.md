@@ -1,5 +1,5 @@
 ---
-title: Přesouvání rozšíření | Dokumentace Microsoftu
+title: Rozšíření expedice | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,53 +13,53 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c7154395be43f6a0b07e9f2557d94fa594ef5ba4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150795"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Odesílání rozšíření sady Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Poznámka:** Galerie Visual Studio teď nahrazuje Visual Studio Marketplace. Zobrazte nejnovější verzi tohoto tématu podrobnosti.
+**Poznámka**: galerie sady Visual Studio se nahrazuje Visual Studio Marketplace. Podrobnosti najdete v nejnovější verzi tohoto tématu.
 
-Po dokončení vývoje rozšíření, nainstalujte ho na jiné počítače, sdílet s přáteli nebo kolegy nebo ho publikovat v Galerii Visual Studio. V této části vám vysvětlíme, vše, co musíte udělat, aby bylo možné publikovat a spravovat vaše rozšíření: práce se soubory VSIX, publikování, lokalizace a aktualizace.
+Po dokončení vývoje rozšíření ho můžete nainstalovat na jiné počítače, sdílet ho s přáteli a spolupracovníky nebo ho publikovat v galerii sady Visual Studio. V této části vyvysvětlíme všechny věci, které potřebujete k tomu, abyste mohli publikovat a udržovat vaše rozšíření: práce se soubory VSIX, publikováním, lokalizací a aktualizací.
 
-## <a name="working-with-vsix-extensions"></a>Práce s rozšíření VSIX
- Vytvoření prázdného projektu VSIX a následným přidáním jiná položka šablony do ní můžete vytvořit rozšíření VSIX. Další informace najdete v tématu [šablonou projektu VSIX](../extensibility/vsix-project-template.md).
+## <a name="working-with-vsix-extensions"></a>Práce s rozšířeními VSIX
+ Rozšíření VSIX můžete vytvořit vytvořením prázdného projektu VSIX a následným přidáním různých šablon položek. Další informace naleznete v tématu [Šablona projektu VSIX](../extensibility/vsix-project-template.md).
 
- Balíček šablony projektů, položku šablony, balíčky VSPackages, součásti Managed Extensibility Framework (MEF), můžete použít formát VSIX **nástrojů** ovládací prvky, sestavení a vlastní typy (to zahrnuje vlastní úvodní stránky). Formát VSIX využívá nasazení založené na souboru. Další informace o balíčcích VSIX, naleznete v tématu [anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md).
+ Můžete použít formát VSIX k zabalení šablon projektů, šablon položek, VSPackage, Managed Extensibility Framework (MEF) komponent, ovládacích prvků **panelu nástrojů** , sestavení a vlastních typů (to zahrnuje vlastní úvodní stránky). Formát VSIX používá nasazení na základě souborů. Další informace o balíčcích VSIX naleznete v tématu [anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md).
 
- Formát VSIX nepodporuje instalaci fragmentů kódu. Také nepodporuje některých dalších scénářů, jako je například zápis do globální mezipaměti sestavení (GAC) nebo do systémového registru. Pokud budete potřebovat k zápisu do mezipaměti GAC nebo registru v instalaci, musíte použít instalační služby systému Windows. Další informace najdete v tématu [Příprava rozšíření pro Windows Installer nasazení](../extensibility/preparing-extensions-for-windows-installer-deployment.md).
+ Formát VSIX nepodporuje instalaci fragmentů kódu. Nepodporuje také některé jiné scénáře, jako je například zápis do globální mezipaměti sestavení (GAC) nebo do systémového registru. Pokud potřebujete zapisovat do globální mezipaměti sestavení (GAC) nebo do registru v instalaci, je nutné použít Instalační služba systému Windows. Další informace najdete v tématu [Příprava rozšíření pro nasazení Instalační služba systému Windows](../extensibility/preparing-extensions-for-windows-installer-deployment.md).
 
-## <a name="publishing-your-extension-to-the-visual-studio-gallery"></a>Publikování rozšíření do Galerie Visual Studio
- Rozšíření ostatním uživatelům můžete distribuovat jednoduše tak, že jejich souboru .vsix poštovní nebo vložení na serveru. Ale nejlepší způsob, jak získat kód dostat do rukou velké množství lidí je umístit jej [Visual Studio Marketplace](https://marketplace.visualstudio.com/). Rozšíření Galerie sady Visual Studio jsou k dispozici uživatelům aplikace Visual Studio prostřednictvím **rozšíření a aktualizace**. Další informace najdete v tématu [hledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).
+## <a name="publishing-your-extension-to-the-visual-studio-gallery"></a>Publikování rozšíření do galerie sady Visual Studio
+ Rozšíření můžete ostatním lidem distribuovat jednoduše jejich odesláním do souboru. VSIX nebo vložením na server. Nejlepším způsobem, jak získat kód v rukou velké části lidí, je umístit ho do [Visual Studio Marketplace](https://marketplace.visualstudio.com/). Rozšíření galerie sady Visual Studio jsou k dispozici uživatelům aplikace Visual Studio prostřednictvím **rozšíření a aktualizací**. Další informace najdete v tématu [vyhledání a používání rozšíření sady Visual Studio](../ide/finding-and-using-visual-studio-extensions.md).
 
- Úplný příklad, který ukazuje, jak nahrát rozšíření do Galerie Visual Studio, naleznete v tématu [názorný postup: Publikování rozšíření sady Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
+ Úplný příklad, který ukazuje, jak nahrát rozšíření do galerie sady Visual Studio, najdete v tématu [Návod: publikování rozšíření aplikace Visual Studio](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
 
 ## <a name="private-galleries"></a>Privátní galerie
- Při vývoji ovládací prvky, šablony a nástroje, můžete je sdílet ve vaší organizaci tím, že publikuje do privátní Galerie na vašem intranetu. Další informace najdete v tématu [privátní Galerie](../extensibility/private-galleries.md).
+ Když vyvíjíte ovládací prvky, šablony a nástroje, můžete je sdílet s vaší organizací, a to jejich publikováním do soukromé galerie v intranetu. Další informace najdete v tématu [soukromé Galerie](../extensibility/private-galleries.md).
 
 ## <a name="localizing-your-extension"></a>Lokalizace rozšíření
- Pokud máte v plánu uvolnit rozšíření v různých národních prostředí, měli byste zvážit, je lokalizace. Vysvětlení, co je zahrnuta, najdete v článku [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md).
+ Pokud máte v úmyslu uvolnit rozšíření v různých národních prostředích, měli byste zvážit jeho lokalizaci. Vysvětlení toho, co se týká, najdete v tématu [lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md).
 
 ## <a name="updating-and-versioning-your-extension"></a>Aktualizace a správa verzí rozšíření
- Po publikování rozšíření, budou přicházet čas, kdy je potřeba ho aktualizovat. Postup aktualizace rozšíření, která byla publikována na Galerii Visual Studio najdete v tématu [jak: Aktualizovat rozšíření](../extensibility/how-to-update-a-visual-studio-extension.md).
+ Po publikování rozšíření bude k dispozici čas potřebný k jeho aktualizaci. Chcete-li zjistit, jak aktualizovat rozšíření, které bylo Publikováno v galerii sady Visual Studio, přečtěte si téma [Postup: aktualizace rozšíření](../extensibility/how-to-update-a-visual-studio-extension.md).
 
- Můžete nastavit rozšíření pro podporu více verzí sady Visual Studio. Další informace najdete v tématu [podporuje více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md).
+ Rozšíření můžete nastavit tak, aby podporovalo více verzí sady Visual Studio. Další informace najdete v tématu [Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md).
 
 ## <a name="related-topics"></a>Související témata
 
-|Název|Popis|
+|Nadpis|Popis|
 |-----------|-----------------|
-|[Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)|Vysvětluje, jak nainstalovat vlastní šablonu projektu pomocí šablony projektu VSIX.|
+|[Začínáme se šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)|Vysvětluje, jak použít šablonu projektu VSIX k instalaci vlastní šablony projektu.|
 |[Anatomie balíčku VSIX](../extensibility/anatomy-of-a-vsix-package.md)|Popisuje součásti balíčku VSIX.|
-|[Šablona projektu VSIX](../extensibility/vsix-project-template.md)|Obsahuje podrobné pokyny o tom, jak zabalit a publikovat rozšíření.|
-|[Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)|Vysvětluje, jak zajistit lokalizovaný text pro proces instalace pomocí extension.vsixlangpack soubory.|
-|[Postupy: Aktualizace rozšíření](../extensibility/how-to-update-a-visual-studio-extension.md)|Popisuje postup aktualizace rozšíření ve vašem systému a jak nasadit aktualizace do existujícího rozšíření sady Visual Studio.|
-|[Postupy: Přidání závislosti k balíčku VSIX](../extensibility/how-to-add-a-dependency-to-a-vsix-package.md)|Popisuje, jak přidat odkazy na balíčky VSIX pro nasazení.|
-|[Příprava rozšíření pro nasazení Instalační služby systému Windows](../extensibility/preparing-extensions-for-windows-installer-deployment.md)|Vysvětluje, jak nasazení vašeho rozšíření Instalační služby systému Windows.|
-|[Podepisování balíčků VSIX](../extensibility/signing-vsix-packages.md)|Vysvětluje, jak k podepisování balíčků VSIX.|
-|[Privátní galerie](../extensibility/private-galleries.md)|Vysvětluje, jak vytvořit privátní Galerie rozšíření.|
-|[Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)|Ukazuje, jak mají vaše rozšíření podpory více verzí sady Visual Studio.|
+|[Šablona projektu VSIX](../extensibility/vsix-project-template.md)|Poskytuje podrobné pokyny pro zabalení a publikování rozšíření.|
+|[Lokalizace balíčků VSIX](../extensibility/localizing-vsix-packages.md)|Vysvětluje, jak poskytnout lokalizovaný text pro instalační proces pomocí souborů s příponou. vsixlangpack.|
+|[Postupy: Aktualizace rozšíření](../extensibility/how-to-update-a-visual-studio-extension.md)|Popisuje, jak aktualizovat rozšíření v systému a jak nasadit aktualizaci do stávajícího rozšíření sady Visual Studio.|
+|[Postupy: Přidání závislosti k balíčku VSIX](../extensibility/how-to-add-a-dependency-to-a-vsix-package.md)|Popisuje, jak přidat odkazy na balíčky nasazení VSIX.|
+|[Příprava rozšíření pro nasazení Instalační služby systému Windows](../extensibility/preparing-extensions-for-windows-installer-deployment.md)|Vysvětluje, jak nasadit rozšíření pomocí Instalační služba systému Windows.|
+|[Podepisování balíčků VSIX](../extensibility/signing-vsix-packages.md)|Vysvětluje, jak podepisovat balíčky VSIX.|
+|[Privátní galerie](../extensibility/private-galleries.md)|Vysvětluje, jak vytvořit privátní Galerie pro rozšíření.|
+|[Podpora více verzí sady Visual Studio](../extensibility/supporting-multiple-versions-of-visual-studio.md)|Ukazuje, jak vaše rozšíření podporuje více verzí sady Visual Studio.|
