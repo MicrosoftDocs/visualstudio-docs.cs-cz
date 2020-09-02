@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: edd141f6b99dc3836d99ebdbc4aab9af7150e4ff
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329228"
 ---
 # <a name="marker_serieswrite_flag-method"></a>marker_series:: write_flag – metoda
@@ -48,11 +48,11 @@ void write_flag(
 ```
 
 #### <a name="parameters"></a>Parametry
- `_Format`Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
+ `_Format` Složený řetězec formátu, který obsahuje text vzájemně se smíšenými nulami nebo více formátovacími položkami, které odpovídají objektům v seznamu argumentů.
 
- `_Importance`Úroveň důležitosti.
+ `_Importance` Úroveň důležitosti.
 
- `_Category`Kategorií.
+ `_Category` Kategorií.
 
 ## <a name="requirements"></a>Požadavky
  **Záhlaví:** *cvmarkersobj. h*

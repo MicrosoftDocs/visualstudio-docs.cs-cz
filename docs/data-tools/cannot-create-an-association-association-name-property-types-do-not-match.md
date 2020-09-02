@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 4b9735c711abe7826d241e8c8aa7ade0a5f5d5e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536718"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>Nelze vytvořit &lt; název přidružení přidružení &gt; – typy vlastností se neshodují.
@@ -33,7 +33,7 @@ Vlastnosti uvedené ve zprávě nemají stejné datové typy.
 
 4. Klikněte na **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Nástroje LINQ to SQL v aplikaci Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Postupy: vytvoření přidružení mezi třídami LINQ to SQL (Návrhář O/R)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)

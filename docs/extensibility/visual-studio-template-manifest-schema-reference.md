@@ -1,5 +1,5 @@
 ---
-title: Referenční příručka pro manifest šablony sady Visual Studio | Dokumenty společnosti Microsoft
+title: Referenční informace schématu manifestu šablony sady Visual Studio | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
@@ -9,91 +9,91 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dbe46851d9df85569be796b4147217bd7db450ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697984"
 ---
-# <a name="visual-studio-template-manifest-schema-reference"></a>Odkaz na schéma manifestu šablony sady Visual Studio
-Toto schéma popisuje formát manifestu šablony sady Visual Studio (*.vstman*) soubory, které jsou generovány pro projekt Visual Studio nebo šablony položek. Schéma také popisuje umístění a další relevantní informace o šabloně.
+# <a name="visual-studio-template-manifest-schema-reference"></a>Referenční dokumentace schématu manifestu šablony sady Visual Studio
+Toto schéma popisuje formát souborů manifestu šablony sady Visual Studio (*. vstman*), které jsou generovány pro projekty aplikace Visual Studio nebo šablony položek. Schéma také popisuje umístění a další důležité informace o této šabloně.
 
- : Vzhledem k tomu, že existují samostatné adresáře položek a šablon projektu, manifest by nikdy neměl mít kombinaci šablon položek a projektů.
+ : Protože existují samostatné adresáře šablon položek a projektů, manifest by nikdy neměl obsahovat kombinaci položek a šablon projektů.
 
 > [!IMPORTANT]
-> Tento manifest je k dispozici od visual studia 2017.
+> Tento manifest je k dispozici od začátku v aplikaci Visual Studio 2017.
 
-## <a name="vstemplatemanifest-element"></a>VSTemplateManifest prvek
+## <a name="vstemplatemanifest-element"></a>Element VSTemplateManifest
  Kořenový prvek manifestu.
 
 ### <a name="attributes"></a>Atributy
 
-- **Verze**: Řetězec představující verzi manifestu šablony. Povinná hodnota.
+- **Verze**: řetězec představující verzi manifestu šablony. Povinná hodnota.
 
-- **Národní prostředí**: Řetězec představující národní prostředí nebo národní prostředí manifestu šablony. Hodnota národního prostředí platí pro všechny šablony. Pro každé národní prostředí je nutné použít samostatný manifest. Nepovinný parametr.
+- **Locale**: řetězec představující národní prostředí nebo národní prostředí manifestu šablony. Hodnota národního prostředí se vztahuje na všechny šablony. Je nutné použít samostatný manifest pro každé národní prostředí. Nepovinný parametr.
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-- **Kontejner VSTemplate** Volitelné.
+- **VSTemplateContainer** Volitelné.
 
 - **VSTemplateDir** Volitelné.
 
-### <a name="parent-element"></a>Nadřazený prvek
- Žádné.
+### <a name="parent-element"></a>Nadřazený element
+ Žádné
 
-## <a name="vstemplatecontainer"></a>Kontejner VSTemplate
- Kontejner prvků manifestu šablony. Manifest má jeden kontejner šablony pro každou šablonu, kterou definuje.
+## <a name="vstemplatecontainer"></a>VSTemplateContainer
+ Kontejner prvků manifestu šablony. Manifest má jeden kontejner šablon pro každou šablonu, kterou definuje.
 
 ### <a name="attributes"></a>Atributy
- **VSTemplateType**: Hodnota řetězce, která určuje typ`"Project"` `"Item"`šablony `"ProjectGroup"`( , , nebo ). Požaduje se
+ **VSTemplateType**: hodnota řetězce, která určuje typ šablony ( `"Project"` , `"Item"` nebo `"ProjectGroup"` ). Vyžadováno
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-- **RelativePathOnDisk**: Relativní cesta k souboru šablony na disku. Toto umístění také definuje umístění šablony ve stromu šablony zobrazeném v dialogovém okně **Nový projekt** nebo **Nová položka.** U šablon nasazených jako adresář a jednotlivé soubory odkazuje tato cesta na adresář obsahující soubory šablon. U šablon nasazených jako soubor *ZIP* by tato cesta měla být cestou k souboru *ZIP.*
+- **RelativePathOnDisk**: relativní cesta k souboru šablony na disku. Toto umístění také definuje umístění šablony ve stromu šablony zobrazeném v dialogovém okně **Nový projekt** nebo **Nová položka** . Pro šablony nasazené jako adresář a jednotlivé soubory odkazuje tato cesta na adresář obsahující soubory šablon. V případě šablon nasazených jako soubor *. zip* by tato cesta měla být cesta k souboru *. zip* .
 
-- **VSTemplateHeader: Element [TemplateData,](../extensibility/templatedata-element-visual-studio-templates.md) který popisuje hlavičku.
+- * * VSTemplateHeader: element [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) , který popisuje hlavičku.
 
-### <a name="parent-element"></a>Nadřazený prvek
+### <a name="parent-element"></a>Nadřazený element
  **VSTemplateManifest**
 
 ## <a name="vstemplatedir"></a>VSTemplateDir
- Popisuje adresář, ve kterém je šablona umístěna. Manifest může obsahovat více položek **VSTemplateDir** poskytnout lokalizovaný název a řazení pro adresáře řídit jejich vzhled ve stromu kategorií šablony.
+ Popisuje adresář, ve kterém je šablona umístěna. Manifest může obsahovat více **VSTemplateDir** záznamů pro poskytnutí lokalizovaného názvu a řazení pro adresáře pro kontrolu jejich vzhledu ve stromu kategorií šablon.
 
- Vzhledem k jejich návrhu by se položky **VSTemplateDir** měly zobrazovat pouze v nenárodních manifestech.
+ Z důvodu jejich návrhu by se položky **VSTemplateDir** měly zobrazit pouze v manifestech, které nejsou zadány národním prostředím.
 
 ### <a name="attributes"></a>Atributy
- Žádné.
+ Žádné
 
 ### <a name="child-elements"></a>Podřízené prvky
 
-- **RelativePath**: Cesta k šabloně. Na cestu může být pouze jedna položka, takže první z nich vyhraje pro všechny manifesty.
+- **RelativePath**: cesta k šabloně. Pro každou cestu může existovat jenom jedna položka, takže první z nich se načte pro všechny manifesty.
 
-- **LocalizedName**: A **NameDescriptionIcon** element, který určuje lokalizovaný název. Nepovinný parametr.
+- **Lokalizovaný**název: element **NameDescriptionIcon** , který určuje lokalizovaný název. Nepovinný parametr.
 
-- **SortOrder**: Řetězec, který určuje pořadí řazení. Nepovinný parametr.
+- **Pořadí**: řetězec, který určuje pořadí řazení. Nepovinný parametr.
 
-- **ParentFolderOverrideName**: Přepsaný název nadřazené složky. Nepovinný parametr. Tento prvek má **Name** atribut, což je hodnota řetězce, který určuje název.
+- **ParentFolderOverrideName**: přejmenovaný název nadřazené složky. Nepovinný parametr. Tento prvek má atribut **Name** , což je řetězcová hodnota, která určuje název.
 
-### <a name="parent-element"></a>Nadřazený prvek
+### <a name="parent-element"></a>Nadřazený element
  **VSTemplateManifest**
 
-## <a name="namedescriptionicon"></a>NázevDescriptionIcon
- Určuje název a popis, případně pro lokalizované šablony. Viz **LocalizedName** výše.
+## <a name="namedescriptionicon"></a>NameDescriptionIcon
+ Určuje název a popis, případně pro lokalizované šablony. Viz **lokalizovaný** symbol výše.
 
 ### <a name="attributes"></a>Atributy
 
-- **Balíček**: Hodnota řetězce, která určuje balíček. Nepovinný parametr.
+- **Balíček**: řetězcová hodnota, která určuje balíček. Nepovinný parametr.
 
-- **ID**: Hodnota řetězce, která určuje ID. Nepovinný parametr.
+- **ID**: hodnota řetězce, která určuje ID. Nepovinný parametr.
 
 ### <a name="child-elements"></a>Podřízené prvky
- Žádné.
+ Žádné
 
-### <a name="parent-element"></a>Nadřazený prvek
- **Lokalizovaný název**
+### <a name="parent-element"></a>Nadřazený element
+ **Lokalizovaný**
 
 ## <a name="examples"></a>Příklady
- Následující kód je příkladem souboru šablony projektu *.vstman.*
+ Následující kód je příkladem souboru *. vstman* šablony projektu.
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -119,7 +119,7 @@ Toto schéma popisuje formát manifestu šablony sady Visual Studio (*.vstman*) 
 
 ```
 
- Následující kód je příkladem souboru *.vstman* šablony položky.
+ Následující kód je příkladem souboru template *. vstman* položky.
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">

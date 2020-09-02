@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: ead3242c348acdf846fb57ec06057cc50c4b1c3b
-ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86285407"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Generování konstruktoru v aplikaci Visual Studio
@@ -37,7 +37,7 @@ Tato generace kódu platí pro:
 - [Přidat parametr do existujícího konstruktoru](#addparameter)
 - [Vytvoření a inicializace pole nebo vlastnosti z parametru konstruktoru](#create)
 
-## <a name="generate-constructor-and-pick-members-c-only"></a><a id = "pick"></a>Generovat konstruktor a vybrat členy (jenom C#)
+## <a name="generate-constructor-and-pick-members-c-only"></a><a id = "pick"></a> Generovat konstruktor a vybrat členy (jenom C#)
 
 1. Umístěte kurzor do libovolného prázdného řádku ve třídě:
 
@@ -68,7 +68,7 @@ Tato generace kódu platí pro:
 
    ![Generovat výsledek konstruktoru](media/constructor1-result-cs.png)
 
-## <a name="generate-constructor-with-properties-c-only"></a><a id = "with"></a>Generovat konstruktor s vlastnostmi (jenom C#)
+## <a name="generate-constructor-with-properties-c-only"></a><a id = "with"></a> Generovat konstruktor s vlastnostmi (jenom C#)
 
 1. Umístěte kurzor na instanci.
 
@@ -78,7 +78,7 @@ Tato generace kódu platí pro:
 
    ![Generovat náhled konstruktoru](media/generate-constructor-with-properties.png)
 
-## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a>Generovat konstruktor z vybraných polí (jenom C#)
+## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a> Generovat konstruktor z vybraných polí (jenom C#)
 
 1. Zvýrazněte členy, které chcete mít ve vytvořeném konstruktoru:
 
@@ -100,7 +100,7 @@ Tato generace kódu platí pro:
 
    ![Generovat výsledek konstruktoru](media/constructor2-result-cs.png)
 
-## <a name="generate-constructor-from-new-usage-c-and-visual-basic"></a><a id="usage"></a>Generovat konstruktor z nového použití (C# a Visual Basic)
+## <a name="generate-constructor-from-new-usage-c-and-visual-basic"></a><a id="usage"></a> Generovat konstruktor z nového použití (C# a Visual Basic)
 
 1. Umístěte kurzor na řádek, kde je červená vlnovka. Červená vlnovka indikuje volání konstruktoru, který ještě neexistuje.
 
@@ -138,7 +138,7 @@ Tato generace kódu platí pro:
 
        ![Generovat výsledek metody VB](media/constructor-result-vb.png)
 
-## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a>Přidat parametr do existujícího konstruktoru (pouze C#)
+## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a> Přidat parametr do existujícího konstruktoru (pouze C#)
 
 1. Přidejte parametr do existujícího volání konstruktoru.
 
@@ -165,7 +165,7 @@ Tato generace kódu platí pro:
 
 Můžete také přidat parametr do existující metody. Další informace naleznete v tématu [Přidání parametru do metody](add-parameter.md).
 
-## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a>Vytvoření a inicializace pole nebo vlastnosti z parametru konstruktoru (pouze C#)
+## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a> Vytvoření a inicializace pole nebo vlastnosti z parametru konstruktoru (pouze C#)
 
 1. Najděte existující konstruktor a přidejte parametr:
 

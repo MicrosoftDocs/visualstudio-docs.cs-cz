@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329180"
 ---
 # <a name="xaml-code-editor"></a>Editor kódu XAML
@@ -173,7 +173,7 @@ Můžete také změnit způsob, jakým posuvník vypadá a jaké další funkce 
 
 Ostatní oceňují pomocí *režimu mapy*, který v posuvníku zobrazuje řádky kódu v miniaturním pruhu. Vývojáři, kteří mají velký kód v souboru, mohou najít, že se tento režim mapy bude sledovat na řádky kódu efektivněji, než je výchozí posuvník.
 
-Další informace o tom, jak změnit výchozí nastavení posuvníku, najdete v tématu přizpůsobení stránky [s posuvníkem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md) .
+Další informace o tom, jak změnit výchozí nastavení posuvníku, najdete v tématu přizpůsobení stránky  [s posuvníkem](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md) .
 
 ## <a name="xaml-specific-features"></a>Funkce specifické pro XAML
 

@@ -1,5 +1,5 @@
 ---
-title: Diagnostické zprávy v okně výstupu | Dokumentace Microsoftu
+title: Diagnostické zprávy v okno Výstup | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -30,40 +30,40 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 60f8da2430e1c84af3c26be31c6de561291c8c6e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695299"
 ---
 # <a name="diagnostic-messages-in-the-output-window"></a>Diagnostické zprávy v okně Výstup
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete napsat zpráv za běhu do okna výstup pomocí třídy ladění a trasování, které jsou součástí <xref:System.Diagnostics> knihovny tříd. Pokud pouze výstup v ladicí verzi programu používejte třídu ladění. Použijte trasovací třídu, pokud chcete výstup v ladění i vydání verze.  
+Můžete psát zprávy za běhu do okna výstup pomocí třídy ladění nebo třídy trasování, která je součástí <xref:System.Diagnostics> knihovny tříd. Třídu Debug použijte, pokud je výstup pouze v ladicí verzi programu. Třídu Trace použijte, pokud chcete výstup v ladicí verzi i ve verzi Release.  
   
-## <a name="output-methods"></a>Výstup metody  
- <xref:System.Diagnostics.Trace> a <xref:System.Diagnostics.Debug> třídy poskytují metody pro následující výstup:  
+## <a name="output-methods"></a>Metody výstupu  
+ <xref:System.Diagnostics.Trace>Třídy a <xref:System.Diagnostics.Debug> poskytují následující metody výstupu:  
   
-- Různé `Write` metody, které výstup s informacemi bez narušení provádění. Nahraďte tyto metody `Debug.Print` metodu použitou v předchozích verzích jazyka Visual Basic.  
+- Různé `Write` metody, které výstupní informace bez přerušení provádění. Tyto metody nahrazují `Debug.Print` metodu použitou v předchozích verzích Visual Basic.  
   
-- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> metody, které přeruší informace o provádění a výstupy, pokud je zadaná podmínka se nezdaří. Ve výchozím nastavení `Assert` metoda zobrazí informace v dialogovém okně. Další informace najdete v tématu [kontrolní výrazy ve spravovaného kódu](../debugger/assertions-in-managed-code.md).  
+- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> metody, které přeruší provádění a vytvoří výstup informací v případě, že se zadaná podmínka nezdařila. Ve výchozím nastavení `Assert` Metoda zobrazí informace v dialogovém okně. Další informace naleznete v tématu [kontrolní výrazy ve spravovaném kódu](../debugger/assertions-in-managed-code.md).  
   
-- <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> metody, které vždy přeruší a vypíše informace. Ve výchozím nastavení `Fail` metody zobrazení informací v dialogovém okně.  
+- <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName>Metody a <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> , které vždy přerušují provádění a výstupy informací. Ve výchozím nastavení `Fail` metody zobrazují informace v dialogovém okně.  
   
-  Kromě programu si z vaší aplikace **výstup** okna můžete zobrazit informace o:  
+  Kromě programu z aplikace může okno **výstup** zobrazit informace o:  
   
-- Moduly ladicí program má načten nebo byla uvolněna.  
+- Moduly, které ladicí program načetl nebo uvolní.  
   
 - Výjimky, které jsou vyvolány.  
   
-- Procesy, které ukončíte.  
+- Procesy, které se ukončí.  
   
-- Vlákna, která ukončíte.  
+- Vlákna, která se ukončí.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Okno výstup](../ide/reference/output-window.md)   
+ [okno Výstup](../ide/reference/output-window.md)   
  [Trasování a instrumentace aplikací](https://msdn.microsoft.com/library/773b6fc4-9013-4322-b728-5dec7a72e743)   
- [Úvod do trasování a instrumentace](https://msdn.microsoft.com/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)   
- [C#, F#a typy projektů jazyka Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Úvod do instrumentace a trasování](https://msdn.microsoft.com/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)   
+ [Typy projektů jazyka C#, F # a Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)

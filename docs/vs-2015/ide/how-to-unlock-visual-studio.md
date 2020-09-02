@@ -11,10 +11,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a71a045661c48fd36733ecd8d2266470667a5c35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670597"
 ---
 # <a name="how-to-unlock-visual-studio"></a>Jak odemknout Visual Studio
@@ -29,7 +29,7 @@ Aplikaci Visual Studio můžete vyhodnotit zdarma až po dobu 30 dnů. Když se 
 ## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Odemčení sady Visual Studio pomocí online předplatného
  Chcete-li odemknout aplikaci Visual Studio pomocí předplatného MSDN nebo Visual Studio Online, které je přidruženo k účet Microsoft nebo pracovnímu nebo školnímu účtu:
 
-1. Klikněte na tlačítko přihlásit v pravém horním rohu integrovaného vývojového prostředí (nebo přejděte na soubor > Nastavení účtu, otevřete dialogové okno nastavení účtu a klikněte na tlačítko Přihlásit se).
+1. Klikněte na tlačítko přihlásit v pravém horním rohu integrovaného vývojového prostředí (nebo přejděte na soubor > nastavení účtu, otevřete dialogové okno nastavení účtu a klikněte na tlačítko Přihlásit se).
 
 2. Zadejte přihlašovací údaje pro účet Microsoft nebo pracovní nebo školní účet. Visual Studio najde předplatné MSDN nebo Visual Studio Team Services předplatné spojené s vaším účtem.
 
@@ -70,7 +70,7 @@ Aplikaci Visual Studio můžete vyhodnotit zdarma až po dobu 30 dnů. Když se 
 
 1. Obnovte si předplatné. Pokud chcete zobrazit další informace o licenci, kterou používáte, přejděte na dialogové okno nastavení účtu > a podívejte se na informace o licencích na pravé straně dialogového okna.
 
-2. Pokud máte jiné předplatné přidružené k jinému účtu, přidejte tento účet do seznamu všechny účty na levé straně dialogového okna nastavení účtu >, a to tak, že kliknete na Přidat účet... propojit.
+2. Pokud máte jiné předplatné přidružené k jinému účtu, přidejte tento účet do seznamu všechny účty na levé straně dialogového okna nastavení účtu >, a to tak, že kliknete na Přidat účet... .
 
 ## <a name="see-also"></a>Viz také
  [Přihlášení k sadě Visual Studio](../ide/signing-in-to-visual-studio.md)

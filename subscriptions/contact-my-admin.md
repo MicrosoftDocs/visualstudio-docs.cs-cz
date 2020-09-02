@@ -8,10 +8,10 @@ ms.date: 03/07/2020
 ms.topic: how-to
 description: Zjistěte, jak kontaktovat správce předplatného s žádostí o pomoc s dotazy nebo problémy.
 ms.openlocfilehash: d3469fa5c8ba69cf5a4d4dab6d5c4b6be070f4d8
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247433"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Získat pomoc od správce předplatného

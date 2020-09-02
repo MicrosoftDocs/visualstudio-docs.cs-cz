@@ -1,5 +1,5 @@
 ---
-title: Architektura vyhodnocovače výrazů | Dokumentace Microsoftu
+title: Architektura vyhodnocovacího filtru výrazů | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,49 +13,49 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e8e0aa8f5cc45e0f6e012ecb3f0a27a22725a259
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421230"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805625"
 ---
 # <a name="expression-evaluator-architecture"></a>Architektura vyhodnocovače výrazů
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka Chyba při vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> V aplikaci Visual Studio 2015 je tento způsob implementace vyhodnocovacích vyhodnocení výrazů zastaralý. Informace o implementaci vyhodnocovacích vyhodnocení výrazů CLR naleznete v tématu [vyhodnocovací filtry výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [Ukázka vyhodnocovacího filtru spravovaného výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Integrace proprietární jazyk do balíčku ladění sady Visual Studio znamená, že implementace rozhraní vyhodnocovače (EE) vyžaduje výraz a volání běžné poskytovatele jazykového nastavení symbolu za běhu (SP) a rozhraní vazače. SP a vazače objekty, spolu s aktuální adresou spuštění jsou kontext, ve kterém jsou výrazy vyhodnocovány. Informace, které tato rozhraní produkovat a konzumovat představuje klíčových konceptů v architektuře EE.  
+ Integrace vlastního jazyka do balíčku ladění sady Visual Studio znamená implementaci požadovaných rozhraní vyhodnocovacího filtru výrazů (EE) a volání rozhraní API pro Common Language Runtime Provider (SP) a Bindery. Objekty SP a Binder spolu s aktuální adresou spuštění jsou kontext, ve kterém jsou výrazy vyhodnocovány. Informace, které tato rozhraní vyrábí a spotřebovávají, představují klíčové koncepty architektury EE.  
   
 ## <a name="overview"></a>Přehled  
   
-### <a name="parsing-the-expression"></a>Parsování výrazu  
- Při ladění programu, jsou výrazy vyhodnocovány pro několik důvodů, ale vždy když laděný program se zastavil na zarážce (zarážku umístěn uživatelem nebo jeden způsobené výjimku). V tomto okamžiku, kdy sady Visual Studio získá rámec zásobníku, je reprezentovaná [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) rozhraní z ladicího stroje (DE). Visual Studio pak zavolá [GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) získat [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. Toto rozhraní představuje kontext, ve kterém můžete vyhodnotit výrazy; [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) je vstupním bodem k hodnocení. Do této chvíle jsou všechna rozhraní implementované DE.  
+### <a name="parsing-the-expression"></a>Analýza výrazu  
+ Když ladíte program, výrazy jsou vyhodnocovány z mnoha důvodů, ale vždy, když je program laděn, zastaveno na zarážce (buď zarážku, kterou zadal uživatel nebo je výsledkem výjimka). V tuto chvíli je k dispozici, když Visual Studio získá rámec zásobníku, jak je reprezentované rozhraním [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) , z ladicího stroje (de). Visual Studio pak zavolá [GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) , aby získalo rozhraní [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) . Toto rozhraní představuje kontext, ve kterém lze výrazy vyhodnotit; [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) je vstupním bodem procesu vyhodnocení. Až do tohoto okamžiku, všechna rozhraní jsou implementována pomocí DE.  
   
- Když `IDebugExpressionContext2::ParseText` je volána, DE vytvoří instanci EE přidružený jazyk zdrojového souboru, kde došlo k zarážce (DE také vytvoří instanci SH v tuto chvíli). Je reprezentován EE [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md) rozhraní. Pak zavolá DE [analyzovat](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) převést na výraz analyzovaný výrazu (ve formě textu), připraveno pro hodnocení. Tato analyzovaný výraz je reprezentován [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) rozhraní. Všimněte si, že je obvykle analyzovat a není v tuto chvíli vyhodnotit výraz.  
+ Při `IDebugExpressionContext2::ParseText` volání metody de vytvoří instanci objektu EE přidruženou k jazyku zdrojového souboru, kde došlo k zarážce (de také vytvoří instanci SH v tomto okamžiku). EE je reprezentované rozhraním [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md) . Rutina DE then rozvolá [analýzu](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) pro převod výrazu (v textovém formátu) na analyzovaný výraz připravený pro vyhodnocení. Tento analyzovaný výraz je reprezentován rozhraním [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) . Všimněte si, že výraz je obvykle analyzován a není v tomto okamžiku vyhodnocován.  
   
- DE vytvoří objekt, který implementuje [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) rozhraní, vloží `IDebugParsedExpression` objektu do `IDebugExpression2` objekt a vrátí `IDebugExpression2` objektu z `IDebugExpressionContext2::ParseText`.  
+ DE vytvoří objekt, který implementuje rozhraní [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) , vloží `IDebugParsedExpression` objekt do `IDebugExpression2` objektu a vrátí `IDebugExpression2` objekt z `IDebugExpressionContext2::ParseText` .  
   
 ### <a name="evaluating-the-expression"></a>Vyhodnocení výrazu  
- Visual Studio vyžaduje buď [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) analyzovaný vyhodnotit. Obě tyto metody volat [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (`IDebugExpression2::EvaluateSync` volá metodu okamžitě, zatímco `IDebugExpression2::EvaluateAsync` volá metodu prostřednictvím vlákna na pozadí) analyzovaný vyhodnotit a vrátíte se [ IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) rozhraní, které představuje hodnotu a typ analyzovaný výrazu. `IDebugParsedExpression::EvaluateSync` používá zadané SH, adresu a vazače převést analyzovaný výraz na skutečnou hodnotu, reprezentovaný `IDebugProperty2` rozhraní.  
+ Visual Studio volá buď [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) , k vyhodnocení analyzovaného výrazu. Obě tyto metody volají [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) ( `IDebugExpression2::EvaluateSync` volá metodu hned, při `IDebugExpression2::EvaluateAsync` volání metody prostřednictvím vlákna na pozadí) k vyhodnocení analyzovaného výrazu a vrácení rozhraní [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) , které představuje hodnotu a typ analyzovaného výrazu. `IDebugParsedExpression::EvaluateSync` používá poskytnutou SH, Address a Binder k převedení analyzovaného výrazu na skutečnou hodnotu reprezentované `IDebugProperty2` rozhraním.  
   
 ### <a name="for-example"></a>Například  
- Po dosažení zarážky v běžící aplikaci uživatel zvolí možnost zobrazit proměnnou **QuickWatch** dialogové okno. Toto dialogové okno zobrazí název proměnné, jeho hodnota a její typ. Uživatel může změnit obvykle hodnota.  
+ Po dosažení zarážky v běžícím programu se uživatel rozhodne zobrazit proměnnou v dialogovém okně **QuickWatch** . Toto dialogové okno zobrazuje název proměnné, její hodnotu a její typ. Uživatel může obvykle změnit hodnotu.  
   
- Když **QuickWatch** se zobrazí dialogové okno, název proměnné zkoumají odeslán jako text, který má [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Tím se vrátí [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) objekt v tomto případě představující analyzovaný výrazu, proměnné. [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) potom je volána k vytvoření `IDebugProperty2` objekt, který reprezentuje hodnotu proměnné a typ, jakož i její název. Je tato informace, které se zobrazí.  
+ Po zobrazení dialogového okna **QuickWatch** se název zkoušené proměnné pošle jako text do [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Vrátí objekt [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) představující analyzovaný výraz, v tomto případě proměnnou. [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) je poté volána k vyprodukování `IDebugProperty2` objektu, který představuje hodnotu a typ proměnné a také její název. Tyto informace se zobrazí.  
   
- Pokud uživatel změní hodnotu proměnné [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) volána s novou hodnotu, která změní hodnotu proměnné v paměti, použije se po obnovení program spuštěn.  
+ Pokud uživatel změní hodnotu proměnné, je [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) volána s novou hodnotou, která změní hodnotu proměnné v paměti tak, aby se použila při obnovení činnosti programu.  
   
- Zobrazit [zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md) podrobné informace o tomto procesu zobrazení hodnot proměnných. Zobrazit [změna hodnoty lokální](../../extensibility/debugger/changing-the-value-of-a-local.md) podrobné informace o tom, jak se změní hodnota proměnné.  
+ Další podrobnosti o tomto procesu zobrazení hodnot proměnných naleznete v tématu [zobrazování místních](../../extensibility/debugger/displaying-locals.md) hodnot. Další informace o změně hodnoty proměnné naleznete v tématu [Změna hodnoty místního prostředí](../../extensibility/debugger/changing-the-value-of-a-local.md) .  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)  
- Obsahuje argumenty, které se předávají při DE volání EE.  
+ Poskytuje argumenty, které jsou předány při volání DE v et.  
   
  [Rozhraní vyhodnocovače klíčových výrazů](../../extensibility/debugger/key-expression-evaluator-interfaces.md)  
- Popisuje klíčové rozhraní potřebné při zápisu EE, spolu s kontext vyhodnocení.  
+ Popisuje podklíčová rozhraní potřebná při psaní EE spolu s kontextem vyhodnocení.  
   
 ## <a name="see-also"></a>Viz také  
- [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
+ [Zápis vyhodnocovacího filtru výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)   
  [Změna hodnoty místní hodnoty](../../extensibility/debugger/changing-the-value-of-a-local.md)

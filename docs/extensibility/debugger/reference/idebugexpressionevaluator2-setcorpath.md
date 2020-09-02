@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCorPath | Dokumenty společnosti Microsoft
+title: 'IDebugExpressionEvaluator2:: SetCorPath | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bea93c3f10a946353c52231d0ac3802f0b2ec8e9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729275"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
-Nastaví cestu k běžnému jazyku runtime (CLR) načtené v ladicím programu.
+Nastaví cestu k modulu CLR (Common Language Runtime) zavedenému v ladicím programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int SetCorPath(
 
 ## <a name="parameters"></a>Parametry
 `pcstrCorPath`\
-[v] Cesta k CLR načtenv ladicím programu.
+pro Cesta k modulu CLR načteného v ladicím programu.
 
 ## <a name="return-value"></a>Návratová hodnota
- V případě `S_OK`úspěchu vrátí ; v opačném případě vrátí kód chyby.
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, jak implementovat tuto metodu pro **ExpressionEvaluatorPackage** objekt, který zpřístupňuje rozhraní [IDebugExpressionEvaluator2.](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)
+ Následující příklad ukazuje, jak implementovat tuto metodu pro objekt **ExpressionEvaluatorPackage** , který zpřístupňuje rozhraní [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) .
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)

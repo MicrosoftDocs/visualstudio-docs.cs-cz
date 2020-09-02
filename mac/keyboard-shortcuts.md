@@ -6,10 +6,10 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
 ms.openlocfilehash: 989c47e3c192c936eec0828b96a800d5ed4feaa4
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247383"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Výchozí klávesové zkratky v Visual Studio pro Mac
@@ -119,7 +119,7 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Dokumentace k rozhraní API|**⌥⌘?**|
 |Reference k rozhraní API Unity|**⌘'**|
 
-## <a name="other"></a>Jiné
+## <a name="other"></a>Další
 
 |Příkazy|Klávesové zkratky|
 |-|-|
@@ -216,7 +216,7 @@ Nashromáždili jsme nejvíce používané a nejužitečnější klávesové zkr
 |Transponovat znaky|**⌃ T**|
 |Zalamovat pomocí &lt; div&gt;|**⌥ ⇧ W**|
 
-## <a name="view"></a>Zobrazit
+## <a name="view"></a>Zobrazení
 
 |Příkazy|Klávesové zkratky|
 |-|-|

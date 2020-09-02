@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_iscvtcil – | Dokumentace Microsoftu
+title: 'IDiaSymbol:: get_isCVTCIL | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 34868f48cf330670c3c14b3979897d80b5525f40
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64799819"
 ---
-# <a name="idiasymbolgetiscvtcil"></a>IDiaSymbol::get_isCVTCIL
+# <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá příznak označující, zda modul byl převeden z modulu Common Intermediate Language (CIL) do nativního modulu.  
+Načte příznak označující, zda byl modul převeden z modulu Common Intermediate Language (CIL) na nativní modul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,23 +35,23 @@ HRESULT get_isCVTCIL(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud modul převedený ze souboru CIL do nativního kódu; v opačném případě vrátí `FALSE`.  
+ mimo Vrátí `TRUE` , zda byl modul převeden z jazyka CIL do nativního kódu. v opačném případě vrátí hodnotu `FALSE` .  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
+ V případě úspěchu vrátí, `S_OK` jinak vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
-> Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
+> Návratová hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost je k dispozici `SymTagCompilandDetails` typu symbolu (naleznete v tématu [compilanddetails –](../../debugger/debug-interface-access/compilanddetails.md).  
+ Tato vlastnost je k dispozici z `SymTagCompilandDetails` typu symbolu (viz [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Záhlaví:|dia2.h|  
-|Verze:|Ve verzi 8.0 DIA SDK|  
+|Hlaviček|Dia2. h|  
+|Verze:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

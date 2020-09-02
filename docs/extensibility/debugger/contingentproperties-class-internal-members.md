@@ -1,5 +1,5 @@
 ---
-title: Třída ContingentProperties - Interní členové | Dokumenty společnosti Microsoft
+title: ContingentProperties třída – interní členové | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c6441cafcc34a06464061b41691ea5faa32fc359
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739099"
 ---
-# <a name="contingentproperties-class---internal-members"></a>Třída ContingentProperties - interní členy
-Obsahuje další vlastnosti objektu. <xref:System.Threading.Tasks.Task>
+# <a name="contingentproperties-class---internal-members"></a>ContingentProperties třída – interní členy
+Obsahuje další vlastnosti <xref:System.Threading.Tasks.Task> objektu.
 
  **Obor názvů:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Sestava:** mscorlib (v mscorlib.dll)
+ **Sestavení:** mscorlib (v mscorlib.dll)
 
- Vzhledem k tomu, že k těmto interním členům nelze získat přístup z rozhraní .NET Framework, je ve společném zprostředkujícím jazyce (CIL) k dispozici následující syntaxe.
+ Vzhledem k tomu, že nemůžete získat přístup k těmto interním členům z .NET Framework, je k dispozici následující syntaxe v Common Intermediate Language (CIL).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .class auto ansi nested assembly beforefieldinit ContingentProperties
@@ -36,14 +36,14 @@ Obsahuje další vlastnosti objektu. <xref:System.Threading.Tasks.Task>
 
 ## <a name="members"></a>Členové
 
-### <a name="fields"></a>Fields (Pole)
+### <a name="fields"></a>Pole
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úkolů, které jsou registrovány s tímto úkolem.|
+|[m_children](../../extensibility/debugger/m-children-field.md)|Seznam podřízených úloh, které jsou registrovány s touto úlohou.|
 
 ## <a name="remarks"></a>Poznámky
- Rozhraní .NET Framework inicializuje pole této třídy pouze v případě, že jsou potřeba.
+ .NET Framework inicializuje pole této třídy pouze v případě potřeby.
 
 ## <a name="see-also"></a>Viz také
-- [Vnitřní rozhraní paralelního rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Vnitřní rozšíření pro .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

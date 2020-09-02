@@ -15,14 +15,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8171c6dcfe285ade07531896893915d0e209e0c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670197"
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>Dialogové okno Konfigurace motivu (starší verze)
-Toto téma popisuje, jak používat dialogové okno **Konfigurace motivu** ve starších [!INCLUDE[wfd1](../includes/wfd1-md.md)]. Starší verze [!INCLUDE[wfd2](../includes/wfd2-md.md)] použijte, pokud potřebujete cílit buď na [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)], nebo na [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)].
+Toto téma popisuje, jak používat dialogové okno **Konfigurace motivu** ve starší verzi [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Použijte starší verze, [!INCLUDE[wfd2](../includes/wfd2-md.md)] Pokud potřebujete cílit buď na, [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] nebo [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Motiv definuje barvy pozadí a popředí, styly, ikony a další vizuální prvky pracovního postupu. Motivy můžete uložit k opakovanému použití jinými pracovními postupy.
 
@@ -36,7 +36,7 @@ Toto téma popisuje, jak používat dialogové okno **Konfigurace motivu** ve st
 |**Umístění motivu:**|Název souboru a cesta k souboru motivu. Název souboru se změnami se vygeneruje pro nové motivy založené na názvu vygenerovaného motivu. Pokud změníte název vygenerovaného motivu, budete pravděpodobně chtít změnit název souboru tak, aby odpovídal názvu motivu.|
 |**...**|Kliknutím vyberte umístění pro uložení souboru motivu pracovního postupu, který používá příponu názvu souboru. WTM. Vybraná cesta bude zobrazená v textovém poli **umístění motivu** .|
 |**Vyberte návrháře a nakonfigurujte vlastnosti:**|V levém podokně se zobrazí stromové zobrazení aktivit, pro které lze motiv přizpůsobit. Ve stromovém zobrazení vyberte aktivitu a v podokně vlastnosti, která je napravo od podokna stromového zobrazení, se zobrazí vlastnosti pro aktivitu. Kliknutím na vlastnost změňte její hodnotu.|
-|**Tisk**|Kliknutím zobrazíte okno, ve kterém můžete zobrazit náhled efektů změny vlastností.|
+|**Preview**|Kliknutím zobrazíte okno, ve kterém můžete zobrazit náhled efektů změny vlastností.|
 
 ## <a name="see-also"></a>Viz také
  [Motivy, Návrhář postupu provádění, dialogové okno Možnosti (zastaralé)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md) [starší verze návrháře pro NÁPOVĚDU k programovací model Windows Workflow Foundation UI](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

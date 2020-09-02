@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017100"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: profilování aplikace SharePoint
@@ -36,7 +37,7 @@ ms.locfileid: "86017100"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Podporované edice Microsoft Windows a SharePointu.
@@ -271,7 +272,7 @@ ms.locfileid: "86017100"
 
      Tato funkce by se měla aktivovat mnohem rychleji, když se neodstraní volání do nečinné smyčky. Sestava profilace vzorku by se měla odrážet.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Přehled výkonnostní relace](../profiling/performance-session-overview.md)
 - [Příručka pro začátečníky k profilaci výkonu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Hledání kritických bodů aplikace pomocí profileru sady Visual Studio](https://msdn.microsoft.com/magazine/cc337887.aspx)

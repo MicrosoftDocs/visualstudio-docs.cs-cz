@@ -15,10 +15,10 @@ ms.workload:
 - uwp
 monikerRange: vs-2017
 ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537238"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>Analýza spotřeby energie v aplikacích pro UWP
@@ -60,7 +60,7 @@ Například plně nabitá baterie v tabletu uchovává určité množství energ
  Jakmile se metoda spustí, uživatelská značka je spolu se zprávou přidána do profilových dat.
 
 > [!NOTE]
-> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType>implementuje <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> rozhraní (projekt jako <xref:System.IDisposable?displayProperty=nameWithType> v jazyce C# a VB). Chcete-li zabránit úniku prostředků operačního systému, zavolejte <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> ( <xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> v jazyce C# a VB), až budete hotovi s kanálem protokolování.
+> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType> implementuje <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> rozhraní (projekt jako <xref:System.IDisposable?displayProperty=nameWithType> v jazyce C# a VB). Chcete-li zabránit úniku prostředků operačního systému, zavolejte <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> ( <xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> v jazyce C# a VB), až budete hotovi s kanálem protokolování.
 > - Každý otevřený protokolovací kanál musí mít jedinečný název. Pokud se pokusíte vytvořit nový kanál protokolování se stejným názvem jako neuvolněný kanál, vyvolá se výjimka.
 
 Příklad kódu naleznete v ukázce Windows SDK Sample [LoggingSession](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)Sample.
@@ -130,12 +130,12 @@ if (performance && performance.mark) {
 |![Krok 2](../profiling/media/procguid_2.png "ProcGuid_2")|Časová osa ukazuje délku relace profilace, aktivační události životního cyklu aplikace a uživatelské značky.|
 |![Krok 3](../profiling/media/procguid_3.png "ProcGuid_3")|Přetažením modrých panelů můžete vybrat určitou oblast časové osy a omezit tak sestavu jen na tuto část časové osy.|
 |![Krok 4](../profiling/media/procguid_4.png "ProcGuid_4")|Graf **využití napájení** je víceřádkový graf, který zobrazuje změnu ve výstupu napájení způsobenou prostředkem zařízení během relace profilování. Profiler Spotřeba energie sleduje výkon využívaný procesorem, síťovou aktivitou a displejem.|
-|![Krok 5](../profiling/media/procguid_6.png "ProcGuid_6")|Graf **prostředky (zapnuto/vypnuto)** poskytuje podrobné informace o nákladech na energii sítě. Panel **síť** představuje čas, kdy bylo připojení k síti otevřeno. Podřízený panel **přenos dat** je čas, kdy aplikace přijímala nebo odesílala data přes síť.|
+|![Krok 5](../profiling/media/procguid_6.png "ProcGuid_6")|Graf **prostředky (zapnuto/vypnuto)**  poskytuje podrobné informace o nákladech na energii sítě. Panel **síť** představuje čas, kdy bylo připojení k síti otevřeno. Podřízený panel **přenos dat** je čas, kdy aplikace přijímala nebo odesílala data přes síť.|
 |![Krok 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|**Souhrn využití energie** zobrazuje poměrnou hodnotu celkové energie, která se použila ve vybrané časové ose podle procesoru, síťové aktivity a displeje obrazovky.|
 
  **Postup analýzy dat energetického profilu**
 
- Najděte oblast, kde výkon prostředku dosáhl vrcholu. Přiřaďte tuto oblast k funkci vaší aplikace. Pomocí ovládacích panelů časové osy můžete tuto oblast přiblížit. Pokud se zaměřujete na využití sítě, rozbalte uzel **síť** v grafu **prostředky (zapnuto/vypnuto)** , abyste porovnali čas, kdy se síťové připojení otevřelo v době, kdy aplikace přijímala nebo přenáší data prostřednictvím připojení. Zkrácení doby, po kterou je síť zbytečně otevřená, představuje velmi efektivní optimalizaci.
+ Najděte oblast, kde výkon prostředku dosáhl vrcholu. Přiřaďte tuto oblast k funkci vaší aplikace. Pomocí ovládacích panelů časové osy můžete tuto oblast přiblížit. Pokud se zaměřujete na využití sítě, rozbalte uzel **síť** v grafu **prostředky (zapnuto/vypnuto)**  , abyste porovnali čas, kdy se síťové připojení otevřelo v době, kdy aplikace přijímala nebo přenáší data prostřednictvím připojení. Zkrácení doby, po kterou je síť zbytečně otevřená, představuje velmi efektivní optimalizaci.
 
 ## <a name="optimize-energy-use"></a>Optimalizace spotřeby energie
  Kromě přenosu dat vynakládají síťová připojení energii také na inicializaci, udržování a ukončování připojení. Některé sítě udržují připojení po určitou dobu po odeslání nebo přijetí dat, aby umožnily přenos většího množství dat v rámci jednoho připojení. Podokno **prostředky (zapnuto/vypnuto)** můžete použít k prohlédnutí způsobu, jakým vaše aplikace komunikuje s připojením.

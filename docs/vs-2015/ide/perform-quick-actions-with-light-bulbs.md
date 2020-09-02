@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 78ac9b0aba4e56b2240ef65783231d31d77e5144
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670341"
 ---
 # <a name="perform-quick-actions-with-light-bulbs"></a>Rychlé akce pomocí žárovek
@@ -23,7 +23,7 @@ ms.locfileid: "72670341"
 
  ![Ikona malé žárovky](../ide/media/vs2015-lightbulbsmall.png "VS2015_LightBulbSmall")
 
- V C# a Visual Basic uvidíte žárovku, pokud je červená vlnovka a Visual Studio obsahuje návrhy na to, jak problém vyřešit. Pokud máte například chybu označenou červenou vlnovkou, žárovka se zobrazí v případě, že jsou pro tuto chybu k dispozici opravy. Když C++v nástroji přidáte novou funkci do hlavičkového souboru, zobrazí se žárovka, která nabízí, aby bylo možné vytvořit zástupnou implementaci této funkce. Pro libovolný jazyk mohou třetí strany poskytovat vlastní diagnostiku a návrhy, například jako součást sady SDK, a žárovky Visual Studio budou na základě těchto pravidel rozsvítit.
+ V jazyce C# a Visual Basic se zobrazí žárovka, pokud je červená vlnovka a Visual Studio obsahuje návrhy na to, jak problém vyřešit. Pokud máte například chybu označenou červenou vlnovkou, žárovka se zobrazí v případě, že jsou pro tuto chybu k dispozici opravy. V jazyce C++ když přidáte novou funkci do hlavičkového souboru, zobrazí se žárovka, která nabízí pro vytvoření zástupné implementace této funkce. Pro libovolný jazyk mohou třetí strany poskytovat vlastní diagnostiku a návrhy, například jako součást sady SDK, a žárovky Visual Studio budou na základě těchto pravidel rozsvítit.
 
 ## <a name="to-see-a-light-bulb"></a>Chcete-li zobrazit žárovku
 

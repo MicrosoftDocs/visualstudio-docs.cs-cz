@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::searchforreturnaddress – | Dokumentace Microsoftu
+title: 'IDiaStackWalkFrame:: Searchforreturnaddress – | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bf23ad6c0edd2a662650e57c3582ec0e1dc1a5d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150159"
 ---
 # <a name="idiastackwalkframesearchforreturnaddress"></a>IDiaStackWalkFrame::searchForReturnAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vyhledá zadaný zásobník snímků pro nejbližší zpáteční adresu funkce.  
+Vyhledá zadaný rámec zásobníku pro nejbližší návratovou adresu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ HRESULT searchForReturnAddress ( 
   
 #### <a name="parameters"></a>Parametry  
  `frame`  
- [in] [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekt, který představuje aktuální rámec zásobníku.  
+ pro Objekt [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) , který představuje aktuální rámec zásobníku.  
   
  `returnAddress`  
- [out] Vrátí nejbližší zpáteční adresu funkce.  
+ mimo Vrátí nejbližší návratovou adresu funkce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Idiastackwalkframe –](../../debugger/debug-interface-access/idiastackwalkframe.md)   
+ [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::Attach | Dokumentace Microsoftu
+title: 'IDebugProgramEx2:: Attach | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4fe729f2fc196380a3db1a60d1c32f62bbd70998
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439157"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64817810"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Relaci připojení k programu.  
+Připojte relaci k programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,22 +45,22 @@ int Attach( 
   
 #### <a name="parameters"></a>Parametry  
  `pCallback`  
- [in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který reprezentuje funkce zpětného volání, která odesílá události do připojeného ladicího stroje.  
+ pro Objekt [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) , který představuje funkci zpětného volání, do které připojený ladicí stroj odesílá události.  
   
  `dwReason`  
- [in] Hodnota z [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) výčet, který je popsaný i důvod pro operace připojení.  
+ pro Hodnota z výčtu [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) , která popisuje důvod operace připojení.  
   
  `pSession`  
- [in] Hodnota, která jednoznačně identifikuje relace, která se připojuje k programu.  
+ pro Hodnota, která jednoznačně identifikuje relaci, která je připojena k programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Tato metoda by měla vrátit `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` Pokud program je již připojen.  
+ V případě úspěchu vrátí `S_OK` . v opačném případě vrátí kód chyby. Tato metoda by měla vracet `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` , pokud je program již připojen.  
   
 ## <a name="remarks"></a>Poznámky  
- Port, který obsahuje program můžete použít hodnotu v `pSession` k určení, které relace se pokouší připojit k programu. Například pokud port umožňuje pouze jednu ladicí relaci se připojit k procesu najednou, port, který můžete určit, pokud stejné relace je již připojena k jiné programy v procesu.  
+ Port, který obsahuje program, může použít hodnotu v `pSession` k určení relace, která se pokouší o připojení k programu. Pokud například port umožňuje připojit pouze jednu relaci ladění k procesu najednou, port může určit, zda je stejná relace již připojena k ostatním programům v procesu.  
   
 > [!NOTE]
-> Předané rozhraní `pSession` je považován za pouze do souboru cookie, hodnotu, která jednoznačně identifikuje správce ladění relace připojení k tomuto programu; žádný z metod na zadané rozhraní není funkční.  
+> Předané rozhraní `pSession` je považováno za soubor cookie, což je hodnota, která jednoznačně identifikuje Správce ladění relací, který se připojuje k tomuto programu; žádná z metod v zadaném rozhraní není funkční.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

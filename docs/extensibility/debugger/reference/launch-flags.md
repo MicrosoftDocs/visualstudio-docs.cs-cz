@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Dokumenty společnosti Microsoft
+title: LAUNCH_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f18fb850641391f451f5eedb08b7130566dd4de3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714708"
 ---
 # <a name="launch_flags"></a>LAUNCH_FLAGS
 Určuje příznaky spuštění ladění.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_LAUNCH_FLAGS {
@@ -46,9 +46,9 @@ public enum enum_LAUNCH_FLAGS {
 };
 ```
 
-## <a name="fields"></a>Fields (Pole)
+## <a name="fields"></a>Pole
 `LAUNCH_DEBUG`\
-Spustí proces ladění.
+Spustí proces pro ladění.
 
 `LAUNCH_NODEBUG`\
 Spustí proces bez ladění.
@@ -57,17 +57,17 @@ Spustí proces bez ladění.
 ZASTARALÉ, NEPOUŽÍVEJTE.
 
 `LAUNCH_MERGE_ENV`\
-Spustí proces a sloučí prostředí s hostitelem spuštění.
+Spustí proces a sloučí prostředí se spouštěcím hostitelem.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou předány jako argument [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) metoda.
+Tyto hodnoty jsou předány jako argument metodě [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) .
 
-Tyto příznaky mohou být kombinovány `OR`s bitovým .
+Tyto příznaky mohou být kombinovány s bitovým operátorem `OR` .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 35ef0ea0352141f18945632f996237c2d9d90204
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547417"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>Postupy: rozšiřování oblastí v dokumentech prostřednictvím kódu programu

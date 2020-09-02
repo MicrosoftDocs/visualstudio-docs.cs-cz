@@ -1,5 +1,5 @@
 ---
-title: INTERCEPT_EXCEPTION_ACTION | Dokumenty společnosti Microsoft
+title: INTERCEPT_EXCEPTION_ACTION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cc44a4fc5264566468777749d5732662ba81ed6d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715071"
 ---
 # <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
-Určuje, jaké akce je třeba provést při zachycení výjimek.
+Určuje, jaké akce se mají provést při zachytávání výjimek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,15 +45,15 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
 ## <a name="parameters"></a>Parametry
 
 `IEA_INTERCEPT`\
-Povolí zachycení aktuální výjimky. Toto je jediná hodnota podporovaná v současné době a musí být zadána.
+Povoluje zachycení aktuální výjimky. Toto je jediná hodnota podporovaná v současnosti a musí se zadat.
 
 ## <a name="remarks"></a>Poznámky
-Tyto hodnoty jsou předány do [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) metoda.
+Tyto hodnoty jsou předány do metody [InterceptCurrentException –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) .
 
 ## <a name="requirements"></a>Požadavky
-Záhlaví: msdbg.h
+Záhlaví: msdbg. h
 
-Obor názvů: Microsoft.VisualStudio.Debugger.Interop
+Obor názvů: Microsoft. VisualStudio. Debugger. Interop
 
 Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll
 

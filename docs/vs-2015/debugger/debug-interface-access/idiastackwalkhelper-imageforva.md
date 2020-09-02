@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::imageforva – | Dokumentace Microsoftu
+title: 'IDiaStackWalkHelper:: imageForVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 36ad6529f28701d0e6d83550636382be773f0ec1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150102"
 ---
 # <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vrátí začátek pro spustitelný soubor bitové kopie v paměti zadané virtuální adresy někde v paměti ke spustitelnému souboru.  
+Vrátí začátek image spustitelného souboru v paměti dané virtuální adresou v paměťovém prostoru spustitelného souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ HRESULT imageForVA(
   
 #### <a name="parameters"></a>Parametry  
  `vaContext`  
- [in] Virtuální adresa, která je někde v prostoru ke spustitelnému souboru.  
+ pro Virtuální adresa, která se nachází někde v prostoru spustitelného souboru.  
   
  `pvaImageStart`  
- [out] Vrátí počáteční virtuální adresu ke spustitelnému souboru obrázku.  
+ mimo Vrátí počáteční virtuální adresu obrázku spustitelného souboru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

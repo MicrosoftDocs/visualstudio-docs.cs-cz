@@ -1,5 +1,5 @@
 ---
-title: Aplikace Windows Store spustit ve vzdáleném počítači | Dokumentace Microsoftu
+title: Spouštění aplikací pro Windows Store ve vzdáleném počítači | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,160 +15,160 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e53e05d9df5a7bbdca5fd8a9b74dd9325dc7aae5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426480"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64794806"
 ---
 # <a name="run-windows-store-apps-on-a-remote-machine"></a>Spouštění aplikací pro Windows Store ve vzdáleném počítači
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Platí pouze pro Windows] (.. /Image/windows_only_content.png "windows_only_content")  
+Platí jenom pro Windows] (.. /Image/windows_only_content.png "windows_only_content")  
   
- Aplikace Visual Studio Remote Tools umožňuje spouštění, ladění, profilování a testování aplikací pro Windows Store, která běží na jednom zařízení z druhého počítače, na kterém běží Visual Studio. Spuštění na vzdáleném zařízení může být zvláště efektivní, když počítač Visual Studio nepodporuje funkce, které jsou specifické pro aplikace Windows Store, jako je například dotykového ovládání, geolokační a fyzická orientace. Toto téma popisuje postupy pro konfiguraci a spuštění vzdálené relace.  
+ Aplikace Visual Studio Remote Tools umožňuje spouštět, ladit, profilovat a testovat aplikaci pro Windows Store, která běží na jednom zařízení z druhého počítače se systémem Visual Studio. Spuštění na vzdáleném zařízení může být obzvláště efektivní, pokud počítač s aplikací Visual Studio nepodporuje funkce, které jsou specifické pro aplikace pro Windows Store, jako je dotykové ovládání, geografické umístění a fyzická orientace. Toto téma popisuje postupy pro konfiguraci a spuštění vzdálené relace.  
   
-## <a name="BKMK_In_this_topic"></a> V tomto tématu  
- Další:  
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> V tomto tématu  
+ Můžete se dozvědět:  
   
  [Požadavky](#BKMK_Prerequisites)  
   
  [Zabezpečení](#BKMK_Security)  
   
- [Jak se připojit přímo do vzdáleného zařízení](#BKMK_DirectConnect)  
+ [Jak se připojit přímo ke vzdálenému zařízení](#BKMK_DirectConnect)  
   
- [Instalace vzdálených nástrojů](#BKMK_Installing_the_Remote_Tools)  
+ [Instalace nástrojů Remote Tools](#BKMK_Installing_the_Remote_Tools)  
   
- [Spuštění sledování vzdáleného ladicího programu](#BKMK_Starting_the_Remote_Debugger_Monitor)  
+ [Spouští se monitorování vzdáleného ladicího programu.](#BKMK_Starting_the_Remote_Debugger_Monitor)  
   
  [Konfigurace vzdáleného ladicího programu](#BKMK_ConfigureRemoteDebugger)  
   
- [Konfigurace projektu Visual Studio pro vzdálené ladění](#BKMK_ConnectVS)  
+ [Konfigurace projektu sady Visual Studio pro vzdálené ladění](#BKMK_ConnectVS)  
   
-- [Volba vzdáleného zařízení pro projekty jazyka C# a Visual Basic](#BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects)  
+- [Volba vzdáleného zařízení pro projekty v jazyce C# a Visual Basic](#BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects)  
   
-- [Volba vzdáleného zařízení pro projekty jazyka JavaScript a C++](#BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects)  
+- [Volba vzdáleného zařízení pro projekty JavaScript a C++](#BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects)  
   
   [Spuštění relace vzdáleného ladění](#BKMK_RunRemoteDebug)  
   
-## <a name="BKMK_Prerequisites"></a> Požadované součásti  
+## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a> Požadovaný  
  Ladění na vzdáleném zařízení:  
   
 - Vzdálené zařízení a počítač s aplikací Visual Studio musí být připojeny přes síť nebo připojeny přímo pomocí kabelu Ethernet. Ladění po Internetu není podporováno.  
   
-- Licence vývojáře musí být nainstalována na vzdáleném zařízení.  
+- Na vzdáleném zařízení musí být nainstalována licence vývojáře.  
   
 - Na vzdáleném zařízení musí být spuštěny součásti vzdáleného ladění.  
   
-- Musíte být správcem vzdáleného zařízení ke konfiguraci brány firewall během instalace. Musíte mít uživatelský přístup ke vzdálenému zařízení ke spuštění nebo připojení vzdáleného ladicího programu.  
+- Abyste mohli nakonfigurovat bránu firewall během instalace, musíte být správcem vzdáleného zařízení. Ke spuštění nebo připojení ke vzdálenému ladicímu programu musíte mít uživatelský přístup ke vzdálenému zařízení.  
   
-## <a name="BKMK_Security"></a> Zabezpečení  
- Ve výchozím nastavení používá vzdálený ladicí program ověřování Windows.  
+## <a name="security"></a><a name="BKMK_Security"></a> Bezpečnost  
+ Ve výchozím nastavení používá vzdálený ladicí program ověřování systému Windows.  
   
 > [!WARNING]
-> Můžete také spustit vzdálený ladicí program v režimu bez ověřování, ale tento režim se rozhodně nedoporučuje. Při spuštění v tomto režimu není žádné zabezpečení sítě. Na možnost Režim bez ověřování klikněte pouze v případě, že jste si jisti, že není síť ohrožena škodlivými nebo nevyžádanými daty.  
+> Můžete také spustit vzdálený ladicí program v režimu bez ověřování, ale tento režim se důrazně nedoporučuje. Při spuštění v tomto režimu není žádné zabezpečení sítě. Na možnost Režim bez ověřování klikněte pouze v případě, že jste si jisti, že není síť ohrožena škodlivými nebo nevyžádanými daty.  
   
-## <a name="BKMK_DirectConnect"></a> Jak se připojit přímo do vzdáleného zařízení  
- Pro připojení přímo ke vzdálenému zařízení, připojte počítač Visual Studio k zařízení pomocí standardního ethernetového kabelu. Pokud zařízení nemá port Ethernetu, můžete použít adaptér USB pro připojení k kabel.  
+## <a name="how-to-connect-directly-to-a-remote-device"></a><a name="BKMK_DirectConnect"></a> Jak se připojit přímo ke vzdálenému zařízení  
+ Pokud se chcete připojit přímo ke vzdálenému zařízení, připojte počítač se sadou Visual Studio k zařízení se standardním kabelem Ethernet. Pokud zařízení nemá port sítě Ethernet, můžete k připojení k kabelu použít adaptér USB na Ethernet.  
   
-## <a name="BKMK_Installing_the_Remote_Tools"></a> Instalace vzdálených nástrojů  
+## <a name="installing-the-remote-tools"></a><a name="BKMK_Installing_the_Remote_Tools"></a> Instalace nástrojů Remote Tools  
   
 > [!NOTE]
 > **Verze a aktualizace**  
 >   
-> **Remote Tools for Visual Studio 2015** nejsou podporovány v předchozích verzích sady Visual Studio.  
+> **Remote Tools for Visual Studio 2015** nejsou podporovány pro předchozí verze sady Visual Studio.  
 >   
-> Doporučujeme nainstalovat verzi aktualizace nástroje Remote Tools for Visual Studio 2015, která odpovídá verzi aktualizace instalace sady Visual Studio.  
+> Doporučujeme nainstalovat aktualizaci verze Remote Tools for Visual Studio 2015, která odpovídá verzi aktualizace instalace sady Visual Studio.  
 >   
-> Ladicí program VS je kompatibilní s libovolnou kombinací verzí VS 2015 a nástrojů Remote Tools for VS 2015. Nejnovější funkce v aplikaci Visual Studio však vyžadují používání nejaktuálnější verzi sady Visual Studio a nástrojů Remote Tools.  
+> Ladicí program VS je kompatibilní s libovolnou kombinací verzí VS 2015 a nástroji Remote Tools for VS 2015. Nejnovější funkce v aplikaci Visual Studio však vyžadují používání nejaktuálnější verzi sady Visual Studio a nástrojů Remote Tools.  
 >   
 > Další diagnostické nástroje mohou vyžadovat stejné verze nástrojů Remote Tools a Visual Studio.  
   
  **Instalace komponent vzdáleného ladění na vzdáleném zařízení**  
   
- Ke spuštění nebo uložení instalačního programu pro nástroje remote tools, zvolte jeden z odkazů v této tabulce, která odpovídá verzi sady Visual Studio:  
+ Pro spuštění nebo uložení instalačního programu pro nástroje Remote Tools vyberte jeden z odkazů v této tabulce, který odpovídá vaší verzi sady Visual Studio:  
   
-|Version|Odkaz|Poznámky|
+|Verze|Odkaz|Poznámky|
 |-|-|-|
-|Visual Studio 2015 Update 3|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Pokud se zobrazí výzva, připojte se k bezplatné Visual Studio Dev Essentials skupiny nebo jenom se můžete přihlásit pomocí platné předplatné sady Visual Studio. Pak znovu otevřete odkaz v případě potřeby. Kdykoli stáhněte verzi, která odpovídá operačního systému zařízení (x 86, x64 nebo verzi ARM)|
-|Visual Studio 2015 (older)|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Pokud se zobrazí výzva, připojte se k bezplatné Visual Studio Dev Essentials skupiny nebo jenom se můžete přihlásit pomocí platné předplatné sady Visual Studio. Pak znovu otevřete odkaz v případě potřeby. Kdykoli stáhněte verzi, která odpovídá operačního systému zařízení (x 86, x64 nebo verzi ARM)|
-|Visual Studio 2013|[Vzdálené nástroje](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Stáhněte si stránku v dokumentaci k sadě Visual Studio 2013|
+|Visual Studio 2015 Update 3|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Pokud se zobrazí výzva, připojte se ke skupině Free Visual Studio Dev Essentials nebo se můžete přihlásit jenom pomocí platného předplatného sady Visual Studio. V případě potřeby pak propojení znovu otevřete. Vždy stáhnout verzi, která odpovídá operačnímu systému zařízení (verze x86, x64 nebo ARM)|
+|Visual Studio 2015 (starší verze)|[Vzdálené nástroje](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Pokud se zobrazí výzva, připojte se ke skupině Free Visual Studio Dev Essentials nebo se můžete přihlásit jenom pomocí platného předplatného sady Visual Studio. V případě potřeby pak propojení znovu otevřete. Vždy stáhnout verzi, která odpovídá operačnímu systému zařízení (verze x86, x64 nebo ARM)|
+|Visual Studio 2013|[Vzdálené nástroje](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Stránka pro stažení v dokumentaci k Visual Studio 2013|
   
- Můžete zvolit, zda chcete stáhnout instalační program nebo ho chcete ihned spustit. Když spustíte instalační program, přijměte uživatelskou smlouvu a klikněte na tlačítko **nainstalovat**.  
+ Můžete zvolit, zda chcete stáhnout instalační program nebo ho chcete ihned spustit. Když spustíte instalační program, přijměte uživatelskou smlouvu a pak zvolte možnost **nainstalovat**.  
   
- Ve výchozím nastavení jsou komponenty vzdáleného ladění nainstalovány v **14.0\Common7\IDE\Remote C:\Program Files\Microsoft Visual Studio Debugger** složky.  
+ Ve výchozím nastavení se komponenty vzdáleného ladění instalují do složky **C:\Program Files\Microsoft Visual Studio 14.0 \ Common7\IDE\Remote Debugger** .  
   
-## <a name="BKMK_Starting_the_Remote_Debugger_Monitor"></a> Spuštění sledování vzdáleného ladicího programu  
+## <a name="starting-the-remote-debugger-monitor"></a><a name="BKMK_Starting_the_Remote_Debugger_Monitor"></a> Spouští se monitorování vzdáleného ladicího programu.  
   
 > [!NOTE]
-> Vzhledem k tomu, že vzdálené ladění nastaví konfiguraci brány firewall umožňující navázat komunikaci s hostitelem Visual Studio, musíte být správcem vzdáleného zařízení při prvním spuštění vzdáleného ladicího programu.  
+> Vzhledem k tomu, že vzdálený ladicí program nakonfiguruje bránu firewall tak, aby umožňovala komunikaci s hostitelem sady Visual Studio, musíte být správcem vzdáleného zařízení při prvním spuštění vzdáleného ladicího programu.  
   
- Po instalaci nástrojů Remote Tools, zvolte **vzdálený ladicí program** na **Start** obrazovky. **Konfigurace vzdáleného ladění** se zobrazí při prvním spuštění vzdáleného ladicího programu.  
+ Po instalaci nástrojů Remote Tools klikněte na obrazovce **Start** na možnost **vzdálený ladicí program** . **Konfigurace vzdáleného ladění** se zobrazí při prvním spuštění vzdáleného ladicího programu.  
   
- Na **konfigurace vzdáleného ladění** dialogové okno:  
+ V dialogovém okně **Konfigurace vzdáleného ladění** :  
   
-1. Pokud není nainstalováno rozhraní API webových služeb Windows, použijte tlačítko **instalace**  
+1. Pokud není nainstalováno rozhraní API webových služeb systému Windows, klikněte na tlačítko **nainstalovat** .  
   
-2. V **konfigurace brány Windows Firewall** zvolte položky, které chcete povolit připojení do sítě. Jsou povoleny pouze ty sítě, které zařízení je nyní připojen k. Musíte vybrat aspoň jednu síť.  
+2. Ve skupině **konfigurovat bránu Windows Firewall** vyberte sítě, kterým chcete povolená připojení. Povolené jsou jenom ty sítě, ke kterým je zařízení aktuálně připojené. Musíte zvolit aspoň jednu síť.  
   
-3. Zvolte **konfigurovat vzdálené ladění** nastavit možnosti brány firewall a spustit vzdálený ladicí program.  Otevřít **Visual Studio Remote Debugging Monitor** dialogové okno uživatelům udělit oprávnění k nástrojům remote tools a nastavit další pokročilé možnosti.  
+3. Vyberte možnost **Konfigurovat vzdálené ladění** a nastavte možnosti brány firewall a spusťte vzdálený ladicí program.  Otevřete dialogové okno **sledování vzdáleného ladění sady Visual Studio** , abyste uživatelům poskytli oprávnění ke vzdáleným nástrojům a nastavili další pokročilé možnosti.  
   
-4. **Visual Studio Remote Debugging Monitor** zobrazí se dialogové okno. Můžete uživatelům udělit oprávnění k nástrojům remote tools a nastavit rozšířenou možnost z tohoto dialogového okna.  
+4. Zobrazí se dialogové okno **sledování vzdáleného ladění sady Visual Studio** . Uživatelům můžete udělit oprávnění ke vzdáleným nástrojům a nastavit další možnost Upřesnit z tohoto dialogového okna.  
   
-## <a name="BKMK_ConfigureRemoteDebugger"></a> Konfigurace vzdáleného ladicího programu  
- Použijete dva nástroje upravit konfiguraci vzdáleného ladicího programu.  
+## <a name="configuring-the-remote-debugger"></a><a name="BKMK_ConfigureRemoteDebugger"></a> Konfigurace vzdáleného ladicího programu  
+ Pomocí dvou nástrojů můžete změnit konfiguraci vzdáleného ladicího programu.  
   
-1. Na **nástroje** nabídku **Visual Studio Remote Debugging Monitor**:  
+1. V nabídce **nástroje** v **aplikaci Visual Studio sledování vzdáleného ladění**:  
   
-   1. Zvolte **možnosti** Chcete-li změnit číslo portu, režimu ověřování nebo intervalu časového limitu vzdáleného ladicího programu.  
+   1. Vyberte **Možnosti** pro změnu čísla portu, režimu ověřování nebo intervalu časového limitu vzdáleného ladicího programu.  
   
-   2. Zvolte **oprávnění** přidat nebo odebrat uživatele, kteří mají oprávnění pro vzdálené ladění.  
+   2. Chcete-li přidat nebo odebrat uživatele, kteří mají oprávnění pro vzdálené ladění, vyberte možnost **oprávnění** .  
   
        > [!NOTE]
-       > Oprávnění musí být udělena pro každý uživatelský účet, který je vzdáleně laděn.  
+       > Oprávnění musí být udělena každému uživatelskému účtu, který je vzdáleně laděn.  
   
-   Můžete použít **Průvodce konfigurací vzdáleného ladicího programu** nastavíte rozšířené možnosti pro vzdálený ladicí program. Chcete-li spustit průvodce, zvolte **Průvodce konfigurací vzdáleného ladicího programu** na úvodní obrazovce.  
+   Pomocí Průvodce nastavením **vzdáleného ladicího programu** můžete nastavit pokročilé možnosti vzdáleného ladicího programu. Průvodce spustíte tak, že na obrazovce Start kliknete na možnost **Průvodce nastavením vzdáleného ladicího programu** .  
   
-2. Na **konfigurovat Visual Studio Remote Debugger** stránky, můžete také spustit vzdálený ladicí program jako službu. Ve většině případů není spuštěná jako služba vyžaduje.  
+2. Na stránce **konfigurace Visual Studio Remote Debugger** můžete zvolit spuštění vzdáleného ladícího programu jako služby. Ve většině případů se spuštění jako služba nevyžaduje.  
   
-3. Na **konfigurace brány Windows Firewall pro ladění** stránky, můžete přidat nebo odebrat typ sítí, které chcete připojit ke vzdálenému ladicímu programu. Jsou povoleny pouze ty sítě, které zařízení je nyní připojen k. Musíte vybrat aspoň jednu síť.  
+3. Na stránce **konfigurovat bránu Windows Firewall pro ladění** můžete přidat nebo odebrat typy sítí, ke kterým se má vzdálený ladicí program připojit. Povolené jsou jenom ty sítě, ke kterým je zařízení aktuálně připojené. Musíte zvolit aspoň jednu síť.  
   
-## <a name="BKMK_ConnectVS"></a> Konfigurace projektu Visual Studio pro vzdálené ladění  
- Zadáte vzdáleného zařízení pro připojení k ve vlastnostech projektu. Postup se liší v závislosti na programovacím jazyce. Můžete zadat název sítě vzdáleného zařízení nebo ho můžete vybrat v dialogovém okně vyberte připojení vzdáleného ladicího programu.  
+## <a name="configuring-the-visual-studio-project-for-remote-debugging"></a><a name="BKMK_ConnectVS"></a> Konfigurace projektu sady Visual Studio pro vzdálené ladění  
+ Ve vlastnostech projektu zadáte vzdálené zařízení, ke kterému se chcete připojit. Postup se liší v závislosti na programovacím jazyce. Můžete zadat síťový název vzdáleného zařízení, nebo ho můžete vybrat v dialogovém okně vybrat připojení vzdáleného ladicího programu.  
   
- ![Dialogové okno Vyberte připojení vzdáleného ladicího programu](../debugger/media/vsrun-selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")  
+ ![Dialogové okno vybrat připojení vzdáleného ladicího programu](../debugger/media/vsrun-selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")  
   
- Dialogové okno obsahuje pouze zařízení, které jsou v místní podsíti počítače Visual Studio, která používají vzdálený ladicí program.  
+ Dialogové okno obsahuje seznam pouze těch zařízení, která jsou v místní podsíti počítače Visual Studio a používají vzdálený ladicí program.  
   
 > [!TIP]
-> Pokud máte potíže s připojením ke vzdálenému zařízení, zkuste zadat IP adresu zařízení. Pokud chcete zjistit IP adresu zařízení, otevřete okno příkazového řádku a zadejte **ipconfig**. IP adresa je uvedena jako **IPv4 adresu**.  
+> Pokud máte potíže s připojením ke vzdálenému zařízení, zkuste zadat IP adresu zařízení. Chcete-li zjistit IP adresu zařízení, otevřete příkazové okno a zadejte příkaz **ipconfig**. IP adresa je uvedená jako **adresa IPv4**.  
   
-### <a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Volba vzdáleného zařízení pro projekty jazyka C# a Visual Basic  
- ![Spravovat vlastnosti projektu pro vzdálené ladění](../debugger/media/vsrun-managed-projprop-remote.png "VSRUN_Managed_ProjProp_Remote")  
+### <a name="choosing-the-remote-device-for-c-and-visual-basic-projects"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Volba vzdáleného zařízení pro projekty v jazyce C# a Visual Basic  
+ ![Vlastnosti spravovaného projektu pro vzdálené ladění](../debugger/media/vsrun-managed-projprop-remote.png "VSRUN_Managed_ProjProp_Remote")  
   
-1. V Průzkumníku řešení vyberte název projektu a klikněte na tlačítko **vlastnosti** z místní nabídky.  
+1. Vyberte název projektu v Průzkumník řešení a potom v místní nabídce zvolte možnost **vlastnosti** .  
   
-2. Vyberte **ladění**.  
+2. Vyberte **ladit**.  
   
-3. Zvolte **vzdálený počítač** z **cílové zařízení** seznamu.  
+3. V seznamu **cílový seznam zařízení** vyberte možnost **vzdálený počítač** .  
   
-4. Zadejte síťový název vzdáleného zařízení **vzdálený počítač** pole nebo zvolte **najít** pro výběr zařízení z **vyberte připojení vzdáleného ladicího programu** dialogové okno.  
+4. Zadejte síťový název vzdáleného zařízení do pole **vzdálený počítač** nebo zvolte **Najít** pro výběr zařízení z dialogového okna **Vybrat připojení vzdáleného ladicího programu** .  
   
-### <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Volba vzdáleného zařízení pro projekty jazyka JavaScript a C++  
- ![C&#43; &#43; vlastnosti pro vzdálené ladění projektu](../debugger/media/vsrun-cpp-projprop-remote.png "VSRUN_CPP_ProjProp_Remote")  
+### <a name="choosing-the-remote-device-for-javascript-and-c-projects"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Volba vzdáleného zařízení pro projekty JavaScript a C++  
+ ![Vlastnosti projektu v jazyce C&#43;&#43; pro vzdálené ladění](../debugger/media/vsrun-cpp-projprop-remote.png "VSRUN_CPP_ProjProp_Remote")  
   
-1. V Průzkumníku řešení vyberte název projektu a klikněte na tlačítko **vlastnosti** z místní nabídky.  
+1. Vyberte název projektu v Průzkumník řešení a potom v místní nabídce zvolte možnost **vlastnosti** .  
   
-2. Rozbalte **vlastnosti konfigurace** uzlu a pak vyberte **ladění**.  
+2. Rozbalte uzel **Vlastnosti konfigurace** a pak vyberte **ladění**.  
   
-3. Zvolte **vzdálený ladicí program** z **ladicí program ke spuštění** seznamu.  
+3. Pro spuštění seznamu vyberte možnost **vzdálený ladicí program** z **ladicího programu** .  
   
-4. Zadejte síťový název vzdáleného zařízení **název počítače** pole nebo klikněte na šipku dolů v poli pro výběr ze zařízení **vyberte připojení vzdáleného ladicího programu** dialogové okno.  
+4. V poli **název počítače** zadejte síťový název vzdáleného zařízení nebo zvolte šipku dolů v poli pro výběr zařízení z dialogového okna **Vybrat připojení vzdáleného ladicího programu** .  
   
-## <a name="BKMK_RunRemoteDebug"></a> Spuštění relace vzdáleného ladění  
- Spuštění, zastavení a procházení vzdálené ladicí relace stejným způsobem jako místní relaci. Před zahájením ladění, ujistěte se, že sledování vzdáleného ladění běží na vzdáleném zařízení.  
+## <a name="running-a-remote-debugging-session"></a><a name="BKMK_RunRemoteDebug"></a> Spuštění relace vzdáleného ladění  
+ Můžete spustit, zastavit a přejít ke vzdálené relaci ladění stejným způsobem jako místní relace. Než začnete s laděním, ujistěte se, že Sledování vzdáleného ladění běží na vzdáleném zařízení.  
   
- Klikněte na tlačítko **spustit ladění** na **ladění** nabídce (klávesnice: F5). Projekt je znovu zkompilovat, pak nasadí do a spustit na vzdáleném zařízení. Ladicí program pozastaví provádění na zarážkách a můžete krokovat do, nad a z kódu. Zvolte **Zastavit ladění** ukončíte ladicí relaci a zavřete vzdálenou aplikaci. Další informace najdete v tématu [ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).  
+ Pak zvolte **Spustit ladění** v nabídce **ladění** (klávesnice: F5). Projekt se znovu zkompiluje a pak se na vzdáleném zařízení nasadí na a začal. Ladicí program pozastaví provádění na zarážekch a můžete krokovat s vaším kódem. Klikněte na **Zastavit ladění** , aby se ukončila relace ladění a zavřela se Vzdálená aplikace. Další informace najdete v tématu [ladění aplikací v aplikaci Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Testování aplikací pro Store pomocí sady Visual Studio](../test/testing-store-apps-with-visual-studio.md)   

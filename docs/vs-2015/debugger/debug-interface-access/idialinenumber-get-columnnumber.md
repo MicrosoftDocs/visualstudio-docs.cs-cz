@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_columnnumber – | Dokumentace Microsoftu
+title: 'IDiaLineNumber:: get_columnNumber | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 51763dea01039ce084804bfa007fd8f0577cb9e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192379"
 ---
-# <a name="idialinenumbergetcolumnnumber"></a>IDiaLineNumber::get_columnNumber
+# <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Získá číslo sloupce, kde začíná výraz nebo příkaz.  
+Načte číslo sloupce, kde začíná výraz nebo příkaz.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ HRESULT get_columnNumber ( 
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí číslo sloupce, kde začíná výraz nebo příkaz. Pokud je hodnota nula, pak informace o sloupci není k dispozici.  
+ mimo Vrátí číslo sloupce, kde začíná výraz nebo příkaz. Pokud je hodnota nulová, informace o sloupci nejsou k dispozici.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . Vrátí `S_FALSE` , pokud tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota sloupce vrácený touto metodou je bajtovým posunem nasazovaných na první znak příkazem na řádku.  
+ Hodnota sloupce vrácená touto metodou je posun bajtů na řádek na první znak příkazu na řádku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbylinenum – | Dokumentace Microsoftu
+title: 'IDiaSession:: findLinesByLinenum | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d7ef4ab516bffbc13f47616c2f20fdd71cac38b0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418341"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805747"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Určuje čísla řádků souboru pro kompilaci, který je zadaný počet řádků ve zdrojovém souboru v rámci nebo blízko ní.  
+Určuje čísla řádků kompilantu, že zadané číslo řádku ve zdrojovém souboru leží uvnitř nebo blízko.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,28 +39,28 @@ HRESULT findLinesByLinenum ( 
   
 #### <a name="parameters"></a>Parametry  
  `compiland`  
- [in] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který reprezentuje kompilace, ve kterém chcete hledat čísla řádků. Tento parametr nemůže mít `NULL`.  
+ pro Objekt [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) , který představuje kompilantu, ve kterém chcete vyhledat čísla řádků. Tento parametr nemůže být `NULL` .  
   
  `file`  
- [in] [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt, který reprezentuje zdrojový soubor pro vyhledávání. Tento parametr nemůže mít `NULL`.  
+ pro Objekt [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) , který představuje zdrojový soubor pro hledání. Tento parametr nemůže být `NULL` .  
   
  `linenum`  
- [in] Určuje číslo řádku založen na jedničce.  
+ pro Určuje číslo řádku založené na jednom čísle.  
   
 > [!NOTE]
-> Nula nelze použít k určení všech řádků (použít [idiasession::findlines –](../../debugger/debug-interface-access/idiasession-findlines.md) metody k vyhledání všech řádků).  
+> Hodnotu nula nelze použít k určení všech řádků (k vyhledání všech řádků použijte metodu [IDiaSession:: findLines](../../debugger/debug-interface-access/idiasession-findlines.md) ).  
   
  `column`  
- [in] Určuje číslo sloupce. Můžete určit všechny sloupce nula. Sloupec je posun bajtů do řádku.  
+ pro Určuje číslo sloupce. K určení všech sloupců použijte nulu. Sloupec je posun bajtů na řádek.  
   
  `ppResult`  
- [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) načíst objta, který obsahuje seznam čísel řádků.  
+ mimo Vrátí [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta, který obsahuje seznam čísel řádků, které se načetly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí. `S_OK` jinak vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak otevřít zdrojový soubor, výčet souborech určených ke kompilaci přispěl tento soubor a vyhledejte číslo řádku ve zdrojovém souboru, kde začíná každý kompilace.  
+ Následující příklad ukazuje, jak otevřít zdrojový soubor, vytvořit výčet compilands, který tento soubor přispěl, a vyhledat čísla řádků ve zdrojovém souboru, kde se spouští jednotlivé kompilantu.  
   
 ```cpp#  
 void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)  
@@ -100,8 +100,8 @@ void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
- [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
- [IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)   
- [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md)   
+ [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSession:: findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)   
+ [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

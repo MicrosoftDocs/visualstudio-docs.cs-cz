@@ -19,55 +19,55 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e8684ad4b9429a5499660ef4ad6fdd8133dccaa5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442418"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64818061"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Volitelné parametry v řešeních pro systém Office
-  Mnoho metod v objektové modely aplikací sady Microsoft Office přijmout volitelné parametry. Pokud používáte Visual Basic pro vývoj řešení pro Office v sadě Visual Studio, nemáte předat hodnotu pro volitelné parametry, protože jsou automaticky použity výchozí hodnoty pro každý parametr chybí. Ve většině případů můžete vynechat volitelné parametry v projektech Visual C#. Ale nejde vynechat volitelné **ref** parametry `ThisDocument` tříd v projektech aplikace Word úrovni dokumentu.
+  Mnohé z metod v objektových modelech systém Microsoft Office aplikací přijímají volitelné parametry. Použijete-li Visual Basic pro vývoj řešení sady Office v sadě Visual Studio, není nutné předávat hodnotu pro volitelné parametry, protože výchozí hodnoty jsou automaticky použity pro každý chybějící parametr. Ve většině případů můžete také vynechat volitelné parametry v projektech Visual C#. Nemůžete však vynechat volitelné parametry **ref** `ThisDocument` třídy v projektech aplikace Word na úrovni dokumentu.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Další informace o práci s volitelnými parametry v projektech Visual C# a Visual Basic najdete v tématu [pojmenované a nepovinné argumenty &#40;C&#35; programováním&#41; ](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments) a [volitelné parametry &#40;Jazyka Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters).
+ Další informace o práci s nepovinnými parametry v jazyce Visual C# a Visual Basicch projektech naleznete v tématu [pojmenované a volitelné argumenty &#40;C&#35; programování průvodce&#41;](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments) a [volitelné parametry &#40;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters)Visual Basic&#41;.
 
 > [!NOTE]
-> V dřívějších verzích sady Visual Studio musíte předat hodnotu pro každý volitelný parametr v projektech Visual C#. Pro usnadnění práce těchto projektů zahrnout globální proměnnou s názvem `missing` , můžete předat volitelný parametr Pokud chcete použít výchozí hodnotu parametru. Projekty Visual C# pro Office v sadě Visual Studio stále zahrnuje `missing` proměnnou, ale obvykle není nutné ho používat při vývoji řešení pro systém Office v [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], s výjimkou při volání metody s volitelným **ref** v parametrech `ThisDocument` tříd v projektech na úrovni dokumentu pro aplikaci Word.
+> V dřívějších verzích sady Visual Studio je nutné předat hodnotu pro každý volitelný parametr v projektech Visual C#. Pro usnadnění mají tyto projekty globální proměnnou s názvem `missing` , která může být předána volitelnému parametru, pokud chcete použít výchozí hodnotu parametru. Projekty Visual C# pro Office v sadě Visual Studio stále obsahují `missing` proměnnou, ale obvykle je nemusíte používat při vývoji řešení pro systém Office v nástroji [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] s výjimkou toho, že voláte metody s volitelnými parametry **ref** ve `ThisDocument` třídě v projektech na úrovni dokumentu pro aplikaci Word.
 
-## <a name="example-in-excel"></a>Příklad v aplikaci Excel
- <xref:Microsoft.Office.Tools.Excel.Worksheet.CheckSpelling%2A> Metoda má mnoho nepovinných parametrů. Můžete zadat hodnoty pro některé parametry a přijměte výchozí hodnotu ostatních, jak je znázorněno v následujícím příkladu kódu. Tento příklad vyžaduje úrovni dokumentu projekt s třídou list s názvem `Sheet1`.
+## <a name="example-in-excel"></a>Příklad v Excelu
+ <xref:Microsoft.Office.Tools.Excel.Worksheet.CheckSpelling%2A>Metoda má mnoho volitelných parametrů. Můžete zadat hodnoty pro některé parametry a přijmout výchozí hodnotu ostatních, jak je znázorněno v následujícím příkladu kódu. Tento příklad vyžaduje projekt na úrovni dokumentu s třídou listu s názvem `Sheet1` .
 
  [!code-csharp[Trin_VstrefGeneralExcel#1](../vsto/codesnippet/CSharp/excelworkbook1/Sheet1.cs#1)]
  [!code-vb[Trin_VstrefGeneralExcel#1](../vsto/codesnippet/VisualBasic/excelworkbook1/Sheet1.vb#1)]
 
-## <a name="example-in-word"></a>Příklad v aplikaci Word
- <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> Metoda má mnoho nepovinných parametrů. Můžete zadat hodnoty pro některé parametry a přijměte výchozí hodnotu ostatních, jak je znázorněno v následujícím příkladu kódu.
+## <a name="example-in-word"></a>Příklad ve Wordu
+ <xref:Microsoft.Office.Interop.Word.Find.Execute%2A>Metoda má mnoho volitelných parametrů. Můžete zadat hodnoty pro některé parametry a přijmout výchozí hodnotu ostatních, jak je znázorněno v následujícím příkladu kódu.
 
  [!code-vb[Trin_VstrefGeneralWord#1](../vsto/codesnippet/VisualBasic/worddocument1/ThisDocument.vb#1)]
  [!code-csharp[Trin_VstrefGeneralWord#1](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#1)]
 
 ## <a name="use-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Použití volitelných parametrů metod ve třídě ThisDocument v jazyce Visual C# projekty na úrovni dokumentu pro Word
- Objektový model aplikace Word obsahuje mnoho metod s volitelným **ref** parametry, které přijímají <xref:System.Object> hodnoty. Ale nejde vynechat volitelné **ref** parametry metody generované `ThisDocument` třídy v úrovni dokumentu projekty Visual C# pro aplikaci Word. Visual C# můžete vynechat, nechte volitelné **ref** parametry pouze pro metody rozhraní, nikoli tříd. Například následující příklad kódu nelze kompilovat, protože nemůžete vynechat volitelné **ref** parametry <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> metodu `ThisDocument` třídy.
+ Objektový model aplikace Word obsahuje mnoho metod s nepovinnými parametry **ref** , které přijímají <xref:System.Object> hodnoty. Nemůžete však vynechat volitelné parametry **ref** metod generované `ThisDocument` třídy v projektech Visual C# na úrovni dokumentu pro aplikaci Word. Visual C# umožňuje vynechat volitelné parametry **ref** pouze pro metody rozhraní, nikoli třídy. Například následující příklad kódu není zkompilován, protože nelze vynechat volitelné parametry **ref** <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> metody `ThisDocument` třídy.
 
  [!code-csharp[Trin_VstrefGeneralWord#3](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#3)]
 
- Při volání metody `ThisDocument` třídy, postupujte podle následujících pokynů:
+ Při volání metod `ThisDocument` třídy, postupujte podle těchto pokynů:
 
-- Přijměte výchozí hodnotu volitelně **ref** parametr, předejte `missing` proměnnou na parametr. `missing` Proměnná je automaticky definovaný v projektech Visual C# Office a bude mu přiřazena hodnota <xref:System.Type.Missing> v kódu generovaném projektu.
+- Chcete-li přijmout výchozí hodnotu volitelného parametru **ref** , předejte `missing` proměnnou do parametru. `missing`Proměnná je automaticky definována v projektech aplikace Visual C# a je přiřazena k hodnotě <xref:System.Type.Missing> ve vygenerovaném kódu projektu.
 
-- Zadat vlastní hodnotu pro volitelný **ref** deklarovat objekt, který je přiřazen k hodnotě, kterou chcete zadat parametr a objekt předat parametr.
+- Chcete-li zadat vlastní hodnotu pro volitelný parametr **ref** , deklarujte objekt, který je přiřazen k hodnotě, kterou chcete zadat, a pak předejte objekt parametru.
 
-  Následující příklad kódu ukazuje, jak volat <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> metodu tak, že zadáte hodnotu *ignoreUppercase* parametr a přijímat výchozí hodnota pro ostatní parametry.
+  Následující příklad kódu ukazuje, jak zavolat <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> metodu zadáním hodnoty pro parametr *ignoreUppercase* a přijetím výchozí hodnoty pro ostatní parametry.
 
   [!code-csharp[Trin_VstrefGeneralWord#4](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#4)]
 
-  Pokud chcete napsat kód, který se vynechá volitelné **ref** parametry metody v `ThisDocument` třídy, můžete také volat stejnou metodu na <xref:Microsoft.Office.Interop.Word.Document> vrácený <xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A> vlastnost a vynechat možnost parametry z metody. Můžete to provést, protože <xref:Microsoft.Office.Interop.Word.Document> rozhraní, nikoli třída.
+  Chcete-li napsat kód, který vynechává volitelné parametry **ref** metody ve `ThisDocument` třídě, můžete alternativně volat stejnou metodu u <xref:Microsoft.Office.Interop.Word.Document> objektu vráceného <xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A> vlastností a vynechat parametry z této metody. To lze provést, protože <xref:Microsoft.Office.Interop.Word.Document> je rozhraní, nikoli třída.
 
   [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]
 
-  Další informace o parametrech typu hodnoty a odkazu, naleznete v tématu [předávání argumentů podle hodnoty a podle reference &#40;jazyka Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (pro jazyk Visual Basic) a [předávat parametry &#40;C&#35; Průvodce programováním pro&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).
+  Další informace o parametrech typu hodnoty a odkazu naleznete v tématu [Pass argumentů podle hodnoty a odkaz &#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (pro Visual Basic) a [Pass parameters &#40;C&#35; program průvodce programováním&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)

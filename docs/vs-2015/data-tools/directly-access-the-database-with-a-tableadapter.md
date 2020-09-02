@@ -27,25 +27,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 58500e59a624dac55824033b8b9667754a9040c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657365"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Přímý přístup k databázi pomocí objektu TableAdapter
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kromě `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekty TableAdapter s metodami, které lze spustit přímo proti databázi. Tyto metody (`TableAdapter.Insert`, `TableAdapter.Update` a `TableAdapter.Delete`) lze volat pro manipulaci s daty přímo v databázi.
+Kromě rozhraní `InsertCommand` , `UpdateCommand` a `DeleteCommand` objekty TableAdapter jsou vytvořeny pomocí metod, které lze spustit přímo proti databázi. Tyto metody ( `TableAdapter.Insert` , `TableAdapter.Update` a `TableAdapter.Delete` ) mohou být volány pro manipulaci s daty přímo v databázi.
 
- Pokud nechcete vytvořit tyto přímé metody, nastavte vlastnost `GenerateDbDirectMethods` TableAdapter na `false` v okně **vlastnosti** . Pokud jsou do TableAdapter přidané nějaké dotazy kromě hlavního dotazu TableAdapter, jedná se o samostatné dotazy, které tyto metody DbDirect negenerují.
+ Pokud nechcete vytvořit tyto přímé metody, nastavte `GenerateDbDirectMethods` vlastnost TableAdapter na hodnotu `false` v okně **vlastnosti** . Pokud jsou do TableAdapter přidané nějaké dotazy kromě hlavního dotazu TableAdapter, jedná se o samostatné dotazy, které tyto metody DbDirect negenerují.
 
 ## <a name="sendcommandsdirectly-to-a-database"></a>Sendcommandsdirectly k databázi
  Zavolejte metodu TableAdapter DbDirect, která provede úkol, který se pokoušíte provést.
 
 #### <a name="to-insert-new-records-directly-into-a-database"></a>Vložení nových záznamů přímo do databáze
 
-- Zavolejte metodu `Insert` TableAdapter a předejte hodnoty pro každý sloupec jako parametry. Následující postup používá v databaseas příkladu tabulku `Region`.
+- Zavolejte `Insert` metodu TableAdapter a předejte hodnoty pro každý sloupec jako parametry. Následující postup používá `Region` tabulku v Databaseas Northwind jako příklad.
 
     > [!NOTE]
     > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.
@@ -55,7 +55,7 @@ Kromě `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekt
 
 #### <a name="to-update-records-directly-in-a-database"></a>Postup aktualizace záznamů přímo v databázi
 
-- Zavolejte metodu `Update` TableAdapter a předejte nové a původní hodnoty pro každý sloupec jako parametry.
+- Zavolejte `Update` metodu TableAdapter a předejte nové a původní hodnoty pro každý sloupec jako parametry.
 
     > [!NOTE]
     > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.
@@ -65,7 +65,7 @@ Kromě `InsertCommand`, `UpdateCommand` a `DeleteCommand` jsou vytvořeny objekt
 
 #### <a name="to-delete-records-directly-from-a-database"></a>Postup odstranění záznamů přímo z databáze
 
-- Zavolejte metodu `Delete` TableAdapter a předejte hodnoty pro každý sloupec jako parametry metody `Delete`. Následující postup používá v databaseas příkladu tabulku `Region`.
+- Zavolejte `Delete` metodu TableAdapter a předejte hodnoty pro každý sloupec jako parametry `Delete` metody. Následující postup používá `Region` tabulku v Databaseas Northwind jako příklad.
 
     > [!NOTE]
     > Pokud nemáte k dispozici instanci, vytvořte instanci TableAdapter, kterou chcete použít.

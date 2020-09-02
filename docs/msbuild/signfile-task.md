@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 319afb810ba755d0201d3edaebcb06a493b59047
-ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86301444"
 ---
 # <a name="signfile-task"></a>SignFile – úloha

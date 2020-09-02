@@ -1,5 +1,5 @@
 ---
-title: TEXT_DOC_ATTR_2 | Dokumentace Microsoftu
+title: TEXT_DOC_ATTR_2 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9ad200d75c5534ddbe9d4ad4d9835417df6515f1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429099"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64821861"
 ---
-# <a name="textdocattr2"></a>TEXT_DOC_ATTR_2
+# <a name="text_doc_attr_2"></a>TEXT_DOC_ATTR_2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Popisuje atributy dokumentu.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef DWORD TEXT_DOC_ATTR_2;  
@@ -37,19 +37,19 @@ public const uint TEXT_DOC_ATTR_READONLY_2 = 0x00000001;
   
 ## <a name="members"></a>Členové  
  TEXT_DOC_ATTR_READONLY_2  
- Označuje, že dokument je jen pro čtení.  
+ Označuje, že dokument je určen jen pro čtení.  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
-> Tato hodnota není definována ve skutečnosti v sestavení pro jazyk C#. Definice místo toho musíte zkopírovat do zdrojového souboru.  
+> Tato hodnota není ve skutečnosti definována v sestavení pro C#. Místo toho je nutné zkopírovat definici do zdrojového souboru.  
   
- Předán jako argument [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) metody.  
+ Byl předán jako argument metodě [onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) .  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: msdbg.h  
+ Záhlaví: msdbg. h  
   
- Obor názvů: Microsoft.VisualStudio.Debugger.Interop  
+ Obor názvů: Microsoft. VisualStudio. Debugger. Interop  
   
  Sestavení: Microsoft.VisualStudio.Debugger.Interop.dll  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění se zdrojem webu Code Center Premium | Dokumentace Microsoftu'
+title: 'Postupy: ladění ve zdroji služby Code Center Premium | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,128 +18,128 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: db9a3e08e14e7fadca6df9e32361c0b042f565e9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438337"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64783466"
 ---
 # <a name="how-to-debug-with-code-center-premium-source"></a>Postupy: Ladění se zdrojem webu Code Center Premium
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-S [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] ladicího programu, můžete ladit zabezpečené sdílené zdroje od společnosti Microsoft MSDN Code Center Premium.  
+Pomocí [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] ladicího programu můžete ladit zabezpečený sdílený zdroj z webu Microsoft MSDN Code Center Premium.  
   
- Toto téma vysvětluje, jak nastavit a ladění Code Center Premium zdrojového kódu v sadě Visual Studio.  
+ Toto téma vysvětluje, jak nastavit a ladit zdrojový kód centra Code úrovně Premium v sadě Visual Studio.  
   
-### <a name="to-prepare-for-debugging-with-code-center-premium"></a>Příprava ladění s Code Center Premium  
+### <a name="to-prepare-for-debugging-with-code-center-premium"></a>Příprava na ladění pomocí centra Code úrovně Premium  
   
-1. Připojte čtečky čipových karet a vložte kartu, kterou jste získali z Shared Source Initiative.  
+1. Připojte čtečku čipových karet a vložte kartu, kterou jste získali z iniciativy Shared Source.  
   
-2. Spusťte sadu Visual Studio.  
+2. Spusťte Visual Studio.  
   
-3. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.  
+3. V nabídce **Tools** (Nástroje) klikněte na **Options** (Možnosti).  
   
-4. V **možnosti** dialogovém okně Otevřít **ladění** uzel a klikněte na tlačítko **Obecné**.  
+4. V dialogovém okně **Možnosti** otevřete uzel **ladění** a klikněte na **Obecné**.  
   
-5. Zrušte **povolit volbu pouze vlastní kód (pouze spravované)** zaškrtávací políčko.  
+5. Zrušte zaškrtnutí políčka **povolit pouze můj kód (pouze spravované)** .  
   
-6. Vyberte **povolit podporu zdrojového serveru**.  
+6. Vyberte možnost **Povolit podporu zdrojového serveru**.  
   
-7. Vymazat **vyžadovat, aby zdrojové soubory shodovaly původní verze**.  
+7. Clear **vyžaduje, aby se zdrojové soubory přesně shodovaly s původní verzí**.  
   
-8. V části **ladění** uzel, klikněte na tlačítko **symboly**.  
+8. V uzlu **ladění** klikněte na **symboly**.  
   
-9. V **soubor symbolů (PDB) umístění** políčka, zrušte **serveru symbolů Microsoft** zaškrtněte políčko a přidáním následujících umístění:  
+9. V poli **umístění souborů symbolů (. pdb)** zrušte zaškrtnutí políčka **symboly serveru společnosti Microsoft** a přidejte následující umístění:  
   
      `https://codepremium.msdn.microsoft.com/symbols`  
   
      `src=https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   > Nezapomeňte zahrnout do adresy koncové lomítko<strong>/</strong> na konci cesty.  
+   > Nezapomeňte na konec cesty zahrnout koncové lomítko <strong>/</strong> .  
   
-     Přesuňte tato místa k hornímu okraji seznam a ověřit, že tyto symboly jsou načten jako první.  
+     Přesuňte tato umístění do horní části seznamu, aby se zajistilo, že se tyto symboly načtou jako první.  
   
    > [!NOTE]
-   > Tato umístění Code Center Premium musí být uvedena nejprve tak, aby byly první umístění, které jsou načteny. V sadě Visual Studio 2010, nelze přesunout všechny výše uvedené servery **Microsoft Symbol Servers** položku, která je důvod, proč je nutné zrušit zaškrtnutí políčka.  
+   > Tato umístění centra Code úrovně Premium musí být uvedená jako první, aby se načetla první umístění. V aplikaci Visual Studio 2010 nelze přesunout žádné servery nad položku **Microsoft Symbol Servers** , což je důvod, proč je nutné zrušit zaškrtnutí políčka.  
    > 
-   >  Chcete-li načíst symboly z symbolů Microsoft během relace ladění, postupujte takto:  
+   >  Chcete-li načíst symboly z symbolů společnosti Microsoft během relace ladění, postupujte takto:  
    > 
-   > 1. Na **ladění** nabídce zvolte **Windows** a klikněte na tlačítko **moduly**.  
-   >    2.  Vyberte modul, který chcete symboly pro a pak otevřete místní nabídku. Zvolte **načíst symboly z** a klikněte na tlačítko **Microsoft Symbol Servers**.  
+   > 1. V nabídce **ladit** zvolte **okna** a pak zvolte **moduly**.  
+   >    2.  Vyberte modul, pro který chcete symboly pro, a pak otevřete místní nabídku. Zvolte **načíst symboly z** a pak zvolte **Microsoft Symbol Servers**.  
   
-10. V **mezipaměti symbolů ze serverů symbolů v tomto adresáři** zadejte umístění, jako `C:\symbols` kde Code Center Premium můžete ukládat do mezipaměti symbolů. Ukládání do mezipaměti symbolů může výrazně zlepšit výkon během ladění.  
+10. V poli **symboly mezipaměti ze serverů symbolů v tomto adresáři** zadejte umístění, jako například `C:\symbols` , kde může kód Premium centra Code ukládat symboly do mezipaměti. Ukládání symbolů do mezipaměti může významně zlepšit výkon během ladění.  
   
-     Pokud máte potíže při ladění zdrojový kód pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] po dokončení tohoto postupu zkontrolujte vaše umístění mezipaměti symbolů dříve uložený v mezipaměti a zastaralých souborů. Odeberte zastaralé symbol soubory.  
+     Pokud máte potíže s laděním zdrojového kódu pomocí [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] po dokončení tohoto postupu, Prohlédněte si umístění mezipaměti dříve uložených v mezipaměti a zastaralých souborů symbolů. Odeberte zastaralé soubory symbolů.  
   
 11. Klikněte na **OK**.  
   
-12. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] zajistit, že jsou zachované v nastavení.  
+12. Restartujte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , abyste zajistili, že nastavení budou trvalá.  
   
-### <a name="to-debug-your-source-code-using-attach-to-process"></a>Chcete-li ladit váš zdrojový kód pomocí připojit k procesu  
+### <a name="to-debug-your-source-code-using-attach-to-process"></a>Ladění zdrojového kódu pomocí příkazu připojit k procesu  
   
-1. Připojte čtečky čipových karet a vložte kartu, kterou jste získali z Shared Source Initiative.  
+1. Připojte čtečku čipových karet a vložte kartu, kterou jste získali z iniciativy Shared Source.  
   
-2. Spusťte sadu Visual Studio.  
+2. Spusťte Visual Studio.  
   
 3. Otevřete projekt sady Visual Studio.  
   
-4. Na **nástroje** nabídky, klikněte na tlačítko **připojit k procesu**.  
+4. V nabídce **nástroje** klikněte na tlačítko **připojit k procesu**.  
   
-5. V **připojit k procesu** dialogové okno, klikněte na tlačítko **vyberte**.  
+5. V dialogovém okně **připojit k procesu** klikněte na **Vybrat**.  
   
-6. V **vybrat typ kódu** dialogovém okně **rozpoznat tyto typy kódu**vyberte **nativní**, **spravované**, a **Managed () V4.0)**.  
+6. V dialogovém okně **Vybrat typ kódu** v části **detekovat tyto typy kódu**vyberte **nativní**, **spravované**a **spravované (v 4.0)**.  
   
-7. Klikněte na tlačítko **OK** zrušíte **vybrat typ kódu** dialogové okno.  
+7. Kliknutím na tlačítko **OK** zavřete dialogové okno **Vybrat typ kódu** .  
   
-8. V **procesy k dispozici** vyberte proces, který chcete ladit.  
+8. V poli **Dostupné procesy** vyberte proces, který chcete ladit.  
   
-9. Klikněte na tlačítko **připojit**.  
+9. Klikněte na **připojit**.  
   
-10. Po zobrazení výzvy k potvrzení vašeho certifikátu, klikněte na tlačítko **OK**. Zadejte svůj PIN kód. Přijměte podmínky použití pro Code Center Premium, pokud se zobrazí výzva.  
+10. Po zobrazení výzvy k potvrzení certifikátu klikněte na tlačítko **OK**. Pak zadejte svůj PIN kód. Pokud se zobrazí výzva, přijměte podmínky použití pro středisko Code úrovně Premium.  
   
-     Stahování symbolů může trvat poměrně dlouho, v závislosti na rychlosti sítě. Stavový řádek bude o tom, kdy byly úspěšně staženy všechny symboly.  
+     Stahování symbolů může trvat spoustu času v závislosti na rychlosti sítě. Stavový řádek bude označovat, že všechny symboly byly úspěšně staženy.  
   
-11. Opakujte kroky připojení pro všechny spravované projekty v řešení.  
+11. Opakujte kroky připojení pro všechny spravované projekty ve vašem řešení.  
   
-### <a name="to-debug-source-code-from-an-existing-solution"></a>Chcete-li ladit zdrojový kód z existujícího řešení  
+### <a name="to-debug-source-code-from-an-existing-solution"></a>Ladění zdrojového kódu z existujícího řešení  
   
-1. V **Průzkumníka řešení**, otevřete místní nabídku řešení a klikněte na tlačítko **vlastnosti**.  
+1. V **Průzkumník řešení**otevřete místní nabídku řešení a pak zvolte možnost **vlastnosti**.  
   
-2. V dialogovém okně stránky vlastností řešení vyberte **zdrojové soubory ladění** v **společné vlastnosti** uzlu.  
+2. V dialogovém okně stránky vlastností řešení vyberte možnost **Ladit zdrojové soubory** v uzlu **společné vlastnosti** .  
   
-3. Přidat do následujícího umístění **adresáře, který obsahuje zdrojové soubory** seznamu:  
+3. Přidejte následující umístění do seznamu **adresáře obsahující zdrojové soubory** :  
   
     `https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
    > [!NOTE]
-   > Nezapomeňte zahrnout do adresy koncové lomítko<strong>/</strong> na konci cesty.  
+   > Nezapomeňte na konec cesty zahrnout koncové lomítko <strong>/</strong> .  
   
-4. Pro každý spravovaný projekt ve vašem řešení proveďte následující  
+4. Pro každý spravovaný projekt ve vašem řešení udělejte toto:  
   
-   1. V Průzkumníku řešení otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**.  
+   1. V Průzkumník řešení otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**.  
   
-   2. Vyberte **ladění** a klikněte na tlačítko **povolit ladění kódu unmanged**.  
+   2. Vyberte **ladit** a pak zvolte **Povolit ladění kódu unmanged**.  
   
-### <a name="to-debug-your-solution-with-code-center-premium-source"></a>Chcete-li ladit vaše řešení se zdrojem webu Code Center Premium  
+### <a name="to-debug-your-solution-with-code-center-premium-source"></a>Ladění řešení pomocí zdroje kódu na úrovni Premium  
   
-1. Ve vaší `Package` třídy, nastavte zarážku v konstruktoru balíčku.  
+1. V `Package` třídě nastavte zarážku na konstruktoru balíčku.  
   
-2. V `Debug` nabídky, klikněte na tlačítko **spustit ladění**.  
+2. V `Debug` nabídce klikněte na **Spustit ladění**.  
   
-3. Až se dostanete k zarážce v konstruktoru balíčku, přejděte **zásobník volání** okno a klikněte pravým tlačítkem na rámec zásobníku sestavení, který chcete načíst symboly z, pak klikněte na tlačítko **načíst symboly**.  
+3. Když zaškrtnete zarážku v konstruktoru balíčku, přejděte do okna **zásobník volání** a klikněte pravým tlačítkem myši na rámec zásobníku sestavení, ze kterého chcete načíst symboly, a poté klikněte na možnost **načíst symboly**.  
   
-     Klikněte dvakrát na rámec volání se načíst zdroj.  
+     Dvojím kliknutím na rámec volání načtěte zdroj.  
   
-### <a name="to-browse-source-code-on-code-center-premium"></a>K procházení zdrojového kódu na Code Center Premium  
+### <a name="to-browse-source-code-on-code-center-premium"></a>Procházení zdrojového kódu na centra kódu Premium  
   
-1. Připojte čtečky čipových karet a vložte kartu, kterou jste získali z Shared Source Initiative.  
+1. Připojte čtečku čipových karet a vložte kartu, kterou jste získali z iniciativy Shared Source.  
   
-2. Spuštění aplikace Internet Explorer zadejte následující adresu URL: `https://codepremium.msdn.microsoft.com`  
+2. Spusťte Internet Explorer a zadejte následující adresu URL: `https://codepremium.msdn.microsoft.com`  
   
-3. Procházením vyhledejte požadovaný zdroj.  
+3. Vyhledejte zdroj, který chcete najít.  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)   
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Code Center Premium](https://www.microsoft.com/en-us/sharedsource/code-center-premium.aspx)
+ [Centrum Code úrovně Premium](https://www.microsoft.com/en-us/sharedsource/code-center-premium.aspx)

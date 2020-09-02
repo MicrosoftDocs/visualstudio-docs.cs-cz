@@ -1,5 +1,5 @@
 ---
-title: Barevné zvýrazňování syntaxe ve vlastních editorech | Dokumentace Microsoftu
+title: Barevné zvýrazňování syntaxe ve vlastních editorech | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,53 +11,53 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a0233873ba5d6ea2fca746f8e12f4bf693b79da
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444066"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64816912"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>Barevné zvýrazňování syntaxe ve vlastních editorech
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio SDK prostředí editory, včetně základní editor používání jazykových služeb k identifikaci konkrétní syntaktické položky a jejich zobrazení pomocí zadaného barvy pro daný dokument zobrazit.  
+Editory sady SDK prostředí sady Visual Studio, včetně základního editoru, používají jazykové služby k identifikaci konkrétních syntaktických položek a jejich zobrazení se zadanými barvami pro dané zobrazení dokumentu.  
   
-## <a name="colorization-requirements"></a>Zabarvení požadavky  
- Musí se všechny editory implementace colorizer služba jazyka:  
+## <a name="colorization-requirements"></a>Požadavky na zabarvení  
+ Všechny editory implementující Colorizer jazykové služby musí:  
   
-1. Použijte implementaci objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> ke správě text, který má být barevně zvýrazněné a implementaci objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> poskytnout dokument zobrazení textu.  
+1. Použijte objekt implementující <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> ke správě textu, který má být zabarvení, a objekt, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> který implementuje k poskytnutí zobrazení dokumentu textu.  
   
-2. Získáte rozhraní službě konkrétní jazyk pomocí dotazu na poskytovatele služeb sady VSPackage pomocí identifikační identifikátor GUID služby jazyky.  
+2. Získejte rozhraní pro konkrétní jazykovou službu pomocí dotazování poskytovatele služeb VSPackage pomocí identifikačního identifikátoru GUID služby jazyka.  
   
-3. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> metoda implementace objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>. Tato metoda přidruží služba jazyka s <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> implementace, která sady VSPackage používá ke správě text, který má být obarveny.  
+3. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer.SetLanguageServiceID%2A> metodu implementující objektu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> . Tato metoda přidruží službu jazyka k <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> implementaci, kterou VSPackage používá ke správě textu, který se má obarvit.  
   
-## <a name="core-editor-usage-of-a-language-services-colorizer"></a>Základní Editor využití Colorizer služba jazyka  
- Když se služba jazyka s colorizer získá instanci základní editor, analýze a vykreslování textu ve službě jazyka colorizer neprovádí automaticky bez dalšího zásahu z vaší strany.  
+## <a name="core-editor-usage-of-a-language-services-colorizer"></a>Základní použití editoru Colorizer jazykové služby  
+ Když se služba jazyka s Colorizer získá instancí základního editoru, analyzuje a vykresluje text pomocí Colorizer služby jazyka automaticky, aniž by to vyžadovalo další zásah na vaší straně.  
   
- Rozhraní IDE transparentně:  
+ Integrované vývojové prostředí (IDE) transparentně:  
   
-- Volá colorizer podle potřeby k analýze a analyzovat text, jak je přidat ani upravit v provádění <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>.  
+- Volá Colorizer podle potřeby pro analýzu a analýzu textu při jeho přidání nebo úpravě v implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> .  
   
-- Zajišťuje, že zobrazení poskytnutých poskytované zobrazení dokumentu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> se aktualizují a překreslen pomocí informace vrácené colorizer implementace.  
+- Zajistí, aby se zobrazení dodané zobrazením dokumentu, které poskytuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> implementace, aktualizovalo a překresleno s použitím informací vrácených colorizer.  
   
-## <a name="non-core-editor-usage-of-a-language-services-colorizer"></a>Použití editoru jiné než core Colorizer služba jazyka  
- Instance non základním editoru můžete také použít službu barevné zvýrazňování syntaxe služba jazyka, ale musí explicitně načíst a použít colorizer služby a repaint jejich zobrazení dokumentů, sami.  
+## <a name="non-core-editor-usage-of-a-language-services-colorizer"></a>Nezákladní použití editoru Colorizer jazykové služby  
+ Instance nezákladního editoru můžou také používat službu barevného zabarvení syntaxe služby jazyka, ale musí explicitně načítat a používat Colorizer služby a převádět jejich zobrazení dokumentů sami.  
   
- Provedete to tak vyžaduje jiné než core editor:  
+ K tomu je potřeba editor, který není základní:  
   
-1. Získání objektu colorizer služba jazyka (která implementuje `T:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer` a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2>). Vaše VSPackage toho dosahuje pomocí volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metodu na službě jazyka rozhraní.  
+1. Získejte objekt Colorizer jazykové služby (který implementuje `T:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer` a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer2> ). Vaše VSPackage to dělá voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metody v rozhraní jazykové služby.  
   
-2. Volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metoda požádat o zbarveny konkrétní rozsah textu.  
+2. Zavolejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> metodu, aby požádala o barevné zabarvení konkrétního rozsahu textu.  
   
-     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> Metoda vrátí pole hodnot, jeden pro každé písmeno v textu span se barevně zvýrazněné. Také identifikuje rozpětí textu jako konkrétního typu, které lze zabarvit položky, jako je například komentář, klíčové slovo nebo datového typu.  
+     <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>Metoda vrátí pole hodnot, jednu pro každé písmeno v rozsahu textu, který je barevně barevný. Určuje také rozsah textu jako konkrétní typ barevné položky, jako je například komentář, klíčové slovo nebo datový typ.  
   
-3. Zabarvení informace vrácené <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> repaint a zobrazení jeho textu.  
+3. Použijte informace o vybarvení vrácené funkcí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> k překreslení a zobrazení jejího textu.  
   
 > [!NOTE]
-> Kromě použití služba jazyka colorizer VSPackage můžete použít pro obecné účely barvy textu mechanismus prostředí sady Visual Studio SDK. Další informace o tomto mechanizmu, naleznete v tématu [pomocí písma a barvy](../extensibility/using-fonts-and-colors.md).  
+> Kromě použití Colorizer jazykové služby se sada VSPackage může rozhodnout použít mechanismus barevného zvýraznění textu sady Visual Studio pro obecné účely. Další informace o tomto mechanismu najdete v tématu [Použití písem a barev](../extensibility/using-fonts-and-colors.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Barevné zvýrazňování syntaxe ve službě starší verze jazyka](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)   
- [Implementace barevného zvýrazňování syntaxe](../extensibility/internals/implementing-syntax-coloring.md)   
- [Postupy: Použití předdefinovaných položek které lze zabarvit](../extensibility/internals/how-to-use-built-in-colorable-items.md)   
+ [Implementace Obarvení syntaxe](../extensibility/internals/implementing-syntax-coloring.md)   
+ [Postupy: Použití vestavěných barevných položek](../extensibility/internals/how-to-use-built-in-colorable-items.md)   
  [Vlastní položky, které lze zabarvit](../extensibility/internals/custom-colorable-items.md)

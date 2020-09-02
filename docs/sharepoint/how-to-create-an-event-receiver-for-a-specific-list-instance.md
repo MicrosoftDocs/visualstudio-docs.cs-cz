@@ -14,9 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 54c384742afba3d5af7f08ee62a9ec56c7f1438c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016960"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Postupy: vytvoření přijímače událostí pro specifickou instanci seznamu
@@ -84,6 +85,6 @@ ms.locfileid: "86016960"
 
      Všimněte si, že příjemce událostí se na novém oznámení neaktivuje, protože příjemce je nakonfigurovaný tak, aby reagoval jenom na události v instanci seznamu vlastní oznámení **TestAnnouncements**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 - [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)
 - [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)

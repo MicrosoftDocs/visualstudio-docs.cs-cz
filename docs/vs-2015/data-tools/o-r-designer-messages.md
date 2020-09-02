@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0be3049718a97455ecce2b2df2f95c730a303110
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657356"
 ---
 # <a name="or-designer-messages"></a>Zprávy Návrháře relací objektů
@@ -22,17 +22,17 @@ ms.locfileid: "72657356"
 Toto téma obsahuje seznam zpráv, se kterými se můžete setkat při práci s návrhářem O/R.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Nelze vytvořit \<association název přidružení >-vlastnost je uvedena dvakrát.](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
+ [Nelze vytvořit vlastnost přidružení, která je \<association name> uvedena dvakrát.](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
 
- [Nelze vytvořit název \<association přidružení >-typy vlastností se neshodují.](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
+ [Nelze vytvořit \<association name> typy vlastností přidružení, které se neshodují.](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
 
  [Změnu návratového typu metody DataContext nelze vrátit zpět.](../data-tools/changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md)
 
- [Nelze načíst informace o schématu pro databázový objekt \<object název >](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)
+ [Nelze načíst informace o schématu pro databázový objekt. \<object name>](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)
 
- [Jeden nebo více vybraných databázových objektů vrací schéma, které se neshoduje se schématem cílové třídy.](../data-tools/one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md)
+ [Minimálně jeden vybraný databázový objekt vrací schéma, které neodpovídá schématu cílové třídy.](../data-tools/one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md)
 
- [Jedna nebo více vybraných položek obsahuje datový typ, který není v návrháři podporován.](../data-tools/one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer.md)
+ [Minimálně jedna vybraná položka obsahuje datový typ, který návrhář nepodporuje.](../data-tools/one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer.md)
 
  [V souboru nastavení aplikace chybí vlastnost připojení nebo je nesprávná.](../data-tools/the-connection-property-in-the-application-settings-file-is-missing-or-incorrect.md)
 
@@ -40,11 +40,11 @@ Toto téma obsahuje seznam zpráv, se kterými se můžete setkat při práci s 
 
  [Objekty přidávané do návrháře využívají odlišné datové připojení, než se v návrháři aktuálně používá.](../data-tools/the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using.md)
 
- [Vlastnost \<property název > nelze odstranit.](../data-tools/the-property-property-name-cannot-be-deleted.md)
+ [Vlastnost \<property name> nelze odstranit.](../data-tools/the-property-property-name-cannot-be-deleted.md)
 
- [Vlastnost \<property název > nelze odstranit, protože se účastní názvu \<association přidružení >](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
+ [Vlastnost \<property name> nelze odstranit, protože je součástí přidružení \<association name>.](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
 
- [Vybranou třídu nelze odstranit, protože se používá jako návratový typ u jedné nebo více metod DataContext.](../data-tools/the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md)
+ [Vybranou třídu nejde odstranit, protože se používá jako návratový typ pro minimálně jednu metodu DataContext.](../data-tools/the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md)
 
  [Zvolené připojení využívá nepodporovaného poskytovatele databáze.](../data-tools/the-selected-connection-uses-an-unsupported-database-provider.md)
 
@@ -60,4 +60,4 @@ Toto téma obsahuje seznam zpráv, se kterými se můžete setkat při práci s 
 ## <a name="related-sections"></a>Související oddíly
  [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 
- [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)
+ [Technologie LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

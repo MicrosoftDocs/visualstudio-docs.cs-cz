@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 54036b985c90be926eaa56f6ebe60d1f3903e0b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657313"
 ---
 # <a name="uml-model-element-types"></a>Typy prvků modelu UML
@@ -26,9 +26,9 @@ Model UML můžete číst a manipulovat pomocí programovacího rozhraní. Toto 
  Podrobnosti o jednotlivých typech jsou k dispozici v [referenčních informacích k rozhraní API pro rozšíření modelování UML](../modeling/api-reference-for-uml-modeling-extensibility.md).
 
 ## <a name="element-types"></a>Typy prvků
- Toto je sada typů definovaných v sestavení `Microsoft.VisualStudio.Uml.Interfaces.dll`.
+ Toto je sada typů definovaných v sestavení `Microsoft.VisualStudio.Uml.Interfaces.dll` .
 
- Plně kvalifikovaný název každé položky je "`Microsoft.VisualStudio.Uml.`" následovaný názvem uvedeným v seznamu.
+ Plně kvalifikovaný název každé položky je `Microsoft.VisualStudio.Uml.` následovaný názvem uvedeným v seznamu.
 
  Pro usnadnění práce se tento seznam nastaví jako Hierarchie dědičnosti. Pokud má typ více než jeden nadtyp, další typy jsou uvedeny za dvojtečkou (:).
 

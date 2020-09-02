@@ -1,5 +1,5 @@
 ---
-title: Zobrazení modulů – vzorkování dat | Dokumentace Microsoftu
+title: Zobrazení modulů – vzorkování dat | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,37 +13,37 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5c3aa55bfc521521e28686ebb248053350ae14a7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438919"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64822209"
 ---
 # <a name="modules-view---sampling-data"></a>Zobrazení modulů – vzorkování dat
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Zobrazení modulů vzorkování údaje o výkonu zobrazí data, která je seskupené podle modulů, které byly vzorkovány v dat profilování. Každý modul je kořen hierarchického stromu. Vzorky funkcí modulu jsou uvedeny pod uzlem modulu.  
+Zobrazení modulů dat vzorkování zobrazuje údaje o výkonu, které jsou seskupeny podle modulů, které byly v datech profilace odebrány. Každý modul je kořenovým adresářem hierarchického stromu. Ukázkové funkce modulu jsou uvedeny pod uzlem modulu.  
   
 > [!NOTE]
-> Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. Aplikace Windows Store také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Rozšířené funkce zabezpečení ve Windows 8 a Windows Serveru 2012 vyžadují významné změny ve způsobu, jakým Profiler sady Visual Studio shromažďuje data na těchto platformách. Aplikace pro Windows Store vyžadují také nové techniky shromažďování. Podívejte [se na nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
- Pokud funkce byla spuštěna při nebyly shromážděny vzorky (tj. funkce byla v horní části zásobníku volání aplikace), zdrojové řádky a instrukce adresy, které byly provádění jsou uvedeny pod uzlem funkce. Protože data se shromažďují pro zdrojový řádek nebo ukazatele na instrukci při řádku nebo instrukce provádí, zahrnuté a výhradní hodnoty jsou vždy stejné pro řádek dat a dat instrukce.  
+ Pokud byla funkce prováděna při shromáždění vzorků (to znamená, že funkce byla v horní části zásobníku volání), zdrojové řádky a adresy instrukcí, které byly spuštěny, jsou uvedeny pod uzlem funkce. Vzhledem k tomu, že data jsou shromažďována pro zdrojový řádek nebo ukazatel instrukcí při provádění řádku nebo instrukce, jsou všechny a exkluzivní hodnoty vždy stejné pro data řádku i pro data instrukcí.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Název**|Název modulu, funkce, číslo řádku nebo adresa ukazatele instrukce.|  
-|**ID procesu**|ID procesu (PID) běhu profilování.|  
-|**Název procesu**|Název procesu.|  
-|**Název modulu**|Název modulu, který obsahuje ukazatel na funkci, řádek nebo instrukci.|  
-|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje ukazatel modulu, funkce, řádek nebo instrukci.|  
-|**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
+|**Name**|Název modulu, funkce, čísla řádku nebo adresy ukazatele na instrukci.|  
+|**ID procesu**|ID procesu (PID) pro spuštění profilace.|  
+|**Název procesu**|Název procesu|  
+|**Název modulu**|Název modulu, který obsahuje funkci, řádek nebo ukazatel na instrukci.|  
+|**Cesta k modulu**|Cesta modulu obsahujícího ukazatel modulu, funkce, řádku nebo instrukce.|  
+|**Zdrojový soubor**|Zdrojový soubor obsahující definici této funkce|  
 |**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
-|**Celkových vzorků**|-Pro určitou funkci Počet vzorků, ve kterých tuto funkci nebo funkce, která volala se tato funkce byla spuštěna; To znamená, že počet volání zásobníku ukázky, které tuto funkci.<br />-Pro modul počet vzorků, ve které alespoň jednu funkci z modulu provádění.<br />-Pro řádek nebo instrukce, počet vzorků, ve kterém tento řádek nebo instrukce byla spuštěna.|  
-|**% Celkových vzorků**|-Pro funkce nebo modulu procento všechny ukázky v profilování, které byly celkových vzorků této funkce nebo modulu.<br />-Pro řádek nebo instrukce procento všechny ukázky v Profilování spustit ve které tento řádek nebo instrukce byla spuštěna.|  
-|**Výhradní vzorky**|-Pro určitou funkci Počet volání zásobníku ukázky, ve kterých byla tato funkce přímo provádění; To znamená, počet vzorků, ve kterých byla tato funkce v horní části zásobníku volání.<br />-Pro modul, součet výhradních vzorků funkce v modulu.<br />-Pro řádek nebo instrukce, počet vzorků, ve kterém tento řádek nebo instrukce byla spuštěna.|  
-|**% Výhradních vzorků**|-Pro funkce nebo modulu procento všechny ukázky v profilování, které byly výhradních vzorků této funkce nebo modulu.<br />-Pro řádek nebo instrukce procento všechny ukázky v Profilování spustit ve které tento řádek nebo instrukce byla spuštěna.|  
+|**Vzorky včetně**|– Pro funkci je proveden počet vzorků, ve kterých byla tato funkce nebo funkce volána touto funkcí. To znamená, že počet ukázek zásobníku volání, které tuto funkci obsahují.<br />– Pro modul je počet vzorků, ve kterých byla spuštěna alespoň jedna funkce z modulu.<br />– Pro řádek nebo instrukci počet vzorků, ve kterém se tento řádek nebo instrukce spouští.|  
+|**% Včetně vzorků**|– Pro funkci nebo modul je procento všech vzorků v průběhu profilace, které byly zahrnuté do vzorků této funkce nebo modulu.<br />– Pro řádek nebo instrukci je procentuální podíl všech vzorků v profilaci spuštěných, ve kterém se tento řádek nebo instrukce spouští.|  
+|**Exkluzivní vzorky**|– Pro funkci je počet vzorků zásobníku volání, ve kterých byla tato funkce přímo spuštěna; To znamená počet vzorků, ve kterých byla tato funkce v horní části zásobníku volání.<br />– Pro modul součet exkluzivních vzorků funkcí v modulu.<br />– Pro řádek nebo instrukci počet vzorků, ve kterém se tento řádek nebo instrukce spouští.|  
+|**% Exkluzivních vzorků**|– Pro funkci nebo modul je procento všech ukázek v profilovém spuštění, které byly exkluzivními ukázkami této funkce nebo modulu.<br />– Pro řádek nebo instrukci je procentuální podíl všech vzorků v profilaci spuštěných, ve kterém se tento řádek nebo instrukce spouští.|  
   
 ## <a name="see-also"></a>Viz také  
- [Moduly zobrazení – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení modulů – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)

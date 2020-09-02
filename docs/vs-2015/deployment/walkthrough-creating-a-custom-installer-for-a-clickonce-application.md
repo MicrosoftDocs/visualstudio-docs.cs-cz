@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vlastního instalátoru pro aplikaci ClickOnce | Dokumentace Microsoftu'
+title: 'Návod: Vytvoření vlastního instalačního programu pro aplikaci ClickOnce | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,26 +20,26 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9ebde75fdf36c84f40ae660a24d469c36e72ceaf
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386590"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64821339"
 ---
 # <a name="walkthrough-creating-a-custom-installer-for-a-clickonce-application"></a>Návod: Vytvoření vlastního instalátoru pro aplikaci ClickOnce
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Každá aplikace ClickOnce, na základě souboru .exe jde bezobslužně nainstalovat a aktualizovat vlastní instalační program. Vlastní instalační program můžete implementovat vlastní uživatelské prostředí při instalaci, včetně vlastní dialogová okna pro operace zabezpečení a údržba. K provedení operace instalace, používá vlastní instalační program <xref:System.Deployment.Application.InPlaceHostingManager> třídy. Tento návod ukazuje, jak vytvořit vlastní instalační program, který tiché instalaci aplikace ClickOnce.  
+Jakoukoli aplikaci ClickOnce založenou na souboru. exe lze tiše nainstalovat a aktualizovat pomocí vlastního instalačního programu. Vlastní instalační program může implementovat vlastní uživatelské prostředí během instalace, včetně vlastních dialogových oken pro operace zabezpečení a údržby. K provedení operací instalace používá vlastní instalační program <xref:System.Deployment.Application.InPlaceHostingManager> třídu. Tento návod ukazuje, jak vytvořit vlastní instalační program, který tiše nainstaluje aplikaci ClickOnce.  
   
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
   
-### <a name="to-create-a-custom-clickonce-application-installer"></a>Chcete-li vytvořit vlastní instalační program aplikace ClickOnce  
+### <a name="to-create-a-custom-clickonce-application-installer"></a>Vytvoření vlastního instalačního programu aplikace ClickOnce  
   
-1. Ve vaší aplikaci ClickOnce přidejte odkazy na System.Deployment a System.Windows.Forms.  
+1. V aplikaci ClickOnce přidejte odkazy na System. Deployment a System. Windows. Forms.  
   
-2. Přidejte novou třídu do vaší aplikace a zadat libovolný název. Tento návod používá název `MyInstaller`.  
+2. Přidejte do své aplikace novou třídu a zadejte libovolný název. Tento návod používá název `MyInstaller` .  
   
-3. Přidejte následující `Imports` nebo `using` příkazy k hornímu okraji novou třídu.  
+3. `Imports` `using` Do horní části nové třídy přidejte následující příkazy nebo.  
   
     ```vb  
     Imports System.Deployment.Application  
@@ -51,17 +51,17 @@ Každá aplikace ClickOnce, na základě souboru .exe jde bezobslužně nainstal
     using System.Windows.Forms;  
     ```  
   
-4. Přidejte následující metody do vaší třídy.  
+4. Přidejte následující metody do třídy.  
   
-     Tyto metody volat <xref:System.Deployment.Application.InPlaceHostingManager> metody se stáhnout manifest nasazení vyhodnocení příslušná oprávnění, požádat uživatele o oprávnění k instalaci a pak si stáhnout a nainstalovat aplikaci do mezipaměti ClickOnce. Vlastní instalační program můžete určit, že je předem důvěryhodné aplikace ClickOnce, nebo můžete odložit rozhodnutí důvěryhodnosti <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> volání metody. Tento kód předběžně vztahy důvěryhodnosti aplikace.  
+     Tyto metody volají <xref:System.Deployment.Application.InPlaceHostingManager> metody pro stažení manifestu nasazení, vyhodnocení odpovídajících oprávnění, požádejte uživatele o oprávnění k instalaci a pak stáhněte a nainstalujte aplikaci do mezipaměti ClickOnce. Vlastní instalační program může určit, že aplikace ClickOnce je předem důvěryhodná, nebo může odložit rozhodnutí o vztahu důvěryhodnosti s <xref:System.Deployment.Application.InPlaceHostingManager.AssertApplicationRequirements%2A> voláním metody. Tento kód předběžně důvěřuje aplikaci.  
   
     > [!NOTE]
-    > Oprávnění přiřazená předem důvěryhodnou nesmí překročit oprávnění kód vlastní instalační služby.  
+    > Oprávnění přiřazená předběžnou důvěryhodností nemůžou přesáhnout oprávnění vlastního kódu instalačního programu.  
   
      [!code-csharp[System.Deployment.Application.InPlaceHostingManager#1](../snippets/csharp/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/CS/Form1.cs#1)]
      [!code-vb[System.Deployment.Application.InPlaceHostingManager#1](../snippets/visualbasic/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/VB/Form1.vb#1)]  
   
-5. Chcete-li se pokusit o instalaci v kódu, zavolejte `InstallApplication` metody. Například pokud pojmenujete vaší třídy `MyInstaller`, může volat `InstallApplication` následujícím způsobem.  
+5. Chcete-li se pokusit o instalaci z kódu, zavolejte `InstallApplication` metodu. Například pokud jste pojmenovali vaši třídu `MyInstaller` , může zavolat `InstallApplication` následující způsob.  
   
     ```vb  
     Dim installer As New MyInstaller()  
@@ -76,8 +76,8 @@ Každá aplikace ClickOnce, na základě souboru .exe jde bezobslužně nainstal
     ```  
   
 ## <a name="next-steps"></a>Další kroky  
- Aplikace ClickOnce můžete také přidat logiku vlastních aktualizací, včetně vlastní uživatelské rozhraní zobrazit během procesu aktualizace. Další informace naleznete v tématu <xref:System.Deployment.Application.UpdateCheckInfo>. Aplikace ClickOnce můžete potlačit také standardní položky nabídky Start, zástupce a položky panelu Přidat nebo odebrat programy pomocí `<customUX>` elementu. Další informace najdete v tématu [ \<entryPoint > Element](../deployment/entrypoint-element-clickonce-application.md) a <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>.  
+ Aplikace ClickOnce může také přidat vlastní logiku aktualizace, včetně vlastního uživatelského rozhraní, které se má zobrazit během procesu aktualizace. Další informace naleznete v tématu <xref:System.Deployment.Application.UpdateCheckInfo>. Aplikace ClickOnce může také potlačit standardní položky nabídky Start, zástupce a přidat nebo odebrat programy pomocí `<customUX>` elementu. Další informace naleznete v tématu [ \<entryPoint> element](../deployment/entrypoint-element-clickonce-application.md) a <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A> .  
   
 ## <a name="see-also"></a>Viz také  
- [ClickOnce – Manifest aplikace](../deployment/clickonce-application-manifest.md)   
- [\<entryPoint> Element](../deployment/entrypoint-element-clickonce-application.md)
+ [Manifest aplikace ClickOnce](../deployment/clickonce-application-manifest.md)   
+ [\<entryPoint> Objekt](../deployment/entrypoint-element-clickonce-application.md)

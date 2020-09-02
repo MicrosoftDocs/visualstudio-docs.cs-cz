@@ -1,5 +1,5 @@
 ---
-title: Dávkování nástroje MSBuild | Dokumentace Microsoftu
+title: Dávkování nástroje MSBuild | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,24 +13,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d96330c01ab340d4db67694f358717a2dae0bce3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439365"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64799390"
 ---
 # <a name="msbuild-batching"></a>Dávkování nástroje MSBuild
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] má schopnost rozdělení seznamů položek do různých kategorií nebo dávek, na základě položky metadat a spustit cíl nebo úloha jednou s jednotlivých dávek.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] má možnost rozdělit seznamy položek do různých kategorií nebo dávky na základě metadat položky a spustit cíl nebo úlohu jednou pro každou dávku.  
   
 ## <a name="task-batching"></a>Dávkování úloh  
- Dávkování úloh můžete zjednodušit tím, že poskytuje způsob, jak rozdělení seznamů položek na jiné listy a každá z těchto dávky samostatně předat do úlohy soubory projektu. To znamená, že soubor projektu pouze musí mít úkolu a její atributy deklarované jednou, i když můžete spustit několikrát.  
+ Dávkování úloh umožňuje zjednodušit soubory projektu tím, že poskytuje způsob, jak rozdělit seznamy položek do různých dávek a předat každou z těchto dávek do úlohy samostatně. To znamená, že soubor projektu potřebuje mít úlohu a její atributy deklarované pouze jednou, i když je možné ji spustit několikrát.  
   
- Určete, jestli má [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] provádět dávkové zpracování s úlohami pomocí %(*ItemMetaDataName*) zápis v jednom z atributů úlohy. V následujícím příkladu se rozdělí `Example` na základě seznamu položek do dávek `Color` hodnotu položky metadat a předá do dávek `MyTask` úloh samostatně.  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Pomocí notace%(*ItemMetaDataName*) v jednom z atributů úlohy určíte, že chcete provést dávkování s úkolem. V následujícím příkladu je rozdělen `Example` seznam položek na dávky založené na `Color` hodnotě metadat položky a každý z těchto dávek se do úlohy předává `MyTask` samostatně.  
   
 > [!NOTE]
-> Pokud Neodkazovat seznam položek jinde v atributech úloh nebo může být nejednoznačný název metadat, můžete použít %(*ItemCollection.ItemMetaDataName*) zápis k plnému určení hodnotu položky metadat pro dávkové zpracování.  
+> Pokud neodkazujte na seznam položek jinde v atributech úlohy nebo název metadat může být nejednoznačný, můžete použít zápis%(*ItemCollection. ItemMetaDataName*) a plně kvalifikovat hodnotu metadat položky, která se má použít pro dávkování.  
   
 ```  
 <Project  
@@ -54,12 +54,12 @@ ms.locfileid: "63439365"
 </Project>  
 ```  
   
- Dávkování konkrétnější příklady najdete v tématu [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md).  
+ Konkrétnější příklady dávkování najdete [v tématu Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md).  
   
 ## <a name="target-batching"></a>Dávkování cíle  
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] kontroluje, pokud vstupy a výstupy cíle jsou aktuální předtím, než spustí cíl. Pokud se vstupy a výstupy jsou aktuální, je cíl vynechán. Pokud úkol uvnitř cíl využívá, dávkové zpracování, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] potřebuje k určení, zda je aktuální vstupy a výstupy pro jednotlivé skupiny položek. V opačném případě je cíl proveden pokaždé, když je spuštění.  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] kontroluje, zda jsou vstupy a výstupy cíle aktuální před spuštěním cíle. Pokud jsou vstupy i výstupy aktuální, přeskočí se cíl. Pokud úloha v cíli používá dávkování, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] musí určit, jestli jsou vstupy a výstupy pro každou dávku položek aktuální. V opačném případě se cíl spustí pokaždé, když je dosaženo.  
   
- Následující příklad ukazuje `Target` element, který obsahuje `Outputs` atributem %(*ItemMetaDataName*) notaci. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Rozdělí `Example` na základě seznamu položek do dávek `Color` položky metadat a analyzovat časová razítka výstupních souborů pro jednotlivé dávky. Pokud výstupy z dávky nejsou aktuální, je spustit cíl. V opačném případě je cíl vynechán.  
+ Následující příklad ukazuje `Target` element, který obsahuje `Outputs` atribut s notaci%(*ItemMetaDataName*). [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] rozdělí `Example` seznam položek na dávky založené na `Color` metadatech položky a analyzuje časová razítka výstupních souborů pro každou dávku. Pokud výstupy z dávky nejsou aktuální, je cíl spuštěn. V opačném případě se cíl přeskočí.  
   
 ```  
 <Project  
@@ -85,25 +85,25 @@ ms.locfileid: "63439365"
 </Project>  
 ```  
   
- Další příklad dávkování cíle, naleznete v tématu [Metadata položek v dávkování cíle](../msbuild/item-metadata-in-target-batching.md).  
+ Další příklad cílového dávkování najdete v tématu [Metadata položek v cílové dávce](../msbuild/item-metadata-in-target-batching.md).  
   
 ## <a name="property-functions-using-metadata"></a>Funkce vlastností pomocí metadat  
- Dávkování lze ovládat funkce vlastností, které zahrnují metadata. Například  
+ Dávkování lze řídit funkcemi vlastností, které zahrnují metadata. Příklad:  
   
  `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`  
   
- používá <xref:System.IO.Path.Combine%2A> zkombinovat cesta ke kořenové složce položky cestu kompilace.  
+ používá <xref:System.IO.Path.Combine%2A> ke kombinování cesty ke kořenové složce s cestou položky kompilace.  
   
- Funkce vlastností se nemusí zobrazit v rámci hodnoty metadat.  Například  
+ Funkce vlastností se nesmí vyskytovat v hodnotách metadat.  Příklad:  
   
  `%(Compile.FullPath.Substring(0,3))`  
   
  není povoleno.  
   
- Další informace o funkcích vlastnost, naleznete v tématu [funkce vlastností](../msbuild/property-functions.md).  
+ Další informace o funkcích vlastností naleznete v tématu [funkce vlastností](../msbuild/property-functions.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Itemmetadata – Element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
+ [ItemMetadata – – element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
- [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)
+ [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

@@ -1,5 +1,5 @@
 ---
-title: Použití sad pravidel k určení C++ pravidel, která se mají spustit | Microsoft Docs
+title: Použití sad pravidel k určení pravidel C++ ke spuštění | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,16 +10,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: ff105af1d817613b324e1158130457eb906c753f
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277864"
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>Použití sad pravidel k určování pravidel C++ pro spuštění
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-V [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Chcete-li vytvořit C++ vlastní sadu pravidel, musí býtC++ v integrovaném vývojovém prostředí sady Visual Studio otevřený projekt C/Project. Pak otevřete standardní sadu pravidel v editoru sad pravidel a pak přidejte nebo odeberte specifická pravidla a volitelně změňte akci, ke které dojde, když analýza kódu zjistí, že pravidlo bylo porušeno.  
+V [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Chcete-li vytvořit vlastní sadu pravidel jazyka C++, projekt C/C++ musí být otevřen v integrovaném vývojovém prostředí sady Visual Studio. Pak otevřete standardní sadu pravidel v editoru sad pravidel a pak přidejte nebo odeberte specifická pravidla a volitelně změňte akci, ke které dojde, když analýza kódu zjistí, že pravidlo bylo porušeno.  
   
  Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového názvu souboru. Vlastní sada pravidel je automaticky přiřazena k projektu.  
   
@@ -35,9 +35,9 @@ V [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsUltShort](.
   
    - Vyberte sadu pravidel, kterou chcete upravit.  
   
-     \- nebo-  
+     \- ani  
   
-   - Vyberte **\<Procházet... >** k určení existující sady pravidel, která není v seznamu.  
+   - Zvolte **\<Browse...>** , chcete-li zadat existující sadu pravidel, která není v seznamu.  
   
 4. Zvolením možnosti **otevřít** zobrazte pravidla v editoru sad pravidel.  
   
@@ -63,7 +63,7 @@ V [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] a [!INCLUDE[vsUltShort](.
   
 - Pokud chcete pravidla sbalit ve všech skupinách, klikněte na **Sbalit vše**.  
   
-- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Pokud chcete zobrazit Neseskupená pravidla, vyberte **\<žádná >** .  
+- Chcete-li změnit pole, podle kterého jsou pravidla seskupena, vyberte pole ze seznamu **Seskupit podle** . Chcete-li zobrazit pravidla Neseskupená, vyberte možnost **\<None>** .  
   
 - Chcete-li přidat nebo odebrat pole ve sloupcích pravidla, vyberte možnost **Možnosti sloupců**.  
   

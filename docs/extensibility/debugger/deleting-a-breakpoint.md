@@ -1,5 +1,5 @@
 ---
-title: Odstranění zarážky | Dokumenty společnosti Microsoft
+title: Odstraňuje se zarážka | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a77be200a11eb7b3985a4c1a47e4cddaa543f900
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738951"
 ---
 # <a name="deleting-a-breakpoint"></a>Odstranění zarážky
-Následující popisuje proces při odstranění čekající zarážky:
+Následující popis procesu při odstraňování nedokončené zarážky:
 
 ## <a name="deletion-process"></a>Proces odstranění
- Správce ladění relace (SDM) volá metodu [IDebugPendingBreakpoint2::Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) k odebrání čekající zarážky a všech vázaných zarážek vázaných z ní.
+ Správce ladění relace (SDM) volá metodu [IDebugPendingBreakpoint2::D dstranit](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) , aby se odstranila nevyřízená zarážka a všechny svázané zarážky.
 
 > [!NOTE]
-> Jedna vázaná zarážka může být také odstraněna voláním [IDebugBoundBreakpoint2::Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md).
+> Jednu vázanou zarážku lze také odstranit voláním [IDebugBoundBreakpoint2::D dstranit](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md).
 
 ## <a name="see-also"></a>Viz také
-- [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)
+- [Události ladicího programu volání](../../extensibility/debugger/calling-debugger-events.md)

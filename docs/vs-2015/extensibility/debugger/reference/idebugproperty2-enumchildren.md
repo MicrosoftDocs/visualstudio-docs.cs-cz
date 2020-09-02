@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::EnumChildren | Dokumentace Microsoftu
+title: 'IDebugProperty2:: EnumChildren | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6cd5b29978b6b67cc80e95b86603b0caf487c26c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164960"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Načte seznam podřízených prvků vlastnost.  
+Načte seznam podřízených objektů vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,28 +52,28 @@ int EnumChildren ( 
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [in] Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčet, který určuje pole, která v výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury mají být vyplněna.  
+ pro Kombinace příznaků z výčtu [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) , která určuje, která pole ve výčtu [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktur mají být vyplněna.  
   
  `dwRadix`  
- [in] Určuje základ, který se má použít v jakékoli číselné informace o formátování.  
+ pro Určuje základ, který má být použit při formátování číselných informací.  
   
  `guidFilter`  
- [in] Identifikátor GUID používá se filtr `dwAttribFilter` a `pszNameFilter` parametry se mají vybrat, na které `DEBUG_PROPERTY_INFO` podřízené objekty jsou pro provedení výčtu. Například `guidFilterLocals` filtry pro místní proměnné.  
+ pro Identifikátor GUID filtru používaného s `dwAttribFilter` parametry a `pszNameFilter` pro výběr `DEBUG_PROPERTY_INFO` podřízených objektů, které mají být vyčísleny Například `guidFilterLocals` filtry pro místní proměnné.  
   
  `dwAttribFilter`  
- [in] Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet, který určuje, jaký typ objektů, které chcete zobrazit výčet, například `DBG_ATTRIB_METHOD` pro všechny metody, které můžou být podřízené této vlastnosti. V kombinaci s `guidFilter` a `pszNameFilter` parametry.  
+ pro Kombinace příznaků z výčtu [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) , které určují typ objektů k zobrazení výčtu, například `DBG_ATTRIB_METHOD` pro všechny metody, které mohou být podřízeny této vlastnosti. Používá se v kombinaci s `guidFilter` `pszNameFilter` parametry a.  
   
  `pszNameFilter`  
- [in] Název filtru použít s `guidFilter` a `dwAttribFilter` parametry se mají vybrat, na které `DEBUG_PROPERTY_INFO` podřízené objekty jsou pro provedení výčtu. Příklad nastavení tohoto parametru na "MyX" filtry pro všechny podřízené objekty s názvem "MyX."  
+ pro Název filtru používaného s `guidFilter` `dwAttribFilter` parametry a pro výběr, které `DEBUG_PROPERTY_INFO` podřízené položky mají být vyčísleny. Například nastavení tohoto parametru na filtry "MyX" pro všechny podřízené položky s názvem "MyX".  
   
  `dwTimeout`  
- [in] Určuje maximální dobu (v milisekundách) čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.  
+ pro Určuje maximální dobu v milisekundách, po kterou se má čekat, než se vrátí z této metody. Použijte `INFINITE` k čekání na neomezenou dobu.  
   
  `ppEnum`  
- [out] Vrátí [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objekt, který obsahuje seznam vlastností podřízené.  
+ mimo Vrátí objekt [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) obsahující seznam podřízených vlastností.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí `S_OK` . jinak vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

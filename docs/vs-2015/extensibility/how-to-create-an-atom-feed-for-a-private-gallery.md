@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření Atom pro privátní galerii | Dokumentace Microsoftu'
+title: 'Postupy: vytvoření informačního kanálu Atom pro soukromou galerii | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,31 +12,31 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6d4ba78028774e8fbf8e281afa2855781dab43a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204213"
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Postupy: Vytvoření informačního kanálu Atom pro privátní galerii
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Můžete vytvořit kanál Atom (RSS) do umístění v intranetu, která obsahuje rozšíření a přidání informačního kanálu do **rozšíření a aktualizace** jako privátní galerie. Další informace najdete v tématu [privátní Galerie](../extensibility/private-galleries.md).  
+Informační kanál Atom (RSS) můžete vytvořit do umístění v intranetu, které obsahuje rozšíření a přidat informační kanál do **rozšíření a aktualizace** jako soukromou galerii. Další informace najdete v tématu [soukromé Galerie](../extensibility/private-galleries.md).  
   
-## <a name="creating-an-atom-feed"></a>Vytváření Atom informačního kanálu  
- Vytvořit jako soukromou galerii informačního kanálu Atom, nejdřív shromážděte rozšíření (soubory VSIX) do složky. Můžete je uspořádat do podsložky potřebujete. Budete také potřebovat následující prostředky:  
+## <a name="creating-an-atom-feed"></a>Vytváření informačního kanálu Atom  
+ Chcete-li vytvořit informační kanál Atom jako soukromou galerii, nejprve Shromážděte rozšíření (soubory. vsix) do složky. V případě potřeby je můžete uspořádat do podsložek. Budete také potřebovat následující prostředky:  
   
-- Soubor atom.xml díky rozšíření k dispozici jako privátní galerie. Informace o tom, jak připojit soubor atom.xml **rozšíření a aktualizace**, naleznete v tématu [privátní Galerie](../extensibility/private-galleries.md).  
+- atom.xml soubor, který rozšíření zpřístupňují jako soukromou galerii. Informace o tom, jak připojit soubor atom.xml k **rozšíření a aktualizacím**, najdete v tématu [soukromé Galerie](../extensibility/private-galleries.md).  
   
-- Složka, která obsahuje všechny soubory obrázků, které se extrahují z rozšíření (například snímky obrazovky). Soubor atom.xml obsahuje relativní odkazy na tyto Image tak, aby byly k dispozici v **rozšíření a aktualizace**.  
+- Složka, která obsahuje všechny soubory obrázků, které byly extrahovány z rozšíření (například snímky obrazovky). atom.xml soubor obsahuje relativní odkazy na tyto image, aby byly dostupné v **rozšířeních a aktualizacích**.  
   
   Předpokládejme například, že jste shromáždili následující dvě rozšíření do složky:  
   
-- Template_Wizard_239.VSIX, což je prázdná šablona projektu VSIX.  
+- Template_Wizard_239. vsix, což je prázdná šablona projektu VSIX.  
   
-- SelectionHighlight.vsix, což je nástroj, zvýrazněte všechny instance vybrané aplikace Word.  
+- SelectionHighlight. vsix, což je nástroj, který zvýrazní všechny instance vybraného slova.  
   
-  Obsah souboru atom.xml by vypadat podobně jako v následujícím příkladu:  
+  Obsah souboru atom.xml by vypadal podobně jako v následujícím příkladu:  
   
 ```  
   <?xml version="1.0" encoding="utf-8" ?>   
@@ -73,7 +73,7 @@ Můžete vytvořit kanál Atom (RSS) do umístění v intranetu, která obsahuje
   
 ```  
   
- Všimněte si, že dvě značky odkazu odkazovat na snímky obrazovky v generovanou složku Obrázky.  
+ Všimněte si, že dvě značky odkazů odkazují na snímky obrazovky ve vygenerované složce imagí.  
   
 ## <a name="see-also"></a>Viz také  
  [Privátní galerie](../extensibility/private-galleries.md)

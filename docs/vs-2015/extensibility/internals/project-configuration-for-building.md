@@ -1,5 +1,5 @@
 ---
-title: Konfigurace pro sestavení projektu | Dokumentace Microsoftu
+title: Konfigurace projektu pro sestavení | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,52 +12,52 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 953a02c27f40e92c41d2e43bc818727118eb0a27
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434851"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64798192"
 ---
 # <a name="project-configuration-for-building"></a>Konfigurace projektu pro sestavení
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Seznam konfigurací řešení pro dané řešení se spravuje přes dialogové okno konfigurace řešení.  
+Seznam konfigurací řešení pro dané řešení je spravován v dialogovém okně konfigurace řešení.  
   
- Uživatel může vytvořit konfigurace další řešení, každý s vlastním jedinečným názvem. Když uživatel vytvoří nová konfigurace řešení, rozhraní IDE použije výchozí k názvu odpovídající konfigurace v projektech nebo ladění, pokud neexistuje žádný odpovídající název. Uživatel může změnit výběr podle specifických požadavků v případě potřeby. Jedinou výjimkou z tohoto chování je, když projekt podporuje konfigurace, která odpovídá názvu nová konfigurace řešení. Předpokládejme například, že řešení obsahuje Project1 a "project2". Project1 má konfigurace projektu, ladění, maloobchodní prodej a MyConfig1. "Project2" má konfigurace projektu, ladění, maloobchodní prodej a MyConfig2.  
+ Uživatel může vytvořit další konfigurace řešení, z nichž každý má vlastní jedinečný název. Když uživatel vytvoří novou konfiguraci řešení, rozhraní IDE bude standardně odpovídající název konfigurace v projektech nebo bude ladit, pokud neexistuje žádný odpovídající název. Uživatel může v případě potřeby změnit výběr tak, aby splňoval konkrétní požadavky. Jedinou výjimkou z tohoto chování je, když projekt podporuje konfiguraci, která odpovídá názvu nové konfigurace řešení. Předpokládejme například, že řešení obsahuje Project1 a "Project2". Project1 má konfigurace projektu ladění, maloobchod a MyConfig1. "Project2" má konfigurace projektu ladění, maloobchod a MyConfig2.  
   
- Pokud uživatel vytvoří nová konfigurace řešení s názvem MyConfig2, Project1 sváže jeho konfiguraci ladění konfigurace řešení ve výchozím nastavení. "Project2" také vytvoří vazbu jeho konfigurace MyConfig2 konfigurace řešení ve výchozím nastavení.  
+ Pokud uživatel vytvoří novou konfiguraci řešení s názvem MyConfig2, Project1 ve výchozím nastavení sváže svou konfiguraci ladění s konfigurací řešení. "Project2" také ve výchozím nastavení váže svou konfiguraci MyConfig2 na konfiguraci řešení.  
   
 > [!NOTE]
-> Vazba je velká a malá písmena.  
+> Vazba rozlišuje malá a velká písmena.  
   
- Když uživatel vybere **vícenásobný výběr** položek v rozevíracím seznamu konfigurace prostředí se zobrazí dialogové okno, které poskytuje seznam dostupných konfigurací.  
+ Když uživatel vybere položku **vícenásobného výběru** v rozevíracím seznamu konfigurace, prostředí zobrazí dialogové okno, které poskytuje seznam dostupných konfigurací.  
   
- ![Multiple Configurations](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
+ ![Více konfigurací](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 Více konfigurací  
   
- V tomto dialogovém okně může uživatel vybrat jednu nebo více konfigurací. Po výběru odrážejí hodnoty vlastností zobrazí v dialogovém okně stránky vlastností průnik hodnot pro zvolené konfigurace.  
+ V tomto dialogovém okně může uživatel vybrat jednu nebo více konfigurací. Po výběru hodnoty vlastností, které se zobrazují v dialogovém okně stránky vlastností, odrážejí průsečík hodnot pro vybrané konfigurace.  
   
- Zobrazit [konfigurace řešení](../../extensibility/internals/solution-configuration.md) informace týkající se přidání a přejmenování konfigurace pro projekty a řešení.  
+ Informace týkající se přidání a přejmenování konfigurací pro řešení a projekty najdete v tématu [Konfigurace řešení](../../extensibility/internals/solution-configuration.md) .  
   
- Závislosti projektu a pořadí sestavení jsou nezávislá konfigurace řešení: to znamená, které můžete nastavit jenom jednu závislost strom pro všechny projekty v řešení. Pravým tlačítkem myši na projekt nebo řešení a vyberete buď **závislosti projektu** nebo **pořadí sestavení projektu** možnost otevře **závislosti projektu** dialogové okno. Můžete otevřít také z **projektu** nabídky.  
+ Závislosti projektu a pořadí sestavení jsou nezávisle na konfiguraci řešení: to znamená, že můžete nastavit pouze jeden strom závislosti pro všechny projekty v řešení. Kliknutím pravým tlačítkem myši na řešení nebo projekt a výběrem možnosti **závislosti projektu** nebo **pořadí sestavení projektu** otevřete dialogové okno **závislosti projektu** . Lze jej také otevřít z nabídky **projekt** .  
   
- ![Project Dependencies](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
+ ![Závislosti projektu](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 Závislosti projektu  
   
- Závislosti projektu určení pořadí, ve kterém sestavení projektů. Na kartě pořadí sestavení v dialogovém okně můžete zobrazit přesný pořadí, ve kterém se projekty v rámci řešení sestavení a chcete-li změnit pořadí sestavení, použijte kartu závislosti.  
+ Závislosti projektu určují pořadí, ve kterém se projekty sestavují. Pomocí karty pořadí sestavení v dialogovém okně můžete zobrazit přesné pořadí, ve kterém budou projekty v rámci řešení sestaveny, a použít kartu závislosti pro úpravu pořadí sestavení.  
   
 > [!NOTE]
-> Projekty v seznamu, které jejich zaškrtnutých políček, ale zobrazují šedě, se přidaly prostředí z důvodu explicitní závislosti, které jsou určené <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> rozhraní a nedá se změnit. Například přidáním odkazu na projekt z [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projektu do jiného projektu automaticky přidá závislost sestavení, který lze odebrat pouze tak, že odstraníte odkaz. Projekty, jejichž zaškrtávací políčka jasné a zobrazují šedě, nelze vybrat, protože to by vytvořilo smyčku závislosti (například Project1 by být závislá na "project2" a "project2" by být závislá na Project1), který by manipulace blokováním do sestavení.  
+> Projekty v seznamu, které mají zaškrtnutá políčka, ale jsou neaktivní, jsou přidány do prostředí z důvodu explicitních závislostí zadaných v <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> rozhraních nebo a nelze je změnit. Například přidání odkazu na projekt z [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projektu do jiného projektu automaticky přidá závislost sestavení, která může být odebrána pouze odstraněním odkazu. Projekty, jejichž zaškrtávací políčka jsou jasné a zobrazují se šedě, nelze vybrat, protože by to vedlo k vytvoření smyčky závislosti (například Project1 by měla být závislá na "Project2" a "Project2" by měla být závislá na Project1), která by zastavila sestavení.  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] procesy sestavení zahrnují typické kompilace a operace odkazů, které jsou vyvolány pomocí jediného příkazu sestavení. Dva procesy sestavení může také podporovat: spuštění operace vyčištění odstranit všechny výstupní položky od předchozího sestavení a kontrolu aktuálnosti k určení, jestli se změnila výstupní položky v konfiguraci.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] procesy sestavení obsahují typické operace kompilace a propojení, které jsou vyvolány jediným příkazem sestavení. Lze také podporovat dva další procesy sestavení: čistou operaci pro odstranění všech výstupních položek z předchozího sestavení a aktuální kontrolu, která určuje, zda se výstupní položka v konfiguraci změnila.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> objekt vrací odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (vrácená <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>) ke správě jejich procesy sestavení. Zaznamenat stav z operace sestavení probíhající, se provedené konfigurace volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>, rozhraní implementované prostředí a druhý objekt zajímá událostí stavu sestavení.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> objekty vracejí odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (vrácený z <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A> ) pro správu procesů sestavení. Chcete-li ohlásit stav operace sestavení, když k ní dojde, konfigurace provádí volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback> , rozhraní implementované prostředím a jakýkoli jiný objekt, který zajímá události stavu sestavení.  
   
- Jakmile sestavená, nastavení konfigurace slouží k určení, zda lze spustit pod kontrolu ladicího programu. Konfigurace implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> v zájmu podpory ladění.  
+ Po sestavení lze nastavení konfigurace použít k určení, zda mohou být spuštěny pod ovládacím prvkem ladicího programu. Konfigurace implementují <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> pro podporu ladění.  
   
- Po implementaci závislosti projektu, můžete programově manipulovat s závislosti pomocí modelu automatizace. Volání <xref:EnvDTE.SolutionBuild.BuildDependencies%2A> v modelu automatizace. Neexistují žádné dostupné rozhraní VSIP úrovni rozhraní API, které umožňují přímé manipulace Správce konfigurace sestavení řešení a jejich vlastnosti.  
+ Po implementaci závislostí projektu můžete programově manipulovat se závislostmi prostřednictvím modelu automatizace. Zavoláte <xref:EnvDTE.SolutionBuild.BuildDependencies%2A> se do modelu automatizace. Nejsou k dispozici žádná rozhraní API na úrovni VSIP, která umožňují přímou manipulaci s konfiguracemi správce sestavení řešení a jejich vlastnostmi.  
   
- Kromě toho můžete zadat do mřížky v okně závislosti projektu. Další informace najdete v tématu [zobrazení mřížky okna vlastnosti](../../extensibility/internals/properties-display-grid.md).  
+ Kromě toho můžete v okně závislosti projektu zadat mřížku. Další informace najdete v tématu [zobrazovaná Mřížka vlastností](../../extensibility/internals/properties-display-grid.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md)   
