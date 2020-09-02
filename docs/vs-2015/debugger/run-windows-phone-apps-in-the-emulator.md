@@ -1,5 +1,5 @@
 ---
-title: Spouštění aplikací pro Windows Phone v emulátoru | Dokumentace Microsoftu
+title: Spuštění aplikací Windows Phone v emulátoru | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,208 +15,208 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5673ebf28cc652e3bcd973808db87b5bb058659c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683525"
 ---
 # <a name="run-windows-phone-apps-in-the-emulator"></a>Spouštění aplikací pro Windows Phone v emulátoru
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Emulátor Windows Phone poskytuje virtualizované prostředí, ve kterém můžete ladění a testování aplikací pro Windows Phone v počítači bez fyzického zařízení. Můžete simulovat běžné touch a otočení události a zvolte velikost fyzické obrazovky a rozlišení, kterou chcete emulovat. Můžete také otestovat mnoho běžně používaných funkcí, jako je například umístění, sítí, oznámení, senzory, akcelerometr a volitelné SD karty.  
+Emulátor Windows Phone poskytuje virtualizované prostředí, ve kterém můžete ladit a testovat Windows Phone aplikace v počítači bez fyzického zařízení. Můžete simulovat běžné události dotykové ovládání a rotace a zvolit velikost fyzické obrazovky a rozlišení, které chcete emulovat. Můžete také otestovat mnoho běžně používaných funkcí, jako je umístění, sítě, oznámení, senzory, akcelerometr a volitelná karta SD.  
   
- Další informace o funkcích, které můžete testovat se spustila v emulátoru najdete v tématu [testování funkcí aplikace v emulátoru Windows Phone](https://msdn.microsoft.com/c1b2b0ec-b8cc-4a98-84c1-701428e45cb1).  
+ Další informace o funkcích, které můžete testovat v emulátoru, najdete v tématu věnovaném [testování funkcí aplikace v emulátoru Windows Phone](https://msdn.microsoft.com/c1b2b0ec-b8cc-4a98-84c1-701428e45cb1).  
   
- Emulátor spolu s Visual Studio, poskytuje kompletní prostředí, ve kterém můžete návrh, vývoj, ladění a testování aplikací pro Windows Phone.  
+ Společně se sadou Visual Studio poskytuje emulátor kompletní prostředí, ve kterém můžete navrhovat, vyvíjet, ladit a testovat aplikace Windows Phone.  
   
-## <a name="BKMK_run"></a> Spuštění aplikace Windows Phone v emulátoru  
- Když vyvíjíte aplikace pro Windows Phone, můžete k nasazení a testování vaší aplikace rychle emulátoru Windows Phone. Doporučujeme vám, že provedete test aplikace skutečný zařízení Windows Phone, ale před publikujte aplikaci ve Store Windows Phone. Díky tomu můžete prostředí vaší aplikace, jak uživatelé budou moct používat ho.  
+## <a name="run-a-windows-phone-app-in-the-emulator"></a><a name="BKMK_run"></a> Spuštění aplikace Windows Phone v emulátoru  
+ Při vývoji aplikace Windows Phone můžete použít emulátor Windows Phone k rychlému nasazení a otestování vaší aplikace. Před publikováním aplikace v obchodě Windows Phone doporučujeme otestovat svou aplikaci na skutečném Windows Phoneovém zařízení. To vám umožní vyzkoušet si aplikaci, protože k ní uživatelé budou mít zkušenosti.  
   
- Při spuštění aplikace Windows Phone v emulátoru Windows Phone poprvé, dojde k následujícím událostem:  
+ Při prvním spuštění aplikace Windows Phone v emulátoru Windows Phone dojde k následujícím událostem:  
   
-1. Spuštění emulátoru.  
+1. Spustí se emulátor.  
   
-2. Emulátor načte operačního systému Windows Phone.  
+2. Emulátor načte Windows Phone operační systém.  
   
-3. Emulátor se zobrazí na obrazovce Start Windows Phone.  
+3. Emulátor zobrazí Windows Phone úvodní obrazovku.  
   
-4. Aplikace je nasazená do emulátoru.  
+4. Vaše aplikace se nasadí do emulátoru.  
   
-5. Vaše aplikace běží v emulátoru.  
+5. Vaše aplikace se spouští na emulátoru.  
   
-   Pokud vybraný emulátor je již spuštěn, je aplikace nasazena a spuštění v spuštěný emulátor. Najednou můžete spustit pouze jedna instance každé emulátoru.  
+   Pokud je vybraný emulátor už spuštěný, vaše aplikace se nasadí a spustí ve spuštěném emulátoru. V jednom okamžiku může běžet jenom jedna instance každého emulátoru.  
   
 > [!TIP]
-> Při testování vaší aplikace v emulátoru, ponechte emulátor, které jsou otevřené mezi ladicími relacemi, takže budete moci spustit vaši aplikaci znovu rychle pracovní postupy.  
+> Když testujete aplikaci na emulátoru, nechte emulátor otevřený mezi relacemi ladění, abyste mohli aplikaci znovu spustit rychleji.  
   
-### <a name="BKMK_vs"></a> Spuštění aplikace ze sady Visual Studio  
+### <a name="run-an-app-from-visual-studio"></a><a name="BKMK_vs"></a> Spuštění aplikace ze sady Visual Studio  
   
-##### <a name="to-deploy-and-run-an-app-from-visual-studio"></a>K nasazení a spuštění aplikace ze sady Visual Studio  
+##### <a name="to-deploy-and-run-an-app-from-visual-studio"></a>Nasazení a spuštění aplikace ze sady Visual Studio  
   
-1. V sadě Visual Studio otevřete projekt Windows Phone.  
+1. V aplikaci Visual Studio otevřete Windows Phone projekt.  
   
-2. Na **standardní** nástrojů, vyberte jednu z možností emulátoru.  
+2. Na panelu nástrojů **standardní** vyberte jednu z možností emulátoru.  
   
-     ![Seznam imagí Windows Phone Emulator](../debugger/media/wp-emulator-list.png "WP_Emulator_list")  
+     ![Seznam imagí emulátoru Windows Phone](../debugger/media/wp-emulator-list.png "WP_Emulator_list")  
   
-3. K nasazení a spuštění aplikace s laděním, na **ladění** nabídky, klikněte na tlačítko **spustit ladění**, nebo stiskněte klávesu F5.  
+3. Pokud chcete aplikaci nasadit a spustit s laděním, v nabídce **ladění** klikněte na **Spustit ladění**nebo stiskněte klávesu F5.  
   
-     K nasazení a spuštění aplikace bez ladění, na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**, nebo stisknutím kláves Ctrl + F5.  
+     Pokud chcete aplikaci nasadit a spustit bez ladění, v nabídce **ladění** klikněte na **Spustit bez ladění**nebo stiskněte klávesy CTRL + F5.  
   
-     Nasazení a spuštění vaší aplikace.  
+     Vaše aplikace je nasazená a spuštěná.  
   
-     K nasazení aplikace bez nutnosti spuštění, dále **sestavení** nabídky, klikněte na tlačítko **nasadit řešení**.  
+     Pokud chcete aplikaci nasadit bez spuštění, klikněte v nabídce **sestavení** na **nasadit řešení**.  
   
-##### <a name="to-stop-a-running-app"></a>Zastavit spuštěné aplikace  
+##### <a name="to-stop-a-running-app"></a>Zastavení spuštěné aplikace  
   
-- Zastavit spuštěné aplikace, proveďte jednu z následujících akcí:  
+- Pokud chcete zastavit spuštěnou aplikaci, proveďte jednu z následujících akcí:  
   
-  - V sadě Visual Studio na **ladění** nabídky, klikněte na tlačítko **Zastavit ladění**, nebo stiskněte klávesy Shift + F5.  
+  - V aplikaci Visual Studio v nabídce **ladění** klikněte na možnost **Zastavit ladění**nebo stiskněte klávesy Shift + F5.  
   
-  - V emulátoru, stiskněte **zpět** tlačítko pro ukončení aplikace. Pokud aktivní stránka aplikace nebyla úvodní stránku aplikace, bude pravděpodobně nutné stisknutím klávesy **zpět** tlačítko více než jednou.  
+  - Kliknutím na tlačítko **zpět** v emulátoru aplikaci ukončíte. Pokud aktivní stránka aplikace není úvodní stránkou aplikace, může být nutné stisknout tlačítko **zpět** více než jednou.  
   
-    Otevře se obrazovka aplikace ukončí a spuštění. Ukončí aktuální relace ladění.  
+    Aplikace se ukončí a otevře se obrazovka Start. Tím se ukončí aktuální relace ladění.  
   
-##### <a name="to-restart-an-app-without-debugging"></a>K restartování aplikace bez ladění  
+##### <a name="to-restart-an-app-without-debugging"></a>Restartování aplikace bez ladění  
   
-1. V emulátoru na obrazovce Start, potáhněte doleva, chcete-li zobrazit seznam aplikací.  
+1. V emulátoru na obrazovce Start přetáhnutím vlevo zobrazíte seznam aplikací.  
   
-2. V seznamu aplikací klepněte na ikonu aplikace. Restartování aplikace bez ladění.  
+2. V seznamu aplikace klepněte na ikonu aplikace. Aplikace se restartuje bez ladění.  
   
-##### <a name="to-deactivate-a-running-app"></a>Deaktivace spuštěné aplikace  
+##### <a name="to-deactivate-a-running-app"></a>Deaktivace běžící aplikace  
   
-1. Před spuštěním aplikace v sadě Visual Studio, klikněte pravým tlačítkem na projekt v Průzkumníku řešení a pak vyberte **vlastnosti** otevřete **Návrháře projektu**.  
+1. Před spuštěním aplikace, v aplikaci Visual Studio, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a pak vyberte **vlastnosti** . otevře se **Návrhář projektu**.  
   
-2. V **Návrháře projektu**na **ladění** ponechte **objektů označených jako neplatné po deaktivaci při ladění** zaškrtněte políčko není zaškrtnuto, pokud chcete aplikaci přejdete v neaktivní stav, kdy deaktivovat. Zaškrtněte políčko, pokud chcete aplikaci bude označen jako neplatný, při deaktivaci.  
+2. Pokud chcete, aby aplikace přešla do neaktivního stavu při deaktivaci, v **Návrháři projektu**na stránce **ladění** ponechte **neplatnou hodnotu po deaktivaci při ladění** . Zaškrtněte políčko, pokud chcete, aby byla aplikace označena při deaktivaci.  
   
-3. Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**, nebo stisknutím klávesy F5 spusťte aplikaci.  
+3. V nabídce **ladění** klikněte na **Spustit ladění**nebo stiskněte klávesu F5 pro spuštění aplikace.  
   
-4. V emulátoru, stiskněte **Start** tlačítko. Se zobrazí na úvodní obrazovku a aplikace je deaktivováno. Aplikace buď přejde do stavu neaktivní nebo je označen jako neplatný, v závislosti na nastavení **objektů označených jako neplatné po deaktivaci při ladění** zaškrtávací políčko.  
+4. V emulátoru stiskněte tlačítko **Start** . Zobrazí se obrazovka Start a aplikace se deaktivuje. Aplikace buď přejde do nepoužívaného stavu, nebo je označena jako neoznačená, v závislosti na nastavení neurčité **při deaktivaci při ladění** .  
   
-##### <a name="to-reactivate-a-dormant-or-tombstoned-app"></a>Opětovná aktivace aplikace neaktivní nebo označen jako neplatný  
+##### <a name="to-reactivate-a-dormant-or-tombstoned-app"></a>Opětovná aktivace neaktivní nebo označené aplikace  
   
-- V emulátoru, stiskněte **zpět** se vrátit do aplikace. Pokud přejde na jinou stránku nebo otevřít jiné aplikace, bude pravděpodobně nutné stisknutím klávesy **zpět** tlačítko více než jednou a znovu aktivujte ji.  
+- V emulátoru se stisknutím tlačítka **zpět** vraťte do aplikace. Pokud jste přešli na jiné stránky nebo jste otevřeli jinou aplikaci, může být nutné stisknout tlačítko **zpět** více než jednou a aplikaci znovu aktivovat.  
   
-     Obnoví se relace ladění. Pokud ladicí program má odpojit z aplikace, budete muset stisknutím klávesy F5 pokračovat v relaci ladění.  
+     Relace ladění pokračuje. Pokud se ladicí program odpojil od aplikace, může být nutné stisknout klávesu F5, aby se relace ladění obnovila.  
   
-### <a name="BKMK_depltool"></a> Spuštění aplikace s nástrojem pro nasazení aplikace  
- Můžete také použít nástroj pro nasazení aplikace Windows Phone (**AppDeploy.exe**) ke spuštění vaší aplikace se spustila v emulátoru. Tento nástroj je samostatná aplikace, který je nainstalován při instalaci nástroje pro vývoj Windows Phone.  
+### <a name="run-an-app-with-the-application-deployment-tool"></a><a name="BKMK_depltool"></a> Spuštění aplikace pomocí nástroje pro nasazení aplikace  
+ K spuštění aplikace v emulátoru můžete také použít nástroj Windows Phone aplikace pro nasazení (**AppDeploy.exe**). Tento nástroj je samostatná aplikace, která je nainstalovaná při instalaci nástrojů Windows Phone Development.  
   
- Další informace najdete v tématu [aplikací nasadit Windows Phone 8.1 pomocí nástroje nasazení aplikace](https://msdn.microsoft.com/library/23700f82-1399-44d9-bc0c-714be4a48ee6).  
+ Další informace najdete v tématu [nasazení aplikací Windows Phone 8,1 pomocí nástroje pro nasazení aplikací](https://msdn.microsoft.com/library/23700f82-1399-44d9-bc0c-714be4a48ee6).  
   
-## <a name="BKMK_toolbar"></a> Konfigurace emulátorem Windows Phone pomocí nástrojů emulátoru  
- Tato tabulka uvádí dostupné konfigurace tlačítka na panelu nástrojů emulátoru.  
+## <a name="configure-the-windows-phone-emulator-with-the-emulator-toolbar"></a><a name="BKMK_toolbar"></a> Konfigurace emulátoru Windows Phone pomocí panelu nástrojů emulátoru  
+ Tato tabulka zobrazuje tlačítka konfigurace, která jsou k dispozici na panelu nástrojů emulátoru.  
   
 |Tlačítka panelu nástrojů|Možnosti konfigurace|  
 |---------------------|---------------------------|  
-|![Zadejte možnosti nástrojů Windows Phone Emulator](../debugger/media/wp-emulator.png "WP_Emulator_")|**Konfigurace bodu jedním nebo více bodu vstupu**<br /><br /> Když povolíte Multi-Factor vstupní bod, kliknete pravým tlačítkem přesunout dotykovými body bez zásahu do obrazovky. Klepněte na položku můžete přesunout i dotykovými body současně.|  
-|![Orientace na panelu nástrojů Windows Phone Emulator](../debugger/media/wp-emulator-rotation.png "WP_Emulator_rotation")|**Konfigurace orientace v emulátoru**<br /><br /> Orientace v emulátoru Windows Phone můžete změnit na jednu ze tří směrů: výšku, na šířku doleva nebo doprava na šířku. Velikost emulátoru nezmění při změně orientace.<br /><br /> Chcete-li změnit orientaci, klikněte na tlačítko **Otočit doleva** tlačítko nebo **Otočit doprava** tlačítko.|  
-|![Velikost panelu nástrojů Windows Phone Emulator](../debugger/media/wp-emulator-size.png "WP_Emulator_size")|**Konfigurovat velikost emulátoru**<br /><br /> Můžete změnit velikost emulátoru na obrazovce počítače hostitele. Bodů na palec (DPI) pro emulátor je založená na hostitele sledování DPI, bez ohledu na hodnotu přiblížení.<br /><br /> – Chcete-li přizpůsobit emulátoru na obrazovku, klikněte na tlačítko **přizpůsobit na obrazovku** tlačítko.<br />– Chcete-li změnit nastavení přiblížení či oddálení, klikněte na tlačítko **přiblížení** tlačítko. **Přiblížení** zobrazí se dialogové okno. V **přiblížení** dialogového okna zadejte hodnotu zvětšení 33 až 100.|  
+|![Možnosti vstupu na panelu nástrojů emulátoru Windows Phone](../debugger/media/wp-emulator.png "WP_Emulator_")|**Konfigurace vstupu s jedním bodem nebo víceřádkovou desetinnou čárkou**<br /><br /> Když povolíte Víceřádkový vstup, můžete kliknout pravým tlačítkem myši a přesunout dotykové body, aniž byste museli se dotýkat obrazovky. Pak můžete kliknout levým na, chcete-li současně přesunout oba dotykové body.|  
+|![Orientace na panelu nástrojů emulátoru Windows Phone](../debugger/media/wp-emulator-rotation.png "WP_Emulator_rotation")|**Konfigurace orientace emulátoru**<br /><br /> Orientaci v Windows Phone emulátoru můžete změnit na jednu ze tří orientací: na výšku, na šířku doleva nebo na šířku. Velikost emulátoru se při změně orientace nemění.<br /><br /> Chcete-li změnit orientaci, klikněte na tlačítko **Otočit doleva** nebo tlačítko **Otočit doprava** .|  
+|![Možnosti velikosti na panelu nástrojů emulátoru Windows Phone](../debugger/media/wp-emulator-size.png "WP_Emulator_size")|**Konfigurace velikosti emulátoru**<br /><br /> Velikost emulátoru můžete změnit na obrazovce hostitelského počítače. Počet bodů na palec (DPI) pro emulátor je založen na rozlišení DPI monitoru hostitele, bez ohledu na hodnotu přiblížení.<br /><br /> – Chcete-li přizpůsobit emulátor na obrazovku, klikněte na tlačítko **Přizpůsobit obrazovce** .<br />– Chcete-li změnit nastavení přiblížení, klikněte na tlačítko **přiblížení** . Otevře se dialogové okno **Lupa** . V dialogovém okně **Lupa** zadejte hodnotu přiblížení mezi 33 a 100.|  
   
-## <a name="BKMK_buttons"></a> Použití simulované hardwarová tlačítka v emulátoru  
- Simulace použití v telefonu hardwarová tlačítka s použitím simulovaného hardwarová tlačítka na pravé straně obrazovky emulátoru.  
+## <a name="use-the-simulated-hardware-buttons-on-the-emulator"></a><a name="BKMK_buttons"></a> Použití simulovaných hardwarových tlačítek na emulátoru  
+ Simulujte použití hardwarových tlačítek telefonu na pravé straně obrazovky emulátoru pomocí tlačítek simulovaného hardwaru.  
   
-- Klikněte na tlačítko **Power** tlačítko pro simulaci zapnutí zobrazení odhlásit a znovu přihlásit. Klepněte a podržte pro simulaci vypnutí telefonu.  
+- Klikněte na tlačítko **napájení** a Simulujte tak vypnutí a zapnutí displeje. Kliknutím a podržením simulaci Zapněte telefon.  
   
-- Klikněte na tlačítko **svazku nahoru** nebo **svazku dolů** tlačítko pro simulaci změna svazku v telefonu mluvčího pro telefonní hovory a oznámení.  
+- Kliknutím na tlačítko **Hlasitost nahoru** nebo **dolů** můžete simulovat změnu objemu mluvčího telefonu pro telefonní hovory a oznámení.  
   
-- **Fotoaparát** tlačítko spustí aplikace fotoaparát. Můžete simulovat trvá fotku nebo video s použitím ovládacích prvků v aplikaci fotoaparát.  
+- Tlačítko **kamera** spustí aplikaci kamery. Můžete simulovat fotku nebo video pomocí ovládacích prvků v aplikaci kamera.  
   
-  Následující snímek obrazovky ukazuje simulované hardwarová tlačítka.  
+  Na následujícím snímku obrazovky vidíte simulovaná hardwarová tlačítka.  
   
-1. Levý obrázek se zobrazí na obrazovce Start na emulátoru.  
+1. Na levém obrázku se zobrazí úvodní obrazovka na emulátoru.  
   
-2. Střední image emulátoru zobrazí po klepnutí **Power** tlačítko Vypnout zobrazení.  
+2. Po klepnutí na tlačítko **napájení** se na prostřední imagi zobrazí emulátor, aby se displej vypnul.  
   
-3. Pravý obrázek se zobrazí na obrazovce emulátoru po klepnutí **svazku nahoru** tlačítko zvětšete svazek.  
+3. Pravý obrázek zobrazuje obrazovku emulátoru po klepnutí na tlačítko **hlasitosti** a zvyšuje hlasitost.  
   
-   ![Tlačítka v emulátoru Windows Phone](../debugger/media/wp-emulator-buttons.png "WP_Emulator_buttons")  
+   ![Tlačítka na emulátoru Windows Phone](../debugger/media/wp-emulator-buttons.png "WP_Emulator_buttons")  
   
-## <a name="BKMK_tasks_kbd"></a> Použití klávesnice počítače pomocí emulátoru  
- Emulátor podporuje mapování klávesnice hardwaru na vašem vývojovém počítači, na klávesnici na Windows Phone. Chování klíče je stejné jako u zařízení s Windows Phone.  
+## <a name="use-the-computer-keyboard-with-the-emulator"></a><a name="BKMK_tasks_kbd"></a> Použití počítačové klávesnice s emulátorem  
+ Emulátor podporuje mapování hardwarové klávesnice ve vývojovém počítači na klávesnici na Windows Phone. Chování klíčů je stejné jako u Windows Phoneho zařízení.  
   
- Ve výchozím nastavení není povolená hardwarová klávesnice. Tato implementace je stejná jako posuvné klávesnice, který musí být nasazené, než budete moct použít. Před povolením klávesnice hardwaru emulátor přijímá klíče vstup pouze z klíče ovládacího prvku.  
+ Hardwarová klávesnice není standardně povolená. Tato implementace je ekvivalentní posuvné klávesnici, která musí být nasazena před tím, než ji budete moci použít. Než povolíte hardwarovou klávesnici, emulátor akceptuje vstup klíče jenom z řídicích kláves.  
   
- Speciální znaky na klávesnici lokalizovanou verzi sady Windows vývojový počítač nepodporuje emulátor. Zadat speciální znaky, které se nacházejí na lokalizované klávesnice, místo toho použijte Panel vstup softwaru (SIP).  
+ Emulátor nepodporuje speciální znaky na klávesnici lokalizované verze počítače s Windows Development. Chcete-li zadat speciální znaky, které jsou k dispozici na lokalizované klávesnici, použijte místo toho panel pro zadání softwaru (SIP).  
   
- Použití klávesnice počítače se spustila v emulátoru, stiskněte klávesu PAGE UP klíč nebo klíč PAUSE/BREAK (emulátor systému Windows 8 nebo 8.1) nebo F4 (emulátor Windows 10).  
+ Chcete-li použít klávesnici počítače v emulátoru, stiskněte klávesu PAGE UP nebo klíč pro pozastavení/přerušení (emulátor systému Windows 8/8.1) nebo F4 (emulátor systému Windows 10).  
   
- Pokud chcete zastavit pomocí klávesnice počítače se spustila v emulátoru, stiskněte klávesu PAGE DOWN klíč nebo klíč PAUSE/BREAK (emulátor systému Windows 8 nebo 8.1) nebo F4 (emulátor Windows 10).  
+ Chcete-li ukončit používání klávesnice počítače v emulátoru, stiskněte klávesu PAGE DOWN nebo klíč pozastavení/přerušení (emulátor systému Windows 8/8.1) nebo F4 (emulátor systému Windows 10).  
   
- V následující tabulce jsou uvedeny kláves na klávesnici hardwaru, můžete použít k emulaci tlačítek a jiných ovládacích prvků ve Windows Phone.  
+ V následující tabulce je uveden seznam klíčů na hardwarové klávesnici, které lze použít k emulaci tlačítek a dalších ovládacích prvků na Windows Phone.  
   
-|Hardwarový klíč počítače|Windows Phone hardwarové tlačítko.|Poznámky|  
+|Hardwarový klíč počítače|Windows Phone – tlačítko hardwaru|Poznámky|  
 |---------------------------|-----------------------------------|-----------|  
-|F1|ZPĚT|Dlouhé stisknutí fungovat podle očekávání.|  
-|F2|START|Dlouhé stisknutí fungovat podle očekávání.|  
-|F3|HLEDÁNÍ||  
-|F4|V emulátoru Windows 10 Přepne mezi pomocí klávesnice v místním počítači a ne pomocí klávesnice v místním počítači.|Není k dispozici v emulátoru systému Windows 8 nebo 8.1.|  
-|F5|Není k dispozici.||  
-|F6|CAMERA HALF|Vyhrazené fotoaparát tlačítko, které se stiskne urazili polovinu cesty.|  
-|F7|ÚPLNÉ FOTOAPARÁTU|Tlačítko vyhrazené fotoaparátu.|  
-|F8|Není k dispozici.||  
-|F9|SVAZEK NAHORU||  
-|F10|SVAZEK DOLŮ||  
-|F11|Není k dispozici.||  
-|F12|NAPÁJENÍ|Stisknutím klávesy F12 dvakrát povolit zamykací obrazovce.<br /><br /> Dlouhé stisknutí fungovat podle očekávání.|  
-|ESC|ZPĚT|Dlouhé stisknutí fungovat podle očekávání.|  
-|PAUSE/BREAK|Přepnout klávesnice (jenom pro emulátor systému windows 8 nebo 8.1).|Není k dispozici pro emulátor systému Windows 10.|  
-|PAGE UP|Umožňuje hardwaru pomocí klávesnice (jenom emulátor systému Windows 8 nebo 8.1).|Není k dispozici pro emulátor systému Windows 10.|  
-|O STRÁNKU DOLŮ|Zakáže hardwaru klávesnice (jenom emulátor systému Windows 8 nebo 8.1).|Není k dispozici pro emulátor systému Windows 10.|  
+|F1|NÁVRAT|Dlouhá stisknutí fungují podle očekávání.|  
+|F2|Čína|Dlouhá stisknutí fungují podle očekávání.|  
+|F3|SEARCH||  
+|F4|V emulátoru Windows 10 přepíná mezi použitím klávesnice místního počítače a nepoužívá klávesnici místního počítače.|Nelze použít v emulátoru systému Windows 8/8.1.|  
+|F5|Neužívá se.||  
+|F6|FOTOAPARÁT – POLOVIČNÍ|Vyhrazené tlačítko kamery, ve kterém se stiskne uprostřed.|  
+|F7|KAMERA PLNÁ|Vyhrazené tlačítko fotoaparátu|  
+|F8|Neužívá se.||  
+|F9|NAVÝŠENÍ OBJEMU||  
+|F10|SNÍŽIT HLASITOST||  
+|Kláves|Neužívá se.||  
+|F12|POWER|Dvojím stisknutím klávesy F12 povolte zamykací obrazovku.<br /><br /> Dlouhá stisknutí fungují podle očekávání.|  
+|KLÁVES|NÁVRAT|Dlouhá stisknutí fungují podle očekávání.|  
+|POZASTAVIT/PŘERUŠIT|Přepnout klávesnici (jenom emulátor Windows 8/8.1).|Nelze použít pro emulátor systému Windows 10.|  
+|O STRÁNKU NAHORU|Povolí hardwarovou klávesnici (jenom emulátor Windows 8/8.1).|Nelze použít pro emulátor systému Windows 10.|  
+|O STRÁNKU DOLŮ|Zakáže hardwarovou klávesnici (jenom emulátor Windows 8/8.1).|Nelze použít pro emulátor systému Windows 10.|  
   
-## <a name="BKMK_checkpoints"></a> Uložit a načíst vlastní kontrolní body  
- Uložte snímek stavu na emulátor pomocí **kontrolní body** kartu v emulátoru **dalších nástrojů**. Tato funkce je užitečná, pokud se často testování aplikace s využitím stejných dat a nastavení.  
+## <a name="save-and-load-custom-checkpoints"></a><a name="BKMK_checkpoints"></a> Uložit a načíst vlastní kontrolní body  
+ Uložte snímek stavu emulátoru pomocí karty **kontrolní body** v **dalších nástrojích**emulátoru. Tato funkce je užitečná v případě, že aplikaci často testujete se stejnými daty a nastaveními.  
   
- Například pokud vaše aplikace vyžaduje několik kontaktů, můžete vytvořit jednou záznamů kontaktů a uložte snímek emulátoru. Jinak budete muset znovu vytvořit záznamů kontaktů pokaždé, když spusťte emulátor.  
+ Například pokud vaše aplikace vyžaduje několik kontaktů, můžete si vytvořit záznamy kontaktů jednou a uložit snímek emulátoru. V opačném případě je nutné znovu vytvořit záznamy kontaktů při každém spuštění emulátoru.  
   
-- Klikněte na tlačítko **nového kontrolního bodu** zachytit nový snímek stavu emulátoru s daty a nastavením požadovaným pro testování vaší aplikace znovu později. Nový kontrolní bod se přidá do **kontrolní body** seznamu.  
+- Kliknutím na **Nový kontrolní bod** Zachyťte nový snímek stavu emulátoru s daty a nastavením požadovaným pro otestování aplikace znovu později. Nový kontrolní bod se přidá do seznamu **kontrolních bodů** .  
   
-   Kontrolní bod nelze zachytit, zatímco je připojen ladicí program v emulátoru.  
+   Kontrolní bod nelze zachytit, pokud je ladicí program připojen k emulátoru.  
   
-- Vyberte kontrolní bod v **kontrolní body** seznamu zobrazíte informace o kontrolního bodu.  
+- Výběrem kontrolního bodu v seznamu **kontrolní body** zobrazíte informace o kontrolním bodu.  
   
-- Vyberte přepínač v **výchozí** sloupec aby uložené kontrolní bod výchozí kontrolní bod pro aktivní emulátoru.  
+- Výběrem přepínače ve **výchozím** sloupci nastavte, aby byl uložený kontrolní bod výchozím kontrolním bodem pro aktivní emulátor.  
   
-- Klikněte na tlačítko **obnovení** restartovat operační systém Windows Phone v emulátoru a načíst vybraný snímek.  
+- Kliknutím na **obnovit** restartujte Windows Phone operační systém na emulátoru a načtěte vybraný snímek.  
   
-- Klikněte na tlačítko **odstranit** odstranit snímek, který už nepotřebujete.  
+- Kliknutím na tlačítko **Odstranit** odstraňte snímek, který již nepotřebujete.  
   
-  Původní obrázek emulátoru se vždy zobrazí jako první položku **kontrolní body** seznamu a nelze změnit ani odstranit. Můžete ale vybrat jiný snímek jako výchozí image emulátoru.  
+  Původní image emulátoru se vždycky zobrazí jako první položka v seznamu **kontrolní body** a nedá se změnit ani odstranit. Můžete ale vybrat jiný snímek jako výchozí image emulátoru.  
   
-  ![Kontrolní body kartu emulátoru Windows Phone](../debugger/media/wp-emulator-checkpoints.png "WP_Emulator_checkpoints")  
+  ![Karta kontrolní body v emulátoru Windows Phone](../debugger/media/wp-emulator-checkpoints.png "WP_Emulator_checkpoints")  
   
-## <a name="BKMK_tasks_shot"></a> Pořídit snímky obrazovky v emulátoru  
- Můžete vytvořit kopie obrazovky aplikací Windows Phone pomocí nástroje snímek obrazovky v okně Další nástroje. Nástroj vytvoří soubory PNG, odpovídající řešení spuštěný emulátor.  
+## <a name="capture-screenshots-in-the-emulator"></a><a name="BKMK_tasks_shot"></a> Zachytit snímky obrazovky v emulátoru  
+ Snímky obrazovky vaší aplikace Windows Phone můžete vytvořit pomocí nástroje snímek obrazovky z dalších oken nástrojů. Nástroj vytvoří soubory PNG, které odpovídají rozlišení běžícího emulátoru.  
   
- ![Snímky obrazovky z Windows Phone Emulator](../debugger/media/wp-emulator-screenshots.png "WP_Emulator_screenshots")  
+ ![Snímky obrazovky z emulátoru Windows Phone](../debugger/media/wp-emulator-screenshots.png "WP_Emulator_screenshots")  
   
-#### <a name="to-create-an-app-screenshot-by-using-the-built-in-emulator-screenshot-tool"></a>Vytvoření – snímek obrazovky aplikace s použitím nástroje snímek obrazovky s integrovanou emulátoru  
+#### <a name="to-create-an-app-screenshot-by-using-the-built-in-emulator-screenshot-tool"></a>Vytvoření snímku aplikace pomocí integrovaného nástroje pro snímek obrazovky emulátoru  
   
-1. K optimalizaci kvality vaší snímky obrazovky, nastavte úroveň přiblížení emulátoru do 100 procent. Vyšší nastavení úrovně přiblížení, tím lepší kvalitu na snímku obrazovky.  
+1. Pro optimalizaci kvality snímků obrazovky nastavte úroveň přiblížení emulátoru na 100 procent. Čím vyšší úroveň přiblížení nastavíte, tím lepší kvalita obrazovky.  
   
 2. Spusťte aplikaci v emulátoru.  
   
-3. Na panelu nástrojů emulátor, klikněte na tlačítko Rozbalit otevřete **další nástroje** okna.  
+3. Kliknutím na tlačítko Rozbalit na panelu nástrojů emulátoru otevřete další okno **nástrojů** .  
   
-4. Klikněte na tlačítko **snímek obrazovky** kartu.  
+4. Klikněte na kartu **snímek obrazovky** .  
   
-5. Když je aplikace připravená, klikněte na tlačítko **zachycení** tlačítko.  
+5. Až bude vaše aplikace připravená, klikněte na tlačítko **zachytit** .  
   
     Snímek obrazovky se zobrazí v pracovním prostoru.  
   
-6. Klikněte na tlačítko **Uložit** tlačítko Otevřít **uložit jako** dialogové okno.  
+6. Kliknutím na tlačítko **Uložit** otevřete dialogové okno **Uložit jako** .  
   
-7. Vyberte umístění a **název_souboru** a potom klikněte na tlačítko **Uložit**.  
+7. Zvolte umístění a **název souboru** , který chcete, a pak klikněte na **Uložit**.  
   
 8. Volitelně můžete přejít na jiné stránky v aplikaci a zachytit další snímky obrazovky.  
   
-9. Spuštění emulátoru se jiná obrazovka řešení k zachycení stejné snímků na jiné řešení. Pokud jste spustili aplikaci s laděním, je nutné zastavit ladění předtím, než spustíte jej znovu na jiný emulátor.  
+9. Spusťte emulátor s jiným rozlišením obrazovky a zachyťte stejné snímky obrazovky v jiném rozlišení. Pokud jste aplikaci spustili s laděním, je nutné zastavit ladění před tím, než je budete moci znovu spustit na jiném emulátoru.  
   
-   Zakažte čítače frekvence snímků na obrazovce emulátoru ještě před zaznamenáním snímky obrazovky, který bude odeslán do Windows Phone Store.  
+   Než zachytíte snímky obrazovky, které se odešlou do úložiště Windows Phone, zakažte čítače snímkových frekvencí na obrazovce emulátoru.  
   
-#### <a name="to-disable-frame-rate-counters-in-the-emulator-before-capturing-screenshots"></a>Chcete-li zakázat čítače frekvence snímků se spustila v emulátoru před pořizování snímků  
+#### <a name="to-disable-frame-rate-counters-in-the-emulator-before-capturing-screenshots"></a>Zakázání čítačů frekvence snímků v emulátoru před zachycením snímků obrazovky  
   
-- Určení verze sestavení v sadě Visual Studio. Po zadání sestavení pro vydání, spusťte aplikaci tak, že vyberete **nasadit _[název aplikace]_**  odkaz na **sestavení** nabídky.  
+- Zadejte sestavení pro vydání v aplikaci Visual Studio. Po zadání buildu pro vydání spusťte aplikaci kliknutím na odkaz **nasadit _[název aplikace]_ ** v nabídce **sestavení** .  
   
-- Alternativně můžete Zakomentovat řádek kódu v souboru app.xaml.cs nebo app.xaml.vb, která nastaví hodnotu `EnableFrameRateCounter` k `true`.
+- Alternativně můžete odkomentovat řádek kódu v souboru app.xaml.cs nebo App. XAML, který nastaví hodnotu `EnableFrameRateCounter` na `true` .

@@ -1,5 +1,5 @@
 ---
-title: Parametr spolupracujícího sestavení sady Visual Studio zařazování | Dokumentace Microsoftu
+title: Zařazování parametrů sestavení Interop sady Visual Studio | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,45 +12,45 @@ ms.assetid: 89123eae-0fef-46d5-bd36-3d2a166b14e3
 caps.latest.revision: 24
 manager: jillfra
 ms.openlocfilehash: ac95c40b356c542da323a3ea3744827087f2d840
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686928"
 ---
-# <a name="visual-studio-interop-assembly-parameter-marshaling"></a>Parametr spolupracujícího sestavení sady Visual Studio zařazování
-Volání nebo volat nespravovaný kód com. pravděpodobně rozšíření VSPackages, která jsou napsána ve spravovaném kódu. Argumenty metody jsou obvykle, transformovat nebo zařadit automaticky interoperační zařazovač. Ale někdy argumenty nelze transformovat v přímočarým způsobem. V těchto případech parametry prototyp metody sestavení vzájemné spolupráce se používají tak, aby odpovídaly parametrům funkcí modelu COM co nejpřesněji. Další informace najdete v tématu [zařazování Interop](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
+# <a name="visual-studio-interop-assembly-parameter-marshaling"></a>Zařazování parametrů sestavení Interop sady Visual Studio
+Rozhraní VSPackage, která jsou napsána ve spravovaném kódu, mohou být pravděpodobně volána nebo volána nespravovaným kódem COM. Obvykle jsou argumenty metody transformovány nebo zařazeny automaticky zařazováním Interop. Někdy se ale argumenty nedají transformovat jednoduchým způsobem. V těchto případech se parametry prototypu metody sestavení používají k co nejpřesněji shodě parametrů funkce modelu COM. Další informace najdete v tématu [zařazování Interop](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
   
-## <a name="general-suggestions"></a>Obecná doporučení  
+## <a name="general-suggestions"></a>Obecné návrhy  
   
 ##### <a name="read-the-reference-documentation"></a>Přečtěte si referenční dokumentaci  
- Účinný způsob, jak detekovat problémy s interoperabilitou je, přečtěte si referenční dokumentaci pro jednotlivé metody.  
+ Účinný způsob, jak zjistit problémy s interoperabilitou, je přečíst si referenční dokumentaci pro každou metodu.  
   
- Referenční dokumentace pro jednotlivé metody obsahuje tři relevantní části:  
+ Referenční dokumentace pro každou metodu obsahuje tři relevantní oddíly:  
   
-- [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] Prototyp funkce modelu COM.  
+- [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]Prototyp funkce modelu COM.  
   
-- Metoda prototypu definiční sestavení.  
+- Prototyp metody sestavení Interop.  
   
-- Seznam parametrů COM a krátký popis každého.  
+- Seznam parametrů modelu COM a stručný popis každého z nich.  
   
-##### <a name="look-for-differences-between-the-two-prototypes"></a>Vyhledejte rozdíly mezi dvěma prototypů  
- Většina problémy s interoperabilitou odvozovat neshody mezi definice rozhraní COM určitého typu a stejného typu v definici [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sestavení vzájemné spolupráce. Představte si třeba rozdíl v možnost předávání `null` hodnotu v parametr [out]. Musíte hledat rozdíly mezi dva prototypy a vezměte v úvahu jejich důsledky pro data předávána.  
+##### <a name="look-for-differences-between-the-two-prototypes"></a>Vyhledání rozdílů mezi těmito dvěma prototypy  
+ Většina problémů s interoperabilitou je odvozena z neshody mezi definicí konkrétního typu v rozhraní COM a definicí stejného typu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sestaveních spolupráce. Zvažte například rozdíl v možnosti předání `null` hodnoty v parametru [out]. Je nutné vyhledat rozdíly mezi těmito dvěma prototypy a vzít v úvahu jejich důsledky pro předávané údaje.  
   
-##### <a name="read-the-parameter-definitions"></a>Číst definice parametru  
- Číst definice parametru. COM je méně striktní než common language runtime (CLR) o kombinování různých typů dat v jeden parametr. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Rozhraní modelu COM využívat všech výhod této flexibility. Žádné parametry, které můžete předat nebo vyžadují nestandardní hodnoty nebo typ dat, jako je konstantní hodnota v parametru ukazatel, by jako takové popsané v dokumentaci.  
+##### <a name="read-the-parameter-definitions"></a>Přečtěte si definice parametrů  
+ Přečtěte si definice parametrů. Model COM je méně striktní než modul CLR (Common Language Runtime), který slouží k kombinování různých typů dat v jednom parametru. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Rozhraní COM plně využívají tuto flexibilitu. Libovolný parametr, který může předat nebo vyžadovat nestandardní hodnotu nebo typ dat, jako je například konstantní hodnota v parametru ukazatele, by měl být popsán jako v dokumentaci.  
   
-### <a name="iunknown-objects-passed-as-type-void"></a>Objekty IUnknown předány jako typ void **  
- Vyhledejte [out] Parametry, které jsou definovány jako typ `void **` v modelu COM rozhraní, ale které jsou definovány jako `[``iid_is``]` v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototyp metody sestavení vzájemné spolupráce.  
+### <a name="iunknown-objects-passed-as-type-void"></a>Objekty IUnknown předané jako typ void * *  
+ Vyhledejte parametry [out], které jsou definovány jako typ `void **` v rozhraní COM, ale jsou definovány jako `[``iid_is``]` v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototypu metody sestavení Interop.  
   
- V některých případech vygeneruje rozhraní modelu COM `IUnknown` objektu a rozhraní modelu COM pak ji předá jako typ. `void **`. Tato rozhraní jsou obzvláště důležité, protože pokud je proměnná definovaná jako [out] v IDL, pak bude `IUnknown` objekt je referenčně s `AddRef` metody. Nevracení paměti dochází, pokud objekt není správně zpracovat.  
+ V některých případech rozhraní COM generuje `IUnknown` objekt a rozhraní com ho potom předává jako typ `void **` . Tato rozhraní jsou obzvláště důležitá, protože pokud je proměnná definována jako [out] v IDL, pak `IUnknown` je objekt počítán odkazem pomocí `AddRef` metody. Nevracení paměti dojde v případě, že se objekt nezpracovává správně.  
   
 > [!NOTE]
-> `IUnknown` Objekt vytvořený rozhraní COM a vrátil [out] proměnné způsobí nevracení paměti, pokud není explicitně uvolněna.  
+> `IUnknown`Objekt vytvořený rozhraním com a vrácený v proměnné [out] způsobuje nevrácení paměti, pokud není explicitně uvolněn.  
   
- Spravované metody, které zpracovávají tyto objekty by měly zpracovávat <xref:System.IntPtr> jako ukazatel na `IUnknown` a následně zavolat <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metodu k získání objektu. Volající by měl pak přetypovávat návratovou hodnotu pro jakýkoli typ je vhodný. Pokud objekt je už nepotřebujete, volání <xref:System.Runtime.InteropServices.Marshal.Release%2A> pro uvolnění.  
+ Spravované metody, které zpracovávají takové objekty by měly být považovány <xref:System.IntPtr> za ukazatel na `IUnknown` objekt a volat <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metodu pro získání objektu. Volající by pak měl přetypovat návratovou hodnotu na libovolný typ. Pokud objekt již není potřeba, zavolejte <xref:System.Runtime.InteropServices.Marshal.Release%2A> k jeho vydání.  
   
- Tady je příklad volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> metoda a zpracování `IUnknown` objektu správně:  
+ Následuje příklad volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> metody a správné manipulace s `IUnknown` objektem:  
   
 ```  
 MyClass myclass;  
@@ -77,7 +77,7 @@ else
 ```  
   
 > [!NOTE]
-> Následující metody se ví, předejte `IUnknown` objektu ukazatele jako typ <xref:System.IntPtr>. Jejich zpracování, jak je popsáno v této části.  
+> Následující metody jsou známy pro předání `IUnknown` ukazatelů na objekty jako typ <xref:System.IntPtr> . Zpracujte je podle pokynů v této části.  
   
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>  
   
@@ -91,39 +91,39 @@ else
   
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>  
   
-### <a name="optional-out-parameters"></a>Volitelné [parametry out]  
- Vyhledejte parametry, které jsou definovány jako [out] datový typ (`int`, `object`, a tak dále) v modelu COM rozhraní, ale které jsou definovány jako pole stejného datového typu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototyp metody sestavení vzájemné spolupráce.  
+### <a name="optional-out-parameters"></a>Volitelné parametry [out]  
+ Vyhledejte parametry, které jsou definovány jako datový typ [out] ( `int` , `object` a tak dále) v rozhraní COM, ale které jsou definovány jako pole stejného datového typu v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototypu metody sestavení Interop.  
   
- Některé COM rozhraní, jako například <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>, nakládat [jako volitelné parametry out]. Pokud objekt není povinný, vrátí tato rozhraní COM `null` ukazatele jako hodnotu tohoto parametru místo vytvoření [out] objekt. Jedná se o účel. Pro tato rozhraní `null` ukazatele se předpokládá, že jako součást správné chování sady VSPackage, a není vrácena žádná chyba.  
+ Některá rozhraní COM, jako <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> je například, považovat parametry [out] za volitelné. Pokud objekt není vyžadován, tato rozhraní COM vrátí `null` ukazatel jako hodnotu tohoto parametru namísto vytvoření objektu [out]. Toto chování je úmyslné. Pro tato rozhraní `null` jsou ukazatele považovány za součást správného chování VSPackage a není vrácena žádná chyba.  
   
- Protože CLR nepovoluje hodnotu parametr [out] bude `null`, část navrženého chování těchto rozhraní není přímo k dispozici v rámci spravovaného kódu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Metody sestavení vzájemné spolupráce pro ovlivněné rozhraní tento problém obejít tak, že definujete relevantní parametry jako pole, protože modul CLR umožňuje předat `null` pole.  
+ Vzhledem k tomu, že modul CLR nepovoluje, aby byla hodnota parametru [out] `null` , součástí navrženého chování těchto rozhraní není přímo k dispozici ve spravovaném kódu. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Metody sestavení vzájemné spolupráce pro ovlivněná rozhraní řeší problém definováním relevantních parametrů jako pole, protože modul CLR umožňuje předávání `null` polí.  
   
- Spravované implementace tyto metody by měl umístit `null` pole do parametru, když není nutné nic vrátit. V opačném případě vytvořte pole s jedním prvkem správný typ a vložte návratová hodnota v poli.  
+ Spravované implementace těchto metod by měly vložit `null` pole do parametru, pokud není nic vráceno. V opačném případě vytvořte pole s jedním prvkem správného typu a vložte vrácenou hodnotu do pole.  
   
- Spravované metody, které se zobrazí informace z rozhraní s volitelné [out] Parametry získávají parametr jako pole. Právě zkontrolujte hodnoty první prvek pole. Pokud není `null`, první prvek zacházet, jako kdyby byly původní parametru.  
+ Spravované metody, které přijímají informace z rozhraní s nepovinnými parametry [out] obdrží parametr jako pole. Pouze prověřte hodnotu prvního prvku pole. Pokud není `null` , považovat první prvek, jako by to byl původní parametr.  
   
-### <a name="passing-constants-in-pointer-parameters"></a>Předávání konstanty v parametry ukazatele  
- Vyhledání parametrů, která jsou definována jako [v] ukazatele rozhraní modelu COM, ale které jsou definovány jako <xref:System.IntPtr> zadejte [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototyp metody sestavení vzájemné spolupráce.  
+### <a name="passing-constants-in-pointer-parameters"></a>Předávání konstant v parametrech ukazatele  
+ Vyhledejte parametry, které jsou definovány jako [in] ukazatelů v rozhraní modelu COM, které jsou definovány jako <xref:System.IntPtr> typ v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototypu metody sestavení Interop.  
   
- K podobnému problému nastane, pokud rozhraní modelu COM předá zvláštní hodnota, například 0, -1 nebo hodnoty – 2, místo ukazatelem na objekt. Na rozdíl od [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], modul CLR neumožňuje konstanty pro přetypování jako objekty. Místo toho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sestavení vzájemné spolupráce definuje jako parametr <xref:System.IntPtr> typu.  
+ K podobnému problému dochází, když rozhraní COM předá speciální hodnotu, například 0,-1 nebo – 2, místo ukazatele na objekt. Na rozdíl od [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , modul CLR nepovoluje, aby byly konstanty přetypování jako objekty. Místo toho [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] definiční sestavení definuje parametr jako <xref:System.IntPtr> typ.  
   
- Spravované implementace z těchto metod zabere fakt, který <xref:System.IntPtr> třídy jsou obě `int` a `void *` konstruktory k vytvoření <xref:System.IntPtr> z objektu nebo celočíselné konstanty, podle potřeby.  
+ Spravované implementace těchto metod by měly využít skutečnost, že <xref:System.IntPtr> Třída má obojí `int` a `void *` konstruktory pro vytvoření <xref:System.IntPtr> z objektu nebo celočíselné konstanty (podle potřeby).  
   
- Spravované metody, které přijímají <xref:System.IntPtr> byste použít parametry tohoto typu <xref:System.IntPtr> zadejte operátory převodu ke zpracování výsledků. Nejprve převeďte <xref:System.IntPtr> k `int` a testování proti relevantní celočíselné konstanty. Pokud žádné hodnoty shodují, převeďte jej na objekt požadovaného typu a pokračovat.  
+ Spravované metody, které přijímají <xref:System.IntPtr> parametry tohoto typu, by měly použít <xref:System.IntPtr> operátory převodu typu pro zpracování výsledků. Nejprve převeďte <xref:System.IntPtr> na `int` a otestujte pomocí relevantních celočíselných konstant. Pokud se žádné hodnoty neshodují, převeďte je na objekt požadovaného typu a pokračujte.  
   
- Příklady tohoto objektu, najdete v článku <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A>.  
+ Příklady naleznete v tématech <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A> .  
   
-### <a name="ole-return-values-passed-as-out-parameters"></a>OLE vrátit hodnoty předány jako [parametry out]  
- Hledat metody, které mají `retval` vrácená hodnota v rozhraní modelu COM, ale mají `int` vracet hodnotu a zobrazí se další [pole parametrem out] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototyp metody sestavení vzájemné spolupráce. By mělo být jasné, že tyto metody vyžadují speciální zacházení, protože [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sestavení vzájemné spolupráce metoda prototypy mít jeden parametr více než metody rozhraní modelu COM.  
+### <a name="ole-return-values-passed-as-out-parameters"></a>Návratové hodnoty OLE předané jako parametry [out]  
+ Vyhledejte metody, které mají `retval` vrácenou hodnotu v rozhraní modelu COM, ale mají `int` vrácenou hodnotu a další parametr [out] v [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototypu metody sestavení Interop. Mělo by být jasné, že tyto metody vyžadují speciální zpracování, protože [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] prototypy metody sestavení Interop mají jeden další parametr než metody rozhraní modelu COM.  
   
- Mnoho rozhraní modelu COM, které se zabývají OLE aktivity odeslat informace o stavu OLE zpět na volající program uložené v `retval` návratovou hodnotu rozhraní. Namísto použití návratovou hodnotu odpovídající [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] metody sestavení vzájemné spolupráce poslat informace o zpět na volající program uložené v [out] pole parametrů.  
+ Mnoho rozhraní COM, která se týkají aktivity OLE, odesílají informace o stavu OLE zpět volajícímu programu uloženému v `retval` návratové hodnotě rozhraní. Namísto použití návratové hodnoty, odpovídající [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] metody sestavení vzájemné spolupráce odesílají informace zpět volajícímu programu uloženému v parametru pole [out].  
   
- Spravované implementace tyto metody by měly vytvořit pole s jedním prvkem stejného typu jako parametr [out] a vložit ho do parametru. Hodnota prvku pole musí být stejné jako odpovídající COM `retval`.  
+ Spravované implementace těchto metod by měly vytvořit pole s jedním prvkem stejného typu jako parametr [out] a umístit ho do parametru. Hodnota prvku pole by měla být stejná jako odpovídající model COM `retval` .  
   
- Spravované metody, které volají rozhraní tohoto typu by měl vyžádání prvního prvku mimo [out] pole. Tento element lze zacházet, jako by šlo `retval` návratová hodnota z odpovídající rozhraní modelu COM.  
+ Spravované metody, které volají rozhraní tohoto typu, by měly načíst první prvek z pole [out]. Tento element lze zacházet, jako by šlo o `retval` návratovou hodnotu z odpovídajícího rozhraní modelu COM.  
   
 ## <a name="see-also"></a>Viz také  
  [Zařazování spolupráce](https://msdn.microsoft.com/a95fdb76-7c0d-409e-a77e-0349b1ea1490)   
  [Zařazování spolupráce](https://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)   
  [Řešení potíží s interoperabilitou](https://msdn.microsoft.com/library/b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37)   
- [Spravovaná rozšíření VSPackages](../misc/managed-vspackages.md)
+ [Spravované VSPackage](../misc/managed-vspackages.md)

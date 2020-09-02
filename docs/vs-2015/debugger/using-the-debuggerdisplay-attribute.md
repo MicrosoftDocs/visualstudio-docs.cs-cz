@@ -1,5 +1,5 @@
 ---
-title: Používání atributu DebuggerDisplay | Dokumentace Microsoftu
+title: Použití atributu DebuggerDisplay | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,65 +19,65 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: aba6feb17a4e7bd4cabfe40bd45480a0f7a9f552
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683927"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>Používání atributu DebuggerDisplay
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:System.Diagnostics.DebuggerDisplayAttribute> Ovládací prvky zobrazení objektu, vlastnost nebo pole v oknech proměnných ladicího programu. Tento atribut lze použít pro typy delegátů, vlastnosti, pole a sestavení.  
+<xref:System.Diagnostics.DebuggerDisplayAttribute>Určuje, jak se objekt, vlastnost nebo pole zobrazí v oknech proměnných ladicího programu. Tento atribut lze použít pro typy, delegáty, vlastnosti, pole a sestavení.  
   
- `DebuggerDisplay` Atribut má jeden argument, což je řetězec, který se zobrazí ve sloupci Hodnota pro instance daného typu. Tento řetězec může obsahovat složené závorky (`{` a `}`). Text v rámci dvojici závorek je vyhodnocen jako pole, vlastnosti nebo metody.  
+ `DebuggerDisplay`Atribut má jeden argument, což je řetězec, který se zobrazí ve sloupci value pro instance daného typu. Tento řetězec může obsahovat složené závorky ( `{` a `}` ). Text v páru složených závorek je vyhodnocen jako pole, vlastnost nebo metoda.  
   
- Pokud má třída překryté `ToString()` metoda, ladicí program používá metodu přepsané místo výchozího `{<typeName>}`. To znamená pokud mají přepsat `ToString()` metoda, ladicí program používá metodu přepsané místo výchozího`{<typeName>}`, a není nutné používat `DebuggerDisplay`. Pokud používáte obě, `DebuggerDisplay` atribut má přednost před přepsané `ToString()` metody.  
+ Pokud má třída potlačenou `ToString()` metodu, ladicí program použije potlačenou metodu namísto výchozího `{<typeName>}` . Proto, pokud jste přepsali `ToString()` metodu, ladicí program použije přepsanou metodu namísto výchozího `{<typeName>}` a nemusíte ji používat `DebuggerDisplay` . Použijete-li obojí, má `DebuggerDisplay` atribut přednost před potlačenou `ToString()` metodou.  
   
- Určuje, zda ladicí program vyhodnotí tomto implicitní `ToString()` volání závisí nastavení hlavního názvu uživatele v **nástroje / Možnosti / ladění** dialogové okno. Visual Basic neimplementuje tomto implicitní `ToString()` hodnocení.  
+ Bez ohledu na to, zda ladicí program vyhodnocuje Toto implicitní `ToString()` volání, závisí na nastavení uživatele v dialogovém okně **Nástroje/možnosti/ladění** . Visual Basic neimplementuje Toto implicitní `ToString()` vyhodnocení.  
   
 > [!IMPORTANT]
-> Pokud **zobrazit nezpracovanou strukturu objektů v oknech proměnných** zaškrtněte políčko v **nástroje/Možnosti / ladění** dialogové okno, pak bude `DebuggerDisplay` atribut se ignoruje.  
+> Pokud je zaškrtnuté políčko **Zobrazit nezpracovanou strukturu objektů v proměnných** v dialogovém okně **nástroje/Options/ladění** , `DebuggerDisplay` je atribut ignorován.  
   
- V následující tabulce jsou uvedeny některé možné způsoby použití `DebuggerDisplay` atribut a příklad výstupy.  
+ V následující tabulce jsou uvedeny některé možné způsoby použití `DebuggerDisplay` atributů a ukázkových výstupů.  
   
-|Atribut|Povolí, nebude výstup **hodnotu** sloupec)|  
+|Atribut|Výstup se zobrazuje ve sloupci **hodnota** ).|  
 |---------------|------------------------------------------------|  
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Použít u typu s poli `x` a `y`.|`x = 5 y = 18`|  
-|`[DebuggerDisplay("String value is {getString()}")]`Syntaxe parametru se může lišit mezi jazyky. Proto je používejte obezřetně.|`String value is [5, 6, 6]`|  
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Používá se pro typ s poli `x` a `y` .|`x = 5 y = 18`|  
+|`[DebuggerDisplay("String value is {getString()}")]`Syntaxe parametru se může mezi jazyky lišit. Proto je používejte opatrně.|`String value is [5, 6, 6]`|  
   
- `DebuggerDisplay` Můžete také přijmout pojmenované parametry.  
+ `DebuggerDisplay` může také přijmout pojmenované parametry.  
   
 |Parametry|Účel|  
 |----------------|-------------|  
-|`Name`, `Type`|Tyto parametry mají vliv **název** a **typ** sloupce oknech proměnných. (To můžete udělat na řetězce pomocí stejné syntaxe jako konstruktor.) Matoucí výstup může způsobit nadměrné tyto parametry, nebo je nesprávně, používají.|  
-|`Target`, `TargetTypeName`|Určuje cílový typ, když je atribut použit na úrovni sestavení.|  
+|`Name`, `Type`|Tyto parametry ovlivňují sloupce **název** a **typ** v oknech proměnných. (Mohou být nastaveny na řetězce pomocí stejné syntaxe jako konstruktor.) Tyto parametry jsou převedené nebo nesprávně používané, můžou způsobit matoucí výstup.|  
+|`Target`, `TargetTypeName`|Určuje cílový typ, pokud je atribut použit na úrovni sestavení.|  
   
- Soubor autoexp.cs používá atributu DebuggerDisplay na úrovni sestavení. Soubor autoexp.cs Určuje výchozí rozšíření, které Visual Studio používá pro objekty .NET. Můžete zkontrolovat soubor autoexp.cs příklady toho, jak pomocí atributu DebuggerDisplay, nebo můžete upravit a zkompilujte soubor autoexp.cs, chcete-li změnit výchozí rozšíření. Ujistěte se, že zálohování souboru autoexp.cs před zahájením úprav.  
+ Soubor autoexp.cs používá atribut DebuggerDisplay na úrovni sestavení. Soubor autoexp.cs určuje výchozí rozšíření, které Visual Studio používá pro objekty .NET. Můžete si prohlédnout soubor autoexp.cs, kde najdete příklady použití atributu DebuggerDisplay, nebo můžete upravit a zkompilovat soubor autoexp.cs pro změnu výchozích rozšíření. Nezapomeňte soubor autoexp.cs před úpravou zálohovat.  
   
- K vytvoření autoexp.cs, otevřete si příkazový řádek pro vývojáře pro VS2015 a spusťte následující příkazy  
+ Pokud chcete sestavit autoexp.cs, otevřete Developer Command Prompt pro VS2015 a spusťte následující příkazy.  
   
 ```  
 cd <directory containing autoexp.cs>  
 csc /t:library autoexp.cs  
 ```  
   
- Aby se změny autoexp.dll neexistoval, použije v příští relaci ladění.  
+ Změny autoexp.dll budou v další relaci ladění vyzvednuty.  
   
 ## <a name="using-expressions-in-debuggerdisplay"></a>Použití výrazů v DebuggerDisplay  
- Přestože lze použít obecné výraz mezi závorkami v atributu DebuggerDisplay, tato praxe se nedoporučuje.  
+ I když můžete použít obecný výraz mezi závorkami v atributu DebuggerDisplay, tento postup se nedoporučuje.  
   
- Obecné výrazu v DebuggerDisplay má implicitní přístup k `this` ukazatele pro aktuální instanci pouze cílového typu. Výraz nemá přístup k aliasy, místní hodnoty nebo ukazatele. Pokud výraz odkazuje na vlastnosti, atributy na tyto vlastnosti nejsou zpracovány. Například kód jazyka C# `[DebuggerDisplay("Object {count - 2}"` zobrazí `Object 6` Pokud pole `count` se 8.  
+ Obecný výraz v DebuggerDisplay má implicitní přístup k `this` ukazateli pro aktuální instanci cílového typu. Výraz nemá přístup k aliasům, místním hodnotám nebo ukazatelům. Pokud výraz odkazuje na vlastnosti, atributy těchto vlastností nejsou zpracovány. Kód jazyka C# se například `[DebuggerDisplay("Object {count - 2}"`  zobrazí, `Object 6` Pokud bylo pole `count` 8.  
   
  Použití výrazů v DebuggerDisplay může vést k následujícím problémům:  
   
-- Vyhodnocování výrazů je nejvíce náročná operace v ladicím programu a tento výraz je vyhodnocen pokaždé, když se zobrazí. To může způsobit problémy s výkonem v krokování kódu. Složitý výraz, který se používá k zobrazení hodnoty v kolekci nebo seznam například může být velmi pomalé. když je velký počet prvků.  
+- Vyhodnocování výrazů je nejlevnější operace v ladicím programu a výraz je vyhodnocen pokaždé, když je zobrazen. To může způsobit problémy s výkonem při procházení kódu. Například složitý výraz, který se používá k zobrazení hodnot v kolekci nebo seznamu, může být velmi pomalý, pokud je počet prvků velký.  
   
-- Chyba při vyhodnocování výrazu jazyka aktuální rámec zásobníku a ne vyhodnocení jazyk, ve kterém byla vytvořená výraz jsou výrazy vyhodnocovány. To může způsobit nepředvídatelné výsledky, když jsou různé jazyky.  
+- Výrazy jsou vyhodnocovány vyhodnocovacím filtrem výrazu jazyka aktuálního rámce zásobníku a nikoli vyhodnocovacím filtrem jazyka, ve kterém byl výraz napsán. To může vést k nepředvídatelným výsledkům, pokud se jazyky liší.  
   
-- Vyhodnocení výrazu můžete změnit stav aplikace. Například výraz, který nastaví hodnotu vlastnosti mění hodnotu vlastnosti v provádění kódu.  
+- Vyhodnocení výrazu může změnit stav aplikace. Například výraz, který nastaví hodnotu vlastnosti, je obdobou hodnoty vlastnosti ve spuštěném kódu.  
   
-  Jeden způsob, jak snížit možné potíže vyhodnocení výrazu je tak, že vytvoříte privátní vlastnost, která provádí operace a vrátí hodnotu typu string. Atributu DebuggerDisplay lze následně zobrazí hodnota této vlastnosti privátní. Následující příklad implementuje tento model:  
+  Jedním ze způsobů, jak omezit možné problémy při vyhodnocování výrazů, je vytvoření soukromé vlastnosti, která provede operaci a vrátí řetězec. Atribut DebuggerDisplay pak může zobrazit hodnotu této soukromé vlastnosti. Následující příklad implementuje tento model:  
   
 ```csharp  
 [DebuggerDisplay("{DebuggerDisplay,nq}")]  
@@ -96,12 +96,12 @@ public sealed class MyClass
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje, jak používat `DebuggerDisplay`společně s `DebuggerBrowseable` a `DebuggerTypeProxy`. Při zobrazení v okně proměnné ladicího programu, například **Watch** okna, vyvolá rozšíření, který vypadá takto:  
+ Následující příklad kódu ukazuje, jak použít `DebuggerDisplay` spolu s `DebuggerBrowseable` a `DebuggerTypeProxy` . Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:  
   
-|**Název**|**Hodnota**|**Typ**|  
+|**Name**|**Hodnota**|**Typ**|  
 |--------------|---------------|--------------|  
-|Key|"tři"|objekt {string}|  
-|Value|3|objekt {int}|  
+|Klíč|3|objekt {String}|  
+|Hodnota|3|objekt {int}|  
   
 ```csharp  
 [DebuggerDisplay("{value}", Name = "{key}")]  
@@ -180,4 +180,4 @@ class MyHashtable
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Používání atributu DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md) [rozšíření ladění pomocí atributů zobrazení ladicího programu](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)
+ [Použití používání DebuggerTypeProxy](../debugger/using-debuggertypeproxy-attribute.md) atributů [vylepšení ladění pomocí atributů zobrazení ladicího programu](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c0797d44115fb5b44cb0c670153e8476356bd533
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816563"
 ---
 # <a name="expected-hexadecimal-digit"></a>Byla očekávána šestnáctková číslice.
@@ -35,5 +35,5 @@ z = "\u1A5F";
     > [!NOTE]
     > Pokud chcete použít textový literál \u v řetězci, použijte dvě zpětná lomítka – ( \\ \u) – jedno pro řídicí sekvence prvního zpětného lomítka.  
   
-## <a name="see-also"></a>Viz také:  
- [Typy dat](../../javascript/data-types-javascript.md)
+## <a name="see-also"></a>Viz také  
+ [Datové typy](../../javascript/data-types-javascript.md)

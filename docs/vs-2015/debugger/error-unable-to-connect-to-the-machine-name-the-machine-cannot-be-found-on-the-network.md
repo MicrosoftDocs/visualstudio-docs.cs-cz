@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Nelze se připojit k počítači &lt;název&gt;. Počítač se v síti nepodařilo najít. | Dokumenty Microsoft'
+title: 'Chyba: Nelze se připojit k názvu počítače &lt; &gt; . Počítač se v síti nepodařilo najít. | Dokumentace Microsoftu'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,35 +19,35 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd1402a476ce2dceaaaf78580b36db20c3eed24f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682561"
 ---
-# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Chyba: Nelze se připojit k počítači &lt;název&gt;. Počítač se v síti nepodařilo najít.
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Chyba: Nelze se připojit k názvu počítače &lt; &gt; . Počítač se v síti nepodařilo najít.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-K tomuto chování dochází, pokud platí jedna z následujících podmínek:  
+K tomuto chování dochází, pokud je splněna jedna z následujících podmínek:  
   
 - Připojení ke vzdálenému počítači bylo přerušeno.  
   
-- Váš uživatelský účet na vzdáleném počítači zakázaná.  
+- Váš uživatelský účet na vzdáleném počítači je zakázán.  
   
-- Vypršela platnost vašeho hesla na vzdáleném počítači.  
+- Platnost vašeho hesla na vzdáleném počítači vypršela.  
   
-### <a name="to-resolve-this-behavior"></a>Chcete-li vyřešit tento problém  
+### <a name="to-resolve-this-behavior"></a>Řešení tohoto chování  
   
-- Ujistěte se, že místní počítač, tak vzdálenému počítači jsou ve stejné síti. K tomuto účelu použijte Průzkumník systému Microsoft Windows (nebo Průzkumníka souborů), k akci pro přístup ke vzdálenému počítači.  
+- Ujistěte se, že je místní počítač a vzdálený počítač ve stejné síti. K tomu použijte Průzkumníka Windows (nebo Průzkumníka souborů) a pokuste se získat přístup ke vzdálenému počítači.  
   
-     – a –  
+     ani  
   
-- Ujistěte se, že je povolena uživatelský účet, který používáte pro připojení ke vzdálenému počítači.  
+- Ujistěte se, že uživatelský účet, který používáte pro připojení ke vzdálenému počítači, je povolený.  
   
-     – a –  
+     ani  
   
-- Ujistěte se, že heslo, které používáte pro připojení ke vzdálenému počítači je platný a že nevypršela platnost.  
+- Ujistěte se, že heslo, které používáte pro připojení ke vzdálenému počítači, je platné a nevypršela jeho platnost.  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení nástroje Remote Tools na zařízení](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)   
+ [Nastavení nástrojů Remote Tools na zařízení](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)   
  [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

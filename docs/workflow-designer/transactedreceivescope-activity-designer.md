@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 75fb1da392bce7dbd0cd7849d83b3b452521e0c7
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86875927"
 ---
 # <a name="transactedreceivescope-activity-designer"></a>Návrhář aktivity TransactedReceiveScope
@@ -37,9 +37,9 @@ V následující tabulce jsou uvedeny <xref:System.ServiceModel.Activities.Trans
 
 |Název vlastnosti|Požaduje se|Využití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Nepravda|Volitelný popisný název <xref:System.ServiceModel.Activities.TransactedReceiveScope> aktivity. Výchozí hodnota je TransactedReceiveScope.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> název není nezbytně nutný, je osvědčeným postupem použití zobrazovaného názvu.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Ne|Volitelný popisný název <xref:System.ServiceModel.Activities.TransactedReceiveScope> aktivity. Výchozí hodnota je TransactedReceiveScope.<br /><br /> I když <xref:System.Activities.Activity.DisplayName%2A> název není nezbytně nutný, je osvědčeným postupem použití zobrazovaného názvu.|
 |<xref:System.ServiceModel.Activities.TransactedReceiveScope.Request%2A>|Ano|Zruší <xref:System.ServiceModel.Activities.Receive> aktivitu do bloku **žádosti** na povrchu návrháře aktivit.|
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|Nepravda|Přenechá <xref:System.Activities.Activity> do bloku **text** na ploše návrháře aktivit.|
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A>|Ne|Přenechá <xref:System.Activities.Activity> do bloku **text** na ploše návrháře aktivit.|
 
 ## <a name="see-also"></a>Viz také
 

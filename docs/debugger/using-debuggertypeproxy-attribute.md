@@ -18,15 +18,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b98481cb1727ecad9289f63136291d500c0d577e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85347960"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Sdělte ladicímu programu, jaký typ se má zobrazit pomocí atributu používání DebuggerTypeProxy (C#, Visual Basic, C++/CLI).
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute>Určuje proxy server nebo jeho nezávisle pro typ a mění způsob, jakým se typ zobrazuje v oknech ladicího programu. Pokud zobrazíte proměnnou, která má proxy server, proxy server je v části pro původní typ v **zobrazení**. Okno proměnné ladicího programu zobrazuje pouze veřejné členy typu proxy serveru. Soukromé členy nejsou zobrazeny.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> Určuje proxy server nebo jeho nezávisle pro typ a mění způsob, jakým se typ zobrazuje v oknech ladicího programu. Pokud zobrazíte proměnnou, která má proxy server, proxy server je v části pro původní typ v **zobrazení**. Okno proměnné ladicího programu zobrazuje pouze veřejné členy typu proxy serveru. Soukromé členy nejsou zobrazeny.
 
 Tento atribut lze použít pro:
 
@@ -43,7 +43,7 @@ Pro minimalizaci sankcí za výkon vyhodnocovací filtr výrazů neověřuje atr
 
 Je vhodné, aby proxy typ byl privátní vnořenou třídou v rámci třídy, které cílí na atribut. To umožňuje snadno získat přístup k interním členům.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute>může být zděděno, takže pokud je typ proxy serveru zadán v základní třídě, bude platit pro všechny odvozené třídy, pokud tyto odvozené třídy neurčí svůj vlastní typ proxy.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> může být zděděno, takže pokud je typ proxy serveru zadán v základní třídě, bude platit pro všechny odvozené třídy, pokud tyto odvozené třídy neurčí svůj vlastní typ proxy.
 
 Pokud <xref:System.Diagnostics.DebuggerTypeProxyAttribute> je použita na úrovni sestavení, `Target` parametr určuje typ, který bude server nahrazen.
 
